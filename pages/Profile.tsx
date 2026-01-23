@@ -103,19 +103,29 @@ export const Profile: React.FC<ProfileProps> = ({ user, onClose }) => {
 
           {/* Level progress bar */}
           <div className="mt-4">
-            <div className="flex justify-between mb-2">
-              {[1, 2, 3, 4, 5].map((level) => (
+            <div className="relative pt-1">
+              <div className="flex mb-2 items-center justify-between">
+                <div>
+                  <span className="text-xs font-semibold inline-block text-indigo-600">
+                    Progress: {Math.round((user.currentLevel / 20) * 100)}%
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="text-xs font-semibold inline-block text-indigo-600">
+                    {user.currentLevel}/20
+                  </span>
+                </div>
+              </div>
+              <div className="overflow-hidden h-3 text-xs flex rounded-full bg-slate-200">
                 <div
-                  key={level}
-                  className={`flex-1 mx-1 h-3 rounded-full transition-colors ${
-                    level <= user.currentLevel ? 'bg-indigo-600' : 'bg-slate-200'
-                  }`}
+                  style={{ width: `${(user.currentLevel / 20) * 100}%` }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-600 transition-all duration-500"
                 />
-              ))}
+              </div>
             </div>
-            <div className="flex justify-between text-xs text-slate-500">
-              <span>Nivå 1</span>
-              <span>Nivå 5</span>
+            <div className="flex justify-between text-xs text-slate-500 mt-2">
+              <span>Nivå 1 (Åk 1)</span>
+              <span>Nivå 20 (Åk 9)</span>
             </div>
           </div>
         </div>

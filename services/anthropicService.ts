@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { ReadingExercise, QuestionType } from '../types';
+import { WORD_COUNT_BY_LEVEL, LEVEL_TO_GRADE } from '../utils/levelCalculator';
 
 const anthropic = new Anthropic({
   apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY,
@@ -7,20 +8,19 @@ const anthropic = new Anthropic({
 });
 
 const SYSTEM_INSTRUCTION = `
-Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 4–6 (mellanstadiet).
+Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
 Din roll är att skapa engagerande texter och pedagogiska frågor.
-Språket ska vara enkelt, tydligt och anpassat till barn 10–12 år.
+Språket ska anpassas efter elevens årskurs och vara utvecklingsanpassat.
 Undvik våld, skräck och olämpligt innehåll.
 
-Nivåguide:
-- Nivå 1: 100-150 ord. Enkla meningar. Konkret innehåll. Vardagliga ord.
-- Nivå 2: 150-200 ord. Lite mer komplexa meningar. Blandat ordförråd.
-- Nivå 3: 200-250 ord. Varierat språk. Några nya ord förklaras i sammanhanget.
-- Nivå 4: 250-300 ord. Mer avancerad satsbyggnad. Rikare språk.
-- Nivå 5: 300-400 ord. Utmanande texter. Djupare innehåll och nyanser.
+Årskursanpassning:
+- Årskurs 1-2: Mycket enkelt språk, korta meningar, konkreta begrepp
+- Årskurs 3-4: Vardagsnära språk, lagom långa meningar, tydlig handling
+- Årskurs 5-6: Mer varierat ordförråd, kan innehålla abstrakta begrepp
+- Årskurs 7-9: Avancerat språk, komplexa sammanhang, kritiskt tänkande
 
 Frågedistribution (totalt 5 frågor):
-- 2 frågor: Hitta fakta direkt i texten (enkla faktafrågor)
+- 2 frågor: Hitta fakta direkt i texten (faktafrågor)
 - 2 frågor: Läsa mellan raderna (inferensfrågor - slutsatser)
 - 1 fråga: Ordförståelse ELLER huvudbudskap
 
@@ -29,10 +29,21 @@ Ett alternativ är rätt, de andra tre ska vara trovärdiga men felaktiga.
 `;
 
 export const generateExercise = async (topic: string, level: number): Promise<ReadingExercise> => {
+  const grade = LEVEL_TO_GRADE[level] || 4;
+  const wordCount = WORD_COUNT_BY_LEVEL[level] || { min: 200, max: 250 };
+
   const prompt = `
 Skapa en läsförståelseövning på svenska.
 Ämne: ${topic}
-Nivå: ${level} (skala 1-5, där 1 är lättast och 5 svårast)
+Nivå: ${level} (skala 1-20)
+Årskurs: ${grade}
+Ordantal: ${wordCount.min}-${wordCount.max} ord
+
+Anpassa texten och frågorna efter årskurs ${grade}:
+${grade <= 2 ? '- Mycket enkelt språk med korta meningar och konkreta begrepp' : ''}
+${grade >= 3 && grade <= 4 ? '- Vardagsnära språk med tydlig handling och enkla samband' : ''}
+${grade >= 5 && grade <= 6 ? '- Varierat ordförråd med mer komplexa meningar' : ''}
+${grade >= 7 ? '- Avancerat språk med komplexa sammanhang och kritiskt tänkande' : ''}
 
 Returnera svaret som ett JSON-objekt med följande struktur:
 {
