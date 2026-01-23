@@ -57,7 +57,7 @@ const createNewUser = (username: string, role: UserRole): User => {
     id: generateId(),
     username,
     role,
-    currentLevel: 3, // Börja på medelnivå
+    currentLevel: 10, // Börja på nivå 10 (årskurs 4)
     totalPoints: 0,
     streak: 0,
     lastActivity: new Date().toISOString(),

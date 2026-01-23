@@ -103,19 +103,16 @@ export const Profile: React.FC<ProfileProps> = ({ user, onClose }) => {
 
           {/* Level progress bar */}
           <div className="mt-4">
-            <div className="flex justify-between mb-2">
-              {[1, 2, 3, 4, 5].map((level) => (
-                <div
-                  key={level}
-                  className={`flex-1 mx-1 h-3 rounded-full transition-colors ${
-                    level <= user.currentLevel ? 'bg-indigo-600' : 'bg-slate-200'
-                  }`}
-                />
-              ))}
+            <div className="relative h-4 bg-slate-200 rounded-full overflow-hidden">
+              <div
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-indigo-500 to-teal-500 transition-all duration-500"
+                style={{ width: `${(user.currentLevel / 20) * 100}%` }}
+              />
             </div>
-            <div className="flex justify-between text-xs text-slate-500">
-              <span>Nivå 1</span>
-              <span>Nivå 5</span>
+            <div className="flex justify-between text-xs text-slate-500 mt-2">
+              <span>Nivå 1 (Åk 1)</span>
+              <span>Nivå 10 (Åk 4)</span>
+              <span>Nivå 20 (Åk 9)</span>
             </div>
           </div>
         </div>

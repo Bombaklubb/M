@@ -77,7 +77,7 @@ export enum BadgeType {
   PERFECT_SCORE = 'perfect_score',
   FIVE_PERFECT = 'five_perfect',
   LEVEL_UP = 'level_up',
-  REACH_LEVEL_5 = 'reach_level_5'
+  REACH_LEVEL_20 = 'reach_level_20'
 }
 
 export interface Badge {
