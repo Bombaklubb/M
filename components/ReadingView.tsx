@@ -197,22 +197,49 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) =>
             {/* All Questions Overview */}
             <div className="bg-white rounded-xl shadow-lg p-4">
               <h4 className="text-sm font-bold text-slate-700 mb-3">Översikt</h4>
-              <div className="grid grid-cols-5 gap-2">
-                {data.questions.map((q, idx) => (
-                  <button
-                    key={q.id}
-                    onClick={() => setCurrentQuestionIndex(idx)}
-                    className={`aspect-square rounded-lg font-bold text-sm transition-all ${
-                      idx === currentQuestionIndex
-                        ? 'bg-indigo-600 text-white shadow-md'
-                        : answers[q.id]
-                        ? 'bg-teal-100 text-teal-700 hover:bg-teal-200'
-                        : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
-                    }`}
-                  >
-                    {idx + 1}
-                  </button>
-                ))}
+              <div className="space-y-3">
+                {/* På raderna - Fråga 1-3 */}
+                <div>
+                  <p className="text-xs text-slate-500 mb-1">På raderna (fakta)</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    {data.questions.slice(0, 3).map((q, idx) => (
+                      <button
+                        key={q.id}
+                        onClick={() => setCurrentQuestionIndex(idx)}
+                        className={`aspect-square rounded-lg font-bold text-sm transition-all ${
+                          idx === currentQuestionIndex
+                            ? 'bg-indigo-600 text-white shadow-md'
+                            : answers[q.id]
+                            ? 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+                            : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
+                        }`}
+                      >
+                        {idx + 1}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                {/* Mellan raderna - Fråga 4-6 */}
+                <div>
+                  <p className="text-xs text-slate-500 mb-1">Mellan raderna (förståelse)</p>
+                  <div className="grid grid-cols-3 gap-2">
+                    {data.questions.slice(3, 6).map((q, idx) => (
+                      <button
+                        key={q.id}
+                        onClick={() => setCurrentQuestionIndex(idx + 3)}
+                        className={`aspect-square rounded-lg font-bold text-sm transition-all ${
+                          idx + 3 === currentQuestionIndex
+                            ? 'bg-indigo-600 text-white shadow-md'
+                            : answers[q.id]
+                            ? 'bg-teal-100 text-teal-700 hover:bg-teal-200'
+                            : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
+                        }`}
+                      >
+                        {idx + 4}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
