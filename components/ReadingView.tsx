@@ -182,13 +182,13 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) =>
                   <button
                     onClick={handleSubmit}
                     disabled={!allQuestionsAnswered}
-                    className={`flex-1 px-4 py-2 rounded-lg font-bold transition-all ${
+                    className={`flex-1 px-6 py-4 rounded-lg text-lg font-bold transition-all ${
                       allQuestionsAnswered
-                        ? 'bg-gradient-to-r from-teal-600 to-indigo-600 text-white hover:shadow-lg hover:from-teal-700 hover:to-indigo-700'
-                        : 'bg-slate-300 text-slate-600 cursor-not-allowed'
+                        ? 'bg-gradient-to-r from-teal-600 to-indigo-600 text-white hover:shadow-xl hover:from-teal-700 hover:to-indigo-700 shadow-md'
+                        : 'bg-slate-300 text-slate-700 cursor-not-allowed'
                     }`}
                   >
-                    {allQuestionsAnswered ? '🚀 Skicka in svar ✓' : `Svara på alla frågor (${Object.keys(answers).length}/${data.questions.length})`}
+                    {allQuestionsAnswered ? 'Skicka in svar ✓' : `Svara på alla frågor (${Object.keys(answers).length}/${data.questions.length})`}
                   </button>
                 )}
               </div>
