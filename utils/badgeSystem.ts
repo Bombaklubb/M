@@ -64,10 +64,10 @@ export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
     description: 'Gick upp en nivå',
     icon: '📈',
   },
-  [BadgeType.REACH_LEVEL_5]: {
-    type: BadgeType.REACH_LEVEL_5,
+  [BadgeType.REACH_LEVEL_20]: {
+    type: BadgeType.REACH_LEVEL_20,
     name: 'Toppnivå',
-    description: 'Nådde nivå 5!',
+    description: 'Nådde nivå 20 (årskurs 9)!',
     icon: '🎯',
   },
 };
@@ -127,9 +127,9 @@ export const checkForNewBadges = (
     newBadges.push({ ...BADGE_DEFINITIONS[BadgeType.LEVEL_UP], earnedAt: now });
   }
 
-  // Reached level 5
-  if (user.currentLevel === 5 && !hasBadge(user, BadgeType.REACH_LEVEL_5)) {
-    newBadges.push({ ...BADGE_DEFINITIONS[BadgeType.REACH_LEVEL_5], earnedAt: now });
+  // Reached level 20
+  if (user.currentLevel === 20 && !hasBadge(user, BadgeType.REACH_LEVEL_20)) {
+    newBadges.push({ ...BADGE_DEFINITIONS[BadgeType.REACH_LEVEL_20], earnedAt: now });
   }
 
   return newBadges;

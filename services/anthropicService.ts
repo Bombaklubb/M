@@ -7,17 +7,21 @@ const anthropic = new Anthropic({
 });
 
 const SYSTEM_INSTRUCTION = `
-Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 4–6 (mellanstadiet).
-Din roll är att skapa engagerande texter och pedagogiska frågor.
-Språket ska vara enkelt, tydligt och anpassat till barn 10–12 år.
+Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
+Din roll är att skapa engagerande texter och pedagogiska frågor anpassade för olika åldrar.
+Språket ska vara tydligt och anpassat till elevens årskurs.
 Undvik våld, skräck och olämpligt innehåll.
 
-Nivåguide:
-- Nivå 1: 100-150 ord. Enkla meningar. Konkret innehåll. Vardagliga ord.
-- Nivå 2: 150-200 ord. Lite mer komplexa meningar. Blandat ordförråd.
-- Nivå 3: 200-250 ord. Varierat språk. Några nya ord förklaras i sammanhanget.
-- Nivå 4: 250-300 ord. Mer avancerad satsbyggnad. Rikare språk.
-- Nivå 5: 300-400 ord. Utmanande texter. Djupare innehåll och nyanser.
+Nivåguide (1-20 för årskurs 1-9):
+- Nivå 1-2 (Åk 1): 50-150 ord. Mycket enkla meningar. Vardagliga ord. Konkret innehåll.
+- Nivå 3-4 (Åk 2): 150-250 ord. Enkla meningar. Vanliga ord.
+- Nivå 5-7 (Åk 3): 250-400 ord. Lite längre meningar. Varierat ordförråd.
+- Nivå 8-10 (Åk 4): 400-550 ord. Mer komplexa meningar. Rikare språk.
+- Nivå 11-13 (Åk 5): 550-700 ord. Avancerade meningar. Djupare innehåll.
+- Nivå 14-15 (Åk 6): 700-800 ord. Mycket varierande språk och innehåll.
+- Nivå 16-17 (Åk 7): 800-1000 ord. Högstadietexter med komplexitet.
+- Nivå 18-19 (Åk 8): 1000-1200 ord. Sofistikerade texter och teman.
+- Nivå 20 (Åk 9): 1200-1500 ord. Experttexter för högstadiet.
 
 Frågedistribution (totalt 5 frågor):
 - 2 frågor: Hitta fakta direkt i texten (enkla faktafrågor)
@@ -26,13 +30,14 @@ Frågedistribution (totalt 5 frågor):
 
 Alla frågor ska vara flervalsfrågor med exakt 4 alternativ.
 Ett alternativ är rätt, de andra tre ska vara trovärdiga men felaktiga.
+Frågornas svårighetsgrad ska matcha textens nivå.
 `;
 
 export const generateExercise = async (topic: string, level: number): Promise<ReadingExercise> => {
   const prompt = `
 Skapa en läsförståelseövning på svenska.
 Ämne: ${topic}
-Nivå: ${level} (skala 1-5, där 1 är lättast och 5 svårast)
+Nivå: ${level} (skala 1-20, där 1 är lättast för årskurs 1 och 20 är svårast för årskurs 9)
 
 Returnera svaret som ett JSON-objekt med följande struktur:
 {
@@ -52,7 +57,7 @@ Returnera svaret som ett JSON-objekt med följande struktur:
 }
 
 VIKTIGT:
-- Texten ska vara intressant och engagerande för 10-12-åringar
+- Texten ska vara intressant och engagerande för åldersgruppen
 - Använd konkreta exempel och vardagsnära situationer
 - Exakt 5 frågor med 4 alternativ vardera
 - correctAnswer måste matcha exakt ett av alternativen i options-arrayen
@@ -62,7 +67,7 @@ VIKTIGT:
   try {
     const message = await anthropic.messages.create({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 2000,
+      max_tokens: 4000,
       temperature: 0.8,
       system: SYSTEM_INSTRUCTION,
       messages: [

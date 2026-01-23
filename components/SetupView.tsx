@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TOPICS } from '../types';
 import { Button } from './Button';
+import { LEVEL_DESCRIPTIONS } from '../utils/levelCalculator';
 
 interface SetupViewProps {
   onStart: (topic: string, level: number) => void;
@@ -9,7 +10,7 @@ interface SetupViewProps {
 export const SetupView: React.FC<SetupViewProps> = ({ onStart }) => {
   const [topic, setTopic] = useState('');
   const [customTopic, setCustomTopic] = useState('');
-  const [level, setLevel] = useState(3);
+  const [level, setLevel] = useState(10);
 
   const handleStart = () => {
     const selectedTopic = customTopic.trim() || topic;
@@ -65,33 +66,47 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart }) => {
         {/* Level Selection */}
         <div>
           <label className="block text-lg font-bold text-slate-700 mb-3">
-            2. Välj svårighetsgrad
+            2. Välj svårighetsgrad (nivå 1-20)
           </label>
-          <div className="flex justify-between items-center bg-slate-100 p-2 rounded-2xl">
-            {[1, 2, 3, 4, 5].map((lvl) => (
-              <button
-                key={lvl}
-                onClick={() => setLevel(lvl)}
-                className={`w-12 h-12 md:w-16 md:h-16 rounded-xl flex flex-col items-center justify-center transition-all ${
-                  level === lvl 
-                    ? 'bg-teal-500 text-white shadow-lg scale-110' 
-                    : 'text-slate-400 hover:text-teal-600'
-                }`}
-              >
-                <span className="text-xl md:text-2xl font-black">{lvl}</span>
-                <span className="text-[10px] md:text-xs font-bold uppercase">
-                  {lvl === 1 ? 'Lätt' : lvl === 5 ? 'Svår' : ''}
-                </span>
-              </button>
-            ))}
+
+          {/* Level Display */}
+          <div className="bg-gradient-to-br from-teal-500 to-indigo-600 rounded-2xl p-6 mb-4 text-center">
+            <div className="text-5xl font-black text-white mb-2">{level}</div>
+            <div className="text-white font-bold text-lg">{LEVEL_DESCRIPTIONS[level]}</div>
           </div>
-          <p className="text-center text-slate-500 text-sm mt-3 font-medium">
-            {level === 1 && "Korta texter, enkla ord. Perfekt för nybörjare!"}
-            {level === 2 && "Lite längre meningar, men fortfarande enkelt."}
-            {level === 3 && "Lagom svårt. En blandning av korta och långa meningar."}
-            {level === 4 && "Mer text och några kluriga ord."}
-            {level === 5 && "Lång text med svårare ord och djupare mening."}
-          </p>
+
+          {/* Slider */}
+          <div className="relative">
+            <input
+              type="range"
+              min="1"
+              max="20"
+              value={level}
+              onChange={(e) => setLevel(Number(e.target.value))}
+              className="w-full h-3 bg-slate-200 rounded-full appearance-none cursor-pointer slider"
+              style={{
+                background: `linear-gradient(to right, #14b8a6 0%, #14b8a6 ${((level - 1) / 19) * 100}%, #e2e8f0 ${((level - 1) / 19) * 100}%, #e2e8f0 100%)`
+              }}
+            />
+            <div className="flex justify-between mt-2 text-xs text-slate-500 font-medium">
+              <span>Nivå 1<br/>(Åk 1)</span>
+              <span>Nivå 10<br/>(Åk 4)</span>
+              <span>Nivå 20<br/>(Åk 9)</span>
+            </div>
+          </div>
+
+          {/* Quick Select Buttons */}
+          <div className="mt-4 flex flex-wrap gap-2 justify-center">
+            <button onClick={() => setLevel(2)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 1</button>
+            <button onClick={() => setLevel(4)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 2</button>
+            <button onClick={() => setLevel(6)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 3</button>
+            <button onClick={() => setLevel(9)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 4</button>
+            <button onClick={() => setLevel(12)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 5</button>
+            <button onClick={() => setLevel(15)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 6</button>
+            <button onClick={() => setLevel(17)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 7</button>
+            <button onClick={() => setLevel(19)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 8</button>
+            <button onClick={() => setLevel(20)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 9</button>
+          </div>
         </div>
 
         <Button 

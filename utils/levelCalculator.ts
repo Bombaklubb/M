@@ -1,6 +1,6 @@
 /**
  * Beräknar ny nivå baserat på resultat
- * 80%+ rätt = nivå upp (max 5)
+ * 80%+ rätt = nivå upp (max 20)
  * under 50% = nivå ner (min 1)
  */
 export const calculateNewLevel = (
@@ -10,7 +10,7 @@ export const calculateNewLevel = (
 ): number => {
   const percentage = (correctAnswers / totalQuestions) * 100;
 
-  if (percentage >= 80 && currentLevel < 5) {
+  if (percentage >= 80 && currentLevel < 20) {
     return currentLevel + 1;
   } else if (percentage < 50 && currentLevel > 1) {
     return currentLevel - 1;
@@ -54,23 +54,53 @@ export const updateStreak = (lastActivity: string): number => {
 };
 
 /**
- * Nivåbeskrivningar
+ * Nivåbeskrivningar (1-20 för årskurs 1-9)
  */
 export const LEVEL_DESCRIPTIONS: Record<number, string> = {
-  1: 'Nybörjare - Korta texter med enkelt språk',
-  2: 'Grundläggande - Lite längre texter och fler ord',
-  3: 'Medel - Bra blandning av enkelt och svårare språk',
-  4: 'Avancerad - Längre texter med rikare ordförråd',
-  5: 'Expert - Utmanande texter för skickliga läsare',
+  1: 'Årskurs 1 - Mycket enkla texter med korta meningar',
+  2: 'Årskurs 1 - Enkla texter med vardagliga ord',
+  3: 'Årskurs 2 - Lite längre texter, enkelt språk',
+  4: 'Årskurs 2 - Varierade meningar, vanliga ord',
+  5: 'Årskurs 3 - Längre meningar, lite svårare ord',
+  6: 'Årskurs 3 - Mer varierat språk och innehåll',
+  7: 'Årskurs 3 - Rikare ordförråd, blandade meningar',
+  8: 'Årskurs 4 - Längre texter med mer komplexitet',
+  9: 'Årskurs 4 - Varierande innehåll och språk',
+  10: 'Årskurs 4 - Utmanande texter med rikare språk',
+  11: 'Årskurs 5 - Avancerade texter och ordförråd',
+  12: 'Årskurs 5 - Komplexa meningar och teman',
+  13: 'Årskurs 5 - Djupare innehåll och nyanser',
+  14: 'Årskurs 6 - Mycket varierande språk och innehåll',
+  15: 'Årskurs 6 - Utmanande texter med djup',
+  16: 'Årskurs 7 - Högstadietexter med komplexitet',
+  17: 'Årskurs 7 - Avancerade teman och språk',
+  18: 'Årskurs 8 - Sofistikerade texter och innehåll',
+  19: 'Årskurs 8 - Mycket utmanande texter',
+  20: 'Årskurs 9 - Experttexter för högstadiet',
 };
 
 /**
- * Antalet ord per nivå
+ * Antalet ord per nivå (1-20)
  */
 export const WORD_COUNT_BY_LEVEL: Record<number, { min: number; max: number }> = {
-  1: { min: 100, max: 150 },
-  2: { min: 150, max: 200 },
-  3: { min: 200, max: 250 },
-  4: { min: 250, max: 300 },
-  5: { min: 300, max: 400 },
+  1: { min: 50, max: 100 },
+  2: { min: 100, max: 150 },
+  3: { min: 150, max: 200 },
+  4: { min: 200, max: 250 },
+  5: { min: 250, max: 300 },
+  6: { min: 300, max: 350 },
+  7: { min: 350, max: 400 },
+  8: { min: 400, max: 450 },
+  9: { min: 450, max: 500 },
+  10: { min: 500, max: 550 },
+  11: { min: 550, max: 600 },
+  12: { min: 600, max: 650 },
+  13: { min: 650, max: 700 },
+  14: { min: 700, max: 750 },
+  15: { min: 750, max: 800 },
+  16: { min: 800, max: 900 },
+  17: { min: 900, max: 1000 },
+  18: { min: 1000, max: 1100 },
+  19: { min: 1100, max: 1200 },
+  20: { min: 1200, max: 1500 },
 };
