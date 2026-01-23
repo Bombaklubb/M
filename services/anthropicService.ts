@@ -109,6 +109,9 @@ VIKTIGT:
 
     const data = JSON.parse(jsonText) as ReadingExercise;
 
+    // Tvinga att använda den nivå som användaren valde (AI:n kan ibland ändra nivån)
+    data.level = level;
+
     // Validera att alla frågor har rätt format
     if (!data.questions || data.questions.length !== 5) {
       throw new Error('Felaktigt antal frågor genererade');
