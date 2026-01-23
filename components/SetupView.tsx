@@ -5,12 +5,13 @@ import { LEVEL_DESCRIPTIONS } from '../utils/levelCalculator';
 
 interface SetupViewProps {
   onStart: (topic: string, level: number, textType: TextType) => void;
+  userLevel?: number;
 }
 
-export const SetupView: React.FC<SetupViewProps> = ({ onStart }) => {
+export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
   const [topic, setTopic] = useState('');
   const [customTopic, setCustomTopic] = useState('');
-  const [level, setLevel] = useState(10);
+  const [level, setLevel] = useState(userLevel || 10);
   const [textType, setTextType] = useState<TextType>(TextType.NARRATIVE);
 
   const handleStart = () => {
