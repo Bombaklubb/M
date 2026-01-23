@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onProfileClick }
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <span className="text-3xl">📚</span>
-          <span className="text-xl font-extrabold text-indigo-900">LäsHjälpen</span>
+          <span className="text-xl font-extrabold text-indigo-900">Läs och lär</span>
         </div>
 
         {/* User info */}

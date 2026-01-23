@@ -22,7 +22,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
         <div className="text-center mb-8">
           <div className="text-6xl mb-4">📚</div>
           <h1 className="text-4xl font-extrabold text-slate-800 mb-2">
-            LäsHjälpen
+            Läs och lär
           </h1>
           <p className="text-slate-600 text-lg">
             Din smarta läskompis
@@ -92,7 +92,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
         <div className="mt-8 pt-6 border-t border-slate-200">
           <p className="text-xs text-slate-500 text-center">
-            LäsHjälpen hjälper dig att träna läsförståelse på din nivå
+            Läs och lär hjälper dig att träna läsförståelse på din nivå
           </p>
         </div>
       </div>

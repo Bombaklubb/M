@@ -22,7 +22,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart }) => {
     <div className="max-w-2xl mx-auto px-4 py-8">
       <div className="text-center mb-10">
         <h1 className="text-4xl md:text-6xl font-extrabold text-indigo-900 mb-4">
-          📚 LäsHjälpen
+          📚 Läs och lär
         </h1>
         <p className="text-xl text-slate-600">
           Din smarta läskompis. Vad vill du läsa om idag?

@@ -1,4 +1,4 @@
-# 📚 LäsHjälpen
+# 📚 Läs och lär
 
 En webbaserad läsförståelseapp för mellanstadieelever (årskurs 4-6) i Sverige, liknande ReadTheory.org och Frippo.se.
 
