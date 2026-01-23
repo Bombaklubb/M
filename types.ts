@@ -37,11 +37,80 @@ export interface UserAnswers {
 export const TOPICS = [
   "Djur & Natur",
   "Rymden",
-  "Skolan",
-  "Fotboll",
-  "Spel & Gaming",
-  "Vänskap",
-  "Äventyr",
-  "Deckargåtor",
-  "Teknik"
+  "Sport & Fritid",
+  "Historia & Forntiden",
+  "Vetenskap",
+  "Äventyr & Spänning",
+  "Vardagsliv & Vänskap",
+  "Sverige & Världen",
+  "Teknik & Uppfinningar"
 ];
+
+// Autentisering och användare
+export enum UserRole {
+  STUDENT = 'student',
+  TEACHER = 'teacher'
+}
+
+export interface User {
+  id: string;
+  username: string;
+  role: UserRole;
+  currentLevel: number;
+  totalPoints: number;
+  streak: number;
+  lastActivity: string; // ISO date string
+  badges: Badge[];
+  completedTexts: number;
+  avatarId?: number;
+}
+
+// Gamification
+export enum BadgeType {
+  FIRST_TEXT = 'first_text',
+  TEN_TEXTS = 'ten_texts',
+  FIFTY_TEXTS = 'fifty_texts',
+  HUNDRED_TEXTS = 'hundred_texts',
+  FIVE_DAY_STREAK = 'five_day_streak',
+  TEN_DAY_STREAK = 'ten_day_streak',
+  THIRTY_DAY_STREAK = 'thirty_day_streak',
+  PERFECT_SCORE = 'perfect_score',
+  FIVE_PERFECT = 'five_perfect',
+  LEVEL_UP = 'level_up',
+  REACH_LEVEL_5 = 'reach_level_5'
+}
+
+export interface Badge {
+  type: BadgeType;
+  name: string;
+  description: string;
+  icon: string;
+  earnedAt: string; // ISO date string
+}
+
+export interface TextResult {
+  id: string;
+  userId: string;
+  textTitle: string;
+  level: number;
+  topic: string;
+  score: number; // antal rätt
+  totalQuestions: number;
+  pointsEarned: number;
+  completedAt: string; // ISO date string
+}
+
+// Lärarvy
+export interface Classroom {
+  id: string;
+  teacherId: string;
+  name: string;
+  students: string[]; // user IDs
+}
+
+export interface StudentProgress {
+  user: User;
+  recentResults: TextResult[];
+  averageScore: number;
+  totalTextsRead: number;
+}
