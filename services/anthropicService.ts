@@ -28,10 +28,9 @@ Nivåguide (1-20 för årskurs 1-9):
 - Nivå 18-19 (Åk 8): 1000-1200 ord. Sofistikerade texter och teman.
 - Nivå 20 (Åk 9): 1200-1500 ord. Experttexter för högstadiet.
 
-Frågedistribution (totalt 5 frågor):
-- 2 frågor: Hitta fakta direkt i texten (enkla faktafrågor)
-- 2 frågor: Läsa mellan raderna (inferensfrågor - slutsatser)
-- 1 fråga: Ordförståelse ELLER huvudbudskap
+Frågedistribution (totalt 6 frågor):
+- Fråga 1-3: "På raderna" - Hitta fakta direkt i texten (explicit information, enkla faktafrågor)
+- Fråga 4-6: "Mellan raderna" - Läsa mellan raderna (inferensfrågor, slutsatser, djupare förståelse)
 
 Alla frågor ska vara flervalsfrågor med exakt 4 alternativ.
 Ett alternativ är rätt, de andra tre ska vara trovärdiga men felaktiga.
@@ -79,7 +78,7 @@ Returnera svaret som ett JSON-objekt med följande struktur:
 VIKTIGT:
 - Texten ska vara intressant och engagerande för åldersgruppen
 - Använd konkreta exempel och vardagsnära situationer
-- Exakt 5 frågor med 4 alternativ vardera
+- Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
 - correctAnswer måste matcha exakt ett av alternativen i options-arrayen
 - Förklaringen ska vara uppmuntrande och lärorik
 `;
@@ -113,7 +112,7 @@ VIKTIGT:
     data.level = level;
 
     // Validera att alla frågor har rätt format
-    if (!data.questions || data.questions.length !== 5) {
+    if (!data.questions || data.questions.length !== 6) {
       throw new Error('Felaktigt antal frågor genererade');
     }
 
