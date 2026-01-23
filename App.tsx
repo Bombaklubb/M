@@ -32,9 +32,8 @@ function App() {
     setAppState(AppState.LOADING);
     setErrorMsg('');
     try {
-      // Use user's current level if available, otherwise use selected level
-      const targetLevel = user?.currentLevel || level;
-      const data = await generateExercise(topic, targetLevel, textType);
+      // Use the selected level - user can choose any level they want
+      const data = await generateExercise(topic, level, textType);
       setExerciseData(data);
       setAppState(AppState.READING);
     } catch (error) {
@@ -181,7 +180,7 @@ function App() {
       {/* Main Content */}
       <main>
         {appState === AppState.SETUP && (
-          <SetupView onStart={handleStart} />
+          <SetupView onStart={handleStart} userLevel={user?.currentLevel} />
         )}
 
         {appState === AppState.READING && exerciseData && (
