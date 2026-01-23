@@ -5,6 +5,18 @@ export enum QuestionType {
   REASONING = 'reasoning'
 }
 
+export enum TextType {
+  NARRATIVE = 'narrative',
+  DESCRIPTIVE = 'descriptive',
+  ARGUMENTATIVE = 'argumentative'
+}
+
+export const TEXT_TYPES = [
+  { value: TextType.NARRATIVE, label: 'Berättande', icon: '📖', description: 'Berättelser och händelser' },
+  { value: TextType.DESCRIPTIVE, label: 'Beskrivande', icon: '🎨', description: 'Beskrivningar och fakta' },
+  { value: TextType.ARGUMENTATIVE, label: 'Argumenterande', icon: '💬', description: 'Åsikter och argument' },
+];
+
 export interface Question {
   id: number;
   type: QuestionType;
@@ -18,6 +30,7 @@ export interface ReadingExercise {
   level: number;
   title: string;
   content: string;
+  textType: TextType;
   questions: Question[];
 }
 

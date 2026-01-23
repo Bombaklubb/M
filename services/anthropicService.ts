@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { ReadingExercise, QuestionType } from '../types';
+import { ReadingExercise, QuestionType, TextType } from '../types';
 
 const anthropic = new Anthropic({
   apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY,
@@ -11,6 +11,11 @@ Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9
 Din roll är att skapa engagerande texter och pedagogiska frågor anpassade för olika åldrar.
 Språket ska vara tydligt och anpassat till elevens årskurs.
 Undvik våld, skräck och olämpligt innehåll.
+
+Texttyper:
+- BERÄTTANDE: Berättelser med handling, karaktärer och händelseförlopp. Kronologisk struktur.
+- BESKRIVANDE: Beskrivningar av personer, platser, föremål eller företeelser. Faktabaserat.
+- ARGUMENTERANDE: Texter som presenterar åsikter och argument för/emot något. För högre nivåer.
 
 Nivåguide (1-20 för årskurs 1-9):
 - Nivå 1-2 (Åk 1): 50-150 ord. Mycket enkla meningar. Vardagliga ord. Konkret innehåll.
@@ -33,17 +38,32 @@ Ett alternativ är rätt, de andra tre ska vara trovärdiga men felaktiga.
 Frågornas svårighetsgrad ska matcha textens nivå.
 `;
 
-export const generateExercise = async (topic: string, level: number): Promise<ReadingExercise> => {
+const getTextTypeLabel = (textType: TextType): string => {
+  switch (textType) {
+    case TextType.NARRATIVE:
+      return 'BERÄTTANDE';
+    case TextType.DESCRIPTIVE:
+      return 'BESKRIVANDE';
+    case TextType.ARGUMENTATIVE:
+      return 'ARGUMENTERANDE';
+  }
+};
+
+export const generateExercise = async (topic: string, level: number, textType: TextType): Promise<ReadingExercise> => {
+  const textTypeLabel = getTextTypeLabel(textType);
+
   const prompt = `
 Skapa en läsförståelseövning på svenska.
 Ämne: ${topic}
 Nivå: ${level} (skala 1-20, där 1 är lättast för årskurs 1 och 20 är svårast för årskurs 9)
+Texttyp: ${textTypeLabel}
 
 Returnera svaret som ett JSON-objekt med följande struktur:
 {
   "level": ${level},
   "title": "En kort, engagerande titel",
   "content": "Själva texten som eleven ska läsa",
+  "textType": "${textType}",
   "questions": [
     {
       "id": 1,
