@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import { TOPICS } from '../types';
+import { TOPICS, TEXT_TYPES, TextType } from '../types';
 import { Button } from './Button';
 import { LEVEL_DESCRIPTIONS } from '../utils/levelCalculator';
 
 interface SetupViewProps {
-  onStart: (topic: string, level: number) => void;
+  onStart: (topic: string, level: number, textType: TextType) => void;
 }
 
 export const SetupView: React.FC<SetupViewProps> = ({ onStart }) => {
   const [topic, setTopic] = useState('');
   const [customTopic, setCustomTopic] = useState('');
   const [level, setLevel] = useState(10);
+  const [textType, setTextType] = useState<TextType>(TextType.NARRATIVE);
 
   const handleStart = () => {
     const selectedTopic = customTopic.trim() || topic;
     if (selectedTopic) {
-      onStart(selectedTopic, level);
+      onStart(selectedTopic, level, textType);
     }
   };
 
@@ -63,10 +64,34 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart }) => {
           </div>
         </div>
 
+        {/* Text Type Selection */}
+        <div>
+          <label className="block text-lg font-bold text-slate-700 mb-3">
+            2. Välj texttyp
+          </label>
+          <div className="grid grid-cols-3 gap-3">
+            {TEXT_TYPES.map((type) => (
+              <button
+                key={type.value}
+                onClick={() => setTextType(type.value)}
+                className={`p-4 rounded-xl border-2 transition-all ${
+                  textType === type.value
+                    ? 'bg-purple-600 text-white border-purple-600 shadow-lg'
+                    : 'bg-white text-slate-600 border-slate-200 hover:border-purple-300'
+                }`}
+              >
+                <div className="text-3xl mb-2">{type.icon}</div>
+                <div className="font-bold text-sm">{type.label}</div>
+                <div className="text-xs mt-1 opacity-80">{type.description}</div>
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Level Selection */}
         <div>
           <label className="block text-lg font-bold text-slate-700 mb-3">
-            2. Välj svårighetsgrad (nivå 1-20)
+            3. Välj svårighetsgrad (nivå 1-20)
           </label>
 
           {/* Level Display */}

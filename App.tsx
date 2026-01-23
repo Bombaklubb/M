@@ -3,11 +3,10 @@ import { Login } from './pages/Login';
 import { Profile } from './pages/Profile';
 import { SetupView } from './components/SetupView';
 import { ReadingView } from './components/ReadingView';
-import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { Header } from './components/Header';
 import { generateExercise } from './services/anthropicService';
-import { ReadingExercise, AppState, UserAnswers, UserRole, Badge } from './types';
+import { ReadingExercise, AppState, UserAnswers, UserRole, Badge, TextType } from './types';
 import { useAuth } from './hooks/useAuth';
 import { useProgress } from './hooks/useProgress';
 
@@ -29,13 +28,13 @@ function App() {
     newBadges: Badge[];
   } | null>(null);
 
-  const handleStart = async (topic: string, level: number) => {
+  const handleStart = async (topic: string, level: number, textType: TextType) => {
     setAppState(AppState.LOADING);
     setErrorMsg('');
     try {
       // Use user's current level if available, otherwise use selected level
       const targetLevel = user?.currentLevel || level;
-      const data = await generateExercise(topic, targetLevel);
+      const data = await generateExercise(topic, targetLevel, textType);
       setExerciseData(data);
       setAppState(AppState.READING);
     } catch (error) {
@@ -45,12 +44,7 @@ function App() {
     }
   };
 
-  const handleFinishedReading = () => {
-    setAppState(AppState.QUIZ);
-    window.scrollTo(0, 0);
-  };
-
-  const handleQuizComplete = (answers: UserAnswers) => {
+  const handleComplete = (answers: UserAnswers) => {
     setUserAnswers(answers);
 
     // Calculate score
@@ -193,14 +187,7 @@ function App() {
         {appState === AppState.READING && exerciseData && (
           <ReadingView
             data={exerciseData}
-            onFinishedReading={handleFinishedReading}
-          />
-        )}
-
-        {appState === AppState.QUIZ && exerciseData && (
-          <QuizView
-            data={exerciseData}
-            onComplete={handleQuizComplete}
+            onComplete={handleComplete}
           />
         )}
 
