@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReadingExercise } from '../types';
 import { Button } from './Button';
 
@@ -8,8 +8,26 @@ interface ReadingViewProps {
 }
 
 export const ReadingView: React.FC<ReadingViewProps> = ({ data, onFinishedReading }) => {
+  const [isSpeaking, setIsSpeaking] = useState(false);
+
   // Split content into paragraphs for better readability
   const paragraphs = data.content.split('\n').filter(p => p.trim().length > 0);
+
+  const handleSpeak = () => {
+    if ('speechSynthesis' in window) {
+      if (isSpeaking) {
+        window.speechSynthesis.cancel();
+        setIsSpeaking(false);
+      } else {
+        const utterance = new SpeechSynthesisUtterance(data.content);
+        utterance.lang = 'sv-SE';
+        utterance.rate = 0.9;
+        utterance.onend = () => setIsSpeaking(false);
+        window.speechSynthesis.speak(utterance);
+        setIsSpeaking(true);
+      }
+    }
+  };
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 pb-20">
@@ -32,7 +50,13 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onFinishedReadin
           ))}
         </div>
 
-        <div className="p-8 bg-slate-50 border-t border-slate-100 flex justify-center sticky bottom-0 z-10">
+        <div className="p-8 bg-slate-50 border-t border-slate-100 flex flex-col md:flex-row justify-center gap-4 sticky bottom-0 z-10">
+          <button
+            onClick={handleSpeak}
+            className="px-6 py-3 bg-purple-100 text-purple-700 rounded-full font-bold hover:bg-purple-200 transition-colors"
+          >
+            {isSpeaking ? '⏸️ Pausa' : '🔊 Lyssna på texten'}
+          </button>
           <Button onClick={onFinishedReading} className="shadow-xl">
             Jag har läst klart! Gå till frågorna 👉
           </Button>
