@@ -1,18 +1,19 @@
 /**
  * Beräknar ny nivå baserat på resultat
- * 80%+ rätt = nivå upp (max 20)
- * under 50% = nivå ner (min 1)
+ * Alla rätt = nivå upp (max 20)
+ * 1 eller fler fel = nivå ner (min 1)
  */
 export const calculateNewLevel = (
   currentLevel: number,
   correctAnswers: number,
   totalQuestions: number
 ): number => {
-  const percentage = (correctAnswers / totalQuestions) * 100;
-
-  if (percentage >= 80 && currentLevel < 20) {
+  // Alla rätt → gå upp 1 nivå
+  if (correctAnswers === totalQuestions && currentLevel < 20) {
     return currentLevel + 1;
-  } else if (percentage < 50 && currentLevel > 1) {
+  }
+  // 1 eller fler fel → gå ner 1 nivå
+  else if (correctAnswers < totalQuestions && currentLevel > 1) {
     return currentLevel - 1;
   }
 
