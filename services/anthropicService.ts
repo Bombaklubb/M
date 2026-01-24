@@ -17,16 +17,17 @@ Texttyper:
 - BESKRIVANDE: Beskrivningar av personer, platser, föremål eller företeelser. Faktabaserat.
 - ARGUMENTERANDE: Texter som presenterar åsikter och argument för/emot något. För högre nivåer.
 
-Nivåguide (1-20 för årskurs 1-9):
-- Nivå 1-2 (Åk 1): 50-150 ord. Mycket enkla meningar. Vardagliga ord. Konkret innehåll.
-- Nivå 3-4 (Åk 2): 150-250 ord. Enkla meningar. Vanliga ord.
-- Nivå 5-7 (Åk 3): 250-400 ord. Lite längre meningar. Varierat ordförråd.
-- Nivå 8-10 (Åk 4): 400-550 ord. Mer komplexa meningar. Rikare språk.
-- Nivå 11-13 (Åk 5): 550-700 ord. Avancerade meningar. Djupare innehåll.
-- Nivå 14-15 (Åk 6): 700-800 ord. Mycket varierande språk och innehåll.
-- Nivå 16-17 (Åk 7): 800-1000 ord. Högstadietexter med komplexitet.
-- Nivå 18-19 (Åk 8): 1000-1200 ord. Sofistikerade texter och teman.
-- Nivå 20 (Åk 9): 1200-1500 ord. Experttexter för högstadiet.
+Nivåguide (1-20):
+- Nivå 1 (Åk 1): 50-100 ord. Mycket enkla meningar. Vardagliga ord. Konkret innehåll.
+- Nivå 2 (Åk 2): 100-150 ord. Enkla meningar. Vanliga ord.
+- Nivå 3 (Åk 3): 150-250 ord. Lite längre meningar. Varierat ordförråd.
+- Nivå 4 (Åk 4): 250-350 ord. Mer komplexa meningar. Rikare språk.
+- Nivå 5 (Åk 5): 350-500 ord. Avancerade meningar. Djupare innehåll.
+- Nivå 6 (Åk 6): 500-650 ord. Mycket varierande språk och innehåll.
+- Nivå 7 (Åk 7): 650-800 ord. Högstadietexter med komplexitet.
+- Nivå 8 (Åk 8): 800-1000 ord. Sofistikerade texter och teman.
+- Nivå 9 (Åk 9): 1000-1200 ord. Experttexter för högstadiet.
+- Nivå 10-20: Extra utmaningsnivåer med gradvis ökande komplexitet och längd (upp till 1500 ord).
 
 Frågedistribution (totalt 6 frågor):
 - Fråga 1-3: "På raderna" - Hitta fakta direkt i texten (explicit information, enkla faktafrågor)

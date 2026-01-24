@@ -11,7 +11,7 @@ interface SetupViewProps {
 export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
   const [topic, setTopic] = useState('');
   const [customTopic, setCustomTopic] = useState('');
-  const [level, setLevel] = useState(userLevel || 10);
+  const [level, setLevel] = useState(userLevel || 4);
   const [textType, setTextType] = useState<TextType>(TextType.NARRATIVE);
 
   const handleStart = () => {
@@ -116,22 +116,23 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
             />
             <div className="flex justify-between mt-2 text-xs text-slate-500 font-medium">
               <span>Nivå 1<br/>(Åk 1)</span>
-              <span>Nivå 10<br/>(Åk 4)</span>
-              <span>Nivå 20<br/>(Åk 9)</span>
+              <span>Nivå 5<br/>(Åk 5)</span>
+              <span>Nivå 9<br/>(Åk 9)</span>
+              <span>Nivå 20<br/>(Max)</span>
             </div>
           </div>
 
           {/* Quick Select Buttons */}
           <div className="mt-4 flex flex-wrap gap-2 justify-center">
             <button onClick={() => setLevel(1)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 1</button>
-            <button onClick={() => setLevel(3)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 2</button>
-            <button onClick={() => setLevel(5)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 3</button>
-            <button onClick={() => setLevel(8)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 4</button>
-            <button onClick={() => setLevel(11)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 5</button>
-            <button onClick={() => setLevel(14)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 6</button>
-            <button onClick={() => setLevel(16)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 7</button>
-            <button onClick={() => setLevel(18)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 8</button>
-            <button onClick={() => setLevel(20)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 9</button>
+            <button onClick={() => setLevel(2)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 2</button>
+            <button onClick={() => setLevel(3)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 3</button>
+            <button onClick={() => setLevel(4)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 4</button>
+            <button onClick={() => setLevel(5)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 5</button>
+            <button onClick={() => setLevel(6)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 6</button>
+            <button onClick={() => setLevel(7)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 7</button>
+            <button onClick={() => setLevel(8)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 8</button>
+            <button onClick={() => setLevel(9)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 9</button>
           </div>
         </div>
 
