@@ -50,9 +50,9 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
           <button
             type="submit"
             disabled={!username.trim()}
-            className="w-full py-5 px-6 rounded-xl bg-green-600 text-white font-extrabold text-xl shadow-lg hover:bg-green-700 hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:bg-gray-300"
+            className="w-full py-6 px-8 rounded-2xl bg-green-600 text-white font-black text-2xl shadow-2xl border-4 border-green-700 hover:bg-green-700 hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:bg-gray-400 disabled:border-gray-500"
           >
-            Starta läsningen
+            Börja din läsning
           </button>
         </form>
 

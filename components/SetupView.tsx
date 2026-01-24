@@ -108,17 +108,32 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
               max="20"
               value={level}
               onChange={(e) => setLevel(Number(e.target.value))}
-              className="w-full h-4 bg-slate-200 rounded-full appearance-none cursor-pointer slider"
+              className="w-full h-5 bg-slate-200 rounded-full appearance-none cursor-pointer slider"
               style={{
                 background: `linear-gradient(to right, #14b8a6 0%, #14b8a6 ${((level - 1) / 19) * 100}%, #e2e8f0 ${((level - 1) / 19) * 100}%, #e2e8f0 100%)`
               }}
             />
-            <div className="flex justify-between mt-3 text-sm text-slate-600 font-bold">
-              <span>Nivå 1</span>
-              <span>Nivå 5</span>
-              <span>Nivå 10</span>
-              <span>Nivå 15</span>
-              <span>Nivå 20</span>
+            <div className="flex justify-between mt-4 text-xs text-slate-700 font-extrabold">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+              <span>15</span>
+              <span>16</span>
+              <span>17</span>
+              <span>18</span>
+              <span>19</span>
+              <span>20</span>
             </div>
           </div>
         </div>
