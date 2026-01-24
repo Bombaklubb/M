@@ -6,7 +6,7 @@ import { ReadingView } from './components/ReadingView';
 import { ResultView } from './components/ResultView';
 import { Header } from './components/Header';
 import { generateExercise } from './services/anthropicService';
-import { ReadingExercise, AppState, UserAnswers, UserRole, Badge, TextType } from './types';
+import { ReadingExercise, AppState, UserAnswers, UserRole, Badge, TextType, TOPICS, TEXT_TYPES } from './types';
 import { useAuth } from './hooks/useAuth';
 import { useProgress } from './hooks/useProgress';
 
@@ -86,6 +86,20 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  const handleRandomize = async () => {
+    // Nollställ tidigare resultat
+    setUserAnswers({});
+    setResultInfo(null);
+
+    // Slumpa fram ämne, nivå och texttyp
+    const randomTopic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
+    const randomLevel = user?.currentLevel || 10;
+    const randomTextType = TEXT_TYPES[Math.floor(Math.random() * TEXT_TYPES.length)].value;
+
+    // Starta direkt med slumpmässiga val
+    await handleStart(randomTopic, randomLevel, randomTextType);
+  };
+
   const handleLogin = (username: string, role: UserRole) => {
     login(username, role);
   };
@@ -116,7 +130,7 @@ function App() {
   if (user.role === UserRole.TEACHER) {
     return (
       <div className="min-h-screen bg-sky-50">
-        <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(!showProfile)} />
+        <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(!showProfile)} onLogoClick={handleRestart} />
         <div className="max-w-4xl mx-auto p-8 text-center">
           <div className="bg-white rounded-3xl p-12 shadow-xl">
             <div className="text-6xl mb-4">👨‍🏫</div>
@@ -140,7 +154,7 @@ function App() {
   if (showProfile) {
     return (
       <>
-        <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(false)} />
+        <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(false)} onLogoClick={handleRestart} />
         <Profile user={user} onClose={() => setShowProfile(false)} />
       </>
     );
@@ -149,7 +163,7 @@ function App() {
   // Main student view
   return (
     <div className="min-h-screen bg-sky-50 font-sans selection:bg-indigo-200">
-      <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(true)} />
+      <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(true)} onLogoClick={handleRestart} />
 
       {/* Loading State */}
       {appState === AppState.LOADING && (
@@ -195,6 +209,7 @@ function App() {
             data={exerciseData}
             answers={userAnswers}
             onRestart={handleRestart}
+            onRandomize={handleRandomize}
             pointsEarned={resultInfo?.pointsEarned}
             newLevel={resultInfo?.newLevel}
             oldLevel={resultInfo?.oldLevel}
