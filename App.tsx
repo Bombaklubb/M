@@ -93,7 +93,7 @@ function App() {
 
     // Slumpa fram ämne, nivå och texttyp
     const randomTopic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
-    const randomLevel = user?.currentLevel || 10;
+    const randomLevel = user?.currentLevel || 4;
     const randomTextType = TEXT_TYPES[Math.floor(Math.random() * TEXT_TYPES.length)].value;
 
     // Starta direkt med slumpmässiga val
