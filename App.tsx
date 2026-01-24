@@ -91,12 +91,32 @@ function App() {
     setUserAnswers({});
     setResultInfo(null);
 
-    // Slumpa fram ämne, nivå och texttyp
+    // Slumpa fram ämne och texttyp
     const randomTopic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
-    // Använd nivån från texten som just gjordes, eller en nivå högre
-    const currentTextLevel = exerciseData?.level || user?.currentLevel || 4;
-    const randomLevel = Math.random() < 0.5 ? currentTextLevel : Math.min(currentTextLevel + 1, 20);
     const randomTextType = TEXT_TYPES[Math.floor(Math.random() * TEXT_TYPES.length)].value;
+
+    // Beräkna om användaren fick alla rätt
+    let correctCount = 0;
+    if (exerciseData) {
+      exerciseData.questions.forEach(q => {
+        if (userAnswers[q.id]?.toLowerCase() === q.correctAnswer.toLowerCase()) {
+          correctCount++;
+        }
+      });
+    }
+
+    const allCorrect = correctCount === exerciseData?.questions.length;
+    const currentTextLevel = exerciseData?.level || user?.currentLevel || 4;
+
+    // Om alla rätt → högre nivå, annars lägre nivå
+    let randomLevel;
+    if (allCorrect) {
+      // Alla rätt → gå upp 1 nivå (max 20)
+      randomLevel = Math.min(currentTextLevel + 1, 20);
+    } else {
+      // Inte alla rätt → gå ner 1 nivå (min 1)
+      randomLevel = Math.max(currentTextLevel - 1, 1);
+    }
 
     // Starta direkt med slumpmässiga val
     await handleStart(randomTopic, randomLevel, randomTextType);
