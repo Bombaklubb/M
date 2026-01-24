@@ -6,6 +6,7 @@ interface ResultViewProps {
   data: ReadingExercise;
   answers: UserAnswers;
   onRestart: () => void;
+  onRandomize?: () => void;
   pointsEarned?: number;
   newLevel?: number;
   oldLevel?: number;
@@ -16,6 +17,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   data,
   answers,
   onRestart,
+  onRandomize,
   pointsEarned = 0,
   newLevel,
   oldLevel,
@@ -149,9 +151,14 @@ export const ResultView: React.FC<ResultViewProps> = ({
         })}
       </div>
 
-      <div className="mt-12 flex justify-center pb-20">
-        <Button onClick={onRestart} className="py-4 text-xl shadow-xl">
-          🔄 Gör en ny övning
+      <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center pb-20 px-4">
+        {onRandomize && (
+          <Button onClick={onRandomize} className="py-4 px-6 text-lg shadow-xl bg-purple-600 hover:bg-purple-700">
+            🎲 Slumpa fram ny text
+          </Button>
+        )}
+        <Button onClick={onRestart} className="py-4 px-6 text-lg shadow-xl bg-indigo-600 hover:bg-indigo-700">
+          🏠 Startsidan
         </Button>
       </div>
     </div>

@@ -5,19 +5,23 @@ interface HeaderProps {
   user: User | null;
   onLogout: () => void;
   onProfileClick?: () => void;
+  onLogoClick?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ user, onLogout, onProfileClick }) => {
+export const Header: React.FC<HeaderProps> = ({ user, onLogout, onProfileClick, onLogoClick }) => {
   if (!user) return null;
 
   return (
     <header className="bg-white shadow-md border-b-4 border-indigo-100">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <button
+          onClick={onLogoClick}
+          className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+        >
           <span className="text-3xl">📚</span>
-          <span className="text-xl font-extrabold text-indigo-900">Läs och lär</span>
-        </div>
+          <span className="text-xl font-extrabold text-indigo-900">LäsHjälpen</span>
+        </button>
 
         {/* User info */}
         <div className="flex items-center space-x-4">
