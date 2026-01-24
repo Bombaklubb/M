@@ -136,13 +136,13 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
           </div>
         </div>
 
-        <Button 
-          onClick={handleStart} 
-          fullWidth 
+        <Button
+          onClick={handleStart}
+          fullWidth
           disabled={!topic && !customTopic}
           className="text-xl py-4"
         >
-          🚀 Starta äventyret!
+          Starta läsningen
         </Button>
       </div>
     </div>

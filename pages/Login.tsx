@@ -7,12 +7,11 @@ interface LoginProps {
 
 export const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [username, setUsername] = useState('');
-  const [role, setRole] = useState<UserRole>(UserRole.STUDENT);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (username.trim()) {
-      onLogin(username.trim(), role);
+      onLogin(username.trim(), UserRole.STUDENT);
     }
   };
 
@@ -47,46 +46,13 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
             />
           </div>
 
-          {/* Role selection */}
-          <div>
-            <label className="block text-sm font-bold text-slate-700 mb-3">
-              Jag är en...
-            </label>
-            <div className="grid grid-cols-2 gap-3">
-              <button
-                type="button"
-                onClick={() => setRole(UserRole.STUDENT)}
-                className={`p-4 rounded-xl border-2 transition-all ${
-                  role === UserRole.STUDENT
-                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-indigo-300'
-                }`}
-              >
-                <div className="text-3xl mb-1">🎓</div>
-                <div className="font-bold">Elev</div>
-              </button>
-              <button
-                type="button"
-                onClick={() => setRole(UserRole.TEACHER)}
-                className={`p-4 rounded-xl border-2 transition-all ${
-                  role === UserRole.TEACHER
-                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-indigo-300'
-                }`}
-              >
-                <div className="text-3xl mb-1">👨‍🏫</div>
-                <div className="font-bold">Lärare</div>
-              </button>
-            </div>
-          </div>
-
           {/* Submit button */}
           <button
             type="submit"
             disabled={!username.trim()}
             className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
-            {role === UserRole.STUDENT ? '🚀 Börja läsa!' : '📊 Till lärarvy'}
+            Börja läsa!
           </button>
         </form>
 

@@ -93,7 +93,9 @@ function App() {
 
     // Slumpa fram ämne, nivå och texttyp
     const randomTopic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
-    const randomLevel = user?.currentLevel || 4;
+    // Använd nivån från texten som just gjordes, eller en nivå högre
+    const currentTextLevel = exerciseData?.level || user?.currentLevel || 4;
+    const randomLevel = Math.random() < 0.5 ? currentTextLevel : Math.min(currentTextLevel + 1, 20);
     const randomTextType = TEXT_TYPES[Math.floor(Math.random() * TEXT_TYPES.length)].value;
 
     // Starta direkt med slumpmässiga val
