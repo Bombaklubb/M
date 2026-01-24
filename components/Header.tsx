@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onProfileClick, 
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
         >
           <span className="text-3xl">📚</span>
-          <span className="text-xl font-extrabold text-indigo-900">LäsHjälpen</span>
+          <span className="text-xl font-extrabold text-indigo-900">Läs och lär</span>
         </button>
 
         {/* User info */}
