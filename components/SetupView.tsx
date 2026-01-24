@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { TOPICS, TEXT_TYPES, TextType } from '../types';
-import { Button } from './Button';
 import { LEVEL_DESCRIPTIONS } from '../utils/levelCalculator';
 
 interface SetupViewProps {
@@ -96,54 +95,41 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
           </label>
 
           {/* Level Display */}
-          <div className="bg-gradient-to-br from-teal-500 to-indigo-600 rounded-2xl p-6 mb-4 text-center">
-            <div className="text-5xl font-black text-white mb-2">{level}</div>
-            <div className="text-white font-bold text-lg">{LEVEL_DESCRIPTIONS[level]}</div>
+          <div className="bg-gradient-to-br from-teal-500 to-indigo-600 rounded-2xl p-8 mb-6 text-center shadow-lg">
+            <div className="text-7xl font-black text-white mb-3">{level}</div>
+            <div className="text-white font-bold text-xl">{LEVEL_DESCRIPTIONS[level]}</div>
           </div>
 
           {/* Slider */}
-          <div className="relative">
+          <div className="relative mb-4">
             <input
               type="range"
               min="1"
               max="20"
               value={level}
               onChange={(e) => setLevel(Number(e.target.value))}
-              className="w-full h-3 bg-slate-200 rounded-full appearance-none cursor-pointer slider"
+              className="w-full h-4 bg-slate-200 rounded-full appearance-none cursor-pointer slider"
               style={{
                 background: `linear-gradient(to right, #14b8a6 0%, #14b8a6 ${((level - 1) / 19) * 100}%, #e2e8f0 ${((level - 1) / 19) * 100}%, #e2e8f0 100%)`
               }}
             />
-            <div className="flex justify-between mt-2 text-xs text-slate-500 font-medium">
-              <span>Nivå 1<br/>(Åk 1)</span>
-              <span>Nivå 5<br/>(Åk 5)</span>
-              <span>Nivå 9<br/>(Åk 9)</span>
-              <span>Nivå 20<br/>(Max)</span>
+            <div className="flex justify-between mt-3 text-sm text-slate-600 font-bold">
+              <span>Nivå 1</span>
+              <span>Nivå 5</span>
+              <span>Nivå 10</span>
+              <span>Nivå 15</span>
+              <span>Nivå 20</span>
             </div>
-          </div>
-
-          {/* Quick Select Buttons */}
-          <div className="mt-4 flex flex-wrap gap-2 justify-center">
-            <button onClick={() => setLevel(1)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 1</button>
-            <button onClick={() => setLevel(2)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 2</button>
-            <button onClick={() => setLevel(3)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 3</button>
-            <button onClick={() => setLevel(4)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 4</button>
-            <button onClick={() => setLevel(5)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 5</button>
-            <button onClick={() => setLevel(6)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 6</button>
-            <button onClick={() => setLevel(7)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 7</button>
-            <button onClick={() => setLevel(8)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 8</button>
-            <button onClick={() => setLevel(9)} className="px-3 py-1 text-xs bg-slate-100 hover:bg-indigo-100 rounded-full font-medium transition">Åk 9</button>
           </div>
         </div>
 
-        <Button
+        <button
           onClick={handleStart}
-          fullWidth
           disabled={!topic && !customTopic}
-          className="text-xl py-4"
+          className="w-full py-5 px-6 rounded-xl bg-green-600 text-white font-extrabold text-2xl shadow-lg hover:bg-green-700 hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:bg-gray-300"
         >
           Starta läsningen
-        </Button>
+        </button>
       </div>
     </div>
   );
