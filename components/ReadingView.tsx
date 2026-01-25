@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ReadingExercise, UserAnswers } from '../types';
 import { Button } from './Button';
 
@@ -10,58 +10,9 @@ interface ReadingViewProps {
 export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) => {
   const [answers, setAnswers] = useState<UserAnswers>({});
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [voicesLoaded, setVoicesLoaded] = useState(false);
-
-  // Ladda röster (vissa webbläsare laddar dem asynkront)
-  useEffect(() => {
-    if ('speechSynthesis' in window) {
-      const loadVoices = () => {
-        const voices = window.speechSynthesis.getVoices();
-        if (voices.length > 0) {
-          setVoicesLoaded(true);
-        }
-      };
-
-      loadVoices();
-      window.speechSynthesis.onvoiceschanged = loadVoices;
-    }
-  }, []);
 
   // Split content into paragraphs for better readability
   const paragraphs = data.content.split('\n').filter(p => p.trim().length > 0);
-
-  const handleSpeak = () => {
-    if ('speechSynthesis' in window) {
-      if (isSpeaking) {
-        window.speechSynthesis.cancel();
-        setIsSpeaking(false);
-      } else {
-        const utterance = new SpeechSynthesisUtterance(data.content);
-        utterance.lang = 'sv-SE';
-
-        // Försök hitta en bättre svensk röst
-        const voices = window.speechSynthesis.getVoices();
-        const swedishVoice = voices.find(voice =>
-          voice.lang.startsWith('sv') &&
-          (voice.name.includes('Alva') || voice.name.includes('Klara') || voice.name.includes('Google'))
-        ) || voices.find(voice => voice.lang.startsWith('sv'));
-
-        if (swedishVoice) {
-          utterance.voice = swedishVoice;
-        }
-
-        // Mer naturliga inställningar
-        utterance.rate = 0.85; // Lite långsammare för bättre förståelse
-        utterance.pitch = 1.1; // Lite högre tonhöjd för vänligare ton
-        utterance.volume = 1.0;
-
-        utterance.onend = () => setIsSpeaking(false);
-        window.speechSynthesis.speak(utterance);
-        setIsSpeaking(true);
-      }
-    }
-  };
 
   const handleAnswerSelect = (questionId: number, answer: string) => {
     setAnswers(prev => ({
@@ -94,17 +45,9 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) =>
     <div className="min-h-screen bg-sky-50">
       {/* Header */}
       <div className="bg-white border-b border-slate-200 px-4 py-3">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div>
-            <h2 className="text-xl font-bold text-slate-800">{data.title}</h2>
-            <p className="text-sm text-slate-500">Nivå {data.level}</p>
-          </div>
-          <button
-            onClick={handleSpeak}
-            className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg font-medium hover:bg-purple-200 transition-colors text-sm"
-          >
-            {isSpeaking ? '⏸️ Pausa' : '🔊 Lyssna'}
-          </button>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-xl font-bold text-slate-800">{data.title}</h2>
+          <p className="text-sm text-slate-500">Nivå {data.level}</p>
         </div>
       </div>
 
