@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReadingExercise, UserAnswers } from '../types';
 import { Button } from './Button';
 
@@ -11,6 +11,22 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) =>
   const [answers, setAnswers] = useState<UserAnswers>({});
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [voicesLoaded, setVoicesLoaded] = useState(false);
+
+  // Ladda röster (vissa webbläsare laddar dem asynkront)
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length > 0) {
+          setVoicesLoaded(true);
+        }
+      };
+
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+  }, []);
 
   // Split content into paragraphs for better readability
   const paragraphs = data.content.split('\n').filter(p => p.trim().length > 0);
@@ -23,7 +39,23 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) =>
       } else {
         const utterance = new SpeechSynthesisUtterance(data.content);
         utterance.lang = 'sv-SE';
-        utterance.rate = 0.9;
+
+        // Försök hitta en bättre svensk röst
+        const voices = window.speechSynthesis.getVoices();
+        const swedishVoice = voices.find(voice =>
+          voice.lang.startsWith('sv') &&
+          (voice.name.includes('Alva') || voice.name.includes('Klara') || voice.name.includes('Google'))
+        ) || voices.find(voice => voice.lang.startsWith('sv'));
+
+        if (swedishVoice) {
+          utterance.voice = swedishVoice;
+        }
+
+        // Mer naturliga inställningar
+        utterance.rate = 0.85; // Lite långsammare för bättre förståelse
+        utterance.pitch = 1.1; // Lite högre tonhöjd för vänligare ton
+        utterance.volume = 1.0;
+
         utterance.onend = () => setIsSpeaking(false);
         window.speechSynthesis.speak(utterance);
         setIsSpeaking(true);
