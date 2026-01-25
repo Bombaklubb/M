@@ -5,20 +5,44 @@ import { SetupView } from './components/SetupView';
 import { ReadingView } from './components/ReadingView';
 import { ResultView } from './components/ResultView';
 import { Header } from './components/Header';
+import { CardGameSetupView, TextCardGameView } from './components/cardgame';
 import { generateExercise } from './services/anthropicService';
-import { ReadingExercise, AppState, UserAnswers, UserRole, Badge, TextType, TOPICS, TEXT_TYPES } from './types';
+import {
+  ReadingExercise,
+  AppState,
+  UserAnswers,
+  UserRole,
+  Badge,
+  TextType,
+  TOPICS,
+  TEXT_TYPES,
+  CardGameTextType,
+  CardGameLevel
+} from './types';
 import { useAuth } from './hooks/useAuth';
 import { useProgress } from './hooks/useProgress';
+
+// Huvudvy-state
+type MainView = 'menu' | 'reading' | 'cardgame';
 
 function App() {
   const { user, isLoading, login, logout, updateUser, isAuthenticated } = useAuth();
   const { recordResult } = useProgress(user, updateUser);
 
+  // Main view state
+  const [mainView, setMainView] = useState<MainView>('menu');
+
+  // Reading exercise state
   const [appState, setAppState] = useState<AppState>(AppState.SETUP);
   const [exerciseData, setExerciseData] = useState<ReadingExercise | null>(null);
   const [userAnswers, setUserAnswers] = useState<UserAnswers>({});
   const [errorMsg, setErrorMsg] = useState('');
   const [showProfile, setShowProfile] = useState(false);
+
+  // Card game state
+  const [cardGameSetup, setCardGameSetup] = useState(true);
+  const [cardGameTextType, setCardGameTextType] = useState<CardGameTextType>(CardGameTextType.NARRATIVE);
+  const [cardGameLevel, setCardGameLevel] = useState<CardGameLevel>(CardGameLevel.B);
 
   // Result info for displaying
   const [resultInfo, setResultInfo] = useState<{
@@ -83,7 +107,27 @@ function App() {
     setUserAnswers({});
     setResultInfo(null);
     setAppState(AppState.SETUP);
+    setMainView('menu');
     window.scrollTo(0, 0);
+  };
+
+  // Card game handlers
+  const handleStartCardGame = (textType: CardGameTextType, level: CardGameLevel) => {
+    setCardGameTextType(textType);
+    setCardGameLevel(level);
+    setCardGameSetup(false);
+  };
+
+  const handleCardGameBack = () => {
+    if (cardGameSetup) {
+      setMainView('menu');
+    } else {
+      setCardGameSetup(true);
+    }
+  };
+
+  const handleCardGameNewGame = () => {
+    setCardGameSetup(true);
   };
 
   const handleRandomize = async () => {
@@ -185,60 +229,140 @@ function App() {
   // Main student view
   return (
     <div className="min-h-screen bg-sky-50 font-sans selection:bg-indigo-200">
-      <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(true)} onLogoClick={handleRestart} />
-
-      {/* Loading State */}
-      {appState === AppState.LOADING && (
-        <div className="fixed inset-0 flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm z-50">
-          <div className="w-16 h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mb-4"></div>
-          <p className="text-xl font-bold text-indigo-900 animate-pulse">Författaren skriver...</p>
-          <p className="text-sm text-indigo-400 mt-2">Det kan ta några sekunder</p>
-        </div>
+      {/* Show header for menu and reading views (card game has its own header) */}
+      {mainView !== 'cardgame' && (
+        <Header user={user} onLogout={handleLogout} onProfileClick={() => setShowProfile(true)} onLogoClick={handleRestart} />
       )}
 
-      {/* Error State */}
-      {appState === AppState.ERROR && (
-        <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
-          <div className="bg-white p-8 rounded-3xl shadow-xl max-w-md text-center">
-            <div className="text-6xl mb-4">🤕</div>
-            <h2 className="text-2xl font-bold text-slate-800 mb-2">Oj då!</h2>
-            <p className="text-slate-600 mb-6">{errorMsg}</p>
+      {/* Main Menu */}
+      {mainView === 'menu' && (
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="text-center mb-10">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-indigo-900 mb-4">
+              Välkommen, {user.username}!
+            </h1>
+            <p className="text-xl text-slate-600">
+              Vad vill du göra idag?
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Läs och lär */}
             <button
-              onClick={() => setAppState(AppState.SETUP)}
-              className="px-6 py-3 bg-indigo-600 text-white rounded-full font-bold hover:bg-indigo-700 transition"
+              onClick={() => setMainView('reading')}
+              className="bg-white p-8 rounded-3xl shadow-xl border-b-8 border-indigo-200 hover:border-indigo-400 transition-all hover:shadow-2xl hover:scale-[1.02] text-left group"
             >
-              Försök igen
+              <div className="text-6xl mb-4">📚</div>
+              <h2 className="text-2xl font-bold text-indigo-900 mb-2 group-hover:text-indigo-700">
+                Läs och lär
+              </h2>
+              <p className="text-slate-600">
+                Läs texter och svara på frågor. Träna din läsförståelse och samla poäng!
+              </p>
+              <div className="mt-4 text-sm text-indigo-600 font-medium">
+                Nivå {user.currentLevel} • {user.totalPoints} poäng
+              </div>
+            </button>
+
+            {/* Textkortlek */}
+            <button
+              onClick={() => {
+                setCardGameSetup(true);
+                setMainView('cardgame');
+              }}
+              className="bg-white p-8 rounded-3xl shadow-xl border-b-8 border-teal-200 hover:border-teal-400 transition-all hover:shadow-2xl hover:scale-[1.02] text-left group"
+            >
+              <div className="text-6xl mb-4">🃏</div>
+              <h2 className="text-2xl font-bold text-teal-900 mb-2 group-hover:text-teal-700">
+                Textkortlek
+              </h2>
+              <p className="text-slate-600">
+                Dra kort och bygg din egen text! Träna på olika texttyper med hjälp av kortlek.
+              </p>
+              <div className="mt-4 text-sm text-teal-600 font-medium">
+                Berättande • Fakta • Instruktion • Argumenterande
+              </div>
             </button>
           </div>
         </div>
       )}
 
-      {/* Main Content */}
-      <main>
-        {appState === AppState.SETUP && (
-          <SetupView onStart={handleStart} userLevel={user?.currentLevel} />
-        )}
+      {/* Reading Exercise View */}
+      {mainView === 'reading' && (
+        <>
+          {/* Loading State */}
+          {appState === AppState.LOADING && (
+            <div className="fixed inset-0 flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm z-50">
+              <div className="w-16 h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mb-4"></div>
+              <p className="text-xl font-bold text-indigo-900 animate-pulse">Författaren skriver...</p>
+              <p className="text-sm text-indigo-400 mt-2">Det kan ta några sekunder</p>
+            </div>
+          )}
 
-        {appState === AppState.READING && exerciseData && (
-          <ReadingView
-            data={exerciseData}
-            onComplete={handleComplete}
-          />
-        )}
+          {/* Error State */}
+          {appState === AppState.ERROR && (
+            <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
+              <div className="bg-white p-8 rounded-3xl shadow-xl max-w-md text-center">
+                <div className="text-6xl mb-4">🤕</div>
+                <h2 className="text-2xl font-bold text-slate-800 mb-2">Oj då!</h2>
+                <p className="text-slate-600 mb-6">{errorMsg}</p>
+                <button
+                  onClick={() => setAppState(AppState.SETUP)}
+                  className="px-6 py-3 bg-indigo-600 text-white rounded-full font-bold hover:bg-indigo-700 transition"
+                >
+                  Försök igen
+                </button>
+              </div>
+            </div>
+          )}
 
-        {appState === AppState.RESULT && exerciseData && (
-          <ResultView
-            data={exerciseData}
-            answers={userAnswers}
-            onRestart={handleRestart}
-            onRandomize={handleRandomize}
-            pointsEarned={resultInfo?.pointsEarned}
-            newLevel={resultInfo?.newLevel}
-            oldLevel={resultInfo?.oldLevel}
-            newBadges={resultInfo?.newBadges}
-          />
-        )}
-      </main>
+          {/* Main Content */}
+          <main>
+            {appState === AppState.SETUP && (
+              <SetupView onStart={handleStart} userLevel={user?.currentLevel} />
+            )}
+
+            {appState === AppState.READING && exerciseData && (
+              <ReadingView
+                data={exerciseData}
+                onComplete={handleComplete}
+              />
+            )}
+
+            {appState === AppState.RESULT && exerciseData && (
+              <ResultView
+                data={exerciseData}
+                answers={userAnswers}
+                onRestart={handleRestart}
+                onRandomize={handleRandomize}
+                pointsEarned={resultInfo?.pointsEarned}
+                newLevel={resultInfo?.newLevel}
+                oldLevel={resultInfo?.oldLevel}
+                newBadges={resultInfo?.newBadges}
+              />
+            )}
+          </main>
+        </>
+      )}
+
+      {/* Card Game View */}
+      {mainView === 'cardgame' && (
+        <>
+          {cardGameSetup ? (
+            <CardGameSetupView
+              onStart={handleStartCardGame}
+              onBack={handleCardGameBack}
+            />
+          ) : (
+            <TextCardGameView
+              textType={cardGameTextType}
+              level={cardGameLevel}
+              onBack={handleCardGameBack}
+              onNewGame={handleCardGameNewGame}
+            />
+          )}
+        </>
+      )}
     </div>
   );
 }
