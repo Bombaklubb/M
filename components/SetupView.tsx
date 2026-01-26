@@ -94,6 +94,28 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
             3. Välj svårighetsgrad (nivå 1-20)
           </label>
 
+          {/* Reading Tips */}
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-4">
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">👀</span>
+                <span className="text-slate-700 font-medium">Läs noga</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🛑</span>
+                <span className="text-slate-700 font-medium">Stanna när du inte förstår</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🧠</span>
+                <span className="text-slate-700 font-medium">Försök förstå även det som inte står rakt ut</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🔍</span>
+                <span className="text-slate-700 font-medium">Leta efter ord du inte förstår</span>
+              </div>
+            </div>
+          </div>
+
           {/* Level Display */}
           <div className="bg-gradient-to-br from-teal-500 to-indigo-600 rounded-2xl p-8 mb-6 text-center shadow-lg">
             <div className="text-7xl font-black text-white mb-3">{level}</div>
