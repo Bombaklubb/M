@@ -2,47 +2,62 @@
 
 ## Översikt
 
-Appen använder nu en robust server-side lösning med Vercel Serverless Functions för att hantera många samtidiga användare (25-30 elever).
+Appen använder nu **Google Gemini AI** med en robust server-side lösning via Vercel Serverless Functions för att hantera många samtidiga användare (25-30 elever).
 
 ### Vad som är implementerat:
 
+✅ **Google Gemini 2.0 Flash** - Gratis upp till 1500 requests/dag
 ✅ **Server-side kö** - Max 3 samtidiga AI-anrop
 ✅ **Automatisk retry** - Exponentiell backoff med jitter (max 4 försök)
 ✅ **Caching** - 10 minuters cache för samma ämne/nivå/texttyp
-✅ **Token-optimering** - Max 600 tokens istället för 4000
+✅ **Token-optimering** - Effektiv användning av AI-resurser
 ✅ **Bättre felmeddelanden** - Tydliga kö- och retry-meddelanden
 ✅ **Logging** - Status, köläge, cache hits/misses
 
 ## Deployment till Vercel
 
-### 1. Sätt miljövariabler i Vercel
+### 1. Skaffa Google API-nyckel (GRATIS)
+
+1. Gå till: https://aistudio.google.com/app/apikey
+2. Logga in med ditt Google-konto
+3. Klicka på **"Create API Key"**
+4. Kopiera nyckeln (börjar med `AIza...`)
+
+### 2. Sätt miljövariabler i Vercel
 
 Gå till Vercel Dashboard → Settings → Environment Variables och lägg till:
 
 ```
-ANTHROPIC_API_KEY=sk-ant-api03-...
+GOOGLE_API_KEY=AIza...
 ```
 
-**VIKTIGT:** Ta bort `VITE_ANTHROPIC_API_KEY` från miljövariablerna - den används inte längre! API-nyckeln ska endast finnas på servern.
+**VIKTIGT:**
+- Ta bort `ANTHROPIC_API_KEY` från miljövariablerna om den finns
+- API-nyckeln ska endast finnas på servern
 
-### 2. Deploy till Vercel
+### 3. Deploy till Vercel
 
 ```bash
 # Commit och pusha ändringar
 git add .
-git commit -m "feat: Lägg till server-side queue och caching för rate limit-hantering"
+git commit -m "feat: Byt till Google Gemini för gratis AI-generering"
 git push -u origin claude/build-feature-Rdg4Z
 
 # Vercel deployer automatiskt när du pushar
 ```
 
-### 3. Verifiera deployment
+### 4. Verifiera deployment
 
 Efter deployment, testa appen med flera användare samtidigt:
 - Öppna appen i flera flikar
 - Starta övningar samtidigt
 - Kontrollera att kö-systemet fungerar (meddelanden som "står i kö")
 - Kontrollera att retry fungerar vid rate limits
+
+**Gratis tier begränsningar (Gemini):**
+- 1500 requests per dag (gratis)
+- 15 requests per minut
+- Detta räcker för 25-30 elever samtidigt med cache
 
 ## Lokal utveckling
 
@@ -94,13 +109,14 @@ vercel dev
 - Verifiera att `vercel.json` är korrekt konfigurerad
 
 ### Problem: "Missing API key"
-- Kontrollera att `ANTHROPIC_API_KEY` finns i Vercel Environment Variables
+- Kontrollera att `GOOGLE_API_KEY` finns i Vercel Environment Variables
 - Verifiera att du använder rätt environment (Production/Preview/Development)
+- Nyckeln ska börja med `AIza...`
 
 ### Problem: Fortfarande rate limit errors
-- Kontrollera att du använder den nya API-endpointen (inte direkta Anthropic-anrop)
+- Kontrollera att du använder den nya API-endpointen (inte direkta Gemini-anrop)
 - Verifiera att caching fungerar (se Vercel Function Logs)
-- Överväg att öka `MAX_CONCURRENT` om du har högre rate limits
+- Gemini free tier: 15 req/min - kö-systemet hjälper dig hantera detta
 
 ## Monitoring
 
@@ -112,10 +128,21 @@ vercel dev
   - `[ATTEMPT X/4]` - Retry-försök
   - `[RETRY]` - Backoff-tider
 
+## Kostnader och begränsningar
+
+**Google Gemini Free Tier:**
+- 1500 requests/dag - GRATIS
+- 15 requests/minut - GRATIS
+- För en klass med 25-30 elever: Helt gratis med cache!
+
+**Om du behöver mer:**
+- Gemini Pro: $0.000125 per 1K tokens (mycket billigare än Claude)
+- Uppgradera på: https://aistudio.google.com/
+
 ## Nästa steg (valfritt)
 
-Om du fortfarande upplever problem kan du:
+Om du behöver ännu bättre prestanda:
 1. Öka cache TTL till 30 minuter
 2. Implementera persistent cache (Redis/Upstash)
-3. Uppgradera till högre Anthropic tier för fler requests/minut
+3. Uppgradera till Gemini Pro för högre rate limits
 4. Lägga till pre-genererade övningar som fallback
