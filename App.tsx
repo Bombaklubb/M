@@ -70,7 +70,7 @@ function App() {
 
     // Calculate time spent
     const timeSpentMs = startTime ? Date.now() - startTime : 0;
-    const timeSpentMinutes = Math.round(timeSpentMs / 60000); // Convert to minutes
+    const timeSpentMinutes = Math.max(1, Math.round(timeSpentMs / 60000)); // Minimum 1 minute
 
     // Calculate score
     if (exerciseData && user) {

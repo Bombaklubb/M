@@ -73,7 +73,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
         )}
 
         {/* Time spent */}
-        {timeSpentMinutes > 0 && (
+        {timeSpentMinutes >= 1 && (
           <div className="mt-4 inline-block bg-blue-50 px-6 py-3 rounded-full border-2 border-blue-200">
             <span className="text-2xl mr-2">⏱️</span>
             <span className="font-black text-blue-600 text-xl">{timeSpentMinutes} minut{timeSpentMinutes !== 1 ? 'er' : ''}</span>
