@@ -1,142 +1,44 @@
-import Anthropic from '@anthropic-ai/sdk';
 import { ReadingExercise, QuestionType, TextType } from '../types';
 
-const anthropic = new Anthropic({
-  apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY,
-  dangerouslyAllowBrowser: true, // För development - i produktion bör detta gå via backend
-});
-
-const SYSTEM_INSTRUCTION = `
-Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
-Din roll är att skapa engagerande texter och pedagogiska frågor anpassade för olika åldrar.
-Språket ska vara tydligt och anpassat till elevens årskurs.
-Undvik våld, skräck och olämpligt innehåll.
-
-VIKTIGT - Skriv för uppläsning:
-Texterna kommer att läsas upp med text-to-speech. Skriv därför som om du pratar lugnt med elever.
-- Använd korta, tydliga meningar som är lätta att följa
-- Variera meningslängd för naturligt flöde
-- Skriv med en vänlig, pedagogisk röst - som en berättare
-- Använd enkla, vardagliga ord som låter naturliga när de sägs högt
-- Undvik långa, komplicerade meningar
-- Undvik formell, stel eller teknisk stil
-- Undvik robotliknande upprepningar av samma fraser
-- Skriv som om du berättar för en god vän
-- Använd punkter (.) för att skapa naturliga pauser
-- Betona det viktiga genom att göra meningar kortare och tydligare
-
-Texttyper:
-- BERÄTTANDE: Berättelser med handling, karaktärer och händelseförlopp. Kronologisk struktur.
-- BESKRIVANDE: Beskrivningar av personer, platser, föremål eller företeelser. Faktabaserat.
-- ARGUMENTERANDE: Texter som presenterar åsikter och argument för/emot något. För högre nivåer.
-
-Nivåguide (1-20):
-- Nivå 1 (Åk 1): 50-100 ord. Mycket enkla meningar. Vardagliga ord. Konkret innehåll.
-- Nivå 2 (Åk 2): 100-150 ord. Enkla meningar. Vanliga ord.
-- Nivå 3 (Åk 3): 150-250 ord. Lite längre meningar. Varierat ordförråd.
-- Nivå 4 (Åk 4): 250-350 ord. Mer komplexa meningar. Rikare språk.
-- Nivå 5 (Åk 5): 350-500 ord. Avancerade meningar. Djupare innehåll.
-- Nivå 6 (Åk 6): 500-650 ord. Mycket varierande språk och innehåll.
-- Nivå 7 (Åk 7): 650-800 ord. Högstadietexter med komplexitet.
-- Nivå 8 (Åk 8): 800-1000 ord. Sofistikerade texter och teman.
-- Nivå 9 (Åk 9): 1000-1200 ord. Experttexter för högstadiet.
-- Nivå 10-20: Extra utmaningsnivåer med gradvis ökande komplexitet och längd (upp till 1500 ord).
-
-Frågedistribution (totalt 6 frågor):
-- Fråga 1-3: "På raderna" - Hitta fakta direkt i texten (explicit information, enkla faktafrågor)
-- Fråga 4-6: "Mellan raderna" - Läsa mellan raderna (inferensfrågor, slutsatser, djupare förståelse)
-
-Alla frågor ska vara flervalsfrågor med exakt 4 alternativ.
-Ett alternativ är rätt, de andra tre ska vara trovärdiga men felaktiga.
-Frågornas svårighetsgrad ska matcha textens nivå.
-`;
-
-const getTextTypeLabel = (textType: TextType): string => {
-  switch (textType) {
-    case TextType.NARRATIVE:
-      return 'BERÄTTANDE';
-    case TextType.DESCRIPTIVE:
-      return 'BESKRIVANDE';
-    case TextType.ARGUMENTATIVE:
-      return 'ARGUMENTERANDE';
-  }
-};
-
 export const generateExercise = async (topic: string, level: number, textType: TextType): Promise<ReadingExercise> => {
-  const textTypeLabel = getTextTypeLabel(textType);
-
-  const prompt = `
-Skapa en läsförståelseövning på svenska.
-Ämne: ${topic}
-Nivå: ${level} (skala 1-20, där 1 är lättast för årskurs 1 och 20 är svårast för årskurs 9)
-Texttyp: ${textTypeLabel}
-
-Returnera svaret som ett JSON-objekt med följande struktur:
-{
-  "level": ${level},
-  "title": "En kort, engagerande titel",
-  "content": "Själva texten som eleven ska läsa",
-  "textType": "${textType}",
-  "questions": [
-    {
-      "id": 1,
-      "type": "multiple_choice",
-      "question": "Frågan?",
-      "options": ["Alternativ A", "Alternativ B", "Alternativ C", "Alternativ D"],
-      "correctAnswer": "Det exakta svaret som finns i options",
-      "explanation": "Pedagogisk förklaring varför svaret är rätt"
-    }
-  ]
-}
-
-VIKTIGT:
-- Texten ska vara intressant och engagerande för åldersgruppen
-- Använd konkreta exempel och vardagsnära situationer
-- Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
-- correctAnswer måste matcha exakt ett av alternativen i options-arrayen
-- Förklaringen ska vara uppmuntrande och lärorik
-`;
-
   try {
-    const message = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 4000,
-      temperature: 0.8,
-      system: SYSTEM_INSTRUCTION,
-      messages: [
-        {
-          role: 'user',
-          content: prompt,
-        },
-      ],
+    // Call the serverless API endpoint
+    const response = await fetch('/api/generate-exercise', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        topic,
+        level,
+        textType,
+      }),
     });
 
-    const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
 
-    // Extrahera JSON från svaret (ibland kan Claude wrappa det i markdown)
-    let jsonText = responseText;
-    const jsonMatch = responseText.match(/```json\n([\s\S]*?)\n```/) || responseText.match(/```\n([\s\S]*?)\n```/);
-    if (jsonMatch) {
-      jsonText = jsonMatch[1];
+      // Handle rate limit errors
+      if (response.status === 429 || errorData.error === 'RATE_LIMIT') {
+        throw new Error('RATE_LIMIT');
+      }
+
+      throw new Error(errorData.message || 'Kunde inte generera övning. Försök igen.');
     }
 
-    const data = JSON.parse(jsonText) as ReadingExercise;
-
-    // Tvinga att använda den nivå som användaren valde (AI:n kan ibland ändra nivån)
-    data.level = level;
-
-    // Validera att alla frågor har rätt format
-    if (!data.questions || data.questions.length !== 6) {
-      throw new Error('Felaktigt antal frågor genererade');
-    }
-
-    return data;
+    const data = await response.json();
+    return data as ReadingExercise;
   } catch (error: any) {
-    console.error('Anthropic API Error:', error);
+    console.error('API Error:', error);
 
-    // Specialhantering för rate limit-fel
-    if (error?.status === 429 || error?.message?.includes('rate_limit')) {
-      throw new Error('RATE_LIMIT');
+    // Preserve rate limit errors
+    if (error?.message === 'RATE_LIMIT') {
+      throw error;
+    }
+
+    // Network errors
+    if (error?.name === 'TypeError' && error?.message?.includes('fetch')) {
+      throw new Error('Nätverksfel. Kontrollera din anslutning.');
     }
 
     throw new Error('Kunde inte generera övning. Försök igen.');
