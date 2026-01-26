@@ -78,13 +78,6 @@ export const ResultView: React.FC<ResultViewProps> = ({
           </div>
         )}
 
-        {levelDown && (
-          <div className="mt-4 bg-orange-50 border-2 border-orange-200 rounded-2xl p-6 inline-block">
-            <div className="text-5xl mb-2">💪</div>
-            <div className="text-xl font-bold text-orange-700">Fortsätt öva! Du är nu på nivå {newLevel}</div>
-          </div>
-        )}
-
         {/* New badges */}
         {newBadges.length > 0 && (
           <div className="mt-6 space-y-3">
