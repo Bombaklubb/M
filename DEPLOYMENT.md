@@ -6,7 +6,7 @@ Appen använder nu **Google Gemini AI** med en robust server-side lösning via V
 
 ### Vad som är implementerat:
 
-✅ **Google Gemini 2.0 Flash** - Gratis upp till 1500 requests/dag
+✅ **Google Gemini 2.5 Flash Lite** - Gratis upp till 1000 requests/dag
 ✅ **Server-side kö** - Max 3 samtidiga AI-anrop
 ✅ **Automatisk retry** - Exponentiell backoff med jitter (max 4 försök)
 ✅ **Caching** - 10 minuters cache för samma ämne/nivå/texttyp
@@ -54,9 +54,10 @@ Efter deployment, testa appen med flera användare samtidigt:
 - Kontrollera att kö-systemet fungerar (meddelanden som "står i kö")
 - Kontrollera att retry fungerar vid rate limits
 
-**Gratis tier begränsningar (Gemini):**
-- 1500 requests per dag (gratis)
+**Gratis tier begränsningar (Gemini 2.5 Flash Lite):**
+- 1000 requests per dag (gratis)
 - 15 requests per minut
+- 250,000 tokens per minut
 - Detta räcker för 25-30 elever samtidigt med cache
 
 ## Lokal utveckling
@@ -130,13 +131,16 @@ vercel dev
 
 ## Kostnader och begränsningar
 
-**Google Gemini Free Tier:**
-- 1500 requests/dag - GRATIS
+**Google Gemini 2.5 Flash Lite Free Tier (2026):**
+- 1000 requests/dag - GRATIS
 - 15 requests/minut - GRATIS
+- 250,000 tokens/minut - GRATIS
 - För en klass med 25-30 elever: Helt gratis med cache!
+- Kommersiell användning tillåten
 
 **Om du behöver mer:**
-- Gemini Pro: $0.000125 per 1K tokens (mycket billigare än Claude)
+- Gemini 2.5 Flash: 250 requests/dag (gratis)
+- Gemini 2.5 Pro: 100 requests/dag (gratis)
 - Uppgradera på: https://aistudio.google.com/
 
 ## Nästa steg (valfritt)
