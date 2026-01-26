@@ -1,4 +1,4 @@
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // Types
 interface GenerateRequest {
@@ -22,7 +22,7 @@ const MAX_CONCURRENT = 3;
 const queue: Array<() => Promise<void>> = [];
 
 // Google Gemini client
-const genAI = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY || '' });
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
 // System instruction (optimized for token usage)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
@@ -217,19 +217,17 @@ VIKTIGT:
 - Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
-        const result = await genAI.models.generateContent({
+        const model = genAI.getGenerativeModel({
           model: 'gemini-1.5-flash',
-          contents: [{
-            role: 'user',
-            parts: [{ text: prompt }]
-          }],
-          config: {
+          generationConfig: {
             temperature: 0.8,
             maxOutputTokens: 2048,
           },
         });
 
-        const responseText = result.text;
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const responseText = response.text();
 
         // Extract JSON
         let jsonText = responseText.trim();
