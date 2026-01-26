@@ -40,9 +40,9 @@ function App() {
       console.error(error);
 
       // Hantera rate limit-fel
-      if (error?.message === 'RATE_LIMIT' && retryCount < 3) {
-        const waitTime = (retryCount + 1) * 10; // 10s, 20s, 30s
-        setErrorMsg(`Många använder appen just nu. Försöker igen om ${waitTime} sekunder...`);
+      if (error?.message === 'RATE_LIMIT' && retryCount < 2) {
+        const waitTime = (retryCount + 1) * 5; // 5s, 10s
+        setErrorMsg(`Systemet är upptaget. Du står i kö och försöker igen om ${waitTime} sekunder...`);
         setAppState(AppState.ERROR);
 
         // Vänta och försök igen
@@ -50,7 +50,10 @@ function App() {
           handleStart(topic, level, textType, retryCount + 1);
         }, waitTime * 1000);
       } else if (error?.message === 'RATE_LIMIT') {
-        setErrorMsg("För många använder appen samtidigt. Vänta 1-2 minuter och försök igen!");
+        setErrorMsg("Systemet är mycket upptaget just nu. Vänta 30 sekunder och försök igen!");
+        setAppState(AppState.ERROR);
+      } else if (error?.message?.includes('Nätverksfel')) {
+        setErrorMsg("Nätverksfel. Kontrollera din internetanslutning och försök igen.");
         setAppState(AppState.ERROR);
       } else {
         setErrorMsg("Hoppsan! Något gick fel när vi skulle skapa texten. Försök igen!");
@@ -208,7 +211,7 @@ function App() {
         <div className="fixed inset-0 flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm z-50">
           <div className="w-16 h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mb-4"></div>
           <p className="text-xl font-bold text-indigo-900 animate-pulse">Författaren skriver...</p>
-          <p className="text-sm text-indigo-400 mt-2">Det kan ta några sekunder</p>
+          <p className="text-sm text-indigo-400 mt-2">Det kan ta några sekunder. Om många använder appen står du i kö.</p>
         </div>
       )}
 
