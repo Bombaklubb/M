@@ -131,8 +131,14 @@ VIKTIGT:
     }
 
     return data;
-  } catch (error) {
+  } catch (error: any) {
     console.error('Anthropic API Error:', error);
+
+    // Specialhantering för rate limit-fel
+    if (error?.status === 429 || error?.message?.includes('rate_limit')) {
+      throw new Error('RATE_LIMIT');
+    }
+
     throw new Error('Kunde inte generera övning. Försök igen.');
   }
 };
