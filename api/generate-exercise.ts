@@ -218,7 +218,7 @@ VIKTIGT:
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
         const model = genAI.getGenerativeModel({
-          model: 'gemini-pro',
+          model: 'gemini-2.5-flash-lite',
           generationConfig: {
             temperature: 0.8,
             maxOutputTokens: 2048,
