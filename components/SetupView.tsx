@@ -118,8 +118,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
 
           {/* Selected Level Display */}
           <div className="text-center mb-4">
-            <div className="text-5xl font-black text-indigo-900 mb-2">{level}</div>
-            <div className="text-slate-600 font-bold text-lg">{LEVEL_DESCRIPTIONS[level]}</div>
+            <div className="text-6xl font-black text-indigo-900">{level}</div>
           </div>
 
           {/* Slider */}
