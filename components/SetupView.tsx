@@ -95,7 +95,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
           </label>
 
           {/* Reading Tips */}
-          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-4">
+          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-6">
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">👀</span>
@@ -116,14 +116,14 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
             </div>
           </div>
 
-          {/* Level Display */}
-          <div className="bg-gradient-to-br from-teal-500 to-indigo-600 rounded-2xl p-8 mb-6 text-center shadow-lg">
-            <div className="text-7xl font-black text-white mb-3">{level}</div>
-            <div className="text-white font-bold text-xl">{LEVEL_DESCRIPTIONS[level]}</div>
+          {/* Selected Level Display */}
+          <div className="text-center mb-4">
+            <div className="text-5xl font-black text-indigo-900 mb-2">{level}</div>
+            <div className="text-slate-600 font-bold text-lg">{LEVEL_DESCRIPTIONS[level]}</div>
           </div>
 
           {/* Slider */}
-          <div className="relative mb-4">
+          <div className="relative mb-4 px-2">
             <input
               type="range"
               min="1"
@@ -135,27 +135,27 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
                 background: `linear-gradient(to right, #14b8a6 0%, #14b8a6 ${((level - 1) / 19) * 100}%, #e2e8f0 ${((level - 1) / 19) * 100}%, #e2e8f0 100%)`
               }}
             />
-            <div className="flex justify-between mt-4 text-xs text-slate-700 font-extrabold">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
-              <span>6</span>
-              <span>7</span>
-              <span>8</span>
-              <span>9</span>
-              <span>10</span>
-              <span>11</span>
-              <span>12</span>
-              <span>13</span>
-              <span>14</span>
-              <span>15</span>
-              <span>16</span>
-              <span>17</span>
-              <span>18</span>
-              <span>19</span>
-              <span>20</span>
+            <div className="flex justify-between mt-3 px-0.5 text-xs text-slate-700 font-extrabold">
+              <span className="w-3 text-center">1</span>
+              <span className="w-3 text-center">2</span>
+              <span className="w-3 text-center">3</span>
+              <span className="w-3 text-center">4</span>
+              <span className="w-3 text-center">5</span>
+              <span className="w-3 text-center">6</span>
+              <span className="w-3 text-center">7</span>
+              <span className="w-3 text-center">8</span>
+              <span className="w-3 text-center">9</span>
+              <span className="w-3 text-center">10</span>
+              <span className="w-3 text-center">11</span>
+              <span className="w-3 text-center">12</span>
+              <span className="w-3 text-center">13</span>
+              <span className="w-3 text-center">14</span>
+              <span className="w-3 text-center">15</span>
+              <span className="w-3 text-center">16</span>
+              <span className="w-3 text-center">17</span>
+              <span className="w-3 text-center">18</span>
+              <span className="w-3 text-center">19</span>
+              <span className="w-3 text-center">20</span>
             </div>
           </div>
         </div>
