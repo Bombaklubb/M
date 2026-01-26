@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk';
+import { GoogleGenerativeAI } from '@google/genai';
 
 // Types
 interface GenerateRequest {
@@ -21,10 +21,8 @@ let activeRequests = 0;
 const MAX_CONCURRENT = 3;
 const queue: Array<() => Promise<void>> = [];
 
-// Anthropic client
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-});
+// Google Gemini client
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
 // System instruction (optimized for token usage)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
@@ -115,30 +113,23 @@ async function retryWithBackoff<T>(
     } catch (error: any) {
       lastError = error;
 
-      // Check if it's a retryable error
+      // Check if it's a retryable error (429 or 5xx)
       const isRetryable =
         error?.status === 429 ||
         error?.status === 529 ||
-        (error?.status >= 500 && error?.status < 600);
+        (error?.status >= 500 && error?.status < 600) ||
+        error?.message?.includes('quota') ||
+        error?.message?.includes('rate');
 
       if (!isRetryable || attempt === maxAttempts) {
         throw error;
       }
 
-      // Get retry-after header if available
-      const retryAfter = error?.headers?.['retry-after'];
-      let waitTime: number;
-
-      if (retryAfter) {
-        waitTime = parseInt(retryAfter) * 1000;
-        console.log(`[RETRY] Using retry-after header: ${waitTime}ms`);
-      } else {
-        // Exponential backoff with jitter: 2^attempt * 1000 + random(0-1000)
-        const baseWait = Math.pow(2, attempt) * 1000;
-        const jitter = Math.random() * 1000;
-        waitTime = baseWait + jitter;
-        console.log(`[RETRY] Exponential backoff: ${waitTime.toFixed(0)}ms`);
-      }
+      // Exponential backoff with jitter: 2^attempt * 1000 + random(0-1000)
+      const baseWait = Math.pow(2, attempt) * 1000;
+      const jitter = Math.random() * 1000;
+      const waitTime = baseWait + jitter;
+      console.log(`[RETRY] Exponential backoff: ${waitTime.toFixed(0)}ms`);
 
       await new Promise((resolve) => setTimeout(resolve, waitTime));
     }
@@ -196,7 +187,9 @@ export default async function handler(req: any, res: any) {
       return await retryWithBackoff(async () => {
         const textTypeLabel = getTextTypeLabel(textType);
 
-        const prompt = `Skapa en läsförståelseövning på svenska.
+        const prompt = `${SYSTEM_INSTRUCTION}
+
+Skapa en läsförståelseövning på svenska.
 Ämne: ${topic}
 Nivå: ${level} (skala 1-20)
 Texttyp: ${textTypeLabel}
@@ -224,16 +217,17 @@ VIKTIGT:
 - Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
-        const message = await anthropic.messages.create({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 600,
-          temperature: 0.8,
-          system: SYSTEM_INSTRUCTION,
-          messages: [{ role: 'user', content: prompt }],
+        const model = genAI.getGenerativeModel({
+          model: 'gemini-2.0-flash-exp',
+          generationConfig: {
+            temperature: 0.8,
+            maxOutputTokens: 2048,
+          },
         });
 
-        const responseText =
-          message.content[0].type === 'text' ? message.content[0].text : '';
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const responseText = response.text();
 
         // Extract JSON
         let jsonText = responseText.trim();
@@ -265,7 +259,7 @@ VIKTIGT:
   } catch (error: any) {
     console.error('[ERROR]', error);
 
-    if (error?.status === 429) {
+    if (error?.status === 429 || error?.message?.includes('quota') || error?.message?.includes('rate')) {
       return res.status(429).json({
         error: 'RATE_LIMIT',
         message: 'För många förfrågningar. Vänta en stund.',
