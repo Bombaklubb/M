@@ -28,7 +28,7 @@ function App() {
     newBadges: Badge[];
   } | null>(null);
 
-  const handleStart = async (topic: string, level: number, textType: TextType) => {
+  const handleStart = async (topic: string, level: number, textType: TextType, retryCount = 0) => {
     setAppState(AppState.LOADING);
     setErrorMsg('');
     try {
@@ -36,10 +36,26 @@ function App() {
       const data = await generateExercise(topic, level, textType);
       setExerciseData(data);
       setAppState(AppState.READING);
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      setErrorMsg("Hoppsan! Något gick fel när vi skulle skapa texten. Försök igen!");
-      setAppState(AppState.ERROR);
+
+      // Hantera rate limit-fel
+      if (error?.message === 'RATE_LIMIT' && retryCount < 3) {
+        const waitTime = (retryCount + 1) * 10; // 10s, 20s, 30s
+        setErrorMsg(`Många använder appen just nu. Försöker igen om ${waitTime} sekunder...`);
+        setAppState(AppState.ERROR);
+
+        // Vänta och försök igen
+        setTimeout(() => {
+          handleStart(topic, level, textType, retryCount + 1);
+        }, waitTime * 1000);
+      } else if (error?.message === 'RATE_LIMIT') {
+        setErrorMsg("För många använder appen samtidigt. Vänta 1-2 minuter och försök igen!");
+        setAppState(AppState.ERROR);
+      } else {
+        setErrorMsg("Hoppsan! Något gick fel när vi skulle skapa texten. Försök igen!");
+        setAppState(AppState.ERROR);
+      }
     }
   };
 
