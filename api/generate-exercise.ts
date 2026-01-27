@@ -229,21 +229,34 @@ VIKTIGT:
         const response = await result.response;
         const responseText = response.text();
 
-        // Extract JSON
+        // Extract JSON with multiple patterns
         let jsonText = responseText.trim();
-        const jsonMatch =
-          responseText.match(/```json\n([\s\S]*?)\n```/) ||
-          responseText.match(/```\n([\s\S]*?)\n```/);
-        if (jsonMatch) {
-          jsonText = jsonMatch[1];
+
+        // Try different markdown code block patterns
+        const patterns = [
+          /```json\s*([\s\S]*?)\s*```/,  // ```json ... ```
+          /```\s*([\s\S]*?)\s*```/,       // ``` ... ```
+          /\{[\s\S]*\}/                   // Direct JSON object
+        ];
+
+        for (const pattern of patterns) {
+          const match = responseText.match(pattern);
+          if (match) {
+            jsonText = match[1] || match[0];
+            break;
+          }
         }
+
+        // Remove any remaining backticks
+        jsonText = jsonText.replace(/^```json?\s*/, '').replace(/\s*```$/, '').trim();
 
         // Parse JSON with better error handling
         let data;
         try {
           data = JSON.parse(jsonText);
         } catch (parseError) {
-          console.error('[JSON PARSE ERROR] Response was:', responseText.substring(0, 500));
+          console.error('[JSON PARSE ERROR] Failed to parse:', jsonText.substring(0, 500));
+          console.error('[RAW RESPONSE]:', responseText.substring(0, 500));
           throw new Error('AI returned invalid JSON format');
         }
 
