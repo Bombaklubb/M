@@ -24,32 +24,14 @@ const queue: Array<() => Promise<void>> = [];
 // Google Gemini client
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// System instruction (optimized for token usage)
-const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
-Skapa engagerande texter och pedagogiska frågor anpassade för olika åldrar.
-Språket ska vara tydligt och anpassat till elevens årskurs.
-
-VIKTIGT - Skriv för uppläsning:
-Texterna kommer att läsas upp med text-to-speech. Använd korta, tydliga meningar.
-Variera meningslängd för naturligt flöde. Skriv med en vänlig, pedagogisk röst.
-
-Texttyper:
-- BERÄTTANDE: Berättelser med handling och karaktärer. Kronologisk struktur.
-- BESKRIVANDE: Beskrivningar av personer, platser, föremål. Faktabaserat.
-- ARGUMENTERANDE: Texter med åsikter och argument. För högre nivåer.
-
-Nivåguide (1-20):
-- Nivå 1-2 (Åk 1-2): 50-150 ord. Enkla meningar. Vardagliga ord.
-- Nivå 3-4 (Åk 3-4): 150-350 ord. Lite längre meningar. Varierat ordförråd.
-- Nivå 5-6 (Åk 5-6): 350-650 ord. Avancerade meningar. Djupare innehåll.
-- Nivå 7-9 (Åk 7-9): 650-1200 ord. Högstadietexter med komplexitet.
-- Nivå 10-20: Extra utmaningsnivåer (upp till 1500 ord).
-
-Frågedistribution (totalt 6 frågor):
-- Fråga 1-3: "På raderna" - Fakta direkt i texten
-- Fråga 4-6: "Mellan raderna" - Inferensfrågor, slutsatser
-
-Alla frågor ska ha exakt 4 alternativ. Ett alternativ är rätt.`;
+// System instruction (minimized for free tier token limits)
+const SYSTEM_INSTRUCTION = `Svenska läsförståelseövningar. Nivå 1-20:
+1-2: 50-100 ord
+3-4: 100-200 ord
+5-6: 200-400 ord
+7-9: 400-600 ord
+10-20: 600-800 ord
+6 frågor: 3 fakta + 3 inferens. 4 alternativ per fråga.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
@@ -188,40 +170,18 @@ export default async function handler(req: any, res: any) {
         const textTypeLabel = getTextTypeLabel(textType);
 
         const prompt = `${SYSTEM_INSTRUCTION}
+Ämne: ${topic}, Nivå: ${level}, Typ: ${textTypeLabel}
 
-Skapa en läsförståelseövning på svenska.
-Ämne: ${topic}
-Nivå: ${level} (skala 1-20)
-Texttyp: ${textTypeLabel}
+JSON:
+{"level":${level},"title":"titel","content":"text","textType":"${textType}","questions":[{"id":1,"type":"multiple_choice","question":"?","options":["A","B","C","D"],"correctAnswer":"A","explanation":"svar"}]}
 
-Returnera endast giltigt JSON utan markdown-formatering:
-{
-  "level": ${level},
-  "title": "En kort, engagerande titel",
-  "content": "Själva texten som eleven ska läsa",
-  "textType": "${textType}",
-  "questions": [
-    {
-      "id": 1,
-      "type": "multiple_choice",
-      "question": "Frågan?",
-      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
-      "correctAnswer": "Det exakta svaret från options",
-      "explanation": "Pedagogisk förklaring"
-    }
-  ]
-}
-
-VIKTIGT:
-- Texten ska vara intressant och engagerande
-- Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
-- correctAnswer måste matcha exakt ett alternativ i options`;
+6 frågor (3 fakta+3 inferens), 4 alternativ/fråga.`;
 
         const model = genAI.getGenerativeModel({
           model: 'gemini-2.5-flash',
           generationConfig: {
             temperature: 0.8,
-            maxOutputTokens: 2048,
+            maxOutputTokens: 800, // Reduced for free tier token limits
           },
         });
 
