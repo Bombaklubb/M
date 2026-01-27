@@ -238,13 +238,21 @@ VIKTIGT:
           jsonText = jsonMatch[1];
         }
 
-        const data = JSON.parse(jsonText);
+        // Parse JSON with better error handling
+        let data;
+        try {
+          data = JSON.parse(jsonText);
+        } catch (parseError) {
+          console.error('[JSON PARSE ERROR] Response was:', responseText.substring(0, 500));
+          throw new Error('AI returned invalid JSON format');
+        }
 
         // Force the selected level
         data.level = level;
 
         // Validate
         if (!data.questions || data.questions.length !== 6) {
+          console.error('[VALIDATION ERROR] Invalid data structure:', data);
           throw new Error('Invalid question count');
         }
 
