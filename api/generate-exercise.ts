@@ -24,14 +24,10 @@ const queue: Array<() => Promise<void>> = [];
 // Google Gemini client
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// System instruction (minimized for free tier token limits)
-const SYSTEM_INSTRUCTION = `Svenska läsförståelseövningar. Nivå 1-20:
-1-2: 50-100 ord
-3-4: 100-200 ord
-5-6: 200-400 ord
-7-9: 400-600 ord
-10-20: 600-800 ord
-6 frågor: 3 fakta + 3 inferens. 4 alternativ per fråga.`;
+// System instruction (ultra-minimized for free tier)
+const SYSTEM_INSTRUCTION = `Svensk text. Nivå 1-20:
+1-2:40-80 ord, 3-4:80-150 ord, 5-6:150-250 ord, 7+:250-400 ord.
+4 frågor med 4 alternativ.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
@@ -170,18 +166,15 @@ export default async function handler(req: any, res: any) {
         const textTypeLabel = getTextTypeLabel(textType);
 
         const prompt = `${SYSTEM_INSTRUCTION}
-Ämne: ${topic}, Nivå: ${level}, Typ: ${textTypeLabel}
-
-JSON:
-{"level":${level},"title":"titel","content":"text","textType":"${textType}","questions":[{"id":1,"type":"multiple_choice","question":"?","options":["A","B","C","D"],"correctAnswer":"A","explanation":"svar"}]}
-
-6 frågor (3 fakta+3 inferens), 4 alternativ/fråga.`;
+Ämne:${topic}, Nivå:${level}, Typ:${textTypeLabel}
+JSON: {"level":${level},"title":"x","content":"x","textType":"${textType}","questions":[{"id":1,"type":"multiple_choice","question":"x","options":["A","B","C","D"],"correctAnswer":"A","explanation":"x"}]}
+4 frågor.`;
 
         const model = genAI.getGenerativeModel({
           model: 'gemini-2.5-flash',
           generationConfig: {
-            temperature: 0.8,
-            maxOutputTokens: 800, // Reduced for free tier token limits
+            temperature: 0.7,
+            maxOutputTokens: 400,
           },
         });
 
@@ -224,9 +217,9 @@ JSON:
         data.level = level;
 
         // Validate
-        if (!data.questions || data.questions.length !== 6) {
+        if (!data.questions || data.questions.length < 3) {
           console.error('[VALIDATION ERROR] Invalid data structure:', data);
-          throw new Error('Invalid question count');
+          throw new Error('Too few questions');
         }
 
         return data;
