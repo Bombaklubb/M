@@ -24,10 +24,19 @@ const queue: Array<() => Promise<void>> = [];
 // Google Gemini client
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// System instruction (ultra-minimized for free tier)
-const SYSTEM_INSTRUCTION = `Svensk text. Nivå 1-20:
-1-2:40-80 ord, 3-4:80-150 ord, 5-6:150-250 ord, 7+:250-400 ord.
-4 frågor med 4 alternativ.`;
+// System instruction (optimized for paid tier)
+const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
+Skapa engagerande texter och pedagogiska frågor.
+
+Nivåguide (1-20):
+- Nivå 1-2: 50-150 ord. Enkla meningar. Vardagliga ord.
+- Nivå 3-4: 150-350 ord. Varierat ordförråd.
+- Nivå 5-6: 350-650 ord. Mer avancerat språk.
+- Nivå 7-9: 650-1000 ord. Högstadietexter.
+- Nivå 10-20: 1000-1500 ord. Utmaningsnivåer.
+
+6 frågor: 3 fakta (direkt i texten) + 3 inferens (slutsatser).
+Alla frågor har 4 alternativ där ett är rätt.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
@@ -166,15 +175,40 @@ export default async function handler(req: any, res: any) {
         const textTypeLabel = getTextTypeLabel(textType);
 
         const prompt = `${SYSTEM_INSTRUCTION}
-Ämne:${topic}, Nivå:${level}, Typ:${textTypeLabel}
-JSON: {"level":${level},"title":"x","content":"x","textType":"${textType}","questions":[{"id":1,"type":"multiple_choice","question":"x","options":["A","B","C","D"],"correctAnswer":"A","explanation":"x"}]}
-4 frågor.`;
+
+Skapa en läsförståelseövning:
+Ämne: ${topic}
+Nivå: ${level} (skala 1-20)
+Texttyp: ${textTypeLabel}
+
+Returnera endast giltigt JSON:
+{
+  "level": ${level},
+  "title": "En kort, engagerande titel",
+  "content": "Själva texten som eleven ska läsa",
+  "textType": "${textType}",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Frågan?",
+      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
+      "correctAnswer": "Det exakta svaret från options",
+      "explanation": "Pedagogisk förklaring"
+    }
+  ]
+}
+
+VIKTIGT:
+- Texten ska vara intressant och engagerande
+- Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
+- correctAnswer måste matcha exakt ett alternativ i options`;
 
         const model = genAI.getGenerativeModel({
           model: 'gemini-2.5-flash',
           generationConfig: {
-            temperature: 0.7,
-            maxOutputTokens: 400,
+            temperature: 0.8,
+            maxOutputTokens: 2048,
           },
         });
 
@@ -217,9 +251,9 @@ JSON: {"level":${level},"title":"x","content":"x","textType":"${textType}","ques
         data.level = level;
 
         // Validate
-        if (!data.questions || data.questions.length < 3) {
+        if (!data.questions || data.questions.length !== 6) {
           console.error('[VALIDATION ERROR] Invalid data structure:', data);
-          throw new Error('Too few questions');
+          throw new Error('Invalid question count');
         }
 
         return data;
