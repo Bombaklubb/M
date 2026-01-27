@@ -209,6 +209,7 @@ VIKTIGT:
           generationConfig: {
             temperature: 0.8,
             maxOutputTokens: 2048,
+            responseMimeType: "application/json",
           },
         });
 
@@ -216,35 +217,41 @@ VIKTIGT:
         const response = await result.response;
         const responseText = response.text();
 
-        // Extract JSON with multiple patterns
+        // With responseMimeType: "application/json", response should be clean JSON
+        // But keep fallback extraction just in case
         let jsonText = responseText.trim();
 
-        // Try different markdown code block patterns
-        const patterns = [
-          /```json\s*([\s\S]*?)\s*```/,  // ```json ... ```
-          /```\s*([\s\S]*?)\s*```/,       // ``` ... ```
-          /\{[\s\S]*\}/                   // Direct JSON object
-        ];
-
-        for (const pattern of patterns) {
-          const match = responseText.match(pattern);
-          if (match) {
-            jsonText = match[1] || match[0];
-            break;
-          }
-        }
-
-        // Remove any remaining backticks
-        jsonText = jsonText.replace(/^```json?\s*/, '').replace(/\s*```$/, '').trim();
-
-        // Parse JSON with better error handling
+        // Try to parse directly first (should work with JSON mode)
         let data;
         try {
           data = JSON.parse(jsonText);
         } catch (parseError) {
-          console.error('[JSON PARSE ERROR] Failed to parse:', jsonText.substring(0, 500));
-          console.error('[RAW RESPONSE]:', responseText.substring(0, 500));
-          throw new Error('AI returned invalid JSON format');
+          // Fallback: Try extracting from markdown code blocks
+          console.log('[JSON MODE FAILED] Attempting extraction from markdown...');
+
+          const patterns = [
+            /```json\s*([\s\S]*?)\s*```/,
+            /```\s*([\s\S]*?)\s*```/,
+            /\{[\s\S]*\}/
+          ];
+
+          for (const pattern of patterns) {
+            const match = responseText.match(pattern);
+            if (match) {
+              jsonText = match[1] || match[0];
+              jsonText = jsonText.replace(/^```json?\s*/, '').replace(/\s*```$/, '').trim();
+              break;
+            }
+          }
+
+          // Try parsing again after extraction
+          try {
+            data = JSON.parse(jsonText);
+          } catch (secondError) {
+            console.error('[JSON PARSE ERROR] Failed to parse:', jsonText.substring(0, 500));
+            console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
+            throw new Error('AI returned invalid JSON format');
+          }
         }
 
         // Force the selected level
