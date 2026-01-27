@@ -11,6 +11,7 @@ interface ResultViewProps {
   newLevel?: number;
   oldLevel?: number;
   newBadges?: Badge[];
+  timeSpentMinutes?: number;
 }
 
 export const ResultView: React.FC<ResultViewProps> = ({
@@ -21,7 +22,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
   pointsEarned = 0,
   newLevel,
   oldLevel,
-  newBadges = []
+  newBadges = [],
+  timeSpentMinutes = 0
 }) => {
   // Simple scoring logic for MC and TF
   let correctCount = 0;
@@ -67,6 +69,14 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <div className="mt-4 inline-block bg-yellow-50 px-6 py-3 rounded-full border-2 border-yellow-200">
             <span className="text-2xl mr-2">⭐</span>
             <span className="font-black text-yellow-600 text-xl">+{pointsEarned} poäng</span>
+          </div>
+        )}
+
+        {/* Time spent */}
+        {timeSpentMinutes >= 1 && (
+          <div className="mt-4 inline-block bg-blue-50 px-6 py-3 rounded-full border-2 border-blue-200">
+            <span className="text-2xl mr-2">⏱️</span>
+            <span className="font-black text-blue-600 text-xl">{timeSpentMinutes} minut{timeSpentMinutes !== 1 ? 'er' : ''}</span>
           </div>
         )}
 
