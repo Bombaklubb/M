@@ -19,6 +19,7 @@ function App() {
   const [userAnswers, setUserAnswers] = useState<UserAnswers>({});
   const [errorMsg, setErrorMsg] = useState('');
   const [showProfile, setShowProfile] = useState(false);
+  const [startTime, setStartTime] = useState<number | null>(null);
 
   // Result info for displaying
   const [resultInfo, setResultInfo] = useState<{
@@ -26,6 +27,7 @@ function App() {
     newLevel: number;
     oldLevel: number;
     newBadges: Badge[];
+    timeSpentMinutes: number;
   } | null>(null);
 
   const handleStart = async (topic: string, level: number, textType: TextType, retryCount = 0) => {
@@ -35,6 +37,7 @@ function App() {
       // Use the selected level - user can choose any level they want
       const data = await generateExercise(topic, level, textType);
       setExerciseData(data);
+      setStartTime(Date.now()); // Start timing when reading begins
       setAppState(AppState.READING);
     } catch (error: any) {
       console.error(error);
@@ -65,6 +68,10 @@ function App() {
   const handleComplete = (answers: UserAnswers) => {
     setUserAnswers(answers);
 
+    // Calculate time spent
+    const timeSpentMs = startTime ? Date.now() - startTime : 0;
+    const timeSpentMinutes = Math.max(1, Math.round(timeSpentMs / 60000)); // Minimum 1 minute
+
     // Calculate score
     if (exerciseData && user) {
       let correctCount = 0;
@@ -89,6 +96,7 @@ function App() {
           newLevel: result.newLevel,
           oldLevel: user.currentLevel,
           newBadges: result.newBadges,
+          timeSpentMinutes: timeSpentMinutes,
         });
       }
     }
@@ -101,6 +109,7 @@ function App() {
     setExerciseData(null);
     setUserAnswers({});
     setResultInfo(null);
+    setStartTime(null);
     setAppState(AppState.SETUP);
     window.scrollTo(0, 0);
   };
@@ -109,6 +118,7 @@ function App() {
     // Nollställ tidigare resultat
     setUserAnswers({});
     setResultInfo(null);
+    setStartTime(null);
 
     // Slumpa fram ämne och texttyp
     const randomTopic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
@@ -255,6 +265,7 @@ function App() {
             newLevel={resultInfo?.newLevel}
             oldLevel={resultInfo?.oldLevel}
             newBadges={resultInfo?.newBadges}
+            timeSpentMinutes={resultInfo?.timeSpentMinutes}
           />
         )}
       </main>

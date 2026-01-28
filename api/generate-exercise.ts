@@ -25,32 +25,19 @@ const queue: Array<() => Promise<void>> = [];
 // Google Gemini client
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
 
-// System instruction (optimized for token usage)
-const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever i årskurs 1–9.
-Skapa engagerande texter och pedagogiska frågor anpassade för olika åldrar.
-Språket ska vara tydligt och anpassat till elevens årskurs.
-
-VIKTIGT - Skriv för uppläsning:
-Texterna kommer att läsas upp med text-to-speech. Använd korta, tydliga meningar.
-Variera meningslängd för naturligt flöde. Skriv med en vänlig, pedagogisk röst.
-
-Texttyper:
-- BERÄTTANDE: Berättelser med handling och karaktärer. Kronologisk struktur.
-- BESKRIVANDE: Beskrivningar av personer, platser, föremål. Faktabaserat.
-- ARGUMENTERANDE: Texter med åsikter och argument. För högre nivåer.
+// System instruction (optimized for paid tier)
+const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
+Skapa engagerande texter och pedagogiska frågor.
 
 Nivåguide (1-20):
-- Nivå 1-2 (Åk 1-2): 50-150 ord. Enkla meningar. Vardagliga ord.
-- Nivå 3-4 (Åk 3-4): 150-350 ord. Lite längre meningar. Varierat ordförråd.
-- Nivå 5-6 (Åk 5-6): 350-650 ord. Avancerade meningar. Djupare innehåll.
-- Nivå 7-9 (Åk 7-9): 650-1200 ord. Högstadietexter med komplexitet.
-- Nivå 10-20: Extra utmaningsnivåer (upp till 1500 ord).
+- Nivå 1-2: 50-150 ord. Enkla meningar. Vardagliga ord.
+- Nivå 3-4: 150-350 ord. Varierat ordförråd.
+- Nivå 5-6: 350-650 ord. Mer avancerat språk.
+- Nivå 7-9: 650-1000 ord. Högstadietexter.
+- Nivå 10-20: 1000-1500 ord. Utmaningsnivåer.
 
-Frågedistribution (totalt 6 frågor):
-- Fråga 1-3: "På raderna" - Fakta direkt i texten
-- Fråga 4-6: "Mellan raderna" - Inferensfrågor, slutsatser
-
-Alla frågor ska ha exakt 4 alternativ. Ett alternativ är rätt.`;
+6 frågor: 3 fakta (direkt i texten) + 3 inferens (slutsatser).
+Alla frågor har 4 alternativ där ett är rätt.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
@@ -190,12 +177,12 @@ export default async function handler(req: any, res: any) {
 
         const prompt = `${SYSTEM_INSTRUCTION}
 
-Skapa en läsförståelseövning på svenska.
+Skapa en läsförståelseövning:
 Ämne: ${topic}
 Nivå: ${level} (skala 1-20)
 Texttyp: ${textTypeLabel}
 
-Returnera endast giltigt JSON utan markdown-formatering:
+Returnera endast giltigt JSON:
 {
   "level": ${level},
   "title": "En kort, engagerande titel",
@@ -219,10 +206,11 @@ VIKTIGT:
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
         const model = genAI.getGenerativeModel({
-          model: 'gemini-2.5-flash-lite',
+          model: 'gemini-2.5-flash',
           generationConfig: {
             temperature: 0.8,
             maxOutputTokens: 2048,
+            responseMimeType: "application/json", // Force JSON response
           },
         });
 
@@ -230,22 +218,49 @@ VIKTIGT:
         const response = await result.response;
         const responseText = response.text();
 
-        // Extract JSON
+        // With responseMimeType: "application/json", response should be clean JSON
+        // But keep fallback extraction just in case
         let jsonText = responseText.trim();
-        const jsonMatch =
-          responseText.match(/```json\n([\s\S]*?)\n```/) ||
-          responseText.match(/```\n([\s\S]*?)\n```/);
-        if (jsonMatch) {
-          jsonText = jsonMatch[1];
-        }
 
-        const data = JSON.parse(jsonText);
+        // Try to parse directly first (should work with JSON mode)
+        let data;
+        try {
+          data = JSON.parse(jsonText);
+        } catch (parseError) {
+          // Fallback: Try extracting from markdown code blocks
+          console.log('[JSON MODE FAILED] Attempting extraction from markdown...');
+
+          const patterns = [
+            /```json\s*([\s\S]*?)\s*```/,
+            /```\s*([\s\S]*?)\s*```/,
+            /\{[\s\S]*\}/
+          ];
+
+          for (const pattern of patterns) {
+            const match = responseText.match(pattern);
+            if (match) {
+              jsonText = match[1] || match[0];
+              jsonText = jsonText.replace(/^```json?\s*/, '').replace(/\s*```$/, '').trim();
+              break;
+            }
+          }
+
+          // Try parsing again after extraction
+          try {
+            data = JSON.parse(jsonText);
+          } catch (secondError) {
+            console.error('[JSON PARSE ERROR] Failed to parse:', jsonText.substring(0, 500));
+            console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
+            throw new Error('AI returned invalid JSON format');
+          }
+        }
 
         // Force the selected level
         data.level = level;
 
         // Validate
         if (!data.questions || data.questions.length !== 6) {
+          console.error('[VALIDATION ERROR] Invalid data structure:', data);
           throw new Error('Invalid question count');
         }
 

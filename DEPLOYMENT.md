@@ -6,7 +6,7 @@ Appen använder nu **Google Gemini AI** med en robust server-side lösning via V
 
 ### Vad som är implementerat:
 
-✅ **Google Gemini 2.5 Flash Lite** - Gratis upp till 1000 requests/dag
+✅ **Google Gemini 2.5 Flash** - Gratis upp till 250 requests/dag
 ✅ **Server-side kö** - Max 3 samtidiga AI-anrop
 ✅ **Automatisk retry** - Exponentiell backoff med jitter (max 4 försök)
 ✅ **Caching** - 10 minuters cache för samma ämne/nivå/texttyp
@@ -54,11 +54,11 @@ Efter deployment, testa appen med flera användare samtidigt:
 - Kontrollera att kö-systemet fungerar (meddelanden som "står i kö")
 - Kontrollera att retry fungerar vid rate limits
 
-**Gratis tier begränsningar (Gemini 2.5 Flash Lite):**
-- 1000 requests per dag (gratis)
-- 15 requests per minut
+**Gratis tier begränsningar (Gemini 2.5 Flash):**
+- 250 requests per dag (gratis)
+- 10 requests per minut
 - 250,000 tokens per minut
-- Detta räcker för 25-30 elever samtidigt med cache
+- Detta räcker för en klass med cache (ca 8-10 texter per elev)
 
 ## Lokal utveckling
 
@@ -117,7 +117,7 @@ vercel dev
 ### Problem: Fortfarande rate limit errors
 - Kontrollera att du använder den nya API-endpointen (inte direkta Gemini-anrop)
 - Verifiera att caching fungerar (se Vercel Function Logs)
-- Gemini free tier: 15 req/min - kö-systemet hjälper dig hantera detta
+- Gemini free tier: 10 req/min - kö-systemet hjälper dig hantera detta
 
 ## Monitoring
 
@@ -131,17 +131,17 @@ vercel dev
 
 ## Kostnader och begränsningar
 
-**Google Gemini 2.5 Flash Lite Free Tier (2026):**
-- 1000 requests/dag - GRATIS
-- 15 requests/minut - GRATIS
+**Google Gemini 2.5 Flash Free Tier (2026):**
+- 250 requests/dag - GRATIS
+- 10 requests/minut - GRATIS
 - 250,000 tokens/minut - GRATIS
-- För en klass med 25-30 elever: Helt gratis med cache!
+- För en klass: Räcker för ca 8-10 texter per elev med cache
 - Kommersiell användning tillåten
 
 **Om du behöver mer:**
-- Gemini 2.5 Flash: 250 requests/dag (gratis)
-- Gemini 2.5 Pro: 100 requests/dag (gratis)
-- Uppgradera på: https://aistudio.google.com/
+- Gemini 2.5 Flash Lite: 20 requests/dag (gratis, inte tillräckligt)
+- Gemini 2.5 Pro: 100 requests/dag (gratis, lägre hastighet)
+- Aktivera betalning för obegränsad användning: https://aistudio.google.com/
 
 ## Nästa steg (valfritt)
 
