@@ -59,7 +59,8 @@ function App() {
         setErrorMsg("Nätverksfel. Kontrollera din internetanslutning och försök igen.");
         setAppState(AppState.ERROR);
       } else {
-        setErrorMsg("Hoppsan! Något gick fel när vi skulle skapa texten. Försök igen!");
+        // Show actual error message for debugging
+        setErrorMsg(error?.message || "Hoppsan! Något gick fel när vi skulle skapa texten. Försök igen!");
         setAppState(AppState.ERROR);
       }
     }

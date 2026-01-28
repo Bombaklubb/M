@@ -290,12 +290,12 @@ REGLER:
               console.error('[PARSE ERROR] After extraction:', extractError);
               console.error('[JSON TEXT]:', jsonText.substring(0, 500));
               console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
-              throw new Error('AI returned invalid JSON format');
+              throw new Error(`JSON Parse Error: ${responseText.substring(0, 300)}`);
             }
           } else {
             console.error('[NO JSON FOUND] Could not find JSON object in response');
             console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
-            throw new Error('AI returned invalid JSON format');
+            throw new Error(`No JSON found. Response: ${responseText.substring(0, 300)}`);
           }
         }
 
@@ -328,7 +328,8 @@ REGLER:
 
     return res.status(500).json({
       error: 'GENERATION_ERROR',
-      message: 'Kunde inte generera övning. Försök igen.',
+      message: error?.message || 'Kunde inte generera övning. Försök igen.',
+      debug: process.env.NODE_ENV === 'development' ? error?.stack : undefined,
     });
   }
 }
