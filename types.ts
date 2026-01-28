@@ -54,7 +54,7 @@ export const TOPICS = [
   "Historia & Forntiden",
   "Vetenskap",
   "Äventyr & Spänning",
-  "Vardagsliv & Vänskap",
+  "🎲 Slumpa fram en text",
   "Sverige & Världen",
   "Teknik & Uppfinningar"
 ];
