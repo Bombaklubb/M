@@ -251,7 +251,7 @@ REGLER:
           model: 'gemini-2.5-flash',
           generationConfig: {
             temperature: 0.8,
-            maxOutputTokens: 2048,
+            maxOutputTokens: 8192, // Increased to handle full text + 6 questions
           },
         });
 
