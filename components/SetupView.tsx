@@ -56,7 +56,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
                   className={`p-3 rounded-xl text-sm font-bold transition-all ${
                     isSelected
                       ? isRandomOption
-                        ? 'bg-gradient-to-br from-orange-500 to-pink-500 text-white shadow-md border-4 border-orange-300'
+                        ? 'bg-gradient-to-br from-orange-400 to-pink-400 text-gray-900 shadow-md border-4 border-orange-500'
                         : 'bg-indigo-600 text-white shadow-md'
                       : isRandomOption
                         ? 'bg-gradient-to-br from-orange-100 to-pink-100 text-orange-700 hover:from-orange-200 hover:to-pink-200 border-4 border-orange-300 shadow-lg'
