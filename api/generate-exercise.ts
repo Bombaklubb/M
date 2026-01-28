@@ -182,7 +182,7 @@ Skapa en läsförståelseövning:
 Nivå: ${level} (skala 1-20)
 Texttyp: ${textTypeLabel}
 
-Returnera endast giltigt JSON:
+KRITISKT - Returnera ENDAST ren JSON, inget annat:
 {
   "level": ${level},
   "title": "En kort, engagerande titel",
@@ -196,17 +196,59 @@ Returnera endast giltigt JSON:
       "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
       "correctAnswer": "Det exakta svaret från options",
       "explanation": "Pedagogisk förklaring"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "question": "Frågan?",
+      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
+      "correctAnswer": "Det exakta svaret från options",
+      "explanation": "Pedagogisk förklaring"
+    },
+    {
+      "id": 3,
+      "type": "multiple_choice",
+      "question": "Frågan?",
+      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
+      "correctAnswer": "Det exakta svaret från options",
+      "explanation": "Pedagogisk förklaring"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "question": "Frågan?",
+      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
+      "correctAnswer": "Det exakta svaret från options",
+      "explanation": "Pedagogisk förklaring"
+    },
+    {
+      "id": 5,
+      "type": "multiple_choice",
+      "question": "Frågan?",
+      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
+      "correctAnswer": "Det exakta svaret från options",
+      "explanation": "Pedagogisk förklaring"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "question": "Frågan?",
+      "options": ["Alt A", "Alt B", "Alt C", "Alt D"],
+      "correctAnswer": "Det exakta svaret från options",
+      "explanation": "Pedagogisk förklaring"
     }
   ]
 }
 
-VIKTIGT:
-- Texten ska vara intressant och engagerande
-- Exakt 6 frågor med 4 alternativ vardera (3 "på raderna" + 3 "mellan raderna")
+REGLER:
+- Svara ENDAST med JSON-objektet ovan
+- INGEN markdown kod-block (inget \`\`\`json)
+- INGEN förklarande text
+- Exakt 6 frågor
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
         const model = genAI.getGenerativeModel({
-          model: 'gemini-1.5-flash',
+          model: 'gemini-2.5-flash',
           generationConfig: {
             temperature: 0.8,
             maxOutputTokens: 2048,
