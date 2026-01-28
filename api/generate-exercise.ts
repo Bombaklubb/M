@@ -252,7 +252,6 @@ REGLER:
           generationConfig: {
             temperature: 0.8,
             maxOutputTokens: 2048,
-            responseMimeType: "application/json", // Force JSON response
           },
         });
 
@@ -260,38 +259,40 @@ REGLER:
         const response = await result.response;
         const responseText = response.text();
 
-        // With responseMimeType: "application/json", response should be clean JSON
-        // But keep fallback extraction just in case
-        let jsonText = responseText.trim();
+        console.log('[GEMINI RESPONSE LENGTH]:', responseText.length);
+        console.log('[GEMINI RESPONSE FIRST 200]:', responseText.substring(0, 200));
 
-        // Try to parse directly first (should work with JSON mode)
+        // Extract JSON from response
+        let jsonText = responseText.trim();
         let data;
+
+        // Try parsing directly first
         try {
           data = JSON.parse(jsonText);
-        } catch (parseError) {
-          // Fallback: Try extracting from markdown code blocks
-          console.log('[JSON MODE FAILED] Attempting extraction from markdown...');
+          console.log('[SUCCESS] Direct JSON parse worked');
+        } catch (directParseError) {
+          console.log('[ATTEMPTING] JSON extraction from markdown/text...');
 
-          const patterns = [
-            /```json\s*([\s\S]*?)\s*```/,
-            /```\s*([\s\S]*?)\s*```/,
-            /\{[\s\S]*\}/
-          ];
+          // Remove any markdown code blocks
+          jsonText = jsonText.replace(/```json\s*/g, '').replace(/```\s*/g, '');
 
-          for (const pattern of patterns) {
-            const match = responseText.match(pattern);
-            if (match) {
-              jsonText = match[1] || match[0];
-              jsonText = jsonText.replace(/^```json?\s*/, '').replace(/\s*```$/, '').trim();
-              break;
+          // Find JSON object
+          const jsonMatch = jsonText.match(/\{[\s\S]*\}/);
+          if (jsonMatch) {
+            jsonText = jsonMatch[0];
+            console.log('[EXTRACTED] JSON object, length:', jsonText.length);
+
+            try {
+              data = JSON.parse(jsonText);
+              console.log('[SUCCESS] Extracted JSON parse worked');
+            } catch (extractError) {
+              console.error('[PARSE ERROR] After extraction:', extractError);
+              console.error('[JSON TEXT]:', jsonText.substring(0, 500));
+              console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
+              throw new Error('AI returned invalid JSON format');
             }
-          }
-
-          // Try parsing again after extraction
-          try {
-            data = JSON.parse(jsonText);
-          } catch (secondError) {
-            console.error('[JSON PARSE ERROR] Failed to parse:', jsonText.substring(0, 500));
+          } else {
+            console.error('[NO JSON FOUND] Could not find JSON object');
             console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
             throw new Error('AI returned invalid JSON format');
           }
