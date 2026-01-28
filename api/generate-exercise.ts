@@ -1,3 +1,4 @@
+// Force rebuild: 2026-01-28T07:00:00Z - JSON mode deployment
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // Types
