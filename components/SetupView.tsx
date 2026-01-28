@@ -127,7 +127,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🔍</span>
-                <span className="text-slate-700 font-medium">Leta efter ord du inte förstår</span>
+                <span className="text-slate-700 font-medium">Ta reda på ord du inte förstår</span>
               </div>
             </div>
           </div>
