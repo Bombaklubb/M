@@ -259,8 +259,8 @@ REGLER:
         const response = await result.response;
         const responseText = response.text();
 
-        console.log('[GEMINI RESPONSE LENGTH]:', responseText.length);
-        console.log('[GEMINI RESPONSE FIRST 200]:', responseText.substring(0, 200));
+        console.error('[DEBUG] GEMINI RESPONSE LENGTH:', responseText.length);
+        console.error('[DEBUG] GEMINI RESPONSE FIRST 500:', responseText.substring(0, 500));
 
         // Extract JSON from response
         let jsonText = responseText.trim();
@@ -269,9 +269,9 @@ REGLER:
         // Try parsing directly first
         try {
           data = JSON.parse(jsonText);
-          console.log('[SUCCESS] Direct JSON parse worked');
+          console.error('[DEBUG] SUCCESS - Direct JSON parse worked');
         } catch (directParseError) {
-          console.log('[ATTEMPTING] JSON extraction from markdown/text...');
+          console.error('[DEBUG] Direct parse failed, attempting extraction...');
 
           // Remove any markdown code blocks
           jsonText = jsonText.replace(/```json\s*/g, '').replace(/```\s*/g, '');
@@ -280,11 +280,12 @@ REGLER:
           const jsonMatch = jsonText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
             jsonText = jsonMatch[0];
-            console.log('[EXTRACTED] JSON object, length:', jsonText.length);
+            console.error('[DEBUG] EXTRACTED JSON length:', jsonText.length);
+            console.error('[DEBUG] EXTRACTED JSON first 500:', jsonText.substring(0, 500));
 
             try {
               data = JSON.parse(jsonText);
-              console.log('[SUCCESS] Extracted JSON parse worked');
+              console.error('[DEBUG] SUCCESS - Extracted JSON parse worked');
             } catch (extractError) {
               console.error('[PARSE ERROR] After extraction:', extractError);
               console.error('[JSON TEXT]:', jsonText.substring(0, 500));
@@ -292,7 +293,7 @@ REGLER:
               throw new Error('AI returned invalid JSON format');
             }
           } else {
-            console.error('[NO JSON FOUND] Could not find JSON object');
+            console.error('[NO JSON FOUND] Could not find JSON object in response');
             console.error('[RAW RESPONSE]:', responseText.substring(0, 1000));
             throw new Error('AI returned invalid JSON format');
           }
