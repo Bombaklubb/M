@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400;
+  }
+
+  .btn-success {
+    @apply bg-success-500 text-white hover:bg-success-600 focus:ring-success-500;
+  }
+
+  .btn-large {
+    @apply px-8 py-4 text-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6;
+  }
+
+  .card-hover {
+    @apply hover:shadow-md hover:border-gray-200 transition-all cursor-pointer;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-gray-900 mb-4;
+  }
+
+  /* Matematik-specifika stilar */
+  .math-display {
+    @apply font-mono text-xl bg-gray-100 px-4 py-3 rounded-lg text-center;
+  }
+
+  .math-input {
+    @apply font-mono text-xl text-center w-24 border-2 border-gray-300 rounded-lg focus:border-primary-500;
+  }
+
+  .feedback-correct {
+    @apply bg-success-50 border-l-4 border-success-500 p-4 rounded-r-lg;
+  }
+
+  .feedback-incorrect {
+    @apply bg-error-50 border-l-4 border-error-500 p-4 rounded-r-lg;
+  }
+
+  /* Uppställning för räknesätt */
+  .uppstallning {
+    @apply font-mono text-right inline-block;
+  }
+
+  .uppstallning-rad {
+    @apply border-b-2 border-gray-800 pb-1 mb-1;
+  }
+}
+
+/* Animeringar */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes pulse-success {
+  0%, 100% { background-color: theme('colors.success.100'); }
+  50% { background-color: theme('colors.success.200'); }
+}
+
+.animate-pulse-success {
+  animation: pulse-success 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.animate-shake {
+  animation: shake 0.3s ease-in-out;
+}

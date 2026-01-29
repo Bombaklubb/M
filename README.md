@@ -1,169 +1,149 @@
-# 📚 Läs och lär
+# Matteträning ÅK 1-9
 
-En webbaserad läsförståelseapp för mellanstadieelever (årskurs 4-6) i Sverige, liknande ReadTheory.org och Frippo.se.
+En komplett webbapp för matematikträning anpassad för svenska grundskolan (årskurs 1-9) enligt Lgr22.
 
-## ✨ Funktioner
+## Funktioner
 
-### Kärnfunktioner
-- **Enkel inloggning** - Inget lösenord krävs, bara användarnamn
-- **Adaptivt nivåsystem** - 5 svårighetsnivåer som anpassas efter elevens resultat
-- **AI-genererade texter** - Unika texter varje gång via Anthropic API
-- **Läsförståelsefrågor** - 5 frågor per text med direkt feedback
-- **Text-to-speech** - Möjlighet att lyssna på texterna
+### För elever
+- **Öva mer** - Automatgenererade övningar med omedelbar feedback
+  - Addition, subtraktion, multiplikation, division
+  - Algebra och mönster (anpassat efter årskurs)
+  - Sammanfattning efter 10 uppgifter
 
-### Spelifiering
-- **Poängsystem** - Tjäna poäng baserat på nivå och antal rätt svar
-- **Streaks** - Belöning för daglig övning
-- **Badges** - Märken för milstolpar (10 texter, 5 dagar i rad, 100% resultat, etc.)
-- **Progressbar** - Visuell representation av framsteg
+- **Repetition** - Lektioner och genomgångar
+  - De fyra räknesätten med uppställning
+  - Enhetsomvandling (längd, massa, volym)
+  - Algebra från saknade tal till ekvationer
 
-### Nivåsystem
-- **Nivå 1**: Korta texter (100-150 ord), enkelt språk
-- **Nivå 2**: 150-200 ord, lite mer komplexa meningar
-- **Nivå 3**: 200-250 ord, varierat ordförråd
-- **Nivå 4**: 250-300 ord, mer avancerade teman
-- **Nivå 5**: 300-400 ord, utmanande texter
+- **Rika problem** - Öppna problem på tre nivåer
+  - E (grundläggande)
+  - C (utvecklad)
+  - A (avancerad)
+  - 8 teman inklusive algebra/samband
 
-Systemet justerar automatiskt:
-- 80%+ rätt → nivå upp
-- Under 50% → nivå ner
+- **Utmaning** - Svårare problem
+  - Logiska problem
+  - Talmönster
+  - Algebra-pussel
+  - Geometri-utmaningar
 
-### Teman
-- Djur & Natur
-- Rymden
-- Sport & Fritid
-- Historia & Forntiden
-- Vetenskap
-- Äventyr & Spänning
-- Vardagsliv & Vänskap
-- Sverige & Världen
-- Teknik & Uppfinningar
+- **Min statistik** - Följ din egen utveckling
 
-## 🚀 Kom igång
+### För lärare
+- Översikt över alla elever
+- Filtrera efter årskurs
+- Se elevers detaljerade statistik
+- Bedöm rika problem (på väg / godtagbart / starkt)
+- Ge personlig återkoppling
 
-### Förutsättningar
-- Node.js (version 14 eller senare)
-- En Anthropic API-nyckel
+## Teknisk stack
 
-### Installation
+- **Frontend:** Next.js 14 + TypeScript
+- **Styling:** Tailwind CSS
+- **Backend:** Next.js API routes
+- **Databas:** JSON-fil (utvecklingsmiljö)
+- **Autentisering:** Enkel kod-baserad inloggning
 
-1. Klona projektet:
+## Installation
+
 ```bash
-git clone <repository-url>
-cd M
-```
+# Klona repot
+git clone <repo-url>
+cd mattetraning
 
-2. Installera dependencies:
-```bash
+# Installera dependencies
 npm install
-```
 
-3. Skapa en `.env.local` fil och lägg till din Anthropic API-nyckel:
-```
-VITE_ANTHROPIC_API_KEY=your-api-key-here
-```
+# Skapa testdata
+npm run seed
 
-4. Starta utvecklingsservern:
-```bash
+# Starta utvecklingsservern
 npm run dev
 ```
 
-5. Öppna din webbläsare och gå till `http://localhost:5173`
+Öppna [http://localhost:3000](http://localhost:3000) i din webbläsare.
 
-## 📖 Användning
+## Testinloggning
 
-### För elever
-1. Logga in med ditt namn och välj "Elev"
-2. Välj ett tema du vill läsa om
-3. Läs texten i din egen takt (använd text-to-speech om du vill)
-4. Svara på 5 frågor om texten
-5. Se ditt resultat och eventuella nya badges
-6. Fortsätt läsa för att öka din nivå!
+### Lärare
+- `LARARE123` - Anna Andersson
+- `LARARE456` - Erik Eriksson
 
-### För lärare
-1. Logga in med ditt namn och välj "Lärare"
-2. Se klassens resultat och framsteg (kommer snart)
+### Klasskoder (för elever)
+- `3A2024` - Klass 3A (årskurs 3)
+- `6B2024` - Klass 6B (årskurs 6)
+- `9C2024` - Klass 9C (årskurs 9)
 
-## 🏗️ Teknisk stack
-
-- **Frontend**: React 19 + TypeScript
-- **Styling**: Tailwind CSS
-- **AI**: Anthropic Claude API
-- **State Management**: React Hooks
-- **Data Storage**: localStorage
-- **Build Tool**: Vite
-
-## 📁 Projektstruktur
+## Projektstruktur
 
 ```
-/src
-├── components/        # React-komponenter
-│   ├── Header.tsx
-│   ├── BadgeDisplay.tsx
-│   ├── Button.tsx
-│   ├── QuestionCard.tsx
-│   ├── QuizView.tsx
-│   ├── ReadingView.tsx
-│   ├── ResultView.tsx
-│   └── SetupView.tsx
-├── pages/            # Sidkomponenter
-│   ├── Login.tsx
-│   └── Profile.tsx
-├── hooks/            # Custom React hooks
-│   ├── useAuth.ts
-│   └── useProgress.ts
-├── services/         # API-tjänster
-│   └── anthropicService.ts
-├── utils/            # Hjälpfunktioner
-│   ├── storage.ts
-│   ├── levelCalculator.ts
-│   └── badgeSystem.ts
-├── types.ts          # TypeScript-typer
-├── App.tsx           # Huvudkomponent
-└── index.tsx         # Entry point
+src/
+├── components/     # Återanvändbara komponenter
+├── lib/            # Databaslogik och hjälpfunktioner
+│   ├── db.ts           # JSON-databas
+│   ├── taskGenerator.ts # Uppgiftsgenerator
+│   ├── lessons.ts      # Lektionsinnehåll
+│   ├── richProblems.ts # Rika problem
+│   └── challenges.ts   # Utmaningar
+├── pages/          # Next.js sidor
+│   ├── api/        # API endpoints
+│   ├── elev/       # Elevsidor
+│   └── larare/     # Lärarsidor
+└── styles/         # CSS
 ```
 
-## 🎮 Spelmekanik
+## Matematikområden
 
-### Poäng
-- 10 poäng per rätt svar × nivå
-- Exempel: 4 rätt på nivå 3 = 120 poäng
+Samma områden används ÅK 1-9 med ökande svårighetsgrad:
 
-### Badges
-- 🌟 **Första steget** - Läste din första text
-- 📚 **Bokmal** - Läste 10 texter
-- 🦸 **Läshjälte** - Läste 50 texter
-- 👑 **Läsmästare** - Läste 100 texter
-- 🔥 **Femma** - Läste 5 dagar i rad
-- 💪 **Tiotal** - Läste 10 dagar i rad
-- 🏆 **Månadsmästare** - Läste 30 dagar i rad
-- 💯 **Perfekt** - Fick 100% på en text
-- ⭐ **Stjärnelev** - Fick 100% fem gånger
-- 📈 **Nivå upp** - Gick upp en nivå
-- 🎯 **Toppnivå** - Nådde nivå 5
+1. Tal & taluppfattning
+2. De fyra räknesätten
+3. Problemlösning
+4. Geometri
+5. Algebra & mönster
+6. Mätning & enheter
+7. Statistik & sannolikhet
+8. Resonemang & kommunikation
 
-## 🔒 Data och integritet
+## Årskursanpassning
 
-All data lagras lokalt i webbläsarens localStorage. Ingen data skickas till externa servrar förutom API-anrop till Anthropic för att generera texter.
+### Lågstadiet (ÅK 1-3)
+- Talområde upp till 100-1000
+- Konkreta representationer
+- Enkla mönster och saknade tal
+- Grundläggande enheter
 
-## 🛠️ Utveckling
+### Mellanstadiet (ÅK 4-6)
+- Talområde till tusentals, decimaler
+- Multiplikation och division
+- Enkla uttryck och ekvationer
+- Alla enhetsomvandlingar
 
-### Bygga för produktion
+### Högstadiet (ÅK 7-9)
+- Negativa tal, potenser
+- Avancerade ekvationer
+- Proportionalitet och linjära samband
+- Sannolikhet och statistik
+
+## Scripts
+
 ```bash
-npm run build
+npm run dev      # Starta utvecklingsserver
+npm run build    # Bygg för produktion
+npm run start    # Starta produktionsserver
+npm run seed     # Skapa testdata
 ```
 
-### Preview production build
-```bash
-npm run preview
-```
+## Vidareutveckling
 
-## 📝 Licens
+Appen är byggd för att enkelt kunna utökas med:
+- Fler uppgifter per kategori
+- Fler lektioner
+- Fler rika problem-teman
+- Fler utmaningar
+- Extern databas (PostgreSQL, etc.)
+- Användarkonton med säker autentisering
 
-Detta projekt är skapat för utbildningsändamål.
+## Licens
 
-## 🙏 Tack till
-
-- Anthropic för Claude API
-- Tailwind CSS-teamet
-- React-teamet
+MIT
