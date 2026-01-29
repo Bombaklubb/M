@@ -1,5 +1,5 @@
-// Force rebuild: 2026-01-28T07:00:00Z - JSON mode deployment
-import { GoogleGenerativeAI } from '@google/generative-ai';
+// Groq-powered free AI for reading comprehension
+import Groq from 'groq-sdk';
 
 // Types
 interface GenerateRequest {
@@ -22,8 +22,10 @@ let activeRequests = 0;
 const MAX_CONCURRENT = 3;
 const queue: Array<() => Promise<void>> = [];
 
-// Google Gemini client
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
+// Groq client (free tier!)
+const groq = new Groq({
+  apiKey: process.env.GROQ_API_KEY || '',
+});
 
 // System instruction (optimized for paid tier)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
@@ -247,20 +249,27 @@ REGLER:
 - Exakt 6 frågor
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
-        const model = genAI.getGenerativeModel({
-          model: 'gemini-2.5-flash',
-          generationConfig: {
-            temperature: 0.8,
-            maxOutputTokens: 8192, // Increased to handle full text + 6 questions
-          },
+        const completion = await groq.chat.completions.create({
+          model: 'llama-3.3-70b-versatile', // Great for Swedish + JSON
+          messages: [
+            {
+              role: 'system',
+              content: SYSTEM_INSTRUCTION,
+            },
+            {
+              role: 'user',
+              content: prompt,
+            },
+          ],
+          temperature: 0.8,
+          max_tokens: 8192,
+          response_format: { type: 'json_object' }, // Force JSON output
         });
 
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const responseText = response.text();
+        const responseText = completion.choices[0]?.message?.content || '';
 
-        console.error('[DEBUG] GEMINI RESPONSE LENGTH:', responseText.length);
-        console.error('[DEBUG] GEMINI RESPONSE FIRST 500:', responseText.substring(0, 500));
+        console.error('[DEBUG] GROQ RESPONSE LENGTH:', responseText.length);
+        console.error('[DEBUG] GROQ RESPONSE FIRST 500:', responseText.substring(0, 500));
 
         // Extract JSON from response
         let jsonText = responseText.trim();
