@@ -41,10 +41,10 @@ En komplett webbapp för matematikträning anpassad för svenska grundskolan (å
 - **Frontend:** Next.js 14 + TypeScript
 - **Styling:** Tailwind CSS
 - **Backend:** Next.js API routes
-- **Databas:** JSON-fil (utvecklingsmiljö)
+- **Databas:** JSON-fil (utveckling) / Vercel KV (produktion)
 - **Autentisering:** Enkel kod-baserad inloggning
 
-## Installation
+## Installation (lokal utveckling)
 
 ```bash
 # Klona repot
@@ -62,6 +62,18 @@ npm run dev
 ```
 
 Öppna [http://localhost:3000](http://localhost:3000) i din webbläsare.
+
+## Deploy till Vercel
+
+1. Pusha koden till GitHub
+2. Gå till [vercel.com](https://vercel.com) och importera repot
+3. Lägg till en **KV Database** under Storage i Vercel-dashboarden
+4. Deploya projektet
+5. Gå till `https://din-app.vercel.app/api/seed` för att skapa testdata
+
+### Environment Variables (sätts automatiskt av Vercel KV)
+- `KV_REST_API_URL`
+- `KV_REST_API_TOKEN`
 
 ## Testinloggning
 
