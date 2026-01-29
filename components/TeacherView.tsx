@@ -21,7 +21,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
   const handleLogin = () => {
     // Simple password check - you can change this!
-    if (password === 'lärare2025') {
+    if (password === 'Korsängen') {
       setAuthenticated(true);
       fetchStats();
     } else {
