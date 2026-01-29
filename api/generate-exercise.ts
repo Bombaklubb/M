@@ -28,19 +28,25 @@ const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY || '',
 });
 
-// System instruction (optimized for paid tier)
+// System instruction (optimized for challenging levels)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
-Skapa engagerande texter och pedagogiska frågor.
+Skapa UTMANANDE texter och SVÅRA frågor som kräver eftertanke.
 
-Nivåguide (1-20):
-- Nivå 1-2: 50-150 ord. Enkla meningar. Vardagliga ord.
-- Nivå 3-4: 150-350 ord. Varierat ordförråd.
-- Nivå 5-6: 350-650 ord. Mer avancerat språk.
-- Nivå 7-9: 650-1000 ord. Högstadietexter.
-- Nivå 10-20: 1000-1500 ord. Utmaningsnivåer.
+Nivåguide (1-20) - HÅLL DIG TILL ORDANTALET:
+- Nivå 1-2: 150-300 ord. Enkla meningar men med några svårare ord inblandade.
+- Nivå 3-4: 300-500 ord. Varierat ordförråd med facktermer. Komplexa meningsbyggnader.
+- Nivå 5-6: 500-800 ord. Avancerat språk med abstrakta begrepp. Bisatser och samband.
+- Nivå 7-9: 800-1200 ord. Högstadienivå med djupare analys och komplexa resonemang.
+- Nivå 10-12: 1200-1600 ord. Gymnasienivå med argumenterande och analytisk text.
+- Nivå 13-15: 1600-2000 ord. Avancerad gymnasienivå med källkritik och perspektiv.
+- Nivå 16-20: 2000-2500 ord. Universitetsnivå med vetenskaplig text och komplex argumentation.
 
-6 frågor: 3 fakta (direkt i texten) + 3 inferens (slutsatser).
-Alla frågor har 4 alternativ där ett är rätt.`;
+VIKTIGT - Frågor ska vara UTMANANDE:
+- 2 faktafrågor (kräver noggrann läsning)
+- 2 inferensfrågor (kräver slutsatser och tolkning)
+- 2 analysfrågor (kräver djupare förståelse och sammankoppling)
+- Distraktorer (felaktiga svarsalternativ) ska vara trovärdiga och kräva eftertanke
+- Alla frågor har 4 alternativ där ENDAST ETT är rätt.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
