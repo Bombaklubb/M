@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Login } from './pages/Login';
 import { Profile } from './pages/Profile';
 import { SetupView } from './components/SetupView';
 import { ReadingView } from './components/ReadingView';
 import { ResultView } from './components/ResultView';
 import { Header } from './components/Header';
+import { TeacherView } from './components/TeacherView';
 import { generateExercise } from './services/anthropicService';
 import { ReadingExercise, AppState, UserAnswers, UserRole, Badge, TextType, TOPICS, TEXT_TYPES } from './types';
 import { useAuth } from './hooks/useAuth';
@@ -19,6 +20,7 @@ function App() {
   const [userAnswers, setUserAnswers] = useState<UserAnswers>({});
   const [errorMsg, setErrorMsg] = useState('');
   const [showProfile, setShowProfile] = useState(false);
+  const [showTeacherView, setShowTeacherView] = useState(false);
   const [startTime, setStartTime] = useState<number | null>(null);
 
   // Result info for displaying
@@ -29,6 +31,19 @@ function App() {
     newBadges: Badge[];
     timeSpentMinutes: number;
   } | null>(null);
+
+  // Keyboard shortcut for teacher view (Ctrl+Shift+L)
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+        e.preventDefault();
+        setShowTeacherView(true);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
 
   const handleStart = async (topic: string, level: number, textType: TextType, retryCount = 0) => {
     setAppState(AppState.LOADING);
@@ -270,6 +285,11 @@ function App() {
           />
         )}
       </main>
+
+      {/* Teacher View (accessed via Ctrl+Shift+L) */}
+      {showTeacherView && (
+        <TeacherView onClose={() => setShowTeacherView(false)} />
+      )}
     </div>
   );
 }

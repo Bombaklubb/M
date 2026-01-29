@@ -1,5 +1,6 @@
 // Groq-powered free AI for reading comprehension
 import Groq from 'groq-sdk';
+import { kv } from '@vercel/kv';
 
 // Types
 interface GenerateRequest {
@@ -320,6 +321,30 @@ REGLER:
         return data;
       });
     });
+
+    // Log usage to KV for teacher stats
+    try {
+      const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+      const usageEntry = {
+        timestamp: Date.now(),
+        topic,
+        level,
+        textType,
+      };
+
+      // Append to today's usage
+      const todayKey = `usage:${today}`;
+      const todayEntries: any[] = (await kv.get(todayKey)) || [];
+      await kv.set(todayKey, [...todayEntries, usageEntry], { ex: 86400 * 7 }); // 7 day expiry
+
+      // Increment total counter
+      await kv.incr('usage:total');
+
+      console.log(`[USAGE LOGGED] Topic: ${topic}, Level: ${level}, Type: ${textType}`);
+    } catch (kvError) {
+      // Don't fail the request if KV logging fails
+      console.error('[KV LOGGING ERROR]', kvError);
+    }
 
     // Save to cache
     saveToCache(cacheKey, result);
