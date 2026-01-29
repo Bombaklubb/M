@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReadingExercise, UserAnswers } from '../types';
+import { ReadingExercise, UserAnswers, TEXT_TYPES } from '../types';
 import { Button } from './Button';
 
 interface ReadingViewProps {
@@ -41,13 +41,27 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ data, onComplete }) =>
   const currentQuestion = data.questions[currentQuestionIndex];
   const progress = ((currentQuestionIndex + 1) / data.questions.length) * 100;
 
+  // Find text type label and icon
+  const textTypeInfo = TEXT_TYPES.find(t => t.value === data.textType);
+
   return (
     <div className="min-h-screen bg-sky-50">
       {/* Header */}
       <div className="bg-white border-b border-slate-200 px-4 py-3">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-bold text-slate-800">{data.title}</h2>
-          <p className="text-sm text-slate-500">Nivå {data.level}</p>
+          <div className="flex items-center gap-3 mt-1">
+            <p className="text-sm text-slate-500">Nivå {data.level}</p>
+            {textTypeInfo && (
+              <>
+                <span className="text-slate-300">•</span>
+                <p className="text-sm text-slate-500 flex items-center gap-1">
+                  <span>{textTypeInfo.icon}</span>
+                  <span>{textTypeInfo.label}</span>
+                </p>
+              </>
+            )}
+          </div>
         </div>
       </div>
 

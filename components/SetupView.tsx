@@ -14,7 +14,14 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
   const [textType, setTextType] = useState<TextType>(TextType.NARRATIVE);
 
   const handleStart = () => {
-    const selectedTopic = customTopic.trim() || topic;
+    let selectedTopic = customTopic.trim() || topic;
+
+    // If "Slumpa fram en text" is selected, pick a random topic
+    if (selectedTopic === "🎲 Slumpa fram en text") {
+      const otherTopics = TOPICS.filter(t => t !== "🎲 Slumpa fram en text");
+      selectedTopic = otherTopics[Math.floor(Math.random() * otherTopics.length)];
+    }
+
     if (selectedTopic) {
       onStart(selectedTopic, level, textType);
     }
@@ -38,19 +45,28 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
             1. Välj ett ämne
           </label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
-            {TOPICS.map((t) => (
-              <button
-                key={t}
-                onClick={() => { setTopic(t); setCustomTopic(''); }}
-                className={`p-3 rounded-xl text-sm font-bold transition-colors ${
-                  topic === t && !customTopic 
-                    ? 'bg-indigo-600 text-white shadow-md' 
-                    : 'bg-slate-100 text-slate-600 hover:bg-indigo-50'
-                }`}
-              >
-                {t}
-              </button>
-            ))}
+            {TOPICS.map((t) => {
+              const isRandomOption = t === "🎲 Slumpa fram en text";
+              const isSelected = topic === t && !customTopic;
+
+              return (
+                <button
+                  key={t}
+                  onClick={() => { setTopic(t); setCustomTopic(''); }}
+                  className={`p-3 rounded-xl text-sm font-bold transition-all ${
+                    isSelected
+                      ? isRandomOption
+                        ? 'bg-gradient-to-br from-orange-400 to-pink-400 text-gray-900 shadow-md border-4 border-orange-500'
+                        : 'bg-indigo-600 text-white shadow-md'
+                      : isRandomOption
+                        ? 'bg-gradient-to-br from-orange-100 to-pink-100 text-orange-700 hover:from-orange-200 hover:to-pink-200 border-4 border-orange-300 shadow-lg'
+                        : 'bg-slate-100 text-slate-600 hover:bg-indigo-50'
+                  }`}
+                >
+                  {t}
+                </button>
+              );
+            })}
           </div>
           <div className="relative">
             <input
@@ -111,7 +127,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🔍</span>
-                <span className="text-slate-700 font-medium">Leta efter ord du inte förstår</span>
+                <span className="text-slate-700 font-medium">Ta reda på ord du inte förstår</span>
               </div>
             </div>
           </div>
