@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { updateRichProblemAttempt } from '@/lib/db'
+import { updateRichProblemAttempt } from '@/lib/database'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'Lärar-ID och betyg krävs' })
     }
 
-    const updated = updateRichProblemAttempt(id, {
+    const updated = await updateRichProblemAttempt(id, {
       teacherId,
       teacherRating: rating,
       teacherFeedback: feedback || undefined,

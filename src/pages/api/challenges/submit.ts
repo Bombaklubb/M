@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { createChallengeAttempt } from '@/lib/db'
+import { createChallengeAttempt } from '@/lib/database'
 import { getChallengeById } from '@/lib/challenges'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Hämta rätt svar
     const challenge = getChallengeById(challengeId)
 
-    createChallengeAttempt({
+    await createChallengeAttempt({
       studentId,
       challengeId,
       challengeType: challengeType || 'unknown',

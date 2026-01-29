@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getUnratedRichProblemAttempts } from '@/lib/db'
+import { getUnratedRichProblemAttempts } from '@/lib/database'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
 
   try {
-    const unrated = getUnratedRichProblemAttempts()
+    const unrated = await getUnratedRichProblemAttempts()
 
     return res.status(200).json({
       count: unrated.length,

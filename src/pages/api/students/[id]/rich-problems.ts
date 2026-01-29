@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getRichProblemAttemptsByStudent } from '@/lib/db'
+import { getRichProblemAttemptsByStudent } from '@/lib/database'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'Student-ID krävs' })
     }
 
-    const attempts = getRichProblemAttemptsByStudent(id)
+    const attempts = await getRichProblemAttemptsByStudent(id)
 
     // Sortera efter datum, nyast först
     attempts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())

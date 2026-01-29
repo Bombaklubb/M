@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { createTaskAttempt } from '@/lib/db'
+import { createTaskAttempt } from '@/lib/database'
 import { validateAnswer } from '@/lib/taskGenerator'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const isCorrect = validateAnswer(userAnswer, correctAnswer)
 
     // Spara försöket
-    createTaskAttempt({
+    await createTaskAttempt({
       studentId,
       section: 'ova_mer',
       domain: domain || 'de_fyra_raknesatten',

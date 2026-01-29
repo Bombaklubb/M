@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { createRichProblemAttempt } from '@/lib/db'
+import { createRichProblemAttempt } from '@/lib/database'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'Saknar nödvändiga fält' })
     }
 
-    const attempt = createRichProblemAttempt({
+    const attempt = await createRichProblemAttempt({
       studentId,
       theme,
       level,

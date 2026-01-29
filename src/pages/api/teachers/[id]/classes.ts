@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getClassesByTeacher } from '@/lib/db'
+import { getClassesByTeacher } from '@/lib/database'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'Lärar-ID krävs' })
     }
 
-    const classes = getClassesByTeacher(id)
+    const classes = await getClassesByTeacher(id)
 
     return res.status(200).json(classes)
   } catch (error) {

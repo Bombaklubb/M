@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { findOrCreateStudent, getClassByCode } from '@/lib/db'
+import { findOrCreateStudent, getClassByCode } from '@/lib/database'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metoden är inte tillåten' })
   }
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Om klasskod anges, validera den
     let classId: string | null = null
     if (classCode) {
-      const cls = getClassByCode(classCode)
+      const cls = await getClassByCode(classCode)
       if (!cls) {
         return res.status(400).json({ error: 'Ogiltig klasskod' })
       }
@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     // Hitta eller skapa elev
-    const student = findOrCreateStudent(name, grade, classId)
+    const student = await findOrCreateStudent(name, grade, classId)
 
     return res.status(200).json({
       student: {
