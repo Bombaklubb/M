@@ -251,7 +251,7 @@ REGLER:
 - correctAnswer måste matcha exakt ett alternativ i options`;
 
         const completion = await groq.chat.completions.create({
-          model: 'llama-3.3-70b-versatile', // Great for Swedish + JSON
+          model: 'llama-3.1-8b-instant', // Faster, more tokens per day
           messages: [
             {
               role: 'system',
