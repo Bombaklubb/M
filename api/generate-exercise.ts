@@ -292,7 +292,7 @@ REGLER:
 - PERFEKT stavning är viktigare än långa texter`;
 
         const completion = await groq.chat.completions.create({
-          model: 'llama-3.1-8b-instant', // Faster, more tokens per day
+          model: 'llama-3.3-70b-versatile', // Higher quality Swedish, better spelling
           messages: [
             {
               role: 'system',

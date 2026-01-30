@@ -127,10 +127,10 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 <div className="text-7xl font-black text-blue-900">{stats.today}</div>
                 <div className="mt-4 space-y-1">
                   <div className="text-base font-bold text-blue-700">
-                    {400 - stats.today} texter kvar idag
+                    {100 - stats.today} texter kvar idag
                   </div>
                   <div className="text-sm text-blue-600">
-                    Daglig kapacitet: 400 texter
+                    Daglig kapacitet: ~100 texter (högkvalitetsmodell)
                   </div>
                 </div>
               </div>
