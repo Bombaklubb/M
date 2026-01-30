@@ -117,20 +117,26 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
         {stats && (
           <div className="space-y-6">
-            {/* Summary Cards */}
+            {/* Summary Cards - Förbättrad synlighet */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg p-6 text-white">
-                <div className="text-blue-100 mb-2">Texter idag</div>
-                <div className="text-5xl font-black">{stats.today}</div>
-                <div className="text-blue-100 mt-2 text-sm">
-                  {((stats.today / 14400) * 100).toFixed(1)}% av daglig gräns (14,400)
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-2xl p-8 text-white border-4 border-blue-400">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-5xl">📝</span>
+                  <div className="text-xl font-bold text-white">Texter idag</div>
+                </div>
+                <div className="text-7xl font-black text-white drop-shadow-lg">{stats.today}</div>
+                <div className="text-blue-50 mt-4 text-base font-semibold">
+                  {((stats.today / 400) * 100).toFixed(1)}% av daglig kapacitet (~400 texter)
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
-                <div className="text-purple-100 mb-2">Texter totalt</div>
-                <div className="text-5xl font-black">{stats.total}</div>
-                <div className="text-purple-100 mt-2 text-sm">
+              <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-2xl p-8 text-white border-4 border-purple-400">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-5xl">📊</span>
+                  <div className="text-xl font-bold text-white">Texter totalt</div>
+                </div>
+                <div className="text-7xl font-black text-white drop-shadow-lg">{stats.total}</div>
+                <div className="text-purple-50 mt-4 text-base font-semibold">
                   Sedan appen startade
                 </div>
               </div>

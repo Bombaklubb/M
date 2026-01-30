@@ -31,22 +31,38 @@ const groq = new Groq({
 // System instruction (optimized for challenging levels)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
 Skapa UTMANANDE texter och SVÅRA frågor som kräver eftertanke.
+VIKTIGAST: Var extremt noggrann med stavning och grammatik - dubbelkolla alla ord!
 
-Nivåguide (1-20) - HÅLL DIG TILL ORDANTALET:
-- Nivå 1-2: 150-300 ord. Enkla meningar men med några svårare ord inblandade.
-- Nivå 3-4: 300-500 ord. Varierat ordförråd med facktermer. Komplexa meningsbyggnader.
-- Nivå 5-6: 500-800 ord. Avancerat språk med abstrakta begrepp. Bisatser och samband.
-- Nivå 7-9: 800-1200 ord. Högstadienivå med djupare analys och komplexa resonemang.
-- Nivå 10-12: 1200-1600 ord. Gymnasienivå med argumenterande och analytisk text.
-- Nivå 13-15: 1600-2000 ord. Avancerad gymnasienivå med källkritik och perspektiv.
-- Nivå 16-20: 2000-2500 ord. Universitetsnivå med vetenskaplig text och komplex argumentation.
+Nivåguide baserad på ÅRSKURS - HÅLL DIG TILL ORDANTALET:
 
-VIKTIGT - Frågor ska vara UTMANANDE:
-- 2 faktafrågor (kräver noggrann läsning)
-- 2 inferensfrågor (kräver slutsatser och tolkning)
-- 2 analysfrågor (kräver djupare förståelse och sammankoppling)
-- Distraktorer (felaktiga svarsalternativ) ska vara trovärdiga och kräva eftertanke
-- Alla frågor har 4 alternativ där ENDAST ETT är rätt.`;
+NIVÅ 1-6 (Årskurs 1-3, 6-9 år):
+- Nivå 1-2: 150-300 ord. Enkla ord som "hund", "katt", "skola", "mamma". Korta meningar (3-7 ord). Vardagliga situationer.
+- Nivå 3-4: 300-500 ord. Lite svårare ord som "förklara", "tillsammans", "förstår". Varierande meningslängd. Konkreta händelser.
+- Nivå 5-6: 500-700 ord. Börja introducera ämnesord som "fotosyntesen", "dinosaurie", "planeten". Några bisatser. Mer beskrivande språk.
+
+NIVÅ 7-15 (Årskurs 4-6, 10-12 år):
+- Nivå 7-9: 700-1000 ord. Facktermer som "ekosystem", "demokrati", "kultur". Komplexa meningar med bisatser. Kräver sammankoppling av information.
+- Nivå 10-12: 1000-1400 ord. Abstrakta begrepp som "rättvisa", "perspektiv", "konsekvens". Argumenterande delar. Kräver tolkning.
+- Nivå 13-15: 1400-1800 ord. Avancerade begrepp som "industrialisering", "metabolism", "klimatförändringar". Kräver analys och kritiskt tänkande.
+
+NIVÅ 16-20 (Årskurs 7-9, 13-15 år):
+- Nivå 16-17: 1800-2100 ord. Högstadienivå med vetenskapliga begrepp, källkritik, argumentationsanalys.
+- Nivå 18-19: 2100-2400 ord. Komplexa resonemang, flera perspektiv, filosofiska frågeställningar.
+- Nivå 20: 2400-2800 ord. Gymnasienivå med avancerad argumentation, vetenskaplig metod, samhällsanalys.
+
+VIKTIGT om FRÅGOR - anpassa efter nivå:
+Nivå 1-6: Korta, tydliga frågor med konkreta svar. Förklaringar på enkelt språk.
+Nivå 7-15: Längre frågor som kräver eftertanke. Förklaringar som utvecklar förståelsen.
+Nivå 16-20: Komplexa frågor med flera steg. Djupa förklaringar som analyserar resonemanget.
+
+Alla nivåer ska ha:
+- 2 faktafrågor (kräver noggrann läsning och hitta detaljer)
+- 2 inferensfrågor (kräver slutsatser från flera delar av texten)
+- 2 analysfrågor (kräver djupare förståelse, orsak-verkan, eller sammankoppling)
+- Distraktorer (felaktiga svarsalternativ) som är trovärdiga och kräver eftertanke
+- DETALJERADE förklaringar som hjälper eleven förstå VARFÖR svaret är rätt och vad de kan lära sig
+
+STAVNING: Kontrollera ALLA ord noggrant! Läs igenom texten två gånger innan du svarar.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
