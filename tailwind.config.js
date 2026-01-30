@@ -38,6 +38,7 @@ module.exports = {
           400: '#4ade80',
           500: '#22c55e',
           600: '#16a34a',
+          700: '#15803d',
         },
         // Mjuk blå för headers
         sky: {
@@ -47,6 +48,8 @@ module.exports = {
           300: '#7dd3fc',
           400: '#38bdf8',
           500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
         },
         // Mjuk orange/gul för varningar och stjärnor
         sunny: {
@@ -56,6 +59,8 @@ module.exports = {
           300: '#fcd34d',
           400: '#fbbf24',
           500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
         },
         // Mjuk rosa/röd
         coral: {
@@ -65,6 +70,8 @@ module.exports = {
           300: '#fda4af',
           400: '#fb7185',
           500: '#f43f5e',
+          600: '#e11d48',
+          700: '#be123c',
         },
         success: {
           50: '#f0fdf4',

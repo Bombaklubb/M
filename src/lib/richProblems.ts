@@ -450,6 +450,191 @@ Visa dina beräkningar och resonemang.`,
     minGrade: 7,
     maxGrade: 9,
   },
+
+  // ============ KOMBINATORIK ============
+  {
+    id: 'kombi_e_1',
+    theme: 'kombinatorik',
+    themeTitle: 'Kombinatorik',
+    level: 'E',
+    title: 'Glasskombinationer',
+    problemText: `I glasskiosken finns 3 smaker: vanilj, choklad och jordgubb.
+
+Du ska välja 2 kulor (kan vara samma smak).
+
+Hur många olika kombinationer kan du göra? Lista alla.`,
+    minGrade: 3,
+    maxGrade: 6,
+  },
+  {
+    id: 'kombi_c_1',
+    theme: 'kombinatorik',
+    themeTitle: 'Kombinatorik',
+    level: 'C',
+    title: 'Kläder',
+    problemText: `Emma har 4 olika tröjor, 3 olika byxor och 2 olika skor.
+
+a) Hur många olika outfits kan hon sätta ihop?
+b) Om hon också har 2 jackor, hur många outfits blir det då (med jacka)?`,
+    minGrade: 4,
+    maxGrade: 7,
+  },
+  {
+    id: 'kombi_a_1',
+    theme: 'kombinatorik',
+    themeTitle: 'Kombinatorik',
+    level: 'A',
+    title: 'Fotbollslag',
+    problemText: `I en klass finns 12 elever. Till matchen ska 5 spelare väljas.
+
+a) På hur många sätt kan man välja ut 5 spelare (ordningen spelar ingen roll)?
+b) Om en av de 5 ska vara kapten, på hur många sätt kan laget sättas samman då?
+
+Visa dina beräkningar.`,
+    minGrade: 7,
+    maxGrade: 9,
+    tips: 'Använd formeln för kombinationer: n! / (k! × (n-k)!)',
+  },
+
+  // ============ PROCENT (fler problem) ============
+  {
+    id: 'procent_e_1',
+    theme: 'procent',
+    themeTitle: 'Procent',
+    level: 'E',
+    title: 'Rea på skor',
+    problemText: `Ett par skor kostar 500 kr. De säljs nu med 20% rabatt.
+
+Hur mycket kostar skorna nu?
+
+Visa hur du räknar.`,
+    minGrade: 5,
+    maxGrade: 7,
+  },
+  {
+    id: 'procent_c_1',
+    theme: 'procent',
+    themeTitle: 'Procent',
+    level: 'C',
+    title: 'Befolkningsökning',
+    problemText: `En stad har 50 000 invånare. Befolkningen ökar med 3% per år.
+
+a) Hur många invånare finns det efter 1 år?
+b) Hur många finns det efter 2 år?
+c) Hur lång tid tar det ungefär innan befolkningen fördubblas?`,
+    minGrade: 6,
+    maxGrade: 9,
+  },
+  {
+    id: 'procent_a_1',
+    theme: 'procent',
+    themeTitle: 'Procent',
+    level: 'A',
+    title: 'Prishöjning och sänkning',
+    problemText: `En vara höjs först med 25% och sänks sedan med 20%.
+
+a) Om ursprungspriset var 400 kr, vad blir slutpriset?
+b) Hur många procent har priset ändrats totalt?
+c) Varför blir det inte samma som ursprungspriset trots att 25-20=5?
+
+Förklara och visa beräkningar.`,
+    minGrade: 7,
+    maxGrade: 9,
+  },
+
+  // ============ TID OCH HASTIGHET (fler) ============
+  {
+    id: 'tid_e_2',
+    theme: 'tid_och_hastighet',
+    themeTitle: 'Tid och hastighet',
+    level: 'E',
+    title: 'Promenad',
+    problemText: `Lisa går 5 km/h. Hon ska gå till affären som ligger 2 km bort.
+
+Hur lång tid tar promenaden?
+
+Visa hur du tänker.`,
+    minGrade: 4,
+    maxGrade: 6,
+  },
+  {
+    id: 'tid_c_2',
+    theme: 'tid_och_hastighet',
+    themeTitle: 'Tid och hastighet',
+    level: 'C',
+    title: 'Snittfart',
+    problemText: `Kalle cyklar till skolan på morgonen (uppför) med 12 km/h.
+På hemvägen (nerför) cyklar han 18 km/h.
+Sträckan är 6 km.
+
+a) Hur lång tid tar det till skolan?
+b) Hur lång tid tar det hem?
+c) Vad är hans medelhastighet för hela resan (fram och tillbaka)?`,
+    minGrade: 6,
+    maxGrade: 9,
+    tips: 'Medelhastighet = total sträcka / total tid',
+  },
+
+  // ============ GEOMETRI (fler) ============
+  {
+    id: 'geometri_e_2',
+    theme: 'geometri_och_area',
+    themeTitle: 'Geometri och area',
+    level: 'E',
+    title: 'Triangelns area',
+    problemText: `En triangel har basen 10 cm och höjden 6 cm.
+
+Beräkna triangelns area.
+
+Visa din uträkning och skriv formeln du använder.`,
+    minGrade: 4,
+    maxGrade: 7,
+  },
+  {
+    id: 'geometri_c_2',
+    theme: 'geometri_och_area',
+    themeTitle: 'Geometri och area',
+    level: 'C',
+    title: 'Måla vägg',
+    problemText: `En vägg är 4 m bred och 2,5 m hög. På väggen finns ett fönster som är 1,2 m × 1 m.
+
+a) Hur stor area ska målas?
+b) 1 liter färg räcker till 8 m². Hur många liter behövs? Färg säljs i hela liter.`,
+    minGrade: 5,
+    maxGrade: 8,
+  },
+
+  // ============ MÖNSTER (fler) ============
+  {
+    id: 'monster_e_2',
+    theme: 'monster_och_talföljder',
+    themeTitle: 'Mönster och talföljder',
+    level: 'E',
+    title: 'Dubblering',
+    problemText: `Titta på talföljden: 3, 6, 12, 24, ...
+
+a) Vad är nästa tal?
+b) Vad är regeln?
+c) Vad är det 7:e talet?`,
+    minGrade: 2,
+    maxGrade: 5,
+  },
+  {
+    id: 'monster_c_2',
+    theme: 'monster_och_talföljder',
+    themeTitle: 'Mönster och talföljder',
+    level: 'C',
+    title: 'Stolar och bord',
+    problemText: `Runt ett fyrkantigt bord sitter 4 personer.
+När man sätter ihop 2 bord i rad sitter 6 personer.
+Med 3 bord sitter 8 personer.
+
+a) Hur många sitter vid 5 bord i rad?
+b) Skriv en formel för antal personer vid n bord.
+c) Hur många bord behövs för 30 personer?`,
+    minGrade: 5,
+    maxGrade: 8,
+  },
 ]
 
 export function getThemesForGrade(grade: number): RichProblemTheme[] {
@@ -469,4 +654,15 @@ export function getProblemsForThemeAndGrade(theme: string, grade: number): RichP
 
 export function getProblemById(id: string): RichProblem | undefined {
   return richProblems.find((p) => p.id === id)
+}
+
+export function getRandomProblem(grade: number, level?: 'E' | 'C' | 'A'): RichProblem | undefined {
+  let filtered = richProblems.filter(
+    (p) => grade >= p.minGrade && grade <= p.maxGrade
+  )
+  if (level) {
+    filtered = filtered.filter(p => p.level === level)
+  }
+  if (filtered.length === 0) return undefined
+  return filtered[Math.floor(Math.random() * filtered.length)]
 }

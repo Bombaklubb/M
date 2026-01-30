@@ -17,6 +17,10 @@ interface Task {
   correctAnswer: string
   hint?: string
   explanation?: string
+  useGrid?: boolean
+  num1?: number
+  num2?: number
+  operation?: string
 }
 
 interface Result {
@@ -30,9 +34,117 @@ const categories = [
   { id: 'subtraktion', name: 'Subtraktion', icon: '➖' },
   { id: 'multiplikation', name: 'Multiplikation', icon: '✖️' },
   { id: 'division', name: 'Division', icon: '➗' },
+  { id: 'uppstallning', name: 'Uppställning', icon: '📝', isGrid: true },
   { id: 'algebra', name: 'Algebra & mönster', icon: '🔢' },
   { id: 'blandade', name: 'Blandade', icon: '🎲' },
 ]
+
+// Grid component för uppställningar
+function GridInput({
+  num1,
+  num2,
+  operation,
+  onAnswerChange,
+  disabled,
+}: {
+  num1: number
+  num2: number
+  operation: string
+  onAnswerChange: (answer: string) => void
+  disabled: boolean
+}) {
+  const num1Str = num1.toString()
+  const num2Str = num2.toString()
+  const maxLen = Math.max(num1Str.length, num2Str.length) + 1
+
+  // Result row state
+  const [resultDigits, setResultDigits] = useState<string[]>(Array(maxLen + 1).fill(''))
+  // Carry row state (minnessiffror)
+  const [carryDigits, setCarryDigits] = useState<string[]>(Array(maxLen).fill(''))
+
+  const handleResultChange = (index: number, value: string) => {
+    if (disabled) return
+    const newDigits = [...resultDigits]
+    newDigits[index] = value.slice(-1) // Only last character
+    setResultDigits(newDigits)
+
+    // Calculate full answer from digits
+    const answer = newDigits.join('').replace(/^0+/, '') || '0'
+    onAnswerChange(answer)
+  }
+
+  const handleCarryChange = (index: number, value: string) => {
+    if (disabled) return
+    const newCarry = [...carryDigits]
+    newCarry[index] = value.slice(-1)
+    setCarryDigits(newCarry)
+  }
+
+  const opSymbol = operation === 'addition' ? '+' : operation === 'subtraktion' ? '−' : '×'
+
+  return (
+    <div className="flex flex-col items-center">
+      <div className="bg-gradient-to-br from-cream-50 to-cream-100 p-6 rounded-2xl border-2 border-cream-300 inline-block">
+        {/* Minnessiffror (carry) */}
+        <div className="flex justify-end mb-1 pr-1">
+          {carryDigits.map((digit, i) => (
+            <input
+              key={`carry-${i}`}
+              type="text"
+              inputMode="numeric"
+              value={digit}
+              onChange={(e) => handleCarryChange(i, e.target.value)}
+              className="w-8 h-6 text-center text-xs text-gray-400 bg-transparent border-b border-dashed border-gray-300 focus:outline-none focus:border-primary-400"
+              maxLength={1}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+
+        {/* Första talet */}
+        <div className="flex justify-end font-mono text-2xl">
+          {num1Str.padStart(maxLen, ' ').split('').map((digit, i) => (
+            <div key={`num1-${i}`} className="w-10 h-12 flex items-center justify-center">
+              {digit !== ' ' ? digit : ''}
+            </div>
+          ))}
+        </div>
+
+        {/* Operator och andra talet */}
+        <div className="flex justify-end font-mono text-2xl border-b-4 border-gray-800 pb-2">
+          <div className="w-10 h-12 flex items-center justify-center text-gray-600">
+            {opSymbol}
+          </div>
+          {num2Str.padStart(maxLen - 1, ' ').split('').map((digit, i) => (
+            <div key={`num2-${i}`} className="w-10 h-12 flex items-center justify-center">
+              {digit !== ' ' ? digit : ''}
+            </div>
+          ))}
+        </div>
+
+        {/* Svarsrad - rutnät för att skriva in svaret */}
+        <div className="flex justify-end mt-2">
+          {resultDigits.map((digit, i) => (
+            <input
+              key={`result-${i}`}
+              type="text"
+              inputMode="numeric"
+              value={digit}
+              onChange={(e) => handleResultChange(i, e.target.value)}
+              className="w-10 h-12 text-center font-mono text-2xl bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 mx-0.5"
+              maxLength={1}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+      </div>
+
+      <p className="text-sm text-gray-500 mt-4">
+        Skriv svaret siffra för siffra i rutorna. Börja från höger!
+      </p>
+    </div>
+  )
+}
 
 export default function OvaMer() {
   const router = useRouter()
@@ -48,7 +160,7 @@ export default function OvaMer() {
   useEffect(() => {
     const stored = sessionStorage.getItem('student')
     if (!stored) {
-      router.push('/elev/login')
+      router.push('/')
       return
     }
     setStudent(JSON.parse(stored))
@@ -62,6 +174,55 @@ export default function OvaMer() {
     setUserAnswer('')
 
     try {
+      // For uppställning, generate grid-friendly tasks
+      if (selectedCategory === 'uppstallning') {
+        const operations = ['addition', 'subtraktion', 'multiplikation']
+        const operation = operations[Math.floor(Math.random() * operations.length)]
+
+        let num1: number, num2: number, correctAnswer: number
+
+        if (student.grade <= 3) {
+          num1 = Math.floor(Math.random() * 90) + 10 // 10-99
+          num2 = Math.floor(Math.random() * 90) + 10
+        } else if (student.grade <= 6) {
+          num1 = Math.floor(Math.random() * 900) + 100 // 100-999
+          num2 = Math.floor(Math.random() * 900) + 100
+        } else {
+          num1 = Math.floor(Math.random() * 9000) + 1000 // 1000-9999
+          num2 = Math.floor(Math.random() * 900) + 100
+        }
+
+        if (operation === 'addition') {
+          correctAnswer = num1 + num2
+        } else if (operation === 'subtraktion') {
+          // Make sure num1 > num2
+          if (num1 < num2) [num1, num2] = [num2, num1]
+          correctAnswer = num1 - num2
+        } else {
+          // Multiplikation - smaller numbers
+          num1 = Math.floor(Math.random() * (student.grade <= 4 ? 50 : 200)) + 10
+          num2 = Math.floor(Math.random() * 9) + 2
+          correctAnswer = num1 * num2
+        }
+
+        const opName = operation === 'addition' ? 'addition' : operation === 'subtraktion' ? 'subtraktion' : 'multiplikation'
+        const opSymbol = operation === 'addition' ? '+' : operation === 'subtraktion' ? '-' : '×'
+
+        setCurrentTask({
+          id: `grid_${Date.now()}`,
+          category: 'uppstallning',
+          domain: opName,
+          prompt: `${num1} ${opSymbol} ${num2}`,
+          correctAnswer: correctAnswer.toString(),
+          useGrid: true,
+          num1,
+          num2,
+          operation: opName,
+        })
+        setLoading(false)
+        return
+      }
+
       const res = await fetch(
         `/api/tasks/generate?category=${selectedCategory}&grade=${student.grade}`
       )
@@ -83,8 +244,10 @@ export default function OvaMer() {
     e.preventDefault()
     if (!currentTask || !userAnswer.trim() || !student) return
 
+    const isCorrect = userAnswer.trim() === currentTask.correctAnswer
+
     try {
-      const res = await fetch('/api/tasks/submit', {
+      await fetch('/api/tasks/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -97,32 +260,29 @@ export default function OvaMer() {
           correctAnswer: currentTask.correctAnswer,
         }),
       })
-
-      const data = await res.json()
-
-      const result: Result = {
-        task: currentTask,
-        userAnswer: userAnswer.trim(),
-        isCorrect: data.isCorrect,
-      }
-
-      setResults((prev) => [...prev, result])
-
-      if (data.isCorrect) {
-        setFeedback({ type: 'correct', message: 'Rätt! Bra jobbat!' })
-      } else {
-        setFeedback({
-          type: 'incorrect',
-          message: `Inte riktigt. Rätt svar är ${currentTask.correctAnswer}`,
-        })
-      }
-
-      // Kolla om vi nått 10 uppgifter
-      if (results.length + 1 >= 10) {
-        setTimeout(() => setShowSummary(true), 1500)
-      }
     } catch {
-      console.error('Failed to submit answer')
+      console.error('Failed to submit')
+    }
+
+    const result: Result = {
+      task: currentTask,
+      userAnswer: userAnswer.trim(),
+      isCorrect,
+    }
+
+    setResults((prev) => [...prev, result])
+
+    if (isCorrect) {
+      setFeedback({ type: 'correct', message: 'Rätt! Bra jobbat!' })
+    } else {
+      setFeedback({
+        type: 'incorrect',
+        message: `Inte riktigt. Rätt svar är ${currentTask.correctAnswer}`,
+      })
+    }
+
+    if (results.length + 1 >= 10) {
+      setTimeout(() => setShowSummary(true), 1500)
     }
   }
 
@@ -152,16 +312,19 @@ export default function OvaMer() {
     return (
       <>
         <Head>
-          <title>Öva mer | Matteträning</title>
+          <title>Öva mer | Matteverkstan</title>
         </Head>
 
-        <div className="min-h-screen bg-gray-50">
-          <header className="bg-white shadow-sm">
+        <div className="min-h-screen">
+          <header className="bg-gradient-to-r from-sky-400 via-sky-500 to-primary-400">
             <div className="max-w-4xl mx-auto px-4 py-4 flex items-center gap-4">
-              <Link href="/elev/dashboard" className="text-gray-500 hover:text-gray-700">
-                ← Tillbaka
+              <Link href="/elev/dashboard" className="text-white/80 hover:text-white flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Tillbaka
               </Link>
-              <h1 className="text-xl font-bold text-gray-900">Öva mer</h1>
+              <h1 className="text-xl font-bold text-white">Öva mer</h1>
             </div>
           </header>
 
@@ -173,10 +336,13 @@ export default function OvaMer() {
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className="card card-hover text-center py-8"
+                  className="bg-white rounded-2xl shadow-soft p-6 border-2 border-gray-100 hover:border-sky-300 hover:shadow-md transition-all text-center group"
                 >
-                  <div className="text-4xl mb-2">{cat.icon}</div>
-                  <div className="font-medium text-gray-900">{cat.name}</div>
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform">{cat.icon}</div>
+                  <div className="font-semibold text-gray-800">{cat.name}</div>
+                  {cat.isGrid && (
+                    <div className="text-xs text-sky-500 mt-1">Med rutnät</div>
+                  )}
                 </button>
               ))}
             </div>
@@ -192,27 +358,19 @@ export default function OvaMer() {
     const total = results.length
     const percentage = Math.round((correct / total) * 100)
 
-    // Hitta svaga områden
-    const incorrectCategories = results
-      .filter((r) => !r.isCorrect)
-      .map((r) => r.task.category)
-    const weakArea = incorrectCategories.length > 0
-      ? [...new Set(incorrectCategories)][0]
-      : null
-
     return (
       <>
         <Head>
-          <title>Resultat | Matteträning</title>
+          <title>Resultat | Matteverkstan</title>
         </Head>
 
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-          <div className="card max-w-md w-full text-center">
+        <div className="min-h-screen flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl shadow-card p-8 max-w-md w-full text-center">
             <div className="text-6xl mb-4">
               {percentage >= 80 ? '🌟' : percentage >= 50 ? '👍' : '💪'}
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
               Bra jobbat!
             </h2>
 
@@ -221,34 +379,26 @@ export default function OvaMer() {
               <span className="font-bold">{total}</span> rätt ({percentage}%)
             </p>
 
-            <div className="space-y-2 mb-6 text-left">
+            <div className="space-y-2 mb-6 text-left max-h-60 overflow-y-auto">
               {results.map((result, index) => (
                 <div
                   key={index}
-                  className={`p-2 rounded flex items-center gap-2 text-sm ${
+                  className={`p-3 rounded-xl flex items-center gap-2 text-sm ${
                     result.isCorrect
-                      ? 'bg-success-50 text-success-600'
-                      : 'bg-error-50 text-error-600'
+                      ? 'bg-leaf-50 text-leaf-700'
+                      : 'bg-coral-50 text-coral-700'
                   }`}
                 >
-                  <span>{result.isCorrect ? '✓' : '✗'}</span>
-                  <span className="font-mono">{result.task.prompt.split('\n')[0]}</span>
+                  <span className="font-bold">{result.isCorrect ? '✓' : '✗'}</span>
+                  <span className="font-mono">{result.task.prompt}</span>
                   {!result.isCorrect && (
-                    <span className="ml-auto text-gray-500">
-                      Ditt: {result.userAnswer} | Rätt: {result.task.correctAnswer}
+                    <span className="ml-auto text-xs">
+                      {result.userAnswer} → {result.task.correctAnswer}
                     </span>
                   )}
                 </div>
               ))}
             </div>
-
-            {weakArea && (
-              <div className="bg-warning-50 p-4 rounded-lg mb-6 text-left">
-                <p className="text-warning-600 font-medium">
-                  💡 Tips: Öva mer på {weakArea}
-                </p>
-              </div>
-            )}
 
             <div className="flex gap-4">
               <button
@@ -275,27 +425,32 @@ export default function OvaMer() {
   }
 
   // Visa övning
+  const isGridTask = currentTask?.useGrid
+
   return (
     <>
       <Head>
-        <title>Öva mer | Matteträning</title>
+        <title>Öva mer | Matteverkstan</title>
       </Head>
 
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm">
+      <div className="min-h-screen">
+        <header className="bg-gradient-to-r from-sky-400 via-sky-500 to-primary-400">
           <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <button
                 onClick={handleReset}
-                className="text-gray-500 hover:text-gray-700"
+                className="text-white/80 hover:text-white flex items-center gap-2"
               >
-                ← Tillbaka
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Tillbaka
               </button>
-              <h1 className="text-xl font-bold text-gray-900">
+              <h1 className="text-xl font-bold text-white">
                 {categories.find((c) => c.id === selectedCategory)?.name}
               </h1>
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="bg-white/20 px-3 py-1 rounded-full text-white text-sm">
               {results.length + 1} / 10
             </div>
           </div>
@@ -303,41 +458,53 @@ export default function OvaMer() {
 
         <main className="max-w-2xl mx-auto px-4 py-8">
           {/* Progress bar */}
-          <div className="w-full bg-gray-200 rounded-full h-2 mb-8">
+          <div className="w-full bg-gray-200 rounded-full h-3 mb-8 overflow-hidden">
             <div
-              className="bg-primary-600 h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-sky-400 to-primary-500 h-3 rounded-full transition-all duration-300"
               style={{ width: `${((results.length) / 10) * 100}%` }}
             />
           </div>
 
           {loading ? (
-            <div className="card text-center py-12">
-              <div className="text-xl text-gray-600">Laddar uppgift...</div>
+            <div className="bg-white rounded-3xl shadow-card p-12 text-center">
+              <div className="text-xl text-gray-600 animate-pulse">Laddar uppgift...</div>
             </div>
           ) : currentTask ? (
-            <div className="card">
+            <div className="bg-white rounded-3xl shadow-card p-6">
               {/* Uppgift */}
-              <div className="math-display mb-8 whitespace-pre-line">
-                {currentTask.prompt}
-              </div>
+              {isGridTask && currentTask.num1 && currentTask.num2 && currentTask.operation ? (
+                <GridInput
+                  num1={currentTask.num1}
+                  num2={currentTask.num2}
+                  operation={currentTask.operation}
+                  onAnswerChange={setUserAnswer}
+                  disabled={!!feedback}
+                />
+              ) : (
+                <div className="math-display mb-8 whitespace-pre-line">
+                  {currentTask.prompt}
+                </div>
+              )}
 
               {/* Svarsformulär */}
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="answer" className="label">
-                    Ditt svar:
-                  </label>
-                  <input
-                    type="text"
-                    id="answer"
-                    value={userAnswer}
-                    onChange={(e) => setUserAnswer(e.target.value)}
-                    className="input text-center text-2xl font-mono"
-                    placeholder="?"
-                    autoFocus
-                    disabled={!!feedback}
-                  />
-                </div>
+              <form onSubmit={handleSubmit} className="space-y-4 mt-6">
+                {!isGridTask && (
+                  <div>
+                    <label htmlFor="answer" className="label">
+                      Ditt svar:
+                    </label>
+                    <input
+                      type="text"
+                      id="answer"
+                      value={userAnswer}
+                      onChange={(e) => setUserAnswer(e.target.value)}
+                      className="input text-center text-2xl font-mono"
+                      placeholder="?"
+                      autoFocus
+                      disabled={!!feedback}
+                    />
+                  </div>
+                )}
 
                 {currentTask.hint && !feedback && (
                   <p className="text-sm text-gray-500 text-center">
@@ -356,35 +523,30 @@ export default function OvaMer() {
                 ) : (
                   <div className="space-y-4">
                     <div
-                      className={`p-4 rounded-lg ${
+                      className={`p-4 rounded-2xl ${
                         feedback.type === 'correct'
-                          ? 'feedback-correct'
-                          : 'feedback-incorrect'
+                          ? 'bg-leaf-50 border-2 border-leaf-200 text-leaf-700'
+                          : 'bg-coral-50 border-2 border-coral-200 text-coral-700'
                       }`}
                     >
-                      <p className="font-medium">
+                      <p className="font-semibold">
                         {feedback.type === 'correct' ? '✓ ' : '✗ '}
                         {feedback.message}
                       </p>
-                      {currentTask.explanation && feedback.type === 'incorrect' && (
-                        <p className="text-sm mt-2 text-gray-600">
-                          {currentTask.explanation}
-                        </p>
-                      )}
                     </div>
 
                     <button
                       onClick={handleNextTask}
                       className="btn btn-primary w-full py-3 text-lg"
                     >
-                      {results.length >= 10 ? 'Se resultat' : 'Nästa uppgift'}
+                      {results.length >= 10 ? 'Se resultat' : 'Nästa uppgift →'}
                     </button>
                   </div>
                 )}
               </form>
             </div>
           ) : (
-            <div className="card text-center py-12">
+            <div className="bg-white rounded-3xl shadow-card p-12 text-center">
               <p className="text-gray-600">Kunde inte ladda uppgift</p>
               <button onClick={fetchNewTask} className="btn btn-primary mt-4">
                 Försök igen
