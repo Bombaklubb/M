@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { findOrCreateStudent, getClassByCode } from '@/lib/database'
+import { getClassByCode, getStudentsByClass, getClassById } from '@/lib/database'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -7,36 +7,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const { name, grade, classCode } = req.body
+    const { classCode } = req.body
 
-    if (!name || typeof name !== 'string') {
-      return res.status(400).json({ error: 'Namn krävs' })
+    if (!classCode || typeof classCode !== 'string') {
+      return res.status(400).json({ error: 'Klasskod krävs' })
     }
 
-    if (!grade || typeof grade !== 'number' || grade < 1 || grade > 9) {
-      return res.status(400).json({ error: 'Ogiltig årskurs (1-9)' })
+    // Hämta klassen
+    const cls = await getClassByCode(classCode.toUpperCase())
+    if (!cls) {
+      return res.status(400).json({ error: 'Ogiltig klasskod' })
     }
 
-    // Om klasskod anges, validera den
-    let classId: string | null = null
-    if (classCode) {
-      const cls = await getClassByCode(classCode)
-      if (!cls) {
-        return res.status(400).json({ error: 'Ogiltig klasskod' })
-      }
-      classId = cls.id
-    }
+    // Hämta alla elever i klassen
+    const students = await getStudentsByClass(cls.id)
 
-    // Hitta eller skapa elev
-    const student = await findOrCreateStudent(name, grade, classId)
+    if (students.length === 0) {
+      return res.status(400).json({ error: 'Inga elever hittades i denna klass' })
+    }
 
     return res.status(200).json({
-      student: {
-        id: student.id,
-        name: student.name,
-        grade: student.grade,
-        classId: student.classId,
-      },
+      className: cls.name,
+      classCode: cls.classCode,
+      students: students.map(s => ({
+        id: s.id,
+        name: s.name,
+        grade: s.grade,
+      })),
     })
   } catch (error) {
     console.error('Student login error:', error)

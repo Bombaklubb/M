@@ -8,17 +8,63 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Mjuka, barnvänliga färger
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          50: '#e8f5f3',
+          100: '#d1ebe7',
+          200: '#a3d7cf',
+          300: '#75c3b7',
+          400: '#4db3a5',
+          500: '#3d9d8f',
+          600: '#2d8377',
+          700: '#1e695f',
+          800: '#0f4f47',
+          900: '#00352f',
+        },
+        // Varm cream/beige för bakgrunder
+        cream: {
+          50: '#fefdfb',
+          100: '#fdf9f3',
+          200: '#faf3e7',
+          300: '#f5ead6',
+          400: '#efe0c5',
+        },
+        // Mjuk grön för knappar och success
+        leaf: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+        },
+        // Mjuk blå för headers
+        sky: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+        },
+        // Mjuk orange/gul för varningar och stjärnor
+        sunny: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+        },
+        // Mjuk rosa/röd
+        coral: {
+          50: '#fff1f2',
+          100: '#ffe4e6',
+          200: '#fecdd3',
+          300: '#fda4af',
+          400: '#fb7185',
+          500: '#f43f5e',
         },
         success: {
           50: '#f0fdf4',
@@ -41,7 +87,17 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Nunito', 'Inter', 'system-ui', 'sans-serif'],
+      },
+      borderRadius: {
+        '2xl': '1rem',
+        '3xl': '1.5rem',
+        '4xl': '2rem',
+      },
+      boxShadow: {
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        'card': '0 4px 20px -2px rgba(0, 0, 0, 0.1)',
+        'button': '0 4px 14px 0 rgba(61, 157, 143, 0.39)',
       },
     },
   },
