@@ -54,8 +54,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Matteträning ÅK 1-9</title>
-        <meta name="description" content="Matematikträning för årskurs 1-9 enligt svensk läroplan" />
+        <title>Matteverkstan</title>
+        <meta name="description" content="Träna matematik för årskurs 1-9" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -77,15 +77,11 @@ export default function Home() {
           </div>
 
           <div className="relative max-w-4xl mx-auto px-6 pt-12 pb-24 text-center">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6">
-              <span>Enligt Lgr22</span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
-              Matematikträning ÅK 1–9
+              Matteverkstan
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-xl mx-auto">
-              Träna matte enligt svensk läroplan för årskurs 1–9
+              Träna matematik för årskurs 1–9
             </p>
           </div>
         </div>
@@ -185,7 +181,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="relative text-center py-6 text-gray-400 text-sm">
-          <p>Matematikträning enligt Lgr22</p>
+          <p>Matteverkstan</p>
         </footer>
       </main>
     </>

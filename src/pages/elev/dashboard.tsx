@@ -108,7 +108,7 @@ export default function ElevDashboard() {
   return (
     <>
       <Head>
-        <title>Dashboard | Matteträning</title>
+        <title>Dashboard | Matteverkstan</title>
       </Head>
 
       <div className="min-h-screen">
