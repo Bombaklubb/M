@@ -14,13 +14,13 @@ interface CacheEntry {
   timestamp: number;
 }
 
-// In-memory cache with 10 min TTL
+// In-memory cache with 24 hour TTL (perfect for classroom use)
 const cache = new Map<string, CacheEntry>();
-const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours - same text can be reused
 
-// Queue management
+// Queue management - increased for multiple students
 let activeRequests = 0;
-const MAX_CONCURRENT = 3;
+const MAX_CONCURRENT = 6; // Allow more concurrent requests for classroom use
 const queue: Array<() => Promise<void>> = [];
 
 // Groq client (free tier!)
@@ -378,13 +378,13 @@ REGLER:
     if (error?.status === 429 || error?.message?.includes('quota') || error?.message?.includes('rate')) {
       return res.status(429).json({
         error: 'RATE_LIMIT',
-        message: 'För många förfrågningar. Vänta en stund.',
+        message: 'Många elever använder appen samtidigt. Appen försöker automatiskt igen - vänta 10-30 sekunder.',
       });
     }
 
     return res.status(500).json({
       error: 'GENERATION_ERROR',
-      message: error?.message || 'Kunde inte generera övning. Försök igen.',
+      message: error?.message || 'Kunde inte generera övning. Försök igen om några sekunder.',
       debug: process.env.NODE_ENV === 'development' ? error?.stack : undefined,
     });
   }
