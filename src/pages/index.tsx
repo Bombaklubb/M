@@ -1,7 +1,56 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import { useState, FormEvent } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+  const [name, setName] = useState('')
+  const [grade, setGrade] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    setError('')
+
+    if (!name.trim()) {
+      setError('Skriv ditt namn')
+      return
+    }
+
+    if (!grade) {
+      setError('Välj din årskurs')
+      return
+    }
+
+    setLoading(true)
+
+    try {
+      const res = await fetch('/api/auth/student', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          grade: parseInt(grade),
+        }),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        setError(data.error || 'Något gick fel')
+        setLoading(false)
+        return
+      }
+
+      sessionStorage.setItem('student', JSON.stringify(data.student))
+      router.push('/elev/dashboard')
+    } catch {
+      setError('Kunde inte ansluta till servern')
+      setLoading(false)
+    }
+  }
+
   return (
     <>
       <Head>
@@ -41,99 +90,102 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Huvudinnehåll */}
-        <div className="relative max-w-4xl mx-auto px-6 -mt-8">
-          <div className="bg-white rounded-3xl shadow-card p-8 md:p-12">
-            <h2 className="text-2xl font-bold text-gray-800 text-center mb-8">
-              Vem vill logga in?
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Elev-knapp */}
-              <Link href="/elev/login" className="group">
-                <div className="relative overflow-hidden bg-gradient-to-br from-primary-50 to-primary-100 rounded-3xl p-8 border-2 border-primary-200 hover:border-primary-400 hover:shadow-lg transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary-200/50 rounded-full -mr-10 -mt-10 group-hover:scale-110 transition-transform" />
-
-                  <div className="relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-lg group-hover:scale-105 transition-transform">
-                      <span role="img" aria-label="Elev">👩‍🎓</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                      Logga in som Elev
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Öva matematik och följ din progression
-                    </p>
-
-                    <div className="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-3 transition-all">
-                      <span>Öva matematik</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Lärare-knapp */}
-              <Link href="/larare/login" className="group">
-                <div className="relative overflow-hidden bg-gradient-to-br from-leaf-50 to-leaf-100 rounded-3xl p-8 border-2 border-leaf-200 hover:border-leaf-400 hover:shadow-lg transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-leaf-200/50 rounded-full -mr-10 -mt-10 group-hover:scale-110 transition-transform" />
-
-                  <div className="relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-leaf-400 to-leaf-600 rounded-2xl flex items-center justify-center text-4xl mb-4 shadow-lg group-hover:scale-105 transition-transform">
-                      <span role="img" aria-label="Lärare">👩‍🏫</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                      Logga in som Lärare
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      Följ elevers progression och ge feedback
-                    </p>
-
-                    <div className="inline-flex items-center gap-2 text-leaf-600 font-semibold group-hover:gap-3 transition-all">
-                      <span>Följ eleverna</span>
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+        {/* Huvudinnehåll - Inloggningsformulär */}
+        <div className="relative max-w-md mx-auto px-6 -mt-8">
+          <div className="bg-white rounded-3xl shadow-card p-8">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg">
+                👩‍🎓
+              </div>
+              <h2 className="text-xl font-bold text-gray-800">
+                Vad heter du?
+              </h2>
             </div>
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="label">
+                  Ditt namn
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="input text-lg"
+                  placeholder="Skriv ditt namn"
+                  autoFocus
+                />
+              </div>
+
+              <div>
+                <label htmlFor="grade" className="label">
+                  Årskurs
+                </label>
+                <select
+                  id="grade"
+                  value={grade}
+                  onChange={(e) => setGrade(e.target.value)}
+                  className="input text-lg"
+                >
+                  <option value="">Välj årskurs</option>
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((g) => (
+                    <option key={g} value={g}>
+                      Årskurs {g}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {error && (
+                <div className="bg-coral-50 text-coral-500 p-4 rounded-2xl text-sm flex items-center gap-2">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {error}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="btn btn-primary w-full py-4 text-lg disabled:opacity-50"
+              >
+                {loading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    Laddar...
+                  </span>
+                ) : (
+                  'Börja träna!'
+                )}
+              </button>
+            </form>
           </div>
 
           {/* Features */}
-          <div className="grid md:grid-cols-3 gap-4 mt-8 mb-12">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 text-center shadow-soft">
-              <div className="text-3xl mb-2">📊</div>
-              <h4 className="font-semibold text-gray-800">Statistik</h4>
-              <p className="text-sm text-gray-600">Följ din utveckling</p>
+          <div className="grid grid-cols-3 gap-3 mt-6 mb-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center shadow-soft">
+              <div className="text-2xl mb-1">📊</div>
+              <p className="text-xs text-gray-600 font-medium">Statistik</p>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 text-center shadow-soft">
-              <div className="text-3xl mb-2">🎯</div>
-              <h4 className="font-semibold text-gray-800">Anpassat</h4>
-              <p className="text-sm text-gray-600">För din årskurs</p>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center shadow-soft">
+              <div className="text-2xl mb-1">🎯</div>
+              <p className="text-xs text-gray-600 font-medium">Anpassat</p>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 text-center shadow-soft">
-              <div className="text-3xl mb-2">🏆</div>
-              <h4 className="font-semibold text-gray-800">Utmaningar</h4>
-              <p className="text-sm text-gray-600">Testa dina gränser</p>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 text-center shadow-soft">
+              <div className="text-2xl mb-1">🏆</div>
+              <p className="text-xs text-gray-600 font-medium">Utmaningar</p>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="relative text-center py-8 text-gray-500 text-sm">
-          <div className="flex items-center justify-center gap-4">
-            <span>Om appen</span>
-            <span>•</span>
-            <span>Hjälp</span>
-            <span>•</span>
-            <span>Kontakt</span>
-          </div>
+        <footer className="relative text-center py-6 text-gray-400 text-sm">
+          <p>Matematikträning enligt Lgr22</p>
         </footer>
       </main>
     </>

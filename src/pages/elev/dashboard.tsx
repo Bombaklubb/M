@@ -70,7 +70,7 @@ export default function ElevDashboard() {
   useEffect(() => {
     const stored = sessionStorage.getItem('student')
     if (!stored) {
-      router.push('/elev/login')
+      router.push('/')
       return
     }
 
@@ -86,7 +86,7 @@ export default function ElevDashboard() {
         })
         .catch(() => setLoading(false))
     } catch {
-      router.push('/elev/login')
+      router.push('/')
     }
   }, [router])
 

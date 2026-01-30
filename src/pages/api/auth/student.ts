@@ -1,5 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getClassByCode, getStudentsByClass, getClassById } from '@/lib/database'
+import { getStudents, generateId } from '@/lib/database'
+
+// In-memory storage för sessionen (i produktion skulle detta vara i databasen)
+const students: Map<string, { id: string; name: string; grade: number }> = new Map()
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -7,34 +10,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const { classCode } = req.body
+    const { name, grade } = req.body
 
-    if (!classCode || typeof classCode !== 'string') {
-      return res.status(400).json({ error: 'Klasskod krävs' })
+    if (!name || typeof name !== 'string' || !name.trim()) {
+      return res.status(400).json({ error: 'Namn krävs' })
     }
 
-    // Hämta klassen
-    const cls = await getClassByCode(classCode.toUpperCase())
-    if (!cls) {
-      return res.status(400).json({ error: 'Ogiltig klasskod' })
+    if (!grade || typeof grade !== 'number' || grade < 1 || grade > 9) {
+      return res.status(400).json({ error: 'Ogiltig årskurs (1-9)' })
     }
 
-    // Hämta alla elever i klassen
-    const students = await getStudentsByClass(cls.id)
-
-    if (students.length === 0) {
-      return res.status(400).json({ error: 'Inga elever hittades i denna klass' })
+    // Skapa en enkel student-session
+    const studentId = generateId()
+    const student = {
+      id: studentId,
+      name: name.trim(),
+      grade: grade,
     }
 
-    return res.status(200).json({
-      className: cls.name,
-      classCode: cls.classCode,
-      students: students.map(s => ({
-        id: s.id,
-        name: s.name,
-        grade: s.grade,
-      })),
-    })
+    return res.status(200).json({ student })
   } catch (error) {
     console.error('Student login error:', error)
     return res.status(500).json({ error: 'Serverfel' })
