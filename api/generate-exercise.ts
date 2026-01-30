@@ -31,7 +31,19 @@ const groq = new Groq({
 // System instruction (optimized for challenging levels)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
 Skapa UTMANANDE texter och SVÅRA frågor som kräver eftertanke.
-VIKTIGAST: Var extremt noggrann med stavning och grammatik - dubbelkolla alla ord!
+
+⚠️ KRITISKT VIKTIGT - STAVNING OCH GRAMMATIK:
+- Du skriver på SVENSKA, inte engelska
+- Dubbelkolla VARJE ord innan du svarar
+- Vanliga fel att undvika:
+  * "och" inte "ock"
+  * "mycket" inte "myket"
+  * "olika" inte "oliga"
+  * "eftersom" inte "efterson"
+  * "också" inte "ocksä"
+  * Sammansatta ord: "fotbollsmatch" inte "fotboll match"
+- Läs igenom HELA texten MINST två gånger innan du skickar den
+- Om du är osäker på ett ord, använd ett enklare ord du är säker på
 
 Nivåguide baserad på ÅRSKURS - HÅLL DIG TILL ORDANTALET:
 
@@ -62,7 +74,7 @@ Alla nivåer ska ha:
 - Distraktorer (felaktiga svarsalternativ) som är trovärdiga och kräver eftertanke
 - DETALJERADE förklaringar som hjälper eleven förstå VARFÖR svaret är rätt och vad de kan lära sig
 
-STAVNING: Kontrollera ALLA ord noggrant! Läs igenom texten två gånger innan du svarar.`;
+KOM IHÅG: Perfekt svenska stavning är det VIKTIGASTE! Kvalitet före kvantitet.`;
 
 // Helper: Get cache key
 function getCacheKey(topic: string, level: number, textType: string): string {
@@ -270,7 +282,14 @@ REGLER:
 - INGEN markdown kod-block (inget \`\`\`json)
 - INGEN förklarande text
 - Exakt 6 frågor
-- correctAnswer måste matcha exakt ett alternativ i options`;
+- correctAnswer måste matcha exakt ett alternativ i options
+
+⚠️ VIKTIGAST AV ALLT - STAVNING:
+- Läs igenom texten MINST TVÅ GÅNGER innan du skickar
+- Kontrollera att VARJE ord är korrekt stavat på SVENSKA
+- Dubbelkolla sammansatta ord (t.ex. "fotbollsmatch" inte "fotboll match")
+- Dubbelkolla vanliga ord som "och", "mycket", "olika", "eftersom", "också"
+- PERFEKT stavning är viktigare än långa texter`;
 
         const completion = await groq.chat.completions.create({
           model: 'llama-3.1-8b-instant', // Faster, more tokens per day
