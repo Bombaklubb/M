@@ -117,26 +117,31 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
         {stats && (
           <div className="space-y-6">
-            {/* Summary Cards - Förbättrad synlighet */}
+            {/* Summary Cards - Tydliga färger för läsbarhet */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-2xl p-8 text-white border-4 border-blue-400">
+              <div className="bg-blue-50 rounded-2xl shadow-2xl p-8 border-4 border-blue-400">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-5xl">📝</span>
-                  <div className="text-xl font-bold text-white">Texter idag</div>
+                  <div className="text-xl font-bold text-blue-900">Texter idag</div>
                 </div>
-                <div className="text-7xl font-black text-white drop-shadow-lg">{stats.today}</div>
-                <div className="text-blue-50 mt-4 text-base font-semibold">
-                  {((stats.today / 400) * 100).toFixed(1)}% av daglig kapacitet (~400 texter)
+                <div className="text-7xl font-black text-blue-900">{stats.today}</div>
+                <div className="mt-4 space-y-1">
+                  <div className="text-base font-bold text-blue-700">
+                    {400 - stats.today} texter kvar idag
+                  </div>
+                  <div className="text-sm text-blue-600">
+                    Daglig kapacitet: 400 texter
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-2xl p-8 text-white border-4 border-purple-400">
+              <div className="bg-purple-50 rounded-2xl shadow-2xl p-8 border-4 border-purple-400">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-5xl">📊</span>
-                  <div className="text-xl font-bold text-white">Texter totalt</div>
+                  <div className="text-xl font-bold text-purple-900">Texter totalt</div>
                 </div>
-                <div className="text-7xl font-black text-white drop-shadow-lg">{stats.total}</div>
-                <div className="text-purple-50 mt-4 text-base font-semibold">
+                <div className="text-7xl font-black text-purple-900">{stats.total}</div>
+                <div className="text-purple-700 mt-4 text-base font-bold">
                   Sedan appen startade
                 </div>
               </div>
