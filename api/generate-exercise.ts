@@ -57,14 +57,14 @@ NIVÅ 7-11 (Årskurs 4-6, 10-12 år - grundnivå):
 - Nivå 10-11: 1000-1300 ord. Abstrakta begrepp som "rättvisa", "perspektiv", "konsekvens". Argumenterande delar. Kräver tolkning.
 
 NIVÅ 12-17 (Årskurs 4-6, 10-12 år - MYCKET UTMANANDE):
-- Nivå 12-13: 1400-1800 ord. Avancerade begrepp som "industrialisering", "metabolism", "ekologisk balans". Flerradsmeningar med flera bisatser. Kräver noggrann analys och djup förståelse. Frågor som kräver koppling mellan olika delar av texten.
-- Nivå 14-15: 1800-2200 ord. Komplexa vetenskapliga och samhällsbegrepp. Abstrakt resonemang. Källkritiska perspektiv. Argumentationskedjor som kräver kritiskt tänkande. Svåra frågor med nyanser i svarsalternativen.
-- Nivå 16-17: 2200-2600 ord. Mycket avancerat språk för årskursen. Vetenskapliga metoder, filosofiska frågeställningar, historisk analys. Flerradsmeningar med komplexa samband. Frågor som kräver syntes av information från flera stycken.
+- Nivå 12-13: 1000-1400 ord. Avancerade begrepp som "industrialisering", "metabolism", "ekologisk balans". Flerradsmeningar med flera bisatser. Kräver noggrann analys och djup förståelse. Frågor som kräver koppling mellan olika delar av texten.
+- Nivå 14-15: 1400-1700 ord. Komplexa vetenskapliga och samhällsbegrepp. Abstrakt resonemang. Källkritiska perspektiv. Argumentationskedjor som kräver kritiskt tänkande. Svåra frågor med nyanser i svarsalternativen.
+- Nivå 16-17: 1700-2000 ord. Mycket avancerat språk för årskursen. Vetenskapliga metoder, filosofiska frågeställningar, historisk analys. Flerradsmeningar med komplexa samband. Frågor som kräver syntes av information från flera stycken.
 
 NIVÅ 18-20 (GYMNASIENIVÅ, 16-18 år):
-- Nivå 18: 2600-3000 ord. GYMNASIENIVÅ - Akademiskt språk med vetenskapliga termer, abstrakt argumentation, källanalys. Texter på universitetsnivå. Frågor kräver akademiskt tänkande, kritisk granskning av påståenden, och förmåga att dra slutsatser från komplexa resonemang.
-- Nivå 19: 3000-3500 ord. AVANCERAD GYMNASIENIVÅ - Vetenskapliga artiklar, filosofiska texter, samhällsanalys på djupet. Multipla perspektiv måste vägas mot varandra. Frågor med hög komplexitet som kräver förståelse av nyanser och underliggande antaganden.
-- Nivå 20: 3500-4000 ord. HÖGSKOLENIVÅ - Akademiska texter med forskningsbaserade resonemang, komplexa teoretiska ramverk, kritisk metoddiskussion. Frågor som skulle kunna finnas på universitetsprov - kräver analytisk förmåga på hög nivå, förmåga att identifiera argument och motargument, samt utvärdera evidens.
+- Nivå 18: 2000-2300 ord. GYMNASIENIVÅ - Akademiskt språk med vetenskapliga termer, abstrakt argumentation, källanalys. Texter på universitetsnivå. Frågor kräver akademiskt tänkande, kritisk granskning av påståenden, och förmåga att dra slutsatser från komplexa resonemang.
+- Nivå 19: 2300-2600 ord. AVANCERAD GYMNASIENIVÅ - Vetenskapliga artiklar, filosofiska texter, samhällsanalys på djupet. Multipla perspektiv måste vägas mot varandra. Frågor med hög komplexitet som kräver förståelse av nyanser och underliggande antaganden.
+- Nivå 20: 2600-3000 ord. HÖGSKOLENIVÅ - Akademiska texter med forskningsbaserade resonemang, komplexa teoretiska ramverk, kritisk metoddiskussion. Frågor som skulle kunna finnas på universitetsprov - kräver analytisk förmåga på hög nivå, förmåga att identifiera argument och motargument, samt utvärdera evidens.
 
 VIKTIGT om FRÅGOR - anpassa efter nivå:
 Nivå 1-11: Tydliga frågor där svaret ofta finns direkt i texten eller kan härledas enkelt. Förklaringar på begripligt språk.

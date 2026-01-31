@@ -127,10 +127,10 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 <div className="text-7xl font-black text-blue-900">{stats.today}</div>
                 <div className="mt-4 space-y-1">
                   <div className="text-base font-bold text-blue-700">
-                    {100 - stats.today} texter kvar idag
+                    Använt: {Math.round((stats.today / 40) * 100)}% av kapacitet
                   </div>
                   <div className="text-sm text-blue-600">
-                    Daglig kapacitet: ~100 texter (högkvalitetsmodell)
+                    Daglig kapacitet: ~40-50 texter (beroende på nivå)
                   </div>
                 </div>
               </div>
