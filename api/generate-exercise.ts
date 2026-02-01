@@ -15,9 +15,9 @@ interface CacheEntry {
   timestamp: number;
 }
 
-// In-memory cache with 24 hour TTL (perfect for classroom use)
+// In-memory cache with 7 day TTL (perfect for classroom use)
 const cache = new Map<string, CacheEntry>();
-const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours - same text can be reused
+const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days - same text can be reused throughout the week
 
 // Queue management - increased for multiple students
 let activeRequests = 0;
@@ -206,6 +206,65 @@ async function retryWithBackoff<T>(
   throw lastError;
 }
 
+// Helper: Call Groq API with automatic fallback to smaller model
+async function callGroqWithFallback(prompt: string): Promise<string> {
+  const models = [
+    { name: 'llama-3.3-70b-versatile', description: 'High quality (better spelling)' },
+    { name: 'llama-3.1-8b-instant', description: 'Fallback (more capacity, occasional spelling errors)' }
+  ];
+
+  let lastError: any;
+
+  for (const model of models) {
+    try {
+      console.log(`[MODEL] Trying ${model.name} - ${model.description}`);
+
+      const completion = await groq.chat.completions.create({
+        model: model.name,
+        messages: [
+          {
+            role: 'system',
+            content: SYSTEM_INSTRUCTION,
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+        temperature: 0.8,
+        max_tokens: 8192,
+        response_format: { type: 'json_object' },
+      });
+
+      const responseText = completion.choices[0]?.message?.content || '';
+
+      if (model.name === 'llama-3.1-8b-instant') {
+        console.log(`[FALLBACK SUCCESS] Using fallback model due to rate limit on primary model`);
+      }
+
+      return responseText;
+    } catch (error: any) {
+      lastError = error;
+
+      // Check if it's a token rate limit error (not request rate limit)
+      const isTokenRateLimit =
+        error?.status === 429 &&
+        (error?.message?.includes('tokens per day') ||
+         error?.message?.includes('TPD'));
+
+      if (isTokenRateLimit && model.name === models[0].name) {
+        console.log(`[FALLBACK] Primary model rate limited. Trying fallback model...`);
+        continue; // Try next model
+      }
+
+      // For any other error, or if we're already on the last model, throw
+      throw error;
+    }
+  }
+
+  throw lastError;
+}
+
 // Helper: Get text type label
 function getTextTypeLabel(textType: string): string {
   switch (textType.toUpperCase()) {
@@ -342,24 +401,8 @@ REGLER:
 - Dubbelkolla vanliga ord som "och", "mycket", "olika", "eftersom", "också"
 - PERFEKT stavning är viktigare än långa texter`;
 
-        const completion = await groq.chat.completions.create({
-          model: 'llama-3.3-70b-versatile', // Higher quality Swedish, better spelling
-          messages: [
-            {
-              role: 'system',
-              content: SYSTEM_INSTRUCTION,
-            },
-            {
-              role: 'user',
-              content: prompt,
-            },
-          ],
-          temperature: 0.8,
-          max_tokens: 8192,
-          response_format: { type: 'json_object' }, // Force JSON output
-        });
-
-        const responseText = completion.choices[0]?.message?.content || '';
+        // Call API with automatic fallback to smaller model if rate limited
+        const responseText = await callGroqWithFallback(prompt);
 
         console.error('[DEBUG] GROQ RESPONSE LENGTH:', responseText.length);
         console.error('[DEBUG] GROQ RESPONSE FIRST 500:', responseText.substring(0, 500));
