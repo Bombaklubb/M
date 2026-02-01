@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TOPICS, TEXT_TYPES, TextType } from '../types';
 import { LEVEL_DESCRIPTIONS } from '../utils/levelCalculator';
-import { getBandForLevel } from '../utils/levelBands';
+import { getBandForLevel } from '../utils/levelBands.js';
 
 interface SetupViewProps {
   onStart: (topic: string, level: number, textType: TextType) => void;

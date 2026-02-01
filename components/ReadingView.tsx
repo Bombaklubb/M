@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ReadingExercise, UserAnswers, TEXT_TYPES } from '../types';
 import { Button } from './Button';
-import { getBandForLevel } from '../utils/levelBands';
+import { getBandForLevel } from '../utils/levelBands.js';
 
 interface ReadingViewProps {
   data: ReadingExercise;

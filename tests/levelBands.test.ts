@@ -14,7 +14,7 @@ import {
   getLevelLabel,
   getGenerationParams,
   LEVEL_BANDS
-} from '../utils/levelBands';
+} from '../utils/levelBands.js';
 
 describe('Level Band Mapping', () => {
   describe('getBandForLevel', () => {

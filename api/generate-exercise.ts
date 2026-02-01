@@ -1,7 +1,7 @@
 // Groq-powered free AI for reading comprehension
 import Groq from 'groq-sdk';
 import { kv } from '@vercel/kv';
-import { getGenerationParams, getBandForLevel } from '../utils/levelBands';
+import { getGenerationParams, getBandForLevel } from '../utils/levelBands.js';
 
 // Types
 interface GenerateRequest {
