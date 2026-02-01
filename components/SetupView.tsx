@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TOPICS, TEXT_TYPES, TextType } from '../types';
 import { LEVEL_DESCRIPTIONS } from '../utils/levelCalculator';
+import { getBandForLevel } from '../utils/levelBands';
 
 interface SetupViewProps {
   onStart: (topic: string, level: number, textType: TextType) => void;
@@ -124,6 +125,10 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
           {/* Selected Level Display */}
           <div className="text-center mb-4">
             <div className="text-6xl font-black text-indigo-900">{level}</div>
+            <div className="text-lg font-bold text-teal-600 mt-2">
+              {getBandForLevel(level).schoolStage}
+              {getBandForLevel(level).gradeRange && ` (${getBandForLevel(level).gradeRange})`}
+            </div>
           </div>
 
           {/* Slider */}

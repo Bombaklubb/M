@@ -1,6 +1,7 @@
 // Groq-powered free AI for reading comprehension
 import Groq from 'groq-sdk';
 import { kv } from '@vercel/kv';
+import { getGenerationParams, getBandForLevel } from '../utils/levelBands';
 
 // Types
 interface GenerateRequest {
@@ -28,7 +29,7 @@ const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY || '',
 });
 
-// System instruction (optimized for challenging levels)
+// System instruction (optimized with band-based level system)
 const SYSTEM_INSTRUCTION = `Du är ett digitalt läsförståelseverktyg för svenska elever.
 Skapa UTMANANDE texter och SVÅRA frågor som kräver eftertanke.
 
@@ -45,38 +46,76 @@ Skapa UTMANANDE texter och SVÅRA frågor som kräver eftertanke.
 - Läs igenom HELA texten MINST två gånger innan du skickar den
 - Om du är osäker på ett ord, använd ett enklare ord du är säker på
 
-Nivåguide baserad på ÅRSKURS - HÅLL DIG TILL ORDANTALET:
+NIVÅSYSTEM baserat på FASTA SKOLSTADIE-BAND:
 
-NIVÅ 1-6 (Årskurs 1-3, 6-9 år):
-- Nivå 1-2: 150-300 ord. Enkla ord som "hund", "katt", "skola", "mamma". Korta meningar (3-7 ord). Vardagliga situationer.
-- Nivå 3-4: 300-500 ord. Lite svårare ord som "förklara", "tillsammans", "förstår". Varierande meningslängd. Konkreta händelser.
-- Nivå 5-6: 500-700 ord. Börja introducera ämnesord som "fotosyntesen", "dinosaurie", "planeten". Några bisatser. Mer beskrivande språk.
+════════════════════════════════════════════════════════════════
+BAND 1: LÅGSTADIET (Nivå 1-6, Årskurs 1-3, 6-9 år)
+Ordantal: 70-300 ord (skalas linjärt med nivån)
+════════════════════════════════════════════════════════════════
+- Nivå 1: ~70 ord
+- Nivå 2: ~115 ord
+- Nivå 3: ~160 ord
+- Nivå 4: ~205 ord
+- Nivå 5: ~250 ord
+- Nivå 6: ~300 ord
 
-NIVÅ 7-11 (Årskurs 4-6, 10-12 år - grundnivå):
-- Nivå 7-9: 700-1000 ord. Facktermer som "ekosystem", "demokrati", "kultur". Komplexa meningar med bisatser. Kräver sammankoppling av information.
-- Nivå 10-11: 1000-1300 ord. Abstrakta begrepp som "rättvisa", "perspektiv", "konsekvens". Argumenterande delar. Kräver tolkning.
+SPRÅKNIVÅ: Konkret vokabulär, korta meningar (3-8 ord)
+EXEMPEL ORD: "hund", "katt", "skola", "mamma", "vän", "leka"
+MENINGSLÄNGD: Korta, enkla meningar. Få bisatser.
+FRÅGOR: Hitta i text, konkreta detaljer, enkel förståelse. Svaren finns nästan alltid direkt i texten.
 
-NIVÅ 12-17 (Årskurs 4-6, 10-12 år - MYCKET UTMANANDE):
-- Nivå 12-13: 1000-1400 ord. Avancerade begrepp som "industrialisering", "metabolism", "ekologisk balans". Flerradsmeningar med flera bisatser. Kräver noggrann analys och djup förståelse. Frågor som kräver koppling mellan olika delar av texten.
-- Nivå 14-15: 1400-1700 ord. Komplexa vetenskapliga och samhällsbegrepp. Abstrakt resonemang. Källkritiska perspektiv. Argumentationskedjor som kräver kritiskt tänkande. Svåra frågor med nyanser i svarsalternativen.
-- Nivå 16-17: 1700-2000 ord. Mycket avancerat språk för årskursen. Vetenskapliga metoder, filosofiska frågeställningar, historisk analys. Flerradsmeningar med komplexa samband. Frågor som kräver syntes av information från flera stycken.
+════════════════════════════════════════════════════════════════
+BAND 2: MELLANSTADIET (Nivå 7-13, Årskurs 4-6, 10-12 år)
+Ordantal: 300-650 ord (skalas linjärt med nivån)
+════════════════════════════════════════════════════════════════
+- Nivå 7: ~300 ord
+- Nivå 8: ~350 ord
+- Nivå 9: ~400 ord
+- Nivå 10: ~450 ord
+- Nivå 11: ~500 ord
+- Nivå 12: ~550 ord
+- Nivå 13: ~650 ord
 
-NIVÅ 18-20 (GYMNASIENIVÅ, 16-18 år):
-- Nivå 18: 2000-2300 ord. GYMNASIENIVÅ - Akademiskt språk med vetenskapliga termer, abstrakt argumentation, källanalys. Texter på universitetsnivå. Frågor kräver akademiskt tänkande, kritisk granskning av påståenden, och förmåga att dra slutsatser från komplexa resonemang.
-- Nivå 19: 2300-2600 ord. AVANCERAD GYMNASIENIVÅ - Vetenskapliga artiklar, filosofiska texter, samhällsanalys på djupet. Multipla perspektiv måste vägas mot varandra. Frågor med hög komplexitet som kräver förståelse av nyanser och underliggande antaganden.
-- Nivå 20: 2600-3000 ord. HÖGSKOLENIVÅ - Akademiska texter med forskningsbaserade resonemang, komplexa teoretiska ramverk, kritisk metoddiskussion. Frågor som skulle kunna finnas på universitetsprov - kräver analytisk förmåga på hög nivå, förmåga att identifiera argument och motargument, samt utvärdera evidens.
+SPRÅKNIVÅ: Mer abstrakt vokabulär, varierande meningslängd
+EXEMPEL ORD: "förklara", "tillsammans", "ekosystem", "demokrati", "kultur", "fotosyntesen"
+MENINGSLÄNGD: Varierande. Flera bisatser. Mer beskrivande språk.
+FRÅGOR: Inferens, sammanfattning, syfte, ordkunskap. Kräver att koppla ihop information från flera meningar/stycken.
 
-VIKTIGT om FRÅGOR - anpassa efter nivå:
-Nivå 1-11: Tydliga frågor där svaret ofta finns direkt i texten eller kan härledas enkelt. Förklaringar på begripligt språk.
-Nivå 12-17: MYCKET UTMANANDE frågor som kräver att eleven läser noga, kombinerar information från flera ställen, och tänker kritiskt. Svarsalternativen ska vara svåra att skilja åt. Förklaringar som utvecklar djupare förståelse.
-Nivå 18-20: GYMNASIE-/HÖGSKOLENIVÅ frågor som kräver akademiskt tänkande, förmåga att analysera komplexa argument, identifiera underliggande antaganden, och dra välgrundade slutsatser. Distraktorer som känns trovärdiga även för väl pålästa elever. Förklaringar som är pedagogiska men akademiskt rigorösa.
+════════════════════════════════════════════════════════════════
+BAND 3: HÖGSTADIET (Nivå 14-17, Årskurs 7-9, 13-15 år)
+Ordantal: 650-950 ord (skalas linjärt med nivån)
+════════════════════════════════════════════════════════════════
+- Nivå 14: ~650 ord
+- Nivå 15: ~750 ord
+- Nivå 16: ~850 ord
+- Nivå 17: ~950 ord
 
-Alla nivåer ska ha:
+SPRÅKNIVÅ: Ämnesspecifik vokabulär, komplexa meningar
+EXEMPEL ORD: "industrialisering", "metabolism", "ekologisk balans", "perspektiv", "konsekvens"
+MENINGSLÄNGD: Flerradsmeningar med flera bisatser. Komplexa samband.
+FRÅGOR: Fler-stegs inferens, textstruktur, stil/retorik grund, analys. Kräver noggrann analys, kritiskt tänkande. Svarsalternativen ska vara svåra att skilja åt.
+
+════════════════════════════════════════════════════════════════
+BAND 4: GYMNASIET (Nivå 18-20, 16-18 år)
+Ordantal: 950-1200 ord (skalas linjärt med nivån)
+════════════════════════════════════════════════════════════════
+- Nivå 18: ~950 ord
+- Nivå 19: ~1075 ord
+- Nivå 20: ~1200 ord
+
+SPRÅKNIVÅ: Akademisk vokabulär, avancerad syntax
+EXEMPEL ORD: Vetenskapliga termer, filosofiska begrepp, samhällsanalytiska koncept
+MENINGSLÄNGD: Akademiskt komplexa meningar med multipla nivåer av bisatser.
+FRÅGOR: Analys, argumentation, retorik, värdering, källkritik. Kräver akademiskt tänkande, förmåga att analysera komplexa argument, identifiera underliggande antaganden, och dra välgrundade slutsatser. Distraktorer som känns trovärdiga även för väl pålästa elever.
+
+════════════════════════════════════════════════════════════════
+
+FRÅGESTRUKTUR - Exakt 6 frågor för alla nivåer:
 - 2 faktafrågor (kräver noggrann läsning och hitta detaljer)
 - 2 inferensfrågor (kräver slutsatser från flera delar av texten)
 - 2 analysfrågor (kräver djupare förståelse, orsak-verkan, eller sammankoppling)
 - Distraktorer (felaktiga svarsalternativ) som är trovärdiga och kräver eftertanke
-- DETALJERADE förklaringar som hjälper eleven förstå VARFÖR svaret är rätt och vad de kan lära sig
+- DETALJERADE förklaringar som hjälper eleven förstå VARFÖR svaret är rätt
 
 KOM IHÅG: Perfekt svenska stavning är det VIKTIGASTE! Kvalitet före kvantitet.`;
 
@@ -211,6 +250,10 @@ export default async function handler(req: any, res: any) {
       return res.status(200).json(cached);
     }
 
+    // Get generation parameters based on band mapping
+    const bandParams = getGenerationParams(level);
+    const band = getBandForLevel(level);
+
     // Generate with queue and retry
     const result = await runWithConcurrencyLimit(async () => {
       return await retryWithBackoff(async () => {
@@ -220,8 +263,12 @@ export default async function handler(req: any, res: any) {
 
 Skapa en läsförståelseövning:
 Ämne: ${topic}
-Nivå: ${level} (skala 1-20)
+Nivå: ${level} (${band.schoolStage}${band.gradeRange ? ' ' + band.gradeRange : ''})
 Texttyp: ${textTypeLabel}
+
+EXAKT ORDANTAL FÖR DENNA NIVÅ: ${bandParams.targetWords} ord (±50 ord acceptabelt, men försök hålla dig så nära ${bandParams.targetWords} som möjligt)
+Fokusfrågor: ${band.questionFocus}
+Språknivå: ${band.vocabTier}
 
 KRITISKT - Returnera ENDAST ren JSON, inget annat:
 {
