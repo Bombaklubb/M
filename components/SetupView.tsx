@@ -9,12 +9,11 @@ interface SetupViewProps {
 
 export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
   const [topic, setTopic] = useState('');
-  const [customTopic, setCustomTopic] = useState('');
   const [level, setLevel] = useState(userLevel || 4);
   const [textType, setTextType] = useState<TextType>(TextType.NARRATIVE);
 
   const handleStart = () => {
-    let selectedTopic = customTopic.trim() || topic;
+    let selectedTopic = topic;
 
     // If "Slumpa fram en text" is selected, pick a random topic
     if (selectedTopic === "🎲 Slumpa fram en text") {
@@ -44,15 +43,15 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
           <label className="block text-lg font-bold text-slate-700 mb-3">
             1. Välj ett ämne
           </label>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {TOPICS.map((t) => {
               const isRandomOption = t === "🎲 Slumpa fram en text";
-              const isSelected = topic === t && !customTopic;
+              const isSelected = topic === t;
 
               return (
                 <button
                   key={t}
-                  onClick={() => { setTopic(t); setCustomTopic(''); }}
+                  onClick={() => setTopic(t)}
                   className={`p-3 rounded-xl text-sm font-bold transition-all ${
                     isSelected
                       ? isRandomOption
@@ -67,16 +66,6 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
                 </button>
               );
             })}
-          </div>
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Eller skriv eget ämne..."
-              value={customTopic}
-              onChange={(e) => setCustomTopic(e.target.value)}
-              className="w-full p-4 pl-12 rounded-xl bg-slate-50 border-2 border-slate-200 focus:border-indigo-500 focus:outline-none transition-colors font-medium text-slate-700"
-            />
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl">✨</span>
           </div>
         </div>
 
@@ -177,7 +166,7 @@ export const SetupView: React.FC<SetupViewProps> = ({ onStart, userLevel }) => {
 
         <button
           onClick={handleStart}
-          disabled={!topic && !customTopic}
+          disabled={!topic}
           className="w-full py-5 px-6 rounded-xl bg-green-600 text-white font-extrabold text-2xl shadow-lg hover:bg-green-700 hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:bg-gray-300"
         >
           Starta läsningen
