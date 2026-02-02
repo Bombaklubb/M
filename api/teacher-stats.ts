@@ -22,16 +22,14 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    // Get all usage entries from today
+    // Get all usage entries from today (for hourly stats)
     const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
     const todayKey = `usage:${today}`;
 
     const todayEntries: UsageEntry[] = (await kv.get(todayKey)) || [];
     const totalCount: number = (await kv.get('usage:total')) || 0;
 
-    // Calculate stats
-    const topicsMap = new Map<string, number>();
-    const levelsMap = new Map<number, number>();
+    // Calculate hourly stats (today only)
     const hourlyMap = new Map<number, number>();
 
     // Initialize hourly map with 24 hours
@@ -40,32 +38,54 @@ export default async function handler(req: any, res: any) {
     }
 
     todayEntries.forEach((entry) => {
-      // Count topics
-      topicsMap.set(entry.topic, (topicsMap.get(entry.topic) || 0) + 1);
-
-      // Count levels
-      levelsMap.set(entry.level, (levelsMap.get(entry.level) || 0) + 1);
-
       // Count hourly
       const hour = new Date(entry.timestamp).getHours();
       hourlyMap.set(hour, (hourlyMap.get(hour) || 0) + 1);
     });
 
-    // Sort and get top topics
-    const topTopics = Array.from(topicsMap.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([topic, count]) => ({ topic, count }));
-
-    // Sort and get top levels
-    const topLevels = Array.from(levelsMap.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 8)
-      .map(([level, count]) => ({ level, count }));
-
     // Convert hourly map to array
     const hourlyUsage = Array.from(hourlyMap.entries())
       .map(([hour, count]) => ({ hour, count }));
+
+    // Get all-time topic stats from KV
+    const allTopics = [
+      'Djur & Natur',
+      'Rymden',
+      'Sport & Fritid',
+      'Historia & Forntiden',
+      'Vetenskap',
+      'Äventyr & Spänning',
+      '🎲 Slumpa fram en text',
+      'Sverige & Världen',
+      'Fantasy'
+    ];
+
+    const topicsWithCounts = await Promise.all(
+      allTopics.map(async (topic) => {
+        const count = (await kv.get(`stats:topic:${topic}`)) || 0;
+        return { topic, count: Number(count) };
+      })
+    );
+
+    // Sort and get top 5 topics
+    const topTopics = topicsWithCounts
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+
+    // Get all-time level stats from KV (levels 1-20)
+    const allLevels = Array.from({ length: 20 }, (_, i) => i + 1);
+
+    const levelsWithCounts = await Promise.all(
+      allLevels.map(async (level) => {
+        const count = (await kv.get(`stats:level:${level}`)) || 0;
+        return { level, count: Number(count) };
+      })
+    );
+
+    // Sort and get top 8 levels
+    const topLevels = levelsWithCounts
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 8);
 
     return res.status(200).json({
       today: todayEntries.length,

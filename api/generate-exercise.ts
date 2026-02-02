@@ -467,13 +467,21 @@ REGLER:
         textType,
       };
 
-      // Append to today's usage
+      // Append to today's usage (7 day expiry)
       const todayKey = `usage:${today}`;
       const todayEntries: any[] = (await kv.get(todayKey)) || [];
       await kv.set(todayKey, [...todayEntries, usageEntry], { ex: 86400 * 7 }); // 7 day expiry
 
       // Increment total counter
       await kv.incr('usage:total');
+
+      // Increment all-time topic counter (never expires)
+      const topicKey = `stats:topic:${topic}`;
+      await kv.incr(topicKey);
+
+      // Increment all-time level counter (never expires)
+      const levelKey = `stats:level:${level}`;
+      await kv.incr(levelKey);
 
       console.log(`[USAGE LOGGED] Topic: ${topic}, Level: ${level}, Type: ${textType}`);
     } catch (kvError) {

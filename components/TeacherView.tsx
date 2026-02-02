@@ -149,7 +149,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
             {/* Top Topics */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">📚 Populäraste ämnen</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">📚 Populäraste ämnen (totalt)</h3>
               <div className="space-y-3">
                 {stats.topTopics.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
@@ -167,7 +167,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
             {/* Top Levels */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">📈 Populäraste nivåer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">📈 Populäraste nivåer (totalt)</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {stats.topLevels.map((item, idx) => (
                   <div key={idx} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-4 text-center">
