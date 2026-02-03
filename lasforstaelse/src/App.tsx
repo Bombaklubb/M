@@ -3,9 +3,9 @@ import { AppState, User, LibraryText, UserAnswers, Badge } from './types';
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';
 import { SetupView } from './components/SetupView';
-import { ReadingView } from './components/ReadingView';
 import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
+import { ProfileView } from './components/ProfileView';
 import {
   createUser,
   loadUser,
@@ -27,6 +27,7 @@ function App() {
     newBadges: Badge[];
   } | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showProfile, setShowProfile] = useState(false);
 
   // Ladda användare vid start
   useEffect(() => {
@@ -54,10 +55,11 @@ function App() {
     setCurrentGrade(null);
     setUserAnswers({});
     setLastResult(null);
+    setShowProfile(false);
     setAppState(AppState.LOGIN);
   };
 
-  // Välj årskurs och hämta en text
+  // Välj årskurs och hämta en text - gå direkt till quiz (side-by-side)
   const handleSelectGrade = async (grade: number) => {
     if (!user) return;
 
@@ -69,22 +71,12 @@ function App() {
 
     if (text) {
       setCurrentText(text);
-      setAppState(AppState.READING);
+      setAppState(AppState.QUIZ); // Gå direkt till quiz med side-by-side layout
     } else {
       alert('Inga texter tillgängliga för denna årskurs.');
     }
 
     setLoading(false);
-  };
-
-  // Börja quiz efter läsning
-  const handleStartQuiz = () => {
-    setAppState(AppState.QUIZ);
-  };
-
-  // Visa texten igen från quiz
-  const handleShowText = () => {
-    setAppState(AppState.READING);
   };
 
   // Skicka in svar
@@ -116,6 +108,7 @@ function App() {
     setUser(updatedUser);
     setLastResult({ pointsEarned, newBadges });
     setAppState(AppState.RESULT);
+    window.scrollTo(0, 0);
   };
 
   // Tillbaka till årskursval
@@ -124,7 +117,9 @@ function App() {
     setCurrentGrade(null);
     setUserAnswers({});
     setLastResult(null);
+    setShowProfile(false);
     setAppState(AppState.SETUP);
+    window.scrollTo(0, 0);
   };
 
   // Nästa text i samma årskurs
@@ -143,12 +138,13 @@ function App() {
 
     if (text) {
       setCurrentText(text);
-      setAppState(AppState.READING);
+      setAppState(AppState.QUIZ);
     } else {
       handleRestart();
     }
 
     setLoading(false);
+    window.scrollTo(0, 0);
   };
 
   // Beräkna antal lästa texter per årskurs
@@ -164,7 +160,7 @@ function App() {
   // Loading screen
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-sky-100 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-sky-50 flex items-center justify-center">
         <div className="text-center">
           <div className="text-8xl mb-4 animate-bounce">📚</div>
           <p className="text-xl text-slate-600">Laddar...</p>
@@ -178,9 +174,29 @@ function App() {
     return <LoginView onLogin={handleLogin} />;
   }
 
+  // Profile view
+  if (showProfile) {
+    return (
+      <div className="min-h-screen bg-sky-50">
+        <Header
+          user={user}
+          onLogout={handleLogout}
+          onHomeClick={handleRestart}
+          onProfileClick={() => setShowProfile(false)}
+        />
+        <ProfileView user={user} onClose={() => setShowProfile(false)} />
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50">
-      <Header user={user} onLogout={handleLogout} onHomeClick={handleRestart} />
+    <div className="min-h-screen bg-sky-50">
+      <Header
+        user={user}
+        onLogout={handleLogout}
+        onHomeClick={handleRestart}
+        onProfileClick={() => setShowProfile(true)}
+      />
 
       <main>
         {appState === AppState.SETUP && (
@@ -190,15 +206,11 @@ function App() {
           />
         )}
 
-        {appState === AppState.READING && currentText && (
-          <ReadingView text={currentText} onStartQuiz={handleStartQuiz} />
-        )}
-
         {appState === AppState.QUIZ && currentText && (
           <QuizView
             text={currentText}
             onComplete={handleComplete}
-            onShowText={handleShowText}
+            onShowText={() => {}} // Not used anymore with side-by-side layout
           />
         )}
 

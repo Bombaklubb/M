@@ -15,8 +15,8 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-100 to-indigo-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full">
+    <div className="min-h-screen bg-sky-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-3xl shadow-xl border-b-8 border-indigo-100 p-8 max-w-md w-full">
         <div className="text-center mb-8">
           <div className="text-8xl mb-4">📚</div>
           <h1 className="text-4xl font-extrabold text-indigo-900 mb-2">
@@ -50,7 +50,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
           <button
             type="submit"
             disabled={!name.trim()}
-            className="w-full py-4 px-6 rounded-xl bg-indigo-600 text-white font-bold text-xl shadow-lg hover:bg-indigo-700 hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-lg"
+            className="w-full py-4 px-6 rounded-xl bg-green-600 text-white font-extrabold text-xl shadow-lg hover:bg-green-700 hover:shadow-xl transform hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-lg disabled:bg-gray-300"
           >
             Börja läsa!
           </button>
@@ -58,6 +58,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
 
         <div className="mt-8 text-center text-slate-500 text-sm">
           <p>Ingen inloggning krävs - skriv bara ditt namn!</p>
+          <p className="mt-2">Din framsteg sparas automatiskt.</p>
         </div>
       </div>
     </div>
