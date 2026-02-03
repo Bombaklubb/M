@@ -6,6 +6,7 @@ import { SetupView } from './components/SetupView';
 import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
+import { TeacherView } from './components/TeacherView';
 import { BookLogo } from './components/BookLogo';
 import {
   createUser,
@@ -29,6 +30,7 @@ function App() {
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
+  const [showTeacher, setShowTeacher] = useState(false);
 
   // Ladda användare vid start
   useEffect(() => {
@@ -38,6 +40,18 @@ function App() {
       setAppState(AppState.SETUP);
     }
     setLoading(false);
+  }, []);
+
+  // Keyboard shortcut för lärarvy (Ctrl+Shift+L)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+        e.preventDefault();
+        setShowTeacher(true);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   // Login
@@ -103,7 +117,9 @@ function App() {
       currentText.title,
       currentText.grade,
       correctCount,
-      currentText.questions.length
+      currentText.questions.length,
+      currentText.genre,
+      currentText.theme
     );
 
     setUser(updatedUser);
@@ -228,6 +244,11 @@ function App() {
           />
         )}
       </main>
+
+      {/* Lärarvy (öppnas med Ctrl+Shift+L) */}
+      {showTeacher && (
+        <TeacherView onClose={() => setShowTeacher(false)} />
+      )}
     </div>
   );
 }
