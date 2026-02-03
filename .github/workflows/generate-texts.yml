@@ -1,0 +1,45 @@
+name: Generate Reading Texts
+
+on:
+  workflow_dispatch:
+    inputs:
+      grades:
+        description: 'Årskurser (t.ex. 1-9 eller 4,5)'
+        required: true
+        default: '1-9'
+      count:
+        description: 'Antal texter per årskurs'
+        required: true
+        default: '50'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate texts
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          node scripts/generate_library.mjs \
+            --grades "${{ inputs.grades }}" \
+            --count "${{ inputs.count }}" \
+            --out lasforstaelse/public/data/library.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add lasforstaelse/public/data/library.json
+          git diff --staged --quiet || git commit -m "Generate ${{ inputs.count }} texts per grade (${{ inputs.grades }})"
+          git push
