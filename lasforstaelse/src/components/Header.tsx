@@ -5,61 +5,52 @@ interface HeaderProps {
   user: User;
   onLogout: () => void;
   onHomeClick: () => void;
+  onProfileClick?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick }) => {
+export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick }) => {
   return (
-    <header className="bg-white shadow-md sticky top-0 z-40">
-      <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="bg-white shadow-md border-b-4 border-indigo-100">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo */}
         <button
           onClick={onHomeClick}
-          className="flex items-center gap-2 hover:opacity-80 transition"
+          className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
         >
           <span className="text-3xl">📚</span>
-          <span className="text-xl font-bold text-indigo-900 hidden sm:inline">
-            Läsförståelse
-          </span>
+          <span className="text-xl font-extrabold text-indigo-900">Läsförståelse</span>
         </button>
 
-        <div className="flex items-center gap-4">
-          {/* Poäng */}
-          <div className="flex items-center gap-1 bg-yellow-100 px-3 py-1 rounded-full">
+        {/* User info */}
+        <div className="flex items-center space-x-3">
+          {/* Points */}
+          <div className="hidden sm:flex items-center space-x-2 bg-yellow-50 px-4 py-2 rounded-full border-2 border-yellow-200">
             <span className="text-xl">⭐</span>
-            <span className="font-bold text-yellow-700">{user.totalPoints}</span>
+            <span className="font-bold text-slate-700">{user.totalPoints}</span>
           </div>
 
           {/* Badges count */}
-          <div className="flex items-center gap-1 bg-purple-100 px-3 py-1 rounded-full">
-            <span className="text-xl">🏅</span>
-            <span className="font-bold text-purple-700">{user.badges.length}</span>
+          <div className="hidden sm:flex items-center space-x-2 bg-orange-50 px-4 py-2 rounded-full border-2 border-orange-200">
+            <span className="text-xl">🔥</span>
+            <span className="font-bold text-slate-700">{user.badges.length}</span>
           </div>
 
-          {/* Användarnamn och logout */}
-          <div className="flex items-center gap-2">
-            <span className="font-medium text-slate-700 hidden sm:inline">
-              {user.name}
-            </span>
-            <button
-              onClick={onLogout}
-              className="p-2 text-slate-400 hover:text-slate-600 transition"
-              title="Logga ut"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                />
-              </svg>
-            </button>
-          </div>
+          {/* Profile button */}
+          <button
+            onClick={onProfileClick}
+            className="flex items-center space-x-2 bg-indigo-50 px-4 py-2 rounded-full border-2 border-indigo-200 hover:bg-indigo-100 transition-colors"
+          >
+            <span className="text-xl">👤</span>
+            <span className="font-bold text-slate-700">{user.name}</span>
+          </button>
+
+          {/* Logout */}
+          <button
+            onClick={onLogout}
+            className="px-4 py-2 bg-slate-100 text-slate-700 rounded-full hover:bg-slate-200 transition-colors font-medium"
+          >
+            Logga ut
+          </button>
         </div>
       </div>
     </header>
