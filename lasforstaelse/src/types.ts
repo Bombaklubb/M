@@ -15,12 +15,12 @@ export interface LibraryQuestion {
 export interface LibraryText {
   id: string;
   grade: number; // 1-9
-  genre: Genre;
+  genre: string;
   theme: string;
   title: string;
   text: string;
   questions: LibraryQuestion[];
-  meta: {
+  meta?: {
     wordCount: number;
     fingerprint: string;
     generatedAt: string;
