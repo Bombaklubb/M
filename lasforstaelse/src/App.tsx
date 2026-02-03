@@ -6,6 +6,7 @@ import { SetupView } from './components/SetupView';
 import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
+import { BookLogo } from './components/BookLogo';
 import {
   createUser,
   loadUser,
@@ -162,7 +163,9 @@ function App() {
     return (
       <div className="min-h-screen bg-sky-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-8xl mb-4 animate-bounce">📚</div>
+          <div className="flex justify-center mb-4 animate-bounce">
+            <BookLogo size={80} />
+          </div>
           <p className="text-xl text-slate-600">Laddar...</p>
         </div>
       </div>
