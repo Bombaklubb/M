@@ -117,20 +117,31 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
         {stats && (
           <div className="space-y-6">
-            {/* Summary Cards */}
+            {/* Summary Cards - Tydliga färger för läsbarhet */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg p-6 text-white">
-                <div className="text-blue-100 mb-2">Texter idag</div>
-                <div className="text-5xl font-black">{stats.today}</div>
-                <div className="text-blue-100 mt-2 text-sm">
-                  {((stats.today / 14400) * 100).toFixed(1)}% av daglig gräns (14,400)
+              <div className="bg-blue-50 rounded-2xl shadow-2xl p-8 border-4 border-blue-400">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-5xl">📝</span>
+                  <div className="text-xl font-bold text-blue-900">Texter idag</div>
+                </div>
+                <div className="text-7xl font-black text-blue-900">{stats.today}</div>
+                <div className="mt-4 space-y-1">
+                  <div className="text-base font-bold text-blue-700">
+                    Använt: {Math.round((stats.today / 40) * 100)}% av kapacitet
+                  </div>
+                  <div className="text-sm text-blue-600">
+                    Daglig kapacitet: ~40-50 texter (beroende på nivå)
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
-                <div className="text-purple-100 mb-2">Texter totalt</div>
-                <div className="text-5xl font-black">{stats.total}</div>
-                <div className="text-purple-100 mt-2 text-sm">
+              <div className="bg-purple-50 rounded-2xl shadow-2xl p-8 border-4 border-purple-400">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-5xl">📊</span>
+                  <div className="text-xl font-bold text-purple-900">Texter totalt</div>
+                </div>
+                <div className="text-7xl font-black text-purple-900">{stats.total}</div>
+                <div className="text-purple-700 mt-4 text-base font-bold">
                   Sedan appen startade
                 </div>
               </div>
@@ -138,7 +149,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
             {/* Top Topics */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">📚 Populäraste ämnen</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">📚 Populäraste ämnen (totalt)</h3>
               <div className="space-y-3">
                 {stats.topTopics.map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">
@@ -156,7 +167,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
             {/* Top Levels */}
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">📈 Populäraste nivåer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">📈 Populäraste nivåer (totalt)</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {stats.topLevels.map((item, idx) => (
                   <div key={idx} className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-4 text-center">

@@ -56,7 +56,7 @@ export const TOPICS = [
   "Äventyr & Spänning",
   "🎲 Slumpa fram en text",
   "Sverige & Världen",
-  "Teknik & Uppfinningar"
+  "Fantasy"
 ];
 
 // Autentisering och användare
