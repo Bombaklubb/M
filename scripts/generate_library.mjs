@@ -4,23 +4,17 @@
  * ✅ What it does
  * - Generates Swedish reading-comprehension texts + questions for grades 1–9
  * - Uses your GROQ_API_KEY (stored as env var)
- * - Saves everything into ONE JSON file: data/library.json
+ * - Saves everything into ONE JSON file
  * - Deduplicates, validates, retries if JSON breaks
  *
- * ✅ How to use (works in Claude Code too)
- * 1) Create a file: scripts/generate_library.mjs  (paste this whole file)
- * 2) Set env var GROQ_API_KEY
- * 3) Run:
- *    node scripts/generate_library.mjs --grades 1-9 --count 20
+ * ✅ How to use
+ * 1) Set env var GROQ_API_KEY
+ * 2) Run:
+ *    node scripts/generate_library.mjs --grades 1-9 --count 50 --out lasforstaelse/public/data/library.json
  *
  * Examples:
- * - 20 texts per grade (1..9): node scripts/generate_library.mjs --grades 1-9 --count 20
- * - Only grade 4 and 5, 50 each: node scripts/generate_library.mjs --grades 4,5 --count 50
- * - Grade 7 only, 200: node scripts/generate_library.mjs --grades 7 --count 200
- *
- * Notes:
- * - "Gratis i användning" = Your website serves the pre-generated JSON. No API calls for users.
- * - You pay Groq usage only when you run this generator.
+ * - 50 texts per grade (1..9): node scripts/generate_library.mjs --grades 1-9 --count 50
+ * - Only grade 4 and 5: node scripts/generate_library.mjs --grades 4,5 --count 50
  */
 
 import fs from "node:fs";
@@ -40,13 +34,13 @@ function getArg(name, fallback = null) {
   if (idx === -1) return fallback;
   return argv[idx + 1] ?? fallback;
 }
-const gradesArg = getArg("--grades", "1-9");      // "1-9" or "4,5" etc
-const countPerGrade = Number(getArg("--count", "20"));
-const outFile = getArg("--out", "data/library.json");
+const gradesArg = getArg("--grades", "1-9");
+const countPerGrade = Number(getArg("--count", "50"));
+const outFile = getArg("--out", "lasforstaelse/public/data/library.json");
 const model = getArg("--model", "llama-3.3-70b-versatile");
-const temperature = Number(getArg("--temp", "0.8"));
-const maxRetries = Number(getArg("--retries", "3"));
-const sleepMs = Number(getArg("--sleep", "250")); // small throttle
+const temperature = Number(getArg("--temp", "0.85"));
+const maxRetries = Number(getArg("--retries", "4"));
+const sleepMs = Number(getArg("--sleep", "300"));
 
 if (!Number.isFinite(countPerGrade) || countPerGrade <= 0) {
   console.error("❌ --count must be a positive number.");
@@ -70,11 +64,6 @@ if (!grades.length) {
   console.error("❌ No valid grades. Use --grades 1-9 or --grades 4,5 etc.");
   process.exit(1);
 }
-
-// ---- Output schema (single record) ----
-// {
-//   id, grade, genre, theme, title, text, questions:[{type,q,a}], meta:{wordCount, approxLevel}
-// }
 
 function ensureDir(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
@@ -104,64 +93,104 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
-// Quick "soft rules" per grade for length + question count.
-// (Not perfect readability scoring—just guardrails.)
+// Rules per grade for text length and style
 function gradeRules(grade) {
-  if (grade <= 1) return { len: [40, 80], q: 5, sentenceHint: "Mycket korta meningar." };
-  if (grade === 2) return { len: [70, 120], q: 6, sentenceHint: "Korta meningar, enkel struktur." };
-  if (grade === 3) return { len: [90, 160], q: 6, sentenceHint: "Korta meningar, få svåra ord." };
-  if (grade <= 6) return { len: [180, 320], q: 8, sentenceHint: "Varierade meningar, tydlig struktur." };
-  return { len: [300, 500], q: 10, sentenceHint: "Mer avancerat språk, inferenser och budskap." };
+  if (grade === 1) return {
+    len: [50, 90],
+    style: "Mycket korta och enkla meningar. Vardagliga ord. Inga svåra ord.",
+    themes: "djur, familj, vänner, leksaker, mat, skola"
+  };
+  if (grade === 2) return {
+    len: [80, 130],
+    style: "Korta meningar. Enkla ord. Tydlig handling.",
+    themes: "djur, natur, vänskap, skola, sport, helger"
+  };
+  if (grade === 3) return {
+    len: [120, 180],
+    style: "Korta till medellånga meningar. Tydlig struktur. Få svåra ord.",
+    themes: "djur, natur, vänskap, äventyr, sport, hobbyer"
+  };
+  if (grade === 4) return {
+    len: [180, 280],
+    style: "Varierade meningar. Mer beskrivande språk. Tydlig struktur.",
+    themes: "äventyr, mysterium, natur, historia, sport, teknik"
+  };
+  if (grade === 5) return {
+    len: [220, 350],
+    style: "Varierade meningar. Beskrivande och förklarande språk.",
+    themes: "äventyr, mysterium, vetenskap, historia, samhälle, miljö"
+  };
+  if (grade === 6) return {
+    len: [280, 420],
+    style: "Mer komplexa meningar. Rikare ordförråd. Tydliga stycken.",
+    themes: "äventyr, mysterium, vetenskap, historia, samhälle, etik, miljö"
+  };
+  if (grade === 7) return {
+    len: [350, 500],
+    style: "Komplexa meningar. Avancerat ordförråd. Tematisk djup.",
+    themes: "samhälle, vetenskap, etik, historia, framtid, relationer, media"
+  };
+  if (grade === 8) return {
+    len: [400, 550],
+    style: "Varierad meningsbyggnad. Akademiskt språk. Abstrakta begrepp.",
+    themes: "samhälle, vetenskap, etik, filosofi, historia, framtid, globala frågor"
+  };
+  return { // grade 9
+    len: [450, 600],
+    style: "Sofistikerad meningsbyggnad. Avancerat språk. Komplexa idéer.",
+    themes: "samhälle, vetenskap, etik, filosofi, politik, globala utmaningar, existentiella frågor"
+  };
 }
 
-// Prompt that strongly forces JSON-only output.
+// Build prompt for text generation
 function buildPrompt(grade) {
   const r = gradeRules(grade);
-
-  const themes = grade <= 3
-    ? "vardag, djur, vänskap, skola, natur"
-    : grade <= 6
-      ? "äventyr, mysterium, fakta, historia light, sport"
-      : "samhälle, vetenskap, etik, media, historia, framtid";
-
-  const genre = grade <= 3 ? "berättelse" : "berättelse eller faktatext";
+  const genre = grade <= 4 ? "berättelse" : "berättelse eller faktatext";
 
   return `
-Skapa 1 läsförståelseuppgift på svenska för ÅK ${grade}.
+Skapa 1 läsförståelseuppgift på svenska för ÅRSKURS ${grade}.
 
-KRAV (viktigt):
-- Längd på texten: ${r.len[0]}–${r.len[1]} ord.
-- Genre: ${genre}.
-- Tema välj från: ${themes}.
-- Stil: ${r.sentenceHint}
-- Innehåll måste vara skolpassande.
-- Inga verkliga personuppgifter eller identifierbara personer.
-- Svara ENDAST med giltig JSON (inga backticks, ingen förklaring, ingen extra text).
+TEXTKRAV:
+- Längd: ${r.len[0]}–${r.len[1]} ord
+- Genre: ${genre}
+- Välj tema från: ${r.themes}
+- Språkstil: ${r.style}
+- Innehållet måste vara skolpassande och intressant för elever i åk ${grade}
+- Inga verkliga personer eller känsliga ämnen
 
-FORMAT (JSON schema):
+FRÅGEKRAV (exakt 6 frågor):
+- 3 frågor av typ "literal" (På raderna - svaret finns direkt i texten)
+- 3 frågor av typ "inferens" (Mellan raderna - kräver slutledning/tolkning)
+
+För åk ${grade}:
+${grade <= 3 ? '- Literal-frågor: "Vad heter...?", "Vad gör...?", "Var är...?"' : ''}
+${grade <= 3 ? '- Inferens-frågor: "Varför tror du...?", "Hur känner sig...?", "Vad betyder det att...?"' : ''}
+${grade >= 4 && grade <= 6 ? '- Literal-frågor: fakta och detaljer från texten' : ''}
+${grade >= 4 && grade <= 6 ? '- Inferens-frågor: orsak/verkan, känslor, budskap' : ''}
+${grade >= 7 ? '- Literal-frågor: specifika fakta, citat, händelser' : ''}
+${grade >= 7 ? '- Inferens-frågor: tolkning, analys, slutsatser, författarens syfte' : ''}
+
+VIKTIGT:
+- Svara ENDAST med giltig JSON (inga backticks, ingen förklaring)
+- Frågorna ska kunna besvaras utifrån texten
+- Facit ska vara kort och tydligt (max 1-2 meningar)
+
+JSON FORMAT:
 {
-  "id": "valfri-sträng",
   "grade": ${grade},
-  "genre": "berättelse|faktatext",
+  "genre": "berättelse" eller "faktatext",
   "theme": "kort temaord",
   "title": "kort titel",
-  "text": "själva texten",
+  "text": "texten här",
   "questions": [
-    {"type":"literal|inferens|ord|sammanfatta", "q":"fråga", "a":"facit-svar"}
+    {"type": "literal", "q": "fråga 1", "a": "svar"},
+    {"type": "literal", "q": "fråga 2", "a": "svar"},
+    {"type": "literal", "q": "fråga 3", "a": "svar"},
+    {"type": "inferens", "q": "fråga 4", "a": "svar"},
+    {"type": "inferens", "q": "fråga 5", "a": "svar"},
+    {"type": "inferens", "q": "fråga 6", "a": "svar"}
   ]
 }
-
-FRÅGOR:
-- Antal frågor: ${r.q}
-- Fördelning (ungefär):
-  - literal: 2–3
-  - inferens: 1–3 (för åk 1–2 max 1 inferens)
-  - ord: 1–2
-  - sammanfatta: 1 (för åk 1 kan vara "Vad handlar texten om?")
-
-KVALITET:
-- Frågorna ska kunna besvaras utifrån texten.
-- Facit ska vara kort och tydligt.
 `.trim();
 }
 
@@ -176,7 +205,7 @@ async function callGroqJSON(prompt) {
       model,
       temperature,
       messages: [
-        { role: "system", content: "You MUST return ONLY a valid JSON object. No extra text." },
+        { role: "system", content: "Du är en expert på att skapa läsförståelseövningar för svenska elever. Svara ENDAST med giltig JSON." },
         { role: "user", content: prompt }
       ],
     }),
@@ -191,11 +220,9 @@ async function callGroqJSON(prompt) {
   const content = data?.choices?.[0]?.message?.content;
   if (!content) throw new Error("No content in Groq response.");
 
-  // Try strict parse first.
   try {
     return JSON.parse(content);
   } catch {
-    // If the model wraps JSON with stray text, attempt to extract first {...}.
     const firstBrace = content.indexOf("{");
     const lastBrace = content.lastIndexOf("}");
     if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
@@ -213,20 +240,30 @@ function validateItem(item) {
 
   if (![1,2,3,4,5,6,7,8,9].includes(Number(item.grade))) return "Invalid grade";
   if (!["berättelse", "faktatext"].includes(String(item.genre))) return "Invalid genre";
-  if (typeof item.text !== "string" || item.text.trim().length < 20) return "Text too short or missing";
-  if (!Array.isArray(item.questions) || item.questions.length < 4) return "Questions missing/too few";
+  if (typeof item.text !== "string" || item.text.trim().length < 30) return "Text too short";
+  if (!Array.isArray(item.questions) || item.questions.length !== 6) return "Must have exactly 6 questions";
+
+  let literalCount = 0;
+  let inferensCount = 0;
 
   for (const q of item.questions) {
     if (!q || typeof q !== "object") return "Question is not an object";
-    if (!["literal","inferens","ord","sammanfatta"].includes(String(q.type))) return "Invalid question type";
+    if (!["literal", "inferens"].includes(String(q.type))) return "Invalid question type (must be literal or inferens)";
     if (typeof q.q !== "string" || !q.q.trim()) return "Question text missing";
     if (typeof q.a !== "string" || !q.a.trim()) return "Answer missing";
+
+    if (q.type === "literal") literalCount++;
+    if (q.type === "inferens") inferensCount++;
   }
+
+  if (literalCount !== 3) return `Must have exactly 3 literal questions (got ${literalCount})`;
+  if (inferensCount !== 3) return `Must have exactly 3 inferens questions (got ${inferensCount})`;
+
   return null;
 }
 
 function normalizeItem(item, grade) {
-  const id = item.id && String(item.id).trim() ? String(item.id).trim() : `ak${grade}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  const id = `ak${grade}-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
   const text = String(item.text).trim();
   const wc = wordCount(text);
   return {
@@ -268,27 +305,18 @@ async function generateOne(grade) {
 
       const norm = normalizeItem(raw, grade);
 
-      // Soft length guardrail
+      // Check length
       const r = gradeRules(grade);
-      if (norm.meta.wordCount < r.len[0] || norm.meta.wordCount > r.len[1] + 30) {
-        throw new Error(`Length out of range (got ${norm.meta.wordCount} words, expected ~${r.len[0]}–${r.len[1]}).`);
-      }
-
-      // Soft question count guardrail
-      if (norm.questions.length !== r.q) {
-        // Not fatal, but try to keep consistent
-        // We'll accept if it's close (±1), otherwise retry.
-        if (Math.abs(norm.questions.length - r.q) > 1) {
-          throw new Error(`Question count off (got ${norm.questions.length}, expected ${r.q}).`);
-        }
+      if (norm.meta.wordCount < r.len[0] - 20 || norm.meta.wordCount > r.len[1] + 50) {
+        throw new Error(`Length out of range (got ${norm.meta.wordCount} words, expected ${r.len[0]}–${r.len[1]}).`);
       }
 
       return norm;
     } catch (e) {
       const msg = String(e?.message ?? e);
-      console.log(`⚠️ Grade ${grade} attempt ${attempt}/${maxRetries} failed: ${msg}`);
+      console.log(`⚠️ Åk ${grade} försök ${attempt}/${maxRetries} misslyckades: ${msg}`);
       if (attempt === maxRetries) throw e;
-      await sleep(300 + attempt * 300);
+      await sleep(500 + attempt * 500);
     }
   }
   throw new Error("Unreachable");
@@ -298,88 +326,78 @@ async function main() {
   ensureDir(outFile);
   const library = loadLibrary(outFile);
 
-  // Quick index by grade (for nicer progress logs)
   const existingByGrade = new Map();
   for (const g of grades) {
     existingByGrade.set(g, library.filter(x => Number(x.grade) === g).length);
   }
 
-  console.log(`✅ Loaded library: ${library.length} items`);
+  console.log(`\n📚 Läsförståelse-generator`);
+  console.log(`${"=".repeat(50)}`);
+  console.log(`✅ Laddat bibliotek: ${library.length} texter`);
   for (const g of grades) {
-    console.log(`   - Existing grade ${g}: ${existingByGrade.get(g) ?? 0}`);
+    console.log(`   Åk ${g}: ${existingByGrade.get(g) ?? 0} texter`);
   }
-  console.log(`➡️ Will generate ${countPerGrade} per grade for: ${grades.join(", ")}`);
-  console.log(`➡️ Output: ${outFile}`);
-  console.log("");
+  console.log(`\n➡️ Kommer generera ${countPerGrade} texter per årskurs`);
+  console.log(`➡️ Årskurser: ${grades.join(", ")}`);
+  console.log(`➡️ Utfil: ${outFile}`);
+  console.log(`${"=".repeat(50)}\n`);
+
+  let totalGenerated = 0;
 
   for (const g of grades) {
+    console.log(`\n📖 Årskurs ${g}`);
+    console.log(`${"-".repeat(30)}`);
+
     let made = 0;
+    let duplicates = 0;
+
     while (made < countPerGrade) {
-      const item = await generateOne(g);
+      try {
+        const item = await generateOne(g);
 
-      if (isDuplicate(library, item)) {
-        console.log(`↩️ Duplicate detected (grade ${g}) – retrying...`);
-        continue;
+        if (isDuplicate(library, item)) {
+          duplicates++;
+          console.log(`   ↩️ Dublett ${duplicates} - försöker igen...`);
+          if (duplicates > 10) {
+            console.log(`   ⚠️ Många dubletter - fortsätter till nästa årskurs`);
+            break;
+          }
+          continue;
+        }
+
+        library.push(item);
+        made++;
+        totalGenerated++;
+
+        const progress = Math.round((made / countPerGrade) * 100);
+        console.log(`   ✅ ${made}/${countPerGrade} (${progress}%) - "${item.title}" (${item.meta.wordCount} ord)`);
+
+        // Save periodically
+        if (made % 10 === 0) {
+          fs.writeFileSync(outFile, JSON.stringify(library, null, 2), "utf8");
+          console.log(`   💾 Sparade ${library.length} texter`);
+        }
+
+        await sleep(sleepMs);
+      } catch (e) {
+        console.log(`   ❌ Fel: ${e.message}`);
+        await sleep(1000);
       }
-
-      library.push(item);
-      made++;
-
-      console.log(`✅ Grade ${g}: ${made}/${countPerGrade} (total library: ${library.length})`);
-      await sleep(sleepMs);
     }
-    console.log("");
+
+    // Save after each grade
+    fs.writeFileSync(outFile, JSON.stringify(library, null, 2), "utf8");
+    console.log(`   📊 Klart! Åk ${g}: ${made} nya texter`);
   }
 
   fs.writeFileSync(outFile, JSON.stringify(library, null, 2), "utf8");
-  console.log(`🎉 Done! Saved ${library.length} items to ${outFile}`);
+  console.log(`\n${"=".repeat(50)}`);
+  console.log(`🎉 Klart! Genererade ${totalGenerated} nya texter`);
+  console.log(`📚 Totalt i biblioteket: ${library.length} texter`);
+  console.log(`💾 Sparat till: ${outFile}`);
 }
 
 main().catch(err => {
   console.error("❌ Generator failed:", err?.message ?? err);
   process.exit(1);
 });
-
-/*
--------------------------------------------
-OPTIONAL (still "online"): GitHub Action
-Copy this into: .github/workflows/generate.yml
-and store GROQ_API_KEY in GitHub Secrets.
-
-name: Generate library (Groq)
-
-on:
-  workflow_dispatch:
-    inputs:
-      grades:
-        description: "Grades, e.g. 1-9 or 4,5"
-        required: true
-        default: "1-9"
-      count:
-        description: "Count per grade"
-        required: true
-        default: "20"
-
-jobs:
-  gen:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - name: Generate
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: node scripts/generate_library.mjs --grades "${{ inputs.grades }}" --count "${{ inputs.count }}"
-      - name: Commit
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/library.json
-          git commit -m "Update library (grades ${{ inputs.grades }})" || echo "No changes"
-          git push
--------------------------------------------
-*/
