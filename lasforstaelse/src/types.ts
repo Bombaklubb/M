@@ -4,11 +4,12 @@ export type QuestionType = 'literal' | 'inferens' | 'ord' | 'sammanfatta';
 // Genre
 export type Genre = 'berättelse' | 'faktatext';
 
-// En fråga i biblioteket
+// En fråga i biblioteket (flervalsfråga)
 export interface LibraryQuestion {
   type: QuestionType;
   q: string;
-  a: string;
+  options: string[]; // 4 svarsalternativ
+  correct: number;   // Index för rätt svar (0-3)
 }
 
 // En text från library.json

@@ -100,13 +100,10 @@ function App() {
 
     setUserAnswers(answers);
 
-    // Beräkna rätt svar
+    // Beräkna rätt svar (flervalsfrågor - jämför vald option med correct index)
     const correctCount = currentText.questions.reduce((count, q, index) => {
-      const userAnswer = (answers[index] || '').trim().toLowerCase();
-      const correctAnswer = q.a.trim().toLowerCase();
-      const isCorrect =
-        userAnswer === correctAnswer ||
-        correctAnswer.split(' ').some((word) => userAnswer.includes(word) && word.length > 3);
+      const userAnswer = answers[index];
+      const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
       return count + (isCorrect ? 1 : 0);
     }, 0);
 
