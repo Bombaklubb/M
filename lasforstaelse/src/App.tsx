@@ -45,7 +45,7 @@ function App() {
   // Keyboard shortcut för lärarvy (Ctrl+Shift+L)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+      if (e.ctrlKey && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
         e.preventDefault();
         setShowTeacher(true);
       }
