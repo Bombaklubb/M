@@ -54,6 +54,14 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Öppna lärarvy via URL parameter (?teacher=1)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('teacher') === '1') {
+      setShowTeacher(true);
+    }
+  }, []);
+
   // Login
   const handleLogin = (name: string) => {
     const newUser = createUser(name);
