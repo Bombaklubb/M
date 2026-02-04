@@ -198,6 +198,15 @@ JSON FORMAT:
 `.trim();
 }
 
+// Custom error for rate limits - don't retry these
+class RateLimitError extends Error {
+  constructor(message, retryAfter = null) {
+    super(message);
+    this.name = "RateLimitError";
+    this.retryAfter = retryAfter;
+  }
+}
+
 async function callGroqJSON(prompt) {
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -217,6 +226,15 @@ async function callGroqJSON(prompt) {
 
   if (!res.ok) {
     const txt = await res.text();
+
+    // Check for rate limit error (HTTP 429)
+    if (res.status === 429 || txt.includes("rate_limit_exceeded")) {
+      // Try to extract retry time from response
+      const retryMatch = txt.match(/try again in (\d+(?:\.\d+)?[sm]?)/i);
+      const retryAfter = retryMatch ? retryMatch[1] : null;
+      throw new RateLimitError(`Rate limit nådd! ${retryAfter ? `Försök igen om ${retryAfter}` : 'Försök igen imorgon.'}`, retryAfter);
+    }
+
     throw new Error(`Groq API error ${res.status}: ${txt}`);
   }
 
@@ -324,6 +342,11 @@ async function generateOne(grade) {
 
       return norm;
     } catch (e) {
+      // Don't retry rate limit errors - throw immediately
+      if (e instanceof RateLimitError) {
+        throw e;
+      }
+
       const msg = String(e?.message ?? e);
       console.log(`⚠️ Åk ${grade} försök ${attempt}/${maxRetries} misslyckades: ${msg}`);
       if (attempt === maxRetries) throw e;
@@ -392,6 +415,16 @@ async function main() {
 
         await sleep(sleepMs);
       } catch (e) {
+        // Rate limit - save and exit immediately
+        if (e instanceof RateLimitError) {
+          console.log(`\n🛑 ${e.message}`);
+          console.log(`\n💾 Sparar ${totalGenerated} genererade texter innan avslut...`);
+          fs.writeFileSync(outFile, JSON.stringify(library, null, 2), "utf8");
+          console.log(`✅ Sparat ${library.length} texter till: ${outFile}`);
+          console.log(`\n📌 Tips: Kör workflowen igen imorgon när rate limit har återställts.`);
+          process.exit(0); // Exit cleanly so workflow commits what we have
+        }
+
         console.log(`   ❌ Fel: ${e.message}`);
         await sleep(1000);
       }
