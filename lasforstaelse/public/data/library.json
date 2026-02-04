@@ -374,5 +374,205 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak3-vanskap-001",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Nya kompisen i klassen",
+    "text": "I klass 3A börjar en ny elev som heter Milad. På rasten står han ensam vid staketet och tittar på fotbollsplanen. Lina ser det och går fram och säger hej. Milad ler lite, men han pratar tyst. Lina frågar om han vill vara med och spela. Milad nickar och springer försiktigt mot planen. Efter en stund passar Lina bollen till Milad. Han skjuter och gör mål. Då ropar de andra: \"Bra jobbat!\" Milad skrattar och säger att han vill spela igen nästa rast.",
+    "questions": [
+      { "type": "literal", "q": "Vad heter den nya eleven?", "options": ["Oskar", "Milad", "Hanna", "Elias"], "correct": 1 },
+      { "type": "inferens", "q": "Varför pratar Milad tyst när Lina säger hej?", "options": ["Han är hungrig", "Han är nervös i den nya klassen", "Han vill inte leka", "Han har ont i foten"], "correct": 1 },
+      { "type": "literal", "q": "Vad gör Milad på fotbollsplanen?", "options": ["Han gör mål", "Han ramlar", "Han går hem", "Han tappar bollen"], "correct": 0 },
+      { "type": "inferens", "q": "Hur tror du Milad känner sig i slutet av texten?", "options": ["Glad och mer trygg", "Arg", "Rädd", "Uttråkad"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 95,
+      "fingerprint": "gpt3-001",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-natur-002",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Varför löven byter färg",
+    "text": "På hösten ändrar många löv färg. De gröna bladen blir gula, orange eller röda. Det beror på att träden får mindre ljus när dagarna blir kortare. Då slutar bladen göra lika mycket klorofyll, alltså det gröna ämnet i bladet. När det gröna försvinner syns andra färger som redan finns i bladet. Till slut släpper trädet löven så att det kan vila under vintern och spara energi.",
+    "questions": [
+      { "type": "literal", "q": "Vilken årstid byter många löv färg?", "options": ["Vår", "Sommar", "Höst", "Vinter"], "correct": 2 },
+      { "type": "inferens", "q": "Varför är det smart av trädet att släppa löven på vintern?", "options": ["För att få mer frukt", "För att spara energi när det är kallt", "För att bli högre", "För att locka fåglar"], "correct": 1 },
+      { "type": "literal", "q": "Vad heter det gröna ämnet i bladet?", "options": ["Socker", "Klorofyll", "Salt", "Vatten"], "correct": 1 },
+      { "type": "inferens", "q": "Vad händer troligen med löven som faller till marken?", "options": ["De smälter som is", "De flyger till månen", "De blir till jord med tiden", "De blir till glas"], "correct": 2 }
+    ],
+    "meta": {
+      "wordCount": 75,
+      "fingerprint": "gpt3-002",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-skola-003",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "skola",
+    "title": "Glömt läxan",
+    "text": "På morgonen ska Jamal lämna in sin matteläxa. Han känner i ryggsäcken, men pappret finns inte där. Jamal blir varm i kinderna. Läraren säger att de som inte har läxan ska komma fram efter lektionen. Jamal sitter tyst och försöker tänka. Efteråt går han fram och berättar att läxan ligger kvar på köksbordet hemma. Läraren nickar och säger: \"Ta med den i morgon och skriv en lapp till dig själv i kväll.\" Jamal känner sig lättad.",
+    "questions": [
+      { "type": "literal", "q": "Vilken läxa ska Jamal lämna in?", "options": ["Svenskaläxa", "Matteläxa", "Musikläxa", "Engelskaläxa"], "correct": 1 },
+      { "type": "inferens", "q": "Varför blir Jamal varm i kinderna?", "options": ["Han har sprungit jättesnabbt", "Han skäms för att läxan saknas", "Han är jätteglad", "Han har feber"], "correct": 1 },
+      { "type": "literal", "q": "Var ligger läxan enligt Jamal?", "options": ["I klassrummet", "I jackfickan", "På köksbordet hemma", "I skolskåpet"], "correct": 2 },
+      { "type": "inferens", "q": "Vilket råd ger läraren som kan hjälpa Jamal nästa gång?", "options": ["Att alltid springa till skolan", "Att skriva en lapp till sig själv", "Att aldrig göra läxor", "Att byta ryggsäck varje dag"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 85,
+      "fingerprint": "gpt3-003",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-sport-004",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Sista varvet",
+    "text": "Tilda är med på skolans lopp i gymnastiksalen. De ska springa många varv runt konerna. Första varvet känns lätt, men sedan blir benen tunga. Tilda hör sin kompis ropa: \"Du klarar det!\" När det är ett varv kvar vill Tilda stanna, men hon tänker på målet. Hon tar ett djupt andetag och springer snabbare. När hon går i mål får hon vatten och ett stort leende.",
+    "questions": [
+      { "type": "literal", "q": "Var springer Tilda loppet?", "options": ["På isen", "I gymnastiksalen", "I simhallen", "I matsalen"], "correct": 1 },
+      { "type": "inferens", "q": "Varför vill Tilda stanna när det är ett varv kvar?", "options": ["Hon är trött", "Hon har tappat sin sko", "Hon vill spela piano", "Hon är hungrig på glass"], "correct": 0 },
+      { "type": "literal", "q": "Vad springer de runt?", "options": ["Stolar", "Böcker", "Konor", "Träd"], "correct": 2 },
+      { "type": "inferens", "q": "Vad hjälper Tilda att orka sista biten?", "options": ["Att någon hejar på henne och att hon tänker på målet", "Att lampan släcks", "Att hon hittar en leksak", "Att hon sitter ner och vilar länge"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 80,
+      "fingerprint": "gpt3-004",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-familj-005",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "familj",
+    "title": "Pannkaksfredag",
+    "text": "På fredagen lagar pappa pannkakor. Doften sprider sig i hela köket. Sanna dukar fram tallrikar och sylt. Hennes lillebror Theo vill hjälpa till och vispar smeten, men han spiller lite på bordet. Pappa skrattar och ger honom en trasa. När pannkakorna är klara sitter hela familjen vid bordet. De äter och pratar om veckan som gått.",
+    "questions": [
+      { "type": "literal", "q": "Vad lagar pappa på fredagen?", "options": ["Soppa", "Pannkakor", "Pizza", "Gröt"], "correct": 1 },
+      { "type": "inferens", "q": "Varför ger pappa Theo en trasa?", "options": ["För att torka det han spillt", "För att sy en tröja", "För att leka med den", "För att vifta bort flugor"], "correct": 0 },
+      { "type": "literal", "q": "Vad ställer Sanna fram på bordet?", "options": ["Tallrikar och sylt", "Skor och jackor", "Böcker och pennor", "Leksaker och bollar"], "correct": 0 },
+      { "type": "inferens", "q": "Hur är stämningen i familjen när de äter?", "options": ["Sur och tyst", "Stressad", "Glad och lugn", "Rädd"], "correct": 2 }
+    ],
+    "meta": {
+      "wordCount": 65,
+      "fingerprint": "gpt3-005",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-djur-006",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "djur",
+    "title": "Så hittar myror hem",
+    "text": "Myror kan hitta tillbaka till sin stack även när de går långt bort. De använder doftspår som de lämnar på marken. Andra myror känner lukten och kan följa samma väg. Myror kan också använda solen som hjälp. De märker var solen står på himlen och kan hålla rätt riktning. På så sätt samarbetar myrorna och hittar både mat och vägen hem igen.",
+    "questions": [
+      { "type": "literal", "q": "Vad lämnar myror på marken för att visa vägen?", "options": ["Stenar", "Doftspår", "Vatten", "Löv"], "correct": 1 },
+      { "type": "inferens", "q": "Varför är doftspår bra för myrorna?", "options": ["Så att de kan flyga", "Så att andra myror kan följa samma väg", "Så att de kan sova bättre", "Så att de blir större"], "correct": 1 },
+      { "type": "literal", "q": "Vilken sak i naturen kan myror använda för att hålla riktning?", "options": ["Solen", "Snön", "Månen i vattnet", "Regnbågen"], "correct": 0 },
+      { "type": "inferens", "q": "Vad visar texten om myrorna när de hittar mat och väg tillsammans?", "options": ["Att de samarbetar", "Att de alltid bråkar", "Att de är ensamma", "Att de är rädda för solen"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 72,
+      "fingerprint": "gpt3-006",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-etik-007",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Hittad plånbok",
+    "text": "På vägen hem från skolan ser Kevin en plånbok på marken. Han plockar upp den och tittar runt, men ingen verkar ha tappat den. I plånboken finns ett busskort och ett foto på en hund. Kevin känner att han vill veta vem som äger den. Han går in i närmaste butik och visar plånboken för personalen. De ringer numret som står på ett kort. Snart kommer en stressad kvinna och tackar Kevin flera gånger.",
+    "questions": [
+      { "type": "literal", "q": "Vad hittar Kevin på marken?", "options": ["En nyckel", "En plånbok", "En mössa", "En mobil"], "correct": 1 },
+      { "type": "inferens", "q": "Varför går Kevin in i en butik med plånboken?", "options": ["För att köpa godis", "För att få hjälp att hitta ägaren", "För att gömma den", "För att byta busskort"], "correct": 1 },
+      { "type": "literal", "q": "Vad finns i plånboken förutom busskortet?", "options": ["Ett foto på en hund", "En karta", "En leksak", "Ett äpple"], "correct": 0 },
+      { "type": "inferens", "q": "Vilken känsla har kvinnan när hon kommer?", "options": ["Lugn och uttråkad", "Stressad men tacksam", "Arg och högljudd", "Glad för att hon ska handla"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 88,
+      "fingerprint": "gpt3-007",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-vetenskap-008",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Så blir regn till",
+    "text": "Regn börjar med vatten som värms av solen. När vattnet blir varmt kan det bli till ånga och stiga upp i luften. Högre upp är det kallare. Då kyls ångan ner och blir till små vattendroppar som samlas i moln. När dropparna blir många och tunga faller de ner mot marken. Då regnar det.",
+    "questions": [
+      { "type": "literal", "q": "Vad värmer vattnet så att det kan bli ånga?", "options": ["Solen", "Månen", "Vinden", "Snön"], "correct": 0 },
+      { "type": "inferens", "q": "Varför blir ånga till droppar högre upp i luften?", "options": ["För att det är kallare där", "För att det är varmare där", "För att det finns mer sand", "För att solen lyser starkare där"], "correct": 0 },
+      { "type": "literal", "q": "Vad samlas dropparna i när de bildas?", "options": ["I stenar", "I moln", "I gräs", "I vattenpölar"], "correct": 1 },
+      { "type": "inferens", "q": "När börjar det regna enligt texten?", "options": ["När dropparna blir många och tunga", "När vattnet fryser", "När molnen blir orange", "När vinden slutar"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 62,
+      "fingerprint": "gpt3-008",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-samhalle-009",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "Varför vi har bibliotek",
+    "text": "Ett bibliotek är en plats där man kan låna böcker och läsa i lugn och ro. Det finns också tidningar, filmer och ibland spel. Biblioteket är öppet för alla och kostar oftast ingenting att använda. Där kan man få hjälp att hitta rätt bok eller lära sig hur man söker information. Många bibliotek har sagostunder och aktiviteter för barn.",
+    "questions": [
+      { "type": "literal", "q": "Vad kan man göra på ett bibliotek?", "options": ["Låna böcker", "Åka skridskor", "Spela fotboll", "Köpa glass"], "correct": 0 },
+      { "type": "inferens", "q": "Varför är det bra att biblioteket är öppet för alla?", "options": ["För att bara vuxna får läsa", "För att fler kan få böcker och information", "För att man måste betala mer", "För att ingen får fråga om hjälp"], "correct": 1 },
+      { "type": "literal", "q": "Vilken aktivitet kan finnas för barn på biblioteket?", "options": ["Sagostund", "Boxning", "Bilrace", "Skidåkning"], "correct": 0 },
+      { "type": "inferens", "q": "Vad kan personalen hjälpa dig med enligt texten?", "options": ["Att hitta rätt bok eller söka information", "Att laga din cykel", "Att måla om huset", "Att träna hunden"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 64,
+      "fingerprint": "gpt3-009",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-existens-010",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "existentiella frågor",
+    "title": "Stjärnan som blinkade",
+    "text": "En kväll står Meja på balkongen med sin farfar. Himlen är mörk och full av stjärnor. Meja pekar på en stjärna som blinkar extra mycket. Farfar säger att det kan vara en planet eller en stjärna långt bort. Meja funderar och frågar om stjärnan kan se dem också. Farfar ler och säger att stjärnor inte har ögon, men att människor kan tänka stora tankar. Meja känner sig liten, men också nyfiken, och hon vill titta på himlen igen i morgon.",
+    "questions": [
+      { "type": "literal", "q": "Vem står Meja på balkongen med?", "options": ["Sin mamma", "Sin farfar", "Sin lärare", "Sin kompis"], "correct": 1 },
+      { "type": "inferens", "q": "Varför känner Meja sig både liten och nyfiken?", "options": ["För att hon är hungrig", "För att hon tänker på hur stor rymden är", "För att hon tappat sin mössa", "För att hon vill gå och lägga sig"], "correct": 1 },
+      { "type": "literal", "q": "Vad säger farfar att den blinkande pricken kan vara?", "options": ["En planet eller en stjärna långt bort", "En flygplats", "En billykta", "En lampa i ett hus"], "correct": 0 },
+      { "type": "inferens", "q": "Vad visar det att Meja vill titta på himlen igen i morgon?", "options": ["Att hon blev nyfiken och vill lära sig mer", "Att hon inte gillar stjärnor", "Att hon är arg på farfar", "Att hon glömt sina läxor"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 95,
+      "fingerprint": "gpt3-010",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
