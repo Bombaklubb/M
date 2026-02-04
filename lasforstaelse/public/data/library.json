@@ -264,5 +264,115 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak9-gpt-001",
+    "grade": 9,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "När skärmarna slocknar",
+    "text": "När tunnelbanan stannade mellan två stationer var det som om staden höll andan. Skärmarna blinkade \"tekniskt fel\", men i vagnen var felet snarare mänskligt: alla tittade ner i sina telefoner, som om ett nätverk var viktigare än luft. Jag hade lovat mig själv att inte bli en av dem. Ändå kände jag den reflexmässiga irritationen när täckningen dog. En kvinna mitt emot mig började prata, först trevande, sedan med en märklig självklarhet. Hon berättade att hon arbetade med att granska kommunens nya system för ansiktsigenkänning. \"Det sägs att det bara ska öka tryggheten\", sa hon, \"men trygghet är ett ord som kan betyda nästan vad som helst.\" Hon beskrev hur kameror placerats vid skolor och torg, hur data lagras \"tillfälligt\" och hur undantag tenderar att bli rutin. När ljuset fladdrade till hördes ett kort skratt längst bak. Någon sa att hederliga människor inte har något att dölja. Kvinnan höjde ögonbrynen. \"Hederlighet är inte ett passerkort till ett fritt samhälle\", svarade hon. \"Frihet bygger på att du kan tänka fel, ändra dig, vara anonym en stund – utan att någon gör en profil av din tvekan.\" Tåget rullade igång igen. Jag såg hur flera lade undan sina telefoner, inte av lydnad, utan av nyfikenhet. När vi nådde nästa station tackade kvinnan för samtalet, som om det varit planerat. Jag gick av med en obekväm känsla: att framtiden ibland smyger in just när skärmarna slocknar.",
+    "questions": [
+      { "type": "literal", "q": "Vilket meddelande blinkade på tunnelbanans skärmar?", "options": ["\"Försening\"", "\"tekniskt fel\"", "\"Nästa station\"", "\"Utrym vagnen\""], "correct": 1 },
+      { "type": "literal", "q": "Vad arbetade kvinnan med att granska?", "options": ["Ett nytt busskort", "En skolmatsedel", "Ett system för ansiktsigenkänning", "Ett nytt bibliotek"], "correct": 2 },
+      { "type": "literal", "q": "Vad sa någon längst bak om hederliga människor?", "options": ["Att de alltid har något att dölja", "Att de borde åka taxi", "Att de inte ska ha kameror", "Att de inte har något att dölja"], "correct": 3 },
+      { "type": "inferens", "q": "Varför lägger flera undan sina telefoner när tåget rullar igång igen?", "options": ["De vill spara batteri", "De får order av en vakt", "De blir nyfikna på samtalet och situationen", "De har tappat sina lösenord"], "correct": 2 },
+      { "type": "inferens", "q": "Vad antyder kvinnan när hon säger att undantag tenderar att bli rutin?", "options": ["Att tillfälliga regler ofta blir permanenta i praktiken", "Att tekniken alltid fungerar perfekt", "Att människor slutar bry sig om trygghet", "Att kameror bara används på natten"], "correct": 0 },
+      { "type": "inferens", "q": "Vilken huvudpoäng förstärks av slutmeningen om att framtiden smyger in när skärmarna slocknar?", "options": ["Att teknikproblem är stadens största fara", "Att människor blir smartare utan internet", "Att anonymitet är omöjlig i kollektivtrafik", "Att det vardagliga kan avslöja stora samhällsförändringar"], "correct": 3 }
+    ],
+    "meta": {
+      "wordCount": 233,
+      "fingerprint": "gpt9-001",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak9-gpt-002",
+    "grade": 9,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "Biologisk skuld",
+    "text": "I laboratoriet luktade det desinfektion och varm plast. På bänken stod ett akvarium där zebrafiskar rörde sig i mjuka, nästan mekaniska bågar. Min handledare, Farah, pekade på en skärm där färgade prickar pulserade. \"Det där är genuttryck\", sa hon, \"som en karta över vad cellerna tror att de är.\" Projektet handlade om CRISPR, men inte den förenklade versionen som populärvetenskapen ofta säljer: saxen som klipper bort sjukdomar. Här var det snarare en grammatikkontroll i livets text, full av felstavningar och dubbeltydigheter. När vi ändrade en sekvens för att minska risken för en ärftlig hjärtsjukdom, dök en oväntad effekt upp i ett helt annat organ. Farah kallade det \"biologisk skuld\": varje förbättring betalas någonstans, ibland av någon annan. På seminariet den eftermiddagen kom etiken in som en kall luftström. En doktorand frågade vem som skulle få råd med de nya behandlingarna. En annan undrade om det var rimligt att kalla det \"bot\" när man samtidigt skapade nya sårbarheter. Jag tänkte på fiskarna som fortsatte simma, ovetande om att vi justerat deras framtid med en pipett. När jag gick hem passerade jag en reklamaffisch för \"optimerad hälsa\". Orden var blanka, nästan obestridliga. Men jag mindes Farahs karta: celler som \"tror\" något. Kanske är vår största risk inte att vi kan förändra livet, utan att vi börjar tro att livet är ett projekt som alltid måste förbättras.",
+    "questions": [
+      { "type": "literal", "q": "Vilket djur fanns i akvariet i laboratoriet?", "options": ["Grodor", "Möss", "Zebrafiskar", "Sköldpaddor"], "correct": 2 },
+      { "type": "literal", "q": "Vad ville de minska risken för när de ändrade en sekvens?", "options": ["En ärftlig hjärtsjukdom", "Influensa", "Allergi mot pollen", "Synnedsättning"], "correct": 0 },
+      { "type": "literal", "q": "Vilken fras stod på reklamaffischen som berättaren passerade?", "options": ["\"Gratis provtagning\"", "\"Snabbare internet\"", "\"Optimerad hälsa\"", "\"Köp två betala för en\""], "correct": 2 },
+      { "type": "inferens", "q": "Vad menas med att CRISPR här liknas vid en \"grammatikkontroll\"?", "options": ["Att ändringar kan verka små men få stora följder i helheten", "Att gener bara finns i böcker", "Att språk och biologi är samma sak", "Att fel alltid går att rätta utan risk"], "correct": 0 },
+      { "type": "inferens", "q": "Varför beskrivs etiken som en \"kall luftström\" på seminariet?", "options": ["För att ventilationen gick sönder", "För att diskussionen blev obekväm och skärpte stämningen", "För att alla frös om händerna", "För att de pratade om vintern"], "correct": 1 },
+      { "type": "inferens", "q": "Vilken slutsats antyds i slutet om \"optimerad hälsa\"?", "options": ["Att forskning bör stoppas helt", "Att reklam alltid är sann", "Att jakten på förbättring kan bli ett krav snarare än ett val", "Att celler kan läsa affischer"], "correct": 2 }
+    ],
+    "meta": {
+      "wordCount": 224,
+      "fingerprint": "gpt9-002",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak9-gpt-003",
+    "grade": 9,
+    "genre": "berättelse",
+    "theme": "filosofi",
+    "title": "Att välja tystnaden",
+    "text": "På filosofilektionen skrev läraren ett citat på tavlan: \"Vi är fria, men ändå bundna.\" Ingen räckte upp handen. Det lät som en gåta man ska imponera med på en fest, inte som något som rör en vardag i en förortsskola. Efteråt följde jag min kompis Samira till biblioteket. Hon skulle skriva en debattartikel om \"valfrihet\" i gymnasievalet. \"Alla säger att vi får välja\", muttrade hon, \"men man väljer ju inom en meny någon annan bestämt.\" Hon pekade på en hylla med böcker om existentialism. Vi drog ut en tunn volym där det stod att frihet inte är att slippa begränsningar, utan att bära ansvaret för sina val även när alternativen känns orättvisa. På vägen hem såg vi en man stå utanför matbutiken med en skylt om att han behövde pengar. Folk gick förbi snabbt, som om hans närvaro var ett test de inte bett om. Samira stannade. Hon gav honom en macka från sin påse och pratade en stund. När vi gick vidare sa hon: \"Jag vet inte om det hjälper, men att inte göra något känns som att välja också.\" Den kvällen tänkte jag på citatet igen. Kanske är det just så: vi är fria i våra handlingar, men bundna av konsekvenser, normer och andras blickar. Friheten är inte en dörr som står öppen; den är en passage där man måste gå, även när man darrar. Och varje gång man låtsas att man inte väljer, väljer man ändå tystnaden.",
+    "questions": [
+      { "type": "literal", "q": "Vilket citat skrev läraren på tavlan?", "options": ["\"Vi är fria, men ändå bundna.\"", "\"Kunskap är makt.\"", "\"Tiden läker allt.\"", "\"Sanning finns i siffror.\""], "correct": 0 },
+      { "type": "literal", "q": "Vad skulle Samira skriva en debattartikel om?", "options": ["Skolmaten", "Valfrihet i gymnasievalet", "Fotbollsträning", "Busspriser"], "correct": 1 },
+      { "type": "literal", "q": "Vad gav Samira mannen utanför matbutiken?", "options": ["En bok", "En femtiolapp", "En macka", "En jacka"], "correct": 2 },
+      { "type": "inferens", "q": "Varför går folk snabbt förbi mannen med skylten?", "options": ["De känner honom och är glada", "De är sena till en fest", "De vill undvika obehag och ansvar", "De tror att han är en skådespelare"], "correct": 2 },
+      { "type": "inferens", "q": "Vad kan Samira mena med att \"inte göra något känns som att välja också\"?", "options": ["Att passivitet också är ett ställningstagande", "Att man aldrig behöver hjälpa andra", "Att man alltid måste vara perfekt", "Att val bara finns i skolan"], "correct": 0 },
+      { "type": "inferens", "q": "Vilken tolkning passar bäst till slutets \"väljer man ändå tystnaden\"?", "options": ["Att tystnad alltid är modigt", "Att man ibland måste prata högre", "Att val inte spelar någon roll", "Att undvikande blir ett aktivt val med konsekvenser"], "correct": 3 }
+    ],
+    "meta": {
+      "wordCount": 240,
+      "fingerprint": "gpt9-003",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak9-gpt-004",
+    "grade": 9,
+    "genre": "berättelse",
+    "theme": "politik",
+    "title": "Tillit i en klippt värld",
+    "text": "När riksdagen debatterade den nya lagen om desinformation hade jag redan sett klippen spridas i min klasschatt. Ett påhittat tal med en politikers röst, ett manipulerat foto från en demonstration, och en \"nyhetsartikel\" som i själva verket var en annons för ett kosttillskott. Allt kändes samtidigt löjligt och farligt, som ett skämt som glider över i hot. På samhällskunskapen pratade vår lärare om att lagen skulle kräva snabbare borttagning av innehåll och tydligare ansvar för plattformar. \"Men vem avgör vad som är falskt?\" frågade Leo. \"Staten?\" Läraren svarade att demokratier alltid balanserar mellan skydd och övergrepp: skydd mot manipulation, men också skydd mot maktens vilja att styra berättelsen. Efter lektionen gick jag hem och testade ett verktyg som kan skapa \"deepfakes\". Det tog mig tio minuter att få fram en video där jag sa något jag aldrig sagt. Jag kände en märklig stolthet, följd av en snabb skam. Om jag kan göra det, vad kan då någon med tid, pengar och hat göra? Senare samma kväll ringde min morfar. Han hade fått ett mejl som påstod att banken fryst hans konto. Jag hjälpte honom att se att avsändaren var falsk. \"Man måste väl kunna lita på något\", sa han tyst. Jag tänkte att politik ibland handlar om lagparagrafer, men oftare om tillit. När tilliten spricker letar människor efter enkla svar, och de svaren kan bli en ny sorts desinformation: att allt är riggat, att ingen går att tro på. Då är frågan inte bara hur vi stoppar lögner, utan hur vi tränar oss att stå ut med osäkerhet utan att ge upp sanningen.",
+    "questions": [
+      { "type": "literal", "q": "Vilken sorts artikel visade sig egentligen vara en annons?", "options": ["En sportartikel", "En väderartikel", "En \"nyhetsartikel\"", "En recension av en film"], "correct": 2 },
+      { "type": "literal", "q": "Vad skulle lagen kräva enligt läraren?", "options": ["Fler skolprov", "Snabbare borttagning av innehåll och tydligare ansvar för plattformar", "Gratis mobiltelefoner", "Förbud mot internet"], "correct": 1 },
+      { "type": "literal", "q": "Hur lång tid tog det att skapa en video där berättaren sa något hen aldrig sagt?", "options": ["Två timmar", "En hel dag", "En minut", "Tio minuter"], "correct": 3 },
+      { "type": "inferens", "q": "Varför känner berättaren både stolthet och skam efter att ha skapat en deepfake?", "options": ["Hen imponeras av sin förmåga men inser hur lätt tekniken kan missbrukas", "Hen gillar inte sin röst", "Hen råkar radera videon", "Hen får ont i händerna av datorn"], "correct": 0 },
+      { "type": "inferens", "q": "Vad menar läraren med att demokratier balanserar mellan skydd och övergrepp?", "options": ["Att val alltid är riggade", "Att skydd inte behövs", "Att lagar kan både försvara samhället och samtidigt hota friheter", "Att politiker aldrig kompromissar"], "correct": 2 },
+      { "type": "inferens", "q": "Vilken slutsats antyds om relationen mellan desinformation och tillit?", "options": ["Desinformation påverkar bara unga", "När tillit minskar blir människor mer sårbara för enkla och cyniska förklaringar", "Tillit skapas av fler reklamer", "Teknik löser alltid problemet utan människors insats"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 263,
+      "fingerprint": "gpt9-004",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak9-gpt-005",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "globala utmaningar",
+    "title": "Ton och värdighet",
+    "text": "På kartan över världen ser klimatkrisen ut som färgade fält och pilar, men i min stad visar den sig först som små förskjutningar: en vinter som inte riktigt blir vinter, en sjöis som bär kortare tid, en allergisäsong som dröjer sig kvar. Det är lätt att vänja sig vid förändringen när den kommer i långsamma steg, som en låt man hör så ofta att man glömmer hur den började. I en rapport vi läste i skolan stod det att utsläpp inte bara är siffror, utan berättelser om vilka liv vi prioriterar. När politiker talar om \"omställning\" låter det som ett tekniskt byte av energikälla, men för många är det en fråga om identitet: bilen som frihet, flygresan som belöning, köttet som tradition. Därför blir diskussionen så hätsk. Den handlar inte enbart om koldioxid, utan om vem som tvingas ändra sig och vem som får fortsätta som vanligt. Jag intervjuade min granne som arbetar på ett sågverk. Han var orolig för jobben, men också trött på att bli kallad \"klimatförnekare\" när han egentligen bara ville förstå hur han skulle betala hyran om fabriken stänger. \"Ni pratar om framtiden\", sa han, \"men jag måste klara nästa månad.\" Det slog mig att globala utmaningar alltid landar i lokala kroppar. Om lösningar upplevs som straff skapar de motstånd, även när målet är rätt. Kanske behöver vi en politik som inte bara räknar ton, utan även räknar värdighet: att omställning kan vara något man gör tillsammans, inte något som görs med en. Annars riskerar vi att förlora tid – och tid är det enda klimatet inte kan förhandla om.",
+    "questions": [
+      { "type": "literal", "q": "Vilken arbetsplats har grannen som berättaren intervjuar?", "options": ["Ett bageri", "Ett sågverk", "En bank", "En flygplats"], "correct": 1 },
+      { "type": "literal", "q": "Vilket exempel ges på en lokal förändring i staden?", "options": ["Sjöis som bär kortare tid", "Fler biografer", "Längre skoltermin", "Nya motorvägar"], "correct": 0 },
+      { "type": "literal", "q": "Vilket ord använder texten för politikernas förändringsarbete?", "options": ["\"Avkoppling\"", "\"Omställning\"", "\"Underhållning\"", "\"Nedstängning\""], "correct": 1 },
+      { "type": "inferens", "q": "Varför blir klimatdiskussionen \"hätsk\" enligt texten?", "options": ["För att koldioxid inte finns", "För att vädret alltid är samma", "För att frågan kopplas till identitet och rättvisa, inte bara fakta", "För att alla redan är överens"], "correct": 2 },
+      { "type": "inferens", "q": "Vad kan författaren mena med att politiken måste \"räkna värdighet\"?", "options": ["Att lösningar bör upplevas som respektfulla och rättvisa för människor", "Att man ska räkna pengar i hemlighet", "Att man ska straffa alla lika hårt", "Att man ska sluta prata om jobb"], "correct": 0 },
+      { "type": "inferens", "q": "Vilken slutsats kan man dra av sista meningen om att klimatet inte kan förhandla om tid?", "options": ["Att fördröjning gör problemet svårare att lösa", "Att klimatet är en person", "Att tid inte spelar någon roll", "Att lokala beslut saknar effekt"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 264,
+      "fingerprint": "gpt9-005",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
