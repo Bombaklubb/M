@@ -10,67 +10,37 @@
       {
         "type": "literal",
         "q": "Vad heter katten?",
-        "options": [
-          "Lisa",
-          "Maja",
-          "Katt",
-          "Svansen"
-        ],
+        "options": ["Lisa", "Maja", "Katt", "Svansen"],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vilka färger har Maja?",
-        "options": [
-          "Röd och blå",
-          "Svart och vit",
-          "Brun och vit",
-          "Grå och svart"
-        ],
+        "options": ["Röd och blå", "Svart och vit", "Brun och vit", "Grå och svart"],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vem bor Maja hos?",
-        "options": [
-          "Erik",
-          "Anna",
-          "Lisa",
-          "Pelle"
-        ],
+        "options": ["Erik", "Anna", "Lisa", "Pelle"],
         "correct": 2
       },
       {
         "type": "inferens",
         "q": "Hur vet vi att Maja trivs?",
-        "options": [
-          "Hon sover mycket",
-          "Hon är glad",
-          "Hon äter inte",
-          "Hon gömmer sig"
-        ],
+        "options": ["Hon sover mycket", "Hon är glad", "Hon äter inte", "Hon gömmer sig"],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad tror du Lisa och Maja är?",
-        "options": [
-          "Ovänner",
-          "Bästa vänner",
-          "Okända",
-          "Rädda för varandra"
-        ],
+        "options": ["Ovänner", "Bästa vänner", "Okända", "Rädda för varandra"],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Varför jagar Maja bollar?",
-        "options": [
-          "Hon är hungrig",
-          "Hon vill sova",
-          "Hon tycker det är roligt",
-          "Hon är arg"
-        ],
+        "options": ["Hon är hungrig", "Hon vill sova", "Hon tycker det är roligt", "Hon är arg"],
         "correct": 2
       }
     ],
@@ -92,67 +62,37 @@
       {
         "type": "literal",
         "q": "Var hittade Emma och Leo kartan?",
-        "options": [
-          "I skogen",
-          "På vinden hos mormor",
-          "I en låda",
-          "Vid ett träd"
-        ],
+        "options": ["I skogen", "På vinden hos mormor", "I en låda", "Vid ett träd"],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Hur länge vandrade de innan de hittade trädet?",
-        "options": [
-          "Tio minuter",
-          "En halvtimme",
-          "En timme",
-          "Två timmar"
-        ],
+        "options": ["Tio minuter", "En halvtimme", "En timme", "Två timmar"],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vem hade gömt skatten?",
-        "options": [
-          "Mormor",
-          "Mormors morfar",
-          "Emma och Leo",
-          "En pirat"
-        ],
+        "options": ["Mormor", "Mormors morfar", "Emma och Leo", "En pirat"],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Varför tror du mormors morfar gömde skatten?",
-        "options": [
-          "Han ville stjäla den",
-          "Han ville att familjen skulle ha ett äventyr",
-          "Han glömde var den var",
-          "Han var rädd för tjuvar"
-        ],
+        "options": ["Han ville stjäla den", "Han ville att familjen skulle ha ett äventyr", "Han glömde var den var", "Han var rädd för tjuvar"],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Hur känner sig Emma och Leo troligen när de hittar skatten?",
-        "options": [
-          "Ledsna",
-          "Rädda",
-          "Upphetsade och glada",
-          "Arga"
-        ],
+        "options": ["Ledsna", "Rädda", "Upphetsade och glada", "Arga"],
         "correct": 2
       },
       {
         "type": "inferens",
         "q": "Varför skyndade de hem till mormor?",
-        "options": [
-          "De var hungriga",
-          "De ville visa henne vad de hittat",
-          "Det började regna",
-          "De var trötta"
-        ],
+        "options": ["De var hungriga", "De ville visa henne vad de hittat", "Det började regna", "De var trötta"],
         "correct": 1
       }
     ],
@@ -174,67 +114,37 @@
       {
         "type": "literal",
         "q": "Vad heter Linnéas hund?",
-        "options": [
-          "Bella",
-          "Max",
-          "Luna",
-          "Fido"
-        ],
+        "options": ["Bella", "Max", "Luna", "Fido"],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Var hittade Linnéa och Max katten?",
-        "options": [
-          "I Linnéas hus",
-          "I skogen",
-          "I parken",
-          "I affären"
-        ],
+        "options": ["I Linnéas hus", "I skogen", "I parken", "I affären"],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad gav Linnéa och Max till katten?",
-        "options": [
-          "En boll",
-          "En leksak",
-          "Mat och vatten",
-          "En bil"
-        ],
+        "options": ["En boll", "En leksak", "Mat och vatten", "En bil"],
         "correct": 2
       },
       {
         "type": "inferens",
         "q": "Varför tror du att katten var rädd?",
-        "options": [
-          "För att den var glad",
-          "För att den var hungrig",
-          "För att den var i en ny miljö",
-          "För att den var arg"
-        ],
+        "options": ["För att den var glad", "För att den var hungrig", "För att den var i en ny miljö", "För att den var arg"],
         "correct": 2
       },
       {
         "type": "inferens",
         "q": "Hur känner sig Linnéa och Max när de hjälper katten?",
-        "options": [
-          "De är arga",
-          "De är glada",
-          "De är rädda",
-          "De är trötta"
-        ],
+        "options": ["De är arga", "De är glada", "De är rädda", "De är trötta"],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad betyder det att Linnéa och Max tar hand om katten?",
-        "options": [
-          "Att de inte bryr sig om katten",
-          "Att de tycker om katten",
-          "Att de är rädda för katten",
-          "Att de vill ge bort katten"
-        ],
+        "options": ["Att de inte bryr sig om katten", "Att de tycker om katten", "Att de är rädda för katten", "Att de vill ge bort katten"],
         "correct": 1
       }
     ],
@@ -243,6 +153,116 @@
       "fingerprint": "8e58f58b56ad1219578a02a5935ae172375d2f39",
       "generatedAt": "2026-02-04T11:58:32.610Z",
       "model": "llama-3.3-70b-versatile"
+    }
+  },
+  {
+    "id": "ak2-gpt-001",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Maja är hungrig",
+    "text": "Katten Maja bor hos Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
+    "questions": [
+      { "type": "literal", "q": "Vem bor katten Maja hos?", "options": ["Hos Sara", "Hos Leo", "Hos Nora", "Hos Max"], "correct": 1 },
+      { "type": "literal", "q": "Vad är tomt på morgonen?", "options": ["Matskålen", "Fönstret", "Skåpet", "Trädet"], "correct": 0 },
+      { "type": "literal", "q": "Var hittar Leo fodret?", "options": ["I ryggsäcken", "På golvet", "I skåpet", "I bilen"], "correct": 2 },
+      { "type": "inferens", "q": "Varför mjauar Maja högt?", "options": ["Hon är kall", "Hon vill leka", "Hon ser en sten", "Hon är hungrig"], "correct": 3 },
+      { "type": "inferens", "q": "Hur känner sig Leo när Maja spinner?", "options": ["Arg", "Rädd", "Glad", "Trött"], "correct": 2 },
+      { "type": "inferens", "q": "Vad gör Maja troligen efter att hon tittat på fåglarna?", "options": ["Hon somnar en stund", "Hon går till skolan", "Hon tappar sin bok", "Hon badar i sjön"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 42,
+      "fingerprint": "gpt-001",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-gpt-002",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "En tur i skogen",
+    "text": "På lördagen går Sara och pappa till skogen. De följer en smal stig. Solen lyser mellan träden. Sara hittar en stor kotte och en blank sten. De hör en hackspett som knackar. När de vilar dricker de varm choklad ur en termos och ler.",
+    "questions": [
+      { "type": "literal", "q": "Vem går Sara till skogen med?", "options": ["Med sin pappa", "Med sin lärare", "Med Nora", "Med Leo"], "correct": 0 },
+      { "type": "literal", "q": "Vad dricker de när de vilar?", "options": ["Saft", "Varm choklad", "Mjölk", "Läsk"], "correct": 1 },
+      { "type": "literal", "q": "Vad hittar Sara?", "options": ["En boll och en bok", "En cykel och en hjälm", "En stor kotte och en blank sten", "En fisk och en glass"], "correct": 2 },
+      { "type": "inferens", "q": "Varför följer de en smal stig?", "options": ["För att komma in i skogen", "För att hitta en buss", "För att köpa biljetter", "För att se TV"], "correct": 0 },
+      { "type": "inferens", "q": "Hur är vädret i skogen?", "options": ["Det snöar", "Det blåser storm", "Det är dimmigt", "Solen lyser"], "correct": 3 },
+      { "type": "inferens", "q": "Vad kan Sara göra med kotten hemma?", "options": ["Ställa den som prydnad", "Äta den till lunch", "Spela fotboll med den i klassrummet", "Sätta den på huvudet och gå till läkaren"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 44,
+      "fingerprint": "gpt-002",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-gpt-003",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "En rolig rast",
+    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger Ali: \"Tack, du gjorde min rast rolig.\"",
+    "questions": [
+      { "type": "literal", "q": "När sitter Ali ensam?", "options": ["På rasten", "På kvällen", "På bussen", "I simhallen"], "correct": 0 },
+      { "type": "literal", "q": "Vad har Ali glömt hemma?", "options": ["Sin bok", "Sin boll", "Sin mössa", "Sin cykel"], "correct": 1 },
+      { "type": "literal", "q": "Vad bygger de tillsammans?", "options": ["En snögubbe", "Ett torn av böcker", "En hinderbana", "En båt"], "correct": 2 },
+      { "type": "inferens", "q": "Varför blir Alis rast rolig?", "options": ["Han får sitta tyst", "Nora leker med honom", "Han får läxor", "Det börjar regna"], "correct": 1 },
+      { "type": "inferens", "q": "Hur känner sig Ali när han säger tack?", "options": ["Tacksam", "Sur", "Sömnig", "Hungrig"], "correct": 0 },
+      { "type": "inferens", "q": "Vad kan Ali och Nora vilja göra nästa rast?", "options": ["Fortsätta leka tillsammans", "Flytta till en annan stad", "Sluta prata för alltid", "Gå vilse i skogen"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 42,
+      "fingerprint": "gpt-003",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-gpt-004",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "skola",
+    "title": "Högläsning i 2B",
+    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
+    "questions": [
+      { "type": "literal", "q": "Vilken klass går eleverna i?", "options": ["1A", "2B", "3C", "4D"], "correct": 1 },
+      { "type": "literal", "q": "Vad handlar boken om?", "options": ["En pirat", "En katt", "En bil", "En dinosaurie"], "correct": 0 },
+      { "type": "literal", "q": "Vad gör eleverna efter läsningen?", "options": ["De sover", "De springer hem", "De ritar en bild", "De badar"], "correct": 2 },
+      { "type": "inferens", "q": "Varför pekar Elsa med fingret när hon läser?", "options": ["För att hitta orden lättare", "För att rita på boken", "För att visa att hon är arg", "För att göra ljud"], "correct": 0 },
+      { "type": "inferens", "q": "Hur känner sig Elsa när några ord är svåra?", "options": ["Stolt", "Osäker", "Jättehungrig", "Sjuk"], "correct": 1 },
+      { "type": "inferens", "q": "Vad kan Anna göra när Elsa fastnar?", "options": ["Hjälpa henne att ljuda", "Ta boken och kasta den", "Säga att ingen får läsa", "Stänga klassrummet"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 42,
+      "fingerprint": "gpt-004",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-gpt-005",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "familj",
+    "title": "Söndag i simhallen",
+    "text": "På söndag ska familjen åka till simhallen. Storasyster Lina packar handdukar. Lillebror Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
+    "questions": [
+      { "type": "literal", "q": "Vart ska familjen åka?", "options": ["Till simhallen", "Till skolan", "Till skogen", "Till affären"], "correct": 0 },
+      { "type": "literal", "q": "Vad tar Max med sig?", "options": ["Sin hjälm", "Sina armpuffar", "Sin katt", "Sin bok"], "correct": 1 },
+      { "type": "literal", "q": "Vilket sim tränar Lina?", "options": ["Bröstsim", "Fjärilsim", "Ryggsim", "Crawl"], "correct": 2 },
+      { "type": "inferens", "q": "Varför håller pappa koll på tiderna?", "options": ["För att de inte ska missa något", "För att han vill sova", "För att han ska skriva prov", "För att han inte gillar vatten"], "correct": 0 },
+      { "type": "inferens", "q": "Hur känner sig Max i vattnet?", "options": ["Rädd", "Glad", "Arg", "Trött"], "correct": 1 },
+      { "type": "inferens", "q": "Varför är alla trötta när de åker hem?", "options": ["De har simmat mycket", "De har sovit hela dagen", "De har bara suttit still", "De har aldrig varit i vatten"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 43,
+      "fingerprint": "gpt-005",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
     }
   }
 ]
