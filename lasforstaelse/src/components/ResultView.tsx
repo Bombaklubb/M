@@ -10,6 +10,11 @@ interface ResultViewProps {
   onNextText: () => void;
 }
 
+const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string }> = {
+  literal: { label: 'På raderna', emoji: '🔍' },
+  inferens: { label: 'Mellan raderna', emoji: '🧠' },
+};
+
 export const ResultView: React.FC<ResultViewProps> = ({
   text,
   answers,
@@ -20,19 +25,16 @@ export const ResultView: React.FC<ResultViewProps> = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
 
-  // Beräkna resultat
+  // Beräkna resultat för flervalsfrågor
   const results = text.questions.map((q, index) => {
-    const userAnswer = (answers[index] || '').trim().toLowerCase();
-    const correctAnswer = q.a.trim().toLowerCase();
-
-    // Enkel jämförelse - räkna som rätt om svaret innehåller nyckelord
-    const isCorrect =
-      userAnswer === correctAnswer ||
-      correctAnswer.split(' ').some((word) => userAnswer.includes(word) && word.length > 3);
+    const userAnswerIndex = answers[index] !== undefined ? Number(answers[index]) : -1;
+    const isCorrect = userAnswerIndex === q.correct;
 
     return {
       question: q,
-      userAnswer: answers[index] || '',
+      userAnswerIndex,
+      userAnswerText: userAnswerIndex >= 0 ? q.options[userAnswerIndex] : null,
+      correctAnswerText: q.options[q.correct],
       isCorrect,
     };
   });
@@ -161,35 +163,94 @@ export const ResultView: React.FC<ResultViewProps> = ({
         {/* Detailed results */}
         {showDetails && (
           <div className="mt-4 space-y-4">
-            {results.map((result, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-xl p-4 shadow-md border-l-4 ${
-                  result.isCorrect ? 'border-green-500' : 'border-red-400'
-                }`}
-              >
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl">
-                    {result.isCorrect ? '✅' : '❌'}
-                  </span>
-                  <div className="flex-1">
-                    <p className="font-bold text-slate-800 mb-2">
-                      {index + 1}. {result.question.q}
-                    </p>
-                    <div className="text-sm space-y-1">
-                      <p className="text-slate-600">
-                        <span className="font-medium">Ditt svar:</span>{' '}
-                        {result.userAnswer || '(inget svar)'}
+            {results.map((result, index) => {
+              const typeInfo = QUESTION_TYPE_LABELS[result.question.type] || {
+                label: 'Fråga',
+                emoji: '❓',
+              };
+
+              return (
+                <div
+                  key={index}
+                  className={`bg-white rounded-xl p-5 shadow-md border-l-4 ${
+                    result.isCorrect ? 'border-green-500' : 'border-red-400'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">
+                      {result.isCorrect ? '✅' : '❌'}
+                    </span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+                          result.question.type === 'literal'
+                            ? 'bg-blue-100 text-blue-700'
+                            : 'bg-purple-100 text-purple-700'
+                        }`}>
+                          {typeInfo.emoji} {typeInfo.label}
+                        </span>
+                      </div>
+                      <p className="font-bold text-slate-800 mb-3">
+                        {index + 1}. {result.question.q}
                       </p>
-                      <p className="text-green-700">
-                        <span className="font-medium">Rätt svar:</span>{' '}
-                        {result.question.a}
-                      </p>
+
+                      {/* All options with highlighting */}
+                      <div className="space-y-2">
+                        {result.question.options.map((option, optIdx) => {
+                          const isUserAnswer = optIdx === result.userAnswerIndex;
+                          const isCorrectAnswer = optIdx === result.question.correct;
+                          const optionLetter = ['A', 'B', 'C', 'D'][optIdx];
+
+                          let bgColor = 'bg-slate-50';
+                          let textColor = 'text-slate-600';
+                          let borderColor = 'border-transparent';
+
+                          if (isCorrectAnswer) {
+                            bgColor = 'bg-green-50';
+                            textColor = 'text-green-800';
+                            borderColor = 'border-green-400';
+                          } else if (isUserAnswer && !result.isCorrect) {
+                            bgColor = 'bg-red-50';
+                            textColor = 'text-red-800';
+                            borderColor = 'border-red-400';
+                          }
+
+                          return (
+                            <div
+                              key={optIdx}
+                              className={`flex items-center gap-2 p-2 rounded-lg border-2 ${bgColor} ${borderColor}`}
+                            >
+                              <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                                isCorrectAnswer
+                                  ? 'bg-green-500 text-white'
+                                  : isUserAnswer && !result.isCorrect
+                                  ? 'bg-red-400 text-white'
+                                  : 'bg-slate-300 text-slate-600'
+                              }`}>
+                                {optionLetter}
+                              </span>
+                              <span className={`text-sm ${textColor}`}>
+                                {option}
+                              </span>
+                              {isCorrectAnswer && (
+                                <span className="ml-auto text-green-600 text-sm font-medium">
+                                  Rätt svar
+                                </span>
+                              )}
+                              {isUserAnswer && !result.isCorrect && (
+                                <span className="ml-auto text-red-600 text-sm font-medium">
+                                  Ditt svar
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

@@ -7,216 +7,100 @@
     "title": "Katten Maja",
     "text": "Maja är en katt. Hon är svart och vit. Maja bor hos Lisa. Varje dag leker de. Maja gillar att jaga bollar. Lisa ger Maja mat. Maja är glad.",
     "questions": [
-      {"type": "literal", "q": "Vad heter katten?", "a": "Maja"},
-      {"type": "literal", "q": "Vilka färger har Maja?", "a": "Svart och vit"},
-      {"type": "literal", "q": "Vem bor Maja hos?", "a": "Lisa"},
-      {"type": "ord", "q": "Vad betyder 'jaga'?", "a": "Springa efter något"},
-      {"type": "sammanfatta", "q": "Vad handlar texten om?", "a": "En katt som heter Maja och bor hos Lisa"}
+      {
+        "type": "literal",
+        "q": "Vad heter katten?",
+        "options": ["Lisa", "Maja", "Katt", "Svansen"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka färger har Maja?",
+        "options": ["Röd och blå", "Svart och vit", "Brun och vit", "Grå och svart"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem bor Maja hos?",
+        "options": ["Erik", "Anna", "Lisa", "Pelle"],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur vet vi att Maja trivs?",
+        "options": ["Hon sover mycket", "Hon är glad", "Hon äter inte", "Hon gömmer sig"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tror du Lisa och Maja är?",
+        "options": ["Ovänner", "Bästa vänner", "Okända", "Rädda för varandra"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför jagar Maja bollar?",
+        "options": ["Hon är hungrig", "Hon vill sova", "Hon tycker det är roligt", "Hon är arg"],
+        "correct": 2
+      }
     ],
-    "meta": {"wordCount": 35, "fingerprint": "abc123", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak1-002",
-    "grade": 1,
-    "genre": "berättelse",
-    "theme": "skola",
-    "title": "Min första skoldag",
-    "text": "Idag är det skola. Jag är glad. Min väska är blå. Jag har penna och bok. Min fröken heter Anna. Vi sjunger en sång. Sen ritar vi.",
-    "questions": [
-      {"type": "literal", "q": "Vilken färg är väskan?", "a": "Blå"},
-      {"type": "literal", "q": "Vad heter fröken?", "a": "Anna"},
-      {"type": "literal", "q": "Vad har barnet i väskan?", "a": "Penna och bok"},
-      {"type": "inferens", "q": "Är barnet ledsen eller glad?", "a": "Glad"},
-      {"type": "sammanfatta", "q": "Vad handlar texten om?", "a": "Första dagen i skolan"}
-    ],
-    "meta": {"wordCount": 36, "fingerprint": "def456", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak2-001",
-    "grade": 2,
-    "genre": "berättelse",
-    "theme": "vänskap",
-    "title": "Bästa vänner",
-    "text": "Emil och Sara är bästa vänner. De bor i samma hus. Varje dag går de till skolan. På rasten leker de kurragömma. Emil gömmer sig bakom ett träd. Sara hittar honom snabbt. De skrattar tillsammans. Efter skolan äter de mellanmål hos Sara.",
-    "questions": [
-      {"type": "literal", "q": "Vilka är bästa vänner?", "a": "Emil och Sara"},
-      {"type": "literal", "q": "Vad leker de på rasten?", "a": "Kurragömma"},
-      {"type": "literal", "q": "Var gömmer sig Emil?", "a": "Bakom ett träd"},
-      {"type": "inferens", "q": "Trivs Emil och Sara tillsammans?", "a": "Ja, de skrattar tillsammans"},
-      {"type": "ord", "q": "Vad är mellanmål?", "a": "Mat man äter mellan lunch och middag"},
-      {"type": "sammanfatta", "q": "Vad handlar texten om?", "a": "Två vänner som leker och har roligt"}
-    ],
-    "meta": {"wordCount": 52, "fingerprint": "ghi789", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak2-002",
-    "grade": 2,
-    "genre": "berättelse",
-    "theme": "natur",
-    "title": "I skogen",
-    "text": "Mamma och jag går i skogen. Solen skiner. Vi ser en ekorre. Den springer upp i ett träd. Vi plockar blåbär. De är goda och söta. En fågel sjunger i toppen. Vi sitter på en sten och vilar. Det är skönt att vara ute.",
-    "questions": [
-      {"type": "literal", "q": "Vad ser de i skogen?", "a": "En ekorre"},
-      {"type": "literal", "q": "Vad plockar de?", "a": "Blåbär"},
-      {"type": "literal", "q": "Var sjunger fågeln?", "a": "I toppen"},
-      {"type": "inferens", "q": "Hur är vädret?", "a": "Soligt och fint"},
-      {"type": "ord", "q": "Vad betyder 'vilar'?", "a": "Tar en paus"},
-      {"type": "sammanfatta", "q": "Vad gör de i skogen?", "a": "Går på promenad, plockar bär och ser djur"}
-    ],
-    "meta": {"wordCount": 56, "fingerprint": "jkl012", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak3-001",
-    "grade": 3,
-    "genre": "berättelse",
-    "theme": "äventyr",
-    "title": "Skatten på ön",
-    "text": "Kim hittade en gammal karta på vinden. Kartan visade en ö med ett kryss. Kim visste att det betydde skatt! Nästa dag rodde Kim och kompisen Lea till den lilla ön. De grävde vid det stora trädet. Plötsligt hördes ett skrammel. I en rostig låda låg glittrande stenar och gamla mynt. De kunde inte tro sina ögon!",
-    "questions": [
-      {"type": "literal", "q": "Var hittade Kim kartan?", "a": "På vinden"},
-      {"type": "literal", "q": "Vem följde med Kim till ön?", "a": "Lea"},
-      {"type": "literal", "q": "Var grävde de?", "a": "Vid det stora trädet"},
-      {"type": "inferens", "q": "Varför visste Kim att krysset betydde skatt?", "a": "För att kryss på kartor brukar markera skatter"},
-      {"type": "ord", "q": "Vad betyder 'rostig'?", "a": "Gammal metall som blivit brunröd"},
-      {"type": "sammanfatta", "q": "Vad handlar texten om?", "a": "Två barn som hittar en skattkarta och gräver upp skatten"}
-    ],
-    "meta": {"wordCount": 78, "fingerprint": "mno345", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak3-002",
-    "grade": 3,
-    "genre": "faktatext",
-    "theme": "djur",
-    "title": "Igelkotten",
-    "text": "Igelkotten är ett litet däggdjur med taggar. Taggarna skyddar den från fiender. När igelkotten blir rädd rullar den ihop sig till en boll. Den äter mest insekter och maskar. På vintern sover igelkotten i en hög med löv. Det kallas vinterdvala. Igelkottar är nattdjur, vilket betyder att de är vakna på natten.",
-    "questions": [
-      {"type": "literal", "q": "Vad äter igelkotten?", "a": "Insekter och maskar"},
-      {"type": "literal", "q": "Vad gör igelkotten på vintern?", "a": "Sover i vinterdvala"},
-      {"type": "literal", "q": "Vad gör igelkotten när den blir rädd?", "a": "Rullar ihop sig till en boll"},
-      {"type": "inferens", "q": "Varför har igelkotten taggar?", "a": "För att skydda sig från fiender"},
-      {"type": "ord", "q": "Vad betyder 'nattdjur'?", "a": "Djur som är vakna på natten"},
-      {"type": "sammanfatta", "q": "Vad lär du dig om igelkotten?", "a": "Den har taggar, äter insekter, sover på vintern och är vaken på natten"}
-    ],
-    "meta": {"wordCount": 68, "fingerprint": "pqr678", "generatedAt": "2024-01-01", "model": "test"}
+    "meta": {
+      "wordCount": 42,
+      "fingerprint": "sample001",
+      "generatedAt": "2025-01-01T00:00:00.000Z",
+      "model": "sample"
+    }
   },
   {
     "id": "ak4-001",
     "grade": 4,
     "genre": "berättelse",
-    "theme": "mysterium",
-    "title": "Det hemliga rummet",
-    "text": "Det hade alltid funnits en låst dörr i Alvas farmors hus. Ingen pratade om den. En dag hittade Alva en nyckel i en gammal låda på vinden. Hennes hjärta bultade när hon stack in nyckeln i låset. Dörren öppnades med ett knarr. Innanför fanns ett litet rum fullt av gamla böcker, fotografier och en dammig docka. Alva kände igen dockan – det var samma docka som farmor hade på ett gammalt foto! Hon förstod att rummet hade varit farmors när hon var liten. Alva satte sig försiktigt ner och började bläddra i en av böckerna.",
+    "theme": "äventyr",
+    "title": "Skatten i skogen",
+    "text": "Emma och Leo gick djupt in i skogen en solig lördagsmorgon. De hade hittat en gammal karta på vinden hemma hos mormor. Kartan visade en stig som ledde till ett stort träd med ett rött kryss på stammen.\n\nEfter en timmes vandring såg de äntligen trädet. Det var en jättelik ek med tjocka grenar. Vid rötterna hittade de en rostig låda. Inuti låg gamla guldmynt och ett brev från mormors morfar.\n\nI brevet stod det att han hade gömt skatten för hundra år sedan. Han hoppades att någon i familjen skulle hitta den en dag. Emma och Leo skyndade hem för att visa mormor vad de hade hittat.",
     "questions": [
-      {"type": "literal", "q": "Var hittade Alva nyckeln?", "a": "I en gammal låda på vinden"},
-      {"type": "literal", "q": "Vad fanns i det hemliga rummet?", "a": "Gamla böcker, fotografier och en dammig docka"},
-      {"type": "literal", "q": "Vems docka var det?", "a": "Farmors"},
-      {"type": "inferens", "q": "Varför tror du ingen pratade om rummet?", "a": "Det var farmors hemliga barndomsrum"},
-      {"type": "inferens", "q": "Hur kände sig Alva när hon öppnade dörren?", "a": "Spänd och nervös"},
-      {"type": "ord", "q": "Vad betyder 'bultade'?", "a": "Slog hårt"},
-      {"type": "ord", "q": "Vad betyder 'bläddra'?", "a": "Vända sidor i en bok"},
-      {"type": "sammanfatta", "q": "Sammanfatta vad som händer i texten.", "a": "Alva hittar en nyckel och upptäcker farmors hemliga barndomsrum"}
+      {
+        "type": "literal",
+        "q": "Var hittade Emma och Leo kartan?",
+        "options": ["I skogen", "På vinden hos mormor", "I en låda", "Vid ett träd"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur länge vandrade de innan de hittade trädet?",
+        "options": ["Tio minuter", "En halvtimme", "En timme", "Två timmar"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem hade gömt skatten?",
+        "options": ["Mormor", "Mormors morfar", "Emma och Leo", "En pirat"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tror du mormors morfar gömde skatten?",
+        "options": ["Han ville stjäla den", "Han ville att familjen skulle ha ett äventyr", "Han glömde var den var", "Han var rädd för tjuvar"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Emma och Leo troligen när de hittar skatten?",
+        "options": ["Ledsna", "Rädda", "Upphetsade och glada", "Arga"],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skyndade de hem till mormor?",
+        "options": ["De var hungriga", "De ville visa henne vad de hittat", "Det började regna", "De var trötta"],
+        "correct": 1
+      }
     ],
-    "meta": {"wordCount": 118, "fingerprint": "stu901", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak5-001",
-    "grade": 5,
-    "genre": "faktatext",
-    "theme": "rymden",
-    "title": "Vår närmaste stjärna",
-    "text": "Solen är en stjärna som ligger ungefär 150 miljoner kilometer från jorden. Trots det enorma avståndet tar solljuset bara cirka 8 minuter att nå oss. Solen är så stor att över en miljon jordklot skulle få plats inuti den. Temperaturen på solens yta är ungefär 5 500 grader Celsius, men i kärnan är det hela 15 miljoner grader! Utan solen skulle det inte finnas liv på jorden. Den ger oss ljus och värme, och driver växternas fotosyntes som producerar syre. Solen har funnits i cirka 4,6 miljarder år och forskare tror att den kommer att lysa i ytterligare 5 miljarder år.",
-    "questions": [
-      {"type": "literal", "q": "Hur långt är det mellan jorden och solen?", "a": "150 miljoner kilometer"},
-      {"type": "literal", "q": "Hur lång tid tar det för solljuset att nå jorden?", "a": "Cirka 8 minuter"},
-      {"type": "literal", "q": "Hur varm är solens kärna?", "a": "15 miljoner grader"},
-      {"type": "inferens", "q": "Varför är solen viktig för livet på jorden?", "a": "Den ger ljus och värme, och driver fotosyntes"},
-      {"type": "inferens", "q": "Kommer solen att finnas för evigt?", "a": "Nej, den kommer lysa i ytterligare 5 miljarder år"},
-      {"type": "ord", "q": "Vad betyder 'fotosyntes'?", "a": "Process där växter använder solljus för att producera syre"},
-      {"type": "ord", "q": "Vad är en miljard?", "a": "Tusen miljoner (1 000 000 000)"},
-      {"type": "sammanfatta", "q": "Vad är de viktigaste fakta om solen?", "a": "Den är vår närmaste stjärna, ger ljus och värme, och är avgörande för liv"}
-    ],
-    "meta": {"wordCount": 134, "fingerprint": "vwx234", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak6-001",
-    "grade": 6,
-    "genre": "berättelse",
-    "theme": "sport",
-    "title": "Den avgörande matchen",
-    "text": "Klockan var 89 minuter och ställningen var 1-1. Elin kände svetten rinna nerför pannan. Hela säsongen hade lett fram till denna match – finalen i cupen. Motståndarlaget pressade hårt, men Elins lag höll emot. Plötsligt fick hennes lagkamrat Nora bollen på mittfältet. Hon slog en lång passning framåt. Elin spurtade allt hon kunde. Bollen studsade perfekt framför hennes fötter. Målvakten rusade ut, men Elin var snabbare. Med en välplacerad chip lyfte hon bollen över målvakten och in i nätet. 2-1! Domaren blåste av matchen sekunder senare. Elin föll på knä medan lagkamraterna störtade fram. Alla drömmar hade blivit verklighet.",
-    "questions": [
-      {"type": "literal", "q": "Vilken minut spelades det?", "a": "89 minuter"},
-      {"type": "literal", "q": "Vad var ställningen innan Elins mål?", "a": "1-1"},
-      {"type": "literal", "q": "Vem passade bollen till Elin?", "a": "Nora"},
-      {"type": "inferens", "q": "Varför var matchen så viktig?", "a": "Det var cupfinalen"},
-      {"type": "inferens", "q": "Hur kände sig Elin under matchen?", "a": "Nervös och pressad"},
-      {"type": "inferens", "q": "Varför föll Elin på knä efter målet?", "a": "Av lättnad och glädje"},
-      {"type": "ord", "q": "Vad betyder 'chip' i fotboll?", "a": "Att lyfta bollen mjukt över någon"},
-      {"type": "sammanfatta", "q": "Beskriv vad som händer i slutet av matchen.", "a": "Elin gör avgörande målet i sista minuten och vinner cupen"}
-    ],
-    "meta": {"wordCount": 142, "fingerprint": "yza567", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak7-001",
-    "grade": 7,
-    "genre": "faktatext",
-    "theme": "vetenskap",
-    "title": "Klimatförändringarnas påverkan",
-    "text": "Jordens klimat har alltid förändrats, men de senaste hundra åren har förändringarna skett ovanligt snabbt. Huvudorsaken är människans utsläpp av växthusgaser, framför allt koldioxid från förbränning av fossila bränslen. Dessa gaser skapar en förstärkt växthuseffekt som värmer upp atmosfären. Konsekvenserna är redan synliga: glaciärer smälter, havsnivån stiger och extrema väderhändelser blir vanligare. Forskare varnar för att om temperaturen ökar med mer än 1,5 grader jämfört med förindustriell tid, kan följderna bli katastrofala. Ekosystem riskerar att kollapsa och många djurarter hotas av utrotning. För att bromsa utvecklingen krävs en snabb omställning till förnybar energi, minskad konsumtion och internationellt samarbete. Varje individ kan bidra genom att minska sin klimatpåverkan.",
-    "questions": [
-      {"type": "literal", "q": "Vad är huvudorsaken till klimatförändringarna?", "a": "Människans utsläpp av växthusgaser"},
-      {"type": "literal", "q": "Vad händer med glaciärerna?", "a": "De smälter"},
-      {"type": "literal", "q": "Vilken temperaturgräns varnar forskarna för?", "a": "1,5 grader ökning"},
-      {"type": "inferens", "q": "Varför blir extrema väderhändelser vanligare?", "a": "För att klimatet blir varmare och mer instabilt"},
-      {"type": "inferens", "q": "Vad menas med att ekosystem kan kollapsa?", "a": "Att naturen inte längre fungerar som den ska"},
-      {"type": "inferens", "q": "Varför behövs internationellt samarbete?", "a": "Klimatet påverkar hela världen och kräver gemensamma lösningar"},
-      {"type": "ord", "q": "Vad är fossila bränslen?", "a": "Kol, olja och gas som bildats av döda organismer"},
-      {"type": "ord", "q": "Vad betyder 'förindustriell tid'?", "a": "Tiden innan industrin utvecklades på 1800-talet"},
-      {"type": "ord", "q": "Vad är förnybar energi?", "a": "Energi från sol, vind, vatten som inte tar slut"},
-      {"type": "sammanfatta", "q": "Sammanfatta textens huvudbudskap.", "a": "Klimatet förändras snabbt på grund av människan och vi måste agera för att undvika katastrof"}
-    ],
-    "meta": {"wordCount": 168, "fingerprint": "bcd890", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak8-001",
-    "grade": 8,
-    "genre": "berättelse",
-    "theme": "etik",
-    "title": "Valet",
-    "text": "Marcus stod utanför rektorns kontor med hjärtat i halsgropen. Han hade sett allt – hur David, klassens populäraste kille, tagit pengar ur en annans väska under rasten. Nu ville rektorn veta vad som hänt. David var Marcus bästa vän sedan lågstadiet. De hade delat allt: hemligheter, drömmar, nederlag och segrar. Men samtidigt visste Marcus att det var Alex pengar som stulits, och Alex hade det redan svårt hemma. Hans familj hade knappt råd med mat. Dörren öppnades och rektorn bad Marcus komma in. 'Såg du något ovanligt på rasten?' frågade hon. Marcus mötte hennes blick. Han tänkte på David som alltid ställt upp för honom. Han tänkte på Alex som gått omkring och letat förtvivlat. Sanningen brände på tungan.",
-    "questions": [
-      {"type": "literal", "q": "Vad hade David gjort?", "a": "Tagit pengar ur någons väska"},
-      {"type": "literal", "q": "Vems pengar var det?", "a": "Alex"},
-      {"type": "literal", "q": "Hur länge hade Marcus och David varit vänner?", "a": "Sedan lågstadiet"},
-      {"type": "inferens", "q": "Varför var stölden extra allvarlig för Alex?", "a": "Hans familj hade det svårt ekonomiskt"},
-      {"type": "inferens", "q": "Vilket dilemma står Marcus inför?", "a": "Att välja mellan lojalitet mot sin vän och att göra det rätta"},
-      {"type": "inferens", "q": "Vad tror du Marcus kommer att göra?", "a": "Olika tolkningar möjliga - berätta sanningen eller skydda vännen"},
-      {"type": "inferens", "q": "Vad betyder uttrycket 'sanningen brände på tungan'?", "a": "Att han kände starkt för att berätta sanningen"},
-      {"type": "ord", "q": "Vad betyder 'hjärtat i halsgropen'?", "a": "Att vara väldigt nervös"},
-      {"type": "ord", "q": "Vad betyder 'dilemma'?", "a": "En svår situation där alla val har nackdelar"},
-      {"type": "sammanfatta", "q": "Vad handlar texten om på djupet?", "a": "Konflikten mellan lojalitet och moral, och svårigheten att göra rätt"}
-    ],
-    "meta": {"wordCount": 175, "fingerprint": "efg123", "generatedAt": "2024-01-01", "model": "test"}
-  },
-  {
-    "id": "ak9-001",
-    "grade": 9,
-    "genre": "faktatext",
-    "theme": "samhälle",
-    "title": "Artificiell intelligens och framtidens arbetsmarknad",
-    "text": "Artificiell intelligens, eller AI, förändrar samhället i en takt som få hade kunnat förutspå för bara ett decennium sedan. Redan idag kan AI-system skriva texter, skapa bilder, analysera medicinska prover och köra fordon. Enligt vissa prognoser kan upp till 40 procent av dagens yrken påverkas betydligt av automatisering inom de kommande 20 åren. Detta väcker både hopp och oro. Optimister menar att AI kommer att befria människor från monotona arbetsuppgifter och skapa helt nya typer av jobb. Pessimister varnar för massarbetslöshet och ökade klyftor mellan de som kan anpassa sig och de som inte kan. Sannolikt ligger verkligheten någonstans mittemellan. Det som står klart är att utbildningssystemet behöver förändras för att förbereda unga för en arbetsmarknad som ser radikalt annorlunda ut. Kritiskt tänkande, kreativitet och förmågan att samarbeta med både människor och maskiner blir allt viktigare kompetenser.",
-    "questions": [
-      {"type": "literal", "q": "Hur stor andel av yrkena kan påverkas av automatisering?", "a": "Upp till 40 procent"},
-      {"type": "literal", "q": "Inom vilken tidsram förutspås förändringarna ske?", "a": "20 år"},
-      {"type": "literal", "q": "Vilka exempel ges på vad AI kan göra idag?", "a": "Skriva texter, skapa bilder, analysera medicinska prover, köra fordon"},
-      {"type": "inferens", "q": "Varför är vissa optimistiska om AI?", "a": "De tror att det skapar nya möjligheter och befriar från tråkiga jobb"},
-      {"type": "inferens", "q": "Vad menas med 'ökade klyftor'?", "a": "Större skillnader mellan de som har och de som inte har"},
-      {"type": "inferens", "q": "Varför behöver utbildningssystemet förändras?", "a": "För att förbereda för en ny typ av arbetsmarknad"},
-      {"type": "inferens", "q": "Varför är kreativitet viktigt i framtiden?", "a": "Det är något AI har svårt att ersätta"},
-      {"type": "ord", "q": "Vad betyder 'automatisering'?", "a": "Att maskiner tar över uppgifter som människor gjort"},
-      {"type": "ord", "q": "Vad är 'monotona arbetsuppgifter'?", "a": "Upprepande och tråkiga arbeten"},
-      {"type": "sammanfatta", "q": "Vad är textens huvudtes?", "a": "AI förändrar arbetsmarknaden och samhället måste anpassa sig"}
-    ],
-    "meta": {"wordCount": 198, "fingerprint": "hij456", "generatedAt": "2024-01-01", "model": "test"}
+    "meta": {
+      "wordCount": 145,
+      "fingerprint": "sample004",
+      "generatedAt": "2025-01-01T00:00:00.000Z",
+      "model": "sample"
+    }
   }
 ]

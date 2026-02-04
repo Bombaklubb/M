@@ -2,7 +2,7 @@
  * generate_library.mjs  (ONE-FILE generator for Groq -> JSON library)
  *
  * ✅ What it does
- * - Generates Swedish reading-comprehension texts + questions for grades 1–9
+ * - Generates Swedish reading-comprehension texts + multiple choice questions for grades 1–9
  * - Uses your GROQ_API_KEY (stored as env var)
  * - Saves everything into ONE JSON file
  * - Deduplicates, validates, retries if JSON breaks
@@ -142,7 +142,7 @@ function gradeRules(grade) {
   };
 }
 
-// Build prompt for text generation
+// Build prompt for text generation with MULTIPLE CHOICE questions
 function buildPrompt(grade) {
   const r = gradeRules(grade);
   const genre = grade <= 4 ? "berättelse" : "berättelse eller faktatext";
@@ -158,9 +158,12 @@ TEXTKRAV:
 - Innehållet måste vara skolpassande och intressant för elever i åk ${grade}
 - Inga verkliga personer eller känsliga ämnen
 
-FRÅGEKRAV (exakt 6 frågor):
+FRÅGEKRAV (exakt 6 flervalsfrågor):
 - 3 frågor av typ "literal" (På raderna - svaret finns direkt i texten)
 - 3 frågor av typ "inferens" (Mellan raderna - kräver slutledning/tolkning)
+- Varje fråga ska ha exakt 4 svarsalternativ (A, B, C, D)
+- Endast ETT alternativ ska vara korrekt
+- Felaktiga alternativ ska vara rimliga men tydligt felaktiga
 
 För åk ${grade}:
 ${grade <= 3 ? '- Literal-frågor: "Vad heter...?", "Vad gör...?", "Var är...?"' : ''}
@@ -173,7 +176,8 @@ ${grade >= 7 ? '- Inferens-frågor: tolkning, analys, slutsatser, författarens 
 VIKTIGT:
 - Svara ENDAST med giltig JSON (inga backticks, ingen förklaring)
 - Frågorna ska kunna besvaras utifrån texten
-- Facit ska vara kort och tydligt (max 1-2 meningar)
+- "correct" är INDEX för rätt svar (0=A, 1=B, 2=C, 3=D)
+- Blanda var rätt svar hamnar (inte alltid A!)
 
 JSON FORMAT:
 {
@@ -183,12 +187,12 @@ JSON FORMAT:
   "title": "kort titel",
   "text": "texten här",
   "questions": [
-    {"type": "literal", "q": "fråga 1", "a": "svar"},
-    {"type": "literal", "q": "fråga 2", "a": "svar"},
-    {"type": "literal", "q": "fråga 3", "a": "svar"},
-    {"type": "inferens", "q": "fråga 4", "a": "svar"},
-    {"type": "inferens", "q": "fråga 5", "a": "svar"},
-    {"type": "inferens", "q": "fråga 6", "a": "svar"}
+    {"type": "literal", "q": "fråga 1", "options": ["alternativ A", "alternativ B", "alternativ C", "alternativ D"], "correct": 0},
+    {"type": "literal", "q": "fråga 2", "options": ["alternativ A", "alternativ B", "alternativ C", "alternativ D"], "correct": 2},
+    {"type": "literal", "q": "fråga 3", "options": ["alternativ A", "alternativ B", "alternativ C", "alternativ D"], "correct": 1},
+    {"type": "inferens", "q": "fråga 4", "options": ["alternativ A", "alternativ B", "alternativ C", "alternativ D"], "correct": 3},
+    {"type": "inferens", "q": "fråga 5", "options": ["alternativ A", "alternativ B", "alternativ C", "alternativ D"], "correct": 0},
+    {"type": "inferens", "q": "fråga 6", "options": ["alternativ A", "alternativ B", "alternativ C", "alternativ D"], "correct": 2}
   ]
 }
 `.trim();
@@ -250,7 +254,13 @@ function validateItem(item) {
     if (!q || typeof q !== "object") return "Question is not an object";
     if (!["literal", "inferens"].includes(String(q.type))) return "Invalid question type (must be literal or inferens)";
     if (typeof q.q !== "string" || !q.q.trim()) return "Question text missing";
-    if (typeof q.a !== "string" || !q.a.trim()) return "Answer missing";
+
+    // Validate multiple choice format
+    if (!Array.isArray(q.options) || q.options.length !== 4) return "Each question must have exactly 4 options";
+    for (const opt of q.options) {
+      if (typeof opt !== "string" || !opt.trim()) return "Option must be a non-empty string";
+    }
+    if (typeof q.correct !== "number" || q.correct < 0 || q.correct > 3) return "correct must be 0, 1, 2, or 3";
 
     if (q.type === "literal") literalCount++;
     if (q.type === "inferens") inferensCount++;
@@ -276,7 +286,8 @@ function normalizeItem(item, grade) {
     questions: item.questions.map(q => ({
       type: String(q.type).trim(),
       q: String(q.q).trim(),
-      a: String(q.a).trim(),
+      options: q.options.map(opt => String(opt).trim()),
+      correct: Number(q.correct),
     })),
     meta: {
       wordCount: wc,
@@ -331,7 +342,7 @@ async function main() {
     existingByGrade.set(g, library.filter(x => Number(x.grade) === g).length);
   }
 
-  console.log(`\n📚 Läsförståelse-generator`);
+  console.log(`\n📚 Läs och lär - Textgenerator`);
   console.log(`${"=".repeat(50)}`);
   console.log(`✅ Laddat bibliotek: ${library.length} texter`);
   for (const g of grades) {
@@ -340,6 +351,7 @@ async function main() {
   console.log(`\n➡️ Kommer generera ${countPerGrade} texter per årskurs`);
   console.log(`➡️ Årskurser: ${grades.join(", ")}`);
   console.log(`➡️ Utfil: ${outFile}`);
+  console.log(`➡️ Format: Flervalsfrågor (4 alternativ per fråga)`);
   console.log(`${"=".repeat(50)}\n`);
 
   let totalGenerated = 0;

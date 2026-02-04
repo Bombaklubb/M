@@ -8,10 +8,8 @@ interface QuizViewProps {
 }
 
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; category: string }> = {
-  literal: { label: 'Hitta i texten', emoji: '🔍', category: 'På raderna' },
-  inferens: { label: 'Tänk efter', emoji: '🧠', category: 'Mellan raderna' },
-  ord: { label: 'Ordförståelse', emoji: '📝', category: 'Ordkunskap' },
-  sammanfatta: { label: 'Sammanfatta', emoji: '📋', category: 'Sammanfattning' },
+  literal: { label: 'På raderna', emoji: '🔍', category: 'På raderna' },
+  inferens: { label: 'Mellan raderna', emoji: '🧠', category: 'Mellan raderna' },
 };
 
 export const QuizView: React.FC<QuizViewProps> = ({
@@ -31,8 +29,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
     category: 'Fråga',
   };
 
-  const handleAnswer = (answer: string) => {
-    setAnswers((prev) => ({ ...prev, [currentQuestion]: answer }));
+  const handleAnswer = (optionIndex: number) => {
+    setAnswers((prev) => ({ ...prev, [currentQuestion]: String(optionIndex) }));
   };
 
   const handleNext = () => {
@@ -52,11 +50,15 @@ export const QuizView: React.FC<QuizViewProps> = ({
   };
 
   const isLastQuestion = currentQuestion === totalQuestions - 1;
-  const allAnswered = questions.every((_, i) => answers[i]?.trim());
+  const allAnswered = questions.every((_, i) => answers[i] !== undefined);
   const progress = ((currentQuestion + 1) / totalQuestions) * 100;
+  const selectedAnswer = answers[currentQuestion];
 
   // Split text into paragraphs
   const paragraphs = text.text.split('\n').filter((p) => p.trim().length > 0);
+
+  // Get word count from meta or calculate it
+  const wordCount = text.meta?.wordCount || text.text.split(/\s+/).length;
 
   return (
     <div className="min-h-screen bg-sky-50">
@@ -71,7 +73,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
               {text.genre === 'berättelse' ? '📖 Berättelse' : '📰 Faktatext'}
             </span>
             <span className="text-slate-300">•</span>
-            <span className="text-sm text-slate-500">{text.meta.wordCount} ord</span>
+            <span className="text-sm text-slate-500">{wordCount} ord</span>
           </div>
         </div>
       </div>
@@ -122,7 +124,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   Fråga {currentQuestion + 1} av {totalQuestions}
                 </span>
                 <span className="text-sm text-slate-500">
-                  {Object.keys(answers).filter((k) => answers[Number(k)]?.trim()).length}/{totalQuestions} besvarade
+                  {Object.keys(answers).length}/{totalQuestions} besvarade
                 </span>
               </div>
               <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
@@ -143,7 +145,11 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-lg">{typeInfo.emoji}</span>
-                      <span className="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-xs font-medium">
+                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+                        currentQ.type === 'literal'
+                          ? 'bg-blue-100 text-blue-700'
+                          : 'bg-purple-100 text-purple-700'
+                      }`}>
                         {typeInfo.label}
                       </span>
                     </div>
@@ -154,18 +160,35 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 </div>
               </div>
 
-              {/* Answer Input */}
-              <div>
-                <label className="block text-sm font-medium text-slate-600 mb-2">
-                  Ditt svar:
-                </label>
-                <textarea
-                  value={answers[currentQuestion] || ''}
-                  onChange={(e) => handleAnswer(e.target.value)}
-                  placeholder="Skriv ditt svar här..."
-                  className="w-full p-4 rounded-xl bg-slate-50 border-2 border-slate-200 focus:border-indigo-500 focus:outline-none transition-colors resize-none"
-                  rows={3}
-                />
+              {/* Multiple Choice Options */}
+              <div className="space-y-3">
+                {currentQ.options.map((option, idx) => {
+                  const isSelected = selectedAnswer === String(idx);
+                  const optionLetter = ['A', 'B', 'C', 'D'][idx];
+
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => handleAnswer(idx)}
+                      className={`w-full p-4 rounded-xl border-2 text-left transition-all flex items-center gap-3 ${
+                        isSelected
+                          ? 'border-indigo-500 bg-indigo-50 shadow-md'
+                          : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                      }`}
+                    >
+                      <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
+                        isSelected
+                          ? 'bg-indigo-600 text-white'
+                          : 'bg-slate-200 text-slate-600'
+                      }`}>
+                        {optionLetter}
+                      </span>
+                      <span className={`text-base ${isSelected ? 'text-indigo-900 font-medium' : 'text-slate-700'}`}>
+                        {option}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Navigation Buttons */}
@@ -173,7 +196,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 <button
                   onClick={handlePrevious}
                   disabled={currentQuestion === 0}
-                  className="px-4 py-2 rounded-lg border-2 border-slate-300 text-slate-700 font-medium hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  className="px-4 py-3 rounded-xl border-2 border-slate-300 text-slate-700 font-medium hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   ← Föregående
                 </button>
@@ -187,12 +210,12 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         : 'bg-gray-200 text-gray-500 border-gray-300 cursor-not-allowed'
                     }`}
                   >
-                    {allAnswered ? '✅ Rätta svaren!' : `Svara på alla (${Object.keys(answers).filter((k) => answers[Number(k)]?.trim()).length}/${totalQuestions})`}
+                    {allAnswered ? '✅ Rätta svaren!' : `Svara på alla (${Object.keys(answers).length}/${totalQuestions})`}
                   </button>
                 ) : (
                   <button
                     onClick={handleNext}
-                    className="flex-1 px-4 py-2 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors"
+                    className="flex-1 px-4 py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors"
                   >
                     Nästa fråga →
                   </button>
@@ -203,7 +226,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
             {/* All Questions Overview */}
             <div className="bg-white rounded-xl shadow-lg p-4">
               <h4 className="text-sm font-bold text-slate-700 mb-3">Översikt</h4>
-              <div className="grid grid-cols-5 gap-2">
+              <div className="grid grid-cols-6 gap-2">
                 {questions.map((q, idx) => (
                   <button
                     key={idx}
@@ -211,7 +234,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     className={`aspect-square rounded-lg font-bold text-sm transition-all ${
                       idx === currentQuestion
                         ? 'bg-indigo-600 text-white shadow-md'
-                        : answers[idx]?.trim()
+                        : answers[idx] !== undefined
                         ? 'bg-teal-100 text-teal-700 hover:bg-teal-200'
                         : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
                     }`}
