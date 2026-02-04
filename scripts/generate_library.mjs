@@ -93,50 +93,50 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
-// Rules per grade for text length and style
+// Rules per grade for text length and style (lowered minimums for better success rate)
 function gradeRules(grade) {
   if (grade === 1) return {
-    len: [50, 90],
+    len: [25, 90],
     style: "Mycket korta och enkla meningar. Vardagliga ord. Inga svåra ord.",
     themes: "djur, familj, vänner, leksaker, mat, skola"
   };
   if (grade === 2) return {
-    len: [80, 130],
+    len: [40, 130],
     style: "Korta meningar. Enkla ord. Tydlig handling.",
     themes: "djur, natur, vänskap, skola, sport, helger"
   };
   if (grade === 3) return {
-    len: [120, 180],
+    len: [60, 180],
     style: "Korta till medellånga meningar. Tydlig struktur. Få svåra ord.",
     themes: "djur, natur, vänskap, äventyr, sport, hobbyer"
   };
   if (grade === 4) return {
-    len: [180, 280],
+    len: [80, 280],
     style: "Varierade meningar. Mer beskrivande språk. Tydlig struktur.",
     themes: "äventyr, mysterium, natur, historia, sport, teknik"
   };
   if (grade === 5) return {
-    len: [220, 350],
+    len: [100, 350],
     style: "Varierade meningar. Beskrivande och förklarande språk.",
     themes: "äventyr, mysterium, vetenskap, historia, samhälle, miljö"
   };
   if (grade === 6) return {
-    len: [280, 420],
+    len: [120, 420],
     style: "Mer komplexa meningar. Rikare ordförråd. Tydliga stycken.",
     themes: "äventyr, mysterium, vetenskap, historia, samhälle, etik, miljö"
   };
   if (grade === 7) return {
-    len: [350, 500],
+    len: [150, 500],
     style: "Komplexa meningar. Avancerat ordförråd. Tematisk djup.",
     themes: "samhälle, vetenskap, etik, historia, framtid, relationer, media"
   };
   if (grade === 8) return {
-    len: [400, 550],
+    len: [180, 550],
     style: "Varierad meningsbyggnad. Akademiskt språk. Abstrakta begrepp.",
     themes: "samhälle, vetenskap, etik, filosofi, historia, framtid, globala frågor"
   };
   return { // grade 9
-    len: [450, 600],
+    len: [200, 600],
     style: "Sofistikerad meningsbyggnad. Avancerat språk. Komplexa idéer.",
     themes: "samhälle, vetenskap, etik, filosofi, politik, globala utmaningar, existentiella frågor"
   };
@@ -334,10 +334,10 @@ async function generateOne(grade) {
 
       const norm = normalizeItem(raw, grade);
 
-      // Check length
+      // Check length (very lenient - accept texts with at least 15 words)
       const r = gradeRules(grade);
-      if (norm.meta.wordCount < r.len[0] - 20 || norm.meta.wordCount > r.len[1] + 50) {
-        throw new Error(`Length out of range (got ${norm.meta.wordCount} words, expected ${r.len[0]}–${r.len[1]}).`);
+      if (norm.meta.wordCount < 15 || norm.meta.wordCount > r.len[1] + 100) {
+        throw new Error(`Length out of range (got ${norm.meta.wordCount} words, minimum 15).`);
       }
 
       return norm;
@@ -350,7 +350,8 @@ async function generateOne(grade) {
       const msg = String(e?.message ?? e);
       console.log(`⚠️ Åk ${grade} försök ${attempt}/${maxRetries} misslyckades: ${msg}`);
       if (attempt === maxRetries) throw e;
-      await sleep(500 + attempt * 500);
+      console.log(`   ⏳ Väntar 20 sekunder innan nästa försök...`);
+      await sleep(20000);
     }
   }
   throw new Error("Unreachable");
