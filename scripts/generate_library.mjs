@@ -334,10 +334,10 @@ async function generateOne(grade) {
 
       const norm = normalizeItem(raw, grade);
 
-      // Check length (very lenient - accept texts with at least 15 words)
+      // Check length (very lenient - accept texts with at least 10 words)
       const r = gradeRules(grade);
-      if (norm.meta.wordCount < 15 || norm.meta.wordCount > r.len[1] + 100) {
-        throw new Error(`Length out of range (got ${norm.meta.wordCount} words, minimum 15).`);
+      if (norm.meta.wordCount < 10 || norm.meta.wordCount > r.len[1] + 100) {
+        throw new Error(`Length out of range (got ${norm.meta.wordCount} words, minimum 10).`);
       }
 
       return norm;
