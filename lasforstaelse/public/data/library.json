@@ -10,37 +10,67 @@
       {
         "type": "literal",
         "q": "Vad heter katten?",
-        "options": ["Lisa", "Maja", "Katt", "Svansen"],
+        "options": [
+          "Lisa",
+          "Maja",
+          "Katt",
+          "Svansen"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vilka färger har Maja?",
-        "options": ["Röd och blå", "Svart och vit", "Brun och vit", "Grå och svart"],
+        "options": [
+          "Röd och blå",
+          "Svart och vit",
+          "Brun och vit",
+          "Grå och svart"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vem bor Maja hos?",
-        "options": ["Erik", "Anna", "Lisa", "Pelle"],
+        "options": [
+          "Erik",
+          "Anna",
+          "Lisa",
+          "Pelle"
+        ],
         "correct": 2
       },
       {
         "type": "inferens",
         "q": "Hur vet vi att Maja trivs?",
-        "options": ["Hon sover mycket", "Hon är glad", "Hon äter inte", "Hon gömmer sig"],
+        "options": [
+          "Hon sover mycket",
+          "Hon är glad",
+          "Hon äter inte",
+          "Hon gömmer sig"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad tror du Lisa och Maja är?",
-        "options": ["Ovänner", "Bästa vänner", "Okända", "Rädda för varandra"],
+        "options": [
+          "Ovänner",
+          "Bästa vänner",
+          "Okända",
+          "Rädda för varandra"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Varför jagar Maja bollar?",
-        "options": ["Hon är hungrig", "Hon vill sova", "Hon tycker det är roligt", "Hon är arg"],
+        "options": [
+          "Hon är hungrig",
+          "Hon vill sova",
+          "Hon tycker det är roligt",
+          "Hon är arg"
+        ],
         "correct": 2
       }
     ],
@@ -62,37 +92,67 @@
       {
         "type": "literal",
         "q": "Var hittade Emma och Leo kartan?",
-        "options": ["I skogen", "På vinden hos mormor", "I en låda", "Vid ett träd"],
+        "options": [
+          "I skogen",
+          "På vinden hos mormor",
+          "I en låda",
+          "Vid ett träd"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Hur länge vandrade de innan de hittade trädet?",
-        "options": ["Tio minuter", "En halvtimme", "En timme", "Två timmar"],
+        "options": [
+          "Tio minuter",
+          "En halvtimme",
+          "En timme",
+          "Två timmar"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vem hade gömt skatten?",
-        "options": ["Mormor", "Mormors morfar", "Emma och Leo", "En pirat"],
+        "options": [
+          "Mormor",
+          "Mormors morfar",
+          "Emma och Leo",
+          "En pirat"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Varför tror du mormors morfar gömde skatten?",
-        "options": ["Han ville stjäla den", "Han ville att familjen skulle ha ett äventyr", "Han glömde var den var", "Han var rädd för tjuvar"],
+        "options": [
+          "Han ville stjäla den",
+          "Han ville att familjen skulle ha ett äventyr",
+          "Han glömde var den var",
+          "Han var rädd för tjuvar"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Hur känner sig Emma och Leo troligen när de hittar skatten?",
-        "options": ["Ledsna", "Rädda", "Upphetsade och glada", "Arga"],
+        "options": [
+          "Ledsna",
+          "Rädda",
+          "Upphetsade och glada",
+          "Arga"
+        ],
         "correct": 2
       },
       {
         "type": "inferens",
         "q": "Varför skyndade de hem till mormor?",
-        "options": ["De var hungriga", "De ville visa henne vad de hittat", "Det började regna", "De var trötta"],
+        "options": [
+          "De var hungriga",
+          "De ville visa henne vad de hittat",
+          "Det började regna",
+          "De var trötta"
+        ],
         "correct": 1
       }
     ],
@@ -101,6 +161,88 @@
       "fingerprint": "sample004",
       "generatedAt": "2025-01-01T00:00:00.000Z",
       "model": "sample"
+    }
+  },
+  {
+    "id": "ak2-1770206312610-60669b",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Linnéa och hunden",
+    "text": "Linnéa har en hund som heter Max. Max är en stor och snäll hund. Linnéa och Max går ofta på promenad i skogen. En dag hittade de en liten katt i skogen. Katten var rädd och gömde sig under en buske. Linnéa och Max ville hjälpa katten. De gav katten mat och vatten. Katten började känna sig bättre. Linnéa och Max tog katten hem till Linnéas hus. Nu bor katten hos Linnéa och Max.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Linnéas hund?",
+        "options": [
+          "Bella",
+          "Max",
+          "Luna",
+          "Fido"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var hittade Linnéa och Max katten?",
+        "options": [
+          "I Linnéas hus",
+          "I skogen",
+          "I parken",
+          "I affären"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gav Linnéa och Max till katten?",
+        "options": [
+          "En boll",
+          "En leksak",
+          "Mat och vatten",
+          "En bil"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tror du att katten var rädd?",
+        "options": [
+          "För att den var glad",
+          "För att den var hungrig",
+          "För att den var i en ny miljö",
+          "För att den var arg"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Linnéa och Max när de hjälper katten?",
+        "options": [
+          "De är arga",
+          "De är glada",
+          "De är rädda",
+          "De är trötta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betyder det att Linnéa och Max tar hand om katten?",
+        "options": [
+          "Att de inte bryr sig om katten",
+          "Att de tycker om katten",
+          "Att de är rädda för katten",
+          "Att de vill ge bort katten"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 74,
+      "fingerprint": "8e58f58b56ad1219578a02a5935ae172375d2f39",
+      "generatedAt": "2026-02-04T11:58:32.610Z",
+      "model": "llama-3.3-70b-versatile"
     }
   }
 ]
