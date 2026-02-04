@@ -1,16 +1,35 @@
-name: Generate Reading Texts
+name: Generate Library Texts
 
 on:
   workflow_dispatch:
     inputs:
-      grades:
-        description: 'Årskurser (t.ex. 1-9 eller 4,5)'
+      grade:
+        description: 'Årskurs (1-9, eller "alla")'
         required: true
-        default: '1-9'
+        default: '1'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
+          - '6'
+          - '7'
+          - '8'
+          - '9'
+          - 'alla'
       count:
-        description: 'Antal texter per årskurs'
+        description: 'Antal texter'
         required: true
-        default: '50'
+        default: '10'
+        type: choice
+        options:
+          - '5'
+          - '10'
+          - '15'
+          - '20'
+          - '25'
 
 jobs:
   generate:
@@ -27,13 +46,24 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Set grades parameter
+        id: grades
+        run: |
+          if [ "${{ inputs.grade }}" = "alla" ]; then
+            echo "value=1-9" >> $GITHUB_OUTPUT
+          else
+            echo "value=${{ inputs.grade }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Generate texts
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
+          echo "🚀 Genererar ${{ inputs.count }} texter för årskurs ${{ steps.grades.outputs.value }}"
           node scripts/generate_library.mjs \
-            --grades "${{ inputs.grades }}" \
+            --grades "${{ steps.grades.outputs.value }}" \
             --count "${{ inputs.count }}" \
+            --sleep 500 \
             --out lasforstaelse/public/data/library.json
 
       - name: Commit and push
@@ -41,5 +71,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add lasforstaelse/public/data/library.json
-          git diff --staged --quiet || git commit -m "Generate ${{ inputs.count }} texts per grade (${{ inputs.grades }})"
-          git push
+          if git diff --staged --quiet; then
+            echo "Inga ändringar att committa"
+          else
+            git commit -m "📚 Genererat ${{ inputs.count }} texter för åk ${{ steps.grades.outputs.value }}"
+            git push
+          fi
