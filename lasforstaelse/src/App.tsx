@@ -42,10 +42,11 @@ function App() {
     setLoading(false);
   }, []);
 
-  // Keyboard shortcut för lärarvy (Ctrl+Shift+L)
+  // Keyboard shortcut för lärarvy (F8 eller Ctrl+Shift+P)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && (e.key === 'L' || e.key === 'l')) {
+      // F8 eller Ctrl+Shift+P öppnar lärarvyn
+      if (e.key === 'F8' || (e.ctrlKey && e.shiftKey && (e.key === 'P' || e.key === 'p'))) {
         e.preventDefault();
         setShowTeacher(true);
       }
