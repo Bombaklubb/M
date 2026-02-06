@@ -3494,5 +3494,415 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak5-vanskap-01",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den tomma platsen",
+    "text": "När klassen kom tillbaka från idrotten stod dörren till klassrummet på glänt. Det var ovanligt, för läraren Sara brukade alltid låsa när de gick ut. Inne i rummet luktade det lite av blött grus och varma jackor. Amal hängde av sig sin tröja och såg direkt att något saknades: Tavlan med klassens \"veckans mål\" var fortfarande där, men på raden med namn var en plats tom.\n\n\"Var är Maja?\" frågade någon.\n\nSara lade sin nyckelknippa på katedern och drog ett djupt andetag. \"Maja är hemma idag. Hon behövde en paus.\"\n\nAmal kände hur det knöt sig i magen. Maja brukade aldrig vara borta. Hon var den som alltid hade rätt penna, som alltid skrev rubriker med prydliga bokstäver och som aldrig glömde läxan. Men de senaste veckorna hade hon skrattat mindre. Hon hade suttit längre bak och tittat ut genom fönstret när andra pratade.\n\nPå rasten gick Amal ut med sin kompis Lucas. De ställde sig vid gungorna där marken var hård av is.\n\n\"Tror du hon är sjuk?\" frågade Lucas.\n\nAmal skakade på huvudet. \"Jag vet inte. Men Sara sa 'behövde en paus'.\"\n\nLucas sparkade lätt på en sten. \"Min storebror säger att folk kan bli trötta i huvudet. Som när man har haft för mycket på länge.\"\n\nAmal tänkte på hur Maja hade sett ut när hon fick tillbaka ett prov med ett enda fel och ändå såg missnöjd ut. Som om ett fel var ett bevis på något hemskt.\n\nPå eftermiddagen fick de i uppgift att skriva en kort text om något de var stolta över. Amal stirrade på pappret. Hon kunde skriva om att hon lärt sig cykla utan händer, men det kändes plötsligt oviktigt. I stället skrev hon: \"Jag är stolt över när jag vågar fråga hur någon mår.\" Hon visste inte om det var sant än, men hon ville att det skulle vara sant.\n\nEfter skolan gick Amal hem och öppnade klasschatten. Någon hade skrivit: \"Maja missar matteglosorna lol.\" Amal blev varm av ilska. Hon skrev inte direkt. Hon tänkte.\n\nSedan skrev hon: \"Hon är hemma för att hon behöver vila. Vi kan väl skriva något snällt i stället?\"\n\nDet blev tyst i chatten i några minuter. Till slut skrev Lucas: \"Jag kan skriva till henne privat.\"\n\nAmal gjorde det också. Hon skrev: \"Hej Maja. Jag saknar dig i klassen. Du behöver inte svara, men jag tänker på dig.\"\n\nTvå timmar senare kom ett svar: \"Tack. Jag har varit stressad länge. Det känns som jag aldrig räcker. Men ditt meddelande gjorde det lite lättare.\"\n\nNästa dag satte Sara upp ett nytt veckomål på tavlan: \"Vi övar på att vara en trygg klass.\" Under stod det: \"Fråga, lyssna, och skratta inte åt någon.\" Amal såg den tomma platsen i klassrummet och förstod att vänskap ibland är att märka när någon saknas – och att försöka göra platsen mindre ensam.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad upptäcker Amal att något saknas när de kommer tillbaka till klassrummet?",
+        "options": [
+          "Katedern",
+          "En plats på raden med namn på tavlan",
+          "Alla böcker",
+          "En stol vid fönstret"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger läraren Sara om varför Maja är hemma?",
+        "options": [
+          "Att hon är på resa",
+          "Att hon behövde en paus",
+          "Att hon har tappat sin nyckel",
+          "Att hon tränar inför en match"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad skriver Amal till Maja i sitt meddelande?",
+        "options": [
+          "Att hon ska skynda sig tillbaka",
+          "Att hon missar matteglosorna",
+          "Att Amal saknar henne och tänker på henne",
+          "Att hon måste göra om provet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tror Amal att Maja kan vara stressad även om hon brukar vara duktig i skolan?",
+        "options": [
+          "För att hon alltid vill vara perfekt och blir ledsen av små fel",
+          "För att hon inte kan läsa",
+          "För att hon hatar sin klass",
+          "För att hon inte gillar läraren Sara"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför väntar Amal en stund innan hon skriver i klasschatten när någon skämtar om Maja?",
+        "options": [
+          "Hon glömmer bort chatten",
+          "Hon vill tänka efter och skriva något som hjälper i stället för att bråka",
+          "Hon vill att fler ska skämta",
+          "Hon vill lämna gruppen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan man förstå att Sara vill uppnå med veckomålet \"Vi övar på att vara en trygg klass\"?",
+        "options": [
+          "Att alla ska vara tysta hela tiden",
+          "Att eleverna ska stötta varandra och minska sårande kommentarer",
+          "Att ingen ska få ha rast",
+          "Att alla ska få högsta betyg"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 474,
+      "fingerprint": "gpt4-001",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-natur-02",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Fåglarna vid bryggan",
+    "text": "Vinden drog i vassens toppar så att de viskade mot varandra. Vid den lilla bryggan stod Farah med en kikare som hon lånat av sin pappa. Hon hade fått i uppgift av sin NO-lärare att observera ett djur och skriva ner vad hon såg. Farah hade valt fåglar, för hon tyckte om att de både verkade fria och ändå följde regler som bara de förstod.\n\nBredvid henne stod Oskar och balanserade på en planka. Han hade valt samma plats för sin observation men såg mest ut som om han försökte bli varm.\n\n\"Ser du något?\" frågade han.\n\nFarah höjde kikaren och lät bilden bli skarp. \"En knipa,\" sa hon. \"Den har vit fläck på kinden. Och… vänta, den dyker!\"\n\nOskar rynkade pannan. \"Hur kan den vara under vattnet så länge?\"\n\nFarah sänkte kikaren. \"Den måste ha anpassningar. Kanske kan den hålla andan länge och använda fötterna som paddlar.\"\n\nDe stod tysta en stund. Farah skrev: \"Knipa dyker efter mat. Kommer upp med något litet i näbben.\" När hon tittade upp såg hon en grupp småfåglar hoppa på marken nära en buske.\n\n\"De letar efter frön,\" sa Farah.\n\nOskar sparkade försiktigt i gruset. \"Jag tycker synd om dem. Det är kallt.\"\n\n\"De är byggda för det,\" sa Farah. \"Men de behöver ändå mat. Det är därför de är så aktiva.\"\n\nPlötsligt flög en stor fågel över sjön. Den gled långsamt, som om den ägde luften. Farah kände hur hon automatiskt höll andan.\n\n\"Är det en örn?\" viskade Oskar.\n\nFarah tittade igen. \"Kanske en havsörn,\" sa hon. \"Den har stora vingar och håller dem nästan helt raka.\"\n\nDe följde den med blicken. Den gjorde en sväng, sjönk lite och steg sedan igen. Farah skrev snabbt: \"Rovfågel cirklar. Spanar.\"\n\nOskar började också skriva, men hans bokstäver blev skakiga av kylan. \"Jag kan inte så många arter,\" muttrade han.\n\nFarah tänkte på det. \"Du behöver inte kunna namnen på allt,\" sa hon. \"Du kan beskriva. Som: stor fågel, breda vingar, flyger långsamt. Det räknas.\"\n\nOskar tittade på henne och log lite. \"Det låter enklare när du säger det.\"\n\nNär lektionen var slut hade Farah en sida full med observationer. Men det viktigaste var att hon hade känt sig som en forskare, fast hon bara stod på en brygga. Hon hade tittat noga, dragit slutsatser och märkt att naturen var full av små beslut: när en fågel dyker, när den flyger, när den sparar energi.\n\nPå vägen tillbaka sa Oskar: \"Jag trodde NO bara var fakta. Men det här var… som att läsa en levande text.\"\n\nFarah nickade. \"Ja. Och vi hann bara ett kapitel.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad hade Farah lånat av sin pappa?",
+        "options": [
+          "En kamera",
+          "En kikare",
+          "En kompass",
+          "En ficklampa"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken fågel nämner Farah först att hon ser?",
+        "options": [
+          "Knipa",
+          "Svala",
+          "Skata",
+          "Trana"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken stor fågel tror de kan vara en havsörn?",
+        "options": [
+          "En fågel med breda vingar som glider långsamt",
+          "En liten fågel som hoppar på marken",
+          "En fågel som dyker snabbt ner",
+          "En fågel som sitter på bryggan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Farah att småfåglarna är så aktiva när det är kallt?",
+        "options": [
+          "För att de leker",
+          "För att de behöver hitta mycket mat för att få energi",
+          "För att de vill bli sedda",
+          "För att de inte kan sitta still"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad försöker Farah hjälpa Oskar med när hon säger att han kan beskriva istället för att kunna alla namn?",
+        "options": [
+          "Att han ska fuska",
+          "Att han ska känna sig trygg och lyckas med uppgiften",
+          "Att han ska sluta skriva",
+          "Att han ska byta plats"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför jämför Oskar NO-uppgiften med att läsa en levande text?",
+        "options": [
+          "För att fåglarna ser ut som bokstäver",
+          "För att observationer hjälper honom att förstå naturens beteenden som en berättelse",
+          "För att Farah läste högt",
+          "För att bryggan hade skyltar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "gpt4-002",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-teknik-03",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Från idé till uppfinning – så testar man smarta lösningar",
+    "text": "Har du någon gång tänkt: \"Det borde finnas en enklare lösning\"? Då har du redan börjat tänka som en uppfinnare. Teknik handlar inte bara om maskiner och skruvar, utan om att lösa problem i vardagen. För att en idé ska bli en fungerande uppfinning behöver man ofta följa en process, ungefär som en plan som kan ändras när man lär sig mer.\n\nFörst brukar man börja med att hitta ett problem. Det kan vara något litet, som att sladden till hörlurarna trasslar, eller något större, som att minska matsvinn. Sedan behöver man beskriva problemet tydligt: När händer det? Vem påverkas? Varför är det jobbigt?\n\nNästa steg är att skapa idéer. Ofta hjälper det att brainstorma, alltså att skriva ner många förslag utan att direkt säga att något är dåligt. Då kan även \"tokiga\" idéer leda till en bra lösning senare. Efter brainstormingen väljer man en idé som verkar möjlig att testa.\n\nSedan bygger man en prototyp. En prototyp är en enkel modell som visar hur uppfinningen kan fungera. Den behöver inte vara perfekt. Tvärtom är det bra om prototypen är snabb att bygga, för då kan man testa tidigt. Du kan använda kartong, tejp, gummiband, lego eller digitala ritningar.\n\nNär prototypen är klar testar man. Här kommer en viktig sak: tester visar ofta fel. Men fel betyder inte att man misslyckats. Fel betyder att man har fått information. Om en låda går sönder kan det betyda att materialet är för svagt eller att formen behöver ändras. Om en knapp är svår att trycka på kan det betyda att man måste tänka mer på användaren.\n\nEfter testet förbättrar man lösningen och testar igen. Den här cykeln – bygga, testa, förbättra – kan upprepas många gånger. Många kända uppfinningar har blivit bra just för att människor vågade ändra sina idéer.\n\nI skolan kan du använda samma process. Om ni till exempel ska bygga en hållbar bro av papper kan ni först bestämma vad \"hållbar\" betyder: ska den bära en bok? Två? Sedan kan ni testa olika former och se vilken som fördelar vikten bäst. Då lär du dig både teknik och problemlösning.\n\nAtt uppfinna handlar alltså om att tänka, prova och lära av resultaten. Det är som att vara detektiv: du undersöker vad som fungerar och varför. Och ibland är det just de små förbättringarna som gör att en idé blir riktigt smart.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas en enkel modell som visar hur en uppfinning kan fungera?",
+        "options": [
+          "Prototyp",
+          "Maskin",
+          "Regel",
+          "Reklam"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad betyder det att brainstorma enligt texten?",
+        "options": [
+          "Att välja den bästa idén direkt",
+          "Att skriva ner många idéer utan att direkt säga att något är dåligt",
+          "Att bygga en färdig produkt",
+          "Att sluta tänka på problemet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken cykel nämns som något man kan upprepa många gånger?",
+        "options": [
+          "Läsa, skriva, räkna",
+          "Bygga, testa, förbättra",
+          "Sova, äta, leka",
+          "Springa, hoppa, kasta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger texten att fel under tester inte betyder att man misslyckats?",
+        "options": [
+          "För att man aldrig kan misslyckas",
+          "För att fel ger information om vad som behöver ändras",
+          "För att tester alltid är lättare än byggandet",
+          "För att prototyper inte får testas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan \"tokiga\" idéer vara användbara i en brainstorming?",
+        "options": [
+          "För att de alltid blir bäst",
+          "För att de kan leda vidare till en bra lösning senare",
+          "För att läraren kräver det",
+          "För att man slipper bygga prototyper"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att du ska förstå om teknik i vardagen?",
+        "options": [
+          "Att teknik bara handlar om datorer",
+          "Att teknik handlar om att lösa problem och förbättra lösningar",
+          "Att teknik alltid är dyr",
+          "Att teknik inte hör hemma i skolan"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 391,
+      "fingerprint": "gpt4-003",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-samhalle-04",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "Varför behöver vi regler? Om trygghet och frihet",
+    "text": "Regler kan kännas jobbiga. Varför måste man stå i kö? Varför får man inte cykla på vissa ställen? Varför ska man vara tyst i biblioteket? Samtidigt gör regler ofta livet tryggare och enklare. De hjälper oss att veta vad som gäller när många människor ska dela samma plats.\n\nEn regel är en överenskommelse. När du spelar ett spel behöver ni regler för att spelet ska fungera. Utan regler skulle någon kunna säga: \"Jag vann för att jag bestämde det!\" och då skulle spelet bli orättvist. I samhället fungerar det liknande. Regler gör att alla vet vilka rättigheter och skyldigheter de har.\n\nI skolan finns regler för att alla ska kunna lära sig. Om det är väldigt stökigt blir det svårt att koncentrera sig, både för elever och lärare. Därför finns regler om att räcka upp handen, lyssna när andra pratar och inte störa med mobilen. Målet är inte att göra livet tråkigt, utan att skapa arbetsro.\n\nI trafiken är regler extra viktiga eftersom det kan vara farligt. Tänk om vissa körde på höger sida och andra på vänster. Då skulle olyckor hända hela tiden. Regler som övergångsställen, hastighetsgränser och cykelbanor gör att vi kan röra oss säkrare.\n\nMen regler måste också vara rimliga. Om en regel känns orättvis är det bra att fråga varför den finns och om den går att ändra. I en demokrati kan regler och lagar ändras när människor diskuterar och kommer överens. I skolan kan elevråd vara ett sätt att påverka, till exempel om elever vill ändra hur raster fungerar eller hur man använder mobil på lektionerna.\n\nRegler handlar alltså både om trygghet och frihet. Det kan låta konstigt, men när regler fungerar bra kan de ge mer frihet. Om du vet att bilar stannar vid ett övergångsställe kan du gå över tryggare. Om du vet att det är tyst i biblioteket kan du läsa i lugn och ro.\n\nAtt förstå regler är att förstå hur människor samarbetar. Regler är inte alltid perfekta, men de är ett försök att få många olika personer att kunna leva tillsammans utan att det blir kaos.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad jämför texten regler i samhället med för att förklara varför de behövs?",
+        "options": [
+          "Matlagning",
+          "Ett spel",
+          "En film",
+          "En teckning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel nämns som regler i trafiken?",
+        "options": [
+          "Att alltid springa",
+          "Övergångsställen och hastighetsgränser",
+          "Att ropa högt",
+          "Att måla skyltar själv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel nämns som ett sätt att påverka regler i skolan?",
+        "options": [
+          "Elevråd",
+          "Att strunta i regler",
+          "Att alltid komma sent",
+          "Att riva lappar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan regler ge mer frihet, enligt texten?",
+        "options": [
+          "För att regler gör att man alltid får som man vill",
+          "För att regler kan skapa trygghet så att man vågar göra saker, som att gå över gatan",
+          "För att regler tar bort allt ansvar",
+          "För att regler gör att ingen behöver tänka"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger texten att regler måste vara rimliga?",
+        "options": [
+          "För att regler annars blir svåra att följa och kan kännas orättvisa",
+          "För att regler bara är för vuxna",
+          "För att regler alltid ska vara hemliga",
+          "För att regler inte får skrivas ner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att du ska förstå om regler och samarbete?",
+        "options": [
+          "Att regler alltid är perfekta",
+          "Att regler är ett sätt för många olika människor att kunna leva tillsammans utan kaos",
+          "Att regler inte spelar någon roll",
+          "Att bara barn behöver regler"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 346,
+      "fingerprint": "gpt4-004",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-etik-05",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Den borttappade plånboken",
+    "text": "Det var på väg hem från skolan som Jamal såg den. En plånbok låg vid busshållplatsen, precis bredvid bänken. Den var brun och lite sliten, som om den hade varit med om mycket. Jamal stannade. Det var ingen annan där just då, bara en kvinna som pratade i telefon längre bort.\n\nHan plockade upp plånboken och kände att den var tung. Hans hjärta började slå snabbare. Han visste att man inte skulle ta saker som inte var ens egna, men han visste också att pengar kunde lösa många problem. Hans fotbollsskor var för små och mamma hade sagt att de skulle vänta till nästa månad.\n\nJamal öppnade plånboken. Där fanns ett bankkort och ett körkort. Bilden visade en man med glasögon och ett trött leende. Namnet var \"Lars Andersson\". Det fanns också sedlar, flera hundralappar.\n\nJamal stängde plånboken snabbt, som om den brände.\n\n\"Vad gör du?\" hörde han en röst.\n\nHan vände sig om. Det var Lin, en tjej från parallellklassen. Hon hade en cykelhjälm i handen och såg både nyfiken och misstänksam ut.\n\n\"Jag hittade den bara,\" sa Jamal.\n\nLin gick närmare. \"Då borde du lämna den.\"\n\nJamal tittade på plånboken igen. Han kände hur två tankar drog i honom åt olika håll: \"Ingen ser\" och \"Någon kommer sakna den.\"\n\n\"Vi kan gå till Ica,\" sa Lin. \"De brukar ha en hittegods-låda. Eller så kan vi ringa numret på körkortet… nej, det finns ju inget nummer. Men man kan lämna till polisen också.\"\n\nJamal suckade. \"Tänk om han behöver den idag?\"\n\nLin nickade. \"Det är därför vi ska lämna den nu.\"\n\nDe gick tillsammans till butiken. Jamal kände sig fortfarande orolig, men oron ändrade form. Det var som om den blev mer… ren. Vid kassan förklarade Lin vad de hittat. Kassören tog plånboken och skrev ner deras namn.\n\n\"Bra att ni kom,\" sa kassören. \"Folk blir jätteglada när de får tillbaka sånt här.\"\n\nNär de gick ut kände Jamal ett tomrum i handen, men också något annat: en slags stolthet som inte kom från att äga något, utan från att ha gjort rätt.\n\nLin såg på honom. \"Var det svårt?\"\n\nJamal nickade. \"Ja. För jag tänkte på skor.\"\n\nLin log lite. \"Jag fattar. Men du valde en sak som du kan vara stolt över längre än nya skor.\"\n\nPå kvällen berättade Jamal för sin mamma. Hon blev tyst en stund och gav honom sedan en kram. \"Det där,\" sa hon, \"är styrka.\"\n\nJamal tänkte på plånboken och på mannen på körkortet. Han hoppades att Lars Andersson skulle få tillbaka den snabbt. Och han insåg att etik ibland är ett val som ingen applåderar i stunden – men som gör att man kan sova lite lättare på natten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittade Jamal plånboken?",
+        "options": [
+          "I klassrummet",
+          "Vid busshållplatsen",
+          "På fotbollsplanen",
+          "I biblioteket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter mannen på körkortet i plånboken?",
+        "options": [
+          "Lars Andersson",
+          "Ali Hassan",
+          "Diego Perez",
+          "Kenji Sato"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vart går Jamal och Lin för att lämna plånboken?",
+        "options": [
+          "Till Ica",
+          "Till skolans expedition",
+          "Till sporthallen",
+          "Till busstationen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känner Jamal sig frestad att behålla pengarna i plånboken?",
+        "options": [
+          "Han vill köpa godis",
+          "Han behöver nya fotbollsskor och pengarna skulle hjälpa",
+          "Han gillar att samla sedlar",
+          "Han tror att plånboken är hans"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Lin när hon säger att Jamal valde något han kan vara stolt över längre än nya skor?",
+        "options": [
+          "Att skor alltid går sönder",
+          "Att ärlighet och rätt val kan kännas bra länge",
+          "Att Jamal inte gillar sport",
+          "Att pengar inte finns på riktigt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Jamals mamma att det han gjorde är \"styrka\"?",
+        "options": [
+          "För att det kräver mod att göra rätt även när man själv vill något annat",
+          "För att Jamal sprang snabbt till butiken",
+          "För att Lin bestämde allt",
+          "För att plånboken var tung"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 448,
+      "fingerprint": "gpt4-005",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
