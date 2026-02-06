@@ -79,75 +79,45 @@ export const SetupView: React.FC<SetupViewProps> = ({
       <div className="text-center mb-10">
         <div className="flex items-center justify-center gap-4 mb-4">
           <BookLogo size={56} />
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 dark:text-white">
             Läs och lär
           </h1>
         </div>
-        <p className="text-xl text-slate-500">
-          Din smarta läskompis. Vad vill du läsa om idag?
-        </p>
       </div>
 
-      <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg">
+      <div className="bg-white dark:bg-slate-800 p-6 md:p-8 rounded-3xl shadow-lg">
         {/* Välj svårighetsgrad */}
         <div className="mb-8">
-          <h2 className="text-lg font-bold text-slate-800 mb-4">Välj svårighetsgrad</h2>
-
-          {/* Tips box */}
-          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-6">
-            <div className="grid grid-cols-2 gap-3 text-sm">
-              <div className="flex items-center gap-2">
-                <span className="text-xl">👀</span>
-                <span className="text-slate-700">Läs noga</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl">🛑</span>
-                <span className="text-slate-700">Stanna när du inte förstår</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl">🧠</span>
-                <span className="text-slate-700">Försök förstå även det som inte står rakt ut</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl">🔍</span>
-                <span className="text-slate-700">Ta reda på ord du inte förstår</span>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-6 text-center">Börja ditt läsäventyr</h2>
 
           {/* Grade display */}
-          <div className="text-center mb-4">
-            <div className="text-6xl font-bold text-indigo-900">{getGradeDisplayText(selectedGrade)}</div>
+          <div className="text-center mb-6">
+            <div className="text-6xl font-bold text-indigo-600 dark:text-indigo-400">{getGradeDisplayText(selectedGrade)}</div>
             <div className={`text-lg font-semibold ${getGradeLabelColor(selectedGrade)}`}>
               {getGradeLabel(selectedGrade)}
             </div>
           </div>
 
-          {/* Slider */}
-          <div className="px-2">
-            <input
-              type="range"
-              min="1"
-              max="10"
-              value={selectedGrade}
-              onChange={(e) => setSelectedGrade(Number(e.target.value))}
-              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
-            />
-            <div className="flex justify-between text-sm text-slate-500 mt-2">
-              {GRADE_LABELS.map((item) => (
-                <span
-                  key={item.grade}
-                  className={`${item.grade === selectedGrade ? 'text-indigo-900 font-bold' : ''}`}
-                >
-                  {item.label}
-                </span>
-              ))}
-            </div>
+          {/* Grade selector buttons */}
+          <div className="flex justify-between items-center gap-1 md:gap-2 mb-2">
+            {GRADE_LABELS.map((item) => (
+              <button
+                key={item.grade}
+                onClick={() => setSelectedGrade(item.grade)}
+                className={`flex-1 py-3 md:py-4 rounded-xl font-bold text-sm md:text-base transition-all ${
+                  item.grade === selectedGrade
+                    ? 'bg-indigo-600 text-white shadow-lg scale-105'
+                    : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
           </div>
 
           {/* Text count indicator */}
           {textCounts[selectedGrade] !== undefined && (
-            <div className="text-center mt-4 text-sm text-slate-500">
+            <div className="text-center mt-4 text-sm text-slate-500 dark:text-slate-400">
               {textCounts[selectedGrade] > 0
                 ? `${textCounts[selectedGrade]} texter tillgängliga`
                 : 'Inga texter ännu - kommer snart!'}
@@ -162,7 +132,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
           className={`w-full py-4 px-6 rounded-xl text-white font-bold text-xl shadow-lg transition-all ${
             textCounts[selectedGrade] && textCounts[selectedGrade] > 0
               ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 hover:shadow-xl transform hover:scale-[1.02]'
-              : 'bg-slate-300 cursor-not-allowed'
+              : 'bg-slate-300 dark:bg-slate-600 cursor-not-allowed'
           }`}
         >
           Börja läsa!
