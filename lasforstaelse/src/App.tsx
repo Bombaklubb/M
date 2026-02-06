@@ -183,12 +183,12 @@ function App() {
   // Loading screen
   if (loading) {
     return (
-      <div className="min-h-screen bg-sky-50 flex items-center justify-center">
+      <div className="min-h-screen bg-sky-50 dark:bg-slate-900 flex items-center justify-center">
         <div className="text-center">
           <div className="flex justify-center mb-4 animate-bounce">
             <BookLogo size={80} />
           </div>
-          <p className="text-xl text-slate-600">Laddar...</p>
+          <p className="text-xl text-slate-600 dark:text-slate-300">Laddar...</p>
         </div>
       </div>
     );
@@ -202,7 +202,7 @@ function App() {
   // Profile view
   if (showProfile) {
     return (
-      <div className="min-h-screen bg-sky-50">
+      <div className="min-h-screen bg-sky-50 dark:bg-slate-900">
         <Header
           user={user}
           onLogout={handleLogout}
@@ -215,7 +215,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-sky-50">
+    <div className="min-h-screen bg-sky-50 dark:bg-slate-900">
       <Header
         user={user}
         onLogout={handleLogout}
