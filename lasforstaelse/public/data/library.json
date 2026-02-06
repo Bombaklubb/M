@@ -3904,5 +3904,415 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak6-vetenskap-11",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Vacciner och immunförsvaret – kroppens träningsprogram",
+    "text": "Immunförsvaret är kroppens försvarssystem. Det arbetar hela tiden, även när du inte märker det, och skyddar dig mot virus, bakterier och andra smittämnen. Ibland räcker det med enkla barriärer, som huden och slemhinnor, men om ett virus tar sig in i kroppen behöver immunförsvaret reagera snabbt och smart. Här spelar vacciner en viktig roll – inte som magi, utan som ett slags träningsprogram för immunförsvaret.\n\nNär ett virus eller en bakterie kommer in i kroppen försöker immunförsvaret först känna igen att något är \"främmande\". Vissa celler fungerar som väktare och larmar. Andra celler börjar attackera. Samtidigt startar en process där immunförsvaret skapar antikroppar. Antikroppar är proteiner som kan binda till smittämnen och göra det svårare för dem att infektera celler. Det finns också särskilda minnesceller som kommer ihåg hur smittan såg ut.\n\nDet är just minnet som är en nyckel. Första gången du blir sjuk av en ny smitta kan det ta tid innan kroppen byggt upp ett effektivt försvar. Under den tiden hinner du känna dig trött, få feber eller ont i halsen. Men om samma smitta kommer tillbaka senare kan minnescellerna snabbt sätta igång produktionen av antikroppar och andra försvar. Då kan du bli mindre sjuk, eller inte märka något alls.\n\nEtt vaccin hjälper kroppen att öva utan att du behöver bli allvarligt sjuk. Vacciner innehåller inte en \"färdig sjukdom\", utan delar av ett smittämne eller information som gör att kroppen kan känna igen smittan. När immunförsvaret möter vaccinet tränar det på att bygga upp försvar och skapa minnesceller. Om du senare möter den riktiga smittan har immunförsvaret redan en plan.\n\nDet finns olika typer av vacciner. Vissa innehåller inaktiverade delar av ett virus eller en bakterie. Andra använder en ofarlig version som liknar smittan. Det finns också vacciner som ger kroppen instruktioner att tillverka en liten, ofarlig del av smittämnet under en kort tid. Oavsett typ handlar idén om samma sak: att immunförsvaret ska känna igen och minnas.\n\nVarför pratar man ibland om \"flockimmunitet\"? Det betyder att om många i en grupp är skyddade blir det svårare för smittan att spridas. Då kan även personer som inte kan vaccinera sig, till exempel på grund av vissa sjukdomar, få ett indirekt skydd eftersom smittan får färre chanser att hoppa från person till person.\n\nVacciner kan ge biverkningar, som öm arm eller lätt feber. Det är ofta tecken på att immunförsvaret arbetar. Men allvarliga biverkningar är ovanliga, och därför undersöks vacciner noggrant innan de används.\n\nNär du förstår hur vacciner fungerar blir det tydligare att de inte \"ersätter\" immunförsvaret. De tränar det. Precis som i idrott blir du bättre av att öva i rätt dos. Immunförsvaret lär sig, minns och reagerar snabbare – och det kan göra stor skillnad för hur sjuk du blir och hur smittor sprids i samhället.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas proteinerna som kan binda till smittämnen och göra det svårare för dem att infektera celler?",
+        "options": [
+          "Enzymer",
+          "Antikroppar",
+          "Vitaminer",
+          "Hormoner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka celler nämns som en nyckel till att kroppen kan reagera snabbare nästa gång samma smitta kommer tillbaka?",
+        "options": [
+          "Minnesceller",
+          "Benceller",
+          "Hudceller",
+          "Muskelfibrer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka exempel på vanliga biverkningar nämns i texten?",
+        "options": [
+          "Öm arm eller lätt feber",
+          "Bruten arm",
+          "Suddig syn i flera veckor",
+          "Tappade tänder"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan man bli mindre sjuk andra gången man möter samma smitta?",
+        "options": [
+          "För att smittan alltid blir snällare",
+          "För att minnesceller gör att immunförsvaret kan sätta igång snabbare",
+          "För att kroppen glömmer att bli sjuk",
+          "För att man alltid har mer vitaminer då"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan flockimmunitet skydda personer som inte kan vaccinera sig?",
+        "options": [
+          "För att de får dubbla doser av andras vaccin",
+          "För att smittan får färre möjligheter att spridas när många andra är skyddade",
+          "För att virus försvinner om man pratar om det",
+          "För att bakterier inte gillar grupper"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att vacciner inte ersätter immunförsvaret utan tränar det?",
+        "options": [
+          "Att vacciner gör immunförsvaret onödigt",
+          "Att vacciner lär kroppen att känna igen smittor så den reagerar snabbare senare",
+          "Att vacciner bara fungerar på vintern",
+          "Att vacciner tar bort behovet av minnesceller"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 461,
+      "fingerprint": "gpt4-006",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak6-historia-12",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "historia",
+    "title": "Handel förr och nu – varför varor har format världen",
+    "text": "Handel betyder att människor byter eller köper och säljer varor och tjänster. Det låter enkelt, men handel har påverkat historien på djupa sätt. Genom handel har idéer spridits, städer vuxit, och ibland har konflikter uppstått. För att förstå historia räcker det därför inte att bara kunna kungar och krig. Man behöver också förstå vad människor behövde, vad de ville ha och hur varor rörde sig mellan platser.\n\nFörr i tiden var transporter långsamma och ofta farliga. Ändå reste varor långt. Kryddor, siden, salt och metaller kunde transporteras på karavanvägar eller med skepp. Tänk dig salt, som i dag känns självklart. Salt behövdes för att konservera mat, särskilt innan kylskåp fanns. Därför kunde salt vara väldigt värdefullt och påverka var människor byggde städer och hur man organiserade skatter.\n\nEn känd del av handelshistorien är Sidenvägen. Det var inte en enda väg, utan ett nät av rutter som kopplade samman delar av Asien, Mellanöstern och Europa. Där transporterades siden, kryddor och andra varor, men också berättelser, uppfinningar och religioner. När människor möttes vid marknader kunde de utbyta kunskap: hur man gör papper, hur man navigerar, vilka mediciner som används.\n\nHandel har också kopplats till makt. Städer som låg bra till, till exempel vid floder eller hav, kunde kontrollera handel och ta ut tullar. Det kunde göra staden rik, men det kunde också skapa avund och konflikter. På vissa platser bildades handelsförbund: grupper av städer som samarbetade för att skydda handel och få bättre villkor.\n\nMen handel har inte alltid varit rättvis. Under vissa perioder har människor utnyttjats. Handel med råvaror och varor kunde bygga rikedom för vissa, medan andra fick arbeta under hårda villkor. Därför behöver man i historia också prata om etik och konsekvenser: Vem tjänade på handeln? Vem betalade priset?\n\nI dag är handeln global på ett sätt som tidigare generationer knappast kunde föreställa sig. En mobiltelefon kan bestå av delar från många länder: metaller bryts i en region, komponenter tillverkas i en annan och telefonen monteras någon annanstans. Transporter går snabbare med lastfartyg, flyg och tåg, men det innebär också miljöpåverkan och frågor om arbetsvillkor.\n\nSamtidigt har handeln gjort att många varor blivit billigare och mer tillgängliga. Du kan köpa frukt från andra sidan jorden mitt i vintern, och du kan beställa saker hem med några klick. Det gör livet bekvämt, men ställer också krav på att vi tänker efter: behöver vi allt vi köper? Kan vi välja varor som håller längre? Kan vi reparera i stället för att slänga?\n\nNär du ser en vara i en butik kan du alltså tänka: den bär på en resa. Handel handlar om mer än pengar. Den handlar om vägar, människor, beslut och konsekvenser – och den hjälper oss att förstå varför världen ser ut som den gör.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken vara nämns som viktig förr bland annat för att konservera mat?",
+        "options": [
+          "Kaffe",
+          "Salt",
+          "Glass",
+          "Plast"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var Sidenvägen enligt texten?",
+        "options": [
+          "En enda rak väg genom Europa",
+          "Ett nät av rutter som kopplade samman delar av Asien, Mellanöstern och Europa",
+          "En modern motorväg i Kina",
+          "En hemlig tunnel under havet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka tre sätt att transportera varor nämns för dagens handel?",
+        "options": [
+          "Skidor, cykel och spark",
+          "Lastfartyg, flyg och tåg",
+          "Buss, taxi och spårvagn",
+          "Båt, häst och släde"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kunde städer vid floder eller hav få mer makt förr?",
+        "options": [
+          "För att de hade mer snö",
+          "För att de kunde kontrollera handel och ta ut tullar",
+          "För att de alltid hade bättre kungar",
+          "För att de inte behövde mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skriver texten att handel också kan handla om etik?",
+        "options": [
+          "För att alla varor är gratis",
+          "För att handel ibland har inneburit utnyttjande och orättvisa villkor",
+          "För att etik betyder samma sak som pengar",
+          "För att handel bara sker i skolor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan man förstå att texten vill att du ska göra som konsument idag?",
+        "options": [
+          "Köpa så mycket som möjligt",
+          "Aldrig köpa frukt på vintern",
+          "Tänka efter kring behov, hållbarhet och att reparera i stället för att slänga",
+          "Bara köpa varor från ett land"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 456,
+      "fingerprint": "gpt4-007",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak6-sport-13",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Sista varvet",
+    "text": "Idrottshallen luktade som den alltid gjorde på onsdagar: en blandning av golvpolish, svett och de där mjuka skumgummimattorna som aldrig riktigt torkar. Klass 6A stod i en halvcirkel medan läraren Jonas förklarade dagens pass: intervaller.\n\n\"Ni ska springa fyra varv,\" sa Jonas och höll upp fyra fingrar. \"Inte för att vara snabbast hela tiden, utan för att hitta ett tempo som går att hålla. Jag vill se att ni tänker.\"\n\nZahra kände hur hennes bröst stramade. Hon var bra på bollspel, men löpning var en annan sak. I femman hade hon sprungit för fort i början och sedan fått håll så att hon nästan grät av frustration. Hon mindes fortfarande hur några i klassen hade skrattat och sagt att hon \"alltid överdriver\".\n\nHon såg sig omkring. Vid ribbstolarna knöt Rami sina skor, lugn och metodisk. Han hade flyttat från Somalia för två år sedan och var ofta den som kunde springa längst utan att se trött ut. Längre bort stod Emilia och pratade om hur hon skulle slå sitt personliga rekord. Diego hoppade på stället som om han redan var ett steg före alla andra.\n\nNär de startade försökte Zahra göra något nytt: hon höll tillbaka. Hon lät Emilia och Diego rusa iväg. Hon fokuserade på andningen: in genom näsan, ut genom munnen. Första varvet kändes nästan lätt, och det gjorde henne misstänksam.\n\n\"Bra tempo,\" hörde hon en röst säga. Det var Rami, som låg bredvid henne. \"Många bränner allt direkt.\"\n\nZahra nickade utan att slösa luft.\n\nPå andra varvet började benen kännas tyngre. Zahra såg hur Emilia fortfarande sprang snabbt, men hennes axlar hade börjat åka upp mot öronen, som om kroppen försökte skydda sig. Diego saktade in och skakade på armarna, irriterat.\n\n\"Fokusera på stegen,\" sa Rami igen, som om han läste hennes tankar. \"Kortare steg kan hjälpa.\"\n\nZahra testade. Det kändes som en liten förändring, men plötsligt blev det lättare att hålla rytmen.\n\nPå tredje varvet kom tvivlet. \"Jag kommer ändå sist,\" tänkte Zahra. Då mindes hon Jonas ord: inte snabbast, utan hålla. Hon tittade på väggen där en klocka tickade. Varje sekund var en sak hon kunde klara.\n\nNär sista varvet började hörde hon Emilia flåsa. Emilia sneglade på Zahra och försökte öka igen, men stegen blev spretiga. Zahra kände hur hon själv fortfarande hade något kvar. Inte mycket, men tillräckligt.\n\nHon ökade lite, inte som en sprint, mer som att vrida upp volymen ett steg. Hon passerade Diego som nu gick några meter och såg arg ut på sig själv. Zahra ville säga något uppmuntrande men vågade inte mitt i andningen.\n\nMålgången var en tejplinje på golvet. Zahra korsade den och stannade, böjd framåt. Hon väntade på håll, på smärta, på skam.\n\nMen det kom inte.\n\nJonas kom fram och nickade. \"Du höll igen i början och ökade på slutet. Det där är smart löpning.\"\n\nZahra drog handen över pannan. Hon märkte att hon log, fast hon fortfarande var trött.\n\nRami kom i mål strax efter. \"Du såg ut som att du hade kontroll,\" sa han.\n\nZahra tänkte på ordet kontroll. Det handlade inte om att vara bäst. Det handlade om att lära sig sin egen kropp, och att inte låta gamla misslyckanden bestämma framtiden.\n\nNär de samlades för nedvarvning såg Zahra hur Diego satte sig bredvid henne.\n\n\"Jag sprang för fort igen,\" mumlade han.\n\nZahra tog ett djupt andetag som nu kändes lugnare. \"Nästa gång kan du testa att hålla igen,\" sa hon. \"Det funkade faktiskt.\"\n\nDiego tittade upp och nickade, och Zahra förstod att hennes seger inte bara var en tid på en klocka. Den var att hon vågade prova en ny strategi – och vågade dela den.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många varv ska eleverna springa enligt läraren Jonas?",
+        "options": [
+          "Två",
+          "Tre",
+          "Fyra",
+          "Sex"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är Zahra bra på enligt berättelsen?",
+        "options": [
+          "Löpning",
+          "Bollspel",
+          "Gymnastikringar",
+          "Simning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket råd ger Rami som kan hjälpa Zahra under passet?",
+        "options": [
+          "Att ta längre steg",
+          "Att sluta springa helt",
+          "Att springa med armarna upp",
+          "Att ta kortare steg"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför bestämmer Zahra sig för att hålla tillbaka i början?",
+        "options": [
+          "För att hon vill bli sist",
+          "För att hon minns att hon tidigare sprang för fort och fick håll",
+          "För att Jonas sa att man måste gå först",
+          "För att hon vill att Emilia ska vinna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Emilias axlar som åker upp mot öronen om hennes kropp?",
+        "options": [
+          "Att hon är avslappnad",
+          "Att hon har mer energi än alla",
+          "Att hon börjar bli spänd och trött",
+          "Att hon har ont i foten från början"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Zahra stolt på slutet, även om hon fortfarande är trött?",
+        "options": [
+          "För att hon aldrig blev svettig",
+          "För att hon lärde sig en strategi och kände kontroll i stället för skam",
+          "För att Diego gav henne ett pris",
+          "För att Jonas avbröt passet tidigt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 605,
+      "fingerprint": "gpt4-008",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak6-samhalle-14",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Mötet i skolmatsalen",
+    "text": "Det började med en lapp på anslagstavlan utanför matsalen: \"Elevmöte om skolmaten – tisdag 14.30. Alla som vill påverka är välkomna.\"\n\nAisha läste lappen två gånger. Hon hade ätit skolmat i flera år och brukar säga att hon \"inte bryr sig\", men sanningen var att hon ofta gick från matsalen hungrig. Inte för att maten var för liten, utan för att den ibland kändes stressig: långa köer, högt ljud, och en känsla av att man måste välja snabbt.\n\nHennes kompis Viktor ryckte på axlarna. \"Det är väl bara att äta,\" sa han.\n\n\"Det är inte bara,\" sa Aisha. Hon visste inte exakt hur hon skulle förklara, men hon kände det i kroppen.\n\nPå tisdagen satt ett tjugotal elever på stolar som någon släpat fram. Längst fram stod rektorn Helena, kökschefen Maria och en kille från elevrådet som hette Reza. Reza såg nervös ut, men han hade också ett block fullt av anteckningar.\n\n\"Vi vill lyssna,\" sa Helena. \"Men vi behöver också konkreta förslag.\"\n\nReza räckte upp handen först. \"Många klagar på ljudet,\" sa han. \"Kan vi testa att dela upp lunchtiderna mer? Så att det inte blir samma trängsel?\"\n\nMaria nickade långsamt. \"Det kan gå, men då behöver vi planera personalen annorlunda. Och lärarna måste följa tiderna.\"\n\nAisha kände hur modet växte. Hon räckte upp handen.\n\n\"Jag vill säga en sak om köerna,\" sa hon. \"När det är stressigt tar man ofta det som finns närmast. Då blir det mer matsvinn, för folk tar något de egentligen inte vill ha och slänger.\"\n\nDet blev tyst. Hon var rädd att hon hade sagt något konstigt, men Maria såg intresserad ut.\n\n\"Det där är faktiskt sant,\" sa Maria. \"Vi ser att vissa rätter slängs mer när det är trångt.\"\n\nViktor räckte upp handen, lite förvånad över sig själv. \"Kan man ha två serveringsställen?\" frågade han. \"Som en extra station med sallad eller bröd, så att kön delas?\"\n\nMaria skrattade kort. \"Det skulle hjälpa. Men vi behöver plats.\"\n\nReza bläddrade i sitt block. \"Vi kan också tydliggöra menyn,\" sa han. \"Om man vet vad som kommer kan man förbereda sig och välja snabbare. Kanske skyltar med allergiinformation som syns bättre.\"\n\nAisha såg flera nicka. Bredvid henne satt Mei och viskade: \"Jag blir alltid osäker på såser. Jag vill se vad som är i.\"\n\nAisha räckte upp handen igen. \"Och kan man ha en 'lugna hörnan'?\" sa hon. \"Inte för att prata mindre, men för att man ska kunna äta utan att få ont i huvudet. Som ett område där man inte skriker.\"\n\nHelena skrev ner. \"Det låter som en regel vi kan testa,\" sa hon. \"Men då måste eleverna själva hjälpa till att hålla den.\"\n\nNär mötet var slut var inget magiskt löst. Men Aisha kände något viktigt: att samhälle inte bara är riksdag och val. Samhälle är också att sitta i en matsal och försöka hitta lösningar tillsammans, även när man inte tycker exakt lika.\n\nPå vägen ut sa Viktor: \"Okej, du hade rätt. Det var inte 'bara att äta'.\"\n\nAisha log, trött men nöjd. \"Det är lätt att klaga,\" sa hon. \"Men det är svårare att föreslå. Fast… också bättre.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter mötet om skolmaten?",
+        "options": [
+          "I biblioteket",
+          "I skolmatsalen",
+          "I idrottshallen",
+          "På skolgården"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter kökschefen som är med på mötet?",
+        "options": [
+          "Maria",
+          "Helena",
+          "Reza",
+          "Aisha"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket förslag nämns för att minska trängseln i kön?",
+        "options": [
+          "Att stänga matsalen tidigare",
+          "Att alla tar med mat hemifrån",
+          "Att ha två serveringsställen eller extra station",
+          "Att förbjuda sallad"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kopplar Aisha stressiga köer till matsvinn?",
+        "options": [
+          "För att stress gör att man glömmer att äta",
+          "För att man tar första bästa och slänger om man inte vill ha det",
+          "För att maten blir kall direkt",
+          "För att personalen lagar mer mat när det är trångt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger rektorn att eleverna måste hjälpa till om de testar en 'lugna hörnan'?",
+        "options": [
+          "För att lärarna inte får vara i matsalen",
+          "För att en regel bara fungerar om de som använder platsen följer den",
+          "För att Maria inte gillar regler",
+          "För att maten då blir billigare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Aisha med att samhälle också kan vara ett möte i matsalen?",
+        "options": [
+          "Att matsalen styr hela landet",
+          "Att samhälle handlar om att samarbeta och påverka sin vardag nära sig",
+          "Att man måste rösta om allt varje dag",
+          "Att bara vuxna får bestämma i skolan"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 519,
+      "fingerprint": "gpt4-009",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak6-musik-15",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Ljud, hörsel och volym – varför musik kan kännas i kroppen",
+    "text": "Har du någon gång känt att en låt inte bara hörs, utan nästan känns i kroppen? Som att basen gör magen varm eller att ett högt ljud får dig att rycka till. Det beror på att ljud är vibrationer som rör sig genom luften (och ibland genom material) och som kan påverka både öron och kropp.\n\nLjud uppstår när något vibrerar. En gitarrsträng vibrerar när du slår an den. Ett trumskinn vibrerar när du slår på det. Vibrationerna skapar tryckvågor i luften. Dessa vågor sprids åt alla håll. När vågorna når ditt öra fångas de upp av ytterörat och leds in i hörselgången till trumhinnan, som börjar vibrera.\n\nBakom trumhinnan finns tre små ben i mellanörat som förstärker vibrationerna och skickar dem vidare till innerörat. I innerörat finns snäckan, som är fylld med vätska och har små hårceller. När vätskan rör sig böjs hårcellerna och skickar signaler till hjärnan. Hjärnan tolkar signalerna som ljud: en röst, en fiol, en dörr som slår igen.\n\nTvå ord är extra viktiga när man pratar om ljud: frekvens och amplitud. Frekvens handlar om hur snabbt något vibrerar. Hög frekvens ger ljusare toner, som en vissling. Låg frekvens ger mörkare toner, som en bas. Amplitud handlar om hur stora vibrationerna är, alltså hur starkt ljudet är. Större amplitud brukar kännas som högre volym.\n\nVarför kan bas \"kännas\"? Låga frekvenser har längre våglängd och kan lättare få större delar av luften (och ibland din kropp) att vibrera. Därför kan du känna basen i ett rum, särskilt om du står nära en högtalare.\n\nHörseln är fantastisk, men den kan också ta skada. Om ljud är för starka under en längre tid kan hårcellerna i innerörat skadas. De växer inte alltid tillbaka, vilket betyder att hörselskador kan bli långvariga. Tecken på att ljud varit för starkt kan vara att det piper i öronen efteråt eller att allt låter dämpat.\n\nDet betyder inte att du måste vara rädd för musik. Det betyder att du kan lyssna smart. En tumregel är att ge öronen pauser och att sänka volymen om du måste höja rösten för att prata med någon bredvid dig. Hörselkåpor på konserter kan också vara ett bra skydd och gör inte upplevelsen sämre – ofta hör man faktiskt tydligare.\n\nNär du förstår ljud blir musik mer spännande. Du kan börja lyssna efter: Är det en ljus melodi med hög frekvens? Är trummorna starka med stor amplitud? Och när basen känns i kroppen kan du tänka: det är fysik som blir till känsla.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är ljud enligt texten?",
+        "options": [
+          "Färg som rör sig",
+          "Vibrationer som rör sig genom luften",
+          "Ljus som studsar",
+          "Vatten som kokar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter delen i innerörat som är fylld med vätska och har hårceller?",
+        "options": [
+          "Snäckan",
+          "Pupillen",
+          "Lungan",
+          "Strupen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka två ord lyfts fram som extra viktiga när man pratar om ljud?",
+        "options": [
+          "Syre och kol",
+          "Frekvens och amplitud",
+          "Värme och kyla",
+          "Smak och lukt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan basen ibland kännas i kroppen enligt texten?",
+        "options": [
+          "För att bas alltid är farlig",
+          "För att låga frekvenser kan få större delar av luften och ibland kroppen att vibrera",
+          "För att hjärnan blandar ihop ljud och smak",
+          "För att högtalare skickar elektricitet in i kroppen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan hörselskador bli långvariga?",
+        "options": [
+          "För att trumhinnan alltid går sönder",
+          "För att hårceller i innerörat kan skadas och inte alltid växa tillbaka",
+          "För att örat slutar fungera på vintern",
+          "För att ljud fastnar i hörselgången"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken situation i texten är ett tecken på att volymen kan vara för hög?",
+        "options": [
+          "Att du kan viska till någon",
+          "Att du måste höja rösten för att prata med någon bredvid dig",
+          "Att du blir hungrig av musik",
+          "Att du inte gillar låten"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 414,
+      "fingerprint": "gpt4-010",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
