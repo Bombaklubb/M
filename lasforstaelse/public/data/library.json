@@ -4314,5 +4314,415 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak8-vetenskap-01",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Antibiotikaresistens – när bakterier lär sig överleva",
+    "text": "Antibiotika är läkemedel som används för att döda bakterier eller hindra dem från att föröka sig. När antibiotika fungerar kan de rädda liv, till exempel vid lunginflammation, blodförgiftning eller infektioner efter operationer. Men det finns ett växande problem som gör att antibiotika ibland inte biter: antibiotikaresistens. Det betyder att bakterier förändras så att de klarar av medicinen och kan fortsätta spridas.\n\nFör att förstå resistens kan du tänka på bakterier som en stor grupp där individer inte är helt lika. När antibiotika ges dör de bakterier som är känsliga, men om några råkar ha egenskaper som gör att de överlever får de ett stort försprång. De kan då föröka sig och bli fler. På så sätt blir bakterierna i gruppen mer och mer motståndskraftiga. Det här är evolution i snabb version: variation, urval och spridning.\n\nBakterier kan bli resistenta på flera sätt. Ibland uppstår slumpmässiga mutationer (små förändringar i arvsmassan) som gör att antibiotika inte längre kan påverka bakterien som förr. Bakterier kan också utbyta genetisk information med varandra, nästan som att de \"lånar\" bra lösningar. Det gör att resistens kan spridas snabbt, även mellan olika bakteriearter.\n\nVarför ökar resistensen? En viktig orsak är överanvändning och felanvändning. Om antibiotika tas när det inte behövs, till exempel vid virusinfektioner som förkylning (där antibiotika inte fungerar), utsätts bakterier i kroppen ändå för läkemedlet. Då ökar chansen att resistenta bakterier överlever och sprids. Ett annat problem är om man avbryter en kur för tidigt. Då kan de starkaste bakterierna, som klarat sig längst, bli kvar och börja växa igen.\n\nResistens hänger också ihop med hur antibiotika används i samhället. I vissa delar av världen har antibiotika använts mycket inom djurhållning, ibland för att förebygga sjukdom i stora besättningar. Det kan skapa resistenta bakterier som kan spridas via mat, vatten eller kontakter mellan människor och djur. I dag arbetar många länder för att minska den typen av användning, men det kräver både regler och kontroll.\n\nKonsekvenserna kan bli stora. Om antibiotika slutar fungera blir vanliga infektioner farligare. Operationer, cancerbehandlingar och intensivvård blir också mer riskfyllda, eftersom patienter då är extra sårbara för infektioner. Det betyder inte att vi \"är tillbaka på medeltiden\", men det betyder att modern sjukvård blir svårare utan fungerande antibiotika.\n\nVad kan man göra? På individnivå handlar det om att använda antibiotika på rätt sätt: bara när läkare bedömer att det behövs, och att fullfölja behandlingen enligt ordination. På samhällsnivå handlar det om smittskydd, bättre hygien i vården, snabbare tester som visar om en infektion är bakterie eller virus, samt forskning som kan ta fram nya antibiotika och alternativa behandlingar.\n\nDet viktiga är att förstå att antibiotikaresistens inte är en \"skuldfälla\" där allt ligger på en person. Det är en gemensam utmaning. Bakterier är smarta på sitt sätt: de anpassar sig. Därför behöver vi också vara smarta – med kunskap, samarbete och tydliga rutiner – för att antibiotika ska fungera även i framtiden.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder antibiotikaresistens enligt texten?",
+        "options": [
+          "Att antibiotika bara fungerar på virus",
+          "Att bakterier förändras så att de klarar av antibiotika och kan fortsätta spridas",
+          "Att kroppen slutar behöva medicin",
+          "Att antibiotika alltid ger feber"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel nämns på en infektion där antibiotika inte fungerar, eftersom det ofta är virus?",
+        "options": [
+          "Förkylning",
+          "Blodförgiftning",
+          "Bakteriell lunginflammation",
+          "Sårinfektion efter operation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka tre ord beskriver texten som grunden i evolutionen i sammanhanget resistens?",
+        "options": [
+          "Fart, styrka och tur",
+          "Variation, urval och spridning",
+          "Hunger, sömn och träning",
+          "Värme, kyla och ljus"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan det vara riskabelt att avbryta en antibiotikakur för tidigt?",
+        "options": [
+          "För att medicinen då blir billigare",
+          "För att de starkaste bakterierna kan överleva och börja växa igen",
+          "För att virus då blir starkare",
+          "För att kroppen glömmer hur man sväljer tabletter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan antibiotikaresistens göra operationer mer riskfyllda?",
+        "options": [
+          "För att operationer tar längre tid när man har resistens",
+          "För att resistenta infektioner blir svårare att behandla när patienten är sårbar",
+          "För att antibiotika behövs för att söva patienter",
+          "För att bakterier bara finns i sjukhusluft"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad antyder texten om varför problemet inte kan lösas av enbart individers val?",
+        "options": [
+          "För att bakterier inte påverkas av medicin",
+          "För att resistens också hänger ihop med vårdrutiner, djurhållning, regler och forskning",
+          "För att hygien inte spelar någon roll",
+          "För att antibiotika snart kommer förbjudas överallt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 482,
+      "fingerprint": "gpt4-001",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak8-samhalle-02",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "Demokrati i praktiken – varför regler, rättigheter och ansvar hänger ihop",
+    "text": "Demokrati är mer än att rösta vart fjärde år. I ett demokratiskt samhälle finns idéer om att makt ska kunna granskas, att människor ska ha rättigheter och att beslut ska fattas på ett sätt som är öppet och möjligt att påverka. Samtidigt finns det ett faktum som ibland glöms bort: demokrati fungerar inte automatiskt. Den behöver både regler och en kultur där människor accepterar att andra kan tycka annorlunda.\n\nEn grund i demokrati är rättigheter. I Sverige skyddas många rättigheter av lagar och av grundlagar. Exempel är yttrandefrihet, religionsfrihet och rätten att organisera sig i föreningar. Men rättigheter kommer ofta tillsammans med ansvar. Om du har yttrandefrihet betyder det inte att du kan säga vad som helst utan konsekvenser. Du får uttrycka åsikter, men du får inte hota andra eller sprida hat mot grupper på ett sätt som bryter mot lagen. Det handlar om att samhället försöker balansera frihet med trygghet.\n\nEn annan grund är maktdelning och kontroll. I en demokrati ska ingen enskild person eller grupp kunna bestämma allt utan att bli granskad. Därför finns det institutioner och regler som gör att beslut kan prövas. Domstolar kan avgöra om något bryter mot lagen. Myndigheter ska följa regler och behandla människor likvärdigt. Media har en roll att granska makthavare, vilket ibland kallas \"den tredje statsmakten\", även om det inte är en formell makt på samma sätt som riksdag, regering och domstolar.\n\nDemokrati påverkas också av hur vi diskuterar. Om samhällsdebatten blir fylld av personangrepp, förenklingar och misstänksamhet kan människor sluta lyssna på varandra. Då kan det bli lättare för grupper att dela upp samhället i \"vi\" och \"de\", vilket ofta gör kompromisser svårare. Kompromiss är ett ord som ibland låter tråkigt, men i demokrati är det ofta ett tecken på att man försökt hitta en lösning som fler kan leva med.\n\nI din vardag syns demokrati i små beslut. Varför får elevrådet finnas? För att skolan tränar elever i att föra fram idéer, lyssna på andra och påverka sin miljö. Varför har klassregler en diskussion ibland? För att regler fungerar bättre om människor förstår varför de finns och har varit delaktiga i processen.\n\nSamtidigt kan demokrati utmanas. En utmaning är desinformation som gör att människor tappar tillit till institutioner. En annan är om människor känner att de aldrig blir hörda, eller om vissa grupper systematiskt får mindre inflytande. Därför är det viktigt med delaktighet: att kunna delta, bli lyssnad på och få svar.\n\nDemokrati är alltså både ett system och en färdighet. Systemet är lagar, val, myndigheter och domstolar. Färdigheten är att kunna diskutera, tåla motstånd, tänka källkritiskt och ta ansvar för hur man påverkar andra. När de två delarna fungerar tillsammans kan demokrati bli stark. När någon del brister blir demokratin svagare, och det kan gå snabbare än man tror.\n\nAtt förstå demokrati i praktiken är att förstå att frihet inte bara handlar om att få göra vad man vill. Frihet handlar också om att andra ska kunna göra det, utan att bli hotade eller tystade. Därför hänger regler, rättigheter och ansvar ihop.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken rättighet nämns som ett exempel på något som skyddas i ett demokratiskt samhälle?",
+        "options": [
+          "Yttrandefrihet",
+          "Rätt att alltid få som man vill",
+          "Rätt att slippa alla regler",
+          "Rätt att bestämma över andras kroppar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken roll nämns som en granskande kraft i samhället, ibland kallad \"den tredje statsmakten\"?",
+        "options": [
+          "Rektorn",
+          "Media",
+          "Elevrådet",
+          "Sportföreningar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett exempel på demokrati i vardagen som texten tar upp?",
+        "options": [
+          "Att internet stängs på natten",
+          "Att elevrådet finns för att elever ska kunna påverka",
+          "Att alla alltid måste vara överens",
+          "Att man aldrig får ändra regler"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger texten att yttrandefrihet inte betyder att man kan säga vad som helst utan konsekvenser?",
+        "options": [
+          "För att åsikter alltid är förbjudna",
+          "För att samhället försöker balansera frihet med trygghet och vissa saker kan bryta mot lagen",
+          "För att domstolar bestämmer vad du tycker",
+          "För att demokrati inte tillåter kritik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan kompromisser vara viktiga i en demokrati enligt textens resonemang?",
+        "options": [
+          "För att kompromiss alltid ger den bästa lösningen",
+          "För att kompromiss kan vara ett sätt att hitta beslut som fler kan leva med",
+          "För att kompromiss gör att ingen behöver diskutera",
+          "För att kompromiss betyder att man vinner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken risk beskriver texten om samhällsdebatten blir fylld av personangrepp och misstänksamhet?",
+        "options": [
+          "Att människor lyssnar mer på varandra",
+          "Att det blir lättare att dela upp samhället i \"vi\" och \"de\" och svårare att samarbeta",
+          "Att alla börjar läsa mer böcker",
+          "Att lagar slutar gälla direkt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 504,
+      "fingerprint": "gpt4-002",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak8-historia-03",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Sot på fingertopparna",
+    "text": "När Nadir följde med sin moster Laila till stadsmuseet trodde han att det skulle bli som vanligt: montrar med gamla saker och skyltar som man läser snabbt för att sedan gå vidare. Men moster Laila, som kom från Irak och alltid sa att historia finns i både sten och människor, gick långsamt och pekade på detaljer som Nadir annars hade missat.\n\nI ett rum stod en gammal vävstol och bredvid låg ett par arbetshandskar. På väggen hängde ett svartvitt foto av ungdomar i randiga skjortor utanför en fabrik. Under stod det: \"Textilindustrin, 1912.\"\n\n\"De är nästan i din ålder,\" sa Laila.\n\nNadir drog på axlarna. \"Det var väl så det var förr.\"\n\nLaila svarade inte direkt. Hon gick vidare till nästa monter. Där låg en liten anteckningsbok, spröd i kanterna, med en lapp: \"Dagbok, okänd arbetare.\"\n\nNadir lutade sig fram. Sidan som låg uppslagen visade sneda bokstäver. Han läste högt, halvt skämtande: \"'Klockan ringde före solen. Jag sprang för att inte bli av med platsen.'\"\n\nLaila tittade på honom. \"Känner du igen känslan?\"\n\nNadir tänkte på morgnar när han hade stressat till bussen och på den där rädslan att komma sent och bli sedd av alla. Han ville säga nej, men orden fastnade.\n\nDe fick låna ett häfte med kopior av fler sidor ur dagboken. Nadir satte sig på en bänk och började läsa mer seriöst. Dagboken berättade om ett skift som aldrig tog slut, om en förman som räknade minuter, och om lungor som brände av damm. Författaren skrev också om små saker: doften av bröd på vägen hem, en vän som delade sin sista äppelbit, och en lördag då de gick ner till älven bara för att se vatten som rörde sig utan att någon kommenderade det.\n\nNadir tittade upp. Han såg människor gå genom museet med jackor, mobiltelefoner och kaffe i handen. Det kändes plötsligt märkligt att de stod här, i en byggnad där man visade spåren av andra liv.\n\n\"Varför står det 'okänd'?\" frågade han.\n\n\"För att många som arbetade inte skrev böcker som sparades i fina bibliotek,\" sa Laila. \"Deras berättelser försvann ofta. Men de formade städerna. De byggde fabrikerna, de sydde kläderna, de gjorde att andra kunde tjäna pengar.\"\n\nNadir läste en rad till: \"'När jag tvättar händerna blir vattnet grått. Sotet sitter kvar i vecken.'\"\n\nHan tittade på sina egna händer. De var rena. Han tänkte på att hans största problem den här veckan hade varit ett matteprov och en konflikt i gruppchatten.\n\n\"Det låter hemskt,\" sa han.\n\n\"Det var hårt,\" sa Laila. \"Men historien är inte bara elände. Den är också förändring. Människor organiserade sig, krävde bättre villkor, och så småningom blev lagar annorlunda. Arbetstid, skolgång, skydd. Inget kom gratis.\"\n\nNadir satt tyst. Han kände sig märkligt nära någon som levde för över hundra år sedan, bara genom orden på papper.\n\nNär de skulle gå ut passerade de en vägg där det stod: \"Vilka röster saknas i historien?\" Nadir stannade.\n\n\"Min morfar berättade om sin första vinter i Sverige,\" sa han långsamt. \"Han skrev aldrig ner det. Men det är också historia, eller hur?\"\n\nLaila log. \"Precis. Och om du lyssnar och minns, då hjälper du en röst att inte försvinna.\"\n\nPå vägen hem kände Nadir något nytt: att historia inte bara var ett ämne. Det var sot på fingertopparna, arbete i gryning, och människor som ändå orkade drömma. Och han visste att nästa gång han såg ett gammalt foto skulle han undra vem som stod utanför bildkanten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket år står det på skylten vid fotot från textilindustrin?",
+        "options": [
+          "1890",
+          "1912",
+          "1939",
+          "1974"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad står det på lappen bredvid anteckningsboken i montern?",
+        "options": [
+          "Dagbok, okänd arbetare",
+          "Receptbok, okänd kock",
+          "Skolbok, okänd elev",
+          "Resedagbok, okänd turist"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med vattnet när dagboksförfattaren tvättar händerna?",
+        "options": [
+          "Det blir blått",
+          "Det blir grått",
+          "Det blir varmt",
+          "Det blir iskallt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför frågar Laila om Nadir känner igen känslan av att springa för att inte förlora sin plats?",
+        "options": [
+          "För att hon vill att han ska börja träna löpning",
+          "För att hon vill koppla historien till en modern känsla av stress och press",
+          "För att hon tror att Nadir vill jobba i fabrik",
+          "För att museet har en tävling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför står det att arbetaren är \"okänd\" enligt Lailas förklaring?",
+        "options": [
+          "För att ingen brydde sig om namn då",
+          "För att många arbetare inte fick sina berättelser sparade på samma sätt som rika och mäktiga",
+          "För att dagboken är påhittad",
+          "För att museet glömde att skriva namnet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad förändras i Nadirs syn på historia i slutet av berättelsen?",
+        "options": [
+          "Han tycker att historia bara är datum",
+          "Han börjar se historia som människors liv och röster, även sådana som annars kan glömmas",
+          "Han bestämmer sig för att aldrig gå på museum igen",
+          "Han tror att allt förr var bättre"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 576,
+      "fingerprint": "gpt4-003",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak8-musik-04",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Sampling, remix och upphovsrätt – vem äger ett ljud?",
+    "text": "Du har säkert hört låtar som låter bekanta, som om de lånar en bit av en äldre låt. Det kan vara en trumloop, en melodi eller ett kort vokal-ljud. När en artist använder en del av en annan inspelning kallas det ofta sampling. Sampling är vanligt i många genrer, särskilt hiphop, elektronisk musik och pop. Det kan vara kreativt och smart, men det väcker också frågor: är det en hyllning, en stöld, eller något mitt emellan?\n\nFörst behöver man förstå vad en sampling är rent praktiskt. En producent tar ett ljudklipp från en inspelning, till exempel två takter från en gammal soul-låt. Sedan kan klippet klippas, tonhöjas, loopas, spelas baklänges eller blandas med nya instrument. Ibland hör man tydligt var ljudet kommer ifrån, ibland är det nästan omöjligt att känna igen.\n\nSampling har också en historik. På 1970- och 80-talen började DJs och producenter experimentera med skivspelare och trummaskiner. De hittade \"breaks\" i låtar, alltså partier där trummorna var extra tydliga, och använde dem för att skapa nya rytmer. Senare blev sampling ett sätt att bygga en musikalisk dialog mellan generationer: man kunde ta något gammalt och göra det nytt.\n\nMen här kommer upphovsrätten in. Upphovsrätt är regler som skyddar den som skapat ett verk, till exempel en låt. Den handlar både om själva kompositionen (melodi och text) och om inspelningen (den specifika versionen som spelats in). Om du samplar en inspelning kan du behöva tillstånd från dem som äger rättigheterna. Det kan vara artisten, skivbolaget eller låtskrivarna, beroende på avtal.\n\nVarför krävs tillstånd? En anledning är att skapande ses som arbete. Om någon annan kan använda din musik gratis kan det kännas orättvist. Samtidigt är musik ofta byggd på influenser. Ingen skapar helt i ett vakuum. Därför finns det en diskussion om var gränsen går mellan inspiration och kopiering.\n\nI dag finns också tekniska lösningar som gör att sampling kan upptäckas lättare. Plattformar och företag kan analysera ljud och hitta likheter mellan inspelningar. Det gör att rättighetsfrågor ibland kommer upp snabbt, även om artisten inte hade en ond avsikt. Det kan också påverka vilka som vågar experimentera.\n\nDet finns olika sätt att arbeta lagligt och etiskt. En del artister betalar för \"clearing\", alltså att få samplet godkänt. Andra skapar egna ljud som låter som en viss stil utan att ta från en specifik inspelning. Man kan också använda ljudbibliotek som är fria eller licensierade för användning.\n\nFrågan \"vem äger ett ljud?\" har inget enkelt svar. Ljud är både fysiska vibrationer och kulturella idéer. Upphovsrätten försöker skydda skapare, men den påverkar också hur kultur får utvecklas. För dig som lyssnare kan sampling bli ett sätt att upptäcka musik bakåt i tiden. En låt du hör i dag kan vara en dörr till en artist från 1960-talet. Och när du själv skapar musik blir det extra viktigt att förstå reglerna, inte för att kreativitet ska stoppas, utan för att kreativitet ska kunna blomma utan att någon blir utnyttjad.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas det när en artist använder en del av en annan inspelning i en ny låt?",
+        "options": [
+          "Stämning",
+          "Sampling",
+          "Tystnad",
+          "Improvisation"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel nämns på hur ett sample kan förändras?",
+        "options": [
+          "Det kan bli till vatten",
+          "Det kan klippas, loopas eller tonhöjas",
+          "Det kan bli en målning",
+          "Det kan försvinna helt ur låten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka två delar av musik skyddas ofta av upphovsrätt enligt texten?",
+        "options": [
+          "Ljudstyrka och tempo",
+          "Kompositionen (melodi/text) och inspelningen",
+          "Färg och form",
+          "Publikens applåder och scenljus"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan sampling ses som en \"dialog mellan generationer\"?",
+        "options": [
+          "För att äldre artister alltid sjunger med",
+          "För att man kan använda äldre musik och ge den nytt liv i en ny låt",
+          "För att alla låtar är likadana",
+          "För att DJs bara spelar gammal musik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir rättighetsfrågor ibland svårare när teknik kan upptäcka likheter snabbare?",
+        "options": [
+          "För att ingen längre kan höra musik",
+          "För att även oavsiktliga likheter kan upptäckas och skapa konflikter eller krav",
+          "För att upphovsrätt slutar gälla",
+          "För att sampling alltid blir lagligt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket etiskt skäl nämns till att man kan behöva tillstånd för att sampla?",
+        "options": [
+          "Att musik annars blir för kort",
+          "Att skapande ses som arbete och att det kan kännas orättvist om andra använder det gratis",
+          "Att lyssnare alltid blir arga",
+          "Att trummor inte får användas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 487,
+      "fingerprint": "gpt4-004",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak8-etik-05",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Rösten som inte var min",
+    "text": "När videon dök upp i skolans gemensamma flöde var det först bara som allt annat: någon hade filmat i korridoren, ljudet var lite burkigt och under stod en rubrik som skulle vara rolig. Men efter tre sekunder stelnade Hana. På skärmen hördes en röst som lät som hennes.\n\n\"Jag orkar inte de där töntarna i åttan,\" sa rösten, och sedan skrattade den.\n\nHana tappade nästan mobilen. Hon kände hur ansiktet blev varmt, som om någon hade dragit en strålkastare mot henne. Hon läste kommentarerna. Någon skrev: \"HAHA Hana sa det!\" En annan skrev: \"Visste att hon var sån.\"\n\nHon hade inte sagt det.\n\nHana satte sig på en bänk utanför biblioteket och spelade upp videon igen. Rösten var skrämmande lik. Det var hennes tonfall, hennes sätt att dra ut på vissa ord. Men hon visste att hon inte ens hade varit i den korridoren den dagen. I bakgrunden såg man en suddig bild av människor som gick förbi. Kameran vände sig mot en grupp elever och någon i videon vinkade.\n\nMei kom springande med sin ryggsäck studsande mot ryggen. \"Hana! Har du sett…?\"\n\n\"Ja,\" sa Hana och höll upp mobilen. \"Det är inte jag.\"\n\nMei lyssnade och knep ihop ögonen. \"Det låter som du. Men… det känns fel. Du skulle aldrig säga så.\"\n\nOrden \"det känns fel\" gjorde Hana både glad och mer rädd. För om andra bara gick på känslan av att det lät som hon, hur skulle hon kunna bevisa motsatsen?\n\nPå SO-lektionen pratade de om källkritik och manipulation. Läraren, Jonas, nämnde att det numera går att skapa falska ljudklipp med AI. Hana hörde ordet som ett avlägset eko: AI. Det lät som något som hör hemma i nyheter och filmer, inte i hennes mobil.\n\nEfter lektionen stannade hon kvar. \"Jonas,\" sa hon, \"om någon gör en fejk… hur stoppar man det?\"\n\nJonas blev allvarlig direkt. \"Har det hänt dig?\"\n\nHana nickade och visade videon. Jonas lyssnade utan att avbryta. Sedan sa han: \"Det här måste vi ta på allvar. Det kan vara kränkning, och det kan sprida sig snabbt. Vi behöver prata med skolledningen.\"\n\nHana kände hur luften i bröstet blev lite lättare. Men samtidigt kom en annan rädsla: att det skulle bli ett stort drama, att fler skulle titta, att hennes namn skulle fastna ännu hårdare.\n\nI korridoren mötte hon Reza från parallellklassen. Han var bra på teknik och brukade fixa ljudet på skolans evenemang.\n\n\"Hana,\" sa han försiktigt, \"jag tror jag vet hur den är gjord.\"\n\n\"Hur?\"\n\n\"Det finns appar där man kan mata in några sekunder av din röst,\" sa Reza. \"Sen kan den säga vad som helst. Det är… sjukt.\"\n\nHana kände hur ilskan bubblade upp under skammen. \"Men varför?\"\n\nReza ryckte på axlarna. \"För att folk vill ha reaktioner. Eller för att de vill såra.\"\n\nSkolan kallade till ett snabbt möte med Hana, hennes mentor och rektorn. De bestämde att videon skulle anmälas i skolans system, och att en vuxen skulle prata med de konton som delat den. Rektorn sa tydligt att man inte får sprida material som kränker någon, även om man \"bara delar vidare\".\n\nPå eftermiddagen satt Hana hemma och scrollade, fast hon visste att hon borde sluta. Några hade tagit bort sina kommentarer. Någon hade skrivit: \"Okej, det var fejk.\" Men videon fanns fortfarande kvar på några ställen.\n\nMei ringde. \"Jag skrev i kommentarsfältet att det är AI,\" sa hon. \"Och att folk ska sluta dela. Några lyssnade.\"\n\nHana blev tyst en stund. \"Tänk om det händer igen?\"\n\n\"Då vet vi mer nu,\" sa Mei. \"Och då är vi fler som säger ifrån.\"\n\nSenare samma kväll fick Hana ett meddelande från ett anonymt konto: \"Det var bara ett skämt.\"\n\nHana stirrade på texten och kände hur något skiftade. Om någon kunde skapa hennes röst, kunde de också skapa en bild av henne. Men hon kunde fortfarande välja vem hon ville vara.\n\nHon skrev tillbaka, långsamt och tydligt: \"Det är inte ett skämt när mitt namn används för att göra andra illa. Ta bort det. Och sluta.\"\n\nDet kom inget svar. Men när hon la ner mobilen kände hon en ny sorts styrka. Etik, tänkte hon, är inte bara att inte göra fel. Det är att förstå att tekniken kan förstärka både omtanke och elakhet. Och att man ibland måste vara den som säger: den rösten är inte min, och jag tänker inte låta den styra mitt liv.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är det Hana hör i videon som gör henne chockad?",
+        "options": [
+          "Att någon sjunger hennes favoritlåt",
+          "En röst som låter som hennes och säger elaka saker",
+          "Ett brandlarm som tjuter",
+          "Att läraren ropar hennes namn"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket ämne på lektionen kopplar läraren Jonas till videon?",
+        "options": [
+          "Geometri",
+          "Källkritik och manipulation",
+          "Idrott och hälsa",
+          "Hemkunskap"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad berättar Reza att man kan göra med vissa appar?",
+        "options": [
+          "Göra läxor snabbare",
+          "Mata in några sekunder av en persons röst och få den att säga vad som helst",
+          "Låsa skolans dörrar på distans",
+          "Bygga en ny mobil av delar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Hana både glad och mer rädd när Mei säger att videon \"känns fel\"?",
+        "options": [
+          "För att Mei lovar att sprida videon mer",
+          "För att Hana inser att folk kan tro på ljudet ändå, även om hennes vänner vet att det inte stämmer",
+          "För att Mei inte vill vara vän längre",
+          "För att Hana börjar tvivla på sig själv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger rektorn att det är fel att dela vidare även om man \"bara delar\"?",
+        "options": [
+          "För att delningar kan sprida kränkningar och göra skadan större",
+          "För att internet blir långsammare annars",
+          "För att videor alltid är förbjudna i skolan",
+          "För att kommentarer aldrig spelar roll"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Hanas svar till det anonyma kontot om hur hon utvecklas i berättelsen?",
+        "options": [
+          "Hon vill bli känd på sociala medier",
+          "Hon tar tillbaka kontrollen genom att sätta gränser och kräva ansvar",
+          "Hon bestämmer sig för att aldrig använda teknik igen",
+          "Hon tycker att allt var roligt egentligen"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 728,
+      "fingerprint": "gpt4-005",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
