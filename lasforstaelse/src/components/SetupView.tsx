@@ -7,21 +7,17 @@ interface SetupViewProps {
   completedByGrade: Record<number, number>;
 }
 
-const THEMES = [
-  { id: 'djur', label: 'Djur & Natur', emoji: '🦊' },
-  { id: 'äventyr', label: 'Äventyr', emoji: '🗺️' },
-  { id: 'sport', label: 'Sport & Fritid', emoji: '⚽' },
-  { id: 'historia', label: 'Historia', emoji: '🏰' },
-  { id: 'vetenskap', label: 'Vetenskap', emoji: '🔬' },
-  { id: 'fantasy', label: 'Fantasy', emoji: '🧙' },
-  { id: 'rymden', label: 'Rymden', emoji: '🚀' },
-  { id: 'random', label: 'Slumpa fram en text', emoji: '🎲', special: true },
-];
-
-const TEXT_TYPES = [
-  { id: 'berättande', label: 'Berättande', description: 'Berättelser och händelser', icon: '📖', color: 'bg-purple-600' },
-  { id: 'beskrivande', label: 'Beskrivande', description: 'Beskrivningar och fakta', icon: '🎨', color: 'bg-white' },
-  { id: 'argumenterande', label: 'Argumenterande', description: 'Åsikter och argument', icon: '💬', color: 'bg-white' },
+const GRADE_LABELS = [
+  { grade: 1, label: '1' },
+  { grade: 2, label: '2' },
+  { grade: 3, label: '3' },
+  { grade: 4, label: '4' },
+  { grade: 5, label: '5' },
+  { grade: 6, label: '6' },
+  { grade: 7, label: '7' },
+  { grade: 8, label: '8' },
+  { grade: 9, label: '9' },
+  { grade: 10, label: 'GY' },
 ];
 
 export const SetupView: React.FC<SetupViewProps> = ({
@@ -30,8 +26,6 @@ export const SetupView: React.FC<SetupViewProps> = ({
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
-  const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
-  const [selectedTextType, setSelectedTextType] = useState<string>('berättande');
   const [selectedGrade, setSelectedGrade] = useState<number>(4);
 
   useEffect(() => {
@@ -48,13 +42,20 @@ export const SetupView: React.FC<SetupViewProps> = ({
   const getGradeLabel = (grade: number): string => {
     if (grade <= 3) return 'Lågstadiet (åk 1-3)';
     if (grade <= 6) return 'Mellanstadiet (åk 4-6)';
-    return 'Högstadiet (åk 7-9)';
+    if (grade <= 9) return 'Högstadiet (åk 7-9)';
+    return 'Gymnasiet';
   };
 
   const getGradeLabelColor = (grade: number): string => {
     if (grade <= 3) return 'text-green-600';
     if (grade <= 6) return 'text-blue-600';
-    return 'text-purple-600';
+    if (grade <= 9) return 'text-purple-600';
+    return 'text-orange-600';
+  };
+
+  const getGradeDisplayText = (grade: number): string => {
+    if (grade === 10) return 'GY';
+    return String(grade);
   };
 
   if (loading) {
@@ -88,64 +89,9 @@ export const SetupView: React.FC<SetupViewProps> = ({
       </div>
 
       <div className="bg-white p-6 md:p-8 rounded-3xl shadow-lg">
-        {/* 1. Välj ett ämne */}
+        {/* Välj svårighetsgrad */}
         <div className="mb-8">
-          <h2 className="text-lg font-bold text-slate-800 mb-4">1. Välj ett ämne</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {THEMES.map((theme) => (
-              <button
-                key={theme.id}
-                onClick={() => setSelectedTheme(theme.id === selectedTheme ? null : theme.id)}
-                className={`p-3 rounded-xl border-2 transition-all ${
-                  theme.special
-                    ? selectedTheme === theme.id
-                      ? 'border-orange-500 bg-orange-50 text-orange-700'
-                      : 'border-orange-300 hover:border-orange-400 text-orange-600'
-                    : selectedTheme === theme.id
-                    ? 'border-slate-800 bg-slate-50'
-                    : 'border-slate-200 hover:border-slate-300'
-                }`}
-              >
-                <span className="text-2xl">{theme.emoji}</span>
-                <div className={`text-sm font-medium mt-1 ${theme.special ? '' : 'text-slate-700'}`}>
-                  {theme.label}
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* 2. Välj texttyp */}
-        <div className="mb-8">
-          <h2 className="text-lg font-bold text-slate-800 mb-4">2. Välj texttyp</h2>
-          <div className="grid grid-cols-3 gap-3">
-            {TEXT_TYPES.map((type) => (
-              <button
-                key={type.id}
-                onClick={() => setSelectedTextType(type.id)}
-                className={`p-4 rounded-xl border-2 transition-all ${
-                  selectedTextType === type.id
-                    ? type.color === 'bg-purple-600'
-                      ? 'bg-purple-600 text-white border-purple-600'
-                      : 'border-slate-800 bg-slate-50'
-                    : 'border-slate-200 hover:border-slate-300 bg-white'
-                }`}
-              >
-                <div className="text-3xl mb-2">{type.icon}</div>
-                <div className={`font-bold ${selectedTextType === type.id && type.color === 'bg-purple-600' ? 'text-white' : 'text-slate-800'}`}>
-                  {type.label}
-                </div>
-                <div className={`text-xs mt-1 ${selectedTextType === type.id && type.color === 'bg-purple-600' ? 'text-purple-200' : 'text-slate-500'}`}>
-                  {type.description}
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* 3. Välj svårighetsgrad */}
-        <div className="mb-8">
-          <h2 className="text-lg font-bold text-slate-800 mb-4">3. Välj svårighetsgrad (årskurs 1-9)</h2>
+          <h2 className="text-lg font-bold text-slate-800 mb-4">Välj svårighetsgrad</h2>
 
           {/* Tips box */}
           <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-6">
@@ -171,7 +117,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
           {/* Grade display */}
           <div className="text-center mb-4">
-            <div className="text-6xl font-bold text-indigo-900">{selectedGrade}</div>
+            <div className="text-6xl font-bold text-indigo-900">{getGradeDisplayText(selectedGrade)}</div>
             <div className={`text-lg font-semibold ${getGradeLabelColor(selectedGrade)}`}>
               {getGradeLabel(selectedGrade)}
             </div>
@@ -182,18 +128,18 @@ export const SetupView: React.FC<SetupViewProps> = ({
             <input
               type="range"
               min="1"
-              max="9"
+              max="10"
               value={selectedGrade}
               onChange={(e) => setSelectedGrade(Number(e.target.value))}
               className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
             />
             <div className="flex justify-between text-sm text-slate-500 mt-2">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+              {GRADE_LABELS.map((item) => (
                 <span
-                  key={num}
-                  className={`${num === selectedGrade ? 'text-indigo-900 font-bold' : ''}`}
+                  key={item.grade}
+                  className={`${item.grade === selectedGrade ? 'text-indigo-900 font-bold' : ''}`}
                 >
-                  {num}
+                  {item.label}
                 </span>
               ))}
             </div>
