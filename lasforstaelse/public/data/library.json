@@ -574,5 +574,205 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak3-djur-011",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Kaninen i snön",
+    "text": "När Ture går hem från skolan ser han spår i snön vid busshållplatsen. Spåren är små och går i hopp. Han följer dem en bit och hittar en vit kanin som sitter stilla under en buske. Kaninen darrar lite. Ture tar av sig sin halsduk och lägger den försiktigt bredvid kaninen så att den kan få skydd. Sedan springer han hem och hämtar sin mamma. Mamma ringer en granne som har kaniner. Snart kommer grannen och tar med kaninen hem. Ture känner sig stolt för att han hjälpte till.",
+    "questions": [
+      { "type": "literal", "q": "Var ser Ture spår i snön?", "options": ["Vid busshållplatsen", "I klassrummet", "På fotbollsplanen", "I matsalen"], "correct": 0 },
+      { "type": "inferens", "q": "Varför lägger Ture sin halsduk bredvid kaninen?", "options": ["För att han vill gömma kaninen", "För att kaninen ska få skydd och bli varmare", "För att han vill torka sina skor", "För att halsduken är trasig"], "correct": 1 },
+      { "type": "literal", "q": "Vem ringer mamma?", "options": ["En lärare", "En granne som har kaniner", "En polis", "En kompis"], "correct": 1 },
+      { "type": "inferens", "q": "Varför känner Ture sig stolt i slutet?", "options": ["För att han kom först i ett lopp", "För att han fick nya skor", "För att han hjälpte någon som behövde hjälp", "För att han vann ett spel"], "correct": 2 }
+    ],
+    "meta": {
+      "wordCount": 98,
+      "fingerprint": "gpt3-011",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-natur-012",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Dimman vid sjön",
+    "text": "På morgonen följer Elin med sin morfar till sjön. Det är dimma över vattnet och allt ser mjukt och grått ut. Morfar säger att dimma kan komma när varm luft möter kall luft. Elin lyssnar och försöker se över sjön, men hon ser bara svaga former av träd på andra sidan. Plötsligt hör de en fågel ropa långt bort. Elin blir tyst en stund och känner sig lugn. När solen stiger lite högre börjar dimman långsamt försvinna, och sjön glittrar igen.",
+    "questions": [
+      { "type": "literal", "q": "Vem går Elin till sjön med?", "options": ["Sin morfar", "Sin lärare", "Sin kusin", "Sin granne"], "correct": 0 },
+      { "type": "inferens", "q": "Varför försvinner dimman när solen stiger?", "options": ["För att luften blir varmare", "För att det börjar snöa", "För att sjön fryser", "För att vinden slutar helt"], "correct": 0 },
+      { "type": "literal", "q": "Vad hör Elin och morfar långt bort?", "options": ["En bil som tutar", "En fågel som ropar", "En hund som skäller", "En klocka som ringer"], "correct": 1 },
+      { "type": "inferens", "q": "Hur känner sig Elin vid sjön enligt texten?", "options": ["Arg", "Lugn", "Rädd", "Jättehungrig"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 92,
+      "fingerprint": "gpt3-012",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-skola-013",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "skola",
+    "title": "Så fungerar en rast",
+    "text": "En rast är en paus mellan lektionerna i skolan. Under rasten får eleverna vila hjärnan och röra på kroppen. Många leker på skolgården, pratar med kompisar eller äter ett mellanmål. Ibland finns rastvakter som hjälper till om någon blir ledsen eller om det blir bråk. När det ringer in igen samlas eleverna och går tillbaka till klassrummet för att fortsätta arbeta.",
+    "questions": [
+      { "type": "literal", "q": "Vad är en rast?", "options": ["En paus mellan lektionerna", "En läxa", "En provdag", "En utflykt"], "correct": 0 },
+      { "type": "inferens", "q": "Varför kan rastvakter vara bra att ha?", "options": ["För att de kan hjälpa om någon blir ledsen eller om det blir bråk", "För att de delar ut godis varje dag", "För att de tar bort alla bollar", "För att de gör läxorna åt eleverna"], "correct": 0 },
+      { "type": "literal", "q": "Vad gör många elever på rasten enligt texten?", "options": ["Sover i klassrummet", "Leker på skolgården", "Åker buss hem", "Skriver prov"], "correct": 1 },
+      { "type": "inferens", "q": "Vad kan hända om man aldrig får rast?", "options": ["Man kan bli trött och ha svårare att koncentrera sig", "Man blir alltid starkare", "Man lär sig allt snabbare", "Man behöver aldrig vila"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 68,
+      "fingerprint": "gpt3-013",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-sport-014",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "sport",
+    "title": "Vad är uppvärmning?",
+    "text": "Uppvärmning är när man gör kroppen redo för att träna. Man kan jogga lugnt, hoppa, eller röra armar och ben. När man värmer upp blir musklerna varmare och blodet rör sig snabbare i kroppen. Då kan man ofta röra sig lättare och minska risken att göra sig illa. En bra uppvärmning brukar ta några minuter innan man börjar med den riktiga träningen.",
+    "questions": [
+      { "type": "literal", "q": "Vad är uppvärmning enligt texten?", "options": ["När man gör kroppen redo för att träna", "När man äter frukost", "När man sitter stilla", "När man sover länge"], "correct": 0 },
+      { "type": "inferens", "q": "Varför minskar uppvärmning risken att göra sig illa?", "options": ["För att musklerna blir varmare och kroppen blir redo", "För att man blir kortare", "För att man blir hungrig", "För att man alltid springer snabbast då"], "correct": 0 },
+      { "type": "literal", "q": "Vad händer med blodet när man värmer upp?", "options": ["Det stannar", "Det rör sig snabbare", "Det blir kallt", "Det försvinner"], "correct": 1 },
+      { "type": "inferens", "q": "När är det bäst att värma upp?", "options": ["Innan den riktiga träningen börjar", "Efter man har gått hem", "Mitt i natten", "När man redan är helt slut"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 70,
+      "fingerprint": "gpt3-014",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-familj-015",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "familj",
+    "title": "Kalasplanen",
+    "text": "Aya fyller år på lördag och vill ha ett litet kalas. Hon och hennes pappa skriver en lista: saft, ballonger och en chokladtårta. Aya vill också leka skattjakt. Pappa säger att de måste tänka på tiden så att alla hinner äta och leka. På fredagen hjälper Aya sin lillasyster att blåsa ballonger, men en ballong smäller och båda hoppar till. De skrattar efteråt. När lördagen kommer är Aya nervös, men när kompisarna ringer på dörren känner hon sig genast glad.",
+    "questions": [
+      { "type": "literal", "q": "När fyller Aya år?", "options": ["På måndag", "På onsdag", "På lördag", "På söndag"], "correct": 2 },
+      { "type": "inferens", "q": "Varför säger pappa att de måste tänka på tiden?", "options": ["För att alla ska hinna äta och leka", "För att Aya ska gå och lägga sig tidigt", "För att de ska hinna måla om huset", "För att ingen ska komma"], "correct": 0 },
+      { "type": "literal", "q": "Vilken lek vill Aya ha på kalaset?", "options": ["Skattjakt", "Kurragömma i skogen", "Ishockey", "Tv-spel hela dagen"], "correct": 0 },
+      { "type": "inferens", "q": "Varför blir Aya nervös när lördagen kommer?", "options": ["För att hon är sjuk", "För att hon väntar på gäster och vill att allt ska bli bra", "För att hon har glömt sin väska", "För att hon inte gillar tårta"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 95,
+      "fingerprint": "gpt3-015",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-vanskap-016",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Två par vantar",
+    "text": "Det är kallt ute och Sam har bara en vante. Han letar i fickorna men hittar inte den andra. I hallen ser Vera att Sam fryser om handen. Hon tar fram ett extra par vantar ur sin ryggsäck. \"Du kan låna dem i dag\", säger hon. Sam först vill säga nej, men han ser att Vera menar det. På rasten kan Sam leka utan att ha ont i handen. Efter skolan tackar han Vera och lovar att lämna tillbaka vantarna i morgon.",
+    "questions": [
+      { "type": "literal", "q": "Hur många vantar har Sam när han är i hallen?", "options": ["Två", "En", "Tre", "Inga"], "correct": 1 },
+      { "type": "inferens", "q": "Varför vill Sam först säga nej till att låna vantar?", "options": ["Han vill inte vara till besvär", "Han gillar inte värme", "Han har redan tre par hemma", "Han vill gå hem direkt"], "correct": 0 },
+      { "type": "literal", "q": "Vad tar Vera fram ur sin ryggsäck?", "options": ["Ett äpple", "Ett extra par vantar", "En bok", "En mössa"], "correct": 1 },
+      { "type": "inferens", "q": "Vad visar det att Sam lovar att lämna tillbaka vantarna?", "options": ["Att han är tacksam och tar ansvar", "Att han vill behålla dem för alltid", "Att han är arg", "Att han inte gillar Vera"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 95,
+      "fingerprint": "gpt3-016",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-samhalle-017",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Övergångsstället",
+    "text": "När Amir går till skolan måste han korsa en stor väg. Vid övergångsstället finns en knapp som tänder ett gult ljus. Amir trycker och väntar vid kanten. En bil saktar in och stannar, men en cyklist kommer snabbt bakom och bromsar sent. Amir tar ett steg tillbaka. Då säger en vuxen bredvid: \"Bra att du väntade.\" När det blir helt stopp på vägen går Amir lugnt över och vinkar tack.",
+    "questions": [
+      { "type": "literal", "q": "Vad finns vid övergångsstället som Amir kan trycka på?", "options": ["En klocka", "En knapp", "En spade", "En flagga"], "correct": 1 },
+      { "type": "inferens", "q": "Varför tar Amir ett steg tillbaka?", "options": ["För att cyklisten kommer snabbt och bromsar sent", "För att han vill leka", "För att han tappat sin sko", "För att han ser en fågel"], "correct": 0 },
+      { "type": "literal", "q": "Vad gör bilen när Amir väntar?", "options": ["Den stannar", "Den tutar länge", "Den kör fortare", "Den backar"], "correct": 0 },
+      { "type": "inferens", "q": "Vad lär sig Amir i texten?", "options": ["Att man alltid ska springa över vägen", "Att det är bra att vänta och se sig för vid vägen", "Att cyklar aldrig kan bromsa", "Att man inte ska använda övergångsställe"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 85,
+      "fingerprint": "gpt3-017",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-etik-018",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "etik",
+    "title": "Att säga förlåt",
+    "text": "Att säga förlåt betyder att man visar att man ångrar något man gjort. Det kan vara när man har råkat säga något taskigt eller gjort någon ledsen. Ett bra förlåt kan vara att säga vad man ångrar och att försöka göra det bättre. Ibland behöver den som blivit ledsen också tid. Då kan man fråga: \"Hur kan jag hjälpa?\" När man vågar säga förlåt kan vänskap bli starkare.",
+    "questions": [
+      { "type": "literal", "q": "Vad betyder det att säga förlåt?", "options": ["Att man visar att man ångrar något", "Att man vinner ett spel", "Att man springer snabbare", "Att man låtsas att inget hänt"], "correct": 0 },
+      { "type": "inferens", "q": "Varför kan det vara bra att fråga \"Hur kan jag hjälpa?\"", "options": ["För att visa att man vill göra det bättre", "För att få godis", "För att slippa prata mer", "För att börja bråka igen"], "correct": 0 },
+      { "type": "literal", "q": "Vad kan ett förlåt handla om enligt texten?", "options": ["Att man råkat säga något taskigt", "Att man fått en present", "Att man klarat ett prov", "Att man lärt sig cykla"], "correct": 0 },
+      { "type": "inferens", "q": "Vad kan hända med vänskap när man vågar säga förlåt?", "options": ["Den kan bli starkare", "Den försvinner alltid", "Den blir farlig", "Den blir tyst för alltid"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 78,
+      "fingerprint": "gpt3-018",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-vetenskap-019",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "Magnettestet",
+    "text": "I skolan får Kim och Fatima göra ett experiment. De har en magnet och olika saker: en gem, en träbit, en plastsked och en mynt. De gissar först vad som ska fastna. När Kim håller magneten över gemen hoppar den upp direkt. Träbiten händer inget med. Plastskeden fastnar inte heller. Myntet rör sig lite, men fastnar inte. Läraren säger att magneten gillar vissa metaller bättre än andra. Kim skriver ner resultaten i sin bok.",
+    "questions": [
+      { "type": "literal", "q": "Vilken sak hoppar upp till magneten direkt?", "options": ["Träbiten", "Plastskeden", "Gemen", "Myntet"], "correct": 2 },
+      { "type": "inferens", "q": "Varför gissar Kim och Fatima innan de testar?", "options": ["För att de ska öva på att tänka och jämföra", "För att magneten ska bli starkare", "För att de vill sluta tidigt", "För att läraren inte är där"], "correct": 0 },
+      { "type": "literal", "q": "Vilken sak fastnar inte på magneten?", "options": ["Träbiten", "Gemen", "Båda: träbiten och plastskeden", "Myntet"], "correct": 2 },
+      { "type": "inferens", "q": "Varför rör sig myntet lite men fastnar inte?", "options": ["Det är gjort av en metall som magneten inte drar lika mycket i", "Det är gjort av papper", "Det är för lätt att se", "Det är för varmt"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 88,
+      "fingerprint": "gpt3-019",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak3-existens-020",
+    "grade": 3,
+    "genre": "faktatext",
+    "theme": "existentiella frågor",
+    "title": "Vad är mod?",
+    "text": "Mod betyder inte att man aldrig är rädd. Mod kan vara att våga göra något även när det känns pirrigt i magen. Det kan till exempel vara att räcka upp handen i klassen, säga ifrån när någon blir retad, eller prova en ny aktivitet. Ibland är mod att be om hjälp. När man tränar på mod blir det ofta lite lättare nästa gång, eftersom man märker att man klarade det.",
+    "questions": [
+      { "type": "literal", "q": "Vad betyder mod enligt texten?", "options": ["Att aldrig vara rädd", "Att våga göra något även när man är rädd", "Att alltid vara starkast", "Att alltid vinna"], "correct": 1 },
+      { "type": "inferens", "q": "Varför kan det bli lättare nästa gång man vågar?", "options": ["För att man märker att man klarade det", "För att man glömmer allt", "För att alla andra blir rädda", "För att man aldrig mer behöver försöka"], "correct": 0 },
+      { "type": "literal", "q": "Vilket exempel på mod nämns i texten?", "options": ["Bygga ett hus", "Räcka upp handen i klassen", "Köra bil", "Flyga till rymden"], "correct": 1 },
+      { "type": "inferens", "q": "Vilket av följande är också mod enligt texten?", "options": ["Att be om hjälp", "Att gömma sig alltid", "Att skratta åt andra", "Att aldrig prata med någon"], "correct": 0 }
+    ],
+    "meta": {
+      "wordCount": 75,
+      "fingerprint": "gpt3-020",
+      "generatedAt": "2026-02-04T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
