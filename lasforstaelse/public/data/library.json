@@ -4724,5 +4724,415 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "gy-vetenskap-01",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Korrelation, kausalitet och hur vi luras av data",
+    "text": "I nyheter, reklam och sociala medier presenteras ofta siffror som om de vore självklara bevis. \"Elever som gör X får högre betyg\", \"Människor som äter Y lever längre\", \"Den här metoden fungerar eftersom kurvan går upp\". Problemet är att data kan visa samband utan att säga något säkert om orsaker. Därför är det viktigt att förstå skillnaden mellan korrelation och kausalitet.\n\nKorrelation betyder att två saker förändras tillsammans. Om glassförsäljningen ökar samtidigt som antalet solbrända personer ökar kan vi säga att det finns en korrelation. Men det betyder inte att glass orsakar solbränna. Här finns en tredje faktor: varmt väder. Den tredje faktorn kallas ibland en \"confounder\" eller en bakomliggande variabel. Den kan skapa ett samband som ser starkt ut men som egentligen beror på något annat.\n\nKausalitet betyder att en sak faktiskt orsakar en annan. För att kunna säga något om kausalitet behöver man ofta mer än observationer. Ibland behöver man experiment där man förändrar en faktor och håller andra faktorer så lika som möjligt. Det är därför randomiserade kontrollerade studier ses som en \"guldstandard\" i medicinsk forskning. Om deltagare slumpas till två grupper, och bara den ena gruppen får en behandling, kan man jämföra resultaten med mindre risk att andra skillnader förklarar effekten.\n\nMen även experiment har problem. Först är det inte alltid etiskt eller praktiskt att experimentera. Man kan till exempel inte slumpa människor till att röka i tio år för att se effekterna. Då behöver man observationsstudier, och då blir källkritiken extra viktig. Dessutom kan resultat misstolkas även när studien är korrekt. Om en effekt är statistiskt signifikant betyder det inte att den är stor eller viktig i praktiken. En liten skillnad kan bli \"signifikant\" i en enorm studie, medan en relevant skillnad kan vara svår att upptäcka i en liten studie.\n\nEtt annat problem är selektionsbias. Det innebär att de som ingår i en studie inte är representativa. Om man till exempel undersöker sambandet mellan träning och välmående genom att fråga människor på ett gym får man en grupp som redan valt att vara där. Då riskerar man att överskatta hur lätt träning är för alla, eller hur väl den fungerar för alla.\n\nVi kan också luras av hur data presenteras. En graf kan börja på en ovanlig skala och få en liten förändring att se dramatisk ut. En rubrik kan lyfta fram en trend utan att nämna att variationen är stor. Och en procent kan låta stor utan att man förstår basen. Om en risk ökar med 50% kan det låta skrämmande, men om risken gick från 2 av 10 000 till 3 av 10 000 är ökningen fortfarande liten i absoluta tal.\n\nDet betyder inte att data är värdelöst. Tvärtom är data ett av våra bästa verktyg för att förstå världen. Men data kräver tolkning, och tolkning kräver frågor. Vem har samlat in informationen? Hur? Vilka saknas? Finns det alternativa förklaringar? Vad säger andra studier?\n\nI ett samhälle där algoritmer sorterar information och där \"statistik\" ofta används som argument är förmågan att skilja korrelation från kausalitet en form av demokratiskt självförsvar. När du lär dig tänka så blir du svårare att manipulera, och du blir bättre på att delta i diskussioner som handlar om allt från hälsa och skola till ekonomi och klimat.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder korrelation enligt texten?",
+        "options": [
+          "Att en sak alltid orsakar en annan",
+          "Att två saker förändras tillsammans",
+          "Att data alltid är falskt",
+          "Att en graf måste börja på noll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel används för att visa att korrelation inte behöver betyda kausalitet?",
+        "options": [
+          "Att studier alltid är dyra",
+          "Att glassförsäljning och solbränna ökar samtidigt på grund av varmt väder",
+          "Att rökning alltid leder till träning",
+          "Att alla experiment är oetiska"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas en bakomliggande faktor som kan skapa ett missvisande samband?",
+        "options": [
+          "Confounder/bakomliggande variabel",
+          "Hypotes",
+          "Placebo",
+          "Kvantifiering"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan en effekt bli statistiskt signifikant utan att vara särskilt viktig i praktiken?",
+        "options": [
+          "För att signifikans betyder att effekten alltid är enorm",
+          "För att en mycket liten skillnad kan bli signifikant i en väldigt stor studie",
+          "För att små studier alltid är bättre",
+          "För att grafer aldrig visar verkligheten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan en graf med ovanlig skala lura en läsare?",
+        "options": [
+          "För att skalan kan få en liten förändring att se dramatisk ut",
+          "För att skalan gör att siffror försvinner",
+          "För att alla grafer måste vara i 3D",
+          "För att rubriker alltid bestämmer skalan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför beskriver texten förmågan att skilja korrelation från kausalitet som demokratiskt viktig?",
+        "options": [
+          "För att det gör dig svårare att manipulera när statistik används som argument",
+          "För att det gör att du slipper läsa nyheter",
+          "För att demokrati bara handlar om matematik",
+          "För att algoritmer slutar fungera annars"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 602,
+      "fingerprint": "gpt4-gy01",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "gy-teknik-02",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "AI-modeller, bias och varför träningsdata formar framtiden",
+    "text": "Många använder AI-verktyg i skolan och hemma: för att sammanfatta text, skapa idéer, öva språk eller få hjälp med programmering. Men en AI-modell är inte en neutral \"sanningmaskin\". Den är en statistisk modell som tränats på stora mängder data, och därför bär den på både styrkor och begränsningar från den värld den lärt sig av. För att förstå hur AI påverkar samhället behöver man förstå begrepp som träningsdata, bias och generalisering.\n\nEn AI-modell inom språk, som en chattbot, tränas genom att läsa enorma textmängder och lära sig mönster: vilka ord som ofta följer på andra, hur argument byggs, hur berättelser brukar fungera. Modellen får inte \"förståelse\" på samma sätt som en människa, men den kan bli mycket skicklig på att förutsäga rimliga svar. Det gör den användbar, men också riskabel om man tror att den alltid har rätt.\n\nBias betyder snedvridning. Om träningsdata innehåller mer text från vissa grupper, språk eller perspektiv kan modellen bli bättre på just dessa och sämre på andra. Bias kan också handla om stereotyper. Om materialet ofta kopplar vissa yrken till vissa kön kan modellen spegla det i sina svar, även om det inte är sant eller önskvärt. Det är viktigt att förstå att bias inte alltid är medvetet \"ondska\". Det kan vara en spegel av hur information producerats och sparats historiskt.\n\nEtt annat viktigt begrepp är generalisering: förmågan att ge rimliga svar på nya situationer. En modell kan vara bra på att härma mönster men ändå göra fel när frågan kräver exakt fakta, eller när den möter ovanliga exempel. Ibland kan den \"hallucinera\", alltså skapa ett svar som låter övertygande men som inte stämmer. Därför behöver användaren en kritisk roll: kontrollera källor, jämföra med pålitliga texter och förstå att ett snyggt svar inte är samma sak som ett sant svar.\n\nAI påverkar också makt. Den som kontrollerar vilka data som används, vilka mål modellen optimeras för och vilka regler som styr användningen kan påverka hur verktyget fungerar i praktiken. Om ett företag tjänar pengar på att du spenderar tid i en app kan det designa system som maximerar engagemang, inte nödvändigtvis lärande eller välmående. På samma sätt kan en skola använda AI på ett sätt som stärker elevers självständighet - eller på ett sätt som gör elever beroende av färdiga svar.\n\nDet finns också etiska frågor om data. Många modeller tränas på texter och bilder som skapats av människor som aldrig aktivt gett sitt medgivande. Samtidigt kan AI skapa nytt innehåll som liknar det den tränats på. Det leder till konflikter om upphovsrätt och rättvisa: vem får betalt, och vem får kontroll?\n\nI gymnasiet kan AI vara ett kraftfullt verktyg om den används rätt. Du kan använda den som en samtalspartner: be den förklara begrepp på olika nivåer, skapa övningsfrågor, föreslå struktur för en text eller ge dig alternativa perspektiv. Men du behöver fortfarande tänka själv. Om du låter AI göra hela arbetet tappar du träningsmomentet som skolan egentligen handlar om: att utveckla din egen förmåga att resonera.\n\nAtt förstå AI handlar alltså inte bara om teknik, utan om samhälle. Träningsdata formar modellens beteende, bias påverkar vilka som gynnas eller missgynnas, och generalisering avgör när verktyget är pålitligt. När du ser det blir AI mindre magi och mer ett system som går att granska, diskutera och använda medvetet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder bias enligt texten?",
+        "options": [
+          "Att modellen alltid är exakt",
+          "Snedvridning i modellens svar på grund av träningsdata",
+          "Att data inte kan mätas",
+          "Att AI bara fungerar på engelska"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket ord används för när en modell skapar ett övertygande men felaktigt svar?",
+        "options": [
+          "Komprimerar",
+          "Hallucinerar",
+          "Verifierar",
+          "Kalibrerar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas förmågan att ge rimliga svar på nya situationer?",
+        "options": [
+          "Generalisation",
+          "Repetition",
+          "Censur",
+          "Kopiering"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan en modell bli sämre på vissa perspektiv eller språk?",
+        "options": [
+          "För att den väljer att ogilla vissa människor",
+          "För att träningsdata innehåller mer material från vissa grupper och mindre från andra",
+          "För att den alltid prioriterar korta svar",
+          "För att internet är för långsamt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger texten att ett snyggt svar inte är samma sak som ett sant svar?",
+        "options": [
+          "För att språk alltid ljuger",
+          "För att modellen kan skapa plausibla formuleringar även när fakta är fel",
+          "För att alla källor är likadana",
+          "För att hallucinering bara sker i matematik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att AI i skolan kan göra elever beroende av färdiga svar?",
+        "options": [
+          "Att AI gör det omöjligt att skriva själv",
+          "Att elever kan hoppa över den egna träningen i att resonera om AI gör hela arbetet",
+          "Att lärare slutar undervisa automatiskt",
+          "Att prov alltid blir lättare"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 587,
+      "fingerprint": "gpt4-gy02",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "gy-samhalle-03",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "Sociala medier, identitet och uppmärksamhetsekonomin",
+    "text": "Sociala medier beskrivs ofta som en plats där människor \"bara delar\" bilder, åsikter och vardag. Men bakom varje flöde finns en ekonomisk logik: uppmärksamhet är en resurs. Plattformar tjänar pengar på annonser och på att användare stannar kvar så länge som möjligt. Den här logiken kallas ibland uppmärksamhetsekonomi, och den påverkar både vad du ser och hur du ser på dig själv.\n\nAlgoritmerna i sociala medier är byggda för att förutsäga vad som får dig att fortsätta scrolla. De mäter beteenden: vilka inlägg du stannar vid, vad du kommenterar, vad du delar, och vilka videor du ser klart. Det leder ofta till att innehåll som väcker starka känslor prioriteras, eftersom känslor gör oss mer benägna att reagera. Det kan vara inspiration och humor, men också ilska och rädsla.\n\nFör individen kan detta påverka identiteten. I tonåren är identitet ofta under konstruktion: man testar roller, grupper och uttryck. Sociala medier kan ge stöd, gemenskap och möjlighet att hitta människor med samma intressen. Men de kan också skapa en känsla av att man alltid blir bedömd. Om en bild får få likes kan det kännas som ett socialt misslyckande, även om det egentligen bara handlar om timing, algoritmer eller slump.\n\nEn annan effekt är jämförelse. Flöden visar sällan vardagens \"mellanscener\": väntan, misslyckanden, tråkiga dagar. De visar höjdpunkter. När man jämför sitt eget liv, med alla sina detaljer, mot andras höjdpunkter kan man känna sig sämre. Det kan skapa stress och en jakt på perfektion. Samtidigt kan människor också använda plattformar för att visa mer ärliga sidor, och då kan flöden bli en plats för igenkänning snarare än jämförelse.\n\nUppmärksamhetsekonomin påverkar också samhällsdebatten. Om starka reaktioner belönas kan nyanserade resonemang få mindre plats. Det kan leda till att extremare ståndpunkter syns mer, inte för att de är vanligast, utan för att de är mest \"engagerande\". Dessutom kan desinformation spridas snabbt när den är formulerad för att chocka eller bekräfta en grupps identitet.\n\nVad kan man göra? Först behöver man förstå att flödet inte är neutralt. Det är ett urval. Att följa olika typer av källor, att ibland söka information aktivt och att ta pauser kan minska effekterna. Man kan också fundera på sin egen roll: varför delar jag detta? Vill jag informera, uttrycka mig, eller få bekräftelse? Bekräftelse är mänskligt, men när den blir det enda måttet på värde kan den bli farlig.\n\nPå samhällsnivå diskuteras reglering: transparens kring algoritmer, krav på att skydda unga användare, och ansvar för hur hat och desinformation hanteras. Det är inte enkelt, eftersom reglering också kan påverka yttrandefrihet. Men diskussionen visar att sociala medier inte bara är privata val, utan en del av den gemensamma infrastrukturen för kommunikation.\n\nAtt förstå uppmärksamhetsekonomin är att förstå att din tid och din reaktion är värdefull. När du ser det kan du börja använda plattformar mer som verktyg och mindre som miljöer som styr dig. Identitet formas fortfarande av dig och dina relationer i verkligheten, men det blir lättare att skydda den när du vet vilka krafter som försöker fånga din uppmärksamhet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad menas med uppmärksamhetsekonomi enligt texten?",
+        "options": [
+          "Att pengar inte längre behövs",
+          "Att plattformar tjänar på att användare stannar kvar och ser annonser",
+          "Att alla inlägg visas i tidsordning",
+          "Att uppmärksamhet mäts i betyg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka beteenden nämns som något algoritmer mäter?",
+        "options": [
+          "Din längd och vikt",
+          "Vad du stannar vid, kommenterar, delar och ser klart",
+          "Hur snabbt du skriver på tangentbordet",
+          "Vilka böcker du lånar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger texten att flöden sällan visar?",
+        "options": [
+          "Höjdpunkter",
+          "Vardagens mellanscener som väntan och misslyckanden",
+          "Reklam",
+          "Videor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan nyanserade resonemang få mindre plats i sociala medier enligt texten?",
+        "options": [
+          "För att nyanser alltid är förbjudna",
+          "För att starka reaktioner ofta belönas och lyfts fram av algoritmer",
+          "För att människor inte kan läsa längre texter",
+          "För att alla plattformar är statliga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan jämförelse i flöden skapa stress och perfektionism?",
+        "options": [
+          "För att alla alltid ljuger",
+          "För att man jämför sitt vardagsliv med andras höjdpunkter",
+          "För att algoritmer bara visar naturbilder",
+          "För att likes inte går att se"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att läsaren ska göra för att minska påverkan från uppmärksamhetsekonomin?",
+        "options": [
+          "Aldrig använda sociala medier",
+          "Förstå att flödet är ett urval, följa olika källor och ta pauser",
+          "Bara läsa kommentarer",
+          "Alltid posta mer för att vinna"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 568,
+      "fingerprint": "gpt4-gy03",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "gy-historia-04",
+    "grade": 10,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Arkivet i källaren",
+    "text": "När Elin valde gymnasiets kurs i historia tänkte hon att det skulle handla om stora händelser: revolutioner, krig och politiska ledare. Hon var van vid att historia kändes som något färdigt, som en bok med tydliga rubriker. Men den första veckan fick klassen en uppgift som inte liknade något hon gjort tidigare. De skulle besöka kommunarkivet och \"hitta en berättelse\" i material som ingen annan hade sammanfattat åt dem.\n\nArkivet låg i en källare under ett gammalt stadshus. Dörren var tung, luften sval, och allt lät dämpat som om väggarna var byggda av tystnad. Arkivarien, en kvinna som hette Parisa, gav dem handskar och förklarade reglerna: inga pennor nära dokumenten, inget slarv, inga onödiga vikningar.\n\nElin hamnade vid en hylla med protokoll från 1940-talet. Det var en tid hon kände till i stora drag: krig i Europa, ransonering, oro. Men här fanns inga dramatiska rubriker. Bara mötesanteckningar från en nämnd: beslut om mjöl, ved, och något som kallades \"evakuerade barn\".\n\nHon bläddrade och stannade vid en lista. Namn, födelseår, och en kolumn med anmärkningar. \"Placering: familj i utkanten.\" \"Behöver extra ullkläder.\" \"Talar finska.\" Elin kände hur texten blev levande. Det var inte bara politik. Det var barn.\n\nI en mapp hittade hon brev, kort och knappt hövliga, skrivna på tunt papper. Ett brev var från en kvinna som skrev att hon inte hade råd att ta emot fler, att potatisen redan var slut och att hennes egen son hostade på nätterna. Ett annat var från en lärare som bad om mer läromedel eftersom klassen växt.\n\nElin försökte föreställa sig hur det var att vara fjorton och skickas till en familj man inte kände, i ett land där man knappt kunde språket. Hon tänkte på sin egen vardag: skolmat, wifi som ibland krånglar, diskussioner om betyg. Det kändes plötsligt överdrivet att bli arg över en inställd buss.\n\nParisa kom fram och såg vad Elin läste. \"Du har hittat evakueringen,\" sa hon. \"Det finns mycket om den här, men ofta berättas den som en stor process. Här ser du vardagen.\"\n\n\"Elin,\" sa en klasskompis, Minh, från bordet bredvid. \"Hittar du något intressant?\"\n\nElin höll upp listan. Minh lutade sig fram. \"Min farmor var barn under kriget,\" sa Minh lågt. \"Hon pratade sällan om det. Men när hon gjorde det var det alltid detaljer. Doften av tvål. Ljudet av en nyckel i en dörr. Inte de stora orden.\"\n\nElin märkte att hon började läsa annorlunda. Hon letade inte efter \"rätt svar\", utan efter mönster: vilka beslut som återkom, vilka ord som användes, vilka röster som lät stressade och vilka som lät hårda. Hon såg också vad som saknades: barnens egna ord fanns knappt.\n\nNär de skulle gå skrev Elin ner en mening i sitt block: \"Historia är att försöka höra människor genom papper.\" Hon visste att hennes redovisning inte skulle bli en färdig saga. Den skulle bli ett försök.\n\nPå vägen uppför trapporna kände hon en ny sorts respekt för ämnet. Inte som en hyllning till \"det som varit\", utan som ett ansvar. För om ingen öppnar de där mapparna förblir listorna bara listor. Men om någon läser, jämför och berättar kan det bli en påminnelse om hur beslut faktiskt landar i människors liv.\n\nNär Elin kom ut i dagsljuset igen kändes staden densamma, men också förändrad. Som om det fanns fler lager under asfalten. Hon tänkte att historien inte bara finns i monument, utan i källare, i protokoll och i namn som nästan bleknat. Och hon tänkte: om framtiden ska förstå oss, vilka spår lämnar vi efter oss?",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var ligger kommunarkivet som Elins klass besöker?",
+        "options": [
+          "På skolans vind",
+          "I en källare under ett gammalt stadshus",
+          "I ett köpcentrum",
+          "I bibliotekets café"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken tidsperiod är protokollen Elin tittar i från?",
+        "options": [
+          "1890-talet",
+          "1940-talet",
+          "1970-talet",
+          "2000-talet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel på information finns i listan Elin hittar?",
+        "options": [
+          "Resultat från fotbollsmatcher",
+          "Placering av evakuerade barn och anmärkningar som 'talar finska'",
+          "Recept på soppa",
+          "Biobiljetter och tider"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför upplever Elin att texten blir \"levande\" när hon läser listan och breven?",
+        "options": [
+          "För att hon hittar en hemlig kod",
+          "För att dokumenten visar hur stora beslut påverkar vanliga människor, särskilt barn",
+          "För att hon gillar gammalt papper",
+          "För att arkivarien berättar en spökhistoria"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Parisa när hon säger att Elin ser vardagen, inte bara processen?",
+        "options": [
+          "Att Elin ser vilka filmer som var populära",
+          "Att Elin ser konkreta problem och detaljer bakom en historisk händelse",
+          "Att Elin ser hur arkivet städas",
+          "Att Elin ser vad politiker hade på sig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad antyder slutet om Elins nya syn på historia?",
+        "options": [
+          "Att historia alltid är enkel och tydlig",
+          "Att historia handlar om ansvar: att läsa, tolka och berätta så att röster inte försvinner",
+          "Att historia bara är fakta utan människor",
+          "Att framtiden inte kan förstå nutiden"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 651,
+      "fingerprint": "gpt4-gy04",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "gy-etik-05",
+    "grade": 10,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Samarbetet som sprack",
+    "text": "När första stora gymnasiearbetet drog igång kändes det som ett skifte. Läraren pratade om källor, metod och ansvar på ett sätt som fick allt att låta mer vuxet. Det var inte längre \"gör en affisch\", utan \"visa hur du tänker\". Nora hamnade i grupp med Elias och Zahid. De skulle skriva om hur sociala medier påverkar ungas stress.\n\nFörsta veckan gick bra. De delade upp uppgifter: Nora skulle läsa forskning och skriva bakgrund, Zahid skulle göra en enkät, Elias skulle sammanställa resultat och skriva diskussion. De skapade en gemensam mapp och satte deadlines. Nora kände sig nästan trygg.\n\nSedan började Elias missa möten. Först en gång, sedan två. Han skrev kort: \"mycket nu\", \"kan inte idag\", \"fixar senare\". Zahid blev irriterad och skrev passivt aggressiva meddelanden om ansvar. Nora försökte hålla stämningen lugn, men det kändes som att hon bar en skål som redan fått en spricka.\n\nTvå dagar före inlämning öppnade Nora dokumentet och såg att Elias hade klistrat in en lång text i diskussionsdelen. Den var välformulerad, nästan för välformulerad. Hon läste en mening och kände igen tonen. Hon hade sett den förut, men inte i deras arbete.\n\nHon kopierade en rad och sökte på nätet. Det tog tre sekunder. Texten kom från en artikel på en blogg, ordagrant.\n\nNora kände hur magen vände sig. Plagiat. Ett ord som lät som en dom.\n\nHon skrev till Elias: \"Var kommer diskussionen ifrån? Den verkar kopierad.\"\n\nElias svarade inte direkt. Zahid såg meddelandet och skrev: \"Jag visste det. Vi kommer få F.\"\n\nNora tog ett djupt andetag. Hon tänkte på allt de läst om källor och etik. Hon tänkte också på Elias, som ofta såg trött ut på morgnarna och som ibland skämtade för att dölja något.\n\nEfter en timme svarade Elias: \"Jag hann inte. Jag panikade. Jag tänkte att vi kunde ändra lite så märks det inte.\"\n\nNora skrev: \"Det här kan förstöra för oss alla. Vi måste göra om.\"\n\nElias: \"Det går inte. Jag orkar inte.\"\n\nZahid: \"Säg det till läraren. Jag tänker inte bli straffad för hans skit.\"\n\nNora satt med mobilen i handen och kände hur situationen pressade henne från två håll. Å ena sidan var det orättvist att gruppen skulle ta smällen. Å andra sidan kändes det som förräderi att gå bakom ryggen på Elias. Etik var plötsligt inte ett kapitel i en bok, utan en konflikt i realtid.\n\nHon ringde Elias. Han svarade efter flera signaler.\n\n\"Jag vet,\" sa han innan hon ens hann börja. Rösten lät tunn.\n\n\"Varför?\" frågade Nora.\n\nElias var tyst, sedan kom orden snabbt: \"Jag har haft det kaos hemma. Jag sover knappt. Jag fattar att det inte är en ursäkt, men jag tänkte att om jag bara levererar något så slipper ni bli arga.\"\n\nNora kände hur ilskan mjuknade men inte försvann. \"Vi blir arga om vi åker dit för plagiat. Men vi kan fortfarande fixa det. Jag kan sitta ikväll och skriva om diskussionen med dig, men du måste vara med. På riktigt.\"\n\nElias drog efter andan. \"Okej.\"\n\nDe kopplade upp sig i ett samtal. Zahid var med, motvilligt. Nora gjorde en plan: de skulle använda bloggartikeln som en källa, citera den korrekt om de ville, men framför allt skriva med egna ord och koppla till deras enkätresultat och de forskningsartiklar Nora hittat. Det blev en lång kväll. Elias skrev först klumpigt, sedan bättre. Zahid la in siffror och diagram. Nora höll ihop texten.\n\nNär de skickade in arbetet var Nora utmattad. Men hon var också märkligt klar. De hade inte valt den enkla vägen. De hade valt den som gick att stå för.\n\nEfteråt satt de kvar i klassrummet när läraren kom fram. Nora var beredd på en utskällning, men läraren sa: \"Jag ser att ni har jobbat hårt. Bra att ni kopplar resultat till källor.\"\n\nNär de gick ut sa Zahid lågt: \"Jag ville anmäla direkt. Men... det var bättre så här.\"\n\nElias nickade. \"Jag är ledsen. Jag fattar nu att etik inte är ett ord. Det är vad man gör när man har panik.\"\n\nNora tänkte att det var sant. Etik är sällan bekvämt. Men ibland är det just det som gör det viktigt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad handlar Noras grupparbete om?",
+        "options": [
+          "Hur man bygger en bro",
+          "Hur sociala medier påverkar ungas stress",
+          "Sveriges medeltid",
+          "Fotosyntesens kemi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad upptäcker Nora när hon söker på en mening från Elias text?",
+        "options": [
+          "Att texten är från en bok i biblioteket",
+          "Att texten är kopierad ordagrant från en blogg",
+          "Att texten är genererad av en skrivare",
+          "Att texten är från deras enkät"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var Elias förslag för att undvika att det märks att texten var kopierad?",
+        "options": [
+          "Att radera hela arbetet",
+          "Att ändra lite i texten så att det inte märks",
+          "Att byta ämne helt",
+          "Att lämna in sent"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tvekar Nora inför att direkt säga till läraren om plagiatet?",
+        "options": [
+          "För att hon inte bryr sig om betyg",
+          "För att hon känner konflikt mellan rättvisa mot gruppen och lojalitet mot Elias",
+          "För att hon tycker att plagiat är okej",
+          "För att hon inte vill bli klar i tid"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar det att de väljer att skriva om diskussionen i stället för att bara 'ändra lite'?",
+        "options": [
+          "Att de vill ha längre text",
+          "Att de tar ansvar för akademisk ärlighet och vill kunna stå för arbetet",
+          "Att de vill imponera med svåra ord",
+          "Att de vill slippa använda källor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Elias i slutet när han säger att etik är vad man gör när man har panik?",
+        "options": [
+          "Att etik bara gäller när man är rädd",
+          "Att ens verkliga värderingar syns i pressade situationer, när det är frestande att fuska",
+          "Att panik gör allt tillåtet",
+          "Att etik är samma sak som stress"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 712,
+      "fingerprint": "gpt4-gy05",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]

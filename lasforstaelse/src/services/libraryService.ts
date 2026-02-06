@@ -71,7 +71,7 @@ export async function getTextCountByGrade(): Promise<Record<number, number>> {
   const library = await loadLibrary();
   const counts: Record<number, number> = {};
 
-  for (let grade = 1; grade <= 9; grade++) {
+  for (let grade = 1; grade <= 10; grade++) {
     counts[grade] = library.filter(t => t.grade === grade).length;
   }
 
