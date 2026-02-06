@@ -884,5 +884,115 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak4-vanskap-01",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den delade pennan",
+    "text": "När Noor kom in i klassrummet efter rasten såg hon direkt att något var annorlunda. På hennes bänk låg en penna som inte var hennes. Den var svart med små stjärnor på, och den såg ny ut. Noor tittade runt. Vid fönstret satt Hugo och letade i sin ryggsäck med rynkade ögonbryn. Han drog fram böcker, sudd och en halv banan i en påse.\n\n\"Letar du efter något?\" frågade Noor.\n\nHugo nickade utan att titta upp. \"Min penna. Jag fick den av min morfar. Det är egentligen bara en penna, men… jag gillar den.\"\n\nNoor kände hur magen drog ihop sig. Hon tittade på pennan på sin bänk igen. Den såg exakt ut som den Hugo brukade skriva med. Hon tänkte tillbaka på rasten: hon hade lånat en penna snabbt när hon skulle skriva en lapp, och sedan hade hon stoppat den i fickan utan att tänka.\n\nHon kunde låtsas som ingenting. Ingen hade sett. Men samtidigt kom hon ihåg hur det kändes när någon tog hennes hårspänne i tvåan och sa att det \"bara var en grej\". Noor tog ett djupt andetag.\n\n\"Är det den här?\" sa hon och höll upp pennan.\n\nHugos ansikte förändrades direkt. Först såg han lättad ut, sedan osäker. \"Ja… det är den. Var hittade du den?\"\n\nNoor svalde. \"Jag lånade den på rasten och glömde lämna tillbaka. Jag är ledsen.\"\n\nHugo var tyst en stund. Noor hann tänka att han skulle bli arg, att han skulle säga det inför alla. Men han tog pennan försiktigt och sa: \"Tack för att du sa det. Jag trodde någon hade tagit den med flit.\"\n\nNoor nickade. \"Jag vill inte att du ska tro det. Jag kan vara slarvig ibland, men jag försöker vara ärlig.\"\n\nHugo log lite. \"Det är bättre än att vara perfekt.\"\n\nSenare på dagen skulle de jobba i par med en text om djur. Läraren delade ut papper och sa att de skulle läsa tyst först och sedan prata om svåra ord. Noor hamnade med Hugo.\n\nNär Hugo fastnade på ett ord, \"anpassa\", pekade Noor på meningen och sa: \"Det betyder typ att man ändrar sig för att klara sig. Som när djur byter päls på vintern.\"\n\nHugo nickade. \"Som när man försöker ändra sig för att bli modigare?\"\n\nNoor skrattade lite, men snällt. \"Kanske. Eller bara för att göra rätt.\"\n\nNär skoldagen var slut stoppade Hugo pennan i sitt pennfodral och sa: \"Du, Noor… tack igen.\"\n\nNoor kände sig lättare när hon gick hem. Hon hade inte blivit perfekt. Men hon hade valt att vara en vän som vågade säga sanningen, även när det kändes svårt.",
+    "questions": [
+      { "type": "literal", "q": "Vad låg på Noors bänk när hon kom in efter rasten?", "options": ["En linjal", "En svart penna med små stjärnor", "Ett suddgummi", "En mobil"], "correct": 1 },
+      { "type": "literal", "q": "Vem letade efter sin penna?", "options": ["Noor", "Hugo", "Läraren", "Morfar"], "correct": 1 },
+      { "type": "literal", "q": "Varför gillade Hugo pennan extra mycket?", "options": ["Den var dyr", "Den var blå", "Han fick den av sin morfar", "Den hade glitter"], "correct": 2 },
+      { "type": "inferens", "q": "Varför kände Noor att magen drog ihop sig när hon såg pennan?", "options": ["Hon var hungrig", "Hon förstod att pennan troligen var Hugos och att hon glömt lämna tillbaka den", "Hon blev arg på Hugo", "Hon ville byta penna direkt"], "correct": 1 },
+      { "type": "inferens", "q": "Vad visar det om Hugo att han inte blir arg när Noor berättar sanningen?", "options": ["Att han inte bryr sig om pennor", "Att han är lugn och uppskattar ärlighet", "Att han inte hörde vad Noor sa", "Att han vill bråka senare"], "correct": 1 },
+      { "type": "inferens", "q": "Varför känner Noor sig lättare när hon går hem?", "options": ["För att hon fick behålla pennan", "För att hon slapp göra läxan", "För att hon valde att vara ärlig och det gjorde situationen bättre", "För att Hugo gav henne en ny penna"], "correct": 2 }
+    ],
+    "meta": {
+      "wordCount": 420,
+      "fingerprint": "gpt4-001",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak4-natur-02",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Spåret i snön",
+    "text": "När första snön kom var gården utanför skolan som en ny sida i en bok. Allt såg rent ut, och varje fotsteg blev ett tydligt märke. Saba drog mössan längre ner över öronen och sprang mot skogsdungen vid staketet. Där brukade hon och hennes kompis Arvid leka, för där fanns pinnar att bygga med och stenar som kunde bli hemliga skatter.\n\n\"Kom!\" ropade Arvid. Han stod böjd över marken och pekade på något.\n\nSaba hann nästan halka på en isig fläck, men hon tog emot sig och tittade ner. I snön syntes små spår, som en rad av prickar och streck. De gick som en slingrande linje mellan buskarna.\n\n\"Vad är det?\" viskade Saba.\n\n\"Jag tror det är en hare,\" sa Arvid. \"Min morbror sa att harar hoppar så där, med bakbenen framför.\"\n\nSaba följde spåren med blicken. De försvann in bakom en gran. Hon kände en märklig känsla i kroppen, som om hon var med i en detektivhistoria.\n\nDe gick försiktigt efter. Saba försökte sätta fötterna bredvid spåren, inte på dem. Hon ville inte förstöra ledtrådarna. Bakom granen såg de fler spår, men nu fanns det också något annat: små fjädrar, grå och mjuka.\n\nArvid svalde. \"Kanske en fågel… och en räv?\"\n\nSaba tittade runt. Det var tyst, men inte en tom tystnad. Det var en tystnad där man kunde ana att det fanns liv som gömde sig. Hon tänkte på att djuren hade sin egen vardag, även när människor hade rast.\n\nDe följde spåren en bit till och såg till slut en liten grop vid en buske. Där låg något som såg ut som ett äpple, fast det var hårt och brunt.\n\n\"Bajs,\" sa Arvid snabbt och rynkade näsan.\n\nSaba började skratta. \"Det är också en ledtråd!\"\n\nArvid skrattade han med. \"Sant. Naturen är lite äcklig ibland.\"\n\nNär det ringde in stod de kvar en sekund. Saba kände att hon hade lärt sig något utan att någon hade undervisat. Hon hade tittat noga, dragit slutsatser och förstått att spår inte bara är märken. Spår är berättelser.\n\nPå vägen tillbaka sa Saba: \"I morgon kan vi ta med en bok om djurspår.\"\n\nArvid nickade ivrigt. \"Ja! Då kan vi veta säkrare. Men jag tror ändå att det var en hare.\"\n\nSaba såg ner på sina egna fotsteg i snön. De var stora och klumpiga jämfört med de små spåren. Ändå var de också en berättelse om någon som hade varit där och försökt förstå världen.",
+    "questions": [
+      { "type": "literal", "q": "Var hittade Saba och Arvid spåren?", "options": ["I matsalen", "Vid skogsdungen vid staketet", "I klassrummet", "På fotbollsplanen"], "correct": 1 },
+      { "type": "literal", "q": "Vilket djur tror Arvid att spåren kan komma från?", "options": ["En hare", "En älg", "En hund", "En katt"], "correct": 0 },
+      { "type": "literal", "q": "Vad hittar de förutom spår bakom granen?", "options": ["En boll", "Små fjädrar", "En mössa", "En nyckel"], "correct": 1 },
+      { "type": "inferens", "q": "Varför försöker Saba sätta fötterna bredvid spåren?", "options": ["För att hon vill göra egna spår", "För att hon inte vill förstöra ledtrådarna", "För att hon är rädd för snö", "För att Arvid säger att man måste"], "correct": 1 },
+      { "type": "inferens", "q": "Vad menar Saba när hon säger att \"spår är berättelser\"?", "options": ["Att spår kan visa vad som hänt och vilka djur som varit där", "Att spår alltid leder till en skatt", "Att spår är samma sak som teckningar", "Att spår bara finns i böcker"], "correct": 0 },
+      { "type": "inferens", "q": "Varför vill Saba ta med en bok om djurspår nästa dag?", "options": ["För att hon vill imponera på läraren", "För att hon vill kunna gissa utan att tänka", "För att de kan jämföra och få en säkrare idé om vilket djur det var", "För att hon vill sluta vara ute på rasterna"], "correct": 2 }
+    ],
+    "meta": {
+      "wordCount": 410,
+      "fingerprint": "gpt4-002",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak4-vetenskap-03",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Varför flyter vissa saker och andra sjunker?",
+    "text": "Har du någon gång lagt en sten i vatten och sett den sjunka direkt, men sedan lagt i en bit trä som flyter? Det kan kännas som magi, men det handlar om fysik. För att förstå varför saker flyter eller sjunker behöver du känna till två viktiga ord: densitet och lyftkraft.\n\nDensitet betyder ungefär hur \"tätt packat\" något är. Tänk dig två lådor som är lika stora. I den ena finns bomull och i den andra finns sten. Lådorna tar lika mycket plats, men stenen väger mycket mer. Då säger vi att stenen har högre densitet än bomullen.\n\nVatten har också en densitet. Om ett föremål har lägre densitet än vatten brukar det flyta. Om föremålet har högre densitet än vatten brukar det sjunka. Trä har ofta lägre densitet än vatten, därför flyter många träbitar. En sten har nästan alltid högre densitet än vatten, därför sjunker den.\n\nMen det finns fler saker som spelar roll. Formen kan påverka. En stor båt av metall kan flyta, trots att metall i sig ofta har hög densitet. Hur är det möjligt? Jo, en båt har mycket luft inuti. När man räknar densitet för hela båten (metall plus luft) blir densiteten lägre än vattnets densitet. Därför kan den flyta.\n\nHär kommer lyftkraft in. Lyftkraft är den kraft som vattnet \"trycker upp\" med. När du sänker ner ett föremål i vatten tränger föremålet undan vatten. Vattnet vill tillbaka, och då uppstår en uppåtriktad kraft. Om lyftkraften är större än föremålets tyngd, flyter det. Om tyngden är större, sjunker det.\n\nDu kan testa detta hemma eller i skolan (med en vuxen om det behövs). Ta en bit aluminiumfolie. Forma den till en tät boll och lägg den i vatten – den sjunker ofta. Forma sedan samma folie som en liten skål med kanter och lägg den i vattnet. Nu flyter den lättare, eftersom formen gör att mer vatten trängs undan och att det finns luft i \"skålen\".\n\nAtt förstå flyta och sjunka hjälper oss att bygga båtar, designa flytvästar och till och med planera hur undervattensfarkoster ska röra sig. Det är ett exempel på hur vardagliga saker kan förklaras med smarta idéer, och hur naturens regler faktiskt går att lära sig.",
+    "questions": [
+      { "type": "literal", "q": "Vilka två ord nämns som viktiga för att förstå flyta och sjunka?", "options": ["Temperatur och hastighet", "Densitet och lyftkraft", "Ljud och ljus", "Skugga och färg"], "correct": 1 },
+      { "type": "literal", "q": "Vad betyder densitet enligt texten?", "options": ["Hur snabbt något rör sig", "Hur tätt packat något är", "Hur varmt något är", "Hur starkt något luktar"], "correct": 1 },
+      { "type": "literal", "q": "Varför kan en båt av metall flyta enligt texten?", "options": ["För att metall alltid flyter", "För att båten har luft inuti så att densiteten för hela båten blir lägre", "För att vattnet är rädd för båten", "För att båtar är målade"], "correct": 1 },
+      { "type": "inferens", "q": "Varför sjunker ofta en tät boll av aluminiumfolie, men en skålformad bit kan flyta?", "options": ["För att skålen är snyggare", "För att skålformen tränger undan mer vatten och håller luft, vilket ökar lyftkraften", "För att vatten gillar aluminium", "För att bollen alltid hamnar fel"], "correct": 1 },
+      { "type": "inferens", "q": "Om ett föremål har högre densitet än vatten, vad händer oftast?", "options": ["Det flyter alltid", "Det sjunker oftast", "Det blir genomskinligt", "Det börjar koka"], "correct": 1 },
+      { "type": "inferens", "q": "Varför kan kunskap om lyftkraft vara viktig när man designar flytvästar?", "options": ["För att flytvästar ska se coola ut", "För att man vill att lyftkraften ska hjälpa personen att hålla sig uppe", "För att flytvästar ska bli tyngre", "För att vatten ska rinna snabbare"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 400,
+      "fingerprint": "gpt4-003",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak4-historia-04",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "historia",
+    "title": "Barn förr i tiden – skola, arbete och lek",
+    "text": "Hur var det att vara barn för hundra år sedan? Det fanns såklart glada stunder då också, men vardagen såg ofta annorlunda ut än idag. Många barn bodde trängre, hade fler syskon och hjälpte till mer hemma. Det som i dag kallas \"barndom\" kunde då innehålla mycket ansvar.\n\nSkolan var inte alltid självklar. I Sverige infördes folkskolan på 1840-talet, men det tog tid innan alla barn gick regelbundet. På landsbygden kunde barn behöva hjälpa till på gården, särskilt under skördetider. För vissa familjer var det viktigare att få in mat och pengar än att barnen satt i ett klassrum.\n\nNär barn väl gick i skolan var reglerna ofta strängare. Läraren kunde ha stor makt, och eleverna förväntades sitta stilla och lyssna. Läroböcker var få, så barn kunde behöva dela. Ibland skrev man på små griffeltavlor i stället för i skrivhäften.\n\nMånga barn arbetade också. Det kunde vara enkla sysslor som att hämta vatten, passa småsyskon eller hugga ved. Men en del barn arbetade långa dagar i fabriker eller som springpojkar i städer. Arbetet kunde vara tungt och ibland farligt.\n\nBetyder det att barn aldrig lekte? Nej, barn lekte även då. Men leksaker var ofta enklare och gjorda av det som fanns. Man kunde snida en träfigur, göra en boll av trasor eller leka lekar där fantasin var viktigast. Utelekar var vanliga, och många barn hittade på egna regler.\n\nDet är viktigt att komma ihåg att historien inte bara handlar om kungar, krig och stora uppfinningar. Den handlar också om vanliga barn som du, som försökte klara sin vardag. När vi lär oss om barn förr i tiden kan vi förstå hur samhället har förändrats och varför saker som skola och barns rättigheter är så viktiga idag.",
+    "questions": [
+      { "type": "literal", "q": "Vilka tre saker nämns i texten som delar av barns vardag förr?", "options": ["Skola, arbete och lek", "Sport, tv och resor", "Datorer, spel och sociala medier", "Bilar, flyg och tåg"], "correct": 0 },
+      { "type": "literal", "q": "Vad kunde barn på landsbygden behöva göra i stället för att gå i skolan regelbundet?", "options": ["Träna på gym", "Hjälpa till på gården, särskilt vid skörd", "Läsa serier hela dagen", "Spela musik på scen"], "correct": 1 },
+      { "type": "literal", "q": "Vad nämns som något barn ibland skrev på i stället för skrivhäften?", "options": ["Surfplattor", "Griffeltavlor", "Affischer", "Tidningar"], "correct": 1 },
+      { "type": "inferens", "q": "Varför var det för vissa familjer viktigare att barn arbetade än att de gick i skolan?", "options": ["För att skolan var gratis", "För att familjen behövde mat och pengar för att klara vardagen", "För att barnen inte ville lära sig", "För att läraren bodde för långt bort"], "correct": 1 },
+      { "type": "inferens", "q": "Vad kan man förstå av att leksaker ofta var hemmagjorda?", "options": ["Att barn inte hade någon fantasi", "Att många familjer hade mindre pengar och använde det som fanns", "Att det inte fanns några material alls", "Att vuxna förbjöd lek"], "correct": 1 },
+      { "type": "inferens", "q": "Varför säger texten att historia inte bara handlar om kungar och krig?", "options": ["För att kungar aldrig funnits", "För att vanliga människors liv också visar hur samhället förändras", "För att krig alltid är påhittade", "För att skolor inte får prata om krig"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 320,
+      "fingerprint": "gpt4-004",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak4-teknik-05",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Hur fungerar internet – som en osynlig väg för information",
+    "text": "Internet kan kännas som något som bara \"finns\", ungefär som el i väggen. Du klickar på en video, skickar ett meddelande eller spelar ett spel, och allt händer snabbt. Men bakom skärmen arbetar ett stort nätverk som skickar information i små delar.\n\nInternet är ett nät av många datorer och servrar som är kopplade till varandra. En server är en kraftig dator som lagrar webbsidor, bilder och filmer. När du vill se en webbsida skickar din dator (eller surfplatta) en fråga: \"Kan jag få den här sidan?\" Servern svarar genom att skicka informationen tillbaka.\n\nInformationen skickas ofta i små paket. Det är som om du skulle skicka ett pussel med posten, men du delar upp det i flera kuvert. Varje kuvert tar kanske en lite olika väg genom nätverket, men när de kommer fram kan din enhet sätta ihop dem igen.\n\nFör att paketen ska hitta rätt används adresser. På internet finns IP-adresser, som fungerar lite som husnummer. Men eftersom IP-adresser är svåra att komma ihåg använder vi ofta webbadresser med namn, som om vi skrev ett smeknamn i stället för en sifferrad.\n\nDet finns också regler för hur information skickas. Dessa regler kallas protokoll. Ett vanligt protokoll gör att din enhet och servern \"förstår\" varandra och vet hur paketen ska sorteras.\n\nInternet kan gå via kablar under marken, genom fiber, eller via trådlösa signaler som wifi. Även om wifi känns \"luftigt\" är det ofta kablar som gör den längsta resan, till exempel kablar som går under havet mellan länder.\n\nAtt förstå internet kan hjälpa dig att förstå varför det ibland laggar. Om många skickar paket samtidigt kan nätverket bli överfullt, ungefär som en väg med för mycket trafik. Då kan vissa paket bli sena och din video kan behöva pausa.\n\nInternet är alltså en osynlig väg för information. När du använder det varje dag är det lätt att glömma hur smart systemet är. Men nästa gång du skickar ett meddelande kan du tänka: det åker faktiskt iväg i små paket, hittar rätt väg, och sätts ihop igen – på bara några sekunder.",
+    "questions": [
+      { "type": "literal", "q": "Vad kallas en kraftig dator som lagrar webbsidor, bilder och filmer?", "options": ["Router", "Server", "Mus", "Skärm"], "correct": 1 },
+      { "type": "literal", "q": "Hur beskrivs informationen ofta skickas över internet i texten?", "options": ["Som små paket", "Som en enda stor låda", "Som vatten i ett rör", "Som ljudvågor i en trumma"], "correct": 0 },
+      { "type": "literal", "q": "Vad kallas reglerna för hur information skickas på internet?", "options": ["Protokoll", "Läxor", "Batterier", "Koder i hemlighet"], "correct": 0 },
+      { "type": "inferens", "q": "Varför jämför texten nätverket med en väg som kan få \"för mycket trafik\"?", "options": ["För att internet använder bilar", "För att mycket data samtidigt kan göra att vissa paket blir sena", "För att wifi alltid är farligt", "För att servrar flyttar på sig"], "correct": 1 },
+      { "type": "inferens", "q": "Varför använder människor webbadresser med namn i stället för IP-adresser?", "options": ["För att namn är lättare att komma ihåg än sifferrader", "För att IP-adresser inte finns", "För att datorer hatar siffror", "För att protokoll inte fungerar annars"], "correct": 0 },
+      { "type": "inferens", "q": "Vad kan texten antyda om varför en video ibland pausar när du tittar?", "options": ["För att filmen är trasig", "För att nätverket kan bli överfullt och paket kommer fram sent", "För att skärmen blir trött", "För att servrar alltid stänger på kvällen"], "correct": 1 }
+    ],
+    "meta": {
+      "wordCount": 380,
+      "fingerprint": "gpt4-005",
+      "generatedAt": "2026-02-06T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
