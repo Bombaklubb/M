@@ -176,7 +176,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
               className={`px-6 py-4 font-bold text-lg rounded-xl transition-all ${
                 currentGrade >= 10
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+                  : 'bg-red-100 text-red-700 hover:bg-red-200'
               }`}
             >
               Ny text, högre nivå
