@@ -170,6 +170,60 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  // Nästa text i lägre årskurs
+  const handleNextTextLower = async () => {
+    if (!user || !currentGrade || currentGrade <= 1) {
+      handleRestart();
+      return;
+    }
+
+    const newGrade = currentGrade - 1;
+    setCurrentGrade(newGrade);
+    setUserAnswers({});
+    setLastResult(null);
+    setLoading(true);
+
+    const completedIds = getCompletedTextIds(user);
+    const text = await getRandomText(newGrade, completedIds);
+
+    if (text) {
+      setCurrentText(text);
+      setAppState(AppState.QUIZ);
+    } else {
+      handleRestart();
+    }
+
+    setLoading(false);
+    window.scrollTo(0, 0);
+  };
+
+  // Nästa text i högre årskurs
+  const handleNextTextHigher = async () => {
+    if (!user || !currentGrade || currentGrade >= 10) {
+      handleRestart();
+      return;
+    }
+
+    const newGrade = currentGrade + 1;
+    setCurrentGrade(newGrade);
+    setUserAnswers({});
+    setLastResult(null);
+    setLoading(true);
+
+    const completedIds = getCompletedTextIds(user);
+    const text = await getRandomText(newGrade, completedIds);
+
+    if (text) {
+      setCurrentText(text);
+      setAppState(AppState.QUIZ);
+    } else {
+      handleRestart();
+    }
+
+    setLoading(false);
+    window.scrollTo(0, 0);
+  };
+
   // Beräkna antal lästa texter per årskurs
   const getCompletedByGrade = (): Record<number, number> => {
     if (!user) return {};
@@ -239,7 +293,7 @@ function App() {
           />
         )}
 
-        {appState === AppState.RESULT && currentText && lastResult && (
+        {appState === AppState.RESULT && currentText && lastResult && currentGrade && (
           <ResultView
             text={currentText}
             answers={userAnswers}
@@ -247,6 +301,9 @@ function App() {
             newBadges={lastResult.newBadges}
             onRestart={handleRestart}
             onNextText={handleNextText}
+            onNextTextLower={handleNextTextLower}
+            onNextTextHigher={handleNextTextHigher}
+            currentGrade={currentGrade}
           />
         )}
       </main>
