@@ -6282,5 +6282,415 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak1-vanskap-08",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "En plats bredvid mig",
+    "text": "På morgonen satt Inez vid sitt bord. Hon hade lagt fram sin bok och sin penna. Runt henne pratade många barn. Då kom Hassan in i klassrummet. Han såg sig omkring och höll hårt i sin ryggsäck.\n\nAlla platser såg upptagna ut, tyckte Hassan. Inez såg att han tveka. Hon flyttade sin stol lite och pekade på platsen bredvid.\n\n\"Du kan sitta här,\" sa Inez.\n\nHassan satte sig försiktigt. \"Tack,\" sa han.\n\nNär läraren delade ut ett papper viskade Hassan: \"Jag hittar inte mitt sudd.\"\n\nInez öppnade sitt pennskrin och gav honom ett extra. Hassan log. Senare på rasten byggde de en bana till en liten bil tillsammans. Inez kände sig stolt. Vänskap kan börja med en plats och ett sudd.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem kommer in och letar efter en plats?",
+        "options": [
+          "Inez",
+          "Hassan",
+          "Läraren",
+          "En hund"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ger Inez till Hassan när han inte hittar sitt sudd?",
+        "options": [
+          "En boll",
+          "Ett extra sudd",
+          "En keps",
+          "En glass"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad bygger de tillsammans på rasten?",
+        "options": [
+          "En bilbana",
+          "En båt",
+          "En snögubbe",
+          "En drake"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför flyttar Inez sin stol lite?",
+        "options": [
+          "För att göra plats åt Hassan",
+          "För att stolen är trasig",
+          "För att hon vill gå hem",
+          "För att hon är arg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Hassan när han får hjälp?",
+        "options": [
+          "Glad",
+          "Arg",
+          "Sömnig",
+          "Hungrig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen visa om vänskap?",
+        "options": [
+          "Att man alltid måste vara bäst",
+          "Att små snälla saker kan starta en vänskap",
+          "Att man ska leka ensam",
+          "Att man inte får dela"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 168,
+      "fingerprint": "gpt4-ak1-08",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-natur-09",
+    "grade": 1,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Regn och pölar",
+    "text": "När det regnar faller vatten från molnen ner på marken. Vattnet kan hamna på gator, gräs och i skogen. Om marken är hård eller redan blöt kan vattnet samlas i pölar.\n\nI en pöl kan du se himlen spegla sig. Ibland hoppar små droppar när det regnar mer. När solen kommer fram kan pölen bli mindre. Då avdunstar vattnet, vilket betyder att det blir till vattenånga och stiger upp i luften.\n\nRegn är viktigt för växter. Blommor och träd behöver vatten för att växa. Men vi ska akta oss vid stora pölar och hala stenar. Det är bäst att ha stövlar och gå försiktigt när det är blött ute.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad faller från molnen när det regnar?",
+        "options": [
+          "Sand",
+          "Vatten",
+          "Löv",
+          "Snöbollar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan hända med en pöl när solen kommer fram?",
+        "options": [
+          "Den blir större",
+          "Den blir mindre",
+          "Den blir till en sten",
+          "Den blir svart"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas det när vatten blir vattenånga och stiger upp i luften?",
+        "options": [
+          "Avdunstar",
+          "Fryser",
+          "Rullar",
+          "Krasar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan vatten samlas i pölar när marken är hård?",
+        "options": [
+          "För att vattnet inte kan sjunka ner lika lätt",
+          "För att solen lyser",
+          "För att pölar är målade",
+          "För att gräs försvinner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är regn viktigt för växter?",
+        "options": [
+          "För att växter behöver vatten för att växa",
+          "För att växter vill bada",
+          "För att regn är varmt",
+          "För att växter blir blå"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ska man gå försiktigt när det är blött ute?",
+        "options": [
+          "För att man kan halka",
+          "För att man blir längre",
+          "För att pölar försvinner",
+          "För att moln ramlar"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 145,
+      "fingerprint": "gpt4-ak1-09",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-teknik-10",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "teknik",
+    "title": "Hjulet som rullade",
+    "text": "På fritids byggde Noura och Viktor en bana av klossar. De ville att en liten bil skulle rulla hela vägen utan att stanna. Men bilen fastnade vid en kant.\n\n\"Den hoppar inte över,\" sa Viktor och såg fundersam ut.\n\nNoura tittade noga. \"Kanten är för hög. Vi kan göra en ramp.\"\n\nDe tog en platt kloss och lade den som en sluttning. Noura höll i klossen medan Viktor tryckte fast den med två andra klossar.\n\nDe testade igen. Bilen rullade, upp på rampen och vidare. Den kom hela vägen till slutet och stannade precis vid en bok.\n\n\"Det funkar!\" sa Viktor.\n\nNoura log. \"Vi ändrade en sak och provade igen.\"\n\nDe ritade en pil på ett papper: start och mål. Sedan byggde de en ännu längre bana. Teknik kan vara att bygga, testa och förbättra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bygger Noura och Viktor?",
+        "options": [
+          "En bana av klossar",
+          "En snögubbe",
+          "En macka",
+          "En drake"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de för att bilen ska komma över kanten?",
+        "options": [
+          "De målar bilen",
+          "De gör en ramp",
+          "De gömmer klossarna",
+          "De byter bok"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var stannar bilen till slut?",
+        "options": [
+          "Vid en bok",
+          "I en pöl",
+          "På taket",
+          "I matsalen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför fastnade bilen först?",
+        "options": [
+          "För att kanten var för hög",
+          "För att bilen sov",
+          "För att rampen var blå",
+          "För att klossarna var mjuka"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför testar de igen efter att de byggt rampen?",
+        "options": [
+          "För att se om det fungerar",
+          "För att göra läraren arg",
+          "För att bilen ska försvinna",
+          "För att rampen ska sjunga"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig barnen om teknik?",
+        "options": [
+          "Att man aldrig får ändra",
+          "Att man kan bygga, testa och förbättra",
+          "Att klossar alltid ramlar",
+          "Att bilar inte rullar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 175,
+      "fingerprint": "gpt4-ak1-10",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-musik-11",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "musik",
+    "title": "Klapp, stopp, klapp",
+    "text": "På musiklektionen sa läraren: \"Vi ska göra en rytm.\" Alla stod i en ring. Läraren klappade: klapp, klapp, stopp. Klassen härmade.\n\nYusuf klappade jättefort. Mei klappade långsamt och tittade på lärarens händer. \"Jag hinner inte,\" viskade Yusuf.\n\nMei sa: \"Vi kan räkna.\"\n\nDe räknade tillsammans: \"Ett, två, stopp.\" Yusuf provade igen. Nu gick det bättre.\n\nSedan fick alla hitta på en egen rytm. Yusuf gjorde: klapp, stamp, klapp. Mei gjorde: klapp, knäpp, stopp. När de spelade ihop blev det som en liten låt.\n\nEfteråt sa Yusuf: \"Tack. Jag trodde jag inte kunde.\"\n\nMei log. \"Du kunde. Du behövde bara en takt.\" Klassen skrattade och klappade en sista gång, lugnt och tillsammans.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken rytm klappar läraren först?",
+        "options": [
+          "Klapp, klapp, stopp",
+          "Stamp, stamp, stamp",
+          "Knäpp, knäpp, knäpp",
+          "Stopp, stopp, klapp"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem klappar jättefort i början?",
+        "options": [
+          "Mei",
+          "Yusuf",
+          "Läraren",
+          "En hund"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad föreslår Mei för att det ska bli lättare?",
+        "options": [
+          "Att de springer",
+          "Att de räknar",
+          "Att de skriker",
+          "Att de sover"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Yusuf \"Jag hinner inte\"?",
+        "options": [
+          "För att han klappar för snabbt och tappar takten",
+          "För att han har glömt sin jacka",
+          "För att lektionen är slut",
+          "För att han inte gillar musik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför hjälper det att räkna \"Ett, två, stopp\"?",
+        "options": [
+          "För att det visar när de ska klappa och stanna",
+          "För att det gör rytmen osynlig",
+          "För att det gör händerna större",
+          "För att läraren blir tyst"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar berättelsen om att lära sig?",
+        "options": [
+          "Att man alltid ska ge upp",
+          "Att hjälp och träning kan göra att man lyckas",
+          "Att man aldrig får räkna",
+          "Att rytm är farligt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 168,
+      "fingerprint": "gpt4-ak1-11",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-etik-12",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Den lånade suddgummit",
+    "text": "På bilden behövde alla sudda ibland. Theo hade tappat sitt suddgummi. Han tittade i sin låda och på golvet.\n\n\"Jag hittar det inte,\" sa Theo.\n\nSahar satt bredvid. Hon tog fram sitt suddgummi. \"Du kan låna mitt,\" sa Sahar.\n\nTheo tog det och suddade. Men när lektionen var slut stoppade han suddgummit i sin ficka utan att tänka. Sahar såg det och blev tyst.\n\nPå vägen ut stannade Theo. Han kände suddgummit i fickan. \"Oj!\" sa han och vände sig om.\n\n\"Förlåt,\" sa Theo och gav tillbaka suddet. \"Jag glömde.\"\n\nSahar log lite. \"Tack för att du sa det.\"\n\nTheo nickade. Han kände sig lättad. Att låna betyder att man lämnar tillbaka. Och om man gör fel kan man säga förlåt och göra rätt igen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har Theo tappat?",
+        "options": [
+          "En penna",
+          "Ett suddgummi",
+          "En mössa",
+          "En bok"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem lånar ut sitt suddgummi till Theo?",
+        "options": [
+          "Sahar",
+          "Theo",
+          "Läraren",
+          "Mei"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var stoppar Theo suddgummit när lektionen är slut?",
+        "options": [
+          "I sin ficka",
+          "I papperskorgen",
+          "I kylskåpet",
+          "I fönstret"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Sahar tyst när Theo stoppar suddgummit i fickan?",
+        "options": [
+          "För att hon tror att han tar det och inte lämnar tillbaka",
+          "För att hon blir hungrig",
+          "För att lektionen är rolig",
+          "För att suddgummit är trasigt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vänder Theo sig om på vägen ut?",
+        "options": [
+          "För att han vill springa",
+          "För att han märker att suddgummit är i hans ficka",
+          "För att han hör musik",
+          "För att han vill gå hem snabbare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten lära om att låna?",
+        "options": [
+          "Att man får behålla allt",
+          "Att man ska lämna tillbaka och säga förlåt om man glömmer",
+          "Att man aldrig ska låna",
+          "Att suddgummin är hemliga"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 175,
+      "fingerprint": "gpt4-ak1-12",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
