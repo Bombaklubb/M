@@ -8,6 +8,9 @@ interface ResultViewProps {
   newBadges: Badge[];
   onRestart: () => void;
   onNextText: () => void;
+  onNextTextLower: () => void;
+  onNextTextHigher: () => void;
+  currentGrade: number;
 }
 
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string }> = {
@@ -22,6 +25,9 @@ export const ResultView: React.FC<ResultViewProps> = ({
   newBadges,
   onRestart,
   onNextText,
+  onNextTextLower,
+  onNextTextHigher,
+  currentGrade,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -104,13 +110,23 @@ export const ResultView: React.FC<ResultViewProps> = ({
           </div>
 
           {/* Points earned */}
-          <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-4 mb-6 inline-block">
+          <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-4 mb-4 inline-block">
             <div className="flex items-center gap-2 justify-center">
               <span className="text-3xl">⭐</span>
               <span className="text-2xl font-bold text-yellow-700">
                 +{pointsEarned} poäng
               </span>
             </div>
+          </div>
+
+          {/* Show/hide details */}
+          <div className="mb-6">
+            <button
+              onClick={() => setShowDetails(!showDetails)}
+              className="text-indigo-600 font-medium py-2 hover:underline"
+            >
+              {showDetails ? '▲ Dölj svaren' : '▼ Visa svaren'}
+            </button>
           </div>
 
           {/* New badges */}
@@ -135,30 +151,38 @@ export const ResultView: React.FC<ResultViewProps> = ({
             </div>
           )}
 
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Actions - three level options */}
+          <div className="flex flex-col gap-3">
             <button
-              onClick={onNextText}
-              className="px-8 py-4 bg-green-600 text-white font-extrabold text-lg rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-105 transition-all"
+              onClick={onNextTextLower}
+              disabled={currentGrade <= 1}
+              className={`px-6 py-4 font-bold text-lg rounded-xl transition-all ${
+                currentGrade <= 1
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                  : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+              }`}
             >
-              Ny text i samma årskurs →
+              Ny text, lägre nivå
             </button>
             <button
-              onClick={onRestart}
-              className="px-8 py-4 bg-slate-200 text-slate-700 font-bold text-lg rounded-xl hover:bg-slate-300 transition-all"
+              onClick={onNextText}
+              className="px-6 py-4 bg-green-600 text-white font-extrabold text-lg rounded-xl shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-105 transition-all"
             >
-              Välj annan årskurs
+              Ny text, samma nivå
+            </button>
+            <button
+              onClick={onNextTextHigher}
+              disabled={currentGrade >= 10}
+              className={`px-6 py-4 font-bold text-lg rounded-xl transition-all ${
+                currentGrade >= 10
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                  : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
+              }`}
+            >
+              Ny text, högre nivå
             </button>
           </div>
         </div>
-
-        {/* Show/hide details */}
-        <button
-          onClick={() => setShowDetails(!showDetails)}
-          className="w-full text-center text-indigo-600 font-medium py-2 hover:underline"
-        >
-          {showDetails ? '▲ Dölj svar' : '▼ Visa rätta svar'}
-        </button>
 
         {/* Detailed results */}
         {showDetails && (
