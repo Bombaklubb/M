@@ -5134,5 +5134,579 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak2-vanskap-01",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Bänken vid gungan",
+    "text": "På rasten sprang Noor till gungorna. Hen älskade att gunga högt, nästan så att fötterna nådde himlen. Men i dag satt någon på den bästa gungan. Det var Alex, som gungade sakta och tittade ner i marken.\n\nNoor stod en stund och väntade. Sedan satte hen sig på bänken bredvid. \"Vill du gunga tillsammans?\" frågade Noor.\n\nAlex ryckte på axlarna. \"Jag vet inte. Jag är lite nervös. Jag ramlade förra veckan.\"\n\nNoor nickade. \"Då kan vi börja lågt. Jag kan räkna, och du kan säga stopp när du vill.\"\n\nAlex tittade upp. \"Okej… kanske.\"\n\nNoor ställde sig bakom gungan och gav en liten knuff. \"Ett… två… tre…\" Alex log försiktigt. \"Lite mer,\" sa Alex.\n\nSnart gungade Alex högre. Noor hörde skratt och kände sig varm i magen. Då kom Fatima förbi med en boll under armen.\n\n\"Får jag vara med?\" frågade Fatima.\n\n\"Ja!\" sa Noor. \"Du kan räkna du också.\"\n\nFatima räknade och Alex gungade. När rasten var slut hoppade Alex av och sa: \"Tack. Det kändes tryggt.\"\n\nNoor log. \"Det är lättare när man hjälps åt.\" Fatima nickade. \"Och när man lyssnar.\"\n\nDe gick in tillsammans. Noor tänkte att vänskap kan börja med en bänk och en liten knuff, och att mod ibland växer när någon står nära.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var är Noor på rasten?",
+        "options": [
+          "I matsalen",
+          "Vid gungorna",
+          "I biblioteket",
+          "På bussen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför är Alex nervös?",
+        "options": [
+          "För att det regnar",
+          "För att Alex ramlade förra veckan",
+          "För att Noor är snabb",
+          "För att bollen är borta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem kommer förbi med en boll?",
+        "options": [
+          "Fatima",
+          "Noor",
+          "Alex",
+          "Jonas"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför börjar Noor med att knuffa gungan lite försiktigt?",
+        "options": [
+          "För att Noor vill retas",
+          "För att Alex ska känna sig trygg",
+          "För att Noor är trött",
+          "För att läraren sa nej"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner Alex sig när rasten är slut?",
+        "options": [
+          "Trygg",
+          "Arg",
+          "Hungrig",
+          "Sömnig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar berättelsen om vänskap?",
+        "options": [
+          "Att man alltid ska tävla",
+          "Att man kan hjälpa varandra och lyssna",
+          "Att man bara får leka ensam",
+          "Att gungor är farliga"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 254,
+      "fingerprint": "gpt4-ak2-01",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-natur-02",
+    "grade": 2,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Ekorren i parken",
+    "text": "En ekorre är ett litet djur som ofta bor nära människor, till exempel i parker och skogar. Ekorren har en lång svans som ser ut som en buske. Svansen hjälper ekorren att hålla balansen när den hoppar mellan grenar. Den kan också använda svansen som en filt när det är kallt.\n\nEkorren äter många saker. Den gillar nötter, frön och kottar. På hösten samlar ekorren mat och gömmer den på olika ställen. Då har den något att äta på vintern. Ibland glömmer ekorren var den gömt sin mat. Då kan ett frö börja växa och bli ett nytt träd.\n\nEkorren är snabb. Den kan klättra rakt upp på en stam och hoppa långt. Om den blir rädd kan den springa runt trädet så att den gömmer sig på andra sidan. Då är det svårare för en fågel att fånga den.\n\nEkorren har också bra hörsel och skarpa klor. Klornas form hjälper den att hålla fast i barken. Om du ser en ekorre i parken kan du titta på hur den rör sig: stannar den och lyssnar? Hoppar den snabbt? Då ser du hur den använder sin kropp för att klara sig.\n\nKom ihåg: det är bäst att titta på djur på avstånd. Då får de vara ifred och fortsätta sitt liv i naturen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har ekorren som är lång och ser ut som en buske?",
+        "options": [
+          "En tass",
+          "En svans",
+          "En näbb",
+          "En vinge"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad samlar ekorren på hösten?",
+        "options": [
+          "Snö",
+          "Mat som nötter och frön",
+          "Stenar",
+          "Vatten i flaskor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför kan ett nytt träd växa ibland?",
+        "options": [
+          "För att ekorren glömmer gömda frön",
+          "För att ekorren sjunger",
+          "För att svansen är mjuk",
+          "För att parken är stor"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det smart av ekorren att gömma mat på många ställen?",
+        "options": [
+          "För att den vill städa",
+          "För att den kan hitta mat även om något ställe försvinner",
+          "För att den vill lura barn",
+          "För att den inte gillar nötter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför springer ekorren runt trädet när den blir rädd?",
+        "options": [
+          "För att den tränar",
+          "För att gömma sig på andra sidan",
+          "För att hitta en pinne",
+          "För att få svansen ren"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ska man titta på ekorrar på avstånd?",
+        "options": [
+          "För att de ska få vara ifred",
+          "För att de blir större",
+          "För att de vill leka med dig",
+          "För att de alltid sover"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 268,
+      "fingerprint": "gpt4-ak2-02",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-teknik-03",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "teknik",
+    "title": "Robot av kartong",
+    "text": "I klassrummet stod en stor låda kartong. Läraren sa att de skulle bygga något av återbruk. \"Ni får bestämma själva,\" sa läraren. \"Men det ska kunna användas till något.\"\n\nKenji och Sara satte sig tillsammans. Kenji ritade snabbt en plan. \"Vi kan bygga en robot!\" sa han. Sara nickade. \"Ja! Den kan hjälpa till att sortera pennor.\"\n\nDe hämtade toalettpappersrullar, kapsyler och tejp. Sara ville att roboten skulle ha långa armar, så att den kunde nå en burk med blyertspennor. Kenji ville att roboten skulle ha en lucka på magen.\n\n\"Varför en lucka?\" frågade Sara.\n\n\"För att stoppa in sudd,\" sa Kenji. \"Som en suddbank!\"\n\nDe skrattade och började klippa. Ibland blev det snett och tejpen fastnade i deras fingrar. Då tog Sara ett djupt andetag och sa: \"Vi provar igen.\" Kenji höll i rullen medan Sara tejpade. De hjälptes åt.\n\nNär roboten var klar stod den på bänken. Den hade runda ögon av kapsyler och en lucka som gick att öppna. De testade den: Sara stoppade i ett sudd. Kenji öppnade luckan och tog ut suddet igen.\n\n\"Den fungerar!\" sa Sara.\n\nLäraren kom förbi. \"Ni har byggt en prototyp,\" sa läraren. \"En första modell. Nu kan ni förbättra den.\"\n\nKenji och Sara tittade på varandra. \"Nästa gång kan den ha hjul,\" sa Sara.\n\n\"Eller en arm som kan peka,\" sa Kenji.\n\nDe skrev ner sina idéer. Kenji kände sig stolt. Sara kände sig modig. De hade byggt något tillsammans, och deras robot av kartong hade blivit en liten början på en större idé.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad vill Kenji och Sara bygga?",
+        "options": [
+          "En båt",
+          "En robot",
+          "En stol",
+          "En cykel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad vill Sara att roboten ska kunna göra?",
+        "options": [
+          "Sortera pennor",
+          "Flyga",
+          "Laga mat",
+          "Spela fotboll"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallar läraren deras första modell?",
+        "options": [
+          "En prototyp",
+          "En karta",
+          "En saga",
+          "En regel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Sara \"Vi provar igen\" när det blir snett?",
+        "options": [
+          "För att hon vill ge upp",
+          "För att hon vill fortsätta och lösa problemet",
+          "För att hon inte gillar robotar",
+          "För att hon är arg på Kenji"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det bra att roboten är en prototyp?",
+        "options": [
+          "För att den måste vara perfekt direkt",
+          "För att de kan testa och förbättra den",
+          "För att den inte får användas",
+          "För att den alltid går sönder"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känns det för Kenji och Sara i slutet?",
+        "options": [
+          "Stolta och modiga",
+          "Arga och ledsna",
+          "Trötta och hungriga",
+          "Rädda och ensamma"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 296,
+      "fingerprint": "gpt4-ak2-03",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-miljo-04",
+    "grade": 2,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Varför vi sorterar sopor",
+    "text": "När vi slänger saker kallas det sopor. Men många sopor kan bli nya saker om vi sorterar dem rätt. Att sortera betyder att lägga samma slags material tillsammans. Då kan man återvinna, alltså göra nytt av gammalt.\n\nPapper kan bli nytt papper. Plast kan bli ny plast, till exempel en hink eller en leksak. Glas kan smältas och bli nya flaskor. Metall kan bli nya burkar eller delar till cyklar och bussar.\n\nOm allt blandas i samma påse blir det svårare att återvinna. Matrester kan göra papper blött och smutsigt. Då kan papperet inte användas igen. Därför är det bra att ha olika kärl eller påsar hemma och i skolan.\n\nNär vi återvinner sparar vi energi och natur. Det behövs ofta mindre energi att göra något av gammalt material än att ta nytt från naturen. Om vi tar mindre från naturen kan skogar, djur och vatten må bättre.\n\nDu kan hjälpa till genom att sortera din yoghurtburk, din papperslapp och ditt äppelskrutt. Det är små saker, men när många gör det blir det en stor skillnad.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder att sortera sopor?",
+        "options": [
+          "Att kasta allt i samma påse",
+          "Att lägga samma slags material tillsammans",
+          "Att gömma sopor",
+          "Att bränna papper"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan glas bli när man återvinner det?",
+        "options": [
+          "Nya flaskor",
+          "Ny mjölk",
+          "Nya träd",
+          "Nya moln"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan matrester göra med papper om allt blandas?",
+        "options": [
+          "Göra papper blött och smutsigt",
+          "Göra papper starkare",
+          "Göra papper osynligt",
+          "Göra papper blått"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir återvinning svårare om sopor blandas?",
+        "options": [
+          "För att det blir roligare",
+          "För att material kan förstöras och inte gå att använda igen",
+          "För att det blir fler sopor",
+          "För att sopor försvinner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sparar återvinning ofta energi?",
+        "options": [
+          "För att det alltid är gratis",
+          "För att det ofta behövs mindre energi än att ta nytt från naturen",
+          "För att sopor är varma",
+          "För att glas inte väger något"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan små saker som att sortera en yoghurtburk göra skillnad?",
+        "options": [
+          "För att ingen annan gör det",
+          "För att när många gör små saker blir det stor skillnad",
+          "För att sopor annars blir större",
+          "För att burkar kan prata"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 208,
+      "fingerprint": "gpt4-ak2-04",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-musik-05",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "musik",
+    "title": "Trumman och melodin",
+    "text": "På musiklektionen stod instrumenten framme. Det fanns trummor, maracas och en liten xylofon med färgglada plattor. Läraren sa: \"I dag ska ni göra en låt tillsammans.\"\n\nDiego ville spela trummor direkt. \"Jag kan rytmen!\" sa han och slog försiktigt: dunk-dunk, dunk-dunk. Leila gick fram till xylofonen. Hon testade en platta som lät ljust, och en som lät mörkare.\n\n\"Jag vill göra en melodi,\" sa Leila.\n\nDiego tittade på henne. \"Men trummor är bäst.\"\n\nLeila log. \"Trummor behövs. Men melodin behövs också.\"\n\nDe började prova. Diego höll en stadig rytm. Leila spelade tre toner som passade ihop. Först blev det lite rörigt. Diego slog snabbare när han blev ivrig, och Leila tappade bort tonerna.\n\nLäraren kom fram. \"Lyssna på varandra,\" sa läraren. \"Musik är som ett samtal.\"\n\nDiego tog ett djupt andetag och saktade ner. Leila nickade och började om från början. Nu lät det bättre. Rytmen var som ett hjärta, och melodin var som en liten fågel som flög över.\n\n\"Vi gjorde det!\" sa Diego.\n\nLeila skrattade. \"Ja! Och vi hjälpte varandra.\"\n\nNär de spelade upp för klassen klappade alla i takt. Diego kände sig stolt över sin rytm. Leila kände sig stolt över sin melodi. Och båda kände att deras låt blev fin för att de lyssnade, väntade och vågade göra plats för varandras ljud.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket instrument vill Diego spela?",
+        "options": [
+          "Xylofon",
+          "Trummor",
+          "Flöjt",
+          "Piano"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket instrument spelar Leila på?",
+        "options": [
+          "Gitarr",
+          "Xylofon",
+          "Trumpet",
+          "Triangel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger läraren att musik är som?",
+        "options": [
+          "En läxa",
+          "Ett samtal",
+          "En tävling",
+          "En bil"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir det bättre när Diego saktar ner?",
+        "options": [
+          "För att trummor försvinner",
+          "För att de kan lyssna på varandra och spela tillsammans",
+          "För att Leila blir arg",
+          "För att klassen går ut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Leila att både trummor och melodi behövs?",
+        "options": [
+          "För att musik ofta har både rytm och toner",
+          "För att trummor är tysta",
+          "För att xylofon är trasig",
+          "För att ingen får spela trummor"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig Diego och Leila i berättelsen?",
+        "options": [
+          "Att alltid spela högst",
+          "Att lyssna och göra plats för varandra",
+          "Att bara en person ska bestämma",
+          "Att musik är farligt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 265,
+      "fingerprint": "gpt4-ak2-05",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-etik-06",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Den tappade mössan",
+    "text": "Det var kallt ute, och många hade mössor som täckte öronen. På vägen till bussen såg Sanna en mössa på marken. Den var blå med en liten stjärna. Sanna plockade upp den och tittade sig omkring.\n\nIngen stod nära. Men längre fram gick en person med en jacka som såg ny ut. Sanna sprang ikapp. Det var Bilal från hennes klass.\n\n\"Bilal!\" ropade Sanna. \"Har du tappat en mössa?\"\n\nBilal stannade och kände på huvudet. \"Ja! Jag märkte inte.\" Han såg lättad ut. \"Tack!\"\n\nSanna gav honom mössan. Hon tänkte att hon kunde ha låtit den ligga, men då skulle någon bli kall. Hon tänkte också att det hade känts konstigt att ta den hem.\n\n\"Hur visste du att den var min?\" frågade Bilal.\n\nSanna pekade på stjärnan. \"Jag såg att du hade en sådan på idrotten.\"\n\nBilal log. \"Min mormor stickade den. Jag hade blivit ledsen om den försvann.\"\n\nDe gick tillsammans mot bussen. Sanna kände sig varm fast det var kallt. Hon gjorde inte något stort, men hon gjorde något snällt.\n\nNär de kom fram såg de en annan elev, Arvin, som stod och frös utan vantar. Bilal tog fram ett extra par från sin ficka. \"Du kan låna,\" sa han.\n\nArvin blev förvånad. \"Tack,\" sa han.\n\nSanna tänkte att snällhet kan smitta, precis som skratt. En mössa på marken kan bli en chans att göra rätt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad hittar Sanna på marken?",
+        "options": [
+          "En mössa",
+          "En boll",
+          "En bok",
+          "En nyckel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem har tappat mössan?",
+        "options": [
+          "Arvin",
+          "Bilal",
+          "Sanna",
+          "Läraren"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem lånar Bilal ut vantar till?",
+        "options": [
+          "Sanna",
+          "Arvin",
+          "Bilal",
+          "En främling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför springer Sanna ikapp Bilal?",
+        "options": [
+          "För att hon vill tävla",
+          "För att hon vill ge tillbaka mössan",
+          "För att hon är sen",
+          "För att hon vill gömma mössan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skulle Bilal blivit ledsen om mössan försvann?",
+        "options": [
+          "För att den var dyr",
+          "För att hans mormor stickade den",
+          "För att han inte gillar kepsar",
+          "För att den var blöt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att snällhet kan smitta?",
+        "options": [
+          "Att man blir sjuk av att vara snäll",
+          "Att en god handling kan göra att andra också vill vara snälla",
+          "Att mössor hoppar runt",
+          "Att alla måste låna vantar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 268,
+      "fingerprint": "gpt4-ak2-06",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak2-historia-07",
+    "grade": 2,
+    "genre": "faktatext",
+    "theme": "historia",
+    "title": "Förr och nu i skolan",
+    "text": "Skolan har funnits länge, men den har inte alltid sett ut som i dag. Förr hade många barn inte skolplikt. Det betyder att de inte behövde gå i skolan varje dag. Många barn hjälpte till hemma eller arbetade.\n\nNär skolor fanns kunde klassrummen vara annorlunda. Det kunde vara fler elever i samma rum och mindre plats. Ibland skrev man på små tavlor, och man kunde ha bläckpennor. Läraren kunde vara sträng och barnen hade andra regler.\n\nI dag har vi skolplikt i Sverige. Det betyder att barn ska gå i skolan. Skolan ska hjälpa alla att lära sig läsa, skriva och räkna. I skolan finns ofta böcker, datorer och olika ämnen som NO, SO, bild och idrott.\n\nMen en sak är lika: barn har alltid behövt öva och lära sig nya saker. De har också behövt vänner och trygga vuxna. När du tänker på förr kan du jämföra: Vad är samma? Vad är olika? Då blir historia något som handlar om människors liv, inte bara om gamla saker.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder skolplikt?",
+        "options": [
+          "Att man får välja själv om man vill lära sig",
+          "Att barn ska gå i skolan",
+          "Att skolan är stängd",
+          "Att man bara får läsa sagor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kunde barn göra förr i stället för att gå i skolan?",
+        "options": [
+          "Arbeta eller hjälpa till hemma",
+          "Spela tv-spel",
+          "Åka tunnelbana",
+          "Skriva på dator"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka saker nämns som exempel på vad som finns i skolan i dag?",
+        "options": [
+          "Böcker och datorer",
+          "Hästar och tält",
+          "Båtar och fiskenät",
+          "Glass och leksaksbilar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är skolplikt bra enligt textens idé?",
+        "options": [
+          "För att ingen behöver lära sig",
+          "För att skolan ska hjälpa alla att lära sig viktiga saker",
+          "För att alla ska ha samma jacka",
+          "För att man ska slippa vänner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att historia handlar om människors liv?",
+        "options": [
+          "Att historia bara är gamla möbler",
+          "Att man kan jämföra hur människor levde förr och nu",
+          "Att historia är samma som matte",
+          "Att man aldrig ska prata om förr"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken sak säger texten att barn alltid har behövt, både förr och nu?",
+        "options": [
+          "Wifi",
+          "Vänner och trygga vuxna",
+          "Bläck överallt",
+          "Att arbeta i fabrik"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 195,
+      "fingerprint": "gpt4-ak2-07",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
