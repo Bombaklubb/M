@@ -7634,5 +7634,385 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak4-vanskap-01",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "När gruppen blir tyst",
+    "text": "På måndagen startade klassen ett grupparbete om djur i Sverige. Läraren sa att de skulle välja ett djur, ta reda på fakta och göra en affisch. Maja hamnade i grupp med Omar, Linnea och Kenji. Maja tyckte om att prata och få saker att hända, men hon märkte snabbt att gruppen kändes… tyst.\n\nOmar bläddrade i en bok utan att säga mycket. Linnea ritade små stjärnor i kanten av sitt papper. Kenji satt med armarna i kors och tittade ut genom fönstret.\n\n\"Vilket djur ska vi ta?\" frågade Maja.\n\nIngen svarade direkt.\n\n\"Vi kan ta varg,\" sa Maja till slut.\n\nOmar tittade upp. \"Varg är intressant,\" sa han. \"Men kanske ren? Det finns i norr.\"\n\nLinnea ryckte på axlarna. \"Jag vet inte.\"\n\nKenji mumlade: \"Jag gillar järv.\"\n\nMaja kände att hon ville bestämma snabbt, men hon mindes något läraren sagt: att alla ska få komma till tals. Hon tog fram en penna och skrev tre förslag: varg, ren, järv.\n\n\"Vi kan rösta,\" sa Maja. \"Och alla måste säga en sak de tycker är spännande med sitt djur.\"\n\nOmar log lite. \"Renar flyttar i stora hjordar.\"\n\nKenji sa: \"Järven är modig och kan klara kyla.\"\n\nLinnea tittade på listan och sa tyst: \"Vargen lever i flock. Det är som en familj.\"\n\nMaja blev glad. \"Bra! Då röstar vi.\"\n\nDet blev två röster på varg och två på ren. Kenji tittade på Maja. \"Vi kan göra varg,\" sa han. \"Men vi tar med ren också, fast som jämförelse.\"\n\nPlötsligt kändes gruppen inte lika tyst. När de började dela upp arbetet tog Omar ansvar för vargens mat, Linnea för flocken, Kenji för hur vargen rör sig och Maja för att planera affischen.\n\nNär de var klara hade de inte bara en affisch. De hade också lärt sig att tystnad i en grupp inte alltid betyder att någon inte bryr sig. Ibland betyder det bara att man väntar på att någon ska öppna dörren så att alla vågar gå in.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska eleverna göra i grupparbetet?",
+        "options": [
+          "En film",
+          "En affisch om ett djur",
+          "En låt",
+          "Ett prov"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka djur skriver Maja upp som förslag?",
+        "options": [
+          "Älg, räv, björn",
+          "Varg, ren, järv",
+          "Hare, ekorre, uggla",
+          "Lax, gädda, sill"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Linnea om vargen?",
+        "options": [
+          "Att den sover hela vintern",
+          "Att den lever i flock som en familj",
+          "Att den bara äter bär",
+          "Att den bor i havet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill Maja att alla ska säga något om sitt djur innan de röstar?",
+        "options": [
+          "För att hon vill göra det svårt",
+          "För att alla ska få komma till tals och känna sig delaktiga",
+          "För att läraren kräver det i hemlighet",
+          "För att ingen får välja varg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känns gruppen mindre tyst när de börjar dela upp arbetet?",
+        "options": [
+          "För att alla får tydliga uppgifter och börjar prata mer",
+          "För att lektionen tar slut",
+          "För att någon spelar musik",
+          "För att de byter klassrum"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menas med att Maja öppnar dörren i slutet?",
+        "options": [
+          "Att hon går ut ur klassrummet",
+          "Att hon hjälper gruppen att börja prata och våga delta",
+          "Att hon låser dörren",
+          "Att hon slutar med grupparbetet"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-natur-02",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Vattnets resa i naturen",
+    "text": "Vatten rör sig hela tiden, även om det ibland ser stilla ut. I naturen går vattnet runt i ett kretslopp. Det betyder att samma vatten kan vara i havet en dag och i en regndroppe en annan dag.\n\nNär solen lyser värms vatten i hav, sjöar och pölar. Då kan vattnet avdunsta. Avdunsta betyder att vattnet blir till vattenånga som stiger upp i luften. Vattenångan syns inte, men den finns där.\n\nHögt uppe i luften är det kallare. Där kan vattenångan kylas ner och bli små droppar igen. Dropparna samlas och bildar moln. Om molnen blir tunga faller vattnet ner som regn, snö eller hagel. Det kallas nederbörd.\n\nNär regnet kommer ner hamnar en del vatten i marken. Det kan sjunka ner och bli grundvatten. Grundvatten är vatten som finns under jorden. En del rinner också på ytan och hamnar i bäckar, sjöar och floder, och till sist i havet.\n\nVattnets kretslopp är viktigt för allt levande. Växter behöver vatten för att växa. Djur och människor behöver dricka. Om det inte regnade skulle naturen torka ut.\n\nDu kan se kretsloppet i liten form hemma. Om du duschar och spegeln blir immig är det vattenånga som kyls och blir droppar. Då händer samma sak som när moln bildas. Naturen är full av sådana resor, och vattnet är en av de viktigaste.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas det när vatten blir till vattenånga?",
+        "options": [
+          "Fryser",
+          "Avdunstar",
+          "Smälter",
+          "Rinner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter vatten som finns under jorden?",
+        "options": [
+          "Saltvatten",
+          "Grundvatten",
+          "Diskvatten",
+          "Regnvatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas regn, snö eller hagel?",
+        "options": [
+          "Nederbörd",
+          "Vind",
+          "Skugga",
+          "Dimma"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan samma vatten finnas i havet och i en regndroppe?",
+        "options": [
+          "För att vatten byts ut varje natt",
+          "För att vattnet rör sig i ett kretslopp",
+          "För att moln skapar nytt vatten",
+          "För att sjöar suger upp havet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför bildas moln högt uppe i luften?",
+        "options": [
+          "För att det är varmare där",
+          "För att vattenångan kyls ner och blir små droppar",
+          "För att vinden målar molnen",
+          "För att grundvatten flyger"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är vattnets kretslopp viktigt?",
+        "options": [
+          "För att det gör himlen blå",
+          "För att växter, djur och människor behöver vatten",
+          "För att det stoppar vinden",
+          "För att havet ska bli mindre"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-historia-03",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Brev från förr",
+    "text": "När klassen skulle besöka biblioteket sa bibliotekarien att de hade en liten utställning om förr i tiden. De fick se gamla skolböcker, foton och till och med en låda med kopior av brev.\n\nAria blev nyfiken och tog upp ett brev som var skrivet med snirkliga bokstäver. Det såg svårt ut, men hon kunde läsa några ord. Brevet var från 1947 och började med: \"Kära syster...\"\n\n\"Får man läsa?\" frågade Aria.\n\n\"Det är en kopia,\" sa bibliotekarien. \"Ni får gärna läsa och fundera.\"\n\nAria satte sig vid ett bord med sin kompis Viktor. De läste högt, rad för rad. Brevet handlade om en person som flyttade från en liten by till en större stad för att arbeta. Personen skrev om att sakna skogen, men också om att vara stolt över att tjäna egna pengar.\n\n\"Det låter som att det var både läskigt och spännande,\" sa Viktor.\n\nAria nickade. \"Och de hade inte mobil. De kunde inte bara ringa.\"\n\nHon tittade på datumet igen. 1947. Det var långt innan hennes farmor ens var född, trodde hon. Plötsligt kändes historia som något mer än årtal. Det var en röst.\n\nNär de gick tillbaka till skolan fick de i uppgift att skriva ett eget brev som om de levde förr. Aria försökte tänka på vad hon skulle sakna om hon flyttade: sitt rum, sin gata, doften av maten hemma.\n\nHon skrev: \"Kära vän. Jag saknar våra lekar, men jag lär mig nya saker här. Jag försöker vara modig.\"\n\nNär Aria läste upp sitt brev för klassen kände hon att hon förstått något: människor i historien var inte bara personer i böcker. De var människor som kände samma sorts längtan och hopp som vi gör.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför går klassen till biblioteket?",
+        "options": [
+          "För att spela spel",
+          "För att se en utställning om förr i tiden",
+          "För att ha idrott",
+          "För att äta lunch"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket år är brevet skrivet?",
+        "options": [
+          "2007",
+          "1947",
+          "1974",
+          "2020"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska eleverna skriva efter besöket?",
+        "options": [
+          "En affisch om djur",
+          "Ett eget brev som om de levde förr",
+          "En låt",
+          "Ett matteprov"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Viktor att det verkar både läskigt och spännande att flytta?",
+        "options": [
+          "För att brevet beskriver saknad men också stolthet",
+          "För att staden alltid är farlig",
+          "För att skogen är förbjuden",
+          "För att brevet handlar om ett monster"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känns historia mer verklig för Aria när hon läser brevet?",
+        "options": [
+          "För att hon gillar papper",
+          "För att hon hör en persons röst och känslor, inte bara årtal",
+          "För att brevet är längre än en bok",
+          "För att biblioteket är tyst"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Arias eget brev om hennes förståelse?",
+        "options": [
+          "Att människor förr var helt olika",
+          "Att människor förr kunde känna längtan och mod, precis som nu",
+          "Att ingen flyttade förr",
+          "Att vänskap inte fanns förr"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-teknik-04",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Så fungerar en bro",
+    "text": "En bro hjälper människor att ta sig över något, till exempel en flod, en väg eller en dal. Det finns många sorters broar, men alla måste klara samma sak: de måste vara stabila och hålla för tyngd.\n\nNär en bil eller en person står på en bro trycker tyngden neråt. Det kallas belastning. Bron måste fördela belastningen så att den inte går sönder. Därför använder man olika former och material.\n\nEn enkel bro kan vara en planka över ett litet dike. Men om bron ska vara lång eller hålla för tunga lastbilar behöver den vara starkare. Då kan man bygga en balkbro. En balk är som en stark pinne av stål eller betong som bär upp bron.\n\nEn annan typ är bågbro. Den ser ut som en stor båge. När någon går på bron trycks bågen ihop och skickar kraften åt sidorna ner i marken. Det gör att bron kan bli stark även om den är ganska tunn.\n\nDet finns också hängbroar. De har kablar som hänger mellan höga torn. Vägen på bron hänger i kablarna. Kablarna dras hårt och kan bära mycket. Hängbroar passar bra när man behöver en väldigt lång bro.\n\nIngenjörerna som bygger broar testar ofta modeller först. I skolan kan du göra ett enkelt test: bygg en bro av papper eller sugrör och lägg mynt på den. Då ser du hur formen och stöden påverkar hur mycket bron klarar.\n\nBroar är alltså inte bara vägar i luften. De är smarta lösningar där form, material och krafter samarbetar för att människor ska kunna ta sig fram säkert.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas tyngden som trycker ner på bron?",
+        "options": [
+          "Belastning",
+          "Skugga",
+          "Fart",
+          "Eko"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken brotyp har en stor båge?",
+        "options": [
+          "Hängbro",
+          "Bågbro",
+          "Tunnbro",
+          "Trädbro"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hänger vägen i på en hängbro?",
+        "options": [
+          "I kablar",
+          "I löv",
+          "I rep av ull",
+          "I träpinnar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behöver broar vara starkare om de ska vara långa?",
+        "options": [
+          "För att belastningen blir större",
+          "För att solen lyser mer",
+          "För att vatten blir kallt",
+          "För att bron blir tyst"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför testar ingenjörer ofta modeller först?",
+        "options": [
+          "För att se hur bron klarar belastning och hitta fel i tid",
+          "För att broar måste vara små",
+          "För att slippa rita",
+          "För att kablar ska bli kortare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att du ska förstå om broar?",
+        "options": [
+          "Att broar bara är för cyklar",
+          "Att form, material och krafter samarbetar för att göra bron säker",
+          "Att alla broar är lika",
+          "Att broar inte behöver testas"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-miljo-05",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "miljö",
+    "title": "Skräpet i bäcken",
+    "text": "När klassen gick på utflykt till naturstigen var luften frisk och marken mjuk av mossa. Läraren sa att de skulle titta på växter, lyssna efter fåglar och skriva ner tre saker de lade märke till.\n\nSofia gick bredvid sin kompis Bilal. Bilal pekade på en hackspett som trummade på ett träd. Sofia skrev snabbt i sin anteckningsbok. Men när de kom fram till en liten bäck stannade Sofia.\n\nDet låg en plastpåse fast i en gren. Längre bort såg hon en tom läskburk som låg halvt i vattnet.\n\n\"Varför ligger det skräp här?\" sa Sofia.\n\nBilal såg bekymrad ut. \"Kanske någon tappade. Eller någon brydde sig inte.\"\n\nSofia kände sig arg. \"Det förstör ju.\"\n\nLäraren kom fram. \"Ni ser ett problem,\" sa läraren. \"Vad kan man göra?\"\n\nSofia tänkte att de inte hade handskar och att de inte fick göra vad som helst. Men Bilal sa: \"Vi kan åtminstone säga till. Och vi kan plocka om vi gör det säkert.\"\n\nLäraren nickade. Klassen hämtade soppåsar och handskar som fanns i ryggsäcken. De plockade försiktigt upp skräpet runt bäcken. Sofia tog plastpåsen och kände hur lätt den var, men ändå hade den kunnat skada ett djur.\n\nNär de var klara såg bäcken klarare ut. Sofia hörde vattnet porla igen utan att störa sig på burken.\n\nPå vägen tillbaka sa Bilal: \"Det var inte så svårt. Men det behövde göras.\"\n\nSofia nickade. \"Och nästa gång kan vi sätta upp en liten skylt. Typ: Ta med ditt skräp hem.\"\n\nLäraren log. \"Det är så miljöarbete börjar. Man ser, man bryr sig, och man gör något.\"\n\nSofia skrev sin sista anteckning: Att naturen inte kan säga ifrån med ord. Men vi kan.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad hittar Sofia vid bäcken?",
+        "options": [
+          "Ett äpple",
+          "Skräp som en plastpåse och en burk",
+          "En fisk",
+          "En sten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket djur pekar Bilal på i början?",
+        "options": [
+          "En hackspett",
+          "En älg",
+          "En uggla",
+          "En räv"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder klassen för att plocka skräpet?",
+        "options": [
+          "Pinnar",
+          "Handskar och soppåsar",
+          "Vattenpistoler",
+          "Böcker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Sofia att plastpåsen kan skada ett djur?",
+        "options": [
+          "För att djur kan fastna i den eller tro att den är mat",
+          "För att plastpåsen är varm",
+          "För att djur gillar skräp",
+          "För att vatten alltid blir farligt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känns bäcken klarare för Sofia efter att de plockat skräp?",
+        "options": [
+          "För att skräpet var borta och naturen såg renare ut",
+          "För att solen gick ner",
+          "För att bäcken slutade rinna",
+          "För att de målade vattnet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Sofia med att naturen inte kan säga ifrån med ord?",
+        "options": [
+          "Att naturen inte finns",
+          "Att människor måste ta ansvar och skydda naturen",
+          "Att djur kan prata ibland",
+          "Att skräp alltid försvinner själv"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
