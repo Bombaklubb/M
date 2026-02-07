@@ -5708,5 +5708,579 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak1-vanskap-01",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Två plats i sandlådan",
+    "text": "På rasten gick Mira till sandlådan. Hon hade en röd spade och en liten hink. Mira ville bygga ett slott med en hög mur. Hon satte sig och började gräva.\n\nDå kom Jamal. Han höll i en blå lastbil. Jamal tittade på sanden och sa: \"Får jag vara här?\"\n\nMira blev först tyst. Hon tänkte: \"Jag vill vara själv.\" Men hon såg att sandlådan var stor. Hon flyttade sin hink lite åt sidan.\n\n\"Du kan vara där,\" sa Mira och pekade. \"Men kör inte över mitt slott.\"\n\nJamal nickade. \"Okej. Jag kan göra en väg bredvid.\"\n\nDe byggde samtidigt. Mira gjorde torn. Jamal gjorde en lång väg. Snart sa Jamal: \"Din mur är fin. Vill du ha en bro?\"\n\nMira log. \"Ja! En bro till vägen.\"\n\nJamal fyllde lastbilen med sand och la sanden försiktigt. Mira tryckte till med spaden. De byggde en bro som satt fast.\n\nNär rasten var slut tittade de på sitt slott och sin väg. \"Vi gjorde det tillsammans,\" sa Mira.\n\nJamal log. \"Det blev bättre så.\"\n\nDe gick in. Mira kände sig varm i magen. Hon hade delat plats och fått en ny vän.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var leker Mira?",
+        "options": [
+          "I klassrummet",
+          "I sandlådan",
+          "I matsalen",
+          "I bussen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har Jamal med sig?",
+        "options": [
+          "En blå lastbil",
+          "En gul boll",
+          "En bok",
+          "En cykel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad bygger Mira?",
+        "options": [
+          "En båt",
+          "Ett slott",
+          "En robot",
+          "En snögubbe"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför flyttar Mira sin hink lite åt sidan?",
+        "options": [
+          "För att hon vill ge plats",
+          "För att hon vill gå hem",
+          "För att hinken är trasig",
+          "För att sanden är blöt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Mira att Jamal inte får köra över slottet?",
+        "options": [
+          "För att hon vill skydda bygget",
+          "För att hon inte gillar lastbilar",
+          "För att slottet är en boll",
+          "För att läraren sa nej"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Mira i slutet?",
+        "options": [
+          "Varm i magen och glad",
+          "Arg och ledsen",
+          "Rädd",
+          "Sömnig"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 248,
+      "fingerprint": "gpt4-ak1-01",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-natur-02",
+    "grade": 1,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Masken i jorden",
+    "text": "En mask bor ofta i jorden. Den är mjuk och lång. Masken har ingen ben, men den kan ändå röra sig. Den drar kroppen framåt och bakåt.\n\nMasken gillar när jorden är fuktig. Om det är väldigt torrt kan masken gömma sig djupare ner. När det regnar kan du ibland se maskar på marken.\n\nMasken hjälper jorden. Den gör små gångar i jorden när den rör sig. I gångarna kan luft och vatten komma ner. Då mår växter bättre.\n\nMasken äter gamla löv och små bitar av växter. När masken äter blir det jord som är bra för blommor och gräs.\n\nOm du ser en mask kan du titta försiktigt. Du ska inte dra i masken. Lägg den gärna tillbaka i jorden om den ligger på en torr väg. Då kan den fortsätta hjälpa naturen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var bor masken ofta?",
+        "options": [
+          "I vatten",
+          "I jorden",
+          "I luften",
+          "I en bok"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gillar masken att jorden är?",
+        "options": [
+          "Fuktig",
+          "Isig",
+          "Brännhet",
+          "Hård som sten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad äter masken enligt texten?",
+        "options": [
+          "Godis",
+          "Gamla löv och små bitar av växter",
+          "Stenar",
+          "Fisk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är maskens gångar bra för växter?",
+        "options": [
+          "För att luft och vatten kan komma ner",
+          "För att växter kan prata",
+          "För att gångar lyser",
+          "För att jorden blir blå"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ska man inte dra i masken?",
+        "options": [
+          "För att den kan skadas",
+          "För att den blir större",
+          "För att den blir glad",
+          "För att den försvinner direkt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan det vara bra att lägga en mask tillbaka i jorden?",
+        "options": [
+          "För att den kan fortsätta leva och hjälpa jorden",
+          "För att den blir ett träd",
+          "För att den kan flyga",
+          "För att den vill bo i din ficka"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 178,
+      "fingerprint": "gpt4-ak1-02",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-teknik-03",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "teknik",
+    "title": "Lampan som inte lyste",
+    "text": "I klassrummet fanns en liten läslampa. Den stod vid bokhyllan. En morgon lyste den inte. \"Den är trasig,\" sa några barn.\n\nAmina gick fram och tittade. Hon tryckte på knappen. Ingenting hände. Då kom Leo och sa: \"Vi kan kolla.\"\n\nAmina sa: \"Kanske batteriet är slut.\"\n\nLeo nickade. De frågade läraren om hjälp. Läraren tog fram nya batterier. Amina höll lampan stilla. Leo öppnade luckan försiktigt.\n\n\"Så här,\" sa läraren. \"Plus och minus ska hamna rätt.\"\n\nLeo satte i batterierna. Amina stängde luckan. De tryckte på knappen.\n\nLampan lyste!\n\n\"Vi fixade den,\" sa Amina.\n\nLeo log. \"Det var bara batterier.\"\n\nNu kunde barnen läsa i lugn och ro. Amina tänkte att teknik ibland är enkel. Man behöver bara titta, prova och fråga om hjälp.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad lyste inte i klassrummet?",
+        "options": [
+          "En tv",
+          "En läslampa",
+          "En dator",
+          "En klocka"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka två elever kollar lampan?",
+        "options": [
+          "Amina och Leo",
+          "Mira och Jamal",
+          "Noor och Alex",
+          "Sara och Kenji"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var problemet med lampan?",
+        "options": [
+          "Den hade inga böcker",
+          "Batteriet var slut",
+          "Den var för stor",
+          "Den var för varm"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför frågar barnen läraren om hjälp?",
+        "options": [
+          "För att de vill fuska",
+          "För att de behöver nya batterier och hjälp att göra rätt",
+          "För att de vill gå hem",
+          "För att lampan är en leksak"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför pratar läraren om plus och minus?",
+        "options": [
+          "För att batterier måste sitta rätt för att fungera",
+          "För att lampan ska bli blå",
+          "För att knappen ska försvinna",
+          "För att boken ska bli lättare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig Amina i slutet?",
+        "options": [
+          "Att teknik alltid är svårt",
+          "Att man kan prova och be om hjälp för att lösa problem",
+          "Att lampor inte behövs",
+          "Att batterier är godis"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 175,
+      "fingerprint": "gpt4-ak1-03",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-miljo-04",
+    "grade": 1,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Släcka och spara",
+    "text": "El är något vi använder varje dag. Lampor lyser med el. Datorer och surfplattor behöver el. Ibland kommer el från vind, vatten eller sol. Ibland kommer el från sådant som kan göra luften smutsigare.\n\nDärför är det bra att spara el. När vi sparar el hjälper vi miljön. Då behövs det mindre energi.\n\nDu kan spara el på enkla sätt. Du kan släcka lampan när du går ut ur ett rum. Du kan stänga av tv:n när ingen tittar. Du kan ta ut laddaren när den inte används.\n\nI skolan kan ni också tänka på el. Kanske kan klassen ha en \"släckare\" som påminner alla. Att spara el är som att vara snäll mot naturen. Många små saker kan bli en stor hjälp.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad behöver lampor för att lysa?",
+        "options": [
+          "El",
+          "Sand",
+          "Mjölk",
+          "Papper"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Ge ett exempel på hur man kan spara el som står i texten.",
+        "options": [
+          "Släcka lampan när man går ut",
+          "Hoppa högt",
+          "Rita en sol",
+          "Äta glass"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan klassen ha enligt texten för att komma ihåg att släcka?",
+        "options": [
+          "En släckare som påminner",
+          "En hund",
+          "En cykel",
+          "En ballong"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det bra att spara el?",
+        "options": [
+          "För att hjälpa miljön",
+          "För att göra väskan tung",
+          "För att lampor blir arga",
+          "För att skolan blir tyst"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ska man ta ut laddaren när den inte används?",
+        "options": [
+          "För att spara el",
+          "För att laddaren ska sjunga",
+          "För att batteriet blir grönt",
+          "För att skärmen blir större"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att små saker kan bli en stor hjälp?",
+        "options": [
+          "Att små lampor lyser starkast",
+          "Att många små handlingar tillsammans gör skillnad",
+          "Att naturen är liten",
+          "Att el kommer från godis"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 158,
+      "fingerprint": "gpt4-ak1-04",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-musik-05",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "musik",
+    "title": "Sången på samlingen",
+    "text": "På morgonen satt klassen i en ring. Det var samling. Läraren sa: \"Vi ska sjunga en sång.\"\n\nSven var glad och ville sjunga högt. Alva var blyg och sjöng tyst. Farah satt bredvid och lyssnade.\n\nNär sången började sjöng Sven snabbt. Alva tappade bort orden. Farah såg att Alva blev röd om kinderna.\n\nFarah viskade: \"Vi kan sjunga långsammare.\"\n\nFarah räckte upp handen. \"Kan vi sjunga en gång till och lite långsammare?\" frågade Farah.\n\nLäraren nickade. \"Bra idé.\"\n\nDe sjöng igen. Nu hann Alva med. Sven lyssnade och sjöng i samma takt som alla andra.\n\nEfter sången sa Alva: \"Tack. Nu var det roligt.\"\n\nSven log. \"Jag kan sjunga lagom också.\"\n\nFarah log. Klassen kände sig som ett lag. När alla hjälps åt blir sången fin.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gör klassen på samlingen?",
+        "options": [
+          "Springer",
+          "Sjunger en sång",
+          "Badar",
+          "Sover"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem är blyg och sjunger tyst?",
+        "options": [
+          "Sven",
+          "Alva",
+          "Farah",
+          "Läraren"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad föreslår Farah att de ska göra?",
+        "options": [
+          "Sluta sjunga",
+          "Sjunga långsammare",
+          "Byta klassrum",
+          "Spela fotboll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tappar Alva bort orden först?",
+        "options": [
+          "För att sången går för snabbt",
+          "För att hon inte gillar musik",
+          "För att hon är hungrig",
+          "För att stolen är hård"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir det bättre när de sjunger långsammare?",
+        "options": [
+          "För att alla kan hänga med",
+          "För att sången försvinner",
+          "För att Sven blir tyst för alltid",
+          "För att läraren går ut"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig Sven i berättelsen?",
+        "options": [
+          "Att bara sjunga högst",
+          "Att lyssna och sjunga i samma takt som andra",
+          "Att aldrig sjunga",
+          "Att ord inte behövs"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 175,
+      "fingerprint": "gpt4-ak1-05",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-etik-06",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Pennan som försvann",
+    "text": "I klassrummet hade Lina en ny penna. Den var grön och glittrade. Lina tyckte mycket om den.\n\nEfter rasten var pennan borta. Lina tittade i sitt pennskrin och på golvet. \"Min penna!\" sa Lina och såg ledsen ut.\n\nOmar satt bredvid. Han hade en penna som såg likadan ut. Lina tittade på den och blev tyst.\n\nOmar såg hennes blick. Han tog ett djupt andetag. \"Jag hittade en penna på golvet,\" sa Omar. \"Jag trodde ingen ägde den. Men kanske är det din.\"\n\nLina nickade. \"Den ser ut som min.\"\n\nOmar räckte fram pennan. \"Förlåt. Jag skulle ha frågat.\"\n\nLina tog pennan. \"Tack för att du sa det,\" sa hon.\n\nLäraren hörde och sa: \"Bra att ni pratar. Att vara ärlig är modigt.\"\n\nOmar kände sig lättare i kroppen. Lina kände sig trygg igen. Båda lärde sig att det är bäst att fråga när man hittar något som kan vara någon annans.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken färg har Linas penna?",
+        "options": [
+          "Röd",
+          "Grön",
+          "Blå",
+          "Svart"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem sitter bredvid Lina?",
+        "options": [
+          "Omar",
+          "Farah",
+          "Sven",
+          "Alva"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var hittade Omar pennan?",
+        "options": [
+          "I sin väska",
+          "På golvet",
+          "I matsalen",
+          "I biblioteket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger läraren att det är modigt att vara ärlig?",
+        "options": [
+          "För att det kan kännas svårt men är rätt",
+          "För att pennor är farliga",
+          "För att man får godis då",
+          "För att man alltid ska viska"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Omar efter att han sagt sanningen?",
+        "options": [
+          "Lättare i kroppen",
+          "Arg",
+          "Rädd",
+          "Sömnig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig barnen i berättelsen?",
+        "options": [
+          "Att gömma saker",
+          "Att fråga när man hittar något som kan vara någon annans",
+          "Att alltid ta nya pennor",
+          "Att aldrig prata"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 195,
+      "fingerprint": "gpt4-ak1-06",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak1-historia-07",
+    "grade": 1,
+    "genre": "faktatext",
+    "theme": "historia",
+    "title": "Förr och nu: skriva med olika saker",
+    "text": "I dag skriver många med penna på papper. Ibland skriver vi på dator eller surfplatta. Men förr skrev människor på andra sätt.\n\nFör länge sedan kunde man skriva med bläck och fjäder. Bläcket var en vätska som kunde kladda. Man behövde vara försiktig. Senare började fler använda blyertspennor.\n\nDet fanns också små griffeltavlor. Barn kunde skriva på tavlan och sudda bort med en trasa. Då kunde man använda samma tavla många gånger.\n\nNär vi tittar på hur man skrev förr kan vi lära oss något. Vi ser att människor alltid har velat dela ord och tankar. Sättet ändras, men behovet att skriva finns kvar.\n\nOm du vill kan du prova hemma: skriv med penna, skriv på dator, och rita bokstäver med en pinne i sand. Då känner du skillnaden mellan förr och nu.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kan man skriva på i dag enligt texten?",
+        "options": [
+          "Bara på sten",
+          "På papper och ibland på dator eller surfplatta",
+          "Bara i sand",
+          "Bara på väggar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kunde man skriva med förr för länge sedan?",
+        "options": [
+          "Bläck och fjäder",
+          "Laser",
+          "Mobilapp",
+          "Krita i luften"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas de små tavlorna man kunde skriva på och sudda bort?",
+        "options": [
+          "Griffeltavlor",
+          "Kartonger",
+          "Klockor",
+          "Batterier"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behövde man vara försiktig med bläck?",
+        "options": [
+          "För att det kunde kladda",
+          "För att det var torrt",
+          "För att det var osynligt",
+          "För att det var av sten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför var griffeltavlor bra?",
+        "options": [
+          "För att man kunde sudda och använda dem många gånger",
+          "För att de sjöng",
+          "För att de var mjuka",
+          "För att de gav läxor"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att du ska förstå om att skriva?",
+        "options": [
+          "Att ingen behöver skriva",
+          "Att människor alltid har velat dela ord och tankar",
+          "Att bara vuxna skriver",
+          "Att pennor är nya"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 168,
+      "fingerprint": "gpt4-ak1-07",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
