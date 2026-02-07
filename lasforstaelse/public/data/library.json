@@ -8394,5 +8394,385 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak5-natur-01",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "När skogen vaknar på våren",
+    "text": "På vintern kan en skog kännas tyst. Träden står stilla, marken är hård eller täckt av snö, och många djur syns inte alls. Men när våren kommer förändras allt, ofta snabbare än man tror. Skogen vaknar, och det beror på ljus, värme och smarta sätt som växter och djur har för att klara årstiderna.\n\nEn av de viktigaste signalerna är ljuset. När dagarna blir längre får växter mer sol. Solen är som bränsle för fotosyntesen, processen där växter gör socker av vatten, koldioxid och ljus. Under vintern går fotosyntesen nästan på sparlåga, men på våren startar den igen. Du kan se det när knoppar sväller på grenarna.\n\nMarken förändras också. När den blir varmare börjar små organismer, som maskar och bakterier, arbeta mer. De bryter ner gamla löv och grenar och gör näring som nya växter kan använda.\n\nDjur reagerar också på våren. Vissa fåglar, som flyttat söderut, kommer tillbaka. De känner igen platser med hjälp av solen, stjärnor och jordens magnetfält. När de är tillbaka börjar de sjunga mer för att hitta partner och försvara revir.\n\nMånga insekter vaknar när temperaturen stiger. Då blir det plötsligt mer mat för fåglar och andra djur. Grodor och paddor vandrar till dammar för att lägga ägg. I vattnet kan man ibland se grodrom som små geléklumpar.\n\nMen våren kan också vara svår. Om det blir en tidig värmeperiod och sedan frost kan knoppar och blommor skadas. Det är därför vissa växter väntar med att slå ut helt tills de känner att våren är mer säker.\n\nNär du går i skogen på våren kan du träna dig på att se detaljer: små spår i leran, nya blad som vecklar ut sig och fåglar som bär pinnar till ett bo. Skogen vaknar inte med en stor knapp. Den vaknar med tusentals små förändringar som tillsammans gör att livet tar fart igen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken signal är extra viktig för att skogen ska vakna på våren?",
+        "options": [
+          "Kortare dagar",
+          "Längre dagar och mer ljus",
+          "Mer snö",
+          "Mindre sol"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter processen där växter gör socker av vatten, koldioxid och ljus?",
+        "options": [
+          "Erosion",
+          "Fotosyntes",
+          "Avdunstning",
+          "Förmultning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man ibland se i vatten som grodor lägger?",
+        "options": [
+          "Grodrom",
+          "Sand",
+          "Is",
+          "Bark"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför börjar fåglar sjunga mer på våren?",
+        "options": [
+          "För att bli varmare",
+          "För att hitta partner och försvara revir",
+          "För att de glömt hur man flyger",
+          "För att det alltid regnar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan tidig värme följt av frost vara ett problem för växter?",
+        "options": [
+          "För att blommor och knoppar kan skadas",
+          "För att solen slocknar",
+          "För att marken blir mjuk",
+          "För att fåglarna flyger bort"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att du ska förstå om hur skogen vaknar?",
+        "options": [
+          "Att det sker på en sekund",
+          "Att det sker genom många små förändringar som tillsammans gör skillnad",
+          "Att skogen aldrig förändras",
+          "Att bara träd påverkas"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-vanskap-02",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Två sidor av samma rast",
+    "text": "På rasten brukade Siri spela fotboll med en grupp som redan hade bestämt vem som var snabbast, vem som var bäst på skott och vem som alltid skulle stå i mål. Det var roligt när Siri fick bollen, men det var också stressigt. Om hon gjorde ett dåligt pass hörde hon snabbt ett \"kom igen!\" som lät mer som en suck än en peppning.\n\nEn tisdag stod Siri vid planens kant och knöt sin sko. Hon såg att Ali, som var ny i klassen, stod ensam vid staketet. Han höll i en mössa och tittade på spelet, men han gick inte närmare.\n\nSiri visste hur det kändes. Förra året hade hon själv bytt klass och haft en period då hon inte riktigt vågade fråga om att få vara med.\n\n\"Vill du spela?\" ropade Siri.\n\nAli ryckte till, som om han inte förväntat sig att någon skulle prata med honom. \"Jag kan inte så bra,\" sa han.\n\n\"Det behöver du inte,\" sa Siri. \"Man lär sig. Kom, jag kan stå bredvid dig.\"\n\nDe sprang fram till planen. När Siri sa till de andra att Ali ville vara med blev det en kort tystnad. Sedan sa Jamal: \"Okej, men han får stå i mål.\"\n\nAli såg nervös ut. Siri såg också att målpositionen var det ställe där man fick mest skuld om man släppte in mål.\n\n\"Vi kan byta ibland,\" sa Siri snabbt. \"Alla kan testa olika.\"\n\nNågra himlade med ögonen, men spelet drog igång. Första skottet kom snabbt. Ali kastade sig åt sidan, men bollen rullade förbi. Någon suckade högt.\n\nAli blev röd i ansiktet. Siri sprang fram och sa lågt: \"Det var inte bara du. Försvaret stod still.\"\n\nEfter en stund såg Siri att Ali började läsa spelet bättre. Han ställde sig rätt, följde bollen med blicken och vågade ropa \"min!\" när han tog den. När en hård boll kom mot hörnet lyckades han rädda med handsken. Då blev det helt tyst i en sekund, och sedan hördes några: \"Bra!\"\n\nEfter rasten gick Ali bredvid Siri. \"Tack,\" sa han. \"Jag trodde jag skulle bli retad.\"\n\nSiri tänkte på suckarna och kommentarerna. \"Det kan bli så ibland,\" sa hon ärligt. \"Men det blir bättre när någon säger ifrån och när man ser att alla försöker.\"\n\nNästa rast tog Siri med en idé. Hon föreslog att de skulle ha en regel: inga suckar åt lagkamrater, bara tips. Först protesterade några, men när spelet blev lugnare märkte alla att de faktiskt spelade bättre.\n\nSiri kände att vänskap ibland handlar om mer än att vara snäll. Det kan också handla om att göra plats, säga ifrån och hjälpa någon att våga ta ett steg in på planen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad brukar Siri spela på rasten?",
+        "options": [
+          "Basket",
+          "Fotboll",
+          "Brännboll",
+          "Innebandy"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem står ensam vid staketet i början?",
+        "options": [
+          "Jamal",
+          "Ali",
+          "Siri",
+          "Nora"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken regel föreslår Siri senare?",
+        "options": [
+          "Att man aldrig får passa",
+          "Inga suckar åt lagkamrater, bara tips",
+          "Att Ali alltid ska stå i mål",
+          "Att spelet ska vara tyst"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Ali nervös när Jamal säger att han ska stå i mål?",
+        "options": [
+          "För att målvakten ofta får skulden om det blir mål",
+          "För att mål är längst bort",
+          "För att han inte gillar gräs",
+          "För att han inte får springa alls"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir stämningen bättre när Siri föreslår sin nya regel?",
+        "options": [
+          "För att spelet blir lugnare och alla känner sig tryggare",
+          "För att ingen behöver spela längre",
+          "För att läraren tar bollen",
+          "För att Ali går hem"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar berättelsen om vänskap?",
+        "options": [
+          "Att vänskap bara handlar om att ha kul",
+          "Att vänskap kan vara att göra plats och säga ifrån när någon behandlas orättvist",
+          "Att man alltid ska vinna",
+          "Att man ska spela ensam"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-teknik-03",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Internet från vägguttag till skärm",
+    "text": "När du klickar på en länk eller startar en video kan det kännas som att informationen bara dyker upp. Men bakom det som händer på skärmen finns en lång kedja av teknik. Internet är inte en enda sak, utan ett nätverk av många datorer som skickar data till varandra.\n\nAllt börjar med att din enhet, till exempel en surfplatta, vill hämta information från en server. En server är en kraftfull dator som lagrar webbsidor, bilder och filmer. När du skriver in en webbadress skickar din enhet en fråga: Finns den här sidan?\n\nFör att hitta rätt server används ofta något som kallas DNS. DNS kan jämföras med en telefonbok. I stället för att du ska komma ihåg en servers siffradress (IP-adress) kan du skriva ett namn, och DNS talar om vilken IP-adress som hör till namnet.\n\nDin fråga och svaret från servern delas upp i små paket av data. Paketen är som små brev. Varje paket får en adress så att det kan hitta fram. Paketen kan till och med ta olika vägar genom nätet.\n\nHur tar sig paketen iväg? Ofta via wifi eller mobildata. Wifi är en trådlös koppling till en router. Routern skickar sedan vidare data genom kablar, ofta fiber, till en internetleverantör. Fiberkablar är tunna trådar av glas som kan skicka ljus med information väldigt snabbt.\n\nNär data reser över världen går den ofta i stora kablar under havet. Många blir förvånade över att internet faktiskt till stor del är fysiskt: kablar, routerlådor och serverhallar.\n\nInternet är smart byggt för att vara tåligt. Eftersom paket kan ta olika vägar kan information ofta hitta fram ändå, även om en del av nätet har problem.\n\nNär du förstår hur internet fungerar kan du också bli bättre på att lösa problem. Om en sida inte laddar kan du testa att byta nät, starta om routern eller vänta och prova igen. Det är inte magi – det är många smarta steg som samarbetar för att en video ska nå just din skärm.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas den kraftfulla dator som lagrar webbsidor och filmer?",
+        "options": [
+          "Router",
+          "Server",
+          "Skärm",
+          "Batteri"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan DNS jämföras med enligt texten?",
+        "options": [
+          "En karta",
+          "En telefonbok",
+          "En kompass",
+          "En högtalare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur skickas data ofta över långa sträckor väldigt snabbt?",
+        "options": [
+          "I fiberkablar av glas",
+          "I papper",
+          "I ballonger",
+          "I träpinnar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför delas information upp i paket?",
+        "options": [
+          "För att det ska bli svårare att förstå",
+          "För att data ska kunna skickas effektivt och hitta fram, även via olika vägar",
+          "För att wifi ska bli varmare",
+          "För att servern ska sova"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan internet fortfarande fungera om en del av nätet har problem?",
+        "options": [
+          "För att paketen kan ta olika vägar",
+          "För att alla använder samma kabel",
+          "För att wifi alltid är starkt",
+          "För att DNS stänger av internet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken huvudidé vill texten att du ska förstå?",
+        "options": [
+          "Att internet är magi",
+          "Att internet består av många steg och saker som samarbetar, och att det är fysiskt",
+          "Att man aldrig kan lösa internetproblem",
+          "Att servern finns i din telefon"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-miljo-04",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "miljö",
+    "title": "Kompostens hemliga liv",
+    "text": "När klassens odlingslådor skulle startas på våren fick de en ny uppgift: de skulle bygga en liten kompost. Läraren sa att det skulle hjälpa dem att förstå hur naturen tar hand om matrester och gör ny jord.\n\nDiego tyckte först att det lät äckligt. \"Ska vi ha rutten mat i skolan?\" frågade han och gjorde en grimas.\n\n\"Vi ska ha matrester som blir jord,\" sa läraren. \"Och vi gör det på ett säkert sätt.\"\n\nGruppen som fick ansvaret bestod av Diego, Fatima, Lin och Joel. De fick en låda med lock, torra löv, lite jord och en burk med små maskar.\n\n\"Maskar?\" sa Diego och backade lite.\n\nFatima log. \"Maskar är som naturens återvinnare.\"\n\nDe lade först ett lager torra löv i botten. Sedan la de matrester: bananskal, äppelskrutt och lite sallad. Lin hade skrivit en lista på vad man får lägga i en kompost och vad man inte ska lägga där. \"Ingen plast. Ingen metall. Och inte för mycket bröd,\" läste hon.\n\nEfter en vecka öppnade de locket. Diego väntade sig en hemsk lukt, men det luktade mest som skog efter regn. Matresterna såg redan annorlunda ut. Bananskalet var mjukare och jordigare.\n\nFatima pekade på små gångar i jorden. \"Maskarna äter och gör gångar. Då kommer luft in.\"\n\nNär de fortsatte i flera veckor såg de hur komposten förändrades. Det som först var tydliga matbitar blev till mörk, smulig jord.\n\nEn dag hade någon slängt en plastbit i komposten. Lin hittade den och blev arg. \"Det här förstör,\" sa hon.\n\nDiego tänkte efter och sa: \"Vi kan göra en skylt. Och vi kan berätta för klassen varför det är viktigt.\"\n\nDe gjorde en affisch med rubriken \"Kompostens hemliga liv\". De ritade maskar, skrev regler och förklarade att komposten hjälper odlingslådorna. När klassen sedan planterade frön blandade de kompostjorden i lådorna.\n\nDiego såg hur jorden blev mörkare och mjukare. Han tänkte att miljöarbete ibland börjar med något som verkar litet och lite äckligt. Men när man förstår hur det hänger ihop känns det plötsligt smart.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska klassen bygga för att förstå hur matrester blir jord?",
+        "options": [
+          "En robot",
+          "En kompost",
+          "En damm",
+          "En fågelholk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket lager lägger de först i botten av komposten?",
+        "options": [
+          "Plast",
+          "Torra löv",
+          "Glass",
+          "Sand"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hittar Lin i komposten som inte ska vara där?",
+        "options": [
+          "Ett bananskal",
+          "En plastbit",
+          "En mask",
+          "Ett löv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är torra löv viktiga i komposten?",
+        "options": [
+          "För att det ska bli lagom fuktigt och maskarna ska trivas",
+          "För att komposten ska bli blå",
+          "För att plast ska försvinna",
+          "För att det ska bli mer mat"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill Diego göra en skylt när de hittar plast?",
+        "options": [
+          "För att skylla på någon",
+          "För att informera så att fler förstår reglerna och komposten fungerar",
+          "För att göra komposten mindre",
+          "För att sluta odla"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är berättelsens viktigaste idé om miljöarbete?",
+        "options": [
+          "Att man alltid ska kasta mat",
+          "Att små saker, som en kompost, kan göra stor skillnad när man förstår sambanden",
+          "Att maskar är farliga",
+          "Att naturen inte kan återvinna"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-etik-05",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "etik",
+    "title": "Rättvist eller lika?",
+    "text": "Orden rättvist och lika låter nästan som samma sak, men de betyder inte alltid exakt samma. När vi pratar om etik handlar det ofta om hur vi behandlar varandra och hur vi tar beslut som påverkar fler än en person. Då kan skillnaden mellan rättvist och lika bli viktig.\n\nAtt något är lika betyder att alla får samma sak. Till exempel: alla får exakt tio minuter på en dator, eller alla får samma antal pennor. Det kan kännas enkelt och tydligt. Men ibland blir det ändå inte rättvist, eftersom människor kan ha olika behov.\n\nRättvist betyder att man försöker skapa en bra situation för alla, även om det inte blir exakt samma för alla. Tänk dig att tre personer ska nå upp till en hylla. En är lång, en är medellång och en är kort. Om alla får samma pall, kanske den långa personen inte behöver den alls, medan den korta personen fortfarande inte når. Om man vill vara rättvis kan man ge olika stöd: kanske den korta får en högre pall, den medellånga en liten pall och den långa ingen. Då får alla möjlighet att nå.\n\nI skolan kan detta hända ofta. En elev kanske behöver extra tid på ett prov, eller får lyssna på en text istället för att läsa. Någon annan kanske behöver sitta på en lugn plats för att kunna koncentrera sig. Det är inte fusk om målet är att alla ska få en rimlig chans att visa vad de kan.\n\nSamtidigt kan rättvisa kännas svårt, eftersom det kräver att man tänker efter. Vem behöver vad? Hur kan man veta att det är rimligt? Därför behövs regler och samtal. Det är också viktigt att skilja på behov och önskningar.\n\nEtt sätt att tänka är att fråga: Vad är målet? Om målet är att alla ska få samma tid med en spelkonsol hemma kan det vara lika som gäller. Om målet är att alla ska kunna göra läxan kan det vara rättvist att någon får mer hjälp.\n\nNär man diskuterar etik kan man också komma ihåg att rättvisa kan se olika ut i olika situationer. Ibland är det mest rättvist att behandla alla lika. I andra situationer är det mest rättvist att behandla människor olika, för att alla ska få en ärlig chans.\n\nAtt förstå skillnaden kan göra det lättare att lösa konflikter. I stället för att bara säga \"det är orättvist!\" kan man fråga: Menar jag att det inte är lika? Eller menar jag att någon inte får det stöd den behöver?",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder det att något är lika enligt texten?",
+        "options": [
+          "Att alla får samma sak",
+          "Att ingen får något",
+          "Att alla får olika saker",
+          "Att man alltid lottar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel använder texten för att förklara rättvisa?",
+        "options": [
+          "Tre personer och en hylla",
+          "En fotbollsmatch",
+          "En bussresa",
+          "En snögubbe"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket är ett exempel på stöd i skolan som nämns?",
+        "options": [
+          "Extra tid på prov",
+          "Gratis glass varje dag",
+          "Ingen läxa alls",
+          "Att byta klass varje vecka"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan något som är lika ändå kännas orättvist?",
+        "options": [
+          "För att människor kan ha olika behov",
+          "För att alla alltid vill ha samma",
+          "För att regler aldrig behövs",
+          "För att prov alltid är lätta"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger texten att extra stöd i skolan inte behöver vara fusk?",
+        "options": [
+          "För att målet är att alla ska få en rimlig chans att visa vad de kan",
+          "För att lärare gillar fusk",
+          "För att prov inte spelar någon roll",
+          "För att alla får mer godis"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken fråga föreslår texten att man kan ställa när man tycker något är orättvist?",
+        "options": [
+          "Vem är bäst?",
+          "Menar jag att det inte är lika, eller att någon inte får det stöd den behöver?",
+          "Varför finns skolan?",
+          "När är nästa lov?"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
