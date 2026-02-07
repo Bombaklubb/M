@@ -6692,5 +6692,415 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak5-vanskap-01",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den tomma platsen i gruppen",
+    "text": "När läraren delade in klassen i grupper för ett stort arbete om Norden kände Leila hur axlarna spändes. Hon tyckte om att jobba tillsammans, men hon hade också märkt att grupper ibland kunde bli som små stormar: någon bestämmer allt, någon blir tyst, och någon får göra det som ingen annan vill.\n\nLeila hamnade med Theo, Samira och Emil. Theo var snabb med idéer och pratade gärna. Samira var noggrann och skrev prydligt. Emil var snäll, men han brukade ofta säga \"jag vet inte\" och låta andra välja.\n\n\"Vi kan göra en presentation om Norge,\" sa Theo direkt. \"Jag tar fakta om fjordar och sånt.\"\n\n\"Vi måste ha alla länder,\" sa Samira. \"Det står i instruktionen.\"\n\nLeila tittade på pappret: Sverige, Norge, Danmark, Finland och Island. Dessutom skulle de berätta om klimat, språk och traditioner.\n\n\"Okej,\" sa Theo och suckade lite. \"Jag tar Norge och Island då.\"\n\n\"Jag kan ta Finland,\" sa Samira.\n\nEmil ryckte på axlarna. \"Jag kan… ta vad som helst.\"\n\nLeila kände igen det där. \"Vad som helst\" blev ofta \"ingenting\", och då fick någon annan dra ett extra lass. Hon ville inte bli sur, men hon ville heller inte att Emil skulle glida med.\n\n\"Emil,\" sa hon försiktigt, \"vill du ta Danmark? Du gillar ju fotboll, och Danmark har en kul fotbollshistoria. Du kan också ta något om mat, typ smørrebrød.\"\n\nEmil såg förvånad ut, som om någon plötsligt räckt honom en lampa när han stod i ett mörkt rum. \"Ja… det kan jag.\"\n\nTheo började ändå prata snabbt igen. \"Vi behöver bilder och en snygg titel. Jag kan fixa PowerPointen.\"\n\nSamira höll upp handen. \"Men då måste vi andra kunna lägga in saker också. Annars blir allt försenat.\"\n\nLeila nickade. \"Vi kan göra en delad plan. Vi skriver en lista: vem gör vad, och när det ska vara klart.\"\n\nDe skrev upp delmål på ett papper. Först fakta, sedan gemensam genomgång, sedan övning på att prata. Emil skrev \"Danmark: sport + mat + språk\" och såg nästan stolt ut.\n\nTvå dagar senare märkte Leila att Theo lagt in massor av bilder men nästan ingen text. Samira hade skrivit långa stycken men de var för svåra att läsa på en slide. Emil hade bara skrivit tre meningar.\n\n\"Vi behöver balans,\" sa Leila när de träffades på biblioteket. \"Theo, dina bilder är bra, men vi måste också säga vad de visar. Samira, din text är jättebra, men vi kan korta ner och prata mer med egna ord. Emil, dina meningar är en bra start, men du kan lägga till två fakta till, som huvudstaden och språket.\"\n\nEmil nickade. \"Jag kan göra det nu.\"\n\nTheo såg först lite irriterad ut, men sedan sa han: \"Okej, jag fattar. Jag fixar bildtexter.\"\n\nNär de övade presentationen var det Emil som överraskade mest. Han berättade om Köpenhamn, om danska ord som låter roliga, och om smørrebrød som är \"som en macka men finare\". Klassen skrattade.\n\nEfteråt sa läraren: \"Det här var ett tydligt samarbete. Man märker att alla har en plats.\"\n\nLeila kände en varm stolthet. Inte bara över betyget de fick, utan över att ingen blev en tom plats i gruppen. Vänskap, tänkte hon, är också att hjälpa varandra att synas på rätt sätt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket ämne ska gruppen arbeta med?",
+        "options": [
+          "Rymden",
+          "Norden",
+          "Vikingar",
+          "Vulkaner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket land föreslår Leila att Emil ska ta ansvar för?",
+        "options": [
+          "Island",
+          "Danmark",
+          "Finland",
+          "Sverige"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket program säger Theo att han kan fixa?",
+        "options": [
+          "Word",
+          "PowerPoint",
+          "Paint",
+          "Teams"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill Leila att gruppen ska skriva en plan med delmål?",
+        "options": [
+          "För att göra arbetet svårare",
+          "För att alla ska veta vad de ska göra och när det ska vara klart",
+          "För att slippa presentera",
+          "För att Theo ska bestämma allt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behöver Samiras text kortas ner enligt Leila?",
+        "options": [
+          "För att den är fel",
+          "För att lång text är svår att läsa på slides och de ska prata med egna ord",
+          "För att Samira inte får skriva",
+          "För att bilder alltid är viktigare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar det att Emil till slut berättar tryggt inför klassen?",
+        "options": [
+          "Att han egentligen inte gjort något",
+          "Att tydligt ansvar och stöd kan få någon att växa i ett samarbete",
+          "Att han alltid varit bäst i klassen",
+          "Att Theo gjorde allt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 598,
+      "fingerprint": "gpt4-ak5-01",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-natur-02",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Varför löv byter färg",
+    "text": "På hösten kan skogen förändras på bara några veckor. Gröna löv blir gula, orange och röda. Till slut faller de ner och täcker marken som en prasslig matta. Men varför händer det? Löv byter färg av flera orsaker, och allt hänger ihop med hur träd klarar vintern.\n\nEtt löv fungerar som en liten fabrik. Under våren och sommaren använder lövet solljus för att göra socker åt trädet. Den processen kallas fotosyntes. För att fotosyntesen ska fungera behövs ett grönt ämne som heter klorofyll. Klorofyll är som lövets \"solfångare\", och det är just klorofyll som gör att löven ser gröna ut.\n\nNär hösten kommer blir dagarna kortare och temperaturen sjunker. Trädet märker förändringen. Det är inte bara kylan som spelar roll, utan också ljuset. Mindre ljus betyder att fotosyntesen inte fungerar lika bra. Då börjar trädet spara på energi och förbereda sig för vintern.\n\nTrädet slutar efter ett tag att fylla på med nytt klorofyll. Det gamla klorofyllet bryts ner. När det gröna försvinner syns andra färger som redan finns i lövet. Till exempel finns gula och orange färgämnen som kallas karotenoider. De har funnits där hela tiden, men de har gömts av det starka gröna.\n\nI vissa träd blir löven röda eller lila. Det beror på färgämnen som kallas antocyaniner. De kan bildas på hösten när trädet fortfarande har socker kvar i löven. Soliga dagar och kalla nätter kan göra att röda färger blir extra starka. Därför kan samma träd se olika ut olika år.\n\nNär trädet har tagit tillbaka så mycket näring som möjligt från löven bildas en liten \"brytzon\" där lövet sitter fast i grenen. Då släpper lövet lättare. När det faller ner kan det bli mat för svampar, maskar och andra smådjur. Till slut blir löven jord som hjälper nya växter att växa.\n\nLöv som faller kan också skydda marken. De fungerar som ett täcke som håller kvar fukt och ger skydd mot kyla. På så sätt hjälper löven skogen även efter att de slutat sitta på träden.\n\nAtt löv byter färg är alltså inte bara vackert. Det är en smart strategi. Träden stänger ner sin \"sommarfabrik\" och sparar resurser. Samtidigt fortsätter naturens kretslopp, där inget försvinner på riktigt utan blir till något nytt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter processen där löv använder solljus för att göra socker åt trädet?",
+        "options": [
+          "Avdunstning",
+          "Fotosyntes",
+          "Erosion",
+          "Förbränning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket ämne gör att löv ser gröna ut?",
+        "options": [
+          "Klorofyll",
+          "Salt",
+          "Syre",
+          "Kalk"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas de gula och orange färgämnena som finns i löv?",
+        "options": [
+          "Karotenoider",
+          "Mineraler",
+          "Proteiner",
+          "Antikroppar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför slutar trädet att fylla på med nytt klorofyll på hösten?",
+        "options": [
+          "För att dagarna blir kortare och fotosyntesen fungerar sämre, så trädet sparar energi",
+          "För att löv inte behöver ljus",
+          "För att trädet vill bli av med alla löv direkt",
+          "För att det alltid regnar på hösten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan samma träd ha olika starka röda färger olika år?",
+        "options": [
+          "För att löven alltid målas om",
+          "För att soliga dagar och kalla nätter påverkar hur antocyaniner bildas",
+          "För att trädet byter art varje år",
+          "För att karotenoider försvinner helt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur hjälper löv som faller ner skogen enligt texten?",
+        "options": [
+          "De gör att marken blir hård",
+          "De blir mat och jord samt fungerar som ett skyddande täcke",
+          "De stoppar allt liv i jorden",
+          "De gör att träd växer snabbare på vintern"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 478,
+      "fingerprint": "gpt4-ak5-02",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-teknik-03",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "teknik",
+    "title": "Koden som inte ville fungera",
+    "text": "När klassen fick prova enkel programmering på lektionen blev det först mycket skratt. På skärmen fanns en liten figur som skulle gå genom en labyrint. Man drog block med kommandon: \"gå framåt\", \"sväng vänster\", \"sväng höger\". Det såg enkelt ut, nästan som att bygga med digitala lego.\n\nMinh satte sig bredvid Elina och Diego. Minh hade programmerat lite hemma, men bara spel och små trick. Elina gillade logik och pussel. Diego gillade att vara snabb, som om varje uppgift var en tävling.\n\n\"Jag tar första banan,\" sa Diego och drog kommandon i en lång rad. \"Kolla, det här går fort.\"\n\nHan tryckte på start. Figuren gick två steg, svängde, och körde rakt in i en vägg.\n\n\"Va?\" sa Diego och tryckte igen. Samma sak.\n\nElina lutade sig fram. \"Du har för många steg innan du svänger,\" sa hon.\n\nDiego suckade. \"Men jag vill bli klar.\"\n\nMinh tog en penna och ritade labyrinten på ett papper. \"Om vi tänker som figuren,\" sa han, \"så ser den bara ett steg i taget. Vi måste beskriva vägen exakt.\"\n\nDe räknade rutor. Elina sa: \"Två fram, sväng höger, en fram, sväng vänster.\"\n\nDiego drog blocken på nytt. Figuren gick längre den här gången, men stannade vid en ny vägg.\n\n\"Jag blir galen,\" muttrade Diego.\n\nMinh log lite. \"Det här är normalt. När något inte funkar kallas det att vi har en 'bugg'. Då felsöker man.\"\n\n\"Felsöker?\" frågade Elina.\n\n\"Man letar efter var det blir fel,\" sa Minh. \"Som en detektiv.\"\n\nDe testade steg för steg och tittade noga på när figuren körde in i väggen. Elina pekade på ett block. \"Där! Du svänger vänster, men du borde svänga höger.\"\n\nDiego stirrade. \"Jag blandade ihop.\"\n\nHan bytte blocket. Den här gången tog figuren sig nästan hela vägen, men fastnade precis innan målet.\n\nMinh sa: \"Vi kan göra en loop också. Om figuren ska gå fram tre steg kan vi använda 'upprepa 3 gånger'.\"\n\nDiego blev intresserad. \"Det låter smart. Då blir koden kortare.\"\n\nElina nickade. \"Och lättare att se fel.\"\n\nDe byggde om koden med en loop. Figuren gick tre steg, svängde, gick två, svängde igen och… nådde målet.\n\nDiego höjde båda händerna. \"Yes!\"\n\nElina log. \"Vi var lugna och tänkte.\"\n\nMinh sa: \"Det är så programmering funkar. Man testar, ser fel, ändrar, testar igen.\"\n\nNär lektionen var slut tänkte Diego på något läraren sagt: att kod inte är magi, utan instruktioner. Diego hade velat vara snabbast. Men nu kände han något annat också: stolthet över att inte ge upp. Koden hade inte velat fungera, men det hade de gjort tillsammans.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska den lilla figuren på skärmen göra?",
+        "options": [
+          "Bygga ett hus",
+          "Gå genom en labyrint",
+          "Spela fotboll",
+          "Rita en cirkel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas ett fel i programmet enligt Minh?",
+        "options": [
+          "En bug",
+          "En bokstav",
+          "En pixel",
+          "En regel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket block använder de för att göra koden kortare?",
+        "options": [
+          "Radera",
+          "Upprepa 3 gånger",
+          "Stopp",
+          "Vänta 10 sekunder"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill Minh att de ska tänka som figuren i labyrinten?",
+        "options": [
+          "För att figuren kan läsa tankar",
+          "För att de måste beskriva vägen steg för steg och vara exakta",
+          "För att det blir roligare att rita",
+          "För att labyrinten försvinner annars"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir koden lättare att felsöka när de använder en loop?",
+        "options": [
+          "För att koden blir kortare och tydligare",
+          "För att loopen tar bort alla buggar automatiskt",
+          "För att figuren blir snabbare",
+          "För att man slipper tänka"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad förändras hos Diego under arbetet?",
+        "options": [
+          "Han vill bara vara snabbast hela tiden",
+          "Han går från stress och irritation till att förstå värdet av att inte ge upp",
+          "Han slutar gilla teknik",
+          "Han blir argare när de lyckas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 512,
+      "fingerprint": "gpt4-ak5-03",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-samhalle-04",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "Vad gör en kommun?",
+    "text": "Du bor i en kommun, även om du kanske inte tänker på det varje dag. En kommun är ett område där människor bor, arbetar och går i skolan. I Sverige är landet indelat i många kommuner. Kommunen har ansvar för saker som påverkar din vardag: skolan du går i, vägarna du cyklar på och var soporna tar vägen.\n\nEn viktig del av kommunen är skolan. Kommunen betalar för skolor och ser till att det finns lärare, lokaler och skolmat. Det betyder inte att kommunen bestämmer allt i klassrummet, men den har ansvar för att skolan fungerar.\n\nKommunen ansvarar också för äldreomsorg. Det handlar om hjälp till äldre personer som behöver stöd hemma eller bor på ett äldreboende. Där jobbar personal som hjälper till med mat, mediciner och trygghet.\n\nEn annan sak kommunen sköter är vatten och avlopp. Vattnet som kommer ur kranen ska vara rent och säkert att dricka. Avloppet tar hand om smutsigt vatten, till exempel från dusch och disk. Det renas så att naturen inte blir förstörd.\n\nKommunen planerar också hur staden eller byn ska utvecklas. Var ska det byggas bostäder? Var ska det finnas parker? Hur ska trafiken fungera? För att kunna planera behöver kommunen lyssna på invånare och följa regler.\n\nKommunen styrs av politiker som du inte själv röstar på förrän du är äldre, men kommunen påverkar dig ändå. Därför är det viktigt att förstå hur kommunen fungerar. Du kan till exempel skriva medborgarförslag när du blir lite äldre, prata med vuxna som röstar, eller vara med i elevråd och lära dig hur man påverkar.\n\nKommunen är alltså som en stor \"vardagsmotor\". Många personer arbetar för att saker ska fungera även när du inte ser det. När bussen kommer i tid, när lampor lyser på gatan och när soporna hämtas, då är det ofta kommunen som har planerat eller ordnat det.\n\nOm du lär dig vad kommunen gör kan du också förstå att samhället inte bara händer av sig självt. Det är människor som tar beslut, och beslut kan ändras. Det betyder att du som växer upp i kommunen en dag också kan vara med och påverka hur din plats ska bli.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är en kommun enligt texten?",
+        "options": [
+          "En sorts sport",
+          "Ett område där människor bor, arbetar och går i skolan",
+          "En bok i biblioteket",
+          "En webbplats för spel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Nämn ett område som kommunen ansvarar för enligt texten.",
+        "options": [
+          "Skola",
+          "Havets tidvatten",
+          "Väder i hela världen",
+          "Planeter"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med smutsigt vatten från dusch och disk enligt texten?",
+        "options": [
+          "Det blir kvar i rören för alltid",
+          "Det renas så att naturen inte blir förstörd",
+          "Det försvinner utan att någon gör något",
+          "Det blir till bensin"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kallar texten kommunen för en 'vardagsmotor'?",
+        "options": [
+          "För att kommunen bygger motorcyklar",
+          "För att kommunen får många vardagliga saker att fungera i bakgrunden",
+          "För att alla måste åka bil",
+          "För att kommuner alltid är tysta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det viktigt att förstå hur kommunen fungerar även om du inte kan rösta ännu?",
+        "options": [
+          "För att kommunen bestämmer allt du gör",
+          "För att kommunens beslut påverkar din vardag och man kan lära sig hur man påverkar",
+          "För att det är ett prov varje vecka",
+          "För att kommunen alltid har rätt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten att läsaren ska förstå om beslut i samhället?",
+        "options": [
+          "Att beslut inte går att ändra",
+          "Att samhället fungerar för att människor tar beslut, och att man kan vara med och påverka",
+          "Att bara vuxna bryr sig",
+          "Att regler aldrig behövs"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 432,
+      "fingerprint": "gpt4-ak5-04",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
+  },
+  {
+    "id": "ak5-etik-05",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Ryktet som sprang snabbare än sanningen",
+    "text": "När Selma kom till skolan på måndagen märkte hon direkt att något var annorlunda. Folk viskade. Några tittade på henne och vände bort blicken. I korridoren hörde hon sitt namn tillsammans med ordet \"fusk\".\n\nSelma stannade vid sin kompis Kenan. \"Vad händer?\" frågade hon.\n\nKenan såg obekväm ut. \"Det går ett rykte… att du fuskade på matteprovet.\"\n\nSelma kände hur det stack till i magen. \"Va? Jag gjorde inte det!\"\n\nKenan nickade snabbt. \"Jag tror dig. Men någon sa att du hade en lapp i ärmen.\"\n\nSelma försökte tänka tillbaka. Hon hade haft en pappersbit i fickan, men det var ett busskort som hon glömt ta ur jackan. På provet hade hon varit nervös och råkat dra upp ärmen för att inte kladda.\n\nPå rasten såg hon hur Albin pratade med flera elever. De skrattade kort, som om de berättade något spännande. Selma gick fram.\n\n\"Varför säger du att jag fuskade?\" frågade hon.\n\nAlbin höjde ögonbrynen. \"Jag sa bara vad jag hörde. Någon såg något.\"\n\n\"Vem?\" frågade Selma.\n\nAlbin ryckte på axlarna. \"Spelar det roll?\"\n\nSelma kände hur ilskan bubblade. Men hon mindes vad hennes pappa ofta sa: \"När du blir arg, andas och välj ord som bygger, inte ord som bränner.\"\n\n\"Det spelar roll,\" sa Selma lugnare. \"För att ett rykte kan skada någon. Du vet inte om det är sant.\"\n\nAlbin såg först irriterad ut, men hans blick flackade. \"Okej… jag hörde det från Nora.\"\n\nSelma gick till Nora, som såg förvånad ut när Selma närmade sig. \"Varför sa du att jag fuskade?\"\n\nNora blev röd. \"Jag… jag trodde det. Jag såg att du drog i ärmen. Och sen sa någon att du hade en lapp.\"\n\n\"Men du frågade mig inte,\" sa Selma. \"Du bara berättade vidare.\"\n\nNora tittade ner. \"Förlåt.\"\n\nSelma tog ett djupt andetag. \"Kan du hjälpa mig att rätta till det?\"\n\nNora nickade långsamt. Under lunch gick de tillsammans till läraren. Selma berättade om busskortet och vad som hänt. Läraren lyssnade och sa: \"Bra att ni kommer och pratar. Det är så man löser saker.\" Läraren lovade att prata med klassen om rykten och att man måste fråga innan man sprider.\n\nEfteråt skrev Nora i klasschatten: \"Jag sa en sak om Selma som jag inte visste var sant. Det var fel. Selma fuskade inte.\"\n\nDet blev tyst en stund. Sedan skrev några: \"Okej.\" \"Förlåt Selma.\"\n\nSelma kände att det fortfarande gjorde ont, men mindre. Hon hade lärt sig något viktigt: sanningen kan vara långsammare än ett rykte, men den kan hinna ikapp om man vågar prata, fråga och ta ansvar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket rykte sprids om Selma?",
+        "options": [
+          "Att hon ska flytta",
+          "Att hon fuskade på matteprovet",
+          "Att hon vann en tävling",
+          "Att hon glömt sin väska"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hade Selma egentligen i fickan?",
+        "options": [
+          "En fusklapp",
+          "Ett busskort",
+          "En mobil",
+          "En nyckel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem säger Albin att han hörde ryktet från?",
+        "options": [
+          "Kenan",
+          "Nora",
+          "Läraren",
+          "Selma"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför väljer Selma att prata lugnare istället för att skrika på Albin?",
+        "options": [
+          "För att hon inte bryr sig",
+          "För att hon vill lösa problemet och inte göra det värre",
+          "För att hon är rädd för matte",
+          "För att hon vill att ryktet ska spridas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ber Selma Nora att hjälpa till att rätta till ryktet?",
+        "options": [
+          "För att Nora startade eller spred ryktet och kan stoppa det",
+          "För att Nora är bäst på matte",
+          "För att läraren inte finns",
+          "För att Albin inte kan skriva"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen lära om rykten?",
+        "options": [
+          "Att rykten alltid är sanna",
+          "Att man ska fråga och tänka innan man sprider, eftersom rykten kan skada",
+          "Att man ska ignorera allt",
+          "Att man ska sprida det som är spännande"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 542,
+      "fingerprint": "gpt4-ak5-05",
+      "generatedAt": "2026-02-07T00:00:00.000Z",
+      "model": "chatgpt"
+    }
   }
 ]
