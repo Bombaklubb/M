@@ -7102,5 +7102,537 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak7-vanskap-01",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "När någon inte svarar",
+    "text": "Det började med något så litet att Amina nästan skämdes över att hon ens tänkte på det. Ett meddelande i klasschatten som hon skrev på bussen hem: \"Ska vi ses och plugga inför SO-provet?\" Hon tryckte skickat, såg bocken bli dubbel, och väntade. Det var inte ens en viktig fråga, bara en idé. Men minuterna gick, och ingen svarade.\n\nHemma satte hon sig vid köksbordet med sin bok om stormaktstiden. Hon försökte läsa, men ögonen drogs tillbaka till skärmen. Chatten fortsatte, men på ett annat spår. Någon lade upp en meme om läraren. Någon annan skrev om fredagens match. Hennes fråga låg kvar som en sten på botten av en bäck: synlig, men ingen rörde den.\n\nDagen efter i skolan kände Amina en märklig tomhet i bröstet, som om hon hade gjort bort sig utan att veta hur. Hon såg sin kompis Elias prata med två andra vid skåpen. De skrattade åt något som Amina inte hörde. Hon försökte säga hej, men det blev mer som ett halvt ord som fastnade.\n\nPå lektionen satte hon sig bredvid Leyla, som hon brukar. Leyla luktade svagt av minttuggummi och hade alltid en penna som klickade när hon tänkte.\n\n\"Du,\" viskade Amina, \"såg du mitt meddelande igår?\"\n\nLeyla blinkade. \"Vilket?\"\n\nAmina svalde. \"Om att ses och plugga.\"\n\nLeyla drog upp chatten, scrollade och stannade. \"Oj. Jag missade det. Förlåt.\"\n\n\"Det är lugnt,\" sa Amina snabbt, men rösten lät inte som hon ville.\n\nUnder rasten kom Kenji fram och frågade Leyla om de skulle spela basket. Amina hörde deras ord, men hon var kvar i känslan av att vara osynlig. Hon tänkte att det kanske var så det började när någon hamnade utanför: inte med ett stort bråk, utan med små tystnader som samlades.\n\nEfter sista lektionen stod Amina vid cykelstället när Elias kom gående. Han såg henne och stannade.\n\n\"Hej,\" sa han. \"Du verkar... off.\"\n\nAmina skrattade kort. \"Det är inget.\"\n\nElias tittade på henne, som om han inte köpte det. \"Är det chatten? Jag såg att du skrev något men jag hann inte svara. Sen försvann det bland allt annat.\"\n\n\"Det var bara en fråga,\" sa Amina, men hon kände hur ansiktet blev varmt.\n\n\"Jag vet,\" sa Elias. \"Men jag fattar också att det kan kännas... som att man inte räknas. Jag har känt så ibland.\"\n\nAmina stirrade på gruset. \"Jag hatar att jag bryr mig.\"\n\n\"Du bryr dig för att du vill ha kontakt,\" sa Elias. \"Det är inte konstigt. Det är mänskligt.\" Han pausade. \"Ska vi plugga då? Jag behöver ändå hjälp att fatta de där orsakerna till krigen.\"\n\nAmina tittade upp. \"På riktigt?\"\n\n\"På riktigt.\"\n\nDe bestämde att ses på biblioteket dagen efter. När Amina kom dit satt redan Leyla vid ett bord och viftade med sin bok.\n\n\"Jag tänkte,\" sa Leyla, \"att om vi ändå pluggar kan vi göra det ordentligt. Och... jag är ledsen att jag missade. Jag vill inte att du ska känna dig ensam.\"\n\nAmina kände hur något släppte, som en knut som långsamt lossnade. Det var fortfarande sant att chatten varit tyst, men det var också sant att vänskap ibland behövde tydliga ord, inte bara antaganden.\n\nNär de gick hem senare hade de inte bara gjort en tidslinje över stormaktstiden. De hade också tränat på något som ingen lärobok riktigt lär ut: att fråga, lyssna och säga förlåt innan avståndet blir för stort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad frågar Amina i klasschatten?",
+        "options": [
+          "Om någon kan skicka läxan i matte",
+          "Om de ska ses och plugga inför SO-provet",
+          "Om någon vill byta plats på lektionen",
+          "Om någon sett hennes cykelnyckel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var bestämmer de att plugga?",
+        "options": [
+          "I en sporthall",
+          "På biblioteket",
+          "I matsalen",
+          "På bussen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket ämne handlar provet om?",
+        "options": [
+          "SO",
+          "Bild",
+          "Idrott",
+          "Musik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känner Amina sig osynlig?",
+        "options": [
+          "För att chatten är stängd för henne",
+          "För att hennes fråga inte får något svar",
+          "För att hon inte kan läsa meddelanden",
+          "För att läraren tar hennes mobil"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Elias när han säger att han också har känt så?",
+        "options": [
+          "Att han vill vinna en diskussion",
+          "Att han försöker förstå och skapa trygghet",
+          "Att han tycker Amina överdriver",
+          "Att han vill byta klass"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig Amina om vänskap?",
+        "options": [
+          "Att man aldrig ska skriva i chattar",
+          "Att vänskap ibland kräver tydliga ord",
+          "Att man alltid ska vara ensam",
+          "Att det är bäst att ignorera allt jobbigt"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-miljo-02",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Matsvinn",
+    "text": "Matsvinn betyder att mat som kunde ha ätits slängs. Det kan vara en banan som blivit brun, en portion pasta som står kvar på tallriken, eller bröd som kastas fast det hade kunnat frysas. Matsvinn händer hemma, i butiker och i skolor. Det kan låta som en liten sak, men när man räknar ihop allt blir det en stor miljöfråga.\n\nFör att förstå varför matsvinn påverkar miljön behöver man tänka på hela resan som maten gör. Mat börjar inte i affären. Den börjar i odling, djurhållning, fiske eller fabriker. För att producera mat behövs mark, vatten, energi och arbete. Traktorer använder bränsle, växthus kan kräva uppvärmning, och transporter kräver lastbilar, båtar eller flyg. Om maten slängs har alla dessa resurser använts i onödan.\n\nNär mat hamnar i soporna kan det också bildas växthusgaser. Matavfall som bryts ner utan syre, till exempel i vissa deponier, kan skapa metan. Metan är en stark växthusgas.\n\nVarför slängs mat? En orsak är planering. Om man handlar mer än man hinner äta blir det rester som glöms bort längst in i kylskåpet. En annan orsak är missförstånd om datum. \"Bäst före\" betyder ofta att maten kan vara okej även efter datumet. \"Sista förbrukningsdag\" är däremot viktigare, särskilt för känsliga varor.\n\nLösningar finns på flera nivåer. Hemma kan man planera inköp, skriva en enkel lista, och använda rester i nya rätter. I skolan kan man jobba med tydligare information om portioner. Det viktiga är att förstå systemet och hitta smartare vanor.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder matsvinn?",
+        "options": [
+          "Att man lagar mat långsamt",
+          "Att mat som kunde ha ätits slängs",
+          "Att man äter för mycket",
+          "Att man bara köper ekologiskt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken växthusgas nämns?",
+        "options": [
+          "Syre",
+          "Metan",
+          "Helium",
+          "Kväve"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken skillnad finns mellan bäst före och sista förbrukningsdag?",
+        "options": [
+          "Bäst före betyder alltid giftigt efter",
+          "Sista förbrukningsdag är viktigare för känsliga varor",
+          "De betyder samma sak",
+          "Endast bäst före finns på mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är matsvinn en miljöfråga innan maten hamnar i soporna?",
+        "options": [
+          "För att sopor luktar",
+          "För att produktionen redan använt resurser",
+          "För att mat är dyrt",
+          "För att skolor lagar för mycket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan svinnet minska om man tar lite mat först?",
+        "options": [
+          "För att man inte tar mer än man orkar äta",
+          "För att maten blir varmare",
+          "För att köerna försvinner",
+          "För att man får mer tid på rasten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten säga om skuldkänslor och matsvinn?",
+        "options": [
+          "Att man ska skamma den som inte äter upp",
+          "Att man ska förstå orsaker istället för att skamma",
+          "Att matsvinn är omöjligt att förändra",
+          "Att man aldrig får lämna mat"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-historia-03",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Fotot i andra handen",
+    "text": "När klassen fick i uppgift att intervjua någon äldre om en sak som förändrats suckade Tilde först. Men hemma hade hennes mamma en idé.\n\n\"Fråga morfar Farid,\" sa hon. \"Han har en historia som inte bara handlar om teknik.\"\n\nMorfar Farid bodde i en lägenhet där kaffet alltid doftade kardemumma och där bokhyllorna hade fler språk än Tilde kunde räkna. När hon kom på lördagen hade han redan dukat fram små kakor.\n\n\"Så,\" sa han och log, \"du vill höra om förr.\"\n\nTilde tog fram mobilen för att spela in. Morfar nickade och gick in i sovrummet. När han kom tillbaka hade han ett gammalt foto i handen, lite böjt i hörnen. På bilden stod en ung man i ljus skjorta bredvid en kvinna med mörkt hår.\n\n\"Det där är du,\" sa Tilde.\n\n\"Ja,\" sa morfar. \"Och det där är min syster, Sahar. Det här fotot tog vi innan vi lämnade Iran.\"\n\n\"Varför lämnade ni?\" frågade Tilde.\n\nMorfar drog långsamt med fingret över fotots kant. \"För att livet blev osäkert. För att vissa ord blev farliga att säga högt. För att framtiden krympte.\" Han tittade upp. \"Det är en förändring som inte syns i en ny telefon.\"\n\n\"Vad förändrades när du kom till Sverige?\" frågade hon.\n\nMorfar log snett. \"Jag fick lära mig ett nytt språk. Jag fick lära mig att vissa människor trodde att jag var mindre smart för att jag pratade långsamt. Jag fick också lära mig att andra människor kunde vara otroligt vänliga.\"\n\n\"Vad saknar du mest?\"\n\nMorfar tog en klunk kaffe. \"Jag saknar vissa människor. Och jag saknar dofter, ljud, platser. Men jag saknar också något som är mer konstigt: att känna mig självklar.\"\n\n\"Får jag ta en bild på fotot?\" frågade hon.\n\n\"Ja,\" sa morfar. \"Men lova att du inte bara sparar det i mobilen. Berätta det också. Historia är inte bara saker vi har. Det är saker vi för vidare.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken uppgift får Tildes klass?",
+        "options": [
+          "Att bygga en modell",
+          "Att intervjua någon äldre om en sak som förändrats",
+          "Att skriva en fantasyberättelse",
+          "Att göra ett experiment"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad visar fotot?",
+        "options": [
+          "En gammal skolgård",
+          "Morfar Farid och hans syster Sahar",
+          "En bil från 1950-talet",
+          "Elever på utflykt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken dryck nämns hemma hos morfar?",
+        "options": [
+          "Te med citron",
+          "Kaffe som doftar kardemumma",
+          "Varm choklad",
+          "Mjölk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger morfar att förändring inte syns i en ny telefon?",
+        "options": [
+          "För att han inte gillar teknik",
+          "För att vissa förändringar handlar om trygghet och frihet",
+          "För att telefoner alltid går sönder",
+          "För att han aldrig använt en mobil"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar morfar med att känna sig självklar?",
+        "options": [
+          "Att vara berömd",
+          "Att passa in utan att behöva förklara sig",
+          "Att vara bäst i allt",
+          "Att äga fler saker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill morfar att Tilde ska berätta historien?",
+        "options": [
+          "För att mobilen är för liten",
+          "För att historia blir levande när den förs vidare",
+          "För att foton är förbjudna",
+          "För att han inte litar på internet"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-teknik-04",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Algoritmer i ditt flöde",
+    "text": "När du öppnar en app och börjar scrolla kan det kännas som att flödet bara finns där. Men i de flesta sociala medier är flödet inte en neutral lista. Det är ett urval som styrs av algoritmer. En algoritm är en uppsättning steg, som ett recept, som talar om vad som ska hända i ett system.\n\nVarför gör man så? Det finns för mycket innehåll. Om du följde hundra konton skulle du inte hinna se allt. Algoritmen försöker gissa vad du kommer tycka är mest intressant. Den tittar på signaler: vad du stannar vid, vad du gillar, vad du kommenterar, vad du delar och hur länge du tittar på en video.\n\nDetta kan vara praktiskt, men det kan också få konsekvenser. Du kan hamna i en bubbla där du mest ser samma typ av innehåll. Då kan det kännas som att alla tycker som du, fast det egentligen bara är algoritmen som ger dig mer av det du redan reagerat på.\n\nEn annan konsekvens är att algoritmer ofta belönar starka reaktioner. Inlägg som gör människor arga, rädda eller väldigt glada kan få fler kommentarer och delningar. Det betyder inte att algoritmen vill skapa bråk, men den optimerar ofta för engagemang.\n\nHur kan man hantera detta? Bli medveten. Fråga dig själv: varför fick jag det här i mitt flöde? Följ konton med olika perspektiv, sök aktivt efter information, och ta pauser när du scrollar utan mål.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är en algoritm enligt texten?",
+        "options": [
+          "En hemlig person som styr internet",
+          "En uppsättning steg, som ett recept",
+          "En sorts batteri i mobilen",
+          "En bild som sprids snabbt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka signaler tittar algoritmen på?",
+        "options": [
+          "Din längd och skostorlek",
+          "Vad du stannar vid, gillar, kommenterar, delar",
+          "Hur fort du springer",
+          "Vilken färg du har på tröjan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket ord använder texten för att beskriva att man mest ser samma typ av innehåll?",
+        "options": [
+          "Bubbla",
+          "Kedja",
+          "Trappa",
+          "Karta"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan inlägg som väcker starka känslor spridas mer?",
+        "options": [
+          "För att de alltid är sanna",
+          "För att de får många reaktioner som algoritmen tolkar som engagemang",
+          "För att de är kortare",
+          "För att de bara visas för vuxna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan algoritmen tro att du vill se mer av något du tittade på av irritation?",
+        "options": [
+          "För att algoritmen bara ser att du tittade länge, inte varför",
+          "För att irritation är förbjudet",
+          "För att du måste gilla allt",
+          "För att mobilen gissar tankar exakt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten förmedla med jämförelsen med en butik?",
+        "options": [
+          "Att sociala medier säljer mat",
+          "Att innehåll kan vara placerat för att påverka dig",
+          "Att man alltid ska köpa mer",
+          "Att algoritmer är samma sak som priser"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-sport-05",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Sista varvet",
+    "text": "Zahra hade alltid gillat att springa, men hon hade inte alltid gillat att springa inför andra. På idrottslektionerna brukade hon hålla ett jämnt tempo, inte sticka ut. Men den här veckan hade skolan en löptävling runt elljusspåret.\n\n\"Det är inte en tävling mot andra,\" sa idrottsläraren. \"Det är en utmaning mot dig själv.\"\n\nZahra hade tränat på egen hand med sin kusin Samir, som spelade fotboll och älskade att ge råd.\n\n\"Du måste hitta din rytm,\" sa Samir. \"Inte börja för snabbt. Och när du tror att du inte orkar mer, då har du mer kvar än du tror.\"\n\nPå tävlingsdagen var luften kall och klar. Startskottet gick, och gruppen rörde sig som en stor, ojämn våg. Några rusade iväg. Zahra höll igen. Hon hittade ett tempo där andningen kändes stadig.\n\nEfter första varvet började benen kännas tyngre. Hon ville också gå. Men då kom hon att tänka på Samirs ord. Hon sänkte tempot lite, men hon stannade inte.\n\nVid andra varvet såg hon Maja längre fram. Maja vinkade kort, som om de var i samma lag. Zahra kände att det hjälpte.\n\nNär de kom in på sista varvet hörde hon Samir ropa: \"Zahra! Sista biten!\"\n\nHon lyfte blicken och såg målet. Hon ökade lite. Det var inte en explosiv spurt, mer som att hon slutade hålla tillbaka.\n\nNär hon sprang över mållinjen blev hon nästan förvånad över hur starkt hon ville le. Det var viktigt på ett sätt som var svårt att förklara. Inte för att hon var snabbast, utan för att hon hade mött sin egen tvekan och fortsatt ändå.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var springer eleverna under löptävlingen?",
+        "options": [
+          "I en sporthall",
+          "Runt elljusspåret",
+          "På en fotbollsplan",
+          "I skolans korridor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad brukar Samir säga att Zahra ska göra?",
+        "options": [
+          "Börja så snabbt som möjligt",
+          "Hitta sin rytm och inte börja för snabbt",
+          "Springa barfota",
+          "Bara gå hela vägen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ropar Samir vid staketet?",
+        "options": [
+          "Zahra! Sista biten!",
+          "Stanna!",
+          "Du är sen!",
+          "Gå hem!"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför väljer Zahra att sänka tempot istället för att gå?",
+        "options": [
+          "För att hon vill visa sig cool",
+          "För att hon minns rådet om att hon har mer kvar",
+          "För att läraren står bredvid",
+          "För att hon tappat sin sko"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar Majas vinkning Zahra?",
+        "options": [
+          "Den gör att Zahra blir arg",
+          "Den får Zahra att känna stöd och vilja fortsätta",
+          "Den gör att Zahra snubblar",
+          "Den gör att Zahra går hem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är berättelsens viktigaste budskap?",
+        "options": [
+          "Att bara den som vinner är duktig",
+          "Att det kan vara viktigt att utmana sin egen rädsla",
+          "Att man alltid ska avbryta när det känns jobbigt",
+          "Att sport bara handlar om tur"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-vetenskap-06",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Vad är ett experiment?",
+    "text": "Ordet experiment används ofta i vardagen. Men i naturvetenskap betyder experiment något mer specifikt. Ett experiment är ett planerat test där man försöker ta reda på hur något fungerar genom att ändra en sak i taget och observera vad som händer.\n\nFör att ett experiment ska ge ett meningsfullt svar behöver man tänka på variabler. En variabel är något som kan förändras. Den oberoende variabeln är det du ändrar medvetet, till exempel mängden ljus en växt får. Den beroende variabeln är det du mäter, till exempel hur mycket växten växer.\n\nFör att resultatet ska bli rättvist behöver man kontrollera andra variabler. Om du jämför två växter och ger den ena mer ljus, men samtidigt vattnar den andra mer, kan du inte veta vad som påverkade resultatet. Därför gör man ofta en kontrollgrupp.\n\nEtt annat viktigt begrepp är upprepning. Om du gör ett test en gång kan resultatet bero på slump. Om du upprepar experimentet flera gånger och får liknande resultat blir slutsatsen starkare.\n\nFelkällor är saker som kan påverka resultatet utan att du tänkt på det. Att prata om felkällor är inte samma sak som att misslyckas. Tvärtom visar det att du förstår att verkligheten är komplicerad.\n\nNär du förstår vad ett experiment är kan du också bli bättre på att tolka påståenden i vardagen. Om någon säger att en produkt bevisat fungerar kan du fråga: Hur testades det? Fanns en kontrollgrupp?",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är ett experiment enligt texten?",
+        "options": [
+          "Ett spontant försök utan plan",
+          "Ett planerat test där man ändrar en sak i taget",
+          "En berättelse om naturen",
+          "En åsikt om vad som borde fungera"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas det man ändrar medvetet?",
+        "options": [
+          "Beroende variabel",
+          "Oberoende variabel",
+          "Felkällan",
+          "Slutsatsen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför använder man en kontrollgrupp?",
+        "options": [
+          "För att göra experimentet roligare",
+          "För att jämföra med en grupp som inte får förändringen",
+          "För att slippa mäta",
+          "För att få fler felkällor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det viktigt att upprepa ett experiment?",
+        "options": [
+          "För att man då kan vara mer säker och minska risken för slump",
+          "För att läraren kräver det utan anledning",
+          "För att kontrollgruppen försvinner",
+          "För att felkällor blir större"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det inte ett misslyckande att prata om felkällor?",
+        "options": [
+          "För att felkällor gör att allt blir rätt",
+          "För att det visar att man förstår begränsningar",
+          "För att man slipper skriva slutsats",
+          "För att felkällor betyder att experimentet inte hände"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför varnar texten för att dra för stora slutsatser från ett litet experiment?",
+        "options": [
+          "För att data aldrig betyder något",
+          "För att olika situationer kan göra att resultatet inte gäller överallt",
+          "För att växter alltid ljuger",
+          "För att kontrollgrupper är onödiga"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-etik-07",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Skärmdumpen i klasschatten",
+    "text": "När Arvin såg skärmdumpen första gången hann han bara tänka: Det där ser inte bra ut. Den låg i klasschatten, skickad av någon som skrev \"kolla\". Skärmdumpen visade en privat konversation där en elev, Noor, hade skrivit något dumt om en annan i klassen.\n\nChatten exploderade nästan direkt. Någon skrev \"HAHA\". Någon skrev \"Noor är fake\". Arvin såg hur meddelandena rullade och rullade.\n\nHan tänkte på Noor. De var inte bästa vänner, men de hade jobbat tillsammans i slöjden och Noor brukade dela med sig av extra pennor. Arvin tänkte också på den som blivit snackad om. Att se sitt namn i en skärmdump är som att stå på scen utan att ha valt det.\n\nPå rasten hittade Arvin sin vän Sara. \"Vad ska man göra?\" sa Arvin. \"Om man säger ifrån blir man typ tråkig.\"\n\nSara suckade. \"Tråkig är bättre än elak. Men jag fattar. Man vill inte bli nästa mål.\"\n\nPå nästa lektion satt Noor längst bak, ovanligt stilla. Efter lektionen gick Arvin fram.\n\n\"Hej,\" sa han. \"Hur är det?\"\n\nNoor tittade upp. \"Dåligt. Jag vet att jag skrev något dumt. Men det var privat.\"\n\nEfter skolan satte Arvin sig vid skrivbordet och skrev ett meddelande. Han raderade det. Skrev igen. Till sist skrev han: \"Kan vi sluta dela skärmdumpar? Det skadar folk. Prata med Noor om ni måste, men sprid inte.\"\n\nHan tryckte skickat. Några reagerade med tystnad. Någon skrev \"lol\". Men så skrev Leyla: \"Håller med.\" Sedan skrev någon annan: \"Jag tar bort min.\"\n\nDet blev inte magiskt bra på en gång. Men tempot sjönk.\n\nNästa dag kom Noor fram till Arvin. \"Tack,\" sa Noor lågt. \"Tack för att du inte gjorde det värre.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad sprids i klasschatten?",
+        "options": [
+          "En läxa",
+          "En skärmdump från en privat konversation",
+          "En bild på en hund",
+          "Ett schema för veckan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem är eleven som skärmdumpen handlar om?",
+        "options": [
+          "Arvin",
+          "Noor",
+          "Sara",
+          "Leyla"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket meddelande skriver Arvin till slut?",
+        "options": [
+          "Att alla ska fortsätta dela",
+          "Att de ska sluta dela skärmdumpar eftersom det skadar folk",
+          "Att Noor ska byta skola",
+          "Att läraren måste läsa allt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tvekar Arvin att säga ifrån?",
+        "options": [
+          "För att han inte kan skriva",
+          "För att han är rädd att bli nästa mål och uppfattas som tråkig",
+          "För att han tycker skärmdumpar är roliga",
+          "För att han inte känner någon i klassen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Arvin när han säger att folk delar för att det är spännande, som att titta på en brand?",
+        "options": [
+          "Att människor dras till drama även om det skadar någon",
+          "Att eld är intressant i NO",
+          "Att Noor gillar att tända ljus",
+          "Att chatten handlar om säkerhet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar reaktionerna efter Arvins meddelande?",
+        "options": [
+          "Att ingen bryr sig",
+          "Att en tydlig markering kan påverka gruppen",
+          "Att alla tycker samma sak hela tiden",
+          "Att skärmdumpen försvinner överallt direkt"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
