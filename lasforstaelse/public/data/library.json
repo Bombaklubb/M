@@ -8014,5 +8014,385 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak6-vanskap-01",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den nya i laget",
+    "text": "När Leyla kom in i omklädningsrummet första gången var det som att kliva in i ett rum som redan hade sin egen rytm. Skåpdörrar slog igen, någon skrattade högt, någon annan letade efter en borttappad strumpa. På en bänk satt tre tjejer och pratade om helgens match som om den fortfarande pågick i luften. Leyla kände sin ryggsäck bli tung i handen.\n\nHon hade flyttat mitt i terminen. I sin förra skola spelade hon handboll, men här var det innebandy som gällde. Läraren hade sagt att det var bra om Leyla gick med i skolans lag, \"så du lär känna folk\". Det lät klokt. Det kändes ändå som att stå på kanten av en isvak.\n\n\"Du är Leyla, va?\" En röst kom från sidan. Det var Maja, lagkaptenen, som hade en hästsvans och ett snabbt sätt att prata.\n\nLeyla nickade. \"Ja.\"\n\n\"Bra. Vi behöver fler backar. Du kan stå bredvid mig på uppvärmningen.\"\n\nDet var inte ovänligt, men det var heller inte ett varmt välkomnande. Leyla bytte om och försökte smälta in. När de gick ut i hallen kändes golvet halare än hon mindes, och klubban i hennes händer var lite för lätt.\n\nPå uppvärmningen märkte Leyla att hon inte förstod alla uttryck: \"pressa högt\", \"vänd upp\", \"ta ytan\". Hon gjorde sitt bästa, men ibland hamnade hon fel. Vid en passningsövning missade hon en boll som rullade rakt genom benen. Några skrattade, inte elakt, men det stack ändå.\n\nEfteråt, vid vattenflaskorna, kom någon fram. \"Jag heter Amir,\" sa en kille med svart pannband. \"Jag gjorde exakt samma sak första gången. Bollen rullade under klubban och alla trodde jag var blind.\"\n\nLeyla skrattade, lite förvånad över att det kom naturligt. \"Skönt att höra.\"\n\nAmir pekade på planen. \"Vill du att jag visar hur vi brukar stå? Det är bara ett mönster. När du fattar mönstret blir allt lättare.\"\n\nDe gick igenom positionerna. Amir förklarade utan att låta som en expert som skulle imponera. Han pratade som om det var självklart att Leyla kunde lära sig.\n\nNästa träning satt Leyla inte längst ut på bänken. Hon satte sig närmare de andra. När hon gjorde fel ryckte hon inte längre till av skam. Hon tänkte: \"Det är bara ett steg i att bli bättre.\"\n\nEn dag kom en viktig träningsmatch. Leyla fick spela back. I början var hon nervös och tog för många små steg. Men så såg hon en chans: en motståndare tappade bollen vid sargen. Leyla tog den, tittade upp och såg Maja på mitten. Hon slog en passning som satt perfekt.\n\nMaja gjorde mål. Efter målet sprang Maja fram och dunkade Leyla lätt på axeln. \"Snyggt spelat,\" sa hon, och den här gången var det ett riktigt leende.\n\nEfter matchen satt Leyla och Amir kvar i omklädningsrummet medan de andra duschade. Leyla kände sig trött på ett bra sätt.\n\n\"Det där med att flytta,\" sa Amir plötsligt, \"det är jobbigt. Jag flyttade i fyran. Jag var tyst i flera månader.\"\n\nLeyla tittade på honom. \"Hur blev det bättre?\"\n\nAmir ryckte på axlarna. \"En person frågade om jag ville sitta bredvid. Det var allt. Sen vågade jag fråga någon annan.\"\n\nLeyla tänkte på det. Kanske var vänskap ofta så: små handlingar som öppnar dörrar. Inte stora tal, utan en fråga, en förklaring, en plats vid bänken.\n\nNär Leyla gick hem den dagen var hallen fortfarande stor och högljudd, men den kändes inte längre som en isvak. Den kändes som en plats där hon kunde få fäste, steg för steg, med ett lag runt sig.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken sport spelar skolans lag som Leyla börjar i?",
+        "options": [
+          "Fotboll",
+          "Innebandy",
+          "Handboll",
+          "Basket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter eleven som erbjuder sig att visa Leyla positionerna?",
+        "options": [
+          "Maja",
+          "Amir",
+          "Noor",
+          "Kenji"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer efter att Leyla slår en passning till Maja i matchen?",
+        "options": [
+          "Maja gör mål",
+          "Bollen går ut",
+          "Leyla blir utbytt",
+          "Matchen avbryts"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känns det först som att Leyla kliver in i en isvak?",
+        "options": [
+          "För att hallen är kall",
+          "För att allt redan är nytt och hon känner sig utanför",
+          "För att hon gillar att simma",
+          "För att golvet är blött"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför hjälper Amirs sätt att förklara Leyla att bli tryggare?",
+        "options": [
+          "För att han skrattar åt henne",
+          "För att han förklarar som om det är självklart att hon kan lära sig",
+          "För att han säger åt henne att sluta",
+          "För att han ignorerar henne"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket budskap om vänskap visar berättelsen tydligast?",
+        "options": [
+          "Att vänskap alltid börjar med en present",
+          "Att små handlingar kan göra stor skillnad för att någon ska känna sig inkluderad",
+          "Att man måste vara bäst för att få vänner",
+          "Att man inte ska byta skola"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-miljo-02",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Plast i havet",
+    "text": "Plast är ett material som finns nästan överallt i vår vardag. Det är lätt, billigt och kan formas på många sätt. Vi använder plast i förpackningar, kläder, leksaker, elektronik och mycket annat. Problemet är att plast ofta används en kort stund men kan finnas kvar i naturen i väldigt lång tid. När plast hamnar i havet påverkar det både djur, människor och hela ekosystem.\n\nHur hamnar plast i havet? En del kommer från skräp som slängs direkt i naturen och sedan blåser eller sköljs ner i vattendrag. Plastpåsar, flaskor och godispapper kan följa med regnvatten ner i diken, bäckar och floder. Till slut kan allt hamna i havet. En annan del kommer från fiske och sjöfart. Förlorade nät och linor kan driva runt som så kallade spöknät och fortsätta fånga fisk och andra djur.\n\nDet finns också plast som vi inte alltid ser. När vi tvättar kläder av fleece eller andra syntetmaterial kan små plastfibrer lossna. Dessa mikroplaster kan följa med avloppsvattnet. Reningsverk tar bort en del, men inte allt. Mikroplast kan också komma från däckslitage när bilar kör.\n\nVarför är plast i havet farligt? Många djur kan fastna i plast eller missta den för mat. En sköldpadda kan tro att en plastpåse är en manet. En fågel kan äta plastbitar och få ont i magen, eller känna sig mätt utan att få näring. Mikroplast kan tas upp av små djur som sedan äts av större djur.\n\nVad kan vi göra? För det första kan vi minska engångsplast. Att använda en flergångsflaska och en matlåda kan göra stor skillnad över tid. För det andra kan vi sortera plast så att mer kan återvinnas. Vi kan också delta i strandstädningar eller plocka skräp längs en sjö. Det är en konkret handling som både hjälper naturen och gör problemet synligt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas förlorade nät som kan fortsätta fånga djur i havet?",
+        "options": [
+          "Spöknät",
+          "Solnät",
+          "Vägnät",
+          "Sjögräs"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var kan mikroplast komma ifrån enligt texten?",
+        "options": [
+          "Vulkaner",
+          "Tvätt av syntetkläder",
+          "Berg",
+          "Trädens löv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan en sköldpadda missta en plastpåse för?",
+        "options": [
+          "En sten",
+          "En manet",
+          "En fisk",
+          "En alg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför räcker det inte att plast bryts sönder i havet?",
+        "options": [
+          "För att den blir osynlig men borta",
+          "För att den fortfarande finns kvar som mindre bitar och kan spridas i näringskedjan",
+          "För att havet blir varmare",
+          "För att fiskar gillar plast"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan en fågel bli sjuk av att äta plast?",
+        "options": [
+          "För att plast ger näring",
+          "För att den kan känna sig mätt utan att få näring och få ont i magen",
+          "För att den flyger snabbare",
+          "För att den börjar sjunga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken huvudidé vill texten att läsaren ska ta med sig?",
+        "options": [
+          "Att plast alltid är dåligt och ska förbjudas helt direkt",
+          "Att problemet är stort men att många små val tillsammans kan göra skillnad",
+          "Att strandstädning är onödigt",
+          "Att mikroplast bara finns i sand"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-historia-03",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "historia",
+    "title": "Hur en stad växer",
+    "text": "Många städer började som små platser där människor möttes för att byta varor, dela nyheter och resa vidare. En stad uppstår sällan från ingenting. Ofta finns det en anledning till att människor samlas just där: en hamn vid havet, en bro över en flod, en plats där vägar korsas eller mark som är bra att odla.\n\nFörr i tiden var marknader viktiga eftersom människor inte kunde köpa allt i en butik. En bonde kunde byta säd mot salt. En hantverkare kunde sälja skor eller verktyg. Marknaden var också en plats där man fick information.\n\nNär en plats växte behövde man ordning. I Sverige fanns städer som fick stadsrättigheter. Det betydde att staden fick särskilda regler och ibland rätten att hålla marknad.\n\nMed tiden förändrades städers utseende. I äldre städer kan man ofta se att gatorna är smala och krokiga. Det beror på att man byggde där det fanns plats, utan att planera allt från början. Husen kunde ligga tätt, och bränder kunde sprida sig snabbt.\n\nNär industrialiseringen kom på 1800-talet växte många städer snabbt. Fabriker behövde arbetare, och arbetare behövde bostäder. Då byggdes ofta stora kvarter.\n\nI modern tid fortsätter städer att förändras. Nya bostäder byggs, kollektivtrafik planeras och parker skapas för att människor ska må bra. Man försöker också tänka mer på hållbarhet.\n\nNär du går i en stad kan du tänka på den som ett lager på lager av historia. En gammal kyrka kan stå nära ett nytt köpcentrum. En smal gata kan leda till en modern bro. Städer bär spår av människors behov, idéer och konflikter.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför samlades människor på platser där städer växte fram?",
+        "options": [
+          "För att det alltid snöar där",
+          "En hamn vid havet",
+          "För att marken är av glas",
+          "För att det finns fler moln"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var marknader viktiga för förr?",
+        "options": [
+          "För att köpa mobiltelefoner",
+          "För att byta varor och få information",
+          "För att spela datorspel",
+          "För att träna idrott"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken period nämns som en tid då många städer växte snabbt?",
+        "options": [
+          "Stenåldern",
+          "1800-talet (industrialiseringen)",
+          "Framtiden",
+          "Medeltiden utan förändring"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är gatorna i äldre städer ofta smala och krokiga?",
+        "options": [
+          "För att bilar behöver mindre plats",
+          "För att man byggde där det fanns plats utan att planera allt",
+          "För att man ville göra folk förvirrade",
+          "För att det var förbjudet att bygga rakt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kunde bränder sprida sig snabbt i äldre städer?",
+        "options": [
+          "För att husen låg tätt och byggmaterial kunde brinna lätt",
+          "För att det fanns för många parker",
+          "För att det alltid blåste orkan",
+          "För att det inte fanns vatten alls"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menas med att en stad är lager på lager av historia?",
+        "options": [
+          "Att staden är byggd av kakor",
+          "Att gamla och nya byggnader finns sida vid sida och visar olika tider",
+          "Att allt i en stad är gammalt",
+          "Att man kan ta bort historien med en spade"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-vetenskap-04",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "Mysteriet med den svarta snön",
+    "text": "Det började som ett skämt. När Noor kom till skolan en morgon i januari pekade hon på snön vid cykelstället och sa: \"Kolla, någon har spillt cola på vintern.\"\n\nSnön var inte vit där. Den var gråsvart, som om någon strött aska över den. Samir böjde sig ner och petade med en pinne. \"Det luktar inte cola,\" sa han. \"Det luktar ingenting.\"\n\nDeras NO-lärare, Karin, hörde dem prata och kom fram. \"Ni har upptäckt något som kan bli en undersökning,\" sa hon. \"Vad tror ni att det är?\"\n\nNoor tänkte högt: \"Kanske jord som blåst dit.\"\n\nSamir sa: \"Eller avgaser från bilar.\"\n\nBakom dem stod Jun och lyssnade. \"Eller sand,\" sa Jun. \"De sandar ju när det är halt.\"\n\nKarin log. \"Bra hypoteser. Om vi vill veta mer måste vi samla data.\"\n\nDe fick låna små burkar och en skopa. De tog tre prover: ett från den svarta snön vid cykelstället, ett från vit snö på gräsmattan och ett från snö nära vägen.\n\nI klassrummet fick de låta snön smälta i burkarna. Vattnet från den vita snön var nästan klart. Vattnet från cykelstället var grumligt, och på botten låg små mörka korn.\n\nDe hällde smältvattnet genom kaffefilter. I filtret från cykelstället fastnade mycket mörkt.\n\nNoor kom på en ny idé. \"Kan vi testa med magnet?\"\n\nKarin hämtade en liten magnet. När Noor höll den under filtret rörde sig några små korn. \"Vad betyder det?\" frågade Samir.\n\n\"Att det finns något som kan vara metallpartiklar,\" sa Karin. \"Det kan komma från slitage, till exempel från bromsar eller dubbdäck.\"\n\nNär de skulle skriva sin rapport kände Noor att hon plötsligt förstod NO på ett nytt sätt. Det handlade inte om att ha rätt direkt. Det handlade om att ställa en fråga, testa idéer och vara noggrann.\n\nPå vägen hem såg Noor en annan fläck av grå snö vid busshållplatsen. Den såg inte längre ut som cola. Den såg ut som en ledtråd.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittar Noor och Samir den gråsvarta snön?",
+        "options": [
+          "I matsalen",
+          "Vid cykelstället",
+          "I klassrummet",
+          "På idrottsplanen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket verktyg använder de för att fånga upp smutsen?",
+        "options": [
+          "Sax",
+          "Kaffefilter",
+          "Kompass",
+          "Linjal"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när Noor håller en magnet under filtret?",
+        "options": [
+          "Allt i filtret flyger iväg",
+          "Några små korn rör sig mot magneten",
+          "Filtret blir vitt",
+          "Vattnet fryser igen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tar de prover från flera olika platser?",
+        "options": [
+          "För att få fler burkar",
+          "För att kunna jämföra och se skillnader mellan ren och smutsig snö",
+          "För att snö alltid ser likadan ut",
+          "För att läraren vill ha fler läxor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Karin att de ska skriva vad data tyder på?",
+        "options": [
+          "För att data aldrig betyder något",
+          "För att deras undersökning gäller deras prover och kan ha begränsningar",
+          "För att NO är en gissningslek",
+          "För att rapporter inte får ha slutsatser"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad förändras i Noors sätt att se på NO?",
+        "options": [
+          "Hon tycker NO är tråkigare",
+          "Hon förstår att NO handlar om att undersöka noggrant, inte bara ha rätt direkt",
+          "Hon tycker att snö alltid är smutsig",
+          "Hon vill aldrig testa något igen"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-musik-05",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Varför en låt fastnar i huvudet",
+    "text": "Har du någon gång fått en låt på hjärnan, så att en liten bit av melodin spelas om och om igen även när du inte vill? Många har upplevt det. Fenomenet kallas ibland öronmask (på engelska earworm). Det betyder inte att det finns en riktig mask i örat, utan att hjärnan verkar fortsätta spela musik som om den hade tryckt på repeat.\n\nForskare tror att öronmaskar ofta uppstår när en låt har ett tydligt mönster som är lätt att minnas. Det kan vara en enkel melodi med små hopp mellan tonerna, en stark rytm eller en refräng som upprepas. Hjärnan gillar mönster. När den känner igen något kan den försöka förutsäga vad som kommer härnäst.\n\nEn annan orsak är att vi ofta hör musik i delar. Du kanske hör en låt i en reklam, på TikTok eller i en butik, men bara en kort bit. Om hjärnan inte får hela låten kan den försöka fylla i resten själv. Då kan en liten del fastna.\n\nKänslor spelar också roll. Om du hör en låt när du är glad, nervös eller spänd kan den kopplas till den känslan. Hjärnan är bra på att komma ihåg saker som har betydelse.\n\nDet kan också handla om uppmärksamhet. När du är trött eller gör något som inte kräver så mycket tankekraft, som att diska eller gå hem från skolan, kan hjärnan börja vandra. Då kan musik dyka upp lättare.\n\nOm du vill bli av med en öronmask finns det några strategier. En del människor tycker att det hjälper att lyssna klart på hela låten, så att hjärnan får ett avslut. Andra tycker att det hjälper att sätta på en annan låt eller göra en aktivitet som kräver fokus.\n\nDet är också vanligt att öronmaskar försvinner av sig själva. De kan vara irriterande, men de är oftast ofarliga. Faktum är att öronmaskar kan säga något fint om hjärnan: den är en maskin som letar mönster, minns melodier och kopplar dem till livet du lever.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas fenomenet när en låt fastnar i huvudet?",
+        "options": [
+          "Eko",
+          "Öronmask",
+          "Stämband",
+          "Rimspel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad i en låt kan göra den lätt att minnas?",
+        "options": [
+          "Ett tydligt mönster som en upprepad refräng",
+          "Att den saknar rytm",
+          "Att den bara är tyst",
+          "Att den inte har tonhöjd"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan hjälpa att bli av med en öronmask?",
+        "options": [
+          "Aldrig lyssna på musik",
+          "Lyssna klart på hela låten",
+          "Skrika högt",
+          "Stänga av ljuset"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan en kort bit från en reklam fastna extra lätt?",
+        "options": [
+          "För att hjärnan får hela låten direkt",
+          "För att hjärnan kan försöka fylla i resten när den bara hört en del",
+          "För att öronmaskar bara händer i butiker",
+          "För att musik inte har mönster"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan en öronmask dyka upp lättare när du gör något enkelt?",
+        "options": [
+          "För att hjärnan aldrig tänker då",
+          "För att hjärnan kan vandra när uppgiften inte kräver mycket fokus",
+          "För att benen skapar musik",
+          "För att man alltid sjunger i hemlighet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten säga om hjärnan och musik?",
+        "options": [
+          "Att hjärnan är svag",
+          "Att hjärnan letar mönster och att musik kan påverka oss länge",
+          "Att musik alltid är farlig",
+          "Att öronmaskar betyder att man är sjuk"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
