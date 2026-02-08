@@ -12,6 +12,14 @@ const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; categ
   inferens: { label: 'Mellan raderna', emoji: '🧠', category: 'Mellan raderna' },
 };
 
+type TextSize = 'small' | 'medium' | 'large';
+
+const textSizeClasses: Record<TextSize, string> = {
+  small: 'text-sm',
+  medium: 'text-base',
+  large: 'text-lg'
+};
+
 export const QuizView: React.FC<QuizViewProps> = ({
   text,
   onComplete,
@@ -19,6 +27,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [answers, setAnswers] = useState<UserAnswers>({});
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showText, setShowText] = useState(true);
+  const [textSize, setTextSize] = useState<TextSize>('medium');
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -84,19 +93,55 @@ export const QuizView: React.FC<QuizViewProps> = ({
           {/* Left: Text Content */}
           <div className={`${showText ? 'block' : 'hidden lg:block'}`}>
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 lg:p-8 h-fit lg:sticky lg:top-4">
-              <div className="flex items-center justify-between mb-4 lg:hidden">
+              <div className="flex items-center justify-between mb-4">
                 <h3 className="font-bold text-slate-700 dark:text-slate-200">Texten</h3>
-                <button
-                  onClick={() => setShowText(false)}
-                  className="text-sm text-indigo-600 dark:text-indigo-400 font-medium"
-                >
-                  Visa frågor →
-                </button>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Storlek:</span>
+                  <button
+                    onClick={() => setTextSize('small')}
+                    className={`w-6 h-6 rounded font-bold text-xs transition-all ${
+                      textSize === 'small'
+                        ? 'bg-indigo-600 text-white'
+                        : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
+                    }`}
+                    title="Liten text"
+                  >
+                    A
+                  </button>
+                  <button
+                    onClick={() => setTextSize('medium')}
+                    className={`w-6 h-6 rounded font-bold text-sm transition-all ${
+                      textSize === 'medium'
+                        ? 'bg-indigo-600 text-white'
+                        : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
+                    }`}
+                    title="Medium text"
+                  >
+                    A
+                  </button>
+                  <button
+                    onClick={() => setTextSize('large')}
+                    className={`w-6 h-6 rounded font-bold text-base transition-all ${
+                      textSize === 'large'
+                        ? 'bg-indigo-600 text-white'
+                        : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
+                    }`}
+                    title="Stor text"
+                  >
+                    A
+                  </button>
+                  <button
+                    onClick={() => setShowText(false)}
+                    className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
+                  >
+                    Visa frågor →
+                  </button>
+                </div>
               </div>
               <div className="prose prose-lg max-w-none dark:prose-invert">
                 <div className="space-y-4">
                   {paragraphs.map((para, idx) => (
-                    <p key={idx} className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
+                    <p key={idx} className={`leading-relaxed text-slate-700 dark:text-slate-300 ${textSizeClasses[textSize]}`}>
                       {para}
                     </p>
                   ))}
