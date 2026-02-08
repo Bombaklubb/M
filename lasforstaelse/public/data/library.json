@@ -8774,5 +8774,765 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak1-vanskap-01",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Plats i kön",
+    "text": "På morgonen stod barnen i kö till matsalen. Lina såg att Yusuf kom sist och såg osäker ut. Några barn trängdes och pratade högt. Lina flyttade lite på sig och sa: \"Du kan stå här bredvid mig.\" Yusuf log försiktigt. När de gick in tappade Yusuf sin gaffel. Lina plockade upp den och räckte över. \"Tack,\" sa Yusuf. Efter maten frågade Yusuf om Lina ville leka kull. Lina nickade. Det kändes bra att hjälpa.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var står barnen i kö?",
+        "options": [
+          "Till matsalen",
+          "Till bussen",
+          "Till skogen",
+          "Till biblioteket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad tappar Yusuf?",
+        "options": [
+          "En mössa",
+          "En gaffel",
+          "En bok",
+          "En boll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad vill Yusuf leka efter maten?",
+        "options": [
+          "Kull",
+          "Schack",
+          "Läsa",
+          "Sova"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Lina att Yusuf kan stå bredvid henne?",
+        "options": [
+          "För att vara snäll",
+          "För att vinna",
+          "För att gå hem",
+          "För att skrika"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Yusuf när Lina hjälper honom?",
+        "options": [
+          "Glad",
+          "Arg",
+          "Sömnig",
+          "Hungrig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar berättelsen om vänskap?",
+        "options": [
+          "Att hjälpa gör skillnad",
+          "Att alltid vara först",
+          "Att aldrig dela",
+          "Att leka ensam"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-natur-02",
+    "grade": 1,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Ett frö blir en blomma",
+    "text": "Ett frö kan vara litet som en smula. Inuti fröet finns en ny liten växt. När fröet får vatten vaknar det. Om fröet också får värme och ljus kan det börja växa. Först kommer en liten rot som söker sig ner i jorden. Sedan kommer en liten stjälk uppåt. Efter ett tag får växten blad. Bladen hjälper växten att få energi från solen. Till slut kan växten få en blomma.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad behöver ett frö för att vakna?",
+        "options": [
+          "Vatten",
+          "Glass",
+          "Sand",
+          "Stenar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kommer först när fröet börjar växa?",
+        "options": [
+          "En blomma",
+          "En rot",
+          "En frukt",
+          "En pinne"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hjälper växten att få energi från solen?",
+        "options": [
+          "Bladen",
+          "Skorna",
+          "Stenen",
+          "Vattnet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför växer roten ner i jorden?",
+        "options": [
+          "För att hitta vatten och hålla fast",
+          "För att flyga",
+          "För att leka",
+          "För att sjunga"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behöver fröet ljus när det växer?",
+        "options": [
+          "För att växten ska kunna få energi",
+          "För att jorden blir blå",
+          "För att vattnet försvinner",
+          "För att fröet blir stort direkt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan hända när växten vuxit ett tag?",
+        "options": [
+          "Den kan få en blomma",
+          "Den blir en sten",
+          "Den blir en bil",
+          "Den försvinner"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-teknik-03",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "teknik",
+    "title": "Lampan som lyste",
+    "text": "På fritids byggde Mei och Carlos en liten ficklampa av ett kit. De hade ett batteri, en lampa och två sladdar. Först hände inget när de tryckte på knappen. Carlos såg besviken ut. Mei tittade noga och sa: \"Sladden sitter löst.\" Hon tryckte fast den. Då lyste lampan direkt. \"Wow!\" sa Carlos. De turades om att lysa på väggen och göra skuggor med händerna. Mei sa: \"Teknik är att testa och fixa.\" Carlos nickade och log stort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bygger Mei och Carlos?",
+        "options": [
+          "En ficklampa",
+          "En cykel",
+          "En kaka",
+          "En bok"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var fel först?",
+        "options": [
+          "Batteriet var borta",
+          "En sladd satt löst",
+          "Lampan var blå",
+          "Knappen var trasig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de på väggen när lampan lyser?",
+        "options": [
+          "Ritar",
+          "Gör skuggor med händerna",
+          "Skriver prov",
+          "Sover"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Carlos besviken?",
+        "options": [
+          "För att lampan inte lyser först",
+          "För att han är hungrig",
+          "För att han vill gå hem",
+          "För att Mei springer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur löser Mei problemet?",
+        "options": [
+          "Hon tittar noga och sätter fast sladden",
+          "Hon kastar allt",
+          "Hon ropar högt",
+          "Hon gömmer batteriet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär de sig om teknik?",
+        "options": [
+          "Att man testar och fixar",
+          "Att man alltid ger upp",
+          "Att lampor är magi",
+          "Att sladdar är farliga alltid"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-musik-04",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "musik",
+    "title": "Trumma i magen",
+    "text": "På musiklektionen fick alla prova trummor. Farah höll trumpinnarna hårt och slog för fort. Det lät rörigt och hon blev varm i ansiktet. Läraren sa: \"Känn pulsen.\" De klappade: ett, två, ett, två. Farah provade igen och slog långsammare. Nu lät det som en riktig rytm. Bredvid henne spelade Kenji samma puls. De log mot varandra. När de slutade kände Farah trumman som ett hjärtslag i magen. Hon ville spela mer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad får barnen prova på musiklektionen?",
+        "options": [
+          "Trummor",
+          "Cyklar",
+          "Böcker",
+          "Skor"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger läraren att de ska känna?",
+        "options": [
+          "Kylan",
+          "Pulsen",
+          "Sand",
+          "Regn"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem spelar samma puls bredvid Farah?",
+        "options": [
+          "Kenji",
+          "Lina",
+          "Yusuf",
+          "Nora"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Farah varm i ansiktet i början?",
+        "options": [
+          "För att det lät rörigt och hon blev osäker",
+          "För att hon sprang",
+          "För att hon åt soppa",
+          "För att lampan var stark"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför låter det bättre när Farah spelar långsammare?",
+        "options": [
+          "För att hon följer pulsen",
+          "För att trumman blir större",
+          "För att hon stänger ögonen",
+          "För att alla är tysta"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner Farah sig i slutet?",
+        "options": [
+          "Stolt och sugen på att spela mer",
+          "Arg och trött",
+          "Rädd och kall",
+          "Ledsen och ensam"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-miljo-05",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "miljö",
+    "title": "Pappret i fel låda",
+    "text": "Efter pysslet skulle klassen städa. Det fanns tre lådor: papper, plast och rest. Mateo såg en kompis kasta papper i plastlådan. Mateo blev osäker. Skulle han säga något? Han gick fram och viskade: \"Papper ska dit.\" Han pekade på papperslådan. Kompisen, Aisha, tittade och sa: \"Oj, jag glömde.\" Hon flyttade pappret rätt. Läraren hörde och sa: \"Bra att ni hjälps åt.\" Mateo kände sig modig. Små saker kan hålla klassrummet rent.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många lådor finns det?",
+        "options": [
+          "Två",
+          "Tre",
+          "Fyra",
+          "En"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska pappret läggas i?",
+        "options": [
+          "Plastlådan",
+          "Papperslådan",
+          "Restlådan",
+          "Ryggsäcken"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Aisha när hon ser felet?",
+        "options": [
+          "Oj, jag glömde",
+          "Det var rätt",
+          "Jag springer",
+          "Jag vill hem"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är Mateo osäker först?",
+        "options": [
+          "Han undrar om han ska säga till kompisen",
+          "Han kan inte se lådorna",
+          "Han har ingen penna",
+          "Han är hungrig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför viskar Mateo istället för att ropa?",
+        "options": [
+          "För att vara snäll och inte skämma någon",
+          "För att han är sjuk",
+          "För att lådorna är borta",
+          "För att läraren är arg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen visa?",
+        "options": [
+          "Att små hjälp kan göra skillnad",
+          "Att man ska slänga allt",
+          "Att plast är bäst",
+          "Att man aldrig ska säga till"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-sport-06",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Ett nytt hopp",
+    "text": "På idrotten skulle de hoppa längdhopp i sanden. Amir stod sist och tittade på spåren. Han tänkte att alla var bättre. När det blev hans tur sprang han långsamt och hoppade kort. Han såg ner. Då kom Sofia fram och sa: \"Prova att ta tre snabba steg på slutet.\" Amir nickade. Nästa gång sprang han snabbare, tog tre steg och hoppade längre. Sanden sprätte. Amir log och gjorde en tumme upp. Han kände att träning kan ändra allt lite i taget.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken idrott gör de?",
+        "options": [
+          "Längdhopp",
+          "Simning",
+          "Skridskor",
+          "Cykel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad tipsar Sofia Amir om?",
+        "options": [
+          "Att sitta ner",
+          "Tre snabba steg på slutet",
+          "Att gå hem",
+          "Att ropa högt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när Amir hoppar längre?",
+        "options": [
+          "Sanden sprätter",
+          "Bollen försvinner",
+          "Det börjar regna",
+          "Läraren går ut"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför hoppar Amir kort första gången?",
+        "options": [
+          "Han är osäker och springer långsamt",
+          "Han gillar inte sand",
+          "Han har inga skor",
+          "Han vill fuska"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Amir glad i slutet?",
+        "options": [
+          "Han märker att han kan bli bättre",
+          "Han slipper idrott",
+          "Han får glass",
+          "Han blir arg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen lära?",
+        "options": [
+          "Att tips och träning kan hjälpa",
+          "Att man ska ge upp",
+          "Att bara de bästa får hoppa",
+          "Att sand är farligt"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-samhalle-07",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Hjälparen på övergångsstället",
+    "text": "Efter skolan gick Jun och Sara hem tillsammans. Vid vägen stod en vuxen med gul väst och en stoppskylt. \"Det är en trafikvakt,\" sa Sara. Trafikvakten höll upp handen så bilarna stannade. Jun och Sara gick över övergångsstället. Jun vinkade. Trafikvakten vinkade tillbaka och log. På andra sidan sa Jun: \"Det kändes tryggt.\" Sara nickade. \"Vuxna hjälper oss att vara säkra.\" De fortsatte hem och pratade om vilka fler som hjälper i samhället, som brandkår och bibliotek.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har trafikvakten på sig?",
+        "options": [
+          "En gul väst",
+          "En röd klänning",
+          "En blå hjälm",
+          "En grön mössa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad håller trafikvakten i?",
+        "options": [
+          "En bok",
+          "En stoppskylt",
+          "En boll",
+          "En blomma"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var går Jun och Sara över?",
+        "options": [
+          "En bro",
+          "Ett övergångsställe",
+          "En tunnel",
+          "En skogsstig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känner Jun att det är tryggt?",
+        "options": [
+          "Bilarna stannar när trafikvakten hjälper",
+          "Han får en leksak",
+          "Det är ingen väg",
+          "Det är natt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vinkar Jun till trafikvakten?",
+        "options": [
+          "För att säga tack",
+          "För att reta",
+          "För att bli arg",
+          "För att stoppa bilar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen visa om samhället?",
+        "options": [
+          "Att vuxna kan hjälpa oss vara säkra",
+          "Att vägar är tomma",
+          "Att man alltid går ensam",
+          "Att stoppskyltar är leksaker"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-historia-08",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Farmors gamla leksak",
+    "text": "En lördag var Nils hemma hos farmor Farida. Farmor öppnade en låda och tog fram en liten trähäst. \"Den här lekte jag med när jag var liten,\" sa farmor. Nils kände på hästen. Den var sliten men fin. \"Hade ni inga spel?\" frågade Nils. Farmor skrattade. \"Vi lekte ute, och vi hade enkla leksaker.\" Nils fick låna trähästen en stund. Han byggde en stall av klossar. Farmor log och sa: \"Lek är samma, även när tiden ändras.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad tar farmor fram ur lådan?",
+        "options": [
+          "En trähäst",
+          "En mobil",
+          "En cykel",
+          "En katt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter farmor?",
+        "options": [
+          "Farida",
+          "Sofia",
+          "Mei",
+          "Lina"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad bygger Nils av klossar?",
+        "options": [
+          "En stall",
+          "En båt",
+          "En raket",
+          "En skola"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är trähästen sliten?",
+        "options": [
+          "För att farmor lekte mycket med den förr",
+          "För att den är ny",
+          "För att den är av plast",
+          "För att den är våt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner farmor när Nils leker med hästen?",
+        "options": [
+          "Glad",
+          "Arg",
+          "Rädd",
+          "Trött"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar farmor med att lek är samma även när tiden ändras?",
+        "options": [
+          "Att barn fortfarande gillar att leka",
+          "Att alla leker med mobiler",
+          "Att leksaker inte finns",
+          "Att man aldrig skrattar"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-vetenskap-09",
+    "grade": 1,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Skugga och sol",
+    "text": "En skugga blir till när något stoppar ljuset. Om solen lyser på dig och du står framför en vägg, kan din skugga synas på väggen. Skuggan är mörkare än marken runt omkring, för där kommer mindre ljus fram. Skuggor kan bli långa eller korta. När solen står lågt, på morgonen eller kvällen, blir skuggan lång. När solen står högt mitt på dagen blir skuggan kortare. Du kan testa genom att gå ut och titta på din skugga.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När blir en skugga till?",
+        "options": [
+          "När något stoppar ljuset",
+          "När det regnar",
+          "När man sover",
+          "När man sjunger"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "När blir skuggan lång enligt texten?",
+        "options": [
+          "När solen står lågt",
+          "När solen står högt",
+          "När det är natt",
+          "När det snöar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "När blir skuggan kortare?",
+        "options": [
+          "Mitt på dagen när solen står högt",
+          "När man är hungrig",
+          "När man springer",
+          "När man viskar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är skuggan mörkare än marken runt omkring?",
+        "options": [
+          "För att mindre ljus kommer fram",
+          "För att skuggan är målad",
+          "För att solen slocknar",
+          "För att marken försvinner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan skuggan ändra längd under dagen?",
+        "options": [
+          "För att solen står på olika höjd",
+          "För att skuggan springer",
+          "För att vinden blåser",
+          "För att man blir kortare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan du göra för att undersöka skuggor?",
+        "options": [
+          "Titta på din skugga ute",
+          "Äta godis",
+          "Sova",
+          "Gömma solen"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-etik-10",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "etik",
+    "title": "Låna och lämna tillbaka",
+    "text": "På lektionen behövde Aya en grön penna. Hon hade bara blå. Bredvid satt Oskar med många pennor. \"Får jag låna en grön?\" frågade Aya. Oskar räckte fram en penna. Aya ritade ett träd och ett gräsfält. När lektionen var slut stoppade Aya pennan i sitt fodral. Då stannade hon. Hon mindes att den var lånad. Aya vände sig om och sa: \"Tack, här är din penna.\" Oskar log. Aya kände sig stolt. Det känns bra att göra rätt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken färg behöver Aya?",
+        "options": [
+          "Grön",
+          "Röd",
+          "Svart",
+          "Gul"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem lånar Aya pennan av?",
+        "options": [
+          "Oskar",
+          "Yusuf",
+          "Farah",
+          "Nils"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ritar Aya?",
+        "options": [
+          "Ett träd och ett gräsfält",
+          "En bil",
+          "En fisk",
+          "En snögubbe"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför stannar Aya när hon ska stoppa pennan i sitt fodral?",
+        "options": [
+          "Hon kommer ihåg att den är lånad",
+          "Hon blir arg",
+          "Hon tappar boken",
+          "Hon vill gå hem"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Oskar när Aya lämnar tillbaka pennan?",
+        "options": [
+          "Glad",
+          "Rädd",
+          "Sömnig",
+          "Hungrig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen lära?",
+        "options": [
+          "Att lämna tillbaka när man lånar",
+          "Att gömma pennor",
+          "Att aldrig fråga",
+          "Att rita är fel"
+        ],
+        "correct": 0
+      }
+    ]
   }
 ]
