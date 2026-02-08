@@ -9914,5 +9914,425 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak4-vanskap-01",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den delade bänken",
+    "text": "På rasten brukade Amina sitta på bänken vid klätterställningen och äta sitt äpple. Hon gillade att titta på när andra lekte, men ibland önskade hon att någon skulle fråga om hon ville vara med. Den här dagen kom Hugo springande med ett hopprep som var trasslat i en knut. Han såg irriterad ut och satte sig tungt på bänken.\n\nAmina tittade på repet. \"Vill du ha hjälp?\" frågade hon.\n\nHugo suckade. \"Det går aldrig.\"\n\nAmina tog försiktigt repet och började lossa knuten, långsamt, som när man öppnar en svår påse utan att riva sönder den. Hugo tittade först bort, men efter en stund lutade han sig närmare.\n\n\"Du gör ju rätt,\" sa han.\n\n\"Man måste hitta var knuten börjar,\" sa Amina.\n\nNär knuten till slut släppte log Hugo stort. \"Tack! Vill du hoppa med mig?\"\n\nAmina kände sig varm i bröstet. De gick till asfalten och turades om att snurra och hoppa. Snart kom fler barn och frågade om de fick vara med. Bänken stod kvar, men Amina tänkte att den inte var lika ensam längre.",
+    "questions": [
+      {
+        "q": "Var brukar Amina sitta på rasten?",
+        "options": [
+          "Vid klätterställningen",
+          "I matsalen",
+          "I klassrummet",
+          "Vid bussen"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad har Hugo med sig som är trasslat?",
+        "options": [
+          "En boll",
+          "Ett hopprep",
+          "En jacka",
+          "En bok"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad gör Amina när knuten släpper?",
+        "options": [
+          "Går hem",
+          "Hoppar hopprep med Hugo",
+          "Gömmer repet",
+          "Börjar rita"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför känner Amina sig varm i bröstet när Hugo frågar om hon vill hoppa?",
+        "options": [
+          "Hon blir för varm av solen",
+          "Hon blir glad för att bli inbjuden",
+          "Hon är rädd",
+          "Hon är arg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför säger Hugo först att det \"aldrig\" går att lösa knuten?",
+        "options": [
+          "Han vill inte ha repet",
+          "Han är frustrerad och har försökt",
+          "Han kan inte se knuten",
+          "Han skojar bara"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar berättelsen om vänskap?",
+        "options": [
+          "Att man alltid ska sitta ensam",
+          "Att små hjälp kan leda till lek tillsammans",
+          "Att knutar är farliga",
+          "Att man måste vara bäst"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-natur-02",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Hur en myra hittar hem",
+    "text": "En myra kan se liten ut, men den är en skicklig upptäckare. När en myra letar mat går den ofta iväg från stacken på slingriga vägar. Ändå hittar den hem igen. Hur går det till?\n\nMyrror använder doftspår. När en myra går kan den lämna en lukt på marken. Om myran hittar mat kan den gå tillbaka och förstärka spåret. Då kan andra myror följa samma väg. Ju fler som går där, desto tydligare blir doften.\n\nMyror kan också använda solen som hjälp. De kan känna var solen är och hålla riktningen. Dessutom kan de känna igen saker i omgivningen, som stenar, gräs och pinnar. Det blir som en karta i huvudet.\n\nOm någon råkar störa spåret, till exempel genom att trampa i gräset, kan myrorna bli förvirrade en stund. Men de kan ofta hitta ett nytt spår, eftersom de provar olika vägar och samarbetar. Därför är en myrstack så bra på att hitta mat och överleva.",
+    "questions": [
+      {
+        "q": "Vad lämnar myror på marken för att andra ska kunna följa?",
+        "options": [
+          "Ljud",
+          "Doftspår",
+          "Vatten",
+          "Sand"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken himlakropp kan myror använda för att hålla riktningen?",
+        "options": [
+          "Solen",
+          "Månen",
+          "Mars",
+          "Stjärnfall"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Nämn något i omgivningen som myror kan känna igen enligt texten.",
+        "options": [
+          "Stenar, gräs och pinnar",
+          "Bilar och bussar",
+          "TV och datorer",
+          "Höghus"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför blir spåret tydligare när fler myror går samma väg?",
+        "options": [
+          "För att de lämnar mer doft",
+          "För att marken blir blå",
+          "För att solen lyser mer",
+          "För att maten växer"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan myror bli förvirrade om någon trampar i gräset?",
+        "options": [
+          "För att doftspåret kan förstöras",
+          "För att myror inte kan gå",
+          "För att stacken flyttar",
+          "För att solen försvinner"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad visar texten om varför myror klarar sig bra?",
+        "options": [
+          "De samarbetar och testar nya vägar",
+          "De sover hela dagen",
+          "De flyger långt",
+          "De äter bara blad"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak4-teknik-03",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "teknik",
+    "title": "Robotens första steg",
+    "text": "På tekniklektionen fick klassen bygga en liten robot av klossar och en motor. Läraren sa att roboten skulle kunna rulla fram och stanna vid en linje. Kenji ville testa direkt, men Sara sa att de först behövde läsa instruktionen.\n\nDe byggde en kropp, satte dit hjul och kopplade en kabel till motorn. När de startade roboten hände inget. Kenji knackade på den. \"Den är död,\" muttrade han.\n\nSara tittade på kabeln. \"Den sitter inte i helt,\" sa hon och tryckte till den. Då började hjulen snurra, men roboten körde åt sidan och fastnade mot en stol.\n\n\"Vi behöver styra den,\" sa Sara.\n\nKenji fick en idé. \"Om vi sätter hjulen lika långt ut kanske den åker rakt.\" De flyttade hjulen och testade igen. Nu rullade roboten rakt mot linjen. När den nådde linjen stängde Sara av.\n\nKenji log. \"Okej, du hade rätt. Först bygga, sen testa.\" Sara skrattade. \"Och sen testa igen.\"",
+    "questions": [
+      {
+        "q": "Vad bygger klassen på tekniklektionen?",
+        "options": [
+          "En drake",
+          "En liten robot",
+          "En båt",
+          "En cykel"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför händer inget när de startar roboten först?",
+        "options": [
+          "Batteriet är i texten slut",
+          "Kabeln sitter inte i helt",
+          "Hjulen saknas",
+          "Robotens kropp är för stor"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad gör de för att roboten ska åka mer rakt?",
+        "options": [
+          "Målar den",
+          "Flyttar hjulen så de sitter lika",
+          "Tar bort motorn",
+          "Sätter på en skärm"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför vill Sara läsa instruktionen först?",
+        "options": [
+          "För att slippa bygga",
+          "För att bygga rätt och förstå delarna",
+          "För att robotar är farliga",
+          "För att Kenji pratar för mycket"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kör roboten åt sidan när hjulen sitter fel?",
+        "options": [
+          "För att motorn blir trött",
+          "För att den får obalans och styr åt ett håll",
+          "För att linjen drar den",
+          "För att stolen rör sig"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad lär sig Kenji av arbetet?",
+        "options": [
+          "Att man ska ge upp",
+          "Att testa och ändra hjälper när man bygger teknik",
+          "Att robotar alltid funkar direkt",
+          "Att instruktioner är onödiga"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-miljo-04",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Varför återvinning hjälper",
+    "text": "När du sorterar sopor gör du något viktigt för miljön. Återvinning betyder att material kan användas igen i stället för att slängas. Det sparar både energi och naturresurser.\n\nTänk på en burk av aluminium. För att göra ny aluminium behöver man ofta bryta malm i gruvor. Det kan påverka naturen. Men om man återvinner en burk kan man smälta ner metallen och göra nya burkar eller andra saker. Det kräver mycket mindre energi än att börja från början.\n\nPlast kan också återvinnas, men det är ibland svårare eftersom det finns många sorters plast. Därför är det bra att sortera rätt. Papper och kartong kan bli nytt papper, som till exempel toapapper eller kartonger.\n\nÅtervinning löser inte alla problem. Det bästa är att minska onödigt skräp. Men när vi både minskar och återvinner kan vi hjälpa jorden. Små val hemma och i skolan kan bli stor skillnad när många gör dem tillsammans.",
+    "questions": [
+      {
+        "q": "Vad betyder återvinning enligt texten?",
+        "options": [
+          "Att kasta allt",
+          "Att material kan användas igen",
+          "Att gömma sopor",
+          "Att bränna allt direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket material tar texten upp som exempel på något som sparar mycket energi att återvinna?",
+        "options": [
+          "Aluminium",
+          "Trä",
+          "Ull",
+          "Lera"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan plast vara svårare att återvinna?",
+        "options": [
+          "För att plast alltid är mjuk",
+          "För att det finns många sorters plast",
+          "För att plast är osynlig",
+          "För att plast kommer från vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför sparar återvinning naturresurser?",
+        "options": [
+          "För att man slipper ta nya råvaror från naturen",
+          "För att man får fler sopor",
+          "För att man bygger fler vägar",
+          "För att man gör allt tyngre"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför säger texten att det bästa är att minska onödigt skräp?",
+        "options": [
+          "För att återvinning aldrig fungerar",
+          "För att mindre skräp betyder mindre som måste tas om hand",
+          "För att sopor är roliga",
+          "För att man inte får sortera"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar texten med att små val kan bli stor skillnad?",
+        "options": [
+          "Att en person kan göra allt",
+          "Att många små handlingar tillsammans påverkar mycket",
+          "Att sopor blir större",
+          "Att återvinning bara är en lek"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-sport-05",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Målet som kom av en passning",
+    "text": "På fotbollsplanen blåste det kallt, men matchen var varm. Luan sprang på kanten och väntade på bollen. Han var snabb, men han vågade inte alltid dribbla. Ibland ropade några: \"Skjut!\" och då blev han stressad.\n\nI andra laget spelade Freja, som var bra på att läsa spelet. Hon såg att Luan ofta tittade ner på bollen. \"Om han tittar ner ser han inte passningen,\" tänkte hon.\n\nI Luans lag spelade Samira. Hon ropade: \"Här!\" och pekade dit hon ville ha bollen. Luan fick en passning. Han tog emot, tittade upp och såg Samira springa mot mål.\n\nHan kunde försöka skjuta själv, men han mindes att de hade tränat på att passa i rätt läge. Luan passade snabbt. Bollen rullade perfekt framför Samira. Hon sköt och gjorde mål.\n\nLuan hoppade till av glädje. \"Vi gjorde det!\" sa han.\n\nEfter matchen sa tränaren: \"Ett mål börjar ofta med en bra passning.\" Luan kände att han hade varit modig på sitt sätt.",
+    "questions": [
+      {
+        "q": "Vilken sport spelar de i berättelsen?",
+        "options": [
+          "Fotboll",
+          "Handboll",
+          "Basket",
+          "Simning"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vem gör målet?",
+        "options": [
+          "Luan",
+          "Samira",
+          "Freja",
+          "Tränaren"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad säger tränaren efter matchen?",
+        "options": [
+          "Att man aldrig ska passa",
+          "Att ett mål ofta börjar med en bra passning",
+          "Att vinden var för stark",
+          "Att domaren var fel"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför blir Luan stressad när någon ropar \"Skjut!\"?",
+        "options": [
+          "För att han inte vill vinna",
+          "För att han känner press och blir osäker",
+          "För att han inte hör",
+          "För att han är arg på Samira"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför tittar Luan upp innan han passar?",
+        "options": [
+          "För att se var lagkamraterna är",
+          "För att solen bländar",
+          "För att han tappat bollen",
+          "För att han vill stanna"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad visar berättelsen om mod i sport?",
+        "options": [
+          "Att mod bara är att skjuta själv",
+          "Att mod kan vara att passa när det är rätt och lita på laget",
+          "Att mod är att skrika högst",
+          "Att mod är att inte spela"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-musik-06",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Så gör rytm oss i takt",
+    "text": "Rytm är som ett osynligt hjärta i musik. När du klappar i händerna till en låt följer du rytmen. Rytm handlar om hur ljud kommer i ett mönster: snabbt eller långsamt, starkt eller svagt.\n\nEn puls är en jämn takt som går hela tiden. Många låtar har en tydlig puls. Om du räknar \"ett, två, tre, fyra\" i samma tempo följer du pulsen. Ovanpå pulsen kan man göra rytmer som varierar. Det kan vara korta slag, långa slag eller pauser.\n\nRytm hjälper grupper att göra saker tillsammans. I en trumgrupp kan alla spela samma puls och ändå låta spännande, eftersom vissa gör extra slag och andra gör pauser. I sport kan man också använda rytm, till exempel när man hoppar hopprep eller springer i jämn takt.\n\nNär du tränar rytm kan du börja med att klappa en enkel puls och sedan lägga till en rytm med fötterna. Då märker du hur kroppen kan bli som ett instrument.",
+    "questions": [
+      {
+        "q": "Vad handlar rytm om enligt texten?",
+        "options": [
+          "Färger",
+          "Hur ljud kommer i ett mönster",
+          "Hur högt man kan sjunga",
+          "Hur man skriver"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är en puls?",
+        "options": [
+          "En jämn takt som går hela tiden",
+          "En paus som varar länge",
+          "Ett instrument",
+          "En melodi"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket exempel nämns där rytm kan hjälpa i sport?",
+        "options": [
+          "Att rita",
+          "Hoppa hopprep eller springa i jämn takt",
+          "Att läsa",
+          "Att sova"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan en trumgrupp låta spännande även om alla följer samma puls?",
+        "options": [
+          "För att alla spelar olika instrument",
+          "För att vissa lägger till extra slag och andra pauser",
+          "För att pulsen försvinner",
+          "För att ingen lyssnar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan man börja med en enkel puls när man tränar rytm?",
+        "options": [
+          "För att det är en tydlig grund att bygga vidare på",
+          "För att rytm är oviktigt",
+          "För att man inte får klappa",
+          "För att pauser är förbjudna"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad menar texten med att kroppen kan bli som ett instrument?",
+        "options": [
+          "Att kroppen blir gjord av trä",
+          "Att man kan skapa rytm med händer och fötter",
+          "Att man behöver en gitarr",
+          "Att man inte kan röra sig"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
