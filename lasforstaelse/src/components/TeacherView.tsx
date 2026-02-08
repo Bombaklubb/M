@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getTeacherStats } from '../services/userService';
+import { getTeacherStatsAsync } from '../services/userService';
+import { isFirebaseConfigured } from '../services/firebase';
 import { BookLogo } from './BookLogo';
 
 interface TeacherViewProps {
@@ -21,6 +22,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
   const [password, setPassword] = useState('');
   const [stats, setStats] = useState<Stats | null>(null);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
     // Enkelt lösenord - kan ändras
@@ -32,9 +34,16 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
     }
   };
 
-  const loadStats = () => {
-    const data = getTeacherStats();
-    setStats(data);
+  const loadStats = async () => {
+    setLoading(true);
+    try {
+      const data = await getTeacherStatsAsync();
+      setStats(data);
+    } catch (err) {
+      console.error('Kunde inte ladda statistik:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -115,7 +124,29 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
           </div>
         </div>
 
-        {stats && (
+        {/* Firebase status */}
+        <div className={`rounded-xl p-4 mb-6 ${isFirebaseConfigured() ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
+          {isFirebaseConfigured() ? (
+            <div className="flex items-center gap-2">
+              <span className="text-xl">✓</span>
+              <span>Firebase är aktiverat - statistik synkas över alla enheter</span>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <span className="text-xl">⚠</span>
+              <span>Firebase är inte konfigurerat - statistik visas endast från denna enhet</span>
+            </div>
+          )}
+        </div>
+
+        {loading && (
+          <div className="text-center py-8">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+            <p className="mt-2 text-slate-600">Laddar statistik...</p>
+          </div>
+        )}
+
+        {stats && !loading && (
           <div className="space-y-6">
             {/* Sammanfattning */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

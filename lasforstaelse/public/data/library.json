@@ -5137,7 +5137,7 @@
   },
   {
     "id": "ak2-vanskap-01",
-    "grade": 2,
+    "grade": 3,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Bänken vid gungan",
@@ -5219,7 +5219,7 @@
   },
   {
     "id": "ak2-natur-02",
-    "grade": 2,
+    "grade": 3,
     "genre": "faktatext",
     "theme": "natur",
     "title": "Ekorren i parken",
@@ -5301,7 +5301,7 @@
   },
   {
     "id": "ak2-teknik-03",
-    "grade": 2,
+    "grade": 3,
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Robot av kartong",
@@ -5465,7 +5465,7 @@
   },
   {
     "id": "ak2-musik-05",
-    "grade": 2,
+    "grade": 3,
     "genre": "berättelse",
     "theme": "musik",
     "title": "Trumman och melodin",
@@ -5547,7 +5547,7 @@
   },
   {
     "id": "ak2-etik-06",
-    "grade": 2,
+    "grade": 3,
     "genre": "berättelse",
     "theme": "etik",
     "title": "Den tappade mössan",
@@ -5629,7 +5629,7 @@
   },
   {
     "id": "ak2-historia-07",
-    "grade": 2,
+    "grade": 3,
     "genre": "faktatext",
     "theme": "historia",
     "title": "Förr och nu i skolan",
@@ -5711,7 +5711,7 @@
   },
   {
     "id": "ak1-vanskap-01",
-    "grade": 2,
+    "grade": 3,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Två plats i sandlådan",
