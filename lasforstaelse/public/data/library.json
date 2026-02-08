@@ -1067,7 +1067,7 @@
   },
   {
     "id": "ak3-vanskap-001",
-    "grade": 3,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Nya kompisen i klassen",
@@ -1307,7 +1307,7 @@
   },
   {
     "id": "ak3-familj-005",
-    "grade": 3,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "familj",
     "title": "Pannkaksfredag",
@@ -1367,7 +1367,7 @@
   },
   {
     "id": "ak3-djur-006",
-    "grade": 3,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "djur",
     "title": "Så hittar myror hem",
@@ -1427,7 +1427,7 @@
   },
   {
     "id": "ak3-etik-007",
-    "grade": 3,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "etik",
     "title": "Hittad plånbok",
@@ -1487,7 +1487,7 @@
   },
   {
     "id": "ak3-vetenskap-008",
-    "grade": 3,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "vetenskap",
     "title": "Så blir regn till",
@@ -1547,7 +1547,7 @@
   },
   {
     "id": "ak3-samhalle-009",
-    "grade": 3,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "samhälle",
     "title": "Varför vi har bibliotek",
@@ -1787,7 +1787,7 @@
   },
   {
     "id": "ak3-skola-013",
-    "grade": 3,
+    "grade": 1,
     "genre": "faktatext",
     "theme": "skola",
     "title": "Så fungerar en rast",
@@ -1967,7 +1967,7 @@
   },
   {
     "id": "ak3-vanskap-016",
-    "grade": 3,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Två par vantar",
@@ -2027,7 +2027,7 @@
   },
   {
     "id": "ak3-samhalle-017",
-    "grade": 3,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Övergångsstället",
@@ -2147,7 +2147,7 @@
   },
   {
     "id": "ak3-vetenskap-019",
-    "grade": 3,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "Magnettestet",
