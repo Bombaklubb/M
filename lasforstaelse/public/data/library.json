@@ -83,7 +83,7 @@
   },
   {
     "id": "ak4-001",
-    "grade": 4,
+    "grade": 3,
     "genre": "berättelse",
     "theme": "äventyr",
     "title": "Skatten i skogen",
@@ -2677,7 +2677,7 @@
   },
   {
     "id": "ak4-vanskap-01",
-    "grade": 4,
+    "grade": 5,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Den delade pennan",
@@ -2759,7 +2759,7 @@
   },
   {
     "id": "ak4-natur-02",
-    "grade": 4,
+    "grade": 5,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Spåret i snön",
@@ -2841,7 +2841,7 @@
   },
   {
     "id": "ak4-vetenskap-03",
-    "grade": 4,
+    "grade": 5,
     "genre": "faktatext",
     "theme": "vetenskap",
     "title": "Varför flyter vissa saker och andra sjunker?",
@@ -3005,7 +3005,7 @@
   },
   {
     "id": "ak4-teknik-05",
-    "grade": 4,
+    "grade": 5,
     "genre": "faktatext",
     "theme": "teknik",
     "title": "Hur fungerar internet – som en osynlig väg för information",
