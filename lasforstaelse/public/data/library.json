@@ -5711,7 +5711,7 @@
   },
   {
     "id": "ak1-vanskap-01",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Två plats i sandlådan",
@@ -5793,7 +5793,7 @@
   },
   {
     "id": "ak1-natur-02",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "natur",
     "title": "Masken i jorden",
@@ -5875,7 +5875,7 @@
   },
   {
     "id": "ak1-teknik-03",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Lampan som inte lyste",
@@ -5957,7 +5957,7 @@
   },
   {
     "id": "ak1-miljo-04",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "miljö",
     "title": "Släcka och spara",
@@ -6039,7 +6039,7 @@
   },
   {
     "id": "ak1-musik-05",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "musik",
     "title": "Sången på samlingen",
@@ -6203,7 +6203,7 @@
   },
   {
     "id": "ak1-historia-07",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "historia",
     "title": "Förr och nu: skriva med olika saker",
@@ -6285,7 +6285,7 @@
   },
   {
     "id": "ak1-vanskap-08",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En plats bredvid mig",
@@ -6367,7 +6367,7 @@
   },
   {
     "id": "ak1-natur-09",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "natur",
     "title": "Regn och pölar",
@@ -6449,7 +6449,7 @@
   },
   {
     "id": "ak1-teknik-10",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Hjulet som rullade",
@@ -6531,7 +6531,7 @@
   },
   {
     "id": "ak1-musik-11",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "musik",
     "title": "Klapp, stopp, klapp",
@@ -6613,7 +6613,7 @@
   },
   {
     "id": "ak1-etik-12",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "etik",
     "title": "Den lånade suddgummit",
