@@ -9534,5 +9534,385 @@
         "correct": 0
       }
     ]
+  },
+  {
+    "id": "ak6-samhalle-01",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Mötet i elevrådet",
+    "text": "När Sanna gick mot biblioteket där elevrådet skulle mötas kändes det som om hon bar två ryggsäckar. Den ena var hennes vanliga, med mattebok och vattenflaska. Den andra var osynlig och fylld av alla tankar hon inte sagt högt. Hon hade lovat sin klass att ta upp problemet med trängseln i matsalen. Varje lunch blev som ett litet kaos: höga röster, brickor som slog i varandra och en känsla av att man behövde skynda sig, även när man var hungrig.\n\nI rummet satt redan några elever runt ett bord. Där var Elias från 6B, som alltid hade pennor i olika färger. Där var Hawa från 5C, som såg lugn ut men kunde säga smarta saker på en gång. Och där var Reza från 6A, som ofta pratade snabbt och ville att beslut skulle tas direkt.\n\nLäraren som var ansvarig, Karin, log och sa: \"Okej, vad vill ni börja med?\"\n\nReza räckte upp handen innan någon hann blinka. \"Vi behöver fler mikrovågsugnar i matsalen. Det tar för lång tid att värma mat.\"\n\nElias svarade: \"Fast det är mest trångt vid dörren och vid disken. Folk står i vägen.\"\n\nSanna svalde. Nu eller aldrig. \"Min klass tycker att ljudet är värst,\" sa hon. \"Man blir stressad. Och många hinner inte äta upp.\"\n\nKarin nickade. \"Bra. Kan vi samla problemen?\"\n\nHawa tog fram ett papper. \"Jag skriver: trängsel, ljudnivå, köer vid disk och dörr.\"\n\nNär de tittade på listan kändes det plötsligt mindre som ett berg och mer som en karta. Sanna märkte att hon blev modigare av att se orden på papper.\n\n\"Vi kan inte bygga om matsalen,\" sa Reza. \"Vi måste ha en snabb lösning.\"\n\nElias rynkade pannan. \"Vi kan ändra hur man går. Som pilar på golvet. En väg in, en väg ut.\"\n\nSanna tänkte på hur människor ofta följde pilar utan att ens tänka på det. \"Och kanske olika tider för olika klasser?\" föreslog hon. \"Bara fem minuter kan hjälpa.\"\n\nKarin skrev upp förslagen på tavlan: pilar, tydligare kölinjer, matvärdar som hjälper, och förskjutna lunchtider.\n\nHawa tittade upp. \"Men vi måste också tänka på rättvisa,\" sa hon. \"Om vissa får äta tidigare, vem bestämmer? Ingen vill alltid hamna sist.\"\n\nEfter en stund enades de om ett test. Under två veckor skulle skolledningen prova pilar på golvet och tydliga kölinjer. Dessutom skulle två matvärdar från varje årskurs få hjälpa till.\n\nNär mötet var slut gick Sanna ut i korridoren och kände den osynliga ryggsäcken bli lättare. Hon hade inte löst allt, men hon hade varit med och startat något. På vägen tillbaka tänkte hon att samhälle inte bara var något som vuxna gjorde. Samhälle kunde också vara en matsal, en kö, och några elever som vågade säga: \"Vi kan göra det bättre.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket problem har Sanna lovat sin klass att ta upp i elevrådet?",
+        "options": [
+          "Trasiga bänkar i klassrummet",
+          "Trängseln i matsalen",
+          "För svåra läxor",
+          "För få fotbollar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka problem skriver Hawa upp på sitt papper?",
+        "options": [
+          "Trängsel, ljudnivå, köer vid disk och dörr",
+          "Regn, snö och blåst",
+          "Betyg, prov och läxor",
+          "Idrott, musik och bild"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken lösning bestämmer de att skolan ska testa i två veckor?",
+        "options": [
+          "Bygga en ny matsal",
+          "Pilar på golvet och tydliga kölinjer",
+          "Ta bort disken",
+          "Ingen får prata vid lunch"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför känns problemen mindre för Sanna när de skrivs ner på papper?",
+        "options": [
+          "För att de försvinner direkt",
+          "För att de blir tydligare och går att planera kring",
+          "För att Sanna inte bryr sig längre",
+          "För att Karin säger åt henne att sluta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tar Hawa upp frågan om rättvisa när de pratar om olika lunchtider?",
+        "options": [
+          "För att hon vill att ingen ska få lunch",
+          "För att vissa annars kan känna att de alltid hamnar sist och att det känns orättvist",
+          "För att hon tycker att pilar är fula",
+          "För att hon vill bestämma allt själv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill berättelsen visa om att påverka i samhället?",
+        "options": [
+          "Att bara vuxna kan ändra saker",
+          "Att man kan börja förändra genom att prata, samla problem och testa lösningar",
+          "Att problem aldrig går att lösa",
+          "Att elevråd alltid bestämmer allt direkt"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-teknik-02",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Batterier – energi i fickformat",
+    "text": "Batterier finns i nästan allt vi använder: mobiltelefoner, fjärrkontroller, cykellampor och hörlurar. De ser ofta små och enkla ut, men inuti händer något som är ganska smart. Ett batteri är en energikälla som omvandlar kemisk energi till elektrisk energi. Den elektriciteten kan sedan få lampor att lysa, motorer att snurra och skärmar att fungera.\n\nEtt batteri består vanligtvis av två olika material som kallas elektroder: en pluspol och en minuspol. Mellan dem finns en vätska eller gel som kallas elektrolyt. När batteriet används sker en kemisk reaktion. Elektroner rör sig från minuspolen till pluspolen genom en sluten krets, till exempel genom en sladd och en lampa. Det är den rörelsen som kallas elektrisk ström.\n\nDet finns engångsbatterier och laddningsbara batterier. Engångsbatterier är gjorda för att användas tills de tar slut. Laddningsbara batterier kan däremot återställas med en laddare. När man laddar sker en reaktion åt andra hållet, så att batteriet kan ge ström igen.\n\nI moderna telefoner används ofta litiumjonbatterier. De kan lagra mycket energi i förhållande till sin vikt, vilket är en stor fördel när man vill ha en tunn mobil. Men litiumjonbatterier kräver också att man hanterar dem säkert. Om ett batteri skadas kan det bli varmt, svälla eller i värsta fall börja brinna.\n\nBatterier påverkar också miljön. För att tillverka dem behövs metaller och andra råvaror som måste brytas ur marken. Därför är återvinning viktig. När batterier återvinns kan man ta tillbaka vissa metaller och minska behovet av nya råvaror.\n\nDu kan göra enkla saker för att batterier ska hålla längre. Undvik att låta mobilen ligga på laddning hela tiden om det inte behövs. Skydda batterier från extrem kyla och värme.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken typ av energi omvandlar ett batteri till elektrisk energi?",
+        "options": [
+          "Kemisk energi",
+          "Ljudenergi",
+          "Rörelseenergi",
+          "Solenergi"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas vätskan eller gelen mellan batteriets elektroder?",
+        "options": [
+          "Elektrolyt",
+          "Plast",
+          "Syre",
+          "Bränsle"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken batterityp nämns som vanlig i moderna mobiltelefoner?",
+        "options": [
+          "Kolkrafts-batteri",
+          "Litiumjonbatteri",
+          "Ångbatteri",
+          "Vattenbatteri"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan laddningsbara batterier användas igen efter att de tagit slut?",
+        "options": [
+          "För att de aldrig blir tomma",
+          "För att laddning kan få den kemiska reaktionen att gå åt andra hållet",
+          "För att de är gjorda av trä",
+          "För att de har extra luft"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är återvinning av batterier viktig enligt texten?",
+        "options": [
+          "För att batterier blir snyggare då",
+          "För att man kan ta tillbaka metaller och minska behovet av nya råvaror",
+          "För att laddare slutar fungera annars",
+          "För att batterier alltid är farliga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken slutsats vill texten att du ska dra om batterier i vardagen?",
+        "options": [
+          "Att batterier är oviktiga eftersom de är små",
+          "Att batterier hänger ihop med teknik, säkerhet och miljö, och bör användas och återvinnas klokt",
+          "Att man aldrig ska använda laddare",
+          "Att alla batterier är likadana"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-historia-03",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Spår i den gamla kartan",
+    "text": "När klass 6D fick i uppgift att lära sig om sin hemorts historia suckade några elever. \"Det finns väl inget spännande här,\" sa någon. Men läraren, Parisa, kom med en stor rulle papper och lade den på katedern.\n\n\"Det här,\" sa hon, \"är en kopia av en karta från slutet av 1800-talet.\"\n\nKartan var gulnad i kanterna och hade ett handskrivet utseende. Floden såg bredare ut än idag, och där det nu fanns ett bostadsområde stod det \"äng\".\n\nHugo böjde sig fram. \"Varför är allt på fel plats?\"\n\n\"Det är inte fel,\" sa Parisa. \"Det är bara annorlunda. Och det är det som är intressant.\"\n\nEleverna fick jobba i par. Rania hamnade med Mateo. De fick en modern karta också och skulle jämföra.\n\n\"Här är skolan,\" sa Mateo och pekade. \"Men på den gamla kartan är det... en gård.\"\n\nRania läste namnet: \"Lindgården.\"\n\nDe började leta efter fler skillnader. En väg som idag var rak och bred var på den gamla kartan en slingrande stig. Där fanns en liten markering: \"bro\".\n\n\"Vi går dit,\" sa Mateo direkt.\n\nNär de kom till platsen såg de en modern väg och en gångtunnel. Men bakom buskarna fanns en gammal stenmur som såg ut att fortsätta ner mot vattnet.\n\nRania tog fram den gamla kartan. \"Om vi står här...\" Hon vände kartan, jämförde med flodens riktning och pekade. \"Stigen borde ha gått här.\"\n\nMateo trampade försiktigt i gräset. Där, mellan två träd, syntes en svag fördjupning i marken, som om många fötter hade gått samma väg för länge sedan.\n\nDe följde spåret en bit. Plötsligt låg en stor sten på sidan, nästan som en del av en grund. Rania såg något på stenen: ett inhugget märke.\n\n\"Kan det vara från bron?\" undrade hon.\n\nNär de kom tillbaka till klassrummet skrev de en liten rapport. Parisa sa att historiker ofta arbetar så: de använder källor som kartor, bilder och föremål för att förstå vad som hänt.\n\nMateo skrev i sin rapport: \"Platser glömmer inte. Vi måste bara lära oss att läsa deras spår.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken typ av källa visar läraren Parisa klassen?",
+        "options": [
+          "En film",
+          "En karta från slutet av 1800-talet",
+          "En nyhetsapp",
+          "En dikt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket namn står på den gamla kartan där skolan ligger idag?",
+        "options": [
+          "Lindgården",
+          "Storgården",
+          "Skolängen",
+          "Norrtorp"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem följer med eleverna när de går ut för att undersöka platsen?",
+        "options": [
+          "Parisa",
+          "Said",
+          "Hugo",
+          "Rania"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker Hugo först att kartan är fel?",
+        "options": [
+          "För att den är gul",
+          "För att platser och landskap har förändrats sedan kartan ritades",
+          "För att ingen kan läsa kartor",
+          "För att floden inte finns"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tyder den svaga fördjupningen i marken på?",
+        "options": [
+          "Att någon grävt en pool",
+          "Att många människor kan ha gått där under lång tid, som en gammal stig",
+          "Att marken alltid är mjuk där",
+          "Att det nyligen varit en jordbävning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken idé om historia vill berättelsen förmedla?",
+        "options": [
+          "Att historia bara finns i böcker",
+          "Att spår av historia kan finnas i platser omkring oss om vi lär oss att undersöka dem",
+          "Att kartor aldrig går att lita på",
+          "Att gamla saker alltid är oviktiga"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-etik-04",
+    "grade": 6,
+    "genre": "faktatext",
+    "theme": "etik",
+    "title": "Att säga ifrån utan att såra",
+    "text": "Ibland hamnar man i situationer där någon säger eller gör något som känns fel. Det kan vara ett skämt som går över gränsen, en kommentar som gör någon ledsen eller ett rykte som sprids. Många vet att man borde säga ifrån, men det kan vara svårt. Man vill inte bli osams, och man vill inte heller bli den som förstör stämningen. Samtidigt kan tystnad göra att problemet fortsätter.\n\nAtt säga ifrån handlar inte bara om mod, utan också om hur man gör det. Ett viktigt första steg är att vara tydlig med vad du reagerar på. I stället för att säga \"Du är dum\" kan du säga \"Det där du sa kändes inte okej.\" Då kritiserar du handlingen, inte personen.\n\nEn annan strategi är att använda jag-budskap. Det betyder att du beskriver hur du upplever situationen. Till exempel: \"Jag blir obekväm när ni skämtar om någons accent\" eller \"Jag tycker det blir orättvist när någon alltid avbryts.\" Jag-budskap kan minska risken för att den andra personen går i försvar direkt.\n\nDet kan också hjälpa att ställa en fråga. Ibland säger människor saker utan att tänka. Om du frågar \"Hur tror du att det känns att höra det där?\" kan personen få en chans att reflektera.\n\nMen det finns situationer där man behöver vara mer direkt, särskilt om någon blir utsatt. Då kan man säga tydligt: \"Sluta. Det där är inte okej.\" Om du känner dig otrygg kan du också be en vuxen om hjälp. Att ta hjälp är inte att skvallra. Det kan vara att skydda någon.\n\nAtt säga ifrån utan att såra betyder inte att det aldrig blir obekvämt. Det betyder att du försöker vara respektfull och samtidigt stå för det som är rätt. När fler i en grupp vågar säga ifrån minskar risken att elaka kommentarer blir normala. Då blir det lättare för alla att känna sig trygga.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är ett jag-budskap enligt texten?",
+        "options": [
+          "När man pratar om någon annan",
+          "När man beskriver hur man själv upplever situationen",
+          "När man alltid skriker",
+          "När man skriver ett rykte"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel på att vara tydlig utan att attackera personen nämns i texten?",
+        "options": [
+          "Du är dum",
+          "Det där du sa kändes inte okej",
+          "Jag hatar dig",
+          "Ingen bryr sig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man göra om man känner sig otrygg när någon blir utsatt?",
+        "options": [
+          "Gå hem direkt",
+          "Be en vuxen om hjälp",
+          "Skratta med",
+          "Filma och lägga upp"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan frågor ibland fungera bättre än att bara säga åt någon att sluta?",
+        "options": [
+          "För att frågor kan få personen att reflektera över hur det känns för andra",
+          "För att frågor alltid är roliga",
+          "För att frågor gör att man vinner direkt",
+          "För att frågor gör att allt blir ett skämt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger texten att att ta hjälp inte alltid är att skvallra?",
+        "options": [
+          "För att vuxna alltid vill höra allt",
+          "För att det kan handla om att skydda någon och stoppa något som skadar",
+          "För att regler inte finns",
+          "För att man ska slippa ansvar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket resultat kan det få om fler vågar säga ifrån i en grupp?",
+        "options": [
+          "Att elaka kommentarer blir vanligare",
+          "Att gruppen kan bli tryggare och att dåliga beteenden inte blir normala",
+          "Att ingen pratar alls längre",
+          "Att man alltid måste hålla tal"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-vetenskap-05",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "Raketen av kartong och luft",
+    "text": "Det började med att Abbas såg en video om en vattenraket och sa: \"Vi borde kunna göra en egen.\" På NO-lektionen fick klassen bygga en modell som skulle kunna skjutas iväg på skolgården. Läraren, Helena, sa att de inte skulle använda eld eller farliga saker. \"Vi jobbar med lufttryck och enkel fysik,\" förklarade hon.\n\nAbbas hamnade i grupp med Mei och Valentina. Mei var bra på att planera och skriva listor. Valentina var kreativ och ville att raketen skulle se snygg ut. Abbas var den som ville testa snabbt.\n\nDe bestämde sig för en raket av kartong med en konformad nos av papper. Helena gav dem också en stor plastflaska, en kork med ventil och en enkel pump. \"Luften i flaskan kan bli som en fjäder,\" sa hon. \"När den släpps ut snabbt kan den ge en kraft.\"\n\nMei ritade en skiss. \"Vi behöver fenor så att den flyger rakt,\" sa hon.\n\nValentina klippte ut tre fenor och målade dem röda. Abbas ville redan testa, men Mei stoppade honom. \"Om vi testar för tidigt vet vi inte vad som är fel när den kraschar.\"\n\nDe byggde noggrant. Fenorna skulle sitta lika långt från varandra. Nosen skulle vara centrerad. När allt var klart gick de ut.\n\nFörsta testet gick konstigt. Raketen flög upp, svängde åt sidan och landade i en buske.\n\nAbbas skrattade. \"Den hade egen vilja.\"\n\nMei såg allvarlig ut och skrev ner: \"Svänger åt höger.\"\n\nValentina tittade på fenorna. \"En fena sitter lite snett,\" sa hon.\n\nDe rätade till fenan och testade igen. Den här gången flög raketen högre men började snurra. Helena kom fram och sa: \"När något snurrar kan det betyda att kraften inte är jämnt fördelad.\"\n\nMei föreslog att de skulle väga raketen i handen. \"Den känns tyngre här,\" sa hon och pekade på ena sidan.\n\nDe upptäckte att Abbas hade tejpat extra mycket där. De tog bort tejp och gjorde en mer jämn yta. Tredje testet blev deras bästa. Raketen sköt rakt upp, stannade i luften en kort sekund och föll sedan ner längre bort på gräset.\n\nAbbas sprang och hämtade den. \"Den flög!\"\n\nMei log. \"Och vi vet varför den flög bättre.\"\n\nNär de skrev sin rapport använde de ord som \"lufttryck\", \"stabilitet\" och \"luftmotstånd\". Men Abbas skrev också en mening som Helena tyckte om: \"Vi misslyckades två gånger, men varje miss var en ledtråd.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken sorts kraft använder gruppens raket för att skjutas iväg?",
+        "options": [
+          "Eld",
+          "Lufttryck",
+          "Magnetism",
+          "Vattenfall"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför vill Mei att de ska ha fenor på raketen?",
+        "options": [
+          "För att den ska låta mer",
+          "För att den ska flyga rakt och bli stabil",
+          "För att den ska bli tyngre",
+          "För att den ska bli genomskinlig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer vid första testet?",
+        "options": [
+          "Raketen flyger rakt och långt",
+          "Raketen svänger åt sidan och landar i en buske",
+          "Raketen exploderar",
+          "Raketen rör sig inte alls"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skriver Mei ner observationen 'Svänger åt höger'?",
+        "options": [
+          "För att hon vill ha fler läxor",
+          "För att kunna jämföra och hitta vad som behöver ändras i nästa test",
+          "För att raketen ska bli snyggare",
+          "För att hon inte gillar Abbas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför börjar raketen snurra vid andra testet enligt texten?",
+        "options": [
+          "För att luften är för varm",
+          "För att kraften eller formen inte är jämnt fördelad och skapar obalans",
+          "För att Valentina målade fenorna röda",
+          "För att den alltid måste snurra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken viktig idé om vetenskap visar berättelsen?",
+        "options": [
+          "Att man måste lyckas direkt annars är det meningslöst",
+          "Att misslyckanden kan ge ledtrådar som hjälper en att förbättra",
+          "Att man aldrig ska testa flera gånger",
+          "Att vetenskap är samma som tur"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
