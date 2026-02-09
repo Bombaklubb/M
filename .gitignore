@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Backup files
-*.zip
-library-backup-*.json
+# Backup files (keeping these in git for download)
+# *.zip
+# library-backup-*.json
