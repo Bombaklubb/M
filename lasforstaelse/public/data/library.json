@@ -11673,5 +11673,325 @@
         "correct": 0
       }
     ]
+  },
+  {
+    "id": "uni-tema-001",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "källkritik och digital information",
+    "title": "När information blir övertygande utan att vara sann",
+    "text": "Det är lätt att tro att felaktig information främst sprids av människor som vill luras. I praktiken kan den spridas även när intentionen är god. En person delar en artikel för att den verkar relevant, en annan citerar en siffra för att den passar in i en diskussion, och snart blir påståendet en del av vad många uppfattar som \"allmänt känt\". Den här typen av spridning sker ofta snabbare i digitala miljöer, där innehåll konkurrerar om uppmärksamhet och där belöningen för att vara tidig ibland är större än belöningen för att vara noggrann.\n\nFlera mekanismer samverkar. En är förenkling: komplexa samband blir till slagkraftiga rubriker som låter mer säkra än underlaget. En annan är auktoritet genom form: en graf, en professionell layout eller ett självsäkert tonläge kan göra att mottagaren tolkar innehållet som mer tillförlitligt. Dessutom påverkas vi av sociala signaler. När många verkar hålla med, eller när avsändaren är någon man redan litar på, minskar benägenheten att kontrollera detaljer. Det betyder inte att människor är irrationella, utan att vi hanterar osäkerhet med genvägar som oftast fungerar i vardagen, men som kan missleda när informationen är strategiskt paketerad.\n\nKällkritik i akademiska sammanhang handlar därför inte bara om att leta efter en \"pålitlig källa\", utan om att analysera ett påståendes stöd: varifrån kommer uppgiften, hur har den producerats, och vilken typ av evidens är relevant? Ett centralt steg är att skilja mellan primär- och sekundärinformation. Primärinformation kan vara en originalstudie, ett protokoll eller en rådatabas. Sekundärinformation är tolkningar och sammanfattningar: nyhetsartiklar, blogginlägg eller en rapport som återger någon annans resultat. Sekundärkällor kan vara utmärkta, men de riskerar att föra vidare fel, särskilt om de återger varandra i en kedja.\n\nEtt annat steg är att granska begrepp och mätningar. Två texter kan använda samma ord men mena olika saker: \"risk\", \"effekt\", \"ökning\" eller \"signifikant\" kan få olika innebörd beroende på sammanhang. Om en siffra presenteras utan definierad baslinje, utan tidsperiod eller utan urval, kan den vara svår att tolka även om den är korrekt. Att förstå vad som faktiskt mättes kan vara viktigare än att veta vem som publicerade.\n\nSlutligen spelar transparens och osäkerhet en stor roll. Ett seriöst underlag brukar redovisa metod, begränsningar och alternativa tolkningar. Paradoxalt nog kan en text som låter försiktig vara mer tillförlitlig än en som låter tvärsäker, eftersom den visar att avsändaren har tagit höjd för felkällor. Att utveckla källkritik på universitetsnivå innebär därför att träna sig i att stå ut med osäkerhet: att kunna säga \"det här verkar troligt, men jag behöver se hur det är belagt\" och att kunna beskriva vad som skulle kunna ändra ens slutsats.",
+    "questions": [
+      {
+        "q": "Vilken tolkning ligger närmast textens syn på varför felaktig information ofta sprids?",
+        "options": [
+          "Den sprids mest när mottagare saknar utbildning och kan därför främst lösas genom mer undervisning.",
+          "Den sprids främst avsiktligt och kan motverkas genom att identifiera illvilliga aktörer.",
+          "Den sprids ofta genom vardagliga genvägar i bedömningar, även utan avsikt att vilseleda."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad antyder texten att en \"professionell form\" kan göra med en mottagares bedömning?",
+        "options": [
+          "Den påverkar bara om mottagaren redan håller med om slutsatsen.",
+          "Den kan fungera som en signal som ersätter eller försvagar kontroll av innehållets stöd.",
+          "Den gör att mottagaren automatiskt söker primärkällor innan delning."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken slutsats kan dras om sekundärkällor utifrån resonemanget i texten?",
+        "options": [
+          "De kan vara användbara men kräver särskild uppmärksamhet på kedjor av återgivning.",
+          "De är mer tillförlitliga än primärkällor eftersom de redan har tolkats av experter.",
+          "De är i regel opålitliga eftersom de alltid återger felaktigheter."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken skillnad mellan två texter pekar författaren ut som särskilt viktig att upptäcka, även om båda verkar sakliga?",
+        "options": [
+          "Att de kan använda samma begrepp men bygga dem på olika definitioner och mätningar.",
+          "Att de kan ha olika typsnitt och därmed olika trovärdighet.",
+          "Att de kan ha olika längd och därmed olika grad av noggrannhet."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "I texten kopplas tvärsäkerhet och försiktighet till trovärdighet. Vilken tolkning stämmer bäst?",
+        "options": [
+          "Försiktighet kan signalera att avsändaren redovisar osäkerheter och felkällor, vilket kan öka tilliten.",
+          "Försiktighet är alltid ett tecken på bristande kunskap och bör därför ses som en varningssignal.",
+          "Tvärsäkerhet är en nödvändig markör för kvalitet eftersom forskning ska ge entydiga svar."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken arbetsstrategi ligger närmast textens idé om källkritik på universitetsnivå?",
+        "options": [
+          "Att avgöra trovärdighet främst genom avsändarens status och sedan acceptera slutsatsen.",
+          "Att formulera vilka uppgifter som skulle behövas för att stärka eller försvaga ett påstående.",
+          "Att undvika osäkerhet genom att endast läsa texter som uttrycker tydliga slutsatser."
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "uni-tema-002",
+    "grade": 10,
+    "genre": "argumenterande",
+    "theme": "öppen data och integritet",
+    "title": "Öppenhetens löfte och integritetens kostnad",
+    "text": "Öppen data framställs ofta som en självklar vinst för samhället. När myndigheter och forskningsinstitutioner publicerar data kan andra granska beslut, utveckla tjänster och göra nya analyser utan att börja från noll. I bästa fall stärker det insyn och effektivitet: fel upptäcks tidigare, resurser används smartare och innovation blir möjlig även för små aktörer. Samtidigt finns en risk att öppenhet behandlas som en princip som alltid bör vinna, oavsett datans innehåll och oavsett vilka konsekvenser publiceringen får.\n\nEtt centralt argument för öppen data är att den kan minska informationsasymmetrier. När fler får tillgång till samma underlag kan debatten handla mer om tolkningar än om hemliga siffror. Öppenhet kan också bygga förtroende: om underlaget är synligt blir det svårare att misstänka att någon manipulerar urval eller döljer avvikande resultat. Dessutom kan öppna dataset återanvändas i oväntade sammanhang, vilket gör att nyttan kan bli större än den ursprungliga avsikten.\n\nMotargumentet handlar sällan om att data ska vara privat \"för säkerhets skull\", utan om att information kan få nya egenskaper när den kombineras. En enskild datapunkt kan vara harmlös, men tillsammans med andra källor kan den göra individer identifierbara eller göra grupper mer sårbara. Det gäller inte bara klassiska personuppgifter, utan även geografiska mönster, tidsserier och metadata som visar beteenden. Den praktiska frågan blir därför inte enbart om data innehåller namn, utan om den kan kopplas till människor på ett rimligt sätt, i dagens tekniska miljö.\n\nEtt möjligt svar är att kräva anonymisering. Problemet är att anonymisering inte är en magisk metod utan en serie avvägningar. Ju mer man tar bort, desto säkrare blir integriteten, men desto mindre användbar blir datan. Om man behåller mycket detaljrikedom kan datan vara analytiskt värdefull, men också lättare att återidentifiera. Därför behöver öppen data styras av syfte och risk, inte av en enkel ja-eller-nej-logik.\n\nEn rimlig position är att kombinera öppenhet med gradvis åtkomst. Viss data kan vara helt öppen, annan kan publiceras i aggregerad form, och mer känslig data kan göras tillgänglig via ansökan, loggning och etiska villkor. Det är inte samma sak som att \"stänga\" data, utan ett sätt att bevara nyttan utan att flytta hela risken till individer som aldrig samtyckt till att bli analysobjekt. Om öppen data ska behålla legitimitet måste den alltså kopplas till tydliga riskbedömningar, transparens om avgränsningar och mekanismer för ansvar när publicering får oönskade effekter.",
+    "questions": [
+      {
+        "q": "Vilken tes driver texten starkast, sett till hur argumenten byggs upp?",
+        "options": [
+          "Öppen data är värdefull, men bör styras av risk- och syftesbedömningar snarare än absolut princip.",
+          "Öppen data bör alltid prioriteras eftersom samhällsnyttan i längden överstiger alla risker.",
+          "Öppen data bör undvikas eftersom anonymisering i praktiken inte fungerar."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad menas i texten med att information kan få \"nya egenskaper när den kombineras\"?",
+        "options": [
+          "Att data kan bli identifierande eller skadlig först när den kopplas ihop med andra dataset.",
+          "Att data tappar sitt värde om den inte presenteras i samma format som originalet.",
+          "Att data ofta blir mindre exakt när flera källor blandas."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken implicit kritik riktas mot en förenklad syn på anonymisering?",
+        "options": [
+          "Att anonymisering alltid leder till att resultat blir politiskt vinklade.",
+          "Att anonymisering innebär avvägningar mellan användbarhet och risk, och därför inte löser frågan ensam.",
+          "Att anonymisering kräver att man redan känner till alla tänkbara framtida analyser."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför framstår \"gradvis åtkomst\" som ett kompromissförslag enligt textens logik?",
+        "options": [
+          "För att den gör all data lika öppen men med längre fördröjning innan publicering.",
+          "För att den behåller någon form av återanvändbarhet men fördelar risk genom villkor och begränsning.",
+          "För att den ersätter behovet av insyn med tekniska säkerhetssystem."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken förutsättning antyds för att öppen data ska behålla legitimitet över tid?",
+        "options": [
+          "Att endast privata aktörer får använda data för att undvika politisk påverkan.",
+          "Att datamängder alltid publiceras i rå form så att alla kan granska dem fullt ut.",
+          "Att riskbedömningar och ansvarsmekanismer är tydliga när publicering kan få negativa effekter."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket påstående passar bäst som textens underliggande värdeprioritering?",
+        "options": [
+          "Innovation kräver full öppenhet, och därför är detaljerad data alltid att föredra.",
+          "Integritet är överordnad alla andra värden och bör alltid stoppa publicering.",
+          "Insyn är viktig, men bör inte automatiskt ske på bekostnad av individers ofrivilliga exponering."
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "uni-tema-003",
+    "grade": 10,
+    "genre": "beskrivande",
+    "theme": "arbetsmiljö och koncentration",
+    "title": "Ett kontor byggt för rörelse och fokus",
+    "text": "Rummet är öppet men inte tomt. Ljudet av tangentbord blandas med ett dämpat surr från ventilationen, och mellan arbetszonerna står bokhyllor som fungerar som mjuka gränser. Det är inte en slump att gångarna är breda: de drar kroppen framåt och gör det enkelt att byta plats utan att störa andra. På håll ser ytan enhetlig ut, men när man rör sig genom rummet märks att varje del är formgiven för en särskild typ av arbete.\n\nNär man passerar entrén möts man av ett litet \"landningsbord\" med låga stolar och väggar som tar upp ljud. Där stannar personer som just kommit in, packar upp, pratar kort och orienterar sig. Längre in blir belysningen svalare och mer riktad. Arbetsplatserna står inte i raka rader utan i små kluster, där skärmarna är vinklade så att man sällan får någon annans display i synfältet. På borden finns få fasta saker. Det är en miljö som förväntar sig att människor skiftar mellan uppgifter och därför behöver kunna göra om sin yta snabbt.\n\nI rummets mitt finns en zon som liknar ett torg. Den är ljusare, mer livlig, och här hörs fler röster. Ett högt bord lockar till stående samtal, och nära kaffemaskinen är golvet av ett material som tål många steg. Ljudbilden är inte kaotisk, men den är tydligt annorlunda än vid skrivborden. Man kan nästan känna hur tempot ändras när någon stannar där: axlarna sjunker, blicken rör sig från skärm till ansikten, och samtalen får en mer prövande ton, som om idéer testas i realtid.\n\nVid fönstren, i en smalare korridor, står små bås med draperier och enkla lampor. Där inne är luften en aning stillare. När draperiet dras för minskar både ljus och intryck, och den som sitter där kan skapa en privat bubbla utan att rummet blir tyst i stort. Några bås har whiteboard på insidan, andra bara en ren yta. Det är tydligt att dessa platser är avsedda för koncentration, men också för korta perioder: man går in, arbetar intensivt, och går ut igen.\n\nDet som binder ihop rummet är inte en enda regel utan en rytm. Ytorna uppmuntrar rörelse, men de signalerar också vad som förväntas. Vid torget är det naturligt att fråga, avbryta och resonera högt. Vid klustren sker samtal mer diskret. I båsen blir kroppen stilla och tiden tätare. Miljön beskriver, utan ord, att produktivitet inte är ett enda tillstånd, utan flera, och att ett fungerande arbetsliv ofta handlar om att kunna växla mellan dem utan att göra våld på vare sig sig själv eller andra.",
+    "questions": [
+      {
+        "q": "Vilken tolkning av rummet framstår som mest förenlig med textens helhetsintryck?",
+        "options": [
+          "Rummet är utformat för att göra alla arbetsuppgifter likartade och minska variation i arbetssätt.",
+          "Rummet är utformat för att stödja olika arbetslägen genom tydliga men tysta signaler i miljön.",
+          "Rummet är utformat för att maximera social interaktion, även om fokus får stå tillbaka."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför beskrivs \"landningsbordet\" tidigt i texten, tror du?",
+        "options": [
+          "För att visa att rummet saknar tydlig struktur och därför behöver en samlingsplats.",
+          "För att framhäva att det viktigaste arbetet sker i spontana samtal nära entrén.",
+          "För att markera en övergång där människor kan byta tempo innan de går in i mer fokuserade zoner."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken funktion får bokhyllorna i textens beskrivning, utöver att förvara saker?",
+        "options": [
+          "De visar främst status och signalerar vilka som har längst erfarenhet.",
+          "De används för att göra gångarna smalare och därmed minska rörelse.",
+          "De fungerar som visuella och akustiska gränser som delar upp rummet utan att stänga det."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats kan dras om \"torget\" i mitten, utifrån hur ljud och kroppsspråk beskrivs?",
+        "options": [
+          "Det är en plats som främst är till för att dölja störande ljud från resten av kontoret.",
+          "Det är en plats som främst används för individuellt arbete eftersom belysningen är stark.",
+          "Det är en plats där idéer prövas informellt och där arbetsrollen tillfälligt blir mer social."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "I sista stycket används ordet \"rytm\". Vad syftar det mest på?",
+        "options": [
+          "Ett mönster av växling mellan olika intensiteter och sociala nivåer, stödjat av miljön.",
+          "En fast daglig rutin där alla arbetar i samma tempo vid samma tider.",
+          "Ett sätt att mäta produktivitet i antal rörelser mellan zoner."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken underliggande idé om produktivitet antyds snarare än sägs rakt ut?",
+        "options": [
+          "Att produktivitet främst uppstår genom spontana avbrott och ständig dialog.",
+          "Att produktivitet består av flera tillstånd som kräver olika typer av rumsligt stöd.",
+          "Att produktivitet kräver långvarig tystnad och minimalt samarbete."
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "uni-tema-004",
+    "grade": 10,
+    "genre": "berättelse",
+    "theme": "förändringsarbete i en organisation",
+    "title": "Mötet där allt lät enkelt",
+    "text": "När Sara kom in i konferensrummet var projektorn redan igång och en blå startskärm speglade sig i glasväggen. Kollegorna satt utspridda, som om de ville lämna luft mellan sig och uppgiften. På agendan stod \"Införande av nytt arbetssätt\", och under rubriken fanns tre punkter som såg förvånansvärt odramatiska ut: utbildning, pilot, uppföljning. Hon lade anteckningsboken framför sig och försökte avgöra om den lugna listan var ett tecken på kontroll eller på att man inte riktigt förstått vad som väntade.\n\nChefen började med att säga att förändringen var nödvändig men också hanterbar. \"Vi tar det stegvis\", sa han och klickade fram en bild med pilar som gick från \"nu\" till \"sen\". Alla nickade ungefär samtidigt, som om man övat. Sara lade märke till att inga frågor kom direkt. Det var som om gruppen väntade på att någon annan skulle vara den som först visade tvekan.\n\nUnder diskussionen om piloten tog Jonas ordet. Han lät positiv och pekade på möjligheten att spara tid. Samtidigt drog han fingret längs kanten av sin kaffekopp, om och om igen. Sara tänkte att kroppar ofta säger sådant som röster försöker dölja. När chefen frågade vilka team som kunde vara med i första omgången blev det tyst igen, men tystnaden hade bytt karaktär: den var inte tom, den var full av beräkningar. Vem skulle ta risken att bli testyta, och vem skulle kunna skylla på någon annan om något gick fel?\n\nTill slut erbjöd sig Saras grupp. Hon sa det utan att helt veta varför. Kanske för att slippa känslan av att stå stilla när världen ändå rörde sig, kanske för att hennes team redan hade byggt små genvägar runt de gamla rutinerna. Chefen log och tackade, och Jonas såg lättad ut på ett sätt som nästan gjorde henne misstänksam. När mötet gick vidare till \"utbildning\" blev tonen varmare. Där kunde alla vara överens: mer kunskap lät tryggt.\n\nEfteråt stannade Sara kvar för att samla ihop sina papper. I korridoren hördes en lågmäld diskussion, fragment av meningar om tid, belastning och om att \"det säkert blir bra\". Hon gick långsamt tillbaka till sin plats och tänkte på bilden med pilarna. Den hade gjort förändringen linjär, nästan ren. Men hon hade sett något annat i rummet: att det som avgör sällan är själva planen, utan vad människor tror att planen betyder för dem. Hon öppnade kalendern och skrev in ett möte med sitt team, inte för att upprepa presentationen, utan för att fråga vad de var mest rädda för att förlora.",
+    "questions": [
+      {
+        "q": "Vilken konflikt ligger mest sannolikt under ytan i mötet, utifrån hur deltagarna agerar?",
+        "options": [
+          "En konflikt om huruvida utbildning över huvud taget behövs i organisationen.",
+          "En konflikt mellan att vilja framstå som positiv och att vilja undvika risk och extra belastning.",
+          "En konflikt om vem som ska få mest erkännande när förändringen lyckas."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad fyller beskrivningen av pilarna på presentationen för funktion i berättelsen?",
+        "options": [
+          "Den kontrasterar ett förenklat, linjärt narrativ mot den mer komplexa verkligheten i rummet.",
+          "Den antyder att förändringen i praktiken redan är genomförd och bara behöver kommuniceras.",
+          "Den visar att chefen har en detaljerad plan som redan är fullt förankrad."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken tolkning av Jonas beteende stöds bäst av textens detaljer?",
+        "options": [
+          "Han är entusiastisk och helt obekymrad inför pilotens konsekvenser.",
+          "Han är motståndare till förändringen och vill sabotera processen öppet.",
+          "Han försöker framstå som positiv, men visar samtidigt spänning och ett behov av kontroll."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan Saras erbjudande om att delta i piloten uppfattas som ambivalent?",
+        "options": [
+          "Det framstår både som ett steg framåt och som ett sätt att undvika passivitet, utan full klarhet om följderna.",
+          "Det framstår som ett beslut som togs efter att alla risker redan var utredda.",
+          "Det framstår främst som ett sätt att vinna status och synlighet inför chefen."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken innebörd har uttrycket att tystnaden var \"full av beräkningar\" i sammanhanget?",
+        "options": [
+          "Att deltagarna vägde personliga och organisatoriska konsekvenser innan de tog ställning.",
+          "Att deltagarna räknade på budgeten och därför behövde tid med siffrorna.",
+          "Att deltagarna försökte komma ihåg innehållet i presentationen för att kunna sammanfatta den."
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket budskap kan läsas in i Saras sista tanke om vad som avgör förändringen?",
+        "options": [
+          "Att människors tolkningar och upplevda förluster ofta styr utfallet mer än själva planen.",
+          "Att förändring främst är en kommunikationsfråga där rätt ordval löser motstånd.",
+          "Att en tydlig plan alltid räcker, eftersom människor i längden anpassar sig."
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "uni-tema-005",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "statistik och tolkning av resultat",
+    "title": "När samma resultat kan betyda olika saker",
+    "text": "Två studier kan presentera samma huvudsakliga resultat men ändå leda läsaren till olika slutsatser. Skillnaden ligger ofta inte i siffrorna, utan i hur de ramas in, vilka antaganden som görs och vilka jämförelser som anses relevanta. På universitetsnivå blir därför statistisk förståelse mindre en fråga om att kunna en formel och mer en fråga om att tolka vad ett mått faktiskt säger, och vad det inte säger.\n\nEtt vanligt exempel är skillnaden mellan relativ och absolut förändring. Om en risk ökar från 1 till 2 procent kan man säga att den har fördubblats, vilket låter dramatiskt. Samtidigt är den absoluta ökningen bara en procentenhet. Båda beskrivningarna är korrekta, men de väcker olika känslor och kan påverka beslut på olika sätt. Därför behöver man fråga: i vilken kontext används måttet, och vilken jämförelse är mest meningsfull för den fråga som ska besvaras?\n\nEtt annat område är signifikans och osäkerhet. Ett p-värde kan tyda på att ett observerat mönster är svårt att förklara med slump under en viss modell, men det säger inte hur stor effekten är eller om den är praktiskt viktig. Om ett stort urval används kan mycket små effekter bli \"signifikanta\", medan ett litet urval kan missa effekter som i verkligheten är relevanta. Därför behöver man skilja mellan statistisk signifikans, effektstorlek och den osäkerhet som alltid följer med mätningar.\n\nDessutom påverkar val av modell och variabler tolkningen. Om man justerar för en variabel kan man minska en snedvridning, men man kan också råka justera bort en del av det man vill förstå. Ibland ligger en variabel på vägen mellan orsak och utfall. Att kontrollera för den kan ge en missvisande bild av sambandet, eftersom man då blandar ihop förklaringskedjor med störfaktorer. Det kräver att läsaren funderar över vilka mekanismer som är rimliga, inte bara över vilka variabler som råkar finnas i ett dataset.\n\nSlutligen är generaliserbarhet en underskattad fråga. Ett resultat kan vara robust inom den studerade gruppen men ändå inte säga mycket om andra grupper, andra tider eller andra miljöer. Urval, bortfall och mätmetoder kan göra att resultatet beskriver en särskild situation snarare än en allmän regel. Att tolka forskning innebär då att väga evidensen mot frågan: gäller detta här, för dessa personer, under dessa villkor?\n\nNär man ser statistik som ett språk blir läsningen mer aktiv. Man frågar vad som jämförs, vad som antas, och vilka alternativa förklaringar som kan finnas. Då blir det också tydligare varför två redovisningar kan vara korrekta men ändå leda tanken åt olika håll: de betonar olika aspekter av samma osäkerhet, och de gör olika val om vad som räknas som relevant betydelse.",
+    "questions": [
+      {
+        "q": "Vilken övergripande poäng är mest central i texten?",
+        "options": [
+          "Olika studier blir bara jämförbara om de alltid använder exakt samma modell och variabler.",
+          "Samma numeriska resultat kan få olika innebörd beroende på inramning, antaganden och relevanta jämförelser.",
+          "Statistikens huvudsakliga problem är att den ofta innehåller felräkning och därför bör undvikas."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför menar texten att relativ och absolut förändring kan påverka beslut olika?",
+        "options": [
+          "För att absolut förändring alltid är mer vetenskaplig än relativ förändring.",
+          "För att de beskriver olika data och därför sällan kan vara samtidigt korrekta.",
+          "För att de tenderar att aktivera olika tolkningar av hur stor förändringen upplevs vara."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken distinktion mellan statistisk signifikans och praktisk betydelse antyds som viktigast?",
+        "options": [
+          "Att signifikans handlar om effektens storlek, medan praktisk betydelse handlar om urvalets storlek.",
+          "Att signifikans kan uppstå även vid små effekter, och därför måste effektstorlek och kontext vägas in.",
+          "Att praktisk betydelse kan avgöras direkt genom att titta på p-värdet utan andra mått."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är den mest rimliga innebörden av att man ibland kan \"justera bort en del av det man vill förstå\"?",
+        "options": [
+          "Att kontrollvariabler alltid förvränger resultat och därför inte bör användas.",
+          "Att vissa variabler kan ligga i orsakskedjan, så kontroll kan dölja ett samband man försöker förklara.",
+          "Att statistiska modeller fungerar bäst när de endast innehåller en variabel åt gången."
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning av generaliserbarhet ligger närmast textens resonemang?",
+        "options": [
+          "Generaliserbarhet avgörs främst av om studien har använt en avancerad modell.",
+          "Ett robust resultat är automatiskt giltigt för alla populationer om det är signifikant.",
+          "Generaliserbarhet beror på hur väl urval och villkor matchar den situation man vill uttala sig om."
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför avslutar texten med att beskriva statistik som ett \"språk\"?",
+        "options": [
+          "För att visa att statistik främst handlar om retorik och inte om mätningar.",
+          "För att antyda att statistiska resultat alltid kan översättas till en enda entydig slutsats.",
+          "För att betona att tolkning kräver aktiva frågor om jämförelser, antaganden och alternativa förklaringar."
+        ],
+        "correct": 2
+      }
+    ]
   }
 ]
