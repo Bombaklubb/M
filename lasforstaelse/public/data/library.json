@@ -10334,5 +10334,325 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak1-vanskap-101",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den blå vanten",
+    "text": "Lina hänger av sig jackan i kapprummet.\n\nPå golvet ligger en blå vante. Ingen säger att den är deras. Lina tar upp vanten och känner att den är varm och mjuk. Hon ser en liten lapp med namnet Omar.\n\nPå rasten går hon runt på skolgården och frågar. Till slut vinkar Omar från gungan. Han ser lättad ut när Lina räcker fram vanten. De ler och springer vidare till leken. Efteråt berättar Lina för sin fröken vad som hände, och fröken säger att det var snällt.",
+    "questions": [
+      {
+        "q": "Var hittade Lina vanten?",
+        "options": [
+          "I klassrummet",
+          "I kapprummet",
+          "På bussen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken färg hade vanten?",
+        "options": [
+          "Blå",
+          "Röd",
+          "Grön"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vems namn stod på lappen?",
+        "options": [
+          "Omar",
+          "Lina",
+          "Erik"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför tror du att Omar såg lättad ut?",
+        "options": [
+          "Han ville leka ensam",
+          "Han hade saknat vanten",
+          "Han ville gå hem"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet \"lättad\" i texten?",
+        "options": [
+          "Hungrig",
+          "Glad och lugn",
+          "Arg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är texten skriven, tror du?",
+        "options": [
+          "För att visa hur man kan hjälpa någon",
+          "För att lära om matte",
+          "För att berätta om en resa"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-vinter-102",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vinter",
+    "title": "Snögubben som lutade",
+    "text": "På morgonen är det tunt med snö på skolgården.\n\nSamir och Nora samlar snö med sina vantar. Snön är lite blöt, så de trycker den hårt. De gör en liten boll och en större boll och lägger dem på varandra. Nora hittar två kottar till ögon. Samir lägger en pinne som mun.\n\nNär de är klara blåser vinden och snögubben lutar. Då stöttar de honom med en kvast och skrattar. Efter lektionen tittar de ut genom fönstret och ser att snögubben fortfarande står kvar.",
+    "questions": [
+      {
+        "q": "Var byggde Samir och Nora snögubben?",
+        "options": [
+          "På skolgården",
+          "I gympasalen",
+          "I matsalen"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad använde Nora till ögon?",
+        "options": [
+          "Stenar",
+          "Kottar",
+          "Knappar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad hände när vinden blåste?",
+        "options": [
+          "Snögubben lutade",
+          "Snögubben smälte",
+          "Snögubben blev större"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför tror du att de tryckte snön hårt?",
+        "options": [
+          "För att den skulle sitta ihop",
+          "För att den skulle bli varm",
+          "För att den skulle bli torr"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"stöttar\" i texten?",
+        "options": [
+          "Hjälper så den inte faller",
+          "Målar över",
+          "Kastar bort"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför är texten skriven, tror du?",
+        "options": [
+          "För att berätta om en lek på vintern",
+          "För att förklara en regel",
+          "För att beskriva ett djur"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-bocker-103",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "böcker",
+    "title": "Boken om rävar",
+    "text": "Maja går med klassen till skolbiblioteket.\n\nDet luktar papper och trä där inne. Bibliotekarien visar en hylla med böcker om djur. Maja väljer en bok om rävar. Hon öppnar den och ser en bild på en räv som springer i snö.\n\nMaja viskar till sin kompis att rävar har yvig svans. När de ska gå lägger Maja boken i sin låda och lovar att läsa för mamma. Hon tänker att bilderna kan hjälpa henne att förstå orden som är svåra.",
+    "questions": [
+      {
+        "q": "Vart gick Maja med klassen?",
+        "options": [
+          "Till skolbiblioteket",
+          "Till simhallen",
+          "Till affären"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad handlade Majas bok om?",
+        "options": [
+          "Fåglar",
+          "Rävar",
+          "Fiskar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad såg Maja i boken?",
+        "options": [
+          "En räv som sprang i snö",
+          "En katt som sov",
+          "En hund som åt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför tror du att Maja ville läsa för mamma?",
+        "options": [
+          "Hon ville dela boken hemma",
+          "Hon ville gömma boken",
+          "Hon ville kasta boken"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"yvig\" i texten?",
+        "options": [
+          "Mycket stor och fluffig",
+          "Helt osynlig",
+          "Väldigt blöt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför är texten skriven, tror du?",
+        "options": [
+          "För att berätta om ett biblioteksbesök",
+          "För att lära om trafik",
+          "För att beskriva en fotbollsmatch"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-skola-104",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "skola",
+    "title": "En tand i servetten",
+    "text": "I matsalen tuggar Leo försiktigt på sin morot.\n\nPlötsligt känner han något hårt i munnen. Han spottar i servetten och ser en liten tand. Leo blir både stolt och lite nervös. Fröken säger att det är vanligt när man är sex år.\n\nLeo lägger tanden i sin ficka och bestämmer sig för att visa den hemma. På vägen till klassrummet tänker han på tandfen, men han säger inget, för han vill överraska. Efter skolan stoppar han tanden i en liten ask och skriver sitt namn på locket.",
+    "questions": [
+      {
+        "q": "Var tappade Leo tanden?",
+        "options": [
+          "I matsalen",
+          "På skolgården",
+          "I bussen"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad åt Leo när det hände?",
+        "options": [
+          "Morot",
+          "Glass",
+          "Soppa"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var lade Leo tanden först?",
+        "options": [
+          "I fickan",
+          "I skåpet",
+          "I ryggsäcken"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför tror du att Leo ville överraska?",
+        "options": [
+          "Han ville berätta senare hemma",
+          "Han glömde tanden",
+          "Han ville ge bort moroten"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"försiktigt\" i texten?",
+        "options": [
+          "Snabbt",
+          "Lite lugnt och försiktigt",
+          "Högt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är texten skriven, tror du?",
+        "options": [
+          "För att berätta om en händelse i skolan",
+          "För att förklara vädret",
+          "För att visa hur man bygger en stol"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-konst-105",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "konst",
+    "title": "Regnbågen på papperet",
+    "text": "På bildlektionen får Sara ett stort vitt papper.\n\nLäraren säger att de ska måla något som gör dem glada. Sara tänker på regn efter sol. Hon doppar penseln i rött och drar en båge. Sedan tar hon orange, gult, grönt och blått.\n\nNär färgerna möts blir de lite blandade, men Sara tycker att det ser fint ut. Hon visar bilden för sin bänkgranne, som säger att den ser ut som en regnbåge. På väggen i klassrummet hänger de alla bilderna, och rummet blir mer färgglatt.",
+    "questions": [
+      {
+        "q": "Vilken lektion är Sara på?",
+        "options": [
+          "Bildlektion",
+          "Idrott",
+          "Musik"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad skulle de måla?",
+        "options": [
+          "Något som gör dem glada",
+          "Bara svarta streck",
+          "Bara siffror"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken färg började Sara med?",
+        "options": [
+          "Rött",
+          "Grönt",
+          "Lila"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför tror du att färgerna blev blandade?",
+        "options": [
+          "De möttes på papperet",
+          "Pappret var trasigt",
+          "Penseln var borta"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"färgglatt\" i texten?",
+        "options": [
+          "Fullt av färger",
+          "Utan färger",
+          "Mycket smutsigt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför är texten skriven, tror du?",
+        "options": [
+          "För att berätta om en bildlektion",
+          "För att lära om djur",
+          "För att beskriva en vinterdag"
+        ],
+        "correct": 0
+      }
+    ]
   }
 ]
