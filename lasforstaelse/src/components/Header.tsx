@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
         >
           <BookLogo size={36} />
-          <span className="text-xl font-extrabold text-purple-700 dark:text-purple-400">Läs och lär</span>
+          <span className="text-xl font-extrabold text-purple-700 dark:text-purple-400">Läsresan</span>
         </button>
 
         {/* User info */}

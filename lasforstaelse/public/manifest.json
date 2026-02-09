@@ -1,6 +1,6 @@
 {
-  "name": "Läs och lär",
-  "short_name": "Läs och lär",
+  "name": "Läsresan",
+  "short_name": "Läsresan",
   "description": "Din smarta läskompis - träna läsförståelse",
   "start_url": "/",
   "display": "standalone",
