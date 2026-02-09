@@ -10654,5 +10654,325 @@
         "correct": 0
       }
     ]
+  },
+  {
+    "id": "ak4-vatten-001",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "vattnets kretslopp",
+    "title": "Vattnets resa runt jorden",
+    "text": "Vattnet på jorden rör sig hela tiden i ett kretslopp. När solen värmer hav, sjöar och mark, avdunstar vatten och blir till osynlig vattenånga. Ångan stiger upp i luften och kyls så småningom ner.\n\nNär luften blir tillräckligt kall bildas små vattendroppar eller iskristaller. De samlas och blir moln. Om dropparna växer och blir tunga faller de ner som nederbörd, till exempel regn, snö eller hagel. En del av nederbörden hamnar direkt i sjöar och hav, och en del rinner på marken som små bäckar och större åar.\n\nVatten kan också sjunka ner i jorden och bli grundvatten. Grundvattnet rör sig långsamt och kan komma fram igen i källor eller pumpas upp i brunnar. Växter tar upp vatten med rötterna och släpper ut en del genom bladen. Till slut når vattnet ofta havet, där solen kan starta processen på nytt.\n\nFör människor betyder kretsloppet att samma vatten används om och om igen. Därför behöver vi skydda sjöar och vattendrag från skräp och kemikalier. I ett vattenverk renas vatten innan det blir dricksvatten, och avloppsvatten renas innan det släpps ut. Om vi sparar vatten hemma, till exempel genom kortare duschar, räcker resurserna längre, särskilt under torra perioder. Moln och regn är alltså delar av samma resa.",
+    "questions": [
+      {
+        "q": "Vad händer när solen värmer vatten i hav och sjöar?",
+        "options": [
+          "Det fryser till is",
+          "Det avdunstar och blir vattenånga",
+          "Det blir till sand"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan nederbörd vara enligt texten?",
+        "options": [
+          "Regn, snö eller hagel",
+          "Bara dimma",
+          "Bara åska"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför är det viktigt att skydda sjöar och vattendrag från kemikalier?",
+        "options": [
+          "För att samma vatten används om och om igen",
+          "För att moln annars försvinner",
+          "För att solen annars slocknar"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Om det är en lång torr period, vad kan hjälpa resurserna att räcka längre?",
+        "options": [
+          "Längre duschar",
+          "Spara vatten hemma",
+          "Lämna kranen rinnande"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet \"avdunstar\" i texten?",
+        "options": [
+          "Försvinner som ånga",
+          "Blir tyngre",
+          "Blir till sten"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudsakliga syfte?",
+        "options": [
+          "Att förklara hur vattnets kretslopp fungerar",
+          "Att berätta en saga om moln",
+          "Att beskriva en särskild sjö"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak4-bibliotek-002",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "bibliotek",
+    "title": "Så fungerar ett bibliotek",
+    "text": "Ett bibliotek är mer än en plats med hyllor. Det är en tjänst där många kan dela på böcker, filmer och ibland spel. När du lånar något registreras det i bibliotekets system, så att man vet vem som har det och när det ska lämnas tillbaka.\n\nBöckerna ordnas ofta efter ämne och författare. I barnavdelningen kan de stå efter färg eller svårighetsgrad, men i större avdelningar används ofta ett nummersystem. Skyltar hjälper dig att hitta rätt. Bibliotekarierna kan också tipsa om böcker och visa hur man söker i datorn.\n\nPå ett bibliotek finns regler som gör att alla kan trivas. Man pratar lågmält, lämnar tillbaka i tid och hanterar material försiktigt. Om något blir försenat kan du ibland få en påminnelse, och i vissa kommuner kan man behöva betala en liten avgift.\n\nBiblioteket erbjuder ofta mer än utlån. Där kan man läsa tidningar, plugga, gå på sagostund eller använda en skrivare. Många bibliotek har även e-böcker som du laddar ner hemifrån.\n\nFör att nya titlar ska kunna köpas in får biblioteket en budget från kommunen. Personal väljer vad som ska finnas, men lyssnar också på önskemål från besökare. När en bok är trasig lagas den eller tas bort, så att hyllorna fortsätter vara trygga och lättlästa.",
+    "questions": [
+      {
+        "q": "Vad händer när du lånar något på biblioteket?",
+        "options": [
+          "Det registreras i bibliotekets system",
+          "Det får du alltid behålla",
+          "Det skickas direkt till ett annat land"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan hjälpa dig att hitta rätt bland hyllorna?",
+        "options": [
+          "Skyltar och bibliotekarier",
+          "Endast tur",
+          "Bara högtalare"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför finns det regler på biblioteket enligt texten?",
+        "options": [
+          "För att alla ska kunna trivas",
+          "För att böckerna ska bli tyngre",
+          "För att ingen ska få läsa"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan hända om något blir försenat?",
+        "options": [
+          "Du kan få en påminnelse",
+          "Biblioteket stänger för alltid",
+          "Boken blir automatiskt ny"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"budget\" i texten?",
+        "options": [
+          "En plan för pengar",
+          "En sorts bokhylla",
+          "Ett väderfenomen"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens syfte?",
+        "options": [
+          "Att förklara vad ett bibliotek erbjuder och hur det fungerar",
+          "Att övertala alla att köpa böcker",
+          "Att beskriva en enda biblioteksbok"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak4-bin-003",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "bin och pollinering",
+    "title": "Bin och blommor samarbetar",
+    "text": "Bin är insekter som samlar nektar och pollen från blommor. Nektar är en söt vätska som bina använder som energi, och pollen innehåller ämnen som behövs för att larverna ska växa. När ett bi landar i en blomma fastnar pollen på kroppen.\n\nNär bina flyger vidare till nästa blomma följer en del pollen med. Det kan hamna på blommans pistill, och då kan växten bilda frön och frukter. Den processen kallas pollinering. Många växter i naturen och i odlingar är beroende av pollinatörer som bin, humlor och fjärilar.\n\nBina arbetar inte ensamma. I ett bisamhälle finns en drottning som lägger ägg, arbetare som samlar mat och tar hand om larver, och drönare som kan para sig med drottningen. På sommaren kan ett samhälle bestå av tiotusentals bin.\n\nDu kan hjälpa pollinatörer genom att plantera olika blommor som blommar vid olika tider, och genom att låta en liten del av gräsmattan bli äng. Då finns mat under en längre period.\n\nDet är också bra att undvika bekämpningsmedel där det går, eftersom vissa ämnen kan skada insekter. Vatten i en grund skål med några stenar ger en säker plats att dricka. Ett bihotell av trä med borrade hål kan hjälpa solitära bin att lägga ägg.",
+    "questions": [
+      {
+        "q": "Vad samlar bin från blommor?",
+        "options": [
+          "Nektar och pollen",
+          "Sand och grus",
+          "Bara vatten"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan hända när pollen hamnar på en blommans pistill?",
+        "options": [
+          "Växten kan bilda frön och frukter",
+          "Blomman blir en sten",
+          "Pollen försvinner alltid direkt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför är pollinering viktig för många växter?",
+        "options": [
+          "För att de annars inte kan få frön och frukter",
+          "För att de annars blir högre",
+          "För att de annars slutar vara gröna"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats passar bäst om du planterar blommor som blommar vid olika tider?",
+        "options": [
+          "Pollinatörer kan hitta mat under längre tid",
+          "Det blir alltid kallare ute",
+          "Alla bin flyttar direkt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"bekämpningsmedel\" i texten?",
+        "options": [
+          "Medel som används för att ta bort oönskade skadedjur eller växter",
+          "Ett slags frö",
+          "En typ av bikupa"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens syfte?",
+        "options": [
+          "Att förklara hur bin hjälper växter och hur vi kan hjälpa bin",
+          "Att berätta en spökhistoria om insekter",
+          "Att beskriva en enda blomma i detalj"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak4-atervinning-004",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "återvinning",
+    "title": "Varför vi sorterar avfall",
+    "text": "Återvinning betyder att material används igen i stället för att slängas. När du sorterar hemma kan papper, plast, glas och metall bli nya produkter. Det sparar ofta energi och råvaror, eftersom man inte behöver ta fram lika mycket nytt material från naturen.\n\nPapper görs av träfibrer. Om pappret är rent kan det malas ner i vatten och bli massa som pressas till nytt papper. Glas kan smältas om många gånger utan att kvaliteten försämras, men olika färger måste hållas isär. Metall kan också smältas och formas på nytt.\n\nPlast är svårare eftersom det finns många sorter. Därför är det viktigt att lägga rätt plast i rätt kärl och att inte blanda med matrester. Matavfall kan i vissa kommuner bli biogas eller jord.\n\nAllt går inte att återvinna. Vissa saker måste brännas eller läggas på deponi. Genom att använda saker längre, låna, laga eller köpa begagnat minskar man mängden avfall. Återvinning är alltså en del av ett större arbete för att hushålla med resurser.\n\nNär du sorterar hjälper du också dem som jobbar på återvinningsstationen, eftersom mindre skräp hamnar fel. Farligt avfall, som batterier och färg, lämnas på särskilda platser. Då minskar risken att ämnen läcker ut i mark och vatten.",
+    "questions": [
+      {
+        "q": "Vilka material nämns som sådant man kan sortera hemma?",
+        "options": [
+          "Papper, plast, glas och metall",
+          "Bara trä och sten",
+          "Bara tyg och ull"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför måste olika färger av glas ofta hållas isär?",
+        "options": [
+          "För att återvinningen ska fungera bättre",
+          "För att glas annars blir mjukare att bära",
+          "För att färgerna ska byta plats"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan plast vara svårare att återvinna än glas och metall?",
+        "options": [
+          "Det finns många olika sorter",
+          "Plast kan aldrig smältas",
+          "Plast finns bara i havet"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats kan du dra om du lagar och använder saker längre?",
+        "options": [
+          "Mängden avfall kan minska",
+          "Allt avfall försvinner direkt",
+          "Man behöver aldrig sortera mer"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"deponi\" i texten?",
+        "options": [
+          "En plats där avfall läggs och förvaras",
+          "En sorts återvinningskärl i köket",
+          "Ett verktyg för att mala papper"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudsakliga syfte?",
+        "options": [
+          "Att förklara vad återvinning är och varför sortering spelar roll",
+          "Att berätta om en person som bygger en soptunna",
+          "Att göra reklam för en särskild produkt"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak4-kartor-005",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "kartor",
+    "title": "Att läsa en karta",
+    "text": "En karta är en bild av ett område sedd uppifrån. Den visar var saker ligger och hur man kan ta sig mellan platser. För att kartan ska få plats på ett papper måste verkligheten göras mindre. Det kallas skala. Om skalan är 1:10 000 betyder det att en centimeter på kartan är 10 000 centimeter i verkligheten, alltså 100 meter.\n\nKartor använder symboler. En blå linje kan visa en å, en svart linje kan visa en väg och en grön yta kan visa skog. Ofta finns en teckenförklaring som berättar vad symbolerna betyder. Kompassen på kartan visar väderstrecken, så att du kan orientera dig. På många kartor är norr uppåt.\n\nI dag finns både papperskartor och digitala kartor i mobilen. Digitala kartor kan räkna ut en väg och visa var du är med hjälp av satelliter. Samtidigt kan en papperskarta vara bra när batteriet tar slut eller när du vill få en överblick. Att kunna läsa en karta hjälper dig att planera och hitta fram.\n\nPå orienteringskartor finns höjdkurvor som visar om terrängen är brant eller platt. Ju tätare linjerna ligger, desto brantare är det. I en stadskarta kan du i stället se kvarter och adresser. Genom att jämföra kartan med omgivningen tränar du din lokalsinne.",
+    "questions": [
+      {
+        "q": "Vad kallas det när verkligheten görs mindre på en karta?",
+        "options": [
+          "Skala",
+          "Skugga",
+          "Skärm"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad berättar en teckenförklaring på en karta?",
+        "options": [
+          "Vad symbolerna betyder",
+          "Hur gammal kartan är",
+          "Vilken musik som passar"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan en papperskarta vara bra ibland, enligt texten?",
+        "options": [
+          "När batteriet tar slut eller när man vill få överblick",
+          "För att den alltid visar exakt var du är utan hjälp",
+          "För att den inte har några symboler"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan du dra för slutsats om höjdkurvor ligger tätt?",
+        "options": [
+          "Terrängen är brant",
+          "Terrängen är helt platt",
+          "Det finns mer vatten där"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"orientera\" i texten?",
+        "options": [
+          "Hitta riktning och förstå var man är",
+          "Måla med färg",
+          "Bygga en bro"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens syfte?",
+        "options": [
+          "Att förklara vad en karta är och hur man kan använda den",
+          "Att berätta om en resa utan karta",
+          "Att beskriva ett speciellt kvarter"
+        ],
+        "correct": 0
+      }
+    ]
   }
 ]
