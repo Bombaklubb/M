@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backup files (keeping these in git for download)
+# *.zip
+# library-backup-*.json
