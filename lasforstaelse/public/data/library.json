@@ -11318,5 +11318,360 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "gy-uni-001",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "vetenskapliga modeller och osäkerhet",
+    "title": "När en modell blir en värld",
+    "text": "I många vetenskaper används modeller för att förstå sådant som är för stort, för komplext eller för svårt att observera direkt. En klimatmodell sammanfattar processer i atmosfär och hav. En ekonomisk modell beskriver hur människor kan reagera på priser och regler. En epidemiologisk modell uppskattar hur smitta kan spridas mellan grupper. Gemensamt är att modeller alltid är förenklingar: de väljer bort detaljer för att göra samband synliga.\n\nEtt vanligt missförstånd är att modeller antingen är \"sanna\" eller \"falska\". I praktiken bedöms modeller ofta efter ändamål. En förenklad modell kan vara utmärkt för att pröva en idé, men otillräcklig för att fatta beslut med stora konsekvenser. Därför blir frågan inte bara hur väl modellen passar historiska data, utan också vilka antaganden som bär upp den, och vilka typer av fel den riskerar att göra.\n\nAntaganden kan vara öppna eller dolda. Öppna antaganden är sådant som står i texten: vilka variabler som ingår, vilka funktioner som används, hur data har samlats in. Dolda antaganden uppstår när en modell byggs in i en rutin: när standardvärden accepteras utan diskussion, när en viss mätmetod tas för given, eller när en förenkling råkar stämma för ett område men sedan förs över till ett annat. I sådana fall kan modellen börja fungera som en \"tyst norm\", där det som inte ryms i modellen också riskerar att framstå som oviktigt.\n\nOsäkerhet är inte bara brist på kunskap; den kan vara en egenskap hos systemet. Vissa processer är känsliga för små skillnader i startvillkor. Andra påverkas av händelser som inte går att förutsäga i detalj, men där man ändå kan uppskatta sannolikheter. Därför skiljer forskare ofta mellan mätosäkerhet (hur bra vi kan mäta), modell-osäkerhet (hur väl modellen fångar mekanismer), och scenario-osäkerhet (vilka framtida förutsättningar som faktiskt kommer att gälla).\n\nNär modeller används i policy blir kommunikationen avgörande. Ett intervall kan uppfattas som tvekan, trots att det kan vara ett uttryck för hederlighet. Samtidigt kan ett exakt tal uppfattas som trygghet, trots att det kan bygga på starka antaganden. Ett sätt att minska risken för feltolkning är att redovisa känslighetsanalyser: hur resultatet förändras om antaganden justeras. Ett annat är att använda flera modeller och jämföra deras slutsatser. Om olika modeller pekar åt samma håll kan man få mer robusta slutsatser, men man måste också fråga om modellerna delar samma blinda fläck.\n\nTill sist finns en normativ dimension: modeller kan påverka vad som räknas som rimligt, möjligt och prioriterat. Att förstå en modell innebär därför inte bara att läsa dess ekvationer eller kod, utan också att förstå dess syfte, dess begränsningar och dess sociala sammanhang.",
+    "word_count": 561,
+    "questions": [
+      {
+        "q": "Vilken tolkning ligger närmast textens syn på vad som avgör om en modell är \"bra\"?",
+        "options": [
+          "Att den är användbar för ett visst syfte och att antagandena är tydliga",
+          "Att den alltid kan ge ett enda exakt värde",
+          "Att den beskriver verkligheten i alla detaljer",
+          "Att den främst är värdefull om den är helt oberoende av data"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Texten antyder att dolda antaganden ofta uppstår när modeller används som rutin. Vilken konsekvens följer mest rimligt av detta?",
+        "options": [
+          "Att jämförelser mellan modeller blir meningslösa",
+          "Att modeller blir mer neutrala över tid",
+          "Att viktiga fenomen kan osynliggöras om de inte passar in i modellens struktur",
+          "Att osäkerhet kan elimineras genom standardvärden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan ett exakt tal ibland skapa en falsk känsla av trygghet enligt textens resonemang?",
+        "options": [
+          "För att exakta tal kan dölja att resultatet vilar på starka antaganden",
+          "För att intervall aldrig är vetenskapliga",
+          "För att exakta tal alltid kommer från dåliga mätningar",
+          "För att känslighetsanalyser alltid ger samma resultat"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken distinktion mellan osäkerhetstyper används i texten för att visa att osäkerhet kan ha olika källor?",
+        "options": [
+          "Kortsiktig osäkerhet, långsiktig osäkerhet, historisk osäkerhet",
+          "Politisk osäkerhet, moralisk osäkerhet, teknisk osäkerhet",
+          "Lokala fel, globala fel, slumpfel",
+          "Mätosäkerhet, modell-osäkerhet, scenario-osäkerhet"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Texten nämner att flera modeller kan ge mer robusta slutsatser. Vilken invändning framhålls samtidigt?",
+        "options": [
+          "Att flera modeller alltid motsäger varandra",
+          "Att modellerna kan dela samma blinda fläck även om de verkar oberoende",
+          "Att policy aldrig bör använda modeller",
+          "Att känslighetsanalys inte går att göra med flera modeller"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket påstående sammanfattar bäst textens normativt orienterade poäng om modeller?",
+        "options": [
+          "Modeller kan forma uppfattningar om vad som är rimligt och därmed påverka beslut",
+          "Modeller är främst ett pedagogiskt verktyg utan praktiska konsekvenser",
+          "Modeller påverkar endast forskning, inte samhälleliga prioriteringar",
+          "Modeller är värdeneutrala om de är matematiskt formulerade"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "gy-uni-002",
+    "grade": 10,
+    "genre": "argumenterande",
+    "theme": "stadsplanering och förtätning",
+    "title": "Förtätning: lösning, risk eller både och?",
+    "text": "Förtätning, alltså att bygga fler bostäder och funktioner inom redan bebyggda områden, lyfts ofta fram som ett svar på bostadsbrist och klimatutmaningar. Idén bygger på att kortare avstånd kan minska bilberoende och att befintlig infrastruktur utnyttjas effektivare. Samtidigt väcker förtätning frågor om vilka värden som går förlorade när tomrum, grönområden och låga hus ersätts av högre och tätare bebyggelse.\n\nEtt argument för förtätning är att staden kan bli mer blandad. När bostäder, arbetsplatser och service ligger nära varandra kan fler vardagsresor ske till fots, med cykel eller kollektivt. Detta kan i sin tur stärka lokala centrum och skapa större underlag för skolor, kultur och handel. Dessutom kan nybyggnation i attraktiva lägen minska trycket på att expandera utåt, vilket annars riskerar att ta mark i anspråk och öka transportbehov.\n\nMotargumentet är att förtätning inte automatiskt leder till minskade utsläpp eller ökad social hållbarhet. Om nybyggda lägenheter blir mycket dyra kan de locka hushåll som redan har goda resurser, medan andra trängs undan. Då kan förtätningen bidra till segregation snarare än blandning. Därtill kan fler invånare på samma yta innebära högre belastning på parker, skolor och vård om investeringar inte följer med. En stad kan bli \"tät\" men ändå upplevas som splittrad, om människor inte har råd att delta i den.\n\nEn särskilt svår fråga gäller grönska. Små parker, gårdar och träd längs gator kan uppfattas som triviala jämfört med bostadsbehov, men de påverkar temperatur, dagvatten och välbefinnande. Om förtätning tar bort många små gröna ytor kan den samlade effekten bli stor, särskilt i värmeböljor. Samtidigt kan förtätning möjliggöra större, mer sammanhängande parker om planeringen prioriterar det. Konflikten handlar alltså inte bara om \"bygga eller inte bygga\", utan om vilken typ av grönstruktur man vill skapa.\n\nEn rimlig ståndpunkt är därför att förtätning bör ses som ett verktyg, inte som en ideologi. Den kan vara klimatmässigt och ekonomiskt rationell, men bara om den kombineras med krav på social blandning, tillräcklig service och långsiktig grönplanering. Det innebär att beslut inte kan reduceras till antalet nya bostäder. Man behöver också fråga: vilka får bo där, vilka vardagsmiljöer skapas, och vilka konsekvenser uppstår när stadens \"mellanrum\" förändras?\n\nOm förtätning genomförs utan dessa frågor riskerar den att bli en teknisk lösning på ett politiskt problem. Men om den genomförs med tydliga mål och uppföljning kan den bidra till en stad som både rymmer fler och fungerar bättre.",
+    "word_count": 552,
+    "questions": [
+      {
+        "q": "Vilken slutsats ligger närmast textens huvudtes om förtätning?",
+        "options": [
+          "Förtätning är ett verktyg vars effekter beror på villkor och genomförande",
+          "Förtätning saknar betydelse för klimatfrågan",
+          "Förtätning är i grunden skadlig för social hållbarhet",
+          "Förtätning bör alltid prioriteras framför utbyggnad utåt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur används grönskefrågan i texten för att fördjupa argumentationen?",
+        "options": [
+          "Som ett sätt att visa att effekter kan vara kumulativa och systemiska, inte bara lokala",
+          "Som bevis för att förtätning alltid leder till större parker",
+          "Som ett argument för att service inte behöver planeras samtidigt",
+          "Som ett exempel på att estetiska frågor alltid väger tyngre än bostadsbehov"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket antagande måste vara sant för att argumentet om minskat bilberoende ska hålla i praktiken?",
+        "options": [
+          "Att bostadspriserna automatiskt sjunker när man bygger tätare",
+          "Att människor alltid föredrar att gå oavsett avstånd",
+          "Att funktionsblandning och kollektivtrafik faktiskt fungerar och är tillgängliga",
+          "Att nybyggnation sker i helt bilfria zoner"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Texten varnar för att förtätning kan bli en teknisk lösning på ett politiskt problem. Vad syftar detta mest på?",
+        "options": [
+          "Att grönplanering inte går att mäta",
+          "Att byggteknik är för komplicerad för kommuner",
+          "Att klimatfrågan inte har politiska dimensioner",
+          "Att fokus på antal bostäder kan dölja frågor om fördelning, tillgänglighet och livsmiljö"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilket av följande är det tydligaste exemplet på en potentiell målkonflikt i texten?",
+        "options": [
+          "Att cykling kräver fler bilar",
+          "Att fler invånare kan ge underlag för service men också öka belastningen om investeringar uteblir",
+          "Att parker bara behövs i ytterområden",
+          "Att högre hus alltid ger mer skugga"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Om man följer textens resonemang, vilken typ av evidens skulle vara mest relevant vid en utvärdering av en förtätningssatsning?",
+        "options": [
+          "Enbart hur höga husen är i genomsnitt",
+          "Både sociala indikatorer (tillgänglighet, blandning) och miljöindikatorer (grönstruktur, resvanor) över tid",
+          "Enbart hur många bostäder som färdigställts",
+          "Enbart invånarnas preferenser före byggstart"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "gy-uni-003",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "biologisk mångfald och mätproblem",
+    "title": "Att räkna naturen: vad betyder \"mångfald\" egentligen?",
+    "text": "Biologisk mångfald låter som ett ord som borde vara lätt att förstå: fler arter betyder mer mångfald. Men i forskning och förvaltning är begreppet mer mångtydigt. Mångfald kan avse hur många arter som finns i ett område, hur jämnt individerna är fördelade mellan arter, hur olika arterna är i sina funktioner, eller hur stor genetisk variation som finns inom en art. Vilken aspekt man väljer påverkar både diagnosen av ett problem och vilka åtgärder som framstår som rimliga.\n\nEtt klassiskt mått är artantal, ibland kompletterat med index som väger in fördelningen mellan arter. Två skogar kan ha lika många arter, men i den ena dominerar en enda art nästan helt, medan den andra har en jämnare blandning. För många ekologiska processer spelar dominansen roll: om ett fåtal arter bär stora delar av produktionen kan systemet bli mer sårbart om just de arterna påverkas av sjukdom eller klimat.\n\nFunktionell mångfald handlar om skillnader i egenskaper: vilka arter som pollinerar, vilka som binder kväve, vilka som bryter ner dött material. Två arter kan vara olika i namn men göra ungefär samma \"jobb\" i ekosystemet. Då kan förlusten av den ena ibland kompenseras av den andra. Men kompensation är inte garanterad; den beror på sammanhang, tidsskala och om arterna faktiskt reagerar olika på störningar. Funktionell mångfald används ofta för att koppla mångfald till ekosystemtjänster, men risken är att man börjar värdera arter enbart efter mätbara nyttor.\n\nGenetisk mångfald hamnar ofta i skymundan eftersom den är svårare att observera utan laboratorieanalys. Ändå kan den vara avgörande för en arts anpassningsförmåga. Små, isolerade populationer kan tappa variation genom inavel och genetisk drift, vilket kan göra dem mindre robusta när miljön förändras. Ur ett bevarandeperspektiv innebär det att två populationer av samma art inte alltid är utbytbara.\n\nMätproblem uppstår också genom skala. Ett område kan se artfattigt ut om man mäter på en liten yta men artrikt på landskapsnivå om miljöerna varierar. Dessutom påverkar provtagningsmetoder resultatet: nattaktiva arter missas lätt i daginventeringar, och sällsynta arter kräver ofta lång tid för att upptäckas. När man jämför trender över tid måste man därför fråga om metoderna är jämförbara, eller om förändringen delvis är en mätartefakt.\n\nAtt tala om biologisk mångfald utan att specificera vilken dimension man menar kan därför leda till förenklade slutsatser. En genomtänkt analys kräver att man kopplar måttet till frågan: vill man förstå resiliens mot störningar, bevara evolutionspotential, eller prioritera livsmiljöer med många specialister? Först då blir \"mångfald\" ett verktyg snarare än en slogan.",
+    "word_count": 566,
+    "questions": [
+      {
+        "q": "Vilken central poäng driver texten om begreppet biologisk mångfald?",
+        "options": [
+          "Att genetisk variation saknar betydelse i bevarandearbete",
+          "Att biologisk mångfald alltid kan reduceras till artantal",
+          "Att biologisk mångfald är entydigt och därför lätt att mäta",
+          "Att biologisk mångfald har flera dimensioner och att valet av mått påverkar slutsatser och åtgärder"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Texten beskriver att två skogar kan ha samma artantal men olika dominansmönster. Vad implicerar detta för riskbedömning?",
+        "options": [
+          "Att artantal bara är relevant i jordbruksmiljöer",
+          "Att sårbarhet kan bero på om systemet bärs av få nyckelarter",
+          "Att dominans aldrig påverkar ekologiska processer",
+          "Att risk alltid är lägre i en jämnt fördelad skog oavsett kontext"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken invändning förs fram mot en alltför snäv koppling mellan funktionell mångfald och ekosystemtjänster?",
+        "options": [
+          "Att funktionell mångfald inte går att mäta",
+          "Att kompensation mellan arter alltid är fullständig",
+          "Att ekosystemtjänster alltid är identiska med genetisk variation",
+          "Att man riskerar att värdera arter enbart efter mätbara nyttor"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför kan två populationer av samma art enligt texten inte alltid betraktas som utbytbara i bevarandearbete?",
+        "options": [
+          "För att laboratorieanalys gör jämförelser omöjliga",
+          "För att genetisk drift ökar artantalet",
+          "För att artbestämning är godtycklig",
+          "För att genetisk mångfald och anpassningsförmåga kan skilja sig mellan populationer"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad är den mest rimliga innebörden av att en trend kan vara en \"mätartefakt\" i textens sammanhang?",
+        "options": [
+          "Att skala saknar betydelse i ekologisk analys",
+          "Att arter medvetet flyttar för att undvika inventering",
+          "Att observerade förändringar delvis kan bero på ändrade metoder snarare än verklig ekologisk förändring",
+          "Att alla mätningar alltid är fel"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket val av frågeställning skulle enligt textens logik mest motivera ett fokus på genetisk mångfald?",
+        "options": [
+          "Att uppskatta antalet arter i ett naturreservat under en dag",
+          "Att jämföra blomningstid mellan två växter",
+          "Att räkna hur många individer som syns längs en stig",
+          "Att bedöma en arts långsiktiga anpassningsförmåga vid snabb miljöförändring"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "gy-uni-004",
+    "grade": 10,
+    "genre": "argumenterande",
+    "theme": "arbetsmarknad och plattformsarbete",
+    "title": "Frihet och risk i plattformsekonomin",
+    "text": "Plattformsarbete, där uppdrag förmedlas via digitala appar och webbplatser, beskrivs ofta med två konkurrerande berättelser. Den ena handlar om flexibilitet: människor kan välja när de vill arbeta, kombinera studier med inkomster och snabbt hitta uppdrag. Den andra handlar om osäkerhet: otydliga anställningsrelationer, varierande inkomster och svagt socialt skydd. Båda perspektiven fångar något verkligt, men de riskerar också att dölja hur villkoren skapas i praktiken.\n\nEtt viktigt analytiskt steg är att skilja mellan formell frihet och faktisk frihet. Formellt kan en förare eller bud tacka nej till uppdrag. Men om ersättningen är låg, konkurrensen hög och algoritmen belönar snabb respons kan utrymmet att säga nej bli litet. Då blir flexibilitet mer en skyldighet att vara ständigt tillgänglig än en möjlighet att planera sin tid. På samma sätt kan friheten att \"vara egen\" innebära att individen bär kostnader för utrustning, väntetid och risker, utan att ha samma förhandlingsstyrka som ett företag.\n\nFörespråkare menar att plattformar sänker trösklar in på arbetsmarknaden. Det kan stämma för personer som behöver en extra inkomst eller som har svårt att få ett traditionellt jobb. Men om plattformsarbete blir ett permanent alternativ för många kan det också pressa villkor i andra delar av ekonomin, särskilt om företag kan jämföra kostnader och välja den billigaste formen av arbetskraft. Här uppstår en klassisk kollektiv handlingsproblematik: en individ kan vinna på att acceptera sämre villkor i stunden, men om många gör det kan nivån på villkoren sjunka för alla.\n\nReglering diskuteras ofta som antingen ett hot mot innovation eller ett skydd för arbetstagare. En mer nyanserad syn är att reglering kan utformas för att bevara vissa fördelar samtidigt som risker minskar. Exempel är tydligare ansvar för arbetsmiljö, transparens kring hur algoritmer sätter priser och prioriterar uppdrag, samt möjligheter till kollektiv förhandling även när arbetet är uppdelat i små uppdrag. Motargumentet är att för mycket standardisering kan minska variation och göra det svårare för människor att välja olika nivåer av risk och belöning.\n\nDen avgörande frågan är därför inte om plattformsekonomin är \"bra\" eller \"dålig\", utan vilka institutioner som gör dess löften trovärdiga. Flexibilitet är värdefull först när den inte bygger på oförutsägbarhet och när den som tar risk också har möjlighet att påverka villkoren. Utan sådana mekanismer riskerar plattformsarbete att skapa en arbetsmarknad där frihet främst betyder att ansvaret flyttas från organisationer till individer.",
+    "word_count": 551,
+    "questions": [
+      {
+        "q": "Vilken distinktion använder texten för att problematisera påståendet att plattformsarbete är flexibelt?",
+        "options": [
+          "Skillnaden mellan formell frihet och faktisk frihet",
+          "Skillnaden mellan heltid och deltid",
+          "Skillnaden mellan offentligt och privat ägande",
+          "Skillnaden mellan utbildning och erfarenhet"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur beskrivs algoritmens roll i relation till arbetstagarens handlingsutrymme?",
+        "options": [
+          "Som en neutral kalender som inte påverkar beteenden",
+          "Som ett verktyg som alltid höjer ersättningen vid låg efterfrågan",
+          "Som en garanti för stabil inkomst",
+          "Som en mekanism som kan göra nej-sägande kostsamt genom belöningar och prioriteringar"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilket problem avses med \"kollektiv handlingsproblematik\" i texten?",
+        "options": [
+          "Att människor inte kan kombinera flera jobb",
+          "Att individuellt rationella val kan leda till sämre villkor på systemnivå",
+          "Att kollektivtrafik alltid är ineffektiv",
+          "Att plattformar inte kan skala upp tekniskt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket av följande exempel ligger närmast textens idé om \"nyanserad reglering\"?",
+        "options": [
+          "Total avreglering för att maximera innovation",
+          "Transparenskrav kring prissättning och prioritering samt tydligare arbetsmiljöansvar",
+          "Förbud mot alla appar som förmedlar uppdrag",
+          "Enbart informationskampanjer om privatekonomi"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket är textens starkaste skäl till att frågan inte kan reduceras till om plattformsekonomin är \"bra\" eller \"dålig\"?",
+        "options": [
+          "För att tekniken utvecklas för snabbt för att diskuteras",
+          "För att alla arbetstagare föredrar osäkerhet",
+          "För att effekterna beror på vilka institutioner och regler som formar incitament och riskfördelning",
+          "För att plattformsarbete är identiskt med traditionellt arbete"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Om man accepterar textens resonemang, vilken indikator skulle bäst pröva om flexibiliteten är \"trovärdig\" för arbetstagare?",
+        "options": [
+          "Hur snabbt appen laddar på äldre telefoner",
+          "Hur ofta plattformen byter grafisk design",
+          "I vilken grad arbetstagare kan förutse inkomster och påverka villkor utan att straffas av systemet",
+          "Hur många uppdrag som finns i appen per dag"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "gy-uni-005",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "AI-etik och ansvar",
+    "title": "Vem bär ansvaret när beslut automatiseras?",
+    "text": "När artificiell intelligens används för att stödja eller fatta beslut i exempelvis rekrytering, kreditbedömning eller sjukvårdsprioritering uppstår en återkommande fråga: vem bär ansvaret om utfallet blir fel eller orättvist? I traditionella beslutskedjor kan man ofta identifiera en beslutsfattare och en motivering. I automatiserade system kan ansvaret bli mer utspritt, eftersom flera aktörer påverkar resultatet: de som samlar in data, de som designar modellen, de som väljer mål och trösklar, och de som implementerar systemet i en verksamhet.\n\nEn vanlig lösning är att säga att människan alltid har ansvar eftersom systemet bara är ett verktyg. Men detta blir otillräckligt om arbetsprocessen är sådan att människor i praktiken följer systemets rekommendationer nästan rutinmässigt. Då uppstår en risk för ansvarsdiffusion: var och en hänvisar till någon annan. Användaren kan säga att modellen \"sa så\", utvecklaren kan säga att användaren borde ha kontrollerat, och organisationen kan säga att den följde branschpraxis. Resultatet blir att den drabbade får svårt att få upprättelse.\n\nEtt annat förslag är att lägga ansvar på den som har störst kontroll över systemets effekter. Kontroll kan dock tolkas på olika sätt. Utvecklaren kan kontrollera modellens arkitektur och träningsdata, men kanske inte hur den används. Organisationen kan kontrollera processerna, men inte alla tekniska detaljer. Dessutom kan leverantörer vara beroende av underleverantörer, vilket gör att ansvarskedjan blir lång. Därför talar man ibland om delat ansvar: att flera aktörer samtidigt har skyldigheter, men på olika nivåer.\n\nFör att delat ansvar inte ska bli ett sätt att undvika ansvar krävs mekanismer som gör ansvar praktiskt. Transparens är en sådan mekanism, men transparens är inte bara att publicera kod. I många sammanhang behövs begriplighet: att man kan förklara vilka faktorer som påverkat ett beslut och hur osäkerheten ser ut. Man behöver också spårbarhet, så att man i efterhand kan se vilka data och versioner som användes. Slutligen behövs möjligheter till omprövning, där den som påverkas kan få beslutet granskat av en mänsklig instans.\n\nSamtidigt finns en avvägning mellan insyn och andra värden. För mycket detaljinsyn kan göra system mer sårbara för manipulation eller hota integritet om känslig data avslöjas. Dessutom kan vissa modeller vara svåra att förklara i vardagliga termer utan att man förenklar bort det som är relevant. Ett praktiskt fokus blir därför att skapa ansvarsfördelning som är proportionerlig: starkare krav när besluten är mer ingripande, och tydligare skydd när fel riskerar att drabba redan utsatta grupper.\n\nI grunden handlar ansvarsfrågan om hur vi vill att makt ska utövas i komplexa organisationer. Automatisering kan effektivisera, men den kan också förändra relationen mellan beslutsfattare och medborgare. Att diskutera ansvar är därför inte en teknisk detalj, utan en del av hur man upprätthåller legitimitet i beslutsfattandet.",
+    "word_count": 578,
+    "questions": [
+      {
+        "q": "Vilken är textens mest centrala förklaring till varför ansvar blir svårt att placera i AI-stödda beslut?",
+        "options": [
+          "Att AI alltid är exakt och därför saknar felkällor",
+          "Att ansvaret fördelas över flera aktörer och steg i kedjan",
+          "Att människor inte längre påverkas av beslut",
+          "Att data inte behövs för AI-modeller"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad innebär \"ansvarsdiffusion\" i textens argumentation?",
+        "options": [
+          "Att ansvaret blir tydligare när fler aktörer deltar",
+          "Att olika aktörer kan hänvisa bort ansvar till varandra så att ingen tar fullt ansvar i praktiken",
+          "Att ansvar bara gäller i offentlig sektor",
+          "Att ansvaret koncentreras till en person"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Texten problematiserar idén att lägga ansvar på den med \"störst kontroll\". Vilket är det starkaste skälet som ges?",
+        "options": [
+          "Att organisationer saknar processer",
+          "Att kontroll alltid ligger hos den drabbade personen",
+          "Att olika aktörer har olika slags kontroll och att kedjor med underleverantörer gör ansvarslinjen lång",
+          "Att kontroll är en entydig och lätt mätbar storhet"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken kombination av mekanismer framställs som särskilt viktig för att göra delat ansvar praktiskt meningsfullt?",
+        "options": [
+          "Total hemlighållning för att undvika manipulation",
+          "Marknadsföring, varumärkesbyggande och ökad försäljning",
+          "Begriplighet, spårbarhet och möjligheter till omprövning",
+          "Transparens i form av publicerad källkod och inga andra krav"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken avvägning lyfter texten fram som ett skäl till att transparens inte är en enkel lösning?",
+        "options": [
+          "Att insyn kan kollidera med integritet och säkerhet samt att förklaringar kan bli förenklade",
+          "Att manipulation omöjliggörs av offentlig kod",
+          "Att insyn alltid gör modeller mer rättvisa",
+          "Att integritet bara är relevant i små system"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken tolkning ligger närmast textens avslutande påstående om legitimitet?",
+        "options": [
+          "Hur ansvar organiseras påverkar relationen mellan beslutsfattare och de som berörs, och därmed tilliten",
+          "Legitimitet påverkas inte av hur beslut fattas",
+          "Automatisering gör alltid beslutsprocesser mer demokratiska",
+          "Ansvar i automatiserade beslut är främst en teknisk fråga utan samhällsdimension"
+        ],
+        "correct": 0
+      }
+    ]
   }
 ]
