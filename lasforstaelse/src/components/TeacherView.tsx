@@ -240,7 +240,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                       key={item.grade}
                       className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 text-center"
                     >
-                      <div className="text-2xl font-black text-teal-700">Åk {item.grade}</div>
+                      <div className="text-2xl font-black text-teal-700">{item.grade === 10 ? 'Gymnasiet' : `Åk ${item.grade}`}</div>
                       <div className="text-sm text-teal-600">{item.count} texter</div>
                     </div>
                   ))}

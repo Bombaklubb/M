@@ -26,7 +26,7 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
           <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-bold dark:bg-indigo-900 dark:text-indigo-200">
-            Åk {text.grade === 10 ? 'GY' : text.grade}
+            {text.grade === 10 ? 'Gymnasiet' : `Åk ${text.grade}`}
           </span>
           <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold dark:bg-purple-900 dark:text-purple-200">
             {genreEmoji} {genreLabel}

@@ -69,7 +69,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose }) => {
         <div className="mb-8">
           <h3 className="text-lg font-bold text-slate-700 mb-3">Årskurser</h3>
           <div className="flex flex-wrap gap-2">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((grade) => {
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((grade) => {
               const completed = user.gradesCompleted.includes(grade);
               return (
                 <div
@@ -80,7 +80,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose }) => {
                       : 'bg-slate-100 text-slate-400 border-2 border-slate-200'
                   }`}
                 >
-                  Åk {grade} {completed && '✓'}
+                  {grade === 10 ? 'Gymnasiet' : `Åk ${grade}`} {completed && '✓'}
                 </div>
               );
             })}
