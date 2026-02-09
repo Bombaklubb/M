@@ -10974,5 +10974,355 @@
         "correct": 2
       }
     ]
+  },
+  {
+    "id": "gym-kallkritik-001",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "källkritik",
+    "title": "När information blir en råvara",
+    "text": "Du möter information hela tiden: i flöden, chattar, poddar, sökresultat och rubriker som blinkar förbi. Det kan kännas som att information bara \"finns\", men i praktiken är den ofta en råvara som någon har samlat in, valt ut, paketerat och spridit. Källkritik handlar därför inte bara om att skilja sant från falskt, utan om att förstå hur och varför en uppgift hamnar framför just dig.\n\nEn central fråga är avsändaren. Vem står bakom texten, videon eller bilden? Det kan vara en myndighet, en forskare, en journalist, ett företag eller en privatperson. Avsändare påverkar ofta vad som betonas och vad som utelämnas, även när informationen i sak är korrekt. En annan fråga är syftet: vill någon informera, övertyga, sälja, underhålla eller skapa reaktioner? Syftet kan göra att samma fakta presenteras med olika tonläge eller ur olika vinkel.\n\nSedan finns urvalet. Även ett tillförlitligt material är alltid ett urval av verkligheten. En rapport kan beskriva en trend men inte alla undantag. En nyhetsartikel kan fokusera på konflikt och tempo, medan en forskningsöversikt ofta betonar osäkerheter och metod. Det är därför viktigt att fråga sig vad som saknas: vilka röster hörs inte, vilka mått har inte tagits med, och vilka alternativa förklaringar nämns inte?\n\nTid är en annan dimension. En uppgift kan ha varit rimlig när den publicerades men vara missvisande i dag. Det gäller särskilt statistik, prisuppgifter och rekommendationer. Ett diagram som delas vidare kan vara \"sant\" men ändå felaktigt i sammanhanget om tidsperioden inte syns eller om skalan är vald på ett sätt som förstärker en viss effekt.\n\nI digitala miljöer blir spridningen dessutom en del av budskapet. Algoritmer premierar ofta innehåll som väcker starka känslor och som får många att reagera snabbt. Det betyder inte att allt som sprids mycket är fel, men det gör att man kan behöva bromsa sin första impuls. När något delas med formuleringar som \"de vill inte att du ska veta detta\" eller \"ingen pratar om det här\" är det ofta en signal om att texten försöker skapa en känsla av exklusiv insikt.\n\nEtt praktiskt sätt att arbeta källkritiskt är att jämföra. Hittar du samma uppgift i flera oberoende källor? Finns det en primärkälla, som en originalrapport, ett protokoll eller en inspelad intervju? Om en text hänvisar till \"studier\" utan att kunna peka ut vilka, är det svårt att bedöma kvaliteten. Samtidigt kan även primärkällor behöva tolkas: en studie kan vara liten, gjord i en annan kontext eller ha resultat som ofta överdrivs i populära sammanfattningar.\n\nKällkritik är alltså inte ett misstroende mot allt, utan en metod för att väga sannolikheter och förstå sammanhang. Målet är att kunna säga: \"Det här verkar välgrundat av dessa skäl\" eller \"Det här är osäkert eftersom…\" I en tid när information både kan upplysa och manipulera blir den förmågan en form av vardagskompetens, inte bara ett skolmoment.",
+    "questions": [
+      {
+        "q": "Vilken huvudpoäng driver texten om varför källkritik behövs i vardagen?",
+        "options": [
+          "Att information alltid är falsk tills motsatsen bevisats",
+          "Att information ofta är utvald och presenterad med ett syfte",
+          "Att det är bäst att undvika digitala medier helt",
+          "Att bara experter kan förstå nyheter"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan en uppgift vara \"sann\" men ändå missvisande enligt texten?",
+        "options": [
+          "För att språket alltid lurar läsaren",
+          "För att den delas i fel sammanhang, till exempel utan tidsperiod eller med manipulerad skala",
+          "För att primärkällor aldrig går att lita på",
+          "För att statistik är meningslös"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning ligger närmast textens syn på avsändare och syfte?",
+        "options": [
+          "Om avsändaren har ett syfte blir innehållet automatiskt fel",
+          "Avsändare och syfte kan påverka vad som betonas även när fakta stämmer",
+          "Syfte spelar ingen roll om man läser långsamt",
+          "Endast myndigheter kan ha neutrala syften"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur beskriver texten kopplingen mellan spridning och trovärdighet i digitala miljöer?",
+        "options": [
+          "Mycket spritt innehåll är alltid mest korrekt",
+          "Spridning säger inget alls om kvaliteten och kan ignoreras",
+          "Spridning kan påverkas av känslor och tempo, så man bör inte låta det avgöra sanningshalt",
+          "Algoritmer tar bort allt känslomässigt innehåll"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket av följande exempel passar bäst som en \"varningssignal\" enligt texten?",
+        "options": [
+          "En text som länkar till originalrapporten",
+          "En rubrik som anger datum och källa",
+          "En formulering som antyder hemlig kunskap och att andra vill dölja sanningen",
+          "En artikel som redovisar osäkerheter i metoden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär det i praktiken att \"jämföra\" källor på det sätt som texten föreslår?",
+        "options": [
+          "Att leta efter flera oberoende bekräftelser och helst spåra upp primärkällan",
+          "Att välja den källa som låter mest säker",
+          "Att bara läsa sammanfattningar för att spara tid",
+          "Att räkna hur många som gillat inlägget"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "gym-ai-skola-002",
+    "grade": 10,
+    "genre": "argumenterande",
+    "theme": "AI i skolan",
+    "title": "AI-verktyg i undervisningen: stöd eller genväg?",
+    "text": "Digitala verktyg som kan skriva, sammanfatta och föreslå formuleringar har snabbt blivit vanliga. I skolan väcker de frågor som går bortom teknik: Vad är lärande, vad är prestation och vad räknas som eget arbete? Debatten blir ofta polariserad, som om AI antingen är en räddning eller ett hot. Men det är möjligt att argumentera för en mer praktisk linje: AI kan vara ett stöd, men bara om användningen styrs av tydliga mål, transparens och bedömningar som fångar tänkandet bakom texten.\n\nEtt argument för att använda AI i undervisningen är likvärdighet. Elever har olika förutsättningar: vissa har lätt för struktur, andra fastnar i att komma i gång. Ett verktyg som hjälper med disposition, exempel eller språkgranskning kan sänka tröskeln så att fler faktiskt kan visa sina kunskaper. På samma sätt kan elever som lär sig svenska eller som har läs- och skrivsvårigheter få ett mer rättvist utgångsläge när fokus är innehåll, analys eller problemlösning.\n\nEtt andra argument gäller metakognition, alltså förmågan att tänka om sitt eget tänkande. Om elever får jämföra sina egna utkast med AI-förslag kan de se mönster: vilka ord är otydliga, var brister logiken, vilka påståenden saknar belägg? Använt på det sättet kan verktyget fungera som en spegel. Det kan också tränas som källkritik: varför föreslår verktyget just detta, vilka antaganden gör det och vilka perspektiv saknas?\n\nSamtidigt finns risker. En uppenbar risk är att elever använder AI som genväg och lämnar in texter som de inte förstår. Då blir bedömningen inte en mätning av kunskap utan av förmågan att \"beställa\" en text. En mer subtil risk är att elever gradvis tappar tålamodet att brottas med svåra uppgifter. När ett svar kan genereras snabbt kan den produktiva frustrationen, där man prövar idéer och gör om, ersättas av yta och tempo.\n\nDet finns också en etisk och praktisk dimension: verktyg kan göra fel, hitta på källor eller ge förslag som låter rimliga men saknar grund. Om elever inte tränas i att kontrollera påståenden kan AI förstärka en falsk säkerhet. Dessutom kan otydliga regler skapa stress: om elever inte vet vad som är tillåtet kan de antingen avstå från stöd som vore rimligt, eller ta risker som senare leder till konflikter.\n\nDärför bör skolans hållning vara tydlig men inte förbudsfokuserad. För det första: kräva öppenhet. Elever kan ange när och hur AI använts, ungefär som man redovisar hjälpmedel i laborationer. För det andra: anpassa uppgifter så att processen syns. Muntliga resonemang, loggböcker, versioner av texter och korta kontrollfrågor gör det svårare att lämna in något man inte behärskar. För det tredje: undervisa om begränsningar, bias och faktakontroll, så att verktygen blir just verktyg.\n\nSammanfattningsvis är frågan inte om AI \"hör hemma\" i skolan, utan hur skolan kan forma användningen så att lärandet står i centrum. När regler är tydliga och uppgifter premierar förståelse kan AI bli ett stöd som utvecklar skrivande och analys. Utan sådana ramar riskerar verktygen att bli en genväg som undergräver det skolan ska mäta.",
+    "questions": [
+      {
+        "q": "Vilken position intar texten i frågan om AI i skolan?",
+        "options": [
+          "AI bör förbjudas helt för att skydda kunskapsmätningen",
+          "AI är alltid positivt och bör ersätta traditionella uppgifter",
+          "AI kan användas som stöd om tydliga mål, transparens och processbedömning finns",
+          "AI spelar liten roll och bör lämnas åt eleverna själva"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur kopplas AI-användning till likvärdighet i texten?",
+        "options": [
+          "Genom att alla får exakt samma AI-svar",
+          "Genom att vissa elever kan få hjälp med struktur och språk så att innehållskunskap kan synas bättre",
+          "Genom att betyg kan sättas automatiskt",
+          "Genom att lärare slipper undervisa om skrivande"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med att AI kan fungera som en \"spegel\" för metakognition enligt texten?",
+        "options": [
+          "Att verktyget kan visa elevens känslor kring uppgiften",
+          "Att eleven kan jämföra utkast med förslag och upptäcka otydlighet, logikbrister och saknade belägg",
+          "Att elever slipper skriva egna utkast",
+          "Att AI alltid skriver mer personligt än eleven"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken risk beskriver texten som mer \"subtil\" än ren fusk-användning?",
+        "options": [
+          "Att verktyg kräver internetuppkoppling",
+          "Att elever gradvis tappar uthållighet att arbeta igenom svårigheter och nöjer sig med yta och tempo",
+          "Att lärare måste lära sig nya lösenord",
+          "Att alla texter blir längre än förut"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket åtgärdspaket stämmer bäst överens med textens rekommendationer?",
+        "options": [
+          "Förbud, hemliga kontroller och inga diskussioner om begränsningar",
+          "Öppen redovisning av användning, uppgifter som synliggör processen och undervisning om faktakontroll",
+          "Fri användning utan regler, eftersom ansvar alltid ligger på individen",
+          "Endast AI för grammatik, men inga andra hjälpmedel"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken underliggande definition av lärande verkar texten utgå från?",
+        "options": [
+          "Lärande är att snabbt producera en färdig produkt",
+          "Lärande är att kunna visa förståelse och resonemang, inte bara leverera en text",
+          "Lärande är att undvika misstag till varje pris",
+          "Lärande är att följa regler oavsett syfte"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "gym-stad-transport-003",
+    "grade": 10,
+    "genre": "beskrivande",
+    "theme": "stad och transport",
+    "title": "En stad i rörelse",
+    "text": "Det märks tidigt på morgonen att staden vaknar i olika tempo. Vid busshållplatsen står människor med hörlurar och kaffemuggar, men också några som bara tittar ut över gatan som om de väntar på ett tecken. När bussen kommer blir ljudet först tydligt: ett dovt fräs när dörrarna öppnas och ett pip som markerar att någon blippar sitt kort. På samma trottoar rullar cyklar fram, ibland i jämn ström, ibland i korta klungor som om de följer en osynlig rytm mellan trafikljusen.\n\nI korsningen längre bort syns ett annat mönster. Bilarna ligger tätt i två filer, och varje gång det blir grönt uppstår en kort spurt som genast bromsas av nästa rödljus. En taxibil signalerar med blinkande ljus när den försöker byta fil, medan en leveransbil står med varningsblinkers och gör trottoaren smalare för dem som går. Samtidigt passerar en spårvagn ljudlöst i jämförelse, med ett mjukt gnissel i kurvan och en kort skugga som faller över fasaderna.\n\nDet är lätt att tänka att alla dessa rörelser handlar om att ta sig från punkt A till punkt B. Men på nära håll ser man att transport också är en sorts vardagsgeografi. Den som går väljer ofta den sida av gatan som har minst korsningar, eller den som känns tryggast när det är mörkt. Den som cyklar lägger märke till underlaget: en ojämn fog i asfalten kan vara en risk, medan en ny målad cykelbana kan skapa ett oväntat lugn. Den som åker kollektivt planerar inte bara sin resa utan även sin väntan: var det finns lä, var man kan stå utan att trängas och vilken hållplats som har en bänk.\n\nPå eftermiddagen förändras staden igen. Skolslut gör att fler rör sig i grupp och att gångbanor fylls av samtal. Vid samma hållplats syns nu barnvagnar och träningsväskor. Bussen är fullare, men ljuden är annorlunda: fler skratt, fler korta frågor om var någon ska kliva av. Bilköerna blir längre runt stora infarter, och cyklarna syns på nya vägar när människor väljer genvägar genom parker eller längs vattnet.\n\nPå kvällen blir kontrasten mellan transportsätten tydligare. En bil kan kännas som en egen bubbla, avskild med musik och rutiner, medan en bussresa gör att man delar utrymme med främlingar och deras små berättelser. Cykeln kan kännas fri men också utsatt när hastigheter möts. Att gå kan vara långsamt men ge tid att upptäcka sådant som annars försvinner: skyltfönster som byter tema, nya skyltar vid ett bygge, ett träd som plötsligt är fullt av fåglar.\n\nNär man ser staden så här, som ett nät av val och vanor, framträder en sak: rörelsen är inte bara teknik och infrastruktur. Den är också social. Den bestämmer vilka möten som blir möjliga, vilka platser som känns nära, och vilka som upplevs som långt bort även om de ligger på kartan inom några kilometer.",
+    "questions": [
+      {
+        "q": "Vilken funktion har de många ljud- och detaljbeskrivningarna i texten?",
+        "options": [
+          "Att bevisa att ett transportsätt alltid är bäst",
+          "Att göra stadens rytm och skillnader mellan rörelsesätt konkreta för läsaren",
+          "Att ge exakta fakta om trafikregler",
+          "Att förklara hur motorer fungerar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur förändras stadens \"mönster\" under dagen enligt texten?",
+        "options": [
+          "Det blir gradvis helt tystare och tommare",
+          "Morgonens individuella tempo ersätts delvis av eftermiddagens gruppvis rörelse och kvällens tydligare kontraster",
+          "All trafik minskar efter lunch och återkommer först sent på natten",
+          "Transportmedlen blir fler men människors beteenden förblir identiska"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken underförstådd poäng gör texten om att \"transport också är en sorts vardagsgeografi\"?",
+        "options": [
+          "Att resor främst handlar om att memorera kartor",
+          "Att sättet man rör sig på påverkar vilka platser som upplevs som tillgängliga och hur man navigerar i vardagen",
+          "Att geografi i skolan borde bara handla om trafik",
+          "Att alla borde välja samma väg för effektivitet"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning ligger närmast textens beskrivning av bil, buss, cykel och gång på kvällen?",
+        "options": [
+          "Texten framställer ett val som moraliskt överlägset",
+          "Texten visar hur varje transportsätt kan kännas både positivt och begränsande på olika sätt",
+          "Texten menar att kvällstrafik alltid är farlig",
+          "Texten påstår att människor inte märker sin omgivning"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad antyder avslutningen om stadens rörelse som \"social\"?",
+        "options": [
+          "Att infrastruktur inte spelar någon roll",
+          "Att hur vi tar oss fram påverkar möten, närhet och upplevelsen av avstånd",
+          "Att sociala medier styr alla resor",
+          "Att alla platser blir lika nära om man vill"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket ord fångar bäst textens övergripande stämning?",
+        "options": [
+          "Stridslysten",
+          "Iakttagande",
+          "Predikande",
+          "Likgiltig"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "gym-berattelse-val-004",
+    "grade": 10,
+    "genre": "berättelse",
+    "theme": "val och konsekvenser",
+    "title": "Versioner av samma dag",
+    "text": "När Lea öppnade dokumentet såg hon rubriken hon skrivit kvällen innan: \"Orsak och verkan i en förändrad stad\". Under rubriken låg tre halva stycken, några markerade meningar och ett tomt avsnitt som hette \"Egen analys\". Hon hade tänkt att det skulle vara den lättaste delen.\n\nHon öppnade ett nytt fönster och skrev in några sökord. Resultaten kom snabbt, som de alltid gjorde, men den här gången kändes de inte som hjälp utan som en vägg av möjliga vägar. En rapport från en myndighet, en debattartikel som lovade \"sanningen\", en blogg med dramatiska bilder, en intervju med en forskare bakom en betalvägg. Hon klickade runt och sparade länkar, men varje gång hon trodde att hon hittat en tydlig linje dök en ny invändning upp.\n\nPå vägen till skolan låg dimman som ett tunt filter över gatorna. Vid övergångsstället stod en man och väntade, men han gick inte när det blev grönt. Han tittade på sin skärm med samma koncentration som Lea kände igen från sig själv. När han till slut gick hade signalen redan hunnit blinka rött igen, som om systemet inte riktigt var byggt för tvekan.\n\nI klassrummet delade läraren ut en enkel instruktion: \"Ni ska visa hur ni tänker. Inte bara vad ni kommer fram till.\" Lea kände hur den meningen landade någonstans mellan lättnad och press. På skärmen hemma kunde hon alltid skapa en snygg text. Här skulle hennes väg synas.\n\nNär de började arbeta satte sig Amir bredvid henne. Han hade redan en disposition och såg ut som om han visste vart han var på väg. \"Jag fastnar i allt jag hittar\", sa Lea och pekade på sina länkar. \"Det känns som att jag kan skriva fem olika uppsatser som alla låter rimliga.\"\n\nAmir lutade sig fram. \"Kanske är det det som är poängen?\" sa han. \"Att visa varför du väljer en version.\"\n\nLea tittade på rubriken igen. Orsak och verkan. Hon tänkte på mannen vid övergångsstället: den lilla tvekan som gjorde att han missade ett grönt ljus och hamnade i nästa cykel. I hennes arbete var tvekan större, men mekanismen liknade ändå något: varje val av källa, exempel och begrepp ledde vidare till nya konsekvenser i texten.\n\nHon började sortera länkarna i tre högar: \"Fakta\", \"Tolkningar\" och \"Påståenden\". Det var inte en perfekt uppdelning, och ibland fick en länk ligga i två högar samtidigt, men det gav henne ett grepp om kaoset. Hon skrev en rad under \"Egen analys\": \"Jag utgår från att förändring inte bara är teknisk utan också social.\" Sedan stannade hon. Var hade hon fått det ifrån? Hon mindes morgonens dimma, trängseln vid hållplatsen, samtalet i klassrummet. Inte som bevis, men som erfarenhet som behövde kopplas till något mer än känsla.\n\nNär läraren gick förbi frågade Lea inte om hon \"fick\" använda något verktyg eller någon källa. Hon frågade: \"Hur visar jag att det här är en rimlig slutsats?\" Läraren svarade inte med ett direkt facit, utan med en fråga tillbaka: \"Vilken invändning skulle en kritisk läsare ha?\"\n\nPå rasten gick Lea ut i korridoren och såg elever som satt på golvet med datorer i knät, pratade, jämförde och skrattade åt missförstånd. Hon tänkte att hennes dag hade minst två versioner: en där hon jagade det perfekta svaret och en där hon byggde en väg som gick att följa. När lektionen fortsatte valde hon den senare, även om den var långsammare.",
+    "questions": [
+      {
+        "q": "Vilken konflikt driver Leas svårigheter i början av berättelsen?",
+        "options": [
+          "Hon saknar helt material att arbeta med",
+          "Hon har för många möjliga riktningar och har svårt att välja vad som ska styra hennes text",
+          "Hon vill inte skriva om ämnet alls",
+          "Hon har glömt datorn hemma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad symboliserar mannen vid övergångsstället mest sannolikt i berättelsen?",
+        "options": [
+          "Att teknik alltid fungerar perfekt",
+          "Hur tvekan och små val kan flytta en till en annan \"cykel\" av händelser",
+          "Att staden är farlig för fotgängare",
+          "Att alla människor är distraherade"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken förändring sker i Leas sätt att arbeta efter samtalet med Amir?",
+        "options": [
+          "Hon slutar använda källor och skriver bara från minnet",
+          "Hon fokuserar på att motivera val och synliggöra sin tankeväg, inte bara leverera en färdig text",
+          "Hon kopierar Amirs disposition ordagrant",
+          "Hon byter ämne för att undvika osäkerhet"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är Leas uppdelning i \"Fakta\", \"Tolkningar\" och \"Påståenden\" viktig för berättelsens tema?",
+        "options": [
+          "Den visar att alla källor kan rangordnas utan problem",
+          "Den visar ett försök att hantera komplexitet och göra resonemanget spårbart",
+          "Den visar att fakta är oviktiga jämfört med känslor",
+          "Den visar att tolkningar alltid är fel"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad antyder lärarens motfråga om skoluppgiftens egentliga mål?",
+        "options": [
+          "Att eleven ska gissa vad läraren tycker",
+          "Att eleven ska öva på att pröva hållbarheten i sina slutsatser genom att tänka som en kritisk läsare",
+          "Att eleven ska skriva så kort som möjligt",
+          "Att eleven ska undvika att ta ställning"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning passar bäst till slutets \"två versioner\" av dagen?",
+        "options": [
+          "Att Lea tror att dagen går att spola tillbaka",
+          "Att Lea ser en skillnad mellan att jaga ett perfekt svar och att bygga en begriplig process, och väljer det senare",
+          "Att Lea planerar att skriva två uppsatser och lämna in båda",
+          "Att Lea vill hoppa över resten av terminen"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "gym-stress-studievanor-005",
+    "grade": 10,
+    "genre": "förklarande",
+    "theme": "stress och studievanor",
+    "title": "När hjärnan vill spara energi",
+    "text": "Många tänker på studieteknik som en fråga om disciplin: antingen \"skärper man sig\" eller så gör man det inte. Men om man tittar närmare på hur människor lär sig blir det tydligt att studievanor också handlar om hjärnans sätt att spara energi och hantera osäkerhet. Det förklarar varför vissa strategier känns sköna i stunden men ger svag effekt på sikt, och varför andra strategier kan kännas obekväma men faktiskt bygger stabilare kunskap.\n\nNär du läser igenom anteckningar om och om igen får du ofta en känsla av att du kan materialet. Orden ser bekanta ut och du minns ungefär var på sidan något stod. Den känslan är inte värdelös, men den kan lura dig. Det som ofta stärker minnet mer är att plocka fram kunskap utan att ha den framför sig, till exempel genom att testa sig själv. Självtest kan kännas långsammare och mer frustrerande, men just ansträngningen gör att hjärnan skapar fler \"vägar\" tillbaka till informationen.\n\nEn annan energisparare är att skjuta upp sådant som är oklart. Om en uppgift saknar tydlig startpunkt kan hjärnan tolka det som en risk för misslyckande och föreslå en snabbare belöning: scrolla, städa, börja med något lätt. Det kan se ut som lathet, men det är ofta ett försök att undvika obehag. En enkel motstrategi är att göra starten extremt liten: öppna dokumentet och skriv rubriken, läsa två sidor, göra tre uppgifter. När starttröskeln sänks minskar också behovet av flykt.\n\nStress spelar in på flera nivåer. Vid låg till måttlig stress kan fokus skärpas, men vid hög stress blir tanken ofta smalare. Då prioriterar man det som känns akut, inte det som är viktigt. Därför kan planering fungera som en form av avlastning. Om du bestämmer i förväg när du ska göra vad, slipper du fatta lika många beslut i stunden. Men planering kan också bli en fälla om den används för att känna kontroll utan att leda till handling. Då blir kalendern full och kroppen ändå spänd.\n\nEn mer hållbar modell är att kombinera struktur med återhämtning. Pauser är inte ett pris man betalar efteråt, utan en del av själva arbetet. Korta pauser kan göra att uppmärksamheten håller längre och att man märker när man tappar tråden. Sömn spelar också en roll, eftersom hjärnan bearbetar och \"sorterar\" information när du vilar. Det betyder att en natt med för lite sömn kan göra att flera timmars plugg ger mindre effekt än du tänkt.\n\nDet sociala sammanhanget påverkar också studievanor. Att plugga med andra kan ge motivation och förklaringar, men det kan även bli en arena för jämförelse. Om man hela tiden mäter sin egen insats mot andras kan stressen öka, särskilt när man bara ser slutresultatet och inte deras process. I sådana lägen kan det hjälpa att prata om strategier i stället för nivåer: hur någon repeterar, hur de testar sig själva, hur de hanterar svåra moment.\n\nSammanfattningsvis är studievanor inte bara en fråga om vilja. De formas av hur hjärnan reagerar på ansträngning, osäkerhet och belöning. När du väl ser mekanismerna kan du designa ditt plugg: små starter, aktiv återkallelse, rimlig planering och återhämtning. Det gör inte studier friktionsfria, men det gör att energin du lägger ner oftare omvandlas till faktisk förståelse.",
+    "questions": [
+      {
+        "q": "Vilken övergripande förklaring ger texten till varför studievanor kan vara svåra att förändra?",
+        "options": [
+          "För att skolans krav alltid är orealistiska",
+          "För att hjärnan försöker spara energi och undvika osäkerhet, vilket påverkar val i stunden",
+          "För att alla har samma inlärningsstil",
+          "För att motivation är medfödd och oföränderlig"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan om-läsning av anteckningar ge en missvisande känsla av kunskap enligt texten?",
+        "options": [
+          "För att ord aldrig kan läras in genom läsning",
+          "För att igenkänning kan förväxlas med förmågan att återkalla och använda kunskapen",
+          "För att anteckningar alltid är fel",
+          "För att självtest bara passar vissa ämnen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur tolkar texten prokrastinering i situationer där uppgiften känns oklar?",
+        "options": [
+          "Som ett tecken på bristande moral",
+          "Som en strategi för att undvika obehag och riskkänsla snarare än ren lathet",
+          "Som bevis på att uppgiften är felkonstruerad",
+          "Som ett resultat av för mycket planering"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken lösning på startmotstånd föreslår texten, och varför fungerar den enligt resonemanget?",
+        "options": [
+          "Att vänta tills man känner stark motivation, eftersom kvaliteten då blir högre",
+          "Att göra starten mycket liten för att sänka tröskeln och minska behovet av att fly undan",
+          "Att plugga dubbelt så länge nästa dag för att kompensera",
+          "Att bara göra enkla uppgifter för att undvika stress"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken skillnad gör texten mellan planering som hjälper och planering som blir en fälla?",
+        "options": [
+          "Hjälpsam planering minskar beslut i stunden, medan fällan ger kontrollkänsla utan att leda till handling",
+          "Hjälpsam planering kräver att man fyller varje minut, medan fällan lämnar luckor",
+          "Hjälpsam planering gör pauser onödiga, medan fällan kräver fler pauser",
+          "Hjälpsam planering fungerar bara för extroverta, medan fällan drabbar introverta"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats om stress kan läsas mellan raderna i texten?",
+        "options": [
+          "All stress är skadlig och bör undvikas helt",
+          "Stressnivå och beslut påverkar var fokus hamnar, vilket gör att struktur och återhämtning kan styra energin mot det viktiga",
+          "Stress spelar ingen roll om man har bra anteckningar",
+          "Stress löses bäst genom att alltid plugga ensam"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
