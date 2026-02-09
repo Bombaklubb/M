@@ -11993,5 +11993,360 @@
         "correct": 2
       }
     ]
+  },
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "källkritik",
+    "title": "När en bild känns sann",
+    "text": "En kväll ser Samir en bild i sitt flöde. Den visar en tom butikshylla och en rubrik som påstår att en viss vara har förbjudits \"från och med i morgon\". Många i kommentarerna skriver att det är \"typiskt\" och att man måste skynda sig och köpa innan det är för sent.\n\nSamir blir osäker. Bilden ser trovärdig ut, med en logotyp och en datumrad. Samtidigt reagerar han på att rubriken är väldigt dramatisk. Han klickar, men länken leder bara till en sida med fler annonser och en knapp som säger \"Dela vidare\". Det finns inget namn på någon skribent och inga källor.\n\nFör att förstå vad som är sant kan man använda några enkla källkritiska frågor. Vem står bakom informationen? En myndighet, en tidning eller ett konto som vill få spridning? När publicerades den? I sociala medier kan gamla inlägg få nytt liv och presenteras som om de är nya. Vad är beviset? En påstådd \"läcka\" utan dokument, eller en källa som går att kontrollera?\n\nSamir provar att söka på rubriken med några ovanliga ord som står i bilden. Då hittar han samma bild på flera konton, men texterna skiljer sig. Han ser också att bilden verkar vara beskuren: datumet saknar årtal. När han söker på den myndighet som nämns hittar han en uppdatering på deras egen sida som säger att inget förbud finns. De förklarar dessutom varför bilden missleder: den visar en hylla från en kort leveransstörning året innan.\n\nHan märker hur lätt det är att gå på känslan. Bilden spelade på oro och brådska, vilket gör att man inte hinner tänka efter. Källkritik handlar inte om att misstänka allt, utan om att sakta ner och kontrollera det som går att kontrollera: avsändare, datum, sammanhang och oberoende bekräftelse. När Samir sedan pratar med en kompis beskriver han inte bara att bilden är fel, utan också hur han kom fram till det. Då blir det lättare för fler att förstå varför en sak som \"känns sann\" ändå kan vara fel.",
+    "word_count": 459,
+    "questions": [
+      {
+        "q": "Vilken detalj gör att Samir börjar tvivla extra mycket på att inlägget är seriöst?",
+        "options": [
+          "Att bilden innehåller en logotyp",
+          "Att rubriken har ett datum",
+          "Att länken inte visar någon skribent eller källor",
+          "Att kommentarsfältet är fullt av åsikter"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär det i texten att en bild kan vara \"beskuren\"?",
+        "options": [
+          "Att delar av informationen har tagits bort",
+          "Att den är ritad i stället för fotograferad",
+          "Att den är suddig och behöver skärpas",
+          "Att den är tagen i dåligt ljus"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför räcker det inte för Samir att bara se att många har delat bilden?",
+        "options": [
+          "För att delningar kan bero på att man vill skämta",
+          "För att delningar alltid gör en nyhet gammal",
+          "För att delningar inte visar om uppgiften är korrekt",
+          "För att delningar bara fungerar på vissa plattformar"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken metod använder Samir som mest tyder på att han försöker kontrollera informationen själv?",
+        "options": [
+          "Han läser kommentarerna noggrant",
+          "Han klickar direkt på \"Dela vidare\"",
+          "Han söker på rubriken och kontrollerar myndighetens egna uppgifter",
+          "Han skriver en egen dramatisk rubrik"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är textens viktigaste poäng om källkritik?",
+        "options": [
+          "Att man bör undvika sociala medier helt",
+          "Att man alltid ska fråga en kompis innan man läser vidare",
+          "Att man ska lita på allt som ser professionellt ut",
+          "Att man ska sakta ner och kontrollera avsändare, datum och sammanhang"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför berättar Samir för kompisen hur han kom fram till att bilden var missvisande?",
+        "options": [
+          "För att han vill få fler följare",
+          "För att göra kompisen imponerad",
+          "För att han vill att myndigheten ska se hans arbete",
+          "För att det blir lättare för fler att förstå och göra likadant nästa gång"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-002",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "teknik",
+    "title": "Från ljudvåg till musik i hörlurar",
+    "text": "När du lyssnar på musik i ett par hörlurar känns det som om ljudet \"kommer\" direkt in i huvudet. Men vägen dit är en kedja av omvandlingar där både luft, elektricitet och material spelar roll.\n\nAllt börjar med en ljudkälla, till exempel en sångare eller ett instrument. Den får luften att vibrera. Vibrationerna sprider sig som vågor, ungefär som ringar på vatten. En mikrofon fångar upp de små tryckförändringarna i luften och gör om dem till en elektrisk signal. Det sker genom att en tunn del i mikrofonen rör sig och påverkar ett magnetfält eller en elektrisk spänning.\n\nI en mobil eller dator lagras sedan signalen som digital information. Den delas upp i mycket små mätpunkter, så kallade samplingar. Ju oftare man mäter, desto mer detaljer kan bevaras. Samtidigt kan man komprimera ljudet för att spara plats, vilket ibland tar bort sådant som anses svårare att höra. Resultatet blir en fil som kan skickas, sparas och spelas upp.\n\nNär du trycker på \"play\" gör en digital-till-analog-omvandlare (DAC) om siffrorna till en elektrisk ström som varierar på samma sätt som det ursprungliga ljudet. Strömmen går vidare till en liten förstärkare som ger tillräckligt med energi för att driva hörlurarnas element.\n\nInuti hörlurana finns vanligtvis ett membran, en spole och en magnet. När strömmen går genom spolen skapas ett magnetfält som får spolen och membranet att röra sig fram och tillbaka. Membranet trycker på luften i öronkåpan eller i hörselgången och skapar nya ljudvågor. Det är därför ett tunt hårstrå eller en dammkorn kan påverka ljudet: membranet rör sig väldigt lite men väldigt snabbt.\n\nI örat omvandlas vågorna igen. Trumhinnan vibrerar, de små hörselbenen förstärker rörelsen och vätska i innerörat sätts i svängning. Där böjs känsliga hårceller som skickar nervsignaler till hjärnan. Hjärnan tolkar mönstret som melodi, rytm och klang. Så även om musiken känns självklar är den egentligen en resa genom flera \"språk\": luftens tryck, elektriska variationer och hjärnans tolkning.",
+    "word_count": 457,
+    "questions": [
+      {
+        "q": "Vilken ordning beskriver bäst de stora stegen från inspelning till att du uppfattar ljudet?",
+        "options": [
+          "Hjärna → mikrofon → luft → DAC",
+          "Magnet → fil → trumhinna → instrument",
+          "Komprimering → luft → förstärkare → mikrofon",
+          "Ljudvågor i luft → mikrofon → digital lagring → hörlurarnas membran → innerörat"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad menas med \"samplingar\" i texten?",
+        "options": [
+          "Att man tar bort basen för att spara plats",
+          "Att man mäter ljudet i många små punkter över tid",
+          "Att man höjer volymen i en förstärkare",
+          "Att man blandar olika låtar till en ny"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför behövs en förstärkare innan signalen går till hörlurarnas element?",
+        "options": [
+          "För att komprimera filen en gång till",
+          "För att byta ut magneten mot en spole",
+          "För att ge signalen nog med energi för att driva membranet",
+          "För att göra ljudet äldre och mer analogt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats passar bäst med textens exempel om damm och hårstrå?",
+        "options": [
+          "DAC:en påverkas av hur örat ser ut",
+          "Membranets små rörelser är känsliga för hinder",
+          "Hörlurar fungerar bara om luften är helt stilla",
+          "Magneten i hörlurar blir svagare av smuts"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens syfte?",
+        "options": [
+          "Att förklara vilka omvandlingar som gör att musik kan höras",
+          "Att varna för att musikfiler är olagliga",
+          "Att jämföra olika musikstilar",
+          "Att övertyga om att trådlösa hörlurar alltid är bättre"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket påstående stämmer bäst med textens helhet om digital komprimering?",
+        "options": [
+          "Komprimering betyder att ljudet blir helt tyst mellan samplingar",
+          "Komprimering gör alltid ljudet mer exakt än originalet",
+          "Komprimering behövs bara för att höja volymen",
+          "Komprimering kan spara utrymme men kan också ta bort vissa detaljer"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-003",
+    "grade": 8,
+    "genre": "argumenterande",
+    "theme": "skola",
+    "title": "Ska skoldagen börja senare?",
+    "text": "På många skolor börjar lektionerna tidigt, ibland redan före klockan åtta. För vissa elever fungerar det bra, men andra upplever att de första timmarna blir en kamp mot trötthet. Frågan är om skoldagen borde börja senare för att passa fler.\n\nEtt argument för en senare start är att ungdomars dygnsrytm ofta förskjuts. Det betyder inte att alla automatiskt lägger sig sent av \"ovilja\", utan att kroppen kan bli piggare senare på kvällen och segare på morgonen. Om första lektionen ligger tidigt kan man vara fysiskt vaken men mentalt långsam. Då riskerar man att missa instruktioner, göra slarvfel och känna att man ligger efter redan från början.\n\nEtt annat argument handlar om lärande. När man är utvilad kan man koncentrera sig längre, komma ihåg mer och samarbeta bättre. Det kan särskilt spela roll i ämnen som kräver problemlösning eller längre texter. En senare start skulle alltså kunna ge bättre förutsättningar för att tiden i klassrummet används effektivt, även om skoldagen fortfarande har samma antal timmar.\n\nSamtidigt finns invändningar. Många familjer planerar morgonen efter arbetstider och syskons lämning på förskola. Om skolan börjar senare kan det bli svårare att få ihop logistiken. Dessutom kan fritidsaktiviteter, bussar och lokaler vara anpassade efter dagens schema. En förändring kan därför påverka fler än bara eleverna.\n\nDet finns också en risk att en senare start gör att vissa ändå går och lägger sig ännu senare, särskilt om kvällen fylls av skärmtid. Då skulle vinsten minska. Därför behöver en eventuell förändring kombineras med kunskap om sömnvanor och tydliga rutiner, både hemma och i skolan.\n\nEn rimlig väg framåt kan vara att prova senare start under en begränsad period och följa upp med flera mått: frånvaro, resultat, stress och hur eleverna upplever sin vardag. Om fler får en bättre start på dagen utan att andra delar kraschar kan det vara värt att ändra. Om problemen i stället flyttar till eftermiddagen får man tänka om. Poängen är att frågan inte bara handlar om bekvämlighet, utan om hur man skapar en skoldag som fungerar för så många som möjligt.",
+    "word_count": 458,
+    "questions": [
+      {
+        "q": "Vilken är den starkaste orsaken i texten till att en senare start kan hjälpa vissa elever?",
+        "options": [
+          "Att ungdomars dygnsrytm kan göra morgonen mentalt seg",
+          "Att bussarna går oftare senare på dagen",
+          "Att alla elever vill slippa morgonlektioner",
+          "Att skolmaten hinner bli bättre"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats ligger närmast textens resonemang om lärande och koncentration?",
+        "options": [
+          "Koncentration beror bara på vilket ämne man läser",
+          "Utvilade elever kan använda lektionstid mer effektivt",
+          "Sena lektioner gör att man alltid minns mer",
+          "Kortare skoldagar är alltid bättre än senare start"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket motargument beskriver bäst varför en senare start kan vara svår att genomföra?",
+        "options": [
+          "Att lärare inte kan byta schema",
+          "Att familjers tider och transporter kan påverkas",
+          "Att prov alltid måste skrivas på morgonen",
+          "Att elever inte får ha mobiltelefoner i skolan"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas i texten med att \"vinsten kan minska\"?",
+        "options": [
+          "Att bussbiljetter blir dyrare",
+          "Att skolan får mindre pengar",
+          "Att effekten av senare start blir mindre om man ändå lägger sig senare",
+          "Att fler kan bli stressade av läxor"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken metod föreslås för att ta reda på om en senare start fungerar?",
+        "options": [
+          "Att prova under en period och följa upp med flera mått",
+          "Att ta bort eftermiddagslektioner permanent",
+          "Att rösta i klassen och bestämma direkt",
+          "Att låta bara en årskurs börja senare utan att mäta något"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket påstående fångar bäst textens huvudbudskap?",
+        "options": [
+          "Tidiga morgnar är nödvändiga för att lära sig disciplin",
+          "Skolan bör alltid börja senare oavsett konsekvenser",
+          "Det går inte att förändra scheman i praktiken",
+          "Frågan handlar om hur man skapar en skoldag som fungerar för många, inte bara om bekvämlighet"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-004",
+    "grade": 8,
+    "genre": "beskrivande",
+    "theme": "miljö",
+    "title": "Stadsodling mellan husen",
+    "text": "Bakom ett högt bostadshus, där vinden brukar snurra runt hörnen, finns en liten gård som många tidigare bara passerade. Platsen ser först ut som en vanlig yta med grus och några trötta buskar, men på nära håll märks förändringen: lådor i trä står på rad, och i varje låda växer något som doftar, prasslar eller klänger.\n\nEn morgon kommer Amina dit med en vattenkanna. Marken är fuktig efter nattens regn, och luften luktar kallt järn från cykelställen. Hon stannar vid en låda där salladsblad vecklar ut sig som små gröna händer. Bredvid sticker strån av gräslök upp, raka som penslar. När hon rör vid dem fastnar en tydlig, skarp doft på fingertopparna.\n\nLängre bort växer tomatplantor som behöver stöd. De är bundna med mjuk snöre mot pinnar, och stjälkarna känns sträva. På några blad syns små hål, som om någon har smakat. Amina letar efter sniglar under kanten av lådan och hittar en som drar sig tillbaka in i sitt skal. Hon flyttar den försiktigt till en buske, eftersom odlarna här har bestämt sig för att undvika gifter.\n\nRunt odlingen finns detaljer som visar att många är inblandade. En skylt med handskrivna regler sitter snett på ett staket: vattna efter behov, skörda lagom, lämna lite till nästa. En annan lapp berättar när komposten öppnas och vad som får läggas i. I ett hörn står en hink med trasiga handskar och en låda med fröpåsar, där olika språk blandas i korta anteckningar.\n\nNär solen tittar fram blir färgerna tydligare. Jorden är mörk och smulig, och små stenar glittrar. Bina kommer i ryckiga flygningar mot en kant med blommor som satts dit för att locka pollinatörer. Ljudet från gatan finns kvar, men det känns längre bort, som om gården sänker volymen.\n\nFör Amina är det inte bara grönsaker som växer här. Hon ser hur platsen ändrar tempo. Människor stannar, frågar vad som är på gång, jämför blad och idéer. Odlingen gör gården mindre anonym och mer gemensam, samtidigt som den påminner om att även en liten yta kan bli något annat än bara en passage.",
+    "word_count": 455,
+    "questions": [
+      {
+        "q": "Vilken detalj i texten visar tydligast att odlingen sköts utan kemiska bekämpningsmedel?",
+        "options": [
+          "Att Amina flyttar snigeln i stället för att använda gift",
+          "Att solen får färgerna att bli tydligare",
+          "Att lådorna står på rad",
+          "Att jorden är mörk och smulig"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad antyder lappen med reglerna om hur odlingen fungerar socialt?",
+        "options": [
+          "Att man måste betala för att få vattna",
+          "Att odlingen är till för dekoration",
+          "Att bara en person får skörda",
+          "Att skörd och ansvar delas mellan flera"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför nämns att olika språk blandas i anteckningarna vid fröpåsarna?",
+        "options": [
+          "För att visa att fröna är svåra att förstå",
+          "För att antyda att många olika personer deltar",
+          "För att betona att odlingen ligger utomlands",
+          "För att visa att reglerna är hemliga"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning passar bäst till formuleringen att gården \"sänker volymen\"?",
+        "options": [
+          "Att ljuden fortfarande finns men upplevs mindre påtagliga",
+          "Att någon stänger av trafiken",
+          "Att bina gör att bilarna kör långsammare",
+          "Att odlarna har satt upp högtalare"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"anonym\" som det används i sista stycket?",
+        "options": [
+          "Nybyggd och modern",
+          "Utan tydlig identitet eller gemenskap",
+          "Fylld av färger och dofter",
+          "Svår att nå med buss"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket är textens viktigaste syfte?",
+        "options": [
+          "Att varna för att odling alltid lockar skadedjur",
+          "Att instruera hur man bygger en odlingslåda steg för steg",
+          "Att beskriva en plats och hur den påverkar stämning och gemenskap",
+          "Att jämföra olika grönsakers näringsinnehåll"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-005",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "hälsa",
+    "title": "Stress som signal och system",
+    "text": "Stress kan låta som ett enda ord för att vara \"pressad\", men i kroppen är stress ett helt system. Det är byggt för att hjälpa oss när något kräver extra uppmärksamhet, till exempel ett prov, en match eller en situation där man snabbt måste fatta beslut.\n\nNär hjärnan uppfattar ett hot eller en utmaning skickas signaler som gör att hormoner som adrenalin och kortisol påverkar kroppen. Pulsen kan öka, andningen blir snabbare och musklerna spänns. Energi frigörs så att man kan prestera. På kort sikt kan det vara användbart: man blir skärpt och får lättare att reagera.\n\nProblemet uppstår när stressen blir långvarig eller otydlig. Om kroppen ofta får signalen att vara \"på\" kan återhämtningen bli för kort. Då kan man känna sig trött men ändå rastlös, eller ha svårt att somna trots att man behöver sömn. Tankar kan fastna i sådant som inte är löst: deadlines, konflikter eller förväntningar som är svåra att mäta.\n\nStress påverkar också hur man tolkar vardagen. När man är belastad kan små hinder kännas större, och man kan bli mer känslig för ljud, kritik eller förändringar. Samtidigt kan vissa bli tysta och dra sig undan, medan andra blir irriterade. Det betyder inte att någon \"är stress på ett visst sätt\", utan att samma belastning kan synas olika.\n\nFör att förstå sin egen stress kan det hjälpa att skilja på krav och resurser. Krav kan vara tid, prestation eller ansvar. Resurser kan vara sömn, planering, stöd, pauser och känslan av kontroll. Om kraven ökar men resurserna inte gör det, blir obalansen tydligare. Därför kan en förändring som verkar liten, som att planera skolarbete tidigare eller prata med någon om förväntningar, ibland göra stor skillnad.\n\nSamtidigt är stress inte alltid något man kan \"lösa\" själv. Ibland handlar det om för många uppgifter samtidigt eller om situationer som kräver hjälp från vuxna och skolan. Att ta stress på allvar betyder inte att man vill slippa allt svårt, utan att man vill skapa utrymme för återhämtning så att systemet kan gå tillbaka till normalnivå. Då blir stress mer som en signal att lyssna på än ett läge man fastnar i.",
+    "word_count": 456,
+    "questions": [
+      {
+        "q": "Vilken beskrivning passar bäst på stressens funktion enligt texten?",
+        "options": [
+          "En metod för att slippa ansvar",
+          "Ett tecken på att man alltid har gjort fel val",
+          "En känsla som bara uppstår när man är uttråkad",
+          "Ett system som kan hjälpa oss prestera när något kräver extra fokus"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken skillnad mellan kortvarig och långvarig stress betonas mest i texten?",
+        "options": [
+          "Kortvarig stress gör att man aldrig blir arg",
+          "Kortvarig stress gör alltid att man somnar direkt",
+          "Långvarig stress kan minska återhämtningen och göra sömn svårare",
+          "Långvarig stress gör att man aldrig blir trött"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menar texten med att stress kan påverka hur man \"tolkar vardagen\"?",
+        "options": [
+          "Att man glömmer hur man läser",
+          "Att små hinder kan kännas större och reaktioner kan bli starkare",
+          "Att man alltid får bättre betyg",
+          "Att man slutar höra ljud"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning stämmer bäst med textens syn på hur stress kan synas hos olika personer?",
+        "options": [
+          "Vissa visar stress utåt medan andra drar sig undan",
+          "Den som är tyst är aldrig stressad",
+          "Alla blir stressade på exakt samma sätt",
+          "Den som blir irriterad väljer att vara stressad"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder \"resurser\" i textens modell med krav och resurser?",
+        "options": [
+          "Antalet prov på en termin",
+          "Saker som hjälper en att klara krav, som sömn, stöd och pauser",
+          "Endast pengar och prylar",
+          "Regler som bestäms av skolan"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket budskap ligger närmast textens slut om att ta stress på allvar?",
+        "options": [
+          "Att stress kan vara en signal och att återhämtning och stöd kan behövas",
+          "Att stress alltid går över om man ignorerar den",
+          "Att stress bara beror på dålig planering",
+          "Att man bör undvika alla svårigheter"
+        ],
+        "correct": 0
+      }
+    ]
   }
 ]
