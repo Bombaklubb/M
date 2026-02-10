@@ -10727,53 +10727,60 @@
       {
         "q": "Vad händer när du lånar något på biblioteket?",
         "options": [
+          "Det får du alltid behålla för evigt",
           "Det registreras i bibliotekets system",
-          "Det får du alltid behålla",
-          "Det skickas direkt till ett annat land"
+          "Det skickas direkt till ett annat land",
+          "Det försvinner från bibliotekets lista"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "q": "Vad kan hjälpa dig att hitta rätt bland hyllorna?",
         "options": [
+          "Endast tur och slumpen",
+          "Bara högtalare i taket",
           "Skyltar och bibliotekarier",
-          "Endast tur",
-          "Bara högtalare"
+          "Bara din egen känsla"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "q": "Varför finns det regler på biblioteket enligt texten?",
         "options": [
           "För att böckerna ska bli tyngre",
-          "För att ingen ska få läsa",
+          "För att ingen ska få läsa böcker",
+          "För att biblioteket ska stänga tidigt",
           "För att alla ska kunna trivas"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "q": "Vad kan hända om något blir försenat?",
         "options": [
-          "Boken blir automatiskt ny",
-          "Du kan få en påminnelse",
-          "Biblioteket stänger för alltid"
+          "Du kan få en påminnelse från biblioteket",
+          "Boken blir automatiskt ny igen",
+          "Biblioteket stänger för alltid",
+          "Du får aldrig låna igen någonsin"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
-        "q": "Vad betyder ordet \"budget\" i texten?",
+        "q": "Vad betyder ordet budget i texten?",
         "options": [
-          "Ett väderfenomen",
-          "En sorts bokhylla"
+          "Ett väderfenomen som påverkar vinden",
+          "En sorts bokhylla för tidningar",
+          "Pengar som är avsatta för något",
+          "En typ av bokband som är hårt"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "q": "Vad är textens syfte?",
         "options": [
           "Att övertala alla att köpa böcker",
           "Att förklara vad ett bibliotek erbjuder och hur det fungerar",
-          "Att beskriva en enda biblioteksbok"
+          "Att beskriva en enda biblioteksbok",
+          "Att berätta om en persons besök"
         ],
         "correct": 1
       }
