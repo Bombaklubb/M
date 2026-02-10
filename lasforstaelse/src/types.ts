@@ -78,9 +78,17 @@ export interface CompletedText {
   completedAt: string;
 }
 
+// Tillgängliga avatarer
+export const AVATAR_OPTIONS = [
+  '🦊', '🐼', '🦁', '🐯', '🐻', '🐨', '🐸', '🦉',
+  '🦋', '🐙', '🦈', '🐬', '🦄', '🐲', '🤖', '👾',
+  '🧙', '🧚', '🦸', '🥷', '🎨', '🚀', '⭐', '🌈'
+];
+
 // Användarprofil (sparas i localStorage)
 export interface User {
   name: string;
+  avatar: string; // Emoji avatar
   totalPoints: number;
   badges: Badge[];
   completedTexts: CompletedText[];

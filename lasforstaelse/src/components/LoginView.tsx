@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { BookLogo } from './BookLogo';
+import { AvatarPicker } from './AvatarPicker';
+import { AVATAR_OPTIONS } from '../types';
 
 interface LoginViewProps {
-  onLogin: (name: string) => void;
+  onLogin: (name: string, avatar: string) => void;
 }
 
 export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   const [name, setName] = useState('');
+  const [selectedAvatar, setSelectedAvatar] = useState(AVATAR_OPTIONS[0]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) {
-      onLogin(name.trim());
+      onLogin(name.trim(), selectedAvatar);
     }
   };
 
@@ -47,6 +50,16 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               className="w-full p-4 text-lg rounded-xl bg-white border-2 border-slate-200 focus:border-purple-500 focus:outline-none transition-colors"
               autoFocus
               maxLength={30}
+            />
+          </div>
+
+          <div>
+            <label className="block text-base font-bold text-slate-700 mb-3">
+              Välj din avatar
+            </label>
+            <AvatarPicker
+              selectedAvatar={selectedAvatar}
+              onSelect={setSelectedAvatar}
             />
           </div>
 
