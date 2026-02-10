@@ -318,7 +318,7 @@ function App() {
 
       {/* Signatur */}
       <footer className="fixed bottom-2 right-3 text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity">
-        Läsresan av Korsängens skola
+        Läsresan av Martin Akdogan
       </footer>
     </div>
   );

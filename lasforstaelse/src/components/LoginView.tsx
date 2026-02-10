@@ -70,7 +70,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
 
       {/* Signatur */}
       <div className="fixed bottom-2 right-3 text-xs text-purple-200 opacity-60 hover:opacity-100 transition-opacity">
-        Läsresan av Korsängens skola
+        Läsresan av Martin Akdogan
       </div>
     </div>
   );
