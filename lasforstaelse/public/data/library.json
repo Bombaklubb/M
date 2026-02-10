@@ -13160,5 +13160,210 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak5-tema-001",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "fotosyntes",
+    "title": "När växter gör sin egen mat",
+    "text": "Fotosyntes är en process där gröna växter använder solljus för att göra socker, och samtidigt frigörs syre som många djur och människor behöver så att vi kan andas varje dag.\n\nI bladen finns små delar som kallas kloroplaster, fyllda med klorofyll som fångar ljuset; därför är bladen oftast gröna och kan starta kemin när solen lyser och temperaturen är lagom.\n\nVäxten tar in koldioxid genom små öppningar, klyvöppningar, och suger upp vatten med rötterna, som sedan leds upp i tunna rör i stammen till bladens celler där allt blandas samman.\n\nMed hjälp av ljusenergin byggs koldioxid och vatten om till druvsocker, och överskottet kan sparas som stärkelse i frön, rötter eller frukter så att växten klarar natten och vintern bättre.\n\nSyret som bildas släpps ut i luften, men en del används också av växten själv när den andas, särskilt i mörker när fotosyntesen pausas och den får energi från socker.\n\nOm det blir torrt stänger klyvöppningarna för att spara vatten, och då kommer mindre koldioxid in, vilket gör att produktionen av socker går långsammare även om solen fortfarande skiner starkt.\n\nDärför kan en krukväxt på fönsterbrädan må bättre om den får jämn vattning och inte står för nära ett varmt element som torkar jorden och luften runt bladen snabbt ut.\n\nFotosyntesen är viktig för hela jordens liv, eftersom den lagrar solens energi i växternas mat, och den håller också nivån av koldioxid lägre än den annars skulle vara i atmosfären.\n\nNär människor bränner kol, olja eller gas släpps koldioxid ut snabbare än växter hinner ta upp, vilket påverkar klimatet på lång sikt men skogar och odlingar kan hjälpa en del.\n\nGenom att förstå fotosyntes kan du se kopplingen mellan ett träd i parken, luften du andas och maten på tallriken, och hur allt hänger ihop i vardagen och naturen framöver.",
+    "questions": [
+      {
+        "q": "Vad använder växter för att starta fotosyntesen enligt texten?",
+        "options": ["Månljus från natthimlen", "Värme från jordens inre", "Blixtar under åskväder", "Solljus från solen"],
+        "correct": 3
+      },
+      {
+        "q": "Vad kallas de små öppningar där växten tar in koldioxid?",
+        "options": ["Klyvöppningar i bladen", "Röttrör i stammen", "Kloroplaster i barken", "Blomnektarier på grenarna"],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan en växt tillverka mindre socker när det är torrt?",
+        "options": ["Den tappar sitt klorofyll helt", "Den stänger öppningarna och släpper in mindre koldioxid", "Den får alldeles för mycket syre", "Den blir alltid kallare inuti"],
+        "correct": 1
+      },
+      {
+        "q": "Vad sparar växten överskottet av socker som?",
+        "options": ["Salt i blommorna", "Syra i rötterna", "Stärkelse i frön eller rötter", "Vatten i stammen"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats passar bäst med textens innehåll om fotosyntes och klimat?",
+        "options": ["Fotosyntes påverkas inte av människors utsläpp alls", "Växter kan ta upp en del koldioxid men inte alltid lika snabbt som den släpps ut", "Koldioxid bildas bara i havet och inte på land", "Skogar gör alltid klimatet varmare överallt"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet överskott i texten?",
+        "options": ["För lite av något viktigt", "Extra som blir kvar efteråt", "Något som är farligt att äta", "Något som är helt osynligt"],
+        "correct": 1
+      }
+    ],
+    "word_count": 300
+  },
+  {
+    "id": "ak5-tema-002",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "vattenkretsloppet",
+    "title": "Vattnet som reser runt",
+    "text": "Vattenkretsloppet beskriver hur samma vatten rör sig mellan hav, sjöar, mark och luft, så att jorden får regn och floder kan fyllas på om och om igen under årets tider.\n\nNär solen värmer vattenytor avdunstar vatten och blir osynlig vattenånga, och även växter släpper ut fukt genom sina blad, vilket kallas transpiration tillsammans gör de luften fuktigare över landet ofta.\n\nHögre upp där luften är kallare kyls ångan ner och bildar små droppar som samlas till moln, och ibland blir dropparna till iskristaller när temperaturen sjunker under noll grader helt.\n\nNär molnen blir tunga faller nederbörd som regn, snö eller hagel, och en del hamnar direkt i havet medan annat landar på marken där det rinner, sugs upp, eller fryser.\n\nVatten som tränger ner i jorden blir grundvatten och kan samlas i lager mellan berg och sand, vilket många brunnar använder som dricksvattenkälla under torra perioder när sjöar sjunker lite.\n\nDet vatten som rinner ovanpå marken bildar bäckar och älvar, och på vägen kan det ta med sig jordpartiklar och näring till sjöar vilket påverkar djur, växter och vattenkvalitet där.\n\nI städer kan asfalt och tak göra att mer regn rinner snabbt till brunnar, så man bygger ibland dammar eller gröna ytor som tar upp vatten och släpper det långsamt.\n\nMänniskor påverkar kretsloppet genom att använda vatten, rena avloppsvatten och ibland leda om floder, men själva rörelsen drivs av sol och gravitation så vattnet söker alltid neråt mot havet igen.\n\nOm du ser dimma över en sjö på morgonen är det också vattenånga som kylts ner nära marken, ett litet moln som visar att luften kan bära mycket fukt då.\n\nGenom att lära dig om vattenkretsloppet kan du förstå varför vi sparar på vatten ibland, och varför regn i en del område kan saknas trots att samma planet har hav.",
+    "questions": [
+      {
+        "q": "Vad kallas det när vatten blir vattenånga och stiger upp i luften?",
+        "options": ["Smältning av is", "Erosion av berg", "Frysning till kristaller", "Avdunstning från ytan"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken roll har solen i vattenkretsloppet enligt texten?",
+        "options": ["Den gör moln tyngre så de faller", "Den driver rörelsen genom att värma vatten", "Den stoppar all nederbörd helt", "Den gör grundvatten salt överallt"],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan städer få mer problem med snabbt rinnande regnvatten?",
+        "options": ["För att det finns fler sjöar i städer", "För att det alltid regnar mindre i städer", "För att asfalt och tak leder bort vatten snabbare", "För att grundvatten blir is under husen"],
+        "correct": 2
+      },
+      {
+        "q": "Vad är grundvatten i textens beskrivning?",
+        "options": ["Vatten som ligger som dimma på marken", "Vatten som bara finns i havet", "Vatten som tränger ner och samlas i marken", "Vatten som fryser på vintern alltid"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats passar bäst om dimma över en sjö på morgonen?",
+        "options": ["Det betyder att allt vatten i sjön har avdunstat", "Det visar att luften nära marken kylts och blivit fuktig", "Det uppstår bara när det snöar kraftigt", "Det är rök från marken under sjön"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet nederbörd?",
+        "options": ["Vatten som faller från moln som regn eller snö", "Vatten som rinner i älvar och bäckar", "Vatten som samlas i brunnar under jord", "Vatten som blir helt osynligt i luften"],
+        "correct": 0
+      }
+    ],
+    "word_count": 300
+  },
+  {
+    "id": "ak5-tema-003",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "återvinning",
+    "title": "När material får ett nytt liv",
+    "text": "Återvinning betyder att material som papper, glas, metall och plast samlas in och används igen, istället för att slängas och bli avfall på soptipp eller brännas utan att resurser sparas.\n\nNär du sorterar hemma hamnar olika saker i olika kärl, och på en återvinningsstation pressas och packas materialet så att det kan transporteras effektivt till fabriker som gör nya produkter.\n\nGlas är extra bra att återvinna, eftersom det kan smältas om många gånger utan att kvaliteten försämras, men färgerna måste ofta hållas isär så grönt, brunt och glas blir rätt.\n\nMetallburkar och aluminium kan sparas på samma sätt, och det kräver mycket mindre energi att smälta om metall än att ta ny malm ur gruvan samt sparar energi och natur.\n\nPapper görs av träfiber, och varje gång det återvinns blir fibrerna lite kortare, så till slut måste nytt papper blandas in för styrka men ändå kan tidningar få ett liv.\n\nPlast är mer komplicerat, eftersom det finns många sorter med olika egenskaper, och om fel plast blandas kan den nya plasten bli spröd därför märks förpackningar med symboler och nummer.\n\nIbland bränns plast för att ge fjärrvärme, och då blir det energi men också koldioxid, så återvinning eller minskad användning kan vara bättre beroende på transport och vad som ersätts.\n\nElektronik, batterier och lampor ska lämnas separat, eftersom de kan innehålla metaller som är värdefulla men också ämnen som måste hanteras säkert på särskilda anläggningar där personalen har rätt utrustning.\n\nOm vi återvinner mer kan vi minska behovet av nya råvaror, men det kräver att alla följer reglerna och att produkterna designas smart så de går att sortera lätt senare.\n\nNästa gång du står vid sorteringen kan du tänka på att varje rätt burk eller flaska är som en liten genväg tillbaka till en ny sak som sparar resurser framåt.",
+    "questions": [
+      {
+        "q": "Vad är huvudidén med återvinning enligt texten?",
+        "options": ["Att göra sopor tyngre för transport", "Att använda material igen istället för att slänga", "Att alltid bränna allt avfall direkt", "Att blanda alla material i samma kärl"],
+        "correct": 1
+      },
+      {
+        "q": "Varför måste glas ofta sorteras efter färg?",
+        "options": ["För att glas inte går att smälta alls", "För att glas blir farligt av starkt ljus", "För att färgerna annars kan blandas och bli fel i nya produkter", "För att glas alltid är magnetiskt inne"],
+        "correct": 2
+      },
+      {
+        "q": "Vilket material nämns som mer komplicerat att återvinna, och varför?",
+        "options": ["Papper, för att det är tungt att lyfta", "Metall, för att den inte kan smältas om", "Glas, för att det alltid går sönder direkt", "Plast, för att det finns många sorter som inte bör blandas"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken slutsats passar bäst om varför elektronik lämnas separat?",
+        "options": ["Den tar alltid mer plats än annat avfall", "Den kan innehålla både värdefulla metaller och ämnen som kräver säker hantering", "Den kan inte transporteras på lastbil", "Den blir automatiskt återvunnen hemma själv"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet råvaror i texten?",
+        "options": ["Färdiga produkter som säljs i butik", "Material som används för att tillverka nya saker", "Sopor som redan är sorterade klart", "Mat som inte är tillagad ännu"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket påstående stämmer bäst med texten?",
+        "options": ["Återvinning fungerar utan att någon sorterar", "Metallåtervinning kan spara energi jämfört med att ta ny malm", "Plast blir alltid bättre om man blandar olika sorter", "Papper blir starkare varje gång det återvinns"],
+        "correct": 1
+      }
+    ],
+    "word_count": 300
+  },
+  {
+    "id": "ak5-tema-004",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "budget",
+    "title": "En plan för pengarna",
+    "text": "En budget är en plan för pengar som visar hur mycket du tror att du får in och hur mycket du kan använda till olika saker under månaden i familjen.\n\nInkomster kan vara lön, studiebidrag eller presentpengar, och utgifter kan vara mat, hyra, busskort och fritidsaktiviteter, så det gäller att se helheten innan man bestämmer vad som finns kvar sen.\n\nOm du skriver upp allt i en lista kan du upptäcka små kostnader som annars glöms, som en glass här eller ett mobilspel där och blir det lättare att välja.\n\nEn budget handlar inte om att aldrig köpa något roligt, utan om att bestämma i förväg så att pengarna räcker när något viktigt dyker upp till exempel en skolresa eller trasig cykel.\n\nI en enkel budget kan man dela upp utgifterna i behov och önskningar, där behov är sådant man måste ha, som mat och kläder och önskningar kan vänta ibland lätt.\n\nNär man sparar lägger man undan en liten summa regelbundet, och även om det känns långsamt i början blir det större när veckor blir månader pengarna får ligga kvar länge.\n\nIbland kan man jämföra priser, låna saker eller dela med andra, och på så sätt minska utgifterna utan att livet blir sämre men kräver planering och att man tänker efter.\n\nOm en familj får mindre pengar en period kan budgeten hjälpa dem att prioritera, och om man får mer kan man bestämma vad som ska sparas och vad som används.\n\nEtt vanligt misstag är att glömma oregelbundna utgifter, som födelsedagar eller nya skor, så många skriver dem som en egen post för då blir man mindre överraskad när tiden kommer.\n\nNär du tränar på budget i liten skala lär du dig ett sätt att fatta beslut, och det kan vara nyttigt senare när du hanterar större summor på egen hand.",
+    "questions": [
+      {
+        "q": "Vad beskriver en budget enligt texten?",
+        "options": ["En lista över bara roliga köp man vill göra", "En karta över butiker i närheten", "En plan över inkomster och utgifter", "En metod för att alltid få mer pengar"],
+        "correct": 2
+      },
+      {
+        "q": "Vilket exempel räknas som en oregelbunden utgift i texten?",
+        "options": ["Hyra varje månad", "Mat varje vecka", "Busskort varje termin", "Födelsedagar som kommer ibland"],
+        "correct": 3
+      },
+      {
+        "q": "Varför kan det vara smart att skriva upp små kostnader?",
+        "options": ["För att de ofta kan ta mer pengar än man tror tillsammans", "För att de alltid försvinner av sig själva snabbt", "För att man då måste sluta köpa allt direkt", "För att inkomsterna blir större av det"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken tolkning passar bäst med textens syn på sparande?",
+        "options": ["Sparande fungerar bara om man lägger undan en stor summa direkt", "Sparande betyder att man aldrig får köpa något roligt", "Sparande kan växa över tid om pengarna får ligga kvar", "Sparande gör att utgifter försvinner helt"],
+        "correct": 2
+      },
+      {
+        "q": "Vad menas med behov i texten?",
+        "options": ["Saker man måste ha, som mat och kläder", "Saker man vill ha, som nya spel", "Saker som alltid kostar exakt samma", "Saker som bara finns på nätet"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket är ett rimligt syfte med att ha budget, enligt texten?",
+        "options": ["Att bli överraskad oftare av räkningar", "Att alltid köpa det billigaste alternativet", "Att kunna prioritera när pengar förändras", "Att undvika att planera framåt alls"],
+        "correct": 2
+      }
+    ],
+    "word_count": 300
+  },
+  {
+    "id": "ak5-tema-005",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "karta och kompass",
+    "title": "Hitta rätt med karta och kompass",
+    "text": "En karta är en ritad bild av ett område sedd uppifrån, där saker som vägar, hus och sjöar visas i mindre storlek med symboler så du hittar vägen och planerar.\n\nFör att förstå avstånd använder kartan en skala, till exempel att en centimeter betyder en kilometer, och då kan du räkna hur långt det är mellan platser du vill besöka.\n\nKartans teckenförklaring berättar vad symbolerna står för, som en blå linje för en bäck eller en prickad linje för en stig och när du läser den slipper du gissa mycket.\n\nEn kompass visar riktningar med hjälp av en magnetisk nål som pekar mot norr, och med den kan du vrida kartan så norr stämmer mot verkligheten när du står ute.\n\nNär kartan är rättvänd kan du följa en linje från din plats till målet och jämföra med vad du ser, som en kulle eller bro så du går rätt väg.\n\nPå många kartor finns höjdkurvor, tunna bruna linjer som visar hur marken lutar, och täta linjer betyder brant medan glest betyder flackt det hjälper när du väljer väg och orkar.\n\nOm du bara har mobilkarta kan batteriet ta slut, så det är bra att kunna grunderna på papper, särskilt på längre utflykter där täckning kan saknas och vädret ändras snabbt.\n\nNär du övar kan du börja i ett känt område, som skolans kvarter, och markera start, mål och viktiga punkter på kartan sedan går du sträckan och kollar om stämmer.\n\nDet finns två norr: geografiskt norr mot jordaxeln och magnetiskt norr som kompassen följer, och ibland skiljer de lite beroende på plats därför har vissa kartor en liten korrigeringsinformation tryckt.\n\nAtt kunna läsa karta och använda kompass gör att du kan ta ansvar för din orientering, samarbeta i grupp och känna dig tryggare ute när stigar försvinner och skyltar saknas.",
+    "questions": [
+      {
+        "q": "Vad är en karta enligt texten?",
+        "options": ["En bild av ett område uppifrån med symboler", "En lista med gatunamn och adresser", "En bok om väder och klimat", "En app som alltid behöver internet"],
+        "correct": 0
+      },
+      {
+        "q": "Vad används skalan på kartan till?",
+        "options": ["Att visa vilka symboler som finns", "Att mäta temperaturen utomhus", "Att räkna ut avstånd i verkligheten", "Att hitta magnetiskt norr direkt"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan det vara bra att kunna använda papperskarta även om man har mobil?",
+        "options": ["För att papperskartor visar alltid fler filmer", "För att kompassnålen fungerar bara med papper", "För att batteriet kan ta slut och täckning saknas", "För att symboler bara finns på papper"],
+        "correct": 2
+      },
+      {
+        "q": "Vad visar höjdkurvor på en karta?",
+        "options": ["Var det finns busshållplatser i området", "Hur marken lutar och var det är brant", "Vilka vägar som är asfalterade helt", "Hur varmt det är på olika platser"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken slutsats passar bäst om varför det finns information om två olika norr?",
+        "options": ["För att kartor alltid är felritade från början", "För att kompassen och kartans norr kan skilja lite på vissa platser", "För att magnetiskt norr är samma som geografiskt norr överallt", "För att höjdkurvor påverkar riktningen på kartan"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet teckenförklaring i texten?",
+        "options": ["En förklaring av vad symbolerna på kartan betyder", "En beskrivning av vädret på platsen", "En regel om hur man går fort framåt", "En lista på alla träd i området"],
+        "correct": 0
+      }
+    ],
+    "word_count": 300
   }
 ]
