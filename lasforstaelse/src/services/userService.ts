@@ -1,24 +1,8 @@
 import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText } from '../types';
-import { db, isFirebaseConfigured } from './firebase';
-import {
-  collection,
-  doc,
-  setDoc,
-  getDoc,
-  getDocs,
-  updateDoc,
-  query,
-  orderBy,
-  limit
-} from 'firebase/firestore';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
 const DAILY_STATS_KEY = 'lasforstaelse_daily_stats';
-
-// Firestore collections
-const USERS_COLLECTION = 'users';
-const DAILY_STATS_COLLECTION = 'dailyStats';
 
 interface DailyStats {
   date: string;
@@ -46,38 +30,7 @@ export function createUser(name: string): User {
 }
 
 /**
- * Generera ett unikt ID baserat på namn
- */
-function getUserId(name: string): string {
-  return name.trim().toLowerCase().replace(/\s+/g, '_');
-}
-
-/**
- * Ladda användare från Firestore eller localStorage
- */
-export async function loadUserAsync(name?: string): Promise<User | null> {
-  // Om Firebase är konfigurerat och vi har ett namn, försök ladda från Firestore
-  if (isFirebaseConfigured() && name) {
-    try {
-      const userId = getUserId(name);
-      const userDoc = await getDoc(doc(db, USERS_COLLECTION, userId));
-      if (userDoc.exists()) {
-        const user = userDoc.data() as User;
-        // Spara även lokalt som cache
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-        return user;
-      }
-    } catch (error) {
-      console.error('Kunde inte ladda användare från Firestore:', error);
-    }
-  }
-
-  // Fallback till localStorage
-  return loadUser();
-}
-
-/**
- * Ladda användare från localStorage (synkron, för bakåtkompatibilitet)
+ * Ladda användare från localStorage
  */
 export function loadUser(): User | null {
   try {
@@ -92,47 +45,14 @@ export function loadUser(): User | null {
 }
 
 /**
- * Spara användare till Firestore och localStorage
- */
-export async function saveUserAsync(user: User): Promise<void> {
-  // Spara alltid lokalt först
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-  } catch (error) {
-    console.error('Kunde inte spara användare lokalt:', error);
-  }
-
-  // Spara till Firestore om konfigurerat
-  if (isFirebaseConfigured()) {
-    try {
-      const userId = getUserId(user.name);
-      await setDoc(doc(db, USERS_COLLECTION, userId), user);
-    } catch (error) {
-      console.error('Kunde inte spara användare till Firestore:', error);
-    }
-  } else {
-    // Fallback: spara till alla användare lokalt
-    saveToAllUsers(user);
-  }
-}
-
-/**
- * Spara användare (synkron wrapper för bakåtkompatibilitet)
+ * Spara användare till localStorage
  */
 export function saveUser(user: User): void {
-  // Spara lokalt synkront
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
     saveToAllUsers(user);
   } catch (error) {
     console.error('Kunde inte spara användare:', error);
-  }
-
-  // Spara till Firestore asynkront
-  if (isFirebaseConfigured()) {
-    saveUserAsync(user).catch(err => {
-      console.error('Async save to Firestore failed:', err);
-    });
   }
 }
 
@@ -263,11 +183,11 @@ export function getCompletedTextIds(user: User): string[] {
 }
 
 /**
- * Spara användare till "alla användare" listan (för lärarstatistik - endast localStorage)
+ * Spara användare till "alla användare" listan (för lärarstatistik)
  */
 export function saveToAllUsers(user: User): void {
   try {
-    const allUsers = getAllUsersLocal();
+    const allUsers = getAllUsers();
     const existingIndex = allUsers.findIndex(u => u.name.toLowerCase() === user.name.toLowerCase());
 
     if (existingIndex >= 0) {
@@ -283,46 +203,18 @@ export function saveToAllUsers(user: User): void {
 }
 
 /**
- * Hämta alla användare från localStorage (för bakåtkompatibilitet)
+ * Hämta alla användare från localStorage
  */
-function getAllUsersLocal(): User[] {
+export function getAllUsers(): User[] {
   try {
     const stored = localStorage.getItem(ALL_USERS_KEY);
     if (stored) {
       return JSON.parse(stored) as User[];
     }
   } catch (error) {
-    console.error('Kunde inte ladda alla användare lokalt:', error);
+    console.error('Kunde inte ladda alla användare:', error);
   }
   return [];
-}
-
-/**
- * Hämta alla användare från Firestore
- */
-export async function getAllUsersAsync(): Promise<User[]> {
-  if (isFirebaseConfigured()) {
-    try {
-      const usersSnapshot = await getDocs(collection(db, USERS_COLLECTION));
-      const users: User[] = [];
-      usersSnapshot.forEach(doc => {
-        users.push(doc.data() as User);
-      });
-      return users;
-    } catch (error) {
-      console.error('Kunde inte ladda alla användare från Firestore:', error);
-    }
-  }
-
-  // Fallback till localStorage
-  return getAllUsersLocal();
-}
-
-/**
- * Hämta alla användare (synkron, för bakåtkompatibilitet)
- */
-export function getAllUsers(): User[] {
-  return getAllUsersLocal();
 }
 
 /**
@@ -333,60 +225,9 @@ function getTodayKey(): string {
 }
 
 /**
- * Spara daglig statistik till Firestore och localStorage
- */
-export async function recordDailyStatsAsync(genre: string, theme: string, grade: number): Promise<void> {
-  const today = getTodayKey();
-
-  let stats: DailyStats = {
-    date: today,
-    textsRead: 0,
-    genres: {},
-    themes: {},
-    grades: {},
-  };
-
-  // Försök ladda befintlig statistik
-  if (isFirebaseConfigured()) {
-    try {
-      const statsDoc = await getDoc(doc(db, DAILY_STATS_COLLECTION, today));
-      if (statsDoc.exists()) {
-        stats = statsDoc.data() as DailyStats;
-      }
-    } catch (error) {
-      console.error('Kunde inte ladda daglig statistik från Firestore:', error);
-    }
-  } else {
-    const stored = localStorage.getItem(`${DAILY_STATS_KEY}_${today}`);
-    if (stored) {
-      stats = JSON.parse(stored);
-    }
-  }
-
-  // Uppdatera statistik
-  stats.textsRead++;
-  stats.genres[genre] = (stats.genres[genre] || 0) + 1;
-  stats.themes[theme] = (stats.themes[theme] || 0) + 1;
-  stats.grades[grade] = (stats.grades[grade] || 0) + 1;
-
-  // Spara till Firestore
-  if (isFirebaseConfigured()) {
-    try {
-      await setDoc(doc(db, DAILY_STATS_COLLECTION, today), stats);
-    } catch (error) {
-      console.error('Kunde inte spara daglig statistik till Firestore:', error);
-    }
-  }
-
-  // Spara alltid lokalt också
-  localStorage.setItem(`${DAILY_STATS_KEY}_${today}`, JSON.stringify(stats));
-}
-
-/**
- * Spara daglig statistik (synkron wrapper)
+ * Spara daglig statistik
  */
 export function recordDailyStats(genre: string, theme: string, grade: number): void {
-  // Spara lokalt synkront
   try {
     const today = getTodayKey();
     const statsKey = `${DAILY_STATS_KEY}_${today}`;
@@ -413,36 +254,10 @@ export function recordDailyStats(genre: string, theme: string, grade: number): v
   } catch (error) {
     console.error('Kunde inte spara daglig statistik:', error);
   }
-
-  // Spara till Firestore asynkront
-  if (isFirebaseConfigured()) {
-    recordDailyStatsAsync(genre, theme, grade).catch(err => {
-      console.error('Async save daily stats to Firestore failed:', err);
-    });
-  }
 }
 
 /**
- * Hämta daglig statistik för en specifik dag från Firestore
- */
-export async function getDailyStatsAsync(date: string): Promise<DailyStats | null> {
-  if (isFirebaseConfigured()) {
-    try {
-      const statsDoc = await getDoc(doc(db, DAILY_STATS_COLLECTION, date));
-      if (statsDoc.exists()) {
-        return statsDoc.data() as DailyStats;
-      }
-    } catch (error) {
-      console.error('Kunde inte ladda daglig statistik från Firestore:', error);
-    }
-  }
-
-  // Fallback till localStorage
-  return getDailyStats(date);
-}
-
-/**
- * Hämta daglig statistik för en specifik dag (synkron)
+ * Hämta daglig statistik för en specifik dag
  */
 export function getDailyStats(date: string): DailyStats | null {
   try {
@@ -458,101 +273,7 @@ export function getDailyStats(date: string): DailyStats | null {
 }
 
 /**
- * Hämta aggregerad statistik för lärarvyn (asynkron version för Firestore)
- */
-export async function getTeacherStatsAsync(): Promise<{
-  todayTexts: number;
-  totalTexts: number;
-  topGenres: Array<{ name: string; count: number }>;
-  topThemes: Array<{ name: string; count: number }>;
-  topGrades: Array<{ grade: number; count: number }>;
-  leaderboard: Array<{ name: string; points: number; textsRead: number }>;
-  last7Days: Array<{ date: string; count: number }>;
-}> {
-  const allUsers = await getAllUsersAsync();
-
-  // Beräkna totalt antal texter och aggregerad statistik
-  let totalTexts = 0;
-  const genresMap = new Map<string, number>();
-  const themesMap = new Map<string, number>();
-  const gradesMap = new Map<number, number>();
-
-  // Gå igenom alla användare och deras completed texts
-  allUsers.forEach(user => {
-    user.completedTexts.forEach(text => {
-      totalTexts++;
-      const grade = text.grade;
-      gradesMap.set(grade, (gradesMap.get(grade) || 0) + 1);
-    });
-  });
-
-  // Hämta dagens statistik
-  const today = getTodayKey();
-  const todayStats = await getDailyStatsAsync(today);
-  const todayTexts = todayStats?.textsRead || 0;
-
-  // Aggregera senaste 7 dagarna
-  const last7Days: Array<{ date: string; count: number }> = [];
-  for (let i = 6; i >= 0; i--) {
-    const date = new Date();
-    date.setDate(date.getDate() - i);
-    const dateKey = date.toISOString().split('T')[0];
-    const stats = await getDailyStatsAsync(dateKey);
-    last7Days.push({
-      date: dateKey,
-      count: stats?.textsRead || 0,
-    });
-
-    // Aggregera genres och themes från daglig statistik
-    if (stats) {
-      Object.entries(stats.genres).forEach(([genre, count]) => {
-        genresMap.set(genre, (genresMap.get(genre) || 0) + count);
-      });
-      Object.entries(stats.themes).forEach(([theme, count]) => {
-        themesMap.set(theme, (themesMap.get(theme) || 0) + count);
-      });
-    }
-  }
-
-  // Sortera och begränsa topp-listor
-  const topGenres = Array.from(genresMap.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([name, count]) => ({ name, count }));
-
-  const topThemes = Array.from(themesMap.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([name, count]) => ({ name, count }));
-
-  const topGrades = Array.from(gradesMap.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 9)
-    .map(([grade, count]) => ({ grade, count }));
-
-  // Skapa leaderboard
-  const leaderboard = allUsers
-    .map(user => ({
-      name: user.name,
-      points: user.totalPoints,
-      textsRead: user.completedTexts.length,
-    }))
-    .sort((a, b) => b.points - a.points)
-    .slice(0, 10);
-
-  return {
-    todayTexts,
-    totalTexts,
-    topGenres,
-    topThemes,
-    topGrades,
-    leaderboard,
-    last7Days,
-  };
-}
-
-/**
- * Hämta aggregerad statistik för lärarvyn (synkron version för bakåtkompatibilitet)
+ * Hämta aggregerad statistik för lärarvyn
  */
 export function getTeacherStats(): {
   todayTexts: number;
@@ -575,8 +296,6 @@ export function getTeacherStats(): {
   allUsers.forEach(user => {
     user.completedTexts.forEach(text => {
       totalTexts++;
-
-      // Extrahera genre/theme från textId om möjligt (format: "ak1-001")
       const grade = text.grade;
       gradesMap.set(grade, (gradesMap.get(grade) || 0) + 1);
     });
