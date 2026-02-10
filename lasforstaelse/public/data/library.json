@@ -12953,5 +12953,205 @@
       }
     ],
     "word_count": 460
+  },
+  {
+    "id": "ak4-tema-001",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "årstider",
+    "title": "Varför löv byter färg",
+    "text": "På våren och sommaren är de flesta löv gröna. Det beror på ett ämne som heter klorofyll. Klorofyll hjälper trädet att få energi från solljus. När dagarna blir kortare på hösten får trädet mindre ljus. Då börjar det spara energi och förbereda sig för vintern.\n\nTrädet slutar gradvis att göra nytt klorofyll. När det gröna försvinner syns andra färger som redan finns i lövet. Gula och orange färger kommer från ämnen som kallas karotenoider. De finns där hela tiden, men på sommaren döljs de av det gröna.\n\nVissa träd får röda och lila färger. Det kan hända när socker stannar kvar i löven och trädet bildar nya färgämnen. Hur starka färgerna blir kan påverkas av vädret. Soliga dagar och kyliga nätter kan ge tydligare färger, men om det är väldigt blött eller stormigt kan löven falla tidigt.\n\nTill slut släpper trädet löven för att minska risken att grenar går sönder av snö och för att spara vatten under vintern.",
+    "questions": [
+      {
+        "q": "Vad är klorofyll viktigt för?",
+        "options": ["Att göra lövet tjockare", "Att få energi från solljus", "Att skydda lövet från vind", "Att ge lövet vintervärmekl"],
+        "correct": 1
+      },
+      {
+        "q": "Varför blir löven mindre gröna på hösten?",
+        "options": ["Löven fylls med mer vatten", "Insekter äter upp den gröna färgen", "Trädet slutar gradvis att göra nytt klorofyll", "Trädet målar om löven varje år"],
+        "correct": 2
+      },
+      {
+        "q": "Vilka färger syns när det gröna försvinner, enligt texten?",
+        "options": ["Blå och turkosa färger", "Svarta och grå färger", "Vita och silvriga färger", "Gula och orange färger"],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan göra att löven faller tidigare?",
+        "options": ["Väldigt blött eller stormigt väder", "Att nätterna är kyliga och klara", "Att solen skiner mycket varje dag", "Att det blir varmare på hösten"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet gradvis i texten?",
+        "options": ["Plötsligt och snabbt", "Lite i taget över tid", "I hemlighet utan att synas", "Bara på natten när det är mörkt"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket är ett viktigt skäl till att trädet släpper löven?",
+        "options": ["För att locka fler fåglar till trädet", "För att löven ska bli varmare", "För att minska risken att grenar går sönder av snö", "För att få mer solljus till stammen"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-002",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "miljö i vardagen",
+    "title": "Så fungerar en enkel kompost",
+    "text": "En kompost är som en plats där matrester och trädgårdsavfall bryts ner och blir till jord. När skal, löv och annat organiskt material ligger tillsammans börjar små organismer arbeta. Det kan vara maskar, insekter, svampar och bakterier. De äter och delar upp materialet i mindre delar.\n\nFör att en kompost ska fungera bra behöver den luft, lagom fukt och en blandning av olika saker. Om man bara lägger blöta matrester kan komposten bli kladdig och lukta. Då kan man blanda i torra saker som löv, rivet papper eller små kvistar. De gör att luft kan komma in mellan bitarna.\n\nDet är också bra om komposten inte blir för torr. Om allt är knastertorrt går nedbrytningen långsamt. Då kan man vattna lite eller lägga i något fuktigt. En kompost blir ofta varm inuti, eftersom organismerna arbetar och det bildas värme.\n\nEfter en tid ser man inte längre de gamla resterna. Det som finns kvar liknar mörk, smulig jord. Den kan användas i rabatter eller i odlingslådor, men ibland behöver den blandas med vanlig jord.",
+    "questions": [
+      {
+        "q": "Vilka är exempel på organismer som hjälper till i en kompost?",
+        "options": ["Fiskar, grodor och fåglar", "Katter, hundar och hästar", "Myror, bin och fjärilar", "Maskar, svampar och bakterier"],
+        "correct": 3
+      },
+      {
+        "q": "Varför är det bra att blanda i torra saker som löv eller rivet papper?",
+        "options": ["De gör komposten kallare på vintern", "De stoppar nedbrytningen helt", "De tar bort all lukt direkt", "De gör att luft kan komma in i komposten"],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan hända om man bara lägger blöta matrester i komposten?",
+        "options": ["Den kan bli kladdig och lukta illa", "Den blir automatiskt färdig på en dag", "Den blir alltid för torr att använda", "Den förvandlas till sand direkt"],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan en kompost bli varm inuti?",
+        "options": ["För att solen lyser direkt på varje bit", "För att nedbrytningen skapar värme", "För att maskarna gnuggar sig mot varandra", "För att man måste värma den själv"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder smulig i texten?",
+        "options": ["Helt slät och blank som glas", "Genomskinlig och hård som sten", "Våt och kladdig som lera", "Som små bitar som lätt faller isär"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket verkar vara textens huvudsyfte?",
+        "options": ["Att berätta om en mask som rymmer", "Att lista alla sorters växter i en trädgård", "Att jämföra olika typer av jord", "Att förklara vad som behövs för att en kompost ska fungera"],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-003",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "vatten och kyla",
+    "title": "När vatten fryser",
+    "text": "Vatten kan finnas som vätska, is eller ånga. När temperaturen sjunker och blir låg nog börjar vatten frysa och bli till is. Då rör sig vattenmolekylerna långsammare. De ordnar sig i ett mönster som tar mer plats än när vattnet är flytande.\n\nDet är därför is kan flyta på vatten. Isen har lägre densitet, vilket betyder att samma mängd vatten tar större plats som is än som vätska. När en sjö fryser bildas is först på ytan, där vattnet kyls av snabbast. Under isen kan vattnet vara varmare, och fiskar kan ofta leva där hela vintern.\n\nNär vatten fryser i en flaska som är helt full kan flaskan spricka. Isen behöver mer utrymme, men plasten eller glaset kan inte alltid ge efter. Därför är det klokt att lämna lite luft i en behållare som ska frysas.\n\nOm isen smälter händer motsatsen. Då får molekylerna mer rörelse, mönstret bryts och vattnet blir vätska igen. Smältning och frysning är exempel på hur samma ämne kan byta form utan att bli ett annat ämne.",
+    "questions": [
+      {
+        "q": "Varför kan is flyta på vatten enligt texten?",
+        "options": ["Is är tyngre än flytande vatten", "Is innehåller luftbubblor som bär den", "Is har lägre densitet än vatten", "Is är varmare än vattnet under"],
+        "correct": 2
+      },
+      {
+        "q": "Var bildas is först på en sjö?",
+        "options": ["På ytan där vattnet kyls snabbast", "På botten bland stenarna", "Mitt i sjön på djupet", "Längs stränderna i sanden"],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan hända om man fryser vatten i en helt full flaska?",
+        "options": ["Vattnet försvinner helt", "Flaskan blir varmare inuti", "Vattnet blir till ånga istället", "Flaskan kan spricka"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken slutsats passar bäst med texten om fiskar på vintern?",
+        "options": ["Allt vatten i en sjö blir alltid till is", "Isen kan skydda vattnet under så att det inte kyls lika snabbt", "Fiskar behöver luft ovanför isen för att överleva", "Fiskar flyttar alltid till varmare vatten"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder densitet i texten?",
+        "options": ["Hur tätt ett ämne är packat", "Hur starkt ett ämne luktar", "Hur snabbt ett ämne rinner", "Hur kallt ett ämne känns"],
+        "correct": 0
+      },
+      {
+        "q": "Vad vill texten framför allt förklara?",
+        "options": ["Hur man bygger en sjö från början", "Varför flaskor alltid går sönder i kylen", "Hur vatten kan byta form mellan vätska och is", "Varför fiskar simmar i grupp på vintern"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-004",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "orientering",
+    "title": "Hitta norr utan kompass",
+    "text": "Ibland behöver man veta vilket håll som är norr, även om man inte har en kompass. Det finns flera sätt att tänka, men inget är perfekt. Därför är det smart att jämföra olika tecken innan man bestämmer sig.\n\nOm det är en klar dag kan solen ge ledtrådar. På morgonen står solen i öster och på kvällen i väster. Mitt på dagen står den högre på himlen, ungefär i söder i Sverige. Om du vet ungefär vilken tid det är kan du använda solens läge för att gissa riktning.\n\nPå natten kan man ibland använda stjärnor. Polstjärnan syns i riktning mot norr. Den är inte den starkaste stjärnan, men den står nästan stilla på himlen jämfört med andra. För att hitta den kan man leta efter Karlavagnen och följa kanten på skopan uppåt.\n\nI skogen pratar man ibland om mossa på träd. Mossa kan växa mer på den sida som är fuktigare och får mindre sol, men det varierar mycket. Träd kan också stå i skugga eller nära vatten. Därför ska mossa ses som en svag ledtråd.\n\nGenom att använda flera tecken, och tänka efter, ökar chansen att du väljer rätt håll.",
+    "questions": [
+      {
+        "q": "Vilket väder gör det lättare att använda solen som ledtråd?",
+        "options": ["En dimmig dag utan sol", "En dag med kraftigt snöfall", "En klar dag med sol", "En mulen dag med regn"],
+        "correct": 2
+      },
+      {
+        "q": "Var står solen ungefär mitt på dagen i Sverige, enligt texten?",
+        "options": ["I söder på himlen", "I norr på himlen", "Rakt i väster vid horisonten", "Rakt i öster vid horisonten"],
+        "correct": 0
+      },
+      {
+        "q": "Varför är Polstjärnan användbar när man vill hitta norr?",
+        "options": ["Den byter färg varje timme", "Den syns bara på sommaren", "Den är den starkaste stjärnan", "Den står nästan stilla på himlen"],
+        "correct": 3
+      },
+      {
+        "q": "Vad menar texten med att mossa är en svag ledtråd?",
+        "options": ["Den visar alltid exakt norr", "Den kan peka åt olika håll beroende på platsen", "Den syns bara på tallar i skogen", "Den växer bara på sommaren"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ledtråd i texten?",
+        "options": ["En plats där man leder djur", "Ett verktyg som alltid är rätt", "Något som hjälper dig att gissa eller förstå", "En stig genom skogen"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken metod stämmer bäst med textens råd om att vara säker?",
+        "options": ["Jämföra flera tecken innan du bestämmer riktning", "Välja första tecknet du ser och gå direkt", "Bara titta efter mossa och inget annat", "Alltid fråga någon annan istället"],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-005",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "hälsa",
+    "title": "Varför vi behöver sömn",
+    "text": "Sömn är en tid då kroppen och hjärnan arbetar på ett annat sätt än när vi är vakna. Det kan se ut som om allt är stilla, men mycket händer. Under natten får kroppen chans att vila muskler, bygga upp vävnad och reglera flera viktiga funktioner.\n\nHjärnan använder också sömnen för att sortera intryck. Sådant du har lärt dig under dagen kan bli lättare att komma ihåg efter en god natts sömn. Därför märker många att de har svårare att koncentrera sig när de har sovit för lite. Känslor kan också påverkas. Trötthet kan göra att små problem känns större.\n\nSömnen är inte likadan hela tiden. Den går i perioder, och i vissa delar drömmer vi mer. Forskare tror att drömmar kan hjälpa hjärnan att bearbeta upplevelser, men man vet inte allt.\n\nHur mycket sömn man behöver kan skilja sig mellan personer, men barn i mellanstadiet brukar behöva många timmar. Om man har svårt att somna kan det hjälpa att ha lugna vanor på kvällen, som att läsa en bok och lägga undan skärmar en stund.\n\nSammantaget är sömn viktig för både kroppen och hur vi fungerar i skolan och hemma.",
+    "questions": [
+      {
+        "q": "Vilken sak nämns som något kroppen kan göra under sömn?",
+        "options": ["Springa snabbare än på dagen", "Bygga upp vävnad i kroppen", "Lära sig ett nytt språk direkt", "Växa fem centimeter på en natt"],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan hända med koncentrationen om man sover för lite?",
+        "options": ["Den blir alltid bättre på morgonen", "Den påverkas bara på sommaren", "Den kan bli sämre än vanligt", "Den försvinner helt under dagen"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats passar bäst om känslor och trötthet?",
+        "options": ["Trötthet kan göra att små problem känns större", "Trötthet gör att alla känslor försvinner helt", "Trötthet påverkar bara idrott och sport", "Trötthet gör alltid att man blir gladare"],
+        "correct": 0
+      },
+      {
+        "q": "Vad säger texten om drömmar?",
+        "options": ["De är alltid exakt samma varje natt", "De uppstår bara när man är sjuk", "Man tror att de kan hjälpa hjärnan att bearbeta upplevelser", "De händer bara vuxna och aldrig barn"],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder bearbeta i texten?",
+        "options": ["Måla över med färg", "Glömma så snabbt som möjligt", "Gömma undan i en låda", "Tänka igenom och hantera"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket verkar vara textens syfte?",
+        "options": ["Att berätta en spännande nattlig historia", "Att förklara varför sömn är viktig och vad den gör", "Att jämföra olika sporter med varandra", "Att beskriva hur man bygger en säng"],
+        "correct": 1
+      }
+    ]
   }
 ]
