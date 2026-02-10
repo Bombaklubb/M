@@ -59,6 +59,44 @@ export function loadUser(): User | null {
 }
 
 /**
+ * Hitta en befintlig användare baserat på namn
+ */
+export function findUserByName(name: string): User | null {
+  try {
+    const allUsers = getAllUsers();
+    const normalizedName = name.trim().toLowerCase();
+    return allUsers.find(u => u.name.toLowerCase() === normalizedName) || null;
+  } catch (error) {
+    console.error('Kunde inte söka efter användare:', error);
+  }
+  return null;
+}
+
+/**
+ * Logga in - returnerar befintlig användare eller skapar ny
+ */
+export function loginUser(name: string, avatar?: string): User {
+  // Kolla om användaren redan finns
+  const existingUser = findUserByName(name);
+
+  if (existingUser) {
+    // Uppdatera senaste aktivitet och eventuellt avatar om den inte finns
+    const updatedUser = {
+      ...existingUser,
+      avatar: existingUser.avatar || avatar || AVATAR_OPTIONS[0],
+      lastActivity: new Date().toISOString(),
+    };
+    saveUser(updatedUser);
+    return updatedUser;
+  }
+
+  // Skapa ny användare
+  const newUser = createUser(name, avatar);
+  saveUser(newUser);
+  return newUser;
+}
+
+/**
  * Spara användare till localStorage
  */
 export function saveUser(user: User): void {

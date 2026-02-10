@@ -9,9 +9,8 @@ import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { BookLogo } from './components/BookLogo';
 import {
-  createUser,
+  loginUser,
   loadUser,
-  saveUser,
   logoutUser,
   recordResult,
   getCompletedTextIds,
@@ -66,9 +65,8 @@ function App() {
 
   // Login
   const handleLogin = (name: string, avatar: string) => {
-    const newUser = createUser(name, avatar);
-    saveUser(newUser);
-    setUser(newUser);
+    const user = loginUser(name, avatar);
+    setUser(user);
     setAppState(AppState.SETUP);
   };
 
