@@ -23,7 +23,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
             <BookLogo size={80} />
           </div>
           <h1 className="text-4xl font-extrabold text-slate-800 mb-2">
-            Läsresan
+            Läsjakten
           </h1>
           <p className="text-slate-500 text-lg">
             Din smarta läskompis
@@ -64,13 +64,13 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
         </form>
 
         <div className="mt-8 pt-6 border-t border-slate-200 text-center text-slate-400 text-sm">
-          <p>Läsresan hjälper dig att träna läsförståelse på din nivå</p>
+          <p>Läsjakten hjälper dig att träna läsförståelse på din nivå</p>
         </div>
       </div>
 
       {/* Signatur */}
       <div className="fixed bottom-2 right-3 text-xs text-purple-200 opacity-60 hover:opacity-100 transition-opacity">
-        Läsresan av Martin Akdogan
+        Läsjakten av Martin Akdogan
       </div>
     </div>
   );
