@@ -1,24 +1,9 @@
 import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText } from '../types';
-import { db, isFirebaseConfigured } from './firebase';
-import {
-  collection,
-  doc,
-  setDoc,
-  getDoc,
-  getDocs,
-  updateDoc,
-  query,
-  orderBy,
-  limit
-} from 'firebase/firestore';
+import { getSupabase, isSupabaseConfigured, generateSyncCode } from './supabase';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
 const DAILY_STATS_KEY = 'lasforstaelse_daily_stats';
-
-// Firestore collections
-const USERS_COLLECTION = 'users';
-const DAILY_STATS_COLLECTION = 'dailyStats';
 
 interface DailyStats {
   date: string;
@@ -53,26 +38,48 @@ function getUserId(name: string): string {
 }
 
 /**
- * Ladda användare från Firestore eller localStorage
+ * Ladda användare från Supabase med synkkod
  */
-export async function loadUserAsync(name?: string): Promise<User | null> {
-  // Om Firebase är konfigurerat och vi har ett namn, försök ladda från Firestore
-  if (isFirebaseConfigured() && name) {
-    try {
-      const userId = getUserId(name);
-      const userDoc = await getDoc(doc(db, USERS_COLLECTION, userId));
-      if (userDoc.exists()) {
-        const user = userDoc.data() as User;
-        // Spara även lokalt som cache
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-        return user;
-      }
-    } catch (error) {
-      console.error('Kunde inte ladda användare från Firestore:', error);
-    }
+export async function loadUserBySyncCode(syncCode: string): Promise<User | null> {
+  const supabase = getSupabase();
+  if (!supabase) {
+    console.log('Supabase är inte konfigurerat');
+    return null;
   }
 
-  // Fallback till localStorage
+  try {
+    const { data, error } = await supabase
+      .from('users')
+      .select('user_data')
+      .eq('sync_code', syncCode.toUpperCase())
+      .single();
+
+    if (error) {
+      if (error.code === 'PGRST116') {
+        // Ingen användare hittades
+        return null;
+      }
+      throw error;
+    }
+
+    if (data?.user_data) {
+      const user = data.user_data as User;
+      // Spara lokalt som cache
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+      return user;
+    }
+  } catch (error) {
+    console.error('Kunde inte ladda användare från Supabase:', error);
+  }
+
+  return null;
+}
+
+/**
+ * Ladda användare från localStorage (synkron)
+ */
+export async function loadUserAsync(name?: string): Promise<User | null> {
+  // Försök ladda från localStorage först
   return loadUser();
 }
 
@@ -92,28 +99,173 @@ export function loadUser(): User | null {
 }
 
 /**
- * Spara användare till Firestore och localStorage
+ * Spara användare till Supabase och localStorage
  */
 export async function saveUserAsync(user: User): Promise<void> {
   // Spara alltid lokalt först
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+    saveToAllUsers(user);
   } catch (error) {
     console.error('Kunde inte spara användare lokalt:', error);
   }
 
-  // Spara till Firestore om konfigurerat
-  if (isFirebaseConfigured()) {
-    try {
-      const userId = getUserId(user.name);
-      await setDoc(doc(db, USERS_COLLECTION, userId), user);
-    } catch (error) {
-      console.error('Kunde inte spara användare till Firestore:', error);
-    }
-  } else {
-    // Fallback: spara till alla användare lokalt
-    saveToAllUsers(user);
+  // Spara till Supabase om konfigurerat och användaren har en synkkod
+  if (isSupabaseConfigured() && user.syncCode) {
+    await syncUserToSupabase(user);
   }
+}
+
+/**
+ * Synka användare till Supabase
+ */
+async function syncUserToSupabase(user: User): Promise<void> {
+  const supabase = getSupabase();
+  if (!supabase || !user.syncCode) return;
+
+  try {
+    const { error } = await supabase
+      .from('users')
+      .upsert({
+        sync_code: user.syncCode,
+        name: user.name,
+        user_data: user,
+        updated_at: new Date().toISOString()
+      }, {
+        onConflict: 'sync_code'
+      });
+
+    if (error) throw error;
+  } catch (error) {
+    console.error('Kunde inte synka användare till Supabase:', error);
+  }
+}
+
+/**
+ * Aktivera synkning för en användare (generera synkkod)
+ */
+export async function enableSync(user: User): Promise<{ user: User; syncCode: string } | null> {
+  const supabase = getSupabase();
+  if (!supabase) {
+    console.log('Supabase är inte konfigurerat');
+    return null;
+  }
+
+  // Generera en unik synkkod
+  let syncCode = generateSyncCode();
+  let attempts = 0;
+  const maxAttempts = 10;
+
+  // Försök hitta en unik kod
+  while (attempts < maxAttempts) {
+    const { data } = await supabase
+      .from('users')
+      .select('sync_code')
+      .eq('sync_code', syncCode)
+      .single();
+
+    if (!data) break; // Koden är unik
+    syncCode = generateSyncCode();
+    attempts++;
+  }
+
+  // Uppdatera användaren med synkkoden
+  const updatedUser: User = {
+    ...user,
+    syncCode
+  };
+
+  // Spara till Supabase
+  try {
+    const { error } = await supabase
+      .from('users')
+      .insert({
+        sync_code: syncCode,
+        name: user.name,
+        user_data: updatedUser,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      });
+
+    if (error) throw error;
+
+    // Spara lokalt
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedUser));
+    saveToAllUsers(updatedUser);
+
+    return { user: updatedUser, syncCode };
+  } catch (error) {
+    console.error('Kunde inte aktivera synkning:', error);
+    return null;
+  }
+}
+
+/**
+ * Hämta och slå samman data från Supabase
+ */
+export async function syncFromCloud(localUser: User): Promise<User | null> {
+  if (!localUser.syncCode) return null;
+
+  const cloudUser = await loadUserBySyncCode(localUser.syncCode);
+  if (!cloudUser) return null;
+
+  // Slå samman data - behåll den mest kompletta
+  const mergedUser = mergeUserData(localUser, cloudUser);
+
+  // Spara den sammanslagna datan
+  saveUser(mergedUser);
+  await syncUserToSupabase(mergedUser);
+
+  return mergedUser;
+}
+
+/**
+ * Slå samman två användarprofiler
+ */
+function mergeUserData(local: User, cloud: User): User {
+  // Slå samman completedTexts (behåll alla unika)
+  const allTexts = [...local.completedTexts];
+  for (const cloudText of cloud.completedTexts) {
+    const exists = allTexts.some(t =>
+      t.textId === cloudText.textId && t.completedAt === cloudText.completedAt
+    );
+    if (!exists) {
+      allTexts.push(cloudText);
+    }
+  }
+
+  // Sortera efter datum
+  allTexts.sort((a, b) =>
+    new Date(a.completedAt).getTime() - new Date(b.completedAt).getTime()
+  );
+
+  // Slå samman badges (behåll alla unika)
+  const allBadges = [...local.badges];
+  for (const cloudBadge of cloud.badges) {
+    const exists = allBadges.some(b => b.type === cloudBadge.type);
+    if (!exists) {
+      allBadges.push(cloudBadge);
+    }
+  }
+
+  // Slå samman gradesCompleted
+  const allGrades = [...new Set([...local.gradesCompleted, ...cloud.gradesCompleted])].sort((a, b) => a - b);
+
+  // Beräkna total poäng från alla texter
+  const totalPoints = allTexts.reduce((sum, t) => sum + t.pointsEarned, 0);
+
+  return {
+    ...local,
+    syncCode: local.syncCode || cloud.syncCode,
+    totalPoints,
+    badges: allBadges,
+    completedTexts: allTexts,
+    gradesCompleted: allGrades,
+    lastActivity: new Date(Math.max(
+      new Date(local.lastActivity).getTime(),
+      new Date(cloud.lastActivity).getTime()
+    )).toISOString()
+  };
 }
 
 /**
@@ -128,10 +280,10 @@ export function saveUser(user: User): void {
     console.error('Kunde inte spara användare:', error);
   }
 
-  // Spara till Firestore asynkront
-  if (isFirebaseConfigured()) {
+  // Spara till Supabase asynkront om användaren har synkkod
+  if (isSupabaseConfigured() && user.syncCode) {
     saveUserAsync(user).catch(err => {
-      console.error('Async save to Firestore failed:', err);
+      console.error('Async save to Supabase failed:', err);
     });
   }
 }
@@ -298,23 +450,9 @@ function getAllUsersLocal(): User[] {
 }
 
 /**
- * Hämta alla användare från Firestore
+ * Hämta alla användare (asynkron)
  */
 export async function getAllUsersAsync(): Promise<User[]> {
-  if (isFirebaseConfigured()) {
-    try {
-      const usersSnapshot = await getDocs(collection(db, USERS_COLLECTION));
-      const users: User[] = [];
-      usersSnapshot.forEach(doc => {
-        users.push(doc.data() as User);
-      });
-      return users;
-    } catch (error) {
-      console.error('Kunde inte ladda alla användare från Firestore:', error);
-    }
-  }
-
-  // Fallback till localStorage
   return getAllUsersLocal();
 }
 
@@ -333,60 +471,16 @@ function getTodayKey(): string {
 }
 
 /**
- * Spara daglig statistik till Firestore och localStorage
+ * Spara daglig statistik till localStorage (asynkron wrapper)
  */
 export async function recordDailyStatsAsync(genre: string, theme: string, grade: number): Promise<void> {
-  const today = getTodayKey();
-
-  let stats: DailyStats = {
-    date: today,
-    textsRead: 0,
-    genres: {},
-    themes: {},
-    grades: {},
-  };
-
-  // Försök ladda befintlig statistik
-  if (isFirebaseConfigured()) {
-    try {
-      const statsDoc = await getDoc(doc(db, DAILY_STATS_COLLECTION, today));
-      if (statsDoc.exists()) {
-        stats = statsDoc.data() as DailyStats;
-      }
-    } catch (error) {
-      console.error('Kunde inte ladda daglig statistik från Firestore:', error);
-    }
-  } else {
-    const stored = localStorage.getItem(`${DAILY_STATS_KEY}_${today}`);
-    if (stored) {
-      stats = JSON.parse(stored);
-    }
-  }
-
-  // Uppdatera statistik
-  stats.textsRead++;
-  stats.genres[genre] = (stats.genres[genre] || 0) + 1;
-  stats.themes[theme] = (stats.themes[theme] || 0) + 1;
-  stats.grades[grade] = (stats.grades[grade] || 0) + 1;
-
-  // Spara till Firestore
-  if (isFirebaseConfigured()) {
-    try {
-      await setDoc(doc(db, DAILY_STATS_COLLECTION, today), stats);
-    } catch (error) {
-      console.error('Kunde inte spara daglig statistik till Firestore:', error);
-    }
-  }
-
-  // Spara alltid lokalt också
-  localStorage.setItem(`${DAILY_STATS_KEY}_${today}`, JSON.stringify(stats));
+  recordDailyStats(genre, theme, grade);
 }
 
 /**
- * Spara daglig statistik (synkron wrapper)
+ * Spara daglig statistik
  */
 export function recordDailyStats(genre: string, theme: string, grade: number): void {
-  // Spara lokalt synkront
   try {
     const today = getTodayKey();
     const statsKey = `${DAILY_STATS_KEY}_${today}`;
@@ -413,31 +507,12 @@ export function recordDailyStats(genre: string, theme: string, grade: number): v
   } catch (error) {
     console.error('Kunde inte spara daglig statistik:', error);
   }
-
-  // Spara till Firestore asynkront
-  if (isFirebaseConfigured()) {
-    recordDailyStatsAsync(genre, theme, grade).catch(err => {
-      console.error('Async save daily stats to Firestore failed:', err);
-    });
-  }
 }
 
 /**
- * Hämta daglig statistik för en specifik dag från Firestore
+ * Hämta daglig statistik för en specifik dag (asynkron wrapper)
  */
 export async function getDailyStatsAsync(date: string): Promise<DailyStats | null> {
-  if (isFirebaseConfigured()) {
-    try {
-      const statsDoc = await getDoc(doc(db, DAILY_STATS_COLLECTION, date));
-      if (statsDoc.exists()) {
-        return statsDoc.data() as DailyStats;
-      }
-    } catch (error) {
-      console.error('Kunde inte ladda daglig statistik från Firestore:', error);
-    }
-  }
-
-  // Fallback till localStorage
   return getDailyStats(date);
 }
 
@@ -458,7 +533,7 @@ export function getDailyStats(date: string): DailyStats | null {
 }
 
 /**
- * Hämta aggregerad statistik för lärarvyn (asynkron version för Firestore)
+ * Hämta aggregerad statistik för lärarvyn (asynkron version)
  */
 export async function getTeacherStatsAsync(): Promise<{
   todayTexts: number;

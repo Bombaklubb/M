@@ -88,6 +88,7 @@ export interface User {
   gradesCompleted: number[]; // vilka årskurser man klarat minst en text i
   createdAt: string;
   lastActivity: string;
+  syncCode?: string; // Kod för att synka mellan enheter
 }
 
 // Badge-definitioner

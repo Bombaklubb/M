@@ -263,7 +263,14 @@ function App() {
           onHomeClick={handleRestart}
           onProfileClick={() => setShowProfile(false)}
         />
-        <ProfileView user={user} onClose={() => setShowProfile(false)} />
+        <ProfileView
+          user={user}
+          onClose={() => setShowProfile(false)}
+          onUserUpdate={(updatedUser) => {
+            setUser(updatedUser);
+            saveUser(updatedUser);
+          }}
+        />
       </div>
     );
   }
