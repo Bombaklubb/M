@@ -1,6 +1,6 @@
 {
-  "name": "Läsresan",
-  "short_name": "Läsresan",
+  "name": "Läsjakten",
+  "short_name": "Läsjakten",
   "description": "Din smarta läskompis - träna läsförståelse",
   "start_url": "/",
   "display": "standalone",
