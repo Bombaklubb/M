@@ -12366,32 +12366,62 @@
     "questions": [
       {
         "q": "Vad gör Samir först när han ser videon?",
-        "options": ["Han sparar den för att undersöka mer", "Han delar den direkt i klasschatten", "Han skriver arga kommentarer", "Han anmäler kontot utan att titta klart"],
+        "options": [
+          "Han sparar den för att undersöka mer",
+          "Han delar den direkt i klasschatten",
+          "Han skriver arga kommentarer",
+          "Han anmäler kontot utan att titta klart"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket är ett av de första källkritiska stegen som texten beskriver?",
-        "options": ["Räkna hur många som har gillat inlägget", "Titta bara på videons kvalitet", "Fråga vem som står bakom informationen", "Vänta tills någon influencer kommenterar"],
+        "options": [
+          "Räkna hur många som har gillat inlägget",
+          "Titta bara på videons kvalitet",
+          "Fråga vem som står bakom informationen",
+          "Vänta tills någon influencer kommenterar"
+        ],
         "correct": 2
       },
       {
         "q": "Varför kan samma formuleringar på flera konton vara ett varningstecken?",
-        "options": ["Det visar att informationen är viktig", "Det betyder att en myndighet godkänt texten", "Det bevisar att fler källor bekräftar sanningen", "Det kan tyda på att innehållet kopieras utan kontroll"],
+        "options": [
+          "Det visar att informationen är viktig",
+          "Det betyder att en myndighet godkänt texten",
+          "Det bevisar att fler källor bekräftar sanningen",
+          "Det kan tyda på att innehållet kopieras utan kontroll"
+        ],
         "correct": 3
       },
       {
         "q": "Vad drar Samir för slutsats när han hittar en längre version av klippet från två år tidigare?",
-        "options": ["Att regeln redan gäller i hans kommun", "Att videon handlar om ett äldre sammanhang och kan vara missvisande", "Att kommentarsfältet har rätt", "Att algoritmen alltid visar korrekta nyheter"],
+        "options": [
+          "Att regeln redan gäller i hans kommun",
+          "Att videon handlar om ett äldre sammanhang och kan vara missvisande",
+          "Att kommentarsfältet har rätt",
+          "Att algoritmen alltid visar korrekta nyheter"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet oberoende i uttrycket oberoende källor i texten?",
-        "options": ["Källor som samarbetar och skriver samma sak", "Källor som bara finns på sociala medier", "Källor som inte påverkar varandra och saknar samma avsändare", "Källor som alltid är gratis att läsa"],
+        "options": [
+          "Källor som samarbetar och skriver samma sak",
+          "Källor som bara finns på sociala medier",
+          "Källor som inte påverkar varandra och saknar samma avsändare",
+          "Källor som alltid är gratis att läsa"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket är textens huvudsakliga syfte?",
-        "options": ["Att förklara hur man kan granska information innan man sprider den", "Att bevisa att sociala medier är farliga", "Att uppmana alla att sluta använda nätet", "Att berätta om en ny regel i kommunen"],
+        "options": [
+          "Att förklara hur man kan granska information innan man sprider den",
+          "Att bevisa att sociala medier är farliga",
+          "Att uppmana alla att sluta använda nätet",
+          "Att berätta om en ny regel i kommunen"
+        ],
         "correct": 0
       }
     ]
@@ -12406,32 +12436,62 @@
     "questions": [
       {
         "q": "Vilken tid går Elin hemifrån enligt texten?",
-        "options": ["06.55", "07.15", "06.25", "07.55"],
+        "options": [
+          "06.55",
+          "07.15",
+          "06.25",
+          "07.55"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket färdmedel byter Elin till vid knutpunkten?",
-        "options": ["Spårvagn", "Pendeltåg", "Tunnelbana", "Färja"],
+        "options": [
+          "Spårvagn",
+          "Pendeltåg",
+          "Tunnelbana",
+          "Färja"
+        ],
         "correct": 1
       },
       {
         "q": "Vad visar beskrivningen av människorna vid hållplatsen om stämningen?",
-        "options": ["Den är högljudd och festlig", "Den är rädd och stressad av en olycka", "Den är långsam eftersom alla pratar", "Den är tyst och rutinmässig"],
+        "options": [
+          "Den är högljudd och festlig",
+          "Den är rädd och stressad av en olycka",
+          "Den är långsam eftersom alla pratar",
+          "Den är tyst och rutinmässig"
+        ],
         "correct": 3
       },
       {
         "q": "Varför nämns rondellen och trafikljusen i texten?",
-        "options": ["För att förklara hur man bygger vägar", "För att bevisa att bussen alltid är sen", "För att visa hur små saker kan styra resans tempo", "För att jämföra bussar med cyklar"],
+        "options": [
+          "För att förklara hur man bygger vägar",
+          "För att bevisa att bussen alltid är sen",
+          "För att visa hur små saker kan styra resans tempo",
+          "För att jämföra bussar med cyklar"
+        ],
         "correct": 2
       },
       {
         "q": "Vad betyder ordet knutpunkt i textens sammanhang?",
-        "options": ["En plats där man byter mellan olika transportmedel", "En särskilt brant backe", "En typ av biljett", "En plats där bussar tvättas"],
+        "options": [
+          "En plats där man byter mellan olika transportmedel",
+          "En särskilt brant backe",
+          "En typ av biljett",
+          "En plats där bussar tvättas"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken tolkning passar bäst till textens avslutning om att resan är en övergång?",
-        "options": ["Resan gör att Elin glömmer bort skolan", "Resan gör att Elin alltid kommer för sent", "Resan hjälper henne att gå från morgontrötthet till att vara redo", "Resan är farlig och borde undvikas"],
+        "options": [
+          "Resan gör att Elin glömmer bort skolan",
+          "Resan gör att Elin alltid kommer för sent",
+          "Resan hjälper henne att gå från morgontrötthet till att vara redo",
+          "Resan är farlig och borde undvikas"
+        ],
         "correct": 2
       }
     ]
@@ -12446,32 +12506,62 @@
     "questions": [
       {
         "q": "Vilken roll har Nora i berättelsen?",
-        "options": ["Hon är rektor", "Hon är busschaufför", "Hon är med i elevrådet", "Hon är skolsköterska"],
+        "options": [
+          "Hon är rektor",
+          "Hon är busschaufför",
+          "Hon är med i elevrådet",
+          "Hon är skolsköterska"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken regel från rektorn påverkar vilka inköp som är möjliga?",
-        "options": ["Skolan får inte köpa saker som kräver dyra abonnemang", "Pengarna får bara användas på idrott", "Allt måste köpas från en viss butik", "Budgeten måste sparas till nästa år"],
+        "options": [
+          "Skolan får inte köpa saker som kräver dyra abonnemang",
+          "Pengarna får bara användas på idrott",
+          "Allt måste köpas från en viss butik",
+          "Budgeten måste sparas till nästa år"
+        ],
         "correct": 0
       },
       {
         "q": "Varför väljer Nora och Amir att göra en enkät vid matsalen?",
-        "options": ["För att slippa diskutera i elevrådet", "För att rektorn kräver exakt hundra svar", "För att samla in pengar till priser", "För att få in fler perspektiv än de som hörs mest"],
+        "options": [
+          "För att slippa diskutera i elevrådet",
+          "För att rektorn kräver exakt hundra svar",
+          "För att samla in pengar till priser",
+          "För att få in fler perspektiv än de som hörs mest"
+        ],
         "correct": 3
       },
       {
         "q": "Vad kan man dra för slutsats om Noras syn på roligt?",
-        "options": ["Hon tycker att roligt alltid är samma sak som tävling", "Hon menar att roligt kan betyda olika saker för olika elever", "Hon vill helst undvika allt som är roligt", "Hon tycker att roligt bara handlar om sociala medier"],
+        "options": [
+          "Hon tycker att roligt alltid är samma sak som tävling",
+          "Hon menar att roligt kan betyda olika saker för olika elever",
+          "Hon vill helst undvika allt som är roligt",
+          "Hon tycker att roligt bara handlar om sociala medier"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet genomtänkt i slutet av texten?",
-        "options": ["Slumpmässigt och snabbt", "Hemligt och förbjudet", "Otydligt och rörigt", "Noggrant övervägt"],
+        "options": [
+          "Slumpmässigt och snabbt",
+          "Hemligt och förbjudet",
+          "Otydligt och rörigt",
+          "Noggrant övervägt"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket verkar vara berättelsens viktigaste budskap?",
-        "options": ["Det är alltid bäst att välja det som flest röstar på", "Skolbudgetar är onödiga", "Beslut blir bättre när man samlar information och försöker vara rättvis", "Diskussioner leder alltid till konflikter utan lösning"],
+        "options": [
+          "Det är alltid bäst att välja det som flest röstar på",
+          "Skolbudgetar är onödiga",
+          "Beslut blir bättre när man samlar information och försöker vara rättvis",
+          "Diskussioner leder alltid till konflikter utan lösning"
+        ],
         "correct": 2
       }
     ]
@@ -12486,32 +12576,62 @@
     "questions": [
       {
         "q": "Vilket är ett argument för återbruk som texten tar upp?",
-        "options": ["Det garanterar att alla produkter håller längre", "Det gör att reklam försvinner", "Det gör att man aldrig behöver köpa något igen", "Det kan minska behovet av nyproduktion och avfall"],
+        "options": [
+          "Det garanterar att alla produkter håller längre",
+          "Det gör att reklam försvinner",
+          "Det gör att man aldrig behöver köpa något igen",
+          "Det kan minska behovet av nyproduktion och avfall"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket motargument nämns om återbruk?",
-        "options": ["Återbruk är alltid dyrare än nytt", "Återbruk förbjuder tekniska produkter", "Alla har inte tid eller möjlighet att leta efter rätt sak", "Återbruk gör att man måste bo i en storstad"],
+        "options": [
+          "Återbruk är alltid dyrare än nytt",
+          "Återbruk förbjuder tekniska produkter",
+          "Alla har inte tid eller möjlighet att leta efter rätt sak",
+          "Återbruk gör att man måste bo i en storstad"
+        ],
         "correct": 2
       },
       {
         "q": "Varför skriver författaren att ansvaret inte bara kan ligga på individen?",
-        "options": ["Lagar och företag påverkar hur produkter tillverkas och repareras", "Individer kan aldrig påverka sina val", "Återbruk fungerar bara i skolor", "Reklam är alltid sann"],
+        "options": [
+          "Lagar och företag påverkar hur produkter tillverkas och repareras",
+          "Individer kan aldrig påverka sina val",
+          "Återbruk fungerar bara i skolor",
+          "Reklam är alltid sann"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken slutsats verkar texten landa i?",
-        "options": ["Man bör alltid köpa nytt för säkerhets skull", "Återbruk är bra när det är praktiskt, och vid nyköp kan man kräva kvalitet", "Second hand är bara en trend som snart försvinner", "Det är meningslöst att diskutera konsumtion"],
+        "options": [
+          "Man bör alltid köpa nytt för säkerhets skull",
+          "Återbruk är bra när det är praktiskt, och vid nyköp kan man kräva kvalitet",
+          "Second hand är bara en trend som snart försvinner",
+          "Det är meningslöst att diskutera konsumtion"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet invändning i texten?",
-        "options": ["Ett motargument eller en protest", "Ett stödjande exempel", "En instruktion", "En sammanfattning"],
+        "options": [
+          "Ett motargument eller en protest",
+          "Ett stödjande exempel",
+          "En instruktion",
+          "En sammanfattning"
+        ],
         "correct": 0
       },
       {
         "q": "Hur försöker texten vara balanserad i sin argumentation?",
-        "options": ["Genom att bara beskriva fördelar", "Genom att undvika alla exempel", "Genom att använda många känsloord men få resonemang", "Genom att visa både fördelar och nackdelar och föreslå en kompromiss"],
+        "options": [
+          "Genom att bara beskriva fördelar",
+          "Genom att undvika alla exempel",
+          "Genom att använda många känsloord men få resonemang",
+          "Genom att visa både fördelar och nackdelar och föreslå en kompromiss"
+        ],
         "correct": 3
       }
     ]
@@ -12526,32 +12646,62 @@
     "questions": [
       {
         "q": "Vilka två delar säger texten är viktiga för trötthet?",
-        "options": ["Kondition och styrka", "Dygnsrytm och sömntryck", "Mat och musik", "Väder och temperatur"],
+        "options": [
+          "Kondition och styrka",
+          "Dygnsrytm och sömntryck",
+          "Mat och musik",
+          "Väder och temperatur"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kan en förskjuten dygnsrytm hos tonåringar innebära?",
-        "options": ["Att man alltid somnar direkt efter skolan", "Att man inte behöver sova alls", "Att man ofta blir pigg senare på kvällen och vill sova längre på morgonen", "Att man aldrig känner trötthet"],
+        "options": [
+          "Att man alltid somnar direkt efter skolan",
+          "Att man inte behöver sova alls",
+          "Att man ofta blir pigg senare på kvällen och vill sova längre på morgonen",
+          "Att man aldrig känner trötthet"
+        ],
         "correct": 2
       },
       {
         "q": "Varför kan sömnbrist göra plugg svårare enligt texten?",
-        "options": ["För att skolan stänger tidigare", "För att melatonin försvinner helt", "För att hunger alltid ökar intelligensen", "För att hjärnan under sömnen bearbetar intryck och stärker minnen"],
+        "options": [
+          "För att skolan stänger tidigare",
+          "För att melatonin försvinner helt",
+          "För att hunger alltid ökar intelligensen",
+          "För att hjärnan under sömnen bearbetar intryck och stärker minnen"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken slutsats kan man dra om skärmar utifrån texten?",
-        "options": ["De kan både störa genom ljus och användas för avkoppling, så vanor spelar roll", "Skärmar är alltid skadliga och bör förbjudas", "Skärmar påverkar bara kroppen, inte hjärnan", "Skärmar påverkar inte sömn alls"],
+        "options": [
+          "De kan både störa genom ljus och användas för avkoppling, så vanor spelar roll",
+          "Skärmar är alltid skadliga och bör förbjudas",
+          "Skärmar påverkar bara kroppen, inte hjärnan",
+          "Skärmar påverkar inte sömn alls"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder uttrycket sömnskuld i texten?",
-        "options": ["Att man måste betala pengar för att sova", "Att man drömmer om skulder", "Att man samlar på sig ett underskott av sömn efter flera korta nätter", "Att man sover mer än man behöver"],
+        "options": [
+          "Att man måste betala pengar för att sova",
+          "Att man drömmer om skulder",
+          "Att man samlar på sig ett underskott av sömn efter flera korta nätter",
+          "Att man sover mer än man behöver"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket är textens huvudsakliga syfte?",
-        "options": ["Att ge en enkel lista på alla sömnregler", "Att förklara varför trötthet uppstår och vad som kan påverka den", "Att jämföra olika skolors scheman", "Att övertyga läsaren om att aldrig använda mobil"],
+        "options": [
+          "Att ge en enkel lista på alla sömnregler",
+          "Att förklara varför trötthet uppstår och vad som kan påverka den",
+          "Att jämföra olika skolors scheman",
+          "Att övertyga läsaren om att aldrig använda mobil"
+        ],
         "correct": 1
       }
     ]
@@ -12566,32 +12716,62 @@
     "questions": [
       {
         "q": "Varför riskerade idrottslektionen att bli inställd?",
-        "options": ["Förrådsnyckeln var borta", "Idrottshallen var låst av vaktmästaren", "Klassens schema hade ändrats", "Idrottsläraren var sjuk"],
+        "options": [
+          "Förrådsnyckeln var borta",
+          "Idrottshallen var låst av vaktmästaren",
+          "Klassens schema hade ändrats",
+          "Idrottsläraren var sjuk"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken ledtråd minns Samira från fredagen innan?",
-        "options": ["Att någon gömde bollar i en väska", "Att expeditionen hade stängt tidigt", "Att en nyckel låg kvar på en bänk", "Att omklädningsrummet var rörigt"],
+        "options": [
+          "Att någon gömde bollar i en väska",
+          "Att expeditionen hade stängt tidigt",
+          "Att en nyckel låg kvar på en bänk",
+          "Att omklädningsrummet var rörigt"
+        ],
         "correct": 2
       },
       {
         "q": "Vad säger det om Samira att hon tvekar innan hon lämnar in nyckeln?",
-        "options": ["Hon vill behålla nyckeln för sig själv", "Hon tycker att idrott är oviktigt", "Hon vet exakt vem som tappade nyckeln", "Hon är rädd att bli anklagad eller skapa problem"],
+        "options": [
+          "Hon vill behålla nyckeln för sig själv",
+          "Hon tycker att idrott är oviktigt",
+          "Hon vet exakt vem som tappade nyckeln",
+          "Hon är rädd att bli anklagad eller skapa problem"
+        ],
         "correct": 3
       },
       {
         "q": "Varför väljer Samira att inte peka ut en person som skyldig?",
-        "options": ["Hon vill att någon annan ska få skulden", "Hon är osäker och vill hellre lösa situationen", "Hon tror att läraren redan vet allt", "Hon gillar inte sin klass"],
+        "options": [
+          "Hon vill att någon annan ska få skulden",
+          "Hon är osäker och vill hellre lösa situationen",
+          "Hon tror att läraren redan vet allt",
+          "Hon gillar inte sin klass"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet glipa i texten?",
-        "options": ["En smäll", "En smal öppning", "En hög ljudnivå", "En lång kö"],
+        "options": [
+          "En smäll",
+          "En smal öppning",
+          "En hög ljudnivå",
+          "En lång kö"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket budskap passar bäst med berättelsen?",
-        "options": ["Det är bäst att alltid hitta en syndabock", "Det lönar sig att hålla saker hemliga", "Ansvar kan handla om att återställa ordning utan att anklaga", "Regler är oviktiga om man har tur"],
+        "options": [
+          "Det är bäst att alltid hitta en syndabock",
+          "Det lönar sig att hålla saker hemliga",
+          "Ansvar kan handla om att återställa ordning utan att anklaga",
+          "Regler är oviktiga om man har tur"
+        ],
         "correct": 2
       }
     ]
@@ -12606,32 +12786,62 @@
     "questions": [
       {
         "q": "Vilka är två olika skäl som nämns till att människor delar innehåll?",
-        "options": ["För att vinna pengar och för att bli bäst i sport", "För att få bättre betyg och för att bli känd i skolan", "För att slippa läsa och för att sova längre", "För att informera och för att påverka"],
+        "options": [
+          "För att vinna pengar och för att bli bäst i sport",
+          "För att få bättre betyg och för att bli känd i skolan",
+          "För att slippa läsa och för att sova längre",
+          "För att informera och för att påverka"
+        ],
         "correct": 3
       },
       {
         "q": "Varför räcker det ofta inte att bara läsa rubriken?",
-        "options": ["Rubriker kan vara skrivna för att locka klick och kan förenkla", "Rubriker är alltid helt falska", "Rubriker innehåller aldrig datum", "Rubriker är svåra att läsa på mobilen"],
+        "options": [
+          "Rubriker kan vara skrivna för att locka klick och kan förenkla",
+          "Rubriker är alltid helt falska",
+          "Rubriker innehåller aldrig datum",
+          "Rubriker är svåra att läsa på mobilen"
+        ],
         "correct": 0
       },
       {
         "q": "Texten antyder att vi lättare delar en nyhet om den känns rimlig. Varför?",
-        "options": ["För att den alltid kommer från en myndighet", "För att den alltid är nyare än andra nyheter", "För att den passar ihop med det vi redan tror", "För att den alltid har en lång förklaring"],
+        "options": [
+          "För att den alltid kommer från en myndighet",
+          "För att den alltid är nyare än andra nyheter",
+          "För att den passar ihop med det vi redan tror",
+          "För att den alltid har en lång förklaring"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken kontrollfråga skulle vara mest relevant om du misstänker att en bild är gammal men delas som ny?",
-        "options": ["Vilket datum publicerades den?", "Vilken färg har bilden?", "Hur många likes har den?", "Vilken musik ligger bakom?"],
+        "options": [
+          "Vilket datum publicerades den?",
+          "Vilken färg har bilden?",
+          "Hur många likes har den?",
+          "Vilken musik ligger bakom?"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menas mest sannolikt med oberoende källor i texten?",
-        "options": ["Källor som tycker samma sak som du", "Källor som bara finns i sociala medier", "Källor som är anonyma", "Källor som inte bygger på varandra som enda ursprung"],
+        "options": [
+          "Källor som tycker samma sak som du",
+          "Källor som bara finns i sociala medier",
+          "Källor som är anonyma",
+          "Källor som inte bygger på varandra som enda ursprung"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket syfte har texten främst?",
-        "options": ["Att övertyga om att internet är farligt och bör undvikas", "Att förklara varför och hur man kan tänka källkritiskt", "Att berätta en spännande historia om en nyhet", "Att lista alla appar som sprider rykten"],
+        "options": [
+          "Att övertyga om att internet är farligt och bör undvikas",
+          "Att förklara varför och hur man kan tänka källkritiskt",
+          "Att berätta en spännande historia om en nyhet",
+          "Att lista alla appar som sprider rykten"
+        ],
         "correct": 1
       }
     ]
@@ -12646,32 +12856,62 @@
     "questions": [
       {
         "q": "Vilka ljud finns kvar i biblioteket efter stängning enligt texten?",
-        "options": ["Höga röster och musik", "Telefoner som ringer hela tiden", "Ventilationens sus och ibland knarr", "Regn som slår mot fönstren"],
+        "options": [
+          "Höga röster och musik",
+          "Telefoner som ringer hela tiden",
+          "Ventilationens sus och ibland knarr",
+          "Regn som slår mot fönstren"
+        ],
         "correct": 2
       },
       {
         "q": "Hur beskrivs ljuset när biblioteket är stängt?",
-        "options": ["Som starkare eftersom solen skiner in", "Som helt släckt och mörkt", "Som färgat av neonlampor", "Som oförändrat men med tydligare gångar och skuggor"],
+        "options": [
+          "Som starkare eftersom solen skiner in",
+          "Som helt släckt och mörkt",
+          "Som färgat av neonlampor",
+          "Som oförändrat men med tydligare gångar och skuggor"
+        ],
         "correct": 3
       },
       {
         "q": "Varför kallas affischerna på anslagstavlan för löften i texten?",
-        "options": ["De antyder kommande aktiviteter när ingen är där", "För att de ser ut som kontrakt", "För att de alltid är felstavade", "För att de bara handlar om barnböcker"],
+        "options": [
+          "De antyder kommande aktiviteter när ingen är där",
+          "För att de ser ut som kontrakt",
+          "För att de alltid är felstavade",
+          "För att de bara handlar om barnböcker"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken känsla vill författaren främst skapa genom beskrivningen?",
-        "options": ["Stress och brådska", "Komik och skämt", "Lugn och en viss högtidlighet", "Ilska över ordningsregler"],
+        "options": [
+          "Stress och brådska",
+          "Komik och skämt",
+          "Lugn och en viss högtidlighet",
+          "Ilska över ordningsregler"
+        ],
         "correct": 2
       },
       {
         "q": "Vad betyder uttrycket som en karta när rummet beskrivs?",
-        "options": ["Att böckerna ligger huller om buller", "Att man kan se en tydlig överblick över olika avdelningar", "Att biblioteket bara har kartböcker", "Att allt är markerat med kompass"],
+        "options": [
+          "Att böckerna ligger huller om buller",
+          "Att man kan se en tydlig överblick över olika avdelningar",
+          "Att biblioteket bara har kartböcker",
+          "Att allt är markerat med kompass"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken slutsats kan man dra om bibliotekets roll utifrån sista meningen?",
-        "options": ["Biblioteket är tomt och meningslöst utan besökare", "Biblioteket stänger för att ingen längre läser böcker", "Biblioteket vill att människor aldrig ska låna hem böcker", "Biblioteket fungerar som en plats som bevarar berättelser och väntar på nya läsare"],
+        "options": [
+          "Biblioteket är tomt och meningslöst utan besökare",
+          "Biblioteket stänger för att ingen längre läser böcker",
+          "Biblioteket vill att människor aldrig ska låna hem böcker",
+          "Biblioteket fungerar som en plats som bevarar berättelser och väntar på nya läsare"
+        ],
         "correct": 3
       }
     ]
@@ -12686,32 +12926,62 @@
     "questions": [
       {
         "q": "Vilket problem med uppmärksamhet lyfter texten fram som argument för mobilfria lektioner?",
-        "options": ["Att mobilens notiser kan dra tankarna bort från uppgiften", "Att mobiler gör att man alltid skriver snabbare", "Att mobiler tar bort behovet av lärare", "Att mobiler bara fungerar utomhus"],
+        "options": [
+          "Att mobilens notiser kan dra tankarna bort från uppgiften",
+          "Att mobiler gör att man alltid skriver snabbare",
+          "Att mobiler tar bort behovet av lärare",
+          "Att mobiler bara fungerar utomhus"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken lösning föreslår texten som en modell för mobilanvändning?",
-        "options": ["Mobilen ska alltid ligga framme på bänken", "Mobilen ska lämnas hemma varje dag", "Mobilen är undanlagd men kan tas fram vid lärarens signal", "Mobilen får användas bara under prov"],
+        "options": [
+          "Mobilen ska alltid ligga framme på bänken",
+          "Mobilen ska lämnas hemma varje dag",
+          "Mobilen är undanlagd men kan tas fram vid lärarens signal",
+          "Mobilen får användas bara under prov"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken underförstådd oro finns bakom meningen om att läraren har svårt att se skillnad på sökande och scrollande?",
-        "options": ["Att lärare inte kan internet", "Att mobilanvändning kan vara svår att kontrollera och kan missbrukas", "Att elever aldrig behöver fakta", "Att skolans wifi alltid är trasigt"],
+        "options": [
+          "Att lärare inte kan internet",
+          "Att mobilanvändning kan vara svår att kontrollera och kan missbrukas",
+          "Att elever aldrig behöver fakta",
+          "Att skolans wifi alltid är trasigt"
+        ],
         "correct": 1
       },
       {
         "q": "Varför tar texten upp att alla inte har samma mobil eller data?",
-        "options": ["För att visa att mobiler är onödigt dyra", "För att argumentera för att alla ska få en ny mobil", "För att säga att bara vissa elever får använda mobil", "För att betona att undervisning inte bör kräva privata mobiler för att vara rättvis"],
+        "options": [
+          "För att visa att mobiler är onödigt dyra",
+          "För att argumentera för att alla ska få en ny mobil",
+          "För att säga att bara vissa elever får använda mobil",
+          "För att betona att undervisning inte bör kräva privata mobiler för att vara rättvis"
+        ],
         "correct": 3
       },
       {
         "q": "Vad betyder digitalt omdöme i textens sammanhang?",
-        "options": ["Att kunna bedöma och använda digitala verktyg ansvarsfullt", "Att kunna spela spel snabbt", "Att alltid lita på det första sökresultatet", "Att undvika all teknik"],
+        "options": [
+          "Att kunna bedöma och använda digitala verktyg ansvarsfullt",
+          "Att kunna spela spel snabbt",
+          "Att alltid lita på det första sökresultatet",
+          "Att undvika all teknik"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket påstående stämmer bäst med textens slutsats?",
-        "options": ["Mobiler ska förbjudas i alla sammanhang", "Mobiler ska alltid vara tillåtna utan regler", "Lektionen blir bäst om mobilen används som belöning", "Tydliga regler kan ge arbetsro och samtidigt möjliggöra nyttig användning"],
+        "options": [
+          "Mobiler ska förbjudas i alla sammanhang",
+          "Mobiler ska alltid vara tillåtna utan regler",
+          "Lektionen blir bäst om mobilen används som belöning",
+          "Tydliga regler kan ge arbetsro och samtidigt möjliggöra nyttig användning"
+        ],
         "correct": 3
       }
     ]
@@ -12726,32 +12996,62 @@
     "questions": [
       {
         "q": "Vilken beskrivning passar bäst in på vad matsvinn är enligt texten?",
-        "options": ["Mat som alltid måste frysas", "Mat som bara produceras i små mängder", "Mat som hade kunnat ätas men kastas", "Mat som är för dyr att köpa"],
+        "options": [
+          "Mat som alltid måste frysas",
+          "Mat som bara produceras i små mängder",
+          "Mat som hade kunnat ätas men kastas",
+          "Mat som är för dyr att köpa"
+        ],
         "correct": 2
       },
       {
         "q": "Varför blir effekten stor även om en slängd banan känns obetydlig?",
-        "options": ["För att bananer är den enda maten som orsakar svinn", "För att det händer ofta och på många platser", "För att bananer alltid transporteras med flyg", "För att bananer inte kan komposteras"],
+        "options": [
+          "För att bananer är den enda maten som orsakar svinn",
+          "För att det händer ofta och på många platser",
+          "För att bananer alltid transporteras med flyg",
+          "För att bananer inte kan komposteras"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken slutsats kan man dra av stycket om resurser i matkedjan?",
-        "options": ["Att svinn innebär att energi och resurser kan ha använts utan att ge nytta", "Att mat aldrig behöver transporteras", "Att förpackningar är det enda som spelar roll", "Att odling inte kräver vatten"],
+        "options": [
+          "Att svinn innebär att energi och resurser kan ha använts utan att ge nytta",
+          "Att mat aldrig behöver transporteras",
+          "Att förpackningar är det enda som spelar roll",
+          "Att odling inte kräver vatten"
+        ],
         "correct": 0
       },
       {
         "q": "Texten nämner metan. Varför tas det upp?",
-        "options": ["För att metan alltid bildas när man lagar mat", "För att metan gör att mat håller längre", "För att metan kan bildas när matavfall bryts ner och påverka klimatet", "För att metan finns i alla kylskåp"],
+        "options": [
+          "För att metan alltid bildas när man lagar mat",
+          "För att metan gör att mat håller längre",
+          "För att metan kan bildas när matavfall bryts ner och påverka klimatet",
+          "För att metan finns i alla kylskåp"
+        ],
         "correct": 2
       },
       {
         "q": "Vad betyder ordet justera i meningen om att skolor justerar menyer och portioner?",
-        "options": ["Att göra något mer anpassat eller ändra lite", "Att förstöra något helt", "Att gömma undan något", "Att köpa något dubbelt"],
+        "options": [
+          "Att göra något mer anpassat eller ändra lite",
+          "Att förstöra något helt",
+          "Att gömma undan något",
+          "Att köpa något dubbelt"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket är textens huvudsyfte?",
-        "options": ["Att berätta om en person som jobbar i butik", "Att lista alla maträtter som är bäst att kasta", "Att argumentera för att man aldrig ska äta rester", "Att förklara varför matsvinn är viktigt och ge exempel på hur det kan minska"],
+        "options": [
+          "Att berätta om en person som jobbar i butik",
+          "Att lista alla maträtter som är bäst att kasta",
+          "Att argumentera för att man aldrig ska äta rester",
+          "Att förklara varför matsvinn är viktigt och ge exempel på hur det kan minska"
+        ],
         "correct": 3
       }
     ]
@@ -12766,32 +13066,62 @@
     "questions": [
       {
         "q": "Vad var uppgiften som klassen fick under mentorstimmen?",
-        "options": ["Att skriva en berättelse om skolgården", "Att samla in pengar till nya bollar", "Att bygga en ny bänk i träslöjden", "Att föreslå förbättringar av gården och lämna en plan"],
+        "options": [
+          "Att skriva en berättelse om skolgården",
+          "Att samla in pengar till nya bollar",
+          "Att bygga en ny bänk i träslöjden",
+          "Att föreslå förbättringar av gården och lämna en plan"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken skillnad i åsikter skapade tidigt spänning i Samirs grupp?",
-        "options": ["Om de skulle arbeta hemma eller i skolan", "Om de skulle fråga rektorn om lov först", "Om de skulle göra en skateyta eller fler sittplatser", "Om de skulle använda dator eller skriva för hand"],
+        "options": [
+          "Om de skulle arbeta hemma eller i skolan",
+          "Om de skulle fråga rektorn om lov först",
+          "Om de skulle göra en skateyta eller fler sittplatser",
+          "Om de skulle använda dator eller skriva för hand"
+        ],
         "correct": 2
       },
       {
         "q": "Vad upptäcker gruppen när de går ut och tittar på skolgården?",
-        "options": ["Att det finns många tomma ytor som ingen använder", "Att fotbollsplanen har ett stort hål i mitten", "Att det saknas en yta där man kan vara utan att välja bollspel", "Att alla elever vill ha exakt samma sak på gården"],
+        "options": [
+          "Att det finns många tomma ytor som ingen använder",
+          "Att fotbollsplanen har ett stort hål i mitten",
+          "Att det saknas en yta där man kan vara utan att välja bollspel",
+          "Att alla elever vill ha exakt samma sak på gården"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket steg hjälper gruppen mest att komma vidare i arbetet?",
-        "options": ["Att lista gemensamma mål innan de bestämmer detaljer", "Att rösta fram en vinnande idé direkt från början", "Att låta läraren bestämma vad de ska göra", "Att pausa projektet tills efter helgen är slut"],
+        "options": [
+          "Att lista gemensamma mål innan de bestämmer detaljer",
+          "Att rösta fram en vinnande idé direkt från början",
+          "Att låta läraren bestämma vad de ska göra",
+          "Att pausa projektet tills efter helgen är slut"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder ordet genomarbetade i slutet av texten?",
-        "options": ["Slarvigt och hastigt gjorda", "Noggrant planerade och utvecklade", "Dyra att genomföra i praktiken", "Svåra att förstå för andra"],
+        "options": [
+          "Slarvigt och hastigt gjorda",
+          "Noggrant planerade och utvecklade",
+          "Dyra att genomföra i praktiken",
+          "Svåra att förstå för andra"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken tolkning passar bäst med Samirs känsla på slutet?",
-        "options": ["Att det alltid är bäst att få sin egen idé igenom", "Att projekt i skolan sällan leder till något bra", "Att konflikter i grupper inte går att lösa alls", "Att samarbetet fungerar när man gör plats för flera behov"],
+        "options": [
+          "Att det alltid är bäst att få sin egen idé igenom",
+          "Att projekt i skolan sällan leder till något bra",
+          "Att konflikter i grupper inte går att lösa alls",
+          "Att samarbetet fungerar när man gör plats för flera behov"
+        ],
         "correct": 3
       }
     ],
@@ -12807,32 +13137,62 @@
     "questions": [
       {
         "q": "Vilken huvudförklaring ger texten till att många somnar senare i tonåren?",
-        "options": ["Att dygnsrytmen ofta förskjuts under puberteten", "Att man alltid behöver mindre sömn som tonåring", "Att skolan gör att man blir mindre trött på dagen", "Att man inte kan bli sömnig utan att dricka kaffe"],
+        "options": [
+          "Att dygnsrytmen ofta förskjuts under puberteten",
+          "Att man alltid behöver mindre sömn som tonåring",
+          "Att skolan gör att man blir mindre trött på dagen",
+          "Att man inte kan bli sömnig utan att dricka kaffe"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menas med sömntryck enligt texten?",
-        "options": ["Att man måste sova exakt åtta timmar varje natt", "Att man blir piggare av att sova mer på dagen", "Att kroppen vill sova mer ju längre man är vaken", "Att man alltid ska sova mitt på dagen för bäst effekt"],
+        "options": [
+          "Att man måste sova exakt åtta timmar varje natt",
+          "Att man blir piggare av att sova mer på dagen",
+          "Att kroppen vill sova mer ju längre man är vaken",
+          "Att man alltid ska sova mitt på dagen för bäst effekt"
+        ],
         "correct": 2
       },
       {
         "q": "Hur kan en lång tupplur påverka kvällen enligt texten?",
-        "options": ["Den gör att dygnsrytmen alltid blir tidigare nästa dag", "Den tar bort behovet av nattlig sömn helt", "Den gör att man alltid vaknar tidigare på morgonen", "Den kan minska sömntrycket och göra det svårare att somna"],
+        "options": [
+          "Den gör att dygnsrytmen alltid blir tidigare nästa dag",
+          "Den tar bort behovet av nattlig sömn helt",
+          "Den gör att man alltid vaknar tidigare på morgonen",
+          "Den kan minska sömntrycket och göra det svårare att somna"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken kombination beskriver textens syn på skärmar bäst?",
-        "options": ["Skärmar påverkar bara genom ljud och inte ljus", "Skärmar kan påverka genom ljus och genom att hålla uppmärksamheten", "Skärmar påverkar aldrig sömn utan bara humör på dagen", "Skärmar är alltid bra för att somna snabbare på kvällen"],
+        "options": [
+          "Skärmar påverkar bara genom ljud och inte ljus",
+          "Skärmar kan påverka genom ljus och genom att hålla uppmärksamheten",
+          "Skärmar påverkar aldrig sömn utan bara humör på dagen",
+          "Skärmar är alltid bra för att somna snabbare på kvällen"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kan hända när man sover längre på helgen efter en vecka med lite sömn?",
-        "options": ["Dygnsrytmen kan flyttas så det blir svårare att somna tidigt", "Man blir helt immun mot trötthet under veckan", "Man behöver aldrig mer sova på vardagar efter det", "Man får automatiskt bättre koncentration på måndagen"],
+        "options": [
+          "Dygnsrytmen kan flyttas så det blir svårare att somna tidigt",
+          "Man blir helt immun mot trötthet under veckan",
+          "Man behöver aldrig mer sova på vardagar efter det",
+          "Man får automatiskt bättre koncentration på måndagen"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket syfte har texten främst?",
-        "options": ["Att säga att alla måste lägga sig exakt samma tid", "Att jämföra olika madrasser och kuddar för bättre sömn", "Att förklara flera faktorer som påverkar sömn och ge principer", "Att berätta om en person som aldrig sover på natten"],
+        "options": [
+          "Att säga att alla måste lägga sig exakt samma tid",
+          "Att jämföra olika madrasser och kuddar för bättre sömn",
+          "Att förklara flera faktorer som påverkar sömn och ge principer",
+          "Att berätta om en person som aldrig sover på natten"
+        ],
         "correct": 2
       }
     ],
@@ -12848,32 +13208,62 @@
     "questions": [
       {
         "q": "Vad händer med ljuden när man går längre in på stigen?",
-        "options": ["Bilarna försvinner och naturens ljud blir tydligare", "Bilarna hörs tydligare ju längre in man kommer", "Allt blir helt tyst utan några ljud överhuvudtaget", "Man hör främst musik från hus som ligger nära"],
+        "options": [
+          "Bilarna försvinner och naturens ljud blir tydligare",
+          "Bilarna hörs tydligare ju längre in man kommer",
+          "Allt blir helt tyst utan några ljud överhuvudtaget",
+          "Man hör främst musik från hus som ligger nära"
+        ],
         "correct": 0
       },
       {
         "q": "Hur beskrivs marken på stigen längre in i skogen?",
-        "options": ["Som mjuk av barr och löv som lagrats under lång tid", "Som helt täckt av asfalt ända fram till sjön", "Som hård av is året runt oavsett säsong", "Som sandig som en strand med fina korn"],
+        "options": [
+          "Som mjuk av barr och löv som lagrats under lång tid",
+          "Som helt täckt av asfalt ända fram till sjön",
+          "Som hård av is året runt oavsett säsong",
+          "Som sandig som en strand med fina korn"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken bild använder texten för att beskriva lavar på stenarna?",
-        "options": ["Som små blomblad i olika färger", "Som torra kartor med mönster", "Som glittrande glas i solen", "Som tjockt tyg av sammet"],
+        "options": [
+          "Som små blomblad i olika färger",
+          "Som torra kartor med mönster",
+          "Som glittrande glas i solen",
+          "Som tjockt tyg av sammet"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kan man dra för slutsats av att spår av människor beskrivs som diskreta?",
-        "options": ["Att platsen är helt förbjuden för alla besökare", "Att området är tydligt förstört av mycket skräp", "Att ingen någonsin har gått på stigen tidigare", "Att människors närvaro finns men dominerar inte upplevelsen"],
+        "options": [
+          "Att platsen är helt förbjuden för alla besökare",
+          "Att området är tydligt förstört av mycket skräp",
+          "Att ingen någonsin har gått på stigen tidigare",
+          "Att människors närvaro finns men dominerar inte upplevelsen"
+        ],
         "correct": 3
       },
       {
         "q": "Vad betyder ordet glipor i meningen om skogen som öppnar sig?",
-        "options": ["Höga berg som reser sig upp", "Små öppningar mellan träden", "Djupt vatten nära stranden", "Starka lampor längs vägen"],
+        "options": [
+          "Höga berg som reser sig upp",
+          "Små öppningar mellan träden",
+          "Djupt vatten nära stranden",
+          "Starka lampor längs vägen"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken stämning skapas främst i slutet av texten?",
-        "options": ["Stress och brådska att hinna tillbaka", "Rädsla för att gå vilse i skogen", "Lugn uppmärksamhet på detaljer runtomkring", "Tävlingskänsla och fart framåt"],
+        "options": [
+          "Stress och brådska att hinna tillbaka",
+          "Rädsla för att gå vilse i skogen",
+          "Lugn uppmärksamhet på detaljer runtomkring",
+          "Tävlingskänsla och fart framåt"
+        ],
         "correct": 2
       }
     ],
@@ -12889,32 +13279,62 @@
     "questions": [
       {
         "q": "Vilket är ett av textens argument för gemensamt betyg?",
-        "options": ["Att det alltid är lättare för läraren att rätta", "Att det gör alla prov helt onödiga i skolan", "Att det kan likna hur arbete fungerar utanför skolan", "Att det garanterar att alla alltid jobbar lika mycket"],
+        "options": [
+          "Att det alltid är lättare för läraren att rätta",
+          "Att det gör alla prov helt onödiga i skolan",
+          "Att det kan likna hur arbete fungerar utanför skolan",
+          "Att det garanterar att alla alltid jobbar lika mycket"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken risk med gemensamt betyg betonas särskilt i texten?",
-        "options": ["Att arbetsinsatsen kan bli ojämn och upplevas orättvis", "Att arbetet alltid blir alldeles för kort", "Att ingen lär sig några nya ord eller begrepp", "Att grupper aldrig kan samarbeta med varandra"],
+        "options": [
+          "Att arbetsinsatsen kan bli ojämn och upplevas orättvis",
+          "Att arbetet alltid blir alldeles för kort",
+          "Att ingen lär sig några nya ord eller begrepp",
+          "Att grupper aldrig kan samarbeta med varandra"
+        ],
         "correct": 0
       },
       {
         "q": "Vad antyder texten kan hända om bedömning alltid är individuell i grupparbeten?",
-        "options": ["Att elever kan dela upp arbetet och bara lära sig sin del", "Att alla automatiskt hjälper varandra mycket mer", "Att slutprodukten alltid blir bättre och mer genomarbetad", "Att samarbete blir helt omöjligt att träna i skolan"],
+        "options": [
+          "Att elever kan dela upp arbetet och bara lära sig sin del",
+          "Att alla automatiskt hjälper varandra mycket mer",
+          "Att slutprodukten alltid blir bättre och mer genomarbetad",
+          "Att samarbete blir helt omöjligt att träna i skolan"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken lösning presenterar texten som mest rimlig?",
-        "options": ["Att förbjuda allt grupparbete i skolan helt", "Att alltid sätta samma betyg oavsett arbetsinsats", "Att enbart bedöma loggboken och inget annat", "Att kombinera gemensam bedömning med individuella underlag"],
+        "options": [
+          "Att förbjuda allt grupparbete i skolan helt",
+          "Att alltid sätta samma betyg oavsett arbetsinsats",
+          "Att enbart bedöma loggboken och inget annat",
+          "Att kombinera gemensam bedömning med individuella underlag"
+        ],
         "correct": 3
       },
       {
         "q": "Vad betyder fånga i meningen om att individuell bedömning kan fånga vad varje elev kan?",
-        "options": ["Lura och vilseleda eleven på något sätt", "Förkorta och sammanfatta texten snabbt", "Synliggöra och visa elevens kunskap", "Försena och skjuta upp bedömningen"],
+        "options": [
+          "Lura och vilseleda eleven på något sätt",
+          "Förkorta och sammanfatta texten snabbt",
+          "Synliggöra och visa elevens kunskap",
+          "Försena och skjuta upp bedömningen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats ligger närmast textens helhetsbudskap?",
-        "options": ["Gemensamma betyg är alltid helt orättvisa", "Bedömning bör anpassas efter syftet och gärna kombineras", "Individuella betyg är alltid bäst för alla elever", "Grupparbete fungerar bara i vissa specifika ämnen"],
+        "options": [
+          "Gemensamma betyg är alltid helt orättvisa",
+          "Bedömning bör anpassas efter syftet och gärna kombineras",
+          "Individuella betyg är alltid bäst för alla elever",
+          "Grupparbete fungerar bara i vissa specifika ämnen"
+        ],
         "correct": 1
       }
     ],
@@ -12930,32 +13350,62 @@
     "questions": [
       {
         "q": "Vilken beskrivning stämmer bäst med vad inflation är enligt texten?",
-        "options": ["När en vara blir dyrare men alla andra blir billigare", "När löner alltid sänks i ett land oavsett anledning", "När man byter valuta vid en resa till ett annat land", "När den allmänna prisnivån stiger och köpkraften minskar"],
+        "options": [
+          "När en vara blir dyrare men alla andra blir billigare",
+          "När löner alltid sänks i ett land oavsett anledning",
+          "När man byter valuta vid en resa till ett annat land",
+          "När den allmänna prisnivån stiger och köpkraften minskar"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket av följande nämns som en möjlig orsak till att priser stiger?",
-        "options": ["Att alla slutar köpa mat helt och hållet", "Att affärer alltid sänker sina priser varje år", "Att transportkostnader ökar för företagen", "Att man mäter priser oftare än förut"],
+        "options": [
+          "Att alla slutar köpa mat helt och hållet",
+          "Att affärer alltid sänker sina priser varje år",
+          "Att transportkostnader ökar för företagen",
+          "Att man mäter priser oftare än förut"
+        ],
         "correct": 2
       },
       {
         "q": "Varför används ett prisindex och en korg av varor och tjänster?",
-        "options": ["För att bestämma vad varje person måste köpa", "För att jämföra hur priser i genomsnitt förändras över tid", "För att göra reklam för vissa varor i butiker", "För att räkna ut vädret nästa vecka eller månad"],
+        "options": [
+          "För att bestämma vad varje person måste köpa",
+          "För att jämföra hur priser i genomsnitt förändras över tid",
+          "För att göra reklam för vissa varor i butiker",
+          "För att räkna ut vädret nästa vecka eller månad"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken slutsats kan man dra om varför mätningen av inflation är en förenkling?",
-        "options": ["För att olika hushåll har olika inköp och kostnader", "För att priser aldrig förändras på riktigt i samhället", "För att alla hushåll köper exakt samma saker alltid", "För att prisindex inte innehåller några tjänster alls"],
+        "options": [
+          "För att olika hushåll har olika inköp och kostnader",
+          "För att priser aldrig förändras på riktigt i samhället",
+          "För att alla hushåll köper exakt samma saker alltid",
+          "För att prisindex inte innehåller några tjänster alls"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder ordet styrränta i textens sammanhang?",
-        "options": ["En ränta som bara gäller för studenter som lånar", "Centralbankens ränta som påverkar hur dyrt det är att låna", "Priset på varor i en korg som mäts varje år", "En avgift man betalar i butikskassan vid varje köp"],
+        "options": [
+          "En ränta som bara gäller för studenter som lånar",
+          "Centralbankens ränta som påverkar hur dyrt det är att låna",
+          "Priset på varor i en korg som mäts varje år",
+          "En avgift man betalar i butikskassan vid varje köp"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket påstående passar bäst med textens sista stycke?",
-        "options": ["Inflation påverkar alla på exakt samma sätt alltid", "Inflation är bara viktig för banker och inget annat", "Inflation betyder alltid att ekonomin kraschar direkt", "Vad inflationen innebär i vardagen beror på inkomster och kostnader"],
+        "options": [
+          "Inflation påverkar alla på exakt samma sätt alltid",
+          "Inflation är bara viktig för banker och inget annat",
+          "Inflation betyder alltid att ekonomin kraschar direkt",
+          "Vad inflationen innebär i vardagen beror på inkomster och kostnader"
+        ],
         "correct": 3
       }
     ],
@@ -12971,32 +13421,62 @@
     "questions": [
       {
         "q": "Vad är klorofyll viktigt för?",
-        "options": ["Att göra lövet tjockare", "Att få energi från solljus", "Att skydda lövet från vind", "Att ge lövet vintervärmekl"],
+        "options": [
+          "Att göra lövet tjockare",
+          "Att få energi från solljus",
+          "Att skydda lövet från vind",
+          "Att ge lövet vintervärmekl"
+        ],
         "correct": 1
       },
       {
         "q": "Varför blir löven mindre gröna på hösten?",
-        "options": ["Löven fylls med mer vatten", "Insekter äter upp den gröna färgen", "Trädet slutar gradvis att göra nytt klorofyll", "Trädet målar om löven varje år"],
+        "options": [
+          "Löven fylls med mer vatten",
+          "Insekter äter upp den gröna färgen",
+          "Trädet slutar gradvis att göra nytt klorofyll",
+          "Trädet målar om löven varje år"
+        ],
         "correct": 2
       },
       {
         "q": "Vilka färger syns när det gröna försvinner, enligt texten?",
-        "options": ["Blå och turkosa färger", "Svarta och grå färger", "Vita och silvriga färger", "Gula och orange färger"],
+        "options": [
+          "Blå och turkosa färger",
+          "Svarta och grå färger",
+          "Vita och silvriga färger",
+          "Gula och orange färger"
+        ],
         "correct": 3
       },
       {
         "q": "Vad kan göra att löven faller tidigare?",
-        "options": ["Väldigt blött eller stormigt väder", "Att nätterna är kyliga och klara", "Att solen skiner mycket varje dag", "Att det blir varmare på hösten"],
+        "options": [
+          "Väldigt blött eller stormigt väder",
+          "Att nätterna är kyliga och klara",
+          "Att solen skiner mycket varje dag",
+          "Att det blir varmare på hösten"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder ordet gradvis i texten?",
-        "options": ["Plötsligt och snabbt", "Lite i taget över tid", "I hemlighet utan att synas", "Bara på natten när det är mörkt"],
+        "options": [
+          "Plötsligt och snabbt",
+          "Lite i taget över tid",
+          "I hemlighet utan att synas",
+          "Bara på natten när det är mörkt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket är ett viktigt skäl till att trädet släpper löven?",
-        "options": ["För att locka fler fåglar till trädet", "För att löven ska bli varmare", "För att minska risken att grenar går sönder av snö", "För att få mer solljus till stammen"],
+        "options": [
+          "För att locka fler fåglar till trädet",
+          "För att löven ska bli varmare",
+          "För att minska risken att grenar går sönder av snö",
+          "För att få mer solljus till stammen"
+        ],
         "correct": 2
       }
     ]
@@ -13011,32 +13491,62 @@
     "questions": [
       {
         "q": "Vilka är exempel på organismer som hjälper till i en kompost?",
-        "options": ["Fiskar, grodor och fåglar", "Katter, hundar och hästar", "Myror, bin och fjärilar", "Maskar, svampar och bakterier"],
+        "options": [
+          "Fiskar, grodor och fåglar",
+          "Katter, hundar och hästar",
+          "Myror, bin och fjärilar",
+          "Maskar, svampar och bakterier"
+        ],
         "correct": 3
       },
       {
         "q": "Varför är det bra att blanda i torra saker som löv eller rivet papper?",
-        "options": ["De gör komposten kallare på vintern", "De stoppar nedbrytningen helt", "De tar bort all lukt direkt", "De gör att luft kan komma in i komposten"],
+        "options": [
+          "De gör komposten kallare på vintern",
+          "De stoppar nedbrytningen helt",
+          "De tar bort all lukt direkt",
+          "De gör att luft kan komma in i komposten"
+        ],
         "correct": 3
       },
       {
         "q": "Vad kan hända om man bara lägger blöta matrester i komposten?",
-        "options": ["Den kan bli kladdig och lukta illa", "Den blir automatiskt färdig på en dag", "Den blir alltid för torr att använda", "Den förvandlas till sand direkt"],
+        "options": [
+          "Den kan bli kladdig och lukta illa",
+          "Den blir automatiskt färdig på en dag",
+          "Den blir alltid för torr att använda",
+          "Den förvandlas till sand direkt"
+        ],
         "correct": 0
       },
       {
         "q": "Varför kan en kompost bli varm inuti?",
-        "options": ["För att solen lyser direkt på varje bit", "För att nedbrytningen skapar värme", "För att maskarna gnuggar sig mot varandra", "För att man måste värma den själv"],
+        "options": [
+          "För att solen lyser direkt på varje bit",
+          "För att nedbrytningen skapar värme",
+          "För att maskarna gnuggar sig mot varandra",
+          "För att man måste värma den själv"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder smulig i texten?",
-        "options": ["Helt slät och blank som glas", "Genomskinlig och hård som sten", "Våt och kladdig som lera", "Som små bitar som lätt faller isär"],
+        "options": [
+          "Helt slät och blank som glas",
+          "Genomskinlig och hård som sten",
+          "Våt och kladdig som lera",
+          "Som små bitar som lätt faller isär"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket verkar vara textens huvudsyfte?",
-        "options": ["Att berätta om en mask som rymmer", "Att lista alla sorters växter i en trädgård", "Att jämföra olika typer av jord", "Att förklara vad som behövs för att en kompost ska fungera"],
+        "options": [
+          "Att berätta om en mask som rymmer",
+          "Att lista alla sorters växter i en trädgård",
+          "Att jämföra olika typer av jord",
+          "Att förklara vad som behövs för att en kompost ska fungera"
+        ],
         "correct": 3
       }
     ]
@@ -13051,32 +13561,62 @@
     "questions": [
       {
         "q": "Varför kan is flyta på vatten enligt texten?",
-        "options": ["Is är tyngre än flytande vatten", "Is innehåller luftbubblor som bär den", "Is har lägre densitet än vatten", "Is är varmare än vattnet under"],
+        "options": [
+          "Is är tyngre än flytande vatten",
+          "Is innehåller luftbubblor som bär den",
+          "Is har lägre densitet än vatten",
+          "Is är varmare än vattnet under"
+        ],
         "correct": 2
       },
       {
         "q": "Var bildas is först på en sjö?",
-        "options": ["På ytan där vattnet kyls snabbast", "På botten bland stenarna", "Mitt i sjön på djupet", "Längs stränderna i sanden"],
+        "options": [
+          "På ytan där vattnet kyls snabbast",
+          "På botten bland stenarna",
+          "Mitt i sjön på djupet",
+          "Längs stränderna i sanden"
+        ],
         "correct": 0
       },
       {
         "q": "Vad kan hända om man fryser vatten i en helt full flaska?",
-        "options": ["Vattnet försvinner helt", "Flaskan blir varmare inuti", "Vattnet blir till ånga istället", "Flaskan kan spricka"],
+        "options": [
+          "Vattnet försvinner helt",
+          "Flaskan blir varmare inuti",
+          "Vattnet blir till ånga istället",
+          "Flaskan kan spricka"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken slutsats passar bäst med texten om fiskar på vintern?",
-        "options": ["Allt vatten i en sjö blir alltid till is", "Isen kan skydda vattnet under så att det inte kyls lika snabbt", "Fiskar behöver luft ovanför isen för att överleva", "Fiskar flyttar alltid till varmare vatten"],
+        "options": [
+          "Allt vatten i en sjö blir alltid till is",
+          "Isen kan skydda vattnet under så att det inte kyls lika snabbt",
+          "Fiskar behöver luft ovanför isen för att överleva",
+          "Fiskar flyttar alltid till varmare vatten"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder densitet i texten?",
-        "options": ["Hur tätt ett ämne är packat", "Hur starkt ett ämne luktar", "Hur snabbt ett ämne rinner", "Hur kallt ett ämne känns"],
+        "options": [
+          "Hur tätt ett ämne är packat",
+          "Hur starkt ett ämne luktar",
+          "Hur snabbt ett ämne rinner",
+          "Hur kallt ett ämne känns"
+        ],
         "correct": 0
       },
       {
         "q": "Vad vill texten framför allt förklara?",
-        "options": ["Hur man bygger en sjö från början", "Varför flaskor alltid går sönder i kylen", "Hur vatten kan byta form mellan vätska och is", "Varför fiskar simmar i grupp på vintern"],
+        "options": [
+          "Hur man bygger en sjö från början",
+          "Varför flaskor alltid går sönder i kylen",
+          "Hur vatten kan byta form mellan vätska och is",
+          "Varför fiskar simmar i grupp på vintern"
+        ],
         "correct": 2
       }
     ]
@@ -13091,32 +13631,62 @@
     "questions": [
       {
         "q": "Vilket väder gör det lättare att använda solen som ledtråd?",
-        "options": ["En dimmig dag utan sol", "En dag med kraftigt snöfall", "En klar dag med sol", "En mulen dag med regn"],
+        "options": [
+          "En dimmig dag utan sol",
+          "En dag med kraftigt snöfall",
+          "En klar dag med sol",
+          "En mulen dag med regn"
+        ],
         "correct": 2
       },
       {
         "q": "Var står solen ungefär mitt på dagen i Sverige, enligt texten?",
-        "options": ["I söder på himlen", "I norr på himlen", "Rakt i väster vid horisonten", "Rakt i öster vid horisonten"],
+        "options": [
+          "I söder på himlen",
+          "I norr på himlen",
+          "Rakt i väster vid horisonten",
+          "Rakt i öster vid horisonten"
+        ],
         "correct": 0
       },
       {
         "q": "Varför är Polstjärnan användbar när man vill hitta norr?",
-        "options": ["Den byter färg varje timme", "Den syns bara på sommaren", "Den är den starkaste stjärnan", "Den står nästan stilla på himlen"],
+        "options": [
+          "Den byter färg varje timme",
+          "Den syns bara på sommaren",
+          "Den är den starkaste stjärnan",
+          "Den står nästan stilla på himlen"
+        ],
         "correct": 3
       },
       {
         "q": "Vad menar texten med att mossa är en svag ledtråd?",
-        "options": ["Den visar alltid exakt norr", "Den kan peka åt olika håll beroende på platsen", "Den syns bara på tallar i skogen", "Den växer bara på sommaren"],
+        "options": [
+          "Den visar alltid exakt norr",
+          "Den kan peka åt olika håll beroende på platsen",
+          "Den syns bara på tallar i skogen",
+          "Den växer bara på sommaren"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ledtråd i texten?",
-        "options": ["En plats där man leder djur", "Ett verktyg som alltid är rätt", "Något som hjälper dig att gissa eller förstå", "En stig genom skogen"],
+        "options": [
+          "En plats där man leder djur",
+          "Ett verktyg som alltid är rätt",
+          "Något som hjälper dig att gissa eller förstå",
+          "En stig genom skogen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken metod stämmer bäst med textens råd om att vara säker?",
-        "options": ["Jämföra flera tecken innan du bestämmer riktning", "Välja första tecknet du ser och gå direkt", "Bara titta efter mossa och inget annat", "Alltid fråga någon annan istället"],
+        "options": [
+          "Jämföra flera tecken innan du bestämmer riktning",
+          "Välja första tecknet du ser och gå direkt",
+          "Bara titta efter mossa och inget annat",
+          "Alltid fråga någon annan istället"
+        ],
         "correct": 0
       }
     ]
@@ -13131,32 +13701,62 @@
     "questions": [
       {
         "q": "Vilken sak nämns som något kroppen kan göra under sömn?",
-        "options": ["Springa snabbare än på dagen", "Bygga upp vävnad i kroppen", "Lära sig ett nytt språk direkt", "Växa fem centimeter på en natt"],
+        "options": [
+          "Springa snabbare än på dagen",
+          "Bygga upp vävnad i kroppen",
+          "Lära sig ett nytt språk direkt",
+          "Växa fem centimeter på en natt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kan hända med koncentrationen om man sover för lite?",
-        "options": ["Den blir alltid bättre på morgonen", "Den påverkas bara på sommaren", "Den kan bli sämre än vanligt", "Den försvinner helt under dagen"],
+        "options": [
+          "Den blir alltid bättre på morgonen",
+          "Den påverkas bara på sommaren",
+          "Den kan bli sämre än vanligt",
+          "Den försvinner helt under dagen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats passar bäst om känslor och trötthet?",
-        "options": ["Trötthet kan göra att små problem känns större", "Trötthet gör att alla känslor försvinner helt", "Trötthet påverkar bara idrott och sport", "Trötthet gör alltid att man blir gladare"],
+        "options": [
+          "Trötthet kan göra att små problem känns större",
+          "Trötthet gör att alla känslor försvinner helt",
+          "Trötthet påverkar bara idrott och sport",
+          "Trötthet gör alltid att man blir gladare"
+        ],
         "correct": 0
       },
       {
         "q": "Vad säger texten om drömmar?",
-        "options": ["De är alltid exakt samma varje natt", "De uppstår bara när man är sjuk", "Man tror att de kan hjälpa hjärnan att bearbeta upplevelser", "De händer bara vuxna och aldrig barn"],
+        "options": [
+          "De är alltid exakt samma varje natt",
+          "De uppstår bara när man är sjuk",
+          "Man tror att de kan hjälpa hjärnan att bearbeta upplevelser",
+          "De händer bara vuxna och aldrig barn"
+        ],
         "correct": 2
       },
       {
         "q": "Vad betyder bearbeta i texten?",
-        "options": ["Måla över med färg", "Glömma så snabbt som möjligt", "Gömma undan i en låda", "Tänka igenom och hantera"],
+        "options": [
+          "Måla över med färg",
+          "Glömma så snabbt som möjligt",
+          "Gömma undan i en låda",
+          "Tänka igenom och hantera"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket verkar vara textens syfte?",
-        "options": ["Att berätta en spännande nattlig historia", "Att förklara varför sömn är viktig och vad den gör", "Att jämföra olika sporter med varandra", "Att beskriva hur man bygger en säng"],
+        "options": [
+          "Att berätta en spännande nattlig historia",
+          "Att förklara varför sömn är viktig och vad den gör",
+          "Att jämföra olika sporter med varandra",
+          "Att beskriva hur man bygger en säng"
+        ],
         "correct": 1
       }
     ]
@@ -13171,32 +13771,62 @@
     "questions": [
       {
         "q": "Vad använder växter för att starta fotosyntesen enligt texten?",
-        "options": ["Månljus från natthimlen", "Värme från jordens inre", "Blixtar under åskväder", "Solljus från solen"],
+        "options": [
+          "Månljus från natthimlen",
+          "Värme från jordens inre",
+          "Blixtar under åskväder",
+          "Solljus från solen"
+        ],
         "correct": 3
       },
       {
         "q": "Vad kallas de små öppningar där växten tar in koldioxid?",
-        "options": ["Klyvöppningar i bladen", "Röttrör i stammen", "Kloroplaster i barken", "Blomnektarier på grenarna"],
+        "options": [
+          "Klyvöppningar i bladen",
+          "Röttrör i stammen",
+          "Kloroplaster i barken",
+          "Blomnektarier på grenarna"
+        ],
         "correct": 0
       },
       {
         "q": "Varför kan en växt tillverka mindre socker när det är torrt?",
-        "options": ["Den tappar sitt klorofyll helt", "Den stänger öppningarna och släpper in mindre koldioxid", "Den får alldeles för mycket syre", "Den blir alltid kallare inuti"],
+        "options": [
+          "Den tappar sitt klorofyll helt",
+          "Den stänger öppningarna och släpper in mindre koldioxid",
+          "Den får alldeles för mycket syre",
+          "Den blir alltid kallare inuti"
+        ],
         "correct": 1
       },
       {
         "q": "Vad sparar växten överskottet av socker som?",
-        "options": ["Salt i blommorna", "Syra i rötterna", "Stärkelse i frön eller rötter", "Vatten i stammen"],
+        "options": [
+          "Salt i blommorna",
+          "Syra i rötterna",
+          "Stärkelse i frön eller rötter",
+          "Vatten i stammen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats passar bäst med textens innehåll om fotosyntes och klimat?",
-        "options": ["Fotosyntes påverkas inte av människors utsläpp alls", "Växter kan ta upp en del koldioxid men inte alltid lika snabbt som den släpps ut", "Koldioxid bildas bara i havet och inte på land", "Skogar gör alltid klimatet varmare överallt"],
+        "options": [
+          "Fotosyntes påverkas inte av människors utsläpp alls",
+          "Växter kan ta upp en del koldioxid men inte alltid lika snabbt som den släpps ut",
+          "Koldioxid bildas bara i havet och inte på land",
+          "Skogar gör alltid klimatet varmare överallt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet överskott i texten?",
-        "options": ["För lite av något viktigt", "Extra som blir kvar efteråt", "Något som är farligt att äta", "Något som är helt osynligt"],
+        "options": [
+          "För lite av något viktigt",
+          "Extra som blir kvar efteråt",
+          "Något som är farligt att äta",
+          "Något som är helt osynligt"
+        ],
         "correct": 1
       }
     ],
@@ -13212,32 +13842,62 @@
     "questions": [
       {
         "q": "Vad kallas det när vatten blir vattenånga och stiger upp i luften?",
-        "options": ["Smältning av is", "Erosion av berg", "Frysning till kristaller", "Avdunstning från ytan"],
+        "options": [
+          "Smältning av is",
+          "Erosion av berg",
+          "Frysning till kristaller",
+          "Avdunstning från ytan"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken roll har solen i vattenkretsloppet enligt texten?",
-        "options": ["Den gör moln tyngre så de faller", "Den driver rörelsen genom att värma vatten", "Den stoppar all nederbörd helt", "Den gör grundvatten salt överallt"],
+        "options": [
+          "Den gör moln tyngre så de faller",
+          "Den driver rörelsen genom att värma vatten",
+          "Den stoppar all nederbörd helt",
+          "Den gör grundvatten salt överallt"
+        ],
         "correct": 1
       },
       {
         "q": "Varför kan städer få mer problem med snabbt rinnande regnvatten?",
-        "options": ["För att det finns fler sjöar i städer", "För att det alltid regnar mindre i städer", "För att asfalt och tak leder bort vatten snabbare", "För att grundvatten blir is under husen"],
+        "options": [
+          "För att det finns fler sjöar i städer",
+          "För att det alltid regnar mindre i städer",
+          "För att asfalt och tak leder bort vatten snabbare",
+          "För att grundvatten blir is under husen"
+        ],
         "correct": 2
       },
       {
         "q": "Vad är grundvatten i textens beskrivning?",
-        "options": ["Vatten som ligger som dimma på marken", "Vatten som bara finns i havet", "Vatten som tränger ner och samlas i marken", "Vatten som fryser på vintern alltid"],
+        "options": [
+          "Vatten som ligger som dimma på marken",
+          "Vatten som bara finns i havet",
+          "Vatten som tränger ner och samlas i marken",
+          "Vatten som fryser på vintern alltid"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats passar bäst om dimma över en sjö på morgonen?",
-        "options": ["Det betyder att allt vatten i sjön har avdunstat", "Det visar att luften nära marken kylts och blivit fuktig", "Det uppstår bara när det snöar kraftigt", "Det är rök från marken under sjön"],
+        "options": [
+          "Det betyder att allt vatten i sjön har avdunstat",
+          "Det visar att luften nära marken kylts och blivit fuktig",
+          "Det uppstår bara när det snöar kraftigt",
+          "Det är rök från marken under sjön"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet nederbörd?",
-        "options": ["Vatten som faller från moln som regn eller snö", "Vatten som rinner i älvar och bäckar", "Vatten som samlas i brunnar under jord", "Vatten som blir helt osynligt i luften"],
+        "options": [
+          "Vatten som faller från moln som regn eller snö",
+          "Vatten som rinner i älvar och bäckar",
+          "Vatten som samlas i brunnar under jord",
+          "Vatten som blir helt osynligt i luften"
+        ],
         "correct": 0
       }
     ],
@@ -13253,32 +13913,62 @@
     "questions": [
       {
         "q": "Vad är huvudidén med återvinning enligt texten?",
-        "options": ["Att göra sopor tyngre för transport", "Att använda material igen istället för att slänga", "Att alltid bränna allt avfall direkt", "Att blanda alla material i samma kärl"],
+        "options": [
+          "Att göra sopor tyngre för transport",
+          "Att använda material igen istället för att slänga",
+          "Att alltid bränna allt avfall direkt",
+          "Att blanda alla material i samma kärl"
+        ],
         "correct": 1
       },
       {
         "q": "Varför måste glas ofta sorteras efter färg?",
-        "options": ["För att glas inte går att smälta alls", "För att glas blir farligt av starkt ljus", "För att färgerna annars kan blandas och bli fel i nya produkter", "För att glas alltid är magnetiskt inne"],
+        "options": [
+          "För att glas inte går att smälta alls",
+          "För att glas blir farligt av starkt ljus",
+          "För att färgerna annars kan blandas och bli fel i nya produkter",
+          "För att glas alltid är magnetiskt inne"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket material nämns som mer komplicerat att återvinna, och varför?",
-        "options": ["Papper, för att det är tungt att lyfta", "Metall, för att den inte kan smältas om", "Glas, för att det alltid går sönder direkt", "Plast, för att det finns många sorter som inte bör blandas"],
+        "options": [
+          "Papper, för att det är tungt att lyfta",
+          "Metall, för att den inte kan smältas om",
+          "Glas, för att det alltid går sönder direkt",
+          "Plast, för att det finns många sorter som inte bör blandas"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken slutsats passar bäst om varför elektronik lämnas separat?",
-        "options": ["Den tar alltid mer plats än annat avfall", "Den kan innehålla både värdefulla metaller och ämnen som kräver säker hantering", "Den kan inte transporteras på lastbil", "Den blir automatiskt återvunnen hemma själv"],
+        "options": [
+          "Den tar alltid mer plats än annat avfall",
+          "Den kan innehålla både värdefulla metaller och ämnen som kräver säker hantering",
+          "Den kan inte transporteras på lastbil",
+          "Den blir automatiskt återvunnen hemma själv"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet råvaror i texten?",
-        "options": ["Färdiga produkter som säljs i butik", "Material som används för att tillverka nya saker", "Sopor som redan är sorterade klart", "Mat som inte är tillagad ännu"],
+        "options": [
+          "Färdiga produkter som säljs i butik",
+          "Material som används för att tillverka nya saker",
+          "Sopor som redan är sorterade klart",
+          "Mat som inte är tillagad ännu"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket påstående stämmer bäst med texten?",
-        "options": ["Återvinning fungerar utan att någon sorterar", "Metallåtervinning kan spara energi jämfört med att ta ny malm", "Plast blir alltid bättre om man blandar olika sorter", "Papper blir starkare varje gång det återvinns"],
+        "options": [
+          "Återvinning fungerar utan att någon sorterar",
+          "Metallåtervinning kan spara energi jämfört med att ta ny malm",
+          "Plast blir alltid bättre om man blandar olika sorter",
+          "Papper blir starkare varje gång det återvinns"
+        ],
         "correct": 1
       }
     ],
@@ -13294,32 +13984,62 @@
     "questions": [
       {
         "q": "Vad beskriver en budget enligt texten?",
-        "options": ["En lista över bara roliga köp man vill göra", "En karta över butiker i närheten", "En plan över inkomster och utgifter", "En metod för att alltid få mer pengar"],
+        "options": [
+          "En lista över bara roliga köp man vill göra",
+          "En karta över butiker i närheten",
+          "En plan över inkomster och utgifter",
+          "En metod för att alltid få mer pengar"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket exempel räknas som en oregelbunden utgift i texten?",
-        "options": ["Hyra varje månad", "Mat varje vecka", "Busskort varje termin", "Födelsedagar som kommer ibland"],
+        "options": [
+          "Hyra varje månad",
+          "Mat varje vecka",
+          "Busskort varje termin",
+          "Födelsedagar som kommer ibland"
+        ],
         "correct": 3
       },
       {
         "q": "Varför kan det vara smart att skriva upp små kostnader?",
-        "options": ["För att de ofta kan ta mer pengar än man tror tillsammans", "För att de alltid försvinner av sig själva snabbt", "För att man då måste sluta köpa allt direkt", "För att inkomsterna blir större av det"],
+        "options": [
+          "För att de ofta kan ta mer pengar än man tror tillsammans",
+          "För att de alltid försvinner av sig själva snabbt",
+          "För att man då måste sluta köpa allt direkt",
+          "För att inkomsterna blir större av det"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken tolkning passar bäst med textens syn på sparande?",
-        "options": ["Sparande fungerar bara om man lägger undan en stor summa direkt", "Sparande betyder att man aldrig får köpa något roligt", "Sparande kan växa över tid om pengarna får ligga kvar", "Sparande gör att utgifter försvinner helt"],
+        "options": [
+          "Sparande fungerar bara om man lägger undan en stor summa direkt",
+          "Sparande betyder att man aldrig får köpa något roligt",
+          "Sparande kan växa över tid om pengarna får ligga kvar",
+          "Sparande gör att utgifter försvinner helt"
+        ],
         "correct": 2
       },
       {
         "q": "Vad menas med behov i texten?",
-        "options": ["Saker man måste ha, som mat och kläder", "Saker man vill ha, som nya spel", "Saker som alltid kostar exakt samma", "Saker som bara finns på nätet"],
+        "options": [
+          "Saker man måste ha, som mat och kläder",
+          "Saker man vill ha, som nya spel",
+          "Saker som alltid kostar exakt samma",
+          "Saker som bara finns på nätet"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket är ett rimligt syfte med att ha budget, enligt texten?",
-        "options": ["Att bli överraskad oftare av räkningar", "Att alltid köpa det billigaste alternativet", "Att kunna prioritera när pengar förändras", "Att undvika att planera framåt alls"],
+        "options": [
+          "Att bli överraskad oftare av räkningar",
+          "Att alltid köpa det billigaste alternativet",
+          "Att kunna prioritera när pengar förändras",
+          "Att undvika att planera framåt alls"
+        ],
         "correct": 2
       }
     ],
@@ -13335,35 +14055,765 @@
     "questions": [
       {
         "q": "Vad är en karta enligt texten?",
-        "options": ["En bild av ett område uppifrån med symboler", "En lista med gatunamn och adresser", "En bok om väder och klimat", "En app som alltid behöver internet"],
+        "options": [
+          "En bild av ett område uppifrån med symboler",
+          "En lista med gatunamn och adresser",
+          "En bok om väder och klimat",
+          "En app som alltid behöver internet"
+        ],
         "correct": 0
       },
       {
         "q": "Vad används skalan på kartan till?",
-        "options": ["Att visa vilka symboler som finns", "Att mäta temperaturen utomhus", "Att räkna ut avstånd i verkligheten", "Att hitta magnetiskt norr direkt"],
+        "options": [
+          "Att visa vilka symboler som finns",
+          "Att mäta temperaturen utomhus",
+          "Att räkna ut avstånd i verkligheten",
+          "Att hitta magnetiskt norr direkt"
+        ],
         "correct": 2
       },
       {
         "q": "Varför kan det vara bra att kunna använda papperskarta även om man har mobil?",
-        "options": ["För att papperskartor visar alltid fler filmer", "För att kompassnålen fungerar bara med papper", "För att batteriet kan ta slut och täckning saknas", "För att symboler bara finns på papper"],
+        "options": [
+          "För att papperskartor visar alltid fler filmer",
+          "För att kompassnålen fungerar bara med papper",
+          "För att batteriet kan ta slut och täckning saknas",
+          "För att symboler bara finns på papper"
+        ],
         "correct": 2
       },
       {
         "q": "Vad visar höjdkurvor på en karta?",
-        "options": ["Var det finns busshållplatser i området", "Hur marken lutar och var det är brant", "Vilka vägar som är asfalterade helt", "Hur varmt det är på olika platser"],
+        "options": [
+          "Var det finns busshållplatser i området",
+          "Hur marken lutar och var det är brant",
+          "Vilka vägar som är asfalterade helt",
+          "Hur varmt det är på olika platser"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken slutsats passar bäst om varför det finns information om två olika norr?",
-        "options": ["För att kartor alltid är felritade från början", "För att kompassen och kartans norr kan skilja lite på vissa platser", "För att magnetiskt norr är samma som geografiskt norr överallt", "För att höjdkurvor påverkar riktningen på kartan"],
+        "options": [
+          "För att kartor alltid är felritade från början",
+          "För att kompassen och kartans norr kan skilja lite på vissa platser",
+          "För att magnetiskt norr är samma som geografiskt norr överallt",
+          "För att höjdkurvor påverkar riktningen på kartan"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder ordet teckenförklaring i texten?",
-        "options": ["En förklaring av vad symbolerna på kartan betyder", "En beskrivning av vädret på platsen", "En regel om hur man går fort framåt", "En lista på alla träd i området"],
+        "options": [
+          "En förklaring av vad symbolerna på kartan betyder",
+          "En beskrivning av vädret på platsen",
+          "En regel om hur man går fort framåt",
+          "En lista på alla träd i området"
+        ],
         "correct": 0
       }
     ],
     "word_count": 300
+  },
+  {
+    "id": "ak9-tema-001",
+    "title": "Staden som måste tåla mer regn",
+    "text": "När Samir cyklade hem från träningen såg han att gatan vid torget var avstängd. Vattnet låg som en brungrå sjö över asfalten, och en brunn hade spottat upp löv och grus. Det här var tredje gången samma höst. Kommunen kallade det skyfall, men för Samir och hans granne Inga, som gick med rullator, betydde det mest att bussen ställdes in och att trottoarer blev svåra att ta sig fram på.\n\nPå samhällskunskapen hade klassen pratat om klimatanpassning. Läraren förklarade att klimatförändringar inte bara handlar om högre medeltemperatur, utan också om att extrema regn kan bli vanligare. När mycket vatten faller på kort tid räcker inte ledningarna under marken till. Då trycks vatten upp i brunnar, källare kan översvämmas och förorenat vatten kan hamna i åar och sjöar. Det blir både en kostnadsfråga och en hälsorisk.\n\nKommunens plan var att kombinera tekniska lösningar med blågröna ytor. Tekniska lösningar kunde vara större dagvattenrör eller magasin som samlar vatten tillfälligt. Blågröna ytor handlar om natur som gör jobbet: parker som kan svämma över utan att skada hus, träd som suger upp vatten och regnbäddar där vatten får rinna ner i jorden i stället för att rusa mot brunnarna. På en skiss visades också genomsläpplig markbeläggning, där små mellanrum gör att vatten kan sippra ner.\n\nMen allt gick inte att lösa med en ny park. I äldre kvarter låg många ytor redan hårdgjorda, och fastighetsägare oroade sig för byggstök och höjda avgifter. Samtidigt kunde kommunen inte bara hoppas på att nästa skyfall dröjde. Läraren tog upp ett begrepp: prioritering. Om budgeten är begränsad måste man välja vilka områden som ska skyddas först. Ska sjukhuset, skolan och äldreboendet få de dyraste åtgärderna? Eller ska man börja där problemen redan är störst?\n\nEfter lektionen gick Samir och Inga på ett öppet möte i biblioteket. Där berättade en ingenjör att en del vatten skulle ledas om mot en ny damm i en park, och att torgets beläggning skulle bytas till en mer genomsläpplig variant. Inga frågade om tillgänglighet: Blir det hala stenar när det regnar? Ingenjören svarade att materialet testas för friktion och att man ska undvika kanter som fastnar i hjul. Samir märkte att klimatanpassning inte bara var teknik eller natur, utan också vardag: hur man rör sig, vem som blir drabbad och hur man fördelar resurser när allt inte kan göras på en gång.",
+    "grade": 9,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Vad är textens huvudtema?",
+        "options": [
+          "Hur man bygger nya bostäder snabbare i centrum",
+          "Hur man tränar säkert när vädret är dåligt",
+          "Varför busslinjer ofta blir försenade på hösten",
+          "Hur städer kan anpassas för att klara kraftiga regn"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför räcker inte ledningarna under marken till vid skyfall enligt texten?",
+        "options": [
+          "De är ofta tomma eftersom vatten sparas i reservoarer",
+          "För mycket vatten kommer på kort tid och pressar systemet",
+          "Vattnet försvinner eftersom marken suger upp allt direkt",
+          "Ledningarna används mest för att transportera dricksvatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket exempel i texten räknas som en blågrön lösning?",
+        "options": [
+          "Ett nytt parkeringshus med tak",
+          "Fler gatlyktor vid torget",
+          "En park som kan ta emot översvämningsvatten",
+          "Ett extra körfält för att minska bilköer"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken oro uttrycker fastighetsägare i de äldre kvarteren?",
+        "options": [
+          "Att skolor ska få för lite undervisningstid",
+          "Att regn alltid leder till strömavbrott",
+          "Att träd kommer att locka fler fåglar till området",
+          "Att byggstök och avgifter kan öka när man bygger om"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad menar läraren med begreppet prioritering i sammanhanget?",
+        "options": [
+          "Att låta invånare själva bestämma hur mycket det ska regna",
+          "Att mäta nederbörd med fler väderstationer i staden",
+          "Att välja vilka åtgärder och platser som ska få resurser först",
+          "Att göra om alla vägar till cykelbanor inom ett år"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför frågar Inga om tillgänglighet på mötet?",
+        "options": [
+          "Hon vill veta om nya material kan bli svåra att ta sig fram på",
+          "Hon vill att parken ska få fler caféer och bänkar",
+          "Hon undrar om kommunen ska sänka biljettpriserna på bussen",
+          "Hon vill att torget ska stängas permanent för cyklar"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 389
+  },
+  {
+    "id": "ak9-tema-002",
+    "title": "När ett klipp blir bevis",
+    "text": "En måndagsmorgon spreds en kort video i niondeklassens chatt. Den visade en person som verkade säga att skolmaten skulle bli avgiftsbelagd nästa termin. Klippet var suddigt, ljudet hackade och ansiktet syntes bara i profil. Ändå kom reaktionerna direkt: några blev arga, andra skrev att de alltid vetat att politiker inte bryr sig. I samma tråd la någon upp en skärmdump på ett påstått kommunbeslut.\n\nAmina, som var elevrådsrepresentant, kände att något skavde. Elliot, som identifierar sig som icke-binär, påpekade att klippet saknade datum och att kontot som först publicerat videon hade ett märkligt användarnamn. De bestämde sig för att göra det de tränat på i källkritik: pausa, undersöka, jämföra.\n\nFörst kollade de ursprungskällan. Kontot hade bara tre inlägg, alla med starka påståenden och inga länkar. Nästa steg blev att leta efter samma klipp på andra plattformar. De hittade en längre version där det framgick att personen pratade om en helt annan kommun och om en utredning som redan lagts ner. Den korta versionen var klippt så att sammanhanget försvann.\n\nSkärmdumpen på beslutet var nästa problem. Texten såg formell ut, men sidhuvudet saknade diarienummer, och språket blandade myndighetsord med slang. Amina ringde kommunens växel, och en tjänsteperson förklarade att alla beslut om skolmat publiceras i protokoll som är offentliga och att man kan kontrollera dem via kommunens webbplats. Elliot hittade protokollet från senaste nämndmötet: där fanns inget om avgiftsbelagd skolmat, men däremot en diskussion om att minska matsvinn genom att låta elever välja portionstorlek.\n\nNär de berättade för klassen blev några generade. Men det lät ju sant, sa en kompis. Läraren tog upp varför desinformation fungerar: den utnyttjar känslor, bekräftar sådant man redan misstänker och sprids snabbt när man delar utan att kontrollera. Ibland är syftet att tjäna pengar på klick. Ibland vill någon påverka en opinion, till exempel inför ett val eller en lokal konflikt.\n\nAmina och Elliot skrev ett kort inlägg till chatten med tre steg: 1) Vem står bakom? 2) Var finns originalet? 3) Kan oberoende källor bekräfta? De la också till en regel: dela inte vidare när du är som mest upprörd. När klassen senare såg hur lätt ett klipp kunde klippas om med enkla appar förstod fler att kritiskt tänkande inte handlar om att misstro allt, utan om att kräva rimliga bevis innan man bestämmer sig.",
+    "grade": 9,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vilken detalj gör att Amina och Elliot först blir misstänksamma mot videon?",
+        "options": [
+          "Den var längre än tio minuter",
+          "Den saknade tydligt datum och ursprungskälla",
+          "Den var filmad i skolans matsal",
+          "Den hade textning på flera språk"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad upptäcker de när de hittar en längre version av klippet?",
+        "options": [
+          "Att personen pratar om en annan kommun och att sammanhanget är bortklippt",
+          "Att videon är helt datoranimerad och saknar verkliga människor",
+          "Att beslutet gäller en nationell lag som redan trätt i kraft",
+          "Att samma person medger att hen hittat på allt som ett skämt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket tecken i skärmdumpen får dem att tvivla på att den är äkta?",
+        "options": [
+          "Att den är skriven med versaler i hela dokumentet",
+          "Att den innehåller ett korrekt diarienummer på varje sida",
+          "Att sidhuvud och språkbruk inte liknar riktiga kommunhandlingar",
+          "Att den är publicerad som en PDF med kommunens logotyp"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad visar det riktiga protokollet från nämndmötet enligt texten?",
+        "options": [
+          "Att skolmaten ska bytas ut mot matlådor hemifrån",
+          "Att skolmaten ska bli avgiftsbelagd i vissa årskurser",
+          "Att kommunen ska stänga alla skolköket under vintern",
+          "Att man diskuterat minskat matsvinn, inte avgifter"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken förklaring ger läraren till varför desinformation sprids så snabbt?",
+        "options": [
+          "Den väcker känslor och bekräftar misstankar, vilket gör att folk delar utan att kolla",
+          "Den är alltid baserad på vetenskapliga rapporter som alla litar på",
+          "Den sprids bara när den kommer från officiella myndighetskonton",
+          "Den är svår att förstå, så människor delar för att få hjälp"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket råd sammanfattar Amina och Elliot i sitt inlägg till chatten?",
+        "options": [
+          "Blockera alla som postar nyheter i sociala medier",
+          "Dela vidare först när du känner dig riktigt arg, så fler reagerar",
+          "Kolla avsändare, original och oberoende bekräftelse innan du bestämmer dig",
+          "Lita mest på skärmdumpar eftersom de inte kan ändras"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 380
+  },
+  {
+    "id": "ak9-tema-003",
+    "title": "När fabriken blev stadens hjärta",
+    "text": "I slutet av 1800-talet förändrades många svenska samhällen snabbt. Där det tidigare funnits små jordbruk och hantverk växte industrier fram: sågverk, textilfabriker och verkstäder. Ångmaskiner och senare elektricitet gjorde att arbetet kunde organiseras på nya sätt. Produktionen ökade, varor blev billigare och fler människor flyttade till städerna för att få lön i stället för att leva på sin egen mark.\n\nMen industrialiseringen hade en baksida. Arbetstiden kunde vara tolv timmar om dagen, sex dagar i veckan. Säkerheten var ofta låg: obevakade remmar och maskiner kunde slita med sig kläder och hår. Barn arbetade eftersom familjens ekonomi krävde det, och kvinnor hade ofta lägre lön trots liknande arbetsuppgifter. Trångboddheten i städerna ökade när inflyttningen gick fortare än byggandet. I vissa kvarter delade flera familjer ett rum, och sjukdomar spreds lätt när rent vatten och avlopp saknades.\n\nSamtidigt uppstod nya möjligheter till organisering. När många arbetade på samma plats blev det lättare att prata om gemensamma problem. Fackföreningar bildades för att förhandla om löner och arbetsvillkor. Strejker användes som ett sätt att sätta press på arbetsgivare, men strejker kunde också mötas av polis eller av att arbetsgivaren tog in strejkbrytare. Konflikter blev därför både ekonomiska och politiska.\n\nEn viktig förändring var att arbetarrörelsen började driva krav på reformer genom riksdagen och kommunerna. Krav på kortare arbetsdag, folkskola, bättre bostäder och allmän rösträtt växte fram. Vissa reformer kom stegvis: arbetarskyddslagar, regler kring barnarbete och senare socialförsäkringar. Men det var inte en rak väg framåt. Arbetsgivare kunde varna för att fabriker skulle flytta om kostnaderna ökade, och en del politiker såg facklig kamp som ett hot mot ordningen.\n\nNär man i dag pratar om industrialiseringen som en modernisering är det därför viktigt att se flera perspektiv. För en fabriksägare kunde det handla om investeringar, marknader och teknik. För en arbetare kunde samma period betyda slit, osäkerhet och samtidigt en chans att påverka sin situation genom kollektiv handling. Historiker använder ofta källor som fabriksprotokoll, tidningsartiklar, brev och statistik för att förstå hur människor faktiskt levde.\n\nTexten visar att industrialiseringen inte bara var en teknisk förändring, utan en samhällsomvandling där frågor om makt, rättigheter och livsvillkor blev centrala. Det är också en påminnelse om att när ekonomin förändras snabbt behöver samhället ibland nya regler för att skydda människor som annars får bära en stor del av kostnaden.",
+    "grade": 9,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "Vilken beskrivning sammanfattar textens huvudsakliga budskap?",
+        "options": [
+          "Industrialiseringen var en period utan konflikter mellan arbetare och arbetsgivare",
+          "Industrialiseringen gjorde att alla fick kortare arbetsdag direkt",
+          "Industrialiseringen handlade mest om att jordbruket blev helt oviktigt på en gång",
+          "Industrialiseringen var en samhällsomvandling med både vinster och stora sociala kostnader"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken konsekvens av snabb inflyttning till städerna nämns i texten?",
+        "options": [
+          "Att det blev lättare att odla mer mat i städerna",
+          "Att trångboddhet ökade och sjukdomar spreds lättare",
+          "Att alla fick gratis bostäder av fabriksägarna",
+          "Att städerna blev tystare eftersom färre arbetade"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför blev det lättare för arbetare att organisera sig enligt texten?",
+        "options": [
+          "De ägde fabrikerna tillsammans redan från början",
+          "De hade mer fritid än tidigare och reste mer",
+          "De arbetade på samma plats och kunde diskutera gemensamma problem",
+          "De fick automatiskt rösträtt när de flyttade till staden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket exempel på motargument nämns från arbetsgivare eller deras sida?",
+        "options": [
+          "Att skolor skulle stängas om lönerna steg",
+          "Att maskiner inte kunde användas på vintern",
+          "Att fabriker kunde flytta om kostnaderna ökade",
+          "Att fackföreningar alltid ökade produktiviteten"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilka källor kan historiker använda för att förstå industrialiseringen enligt texten?",
+        "options": [
+          "Enbart fotografier, eftersom textkällor saknas",
+          "Endast muntliga rykten från samma tidsperiod",
+          "Bara romaner skrivna långt efter händelserna",
+          "Fabriksprotokoll, tidningar, brev och statistik"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad säger texten om reformer som arbetarrörelsen drev fram?",
+        "options": [
+          "Att de kom stegvis och inte utan motstånd",
+          "Att de infördes samtidigt i hela landet på ett år",
+          "Att de främst gällde nya maskiner, inte människor",
+          "Att de stoppades helt och hållet av kommunerna"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 381
+  },
+  {
+    "id": "ak9-tema-004",
+    "title": "Saxen som kan ändra arvsmassan",
+    "text": "När forskaren Linh höll en föreläsning på gymnasiedagen började hon med en liknelse: Tänk att DNA är en lång text. Förr kunde vi mest läsa den. Nu kan vi ibland redigera. Hon syftade på CRISPR, en metod som gör det möjligt att klippa i arvsmassan på en bestämd plats. I naturen är CRISPR en del av bakteriers försvar mot virus, men forskare har anpassat systemet för att kunna styra klippet med en guide-sekvens.\n\nI föreläsningen beskrev Linh två olika användningar. Den ena gäller somatisk genterapi, alltså ändringar i kroppsceller hos en person som redan lever. Målet kan vara att behandla en sjukdom, till exempel genom att reparera en mutation i blodceller. Om behandlingen fungerar påverkar den bara patienten, inte framtida barn. Den andra användningen gäller könsceller eller embryon, så kallad groddlinje-redigering. Då skulle förändringen kunna ärvas av kommande generationer.\n\nTekniskt sett är metoden inte magisk. Ett klipp kan följas av att cellen lagar DNA:t på olika sätt. Ibland blir resultatet exakt, ibland uppstår oönskade förändringar. Forskare pratar om off-target-effekter, alltså att CRISPR råkar klippa på liknande ställen i genomet. Det är en anledning till att säkerhet och noggranna tester är centrala innan metoden används brett.\n\nDe etiska frågorna är minst lika stora som de tekniska. Linh bad publiken tänka på skillnaden mellan att behandla en svår sjukdom och att förbättra egenskaper som längd eller intelligens. Vem skulle få tillgång till tekniken om den är dyr? Skulle det skapa ett samhälle där vissa kan köpa genetiska fördelar? Samtidigt finns argumentet att det kan vara oetiskt att inte använda en metod som kan minska lidande, om den blir tillräckligt säker.\n\nHon tog också upp hur beslut fattas. Forskning styrs av lagar, etikprövning och internationella rekommendationer. Men gränserna skiljer sig mellan länder, och det gör att det ibland uppstår etik-shopping, där aktörer söker sig till platser med svagare regler. Därför diskuterar många forskare behovet av gemensamma ramar och öppenhet.\n\nNär frågestunden kom räckte en elev upp handen och frågade: Om vi kan redigera, vem bestämmer vad som räknas som normalt? Linh svarade att det är en demokratisk och filosofisk fråga, inte bara en medicinsk. Tekniken kan ge verktyg, men samhället måste avgöra hur de ska användas. CRISPR visar alltså både människans uppfinningsrikedom och hur viktigt det är att koppla vetenskap till ansvar.",
+    "grade": 9,
+    "category": "Vetenskap",
+    "questions": [
+      {
+        "q": "Vad menar Linh med liknelsen att DNA är en lång text?",
+        "options": [
+          "Att DNA alltid skrivs om av sig självt varje dag",
+          "Att vi kan läsa DNA och ibland göra riktade ändringar i det",
+          "Att DNA bara finns i böcker och inte i kroppen",
+          "Att CRISPR fungerar som en stavningskontroll som alltid blir perfekt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken skillnad mellan somatisk genterapi och groddlinje-redigering betonas i texten?",
+        "options": [
+          "Somatisk genterapi påverkar patienten men ärvs inte av framtida barn",
+          "Groddlinje-redigering används bara på växter, inte på människor",
+          "Somatisk genterapi kan bara göras i laboratorier utan patienter",
+          "Groddlinje-redigering innebär inga etiska frågor eftersom den är förbjuden"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är en off-target-effekt enligt texten?",
+        "options": [
+          "Att cellen alltid vägrar laga ett klipp i DNA",
+          "Att CRISPR bara kan fungera i bakterier och inte i människor",
+          "Att CRISPR kan klippa på fel ställen som liknar målsekvensen",
+          "Att guiden alltid leder CRISPR till exakt rätt plats"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken etisk risk kopplas i texten till förbättring av egenskaper?",
+        "options": [
+          "Att sjukdomar automatiskt ökar när man använder teknik",
+          "Att alla länder får identiska lagar samtidigt",
+          "Att människor slutar utbilda sig eftersom gener räcker",
+          "Att tillgång kan bli ojämlik och skapa köpta genetiska fördelar"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad menas med etik-shopping i texten?",
+        "options": [
+          "Att aktörer söker sig till länder med svagare regler för att kunna agera",
+          "Att forskare säljer etikböcker i sjukhusens caféer",
+          "Att patientgrupper väljer den billigaste behandlingen utan att fråga",
+          "Att etikprövningar alltid sker i samma internationella myndighet"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad visar Linhs svar om frågan vem bestämmer vad som räknas som normalt?",
+        "options": [
+          "Att frågan bara kan besvaras av genetiker och ingen annan",
+          "Att det är en samhällsfråga där demokrati och värderingar spelar in",
+          "Att tekniken redan har bestämt vad som är normalt i alla länder",
+          "Att man kan lösa frågan genom att undvika all medicinsk forskning"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 379
+  },
+  {
+    "id": "ak9-tema-005",
+    "title": "När språket markerar vem du är",
+    "text": "På bussen hem från skolan hörde Nora två yngre elever prata snabbt och fullt av uttryck som hon knappt kände igen. De blandade svenska med engelska ord och klippte av meningar mitt i. Nora tänkte först att det lät slarvigt, men på svenskalektionen samma vecka fick hon en annan bild. Läraren berättade att språk inte bara är grammatik och stavning, utan också identitet: hur vi signalerar tillhörighet, avstånd eller närhet.\n\nEtt begrepp var sociolekt, alltså språkliga drag som hänger ihop med social miljö, till exempel ålder, utbildning eller vilken grupp man rör sig i. Ett annat var dialekt, som oftare kopplas till geografiska områden. Men gränserna kan överlappa. I en storstad kan en person tala med drag från sin stadsdel, sin vänkrets och sin familj på samma gång. Läraren betonade också att ingen har ett enda språk. Många växlar stil beroende på situation: hemma, i skolan, på jobbet eller online.\n\nKlassens uppgift blev att analysera två korta texter: ett formellt mejl och en chattkonversation. I mejlet fanns hela meningar, tydliga hälsningsfraser och ord som vänligen. I chatten fanns emojis, förkortningar och ord som saknade vokaler. Poängen var inte att chatten var fel, utan att den följer andra normer. Normer är oskrivna regler som bestämmer vad som uppfattas som passande i ett sammanhang.\n\nSedan diskuterade de makt. Den som behärskar standardspråk kan lättare bli tagen på allvar i vissa situationer, till exempel i en jobbintervju eller när man skriver en debattartikel. Samtidigt kan krav på rätt språk användas för att stänga ute människor eller få dem att känna sig mindre värda. En elev i klassen, Farah, berättade att hon ibland väljer att inte prata sin hemmasvenska i nya sammanhang eftersom hon är rädd att bli bedömd som mindre smart. Läraren kallade det språklig osäkerhet.\n\nDe pratade också om språklig förändring. Nya ord uppstår när samhället förändras: teknik, musik och sociala medier skapar behov av nya uttryck. Vissa ord stannar, andra försvinner. Att äldre kan tycka att ungdomars språk är sämre är inget nytt; liknande klagomål finns dokumenterade i många tider.\n\nNär Nora gick hem efter lektionen lyssnade hon annorlunda på bussen. Hon hörde inte bara slang, utan en grupp som byggde gemenskap. Samtidigt förstod hon att hon själv växlar språk: hon skriver inte en uppsats som hon chattar. Texten visar att språk är ett verktyg, men också ett socialt system där regler, status och tillhörighet hänger ihop.",
+    "grade": 9,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Emojis har ersatt grammatik i alla typer av texter",
+          "Ungdomar pratar alltid sämre än vuxna gjorde förr",
+          "Dialekter är olagliga i skolan och bör förbjudas",
+          "Språk handlar både om kommunikation och om identitet, normer och makt"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad är en sociolekt enligt texten?",
+        "options": [
+          "Ett språk som bara används i kontaktannonser",
+          "Språkliga drag kopplade till social miljö, som ålder eller grupp",
+          "En dialekt som alltid är knuten till ett bergsområde",
+          "Ett hemligt språk som bara lärare förstår"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför säger läraren att chatten inte är fel?",
+        "options": [
+          "För att chatten följer andra normer än formella texter",
+          "För att chatten alltid är mer korrekt än mejl",
+          "För att regler i språk inte existerar längre",
+          "För att emojis gör att man inte behöver förstå varandra"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur kopplas standardspråk till makt i texten?",
+        "options": [
+          "Standardspråk gör att man aldrig kan missförstå varandra",
+          "Standardspråk används bara i kontaktannonser och reklam",
+          "Den som kan standardspråk kan lättare bli tagen på allvar i vissa sammanhang",
+          "Standardspråk gör att dialekter automatiskt försvinner på en generation"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär språklig osäkerhet i texten?",
+        "options": [
+          "Att man är osäker på om ett ord finns i ordboken",
+          "Att man medvetet väljer tystnad för att slippa bli negativt bedömd",
+          "Att man alltid byter språk från svenska till engelska i skolan",
+          "Att man bara kan prata i korta meningar av medicinska skäl"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken förklaring ger texten till att nya ord uppstår?",
+        "options": [
+          "Att lärare hittar på ord för att göra prov svårare",
+          "Att ungdomar alltid försöker dölja vad de menar",
+          "Att nya ord främst uppstår när man flyttar till en annan stad",
+          "Att samhällsförändringar som teknik och sociala medier skapar nya behov"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 396
+  },
+  {
+    "id": "ak6-tema-001",
+    "title": "Våtmarken som räddar vatten",
+    "text": "En kylig morgon i april följer Noor och deras morfar Leif en smal stig ner mot en våtmark nära byn. Våtmarken ser först ut som en rörig blandning av vattenpölar, tuvor och vass. Men morfar säger att det är som ett levande filter. När det regnar rinner vatten från åkrar och vägar ner mot våtmarken. I vattnet finns jord, näringsämnen och ibland små rester av olja från bilar. I våtmarken saktar vattnet ner. Då sjunker jordpartiklar till botten och växterna kan ta upp en del av näringen.\n\nNoor tittar på en liten bäck som slingrar sig ut från våtmarken. \"Blir det renare vatten här?\" frågar de. Morfar nickar och förklarar att det ofta blir mindre grumligt, alltså mindre fullt av små partiklar. Dessutom trivs många djur här. De ser spår av rådjur i leran och hör grodor som kväker. En trollslända flyger förbi och sätter sig på en strå. Morfar berättar att våtmarker också kan hjälpa vid översvämningar. När det kommer mycket regn kan våtmarken hålla kvar vatten, ungefär som en svamp, så att det inte rusar vidare och fyller diken och källare.\n\nMen det finns ett problem. Förr dikade man ofta ut våtmarker för att få mer åkermark. Då försvann både djurens livsmiljöer och våtmarkens \"svamp-effekt\". Nu försöker många kommuner och markägare återställa våtmarker. Det kan innebära att man täpper igen gamla diken eller bygger små dammar så att vattnet stannar längre.\n\nPå vägen hem pratar Noor och morfar om att naturvård inte bara handlar om att \"låta naturen vara\". Ibland måste människor hjälpa till att återställa något som redan har förändrats. Noor tänker att våtmarken inte är rörig längre. Den är smart.",
+    "grade": 6,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Vad menar morfar när han säger att våtmarken är som ett levande filter?",
+        "options": [
+          "Att våtmarken kan göra vattnet renare när det rinner långsammare genom den",
+          "Att våtmarken alltid gör vatten helt drickbart direkt",
+          "Att våtmarken bara samlar regnvatten utan att något förändras",
+          "Att våtmarken främst används för att odla grönsaker"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket djur nämns som Noor och morfar märker av vid våtmarken?",
+        "options": [
+          "Igelkott",
+          "Grodor",
+          "Fjällräv",
+          "Älg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan våtmarker minska risken för översvämningar enligt texten?",
+        "options": [
+          "De gör att regnet slutar snabbare",
+          "De leder bort vatten genom hemliga tunnlar",
+          "De kan hålla kvar mycket vatten en stund, som en svamp",
+          "De höjer marken så att vatten inte når hus"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad var en vanlig orsak till att våtmarker försvann förr i tiden?",
+        "options": [
+          "Man ville ha fler badplatser",
+          "Man planterade skog överallt",
+          "Man flyttade våtmarker till andra platser",
+          "Man dikade ut dem för att få mer åkermark"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad betyder ordet \"grumligt\" i texten?",
+        "options": [
+          "Att vattnet är mindre klart och fullt av små partiklar",
+          "Att vattnet är varmt och salt",
+          "Att vattnet luktar blommor",
+          "Att vattnet är fruset och hårt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att alla våtmarker är farliga att gå i",
+          "Att naturen alltid klarar sig bäst utan människor",
+          "Att våtmarker kan vara viktiga och ibland behöver återställas",
+          "Att åkrar borde byggas om till parker i alla byar"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 274
+  },
+  {
+    "id": "ak6-tema-002",
+    "title": "När klassens surfplattor fick ett mystiskt meddelande",
+    "text": "På måndagen efter lunch skulle 6B arbeta med en digital frågesport. Amina loggade in på sin surfplatta, men skärmen blinkade till och ett meddelande dök upp: \"Grattis! Du har vunnit ett pris. Klicka här.\" Flera i klassen såg samma sak. Någon tryckte direkt, men sidan som öppnades såg konstig ut: den hade en logga som liknade ett känt spel, men bokstäverna var lite felstavade.\n\nLäraren Jonas bad alla att lägga ner plattorna och samla sig. Han förklarade att det kunde vara nätfiske. Nätfiske betyder att någon försöker lura dig att lämna ut lösenord eller andra uppgifter genom att låtsas vara en pålitlig sida. \"De använder ofta stress,\" sa Jonas. \"Som att du måste klicka snabbt för att inte förlora priset.\"\n\nJonas visade tre saker att kontrollera. Först: är språket slarvigt eller fullt av stavfel? Sedan: verkar erbjudandet för bra för att vara sant? Och till sist: vad händer om man håller fingret på länken utan att klicka? Då kan man ibland se webbadressen. Den kan avslöja om sidan är äkta eller inte. På en riktig skolsida slutar adressen ofta på något som skolan använder, men här var det en lång rad tecken och ett namn som inte passade.\n\nKlassen pratade om lösenord också. Många använder samma lösenord på flera ställen. Jonas sa att det är riskabelt, för om ett lösenord läcker kan någon prova det överallt. Ett bra lösenord är längre och svårare att gissa. En metod är att göra en lösenordsfras, som en kort mening med mellanrum eller symboler, till exempel något som du kan komma ihåg men som andra inte kan lista ut.\n\nTill sist ringde Jonas skolans IT-ansvariga, Mei, som arbetar med hjälpmedel och tillgänglighet. Mei stängde av en inställning som gjorde att meddelandet spreds mellan enheter och uppdaterade ett filter i nätverket. När allt var klart fick eleverna prata om vad de hade lärt sig. Amina kände sig först lurad, men nu mest stolt över att klassen hade stoppat det i tid.",
+    "grade": 6,
+    "category": "Teknik",
+    "questions": [
+      {
+        "q": "Vilket tecken på nätfiske nämns i texten som flera elever lade märke till?",
+        "options": [
+          "Att surfplattan blev helt svart i en timme",
+          "Att ett pris-meddelande dök upp och sidan såg misstänkt ut",
+          "Att alla spel på plattan försvann samtidigt",
+          "Att kameran började ta bilder av sig själv"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför säger Jonas att nätfiske ofta använder stress?",
+        "options": [
+          "För att få dig att klicka snabbt utan att tänka efter",
+          "För att internet ska bli snabbare",
+          "För att göra sidan mer färgglad",
+          "För att spara batteri på enheten"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilket av följande är ett av Jonas tre råd för att kontrollera en länk?",
+        "options": [
+          "Byta bakgrundsbild innan man klickar",
+          "Räkna hur många annonser som syns",
+          "Hålla fingret på länken för att se webbadressen",
+          "Starta om plattan tre gånger"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför är det riskabelt att använda samma lösenord på flera ställen?",
+        "options": [
+          "Om ett lösenord läcker kan det provas på andra konton",
+          "Det kan göra att man glömmer sin e-postadress",
+          "Det gör att internet blir långsammare",
+          "Det gör att appar inte kan uppdateras"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad gjorde Mei för att hjälpa till enligt texten?",
+        "options": [
+          "Hon målade om datasalen",
+          "Hon stängde av en inställning och uppdaterade ett filter i nätverket",
+          "Hon gav alla nya surfplattor",
+          "Hon tog bort allas spelappar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man vinner priser på nätet",
+          "Varför spel är bättre än skolarbete",
+          "Hur man bygger ett eget datorprogram",
+          "Hur man kan känna igen och stoppa nätfiske i skolan"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 326
+  },
+  {
+    "id": "ak6-tema-003",
+    "title": "En dag i en stad under stormaktstiden",
+    "text": "Det är tidig morgon i en svensk stad på 1600-talet. Gatorna är smala och ojämna, och många hus är byggda av trä. Karin, som är tretton år, hjälper sin faster i en liten bod där de säljer tyg och tråd. Faster Brita säger att staden växer, för fler människor flyttar in när handeln ökar. Samtidigt finns oro. Trähusen kan börja brinna om någon tappar en glöd från spisen, och då kan elden sprida sig snabbt.\n\nKarin springer ibland ärenden till hamnen. Där luktar det tjära och saltvatten. Skepp kommer med varor som salt, kryddor och järn. Hon har hört att Sverige kallas en stormakt nu, för att landet har starkt inflytande i Europa och ett stort militärt rykte. Men i Karins vardag märks stormakten mest genom skatter och soldater. En granne har fått en lapp om att hennes son ska bli indelt soldat. Det betyder att han får ett torp att bo i och att några gårdar hjälper till med mat och utrustning, men i gengäld måste han kunna kallas ut till krig.\n\nPå torget ropar en handelsman ut nyheter. Karin hör ordet \"pest\" och blir stel. Hon minns berättelser om hur sjukdomar kan spridas när många bor tätt. Faster Brita påminner henne om att folk försöker skydda sig med bättre renlighet och genom att undvika trängsel, men att man inte alltid vet vad som hjälper. I boden kommer en kund och vill köpa tyg till en rock. Karin räknar mynt och tränar på mått. Hon kan läsa lite, vilket inte alla kan, och faster säger att det är en fördel när man ska hålla koll på beställningar.\n\nNär dagen går mot kväll hörs kyrkklockor. På väg hem ser Karin en grupp barn som leker vid en vattenpump. Hon tänker på hur staden är full av ljud: hammarslag från smeden, hjul som gnisslar och människor som pratar på olika dialekter. Stormaktstid kan låta som något stort och långt borta, men för Karin är det också en vanlig dag med arbete, oro och små möjligheter.",
+    "grade": 6,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "Vilket århundrade utspelar sig texten i?",
+        "options": [
+          "1400-talet",
+          "1500-talet",
+          "1600-talet",
+          "1800-talet"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad säljer Karin och hennes faster i boden?",
+        "options": [
+          "Tyg och tråd",
+          "Bröd och ost",
+          "Fisk och salt",
+          "Skor och läder"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder det i texten att en son ska bli \"indelt soldat\"?",
+        "options": [
+          "Att han får gå i en militär skola i staden",
+          "Att han måste arbeta gratis i hamnen",
+          "Att han bara tränar på helgerna och aldrig skickas iväg",
+          "Att han får torp och stöd men måste kunna kallas ut till krig"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför fanns det oro för bränder i staden?",
+        "options": [
+          "För att husen var byggda av trä och elden kunde sprida sig snabbt",
+          "För att det regnade för lite under våren",
+          "För att gatorna var för breda",
+          "För att alla hade egna eldstäder av sten"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är ett exempel på hur stormaktstiden märks i Karins vardag enligt texten?",
+        "options": [
+          "Fler filmer visas på torget",
+          "Skatter och soldater påverkar människors liv",
+          "Alla får gratis mat i kyrkan",
+          "Staden slutar handla med andra länder"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att livet i staden bara var farligt och aldrig hade glädje",
+          "Att hamnen var den enda viktiga platsen i Sverige",
+          "Att alla kunde läsa och skriva under 1600-talet",
+          "Att stormaktstiden kan förstås genom vanliga människors vardag"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 334
+  },
+  {
+    "id": "ak6-tema-004",
+    "title": "Sömnen, skärmen och hjärnans paus",
+    "text": "Många i 6A tycker att det är svårt att somna i tid. Farah säger att hon ofta \"bara ska kolla en sak\" på mobilen, och plötsligt är klockan mycket mer än hon trodde. Samtidigt behöver kroppen sömn för att fungera bra. Under natten vilar musklerna, men hjärnan jobbar också: den sorterar minnen, tränar på det vi har lärt oss och städar bort sådant som inte behövs.\n\nSkolsköterskan Oskar kommer till klassen för att prata om sömnvanor. Han förklarar att ljuset från skärmar kan göra att kroppen tror att det fortfarande är dag. Då minskar ett ämne som heter melatonin, som hjälper oss att bli sömniga. Men det är inte bara ljuset. Innehållet spelar också roll. Om man tittar på spännande klipp eller spelar ett tävlingsspel kan kroppen bli mer stressad, och hjärtat kan slå snabbare. Då tar det längre tid att varva ner.\n\nOskar föreslår några enkla strategier. En är att skapa en rutin: samma saker i samma ordning varje kväll. Det kan vara att packa väskan, borsta tänderna och läsa några sidor i en bok. En annan strategi är att lägga mobilen utanför sängen, helst i ett annat rum eller åtminstone på ett bord längre bort. Då blir det svårare att \"bara ta upp den\" när man vaknar till. Han säger också att man kan prova en \"skärmfri stund\" före läggdags, till exempel 30–60 minuter. För vissa känns det ovant i början, men många märker att de somnar snabbare efter några dagar.\n\nKlassen diskuterar hur det känns när man har sovit för lite: man kan bli irriterad, få svårare att koncentrera sig och göra fler slarvfel. Farah berättar att hon ibland glömmer vad läraren nyss sa. Oskar säger att det är vanligt, eftersom hjärnan behöver vila för att kunna fokusera.\n\nNär lektionen är slut bestämmer klassen att testa en vecka med nya vanor. Farah tänker att hon inte måste sluta med mobilen helt. Hon vill bara ge hjärnan en chans att få sin paus.",
+    "grade": 6,
+    "category": "Hälsa",
+    "questions": [
+      {
+        "q": "Vilket ämne nämns som hjälper oss att bli sömniga?",
+        "options": [
+          "Adrenalin",
+          "Melatonin",
+          "Syre",
+          "Kalcium"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan skärmljus göra det svårare att somna enligt texten?",
+        "options": [
+          "Det får kroppen att tro att det är dag och minskar melatonin",
+          "Det gör att man alltid drömmer mer",
+          "Det kyler ner kroppen för mycket",
+          "Det gör att man blir hungrigare direkt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken strategi föreslår Oskar för att minska mobilanvändning i sängen?",
+        "options": [
+          "Att bara använda mobilen på morgonen",
+          "Att spela ett lugnt spel precis innan man somnar",
+          "Att ställa mobilen på högsta ljud",
+          "Att lägga mobilen utanför sängen, gärna längre bort"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken rutin nämns som ett exempel på kvällsrutin?",
+        "options": [
+          "Packa väskan, borsta tänderna och läsa en stund",
+          "Träna hårt och äta godis",
+          "Se en actionfilm och chatta samtidigt",
+          "Städa rummet mitt i natten"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket problem tar Farah upp när hon har sovit för lite?",
+        "options": [
+          "Att hon alltid springer snabbare",
+          "Att hon får bättre minne direkt",
+          "Att hon glömmer vad läraren nyss sa",
+          "Att hon aldrig blir trött"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man blir bäst på mobilspel",
+          "Varför sömn är viktig och hur skärmar kan påverka den",
+          "Varför man ska sova på dagen istället för natten",
+          "Hur man lagar mat som gör en pigg"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 325
+  },
+  {
+    "id": "ak6-tema-005",
+    "title": "Vatten på en ö där regnet nästan aldrig kommer",
+    "text": "På ön Solvind bor Leo med sin pappa och sin bonusmamma, Samira. Ön ligger långt ut i havet och har mest klippor, buskar och små byar. På sommaren är det varmt och soligt, men det regnar sällan. Förr samlade människorna regnvatten i stora cisterner, alltså vattentankar av sten eller betong. När regnet kom fyllde de tankarna, och sedan räckte vattnet så länge det gick.\n\nDe senaste åren har fler turister kommit, och fler hus har byggts. Det gör att ön behöver mer vatten än tidigare. Samtidigt har perioder med torka blivit längre. Leo märker det hemma när pappa säger att duschen ska vara kort och att man inte ska låta kranen rinna när man borstar tänderna. I skolan pratar de om att vatten är en begränsad resurs, något som kan ta slut om man använder mer än naturen hinner fylla på.\n\nKommunen på Solvind har därför byggt en avsaltningsanläggning. Avsaltning betyder att man tar bort saltet ur havsvatten så att det kan bli dricksvatten. Leo och Samira får följa med på ett studiebesök. De ser rör, filter och stora pumpar som pressar vattnet genom ett mycket fint membran. Membranet släpper igenom vattenmolekyler men stoppar salt. Ingenjören som guidar berättar att processen kräver mycket energi. Därför har de också satt upp solpaneler nära anläggningen för att minska utsläpp och kostnader.\n\nEfter besöket diskuterar Leo och Samira vad som är bäst. Avsaltning ger mer vatten, men den kan påverka miljön om man inte tar hand om det salta restvattnet på rätt sätt. Cisterner är enkla och tysta, men de beror på att det faktiskt regnar ibland. Leo inser att det inte finns en perfekt lösning. Ofta behöver man flera: spara vatten hemma, laga läckor i ledningar och använda teknik när det behövs.\n\nNär de går förbi hamnen ser Leo båtar som fyller sina tankar. Han tänker att vatten kan kännas självklart, men på Solvind planerar nästan alla sin dag efter det. Det gör att han uppskattar varje glas vatten lite mer.",
+    "grade": 6,
+    "category": "Geografi",
+    "questions": [
+      {
+        "q": "Vad är en cistern enligt texten?",
+        "options": [
+          "En vattentank där man kan samla regnvatten",
+          "Ett rör som leder saltvatten till havet",
+          "En maskin som gör luft kallare",
+          "Ett litet båthus vid hamnen"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför behöver ön Solvind mer vatten nu än tidigare?",
+        "options": [
+          "För att det finns färre människor på ön",
+          "För att turismen och antalet hus har ökat",
+          "För att havet har blivit mindre",
+          "För att alla cisterner har blivit större"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder avsaltning?",
+        "options": [
+          "Att man fryser havsvatten till is",
+          "Att man pumpar upp vatten från berg",
+          "Att man blandar salt i regnvatten",
+          "Att man tar bort saltet ur havsvatten så det kan bli dricksvatten"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför har kommunen satt upp solpaneler vid anläggningen?",
+        "options": [
+          "För att göra vattnet saltare",
+          "För att locka fler turister",
+          "För att processen kräver energi och solpaneler kan minska utsläpp och kostnader",
+          "För att membranen ska hålla längre i kyla"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken nackdel med avsaltning nämns i texten?",
+        "options": [
+          "Den fungerar bara när det regnar",
+          "Den kan påverka miljön om restvattnet inte hanteras rätt",
+          "Den gör att alla cisterner spricker",
+          "Den gör att man aldrig behöver spara vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att vatten alltid är gratis och obegränsat",
+          "Att cisterner är bättre än all annan teknik",
+          "Att turister borde förbjudas på alla öar",
+          "Att vatten kräver planering och ofta flera lösningar samtidigt"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 329
   }
 ]
