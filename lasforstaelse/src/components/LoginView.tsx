@@ -67,6 +67,11 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
           <p>Läsresan hjälper dig att träna läsförståelse på din nivå</p>
         </div>
       </div>
+
+      {/* Signatur */}
+      <div className="fixed bottom-2 right-3 text-xs text-purple-200 opacity-60 hover:opacity-100 transition-opacity">
+        Läsresan av Martin Akdogan
+      </div>
     </div>
   );
 };
