@@ -12348,5 +12348,205 @@
         "correct": 0
       }
     ]
+  },
+  {
+    "id": "ak9-tema-001",
+    "grade": 9,
+    "genre": "förklarande",
+    "theme": "källkritik",
+    "title": "När en nyhet sprids på några minuter",
+    "text": "En kväll ser Samir en kort video i sitt flöde. Den påstår att en ny regel ska införas i kommunen redan nästa vecka. I kommentarsfältet skriver flera att de är arga och att de ska "dela så alla fattar". Samir tvekar. Videon har dramatisk musik, men ingen länk till något mer. Han sparar den och bestämmer sig för att undersöka.\n\nKällkritik handlar om att bedöma om information är trovärdig. Först kan man fråga: Vem står bakom? Ibland syns en tydlig avsändare, som en myndighet eller en etablerad redaktion. I andra fall finns bara ett konto med ett användarnamn. Då är det svårare att veta vilka intressen som finns. Nästa fråga är: Varför publiceras det? En del vill informera, andra vill påverka, sälja något eller bara få uppmärksamhet.\n\nSedan är det viktigt att titta på bevis. I videon nämns en "intern rapport", men ingen visar den. Om påståendet är sant brukar det gå att hitta i flera oberoende källor. Samir söker på kommunens webbplats och hittar inget. Han söker på stora nyhetssajter och ser heller inget. Däremot hittar han samma formuleringar på flera konton som verkar kopiera varandra. Det kan vara ett tecken på att innehållet sprids utan kontroll.\n\nEtt annat steg är att kontrollera datum och sammanhang. Ibland delas gamla händelser som om de är nya. Samir pausar videon och ser en skylt i bakgrunden. Han googlar skylten och inser att den hör till en annan stad. Han testar också att söka efter en stillbild från videon och hittar en längre version från två år tidigare, där det framgår att det handlade om ett förslag som aldrig genomfördes.\n\nAlgoritmer kan göra att vissa inlägg syns extra mycket. Det betyder inte att de är sanna, bara att de väcker reaktioner. När många gillar, kommenterar eller delar, tolkar plattformen att fler vill se samma sak. Därför kan en missvisande video spridas snabbt, särskilt om den spelar på starka känslor.\n\nSamir skickar istället länkar till kommunens sida och till den äldre versionen av klippet i klasschatten. Några blir irriterade och tycker att han förstör stämningen, men andra tackar. Källkritik tar tid, men den kan minska risken att man blir lurad eller råkar föra vidare något som saknar stöd.",
+    "questions": [
+      {
+        "q": "Vad gör Samir först när han ser videon?",
+        "options": ["Han sparar den för att undersöka mer", "Han delar den direkt i klasschatten", "Han skriver arga kommentarer", "Han anmäler kontot utan att titta klart"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket är ett av de första källkritiska stegen som texten beskriver?",
+        "options": ["Räkna hur många som har gillat inlägget", "Titta bara på videons kvalitet", "Fråga vem som står bakom informationen", "Vänta tills någon influencer kommenterar"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan samma formuleringar på flera konton vara ett varningstecken?",
+        "options": ["Det visar att informationen är viktig", "Det betyder att en myndighet godkänt texten", "Det bevisar att fler källor bekräftar sanningen", "Det kan tyda på att innehållet kopieras utan kontroll"],
+        "correct": 3
+      },
+      {
+        "q": "Vad drar Samir för slutsats när han hittar en längre version av klippet från två år tidigare?",
+        "options": ["Att regeln redan gäller i hans kommun", "Att videon handlar om ett äldre sammanhang och kan vara missvisande", "Att kommentarsfältet har rätt", "Att algoritmen alltid visar korrekta nyheter"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet 'oberoende' i uttrycket 'oberoende källor' i texten?",
+        "options": ["Källor som samarbetar och skriver samma sak", "Källor som bara finns på sociala medier", "Källor som inte påverkar varandra och saknar samma avsändare", "Källor som alltid är gratis att läsa"],
+        "correct": 2
+      },
+      {
+        "q": "Vilket är textens huvudsakliga syfte?",
+        "options": ["Att förklara hur man kan granska information innan man sprider den", "Att bevisa att sociala medier är farliga", "Att uppmana alla att sluta använda nätet", "Att berätta om en ny regel i kommunen"],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak9-tema-002",
+    "grade": 9,
+    "genre": "beskrivande",
+    "theme": "vardagslogistik",
+    "title": "Morgonen som rullar på räls och hjul",
+    "text": "Klockan är 06.55 när Elin kliver ut genom porten. Luften är kall, och det luktar svagt av våt asfalt efter nattens duggregn. Hon drar upp jackans krage och går mot hållplatsen där bussen brukar komma. På vägen passerar hon cykelstället, en rad sadlar som glänser i gatlyktans ljus, och en papperskorg som redan är full av take-away-muggar.\n\nVid hållplatsen står tre personer med hörlurar. Ingen säger något, men alla rör sig i samma rytm: blickar mot klockan, tillbaka till skärmen, sedan mot vägen igen. När bussen svänger in hörs ett pysande ljud från dörrarna. Elin blippar sitt kort, letar efter en plats och sätter sig på den varma sätet vid fönstret. Rutorna är immiga av andedräkter och ytterkläder som fortfarande är fuktiga.\n\nBussen rullar genom kvarteren. I ett villområde syns frukostlampor tändas bakom gardiner. Längre bort, vid den stora rondellen, kommer trafikljusen att bestämma tempot. Först går det snabbt, sedan rycks det fram i korta stopp. Elin ser hur en bilist gestikulerar irriterat, medan någon på en elsparkcykel slingrar sig mellan trottoarkanten och ett parkerat släp.\n\nVid knutpunkten byter hon till pendeltåget. Här är ljuden annorlunda: klapprande steg på trapporna, ett skarpt pling från spärrarna och en röst i högtalaren som upprepar samma information med lugn betoning. På perrongen blåser vinden rakt igenom, och papperslappar far runt som små fåglar. När tåget kommer vibrerar marken lätt, och dörrarna öppnas i en lång rad.\n\nInne i vagnen blandas dofter av parfym, blött tyg och kaffe. Någon prasslar med en tidning, en annan scrollar snabbt. Elin tittar ut när tåget passerar industrilokaler och graffitimålade plank. Hon känner igen varje kurva: bron över ån, den korta tunneln, sedan den öppna sträckan där solen ibland bländar.\n\nNär hon kliver av är det mer folk, men rörelserna är fortfarande tysta och bestämda. Alla verkar veta var de ska. Elin går den sista biten till skolan. Hon märker att resan inte bara är transport. Den är en övergång, en stund där kroppen vaknar och där dagen långsamt ställer in sig.",
+    "questions": [
+      {
+        "q": "Vilken tid går Elin hemifrån enligt texten?",
+        "options": ["06.55", "07.15", "06.25", "07.55"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket färdmedel byter Elin till vid knutpunkten?",
+        "options": ["Spårvagn", "Pendeltåg", "Tunnelbana", "Färja"],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar beskrivningen av människorna vid hållplatsen om stämningen?",
+        "options": ["Den är högljudd och festlig", "Den är rädd och stressad av en olycka", "Den är långsam eftersom alla pratar", "Den är tyst och rutinmässig"],
+        "correct": 3
+      },
+      {
+        "q": "Varför nämns rondellen och trafikljusen i texten?",
+        "options": ["För att förklara hur man bygger vägar", "För att bevisa att bussen alltid är sen", "För att visa hur små saker kan styra resans tempo", "För att jämföra bussar med cyklar"],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder ordet 'knutpunkt' i textens sammanhang?",
+        "options": ["En plats där man byter mellan olika transportmedel", "En särskilt brant backe", "En typ av biljett", "En plats där bussar tvättas"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken tolkning passar bäst till textens avslutning om att resan är en 'övergång'?",
+        "options": ["Resan gör att Elin glömmer bort skolan", "Resan gör att Elin alltid kommer för sent", "Resan hjälper henne att gå från morgontrötthet till att vara redo", "Resan är farlig och borde undvikas"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak9-tema-003",
+    "grade": 9,
+    "genre": "berättelse",
+    "theme": "ansvar",
+    "title": "Pengarna som skulle räcka till alla",
+    "text": "När klassens mentor säger att elevrådet får bestämma över en liten del av skolans aktivitetsbudget blir det oväntat tyst. Det är inte mycket pengar, men det är tillräckligt för att göra något som märks. Nora känner hur flera i rummet börjar tänka samtidigt: en temadag, nya bollar, ett filmrum, fler sittplatser. Alla idéer låter bra på sitt sätt.\n\nPå första elevrådsmötet sitter Nora bredvid Amir och bläddrar i en lista över önskemål som kommit in. Rektorn har skrivit att pengarna måste gå till något som flera kan använda, och att skolan inte får köpa saker som kräver dyra abonnemang. Det begränsar mer än Nora trodde. Samtidigt vill hon inte att det bara ska bli "det vanliga", som alltid hamnar på idrott.\n\nFörslagen delas upp i tre högar: miljö, trivsel och aktiviteter. Miljöhögen innehåller idéer om fler sorteringskärl och en liten odlingslåda på skolgården. Trivsel handlar om soffor i korridoren och bättre belysning i uppehållsrummet. Aktiviteter innehåller allt från schackturnering till en gästföreläsare om yrkesval. Amir vill ha en turneringsdag med priser. Nora gillar tanken, men undrar vilka som faktiskt skulle delta.\n\nDe bestämmer sig för att fråga fler än de som redan hörs mest. Under en vecka står de vid matsalen med en enkel enkät. Flera svarar snabbt, men några stannar och pratar. En elev säger att hon helst vill ha en lugn plats där man kan sitta utan att bli störd. En annan säger att hen vill att skolan ska kännas mer "tillsammans", inte uppdelad i olika grupper. Nora märker att många önskar något som inte syns på Instagram, men som påverkar vardagen.\n\nNär de sammanställer svaren blir det tydligt att soffor lockar många, men också att vissa oroar sig för att de blir stökiga. Odlingslådan verkar få färre kryss, men flera skriver att den skulle göra skolgården trevligare och kunna användas i flera ämnen. En gästföreläsare får oväntat många ja, särskilt om det handlar om stress och studieteknik.\n\nPå beslutsmötet går diskussionen varm. Någon säger att elevrådet måste våga satsa på något roligt. Nora svarar att "roligt" kan betyda olika saker och att budgeten ska kännas rättvis. Till slut enas de om en kombination: bättre belysning och några tåliga sittplatser, plus en föreläsning som alla årskurser får ta del av. När mötet är slut känner Nora ingen triumf, men en sorts lättnad. Pengarna räckte inte till allt, men beslutet känns genomtänkt.",
+    "questions": [
+      {
+        "q": "Vilken roll har Nora i berättelsen?",
+        "options": ["Hon är rektor", "Hon är busschaufför", "Hon är med i elevrådet", "Hon är skolsköterska"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken regel från rektorn påverkar vilka inköp som är möjliga?",
+        "options": ["Skolan får inte köpa saker som kräver dyra abonnemang", "Pengarna får bara användas på idrott", "Allt måste köpas från en viss butik", "Budgeten måste sparas till nästa år"],
+        "correct": 0
+      },
+      {
+        "q": "Varför väljer Nora och Amir att göra en enkät vid matsalen?",
+        "options": ["För att slippa diskutera i elevrådet", "För att rektorn kräver exakt hundra svar", "För att samla in pengar till priser", "För att få in fler perspektiv än de som hörs mest"],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan man dra för slutsats om Noras syn på 'roligt'?",
+        "options": ["Hon tycker att roligt alltid är samma sak som tävling", "Hon menar att roligt kan betyda olika saker för olika elever", "Hon vill helst undvika allt som är roligt", "Hon tycker att roligt bara handlar om sociala medier"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet 'genomtänkt' i slutet av texten?",
+        "options": ["Slumpmässigt och snabbt", "Hemligt och förbjudet", "Otydligt och rörigt", "Noggrant övervägt"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket verkar vara berättelsens viktigaste budskap?",
+        "options": ["Det är alltid bäst att välja det som flest röstar på", "Skolbudgetar är onödiga", "Beslut blir bättre när man samlar information och försöker vara rättvis", "Diskussioner leder alltid till konflikter utan lösning"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak9-tema-004",
+    "grade": 9,
+    "genre": "argumenterande",
+    "theme": "konsumtion",
+    "title": "Ska man köpa nytt eller välja återbruk?",
+    "text": "I många skolor och hem pratar man om återbruk: att använda saker igen, köpa second hand eller laga det som gått sönder. Samtidigt är det enkelt att köpa nytt. Utbudet är stort, leveranser går snabbt och reklam visar ständigt nästa modell. Frågan är inte bara vad man har råd med, utan också hur man vill att vardagen ska fungera.\n\nEtt argument för återbruk är att det kan minska mängden avfall och behovet av nyproduktion. När en jacka, en stol eller en mobil används längre, behöver färre nya saker tillverkas. Tillverkning kräver ofta råvaror, energi och transporter. Genom att välja återbruk kan man därför, åtminstone i teorin, minska sin påverkan på miljön. Dessutom kan second hand vara ekonomiskt. För den som vill spara pengar kan det vara skillnaden mellan att kunna köpa något alls och att avstå.\n\nDet finns också sociala och praktiska fördelar. Att laga eller byta saker kan skapa kunskap: man lär sig sy, skruva eller felsöka. För vissa blir det en hobby eller ett sätt att umgås. I vissa städer finns bibliotek för verktyg och lokala bytardagar. Den typen av lösningar kan göra att man delar resurser istället för att alla äger allt.\n\nSamtidigt finns motargument. Alla har inte tid, kunskap eller möjlighet att leta efter rätt storlek eller reservdel. I vissa fall kan återbruk vara opraktiskt, till exempel om man behöver en specifik utrustning snabbt eller om säkerhetskrav är höga. Vissa produkter slits också på ett sätt som gör dem svåra att använda länge. Om något går sönder ofta kan det bli billigare, och mindre frustrerande, att köpa en mer hållbar ny vara.\n\nEn annan invändning handlar om ansvar. Det är lätt att lägga hela frågan på individen: "Om du bara handlar rätt så löser det sig." Men stora delar av produktion och avfall styrs av företag, lagar och system för återvinning. Därför kan återbruk vara en del av lösningen, men inte den enda. Om produkter byggs för att vara svåra att reparera, blir återbruk svårt även för den som vill.\n\nEn rimlig slutsats är att återbruk ofta är smart när det är praktiskt möjligt: kläder, möbler och mycket vardagsutrustning kan fungera utmärkt begagnat. Samtidigt kan man kräva bättre kvalitet och reparerbarhet när man väl köper nytt. På så vis blir valet inte en tävling i att vara "perfekt", utan ett sätt att kombinera vardagsbehov med långsiktigt tänkande.",
+    "questions": [
+      {
+        "q": "Vilket är ett argument för återbruk som texten tar upp?",
+        "options": ["Det garanterar att alla produkter håller längre", "Det gör att reklam försvinner", "Det gör att man aldrig behöver köpa något igen", "Det kan minska behovet av nyproduktion och avfall"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket motargument nämns om återbruk?",
+        "options": ["Återbruk är alltid dyrare än nytt", "Återbruk förbjuder tekniska produkter", "Alla har inte tid eller möjlighet att leta efter rätt sak", "Återbruk gör att man måste bo i en storstad"],
+        "correct": 2
+      },
+      {
+        "q": "Varför skriver författaren att ansvaret inte bara kan ligga på individen?",
+        "options": ["Lagar och företag påverkar hur produkter tillverkas och repareras", "Individer kan aldrig påverka sina val", "Återbruk fungerar bara i skolor", "Reklam är alltid sann"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats verkar texten landa i?",
+        "options": ["Man bör alltid köpa nytt för säkerhets skull", "Återbruk är bra när det är praktiskt, och vid nyköp kan man kräva kvalitet", "Second hand är bara en trend som snart försvinner", "Det är meningslöst att diskutera konsumtion"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet 'invändning' i texten?",
+        "options": ["Ett motargument eller en protest", "Ett stödjande exempel", "En instruktion", "En sammanfattning"],
+        "correct": 0
+      },
+      {
+        "q": "Hur försöker texten vara balanserad i sin argumentation?",
+        "options": ["Genom att bara beskriva fördelar", "Genom att undvika alla exempel", "Genom att använda många känsloord men få resonemang", "Genom att visa både fördelar och nackdelar och föreslå en kompromiss"],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak9-tema-005",
+    "grade": 9,
+    "genre": "förklarande",
+    "theme": "sömn",
+    "title": "Varför trötthet känns i både kropp och huvud",
+    "text": "Många niondeklassare beskriver att de är trötta på morgonen, även när de somnar i "rimlig tid". Trötthet är inte bara en känsla, utan resultatet av flera processer i kroppen. Två viktiga delar är dygnsrytmen och sömntrycket.\n\nDygnsrytmen styrs bland annat av ljus. När det blir mörkare ökar produktionen av melatonin, ett hormon som signalerar att kroppen ska varva ner. Hos tonåringar kan dygnsrytmen förskjutas, så att man blir pigg senare på kvällen och vill sova längre på morgonen. Det betyder inte att man är lat, utan att biologin kan göra kvällarna lättare och tidiga morgnar svårare.\n\nSömntrycket handlar om hur länge man har varit vaken. Ju fler timmar utan sömn, desto starkare blir behovet att sova. Om man sover för lite flera nätter i rad byggs en "skuld" upp. Då kan man känna sig dimmig, lättirriterad eller ha svårt att fokusera. Det gäller särskilt när man ska lära sig nya saker. Under sömnen bearbetar hjärnan intryck och stärker minnen, och brist på sömn kan därför göra att plugg tar längre tid.\n\nSkärmar påverkar ofta både dygnsrytmen och vanor. Ljuset från skärmen kan lura hjärnan att det fortfarande är dag, och notiser kan göra att man blir mentalt aktiv när man egentligen vill slappna av. Samtidigt använder många mobilen för att koppla av. Därför handlar sömnrutiner inte bara om teknik, utan också om hur man skapar en lugn övergång från aktivitet till vila.\n\nSömn påverkar även kroppen. När man sover regleras bland annat hunger- och stresshormoner. Vid långvarig sömnbrist kan man känna sig mer hungrig och lättare stressad. Det betyder inte att en dålig natt förstör allt, men flera dåliga nätter kan göra skillnad i vardagen.\n\nDet finns ingen perfekt regel som passar alla, men vissa strategier brukar hjälpa: regelbundna tider, dagsljus på dagen, och att minska stark stimulans precis innan man ska sova. Om man har mycket att tänka på kan det hjälpa att skriva ner saker man ska göra nästa dag, så att hjärnan slipper hålla allt i huvudet. Trötthet blir ofta mindre mystisk när man förstår att den har både biologiska och praktiska förklaringar.",
+    "questions": [
+      {
+        "q": "Vilka två delar säger texten är viktiga för trötthet?",
+        "options": ["Kondition och styrka", "Dygnsrytm och sömntryck", "Mat och musik", "Väder och temperatur"],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan en förskjuten dygnsrytm hos tonåringar innebära?",
+        "options": ["Att man alltid somnar direkt efter skolan", "Att man inte behöver sova alls", "Att man ofta blir pigg senare på kvällen och vill sova längre på morgonen", "Att man aldrig känner trötthet"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan sömnbrist göra plugg svårare enligt texten?",
+        "options": ["För att skolan stänger tidigare", "För att melatonin försvinner helt", "För att hunger alltid ökar intelligensen", "För att hjärnan under sömnen bearbetar intryck och stärker minnen"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken slutsats kan man dra om skärmar utifrån texten?",
+        "options": ["De kan både störa genom ljus och användas för avkoppling, så vanor spelar roll", "Skärmar är alltid skadliga och bör förbjudas", "Skärmar påverkar bara kroppen, inte hjärnan", "Skärmar påverkar inte sömn alls"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder uttrycket 'sömnskuld' i texten?",
+        "options": ["Att man måste betala pengar för att sova", "Att man drömmer om skulder", "Att man samlar på sig ett underskott av sömn efter flera korta nätter", "Att man sover mer än man behöver"],
+        "correct": 2
+      },
+      {
+        "q": "Vilket är textens huvudsakliga syfte?",
+        "options": ["Att ge en enkel lista på alla sömnregler", "Att förklara varför trötthet uppstår och vad som kan påverka den", "Att jämföra olika skolors scheman", "Att övertyga läsaren om att aldrig använda mobil"],
+        "correct": 1
+      }
+    ]
   }
 ]
