@@ -12748,5 +12748,210 @@
         "correct": 3
       }
     ]
+  },
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "samarbete",
+    "title": "Planen för skolans gård",
+    "text": "När mentorstimmen började stod en stor rulle papper på katedern. \"Skolgårdsprojektet\", stod det på en lapp. Klassen skulle föreslå förbättringar av gården och lämna in en plan till rektorn. Läraren delade in dem i grupper och gav dem en vecka. Alla nickade, men flera såg redan trötta ut.\n\nI Samirs grupp hamnade Elin, Noura och Felix. Första dagen ville Felix direkt rita en skateyta, medan Elin pratade om fler sittplatser i solen. Noura sa att det borde finnas mer skugga, eftersom många undvek gården när det var varmt. Samir sa inte så mycket, men skrev ner allt på ett block. Det blev snabbt tydligt att de menade olika saker, och samtalet gled mot vem som skulle få sin idé.\n\nPå rasten gick de ut för att titta på platsen. De såg hur en del elever stod vid cykelstället för att det var lugnare där, medan andra samlades nära fotbollsplanen. Samir lade märke till att det nästan inte fanns någon yta där man kunde vara utan att behöva välja mellan bollspel och att stå i vägen. Elin fotograferade bänkar som var slitna. Noura mätte med steg var skuggan föll från de få träden.\n\nNästa möte började med att Felix var irriterad. \"Vi hinner inte göra allt\", sa han. Elin svarade att deras plan måste fungera för fler än bara de som åker bräda. Stämningen blev spänd, och Samir kände att de var på väg att fastna. Han tog fram sina anteckningar och föreslog att de skulle lista mål först: en plats för rörelse, en plats för vila och en plats som kändes trygg.\n\nDet gjorde något med gruppen. Noura föreslog en kombinerad yta: en mindre rampdel på ena sidan och en bred gång med markeringar som kunde användas för olika spel. Elin ritade en pergola med klätterväxter som gav skugga och en rad bänkar som gick att flytta. Felix ritade rampen mindre än han tänkt, men la till en tydlig säkerhetszon. Samir föreslog skyltar med enkla regler och en papperskorg nära sittplatserna.\n\nNär de presenterade för klassen hade de en skiss, en kort budgetidé och ett argument: att en gård kan rymma flera sätt att vara, om ytorna är tydliga. Efteråt sa läraren att deras plan var den mest genomarbetade. Felix såg på Samir och ryckte på axlarna. \"Okej, det blev faktiskt bättre så här\", sa han. Samir kände inte att någon hade \"vunnit\", men att gruppen hade hittat ett sätt att få plats med fler.",
+    "questions": [
+      {
+        "q": "Vad var uppgiften som klassen fick under mentorstimmen?",
+        "options": ["Att skriva en berättelse om skolgården", "Att samla in pengar till nya bollar", "Att bygga en ny bänk i träslöjden", "Att föreslå förbättringar av gården och lämna en plan"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken skillnad i åsikter skapade tidigt spänning i Samirs grupp?",
+        "options": ["Om de skulle arbeta hemma eller i skolan", "Om de skulle fråga rektorn om lov först", "Om de skulle göra en skateyta eller fler sittplatser", "Om de skulle använda dator eller skriva för hand"],
+        "correct": 2
+      },
+      {
+        "q": "Vad upptäcker gruppen när de går ut och tittar på skolgården?",
+        "options": ["Att det finns många tomma ytor som ingen använder", "Att fotbollsplanen har ett stort hål i mitten", "Att det saknas en yta där man kan vara utan att välja bollspel", "Att alla elever vill ha exakt samma sak på gården"],
+        "correct": 2
+      },
+      {
+        "q": "Vilket steg hjälper gruppen mest att komma vidare i arbetet?",
+        "options": ["Att lista gemensamma mål innan de bestämmer detaljer", "Att rösta fram en vinnande idé direkt från början", "Att låta läraren bestämma vad de ska göra", "Att pausa projektet tills efter helgen är slut"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet genomarbetade i slutet av texten?",
+        "options": ["Slarvigt och hastigt gjorda", "Noggrant planerade och utvecklade", "Dyra att genomföra i praktiken", "Svåra att förstå för andra"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken tolkning passar bäst med Samirs känsla på slutet?",
+        "options": ["Att det alltid är bäst att få sin egen idé igenom", "Att projekt i skolan sällan leder till något bra", "Att konflikter i grupper inte går att lösa alls", "Att samarbetet fungerar när man gör plats för flera behov"],
+        "correct": 3
+      }
+    ],
+    "word_count": 457
+  },
+  {
+    "id": "ak8-tema-002",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "sömn och vardag",
+    "title": "Varför kroppen vill sova senare",
+    "text": "Många märker att det kan vara svårare att somna tidigt i tonåren, även om man behöver gå upp i samma tid som tidigare. Det kan kännas som lathet eller dålig disciplin, men det finns också biologiska förklaringar. Kroppen styrs av flera system som påverkar när vi blir sömniga och när vi blir pigga.\n\nEn viktig del är dygnsrytmen, som fungerar som en intern klocka. Den påverkas av ljus, mörker och vanor. Hos många förskjuts dygnsrytmen under puberteten så att kroppen signalerar sömnighet senare på kvällen. Samtidigt kan morgontröttheten bli starkare, särskilt om man måste upp tidigt för skolan.\n\nSömn påverkas också av något som kan kallas \"sömntryck\". Ju längre man är vaken, desto större blir trycket att sova. Om man tar en lång tupplur på eftermiddagen kan trycket minska, vilket gör det svårare att somna på kvällen. Det betyder inte att tupplurar alltid är dåliga, men de kan ändra hur lätt det känns att somna när det är dags.\n\nSkärmar kan spela en roll, men inte alltid på exakt samma sätt. Det starka ljuset från en skärm, särskilt sent, kan göra att hjärnan tolkar situationen som mer \"dag\" än \"kväll\". Dessutom kan innehållet hålla kvar uppmärksamheten. Om man tittar på något spännande, spelar eller chattar kan man bli mentalt aktiverad, och då tar det längre tid för kroppen att varva ner.\n\nSamtidigt är det vanligt att vardagen är full av saker som konkurrerar om tiden: träning, läxor, resor, socialt liv och avkoppling. Om man försöker pressa in allt kan sömnen bli det som flyttas sist. När man sover för lite under flera dagar samlas en sömnskuld som kan göra att man sover längre på helgen, vilket i sin tur kan flytta dygnsrytmen ännu mer.\n\nDet finns ingen perfekt lösning som passar alla, men några principer brukar hjälpa. Regelbundna tider, ljus på morgonen och en lugnare avslutning på kvällen kan underlätta. Det kan också vara bra att skilja mellan \"vill\" och \"kan\": ibland vill man vara vaken längre, men ibland kan kroppen helt enkelt inte somna tidigare utan att man ändrar rutiner över tid.",
+    "questions": [
+      {
+        "q": "Vilken huvudförklaring ger texten till att många somnar senare i tonåren?",
+        "options": ["Att dygnsrytmen ofta förskjuts under puberteten", "Att man alltid behöver mindre sömn som tonåring", "Att skolan gör att man blir mindre trött på dagen", "Att man inte kan bli sömnig utan att dricka kaffe"],
+        "correct": 0
+      },
+      {
+        "q": "Vad menas med sömntryck enligt texten?",
+        "options": ["Att man måste sova exakt åtta timmar varje natt", "Att man blir piggare av att sova mer på dagen", "Att kroppen vill sova mer ju längre man är vaken", "Att man alltid ska sova mitt på dagen för bäst effekt"],
+        "correct": 2
+      },
+      {
+        "q": "Hur kan en lång tupplur påverka kvällen enligt texten?",
+        "options": ["Den gör att dygnsrytmen alltid blir tidigare nästa dag", "Den tar bort behovet av nattlig sömn helt", "Den gör att man alltid vaknar tidigare på morgonen", "Den kan minska sömntrycket och göra det svårare att somna"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken kombination beskriver textens syn på skärmar bäst?",
+        "options": ["Skärmar påverkar bara genom ljud och inte ljus", "Skärmar kan påverka genom ljus och genom att hålla uppmärksamheten", "Skärmar påverkar aldrig sömn utan bara humör på dagen", "Skärmar är alltid bra för att somna snabbare på kvällen"],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan hända när man sover längre på helgen efter en vecka med lite sömn?",
+        "options": ["Dygnsrytmen kan flyttas så det blir svårare att somna tidigt", "Man blir helt immun mot trötthet under veckan", "Man behöver aldrig mer sova på vardagar efter det", "Man får automatiskt bättre koncentration på måndagen"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket syfte har texten främst?",
+        "options": ["Att säga att alla måste lägga sig exakt samma tid", "Att jämföra olika madrasser och kuddar för bättre sömn", "Att förklara flera faktorer som påverkar sömn och ge principer", "Att berätta om en person som aldrig sover på natten"],
+        "correct": 2
+      }
+    ],
+    "word_count": 452
+  },
+  {
+    "id": "ak8-tema-003",
+    "grade": 8,
+    "genre": "beskrivande",
+    "theme": "natur och upplevelse",
+    "title": "Stigen vid sjön",
+    "text": "Stigen börjar bakom busshållplatsen där vägen smalnar av och asfalten blir till grus. Först ser platsen ganska vanlig ut: några björkar, ett dike och en skylt som pekar mot \"Sjöleden\". Men efter ett par minuter förändras ljuden. Bilarna försvinner som ett avlägset brus, och i stället hörs små knäpp från kvistar och ett svagt kluckande från vatten någonstans längre fram.\n\nLuften känns fuktigare nära marken. När man går förbi en liten sänka ligger dimma kvar mellan grästuvor, även mitt på dagen. Under skorna ligger gruset löst, men längre in blir stigen mjukare, nästan fjädrande, av barr och löv som byggts upp i lager. Ibland sticker rötter upp som smala trösklar och tvingar stegen att bli långsammare.\n\nPå vänster sida öppnar skogen sig i glipor. Där syns sjön som blanka fläckar mellan stammarna. Vattnet är inte alltid blått; vissa dagar drar det åt grått och silver, andra dagar speglar det himlen så tydligt att man nästan tror att det är ett extra lager av ljus. Längs kanten ligger stenar med mjuka former, och på några sitter lavar som ser ut som torra kartor.\n\nDoften skiftar längs vägen. Vid tallarna luktar det kåda och varm bark, men när stigen passerar ett område med al blir det mer jordigt, som nyvattnad mylla. Om man stannar till kan man känna en sval ton från sjön, särskilt när vinden kommer från rätt håll. Den tar med sig en svag lukt av tång och något metalliskt, som påminner om våta bryggor.\n\nDet finns spår av människor, men de är diskreta. En bänk står på en liten höjd, sliten på armstöden, som om många har suttit där och tittat ut. På ett träd är en orange markering målad i ett band, och längre fram ligger en sten med inristade initialer som nästan vuxit igen av mossa. Samtidigt är det få saker som stör; inga starka färger, inga skyltar som ropar.\n\nNär stigen till slut når vattnet blir allt mer öppet. Man ser långt, och ljudet från små vågor mot sten blandas med fåglar som ropar från vassen. Om man sätter sig stilla känns tiden lite långsammare, som om platsen vill att man ska se detaljerna: ringarna efter en fisk, en insekt som landar, ljuset som byter riktning över ytan.",
+    "questions": [
+      {
+        "q": "Vad händer med ljuden när man går längre in på stigen?",
+        "options": ["Bilarna försvinner och naturens ljud blir tydligare", "Bilarna hörs tydligare ju längre in man kommer", "Allt blir helt tyst utan några ljud överhuvudtaget", "Man hör främst musik från hus som ligger nära"],
+        "correct": 0
+      },
+      {
+        "q": "Hur beskrivs marken på stigen längre in i skogen?",
+        "options": ["Som mjuk av barr och löv som lagrats under lång tid", "Som helt täckt av asfalt ända fram till sjön", "Som hård av is året runt oavsett säsong", "Som sandig som en strand med fina korn"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken bild använder texten för att beskriva lavar på stenarna?",
+        "options": ["Som små blomblad i olika färger", "Som torra kartor med mönster", "Som glittrande glas i solen", "Som tjockt tyg av sammet"],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan man dra för slutsats av att spår av människor beskrivs som diskreta?",
+        "options": ["Att platsen är helt förbjuden för alla besökare", "Att området är tydligt förstört av mycket skräp", "Att ingen någonsin har gått på stigen tidigare", "Att människors närvaro finns men dominerar inte upplevelsen"],
+        "correct": 3
+      },
+      {
+        "q": "Vad betyder ordet glipor i meningen om skogen som öppnar sig?",
+        "options": ["Höga berg som reser sig upp", "Små öppningar mellan träden", "Djupt vatten nära stranden", "Starka lampor längs vägen"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken stämning skapas främst i slutet av texten?",
+        "options": ["Stress och brådska att hinna tillbaka", "Rädsla för att gå vilse i skogen", "Lugn uppmärksamhet på detaljer runtomkring", "Tävlingskänsla och fart framåt"],
+        "correct": 2
+      }
+    ],
+    "word_count": 456
+  },
+  {
+    "id": "ak8-tema-004",
+    "grade": 8,
+    "genre": "argumenterande",
+    "theme": "skolbedömning",
+    "title": "Ska grupparbete alltid få gemensamt betyg?",
+    "text": "Grupparbete används ofta i skolan för att träna samarbete, planering och kommunikation. Samtidigt kan det uppstå diskussioner om hur bedömningen ska göras. Vissa tycker att gruppen bör få ett gemensamt betyg, medan andra menar att varje elev alltid ska bedömas individuellt. Frågan är mer komplicerad än den först kan verka, eftersom både rättvisa och lärande behöver tas med i bilden.\n\nEtt argument för gemensamt betyg är att det liknar hur många uppgifter fungerar utanför skolan. När flera arbetar tillsammans blir resultatet beroende av att man tar ansvar för helheten. Om alla vet att de bedöms som grupp kan det uppmuntra till att hjälpa varandra, dela kunskap och lösa problem tillsammans i stället för att bara fokusera på sin egen del.\n\nSamtidigt finns en risk: att arbetsinsatsen blir ojämn. Om någon gör mycket och någon gör lite kan ett gemensamt betyg upplevas som orättvist. Den som arbetar hårt kan känna sig utnyttjad, och den som gör mindre kan ändå få samma resultat. Då kan motivationen minska, och grupparbete kan börja uppfattas som något man \"överlever\" i stället för något man lär sig av.\n\nEtt argument för individuell bedömning är därför att den kan fånga vad varje elev faktiskt kan. Det kan också göra det tydligare vad man behöver utveckla. Men om all bedömning alltid blir individuell kan eleverna välja att dela upp arbetet helt och hållet, så att man bara lär sig sin egen del. Då tränas inte samarbete på riktigt, och en viktig poäng med grupparbete går förlorad.\n\nEn rimlig väg kan vara att kombinera. Man kan bedöma slutprodukten delvis gemensamt och samtidigt bedöma individuella delar, till exempel loggbok, muntlig redovisning eller frågor där varje elev måste visa förståelse för helheten. På så sätt blir samarbetet viktigt, men ingen är helt beroende av andras arbetsinsats.\n\nSammanfattningsvis finns det skäl att undvika både \"alltid gemensamt\" och \"alltid individuellt\". Om syftet är att lära samarbete behöver gruppen få betydelse, men om syftet är att visa kunskap behöver individen synas. En kombinerad bedömning kan därför vara ett mer rättvist sätt att ta vara på det som grupparbete faktiskt är tänkt att träna.",
+    "questions": [
+      {
+        "q": "Vilket är ett av textens argument för gemensamt betyg?",
+        "options": ["Att det alltid är lättare för läraren att rätta", "Att det gör alla prov helt onödiga i skolan", "Att det kan likna hur arbete fungerar utanför skolan", "Att det garanterar att alla alltid jobbar lika mycket"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken risk med gemensamt betyg betonas särskilt i texten?",
+        "options": ["Att arbetsinsatsen kan bli ojämn och upplevas orättvis", "Att arbetet alltid blir alldeles för kort", "Att ingen lär sig några nya ord eller begrepp", "Att grupper aldrig kan samarbeta med varandra"],
+        "correct": 0
+      },
+      {
+        "q": "Vad antyder texten kan hända om bedömning alltid är individuell i grupparbeten?",
+        "options": ["Att elever kan dela upp arbetet och bara lära sig sin del", "Att alla automatiskt hjälper varandra mycket mer", "Att slutprodukten alltid blir bättre och mer genomarbetad", "Att samarbete blir helt omöjligt att träna i skolan"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken lösning presenterar texten som mest rimlig?",
+        "options": ["Att förbjuda allt grupparbete i skolan helt", "Att alltid sätta samma betyg oavsett arbetsinsats", "Att enbart bedöma loggboken och inget annat", "Att kombinera gemensam bedömning med individuella underlag"],
+        "correct": 3
+      },
+      {
+        "q": "Vad betyder fånga i meningen om att individuell bedömning kan fånga vad varje elev kan?",
+        "options": ["Lura och vilseleda eleven på något sätt", "Förkorta och sammanfatta texten snabbt", "Synliggöra och visa elevens kunskap", "Försena och skjuta upp bedömningen"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats ligger närmast textens helhetsbudskap?",
+        "options": ["Gemensamma betyg är alltid helt orättvisa", "Bedömning bör anpassas efter syftet och gärna kombineras", "Individuella betyg är alltid bäst för alla elever", "Grupparbete fungerar bara i vissa specifika ämnen"],
+        "correct": 1
+      }
+    ],
+    "word_count": 454
+  },
+  {
+    "id": "ak8-tema-005",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "ekonomi och samhälle",
+    "title": "Vad som menas med inflation",
+    "text": "Inflation betyder att den allmänna prisnivån i ett land stiger över tid. Det handlar inte om att en enstaka vara blir dyrare, utan om att många varor och tjänster i genomsnitt kostar mer. När inflationen stiger kan samma summa pengar räcka till färre saker, vilket ibland beskrivs som att pengarnas köpkraft minskar.\n\nPriser kan stiga av flera skäl. Om efterfrågan ökar mycket, till exempel om många vill köpa samma saker samtidigt, kan företag höja priserna. Priser kan också stiga om det blir dyrare att producera, exempelvis på grund av högre energi- eller transportkostnader. Ibland påverkar även växelkurser, skatter och globala händelser kostnaderna, vilket kan göra vissa varor dyrare i flera länder samtidigt.\n\nFör att mäta inflation använder man ofta ett prisindex, som jämför priset på en \"korg\" av varor och tjänster över tid. Korgen kan innehålla sådant som mat, boende, kläder och transporter. Om indexet ökar med två procent på ett år säger man förenklat att inflationen är två procent. Mätningen är en förenkling, eftersom olika hushåll köper olika saker, men den ger en bild av hur priserna utvecklas i samhället.\n\nInflation påverkar människor på olika sätt. Om löner och bidrag inte ökar i samma takt kan det bli svårare att få pengarna att räcka. Samtidigt kan inflation vara mindre problematisk om inkomsterna också stiger. För den som har sparade pengar utan ränta kan inflation innebära att sparandet tappar värde över tid. För den som har lån kan det ibland kännas lättare att betala tillbaka om inkomsterna stiger, men det beror på räntan och den egna situationen.\n\nCentralbanker har ofta som mål att hålla inflationen på en låg och stabil nivå. Ett verktyg kan vara styrräntan, som påverkar hur dyrt det är att låna pengar. Om räntan höjs kan färre vilja låna och konsumera, vilket kan dämpa prisökningar. Om räntan sänks kan ekonomin i stället stimuleras. Effekterna kommer ofta med fördröjning och kan slå olika i olika grupper.\n\nAtt förstå inflation handlar därför både om siffror och om vardag. När man hör att inflationen stiger kan det vara en signal om att priser förändras brett, men vad det betyder i praktiken beror på vilka kostnader man har, vilka inkomster man får och hur ekonomin i övrigt utvecklas.",
+    "questions": [
+      {
+        "q": "Vilken beskrivning stämmer bäst med vad inflation är enligt texten?",
+        "options": ["När en vara blir dyrare men alla andra blir billigare", "När löner alltid sänks i ett land oavsett anledning", "När man byter valuta vid en resa till ett annat land", "När den allmänna prisnivån stiger och köpkraften minskar"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket av följande nämns som en möjlig orsak till att priser stiger?",
+        "options": ["Att alla slutar köpa mat helt och hållet", "Att affärer alltid sänker sina priser varje år", "Att transportkostnader ökar för företagen", "Att man mäter priser oftare än förut"],
+        "correct": 2
+      },
+      {
+        "q": "Varför används ett prisindex och en korg av varor och tjänster?",
+        "options": ["För att bestämma vad varje person måste köpa", "För att jämföra hur priser i genomsnitt förändras över tid", "För att göra reklam för vissa varor i butiker", "För att räkna ut vädret nästa vecka eller månad"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken slutsats kan man dra om varför mätningen av inflation är en förenkling?",
+        "options": ["För att olika hushåll har olika inköp och kostnader", "För att priser aldrig förändras på riktigt i samhället", "För att alla hushåll köper exakt samma saker alltid", "För att prisindex inte innehåller några tjänster alls"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet styrränta i textens sammanhang?",
+        "options": ["En ränta som bara gäller för studenter som lånar", "Centralbankens ränta som påverkar hur dyrt det är att låna", "Priset på varor i en korg som mäts varje år", "En avgift man betalar i butikskassan vid varje köp"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket påstående passar bäst med textens sista stycke?",
+        "options": ["Inflation påverkar alla på exakt samma sätt alltid", "Inflation är bara viktig för banker och inget annat", "Inflation betyder alltid att ekonomin kraschar direkt", "Vad inflationen innebär i vardagen beror på inkomster och kostnader"],
+        "correct": 3
+      }
+    ],
+    "word_count": 460
   }
 ]
