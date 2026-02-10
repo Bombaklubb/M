@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getTeacherStatsAsync } from '../services/userService';
-import { isFirebaseConfigured } from '../services/firebase';
+import { getTeacherStats } from '../services/userService';
 import { BookLogo } from './BookLogo';
 
 interface TeacherViewProps {
@@ -34,10 +33,10 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
     }
   };
 
-  const loadStats = async () => {
+  const loadStats = () => {
     setLoading(true);
     try {
-      const data = await getTeacherStatsAsync();
+      const data = getTeacherStats();
       setStats(data);
     } catch (err) {
       console.error('Kunde inte ladda statistik:', err);
@@ -122,21 +121,6 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
               Stäng
             </button>
           </div>
-        </div>
-
-        {/* Firebase status */}
-        <div className={`rounded-xl p-4 mb-6 ${isFirebaseConfigured() ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
-          {isFirebaseConfigured() ? (
-            <div className="flex items-center gap-2">
-              <span className="text-xl">✓</span>
-              <span>Firebase är aktiverat - statistik synkas över alla enheter</span>
-            </div>
-          ) : (
-            <div className="flex items-center gap-2">
-              <span className="text-xl">⚠</span>
-              <span>Firebase är inte konfigurerat - statistik visas endast från denna enhet</span>
-            </div>
-          )}
         </div>
 
         {loading && (

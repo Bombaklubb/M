@@ -1,5 +1,4 @@
 import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText } from '../types';
-import { getSupabase, isSupabaseConfigured, generateSyncCode } from './supabase';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
@@ -31,60 +30,7 @@ export function createUser(name: string): User {
 }
 
 /**
- * Generera ett unikt ID baserat på namn
- */
-function getUserId(name: string): string {
-  return name.trim().toLowerCase().replace(/\s+/g, '_');
-}
-
-/**
- * Ladda användare från Supabase med synkkod
- */
-export async function loadUserBySyncCode(syncCode: string): Promise<User | null> {
-  const supabase = getSupabase();
-  if (!supabase) {
-    console.log('Supabase är inte konfigurerat');
-    return null;
-  }
-
-  try {
-    const { data, error } = await supabase
-      .from('users')
-      .select('user_data')
-      .eq('sync_code', syncCode.toUpperCase())
-      .single();
-
-    if (error) {
-      if (error.code === 'PGRST116') {
-        // Ingen användare hittades
-        return null;
-      }
-      throw error;
-    }
-
-    if (data?.user_data) {
-      const user = data.user_data as User;
-      // Spara lokalt som cache
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-      return user;
-    }
-  } catch (error) {
-    console.error('Kunde inte ladda användare från Supabase:', error);
-  }
-
-  return null;
-}
-
-/**
- * Ladda användare från localStorage (synkron)
- */
-export async function loadUserAsync(name?: string): Promise<User | null> {
-  // Försök ladda från localStorage först
-  return loadUser();
-}
-
-/**
- * Ladda användare från localStorage (synkron, för bakåtkompatibilitet)
+ * Ladda användare från localStorage
  */
 export function loadUser(): User | null {
   try {
@@ -99,192 +45,14 @@ export function loadUser(): User | null {
 }
 
 /**
- * Spara användare till Supabase och localStorage
- */
-export async function saveUserAsync(user: User): Promise<void> {
-  // Spara alltid lokalt först
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
-    saveToAllUsers(user);
-  } catch (error) {
-    console.error('Kunde inte spara användare lokalt:', error);
-  }
-
-  // Spara till Supabase om konfigurerat och användaren har en synkkod
-  if (isSupabaseConfigured() && user.syncCode) {
-    await syncUserToSupabase(user);
-  }
-}
-
-/**
- * Synka användare till Supabase
- */
-async function syncUserToSupabase(user: User): Promise<void> {
-  const supabase = getSupabase();
-  if (!supabase || !user.syncCode) return;
-
-  try {
-    const { error } = await supabase
-      .from('users')
-      .upsert({
-        sync_code: user.syncCode,
-        name: user.name,
-        user_data: user,
-        updated_at: new Date().toISOString()
-      }, {
-        onConflict: 'sync_code'
-      });
-
-    if (error) throw error;
-  } catch (error) {
-    console.error('Kunde inte synka användare till Supabase:', error);
-  }
-}
-
-/**
- * Aktivera synkning för en användare (generera synkkod)
- */
-export async function enableSync(user: User): Promise<{ user: User; syncCode: string } | null> {
-  const supabase = getSupabase();
-  if (!supabase) {
-    console.log('Supabase är inte konfigurerat');
-    return null;
-  }
-
-  // Generera en unik synkkod
-  let syncCode = generateSyncCode();
-  let attempts = 0;
-  const maxAttempts = 10;
-
-  // Försök hitta en unik kod
-  while (attempts < maxAttempts) {
-    const { data } = await supabase
-      .from('users')
-      .select('sync_code')
-      .eq('sync_code', syncCode)
-      .single();
-
-    if (!data) break; // Koden är unik
-    syncCode = generateSyncCode();
-    attempts++;
-  }
-
-  // Uppdatera användaren med synkkoden
-  const updatedUser: User = {
-    ...user,
-    syncCode
-  };
-
-  // Spara till Supabase
-  try {
-    const { error } = await supabase
-      .from('users')
-      .insert({
-        sync_code: syncCode,
-        name: user.name,
-        user_data: updatedUser,
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
-      });
-
-    if (error) throw error;
-
-    // Spara lokalt
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedUser));
-    saveToAllUsers(updatedUser);
-
-    return { user: updatedUser, syncCode };
-  } catch (error) {
-    console.error('Kunde inte aktivera synkning:', error);
-    return null;
-  }
-}
-
-/**
- * Hämta och slå samman data från Supabase
- */
-export async function syncFromCloud(localUser: User): Promise<User | null> {
-  if (!localUser.syncCode) return null;
-
-  const cloudUser = await loadUserBySyncCode(localUser.syncCode);
-  if (!cloudUser) return null;
-
-  // Slå samman data - behåll den mest kompletta
-  const mergedUser = mergeUserData(localUser, cloudUser);
-
-  // Spara den sammanslagna datan
-  saveUser(mergedUser);
-  await syncUserToSupabase(mergedUser);
-
-  return mergedUser;
-}
-
-/**
- * Slå samman två användarprofiler
- */
-function mergeUserData(local: User, cloud: User): User {
-  // Slå samman completedTexts (behåll alla unika)
-  const allTexts = [...local.completedTexts];
-  for (const cloudText of cloud.completedTexts) {
-    const exists = allTexts.some(t =>
-      t.textId === cloudText.textId && t.completedAt === cloudText.completedAt
-    );
-    if (!exists) {
-      allTexts.push(cloudText);
-    }
-  }
-
-  // Sortera efter datum
-  allTexts.sort((a, b) =>
-    new Date(a.completedAt).getTime() - new Date(b.completedAt).getTime()
-  );
-
-  // Slå samman badges (behåll alla unika)
-  const allBadges = [...local.badges];
-  for (const cloudBadge of cloud.badges) {
-    const exists = allBadges.some(b => b.type === cloudBadge.type);
-    if (!exists) {
-      allBadges.push(cloudBadge);
-    }
-  }
-
-  // Slå samman gradesCompleted
-  const allGrades = [...new Set([...local.gradesCompleted, ...cloud.gradesCompleted])].sort((a, b) => a - b);
-
-  // Beräkna total poäng från alla texter
-  const totalPoints = allTexts.reduce((sum, t) => sum + t.pointsEarned, 0);
-
-  return {
-    ...local,
-    syncCode: local.syncCode || cloud.syncCode,
-    totalPoints,
-    badges: allBadges,
-    completedTexts: allTexts,
-    gradesCompleted: allGrades,
-    lastActivity: new Date(Math.max(
-      new Date(local.lastActivity).getTime(),
-      new Date(cloud.lastActivity).getTime()
-    )).toISOString()
-  };
-}
-
-/**
- * Spara användare (synkron wrapper för bakåtkompatibilitet)
+ * Spara användare till localStorage
  */
 export function saveUser(user: User): void {
-  // Spara lokalt synkront
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
     saveToAllUsers(user);
   } catch (error) {
     console.error('Kunde inte spara användare:', error);
-  }
-
-  // Spara till Supabase asynkront om användaren har synkkod
-  if (isSupabaseConfigured() && user.syncCode) {
-    saveUserAsync(user).catch(err => {
-      console.error('Async save to Supabase failed:', err);
-    });
   }
 }
 
@@ -415,11 +183,11 @@ export function getCompletedTextIds(user: User): string[] {
 }
 
 /**
- * Spara användare till "alla användare" listan (för lärarstatistik - endast localStorage)
+ * Spara användare till "alla användare" listan (för lärarstatistik)
  */
 export function saveToAllUsers(user: User): void {
   try {
-    const allUsers = getAllUsersLocal();
+    const allUsers = getAllUsers();
     const existingIndex = allUsers.findIndex(u => u.name.toLowerCase() === user.name.toLowerCase());
 
     if (existingIndex >= 0) {
@@ -435,32 +203,18 @@ export function saveToAllUsers(user: User): void {
 }
 
 /**
- * Hämta alla användare från localStorage (för bakåtkompatibilitet)
+ * Hämta alla användare från localStorage
  */
-function getAllUsersLocal(): User[] {
+export function getAllUsers(): User[] {
   try {
     const stored = localStorage.getItem(ALL_USERS_KEY);
     if (stored) {
       return JSON.parse(stored) as User[];
     }
   } catch (error) {
-    console.error('Kunde inte ladda alla användare lokalt:', error);
+    console.error('Kunde inte ladda alla användare:', error);
   }
   return [];
-}
-
-/**
- * Hämta alla användare (asynkron)
- */
-export async function getAllUsersAsync(): Promise<User[]> {
-  return getAllUsersLocal();
-}
-
-/**
- * Hämta alla användare (synkron, för bakåtkompatibilitet)
- */
-export function getAllUsers(): User[] {
-  return getAllUsersLocal();
 }
 
 /**
@@ -468,13 +222,6 @@ export function getAllUsers(): User[] {
  */
 function getTodayKey(): string {
   return new Date().toISOString().split('T')[0];
-}
-
-/**
- * Spara daglig statistik till localStorage (asynkron wrapper)
- */
-export async function recordDailyStatsAsync(genre: string, theme: string, grade: number): Promise<void> {
-  recordDailyStats(genre, theme, grade);
 }
 
 /**
@@ -510,14 +257,7 @@ export function recordDailyStats(genre: string, theme: string, grade: number): v
 }
 
 /**
- * Hämta daglig statistik för en specifik dag (asynkron wrapper)
- */
-export async function getDailyStatsAsync(date: string): Promise<DailyStats | null> {
-  return getDailyStats(date);
-}
-
-/**
- * Hämta daglig statistik för en specifik dag (synkron)
+ * Hämta daglig statistik för en specifik dag
  */
 export function getDailyStats(date: string): DailyStats | null {
   try {
@@ -533,101 +273,7 @@ export function getDailyStats(date: string): DailyStats | null {
 }
 
 /**
- * Hämta aggregerad statistik för lärarvyn (asynkron version)
- */
-export async function getTeacherStatsAsync(): Promise<{
-  todayTexts: number;
-  totalTexts: number;
-  topGenres: Array<{ name: string; count: number }>;
-  topThemes: Array<{ name: string; count: number }>;
-  topGrades: Array<{ grade: number; count: number }>;
-  leaderboard: Array<{ name: string; points: number; textsRead: number }>;
-  last7Days: Array<{ date: string; count: number }>;
-}> {
-  const allUsers = await getAllUsersAsync();
-
-  // Beräkna totalt antal texter och aggregerad statistik
-  let totalTexts = 0;
-  const genresMap = new Map<string, number>();
-  const themesMap = new Map<string, number>();
-  const gradesMap = new Map<number, number>();
-
-  // Gå igenom alla användare och deras completed texts
-  allUsers.forEach(user => {
-    user.completedTexts.forEach(text => {
-      totalTexts++;
-      const grade = text.grade;
-      gradesMap.set(grade, (gradesMap.get(grade) || 0) + 1);
-    });
-  });
-
-  // Hämta dagens statistik
-  const today = getTodayKey();
-  const todayStats = await getDailyStatsAsync(today);
-  const todayTexts = todayStats?.textsRead || 0;
-
-  // Aggregera senaste 7 dagarna
-  const last7Days: Array<{ date: string; count: number }> = [];
-  for (let i = 6; i >= 0; i--) {
-    const date = new Date();
-    date.setDate(date.getDate() - i);
-    const dateKey = date.toISOString().split('T')[0];
-    const stats = await getDailyStatsAsync(dateKey);
-    last7Days.push({
-      date: dateKey,
-      count: stats?.textsRead || 0,
-    });
-
-    // Aggregera genres och themes från daglig statistik
-    if (stats) {
-      Object.entries(stats.genres).forEach(([genre, count]) => {
-        genresMap.set(genre, (genresMap.get(genre) || 0) + count);
-      });
-      Object.entries(stats.themes).forEach(([theme, count]) => {
-        themesMap.set(theme, (themesMap.get(theme) || 0) + count);
-      });
-    }
-  }
-
-  // Sortera och begränsa topp-listor
-  const topGenres = Array.from(genresMap.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([name, count]) => ({ name, count }));
-
-  const topThemes = Array.from(themesMap.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([name, count]) => ({ name, count }));
-
-  const topGrades = Array.from(gradesMap.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 9)
-    .map(([grade, count]) => ({ grade, count }));
-
-  // Skapa leaderboard
-  const leaderboard = allUsers
-    .map(user => ({
-      name: user.name,
-      points: user.totalPoints,
-      textsRead: user.completedTexts.length,
-    }))
-    .sort((a, b) => b.points - a.points)
-    .slice(0, 10);
-
-  return {
-    todayTexts,
-    totalTexts,
-    topGenres,
-    topThemes,
-    topGrades,
-    leaderboard,
-    last7Days,
-  };
-}
-
-/**
- * Hämta aggregerad statistik för lärarvyn (synkron version för bakåtkompatibilitet)
+ * Hämta aggregerad statistik för lärarvyn
  */
 export function getTeacherStats(): {
   todayTexts: number;
@@ -650,8 +296,6 @@ export function getTeacherStats(): {
   allUsers.forEach(user => {
     user.completedTexts.forEach(text => {
       totalTexts++;
-
-      // Extrahera genre/theme från textId om möjligt (format: "ak1-001")
       const grade = text.grade;
       gradesMap.set(grade, (gradesMap.get(grade) || 0) + 1);
     });

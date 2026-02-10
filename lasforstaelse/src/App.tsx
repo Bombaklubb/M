@@ -266,10 +266,6 @@ function App() {
         <ProfileView
           user={user}
           onClose={() => setShowProfile(false)}
-          onUserUpdate={(updatedUser) => {
-            setUser(updatedUser);
-            saveUser(updatedUser);
-          }}
         />
       </div>
     );
