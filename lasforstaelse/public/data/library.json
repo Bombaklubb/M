@@ -12548,5 +12548,205 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak7-tema-001",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "ansvar",
+    "title": "Nyckeln i förrådet",
+    "text": "På måndagsmorgonen låg en lapp på klassens anslagstavla: Förrådsnyckeln är borta. Idrottslektionen kan bli inställd. Samira läste den två gånger. Hon hade hört att skolans förråd var fullt av bollar, mattor och koner, och att bara några få vuxna hade nyckel.\n\nUnder första lektionen såg hon hur idrottsläraren gick förbi i korridoren med snabba steg. Han stannade vid expeditionen och pekade på sin nyckelknippa, som om han redan visste att något fattades. Samira försökte koncentrera sig, men tänkte på att alla i klassen hade sett nyckeln senast i fredags när de bar in ribbstolar.\n\nPå rasten började ryktena. Någon sa att en sjundeklassare hade lånat nyckeln för att hämta en boll efter skoltid. En annan menade att den hade tappats i omklädningsrummet. Samira stod vid skåpen och lyssnade utan att säga något. Hon mindes hur hon i fredags hade hjälpt till att ställa undan saker och sett en nyckel ligga kvar på en bänk.\n\nEfter lunch gick hon tillbaka till idrottshallen. Det var tyst där inne, bara ett svagt surr från ventilationssystemet. Hon öppnade dörren till tjejernas omklädningsrum och såg att det var städat, men i hörnet låg en bortglömd vattenflaska. Hon tittade under bänkarna och bakom en korg med hopprep. Inget.\n\nPrecis när hon skulle gå såg hon en liten glipa mellan ett element och väggen. Hon böjde sig ner och fick syn på en metallring som blänkte. Nyckeln satt fast i ringen. Hon drog försiktigt ut den och kände hur pulsen ökade, som om hon hittat något som egentligen inte var hennes.\n\nHon stod kvar en stund. Om hon gick direkt till expeditionen skulle ingen veta att hon varit här och letat. Men hon visste också att någon annan kanske hade tappat nyckeln och varit rädd att säga till. Samira gick till slut till idrottsläraren, som just höll på att skriva ett mejl.\n\nJag hittade den, sa hon och la nyckeln på bordet.\n\nHan såg först förvånad ut, sedan lättad. Tack. Vet du hur den hamnade där?\n\nSamira tog ett andetag. Jag är inte säker. Men jag tror att den blev kvar efter att vi städade i fredags. Jag såg något på bänken då. Hon lät det vara så. Idrottsläraren nickade och sa att han skulle påminna alla om att dubbelkolla efter lektionen.\n\nNär Samira gick därifrån tänkte hon att ansvar ibland handlar mindre om att peka ut någon och mer om att göra så att saker fungerar igen, även om det känns lite obekvämt.",
+    "questions": [
+      {
+        "q": "Varför riskerade idrottslektionen att bli inställd?",
+        "options": ["Förrådsnyckeln var borta", "Idrottshallen var låst av vaktmästaren", "Klassens schema hade ändrats", "Idrottsläraren var sjuk"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken ledtråd minns Samira från fredagen innan?",
+        "options": ["Att någon gömde bollar i en väska", "Att expeditionen hade stängt tidigt", "Att en nyckel låg kvar på en bänk", "Att omklädningsrummet var rörigt"],
+        "correct": 2
+      },
+      {
+        "q": "Vad säger det om Samira att hon tvekar innan hon lämnar in nyckeln?",
+        "options": ["Hon vill behålla nyckeln för sig själv", "Hon tycker att idrott är oviktigt", "Hon vet exakt vem som tappade nyckeln", "Hon är rädd att bli anklagad eller skapa problem"],
+        "correct": 3
+      },
+      {
+        "q": "Varför väljer Samira att inte peka ut en person som skyldig?",
+        "options": ["Hon vill att någon annan ska få skulden", "Hon är osäker och vill hellre lösa situationen", "Hon tror att läraren redan vet allt", "Hon gillar inte sin klass"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet glipa i texten?",
+        "options": ["En smäll", "En smal öppning", "En hög ljudnivå", "En lång kö"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket budskap passar bäst med berättelsen?",
+        "options": ["Det är bäst att alltid hitta en syndabock", "Det lönar sig att hålla saker hemliga", "Ansvar kan handla om att återställa ordning utan att anklaga", "Regler är oviktiga om man har tur"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-002",
+    "grade": 7,
+    "genre": "förklarande",
+    "theme": "källkritik",
+    "title": "När en nyhet sprids snabbt",
+    "text": "En bild i en chatt, en rubrik på en sida eller ett klipp i ett flöde kan få det att kännas som att alla pratar om samma sak. Ibland handlar det om en riktig händelse, ibland om en missuppfattning, och ibland om något som någon hittat på. För att förstå vad som är mest troligt behöver man tänka på hur information skapas och sprids.\n\nNär något publiceras på internet kan det delas vidare på några sekunder. Delningen kan ske av flera skäl: någon vill informera, någon vill underhålla, någon vill få uppmärksamhet, eller någon vill påverka hur andra tycker. Det gör att samma innehåll kan få olika ton beroende på vem som delar och vilket sammanhang det hamnar i. En ironi kan till exempel missas, och ett skämt kan tolkas som fakta.\n\nEtt vanligt knep är att använda starka ord eller otydliga påståenden. Rubriker kan vara skrivna för att locka klick, inte för att sammanfatta på ett exakt sätt. Därför räcker det sällan att bara läsa rubriken. En annan sak som kan lura oss är att vi ofta litar mer på sådant som bekräftar det vi redan tror. Om en nyhet passar in i en bild vi har av världen kan vi dela den utan att kontrollera den, eftersom det känns rimligt.\n\nKällkritik handlar om att ställa frågor. Vem ligger bakom informationen? Är det en myndighet, en nyhetsredaktion, en privatperson eller ett konto som är svårt att spåra? När publicerades det? En gammal händelse kan delas som om den vore ny. Finns det flera oberoende källor som säger samma sak, eller kommer allt från samma ursprung? Och finns det detaljer som går att kontrollera, som plats, datum eller citat?\n\nBilder och filmer kan också vara missvisande. En bild kan vara tagen i ett helt annat land eller vid ett annat tillfälle. En kort filmsekvens kan sakna det som hände före och efter, vilket gör att vi drar slutsatser som kanske inte stämmer. Numera går det dessutom att redigera material på sätt som är svåra att se direkt.\n\nAtt vara källkritisk betyder inte att man måste misstro allt. Det betyder att man försöker vara noggrann innan man bestämmer sig. I praktiken kan det handla om att läsa mer än en källa, söka efter ursprunget, och fundera över varför någon vill att just den här informationen ska spridas. Då minskar risken att man hjälper till att föra vidare något som senare visar sig vara fel eller vilseledande.",
+    "questions": [
+      {
+        "q": "Vilka är två olika skäl som nämns till att människor delar innehåll?",
+        "options": ["För att vinna pengar och för att bli bäst i sport", "För att få bättre betyg och för att bli känd i skolan", "För att slippa läsa och för att sova längre", "För att informera och för att påverka"],
+        "correct": 3
+      },
+      {
+        "q": "Varför räcker det ofta inte att bara läsa rubriken?",
+        "options": ["Rubriker kan vara skrivna för att locka klick och kan förenkla", "Rubriker är alltid helt falska", "Rubriker innehåller aldrig datum", "Rubriker är svåra att läsa på mobilen"],
+        "correct": 0
+      },
+      {
+        "q": "Texten antyder att vi lättare delar en nyhet om den känns rimlig. Varför?",
+        "options": ["För att den alltid kommer från en myndighet", "För att den alltid är nyare än andra nyheter", "För att den passar ihop med det vi redan tror", "För att den alltid har en lång förklaring"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken kontrollfråga skulle vara mest relevant om du misstänker att en bild är gammal men delas som ny?",
+        "options": ["Vilket datum publicerades den?", "Vilken färg har bilden?", "Hur många likes har den?", "Vilken musik ligger bakom?"],
+        "correct": 0
+      },
+      {
+        "q": "Vad menas mest sannolikt med oberoende källor i texten?",
+        "options": ["Källor som tycker samma sak som du", "Källor som bara finns i sociala medier", "Källor som är anonyma", "Källor som inte bygger på varandra som enda ursprung"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket syfte har texten främst?",
+        "options": ["Att övertyga om att internet är farligt och bör undvikas", "Att förklara varför och hur man kan tänka källkritiskt", "Att berätta en spännande historia om en nyhet", "Att lista alla appar som sprider rykten"],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-003",
+    "grade": 7,
+    "genre": "beskrivande",
+    "theme": "plats och stämning",
+    "title": "Biblioteket efter stängning",
+    "text": "När biblioteket stänger för dagen förändras rummet på ett sätt som är svårt att märka när det är fullt av besökare. Det första som försvinner är ljuden: småpratet vid lånedisken, prasslet av jackor, klickandet från datorernas tangentbord. Kvar blir ett mjukt, jämnt sus från ventilationen och ibland ett dämpat knarr när någon rör sig mellan hyllorna.\n\nLjuset känns annorlunda också. Lamporna lyser fortfarande, men det finns inga skärmar som blinkar och inga dörrar som öppnas och släpper in dagsljus. I stället blir gångarna mellan hyllorna tydligare, som smala korridorer. På vissa ställen faller skuggor över bokryggarna så att titlarna ser mörkare ut, nästan som om de gömmer sig.\n\nDoften i biblioteket är en blandning av papper och damm, men också av något som påminner om trä. Det luktar inte starkt, mer som en bakgrund som man lägger märke till när man stannar upp. En del böcker känns nya och torra, andra är mjukare i kanterna och har sidor som är lite gulnade. Om man drar ut en sådan bok kan man höra ett svagt fras, som om den andas ut efter att ha stått stilla länge.\n\nMöblerna ser mer ordnade ut när ingen sitter i dem. Stolarna står tätt intill borden, och i läshörnan ligger kuddarna i en prydlig hög. På anslagstavlan hänger affischer om författarbesök och bokcirklar, men utan människor runt omkring ser de mer ut som löften än som aktiviteter. Till och med barnavdelningen blir stilla: låga hyllor, färgglada skyltar och en matta med mönster som brukar vara fylld av lek.\n\nBakom lånedisken finns små spår av dagen som gått. En kvarglömd penna, en bunt kvitton, en återlämningslåda som fortfarande innehåller några böcker som ska registreras. När man står där och tittar ut över rummet syns biblioteksrummet som en karta: facklitteraturen åt ena hållet, romanerna åt det andra, tidskrifter och tidningar som en egen liten ö.\n\nStämningen efter stängning kan kännas både lugn och lite högtidlig. Det är som om biblioteket samlar ihop sig, väntar, och håller kvar alla berättelser i hyllorna tills nästa dag när dörrarna öppnas igen.",
+    "questions": [
+      {
+        "q": "Vilka ljud finns kvar i biblioteket efter stängning enligt texten?",
+        "options": ["Höga röster och musik", "Telefoner som ringer hela tiden", "Ventilationens sus och ibland knarr", "Regn som slår mot fönstren"],
+        "correct": 2
+      },
+      {
+        "q": "Hur beskrivs ljuset när biblioteket är stängt?",
+        "options": ["Som starkare eftersom solen skiner in", "Som helt släckt och mörkt", "Som färgat av neonlampor", "Som oförändrat men med tydligare gångar och skuggor"],
+        "correct": 3
+      },
+      {
+        "q": "Varför kallas affischerna på anslagstavlan för löften i texten?",
+        "options": ["De antyder kommande aktiviteter när ingen är där", "För att de ser ut som kontrakt", "För att de alltid är felstavade", "För att de bara handlar om barnböcker"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken känsla vill författaren främst skapa genom beskrivningen?",
+        "options": ["Stress och brådska", "Komik och skämt", "Lugn och en viss högtidlighet", "Ilska över ordningsregler"],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder uttrycket som en karta när rummet beskrivs?",
+        "options": ["Att böckerna ligger huller om buller", "Att man kan se en tydlig överblick över olika avdelningar", "Att biblioteket bara har kartböcker", "Att allt är markerat med kompass"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken slutsats kan man dra om bibliotekets roll utifrån sista meningen?",
+        "options": ["Biblioteket är tomt och meningslöst utan besökare", "Biblioteket stänger för att ingen längre läser böcker", "Biblioteket vill att människor aldrig ska låna hem böcker", "Biblioteket fungerar som en plats som bevarar berättelser och väntar på nya läsare"],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-004",
+    "grade": 7,
+    "genre": "argumenterande",
+    "theme": "skolvardag",
+    "title": "Mobilfri lektion eller inte?",
+    "text": "Frågan om mobiltelefoner i klassrummet väcker ofta starka åsikter. Vissa menar att mobiler alltid stör, medan andra tycker att de är ett naturligt verktyg. En rimlig diskussion behöver ta hänsyn till både risker och möjligheter, eftersom en regel som passar i en situation kan skapa problem i en annan.\n\nEtt argument för mobilfria lektioner är att uppmärksamhet är begränsad. Även om en elev inte aktivt använder mobilen kan notiser och vibrationer dra tankarna bort från uppgiften. När många i samma rum har tillgång till snabb underhållning blir det lättare att bara kolla en sak och sedan tappa fokus. För läraren kan det dessutom bli svårt att se skillnad på en elev som söker information och en elev som scrollar utan mål.\n\nSamtidigt finns argument för att mobiler ibland kan stödja lärande. De kan användas för att söka fakta, översätta ord, fotografera anteckningar eller spela in instruktioner. För vissa elever kan en digital kalender eller påminnelsefunktion vara ett sätt att hålla ordning. Om skolan helt förbjuder mobilanvändning kan man också missa en chans att träna ansvar och digitalt omdöme i en vardaglig miljö.\n\nEn viktig fråga är därför inte bara tillåta eller förbjuda, utan hur användningen styrs. En tydlig modell kan vara att mobilen är undanlagd som standard men får tas fram vid lärarens signal, när den fyller ett tydligt syfte. På så sätt minskar frestelsen att använda mobilen spontant, samtidigt som verktyget finns tillgängligt när det faktiskt behövs.\n\nDet finns också ett rättviseperspektiv. Alla har inte samma mobil eller samma tillgång till data, och vissa har ingen alls. Om undervisningen ofta förutsätter mobil kan det bli ojämlikt. Därför bör skolans uppgifter kunna lösas utan att en privat mobil är nödvändig, även om den ibland kan vara ett stöd.\n\nSammanfattningsvis talar mycket för att lektioner behöver vara mobilkontrollerade snarare än helt mobilfria eller helt mobiltillåtna. En genomtänkt regel kan skydda arbetsro och samtidigt ge elever möjlighet att använda digitala verktyg på ett ansvarsfullt sätt.",
+    "questions": [
+      {
+        "q": "Vilket problem med uppmärksamhet lyfter texten fram som argument för mobilfria lektioner?",
+        "options": ["Att mobilens notiser kan dra tankarna bort från uppgiften", "Att mobiler gör att man alltid skriver snabbare", "Att mobiler tar bort behovet av lärare", "Att mobiler bara fungerar utomhus"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken lösning föreslår texten som en modell för mobilanvändning?",
+        "options": ["Mobilen ska alltid ligga framme på bänken", "Mobilen ska lämnas hemma varje dag", "Mobilen är undanlagd men kan tas fram vid lärarens signal", "Mobilen får användas bara under prov"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken underförstådd oro finns bakom meningen om att läraren har svårt att se skillnad på sökande och scrollande?",
+        "options": ["Att lärare inte kan internet", "Att mobilanvändning kan vara svår att kontrollera och kan missbrukas", "Att elever aldrig behöver fakta", "Att skolans wifi alltid är trasigt"],
+        "correct": 1
+      },
+      {
+        "q": "Varför tar texten upp att alla inte har samma mobil eller data?",
+        "options": ["För att visa att mobiler är onödigt dyra", "För att argumentera för att alla ska få en ny mobil", "För att säga att bara vissa elever får använda mobil", "För att betona att undervisning inte bör kräva privata mobiler för att vara rättvis"],
+        "correct": 3
+      },
+      {
+        "q": "Vad betyder digitalt omdöme i textens sammanhang?",
+        "options": ["Att kunna bedöma och använda digitala verktyg ansvarsfullt", "Att kunna spela spel snabbt", "Att alltid lita på det första sökresultatet", "Att undvika all teknik"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket påstående stämmer bäst med textens slutsats?",
+        "options": ["Mobiler ska förbjudas i alla sammanhang", "Mobiler ska alltid vara tillåtna utan regler", "Lektionen blir bäst om mobilen används som belöning", "Tydliga regler kan ge arbetsro och samtidigt möjliggöra nyttig användning"],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-005",
+    "grade": 7,
+    "genre": "förklarande",
+    "theme": "miljö och vardagsval",
+    "title": "Varför matsvinn spelar roll",
+    "text": "Matsvinn betyder att mat som hade kunnat ätas kastas. Det kan ske i butiker, i storkök och hemma. Ibland beror svinn på att maten blir gammal, ibland på att portioner är för stora, och ibland på att man köper mer än man hinner använda. Även om en enskild slängd banan kan kännas obetydlig blir effekten stor när det händer ofta och på många platser.\n\nFör att förstå varför matsvinn spelar roll kan man tänka på allt som krävs innan maten hamnar på tallriken. Odlare behöver mark, vatten och ibland gödsel. Mat ska skördas, transporteras, förpackas och förvaras i kylar. Varje steg använder energi och resurser. Om maten kastas betyder det att resurserna har använts utan att ge den nytta som var syftet: att bli mat.\n\nMatsvinn påverkar också klimatet. Vissa delar av matkedjan leder till utsläpp av växthusgaser, till exempel när transporter går med lastbil eller när energi används för kylning. Dessutom kan matavfall som hamnar på fel sätt bilda metan när det bryts ner, en gas som har stor påverkan på uppvärmningen av klimatet. Exakt hur stor påverkan blir beror på vilken mat det handlar om och hur avfallet hanteras, men grundprincipen är att onödigt svinn ofta innebär onödiga utsläpp.\n\nSamtidigt finns ekonomiska och sociala sidor. När hushåll slänger mat kostar det pengar. För en familj kan det handla om små summor varje gång, men över tid blir det mycket. I storskaliga verksamheter kan svinn också göra att man måste köpa in mer än nödvändigt. Många kommuner och skolor arbetar därför med att mäta svinn och justera menyer och portioner.\n\nDet finns flera sätt att minska matsvinn utan att göra vardagen krånglig. Att planera inköp, använda rester, och förstå skillnaden mellan bäst före och sista förbrukningsdag kan hjälpa. Man kan också börja med att ta mindre portioner och sedan ta mer om man fortfarande är hungrig.\n\nAtt minska matsvinn löser inte alla miljöproblem, men det är ett område där många kan påverka genom små val. När svinnet minskar används resurserna mer effektivt, och det blir lättare att få matkedjan att räcka längre, både för plånboken och för miljön.",
+    "questions": [
+      {
+        "q": "Vilken beskrivning passar bäst in på vad matsvinn är enligt texten?",
+        "options": ["Mat som alltid måste frysas", "Mat som bara produceras i små mängder", "Mat som hade kunnat ätas men kastas", "Mat som är för dyr att köpa"],
+        "correct": 2
+      },
+      {
+        "q": "Varför blir effekten stor även om en slängd banan känns obetydlig?",
+        "options": ["För att bananer är den enda maten som orsakar svinn", "För att det händer ofta och på många platser", "För att bananer alltid transporteras med flyg", "För att bananer inte kan komposteras"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken slutsats kan man dra av stycket om resurser i matkedjan?",
+        "options": ["Att svinn innebär att energi och resurser kan ha använts utan att ge nytta", "Att mat aldrig behöver transporteras", "Att förpackningar är det enda som spelar roll", "Att odling inte kräver vatten"],
+        "correct": 0
+      },
+      {
+        "q": "Texten nämner metan. Varför tas det upp?",
+        "options": ["För att metan alltid bildas när man lagar mat", "För att metan gör att mat håller längre", "För att metan kan bildas när matavfall bryts ner och påverka klimatet", "För att metan finns i alla kylskåp"],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder ordet justera i meningen om att skolor justerar menyer och portioner?",
+        "options": ["Att göra något mer anpassat eller ändra lite", "Att förstöra något helt", "Att gömma undan något", "Att köpa något dubbelt"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket är textens huvudsyfte?",
+        "options": ["Att berätta om en person som jobbar i butik", "Att lista alla maträtter som är bäst att kasta", "Att argumentera för att man aldrig ska äta rester", "Att förklara varför matsvinn är viktigt och ge exempel på hur det kan minska"],
+        "correct": 3
+      }
+    ]
   }
 ]
