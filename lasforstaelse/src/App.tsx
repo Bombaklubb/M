@@ -15,6 +15,7 @@ import {
   logoutUser,
   recordResult,
   getCompletedTextIds,
+  updateAvatar,
 } from './services/userService';
 import { getRandomText } from './services/libraryService';
 
@@ -64,11 +65,19 @@ function App() {
   }, []);
 
   // Login
-  const handleLogin = (name: string) => {
-    const newUser = createUser(name);
+  const handleLogin = (name: string, avatar: string) => {
+    const newUser = createUser(name, avatar);
     saveUser(newUser);
     setUser(newUser);
     setAppState(AppState.SETUP);
+  };
+
+  // Byt avatar
+  const handleAvatarChange = (avatar: string) => {
+    if (user) {
+      const updatedUser = updateAvatar(user, avatar);
+      setUser(updatedUser);
+    }
   };
 
   // Logout
@@ -266,6 +275,7 @@ function App() {
         <ProfileView
           user={user}
           onClose={() => setShowProfile(false)}
+          onAvatarChange={handleAvatarChange}
         />
       </div>
     );

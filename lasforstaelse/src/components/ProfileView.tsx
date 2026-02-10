@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { User, BADGE_DEFINITIONS, BadgeType } from '../types';
+import { AvatarPicker } from './AvatarPicker';
 
 interface ProfileViewProps {
   user: User;
   onClose: () => void;
+  onAvatarChange?: (avatar: string) => void;
 }
 
-export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose }) => {
+export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvatarChange }) => {
+  const [showAvatarPicker, setShowAvatarPicker] = useState(false);
   const allBadgeTypes = Object.values(BadgeType);
   const earnedBadgeTypes = user.badges.map((b) => b.type);
+
+  const handleAvatarSelect = (avatar: string) => {
+    if (onAvatarChange) {
+      onAvatarChange(avatar);
+    }
+    setShowAvatarPicker(false);
+  };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
@@ -39,12 +49,29 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose }) => {
 
         {/* User info */}
         <div className="text-center mb-8">
-          <div className="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-5xl">👤</span>
-          </div>
-          <h2 className="text-2xl font-bold text-slate-800">{user.name}</h2>
-          <p className="text-slate-500">Medlem sedan {new Date(user.createdAt).toLocaleDateString('sv-SE')}</p>
+          <button
+            onClick={() => setShowAvatarPicker(true)}
+            className="w-24 h-24 bg-indigo-100 dark:bg-indigo-900/50 rounded-full flex items-center justify-center mx-auto mb-4 hover:ring-4 hover:ring-purple-300 dark:hover:ring-purple-600 transition-all group relative"
+            title="Klicka för att byta avatar"
+          >
+            <span className="text-5xl">{user.avatar || '👤'}</span>
+            <div className="absolute inset-0 bg-black/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span className="text-white text-sm font-medium">Byt</span>
+            </div>
+          </button>
+          <h2 className="text-2xl font-bold text-slate-800 dark:text-white">{user.name}</h2>
+          <p className="text-slate-500 dark:text-slate-400">Medlem sedan {new Date(user.createdAt).toLocaleDateString('sv-SE')}</p>
         </div>
+
+        {/* Avatar Picker Modal */}
+        {showAvatarPicker && (
+          <AvatarPicker
+            selectedAvatar={user.avatar || '🦊'}
+            onSelect={handleAvatarSelect}
+            onClose={() => setShowAvatarPicker(false)}
+            isModal={true}
+          />
+        )}
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4 mb-8">

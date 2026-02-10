@@ -53,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             onClick={onProfileClick}
             className="flex items-center space-x-1 md:space-x-2 bg-indigo-50 dark:bg-indigo-900/30 px-3 md:px-4 py-2 rounded-full border border-indigo-200 dark:border-indigo-700 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
           >
-            <span className="text-lg md:text-xl">👤</span>
+            <span className="text-lg md:text-xl">{user.avatar || '👤'}</span>
             <span className="font-bold text-slate-700 dark:text-slate-200 text-sm md:text-base hidden sm:inline">{user.name}</span>
           </button>
 

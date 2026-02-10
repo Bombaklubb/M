@@ -1,4 +1,4 @@
-import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText } from '../types';
+import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS } from '../types';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
@@ -15,10 +15,11 @@ interface DailyStats {
 /**
  * Skapa en ny användare
  */
-export function createUser(name: string): User {
+export function createUser(name: string, avatar?: string): User {
   const now = new Date().toISOString();
   return {
     name: name.trim(),
+    avatar: avatar || AVATAR_OPTIONS[0], // Standardavatar om ingen väljs
     totalPoints: 0,
     badges: [],
     completedTexts: [],
@@ -27,6 +28,19 @@ export function createUser(name: string): User {
     createdAt: now,
     lastActivity: now,
   };
+}
+
+/**
+ * Uppdatera användarens avatar
+ */
+export function updateAvatar(user: User, avatar: string): User {
+  const updatedUser = {
+    ...user,
+    avatar,
+    lastActivity: new Date().toISOString(),
+  };
+  saveUser(updatedUser);
+  return updatedUser;
 }
 
 /**
