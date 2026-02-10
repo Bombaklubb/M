@@ -156,7 +156,7 @@ async function callGroq(prompt: string) {
   if (!apiKey) throw new Error("GROQ_API_KEY saknas (lägg i .env.local eller Vercel env).");
 
   const baseUrl = process.env.GROQ_BASE_URL || "https://api.groq.com/openai/v1";
-  const model = process.env.GROQ_MODEL || "llama-3.1-70b-versatile";
+  const model = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
 
   const r = await fetch(`${baseUrl}/chat/completions`, {
     method: "POST",
