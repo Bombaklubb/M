@@ -16,7 +16,21 @@ export async function loadLibrary(): Promise<LibraryText[]> {
       throw new Error('Kunde inte ladda biblioteket');
     }
     const data = await response.json();
-    libraryCache = Array.isArray(data) ? data : [];
+    const texts = Array.isArray(data) ? data : [];
+
+    // Normalisera texter: lägg till genre för texter som har category men saknar genre
+    // Texter med category-fält är berättelser (narrativ struktur med karaktärer)
+    libraryCache = texts.map((text: LibraryText & { category?: string }) => {
+      if (!text.genre && text.category) {
+        return {
+          ...text,
+          genre: 'berättelse' as const,
+          theme: text.category, // Använd category som theme
+        };
+      }
+      return text;
+    });
+
     return libraryCache;
   } catch (error) {
     console.error('Fel vid laddning av bibliotek:', error);

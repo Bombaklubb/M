@@ -15423,5 +15423,230 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak3-tema-006",
+    "title": "Cykeln som blev stulen",
+    "text": "En måndag efter skolan gick Amina hem med sin kompis Leo. De stannade vid cykelstället för att hämta Aminas cykel. Men platsen var tom. Amina kände hur magen knöt sig. Hon tittade runt och såg ett trasigt lås på marken. Leo föreslog att de skulle fråga vaktmästaren. Vaktmästaren hette Rune och sa att flera cyklar hade försvunnit den senaste veckan. Han följde med dem och skrev ner färg och märke på cykeln. Sedan ringde han Aminas mamma. Amina fick låna skolans reservcykel för att ta sig hem. På kvällen gjorde Amina och hennes mamma en polisanmälan. Dagen efter satt en lapp på skolans dörr: \"Kom ihåg att låsa cykeln med två lås.\"",
+    "grade": 3,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad upptäckte Amina vid cykelstället?",
+        "options": ["Att cykeln var borta", "Att däcket var punkterat", "Att kedjan hade hoppat av", "Att cykeln stod på fel plats"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blev Amina extra orolig när hon såg marken?",
+        "options": ["Hon såg att regnet hade blött ner sadeln", "Hon såg ett trasigt lås ligga där", "Hon såg att någon hade ritat på asfalten", "Hon såg att cykelstället var flyttat"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde vaktmästaren Rune för att hjälpa till?",
+        "options": ["Han letade i klassrummen efter cykeln", "Han cyklade runt i området och ropade", "Han skrev ner färg och märke och ringde hem", "Han gav Amina pengar till en ny cykel"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad fick Amina använda för att ta sig hem?",
+        "options": ["En sparkcykel från Leo", "En buss som Rune beställde", "Sin mammas cykel", "Skolans reservcykel"],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför satte skolan upp lappen på dörren?",
+        "options": ["För att påminna om bättre låsning av cyklar", "För att visa att cykelstället var stängt", "För att be eleverna cykla långsammare", "För att säga att alla cyklar skulle målas om"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Amina och hennes mamma på kvällen?",
+        "options": ["De köpte två nya lås direkt", "De ringde till alla i klassen", "De gjorde en polisanmälan", "De satte upp en lapp på cykelstället"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak3-tema-007",
+    "title": "Spår i snön",
+    "text": "Det hade snöat hela natten, och på morgonen var gården vit och tyst. Samir tog på sig sina varma stövlar och gick ut med sin morfar, Ingrid. Morfar Ingrid gick lite långsamt och använde en käpp, men de hann ändå runt parken. Plötsligt pekade Samir på små spår som gick i en krokig linje. \"Vilket djur kan det vara?\" undrade han. Morfar böjde sig ner och mätte med handen. Spåren var små och låg nära varandra. De följde spåren till en buske, och där låg några frön och ett litet gnagmärke på en kotte. Morfar sa att det kunde vara en mus eller en liten sork. Samir fick en idé: han skulle rita av spåren i sitt anteckningsblock och skriva vad de kunde betyda. När de kom hem drack de varm choklad och tittade i en djurbok.",
+    "grade": 3,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur var gården på morgonen?",
+        "options": ["Vit och tyst", "Blöt och lerig", "Grön och solig", "Torr och dammig"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Varför gick morfar Ingrid långsamt?",
+        "options": ["Hen bar en tung ryggsäck", "Hen använde en käpp", "Hen ville vila ofta för att det var varmt", "Hen väntade på en vän i parken"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad såg Samir som gjorde honom nyfiken?",
+        "options": ["En fågel som sjöng i trädet", "En snögubbe som någon byggt", "Små spår i snön", "Ett borttappat par vantar"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad hittade de vid busken som gav en ledtråd?",
+        "options": ["En boll och ett hundkoppel", "En tom glasspinne och ett papper", "En blomma som stack upp ur snön", "Frön och ett gnagmärke på en kotte"],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket djur trodde morfar Ingrid att spåren kunde komma från?",
+        "options": ["En mus eller en liten sork", "En räv eller en varg", "En hare eller ett rådjur", "En katt eller en hund"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Samir när han fick en idé?",
+        "options": ["Han fotade spåren med en kamera", "Han rensade bort snön för att se bättre", "Han ritade av spåren och skrev om dem", "Han byggde en fälla för att fånga djuret"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak3-tema-008",
+    "title": "Bibliotekets hemliga hylla",
+    "text": "På onsdagen följde klassen med sin lärare till biblioteket. Där fanns höga hyllor och mjuka stolar. Nova gillade att gå långsamt mellan böckerna och läsa på ryggarna. Hon letade efter något spännande, men många böcker såg likadana ut. Då märkte hon en liten skylt: \"Rekommenderas.\" Skylten satt på en hylla längst in, nästan bakom en gardin. Nova drog försiktigt undan gardinen och såg böcker med färgglada omslag. En bibliotekarie som hette Malik kom fram och log. Han berättade att hyllan var till för den som ville prova något nytt, som deckare, fakta om rymden eller berättelser från olika länder. Nova valde en bok om en flicka som löste mysterier i sin stad. När hon skulle låna den fick hon ett bokmärke och en lapp där det stod att hon kunde skriva en egen recension nästa gång.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var gick Nova och klassen på onsdagen?",
+        "options": ["Till biblioteket", "Till simhallen", "Till museet", "Till idrottsplatsen"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför var det svårt för Nova att välja först?",
+        "options": ["Hon hade glömt sina glasögon", "Många böcker såg likadana ut", "Det fanns inga stolar att sitta på", "Hon fick inte röra vid böckerna"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad stod det på skylten som Nova såg?",
+        "options": ["Tyst zon", "Nya böcker", "Rekommenderas", "Endast vuxna"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var hittade Nova hyllan med skylten?",
+        "options": ["Mitt i rummet vid disken", "Vid utgången bredvid dörren", "Högst upp på en stege", "Längst in, nästan bakom en gardin"],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad sa Malik att hyllan var till för?",
+        "options": ["Att prova nya sorters böcker", "Att lämna tillbaka gamla böcker", "Att lägga bort trasiga böcker", "Att sitta och äta matsäck"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad fick Nova när hon lånade boken?",
+        "options": ["En affisch och en nyckelring", "Ett bokmärke och en lapp om recension", "En extra bok att behålla", "En karta över biblioteket"],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak3-tema-009",
+    "title": "Vattenexperimentet",
+    "text": "I klassrummet ställde läraren fram tre glas med vatten. På bordet låg också salt, socker och små skedar. Klassen skulle undersöka vad som hände när man blandade olika saker i vatten. Jia, som ibland använder hörselkåpor när det är stökigt, satte sig längst fram för att se tydligt. Först fick alla hälla en sked socker i ett glas och röra om. Sockret försvann nästan direkt. Sedan gjorde de samma sak med salt. Det löstes också upp, men smaken blev annorlunda. I det tredje glaset la de i både salt och socker. Läraren frågade varför man inte alltid ser det som är i vattnet. Eleverna pratade om att vissa saker blir så små att de sprids överallt i glaset. Till sist fick de skriva i sina häften vad de gjort och vad de märkt, och jämföra med sin bänkkompis.",
+    "grade": 3,
+    "category": "Vetenskap",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad fanns på bordet förutom glas med vatten?",
+        "options": ["Salt, socker och skedar", "Mjöl, peppar och tallrikar", "Saft, lemonad och sugrör", "Stenar, löv och pennor"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför satte sig Jia längst fram?",
+        "options": ["För att hen ville vara närmast läraren alltid", "För att hen ville se tydligt", "För att hen skulle dela ut material", "För att hen inte tyckte om att skriva"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände när de rörde ner socker i vatten?",
+        "options": ["Det sjönk och blev som grus", "Det blev en klump som flöt", "Det försvann nästan direkt", "Det ändrade vattnets färg"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde de i det tredje glaset?",
+        "options": ["De la i både salt och socker", "De la i bara socker men rörde inte", "De hällde ut vattnet och fyllde på nytt", "De la i sand för att testa tyngd"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ser man inte alltid det som är i vattnet, enligt samtalet?",
+        "options": ["Det blir så smått att det sprids i hela glaset", "Det fastnar i glasets botten och försvinner", "Det flyger upp i luften när man rör om", "Det blir osynligt bara när vattnet är kallt"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde eleverna sist på lektionen?",
+        "options": ["De sprang ut på rast direkt", "De ritade bara bilder av glasen", "De skrev vad de gjort och jämförde", "De tog hem glasen som souvenirer"],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak3-tema-010",
+    "title": "Matchen i regnet",
+    "text": "Det regnade små droppar när fotbollslaget samlades på planen. Tränaren Elin delade ut västar och sa att de skulle öva passningar. Kim knöt sina skor extra hårt eftersom gräset var halt. Alex, som var ny i laget, såg lite nervös ut och tittade på de andra. \"Vi hjälper varandra,\" sa Elin. Övningen började med att två och två passade bollen fram och tillbaka. Om bollen rullade iväg skulle man hämta den utan att stressa. Efter en stund gjorde de en liten match. Kim råkade halka och tappade bollen, men Alex sprang tillbaka och vann den. Kim ropade \"Tack!\" och Alex log. När matchen var slut samlades laget i en ring. Elin frågade vad som fungerat bra. Flera sa att de pratade mer med varandra och att det gjorde spelet lättare, även i regn.",
+    "grade": 3,
+    "category": "Sport",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur var vädret när laget samlades?",
+        "options": ["Det regnade små droppar", "Det snöade kraftigt", "Det var väldigt varmt", "Det blåste sand över planen"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför knöt Kim skorna extra hårt?",
+        "options": ["För att skosnörena var för långa", "För att gräset var halt", "För att hen hade nya skor som glappade", "För att tränaren bad alla göra det"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kände sig Alex i början?",
+        "options": ["Lite nervös", "Arg på domaren", "Sömnig och trött", "Uttråkad av övningen"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad sa tränaren Elin som gjorde stämningen bättre?",
+        "options": ["Att matchen skulle ställas in", "Att bara de bästa fick spela", "Att de skulle vara tysta hela tiden", "Att de hjälper varandra"],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände när Kim halkade i matchen?",
+        "options": ["Alex sprang tillbaka och vann bollen", "Elin blåste av matchen direkt", "Kim gick hem och bytte kläder", "Ingen märkte att bollen försvann"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tyckte flera i laget fungerade bra till slut?",
+        "options": ["Att de sköt hårdare än vanligt", "Att de pratade mer med varandra", "Att de slutade passa och dribblade bara", "Att de bytte plan mitt i matchen"],
+        "correct": 1
+      }
+    ]
   }
 ]
