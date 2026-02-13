@@ -155,8 +155,12 @@ export function checkForNewBadges(user: User): Badge[] {
   if (totalTexts >= 1) addBadge(BadgeType.FIRST_TEXT);
   if (totalTexts >= 5) addBadge(BadgeType.FIVE_TEXTS);
   if (totalTexts >= 10) addBadge(BadgeType.TEN_TEXTS);
+  if (totalTexts >= 15) addBadge(BadgeType.FIFTEEN_TEXTS);
   if (totalTexts >= 25) addBadge(BadgeType.TWENTY_FIVE_TEXTS);
+  if (totalTexts >= 30) addBadge(BadgeType.THIRTY_TEXTS);
   if (totalTexts >= 50) addBadge(BadgeType.FIFTY_TEXTS);
+  if (totalTexts >= 75) addBadge(BadgeType.SEVENTY_FIVE_TEXTS);
+  if (totalTexts >= 100) addBadge(BadgeType.HUNDRED_TEXTS);
 
   // Perfect score badges
   const lastText = user.completedTexts[user.completedTexts.length - 1];
@@ -166,11 +170,45 @@ export function checkForNewBadges(user: User): Badge[] {
 
   if (user.perfectScoreStreak >= 3) addBadge(BadgeType.THREE_PERFECT);
   if (user.perfectScoreStreak >= 5) addBadge(BadgeType.FIVE_PERFECT);
+  if (user.perfectScoreStreak >= 10) addBadge(BadgeType.TEN_PERFECT);
 
-  // Alla årskurser
-  if (user.gradesCompleted.length >= 9) {
+  // Poäng-badges
+  if (user.totalPoints >= 100) addBadge(BadgeType.HUNDRED_POINTS);
+  if (user.totalPoints >= 500) addBadge(BadgeType.FIVE_HUNDRED_POINTS);
+  if (user.totalPoints >= 1000) addBadge(BadgeType.THOUSAND_POINTS);
+
+  // Årskurs-badges
+  const grades = user.gradesCompleted;
+
+  // Utforskare - minst 5 olika årskurser
+  if (grades.length >= 5) addBadge(BadgeType.EXPLORER);
+
+  // Alla årskurser (1-9 + gymnasiet = 10 st)
+  if (grades.length >= 10) {
     addBadge(BadgeType.ALL_GRADES);
   }
+
+  // Nybörjarläsare - klarat åk 1, 2 och 3
+  if (grades.includes(1) && grades.includes(2) && grades.includes(3)) {
+    addBadge(BadgeType.BEGINNER_GRADES);
+  }
+
+  // Mellanläsare - klarat åk 4, 5 och 6
+  if (grades.includes(4) && grades.includes(5) && grades.includes(6)) {
+    addBadge(BadgeType.MIDDLE_GRADES);
+  }
+
+  // Avancerad läsare - klarat åk 7, 8 och 9
+  if (grades.includes(7) && grades.includes(8) && grades.includes(9)) {
+    addBadge(BadgeType.ADVANCED_GRADES);
+  }
+
+  // Genre-badges
+  const storyCount = user.completedTexts.filter(t => t.genre === 'berättelse').length;
+  const factCount = user.completedTexts.filter(t => t.genre === 'faktatext').length;
+
+  if (storyCount >= 10) addBadge(BadgeType.STORY_LOVER);
+  if (factCount >= 10) addBadge(BadgeType.FACT_LOVER);
 
   return newBadges;
 }
@@ -203,6 +241,7 @@ export function recordResult(
     totalQuestions,
     pointsEarned,
     completedAt: new Date().toISOString(),
+    genre,
   };
 
   // Uppdatera användaren

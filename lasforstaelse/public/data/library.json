@@ -15193,5 +15193,235 @@
       }
     ],
     "word_count": 149
+  },
+  {
+    "id": "ak1-tema-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "Natur & Miljö",
+    "title": "Fröet i fickan",
+    "text": "På rasten hittar Lina ett litet frö vid gungan. Hon stoppar fröet i fickan och visar det för sin kompis Noor. De går till skolans lilla odlingslåda. Där finns jord och en vattenkanna. Lina gör ett litet hål med fingret. Noor lägger fröet i hålet och täcker med jord. Sedan vattnar de försiktigt. \"Nu får vi vänta,\" säger Lina. De tittar på lådan varje dag för att se om något grönt kommer upp.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittade Lina fröet?",
+        "options": ["Vid gungan", "I klassrummet", "I matsalen", "Vid busshållplatsen"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem lägger fröet i hålet?",
+        "options": ["Lina", "Noor", "Läraren", "Vaktmästaren"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de efter att fröet är i jorden?",
+        "options": ["De vattnar försiktigt", "De tar upp fröet igen", "De ritar en bild", "De går hem direkt"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Lina att de måste vänta?",
+        "options": ["För att fröet behöver tid att växa", "För att jorden är slut", "För att vattenkannan är trasig", "För att rasten är för kort"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad tittar de efter varje dag?",
+        "options": ["En ny gunga", "Något grönt som kommer upp", "En ny vattenkanna", "En boll som rullar"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten mest om?",
+        "options": ["Att vinna en tävling", "Att plantera ett frö i skolan", "Att bygga en koja", "Att köpa nya kläder"],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-002",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "Samhälle",
+    "title": "Bussen till badhuset",
+    "text": "På lördagen ska Amir och hans pappa åka buss till badhuset. Amir har packat badbyxor och en liten handduk. Vid hållplatsen blåser det lite kallt. Pappa håller upp busskortet när bussen kommer. De sätter sig längst fram. Amir tittar ut genom fönstret och räknar röda bilar. När de är framme ser Amir en stor skylt med en simmande fisk. \"Nu är vi här!\" säger pappa, och Amir ler.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken dag åker Amir och pappa till badhuset?",
+        "options": ["På lördagen", "På måndagen", "På onsdagen", "På fredagen"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad har Amir packat?",
+        "options": ["En mössa och en bok", "Badbyxor och en liten handduk", "En boll och en tröja", "En lunchlåda och en penna"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter de på bussen?",
+        "options": ["Längst bak", "I mitten", "Längst fram", "På golvet"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Amir när han tittar ut genom fönstret?",
+        "options": ["Han sover", "Han räknar röda bilar", "Han läser en tidning", "Han ropar till chauffören"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ser Amir när de är framme?",
+        "options": ["En stor skylt med en simmande fisk", "En hög med snö", "En cykel som vält", "En stor hund"],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ler Amir på slutet?",
+        "options": ["För att han tappade busskortet", "För att han är framme vid badhuset", "För att vinden blev starkare", "För att bussen körde fel"],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-003",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "Kultur",
+    "title": "Boken med stora bilder",
+    "text": "Alex går till biblioteket efter skolan. Alex säger \"hen\" när någon frågar. Vid dörren möter Alex sin granne Sam, som använder rullstol. De rullar och går tillsammans mellan hyllorna. En bibliotekarie visar en bok med stora bilder om djur. Alex väljer en sida med en uggla. Sam pekar på en räv. De sitter vid ett bord och bläddrar långsamt. När det är dags att gå hem lånar de boken och lovar att läsa mer nästa gång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vart går Alex efter skolan?",
+        "options": ["Till biblioteket", "Till sjukhuset", "Till en affär", "Till en pool"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem möter Alex vid dörren?",
+        "options": ["En kusin", "Sam", "En hund", "En lärare"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar boken om?",
+        "options": ["Bilar", "Planeter", "Djur", "Mat"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilket djur väljer Alex att titta på?",
+        "options": ["En katt", "En uggla", "En häst", "En fisk"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de vid bordet?",
+        "options": ["De springer runt", "De bläddrar långsamt i boken", "De spelar fotboll", "De målar väggar"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lånar de boken?",
+        "options": ["För att ge bort den", "För att läsa mer nästa gång", "För att gömma den", "För att riva sidor"],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-004",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "Hälsa",
+    "title": "Pulkan i backen",
+    "text": "Det har snöat hela natten. På morgonen ser Maja att gården är vit. Hon tar på sig overall och varma vantar. Hennes storebror Leo drar fram en röd pulka. De går till en liten backe nära huset. Först åker Leo, och pulkan glider snabbt. Sedan är det Majas tur. Hon håller hårt i snöret och skrattar när hon kommer ner. De bygger en liten snögubbe också, innan de går in och dricker varm choklad.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har hänt under natten?",
+        "options": ["Det har snöat", "Det har regnat varmt", "Det har varit åska", "Det har blåst sand"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har pulkan?",
+        "options": ["Blå", "Grön", "Röd", "Gul"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem åker först i backen?",
+        "options": ["Maja", "Leo", "En granne", "En hund"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur känns det när Maja åker?",
+        "options": ["Hon blir arg", "Hon skrattar", "Hon somnar", "Hon blir helt tyst"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de mer än att åka pulka?",
+        "options": ["De planterar frön", "De bygger en liten snögubbe", "De målar ett staket", "De fiskar i sjön"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad dricker de när de går in?",
+        "options": ["Varm choklad", "Kall saft", "Mjölk med is", "Citronvatten"],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-005",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "Natur & Miljö",
+    "title": "Sortera hemma",
+    "text": "I köket står tre lådor. En är för papper, en för plast och en för metall. Elin hjälper sin mamma att sortera. Hon håller i en tom yoghurtburk och tittar noga. \"Är det plast?\" frågar hon. Mamma nickar. Elin sköljer burken lite och lägger den i rätt låda. Sedan hittar hon en gammal konservburk. Den lägger hon i metall. När de är klara knyter de ihop påsen och går ut till återvinningsstationen tillsammans.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många lådor står i köket?",
+        "options": ["Två", "Tre", "Fyra", "En"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en låda till?",
+        "options": ["Papper", "Godis", "Kläder", "Leksaker"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Elin med yoghurtburken innan hon lägger den i lådan?",
+        "options": ["Hon målar den", "Hon sköljer den lite", "Hon fyller den med vatten", "Hon gömmer den"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var lägger Elin konservburken?",
+        "options": ["I papper", "I plast", "I metall", "I soporna direkt"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vart går de när de är klara?",
+        "options": ["Till skolan", "Till återvinningsstationen", "Till badhuset", "Till lekparken"],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten mest om?",
+        "options": ["Att baka bröd", "Att sortera och återvinna", "Att spela ett spel", "Att köpa en cykel"],
+        "correct": 1
+      }
+    ]
   }
 ]
