@@ -94,7 +94,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <div className={`${showText ? 'block' : 'hidden lg:block'}`}>
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 lg:p-8 h-fit lg:sticky lg:top-4">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="font-bold text-slate-700 dark:text-slate-200">Texten</h3>
+                <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
                 <div className="flex items-center gap-2">
                   <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Storlek:</span>
                   <button
