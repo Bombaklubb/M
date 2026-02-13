@@ -203,6 +203,11 @@ export function checkForNewBadges(user: User): Badge[] {
     addBadge(BadgeType.ADVANCED_GRADES);
   }
 
+  // Streak-badges (läst X dagar i rad)
+  const readingStreak = calculateReadingStreak(user.completedTexts);
+  if (readingStreak >= 3) addBadge(BadgeType.STREAK_3);
+  if (readingStreak >= 7) addBadge(BadgeType.STREAK_7);
+
   // Genre-badges
   const storyCount = user.completedTexts.filter(t => t.genre === 'berättelse').length;
   const factCount = user.completedTexts.filter(t => t.genre === 'faktatext').length;
@@ -313,6 +318,53 @@ export function getAllUsers(): User[] {
  */
 function getTodayKey(): string {
   return new Date().toISOString().split('T')[0];
+}
+
+/**
+ * Beräkna lässtreak (antal dagar i rad som användaren har läst)
+ */
+export function calculateReadingStreak(completedTexts: CompletedText[]): number {
+  if (completedTexts.length === 0) return 0;
+
+  // Extrahera unika datum (YYYY-MM-DD) från completedTexts
+  const uniqueDates = new Set<string>();
+  completedTexts.forEach(text => {
+    const date = text.completedAt.split('T')[0];
+    uniqueDates.add(date);
+  });
+
+  // Konvertera till sorterad array (nyaste först)
+  const sortedDates = Array.from(uniqueDates).sort((a, b) => b.localeCompare(a));
+
+  if (sortedDates.length === 0) return 0;
+
+  const today = getTodayKey();
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayKey = yesterday.toISOString().split('T')[0];
+
+  // Streaken måste inkludera idag eller igår för att vara aktiv
+  const mostRecentDate = sortedDates[0];
+  if (mostRecentDate !== today && mostRecentDate !== yesterdayKey) {
+    return 0;
+  }
+
+  // Räkna konsekutiva dagar bakåt från mest aktuella datum
+  let streak = 1;
+  let currentDate = new Date(mostRecentDate);
+
+  for (let i = 1; i < sortedDates.length; i++) {
+    currentDate.setDate(currentDate.getDate() - 1);
+    const expectedDate = currentDate.toISOString().split('T')[0];
+
+    if (sortedDates.includes(expectedDate)) {
+      streak++;
+    } else {
+      break;
+    }
+  }
+
+  return streak;
 }
 
 /**
