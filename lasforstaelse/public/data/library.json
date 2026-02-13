@@ -14815,5 +14815,355 @@
       }
     ],
     "word_count": 329
+  },
+  {
+    "id": "ak3-tema-001",
+    "title": "Kattugglan i parken",
+    "text": "En tidig morgon gick Mira och hennes morfar till parken. Luften var kall och gräset glittrade av frost. Morfar hade med sig en kikare, och Mira bar en liten anteckningsbok. De hörde ett mjukt \"ho-ho\" från en gammal ek. I en gren satt en kattuggla och blinkade långsamt. Mira viskade så att den inte skulle bli rädd. Morfar pekade på ugglans runda ansikte och sa att den jagar mest på natten. Plötsligt flög en grå mus över stigen och försvann i buskarna. Ugglan vred huvudet nästan helt runt och följde ljudet. Mira skrev ner allt hon såg: tiden, vädret och var ugglan satt. När solen steg började fåglarna sjunga högre. Då flög ugglan tyst iväg mot skogen. Mira kände sig som en riktig naturforskare.",
+    "grade": 3,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Vem gick Mira till parken med?",
+        "options": [
+          "Sin morfar",
+          "Sin storebror",
+          "Sin granne",
+          "Sin klasslärare"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad hade morfar med sig?",
+        "options": [
+          "En matsäck",
+          "En kikare",
+          "En ficklampa",
+          "En karta"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "När jagar kattugglan oftast?",
+        "options": [
+          "På morgonen",
+          "Mitt på dagen",
+          "På natten",
+          "Bara på vintern"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför viskade Mira när hon såg ugglan?",
+        "options": [
+          "För att morfar bad henne träna",
+          "För att hon var trött",
+          "För att hon ville höra bättre",
+          "För att inte skrämma ugglan"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad skrev Mira ner i sin anteckningsbok?",
+        "options": [
+          "Tid, väder och var ugglan satt",
+          "Bara ugglans färg",
+          "Namnen på alla träd",
+          "Hur långt de hade gått"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad hände när solen steg?",
+        "options": [
+          "Det började regna",
+          "Ugglan byggde bo",
+          "Frosten blev tjockare",
+          "Fåglarna sjöng högre"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 124
+  },
+  {
+    "id": "ak3-tema-002",
+    "title": "Den hemliga lappen",
+    "text": "På måndagen hittade Leo en vikt lapp under sin bänk i klassrummet. På lappen stod: \"Följ de blå pilarna.\" Leo tittade runt, men ingen verkade märka något. När rasten började såg han en liten blå pil på väggen vid dörren. Han följde den till biblioteket, där en ny pil satt på hyllan med faktaböcker. Leo gick mellan hyllorna och hittade en tredje pil som pekade mot ett bord. Där låg en bok om rymden, och inuti boken fanns en sista lapp. \"Bra jobbat! Kom till läshörnan efter lunchen,\" stod det. Efter lunchen satt flera elever där, och bibliotekarien Sara log. Hon berättade att de startade en bokklubb för den som gillar mysterier och fakta. Leo blev glad och lite stolt. Han hade följt ledtrådar utan att ge upp, och nu skulle han få nya vänner att läsa med.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Var hittade Leo den första lappen?",
+        "options": [
+          "I sin ryggsäck",
+          "Under sin bänk",
+          "På lärarens bord",
+          "Vid fönstret"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad stod det på den första lappen?",
+        "options": [
+          "Följ de blå pilarna",
+          "Gå hem direkt",
+          "Hitta en röd penna",
+          "Skriv ditt namn här"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vart ledde en pil Leo efter dörren?",
+        "options": [
+          "Till matsalen",
+          "Till gymnastiksalen",
+          "Till biblioteket",
+          "Till skolgårdens gunga"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad fanns inuti boken om rymden?",
+        "options": [
+          "En karta över skolan",
+          "Ett foto på klassen",
+          "En nyckel",
+          "En sista lapp"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför hade någon lagt ut pilar och lappar?",
+        "options": [
+          "För att skoja med Leo",
+          "För att hitta en borttappad sak",
+          "För att starta en bokklubb",
+          "För att öva på matematik"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur kände sig Leo när han förstod vad det handlade om?",
+        "options": [
+          "Han blev arg och gick därifrån",
+          "Han blev glad och lite stolt",
+          "Han blev rädd för biblioteket",
+          "Han blev uttråkad"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 138
+  },
+  {
+    "id": "ak3-tema-003",
+    "title": "Cykeln som behövde luft",
+    "text": "På lördagen skulle Amina cykla till sin kusin. När hon rullade ut cykeln från förrådet kändes bakhjulet mjukt. Det gick att trycka in däcket med fingret. Amina hämtade sin pappa, som visade hur man kan känna om ett däck behöver mer luft. De tog fram en pump och satte munstycket på ventilen. Pappa sa att man ska pumpa lugnt och lyssna. Efter några tag blev däcket hårdare. Amina provrullade cykeln på gården. Den gick lättare och svängde stadigt. Pappa berättade att rätt luft gör att man cyklar tryggare och att däcken inte slits lika snabbt. Amina tackade och satte på hjälmen. På vägen till kusinen stannade hon vid övergångsställen och tittade åt båda hållen. När hon kom fram var hon i tid och kände sig säker. Hon berättade stolt att hon hade fixat cykeln tillsammans med pappa.",
+    "grade": 3,
+    "category": "Hälsa",
+    "questions": [
+      {
+        "q": "Vad märkte Amina när hon tog fram cykeln?",
+        "options": [
+          "Framlyset var trasigt",
+          "Bakdäcket var mjukt",
+          "Kedjan saknades",
+          "Sadeln var för hög"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad använde de för att fylla däcket med luft?",
+        "options": [
+          "En pump",
+          "En hink vatten",
+          "En borste",
+          "Ett rep"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur pumpade de enligt pappan?",
+        "options": [
+          "Snabbt och hårt hela tiden",
+          "Bara när det regnade",
+          "Lugnt och medan man lyssnar",
+          "Utan att sätta på munstycket"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför är rätt luft i däcken bra, enligt texten?",
+        "options": [
+          "För att cykeln blir tyngre",
+          "För att man kan cykla utan hjälm",
+          "För att det blir varmare ute",
+          "För att man cyklar tryggare och däcken slits mindre"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad gjorde Amina innan hon cyklade iväg?",
+        "options": [
+          "Hon tog av kedjan",
+          "Hon målade cykeln",
+          "Hon ringde sin kusin",
+          "Hon satte på hjälmen"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur tog Amina sig fram i trafiken på vägen?",
+        "options": [
+          "Hon stannade och tittade åt båda hållen",
+          "Hon blundade i backar",
+          "Hon cyklade mitt i vägen hela tiden",
+          "Hon höll i en bil"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 137
+  },
+  {
+    "id": "ak3-tema-004",
+    "title": "Vatten som byter form",
+    "text": "I klass 3B gjorde de ett experiment om vatten. Läraren Nils ställde fram tre skålar: en med is, en med vatten och en tom. Först fick eleverna känna på isbitarna med en sked. De var hårda och kalla. Sedan tittade de på vattnet i skålen, som rörde sig när man nuddade kanten. Nils sa att vatten kan vara fast, flytande eller som gas. För att visa gas höll han en varm vattenkokare på säkert avstånd, så att ångan steg upp. Eleverna såg hur ångan försvann i luften. De pratade om att is smälter när den blir varm, och att vatten kan koka om det blir ännu varmare. Alex, som är icke-binär, skrev en lista i sin loggbok: is, vatten, ånga. Efteråt jämförde de sina anteckningar och hjälpte varandra att komma ihåg orden. Alla var överens om att experimentet gjorde det lättare att förstå hur samma ämne kan se olika ut.",
+    "grade": 3,
+    "category": "Vetenskap",
+    "questions": [
+      {
+        "q": "Vad handlade experimentet om?",
+        "options": [
+          "Vattnets olika former",
+          "Hur man odlar frön",
+          "Varför löv faller",
+          "Hur man bygger en bro"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur kändes isbitarna enligt texten?",
+        "options": [
+          "Mjuka och varma",
+          "Hårda och kalla",
+          "Torra och lätta",
+          "Klibbiga och runda"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad använde läraren för att visa ånga?",
+        "options": [
+          "En fläkt",
+          "En frys",
+          "En varm vattenkokare",
+          "En ficklampa"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad skrev Alex i sin loggbok?",
+        "options": [
+          "En dikt om regn",
+          "Tre djur i skogen",
+          "En karta över skolan",
+          "Is, vatten, ånga"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför pratade eleverna om att is smälter?",
+        "options": [
+          "För att hitta is i matsalen",
+          "För att göra glass på rasten",
+          "För att räkna isbitarna",
+          "För att visa att värme kan ändra vatten"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad tyckte klassen om experimentet till slut?",
+        "options": [
+          "Det var farligt och förbjudet",
+          "Det gjorde det lättare att förstå",
+          "Det var helt onödigt",
+          "Det hade inget med vatten att göra"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 150
+  },
+  {
+    "id": "ak3-tema-005",
+    "title": "Kartans små tecken",
+    "text": "På fritids fick gruppen en uppgift av ledaren Kim: att hitta tre platser med hjälp av en enkel karta. Kartan visade gården med symboler. En liten gunga betydde lekplats, en cirkel med streck betydde cykelställ, och ett träd betydde den stora lönnen. Nora, som har en hörselapparat, höll i kartan och pekade tydligt så alla såg. Samir räknade steg mellan platserna, och Jun bar en penna för att kryssa i listan. Först gick de till cykelstället och hittade en blå kon som var gömd bakom en låda. Sedan följde de kartans linje till lönnen, där en grön lapp satt fast med tejp. Till sist letade de vid lekplatsen. Där låg en röd boll bakom rutschkanan. När de kom tillbaka pratade de om hur symboler kan hjälpa oss att hitta rätt, även när man inte känner platsen så bra. Kim sa att kartläsning är som att lösa en gåta tillsammans.",
+    "grade": 3,
+    "category": "Geografi",
+    "questions": [
+      {
+        "q": "Vem gav uppgiften på fritids?",
+        "options": [
+          "Ledaren Kim",
+          "Rektorn",
+          "En vaktmästare",
+          "En elev i sexan"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vem höll i kartan?",
+        "options": [
+          "Samir",
+          "Nora",
+          "Jun",
+          "Kim"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betydde symbolen med en cirkel och streck?",
+        "options": [
+          "En busshållplats",
+          "En fontän",
+          "Ett cykelställ",
+          "Ett klassrum"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad hittade gruppen vid lekplatsen?",
+        "options": [
+          "En grön lapp",
+          "En gul nyckel",
+          "En blå kon",
+          "En röd boll"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Var var den blå konen gömd?",
+        "options": [
+          "I ett träd vid lönnen",
+          "Under en bänk i matsalen",
+          "Bakom en låda vid cykelstället",
+          "I en garderob inomhus"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad jämförde Kim kartläsning med?",
+        "options": [
+          "Att lösa en gåta tillsammans",
+          "Att måla en tavla",
+          "Att baka bröd",
+          "Att springa ett lopp ensam"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 149
   }
 ]
