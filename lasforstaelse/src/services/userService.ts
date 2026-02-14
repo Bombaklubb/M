@@ -76,7 +76,7 @@ export function findUserByName(name: string): User | null {
  * Logga in - returnerar befintlig användare eller skapar ny
  */
 export function loginUser(name: string, avatar?: string): User {
-  // Kolla om användaren redan finns
+  // Kolla om användaren redan finns lokalt
   const existingUser = findUserByName(name);
 
   if (existingUser) {
@@ -368,7 +368,7 @@ export function calculateReadingStreak(completedTexts: CompletedText[]): number 
 }
 
 /**
- * Spara daglig statistik
+ * Spara daglig statistik lokalt
  */
 export function recordDailyStats(genre: string, theme: string, grade: number): void {
   try {

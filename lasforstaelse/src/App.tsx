@@ -64,10 +64,17 @@ function App() {
   }, []);
 
   // Login
-  const handleLogin = (name: string, avatar: string) => {
-    const user = loginUser(name, avatar);
-    setUser(user);
-    setAppState(AppState.SETUP);
+  const handleLogin = async (name: string, avatar: string) => {
+    setLoading(true);
+    try {
+      const user = await loginUser(name, avatar);
+      setUser(user);
+      setAppState(AppState.SETUP);
+    } catch (err) {
+      console.error('Kunde inte logga in:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Byt avatar
