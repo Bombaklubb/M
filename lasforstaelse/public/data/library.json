@@ -4737,7 +4737,7 @@
         "type": "literal",
         "q": "Vad betyder korrelation enligt texten?",
         "options": [
-          "Att en sak alltid orsakar en annan baserat på en tolkning av materialet",
+          "Att en sak orsakar en annan",
           "Att två saker förändras tillsammans",
           "Att en graf måste börja på noll",
           "Att data alltid är falskt"
@@ -4751,7 +4751,7 @@
           "Att alla experiment är oetiska",
           "Att glassförsäljning och solbränna ökar samtidigt på grund av varmt väder",
           "Att studier alltid är dyra",
-          "Att rökning alltid leder till träning för att uppnå ett specifikt resultat"
+          "Att rökning och stress hänger ihop"
         ],
         "correct": 1
       },
@@ -4760,7 +4760,7 @@
         "q": "Vad kallas en bakomliggande faktor som kan skapa ett missvisande samband?",
         "options": [
           "Hypotes",
-          "Kvantifiering som en del av processen",
+          "Medelvärde",
           "Confounder/bakomliggande variabel",
           "Placebo"
         ],
@@ -4771,7 +4771,7 @@
         "q": "Varför kan en effekt bli statistiskt signifikant utan att vara särskilt viktig i praktiken?",
         "options": [
           "För att små studier alltid är bättre",
-          "För att signifikans betyder att effekten alltid är enorm som en del av processen",
+          "För att signifikans betyder att effekten är stor",
           "För att en mycket liten skillnad kan bli signifikant i en väldigt stor studie",
           "För att grafer aldrig visar verkligheten"
         ],
@@ -4781,7 +4781,7 @@
         "type": "inferens",
         "q": "Varför kan en graf med ovanlig skala lura en läsare?",
         "options": [
-          "För att skalan gör att siffror försvinner för att nå det avsedda målet",
+          "För att skalans start påverkar hur data tolkas",
           "För att rubriker alltid bestämmer skalan",
           "För att skalan kan få en liten förändring att se dramatisk ut",
           "För att alla grafer måste vara i 3D"
@@ -4820,7 +4820,7 @@
         "q": "Vad betyder bias enligt texten?",
         "options": [
           "Snedvridning i modellens svar på grund av träningsdata",
-          "Att AI bara fungerar på engelska i det aktuella sammanhanget",
+          "Att AI bara fungerar på engelska",
           "Att data inte kan mätas",
           "Att modellen alltid är exakt"
         ],
@@ -4831,7 +4831,7 @@
         "q": "Vilket ord används för när en modell skapar ett övertygande men felaktigt svar?",
         "options": [
           "Kalibrerar",
-          "Komprimerar som en del av processen",
+          "Komprimerar",
           "Hallucinerar",
           "Verifierar"
         ],
@@ -4841,7 +4841,7 @@
         "type": "literal",
         "q": "Vad kallas förmågan att ge rimliga svar på nya situationer?",
         "options": [
-          "Repetition utifrån det givna perspektivet",
+          "Repetition",
           "Generalisation",
           "Kopiering",
           "Censur"
@@ -4866,7 +4866,7 @@
           "För att modellen kan skapa plausibla formuleringar även när fakta är fel",
           "För att alla källor är likadana",
           "För att språk alltid ljuger",
-          "För att hallucinering bara sker i matematik med hänsyn till flera aspekter"
+          "För att hallucinering sällan upptäcks"
         ],
         "correct": 0
       },
@@ -4913,7 +4913,7 @@
         "q": "Vilka beteenden nämns som något algoritmer mäter?",
         "options": [
           "Din längd och vikt",
-          "Hur snabbt du skriver på tangentbordet som en grundläggande förutsättning",
+          "Hur snabbt du skriver på tangentbordet",
           "Vad du stannar vid, kommenterar, delar och ser klart",
           "Vilka böcker du lånar"
         ],
@@ -4934,7 +4934,7 @@
         "type": "inferens",
         "q": "Varför kan nyanserade resonemang få mindre plats i sociala medier enligt texten?",
         "options": [
-          "För att människor inte kan läsa längre texter utifrån det givna perspektivet",
+          "För att långa texter inte får plats",
           "För att alla plattformar är statliga",
           "För att nyanser alltid är förbjudna",
           "För att starka reaktioner ofta belönas och lyfts fram av algoritmer"
@@ -4948,7 +4948,7 @@
           "För att likes inte går att se",
           "För att man jämför sitt vardagsliv med andras höjdpunkter",
           "För att alla alltid ljuger",
-          "För att algoritmer bara visar naturbilder utifrån det givna perspektivet"
+          "För att algoritmer bara visar naturbilder"
         ],
         "correct": 1
       },
@@ -4957,7 +4957,7 @@
         "q": "Vad vill texten att läsaren ska göra för att minska påverkan från uppmärksamhetsekonomin?",
         "options": [
           "Bara läsa kommentarer",
-          "Alltid posta mer för att vinna för att uppnå ett specifikt resultat",
+          "Posta så mycket som möjligt för att synas",
           "Förstå att flödet är ett urval, följa olika källor och ta pauser",
           "Aldrig använda sociala medier"
         ],
@@ -4986,7 +4986,7 @@
           "På skolans vind",
           "I ett köpcentrum",
           "I en källare under ett gammalt stadshus",
-          "I bibliotekets café med hänsyn till flera aspekter"
+          "I bibliotekets café"
         ],
         "correct": 2
       },
@@ -4994,7 +4994,7 @@
         "type": "literal",
         "q": "Vilken tidsperiod är protokollen Elin tittar i från?",
         "options": [
-          "1890-talet som en grundläggande förutsättning",
+          "1890-talet",
           "1940-talet",
           "1970-talet",
           "2000-talet"
@@ -5028,7 +5028,7 @@
         "q": "Vad menar Parisa när hon säger att Elin ser vardagen, inte bara processen?",
         "options": [
           "Att Elin ser vad politiker hade på sig",
-          "Att Elin ser vilka filmer som var populära för att uppnå ett specifikt resultat",
+          "Att Elin ser vilka filmer som var populära",
           "Att Elin ser hur arkivet städas",
           "Att Elin ser konkreta problem och detaljer bakom en historisk händelse"
         ],
@@ -5067,7 +5067,7 @@
         "options": [
           "Hur sociala medier påverkar ungas stress",
           "Sveriges medeltid",
-          "Hur man bygger en bro baserat på en tolkning av materialet",
+          "Hur man bygger en bro",
           "Fotosyntesens kemi"
         ],
         "correct": 0
@@ -5079,7 +5079,7 @@
           "Att texten är genererad av en skrivare",
           "Att texten är kopierad ordagrant från en blogg",
           "Att texten är från deras enkät",
-          "Att texten är från en bok i biblioteket för att nå det avsedda målet"
+          "Att texten är från en bok i biblioteket"
         ],
         "correct": 1
       },
@@ -5089,7 +5089,7 @@
         "options": [
           "Att ändra lite i texten så att det inte märks",
           "Att byta ämne helt",
-          "Att radera hela arbetet med hänsyn till flera aspekter",
+          "Att radera hela arbetet",
           "Att lämna in sent"
         ],
         "correct": 0
@@ -6692,6 +6692,386 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     }
+  },
+  {
+    "id": "ak2-tema-001",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Fågeln vid fönstret",
+    "text": "Varje morgon sitter en liten fågel på fönsterbrädan utanför Willmas rum. Den pickar på glaset och hoppar fram och tillbaka. Willma tycker att det ser ut som om fågeln vill komma in.\n\n\"Vad äter den?\" frågar hon sin pappa.\n\n\"Fröer och insekter,\" svarar pappa. \"Vi kan hänga ut en fågelmatare.\"\n\nDe gör en matare av en tom mjölkkartong. Willma klipper ett hål i sidan och fyller med solrosfrön. Pappa hjälper henne att hänga den i trädet utanför fönstret.\n\nNästa dag kommer fågeln tillbaka. Den sitter på mataren och äter. Snart kommer fler fåglar. Willma räknar tre stycken. Hon ritar dem i sitt block och skriver vad de gör.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter fågeln på morgonen?",
+        "options": [
+          "I ett träd",
+          "På fönsterbrädan",
+          "På marken",
+          "På taket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de fågelmataren av?",
+        "options": [
+          "En plastflaska",
+          "En sko",
+          "En tom mjölkkartong",
+          "En burk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad fyller Willma mataren med?",
+        "options": [
+          "Bröd",
+          "Ris",
+          "Solrosfrön",
+          "Socker"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur många fåglar räknar Willma nästa dag?",
+        "options": [
+          "En",
+          "Två",
+          "Tre",
+          "Fem"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ritar Willma fåglarna i sitt block?",
+        "options": [
+          "Läraren sa att hon måste",
+          "Hon vill komma ihåg vad hon sett",
+          "Pappa tvingar henne",
+          "Hon har inget annat att göra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan vi förstå om Willma?",
+        "options": [
+          "Hon är rädd för fåglar",
+          "Hon bryr sig inte om naturen",
+          "Hon är nyfiken och tycker om djur",
+          "Hon vill fånga fåglarna"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-002",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "kroppen",
+    "title": "Tanden som lossnade",
+    "text": "Mitt under lunchen kände Amir att något var konstigt. Hans framtand gungade mer än vanligt. Han vågade inte bita i smörgåsen.\n\n\"Min tand gungar jättemycket,\" sa han till sin kompis Ella.\n\n\"Vicka på den!\" sa Ella. \"Min föll ut i ett äpple förra veckan.\"\n\nAmir vickade försiktigt med tungan. Plötsligt lossnade tanden. Den låg där i hans hand, liten och vit.\n\n\"Lägg den under kudden ikväll,\" sa Ella. \"Då kanske tandfen kommer.\"\n\nAmir visade tanden för fröken. Hon sa att det var helt normalt och att en ny tand snart skulle växa fram.\n\nPå kvällen lade Amir tanden under kudden. Nästa morgon låg där en blank femkrona. Amir log brett, och i spegeln såg han luckan där tanden hade suttit.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken tand gungade på Amir?",
+        "options": [
+          "En kindtand",
+          "En hörntand",
+          "Hans framtand",
+          "En visdomstand"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad sa Ella om sin egen tand?",
+        "options": [
+          "Den ramlade ut i en smörgås",
+          "Den föll ut i ett äpple",
+          "Den tappade hon i sömnen",
+          "Den drog tandläkaren ut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var lade Amir tanden på kvällen?",
+        "options": [
+          "I en ask",
+          "Under kudden",
+          "På bordet",
+          "I ett glas vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad låg under kudden nästa morgon?",
+        "options": [
+          "En leksak",
+          "Ett brev",
+          "En blank femkrona",
+          "En ny tandborste"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vågade Amir inte bita i smörgåsen?",
+        "options": [
+          "Han var inte hungrig",
+          "Smörgåsen smakade illa",
+          "Han var rädd att tanden skulle lossna",
+          "Han hade ont i magen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vem tror du lade femkronan under kudden?",
+        "options": [
+          "Ella",
+          "Fröken i skolan",
+          "Amir själv",
+          "Någon i Amirs familj"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-003",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "hjälpsamhet",
+    "title": "Grannens tunga kasse",
+    "text": "Saga och hennes bror Ville satt på trappen hemma. De såg grannfrun Margit komma gående med två tunga kassar. Margit stannade och pustade.\n\n\"Ska vi hjälpa dig?\" frågade Saga.\n\nMargit log. \"Det vore snällt. Jag bor ju bara där borta.\"\n\nSaga tog en kasse och Ville tog den andra. De gick sakta bredvid Margit till hennes dörr. I kassen fanns mjölk, bröd, äpplen och en tidning.\n\n\"Tack, barn,\" sa Margit. \"Ni är riktiga hjältar. Vill ni ha var sin kaka?\"\n\nDe fick en kanelbulle var. Saga och Ville satte sig på Margits bänk och åt.\n\n\"Det känns bra att hjälpa,\" sa Ville.\n\n\"Ja,\" sa Saga. \"Och man får kanelbullar.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bar Margit?",
+        "options": [
+          "En väska och en påse",
+          "Två tunga kassar",
+          "En stor låda",
+          "Ett paraply och en kasse"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad fanns i kassen?",
+        "options": [
+          "Godis och glass",
+          "Kläder och skor",
+          "Mjölk, bröd, äpplen och en tidning",
+          "Böcker och pennor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad fick barnen av Margit?",
+        "options": [
+          "Pengar",
+          "En kanelbulle var",
+          "En leksak",
+          "Äpplen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem är Saga och Villes granne?",
+        "options": [
+          "Fröken Anna",
+          "Hunden Sigge",
+          "Margit",
+          "Leo"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför stannade Margit och pustade?",
+        "options": [
+          "Hon var glad",
+          "Kassarna var tunga och hon var trött",
+          "Hon ville prata med barnen",
+          "Det regnade"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sa Saga att man får kanelbullar?",
+        "options": [
+          "Hon menade att hjälpsamhet kan ge goda saker tillbaka",
+          "Hon ville ha fler bullar",
+          "Hon tyckte inte det var roligt att hjälpa",
+          "Hon var hungrig och tänkte bara på mat"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-004",
+    "grade": 2,
+    "genre": "faktatext",
+    "theme": "väder",
+    "title": "Vad är snö?",
+    "text": "När det är tillräckligt kallt ute kan det börja snöa. Snö är egentligen vatten som har frusit till iskristaller uppe i molnen. Varje snöflinga ser lite annorlunda ut, men de flesta har sex armar.\n\nNär snöflingorna blir tillräckligt tunga faller de ner mot marken. Om luften är kall hela vägen ner landar de som snö. Om det är varmare nere vid marken kan de smälta och bli regn istället.\n\nSnö kan vara lös och fluffig eller tung och blöt. Lös snö är bra att åka skidor i. Blöt snö är bra att göra snöbollar och snögubbar av.\n\nDjur hanterar snö på olika sätt. Haren byter till vit päls på vintern för att gömma sig. Räven gräver i snön för att hitta möss. Och ekorren sover mycket och lever på nötter som den gömde under hösten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är snö egentligen?",
+        "options": [
+          "Kallt damm",
+          "Vatten som frusit till iskristaller",
+          "Vit sand som faller",
+          "Moln som ramlat ner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur många armar har de flesta snöflingor?",
+        "options": [
+          "Fyra",
+          "Fem",
+          "Sex",
+          "Åtta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken sorts snö är bra för snöbollar?",
+        "options": [
+          "Lös och fluffig",
+          "Tung och blöt",
+          "Hård och isig",
+          "Lätt och torr"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör haren på vintern?",
+        "options": [
+          "Den sover hela vintern",
+          "Den flyger söderut",
+          "Den byter till vit päls",
+          "Den simmar under isen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir snöflingorna till regn ibland?",
+        "options": [
+          "De är för tunga",
+          "De smälter om luften är varm",
+          "Solen skiner på dem",
+          "Vinden blåser för hårt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför byter haren till vit päls?",
+        "options": [
+          "Så den fryser mindre",
+          "Så den syns bättre",
+          "Så den kan gömma sig i snön",
+          "Så andra harar känner igen den"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-005",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "fantasi",
+    "title": "Kartan i boken",
+    "text": "Leo hittade en gammal bok i bokhyllan hemma. Inuti pärmen satt en liten karta. Det stod \"Skatten under stora stenen\" med blyerts.\n\n\"Titta!\" sa Leo till sin storasyster Meja. \"Det är en skattkarta!\"\n\nMeja tittade noga. \"Det ser ut som vår trädgård. Ser du? Där är trädet och där är gången.\"\n\nDe sprang ut med kartan. De följde den förbi buskarna, runt trädet och fram till en stor sten vid staketet.\n\n\"Gräv!\" sa Leo.\n\nMeja hittade en spade. De grävde och grävde. Plötsligt hörde de ett klonk. I jorden låg en gammal plåtburk. Inuti fanns tre stenar, en pärla av glas och en lapp. På lappen stod det: \"Till den som hittar skatten. Från Maja, 2014.\"\n\n\"Vem är Maja?\" frågade Leo.\n\n\"Kanske någon som bodde här förut,\" sa Meja.\n\nDe lade tillbaka burken och ritade en ny karta. Nu var det deras tur att gömma en skatt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittade Leo kartan?",
+        "options": [
+          "I en låda",
+          "Inuti en bok i bokhyllan",
+          "Under sin säng",
+          "I trädgården"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad stod på kartan?",
+        "options": [
+          "Skatten vid bäcken",
+          "Skatten under stora stenen",
+          "Skatten i trädet",
+          "Skatten i källaren"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad fanns i plåtburken?",
+        "options": [
+          "Pengar och godis",
+          "Tre stenar, en pärla av glas och en lapp",
+          "En nyckel och en ring",
+          "Sand och snäckor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem hade gömt skatten?",
+        "options": [
+          "Leo",
+          "Meja",
+          "Maja",
+          "Pappa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lade de tillbaka burken?",
+        "options": [
+          "De ville inte ha den",
+          "De tyckte det var roligare om någon annan också kunde hitta en skatt",
+          "De var rädda för att få skäll",
+          "Burken var för tung att bära"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ritade de en ny karta?",
+        "options": [
+          "De ville göra en läxa",
+          "De ville att någon i framtiden ska hitta deras skatt",
+          "Meja behövde öva sig på att rita",
+          "De hade tappat den gamla kartan"
+        ],
+        "correct": 1
+      }
+    ]
   },
   {
     "id": "ak5-vanskap-01",
@@ -11015,7 +11395,7 @@
       {
         "q": "Vilken huvudpoäng driver texten om varför källkritik behövs i vardagen?",
         "options": [
-          "Att information alltid är falsk tills motsatsen bevisats baserat på en tolkning av materialet",
+          "Att information alltid är falsk tills motsatsen bevisats",
           "Att information ofta är utvald och presenterad med ett syfte",
           "Att det är bäst att undvika digitala medier helt",
           "Att bara experter kan förstå nyheter"
@@ -11035,7 +11415,7 @@
       {
         "q": "Vilken tolkning ligger närmast textens syn på avsändare och syfte?",
         "options": [
-          "Om avsändaren har ett syfte blir innehållet automatiskt fel och därmed skapa förändring",
+          "Om avsändaren har ett syfte blir innehållet automatiskt fel",
           "Avsändare och syfte kan påverka vad som betonas även när fakta stämmer",
           "Syfte spelar ingen roll om man läser långsamt",
           "Endast myndigheter kan ha neutrala syften"
@@ -11087,7 +11467,7 @@
         "options": [
           "AI kan användas som stöd om tydliga mål, transparens och processbedömning finns",
           "AI spelar liten roll och bör lämnas åt eleverna själva",
-          "AI är alltid positivt och bör ersätta traditionella uppgifter i det aktuella sammanhanget",
+          "AI är alltid positivt och bör ersätta traditionella uppgifter",
           "AI bör förbjudas helt för att skydda kunskapsmätningen"
         ],
         "correct": 0
@@ -11257,7 +11637,7 @@
         "options": [
           "Den visar att tolkningar alltid är fel",
           "Den visar att fakta är oviktiga jämfört med känslor",
-          "Den visar att alla källor kan rangordnas utan problem baserat på en tolkning av materialet",
+          "Den visar att alla källor kan rangordnas utan problem",
           "Den visar ett försök att hantera komplexitet och göra resonemanget spårbart"
         ],
         "correct": 3
@@ -11327,7 +11707,7 @@
         "options": [
           "Att plugga dubbelt så länge nästa dag för att kompensera",
           "Att bara göra enkla uppgifter för att undvika stress",
-          "Att vänta tills man känner stark motivation, eftersom kvaliteten då blir högre som en grundläggande förutsättning",
+          "Att vänta tills man känner stark motivation",
           "Att göra starten mycket liten för att sänka tröskeln och minska behovet av att fly undan"
         ],
         "correct": 3
@@ -11337,7 +11717,7 @@
         "options": [
           "Hjälpsam planering minskar beslut i stunden, medan fällan ger kontrollkänsla utan att leda till handling",
           "Hjälpsam planering gör pauser onödiga, medan fällan kräver fler pauser",
-          "Hjälpsam planering fungerar bara för extroverta, medan fällan drabbar introverta för att nå det avsedda målet",
+          "Hjälpsam planering fungerar bara för extroverta, medan fällan drabbar introverta",
           "Hjälpsam planering kräver att man fyller varje minut, medan fällan lämnar luckor"
         ],
         "correct": 0
@@ -11369,7 +11749,7 @@
           "Att den är användbar för ett visst syfte och att antagandena är tydliga",
           "Att den alltid kan ge ett enda exakt värde",
           "Att den beskriver verkligheten i alla detaljer",
-          "Att den främst är värdefull om den är helt oberoende av data som en del av processen"
+          "Att den är oberoende av historiska data"
         ],
         "correct": 0
       },
@@ -11379,7 +11759,7 @@
           "Att jämförelser mellan modeller blir meningslösa",
           "Att modeller blir mer neutrala över tid",
           "Att viktiga fenomen kan osynliggöras om de inte passar in i modellens struktur",
-          "Att osäkerhet kan elimineras genom standardvärden enligt den beskrivna modellen"
+          "Att osäkerhet kan elimineras genom standardvärden"
         ],
         "correct": 2
       },
@@ -11388,7 +11768,7 @@
         "options": [
           "För att exakta tal kan dölja att resultatet vilar på starka antaganden",
           "För att intervall aldrig är vetenskapliga",
-          "För att exakta tal alltid kommer från dåliga mätningar och därmed skapa förändring",
+          "För att exakta tal alltid kommer från dåliga mätningar",
           "För att känslighetsanalyser alltid ger samma resultat"
         ],
         "correct": 0
@@ -11409,7 +11789,7 @@
           "Att flera modeller alltid motsäger varandra",
           "Att modellerna kan dela samma blinda fläck även om de verkar oberoende",
           "Att policy aldrig bör använda modeller",
-          "Att känslighetsanalys inte går att göra med flera modeller utifrån det givna perspektivet"
+          "Att känslighetsanalys inte fungerar med flera modeller"
         ],
         "correct": 1
       },
@@ -11417,7 +11797,7 @@
         "q": "Vilket påstående sammanfattar bäst textens normativt orienterade poäng om modeller?",
         "options": [
           "Modeller kan forma uppfattningar om vad som är rimligt och därmed påverka beslut",
-          "Modeller är främst ett pedagogiskt verktyg utan praktiska konsekvenser som en grundläggande förutsättning",
+          "Modeller är främst pedagogiska verktyg utan praktiska konsekvenser",
           "Modeller påverkar endast forskning, inte samhälleliga prioriteringar",
           "Modeller är värdeneutrala om de är matematiskt formulerade"
         ],
@@ -11440,7 +11820,7 @@
           "Förtätning är ett verktyg vars effekter beror på villkor och genomförande",
           "Förtätning saknar betydelse för klimatfrågan",
           "Förtätning är i grunden skadlig för social hållbarhet",
-          "Förtätning bör alltid prioriteras framför utbyggnad utåt med hänsyn till flera aspekter"
+          "Förtätning bör alltid prioriteras framför utbyggnad utåt"
         ],
         "correct": 0
       },
@@ -11450,14 +11830,14 @@
           "Som ett sätt att visa att effekter kan vara kumulativa och systemiska, inte bara lokala",
           "Som bevis för att förtätning alltid leder till större parker",
           "Som ett argument för att service inte behöver planeras samtidigt",
-          "Som ett exempel på att estetiska frågor alltid väger tyngre än bostadsbehov och därmed skapa förändring"
+          "Som ett exempel på att estetik väger tyngre än bostadsbehov"
         ],
         "correct": 0
       },
       {
         "q": "Vilket antagande måste vara sant för att argumentet om minskat bilberoende ska hålla i praktiken?",
         "options": [
-          "Att bostadspriserna automatiskt sjunker när man bygger tätare i det aktuella sammanhanget",
+          "Att bostadspriserna automatiskt sjunker när man bygger tätare",
           "Att människor alltid föredrar att gå oavsett avstånd",
           "Att funktionsblandning och kollektivtrafik faktiskt fungerar och är tillgängliga",
           "Att nybyggnation sker i helt bilfria zoner"
@@ -11538,7 +11918,7 @@
       {
         "q": "Varför kan två populationer av samma art enligt texten inte alltid betraktas som utbytbara i bevarandearbete?",
         "options": [
-          "För att laboratorieanalys gör jämförelser omöjliga som en grundläggande förutsättning",
+          "För att laboratorieanalys är för dyr",
           "För att genetisk drift ökar artantalet",
           "För att artbestämning är godtycklig",
           "För att genetisk mångfald och anpassningsförmåga kan skilja sig mellan populationer"
@@ -11558,7 +11938,7 @@
       {
         "q": "Vilket val av frågeställning skulle enligt textens logik mest motivera ett fokus på genetisk mångfald?",
         "options": [
-          "Att uppskatta antalet arter i ett naturreservat under en dag i det aktuella sammanhanget",
+          "Att uppskatta antalet arter i ett naturreservat",
           "Att jämföra blomningstid mellan två växter",
           "Att räkna hur många individer som syns längs en stig",
           "Att bedöma en arts långsiktiga anpassningsförmåga vid snabb miljöförändring"
@@ -11581,7 +11961,7 @@
         "options": [
           "Skillnaden mellan formell frihet och faktisk frihet",
           "Skillnaden mellan heltid och deltid",
-          "Skillnaden mellan offentligt och privat ägande i det aktuella sammanhanget",
+          "Skillnaden mellan offentligt och privat ägande",
           "Skillnaden mellan utbildning och erfarenhet"
         ],
         "correct": 0
@@ -11590,7 +11970,7 @@
         "q": "Hur beskrivs algoritmens roll i relation till arbetstagarens handlingsutrymme?",
         "options": [
           "Som en neutral kalender som inte påverkar beteenden",
-          "Som ett verktyg som alltid höjer ersättningen vid låg efterfrågan baserat på en tolkning av materialet",
+          "Som ett verktyg som alltid höjer ersättningen vid låg efterfrågan",
           "Som en garanti för stabil inkomst",
           "Som en mekanism som kan göra nej-sägande kostsamt genom belöningar och prioriteringar"
         ],
@@ -11650,7 +12030,7 @@
       {
         "q": "Vilken är textens mest centrala förklaring till varför ansvar blir svårt att placera i AI-stödda beslut?",
         "options": [
-          "Att AI alltid är exakt och därför saknar felkällor för att nå det avsedda målet",
+          "Att AI alltid är exakt och därför saknar felkällor",
           "Att ansvaret fördelas över flera aktörer och steg i kedjan",
           "Att människor inte längre påverkas av beslut",
           "Att data inte behövs för AI-modeller"
@@ -11703,7 +12083,7 @@
           "Hur ansvar organiseras påverkar relationen mellan beslutsfattare och de som berörs, och därmed tilliten",
           "Legitimitet påverkas inte av hur beslut fattas",
           "Automatisering gör alltid beslutsprocesser mer demokratiska",
-          "Ansvar i automatiserade beslut är främst en teknisk fråga utan samhällsdimension i det aktuella sammanhanget"
+          "Ansvar i automatiserade beslut är främst en teknisk fråga utan samhällsdimension"
         ],
         "correct": 0
       }
@@ -11731,7 +12111,7 @@
         "options": [
           "Den påverkar bara om mottagaren redan håller med om slutsatsen.",
           "Den kan fungera som en signal som ersätter eller försvagar kontroll av innehållets stöd.",
-          "Den gör att mottagaren automatiskt söker primärkällor innan delning och därmed skapa förändring"
+          "Den gör att mottagaren automatiskt söker primärkällor"
         ],
         "correct": 1
       },
@@ -11749,7 +12129,7 @@
         "options": [
           "Att de kan använda samma begrepp men bygga dem på olika definitioner och mätningar.",
           "Att de kan ha olika typsnitt och därmed olika trovärdighet.",
-          "Att de kan ha olika längd och därmed olika grad av noggrannhet som en del av processen"
+          "Att de kan ha olika längd och därmed olika noggrannhet"
         ],
         "correct": 0
       },
@@ -11757,7 +12137,7 @@
         "q": "I texten kopplas tvärsäkerhet och försiktighet till trovärdighet. Vilken tolkning stämmer bäst?",
         "options": [
           "Försiktighet kan signalera att avsändaren redovisar osäkerheter och felkällor, vilket kan öka tilliten.",
-          "Försiktighet är alltid ett tecken på bristande kunskap och bör därför ses som en varningssignal baserat på en tolkning av materialet",
+          "Försiktighet är alltid ett tecken på bristande kunskap",
           "Tvärsäkerhet är en nödvändig markör för kvalitet eftersom forskning ska ge entydiga svar."
         ],
         "correct": 0
@@ -11765,7 +12145,7 @@
       {
         "q": "Vilken arbetsstrategi ligger närmast textens idé om källkritik på universitetsnivå?",
         "options": [
-          "Att avgöra trovärdighet främst genom avsändarens status och sedan acceptera slutsatsen och därmed skapa förändring",
+          "Att avgöra trovärdighet främst genom avsändarens status",
           "Att formulera vilka uppgifter som skulle behövas för att stärka eller försvaga ett påstående.",
           "Att undvika osäkerhet genom att endast läsa texter som uttrycker tydliga slutsatser."
         ],
@@ -11785,7 +12165,7 @@
         "q": "Vilken tes driver texten starkast, sett till hur argumenten byggs upp?",
         "options": [
           "Öppen data är värdefull, men bör styras av risk- och syftesbedömningar snarare än absolut princip.",
-          "Öppen data bör alltid prioriteras eftersom samhällsnyttan i längden överstiger alla risker som en del av processen",
+          "Öppen data bör alltid prioriteras eftersom samhällsnyttan överstiger riskerna",
           "Öppen data bör undvikas eftersom anonymisering i praktiken inte fungerar."
         ],
         "correct": 0
@@ -11794,7 +12174,7 @@
         "q": "Vad menas i texten med att information kan få \"nya egenskaper när den kombineras\"?",
         "options": [
           "Att data kan bli identifierande eller skadlig först när den kopplas ihop med andra dataset.",
-          "Att data tappar sitt värde om den inte presenteras i samma format som originalet som en grundläggande förutsättning",
+          "Att data tappar sitt värde om den inte presenteras i samma format",
           "Att data ofta blir mindre exakt när flera källor blandas."
         ],
         "correct": 0
@@ -11804,14 +12184,14 @@
         "options": [
           "Att anonymisering alltid leder till att resultat blir politiskt vinklade.",
           "Att anonymisering innebär avvägningar mellan användbarhet och risk, och därför inte löser frågan ensam.",
-          "Att anonymisering kräver att man redan känner till alla tänkbara framtida analyser baserat på en tolkning av materialet"
+          "Att anonymisering kräver att man känner till alla framtida analyser"
         ],
         "correct": 1
       },
       {
         "q": "Varför framstår \"gradvis åtkomst\" som ett kompromissförslag enligt textens logik?",
         "options": [
-          "För att den gör all data lika öppen men med längre fördröjning innan publicering som en grundläggande förutsättning",
+          "För att den gör all data lika öppen men med längre fördröjning",
           "För att den behåller någon form av återanvändbarhet men fördelar risk genom villkor och begränsning.",
           "För att den ersätter behovet av insyn med tekniska säkerhetssystem."
         ],
@@ -11821,7 +12201,7 @@
         "q": "Vilken förutsättning antyds för att öppen data ska behålla legitimitet över tid?",
         "options": [
           "Att endast privata aktörer får använda data för att undvika politisk påverkan.",
-          "Att datamängder alltid publiceras i rå form så att alla kan granska dem fullt ut för att nå det avsedda målet",
+          "Att datamängder alltid publiceras i rå form så att alla kan granska dem",
           "Att riskbedömningar och ansvarsmekanismer är tydliga när publicering kan få negativa effekter."
         ],
         "correct": 2
@@ -11829,7 +12209,7 @@
       {
         "q": "Vilket påstående passar bäst som textens underliggande värdeprioritering?",
         "options": [
-          "Innovation kräver full öppenhet, och därför är detaljerad data alltid att föredra som en grundläggande förutsättning",
+          "Innovation kräver full öppenhet, och därför är detaljerad data alltid att föredra",
           "Integritet är överordnad alla andra värden och bör alltid stoppa publicering.",
           "Insyn är viktig, men bör inte automatiskt ske på bekostnad av individers ofrivilliga exponering."
         ],
@@ -11857,7 +12237,7 @@
       {
         "q": "Varför beskrivs \"landningsbordet\" tidigt i texten, tror du?",
         "options": [
-          "För att visa att rummet saknar tydlig struktur och därför behöver en samlingsplats i det aktuella sammanhanget",
+          "För att visa att rummet saknar tydlig struktur",
           "För att framhäva att det viktigaste arbetet sker i spontana samtal nära entrén.",
           "För att markera en övergång där människor kan byta tempo innan de går in i mer fokuserade zoner."
         ],
@@ -11866,7 +12246,7 @@
       {
         "q": "Vilken funktion får bokhyllorna i textens beskrivning, utöver att förvara saker?",
         "options": [
-          "De visar främst status och signalerar vilka som har längst erfarenhet utifrån det givna perspektivet",
+          "De visar främst status och signalerar vilka som har längst erfarenhet",
           "De används för att göra gångarna smalare och därmed minska rörelse.",
           "De fungerar som visuella och akustiska gränser som delar upp rummet utan att stänga det."
         ],
@@ -11876,7 +12256,7 @@
         "q": "Vilken slutsats kan dras om \"torget\" i mitten, utifrån hur ljud och kroppsspråk beskrivs?",
         "options": [
           "Det är en plats som främst är till för att dölja störande ljud från resten av kontoret.",
-          "Det är en plats som främst används för individuellt arbete eftersom belysningen är stark som en grundläggande förutsättning",
+          "Det är en plats som främst används för individuellt arbete",
           "Det är en plats där idéer prövas informellt och där arbetsrollen tillfälligt blir mer social."
         ],
         "correct": 2
@@ -11885,7 +12265,7 @@
         "q": "I sista stycket används ordet \"rytm\". Vad syftar det mest på?",
         "options": [
           "Ett mönster av växling mellan olika intensiteter och sociala nivåer, stödjat av miljön.",
-          "En fast daglig rutin där alla arbetar i samma tempo vid samma tider baserat på en tolkning av materialet",
+          "En fast daglig rutin där alla arbetar i samma tempo",
           "Ett sätt att mäta produktivitet i antal rörelser mellan zoner."
         ],
         "correct": 0
@@ -11893,7 +12273,7 @@
       {
         "q": "Vilken underliggande idé om produktivitet antyds snarare än sägs rakt ut?",
         "options": [
-          "Att produktivitet främst uppstår genom spontana avbrott och ständig dialog som en grundläggande förutsättning",
+          "Att produktivitet främst uppstår genom spontana avbrott",
           "Att produktivitet består av flera tillstånd som kräver olika typer av rumsligt stöd.",
           "Att produktivitet kräver långvarig tystnad och minimalt samarbete."
         ],
@@ -11912,7 +12292,7 @@
       {
         "q": "Vilken konflikt ligger mest sannolikt under ytan i mötet, utifrån hur deltagarna agerar?",
         "options": [
-          "En konflikt om huruvida utbildning över huvud taget behövs i organisationen och därmed skapa förändring",
+          "En konflikt om huruvida utbildning över huvud taget behövs",
           "En konflikt mellan att vilja framstå som positiv och att vilja undvika risk och extra belastning.",
           "En konflikt om vem som ska få mest erkännande när förändringen lyckas."
         ],
@@ -11922,7 +12302,7 @@
         "q": "Vad fyller beskrivningen av pilarna på presentationen för funktion i berättelsen?",
         "options": [
           "Den kontrasterar ett förenklat, linjärt narrativ mot den mer komplexa verkligheten i rummet.",
-          "Den antyder att förändringen i praktiken redan är genomförd och bara behöver kommuniceras som en del av processen",
+          "Den antyder att förändringen redan är genomförd och bara behöver kommuniceras",
           "Den visar att chefen har en detaljerad plan som redan är fullt förankrad."
         ],
         "correct": 0
@@ -11931,7 +12311,7 @@
         "q": "Vilken tolkning av Jonas beteende stöds bäst av textens detaljer?",
         "options": [
           "Han är entusiastisk och helt obekymrad inför pilotens konsekvenser.",
-          "Han är motståndare till förändringen och vill sabotera processen öppet som en del av processen",
+          "Han är motståndare till förändringen och vill sabotera processen",
           "Han försöker framstå som positiv, men visar samtidigt spänning och ett behov av kontroll."
         ],
         "correct": 2
@@ -11958,7 +12338,7 @@
         "q": "Vilket budskap kan läsas in i Saras sista tanke om vad som avgör förändringen?",
         "options": [
           "Att människors tolkningar och upplevda förluster ofta styr utfallet mer än själva planen.",
-          "Att förändring främst är en kommunikationsfråga där rätt ordval löser motstånd och därmed skapa förändring",
+          "Att förändring främst är en kommunikationsfråga där rätt ordval löser motstånd",
           "Att en tydlig plan alltid räcker, eftersom människor i längden anpassar sig."
         ],
         "correct": 0
@@ -11978,7 +12358,7 @@
         "options": [
           "Olika studier blir bara jämförbara om de alltid använder exakt samma modell och variabler.",
           "Samma numeriska resultat kan få olika innebörd beroende på inramning, antaganden och relevanta jämförelser.",
-          "Statistikens huvudsakliga problem är att den ofta innehåller felräkning och därför bör undvikas enligt den beskrivna modellen"
+          "Statistikens huvudsakliga problem är att den ofta innehåller felräkning"
         ],
         "correct": 1
       },
@@ -11986,7 +12366,7 @@
         "q": "Varför menar texten att relativ och absolut förändring kan påverka beslut olika?",
         "options": [
           "För att absolut förändring alltid är mer vetenskaplig än relativ förändring.",
-          "För att de beskriver olika data och därför sällan kan vara samtidigt korrekta utifrån det givna perspektivet",
+          "För att de beskriver olika data och därför sällan kan vara samtidigt korrekta",
           "För att de tenderar att aktivera olika tolkningar av hur stor förändringen upplevs vara."
         ],
         "correct": 2
@@ -11994,7 +12374,7 @@
       {
         "q": "Vilken distinktion mellan statistisk signifikans och praktisk betydelse antyds som viktigast?",
         "options": [
-          "Att signifikans handlar om effektens storlek, medan praktisk betydelse handlar om urvalets storlek för att nå det avsedda målet",
+          "Att signifikans handlar om effektens storlek, medan praktisk betydelse handlar om urvalets storlek",
           "Att signifikans kan uppstå även vid små effekter, och därför måste effektstorlek och kontext vägas in.",
           "Att praktisk betydelse kan avgöras direkt genom att titta på p-värdet utan andra mått."
         ],
@@ -12005,7 +12385,7 @@
         "options": [
           "Att kontrollvariabler alltid förvränger resultat och därför inte bör användas.",
           "Att vissa variabler kan ligga i orsakskedjan, så kontroll kan dölja ett samband man försöker förklara.",
-          "Att statistiska modeller fungerar bäst när de endast innehåller en variabel åt gången baserat på en tolkning av materialet"
+          "Att statistiska modeller fungerar bäst med endast en variabel"
         ],
         "correct": 1
       },
@@ -12013,7 +12393,7 @@
         "q": "Vilken tolkning av generaliserbarhet ligger närmast textens resonemang?",
         "options": [
           "Generaliserbarhet avgörs främst av om studien har använt en avancerad modell.",
-          "Ett robust resultat är automatiskt giltigt för alla populationer om det är signifikant baserat på en tolkning av materialet",
+          "Ett robust resultat är automatiskt giltigt för alla populationer om det är signifikant",
           "Generaliserbarhet beror på hur väl urval och villkor matchar den situation man vill uttala sig om."
         ],
         "correct": 2
@@ -12022,7 +12402,7 @@
         "q": "Varför avslutar texten med att beskriva statistik som ett \"språk\"?",
         "options": [
           "För att visa att statistik främst handlar om retorik och inte om mätningar.",
-          "För att antyda att statistiska resultat alltid kan översättas till en enda entydig slutsats för att nå det avsedda målet",
+          "För att antyda att statistiska resultat alltid kan översättas till en enda entydig slutsats",
           "För att betona att tolkning kräver aktiva frågor om jämförelser, antaganden och alternativa förklaringar."
         ],
         "correct": 2
@@ -14200,6 +14580,356 @@
     ]
   },
   {
+    "id": "ak4-tema-006",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "rymden",
+    "title": "Varför månen ändrar form",
+    "text": "Om du tittar på månen flera kvällar i rad ser du att den verkar ändra form. Ibland är den rund som en boll, ibland ser du bara en tunn skära, och ibland syns den knappt alls. Men månen byter egentligen inte form. Den är alltid rund.\n\nDet som förändras är hur mycket av månens belysta sida vi kan se från jorden. Månen lyser inte själv utan reflekterar ljus från solen. När månen befinner sig mellan solen och jorden vänds den belysta sidan bort från oss, och då ser vi nästan ingenting. Det kallas nymåne.\n\nEfter det börjar en allt större del av den belysta sidan synas. När hela den belysta sidan är vänd mot oss har vi fullmåne. Sedan minskar den synliga delen igen.\n\nHela kretsloppet tar ungefär en månad. Ordet månad kommer faktiskt från ordet måne. Människor har i tusentals år använt månens faser för att hålla reda på tiden.",
+    "questions": [
+      {
+        "q": "Vad händer egentligen med månens form?",
+        "options": [
+          "Den krymper och växer varje vecka",
+          "Den är alltid rund men vi ser olika mycket av den belysta sidan",
+          "Den smälter och fryser om vartannat",
+          "Den byter form beroende på årstid"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kallas det när vi inte kan se månen?",
+        "options": [
+          "Halvmåne",
+          "Fullmåne",
+          "Nymåne",
+          "Kvartsmåne"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur lång tid tar månens kretslopp?",
+        "options": [
+          "Ungefär en vecka",
+          "Ungefär ett år",
+          "Ungefär en månad",
+          "Ungefär ett dygn"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför lyser månen enligt texten?",
+        "options": [
+          "Den har ett eget ljus som tänds på kvällen",
+          "Den reflekterar ljus från solen",
+          "Stjärnorna omkring den lyser upp den",
+          "Jorden skickar ljus till den"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan man dra för slutsats av att ordet månad kommer från måne?",
+        "options": [
+          "Att människor förr inte visste vad månen var",
+          "Att månen förr användes för att mäta tid",
+          "Att alla språk har samma ord för måne",
+          "Att en månad alltid har exakt 30 dagar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad verkar vara textens huvudsyfte?",
+        "options": [
+          "Att berätta en saga om månen",
+          "Att jämföra månen med andra planeter",
+          "Att förklara varför månen ser olika ut",
+          "Att beskriva hur astronauter reser till månen"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-007",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Igelkotten i trädgården",
+    "text": "En kväll i september satt Noa på trappen och åt ett äpple. Det var nästan mörkt, och luften var sval. Plötsligt hörde han ett prasslande ljud bland löven vid busken.\n\nNoa smög närmare. Där, halvt gömd under ett gult lönnlöv, rullade något litet och taggigt. Det var en igelkott. Den rörde sig långsamt och nosade på marken.\n\nNoa sprang in och frågade sin mamma vad igelkottar äter. Hon berättade att de gillar insekter, maskar och ibland kattmat. Hon sa också att man inte ska ge dem mjölk, för det mår de dåligt av.\n\nNoa ställde ut en liten skål med vatten och lite kattmat. Sedan satte han sig på trappen igen och väntade. Efter en stund kom igelkotten fram och började äta. Den verkade inte rädd.\n\nNästa morgon var skålen tom. Noa log. Han bestämde sig för att läsa mer om igelkottar och hur man kan hjälpa dem inför vintern, när de ska gå i ide.",
+    "questions": [
+      {
+        "q": "När på året utspelar sig berättelsen?",
+        "options": [
+          "I juli på sommaren",
+          "I september på hösten",
+          "I december på vintern",
+          "I mars på våren"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad fick Noa veta att man inte ska ge igelkottar?",
+        "options": [
+          "Vatten",
+          "Kattmat",
+          "Mjölk",
+          "Äpplen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad ställde Noa ut till igelkotten?",
+        "options": [
+          "Mjölk och bröd",
+          "Vatten och kattmat",
+          "Äpplen och nötter",
+          "Maskar och insekter"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför tror du att Noa ville läsa mer om igelkottar?",
+        "options": [
+          "Han ville fånga den och ha den som husdjur",
+          "Han ville skriva en bok om djur",
+          "Han blev nyfiken och ville hjälpa den",
+          "Han var rädd för den och ville skydda sig"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder att igelkotten ska gå i ide?",
+        "options": [
+          "Att den flyttar till en annan trädgård",
+          "Att den sover under vintern",
+          "Att den bygger ett bo åt sina ungar",
+          "Att den letar efter mat i skogen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar berättelsen om Noas sätt att vara?",
+        "options": [
+          "Att han är otålig och vill ha saker direkt",
+          "Att han bryr sig om djur och vill lära sig mer",
+          "Att han är rädd för det mesta i naturen",
+          "Att han helst vill vara inne och titta på TV"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-008",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "kroppen",
+    "title": "Hur kroppen läker ett sår",
+    "text": "När du skrapar knäet eller skär dig i fingret börjar kroppen genast jobba med att laga skadan. Det första som händer är att blodet vid såret tjocknar och bildar en propp. Den proppen stoppar blödningen. Efter ett tag torkar proppen och blir till en skorpa.\n\nUnder skorpan pågår reparationen. Vita blodkroppar åker till området och dödar bakterier som kan ha kommit in. Sedan börjar kroppen bygga ny hud. Speciella celler skapar nytt material som fyller igen hålet.\n\nIbland kan ett sår bli rött och svullet. Det är ett tecken på att kroppen kämpar mot bakterier. Om det gör mycket ont eller inte blir bättre kan man behöva hjälp av en vuxen eller en sjuksköterska.\n\nDet är viktigt att hålla såret rent. Smuts kan göra att läkningen tar längre tid. Att tvätta försiktigt med vatten och skydda såret med ett plåster hjälper kroppen.\n\nEfter några dagar eller veckor lossnar skorpan, och under den finns ny, hel hud. Det är kroppens eget sätt att reparera sig själv.",
+    "questions": [
+      {
+        "q": "Vad är det första som händer när man får ett sår?",
+        "options": [
+          "Huden blir blå runt såret",
+          "Blodet tjocknar och bildar en propp",
+          "Nya celler bildas direkt",
+          "Bakterier städar bort smuts"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad gör vita blodkroppar enligt texten?",
+        "options": [
+          "De bygger ny hud",
+          "De stoppar blödningen",
+          "De dödar bakterier vid såret",
+          "De gör att skorpan lossnar"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad kan rödhet och svullnad vid ett sår vara tecken på?",
+        "options": [
+          "Att såret är helt läkt",
+          "Att kroppen kämpar mot bakterier",
+          "Att man behöver mer mat",
+          "Att blodet har slutat rinna"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför ska man hålla ett sår rent?",
+        "options": [
+          "För att såret ska blöda mer",
+          "För att skorpan ska lossna snabbare",
+          "För att smuts kan göra läkningen långsammare",
+          "För att vita blodkroppar inte gillar vatten"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder reparera i texten?",
+        "options": [
+          "Riva ner och börja om",
+          "Laga och göra helt igen",
+          "Tvätta med tvål och vatten",
+          "Flytta till en annan plats"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad verkar texten vilja visa om kroppen?",
+        "options": [
+          "Att kroppen alltid behöver medicin för att läka",
+          "Att sår aldrig läker utan sjukhus",
+          "Att kroppen har ett eget system för att laga skador",
+          "Att man ska undvika att röra sig utomhus"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-009",
+    "grade": 4,
+    "genre": "förklarande",
+    "theme": "väder",
+    "title": "Hur moln bildas",
+    "text": "Moln ser ut som mjuka klumpar av bomull på himlen, men de består egentligen av miljontals små vattendroppar eller iskristaller. För att förstå hur moln bildas behöver man veta lite om vatten och luft.\n\nNär solen värmer upp vatten i sjöar, hav och vattenpölar avdunstar en del av vattnet. Det betyder att vattnet blir till vattenånga, en osynlig gas som stiger uppåt med luften.\n\nJu högre vattenångan stiger, desto kallare blir det. Till slut blir luften så kall att vattenångan inte kan vara gas längre. Då samlas den runt små partiklar i luften, som damm eller pollen, och bildar små droppar. Många sådana droppar tillsammans bildar ett moln.\n\nOlika moln ser olika ut. Tunna, höga moln brukar betyda fint väder. Tjocka, mörka moln kan betyda regn. När dropparna i molnet blir tillräckligt stora och tunga faller de ner som regn eller snö.\n\nSå vattnet rör sig hela tiden i ett kretslopp: från marken uppåt och tillbaka ner igen.",
+    "questions": [
+      {
+        "q": "Vad består moln av enligt texten?",
+        "options": [
+          "Bomull och gas",
+          "Damm och sand",
+          "Små vattendroppar eller iskristaller",
+          "Rök från fabriker"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad händer med vatten när solen värmer det?",
+        "options": [
+          "Det fryser till is",
+          "Det avdunstar och blir vattenånga",
+          "Det sjunker ner i marken",
+          "Det blir salt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Runt vad samlas vattenångan när den blir till droppar?",
+        "options": [
+          "Runt andra moln",
+          "Runt fåglar som flyger",
+          "Runt flygplan i luften",
+          "Runt små partiklar som damm"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad brukar tunna, höga moln betyda?",
+        "options": [
+          "Att det snart blir storm",
+          "Att det troligen blir fint väder",
+          "Att det ska hagla",
+          "Att det blir mörkt snart"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder avdunstar i texten?",
+        "options": [
+          "Att vattnet försvinner för alltid",
+          "Att vattnet fryser till is",
+          "Att vattnet blir till osynlig gas",
+          "Att vattnet rinner nedåt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför kallar texten det ett kretslopp?",
+        "options": [
+          "För att vattnet bara rör sig åt ett håll",
+          "För att vattnet rör sig i en cykel som upprepas",
+          "För att molnen alltid ser likadana ut",
+          "För att regn bara faller på vissa platser"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak4-tema-010",
+    "grade": 4,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Klassmötet",
+    "text": "Varje fredag hade klass 4B ett klassmöte. Den här veckan var det Elins tur att vara ordförande. Hon satte sig längst fram och öppnade sitt block.\n\n\"Finns det något som någon vill ta upp?\" frågade hon.\n\nOliver räckte upp handen. \"Jag tycker att vi ska få välja bok själva på lässtunden i stället för att alla läser samma.\"\n\nNågra nickade. Men Fatima sa: \"Om vi alla läser samma bok kan vi prata om den efteråt. Det är också bra.\"\n\nElin antecknade båda åsikterna. Sedan frågade hon om fler ville säga något. Isak föreslog att klassen kunde byta varannan vecka – ibland samma bok, ibland eget val.\n\n\"Ska vi rösta?\" frågade Elin. Alla höll upp handen för Isaks förslag. Det blev enhälligt.\n\nElin skrev ner beslutet och sa att hon skulle visa det för fröken Annika. Klassmötet avslutades och alla gick ut på rast.\n\nPå vägen ut sa Oliver till Fatima: \"Din idé var bra också. Därför blev det ju en blandning.\"",
+    "questions": [
+      {
+        "q": "Vad hade Elin för roll på klassmötet?",
+        "options": [
+          "Hon var sekreterare",
+          "Hon var ordförande",
+          "Hon var lärare",
+          "Hon var tidtagare"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad ville Oliver att klassen skulle få göra?",
+        "options": [
+          "Slippa lässtunden helt",
+          "Välja bok själv på lässtunden",
+          "Läsa två böcker samtidigt",
+          "Byta lärare varje vecka"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad blev resultatet av röstningen?",
+        "options": [
+          "Alla röstade för Olivers förslag",
+          "Alla röstade för Fatimas förslag",
+          "Alla röstade för Isaks förslag om att byta varannan vecka",
+          "De kunde inte bestämma sig"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför tyckte Fatima att samma bok kunde vara bra?",
+        "options": [
+          "För att det var billigare för skolan",
+          "För att man då kan prata om boken efteråt",
+          "För att hon inte gillade att välja själv",
+          "För att läraren hade bestämt det"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder enhälligt i texten?",
+        "options": [
+          "Att bara hälften röstade ja",
+          "Att alla var överens",
+          "Att ingen ville rösta",
+          "Att de lottade fram ett svar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar berättelsen om hur beslut kan fattas i en grupp?",
+        "options": [
+          "Att den som pratar högst alltid vinner",
+          "Att det är bäst att inte lyssna på andra",
+          "Att man kan hitta lösningar genom att lyssna och kompromissa",
+          "Att röstning aldrig fungerar i en klass"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
     "id": "ak5-tema-001",
     "grade": 5,
     "genre": "förklarande",
@@ -14553,6 +15283,356 @@
       }
     ],
     "word_count": 300
+  },
+  {
+    "id": "ak5-tema-006",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "kroppen",
+    "title": "Varför hjärtat slår",
+    "text": "Ditt hjärta slår ungefär hundratusen gånger varje dag utan att du behöver tänka på det. Det är en muskel som aldrig vilar, och dess uppgift är att pumpa blod genom hela kroppen.\n\nBlodet transporterar syre från lungorna till alla kroppens celler. Cellerna behöver syre för att kunna arbeta, ungefär som en motor behöver bränsle. När cellerna har använt syret skickas blodet tillbaka till hjärtat och vidare till lungorna för att hämta nytt syre.\n\nHjärtat har fyra rum: två förmak och två kammare. Höger sida tar emot blod som behöver nytt syre och skickar det till lungorna. Vänster sida tar emot syrerikt blod och pumpar ut det i kroppen. Klaffar mellan rummen ser till att blodet bara flödar åt rätt håll.\n\nNär du springer eller blir rädd slår hjärtat snabbare, för att kroppen behöver mer syre. När du vilar lugnar det ner sig. Läkare kan lyssna på hjärtljuden med ett stetoskop för att kontrollera att allt fungerar som det ska.\n\nHjärtat börjar slå redan innan vi föds och fortsätter hela livet. Det gör det till en av kroppens mest uthålliga muskler.",
+    "questions": [
+      {
+        "q": "Hur många gånger slår hjärtat ungefär per dag?",
+        "options": [
+          "Omkring tiotusen gånger",
+          "Omkring hundratusen gånger",
+          "Omkring en miljon gånger",
+          "Omkring tusen gånger"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad transporterar blodet från lungorna till cellerna?",
+        "options": [
+          "Koldioxid",
+          "Vatten",
+          "Syre",
+          "Näring"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur många rum har hjärtat?",
+        "options": [
+          "Två rum",
+          "Tre rum",
+          "Fyra rum",
+          "Sex rum"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför slår hjärtat snabbare när du springer?",
+        "options": [
+          "För att kroppen behöver mer syre",
+          "För att hjärtat vill vila snabbare",
+          "För att lungorna slutar fungera",
+          "För att blodet blir varmare"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder uthållig i texten?",
+        "options": [
+          "Att något är mycket stort",
+          "Att något kan hålla på länge utan att sluta",
+          "Att något rör sig snabbt framåt",
+          "Att något väger mycket"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför jämför texten celler med en motor?",
+        "options": [
+          "För att celler är gjorda av metall",
+          "För att båda behöver energi för att fungera",
+          "För att celler är lika stora som en motor",
+          "För att motorer också har blod"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-007",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Brevet från farfars farfar",
+    "text": "Saga hittade ett gulnat kuvert i en låda på vinden. Bokstäverna på framsidan var skrivna med svarta bläckpennan i en slingrande stil som var svår att läsa.\n\n\"Mormor, vems är det här?\" ropade hon nerför trappen.\n\nMormor kom upp och tog försiktigt kuvertet. \"Det är från min farfar. Han skrev det 1923 när han jobbade på järnvägen.\"\n\nSaga öppnade brevet varsamt. Där stod det om långa arbetspass i kyla, om att sakna familjen och om glädjen över att äntligen ha fast lön. Farfars farfar berättade att de höll på att bygga en ny sträcka genom skogen och att arbetet var tungt men gav hopp om en bättre framtid.\n\n\"Tänk att vi kan läsa hans tankar hundra år senare\", sa Saga.\n\n\"Just det\", sa mormor. \"Förr skrev man brev för att det var det enda sättet att nå varandra. Det kunde ta veckor att få svar.\"\n\nSaga tänkte på sina egna meddelanden som kom fram på sekunder. Hon undrade om någon om hundra år skulle vilja läsa dem.\n\n\"Ska vi spara brevet?\" frågade Saga. Mormor nickade. \"Det är en del av vår historia.\"",
+    "questions": [
+      {
+        "q": "Var hittade Saga brevet?",
+        "options": [
+          "I ett skåp i köket",
+          "Under en sten i trädgården",
+          "I en låda på vinden",
+          "I en bok på biblioteket"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket år var brevet skrivet?",
+        "options": [
+          "1898",
+          "1923",
+          "1945",
+          "1972"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad jobbade farfars farfar med?",
+        "options": [
+          "Han var bonde",
+          "Han jobbade på järnvägen",
+          "Han var lärare",
+          "Han arbetade i en fabrik"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför undrade Saga om någon skulle vilja läsa hennes meddelanden?",
+        "options": [
+          "För att hon skriver dåligt",
+          "För att hon tänkte på skillnaden mellan brev och snabba meddelanden",
+          "För att mormor sa att meddelanden är oviktiga",
+          "För att hon ville sluta använda telefonen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder varsamt i texten?",
+        "options": [
+          "Snabbt och utan att tänka",
+          "Försiktigt och med omsorg",
+          "Högljutt och glatt",
+          "Ilsket och stressat"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad säger berättelsen om värdet av att spara gamla saker?",
+        "options": [
+          "Att gamla saker bara tar plats och bör slängas",
+          "Att gamla föremål kan ge oss en koppling till det förflutna",
+          "Att vinden alltid innehåller värdefulla saker",
+          "Att barn inte bör röra gamla brev"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-008",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "rymden",
+    "title": "Planeten Mars – vår röda granne",
+    "text": "Mars kallas ibland den röda planeten eftersom dess yta är täckt av järnoxid, ett ämne som ger en roströd färg. Mars är den fjärde planeten från solen och en av jordens närmaste grannar i rymden.\n\nPlaneten är ungefär hälften så stor som jorden. Dess atmosfär är mycket tunn och består mest av koldioxid, vilket gör att det inte finns tillräckligt med luft för människor att andas. Temperaturen kan sjunka till minus hundratrettio grader på vintern.\n\nÄndå har Mars likheter med jorden. Den har årstider, istäcken vid polerna och vulkaner. Olympus Mons på Mars är det högsta berget i hela solsystemet, nästan tre gånger så högt som Mount Everest.\n\nForskare har skickat flera robotfordon, så kallade rovers, till Mars för att undersöka ytan. De har hittat spår som tyder på att det en gång kan ha funnits flytande vatten där. Det har gjort att många undrar om det funnits enkla livsformer på planeten.\n\nI framtiden planerar rymdorganisationer att skicka människor till Mars. Det skulle vara den längsta rymdresan som människor gjort, och resan dit tar ungefär sju månader.",
+    "questions": [
+      {
+        "q": "Varför kallas Mars den röda planeten?",
+        "options": [
+          "För att den brinner",
+          "För att ytan är täckt av järnoxid",
+          "För att den alltid är varm",
+          "För att solen lyser rött på den"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad har forskare hittat på Mars som väckt nyfikenhet?",
+        "options": [
+          "Levande växter",
+          "Spår av flytande vatten",
+          "Byggnader under ytan",
+          "Flygande djur"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur lång tid tar en resa till Mars ungefär?",
+        "options": [
+          "Ungefär två veckor",
+          "Ungefär sju månader",
+          "Ungefär tre år",
+          "Ungefär tio dagar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan inte människor andas på Mars?",
+        "options": [
+          "För att det inte finns någon mark att stå på",
+          "För att atmosfären är för tunn och har fel gaser",
+          "För att det regnar hela tiden",
+          "För att tyngdkraften är för stark"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder atmosfär i texten?",
+        "options": [
+          "Ytan på en planet",
+          "Luftlagret som omger en planet",
+          "Berget på Mars",
+          "Vattnets temperatur"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är spåren av vatten på Mars viktiga enligt texten?",
+        "options": [
+          "För att vatten behövs för att odla blommor",
+          "För att det kan tyda på att enkla livsformer funnits",
+          "För att man vill bygga en sjö på Mars",
+          "För att vatten alltid är rött på andra planeter"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-009",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "demokrati",
+    "title": "Omröstningen",
+    "text": "I klass 5A skulle de bestämma vart höstutflykten skulle gå. Fröken Karin hade skrivit tre förslag på tavlan: naturreservatet, vetenskapsmuseet och klätterparken.\n\nLiam ville genast till klätterparken. \"Det är roligast!\" sa han högt. Flera höll med.\n\nMen Amira räckte upp handen. \"Jag tycker vi ska diskutera först. Alla kanske inte kan klättra.\"\n\nFröken Karin nickade. \"Bra tanke. Ska vi låta var och en säga något om förslagen innan vi röstar?\"\n\nEn efter en fick eleverna berätta vad de tyckte. Teo sa att naturreservatet var gratis, vilket betydde att alla kunde följa med utan extra kostnad. Wilma berättade att hon besökt museet och att det fanns roliga experiment.\n\nNär alla hade pratat var det dags att rösta. Varje elev fick lägga en lapp i en låda. Fröken Karin räknade rösterna: naturreservatet fick tolv, museet fem och klätterparken åtta.\n\nLiam såg besviken ut. Men Amira sa: \"Vi kanske kan åka till klätterparken en annan gång. Nu vann naturreservatet för att flest ville dit.\"\n\n\"Det är det som är demokrati\", sa fröken Karin. \"Alla får säga sin åsikt och sedan bestämmer majoriteten. Men man lyssnar på varandra först.\"",
+    "questions": [
+      {
+        "q": "Hur många förslag stod det på tavlan?",
+        "options": [
+          "Två förslag",
+          "Tre förslag",
+          "Fyra förslag",
+          "Fem förslag"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket förslag vann omröstningen?",
+        "options": [
+          "Klätterparken",
+          "Vetenskapsmuseet",
+          "Naturreservatet",
+          "Simhallen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför tyckte Teo att naturreservatet var bra?",
+        "options": [
+          "För att det låg närmast skolan",
+          "För att det var gratis och alla kunde följa med",
+          "För att han ville se djur",
+          "För att han hade varit där förut"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför ville Amira att klassen skulle diskutera först?",
+        "options": [
+          "För att hon ville vinna tid",
+          "För att hon tyckte att alla kanske inte kunde klättra",
+          "För att hon var rädd för naturen",
+          "För att hon ville att fröken skulle bestämma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder majoritet i texten?",
+        "options": [
+          "Den som pratar mest",
+          "Den största gruppen av röster",
+          "Den som bestämmer utan att fråga",
+          "Den som räknar rösterna"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad försöker berättelsen visa om demokrati?",
+        "options": [
+          "Att den som skriker högst alltid får som den vill",
+          "Att man inte behöver lyssna på andra om man har rätt",
+          "Att alla får uttrycka sin åsikt och att gruppen bestämmer",
+          "Att omröstningar alltid är orättvisa"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-010",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "mat och hälsa",
+    "title": "Varför behöver kroppen olika sorters mat?",
+    "text": "Maten vi äter ger kroppen energi och byggstenar. Men kroppen behöver många olika ämnen för att fungera bra, och inget enskilt livsmedel innehåller allt.\n\nKolhydrater finns i bröd, pasta, ris och potatis. De ger snabb energi och är särskilt viktiga för hjärnan, som förbrukar mycket bränsle. Protein finns i kött, fisk, bönor och ägg. Kroppen använder protein för att bygga och reparera muskler och andra vävnader.\n\nFett behövs också, även om det ibland har dåligt rykte. Fett hjälper kroppen att ta upp vissa vitaminer och skyddar inre organ. Det finns i till exempel nötter, olivolja och fisk.\n\nVitaminer och mineraler behövs i mindre mängder men är ändå nödvändiga. Järn hjälper blodet att transportera syre, och C-vitamin stärker immunförsvaret. Frukt och grönsaker innehåller många av dessa ämnen.\n\nVatten är också avgörande. Kroppen består till stor del av vatten, och det behövs för nästan alla funktioner, från att reglera temperaturen till att transportera näringsämnen.\n\nAtt äta varierat är nyckeln. Genom att blanda olika sorters mat får kroppen det den behöver för att växa, tänka och röra sig.",
+    "questions": [
+      {
+        "q": "Vad ger kolhydrater kroppen?",
+        "options": [
+          "Starka muskler",
+          "Snabb energi",
+          "Bättre syn",
+          "Längre hår"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad använder kroppen protein till?",
+        "options": [
+          "Att reglera temperaturen",
+          "Att bygga och reparera muskler",
+          "Att smälta kolhydrater",
+          "Att lagra vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför säger texten att fett ibland har dåligt rykte?",
+        "options": [
+          "För att fett alltid är skadligt",
+          "För att fett inte finns i mat",
+          "För att många tror att fett bara är dåligt, men det behövs",
+          "För att fett smakar illa"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad hjälper järn till med enligt texten?",
+        "options": [
+          "Att göra maten godare",
+          "Att blodet transporterar syre",
+          "Att musklerna blir större",
+          "Att man sover bättre"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder varierat i texten?",
+        "options": [
+          "Att man äter mycket av samma sak",
+          "Att man byter mellan olika sorters mat",
+          "Att man äter så lite som möjligt",
+          "Att man bara äter vid fasta tider"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket verkar vara textens viktigaste budskap?",
+        "options": [
+          "Att man bör undvika fett och kolhydrater",
+          "Att frukt är det enda man behöver äta",
+          "Att kroppen behöver blandad mat för att fungera bra",
+          "Att vatten är viktigare än all annan mat"
+        ],
+        "correct": 2
+      }
+    ]
   },
   {
     "id": "ak9-tema-001",
@@ -15255,6 +16335,351 @@
     "word_count": 329
   },
   {
+    "id": "ak6-tema-006",
+    "title": "Tidningen som ingen ville göra",
+    "text": "I klass 6C fick eleverna i uppgift att göra en klasstidning. De skulle arbeta i grupper, och varje grupp ansvarade för en del: nyheter, sport, kultur och insändare. Men redan första dagen uppstod problem.\n\nNyhetsgruppen kunde inte enas om vad som var en nyhet. Jasmin ville skriva om skolmaten, men Elliot tyckte att det var för vardagligt. \"En nyhet ska vara något som folk inte redan vet\", sa han. Jasmin svarade: \"Men alla har åsikter om maten, och det handlar om vår vardag.\"\n\nSportgruppen hade ett annat problem. De hade tre texter om fotboll men inget om andra sporter. Deras lärare, Mikael, påminde dem om att en tidning bör spegla olika intressen.\n\nKulturgruppen hade mest material. De hade intervjuat skolans musiklärare, recenserat en bok och fotograferat en utställning. Men de märkte att alla texter var positiva. \"Behöver inte en recension också kunna vara kritisk?\" frågade Noor.\n\nInsändargruppen hade fått in brev från elever som tyckte olika om mobilförbudet. De diskuterade hur man kan publicera åsikter utan att det blir elakt.\n\nNär tidningen till slut var klar hade alla lärt sig något. Jasmin sammanfattade det så: \"Det svåraste var inte att skriva. Det var att bestämma vad som var viktigt och rättvist att ta med.\"",
+    "grade": 6,
+    "category": "Medier",
+    "questions": [
+      {
+        "q": "Varför blev det en diskussion i nyhetsgruppen?",
+        "options": [
+          "De hade för många texter att välja mellan",
+          "De kunde inte enas om vad som räknas som en nyhet",
+          "De ville inte arbeta tillsammans",
+          "De hade glömt sin deadline"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad påminde läraren sportgruppen om?",
+        "options": [
+          "Att fotboll är den viktigaste sporten",
+          "Att tidningen bör spegla olika intressen",
+          "Att de inte fick skriva om sport alls",
+          "Att de måste intervjua tränaren"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menade Noor med sin fråga om recensioner?",
+        "options": [
+          "Att man aldrig ska vara positiv i en text",
+          "Att en recension kan vara ärlig och ibland kritisk",
+          "Att alla recensioner borde vara negativa",
+          "Att kultur inte hör hemma i en tidning"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad diskuterade insändargruppen?",
+        "options": [
+          "Hur man publicerar åsikter utan att det blir elakt",
+          "Hur man hittar fler annonser till tidningen",
+          "Om de skulle skriva insändarna själva",
+          "Om de skulle ta bort alla kritiska brev"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder att en tidning bör spegla olika intressen?",
+        "options": [
+          "Att den bara ska handla om populära ämnen",
+          "Att innehållet ska visa många perspektiv och ämnen",
+          "Att alla texter ska vara exakt lika långa",
+          "Att varje elev ska skriva lika många artiklar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad lärde sig klassen mest av projektet enligt Jasmin?",
+        "options": [
+          "Att det svåraste är att stava rätt",
+          "Att det svåraste var att välja vad som var viktigt och rättvist",
+          "Att det var lättare än de trodde från början",
+          "Att man inte bör göra klasstidningar"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-007",
+    "title": "Varför smakar saker olika?",
+    "text": "Har du funderat på varför en citron smakar surt och choklad smakar sött? Smak är ett samspel mellan tungan, näsan och hjärnan som hjälper oss att avgöra vad vi äter.\n\nPå tungan finns tusentals smaklökar, små mottagare som reagerar på kemiska ämnen i maten. Forskare brukar prata om fem grundsmaker: sött, salt, surt, beskt och umami. Umami är en fyllig smak som finns i till exempel tomater, ost och soja.\n\nMen smak handlar inte bara om tungan. Näsan spelar en stor roll. När du tuggar frigörs doftämnen som når näsan inifrån munhålan. Därför smakar mat ofta ganska lite när du är förkyld och har täppt näsa.\n\nHjärnan sätter ihop informationen från tungan och näsan med andra sinnen: hur maten ser ut, vilken temperatur den har och hur den känns i munnen. En krispig kex upplevs annorlunda än en mjuk kaka, även om de smakar likadant.\n\nVarför gillar vi olika saker? Det beror på en blandning av biologi och erfarenhet. Barn har ofta fler smaklökar än vuxna, vilket kan göra starka smaker mer intensiva. Samtidigt påverkar matvanor vad vi tycker om. Den som växer upp med en viss krydda kan uppleva den som helt vanlig, medan någon annan tycker den är stark.\n\nSmak är alltså inte bara kemi. Det är en upplevelse som formas av kroppen, minnet och kulturen.",
+    "grade": 6,
+    "category": "Vetenskap",
+    "questions": [
+      {
+        "q": "Hur många grundsmaker brukar forskare prata om?",
+        "options": [
+          "Tre stycken",
+          "Fyra stycken",
+          "Fem stycken",
+          "Sju stycken"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför smakar mat ofta mindre när man är förkyld?",
+        "options": [
+          "För att tungan slutar fungera helt",
+          "För att näsan är täppt och doftämnen inte når fram",
+          "För att man äter långsammare",
+          "För att hjärnan stänger av smaklökarna"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är umami?",
+        "options": [
+          "En japansk maträtt",
+          "En fyllig grundsmak som finns i tomater och ost",
+          "En typ av krydda från Sydamerika",
+          "Ett ämne som gör mat salt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan barn uppleva starka smaker mer intensivt?",
+        "options": [
+          "För att de alltid äter snabbare",
+          "För att de ofta har fler smaklökar än vuxna",
+          "För att de har bättre syn",
+          "För att de dricker mer vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder att smak formas av kulturen?",
+        "options": [
+          "Att all mat smakar likadant överallt",
+          "Att våra matvanor påverkar vad vi tycker om",
+          "Att bara vuxna kan smaka kultur",
+          "Att man måste resa för att uppleva smak"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad vill texten visa om smak som helhet?",
+        "options": [
+          "Att smak bara beror på vad tungan känner",
+          "Att smak är en upplevelse som involverar flera sinnen och erfarenheter",
+          "Att alla människor smakar exakt likadant",
+          "Att näsan inte har något med smak att göra"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-008",
+    "title": "Barnarbete förr och nu",
+    "text": "I Sverige för drygt hundra år sedan var det vanligt att barn arbetade. Redan vid sju eller åtta års ålder kunde barn jobba i fabriker, på bondgårdar eller i gruvor. Dagarna var långa och arbetet tungt. Många barn fick aldrig gå i skolan.\n\nI slutet av 1800-talet började folk reagera. Lärare, läkare och politiker argumenterade för att barn behövde utbildning och skydd. Steg för steg kom nya lagar. År 1882 blev det skolplikt i Sverige, vilket innebar att alla barn hade rätt och skyldighet att gå i skolan. Senare skärptes reglerna för barnarbete ytterligare.\n\nIdag är barnarbete förbjudet i Sverige. Barn får visst arbeta i begränsad utsträckning, till exempel med lättare sommarjobb efter att de fyllt tretton, men det får inte påverka deras hälsa eller skolgång.\n\nI andra delar av världen ser verkligheten annorlunda ut. Enligt FN arbetar fortfarande ungefär 160 miljoner barn globalt, många under farliga förhållanden. Orsakerna är ofta fattigdom, brist på skolor och konflikter.\n\nOrganisationer arbetar för att minska barnarbete genom att stödja familjer ekonomiskt och bygga skolor. FN:s barnkonvention slår fast att alla barn har rätt till utbildning, lek och skydd mot utnyttjande.\n\nFrågan om barnarbete handlar i grunden om vilka rättigheter barn ska ha och vem som ansvarar för att de uppfylls.",
+    "grade": 6,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vad innebar skolplikten som infördes 1882?",
+        "options": [
+          "Att alla barn fick jobba i skolan",
+          "Att alla barn hade rätt och skyldighet att gå i skolan",
+          "Att bara rika barn fick gå i skolan",
+          "Att skolan blev frivillig för alla"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur många barn arbetar globalt enligt FN?",
+        "options": [
+          "Ungefär 10 miljoner",
+          "Ungefär 50 miljoner",
+          "Ungefär 160 miljoner",
+          "Ungefär 500 miljoner"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilka orsaker till barnarbete nämns i texten?",
+        "options": [
+          "Dålig teknik och brist på datorer",
+          "Fattigdom, brist på skolor och konflikter",
+          "Att barn vill arbeta i stället för att leka",
+          "Att föräldrar inte bryr sig om sina barn"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför började människor reagera mot barnarbete i Sverige?",
+        "options": [
+          "För att barnen tjänade för mycket pengar",
+          "För att fabrikerna inte ville ha barn kvar",
+          "För att barn behövde utbildning och skydd",
+          "För att det inte fanns tillräckligt med jobb"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder i begränsad utsträckning i texten?",
+        "options": [
+          "Att det är helt förbjudet",
+          "Att det är tillåtet men med regler och gränser",
+          "Att det bara gäller vissa städer",
+          "Att bara vuxna får bestämma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken grundfråga handlar barnarbete om enligt texten?",
+        "options": [
+          "Hur mycket pengar barn kan tjäna",
+          "Vilka rättigheter barn ska ha och vem som ansvarar",
+          "Vilka länder som är rikast",
+          "Hur man bygger fler fabriker"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-009",
+    "title": "Ekosystemet i en stubbe",
+    "text": "En gammal stubbe i skogen kan se död ut, men den är ofta full av liv. Om du tittar noga ser du mossa, svamp, insekter och kanske till och med en liten groda. Stubben är ett helt ekosystem i miniatyr.\n\nNär ett träd fälls eller dör börjar nedbrytningen. Svampar och bakterier bryter ner veden bit för bit. De omvandlar trämaterialet till näringsämnen som återgår till jorden. Den processen kan ta många år, och under tiden erbjuder stubben mat och skydd åt andra organismer.\n\nInsekter som skalbaggar och myror är bland de första som flyttar in. De gräver gångar i den mjuka veden och skapar utrymmen där de lägger ägg. Fåglar som hackspettar kan komma och leta efter insekterna. På så sätt bildas en näringskedja där varje art har en roll.\n\nMossa och lavar växer på stubbens yta. De binder fukt och skapar ett skyddat klimat för små djur som spindlar och gråsuggor. I sprickor kan fröer från andra växter gro och så småningom växa upp genom den murkna veden.\n\nEn stubbe påminner om att döden i naturen inte är ett slut utan en övergång. Materialet från det gamla trädet blir till näring för nya växter och djur. Det är så kretsloppet i skogen fungerar: inget försvinner, allt återanvänds.\n\nNästa gång du ser en stubbe i skogen, stanna och titta. Du kanske upptäcker mer liv än du trodde.",
+    "grade": 6,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Vilka organismer börjar bryta ner en stubbe först?",
+        "options": [
+          "Fåglar och grodor",
+          "Svampar och bakterier",
+          "Mossa och blommor",
+          "Myror och spindlar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kommer hackspettar till stubben?",
+        "options": [
+          "För att bygga bo i mossan",
+          "För att äta svamp",
+          "För att leta efter insekter",
+          "För att dricka vatten ur veden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör mossan på stubbens yta?",
+        "options": [
+          "Den bryter ner veden snabbare",
+          "Den binder fukt och skapar ett skyddat klimat",
+          "Den förhindrar att insekter flyttar in",
+          "Den gör stubben hårdare"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar texten med att döden i naturen är en övergång?",
+        "options": [
+          "Att döda träd försvinner helt utan spår",
+          "Att materialet blir till näring för nytt liv",
+          "Att stubbar aldrig bryts ner",
+          "Att döda träd alltid planteras om"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder näringskedja i texten?",
+        "options": [
+          "En kedja av metall i naturen",
+          "En serie där varje art äter eller äts av en annan",
+          "Ett sätt att mäta hur gammal en stubbe är",
+          "En typ av svamp som växer i kedjor"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken insikt vill texten ge läsaren?",
+        "options": [
+          "Att man bör undvika stubbar i skogen",
+          "Att gamla stubbar bör tas bort för att skogen ska må bra",
+          "Att det finns mycket dolt liv i det som ser dött ut",
+          "Att nedbrytning bara sker i tropiska skogar"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-010",
+    "title": "Kan man lita på en bild?",
+    "text": "Bilder finns överallt: i nyheter, på sociala medier och i reklam. De flesta av oss reagerar snabbt på bilder, ofta snabbare än på text. Men kan man alltid lita på det man ser?\n\nEn bild visar alltid ett urval. Fotografen väljer vinkel, ljus och vad som ska vara med i bilden. Det som hamnar utanför ramen syns inte. En bild av en tom strand kan ge intrycket att platsen är öde, men precis bakom fotografen kanske det står hundra människor.\n\nBilder kan också redigeras. Med moderna program går det att ändra färger, ta bort föremål eller lägga till saker som inte fanns där. Ibland görs det för att förbättra kvaliteten, men ibland för att vilseleda. Reklam använder ofta retuscherade bilder för att produkter eller personer ska se bättre ut.\n\nPå sociala medier delar många sina bästa ögonblick. Det skapar en skev bild av verkligheten, eftersom vardagen med tråkiga stunder och misslyckanden sällan visas. Det kan påverka hur vi ser på oss själva och andra.\n\nAtt vara bildkritisk innebär att ställa frågor: Vem tog bilden? I vilket sammanhang? Har den beskurits eller förändrats? Vad ville avsändaren att jag skulle tänka eller känna?\n\nBilder är kraftfulla just för att de känns direkta och sanna. Att förstå att de alltid innebär ett val gör oss bättre på att tolka den visuella värld vi lever i.",
+    "grade": 6,
+    "category": "Källkritik",
+    "questions": [
+      {
+        "q": "Vad menar texten med att en bild alltid visar ett urval?",
+        "options": [
+          "Att bilder alltid är falska",
+          "Att fotografen väljer vad som syns och vad som inte gör det",
+          "Att bilder bara visar det som är vackert",
+          "Att man alltid måste fråga fotografen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur kan reklam använda redigerade bilder?",
+        "options": [
+          "För att visa exakt hur produkten ser ut",
+          "För att produkter eller personer ska se bättre ut",
+          "För att göra bilder svartvita",
+          "För att spara pengar på fotografering"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan sociala medier ge en skev bild av verkligheten?",
+        "options": [
+          "För att alla ljuger hela tiden",
+          "För att bilder alltid tas med dåliga kameror",
+          "För att folk oftast delar sina bästa stunder",
+          "För att sociala medier inte tillåter bilder"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär att vara bildkritisk enligt texten?",
+        "options": [
+          "Att man aldrig tittar på bilder",
+          "Att man ställer frågor om vem som tog bilden och varför",
+          "Att man bara litar på bilder i böcker",
+          "Att man alltid tar egna bilder i stället"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder retuscherade i texten?",
+        "options": [
+          "Fotograferade med en speciell kamera",
+          "Bearbetade och förändrade digitalt",
+          "Utskrivna på papper i stor storlek",
+          "Tagna utomhus i naturligt ljus"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är bilder särskilt kraftfulla enligt texten?",
+        "options": [
+          "För att de alltid innehåller text",
+          "För att de kostar mer att producera",
+          "För att de känns direkta och sanna",
+          "För att de bara finns i tidningar"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
     "id": "ak3-tema-001",
     "title": "Kattugglan i parken",
     "text": "En tidig morgon gick Mira och hennes morfar till parken. Luften var kall och gräset glittrade av frost. Morfar hade med sig en kikare, och Mira bar en liten anteckningsbok. De hörde ett mjukt \"ho-ho\" från en gammal ek. I en gren satt en kattuggla och blinkade långsamt. Mira viskade så att den inte skulle bli rädd. Morfar pekade på ugglans runda ansikte och sa att den jagar mest på natten. Plötsligt flög en grå mus över stigen och försvann i buskarna. Ugglan vred huvudet nästan helt runt och följde ljudet. Mira skrev ner allt hon såg: tiden, vädret och var ugglan satt. När solen steg började fåglarna sjunga högre. Då flög ugglan tyst iväg mot skogen. Mira kände sig som en riktig naturforskare.",
@@ -15615,37 +17040,67 @@
       {
         "type": "literal",
         "q": "Var hittade Lina fröet?",
-        "options": ["Vid gungan", "I klassrummet", "I matsalen", "Vid busshållplatsen"],
+        "options": [
+          "Vid gungan",
+          "I klassrummet",
+          "I matsalen",
+          "Vid busshållplatsen"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vem lägger fröet i hålet?",
-        "options": ["Lina", "Noor", "Läraren", "Vaktmästaren"],
+        "options": [
+          "Lina",
+          "Noor",
+          "Läraren",
+          "Vaktmästaren"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad gör de efter att fröet är i jorden?",
-        "options": ["De vattnar försiktigt", "De tar upp fröet igen", "De ritar en bild", "De går hem direkt"],
+        "options": [
+          "De vattnar försiktigt",
+          "De tar upp fröet igen",
+          "De ritar en bild",
+          "De går hem direkt"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför säger Lina att de måste vänta?",
-        "options": ["För att fröet behöver tid att växa", "För att jorden är slut", "För att vattenkannan är trasig", "För att rasten är för kort"],
+        "options": [
+          "För att fröet behöver tid att växa",
+          "För att jorden är slut",
+          "För att vattenkannan är trasig",
+          "För att rasten är för kort"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad tittar de efter varje dag?",
-        "options": ["En ny gunga", "Något grönt som kommer upp", "En ny vattenkanna", "En boll som rullar"],
+        "options": [
+          "En ny gunga",
+          "Något grönt som kommer upp",
+          "En ny vattenkanna",
+          "En boll som rullar"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad handlar texten mest om?",
-        "options": ["Att vinna en tävling", "Att plantera ett frö i skolan", "Att bygga en koja", "Att köpa nya kläder"],
+        "options": [
+          "Att vinna en tävling",
+          "Att plantera ett frö i skolan",
+          "Att bygga en koja",
+          "Att köpa nya kläder"
+        ],
         "correct": 1
       }
     ]
@@ -15661,37 +17116,67 @@
       {
         "type": "literal",
         "q": "Vilken dag åker Amir och pappa till badhuset?",
-        "options": ["På lördagen", "På måndagen", "På onsdagen", "På fredagen"],
+        "options": [
+          "På lördagen",
+          "På måndagen",
+          "På onsdagen",
+          "På fredagen"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad har Amir packat?",
-        "options": ["En mössa och en bok", "Badbyxor och en liten handduk", "En boll och en tröja", "En lunchlåda och en penna"],
+        "options": [
+          "En mössa och en bok",
+          "Badbyxor och en liten handduk",
+          "En boll och en tröja",
+          "En lunchlåda och en penna"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Var sitter de på bussen?",
-        "options": ["Längst bak", "I mitten", "Längst fram", "På golvet"],
+        "options": [
+          "Längst bak",
+          "I mitten",
+          "Längst fram",
+          "På golvet"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vad gör Amir när han tittar ut genom fönstret?",
-        "options": ["Han sover", "Han räknar röda bilar", "Han läser en tidning", "Han ropar till chauffören"],
+        "options": [
+          "Han sover",
+          "Han räknar röda bilar",
+          "Han läser en tidning",
+          "Han ropar till chauffören"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad ser Amir när de är framme?",
-        "options": ["En stor skylt med en simmande fisk", "En hög med snö", "En cykel som vält", "En stor hund"],
+        "options": [
+          "En stor skylt med en simmande fisk",
+          "En hög med snö",
+          "En cykel som vält",
+          "En stor hund"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför ler Amir på slutet?",
-        "options": ["För att han tappade busskortet", "För att han är framme vid badhuset", "För att vinden blev starkare", "För att bussen körde fel"],
+        "options": [
+          "För att han tappade busskortet",
+          "För att han är framme vid badhuset",
+          "För att vinden blev starkare",
+          "För att bussen körde fel"
+        ],
         "correct": 1
       }
     ]
@@ -15707,37 +17192,67 @@
       {
         "type": "literal",
         "q": "Vart går Alex efter skolan?",
-        "options": ["Till biblioteket", "Till sjukhuset", "Till en affär", "Till en pool"],
+        "options": [
+          "Till biblioteket",
+          "Till sjukhuset",
+          "Till en affär",
+          "Till en pool"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vem möter Alex vid dörren?",
-        "options": ["En kusin", "Sam", "En hund", "En lärare"],
+        "options": [
+          "En kusin",
+          "Sam",
+          "En hund",
+          "En lärare"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad handlar boken om?",
-        "options": ["Bilar", "Planeter", "Djur", "Mat"],
+        "options": [
+          "Bilar",
+          "Planeter",
+          "Djur",
+          "Mat"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vilket djur väljer Alex att titta på?",
-        "options": ["En katt", "En uggla", "En häst", "En fisk"],
+        "options": [
+          "En katt",
+          "En uggla",
+          "En häst",
+          "En fisk"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad gör de vid bordet?",
-        "options": ["De springer runt", "De bläddrar långsamt i boken", "De spelar fotboll", "De målar väggar"],
+        "options": [
+          "De springer runt",
+          "De bläddrar långsamt i boken",
+          "De spelar fotboll",
+          "De målar väggar"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Varför lånar de boken?",
-        "options": ["För att ge bort den", "För att läsa mer nästa gång", "För att gömma den", "För att riva sidor"],
+        "options": [
+          "För att ge bort den",
+          "För att läsa mer nästa gång",
+          "För att gömma den",
+          "För att riva sidor"
+        ],
         "correct": 1
       }
     ]
@@ -15753,37 +17268,67 @@
       {
         "type": "literal",
         "q": "Vad har hänt under natten?",
-        "options": ["Det har snöat", "Det har regnat varmt", "Det har varit åska", "Det har blåst sand"],
+        "options": [
+          "Det har snöat",
+          "Det har regnat varmt",
+          "Det har varit åska",
+          "Det har blåst sand"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vilken färg har pulkan?",
-        "options": ["Blå", "Grön", "Röd", "Gul"],
+        "options": [
+          "Blå",
+          "Grön",
+          "Röd",
+          "Gul"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vem åker först i backen?",
-        "options": ["Maja", "Leo", "En granne", "En hund"],
+        "options": [
+          "Maja",
+          "Leo",
+          "En granne",
+          "En hund"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Hur känns det när Maja åker?",
-        "options": ["Hon blir arg", "Hon skrattar", "Hon somnar", "Hon blir helt tyst"],
+        "options": [
+          "Hon blir arg",
+          "Hon skrattar",
+          "Hon somnar",
+          "Hon blir helt tyst"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad gör de mer än att åka pulka?",
-        "options": ["De planterar frön", "De bygger en liten snögubbe", "De målar ett staket", "De fiskar i sjön"],
+        "options": [
+          "De planterar frön",
+          "De bygger en liten snögubbe",
+          "De målar ett staket",
+          "De fiskar i sjön"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad dricker de när de går in?",
-        "options": ["Varm choklad", "Kall saft", "Mjölk med is", "Citronvatten"],
+        "options": [
+          "Varm choklad",
+          "Kall saft",
+          "Mjölk med is",
+          "Citronvatten"
+        ],
         "correct": 0
       }
     ]
@@ -15799,37 +17344,447 @@
       {
         "type": "literal",
         "q": "Hur många lådor står i köket?",
-        "options": ["Två", "Tre", "Fyra", "En"],
+        "options": [
+          "Två",
+          "Tre",
+          "Fyra",
+          "En"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad är en låda till?",
-        "options": ["Papper", "Godis", "Kläder", "Leksaker"],
+        "options": [
+          "Papper",
+          "Godis",
+          "Kläder",
+          "Leksaker"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad gör Elin med yoghurtburken innan hon lägger den i lådan?",
-        "options": ["Hon målar den", "Hon sköljer den lite", "Hon fyller den med vatten", "Hon gömmer den"],
+        "options": [
+          "Hon målar den",
+          "Hon sköljer den lite",
+          "Hon fyller den med vatten",
+          "Hon gömmer den"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Var lägger Elin konservburken?",
-        "options": ["I papper", "I plast", "I metall", "I soporna direkt"],
+        "options": [
+          "I papper",
+          "I plast",
+          "I metall",
+          "I soporna direkt"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vart går de när de är klara?",
-        "options": ["Till skolan", "Till återvinningsstationen", "Till badhuset", "Till lekparken"],
+        "options": [
+          "Till skolan",
+          "Till återvinningsstationen",
+          "Till badhuset",
+          "Till lekparken"
+        ],
         "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad handlar texten mest om?",
-        "options": ["Att baka bröd", "Att sortera och återvinna", "Att spela ett spel", "Att köpa en cykel"],
+        "options": [
+          "Att baka bröd",
+          "Att sortera och återvinna",
+          "Att spela ett spel",
+          "Att köpa en cykel"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-006",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den nya kompisen",
+    "text": "Hugo sitter ensam i sandlådan. Han bygger ett slott av sand. En flicka kommer fram. \"Jag heter Mira. Får jag vara med?\" frågar hon. Hugo nickar. Mira hämtar en spade och börjar gräva en grav runt slottet. \"Nu kan ingen komma in\", säger hon och skrattar. Hugo skrattar också. De bygger vidare tills mamma ropar att det är dags att gå hem. \"Ses vi imorgon?\" frågar Mira. Hugo nickar igen. Han är glad hela vägen hem.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter Hugo i början?",
+        "options": [
+          "På en bänk",
+          "I sandlådan",
+          "Under ett träd",
+          "Vid en bäck"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter flickan?",
+        "options": [
+          "Sara",
+          "Elin",
+          "Mira",
+          "Alma"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad bygger Hugo?",
+        "options": [
+          "En bil",
+          "Ett hus",
+          "En väg",
+          "Ett slott"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad gräver Mira runt slottet?",
+        "options": [
+          "En grav",
+          "Ett hål",
+          "En tunnel",
+          "En väg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är Hugo glad hela vägen hem?",
+        "options": [
+          "Han fick glass",
+          "Han fick en ny kompis",
+          "Han hittade en leksak",
+          "Han vann en tävling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tror du händer nästa dag?",
+        "options": [
+          "Hugo stannar hemma",
+          "Mira flyttar bort",
+          "De leker tillsammans igen",
+          "Sandlådan försvinner"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-007",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Hunden på promenaden",
+    "text": "Alva tar med sin hund Sigge på en promenad. Sigge springer fram och nosar på allt. Han nosar på en sten, en pinne och en blomma. Plötsligt stannar Sigge och skäller. Det sitter en ekorre i ett träd. Ekorren tittar ner och rör inte på sig. \"Lugn, Sigge\", säger Alva. \"Ekorren vill vara ifred.\" Sigge slutar skälla. De går vidare längs stigen. Hemma igen får Sigge vatten och lägger sig i sin korg.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter hunden?",
+        "options": [
+          "Rufus",
+          "Sigge",
+          "Bamse",
+          "Ludde"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad nosar Sigge på?",
+        "options": [
+          "En boll och en sko",
+          "En sten, en pinne och en blomma",
+          "Mat och vatten",
+          "En katt och en fågel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad sitter i trädet?",
+        "options": [
+          "En katt",
+          "En fågel",
+          "En ekorre",
+          "En fjäril"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Sigge hemma igen?",
+        "options": [
+          "Han äter mat",
+          "Han springer runt",
+          "Han får vatten och lägger sig",
+          "Han leker med en boll"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skäller Sigge på ekorren?",
+        "options": [
+          "Han är rädd",
+          "Han är hungrig",
+          "Han är nyfiken och vill jaga",
+          "Han vill leka med den"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lägger sig Sigge i korgen efteråt?",
+        "options": [
+          "Han är ledsen",
+          "Han är trött efter promenaden",
+          "Han gillar inte hemma",
+          "Han vill gömma sig"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-008",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "mat",
+    "title": "Pannkaksdagen",
+    "text": "Idag ska Olle och pappa göra pannkakor. Pappa häller mjöl i en skål. Olle knäcker två ägg. \"Var försiktig\", säger pappa. Sedan häller de i mjölk och rör om. Smeten blir jämn och fin. Pappa steker den första pannkakan i stekpannan. Den luktar gott. Olle får sylt och grädde på sin. Han äter tre pannkakor. \"Mätt nu?\" frågar pappa. Olle nickar och ler med sylt runt munnen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska Olle och pappa göra?",
+        "options": [
+          "Baka bröd",
+          "Göra pannkakor",
+          "Laga soppa",
+          "Grilla korv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur många ägg knäcker Olle?",
+        "options": [
+          "Ett",
+          "Två",
+          "Tre",
+          "Fyra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad får Olle på sin pannkaka?",
+        "options": [
+          "Socker och smör",
+          "Sylt och grädde",
+          "Banan och honung",
+          "Ost och skinka"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur många pannkakor äter Olle?",
+        "options": [
+          "En",
+          "Två",
+          "Tre",
+          "Fyra"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför har Olle sylt runt munnen?",
+        "options": [
+          "Han spillde ett glas",
+          "Han åt pannkakor med sylt",
+          "Han målade med sylt",
+          "Pappa smetade sylt på honom"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan vi förstå om Olle och pappa?",
+        "options": [
+          "De brukar aldrig vara i köket",
+          "De tycker om att laga mat ihop",
+          "De är osams med varandra",
+          "De gillar inte pannkakor"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-009",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "årstider",
+    "title": "Regnet som slutade",
+    "text": "Det har regnat hela dagen. Maja tittar ut genom fönstret. Pölarna är stora på gården. Plötsligt slutar regnet. Solen kommer fram och himlen blir ljus. \"Kan jag gå ut?\" frågar Maja. Mamma säger ja. Maja tar på sig stövlar och jacka. Hon springer ut och hoppar i den största pölen. Vattnet stänker åt alla håll. En regnbåge syns på himlen. \"Titta mamma, en regnbåge!\" ropar Maja. Mamma vinkar och ler från dörren.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har det gjort hela dagen?",
+        "options": [
+          "Snöat",
+          "Regnat",
+          "Blåst",
+          "Solat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad tar Maja på sig?",
+        "options": [
+          "Sandaler och shorts",
+          "Stövlar och jacka",
+          "Mössa och vantar",
+          "Klänning och skor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Maja i pölen?",
+        "options": [
+          "Hon simmar",
+          "Hon hoppar",
+          "Hon sitter ner",
+          "Hon kastar sten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad syns på himlen?",
+        "options": [
+          "En fågel",
+          "Ett flygplan",
+          "En regnbåge",
+          "En drake"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tar Maja på sig stövlar?",
+        "options": [
+          "För att det är kallt",
+          "För att det är blött ute",
+          "För att hon ska cykla",
+          "För att mamma sa det"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur mår Maja när hon är ute?",
+        "options": [
+          "Hon är ledsen",
+          "Hon är rädd",
+          "Hon är glad och upprymd",
+          "Hon är trött"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-010",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "skola",
+    "title": "Visningstunden",
+    "text": "Idag är det visa-och-berätta i klassen. Varje barn får ta med en sak hemifrån. Noor har med sig ett snäckskal. \"Jag hittade det på stranden\", berättar hon. \"Om man håller det mot örat kan man höra havet.\" Alla vill prova. En efter en håller de skalet mot örat och lyssnar. \"Jag hör det!\" viskar Leo. Fröken säger att det egentligen är luften i skalet som låter. Men alla tycker ändå att det låter som havet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har Noor med sig?",
+        "options": [
+          "En sten",
+          "En bok",
+          "Ett snäckskal",
+          "En leksak"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var hittade Noor skalet?",
+        "options": [
+          "I skogen",
+          "Hemma i trädgården",
+          "På stranden",
+          "I en affär"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger fröken om ljudet?",
+        "options": [
+          "Att det är havet man hör",
+          "Att det är luften i skalet som låter",
+          "Att skalet är trasigt",
+          "Att man inte ska lyssna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad viskar Leo?",
+        "options": [
+          "\"Jag vill inte\"",
+          "\"Jag hör det!\"",
+          "\"Det är tyst\"",
+          "\"Jag ser havet\""
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill alla prova att lyssna?",
+        "options": [
+          "De är rädda för skalet",
+          "De tror att skalet är farligt",
+          "De är nyfikna på att höra havet",
+          "De vill ha skalet själva"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker barnen att det låter som havet fast det inte är det?",
+        "options": [
+          "De har aldrig hört havet förut",
+          "Ljudet påminner om vågor och de vill tro det",
+          "Fröken lurar dem",
+          "Skalet är magiskt"
+        ],
         "correct": 1
       }
     ]
@@ -15844,37 +17799,67 @@
       {
         "type": "literal",
         "q": "Vad upptäckte Amina vid cykelstället?",
-        "options": ["Att cykeln var borta", "Att däcket var punkterat", "Att kedjan hade hoppat av", "Att cykeln stod på fel plats"],
+        "options": [
+          "Att cykeln var borta",
+          "Att däcket var punkterat",
+          "Att kedjan hade hoppat av",
+          "Att cykeln stod på fel plats"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför blev Amina extra orolig när hon såg marken?",
-        "options": ["Hon såg att regnet hade blött ner sadeln", "Hon såg ett trasigt lås ligga där", "Hon såg att någon hade ritat på asfalten", "Hon såg att cykelstället var flyttat"],
+        "options": [
+          "Hon såg att regnet hade blött ner sadeln",
+          "Hon såg ett trasigt lås ligga där",
+          "Hon såg att någon hade ritat på asfalten",
+          "Hon såg att cykelstället var flyttat"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad gjorde vaktmästaren Rune för att hjälpa till?",
-        "options": ["Han letade i klassrummen efter cykeln", "Han cyklade runt i området och ropade", "Han skrev ner färg och märke och ringde hem", "Han gav Amina pengar till en ny cykel"],
+        "options": [
+          "Han letade i klassrummen efter cykeln",
+          "Han cyklade runt i området och ropade",
+          "Han skrev ner färg och märke och ringde hem",
+          "Han gav Amina pengar till en ny cykel"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vad fick Amina använda för att ta sig hem?",
-        "options": ["En sparkcykel från Leo", "En buss som Rune beställde", "Sin mammas cykel", "Skolans reservcykel"],
+        "options": [
+          "En sparkcykel från Leo",
+          "En buss som Rune beställde",
+          "Sin mammas cykel",
+          "Skolans reservcykel"
+        ],
         "correct": 3
       },
       {
         "type": "inferens",
         "q": "Varför satte skolan upp lappen på dörren?",
-        "options": ["För att påminna om bättre låsning av cyklar", "För att visa att cykelstället var stängt", "För att be eleverna cykla långsammare", "För att säga att alla cyklar skulle målas om"],
+        "options": [
+          "För att påminna om bättre låsning av cyklar",
+          "För att visa att cykelstället var stängt",
+          "För att be eleverna cykla långsammare",
+          "För att säga att alla cyklar skulle målas om"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad gjorde Amina och hennes mamma på kvällen?",
-        "options": ["De köpte två nya lås direkt", "De ringde till alla i klassen", "De gjorde en polisanmälan", "De satte upp en lapp på cykelstället"],
+        "options": [
+          "De köpte två nya lås direkt",
+          "De ringde till alla i klassen",
+          "De gjorde en polisanmälan",
+          "De satte upp en lapp på cykelstället"
+        ],
         "correct": 2
       }
     ]
@@ -15889,37 +17874,67 @@
       {
         "type": "literal",
         "q": "Hur var gården på morgonen?",
-        "options": ["Vit och tyst", "Blöt och lerig", "Grön och solig", "Torr och dammig"],
+        "options": [
+          "Vit och tyst",
+          "Blöt och lerig",
+          "Grön och solig",
+          "Torr och dammig"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Varför gick morfar Ingrid långsamt?",
-        "options": ["Hen bar en tung ryggsäck", "Hen använde en käpp", "Hen ville vila ofta för att det var varmt", "Hen väntade på en vän i parken"],
+        "options": [
+          "Hen bar en tung ryggsäck",
+          "Hen använde en käpp",
+          "Hen ville vila ofta för att det var varmt",
+          "Hen väntade på en vän i parken"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad såg Samir som gjorde honom nyfiken?",
-        "options": ["En fågel som sjöng i trädet", "En snögubbe som någon byggt", "Små spår i snön", "Ett borttappat par vantar"],
+        "options": [
+          "En fågel som sjöng i trädet",
+          "En snögubbe som någon byggt",
+          "Små spår i snön",
+          "Ett borttappat par vantar"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vad hittade de vid busken som gav en ledtråd?",
-        "options": ["En boll och ett hundkoppel", "En tom glasspinne och ett papper", "En blomma som stack upp ur snön", "Frön och ett gnagmärke på en kotte"],
+        "options": [
+          "En boll och ett hundkoppel",
+          "En tom glasspinne och ett papper",
+          "En blomma som stack upp ur snön",
+          "Frön och ett gnagmärke på en kotte"
+        ],
         "correct": 3
       },
       {
         "type": "literal",
         "q": "Vilket djur trodde morfar Ingrid att spåren kunde komma från?",
-        "options": ["En mus eller en liten sork", "En räv eller en varg", "En hare eller ett rådjur", "En katt eller en hund"],
+        "options": [
+          "En mus eller en liten sork",
+          "En räv eller en varg",
+          "En hare eller ett rådjur",
+          "En katt eller en hund"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad gjorde Samir när han fick en idé?",
-        "options": ["Han fotade spåren med en kamera", "Han rensade bort snön för att se bättre", "Han ritade av spåren och skrev om dem", "Han byggde en fälla för att fånga djuret"],
+        "options": [
+          "Han fotade spåren med en kamera",
+          "Han rensade bort snön för att se bättre",
+          "Han ritade av spåren och skrev om dem",
+          "Han byggde en fälla för att fånga djuret"
+        ],
         "correct": 2
       }
     ]
@@ -15934,37 +17949,67 @@
       {
         "type": "literal",
         "q": "Var gick Nova och klassen på onsdagen?",
-        "options": ["Till biblioteket", "Till simhallen", "Till museet", "Till idrottsplatsen"],
+        "options": [
+          "Till biblioteket",
+          "Till simhallen",
+          "Till museet",
+          "Till idrottsplatsen"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför var det svårt för Nova att välja först?",
-        "options": ["Hon hade glömt sina glasögon", "Många böcker såg likadana ut", "Det fanns inga stolar att sitta på", "Hon fick inte röra vid böckerna"],
+        "options": [
+          "Hon hade glömt sina glasögon",
+          "Många böcker såg likadana ut",
+          "Det fanns inga stolar att sitta på",
+          "Hon fick inte röra vid böckerna"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad stod det på skylten som Nova såg?",
-        "options": ["Tyst zon", "Nya böcker", "Rekommenderas", "Endast vuxna"],
+        "options": [
+          "Tyst zon",
+          "Nya böcker",
+          "Rekommenderas",
+          "Endast vuxna"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Var hittade Nova hyllan med skylten?",
-        "options": ["Mitt i rummet vid disken", "Vid utgången bredvid dörren", "Högst upp på en stege", "Längst in, nästan bakom en gardin"],
+        "options": [
+          "Mitt i rummet vid disken",
+          "Vid utgången bredvid dörren",
+          "Högst upp på en stege",
+          "Längst in, nästan bakom en gardin"
+        ],
         "correct": 3
       },
       {
         "type": "literal",
         "q": "Vad sa Malik att hyllan var till för?",
-        "options": ["Att prova nya sorters böcker", "Att lämna tillbaka gamla böcker", "Att lägga bort trasiga böcker", "Att sitta och äta matsäck"],
+        "options": [
+          "Att prova nya sorters böcker",
+          "Att lämna tillbaka gamla böcker",
+          "Att lägga bort trasiga böcker",
+          "Att sitta och äta matsäck"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad fick Nova när hon lånade boken?",
-        "options": ["En affisch och en nyckelring", "Ett bokmärke och en lapp om recension", "En extra bok att behålla", "En karta över biblioteket"],
+        "options": [
+          "En affisch och en nyckelring",
+          "Ett bokmärke och en lapp om recension",
+          "En extra bok att behålla",
+          "En karta över biblioteket"
+        ],
         "correct": 1
       }
     ]
@@ -15979,37 +18024,67 @@
       {
         "type": "literal",
         "q": "Vad fanns på bordet förutom glas med vatten?",
-        "options": ["Salt, socker och skedar", "Mjöl, peppar och tallrikar", "Saft, lemonad och sugrör", "Stenar, löv och pennor"],
+        "options": [
+          "Salt, socker och skedar",
+          "Mjöl, peppar och tallrikar",
+          "Saft, lemonad och sugrör",
+          "Stenar, löv och pennor"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför satte sig Jia längst fram?",
-        "options": ["För att hen ville vara närmast läraren alltid", "För att hen ville se tydligt", "För att hen skulle dela ut material", "För att hen inte tyckte om att skriva"],
+        "options": [
+          "För att hen ville vara närmast läraren alltid",
+          "För att hen ville se tydligt",
+          "För att hen skulle dela ut material",
+          "För att hen inte tyckte om att skriva"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Vad hände när de rörde ner socker i vatten?",
-        "options": ["Det sjönk och blev som grus", "Det blev en klump som flöt", "Det försvann nästan direkt", "Det ändrade vattnets färg"],
+        "options": [
+          "Det sjönk och blev som grus",
+          "Det blev en klump som flöt",
+          "Det försvann nästan direkt",
+          "Det ändrade vattnets färg"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Vad gjorde de i det tredje glaset?",
-        "options": ["De la i både salt och socker", "De la i bara socker men rörde inte", "De hällde ut vattnet och fyllde på nytt", "De la i sand för att testa tyngd"],
+        "options": [
+          "De la i både salt och socker",
+          "De la i bara socker men rörde inte",
+          "De hällde ut vattnet och fyllde på nytt",
+          "De la i sand för att testa tyngd"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför ser man inte alltid det som är i vattnet, enligt samtalet?",
-        "options": ["Det blir så smått att det sprids i hela glaset", "Det fastnar i glasets botten och försvinner", "Det flyger upp i luften när man rör om", "Det blir osynligt bara när vattnet är kallt"],
+        "options": [
+          "Det blir så smått att det sprids i hela glaset",
+          "Det fastnar i glasets botten och försvinner",
+          "Det flyger upp i luften när man rör om",
+          "Det blir osynligt bara när vattnet är kallt"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad gjorde eleverna sist på lektionen?",
-        "options": ["De sprang ut på rast direkt", "De ritade bara bilder av glasen", "De skrev vad de gjort och jämförde", "De tog hem glasen som souvenirer"],
+        "options": [
+          "De sprang ut på rast direkt",
+          "De ritade bara bilder av glasen",
+          "De skrev vad de gjort och jämförde",
+          "De tog hem glasen som souvenirer"
+        ],
         "correct": 2
       }
     ]
@@ -16024,37 +18099,67 @@
       {
         "type": "literal",
         "q": "Hur var vädret när laget samlades?",
-        "options": ["Det regnade små droppar", "Det snöade kraftigt", "Det var väldigt varmt", "Det blåste sand över planen"],
+        "options": [
+          "Det regnade små droppar",
+          "Det snöade kraftigt",
+          "Det var väldigt varmt",
+          "Det blåste sand över planen"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför knöt Kim skorna extra hårt?",
-        "options": ["För att skosnörena var för långa", "För att gräset var halt", "För att hen hade nya skor som glappade", "För att tränaren bad alla göra det"],
+        "options": [
+          "För att skosnörena var för långa",
+          "För att gräset var halt",
+          "För att hen hade nya skor som glappade",
+          "För att tränaren bad alla göra det"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Hur kände sig Alex i början?",
-        "options": ["Lite nervös", "Arg på domaren", "Sömnig och trött", "Uttråkad av övningen"],
+        "options": [
+          "Lite nervös",
+          "Arg på domaren",
+          "Sömnig och trött",
+          "Uttråkad av övningen"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Vad sa tränaren Elin som gjorde stämningen bättre?",
-        "options": ["Att matchen skulle ställas in", "Att bara de bästa fick spela", "Att de skulle vara tysta hela tiden", "Att de hjälper varandra"],
+        "options": [
+          "Att matchen skulle ställas in",
+          "Att bara de bästa fick spela",
+          "Att de skulle vara tysta hela tiden",
+          "Att de hjälper varandra"
+        ],
         "correct": 3
       },
       {
         "type": "literal",
         "q": "Vad hände när Kim halkade i matchen?",
-        "options": ["Alex sprang tillbaka och vann bollen", "Elin blåste av matchen direkt", "Kim gick hem och bytte kläder", "Ingen märkte att bollen försvann"],
+        "options": [
+          "Alex sprang tillbaka och vann bollen",
+          "Elin blåste av matchen direkt",
+          "Kim gick hem och bytte kläder",
+          "Ingen märkte att bollen försvann"
+        ],
         "correct": 0
       },
       {
         "type": "inferens",
         "q": "Vad tyckte flera i laget fungerade bra till slut?",
-        "options": ["Att de sköt hårdare än vanligt", "Att de pratade mer med varandra", "Att de slutade passa och dribblade bara", "Att de bytte plan mitt i matchen"],
+        "options": [
+          "Att de sköt hårdare än vanligt",
+          "Att de pratade mer med varandra",
+          "Att de slutade passa och dribblade bara",
+          "Att de bytte plan mitt i matchen"
+        ],
         "correct": 1
       }
     ]
@@ -16068,32 +18173,62 @@
     "questions": [
       {
         "q": "Var hittade Elin och Amir burken?",
-        "options": ["Bakom cykelstället", "I klassrummets förråd", "Vid matsalens dörr", "Under gungorna"],
+        "options": [
+          "Bakom cykelstället",
+          "I klassrummets förråd",
+          "Vid matsalens dörr",
+          "Under gungorna"
+        ],
         "correct": 0
       },
       {
         "q": "Vad sa fröken Sofia att vilda bin behöver?",
-        "options": ["Stora löv att sova på", "Små hål att vila och lägga ägg i", "Djupa vattenpölar att dricka ur", "Mjuka gräsmattor att gömma sig i"],
+        "options": [
+          "Stora löv att sova på",
+          "Små hål att vila och lägga ägg i",
+          "Djupa vattenpölar att dricka ur",
+          "Mjuka gräsmattor att gömma sig i"
+        ],
         "correct": 1
       },
       {
         "q": "Varför satte klassen burken i en trälåda?",
-        "options": ["För att göra den tyngre än sten", "För att den skulle se finare ut", "För att den inte skulle rulla", "För att skydda den från regn inomhus"],
+        "options": [
+          "För att göra den tyngre än sten",
+          "För att den skulle se finare ut",
+          "För att den inte skulle rulla",
+          "För att skydda den från regn inomhus"
+        ],
         "correct": 2
       },
       {
         "q": "Var placerade de bihotellet?",
-        "options": ["I skuggan under en bänk", "Långt från alla växter", "Inne i biblioteket", "I solen nära blommorna vid staketet"],
+        "options": [
+          "I skuggan under en bänk",
+          "Långt från alla växter",
+          "Inne i biblioteket",
+          "I solen nära blommorna vid staketet"
+        ],
         "correct": 3
       },
       {
         "q": "Vad stod det på skylten som Elin ritade?",
-        "options": ["\"Rör inte, bina jobbar!\"", "\"Ta hem burken nu!\"", "\"Här bor fåglar\"", "\"Städa skolgården\""],
+        "options": [
+          "\"Rör inte, bina jobbar!\"",
+          "\"Ta hem burken nu!\"",
+          "\"Här bor fåglar\"",
+          "\"Städa skolgården\""
+        ],
         "correct": 0
       },
       {
         "q": "Varför ska man låta bihotellet vara i fred?",
-        "options": ["För att stråna annars blir blöta", "För att bina behöver lugn för att kunna bo och hjälpa blommor", "För att burken kan blåsa bort", "För att blommorna annars vissnar direkt"],
+        "options": [
+          "För att stråna annars blir blöta",
+          "För att bina behöver lugn för att kunna bo och hjälpa blommor",
+          "För att burken kan blåsa bort",
+          "För att blommorna annars vissnar direkt"
+        ],
         "correct": 1
       }
     ],
@@ -16108,32 +18243,62 @@
     "questions": [
       {
         "q": "Vem skulle Milo åka med till simhallen?",
-        "options": ["Sin granne", "Sin morfar", "Sin kusin", "Sin tränare"],
+        "options": [
+          "Sin granne",
+          "Sin morfar",
+          "Sin kusin",
+          "Sin tränare"
+        ],
         "correct": 1
       },
       {
         "q": "Hur tidigt stod de vid hållplatsen?",
-        "options": ["Precis när bussen kom", "En halvtimme för tidigt", "Tio minuter tidigt", "Fem minuter efter tiden"],
+        "options": [
+          "Precis när bussen kom",
+          "En halvtimme för tidigt",
+          "Tio minuter tidigt",
+          "Fem minuter efter tiden"
+        ],
         "correct": 2
       },
       {
         "q": "Varför blev det stopp på vägen?",
-        "options": ["Det var en cykeltävling", "Det var halt av snö", "En bil stod felparkerad", "En lastbil fick motorstopp"],
+        "options": [
+          "Det var en cykeltävling",
+          "Det var halt av snö",
+          "En bil stod felparkerad",
+          "En lastbil fick motorstopp"
+        ],
         "correct": 3
       },
       {
         "q": "Vad gjorde morfar för att få reda på mer?",
-        "options": ["Han ringde trafikbolaget", "Han sprang till nästa hållplats", "Han frågade en hundägare", "Han skickade brev"],
+        "options": [
+          "Han ringde trafikbolaget",
+          "Han sprang till nästa hållplats",
+          "Han frågade en hundägare",
+          "Han skickade brev"
+        ],
         "correct": 0
       },
       {
         "q": "Vad gjorde chauffören när ersättningsbussen kom?",
-        "options": ["Han stängde dörrarna snabbt", "Han vinkade och fällde ut rampen", "Han tutade och körde förbi", "Han bad alla gå av"],
+        "options": [
+          "Han stängde dörrarna snabbt",
+          "Han vinkade och fällde ut rampen",
+          "Han tutade och körde förbi",
+          "Han bad alla gå av"
+        ],
         "correct": 1
       },
       {
         "q": "Vad tyckte simläraren om hur de gjorde?",
-        "options": ["Att de borde ha vänt om", "Att de borde ha skällt på någon", "Att de gjorde rätt som väntade lugnt och följde informationen", "Att de borde ha åkt taxi direkt"],
+        "options": [
+          "Att de borde ha vänt om",
+          "Att de borde ha skällt på någon",
+          "Att de gjorde rätt som väntade lugnt och följde informationen",
+          "Att de borde ha åkt taxi direkt"
+        ],
         "correct": 2
       }
     ],
@@ -16148,32 +18313,62 @@
     "questions": [
       {
         "q": "Vad såg Nova vid hyllorna som väckte intresse?",
-        "options": ["En affisch om idrott", "En liten skylt: \"Nya böcker\"", "En låst dörr med larm", "En karta över skolan"],
+        "options": [
+          "En affisch om idrott",
+          "En liten skylt: \"Nya böcker\"",
+          "En låst dörr med larm",
+          "En karta över skolan"
+        ],
         "correct": 1
       },
       {
         "q": "Hur ofta får biblioteket nya böcker enligt Farah?",
-        "options": ["En gång per år", "Varje vecka", "Varje månad", "Bara på sommaren"],
+        "options": [
+          "En gång per år",
+          "Varje vecka",
+          "Varje månad",
+          "Bara på sommaren"
+        ],
         "correct": 2
       },
       {
         "q": "Vad behövde göras innan de nya böckerna kunde lånas?",
-        "options": ["De måste märkas och registreras", "De måste tvättas med vatten", "De måste målas om", "De måste skickas tillbaka"],
+        "options": [
+          "De måste märkas och registreras",
+          "De måste tvättas med vatten",
+          "De måste målas om",
+          "De måste skickas tillbaka"
+        ],
         "correct": 0
       },
       {
         "q": "Vad hjälpte Nova till med?",
-        "options": ["Att laga trasiga stolar", "Att sätta klisterlappar med streckkoder", "Att skriva en hel bok", "Att rita nya bokomslag"],
+        "options": [
+          "Att laga trasiga stolar",
+          "Att sätta klisterlappar med streckkoder",
+          "Att skriva en hel bok",
+          "Att rita nya bokomslag"
+        ],
         "correct": 1
       },
       {
         "q": "Vilka två typer av böcker valde Nova?",
-        "options": ["En kokbok och en diktbok", "En sporttidning och en karta", "En bok om rymden och en tunn deckare", "Två böcker om hästar"],
+        "options": [
+          "En kokbok och en diktbok",
+          "En sporttidning och en karta",
+          "En bok om rymden och en tunn deckare",
+          "Två böcker om hästar"
+        ],
         "correct": 2
       },
       {
         "q": "Varför är det viktigt att lämna tillbaka i tid?",
-        "options": ["Så att Farah kan stänga tidigare", "Så att böckerna blir nya igen", "Så att man slipper lånekort", "Så att andra också får chansen att låna"],
+        "options": [
+          "Så att Farah kan stänga tidigare",
+          "Så att böckerna blir nya igen",
+          "Så att man slipper lånekort",
+          "Så att andra också får chansen att låna"
+        ],
         "correct": 3
       }
     ],
@@ -16188,32 +18383,62 @@
     "questions": [
       {
         "q": "Vad la läraren Jonas på golvet?",
-        "options": ["En stor karta", "En lång hopprep", "En påse med frukt", "En ny fotboll"],
+        "options": [
+          "En stor karta",
+          "En lång hopprep",
+          "En påse med frukt",
+          "En ny fotboll"
+        ],
         "correct": 0
       },
       {
         "q": "Vad skulle klassen gå till?",
-        "options": ["Ett museum", "En simhall", "En bondgård", "Sjön"],
+        "options": [
+          "Ett museum",
+          "En simhall",
+          "En bondgård",
+          "Sjön"
+        ],
         "correct": 3
       },
       {
         "q": "Vad pekade Sana på på kartan?",
-        "options": ["En röd cirkel", "En grön triangel", "En blå fläck", "En svart linje"],
+        "options": [
+          "En röd cirkel",
+          "En grön triangel",
+          "En blå fläck",
+          "En svart linje"
+        ],
         "correct": 2
       },
       {
         "q": "Hur valde de vilken bro de skulle gå över?",
-        "options": ["Den som låg närmast lekparken", "Den som hade flest bilar", "Den som var längst bort", "Den som var målad gul"],
+        "options": [
+          "Den som låg närmast lekparken",
+          "Den som hade flest bilar",
+          "Den som var längst bort",
+          "Den som var målad gul"
+        ],
         "correct": 0
       },
       {
         "q": "Vad gjorde de vid första korsningen?",
-        "options": ["De sprang för att hinna före", "De jämförde skylten med kartan", "De gömde kartan i en buske", "De bytte om till stövlar"],
+        "options": [
+          "De sprang för att hinna före",
+          "De jämförde skylten med kartan",
+          "De gömde kartan i en buske",
+          "De bytte om till stövlar"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens viktigaste budskap?",
-        "options": ["Att sjöar alltid är stora", "Att man ska undvika broar", "Att kartor hjälper oss att planera, även om de inte visar allt", "Att kartor inte behövs i städer"],
+        "options": [
+          "Att sjöar alltid är stora",
+          "Att man ska undvika broar",
+          "Att kartor hjälper oss att planera, även om de inte visar allt",
+          "Att kartor inte behövs i städer"
+        ],
         "correct": 2
       }
     ],
@@ -16228,32 +18453,62 @@
     "questions": [
       {
         "q": "Vilka fyra stationer hade läraren Kim satt upp?",
-        "options": ["Hoppa rep, kasta boll, balans, vila med djupa andetag", "Springa långt, simma, klättra, skriva logg", "Fotboll, basket, handboll, innebandy", "Yoga, matte, lunch, rast"],
+        "options": [
+          "Hoppa rep, kasta boll, balans, vila med djupa andetag",
+          "Springa långt, simma, klättra, skriva logg",
+          "Fotboll, basket, handboll, innebandy",
+          "Yoga, matte, lunch, rast"
+        ],
         "correct": 0
       },
       {
         "q": "Var kände Leo sin puls?",
-        "options": ["På knät", "På handleden", "På örat", "På axeln"],
+        "options": [
+          "På knät",
+          "På handleden",
+          "På örat",
+          "På axeln"
+        ],
         "correct": 1
       },
       {
         "q": "Vad betyder det när pulsen blir snabbare enligt Kim?",
-        "options": ["Att hjärtat jobbar snabbare när man rör sig", "Att man alltid måste dricka saft", "Att man blir längre", "Att man behöver nya skor"],
+        "options": [
+          "Att hjärtat jobbar snabbare när man rör sig",
+          "Att man alltid måste dricka saft",
+          "Att man blir längre",
+          "Att man behöver nya skor"
+        ],
         "correct": 0
       },
       {
         "q": "Varför blev Amina inte lika andfådd vid balansstationen?",
-        "options": ["Hon sprang fortare än alla andra", "Hon hade redan vilat länge", "Hon gick långsamt och fokuserade", "Hon hoppade rep samtidigt"],
+        "options": [
+          "Hon sprang fortare än alla andra",
+          "Hon hade redan vilat länge",
+          "Hon gick långsamt och fokuserade",
+          "Hon hoppade rep samtidigt"
+        ],
         "correct": 2
       },
       {
         "q": "Vad hände med Leos puls efter vilostationen?",
-        "options": ["Den försvann helt", "Den blev långsammare", "Den blev dubbelt så snabb", "Den kändes bara i fötterna"],
+        "options": [
+          "Den försvann helt",
+          "Den blev långsammare",
+          "Den blev dubbelt så snabb",
+          "Den kändes bara i fötterna"
+        ],
         "correct": 1
       },
       {
         "q": "Vad skrev eleverna i sin logg efter lektionen?",
-        "options": ["Vilken mat de åt till lunch", "Hur många böcker de lånade", "Vad som gjorde pulsen hög och vad som fick den att sjunka", "Vilka som vann en tävling"],
+        "options": [
+          "Vilken mat de åt till lunch",
+          "Hur många böcker de lånade",
+          "Vad som gjorde pulsen hög och vad som fick den att sjunka",
+          "Vilka som vann en tävling"
+        ],
         "correct": 2
       }
     ],
