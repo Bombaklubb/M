@@ -17030,6 +17030,386 @@
     ]
   },
   {
+    "id": "ak1-tema-006",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vänskap",
+    "title": "Den nya kompisen",
+    "text": "Hugo sitter ensam i sandlådan. Han bygger ett slott av sand. En flicka kommer fram. \"Jag heter Mira. Får jag vara med?\" frågar hon. Hugo nickar. Mira hämtar en spade och börjar gräva en grav runt slottet. \"Nu kan ingen komma in\", säger hon och skrattar. Hugo skrattar också. De bygger vidare tills mamma ropar att det är dags att gå hem. \"Ses vi imorgon?\" frågar Mira. Hugo nickar igen. Han är glad hela vägen hem.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter Hugo i början?",
+        "options": [
+          "På en bänk",
+          "I sandlådan",
+          "Under ett träd",
+          "Vid en bäck"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter flickan?",
+        "options": [
+          "Sara",
+          "Elin",
+          "Mira",
+          "Alma"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad bygger Hugo?",
+        "options": [
+          "En bil",
+          "Ett hus",
+          "En väg",
+          "Ett slott"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad gräver Mira runt slottet?",
+        "options": [
+          "En grav",
+          "Ett hål",
+          "En tunnel",
+          "En väg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är Hugo glad hela vägen hem?",
+        "options": [
+          "Han fick glass",
+          "Han fick en ny kompis",
+          "Han hittade en leksak",
+          "Han vann en tävling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tror du händer nästa dag?",
+        "options": [
+          "Hugo stannar hemma",
+          "Mira flyttar bort",
+          "De leker tillsammans igen",
+          "Sandlådan försvinner"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-007",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Hunden på promenaden",
+    "text": "Alva tar med sin hund Sigge på en promenad. Sigge springer fram och nosar på allt. Han nosar på en sten, en pinne och en blomma. Plötsligt stannar Sigge och skäller. Det sitter en ekorre i ett träd. Ekorren tittar ner och rör inte på sig. \"Lugn, Sigge\", säger Alva. \"Ekorren vill vara ifred.\" Sigge slutar skälla. De går vidare längs stigen. Hemma igen får Sigge vatten och lägger sig i sin korg.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter hunden?",
+        "options": [
+          "Rufus",
+          "Sigge",
+          "Bamse",
+          "Ludde"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad nosar Sigge på?",
+        "options": [
+          "En boll och en sko",
+          "En sten, en pinne och en blomma",
+          "Mat och vatten",
+          "En katt och en fågel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad sitter i trädet?",
+        "options": [
+          "En katt",
+          "En fågel",
+          "En ekorre",
+          "En fjäril"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Sigge hemma igen?",
+        "options": [
+          "Han äter mat",
+          "Han springer runt",
+          "Han får vatten och lägger sig",
+          "Han leker med en boll"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skäller Sigge på ekorren?",
+        "options": [
+          "Han är rädd",
+          "Han är hungrig",
+          "Han är nyfiken och vill jaga",
+          "Han vill leka med den"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lägger sig Sigge i korgen efteråt?",
+        "options": [
+          "Han är ledsen",
+          "Han är trött efter promenaden",
+          "Han gillar inte hemma",
+          "Han vill gömma sig"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-008",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "mat",
+    "title": "Pannkaksdagen",
+    "text": "Idag ska Olle och pappa göra pannkakor. Pappa häller mjöl i en skål. Olle knäcker två ägg. \"Var försiktig\", säger pappa. Sedan häller de i mjölk och rör om. Smeten blir jämn och fin. Pappa steker den första pannkakan i stekpannan. Den luktar gott. Olle får sylt och grädde på sin. Han äter tre pannkakor. \"Mätt nu?\" frågar pappa. Olle nickar och ler med sylt runt munnen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska Olle och pappa göra?",
+        "options": [
+          "Baka bröd",
+          "Göra pannkakor",
+          "Laga soppa",
+          "Grilla korv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur många ägg knäcker Olle?",
+        "options": [
+          "Ett",
+          "Två",
+          "Tre",
+          "Fyra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad får Olle på sin pannkaka?",
+        "options": [
+          "Socker och smör",
+          "Sylt och grädde",
+          "Banan och honung",
+          "Ost och skinka"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur många pannkakor äter Olle?",
+        "options": [
+          "En",
+          "Två",
+          "Tre",
+          "Fyra"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför har Olle sylt runt munnen?",
+        "options": [
+          "Han spillde ett glas",
+          "Han åt pannkakor med sylt",
+          "Han målade med sylt",
+          "Pappa smetade sylt på honom"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan vi förstå om Olle och pappa?",
+        "options": [
+          "De brukar aldrig vara i köket",
+          "De tycker om att laga mat ihop",
+          "De är osams med varandra",
+          "De gillar inte pannkakor"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-009",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "årstider",
+    "title": "Regnet som slutade",
+    "text": "Det har regnat hela dagen. Maja tittar ut genom fönstret. Pölarna är stora på gården. Plötsligt slutar regnet. Solen kommer fram och himlen blir ljus. \"Kan jag gå ut?\" frågar Maja. Mamma säger ja. Maja tar på sig stövlar och jacka. Hon springer ut och hoppar i den största pölen. Vattnet stänker åt alla håll. En regnbåge syns på himlen. \"Titta mamma, en regnbåge!\" ropar Maja. Mamma vinkar och ler från dörren.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har det gjort hela dagen?",
+        "options": [
+          "Snöat",
+          "Regnat",
+          "Blåst",
+          "Solat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad tar Maja på sig?",
+        "options": [
+          "Sandaler och shorts",
+          "Stövlar och jacka",
+          "Mössa och vantar",
+          "Klänning och skor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Maja i pölen?",
+        "options": [
+          "Hon simmar",
+          "Hon hoppar",
+          "Hon sitter ner",
+          "Hon kastar sten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad syns på himlen?",
+        "options": [
+          "En fågel",
+          "Ett flygplan",
+          "En regnbåge",
+          "En drake"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tar Maja på sig stövlar?",
+        "options": [
+          "För att det är kallt",
+          "För att det är blött ute",
+          "För att hon ska cykla",
+          "För att mamma sa det"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur mår Maja när hon är ute?",
+        "options": [
+          "Hon är ledsen",
+          "Hon är rädd",
+          "Hon är glad och upprymd",
+          "Hon är trött"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-010",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "skola",
+    "title": "Visningstunden",
+    "text": "Idag är det visa-och-berätta i klassen. Varje barn får ta med en sak hemifrån. Noor har med sig ett snäckskal. \"Jag hittade det på stranden\", berättar hon. \"Om man håller det mot örat kan man höra havet.\" Alla vill prova. En efter en håller de skalet mot örat och lyssnar. \"Jag hör det!\" viskar Leo. Fröken säger att det egentligen är luften i skalet som låter. Men alla tycker ändå att det låter som havet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har Noor med sig?",
+        "options": [
+          "En sten",
+          "En bok",
+          "Ett snäckskal",
+          "En leksak"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var hittade Noor skalet?",
+        "options": [
+          "I skogen",
+          "Hemma i trädgården",
+          "På stranden",
+          "I en affär"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger fröken om ljudet?",
+        "options": [
+          "Att det är havet man hör",
+          "Att det är luften i skalet som låter",
+          "Att skalet är trasigt",
+          "Att man inte ska lyssna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad viskar Leo?",
+        "options": [
+          "\"Jag vill inte\"",
+          "\"Jag hör det!\"",
+          "\"Det är tyst\"",
+          "\"Jag ser havet\""
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vill alla prova att lyssna?",
+        "options": [
+          "De är rädda för skalet",
+          "De tror att skalet är farligt",
+          "De är nyfikna på att höra havet",
+          "De vill ha skalet själva"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker barnen att det låter som havet fast det inte är det?",
+        "options": [
+          "De har aldrig hört havet förut",
+          "Ljudet påminner om vågor och de vill tro det",
+          "Fröken lurar dem",
+          "Skalet är magiskt"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
     "id": "ak3-tema-006",
     "title": "Cykeln som blev stulen",
     "text": "En måndag efter skolan gick Amina hem med sin kompis Leo. De stannade vid cykelstället för att hämta Aminas cykel. Men platsen var tom. Amina kände hur magen knöt sig. Hon tittade runt och såg ett trasigt lås på marken. Leo föreslog att de skulle fråga vaktmästaren. Vaktmästaren hette Rune och sa att flera cyklar hade försvunnit den senaste veckan. Han följde med dem och skrev ner färg och märke på cykeln. Sedan ringde han Aminas mamma. Amina fick låna skolans reservcykel för att ta sig hem. På kvällen gjorde Amina och hennes mamma en polisanmälan. Dagen efter satt en lapp på skolans dörr: \"Kom ihåg att låsa cykeln med två lås.\"",
