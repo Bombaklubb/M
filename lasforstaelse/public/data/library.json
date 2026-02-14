@@ -13085,6 +13085,416 @@
     ]
   },
   {
+    "id": "ak7-tema-006",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Stadens hemliga pollinatörer",
+    "text": "När man tänker på bin och fjärilar ser man ofta en sommaräng framför sig. Men många pollinatörer bor faktiskt i städer. På en innergård kan en syrenhäck ge mat åt humlor i flera veckor, och längs en trottoarkant kan maskrosor bli en tidig \"frukost\" efter vintern. I vissa svenska parker har forskare hittat fler arter av vildbin än i närliggande jordbruksområden, delvis för att staden har många sorters växter på liten yta.\n\nPollinering betyder att pollen flyttas från en blomma till en annan så att frön kan bildas. Utan pollinatörer blir det färre frukter och bär, och många växter skulle få svårare att sprida sig. Vildbin är ofta extra viktiga eftersom flera arter kan flyga i kyligare väder än honungsbin. De flesta vildbin bor inte i kupor. Många lägger sina ägg i håligheter i marken, i torra stjälkar eller i sprickor i gammalt trä.\n\nHär uppstår en konflikt mellan ordning och natur. Om marken packas hårt av många fötter, eller om allt \"städas bort\" på våren, försvinner boplatserna. Samtidigt kan staden vara farlig: trafik, stark belysning på natten och bekämpningsmedel i vissa planteringar kan störa insekterna. En annan risk är att vi planterar växter som ser fina ut men ger lite nektar, till exempel förädlade sorter med täta kronblad som är svåra att komma åt för ett litet bi.\n\nFlera skolor testar därför pollinatörsvänliga gårdar. Det kan handla om att låta en del av gräset växa längre så att blommor hinner slå ut och frön utvecklas. Man kan också bygga insektshotell av bamburör eller borrade träbitar. Men ett insektshotell hjälper bara om det finns mat i närheten. Därför pratar man om en hel kedja: boplatser, mat, vatten och lugna ytor.\n\nDet viktigaste är att se staden som ett ekosystem, inte bara som byggnader. När vi planerar en park eller skolgård handlar det inte enbart om hur det ser ut på invigningsdagen, utan om vilka arter som får plats att leva där i flera år. Små val, som att spara en sandig slänt eller plantera fler enkla blomformer, kan göra stor skillnad för stadens hemliga pollinatörer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken förklaring ger texten till att vissa parker kan ha fler arter av vildbin än jordbruksområden?",
+        "options": [
+          "Att staden ofta har många olika växter nära varandra",
+          "Att honungsbin inte får finnas på landet",
+          "Att vildbin bara trivs där det finns höga hus",
+          "Att parker alltid är helt fria från bekämpningsmedel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad betyder pollinering enligt texten?",
+        "options": [
+          "Att växter tar upp vatten genom bladen",
+          "Att pollen flyttas mellan blommor så frön kan bildas",
+          "Att insekter byter färg när de landar på en blomma",
+          "Att blommor stänger sig när det blir kväll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan \"städning\" och hårt packad mark göra det svårare för vildbin?",
+        "options": [
+          "De hittar då fler rovdjur i gräset",
+          "De tappar bort sina ungar i kupor",
+          "Deras boplatser i mark och stjälkar försvinner",
+          "De får för mycket nektar och blir trötta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel nämns på växter som kan vara mindre bra för pollinatörer trots att de är fina?",
+        "options": [
+          "Träd som blommar tidigt på våren",
+          "Växter med öppna, enkla blomformer",
+          "Buskar som doftar starkt i skymningen",
+          "Förädlade sorter med täta kronblad som är svåra att nå"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att man behöver en \"kedja\" för att hjälpa pollinatörer?",
+        "options": [
+          "Att boplatser, mat, vatten och lugna ytor hänger ihop",
+          "Att insektshotell måste byggas i metall",
+          "Att man alltid ska börja med att plantera träd",
+          "Att pollinatörer bara klarar sig i stora naturreservat"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Att alla insekter bör flyttas från staden till landet",
+          "Att städer kan fungera som ekosystem där små val kan gynna pollinatörer",
+          "Att parker främst ska planeras för att se snygga ut vid invigning",
+          "Att honungsbin är den enda arten som pollinerar växter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 340,
+      "fingerprint": "ak7-tema-006",
+      "generatedAt": "2026-02-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-007",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "demokrati",
+    "title": "När unga får vara med och bestämma",
+    "text": "På kommunens webbplats stod det: \"Vi vill höra ungdomars idéer.\" Amina i åttan skickade länken till sin kompis Leo och skrev: \"Ska vi gå?\" De var båda trötta på att vuxna pratade om ungas fritid utan att fråga dem som faktiskt använder idrottshallen, biblioteket och busshållplatserna. De ville veta om det fanns ett sätt att påverka mer än genom att bara sucka i korridoren.\n\nMötet handlade om ett ungdomsråd. Tanken var att en grupp elever från olika skolor skulle träffa tjänstepersoner och politiker några gånger per termin. Ungdomarna skulle kunna lämna förslag, kommentera planer och följa upp beslut. Några vuxna i rummet såg tveksamma ut. De undrade om det skulle bli \"för mycket klagomål\" och om ungdomarna skulle orka hålla igång arbetet när skolan redan tar tid.\n\nAmina räckte upp handen och sa att klagomål ofta betyder att något inte fungerar. Om man vill ha färre klagomål behöver man veta vad som orsakar dem. Leo fyllde i att ungdomar redan är bra på att organisera sig: de planerar lag, spelkvällar, föreningar och skolprojekt. Skillnaden är att kommunen har en annan sorts makt, och då blir det svårare att förstå hur man gör sin röst hörd och vart man ska vända sig.\n\nEfter mötet fick de läsa ett förslag till regler. Där stod att ungdomsrådet skulle vara \"rådgivande\". Det betyder att rådet inte bestämmer, men ger råd innan beslut tas. Amina blev först besviken. Sedan insåg hon att rådgivande ändå kan spela stor roll om kommunen verkligen lyssnar och visar hur råden påverkar. Hon föreslog att varje idé ska få ett tydligt svar: genomförs den, utreds den vidare, eller avslås den, och varför.\n\nEn annan diskussion handlade om vilka som brukar komma till sådana här möten. Ofta är det elever som redan känner sig trygga i att prata inför andra. Därför föreslog Leo att ungdomsrådet också ska samla in synpunkter på flera sätt: anonyma formulär, besök i klassrum och samtal på fritidsgården. När de gick hem pratade de om demokrati. För dem blev det tydligt att demokrati också handlar om att förstå hur beslut växer fram och hur fler kan få plats att påverka.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför ville Amina och Leo gå på mötet enligt texten?",
+        "options": [
+          "De behövde extra meritpoäng till gymnasiet",
+          "De ville att vuxna skulle sluta prata om ungas vardag utan att fråga dem",
+          "De skulle presentera ett nytt skolämne för kommunen",
+          "De hade fått betalt för att delta i mötet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var tanken med ungdomsrådet?",
+        "options": [
+          "Att ungdomar skulle ta över kommunens budgetarbete",
+          "Att alla elever skulle rösta om varje kommunal fråga",
+          "Att elever från olika skolor skulle träffa politiker och tjänstepersoner och lämna förslag",
+          "Att kommunen skulle ersätta fritidsgårdar med digitala möten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur bemötte Amina oron för att det skulle bli \"för mycket klagomål\"?",
+        "options": [
+          "Hon sa att klagomål kan visa vad som inte fungerar och varför",
+          "Hon lovade att ingen i rådet skulle kritisera något",
+          "Hon menade att klagomål alltid är respektlöst",
+          "Hon föreslog att bara positiva idéer skulle få tas upp"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad betyder det att ungdomsrådet skulle vara \"rådgivande\"?",
+        "options": [
+          "Att rådet får bestämma utan politiker",
+          "Att rådet bara får prata om skolan, inte kommunen",
+          "Att rådet kan stoppa beslut genom veto",
+          "Att rådet ger råd innan beslut tas, men inte bestämmer"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilken lösning föreslog Amina för att råden skulle tas på allvar?",
+        "options": [
+          "Att varje idé ska få ett tydligt svar om den genomförs, utreds eller avslås",
+          "Att rådet bara ska träffas en gång per år",
+          "Att ungdomar ska skriva under ett kontrakt om tystnadsplikt",
+          "Att kommunen ska ta bort alla regler för möten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Att demokrati fungerar bäst när bara de mest vana talarna deltar",
+          "Att ett ungdomsråd alltid leder till att ungdomar får bestämma allt",
+          "Att demokrati också handlar om att förstå beslutsprocesser och hitta fler sätt att påverka",
+          "Att politiska frågor är för komplicerade för elever i grundskolan"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 370,
+      "fingerprint": "ak7-tema-007",
+      "generatedAt": "2026-02-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-008",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "historia",
+    "title": "Visby, handeln och källorna som bråkar",
+    "text": "När klassen åkte till Gotland såg de ringmuren långt innan bussen rullade in i Visby. Guiden berättade om en tid då staden var en av Östersjöns viktigaste handelsplatser. Under medeltiden kom köpmän från olika håll för att köpa och sälja varor som pälsar, vax, fisk, tyg och salt. Många av dem var knutna till Hansan, ett nätverk av handelsstäder som samarbetade för att skydda sina intressen.\n\nI museet stod en stor modell av hamnen. Där fanns packhus, bryggor och lager, och allt låg tätt. Läraren bad eleverna lägga märke till avstånden: varor kunde lastas av, räknas, lagras och säljas utan att fraktas långt in i landet. Men guiden betonade också att Visby inte bara var en \"hanse-stad\". Gotländska bönder och hantverkare spelade stor roll, och ibland uppstod konflikter om vem som skulle bestämma över tullar och regler.\n\nEfter rundturen fick klassen en uppgift: att jämföra två texter om samma händelse, ett bråk mellan lokala invånare och utländska köpmän. Den första texten var ett utdrag ur en krönika som beskrev köpmännen som ordningsamma och invånarna som \"oroliga\". Den andra var en senare historiebok som betonade att köpmännen hade särskilda privilegier och att det kunde skapa ilska.\n\nEleverna märkte snabbt att källorna inte sa exakt samma sak. Krönikan skrevs av någon som levde nära händelsen, men den kunde också vara partisk. Kanske ville författaren skydda vissa grupper eller få stöd från mäktiga personer. Historieboken hade fler källor att jämföra med, men den var skriven långt senare och påverkades av vilka frågor som var viktiga när den skrevs.\n\nI diskussionen sa Sam att han först litade mest på krönikan \"för den var där\". Noa invände att närhet inte alltid betyder sanning. Om en författare är rädd, arg eller beroende av någon kan den ändå beskriva saker på ett snedvridet sätt. Läraren sammanfattade: historiskt källarbete handlar om att väga närhet mot tendens och att fråga sig vem som tjänar på en viss berättelse. När de gick längs kullerstensgatorna igen tänkte eleverna på hur historia både är spår och tolkning.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilka varor nämns som exempel på sådant som handlades i Visby under medeltiden?",
+        "options": [
+          "Pälsar, vax, fisk, tyg och salt",
+          "Kaffe, te, socker och kakao",
+          "Olja, plast och elektronik",
+          "Potatis, tomater och majs"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var Hansan enligt texten?",
+        "options": [
+          "Ett nätverk av handelsstäder som samarbetade för att skydda sina intressen",
+          "En armé som erövrade städer runt Östersjön",
+          "Ett kungligt råd som styrde Gotland",
+          "En religiös rörelse som byggde kyrkor i Visby"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tyckte läraren att modellens placering av hamnens byggnader var intressant?",
+        "options": [
+          "För att den visade att alla bodde i samma hus",
+          "För att den visade att handeln blev effektiv när allt låg nära",
+          "För att den bevisade att Visby saknade murar",
+          "För att den visade att varor aldrig lagrades"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken skillnad mellan krönikan och den senare historieboken lyfts fram?",
+        "options": [
+          "Krönikan nämner inga konflikter alls, historieboken gör det",
+          "Historieboken säger att inget bråk skedde, krönikan gör det",
+          "Krönikan beskriver köpmännen positivt, historieboken betonar privilegier som kunde skapa ilska",
+          "Båda texterna säger exakt samma sak men med olika språk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket argument använder Noa mot Sams idé att krönikan är mest trovärdig?",
+        "options": [
+          "Att krönikor alltid är påhittade",
+          "Att historieböcker aldrig använder källor",
+          "Att museer inte får visa modeller",
+          "Att närhet inte alltid betyder sanning eftersom författaren kan vara partisk eller beroende"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bakar medeltida bröd på Gotland",
+          "Visbys ringmur och vilka stenar den är byggd av",
+          "Handel i Visby och hur man kan tolka historiska källor som säger olika",
+          "Varför alla kyrkor i Visby revs samtidigt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 335,
+      "fingerprint": "ak7-tema-008",
+      "generatedAt": "2026-02-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-009",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Flödet som väljer åt dig",
+    "text": "När Malte öppnar sin app efter skolan är det som om den redan vet vad han vill se. Ett klipp om en ny speluppdatering följs av ett om en basketmatch, och sedan dyker en video upp där någon testar en billig mikrofon. \"Hur kan den pricka så rätt?\" frågar han sin syster Rana. Hon svarar: \"Det är algoritmer. De gissar vad du stannar kvar vid, och de vill att du ska fortsätta.\"\n\nEn algoritm är en uppsättning steg som löser en uppgift. I sociala medier handlar uppgiften ofta om att välja vilket innehåll som ska visas och i vilken ordning. Appar mäter sådant som tittartid, likes, kommentarer och om du delar vidare. De kan också titta på mer dolda signaler: om du pausar, spolar tillbaka eller snabbt scrollar förbi. Allt detta blir data som används för att förutsäga vad som får dig att stanna.\n\nDet låter smart, men det finns baksidor. Om algoritmen belönar sådant som gör oss arga eller chockade, kan flödet fyllas av konflikter. Och om man bara får mer av det man redan gillar kan man fastna i en \"bubbla\" där andra perspektiv nästan aldrig syns. Rana berättar att forskare ibland kallar det filterbubbla eller ekokammare, även om effekten kan variera mellan personer och plattformar.\n\nEn dag får klassen i uppgift att granska påståendet: \"Algoritmer är neutrala.\" Malte vill först hålla med. En algoritm är ju bara matematik. Men läraren påminner dem om att människor bestämmer målet, väljer vilken data som ska samlas in och sätter reglerna. Om datan speglar gamla orättvisor kan algoritmen förstärka dem. Om den tränas på innehåll som mest kommer från vissa grupper kan andra bli sämre representerade.\n\nKlassen gör ett experiment. De skapar två nya konton och tittar på olika typer av videor i fem minuter. Kontot som tittar på träningsklipp får snabbt fler råd om kost och kropp, medan det andra som tittar på humor får fler skämtkanaler. Efteråt jämför de flödena. Skillnaden blir tydlig, trots att kontona är lika nya. Läraren säger att lösningen inte är att \"stänga av internet\", utan att förstå mekanismerna och söka mer aktivt när flödet börjar styra för mycket.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken förklaring ger Rana till att appen verkar veta vad Malte vill se?",
+        "options": [
+          "Att innehållet väljs slumpmässigt varje gång",
+          "Att algoritmer gissar utifrån vad han stannar kvar vid",
+          "Att alla användare får exakt samma flöde",
+          "Att videorna väljs av en människa som följer honom"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket av följande nämns som en möjlig \"dold signal\" som appar kan mäta?",
+        "options": [
+          "Om du pausar eller spolar tillbaka",
+          "Vilken färg du har på dina skor",
+          "Hur många syskon du har",
+          "Om du gör läxan samma kväll"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är en risk med att algoritmen visar mer av det man redan gillar?",
+        "options": [
+          "Att telefonens batteri alltid laddas ur snabbare",
+          "Att man tvingas sluta använda internet helt",
+          "Att man kan hamna i en bubbla med få andra perspektiv",
+          "Att alla videor blir längre och långsammare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför menar läraren att algoritmer inte alltid är neutrala?",
+        "options": [
+          "För att de aldrig använder data",
+          "För att de bara fungerar på gamla telefoner",
+          "För att de bara visar sportinnehåll",
+          "För att människor sätter mål och väljer data, vilket kan förstärka snedvridningar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad visade klassens experiment med två nya konton?",
+        "options": [
+          "Att flödet snabbt anpassas efter vad man tittar på, även på kort tid",
+          "Att nya konton inte kan få rekommendationer",
+          "Att humor alltid leder till träningsklipp",
+          "Att algoritmer bara påverkar vuxna användare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Att algoritmer alltid gör oss arga och därför bör förbjudas",
+          "Att man kan förstå och påverka sitt flöde genom medvetna val och källor",
+          "Att sociala medier inte använder algoritmer längre",
+          "Att det bästa är att aldrig dela eller kommentera något"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 335,
+      "fingerprint": "ak7-tema-009",
+      "generatedAt": "2026-02-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-010",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "hälsa",
+    "title": "Sömn, stress och den där sista videon",
+    "text": "På tisdagar börjar skolan extra tidigt för att idrottshallen är bokad senare på dagen. Mira känner redan i korridoren att huvudet går långsammare. Hon somnade sent igen. I omklädningsrummet berättar hon för sin vän Elias att hon \"bara\" skulle kolla en sista video, men att det blev fem. Elias nickar. Han brukar själv fastna, särskilt när han är stressad och vill slippa tänka på nästa prov.\n\nSkolsköterskan har satt upp en affisch om sömn. Den säger att ungdomar ofta behöver omkring åtta till tio timmar per natt, men att många får mindre. Det handlar inte bara om trötthet. För lite sömn kan göra det svårare att koncentrera sig, komma ihåg saker och hantera känslor. Mira märker att hon blir lättare irriterad, och hon börjar tolka små kommentarer som kritik, även när ingen menar något illa.\n\nPå elevhälsans temalektion berättar kuratorn Jamal att stress kan vara både yttre och inre. Yttre stress kan vara prov, tider och höga krav. Inre stress kan vara tankar som \"jag måste vara perfekt\" eller \"alla andra klarar det\". Jamal påpekar också att stress inte alltid syns. Någon kan skämta mycket och ändå känna press. En annan kan vara tyst och ändå må bra, och man kan inte alltid gissa.\n\nI klassen finns också Alex, som använder hörselkåpor när det blir för mycket ljud. Alex säger att sömnbrist gör ljud ännu jobbigare, som om volymen skruvas upp. Mira hade inte tänkt på att trötthet kan påverka kroppen så olika. Samtidigt vill hon inte göra sömn till en tävling. Elias säger: \"Det handlar inte om att vara duktig. Det handlar om att fungera.\"\n\nDe får göra en plan i par. Mira och Elias skriver tre små steg: lägga mobilen utanför sängen, ha ett fast \"släck-ljus\"-klockslag och göra något lugnt tio minuter innan, som att läsa eller lyssna på musik. Alex nämner också skärmljus, och Jamal förklarar att starkt ljus på kvällen kan göra hjärnan mer vaken, särskilt när notiser ger snabba belöningar. Efter två veckor märker Mira en skillnad vissa dagar. Hon snubblar ibland, men känner sig mindre hopplös, eftersom hon kan gå i en hjälpsam riktning steg för steg.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför är Mira extra trött just på tisdagar enligt texten?",
+        "options": [
+          "För att skolan börjar extra tidigt den dagen",
+          "För att hon alltid tränar sent på måndagar",
+          "För att hon hoppar över frukosten på tisdagar",
+          "För att hon sitter längst bak i klassrummet då"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken konsekvens av för lite sömn nämns i texten?",
+        "options": [
+          "Att man blir bättre på att komma ihåg detaljer",
+          "Att det kan bli svårare att koncentrera sig och hantera känslor",
+          "Att man alltid blir hungrigare på morgonen",
+          "Att man får mer energi av höga ljud"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad menar Jamal med inre stress?",
+        "options": [
+          "Stress som kommer från tider, prov och schema",
+          "Stress som orsakas av för lite syre i luften",
+          "Stress som skapas av egna tankar och krav på sig själv",
+          "Stress som bara drabbar dem som är utåtriktade"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad berättar Alex att sömnbrist kan göra för hen?",
+        "options": [
+          "Att hen får svårare att läsa långa texter men lättare att räkna",
+          "Att hen blir mindre känslig för ljud i klassrummet",
+          "Att hen alltid vill träna mer när hen sovit dåligt",
+          "Att ljud upplevs jobbigare, som om volymen höjs"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilka tre steg skriver Mira och Elias i sin plan?",
+        "options": [
+          "Lägga mobilen utanför sängen, ha fast släcktid och göra något lugnt innan",
+          "Dricka energidryck, somna med tv:n på och sova på dagen",
+          "Byta klass, sluta med idrott och plugga hela kvällen",
+          "Skrolla snabbare, stänga av ljudet och vakna senare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Att man måste följa en plan perfekt för att må bra",
+          "Att hälsa är en riktning där små steg kan hjälpa även om man ibland misslyckas",
+          "Att skärmar alltid är skadliga oavsett tid på dygnet",
+          "Att stress alltid syns tydligt på alla människor"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 345,
+      "fingerprint": "ak7-tema-010",
+      "generatedAt": "2026-02-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
     "id": "ak8-tema-001",
     "grade": 8,
     "genre": "berättelse",
