@@ -14905,6 +14905,356 @@
     "word_count": 300
   },
   {
+    "id": "ak5-tema-006",
+    "grade": 5,
+    "genre": "förklarande",
+    "theme": "kroppen",
+    "title": "Varför hjärtat slår",
+    "text": "Ditt hjärta slår ungefär hundratusen gånger varje dag utan att du behöver tänka på det. Det är en muskel som aldrig vilar, och dess uppgift är att pumpa blod genom hela kroppen.\n\nBlodet transporterar syre från lungorna till alla kroppens celler. Cellerna behöver syre för att kunna arbeta, ungefär som en motor behöver bränsle. När cellerna har använt syret skickas blodet tillbaka till hjärtat och vidare till lungorna för att hämta nytt syre.\n\nHjärtat har fyra rum: två förmak och två kammare. Höger sida tar emot blod som behöver nytt syre och skickar det till lungorna. Vänster sida tar emot syrerikt blod och pumpar ut det i kroppen. Klaffar mellan rummen ser till att blodet bara flödar åt rätt håll.\n\nNär du springer eller blir rädd slår hjärtat snabbare, för att kroppen behöver mer syre. När du vilar lugnar det ner sig. Läkare kan lyssna på hjärtljuden med ett stetoskop för att kontrollera att allt fungerar som det ska.\n\nHjärtat börjar slå redan innan vi föds och fortsätter hela livet. Det gör det till en av kroppens mest uthålliga muskler.",
+    "questions": [
+      {
+        "q": "Hur många gånger slår hjärtat ungefär per dag?",
+        "options": [
+          "Omkring tiotusen gånger",
+          "Omkring hundratusen gånger",
+          "Omkring en miljon gånger",
+          "Omkring tusen gånger"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad transporterar blodet från lungorna till cellerna?",
+        "options": [
+          "Koldioxid",
+          "Vatten",
+          "Syre",
+          "Näring"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur många rum har hjärtat?",
+        "options": [
+          "Två rum",
+          "Tre rum",
+          "Fyra rum",
+          "Sex rum"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför slår hjärtat snabbare när du springer?",
+        "options": [
+          "För att kroppen behöver mer syre",
+          "För att hjärtat vill vila snabbare",
+          "För att lungorna slutar fungera",
+          "För att blodet blir varmare"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder uthållig i texten?",
+        "options": [
+          "Att något är mycket stort",
+          "Att något kan hålla på länge utan att sluta",
+          "Att något rör sig snabbt framåt",
+          "Att något väger mycket"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför jämför texten celler med en motor?",
+        "options": [
+          "För att celler är gjorda av metall",
+          "För att båda behöver energi för att fungera",
+          "För att celler är lika stora som en motor",
+          "För att motorer också har blod"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-007",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Brevet från farfars farfar",
+    "text": "Saga hittade ett gulnat kuvert i en låda på vinden. Bokstäverna på framsidan var skrivna med svarta bläckpennan i en slingrande stil som var svår att läsa.\n\n\"Mormor, vems är det här?\" ropade hon nerför trappen.\n\nMormor kom upp och tog försiktigt kuvertet. \"Det är från min farfar. Han skrev det 1923 när han jobbade på järnvägen.\"\n\nSaga öppnade brevet varsamt. Där stod det om långa arbetspass i kyla, om att sakna familjen och om glädjen över att äntligen ha fast lön. Farfars farfar berättade att de höll på att bygga en ny sträcka genom skogen och att arbetet var tungt men gav hopp om en bättre framtid.\n\n\"Tänk att vi kan läsa hans tankar hundra år senare\", sa Saga.\n\n\"Just det\", sa mormor. \"Förr skrev man brev för att det var det enda sättet att nå varandra. Det kunde ta veckor att få svar.\"\n\nSaga tänkte på sina egna meddelanden som kom fram på sekunder. Hon undrade om någon om hundra år skulle vilja läsa dem.\n\n\"Ska vi spara brevet?\" frågade Saga. Mormor nickade. \"Det är en del av vår historia.\"",
+    "questions": [
+      {
+        "q": "Var hittade Saga brevet?",
+        "options": [
+          "I ett skåp i köket",
+          "Under en sten i trädgården",
+          "I en låda på vinden",
+          "I en bok på biblioteket"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket år var brevet skrivet?",
+        "options": [
+          "1898",
+          "1923",
+          "1945",
+          "1972"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad jobbade farfars farfar med?",
+        "options": [
+          "Han var bonde",
+          "Han jobbade på järnvägen",
+          "Han var lärare",
+          "Han arbetade i en fabrik"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför undrade Saga om någon skulle vilja läsa hennes meddelanden?",
+        "options": [
+          "För att hon skriver dåligt",
+          "För att hon tänkte på skillnaden mellan brev och snabba meddelanden",
+          "För att mormor sa att meddelanden är oviktiga",
+          "För att hon ville sluta använda telefonen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder varsamt i texten?",
+        "options": [
+          "Snabbt och utan att tänka",
+          "Försiktigt och med omsorg",
+          "Högljutt och glatt",
+          "Ilsket och stressat"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad säger berättelsen om värdet av att spara gamla saker?",
+        "options": [
+          "Att gamla saker bara tar plats och bör slängas",
+          "Att gamla föremål kan ge oss en koppling till det förflutna",
+          "Att vinden alltid innehåller värdefulla saker",
+          "Att barn inte bör röra gamla brev"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-008",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "rymden",
+    "title": "Planeten Mars – vår röda granne",
+    "text": "Mars kallas ibland den röda planeten eftersom dess yta är täckt av järnoxid, ett ämne som ger en roströd färg. Mars är den fjärde planeten från solen och en av jordens närmaste grannar i rymden.\n\nPlaneten är ungefär hälften så stor som jorden. Dess atmosfär är mycket tunn och består mest av koldioxid, vilket gör att det inte finns tillräckligt med luft för människor att andas. Temperaturen kan sjunka till minus hundratrettio grader på vintern.\n\nÄndå har Mars likheter med jorden. Den har årstider, istäcken vid polerna och vulkaner. Olympus Mons på Mars är det högsta berget i hela solsystemet, nästan tre gånger så högt som Mount Everest.\n\nForskare har skickat flera robotfordon, så kallade rovers, till Mars för att undersöka ytan. De har hittat spår som tyder på att det en gång kan ha funnits flytande vatten där. Det har gjort att många undrar om det funnits enkla livsformer på planeten.\n\nI framtiden planerar rymdorganisationer att skicka människor till Mars. Det skulle vara den längsta rymdresan som människor gjort, och resan dit tar ungefär sju månader.",
+    "questions": [
+      {
+        "q": "Varför kallas Mars den röda planeten?",
+        "options": [
+          "För att den brinner",
+          "För att ytan är täckt av järnoxid",
+          "För att den alltid är varm",
+          "För att solen lyser rött på den"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad har forskare hittat på Mars som väckt nyfikenhet?",
+        "options": [
+          "Levande växter",
+          "Spår av flytande vatten",
+          "Byggnader under ytan",
+          "Flygande djur"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur lång tid tar en resa till Mars ungefär?",
+        "options": [
+          "Ungefär två veckor",
+          "Ungefär sju månader",
+          "Ungefär tre år",
+          "Ungefär tio dagar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan inte människor andas på Mars?",
+        "options": [
+          "För att det inte finns någon mark att stå på",
+          "För att atmosfären är för tunn och har fel gaser",
+          "För att det regnar hela tiden",
+          "För att tyngdkraften är för stark"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder atmosfär i texten?",
+        "options": [
+          "Ytan på en planet",
+          "Luftlagret som omger en planet",
+          "Berget på Mars",
+          "Vattnets temperatur"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är spåren av vatten på Mars viktiga enligt texten?",
+        "options": [
+          "För att vatten behövs för att odla blommor",
+          "För att det kan tyda på att enkla livsformer funnits",
+          "För att man vill bygga en sjö på Mars",
+          "För att vatten alltid är rött på andra planeter"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-009",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "demokrati",
+    "title": "Omröstningen",
+    "text": "I klass 5A skulle de bestämma vart höstutflykten skulle gå. Fröken Karin hade skrivit tre förslag på tavlan: naturreservatet, vetenskapsmuseet och klätterparken.\n\nLiam ville genast till klätterparken. \"Det är roligast!\" sa han högt. Flera höll med.\n\nMen Amira räckte upp handen. \"Jag tycker vi ska diskutera först. Alla kanske inte kan klättra.\"\n\nFröken Karin nickade. \"Bra tanke. Ska vi låta var och en säga något om förslagen innan vi röstar?\"\n\nEn efter en fick eleverna berätta vad de tyckte. Teo sa att naturreservatet var gratis, vilket betydde att alla kunde följa med utan extra kostnad. Wilma berättade att hon besökt museet och att det fanns roliga experiment.\n\nNär alla hade pratat var det dags att rösta. Varje elev fick lägga en lapp i en låda. Fröken Karin räknade rösterna: naturreservatet fick tolv, museet fem och klätterparken åtta.\n\nLiam såg besviken ut. Men Amira sa: \"Vi kanske kan åka till klätterparken en annan gång. Nu vann naturreservatet för att flest ville dit.\"\n\n\"Det är det som är demokrati\", sa fröken Karin. \"Alla får säga sin åsikt och sedan bestämmer majoriteten. Men man lyssnar på varandra först.\"",
+    "questions": [
+      {
+        "q": "Hur många förslag stod det på tavlan?",
+        "options": [
+          "Två förslag",
+          "Tre förslag",
+          "Fyra förslag",
+          "Fem förslag"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket förslag vann omröstningen?",
+        "options": [
+          "Klätterparken",
+          "Vetenskapsmuseet",
+          "Naturreservatet",
+          "Simhallen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför tyckte Teo att naturreservatet var bra?",
+        "options": [
+          "För att det låg närmast skolan",
+          "För att det var gratis och alla kunde följa med",
+          "För att han ville se djur",
+          "För att han hade varit där förut"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför ville Amira att klassen skulle diskutera först?",
+        "options": [
+          "För att hon ville vinna tid",
+          "För att hon tyckte att alla kanske inte kunde klättra",
+          "För att hon var rädd för naturen",
+          "För att hon ville att fröken skulle bestämma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder majoritet i texten?",
+        "options": [
+          "Den som pratar mest",
+          "Den största gruppen av röster",
+          "Den som bestämmer utan att fråga",
+          "Den som räknar rösterna"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad försöker berättelsen visa om demokrati?",
+        "options": [
+          "Att den som skriker högst alltid får som den vill",
+          "Att man inte behöver lyssna på andra om man har rätt",
+          "Att alla får uttrycka sin åsikt och att gruppen bestämmer",
+          "Att omröstningar alltid är orättvisa"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-010",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "mat och hälsa",
+    "title": "Varför behöver kroppen olika sorters mat?",
+    "text": "Maten vi äter ger kroppen energi och byggstenar. Men kroppen behöver många olika ämnen för att fungera bra, och inget enskilt livsmedel innehåller allt.\n\nKolhydrater finns i bröd, pasta, ris och potatis. De ger snabb energi och är särskilt viktiga för hjärnan, som förbrukar mycket bränsle. Protein finns i kött, fisk, bönor och ägg. Kroppen använder protein för att bygga och reparera muskler och andra vävnader.\n\nFett behövs också, även om det ibland har dåligt rykte. Fett hjälper kroppen att ta upp vissa vitaminer och skyddar inre organ. Det finns i till exempel nötter, olivolja och fisk.\n\nVitaminer och mineraler behövs i mindre mängder men är ändå nödvändiga. Järn hjälper blodet att transportera syre, och C-vitamin stärker immunförsvaret. Frukt och grönsaker innehåller många av dessa ämnen.\n\nVatten är också avgörande. Kroppen består till stor del av vatten, och det behövs för nästan alla funktioner, från att reglera temperaturen till att transportera näringsämnen.\n\nAtt äta varierat är nyckeln. Genom att blanda olika sorters mat får kroppen det den behöver för att växa, tänka och röra sig.",
+    "questions": [
+      {
+        "q": "Vad ger kolhydrater kroppen?",
+        "options": [
+          "Starka muskler",
+          "Snabb energi",
+          "Bättre syn",
+          "Längre hår"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad använder kroppen protein till?",
+        "options": [
+          "Att reglera temperaturen",
+          "Att bygga och reparera muskler",
+          "Att smälta kolhydrater",
+          "Att lagra vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför säger texten att fett ibland har dåligt rykte?",
+        "options": [
+          "För att fett alltid är skadligt",
+          "För att fett inte finns i mat",
+          "För att många tror att fett bara är dåligt, men det behövs",
+          "För att fett smakar illa"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad hjälper järn till med enligt texten?",
+        "options": [
+          "Att göra maten godare",
+          "Att blodet transporterar syre",
+          "Att musklerna blir större",
+          "Att man sover bättre"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder varierat i texten?",
+        "options": [
+          "Att man äter mycket av samma sak",
+          "Att man byter mellan olika sorters mat",
+          "Att man äter så lite som möjligt",
+          "Att man bara äter vid fasta tider"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket verkar vara textens viktigaste budskap?",
+        "options": [
+          "Att man bör undvika fett och kolhydrater",
+          "Att frukt är det enda man behöver äta",
+          "Att kroppen behöver blandad mat för att fungera bra",
+          "Att vatten är viktigare än all annan mat"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
     "id": "ak9-tema-001",
     "title": "Staden som måste tåla mer regn",
     "text": "När Samir cyklade hem från träningen såg han att gatan vid torget var avstängd. Vattnet låg som en brungrå sjö över asfalten, och en brunn hade spottat upp löv och grus. Det här var tredje gången samma höst. Kommunen kallade det skyfall, men för Samir och hans granne Inga, som gick med rullator, betydde det mest att bussen ställdes in och att trottoarer blev svåra att ta sig fram på.\n\nPå samhällskunskapen hade klassen pratat om klimatanpassning. Läraren förklarade att klimatförändringar inte bara handlar om högre medeltemperatur, utan också om att extrema regn kan bli vanligare. När mycket vatten faller på kort tid räcker inte ledningarna under marken till. Då trycks vatten upp i brunnar, källare kan översvämmas och förorenat vatten kan hamna i åar och sjöar. Det blir både en kostnadsfråga och en hälsorisk.\n\nKommunens plan var att kombinera tekniska lösningar med blågröna ytor. Tekniska lösningar kunde vara större dagvattenrör eller magasin som samlar vatten tillfälligt. Blågröna ytor handlar om natur som gör jobbet: parker som kan svämma över utan att skada hus, träd som suger upp vatten och regnbäddar där vatten får rinna ner i jorden i stället för att rusa mot brunnarna. På en skiss visades också genomsläpplig markbeläggning, där små mellanrum gör att vatten kan sippra ner.\n\nMen allt gick inte att lösa med en ny park. I äldre kvarter låg många ytor redan hårdgjorda, och fastighetsägare oroade sig för byggstök och höjda avgifter. Samtidigt kunde kommunen inte bara hoppas på att nästa skyfall dröjde. Läraren tog upp ett begrepp: prioritering. Om budgeten är begränsad måste man välja vilka områden som ska skyddas först. Ska sjukhuset, skolan och äldreboendet få de dyraste åtgärderna? Eller ska man börja där problemen redan är störst?\n\nEfter lektionen gick Samir och Inga på ett öppet möte i biblioteket. Där berättade en ingenjör att en del vatten skulle ledas om mot en ny damm i en park, och att torgets beläggning skulle bytas till en mer genomsläpplig variant. Inga frågade om tillgänglighet: Blir det hala stenar när det regnar? Ingenjören svarade att materialet testas för friktion och att man ska undvika kanter som fastnar i hjul. Samir märkte att klimatanpassning inte bara var teknik eller natur, utan också vardag: hur man rör sig, vem som blir drabbad och hur man fördelar resurser när allt inte kan göras på en gång.",
