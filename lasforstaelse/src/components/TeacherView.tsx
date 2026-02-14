@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getTeacherStatsFromCloud } from '../services/userService';
-import { isFirebaseConfigured } from '../services/firebase';
+import { getTeacherStats } from '../services/userService';
 import { BookLogo } from './BookLogo';
 
 interface TeacherViewProps {
@@ -15,7 +14,6 @@ interface Stats {
   topGrades: Array<{ grade: number; count: number }>;
   leaderboard: Array<{ name: string; points: number; textsRead: number }>;
   last7Days: Array<{ date: string; count: number }>;
-  isCloudData?: boolean;
 }
 
 export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
@@ -23,7 +21,6 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
   const [password, setPassword] = useState('');
   const [stats, setStats] = useState<Stats | null>(null);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
     // Enkelt lösenord - kan ändras
@@ -35,16 +32,9 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
     }
   };
 
-  const loadStats = async () => {
-    setLoading(true);
-    try {
-      const data = await getTeacherStatsFromCloud();
-      setStats(data);
-    } catch (err) {
-      console.error('Kunde inte ladda statistik:', err);
-    } finally {
-      setLoading(false);
-    }
+  const loadStats = () => {
+    const data = getTeacherStats();
+    setStats(data);
   };
 
   useEffect(() => {
@@ -113,24 +103,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
               <BookLogo size={40} />
               <div>
                 <h1 className="text-2xl md:text-3xl font-bold text-slate-800">Lärarvy</h1>
-                <p className="text-slate-500">
-                  {stats?.isCloudData ? (
-                    <span className="flex items-center gap-1">
-                      <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
-                      Visar data från alla enheter (molnet)
-                    </span>
-                  ) : isFirebaseConfigured() ? (
-                    <span className="flex items-center gap-1">
-                      <span className="inline-block w-2 h-2 bg-yellow-500 rounded-full"></span>
-                      Hämtar från molnet...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-1">
-                      <span className="inline-block w-2 h-2 bg-orange-500 rounded-full"></span>
-                      Endast lokal data - konfigurera Firebase för molnsynk
-                    </span>
-                  )}
-                </p>
+                <p className="text-slate-500">Statistik för denna enhet</p>
               </div>
             </div>
             <button
@@ -142,14 +115,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
           </div>
         </div>
 
-        {loading && (
-          <div className="text-center py-8">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
-            <p className="mt-2 text-slate-600">Laddar statistik...</p>
-          </div>
-        )}
-
-        {stats && !loading && (
+        {stats && (
           <div className="space-y-6">
             {/* Sammanfattning */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
