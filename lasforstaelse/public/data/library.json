@@ -3130,9 +3130,9 @@
         "type": "inferens",
         "q": "Varför jämför texten fossilt kol med ett “gammalt bankkonto”?",
         "options": [
-          "För att banker styr klimatet",
+          "För att banker styr klimatet direkt",
           "För att växter bara växer i banker",
-          "För att kolet har varit lagrat länge och frigörs snabbt när vi bränner fossila bränslen",
+          "För att kolet varit lagrat länge och frigörs snabbt",
           "För att pengar är samma sak som energi"
         ],
         "correct": 2
@@ -3141,8 +3141,8 @@
         "type": "inferens",
         "q": "Varför kan havets upptag av koldioxid ses som både positivt och negativt?",
         "options": [
-          "För att det minskar koldioxid i luften men kan orsaka havsförsurning",
-          "För att solen lyser svagare",
+          "Det minskar koldioxid men orsakar havsförsurning",
+          "För att solen lyser svagare när havet tar upp mer kol",
           "För att fiskar gillar koldioxid",
           "För att havet då blir varmare och kallare samtidigt"
         ],
@@ -3152,10 +3152,10 @@
         "type": "inferens",
         "q": "Vad antyder texten om varför klimatfrågan också är en samhällsfråga?",
         "options": [
-          "För att väder alltid skapar bråk",
-          "För att effekter som torka och regn påverkar människor, jordbruk och olika områden olika",
-          "För att skolor bestämmer temperaturen",
-          "För att klimat bara handlar om politik"
+          "För att väder alltid skapar konflikter och bråk mellan länder",
+          "Effekterna drabbar människor och jordbruk olika",
+          "För att skolor bestämmer temperaturen i klassrummet",
+          "För att klimat bara handlar om politik och inte om natur"
         ],
         "correct": 1
       }
@@ -3343,10 +3343,10 @@
         "type": "literal",
         "q": "Vad säger texten om regler och etik?",
         "options": [
-          "Regler är oviktiga",
+          "Regler är oviktiga och bör tas bort",
           "Regler är viktiga men räcker inte alltid",
-          "Regler behövs bara i skolan",
-          "Regler gör alltid allt rättvist"
+          "Regler behövs bara i skolan och inte på andra platser",
+          "Regler gör alltid allt rättvist för alla"
         ],
         "correct": 1
       },
@@ -3376,10 +3376,10 @@
         "type": "inferens",
         "q": "Varför kan ett “skämt” kännas värre om det kommer från någon med hög status i gruppen?",
         "options": [
-          "För att personens ord kan skapa mer press och påverka andra mer",
-          "För att hög status betyder att man är äldre",
-          "För att skämt alltid är förbjudna",
-          "För att status gör att man inte får prata"
+          "Personens ord väger tyngre och skapar press",
+          "För att hög status betyder att man alltid är äldre än andra",
+          "För att skämt alltid är förbjudna i grupper",
+          "För att status gör att man inte får prata med andra"
         ],
         "correct": 0
       },
@@ -3387,9 +3387,9 @@
         "type": "inferens",
         "q": "Vad betyder det att etik är “levande” enligt texten?",
         "options": [
-          "Att etik syns i små val i vardagen och förändras i olika situationer",
-          "Att etik aldrig kan diskuteras",
-          "Att etik bara finns i böcker",
+          "Att etik syns i vardagens små val",
+          "Att etik aldrig kan diskuteras med andra människor",
+          "Att etik bara finns i böcker och inte i verkligheten",
           "Att etik är samma som biologi"
         ],
         "correct": 0
@@ -3398,9 +3398,9 @@
         "type": "inferens",
         "q": "Varför kan det vara bra att använda flera modeller (regler, konsekvenser, dygder) när man tänker etiskt?",
         "options": [
-          "För att olika modeller kan hjälpa en att se olika delar av en situation",
-          "För att det alltid blir enklare då",
-          "För att regler aldrig behövs",
+          "De belyser olika delar av en situation",
+          "För att det alltid blir enklare och snabbare att bestämma sig då",
+          "För att regler aldrig behövs i etiska frågor",
           "För att man måste skriva längre texter"
         ],
         "correct": 0
@@ -12765,10 +12765,10 @@
       {
         "q": "Vad säger det om Samira att hon tvekar innan hon lämnar in nyckeln?",
         "options": [
-          "Hon vill behålla nyckeln för sig själv",
-          "Hon tycker att idrott är oviktigt",
-          "Hon vet exakt vem som tappade nyckeln",
-          "Hon är rädd att bli anklagad eller skapa problem"
+          "Hon vill behålla nyckeln för sig själv som ett minne",
+          "Hon tycker att idrott är oviktigt och bryr sig inte",
+          "Hon vet exakt vem som tappade nyckeln men vill skydda den personen",
+          "Hon är rädd att skapa problem"
         ],
         "correct": 3
       },
@@ -12795,9 +12795,9 @@
       {
         "q": "Vilket budskap passar bäst med berättelsen?",
         "options": [
-          "Det är bäst att alltid hitta en syndabock",
-          "Det lönar sig att hålla saker hemliga",
-          "Ansvar kan handla om att återställa ordning utan att anklaga",
+          "Det är bäst att alltid hitta en syndabock när något försvinner",
+          "Det lönar sig att hålla saker hemliga så länge det går",
+          "Ansvar kan handla om att lösa saker utan att anklaga",
           "Regler är oviktiga om man har tur"
         ],
         "correct": 2
@@ -12818,7 +12818,7 @@
           "För att vinna pengar och för att bli bäst i sport",
           "För att få bättre betyg och för att bli känd i skolan",
           "För att slippa läsa och för att sova längre",
-          "För att informera och för att påverka"
+          "För att informera och påverka"
         ],
         "correct": 3
       },
@@ -12895,10 +12895,10 @@
       {
         "q": "Hur beskrivs ljuset när biblioteket är stängt?",
         "options": [
-          "Som starkare eftersom solen skiner in",
-          "Som helt släckt och mörkt",
-          "Som färgat av neonlampor",
-          "Som oförändrat men med tydligare gångar och skuggor"
+          "Som starkare eftersom solen skiner in genom alla fönster",
+          "Som helt släckt och mörkt överallt i lokalen",
+          "Som färgat av neonlampor i olika kulörer",
+          "Som oförändrat men med tydligare skuggor"
         ],
         "correct": 3
       },
@@ -12935,10 +12935,10 @@
       {
         "q": "Vilken slutsats kan man dra om bibliotekets roll utifrån sista meningen?",
         "options": [
-          "Biblioteket är tomt och meningslöst utan besökare",
-          "Biblioteket stänger för att ingen längre läser böcker",
+          "Biblioteket är tomt och meningslöst utan besökare som fyller rummen",
+          "Biblioteket stänger för att ingen längre läser böcker numera",
           "Biblioteket vill att människor aldrig ska låna hem böcker",
-          "Biblioteket fungerar som en plats som bevarar berättelser och väntar på nya läsare"
+          "Biblioteket bevarar berättelser och väntar på läsare"
         ],
         "correct": 3
       }
@@ -12985,10 +12985,10 @@
       {
         "q": "Varför tar texten upp att alla inte har samma mobil eller data?",
         "options": [
-          "För att visa att mobiler är onödigt dyra",
-          "För att argumentera för att alla ska få en ny mobil",
-          "För att säga att bara vissa elever får använda mobil",
-          "För att betona att undervisning inte bör kräva privata mobiler för att vara rättvis"
+          "För att visa att mobiler är onödigt dyra för de flesta familjer idag",
+          "För att argumentera för att alla ska få en ny mobil från kommunen",
+          "För att säga att bara vissa elever bör få använda mobil under lektioner",
+          "För att undervisningen inte bör kräva privat mobil"
         ],
         "correct": 3
       },
@@ -13005,10 +13005,10 @@
       {
         "q": "Vilket påstående stämmer bäst med textens slutsats?",
         "options": [
-          "Mobiler ska förbjudas i alla sammanhang",
-          "Mobiler ska alltid vara tillåtna utan regler",
-          "Lektionen blir bäst om mobilen används som belöning",
-          "Tydliga regler kan ge arbetsro och samtidigt möjliggöra nyttig användning"
+          "Mobiler ska förbjudas helt i alla sammanhang och på alla platser",
+          "Mobiler ska alltid vara tillåtna utan regler i skolan",
+          "Lektionen blir bäst om mobilen används som belöning efter avklarade uppgifter",
+          "Tydliga regler kan ge både arbetsro och nyttig användning"
         ],
         "correct": 3
       }
@@ -13075,10 +13075,10 @@
       {
         "q": "Vilket är textens huvudsyfte?",
         "options": [
-          "Att berätta om en person som jobbar i butik",
-          "Att lista alla maträtter som är bäst att kasta",
-          "Att argumentera för att man aldrig ska äta rester",
-          "Att förklara varför matsvinn är viktigt och ge exempel på hur det kan minska"
+          "Att berätta om en person som jobbar i en matbutik varje dag",
+          "Att lista alla maträtter som det är bäst att kasta direkt",
+          "Att argumentera för att man aldrig ska äta rester hemma",
+          "Att förklara varför matsvinn spelar roll"
         ],
         "correct": 3
       }
@@ -13096,8 +13096,8 @@
         "type": "literal",
         "q": "Vilken förklaring ger texten till att vissa parker kan ha fler arter av vildbin än jordbruksområden?",
         "options": [
-          "Att staden ofta har många olika växter nära varandra",
-          "Att honungsbin inte får finnas på landet",
+          "Att staden har många sorters växter på liten yta",
+          "Att honungsbin inte får finnas på landet enligt lag",
           "Att vildbin bara trivs där det finns höga hus",
           "Att parker alltid är helt fria från bekämpningsmedel"
         ],
@@ -13129,10 +13129,10 @@
         "type": "literal",
         "q": "Vilket exempel nämns på växter som kan vara mindre bra för pollinatörer trots att de är fina?",
         "options": [
-          "Träd som blommar tidigt på våren",
+          "Träd som blommar tidigt på våren innan insekterna vaknat",
           "Växter med öppna, enkla blomformer",
           "Buskar som doftar starkt i skymningen",
-          "Förädlade sorter med täta kronblad som är svåra att nå"
+          "Förädlade sorter med täta kronblad"
         ],
         "correct": 3
       },
@@ -13151,10 +13151,10 @@
         "type": "sammanfatta",
         "q": "Vilket är textens huvudbudskap?",
         "options": [
-          "Att alla insekter bör flyttas från staden till landet",
-          "Att städer kan fungera som ekosystem där små val kan gynna pollinatörer",
-          "Att parker främst ska planeras för att se snygga ut vid invigning",
-          "Att honungsbin är den enda arten som pollinerar växter"
+          "Att alla insekter bör flyttas till landet",
+          "Att små val i staden kan gynna pollinatörer",
+          "Att parker främst ska planeras för att se snygga ut vid invigningen av dem",
+          "Att honungsbin är den enda arten som pollinerar växter i städer"
         ],
         "correct": 1
       }
@@ -13178,8 +13178,8 @@
         "type": "literal",
         "q": "Varför ville Amina och Leo gå på mötet enligt texten?",
         "options": [
-          "De behövde extra meritpoäng till gymnasiet",
-          "De ville att vuxna skulle sluta prata om ungas vardag utan att fråga dem",
+          "De behövde extra meritpoäng inför ansökan till gymnasiet",
+          "De ville påverka beslut som rör ungas vardag",
           "De skulle presentera ett nytt skolämne för kommunen",
           "De hade fått betalt för att delta i mötet"
         ],
@@ -13189,9 +13189,9 @@
         "type": "literal",
         "q": "Vad var tanken med ungdomsrådet?",
         "options": [
-          "Att ungdomar skulle ta över kommunens budgetarbete",
-          "Att alla elever skulle rösta om varje kommunal fråga",
-          "Att elever från olika skolor skulle träffa politiker och tjänstepersoner och lämna förslag",
+          "Att ungdomar skulle ta över kommunens budgetarbete helt",
+          "Att alla elever skulle rösta om varje kommunal fråga direkt",
+          "Att elever skulle träffa politiker och lämna förslag",
           "Att kommunen skulle ersätta fritidsgårdar med digitala möten"
         ],
         "correct": 2
@@ -13222,8 +13222,8 @@
         "type": "literal",
         "q": "Vilken lösning föreslog Amina för att råden skulle tas på allvar?",
         "options": [
-          "Att varje idé ska få ett tydligt svar om den genomförs, utreds eller avslås",
-          "Att rådet bara ska träffas en gång per år",
+          "Att varje idé ska få ett tydligt svar",
+          "Att rådet bara ska träffas en gång per år för att spara tid",
           "Att ungdomar ska skriva under ett kontrakt om tystnadsplikt",
           "Att kommunen ska ta bort alla regler för möten"
         ],
@@ -13233,9 +13233,9 @@
         "type": "sammanfatta",
         "q": "Vilket är textens huvudbudskap?",
         "options": [
-          "Att demokrati fungerar bäst när bara de mest vana talarna deltar",
+          "Att demokrati fungerar bäst när bara de mest vana talarna deltar i processen",
           "Att ett ungdomsråd alltid leder till att ungdomar får bestämma allt",
-          "Att demokrati också handlar om att förstå beslutsprocesser och hitta fler sätt att påverka",
+          "Att demokrati handlar om att förstå hur beslut växer fram",
           "Att politiska frågor är för komplicerade för elever i grundskolan"
         ],
         "correct": 2
@@ -13271,8 +13271,8 @@
         "type": "literal",
         "q": "Vad var Hansan enligt texten?",
         "options": [
-          "Ett nätverk av handelsstäder som samarbetade för att skydda sina intressen",
-          "En armé som erövrade städer runt Östersjön",
+          "Ett nätverk av handelsstäder",
+          "En armé som erövrade städer runt hela Östersjön under medeltiden",
           "Ett kungligt råd som styrde Gotland",
           "En religiös rörelse som byggde kyrkor i Visby"
         ],
@@ -13293,9 +13293,9 @@
         "type": "literal",
         "q": "Vilken skillnad mellan krönikan och den senare historieboken lyfts fram?",
         "options": [
-          "Krönikan nämner inga konflikter alls, historieboken gör det",
-          "Historieboken säger att inget bråk skedde, krönikan gör det",
-          "Krönikan beskriver köpmännen positivt, historieboken betonar privilegier som kunde skapa ilska",
+          "Krönikan nämner inga konflikter alls medan historieboken gör det",
+          "Historieboken säger att inget bråk skedde, men krönikan gör det",
+          "Krönikan är positiv till köpmännen, historieboken lyfter privilegier",
           "Båda texterna säger exakt samma sak men med olika språk"
         ],
         "correct": 2
@@ -13304,10 +13304,10 @@
         "type": "inferens",
         "q": "Vilket argument använder Noa mot Sams idé att krönikan är mest trovärdig?",
         "options": [
-          "Att krönikor alltid är påhittade",
-          "Att historieböcker aldrig använder källor",
-          "Att museer inte får visa modeller",
-          "Att närhet inte alltid betyder sanning eftersom författaren kan vara partisk eller beroende"
+          "Att krönikor alltid är helt påhittade från början till slut",
+          "Att historieböcker aldrig använder några källor alls",
+          "Att museer inte får visa modeller av historiska platser",
+          "Att närhet inte alltid betyder sanning"
         ],
         "correct": 3
       },
@@ -13342,8 +13342,8 @@
         "type": "literal",
         "q": "Vilken förklaring ger Rana till att appen verkar veta vad Malte vill se?",
         "options": [
-          "Att innehållet väljs slumpmässigt varje gång",
-          "Att algoritmer gissar utifrån vad han stannar kvar vid",
+          "Att innehållet väljs helt slumpmässigt varje gång appen öppnas",
+          "Att algoritmer gissar utifrån hans beteende",
           "Att alla användare får exakt samma flöde",
           "Att videorna väljs av en människa som följer honom"
         ],
@@ -13375,10 +13375,10 @@
         "type": "inferens",
         "q": "Varför menar läraren att algoritmer inte alltid är neutrala?",
         "options": [
-          "För att de aldrig använder data",
+          "För att de aldrig använder data från riktiga människor",
           "För att de bara fungerar på gamla telefoner",
-          "För att de bara visar sportinnehåll",
-          "För att människor sätter mål och väljer data, vilket kan förstärka snedvridningar"
+          "För att de bara visar sportinnehåll oavsett användare",
+          "För att människors val av mål och data kan ge snedvridningar"
         ],
         "correct": 3
       },
@@ -13386,9 +13386,9 @@
         "type": "literal",
         "q": "Vad visade klassens experiment med två nya konton?",
         "options": [
-          "Att flödet snabbt anpassas efter vad man tittar på, även på kort tid",
-          "Att nya konton inte kan få rekommendationer",
-          "Att humor alltid leder till träningsklipp",
+          "Att flödet snabbt anpassas efter tittandet",
+          "Att nya konton inte kan få några rekommendationer alls",
+          "Att humor alltid leder till träningsklipp efter ett tag",
           "Att algoritmer bara påverkar vuxna användare"
         ],
         "correct": 0
@@ -13397,10 +13397,10 @@
         "type": "sammanfatta",
         "q": "Vilket är textens huvudbudskap?",
         "options": [
-          "Att algoritmer alltid gör oss arga och därför bör förbjudas",
-          "Att man kan förstå och påverka sitt flöde genom medvetna val och källor",
+          "Att algoritmer alltid gör oss arga och därför bör förbjudas helt",
+          "Att man kan förstå och påverka sitt flöde",
           "Att sociala medier inte använder algoritmer längre",
-          "Att det bästa är att aldrig dela eller kommentera något"
+          "Att det bästa är att aldrig dela eller kommentera något alls"
         ],
         "correct": 1
       }
@@ -13435,9 +13435,9 @@
         "type": "literal",
         "q": "Vilken konsekvens av för lite sömn nämns i texten?",
         "options": [
-          "Att man blir bättre på att komma ihåg detaljer",
-          "Att det kan bli svårare att koncentrera sig och hantera känslor",
-          "Att man alltid blir hungrigare på morgonen",
+          "Att man blir bättre på att komma ihåg detaljer och fakta",
+          "Att koncentration och känslohantering försämras",
+          "Att man alltid blir hungrigare på morgonen efter dålig sömn",
           "Att man får mer energi av höga ljud"
         ],
         "correct": 1
@@ -13468,8 +13468,8 @@
         "type": "literal",
         "q": "Vilka tre steg skriver Mira och Elias i sin plan?",
         "options": [
-          "Lägga mobilen utanför sängen, ha fast släcktid och göra något lugnt innan",
-          "Dricka energidryck, somna med tv:n på och sova på dagen",
+          "Mobilen utanför sängen, fast släcktid, lugn stund",
+          "Dricka energidryck, somna med tv:n på och sova på dagen istället",
           "Byta klass, sluta med idrott och plugga hela kvällen",
           "Skrolla snabbare, stänga av ljudet och vakna senare"
         ],
@@ -13479,8 +13479,8 @@
         "type": "sammanfatta",
         "q": "Vilket är textens huvudbudskap?",
         "options": [
-          "Att man måste följa en plan perfekt för att må bra",
-          "Att hälsa är en riktning där små steg kan hjälpa även om man ibland misslyckas",
+          "Att man måste följa en plan perfekt varje dag för att må bra",
+          "Att små steg kan hjälpa även om man ibland misslyckas",
           "Att skärmar alltid är skadliga oavsett tid på dygnet",
           "Att stress alltid syns tydligt på alla människor"
         ],
