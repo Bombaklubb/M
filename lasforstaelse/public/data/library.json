@@ -4329,8 +4329,8 @@
         "options": [
           "Att kroppen slutar behöva medicin",
           "Att antibiotika bara fungerar på virus",
-          "Att bakterier förändras så att de klarar av antibiotika och kan fortsätta spridas",
-          "Att antibiotika alltid ger feber"
+          "Att bakterier klarar av antibiotika",
+          "Att antibiotika alltid ger feber som biverkning"
         ],
         "correct": 2
       },
@@ -4361,8 +4361,8 @@
         "q": "Varför kan det vara riskabelt att avbryta en antibiotikakur för tidigt?",
         "options": [
           "För att kroppen glömmer hur man sväljer tabletter",
-          "För att de starkaste bakterierna kan överleva och börja växa igen",
-          "För att virus då blir starkare",
+          "För att de starkaste bakterierna kan överleva",
+          "För att virus då blir starkare och sprids lättare",
           "För att medicinen då blir billigare"
         ],
         "correct": 1
@@ -4371,8 +4371,8 @@
         "type": "inferens",
         "q": "Varför kan antibiotikaresistens göra operationer mer riskfyllda?",
         "options": [
-          "För att resistenta infektioner blir svårare att behandla när patienten är sårbar",
-          "För att bakterier bara finns i sjukhusluft",
+          "För att infektioner blir svårare att behandla",
+          "För att bakterier bara finns i sjukhusluft och ventilation",
           "För att antibiotika behövs för att söva patienter",
           "För att operationer tar längre tid när man har resistens"
         ],
@@ -4382,8 +4382,8 @@
         "type": "inferens",
         "q": "Vad antyder texten om varför problemet inte kan lösas av enbart individers val?",
         "options": [
-          "För att resistens också hänger ihop med vårdrutiner, djurhållning, regler och forskning",
-          "För att bakterier inte påverkas av medicin",
+          "För att resistens även beror på samhällsfaktorer",
+          "För att bakterier inte påverkas av medicin överhuvudtaget",
           "För att hygien inte spelar någon roll",
           "För att antibiotika snart kommer förbjudas överallt"
         ],
@@ -4431,10 +4431,10 @@
         "type": "literal",
         "q": "Vad är ett exempel på demokrati i vardagen som texten tar upp?",
         "options": [
-          "Att man aldrig får ändra regler",
-          "Att alla alltid måste vara överens",
-          "Att elevrådet finns för att elever ska kunna påverka",
-          "Att internet stängs på natten"
+          "Att man aldrig får ändra regler i skolan",
+          "Att alla alltid måste vara helt överens",
+          "Att elevrådet finns och ger inflytande",
+          "Att internet stängs på natten för alla"
         ],
         "correct": 2
       },
@@ -4442,9 +4442,9 @@
         "type": "inferens",
         "q": "Varför säger texten att yttrandefrihet inte betyder att man kan säga vad som helst utan konsekvenser?",
         "options": [
-          "För att åsikter alltid är förbjudna",
-          "För att samhället försöker balansera frihet med trygghet och vissa saker kan bryta mot lagen",
-          "För att demokrati inte tillåter kritik",
+          "För att åsikter alltid är förbjudna i demokratier",
+          "För att frihet balanseras med trygghet",
+          "För att demokrati inte tillåter kritik av beslut",
           "För att domstolar bestämmer vad du tycker"
         ],
         "correct": 1
@@ -4453,8 +4453,8 @@
         "type": "inferens",
         "q": "Varför kan kompromisser vara viktiga i en demokrati enligt textens resonemang?",
         "options": [
-          "För att kompromiss kan vara ett sätt att hitta beslut som fler kan leva med",
-          "För att kompromiss betyder att man vinner",
+          "För att det ger beslut som fler accepterar",
+          "För att kompromiss betyder att man alltid vinner",
           "För att kompromiss gör att ingen behöver diskutera",
           "För att kompromiss alltid ger den bästa lösningen"
         ],
@@ -4464,10 +4464,10 @@
         "type": "inferens",
         "q": "Vilken risk beskriver texten om samhällsdebatten blir fylld av personangrepp och misstänksamhet?",
         "options": [
-          "Att människor lyssnar mer på varandra",
-          "Att lagar slutar gälla direkt",
-          "Att alla börjar läsa mer böcker",
-          "Att det blir lättare att dela upp samhället i \"vi\" och \"de\" och svårare att samarbeta"
+          "Att människor lyssnar mer på varandra och samarbetar",
+          "Att lagar slutar gälla direkt och ordningen försvinner",
+          "Att alla börjar läsa mer böcker om politik",
+          "Att samhället delas i \"vi\" och \"de\""
         ],
         "correct": 3
       }
@@ -4525,8 +4525,8 @@
         "q": "Varför frågar Laila om Nadir känner igen känslan av att springa för att inte förlora sin plats?",
         "options": [
           "För att hon tror att Nadir vill jobba i fabrik",
-          "För att hon vill koppla historien till en modern känsla av stress och press",
-          "För att museet har en tävling",
+          "För att hon kopplar historien till modern stress",
+          "För att museet har en tävling om bästa tolkning",
           "För att hon vill att han ska börja träna löpning"
         ],
         "correct": 1
@@ -4535,9 +4535,9 @@
         "type": "inferens",
         "q": "Varför står det att arbetaren är \"okänd\" enligt Lailas förklaring?",
         "options": [
-          "För att museet glömde att skriva namnet",
-          "För att dagboken är påhittad",
-          "För att många arbetare inte fick sina berättelser sparade på samma sätt som rika och mäktiga",
+          "För att museet glömde att skriva namnet på skylten",
+          "För att dagboken är helt påhittad av museet",
+          "För att arbetares berättelser sällan sparades",
           "För att ingen brydde sig om namn då"
         ],
         "correct": 2
@@ -4546,9 +4546,9 @@
         "type": "inferens",
         "q": "Vad förändras i Nadirs syn på historia i slutet av berättelsen?",
         "options": [
-          "Han tror att allt förr var bättre",
-          "Han tycker att historia bara är datum",
-          "Han börjar se historia som människors liv och röster, även sådana som annars kan glömmas",
+          "Han tror att allt förr var bättre än i dag",
+          "Han tycker att historia bara är datum och årtal",
+          "Han ser historia som verkliga liv och röster",
           "Han bestämmer sig för att aldrig gå på museum igen"
         ],
         "correct": 2
@@ -4606,10 +4606,10 @@
         "type": "inferens",
         "q": "Varför kan sampling ses som en \"dialog mellan generationer\"?",
         "options": [
-          "För att alla låtar är likadana",
-          "För att äldre artister alltid sjunger med",
-          "För att DJs bara spelar gammal musik",
-          "För att man kan använda äldre musik och ge den nytt liv i en ny låt"
+          "För att alla låtar är likadana oavsett årtionde",
+          "För att äldre artister alltid sjunger med i studion",
+          "För att DJs bara spelar gammal musik på klubbar",
+          "För att äldre musik får nytt liv i nya låtar"
         ],
         "correct": 3
       },
@@ -4617,10 +4617,10 @@
         "type": "inferens",
         "q": "Varför blir rättighetsfrågor ibland svårare när teknik kan upptäcka likheter snabbare?",
         "options": [
-          "För att även oavsiktliga likheter kan upptäckas och skapa konflikter eller krav",
-          "För att ingen längre kan höra musik",
-          "För att upphovsrätt slutar gälla",
-          "För att sampling alltid blir lagligt"
+          "För att oavsiktliga likheter kan skapa krav",
+          "För att ingen längre kan höra musik ordentligt",
+          "För att upphovsrätt slutar gälla efter en viss tid",
+          "För att sampling alltid blir lagligt med ny teknik"
         ],
         "correct": 0
       },
@@ -4628,9 +4628,9 @@
         "type": "inferens",
         "q": "Vilket etiskt skäl nämns till att man kan behöva tillstånd för att sampla?",
         "options": [
-          "Att musik annars blir för kort",
-          "Att trummor inte får användas",
-          "Att skapande ses som arbete och att det kan kännas orättvist om andra använder det gratis",
+          "Att musik annars blir för kort och tråkig",
+          "Att trummor inte får användas utan licens",
+          "Att skapande är arbete som förtjänar ersättning",
           "Att lyssnare alltid blir arga"
         ],
         "correct": 2
@@ -4655,9 +4655,9 @@
         "type": "literal",
         "q": "Vad är det Hana hör i videon som gör henne chockad?",
         "options": [
-          "Ett brandlarm som tjuter",
-          "Att någon sjunger hennes favoritlåt",
-          "En röst som låter som hennes och säger elaka saker",
+          "Ett brandlarm som tjuter i korridoren",
+          "Att någon sjunger hennes favoritlåt högt",
+          "En röst som låter som hennes",
           "Att läraren ropar hennes namn"
         ],
         "correct": 2
@@ -4677,8 +4677,8 @@
         "type": "literal",
         "q": "Vad berättar Reza att man kan göra med vissa appar?",
         "options": [
-          "Göra läxor snabbare",
-          "Mata in några sekunder av en persons röst och få den att säga vad som helst",
+          "Göra läxor snabbare med hjälp av automatisering",
+          "Skapa en falsk röst utifrån korta klipp",
           "Bygga en ny mobil av delar",
           "Låsa skolans dörrar på distans"
         ],
@@ -4688,9 +4688,9 @@
         "type": "inferens",
         "q": "Varför blir Hana både glad och mer rädd när Mei säger att videon \"känns fel\"?",
         "options": [
-          "För att Mei lovar att sprida videon mer",
-          "För att Hana börjar tvivla på sig själv",
-          "För att Hana inser att folk kan tro på ljudet ändå, även om hennes vänner vet att det inte stämmer",
+          "För att Mei lovar att sprida videon ännu mer",
+          "För att Hana börjar tvivla på sig själv helt",
+          "För att andra kan tro på ljudet ändå",
           "För att Mei inte vill vara vän längre"
         ],
         "correct": 2
@@ -4699,9 +4699,9 @@
         "type": "inferens",
         "q": "Varför säger rektorn att det är fel att dela vidare även om man \"bara delar\"?",
         "options": [
-          "För att delningar kan sprida kränkningar och göra skadan större",
-          "För att videor alltid är förbjudna i skolan",
-          "För att kommentarer aldrig spelar roll",
+          "För att delning sprider kränkningen vidare",
+          "För att videor alltid är förbjudna i skolan helt",
+          "För att kommentarer aldrig spelar roll för någon",
           "För att internet blir långsammare annars"
         ],
         "correct": 0
@@ -4711,8 +4711,8 @@
         "q": "Vad visar Hanas svar till det anonyma kontot om hur hon utvecklas i berättelsen?",
         "options": [
           "Hon bestämmer sig för att aldrig använda teknik igen",
-          "Hon tar tillbaka kontrollen genom att sätta gränser och kräva ansvar",
-          "Hon tycker att allt var roligt egentligen",
+          "Hon sätter gränser och kräver ansvar",
+          "Hon tycker att allt var roligt och skämtsamt egentligen",
           "Hon vill bli känd på sociala medier"
         ],
         "correct": 1
@@ -12041,9 +12041,9 @@
       {
         "q": "Vilken detalj gör att Samir börjar tvivla extra mycket på att inlägget är seriöst?",
         "options": [
-          "Att bilden innehåller en logotyp",
-          "Att rubriken har ett datum",
-          "Att länken inte visar någon skribent eller källor",
+          "Att bilden innehåller en logotyp som ser officiell ut",
+          "Att rubriken har ett datum och ser professionell ut",
+          "Att länken saknar skribent och källor",
           "Att kommentarsfältet är fullt av åsikter"
         ],
         "correct": 2
@@ -12071,9 +12071,9 @@
       {
         "q": "Vilken metod använder Samir som mest tyder på att han försöker kontrollera informationen själv?",
         "options": [
-          "Han läser kommentarerna noggrant",
-          "Han klickar direkt på \"Dela vidare\"",
-          "Han söker på rubriken och kontrollerar myndighetens egna uppgifter",
+          "Han läser kommentarerna noggrant och jämför dem",
+          "Han klickar direkt på \"Dela vidare\" för att sprida",
+          "Han söker på rubriken och kollar myndighetens sida",
           "Han skriver en egen dramatisk rubrik"
         ],
         "correct": 2
@@ -12081,20 +12081,20 @@
       {
         "q": "Vad är textens viktigaste poäng om källkritik?",
         "options": [
-          "Att man bör undvika sociala medier helt",
-          "Att man alltid ska fråga en kompis innan man läser vidare",
+          "Att man bör undvika sociala medier helt och hållet",
+          "Att man alltid ska fråga en kompis innan man läser",
           "Att man ska lita på allt som ser professionellt ut",
-          "Att man ska sakta ner och kontrollera avsändare, datum och sammanhang"
+          "Att man ska sakta ner och kontrollera fakta"
         ],
         "correct": 3
       },
       {
         "q": "Varför berättar Samir för kompisen hur han kom fram till att bilden var missvisande?",
         "options": [
-          "För att han vill få fler följare",
-          "För att göra kompisen imponerad",
+          "För att han vill få fler följare i sitt flöde",
+          "För att göra kompisen imponerad av honom",
           "För att han vill att myndigheten ska se hans arbete",
-          "För att det blir lättare för fler att förstå och göra likadant nästa gång"
+          "För att fler då kan tänka likadant"
         ],
         "correct": 3
       }
@@ -12112,10 +12112,10 @@
       {
         "q": "Vilken ordning beskriver bäst de stora stegen från inspelning till att du uppfattar ljudet?",
         "options": [
-          "Hjärna → mikrofon → luft → DAC",
-          "Magnet → fil → trumhinna → instrument",
+          "Hjärna → mikrofon → luft → DAC → membran",
+          "Magnet → fil → trumhinna → instrument → spole",
           "Komprimering → luft → förstärkare → mikrofon",
-          "Ljudvågor i luft → mikrofon → digital lagring → hörlurarnas membran → innerörat"
+          "Luft → mikrofon → lagring → membran → öra"
         ],
         "correct": 3
       },
@@ -12132,9 +12132,9 @@
       {
         "q": "Varför behövs en förstärkare innan signalen går till hörlurarnas element?",
         "options": [
-          "För att komprimera filen en gång till",
+          "För att komprimera filen en gång till innan uppspelning",
           "För att byta ut magneten mot en spole",
-          "För att ge signalen nog med energi för att driva membranet",
+          "För att ge nog med energi till membranet",
           "För att göra ljudet äldre och mer analogt"
         ],
         "correct": 2
@@ -12152,9 +12152,9 @@
       {
         "q": "Vad är textens syfte?",
         "options": [
-          "Att förklara vilka omvandlingar som gör att musik kan höras",
-          "Att varna för att musikfiler är olagliga",
-          "Att jämföra olika musikstilar",
+          "Att förklara hur ljud omvandlas till musik",
+          "Att varna för att musikfiler ofta är olagliga att ladda ner",
+          "Att jämföra olika musikstilar med varandra",
           "Att övertyga om att trådlösa hörlurar alltid är bättre"
         ],
         "correct": 0
@@ -12164,8 +12164,8 @@
         "options": [
           "Komprimering betyder att ljudet blir helt tyst mellan samplingar",
           "Komprimering gör alltid ljudet mer exakt än originalet",
-          "Komprimering behövs bara för att höja volymen",
-          "Komprimering kan spara utrymme men kan också ta bort vissa detaljer"
+          "Komprimering behövs bara för att höja volymen i filen",
+          "Komprimering sparar plats men kan ta bort detaljer"
         ],
         "correct": 3
       }
