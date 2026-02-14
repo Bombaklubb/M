@@ -81,6 +81,12 @@ export interface Badge {
   earnedAt: string;
 }
 
+// Resultat för en enskild fråga
+export interface QuestionResult {
+  questionType: QuestionType;  // 'literal', 'inferens', etc.
+  correct: boolean;
+}
+
 // Sparad info om en läst text
 export interface CompletedText {
   textId: string;
@@ -91,6 +97,8 @@ export interface CompletedText {
   pointsEarned: number;
   completedAt: string;
   genre?: string;
+  theme?: string;
+  questionResults?: QuestionResult[];  // Detaljerad info om varje fråga
 }
 
 // Tillgängliga avatarer
