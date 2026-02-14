@@ -15955,6 +15955,351 @@
     "word_count": 329
   },
   {
+    "id": "ak6-tema-006",
+    "title": "Tidningen som ingen ville göra",
+    "text": "I klass 6C fick eleverna i uppgift att göra en klasstidning. De skulle arbeta i grupper, och varje grupp ansvarade för en del: nyheter, sport, kultur och insändare. Men redan första dagen uppstod problem.\n\nNyhetsgruppen kunde inte enas om vad som var en nyhet. Jasmin ville skriva om skolmaten, men Elliot tyckte att det var för vardagligt. \"En nyhet ska vara något som folk inte redan vet\", sa han. Jasmin svarade: \"Men alla har åsikter om maten, och det handlar om vår vardag.\"\n\nSportgruppen hade ett annat problem. De hade tre texter om fotboll men inget om andra sporter. Deras lärare, Mikael, påminde dem om att en tidning bör spegla olika intressen.\n\nKulturgruppen hade mest material. De hade intervjuat skolans musiklärare, recenserat en bok och fotograferat en utställning. Men de märkte att alla texter var positiva. \"Behöver inte en recension också kunna vara kritisk?\" frågade Noor.\n\nInsändargruppen hade fått in brev från elever som tyckte olika om mobilförbudet. De diskuterade hur man kan publicera åsikter utan att det blir elakt.\n\nNär tidningen till slut var klar hade alla lärt sig något. Jasmin sammanfattade det så: \"Det svåraste var inte att skriva. Det var att bestämma vad som var viktigt och rättvist att ta med.\"",
+    "grade": 6,
+    "category": "Medier",
+    "questions": [
+      {
+        "q": "Varför blev det en diskussion i nyhetsgruppen?",
+        "options": [
+          "De hade för många texter att välja mellan",
+          "De kunde inte enas om vad som räknas som en nyhet",
+          "De ville inte arbeta tillsammans",
+          "De hade glömt sin deadline"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad påminde läraren sportgruppen om?",
+        "options": [
+          "Att fotboll är den viktigaste sporten",
+          "Att tidningen bör spegla olika intressen",
+          "Att de inte fick skriva om sport alls",
+          "Att de måste intervjua tränaren"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menade Noor med sin fråga om recensioner?",
+        "options": [
+          "Att man aldrig ska vara positiv i en text",
+          "Att en recension kan vara ärlig och ibland kritisk",
+          "Att alla recensioner borde vara negativa",
+          "Att kultur inte hör hemma i en tidning"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad diskuterade insändargruppen?",
+        "options": [
+          "Hur man publicerar åsikter utan att det blir elakt",
+          "Hur man hittar fler annonser till tidningen",
+          "Om de skulle skriva insändarna själva",
+          "Om de skulle ta bort alla kritiska brev"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder att en tidning bör spegla olika intressen?",
+        "options": [
+          "Att den bara ska handla om populära ämnen",
+          "Att innehållet ska visa många perspektiv och ämnen",
+          "Att alla texter ska vara exakt lika långa",
+          "Att varje elev ska skriva lika många artiklar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad lärde sig klassen mest av projektet enligt Jasmin?",
+        "options": [
+          "Att det svåraste är att stava rätt",
+          "Att det svåraste var att välja vad som var viktigt och rättvist",
+          "Att det var lättare än de trodde från början",
+          "Att man inte bör göra klasstidningar"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-007",
+    "title": "Varför smakar saker olika?",
+    "text": "Har du funderat på varför en citron smakar surt och choklad smakar sött? Smak är ett samspel mellan tungan, näsan och hjärnan som hjälper oss att avgöra vad vi äter.\n\nPå tungan finns tusentals smaklökar, små mottagare som reagerar på kemiska ämnen i maten. Forskare brukar prata om fem grundsmaker: sött, salt, surt, beskt och umami. Umami är en fyllig smak som finns i till exempel tomater, ost och soja.\n\nMen smak handlar inte bara om tungan. Näsan spelar en stor roll. När du tuggar frigörs doftämnen som når näsan inifrån munhålan. Därför smakar mat ofta ganska lite när du är förkyld och har täppt näsa.\n\nHjärnan sätter ihop informationen från tungan och näsan med andra sinnen: hur maten ser ut, vilken temperatur den har och hur den känns i munnen. En krispig kex upplevs annorlunda än en mjuk kaka, även om de smakar likadant.\n\nVarför gillar vi olika saker? Det beror på en blandning av biologi och erfarenhet. Barn har ofta fler smaklökar än vuxna, vilket kan göra starka smaker mer intensiva. Samtidigt påverkar matvanor vad vi tycker om. Den som växer upp med en viss krydda kan uppleva den som helt vanlig, medan någon annan tycker den är stark.\n\nSmak är alltså inte bara kemi. Det är en upplevelse som formas av kroppen, minnet och kulturen.",
+    "grade": 6,
+    "category": "Vetenskap",
+    "questions": [
+      {
+        "q": "Hur många grundsmaker brukar forskare prata om?",
+        "options": [
+          "Tre stycken",
+          "Fyra stycken",
+          "Fem stycken",
+          "Sju stycken"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför smakar mat ofta mindre när man är förkyld?",
+        "options": [
+          "För att tungan slutar fungera helt",
+          "För att näsan är täppt och doftämnen inte når fram",
+          "För att man äter långsammare",
+          "För att hjärnan stänger av smaklökarna"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är umami?",
+        "options": [
+          "En japansk maträtt",
+          "En fyllig grundsmak som finns i tomater och ost",
+          "En typ av krydda från Sydamerika",
+          "Ett ämne som gör mat salt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan barn uppleva starka smaker mer intensivt?",
+        "options": [
+          "För att de alltid äter snabbare",
+          "För att de ofta har fler smaklökar än vuxna",
+          "För att de har bättre syn",
+          "För att de dricker mer vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder att smak formas av kulturen?",
+        "options": [
+          "Att all mat smakar likadant överallt",
+          "Att våra matvanor påverkar vad vi tycker om",
+          "Att bara vuxna kan smaka kultur",
+          "Att man måste resa för att uppleva smak"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad vill texten visa om smak som helhet?",
+        "options": [
+          "Att smak bara beror på vad tungan känner",
+          "Att smak är en upplevelse som involverar flera sinnen och erfarenheter",
+          "Att alla människor smakar exakt likadant",
+          "Att näsan inte har något med smak att göra"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-008",
+    "title": "Barnarbete förr och nu",
+    "text": "I Sverige för drygt hundra år sedan var det vanligt att barn arbetade. Redan vid sju eller åtta års ålder kunde barn jobba i fabriker, på bondgårdar eller i gruvor. Dagarna var långa och arbetet tungt. Många barn fick aldrig gå i skolan.\n\nI slutet av 1800-talet började folk reagera. Lärare, läkare och politiker argumenterade för att barn behövde utbildning och skydd. Steg för steg kom nya lagar. År 1882 blev det skolplikt i Sverige, vilket innebar att alla barn hade rätt och skyldighet att gå i skolan. Senare skärptes reglerna för barnarbete ytterligare.\n\nIdag är barnarbete förbjudet i Sverige. Barn får visst arbeta i begränsad utsträckning, till exempel med lättare sommarjobb efter att de fyllt tretton, men det får inte påverka deras hälsa eller skolgång.\n\nI andra delar av världen ser verkligheten annorlunda ut. Enligt FN arbetar fortfarande ungefär 160 miljoner barn globalt, många under farliga förhållanden. Orsakerna är ofta fattigdom, brist på skolor och konflikter.\n\nOrganisationer arbetar för att minska barnarbete genom att stödja familjer ekonomiskt och bygga skolor. FN:s barnkonvention slår fast att alla barn har rätt till utbildning, lek och skydd mot utnyttjande.\n\nFrågan om barnarbete handlar i grunden om vilka rättigheter barn ska ha och vem som ansvarar för att de uppfylls.",
+    "grade": 6,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vad innebar skolplikten som infördes 1882?",
+        "options": [
+          "Att alla barn fick jobba i skolan",
+          "Att alla barn hade rätt och skyldighet att gå i skolan",
+          "Att bara rika barn fick gå i skolan",
+          "Att skolan blev frivillig för alla"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur många barn arbetar globalt enligt FN?",
+        "options": [
+          "Ungefär 10 miljoner",
+          "Ungefär 50 miljoner",
+          "Ungefär 160 miljoner",
+          "Ungefär 500 miljoner"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilka orsaker till barnarbete nämns i texten?",
+        "options": [
+          "Dålig teknik och brist på datorer",
+          "Fattigdom, brist på skolor och konflikter",
+          "Att barn vill arbeta i stället för att leka",
+          "Att föräldrar inte bryr sig om sina barn"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför började människor reagera mot barnarbete i Sverige?",
+        "options": [
+          "För att barnen tjänade för mycket pengar",
+          "För att fabrikerna inte ville ha barn kvar",
+          "För att barn behövde utbildning och skydd",
+          "För att det inte fanns tillräckligt med jobb"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder i begränsad utsträckning i texten?",
+        "options": [
+          "Att det är helt förbjudet",
+          "Att det är tillåtet men med regler och gränser",
+          "Att det bara gäller vissa städer",
+          "Att bara vuxna får bestämma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken grundfråga handlar barnarbete om enligt texten?",
+        "options": [
+          "Hur mycket pengar barn kan tjäna",
+          "Vilka rättigheter barn ska ha och vem som ansvarar",
+          "Vilka länder som är rikast",
+          "Hur man bygger fler fabriker"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-009",
+    "title": "Ekosystemet i en stubbe",
+    "text": "En gammal stubbe i skogen kan se död ut, men den är ofta full av liv. Om du tittar noga ser du mossa, svamp, insekter och kanske till och med en liten groda. Stubben är ett helt ekosystem i miniatyr.\n\nNär ett träd fälls eller dör börjar nedbrytningen. Svampar och bakterier bryter ner veden bit för bit. De omvandlar trämaterialet till näringsämnen som återgår till jorden. Den processen kan ta många år, och under tiden erbjuder stubben mat och skydd åt andra organismer.\n\nInsekter som skalbaggar och myror är bland de första som flyttar in. De gräver gångar i den mjuka veden och skapar utrymmen där de lägger ägg. Fåglar som hackspettar kan komma och leta efter insekterna. På så sätt bildas en näringskedja där varje art har en roll.\n\nMossa och lavar växer på stubbens yta. De binder fukt och skapar ett skyddat klimat för små djur som spindlar och gråsuggor. I sprickor kan fröer från andra växter gro och så småningom växa upp genom den murkna veden.\n\nEn stubbe påminner om att döden i naturen inte är ett slut utan en övergång. Materialet från det gamla trädet blir till näring för nya växter och djur. Det är så kretsloppet i skogen fungerar: inget försvinner, allt återanvänds.\n\nNästa gång du ser en stubbe i skogen, stanna och titta. Du kanske upptäcker mer liv än du trodde.",
+    "grade": 6,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Vilka organismer börjar bryta ner en stubbe först?",
+        "options": [
+          "Fåglar och grodor",
+          "Svampar och bakterier",
+          "Mossa och blommor",
+          "Myror och spindlar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kommer hackspettar till stubben?",
+        "options": [
+          "För att bygga bo i mossan",
+          "För att äta svamp",
+          "För att leta efter insekter",
+          "För att dricka vatten ur veden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör mossan på stubbens yta?",
+        "options": [
+          "Den bryter ner veden snabbare",
+          "Den binder fukt och skapar ett skyddat klimat",
+          "Den förhindrar att insekter flyttar in",
+          "Den gör stubben hårdare"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar texten med att döden i naturen är en övergång?",
+        "options": [
+          "Att döda träd försvinner helt utan spår",
+          "Att materialet blir till näring för nytt liv",
+          "Att stubbar aldrig bryts ner",
+          "Att döda träd alltid planteras om"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder näringskedja i texten?",
+        "options": [
+          "En kedja av metall i naturen",
+          "En serie där varje art äter eller äts av en annan",
+          "Ett sätt att mäta hur gammal en stubbe är",
+          "En typ av svamp som växer i kedjor"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken insikt vill texten ge läsaren?",
+        "options": [
+          "Att man bör undvika stubbar i skogen",
+          "Att gamla stubbar bör tas bort för att skogen ska må bra",
+          "Att det finns mycket dolt liv i det som ser dött ut",
+          "Att nedbrytning bara sker i tropiska skogar"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak6-tema-010",
+    "title": "Kan man lita på en bild?",
+    "text": "Bilder finns överallt: i nyheter, på sociala medier och i reklam. De flesta av oss reagerar snabbt på bilder, ofta snabbare än på text. Men kan man alltid lita på det man ser?\n\nEn bild visar alltid ett urval. Fotografen väljer vinkel, ljus och vad som ska vara med i bilden. Det som hamnar utanför ramen syns inte. En bild av en tom strand kan ge intrycket att platsen är öde, men precis bakom fotografen kanske det står hundra människor.\n\nBilder kan också redigeras. Med moderna program går det att ändra färger, ta bort föremål eller lägga till saker som inte fanns där. Ibland görs det för att förbättra kvaliteten, men ibland för att vilseleda. Reklam använder ofta retuscherade bilder för att produkter eller personer ska se bättre ut.\n\nPå sociala medier delar många sina bästa ögonblick. Det skapar en skev bild av verkligheten, eftersom vardagen med tråkiga stunder och misslyckanden sällan visas. Det kan påverka hur vi ser på oss själva och andra.\n\nAtt vara bildkritisk innebär att ställa frågor: Vem tog bilden? I vilket sammanhang? Har den beskurits eller förändrats? Vad ville avsändaren att jag skulle tänka eller känna?\n\nBilder är kraftfulla just för att de känns direkta och sanna. Att förstå att de alltid innebär ett val gör oss bättre på att tolka den visuella värld vi lever i.",
+    "grade": 6,
+    "category": "Källkritik",
+    "questions": [
+      {
+        "q": "Vad menar texten med att en bild alltid visar ett urval?",
+        "options": [
+          "Att bilder alltid är falska",
+          "Att fotografen väljer vad som syns och vad som inte gör det",
+          "Att bilder bara visar det som är vackert",
+          "Att man alltid måste fråga fotografen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur kan reklam använda redigerade bilder?",
+        "options": [
+          "För att visa exakt hur produkten ser ut",
+          "För att produkter eller personer ska se bättre ut",
+          "För att göra bilder svartvita",
+          "För att spara pengar på fotografering"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan sociala medier ge en skev bild av verkligheten?",
+        "options": [
+          "För att alla ljuger hela tiden",
+          "För att bilder alltid tas med dåliga kameror",
+          "För att folk oftast delar sina bästa stunder",
+          "För att sociala medier inte tillåter bilder"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär att vara bildkritisk enligt texten?",
+        "options": [
+          "Att man aldrig tittar på bilder",
+          "Att man ställer frågor om vem som tog bilden och varför",
+          "Att man bara litar på bilder i böcker",
+          "Att man alltid tar egna bilder i stället"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder retuscherade i texten?",
+        "options": [
+          "Fotograferade med en speciell kamera",
+          "Bearbetade och förändrade digitalt",
+          "Utskrivna på papper i stor storlek",
+          "Tagna utomhus i naturligt ljus"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är bilder särskilt kraftfulla enligt texten?",
+        "options": [
+          "För att de alltid innehåller text",
+          "För att de kostar mer att producera",
+          "För att de känns direkta och sanna",
+          "För att de bara finns i tidningar"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
     "id": "ak3-tema-001",
     "title": "Kattugglan i parken",
     "text": "En tidig morgon gick Mira och hennes morfar till parken. Luften var kall och gräset glittrade av frost. Morfar hade med sig en kikare, och Mira bar en liten anteckningsbok. De hörde ett mjukt \"ho-ho\" från en gammal ek. I en gren satt en kattuggla och blinkade långsamt. Mira viskade så att den inte skulle bli rädd. Morfar pekade på ugglans runda ansikte och sa att den jagar mest på natten. Plötsligt flög en grå mus över stigen och försvann i buskarna. Ugglan vred huvudet nästan helt runt och följde ljudet. Mira skrev ner allt hon såg: tiden, vädret och var ugglan satt. När solen steg började fåglarna sjunga högre. Då flög ugglan tyst iväg mot skogen. Mira kände sig som en riktig naturforskare.",
