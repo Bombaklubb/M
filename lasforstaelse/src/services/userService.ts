@@ -1,4 +1,13 @@
 import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS, QuestionResult, QuestionType } from '../types';
+import {
+  isFirebaseConfigured,
+  saveUserToCloud,
+  getUserFromCloud,
+  getAllUsersFromCloud,
+  saveDailyStatsToCloud,
+  getDailyStatsFromCloud,
+  getDailyStatsRangeFromCloud
+} from './firebase';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
@@ -74,10 +83,24 @@ export function findUserByName(name: string): User | null {
 
 /**
  * Logga in - returnerar befintlig användare eller skapar ny
+ * Kollar både lokalt och i molnet
  */
-export function loginUser(name: string, avatar?: string): User {
-  // Kolla om användaren redan finns
-  const existingUser = findUserByName(name);
+export async function loginUser(name: string, avatar?: string): Promise<User> {
+  // Kolla om användaren redan finns lokalt
+  let existingUser = findUserByName(name);
+
+  // Om inte lokalt, kolla i molnet
+  if (!existingUser && isFirebaseConfigured()) {
+    try {
+      existingUser = await getUserFromCloud(name);
+      if (existingUser) {
+        // Spara lokalt för framtida användning
+        saveToAllUsers(existingUser);
+      }
+    } catch (err) {
+      console.error('Kunde inte hämta användare från molnet:', err);
+    }
+  }
 
   if (existingUser) {
     // Uppdatera senaste aktivitet och eventuellt avatar om den inte finns
@@ -97,12 +120,16 @@ export function loginUser(name: string, avatar?: string): User {
 }
 
 /**
- * Spara användare till localStorage
+ * Spara användare till localStorage och molnet
  */
 export function saveUser(user: User): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
     saveToAllUsers(user);
+    // Synka till molnet (async, väntar ej)
+    saveUserToCloud(user).catch(err => {
+      console.error('Kunde inte synka användare till molnet:', err);
+    });
   } catch (error) {
     console.error('Kunde inte spara användare:', error);
   }
@@ -368,7 +395,7 @@ export function calculateReadingStreak(completedTexts: CompletedText[]): number 
 }
 
 /**
- * Spara daglig statistik
+ * Spara daglig statistik lokalt och till molnet
  */
 export function recordDailyStats(genre: string, theme: string, grade: number): void {
   try {
@@ -394,6 +421,11 @@ export function recordDailyStats(genre: string, theme: string, grade: number): v
     stats.grades[grade] = (stats.grades[grade] || 0) + 1;
 
     localStorage.setItem(statsKey, JSON.stringify(stats));
+
+    // Synka till molnet (async, väntar ej)
+    saveDailyStatsToCloud(stats).catch(err => {
+      console.error('Kunde inte synka daglig statistik till molnet:', err);
+    });
   } catch (error) {
     console.error('Kunde inte spara daglig statistik:', error);
   }
@@ -507,4 +539,125 @@ export function getTeacherStats(): {
     leaderboard,
     last7Days,
   };
+}
+
+/**
+ * Hämta aggregerad statistik för lärarvyn från MOLNET (alla enheter)
+ */
+export async function getTeacherStatsFromCloud(): Promise<{
+  todayTexts: number;
+  totalTexts: number;
+  topGenres: Array<{ name: string; count: number }>;
+  topThemes: Array<{ name: string; count: number }>;
+  topGrades: Array<{ grade: number; count: number }>;
+  leaderboard: Array<{ name: string; points: number; textsRead: number }>;
+  last7Days: Array<{ date: string; count: number }>;
+  isCloudData: boolean;
+}> {
+  // Om Firebase inte är konfigurerat, returnera lokal data
+  if (!isFirebaseConfigured()) {
+    const localStats = getTeacherStats();
+    return { ...localStats, isCloudData: false };
+  }
+
+  try {
+    // Hämta alla användare från molnet
+    const allUsers = await getAllUsersFromCloud();
+
+    // Om inga användare i molnet, fallback till lokal data
+    if (allUsers.length === 0) {
+      const localStats = getTeacherStats();
+      return { ...localStats, isCloudData: false };
+    }
+
+    // Beräkna totalt antal texter och aggregerad statistik
+    let totalTexts = 0;
+    const genresMap = new Map<string, number>();
+    const themesMap = new Map<string, number>();
+    const gradesMap = new Map<number, number>();
+
+    // Gå igenom alla användare och deras completed texts
+    allUsers.forEach(user => {
+      user.completedTexts.forEach(text => {
+        totalTexts++;
+        const grade = text.grade;
+        gradesMap.set(grade, (gradesMap.get(grade) || 0) + 1);
+
+        // Aggregera genres och themes från användardata
+        if (text.genre) {
+          genresMap.set(text.genre, (genresMap.get(text.genre) || 0) + 1);
+        }
+        if (text.theme) {
+          themesMap.set(text.theme, (themesMap.get(text.theme) || 0) + 1);
+        }
+      });
+    });
+
+    // Hämta daglig statistik för senaste 7 dagarna från molnet
+    const today = getTodayKey();
+    const dates: string[] = [];
+    for (let i = 6; i >= 0; i--) {
+      const date = new Date();
+      date.setDate(date.getDate() - i);
+      dates.push(date.toISOString().split('T')[0]);
+    }
+
+    const cloudDailyStats = await getDailyStatsRangeFromCloud(dates);
+
+    // Beräkna texter idag
+    const todayCloudStats = cloudDailyStats.get(today);
+    const todayTexts = todayCloudStats?.textsRead || 0;
+
+    // Bygg upp senaste 7 dagars statistik
+    const last7Days: Array<{ date: string; count: number }> = [];
+    for (const dateKey of dates) {
+      const stats = cloudDailyStats.get(dateKey);
+      last7Days.push({
+        date: dateKey,
+        count: stats?.textsRead || 0,
+      });
+    }
+
+    // Sortera och begränsa topp-listor
+    const topGenres = Array.from(genresMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([name, count]) => ({ name, count }));
+
+    const topThemes = Array.from(themesMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 5)
+      .map(([name, count]) => ({ name, count }));
+
+    const topGrades = Array.from(gradesMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 9)
+      .map(([grade, count]) => ({ grade, count }));
+
+    // Skapa leaderboard
+    const leaderboard = allUsers
+      .map(user => ({
+        name: user.name,
+        points: user.totalPoints,
+        textsRead: user.completedTexts.length,
+      }))
+      .sort((a, b) => b.points - a.points)
+      .slice(0, 10);
+
+    return {
+      todayTexts,
+      totalTexts,
+      topGenres,
+      topThemes,
+      topGrades,
+      leaderboard,
+      last7Days,
+      isCloudData: true,
+    };
+  } catch (error) {
+    console.error('Kunde inte hämta statistik från molnet:', error);
+    // Fallback till lokal data vid fel
+    const localStats = getTeacherStats();
+    return { ...localStats, isCloudData: false };
+  }
 }
