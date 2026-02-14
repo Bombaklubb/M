@@ -15648,5 +15648,205 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak3-tema-011",
+    "title": "Ett bihotell på skolgården",
+    "text": "I måndags hittade Elin och Amir en tom burk bakom cykelstället. De tog med den till fröken Sofia och frågade om den kunde bli ett bihotell. Fröken log och sa att vilda bin behöver små hål att vila och lägga ägg i. Klassen samlade bambupinnar, torra strån och lite lera. Amir mätte burken och Elin ritade en skylt: \"Rör inte, bina jobbar!\"\n\nDe satte burken i en trälåda så att den inte rullade. Sedan placerade de hotellet i solen, men nära blommorna vid staketet. Efter några dagar såg de ett litet bi krypa in i ett rör. Elin blev stolt, men fröken Sofia sa att man också måste låta hotellet vara i fred. Om bina får lugn och mat kan de hjälpa blommor att göra frön.",
+    "grade": 3,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Var hittade Elin och Amir burken?",
+        "options": ["Bakom cykelstället", "I klassrummets förråd", "Vid matsalens dörr", "Under gungorna"],
+        "correct": 0
+      },
+      {
+        "q": "Vad sa fröken Sofia att vilda bin behöver?",
+        "options": ["Stora löv att sova på", "Små hål att vila och lägga ägg i", "Djupa vattenpölar att dricka ur", "Mjuka gräsmattor att gömma sig i"],
+        "correct": 1
+      },
+      {
+        "q": "Varför satte klassen burken i en trälåda?",
+        "options": ["För att göra den tyngre än sten", "För att den skulle se finare ut", "För att den inte skulle rulla", "För att skydda den från regn inomhus"],
+        "correct": 2
+      },
+      {
+        "q": "Var placerade de bihotellet?",
+        "options": ["I skuggan under en bänk", "Långt från alla växter", "Inne i biblioteket", "I solen nära blommorna vid staketet"],
+        "correct": 3
+      },
+      {
+        "q": "Vad stod det på skylten som Elin ritade?",
+        "options": ["\"Rör inte, bina jobbar!\"", "\"Ta hem burken nu!\"", "\"Här bor fåglar\"", "\"Städa skolgården\""],
+        "correct": 0
+      },
+      {
+        "q": "Varför ska man låta bihotellet vara i fred?",
+        "options": ["För att stråna annars blir blöta", "För att bina behöver lugn för att kunna bo och hjälpa blommor", "För att burken kan blåsa bort", "För att blommorna annars vissnar direkt"],
+        "correct": 1
+      }
+    ],
+    "word_count": 138
+  },
+  {
+    "id": "ak3-tema-012",
+    "title": "Bussen som nästan inte kom",
+    "text": "Milo skulle åka buss till simhallen med sin morfar. Morfar använder rullator och brukar planera i god tid. De stod vid hållplatsen tio minuter tidigt och Milo höll biljetten i fickan. Men när bussen skulle komma blev det plötsligt stilla på vägen. En lastbil hade fått motorstopp längre fram.\n\nMilo kände hur magen knöt sig. Tänk om de missade simlektionen! Morfar tog fram sin mobil och ringde trafikbolaget. Personen i telefonen berättade att en annan buss snart skulle köra en omväg och hämta dem.\n\nNär ersättningsbussen kom vinkade chauffören och fällde ut rampen. Milo hjälpte morfar att rulla på, och de satte sig nära dörren. De kom fram lite sent, men simläraren sa att de gjorde rätt som väntade lugnt och följde informationen.",
+    "grade": 3,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vem skulle Milo åka med till simhallen?",
+        "options": ["Sin granne", "Sin morfar", "Sin kusin", "Sin tränare"],
+        "correct": 1
+      },
+      {
+        "q": "Hur tidigt stod de vid hållplatsen?",
+        "options": ["Precis när bussen kom", "En halvtimme för tidigt", "Tio minuter tidigt", "Fem minuter efter tiden"],
+        "correct": 2
+      },
+      {
+        "q": "Varför blev det stopp på vägen?",
+        "options": ["Det var en cykeltävling", "Det var halt av snö", "En bil stod felparkerad", "En lastbil fick motorstopp"],
+        "correct": 3
+      },
+      {
+        "q": "Vad gjorde morfar för att få reda på mer?",
+        "options": ["Han ringde trafikbolaget", "Han sprang till nästa hållplats", "Han frågade en hundägare", "Han skickade brev"],
+        "correct": 0
+      },
+      {
+        "q": "Vad gjorde chauffören när ersättningsbussen kom?",
+        "options": ["Han stängde dörrarna snabbt", "Han vinkade och fällde ut rampen", "Han tutade och körde förbi", "Han bad alla gå av"],
+        "correct": 1
+      },
+      {
+        "q": "Vad tyckte simläraren om hur de gjorde?",
+        "options": ["Att de borde ha vänt om", "Att de borde ha skällt på någon", "Att de gjorde rätt som väntade lugnt och följde informationen", "Att de borde ha åkt taxi direkt"],
+        "correct": 2
+      }
+    ],
+    "word_count": 140
+  },
+  {
+    "id": "ak3-tema-013",
+    "title": "Den hemliga hyllan på biblioteket",
+    "text": "På skolbiblioteket jobbade bibliotekarien Farah med att ställa böcker i ordning. En dag följde Nova med sin klass dit. Nova är icke-binär och gillar både fakta och sagor. När de gick mellan hyllorna såg Nova en liten skylt: \"Nya böcker\". Där stod en vagn med blandade titlar.\n\nFarah berättade att biblioteket får nya böcker varje månad, men att de först måste märkas och registreras. Nova fick hjälpa till att sätta klisterlappar med streckkoder. Sedan fick Nova välja en bok att låna först.\n\nNova valde en bok om rymden, men tog också en tunn deckare. På vägen ut stämplade Farah lånekortet och sa att om man lämnar tillbaka i tid får andra också chansen. Nova tänkte att biblioteket är som en skattkista: man hittar något nytt om man letar noga.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad såg Nova vid hyllorna som väckte intresse?",
+        "options": ["En affisch om idrott", "En liten skylt: \"Nya böcker\"", "En låst dörr med larm", "En karta över skolan"],
+        "correct": 1
+      },
+      {
+        "q": "Hur ofta får biblioteket nya böcker enligt Farah?",
+        "options": ["En gång per år", "Varje vecka", "Varje månad", "Bara på sommaren"],
+        "correct": 2
+      },
+      {
+        "q": "Vad behövde göras innan de nya böckerna kunde lånas?",
+        "options": ["De måste märkas och registreras", "De måste tvättas med vatten", "De måste målas om", "De måste skickas tillbaka"],
+        "correct": 0
+      },
+      {
+        "q": "Vad hjälpte Nova till med?",
+        "options": ["Att laga trasiga stolar", "Att sätta klisterlappar med streckkoder", "Att skriva en hel bok", "Att rita nya bokomslag"],
+        "correct": 1
+      },
+      {
+        "q": "Vilka två typer av böcker valde Nova?",
+        "options": ["En kokbok och en diktbok", "En sporttidning och en karta", "En bok om rymden och en tunn deckare", "Två böcker om hästar"],
+        "correct": 2
+      },
+      {
+        "q": "Varför är det viktigt att lämna tillbaka i tid?",
+        "options": ["Så att Farah kan stänga tidigare", "Så att böckerna blir nya igen", "Så att man slipper lånekort", "Så att andra också får chansen att låna"],
+        "correct": 3
+      }
+    ],
+    "word_count": 134
+  },
+  {
+    "id": "ak3-tema-014",
+    "title": "Kartan över den närmaste sjön",
+    "text": "Klassen skulle lära sig mer om området runt skolan. Läraren Jonas tog med en stor karta och la den på golvet. \"Vi ska gå till sjön,\" sa han, \"men vi ska också öva på att hitta rätt väg.\"\n\nSana pekade på en blå fläck och frågade om det var sjön. Jonas nickade och visade tecknet för bro. De räknade två broar på kartan och bestämde att de skulle gå över den som låg närmast lekparken.\n\nUte på promenaden gick de lugnt i led. Vid första korsningen jämförde de skylten med kartan. Det stämde: de var på rätt gata. När de kom fram såg de att sjön var mindre än Sana hade trott, men den glittrade i solen. Jonas sa att kartor inte visar allt, men de hjälper oss att planera och känna oss säkra när vi går någonstans.",
+    "grade": 3,
+    "category": "Geografi",
+    "questions": [
+      {
+        "q": "Vad la läraren Jonas på golvet?",
+        "options": ["En stor karta", "En lång hopprep", "En påse med frukt", "En ny fotboll"],
+        "correct": 0
+      },
+      {
+        "q": "Vad skulle klassen gå till?",
+        "options": ["Ett museum", "En simhall", "En bondgård", "Sjön"],
+        "correct": 3
+      },
+      {
+        "q": "Vad pekade Sana på på kartan?",
+        "options": ["En röd cirkel", "En grön triangel", "En blå fläck", "En svart linje"],
+        "correct": 2
+      },
+      {
+        "q": "Hur valde de vilken bro de skulle gå över?",
+        "options": ["Den som låg närmast lekparken", "Den som hade flest bilar", "Den som var längst bort", "Den som var målad gul"],
+        "correct": 0
+      },
+      {
+        "q": "Vad gjorde de vid första korsningen?",
+        "options": ["De sprang för att hinna före", "De jämförde skylten med kartan", "De gömde kartan i en buske", "De bytte om till stövlar"],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens viktigaste budskap?",
+        "options": ["Att sjöar alltid är stora", "Att man ska undvika broar", "Att kartor hjälper oss att planera, även om de inte visar allt", "Att kartor inte behövs i städer"],
+        "correct": 2
+      }
+    ],
+    "word_count": 142
+  },
+  {
+    "id": "ak3-tema-015",
+    "title": "När pulsen slog snabbare",
+    "text": "På idrotten skulle eleverna prova ett nytt upplägg. Läraren Kim satte upp fyra stationer: hoppa rep, kasta boll, balans på en linje och vila med djupa andetag. \"Vi ska känna efter i kroppen,\" sa Kim. \"Det är så man lär sig vad puls betyder.\"\n\nLeo började med hopprep och blev snabbt varm. Han satte två fingrar på handleden, precis som Kim visade. Där kände han små dunk. \"Det är pulsen,\" sa Kim. \"När du rör dig jobbar hjärtat snabbare.\"\n\nVid balansstationen gick Amina långsamt och fokuserade. Hon blev inte lika andfådd som vid hopprepet. På vilostationen satte sig alla ner och andades lugnt i tio andetag. Då kände Leo hur dunken blev långsammare.\n\nEfter lektionen skrev de i en liten logg vad som gjorde pulsen hög och vad som fick den att sjunka. Leo märkte att pauser kan vara lika viktiga som att springa.",
+    "grade": 3,
+    "category": "Hälsa",
+    "questions": [
+      {
+        "q": "Vilka fyra stationer hade läraren Kim satt upp?",
+        "options": ["Hoppa rep, kasta boll, balans, vila med djupa andetag", "Springa långt, simma, klättra, skriva logg", "Fotboll, basket, handboll, innebandy", "Yoga, matte, lunch, rast"],
+        "correct": 0
+      },
+      {
+        "q": "Var kände Leo sin puls?",
+        "options": ["På knät", "På handleden", "På örat", "På axeln"],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder det när pulsen blir snabbare enligt Kim?",
+        "options": ["Att hjärtat jobbar snabbare när man rör sig", "Att man alltid måste dricka saft", "Att man blir längre", "Att man behöver nya skor"],
+        "correct": 0
+      },
+      {
+        "q": "Varför blev Amina inte lika andfådd vid balansstationen?",
+        "options": ["Hon sprang fortare än alla andra", "Hon hade redan vilat länge", "Hon gick långsamt och fokuserade", "Hon hoppade rep samtidigt"],
+        "correct": 2
+      },
+      {
+        "q": "Vad hände med Leos puls efter vilostationen?",
+        "options": ["Den försvann helt", "Den blev långsammare", "Den blev dubbelt så snabb", "Den kändes bara i fötterna"],
+        "correct": 1
+      },
+      {
+        "q": "Vad skrev eleverna i sin logg efter lektionen?",
+        "options": ["Vilken mat de åt till lunch", "Hur många böcker de lånade", "Vad som gjorde pulsen hög och vad som fick den att sjunka", "Vilka som vann en tävling"],
+        "correct": 2
+      }
+    ],
+    "word_count": 155
   }
 ]
