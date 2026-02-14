@@ -6694,6 +6694,386 @@
     }
   },
   {
+    "id": "ak2-tema-001",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Fågeln vid fönstret",
+    "text": "Varje morgon sitter en liten fågel på fönsterbrädan utanför Willmas rum. Den pickar på glaset och hoppar fram och tillbaka. Willma tycker att det ser ut som om fågeln vill komma in.\n\n\"Vad äter den?\" frågar hon sin pappa.\n\n\"Fröer och insekter,\" svarar pappa. \"Vi kan hänga ut en fågelmatare.\"\n\nDe gör en matare av en tom mjölkkartong. Willma klipper ett hål i sidan och fyller med solrosfrön. Pappa hjälper henne att hänga den i trädet utanför fönstret.\n\nNästa dag kommer fågeln tillbaka. Den sitter på mataren och äter. Snart kommer fler fåglar. Willma räknar tre stycken. Hon ritar dem i sitt block och skriver vad de gör.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter fågeln på morgonen?",
+        "options": [
+          "I ett träd",
+          "På fönsterbrädan",
+          "På marken",
+          "På taket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de fågelmataren av?",
+        "options": [
+          "En plastflaska",
+          "En sko",
+          "En tom mjölkkartong",
+          "En burk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad fyller Willma mataren med?",
+        "options": [
+          "Bröd",
+          "Ris",
+          "Solrosfrön",
+          "Socker"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur många fåglar räknar Willma nästa dag?",
+        "options": [
+          "En",
+          "Två",
+          "Tre",
+          "Fem"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ritar Willma fåglarna i sitt block?",
+        "options": [
+          "Läraren sa att hon måste",
+          "Hon vill komma ihåg vad hon sett",
+          "Pappa tvingar henne",
+          "Hon har inget annat att göra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan vi förstå om Willma?",
+        "options": [
+          "Hon är rädd för fåglar",
+          "Hon bryr sig inte om naturen",
+          "Hon är nyfiken och tycker om djur",
+          "Hon vill fånga fåglarna"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-002",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "kroppen",
+    "title": "Tanden som lossnade",
+    "text": "Mitt under lunchen kände Amir att något var konstigt. Hans framtand gungade mer än vanligt. Han vågade inte bita i smörgåsen.\n\n\"Min tand gungar jättemycket,\" sa han till sin kompis Ella.\n\n\"Vicka på den!\" sa Ella. \"Min föll ut i ett äpple förra veckan.\"\n\nAmir vickade försiktigt med tungan. Plötsligt lossnade tanden. Den låg där i hans hand, liten och vit.\n\n\"Lägg den under kudden ikväll,\" sa Ella. \"Då kanske tandfen kommer.\"\n\nAmir visade tanden för fröken. Hon sa att det var helt normalt och att en ny tand snart skulle växa fram.\n\nPå kvällen lade Amir tanden under kudden. Nästa morgon låg där en blank femkrona. Amir log brett, och i spegeln såg han luckan där tanden hade suttit.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken tand gungade på Amir?",
+        "options": [
+          "En kindtand",
+          "En hörntand",
+          "Hans framtand",
+          "En visdomstand"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad sa Ella om sin egen tand?",
+        "options": [
+          "Den ramlade ut i en smörgås",
+          "Den föll ut i ett äpple",
+          "Den tappade hon i sömnen",
+          "Den drog tandläkaren ut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var lade Amir tanden på kvällen?",
+        "options": [
+          "I en ask",
+          "Under kudden",
+          "På bordet",
+          "I ett glas vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad låg under kudden nästa morgon?",
+        "options": [
+          "En leksak",
+          "Ett brev",
+          "En blank femkrona",
+          "En ny tandborste"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vågade Amir inte bita i smörgåsen?",
+        "options": [
+          "Han var inte hungrig",
+          "Smörgåsen smakade illa",
+          "Han var rädd att tanden skulle lossna",
+          "Han hade ont i magen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vem tror du lade femkronan under kudden?",
+        "options": [
+          "Ella",
+          "Fröken i skolan",
+          "Amir själv",
+          "Någon i Amirs familj"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-003",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "hjälpsamhet",
+    "title": "Grannens tunga kasse",
+    "text": "Saga och hennes bror Ville satt på trappen hemma. De såg grannfrun Margit komma gående med två tunga kassar. Margit stannade och pustade.\n\n\"Ska vi hjälpa dig?\" frågade Saga.\n\nMargit log. \"Det vore snällt. Jag bor ju bara där borta.\"\n\nSaga tog en kasse och Ville tog den andra. De gick sakta bredvid Margit till hennes dörr. I kassen fanns mjölk, bröd, äpplen och en tidning.\n\n\"Tack, barn,\" sa Margit. \"Ni är riktiga hjältar. Vill ni ha var sin kaka?\"\n\nDe fick en kanelbulle var. Saga och Ville satte sig på Margits bänk och åt.\n\n\"Det känns bra att hjälpa,\" sa Ville.\n\n\"Ja,\" sa Saga. \"Och man får kanelbullar.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bar Margit?",
+        "options": [
+          "En väska och en påse",
+          "Två tunga kassar",
+          "En stor låda",
+          "Ett paraply och en kasse"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad fanns i kassen?",
+        "options": [
+          "Godis och glass",
+          "Kläder och skor",
+          "Mjölk, bröd, äpplen och en tidning",
+          "Böcker och pennor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad fick barnen av Margit?",
+        "options": [
+          "Pengar",
+          "En kanelbulle var",
+          "En leksak",
+          "Äpplen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem är Saga och Villes granne?",
+        "options": [
+          "Fröken Anna",
+          "Hunden Sigge",
+          "Margit",
+          "Leo"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför stannade Margit och pustade?",
+        "options": [
+          "Hon var glad",
+          "Kassarna var tunga och hon var trött",
+          "Hon ville prata med barnen",
+          "Det regnade"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sa Saga att man får kanelbullar?",
+        "options": [
+          "Hon menade att hjälpsamhet kan ge goda saker tillbaka",
+          "Hon ville ha fler bullar",
+          "Hon tyckte inte det var roligt att hjälpa",
+          "Hon var hungrig och tänkte bara på mat"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-004",
+    "grade": 2,
+    "genre": "faktatext",
+    "theme": "väder",
+    "title": "Vad är snö?",
+    "text": "När det är tillräckligt kallt ute kan det börja snöa. Snö är egentligen vatten som har frusit till iskristaller uppe i molnen. Varje snöflinga ser lite annorlunda ut, men de flesta har sex armar.\n\nNär snöflingorna blir tillräckligt tunga faller de ner mot marken. Om luften är kall hela vägen ner landar de som snö. Om det är varmare nere vid marken kan de smälta och bli regn istället.\n\nSnö kan vara lös och fluffig eller tung och blöt. Lös snö är bra att åka skidor i. Blöt snö är bra att göra snöbollar och snögubbar av.\n\nDjur hanterar snö på olika sätt. Haren byter till vit päls på vintern för att gömma sig. Räven gräver i snön för att hitta möss. Och ekorren sover mycket och lever på nötter som den gömde under hösten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är snö egentligen?",
+        "options": [
+          "Kallt damm",
+          "Vatten som frusit till iskristaller",
+          "Vit sand som faller",
+          "Moln som ramlat ner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur många armar har de flesta snöflingor?",
+        "options": [
+          "Fyra",
+          "Fem",
+          "Sex",
+          "Åtta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken sorts snö är bra för snöbollar?",
+        "options": [
+          "Lös och fluffig",
+          "Tung och blöt",
+          "Hård och isig",
+          "Lätt och torr"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör haren på vintern?",
+        "options": [
+          "Den sover hela vintern",
+          "Den flyger söderut",
+          "Den byter till vit päls",
+          "Den simmar under isen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir snöflingorna till regn ibland?",
+        "options": [
+          "De är för tunga",
+          "De smälter om luften är varm",
+          "Solen skiner på dem",
+          "Vinden blåser för hårt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför byter haren till vit päls?",
+        "options": [
+          "Så den fryser mindre",
+          "Så den syns bättre",
+          "Så den kan gömma sig i snön",
+          "Så andra harar känner igen den"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak2-tema-005",
+    "grade": 2,
+    "genre": "berättelse",
+    "theme": "fantasi",
+    "title": "Kartan i boken",
+    "text": "Leo hittade en gammal bok i bokhyllan hemma. Inuti pärmen satt en liten karta. Det stod \"Skatten under stora stenen\" med blyerts.\n\n\"Titta!\" sa Leo till sin storasyster Meja. \"Det är en skattkarta!\"\n\nMeja tittade noga. \"Det ser ut som vår trädgård. Ser du? Där är trädet och där är gången.\"\n\nDe sprang ut med kartan. De följde den förbi buskarna, runt trädet och fram till en stor sten vid staketet.\n\n\"Gräv!\" sa Leo.\n\nMeja hittade en spade. De grävde och grävde. Plötsligt hörde de ett klonk. I jorden låg en gammal plåtburk. Inuti fanns tre stenar, en pärla av glas och en lapp. På lappen stod det: \"Till den som hittar skatten. Från Maja, 2014.\"\n\n\"Vem är Maja?\" frågade Leo.\n\n\"Kanske någon som bodde här förut,\" sa Meja.\n\nDe lade tillbaka burken och ritade en ny karta. Nu var det deras tur att gömma en skatt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittade Leo kartan?",
+        "options": [
+          "I en låda",
+          "Inuti en bok i bokhyllan",
+          "Under sin säng",
+          "I trädgården"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad stod på kartan?",
+        "options": [
+          "Skatten vid bäcken",
+          "Skatten under stora stenen",
+          "Skatten i trädet",
+          "Skatten i källaren"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad fanns i plåtburken?",
+        "options": [
+          "Pengar och godis",
+          "Tre stenar, en pärla av glas och en lapp",
+          "En nyckel och en ring",
+          "Sand och snäckor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem hade gömt skatten?",
+        "options": [
+          "Leo",
+          "Meja",
+          "Maja",
+          "Pappa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lade de tillbaka burken?",
+        "options": [
+          "De ville inte ha den",
+          "De tyckte det var roligare om någon annan också kunde hitta en skatt",
+          "De var rädda för att få skäll",
+          "Burken var för tung att bära"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ritade de en ny karta?",
+        "options": [
+          "De ville göra en läxa",
+          "De ville att någon i framtiden ska hitta deras skatt",
+          "Meja behövde öva sig på att rita",
+          "De hade tappat den gamla kartan"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
     "id": "ak5-vanskap-01",
     "grade": 5,
     "genre": "berättelse",
