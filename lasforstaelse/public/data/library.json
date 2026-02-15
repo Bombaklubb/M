@@ -21096,5 +21096,355 @@
       }
     ],
     "word_count": 286
+  },
+  {
+    "id": "ak5-tema-011",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "djur",
+    "title": "Varför flyttar fåglarna?",
+    "text": "Varje höst lämnar tusentals fåglar Sverige och flyger söderut. De kallas flyttfåglar. Men varför gör de det, och hur hittar de vägen?\n\nDen viktigaste orsaken är maten. Under vintern fryser sjöar och marker, och insekter försvinner. Fåglar som lever av insekter, som svalor och gökar, skulle inte överleva. Därför flyger de till varmare platser där det fortfarande finns mat.\n\nMen inte alla fåglar flyttar. Talgoxar, kråkor och björktrastar stannar kvar. De äter frön, bär och rester och klarar kylan. Man kallar dem stannfåglar.\n\nHur hittar flyttfåglarna rätt? Forskare har upptäckt att fåglar använder flera metoder. Vissa orienterar sig med hjälp av solen och stjärnorna. Andra har ett slags inbyggd kompass som känner av jordens magnetfält. Unga fåglar lär sig också rutten genom att följa äldre fåglar första gången.\n\nResan kan vara otroligt lång. Fjällvråken flyger till Afrika, och den lilla kungsfågeln korsar Medelhavet trots att den bara väger fem gram. Silvertärnan har den längsta sträckan av alla – den flyger från Arktis till Antarktis och tillbaka, nästan fyra mil om dagen.\n\nFågelflyttning visar hur djur anpassar sig till årstiderna. Det visar också att naturen hänger ihop: fåglar som häckar i svenska skogar är beroende av våtmarker i Afrika.",
+    "questions": [
+      {
+        "q": "Vad är den viktigaste orsaken till att fåglar flyttar enligt texten?",
+        "options": [
+          "De vill hitta en partner",
+          "De är rädda för snö",
+          "De hittar inte mat under vintern",
+          "De behöver mer solljus för fjädrarna"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är en stannfågel?",
+        "options": [
+          "En fågel som bor i bur",
+          "En fågel som stannar i Sverige under vintern",
+          "En fågel som flyttar sent på hösten",
+          "En fågel som bara finns i södra Sverige"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur orienterar sig vissa flyttfåglar enligt forskare?",
+        "options": [
+          "De följer vägar och motorvägar",
+          "De flyger bara på dagtid",
+          "De använder solen, stjärnor och jordens magnetfält",
+          "De ropar till varandra för att hålla riktningen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken fågel har den längsta flyttsträckan enligt texten?",
+        "options": [
+          "Fjällvråken",
+          "Kungsfågeln",
+          "Göken",
+          "Silvertärnan"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad väger kungsfågeln ungefär?",
+        "options": [
+          "Fem gram",
+          "Femtio gram",
+          "Fem hekto",
+          "Fem kilo"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad menar texten med att naturen hänger ihop?",
+        "options": [
+          "Att alla fåglar ser likadana ut",
+          "Att fåglar i Sverige är beroende av platser i andra länder",
+          "Att det alltid är vinter i Afrika",
+          "Att alla djur flyttar söderut samtidigt"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-012",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Matchen som ingen vann",
+    "text": "Alla visste att lördagens fotbollsmatch skulle bli viktig. Laget från Ekskolan mötte Björkskolan i semifinalen, och vinnaren gick vidare till finalen.\n\nTova spelade mittfältare i Ekskolan. Hon hade tränat extra hela veckan och kände sig redo. Men redan i andra minuten halkade hon på det blöta gräset och slog i knät. Det gjorde ont, men hon fortsatte spela.\n\nI första halvlek fick Björkskolan ett mål. En snabb framspelning som ingen hann täcka. Ekolaget blev tyst i halvtidspausen. Tränaren sa inte så mycket, men frågade: \"Vad kan ni göra bättre som lag, inte var för sig?\"\n\nDet fick Tova att tänka. Hon hade försökt dribbla förbi alla själv i stället för att passa. I andra halvlek bytte hon strategi. Hon spelade kortare passningar och lät kompisarna komma till skott. I sjuttionde minuten gjorde Noel kvittering efter en fin kombination.\n\nMatchen slutade 1–1, och det blev straffläggning. Tova missade sin straff – bollen gick precis utanför stolpen. Björkskolan vann till slut.\n\nPå bussen hem var det tyst. Men efter en stund sa Noel: \"Vi spelade bättre som lag i andra halvlek än vi gjort hela säsongen.\" Tova nickade. Hon var besviken, men inte på samma sätt som förut. Hon hade lärt sig något: att samarbete kan vara viktigare än att vinna.",
+    "questions": [
+      {
+        "q": "Varför var lördagens match viktig?",
+        "options": [
+          "Det var en träningsmatch",
+          "Det var en semifinal och vinnaren gick vidare",
+          "Det var lagets sista match för säsongen",
+          "Det var en vänskapsmatch mot en utländsk skola"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad hände med Tova tidigt i matchen?",
+        "options": [
+          "Hon fick gult kort",
+          "Hon gjorde ett mål",
+          "Hon halkade och slog i knät",
+          "Hon blev utbytt av tränaren"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad frågade tränaren i halvtidspausen?",
+        "options": [
+          "Vem som vill ta straffar",
+          "Vad de kan göra bättre som lag",
+          "Varför de inte springer snabbare",
+          "Om de vill byta målvakt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur ändrade Tova sitt spel i andra halvlek?",
+        "options": [
+          "Hon slutade springa och stod still",
+          "Hon bytte position till målvakt",
+          "Hon spelade kortare passningar och lät andra skjuta",
+          "Hon sprang bara framåt och väntade på bollen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad hände i straffläggningen?",
+        "options": [
+          "Tova gjorde det avgörande målet",
+          "Matchen avbröts på grund av regn",
+          "Ekskolan vann med 3–2",
+          "Tova missade sin straff och Björkskolan vann"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad hade Tova lärt sig efter matchen?",
+        "options": [
+          "Att man alltid ska dribbla själv",
+          "Att samarbete kan vara viktigare än att vinna",
+          "Att man inte ska spela fotboll i regn",
+          "Att straffar alltid avgör matcher"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-013",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Hur ljud blir musik",
+    "text": "Musik finns överallt: i telefonen, i affären, på skolgården när någon nynnar. Men vad är egentligen musik, och hur skiljer den sig från vanligt ljud?\n\nAllt ljud uppstår genom vibrationer. När en gitarrsträng vibrerar skapar den ljudvågor som färdas genom luften till våra öron. Hjärnan tolkar sedan signalerna som ljud. Om vibrationerna är jämna och regelbundna uppfattar vi en ton. Om de är ojämna hör vi brus eller oljud.\n\nMusik bygger på tre grunddelar: melodi, rytm och harmoni. Melodin är den del vi brukar nynna – en rad toner som följer efter varandra. Rytmen handlar om tid: hur långa eller korta tonerna är och var betoningen ligger. Harmoni uppstår när flera toner klingar samtidigt, som i ett ackord på piano.\n\nMänniskor har gjort musik i tiotusentals år. De äldsta instrumenten man hittat är flöjter gjorda av ben, över 40 000 år gamla. Musik har använts vid ceremonier, fester, arbete och för att berätta historier.\n\nIdag skapas musik också med datorer. Producenter kan bygga ihop låtar digitalt, lägga till effekter och ändra tonhöjd. Men grundprinciperna är desamma: vibrationer som skapar mönster som hjärnan uppfattar som musik.\n\nForskare har visat att musik påverkar oss starkt. Den kan göra oss glada, lugna eller ge oss energi. Vissa studier visar att musik till och med kan hjälpa oss att koncentrera oss bättre.",
+    "questions": [
+      {
+        "q": "Hur uppstår ljud enligt texten?",
+        "options": [
+          "Genom elektriska signaler",
+          "Genom vibrationer som skapar ljudvågor",
+          "Genom att luft pressas ihop i ett rör",
+          "Genom att hjärnan skapar toner själv"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är melodin i musik?",
+        "options": [
+          "Hur starkt ljudet är",
+          "En rad toner som följer efter varandra",
+          "Flera toner som klingar samtidigt",
+          "Hur lång låten är"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är harmoni?",
+        "options": [
+          "När man sjunger ensam",
+          "När man spelar bara rytm utan toner",
+          "När flera toner klingar samtidigt",
+          "När musiken blir tyst"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur gamla är de äldsta instrumenten som hittats?",
+        "options": [
+          "Omkring 1 000 år",
+          "Omkring 5 000 år",
+          "Omkring 40 000 år",
+          "Omkring 100 000 år"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menas med att producenter bygger ihop låtar digitalt?",
+        "options": [
+          "Att de spelar in sig själva på kassettband",
+          "Att de skapar musik med hjälp av datorer",
+          "Att de bara använder akustiska instrument",
+          "Att de skriver noter för hand"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad har forskare visat om musikens påverkan?",
+        "options": [
+          "Att musik inte påverkar humöret alls",
+          "Att musik bara hjälper barn, inte vuxna",
+          "Att musik kan göra oss glada, lugna och hjälpa oss koncentrera",
+          "Att musik alltid gör oss trötta"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-014",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Flickan som ritade kartor",
+    "text": "År 1752 bodde Maja i en liten by vid sjön Mälaren. Hon var tolv år och hjälpte sin mamma med tvättning och bakning. Men det Maja helst ville göra var att rita.\n\nEn dag kom en lantmätare till byn. Han hade med sig ett mätbord, en kompass och stora pappersrullar. Hans uppgift var att rita en karta över byns ägor så att man visste vilken mark som tillhörde vem.\n\nMaja följde efter honom och tittade fascinerat när han mätte avstånd med en kedja och ritade streck på pappret. \"Vill du prova?\" frågade han. Maja fick hålla i kedjan medan han läste av kompassriktningen.\n\nLantmätaren förklarade att kartor var viktiga för rättvisan. Om ingen visste var gränserna gick kunde den starkaste ta mest mark. En karta var ett sätt att visa sanningen om landskapet.\n\nMaja frågade varför sjön var målad blå fast vattnet egentligen var grönt. Lantmätaren skrattade och sa att kartor inte visar hur saker ser ut, utan var de finns. Färgerna var symboler – överenskommelser som alla kunde förstå.\n\nPå kvällen ritade Maja sin egen karta över byn. Hon markerade hus, brunnar, stigar och den gamla eken där barnen brukade leka. Mamman tittade på kartan och sa: \"Du har fått med allt det viktiga.\" Maja log. Kanske kunde hon rita kartor en dag, på riktigt.",
+    "questions": [
+      {
+        "q": "När utspelar sig berättelsen?",
+        "options": [
+          "År 1952",
+          "År 1852",
+          "År 1752",
+          "År 1652"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad var lantmätarens uppgift i byn?",
+        "options": [
+          "Att bygga en bro över sjön",
+          "Att rita en karta över byns ägor",
+          "Att lära barnen att skriva",
+          "Att samla in skatt åt kungen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför var kartor viktiga för rättvisan enligt lantmätaren?",
+        "options": [
+          "Så att alla visste var de bodde",
+          "Så att den starkaste inte kunde ta mest mark",
+          "Så att byborna kunde sälja sin mark",
+          "Så att kungen kunde bygga en väg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför var sjön blå på kartan fast vattnet var grönt?",
+        "options": [
+          "Lantmätaren hade bara blå färg",
+          "Sjön var blå på vintern",
+          "Färgerna var symboler som alla kunde förstå",
+          "Kartan var gammal och färgen hade ändrats"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad ritade Maja på sin egen karta?",
+        "options": [
+          "Bara sjön och skogen",
+          "Hus, brunnar, stigar och den gamla eken",
+          "En skattkarta med kryss",
+          "Bara sitt eget hus och trädgård"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan man säga att texten handlar om?",
+        "options": [
+          "Att flickor inte fick gå i skolan förr",
+          "Att Maja upptäcker kartor och hur de visar världen",
+          "Att sjöar alltid har olika färg",
+          "Att lantmätare hade ett farligt yrke"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-015",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Vad händer med skräpet i havet?",
+    "text": "Varje år hamnar miljontals ton skräp i haven. Det mesta är plast: påsar, flaskor, förpackningar och fiskenät. Men vart tar skräpet vägen, och varför är det ett problem?\n\nPlast bryts inte ner som trä eller papper. I stället delas den långsamt upp i allt mindre bitar. Dessa små bitar kallas mikroplast och kan vara mindre än ett sandkorn. Mikroplasten sprids med strömmar och finns nu i alla hav, även i Arktis.\n\nDjur i havet tar skada av skräpet. Sköldpaddor kan förväxla plastpåsar med maneter och äta dem. Sjöfåglar sväljer små plastbitar som fyller magen utan att ge näring. Fiskar får i sig mikroplast som sedan kan hamna i den fisk vi själva äter.\n\nEn del av skräpet samlas i stora områden som kallas skräpöar. Den mest kända ligger i Stilla havet och är flera gånger större än Sverige. Men det är inte en ö man kan gå på – det handlar om enorma mängder små plastbitar som flyter under ytan.\n\nVad kan vi göra? Forskare arbetar med metoder för att samla in plast ur havet, men det räcker inte. Det viktigaste är att minska mängden plast som hamnar där från början. Att återvinna, använda mindre engångsplast och plocka skräp vid stränder är saker som alla kan bidra med.\n\nHavet täcker över sjuttio procent av jordens yta. Det ger oss mat, syre och reglerar klimatet. Att ta hand om haven är att ta hand om oss själva.",
+    "questions": [
+      {
+        "q": "Vad är det mesta skräpet i haven gjort av?",
+        "options": [
+          "Metall",
+          "Glas",
+          "Plast",
+          "Papper"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är mikroplast?",
+        "options": [
+          "En sorts plast som löser upp sig helt",
+          "Mycket små plastbitar som kan vara mindre än ett sandkorn",
+          "Plast som bara finns i Stilla havet",
+          "En ny typ av nedbrytbar plast"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan plastpåsar vara farliga för sköldpaddor?",
+        "options": [
+          "Plastpåsar fastnar i deras skal",
+          "Sköldpaddor förväxlar dem med maneter och äter dem",
+          "Plastpåsar blockerar strömmarna",
+          "Sköldpaddor bygger bon av dem"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur beskrivs skräpön i Stilla havet?",
+        "options": [
+          "Som en stor ö man kan gå på",
+          "Som en sandbank full av skräp",
+          "Som enorma mängder små plastbitar under ytan",
+          "Som en flytande sopstation"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menar texten är det viktigaste man kan göra?",
+        "options": [
+          "Sluta äta fisk helt",
+          "Bygga fler fabriker vid kusten",
+          "Minska mängden plast som hamnar i havet",
+          "Flytta alla djur från havet"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför säger texten att ta hand om haven är att ta hand om oss själva?",
+        "options": [
+          "Havet ger oss mat, syre och reglerar klimatet",
+          "Alla människor bor nära havet",
+          "Havet är det enda stället där det finns dricksvatten",
+          "Vi tillbringar mest tid vid havet"
+        ],
+        "correct": 0
+      }
+    ]
   }
 ]
