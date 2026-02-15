@@ -19601,5 +19601,385 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak7-tema-011",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Varför Hogwarts känns verkligt",
+    "text": "Många som läser Harry Potter säger att Hogwarts nästan känns som en riktig plats. Det beror inte bara på magi och spännande händelser, utan på hur världen byggs upp med regler, detaljer och vardag. På Hogwarts finns lektioner som kan vara tråkiga, lärare som är olika stränga, konflikter i korridorerna och små rutiner som återkommer: uggleposten, elevhemmen, måltiderna och poängen som delas ut. När en fantasivärld har vardag blir den lättare att tro på.\n\nSamtidigt är världen inte helt logisk, och det är ofta med flit. I berättelserna finns saker som väcker frågor: Varför använder trollkarlar ibland enkla saker när de har magi? Varför är vissa problem svåra att lösa trots att det finns kraftfulla besvärjelser? Författaren låter ibland logiken böja sig för att skapa spänning eller humor. Det gör att läsaren får fylla i luckor och fundera vidare.\n\nEn viktig del av känslan är också perspektivet. Vi ser mycket genom Harrys ögon, och han kan inte allt. Han missförstår, gissar och får veta nya saker i efterhand. Därför får läsaren upptäcka världen steg för steg. Hemligheter blir inte bara information, utan något som påverkar relationer: vem man litar på, vem som döljer något och vilka rykten som sprids.\n\nDessutom finns tydliga symboler. Elevhemmen står för olika ideal: mod, kunskap, lojalitet och ambition. Men böckerna visar att ingen är bara en sak. En elev kan vara modig och samtidigt rädd. En annan kan vara smart men ändå göra dåliga val. Just den blandningen gör att Hogwarts känns som en skola där riktiga människor skulle kunna gå.\n\nTill slut handlar det om att magin inte tar bort det mänskliga. Vänskap, sorg, avundsjuka och ansvar finns kvar. När läsaren känner igen det, blir det mindre viktigt om trapporna flyttar på sig. Då blir Hogwarts en plats man kan sakna, trots att den inte finns på en karta.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Att Hogwarts känns trovärdigt eftersom världen har regler, detaljer och vardagliga inslag.",
+          "Att Hogwarts är den mest realistiska skolan i all fantasy eftersom magi förklarar allt.",
+          "Att Hogwarts är svårt att förstå eftersom författaren aldrig visar några rutiner.",
+          "Att Hogwarts främst är spännande på grund av alla dueller och monster."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel i texten visar på \"vardag\" i fantasivärlden?",
+        "options": [
+          "Att trapporna flyttar på sig när någon tittar bort.",
+          "Att det finns lektioner, måltider och poäng som delas ut.",
+          "Att alla problem löses snabbt med kraftfulla besvärjelser.",
+          "Att Hogwarts ligger på en karta som alla kan köpa."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför menar texten att världen ibland inte är helt logisk?",
+        "options": [
+          "För att läsaren ska bli förvirrad och sluta läsa.",
+          "För att magi alltid gör regler onödiga.",
+          "För att spänning eller humor ibland är viktigare än strikt logik.",
+          "För att författaren glömde vilka regler som redan fanns."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar berättarperspektivet känslan av att upptäcka Hogwarts?",
+        "options": [
+          "Läsaren får veta allt direkt och behöver aldrig gissa.",
+          "Läsaren ser mest genom lärarnas ögon och får facit.",
+          "Läsaren får en objektiv lista över regler och historik.",
+          "Läsaren lär sig världen steg för steg eftersom Harry inte kan allt."
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger texten om elevhemmen och idealen de står för?",
+        "options": [
+          "De står för ideal, men böckerna visar att människor kan vara mer än en egenskap.",
+          "De står för ideal, och eleverna passar alltid perfekt in i bara ett ideal.",
+          "De är mest ett sätt att dela in elever efter vilka betyg de får.",
+          "De finns främst för att göra sporttävlingar mer rättvisa."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket påstående stämmer bäst med textens slutsats?",
+        "options": [
+          "Magin gör att mänskliga känslor blir mindre viktiga.",
+          "Att känna igen mänskliga känslor gör att Hogwarts kan kännas som en plats man saknar.",
+          "Om en plats inte finns på en karta kan man inte sakna den.",
+          "Hogwarts känns verkligt bara för att det finns hemligheter."
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-012",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "Från bokhylla till globalt fenomen",
+    "text": "När en bokserie blir ett fenomen händer något med hur människor läser och pratar. Harry Potter började som berättelser om en pojke som upptäcker en dold värld, men spreds snabbt till många länder och språk. När flera miljoner läser samma berättelse uppstår ett gemensamt \"språk\": citat, skämt, symboler och diskussioner som känns bekanta även mellan främlingar.\n\nEn orsak till att serien fick så stort genomslag är att den växte med sin publik. I början är tonen mer skol- och äventyrsinriktad, med tydliga mysterier och mycket humor. Senare blir konflikterna mörkare och valen svårare. Många läsare hann själva bli äldre under åren mellan böckerna. På så sätt kunde serien fortsätta kännas relevant, men på olika sätt för olika åldrar.\n\nNär böcker översätts uppstår nya frågor. Vissa namn, ordlekar och kulturella referenser fungerar inte lika bra i ett annat språk. Översättaren måste välja: ska man behålla originalet för att vara trogen, eller anpassa för att behålla känslan? Ett elevhemsnamn eller en magisk varelse kan låta helt annorlunda på svenska än på engelska. För en del läsare blir det en upptäckt att samma sak kan kännas olika beroende på språket.\n\nFilmerna ökade också spridningen. Bild och musik gör berättelsen lättare att ta till sig, men de tvingar fram kortare versioner. Det betyder att vissa scener, personer eller förklaringar försvinner. Då får fansen ibland diskutera vad som \"räknas\": är det boken eller filmen som är den viktigaste versionen?\n\nNär en serie blir så stor uppstår dessutom fan-kultur: poddar, bokklubbar, cosplay och egna teorier. Där kan man möta personer som tolkar samma händelse på olika sätt. Någon ser berättelsen som en kamp mot fördomar, någon annan som en skildring av sorg, och en tredje som en berättelse om mod i vardagen. Fenomenet visar att en text inte bara är ord på papper, utan något som fortsätter i samtalen efteråt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken förändring i serien lyfter texten som en del av framgången?",
+        "options": [
+          "Att berättelsen blir enklare och mer barnslig för varje bok.",
+          "Att allt fler kapitel handlar om sport istället för mysterier.",
+          "Att tonen och konflikterna blir mörkare och mer komplexa i senare böcker.",
+          "Att huvudpersonen byts ut i mitten av serien för att skapa variation."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att ett \"gemensamt språk\" uppstår?",
+        "options": [
+          "Att läsare börjar tala exakt samma dialekt efter att ha läst böckerna.",
+          "Att fans delar referenser, skämt och symboler som många känner igen.",
+          "Att alla översättningar blir identiska oavsett land.",
+          "Att böckerna ersätter behovet av att prata om andra ämnen."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket dilemma får en översättare enligt texten?",
+        "options": [
+          "Om man ska behålla originalet eller anpassa för att känslan ska fungera i målspråket.",
+          "Om man ska skriva om handlingen så att den utspelar sig i Sverige.",
+          "Om man ska ta bort alla namn för att undvika missförstånd.",
+          "Om man ska lägga till helt nya kapitel för att göra boken längre."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan filmerna leda till diskussion om vad som \"räknas\"?",
+        "options": [
+          "För att filmerna alltid har fler scener än böckerna.",
+          "För att filmerna måste korta ner och ta bort delar, vilket gör versionerna olika.",
+          "För att filmerna inte använder musik, vilket gör dem svåra att förstå.",
+          "För att filmerna bara följer birollerna och inte huvudhandlingen."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel på fan-kultur nämns i texten?",
+        "options": [
+          "Att skolor förbjuder bokklubbar som handlar om serien.",
+          "Att läsare bara diskuterar serien i hemlighet och aldrig offentligt.",
+          "Att författaren skriver om alla böcker på nytt varje år.",
+          "Att fans skapar poddar, cosplay och egna teorier."
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar texten om hur olika personer kan tolka samma berättelse?",
+        "options": [
+          "Att det finns bara en korrekt tolkning som alla måste följa.",
+          "Att tolkningar främst beror på vilken film man såg först.",
+          "Att tolkningar kan variera: samma händelse kan handla om fördomar, sorg eller vardagsmod.",
+          "Att tolkningar blir identiska när en serie blir populär."
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-013",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "värdegrund",
+    "title": "Ett val i korridoren",
+    "text": "På Hogwarts kan ett rykte spridas snabbare än en uggla hinner blinka. En torsdag eftermiddag hörde Samir, som gick i femte året, att någon hade hittat en förbjuden bok i bibliotekets mest avstängda del. Boken skulle tydligen innehålla besvärjelser som kunde påverka minnen. Nyheten kom med viskningar och snabba blickar, och redan vid middagen pratade flera om vem som kunde ha tagit den.\n\nSamir satt bredvid sin vän Alva och deras klasskamrat Noa, som var icke-binär och ofta lade märke till sådant andra missade. Noa sa tyst: \"Om någon verkligen kan ändra minnen är det farligt, men det är också farligt att börja anklaga folk.\" Alva höll med och påminde om hur lätt elever tidigare blivit utpekade bara för att de var \"annorlunda\".\n\nEfter middagen såg Samir något som gjorde allt svårare. I en tom korridor stod en elev från ett annat elevhem och försökte få upp en dörr med ett lås som glödde svagt. Eleven märkte Samir och stelnade. \"Säg inget\", viskade hen. \"Jag måste bara kolla en sak. Det handlar om min storebror.\"\n\nSamir hade två impulser samtidigt. Den ena var att springa till en lärare: reglerna fanns av en anledning. Den andra var att stanna och lyssna: det lät som ett verkligt problem, inte som ett bus. Samir frågade vad det gällde. Eleven berättade att storebrodern hade blivit avstängd efter att ha \"erkänt\" något, men familjen trodde att erkännandet inte var äkta. Om det fanns en bok som kunde påverka minnen, kanske den kunde förklara saken.\n\nNoa hade ofta sagt att mod inte bara är att slåss, utan att göra rätt när ingen applåderar. Samir tänkte också på att lojalitet kan betyda olika saker: lojal mot regler, lojal mot vänner, eller lojal mot sanningen. Till slut valde Samir att inte lämna eleven ensam. I stället föreslog Samir att de skulle gå tillsammans till bibliotekarien och berätta allt, innan någon gjorde något värre.\n\nDet var inte det mest dramatiska valet på Hogwarts. Men när de senare satt i biblioteket och försökte reda ut vad som verkligen hänt, kände Samir att korridoren hade lärt hen något: att man ibland måste välja en tredje väg, där både omtanke och ansvar får plats.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad hör Samir först om den förbjudna boken?",
+        "options": [
+          "Att den ska kunna påverka minnen och att någon hittat den i en avstängd del av biblioteket.",
+          "Att den innehåller recept på magiska drycker som gör en osynlig i flera dagar.",
+          "Att den är skriven av en känd Quidditch-spelare och ska ge bättre reflexer.",
+          "Att den är en ny kursbok som alla måste köpa innan nästa lektion."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket budskap förmedlar Noa vid middagen?",
+        "options": [
+          "Att anklagelser och rykten kan vara farliga, även om situationen verkar allvarlig.",
+          "Att det viktigaste är att hitta den skyldige snabbt, även om man gissar.",
+          "Att minnesmagi alltid är ofarlig om den används av elever.",
+          "Att elever från andra elevhem inte bör få prata om biblioteket."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Varför vill eleven i korridoren komma in genom den låsta dörren?",
+        "options": [
+          "För att bevisa att hen kan bryta regler bättre än andra.",
+          "För att hitta en genväg till matsalen utan att bli sen.",
+          "För att gömma ett föremål innan en lärare upptäcker det.",
+          "För att undersöka något som kan hjälpa hens storebror, som blivit avstängd efter ett misstänkt erkännande."
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betyder \"en tredje väg\" i slutet av texten?",
+        "options": [
+          "Att ignorera både regler och människor och bara tänka på sig själv.",
+          "Att välja ett alternativ som kombinerar omtanke med ansvar, i stället för att bara ange eller bara hjälpa i hemlighet.",
+          "Att låtsas som att inget har hänt och hoppas att problemet försvinner.",
+          "Att alltid låta någon annan fatta beslutet för att slippa risk."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken tanke från Noa påverkar Samirs beslut mest?",
+        "options": [
+          "Att mod kan vara att göra rätt när ingen applåderar.",
+          "Att man aldrig ska prata med elever från andra elevhem.",
+          "Att biblioteket alltid har rätt och att frågor är onödiga.",
+          "Att lojalitet bara handlar om att skydda sina vänner, oavsett vad."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken lösning föreslår Samir i korridoren?",
+        "options": [
+          "Att de tillsammans ska gå till bibliotekarien och berätta innan något blir värre.",
+          "Att de ska låsa upp dörren själva och ta boken i hemlighet.",
+          "Att de ska skriva ett anonymt brev och lämna det på rektorns bord.",
+          "Att de ska sprida ryktet vidare så att fler elever hjälper till."
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-014",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Magin bakom en besvärjelse",
+    "text": "I Harry Potter-världen kan en kort fras och en rörelse få något att hända direkt. För läsaren kan det se ut som om besvärjelser är \"gratis\": man säger orden och så löser sig problemet. Men om man tittar närmare finns det nästan alltid en kostnad. Kostnaden behöver inte vara pengar, utan kan vara koncentration, kunskap, risk eller ansvar.\n\nFör att en besvärjelse ska fungera krävs flera saker samtidigt. Eleven måste kunna uttalet, förstå vad den försöker göra och kunna kontrollera sin avsikt. I berättelserna går det ofta fel när någon är stressad, arg eller försöker imponera. Det är en påminnelse om att magi inte bara handlar om teknik, utan också om psykologi. Om du tappar fokus kan du skapa konsekvenser du inte tänkt på.\n\nMånga besvärjelser fungerar dessutom som en sorts teknologi med regler. De har räckvidd, begränsningar och ibland biverkningar. Om du förtrollar ett föremål kan det påverka andra saker runt omkring. Om du försöker ändra något som är komplext kan resultatet bli ofullständigt. Därför lägger skolan så mycket tid på teori och övning. Det räcker inte att \"vilja väl\".\n\nEtt annat viktigt tema är etik. Bara för att något är möjligt betyder det inte att det är rätt. I böckerna finns förbjudna metoder och besvärjelser som skadar, kontrollerar eller skrämmer andra. De kan ge makt snabbt, men de förstör också relationer och förtroende. När någon använder magi för att tvinga fram ett resultat blir frågan inte bara \"fungerade det?\", utan \"vad gjorde det med den som blev utsatt?\" och \"vad gör det med den som använder det?\"\n\nSamtidigt kan magi användas omtänksamt. En liten reparationsbesvärjelse kan spara tid. En skyddsbesvärjelse kan rädda liv. Men även då krävs ansvar: att veta när man kan hjälpa och när man måste be om hjälp. I många scener är det de som vågar erkänna sina gränser som undviker de största misstagen.\n\nNär man läser så kan man se magin som en spegel av verkliga färdigheter. Kunskap utan ansvar kan bli farligt. Kraft utan eftertanke kan skada. Och den största \"besvärjelsen\" är kanske att kunna stanna upp och välja hur man använder det man kan.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken \"kostnad\" menar texten att besvärjelser ofta har?",
+        "options": [
+          "Att man alltid måste betala med guldmynt för varje besvärjelse.",
+          "Att man måste offra ett minne varje gång man använder magi.",
+          "Att man blir äldre med ett år efter varje lyckad besvärjelse.",
+          "Att man kan behöva kunskap, koncentration, risk och ansvar för att magin ska fungera."
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Varför går besvärjelser ofta fel enligt texten?",
+        "options": [
+          "För att magi fungerar bara när man är ensam i ett rum.",
+          "För att lärare medvetet saboterar elevernas försök i hemlighet.",
+          "För att stress, ilska eller vilja att imponera kan störa fokus och avsikt.",
+          "För att besvärjelser aldrig har regler utan är helt slumpmässiga."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur beskriver texten besvärjelser som en sorts teknologi?",
+        "options": [
+          "De har regler, begränsningar och kan ge biverkningar.",
+          "De fungerar alltid perfekt om man uttalar orden rätt en gång.",
+          "De kräver inga övningar eftersom talang räcker.",
+          "De påverkar bara den som kastar besvärjelsen, aldrig omgivningen."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken etisk fråga lyfter texten när magi används för att tvinga fram ett resultat?",
+        "options": [
+          "Vad det gör med den som utsätts och den som använder magin, inte bara om det fungerade.",
+          "Om man får använda magi för att vinna matcher i Quidditch.",
+          "Om man borde läsa fler böcker om besvärjelser innan man provar.",
+          "Om magi alltid borde vara förbjudet i skolan oavsett situation."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel på omtänksam magi nämns i texten?",
+        "options": [
+          "Att använda en förbjuden besvärjelse för att skrämma någon till tystnad.",
+          "Att förtrolla en klasskamrat så att hen aldrig kan säga nej.",
+          "Att ändra någons minnen för att slippa be om ursäkt.",
+          "En reparations- eller skyddsbesvärjelse som hjälper utan att kontrollera andra."
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket är textens slutpoäng om \"den största besvärjelsen\"?",
+        "options": [
+          "Att det viktigaste är att kunna flest ord utantill.",
+          "Att det viktigaste är att vinna över andra med så stark magi som möjligt.",
+          "Att det viktigaste är att kunna stanna upp och välja hur man använder sin kunskap.",
+          "Att det viktigaste är att aldrig erkänna sina gränser."
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak7-tema-015",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "När fandom blir en gemenskap",
+    "text": "Att vara fan av Harry Potter kan betyda många saker. För vissa handlar det om att läsa om böckerna och känna trygghet i en bekant berättelse. För andra handlar det om att diskutera detaljer, hitta mönster och bygga teorier. I en fandom uppstår ofta ett slags gemenskap där man känner sig mindre ensam med sina intressen.\n\nTänk dig en bokcirkel på en skola. Gruppen består av olika personer: Maja som älskar språk och jämför svenska och engelska uttryck, Leo som har dyslexi men lyssnar på ljudbok och minns scenerna exakt, och Farah som helst pratar om karaktärernas val och moral. Det finns också en pensionerad granne, Sven, som ibland kommer förbi och berättar hur han upplevde böckernas lansering när hans barn var små. I samma rum kan olika generationer och olika sätt att läsa mötas.\n\nMen gemenskapen kan också skapa problem. Ibland blir diskussioner till tävlingar: vem kan mest, vem har \"rätt\" tolkning, eller vem har läst flest extramaterial? Då kan nya personer känna sig dumma och sluta delta. Det kan också bli konflikter när någon kopplar serien till sin identitet och tar kritik personligt. En bok kan betyda mycket och samtidigt gå att prata om på ett nyanserat sätt.\n\nEn annan fråga är gränsen mellan fantasi och verklighet. Det kan vara roligt att kalla sig ett elevhem och skämta om \"mugglarproblem\", men ibland används sådana ord för att utesluta andra. Om man vill att en fandom ska vara välkomnande behöver man tänka på tonen: skämt som känns interna kan upplevas som stängda dörrar.\n\nSamtidigt kan fandom göra verklig skillnad. Många fan-grupper samlar in pengar till välgörenhet, ordnar läsprojekt eller skapar kreativa saker som fanfiction, fanart och musik. Där tränar man skrivande, samarbete och källkritik, eftersom man lär sig skilja på text, tolkning och rykten.\n\nDet viktigaste är kanske att komma ihåg varför man började: en berättelse som väckte känslor. Om gemenskapen hjälper fler att läsa, skapa och känna sig inkluderade, då har fandom blivit mer än underhållning. Den har blivit ett sätt att bygga broar mellan människor.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap om att vara fan?",
+        "options": [
+          "Att fandom kan bli en gemenskap som både kan inkludera och skapa problem, beroende på hur man beter sig.",
+          "Att fandom alltid leder till konflikter och därför bör undvikas.",
+          "Att bara de som kan flest fakta får kallas fans.",
+          "Att det viktigaste med fandom är att vinna diskussioner om detaljer."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel visar att människor kan läsa på olika sätt?",
+        "options": [
+          "Att alla i bokcirkeln läser exakt samma upplaga och tolkar allt lika.",
+          "Att Sven förbjuder gruppen att prata om filmerna.",
+          "Att Leo lyssnar på ljudbok på grund av dyslexi och ändå minns scenerna tydligt.",
+          "Att Maja vägrar jämföra språk eftersom det förstör upplevelsen."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken risk med fandomens diskussioner nämns i texten?",
+        "options": [
+          "Att diskussioner kan bli tävlingar där nya deltagare känner sig dumma.",
+          "Att alla slutar läsa böcker när de går med i en fan-grupp.",
+          "Att tolkningar blir omöjliga eftersom ingen bryr sig om handlingen.",
+          "Att fandom gör att man aldrig kan känna glädje i berättelsen igen."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med \"stängda dörrar\" i en fandom?",
+        "options": [
+          "Att fan-träffar alltid hålls i rum utan fönster.",
+          "Att man måste skriva prov för att få komma in på möten.",
+          "Att böckerna bara får diskuteras bakom låsta dörrar på bibliotek.",
+          "Att interna skämt och ton kan göra att andra känner sig uteslutna."
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel på positiv påverkan från fandom nämns?",
+        "options": [
+          "Att fan-grupper kan samla in pengar, ordna läsprojekt och skapa kreativt innehåll.",
+          "Att fan-grupper alltid ersätter skolarbete med rollspel på lektionstid.",
+          "Att fan-grupper gör att man slipper tänka kritiskt om källor.",
+          "Att fan-grupper hindrar personer från att läsa andra böcker."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämns källkritik i slutet av texten?",
+        "options": [
+          "För att källkritik bara behövs om man aldrig läst originalböckerna.",
+          "För att källkritik gör att man inte får skapa fanart eller fanfiction.",
+          "För att fandom innebär att man lär sig skilja på text, tolkning och rykten.",
+          "För att källkritik handlar om att bevisa att ens elevhem är bäst."
+        ],
+        "correct": 2
+      }
+    ]
   }
 ]
