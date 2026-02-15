@@ -99,6 +99,7 @@ export interface CompletedText {
   genre?: string;
   theme?: string;
   questionResults?: QuestionResult[];  // Detaljerad info om varje fråga
+  readingTimeSeconds?: number;  // Tid i sekunder från start till inlämning
 }
 
 // Tillgängliga avatarer

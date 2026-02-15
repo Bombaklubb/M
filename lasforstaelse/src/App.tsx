@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { AppState, User, LibraryText, UserAnswers, Badge } from './types';
+import { useState, useEffect, useRef } from 'react';
+import { AppState, User, LibraryText, UserAnswers, Badge, QuestionResult } from './types';
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';
 import { SetupView } from './components/SetupView';
@@ -31,6 +31,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
   const [showTeacher, setShowTeacher] = useState(false);
+  const quizStartTime = useRef<number | null>(null);
 
   // Ladda användare vid start
   useEffect(() => {
@@ -109,6 +110,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ); // Gå direkt till quiz med side-by-side layout
     } else {
       alert('Inga texter tillgängliga för denna årskurs.');
@@ -123,12 +125,19 @@ function App() {
 
     setUserAnswers(answers);
 
-    // Beräkna rätt svar (flervalsfrågor - jämför vald option med correct index)
+    // Beräkna rätt svar och bygg questionResults
+    const questionResults: QuestionResult[] = [];
     const correctCount = currentText.questions.reduce((count, q, index) => {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
+      questionResults.push({ questionType: q.type, correct: isCorrect });
       return count + (isCorrect ? 1 : 0);
     }, 0);
+
+    // Beräkna lästid
+    const readingTimeSeconds = quizStartTime.current
+      ? Math.round((Date.now() - quizStartTime.current) / 1000)
+      : undefined;
 
     // Registrera resultatet
     const { updatedUser, pointsEarned, newBadges } = recordResult(
@@ -139,7 +148,9 @@ function App() {
       correctCount,
       currentText.questions.length,
       currentText.genre,
-      currentText.theme
+      currentText.theme,
+      questionResults,
+      readingTimeSeconds
     );
 
     setUser(updatedUser);
@@ -175,6 +186,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
       handleRestart();
@@ -202,6 +214,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
       handleRestart();
@@ -229,6 +242,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
       handleRestart();
