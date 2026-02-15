@@ -22788,5 +22788,205 @@
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "claude-opus-4-5"
     }
+  },
+  {
+    "id": "ak6-tema-016",
+    "title": "Öar, klippor och skärgård på Åland",
+    "text": "Åland är en ögrupp mitt i Östersjön, mellan Sverige och Finland. När man tittar på en karta ser man att det inte är en enda ö, utan tusentals öar och skär som ligger utspridda som ett pussel i havet. Den största ön kallas ofta för fasta Åland, och där ligger Mariehamn, som är huvudstad. Många som bor på Åland säger att havet alltid är nära, oavsett om man bor i stan eller på landet.\n\nNaturen på Åland känns annorlunda än på många andra platser i Finland. Här är berggrunden synlig på många ställen, och man kan se släta, gråa klippor som formats av isen under istiden. På våren och sommaren blommar ängar och vägkanter av olika växter. Det finns också lövskogar med ek och lönn, och i skyddade vikar växer vass där fåglar gärna gömmer sig.\n\nSkärgården gör att vädret kan skifta snabbt. En stund kan det vara sol och vindstilla, och nästa stund blåser det upp. Därför har fiskare och båtfolk länge behövt läsa av himlen och havet. Även i dag är båtar viktiga. Många tar färjor mellan öarna, och på sommaren cyklar turister från by till by, ofta över broar eller med små färjor.\n\nPå Åland finns många naturreservat där man försöker skydda fågelliv och känsliga stränder. Under flyttningstider kan man se svanar och gäss vila på väg norrut eller söderut. Samtidigt måste människor som bor och jobbar här tänka på hur man tar hand om miljön. Om för mycket skräp hamnar i vattnet eller om man kör båt för nära fågelbon kan djuren störas.\n\nEn sak som många lägger märke till är hur Åland både känns öppet och tryggt. Horisonten syns långt bort över havet, men det finns också små byar där många känner varandra. För den som vill förstå Åland är det bra att tänka på att öarna och havet formar livet: hur man reser, vad man arbetar med och vilka platser man vill skydda.",
+    "grade": 6,
+    "category": "Geografi",
+    "questions": [
+      {
+        "q": "Vad är Åland enligt texten?",
+        "options": ["En ögrupp med många öar och skär", "En enda stor ö utan skärgård", "En fjällkedja i norra Finland", "Ett havsområde utan land"],
+        "correct": 0
+      },
+      {
+        "q": "Var ligger Mariehamn?",
+        "options": ["På en liten skärgårdsö långt från fasta Åland", "På den största ön, ofta kallad fasta Åland", "På Sveriges fastland mittemot Åland", "Under vattenytan i en skyddad vik"],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med att klipporna formats av isen under istiden?",
+        "options": ["Att människor högg bort klipporna med verktyg", "Att havsvågorna byggde klipporna av sand", "Att is och rörelser slipade och rundade bergytan", "Att klipporna är gjorda av fruset havsvatten"],
+        "correct": 2
+      },
+      {
+        "q": "Varför behöver man ta hänsyn i naturreservat på Åland?",
+        "options": ["För att det ska bli fler broar mellan öarna", "För att turister ska hitta snabbare cykelvägar", "För att färjorna ska kunna gå oftare", "För att fåglar och känsliga stränder inte ska störas"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken slutsats kan man dra om vädret på Åland?",
+        "options": ["Det kan ändras snabbt, så båtfolk måste vara uppmärksamma", "Det är alltid vindstilla eftersom öarna skyddar helt", "Det snöar nästan hela sommaren nära havet", "Det är lika stabilt som i en öken"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudidé?",
+        "options": ["Att förklara hur man bygger en färja steg för steg", "Att beskriva hur öar, hav och natur formar livet på Åland", "Att lista alla sporter som spelas i Mariehamn", "Att jämföra priser på cyklar mellan Finland och Sverige"],
+        "correct": 1
+      }
+    ],
+    "word_count": 307
+  },
+  {
+    "id": "ak6-tema-017",
+    "title": "Varför Åland är självstyrt och demilitariserat",
+    "text": "När man pratar om Åland nämns ofta två ord: självstyre och demilitarisering. Självstyre betyder att Åland får bestämma mycket själv, till exempel om skola, kultur och en del lagar, även om Åland hör till Finland. Demilitarisering betyder att det inte ska finnas militär på Åland i fredstid. De här reglerna kom inte av en slump, utan växte fram ur en historisk konflikt.\n\nFör länge sedan tillhörde Finland Sverige. Efter ett krig på 1800-talet blev Finland ett storfurstendöme inom det ryska riket. Då blev Åland också en del av det området. Åland låg strategiskt till i Östersjön, och därför byggdes befästningar. När Finland blev självständigt 1917 uppstod en svår fråga: många på Åland ville hellre höra till Sverige, eftersom språket var svenska och kontakterna över havet var starka.\n\nFrågan skapade oro. Både Sverige och Finland hade argument, och många ålänningar kände sig osäkra på framtiden. För att lösa situationen på ett fredligt sätt togs frågan upp internationellt. Resultatet blev att Åland skulle fortsätta tillhöra Finland, men få ett starkt självstyre och skydd för svenska språket. Samtidigt förstärktes reglerna om att området skulle vara demilitariserat.\n\nSjälvstyret märks i vardagen. Åland har ett eget parlament som fattar beslut i flera frågor. Man ser också egna registreringsskyltar och ibland andra symboler som visar den lokala identiteten. Men självstyret betyder inte att Åland är ett eget land med allt separat. Vissa saker, som utrikespolitik och stora delar av rättsväsendet, sköts fortfarande av Finland.\n\nDemilitariseringen är också en del av vardagen, även om man inte tänker på den hela tiden. Tanken är att minska risken för att ögruppen dras in i konflikter, eftersom läget i Östersjön kan vara viktigt för flera länder. För många ålänningar är det en trygghet, men det kräver också att man samarbetar och litar på avtal.\n\nTexten visar att Ålands regler handlar om att hitta en balans: att höra till Finland, men samtidigt skydda språk, kultur och säkerhet på ett särskilt sätt.",
+    "grade": 6,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "Vad betyder självstyre enligt texten?",
+        "options": ["Att Åland bestämmer allt, även utrikespolitik och försvar", "Att Åland får bestämma mycket själv i vissa frågor, trots att det hör till Finland", "Att Åland bara får bestämma över vädret och havet", "Att Finland styr alla beslut på Åland utan undantag"],
+        "correct": 1
+      },
+      {
+        "q": "Varför ville många ålänningar hellre höra till Sverige efter 1917?",
+        "options": ["För att Sverige lovade gratis färjor till alla öar", "För att Åland låg längst norrut i Sverige", "För att de redan pratade mest svenska och hade starka kontakter över havet", "För att de ville sluta använda båtar helt"],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär demilitarisering i texten?",
+        "options": ["Att det alltid ska finnas militär på Åland", "Att bara poliser får bo på öarna", "Att alla ålänningar måste göra värnplikt på plats", "Att det inte ska finnas militär på Åland i fredstid"],
+        "correct": 3
+      },
+      {
+        "q": "Hur löstes konflikten om Ålands tillhörighet enligt texten?",
+        "options": ["Genom en internationell lösning där Åland stannade i Finland men fick självstyre och språkskydd", "Genom att Åland blev en del av Ryssland igen", "Genom att Sverige tog över utan några villkor", "Genom att Åland flyttades längre bort i Östersjön"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket exempel i texten visar att självstyret märks i vardagen?",
+        "options": ["Att Åland inte får ha skolor", "Att Åland saknar lokala symboler helt", "Att Åland har ett eget parlament som fattar beslut i flera frågor", "Att Åland alltid byter språk varje vecka"],
+        "correct": 2
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": ["Att Åland är känt för fjäll och skidåkning", "Att Ålands särskilda regler kom för att skapa balans mellan tillhörighet, språk och säkerhet", "Att Åland är det enda stället i Norden med broar till alla länder", "Att internationella avtal aldrig påverkar människors vardag"],
+        "correct": 1
+      }
+    ],
+    "word_count": 304
+  },
+  {
+    "id": "ak6-tema-018",
+    "title": "Ett hav av jobb: sjöfart och företagande på Åland",
+    "text": "Om man frågar någon vad Åland lever av får man ofta höra ord som sjöfart, turism och småföretag. Eftersom Åland ligger mitt i Östersjön har människor länge rest och transporterat varor över vatten. Förr handlade det om segelfartyg och fiske. I dag handlar det också om färjor, hamnar och service runt resandet.\n\nSjöfart betyder inte bara att båtar går från A till B. Runt varje fartyg finns många arbetsuppgifter. Det behövs personer som navigerar, sköter maskiner, lagar mat, planerar säkerhet och tar hand om passagerare. Dessutom finns jobb på land: i hamnarna, i verkstäder och på kontor där man planerar rutter och ekonomi. När turister kommer på sommaren ökar behovet av guidning, boende och restauranger.\n\nSamtidigt är Åland inte bara en plats där andra passerar. Många driver företag som är anpassade till ö-livet. Det kan vara cykeluthyrning, båtservice eller gårdsbutiker som säljer lokala produkter. På vissa gårdar odlas frukt, och äppelmust är något man ofta ser på marknader. Andra jobbar med hantverk, som att bygga båtar eller göra saker av trä och ull.\n\nMen ö-livet innebär också utmaningar. Transporter kan bli dyrare när varor måste fraktas med båt. Om vädret är hårt kan leveranser bli sena. Därför behöver företag planera noga och ha reservlösningar. För att minska påverkan på miljön pratar man också om hur man kan resa smartare och hur fartyg kan släppa ut mindre.\n\nEn skolklass från Jomala fick en gång besöka en hamn. I gruppen fanns Samira som älskar matematik, och Kim som är icke-binär och gillar att fotografera. Deras kompis Leo använder hörselhjälpmedel och stod nära guiden för att höra tydligt. Efter besöket skrev de en gemensam rapport. De upptäckte att nästan allt de såg hängde ihop: havet, jobben, turisterna och behovet av att planera.\n\nTexten visar att Ålands ekonomi är som ett nät av trådar. Sjöfarten är en stor tråd, men den knyts ihop med turism, lokala produkter och människor som hittar smarta sätt att arbeta där havet alltid finns runt hörnet.",
+    "grade": 6,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vilka tre områden nämns som vanliga svar på vad Åland lever av?",
+        "options": ["Gruvdrift, rymdforskning och skidorter", "Bara fiske och inget annat", "Sjöfart, turism och småföretag", "Enbart stora fabriker i inlandet"],
+        "correct": 2
+      },
+      {
+        "q": "Vad visar texten att sjöfart kan innebära, förutom att båtar åker mellan platser?",
+        "options": ["Endast att man målar båtar i nya färger", "Att alla resor sker utan hamnar", "Att man bara transporterar djur, aldrig människor", "Många olika jobb ombord och på land, som säkerhet och planering"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket exempel i texten handlar om lokala produkter?",
+        "options": ["Äppelmust som säljs på marknader", "Elektronik från rymdstationer", "Kol som bryts i stora gruvor", "Bergsklättringsutrustning från fjällen"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken utmaning för företag på Åland nämns i texten?",
+        "options": ["Att solen aldrig går upp på vintern", "Att transporter kan bli dyrare och leveranser kan bli sena vid hårt väder", "Att det saknas vägar helt och hållet", "Att man inte får sälja saker på sommaren"],
+        "correct": 1
+      },
+      {
+        "q": "Varför stod Leo nära guiden under hamnbesöket?",
+        "options": ["För att han ville se kartorna först", "För att han tränade på att bli guide själv", "För att han var ansvarig för att räkna båtar", "För att han behövde stå nära för att höra tydligt med sina hjälpmedel"],
+        "correct": 3
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": ["Att företag alltid är enklast där det finns få transporter", "Att turism aldrig påverkar hur många jobb som finns", "Att Ålands ekonomi består av flera delar som hänger ihop, med sjöfart som en viktig del", "Att hamnar bara är viktiga förr i tiden"],
+        "correct": 2
+      }
+    ],
+    "word_count": 318
+  },
+  {
+    "id": "ak6-tema-019",
+    "title": "Språk och kultur: att leva på svenska i Finland",
+    "text": "På Åland är svenska det språk som används i skolan, i butiker och i myndigheter. Det gör att många ålänningar känner en stark koppling till den svenska kulturen, samtidigt som de är en del av Finland. För en utomstående kan det låta motsägelsefullt, men för den som bor där är det en vardag: man har svenska som språk, men finska flaggan finns i sammanhang där Åland ingår i Finland.\n\nAtt ha svenska som huvudspråk betyder inte att alla pratar exakt likadant. Dialekter kan skilja sig mellan olika öar och byar. En del ord låter lite äldre, och vissa uttryck kan vara typiska för skärgårdsliv. Samtidigt möter unga människor språk från många håll, genom tv, spel och sociala medier. Därför kan man höra en blandning av dialekt, standardsvenska och ord som lånats från finska eller engelska.\n\nKulturen på Åland syns också i traditioner och platser. Många firar midsommar och ordnar majstänger, men man kan också se spår av sjöfart i museer och gamla hamnområden. På sommaren finns konserter, marknader och evenemang som lockar både lokalbor och turister. För vissa familjer är sommaren den tid då släkt från olika länder kommer på besök, och då blir språket extra viktigt: man vill kunna hälsa välkommen och berätta om sin plats.\n\nI en klass i Mariehamn jobbade läraren med ett projekt om identitet. Eleverna fick intervjua någon äldre om hur språket på Åland förändrats. Amina intervjuade sin mormor som flyttat hit som vuxen och lärt sig svenska. Oskar intervjuade sin farbror som jobbat på färja och hört många språk. Nelly, som bor växelvis hos två föräldrar, intervjuade en granne som vuxit upp på en mindre ö och saknade sin dialekt när hen flyttade till stan.\n\nNär klassen sammanställde svaren märkte de att språk inte bara är ord. Det handlar om att känna sig hemma, kunna delta i samhället och förstå sin historia. Texten visar att Ålands svenska språk är både en rättighet och en levande del av vardagen, som förändras men fortfarande binder människor samman.",
+    "grade": 6,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vilket språk används enligt texten i skola och myndigheter på Åland?",
+        "options": ["Finska", "Engelska", "Tyska", "Svenska"],
+        "correct": 3
+      },
+      {
+        "q": "Vad beskriver texten om hur svenskan låter på Åland?",
+        "options": ["Att dialekter kan skilja sig mellan öar och byar", "Att alla pratar exakt samma svenska överallt", "Att man bara får använda ord från engelska", "Att dialekter är förbjudna i Mariehamn"],
+        "correct": 0
+      },
+      {
+        "q": "Varför kan unga på Åland höra och använda en blandning av olika ord?",
+        "options": ["För att skolan bara lär ut latin", "För att de möter språk genom tv, spel och sociala medier", "För att ingen pratar svenska längre", "För att dialekter gör internet långsammare"],
+        "correct": 1
+      },
+      {
+        "q": "Vad var syftet med klassens projekt om identitet?",
+        "options": ["Att räkna hur många båtar som passerar varje dag", "Att lära sig alla landskap i Finland utantill", "Att intervjua äldre om hur språket på Åland förändrats", "Att bygga en ny majstång till skolans gård"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken slutsats drar klassen när de sammanställer intervjuerna?",
+        "options": ["Att språk kan vara en del av att känna sig hemma och delta i samhället", "Att språk bara handlar om grammatik och stavning", "Att språk inte påverkar människors liv alls", "Att alla på Åland vill sluta prata svenska"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": ["Att Åland saknar kultur eftersom det är en ögrupp", "Att Ålands språk är helt oförändrat sedan 1800-talet", "Att turister bestämmer vilket språk som ska användas", "Att Ålands svenska språk är en levande rättighet som binder människor samman"],
+        "correct": 3
+      }
+    ],
+    "word_count": 310
+  },
+  {
+    "id": "ak6-tema-020",
+    "title": "En hållbar resa runt Åland",
+    "text": "En grupp elever i årskurs 6 fick uppgiften att planera en hållbar resa till Åland. De skulle inte bara tänka på vad som var roligt, utan också på hur man kan resa på ett sätt som är snällare mot naturen. Gruppen bestod av Elin, Farid, Siri och Alex. Alex använder rullstol och var noga med att alla platser skulle vara tillgängliga. De började med att läsa om att Åland har många cykelvägar, korta avstånd och flera färjor mellan öarna.\n\nFörst planerade de att ta färja till Mariehamn och bo nära centrum för att slippa åka bil. De ville besöka ett museum om sjöfart för att förstå varför havet är så viktigt. Sedan tänkte de hyra cyklar. För Alex letade de efter en cykel som kunde kopplas till en anpassad vagn, och de hittade ett företag som hyr ut hjälpmedel till turister.\n\nNästa dag ville de åka till en naturstig i ett reservat. De skrev upp regler: inte lämna skräp, hålla sig på stigen och inte störa fåglar. Farid föreslog att de skulle ta med kikare i stället för att gå nära fågelbon. Elin kom på att de kunde packa matsäck i återanvändbara burkar. Siri, som älskar att rita, ville göra en liten affisch till klassen om hur man kan resa utan att slita på naturen.\n\nTill sist lade de in ett besök på en gårdsbutik som säljer lokala produkter. De tänkte att om man köper något som är producerat nära behöver det inte transporteras lika långt. Samtidigt diskuterade de att man inte ska köpa mer än man behöver, bara för att det är \"sommarmysigt\".\n\nNär de redovisade sin plan sa läraren att resan var genomtänkt. Eleverna hade kombinerat upplevelser med ansvar: kultur i stan, natur i reservat och smarta val kring transporter. Texten visar att hållbarhet inte är en enda regel, utan många små beslut som tillsammans gör skillnad, särskilt på en plats där hav och öar är så nära.",
+    "grade": 6,
+    "category": "Natur & Miljö",
+    "questions": [
+      {
+        "q": "Vad var gruppens uppgift?",
+        "options": ["Att planera en hållbar resa till Åland", "Att bygga en ny färja till skolan", "Att skriva en saga utan fakta", "Att träna inför en cykeltävling i Sverige"],
+        "correct": 0
+      },
+      {
+        "q": "Varför ville de bo nära centrum i Mariehamn?",
+        "options": ["För att det är den enda platsen med hav", "För att cyklar inte är tillåtna utanför centrum", "För att kunna slippa åka bil så mycket", "För att naturreservat bara finns i staden"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken anpassning planerade de med tanke på Alex?",
+        "options": ["Att hoppa över alla aktiviteter utomhus", "Att välja platser som är tillgängliga och ordna en anpassad cykellösning", "Att bara resa nattetid när det är svalare", "Att byta ut färjan mot ett flygplan utan stopp"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket skäl gav Farid till att ta med kikare?",
+        "options": ["För att kikare gör det lättare att hitta vägen i stan", "För att man kan se museumsskyltar på långt håll", "För att kikare minskar vind när man cyklar", "För att man kan titta på fåglar utan att gå nära bon och störa"],
+        "correct": 3
+      },
+      {
+        "q": "Varför tyckte de att en gårdsbutik passade in i en hållbar resa?",
+        "options": ["För att man alltid måste köpa souvenirer på resa", "För att lokala produkter ofta inte behöver transporteras lika långt", "För att gårdsbutiker bara säljer importvaror", "För att det ersätter behovet av att besöka naturen"],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": ["Att resor alltid skadar naturen lika mycket", "Att museer är viktigare än naturreservat", "Att hållbarhet handlar om många små val som tillsammans gör skillnad", "Att man måste åka bil på alla öar"],
+        "correct": 2
+      }
+    ],
+    "word_count": 295
   }
 ]
