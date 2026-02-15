@@ -204,7 +204,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <h3 className="text-xl font-bold text-slate-800 mb-4">Populäraste årskurser</h3>
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
-                  {stats.topGrades.map((item, idx) => (
+                  {stats.topGrades.map((item) => (
                     <div
                       key={item.grade}
                       className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 text-center"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { AppState, User, LibraryText, UserAnswers, Badge } from './types';
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';

@@ -22,7 +22,7 @@ const GRADE_LABELS = [
 
 export const SetupView: React.FC<SetupViewProps> = ({
   onSelectGrade,
-  completedByGrade,
+  completedByGrade: _completedByGrade,
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
