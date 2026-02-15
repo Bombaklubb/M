@@ -19221,5 +19221,385 @@
       }
     ],
     "word_count": 380
+  },
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "hälsa",
+    "title": "När känslor tar över i klassrummet",
+    "text": "På måndagsmorgonen började allt som en vanlig lektion. Klassen hade fått tillbaka ett matteprov, och många var trötta efter helgen. När läraren sa att provet skulle påverka terminsbetyget kände flera hur stämningen förändrades. Några suckade, någon skämtade högt, och längst bak satt Alex och stirrade på bordet. Alex hade pluggat mycket men ändå fått lägre resultat än väntat. Det brände bakom ögonen och händerna blev kalla.\n\nKänslor kan kännas som något som \"bara händer\", men kroppen reagerar ofta innan man hinner tänka. Hjärtat kan slå snabbare, musklerna spänns och andningen blir kort. Det är inte ett tecken på svaghet, utan ett gammalt alarmsystem. I hjärnan spelar amygdala en viktig roll: den hjälper oss att snabbt upptäcka hot. Samtidigt behövs pannloben, den del som hjälper oss att planera och göra rimliga val. När stressen är hög kan amygdala bli \"för högljudd\", och då blir det svårare att använda pannlobens lugna tänkande.\n\nAlex hörde hur läraren pratade, men orden fastnade inte. I stället tänkte Alex: \"Jag är sämst. Alla kommer se.\" Det var en tolkning, inte ett faktum. En klasskompis, Samira, märkte att Alex såg blek ut och frågade tyst om det var okej. Alex ryckte på axlarna och sa att det var lugnt, men rösten lät hård. Samira blev osäker och tog ett steg tillbaka.\n\nEfter lektionen gick Alex till korridoren och lutade sig mot skåpet. Det kändes som om ilskan och skammen slogs om plats. Då kom skolkuratorn, som råkade gå förbi, och frågade om Alex ville följa med en minut. I rummet fick Alex ett glas vatten och tid att andas. Kuratorn föreslog en enkel metod: sätt ord på känslan och på vad som triggar den. \"Jag känner skam för att jag fick E fast jag ville ha C. Jag är rädd att andra ska döma mig.\" När Alex sa det högt blev det inte lika kaotiskt.\n\nKuratorn pratade också om att känslor ofta vill skydda oss, men att de inte alltid ger rätt råd. Alex kunde välja att be läraren om en genomgång och göra en plan för nästa prov, i stället för att låtsas som ingenting. När Alex senare skrev ett meddelande till Samira och bad om ursäkt för den hårda tonen kändes det som att något lättade. Känslan var fortfarande där, men den styrde inte allt längre.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad var den tydliga utlösande händelsen som fick stämningen att förändras på lektionen?",
+        "options": [
+          "Läraren meddelade att matteprovet skulle påverka terminsbetyget",
+          "En elev började prata högt om helgens planer",
+          "Klassen skulle börja med ett nytt kapitel i matteboken",
+          "Skolkuratorn kom in mitt under genomgången"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken funktion beskrivs amygdala ha i texten?",
+        "options": [
+          "Den lagrar fakta så att man minns matteformler bättre",
+          "Den hjälper hjärnan att snabbt upptäcka hot och reagera",
+          "Den gör att man kan skriva snabbare på prov",
+          "Den styr hur man tolkar grammatik i svenska"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menas med att Alex tanke \"Alla kommer se\" var en tolkning och inte ett faktum?",
+        "options": [
+          "Att Alex hade läst fel på provresultatet",
+          "Att läraren inte hade rättat provet än",
+          "Att Alex drog en slutsats utan att veta säkert hur andra skulle reagera",
+          "Att Samira redan visste exakt vad Alex hade fått"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför föreslog kuratorn att Alex skulle sätta ord på känslan och triggern?",
+        "options": [
+          "För att Alex skulle kunna glömma provet snabbare",
+          "För att läraren skulle kunna sänka kraven på klassen",
+          "För att det skulle bli lättare att skylla ifrån sig på någon annan",
+          "För att känslan ofta blir mer hanterbar när den blir tydlig och konkret"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket av följande är ett exempel på ett mer konstruktivt val som texten nämner att Alex kan göra?",
+        "options": [
+          "Be läraren om en genomgång och göra en plan inför nästa prov",
+          "Undvika matte helt tills nästa termin börjar",
+          "Berätta för alla att provet var orättvist utan att prata med läraren",
+          "Låtsas vara sjuk varje gång klassen har matte"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "huvudbudskap",
+        "q": "Vad är textens huvudsakliga budskap?",
+        "options": [
+          "Att prov alltid borde tas bort från skolan",
+          "Att känslor är farliga och måste tryckas undan",
+          "Att känslor kan förstås och påverkas, även om de känns starka",
+          "Att man alltid ska vara ensam när man mår dåligt"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-002",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "värdegrund",
+    "title": "Känslor i mobilen: när jämförelser blir en vana",
+    "text": "Nora brukade säga att hon \"bara kollade lite\" på sociala medier. Ändå märkte hon hur kvällen ofta försvann: en video till, en bild till, en snabb titt på kommentarer. När hon la ifrån sig mobilen kände hon sig sällan nöjd. I stället kom en märklig blandning av rastlöshet och nedstämdhet. Hon kunde ligga i sängen och tänka på en klasskompis som verkade ha perfekt hud, många vänner och alltid något roligt på gång.\n\nKänslor som avund och otillräcklighet uppstår ofta när man jämför sig. Problemet är att man på nätet mest ser andras \"höjdpunkter\". Man ser inte bråken hemma, osäkerheten innan en fest eller att någon tog trettio bilder för att få en som blev bra. Hjärnan gillar dessutom snabba belöningar. När en notis plingar eller någon gillar en bild får man en liten dopaminkick, som kan göra att man vill fortsätta scrolla.\n\nEn dag bestämde sig Nora för att testa något som skolans bibliotekarie hade tipsat om under en temavecka: \"gör en känslokarta\". Hon skrev ner tre situationer: när hon såg bilder från en fest hon inte var bjuden till, när någon inte svarade på ett meddelande, och när hon fick många likes. Bredvid skrev hon känslor och kroppssignaler. Vid festen: ensamhet, varm kind, klump i magen. Vid tystnaden: oro, spända axlar. Vid likes: pirr, lättnad.\n\nNär Nora såg mönstret blev hon förvånad. Det var inte själva mobilen som gjorde henne ledsen, utan tolkningarna: \"De ville inte ha mig där\", \"Jag har sagt något fel\", \"Nu duger jag igen\". Hon pratade med sin vän Malik, som sa att han också kunde känna så, men att han hade stängt av vissa notiser. De bestämde sig för ett experiment: en timme utan sociala medier före läggdags och mobilen på laddning i köket.\n\nFörsta kvällen kändes det tomt, som om något saknades. Nora gick runt i rummet och plockade utan mål. Sedan satte hon sig och läste några sidor ur en bok hon fått av sin morfar. Det tog tid innan hjärnan varvade ner, men efter några dagar märkte hon att hon somnade snabbare. Hon började också lägga upp färre bilder och skriva mer till personer direkt, i stället för att jaga reaktioner. Jämförelserna försvann inte helt, men de fick mindre makt när Nora tränade på att skilja mellan fakta och egna tolkningar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken känsla beskriver Nora ofta efter att hon lagt ifrån sig mobilen på kvällen?",
+        "options": [
+          "Nöjdhet och lugn",
+          "Rastlöshet och nedstämdhet",
+          "Stolthet över sin disciplin",
+          "Ilska mot sina föräldrar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan jämförelser på sociala medier bli extra missvisande enligt texten?",
+        "options": [
+          "Man ser mest andras höjdpunkter och inte allt som är svårt bakom",
+          "Alla inlägg är alltid helt påhittade",
+          "Det är förbjudet att visa vardagliga saker på nätet",
+          "Man får inte välja vilka man följer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var syftet med Noras \"känslokarta\"?",
+        "options": [
+          "Att räkna hur många timmar hon var online varje dag",
+          "Att bestämma vilka konton hon skulle sluta följa direkt",
+          "Att koppla ihop situationer med känslor och kroppssignaler för att se mönster",
+          "Att skriva en lista på saker hon ville köpa efter att ha scrollat"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken tolkning visar texten att Nora gjorde när någon inte svarade på ett meddelande?",
+        "options": [
+          "Att personen säkert hade tappat bort sin mobil",
+          "Att alla i klassen hade samma problem",
+          "Att hon borde sluta skicka meddelanden helt",
+          "Att hon kanske hade sagt något fel"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket experiment bestämde Nora och Malik sig för att prova?",
+        "options": [
+          "En timme utan sociala medier före läggdags och mobilen på laddning i köket",
+          "Att bara använda mobilen på helger och aldrig på vardagar",
+          "Att skriva inlägg varje dag för att vänja sig vid nätet",
+          "Att läsa alla kommentarer högt för varandra"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "huvudbudskap",
+        "q": "Vad är den viktigaste förändringen Nora tränar på mot slutet av texten?",
+        "options": [
+          "Att alltid vara online så att hon inte missar något",
+          "Att skilja mellan fakta och egna tolkningar när hon reagerar",
+          "Att jämföra sig mer för att bli motiverad",
+          "Att undvika alla vänner som använder sociala medier"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-003",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Pressen inför matchen",
+    "text": "Det var semifinal i innebandyserien, och hallen luktade som den alltid gjorde: plastgolv, sporttejp och lite nervositet. Jordan, som identifierade sig som icke-binär och spelade som back, knöt skorna långsamt. Tränaren hade pratat om att \"allt sitter i huvudet\", men Jordan kände mest hur huvudet var fullt. Om de vann skulle laget gå till final, och skolans rektor hade till och med lovat komma och titta.\n\nInför viktiga prestationer kan kroppen hamna i ett stresspåslag. Stress är inte bara negativt; den kan ge fokus och energi. Men när stressen blir för hög kan finmotoriken försämras och tankarna fastna i katastrofer. Jordan märkte att de tänkte: \"Om jag gör ett misstag kommer alla minnas det.\" Samtidigt försökte Jordan ignorera känslan, vilket gjorde att den växte.\n\nI omklädningsrummet satte sig lagkamraten Elin bredvid. Elin hade en hörselnedsättning och använde hörapparat. Hon sa att hon också kunde känna press, men att hon brukade göra en snabb rutin: tre djupa andetag, en sak hon kunde påverka och en sak hon inte kunde påverka. Jordan testade. Påverka: hålla klubban rätt, kommunicera tydligt, våga spela enkelt. Inte påverka: publikens reaktioner, domarens beslut, motståndarnas tur.\n\nNär matchen började kom första prövningen direkt. Jordan tappade bollen vid sargen och motståndarna fick en chans. Skammen slog till som en värmevåg. Men Jordan hörde Elin ropa \"nästa byte!\" och mindes rutinen. I stället för att älta misstaget fokuserade Jordan på nästa situation: täcka passningsvägar och hålla sig mellan spelare och mål.\n\nI andra perioden blev det stökigt. En motståndare tacklade hårt, och flera i Jordans lag blev arga. Jordan kände ilskan bubbla och såg framför sig hur de skulle säga något dumt eller ge igen. Då valde Jordan att ta ett extra långt byte på bänken, dricka vatten och låta pulsen sjunka. Tränaren kom förbi och sa: \"Bra beslut. Du hjälper laget när du håller dig lugn.\"\n\nMatchen slutade oavgjort och gick till förlängning. I slutminuten passade Jordan till en forward som gjorde mål. Det var inte en spektakulär dribbling, bara ett enkelt, smart beslut. Efteråt kände Jordan något som var större än lättnad: stolthet över att ha hanterat sina känslor i stället för att låta dem styra. Pressen fanns där, men den blev en signal att ta hand om, inte en fiende.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken roll hade Jordan i laget enligt texten?",
+        "options": [
+          "Målvakt",
+          "Forward",
+          "Back",
+          "Domare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad beskriver texten som en möjlig effekt när stressen blir för hög?",
+        "options": [
+          "Att finmotoriken kan försämras och tankarna fastnar i katastrofer",
+          "Att man automatiskt blir snabbare och mer exakt",
+          "Att man slutar känna något alls under matchen",
+          "Att publiken alltid blir tystare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ingick i Elins rutin för att hantera press?",
+        "options": [
+          "Att lyssna på musik och undvika alla i omklädningsrummet",
+          "Tre djupa andetag samt en sak hon kunde påverka och en hon inte kunde påverka",
+          "Att prata med domaren innan matchen börjar",
+          "Att byta klubba flera gånger för att känna sig säker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tog Jordan ett extra långt byte på bänken i andra perioden?",
+        "options": [
+          "För att de hade fått ont i foten och inte kunde springa",
+          "För att tränaren straffade dem för en dålig passning",
+          "För att de ville att någon annan skulle göra mål i stället",
+          "För att de märkte att ilskan steg och behövde lugna ner pulsen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur hanterade Jordan sitt tidiga misstag i matchen?",
+        "options": [
+          "Genom att fokusera på nästa situation i stället för att älta",
+          "Genom att lämna hallen för att slippa publiken",
+          "Genom att skylla på en lagkamrat för tappet",
+          "Genom att spela hårdare för att ge igen direkt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "huvudbudskap",
+        "q": "Vad visar slutet av texten främst om Jordans utveckling?",
+        "options": [
+          "Att Jordan vann tack vare tur och inget annat",
+          "Att Jordan blev av med alla känslor under press",
+          "Att Jordan lärde sig att använda känslor som signaler och göra kloka val ändå",
+          "Att Jordan slutade bry sig om lagets resultat"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-004",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "hälsa",
+    "title": "Sorgens olika ansikten",
+    "text": "När Linneas farmor dog blev allt både tydligt och otydligt på samma gång. Det tydliga var datumet på begravningen och att någon måste ringa släktingar. Det otydliga var hur Linnea skulle orka gå till skolan som vanligt. Farmor hade alltid skickat meddelanden om små saker: väder, ett recept, en fråga om hur det gick med engelskan. Nu var chatten plötsligt tyst.\n\nMånga tror att sorg alltid ser likadan ut: gråt, svarta kläder, stillhet. Men sorg kan komma som trötthet, irritation eller att man känner sig tom. Den kan också slå till när man minst anar det, som när man hör en låt eller känner en doft. Linnea märkte att hon ibland skrattade åt ett skämt och sedan fick dåligt samvete. \"Om jag kan skratta, betyder det att jag inte saknar henne?\" tänkte hon.\n\nPå en svensklektion fick klassen skriva en krönika om något som förändrat dem. Linnea stirrade på pappret. Samtidigt kände hon sig arg på sina kompisar som pratade om en fest. Det var inte deras fel, men det kändes orättvist att världen rullade på. Läraren, Kim, som var ny på skolan, gick runt och såg att Linnea inte skrev. Kim frågade försiktigt om Linnea ville gå ut en stund.\n\nI korridoren sa Linnea att hon inte visste vad hon kände. Kim sa att det kan vara en del av sorgen: hjärnan försöker förstå något som inte går att göra ogjort. Kim föreslog att Linnea kunde skriva om farmor utan att behöva göra det \"fint\". Bara minnen, detaljer, det som saknades. Linnea skrev senare: farmors röda tekopp, hennes långsamma steg i trappan, hur hon alltid hade en extra filt i soffan.\n\nHemma pratade Linnea med sin pappa, som verkade stark men som plötsligt började gråta när han hittade farmors gamla vykort. Då förstod Linnea något viktigt: sorg är inte en rak linje och den följer ingen perfekt kalender. Vissa dagar kan kännas nästan normala, andra dagar kan vara tunga. Pappa föreslog att de skulle skapa en liten rutin: söndagspromenad till farmors favoritplats i parken och lägga en liten blomma där.\n\nMed tiden blev tomheten mindre vass. Linnea kunde fortfarande sakna farmor, men hon kunde också känna värme när hon mindes. Hon lärde sig att skratt inte raderar saknad, och att känslor kan finnas samtidigt. Sorg var inte ett prov hon skulle klara, utan något hon fick bära tillsammans med andra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken detalj i texten visar tydligast att farmor brukade finnas i Linneas vardag?",
+        "options": [
+          "Att farmor hade en röd tekopp som Linnea mindes",
+          "Att farmor alltid skrev små meddelanden om vardagliga saker",
+          "Att farmor bodde nära Linneas skola",
+          "Att farmor var med på alla Linneas lektioner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad vill texten förklara om hur sorg kan kännas?",
+        "options": [
+          "Sorg är alltid likadan och går över snabbt",
+          "Sorg kan bara uttryckas genom att man gråter",
+          "Sorg betyder att man måste undvika alla glada saker",
+          "Sorg kan visa sig på många sätt, som trötthet, irritation eller tomhet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför fick Linnea dåligt samvete när hon skrattade?",
+        "options": [
+          "Hon trodde att skratt kanske betydde att hon inte saknade farmor",
+          "Hon var rädd att läraren skulle bli arg om hon skrattade",
+          "Hon hade lovat sin pappa att aldrig skratta i skolan",
+          "Hon skrattade åt ett skämt om sin farmor"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket råd gav läraren Kim om skrivuppgiften?",
+        "options": [
+          "Att Linnea skulle skriva en perfekt text utan personliga detaljer",
+          "Att Linnea kunde skriva om farmor med enkla minnen och det som saknades",
+          "Att Linnea borde byta ämne och skriva om en fest i stället",
+          "Att Linnea skulle vänta tills sorgen var helt borta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad blev Linneas och pappans nya rutin efter farmors död?",
+        "options": [
+          "Söndagspromenad till farmors favoritplats i parken och lägga en liten blomma",
+          "Att titta på samma film varje kväll för att tänka på något annat",
+          "Att ringa alla släktingar varje dag utan paus",
+          "Att städa ur hela farmors hem på en enda helg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "huvudbudskap",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att man ska dölja sorg för att inte belasta andra",
+          "Att sorg alltid går över om man bara håller sig upptagen",
+          "Att sorg är en tävling där man måste vara starkast",
+          "Att sorg inte är linjär och att flera känslor kan finnas samtidigt"
+        ],
+        "correct": 3
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-005",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "mänskliga rättigheter",
+    "title": "Empati i praktiken: att förstå utan att ta över",
+    "text": "På elevrådets möte satt flera och diskuterade skolans nya regler för mobilanvändning. Rami ville att mobilen skulle samlas in helt under lektionerna, medan Tuva tyckte att det borde vara varje lärares beslut. Längst fram satt Vera, som var nyinflyttad och fortfarande letade efter sin plats i klassen. Vera sa inte så mycket, men antecknade noggrant.\n\nEfter mötet kom Vera fram till ordföranden, Fatima, och bad om hjälp. Vera berättade att hon ibland fick panikkänslor när mobilen inte fanns nära. Inte för att hon ville scrolla, utan för att hennes mamma brukade behöva kunna nå henne snabbt på grund av en sjukdom i familjen. Fatima kände direkt hur hon ville \"fixa allt\". Hon hade varit med om att folk inte blev lyssnade på och ville inte att Vera skulle hamna där.\n\nEmpati betyder att försöka förstå någon annans känslor och situation. Men empati är inte samma sak som att bestämma åt den andra eller att ta över deras berättelse. Fatima märkte att hon var på väg att säga: \"Då måste vi ändra hela regeln!\" i stället för att först fråga vad Vera behövde. Hon stannade upp och använde en metod som hon lärt sig på en workshop om konflikter: spegling och öppna frågor.\n\nFatima sa: \"Det låter som att mobilen känns som en trygghet när du oroar dig för din familj. Stämmer det?\" Vera nickade och berättade mer. Fatima frågade: \"Vad skulle vara en rimlig lösning som fungerar för dig och samtidigt för lektionen?\" Vera tänkte en stund och föreslog ett undantag: att hon kunde lämna mobilen hos läraren på katedern, på ljudlöst, och få hämta den om ett samtal kom. Då fanns tryggheten kvar utan att mobilen störde.\n\nNästa elevråd tog Fatima upp frågan utan att avslöja privata detaljer. Hon föreslog att skolan kunde ha en tydlig rutin för undantag vid särskilda behov, och att den skulle skötas diskret. Diskussionen blev mer nyanserad. Rami insåg att en regel kunde vara rättvis utan att vara exakt likadan för alla, och Tuva höll med om att det behövdes tydlighet.\n\nEfteråt tackade Vera. Fatima kände sig lättad, men också stolt över att hon inte hade rusat iväg och pratat över Vera. Hon hade lyssnat, sammanfattat och frågat. Empati, förstod hon, kan vara att stå bredvid någon i deras känsla—inte att dra dem åt ett håll. Och ibland är den mest respektfulla hjälpen att hitta en lösning tillsammans, steg för steg.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad handlade elevrådets möte främst om i början av texten?",
+        "options": [
+          "Nya regler för mobilanvändning i skolan",
+          "Planering av skolans vårshow",
+          "Val av ny idrottslärare",
+          "Hur man ska möblera om i matsalen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Varför ville Vera ha mobilen nära enligt texten?",
+        "options": [
+          "Hon ville kunna spela spel i smyg under lektionerna",
+          "Hon var rädd att missa viktiga samtal kopplade till sjukdom i familjen",
+          "Hon försökte bli populär genom att lägga upp bilder hela tiden",
+          "Hon hade glömt sin klocka och behövde se tiden"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken skillnad mellan empati och att \"ta över\" betonas i texten?",
+        "options": [
+          "Empati betyder att man alltid håller med, medan att ta över betyder att säga emot",
+          "Empati är att förstå och lyssna, inte att bestämma åt någon eller göra deras berättelse till sin",
+          "Empati handlar mest om att ge råd, medan att ta över handlar om att vara tyst",
+          "Empati innebär att man löser problemet direkt, medan att ta över innebär att vänta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken metod använde Fatima när hon pratade med Vera?",
+        "options": [
+          "Hon skrev ett långt tal och läste upp det utan avbrott",
+          "Hon bytte ämne för att Vera skulle glömma sin oro",
+          "Hon speglade Veras känsla och ställde öppna frågor",
+          "Hon bad rektorn besluta utan att diskutera med någon"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken lösning föreslog Vera som kompromiss?",
+        "options": [
+          "Att mobilen kunde ligga hos läraren på katedern, på ljudlöst, och hämtas vid behov",
+          "Att alla elever alltid skulle få ha mobilen i handen under lektionerna",
+          "Att Vera skulle slippa gå på lektioner de dagar hon kände oro",
+          "Att skolan skulle förbjuda mobil helt men ge Vera en extra surfplatta"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lärde sig Rami enligt texten under den senare diskussionen?",
+        "options": [
+          "Att det är bäst att aldrig ha regler alls",
+          "Att en regel kan vara rättvis även om den inte är exakt likadan för alla",
+          "Att elevrådet inte borde prata om svåra ämnen",
+          "Att undantag alltid leder till fusk och därför måste förbjudas"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
