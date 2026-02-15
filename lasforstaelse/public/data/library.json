@@ -19981,8 +19981,7 @@
         "correct": 2
       }
     ]
-  }
-,
+  },
   {
     "id": "ak10-tema-001",
     "grade": 10,
@@ -20402,32 +20401,62 @@
     "questions": [
       {
         "q": "Vilken sömnfas kopplas i texten särskilt till livliga och berättande drömmar?",
-        "options": ["REM-sömn", "Djupsömn", "Vakenhetsfasen", "Insomningsfasen"],
+        "options": [
+          "REM-sömn",
+          "Djupsömn",
+          "Vakenhetsfasen",
+          "Insomningsfasen"
+        ],
         "correct": 0
       },
       {
         "q": "Varför är kroppen \"nästan förlamad\" under REM enligt texten?",
-        "options": ["För att spara energi till hjärnans arbete", "För att vi inte ska agera ut drömmen", "För att hjärtat ska slå långsammare", "För att temperaturen i kroppen ska stiga"],
+        "options": [
+          "För att spara energi till hjärnans arbete",
+          "För att vi inte ska agera ut drömmen",
+          "För att hjärtat ska slå långsammare",
+          "För att temperaturen i kroppen ska stiga"
+        ],
         "correct": 1
       },
       {
         "q": "Vad menas med att dagens upplevelser kan \"klippas om\" i drömmar?",
-        "options": ["Att drömmar upprepar dagen exakt som den var", "Att minnen raderas när vi sover", "Att detaljer blandas och hamnar i nya scener", "Att hjärnan slutar registrera känslor på natten"],
+        "options": [
+          "Att drömmar upprepar dagen exakt som den var",
+          "Att minnen raderas när vi sover",
+          "Att detaljer blandas och hamnar i nya scener",
+          "Att hjärnan slutar registrera känslor på natten"
+        ],
         "correct": 2
       },
       {
         "q": "Hur kan mardrömmar förstås utifrån hot-teorin som nämns?",
-        "options": ["Som bevis på att något kommer hända", "Som ett tecken på för lite djupsömn", "Som slumpmässiga bilder utan koppling", "Som mental träning för att hantera hot"],
+        "options": [
+          "Som bevis på att något kommer hända",
+          "Som ett tecken på för lite djupsömn",
+          "Som slumpmässiga bilder utan koppling",
+          "Som mental träning för att hantera hot"
+        ],
         "correct": 3
       },
       {
         "q": "Vad upptäcker Samira när hon sover mer regelbundet?",
-        "options": ["Att hon slutar drömma helt", "Att drömmarna blir tydligare och lättare att minnas", "Att hon alltid får samma dröm", "Att hon bara drömmer om skolan"],
+        "options": [
+          "Att hon slutar drömma helt",
+          "Att drömmarna blir tydligare och lättare att minnas",
+          "Att hon alltid får samma dröm",
+          "Att hon bara drömmer om skolan"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket är Samiras slutsats om drömmar i slutet av texten?",
-        "options": ["Att drömmar alltid har en gömd kod som måste lösas", "Att drömmar är meningslösa och bör ignoreras", "Att drömmar kan spegla vad hon bär på utan att vara spådomar", "Att drömmar uppstår bara när man är stressad"],
+        "options": [
+          "Att drömmar alltid har en gömd kod som måste lösas",
+          "Att drömmar är meningslösa och bör ignoreras",
+          "Att drömmar kan spegla vad hon bär på utan att vara spådomar",
+          "Att drömmar uppstår bara när man är stressad"
+        ],
         "correct": 2
       }
     ],
@@ -20442,32 +20471,62 @@
     "questions": [
       {
         "q": "Vad är Linus huvudsakliga dröm enligt texten?",
-        "options": ["Att starta ett eget spelbolag", "Att göra städer mer tillgängliga på flera sätt", "Att bli politiker på heltid direkt efter gymnasiet", "Att arbeta med ekonomi och budget i kommunen"],
+        "options": [
+          "Att starta ett eget spelbolag",
+          "Att göra städer mer tillgängliga på flera sätt",
+          "Att bli politiker på heltid direkt efter gymnasiet",
+          "Att arbeta med ekonomi och budget i kommunen"
+        ],
         "correct": 1
       },
       {
         "q": "Varför blir det tyst när kuratorn frågar vad yrket heter?",
-        "options": ["Linus vill inte berätta sin dröm för någon", "Linus är osäker på om kuratorn är intresserad", "Det finns ingen tydlig titel som passar drömmen", "Kuratorn avbryter samtalet mitt i meningen"],
+        "options": [
+          "Linus vill inte berätta sin dröm för någon",
+          "Linus är osäker på om kuratorn är intresserad",
+          "Det finns ingen tydlig titel som passar drömmen",
+          "Kuratorn avbryter samtalet mitt i meningen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket exempel använder Linus för att visa att ljudmiljön kan vara ett problem?",
-        "options": ["En skolmatsal där ljudet studsar så att en kompis måste äta utanför", "En park där fåglarna låter för mycket på morgonen", "En fotbollsmatch med hög musik mellan perioderna", "En tv-serie där bakgrundsljudet är för svagt"],
+        "options": [
+          "En skolmatsal där ljudet studsar så att en kompis måste äta utanför",
+          "En park där fåglarna låter för mycket på morgonen",
+          "En fotbollsmatch med hög musik mellan perioderna",
+          "En tv-serie där bakgrundsljudet är för svagt"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder det att Linus \"kartlägger sin dröm som om den vore ett projekt\"?",
-        "options": ["Att hen slutar tänka på känslor och bara tänker på pengar", "Att hen skriver ner problem och möjliga verktyg för att nå målet", "Att hen bestämmer en exakt titel och en tidsplan på en dag", "Att hen väljer gymnasium genom att följa kompisarnas val"],
+        "options": [
+          "Att hen slutar tänka på känslor och bara tänker på pengar",
+          "Att hen skriver ner problem och möjliga verktyg för att nå målet",
+          "Att hen bestämmer en exakt titel och en tidsplan på en dag",
+          "Att hen väljer gymnasium genom att följa kompisarnas val"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken roll spelar morfars berättelse i texten?",
-        "options": ["Den gör att Linus helt byter dröm och mål", "Den visar att drömmen handlar om vardaglig rättvisa och energi", "Den bevisar att centrum är för dyrt för äldre", "Den får Linus att sluta engagera sig i kommunen"],
+        "options": [
+          "Den gör att Linus helt byter dröm och mål",
+          "Den visar att drömmen handlar om vardaglig rättvisa och energi",
+          "Den bevisar att centrum är för dyrt för äldre",
+          "Den får Linus att sluta engagera sig i kommunen"
+        ],
         "correct": 1
       },
       {
         "q": "Hur resonerar Linus kring gymnasievalet till slut?",
-        "options": ["Hen väntar med att välja tills en perfekt framtidsbild finns", "Hen väljer det program som ger mest fritid", "Hen väljer utifrån nästa steg och möjlighet att kombinera intressen", "Hen låter någon annan bestämma för att minska stressen"],
+        "options": [
+          "Hen väntar med att välja tills en perfekt framtidsbild finns",
+          "Hen väljer det program som ger mest fritid",
+          "Hen väljer utifrån nästa steg och möjlighet att kombinera intressen",
+          "Hen låter någon annan bestämma för att minska stressen"
+        ],
         "correct": 2
       }
     ],
@@ -20482,32 +20541,62 @@
     "questions": [
       {
         "q": "Vad menas med klardrömmande enligt texten?",
-        "options": ["Att alltid drömma i färg och minnas allt", "Att vakna exakt samma tid varje natt", "Att kunna somna på kommando", "Att bli medveten i drömmen om att man drömmer"],
+        "options": [
+          "Att alltid drömma i färg och minnas allt",
+          "Att vakna exakt samma tid varje natt",
+          "Att kunna somna på kommando",
+          "Att bli medveten i drömmen om att man drömmer"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken förändring gör Noah i mardrömmen när han blir medveten?",
-        "options": ["Han stannar, andas och ropar i stället för att bara jaga", "Han försöker springa ännu snabbare än tidigare", "Han låtsas att folkmassan inte finns", "Han vaknar direkt så fort drömmen börjar"],
+        "options": [
+          "Han stannar, andas och ropar i stället för att bara jaga",
+          "Han försöker springa ännu snabbare än tidigare",
+          "Han låtsas att folkmassan inte finns",
+          "Han vaknar direkt så fort drömmen börjar"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket begrepp kopplas i texten till att kunna tänka på sitt eget tänkande?",
-        "options": ["Empati", "Metakognition", "Kondition", "Intuition"],
+        "options": [
+          "Empati",
+          "Metakognition",
+          "Kondition",
+          "Intuition"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är ett exempel på en \"verklighetskontroll\" som nämns?",
-        "options": ["Att äta något sött innan man lägger sig", "Att spela lugn musik hela natten", "Att titta på en klocka två gånger och jämföra", "Att skriva ner drömmar mitt på dagen"],
+        "options": [
+          "Att äta något sött innan man lägger sig",
+          "Att spela lugn musik hela natten",
+          "Att titta på en klocka två gånger och jämföra",
+          "Att skriva ner drömmar mitt på dagen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken nackdel märker Noah när han blir för fokuserad på att kontrollera drömmar?",
-        "options": ["Han får svårare att minnas sina klasskompisars namn", "Han missar frukosten varje morgon", "Han börjar prata i sömnen varje natt", "Han vaknar ofta och sover sämre, vilket gör honom trött"],
+        "options": [
+          "Han får svårare att minnas sina klasskompisars namn",
+          "Han missar frukosten varje morgon",
+          "Han börjar prata i sömnen varje natt",
+          "Han vaknar ofta och sover sämre, vilket gör honom trött"
+        ],
         "correct": 3
       },
       {
         "q": "Vad blir Noahs viktigaste insikt i slutet av texten?",
-        "options": ["Att det viktigaste är att byta drömscen så snabbt som möjligt", "Att han kan påverka sin reaktion på rädslan även i drömmen", "Att mardrömmar alltid betyder att något kommer hända", "Att klardrömmande fungerar bäst om man sover så lite som möjligt"],
+        "options": [
+          "Att det viktigaste är att byta drömscen så snabbt som möjligt",
+          "Att han kan påverka sin reaktion på rädslan även i drömmen",
+          "Att mardrömmar alltid betyder att något kommer hända",
+          "Att klardrömmande fungerar bäst om man sover så lite som möjligt"
+        ],
         "correct": 1
       }
     ],
@@ -20522,32 +20611,62 @@
     "questions": [
       {
         "q": "Vilken huvudidé lyfter texten om drömmars betydelse i samhället?",
-        "options": ["Att drömmar alltid är sanna förutsägelser", "Att drömmar kan kopplas till makt, tolkning och beslut", "Att drömmar bara uppstår i djupsömn", "Att drömmar är samma i alla kulturer"],
+        "options": [
+          "Att drömmar alltid är sanna förutsägelser",
+          "Att drömmar kan kopplas till makt, tolkning och beslut",
+          "Att drömmar bara uppstår i djupsömn",
+          "Att drömmar är samma i alla kulturer"
+        ],
         "correct": 1
       },
       {
         "q": "Vad var ett syfte med drömtempel i antikens Grekland enligt texten?",
-        "options": ["Att få drömmar som kunde tolkas som läkande eller vägledande", "Att träna soldater i att hålla sig vakna", "Att förvara skrifter om stjärnornas rörelser", "Att ordna offentliga debatter om lagar"],
+        "options": [
+          "Att få drömmar som kunde tolkas som läkande eller vägledande",
+          "Att träna soldater i att hålla sig vakna",
+          "Att förvara skrifter om stjärnornas rörelser",
+          "Att ordna offentliga debatter om lagar"
+        ],
         "correct": 0
       },
       {
         "q": "Varför beskrivs drömmar i sagor som ofta tvetydiga?",
-        "options": ["För att de alltid handlar om väder och årstider", "För att de saknar känslor och detaljer", "För att de ger symboler som kräver tolkning", "För att de skrevs utan att någon sov"],
+        "options": [
+          "För att de alltid handlar om väder och årstider",
+          "För att de saknar känslor och detaljer",
+          "För att de ger symboler som kräver tolkning",
+          "För att de skrevs utan att någon sov"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken risk nämns med drömlexikon som ger fasta betydelser?",
-        "options": ["Att de gör det omöjligt att minnas drömmar", "Att de kan förenkla något som är personligt och varierar", "Att de alltid leder till samma beslut i politiken", "Att de får människor att sluta drömma helt"],
+        "options": [
+          "Att de gör det omöjligt att minnas drömmar",
+          "Att de kan förenkla något som är personligt och varierar",
+          "Att de alltid leder till samma beslut i politiken",
+          "Att de får människor att sluta drömma helt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad undersöker klassens övning med två olika tolkningar av samma dröm?",
-        "options": ["Hur man kan bevisa vilken tolkning som är vetenskapligt sannast", "Hur man kan träna på att minnas fler detaljer", "Vad som händer om en tolkning får monopol och andra röster tystnar", "Hur man kan styra drömmar med musik"],
+        "options": [
+          "Hur man kan bevisa vilken tolkning som är vetenskapligt sannast",
+          "Hur man kan träna på att minnas fler detaljer",
+          "Vad som händer om en tolkning får monopol och andra röster tystnar",
+          "Hur man kan styra drömmar med musik"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats drar texten om drömmar i relation till sin tid?",
-        "options": ["Att drömmar kan spegla oro och även användas för att påverka människor", "Att drömmar inte påverkas av samhället alls", "Att drömmar blir svagare ju mer man läser historia", "Att drömmar alltid är identiska över generationer"],
+        "options": [
+          "Att drömmar kan spegla oro och även användas för att påverka människor",
+          "Att drömmar inte påverkas av samhället alls",
+          "Att drömmar blir svagare ju mer man läser historia",
+          "Att drömmar alltid är identiska över generationer"
+        ],
         "correct": 0
       }
     ],
@@ -20562,35 +20681,1500 @@
     "questions": [
       {
         "q": "Vilken typ av mardrömmar har Elin oftast enligt texten?",
-        "options": ["Realistiska drömmar om prov och otrygga platser", "Äventyrsdrömmar där hon alltid vinner", "Drömmar som bara handlar om barndomen", "Drömmar utan känslor eller handling"],
+        "options": [
+          "Realistiska drömmar om prov och otrygga platser",
+          "Äventyrsdrömmar där hon alltid vinner",
+          "Drömmar som bara handlar om barndomen",
+          "Drömmar utan känslor eller handling"
+        ],
         "correct": 0
       },
       {
         "q": "Vad blir en negativ följd av att Elin börjar undvika att lägga sig?",
-        "options": ["Hon får mer tid att plugga och blir mindre stressad", "Sömnbristen gör att kroppen går på högvarv och drömmarna blir intensivare", "Hon slutar helt att drömma efter några dagar", "Hon blir hungrigare men mer utvilad"],
+        "options": [
+          "Hon får mer tid att plugga och blir mindre stressad",
+          "Sömnbristen gör att kroppen går på högvarv och drömmarna blir intensivare",
+          "Hon slutar helt att drömma efter några dagar",
+          "Hon blir hungrigare men mer utvilad"
+        ],
         "correct": 1
       },
       {
         "q": "Varför frågar sjuksköterskan om Elins kvällsvanor och situation hemma?",
-        "options": ["För att mardrömmar kan hänga ihop med stress, rutiner och trygghet", "För att kunna gissa vilken dröm som kommer nästa natt", "För att avgöra om Elin behöver byta skola", "För att se om Elin borde träna mer varje kväll"],
+        "options": [
+          "För att mardrömmar kan hänga ihop med stress, rutiner och trygghet",
+          "För att kunna gissa vilken dröm som kommer nästa natt",
+          "För att avgöra om Elin behöver byta skola",
+          "För att se om Elin borde träna mer varje kväll"
+        ],
         "correct": 0
       },
       {
         "q": "Vad innebär metoden där Elin skriver en alternativ fortsättning på mardrömmen?",
-        "options": ["Att hon försöker radera drömmen genom att inte tänka på den", "Att hon tränar hjärnan på nya spår genom en ny utgång i berättelsen", "Att hon lär sig att tolka symboler med ett drömlexikon", "Att hon dokumenterar drömmen för att bevisa att den var sann"],
+        "options": [
+          "Att hon försöker radera drömmen genom att inte tänka på den",
+          "Att hon tränar hjärnan på nya spår genom en ny utgång i berättelsen",
+          "Att hon lär sig att tolka symboler med ett drömlexikon",
+          "Att hon dokumenterar drömmen för att bevisa att den var sann"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken förändring gör Elin och pappan för att öka tryggheten i vardagen?",
-        "options": ["De bestämmer att aldrig prata om oro igen", "De flyttar om alla möbler i lägenheten", "De planerar gemensam middag och en söndagspromenad", "De slutar dricka vatten efter klockan sex"],
+        "options": [
+          "De bestämmer att aldrig prata om oro igen",
+          "De flyttar om alla möbler i lägenheten",
+          "De planerar gemensam middag och en söndagspromenad",
+          "De slutar dricka vatten efter klockan sex"
+        ],
         "correct": 2
       },
       {
         "q": "Vad menar texten med att drömmar kan vara ett \"alarm\"?",
-        "options": ["Att drömmar varnar för framtida olyckor med exakta detaljer", "Att drömmar visar hur kroppen och livet mår just nu", "Att drömmar styrs av ljud i rummet och inget annat", "Att drömmar alltid betyder att man är sjuk"],
+        "options": [
+          "Att drömmar varnar för framtida olyckor med exakta detaljer",
+          "Att drömmar visar hur kroppen och livet mår just nu",
+          "Att drömmar styrs av ljud i rummet och inget annat",
+          "Att drömmar alltid betyder att man är sjuk"
+        ],
         "correct": 1
       }
     ],
     "word_count": 492
+  },
+  {
+    "id": "ak4-bamse-001",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "värdegrund",
+    "title": "Dunderhonung och den försvunna cykelkorgen",
+    "text": "En solig morgon i Småköping ska Bamse, Lille Skutt och Skalman cykla till torget. Bamse har packat en korg med morötter och äpplen som de ska dela ut till barnen som hjälper till att städa parken. Men när de kommer ut från Bamses hus är cykelkorgen borta. Lille Skutt hoppar runt av oro och säger att någon säkert har stulit den. Skalman tar fram sin anteckningsbok och skriver: \"Vi letar lugnt och noggrant.\"\n\nDe frågar grannarna. En äldre granne säger att hon såg någon springa mot ån med en stor korg. Vid ån hittar de spår i leran, och Bamse ser att spåren går mot den gamla boden vid bryggan. Inne i boden sitter Vargen. Han ser ledsen ut och håller om korgen.\n\n\"Jag skulle bara låna den,\" mumlar han. \"Min lillasyster fyllde år, och jag hade inget att lägga presenten i.\" Bamse blir först arg, men andas djupt. Han säger att man måste fråga innan man lånar. Vargen nickar och föreslår att han kan hjälpa till att städa parken som tack. Tillsammans går de till torget, och cykelkorgen får komma till nytta igen.",
+    "questions": [
+      {
+        "q": "Vad var det som hade försvunnit från Bamses cykel?",
+        "options": [
+          "Cykelkorgen med frukt",
+          "Cykelnyckeln i låset",
+          "En hjälm som hängde på styret",
+          "En karta till torget"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad gör Skalman direkt när de märker att korgen är borta?",
+        "options": [
+          "Han springer till torget och letar",
+          "Han skriver ner att de ska leta lugnt",
+          "Han ber Bamse äta dunderhonung",
+          "Han ringer polisen från sin telefon"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Var hittar de spår som hjälper dem att förstå vart korgen tagit vägen?",
+        "options": [
+          "På trappan vid Bamses hus",
+          "I sanden på torget",
+          "I leran vid ån",
+          "I snön bakom skolan"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför hade Vargen tagit korgen enligt texten?",
+        "options": [
+          "För att sälja frukten på torget",
+          "För att gömma en skatt i boden",
+          "För att lura Lille Skutt",
+          "För att lägga en present till sin syster i den"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad vill Bamse att man ska göra innan man lånar något?",
+        "options": [
+          "Fråga om lov",
+          "Låna snabbt och lämna tillbaka senare",
+          "Byta mot något annat direkt",
+          "Skriva en lapp efteråt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad blir lösningen i slutet av berättelsen?",
+        "options": [
+          "Vargen hjälper till att städa parken som tack",
+          "Korgen lämnas kvar i boden vid bryggan",
+          "Bamse cyklar hem och ger upp letandet",
+          "Skalman gömmer korgen för säkerhets skull"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 258
+  },
+  {
+    "id": "ak4-bamse-002",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "samhälle",
+    "title": "Skalmans plan för tysta biblioteket",
+    "text": "I Småköping ska biblioteket ordna en \"tyst timme\" för alla som vill läsa i lugn och ro. Bamse tycker om att bläddra i serier, Lille Skutt lånar böcker om mod, och Skalman vill läsa om stjärnor. När de kommer dit märker de att det ändå är stökigt. Några barn springer mellan hyllorna och pratar högt. Bibliotekarien ser trött ut och försöker säga till, men ingen lyssnar.\n\nDå får Skalman en idé. Han föreslår att de gör en tydlig läshörna med mjuka kuddar och en skylt där det står \"Här viskar vi\". Bamse hjälper till att bära kuddar och små bord. Lille Skutt, som är snabb, springer och hämtar färgpennor och papper så barnen kan rita tysta \"pratbubblor\" som dekoration.\n\nNär allt är klart samlar Bamse barnen och säger vänligt: \"Alla får ha kul, men här inne behöver vissa lugn för att kunna tänka.\" Barnen provar att viska i stället. Bibliotekarien blir glad och tackar.\n\nEfter en stund märker Lille Skutt att även de som först sprang runt nu sitter och läser. En av dem säger: \"Det blev faktiskt mysigare så här.\" Skalman nickar och säger att bra regler fungerar bäst när alla förstår varför de finns.",
+    "questions": [
+      {
+        "q": "Vad skulle biblioteket ordna den dagen?",
+        "options": [
+          "En tävling i högläsning",
+          "En tyst timme för lugn läsning",
+          "Ett bokloppis på torget",
+          "En filmvisning i stora salen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är problemet när Bamse och vännerna kommer till biblioteket?",
+        "options": [
+          "Det är stängt för renovering",
+          "Alla böcker är utlånade",
+          "Det är stökigt och högljutt",
+          "Lamporna fungerar inte"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör Lille Skutt för att hjälpa till enligt texten?",
+        "options": [
+          "Han hämtar färgpennor och papper",
+          "Han låser dörren så ingen kan springa",
+          "Han läser högt för alla barnen",
+          "Han flyttar böckerna till nya hyllor"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket budskap säger Bamse till barnen?",
+        "options": [
+          "Att bara vuxna får vara i biblioteket",
+          "Att man måste vara helt tyst överallt",
+          "Att man ska låna minst tre böcker",
+          "Att vissa behöver lugn för att kunna tänka"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad händer med barnen som först sprang runt?",
+        "options": [
+          "De går hem arga",
+          "De blir tillsagda och gråter",
+          "De börjar också sitta och läsa",
+          "De gömmer sig bakom hyllorna"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menar Skalman när han säger att regler fungerar bäst när man förstår varför de finns?",
+        "options": [
+          "Att regler ska vara hemliga",
+          "Att man lättare följer regler när de känns rimliga",
+          "Att regler bara gäller på bibliotek",
+          "Att regler alltid ska vara långa och svåra"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 271
+  },
+  {
+    "id": "ak4-bamse-003",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "värdegrund",
+    "title": "Bamse och den nya vännen Kim",
+    "text": "En eftermiddag ser Bamse en ny person vid lekplatsen. Personen heter Kim och har en rullstol med röda reflexer. Några barn tittar nyfiket, men de vet inte riktigt hur de ska fråga om Kim vill vara med. Lille Skutt blir nervös och viskar att han inte vill säga fel. Skalman säger att det viktigaste är att vara vänlig och fråga som vanligt.\n\nBamse går fram och säger: \"Hej! Vi spelar skattjakt. Vill du vara med?\" Kim ler och svarar att hen gärna vill, men att banan måste fungera för rullstol. Skattjakten brukar gå genom en smal stig i skogen. Bamse tänker efter och föreslår att de gör om banan: en del kan gå på grusvägen och en del kan leta ledtrådar nära dammen där det är plant.\n\nDe delar upp ledtrådarna så att alla får göra något viktigt. Kim får en karta och ansvarar för att hålla koll på tiden. Lille Skutt springer och hämtar nästa ledtråd, och Skalman löser en gåta om vilka spår som är från en and. När de hittar \"skatten\", en låda med frukt och saft, säger Kim att det var första gången någon ändrade leken så att hen kunde delta.\n\nBamse svarar: \"Det blir roligare när fler kan vara med.\" Alla nickar, och lekplatsen känns plötsligt större.",
+    "questions": [
+      {
+        "q": "Var träffar Bamse Kim första gången i texten?",
+        "options": [
+          "Vid lekplatsen",
+          "I bibliotekets läshörna",
+          "På bryggan vid ån",
+          "I skolans matsal"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför vill Kim att de ska ändra skattjakten?",
+        "options": [
+          "För att det regnar och blir halt",
+          "För att banan måste fungera för rullstol",
+          "För att Kim inte gillar gåtor",
+          "För att de inte har någon karta"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur löser de problemet med den smala stigen?",
+        "options": [
+          "De ställer in leken helt",
+          "De väntar tills nästa dag",
+          "De gör om banan och använder grusväg och plan mark",
+          "De går bara i skogen utan ledtrådar"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken uppgift får Kim i den nya skattjakten?",
+        "options": [
+          "Att springa och hämta alla ledtrådar",
+          "Att gräva upp skatten med en spade",
+          "Att hitta spår från en and",
+          "Att hålla i kartan och ha koll på tiden"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad är \"skatten\" som de hittar?",
+        "options": [
+          "En låda med frukt och saft",
+          "En ny cykelkorg i metall",
+          "Ett paket med serietidningar",
+          "En burk dunderhonung"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att skattjakter alltid ska vara i skogen",
+          "Att det är bäst att leka bara med sina gamla vänner",
+          "Att man kan göra små ändringar så att fler kan vara med",
+          "Att gåtor är viktigare än att samarbeta"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 285
+  },
+  {
+    "id": "ak4-bamse-004",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "hälsa",
+    "title": "Dunderhonungens etikett",
+    "text": "Bamse ska hålla ett litet tal i skolan om sin dunderhonung. Läraren har bett honom berätta hur honungen fungerar och varför man måste vara försiktig. Bamse tar med en burk och ställer den på katedern. På burken finns en etikett, alltså en lapp som berättar vad som är i burken.\n\nNär klassen samlas frågar en elev: \"Varför äter du inte dunderhonung jämt, så är du alltid stark?\" Bamse ler och säger att styrka inte bara handlar om muskler. Han förklarar att honungen ger honom kraft att hjälpa andra, men att man ändå måste tänka innan man gör något. Om man blir stark och samtidigt arg kan man råka förstöra.\n\nSkalman räcker upp handen och berättar att man kan träna på \"självkontroll\", alltså att bromsa sig själv. Han ger ett exempel: om någon tränger sig i kön kan man säga ifrån lugnt i stället för att knuffas. Lille Skutt säger att han ibland blir rädd, men att mod kan vara att våga be om hjälp.\n\nEfter talet får eleverna skriva egna etiketter till låtsasburkar, som \"snällhetsmarmelad\" och \"tålamodste\". Bamse läser lapparna och känner sig stolt. På vägen hem tänker han att den viktigaste kraften i Småköping är att människor lär sig ta ansvar för sina val.",
+    "questions": [
+      {
+        "q": "Var håller Bamse sitt tal i texten?",
+        "options": [
+          "I skolan",
+          "På torget",
+          "I biblioteket",
+          "Vid bryggan"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"etikett\" som förklaras i texten?",
+        "options": [
+          "En lapp som berättar vad som är i burken",
+          "En regel om att alltid vara tyst",
+          "En sorts honung med extra smak",
+          "En bok där man skriver upp tider"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför äter inte Bamse dunderhonung hela tiden enligt honom?",
+        "options": [
+          "För att honungen är för dyr",
+          "För att styrka måste användas med eftertanke",
+          "För att han inte tycker om smaken",
+          "För att läraren förbjuder det"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar Skalman med \"självkontroll\" i texten?",
+        "options": [
+          "Att springa snabbare än alla andra",
+          "Att aldrig säga ifrån",
+          "Att bromsa sig själv och agera lugnt",
+          "Att alltid vinna i tävlingar"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket exempel ger Skalman för att visa självkontroll?",
+        "options": [
+          "Att äta två burkar honung på en gång",
+          "Att gömma sig när någon ropar",
+          "Att skratta åt alla skämt",
+          "Att säga ifrån lugnt om någon tränger sig"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad gör eleverna efter Bamses tal?",
+        "options": [
+          "De skriver egna etiketter till låtsasburkar",
+          "De går hem utan att säga något",
+          "De målar en stor karta över Småköping",
+          "De tränar styrkelyft i gymnastiksalen"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 278
+  },
+  {
+    "id": "ak4-bamse-005",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "natur och miljö",
+    "title": "Skalmans mat- och viloklocka på utflykt",
+    "text": "Bamse, Lille Skutt och Skalman ska på utflykt till Kullarna, en plats med fina utsikter. De vill se hur långt man kan se över Småköping. Skalman packar sin matsäck noggrant: smörgåsar, termos och en liten burk med bär. Han tar också fram sin mat- och viloklocka. Klockan påminner honom om när det är dags att äta och vila, så att han orkar tänka klart.\n\nI början går det fort. Lille Skutt skuttar i förväg och ropar att han ser en stig som verkar kortare. Bamse vill följa efter, men Skalman tittar på kartan och säger att den korta stigen går brant ner mot en ravin. En ravin är en djup spricka i marken. De väljer i stället den längre vägen som är säkrare.\n\nEfter en stund ringer Skalmans klocka. Lille Skutt suckar och säger att de kan vila senare, men Bamse minns att de lätt blir irriterade när de är trötta. De sätter sig på en sten och äter. Då hör de plötsligt ett rop längre bort. En familj har gått vilse vid en skylt som blåst ner. Medan Skalman vilar hinner han tänka ut en plan: de sätter upp skylten igen och ritar en enkel karta i sanden.\n\nNär de till slut når utsikten säger Lille Skutt: \"Tur att vi tog pauser. Annars hade vi kanske missat dem.\"",
+    "questions": [
+      {
+        "q": "Vart ska Bamse, Lille Skutt och Skalman på utflykt?",
+        "options": [
+          "Till Kullarna",
+          "Till biblioteket",
+          "Till torget",
+          "Till den gamla boden"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är Skalmans mat- och viloklocka till för?",
+        "options": [
+          "Att visa vädret i Småköping",
+          "Att påminna honom om att äta och vila",
+          "Att räkna hur många steg de tar",
+          "Att spela musik när de går"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför väljer de inte den \"kortare\" stigen som Lille Skutt hittar?",
+        "options": [
+          "Den leder brant mot en ravin",
+          "Den är stängd med ett lås",
+          "Den går genom en privat trädgård",
+          "Den är för smal för Bamses ryggsäck"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"ravin\" som förklaras i texten?",
+        "options": [
+          "Ett högt torn av sten",
+          "En djup spricka i marken",
+          "En liten sjö med fisk",
+          "En bro över en väg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket problem hjälper de en familj med under utflykten?",
+        "options": [
+          "Familjen har tappat sin matsäck",
+          "Familjen har glömt sin cykel",
+          "Familjen fryser och behöver filtar",
+          "Familjen har gått vilse när en skylt blåst ner"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken slutsats drar Lille Skutt i slutet?",
+        "options": [
+          "Att utsikten var tråkig",
+          "Att pauserna gjorde att de kunde hjälpa någon",
+          "Att kartor alltid är onödiga",
+          "Att den kortaste vägen alltid är bäst"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 286
+  },
+  {
+    "id": "ak5-tema-011",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "djur",
+    "title": "Varför flyttar fåglarna?",
+    "text": "Varje höst lämnar tusentals fåglar Sverige och flyger söderut. De kallas flyttfåglar. Men varför gör de det, och hur hittar de vägen?\n\nDen viktigaste orsaken är maten. Under vintern fryser sjöar och marker, och insekter försvinner. Fåglar som lever av insekter, som svalor och gökar, skulle inte överleva. Därför flyger de till varmare platser där det fortfarande finns mat.\n\nMen inte alla fåglar flyttar. Talgoxar, kråkor och björktrastar stannar kvar. De äter frön, bär och rester och klarar kylan. Man kallar dem stannfåglar.\n\nHur hittar flyttfåglarna rätt? Forskare har upptäckt att fåglar använder flera metoder. Vissa orienterar sig med hjälp av solen och stjärnorna. Andra har ett slags inbyggd kompass som känner av jordens magnetfält. Unga fåglar lär sig också rutten genom att följa äldre fåglar första gången.\n\nResan kan vara otroligt lång. Fjällvråken flyger till Afrika, och den lilla kungsfågeln korsar Medelhavet trots att den bara väger fem gram. Silvertärnan har den längsta sträckan av alla – den flyger från Arktis till Antarktis och tillbaka, nästan fyra mil om dagen.\n\nFågelflyttning visar hur djur anpassar sig till årstiderna. Det visar också att naturen hänger ihop: fåglar som häckar i svenska skogar är beroende av våtmarker i Afrika.",
+    "questions": [
+      {
+        "q": "Vad är den viktigaste orsaken till att fåglar flyttar enligt texten?",
+        "options": [
+          "De vill hitta en partner",
+          "De är rädda för snö",
+          "De hittar inte mat under vintern",
+          "De behöver mer solljus för fjädrarna"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är en stannfågel?",
+        "options": [
+          "En fågel som bor i bur",
+          "En fågel som stannar i Sverige under vintern",
+          "En fågel som flyttar sent på hösten",
+          "En fågel som bara finns i södra Sverige"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur orienterar sig vissa flyttfåglar enligt forskare?",
+        "options": [
+          "De följer vägar och motorvägar",
+          "De flyger bara på dagtid",
+          "De använder solen, stjärnor och jordens magnetfält",
+          "De ropar till varandra för att hålla riktningen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken fågel har den längsta flyttsträckan enligt texten?",
+        "options": [
+          "Fjällvråken",
+          "Kungsfågeln",
+          "Göken",
+          "Silvertärnan"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad väger kungsfågeln ungefär?",
+        "options": [
+          "Fem gram",
+          "Femtio gram",
+          "Fem hekto",
+          "Fem kilo"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad menar texten med att naturen hänger ihop?",
+        "options": [
+          "Att alla fåglar ser likadana ut",
+          "Att fåglar i Sverige är beroende av platser i andra länder",
+          "Att det alltid är vinter i Afrika",
+          "Att alla djur flyttar söderut samtidigt"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-012",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Matchen som ingen vann",
+    "text": "Alla visste att lördagens fotbollsmatch skulle bli viktig. Laget från Ekskolan mötte Björkskolan i semifinalen, och vinnaren gick vidare till finalen.\n\nTova spelade mittfältare i Ekskolan. Hon hade tränat extra hela veckan och kände sig redo. Men redan i andra minuten halkade hon på det blöta gräset och slog i knät. Det gjorde ont, men hon fortsatte spela.\n\nI första halvlek fick Björkskolan ett mål. En snabb framspelning som ingen hann täcka. Ekolaget blev tyst i halvtidspausen. Tränaren sa inte så mycket, men frågade: \"Vad kan ni göra bättre som lag, inte var för sig?\"\n\nDet fick Tova att tänka. Hon hade försökt dribbla förbi alla själv i stället för att passa. I andra halvlek bytte hon strategi. Hon spelade kortare passningar och lät kompisarna komma till skott. I sjuttionde minuten gjorde Noel kvittering efter en fin kombination.\n\nMatchen slutade 1–1, och det blev straffläggning. Tova missade sin straff – bollen gick precis utanför stolpen. Björkskolan vann till slut.\n\nPå bussen hem var det tyst. Men efter en stund sa Noel: \"Vi spelade bättre som lag i andra halvlek än vi gjort hela säsongen.\" Tova nickade. Hon var besviken, men inte på samma sätt som förut. Hon hade lärt sig något: att samarbete kan vara viktigare än att vinna.",
+    "questions": [
+      {
+        "q": "Varför var lördagens match viktig?",
+        "options": [
+          "Det var en träningsmatch",
+          "Det var en semifinal och vinnaren gick vidare",
+          "Det var lagets sista match för säsongen",
+          "Det var en vänskapsmatch mot en utländsk skola"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad hände med Tova tidigt i matchen?",
+        "options": [
+          "Hon fick gult kort",
+          "Hon gjorde ett mål",
+          "Hon halkade och slog i knät",
+          "Hon blev utbytt av tränaren"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad frågade tränaren i halvtidspausen?",
+        "options": [
+          "Vem som vill ta straffar",
+          "Vad de kan göra bättre som lag",
+          "Varför de inte springer snabbare",
+          "Om de vill byta målvakt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur ändrade Tova sitt spel i andra halvlek?",
+        "options": [
+          "Hon slutade springa och stod still",
+          "Hon bytte position till målvakt",
+          "Hon spelade kortare passningar och lät andra skjuta",
+          "Hon sprang bara framåt och väntade på bollen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad hände i straffläggningen?",
+        "options": [
+          "Tova gjorde det avgörande målet",
+          "Matchen avbröts på grund av regn",
+          "Ekskolan vann med 3–2",
+          "Tova missade sin straff och Björkskolan vann"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad hade Tova lärt sig efter matchen?",
+        "options": [
+          "Att man alltid ska dribbla själv",
+          "Att samarbete kan vara viktigare än att vinna",
+          "Att man inte ska spela fotboll i regn",
+          "Att straffar alltid avgör matcher"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-013",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Hur ljud blir musik",
+    "text": "Musik finns överallt: i telefonen, i affären, på skolgården när någon nynnar. Men vad är egentligen musik, och hur skiljer den sig från vanligt ljud?\n\nAllt ljud uppstår genom vibrationer. När en gitarrsträng vibrerar skapar den ljudvågor som färdas genom luften till våra öron. Hjärnan tolkar sedan signalerna som ljud. Om vibrationerna är jämna och regelbundna uppfattar vi en ton. Om de är ojämna hör vi brus eller oljud.\n\nMusik bygger på tre grunddelar: melodi, rytm och harmoni. Melodin är den del vi brukar nynna – en rad toner som följer efter varandra. Rytmen handlar om tid: hur långa eller korta tonerna är och var betoningen ligger. Harmoni uppstår när flera toner klingar samtidigt, som i ett ackord på piano.\n\nMänniskor har gjort musik i tiotusentals år. De äldsta instrumenten man hittat är flöjter gjorda av ben, över 40 000 år gamla. Musik har använts vid ceremonier, fester, arbete och för att berätta historier.\n\nIdag skapas musik också med datorer. Producenter kan bygga ihop låtar digitalt, lägga till effekter och ändra tonhöjd. Men grundprinciperna är desamma: vibrationer som skapar mönster som hjärnan uppfattar som musik.\n\nForskare har visat att musik påverkar oss starkt. Den kan göra oss glada, lugna eller ge oss energi. Vissa studier visar att musik till och med kan hjälpa oss att koncentrera oss bättre.",
+    "questions": [
+      {
+        "q": "Hur uppstår ljud enligt texten?",
+        "options": [
+          "Genom elektriska signaler",
+          "Genom vibrationer som skapar ljudvågor",
+          "Genom att luft pressas ihop i ett rör",
+          "Genom att hjärnan skapar toner själv"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är melodin i musik?",
+        "options": [
+          "Hur starkt ljudet är",
+          "En rad toner som följer efter varandra",
+          "Flera toner som klingar samtidigt",
+          "Hur lång låten är"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är harmoni?",
+        "options": [
+          "När man sjunger ensam",
+          "När man spelar bara rytm utan toner",
+          "När flera toner klingar samtidigt",
+          "När musiken blir tyst"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur gamla är de äldsta instrumenten som hittats?",
+        "options": [
+          "Omkring 1 000 år",
+          "Omkring 5 000 år",
+          "Omkring 40 000 år",
+          "Omkring 100 000 år"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menas med att producenter bygger ihop låtar digitalt?",
+        "options": [
+          "Att de spelar in sig själva på kassettband",
+          "Att de skapar musik med hjälp av datorer",
+          "Att de bara använder akustiska instrument",
+          "Att de skriver noter för hand"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad har forskare visat om musikens påverkan?",
+        "options": [
+          "Att musik inte påverkar humöret alls",
+          "Att musik bara hjälper barn, inte vuxna",
+          "Att musik kan göra oss glada, lugna och hjälpa oss koncentrera",
+          "Att musik alltid gör oss trötta"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-014",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "historia",
+    "title": "Flickan som ritade kartor",
+    "text": "År 1752 bodde Maja i en liten by vid sjön Mälaren. Hon var tolv år och hjälpte sin mamma med tvättning och bakning. Men det Maja helst ville göra var att rita.\n\nEn dag kom en lantmätare till byn. Han hade med sig ett mätbord, en kompass och stora pappersrullar. Hans uppgift var att rita en karta över byns ägor så att man visste vilken mark som tillhörde vem.\n\nMaja följde efter honom och tittade fascinerat när han mätte avstånd med en kedja och ritade streck på pappret. \"Vill du prova?\" frågade han. Maja fick hålla i kedjan medan han läste av kompassriktningen.\n\nLantmätaren förklarade att kartor var viktiga för rättvisan. Om ingen visste var gränserna gick kunde den starkaste ta mest mark. En karta var ett sätt att visa sanningen om landskapet.\n\nMaja frågade varför sjön var målad blå fast vattnet egentligen var grönt. Lantmätaren skrattade och sa att kartor inte visar hur saker ser ut, utan var de finns. Färgerna var symboler – överenskommelser som alla kunde förstå.\n\nPå kvällen ritade Maja sin egen karta över byn. Hon markerade hus, brunnar, stigar och den gamla eken där barnen brukade leka. Mamman tittade på kartan och sa: \"Du har fått med allt det viktiga.\" Maja log. Kanske kunde hon rita kartor en dag, på riktigt.",
+    "questions": [
+      {
+        "q": "När utspelar sig berättelsen?",
+        "options": [
+          "År 1952",
+          "År 1852",
+          "År 1752",
+          "År 1652"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad var lantmätarens uppgift i byn?",
+        "options": [
+          "Att bygga en bro över sjön",
+          "Att rita en karta över byns ägor",
+          "Att lära barnen att skriva",
+          "Att samla in skatt åt kungen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför var kartor viktiga för rättvisan enligt lantmätaren?",
+        "options": [
+          "Så att alla visste var de bodde",
+          "Så att den starkaste inte kunde ta mest mark",
+          "Så att byborna kunde sälja sin mark",
+          "Så att kungen kunde bygga en väg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför var sjön blå på kartan fast vattnet var grönt?",
+        "options": [
+          "Lantmätaren hade bara blå färg",
+          "Sjön var blå på vintern",
+          "Färgerna var symboler som alla kunde förstå",
+          "Kartan var gammal och färgen hade ändrats"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad ritade Maja på sin egen karta?",
+        "options": [
+          "Bara sjön och skogen",
+          "Hus, brunnar, stigar och den gamla eken",
+          "En skattkarta med kryss",
+          "Bara sitt eget hus och trädgård"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kan man säga att texten handlar om?",
+        "options": [
+          "Att flickor inte fick gå i skolan förr",
+          "Att Maja upptäcker kartor och hur de visar världen",
+          "Att sjöar alltid har olika färg",
+          "Att lantmätare hade ett farligt yrke"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak5-tema-015",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "miljö",
+    "title": "Vad händer med skräpet i havet?",
+    "text": "Varje år hamnar miljontals ton skräp i haven. Det mesta är plast: påsar, flaskor, förpackningar och fiskenät. Men vart tar skräpet vägen, och varför är det ett problem?\n\nPlast bryts inte ner som trä eller papper. I stället delas den långsamt upp i allt mindre bitar. Dessa små bitar kallas mikroplast och kan vara mindre än ett sandkorn. Mikroplasten sprids med strömmar och finns nu i alla hav, även i Arktis.\n\nDjur i havet tar skada av skräpet. Sköldpaddor kan förväxla plastpåsar med maneter och äta dem. Sjöfåglar sväljer små plastbitar som fyller magen utan att ge näring. Fiskar får i sig mikroplast som sedan kan hamna i den fisk vi själva äter.\n\nEn del av skräpet samlas i stora områden som kallas skräpöar. Den mest kända ligger i Stilla havet och är flera gånger större än Sverige. Men det är inte en ö man kan gå på – det handlar om enorma mängder små plastbitar som flyter under ytan.\n\nVad kan vi göra? Forskare arbetar med metoder för att samla in plast ur havet, men det räcker inte. Det viktigaste är att minska mängden plast som hamnar där från början. Att återvinna, använda mindre engångsplast och plocka skräp vid stränder är saker som alla kan bidra med.\n\nHavet täcker över sjuttio procent av jordens yta. Det ger oss mat, syre och reglerar klimatet. Att ta hand om haven är att ta hand om oss själva.",
+    "questions": [
+      {
+        "q": "Vad är det mesta skräpet i haven gjort av?",
+        "options": [
+          "Metall",
+          "Glas",
+          "Plast",
+          "Papper"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är mikroplast?",
+        "options": [
+          "En sorts plast som löser upp sig helt",
+          "Mycket små plastbitar som kan vara mindre än ett sandkorn",
+          "Plast som bara finns i Stilla havet",
+          "En ny typ av nedbrytbar plast"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför kan plastpåsar vara farliga för sköldpaddor?",
+        "options": [
+          "Plastpåsar fastnar i deras skal",
+          "Sköldpaddor förväxlar dem med maneter och äter dem",
+          "Plastpåsar blockerar strömmarna",
+          "Sköldpaddor bygger bon av dem"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur beskrivs skräpön i Stilla havet?",
+        "options": [
+          "Som en stor ö man kan gå på",
+          "Som en sandbank full av skräp",
+          "Som enorma mängder små plastbitar under ytan",
+          "Som en flytande sopstation"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menar texten är det viktigaste man kan göra?",
+        "options": [
+          "Sluta äta fisk helt",
+          "Bygga fler fabriker vid kusten",
+          "Minska mängden plast som hamnar i havet",
+          "Flytta alla djur från havet"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför säger texten att ta hand om haven är att ta hand om oss själva?",
+        "options": [
+          "Havet ger oss mat, syre och reglerar klimatet",
+          "Alla människor bor nära havet",
+          "Havet är det enda stället där det finns dricksvatten",
+          "Vi tillbringar mest tid vid havet"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-011",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "vetenskap och teknik",
+    "title": "Hur AI lär sig – mönster, data och beslut",
+    "text": "Artificiell intelligens, eller AI, har blivit en del av vardagen. Den finns i telefonens ansiktsigenkänning, i appar som föreslår musik och i verktyg som kan skriva text. Men hur fungerar det egentligen?\n\nI grunden handlar AI om mönsterigenkänning. Ett AI-system tränas genom att få se enorma mängder data. Om man vill att systemet ska kunna skilja på katter och hundar visar man det tusentals bilder av båda, märkta med rätt svar. Systemet letar efter mönster: katter har kanske mer spetsiga öron, hundar har längre nosar. Gradvis blir det bättre på att gissa rätt.\n\nDen här processen kallas maskininlärning. Systemet lär sig inte genom att förstå vad en katt är – det har ingen upplevelse eller medvetenhet. Det hittar statistiska samband i data. Ju mer data det får, desto fler mönster kan det hitta.\n\nMen AI gör också fel. Om träningsdatan är sned kan resultaten bli orättvisa. Om ett ansiktsigenkänningssystem mest tränats på ljushyade ansikten fungerar det sämre på mörkare hudtoner. Det kallas bias och är ett stort etiskt problem.\n\nEn annan fråga är transparens. Avancerade AI-system kan vara så komplexa att inte ens utvecklarna helt förstår varför systemet fattade ett visst beslut. Det blir problematiskt när AI används för att bedöma låneansökningar, sjukdomsdiagnoser eller brottsmisstankar.\n\nAI är ett kraftfullt verktyg, men det ersätter inte mänskligt omdöme. Att förstå hur tekniken fungerar – och var den brister – är en viktig del av att vara medborgare i en digital värld.",
+    "questions": [
+      {
+        "q": "Vad är grunden i hur AI fungerar enligt texten?",
+        "options": [
+          "AI tänker precis som en människa",
+          "AI bygger på mönsterigenkänning i stora mängder data",
+          "AI programmeras med alla svar från början",
+          "AI lär sig genom att läsa böcker"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med maskininlärning?",
+        "options": [
+          "Att en maskin reparerar sig själv",
+          "Att datorer kopplas ihop i nätverk",
+          "Att ett system lär sig hitta mönster genom att se stora mängder data",
+          "Att man programmerar varje svar manuellt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär bias i AI-sammanhang?",
+        "options": [
+          "Att systemet arbetar för långsamt",
+          "Att träningsdatan är sned och ger orättvisa resultat",
+          "Att AI alltid gynnar den som äger programmet",
+          "Att datorn har virus"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är transparens ett problem med avancerad AI?",
+        "options": [
+          "Systemet kan vara så komplext att inte ens utvecklarna förstår dess beslut",
+          "AI-system är alltid hemliga och säljs dyrt",
+          "Användare kan inte ladda ner programmen",
+          "Koden är skriven på ett ovanligt språk"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Inom vilka områden nämner texten att AI-beslut kan vara problematiska?",
+        "options": [
+          "Matlagning och trädgårdsskötsel",
+          "Låneansökningar, sjukdomsdiagnoser och brottsmisstankar",
+          "Sport och musik",
+          "Väderrapporter och trafikstockning"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens huvudsakliga budskap?",
+        "options": [
+          "AI bör förbjudas helt",
+          "AI är perfekt och bör användas för alla beslut",
+          "AI är kraftfullt men ersätter inte mänskligt omdöme",
+          "Bara experter behöver förstå AI"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-012",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "identitet och kultur",
+    "title": "Två språk, en röst",
+    "text": "Amina hade alltid pratat arabiska hemma och svenska i skolan. Det var inget hon tänkte på – det bara var så. Men i åttan började det skava.\n\nDet hade börjat med en presentation i svenskan. Amina berättade om sin familjs bakning, om kaak-kakorna som hennes farmor alltid bakade till fredagar. Hon använde det arabiska ordet utan att tänka sig för, och en kille i klassen fnissade. \"Vad sa du?\" Amina upprepade och kände hur kinderna blev varma.\n\nPå rasten sa kompisen Ella: \"Jag tyckte det lät fint. Hur stavas det?\" Amina visade, och Ella provade att säga ordet. Det lät fel men känslan var rätt.\n\nSenare den veckan hade de en uppgift om identitet i SO:n. Läraren frågade: \"Vad formar vem ni är?\" Amina skrev om sina två språk. Hon beskrev hur arabiskan hade ord för känslor som svenskan saknade, och tvärtom. Ordet \"lagom\" till exempel – det gick inte att översätta rakt av. Och det arabiska \"tarab\", känslan när musik griper tag i hela kroppen, hade ingen direkt motsvarighet i svenskan.\n\nNär hon läste upp texten blev det tyst. Sedan sa läraren: \"Du visar att språk inte bara är kommunikation. Det är också ett sätt att tänka.\" Amina kände något lossna i bröstet. Det var inte så att hon hade två halvspråk. Hon hade två hela världar.\n\nPå vägen hem ringde hon farmor och berättade om presentationen – på arabiska. Farmor skrattade och sa: \"Du har alltid haft orden. Nu har du hittat modet att använda dem.\"",
+    "questions": [
+      {
+        "q": "Vad handlade Aminas presentation i svenskan om?",
+        "options": [
+          "Om en bok hon läst",
+          "Om sin familjs bakning och kaak-kakor",
+          "Om en resa till Marocko",
+          "Om svenska matrecept"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför blev Amina generad under presentationen?",
+        "options": [
+          "Hon glömde vad hon skulle säga",
+          "En kille fnissade när hon använde ett arabiskt ord",
+          "Läraren avbröt henne",
+          "Hon tappade sina anteckningar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar texten med att ordet 'lagom' inte går att översätta rakt av?",
+        "options": [
+          "Att ordet inte finns i ordböcker",
+          "Att det inte finns en exakt motsvarighet på arabiska",
+          "Att Amina inte förstår vad lagom betyder",
+          "Att ordet uttalas olika i olika delar av Sverige"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad sa läraren efter att Amina läst sin text?",
+        "options": [
+          "Att hon borde välja ett av språken",
+          "Att språk inte bara är kommunikation utan också ett sätt att tänka",
+          "Att hon borde skriva om texten på arabiska",
+          "Att alla borde lära sig arabiska"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med att Amina inte hade 'två halvspråk' utan 'två hela världar'?",
+        "options": [
+          "Att hon bor i två olika länder",
+          "Att hennes språk begränsar henne",
+          "Att varje språk ger henne en hel, rik förståelse av tillvaron",
+          "Att hon måste välja ett språk att behålla"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad sa farmor till Amina i slutet?",
+        "options": [
+          "Att hon borde sluta prata arabiska i skolan",
+          "Att hon alltid haft orden men nu hittat modet att använda dem",
+          "Att hon borde flytta tillbaka",
+          "Att svenska är svårt att lära sig"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-013",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "natur och ekosystem",
+    "title": "Varför behöver vi skogen?",
+    "text": "Skog täcker ungefär sjuttio procent av Sveriges yta. Den syns överallt – i horisonten på en bilresa, utanför skolans fönster, i parker och naturreservat. Men skogens betydelse går långt bortom det vi ser.\n\nTräd binder koldioxid. Genom fotosyntesen tar de upp koldioxid från luften och omvandlar den till syre och organiskt material. En vuxen gran kan binda hundratals kilo koldioxid under sin livstid. Det gör skogen till en av våra viktigaste kolsänkor – platser som lagrar kol och bromsar klimatförändringarna.\n\nSkogen är också hem åt tusentals arter. I en svensk granskog lever allt från hackspettar och ekorrar till svampar, lavar och insekter. Många av dessa arter är beroende av gammal skog med döda träd, så kallad naturskog, som inte har avverkats.\n\nMen skogen används också som resurs. Sverige är ett av världens största exportländer av papper och trävaror. Skogsindustrin sysselsätter tiotusentals människor. Konflikten mellan att bruka och bevara skogen är en av vår tids stora frågor.\n\nEn del forskare menar att vi behöver mer skyddad skog för att klara klimatmålen och bevara biologisk mångfald. Andra hävdar att hållbart skogsbruk – där man planterar nya träd och avverkar med hänsyn – kan kombinera produktion med naturvård.\n\nDet som är tydligt är att skogen spelar en avgörande roll. Den renar luften vi andas, lagrar vatten, minskar erosion och erbjuder platser för rekreation. Att förstå skogen är att förstå sambanden mellan människa och natur.",
+    "questions": [
+      {
+        "q": "Hur stor del av Sveriges yta täcks ungefär av skog?",
+        "options": [
+          "Trettio procent",
+          "Femtio procent",
+          "Sjuttio procent",
+          "Nittio procent"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är en kolsänka?",
+        "options": [
+          "En plats som släpper ut kol i luften",
+          "En plats som lagrar kol och bromsar klimatförändringarna",
+          "En fabrik som tillverkar kol",
+          "En sjö som innehåller mycket koldioxid"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med naturskog?",
+        "options": [
+          "Skog som planterats av människor",
+          "Skog som bara finns i nationalparker",
+          "Gammal skog som inte avverkats",
+          "Skog utan djur"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är konflikten som texten beskriver?",
+        "options": [
+          "Mellan skogsarbetare och djur",
+          "Mellan att bruka och bevara skogen",
+          "Mellan Sverige och andra länder",
+          "Mellan stad och landsbygd"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar de som förespråkar hållbart skogsbruk?",
+        "options": [
+          "Att vi ska sluta använda trä helt",
+          "Att man kan kombinera produktion med naturvård",
+          "Att bara gammal skog ska avverkas",
+          "Att skogen ska ersättas av åkermark"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilka funktioner fyller skogen enligt textens avslutning?",
+        "options": [
+          "Bara att producera virke och papper",
+          "Rena luft, lagra vatten, minska erosion och erbjuda rekreation",
+          "Bara att vara hem åt djur",
+          "Bara att se fin ut i landskapet"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-014",
+    "grade": 8,
+    "genre": "argumenterande",
+    "theme": "digital vardag",
+    "title": "Är det okej att alltid vara nåbar?",
+    "text": "De flesta tonåringar har sin telefon inom armlängds avstånd hela dagen. Meddelanden, notiser och uppdateringar strömmar in konstant. Frågan är: vad gör den ständiga uppkopplingen med oss?\n\nFörespråkare menar att tillgängligheten har stora fördelar. Man kan snabbt nå familj och vänner, söka information och organisera sin vardag. I krissituationer kan en telefon vara livräddande. Dessutom ger sociala medier möjlighet att hålla kontakt med människor som bor långt bort.\n\nMen kritiker lyfter andra sidor. Forskning visar att ständig uppkoppling kan öka stress och göra det svårare att koncentrera sig. Hjärnan behöver pauser för att bearbeta intryck och vila. När vi hela tiden förväntas svara direkt skapas en känsla av att aldrig riktigt vara ledig.\n\nEtt begrepp som diskuteras är FOMO – fear of missing out. Det handlar om rädslan att missa något viktigt om man inte är online. Paradoxalt nog kan den rädslan göra att man missar det som händer just nu, i det riktiga livet.\n\nNågra skolor har infört mobilfria zoner eller tider utan telefon. Elever som prövat detta rapporterar blandade reaktioner: en del kände sig rastlösa i början men uppskattade sedan lugnet. Andra tyckte att det var onödigt och att de själva borde få bestämma.\n\nDet handlar inte om att välja mellan uppkoppling och avkoppling. Det handlar om att hitta en balans. Att själv kunna bestämma när man är nåbar – och när man inte är det – kan vara en form av frihet.",
+    "questions": [
+      {
+        "q": "Vad lyfter förespråkare som fördelar med ständig uppkoppling?",
+        "options": [
+          "Att man slipper träffa människor i verkligheten",
+          "Att man snabbt kan nå andra, söka information och organisera vardagen",
+          "Att man aldrig behöver tänka själv",
+          "Att man kan tjäna pengar genom att vara online"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar forskning om ständig uppkoppling enligt texten?",
+        "options": [
+          "Att det alltid är positivt för hälsan",
+          "Att det inte påverkar oss alls",
+          "Att det kan öka stress och göra det svårare att koncentrera sig",
+          "Att bara vuxna påverkas negativt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder FOMO?",
+        "options": [
+          "Rädsla att missa något viktigt om man inte är online",
+          "En typ av telefon utan internet",
+          "Ett program som blockerar notiser",
+          "En studie om ungdomars sömnvanor"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför beskrivs FOMO som paradoxalt i texten?",
+        "options": [
+          "Rädslan att missa något online gör att man missar det som händer just nu",
+          "FOMO gör att man sover bättre",
+          "De som har FOMO använder telefonen mindre",
+          "FOMO drabbar bara personer utan mobiltelefon"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur reagerade elever på mobilfria zoner enligt texten?",
+        "options": [
+          "Alla tyckte det var en bra idé direkt",
+          "Ingen märkte någon skillnad",
+          "Blandade reaktioner – rastlöshet först men sedan uppskattning hos en del",
+          "Alla lämnade skolan i protest"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är textens slutsats?",
+        "options": [
+          "Att telefoner borde förbjudas helt",
+          "Att man aldrig ska stänga av telefonen",
+          "Att balans och eget val om nåbarhet kan vara en form av frihet",
+          "Att bara vuxna bör ha mobiltelefon"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-015",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "filosofi och existens",
+    "title": "Tankeexperimentet",
+    "text": "\"Om ett träd faller i skogen och ingen hör det – låter det då?\" Frågan stod på tavlan när Kasper kom in i klassrummet. Filosofilektionen hade börjat.\n\nLäraren Birgitta bad dem fundera i tystnad en minut. Kasper tänkte att svaret var självklart: ja, förstås låter det. Ljudvågor uppstår oavsett om någon lyssnar. Men sedan tvekade han. Är ljud samma sak som ljudvågor, eller behövs ett öra som uppfattar dem?\n\nElsa räckte upp handen och sa att det beror på vad man menar med ljud. Om ljud är vibrationer i luften – ja, det låter. Om ljud kräver någon som hör – nej. Birgitta nickade och sa att det var poängen: ibland handlar filosofi inte om att hitta rätt svar, utan om att ställa bättre frågor.\n\nSedan gav hon ett annat tankeexperiment: \"Tänk er att ni vaknar imorgon och allt ser likadant ut, men alla andra människor har bytts ut mot identiska kopior som beter sig exakt likadant. Skulle ni märka det?\" Klassen blev tyst.\n\nKasper kände en märklig känsla i magen. Hur vet man egentligen att andra människor har ett inre liv? Man kan inte kliva in i någon annans medvetande. Man måste lita på att deras beteende speglar verkliga känslor.\n\nEfter lektionen gick Kasper bredvid Elsa i korridoren. \"Tror du att jag har ett medvetande?\" frågade han och log snett. Elsa skrattade. \"Jag väljer att tro det. Annars blir tillvaron ganska ensam.\"\n\nPå kvällen satt Kasper länge med en tom sida i skrivhäftet. Han försökte formulera en egen filosofisk fråga. Till slut skrev han: \"Om alla minnen från igår försvann – skulle du fortfarande vara du?\"",
+    "questions": [
+      {
+        "q": "Vad var frågan som stod på tavlan?",
+        "options": [
+          "Vad är meningen med livet?",
+          "Om ett träd faller i skogen och ingen hör det, låter det då?",
+          "Finns det liv på andra planeter?",
+          "Varför finns det ont i världen?"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menade Elsa med sitt svar om trädet?",
+        "options": [
+          "Att träd aldrig faller i skogen",
+          "Att frågan har två möjliga svar beroende på vad man menar med ljud",
+          "Att bara forskare kan svara",
+          "Att ljudvågor inte finns"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad sa Birgitta att filosofi ibland handlar om?",
+        "options": [
+          "Att memorera fakta",
+          "Att alltid hitta ett rätt svar snabbt",
+          "Att ställa bättre frågor snarare än att hitta rätt svar",
+          "Att skriva långa uppsatser"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad handlade det andra tankeexperimentet om?",
+        "options": [
+          "Om tidsresor bakåt i tiden",
+          "Om alla bytts ut mot identiska kopior som beter sig likadant",
+          "Om man kan leva utan sömn",
+          "Om djur kan tänka"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menade Elsa med att hon 'väljer att tro' att Kasper har ett medvetande?",
+        "options": [
+          "Att hon inte gillar Kasper",
+          "Att man inte kan bevisa det men att alternativet vore ensamt",
+          "Att hon har läst det i en bok",
+          "Att Kasper inte verkar ha ett medvetande"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken filosofisk fråga formulerade Kasper på kvällen?",
+        "options": [
+          "Varför finns universum?",
+          "Kan man resa i tiden?",
+          "Om alla minnen försvann, skulle du fortfarande vara du?",
+          "Vad händer efter döden?"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-011",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Fågeln på fönsterbrädan",
+    "text": "En morgon sitter det en liten fågel på fönsterbrädan. Wilma ser den när hon äter frukost. Fågeln är blå och grå. Den tittar in genom rutan med huvudet på sned. \"Mamma, titta!\" viskar Wilma. \"Den är nog hungrig\", säger mamma. De lägger lite bröd på brädan. Fågeln pickar försiktigt. Sedan flyger den iväg. Nästa dag kommer fågeln tillbaka. Och dagen efter det också. Wilma ger den ett namn: Blåis. Varje morgon tittar Wilma ut. Och varje morgon sitter Blåis där och väntar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter fågeln?",
+        "options": [
+          "I ett träd",
+          "På fönsterbrädan",
+          "På taket",
+          "I en bur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har fågeln?",
+        "options": [
+          "Röd och gul",
+          "Svart och vit",
+          "Blå och grå",
+          "Grön och brun"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad lägger de på brädan?",
+        "options": [
+          "Frön",
+          "Lite bröd",
+          "Ris",
+          "Godis"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallar Wilma fågeln?",
+        "options": [
+          "Pipen",
+          "Gråis",
+          "Kvansen",
+          "Blåis"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför viskar Wilma till mamma?",
+        "options": [
+          "Hon vill inte väcka pappa",
+          "Hon vill inte skrämma fågeln",
+          "Hon har ont i halsen",
+          "Hon pratar alltid tyst"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kommer fågeln tillbaka varje dag?",
+        "options": [
+          "Den har inget annat ställe att bo",
+          "Den gillar att titta på Wilma",
+          "Den vet att hon brukar ge mat",
+          "Den är rädd för andra fåglar"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-012",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "familj",
+    "title": "Storasyster hjälper till",
+    "text": "Malte är fem år. Hans storasyster Saga är sju. Idag ska de baka bullar med pappa. Pappa tar fram mjöl, socker och smör. Saga får mäta mjölet. Malte vill också hjälpa till. \"Du kan röra i degen\", säger pappa. Malte rör så hårt att mjöl flyger upp i luften. Saga skrattar. \"Sakta, sakta!\" säger hon. Hon lägger sin hand över Maltes och visar hur man rör försiktigt. Tillsammans gör de runda bullar. Malte gör en extra stor. \"Den är till dig, Saga\", säger han. Saga ler. \"Tack, lillebror.\" Bullarna doftar gott i ugnen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska de baka?",
+        "options": [
+          "En tårta",
+          "Bröd",
+          "Bullar",
+          "Kakor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem får mäta mjölet?",
+        "options": [
+          "Malte",
+          "Pappa",
+          "Mamma",
+          "Saga"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när Malte rör i degen?",
+        "options": [
+          "Degen ramlar på golvet",
+          "Mjöl flyger upp i luften",
+          "Bunken går sönder",
+          "Malte börjar gråta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem är den stora bullen till?",
+        "options": [
+          "Till pappa",
+          "Till mamma",
+          "Till Malte själv",
+          "Till Saga"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lägger Saga sin hand över Maltes?",
+        "options": [
+          "Hon vill ta hans plats",
+          "Hon vill visa hur man rör försiktigt",
+          "Hon är arg på honom",
+          "Hon fryser om händerna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför gör Malte en extra stor bulle till Saga?",
+        "options": [
+          "Han vill visa att han tycker om henne",
+          "Pappa sa att han måste",
+          "Han har för mycket deg kvar",
+          "Han vill ha den själv sen"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-013",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "väder",
+    "title": "Vattenpölen",
+    "text": "Det har regnat hela natten. När Ines kommer ut på morgonen finns det en stor vattenpöl på gården. Den är nästan som en liten sjö. Ines har sina gula gummistövlar på sig. Hon hoppar rakt i pölen. Splash! Vattnet stänker högt. Kompisen Omar kommer förbi. \"Får jag hoppa också?\" frågar han. \"Klart du får!\" säger Ines. De hoppar och hoppar tills stövlarna är blöta på insidan. Sedan sitter de på trappen och häller ut vattnet. \"Titta\", säger Omar. \"Solen kommer fram.\" Pölen börjar bli mindre. \"Vi får hoppa snabbt imorgon\", säger Ines. \"Innan pölen försvinner.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför finns det en pöl på gården?",
+        "options": [
+          "Någon har hällt vatten",
+          "Det har regnat hela natten",
+          "En kran läcker",
+          "Snön har smält"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har Ines stövlar?",
+        "options": [
+          "Röda",
+          "Blåa",
+          "Gula",
+          "Gröna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem kommer förbi och vill hoppa?",
+        "options": [
+          "Ines mamma",
+          "En hund",
+          "Omar",
+          "Fröken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de på trappen?",
+        "options": [
+          "De äter mellanmål",
+          "De häller ut vatten ur stövlarna",
+          "De läser en bok",
+          "De väntar på bussen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir pölen mindre när solen kommer fram?",
+        "options": [
+          "Vattnet rinner ner i ett hål",
+          "Solen värmer och vattnet torkar",
+          "Barnen har hoppat bort allt vatten",
+          "Det börjar blåsa"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Ines att de får hoppa snabbt imorgon?",
+        "options": [
+          "Hon har bråttom till skolan",
+          "Pölen kan försvinna om solen torkar den",
+          "Omar kan bara komma tidigt",
+          "Stövlarna håller på att gå sönder"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-014",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "fantasi",
+    "title": "Lådan som blev en båt",
+    "text": "I garaget hittar Theo en stor pappkartong. Den är nästan lika stor som han själv. \"Den här kan bli vad som helst!\" säger han. Han drar ut den på gräset. Först blir den en båt. Theo kliver i och låtsas ro med en pinne. \"Land i sikte!\" ropar han. Kompisen Li kommer springande. \"Vad gör du?\" frågar hon. \"Jag seglar till en ö\", säger Theo. Li kliver också i. De låtsas att gräset är hav och att maskrosorna är fiskar. Sedan vänder de på lådan och den blir ett hus. De sitter under den och äter äpple. \"Det här är det bästa huset\", säger Li. Theo nickar. En vanlig kartong kan bli allt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittar Theo kartongen?",
+        "options": [
+          "I köket",
+          "I garaget",
+          "I skolan",
+          "I parken"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad blir kartongen först?",
+        "options": [
+          "En bil",
+          "En robot",
+          "En båt",
+          "Ett flygplan"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad låtsas de att maskrosorna är?",
+        "options": [
+          "Blommor",
+          "Fiskar",
+          "Stjärnor",
+          "Bollar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad äter de under kartongen?",
+        "options": [
+          "Smörgås",
+          "Banan",
+          "Äpple",
+          "Kex"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Theo att lådan kan bli vad som helst?",
+        "options": [
+          "Lådan är magisk",
+          "Han har en bra fantasi",
+          "Pappa har sagt det",
+          "Lådan kan prata"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker Li att det är det bästa huset?",
+        "options": [
+          "Det har ett riktigt tak",
+          "Det är stort och fint",
+          "Det är roligt att leka ihop med fantasi",
+          "Det regnar ute"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-015",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "hjälpsamhet",
+    "title": "Mössan i trädet",
+    "text": "Elias tappar sin mössa på väg till skolan. Vinden tar den och den fastnar i ett träd. Grenen är för hög. Elias sträcker sig men når inte. \"Oj!\" säger han. Kompisen Mira kommer gående. \"Vad hände?\" frågar hon. \"Min mössa sitter fast\", säger Elias. Mira tittar upp. \"Om du lyfter mig kan jag nå den\", säger hon. Elias lyfter Mira försiktigt. Hon sträcker sig och får tag i mössan. \"Tack!\" säger Elias och sätter på sig den. \"Inget att tacka för\", säger Mira. \"Man hjälper varandra.\" De går till skolan tillsammans. Elias håller hårt i mössan hela vägen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad händer med Elias mössa?",
+        "options": [
+          "Den ramlar i en pöl",
+          "Den fastnar i ett träd",
+          "En hund tar den",
+          "Den blåser bort helt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför når inte Elias mössan?",
+        "options": [
+          "Han är rädd för höjder",
+          "Grenen är för hög",
+          "Trädet är för tjockt",
+          "Han har handskar på sig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur löser de problemet?",
+        "options": [
+          "De kastar en boll på mössan",
+          "De hämtar en stege",
+          "Elias lyfter Mira så hon når",
+          "De ropar på en vuxen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Mira när Elias tackar?",
+        "options": [
+          "\"Var så god!\"",
+          "\"Det var svårt!\"",
+          "\"Man hjälper varandra\"",
+          "\"Du är skyldig mig\""
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför håller Elias hårt i mössan hela vägen?",
+        "options": [
+          "Han vill inte att den ska blåsa bort igen",
+          "Mössan är ny och fin",
+          "Mira sa att han måste",
+          "Det är en del av en lek"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig Elias i berättelsen?",
+        "options": [
+          "Att mössor alltid blåser bort",
+          "Att det är bra att ha en kompis som hjälper",
+          "Att man inte ska ha mössa",
+          "Att träd är farliga"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
