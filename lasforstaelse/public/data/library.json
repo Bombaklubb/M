@@ -22178,5 +22178,205 @@
         "correct": 1
       }
     ]
+  },
+  {
+    "id": "ak6-tema-011",
+    "title": "Arsenal – från verkstadslag till stor klubb",
+    "text": "Arsenal är ett fotbollslag från norra London. Klubben startade redan 1886 av arbetare på en fabrik som gjorde vapen och maskiner. Därför hette laget först något som liknade \"Dial Square\", och senare \"Woolwich Arsenal\". Till slut blev namnet bara Arsenal. Många tror att Arsenal alltid har spelat där de spelar nu, men klubben flyttade tidigt till området Highbury. Där spelade de i många år och fick en stor supporterskara.\n\nI dag spelar herrlaget sina hemmamatcher på Emirates Stadium. Det är en stor arena där det ryms många tusen personer. När man pratar om \"hemmamatch\" menar man att laget spelar på sin egen arena. Motståndarna kallas ofta \"bortalag\". På läktarna har Arsenal-supportrar ofta röda tröjor och halsdukar, eftersom Arsenals färger traditionellt är rött och vitt.\n\nArsenal har haft flera kända tränare genom åren. En tränare bestämmer mycket: hur laget ska spela, vilka som startar, och hur man tränar. Arsenal är också känt för att ha haft spelare som varit bra på passningsspel, alltså att hålla bollen inom laget och hitta smarta vägar framåt. Det låter enkelt, men det kräver att spelarna rör sig rätt och vågar passa även när det blir trångt.\n\nEn speciell sak i London är att många stora lag ligger nära varandra. När Arsenal möter Tottenham kallas det ofta för ett \"derby\", alltså en match mellan lag från samma område. Sådana matcher kan bli extra intensiva, eftersom många fans känner varandra och vill vinna \"staden\" för en dag.\n\nDet viktigaste är ändå att Arsenal, som alla klubbar, består av mer än bara resultat. Det handlar om traditioner, minnen från matcher, och känslan av att höra ihop med andra som gillar samma lag.",
+    "grade": 6,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "När startade Arsenal enligt texten?",
+        "options": ["1886", "1906", "1978", "2012"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder en \"hemmamatch\" i texten?",
+        "options": ["Att laget spelar på en neutral plan", "Att laget spelar på sin egen arena", "Att laget alltid vinner hemma", "Att matchen spelas utan publik"],
+        "correct": 1
+      },
+      {
+        "q": "Varför nämns passningsspel som något som kräver mycket?",
+        "options": ["För att domaren måste springa mer", "För att bollen måste vara ny", "För att spelarna måste röra sig rätt och våga passa i trånga lägen", "För att man bara får passa bakåt"],
+        "correct": 2
+      },
+      {
+        "q": "Vad kallas matchen mellan Arsenal och Tottenham ofta?",
+        "options": ["En final", "En träningsmatch", "En kvalmatch", "Ett derby"],
+        "correct": 3
+      },
+      {
+        "q": "Vilka färger kopplas till Arsenal i texten?",
+        "options": ["Rött och vitt", "Blått och gult", "Grönt och svart", "Vitt och lila"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudidé?",
+        "options": ["Att fotboll bara handlar om pengar", "Att Arsenal är mer än resultat: traditioner, minnen och gemenskap", "Att derbyn alltid blir bråk", "Att en tränare inte påverkar spelet"],
+        "correct": 1
+      }
+    ],
+    "word_count": 274
+  },
+  {
+    "id": "ak6-tema-012",
+    "title": "En matchdag på Emirates Stadium",
+    "text": "Det är lördag och Samira, hennes pappa och pappas vän Alex ska gå på match. Samira är tolv år och har följt Arsenal länge, men det är första gången hon får se laget på Emirates Stadium. Alex använder rullstol och har planerat resan noga, eftersom det kan vara trångt på stationer och runt arenan. De åker tidigt för att slippa stress.\n\nNär de kommer fram ser Samira hur arenan reser sig som en stor ring av glas och stål. Utanför säljs matchprogram, alltså ett häfte med fakta om lagen, spelarna och dagens startelva. Samira lär sig också ett nytt ord: \"tifo\". Det är när supportrar tillsammans visar flaggor och skyltar för att skapa en mäktig bild på läktaren.\n\nInne på arenan hittar de sina platser. Alex har en plats med bra sikt och Samira märker att personalen hjälper till utan att göra någon stor grej av det. Hon tycker det känns som att alla ska kunna vara med. När lagen går in på planen sjunger publiken och ljudet studsar mellan väggarna. Samira känner sig både nervös och glad.\n\nMatchen börjar med högt tempo. Arsenal försöker vinna tillbaka bollen snabbt när de tappar den. Det kallas \"press\". Motståndarna försöker i stället hålla bollen och lugna ner spelet. Samira ser att fotboll inte bara är att springa, utan också att tänka: när ska man passa, när ska man skjuta, och när är det bäst att backa hem?\n\nI halvtid pratar de om vad som hänt. Pappan säger att Arsenal ibland blir för ivriga och glömmer att hålla ihop laget. Alex håller med, men säger att det kan lösa sig om mittfältet hittar enklare passningar. Samira tittar ner på planen igen och försöker följa spelarnas rörelser.\n\nNär matchen är slut är Samira hes av allt sjungande. Resultatet är viktigt, men det hon minns mest är känslan av att dela en upplevelse med andra. På vägen hem säger hon att hon vill lära sig mer om taktik, inte bara om mål.",
+    "grade": 6,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Varför åker de tidigt till arenan?",
+        "options": ["För att hinna se en konsert", "För att slippa stress och trängsel", "För att spelarna ska få autografer", "För att matchen börjar tidigare än vanligt"],
+        "correct": 1
+      },
+      {
+        "q": "Vad är ett matchprogram enligt texten?",
+        "options": ["Ett häfte med fakta om lagen och dagens match", "En app som visar vädret", "En lista över alla arenor i London", "En film om tidigare säsonger"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder \"press\" i texten?",
+        "options": ["Att publiken buar", "Att domaren blåser ofta", "Att laget försöker vinna tillbaka bollen snabbt", "Att man skjuter hårt mot mål"],
+        "correct": 2
+      },
+      {
+        "q": "Vad tycker Samira är det viktigaste minnet från dagen?",
+        "options": ["Att hon fick en ny halsduk", "Att hon lärde sig alla spelarnas nummer", "Att hon såg flest mål någonsin", "Känslan av att dela upplevelsen med andra"],
+        "correct": 3
+      },
+      {
+        "q": "Hur beskrivs personalens hjälp till Alex?",
+        "options": ["De hjälper lugnt och utan att göra en stor sak av det", "De säger att det är för svårt att komma in", "De flyttar honom till en plats utan sikt", "De ignorerar honom helt"],
+        "correct": 0
+      },
+      {
+        "q": "Vad vill Samira göra efter matchen?",
+        "options": ["Byta favoritlag direkt", "Lära sig mer om taktik, inte bara mål", "Sluta titta på fotboll på tv", "Bara prata om domaren"],
+        "correct": 1
+      }
+    ],
+    "word_count": 327
+  },
+  {
+    "id": "ak6-tema-013",
+    "title": "Akademin: när unga spelare drömmer stort",
+    "text": "Många som gillar Arsenal känner till stjärnorna i A-laget, men bakom varje match finns också ett arbete som tar flera år. En viktig del är klubbens akademi. En akademi är som en lång utbildning för unga spelare. Där tränar man inte bara skott och passningar, utan även styrka, rörlighet och hur man samarbetar i ett lag.\n\nI Arsenals ungdomsverksamhet spelar barn och ungdomar i olika åldrar. De har egna tränare och matcher mot andra klubbar. Målet är inte bara att vinna, utan att utvecklas. Tränarna pratar ofta om \"spelförståelse\". Det betyder att man lär sig läsa spelet: se var medspelare finns, förstå när man ska slå en enkel passning och när man kan chansa.\n\nEn del tror att talang räcker, men i texten på klubbens anslagstavla står något som alla får höra: vila, mat och skola spelar också roll. Om man sover dåligt blir det svårare att koncentrera sig, och om man hoppar över maten orkar man inte springa lika mycket. Dessutom behöver unga spelare planera sin tid, eftersom läxor och prov inte försvinner bara för att man tränar.\n\nLevi, som är tretton, har provat på en provträning. Han berättar att det mest oväntade var hur mycket de pratade om beslut. I en övning fick de spela på små ytor, och tränaren stoppade spelet och frågade: \"Varför passade du där?\" Levi insåg att det inte finns ett enda rätt svar, men att man måste kunna förklara sitt val.\n\nAlla i akademin blir inte proffs. Många går vidare till andra lag eller väljer något helt annat. Men erfarenheten kan ändå vara värdefull. Man lär sig att hantera nervositet, att samarbeta med personer man inte känner från början och att öva även när det känns svårt.\n\nTexten handlar alltså om att Arsenal inte bara är ett lag man ser på tv. Det är också en plats där unga människor tränar, gör misstag och lär sig steg för steg. Drömmen om en fullsatt arena börjar ofta på en liten träningsplan.",
+    "grade": 6,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Vad är en akademi enligt texten?",
+        "options": ["En lång utbildning för unga spelare", "En butik som säljer tröjor", "Ett museum om klubbens historia", "En sorts finalturnering"],
+        "correct": 0
+      },
+      {
+        "q": "Vad menas med \"spelförståelse\" i texten?",
+        "options": ["Att kunna alla regler utantill", "Att kunna läsa spelet och göra kloka val", "Att springa snabbast i laget", "Att alltid skjuta så fort man får bollen"],
+        "correct": 1
+      },
+      {
+        "q": "Varför nämns vila, mat och skola?",
+        "options": ["För att tränarna vill att alla ska sluta träna", "För att det är viktigare än att röra sig", "För att det påverkar ork, koncentration och planering", "För att man måste bli kock för att bli proffs"],
+        "correct": 2
+      },
+      {
+        "q": "Vad blev Levi mest förvånad över på provträningen?",
+        "options": ["Att alla fick nya skor", "Att de aldrig passade bollen", "Att matcherna var utan domare", "Hur mycket de pratade om beslut och varför man gör val"],
+        "correct": 3
+      },
+      {
+        "q": "Vilket av följande är ett exempel på vad man kan lära sig även om man inte blir proffs?",
+        "options": ["Att hantera nervositet och samarbeta", "Att alltid vinna varje match", "Att slippa skolan helt", "Att aldrig göra misstag"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": ["Att Arsenal bara handlar om tv-matcher", "Att ungdomsträning handlar om utveckling steg för steg", "Att talang alltid räcker", "Att akademin bara tar emot vuxna"],
+        "correct": 1
+      }
+    ],
+    "word_count": 327
+  },
+  {
+    "id": "ak6-tema-014",
+    "title": "Arsenal och gemenskapen runt klubben",
+    "text": "När man säger \"Arsenal\" tänker många på matcher, mål och tabeller. Men runt en stor klubb finns också ett samhälle av människor. Vissa är supportrar som går på match, andra jobbar i kioskerna, och några tränar barn i lokala lag. Klubben blir som en mötesplats där många olika personer kan känna att de hör ihop.\n\nNoah och hans mormor Ingrid tittar ofta på Arsenal tillsammans. Ingrid är pensionär och gillar att analysera spelet. Noah är elva och gillar mest när det går snabbt. De brukar ibland vara oense, men de har en regel: man får kritisera spelet, men inte håna spelare som person. Ingrid säger att det är skillnad på att säga \"den passningen blev fel\" och att säga \"du är dålig\". Det låter enkelt, men Noah märker att många på internet blandar ihop det.\n\nI deras område finns en supporterförening som ordnar insamlingar. En gång samlade de pengar till nya målburar på en grusplan där barn tränar. En annan gång hjälpte de en familj som hade förlorat mycket i en brand. Ingen i gruppen tjänade pengar på det. De gjorde det för att de ville att fotboll skulle vara mer än bara en sport.\n\nNär Arsenal spelar stora matcher märks det i kvarteret. I butiken hör man folk prata om startelvan, och på bussen jämför man olika åsikter om tränarens val. Noah lär sig att två personer kan se samma situation men tolka den olika. En tyckte att laget borde anfalla mer, en annan tyckte att de borde försvara smartare. Ingrid säger att det är därför man kallar det \"taktik\": det finns flera vägar mot samma mål.\n\nSamtidigt kan starka känslor bli ett problem. När ett lag förlorar kan vissa bli arga och leta efter en syndabock. Ingrid påminner Noah om att ett lag alltid består av många beslut: spelare, tränare och ibland också tur eller otur.\n\nTexten visar att Arsenal för många är en del av vardagen. Det handlar om gemenskap, respekt och att kunna prata om sport utan att glömma att det är människor på planen.",
+    "grade": 6,
+    "category": "Värdegrund",
+    "questions": [
+      {
+        "q": "Vilken regel har Noah och Ingrid när de pratar om matcher?",
+        "options": ["Man får aldrig kritisera något", "Man får kritisera spelet men inte håna spelaren som person", "Man måste alltid hålla med varandra", "Man får bara prata om domaren"],
+        "correct": 1
+      },
+      {
+        "q": "Vad gjorde supporterföreningen för grusplanen?",
+        "options": ["De samlade pengar till nya målburar", "De byggde en ny arena", "De köpte biljetter till alla i stan", "De målade om bussarna röda"],
+        "correct": 0
+      },
+      {
+        "q": "Varför säger Ingrid att man kallar det \"taktik\"?",
+        "options": ["För att det bara finns en rätt plan", "För att spelet alltid är slump", "För att man alltid ska anfalla", "För att det finns flera vägar mot samma mål"],
+        "correct": 3
+      },
+      {
+        "q": "Vad lär sig Noah av att folk tycker olika om samma situation?",
+        "options": ["Att alla ser exakt samma sak", "Att det inte spelar någon roll vad man gör", "Att man kan tolka spelet på olika sätt", "Att man aldrig ska diskutera fotboll"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken risk nämns när känslorna blir starka efter en förlust?",
+        "options": ["Att man letar efter en syndabock", "Att alla slutar titta på sport", "Att reglerna i fotboll ändras", "Att bollarna blir för tunga"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": ["Att tabellen är viktigast", "Att man ska byta lag ofta", "Att Arsenal bara handlar om mål", "Att fotboll kan handla om gemenskap och respekt"],
+        "correct": 3
+      }
+    ],
+    "word_count": 339
+  },
+  {
+    "id": "ak6-tema-015",
+    "title": "Så kan ett Arsenal-anfall byggas upp",
+    "text": "Ibland ser det ut som att ett mål kommer plötsligt. Men ofta börjar ett anfall långt tidigare, med små beslut. I den här texten följer vi ett exempel på hur Arsenal kan bygga upp spelet. \"Bygga upp\" betyder att laget flyttar bollen framåt steg för steg, i stället för att slå en lång boll direkt.\n\nDet börjar hos målvakten, som rullar ut bollen till en försvarare. Försvararen tittar upp och ser att motståndarna står högt. Då gäller det att inte stressa. En mittfältare droppar ner, alltså rör sig närmare för att bli ett passningsalternativ. Det gör att laget får en extra spelare i uppspelsfasen, den del där man tar sig ur egen planhalva.\n\nNär mittfältaren får bollen kan hen välja ett säkert alternativ eller försöka spela förbi en motståndare. Om passningen går in i mitten kan Arsenal snabbt byta kant. \"Byta kant\" betyder att bollen flyttas från ena sidan till den andra för att hitta yta. Ofta springer en ytterback upp längs linjen, medan en yttermittfältare går in mer centralt. Det kan förvirra motståndarna: vem ska markera vem?\n\nMen det finns risker. Om Arsenal tappar bollen när många har gått fram kan motståndarna kontra. En kontring är ett snabbt anfall åt andra hållet. Därför pratar tränare om \"balans\". Det betyder att några spelare måste stanna kvar och vara redo att försvara.\n\nI vårt exempel kommer bollen ut på kanten. En spelare gör en löpning bakom backlinjen. Den som har bollen låtsas först skjuta, men passar i stället snett inåt. I straffområdet, alltså ytan nära målet, tar en anfallare emot och avslutar. Det blir mål, men det som gjorde målet möjligt var alla små rörelser före: att någon droppade ner, att laget bytte kant och att spelarna vågade ta beslut.\n\nTexten visar att fotboll är som ett pussel. Om varje bit hamnar rätt kan det se enkelt ut, men bakom ligger planering, samarbete och träning.",
+    "grade": 6,
+    "category": "Teknik",
+    "questions": [
+      {
+        "q": "Vad betyder \"bygga upp\" enligt texten?",
+        "options": ["Att flytta bollen framåt steg för steg", "Att alltid skjuta direkt", "Att bara spela med långbollar", "Att stå stilla och vänta"],
+        "correct": 0
+      },
+      {
+        "q": "Varför droppar en mittfältare ner i början av anfallet?",
+        "options": ["För att be domaren om timeout", "För att bli ett passningsalternativ och hjälpa i uppspelsfasen", "För att gömma sig bakom målvakten", "För att det är förbjudet att vara på mitten"],
+        "correct": 1
+      },
+      {
+        "q": "Vad innebär \"byta kant\" i texten?",
+        "options": ["Att byta tröjfärg", "Att byta ut alla spelare samtidigt", "Att flytta bollen från ena sidan till den andra", "Att byta arena i halvtid"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken risk nämns när många spelare går fram?",
+        "options": ["Att publiken går hem", "Att målet blir mindre", "Att domaren glömmer pipan", "Att motståndarna kan kontra snabbt"],
+        "correct": 3
+      },
+      {
+        "q": "Vad betyder \"balans\" i texten?",
+        "options": ["Att några spelare stannar kvar och är redo att försvara", "Att alla alltid springer mot mål", "Att man aldrig får passa bakåt", "Att man måste ha lika många målchanser"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudidé?",
+        "options": ["Att tur är det enda som spelar roll", "Att ett mål ofta kommer från flera små beslut och samarbete", "Att kontringar alltid är bättre än anfall", "Att fotboll inte går att planera"],
+        "correct": 1
+      }
+    ],
+    "word_count": 314
   }
 ]
