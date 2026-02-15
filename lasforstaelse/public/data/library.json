@@ -19981,8 +19981,7 @@
         "correct": 2
       }
     ]
-  }
-,
+  },
   {
     "id": "ak10-tema-001",
     "grade": 10,
@@ -20402,32 +20401,62 @@
     "questions": [
       {
         "q": "Vilken sömnfas kopplas i texten särskilt till livliga och berättande drömmar?",
-        "options": ["REM-sömn", "Djupsömn", "Vakenhetsfasen", "Insomningsfasen"],
+        "options": [
+          "REM-sömn",
+          "Djupsömn",
+          "Vakenhetsfasen",
+          "Insomningsfasen"
+        ],
         "correct": 0
       },
       {
         "q": "Varför är kroppen \"nästan förlamad\" under REM enligt texten?",
-        "options": ["För att spara energi till hjärnans arbete", "För att vi inte ska agera ut drömmen", "För att hjärtat ska slå långsammare", "För att temperaturen i kroppen ska stiga"],
+        "options": [
+          "För att spara energi till hjärnans arbete",
+          "För att vi inte ska agera ut drömmen",
+          "För att hjärtat ska slå långsammare",
+          "För att temperaturen i kroppen ska stiga"
+        ],
         "correct": 1
       },
       {
         "q": "Vad menas med att dagens upplevelser kan \"klippas om\" i drömmar?",
-        "options": ["Att drömmar upprepar dagen exakt som den var", "Att minnen raderas när vi sover", "Att detaljer blandas och hamnar i nya scener", "Att hjärnan slutar registrera känslor på natten"],
+        "options": [
+          "Att drömmar upprepar dagen exakt som den var",
+          "Att minnen raderas när vi sover",
+          "Att detaljer blandas och hamnar i nya scener",
+          "Att hjärnan slutar registrera känslor på natten"
+        ],
         "correct": 2
       },
       {
         "q": "Hur kan mardrömmar förstås utifrån hot-teorin som nämns?",
-        "options": ["Som bevis på att något kommer hända", "Som ett tecken på för lite djupsömn", "Som slumpmässiga bilder utan koppling", "Som mental träning för att hantera hot"],
+        "options": [
+          "Som bevis på att något kommer hända",
+          "Som ett tecken på för lite djupsömn",
+          "Som slumpmässiga bilder utan koppling",
+          "Som mental träning för att hantera hot"
+        ],
         "correct": 3
       },
       {
         "q": "Vad upptäcker Samira när hon sover mer regelbundet?",
-        "options": ["Att hon slutar drömma helt", "Att drömmarna blir tydligare och lättare att minnas", "Att hon alltid får samma dröm", "Att hon bara drömmer om skolan"],
+        "options": [
+          "Att hon slutar drömma helt",
+          "Att drömmarna blir tydligare och lättare att minnas",
+          "Att hon alltid får samma dröm",
+          "Att hon bara drömmer om skolan"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket är Samiras slutsats om drömmar i slutet av texten?",
-        "options": ["Att drömmar alltid har en gömd kod som måste lösas", "Att drömmar är meningslösa och bör ignoreras", "Att drömmar kan spegla vad hon bär på utan att vara spådomar", "Att drömmar uppstår bara när man är stressad"],
+        "options": [
+          "Att drömmar alltid har en gömd kod som måste lösas",
+          "Att drömmar är meningslösa och bör ignoreras",
+          "Att drömmar kan spegla vad hon bär på utan att vara spådomar",
+          "Att drömmar uppstår bara när man är stressad"
+        ],
         "correct": 2
       }
     ],
@@ -20442,32 +20471,62 @@
     "questions": [
       {
         "q": "Vad är Linus huvudsakliga dröm enligt texten?",
-        "options": ["Att starta ett eget spelbolag", "Att göra städer mer tillgängliga på flera sätt", "Att bli politiker på heltid direkt efter gymnasiet", "Att arbeta med ekonomi och budget i kommunen"],
+        "options": [
+          "Att starta ett eget spelbolag",
+          "Att göra städer mer tillgängliga på flera sätt",
+          "Att bli politiker på heltid direkt efter gymnasiet",
+          "Att arbeta med ekonomi och budget i kommunen"
+        ],
         "correct": 1
       },
       {
         "q": "Varför blir det tyst när kuratorn frågar vad yrket heter?",
-        "options": ["Linus vill inte berätta sin dröm för någon", "Linus är osäker på om kuratorn är intresserad", "Det finns ingen tydlig titel som passar drömmen", "Kuratorn avbryter samtalet mitt i meningen"],
+        "options": [
+          "Linus vill inte berätta sin dröm för någon",
+          "Linus är osäker på om kuratorn är intresserad",
+          "Det finns ingen tydlig titel som passar drömmen",
+          "Kuratorn avbryter samtalet mitt i meningen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilket exempel använder Linus för att visa att ljudmiljön kan vara ett problem?",
-        "options": ["En skolmatsal där ljudet studsar så att en kompis måste äta utanför", "En park där fåglarna låter för mycket på morgonen", "En fotbollsmatch med hög musik mellan perioderna", "En tv-serie där bakgrundsljudet är för svagt"],
+        "options": [
+          "En skolmatsal där ljudet studsar så att en kompis måste äta utanför",
+          "En park där fåglarna låter för mycket på morgonen",
+          "En fotbollsmatch med hög musik mellan perioderna",
+          "En tv-serie där bakgrundsljudet är för svagt"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder det att Linus \"kartlägger sin dröm som om den vore ett projekt\"?",
-        "options": ["Att hen slutar tänka på känslor och bara tänker på pengar", "Att hen skriver ner problem och möjliga verktyg för att nå målet", "Att hen bestämmer en exakt titel och en tidsplan på en dag", "Att hen väljer gymnasium genom att följa kompisarnas val"],
+        "options": [
+          "Att hen slutar tänka på känslor och bara tänker på pengar",
+          "Att hen skriver ner problem och möjliga verktyg för att nå målet",
+          "Att hen bestämmer en exakt titel och en tidsplan på en dag",
+          "Att hen väljer gymnasium genom att följa kompisarnas val"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken roll spelar morfars berättelse i texten?",
-        "options": ["Den gör att Linus helt byter dröm och mål", "Den visar att drömmen handlar om vardaglig rättvisa och energi", "Den bevisar att centrum är för dyrt för äldre", "Den får Linus att sluta engagera sig i kommunen"],
+        "options": [
+          "Den gör att Linus helt byter dröm och mål",
+          "Den visar att drömmen handlar om vardaglig rättvisa och energi",
+          "Den bevisar att centrum är för dyrt för äldre",
+          "Den får Linus att sluta engagera sig i kommunen"
+        ],
         "correct": 1
       },
       {
         "q": "Hur resonerar Linus kring gymnasievalet till slut?",
-        "options": ["Hen väntar med att välja tills en perfekt framtidsbild finns", "Hen väljer det program som ger mest fritid", "Hen väljer utifrån nästa steg och möjlighet att kombinera intressen", "Hen låter någon annan bestämma för att minska stressen"],
+        "options": [
+          "Hen väntar med att välja tills en perfekt framtidsbild finns",
+          "Hen väljer det program som ger mest fritid",
+          "Hen väljer utifrån nästa steg och möjlighet att kombinera intressen",
+          "Hen låter någon annan bestämma för att minska stressen"
+        ],
         "correct": 2
       }
     ],
@@ -20482,32 +20541,62 @@
     "questions": [
       {
         "q": "Vad menas med klardrömmande enligt texten?",
-        "options": ["Att alltid drömma i färg och minnas allt", "Att vakna exakt samma tid varje natt", "Att kunna somna på kommando", "Att bli medveten i drömmen om att man drömmer"],
+        "options": [
+          "Att alltid drömma i färg och minnas allt",
+          "Att vakna exakt samma tid varje natt",
+          "Att kunna somna på kommando",
+          "Att bli medveten i drömmen om att man drömmer"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken förändring gör Noah i mardrömmen när han blir medveten?",
-        "options": ["Han stannar, andas och ropar i stället för att bara jaga", "Han försöker springa ännu snabbare än tidigare", "Han låtsas att folkmassan inte finns", "Han vaknar direkt så fort drömmen börjar"],
+        "options": [
+          "Han stannar, andas och ropar i stället för att bara jaga",
+          "Han försöker springa ännu snabbare än tidigare",
+          "Han låtsas att folkmassan inte finns",
+          "Han vaknar direkt så fort drömmen börjar"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket begrepp kopplas i texten till att kunna tänka på sitt eget tänkande?",
-        "options": ["Empati", "Metakognition", "Kondition", "Intuition"],
+        "options": [
+          "Empati",
+          "Metakognition",
+          "Kondition",
+          "Intuition"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är ett exempel på en \"verklighetskontroll\" som nämns?",
-        "options": ["Att äta något sött innan man lägger sig", "Att spela lugn musik hela natten", "Att titta på en klocka två gånger och jämföra", "Att skriva ner drömmar mitt på dagen"],
+        "options": [
+          "Att äta något sött innan man lägger sig",
+          "Att spela lugn musik hela natten",
+          "Att titta på en klocka två gånger och jämföra",
+          "Att skriva ner drömmar mitt på dagen"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken nackdel märker Noah när han blir för fokuserad på att kontrollera drömmar?",
-        "options": ["Han får svårare att minnas sina klasskompisars namn", "Han missar frukosten varje morgon", "Han börjar prata i sömnen varje natt", "Han vaknar ofta och sover sämre, vilket gör honom trött"],
+        "options": [
+          "Han får svårare att minnas sina klasskompisars namn",
+          "Han missar frukosten varje morgon",
+          "Han börjar prata i sömnen varje natt",
+          "Han vaknar ofta och sover sämre, vilket gör honom trött"
+        ],
         "correct": 3
       },
       {
         "q": "Vad blir Noahs viktigaste insikt i slutet av texten?",
-        "options": ["Att det viktigaste är att byta drömscen så snabbt som möjligt", "Att han kan påverka sin reaktion på rädslan även i drömmen", "Att mardrömmar alltid betyder att något kommer hända", "Att klardrömmande fungerar bäst om man sover så lite som möjligt"],
+        "options": [
+          "Att det viktigaste är att byta drömscen så snabbt som möjligt",
+          "Att han kan påverka sin reaktion på rädslan även i drömmen",
+          "Att mardrömmar alltid betyder att något kommer hända",
+          "Att klardrömmande fungerar bäst om man sover så lite som möjligt"
+        ],
         "correct": 1
       }
     ],
@@ -20522,32 +20611,62 @@
     "questions": [
       {
         "q": "Vilken huvudidé lyfter texten om drömmars betydelse i samhället?",
-        "options": ["Att drömmar alltid är sanna förutsägelser", "Att drömmar kan kopplas till makt, tolkning och beslut", "Att drömmar bara uppstår i djupsömn", "Att drömmar är samma i alla kulturer"],
+        "options": [
+          "Att drömmar alltid är sanna förutsägelser",
+          "Att drömmar kan kopplas till makt, tolkning och beslut",
+          "Att drömmar bara uppstår i djupsömn",
+          "Att drömmar är samma i alla kulturer"
+        ],
         "correct": 1
       },
       {
         "q": "Vad var ett syfte med drömtempel i antikens Grekland enligt texten?",
-        "options": ["Att få drömmar som kunde tolkas som läkande eller vägledande", "Att träna soldater i att hålla sig vakna", "Att förvara skrifter om stjärnornas rörelser", "Att ordna offentliga debatter om lagar"],
+        "options": [
+          "Att få drömmar som kunde tolkas som läkande eller vägledande",
+          "Att träna soldater i att hålla sig vakna",
+          "Att förvara skrifter om stjärnornas rörelser",
+          "Att ordna offentliga debatter om lagar"
+        ],
         "correct": 0
       },
       {
         "q": "Varför beskrivs drömmar i sagor som ofta tvetydiga?",
-        "options": ["För att de alltid handlar om väder och årstider", "För att de saknar känslor och detaljer", "För att de ger symboler som kräver tolkning", "För att de skrevs utan att någon sov"],
+        "options": [
+          "För att de alltid handlar om väder och årstider",
+          "För att de saknar känslor och detaljer",
+          "För att de ger symboler som kräver tolkning",
+          "För att de skrevs utan att någon sov"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken risk nämns med drömlexikon som ger fasta betydelser?",
-        "options": ["Att de gör det omöjligt att minnas drömmar", "Att de kan förenkla något som är personligt och varierar", "Att de alltid leder till samma beslut i politiken", "Att de får människor att sluta drömma helt"],
+        "options": [
+          "Att de gör det omöjligt att minnas drömmar",
+          "Att de kan förenkla något som är personligt och varierar",
+          "Att de alltid leder till samma beslut i politiken",
+          "Att de får människor att sluta drömma helt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad undersöker klassens övning med två olika tolkningar av samma dröm?",
-        "options": ["Hur man kan bevisa vilken tolkning som är vetenskapligt sannast", "Hur man kan träna på att minnas fler detaljer", "Vad som händer om en tolkning får monopol och andra röster tystnar", "Hur man kan styra drömmar med musik"],
+        "options": [
+          "Hur man kan bevisa vilken tolkning som är vetenskapligt sannast",
+          "Hur man kan träna på att minnas fler detaljer",
+          "Vad som händer om en tolkning får monopol och andra röster tystnar",
+          "Hur man kan styra drömmar med musik"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats drar texten om drömmar i relation till sin tid?",
-        "options": ["Att drömmar kan spegla oro och även användas för att påverka människor", "Att drömmar inte påverkas av samhället alls", "Att drömmar blir svagare ju mer man läser historia", "Att drömmar alltid är identiska över generationer"],
+        "options": [
+          "Att drömmar kan spegla oro och även användas för att påverka människor",
+          "Att drömmar inte påverkas av samhället alls",
+          "Att drömmar blir svagare ju mer man läser historia",
+          "Att drömmar alltid är identiska över generationer"
+        ],
         "correct": 0
       }
     ],
@@ -20562,35 +20681,420 @@
     "questions": [
       {
         "q": "Vilken typ av mardrömmar har Elin oftast enligt texten?",
-        "options": ["Realistiska drömmar om prov och otrygga platser", "Äventyrsdrömmar där hon alltid vinner", "Drömmar som bara handlar om barndomen", "Drömmar utan känslor eller handling"],
+        "options": [
+          "Realistiska drömmar om prov och otrygga platser",
+          "Äventyrsdrömmar där hon alltid vinner",
+          "Drömmar som bara handlar om barndomen",
+          "Drömmar utan känslor eller handling"
+        ],
         "correct": 0
       },
       {
         "q": "Vad blir en negativ följd av att Elin börjar undvika att lägga sig?",
-        "options": ["Hon får mer tid att plugga och blir mindre stressad", "Sömnbristen gör att kroppen går på högvarv och drömmarna blir intensivare", "Hon slutar helt att drömma efter några dagar", "Hon blir hungrigare men mer utvilad"],
+        "options": [
+          "Hon får mer tid att plugga och blir mindre stressad",
+          "Sömnbristen gör att kroppen går på högvarv och drömmarna blir intensivare",
+          "Hon slutar helt att drömma efter några dagar",
+          "Hon blir hungrigare men mer utvilad"
+        ],
         "correct": 1
       },
       {
         "q": "Varför frågar sjuksköterskan om Elins kvällsvanor och situation hemma?",
-        "options": ["För att mardrömmar kan hänga ihop med stress, rutiner och trygghet", "För att kunna gissa vilken dröm som kommer nästa natt", "För att avgöra om Elin behöver byta skola", "För att se om Elin borde träna mer varje kväll"],
+        "options": [
+          "För att mardrömmar kan hänga ihop med stress, rutiner och trygghet",
+          "För att kunna gissa vilken dröm som kommer nästa natt",
+          "För att avgöra om Elin behöver byta skola",
+          "För att se om Elin borde träna mer varje kväll"
+        ],
         "correct": 0
       },
       {
         "q": "Vad innebär metoden där Elin skriver en alternativ fortsättning på mardrömmen?",
-        "options": ["Att hon försöker radera drömmen genom att inte tänka på den", "Att hon tränar hjärnan på nya spår genom en ny utgång i berättelsen", "Att hon lär sig att tolka symboler med ett drömlexikon", "Att hon dokumenterar drömmen för att bevisa att den var sann"],
+        "options": [
+          "Att hon försöker radera drömmen genom att inte tänka på den",
+          "Att hon tränar hjärnan på nya spår genom en ny utgång i berättelsen",
+          "Att hon lär sig att tolka symboler med ett drömlexikon",
+          "Att hon dokumenterar drömmen för att bevisa att den var sann"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken förändring gör Elin och pappan för att öka tryggheten i vardagen?",
-        "options": ["De bestämmer att aldrig prata om oro igen", "De flyttar om alla möbler i lägenheten", "De planerar gemensam middag och en söndagspromenad", "De slutar dricka vatten efter klockan sex"],
+        "options": [
+          "De bestämmer att aldrig prata om oro igen",
+          "De flyttar om alla möbler i lägenheten",
+          "De planerar gemensam middag och en söndagspromenad",
+          "De slutar dricka vatten efter klockan sex"
+        ],
         "correct": 2
       },
       {
         "q": "Vad menar texten med att drömmar kan vara ett \"alarm\"?",
-        "options": ["Att drömmar varnar för framtida olyckor med exakta detaljer", "Att drömmar visar hur kroppen och livet mår just nu", "Att drömmar styrs av ljud i rummet och inget annat", "Att drömmar alltid betyder att man är sjuk"],
+        "options": [
+          "Att drömmar varnar för framtida olyckor med exakta detaljer",
+          "Att drömmar visar hur kroppen och livet mår just nu",
+          "Att drömmar styrs av ljud i rummet och inget annat",
+          "Att drömmar alltid betyder att man är sjuk"
+        ],
         "correct": 1
       }
     ],
     "word_count": 492
+  },
+  {
+    "id": "ak4-bamse-001",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "värdegrund",
+    "title": "Dunderhonung och den försvunna cykelkorgen",
+    "text": "En solig morgon i Småköping ska Bamse, Lille Skutt och Skalman cykla till torget. Bamse har packat en korg med morötter och äpplen som de ska dela ut till barnen som hjälper till att städa parken. Men när de kommer ut från Bamses hus är cykelkorgen borta. Lille Skutt hoppar runt av oro och säger att någon säkert har stulit den. Skalman tar fram sin anteckningsbok och skriver: \"Vi letar lugnt och noggrant.\"\n\nDe frågar grannarna. En äldre granne säger att hon såg någon springa mot ån med en stor korg. Vid ån hittar de spår i leran, och Bamse ser att spåren går mot den gamla boden vid bryggan. Inne i boden sitter Vargen. Han ser ledsen ut och håller om korgen.\n\n\"Jag skulle bara låna den,\" mumlar han. \"Min lillasyster fyllde år, och jag hade inget att lägga presenten i.\" Bamse blir först arg, men andas djupt. Han säger att man måste fråga innan man lånar. Vargen nickar och föreslår att han kan hjälpa till att städa parken som tack. Tillsammans går de till torget, och cykelkorgen får komma till nytta igen.",
+    "questions": [
+      {
+        "q": "Vad var det som hade försvunnit från Bamses cykel?",
+        "options": [
+          "Cykelkorgen med frukt",
+          "Cykelnyckeln i låset",
+          "En hjälm som hängde på styret",
+          "En karta till torget"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad gör Skalman direkt när de märker att korgen är borta?",
+        "options": [
+          "Han springer till torget och letar",
+          "Han skriver ner att de ska leta lugnt",
+          "Han ber Bamse äta dunderhonung",
+          "Han ringer polisen från sin telefon"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Var hittar de spår som hjälper dem att förstå vart korgen tagit vägen?",
+        "options": [
+          "På trappan vid Bamses hus",
+          "I sanden på torget",
+          "I leran vid ån",
+          "I snön bakom skolan"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför hade Vargen tagit korgen enligt texten?",
+        "options": [
+          "För att sälja frukten på torget",
+          "För att gömma en skatt i boden",
+          "För att lura Lille Skutt",
+          "För att lägga en present till sin syster i den"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad vill Bamse att man ska göra innan man lånar något?",
+        "options": [
+          "Fråga om lov",
+          "Låna snabbt och lämna tillbaka senare",
+          "Byta mot något annat direkt",
+          "Skriva en lapp efteråt"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad blir lösningen i slutet av berättelsen?",
+        "options": [
+          "Vargen hjälper till att städa parken som tack",
+          "Korgen lämnas kvar i boden vid bryggan",
+          "Bamse cyklar hem och ger upp letandet",
+          "Skalman gömmer korgen för säkerhets skull"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 258
+  },
+  {
+    "id": "ak4-bamse-002",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "samhälle",
+    "title": "Skalmans plan för tysta biblioteket",
+    "text": "I Småköping ska biblioteket ordna en \"tyst timme\" för alla som vill läsa i lugn och ro. Bamse tycker om att bläddra i serier, Lille Skutt lånar böcker om mod, och Skalman vill läsa om stjärnor. När de kommer dit märker de att det ändå är stökigt. Några barn springer mellan hyllorna och pratar högt. Bibliotekarien ser trött ut och försöker säga till, men ingen lyssnar.\n\nDå får Skalman en idé. Han föreslår att de gör en tydlig läshörna med mjuka kuddar och en skylt där det står \"Här viskar vi\". Bamse hjälper till att bära kuddar och små bord. Lille Skutt, som är snabb, springer och hämtar färgpennor och papper så barnen kan rita tysta \"pratbubblor\" som dekoration.\n\nNär allt är klart samlar Bamse barnen och säger vänligt: \"Alla får ha kul, men här inne behöver vissa lugn för att kunna tänka.\" Barnen provar att viska i stället. Bibliotekarien blir glad och tackar.\n\nEfter en stund märker Lille Skutt att även de som först sprang runt nu sitter och läser. En av dem säger: \"Det blev faktiskt mysigare så här.\" Skalman nickar och säger att bra regler fungerar bäst när alla förstår varför de finns.",
+    "questions": [
+      {
+        "q": "Vad skulle biblioteket ordna den dagen?",
+        "options": [
+          "En tävling i högläsning",
+          "En tyst timme för lugn läsning",
+          "Ett bokloppis på torget",
+          "En filmvisning i stora salen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är problemet när Bamse och vännerna kommer till biblioteket?",
+        "options": [
+          "Det är stängt för renovering",
+          "Alla böcker är utlånade",
+          "Det är stökigt och högljutt",
+          "Lamporna fungerar inte"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör Lille Skutt för att hjälpa till enligt texten?",
+        "options": [
+          "Han hämtar färgpennor och papper",
+          "Han låser dörren så ingen kan springa",
+          "Han läser högt för alla barnen",
+          "Han flyttar böckerna till nya hyllor"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilket budskap säger Bamse till barnen?",
+        "options": [
+          "Att bara vuxna får vara i biblioteket",
+          "Att man måste vara helt tyst överallt",
+          "Att man ska låna minst tre böcker",
+          "Att vissa behöver lugn för att kunna tänka"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad händer med barnen som först sprang runt?",
+        "options": [
+          "De går hem arga",
+          "De blir tillsagda och gråter",
+          "De börjar också sitta och läsa",
+          "De gömmer sig bakom hyllorna"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad menar Skalman när han säger att regler fungerar bäst när man förstår varför de finns?",
+        "options": [
+          "Att regler ska vara hemliga",
+          "Att man lättare följer regler när de känns rimliga",
+          "Att regler bara gäller på bibliotek",
+          "Att regler alltid ska vara långa och svåra"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 271
+  },
+  {
+    "id": "ak4-bamse-003",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "värdegrund",
+    "title": "Bamse och den nya vännen Kim",
+    "text": "En eftermiddag ser Bamse en ny person vid lekplatsen. Personen heter Kim och har en rullstol med röda reflexer. Några barn tittar nyfiket, men de vet inte riktigt hur de ska fråga om Kim vill vara med. Lille Skutt blir nervös och viskar att han inte vill säga fel. Skalman säger att det viktigaste är att vara vänlig och fråga som vanligt.\n\nBamse går fram och säger: \"Hej! Vi spelar skattjakt. Vill du vara med?\" Kim ler och svarar att hen gärna vill, men att banan måste fungera för rullstol. Skattjakten brukar gå genom en smal stig i skogen. Bamse tänker efter och föreslår att de gör om banan: en del kan gå på grusvägen och en del kan leta ledtrådar nära dammen där det är plant.\n\nDe delar upp ledtrådarna så att alla får göra något viktigt. Kim får en karta och ansvarar för att hålla koll på tiden. Lille Skutt springer och hämtar nästa ledtråd, och Skalman löser en gåta om vilka spår som är från en and. När de hittar \"skatten\", en låda med frukt och saft, säger Kim att det var första gången någon ändrade leken så att hen kunde delta.\n\nBamse svarar: \"Det blir roligare när fler kan vara med.\" Alla nickar, och lekplatsen känns plötsligt större.",
+    "questions": [
+      {
+        "q": "Var träffar Bamse Kim första gången i texten?",
+        "options": [
+          "Vid lekplatsen",
+          "I bibliotekets läshörna",
+          "På bryggan vid ån",
+          "I skolans matsal"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför vill Kim att de ska ändra skattjakten?",
+        "options": [
+          "För att det regnar och blir halt",
+          "För att banan måste fungera för rullstol",
+          "För att Kim inte gillar gåtor",
+          "För att de inte har någon karta"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur löser de problemet med den smala stigen?",
+        "options": [
+          "De ställer in leken helt",
+          "De väntar tills nästa dag",
+          "De gör om banan och använder grusväg och plan mark",
+          "De går bara i skogen utan ledtrådar"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken uppgift får Kim i den nya skattjakten?",
+        "options": [
+          "Att springa och hämta alla ledtrådar",
+          "Att gräva upp skatten med en spade",
+          "Att hitta spår från en and",
+          "Att hålla i kartan och ha koll på tiden"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad är \"skatten\" som de hittar?",
+        "options": [
+          "En låda med frukt och saft",
+          "En ny cykelkorg i metall",
+          "Ett paket med serietidningar",
+          "En burk dunderhonung"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att skattjakter alltid ska vara i skogen",
+          "Att det är bäst att leka bara med sina gamla vänner",
+          "Att man kan göra små ändringar så att fler kan vara med",
+          "Att gåtor är viktigare än att samarbeta"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 285
+  },
+  {
+    "id": "ak4-bamse-004",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "hälsa",
+    "title": "Dunderhonungens etikett",
+    "text": "Bamse ska hålla ett litet tal i skolan om sin dunderhonung. Läraren har bett honom berätta hur honungen fungerar och varför man måste vara försiktig. Bamse tar med en burk och ställer den på katedern. På burken finns en etikett, alltså en lapp som berättar vad som är i burken.\n\nNär klassen samlas frågar en elev: \"Varför äter du inte dunderhonung jämt, så är du alltid stark?\" Bamse ler och säger att styrka inte bara handlar om muskler. Han förklarar att honungen ger honom kraft att hjälpa andra, men att man ändå måste tänka innan man gör något. Om man blir stark och samtidigt arg kan man råka förstöra.\n\nSkalman räcker upp handen och berättar att man kan träna på \"självkontroll\", alltså att bromsa sig själv. Han ger ett exempel: om någon tränger sig i kön kan man säga ifrån lugnt i stället för att knuffas. Lille Skutt säger att han ibland blir rädd, men att mod kan vara att våga be om hjälp.\n\nEfter talet får eleverna skriva egna etiketter till låtsasburkar, som \"snällhetsmarmelad\" och \"tålamodste\". Bamse läser lapparna och känner sig stolt. På vägen hem tänker han att den viktigaste kraften i Småköping är att människor lär sig ta ansvar för sina val.",
+    "questions": [
+      {
+        "q": "Var håller Bamse sitt tal i texten?",
+        "options": [
+          "I skolan",
+          "På torget",
+          "I biblioteket",
+          "Vid bryggan"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"etikett\" som förklaras i texten?",
+        "options": [
+          "En lapp som berättar vad som är i burken",
+          "En regel om att alltid vara tyst",
+          "En sorts honung med extra smak",
+          "En bok där man skriver upp tider"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför äter inte Bamse dunderhonung hela tiden enligt honom?",
+        "options": [
+          "För att honungen är för dyr",
+          "För att styrka måste användas med eftertanke",
+          "För att han inte tycker om smaken",
+          "För att läraren förbjuder det"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar Skalman med \"självkontroll\" i texten?",
+        "options": [
+          "Att springa snabbare än alla andra",
+          "Att aldrig säga ifrån",
+          "Att bromsa sig själv och agera lugnt",
+          "Att alltid vinna i tävlingar"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilket exempel ger Skalman för att visa självkontroll?",
+        "options": [
+          "Att äta två burkar honung på en gång",
+          "Att gömma sig när någon ropar",
+          "Att skratta åt alla skämt",
+          "Att säga ifrån lugnt om någon tränger sig"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad gör eleverna efter Bamses tal?",
+        "options": [
+          "De skriver egna etiketter till låtsasburkar",
+          "De går hem utan att säga något",
+          "De målar en stor karta över Småköping",
+          "De tränar styrkelyft i gymnastiksalen"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 278
+  },
+  {
+    "id": "ak4-bamse-005",
+    "grade": 4,
+    "genre": "berättande",
+    "theme": "natur och miljö",
+    "title": "Skalmans mat- och viloklocka på utflykt",
+    "text": "Bamse, Lille Skutt och Skalman ska på utflykt till Kullarna, en plats med fina utsikter. De vill se hur långt man kan se över Småköping. Skalman packar sin matsäck noggrant: smörgåsar, termos och en liten burk med bär. Han tar också fram sin mat- och viloklocka. Klockan påminner honom om när det är dags att äta och vila, så att han orkar tänka klart.\n\nI början går det fort. Lille Skutt skuttar i förväg och ropar att han ser en stig som verkar kortare. Bamse vill följa efter, men Skalman tittar på kartan och säger att den korta stigen går brant ner mot en ravin. En ravin är en djup spricka i marken. De väljer i stället den längre vägen som är säkrare.\n\nEfter en stund ringer Skalmans klocka. Lille Skutt suckar och säger att de kan vila senare, men Bamse minns att de lätt blir irriterade när de är trötta. De sätter sig på en sten och äter. Då hör de plötsligt ett rop längre bort. En familj har gått vilse vid en skylt som blåst ner. Medan Skalman vilar hinner han tänka ut en plan: de sätter upp skylten igen och ritar en enkel karta i sanden.\n\nNär de till slut når utsikten säger Lille Skutt: \"Tur att vi tog pauser. Annars hade vi kanske missat dem.\"",
+    "questions": [
+      {
+        "q": "Vart ska Bamse, Lille Skutt och Skalman på utflykt?",
+        "options": [
+          "Till Kullarna",
+          "Till biblioteket",
+          "Till torget",
+          "Till den gamla boden"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är Skalmans mat- och viloklocka till för?",
+        "options": [
+          "Att visa vädret i Småköping",
+          "Att påminna honom om att äta och vila",
+          "Att räkna hur många steg de tar",
+          "Att spela musik när de går"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför väljer de inte den \"kortare\" stigen som Lille Skutt hittar?",
+        "options": [
+          "Den leder brant mot en ravin",
+          "Den är stängd med ett lås",
+          "Den går genom en privat trädgård",
+          "Den är för smal för Bamses ryggsäck"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder ordet \"ravin\" som förklaras i texten?",
+        "options": [
+          "Ett högt torn av sten",
+          "En djup spricka i marken",
+          "En liten sjö med fisk",
+          "En bro över en väg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilket problem hjälper de en familj med under utflykten?",
+        "options": [
+          "Familjen har tappat sin matsäck",
+          "Familjen har glömt sin cykel",
+          "Familjen fryser och behöver filtar",
+          "Familjen har gått vilse när en skylt blåst ner"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken slutsats drar Lille Skutt i slutet?",
+        "options": [
+          "Att utsikten var tråkig",
+          "Att pauserna gjorde att de kunde hjälpa någon",
+          "Att kartor alltid är onödiga",
+          "Att den kortaste vägen alltid är bäst"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 286
   }
 ]
