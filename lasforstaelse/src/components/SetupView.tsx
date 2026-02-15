@@ -115,12 +115,10 @@ export const SetupView: React.FC<SetupViewProps> = ({
             ))}
           </div>
 
-          {/* Text count indicator */}
-          {textCounts[selectedGrade] !== undefined && (
+          {/* No-texts fallback (hidden count) */}
+          {textCounts[selectedGrade] !== undefined && textCounts[selectedGrade] === 0 && (
             <div className="text-center mt-4 text-sm text-slate-500 dark:text-slate-400">
-              {textCounts[selectedGrade] > 0
-                ? `${textCounts[selectedGrade]} texter tillgängliga`
-                : 'Inga texter ännu - kommer snart!'}
+              Inga texter ännu - kommer snart!
             </div>
           )}
         </div>
