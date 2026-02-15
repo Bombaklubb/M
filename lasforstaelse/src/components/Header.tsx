@@ -43,12 +43,6 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             <span className="font-bold text-slate-700 dark:text-slate-200 text-sm md:text-base">{user.totalPoints}</span>
           </div>
 
-          {/* Badges count / streak */}
-          <div className="flex items-center space-x-1 md:space-x-2 bg-orange-50 dark:bg-orange-900/30 px-3 md:px-4 py-2 rounded-full border border-orange-200 dark:border-orange-700">
-            <span className="text-lg md:text-xl">🔥</span>
-            <span className="font-bold text-slate-700 dark:text-slate-200 text-sm md:text-base">{user.badges.length}</span>
-          </div>
-
           {/* Profile button */}
           <button
             onClick={onProfileClick}
