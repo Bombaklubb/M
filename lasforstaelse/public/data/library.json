@@ -21446,5 +21446,355 @@
         "correct": 0
       }
     ]
+  },
+  {
+    "id": "ak8-tema-011",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "vetenskap och teknik",
+    "title": "Hur AI lär sig – mönster, data och beslut",
+    "text": "Artificiell intelligens, eller AI, har blivit en del av vardagen. Den finns i telefonens ansiktsigenkänning, i appar som föreslår musik och i verktyg som kan skriva text. Men hur fungerar det egentligen?\n\nI grunden handlar AI om mönsterigenkänning. Ett AI-system tränas genom att få se enorma mängder data. Om man vill att systemet ska kunna skilja på katter och hundar visar man det tusentals bilder av båda, märkta med rätt svar. Systemet letar efter mönster: katter har kanske mer spetsiga öron, hundar har längre nosar. Gradvis blir det bättre på att gissa rätt.\n\nDen här processen kallas maskininlärning. Systemet lär sig inte genom att förstå vad en katt är – det har ingen upplevelse eller medvetenhet. Det hittar statistiska samband i data. Ju mer data det får, desto fler mönster kan det hitta.\n\nMen AI gör också fel. Om träningsdatan är sned kan resultaten bli orättvisa. Om ett ansiktsigenkänningssystem mest tränats på ljushyade ansikten fungerar det sämre på mörkare hudtoner. Det kallas bias och är ett stort etiskt problem.\n\nEn annan fråga är transparens. Avancerade AI-system kan vara så komplexa att inte ens utvecklarna helt förstår varför systemet fattade ett visst beslut. Det blir problematiskt när AI används för att bedöma låneansökningar, sjukdomsdiagnoser eller brottsmisstankar.\n\nAI är ett kraftfullt verktyg, men det ersätter inte mänskligt omdöme. Att förstå hur tekniken fungerar – och var den brister – är en viktig del av att vara medborgare i en digital värld.",
+    "questions": [
+      {
+        "q": "Vad är grunden i hur AI fungerar enligt texten?",
+        "options": [
+          "AI tänker precis som en människa",
+          "AI bygger på mönsterigenkänning i stora mängder data",
+          "AI programmeras med alla svar från början",
+          "AI lär sig genom att läsa böcker"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med maskininlärning?",
+        "options": [
+          "Att en maskin reparerar sig själv",
+          "Att datorer kopplas ihop i nätverk",
+          "Att ett system lär sig hitta mönster genom att se stora mängder data",
+          "Att man programmerar varje svar manuellt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad innebär bias i AI-sammanhang?",
+        "options": [
+          "Att systemet arbetar för långsamt",
+          "Att träningsdatan är sned och ger orättvisa resultat",
+          "Att AI alltid gynnar den som äger programmet",
+          "Att datorn har virus"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför är transparens ett problem med avancerad AI?",
+        "options": [
+          "Systemet kan vara så komplext att inte ens utvecklarna förstår dess beslut",
+          "AI-system är alltid hemliga och säljs dyrt",
+          "Användare kan inte ladda ner programmen",
+          "Koden är skriven på ett ovanligt språk"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Inom vilka områden nämner texten att AI-beslut kan vara problematiska?",
+        "options": [
+          "Matlagning och trädgårdsskötsel",
+          "Låneansökningar, sjukdomsdiagnoser och brottsmisstankar",
+          "Sport och musik",
+          "Väderrapporter och trafikstockning"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens huvudsakliga budskap?",
+        "options": [
+          "AI bör förbjudas helt",
+          "AI är perfekt och bör användas för alla beslut",
+          "AI är kraftfullt men ersätter inte mänskligt omdöme",
+          "Bara experter behöver förstå AI"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-012",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "identitet och kultur",
+    "title": "Två språk, en röst",
+    "text": "Amina hade alltid pratat arabiska hemma och svenska i skolan. Det var inget hon tänkte på – det bara var så. Men i åttan började det skava.\n\nDet hade börjat med en presentation i svenskan. Amina berättade om sin familjs bakning, om kaak-kakorna som hennes farmor alltid bakade till fredagar. Hon använde det arabiska ordet utan att tänka sig för, och en kille i klassen fnissade. \"Vad sa du?\" Amina upprepade och kände hur kinderna blev varma.\n\nPå rasten sa kompisen Ella: \"Jag tyckte det lät fint. Hur stavas det?\" Amina visade, och Ella provade att säga ordet. Det lät fel men känslan var rätt.\n\nSenare den veckan hade de en uppgift om identitet i SO:n. Läraren frågade: \"Vad formar vem ni är?\" Amina skrev om sina två språk. Hon beskrev hur arabiskan hade ord för känslor som svenskan saknade, och tvärtom. Ordet \"lagom\" till exempel – det gick inte att översätta rakt av. Och det arabiska \"tarab\", känslan när musik griper tag i hela kroppen, hade ingen direkt motsvarighet i svenskan.\n\nNär hon läste upp texten blev det tyst. Sedan sa läraren: \"Du visar att språk inte bara är kommunikation. Det är också ett sätt att tänka.\" Amina kände något lossna i bröstet. Det var inte så att hon hade två halvspråk. Hon hade två hela världar.\n\nPå vägen hem ringde hon farmor och berättade om presentationen – på arabiska. Farmor skrattade och sa: \"Du har alltid haft orden. Nu har du hittat modet att använda dem.\"",
+    "questions": [
+      {
+        "q": "Vad handlade Aminas presentation i svenskan om?",
+        "options": [
+          "Om en bok hon läst",
+          "Om sin familjs bakning och kaak-kakor",
+          "Om en resa till Marocko",
+          "Om svenska matrecept"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför blev Amina generad under presentationen?",
+        "options": [
+          "Hon glömde vad hon skulle säga",
+          "En kille fnissade när hon använde ett arabiskt ord",
+          "Läraren avbröt henne",
+          "Hon tappade sina anteckningar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar texten med att ordet 'lagom' inte går att översätta rakt av?",
+        "options": [
+          "Att ordet inte finns i ordböcker",
+          "Att det inte finns en exakt motsvarighet på arabiska",
+          "Att Amina inte förstår vad lagom betyder",
+          "Att ordet uttalas olika i olika delar av Sverige"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad sa läraren efter att Amina läst sin text?",
+        "options": [
+          "Att hon borde välja ett av språken",
+          "Att språk inte bara är kommunikation utan också ett sätt att tänka",
+          "Att hon borde skriva om texten på arabiska",
+          "Att alla borde lära sig arabiska"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med att Amina inte hade 'två halvspråk' utan 'två hela världar'?",
+        "options": [
+          "Att hon bor i två olika länder",
+          "Att hennes språk begränsar henne",
+          "Att varje språk ger henne en hel, rik förståelse av tillvaron",
+          "Att hon måste välja ett språk att behålla"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad sa farmor till Amina i slutet?",
+        "options": [
+          "Att hon borde sluta prata arabiska i skolan",
+          "Att hon alltid haft orden men nu hittat modet att använda dem",
+          "Att hon borde flytta tillbaka",
+          "Att svenska är svårt att lära sig"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-013",
+    "grade": 8,
+    "genre": "förklarande",
+    "theme": "natur och ekosystem",
+    "title": "Varför behöver vi skogen?",
+    "text": "Skog täcker ungefär sjuttio procent av Sveriges yta. Den syns överallt – i horisonten på en bilresa, utanför skolans fönster, i parker och naturreservat. Men skogens betydelse går långt bortom det vi ser.\n\nTräd binder koldioxid. Genom fotosyntesen tar de upp koldioxid från luften och omvandlar den till syre och organiskt material. En vuxen gran kan binda hundratals kilo koldioxid under sin livstid. Det gör skogen till en av våra viktigaste kolsänkor – platser som lagrar kol och bromsar klimatförändringarna.\n\nSkogen är också hem åt tusentals arter. I en svensk granskog lever allt från hackspettar och ekorrar till svampar, lavar och insekter. Många av dessa arter är beroende av gammal skog med döda träd, så kallad naturskog, som inte har avverkats.\n\nMen skogen används också som resurs. Sverige är ett av världens största exportländer av papper och trävaror. Skogsindustrin sysselsätter tiotusentals människor. Konflikten mellan att bruka och bevara skogen är en av vår tids stora frågor.\n\nEn del forskare menar att vi behöver mer skyddad skog för att klara klimatmålen och bevara biologisk mångfald. Andra hävdar att hållbart skogsbruk – där man planterar nya träd och avverkar med hänsyn – kan kombinera produktion med naturvård.\n\nDet som är tydligt är att skogen spelar en avgörande roll. Den renar luften vi andas, lagrar vatten, minskar erosion och erbjuder platser för rekreation. Att förstå skogen är att förstå sambanden mellan människa och natur.",
+    "questions": [
+      {
+        "q": "Hur stor del av Sveriges yta täcks ungefär av skog?",
+        "options": [
+          "Trettio procent",
+          "Femtio procent",
+          "Sjuttio procent",
+          "Nittio procent"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är en kolsänka?",
+        "options": [
+          "En plats som släpper ut kol i luften",
+          "En plats som lagrar kol och bromsar klimatförändringarna",
+          "En fabrik som tillverkar kol",
+          "En sjö som innehåller mycket koldioxid"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menas med naturskog?",
+        "options": [
+          "Skog som planterats av människor",
+          "Skog som bara finns i nationalparker",
+          "Gammal skog som inte avverkats",
+          "Skog utan djur"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är konflikten som texten beskriver?",
+        "options": [
+          "Mellan skogsarbetare och djur",
+          "Mellan att bruka och bevara skogen",
+          "Mellan Sverige och andra länder",
+          "Mellan stad och landsbygd"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menar de som förespråkar hållbart skogsbruk?",
+        "options": [
+          "Att vi ska sluta använda trä helt",
+          "Att man kan kombinera produktion med naturvård",
+          "Att bara gammal skog ska avverkas",
+          "Att skogen ska ersättas av åkermark"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilka funktioner fyller skogen enligt textens avslutning?",
+        "options": [
+          "Bara att producera virke och papper",
+          "Rena luft, lagra vatten, minska erosion och erbjuda rekreation",
+          "Bara att vara hem åt djur",
+          "Bara att se fin ut i landskapet"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-014",
+    "grade": 8,
+    "genre": "argumenterande",
+    "theme": "digital vardag",
+    "title": "Är det okej att alltid vara nåbar?",
+    "text": "De flesta tonåringar har sin telefon inom armlängds avstånd hela dagen. Meddelanden, notiser och uppdateringar strömmar in konstant. Frågan är: vad gör den ständiga uppkopplingen med oss?\n\nFörespråkare menar att tillgängligheten har stora fördelar. Man kan snabbt nå familj och vänner, söka information och organisera sin vardag. I krissituationer kan en telefon vara livräddande. Dessutom ger sociala medier möjlighet att hålla kontakt med människor som bor långt bort.\n\nMen kritiker lyfter andra sidor. Forskning visar att ständig uppkoppling kan öka stress och göra det svårare att koncentrera sig. Hjärnan behöver pauser för att bearbeta intryck och vila. När vi hela tiden förväntas svara direkt skapas en känsla av att aldrig riktigt vara ledig.\n\nEtt begrepp som diskuteras är FOMO – fear of missing out. Det handlar om rädslan att missa något viktigt om man inte är online. Paradoxalt nog kan den rädslan göra att man missar det som händer just nu, i det riktiga livet.\n\nNågra skolor har infört mobilfria zoner eller tider utan telefon. Elever som prövat detta rapporterar blandade reaktioner: en del kände sig rastlösa i början men uppskattade sedan lugnet. Andra tyckte att det var onödigt och att de själva borde få bestämma.\n\nDet handlar inte om att välja mellan uppkoppling och avkoppling. Det handlar om att hitta en balans. Att själv kunna bestämma när man är nåbar – och när man inte är det – kan vara en form av frihet.",
+    "questions": [
+      {
+        "q": "Vad lyfter förespråkare som fördelar med ständig uppkoppling?",
+        "options": [
+          "Att man slipper träffa människor i verkligheten",
+          "Att man snabbt kan nå andra, söka information och organisera vardagen",
+          "Att man aldrig behöver tänka själv",
+          "Att man kan tjäna pengar genom att vara online"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar forskning om ständig uppkoppling enligt texten?",
+        "options": [
+          "Att det alltid är positivt för hälsan",
+          "Att det inte påverkar oss alls",
+          "Att det kan öka stress och göra det svårare att koncentrera sig",
+          "Att bara vuxna påverkas negativt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad betyder FOMO?",
+        "options": [
+          "Rädsla att missa något viktigt om man inte är online",
+          "En typ av telefon utan internet",
+          "Ett program som blockerar notiser",
+          "En studie om ungdomars sömnvanor"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför beskrivs FOMO som paradoxalt i texten?",
+        "options": [
+          "Rädslan att missa något online gör att man missar det som händer just nu",
+          "FOMO gör att man sover bättre",
+          "De som har FOMO använder telefonen mindre",
+          "FOMO drabbar bara personer utan mobiltelefon"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur reagerade elever på mobilfria zoner enligt texten?",
+        "options": [
+          "Alla tyckte det var en bra idé direkt",
+          "Ingen märkte någon skillnad",
+          "Blandade reaktioner – rastlöshet först men sedan uppskattning hos en del",
+          "Alla lämnade skolan i protest"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är textens slutsats?",
+        "options": [
+          "Att telefoner borde förbjudas helt",
+          "Att man aldrig ska stänga av telefonen",
+          "Att balans och eget val om nåbarhet kan vara en form av frihet",
+          "Att bara vuxna bör ha mobiltelefon"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak8-tema-015",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "filosofi och existens",
+    "title": "Tankeexperimentet",
+    "text": "\"Om ett träd faller i skogen och ingen hör det – låter det då?\" Frågan stod på tavlan när Kasper kom in i klassrummet. Filosofilektionen hade börjat.\n\nLäraren Birgitta bad dem fundera i tystnad en minut. Kasper tänkte att svaret var självklart: ja, förstås låter det. Ljudvågor uppstår oavsett om någon lyssnar. Men sedan tvekade han. Är ljud samma sak som ljudvågor, eller behövs ett öra som uppfattar dem?\n\nElsa räckte upp handen och sa att det beror på vad man menar med ljud. Om ljud är vibrationer i luften – ja, det låter. Om ljud kräver någon som hör – nej. Birgitta nickade och sa att det var poängen: ibland handlar filosofi inte om att hitta rätt svar, utan om att ställa bättre frågor.\n\nSedan gav hon ett annat tankeexperiment: \"Tänk er att ni vaknar imorgon och allt ser likadant ut, men alla andra människor har bytts ut mot identiska kopior som beter sig exakt likadant. Skulle ni märka det?\" Klassen blev tyst.\n\nKasper kände en märklig känsla i magen. Hur vet man egentligen att andra människor har ett inre liv? Man kan inte kliva in i någon annans medvetande. Man måste lita på att deras beteende speglar verkliga känslor.\n\nEfter lektionen gick Kasper bredvid Elsa i korridoren. \"Tror du att jag har ett medvetande?\" frågade han och log snett. Elsa skrattade. \"Jag väljer att tro det. Annars blir tillvaron ganska ensam.\"\n\nPå kvällen satt Kasper länge med en tom sida i skrivhäftet. Han försökte formulera en egen filosofisk fråga. Till slut skrev han: \"Om alla minnen från igår försvann – skulle du fortfarande vara du?\"",
+    "questions": [
+      {
+        "q": "Vad var frågan som stod på tavlan?",
+        "options": [
+          "Vad är meningen med livet?",
+          "Om ett träd faller i skogen och ingen hör det, låter det då?",
+          "Finns det liv på andra planeter?",
+          "Varför finns det ont i världen?"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menade Elsa med sitt svar om trädet?",
+        "options": [
+          "Att träd aldrig faller i skogen",
+          "Att frågan har två möjliga svar beroende på vad man menar med ljud",
+          "Att bara forskare kan svara",
+          "Att ljudvågor inte finns"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad sa Birgitta att filosofi ibland handlar om?",
+        "options": [
+          "Att memorera fakta",
+          "Att alltid hitta ett rätt svar snabbt",
+          "Att ställa bättre frågor snarare än att hitta rätt svar",
+          "Att skriva långa uppsatser"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad handlade det andra tankeexperimentet om?",
+        "options": [
+          "Om tidsresor bakåt i tiden",
+          "Om alla bytts ut mot identiska kopior som beter sig likadant",
+          "Om man kan leva utan sömn",
+          "Om djur kan tänka"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad menade Elsa med att hon 'väljer att tro' att Kasper har ett medvetande?",
+        "options": [
+          "Att hon inte gillar Kasper",
+          "Att man inte kan bevisa det men att alternativet vore ensamt",
+          "Att hon har läst det i en bok",
+          "Att Kasper inte verkar ha ett medvetande"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken filosofisk fråga formulerade Kasper på kvällen?",
+        "options": [
+          "Varför finns universum?",
+          "Kan man resa i tiden?",
+          "Om alla minnen försvann, skulle du fortfarande vara du?",
+          "Vad händer efter döden?"
+        ],
+        "correct": 2
+      }
+    ]
   }
 ]
