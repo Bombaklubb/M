@@ -21796,5 +21796,385 @@
         "correct": 2
       }
     ]
+  },
+  {
+    "id": "ak1-tema-011",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "djur",
+    "title": "Fågeln på fönsterbrädan",
+    "text": "En morgon sitter det en liten fågel på fönsterbrädan. Wilma ser den när hon äter frukost. Fågeln är blå och grå. Den tittar in genom rutan med huvudet på sned. \"Mamma, titta!\" viskar Wilma. \"Den är nog hungrig\", säger mamma. De lägger lite bröd på brädan. Fågeln pickar försiktigt. Sedan flyger den iväg. Nästa dag kommer fågeln tillbaka. Och dagen efter det också. Wilma ger den ett namn: Blåis. Varje morgon tittar Wilma ut. Och varje morgon sitter Blåis där och väntar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter fågeln?",
+        "options": [
+          "I ett träd",
+          "På fönsterbrädan",
+          "På taket",
+          "I en bur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har fågeln?",
+        "options": [
+          "Röd och gul",
+          "Svart och vit",
+          "Blå och grå",
+          "Grön och brun"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad lägger de på brädan?",
+        "options": [
+          "Frön",
+          "Lite bröd",
+          "Ris",
+          "Godis"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallar Wilma fågeln?",
+        "options": [
+          "Pipen",
+          "Gråis",
+          "Kvansen",
+          "Blåis"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför viskar Wilma till mamma?",
+        "options": [
+          "Hon vill inte väcka pappa",
+          "Hon vill inte skrämma fågeln",
+          "Hon har ont i halsen",
+          "Hon pratar alltid tyst"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kommer fågeln tillbaka varje dag?",
+        "options": [
+          "Den har inget annat ställe att bo",
+          "Den gillar att titta på Wilma",
+          "Den vet att hon brukar ge mat",
+          "Den är rädd för andra fåglar"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-012",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "familj",
+    "title": "Storasyster hjälper till",
+    "text": "Malte är fem år. Hans storasyster Saga är sju. Idag ska de baka bullar med pappa. Pappa tar fram mjöl, socker och smör. Saga får mäta mjölet. Malte vill också hjälpa till. \"Du kan röra i degen\", säger pappa. Malte rör så hårt att mjöl flyger upp i luften. Saga skrattar. \"Sakta, sakta!\" säger hon. Hon lägger sin hand över Maltes och visar hur man rör försiktigt. Tillsammans gör de runda bullar. Malte gör en extra stor. \"Den är till dig, Saga\", säger han. Saga ler. \"Tack, lillebror.\" Bullarna doftar gott i ugnen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ska de baka?",
+        "options": [
+          "En tårta",
+          "Bröd",
+          "Bullar",
+          "Kakor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem får mäta mjölet?",
+        "options": [
+          "Malte",
+          "Pappa",
+          "Mamma",
+          "Saga"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när Malte rör i degen?",
+        "options": [
+          "Degen ramlar på golvet",
+          "Mjöl flyger upp i luften",
+          "Bunken går sönder",
+          "Malte börjar gråta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem är den stora bullen till?",
+        "options": [
+          "Till pappa",
+          "Till mamma",
+          "Till Malte själv",
+          "Till Saga"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lägger Saga sin hand över Maltes?",
+        "options": [
+          "Hon vill ta hans plats",
+          "Hon vill visa hur man rör försiktigt",
+          "Hon är arg på honom",
+          "Hon fryser om händerna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför gör Malte en extra stor bulle till Saga?",
+        "options": [
+          "Han vill visa att han tycker om henne",
+          "Pappa sa att han måste",
+          "Han har för mycket deg kvar",
+          "Han vill ha den själv sen"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-013",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "väder",
+    "title": "Vattenpölen",
+    "text": "Det har regnat hela natten. När Ines kommer ut på morgonen finns det en stor vattenpöl på gården. Den är nästan som en liten sjö. Ines har sina gula gummistövlar på sig. Hon hoppar rakt i pölen. Splash! Vattnet stänker högt. Kompisen Omar kommer förbi. \"Får jag hoppa också?\" frågar han. \"Klart du får!\" säger Ines. De hoppar och hoppar tills stövlarna är blöta på insidan. Sedan sitter de på trappen och häller ut vattnet. \"Titta\", säger Omar. \"Solen kommer fram.\" Pölen börjar bli mindre. \"Vi får hoppa snabbt imorgon\", säger Ines. \"Innan pölen försvinner.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför finns det en pöl på gården?",
+        "options": [
+          "Någon har hällt vatten",
+          "Det har regnat hela natten",
+          "En kran läcker",
+          "Snön har smält"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har Ines stövlar?",
+        "options": [
+          "Röda",
+          "Blåa",
+          "Gula",
+          "Gröna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem kommer förbi och vill hoppa?",
+        "options": [
+          "Ines mamma",
+          "En hund",
+          "Omar",
+          "Fröken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de på trappen?",
+        "options": [
+          "De äter mellanmål",
+          "De häller ut vatten ur stövlarna",
+          "De läser en bok",
+          "De väntar på bussen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir pölen mindre när solen kommer fram?",
+        "options": [
+          "Vattnet rinner ner i ett hål",
+          "Solen värmer och vattnet torkar",
+          "Barnen har hoppat bort allt vatten",
+          "Det börjar blåsa"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Ines att de får hoppa snabbt imorgon?",
+        "options": [
+          "Hon har bråttom till skolan",
+          "Pölen kan försvinna om solen torkar den",
+          "Omar kan bara komma tidigt",
+          "Stövlarna håller på att gå sönder"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-014",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "fantasi",
+    "title": "Lådan som blev en båt",
+    "text": "I garaget hittar Theo en stor pappkartong. Den är nästan lika stor som han själv. \"Den här kan bli vad som helst!\" säger han. Han drar ut den på gräset. Först blir den en båt. Theo kliver i och låtsas ro med en pinne. \"Land i sikte!\" ropar han. Kompisen Li kommer springande. \"Vad gör du?\" frågar hon. \"Jag seglar till en ö\", säger Theo. Li kliver också i. De låtsas att gräset är hav och att maskrosorna är fiskar. Sedan vänder de på lådan och den blir ett hus. De sitter under den och äter äpple. \"Det här är det bästa huset\", säger Li. Theo nickar. En vanlig kartong kan bli allt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var hittar Theo kartongen?",
+        "options": [
+          "I köket",
+          "I garaget",
+          "I skolan",
+          "I parken"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad blir kartongen först?",
+        "options": [
+          "En bil",
+          "En robot",
+          "En båt",
+          "Ett flygplan"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad låtsas de att maskrosorna är?",
+        "options": [
+          "Blommor",
+          "Fiskar",
+          "Stjärnor",
+          "Bollar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad äter de under kartongen?",
+        "options": [
+          "Smörgås",
+          "Banan",
+          "Äpple",
+          "Kex"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Theo att lådan kan bli vad som helst?",
+        "options": [
+          "Lådan är magisk",
+          "Han har en bra fantasi",
+          "Pappa har sagt det",
+          "Lådan kan prata"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker Li att det är det bästa huset?",
+        "options": [
+          "Det har ett riktigt tak",
+          "Det är stort och fint",
+          "Det är roligt att leka ihop med fantasi",
+          "Det regnar ute"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "ak1-tema-015",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "hjälpsamhet",
+    "title": "Mössan i trädet",
+    "text": "Elias tappar sin mössa på väg till skolan. Vinden tar den och den fastnar i ett träd. Grenen är för hög. Elias sträcker sig men når inte. \"Oj!\" säger han. Kompisen Mira kommer gående. \"Vad hände?\" frågar hon. \"Min mössa sitter fast\", säger Elias. Mira tittar upp. \"Om du lyfter mig kan jag nå den\", säger hon. Elias lyfter Mira försiktigt. Hon sträcker sig och får tag i mössan. \"Tack!\" säger Elias och sätter på sig den. \"Inget att tacka för\", säger Mira. \"Man hjälper varandra.\" De går till skolan tillsammans. Elias håller hårt i mössan hela vägen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad händer med Elias mössa?",
+        "options": [
+          "Den ramlar i en pöl",
+          "Den fastnar i ett träd",
+          "En hund tar den",
+          "Den blåser bort helt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför når inte Elias mössan?",
+        "options": [
+          "Han är rädd för höjder",
+          "Grenen är för hög",
+          "Trädet är för tjockt",
+          "Han har handskar på sig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur löser de problemet?",
+        "options": [
+          "De kastar en boll på mössan",
+          "De hämtar en stege",
+          "Elias lyfter Mira så hon når",
+          "De ropar på en vuxen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Mira när Elias tackar?",
+        "options": [
+          "\"Var så god!\"",
+          "\"Det var svårt!\"",
+          "\"Man hjälper varandra\"",
+          "\"Du är skyldig mig\""
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför håller Elias hårt i mössan hela vägen?",
+        "options": [
+          "Han vill inte att den ska blåsa bort igen",
+          "Mössan är ny och fin",
+          "Mira sa att han måste",
+          "Det är en del av en lek"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lär sig Elias i berättelsen?",
+        "options": [
+          "Att mössor alltid blåser bort",
+          "Att det är bra att ha en kompis som hjälper",
+          "Att man inte ska ha mössa",
+          "Att träd är farliga"
+        ],
+        "correct": 1
+      }
+    ]
   }
 ]
