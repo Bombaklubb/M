@@ -1,44 +1,58 @@
 import React, { useState, useEffect } from 'react';
-import { getTeacherStats } from '../services/userService';
 
 interface TeacherViewProps {
   onClose: () => void;
 }
 
-interface Stats {
-  topGrades: Array<{ grade: number; count: number }>;
+interface GradeCount {
+  grade: number;
+  count: number;
 }
 
 export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
-  const [stats, setStats] = useState<Stats | null>(null);
+  const [gradeCounts, setGradeCounts] = useState<GradeCount[]>([]);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
-    // Enkelt lösenord - kan ändras
     if (password === 'Korsängen') {
       setAuthenticated(true);
-      loadStats();
+      loadLibraryStats();
     } else {
       setError('Fel lösenord');
     }
   };
 
-  const loadStats = () => {
-    const data = getTeacherStats();
-    setStats({ topGrades: data.topGrades });
+  const loadLibraryStats = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('/data/library.json');
+      const texts = await response.json();
+
+      const counts: Record<number, number> = {};
+      texts.forEach((text: { grade: number }) => {
+        counts[text.grade] = (counts[text.grade] || 0) + 1;
+      });
+
+      const gradeArray: GradeCount[] = Object.entries(counts)
+        .map(([grade, count]) => ({ grade: parseInt(grade), count }))
+        .sort((a, b) => a.grade - b.grade);
+
+      setGradeCounts(gradeArray);
+    } catch (err) {
+      console.error('Kunde inte ladda biblioteket:', err);
+    }
+    setLoading(false);
   };
 
   useEffect(() => {
-    // Uppdatera varje minut om autentiserad
-    if (authenticated) {
-      const interval = setInterval(loadStats, 60000);
-      return () => clearInterval(interval);
+    if (authenticated && gradeCounts.length === 0) {
+      loadLibraryStats();
     }
   }, [authenticated]);
 
-  // Inloggningsvy
   if (!authenticated) {
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -85,60 +99,45 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
     );
   }
 
-  // Statistikvy
   return (
-    <div className="fixed inset-0 bg-sky-50 overflow-y-auto z-50">
-      <div className="max-w-2xl mx-auto p-4 md:p-6">
-        {/* Header */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-800">Lärarvy</h1>
-              <p className="text-slate-500">Antal texter per årskurs</p>
-            </div>
-            <button
-              onClick={onClose}
-              className="px-4 py-2 bg-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-300 transition"
-            >
-              Stäng
-            </button>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl">
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-800">Lärarvy</h1>
+            <p className="text-slate-500">Antal texter i biblioteket per årskurs</p>
           </div>
+          <button
+            onClick={onClose}
+            className="px-4 py-2 bg-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-300 transition"
+          >
+            Stäng
+          </button>
         </div>
 
-        {stats && (
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            {stats.topGrades.length > 0 ? (
-              <div className="space-y-3">
-                {stats.topGrades
-                  .sort((a, b) => a.grade - b.grade)
-                  .map((item) => (
-                    <div
-                      key={item.grade}
-                      className="flex items-center justify-between p-4 bg-slate-50 rounded-xl"
-                    >
-                      <div className="text-lg font-bold text-slate-800">
-                        {item.grade === 10 ? 'Gymnasiet' : `Årskurs ${item.grade}`}
-                      </div>
-                      <div className="text-2xl font-black text-purple-600">
-                        {item.count} <span className="text-sm font-normal text-slate-500">texter</span>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            ) : (
-              <p className="text-slate-500 text-center py-8">Inga texter har lästs ännu</p>
-            )}
-
-            <div className="mt-6 text-center">
-              <button
-                onClick={loadStats}
-                className="px-6 py-2 bg-purple-600 text-white rounded-xl font-bold hover:bg-purple-700 transition"
+        {loading ? (
+          <p className="text-center text-slate-500 py-8">Laddar...</p>
+        ) : (
+          <div className="flex flex-wrap gap-3 justify-center">
+            {gradeCounts.map((item) => (
+              <div
+                key={item.grade}
+                className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center min-w-[90px]"
               >
-                Uppdatera
-              </button>
-            </div>
+                <div className="text-sm font-medium text-purple-600 mb-1">
+                  {item.grade === 10 ? 'Gym' : `Åk ${item.grade}`}
+                </div>
+                <div className="text-2xl font-black text-purple-700">
+                  {item.count}
+                </div>
+              </div>
+            ))}
           </div>
         )}
+
+        <div className="mt-6 pt-4 border-t text-center text-slate-500">
+          Totalt: {gradeCounts.reduce((sum, g) => sum + g.count, 0)} texter
+        </div>
       </div>
     </div>
   );
