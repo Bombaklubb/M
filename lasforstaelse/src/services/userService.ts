@@ -1,4 +1,4 @@
-import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS } from '../types';
+import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS, QuestionResult } from '../types';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
@@ -229,7 +229,9 @@ export function recordResult(
   score: number,
   totalQuestions: number,
   genre?: string,
-  theme?: string
+  theme?: string,
+  questionResults?: QuestionResult[],
+  readingTimeSeconds?: number
 ): { updatedUser: User; pointsEarned: number; newBadges: Badge[] } {
   // Spara daglig statistik
   if (genre && theme) {
@@ -247,6 +249,8 @@ export function recordResult(
     pointsEarned,
     completedAt: new Date().toISOString(),
     genre,
+    questionResults,
+    readingTimeSeconds,
   };
 
   // Uppdatera användaren
