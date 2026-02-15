@@ -16,6 +16,8 @@ interface ResultViewProps {
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string }> = {
   literal: { label: 'På raderna', emoji: '🔍' },
   inferens: { label: 'Mellan raderna', emoji: '🧠' },
+  sammanfatta: { label: 'Sammanfatta', emoji: '📝' },
+  ord: { label: 'Ord & begrepp', emoji: '📖' },
 };
 
 export const ResultView: React.FC<ResultViewProps> = ({
@@ -23,7 +25,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   answers,
   pointsEarned,
   newBadges,
-  onRestart,
+  onRestart: _onRestart,
   onNextText,
   onNextTextLower,
   onNextTextHigher,
@@ -209,6 +211,10 @@ export const ResultView: React.FC<ResultViewProps> = ({
                         <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
                           result.question.type === 'literal'
                             ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300'
+                            : result.question.type === 'sammanfatta'
+                            ? 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300'
+                            : result.question.type === 'ord'
+                            ? 'bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300'
                             : 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300'
                         }`}>
                           {typeInfo.emoji} {typeInfo.label}

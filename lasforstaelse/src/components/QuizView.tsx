@@ -10,6 +10,8 @@ interface QuizViewProps {
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; category: string }> = {
   literal: { label: 'På raderna', emoji: '🔍', category: 'På raderna' },
   inferens: { label: 'Mellan raderna', emoji: '🧠', category: 'Mellan raderna' },
+  sammanfatta: { label: 'Sammanfatta', emoji: '📝', category: 'Sammanfatta' },
+  ord: { label: 'Ord & begrepp', emoji: '📖', category: 'Ord & begrepp' },
 };
 
 type TextSize = 'small' | 'medium' | 'large';
@@ -105,6 +107,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
                     }`}
                     title="Liten text"
+                    aria-label="Liten textstorlek"
+                    aria-pressed={textSize === 'small'}
                   >
                     A
                   </button>
@@ -116,6 +120,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
                     }`}
                     title="Medium text"
+                    aria-label="Medium textstorlek"
+                    aria-pressed={textSize === 'medium'}
                   >
                     A
                   </button>
@@ -127,6 +133,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
                     }`}
                     title="Stor text"
+                    aria-label="Stor textstorlek"
+                    aria-pressed={textSize === 'large'}
                   >
                     A
                   </button>
@@ -172,7 +180,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   {Object.keys(answers).length}/{totalQuestions} besvarade
                 </span>
               </div>
-              <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+              <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden" role="progressbar" aria-valuenow={currentQuestion + 1} aria-valuemin={1} aria-valuemax={totalQuestions} aria-label={`Fråga ${currentQuestion + 1} av ${totalQuestions}`}>
                 <div
                   className="h-full bg-gradient-to-r from-teal-500 to-indigo-600 transition-all duration-300"
                   style={{ width: `${progress}%` }}
@@ -193,6 +201,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
                         currentQ.type === 'literal'
                           ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300'
+                          : currentQ.type === 'sammanfatta'
+                          ? 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300'
+                          : currentQ.type === 'ord'
+                          ? 'bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300'
                           : 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300'
                       }`}>
                         {typeInfo.label}
@@ -272,7 +284,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-4">
               <h4 className="text-sm font-bold text-slate-700 dark:text-slate-200 mb-3">Översikt</h4>
               <div className="grid grid-cols-6 gap-2">
-                {questions.map((q, idx) => (
+                {questions.map((_q, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentQuestion(idx)}

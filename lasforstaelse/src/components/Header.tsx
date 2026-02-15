@@ -32,6 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             onClick={toggleDarkMode}
             className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
             title={darkMode ? 'Ljust läge' : 'Mörkt läge'}
+            aria-label={darkMode ? 'Byt till ljust läge' : 'Byt till mörkt läge'}
           >
             <span className="text-xl">{darkMode ? '☀️' : '🌙'}</span>
           </button>
@@ -52,6 +53,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           <button
             onClick={onProfileClick}
             className="flex items-center space-x-1 md:space-x-2 bg-indigo-50 dark:bg-indigo-900/30 px-3 md:px-4 py-2 rounded-full border border-indigo-200 dark:border-indigo-700 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+            aria-label={`Profil för ${user.name}`}
           >
             <span className="text-lg md:text-xl">{user.avatar || '👤'}</span>
             <span className="font-bold text-slate-700 dark:text-white text-sm md:text-base hidden sm:inline">{user.name}</span>

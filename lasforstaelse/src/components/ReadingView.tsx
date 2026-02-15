@@ -32,7 +32,7 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
             {genreEmoji} {genreLabel}
           </span>
           <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm dark:bg-slate-700 dark:text-slate-300">
-            {text.meta.wordCount} ord
+            {text.meta?.wordCount || text.text.split(/\s+/).length} ord
           </span>
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 dark:text-slate-100">
@@ -51,6 +51,8 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
               : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'
           }`}
           title="Liten text"
+          aria-label="Liten textstorlek"
+          aria-pressed={textSize === 'small'}
         >
           A
         </button>
@@ -62,6 +64,8 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
               : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'
           }`}
           title="Medium text"
+          aria-label="Medium textstorlek"
+          aria-pressed={textSize === 'medium'}
         >
           A
         </button>
@@ -73,6 +77,8 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
               : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'
           }`}
           title="Stor text"
+          aria-label="Stor textstorlek"
+          aria-pressed={textSize === 'large'}
         >
           A
         </button>

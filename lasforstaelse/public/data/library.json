@@ -4738,11 +4738,11 @@
         "q": "Vad betyder korrelation enligt texten?",
         "options": [
           "Att en sak orsakar en annan",
-          "Att två saker förändras tillsammans",
+          "Att data alltid är falskt",
           "Att en graf måste börja på noll",
-          "Att data alltid är falskt"
+          "Att två saker förändras tillsammans"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -4761,10 +4761,10 @@
         "options": [
           "Hypotes",
           "Medelvärde",
-          "Confounder/bakomliggande variabel",
-          "Placebo"
+          "Placebo",
+          "Confounder/bakomliggande variabel"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -4902,11 +4902,11 @@
         "q": "Vad menas med uppmärksamhetsekonomi enligt texten?",
         "options": [
           "Att uppmärksamhet mäts i betyg",
-          "Att plattformar tjänar på att användare stannar kvar och ser annonser",
+          "Att alla inlägg visas i tidsordning",
           "Att pengar inte längre behövs",
-          "Att alla inlägg visas i tidsordning"
+          "Att plattformar tjänar på att användare stannar kvar och ser annonser"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -4914,10 +4914,10 @@
         "options": [
           "Din längd och vikt",
           "Hur snabbt du skriver på tangentbordet",
-          "Vad du stannar vid, kommenterar, delar och ser klart",
-          "Vilka böcker du lånar"
+          "Vilka böcker du lånar",
+          "Vad du stannar vid, kommenterar, delar och ser klart"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
@@ -4995,11 +4995,11 @@
         "q": "Vilken tidsperiod är protokollen Elin tittar i från?",
         "options": [
           "1890-talet",
-          "1940-talet",
+          "2000-talet",
           "1970-talet",
-          "2000-talet"
+          "1940-talet"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -5065,12 +5065,12 @@
         "type": "literal",
         "q": "Vad handlar Noras grupparbete om?",
         "options": [
-          "Hur sociala medier påverkar ungas stress",
+          "Fotosyntesens kemi",
           "Sveriges medeltid",
           "Hur man bygger en bro",
-          "Fotosyntesens kemi"
+          "Hur sociala medier påverkar ungas stress"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
@@ -11396,11 +11396,11 @@
         "q": "Vilken huvudpoäng driver texten om varför källkritik behövs i vardagen?",
         "options": [
           "Att information alltid är falsk tills motsatsen bevisats",
-          "Att information ofta är utvald och presenterad med ett syfte",
+          "Att bara experter kan förstå nyheter",
           "Att det är bäst att undvika digitala medier helt",
-          "Att bara experter kan förstå nyheter"
+          "Att information ofta är utvald och presenterad med ett syfte"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "q": "Varför kan en uppgift vara \"sann\" men ändå missvisande enligt texten?",
@@ -11476,11 +11476,11 @@
         "q": "Hur kopplas AI-användning till likvärdighet i texten?",
         "options": [
           "Genom att betyg kan sättas automatiskt",
-          "Genom att vissa elever kan få hjälp med struktur och språk så att innehållskunskap kan synas bättre",
+          "Genom att lärare slipper undervisa om skrivande",
           "Genom att alla får exakt samma AI-svar",
-          "Genom att lärare slipper undervisa om skrivande"
+          "Genom att vissa elever kan få hjälp med struktur och språk så att innehållskunskap kan synas bättre"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "q": "Vad menas med att AI kan fungera som en \"spegel\" för metakognition enligt texten?",
@@ -11556,11 +11556,11 @@
         "q": "Vilken underförstådd poäng gör texten om att \"transport också är en sorts vardagsgeografi\"?",
         "options": [
           "Att alla borde välja samma väg för effektivitet",
-          "Att sättet man rör sig på påverkar vilka platser som upplevs som tillgängliga och hur man navigerar i vardagen",
+          "Att geografi i skolan borde bara handla om trafik",
           "Att resor främst handlar om att memorera kartor",
-          "Att geografi i skolan borde bara handla om trafik"
+          "Att sättet man rör sig på påverkar vilka platser som upplevs som tillgängliga och hur man navigerar i vardagen"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "q": "Vilken tolkning ligger närmast textens beskrivning av bil, buss, cykel och gång på kvällen?",
@@ -11606,11 +11606,11 @@
         "q": "Vilken konflikt driver Leas svårigheter i början av berättelsen?",
         "options": [
           "Hon vill inte skriva om ämnet alls",
-          "Hon har för många möjliga riktningar och har svårt att välja vad som ska styra hennes text",
+          "Hon saknar helt material att arbeta med",
           "Hon har glömt datorn hemma",
-          "Hon saknar helt material att arbeta med"
+          "Hon har för många möjliga riktningar och har svårt att välja vad som ska styra hennes text"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "q": "Vad symboliserar mannen vid övergångsstället mest sannolikt i berättelsen?",
@@ -11686,11 +11686,11 @@
         "q": "Varför kan om-läsning av anteckningar ge en missvisande känsla av kunskap enligt texten?",
         "options": [
           "För att ord aldrig kan läras in genom läsning",
-          "För att igenkänning kan förväxlas med förmågan att återkalla och använda kunskapen",
+          "För att anteckningar alltid är fel",
           "För att självtest bara passar vissa ämnen",
-          "För att anteckningar alltid är fel"
+          "För att igenkänning kan förväxlas med förmågan att återkalla och använda kunskapen"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "q": "Hur tolkar texten prokrastinering i situationer där uppgiften känns oklar?",
@@ -11746,12 +11746,12 @@
       {
         "q": "Vilken tolkning ligger närmast textens syn på vad som avgör om en modell är \"bra\"?",
         "options": [
-          "Att den är användbar för ett visst syfte och att antagandena är tydliga",
+          "Att den är oberoende av historiska data",
           "Att den alltid kan ge ett enda exakt värde",
           "Att den beskriver verkligheten i alla detaljer",
-          "Att den är oberoende av historiska data"
+          "Att den är användbar för ett visst syfte och att antagandena är tydliga"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "q": "Texten antyder att dolda antaganden ofta uppstår när modeller används som rutin. Vilken konsekvens följer mest rimligt av detta?",
@@ -12239,9 +12239,10 @@
         "options": [
           "För att visa att rummet saknar tydlig struktur",
           "För att framhäva att det viktigaste arbetet sker i spontana samtal nära entrén.",
+          null,
           "För att markera en övergång där människor kan byta tempo innan de går in i mer fokuserade zoner."
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "q": "Vilken funktion får bokhyllorna i textens beskrivning, utöver att förvara saker?",
@@ -12301,11 +12302,12 @@
       {
         "q": "Vad fyller beskrivningen av pilarna på presentationen för funktion i berättelsen?",
         "options": [
-          "Den kontrasterar ett förenklat, linjärt narrativ mot den mer komplexa verkligheten i rummet.",
+          null,
           "Den antyder att förändringen redan är genomförd och bara behöver kommuniceras",
-          "Den visar att chefen har en detaljerad plan som redan är fullt förankrad."
+          "Den visar att chefen har en detaljerad plan som redan är fullt förankrad.",
+          "Den kontrasterar ett förenklat, linjärt narrativ mot den mer komplexa verkligheten i rummet."
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "q": "Vilken tolkning av Jonas beteende stöds bäst av textens detaljer?",
@@ -12357,10 +12359,11 @@
         "q": "Vilken övergripande poäng är mest central i texten?",
         "options": [
           "Olika studier blir bara jämförbara om de alltid använder exakt samma modell och variabler.",
-          "Samma numeriska resultat kan få olika innebörd beroende på inramning, antaganden och relevanta jämförelser.",
-          "Statistikens huvudsakliga problem är att den ofta innehåller felräkning"
+          null,
+          "Statistikens huvudsakliga problem är att den ofta innehåller felräkning",
+          "Samma numeriska resultat kan få olika innebörd beroende på inramning, antaganden och relevanta jämförelser."
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "q": "Varför menar texten att relativ och absolut förändring kan påverka beslut olika?",
