@@ -22378,5 +22378,415 @@
       }
     ],
     "word_count": 314
+  },
+  {
+    "id": "ak7-tema-016",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "psykisk hälsa",
+    "title": "Stress i skolan – när pressen blir för stor",
+    "text": "De flesta känner igen känslan: hjärtat slår lite snabbare inför ett prov, tankarna snurrar innan en redovisning. Det är kroppens sätt att förbereda sig, och i lagom dos kan stress till och med hjälpa oss prestera bättre. Men vad händer när stressen inte släpper?\n\nForskning visar att allt fler unga upplever stress som påverkar deras vardag. Det kan handla om prestationsångest, sömnproblem eller en känsla av att aldrig räcka till. Orsakerna är ofta flera: skolarbete, sociala medier, fritidsaktiviteter och förväntningar från både sig själv och andra.\n\nEn viktig skillnad är den mellan akut stress och långvarig stress. Akut stress är kortvarig och kan vara användbar, som när du fokuserar extra hårt under en match. Långvarig stress däremot, där kroppen aldrig får återhämta sig, kan leda till trötthet, koncentrationssvårigheter och till och med fysiska symtom som huvudvärk eller magont.\n\nVad kan man göra? Ett första steg är att bli medveten om sina egna signaler. Sover du sämre? Blir du lättirriterad? Undviker du saker du brukar tycka om? Det kan vara tecken på att stressen blivit för stor. Att prata med någon, vare sig det är en vän, förälder eller kurator, kan hjälpa.\n\nSkolan har också ett ansvar. Rimliga deadlines, tydlig information och möjlighet till stöd är faktorer som påverkar hur stressade elever blir. Samtidigt kan man själv träna på att prioritera: allt behöver inte vara perfekt, och ibland är \"tillräckligt bra\" faktiskt bra nog.\n\nDet är lätt att tro att man är ensam om att känna press. Men sanningen är att stress är vanligt, och att våga prata om det är ett första steg mot att hantera det. Att ta hand om sin psykiska hälsa är lika viktigt som att ta hand om sin kropp.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilka fysiska symtom på långvarig stress nämns i texten?",
+        "options": [
+          "Feber och hosta",
+          "Huvudvärk och magont",
+          "Blåmärken och sår",
+          "Yrsel och svimning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är skillnaden mellan akut och långvarig stress enligt texten?",
+        "options": [
+          "Akut stress varar längre än långvarig stress",
+          "Akut stress är kortvarig medan långvarig stress ger kroppen ingen återhämtning",
+          "Långvarig stress hjälper alltid en att prestera bättre",
+          "Det finns ingen skillnad mellan dem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka orsaker till stress bland unga nämns i texten?",
+        "options": [
+          "Endast skolarbete",
+          "Skolarbete, sociala medier, fritidsaktiviteter och förväntningar",
+          "Bara sociala medier",
+          "Enbart föräldrars krav"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skriver texten att stress i lagom dos kan vara positivt?",
+        "options": [
+          "För att stress alltid är dåligt för kroppen",
+          "För att det kan hjälpa oss fokusera och prestera bättre",
+          "För att det gör oss trötta",
+          "För att lärare uppskattar stressade elever"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att 'tillräckligt bra' ibland är bra nog?",
+        "options": [
+          "Att man aldrig ska anstränga sig",
+          "Att perfektion inte alltid är nödvändigt och kan skapa onödig press",
+          "Att skolan inte har några krav",
+          "Att man ska strunta i alla uppgifter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det viktigt att prata om stress enligt texten?",
+        "options": [
+          "För att andra ska tycka synd om en",
+          "För att det är ett första steg mot att hantera stressen",
+          "För att lärare ska ge högre betyg",
+          "För att man då slipper göra läxor"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 345,
+      "fingerprint": "claude-opus-ak7-016",
+      "generatedAt": "2026-02-15T00:00:00.000Z",
+      "model": "claude-opus-4-5"
+    }
+  },
+  {
+    "id": "ak7-tema-017",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "medier",
+    "title": "Nyhetsflödet – hur vet du vad som är viktigt?",
+    "text": "Varje dag produceras miljontals nyhetsartiklar, inlägg och videor världen över. I ditt flöde dyker det upp rubriker om allt från krig till kändisar, från klimat till nya spel. Men hur bestäms egentligen vad som hamnar framför dina ögon?\n\nNyhetsmedier väljer ut händelser baserat på nyhetsvärdering. Det handlar om faktorer som aktualitet (har det hänt nyligen?), närhet (berör det människor i vår omgivning?), konsekvens (påverkar det många?) och konflikt (finns det en motsättning?). Något som uppfyller flera av dessa kriterier har större chans att bli en nyhet.\n\nMen i sociala medier fungerar det annorlunda. Där styrs ofta synligheten av engagemang: hur många som klickar, kommenterar eller delar. Det betyder att innehåll som väcker starka känslor, vare sig det är ilska, rädsla eller glädje, kan spridas snabbare än lugn och nyanserad information. Det är inte nödvändigtvis dåligt, men det är bra att vara medveten om det.\n\nEn annan faktor är personalisering. Algoritmer försöker visa dig sådant du förmodligen gillar, baserat på tidigare beteende. Det kan göra ditt flöde mer relevant, men det kan också skapa en filterbubbla där du mest ser åsikter som liknar dina egna.\n\nHur kan du navigera? Ett första steg är att aktivt söka information från olika källor, inte bara scrolla passivt. Fundera på vem som ligger bakom en artikel: är det en etablerad nyhetsbyrå, en privatperson eller en organisation med ett specifikt syfte? Läs gärna hela texten istället för bara rubriken, eftersom rubriker ofta är förenklade.\n\nDet handlar inte om att misstro allt, utan om att vara en aktiv läsare. I en värld där alla kan publicera behöver var och en ta ansvar för sin egen informationskost. Att förstå hur nyheter skapas och sprids är en viktig del av att vara en medveten samhällsmedborgare.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilka fyra faktorer för nyhetsvärdering nämns i texten?",
+        "options": [
+          "Längd, färg, form och vikt",
+          "Aktualitet, närhet, konsekvens och konflikt",
+          "Tid, plats, person och handling",
+          "Rubrik, bild, video och ljud"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad styr ofta synligheten i sociala medier enligt texten?",
+        "options": [
+          "Journalisters beslut",
+          "Slumpmässigt urval",
+          "Engagemang som klick, kommentarer och delningar",
+          "Regeringens regler"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en filterbubbla?",
+        "options": [
+          "Ett sätt att rensa spam",
+          "En situation där du mest ser åsikter som liknar dina egna",
+          "Ett filter för bilder",
+          "En typ av reklam"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan innehåll som väcker starka känslor spridas snabbare?",
+        "options": [
+          "För att det alltid är sant",
+          "För att människor engagerar sig mer och algoritmerna premierar det",
+          "För att journalister föredrar känslomässigt innehåll",
+          "För att datorer gillar känslor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att vara en 'aktiv läsare'?",
+        "options": [
+          "Att läsa snabbt utan att tänka",
+          "Att kritiskt granska källor och aktivt söka olika perspektiv",
+          "Att bara läsa det som algoritmerna visar",
+          "Att alltid hålla med det man läser"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför föreslår texten att man ska läsa hela artiklar istället för bara rubriker?",
+        "options": [
+          "För att rubriker ofta är långa och detaljerade",
+          "För att rubriker ofta är förenklade och inte ger hela bilden",
+          "För att det tar längre tid och är mer underhållande",
+          "För att journalister tjänar mer pengar då"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 332,
+      "fingerprint": "claude-opus-ak7-017",
+      "generatedAt": "2026-02-15T00:00:00.000Z",
+      "model": "claude-opus-4-5"
+    }
+  },
+  {
+    "id": "ak7-tema-018",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "identitet",
+    "title": "Spegeln i omklädningsrummet",
+    "text": "Leo stod framför spegeln i omklädningsrummet och drog i sin tröja. Den satt likadant som igår, men idag kändes allt fel. Kanske var ärmarna för korta. Eller så var det håret som inte ville lägga sig rätt.\n\n\"Kommer du?\" ropade Amir från dörren.\n\nLeo nickade men blev stående. I spegeln såg han någon han inte riktigt kände igen. För ett år sedan hade han inte brytt sig om sånt här. Då hade han bara kastat på sig kläder och sprungit ut. Nu kändes varje val som ett test.\n\nPå väg till matsalen märkte Leo att han jämförde sig med alla han passerade. Den killen hade snyggare skor. Den tjejen verkade så säker på sig själv. Och Amir, hans bästa vän, såg aldrig ut att tvivla på någonting.\n\n\"Du är konstig idag\", sa Amir och tog en tugga av sin smörgås. \"Vad tänker du på?\"\n\nLeo tvekade. Hur förklarar man att man inte vet vem man är? Att man ibland känner sig som en skådespelare som glömt sitt manus?\n\n\"Bara trött\", sa han.\n\nMen på kvällen, när Leo satt ensam i sitt rum, googlade han \"känner mig inte som mig själv\". Tusentals träffar dök upp. Artiklar, forum, videoklipp. Han var inte ensam.\n\nNästa dag i skolan såg Leo på Amir med nya ögon. Kanske var inte alla så säkra som de verkade. Kanske bar alla på frågor de inte vågade ställa högt.\n\n\"Amir\", sa Leo under rasten. \"Känner du dig ibland... jag vet inte... som att du inte vet vem du är?\"\n\nAmir var tyst en stund. Sedan log han lite.\n\n\"Hela tiden\", sa han. \"Men jag tror det hör till. Vi håller på att bli de vi ska bli.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var stod Leo i början av berättelsen?",
+        "options": [
+          "I klassrummet",
+          "Hemma i köket",
+          "Framför spegeln i omklädningsrummet",
+          "I matsalen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Leo på kvällen när han var ensam?",
+        "options": [
+          "Han ringde till Amir",
+          "Han googlade om att inte känna sig som sig själv",
+          "Han skrev i en dagbok",
+          "Han tittade på film"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad svarade Leo först när Amir frågade vad han tänkte på?",
+        "options": [
+          "Att han var orolig för ett prov",
+          "Att han kände sig konstig",
+          "Att han bara var trött",
+          "Att han ville byta skola"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför jämförde Leo sig med andra på väg till matsalen?",
+        "options": [
+          "För att han tyckte alla andra såg dumma ut",
+          "För att han var osäker på sig själv och sin identitet",
+          "För att han ville hitta nya vänner",
+          "För att han letade efter sin bror"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menade Amir med att 'vi håller på att bli de vi ska bli'?",
+        "options": [
+          "Att de ska bli professionella idrottare",
+          "Att osäkerhet är en del av att växa upp och hitta sin identitet",
+          "Att de snart ska flytta till en annan stad",
+          "Att de ska byta skola nästa år"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lärde sig Leo av sin sökning på nätet?",
+        "options": [
+          "Att det var fel på honom",
+          "Att han var den enda som kände så",
+          "Att många andra hade liknande känslor",
+          "Att han borde sluta tänka på saken"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 351,
+      "fingerprint": "claude-opus-ak7-018",
+      "generatedAt": "2026-02-15T00:00:00.000Z",
+      "model": "claude-opus-4-5"
+    }
+  },
+  {
+    "id": "ak7-tema-019",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "ekonomi",
+    "title": "Pengars värde – mer än siffror på ett konto",
+    "text": "Du har kanske hört uttrycket \"pengar växer inte på träd\". Men varifrån kommer egentligen pengar, och varför har de värde? Svaret är mer komplicerat än man kanske tror.\n\nHistoriskt sett har människor bytit varor och tjänster direkt med varandra. Men det blev opraktiskt: om du hade ägg men ville ha ved, behövde du hitta någon som både hade ved och ville ha ägg. Pengar löste detta genom att fungera som ett mellansteg, något alla accepterade som betalning.\n\nFörr var pengar ofta kopplade till något fysiskt, som guld. Idag är de flesta valutor så kallade fiatpengar, vilket betyder att de har värde för att vi litar på att de har det. Staten garanterar att sedlar och mynt kan användas för att betala skulder och köpa saker. Men om det förtroendet försvinner, kan pengar snabbt bli värdelösa.\n\nInflation är ett begrepp du troligen stött på. Det betyder att priserna stiger över tid, så att samma summa pengar köper mindre. Måttlig inflation är normalt, men hög inflation kan vara problematiskt. Tänk dig att din veckopenning är 100 kronor. Om ett år kostar en glass dubbelt så mycket, har din köpkraft minskat även om siffran på kontot är densamma.\n\nIdag sker de flesta transaktioner digitalt. Du svajpar med kortet, överför via mobilen, eller till och med handlar med kryptovalutor. Det väcker nya frågor: Vem kontrollerar pengarna? Hur skyddas din information? Vad händer om tekniken slutar fungera?\n\nAtt förstå ekonomi handlar inte bara om att kunna räkna. Det handlar om att förstå makt, tillit och hur samhället organiseras. Nästa gång du köper något, tänk på att du deltar i ett system som bygger på tusentals år av mänsklig uppfinningsrikedom och överenskommelser.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför uppfanns pengar enligt texten?",
+        "options": [
+          "För att göra människor rika",
+          "För att lösa problemet med direkt byteshandel",
+          "För att banker skulle kunna tjäna pengar",
+          "För att man inte ville använda guld längre"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad betyder fiatpengar?",
+        "options": [
+          "Pengar gjorda av en speciell metall",
+          "Pengar som bara kan användas i bilar",
+          "Pengar som har värde för att vi litar på att de har det",
+          "Pengar som är kopplade till guld"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är inflation?",
+        "options": [
+          "När priserna sjunker över tid",
+          "När priserna stiger över tid",
+          "När pengar blir mer värda",
+          "När banker sänker räntorna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan höga inflationstakter vara problematiska?",
+        "options": [
+          "För att det blir lättare att spara pengar",
+          "För att samma summa pengar köper mindre, vilket minskar köpkraften",
+          "För att alla blir rikare",
+          "För att priserna aldrig ändras"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad antyder texten om relationen mellan pengar och tillit?",
+        "options": [
+          "Pengar fungerar helt oberoende av vad människor tror",
+          "Pengar har värde bara för att de är gjorda av dyra material",
+          "Pengars värde bygger på att människor litar på systemet",
+          "Tillit har ingen koppling till ekonomi"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämner texten frågor om kontroll och information vid digitala betalningar?",
+        "options": [
+          "För att visa att digitala betalningar är helt riskfria",
+          "För att digital ekonomi väcker nya frågor om makt och säkerhet",
+          "För att kontanter är det enda säkra alternativet",
+          "För att banker inte gillar digital teknik"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 329,
+      "fingerprint": "claude-opus-ak7-019",
+      "generatedAt": "2026-02-15T00:00:00.000Z",
+      "model": "claude-opus-4-5"
+    }
+  },
+  {
+    "id": "ak7-tema-020",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "filosofi",
+    "title": "Vad är rättvisa? – En fråga utan enkla svar",
+    "text": "Föreställ dig att du och två vänner har jobbat hela dagen med ett projekt. En av er har arbetat dubbelt så hårt som de andra. Hur ska belöningen delas? Lika mellan alla tre? Eller mer till den som jobbade mest? Svaret beror på vad du menar med rättvisa.\n\nFilosofer har funderat på rättvisa i tusentals år. Den grekiske filosofen Aristoteles menade att rättvisa handlar om att ge var och en det de förtjänar. Men vad innebär det att förtjäna något? Den som anstränger sig mest? Den som är mest talangfull? Eller den som har störst behov?\n\nEn modern tänkare, John Rawls, föreslog ett tankeexperiment. Tänk dig att du ska utforma reglerna för ett samhälle, men du vet inte vilken position du själv kommer ha. Du kan bli rik eller fattig, frisk eller sjuk. Rawls menade att om vi tänker så, skulle vi skapa ett samhälle som tar hand om de mest utsatta, eftersom vi själva kunde vara en av dem.\n\nMen andra filosofer invänder. De menar att rättvisa handlar om frihet: att varje person ska få behålla frukten av sitt arbete och göra sina egna val, så länge de inte skadar andra. Ur det perspektivet kan tvingande omfördelning vara orättvis, även om den hjälper de fattiga.\n\nI vardagen möter vi rättvisefrågor hela tiden. Är det rättvist att samma regler gäller alla i en skola, även om elevernas förutsättningar är olika? Är det rättvist att en fotbollsspelare tjänar tusen gånger mer än en sjuksköterska?\n\nDet finns inget facit. Men genom att tänka på dessa frågor utvecklar vi vår förmåga att resonera, förstå andras perspektiv och ta ställning. Rättvisa är inte bara en abstrakt idé – det är något vi skapar tillsammans, varje dag.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem var Aristoteles enligt texten?",
+        "options": [
+          "En modern ekonom",
+          "En grekisk filosof",
+          "En svensk politiker",
+          "En fotbollsspelare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebar John Rawls tankeexperiment?",
+        "options": [
+          "Att man ska tänka sig hur det är att vara rik",
+          "Att man utformar regler utan att veta vilken position man själv får",
+          "Att man alltid ska följa majoriteten",
+          "Att rättvisa inte går att definiera"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel på rättvisefråga i vardagen nämns?",
+        "options": [
+          "Om det ska vara lov på sommaren",
+          "Om samma regler ska gälla alla i skolan även om förutsättningarna är olika",
+          "Om vädret är rättvist",
+          "Om mat ska vara gratis"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför menade Rawls att vi skulle ta hand om de mest utsatta om vi inte visste vår position?",
+        "options": [
+          "För att rika människor alltid är elaka",
+          "För att vi själva skulle kunna vara en av de utsatta",
+          "För att fattiga människor arbetar hårdare",
+          "För att det står i lagen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kritiserar de filosofer som betonar frihet?",
+        "options": [
+          "Att människor inte borde få arbeta",
+          "Att tvingande omfördelning kan vara orättvis även om den hjälper fattiga",
+          "Att alla ska tjäna lika mycket",
+          "Att Aristoteles hade fel om allt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap om rättvisa?",
+        "options": [
+          "Att det finns ett enkelt svar på vad rättvisa är",
+          "Att rättvisa är omöjligt att uppnå",
+          "Att rättvisa är komplext och något vi skapar tillsammans genom att resonera",
+          "Att bara filosofer kan förstå rättvisa"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 347,
+      "fingerprint": "claude-opus-ak7-020",
+      "generatedAt": "2026-02-15T00:00:00.000Z",
+      "model": "claude-opus-4-5"
+    }
   }
 ]
