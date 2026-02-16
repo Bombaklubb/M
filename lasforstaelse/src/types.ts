@@ -122,6 +122,16 @@ export interface User {
   lastActivity: string;
 }
 
+// Meddelande från elev till lärare
+export interface StudentMessage {
+  id: string;
+  studentName: string;
+  studentAvatar: string;
+  message: string;
+  sentAt: string;
+  read: boolean;
+}
+
 // Badge-definitioner
 export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
   [BadgeType.FIRST_TEXT]: {
