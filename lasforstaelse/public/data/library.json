@@ -22188,32 +22188,62 @@
     "questions": [
       {
         "q": "När startade Arsenal enligt texten?",
-        "options": ["1886", "1906", "1978", "2012"],
+        "options": [
+          "1886",
+          "1906",
+          "1978",
+          "2012"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder en \"hemmamatch\" i texten?",
-        "options": ["Att laget spelar på en neutral plan", "Att laget spelar på sin egen arena", "Att laget alltid vinner hemma", "Att matchen spelas utan publik"],
+        "options": [
+          "Att laget spelar på en neutral plan",
+          "Att laget spelar på sin egen arena",
+          "Att laget alltid vinner hemma",
+          "Att matchen spelas utan publik"
+        ],
         "correct": 1
       },
       {
         "q": "Varför nämns passningsspel som något som kräver mycket?",
-        "options": ["För att domaren måste springa mer", "För att bollen måste vara ny", "För att spelarna måste röra sig rätt och våga passa i trånga lägen", "För att man bara får passa bakåt"],
+        "options": [
+          "För att domaren måste springa mer",
+          "För att bollen måste vara ny",
+          "För att spelarna måste röra sig rätt och våga passa i trånga lägen",
+          "För att man bara får passa bakåt"
+        ],
         "correct": 2
       },
       {
         "q": "Vad kallas matchen mellan Arsenal och Tottenham ofta?",
-        "options": ["En final", "En träningsmatch", "En kvalmatch", "Ett derby"],
+        "options": [
+          "En final",
+          "En träningsmatch",
+          "En kvalmatch",
+          "Ett derby"
+        ],
         "correct": 3
       },
       {
         "q": "Vilka färger kopplas till Arsenal i texten?",
-        "options": ["Rött och vitt", "Blått och gult", "Grönt och svart", "Vitt och lila"],
+        "options": [
+          "Rött och vitt",
+          "Blått och gult",
+          "Grönt och svart",
+          "Vitt och lila"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudidé?",
-        "options": ["Att fotboll bara handlar om pengar", "Att Arsenal är mer än resultat: traditioner, minnen och gemenskap", "Att derbyn alltid blir bråk", "Att en tränare inte påverkar spelet"],
+        "options": [
+          "Att fotboll bara handlar om pengar",
+          "Att Arsenal är mer än resultat: traditioner, minnen och gemenskap",
+          "Att derbyn alltid blir bråk",
+          "Att en tränare inte påverkar spelet"
+        ],
         "correct": 1
       }
     ],
@@ -22228,32 +22258,62 @@
     "questions": [
       {
         "q": "Varför åker de tidigt till arenan?",
-        "options": ["För att hinna se en konsert", "För att slippa stress och trängsel", "För att spelarna ska få autografer", "För att matchen börjar tidigare än vanligt"],
+        "options": [
+          "För att hinna se en konsert",
+          "För att slippa stress och trängsel",
+          "För att spelarna ska få autografer",
+          "För att matchen börjar tidigare än vanligt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är ett matchprogram enligt texten?",
-        "options": ["Ett häfte med fakta om lagen och dagens match", "En app som visar vädret", "En lista över alla arenor i London", "En film om tidigare säsonger"],
+        "options": [
+          "Ett häfte med fakta om lagen och dagens match",
+          "En app som visar vädret",
+          "En lista över alla arenor i London",
+          "En film om tidigare säsonger"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betyder \"press\" i texten?",
-        "options": ["Att publiken buar", "Att domaren blåser ofta", "Att laget försöker vinna tillbaka bollen snabbt", "Att man skjuter hårt mot mål"],
+        "options": [
+          "Att publiken buar",
+          "Att domaren blåser ofta",
+          "Att laget försöker vinna tillbaka bollen snabbt",
+          "Att man skjuter hårt mot mål"
+        ],
         "correct": 2
       },
       {
         "q": "Vad tycker Samira är det viktigaste minnet från dagen?",
-        "options": ["Att hon fick en ny halsduk", "Att hon lärde sig alla spelarnas nummer", "Att hon såg flest mål någonsin", "Känslan av att dela upplevelsen med andra"],
+        "options": [
+          "Att hon fick en ny halsduk",
+          "Att hon lärde sig alla spelarnas nummer",
+          "Att hon såg flest mål någonsin",
+          "Känslan av att dela upplevelsen med andra"
+        ],
         "correct": 3
       },
       {
         "q": "Hur beskrivs personalens hjälp till Alex?",
-        "options": ["De hjälper lugnt och utan att göra en stor sak av det", "De säger att det är för svårt att komma in", "De flyttar honom till en plats utan sikt", "De ignorerar honom helt"],
+        "options": [
+          "De hjälper lugnt och utan att göra en stor sak av det",
+          "De säger att det är för svårt att komma in",
+          "De flyttar honom till en plats utan sikt",
+          "De ignorerar honom helt"
+        ],
         "correct": 0
       },
       {
         "q": "Vad vill Samira göra efter matchen?",
-        "options": ["Byta favoritlag direkt", "Lära sig mer om taktik, inte bara mål", "Sluta titta på fotboll på tv", "Bara prata om domaren"],
+        "options": [
+          "Byta favoritlag direkt",
+          "Lära sig mer om taktik, inte bara mål",
+          "Sluta titta på fotboll på tv",
+          "Bara prata om domaren"
+        ],
         "correct": 1
       }
     ],
@@ -22268,32 +22328,62 @@
     "questions": [
       {
         "q": "Vad är en akademi enligt texten?",
-        "options": ["En lång utbildning för unga spelare", "En butik som säljer tröjor", "Ett museum om klubbens historia", "En sorts finalturnering"],
+        "options": [
+          "En lång utbildning för unga spelare",
+          "En butik som säljer tröjor",
+          "Ett museum om klubbens historia",
+          "En sorts finalturnering"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menas med \"spelförståelse\" i texten?",
-        "options": ["Att kunna alla regler utantill", "Att kunna läsa spelet och göra kloka val", "Att springa snabbast i laget", "Att alltid skjuta så fort man får bollen"],
+        "options": [
+          "Att kunna alla regler utantill",
+          "Att kunna läsa spelet och göra kloka val",
+          "Att springa snabbast i laget",
+          "Att alltid skjuta så fort man får bollen"
+        ],
         "correct": 1
       },
       {
         "q": "Varför nämns vila, mat och skola?",
-        "options": ["För att tränarna vill att alla ska sluta träna", "För att det är viktigare än att röra sig", "För att det påverkar ork, koncentration och planering", "För att man måste bli kock för att bli proffs"],
+        "options": [
+          "För att tränarna vill att alla ska sluta träna",
+          "För att det är viktigare än att röra sig",
+          "För att det påverkar ork, koncentration och planering",
+          "För att man måste bli kock för att bli proffs"
+        ],
         "correct": 2
       },
       {
         "q": "Vad blev Levi mest förvånad över på provträningen?",
-        "options": ["Att alla fick nya skor", "Att de aldrig passade bollen", "Att matcherna var utan domare", "Hur mycket de pratade om beslut och varför man gör val"],
+        "options": [
+          "Att alla fick nya skor",
+          "Att de aldrig passade bollen",
+          "Att matcherna var utan domare",
+          "Hur mycket de pratade om beslut och varför man gör val"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket av följande är ett exempel på vad man kan lära sig även om man inte blir proffs?",
-        "options": ["Att hantera nervositet och samarbeta", "Att alltid vinna varje match", "Att slippa skolan helt", "Att aldrig göra misstag"],
+        "options": [
+          "Att hantera nervositet och samarbeta",
+          "Att alltid vinna varje match",
+          "Att slippa skolan helt",
+          "Att aldrig göra misstag"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Arsenal bara handlar om tv-matcher", "Att ungdomsträning handlar om utveckling steg för steg", "Att talang alltid räcker", "Att akademin bara tar emot vuxna"],
+        "options": [
+          "Att Arsenal bara handlar om tv-matcher",
+          "Att ungdomsträning handlar om utveckling steg för steg",
+          "Att talang alltid räcker",
+          "Att akademin bara tar emot vuxna"
+        ],
         "correct": 1
       }
     ],
@@ -22308,32 +22398,62 @@
     "questions": [
       {
         "q": "Vilken regel har Noah och Ingrid när de pratar om matcher?",
-        "options": ["Man får aldrig kritisera något", "Man får kritisera spelet men inte håna spelaren som person", "Man måste alltid hålla med varandra", "Man får bara prata om domaren"],
+        "options": [
+          "Man får aldrig kritisera något",
+          "Man får kritisera spelet men inte håna spelaren som person",
+          "Man måste alltid hålla med varandra",
+          "Man får bara prata om domaren"
+        ],
         "correct": 1
       },
       {
         "q": "Vad gjorde supporterföreningen för grusplanen?",
-        "options": ["De samlade pengar till nya målburar", "De byggde en ny arena", "De köpte biljetter till alla i stan", "De målade om bussarna röda"],
+        "options": [
+          "De samlade pengar till nya målburar",
+          "De byggde en ny arena",
+          "De köpte biljetter till alla i stan",
+          "De målade om bussarna röda"
+        ],
         "correct": 0
       },
       {
         "q": "Varför säger Ingrid att man kallar det \"taktik\"?",
-        "options": ["För att det bara finns en rätt plan", "För att spelet alltid är slump", "För att man alltid ska anfalla", "För att det finns flera vägar mot samma mål"],
+        "options": [
+          "För att det bara finns en rätt plan",
+          "För att spelet alltid är slump",
+          "För att man alltid ska anfalla",
+          "För att det finns flera vägar mot samma mål"
+        ],
         "correct": 3
       },
       {
         "q": "Vad lär sig Noah av att folk tycker olika om samma situation?",
-        "options": ["Att alla ser exakt samma sak", "Att det inte spelar någon roll vad man gör", "Att man kan tolka spelet på olika sätt", "Att man aldrig ska diskutera fotboll"],
+        "options": [
+          "Att alla ser exakt samma sak",
+          "Att det inte spelar någon roll vad man gör",
+          "Att man kan tolka spelet på olika sätt",
+          "Att man aldrig ska diskutera fotboll"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken risk nämns när känslorna blir starka efter en förlust?",
-        "options": ["Att man letar efter en syndabock", "Att alla slutar titta på sport", "Att reglerna i fotboll ändras", "Att bollarna blir för tunga"],
+        "options": [
+          "Att man letar efter en syndabock",
+          "Att alla slutar titta på sport",
+          "Att reglerna i fotboll ändras",
+          "Att bollarna blir för tunga"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att tabellen är viktigast", "Att man ska byta lag ofta", "Att Arsenal bara handlar om mål", "Att fotboll kan handla om gemenskap och respekt"],
+        "options": [
+          "Att tabellen är viktigast",
+          "Att man ska byta lag ofta",
+          "Att Arsenal bara handlar om mål",
+          "Att fotboll kan handla om gemenskap och respekt"
+        ],
         "correct": 3
       }
     ],
@@ -22348,32 +22468,62 @@
     "questions": [
       {
         "q": "Vad betyder \"bygga upp\" enligt texten?",
-        "options": ["Att flytta bollen framåt steg för steg", "Att alltid skjuta direkt", "Att bara spela med långbollar", "Att stå stilla och vänta"],
+        "options": [
+          "Att flytta bollen framåt steg för steg",
+          "Att alltid skjuta direkt",
+          "Att bara spela med långbollar",
+          "Att stå stilla och vänta"
+        ],
         "correct": 0
       },
       {
         "q": "Varför droppar en mittfältare ner i början av anfallet?",
-        "options": ["För att be domaren om timeout", "För att bli ett passningsalternativ och hjälpa i uppspelsfasen", "För att gömma sig bakom målvakten", "För att det är förbjudet att vara på mitten"],
+        "options": [
+          "För att be domaren om timeout",
+          "För att bli ett passningsalternativ och hjälpa i uppspelsfasen",
+          "För att gömma sig bakom målvakten",
+          "För att det är förbjudet att vara på mitten"
+        ],
         "correct": 1
       },
       {
         "q": "Vad innebär \"byta kant\" i texten?",
-        "options": ["Att byta tröjfärg", "Att byta ut alla spelare samtidigt", "Att flytta bollen från ena sidan till den andra", "Att byta arena i halvtid"],
+        "options": [
+          "Att byta tröjfärg",
+          "Att byta ut alla spelare samtidigt",
+          "Att flytta bollen från ena sidan till den andra",
+          "Att byta arena i halvtid"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken risk nämns när många spelare går fram?",
-        "options": ["Att publiken går hem", "Att målet blir mindre", "Att domaren glömmer pipan", "Att motståndarna kan kontra snabbt"],
+        "options": [
+          "Att publiken går hem",
+          "Att målet blir mindre",
+          "Att domaren glömmer pipan",
+          "Att motståndarna kan kontra snabbt"
+        ],
         "correct": 3
       },
       {
         "q": "Vad betyder \"balans\" i texten?",
-        "options": ["Att några spelare stannar kvar och är redo att försvara", "Att alla alltid springer mot mål", "Att man aldrig får passa bakåt", "Att man måste ha lika många målchanser"],
+        "options": [
+          "Att några spelare stannar kvar och är redo att försvara",
+          "Att alla alltid springer mot mål",
+          "Att man aldrig får passa bakåt",
+          "Att man måste ha lika många målchanser"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudidé?",
-        "options": ["Att tur är det enda som spelar roll", "Att ett mål ofta kommer från flera små beslut och samarbete", "Att kontringar alltid är bättre än anfall", "Att fotboll inte går att planera"],
+        "options": [
+          "Att tur är det enda som spelar roll",
+          "Att ett mål ofta kommer från flera små beslut och samarbete",
+          "Att kontringar alltid är bättre än anfall",
+          "Att fotboll inte går att planera"
+        ],
         "correct": 1
       }
     ],
@@ -22798,32 +22948,62 @@
     "questions": [
       {
         "q": "Vad är Åland enligt texten?",
-        "options": ["En ögrupp med många öar och skär", "En enda stor ö utan skärgård", "En fjällkedja i norra Finland", "Ett havsområde utan land"],
+        "options": [
+          "En ögrupp med många öar och skär",
+          "En enda stor ö utan skärgård",
+          "En fjällkedja i norra Finland",
+          "Ett havsområde utan land"
+        ],
         "correct": 0
       },
       {
         "q": "Var ligger Mariehamn?",
-        "options": ["På en liten skärgårdsö långt från fasta Åland", "På den största ön, ofta kallad fasta Åland", "På Sveriges fastland mittemot Åland", "Under vattenytan i en skyddad vik"],
+        "options": [
+          "På en liten skärgårdsö långt från fasta Åland",
+          "På den största ön, ofta kallad fasta Åland",
+          "På Sveriges fastland mittemot Åland",
+          "Under vattenytan i en skyddad vik"
+        ],
         "correct": 1
       },
       {
         "q": "Vad menas med att klipporna formats av isen under istiden?",
-        "options": ["Att människor högg bort klipporna med verktyg", "Att havsvågorna byggde klipporna av sand", "Att is och rörelser slipade och rundade bergytan", "Att klipporna är gjorda av fruset havsvatten"],
+        "options": [
+          "Att människor högg bort klipporna med verktyg",
+          "Att havsvågorna byggde klipporna av sand",
+          "Att is och rörelser slipade och rundade bergytan",
+          "Att klipporna är gjorda av fruset havsvatten"
+        ],
         "correct": 2
       },
       {
         "q": "Varför behöver man ta hänsyn i naturreservat på Åland?",
-        "options": ["För att det ska bli fler broar mellan öarna", "För att turister ska hitta snabbare cykelvägar", "För att färjorna ska kunna gå oftare", "För att fåglar och känsliga stränder inte ska störas"],
+        "options": [
+          "För att det ska bli fler broar mellan öarna",
+          "För att turister ska hitta snabbare cykelvägar",
+          "För att färjorna ska kunna gå oftare",
+          "För att fåglar och känsliga stränder inte ska störas"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken slutsats kan man dra om vädret på Åland?",
-        "options": ["Det kan ändras snabbt, så båtfolk måste vara uppmärksamma", "Det är alltid vindstilla eftersom öarna skyddar helt", "Det snöar nästan hela sommaren nära havet", "Det är lika stabilt som i en öken"],
+        "options": [
+          "Det kan ändras snabbt, så båtfolk måste vara uppmärksamma",
+          "Det är alltid vindstilla eftersom öarna skyddar helt",
+          "Det snöar nästan hela sommaren nära havet",
+          "Det är lika stabilt som i en öken"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudidé?",
-        "options": ["Att förklara hur man bygger en färja steg för steg", "Att beskriva hur öar, hav och natur formar livet på Åland", "Att lista alla sporter som spelas i Mariehamn", "Att jämföra priser på cyklar mellan Finland och Sverige"],
+        "options": [
+          "Att förklara hur man bygger en färja steg för steg",
+          "Att beskriva hur öar, hav och natur formar livet på Åland",
+          "Att lista alla sporter som spelas i Mariehamn",
+          "Att jämföra priser på cyklar mellan Finland och Sverige"
+        ],
         "correct": 1
       }
     ],
@@ -22838,32 +23018,62 @@
     "questions": [
       {
         "q": "Vad betyder självstyre enligt texten?",
-        "options": ["Att Åland bestämmer allt, även utrikespolitik och försvar", "Att Åland får bestämma mycket själv i vissa frågor, trots att det hör till Finland", "Att Åland bara får bestämma över vädret och havet", "Att Finland styr alla beslut på Åland utan undantag"],
+        "options": [
+          "Att Åland bestämmer allt, även utrikespolitik och försvar",
+          "Att Åland får bestämma mycket själv i vissa frågor, trots att det hör till Finland",
+          "Att Åland bara får bestämma över vädret och havet",
+          "Att Finland styr alla beslut på Åland utan undantag"
+        ],
         "correct": 1
       },
       {
         "q": "Varför ville många ålänningar hellre höra till Sverige efter 1917?",
-        "options": ["För att Sverige lovade gratis färjor till alla öar", "För att Åland låg längst norrut i Sverige", "För att de redan pratade mest svenska och hade starka kontakter över havet", "För att de ville sluta använda båtar helt"],
+        "options": [
+          "För att Sverige lovade gratis färjor till alla öar",
+          "För att Åland låg längst norrut i Sverige",
+          "För att de redan pratade mest svenska och hade starka kontakter över havet",
+          "För att de ville sluta använda båtar helt"
+        ],
         "correct": 2
       },
       {
         "q": "Vad innebär demilitarisering i texten?",
-        "options": ["Att det alltid ska finnas militär på Åland", "Att bara poliser får bo på öarna", "Att alla ålänningar måste göra värnplikt på plats", "Att det inte ska finnas militär på Åland i fredstid"],
+        "options": [
+          "Att det alltid ska finnas militär på Åland",
+          "Att bara poliser får bo på öarna",
+          "Att alla ålänningar måste göra värnplikt på plats",
+          "Att det inte ska finnas militär på Åland i fredstid"
+        ],
         "correct": 3
       },
       {
         "q": "Hur löstes konflikten om Ålands tillhörighet enligt texten?",
-        "options": ["Genom en internationell lösning där Åland stannade i Finland men fick självstyre och språkskydd", "Genom att Åland blev en del av Ryssland igen", "Genom att Sverige tog över utan några villkor", "Genom att Åland flyttades längre bort i Östersjön"],
+        "options": [
+          "Genom en internationell lösning där Åland stannade i Finland men fick självstyre och språkskydd",
+          "Genom att Åland blev en del av Ryssland igen",
+          "Genom att Sverige tog över utan några villkor",
+          "Genom att Åland flyttades längre bort i Östersjön"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket exempel i texten visar att självstyret märks i vardagen?",
-        "options": ["Att Åland inte får ha skolor", "Att Åland saknar lokala symboler helt", "Att Åland har ett eget parlament som fattar beslut i flera frågor", "Att Åland alltid byter språk varje vecka"],
+        "options": [
+          "Att Åland inte får ha skolor",
+          "Att Åland saknar lokala symboler helt",
+          "Att Åland har ett eget parlament som fattar beslut i flera frågor",
+          "Att Åland alltid byter språk varje vecka"
+        ],
         "correct": 2
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Åland är känt för fjäll och skidåkning", "Att Ålands särskilda regler kom för att skapa balans mellan tillhörighet, språk och säkerhet", "Att Åland är det enda stället i Norden med broar till alla länder", "Att internationella avtal aldrig påverkar människors vardag"],
+        "options": [
+          "Att Åland är känt för fjäll och skidåkning",
+          "Att Ålands särskilda regler kom för att skapa balans mellan tillhörighet, språk och säkerhet",
+          "Att Åland är det enda stället i Norden med broar till alla länder",
+          "Att internationella avtal aldrig påverkar människors vardag"
+        ],
         "correct": 1
       }
     ],
@@ -22878,32 +23088,62 @@
     "questions": [
       {
         "q": "Vilka tre områden nämns som vanliga svar på vad Åland lever av?",
-        "options": ["Gruvdrift, rymdforskning och skidorter", "Bara fiske och inget annat", "Sjöfart, turism och småföretag", "Enbart stora fabriker i inlandet"],
+        "options": [
+          "Gruvdrift, rymdforskning och skidorter",
+          "Bara fiske och inget annat",
+          "Sjöfart, turism och småföretag",
+          "Enbart stora fabriker i inlandet"
+        ],
         "correct": 2
       },
       {
         "q": "Vad visar texten att sjöfart kan innebära, förutom att båtar åker mellan platser?",
-        "options": ["Endast att man målar båtar i nya färger", "Att alla resor sker utan hamnar", "Att man bara transporterar djur, aldrig människor", "Många olika jobb ombord och på land, som säkerhet och planering"],
+        "options": [
+          "Endast att man målar båtar i nya färger",
+          "Att alla resor sker utan hamnar",
+          "Att man bara transporterar djur, aldrig människor",
+          "Många olika jobb ombord och på land, som säkerhet och planering"
+        ],
         "correct": 3
       },
       {
         "q": "Vilket exempel i texten handlar om lokala produkter?",
-        "options": ["Äppelmust som säljs på marknader", "Elektronik från rymdstationer", "Kol som bryts i stora gruvor", "Bergsklättringsutrustning från fjällen"],
+        "options": [
+          "Äppelmust som säljs på marknader",
+          "Elektronik från rymdstationer",
+          "Kol som bryts i stora gruvor",
+          "Bergsklättringsutrustning från fjällen"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken utmaning för företag på Åland nämns i texten?",
-        "options": ["Att solen aldrig går upp på vintern", "Att transporter kan bli dyrare och leveranser kan bli sena vid hårt väder", "Att det saknas vägar helt och hållet", "Att man inte får sälja saker på sommaren"],
+        "options": [
+          "Att solen aldrig går upp på vintern",
+          "Att transporter kan bli dyrare och leveranser kan bli sena vid hårt väder",
+          "Att det saknas vägar helt och hållet",
+          "Att man inte får sälja saker på sommaren"
+        ],
         "correct": 1
       },
       {
         "q": "Varför stod Leo nära guiden under hamnbesöket?",
-        "options": ["För att han ville se kartorna först", "För att han tränade på att bli guide själv", "För att han var ansvarig för att räkna båtar", "För att han behövde stå nära för att höra tydligt med sina hjälpmedel"],
+        "options": [
+          "För att han ville se kartorna först",
+          "För att han tränade på att bli guide själv",
+          "För att han var ansvarig för att räkna båtar",
+          "För att han behövde stå nära för att höra tydligt med sina hjälpmedel"
+        ],
         "correct": 3
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att företag alltid är enklast där det finns få transporter", "Att turism aldrig påverkar hur många jobb som finns", "Att Ålands ekonomi består av flera delar som hänger ihop, med sjöfart som en viktig del", "Att hamnar bara är viktiga förr i tiden"],
+        "options": [
+          "Att företag alltid är enklast där det finns få transporter",
+          "Att turism aldrig påverkar hur många jobb som finns",
+          "Att Ålands ekonomi består av flera delar som hänger ihop, med sjöfart som en viktig del",
+          "Att hamnar bara är viktiga förr i tiden"
+        ],
         "correct": 2
       }
     ],
@@ -22918,32 +23158,62 @@
     "questions": [
       {
         "q": "Vilket språk används enligt texten i skola och myndigheter på Åland?",
-        "options": ["Finska", "Engelska", "Tyska", "Svenska"],
+        "options": [
+          "Finska",
+          "Engelska",
+          "Tyska",
+          "Svenska"
+        ],
         "correct": 3
       },
       {
         "q": "Vad beskriver texten om hur svenskan låter på Åland?",
-        "options": ["Att dialekter kan skilja sig mellan öar och byar", "Att alla pratar exakt samma svenska överallt", "Att man bara får använda ord från engelska", "Att dialekter är förbjudna i Mariehamn"],
+        "options": [
+          "Att dialekter kan skilja sig mellan öar och byar",
+          "Att alla pratar exakt samma svenska överallt",
+          "Att man bara får använda ord från engelska",
+          "Att dialekter är förbjudna i Mariehamn"
+        ],
         "correct": 0
       },
       {
         "q": "Varför kan unga på Åland höra och använda en blandning av olika ord?",
-        "options": ["För att skolan bara lär ut latin", "För att de möter språk genom tv, spel och sociala medier", "För att ingen pratar svenska längre", "För att dialekter gör internet långsammare"],
+        "options": [
+          "För att skolan bara lär ut latin",
+          "För att de möter språk genom tv, spel och sociala medier",
+          "För att ingen pratar svenska längre",
+          "För att dialekter gör internet långsammare"
+        ],
         "correct": 1
       },
       {
         "q": "Vad var syftet med klassens projekt om identitet?",
-        "options": ["Att räkna hur många båtar som passerar varje dag", "Att lära sig alla landskap i Finland utantill", "Att intervjua äldre om hur språket på Åland förändrats", "Att bygga en ny majstång till skolans gård"],
+        "options": [
+          "Att räkna hur många båtar som passerar varje dag",
+          "Att lära sig alla landskap i Finland utantill",
+          "Att intervjua äldre om hur språket på Åland förändrats",
+          "Att bygga en ny majstång till skolans gård"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken slutsats drar klassen när de sammanställer intervjuerna?",
-        "options": ["Att språk kan vara en del av att känna sig hemma och delta i samhället", "Att språk bara handlar om grammatik och stavning", "Att språk inte påverkar människors liv alls", "Att alla på Åland vill sluta prata svenska"],
+        "options": [
+          "Att språk kan vara en del av att känna sig hemma och delta i samhället",
+          "Att språk bara handlar om grammatik och stavning",
+          "Att språk inte påverkar människors liv alls",
+          "Att alla på Åland vill sluta prata svenska"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Åland saknar kultur eftersom det är en ögrupp", "Att Ålands språk är helt oförändrat sedan 1800-talet", "Att turister bestämmer vilket språk som ska användas", "Att Ålands svenska språk är en levande rättighet som binder människor samman"],
+        "options": [
+          "Att Åland saknar kultur eftersom det är en ögrupp",
+          "Att Ålands språk är helt oförändrat sedan 1800-talet",
+          "Att turister bestämmer vilket språk som ska användas",
+          "Att Ålands svenska språk är en levande rättighet som binder människor samman"
+        ],
         "correct": 3
       }
     ],
@@ -22958,32 +23228,62 @@
     "questions": [
       {
         "q": "Vad var gruppens uppgift?",
-        "options": ["Att planera en hållbar resa till Åland", "Att bygga en ny färja till skolan", "Att skriva en saga utan fakta", "Att träna inför en cykeltävling i Sverige"],
+        "options": [
+          "Att planera en hållbar resa till Åland",
+          "Att bygga en ny färja till skolan",
+          "Att skriva en saga utan fakta",
+          "Att träna inför en cykeltävling i Sverige"
+        ],
         "correct": 0
       },
       {
         "q": "Varför ville de bo nära centrum i Mariehamn?",
-        "options": ["För att det är den enda platsen med hav", "För att cyklar inte är tillåtna utanför centrum", "För att kunna slippa åka bil så mycket", "För att naturreservat bara finns i staden"],
+        "options": [
+          "För att det är den enda platsen med hav",
+          "För att cyklar inte är tillåtna utanför centrum",
+          "För att kunna slippa åka bil så mycket",
+          "För att naturreservat bara finns i staden"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken anpassning planerade de med tanke på Alex?",
-        "options": ["Att hoppa över alla aktiviteter utomhus", "Att välja platser som är tillgängliga och ordna en anpassad cykellösning", "Att bara resa nattetid när det är svalare", "Att byta ut färjan mot ett flygplan utan stopp"],
+        "options": [
+          "Att hoppa över alla aktiviteter utomhus",
+          "Att välja platser som är tillgängliga och ordna en anpassad cykellösning",
+          "Att bara resa nattetid när det är svalare",
+          "Att byta ut färjan mot ett flygplan utan stopp"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket skäl gav Farid till att ta med kikare?",
-        "options": ["För att kikare gör det lättare att hitta vägen i stan", "För att man kan se museumsskyltar på långt håll", "För att kikare minskar vind när man cyklar", "För att man kan titta på fåglar utan att gå nära bon och störa"],
+        "options": [
+          "För att kikare gör det lättare att hitta vägen i stan",
+          "För att man kan se museumsskyltar på långt håll",
+          "För att kikare minskar vind när man cyklar",
+          "För att man kan titta på fåglar utan att gå nära bon och störa"
+        ],
         "correct": 3
       },
       {
         "q": "Varför tyckte de att en gårdsbutik passade in i en hållbar resa?",
-        "options": ["För att man alltid måste köpa souvenirer på resa", "För att lokala produkter ofta inte behöver transporteras lika långt", "För att gårdsbutiker bara säljer importvaror", "För att det ersätter behovet av att besöka naturen"],
+        "options": [
+          "För att man alltid måste köpa souvenirer på resa",
+          "För att lokala produkter ofta inte behöver transporteras lika långt",
+          "För att gårdsbutiker bara säljer importvaror",
+          "För att det ersätter behovet av att besöka naturen"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att resor alltid skadar naturen lika mycket", "Att museer är viktigare än naturreservat", "Att hållbarhet handlar om många små val som tillsammans gör skillnad", "Att man måste åka bil på alla öar"],
+        "options": [
+          "Att resor alltid skadar naturen lika mycket",
+          "Att museer är viktigare än naturreservat",
+          "Att hållbarhet handlar om många små val som tillsammans gör skillnad",
+          "Att man måste åka bil på alla öar"
+        ],
         "correct": 2
       }
     ],
@@ -22998,32 +23298,62 @@
     "questions": [
       {
         "q": "Vilka musikstilar blandade Elvis i sin musik enligt texten?",
-        "options": ["Klassisk musik, opera och jazz", "Country, gospel och rhythm and blues", "Hiphop, techno och reggae", "Bara gospel utan andra influenser"],
+        "options": [
+          "Klassisk musik, opera och jazz",
+          "Country, gospel och rhythm and blues",
+          "Hiphop, techno och reggae",
+          "Bara gospel utan andra influenser"
+        ],
         "correct": 1
       },
       {
         "q": "Var växte Elvis upp innan familjen flyttade till Memphis?",
-        "options": ["I New York", "I delstaten Mississippi", "I Los Angeles", "I Nashville"],
+        "options": [
+          "I New York",
+          "I delstaten Mississippi",
+          "I Los Angeles",
+          "I Nashville"
+        ],
         "correct": 1
       },
       {
         "q": "Hur reagerade många vuxna på Elvis musik och scenframträdanden?",
-        "options": ["De tyckte att musiken var för vild och att han rörde sig opassande", "De ville genast lära sig dansa likadant", "De ignorerade honom helt utan att ha en åsikt", "De bjöd in honom att sjunga i kyrkan varje söndag"],
+        "options": [
+          "De tyckte att musiken var för vild och att han rörde sig opassande",
+          "De ville genast lära sig dansa likadant",
+          "De ignorerade honom helt utan att ha en åsikt",
+          "De bjöd in honom att sjunga i kyrkan varje söndag"
+        ],
         "correct": 0
       },
       {
         "q": "Varför nådde Elvis fler lyssnare än många andra rock'n'roll-musiker?",
-        "options": ["För att han sjöng långsammare än alla andra", "Delvis för att han fick möjlighet att synas på tv", "För att han bara spelade på stora arenor utomlands", "För att han alltid sjöng samma låt om och om igen"],
+        "options": [
+          "För att han sjöng långsammare än alla andra",
+          "Delvis för att han fick möjlighet att synas på tv",
+          "För att han bara spelade på stora arenor utomlands",
+          "För att han alltid sjöng samma låt om och om igen"
+        ],
         "correct": 1
       },
       {
         "q": "Vad menas med att rock'n'roll blev ett soundtrack till en ny ungdomskultur?",
-        "options": ["Att musiken bara spelades i biografer före filmer", "Att ungdomar kände igen sig i musiken och den blev en del av deras identitet", "Att vuxna skapade musiken åt ungdomarna", "Att rock'n'roll bara handlade om att dansa långsamt"],
+        "options": [
+          "Att musiken bara spelades i biografer före filmer",
+          "Att ungdomar kände igen sig i musiken och den blev en del av deras identitet",
+          "Att vuxna skapade musiken åt ungdomarna",
+          "Att rock'n'roll bara handlade om att dansa långsamt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Elvis uppfann all musik som finns i dag", "Att Elvis musik byggde på äldre traditioner men presenterades på ett nytt sätt som förändrade populärmusiken", "Att rock'n'roll bara var populärt i en enda stad", "Att gospel och blues försvann helt när rock'n'roll kom"],
+        "options": [
+          "Att Elvis uppfann all musik som finns i dag",
+          "Att Elvis musik byggde på äldre traditioner men presenterades på ett nytt sätt som förändrade populärmusiken",
+          "Att rock'n'roll bara var populärt i en enda stad",
+          "Att gospel och blues försvann helt när rock'n'roll kom"
+        ],
         "correct": 1
       }
     ],
@@ -23038,32 +23368,62 @@
     "questions": [
       {
         "q": "Var föddes Elvis Presley?",
-        "options": ["I Memphis, Tennessee", "I Nashville, Tennessee", "I New York, New York", "I Tupelo, Mississippi"],
+        "options": [
+          "I Memphis, Tennessee",
+          "I Nashville, Tennessee",
+          "I New York, New York",
+          "I Tupelo, Mississippi"
+        ],
         "correct": 3
       },
       {
         "q": "Vad fick Elvis i present på sin elvaårsdag istället för det han önskade sig?",
-        "options": ["En radio", "En gitarr", "En skivspelare", "En trumpet"],
+        "options": [
+          "En radio",
+          "En gitarr",
+          "En skivspelare",
+          "En trumpet"
+        ],
         "correct": 1
       },
       {
         "q": "Vad jobbade Elvis med innan han fick sitt musikaliska genombrott?",
-        "options": ["Som kock på en restaurang", "Som lärare i en skola", "Som lastbilschaufför", "Som fiskare vid Mississippifloden"],
+        "options": [
+          "Som kock på en restaurang",
+          "Som lärare i en skola",
+          "Som lastbilschaufför",
+          "Som fiskare vid Mississippifloden"
+        ],
         "correct": 2
       },
       {
         "q": "Vad letade producenten Sam Phillips efter enligt texten?",
-        "options": ["En musiker som bara kunde spela piano", "En vit sångare som kunde sjunga med samma känsla som svarta bluesmusiker", "En kompositör som skrev låtar utan sång", "En skådespelare som aldrig hade sjungit förut"],
+        "options": [
+          "En musiker som bara kunde spela piano",
+          "En vit sångare som kunde sjunga med samma känsla som svarta bluesmusiker",
+          "En kompositör som skrev låtar utan sång",
+          "En skådespelare som aldrig hade sjungit förut"
+        ],
         "correct": 1
       },
       {
         "q": "Varför kan man säga att Elvis genombrott inte bara handlade om talang?",
-        "options": ["För att han köpte sig in på skivbolaget", "För att texten nämner att det också handlade om att vara på rätt plats vid rätt tidpunkt", "För att han bara hade tur och ingen talang alls", "För att alla i Memphis blev lika kända som han"],
+        "options": [
+          "För att han köpte sig in på skivbolaget",
+          "För att texten nämner att det också handlade om att vara på rätt plats vid rätt tidpunkt",
+          "För att han bara hade tur och ingen talang alls",
+          "För att alla i Memphis blev lika kända som han"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Elvis hatade musik som barn men tvingades sjunga", "Att Memphis är en stad helt utan musikhistoria", "Att Elvis resa från en enkel uppväxt till berömmelse formades av talang och omständigheter", "Att alla lastbilschaufförer i USA blev rockstjärnor på 1950-talet"],
+        "options": [
+          "Att Elvis hatade musik som barn men tvingades sjunga",
+          "Att Memphis är en stad helt utan musikhistoria",
+          "Att Elvis resa från en enkel uppväxt till berömmelse formades av talang och omständigheter",
+          "Att alla lastbilschaufförer i USA blev rockstjärnor på 1950-talet"
+        ],
         "correct": 2
       }
     ],
@@ -23078,32 +23438,62 @@
     "questions": [
       {
         "q": "Vad förändrades i populärkulturen när Elvis slog igenom?",
-        "options": ["Att musik slutade spelas på radio helt", "Att en artists utseende, rörelser och kläder blev nästan lika viktigt som musiken", "Att biografer stängdes ner i hela USA", "Att ingen längre var intresserad av film eller tv"],
+        "options": [
+          "Att musik slutade spelas på radio helt",
+          "Att en artists utseende, rörelser och kläder blev nästan lika viktigt som musiken",
+          "Att biografer stängdes ner i hela USA",
+          "Att ingen längre var intresserad av film eller tv"
+        ],
         "correct": 1
       },
       {
         "q": "Hur reagerade unga och vuxna olika på Elvis stil?",
-        "options": ["Alla tyckte exakt likadant om honom", "Unga älskade det medan många vuxna var skeptiska och kallade honom vulgär", "Vuxna var mest entusiastiska och ungdomar var ointresserade", "Ingen brydde sig om hans kläder eller rörelser"],
+        "options": [
+          "Alla tyckte exakt likadant om honom",
+          "Unga älskade det medan många vuxna var skeptiska och kallade honom vulgär",
+          "Vuxna var mest entusiastiska och ungdomar var ointresserade",
+          "Ingen brydde sig om hans kläder eller rörelser"
+        ],
         "correct": 1
       },
       {
         "q": "Vad menas med merchandising i texten?",
-        "options": ["Att tjäna pengar på en kändis varumärke genom att sälja produkter", "Att sälja begagnade skivor på loppmarknader", "Att handla mat i stora butiker nära biografen", "Att bygga nya filmstudior vid havet"],
+        "options": [
+          "Att tjäna pengar på en kändis varumärke genom att sälja produkter",
+          "Att sälja begagnade skivor på loppmarknader",
+          "Att handla mat i stora butiker nära biografen",
+          "Att bygga nya filmstudior vid havet"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken baksida av Elvis framgång nämns i texten?",
-        "options": ["Att han aldrig tjänade pengar på sina filmer", "Att svarta musiker som bidragit till musiken inte fick samma erkännande", "Att hans filmer var för svåra att förstå för publiken", "Att ingen ville köpa hans skivor utanför Memphis"],
+        "options": [
+          "Att han aldrig tjänade pengar på sina filmer",
+          "Att svarta musiker som bidragit till musiken inte fick samma erkännande",
+          "Att hans filmer var för svåra att förstå för publiken",
+          "Att ingen ville köpa hans skivor utanför Memphis"
+        ],
         "correct": 1
       },
       {
         "q": "Hur många filmer medverkade Elvis i enligt texten?",
-        "options": ["Ungefär fem filmer", "Exakt hundra filmer", "Över trettio filmer", "Bara en enda film"],
+        "options": [
+          "Ungefär fem filmer",
+          "Exakt hundra filmer",
+          "Över trettio filmer",
+          "Bara en enda film"
+        ],
         "correct": 2
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Elvis var en kulturell kraft som förändrade underhållning och kändisskap, men att det också väcker frågor om rättvisa", "Att Elvis bara var känd för sin frisyr och inget annat", "Att filmindustrin aldrig tjänade pengar på musik", "Att popkultur inte förändrats sedan 1950-talet"],
+        "options": [
+          "Att Elvis var en kulturell kraft som förändrade underhållning och kändisskap, men att det också väcker frågor om rättvisa",
+          "Att Elvis bara var känd för sin frisyr och inget annat",
+          "Att filmindustrin aldrig tjänade pengar på musik",
+          "Att popkultur inte förändrats sedan 1950-talet"
+        ],
         "correct": 0
       }
     ],
@@ -23118,32 +23508,62 @@
     "questions": [
       {
         "q": "Vad innebar segregation i USA på 1950-talet enligt texten?",
-        "options": ["Att alla lyssnade på samma radiostation", "Att svarta och vita levde åtskilda med olika skolor och platser", "Att musik var förbjudet i hela landet", "Att alla barn gick i samma skola oavsett hudfärg"],
+        "options": [
+          "Att alla lyssnade på samma radiostation",
+          "Att svarta och vita levde åtskilda med olika skolor och platser",
+          "Att musik var förbjudet i hela landet",
+          "Att alla barn gick i samma skola oavsett hudfärg"
+        ],
         "correct": 1
       },
       {
         "q": "Hur skilde sig Elvis musiksmak från samhällets uppdelning?",
-        "options": ["Han lyssnade bara på country och inget annat", "Han lyssnade på både svart och vit musik och blandade stilarna", "Han vägrade lyssna på all musik förutom gospel", "Han spelade bara klassisk musik hemma"],
+        "options": [
+          "Han lyssnade bara på country och inget annat",
+          "Han lyssnade på både svart och vit musik och blandade stilarna",
+          "Han vägrade lyssna på all musik förutom gospel",
+          "Han spelade bara klassisk musik hemma"
+        ],
         "correct": 1
       },
       {
         "q": "Vem var Big Mama Thornton enligt texten?",
-        "options": ["Elvis musiklärare i skolan", "En radiovärd som bara spelade country", "En svart artist som spelat in låtar som Elvis senare gjorde till stora hits", "Elvis mormor som sjöng i kyrkan"],
+        "options": [
+          "Elvis musiklärare i skolan",
+          "En radiovärd som bara spelade country",
+          "En svart artist som spelat in låtar som Elvis senare gjorde till stora hits",
+          "Elvis mormor som sjöng i kyrkan"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken positiv effekt hade Elvis musik på segregationens gränser?",
-        "options": ["Fler vita lyssnare började upptäcka svarta artister genom att höra liknande musik", "Alla radiostationer stängdes ner direkt", "Segregationslagarna ändrades samma dag som Elvis första låt spelades", "Ingen effekt alls nämns i texten"],
+        "options": [
+          "Fler vita lyssnare började upptäcka svarta artister genom att höra liknande musik",
+          "Alla radiostationer stängdes ner direkt",
+          "Segregationslagarna ändrades samma dag som Elvis första låt spelades",
+          "Ingen effekt alls nämns i texten"
+        ],
         "correct": 0
       },
       {
         "q": "Varför var vissa svarta musiker frustrerade enligt texten?",
-        "options": ["För att Elvis musik lät helt annorlunda än deras", "För att en vit sångare fick uppmärksamhet för musik de själva hade utvecklat", "För att de inte gillade rock'n'roll alls", "För att Elvis aldrig lyssnade på deras musik"],
+        "options": [
+          "För att Elvis musik lät helt annorlunda än deras",
+          "För att en vit sångare fick uppmärksamhet för musik de själva hade utvecklat",
+          "För att de inte gillade rock'n'roll alls",
+          "För att Elvis aldrig lyssnade på deras musik"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att segregation aldrig påverkade musiken i USA", "Att Elvis musik hade samhällspåverkan genom att utmana segregationens gränser, men att frågan om kredit är komplex", "Att Elvis bara sjöng countrylåtar under hela sin karriär", "Att radiostationer på 1950-talet spelade all musik blandat utan problem"],
+        "options": [
+          "Att segregation aldrig påverkade musiken i USA",
+          "Att Elvis musik hade samhällspåverkan genom att utmana segregationens gränser, men att frågan om kredit är komplex",
+          "Att Elvis bara sjöng countrylåtar under hela sin karriär",
+          "Att radiostationer på 1950-talet spelade all musik blandat utan problem"
+        ],
         "correct": 1
       }
     ],
@@ -23158,32 +23578,62 @@
     "questions": [
       {
         "q": "Hur fungerade inspelning på Sun Records enligt texten?",
-        "options": ["Musikerna spelade in på datorer med program som klippte automatiskt", "Ljudet fångades direkt på en bandspelare och bandet fick börja om vid fel", "Man använde hundra mikrofoner samtidigt i ett stort rum", "Varje musiker spelade in hemma och skickade filerna till studion"],
+        "options": [
+          "Musikerna spelade in på datorer med program som klippte automatiskt",
+          "Ljudet fångades direkt på en bandspelare och bandet fick börja om vid fel",
+          "Man använde hundra mikrofoner samtidigt i ett stort rum",
+          "Varje musiker spelade in hemma och skickade filerna till studion"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är slapback echo?",
-        "options": ["Ett instrument som Elvis spelade på scenen", "En teknik där ljudet spelas tillbaka med kort fördröjning för att skapa eko", "En typ av gitarr som bara tillverkades i Memphis", "Ett datorprogram som inte fanns på 1950-talet"],
+        "options": [
+          "Ett instrument som Elvis spelade på scenen",
+          "En teknik där ljudet spelas tillbaka med kort fördröjning för att skapa eko",
+          "En typ av gitarr som bara tillverkades i Memphis",
+          "Ett datorprogram som inte fanns på 1950-talet"
+        ],
         "correct": 1
       },
       {
         "q": "Vad hände med ljudet när Elvis flyttade till större studior?",
-        "options": ["Det blev fylligare och mer polerat, men vissa tyckte att den råa energin försvann", "Det lät exakt likadant som på Sun Records", "Ljudet blev sämre för att studiorna var för stora", "Elvis slutade sjunga och lät bara instrument höras"],
+        "options": [
+          "Det blev fylligare och mer polerat, men vissa tyckte att den råa energin försvann",
+          "Det lät exakt likadant som på Sun Records",
+          "Ljudet blev sämre för att studiorna var för stora",
+          "Elvis slutade sjunga och lät bara instrument höras"
+        ],
         "correct": 0
       },
       {
         "q": "Varför var Elvis ibland frustrerad under filmmusik-inspelningarna?",
-        "options": ["För att han fick för många låtar att välja mellan", "För att han inte fick välja sina egna låtar", "För att filmerna aldrig visades på bio", "För att han hellre ville bli regissör än sångare"],
+        "options": [
+          "För att han fick för många låtar att välja mellan",
+          "För att han inte fick välja sina egna låtar",
+          "För att filmerna aldrig visades på bio",
+          "För att han hellre ville bli regissör än sångare"
+        ],
         "correct": 1
       },
       {
         "q": "Vad menas med att inspelningstekniken påverkar hur musik låter?",
-        "options": ["Att det inte spelar någon roll vilken utrustning man använder", "Att studions utrustning och metoder formar musikens klang och känsla", "Att alla inspelningar genom historien låter exakt likadant", "Att bara texten i låtarna är viktig, aldrig ljudet"],
+        "options": [
+          "Att det inte spelar någon roll vilken utrustning man använder",
+          "Att studions utrustning och metoder formar musikens klang och känsla",
+          "Att alla inspelningar genom historien låter exakt likadant",
+          "Att bara texten i låtarna är viktig, aldrig ljudet"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att Elvis karriär följde inspelningsteknikens utveckling och att tekniken påverkade hur musiken lät", "Att modern teknik gör all musik sämre", "Att Sun Records var den största studion i världen", "Att Elvis aldrig spelade in musik i en studio"],
+        "options": [
+          "Att Elvis karriär följde inspelningsteknikens utveckling och att tekniken påverkade hur musiken lät",
+          "Att modern teknik gör all musik sämre",
+          "Att Sun Records var den största studion i världen",
+          "Att Elvis aldrig spelade in musik i en studio"
+        ],
         "correct": 0
       }
     ],
@@ -23192,38 +23642,68 @@
   {
     "id": "ak8-tema-001",
     "title": "En karta som inte alltid syns",
-    "text": "När Amir bläddrar i sin geografibok hittar han inte alltid ordet \u201cKurdistan\u201d på kartan. Ibland står det bara Irak, Iran, Turkiet och Syrien. Ändå använder många kurder namnet Kurdistan för att beskriva de områden där kurder historiskt har bott och där språket kurdiska har talats i generationer. Det handlar alltså inte bara om en plats, utan också om identitet.\n\nGeografiskt ligger området i ett bälte av berg och högland. Bergen har påverkat livet på flera sätt. De har gett skydd, men också gjort resor och handel svårare. Många floder börjar i dessa berg, vilket gör dalar viktiga för jordbruk. I delar av irakiska Kurdistan, som ofta kallas Kurdistans regionala regering (KRG), finns städer som Erbil (Hewlêr) och Sulaymaniyah. Där syns moderna köpcentrum bredvid äldre kvarter och marknader. Under vissa perioder har området upplevt mer stabilitet än andra delar av Irak, vilket har lett till att människor flyttat dit för arbete eller utbildning.\n\nMen Kurdistan är inte ett enda land med en gemensam regering överallt. Kurder lever i flera stater och har olika villkor beroende på vilket land de bor i. I ett område kan kurdiska undervisas i skolan, medan det i ett annat kan vara begränsat. Därför kan två kurdiska ungdomar ha olika erfarenheter, även om de båda säger att de är från Kurdistan.\n\nAmir märker också att ordet \u201cKurdistan\u201d kan betyda olika saker i olika sammanhang. För vissa handlar det om ett framtida självständigt land. För andra handlar det främst om kultur, språk och samhörighet, oavsett var gränserna går. När han läser vidare förstår han att geografi inte bara handlar om berg och floder, utan också om hur människor beskriver sin plats i världen.",
+    "text": "När Amir bläddrar i sin geografibok hittar han inte alltid ordet “Kurdistan” på kartan. Ibland står det bara Irak, Iran, Turkiet och Syrien. Ändå använder många kurder namnet Kurdistan för att beskriva de områden där kurder historiskt har bott och där språket kurdiska har talats i generationer. Det handlar alltså inte bara om en plats, utan också om identitet.\n\nGeografiskt ligger området i ett bälte av berg och högland. Bergen har påverkat livet på flera sätt. De har gett skydd, men också gjort resor och handel svårare. Många floder börjar i dessa berg, vilket gör dalar viktiga för jordbruk. I delar av irakiska Kurdistan, som ofta kallas Kurdistans regionala regering (KRG), finns städer som Erbil (Hewlêr) och Sulaymaniyah. Där syns moderna köpcentrum bredvid äldre kvarter och marknader. Under vissa perioder har området upplevt mer stabilitet än andra delar av Irak, vilket har lett till att människor flyttat dit för arbete eller utbildning.\n\nMen Kurdistan är inte ett enda land med en gemensam regering överallt. Kurder lever i flera stater och har olika villkor beroende på vilket land de bor i. I ett område kan kurdiska undervisas i skolan, medan det i ett annat kan vara begränsat. Därför kan två kurdiska ungdomar ha olika erfarenheter, även om de båda säger att de är från Kurdistan.\n\nAmir märker också att ordet “Kurdistan” kan betyda olika saker i olika sammanhang. För vissa handlar det om ett framtida självständigt land. För andra handlar det främst om kultur, språk och samhörighet, oavsett var gränserna går. När han läser vidare förstår han att geografi inte bara handlar om berg och floder, utan också om hur människor beskriver sin plats i världen.",
     "grade": 8,
     "category": "Geografi",
     "questions": [
       {
-        "q": "Varför syns inte alltid ordet \u201cKurdistan\u201d på kartor i Amirs bok?",
-        "options": ["För att området ofta räknas in i flera olika länder", "För att Kurdistan ligger under havsytan på många kartor", "För att kurder alltid har haft ett eget land som redan är markerat", "För att området bara består av öknar utan städer"],
+        "q": "Varför syns inte alltid ordet “Kurdistan” på kartor i Amirs bok?",
+        "options": [
+          "För att området ofta räknas in i flera olika länder",
+          "För att Kurdistan ligger under havsytan på många kartor",
+          "För att kurder alltid har haft ett eget land som redan är markerat",
+          "För att området bara består av öknar utan städer"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken geografisk faktor beskrivs som särskilt viktig för livet i området?",
-        "options": ["Långa kustlinjer med hamnar", "Berg och högland som påverkar skydd och resor", "Stora korallrev som ger fiskeinkomster", "Permanent is som gör jordbruk omöjligt"],
+        "options": [
+          "Långa kustlinjer med hamnar",
+          "Berg och högland som påverkar skydd och resor",
+          "Stora korallrev som ger fiskeinkomster",
+          "Permanent is som gör jordbruk omöjligt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket exempel nämns på ett område med viss grad av självstyre?",
-        "options": ["Kurdistans regionala regering (KRG) i Irak", "En union mellan alla kurdiska områden i Europa", "Ett kurdiskt kungadöme i Nordafrika", "En nybildad stat i Sydamerika"],
+        "options": [
+          "Kurdistans regionala regering (KRG) i Irak",
+          "En union mellan alla kurdiska områden i Europa",
+          "Ett kurdiskt kungadöme i Nordafrika",
+          "En nybildad stat i Sydamerika"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudpoäng?",
-        "options": ["Att berg alltid gör handel omöjlig", "Att alla kartor visar samma politiska gränser", "Att Kurdistan är ett enda land med en gemensam regering", "Att geografi och identitet hänger ihop när människor beskriver Kurdistan"],
+        "options": [
+          "Att berg alltid gör handel omöjlig",
+          "Att alla kartor visar samma politiska gränser",
+          "Att Kurdistan är ett enda land med en gemensam regering",
+          "Att geografi och identitet hänger ihop när människor beskriver Kurdistan"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken skillnad mellan kurdiska ungdomars vardag tar texten upp?",
-        "options": ["Att villkoren kan skilja sig beroende på vilket land de bor i", "Att alla kurdiska ungdomar bor i samma stad", "Att kurdiska alltid är förbjudet att tala i hemmet", "Att ingen får studera vidare efter grundskolan"],
+        "options": [
+          "Att villkoren kan skilja sig beroende på vilket land de bor i",
+          "Att alla kurdiska ungdomar bor i samma stad",
+          "Att kurdiska alltid är förbjudet att tala i hemmet",
+          "Att ingen får studera vidare efter grundskolan"
+        ],
         "correct": 0
       },
       {
-        "q": "Vad kan ordet \u201cKurdistan\u201d betyda enligt texten, förutom en plats?",
-        "options": ["Enbart ett bergskedjenamn utan koppling till människor", "En identitet kopplad till kultur, språk och samhörighet", "Ett väderfenomen som återkommer varje vår", "En maträtt som bara äts i huvudstaden"],
+        "q": "Vad kan ordet “Kurdistan” betyda enligt texten, förutom en plats?",
+        "options": [
+          "Enbart ett bergskedjenamn utan koppling till människor",
+          "En identitet kopplad till kultur, språk och samhörighet",
+          "Ett väderfenomen som återkommer varje vår",
+          "En maträtt som bara äts i huvudstaden"
+        ],
         "correct": 1
       }
     ],
@@ -23238,32 +23718,62 @@
     "questions": [
       {
         "q": "Vad hände med Mellanösterns karta efter första världskriget enligt texten?",
-        "options": ["Det osmanska riket försvagades och nya gränser drogs", "Alla gränser försvann och länder slogs ihop", "Europa tog bort alla stater i regionen", "Inga förändringar skedde, allt förblev som tidigare"],
+        "options": [
+          "Det osmanska riket försvagades och nya gränser drogs",
+          "Alla gränser försvann och länder slogs ihop",
+          "Europa tog bort alla stater i regionen",
+          "Inga förändringar skedde, allt förblev som tidigare"
+        ],
         "correct": 0
       },
       {
         "q": "Varför blev det svårt för kurder att få ett gemensamt land under 1920-talet?",
-        "options": ["För att kurder inte bodde i området längre", "För att stormakter ofta prioriterade egna intressen och drog nya gränser", "För att det inte fanns några internationella förhandlingar alls", "För att alla länder i regionen redan var demokratiska och eniga"],
+        "options": [
+          "För att kurder inte bodde i området längre",
+          "För att stormakter ofta prioriterade egna intressen och drog nya gränser",
+          "För att det inte fanns några internationella förhandlingar alls",
+          "För att alla länder i regionen redan var demokratiska och eniga"
+        ],
         "correct": 1
       },
       {
         "q": "Vilka länder nämns som exempel där kurder hamnade efter att gränser drogs om?",
-        "options": ["Spanien, Portugal, Frankrike och Italien", "Kanada, USA, Mexiko och Brasilien", "Turkiet, Iran, Irak och Syrien", "Japan, Kina, Korea och Mongoliet"],
+        "options": [
+          "Spanien, Portugal, Frankrike och Italien",
+          "Kanada, USA, Mexiko och Brasilien",
+          "Turkiet, Iran, Irak och Syrien",
+          "Japan, Kina, Korea och Mongoliet"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken händelse från 1988 lyfts som ett tragiskt exempel i texten?",
-        "options": ["En jordbävning som förstörde alla städer i regionen", "Ett fredsavtal som gav alla kurder rösträtt samtidigt", "En stor handelsblockad som stoppade all import", "Gasattacken mot Halabja där många civila dog"],
+        "options": [
+          "En jordbävning som förstörde alla städer i regionen",
+          "Ett fredsavtal som gav alla kurder rösträtt samtidigt",
+          "En stor handelsblockad som stoppade all import",
+          "Gasattacken mot Halabja där många civila dog"
+        ],
         "correct": 3
       },
       {
         "q": "Vad ledde Gulfkriget 1991 till i norra Irak enligt texten?",
-        "options": ["Ett mer självstyrt kurdiskt område började växa fram", "Att kurder flyttade därifrån och området tömdes", "Att regionen blev en del av EU", "Att alla konflikter i Mellanöstern avslutades"],
+        "options": [
+          "Ett mer självstyrt kurdiskt område började växa fram",
+          "Att kurder flyttade därifrån och området tömdes",
+          "Att regionen blev en del av EU",
+          "Att alla konflikter i Mellanöstern avslutades"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket resonemang om framtiden beskrivs i texten?",
-        "options": ["Att alla kurder vill exakt samma sak politiskt", "Att vissa vill ha ett eget land och andra vill stärka rättigheter där de bor", "Att framtiden inte påverkas av historien", "Att gränser alltid dras helt efter folkgruppers önskemål"],
+        "options": [
+          "Att alla kurder vill exakt samma sak politiskt",
+          "Att vissa vill ha ett eget land och andra vill stärka rättigheter där de bor",
+          "Att framtiden inte påverkas av historien",
+          "Att gränser alltid dras helt efter folkgruppers önskemål"
+        ],
         "correct": 1
       }
     ],
@@ -23272,38 +23782,68 @@
   {
     "id": "ak8-tema-003",
     "title": "Språk, musik och en eld i mars",
-    "text": "På en skola i Sverige ska klassen ordna en kulturkväll. Läraren ber alla att ta med något som betyder mycket för dem. Dilan tar med en liten flagga med en sol i mitten, men förklarar att symboler kan uppfattas olika beroende på sammanhang. Hen vill hellre prata om språk och traditioner. Samir har med en spellista med kurdisk musik, och Aso visar ett foto från Newroz, den kurdiska nyårsfesten som ofta firas runt vårdagjämningen. Där tänder man ibland eldar, sjunger och dansar i ring, inte bara för att det är festligt utan också för att högtiden har blivit en markering av identitet och hopp.\n\nKurdiskan är inte ett enda språk på exakt samma sätt överallt. Det finns flera varianter, ofta kallade dialekter, som kan skilja sig i uttal och ord. Två vanliga är kurmanji och sorani. En person kan förstå mycket av den andras dialekt, men ändå behöva vänja sig vid skillnaderna. Dessutom använder kurder olika alfabet beroende på land och tradition: i vissa områden används latinska bokstäver, i andra ett alfabet som liknar det arabiska. Det gör att en text kan se helt olika ut även om den säger samma sak.\n\nNär Dilan berättar detta inser flera i klassen att språk också handlar om tillgång. Om man får lära sig läsa och skriva på sitt modersmål blir det lättare att föra vidare berättelser, dikter och sånger. Samir spelar en låt där instrumentet tembûr hörs tydligt. Han säger att musiken ofta bär minnen: om byar, berg, förälskelser och migration. Aso berättar att hens mormor, som har en hörselnedsättning, känner rytmen genom att lägga handen mot bordet när trummorna spelar.\n\nKulturkvällen blir inte en tävling om \u201crätt\u201d symboler. Den blir en påminnelse om att Kurdistan för många betyder ett sammanhang: språk som lever i olika former, traditioner som förändras, och en gemenskap som kan finnas både i Mellanöstern och i en svensk skolsal.",
+    "text": "På en skola i Sverige ska klassen ordna en kulturkväll. Läraren ber alla att ta med något som betyder mycket för dem. Dilan tar med en liten flagga med en sol i mitten, men förklarar att symboler kan uppfattas olika beroende på sammanhang. Hen vill hellre prata om språk och traditioner. Samir har med en spellista med kurdisk musik, och Aso visar ett foto från Newroz, den kurdiska nyårsfesten som ofta firas runt vårdagjämningen. Där tänder man ibland eldar, sjunger och dansar i ring, inte bara för att det är festligt utan också för att högtiden har blivit en markering av identitet och hopp.\n\nKurdiskan är inte ett enda språk på exakt samma sätt överallt. Det finns flera varianter, ofta kallade dialekter, som kan skilja sig i uttal och ord. Två vanliga är kurmanji och sorani. En person kan förstå mycket av den andras dialekt, men ändå behöva vänja sig vid skillnaderna. Dessutom använder kurder olika alfabet beroende på land och tradition: i vissa områden används latinska bokstäver, i andra ett alfabet som liknar det arabiska. Det gör att en text kan se helt olika ut även om den säger samma sak.\n\nNär Dilan berättar detta inser flera i klassen att språk också handlar om tillgång. Om man får lära sig läsa och skriva på sitt modersmål blir det lättare att föra vidare berättelser, dikter och sånger. Samir spelar en låt där instrumentet tembûr hörs tydligt. Han säger att musiken ofta bär minnen: om byar, berg, förälskelser och migration. Aso berättar att hens mormor, som har en hörselnedsättning, känner rytmen genom att lägga handen mot bordet när trummorna spelar.\n\nKulturkvällen blir inte en tävling om “rätt” symboler. Den blir en påminnelse om att Kurdistan för många betyder ett sammanhang: språk som lever i olika former, traditioner som förändras, och en gemenskap som kan finnas både i Mellanöstern och i en svensk skolsal.",
     "grade": 8,
     "category": "Kultur",
     "questions": [
       {
         "q": "Vad vill Dilan helst prata om i stället för symboler?",
-        "options": ["Språk och traditioner", "Matematik och provresultat", "Endast politik och partier", "Sportregler från olika länder"],
+        "options": [
+          "Språk och traditioner",
+          "Matematik och provresultat",
+          "Endast politik och partier",
+          "Sportregler från olika länder"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är Newroz enligt texten?",
-        "options": ["En kurdisk nyårsfest som ofta firas runt vårdagjämningen", "En vinterhögtid där man alltid undviker musik", "Ett bergspass som bara används av herdar", "Ett skolämne som handlar om geologi"],
+        "options": [
+          "En kurdisk nyårsfest som ofta firas runt vårdagjämningen",
+          "En vinterhögtid där man alltid undviker musik",
+          "Ett bergspass som bara används av herdar",
+          "Ett skolämne som handlar om geologi"
+        ],
         "correct": 0
       },
       {
         "q": "Vilka två dialekter nämns som vanliga varianter av kurdiska?",
-        "options": ["Svenska och norska", "Spanska och portugisiska", "Kurmanji och sorani", "Tyska och nederländska"],
+        "options": [
+          "Svenska och norska",
+          "Spanska och portugisiska",
+          "Kurmanji och sorani",
+          "Tyska och nederländska"
+        ],
         "correct": 2
       },
       {
         "q": "Varför kan kurdiska texter se olika ut även om de betyder samma sak?",
-        "options": ["För att kurdiska alltid skrivs utan vokaler", "För att varje by hittar på egna bokstäver", "För att alla skriver med hemliga koder", "För att olika alfabet kan användas i olika områden"],
+        "options": [
+          "För att kurdiska alltid skrivs utan vokaler",
+          "För att varje by hittar på egna bokstäver",
+          "För att alla skriver med hemliga koder",
+          "För att olika alfabet kan användas i olika områden"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken tanke om språk lyfts i texten när klassen pratar om modersmål?",
-        "options": ["Att läs- och skrivkunnighet kan göra det lättare att föra kultur vidare", "Att modersmål aldrig påverkar berättelser eller sånger", "Att dialekter alltid gör att man inte kan förstå varandra alls", "Att alfabet bara är viktigt för turister"],
+        "options": [
+          "Att läs- och skrivkunnighet kan göra det lättare att föra kultur vidare",
+          "Att modersmål aldrig påverkar berättelser eller sånger",
+          "Att dialekter alltid gör att man inte kan förstå varandra alls",
+          "Att alfabet bara är viktigt för turister"
+        ],
         "correct": 0
       },
       {
         "q": "Hur deltar Asos mormor i musiken trots hörselnedsättning?",
-        "options": ["Genom att läsa låttexter på en skärm", "Genom att känna rytmen med handen mot bordet", "Genom att alltid stå längst bort från trummorna", "Genom att bara lyssna på mycket höga toner"],
+        "options": [
+          "Genom att läsa låttexter på en skärm",
+          "Genom att känna rytmen med handen mot bordet",
+          "Genom att alltid stå längst bort från trummorna",
+          "Genom att bara lyssna på mycket höga toner"
+        ],
         "correct": 1
       }
     ],
@@ -23318,32 +23858,62 @@
     "questions": [
       {
         "q": "Vilket område handlar texten främst om när den beskriver ett regionalt självstyre?",
-        "options": ["Irakiska Kurdistan i norra Irak", "Ett kurdiskt område i norra Sverige", "En region i Australien med egen valuta", "Ett bergsområde i Kanada utan städer"],
+        "options": [
+          "Irakiska Kurdistan i norra Irak",
+          "Ett kurdiskt område i norra Sverige",
+          "En region i Australien med egen valuta",
+          "Ett bergsområde i Kanada utan städer"
+        ],
         "correct": 0
       },
       {
         "q": "Varför måste vissa beslut fortfarande förhandlas med Bagdad?",
-        "options": ["För att regionen formellt är en del av Irak", "För att Bagdad ligger närmast havet", "För att parlamentet i regionen är upplöst", "För att regionen saknar invånare"],
+        "options": [
+          "För att regionen formellt är en del av Irak",
+          "För att Bagdad ligger närmast havet",
+          "För att parlamentet i regionen är upplöst",
+          "För att regionen saknar invånare"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket exempel ges på något som kan påverkas om ekonomi och fördelning av inkomster blir en konflikt?",
-        "options": ["Att alla berg flyttas för att göra plats för nya vägar", "Att skolböcker blir identiska i hela världen", "Att löner, investeringar och samhällsservice kan påverkas", "Att alla invånare automatiskt får samma jobb"],
+        "options": [
+          "Att alla berg flyttas för att göra plats för nya vägar",
+          "Att skolböcker blir identiska i hela världen",
+          "Att löner, investeringar och samhällsservice kan påverkas",
+          "Att alla invånare automatiskt får samma jobb"
+        ],
         "correct": 2
       },
       {
         "q": "Varför kan grannländer reagera på politiska förändringar i regionen enligt texten?",
-        "options": ["För att de vill stoppa all handel i Mellanöstern", "För att de tror att regionen ska flytta sina floder", "För att de redan är helt utan minoriteter", "För att de kan bli oroliga att egna minoriteter ska kräva samma sak"],
+        "options": [
+          "För att de vill stoppa all handel i Mellanöstern",
+          "För att de tror att regionen ska flytta sina floder",
+          "För att de redan är helt utan minoriteter",
+          "För att de kan bli oroliga att egna minoriteter ska kräva samma sak"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken vardagsnära fråga använder texten för att visa att politik blir konkret för invånarna?",
-        "options": ["Om det blir elavbrott och om det finns jobb", "Om alla får nya efternamn varje år", "Om solen går upp i väster", "Om skolan slutar ha raster"],
+        "options": [
+          "Om det blir elavbrott och om det finns jobb",
+          "Om alla får nya efternamn varje år",
+          "Om solen går upp i väster",
+          "Om skolan slutar ha raster"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken slutsats antyds om vägen mot mer självstyre eller självständighet?",
-        "options": ["Att det alltid går snabbt och utan kompromisser", "Att institutioner, rättssäkerhet och demokratiska processer kan behöva stärkas", "Att ekonomi aldrig spelar någon roll", "Att gränser inte påverkar människor alls"],
+        "options": [
+          "Att det alltid går snabbt och utan kompromisser",
+          "Att institutioner, rättssäkerhet och demokratiska processer kan behöva stärkas",
+          "Att ekonomi aldrig spelar någon roll",
+          "Att gränser inte påverkar människor alls"
+        ],
         "correct": 1
       }
     ],
@@ -23352,38 +23922,68 @@
   {
     "id": "ak8-tema-005",
     "title": "Att bära två hem samtidigt",
-    "text": "När Zilan flyttar till en ny stad i Sverige får hen ofta frågan varifrån familjen kommer. Zilan svarar ibland \u201cfrån Irak\u201d, ibland \u201cfrån Kurdistan\u201d, och märker att reaktionen kan bli olika. För vissa är det bara en geografisk detalj. För andra väcker det frågor om konflikter, migration och mänskliga rättigheter.\n\nKurder har i olika tider och på olika platser upplevt begränsningar av språk, politisk organisering eller kulturella uttryck. Samtidigt har villkoren varierat mycket mellan länder och perioder. Vissa familjer har flytt på grund av krig och våld, andra på grund av ekonomiska svårigheter eller brist på framtidstro. När människor lämnar ett område tar de ofta med sig mer än en resväska: de tar med sig berättelser, sånger, mattraditioner och ett språk som kanske talas hemma men inte alltid i samhället runt omkring.\n\nI diasporan, alltså när en grupp bor utanför sitt ursprungliga område, kan identitet bli både starkare och mer komplicerad. Zilan går på kurdisk dans ibland, men spelar också svensk fotboll med kompisar. Ibland känns det lätt att kombinera. Ibland känns det som att behöva välja. En släkting säger att man måste hålla fast vid allt \u201csom förr\u201d, medan en annan släkting säger att man måste anpassa sig helt för att bli accepterad. Zilan tycker att båda har en poäng, men att verkligheten ofta ligger mitt emellan.\n\nTexten visar också att mänskliga rättigheter inte bara handlar om stora ord i FN-dokument. Det handlar om rätten att kunna uttrycka sin kultur, att känna sig trygg och att få delta i samhället utan att bli misstänkliggjord. När Zilan skriver en skoluppgift om Kurdistan väljer hen därför att inte bara beskriva konflikter. Hen skriver också om vardag, språk och människor som försöker bygga framtid – både där och här.",
+    "text": "När Zilan flyttar till en ny stad i Sverige får hen ofta frågan varifrån familjen kommer. Zilan svarar ibland “från Irak”, ibland “från Kurdistan”, och märker att reaktionen kan bli olika. För vissa är det bara en geografisk detalj. För andra väcker det frågor om konflikter, migration och mänskliga rättigheter.\n\nKurder har i olika tider och på olika platser upplevt begränsningar av språk, politisk organisering eller kulturella uttryck. Samtidigt har villkoren varierat mycket mellan länder och perioder. Vissa familjer har flytt på grund av krig och våld, andra på grund av ekonomiska svårigheter eller brist på framtidstro. När människor lämnar ett område tar de ofta med sig mer än en resväska: de tar med sig berättelser, sånger, mattraditioner och ett språk som kanske talas hemma men inte alltid i samhället runt omkring.\n\nI diasporan, alltså när en grupp bor utanför sitt ursprungliga område, kan identitet bli både starkare och mer komplicerad. Zilan går på kurdisk dans ibland, men spelar också svensk fotboll med kompisar. Ibland känns det lätt att kombinera. Ibland känns det som att behöva välja. En släkting säger att man måste hålla fast vid allt “som förr”, medan en annan släkting säger att man måste anpassa sig helt för att bli accepterad. Zilan tycker att båda har en poäng, men att verkligheten ofta ligger mitt emellan.\n\nTexten visar också att mänskliga rättigheter inte bara handlar om stora ord i FN-dokument. Det handlar om rätten att kunna uttrycka sin kultur, att känna sig trygg och att få delta i samhället utan att bli misstänkliggjord. När Zilan skriver en skoluppgift om Kurdistan väljer hen därför att inte bara beskriva konflikter. Hen skriver också om vardag, språk och människor som försöker bygga framtid – både där och här.",
     "grade": 8,
     "category": "Mänskliga rättigheter",
     "questions": [
       {
-        "q": "Varför märker Zilan att svaret \u201cKurdistan\u201d kan ge olika reaktioner?",
-        "options": ["För att det kan väcka frågor om konflikter, migration och rättigheter", "För att alla alltid tänker på exakt samma sak", "För att ordet bara används om en sportklubb", "För att Sverige har förbjudit ordet i skolor"],
+        "q": "Varför märker Zilan att svaret “Kurdistan” kan ge olika reaktioner?",
+        "options": [
+          "För att det kan väcka frågor om konflikter, migration och rättigheter",
+          "För att alla alltid tänker på exakt samma sak",
+          "För att ordet bara används om en sportklubb",
+          "För att Sverige har förbjudit ordet i skolor"
+        ],
         "correct": 0
       },
       {
-        "q": "Vad betyder \u201cdiasporan\u201d enligt textens förklaring?",
-        "options": ["När en grupp bor utanför sitt ursprungliga område", "När en stad byter namn vart tionde år", "När två länder slås ihop till ett", "När en högtid alltid firas i hemlighet"],
+        "q": "Vad betyder “diasporan” enligt textens förklaring?",
+        "options": [
+          "När en grupp bor utanför sitt ursprungliga område",
+          "När en stad byter namn vart tionde år",
+          "När två länder slås ihop till ett",
+          "När en högtid alltid firas i hemlighet"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket exempel visar hur Zilan kombinerar olika delar av sitt liv?",
-        "options": ["Hen vägrar prata med kompisar i skolan", "Hen flyttar tillbaka varje helg", "Hen går på kurdisk dans och spelar svensk fotboll", "Hen slutar helt med alla fritidsaktiviteter"],
+        "options": [
+          "Hen vägrar prata med kompisar i skolan",
+          "Hen flyttar tillbaka varje helg",
+          "Hen går på kurdisk dans och spelar svensk fotboll",
+          "Hen slutar helt med alla fritidsaktiviteter"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken rättighet betonas som vardagsnära i texten?",
-        "options": ["Rätten att bestämma vädret", "Rätten att aldrig behöva gå i skolan", "Rätten att resa gratis i hela världen", "Rätten att uttrycka kultur och delta utan att misstänkliggöras"],
+        "options": [
+          "Rätten att bestämma vädret",
+          "Rätten att aldrig behöva gå i skolan",
+          "Rätten att resa gratis i hela världen",
+          "Rätten att uttrycka kultur och delta utan att misstänkliggöras"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken konflikt i åsikter mellan släktingar beskriver texten?",
-        "options": ["Att en vill hålla fast vid allt som förr och en annan vill anpassa sig helt", "Att båda vill att Zilan ska sluta lära sig språk", "Att ingen vill att Zilan ska ha vänner", "Att alla är överens om att identitet är oviktigt"],
+        "options": [
+          "Att en vill hålla fast vid allt som förr och en annan vill anpassa sig helt",
+          "Att båda vill att Zilan ska sluta lära sig språk",
+          "Att ingen vill att Zilan ska ha vänner",
+          "Att alla är överens om att identitet är oviktigt"
+        ],
         "correct": 0
       },
       {
         "q": "Varför väljer Zilan att inte bara skriva om konflikter i sin skoluppgift?",
-        "options": ["För att konflikter aldrig har funnits i regionen", "För att hen också vill beskriva vardag, språk och framtidsförsök", "För att skolan förbjuder historiska exempel", "För att hen bara vill skriva om svensk geografi"],
+        "options": [
+          "För att konflikter aldrig har funnits i regionen",
+          "För att hen också vill beskriva vardag, språk och framtidsförsök",
+          "För att skolan förbjuder historiska exempel",
+          "För att hen bara vill skriva om svensk geografi"
+        ],
         "correct": 1
       }
     ],
@@ -23398,32 +23998,62 @@
     "questions": [
       {
         "q": "Var är Elin och Amir när de ser affischen?",
-        "options": ["I musikrummet på fritids", "På fotbollsplanen", "I matsalen", "I skolans korridor"],
+        "options": [
+          "I musikrummet på fritids",
+          "På fotbollsplanen",
+          "I matsalen",
+          "I skolans korridor"
+        ],
         "correct": 0
       },
       {
         "q": "Vad säger Amir att musiken låter som?",
-        "options": ["Som en lugn viskning", "Som när man hoppar studsmatta", "Som en åskknall", "Som en sovsång"],
+        "options": [
+          "Som en lugn viskning",
+          "Som när man hoppar studsmatta",
+          "Som en åskknall",
+          "Som en sovsång"
+        ],
         "correct": 1
       },
       {
         "q": "Vad finns i rummet i musikvideon?",
-        "options": ["Bara ett piano", "En stor skog", "Ballonger och lampor som blinkar", "En tom scen utan saker"],
+        "options": [
+          "Bara ett piano",
+          "En stor skog",
+          "Ballonger och lampor som blinkar",
+          "En tom scen utan saker"
+        ],
         "correct": 2
       },
       {
         "q": "Varför gillar många Dolly Style, enligt Sara?",
-        "options": ["För att de alltid är tysta", "För att de vinner varje tävling", "För att de bor i samma stad", "För att de vågar vara sig själva"],
+        "options": [
+          "För att de alltid är tysta",
+          "För att de vinner varje tävling",
+          "För att de bor i samma stad",
+          "För att de vågar vara sig själva"
+        ],
         "correct": 3
       },
       {
         "q": "Vad gör barnen efter mellis?",
-        "options": ["De gör armband av pärlor", "De skriver prov", "De städar hela skolan", "De går hem direkt"],
+        "options": [
+          "De gör armband av pärlor",
+          "De skriver prov",
+          "De städar hela skolan",
+          "De går hem direkt"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket budskap sjunger bandet om i texten?",
-        "options": ["Att alltid tävla", "Att aldrig leka", "Vänskap och att man kan vara olika", "Att bara gilla samma sak"],
+        "options": [
+          "Att alltid tävla",
+          "Att aldrig leka",
+          "Vänskap och att man kan vara olika",
+          "Att bara gilla samma sak"
+        ],
         "correct": 2
       }
     ],
@@ -23438,32 +24068,62 @@
     "questions": [
       {
         "q": "Varför vill flera i klassen ha Dolly Style som musik?",
-        "options": ["För att låtarna är lätta att sjunga med i", "För att låtarna är helt tysta", "För att Jonas förbjuder annan musik", "För att alla redan kan spela gitarr"],
+        "options": [
+          "För att låtarna är lätta att sjunga med i",
+          "För att låtarna är helt tysta",
+          "För att Jonas förbjuder annan musik",
+          "För att alla redan kan spela gitarr"
+        ],
         "correct": 0
       },
       {
         "q": "Vad ska klassen skapa med färgat papper?",
-        "options": ["En ny mattebok", "En scenbakgrund", "Ett prov", "En flagga till rektorn"],
+        "options": [
+          "En ny mattebok",
+          "En scenbakgrund",
+          "Ett prov",
+          "En flagga till rektorn"
+        ],
         "correct": 1
       },
       {
         "q": "Vad bygger Sam?",
-        "options": ["En regnbåge av papp och tejp", "En robot av metall", "Ett torn av sten", "En båt av trä"],
+        "options": [
+          "En regnbåge av papp och tejp",
+          "En robot av metall",
+          "Ett torn av sten",
+          "En båt av trä"
+        ],
         "correct": 0
       },
       {
         "q": "Vad tipsar Jonas om när man är nervös?",
-        "options": ["Springa så fort man kan", "Blunda hela tiden", "Andas långsamt och titta på en vän", "Gömma sig bakom ridån"],
+        "options": [
+          "Springa så fort man kan",
+          "Blunda hela tiden",
+          "Andas långsamt och titta på en vän",
+          "Gömma sig bakom ridån"
+        ],
         "correct": 2
       },
       {
         "q": "Vad märker Nora när hon testar tipset?",
-        "options": ["Att hon blir arg", "Att axlarna slappnar av", "Att hon glömmer sitt namn", "Att hon tappar rösten direkt"],
+        "options": [
+          "Att hon blir arg",
+          "Att axlarna slappnar av",
+          "Att hon glömmer sitt namn",
+          "Att hon tappar rösten direkt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilka applåderar på fredagen?",
-        "options": ["Bara lärarna", "Endast skolans kockar", "Alla i en annan klass", "Föräldrar och syskon"],
+        "options": [
+          "Bara lärarna",
+          "Endast skolans kockar",
+          "Alla i en annan klass",
+          "Föräldrar och syskon"
+        ],
         "correct": 3
       }
     ],
@@ -23478,32 +24138,62 @@
     "questions": [
       {
         "q": "Vad lånar Fatima på biblioteket?",
-        "options": ["En bok om popmusik", "En karta över Sverige", "En bok om dinosaurier", "En tidning om väder"],
+        "options": [
+          "En bok om popmusik",
+          "En karta över Sverige",
+          "En bok om dinosaurier",
+          "En tidning om väder"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken typ av låt lägger hon först i spellistan?",
-        "options": ["En Dolly Style-låt med snabb rytm", "En helt tyst låt", "En låt utan refräng", "En låt som bara är trummor"],
+        "options": [
+          "En Dolly Style-låt med snabb rytm",
+          "En helt tyst låt",
+          "En låt utan refräng",
+          "En låt som bara är trummor"
+        ],
         "correct": 0
       },
       {
         "q": "Varför fastnar refrängen ofta i huvudet, enligt morfar?",
-        "options": ["För att den alltid är svår att sjunga", "För att den upprepas och har enkel melodi", "För att den bara finns på vintern", "För att den aldrig spelas igen"],
+        "options": [
+          "För att den alltid är svår att sjunga",
+          "För att den upprepas och har enkel melodi",
+          "För att den bara finns på vintern",
+          "För att den aldrig spelas igen"
+        ],
         "correct": 1
       },
       {
         "q": "Vad gör Fatima och morfar när refrängen börjar?",
-        "options": ["De sitter helt stilla", "De ritar i en bok", "De klappar med händerna", "De springer ut ur rummet"],
+        "options": [
+          "De sitter helt stilla",
+          "De ritar i en bok",
+          "De klappar med händerna",
+          "De springer ut ur rummet"
+        ],
         "correct": 2
       },
       {
         "q": "Vad bestämmer Fatima och Viggo att göra i skolan?",
-        "options": ["Bygga ett slott", "Göra en egen liten dans", "Skriva en uppsats om matte", "Samla stenar i en låda"],
+        "options": [
+          "Bygga ett slott",
+          "Göra en egen liten dans",
+          "Skriva en uppsats om matte",
+          "Samla stenar i en låda"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket av orden skriver Fatima ner till slut?",
-        "options": ["Tillsammans", "Sömn", "Regnjacka", "Tystnad"],
+        "options": [
+          "Tillsammans",
+          "Sömn",
+          "Regnjacka",
+          "Tystnad"
+        ],
         "correct": 0
       }
     ],
@@ -23518,32 +24208,62 @@
     "questions": [
       {
         "q": "Vad heter workshoppen på kulturhuset?",
-        "options": ["Dolly-dans", "Vinterloppet", "Bokklubben", "Smygverkstaden"],
+        "options": [
+          "Dolly-dans",
+          "Vinterloppet",
+          "Bokklubben",
+          "Smygverkstaden"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket pronomen använder Kim?",
-        "options": ["Han", "Hen", "Hon", "De"],
+        "options": [
+          "Han",
+          "Hen",
+          "Hon",
+          "De"
+        ],
         "correct": 1
       },
       {
         "q": "Varför står Tuva nära högtalaren?",
-        "options": ["För att se lamporna bättre", "För att kunna prata med alla", "För att känna basen", "För att få låna en peruk"],
+        "options": [
+          "För att se lamporna bättre",
+          "För att kunna prata med alla",
+          "För att känna basen",
+          "För att få låna en peruk"
+        ],
         "correct": 2
       },
       {
         "q": "Vad visar Oliver att man kan göra i stället för hopp?",
-        "options": ["Långa fotsteg bakåt", "En stilla bugning", "Snabba armrörelser", "Sitta helt tyst"],
+        "options": [
+          "Långa fotsteg bakåt",
+          "En stilla bugning",
+          "Snabba armrörelser",
+          "Sitta helt tyst"
+        ],
         "correct": 2
       },
       {
         "q": "Vad säger Kim om pauser i dansen?",
-        "options": ["Paus är också en del av dansen", "Paus är alltid fel", "Paus finns bara på slutet", "Paus betyder att man måste gå hem"],
+        "options": [
+          "Paus är också en del av dansen",
+          "Paus är alltid fel",
+          "Paus finns bara på slutet",
+          "Paus betyder att man måste gå hem"
+        ],
         "correct": 0
       },
       {
         "q": "Vad väljer Oliver efteråt?",
-        "options": ["Ett lila färgband", "Ett silverfärgat band", "En grön mössa", "En gul ryggsäck"],
+        "options": [
+          "Ett lila färgband",
+          "Ett silverfärgat band",
+          "En grön mössa",
+          "En gul ryggsäck"
+        ],
         "correct": 1
       }
     ],
@@ -23558,35 +24278,425 @@
     "questions": [
       {
         "q": "Vad hittar Linus i en låda?",
-        "options": ["En glittrig penna", "En ny cykelhjälm", "En glasspinne", "En gammal mobil"],
+        "options": [
+          "En glittrig penna",
+          "En ny cykelhjälm",
+          "En glasspinne",
+          "En gammal mobil"
+        ],
         "correct": 0
       },
       {
         "q": "Vad vill Linus att refrängen ska kännas som?",
-        "options": ["Som kyla", "Som färg", "Som sömn", "Som damm"],
+        "options": [
+          "Som kyla",
+          "Som färg",
+          "Som sömn",
+          "Som damm"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket förslag ger Maja?",
-        "options": ["Att låten ska vara helt utan ord", "Att refrängen ska vara längre än versen", "Att refrängen ska upprepas två gånger", "Att de ska byta till trummor direkt"],
+        "options": [
+          "Att låten ska vara helt utan ord",
+          "Att refrängen ska vara längre än versen",
+          "Att refrängen ska upprepas två gånger",
+          "Att de ska byta till trummor direkt"
+        ],
         "correct": 2
       },
       {
         "q": "Vad spelar pappa?",
-        "options": ["Tre ackord på gitarr", "En flöjtmelodi", "En trumsolo", "Ett piano som är ostämt"],
+        "options": [
+          "Tre ackord på gitarr",
+          "En flöjtmelodi",
+          "En trumsolo",
+          "Ett piano som är ostämt"
+        ],
         "correct": 0
       },
       {
         "q": "Vad handlar deras färdiga låt om?",
-        "options": ["Att vinna en tävling", "Att baka bullar", "Att våga vara ny på skolgården", "Att sova länge på morgonen"],
+        "options": [
+          "Att vinna en tävling",
+          "Att baka bullar",
+          "Att våga vara ny på skolgården",
+          "Att sova länge på morgonen"
+        ],
         "correct": 2
       },
       {
         "q": "Vad säger Aisha om låten?",
-        "options": ["Att den är för lång", "Att den är för svår att förstå", "Att den känns snäll och stark", "Att den inte har någon refräng"],
+        "options": [
+          "Att den är för lång",
+          "Att den är för svår att förstå",
+          "Att den känns snäll och stark",
+          "Att den inte har någon refräng"
+        ],
         "correct": 2
       }
     ],
     "word_count": 156
+  },
+  {
+    "id": "ak5-tema-016",
+    "title": "Från grå låda till PS5",
+    "text": "En lördag lånade Amir sin mammas gamla spelmagasin. Där stod en artikel om hur den första PlayStation kom 1994. Sony hade tidigare gjort delar till andras konsoler, men ville skapa en egen. En stor skillnad var att spel skulle lagras på cd-skivor i stället för kassetter. Cd rymde mer och gjorde att spel kunde ha längre musik, korta filmsekvenser och större världar att utforska.\n\nNär PlayStation släpptes såg den grå ut och hade en handkontroll med knappar i olika former: triangel, cirkel, kryss och fyrkant. Amir läste att symbolerna inte bara var snygga. De skulle hjälpa spelare att komma ihåg vad knapparna gjorde. Efter några år kom DualShock-kontrollen med två styrspakar och vibration. Plötsligt kunde man smyga, svänga och sikta mer exakt, och när en bil krockade i ett racingspel kändes det i händerna.\n\nPå den tiden sparade man ofta på minneskort. Om man glömde kortet hos en kompis kunde man tvingas börja om från början. Amir tyckte det lät både jobbigt och lite spännande, som att varje spelsession var ett äventyr. I magasinet fanns listor över spel: äventyr, sport och pussel. Artikeln beskrev också hur små utvecklarteam kunde lyckas om de hade en tydlig idé och vågade testa nya saker.\n\nSedan kom PlayStation 2, som också kunde spela dvd. Många familjer köpte den både för spel och filmkvällar. PlayStation 3 och 4 fick bättre grafik och kunde kopplas upp mot internet. Då blev det lättare att spela med vänner som bodde långt bort, men också viktigare att tänka på lösenord och hur man pratar i chattar.\n\nI dag finns PlayStation 5, som laddar spel snabbt och kan visa mycket detaljer. Amir märkte att det viktigaste ändå inte var siffrorna. Han skrev i sin anteckningsbok: PlayStation blev populärt för att det kombinerade teknik med berättelser, och för att människor kunde dela upplevelser, både i samma soffa och online.",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "category": "Tv spel",
+    "questions": [
+      {
+        "q": "Vad var en viktig skillnad med den första PlayStation jämfört med många äldre konsoler?",
+        "options": [
+          "Att spel låg på cd-skivor i stället för kassetter",
+          "Att den bara kunde spela spel utan ljud",
+          "Att den inte behövde en tv för att fungera",
+          "Att alla spel var gratis att ladda ner"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför hade knapparna olika symboler enligt texten?",
+        "options": [
+          "För att de skulle se ut som i en film",
+          "För att hjälpa spelare att komma ihåg vad knapparna gjorde",
+          "För att göra kontrollen tyngre i handen",
+          "För att samma symbol alltid betydde samma sak i alla spel"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken ny funktion gjorde att krockar kunde kännas i händerna?",
+        "options": [
+          "Att spelen sparades på minneskort",
+          "Att konsolen kunde spela dvd",
+          "Att man spelade på internet",
+          "Att kontrollen fick vibration"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilket problem kunde uppstå om man glömde minneskortet hos en kompis?",
+        "options": [
+          "Man kunde inte starta konsolen alls",
+          "Man förlorade sin handkontroll",
+          "Man kunde behöva börja om från början",
+          "Man fick automatiskt ett nytt spel"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad tyckte Amir var det viktigaste, trots ny teknik i PS5?",
+        "options": [
+          "Att PlayStation kombinerar teknik med berättelser och delade upplevelser",
+          "Att varje konsol är större än den förra",
+          "Att alla spel är sportspel",
+          "Att man alltid spelar ensam"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad blev lättare när PlayStation 3 och 4 kunde kopplas upp mot internet?",
+        "options": [
+          "Att göra egna cd-skivor hemma",
+          "Att spela utan skärm",
+          "Att bara spela gamla spel",
+          "Att spela med vänner som bodde långt bort"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 308
+  },
+  {
+    "id": "ak5-tema-017",
+    "title": "Så blir ett spel till",
+    "text": "På fritidsklubben ordnade ledaren Sofia en \"spelverkstad\". Gruppen skulle inte spela, utan ta reda på hur ett PlayStation-spel blir till. Först fick de välja en idé: ett mysterium i en kuststad. Sedan ritade de banor på rutat papper och bestämde regler, som hur många liv man har och vad som händer när tiden tar slut.\n\nSofia berättade att i riktiga studior arbetar flera yrken tillsammans. Speldesigners planerar uppdrag och svårighetsgrad. Grafiker gör figurer och miljöer i 3D. Ljudtekniker spelar in fotsteg, vind och dialog. Programmerare skriver kod som får allt att fungera, till exempel hur en karaktär hoppar eller hur en fiende reagerar.\n\nNär barnen testade sin pappersversion märkte de problem. Om ledtrådar låg på fel plats fastnade spelaren. Om belöningen kom för tidigt blev spelet för lätt. De flyttade om, skrev tydligare instruktioner och provade igen. Sofia kallade det \"testning\", och sa att proffs gör samma sak många gånger. Ibland hittar de buggar, alltså fel i spelet, som kan göra att en dörr inte går att öppna eller att figuren hamnar utanför kartan.\n\nSofia visade en trailer och pekade på skådespelare som gjort \"motion capture\", där rörelser spelas in med dräkter och prickar. Hon berättade också om uppdateringar. Om ett spel släpps och spelare upptäcker fel kan studion skicka en patch via internet. Ibland lägger de till nya nivåer som nedladdningsbart innehåll. Barnen pratade om hur recensioner och kommentarer kan hjälpa, men också om att man ska skriva snällt, eftersom riktiga människor läser. Det gjorde att deras egen idé kändes som början på något större.\n\nTill sist pratade de om åldersmärkning. Vissa spel har våld eller skrämmande teman och passar inte alla. På PlayStation kan man också använda föräldrakontroller för att styra tid och köp. När verkstaden var slut hade gruppen inte ett färdigt spel, men de förstod varför det tar år att skapa ett riktigt äventyr.",
+    "grade": 5,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "category": "Tv spel",
+    "questions": [
+      {
+        "q": "Vad gjorde gruppen först i spelverkstaden?",
+        "options": [
+          "De valde en idé till ett spel",
+          "De tävlade om högsta poängen",
+          "De byggde en riktig konsol",
+          "De spelade bara sportspel"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken uppgift har grafiker enligt texten?",
+        "options": [
+          "De skriver regler för chatten",
+          "De gör figurer och miljöer i 3D",
+          "De bestämmer priset i butiken",
+          "De tar bort alla buggar ensamma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad betyder ordet \"bugg\" i texten?",
+        "options": [
+          "En hemlig extra nivå",
+          "En ny handkontroll",
+          "En sorts musik i spelet",
+          "Ett fel som gör att något inte fungerar som det ska"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför testade barnen sin pappersversion flera gånger?",
+        "options": [
+          "För att spelet skulle bli längre än alla andra",
+          "För att de ville byta tema till rymden",
+          "För att upptäcka problem och förbättra regler och ledtrådar",
+          "För att slippa rita banor"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är en patch enligt texten?",
+        "options": [
+          "En uppdatering som kan rätta fel i spelet",
+          "Ett nytt minneskort med plats för bilder",
+          "En sorts hjälm för spelare",
+          "En knapp som alltid betyder \"paus\""
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken tanke hade gruppen när de pratade om kommentarer och recensioner?",
+        "options": [
+          "Att man alltid ska skriva så snabbt som möjligt",
+          "Att bara vuxna får säga vad de tycker",
+          "Att recensioner aldrig påverkar spel",
+          "Att man ska skriva snällt eftersom riktiga människor läser"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 308
+  },
+  {
+    "id": "ak5-tema-018",
+    "title": "Spelkväll där alla kan vara med",
+    "text": "På bibliotekets spelkväll samlades fyra personer vid en PlayStation 5. Ella hade spelat länge, Sam var ny och använde pronomen hen, och Farah hade med sin morfar Lars som var 70 år. Lars satt i rullstol efter en olycka och var nyfiken på hur det skulle fungera.\n\nBibliotekarien visade först inställningar för tillgänglighet. Man kunde förstora text, ändra färger för bättre kontrast och slå på undertexter. I kontrollmenyn gick det att byta vilka knappar som gjorde vad. Lars testade att låta en stor knapp på framsidan bli \"hoppa\", eftersom det var lättare för honom att trycka där. Sam justerade vibrationerna så att de blev svagare. Bibliotekarien nämnde också att man kan spara profiler med olika inställningar, så att varje spelare slipper börja om nästa gång. För Sam var det skönt att slippa för små ikoner. För Lars betydde det att han kunde spela längre utan att bli trött i handen. De satte dessutom en timer på 45 minuter, så att skärmen inte tog över hela kvällen.\n\nDe valde ett samarbetsäventyr där man måste lösa pussel tillsammans. När en dörr var låst kunde inte Ella bara springa vidare. Hon behövde vänta och prata: \"Jag ser en spak här. Kan någon nå den?\" Farah styrde en figur som kunde klättra, och Lars styrde en som kunde skjuta en lina. Sam höll koll på kartan och gav lugna instruktioner.\n\nEfter en stund pausade de och tog fika. Lars sa att han först trodde att spel mest var för barn, men att det påminde om att lägga pussel och att samarbeta i ett lag. Bibliotekarien berättade att spel kan vara ett sätt att träna reaktion, språk och problemlösning, men att man också behöver röra på sig och sova ordentligt.\n\nNär kvällen slutade skrev Sam upp spelets titel i sin mobil. \"Det bästa\", sa hen, \"var att vi hittade ett sätt för alla att vara med.\"",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "värdegrund",
+    "category": "Tv spel",
+    "questions": [
+      {
+        "q": "Varför var Lars extra nyfiken på spelkvällen?",
+        "options": [
+          "Han satt i rullstol och ville se hur det skulle fungera",
+          "Han hade vunnit en stor turnering",
+          "Han kunde redan alla spel utantill",
+          "Han skulle sälja spel till biblioteket"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken inställning ändrade Sam för att det skulle passa bättre?",
+        "options": [
+          "Hen stängde av alla undertexter",
+          "Hen gjorde vibrationerna svagare",
+          "Hen bytte ut spelets musik mot radio",
+          "Hen tog bort kartan från spelet"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad hjälpte profiler med olika inställningar till?",
+        "options": [
+          "Att spelet blev kortare",
+          "Att man alltid fick fler liv",
+          "Att ingen behövde prata med varandra",
+          "Att varje spelare slapp ställa in allt på nytt nästa gång"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Varför behövde Ella vänta och prata i spelet?",
+        "options": [
+          "För att hon inte fick röra kontrollen",
+          "För att hon glömde spelets titel",
+          "För att de måste samarbeta för att lösa pussel och komma vidare",
+          "För att spelet inte gick att pausa"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad tyckte Lars att spel påminde om?",
+        "options": [
+          "Att lägga pussel och samarbeta i ett lag",
+          "Att läsa enbart faktaböcker",
+          "Att springa ett maraton",
+          "Att skriva prov i matte"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad sa Sam var det bästa med kvällen?",
+        "options": [
+          "Att de vann på första försöket",
+          "Att ingen behövde göra inställningar",
+          "Att de aldrig tog paus",
+          "Att de hittade ett sätt för alla att vara med"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 311
+  },
+  {
+    "id": "ak5-tema-019",
+    "title": "Att spela online på ett tryggt sätt",
+    "text": "När Tilde fick sitt första onlinespel till PlayStation blev hon nervös. Hon kunde spela med andra, men hon visste inte vilka som fanns bakom skärmarna. Hennes pappa föreslog att de skulle göra en liten plan innan hon tryckte på \"Start\". De pratade även om ljud. Med ett headset hör man röster tydligt, men då kan man också råka säga saker man inte menar. Tilde bestämde att hon skulle ha mikrofonen avstängd i nya grupper tills hon kände sig trygg. Hon lärde sig var knappen för \"mute\" fanns och hur man lämnar en match om stämningen blir dålig.\n\nFörst skapade de ett konto med ett smeknamn som inte avslöjade efternamn eller skola. De valde ett starkt lösenord och aktiverade tvåstegsverifiering. Sedan gick de igenom sekretessinställningar: vem får skicka meddelanden, vem ser ens riktiga namn och vilka kan bjuda in till grupper. Tilde ställde in så att bara vänner kunde chatta.\n\nI spelet hamnade hon i ett lag som skulle bygga en bas och försvara den. En spelare skrev snabbt och stressigt: \"Du gör fel!\" Tilde tog ett andetag och svarade lugnt: \"Jag lär mig. Kan du visa?\" Plötsligt ändrades tonen. Spelaren förklarade och laget vann rundan. Efteråt skickade Tilde en vänförfrågan, men bara efter att de hade spelat flera matcher och känts schyssta.\n\nDagen därpå fick hon ett meddelande från någon hon inte kände, som bad om att få hennes mobilnummer. Tilde kom ihåg planen och rapporterade kontot i stället för att svara. Hon berättade också för en vuxen hemma. Pappa sa att det var precis så man ska göra: man behöver inte vara otrevlig, men man ska vara tydlig med gränser.\n\nTilde märkte att onlinespel kan vara som en stor idrottshall. Det kan bli stökigt, men med rätt regler, bra lagkamrater och mod att säga ifrån kan det också bli riktigt roligt.",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "digital kompetens",
+    "category": "Tv spel",
+    "questions": [
+      {
+        "q": "Varför gjorde Tilde och hennes pappa en plan innan hon började spela online?",
+        "options": [
+          "För att hon inte visste vilka som fanns bakom skärmarna",
+          "För att alla online-spel är förbjudna",
+          "För att spelet inte hade någon instruktion",
+          "För att hon skulle slippa välja smeknamn"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad ställde Tilde in när det gällde chatten?",
+        "options": [
+          "Att ingen fick prata alls",
+          "Att bara vänner kunde chatta",
+          "Att alla i världen kunde se hennes riktiga namn",
+          "Att hon alltid måste svara på meddelanden"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad var Tildes första idé med mikrofonen i nya grupper?",
+        "options": [
+          "Att alltid prata mest av alla",
+          "Att bara använda den i arga matcher",
+          "Att aldrig lära sig var \"mute\" finns",
+          "Att ha den avstängd tills hon kände sig trygg"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur fick Tilde en stressig lagkamrat att ändra ton?",
+        "options": [
+          "Hon lämnade matchen direkt",
+          "Hon låtsades vara någon annan",
+          "Hon svarade lugnt och bad om hjälp",
+          "Hon skickade sitt mobilnummer"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gjorde Tilde när en okänd person bad om hennes mobilnummer?",
+        "options": [
+          "Hon rapporterade kontot i stället för att svara",
+          "Hon skickade numret men bad om ursäkt",
+          "Hon skrev sitt efternamn och sin skola",
+          "Hon bjöd in personen till fler grupper"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vilken jämförelse gör texten med onlinespel?",
+        "options": [
+          "Som ett tyst bibliotek där ingen får prata",
+          "Som en matlektion i skolan",
+          "Som en bussresa på morgonen",
+          "Som en stor idrottshall som kan bli stökig"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 302
+  },
+  {
+    "id": "ak5-tema-020",
+    "title": "Skiva eller nedladdning?",
+    "text": "Leo och hans kusin Noura stod i en spelbutik och tittade på två versioner av samma PlayStation-spel. Den ena var en skiva i ett plastfodral, den andra var ett digitalt köp som man laddar ner. Priserna skilde bara några tior, men valet kändes ändå svårt.\n\nButiksbiträdet förklarade att en skiva kan lånas ut eller säljas vidare. Om man tröttnar kan man byta med en kompis. Digitala spel är däremot alltid kopplade till kontot och går snabbt att starta utan att man byter skiva. Noura tyckte om att ha allt samlat i biblioteket på skärmen, medan Leo gillade känslan av att ställa fodral i en hylla. Biträdet nämnde även lagringsutrymme. Stora spel kan ta många gigabyte, så ibland behöver man rensa eller köpa extra lagring. Oavsett format måste man ofta ladda ner uppdateringar. Därför skrev Leo och Noura upp sitt wifi-lösenord hemma och bestämde att nedladdningar skulle ske när ingen annan streamar film.\n\nDe pratade också om PlayStation Plus, ett abonnemang som kan ge tillgång till onlinespel och ett urval av spel som byts ut över tid. Leo räknade i huvudet: Om han spelar mycket kan det bli billigare än att köpa varje spel direkt. Men om han bara spelar några få favoritspel kan ett abonnemang kännas onödigt.\n\nHemma gjorde de en budget på ett papper. De skrev upp hur mycket pengar som fanns till spel under en månad och bestämde en regel: inga impulsköp efter midnatt, och alltid läsa recensioner från flera håll. De la också in pausdagar utan skärm. De sparade också kvittot och kollade reglerna för återköp, ifall spelet inte fungerade som de tänkt.\n\nTill slut köpte Noura spelet digitalt, eftersom hon ofta reser mellan två hem och vill ha samma spel överallt. Leo valde skivan, för han tänkte byta den senare. Båda kände att de hade valt smart, eftersom de hade tänkt efter före.",
+    "grade": 5,
+    "genre": "berättelse",
+    "theme": "ekonomi",
+    "category": "Tv spel",
+    "questions": [
+      {
+        "q": "Vilken fördel med en skiva nämns i texten?",
+        "options": [
+          "Att den kan lånas ut eller säljas vidare",
+          "Att den aldrig behöver uppdateras",
+          "Att den alltid är gratis",
+          "Att den gör spelet kortare"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför gillade Noura digitala spel mer?",
+        "options": [
+          "För att de bara finns i sportgenren",
+          "För att hon vill ha allt samlat i biblioteket på skärmen",
+          "För att de alltid tar mindre plats på konsolen",
+          "För att man kan sälja dem vidare enklare"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad behövde Leo och Noura tänka på när det gällde stora spel?",
+        "options": [
+          "Att man måste köpa en ny tv varje gång",
+          "Att man inte får spela på helger",
+          "Att skivor inte kan fungera i plastfodral",
+          "Att de kan ta mycket lagringsutrymme och behöva uppdateringar"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad var Leos tanke om PlayStation Plus?",
+        "options": [
+          "Att abonnemang alltid är billigast för alla",
+          "Att det bara behövs för pusselspel",
+          "Att det kan vara billigare om han spelar mycket",
+          "Att det gör att man slipper wifi"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken regel satte de upp i sin budget för att undvika snabba köp?",
+        "options": [
+          "Inga impulsköp efter midnatt",
+          "Alltid köpa två spel samtidigt",
+          "Aldrig läsa recensioner",
+          "Bara köpa spel på tisdagar"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför valde Leo skivan till slut?",
+        "options": [
+          "För att han aldrig reser",
+          "För att skivor inte behöver konto",
+          "För att butiken tvingade honom",
+          "För att han tänkte byta eller sälja den senare"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 307
   }
 ]
