@@ -1,8 +1,9 @@
-import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS, QuestionResult } from '../types';
+import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS, QuestionResult, StudentMessage } from '../types';
 
 const STORAGE_KEY = 'lasforstaelse_user';
 const ALL_USERS_KEY = 'lasforstaelse_all_users';
 const DAILY_STATS_KEY = 'lasforstaelse_daily_stats';
+const MESSAGES_KEY = 'lasforstaelse_messages';
 
 interface DailyStats {
   date: string;
@@ -511,4 +512,74 @@ export function getTeacherStats(): {
     leaderboard,
     last7Days,
   };
+}
+
+/**
+ * Skicka ett meddelande från elev till lärare
+ */
+export function sendStudentMessage(studentName: string, studentAvatar: string, message: string): StudentMessage {
+  const msg: StudentMessage = {
+    id: `msg_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+    studentName,
+    studentAvatar,
+    message: message.trim(),
+    sentAt: new Date().toISOString(),
+    read: false,
+  };
+
+  const messages = getStudentMessages();
+  messages.push(msg);
+  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  return msg;
+}
+
+/**
+ * Hämta alla meddelanden
+ */
+export function getStudentMessages(): StudentMessage[] {
+  try {
+    const stored = localStorage.getItem(MESSAGES_KEY);
+    if (stored) {
+      return JSON.parse(stored) as StudentMessage[];
+    }
+  } catch (error) {
+    console.error('Kunde inte ladda meddelanden:', error);
+  }
+  return [];
+}
+
+/**
+ * Markera ett meddelande som läst
+ */
+export function markMessageAsRead(messageId: string): void {
+  const messages = getStudentMessages();
+  const msg = messages.find(m => m.id === messageId);
+  if (msg) {
+    msg.read = true;
+    localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  }
+}
+
+/**
+ * Markera alla meddelanden som lästa
+ */
+export function markAllMessagesAsRead(): void {
+  const messages = getStudentMessages();
+  messages.forEach(m => m.read = true);
+  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+}
+
+/**
+ * Ta bort ett meddelande
+ */
+export function deleteMessage(messageId: string): void {
+  const messages = getStudentMessages().filter(m => m.id !== messageId);
+  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+}
+
+/**
+ * Räkna olästa meddelanden
+ */
+export function getUnreadMessageCount(): number {
+  return getStudentMessages().filter(m => !m.read).length;
 }
