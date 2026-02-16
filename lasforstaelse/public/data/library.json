@@ -23188,5 +23188,205 @@
       }
     ],
     "word_count": 290
+  },
+  {
+    "id": "ak8-tema-001",
+    "title": "En karta som inte alltid syns",
+    "text": "När Amir bläddrar i sin geografibok hittar han inte alltid ordet \u201cKurdistan\u201d på kartan. Ibland står det bara Irak, Iran, Turkiet och Syrien. Ändå använder många kurder namnet Kurdistan för att beskriva de områden där kurder historiskt har bott och där språket kurdiska har talats i generationer. Det handlar alltså inte bara om en plats, utan också om identitet.\n\nGeografiskt ligger området i ett bälte av berg och högland. Bergen har påverkat livet på flera sätt. De har gett skydd, men också gjort resor och handel svårare. Många floder börjar i dessa berg, vilket gör dalar viktiga för jordbruk. I delar av irakiska Kurdistan, som ofta kallas Kurdistans regionala regering (KRG), finns städer som Erbil (Hewlêr) och Sulaymaniyah. Där syns moderna köpcentrum bredvid äldre kvarter och marknader. Under vissa perioder har området upplevt mer stabilitet än andra delar av Irak, vilket har lett till att människor flyttat dit för arbete eller utbildning.\n\nMen Kurdistan är inte ett enda land med en gemensam regering överallt. Kurder lever i flera stater och har olika villkor beroende på vilket land de bor i. I ett område kan kurdiska undervisas i skolan, medan det i ett annat kan vara begränsat. Därför kan två kurdiska ungdomar ha olika erfarenheter, även om de båda säger att de är från Kurdistan.\n\nAmir märker också att ordet \u201cKurdistan\u201d kan betyda olika saker i olika sammanhang. För vissa handlar det om ett framtida självständigt land. För andra handlar det främst om kultur, språk och samhörighet, oavsett var gränserna går. När han läser vidare förstår han att geografi inte bara handlar om berg och floder, utan också om hur människor beskriver sin plats i världen.",
+    "grade": 8,
+    "category": "Geografi",
+    "questions": [
+      {
+        "q": "Varför syns inte alltid ordet \u201cKurdistan\u201d på kartor i Amirs bok?",
+        "options": ["För att området ofta räknas in i flera olika länder", "För att Kurdistan ligger under havsytan på många kartor", "För att kurder alltid har haft ett eget land som redan är markerat", "För att området bara består av öknar utan städer"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken geografisk faktor beskrivs som särskilt viktig för livet i området?",
+        "options": ["Långa kustlinjer med hamnar", "Berg och högland som påverkar skydd och resor", "Stora korallrev som ger fiskeinkomster", "Permanent is som gör jordbruk omöjligt"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket exempel nämns på ett område med viss grad av självstyre?",
+        "options": ["Kurdistans regionala regering (KRG) i Irak", "En union mellan alla kurdiska områden i Europa", "Ett kurdiskt kungadöme i Nordafrika", "En nybildad stat i Sydamerika"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudpoäng?",
+        "options": ["Att berg alltid gör handel omöjlig", "Att alla kartor visar samma politiska gränser", "Att Kurdistan är ett enda land med en gemensam regering", "Att geografi och identitet hänger ihop när människor beskriver Kurdistan"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken skillnad mellan kurdiska ungdomars vardag tar texten upp?",
+        "options": ["Att villkoren kan skilja sig beroende på vilket land de bor i", "Att alla kurdiska ungdomar bor i samma stad", "Att kurdiska alltid är förbjudet att tala i hemmet", "Att ingen får studera vidare efter grundskolan"],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan ordet \u201cKurdistan\u201d betyda enligt texten, förutom en plats?",
+        "options": ["Enbart ett bergskedjenamn utan koppling till människor", "En identitet kopplad till kultur, språk och samhörighet", "Ett väderfenomen som återkommer varje vår", "En maträtt som bara äts i huvudstaden"],
+        "correct": 1
+      }
+    ],
+    "word_count": 279
+  },
+  {
+    "id": "ak8-tema-002",
+    "title": "Historien om löften och gränser",
+    "text": "När första världskriget tog slut förändrades kartan i Mellanöstern. Det osmanska riket, som länge hade styrt stora områden, försvagades och delades upp. För många kurder väcktes hoppet om större självbestämmande. I början av 1920-talet nämndes möjligheten till ett kurdiskt område i internationella förhandlingar. Men politik är sällan rak. Stormakter prioriterade egna intressen, och nya gränser drogs på ett sätt som inte alltid tog hänsyn till folkgruppernas önskemål.\n\nResultatet blev att kurder hamnade i flera olika länder. I Turkiet, Iran, Irak och Syrien utvecklades olika relationer mellan staten och den kurdiska befolkningen. I vissa perioder har kurdiska uttryck och organisationer begränsats, i andra har det funnits försök till dialog eller reformer. Under 1900-talet förekom också uppror och hårda motreaktioner, vilket bidrog till att misstro växte.\n\nEtt tragiskt exempel som ofta nämns i diskussioner om kurdernas historia är gasattacken mot Halabja 1988 under Iran–Irak-kriget. Många civila dog, och händelsen blev en symbol för hur civila kan drabbas när konflikter eskalerar. Efter Gulfkriget 1991 uppstod ett mer självstyrt kurdiskt område i norra Irak, och senare skapades en regional regering med eget parlament. För vissa kurder blev detta ett bevis på att politiska förändringar kan vara möjliga, även om området fortfarande formellt ingår i Irak.\n\nHistorien påverkar också hur människor pratar om framtiden. Vissa betonar rätten till ett eget land, andra vill främst ha starkare rättigheter och trygghet där de redan bor. Det som förenar många berättelser är erfarenheten av att ha funnits på kartan i människors minne, även när gränser har flyttats utan att de själva fått bestämma.",
+    "grade": 8,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "Vad hände med Mellanösterns karta efter första världskriget enligt texten?",
+        "options": ["Det osmanska riket försvagades och nya gränser drogs", "Alla gränser försvann och länder slogs ihop", "Europa tog bort alla stater i regionen", "Inga förändringar skedde, allt förblev som tidigare"],
+        "correct": 0
+      },
+      {
+        "q": "Varför blev det svårt för kurder att få ett gemensamt land under 1920-talet?",
+        "options": ["För att kurder inte bodde i området längre", "För att stormakter ofta prioriterade egna intressen och drog nya gränser", "För att det inte fanns några internationella förhandlingar alls", "För att alla länder i regionen redan var demokratiska och eniga"],
+        "correct": 1
+      },
+      {
+        "q": "Vilka länder nämns som exempel där kurder hamnade efter att gränser drogs om?",
+        "options": ["Spanien, Portugal, Frankrike och Italien", "Kanada, USA, Mexiko och Brasilien", "Turkiet, Iran, Irak och Syrien", "Japan, Kina, Korea och Mongoliet"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken händelse från 1988 lyfts som ett tragiskt exempel i texten?",
+        "options": ["En jordbävning som förstörde alla städer i regionen", "Ett fredsavtal som gav alla kurder rösträtt samtidigt", "En stor handelsblockad som stoppade all import", "Gasattacken mot Halabja där många civila dog"],
+        "correct": 3
+      },
+      {
+        "q": "Vad ledde Gulfkriget 1991 till i norra Irak enligt texten?",
+        "options": ["Ett mer självstyrt kurdiskt område började växa fram", "Att kurder flyttade därifrån och området tömdes", "Att regionen blev en del av EU", "Att alla konflikter i Mellanöstern avslutades"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket resonemang om framtiden beskrivs i texten?",
+        "options": ["Att alla kurder vill exakt samma sak politiskt", "Att vissa vill ha ett eget land och andra vill stärka rättigheter där de bor", "Att framtiden inte påverkas av historien", "Att gränser alltid dras helt efter folkgruppers önskemål"],
+        "correct": 1
+      }
+    ],
+    "word_count": 265
+  },
+  {
+    "id": "ak8-tema-003",
+    "title": "Språk, musik och en eld i mars",
+    "text": "På en skola i Sverige ska klassen ordna en kulturkväll. Läraren ber alla att ta med något som betyder mycket för dem. Dilan tar med en liten flagga med en sol i mitten, men förklarar att symboler kan uppfattas olika beroende på sammanhang. Hen vill hellre prata om språk och traditioner. Samir har med en spellista med kurdisk musik, och Aso visar ett foto från Newroz, den kurdiska nyårsfesten som ofta firas runt vårdagjämningen. Där tänder man ibland eldar, sjunger och dansar i ring, inte bara för att det är festligt utan också för att högtiden har blivit en markering av identitet och hopp.\n\nKurdiskan är inte ett enda språk på exakt samma sätt överallt. Det finns flera varianter, ofta kallade dialekter, som kan skilja sig i uttal och ord. Två vanliga är kurmanji och sorani. En person kan förstå mycket av den andras dialekt, men ändå behöva vänja sig vid skillnaderna. Dessutom använder kurder olika alfabet beroende på land och tradition: i vissa områden används latinska bokstäver, i andra ett alfabet som liknar det arabiska. Det gör att en text kan se helt olika ut även om den säger samma sak.\n\nNär Dilan berättar detta inser flera i klassen att språk också handlar om tillgång. Om man får lära sig läsa och skriva på sitt modersmål blir det lättare att föra vidare berättelser, dikter och sånger. Samir spelar en låt där instrumentet tembûr hörs tydligt. Han säger att musiken ofta bär minnen: om byar, berg, förälskelser och migration. Aso berättar att hens mormor, som har en hörselnedsättning, känner rytmen genom att lägga handen mot bordet när trummorna spelar.\n\nKulturkvällen blir inte en tävling om \u201crätt\u201d symboler. Den blir en påminnelse om att Kurdistan för många betyder ett sammanhang: språk som lever i olika former, traditioner som förändras, och en gemenskap som kan finnas både i Mellanöstern och i en svensk skolsal.",
+    "grade": 8,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad vill Dilan helst prata om i stället för symboler?",
+        "options": ["Språk och traditioner", "Matematik och provresultat", "Endast politik och partier", "Sportregler från olika länder"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är Newroz enligt texten?",
+        "options": ["En kurdisk nyårsfest som ofta firas runt vårdagjämningen", "En vinterhögtid där man alltid undviker musik", "Ett bergspass som bara används av herdar", "Ett skolämne som handlar om geologi"],
+        "correct": 0
+      },
+      {
+        "q": "Vilka två dialekter nämns som vanliga varianter av kurdiska?",
+        "options": ["Svenska och norska", "Spanska och portugisiska", "Kurmanji och sorani", "Tyska och nederländska"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan kurdiska texter se olika ut även om de betyder samma sak?",
+        "options": ["För att kurdiska alltid skrivs utan vokaler", "För att varje by hittar på egna bokstäver", "För att alla skriver med hemliga koder", "För att olika alfabet kan användas i olika områden"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken tanke om språk lyfts i texten när klassen pratar om modersmål?",
+        "options": ["Att läs- och skrivkunnighet kan göra det lättare att föra kultur vidare", "Att modersmål aldrig påverkar berättelser eller sånger", "Att dialekter alltid gör att man inte kan förstå varandra alls", "Att alfabet bara är viktigt för turister"],
+        "correct": 0
+      },
+      {
+        "q": "Hur deltar Asos mormor i musiken trots hörselnedsättning?",
+        "options": ["Genom att läsa låttexter på en skärm", "Genom att känna rytmen med handen mot bordet", "Genom att alltid stå längst bort från trummorna", "Genom att bara lyssna på mycket höga toner"],
+        "correct": 1
+      }
+    ],
+    "word_count": 310
+  },
+  {
+    "id": "ak8-tema-004",
+    "title": "Självstyre och svåra kompromisser",
+    "text": "I norra Irak finns ett område som ofta kallas irakiska Kurdistan. Där har den kurdiska befolkningen under lång tid strävat efter större självbestämmande. Efter konflikter och politiska förändringar under 1900-talet växte ett regionalt självstyre fram, och i dag finns en regional regering med parlament och egna myndigheter inom flera områden. Samtidigt är regionen formellt en del av Irak, vilket betyder att vissa beslut måste förhandlas med den federala staten i Bagdad.\n\nI praktiken kan självstyre handla om allt från skolans språkval till hur polis och sjukvård organiseras. Men det kan också handla om ekonomi. Regionen har naturresurser, och inkomsterna från till exempel olja kan skapa både möjligheter och konflikter. Om den regionala nivån och centralstaten inte är överens om hur pengar ska fördelas kan löner, investeringar och samhällsservice påverkas. För invånare kan detta kännas konkret: blir det elavbrott? Finns det jobb? Kan unga starta företag?\n\nRelationerna med grannländer spelar också roll. Kurdiska områden ligger nära flera gränser, och politiska förändringar kan göra grannar oroliga för att egna minoriteter ska kräva samma sak. Därför påverkas regionen av diplomati, handel och ibland spänningar. Många kurder i Irak har dessutom band till släktingar i andra länder, vilket gör att händelser på andra sidan en gräns kan kännas personliga.\n\nEn del politiska rörelser har drivit frågan om självständighet, men även bland dem som vill ha ett eget land finns olika uppfattningar om tidpunkt och väg dit. Andra betonar att starka institutioner, rättssäkerhet och fungerande demokratiska processer måste komma först. Texten visar att politik sällan är en enkel knapp: mer självstyre kan ge inflytande, men kräver också kompromisser, stabilitet och ansvar.",
+    "grade": 8,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vilket område handlar texten främst om när den beskriver ett regionalt självstyre?",
+        "options": ["Irakiska Kurdistan i norra Irak", "Ett kurdiskt område i norra Sverige", "En region i Australien med egen valuta", "Ett bergsområde i Kanada utan städer"],
+        "correct": 0
+      },
+      {
+        "q": "Varför måste vissa beslut fortfarande förhandlas med Bagdad?",
+        "options": ["För att regionen formellt är en del av Irak", "För att Bagdad ligger närmast havet", "För att parlamentet i regionen är upplöst", "För att regionen saknar invånare"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket exempel ges på något som kan påverkas om ekonomi och fördelning av inkomster blir en konflikt?",
+        "options": ["Att alla berg flyttas för att göra plats för nya vägar", "Att skolböcker blir identiska i hela världen", "Att löner, investeringar och samhällsservice kan påverkas", "Att alla invånare automatiskt får samma jobb"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan grannländer reagera på politiska förändringar i regionen enligt texten?",
+        "options": ["För att de vill stoppa all handel i Mellanöstern", "För att de tror att regionen ska flytta sina floder", "För att de redan är helt utan minoriteter", "För att de kan bli oroliga att egna minoriteter ska kräva samma sak"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken vardagsnära fråga använder texten för att visa att politik blir konkret för invånarna?",
+        "options": ["Om det blir elavbrott och om det finns jobb", "Om alla får nya efternamn varje år", "Om solen går upp i väster", "Om skolan slutar ha raster"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats antyds om vägen mot mer självstyre eller självständighet?",
+        "options": ["Att det alltid går snabbt och utan kompromisser", "Att institutioner, rättssäkerhet och demokratiska processer kan behöva stärkas", "Att ekonomi aldrig spelar någon roll", "Att gränser inte påverkar människor alls"],
+        "correct": 1
+      }
+    ],
+    "word_count": 270
+  },
+  {
+    "id": "ak8-tema-005",
+    "title": "Att bära två hem samtidigt",
+    "text": "När Zilan flyttar till en ny stad i Sverige får hen ofta frågan varifrån familjen kommer. Zilan svarar ibland \u201cfrån Irak\u201d, ibland \u201cfrån Kurdistan\u201d, och märker att reaktionen kan bli olika. För vissa är det bara en geografisk detalj. För andra väcker det frågor om konflikter, migration och mänskliga rättigheter.\n\nKurder har i olika tider och på olika platser upplevt begränsningar av språk, politisk organisering eller kulturella uttryck. Samtidigt har villkoren varierat mycket mellan länder och perioder. Vissa familjer har flytt på grund av krig och våld, andra på grund av ekonomiska svårigheter eller brist på framtidstro. När människor lämnar ett område tar de ofta med sig mer än en resväska: de tar med sig berättelser, sånger, mattraditioner och ett språk som kanske talas hemma men inte alltid i samhället runt omkring.\n\nI diasporan, alltså när en grupp bor utanför sitt ursprungliga område, kan identitet bli både starkare och mer komplicerad. Zilan går på kurdisk dans ibland, men spelar också svensk fotboll med kompisar. Ibland känns det lätt att kombinera. Ibland känns det som att behöva välja. En släkting säger att man måste hålla fast vid allt \u201csom förr\u201d, medan en annan släkting säger att man måste anpassa sig helt för att bli accepterad. Zilan tycker att båda har en poäng, men att verkligheten ofta ligger mitt emellan.\n\nTexten visar också att mänskliga rättigheter inte bara handlar om stora ord i FN-dokument. Det handlar om rätten att kunna uttrycka sin kultur, att känna sig trygg och att få delta i samhället utan att bli misstänkliggjord. När Zilan skriver en skoluppgift om Kurdistan väljer hen därför att inte bara beskriva konflikter. Hen skriver också om vardag, språk och människor som försöker bygga framtid – både där och här.",
+    "grade": 8,
+    "category": "Mänskliga rättigheter",
+    "questions": [
+      {
+        "q": "Varför märker Zilan att svaret \u201cKurdistan\u201d kan ge olika reaktioner?",
+        "options": ["För att det kan väcka frågor om konflikter, migration och rättigheter", "För att alla alltid tänker på exakt samma sak", "För att ordet bara används om en sportklubb", "För att Sverige har förbjudit ordet i skolor"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder \u201cdiasporan\u201d enligt textens förklaring?",
+        "options": ["När en grupp bor utanför sitt ursprungliga område", "När en stad byter namn vart tionde år", "När två länder slås ihop till ett", "När en högtid alltid firas i hemlighet"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket exempel visar hur Zilan kombinerar olika delar av sitt liv?",
+        "options": ["Hen vägrar prata med kompisar i skolan", "Hen flyttar tillbaka varje helg", "Hen går på kurdisk dans och spelar svensk fotboll", "Hen slutar helt med alla fritidsaktiviteter"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken rättighet betonas som vardagsnära i texten?",
+        "options": ["Rätten att bestämma vädret", "Rätten att aldrig behöva gå i skolan", "Rätten att resa gratis i hela världen", "Rätten att uttrycka kultur och delta utan att misstänkliggöras"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken konflikt i åsikter mellan släktingar beskriver texten?",
+        "options": ["Att en vill hålla fast vid allt som förr och en annan vill anpassa sig helt", "Att båda vill att Zilan ska sluta lära sig språk", "Att ingen vill att Zilan ska ha vänner", "Att alla är överens om att identitet är oviktigt"],
+        "correct": 0
+      },
+      {
+        "q": "Varför väljer Zilan att inte bara skriva om konflikter i sin skoluppgift?",
+        "options": ["För att konflikter aldrig har funnits i regionen", "För att hen också vill beskriva vardag, språk och framtidsförsök", "För att skolan förbjuder historiska exempel", "För att hen bara vill skriva om svensk geografi"],
+        "correct": 1
+      }
+    ],
+    "word_count": 282
   }
 ]
