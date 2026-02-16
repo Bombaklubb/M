@@ -23188,5 +23188,405 @@
       }
     ],
     "word_count": 290
+  },
+  {
+    "id": "ak8-tema-001",
+    "title": "En karta som inte alltid syns",
+    "text": "När Amir bläddrar i sin geografibok hittar han inte alltid ordet \u201cKurdistan\u201d på kartan. Ibland står det bara Irak, Iran, Turkiet och Syrien. Ändå använder många kurder namnet Kurdistan för att beskriva de områden där kurder historiskt har bott och där språket kurdiska har talats i generationer. Det handlar alltså inte bara om en plats, utan också om identitet.\n\nGeografiskt ligger området i ett bälte av berg och högland. Bergen har påverkat livet på flera sätt. De har gett skydd, men också gjort resor och handel svårare. Många floder börjar i dessa berg, vilket gör dalar viktiga för jordbruk. I delar av irakiska Kurdistan, som ofta kallas Kurdistans regionala regering (KRG), finns städer som Erbil (Hewlêr) och Sulaymaniyah. Där syns moderna köpcentrum bredvid äldre kvarter och marknader. Under vissa perioder har området upplevt mer stabilitet än andra delar av Irak, vilket har lett till att människor flyttat dit för arbete eller utbildning.\n\nMen Kurdistan är inte ett enda land med en gemensam regering överallt. Kurder lever i flera stater och har olika villkor beroende på vilket land de bor i. I ett område kan kurdiska undervisas i skolan, medan det i ett annat kan vara begränsat. Därför kan två kurdiska ungdomar ha olika erfarenheter, även om de båda säger att de är från Kurdistan.\n\nAmir märker också att ordet \u201cKurdistan\u201d kan betyda olika saker i olika sammanhang. För vissa handlar det om ett framtida självständigt land. För andra handlar det främst om kultur, språk och samhörighet, oavsett var gränserna går. När han läser vidare förstår han att geografi inte bara handlar om berg och floder, utan också om hur människor beskriver sin plats i världen.",
+    "grade": 8,
+    "category": "Geografi",
+    "questions": [
+      {
+        "q": "Varför syns inte alltid ordet \u201cKurdistan\u201d på kartor i Amirs bok?",
+        "options": ["För att området ofta räknas in i flera olika länder", "För att Kurdistan ligger under havsytan på många kartor", "För att kurder alltid har haft ett eget land som redan är markerat", "För att området bara består av öknar utan städer"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken geografisk faktor beskrivs som särskilt viktig för livet i området?",
+        "options": ["Långa kustlinjer med hamnar", "Berg och högland som påverkar skydd och resor", "Stora korallrev som ger fiskeinkomster", "Permanent is som gör jordbruk omöjligt"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket exempel nämns på ett område med viss grad av självstyre?",
+        "options": ["Kurdistans regionala regering (KRG) i Irak", "En union mellan alla kurdiska områden i Europa", "Ett kurdiskt kungadöme i Nordafrika", "En nybildad stat i Sydamerika"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är textens huvudpoäng?",
+        "options": ["Att berg alltid gör handel omöjlig", "Att alla kartor visar samma politiska gränser", "Att Kurdistan är ett enda land med en gemensam regering", "Att geografi och identitet hänger ihop när människor beskriver Kurdistan"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken skillnad mellan kurdiska ungdomars vardag tar texten upp?",
+        "options": ["Att villkoren kan skilja sig beroende på vilket land de bor i", "Att alla kurdiska ungdomar bor i samma stad", "Att kurdiska alltid är förbjudet att tala i hemmet", "Att ingen får studera vidare efter grundskolan"],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan ordet \u201cKurdistan\u201d betyda enligt texten, förutom en plats?",
+        "options": ["Enbart ett bergskedjenamn utan koppling till människor", "En identitet kopplad till kultur, språk och samhörighet", "Ett väderfenomen som återkommer varje vår", "En maträtt som bara äts i huvudstaden"],
+        "correct": 1
+      }
+    ],
+    "word_count": 279
+  },
+  {
+    "id": "ak8-tema-002",
+    "title": "Historien om löften och gränser",
+    "text": "När första världskriget tog slut förändrades kartan i Mellanöstern. Det osmanska riket, som länge hade styrt stora områden, försvagades och delades upp. För många kurder väcktes hoppet om större självbestämmande. I början av 1920-talet nämndes möjligheten till ett kurdiskt område i internationella förhandlingar. Men politik är sällan rak. Stormakter prioriterade egna intressen, och nya gränser drogs på ett sätt som inte alltid tog hänsyn till folkgruppernas önskemål.\n\nResultatet blev att kurder hamnade i flera olika länder. I Turkiet, Iran, Irak och Syrien utvecklades olika relationer mellan staten och den kurdiska befolkningen. I vissa perioder har kurdiska uttryck och organisationer begränsats, i andra har det funnits försök till dialog eller reformer. Under 1900-talet förekom också uppror och hårda motreaktioner, vilket bidrog till att misstro växte.\n\nEtt tragiskt exempel som ofta nämns i diskussioner om kurdernas historia är gasattacken mot Halabja 1988 under Iran–Irak-kriget. Många civila dog, och händelsen blev en symbol för hur civila kan drabbas när konflikter eskalerar. Efter Gulfkriget 1991 uppstod ett mer självstyrt kurdiskt område i norra Irak, och senare skapades en regional regering med eget parlament. För vissa kurder blev detta ett bevis på att politiska förändringar kan vara möjliga, även om området fortfarande formellt ingår i Irak.\n\nHistorien påverkar också hur människor pratar om framtiden. Vissa betonar rätten till ett eget land, andra vill främst ha starkare rättigheter och trygghet där de redan bor. Det som förenar många berättelser är erfarenheten av att ha funnits på kartan i människors minne, även när gränser har flyttats utan att de själva fått bestämma.",
+    "grade": 8,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "Vad hände med Mellanösterns karta efter första världskriget enligt texten?",
+        "options": ["Det osmanska riket försvagades och nya gränser drogs", "Alla gränser försvann och länder slogs ihop", "Europa tog bort alla stater i regionen", "Inga förändringar skedde, allt förblev som tidigare"],
+        "correct": 0
+      },
+      {
+        "q": "Varför blev det svårt för kurder att få ett gemensamt land under 1920-talet?",
+        "options": ["För att kurder inte bodde i området längre", "För att stormakter ofta prioriterade egna intressen och drog nya gränser", "För att det inte fanns några internationella förhandlingar alls", "För att alla länder i regionen redan var demokratiska och eniga"],
+        "correct": 1
+      },
+      {
+        "q": "Vilka länder nämns som exempel där kurder hamnade efter att gränser drogs om?",
+        "options": ["Spanien, Portugal, Frankrike och Italien", "Kanada, USA, Mexiko och Brasilien", "Turkiet, Iran, Irak och Syrien", "Japan, Kina, Korea och Mongoliet"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken händelse från 1988 lyfts som ett tragiskt exempel i texten?",
+        "options": ["En jordbävning som förstörde alla städer i regionen", "Ett fredsavtal som gav alla kurder rösträtt samtidigt", "En stor handelsblockad som stoppade all import", "Gasattacken mot Halabja där många civila dog"],
+        "correct": 3
+      },
+      {
+        "q": "Vad ledde Gulfkriget 1991 till i norra Irak enligt texten?",
+        "options": ["Ett mer självstyrt kurdiskt område började växa fram", "Att kurder flyttade därifrån och området tömdes", "Att regionen blev en del av EU", "Att alla konflikter i Mellanöstern avslutades"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket resonemang om framtiden beskrivs i texten?",
+        "options": ["Att alla kurder vill exakt samma sak politiskt", "Att vissa vill ha ett eget land och andra vill stärka rättigheter där de bor", "Att framtiden inte påverkas av historien", "Att gränser alltid dras helt efter folkgruppers önskemål"],
+        "correct": 1
+      }
+    ],
+    "word_count": 265
+  },
+  {
+    "id": "ak8-tema-003",
+    "title": "Språk, musik och en eld i mars",
+    "text": "På en skola i Sverige ska klassen ordna en kulturkväll. Läraren ber alla att ta med något som betyder mycket för dem. Dilan tar med en liten flagga med en sol i mitten, men förklarar att symboler kan uppfattas olika beroende på sammanhang. Hen vill hellre prata om språk och traditioner. Samir har med en spellista med kurdisk musik, och Aso visar ett foto från Newroz, den kurdiska nyårsfesten som ofta firas runt vårdagjämningen. Där tänder man ibland eldar, sjunger och dansar i ring, inte bara för att det är festligt utan också för att högtiden har blivit en markering av identitet och hopp.\n\nKurdiskan är inte ett enda språk på exakt samma sätt överallt. Det finns flera varianter, ofta kallade dialekter, som kan skilja sig i uttal och ord. Två vanliga är kurmanji och sorani. En person kan förstå mycket av den andras dialekt, men ändå behöva vänja sig vid skillnaderna. Dessutom använder kurder olika alfabet beroende på land och tradition: i vissa områden används latinska bokstäver, i andra ett alfabet som liknar det arabiska. Det gör att en text kan se helt olika ut även om den säger samma sak.\n\nNär Dilan berättar detta inser flera i klassen att språk också handlar om tillgång. Om man får lära sig läsa och skriva på sitt modersmål blir det lättare att föra vidare berättelser, dikter och sånger. Samir spelar en låt där instrumentet tembûr hörs tydligt. Han säger att musiken ofta bär minnen: om byar, berg, förälskelser och migration. Aso berättar att hens mormor, som har en hörselnedsättning, känner rytmen genom att lägga handen mot bordet när trummorna spelar.\n\nKulturkvällen blir inte en tävling om \u201crätt\u201d symboler. Den blir en påminnelse om att Kurdistan för många betyder ett sammanhang: språk som lever i olika former, traditioner som förändras, och en gemenskap som kan finnas både i Mellanöstern och i en svensk skolsal.",
+    "grade": 8,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad vill Dilan helst prata om i stället för symboler?",
+        "options": ["Språk och traditioner", "Matematik och provresultat", "Endast politik och partier", "Sportregler från olika länder"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är Newroz enligt texten?",
+        "options": ["En kurdisk nyårsfest som ofta firas runt vårdagjämningen", "En vinterhögtid där man alltid undviker musik", "Ett bergspass som bara används av herdar", "Ett skolämne som handlar om geologi"],
+        "correct": 0
+      },
+      {
+        "q": "Vilka två dialekter nämns som vanliga varianter av kurdiska?",
+        "options": ["Svenska och norska", "Spanska och portugisiska", "Kurmanji och sorani", "Tyska och nederländska"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan kurdiska texter se olika ut även om de betyder samma sak?",
+        "options": ["För att kurdiska alltid skrivs utan vokaler", "För att varje by hittar på egna bokstäver", "För att alla skriver med hemliga koder", "För att olika alfabet kan användas i olika områden"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken tanke om språk lyfts i texten när klassen pratar om modersmål?",
+        "options": ["Att läs- och skrivkunnighet kan göra det lättare att föra kultur vidare", "Att modersmål aldrig påverkar berättelser eller sånger", "Att dialekter alltid gör att man inte kan förstå varandra alls", "Att alfabet bara är viktigt för turister"],
+        "correct": 0
+      },
+      {
+        "q": "Hur deltar Asos mormor i musiken trots hörselnedsättning?",
+        "options": ["Genom att läsa låttexter på en skärm", "Genom att känna rytmen med handen mot bordet", "Genom att alltid stå längst bort från trummorna", "Genom att bara lyssna på mycket höga toner"],
+        "correct": 1
+      }
+    ],
+    "word_count": 310
+  },
+  {
+    "id": "ak8-tema-004",
+    "title": "Självstyre och svåra kompromisser",
+    "text": "I norra Irak finns ett område som ofta kallas irakiska Kurdistan. Där har den kurdiska befolkningen under lång tid strävat efter större självbestämmande. Efter konflikter och politiska förändringar under 1900-talet växte ett regionalt självstyre fram, och i dag finns en regional regering med parlament och egna myndigheter inom flera områden. Samtidigt är regionen formellt en del av Irak, vilket betyder att vissa beslut måste förhandlas med den federala staten i Bagdad.\n\nI praktiken kan självstyre handla om allt från skolans språkval till hur polis och sjukvård organiseras. Men det kan också handla om ekonomi. Regionen har naturresurser, och inkomsterna från till exempel olja kan skapa både möjligheter och konflikter. Om den regionala nivån och centralstaten inte är överens om hur pengar ska fördelas kan löner, investeringar och samhällsservice påverkas. För invånare kan detta kännas konkret: blir det elavbrott? Finns det jobb? Kan unga starta företag?\n\nRelationerna med grannländer spelar också roll. Kurdiska områden ligger nära flera gränser, och politiska förändringar kan göra grannar oroliga för att egna minoriteter ska kräva samma sak. Därför påverkas regionen av diplomati, handel och ibland spänningar. Många kurder i Irak har dessutom band till släktingar i andra länder, vilket gör att händelser på andra sidan en gräns kan kännas personliga.\n\nEn del politiska rörelser har drivit frågan om självständighet, men även bland dem som vill ha ett eget land finns olika uppfattningar om tidpunkt och väg dit. Andra betonar att starka institutioner, rättssäkerhet och fungerande demokratiska processer måste komma först. Texten visar att politik sällan är en enkel knapp: mer självstyre kan ge inflytande, men kräver också kompromisser, stabilitet och ansvar.",
+    "grade": 8,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vilket område handlar texten främst om när den beskriver ett regionalt självstyre?",
+        "options": ["Irakiska Kurdistan i norra Irak", "Ett kurdiskt område i norra Sverige", "En region i Australien med egen valuta", "Ett bergsområde i Kanada utan städer"],
+        "correct": 0
+      },
+      {
+        "q": "Varför måste vissa beslut fortfarande förhandlas med Bagdad?",
+        "options": ["För att regionen formellt är en del av Irak", "För att Bagdad ligger närmast havet", "För att parlamentet i regionen är upplöst", "För att regionen saknar invånare"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket exempel ges på något som kan påverkas om ekonomi och fördelning av inkomster blir en konflikt?",
+        "options": ["Att alla berg flyttas för att göra plats för nya vägar", "Att skolböcker blir identiska i hela världen", "Att löner, investeringar och samhällsservice kan påverkas", "Att alla invånare automatiskt får samma jobb"],
+        "correct": 2
+      },
+      {
+        "q": "Varför kan grannländer reagera på politiska förändringar i regionen enligt texten?",
+        "options": ["För att de vill stoppa all handel i Mellanöstern", "För att de tror att regionen ska flytta sina floder", "För att de redan är helt utan minoriteter", "För att de kan bli oroliga att egna minoriteter ska kräva samma sak"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken vardagsnära fråga använder texten för att visa att politik blir konkret för invånarna?",
+        "options": ["Om det blir elavbrott och om det finns jobb", "Om alla får nya efternamn varje år", "Om solen går upp i väster", "Om skolan slutar ha raster"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken slutsats antyds om vägen mot mer självstyre eller självständighet?",
+        "options": ["Att det alltid går snabbt och utan kompromisser", "Att institutioner, rättssäkerhet och demokratiska processer kan behöva stärkas", "Att ekonomi aldrig spelar någon roll", "Att gränser inte påverkar människor alls"],
+        "correct": 1
+      }
+    ],
+    "word_count": 270
+  },
+  {
+    "id": "ak8-tema-005",
+    "title": "Att bära två hem samtidigt",
+    "text": "När Zilan flyttar till en ny stad i Sverige får hen ofta frågan varifrån familjen kommer. Zilan svarar ibland \u201cfrån Irak\u201d, ibland \u201cfrån Kurdistan\u201d, och märker att reaktionen kan bli olika. För vissa är det bara en geografisk detalj. För andra väcker det frågor om konflikter, migration och mänskliga rättigheter.\n\nKurder har i olika tider och på olika platser upplevt begränsningar av språk, politisk organisering eller kulturella uttryck. Samtidigt har villkoren varierat mycket mellan länder och perioder. Vissa familjer har flytt på grund av krig och våld, andra på grund av ekonomiska svårigheter eller brist på framtidstro. När människor lämnar ett område tar de ofta med sig mer än en resväska: de tar med sig berättelser, sånger, mattraditioner och ett språk som kanske talas hemma men inte alltid i samhället runt omkring.\n\nI diasporan, alltså när en grupp bor utanför sitt ursprungliga område, kan identitet bli både starkare och mer komplicerad. Zilan går på kurdisk dans ibland, men spelar också svensk fotboll med kompisar. Ibland känns det lätt att kombinera. Ibland känns det som att behöva välja. En släkting säger att man måste hålla fast vid allt \u201csom förr\u201d, medan en annan släkting säger att man måste anpassa sig helt för att bli accepterad. Zilan tycker att båda har en poäng, men att verkligheten ofta ligger mitt emellan.\n\nTexten visar också att mänskliga rättigheter inte bara handlar om stora ord i FN-dokument. Det handlar om rätten att kunna uttrycka sin kultur, att känna sig trygg och att få delta i samhället utan att bli misstänkliggjord. När Zilan skriver en skoluppgift om Kurdistan väljer hen därför att inte bara beskriva konflikter. Hen skriver också om vardag, språk och människor som försöker bygga framtid – både där och här.",
+    "grade": 8,
+    "category": "Mänskliga rättigheter",
+    "questions": [
+      {
+        "q": "Varför märker Zilan att svaret \u201cKurdistan\u201d kan ge olika reaktioner?",
+        "options": ["För att det kan väcka frågor om konflikter, migration och rättigheter", "För att alla alltid tänker på exakt samma sak", "För att ordet bara används om en sportklubb", "För att Sverige har förbjudit ordet i skolor"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betyder \u201cdiasporan\u201d enligt textens förklaring?",
+        "options": ["När en grupp bor utanför sitt ursprungliga område", "När en stad byter namn vart tionde år", "När två länder slås ihop till ett", "När en högtid alltid firas i hemlighet"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket exempel visar hur Zilan kombinerar olika delar av sitt liv?",
+        "options": ["Hen vägrar prata med kompisar i skolan", "Hen flyttar tillbaka varje helg", "Hen går på kurdisk dans och spelar svensk fotboll", "Hen slutar helt med alla fritidsaktiviteter"],
+        "correct": 2
+      },
+      {
+        "q": "Vilken rättighet betonas som vardagsnära i texten?",
+        "options": ["Rätten att bestämma vädret", "Rätten att aldrig behöva gå i skolan", "Rätten att resa gratis i hela världen", "Rätten att uttrycka kultur och delta utan att misstänkliggöras"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken konflikt i åsikter mellan släktingar beskriver texten?",
+        "options": ["Att en vill hålla fast vid allt som förr och en annan vill anpassa sig helt", "Att båda vill att Zilan ska sluta lära sig språk", "Att ingen vill att Zilan ska ha vänner", "Att alla är överens om att identitet är oviktigt"],
+        "correct": 0
+      },
+      {
+        "q": "Varför väljer Zilan att inte bara skriva om konflikter i sin skoluppgift?",
+        "options": ["För att konflikter aldrig har funnits i regionen", "För att hen också vill beskriva vardag, språk och framtidsförsök", "För att skolan förbjuder historiska exempel", "För att hen bara vill skriva om svensk geografi"],
+        "correct": 1
+      }
+    ],
+    "word_count": 282
+  },
+  {
+    "id": "ak3-tema-016",
+    "title": "Affischen på fritids",
+    "text": "På fritids kommer Elin och Amir in i musikrummet. På bordet ligger en affisch med fyra färgglada figurer. Det är Dolly Style, ett popband som klär sig som godis. De har stora rosetter, glittriga kläder och peruker i starka färger. Elin har hört deras låt på radion och nynnar direkt. Amir säger att musiken låter glad, som när man hoppar studsmatta. De tittar på en musikvideo på surfplattan. I videon dansar bandet i ett rum med ballonger och lampor som blinkar. Elin märker att alla i bandet har egna färger. Amir undrar hur länge det tar att sminka sig så mycket. Pedagogen Sara berättar att många gillar Dolly Style för att de vågar vara sig själva. Bandet sjunger om vänskap och att man kan vara olika. Efter mellis gör barnen egna \"Dolly\"-armband av pärlor. Elin väljer rosa och blå. Amir tar grönt och gult. När de är klara sätter de upp armbanden på affischen och skriver: \"Välkommen hit!\"",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Var är Elin och Amir när de ser affischen?",
+        "options": ["I musikrummet på fritids", "På fotbollsplanen", "I matsalen", "I skolans korridor"],
+        "correct": 0
+      },
+      {
+        "q": "Vad säger Amir att musiken låter som?",
+        "options": ["Som en lugn viskning", "Som när man hoppar studsmatta", "Som en åskknall", "Som en sovsång"],
+        "correct": 1
+      },
+      {
+        "q": "Vad finns i rummet i musikvideon?",
+        "options": ["Bara ett piano", "En stor skog", "Ballonger och lampor som blinkar", "En tom scen utan saker"],
+        "correct": 2
+      },
+      {
+        "q": "Varför gillar många Dolly Style, enligt Sara?",
+        "options": ["För att de alltid är tysta", "För att de vinner varje tävling", "För att de bor i samma stad", "För att de vågar vara sig själva"],
+        "correct": 3
+      },
+      {
+        "q": "Vad gör barnen efter mellis?",
+        "options": ["De gör armband av pärlor", "De skriver prov", "De städar hela skolan", "De går hem direkt"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket budskap sjunger bandet om i texten?",
+        "options": ["Att alltid tävla", "Att aldrig leka", "Vänskap och att man kan vara olika", "Att bara gilla samma sak"],
+        "correct": 2
+      }
+    ],
+    "word_count": 158
+  },
+  {
+    "id": "ak3-tema-017",
+    "title": "Vårshowen i trean",
+    "text": "I trean ska klassen göra en liten vårshow. Läraren Jonas frågar vilken musik de vill ha till avslutningen. Flera ropar \"Dolly Style!\" eftersom låtarna är lätta att sjunga med i. Klassen lyssnar på en låt och räknar takten: ett, två, tre, fyra. Sedan delar Jonas ut färgat papper. Uppgiften är att skapa en scenbakgrund som passar musiken. Nora ritar stjärnor och hjärtan. Leo målar en jättestor klubba. Sam bygger en regnbåge av papp och tejp. De pratar om att Dolly Style ofta använder samma tema i kläder, dans och färger, så allt känns som en saga. Efter övningen pratar de om nervositet. Jonas säger att man kan andas långsamt och titta på en vän i publiken. Nora testar och märker att axlarna slappnar av. Leo nickar och säger att han vågar sjunga högre. På fredagen applåderar föräldrar och syskon, och klassen känner sig modig.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Varför vill flera i klassen ha Dolly Style som musik?",
+        "options": ["För att låtarna är lätta att sjunga med i", "För att låtarna är helt tysta", "För att Jonas förbjuder annan musik", "För att alla redan kan spela gitarr"],
+        "correct": 0
+      },
+      {
+        "q": "Vad ska klassen skapa med färgat papper?",
+        "options": ["En ny mattebok", "En scenbakgrund", "Ett prov", "En flagga till rektorn"],
+        "correct": 1
+      },
+      {
+        "q": "Vad bygger Sam?",
+        "options": ["En regnbåge av papp och tejp", "En robot av metall", "Ett torn av sten", "En båt av trä"],
+        "correct": 0
+      },
+      {
+        "q": "Vad tipsar Jonas om när man är nervös?",
+        "options": ["Springa så fort man kan", "Blunda hela tiden", "Andas långsamt och titta på en vän", "Gömma sig bakom ridån"],
+        "correct": 2
+      },
+      {
+        "q": "Vad märker Nora när hon testar tipset?",
+        "options": ["Att hon blir arg", "Att axlarna slappnar av", "Att hon glömmer sitt namn", "Att hon tappar rösten direkt"],
+        "correct": 1
+      },
+      {
+        "q": "Vilka applåderar på fredagen?",
+        "options": ["Bara lärarna", "Endast skolans kockar", "Alla i en annan klass", "Föräldrar och syskon"],
+        "correct": 3
+      }
+    ],
+    "word_count": 163
+  },
+  {
+    "id": "ak3-tema-018",
+    "title": "Spellistan med refränger",
+    "text": "På biblioteket finns en hylla med musikböcker. Fatima lånar en bok om popmusik och läser om hur en refräng fungerar. Hon får en idé och gör en spellista hemma. Först lägger hon in en Dolly Style-låt med snabb rytm och glada ord. Sedan väljer hon en lugnare låt från ett annat band. När morfar kommer på besök får han lyssna. Morfar säger att Dolly Style påminner honom om karneval, eftersom allt är färgglatt och fullt av energi. Fatima frågar varför refrängen fastnar i huvudet. Morfar förklarar att refrängen ofta upprepas och har en enkel melodi. De testar genom att klappa med händerna varje gång refrängen börjar. Fatima märker att hon lär sig texten snabbare när hon klappar. Nästa dag berättar hon för sin kompis Viggo i skolan. De bestämmer att göra en egen liten dans till första versen och en annan till refrängen. Till sist skriver hon ner tre ord som beskriver musiken: \"glitter\", \"dans\" och \"tillsammans\".",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad lånar Fatima på biblioteket?",
+        "options": ["En bok om popmusik", "En karta över Sverige", "En bok om dinosaurier", "En tidning om väder"],
+        "correct": 0
+      },
+      {
+        "q": "Vilken typ av låt lägger hon först i spellistan?",
+        "options": ["En Dolly Style-låt med snabb rytm", "En helt tyst låt", "En låt utan refräng", "En låt som bara är trummor"],
+        "correct": 0
+      },
+      {
+        "q": "Varför fastnar refrängen ofta i huvudet, enligt morfar?",
+        "options": ["För att den alltid är svår att sjunga", "För att den upprepas och har enkel melodi", "För att den bara finns på vintern", "För att den aldrig spelas igen"],
+        "correct": 1
+      },
+      {
+        "q": "Vad gör Fatima och morfar när refrängen börjar?",
+        "options": ["De sitter helt stilla", "De ritar i en bok", "De klappar med händerna", "De springer ut ur rummet"],
+        "correct": 2
+      },
+      {
+        "q": "Vad bestämmer Fatima och Viggo att göra i skolan?",
+        "options": ["Bygga ett slott", "Göra en egen liten dans", "Skriva en uppsats om matte", "Samla stenar i en låda"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket av orden skriver Fatima ner till slut?",
+        "options": ["Tillsammans", "Sömn", "Regnjacka", "Tystnad"],
+        "correct": 0
+      }
+    ],
+    "word_count": 157
+  },
+  {
+    "id": "ak3-tema-019",
+    "title": "Dolly-dans på kulturhuset",
+    "text": "På kulturhuset ordnas en dansworkshop som heter \"Dolly-dans\". Ledaren heter Kim och använder hen som pronomen. I gruppen finns många olika barn. Tuva har hörapparat och står nära högtalaren för att känna basen. Oliver sitter i rullstol och visar hur man kan göra snabba armrörelser i stället för hopp. Kim säger att alla rörelser räknas, bara man följer takten. Först tränar de en enkel serie: klapp, snurr, pek, och ett steg åt sidan. Sedan sätter de på en Dolly Style-låt med mycket glitterkänsla. Barnen skrattar när de försöker hålla samma tempo. Kim påminner dem om att paus också är en del av dansen. Några barn vill ha peruker, men Kim säger att det räcker med en färg man gillar. Tuvas mamma filmar en kort stund och skickar till morfar, som ler på skärmen. Efteråt får alla välja ett färgband till handleden. Oliver tar silver. Tuva väljer lila. Kim säger: \"Ni gjorde dansen till er egen.\"",
+    "grade": 3,
+    "category": "Värdegrund",
+    "questions": [
+      {
+        "q": "Vad heter workshoppen på kulturhuset?",
+        "options": ["Dolly-dans", "Vinterloppet", "Bokklubben", "Smygverkstaden"],
+        "correct": 0
+      },
+      {
+        "q": "Vilket pronomen använder Kim?",
+        "options": ["Han", "Hen", "Hon", "De"],
+        "correct": 1
+      },
+      {
+        "q": "Varför står Tuva nära högtalaren?",
+        "options": ["För att se lamporna bättre", "För att kunna prata med alla", "För att känna basen", "För att få låna en peruk"],
+        "correct": 2
+      },
+      {
+        "q": "Vad visar Oliver att man kan göra i stället för hopp?",
+        "options": ["Långa fotsteg bakåt", "En stilla bugning", "Snabba armrörelser", "Sitta helt tyst"],
+        "correct": 2
+      },
+      {
+        "q": "Vad säger Kim om pauser i dansen?",
+        "options": ["Paus är också en del av dansen", "Paus är alltid fel", "Paus finns bara på slutet", "Paus betyder att man måste gå hem"],
+        "correct": 0
+      },
+      {
+        "q": "Vad väljer Oliver efteråt?",
+        "options": ["Ett lila färgband", "Ett silverfärgat band", "En grön mössa", "En gul ryggsäck"],
+        "correct": 1
+      }
+    ],
+    "word_count": 155
+  },
+  {
+    "id": "ak3-tema-020",
+    "title": "En egen poptext",
+    "text": "Linus hittar en gammal glittrig penna i en låda. Han bestämmer sig för att skriva en egen poptext, inspirerad av Dolly Style. Först skriver han en vers om en grå måndag när regnet faller. Sedan vill han att refrängen ska kännas som färg. Han skriver ord som \"rosa\", \"mod\" och \"hej!\". Lillasyster Maja hjälper till och föreslår att refrängen ska upprepas två gånger, så den blir lätt att minnas. Pappa spelar tre ackord på gitarr och Linus sjunger ovanpå. De märker att texten låter bättre när orden passar rytmen. Linus suddar och byter plats på några rader. Till slut har de en låt om att våga gå in på skolgården även om man är ny. Linus tänker att Dolly Style också sjunger om att hitta sin plats. Nästa dag läser han upp den för sin kompis Aisha. Hon säger att låten känns både snäll och stark, precis som en kram. Han sparar texten i sin skrivbok.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad hittar Linus i en låda?",
+        "options": ["En glittrig penna", "En ny cykelhjälm", "En glasspinne", "En gammal mobil"],
+        "correct": 0
+      },
+      {
+        "q": "Vad vill Linus att refrängen ska kännas som?",
+        "options": ["Som kyla", "Som färg", "Som sömn", "Som damm"],
+        "correct": 1
+      },
+      {
+        "q": "Vilket förslag ger Maja?",
+        "options": ["Att låten ska vara helt utan ord", "Att refrängen ska vara längre än versen", "Att refrängen ska upprepas två gånger", "Att de ska byta till trummor direkt"],
+        "correct": 2
+      },
+      {
+        "q": "Vad spelar pappa?",
+        "options": ["Tre ackord på gitarr", "En flöjtmelodi", "En trumsolo", "Ett piano som är ostämt"],
+        "correct": 0
+      },
+      {
+        "q": "Vad handlar deras färdiga låt om?",
+        "options": ["Att vinna en tävling", "Att baka bullar", "Att våga vara ny på skolgården", "Att sova länge på morgonen"],
+        "correct": 2
+      },
+      {
+        "q": "Vad säger Aisha om låten?",
+        "options": ["Att den är för lång", "Att den är för svår att förstå", "Att den känns snäll och stark", "Att den inte har någon refräng"],
+        "correct": 2
+      }
+    ],
+    "word_count": 156
   }
 ]
