@@ -85,7 +85,7 @@ export default function StudentResults({ hideHeader }: { hideHeader?: boolean })
             <h2 className="text-lg font-bold text-gray-800 mb-3">📚 Mina ämnen</h2>
             <div className="space-y-3">
               {allTopicProgress.map(({ topic, prog }) => prog && (
-                <div key={topic.id} className="bg-white rounded-2xl p-4 shadow-sm">
+                <div key={topic.id} className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm">
                   <div className="flex items-center gap-3">
                     <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${topic.color} flex items-center justify-center text-xl flex-shrink-0`}>
                       {topic.icon}

@@ -200,10 +200,10 @@ function TopicCard({
     <button
       onClick={onClick}
       disabled={isLocked}
-      className={`w-full text-left rounded-2xl p-4 transition-all shadow-sm ${
+      className={`w-full text-left rounded-2xl p-4 transition-all ${
         isLocked
-          ? 'bg-gray-100 opacity-60 cursor-not-allowed'
-          : 'bg-white hover:shadow-md hover:scale-[1.02] cursor-pointer active:scale-[0.98]'
+          ? 'bg-gray-100 border border-gray-200 opacity-60 cursor-not-allowed'
+          : 'bg-white border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 hover:scale-[1.02] cursor-pointer active:scale-[0.98]'
       }`}
     >
       <div className="flex items-start gap-4">

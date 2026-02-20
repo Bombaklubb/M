@@ -56,8 +56,8 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
                       key={ach.id}
                       className={`rounded-2xl p-4 transition-all ${
                         isEarned
-                          ? 'bg-white shadow-md'
-                          : 'bg-gray-100 opacity-60'
+                          ? 'bg-white border border-gray-200 shadow-md'
+                          : 'bg-gray-100 border border-gray-200 opacity-60'
                       }`}
                     >
                       <div className="flex items-start gap-3">
