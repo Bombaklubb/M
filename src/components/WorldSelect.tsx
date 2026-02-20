@@ -45,7 +45,7 @@ export default function WorldSelect() {
         <div className="max-w-4xl mx-auto px-6 pt-6 pb-4">
 
           {/* Avatar + info + quick stats */}
-          <div className="flex flex-wrap items-center gap-4 mb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
             <div className="flex items-center gap-3 flex-1 min-w-0">
               <div className="text-5xl">{AVATARS[currentStudent.avatar]}</div>
               <div>
