@@ -4,38 +4,18 @@ import { verifyTeacherPin } from '../utils/storage';
 
 export default function TeacherLogin() {
   const { setTeacher, setView } = useApp();
-  const [pin, setPin] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [digits, setDigits] = useState(['', '', '', '']);
+  const [showPw, setShowPw] = useState(false);
 
-  function handleDigit(i: number, val: string) {
-    if (!/^\d*$/.test(val)) return;
-    const next = [...digits];
-    next[i] = val.slice(-1);
-    setDigits(next);
-    const joined = next.join('');
-    if (joined.length === 4) {
-      if (verifyTeacherPin(joined)) {
-        setTeacher(true);
-      } else {
-        setError('Fel PIN-kod. Försök igen.');
-        setTimeout(() => {
-          setDigits(['', '', '', '']);
-          setError('');
-        }, 1200);
-      }
-    }
-    // Auto-focus next
-    if (val && i < 3) {
-      const el = document.getElementById(`pin-${i + 1}`);
-      el?.focus();
-    }
-  }
-
-  function handleKeyDown(i: number, e: React.KeyboardEvent) {
-    if (e.key === 'Backspace' && !digits[i] && i > 0) {
-      const el = document.getElementById(`pin-${i - 1}`);
-      el?.focus();
+  function handleSubmit(e?: React.FormEvent) {
+    e?.preventDefault();
+    if (verifyTeacherPin(password)) {
+      setTeacher(true);
+    } else {
+      setError('Fel lösenord. Försök igen.');
+      setPassword('');
+      setTimeout(() => setError(''), 2000);
     }
   }
 
@@ -45,35 +25,40 @@ export default function TeacherLogin() {
         <div className="text-center mb-6">
           <div className="text-5xl mb-3">👩‍🏫</div>
           <h1 className="text-2xl font-black text-gray-800">Lärarvy</h1>
-          <p className="text-gray-500 mt-1">Ange PIN-kod för att logga in</p>
-          <p className="text-xs text-gray-400 mt-1">(Standard PIN: 1234)</p>
+          <p className="text-gray-500 mt-1 text-sm">Ange lösenord för att logga in</p>
         </div>
 
-        <div className="flex justify-center gap-3 mb-6">
-          {digits.map((d, i) => (
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="relative">
             <input
-              key={i}
-              id={`pin-${i}`}
-              type="tel"
-              inputMode="numeric"
-              maxLength={1}
-              value={d}
-              onChange={e => handleDigit(i, e.target.value)}
-              onKeyDown={e => handleKeyDown(i, e)}
-              className={`w-14 h-14 text-center text-2xl font-black border-2 rounded-2xl focus:outline-none transition-colors ${
+              type={showPw ? 'text' : 'password'}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              placeholder="Lösenord..."
+              autoFocus
+              className={`w-full border-2 rounded-2xl px-4 py-3.5 text-lg font-bold focus:outline-none transition-colors pr-12 ${
                 error ? 'border-red-400 bg-red-50' : 'border-gray-200 focus:border-indigo-500'
               }`}
             />
-          ))}
-        </div>
+            <button type="button" onClick={() => setShowPw(v => !v)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-sm">
+              {showPw ? '🙈' : '👁️'}
+            </button>
+          </div>
 
-        {error && (
-          <p className="text-red-500 text-center text-sm mb-4 animate-bounce">{error}</p>
-        )}
+          {error && (
+            <p className="text-red-500 text-center text-sm animate-bounce">{error}</p>
+          )}
+
+          <button type="submit"
+            className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-black py-4 rounded-2xl text-lg shadow-lg hover:scale-105 active:scale-95 transition-all">
+            Logga in →
+          </button>
+        </form>
 
         <button
           onClick={() => setView('login')}
-          className="w-full text-gray-400 hover:text-gray-600 text-sm transition-colors"
+          className="w-full mt-4 text-gray-400 hover:text-gray-600 text-sm transition-colors text-center block"
         >
           ← Tillbaka till elevlogin
         </button>
