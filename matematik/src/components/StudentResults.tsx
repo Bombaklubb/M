@@ -1,3 +1,4 @@
+import AppHeader from './AppHeader';
 import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { LEVEL_NAMES, LEVEL_COLORS, LEVEL_THRESHOLDS } from '../types';
@@ -34,8 +35,9 @@ export default function StudentResults() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <AppHeader />
       {/* Header */}
-      <div className={`bg-gradient-to-r ${LEVEL_COLORS[level]} text-white py-8 px-4`}>
+      <div className={`bg-gradient-to-r ${LEVEL_COLORS[level]} text-white pt-16 pb-8 px-4`}>
         <div className="max-w-lg mx-auto">
           <button
             onClick={() => setView('dashboard')}

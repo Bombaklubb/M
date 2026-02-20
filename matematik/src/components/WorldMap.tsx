@@ -5,6 +5,7 @@ import { TOPICS } from '../data/topics';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { getDifficultyLevel, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../utils/adaptive';
 import { GRADE_LABELS } from '../types';
+import AppHeader from './AppHeader';
 
 export default function WorldMap({ worldId }: { worldId: WorldId }) {
   const { currentStudent, selectTopic, setView } = useApp();
@@ -24,8 +25,9 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <AppHeader />
       {/* World header */}
-      <div className={`bg-gradient-to-r ${world.bg} text-white pb-6 pt-4 px-4 relative overflow-hidden`}>
+      <div className={`bg-gradient-to-r ${world.bg} text-white pb-6 pt-16 px-4 relative overflow-hidden`}>
         <div className="absolute right-0 top-0 opacity-20 text-8xl pointer-events-none select-none p-4">
           {world.emoji}
         </div>
