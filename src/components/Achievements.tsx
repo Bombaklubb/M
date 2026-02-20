@@ -4,7 +4,7 @@ import { useApp } from '../contexts/AppContext';
 import { ACHIEVEMENTS, RARITY_LABELS, RARITY_COLORS } from '../data/achievements';
 import { getAchievements } from '../utils/storage';
 
-export default function Achievements() {
+export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView, getStudentStats } = useApp();
   if (!currentStudent) return null;
 
@@ -16,12 +16,12 @@ export default function Achievements() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AppHeader />
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white pt-16 pb-8 px-4">
+      {!hideHeader && <AppHeader />}
+      <div className={`bg-gradient-to-r from-purple-600 to-indigo-700 text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-8 px-4`}>
         <div className="max-w-lg mx-auto">
-          <button onClick={() => setView('my-results')} className="text-white/80 hover:text-white text-sm mb-4 block">
+          {!hideHeader && <button onClick={() => setView('my-results')} className="text-white/80 hover:text-white text-sm mb-4 block">
             ← Mina resultat
-          </button>
+          </button>}
           <h1 className="text-2xl font-black">🏆 Märken & Utmärkelser</h1>
           <p className="text-white/80 mt-1">{earned.length} av {ACHIEVEMENTS.length} upplåsta</p>
           {/* Progress bar */}
