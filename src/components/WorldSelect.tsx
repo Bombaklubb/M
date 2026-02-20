@@ -100,7 +100,6 @@ export default function WorldSelect() {
 
           <div className="grid grid-cols-2 gap-4">
             {WORLDS.map(world => {
-              const isAccessible = accessibleWorlds.includes(world.id);
               const isCurrent = world.id === currentWorldId;
               const worldProgress = progress.filter(p => world.topicIds.includes(p.topicId));
               const completed = worldProgress.filter(p => p.completed).length;
@@ -108,13 +107,10 @@ export default function WorldSelect() {
 
               return (
                 <button key={world.id}
-                  onClick={() => isAccessible && setView(`world-${world.id}` as any)}
-                  disabled={!isAccessible}
-                  className={`text-left rounded-3xl overflow-hidden transition-all shadow-xl ${
-                    isAccessible
-                      ? 'hover:scale-[1.03] active:scale-[0.97] cursor-pointer'
-                      : 'opacity-50 cursor-not-allowed'
-                  } ${isCurrent ? 'ring-4 ring-amber-400 ring-offset-2 ring-offset-transparent' : ''}`}
+                  onClick={() => setView(`world-${world.id}` as any)}
+                  className={`text-left rounded-3xl overflow-hidden transition-all shadow-xl hover:scale-[1.03] active:scale-[0.97] cursor-pointer ${
+                    isCurrent ? 'ring-4 ring-amber-400 ring-offset-2 ring-offset-transparent' : ''
+                  }`}
                 >
                   <div className={`bg-gradient-to-br ${world.bg} p-5 relative overflow-hidden h-full`}>
                     {/* Decorative emojis background */}
@@ -122,17 +118,14 @@ export default function WorldSelect() {
                       {world.islandEmojis[0]}
                     </div>
 
-                    {/* Top row: emoji + lock */}
+                    {/* Top row: emoji + current badge */}
                     <div className="flex items-start justify-between mb-3">
                       <div className="text-5xl leading-none">{world.emoji}</div>
-                      <div className="flex flex-col items-end gap-1">
-                        {isCurrent && (
-                          <span className="bg-amber-400 text-amber-900 text-xs font-black px-2 py-0.5 rounded-full">
-                            DIN VÄRLD
-                          </span>
-                        )}
-                        {!isAccessible && <span className="text-white/70 text-lg">🔒</span>}
-                      </div>
+                      {isCurrent && (
+                        <span className="bg-amber-400 text-amber-900 text-xs font-black px-2 py-0.5 rounded-full">
+                          DIN VÄRLD
+                        </span>
+                      )}
                     </div>
 
                     {/* Name & subtitle */}
@@ -142,20 +135,16 @@ export default function WorldSelect() {
                     <p className="text-white/70 text-xs font-semibold mb-3">{world.subtitle}</p>
 
                     {/* Progress */}
-                    {isAccessible ? (
-                      <div>
-                        <div className="flex justify-between text-white/70 text-xs mb-1">
-                          <span>{completed}/{world.topicIds.length} klara</span>
-                          <span>{Math.round(pct)}%</span>
-                        </div>
-                        <div className="h-2 bg-white/30 rounded-full overflow-hidden">
-                          <div className="h-full bg-white rounded-full transition-all"
-                            style={{ width: `${pct}%` }} />
-                        </div>
+                    <div>
+                      <div className="flex justify-between text-white/70 text-xs mb-1">
+                        <span>{completed}/{world.topicIds.length} klara</span>
+                        <span>{Math.round(pct)}%</span>
                       </div>
-                    ) : (
-                      <p className="text-white/50 text-xs">Lås upp när du kommit längre</p>
-                    )}
+                      <div className="h-2 bg-white/30 rounded-full overflow-hidden">
+                        <div className="h-full bg-white rounded-full transition-all"
+                          style={{ width: `${pct}%` }} />
+                      </div>
+                    </div>
                   </div>
                 </button>
               );
