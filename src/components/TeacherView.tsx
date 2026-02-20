@@ -1,14 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { getAllStudents, getProgress, getPoints, getAchievements, getSessions, setTeacherPin, getTeacherPin } from '../utils/storage';
+import { getAllStudents, getProgress, getPoints, getAchievements, getSessions } from '../utils/storage';
 import { TOPICS } from '../data/topics';
 import { LEVEL_NAMES, GRADE_LABELS, Grade } from '../types';
 
 export default function TeacherView() {
   const { setTeacher } = useApp();
   const [tab, setTab] = useState<'overview' | 'students' | 'topics' | 'settings'>('overview');
-  const [newPin, setNewPin] = useState('');
-  const [pinMsg, setPinMsg] = useState('');
 
   const allStudents = getAllStudents();
   const sessions = getSessions();
@@ -68,16 +66,6 @@ export default function TeacherView() {
     const accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
     return { student: s, pts, completed, accuracy, achievements: achs.length };
   }).sort((a, b) => (b.pts?.total ?? 0) - (a.pts?.total ?? 0)), [allStudents]);
-
-  function handlePinChange() {
-    if (!/^\d{4}$/.test(newPin)) {
-      setPinMsg('PIN måste vara exakt 4 siffror');
-      return;
-    }
-    setTeacherPin(newPin);
-    setPinMsg('PIN-koden har ändrats! ✅');
-    setNewPin('');
-  }
 
   const tabs: { id: typeof tab; label: string; icon: string }[] = [
     { id: 'overview', label: 'Översikt', icon: '📊' },
@@ -298,24 +286,8 @@ export default function TeacherView() {
         {tab === 'settings' && (
           <div className="space-y-4 animate-fade-in">
             <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-4">🔐 Ändra lärar-PIN</h2>
-              <p className="text-sm text-gray-500 mb-3">Nuvarande PIN: {getTeacherPin()}</p>
-              <input
-                type="tel"
-                inputMode="numeric"
-                maxLength={4}
-                value={newPin}
-                onChange={e => setNewPin(e.target.value.replace(/\D/g, '').slice(0, 4))}
-                placeholder="Ny 4-siffrig PIN"
-                className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-lg font-bold text-center tracking-widest focus:outline-none focus:border-indigo-500 mb-3"
-              />
-              <button
-                onClick={handlePinChange}
-                className="w-full bg-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-indigo-700 transition-colors"
-              >
-                Spara ny PIN
-              </button>
-              {pinMsg && <p className="text-center text-sm mt-2 font-semibold text-green-600">{pinMsg}</p>}
+              <h2 className="font-bold text-gray-800 mb-3">🔐 Inloggning</h2>
+              <p className="text-sm text-gray-500">Lärarvyn öppnas med <strong>Ctrl+Shift+P</strong> och lösenordet <strong>Korsängen</strong>.</p>
             </div>
 
             <div className="bg-white rounded-2xl shadow-sm p-5">

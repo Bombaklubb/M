@@ -71,15 +71,17 @@ export default function QuestView() {
       setAnswered(false);
       setInput('');
     } else {
-      // Quest complete
-      const pts = correctCount * 20 + 50;
+      // Quest complete – belöning KRÄVER alla rätt
+      const allCorrect = correctCount === selectedQuest.steps.length;
+      const pts = correctCount * 20 + (allCorrect ? 100 : 0);
       addPoints(currentStudent.id, pts);
       saveQuestProgress(currentStudent.id, selectedQuest.id, selectedQuest.steps.length, true, correctCount);
-      // Unlock collectible
-      const item = COLLECTION_ITEMS.find(c => c.id === selectedQuest.rewardItem);
-      if (item) {
-        unlockCollectible(currentStudent.id, item.id);
-        setNewItem(item.id);
+      if (allCorrect) {
+        const item = COLLECTION_ITEMS.find(c => c.id === selectedQuest.rewardItem);
+        if (item) {
+          unlockCollectible(currentStudent.id, item.id);
+          setNewItem(item.id);
+        }
       }
       setPhase('result');
     }
@@ -154,7 +156,7 @@ export default function QuestView() {
             <span className="text-4xl">{selectedQuest.rewardEmoji}</span>
             <div className="text-left">
               <p className="text-white font-bold">{COLLECTION_ITEMS.find(i => i.id === selectedQuest.rewardItem)?.name ?? 'Samlarobjekt'}</p>
-              <p className="text-white/60 text-xs">Slutför alla {selectedQuest.steps.length} steg</p>
+              <p className="text-white/60 text-xs">Alla {selectedQuest.steps.length} svar måste vara rätt!</p>
             </div>
           </div>
         </div>
@@ -275,14 +277,20 @@ export default function QuestView() {
         </div>
 
         {/* Reward */}
-        {item && (
-          <div className="bg-white/10 border-2 border-white/20 rounded-2xl p-5 mb-6">
-            <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-3">🎁 Du låste upp</p>
+        {newItem && item ? (
+          <div className="bg-white/10 border-2 border-amber-400/40 rounded-2xl p-5 mb-6">
+            <p className="text-amber-300 text-xs font-bold uppercase tracking-widest mb-3">🎁 Belöning upplåst!</p>
             <div className="text-6xl mb-2">{item.emoji}</div>
             <p className="text-white font-black text-xl">{item.name}</p>
             <p className="text-white/60 text-sm mt-1">{item.description}</p>
           </div>
-        )}
+        ) : !newItem && item ? (
+          <div className="bg-red-900/30 border-2 border-red-400/40 rounded-2xl p-5 mb-6">
+            <p className="text-red-300 text-xs font-bold uppercase tracking-widest mb-2">❌ Belöningen missades</p>
+            <div className="text-4xl mb-2 opacity-40">{item.emoji}</div>
+            <p className="text-white/60 text-sm">Du behöver alla rätt för att låsa upp <strong>{item.name}</strong>. Försök igen!</p>
+          </div>
+        ) : null}
 
         <div className="grid grid-cols-2 gap-3">
           <button onClick={() => startQuest(selectedQuest)}

@@ -222,8 +222,10 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
   const [miniAnswered, setMiniAnswered] = useState(false);
   const [miniCorrect, setMiniCorrect] = useState(false);
 
-  // Pick the first fill-in or multiple-choice exercise as mini challenge
-  const miniEx = topic.exercises.find(e => e.type === 'fill-in' || e.type === 'multiple-choice' || e.type === 'true-false');
+  // Pick a mini-challenge exercise – skip the first one so it's not the same as exercise 1
+  const miniEx = topic.exercises.slice(1).find(
+    e => e.type === 'fill-in' || e.type === 'multiple-choice' || e.type === 'true-false'
+  ) ?? topic.exercises[0];
 
   function checkMini(ans: string) {
     if (!miniEx) return;
