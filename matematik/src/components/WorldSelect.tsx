@@ -99,7 +99,7 @@ export default function WorldSelect() {
             </button>
             <button onClick={logout}
               className="bg-white/10 hover:bg-white/20 text-white/60 text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              Byt elev
+              Logga ut
             </button>
           </div>
         </div>
