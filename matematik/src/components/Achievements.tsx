@@ -15,7 +15,7 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
   const byRarity = ['legendary', 'epic', 'rare', 'common'] as const;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen ${hideHeader ? 'bg-transparent' : 'bg-gray-50'}`}>
       {!hideHeader && <AppHeader />}
       <div className={`bg-gradient-to-r from-purple-600 to-indigo-700 text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-8 px-4`}>
         <div className="max-w-lg mx-auto">

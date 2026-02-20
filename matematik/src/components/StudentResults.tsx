@@ -34,7 +34,7 @@ export default function StudentResults({ hideHeader }: { hideHeader?: boolean })
   })).filter(tp => tp.prog);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen ${hideHeader ? 'bg-transparent' : 'bg-gray-50'}`}>
       {!hideHeader && <AppHeader />}
       {/* Header */}
       <div className={`bg-gradient-to-r ${LEVEL_COLORS[level]} text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-8 px-4`}>

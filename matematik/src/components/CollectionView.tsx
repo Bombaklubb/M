@@ -25,7 +25,7 @@ export default function CollectionView({ hideHeader }: { hideHeader?: boolean })
   const pct = Math.round((unlockedCount / totalCount) * 100);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen ${hideHeader ? 'bg-transparent' : 'bg-gray-50'}`}>
       {!hideHeader && <AppHeader />}
       {/* Header */}
       <div className={`bg-gradient-to-r from-amber-500 to-orange-600 text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-6 px-4`}>
@@ -42,7 +42,7 @@ export default function CollectionView({ hideHeader }: { hideHeader?: boolean })
       </div>
 
       {/* Filter tabs */}
-      <div className={`bg-white border-b border-gray-100 px-4 ${hideHeader ? '' : 'sticky top-0 z-10'}`}>
+      <div className={`px-4 ${hideHeader ? 'bg-white/10 border-b border-white/10' : 'bg-white border-b border-gray-100 sticky top-0 z-10'}`}>
         <div className="max-w-lg mx-auto flex gap-2 overflow-x-auto py-3">
           {filters.map(f => {
             const world = worlds.find(w => w.id === f);
