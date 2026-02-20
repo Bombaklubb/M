@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise } from '../types';
 import { useApp } from '../contexts/AppContext';
+import { updateAdaptive } from '../utils/adaptive';
+import { recordError } from '../utils/errorBank';
 
 interface ExerciseState {
   answered: boolean;
@@ -9,7 +11,7 @@ interface ExerciseState {
 }
 
 export default function TopicExercise({ topic }: { topic: Topic }) {
-  const { setView, submitTopicResult } = useApp();
+  const { setView, submitTopicResult, currentStudent } = useApp();
   const [currentIdx, setCurrentIdx] = useState(0);
   const [states, setStates] = useState<ExerciseState[]>(
     topic.exercises.map(() => ({ answered: false, correct: false, userAnswer: '' }))
@@ -17,6 +19,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   const [input, setInput] = useState('');
   const [showExplanation, setShowExplanation] = useState(false);
   const [startTime] = useState(Date.now());
+  const exerciseStartRef = useRef(Date.now());
   const [newAchievements, setNewAchievements] = useState<string[]>([]);
   const [pointsGained, setPointsGained] = useState(0);
   const [showCelebration, setShowCelebration] = useState(false);
@@ -33,6 +36,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     }
     setInput('');
     setShowExplanation(false);
+    exerciseStartRef.current = Date.now();
   }, [currentIdx]);
 
   function answerMultipleChoice(idx: number) {
@@ -62,6 +66,19 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   }
 
   function commitAnswer(userAnswer: string, correct: boolean) {
+    const elapsed = Date.now() - exerciseStartRef.current;
+    // Adaptive difficulty + error bank tracking
+    if (currentStudent) {
+      updateAdaptive(currentStudent.id, topic.id, correct, elapsed);
+      if (!correct) {
+        const ex = exercise;
+        const correctAns = ex.type === 'multiple-choice'
+          ? (ex as any).options[(ex as any).correctIndex]
+          : ex.type === 'true-false' ? String((ex as any).isTrue)
+          : String((ex as any).answer);
+        recordError(currentStudent.id, topic.id, topic.title, ex.id, ex.question, correctAns, userAnswer);
+      }
+    }
     setShowExplanation(true);
     const newStates = [...states];
     newStates[currentIdx] = { answered: true, correct, userAnswer };
