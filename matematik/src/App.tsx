@@ -12,6 +12,8 @@ import TeacherLogin from './components/TeacherLogin';
 import TeacherView from './components/TeacherView';
 import QuickDrill from './components/QuickDrill';
 import ErrorBankView from './components/ErrorBankView';
+import QuestView from './components/QuestView';
+import CollectionView from './components/CollectionView';
 
 function AppInner() {
   const { currentView, selectedTopic } = useApp();
@@ -27,6 +29,8 @@ function AppInner() {
     case 'topic-result':      return selectedTopic ? <TopicResult topic={selectedTopic} /> : <WorldSelect />;
     case 'quick-drill':       return <QuickDrill />;
     case 'error-bank':        return <ErrorBankView />;
+    case 'quest':             return <QuestView />;
+    case 'collection':        return <CollectionView />;
     case 'my-results':        return <StudentResults />;
     case 'achievements':      return <Achievements />;
     case 'teacher-login':     return <TeacherLogin />;
