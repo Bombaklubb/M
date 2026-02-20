@@ -89,7 +89,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- LIST ----
   if (phase === 'list') return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen ${hideHeader ? 'bg-transparent' : 'bg-gray-50'}`}>
       <div className={`bg-gradient-to-r ${world.bg} text-white py-6 px-4`}>
         <div className="max-w-lg mx-auto">
           {!hideHeader && <button onClick={() => setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>}
@@ -172,7 +172,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- STEP ----
   if (phase === 'step') return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen ${hideHeader ? 'bg-transparent' : 'bg-gray-50'}`}>
       {/* Header */}
       <div className={`bg-gradient-to-r ${selectedQuest.storyColor} text-white py-4 px-4`}>
         <div className="max-w-lg mx-auto">

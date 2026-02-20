@@ -18,11 +18,21 @@ export default function MinSidaView() {
   const [activeTab, setActiveTab] = useState<Tab>('quest');
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(160deg,#0f2027,#203a43,#2c5364)' }}>
       <AppHeader />
 
+      {/* Stars */}
+      {Array.from({ length: 24 }, (_, i) => (
+        <div key={i} className="fixed rounded-full bg-white pointer-events-none"
+          style={{
+            width: `${1 + (i * 7 % 2)}px`, height: `${1 + (i * 7 % 2)}px`,
+            top: `${(i * 37 + 5) % 100}%`, left: `${(i * 53 + 11) % 100}%`,
+            opacity: 0.3 + (i % 5) * 0.07,
+          }} />
+      ))}
+
       {/* Tab bar – fixed below the header */}
-      <div className="fixed top-12 left-0 right-0 z-40 bg-white border-b border-gray-200 shadow-sm">
+      <div className="fixed top-12 left-0 right-0 z-40 bg-black/50 backdrop-blur-md border-b border-white/10">
         <div className="max-w-4xl mx-auto flex">
           {TABS.map(tab => (
             <button
@@ -30,8 +40,8 @@ export default function MinSidaView() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 flex flex-col items-center gap-0.5 py-2 text-xs font-bold transition-colors
                 ${activeTab === tab.id
-                  ? 'text-blue-600 border-b-2 border-blue-600'
-                  : 'text-gray-500 hover:text-gray-700'
+                  ? 'text-amber-400 border-b-2 border-amber-400'
+                  : 'text-white/50 hover:text-white/80'
                 }`}
             >
               <span className="text-lg leading-none">{tab.icon}</span>
