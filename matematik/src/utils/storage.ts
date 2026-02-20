@@ -265,18 +265,10 @@ export function getSessions(): SessionEntry[] {
 
 // ======================== TEACHER ========================
 
-const DEFAULT_TEACHER_PIN = '1234';
-
-export function getTeacherPin(): string {
-  return localStorage.getItem(KEYS.teacherPin) ?? DEFAULT_TEACHER_PIN;
-}
-
-export function setTeacherPin(pin: string): void {
-  localStorage.setItem(KEYS.teacherPin, pin);
-}
+const TEACHER_PASSWORD = 'Korsängen';
 
 export function verifyTeacherPin(pin: string): boolean {
-  return pin === getTeacherPin();
+  return pin === TEACHER_PASSWORD;
 }
 
 // ======================== HELPERS ========================

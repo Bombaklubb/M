@@ -24,7 +24,7 @@ export default function Login() {
   const selectedGroup = GRADE_GROUPS.find(g => g.grades.includes(grade as Grade));
 
   function next1() {
-    if (name.trim().length < 2) { setError('Skriv ditt namn (minst 2 bokstäver)'); return; }
+    if (name.trim().length < 2) { setError('Skriv ditt skolanvändarnamn (minst 2 tecken)'); return; }
     setError(''); setStep('grade');
   }
   function next2() {
@@ -83,10 +83,10 @@ export default function Login() {
 
           {step==='name' && (
             <div className="animate-slide-up">
-              <h2 className="text-2xl font-black text-gray-800 mb-1">Vad heter du? 👋</h2>
-              <p className="text-gray-400 text-sm mb-5">Ange ditt förnamn för att starta äventyret</p>
+              <h2 className="text-2xl font-black text-gray-800 mb-1">Skolanvändarnamn 🏫</h2>
+              <p className="text-gray-400 text-sm mb-5">Ange ditt skolanvändarnamn för att logga in</p>
               <input type="text" value={name} onChange={e=>setName(e.target.value)}
-                onKeyDown={e=>e.key==='Enter'&&next1()} placeholder="Ditt namn..."
+                onKeyDown={e=>e.key==='Enter'&&next1()} placeholder="Ditt skolanvändarnamn..."
                 className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-lg font-bold focus:outline-none focus:border-amber-400 transition-colors"
                 autoFocus/>
               {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
@@ -153,11 +153,6 @@ export default function Login() {
             </div>
           )}
 
-          <div className="mt-5 text-center">
-            <button onClick={()=>setView('teacher-login')} className="text-gray-300 text-sm hover:text-gray-500 transition-colors">
-              👩‍🏫 Lärare? Klicka här
-            </button>
-          </div>
         </div>
       </div>
     </div>
