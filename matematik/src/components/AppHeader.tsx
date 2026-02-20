@@ -29,7 +29,7 @@ export default function AppHeader() {
           className="flex items-center gap-2 group"
           title="Till startsidan"
         >
-          <span className="text-2xl">🧮</span>
+          <span className="text-2xl">🎯</span>
           <span className="text-white font-black text-lg tracking-tight
             group-hover:text-amber-300 transition-colors">
             Mattejakten

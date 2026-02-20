@@ -6,7 +6,7 @@ import { WORLDS } from '../data/worlds';
 import { getCollection } from '../utils/questStorage';
 import { gradeToNum } from '../data/topics';
 
-export default function CollectionView() {
+export default function CollectionView({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView } = useApp();
   const [filter, setFilter] = useState<string>('all');
 
@@ -26,11 +26,11 @@ export default function CollectionView() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AppHeader />
+      {!hideHeader && <AppHeader />}
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white pt-16 pb-6 px-4">
+      <div className={`bg-gradient-to-r from-amber-500 to-orange-600 text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-6 px-4`}>
         <div className="max-w-lg mx-auto">
-          <button onClick={() => setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>
+          {!hideHeader && <button onClick={() => setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>}
           <h1 className="text-2xl font-black">🏅 Min Samling</h1>
           <p className="text-white/80 text-sm mt-1">{unlockedCount}/{totalCount} upplåsta ({pct}%)</p>
 
@@ -42,7 +42,7 @@ export default function CollectionView() {
       </div>
 
       {/* Filter tabs */}
-      <div className="bg-white border-b border-gray-100 px-4 sticky top-0 z-10">
+      <div className={`bg-white border-b border-gray-100 px-4 ${hideHeader ? '' : 'sticky top-0 z-10'}`}>
         <div className="max-w-lg mx-auto flex gap-2 overflow-x-auto py-3">
           {filters.map(f => {
             const world = worlds.find(w => w.id === f);
