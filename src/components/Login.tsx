@@ -4,7 +4,7 @@ import { findOrCreateStudent } from '../utils/storage';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 
-const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
+const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉', '🧙', '🦸', '🧝', '🐺', '🦅', '🐯', '🧜', '🦖'];
 
 const GRADE_GROUPS = [
   { label: 'Lågstadiet', emoji: '🦕', grades: ['1','2','3'] as Grade[], world: 'Dinosaurie Världen', color: 'from-emerald-400 to-green-500' },
