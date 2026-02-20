@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Topic } from '../types';
 import { useApp } from '../contexts/AppContext';
+import AppHeader from './AppHeader';
 
 // Inline SVG illustrations for each topic type
 function Illustration({ name }: { name: string }) {
@@ -242,7 +243,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
   }
 
   const Header = () => (
-    <div className={`bg-gradient-to-r ${topic.color} text-white py-6 px-4`}>
+    <div className={`bg-gradient-to-r ${topic.color} text-white pt-16 pb-6 px-4`}>
       <div className="max-w-lg mx-auto">
         <button onClick={() => setView('dashboard')}
           className="mb-3 flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm">
@@ -270,6 +271,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
   // ---- LEARN PHASE ----
   if (phase === 'learn') return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
         <div className="bg-white rounded-3xl shadow-md p-6 mb-6">
@@ -307,6 +309,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
   // ---- MINI CHALLENGE ----
   if (phase === 'mini' && miniEx) return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
         <div className="bg-white rounded-3xl shadow-md p-6 mb-5">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Grade, GRADE_LABELS } from '../types';
 import { findOrCreateStudent } from '../utils/storage';
 import { useApp } from '../contexts/AppContext';
+import AppHeader from './AppHeader';
 
 const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
 
@@ -36,8 +37,9 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
+    <div className="min-h-screen flex items-center justify-center p-4 pt-20 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)' }}>
+      <AppHeader />
 
       {/* Stars */}
       {Array.from({length:25},(_,i)=>(
@@ -58,7 +60,7 @@ export default function Login() {
             style={{background:'linear-gradient(135deg,#f59e0b,#ef4444)'}}>
             <span className="text-4xl">🧮</span>
           </div>
-          <h1 className="text-5xl font-black text-white tracking-tight drop-shadow-lg">MatteÄventyr</h1>
+          <h1 className="text-5xl font-black text-white tracking-tight drop-shadow-lg">Mattejakten</h1>
           <p className="text-blue-200 mt-1">Utforska matematikens världar!</p>
           <div className="flex justify-center gap-2 mt-3 flex-wrap">
             {['🦕 Dino','🏰 Fantasy','🚀 Sci-Fi','🌌 Rymd'].map((w,i)=>(

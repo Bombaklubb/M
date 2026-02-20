@@ -1,3 +1,4 @@
+import AppHeader from './AppHeader';
 import React, { useEffect, useState } from 'react';
 import { Topic } from '../types';
 import { useApp } from '../contexts/AppContext';
@@ -34,7 +35,8 @@ export default function TopicResult({ topic }: { topic: Topic }) {
   const grade = score >= 90 ? 'Utmärkt! 🌟' : score >= 70 ? 'Bra jobbat! 👍' : score >= 50 ? 'Godkänt! ✅' : 'Försök igen! 💪';
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex flex-col items-center justify-start py-10 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex flex-col items-center justify-start pt-24 pb-10 px-4">
+      <AppHeader />
       <div className={`w-full max-w-md transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         {/* Result card */}
         <div className="bg-white rounded-3xl shadow-xl p-8 mb-5">

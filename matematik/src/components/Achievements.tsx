@@ -1,3 +1,4 @@
+import AppHeader from './AppHeader';
 import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { ACHIEVEMENTS, RARITY_LABELS, RARITY_COLORS } from '../data/achievements';
@@ -15,7 +16,8 @@ export default function Achievements() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-8 px-4">
+      <AppHeader />
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white pt-16 pb-8 px-4">
         <div className="max-w-lg mx-auto">
           <button onClick={() => setView('my-results')} className="text-white/80 hover:text-white text-sm mb-4 block">
             ← Mina resultat
