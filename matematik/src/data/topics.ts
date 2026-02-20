@@ -165,6 +165,62 @@ export const TOPICS: Topic[] = [
     ],
   },
 
+  {
+    id: 'rakna-till-100',
+    title: 'Räkna till 100',
+    icon: '💯',
+    description: 'Lär dig räkna, hoppa i tiosteg och förstå tiotalen',
+    grades: ['2', '3'],
+    minGrade: 2,
+    color: 'from-lime-400 to-green-500',
+    instruction: {
+      title: 'Räkna till 100',
+      text: 'Nu räknar vi till 100! Tiotalen är din hemlighet: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Hoppa tio i taget – som en groda! Sedan fyller du i siffrorna däremellan.',
+      illustration: 'count-to-100',
+      examples: [
+        '10, 20, 30... → hoppa 10 i taget',
+        '45 = fyra tiotal (40) + fem ental (5)',
+        '71 = sjuttioett, 99 = nittionio',
+      ],
+    },
+    exercises: [
+      { id: 'c100-1', type: 'multiple-choice', question: 'Vad kommer efter 39?', options: ['30', '40', '38', '41'], correctIndex: 1, points: 10, explanation: 'Efter 39 kommer 40! Vi hoppar upp till nästa tiotat.' },
+      { id: 'c100-2', type: 'fill-in', question: '10, 20, 30, ___, 50', answer: '40', points: 10, explanation: 'Vi hoppar 10 i taget: 30 + 10 = 40.' },
+      { id: 'c100-3', type: 'fill-in', question: 'Hur många tiotal finns det i 80?', answer: '8', points: 10, explanation: '80 = 8 × 10, alltså 8 tiotal.' },
+      { id: 'c100-4', type: 'multiple-choice', question: 'Vad är 65 i ord?', options: ['Sextiotre', 'Sextiosex', 'Sextiofem', 'Femtiosex'], correctIndex: 2, points: 10, explanation: '65 = sextiofem. 60 = sextio, 5 = fem.' },
+      { id: 'c100-5', type: 'true-false', question: '99 är det största tvåsiffriga talet', isTrue: true, points: 10, explanation: 'Rätt! 99 är det sista talet innan 100.' },
+      { id: 'c100-6', type: 'fill-in', question: '50 + 30 = ?', answer: '80', points: 10, explanation: '50 + 30 = 80. Fem tiotal + tre tiotal = åtta tiotal.' },
+    ],
+  },
+  {
+    id: 'klockan',
+    title: 'Klockan',
+    icon: '🕐',
+    description: 'Lär dig läsa analoga och digitala klockor',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-amber-400 to-yellow-500',
+    instruction: {
+      title: 'Klockan – tid och timmar',
+      text: 'Klockan visar oss vilken tid det är! En dag har 24 timmar, en timme har 60 minuter. Den korta visaren visar timmar, den långa visar minuter. Klockan 12:00 på dagen kallas "mitt på dagen" och 12:00 på natten kallas "midnatt".',
+      illustration: 'clock',
+      examples: [
+        '🕐 Klockan 1:00 = "klockan ett"',
+        '🕧 Klockan 12:30 = "halv ett"',
+        '🕑 Klockan 2:15 = "kvart över två"',
+        '🕒 Klockan 3:45 = "kvart i fyra"',
+      ],
+    },
+    exercises: [
+      { id: 'klk-1', type: 'multiple-choice', question: 'En timme har hur många minuter?', options: ['30', '60', '100', '24'], correctIndex: 1, points: 10, explanation: 'En timme = 60 minuter. Klockan tar 60 "steg" för att gå ett varv.' },
+      { id: 'klk-2', type: 'fill-in', question: 'Klockan 3:00 – hur många timmar till klockan 5:00?', answer: '2', points: 10, explanation: 'Från 3 till 5 är det 2 timmar.' },
+      { id: 'klk-3', type: 'multiple-choice', question: 'Vad kallas klockan 12:00 på natten?', options: ['Middag', 'Midnatt', 'Halvdag', 'Kvällen'], correctIndex: 1, points: 10, explanation: 'Klockan 12:00 på natten kallas midnatt.' },
+      { id: 'klk-4', type: 'true-false', question: '"Kvart i tre" är klockan 2:45', isTrue: true, points: 10, explanation: 'Rätt! Kvart i tre = 15 minuter före klockan tre = 2:45.' },
+      { id: 'klk-5', type: 'fill-in', question: 'Klockan är 8:30. Skolan börjar 9:00. Hur många minuter har du kvar?', answer: '30', points: 15, explanation: 'Från 8:30 till 9:00 är det 30 minuter.' },
+      { id: 'klk-6', type: 'multiple-choice', question: '"Halv fyra" är vilken klockslag?', options: ['4:30', '3:30', '3:00', '4:00'], correctIndex: 1, points: 10, explanation: 'Halv fyra = 30 minuter in i timmen innan fyra = 3:30.' },
+    ],
+  },
+
   // ============================================================
   // ÅK 2-4: MULTIPLIKATION & DIVISION INTRO
   // ============================================================
@@ -312,6 +368,34 @@ export const TOPICS: Topic[] = [
       { id: 'pct-4', type: 'fill-in', question: '20% av 150 = ?', answer: '30', points: 15, explanation: '20% av 150: 150 × 0,2 = 30.' },
       { id: 'pct-5', type: 'true-false', question: '100% = 1 (ett helt)', isTrue: true, points: 10, explanation: 'Rätt! 100% = 100/100 = 1.' },
       { id: 'pct-6', type: 'multiple-choice', question: 'En jacka kostar 400 kr. Det är 20% rabatt. Vad är rabatten i kronor?', options: ['40 kr', '60 kr', '80 kr', '100 kr'], correctIndex: 2, points: 20, explanation: '20% av 400 = 400 × 0,2 = 80 kr.' },
+    ],
+  },
+
+  {
+    id: 'geometri-omfang',
+    title: 'Omkrets och Mätning',
+    icon: '📏',
+    description: 'Mät och beräkna omkrets av figurer',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-cyan-400 to-sky-500',
+    instruction: {
+      title: 'Omkrets – runt om en figur',
+      text: 'Omkretsen är den totala längden av en figurs alla sidor – som att gå runt hela figuren! Kvadrat: 4 × sida. Rektangel: 2 × (längd + bredd). Cirkelns omkrets kallas "circumferens": C = π × d ≈ 3,14 × diameter.',
+      illustration: 'perimeter',
+      examples: [
+        'Kvadrat med sida 5: O = 4 × 5 = 20',
+        'Rektangel 6 × 4: O = 2 × (6+4) = 20',
+        'Triangel med sidor 3, 4, 5: O = 3+4+5 = 12',
+      ],
+    },
+    exercises: [
+      { id: 'omf-1', type: 'fill-in', question: 'Omkrets av kvadrat med sida 7?', answer: '28', points: 10, explanation: 'O = 4 × 7 = 28.' },
+      { id: 'omf-2', type: 'fill-in', question: 'Omkrets av rektangel 5 × 3?', answer: '16', points: 10, explanation: 'O = 2 × (5+3) = 2 × 8 = 16.' },
+      { id: 'omf-3', type: 'multiple-choice', question: 'Triangel med sidor 6, 8, 10. Vad är omkretsen?', options: ['22', '24', '26', '20'], correctIndex: 1, points: 10, explanation: 'O = 6+8+10 = 24.' },
+      { id: 'omf-4', type: 'true-false', question: 'Omkretsen av en kvadrat med sida 4 = 16', isTrue: true, points: 10, explanation: 'Rätt! 4 × 4 = 16.' },
+      { id: 'omf-5', type: 'fill-in', question: 'En rektangel har omkrets 30 och ena sidan är 9. Vad är den andra sidan?', answer: '6', points: 20, explanation: '2 × (9 + b) = 30 → 9 + b = 15 → b = 6.' },
+      { id: 'omf-6', type: 'multiple-choice', question: 'Vilket är störst – kvadrat sida 5 eller rektangel 3×8?', options: ['Kvadraten (O=20)', 'Rektangeln (O=22)', 'Lika stora', 'Går ej att jämföra'], correctIndex: 1, points: 15, explanation: 'Kvadrat O=20, Rektangel O=2×(3+8)=22. Rektangeln har störst omkrets.' },
     ],
   },
 

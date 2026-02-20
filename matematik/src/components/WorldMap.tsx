@@ -68,6 +68,22 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           <span className="ml-auto text-white/60 text-2xl">→</span>
         </button>
 
+        {/* Quest & Collection shortcuts */}
+        <div className="grid grid-cols-2 gap-3">
+          <button onClick={()=>setView('quest')}
+            className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left">
+            <span className="text-2xl">⚔️</span>
+            <p className="font-black text-gray-800 text-sm mt-1">Äventyr</p>
+            <p className="text-gray-500 text-xs">Berättelseproblem</p>
+          </button>
+          <button onClick={()=>setView('collection')}
+            className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left">
+            <span className="text-2xl">🏅</span>
+            <p className="font-black text-gray-800 text-sm mt-1">Samling</p>
+            <p className="text-gray-500 text-xs">Dina föremål</p>
+          </button>
+        </div>
+
         <h2 className="text-gray-700 font-bold text-sm uppercase tracking-widest mt-1">Kapitel</h2>
 
         {worldTopics.map((topic, idx) => {

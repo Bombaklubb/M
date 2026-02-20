@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Topic } from '../types';
 import { useApp } from '../contexts/AppContext';
 
@@ -216,76 +216,161 @@ function Illustration({ name }: { name: string }) {
 
 export default function TopicInstruction({ topic }: { topic: Topic }) {
   const { setView } = useApp();
+  const [phase, setPhase] = useState<'learn' | 'mini' | 'done'>('learn');
+  const [miniInput, setMiniInput] = useState('');
+  const [miniAnswered, setMiniAnswered] = useState(false);
+  const [miniCorrect, setMiniCorrect] = useState(false);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Header */}
-      <div className={`bg-gradient-to-r ${topic.color} text-white py-8 px-4`}>
-        <div className="max-w-lg mx-auto">
-          <button
-            onClick={() => setView('dashboard')}
-            className="mb-4 flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm"
-          >
-            ← Tillbaka till menyn
-          </button>
-          <div className="flex items-center gap-4">
-            <div className="text-5xl">{topic.icon}</div>
-            <div>
-              <h1 className="text-2xl font-black">{topic.title}</h1>
-              <p className="text-white/80">{topic.description}</p>
-            </div>
+  // Pick the first fill-in or multiple-choice exercise as mini challenge
+  const miniEx = topic.exercises.find(e => e.type === 'fill-in' || e.type === 'multiple-choice' || e.type === 'true-false');
+
+  function checkMini(ans: string) {
+    if (!miniEx) return;
+    let ok = false;
+    if (miniEx.type === 'fill-in') {
+      const correct_str = String((miniEx as any).answer).replace(',', '.');
+      const acceptable = ((miniEx as any).acceptableAnswers ?? []).map((a: any) => String(a).replace(',', '.').toLowerCase());
+      ok = ans.trim().replace(',', '.').toLowerCase() === correct_str.toLowerCase()
+        || acceptable.includes(ans.trim().replace(',', '.').toLowerCase());
+    } else if (miniEx.type === 'multiple-choice') {
+      ok = ans === String((miniEx as any).correctIndex);
+    } else if (miniEx.type === 'true-false') {
+      ok = ans === String((miniEx as any).isTrue);
+    }
+    setMiniCorrect(ok);
+    setMiniAnswered(true);
+  }
+
+  const Header = () => (
+    <div className={`bg-gradient-to-r ${topic.color} text-white py-6 px-4`}>
+      <div className="max-w-lg mx-auto">
+        <button onClick={() => setView('dashboard')}
+          className="mb-3 flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm">
+          ← Tillbaka till menyn
+        </button>
+        <div className="flex items-center gap-4">
+          <div className="text-5xl">{topic.icon}</div>
+          <div>
+            <h1 className="text-2xl font-black">{topic.title}</h1>
+            <p className="text-white/80 text-sm">{topic.description}</p>
           </div>
         </div>
+        {/* Phase indicator */}
+        <div className="flex gap-2 mt-4">
+          {['learn', 'mini', 'done'].map((p, i) => (
+            <div key={p} className={`flex-1 h-1.5 rounded-full transition-all ${
+              phase === p ? 'bg-white' : i < ['learn','mini','done'].indexOf(phase) ? 'bg-white/60' : 'bg-white/25'
+            }`}/>
+          ))}
+        </div>
       </div>
+    </div>
+  );
 
-      {/* Instruction content */}
+  // ---- LEARN PHASE ----
+  if (phase === 'learn') return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
         <div className="bg-white rounded-3xl shadow-md p-6 mb-6">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">
-            📖 {topic.instruction.title}
-          </h2>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-blue-100 text-blue-700 font-bold text-xs px-3 py-1 rounded-full">Steg 1 av 2 · Lär dig</span>
+          </div>
+          <h2 className="text-xl font-bold text-gray-800 mb-4">📖 {topic.instruction.title}</h2>
 
-          {/* Illustration */}
           <div className="rounded-2xl overflow-hidden mb-5 bg-gray-50">
             <Illustration name={topic.instruction.illustration} />
           </div>
 
-          {/* Text */}
-          <p className="text-gray-700 leading-relaxed text-base mb-5">
-            {topic.instruction.text}
-          </p>
+          <p className="text-gray-700 leading-relaxed text-base mb-5">{topic.instruction.text}</p>
 
-          {/* Examples */}
           {topic.instruction.examples && (
             <div className="bg-blue-50 rounded-2xl p-4">
               <p className="font-bold text-blue-800 mb-2">💡 Exempel:</p>
               <ul className="space-y-1">
                 {topic.instruction.examples.map((ex, i) => (
-                  <li key={i} className="text-blue-700 font-mono text-sm">
-                    {ex}
-                  </li>
+                  <li key={i} className="text-blue-700 font-mono text-sm">{ex}</li>
                 ))}
               </ul>
             </div>
           )}
         </div>
 
-        {/* Exercise count info */}
-        <div className="bg-purple-50 rounded-2xl p-4 mb-6 flex items-center gap-3">
-          <span className="text-3xl">🎯</span>
-          <div>
-            <p className="font-bold text-purple-800">{topic.exercises.length} uppgifter väntar!</p>
-            <p className="text-purple-600 text-sm">Svara rätt för att tjäna poäng och stjärnor</p>
-          </div>
-        </div>
-
-        <button
-          onClick={() => setView('topic-exercise')}
-          className={`w-full bg-gradient-to-r ${topic.color} text-white font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all`}
-        >
-          Starta uppgifterna! 🚀
+        <button onClick={() => setPhase(miniEx ? 'mini' : 'done')}
+          className={`w-full bg-gradient-to-r ${topic.color} text-white font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all`}>
+          Nästa: Testa dig! →
         </button>
       </div>
     </div>
   );
+
+  // ---- MINI CHALLENGE ----
+  if (phase === 'mini' && miniEx) return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Header />
+      <div className="max-w-lg mx-auto px-4 py-6">
+        <div className="bg-white rounded-3xl shadow-md p-6 mb-5">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-purple-100 text-purple-700 font-bold text-xs px-3 py-1 rounded-full">Steg 2 av 2 · Testa dig!</span>
+          </div>
+          <p className="text-gray-500 text-sm mb-3">Innan du börjar – svara på denna fråga:</p>
+          <h2 className="text-xl font-black text-gray-800 mb-5">{miniEx.question}</h2>
+
+          {miniEx.type === 'fill-in' && !miniAnswered && (
+            <div className="flex gap-3">
+              <input type="text" inputMode="decimal" value={miniInput} autoFocus
+                onChange={e => setMiniInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && miniInput.trim() && checkMini(miniInput.trim())}
+                placeholder="Ditt svar..."
+                className={`flex-1 border-2 border-gray-200 rounded-2xl px-4 py-3 text-lg font-bold focus:outline-none focus:border-purple-400`}/>
+              <button onClick={() => miniInput.trim() && checkMini(miniInput.trim())}
+                className="bg-purple-500 text-white font-bold px-5 rounded-2xl hover:bg-purple-400">✓</button>
+            </div>
+          )}
+
+          {miniEx.type === 'multiple-choice' && !miniAnswered && (
+            <div className="grid gap-3">
+              {(miniEx as any).options.map((opt: string, i: number) => (
+                <button key={i} onClick={() => checkMini(String(i))}
+                  className="text-left px-5 py-3 rounded-2xl font-semibold border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all">
+                  <span className="text-gray-400 font-bold mr-2">{String.fromCharCode(65 + i)}.</span>{opt}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {miniEx.type === 'true-false' && !miniAnswered && (
+            <div className="grid grid-cols-2 gap-4">
+              {[true, false].map(val => (
+                <button key={String(val)} onClick={() => checkMini(String(val))}
+                  className="py-5 rounded-2xl font-black text-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all">
+                  {val ? '👍 Sant' : '👎 Falskt'}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {miniAnswered && (
+            <div className={`rounded-2xl p-4 mt-3 ${miniCorrect ? 'bg-green-50 border border-green-200' : 'bg-orange-50 border border-orange-200'}`}>
+              <p className={`font-black text-lg mb-1 ${miniCorrect ? 'text-green-700' : 'text-orange-700'}`}>
+                {miniCorrect ? '🎉 Precis rätt!' : '💪 Bra försök!'}
+              </p>
+              <p className={`text-sm ${miniCorrect ? 'text-green-600' : 'text-orange-600'}`}>{miniEx.explanation}</p>
+            </div>
+          )}
+        </div>
+
+        {miniAnswered && (
+          <button onClick={() => setView('topic-exercise')}
+            className={`w-full bg-gradient-to-r ${topic.color} text-white font-black text-xl py-4 rounded-2xl shadow-lg hover:scale-105 transition-all`}>
+            {miniCorrect ? '🚀 Starta alla uppgifter!' : '🚀 Starta uppgifterna ändå!'}
+          </button>
+        )}
+      </div>
+    </div>
+  );
+
+  // Fallback: go straight to exercises
+  setView('topic-exercise');
+  return null;
 }
