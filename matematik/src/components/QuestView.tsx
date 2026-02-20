@@ -10,7 +10,7 @@ import { gradeToNum } from '../data/topics';
 
 type Phase = 'list' | 'intro' | 'step' | 'result';
 
-export default function QuestView() {
+export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView } = useApp();
   const [selectedQuest, setSelectedQuest] = useState<Quest | null>(null);
   const [phase, setPhase] = useState<Phase>('list');
@@ -92,7 +92,7 @@ export default function QuestView() {
     <div className="min-h-screen bg-gray-50">
       <div className={`bg-gradient-to-r ${world.bg} text-white py-6 px-4`}>
         <div className="max-w-lg mx-auto">
-          <button onClick={() => setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>
+          {!hideHeader && <button onClick={() => setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>}
           <h1 className="text-2xl font-black">⚔️ Äventyr</h1>
           <p className="text-white/80 text-sm mt-1">Lös berättelseproblem och vinn belöningar!</p>
         </div>

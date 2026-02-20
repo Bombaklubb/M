@@ -81,21 +81,9 @@ export default function WorldSelect() {
 
           {/* Nav pills */}
           <div className="flex gap-2 flex-wrap">
-            <button onClick={() => setView('quest')}
-              className="bg-purple-500/80 hover:bg-purple-500 text-white text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              ⚔️ Äventyr
-            </button>
-            <button onClick={() => setView('collection')}
-              className="bg-amber-500/80 hover:bg-amber-500 text-white text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              🏅 Samling
-            </button>
-            <button onClick={() => setView('my-results')}
-              className="bg-white/10 hover:bg-white/20 text-white text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              📊 Resultat
-            </button>
-            <button onClick={() => setView('achievements')}
-              className="bg-white/10 hover:bg-white/20 text-white text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              🏆 Utmärkelser
+            <button onClick={() => setView('my-page')}
+              className="bg-white/20 hover:bg-white/30 text-white text-sm font-bold px-4 py-2 rounded-xl transition-colors">
+              👤 Min sida
             </button>
             <button onClick={logout}
               className="bg-white/10 hover:bg-white/20 text-white/60 text-sm font-bold px-4 py-2 rounded-xl transition-colors">

@@ -7,7 +7,7 @@ import { TOPICS } from '../data/topics';
 
 const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
 
-export default function StudentResults() {
+export default function StudentResults({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView, getStudentStats } = useApp();
   if (!currentStudent) return null;
 
@@ -35,16 +35,16 @@ export default function StudentResults() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AppHeader />
+      {!hideHeader && <AppHeader />}
       {/* Header */}
-      <div className={`bg-gradient-to-r ${LEVEL_COLORS[level]} text-white pt-16 pb-8 px-4`}>
+      <div className={`bg-gradient-to-r ${LEVEL_COLORS[level]} text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-8 px-4`}>
         <div className="max-w-lg mx-auto">
-          <button
+          {!hideHeader && <button
             onClick={() => setView('dashboard')}
             className="text-white/80 hover:text-white text-sm mb-4 block"
           >
             ← Tillbaka
-          </button>
+          </button>}
           <div className="flex items-center gap-4 mb-4">
             <div className="text-5xl">{AVATARS[currentStudent.avatar]}</div>
             <div>

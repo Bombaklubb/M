@@ -16,7 +16,7 @@ import { WorldId } from '../data/worlds';
 export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
-  | 'quick-drill' | 'error-bank' | 'quest' | 'collection';
+  | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page';
 
 interface AppContextValue {
   currentStudent: Student | null;
