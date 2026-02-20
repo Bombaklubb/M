@@ -1,3 +1,4 @@
+import AppHeader from './AppHeader';
 import React, { useState } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { COLLECTION_ITEMS, RARITY_COLORS, RARITY_LABELS } from '../data/collection';
@@ -25,8 +26,9 @@ export default function CollectionView() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <AppHeader />
       {/* Header */}
-      <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-6 px-4">
+      <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white pt-16 pb-6 px-4">
         <div className="max-w-lg mx-auto">
           <button onClick={() => setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>
           <h1 className="text-2xl font-black">🏅 Min Samling</h1>

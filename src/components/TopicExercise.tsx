@@ -3,6 +3,7 @@ import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExerc
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
+import AppHeader from './AppHeader';
 
 interface ExerciseState {
   answered: boolean;
@@ -111,8 +112,9 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <AppHeader />
       {/* Top bar */}
-      <div className={`bg-gradient-to-r ${topic.color} text-white px-4 pt-4 pb-3`}>
+      <div className={`bg-gradient-to-r ${topic.color} text-white px-4 pt-16 pb-3`}>
         <div className="max-w-lg mx-auto">
           <div className="flex justify-between items-center mb-2">
             <button
