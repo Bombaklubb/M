@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "cd lasforstaelse && npm run dev",
     "build": "cd lasforstaelse && npm run build",
-    "generate": "node scripts/generate_library.mjs"
+    "generate": "node scripts/generate_library.mjs",
+    "matematik:dev": "cd matematik && npm run dev",
+    "matematik:build": "cd matematik && npm run build"
   }
 }
