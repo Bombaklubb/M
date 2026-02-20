@@ -83,7 +83,7 @@ export default function Login() {
 
           {step==='name' && (
             <div className="animate-slide-up">
-              <h2 className="text-2xl font-black text-gray-800 mb-1">Skolanvändarnamn 🏫</h2>
+              <h2 className="text-2xl font-black text-gray-800 mb-1">Ditt användarnamn i skolan 🏫</h2>
               <p className="text-gray-400 text-sm mb-5">Ange ditt skolanvändarnamn för att logga in</p>
               <input type="text" value={name} onChange={e=>setName(e.target.value)}
                 onKeyDown={e=>e.key==='Enter'&&next1()} placeholder="Ditt skolanvändarnamn..."

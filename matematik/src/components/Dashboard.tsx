@@ -108,7 +108,7 @@ export default function Dashboard() {
             onClick={logout}
             className="text-gray-400 hover:text-gray-600 text-sm"
           >
-            Byt elev
+            Logga ut
           </button>
         </div>
 
