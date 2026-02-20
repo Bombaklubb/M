@@ -1,4 +1,4 @@
-const CACHE = 'matteaventyr-v1';
+const CACHE = 'mattejakten-v2';
 const OFFLINE_URLS = ['/', '/index.html'];
 
 self.addEventListener('install', e => {
@@ -25,9 +25,10 @@ self.addEventListener('fetch', e => {
         const fresh = await fetch(e.request);
         if (fresh.ok) cache.put(e.request, fresh.clone());
         return fresh;
-      } catch {
+      } catch(err) {
         // Offline fallback
-        return cache.match('/') ?? new Response('Offline', { status: 503 });
+        const fallback = await cache.match('/');
+        return fallback || new Response('Offline', { status: 503 });
       }
     })
   );
