@@ -39,7 +39,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               htmlFor="name"
               className="block text-base font-bold text-slate-700 mb-2"
             >
-              Vad heter du?
+              Ditt användarnamn i skolan
             </label>
             <input
               type="text"
