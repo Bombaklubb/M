@@ -1,5 +1,3 @@
 {
-  "buildCommand": "cd lasforstaelse && npm install && npm run build",
-  "outputDirectory": "lasforstaelse/dist",
-  "installCommand": "npm install"
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
