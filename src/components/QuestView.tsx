@@ -104,7 +104,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
           const done = progress?.completed;
           return (
             <button key={quest.id} onClick={() => startQuest(quest)}
-              className="w-full bg-white rounded-2xl p-5 shadow-sm hover:shadow-md hover:scale-[1.01] transition-all text-left">
+              className="w-full bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-gray-300 hover:scale-[1.01] transition-all text-left">
               <div className="flex items-start gap-4">
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${quest.storyColor} flex items-center justify-center text-3xl flex-shrink-0 shadow-md`}>
                   {quest.emoji}
@@ -196,7 +196,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
         </div>
 
         {/* Question card */}
-        <div className="bg-white rounded-3xl shadow-md p-6 mb-4">
+        <div className="bg-white border border-gray-200 rounded-3xl shadow-md p-6 mb-4">
           <h2 className="text-xl font-black text-gray-800 mb-5">{currentStep.question}</h2>
 
           {currentStep.type === 'fill-in' && !answered && (

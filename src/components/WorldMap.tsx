@@ -45,7 +45,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           <p className="text-white/70 text-sm italic mb-4">"{world.storyIntro}"</p>
 
           {/* Progress */}
-          <div className="bg-white/20 rounded-2xl p-3">
+          <div className="bg-white/20 rounded-2xl p-3 mb-4">
             <div className="flex justify-between text-sm text-white/80 mb-1.5">
               <span>⭐ {points.total} poäng</span>
               <span>{completed}/{worldTopics.length} kapitel klara</span>
@@ -53,6 +53,21 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
             <div className="h-2.5 bg-white/30 rounded-full overflow-hidden">
               <div className="h-full bg-white rounded-full" style={{width:`${worldTopics.length ? (completed/worldTopics.length)*100 : 0}%`}}/>
             </div>
+          </div>
+
+          {/* World switcher */}
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {WORLDS.map(w => (
+              <button key={w.id} onClick={() => setView(`world-${w.id}` as any)}
+                className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-bold transition-all ${
+                  w.id === worldId
+                    ? 'bg-white text-gray-800 shadow-md'
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}>
+                <span>{w.emoji}</span>
+                <span className="hidden sm:inline">{w.name.split(' ')[0]}</span>
+              </button>
+            ))}
           </div>
         </div>
       </div>
@@ -73,13 +88,13 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
         {/* Quest & Collection shortcuts */}
         <div className="grid grid-cols-2 gap-3">
           <button onClick={()=>setView('quest')}
-            className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left">
+            className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left">
             <span className="text-2xl">⚔️</span>
             <p className="font-black text-gray-800 text-sm mt-1">Äventyr</p>
             <p className="text-gray-500 text-xs">Berättelseproblem</p>
           </button>
           <button onClick={()=>setView('collection')}
-            className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left">
+            className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left">
             <span className="text-2xl">🏅</span>
             <p className="font-black text-gray-800 text-sm mt-1">Samling</p>
             <p className="text-gray-500 text-xs">Dina föremål</p>
@@ -99,7 +114,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
           return (
             <button key={topic.id} onClick={()=>selectTopic(topic)}
-              className="w-full bg-white rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.99] transition-all text-left">
+              className="w-full bg-white border border-gray-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:border-gray-300 hover:scale-[1.01] active:scale-[0.99] transition-all text-left">
               <div className="flex items-center gap-4">
                 {/* Chapter number */}
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-white flex-shrink-0 bg-gradient-to-br ${topic.color} shadow-md`}>
