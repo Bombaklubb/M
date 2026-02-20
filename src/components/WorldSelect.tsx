@@ -61,7 +61,7 @@ export default function WorldSelect() {
               </button>
               <button onClick={() => setView('error-bank')}
                 className="bg-red-500/80 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
-                💡 Träna misstag
+                💡 Försök igen
               </button>
             </div>
           </div>
