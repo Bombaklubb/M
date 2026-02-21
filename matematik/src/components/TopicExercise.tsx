@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise } from '../types';
+import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise, ColumnArithmeticExercise } from '../types';
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import AppHeader from './AppHeader';
+import ColumnArithmetic from './ColumnArithmetic';
 
 interface ExerciseState {
   answered: boolean;
@@ -12,7 +13,7 @@ interface ExerciseState {
 }
 
 export default function TopicExercise({ topic }: { topic: Topic }) {
-  const { setView, submitTopicResult, currentStudent } = useApp();
+  const { setView, submitTopicResult, currentStudent, isTeacher } = useApp();
   const [currentIdx, setCurrentIdx] = useState(0);
   const [states, setStates] = useState<ExerciseState[]>(
     topic.exercises.map(() => ({ answered: false, correct: false, userAnswer: '' }))
@@ -153,12 +154,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           {/* Points badge */}
           <div className="flex justify-between items-center mb-4">
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
-              exercise.type === 'multiple-choice' ? 'bg-blue-100 text-blue-700' :
-              exercise.type === 'fill-in' ? 'bg-purple-100 text-purple-700' :
-              'bg-green-100 text-green-700'
+              exercise.type === 'multiple-choice'  ? 'bg-blue-100 text-blue-700' :
+              exercise.type === 'fill-in'          ? 'bg-purple-100 text-purple-700' :
+              exercise.type === 'column-arithmetic'? 'bg-amber-100 text-amber-700' :
+                                                     'bg-green-100 text-green-700'
             }`}>
-              {exercise.type === 'multiple-choice' ? '🔘 Flerval' :
-               exercise.type === 'fill-in' ? '✏️ Fritext' : '✅ Sant/Falskt'}
+              {exercise.type === 'multiple-choice'   ? '🔘 Flerval' :
+               exercise.type === 'fill-in'           ? '✏️ Fritext' :
+               exercise.type === 'column-arithmetic' ? '📐 Uppställning' :
+                                                       '✅ Sant/Falskt'}
             </span>
             <span className="text-sm font-bold text-amber-600">+{exercise.points}p</span>
           </div>
@@ -190,6 +194,13 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
               inputRef={inputRef}
               onChange={setInput}
               onSubmit={answerFillIn}
+            />
+          )}
+          {exercise.type === 'column-arithmetic' && !state.answered && (
+            <ColumnArithmetic
+              exercise={exercise as ColumnArithmeticExercise}
+              onDone={(correct) => commitAnswer('uppställning', correct)}
+              isTeacher={isTeacher}
             />
           )}
 
