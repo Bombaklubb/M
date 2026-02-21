@@ -403,12 +403,20 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
   // ── Subtraction render ──────────────────────────────────────────────────────
   // Swedish school format ("uppställning med växling"):
   //
-  // Exempel 345 − 267:
-  //   [2] [3]          ← växlingsrad: eleven skriver reducerade siffror
-  //    3̶  ¹4̶  ¹5       ← originalsiffror: överstrukna om de gav bort,
-  //  − 2   6   7           ¹ framför siffror som fick +10
-  //  ──────────
-  //        7   8       ← svar (ledande nolla hoppas över)
+  // Matches handwritten notation from Swedish classrooms:
+  //
+  // Exempel 52 − 23 = 29:        Exempel 305 − 37 = 268:
+  //          10                       10̶   10
+  //    [4]                       [2] [9]
+  //     5̶    2                    3̶   0̶    5
+  //   − 2    3                  −     3    7
+  //   ──────                    ──────────
+  //    [2]  [9]                 [2]  [6]  [8]
+  //
+  // • "10" on its own row above each column that RECEIVED +10 from its left.
+  // • When a 0-column both receives+lends, "10" gets a strikethrough (consumed).
+  // • Reduced digits in input cells (CW-wide containers for alignment).
+  // • Original digits with red strikethrough where they gave away 1.
 
   function SubtractionGrid() {
     if (!subSol) return null;
@@ -422,38 +430,50 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
     const lends   = topD.map((_, c) => c < cols - 1 && borrows[c + 1] === 1);
     const receives = topD.map((_, c) => borrows[c] === 1);
 
+    const anyLends = lends.some(Boolean);
+
     return (
-      <div className="flex flex-col gap-1">
-        {/* Växlingsrad: reduced digit above each column that lent */}
+      <div className="flex flex-col gap-0.5">
+        {/* Minnessiffra row: visual "10" labels (NOT inputs) */}
         {hasBorrow && (
-          <div className="flex items-end" style={{ height: SW + 4 }}>
-            <Gap />
+          <div className="flex items-end" style={{ height: 18 }}>
+            <div style={{ width: CW }} className="flex-shrink-0" />
             {topD.map((d, c) => {
-              if (!lends[c]) return <Gap key={c} small />;
-              // ¹ on the small cell only when column ALSO receives AND original digit >= 1.
-              // (When original digit is 0 the student writes "9" – the ¹ is already implicit.)
-              const showOne = receives[c] && d >= 1;
+              // "10" shown above every receiving column.
+              // If column receives + lends + original=0: strikethrough on "10" (consumed).
+              const show = receives[c];
+              const consumed = receives[c] && lends[c] && d === 0;
               return (
-                <div key={c} className="relative flex-shrink-0" style={{ width: SW, height: SW }}>
-                  {showOne && (
-                    <span className="absolute -left-1.5 top-0 text-[9px] font-black text-red-500 leading-none select-none">1</span>
+                <div key={c} style={{ width: CW, height: 18 }}
+                     className="flex items-center justify-center flex-shrink-0">
+                  {show && (
+                    <span className={`text-[11px] font-black select-none ${consumed ? 'line-through text-gray-400' : 'text-red-500'}`}>
+                      10
+                    </span>
                   )}
-                  <InputCell id={`reduced-${c}`} small />
                 </div>
               );
             })}
           </div>
         )}
-        {/* Top number */}
+        {/* Reduced digits row: student input cells for lending columns */}
+        {anyLends && (
+          <div className="flex items-end" style={{ height: SW + 2 }}>
+            <div style={{ width: CW }} className="flex-shrink-0" />
+            {topD.map((_, c) => (
+              <div key={c} style={{ width: CW, height: SW + 2 }}
+                   className="flex items-end justify-center flex-shrink-0">
+                {lends[c] && <InputCell id={`reduced-${c}`} small />}
+              </div>
+            ))}
+          </div>
+        )}
+        {/* Top number: original digits with strikethrough for lending cols */}
         <div className="flex items-center">
           <Gap />
           {topD.map((d, c) => (
-            <div key={c} style={{ width: CW, height: CW }} className="relative flex items-center justify-center font-black text-lg flex-shrink-0">
-              {/* Tiny "¹" on original digit only if it receives AND does NOT lend
-                  (if it also lends, the "¹" is on the reduced cell above instead) */}
-              {receives[c] && !lends[c] && (
-                <span className="absolute -left-1 -top-0.5 text-[10px] font-black text-red-500 leading-none select-none">1</span>
-              )}
+            <div key={c} style={{ width: CW, height: CW }}
+                 className="flex items-center justify-center font-black text-lg flex-shrink-0">
               <span className={lends[c]
                 ? 'line-through decoration-red-400 decoration-2 text-gray-400'
                 : 'text-gray-700'}>
@@ -462,7 +482,7 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
             </div>
           ))}
         </div>
-        {/* Bottom + operator */}
+        {/* Bottom number with minus */}
         <div className="flex items-center">
           <Op v="−" />
           {botD.map((d, c) =>
