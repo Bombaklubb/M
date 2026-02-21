@@ -25,7 +25,8 @@ export type ExerciseType =
   | 'fill-in'
   | 'true-false'
   | 'order'
-  | 'match';
+  | 'match'
+  | 'column-arithmetic';
 
 export interface BaseExercise {
   id: string;
@@ -53,7 +54,19 @@ export interface TrueFalseExercise extends BaseExercise {
   isTrue: boolean;
 }
 
-export type Exercise = MultipleChoiceExercise | FillInExercise | TrueFalseExercise;
+// === COLUMN ARITHMETIC ===
+export type ColumnOperation = 'addition' | 'subtraction' | 'multiplication' | 'division';
+
+export interface ColumnArithmeticExercise extends BaseExercise {
+  type: 'column-arithmetic';
+  operation: ColumnOperation;
+  top: number;       // övre tal (täljare/minuend/faktor)
+  bottom: number;    // undre tal (nämnare/subtrahend/faktor/divisor)
+  answer: number;    // korrekt slutsvar
+  remainder?: number; // rest vid division
+}
+
+export type Exercise = MultipleChoiceExercise | FillInExercise | TrueFalseExercise | ColumnArithmeticExercise;
 
 // === TOPICS ===
 export interface TopicInstruction {
