@@ -208,10 +208,19 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
     addSol.answerD.forEach((v, c) => allInputs.push({ id: `a-${c}`, correct: String(v) }));
   }
   if (subSol) {
+    const ansStart = subSol.answerD.findIndex(d => d !== 0);
+    // Row A: "1" marker for each column that borrows (received +10)
     subSol.borrows.forEach((v, c) => {
-      if (v) allInputs.push({ id: `b-${c - 1}`, correct: String(subSol.topReduced[c - 1]) });
+      if (v) allInputs.push({ id: `borrow1-${c}`, correct: '1' });
     });
-    subSol.answerD.forEach((v, c) => allInputs.push({ id: `a-${c}`, correct: String(v) }));
+    // Row B: reduced digit for each column that lends (its right neighbour borrows)
+    subSol.borrows.forEach((v, c) => {
+      if (v && c > 0) allInputs.push({ id: `reduced-${c - 1}`, correct: String(subSol.topReduced[c - 1]) });
+    });
+    // Answer digits – skip leading zeros
+    subSol.answerD.forEach((v, c) => {
+      if (c >= (ansStart < 0 ? subSol.cols : ansStart)) allInputs.push({ id: `a-${c}`, correct: String(v) });
+    });
   }
   if (multSol) {
     multSol.partials.forEach((pp, pi) => {
@@ -382,20 +391,36 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
   // ── Subtraction render ──────────────────────────────────────────────────────
   function SubtractionGrid() {
     if (!subSol) return null;
-    const { cols, topD, botD, borrows, topReduced } = subSol;
+    const { cols, topD, botD, borrows, answerD } = subSol;
+    const hasBorrow = borrows.some(v => v > 0);
+    const ansStart = answerD.findIndex(d => d !== 0);
+    const safeAnsStart = ansStart < 0 ? cols : ansStart;
+    const botStart = botD.findIndex(x => x !== 0);
     return (
       <div className="flex flex-col gap-1">
-        {/* Borrow row: reduced digit above the column that gives */}
-        <div className="flex items-end" style={{ height: SW + 4 }}>
-          <Gap />
-          {topD.map((_, c) => {
-            // Does the column to the RIGHT (c+1) borrow from c?
-            const gives = c < cols - 1 && borrows[c + 1] === 1;
-            return gives
-              ? <InputCell key={c} id={`b-${c}`} small />
-              : <Gap key={c} small />;
-          })}
-        </div>
+        {/* Row A: small "1" above each column that borrowed (+10 received) */}
+        {hasBorrow && (
+          <div className="flex items-end" style={{ height: SW + 4 }}>
+            <Gap />
+            {topD.map((_, c) =>
+              borrows[c]
+                ? <InputCell key={c} id={`borrow1-${c}`} small />
+                : <Gap key={c} small />
+            )}
+          </div>
+        )}
+        {/* Row B: reduced digit above each column that lent (right neighbour borrows) */}
+        {hasBorrow && (
+          <div className="flex items-end" style={{ height: SW + 4 }}>
+            <Gap />
+            {topD.map((_, c) => {
+              const lends = c < cols - 1 && borrows[c + 1] === 1;
+              return lends
+                ? <InputCell key={c} id={`reduced-${c}`} small />
+                : <Gap key={c} small />;
+            })}
+          </div>
+        )}
         {/* Top number */}
         <div className="flex items-center">
           <Gap />
@@ -404,16 +429,17 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
         {/* Bottom + operator */}
         <div className="flex items-center">
           <Op v="−" />
-          {botD.map((d, c) => {
-            const botStart = botD.findIndex(x => x !== 0);
-            return c < botStart ? <Gap key={c} /> : <Digit key={c} v={d} />;
-          })}
+          {botD.map((d, c) =>
+            c < botStart ? <Gap key={c} /> : <Digit key={c} v={d} />
+          )}
         </div>
         <HRule colCount={cols} />
-        {/* Answer */}
+        {/* Answer – leading zeros shown as gaps */}
         <div className="flex items-center">
           <Gap />
-          {subSol.answerD.map((_, c) => <InputCell key={c} id={`a-${c}`} />)}
+          {answerD.map((_, c) =>
+            c < safeAnsStart ? <Gap key={c} /> : <InputCell key={c} id={`a-${c}`} />
+          )}
         </div>
       </div>
     );
