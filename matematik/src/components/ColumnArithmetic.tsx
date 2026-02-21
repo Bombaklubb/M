@@ -209,11 +209,7 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
   }
   if (subSol) {
     const ansStart = subSol.answerD.findIndex(d => d !== 0);
-    // Row A: "1" marker for each column that borrows (received +10)
-    subSol.borrows.forEach((v, c) => {
-      if (v) allInputs.push({ id: `borrow1-${c}`, correct: '1' });
-    });
-    // Row B: reduced digit for each column that lends (its right neighbour borrows)
+    // Växling: reduced digit for each column that lends (its right neighbour borrows)
     subSol.borrows.forEach((v, c) => {
       if (v && c > 0) allInputs.push({ id: `reduced-${c - 1}`, correct: String(subSol.topReduced[c - 1]) });
     });
@@ -389,6 +385,15 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
   }
 
   // ── Subtraction render ──────────────────────────────────────────────────────
+  // Swedish school format ("uppställning med växling"):
+  //
+  // Exempel 345 − 267:
+  //   [2] [3]          ← växlingsrad: eleven skriver reducerade siffror
+  //    3̶  ¹4̶  ¹5       ← originalsiffror: överstrukna om de gav bort,
+  //  − 2   6   7           ¹ framför siffror som fick +10
+  //  ──────────
+  //        7   8       ← svar (ledande nolla hoppas över)
+
   function SubtractionGrid() {
     if (!subSol) return null;
     const { cols, topD, botD, borrows, answerD } = subSol;
@@ -396,35 +401,48 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
     const ansStart = answerD.findIndex(d => d !== 0);
     const safeAnsStart = ansStart < 0 ? cols : ansStart;
     const botStart = botD.findIndex(x => x !== 0);
+
+    // Per column: does it lend (give away 1 to its right) or receive (+10 from its left)?
+    const lends   = topD.map((_, c) => c < cols - 1 && borrows[c + 1] === 1);
+    const receives = topD.map((_, c) => borrows[c] === 1);
+
     return (
       <div className="flex flex-col gap-1">
-        {/* Row A: small "1" above each column that borrowed (+10 received) */}
-        {hasBorrow && (
-          <div className="flex items-end" style={{ height: SW + 4 }}>
-            <Gap />
-            {topD.map((_, c) =>
-              borrows[c]
-                ? <InputCell key={c} id={`borrow1-${c}`} small />
-                : <Gap key={c} small />
-            )}
-          </div>
-        )}
-        {/* Row B: reduced digit above each column that lent (right neighbour borrows) */}
+        {/* Växlingsrad: reduced digit above each column that lent */}
         {hasBorrow && (
           <div className="flex items-end" style={{ height: SW + 4 }}>
             <Gap />
             {topD.map((_, c) => {
-              const lends = c < cols - 1 && borrows[c + 1] === 1;
-              return lends
-                ? <InputCell key={c} id={`reduced-${c}`} small />
-                : <Gap key={c} small />;
+              if (!lends[c]) return <Gap key={c} small />;
+              // If this column also receives (+10), show tiny "¹" inside the small input
+              return (
+                <div key={c} className="relative flex-shrink-0" style={{ width: SW, height: SW }}>
+                  {receives[c] && (
+                    <span className="absolute -left-1.5 top-0 text-[9px] font-black text-red-500 leading-none select-none">1</span>
+                  )}
+                  <InputCell id={`reduced-${c}`} small />
+                </div>
+              );
             })}
           </div>
         )}
         {/* Top number */}
         <div className="flex items-center">
           <Gap />
-          {topD.map((d, c) => <Digit key={c} v={d} />)}
+          {topD.map((d, c) => (
+            <div key={c} style={{ width: CW, height: CW }} className="relative flex items-center justify-center font-black text-lg flex-shrink-0">
+              {/* Tiny "¹" on original digit only if it receives AND does NOT lend
+                  (if it also lends, the "¹" is on the reduced cell above instead) */}
+              {receives[c] && !lends[c] && (
+                <span className="absolute -left-1 -top-0.5 text-[10px] font-black text-red-500 leading-none select-none">1</span>
+              )}
+              <span className={lends[c]
+                ? 'line-through decoration-red-400 decoration-2 text-gray-400'
+                : 'text-gray-700'}>
+                {d}
+              </span>
+            </div>
+          ))}
         </div>
         {/* Bottom + operator */}
         <div className="flex items-center">
@@ -619,7 +637,9 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
 
       {!checked && (
         <p className="text-xs text-gray-400 text-center">
-          Fyll i alla rutor — ental under ental, tiotal under tiotal
+          {operation === 'subtraction'
+            ? 'Räkna från höger till vänster. Visa växling genom att fylla i den nya siffran.'
+            : 'Fyll i alla rutor — ental under ental, tiotal under tiotal'}
         </p>
       )}
 
