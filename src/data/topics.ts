@@ -807,6 +807,122 @@ export const TOPICS: Topic[] = [
       { id: 'prob-13', type: 'multiple-choice', question: 'P(minst en krona vid tre myntkast)?', options: ['1/8', '3/8', '6/8', '7/8'], correctIndex: 3, points: 25, explanation: 'P(ingen krona) = (1/2)³ = 1/8. P(minst en) = 1 − 1/8 = 7/8.' },
     ],
   },
+  // ============================================================
+  // UPPSTÄLLNINGAR – LÅGSTADIET (åk 1-3, Dinovärlden)
+  // ============================================================
+  {
+    id: 'uppstallningar-lagstadiet',
+    title: 'Uppställningar',
+    icon: '📐',
+    description: 'Lär dig räkna med uppställning – ental under ental, tiotal under tiotal',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-lime-400 to-green-500',
+    instruction: {
+      title: 'Uppställningar',
+      text: 'När vi ställer upp tal räknar vi kolumn för kolumn från höger. Ental hamnar under ental, tiotal under tiotal. Är summan i en kolumn 10 eller mer, skriver vi minnessiffran ovanför nästa kolumn. Vid subtraktion lånar vi från kolumnen till vänster om vi behöver.',
+      illustration: 'uppstallning',
+      examples: [
+        '  23        52',
+        '+ 14      − 27',
+        '────      ────',
+        '  37        25',
+      ],
+    },
+    exercises: [
+      { id: 'ul-1',  type: 'column-arithmetic', operation: 'addition',    top: 23,  bottom: 14,  answer: 37,  question: 'Beräkna 23 + 14 med uppställning', explanation: '23 + 14 = 37. Ental: 3+4=7. Tiotal: 2+1=3.', points: 15 },
+      { id: 'ul-2',  type: 'column-arithmetic', operation: 'addition',    top: 46,  bottom: 37,  answer: 83,  question: 'Beräkna 46 + 37 med uppställning', explanation: '46 + 37 = 83. Ental: 6+7=13, skriv 3 och för över 1. Tiotal: 4+3+1=8.', points: 15 },
+      { id: 'ul-3',  type: 'column-arithmetic', operation: 'addition',    top: 55,  bottom: 28,  answer: 83,  question: 'Beräkna 55 + 28 med uppställning', explanation: '55 + 28 = 83. Ental: 5+8=13, minnessiffra 1. Tiotal: 5+2+1=8.', points: 15 },
+      { id: 'ul-4',  type: 'column-arithmetic', operation: 'addition',    top: 34,  bottom: 58,  answer: 92,  question: 'Beräkna 34 + 58 med uppställning', explanation: '34 + 58 = 92. Ental: 4+8=12, minnessiffra 1. Tiotal: 3+5+1=9.', points: 15 },
+      { id: 'ul-5',  type: 'column-arithmetic', operation: 'addition',    top: 76,  bottom: 45,  answer: 121, question: 'Beräkna 76 + 45 med uppställning', explanation: '76 + 45 = 121. Ental: 6+5=11. Tiotal: 7+4+1=12. Hundratal: 1.', points: 20 },
+      { id: 'ul-6',  type: 'column-arithmetic', operation: 'addition',    top: 138, bottom: 47,  answer: 185, question: 'Beräkna 138 + 47 med uppställning', explanation: '138 + 47 = 185. Ental: 8+7=15. Tiotal: 3+4+1=8. Hundratal: 1.', points: 20 },
+      { id: 'ul-7',  type: 'column-arithmetic', operation: 'subtraction', top: 38,  bottom: 15,  answer: 23,  question: 'Beräkna 38 − 15 med uppställning', explanation: '38 − 15 = 23. Ental: 8−5=3. Tiotal: 3−1=2.', points: 15 },
+      { id: 'ul-8',  type: 'column-arithmetic', operation: 'subtraction', top: 52,  bottom: 27,  answer: 25,  question: 'Beräkna 52 − 27 med uppställning', explanation: '52 − 27 = 25. Ental: 2<7, lån → 12−7=5. Tiotal: 5−1−2=2.', points: 20 },
+      { id: 'ul-9',  type: 'column-arithmetic', operation: 'subtraction', top: 73,  bottom: 48,  answer: 25,  question: 'Beräkna 73 − 48 med uppställning', explanation: '73 − 48 = 25. Ental: 3<8, lån → 13−8=5. Tiotal: 7−1−4=2.', points: 20 },
+      { id: 'ul-10', type: 'column-arithmetic', operation: 'subtraction', top: 81,  bottom: 36,  answer: 45,  question: 'Beräkna 81 − 36 med uppställning', explanation: '81 − 36 = 45. Ental: 1<6, lån → 11−6=5. Tiotal: 8−1−3=4.', points: 20 },
+      { id: 'ul-11', type: 'column-arithmetic', operation: 'subtraction', top: 60,  bottom: 23,  answer: 37,  question: 'Beräkna 60 − 23 med uppställning', explanation: '60 − 23 = 37. Ental: 0<3, lån → 10−3=7. Tiotal: 6−1−2=3.', points: 20 },
+      { id: 'ul-12', type: 'column-arithmetic', operation: 'subtraction', top: 145, bottom: 67,  answer: 78,  question: 'Beräkna 145 − 67 med uppställning', explanation: '145 − 67 = 78. Ental: 5<7, lån → 15−7=8. Tiotal: 4−1<6, lån → 13−6=7. Hundratal: 1−1=0.', points: 25 },
+    ],
+  } as any,
+
+  // ============================================================
+  // UPPSTÄLLNINGAR – MELLANSTADIET (åk 4-6, Fantasyvärlden)
+  // ============================================================
+  {
+    id: 'uppstallningar-mellanstadiet',
+    title: 'Uppställningar',
+    icon: '📐',
+    description: 'Addition, subtraktion och multiplikation med uppställning för större tal',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-violet-400 to-purple-600',
+    instruction: {
+      title: 'Uppställningar',
+      text: 'Vi ställer upp tal med ental under ental, tiotal under tiotal osv. Vid multiplikation med ett ensiffrigt tal multiplicerar vi siffra för siffra från höger och för över minnessiffror. Delresultat skrivs i egna rader.',
+      illustration: 'uppstallning',
+      examples: [
+        '  345       84',
+        '+ 267     ×  3',
+        '─────     ────',
+        '  612      252',
+      ],
+    },
+    exercises: [
+      { id: 'um-1',  type: 'column-arithmetic', operation: 'addition',       top: 345,  bottom: 267,  answer: 612,  question: 'Beräkna 345 + 267 med uppställning', explanation: '345 + 267 = 612.', points: 20 },
+      { id: 'um-2',  type: 'column-arithmetic', operation: 'addition',       top: 528,  bottom: 375,  answer: 903,  question: 'Beräkna 528 + 375 med uppställning', explanation: '528 + 375 = 903.', points: 20 },
+      { id: 'um-3',  type: 'column-arithmetic', operation: 'addition',       top: 1234, bottom: 2567, answer: 3801, question: 'Beräkna 1 234 + 2 567 med uppställning', explanation: '1234 + 2567 = 3801.', points: 25 },
+      { id: 'um-4',  type: 'column-arithmetic', operation: 'addition',       top: 437,  bottom: 186,  answer: 623,  question: 'Beräkna 437 + 186 med uppställning', explanation: '437 + 186 = 623.', points: 20 },
+      { id: 'um-5',  type: 'column-arithmetic', operation: 'subtraction',    top: 463,  bottom: 278,  answer: 185,  question: 'Beräkna 463 − 278 med uppställning', explanation: '463 − 278 = 185. Lån i ental och tiotal.', points: 20 },
+      { id: 'um-6',  type: 'column-arithmetic', operation: 'subtraction',    top: 700,  bottom: 356,  answer: 344,  question: 'Beräkna 700 − 356 med uppställning', explanation: '700 − 356 = 344. Kedjelån från hundratalet.', points: 25 },
+      { id: 'um-7',  type: 'column-arithmetic', operation: 'subtraction',    top: 503,  bottom: 247,  answer: 256,  question: 'Beräkna 503 − 247 med uppställning', explanation: '503 − 247 = 256. Kedjelån över nollan.', points: 25 },
+      { id: 'um-8',  type: 'column-arithmetic', operation: 'subtraction',    top: 6000, bottom: 2345, answer: 3655, question: 'Beräkna 6 000 − 2 345 med uppställning', explanation: '6000 − 2345 = 3655. Kedjelån genom tre nollor.', points: 30 },
+      { id: 'um-9',  type: 'column-arithmetic', operation: 'multiplication', top: 84,   bottom: 3,    answer: 252,  question: 'Beräkna 84 × 3 med uppställning', explanation: '84 × 3 = 252. Ental: 4×3=12. Tiotal: 8×3+1=25.', points: 20 },
+      { id: 'um-10', type: 'column-arithmetic', operation: 'multiplication', top: 67,   bottom: 4,    answer: 268,  question: 'Beräkna 67 × 4 med uppställning', explanation: '67 × 4 = 268. Ental: 7×4=28. Tiotal: 6×4+2=26.', points: 20 },
+      { id: 'um-11', type: 'column-arithmetic', operation: 'multiplication', top: 125,  bottom: 6,    answer: 750,  question: 'Beräkna 125 × 6 med uppställning', explanation: '125 × 6 = 750. Ental: 5×6=30. Tiotal: 2×6+3=15. Hundratal: 1×6+1=7.', points: 25 },
+      { id: 'um-12', type: 'column-arithmetic', operation: 'multiplication', top: 73,   bottom: 8,    answer: 584,  question: 'Beräkna 73 × 8 med uppställning', explanation: '73 × 8 = 584. Ental: 3×8=24. Tiotal: 7×8+2=58.', points: 20 },
+    ],
+  } as any,
+
+  // ============================================================
+  // UPPSTÄLLNINGAR – HÖGSTADIET (åk 7-9, Sci-Fivärlden)
+  // ============================================================
+  {
+    id: 'uppstallningar-hogstadiet',
+    title: 'Uppställningar',
+    icon: '📐',
+    description: 'Tvåsiffrig multiplikation och lång division med uppställning',
+    grades: ['7', '8', '9'],
+    minGrade: 7,
+    color: 'from-cyan-500 to-blue-700',
+    instruction: {
+      title: 'Uppställningar',
+      text: 'Vid multiplikation med tvåsiffrigt tal skriver vi ett delresultat per siffra i den undre faktorn. Det andra delresultatet förskjuts ett steg åt vänster. Sedan adderas delprodukterna. Vid lång division tar vi en siffra i taget från täljaren och dividerar stegvis.',
+      illustration: 'uppstallning',
+      examples: [
+        '   43        96 ÷ 4',
+        '×  27       = 24',
+        '─────',
+        '  301   (43×7)',
+        '  860   (43×2×10)',
+        '─────',
+        ' 1161',
+      ],
+    },
+    exercises: [
+      { id: 'uh-1',  type: 'column-arithmetic', operation: 'multiplication', top: 43,  bottom: 27, answer: 1161, question: 'Beräkna 43 × 27 med uppställning (delprodukter)', explanation: '43 × 27 = 1161. Delprodukt 1: 43×7=301. Delprodukt 2: 43×2=86 (förskjuten ett steg). 301+860=1161.', points: 30 },
+      { id: 'uh-2',  type: 'column-arithmetic', operation: 'multiplication', top: 56,  bottom: 34, answer: 1904, question: 'Beräkna 56 × 34 med uppställning', explanation: '56 × 34 = 1904. Delprodukt 1: 56×4=224. Delprodukt 2: 56×3=168 (förskjuten). 224+1680=1904.', points: 30 },
+      { id: 'uh-3',  type: 'column-arithmetic', operation: 'multiplication', top: 85,  bottom: 23, answer: 1955, question: 'Beräkna 85 × 23 med uppställning', explanation: '85 × 23 = 1955. 85×3=255 och 85×2=170. 255+1700=1955.', points: 30 },
+      { id: 'uh-4',  type: 'column-arithmetic', operation: 'multiplication', top: 72,  bottom: 46, answer: 3312, question: 'Beräkna 72 × 46 med uppställning', explanation: '72 × 46 = 3312. 72×6=432 och 72×4=288. 432+2880=3312.', points: 30 },
+      { id: 'uh-5',  type: 'column-arithmetic', operation: 'multiplication', top: 48,  bottom: 15, answer: 720,  question: 'Beräkna 48 × 15 med uppställning', explanation: '48 × 15 = 720. 48×5=240 och 48×1=48. 240+480=720.', points: 25 },
+      { id: 'uh-6',  type: 'column-arithmetic', operation: 'multiplication', top: 63,  bottom: 28, answer: 1764, question: 'Beräkna 63 × 28 med uppställning', explanation: '63 × 28 = 1764. 63×8=504 och 63×2=126. 504+1260=1764.', points: 30 },
+      { id: 'uh-7',  type: 'column-arithmetic', operation: 'division',       top: 96,  bottom: 4,  answer: 24,   question: 'Beräkna 96 ÷ 4 med lång division', explanation: '96 ÷ 4 = 24. 9÷4=2 rest 1. Ta ner 6 → 16÷4=4.', points: 25 },
+      { id: 'uh-8',  type: 'column-arithmetic', operation: 'division',       top: 126, bottom: 6,  answer: 21,   question: 'Beräkna 126 ÷ 6 med lång division', explanation: '126 ÷ 6 = 21. 12÷6=2 rest 0. Ta ner 6 → 6÷6=1.', points: 25 },
+      { id: 'uh-9',  type: 'column-arithmetic', operation: 'division',       top: 185, bottom: 5,  answer: 37,   question: 'Beräkna 185 ÷ 5 med lång division', explanation: '185 ÷ 5 = 37. 1÷5=0, ta ner 8 → 18÷5=3 rest 3. Ta ner 5 → 35÷5=7.', points: 25 },
+      { id: 'uh-10', type: 'column-arithmetic', operation: 'division',       top: 364, bottom: 7,  answer: 52,   question: 'Beräkna 364 ÷ 7 med lång division', explanation: '364 ÷ 7 = 52. 36÷7=5 rest 1. Ta ner 4 → 14÷7=2.', points: 25 },
+      { id: 'uh-11', type: 'column-arithmetic', operation: 'division',       top: 252, bottom: 9,  answer: 28,   question: 'Beräkna 252 ÷ 9 med lång division', explanation: '252 ÷ 9 = 28. 25÷9=2 rest 7. Ta ner 2 → 72÷9=8.', points: 25 },
+      { id: 'uh-12', type: 'column-arithmetic', operation: 'division',       top: 432, bottom: 8,  answer: 54,   question: 'Beräkna 432 ÷ 8 med lång division', explanation: '432 ÷ 8 = 54. 43÷8=5 rest 3. Ta ner 2 → 32÷8=4.', points: 25 },
+    ],
+  } as any,
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
