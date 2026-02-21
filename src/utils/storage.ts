@@ -57,8 +57,17 @@ export function findOrCreateStudent(name: string, grade: Grade, avatar: number):
 export function getCurrentStudent(): Student | null {
   try {
     const data = localStorage.getItem(KEYS.currentStudent);
-    return data ? JSON.parse(data) : null;
+    if (!data) return null;
+    const parsed = JSON.parse(data);
+    // Validate required fields – stale/corrupt data should not crash the app
+    if (parsed && typeof parsed.id === 'string' && typeof parsed.name === 'string' && parsed.grade) {
+      return parsed as Student;
+    }
+    // Invalid shape → remove corrupt entry
+    localStorage.removeItem(KEYS.currentStudent);
+    return null;
   } catch {
+    localStorage.removeItem(KEYS.currentStudent);
     return null;
   }
 }

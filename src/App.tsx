@@ -17,6 +17,71 @@ import QuestView from './components/QuestView';
 import CollectionView from './components/CollectionView';
 import MinSidaView from './components/MinSidaView';
 
+// ─── Error Boundary ─────────────────────────────────────────────────────────
+// Catches any uncaught error in the React tree and shows a recovery screen
+// instead of a blank white page.
+
+interface EBState { hasError: boolean; error?: Error }
+
+class ErrorBoundary extends React.Component<{ children: React.ReactNode }, EBState> {
+  state: EBState = { hasError: false };
+
+  static getDerivedStateFromError(error: Error): EBState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error('Mattejakten kraschade:', error, info.componentStack);
+  }
+
+  handleRetry = () => this.setState({ hasError: false, error: undefined });
+
+  handleReset = () => {
+    const keysToRemove: string[] = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key?.startsWith('math_') || key?.startsWith('drill_pb_') || key === 'theme-size') {
+        keysToRemove.push(key);
+      }
+    }
+    keysToRemove.forEach(k => localStorage.removeItem(k));
+    window.location.reload();
+  };
+
+  render() {
+    if (!this.state.hasError) return this.props.children;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white p-6">
+        <div className="max-w-sm w-full bg-white rounded-3xl shadow-lg p-8 text-center">
+          <div className="text-6xl mb-4">😵</div>
+          <h1 className="text-2xl font-black text-gray-800 mb-2">Oj! Något gick fel</h1>
+          <p className="text-gray-500 mb-6 text-sm leading-relaxed">
+            Appen kraschade. Prova att ladda om först.
+            Om det inte hjälper kan du rensa sparad data — du behöver logga in igen.
+          </p>
+          <div className="flex flex-col gap-3">
+            <button onClick={this.handleRetry}
+              className="w-full py-3 bg-blue-500 text-white font-bold rounded-2xl hover:bg-blue-600 transition-colors">
+              Försök igen
+            </button>
+            <button onClick={this.handleReset}
+              className="w-full py-3 bg-red-100 text-red-700 font-bold rounded-2xl hover:bg-red-200 transition-colors">
+              Rensa data och börja om
+            </button>
+          </div>
+          {this.state.error && (
+            <p className="text-xs text-gray-400 mt-5 break-all">
+              {this.state.error.message}
+            </p>
+          )}
+        </div>
+      </div>
+    );
+  }
+}
+
+// ─── App Inner ───────────────────────────────────────────────────────────────
+
 function AppInner() {
   const { currentView, selectedTopic, setView } = useApp();
 
@@ -69,12 +134,16 @@ function AppInner() {
   );
 }
 
+// ─── Root ────────────────────────────────────────────────────────────────────
+
 export default function App() {
   return (
-    <ThemeProvider>
-      <AppProvider>
-        <AppInner />
-      </AppProvider>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <AppProvider>
+          <AppInner />
+        </AppProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
