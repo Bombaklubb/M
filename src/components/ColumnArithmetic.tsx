@@ -93,11 +93,27 @@ function solveSub(top: number, bottom: number): SubSol {
   borrowsR.forEach((v, j) => {
     if (v) borrows[cols - 1 - j] = 1;
   });
-  // topReduced[c] = what col c shows after it gave away a borrow
-  // col c (display) gives to col c+1 when borrowsR[cols-1-(c+1)] = 1
+  // topReduced[c] = value the student writes in the small cell above col c
+  // when col c LENDS (its right neighbour borrows, borrowsR[rtl-1]=1).
+  //
+  // Two sub-cases:
+  //   A) Col also RECEIVES (+10 from left, borrowsR[rtl]=1) AND original digit ≥ 1:
+  //      effective = topD[c] - 1  (¹ indicator will render separately → reads as +10)
+  //   B) Col also RECEIVES AND original digit = 0:
+  //      effective = 0 + 10 - 1 = 9  (student writes "9"; no ¹ indicator needed)
+  //   C) Col only LENDS (no receive):
+  //      effective = topD[c] - 1
+  //
+  // General formula: eff = topD[c] + (alsoReceives ? 10 : 0) - 1
+  //   if eff ≥ 10  → student writes eff - 10  (case A, ¹ shown)
+  //   if eff < 10  → student writes eff        (case B or C)
   for (let c = 0; c < cols - 1; c++) {
     const rtl = cols - 1 - c;
-    if (borrowsR[rtl - 1]) topReduced[c] = topD[c] - 1;
+    if (borrowsR[rtl - 1]) {                     // col c lends
+      const alsoReceives = borrowsR[rtl] === 1;  // col c also receives
+      const eff = topD[c] + (alsoReceives ? 10 : 0) - 1;
+      topReduced[c] = eff >= 10 ? eff - 10 : eff;
+    }
   }
   return { cols, topD, botD, borrows, topReduced, answerD: [...ansR].reverse() };
 }
@@ -412,12 +428,14 @@ export default function ColumnArithmetic({ exercise, onDone, isTeacher }: Props)
         {hasBorrow && (
           <div className="flex items-end" style={{ height: SW + 4 }}>
             <Gap />
-            {topD.map((_, c) => {
+            {topD.map((d, c) => {
               if (!lends[c]) return <Gap key={c} small />;
-              // If this column also receives (+10), show tiny "¹" inside the small input
+              // ¹ on the small cell only when column ALSO receives AND original digit >= 1.
+              // (When original digit is 0 the student writes "9" – the ¹ is already implicit.)
+              const showOne = receives[c] && d >= 1;
               return (
                 <div key={c} className="relative flex-shrink-0" style={{ width: SW, height: SW }}>
-                  {receives[c] && (
+                  {showOne && (
                     <span className="absolute -left-1.5 top-0 text-[9px] font-black text-red-500 leading-none select-none">1</span>
                   )}
                   <InputCell id={`reduced-${c}`} small />
