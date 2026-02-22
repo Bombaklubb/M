@@ -4,8 +4,7 @@ import { useApp } from '../contexts/AppContext';
 import { LEVEL_NAMES, LEVEL_COLORS, LEVEL_THRESHOLDS } from '../types';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { TOPICS } from '../data/topics';
-
-const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
+import { ALL_AVATARS } from '../data/avatars';
 
 export default function StudentResults({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView, getStudentStats } = useApp();
@@ -46,7 +45,7 @@ export default function StudentResults({ hideHeader }: { hideHeader?: boolean })
             ← Tillbaka
           </button>}
           <div className="flex items-center gap-4 mb-4">
-            <div className="text-5xl">{AVATARS[currentStudent.avatar]}</div>
+            <div className="text-5xl">{ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0]}</div>
             <div>
               <h1 className="text-2xl font-black">{currentStudent.name}</h1>
               <p className="text-white/80">Nivå {level}: {LEVEL_NAMES[level]}</p>

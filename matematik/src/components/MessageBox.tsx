@@ -28,7 +28,7 @@ export default function MessageBox({ student, onClose }: Props) {
           </p>
           <button
             onClick={onClose}
-            className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black transition-colors"
+            className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-black transition-colors"
           >
             Stäng
           </button>
@@ -61,7 +61,7 @@ export default function MessageBox({ student, onClose }: Props) {
           rows={4}
           maxLength={500}
           autoFocus
-          className="w-full border-2 border-gray-200 focus:border-indigo-400 focus:outline-none rounded-2xl px-4 py-3 text-sm resize-none transition-colors"
+          className="w-full border-2 border-gray-200 focus:border-orange-400 focus:outline-none rounded-2xl px-4 py-3 text-sm resize-none transition-colors"
         />
         <div className="text-right text-xs text-gray-400 mb-4 -mt-1">
           {message.length}/500
@@ -72,7 +72,7 @@ export default function MessageBox({ student, onClose }: Props) {
           <button
             onClick={handleSend}
             disabled={!message.trim()}
-            className="flex-1 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-black py-3 rounded-2xl transition-colors"
+            className="flex-1 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed text-white font-black py-3 rounded-2xl transition-colors"
           >
             Skicka ✉️
           </button>

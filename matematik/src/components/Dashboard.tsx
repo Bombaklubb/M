@@ -6,8 +6,7 @@ import {
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { TOPICS, getTopicsForGrade, gradeToNum } from '../data/topics';
 import { Topic } from '../types';
-
-const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
+import { ALL_AVATARS } from '../data/avatars';
 
 export default function Dashboard() {
   const { currentStudent, selectTopic, setView, logout } = useApp();
@@ -51,7 +50,7 @@ export default function Dashboard() {
         <div className="max-w-2xl mx-auto px-4 pt-4 pb-6">
           <div className="flex justify-between items-start">
             <div className="flex items-center gap-3">
-              <div className="text-4xl">{AVATARS[currentStudent.avatar]}</div>
+              <div className="text-4xl">{ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0]}</div>
               <div>
                 <p className="font-bold text-lg">{currentStudent.name}</p>
                 <p className="text-white/80 text-sm">{GRADE_LABELS[currentStudent.grade]}</p>
