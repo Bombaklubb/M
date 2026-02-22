@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Login from './components/Login';
@@ -16,6 +16,7 @@ import ErrorBankView from './components/ErrorBankView';
 import QuestView from './components/QuestView';
 import CollectionView from './components/CollectionView';
 import MinSidaView from './components/MinSidaView';
+import MessageBox from './components/MessageBox';
 
 // ─── Error Boundary ─────────────────────────────────────────────────────────
 // Catches any uncaught error in the React tree and shows a recovery screen
@@ -83,7 +84,8 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, EBSta
 // ─── App Inner ───────────────────────────────────────────────────────────────
 
 function AppInner() {
-  const { currentView, selectedTopic, setView } = useApp();
+  const { currentView, selectedTopic, setView, currentStudent, isTeacher } = useApp();
+  const [showMessageBox, setShowMessageBox] = useState(false);
 
   // Ctrl+Shift+P öppnar lärarvy
   useEffect(() => {
@@ -96,6 +98,9 @@ function AppInner() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [setView]);
+
+  // Visa meddelandeknappen bara när en elev är inloggad (inte på login-/lärarsidan)
+  const showMsgBtn = !!currentStudent && !isTeacher && currentView !== 'login';
 
   return (
     <>
@@ -122,6 +127,25 @@ function AppInner() {
           default:                  return <Login />;
         }
       })()}
+
+      {/* Flytande meddelandeknapp */}
+      {showMsgBtn && (
+        <button
+          onClick={() => setShowMessageBox(true)}
+          className="fixed bottom-6 left-6 z-40 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all"
+          title="Skicka meddelande till läraren"
+        >
+          <span className="text-2xl">💬</span>
+        </button>
+      )}
+
+      {/* Meddelanderuta */}
+      {showMessageBox && currentStudent && (
+        <MessageBox
+          student={currentStudent}
+          onClose={() => setShowMessageBox(false)}
+        />
+      )}
 
       {/* Footer – alltid synlig */}
       <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">

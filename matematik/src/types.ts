@@ -182,6 +182,17 @@ export interface ClassStats {
   totalExercisesCompleted: number;
 }
 
+// === STUDENT MESSAGES ===
+export interface StudentMessage {
+  id: string;
+  studentId: string;
+  studentName: string;
+  studentAvatar: number;
+  message: string;
+  sentAt: string;
+  read: boolean;
+}
+
 // === APP STATE ===
 export type AppView =
   | 'login'
