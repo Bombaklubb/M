@@ -7,7 +7,7 @@ import {
   getCurrentStudent, setCurrentStudent, getProgress,
   getPoints, initPoints, getAchievements, addPoints,
   grantAchievement, saveTopicProgress, calcStars,
-  recordTopicSession,
+  recordTopicSession, saveStudent,
 } from '../utils/storage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { TOPICS } from '../data/topics';
@@ -30,6 +30,7 @@ interface AppContextValue {
   setTeacher: (val: boolean) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number };
+  updateAvatar: (avatarIndex: number) => void;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -80,6 +81,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  const updateAvatar = useCallback((avatarIndex: number) => {
+    if (!currentStudent) return;
+    const updated = { ...currentStudent, avatar: avatarIndex };
+    saveStudent(updated);
+    setCurrentStudent(updated);
+    setCurrentStudentState(updated);
+  }, [currentStudent]);
+
   const submitTopicResult = useCallback((topicId: string, correct: number, total: number, timeSpent: number) => {
     if (!currentStudent) return { newAchievements: [], pointsGained: 0 };
     const score = total > 0 ? Math.round((correct / total) * 100) : 0;
@@ -101,7 +110,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, login, logout, setView, selectTopic, setTeacher, getStudentStats, submitTopicResult }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, login, logout, setView, selectTopic, setTeacher, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

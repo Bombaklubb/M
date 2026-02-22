@@ -5,8 +5,7 @@ import { gradeToNum } from '../data/topics';
 import { getPoints, initPoints, getProgress } from '../utils/storage';
 import { LEVEL_NAMES, LEVEL_THRESHOLDS } from '../types';
 import AppHeader from './AppHeader';
-
-const AVATARS = ['🦁','🐼','🦊','🐸','🦋','🐢','🦄','🐉'];
+import { ALL_AVATARS } from '../data/avatars';
 
 export default function WorldSelect() {
   const { currentStudent, setView, logout } = useApp();
@@ -47,7 +46,7 @@ export default function WorldSelect() {
           {/* Avatar + info + quick stats */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
             <div className="flex items-center gap-3 flex-1 min-w-0">
-              <div className="text-5xl">{AVATARS[currentStudent.avatar]}</div>
+              <div className="text-5xl">{ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0]}</div>
               <div>
                 <p className="font-black text-white text-xl leading-tight">{currentStudent.name}</p>
                 <p className="text-blue-200 text-sm">Nivå {points.level}: {levelName}</p>

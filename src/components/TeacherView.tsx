@@ -9,8 +9,7 @@ import {
   markAllMessagesAsRead,
   deleteMessage,
 } from '../utils/messages';
-
-const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
+import { ALL_AVATARS } from '../data/avatars';
 
 export default function TeacherView() {
   const { setTeacher } = useApp();
@@ -250,7 +249,7 @@ export default function TeacherView() {
             ) : studentData.map(({ student, pts, completed, accuracy, achievements }) => (
               <div key={student.id} className="bg-white rounded-2xl shadow-sm p-4">
                 <div className="flex items-center gap-3">
-                  <div className="text-3xl">{['🦁','🐼','🦊','🐸','🦋','🐢','🦄','🐉'][student.avatar]}</div>
+                  <div className="text-3xl">{ALL_AVATARS[student.avatar] ?? ALL_AVATARS[0]}</div>
                   <div className="flex-1">
                     <div className="flex justify-between">
                       <p className="font-bold text-gray-800">{student.name}</p>
@@ -363,7 +362,7 @@ export default function TeacherView() {
                     <div className="flex items-start gap-3">
                       {/* Avatar */}
                       <span className="text-2xl flex-shrink-0">
-                        {AVATARS[msg.studentAvatar] ?? '🦁'}
+                        {ALL_AVATARS[msg.studentAvatar] ?? ALL_AVATARS[0]}
                       </span>
 
                       {/* Content */}

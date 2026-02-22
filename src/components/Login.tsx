@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { findOrCreateStudent } from '../utils/storage';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
+import { BASE_AVATARS } from '../data/avatars';
 
-const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉', '🧙', '🦸', '🧝', '🐺', '🦅', '🐯', '🧜', '🦖'];
+const AVATARS = BASE_AVATARS;
 
 export default function Login() {
   const { login } = useApp();
