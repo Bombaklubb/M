@@ -346,8 +346,8 @@ function App() {
       <button
         onClick={() => setShowMessageBox(true)}
         className="fixed bottom-6 left-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all z-40 group"
-        title="Skicka meddelande till läraren"
-        aria-label="Skicka meddelande till läraren"
+        title="Skicka meddelande"
+        aria-label="Skicka meddelande"
       >
         <span className="text-2xl">💬</span>
       </button>
