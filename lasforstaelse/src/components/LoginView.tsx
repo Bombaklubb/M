@@ -46,7 +46,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Skriv ditt namn..."
+              placeholder="Ditt användarnamn"
               className="w-full p-4 text-lg rounded-xl bg-white border-2 border-slate-200 focus:border-purple-500 focus:outline-none transition-colors"
               autoFocus
               maxLength={30}
