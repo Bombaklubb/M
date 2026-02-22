@@ -49,12 +49,12 @@ export const StudentMessageBox: React.FC<StudentMessageBoxProps> = ({
         <div className="flex items-center gap-3 mb-4">
           <span className="text-3xl">💬</span>
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">
-            Skicka meddelande till läraren
+            Skicka meddelande
           </h2>
         </div>
 
         <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">
-          Skriv ett meddelande till din lärare. Det kan vara en fråga, en kommentar eller något du vill berätta.
+          Skriv ett meddelande. Det kan vara en fråga, en kommentar eller något du vill berätta.
         </p>
 
         <textarea
