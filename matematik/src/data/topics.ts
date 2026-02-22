@@ -1,4 +1,5 @@
 import { Topic } from '../types';
+import { SCIFI_EXTENDED_TOPICS } from './topics-scifi-extended';
 
 export const TOPICS: Topic[] = [
   // ============================================================
@@ -1338,6 +1339,9 @@ export const TOPICS: Topic[] = [
       { id: 'prob-13', type: 'multiple-choice', question: 'P(minst en krona vid tre myntkast)?', options: ['1/8', '3/8', '6/8', '7/8'], correctIndex: 3, points: 25, explanation: 'P(ingen krona) = (1/2)³ = 1/8. P(minst en) = 1 − 1/8 = 7/8.' },
     ],
   },
+
+  // Extended Sci-Fi topics (Åk 7-9)
+  ...SCIFI_EXTENDED_TOPICS,
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
