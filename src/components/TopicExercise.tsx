@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise } from '../types';
+import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise, ClockSetExercise } from '../types';
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import AppHeader from './AppHeader';
+import InteractiveClock from './InteractiveClock';
 
 interface ExerciseState {
   answered: boolean;
@@ -54,6 +55,11 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     commitAnswer(String(answer), correct);
   }
 
+  function answerClockSet(correct: boolean) {
+    if (state.answered) return;
+    commitAnswer(correct ? 'korrekt' : 'fel', correct);
+  }
+
   function answerFillIn() {
     if (state.answered) return;
     const ex = exercise as FillInExercise;
@@ -76,6 +82,8 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
         const correctAns = ex.type === 'multiple-choice'
           ? (ex as any).options[(ex as any).correctIndex]
           : ex.type === 'true-false' ? String((ex as any).isTrue)
+          : ex.type === 'clock-set'
+            ? `${String((ex as any).targetHour).padStart(2,'0')}:${String((ex as any).targetMinute).padStart(2,'0')}`
           : String((ex as any).answer);
         recordError(currentStudent.id, topic.id, topic.title, ex.id, ex.question, correctAns, userAnswer);
       }
@@ -191,6 +199,13 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
               inputRef={inputRef}
               onChange={setInput}
               onSubmit={answerFillIn}
+            />
+          )}
+          {exercise.type === 'clock-set' && (
+            <ClockSetAnswers
+              exercise={exercise as ClockSetExercise}
+              state={state}
+              onAnswer={answerClockSet}
             />
           )}
           {/* Rätt svar – kort bekräftelse */}
@@ -352,6 +367,105 @@ function FillInAnswer({ exercise, state, input, inputRef, onChange, onSubmit }: 
   );
 }
 
+// ─── Clock-set exercise ───────────────────────────────────────────────────────
+
+function ClockSetAnswers({
+  exercise,
+  state,
+  onAnswer,
+}: {
+  exercise: ClockSetExercise;
+  state: ExerciseState;
+  onAnswer: (correct: boolean) => void;
+}) {
+  const [hour, setHour] = useState(12);
+  const [minute, setMinute] = useState(0);
+
+  function handleTimeChange(h: number, m: number) {
+    setHour(h);
+    setMinute(m);
+  }
+
+  function handleSubmit() {
+    if (state.answered) return;
+    const correct = hour === exercise.targetHour && minute === exercise.targetMinute;
+    onAnswer(correct);
+  }
+
+  function fmt(h: number, m: number) {
+    return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+  }
+
+  return (
+    <div className="space-y-3">
+      {/* Clock */}
+      <div className="flex justify-center">
+        <InteractiveClock
+          hour={hour}
+          minute={minute}
+          onChange={handleTimeChange}
+          readOnly={state.answered}
+          size={210}
+        />
+      </div>
+
+      {/* Digital display */}
+      <p className="text-center text-3xl font-black text-gray-800 tabular-nums">
+        {fmt(hour, minute)}
+      </p>
+
+      {!state.answered && (
+        <>
+          {/* Step controls */}
+          <div className="grid grid-cols-2 gap-3">
+            {/* Hour */}
+            <div className="bg-gray-50 rounded-2xl p-2 text-center">
+              <p className="text-xs font-bold text-gray-500 mb-1">⏱ Timme</p>
+              <div className="flex items-center justify-center gap-2">
+                <button
+                  onClick={() => setHour(h => (h === 1 ? 12 : h - 1))}
+                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                >‹</button>
+                <span className="w-6 text-center font-black text-xl">{hour}</span>
+                <button
+                  onClick={() => setHour(h => (h === 12 ? 1 : h + 1))}
+                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                >›</button>
+              </div>
+            </div>
+            {/* Minute */}
+            <div className="bg-gray-50 rounded-2xl p-2 text-center">
+              <p className="text-xs font-bold text-gray-500 mb-1">⏰ Minut</p>
+              <div className="flex items-center justify-center gap-2">
+                <button
+                  onClick={() => setMinute(m => (m === 0 ? 55 : m - 5))}
+                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                >‹</button>
+                <span className="w-8 text-center font-black text-xl">{String(minute).padStart(2, '0')}</span>
+                <button
+                  onClick={() => setMinute(m => (m === 55 ? 0 : m + 5))}
+                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                >›</button>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xs text-center text-gray-400">
+            Dra på klockan eller använd knapparna · Inre cirkel = timme · Yttre = minut
+          </p>
+
+          <button
+            onClick={handleSubmit}
+            className="w-full bg-green-500 hover:bg-green-600 text-white font-black py-3 rounded-2xl text-lg transition-colors"
+          >
+            ✓ Klar!
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
+
 // ─── Visual explanation (only on wrong answer) ───────────────────────────────
 
 function WrongAnswerExplanation({ exercise }: { exercise: Exercise }) {
@@ -416,6 +530,32 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
     for (let i = 1; i <= q2; i++) rows.push(`${b} × ${i} = ${b * i}`);
     rows.push(`Svar: ${a} ÷ ${b} = ${q2}`);
     return <StepCalc title={`Hitta hur många gånger ${b} går i ${a}:`} lines={rows} answer={String(q2)} />;
+  }
+
+  // ── Clock-set: show correct time on a static clock ──────────────────────
+  if (exercise.type === 'clock-set') {
+    const ex = exercise as ClockSetExercise;
+    const fmtH = String(ex.targetHour).padStart(2, '0');
+    const fmtM = String(ex.targetMinute).padStart(2, '0');
+    return (
+      <div className="mt-3 flex items-center gap-4">
+        <InteractiveClock
+          hour={ex.targetHour}
+          minute={ex.targetMinute}
+          onChange={() => {}}
+          readOnly
+          size={150}
+        />
+        <div>
+          <p className="text-xs font-bold text-gray-500 mb-1">Rätt tid:</p>
+          <p className="text-3xl font-black text-green-700 tabular-nums">{fmtH}:{fmtM}</p>
+          <p className="text-xs text-gray-500 mt-2">
+            Kort visare (mörk) → {ex.targetHour}<br />
+            Lång visare (blå) → {ex.targetMinute} min
+          </p>
+        </div>
+      </div>
+    );
   }
 
   // ── Multiple-choice: highlight correct answer ────────────────────────────
