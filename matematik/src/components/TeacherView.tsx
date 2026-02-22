@@ -1,12 +1,45 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getAllStudents, getProgress, getPoints, getAchievements, getSessions } from '../utils/storage';
 import { TOPICS } from '../data/topics';
-import { LEVEL_NAMES, GRADE_LABELS, Grade } from '../types';
+import { LEVEL_NAMES, GRADE_LABELS, Grade, StudentMessage } from '../types';
+import {
+  getStudentMessages,
+  markMessageAsRead,
+  markAllMessagesAsRead,
+  deleteMessage,
+} from '../utils/messages';
+
+const AVATARS = ['🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉'];
 
 export default function TeacherView() {
   const { setTeacher } = useApp();
-  const [tab, setTab] = useState<'overview' | 'students' | 'topics' | 'settings'>('overview');
+  const [tab, setTab] = useState<'overview' | 'students' | 'topics' | 'messages' | 'settings'>('overview');
+  const [messages, setMessages] = useState<StudentMessage[]>([]);
+
+  // Load messages whenever the tab changes to 'messages'
+  useEffect(() => {
+    if (tab === 'messages') {
+      setMessages(getStudentMessages().slice().reverse()); // newest first
+    }
+  }, [tab]);
+
+  function handleMarkRead(id: string) {
+    markMessageAsRead(id);
+    setMessages(prev => prev.map(m => m.id === id ? { ...m, read: true } : m));
+  }
+
+  function handleMarkAllRead() {
+    markAllMessagesAsRead();
+    setMessages(prev => prev.map(m => ({ ...m, read: true })));
+  }
+
+  function handleDelete(id: string) {
+    deleteMessage(id);
+    setMessages(prev => prev.filter(m => m.id !== id));
+  }
+
+  const unreadCount = getStudentMessages().filter(m => !m.read).length;
 
   const allStudents = getAllStudents();
   const sessions = getSessions();
@@ -68,10 +101,11 @@ export default function TeacherView() {
   }).sort((a, b) => (b.pts?.total ?? 0) - (a.pts?.total ?? 0)), [allStudents]);
 
   const tabs: { id: typeof tab; label: string; icon: string }[] = [
-    { id: 'overview', label: 'Översikt', icon: '📊' },
-    { id: 'students', label: 'Elever', icon: '👥' },
-    { id: 'topics', label: 'Ämnen', icon: '📚' },
-    { id: 'settings', label: 'Inställningar', icon: '⚙️' },
+    { id: 'overview',  label: 'Översikt',     icon: '📊' },
+    { id: 'students',  label: 'Elever',        icon: '👥' },
+    { id: 'topics',    label: 'Ämnen',         icon: '📚' },
+    { id: 'messages',  label: 'Meddelanden',   icon: '💬' },
+    { id: 'settings',  label: 'Inställningar', icon: '⚙️' },
   ];
 
   return (
@@ -99,13 +133,18 @@ export default function TeacherView() {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className={`flex-1 py-3 text-sm font-bold transition-colors border-b-2 ${
+              className={`flex-1 py-3 text-sm font-bold transition-colors border-b-2 relative ${
                 tab === t.id
                   ? 'border-indigo-600 text-indigo-600'
                   : 'border-transparent text-gray-500 hover:text-gray-700'
               }`}
             >
               {t.icon} {t.label}
+              {t.id === 'messages' && unreadCount > 0 && (
+                <span className="absolute top-1.5 right-1 bg-red-500 text-white text-[10px] font-black rounded-full min-w-[16px] h-4 flex items-center justify-center px-1">
+                  {unreadCount}
+                </span>
+              )}
             </button>
           ))}
         </div>
@@ -279,6 +318,95 @@ export default function TeacherView() {
                 </div>
               );
             })}
+          </div>
+        )}
+
+        {/* MESSAGES TAB */}
+        {tab === 'messages' && (
+          <div className="space-y-4 animate-fade-in">
+            <div className="flex items-center justify-between">
+              <h2 className="font-black text-gray-800">
+                💬 Elevmeddelanden
+                {unreadCount > 0 && (
+                  <span className="ml-2 bg-red-500 text-white text-xs font-black rounded-full px-2 py-0.5">
+                    {unreadCount} olästa
+                  </span>
+                )}
+              </h2>
+              {messages.some(m => !m.read) && (
+                <button
+                  onClick={handleMarkAllRead}
+                  className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
+                >
+                  Markera alla som lästa
+                </button>
+              )}
+            </div>
+
+            {messages.length === 0 ? (
+              <div className="bg-white rounded-2xl shadow-sm p-10 text-center">
+                <div className="text-4xl mb-3">📭</div>
+                <p className="font-bold text-gray-500">Inga meddelanden ännu</p>
+                <p className="text-gray-400 text-sm mt-1">
+                  Elever kan skicka meddelanden via 💬-knappen i appen.
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {messages.map(msg => (
+                  <div
+                    key={msg.id}
+                    className={`bg-white rounded-2xl shadow-sm p-4 border-l-4 transition-all ${
+                      msg.read ? 'border-gray-200' : 'border-indigo-500'
+                    }`}
+                  >
+                    <div className="flex items-start gap-3">
+                      {/* Avatar */}
+                      <span className="text-2xl flex-shrink-0">
+                        {AVATARS[msg.studentAvatar] ?? '🦁'}
+                      </span>
+
+                      {/* Content */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-black text-gray-800 text-sm">{msg.studentName}</span>
+                          {!msg.read && (
+                            <span className="bg-indigo-100 text-indigo-700 text-[10px] font-black px-1.5 py-0.5 rounded-full">
+                              NYTT
+                            </span>
+                          )}
+                          <span className="text-xs text-gray-400 ml-auto flex-shrink-0">
+                            {new Date(msg.sentAt).toLocaleString('sv-SE', {
+                              month: 'short', day: 'numeric',
+                              hour: '2-digit', minute: '2-digit',
+                            })}
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-700 leading-relaxed">{msg.message}</p>
+                      </div>
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex gap-2 mt-3 justify-end">
+                      {!msg.read && (
+                        <button
+                          onClick={() => handleMarkRead(msg.id)}
+                          className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
+                        >
+                          ✓ Markera som läst
+                        </button>
+                      )}
+                      <button
+                        onClick={() => handleDelete(msg.id)}
+                        className="text-xs font-bold text-red-400 hover:text-red-600 transition-colors"
+                      >
+                        🗑 Ta bort
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
