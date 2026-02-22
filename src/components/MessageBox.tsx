@@ -24,7 +24,7 @@ export default function MessageBox({ student, onClose }: Props) {
           <div className="text-6xl mb-4">✅</div>
           <h2 className="text-xl font-black text-gray-800 mb-2">Meddelande skickat!</h2>
           <p className="text-gray-500 text-sm mb-6">
-            Din lärare kommer att kunna läsa ditt meddelande.
+            Ditt meddelande har tagits emot.
           </p>
           <button
             onClick={onClose}
@@ -45,12 +45,12 @@ export default function MessageBox({ student, onClose }: Props) {
           <span className="text-3xl">💬</span>
           <div>
             <h2 className="text-lg font-black text-gray-800">Skicka meddelande</h2>
-            <p className="text-xs text-gray-400">till din lärare</p>
+            <p className="text-xs text-gray-400">din åsikt räknas!</p>
           </div>
         </div>
 
         <p className="text-gray-500 text-sm mb-4">
-          Skriv en fråga, en kommentar eller något du vill berätta för läraren.
+          Skriv en fråga, en kommentar eller något du vill berätta.
         </p>
 
         {/* Textarea */}

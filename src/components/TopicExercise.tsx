@@ -20,6 +20,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   );
   const [input, setInput] = useState('');
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showHint, setShowHint] = useState(false);
   const [startTime] = useState(Date.now());
   const exerciseStartRef = useRef(Date.now());
   const [newAchievements, setNewAchievements] = useState<string[]>([]);
@@ -38,6 +39,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     }
     setInput('');
     setShowExplanation(false);
+    setShowHint(false);
     exerciseStartRef.current = Date.now();
   }, [currentIdx]);
 
@@ -173,9 +175,24 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           </div>
 
           {/* Question */}
-          <h2 className="text-xl font-bold text-gray-800 mb-6 leading-snug">
+          <h2 className="text-xl font-bold text-gray-800 mb-4 leading-snug">
             {exercise.question}
           </h2>
+
+          {/* Tänk så här – hint button (only before answering) */}
+          {!state.answered && (
+            <div className="mb-5">
+              <button
+                onClick={() => setShowHint(h => !h)}
+                className="flex items-center gap-2 text-sm font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-4 py-2 rounded-xl transition-colors w-full"
+              >
+                <span>🤔</span>
+                <span>{showHint ? 'Dölj tips' : 'Tänk så här'}</span>
+                <span className="ml-auto text-xs opacity-60">{showHint ? '▲' : '▼'}</span>
+              </button>
+              {showHint && <HintPanel exercise={exercise} />}
+            </div>
+          )}
 
           {/* Answer area */}
           {exercise.type === 'multiple-choice' && (
@@ -670,6 +687,108 @@ function DotGrid({ rows, cols }: { rows: number; cols: number }) {
       <p className="text-sm font-black text-gray-700 mt-1.5">{rows} rader × {cols} = <span className="text-green-700">{product}</span></p>
     </div>
   );
+}
+
+// ─── "Tänk så här" hint system ───────────────────────────────────────────────
+
+function HintPanel({ exercise }: { exercise: Exercise }) {
+  const hint = generateHint(exercise);
+  return (
+    <div className="mt-2 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 animate-fade-in">
+      <p className="text-xs font-black text-amber-800 uppercase tracking-wide mb-2">💡 Strategi – tänk så här:</p>
+      <p className="text-sm text-amber-900 leading-relaxed whitespace-pre-line">{hint}</p>
+    </div>
+  );
+}
+
+function generateHint(exercise: Exercise): string {
+  // Use existing hint field if available
+  if ('hint' in exercise && (exercise as FillInExercise).hint) {
+    return (exercise as FillInExercise).hint!;
+  }
+
+  const q = exercise.question;
+
+  // Parentheses / order of operations
+  if (/parentes|PEMDAS|ordning/i.test(q) || (q.match(/[+\-]/g) && q.match(/[×÷]/g))) {
+    return 'Räkna i rätt ordning:\n1. Parenteser ( ) räknas ALLTID först\n2. Potenser (t.ex. 3²)\n3. × och ÷ — vänster till höger\n4. + och − — vänster till höger';
+  }
+
+  // Negative numbers
+  if (q.includes('−') && /−\d/.test(q.replace(/\s/g, ''))) {
+    return 'Negativa tal – kom ihåg:\n• − och − = + (t.ex. 5 − (−3) = 5 + 3)\n• − × − = + (t.ex. (−4) × (−2) = 8)\n• − × + = − (t.ex. −3 × 5 = −15)\nTips: Använd tallinjen och räkna steg åt höger/vänster!';
+  }
+
+  // Standard form / powers of 10
+  if (/standardform|10\^|10⁻|×\s*10/i.test(q)) {
+    return 'Standardform (a × 10ⁿ):\n• Flytta kommat tills siffran framför är 1–9\n• Räkna antalet steg = n\n• Stor tal (flytta vänster) → positivt n\n• Litet tal (flytta höger) → negativt n\nExempel: 0,0072 → flytta 3 steg → 7,2 × 10⁻³';
+  }
+
+  // Powers and roots
+  if (/[²³⁴⁵]|√|roten ur|\^/.test(q)) {
+    return 'Potenser och rötter:\n• aⁿ = a multiplicerat med sig självt n gånger\n• √x = det positiva tal som multiplicerat med sig självt ger x\n• Regler: aᵐ × aⁿ = aᵐ⁺ⁿ\n• a⁰ = 1 (alltid!)\nTips: Börja med att räkna ut potensen eller roten innan du gör resten.';
+  }
+
+  // Fractions — division
+  if (/÷|dela/.test(q) && /\d\/\d|bråk/i.test(q)) {
+    return 'Division av bråk – vänd och multiplicera:\n1. Vänd det bråk du dividerar med (byt täljare och nämnare)\n2. Multiplicera istället för att dividera\nExempel: 2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6';
+  }
+
+  // Fractions — addition/subtraction
+  if (/\d\/\d|nämnare|bråk/i.test(q)) {
+    if (/[+−\-]/.test(q)) {
+      return 'Addition/subtraktion av bråk:\n1. Hitta Minsta Gemensamma Nämnaren (MGN)\n2. Bygg om båda bråken med den nya nämnaren\n3. Addera eller subtrahera bara täljarna\nExempel: 1/3 + 1/4 → MGN=12 → 4/12 + 3/12 = 7/12';
+    }
+    return 'Multiplikation av bråk:\n1. Täljare × täljare\n2. Nämnare × nämnare\n3. Förenkla om möjligt\nExempel: 2/3 × 3/5 = 6/15 = 2/5';
+  }
+
+  // Percent / proportional change
+  if (/procent|%|rabatt|ökning|minskning|förändring/i.test(q)) {
+    return 'Procent – förändringsfaktorn:\n• Ökning med p%: multiplicera med (1 + p/100)\n  Exempel: +20% → × 1,20\n• Minskning med p%: multiplicera med (1 − p/100)\n  Exempel: 15% rabatt → × 0,85\n• Procentuell förändring: (nytt − gammalt) ÷ gammalt × 100%';
+  }
+
+  // Equations / algebra
+  if (/x\s*=|=\s*x|\bx\b|\by\b|ekvation|variabel/i.test(q)) {
+    return 'Lös ekvationen steg för steg:\n1. Flytta alla x-termer till ena sidan\n2. Flytta alla tal till andra sidan\n3. Dividera båda sidor med koefficienten\nTips: Vad du gör på ena sidan måste du göra på den andra!';
+  }
+
+  // Proportions / scale / ratios
+  if (/skala|karta|proportion|förhållande|:/.test(q)) {
+    return 'Proportioner – trestegsregeln:\n1. Hitta värdet för EN enhet\n2. Multiplicera med det antal du söker\nEller korsvis multiplikation: a/b = c/d → a × d = b × c\nSkala: verklig sträcka = kartmått × skalans nämnare';
+  }
+
+  // Pythagoras
+  if (/a²|b²|c²|hypoten|rätvinkl|pythagoras/i.test(q)) {
+    return 'Pythagoras sats: a² + b² = c²\n• c = hypotenusan (sidan MOT räta vinkeln – alltid längst!)\n• Hitta c: c = √(a² + b²)\n• Hitta ett ben: a = √(c² − b²)\nSteg: Kvadrera → addera/subtrahera → ta kvadratroten';
+  }
+
+  // Angles
+  if (/vinkel|°|triangel.*vinkel|vinkel.*triangel/i.test(q)) {
+    return 'Vinkelsummor:\n• Triangel: alla vinklar = 180°\n• Rät linje: 180°, Hel varv: 360°\n• Fyrhörning: 360°\n• Vertikalvinklar (motstående): alltid lika\nTips: Skriv upp det du vet och räkna ut resten med subtraktion!';
+  }
+
+  // Coordinate system / line
+  if (/koordinat|mittpunkt|\([\d-]+,|lutning|y = k|räta linjen/i.test(q)) {
+    return 'Koordinater och räta linjen:\n• Punkt (x, y): x=horisontell, y=vertikal\n• Lutning k = (y₂ − y₁) / (x₂ − x₁)\n• y = kx + m: k=lutning, m=y-skärningspunkt\nTips: Sätt x = 0 för att hitta var linjen skär y-axeln!';
+  }
+
+  // Volume / area / geometry
+  if (/volym|area|omkrets|cylinder|prisma|rätblock|cirkel/i.test(q)) {
+    return 'Välj rätt formel:\n• Rektangel/rätblock: A = l × b, V = l × b × h\n• Triangel: A = (bas × höjd) / 2\n• Cirkel: A = πr², O = 2πr\n• Cylinder: V = πr²h\nTips: Identifiera figuren → plocka formeln → räkna!';
+  }
+
+  // Statistics
+  if (/medelvärde|median|typvärde|variationsbredd|kvartil|IQR/i.test(q)) {
+    return 'Statistik – välj rätt mått:\n• Medelvärde: (summan av alla värden) ÷ antal\n• Median: sortera talen → ta det mittersta\n• Typvärde: det värde som förekommer flest gånger\n• Variationsbredd: största − minsta\nTips: Sortera alltid listan innan du räknar ut median!';
+  }
+
+  // Rounding / estimation
+  if (/avrunda|avrundn|överslag|uppskatt/i.test(q)) {
+    return 'Avrundning – tumregel:\n• Titta på siffran TILL HÖGER om avrundningspositionen\n• 0–4 → behåll (avrunda nedåt)\n• 5–9 → öka med 1 (avrunda uppåt)\nÖverslag: avrunda talen INNAN du räknar för att få en snabb uppskattning!';
+  }
+
+  // Generic fallback
+  return 'Strategi för att lösa uppgiften:\n1. Läs frågan noga – vad söker du exakt?\n2. Identifiera vilken metod som passar (formel, ekvation, proportion...)\n3. Räkna ett steg i taget\n4. Kontrollera svaret – är det rimligt?';
 }
 
 /** Step-by-step calculation display. */
