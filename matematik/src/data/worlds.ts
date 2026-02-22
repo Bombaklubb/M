@@ -62,7 +62,23 @@ export const WORLDS: World[] = [
     accent: 'blue',
     accentHex: '#3b82f6',
     cardBg: 'bg-blue-50',
-    topicIds: ['algebra-intro', 'ekvationer', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet'],
+    topicIds: [
+      'algebra-intro', 'ekvationer', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet',
+      // Tal & räknefärdighet
+      'prioritering', 'negativa-tal', 'avrundning', 'standardform', 'potenser',
+      // Bråk, decimaltal, procent
+      'brak-avancerat', 'procent-forandring', 'procentenheter',
+      // Algebra
+      'forenkla-uttryck', 'distributiva-lagen', 'formler-variabler',
+      // Funktioner & koordinater
+      'koordinatsystem', 'rata-linjen',
+      // Proportioner, skala & enheter
+      'proportioner', 'skala', 'enhetsomvandlingar-hog',
+      // Geometri
+      'vinkelregler', 'pythagoras', 'geometri-volym',
+      // Statistik & problemlösning
+      'statistik-spridning', 'problemlosning-hog',
+    ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',
   },
