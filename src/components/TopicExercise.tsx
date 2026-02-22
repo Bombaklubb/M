@@ -193,18 +193,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
               onSubmit={answerFillIn}
             />
           )}
-          {/* Explanation */}
-          {showExplanation && exercise.explanation && (
-            <div className={`mt-4 rounded-2xl p-4 animate-fade-in ${
-              state.correct ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'
-            }`}>
-              <p className={`font-bold mb-1 ${state.correct ? 'text-green-700' : 'text-red-700'}`}>
-                {state.correct ? '🎉 Rätt!' : '❌ Inte riktigt...'}
-              </p>
-              <p className={`text-sm ${state.correct ? 'text-green-600' : 'text-red-600'}`}>
-                {exercise.explanation}
-              </p>
+          {/* Rätt svar – kort bekräftelse */}
+          {showExplanation && state.correct && (
+            <div className="mt-4 rounded-2xl px-4 py-3 bg-green-50 border border-green-200 animate-fade-in">
+              <p className="text-green-700 font-black">🎉 Rätt! Bra jobbat!</p>
             </div>
+          )}
+          {/* Fel svar – rik förklaring med bildstöd */}
+          {showExplanation && !state.correct && (
+            <WrongAnswerExplanation exercise={exercise} />
           )}
         </div>
 
@@ -350,6 +347,208 @@ function FillInAnswer({ exercise, state, input, inputRef, onChange, onSubmit }: 
             ✓
           </button>
         )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Visual explanation (only on wrong answer) ───────────────────────────────
+
+function WrongAnswerExplanation({ exercise }: { exercise: Exercise }) {
+  return (
+    <div className="mt-4 rounded-2xl overflow-hidden border-2 border-red-300 animate-fade-in">
+      <div className="bg-red-500 px-4 py-2.5">
+        <p className="text-white font-black">❌ Inte riktigt — så här tänker man:</p>
+      </div>
+      <div className="bg-red-50 px-4 py-3 space-y-2">
+        {exercise.explanation && (
+          <p className="text-sm text-red-700 leading-relaxed">{exercise.explanation}</p>
+        )}
+        <ExerciseVisual exercise={exercise} />
+      </div>
+    </div>
+  );
+}
+
+/** Auto-generates a visual aid based on exercise type and question content. */
+function ExerciseVisual({ exercise }: { exercise: Exercise }) {
+  const q = exercise.question;
+
+  // ── Addition: "X + Y" ────────────────────────────────────────────────────
+  const addMatch = q.match(/(\d+)\s*\+\s*(\d+)/);
+  if (addMatch && exercise.type === 'fill-in') {
+    const a = parseInt(addMatch[1]), b = parseInt(addMatch[2]);
+    const sum = a + b;
+    if (sum <= 20) return <NumberLineAdd a={a} b={b} />;
+    return <StepCalc title="Räkna så här:" lines={[`${a} + ${b} = ?`, `${a} + ${b} = ${sum}`]} answer={String(sum)} />;
+  }
+
+  // ── Subtraction: "X − Y" or "X - Y" ────────────────────────────────────
+  const subMatch = q.match(/(\d+)\s*[−-]\s*(\d+)/);
+  if (subMatch && exercise.type === 'fill-in') {
+    const a = parseInt(subMatch[1]), b = parseInt(subMatch[2]);
+    const diff = a - b;
+    if (a <= 20) return <NumberLineSub a={a} b={b} />;
+    return <StepCalc title="Räkna så här:" lines={[`${a} − ${b} = ?`, `${a} − ${b} = ${diff}`]} answer={String(diff)} />;
+  }
+
+  // ── Multiplication: "X × Y" or "X x Y" ──────────────────────────────────
+  const multMatch = q.match(/(\d+)\s*[×xX*]\s*(\d+)/);
+  if (multMatch && exercise.type === 'fill-in') {
+    const a = parseInt(multMatch[1]), b = parseInt(multMatch[2]);
+    const prod = a * b;
+    if (a <= 10 && b <= 10 && prod <= 50) return <DotGrid rows={b} cols={a} />;
+    // Show as repeated addition table
+    const rows: string[] = [];
+    const limit = Math.min(b, 5);
+    for (let i = 1; i <= limit; i++) rows.push(`${a} × ${i} = ${a * i}`);
+    if (b > 5) rows.push('...');
+    rows.push(`${a} × ${b} = ${prod}`);
+    return <StepCalc title={`${a} × ${b} räknas som:`} lines={rows} answer={String(prod)} />;
+  }
+
+  // ── Division: "X ÷ Y" ───────────────────────────────────────────────────
+  const divMatch = q.match(/(\d+)\s*÷\s*(\d+)/);
+  if (divMatch && exercise.type === 'fill-in') {
+    const a = parseInt(divMatch[1]), b = parseInt(divMatch[2]);
+    const q2 = Math.floor(a / b);
+    const rows: string[] = [];
+    for (let i = 1; i <= q2; i++) rows.push(`${b} × ${i} = ${b * i}`);
+    rows.push(`Svar: ${a} ÷ ${b} = ${q2}`);
+    return <StepCalc title={`Hitta hur många gånger ${b} går i ${a}:`} lines={rows} answer={String(q2)} />;
+  }
+
+  // ── Multiple-choice: highlight correct answer ────────────────────────────
+  if (exercise.type === 'multiple-choice') {
+    const ex = exercise as MultipleChoiceExercise;
+    return (
+      <div className="mt-1 bg-green-100 border border-green-300 rounded-xl px-4 py-2.5">
+        <p className="text-sm font-black text-green-800">✓ Rätt svar: {ex.options[ex.correctIndex]}</p>
+      </div>
+    );
+  }
+
+  // ── True/false: show correct answer ─────────────────────────────────────
+  if (exercise.type === 'true-false') {
+    const ex = exercise as TrueFalseExercise;
+    return (
+      <div className="mt-1 bg-green-100 border border-green-300 rounded-xl px-4 py-2.5">
+        <p className="text-sm font-black text-green-800">
+          ✓ Rätt svar: {ex.isTrue ? '👍 Sant' : '👎 Falskt'}
+        </p>
+      </div>
+    );
+  }
+
+  return null;
+}
+
+/** Number line for addition: highlights start, jump, and result. */
+function NumberLineAdd({ a, b }: { a: number; b: number }) {
+  const sum = a + b;
+  const cells = Array.from({ length: sum + 1 }, (_, i) => i);
+  const cellW = Math.max(22, Math.min(32, Math.floor(300 / (sum + 1))));
+  return (
+    <div className="mt-2">
+      <p className="text-xs font-bold text-gray-500 mb-1">📏 Tallinjen — räkna {b} steg från {a}:</p>
+      <div className="overflow-x-auto pb-1">
+        <div className="flex items-end" style={{ gap: 2 }}>
+          {cells.map(n => (
+            <div key={n} className="flex flex-col items-center flex-shrink-0" style={{ width: cellW }}>
+              <div className={`rounded-full font-bold flex items-center justify-center text-[11px] leading-none ${
+                n === sum ? 'bg-green-500 text-white ring-2 ring-green-300' :
+                n === a   ? 'bg-blue-500 text-white' :
+                n > a     ? 'bg-blue-200 text-blue-700' :
+                            'bg-gray-100 text-gray-500'
+              }`} style={{ width: cellW - 2, height: cellW - 2 }}>
+                {n}
+              </div>
+              <div className="bg-gray-300 mt-0.5" style={{ height: 2, width: cellW - 2 }} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex gap-4 mt-1 text-[11px]">
+        <span className="flex items-center gap-1 text-blue-700"><span className="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block" /> Start ({a})</span>
+        <span className="flex items-center gap-1 text-green-700"><span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" /> Svar ({sum})</span>
+      </div>
+    </div>
+  );
+}
+
+/** Number line for subtraction: shows stepping left. */
+function NumberLineSub({ a, b }: { a: number; b: number }) {
+  const diff = a - b;
+  const cells = Array.from({ length: a + 1 }, (_, i) => i);
+  const cellW = Math.max(22, Math.min(32, Math.floor(300 / (a + 1))));
+  return (
+    <div className="mt-2">
+      <p className="text-xs font-bold text-gray-500 mb-1">📏 Tallinjen — räkna {b} steg tillbaka från {a}:</p>
+      <div className="overflow-x-auto pb-1">
+        <div className="flex items-end" style={{ gap: 2 }}>
+          {cells.map(n => (
+            <div key={n} className="flex flex-col items-center flex-shrink-0" style={{ width: cellW }}>
+              <div className={`rounded-full font-bold flex items-center justify-center text-[11px] leading-none ${
+                n === diff ? 'bg-green-500 text-white ring-2 ring-green-300' :
+                n === a    ? 'bg-blue-500 text-white' :
+                n > diff && n < a ? 'bg-red-200 text-red-700' :
+                                    'bg-gray-100 text-gray-500'
+              }`} style={{ width: cellW - 2, height: cellW - 2 }}>
+                {n}
+              </div>
+              <div className="bg-gray-300 mt-0.5" style={{ height: 2, width: cellW - 2 }} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex gap-4 mt-1 text-[11px]">
+        <span className="flex items-center gap-1 text-blue-700"><span className="w-2.5 h-2.5 rounded-full bg-blue-500 inline-block" /> Start ({a})</span>
+        <span className="flex items-center gap-1 text-green-700"><span className="w-2.5 h-2.5 rounded-full bg-green-500 inline-block" /> Svar ({diff})</span>
+      </div>
+    </div>
+  );
+}
+
+/** Dot grid for multiplication: rows × cols array of dots. */
+function DotGrid({ rows, cols }: { rows: number; cols: number }) {
+  const product = rows * cols;
+  return (
+    <div className="mt-2">
+      <p className="text-xs font-bold text-gray-500 mb-1.5">🔵 Prickar — {cols} kolumner × {rows} rader:</p>
+      <div className="overflow-x-auto">
+        <div className="flex flex-col gap-1.5 inline-flex">
+          {Array.from({ length: rows }, (_, r) => (
+            <div key={r} className="flex gap-1.5">
+              {Array.from({ length: cols }, (_, c) => (
+                <div key={c} className="w-5 h-5 rounded-full flex-shrink-0"
+                  style={{ background: `hsl(${(r * 30) % 360},65%,55%)` }} />
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      <p className="text-sm font-black text-gray-700 mt-1.5">{rows} rader × {cols} = <span className="text-green-700">{product}</span></p>
+    </div>
+  );
+}
+
+/** Step-by-step calculation display. */
+function StepCalc({ title, lines, answer }: { title: string; lines: string[]; answer: string }) {
+  return (
+    <div className="mt-2 bg-white rounded-xl border border-gray-200 overflow-hidden">
+      <div className="bg-gray-50 px-3 py-1.5 border-b border-gray-200">
+        <p className="text-xs font-bold text-gray-500">{title}</p>
+      </div>
+      <div className="px-3 py-2 space-y-0.5">
+        {lines.map((line, i) => (
+          <p key={i} className={`font-mono ${
+            i === lines.length - 1
+              ? 'font-black text-green-700 text-base border-t border-gray-100 pt-1 mt-1'
+              : 'text-sm text-gray-600'
+          }`}>
+            {line}
+          </p>
+        ))}
       </div>
     </div>
   );

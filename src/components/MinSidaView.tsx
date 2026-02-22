@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import AppHeader from './AppHeader';
-import QuestView from './QuestView';
 import CollectionView from './CollectionView';
 import Achievements from './Achievements';
 import StudentResults from './StudentResults';
 
-type Tab = 'quest' | 'collection' | 'achievements' | 'results';
+type Tab = 'collection' | 'achievements' | 'results';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: 'quest',        label: 'Äventyr',      icon: '⚔️' },
   { id: 'collection',   label: 'Samling',       icon: '🏅' },
   { id: 'achievements', label: 'Utmärkelser',   icon: '🏆' },
   { id: 'results',      label: 'Resultat',      icon: '📊' },
 ];
 
 export default function MinSidaView() {
-  const [activeTab, setActiveTab] = useState<Tab>('quest');
+  const [activeTab, setActiveTab] = useState<Tab>('collection');
 
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(160deg,#0f2027,#203a43,#2c5364)' }}>
@@ -53,7 +51,6 @@ export default function MinSidaView() {
 
       {/* Content – padded to clear header (48px) + tab bar (~52px) */}
       <div className="pt-[104px]">
-        {activeTab === 'quest'        && <QuestView       hideHeader />}
         {activeTab === 'collection'   && <CollectionView  hideHeader />}
         {activeTab === 'achievements' && <Achievements     hideHeader />}
         {activeTab === 'results'      && <StudentResults   hideHeader />}

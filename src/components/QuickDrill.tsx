@@ -276,7 +276,7 @@ export default function QuickDrill() {
           </div>
           <button onClick={()=>setView('error-bank')}
             className="w-full mt-3 text-red-500 text-sm font-bold hover:text-red-700 transition-colors">
-            💡 Träna på mina misstag →
+            💡 Försök igen →
           </button>
         </div>
       </div>
