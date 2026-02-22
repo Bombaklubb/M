@@ -30,7 +30,7 @@ export const WORLDS: World[] = [
     accent: 'emerald',
     accentHex: '#10b981',
     cardBg: 'bg-emerald-50',
-    topicIds: ['rakna-till-10', 'addition-bas', 'subtraktion-bas', 'former-och-figurer', 'klockan', 'rakna-till-100', 'enheter'],
+    topicIds: ['rakna-till-10', 'addition-bas', 'subtraktion-bas', 'former-och-figurer', 'klockan', 'rakna-till-100', 'enheter', 'taluppfattning-lag-1', 'taluppfattning-lag-2', 'addition-strategier', 'subtraktion-strategier', 'likheter-monster', 'problemlosning-lag'],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
   },
