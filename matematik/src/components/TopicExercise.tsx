@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise, ColumnArithmeticExercise } from '../types';
+import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise } from '../types';
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import AppHeader from './AppHeader';
-import ColumnArithmetic from './ColumnArithmetic';
 
 interface ExerciseState {
   answered: boolean;
@@ -156,12 +155,10 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
               exercise.type === 'multiple-choice'  ? 'bg-blue-100 text-blue-700' :
               exercise.type === 'fill-in'          ? 'bg-purple-100 text-purple-700' :
-              exercise.type === 'column-arithmetic'? 'bg-amber-100 text-amber-700' :
                                                      'bg-green-100 text-green-700'
             }`}>
               {exercise.type === 'multiple-choice'   ? '🔘 Flerval' :
                exercise.type === 'fill-in'           ? '✏️ Fritext' :
-               exercise.type === 'column-arithmetic' ? '📐 Uppställning' :
                                                        '✅ Sant/Falskt'}
             </span>
             <span className="text-sm font-bold text-amber-600">+{exercise.points}p</span>
@@ -196,14 +193,6 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
               onSubmit={answerFillIn}
             />
           )}
-          {exercise.type === 'column-arithmetic' && !state.answered && (
-            <ColumnArithmetic
-              exercise={exercise as ColumnArithmeticExercise}
-              onDone={(correct) => commitAnswer('uppställning', correct)}
-              isTeacher={isTeacher}
-            />
-          )}
-
           {/* Explanation */}
           {showExplanation && exercise.explanation && (
             <div className={`mt-4 rounded-2xl p-4 animate-fade-in ${

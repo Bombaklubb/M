@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Topic, ColumnArithmeticExercise } from '../types';
+import { Topic } from '../types';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
-import ColumnArithmetic from './ColumnArithmetic';
 
 // Inline SVG illustrations for each topic type
 function Illustration({ name }: { name: string }) {
@@ -356,14 +355,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
             </div>
           )}
 
-          {miniEx.type === 'column-arithmetic' && (
-            <ColumnArithmetic
-              exercise={miniEx as ColumnArithmeticExercise}
-              onDone={(correct) => { setMiniCorrect(correct); setMiniAnswered(true); }}
-            />
-          )}
-
-          {miniAnswered && miniEx.type !== 'column-arithmetic' && (
+          {miniAnswered && (
             <div className={`rounded-2xl p-4 mt-3 ${miniCorrect ? 'bg-green-50 border border-green-200' : 'bg-orange-50 border border-orange-200'}`}>
               <p className={`font-black text-lg mb-1 ${miniCorrect ? 'text-green-700' : 'text-orange-700'}`}>
                 {miniCorrect ? '🎉 Precis rätt!' : '💪 Bra försök!'}
