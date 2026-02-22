@@ -24,6 +24,7 @@ export type ExerciseType =
   | 'multiple-choice'
   | 'fill-in'
   | 'true-false'
+  | 'clock-set'
   | 'order'
   | 'match';
 
@@ -53,7 +54,13 @@ export interface TrueFalseExercise extends BaseExercise {
   isTrue: boolean;
 }
 
-export type Exercise = MultipleChoiceExercise | FillInExercise | TrueFalseExercise;
+export interface ClockSetExercise extends BaseExercise {
+  type: 'clock-set';
+  targetHour: number;    // 1–12
+  targetMinute: number;  // 0, 5, 10, …, 55
+}
+
+export type Exercise = MultipleChoiceExercise | FillInExercise | TrueFalseExercise | ClockSetExercise;
 
 // === TOPICS ===
 export interface TopicInstruction {
