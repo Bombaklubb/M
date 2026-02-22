@@ -133,7 +133,7 @@ function AppInner() {
         <button
           onClick={() => setShowMessageBox(true)}
           className="fixed bottom-6 left-6 z-40 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all"
-          title="Skicka meddelande till läraren"
+          title="Skicka ett meddelande"
         >
           <span className="text-2xl">💬</span>
         </button>
