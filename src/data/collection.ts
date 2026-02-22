@@ -28,6 +28,8 @@ export const COLLECTION_ITEMS: CollectibleItem[] = [
   { id: 'robot-buddy',  worldId: 'scifi',   name: 'Robotvän',        emoji: '🤖', description: 'Byggd av dig!',                 rarity: 'epic',      unlockCondition: 'Slutför quest: Robotfabriken' },
   { id: 'space-badge',  worldId: 'scifi',   name: 'Rymdbricka',      emoji: '🛸', description: 'Certified space mathematician!', rarity: 'common',   unlockCondition: 'Klara 3 kapitel i Sci-Fi Världen' },
   { id: 'black-hole',   worldId: 'scifi',   name: 'Svart Hål',       emoji: '🌌', description: 'Beräknade singulariteten!',     rarity: 'legendary', unlockCondition: 'Få 3 stjärnor i alla Sci-Fi-kapitel' },
+  { id: 'star-chart',   worldId: 'scifi',   name: 'Stjärnkarta',     emoji: '🗺️', description: 'Navigerade hem genom rymden!',  rarity: 'rare',      unlockCondition: 'Slutför quest: Navigation i Rymden' },
+  { id: 'data-crystal', worldId: 'scifi',   name: 'Datakristall',    emoji: '💎', description: 'Analyserade stationens data!',  rarity: 'epic',      unlockCondition: 'Slutför quest: Dataanalys på Stationen' },
 
   // Gym world
   { id: 'universe-map', worldId: 'gym',     name: 'Universumkarta',  emoji: '🗺️', description: 'Universum kartlagt!',           rarity: 'epic',      unlockCondition: 'Slutför quest: Universums Mysterium' },
