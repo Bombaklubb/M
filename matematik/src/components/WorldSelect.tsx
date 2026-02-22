@@ -59,6 +59,10 @@ export default function WorldSelect() {
                 className="bg-amber-500 hover:bg-amber-400 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
                 ⚡ Snabbträning
               </button>
+              <button onClick={() => setView('quest')}
+                className="bg-purple-500 hover:bg-purple-400 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
+                ⚔️ Äventyr
+              </button>
               <button onClick={() => setView('error-bank')}
                 className="bg-red-500/80 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
                 💡 Försök igen

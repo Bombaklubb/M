@@ -79,7 +79,7 @@ export default function ErrorBankView() {
       <div className="bg-gradient-to-r from-red-500 to-rose-600 text-white py-6 px-4">
         <div className="max-w-lg mx-auto">
           <button onClick={()=>setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>
-          <h1 className="text-2xl font-black">💡 Träna på mina misstag</h1>
+          <h1 className="text-2xl font-black">💡 Försök igen</h1>
           <p className="text-white/80 mt-1 text-sm">
             {errors.length === 0 ? 'Inga misstag registrerade ännu!' : `${errors.length} uppgifter att förbättra`}
           </p>
