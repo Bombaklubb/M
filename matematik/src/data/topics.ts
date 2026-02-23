@@ -275,12 +275,27 @@ export const TOPICS: Topic[] = [
       ],
     },
     exercises: [
-      // ── Grundkunskap ──────────────────────────────────────────────────────
-      { id: 'klk-1', type: 'multiple-choice', question: 'Den KORTA (tjocka mörka) visaren på klockan visar...?', options: ['Minuter', 'Timmar', 'Sekunder', 'Dagar'], correctIndex: 1, points: 10, explanation: 'Den korta, tjocka mörka visaren visar TIMMAR. Den långa blå visar minuter.' },
-      { id: 'klk-2', type: 'multiple-choice', question: 'Den LÅNGA (tunna blå) visaren visar...?', options: ['Timmar', 'Dagar', 'Minuter', 'Sekunder'], correctIndex: 2, points: 10, explanation: 'Den långa, tunna blå visaren visar MINUTER. Den korta mörka visar timmar.' },
+      // ── Grundkunskap (med klockbild) ──────────────────────────────────────
+      { id: 'klk-1', type: 'multiple-choice', clockDisplay: { hour: 3, minute: 0 }, question: 'Titta på klockan — den KORTA (tjocka mörka) visaren visar...?', options: ['Minuter', 'Timmar', 'Sekunder', 'Dagar'], correctIndex: 1, points: 10, explanation: 'Den korta, tjocka mörka visaren visar TIMMAR. På bilden pekar den på 3 = klockan 3. Den långa blå visar minuter.' },
+      { id: 'klk-2', type: 'multiple-choice', clockDisplay: { hour: 3, minute: 0 }, question: 'Titta på klockan — den LÅNGA (tunna blå) visaren visar...?', options: ['Timmar', 'Dagar', 'Minuter', 'Sekunder'], correctIndex: 2, points: 10, explanation: 'Den långa, tunna blå visaren visar MINUTER. På bilden pekar den på 12 = 0 minuter. Den korta mörka visar timmar.' },
       { id: 'klk-3', type: 'fill-in', question: 'En timme = ___ minuter', answer: '60', hint: 'Titta på klockan – den långa visaren går ett helt varv på en timme', points: 10, explanation: 'En timme = 60 minuter. Den långa visaren gör ett helt varv = 60 steg.' },
-      { id: 'klk-4', type: 'fill-in', question: 'En halvtimme = ___ minuter', answer: '30', hint: 'Hälften av 60', points: 10, explanation: 'Hälften av 60 minuter = 30 minuter. Den långa visaren pekar på 6 = halv.' },
-      { id: 'klk-5', type: 'multiple-choice', question: '"Halv tre" – vilken tid är det?', options: ['3:30', '2:30', '3:15', '2:15'], correctIndex: 1, points: 10, explanation: '"Halv tre" = 2:30. Halva timmen INNAN tre har gått. Lång visare pekar på 6.' },
+      { id: 'klk-4', type: 'fill-in', clockDisplay: { hour: 12, minute: 30 }, question: 'Titta på klockan — den långa (blå) visaren pekar på 6. En halvtimme = ___ minuter', answer: '30', hint: 'Hälften av 60', points: 10, explanation: 'Hälften av 60 minuter = 30 minuter. När den långa visaren pekar på 6 har en halvtimme gått.' },
+      { id: 'klk-5', type: 'multiple-choice', clockDisplay: { hour: 2, minute: 30 }, question: 'Titta på klockan — vad är det för tid?', options: ['3:30', '2:30', '3:15', '2:15'], correctIndex: 1, points: 10, explanation: '"Halv tre" = 2:30. Den korta visaren är halvvägs mot 3. Den långa (blå) pekar på 6.' },
+
+      // ── Läs klockan – hela timmar ─────────────────────────────────────────
+      { id: 'klk-14', type: 'multiple-choice', clockDisplay: { hour: 7, minute: 0 }, question: 'Vad visar klockan?', options: ['6:00', '7:00', '8:00', '12:07'], correctIndex: 1, points: 10, explanation: 'Den korta visaren pekar på 7, den långa pekar på 12. Det är klockan 7:00.' },
+      { id: 'klk-15', type: 'multiple-choice', clockDisplay: { hour: 11, minute: 0 }, question: 'Vad visar klockan?', options: ['10:00', '12:00', '11:00', '1:00'], correctIndex: 2, points: 10, explanation: 'Den korta visaren pekar på 11, den långa pekar på 12. Det är klockan 11:00.' },
+      { id: 'klk-16', type: 'fill-in', clockDisplay: { hour: 5, minute: 0 }, question: 'Skriv vad klockan visar (t:mm)', answer: '5:00', acceptableAnswers: ['05:00'], points: 10, explanation: 'Den korta visaren pekar på 5, den långa på 12 → klockan 5:00.' },
+
+      // ── Läs klockan – halva timmar ────────────────────────────────────────
+      { id: 'klk-17', type: 'multiple-choice', clockDisplay: { hour: 8, minute: 30 }, question: 'Vad visar klockan?', options: ['8:00', '9:30', '8:30', '7:30'], correctIndex: 2, points: 10, explanation: 'Den korta visaren är halvvägs mellan 8 och 9. Den långa (blå) pekar på 6 = 30 minuter. Klockan är 8:30.' },
+      { id: 'klk-18', type: 'multiple-choice', clockDisplay: { hour: 1, minute: 30 }, question: 'Hur säger man den här tiden på svenska?', options: ['Halv ett', 'Halv två', 'Halv tre', 'Kvart i två'], correctIndex: 1, points: 10, explanation: '1:30 = halv två. "Halv" = halvvägs INNAN nästa timme. Nästa timme är 2, alltså "halv två".' },
+      { id: 'klk-19', type: 'fill-in', clockDisplay: { hour: 10, minute: 30 }, question: 'Skriv vad klockan visar (t:mm)', answer: '10:30', acceptableAnswers: ['halv elva'], points: 10, explanation: 'Den korta visaren pekar halvvägs mellan 10 och 11. Den långa på 6. Klockan 10:30 = halv elva.' },
+
+      // ── Läs klockan – kvartar ─────────────────────────────────────────────
+      { id: 'klk-20', type: 'multiple-choice', clockDisplay: { hour: 4, minute: 15 }, question: 'Vad visar klockan?', options: ['3:15', '4:15', '4:45', '5:15'], correctIndex: 1, points: 10, explanation: 'Den korta visaren har passerat 4. Den långa (blå) pekar på 3 = 15 minuter. Klockan är 4:15 = kvart över 4.' },
+      { id: 'klk-21', type: 'multiple-choice', clockDisplay: { hour: 2, minute: 45 }, question: 'Vad visar klockan?', options: ['2:15', '3:45', '2:45', '3:15'], correctIndex: 2, points: 10, explanation: 'Den korta visaren är nära 3. Den långa (blå) pekar på 9 = 45 minuter. Klockan är 2:45 = kvart i 3.' },
+
       // ── Interaktiva klockuppgifter – hela timmar ──────────────────────────
       { id: 'klk-6', type: 'clock-set', question: '⏰ Ställ klockan på 3:00 — klockan tre', targetHour: 3, targetMinute: 0, points: 10, explanation: 'Klockan tre: den korta (mörka) visaren pekar på 3. Den långa (blå) pekar på 12.' },
       { id: 'klk-7', type: 'clock-set', question: '⏰ Ställ klockan på 6:00 — klockan sex', targetHour: 6, targetMinute: 0, points: 10, explanation: 'Klockan sex: den korta visaren pekar på 6. Den långa pekar på 12.' },
