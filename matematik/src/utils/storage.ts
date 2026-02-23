@@ -40,7 +40,14 @@ export function findOrCreateStudent(name: string, grade: Grade, avatar: number):
   const existing = students.find(
     s => s.name.toLowerCase() === name.toLowerCase() && s.grade === grade
   );
-  if (existing) return existing;
+  if (existing) {
+    // Always apply the avatar selected at login
+    if (existing.avatar !== avatar) {
+      existing.avatar = avatar;
+      saveStudent(existing);
+    }
+    return existing;
+  }
 
   const newStudent: Student = {
     id: `student_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
