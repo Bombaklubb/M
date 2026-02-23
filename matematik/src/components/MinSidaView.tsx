@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import AppHeader from './AppHeader';
-import CollectionView from './CollectionView';
 import Achievements from './Achievements';
 import StudentResults from './StudentResults';
 import AvatarPicker from './AvatarPicker';
@@ -8,17 +7,16 @@ import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS } from '../data/avatars';
 import { GRADE_LABELS } from '../types';
 
-type Tab = 'collection' | 'achievements' | 'results';
+type Tab = 'achievements' | 'results';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: 'collection',   label: 'Samling',       icon: '🏅' },
-  { id: 'achievements', label: 'Utmärkelser',   icon: '🏆' },
-  { id: 'results',      label: 'Resultat',      icon: '📊' },
+  { id: 'achievements', label: 'Utmärkelser', icon: '🏆' },
+  { id: 'results',      label: 'Resultat',    icon: '📊' },
 ];
 
 export default function MinSidaView() {
   const { currentStudent } = useApp();
-  const [activeTab, setActiveTab] = useState<Tab>('collection');
+  const [activeTab, setActiveTab] = useState<Tab>('achievements');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
 
   const avatarEmoji = currentStudent
@@ -90,9 +88,8 @@ export default function MinSidaView() {
 
       {/* Content – padded to clear header (48px) + profile+tab bar (~116px) */}
       <div className="pt-[164px]">
-        {activeTab === 'collection'   && <CollectionView  hideHeader />}
-        {activeTab === 'achievements' && <Achievements     hideHeader />}
-        {activeTab === 'results'      && <StudentResults   hideHeader />}
+        {activeTab === 'achievements' && <Achievements  hideHeader />}
+        {activeTab === 'results'      && <StudentResults hideHeader />}
       </div>
 
       {/* Avatar picker modal */}
