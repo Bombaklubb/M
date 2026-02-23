@@ -434,6 +434,56 @@ export const TOPICS: Topic[] = [
   // ÅK 4-6: MELLANSTADIET
   // ============================================================
   {
+    id: 'klockan-mel',
+    title: 'Klockan',
+    icon: '🕐',
+    description: 'Läs klockan exakt, förstå 24-timmarsklockan och räkna med tid',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-amber-400 to-yellow-500',
+    instruction: {
+      title: 'Klockan – exakt avläsning och 24-timmarsklockan',
+      text: 'Nu läser vi klockan exakt ner till 5-minutersintervaller och lär oss 24-timmarsklockan! "Tjugo över tre" = 3:20. "Tio i fem" = 4:50. 24-timmarsklockan räknar till 23:59 – 13:00 = klockan ett på eftermiddagen.',
+      illustration: 'clock',
+      examples: [
+        '🕐 3:20 = tjugo över tre',
+        '🕔 4:50 = tio i fem',
+        '🌞 13:00 = klockan ett (em) på 24-h klockan',
+        '🌙 21:30 = halv tio på kvällen',
+      ],
+    },
+    exercises: [
+      // ── Läs klockan – 5-minutersintervaller ───────────────────────────────
+      { id: 'klkm-1', type: 'multiple-choice', clockDisplay: { hour: 3, minute: 20 }, question: 'Vad visar klockan?', options: ['3:25', '3:20', '2:20', '4:20'], correctIndex: 1, points: 10, explanation: 'Den korta visaren har passerat 3. Den långa pekar på 4 (= 20 minuter). Klockan är 3:20 = tjugo över tre.' },
+      { id: 'klkm-2', type: 'multiple-choice', clockDisplay: { hour: 6, minute: 35 }, question: 'Vad visar klockan?', options: ['6:30', '7:35', '6:35', '5:35'], correctIndex: 2, points: 10, explanation: 'Den långa visaren pekar på 7 (= 35 minuter). Den korta har passerat 6. Klockan är 6:35.' },
+      { id: 'klkm-3', type: 'fill-in', clockDisplay: { hour: 9, minute: 50 }, question: 'Skriv vad klockan visar (t:mm)', answer: '9:50', acceptableAnswers: ['09:50', 'tio i tio'], points: 10, explanation: 'Den långa visaren pekar på 10 (= 50 minuter). Klockan är 9:50 = tio i tio.' },
+      { id: 'klkm-4', type: 'multiple-choice', clockDisplay: { hour: 11, minute: 40 }, question: 'Hur säger man den här tiden på svenska?', options: ['Tjugo i tolv', 'Tjugo över elva', 'Kvart i tolv', 'Kvart över elva'], correctIndex: 0, points: 10, explanation: '11:40 = 20 minuter kvar till 12. "Tjugo i tolv" = 11:40.' },
+      { id: 'klkm-5', type: 'multiple-choice', clockDisplay: { hour: 8, minute: 10 }, question: 'Hur säger man den här tiden på svenska?', options: ['Tio i åtta', 'Tio över åtta', 'Kvart över åtta', 'Halv nio'], correctIndex: 1, points: 10, explanation: '8:10 = tio minuter efter åtta. "Tio över åtta" = 8:10.' },
+      { id: 'klkm-6', type: 'fill-in', clockDisplay: { hour: 4, minute: 25 }, question: 'Skriv vad klockan visar (t:mm)', answer: '4:25', acceptableAnswers: ['04:25', 'fem i halv fem'], points: 10, explanation: 'Den långa visaren pekar på 5 (= 25 minuter). Klockan är 4:25 = fem i halv fem.' },
+      { id: 'klkm-7', type: 'multiple-choice', clockDisplay: { hour: 7, minute: 55 }, question: 'Vad visar klockan?', options: ['7:55', '8:05', '7:50', '8:55'], correctIndex: 0, points: 10, explanation: 'Den långa visaren pekar på 11 (= 55 minuter). Klockan är 7:55 = fem i åtta.' },
+
+      // ── 24-timmarsklockan ─────────────────────────────────────────────────
+      { id: 'klkm-8', type: 'multiple-choice', question: 'Klockan 13:00 på 24-timmarsklockan är samma som…?', options: ['1:00 på morgonen', '3:00 på eftermiddagen', '1:00 på eftermiddagen', '12:00 på natten'], correctIndex: 2, points: 10, explanation: '13:00 − 12 = 1:00 em. 13:00 = klockan ett på eftermiddagen.' },
+      { id: 'klkm-9', type: 'fill-in', question: 'Klockan 15:30 på 24-timmarsklockan – skriv den som 12-timmar (t:mm em)', answer: '3:30 em', acceptableAnswers: ['15:30', '3:30'], points: 15, explanation: '15 − 12 = 3. Klockan 15:30 = 3:30 på eftermiddagen.' },
+      { id: 'klkm-10', type: 'multiple-choice', question: 'Vilket klockslag är 21:00?', options: ['9:00 på morgonen', '9:00 på kvällen', '11:00 på kvällen', '3:00 på eftermiddagen'], correctIndex: 1, points: 10, explanation: '21 − 12 = 9. Klockan 21:00 = klockan 9 på kvällen.' },
+      { id: 'klkm-11', type: 'true-false', question: 'Klockan 8:00 och 20:00 är samma tid', isTrue: false, points: 10, explanation: 'Fel! 8:00 = klockan 8 på morgonen. 20:00 = 8 på kvällen. 20 − 12 = 8 em.' },
+      { id: 'klkm-12', type: 'fill-in', question: 'Klockan 7:45 på morgonen – skriv den i 24-timmarformat', answer: '7:45', acceptableAnswers: ['07:45'], points: 10, explanation: 'Tider på morgonen (före 12:00) är samma på 12h och 24h: 7:45 = 07:45.' },
+      { id: 'klkm-13', type: 'multiple-choice', question: 'Skolan slutar 15:15. Vad är klockan på ett "vanligt" 12-timmarsur?', options: ['3:15 på morgonen', '5:15 på eftermiddagen', '3:15 på eftermiddagen', '5:15 på morgonen'], correctIndex: 2, points: 10, explanation: '15 − 12 = 3. Skolan slutar klockan 3:15 på eftermiddagen.' },
+
+      // ── Tidsskillnader & beräkningar ─────────────────────────────────────
+      { id: 'klkm-14', type: 'fill-in', question: 'Det är 10:30 nu. Om 45 minuter, vad är klockan? (skriv t:mm)', answer: '11:15', points: 15, explanation: '10:30 + 45 min = 10:30 + 30 min + 15 min = 11:00 + 15 min = 11:15.' },
+      { id: 'klkm-15', type: 'multiple-choice', question: 'En film börjar 14:00 och slutar 15:45. Hur lång är filmen?', options: ['1 timme', '1 tim 30 min', '1 tim 45 min', '2 timmar'], correctIndex: 2, points: 15, explanation: '15:45 − 14:00 = 1 timme och 45 minuter.' },
+      { id: 'klkm-16', type: 'fill-in', question: 'Lektionen börjar 09:00 och är 40 minuter lång. När slutar den? (skriv t:mm)', answer: '9:40', acceptableAnswers: ['09:40'], points: 15, explanation: '09:00 + 40 min = 09:40.' },
+      { id: 'klkm-17', type: 'true-false', question: 'Från 11:50 till 12:30 är det 40 minuter', isTrue: true, points: 15, explanation: 'Rätt! 11:50 + 10 min = 12:00. 12:00 + 30 min = 12:30. Totalt 10 + 30 = 40 minuter.' },
+      { id: 'klkm-18', type: 'multiple-choice', question: 'Du kliver på bussen 08:20 och reser i 35 minuter. När är du framme?', options: ['08:45', '08:55', '09:05', '08:50'], correctIndex: 1, points: 15, explanation: '08:20 + 35 min = 08:20 + 40 min − 5 min = 09:00 − 5 min = 08:55.' },
+
+      // ── Interaktiva klockuppgifter – exakta tider ──────────────────────
+      { id: 'klkm-19', type: 'clock-set', question: '⏰ Ställ klockan på 4:20 — tjugo över fyra', targetHour: 4, targetMinute: 20, points: 10, explanation: '4:20 = tjugo över fyra. Den långa visaren pekar på 4 (= 20 min).' },
+      { id: 'klkm-20', type: 'clock-set', question: '⏰ Ställ klockan på 7:35 — fem i halv åtta', targetHour: 7, targetMinute: 35, points: 10, explanation: '7:35 = fem i halv åtta. Den långa visaren pekar på 7 (= 35 min).' },
+      { id: 'klkm-21', type: 'clock-set', question: '⏰ Ställ klockan på 10:50 — tio i elva', targetHour: 10, targetMinute: 50, points: 15, explanation: '10:50 = tio i elva. Den långa visaren pekar på 10 (= 50 min). Tio minuter kvar till elva.' },
+    ],
+  },
+  {
     id: 'brak',
     title: 'Bråk',
     icon: '🍕',
