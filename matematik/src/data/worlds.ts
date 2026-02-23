@@ -46,7 +46,7 @@ export const WORLDS: World[] = [
     accent: 'purple',
     accentHex: '#8b5cf6',
     cardBg: 'bg-purple-50',
-    topicIds: ['multiplikation-intro', 'division-intro', 'brak', 'decimaler', 'procent', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'brak-2', 'decimal-procent', 'huvudrakning', 'geometri-mel', 'statistik-mel'],
+    topicIds: ['multiplikation-intro', 'division-intro', 'klockan-mel', 'brak', 'decimaler', 'procent', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'brak-2', 'decimal-procent', 'huvudrakning', 'geometri-mel', 'statistik-mel'],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
   },
