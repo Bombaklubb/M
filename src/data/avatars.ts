@@ -4,10 +4,9 @@ import { QUESTS } from './quests';
 
 // ─── Base avatars (always unlocked) ──────────────────────────────────────────
 export const BASE_AVATARS = [
-  '🦁', '🐼', '🦊', '🐸', '🦋', '🐢', '🦄', '🐉',
-  '🧙', '🦸', '🧝', '🐺', '🦅', '🐯', '🧜', '🦖',
-  // Karaktärer med olika hudfärger, blandade kön + ninja
-  '🥷', '👩🏽', '👨🏿', '👧🏾', '👦🏻', '🧕🏾', '🧑🏽',
+  '🦁', '👦🏻', '🐼', '🥷',  '🦊', '👧🏾', '🐸', '👩🏽',
+  '🦋', '👨🏿', '🐢', '🧕🏾', '🦄', '🧑🏽', '🐉', '🧙',
+  '🦸', '🧝', '🐺', '🦅',   '🐯', '🧜', '🦖',
 ];
 
 // ─── World-specific avatar packs (unlocked by completing any quest in that world) ─
