@@ -208,7 +208,7 @@ function Illustration({ name }: { name: string }) {
       {illustrations[name] ?? (
         <svg viewBox="0 0 200 120" className="w-full h-full">
           <rect width="200" height="120" fill="#f3f4f6" rx="12"/>
-          <text x="100" y="65" textAnchor="middle" fontSize="40">🧮</text>
+          <text x="100" y="65" textAnchor="middle" fontSize="40">🎯</text>
         </svg>
       )}
     </div>
