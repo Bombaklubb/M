@@ -420,7 +420,7 @@ export default function TeacherView() {
             <div className="bg-white rounded-2xl shadow-sm p-5">
               <h2 className="font-bold text-gray-800 mb-3">📱 Om appen</h2>
               <div className="space-y-2 text-sm text-gray-600">
-                <p>🧮 <strong>MatematikAppen</strong> – Lär dig matte på ett roligt sätt</p>
+                <p>🎯 <strong>MatematikAppen</strong> – Lär dig matte på ett roligt sätt</p>
                 <p>📚 {TOPICS.length} ämnesområden täckande åk 1 – gymnasium</p>
                 <p>💾 All data sparas lokalt i webbläsaren (inga kostnader)</p>
                 <p>🏆 {18} utmärkelser att låsa upp</p>
