@@ -174,6 +174,24 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             <span className="text-sm font-bold text-amber-600">+{exercise.points}p</span>
           </div>
 
+          {/* Static clock display – shown when exercise.clockDisplay is set */}
+          {exercise.clockDisplay && (
+            <div className="flex flex-col items-center mb-5">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">
+                🕐 Se klockan
+              </p>
+              <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-3 inline-block">
+                <InteractiveClock
+                  hour={exercise.clockDisplay.hour}
+                  minute={exercise.clockDisplay.minute}
+                  onChange={() => {}}
+                  readOnly
+                  size={180}
+                />
+              </div>
+            </div>
+          )}
+
           {/* Question */}
           <h2 className="text-xl font-bold text-gray-800 mb-4 leading-snug">
             {exercise.question}

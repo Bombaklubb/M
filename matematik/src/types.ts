@@ -34,6 +34,7 @@ export interface BaseExercise {
   question: string;
   explanation?: string; // shown after answering
   points: number;
+  clockDisplay?: { hour: number; minute: number }; // shows a static clock above the question
 }
 
 export interface MultipleChoiceExercise extends BaseExercise {
