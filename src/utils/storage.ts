@@ -287,6 +287,33 @@ export function verifyTeacherPin(pin: string): boolean {
   return pin === TEACHER_PASSWORD;
 }
 
+// ======================== DATA EXPORT / IMPORT ========================
+
+/** Collects every localStorage key belonging to this app and returns it as a plain object. */
+export function exportAllData(): Record<string, unknown> {
+  const data: Record<string, unknown> = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (!key) continue;
+    if (key.startsWith('math_') || key.startsWith('mattejakten_')) {
+      try {
+        data[key] = JSON.parse(localStorage.getItem(key) ?? 'null');
+      } catch {
+        data[key] = localStorage.getItem(key);
+      }
+    }
+  }
+  return data;
+}
+
+/** Writes a previously exported data object back into localStorage, then reloads. */
+export function importAllData(data: Record<string, unknown>): void {
+  for (const [key, value] of Object.entries(data)) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+  window.location.reload();
+}
+
 // ======================== HELPERS ========================
 
 function getWeekStart(): string {
