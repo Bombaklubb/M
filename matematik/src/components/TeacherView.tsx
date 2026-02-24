@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { getAllStudents, getProgress, getPoints, getAchievements, getSessions } from '../utils/storage';
+import { getAllStudents, getProgress, getPoints, getAchievements, getSessions, exportAllData, importAllData } from '../utils/storage';
 import { TOPICS } from '../data/topics';
 import { LEVEL_NAMES, GRADE_LABELS, Grade, StudentMessage } from '../types';
 import {
@@ -39,6 +39,33 @@ export default function TeacherView() {
   }
 
   const unreadCount = getStudentMessages().filter(m => !m.read).length;
+
+  function handleExport() {
+    const data = exportAllData();
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `mattejakten-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      try {
+        const data = JSON.parse(evt.target?.result as string);
+        importAllData(data);
+      } catch {
+        alert('Filen kunde inte läsas. Kontrollera att det är en giltig backup-fil.');
+      }
+    };
+    reader.readAsText(file);
+  }
 
   const allStudents = getAllStudents();
   const sessions = getSessions();
@@ -415,6 +442,30 @@ export default function TeacherView() {
             <div className="bg-white rounded-2xl shadow-sm p-5">
               <h2 className="font-bold text-gray-800 mb-3">🔐 Inloggning</h2>
               <p className="text-sm text-gray-500">Lärarvyn öppnas med <strong>Ctrl+Shift+P</strong> och lösenordet <strong>Korsängen</strong>.</p>
+            </div>
+
+            {/* Data sync between devices */}
+            <div className="bg-white rounded-2xl shadow-sm p-5">
+              <h2 className="font-bold text-gray-800 mb-1">🔄 Synka data mellan enheter</h2>
+              <p className="text-sm text-gray-500 mb-4">
+                All data sparas lokalt i webbläsaren och syns inte automatiskt på andra enheter.
+                Exportera data från en enhet och importera på en annan för att flytta elever, resultat och meddelanden.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={handleExport}
+                  className="flex-1 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition-colors text-sm"
+                >
+                  ⬇️ Exportera all data
+                </button>
+                <label className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition-colors text-sm cursor-pointer">
+                  ⬆️ Importera data
+                  <input type="file" accept=".json" className="hidden" onChange={handleImport} />
+                </label>
+              </div>
+              <p className="text-xs text-gray-400 mt-3">
+                ⚠️ Import skriver över befintlig data på denna enhet och laddar om sidan.
+              </p>
             </div>
 
             <div className="bg-white rounded-2xl shadow-sm p-5">
