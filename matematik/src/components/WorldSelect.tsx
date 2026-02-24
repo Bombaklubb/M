@@ -123,7 +123,9 @@ export default function WorldSelect() {
 
                     {/* Top row: emoji + current badge */}
                     <div className="flex items-start justify-between mb-3">
-                      <div className="text-5xl leading-none">{world.emoji}</div>
+                      <div className="text-5xl leading-none bg-white/20 rounded-2xl p-1.5 inline-flex items-center justify-center shadow-lg">
+                        {world.emoji}
+                      </div>
                       {isCurrent && (
                         <span className="bg-amber-400 text-amber-900 text-xs font-black px-2 py-0.5 rounded-full">
                           DIN VÄRLD
