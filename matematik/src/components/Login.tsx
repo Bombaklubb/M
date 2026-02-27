@@ -52,8 +52,7 @@ export default function Login() {
 
         {/* Card */}
         <div className="bg-white rounded-3xl shadow-2xl p-7">
-          <h2 className="text-2xl font-black text-gray-800 mb-1">Ditt användarnamn i skolan 🏫</h2>
-          <p className="text-gray-400 text-sm mb-4">Ange ditt skolanvändarnamn för att logga in</p>
+          <h2 className="text-2xl font-black text-gray-800 mb-4">Skriv ditt namn 🏫</h2>
           <input type="text" value={name} onChange={e=>setName(e.target.value)}
             onKeyDown={e=>e.key==='Enter'&&doLogin()}
             className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-lg font-bold focus:outline-none focus:border-amber-400 transition-colors mb-5"
