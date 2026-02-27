@@ -24698,8 +24698,7 @@
       }
     ],
     "word_count": 307
-  }
-,
+  },
   {
     "id": "ak9-tema-016",
     "title": "Giorgio Armani och idén om tyst elegans",
@@ -24709,32 +24708,62 @@
     "questions": [
       {
         "q": "Vilken tidig erfarenhet beskriver texten som viktig för Armani?",
-        "options": ["Arbete med skyltning och försäljning i modebranschen", "Att han var professionell idrottare i Italien", "Att han utbildade sig till jurist och domare", "Att han arbetade som kock på ett hotell"],
+        "options": [
+          "Arbete med skyltning och försäljning i modebranschen",
+          "Att han var professionell idrottare i Italien",
+          "Att han utbildade sig till jurist och domare",
+          "Att han arbetade som kock på ett hotell"
+        ],
         "correct": 0
       },
       {
         "q": "Hur beskrivs Armanis elegans i texten?",
-        "options": ["Den bygger mest på starka färger och stora logotyper", "Den är avskalad och inte högljudd", "Den handlar främst om ovanliga hattar och smycken", "Den utgår från att plaggen ska se slitna ut"],
+        "options": [
+          "Den bygger mest på starka färger och stora logotyper",
+          "Den är avskalad och inte högljudd",
+          "Den handlar främst om ovanliga hattar och smycken",
+          "Den utgår från att plaggen ska se slitna ut"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken förändring av kavajen lyfts fram som typisk för Armani?",
-        "options": ["Mycket hårda axlar och stel konstruktion", "Kortare ärmar för att visa klockan", "Mjukare axlar och mindre stel passform", "Insydda metalltrådar för extra glans"],
+        "options": [
+          "Mycket hårda axlar och stel konstruktion",
+          "Kortare ärmar för att visa klockan",
+          "Mjukare axlar och mindre stel passform",
+          "Insydda metalltrådar för extra glans"
+        ],
         "correct": 2
       },
       {
         "q": "Vad menar texten att 1980-talets kostymtrend också kunde kritiseras för?",
-        "options": ["Att den gjorde kläder för billiga att köpa", "Att den tog bort alla könsnormer helt", "Att den gjorde reklam förbjuden", "Att den kunde öka pressen att passa in i en företagskultur"],
+        "options": [
+          "Att den gjorde kläder för billiga att köpa",
+          "Att den tog bort alla könsnormer helt",
+          "Att den gjorde reklam förbjuden",
+          "Att den kunde öka pressen att passa in i en företagskultur"
+        ],
         "correct": 3
       },
       {
         "q": "Varför är flera olika linjer viktiga i en lyxkoncern enligt texten?",
-        "options": ["De kan skilja sig i pris, kvalitet, målgrupp och försäljningsplats", "De gör att företaget slipper tänka på varumärket", "De finns bara för att förvirra kunderna", "De gör att alla plagg måste tillverkas i samma fabrik"],
+        "options": [
+          "De kan skilja sig i pris, kvalitet, målgrupp och försäljningsplats",
+          "De gör att företaget slipper tänka på varumärket",
+          "De finns bara för att förvirra kunderna",
+          "De gör att alla plagg måste tillverkas i samma fabrik"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken större fråga används Armani som exempel på i slutet?",
-        "options": ["Hur man kan vinna en sportturnering med rätt kläder", "Hur ett företag kan kombinera design, status och ansvar", "Hur man snabbt blir känd på sociala medier", "Hur man undviker att använda modeord i reklam"],
+        "options": [
+          "Hur man kan vinna en sportturnering med rätt kläder",
+          "Hur ett företag kan kombinera design, status och ansvar",
+          "Hur man snabbt blir känd på sociala medier",
+          "Hur man undviker att använda modeord i reklam"
+        ],
         "correct": 1
       }
     ],
@@ -24749,32 +24778,62 @@
     "questions": [
       {
         "q": "Vad menar texten med att mode kan fungera som ett språk?",
-        "options": ["Att plagg kan signalera budskap om roll och identitet", "Att alla kläder har skrivna texter på sig", "Att man måste tala italienska för att bära kostym", "Att kostymer bara används i teater"],
+        "options": [
+          "Att plagg kan signalera budskap om roll och identitet",
+          "Att alla kläder har skrivna texter på sig",
+          "Att man måste tala italienska för att bära kostym",
+          "Att kostymer bara används i teater"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken fråga uppstod när fler kvinnor tog plats i yrken där kostym var norm?",
-        "options": ["Om kostymen skulle förbjudas i offentliga rum", "Om man måste klä sig som män för att ses som professionell", "Om alla måste bära exakt samma färg varje dag", "Om kostymer bara skulle sys för hand"],
+        "options": [
+          "Om kostymen skulle förbjudas i offentliga rum",
+          "Om man måste klä sig som män för att ses som professionell",
+          "Om alla måste bära exakt samma färg varje dag",
+          "Om kostymer bara skulle sys för hand"
+        ],
         "correct": 1
       },
       {
         "q": "Hur beskriver texten Armanis syn på kostymen?",
-        "options": ["Som en rustning som ska göra bäraren hårdare", "Som ett verktyg som underlättar rörelse och arbete", "Som ett skämtplagg som inte hör hemma i arbetslivet", "Som något som alltid måste vara så tajt som möjligt"],
+        "options": [
+          "Som en rustning som ska göra bäraren hårdare",
+          "Som ett verktyg som underlättar rörelse och arbete",
+          "Som ett skämtplagg som inte hör hemma i arbetslivet",
+          "Som något som alltid måste vara så tajt som möjligt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket exempel används för att visa hur material och färg påverkar tolkningen?",
-        "options": ["Att en mörk ull ofta uppfattas som formell", "Att alla tyger känns likadana för betraktaren", "Att ljusa färger alltid signalerar sorg", "Att struktur i tyg bara syns på nära håll och saknar betydelse"],
+        "options": [
+          "Att en mörk ull ofta uppfattas som formell",
+          "Att alla tyger känns likadana för betraktaren",
+          "Att ljusa färger alltid signalerar sorg",
+          "Att struktur i tyg bara syns på nära håll och saknar betydelse"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menar texten med att det finns en klassdimension i lyxkostymer?",
-        "options": ["Att lyx alltid gör människor otrevliga", "Att status kan handla om både pengar och att kunna sociala koder", "Att bara studenter får bära kostym", "Att kostymer bara fungerar i ett visst land"],
+        "options": [
+          "Att lyx alltid gör människor otrevliga",
+          "Att status kan handla om både pengar och att kunna sociala koder",
+          "Att bara studenter får bära kostym",
+          "Att kostymer bara fungerar i ett visst land"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken utveckling nämns som en orsak till att kostymens roll ifrågasätts i dag?",
-        "options": ["Att ull har slutat produceras helt", "Att reklam för kläder blivit olaglig", "Att alla arbetsplatser kräver uniform", "Att distansarbete och mer informella kontor blivit vanligare"],
+        "options": [
+          "Att ull har slutat produceras helt",
+          "Att reklam för kläder blivit olaglig",
+          "Att alla arbetsplatser kräver uniform",
+          "Att distansarbete och mer informella kontor blivit vanligare"
+        ],
         "correct": 3
       }
     ],
@@ -24789,32 +24848,62 @@
     "questions": [
       {
         "q": "Vad menar texten med att man måste tänka i hela livscykler?",
-        "options": ["Att man bara ska titta på plaggets färg och form", "Att man ska se hela kedjan från råvara till avfall", "Att man ska köpa samma plagg varje vecka", "Att man alltid ska kasta kläder efter en säsong"],
+        "options": [
+          "Att man bara ska titta på plaggets färg och form",
+          "Att man ska se hela kedjan från råvara till avfall",
+          "Att man ska köpa samma plagg varje vecka",
+          "Att man alltid ska kasta kläder efter en säsong"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket ord förklaras i texten som att kunna följa var och hur en produkt tillverkats?",
-        "options": ["Spårbarhet", "Siluett", "Kampanj", "Säsongsrea"],
+        "options": [
+          "Spårbarhet",
+          "Siluett",
+          "Kampanj",
+          "Säsongsrea"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket exempel används för att visa att råvaror kan påverka klimat och mark?",
-        "options": ["En kavaj i ull kopplad till djurhållning", "En plastpåse kopplad till bibliotek", "En tröja i bomull kopplad till snickeri", "En scarf kopplad till biltrafik i städer"],
+        "options": [
+          "En kavaj i ull kopplad till djurhållning",
+          "En plastpåse kopplad till bibliotek",
+          "En tröja i bomull kopplad till snickeri",
+          "En scarf kopplad till biltrafik i städer"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken invändning tar texten upp mot idén att lyx alltid innebär mindre konsumtion?",
-        "options": ["Att lyx aldrig säljs internationellt", "Att trender och kollektioner ändå kan driva köp", "Att ull inte går att färga", "Att second hand är förbjudet för dyra märken"],
+        "options": [
+          "Att lyx aldrig säljs internationellt",
+          "Att trender och kollektioner ändå kan driva köp",
+          "Att ull inte går att färga",
+          "Att second hand är förbjudet för dyra märken"
+        ],
         "correct": 1
       },
       {
         "q": "Vad säger texten om arbetsvillkor i textilindustrin?",
-        "options": ["Att problem bara finns i ett enda land", "Att risker kan finnas även där regelverk är starkare om kontrollen brister", "Att löner alltid är högre i hela branschen än i andra yrken", "Att olyckor är omöjliga om plagget är dyrt"],
+        "options": [
+          "Att problem bara finns i ett enda land",
+          "Att risker kan finnas även där regelverk är starkare om kontrollen brister",
+          "Att löner alltid är högre i hela branschen än i andra yrken",
+          "Att olyckor är omöjliga om plagget är dyrt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket av följande nämns som ett sätt för konsumenter att påverka?",
-        "options": ["Att undvika att laga kläder så att man köper nytt", "Att bara följa reklam utan att fråga något", "Att använda plagg längre eller välja second hand", "Att alltid kräva att allt sys i samma butik"],
+        "options": [
+          "Att undvika att laga kläder så att man köper nytt",
+          "Att bara följa reklam utan att fråga något",
+          "Att använda plagg längre eller välja second hand",
+          "Att alltid kräva att allt sys i samma butik"
+        ],
         "correct": 2
       }
     ],
@@ -24829,32 +24918,62 @@
     "questions": [
       {
         "q": "Vilken väg säger texten att många först möter Armani genom?",
-        "options": ["Genom filmer, galor eller reklam", "Genom att själva sy i en skräddarskola", "Genom att läsa kemirapporter om färgning", "Genom kommunala idrottstävlingar"],
+        "options": [
+          "Genom filmer, galor eller reklam",
+          "Genom att själva sy i en skräddarskola",
+          "Genom att läsa kemirapporter om färgning",
+          "Genom kommunala idrottstävlingar"
+        ],
         "correct": 0
       },
       {
         "q": "Varför kan samarbeten med kändisar vara riskabla för ett varumärke enligt texten?",
-        "options": ["För att kläderna alltid blir billigare", "För att en skandal kan påverka varumärkets rykte", "För att film inte innehåller känslor", "För att publiken aldrig lägger märke till kläder"],
+        "options": [
+          "För att kläderna alltid blir billigare",
+          "För att en skandal kan påverka varumärkets rykte",
+          "För att film inte innehåller känslor",
+          "För att publiken aldrig lägger märke till kläder"
+        ],
         "correct": 1
       },
       {
         "q": "Hur beskrivs Armanis uttryck i marknadsföring?",
-        "options": ["Igenkännligt utan att skrika", "Alltid fullt av neonfärger och stora slagord", "Bara sportigt och lekfullt", "Medvetet slarvigt och trasigt"],
+        "options": [
+          "Igenkännligt utan att skrika",
+          "Alltid fullt av neonfärger och stora slagord",
+          "Bara sportigt och lekfullt",
+          "Medvetet slarvigt och trasigt"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menar texten att reklam sällan visar?",
-        "options": ["Att människor kan känna inspiration", "Att personal kan bemöta kunder olika", "Att en kampanj bygger en dröm", "Att fabriker, transporter och plaggets fortsatta liv ingår i helheten"],
+        "options": [
+          "Att människor kan känna inspiration",
+          "Att personal kan bemöta kunder olika",
+          "Att en kampanj bygger en dröm",
+          "Att fabriker, transporter och plaggets fortsatta liv ingår i helheten"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken typ av dröm kopplas ofta till lyxmode i texten?",
-        "options": ["Att man blir bäst på ett instrument direkt", "Att man kan framstå som samlad och framgångsrik", "Att man slipper gå i skolan", "Att man alltid får resa gratis"],
+        "options": [
+          "Att man blir bäst på ett instrument direkt",
+          "Att man kan framstå som samlad och framgångsrik",
+          "Att man slipper gå i skolan",
+          "Att man alltid får resa gratis"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är huvudfrågan i slutet av texten?",
-        "options": ["Om film alltid är bättre än böcker", "Om kändisar borde designa kläder själva", "Om vi väljer budskapet själva eller låter det välja oss", "Om alla borde bära samma färg i reklam"],
+        "options": [
+          "Om film alltid är bättre än böcker",
+          "Om kändisar borde designa kläder själva",
+          "Om vi väljer budskapet själva eller låter det välja oss",
+          "Om alla borde bära samma färg i reklam"
+        ],
         "correct": 2
       }
     ],
@@ -24869,32 +24988,62 @@
     "questions": [
       {
         "q": "Vilken grundfråga startade gruppens arbete med?",
-        "options": ["Om priset beror på material, arbete, varumärke eller allt tillsammans", "Om Armani bara gör sportkläder", "Om alla kopior är lagliga i Sverige", "Om reklam alltid säger sanningen"],
+        "options": [
+          "Om priset beror på material, arbete, varumärke eller allt tillsammans",
+          "Om Armani bara gör sportkläder",
+          "Om alla kopior är lagliga i Sverige",
+          "Om reklam alltid säger sanningen"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken punkt la Noor till utöver material och arbete?",
-        "options": ["Att priset främst beror på vädret", "Att varumärkesvärde kan vara en stor del av priset", "Att alla plagg måste vara handmålade", "Att lyx alltid är billigare i längden"],
+        "options": [
+          "Att priset främst beror på vädret",
+          "Att varumärkesvärde kan vara en stor del av priset",
+          "Att alla plagg måste vara handmålade",
+          "Att lyx alltid är billigare i längden"
+        ],
         "correct": 1
       },
       {
         "q": "Varför invände Kim mot att köpa fejk, enligt texten?",
-        "options": ["För att kopior kan kopplas till dåliga arbetsvillkor och att kunder kan bli lurade", "För att fejk alltid är tillverkat av guld", "För att äkta varor aldrig säljs online", "För att kopior inte påverkar någon alls"],
+        "options": [
+          "För att kopior kan kopplas till dåliga arbetsvillkor och att kunder kan bli lurade",
+          "För att fejk alltid är tillverkat av guld",
+          "För att äkta varor aldrig säljs online",
+          "För att kopior inte påverkar någon alls"
+        ],
         "correct": 0
       },
       {
         "q": "Vad säger texten om att avgöra om något är äkta eller fejk?",
-        "options": ["Det räcker alltid att titta på färgen", "Ett enda tecken, som etiketten, är alltid säkert", "Man kan aldrig få några ledtrådar alls", "Flera saker kan ge ledtrådar, men inget enskilt tecken räcker alltid"],
+        "options": [
+          "Det räcker alltid att titta på färgen",
+          "Ett enda tecken, som etiketten, är alltid säkert",
+          "Man kan aldrig få några ledtrådar alls",
+          "Flera saker kan ge ledtrådar, men inget enskilt tecken räcker alltid"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken konsekvens nämner Noor om marknaden fylls av kopior?",
-        "options": ["Att märket kan förlora kontroll över sitt rykte", "Att alla priser automatiskt sänks till noll", "Att butiker slutar existera överallt", "Att material blir oviktigt för konsumenter"],
+        "options": [
+          "Att märket kan förlora kontroll över sitt rykte",
+          "Att alla priser automatiskt sänks till noll",
+          "Att butiker slutar existera överallt",
+          "Att material blir oviktigt för konsumenter"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudsakliga budskap i slutet?",
-        "options": ["Att man alltid ska köpa den dyraste versionen", "Att kopior är den bästa lösningen för alla", "Att köpval handlar om etik, konsumtion och identitet, inte bara utseende", "Att mode inte har någon koppling till samhället"],
+        "options": [
+          "Att man alltid ska köpa den dyraste versionen",
+          "Att kopior är den bästa lösningen för alla",
+          "Att köpval handlar om etik, konsumtion och identitet, inte bara utseende",
+          "Att mode inte har någon koppling till samhället"
+        ],
         "correct": 2
       }
     ],
@@ -24909,32 +25058,62 @@
     "questions": [
       {
         "q": "Var spelar England sina hemmamatcher?",
-        "options": ["På Wembley Stadium", "På Twickenham i London", "På en arena i Manchester", "På en mindre stadion i Birmingham"],
+        "options": [
+          "På Wembley Stadium",
+          "På Twickenham i London",
+          "På en arena i Manchester",
+          "På en mindre stadion i Birmingham"
+        ],
         "correct": 1
       },
       {
         "q": "Vad hände år 2003?",
-        "options": ["England vann världsmästerskapet", "England slutade sist i Six Nations", "Rugby förbjöds tillfälligt", "Laget bytte namn"],
+        "options": [
+          "England vann världsmästerskapet",
+          "England slutade sist i Six Nations",
+          "Rugby förbjöds tillfälligt",
+          "Laget bytte namn"
+        ],
         "correct": 0
       },
       {
         "q": "Hur lång är en rugbymatch enligt texten?",
-        "options": ["60 minuter", "70 minuter", "80 minuter", "90 minuter"],
+        "options": [
+          "60 minuter",
+          "70 minuter",
+          "80 minuter",
+          "90 minuter"
+        ],
         "correct": 2
       },
       {
         "q": "Vad kallas poängen som avgjorde VM-finalen 2003?",
-        "options": ["Straffspark", "Inkastspark", "Hörnmål", "Drop goal"],
+        "options": [
+          "Straffspark",
+          "Inkastspark",
+          "Hörnmål",
+          "Drop goal"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken turnering spelar England varje år tillsammans med fem andra länder?",
-        "options": ["Champions League", "Premier Cup", "Six Nations", "World Series"],
+        "options": [
+          "Champions League",
+          "Premier Cup",
+          "Six Nations",
+          "World Series"
+        ],
         "correct": 2
       },
       {
         "q": "Vad symboliserar den röda rosen på tröjan?",
-        "options": ["En känd spelare", "Englands landslag", "En gammal arena", "En särskild taktik"],
+        "options": [
+          "En känd spelare",
+          "Englands landslag",
+          "En gammal arena",
+          "En särskild taktik"
+        ],
         "correct": 1
       }
     ],
@@ -24949,32 +25128,62 @@
     "questions": [
       {
         "q": "Var börjar ofta resan mot landslaget?",
-        "options": ["I en lokal klubb", "Direkt i landslaget", "På ett idrottsgymnasium utomlands", "I ett annat land"],
+        "options": [
+          "I en lokal klubb",
+          "Direkt i landslaget",
+          "På ett idrottsgymnasium utomlands",
+          "I ett annat land"
+        ],
         "correct": 0
       },
       {
         "q": "Vad gör förbundskaptenen för att hitta nya spelare?",
-        "options": ["Lottar fram namn", "Följer ligamatcher och letar talanger", "Frågar publiken om råd", "Väljer bara tidigare landslagsspelare"],
+        "options": [
+          "Lottar fram namn",
+          "Följer ligamatcher och letar talanger",
+          "Frågar publiken om råd",
+          "Väljer bara tidigare landslagsspelare"
+        ],
         "correct": 1
       },
       {
         "q": "Varför krävs disciplin i rugby?",
-        "options": ["För att matcherna är korta", "För att publiken kräver det", "För att undvika skador och straff", "För att vinna fler medaljer"],
+        "options": [
+          "För att matcherna är korta",
+          "För att publiken kräver det",
+          "För att undvika skador och straff",
+          "För att vinna fler medaljer"
+        ],
         "correct": 2
       },
       {
         "q": "Hur beskrivs konkurrensen om platserna?",
-        "options": ["Den är obetydlig", "Alla får spela lika mycket", "Den är måttlig", "Den är hård eftersom få platser finns"],
+        "options": [
+          "Den är obetydlig",
+          "Alla får spela lika mycket",
+          "Den är måttlig",
+          "Den är hård eftersom få platser finns"
+        ],
         "correct": 3
       },
       {
         "q": "Vad analyserar spelarna inför matcher?",
-        "options": ["Publikens åsikter", "Motståndarnas spel och tidigare matcher", "Vädret i andra länder", "Gamla fotbollsmatcher"],
+        "options": [
+          "Publikens åsikter",
+          "Motståndarnas spel och tidigare matcher",
+          "Vädret i andra länder",
+          "Gamla fotbollsmatcher"
+        ],
         "correct": 1
       },
       {
         "q": "Hur känner många spelare när de sjunger nationalsången?",
-        "options": ["Likgiltighet", "Ilska", "Stolthet och ansvar", "Förvirring"],
+        "options": [
+          "Likgiltighet",
+          "Ilska",
+          "Stolthet och ansvar",
+          "Förvirring"
+        ],
         "correct": 2
       }
     ],
@@ -24989,32 +25198,62 @@
     "questions": [
       {
         "q": "Vem sparkade den avgörande poängen i VM-finalen 2003?",
-        "options": ["Jonny Wilkinson", "Lagkaptenen 2010", "En australiensisk spelare", "Domaren"],
+        "options": [
+          "Jonny Wilkinson",
+          "Lagkaptenen 2010",
+          "En australiensisk spelare",
+          "Domaren"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är en kaptens uppgift enligt texten?",
-        "options": ["Att sälja biljetter", "Att leda laget och tala med domaren", "Att bestämma matchens längd", "Att skriva reglerna"],
+        "options": [
+          "Att sälja biljetter",
+          "Att leda laget och tala med domaren",
+          "Att bestämma matchens längd",
+          "Att skriva reglerna"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kännetecknar en forward?",
-        "options": ["Snabba löpningar på kanten", "Ansvar för publiken", "Arbete i närkamperna", "Att alltid sparka mål"],
+        "options": [
+          "Snabba löpningar på kanten",
+          "Ansvar för publiken",
+          "Arbete i närkamperna",
+          "Att alltid sparka mål"
+        ],
         "correct": 2
       },
       {
         "q": "Hur engagerar sig många spelare utanför planen?",
-        "options": ["Genom att undvika media", "Genom att bara träna", "Genom att flytta utomlands", "Genom skolbesök och välgörenhet"],
+        "options": [
+          "Genom att undvika media",
+          "Genom att bara träna",
+          "Genom att flytta utomlands",
+          "Genom skolbesök och välgörenhet"
+        ],
         "correct": 3
       },
       {
         "q": "Vad kan påverka hur länge en spelare stannar i landslaget?",
-        "options": ["Skador och konkurrens", "Färgen på tröjan", "Publikens klädsel", "Stadens storlek"],
+        "options": [
+          "Skador och konkurrens",
+          "Färgen på tröjan",
+          "Publikens klädsel",
+          "Stadens storlek"
+        ],
         "correct": 0
       },
       {
         "q": "Vad betonar spelarna trots att sporten är tuff?",
-        "options": ["Att vinna till varje pris", "Respekt för motståndarna", "Att undvika träning", "Att spela utan regler"],
+        "options": [
+          "Att vinna till varje pris",
+          "Respekt för motståndarna",
+          "Att undvika träning",
+          "Att spela utan regler"
+        ],
         "correct": 1
       }
     ],
@@ -25029,32 +25268,62 @@
     "questions": [
       {
         "q": "Hur många spelare är det i varje lag?",
-        "options": ["Elva", "Tretton", "Femton", "Sjutton"],
+        "options": [
+          "Elva",
+          "Tretton",
+          "Femton",
+          "Sjutton"
+        ],
         "correct": 2
       },
       {
         "q": "Hur många poäng ger ett försök?",
-        "options": ["Tre poäng", "Fem poäng", "Sju poäng", "En poäng"],
+        "options": [
+          "Tre poäng",
+          "Fem poäng",
+          "Sju poäng",
+          "En poäng"
+        ],
         "correct": 1
       },
       {
         "q": "Hur måste en passning kastas?",
-        "options": ["Bakåt eller åt sidan", "Alltid framåt", "Rakt upp i luften", "Mot publiken"],
+        "options": [
+          "Bakåt eller åt sidan",
+          "Alltid framåt",
+          "Rakt upp i luften",
+          "Mot publiken"
+        ],
         "correct": 0
       },
       {
         "q": "Varför sparkar laget ibland bollen långt?",
-        "options": ["För att avsluta matchen", "För att vila spelarna", "För att imponera på publiken", "För att flytta spelet till motståndarnas planhalva"],
+        "options": [
+          "För att avsluta matchen",
+          "För att vila spelarna",
+          "För att imponera på publiken",
+          "För att flytta spelet till motståndarnas planhalva"
+        ],
         "correct": 3
       },
       {
         "q": "Vad är viktigt i försvaret?",
-        "options": ["Att undvika kontakt helt", "Att tackla säkert och stå rätt", "Att bara vänta på domaren", "Att alltid sparka bort bollen"],
+        "options": [
+          "Att undvika kontakt helt",
+          "Att tackla säkert och stå rätt",
+          "Att bara vänta på domaren",
+          "Att alltid sparka bort bollen"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kombinerar laget för att skapa fördelar?",
-        "options": ["Tur och slump", "Enbart snabbhet", "Styrka, snabbhet och taktik", "Publikens sånger"],
+        "options": [
+          "Tur och slump",
+          "Enbart snabbhet",
+          "Styrka, snabbhet och taktik",
+          "Publikens sånger"
+        ],
         "correct": 2
       }
     ],
@@ -25069,32 +25338,62 @@
     "questions": [
       {
         "q": "Vad bär många supportrar på matchdagar?",
-        "options": ["Blå halsdukar", "Vita tröjor med en röd ros", "Svarta kostymer", "Gröna jackor"],
+        "options": [
+          "Blå halsdukar",
+          "Vita tröjor med en röd ros",
+          "Svarta kostymer",
+          "Gröna jackor"
+        ],
         "correct": 1
       },
       {
         "q": "Vad gör matcherna till mer än bara sport enligt texten?",
-        "options": ["De är en social händelse", "De är obligatoriska", "De är gratis för alla", "De spelas varje dag"],
+        "options": [
+          "De är en social händelse",
+          "De är obligatoriska",
+          "De är gratis för alla",
+          "De spelas varje dag"
+        ],
         "correct": 0
       },
       {
         "q": "Vad visar att laget är inkluderande?",
-        "options": ["Endast äldre får komma", "Inga barn deltar", "Tillgängliga platser för personer med funktionsvariationer", "Bara professionella får vara fans"],
+        "options": [
+          "Endast äldre får komma",
+          "Inga barn deltar",
+          "Tillgängliga platser för personer med funktionsvariationer",
+          "Bara professionella får vara fans"
+        ],
         "correct": 2
       },
       {
         "q": "Hur reagerar fansen när laget förlorar?",
-        "options": ["De lämnar direkt arenan", "De slutar följa laget", "De buar alltid högt", "De stöttar varandra"],
+        "options": [
+          "De lämnar direkt arenan",
+          "De slutar följa laget",
+          "De buar alltid högt",
+          "De stöttar varandra"
+        ],
         "correct": 3
       },
       {
         "q": "Vad är en viktig del av rugbyns kultur?",
-        "options": ["Respekt för motståndarna", "Att ignorera regler", "Att aldrig sjunga", "Att byta lag ofta"],
+        "options": [
+          "Respekt för motståndarna",
+          "Att ignorera regler",
+          "Att aldrig sjunga",
+          "Att byta lag ofta"
+        ],
         "correct": 0
       },
       {
         "q": "Vad kan barn som Amir, Ella och Noa känna?",
-        "options": ["Att rugby bara är för vuxna", "Att det finns flera sätt att bidra till ett lag", "Att bara snabba spelare lyckas", "Att man måste bo i London"],
+        "options": [
+          "Att rugby bara är för vuxna",
+          "Att det finns flera sätt att bidra till ett lag",
+          "Att bara snabba spelare lyckas",
+          "Att man måste bo i London"
+        ],
         "correct": 1
       }
     ],
@@ -25109,32 +25408,62 @@
     "questions": [
       {
         "q": "Vad har enhörningen i pannan?",
-        "options": ["Två små öron", "Ett långt horn", "En krona", "En blomma"],
+        "options": [
+          "Två små öron",
+          "Ett långt horn",
+          "En krona",
+          "En blomma"
+        ],
         "correct": 1
       },
       {
         "q": "Var bodde Alva?",
-        "options": ["I en liten by", "I en stor stad", "På ett slott", "Vid havet"],
+        "options": [
+          "I en liten by",
+          "I en stor stad",
+          "På ett slott",
+          "Vid havet"
+        ],
         "correct": 0
       },
       {
         "q": "Var såg Alva något vitt?",
-        "options": ["På himlen", "I sitt rum", "Mellan träden", "På vägen"],
+        "options": [
+          "På himlen",
+          "I sitt rum",
+          "Mellan träden",
+          "På vägen"
+        ],
         "correct": 2
       },
       {
         "q": "Vad gjorde enhörningen vid bäcken?",
-        "options": ["Sov", "Åt gräs", "Drack vatten", "Byggde bo"],
+        "options": [
+          "Sov",
+          "Åt gräs",
+          "Drack vatten",
+          "Byggde bo"
+        ],
         "correct": 2
       },
       {
         "q": "Hur rörde sig enhörningen?",
-        "options": ["Högt och snabbt", "Tyst och försiktigt", "Argt och hårt", "Klantigt och långsamt"],
+        "options": [
+          "Högt och snabbt",
+          "Tyst och försiktigt",
+          "Argt och hårt",
+          "Klantigt och långsamt"
+        ],
         "correct": 1
       },
       {
         "q": "Hur kände sig Alva efter mötet?",
-        "options": ["Rädd", "Arg", "Likgiltig", "Glad"],
+        "options": [
+          "Rädd",
+          "Arg",
+          "Likgiltig",
+          "Glad"
+        ],
         "correct": 3
       }
     ],
@@ -25149,32 +25478,62 @@
     "questions": [
       {
         "q": "Vad heter enhörningen?",
-        "options": ["Luma", "Bella", "Nova", "Mira"],
+        "options": [
+          "Luma",
+          "Bella",
+          "Nova",
+          "Mira"
+        ],
         "correct": 0
       },
       {
         "q": "Var bor Luma?",
-        "options": ["På en äng", "I ett stall", "I en grotta", "På ett berg"],
+        "options": [
+          "På en äng",
+          "I ett stall",
+          "I en grotta",
+          "På ett berg"
+        ],
         "correct": 0
       },
       {
         "q": "Vad lämnar hon efter sig när hon springer?",
-        "options": ["Fotspår i lera", "Glittrande spår", "Blommor", "Stenar"],
+        "options": [
+          "Fotspår i lera",
+          "Glittrande spår",
+          "Blommor",
+          "Stenar"
+        ],
         "correct": 1
       },
       {
         "q": "Vem kom till ängen med sin morfar?",
-        "options": ["Alva", "Noa", "Sam", "Ella"],
+        "options": [
+          "Alva",
+          "Noa",
+          "Sam",
+          "Ella"
+        ],
         "correct": 2
       },
       {
         "q": "Hur kände sig Sam först?",
-        "options": ["Glad", "Trött", "Ledsen", "Arg"],
+        "options": [
+          "Glad",
+          "Trött",
+          "Ledsen",
+          "Arg"
+        ],
         "correct": 2
       },
       {
         "q": "Vad gjorde Luma sedan?",
-        "options": ["Somnade på stenen", "Stannade hela dagen", "Flög upp i luften", "Galopperade mot skogen"],
+        "options": [
+          "Somnade på stenen",
+          "Stannade hela dagen",
+          "Flög upp i luften",
+          "Galopperade mot skogen"
+        ],
         "correct": 3
       }
     ],
@@ -25189,32 +25548,62 @@
     "questions": [
       {
         "q": "Vad hette enhörningen?",
-        "options": ["Orion", "Luma", "Sam", "Leo"],
+        "options": [
+          "Orion",
+          "Luma",
+          "Sam",
+          "Leo"
+        ],
         "correct": 0
       },
       {
         "q": "Vad tappade Leila?",
-        "options": ["En bok", "En röd boll", "En sko", "En hatt"],
+        "options": [
+          "En bok",
+          "En röd boll",
+          "En sko",
+          "En hatt"
+        ],
         "correct": 1
       },
       {
         "q": "Var hamnade bollen?",
-        "options": ["I en bäck", "På taket", "I en buske med taggar", "På vägen"],
+        "options": [
+          "I en bäck",
+          "På taket",
+          "I en buske med taggar",
+          "På vägen"
+        ],
         "correct": 2
       },
       {
         "q": "Hur hjälpte Orion till?",
-        "options": ["Han sparkade bort bollen", "Han ropade på hjälp", "Han bar Leila hem", "Han lyfte bort grenarna med sitt horn"],
+        "options": [
+          "Han sparkade bort bollen",
+          "Han ropade på hjälp",
+          "Han bar Leila hem",
+          "Han lyfte bort grenarna med sitt horn"
+        ],
         "correct": 3
       },
       {
         "q": "Vart sprang Orion efteråt?",
-        "options": ["Till ängen", "Till skolan", "Till staden", "Till ett stall"],
+        "options": [
+          "Till ängen",
+          "Till skolan",
+          "Till staden",
+          "Till ett stall"
+        ],
         "correct": 0
       },
       {
         "q": "Vad började barnen hålla utkik efter?",
-        "options": ["Regnbågar", "Glittrande spår", "Stora fåglar", "Nya leksaker"],
+        "options": [
+          "Regnbågar",
+          "Glittrande spår",
+          "Stora fåglar",
+          "Nya leksaker"
+        ],
         "correct": 1
       }
     ],
@@ -25229,32 +25618,62 @@
     "questions": [
       {
         "q": "Var bodde enhörningen?",
-        "options": ["I en stad", "I en skog nära en sjö", "På en bondgård", "På ett berg"],
+        "options": [
+          "I en stad",
+          "I en skog nära en sjö",
+          "På en bondgård",
+          "På ett berg"
+        ],
         "correct": 1
       },
       {
         "q": "Vad brukade Noa göra vid sjön?",
-        "options": ["Fiska", "Mata änderna", "Bygga en båt", "Simma varje dag"],
+        "options": [
+          "Fiska",
+          "Mata änderna",
+          "Bygga en båt",
+          "Simma varje dag"
+        ],
         "correct": 1
       },
       {
         "q": "Hur lät hornet?",
-        "options": ["Det sjöng högt", "Det sprakade", "Det lyste svagt", "Det var helt mörkt"],
+        "options": [
+          "Det sjöng högt",
+          "Det sprakade",
+          "Det lyste svagt",
+          "Det var helt mörkt"
+        ],
         "correct": 2
       },
       {
         "q": "När klev enhörningen fram?",
-        "options": ["Mitt på dagen", "Tidigt på morgonen", "När det regnade", "När solen gick ner"],
+        "options": [
+          "Mitt på dagen",
+          "Tidigt på morgonen",
+          "När det regnade",
+          "När solen gick ner"
+        ],
         "correct": 3
       },
       {
         "q": "Hur var Noa mot naturen?",
-        "options": ["Skräpade ner", "Var försiktig", "Plockade blommor hela tiden", "Skrek högt"],
+        "options": [
+          "Skräpade ner",
+          "Var försiktig",
+          "Plockade blommor hela tiden",
+          "Skrek högt"
+        ],
         "correct": 1
       },
       {
         "q": "Vad gjorde Noa med sin upplevelse?",
-        "options": ["Berättade för hela skolan", "Glömde bort den", "Skrev om den i en tidning", "Sparade den som en hemlighet"],
+        "options": [
+          "Berättade för hela skolan",
+          "Glömde bort den",
+          "Skrev om den i en tidning",
+          "Sparade den som en hemlighet"
+        ],
         "correct": 3
       }
     ],
@@ -25269,32 +25688,62 @@
     "questions": [
       {
         "q": "Vad hette enhörningen?",
-        "options": ["Orion", "Frost", "Luma", "Noa"],
+        "options": [
+          "Orion",
+          "Frost",
+          "Luma",
+          "Noa"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken årstid var det?",
-        "options": ["Sommar", "Vår", "Höst", "Vinter"],
+        "options": [
+          "Sommar",
+          "Vår",
+          "Höst",
+          "Vinter"
+        ],
         "correct": 3
       },
       {
         "q": "Vad byggde Amina och Leo?",
-        "options": ["En koja", "En snögubbe", "En båt", "En bro"],
+        "options": [
+          "En koja",
+          "En snögubbe",
+          "En båt",
+          "En bro"
+        ],
         "correct": 1
       },
       {
         "q": "Var kom Frost ifrån?",
-        "options": ["Från staden", "Från sjön", "Från skogen", "Från ett stall"],
+        "options": [
+          "Från staden",
+          "Från sjön",
+          "Från skogen",
+          "Från ett stall"
+        ],
         "correct": 2
       },
       {
         "q": "Hur reagerade barnen?",
-        "options": ["De sprang efter honom", "De stod stilla", "De ropade högt", "De kastade snö"],
+        "options": [
+          "De sprang efter honom",
+          "De stod stilla",
+          "De ropade högt",
+          "De kastade snö"
+        ],
         "correct": 1
       },
       {
         "q": "Vad tänkte barnen efteråt?",
-        "options": ["Att de drömde", "Att det var en vanlig häst", "Att de sett något magiskt", "Att det var farligt"],
+        "options": [
+          "Att de drömde",
+          "Att det var en vanlig häst",
+          "Att de sett något magiskt",
+          "Att det var farligt"
+        ],
         "correct": 2
       }
     ],
@@ -25309,32 +25758,62 @@
     "questions": [
       {
         "q": "Vad bidrog till att Miley tidigt blev van vid rampljuset?",
-        "options": ["Hon gick i en teaterskola som barn", "Hon följde med sin pappa på konserter", "Hon vann en sångtävling i skolan", "Hon spelade i reklamfilmer som liten"],
+        "options": [
+          "Hon gick i en teaterskola som barn",
+          "Hon följde med sin pappa på konserter",
+          "Hon vann en sångtävling i skolan",
+          "Hon spelade i reklamfilmer som liten"
+        ],
         "correct": 1
       },
       {
         "q": "Vad handlade tv-serien Hannah Montana om?",
-        "options": ["En artist som slutade sjunga", "En familj som flyttade ofta", "En tonåring med ett hemligt popstjärneliv", "En grupp elever i en musikklass"],
+        "options": [
+          "En artist som slutade sjunga",
+          "En familj som flyttade ofta",
+          "En tonåring med ett hemligt popstjärneliv",
+          "En grupp elever i en musikklass"
+        ],
         "correct": 2
       },
       {
         "q": "Varför ville Miley förändra sin image?",
-        "options": ["Hon ville byta skivbolag", "Publiken blandade ihop henne med rollen", "Hon tröttnade på att turnera", "Serien fick låga tittarsiffror"],
+        "options": [
+          "Hon ville byta skivbolag",
+          "Publiken blandade ihop henne med rollen",
+          "Hon tröttnade på att turnera",
+          "Serien fick låga tittarsiffror"
+        ],
         "correct": 1
       },
       {
         "q": "Hur reagerade omvärlden på albumet Bangerz?",
-        "options": ["Alla var positiva", "Ingen märkte förändringen", "Reaktionerna var starka och delade", "Albumet förbjöds i flera länder"],
+        "options": [
+          "Alla var positiva",
+          "Ingen märkte förändringen",
+          "Reaktionerna var starka och delade",
+          "Albumet förbjöds i flera länder"
+        ],
         "correct": 2
       },
       {
         "q": "Vilka ämnen har hon engagerat sig i utanför musiken?",
-        "options": ["Sport och tävlingsidrott", "Hemlöshet och ungas rättigheter", "Teknisk utveckling", "Militärfrågor"],
+        "options": [
+          "Sport och tävlingsidrott",
+          "Hemlöshet och ungas rättigheter",
+          "Teknisk utveckling",
+          "Militärfrågor"
+        ],
         "correct": 1
       },
       {
         "q": "Vad visar hennes karriär enligt texten?",
-        "options": ["Att kändisskap alltid är enkelt", "Att barndomsroller är svåra att lämna", "Att musikbranschen inte förändras", "Att identitet kan vara svår att forma offentligt"],
+        "options": [
+          "Att kändisskap alltid är enkelt",
+          "Att barndomsroller är svåra att lämna",
+          "Att musikbranschen inte förändras",
+          "Att identitet kan vara svår att forma offentligt"
+        ],
         "correct": 3
       }
     ],
@@ -25349,32 +25828,62 @@
     "questions": [
       {
         "q": "Vad gör kändisskap i ung ålder särskilt utmanande enligt texten?",
-        "options": ["Att man måste resa hela tiden", "Att medier och sociala medier granskar allt", "Att man inte får tjäna pengar", "Att man inte får byta stil"],
+        "options": [
+          "Att man måste resa hela tiden",
+          "Att medier och sociala medier granskar allt",
+          "Att man inte får tjäna pengar",
+          "Att man inte får byta stil"
+        ],
         "correct": 1
       },
       {
         "q": "Hur skapades bilden av Miley som tonårsidol?",
-        "options": ["Genom marknadsföring, serien och fansens förväntningar", "Enbart genom hennes familj", "Genom skolans regler", "Bara genom hennes klädval"],
+        "options": [
+          "Genom marknadsföring, serien och fansens förväntningar",
+          "Enbart genom hennes familj",
+          "Genom skolans regler",
+          "Bara genom hennes klädval"
+        ],
         "correct": 0
       },
       {
         "q": "Varför blev hennes förändring kontroversiell?",
-        "options": ["Hon slutade helt med musik", "Hon flyttade utomlands", "Den nya stilen krockade med den gamla bilden", "Hon vägrade intervjuer"],
+        "options": [
+          "Hon slutade helt med musik",
+          "Hon flyttade utomlands",
+          "Den nya stilen krockade med den gamla bilden",
+          "Hon vägrade intervjuer"
+        ],
         "correct": 2
       },
       {
         "q": "Vilken fördel gav berömmelsen henne?",
-        "options": ["Hon slapp kritik", "Hon kunde påverka många med sina budskap", "Hon behövde inte arbeta", "Hon slapp sociala medier"],
+        "options": [
+          "Hon slapp kritik",
+          "Hon kunde påverka många med sina budskap",
+          "Hon behövde inte arbeta",
+          "Hon slapp sociala medier"
+        ],
         "correct": 1
       },
       {
         "q": "Hur har hon försökt ta kontroll över sin berättelse?",
-        "options": ["Genom att sluta uppträda", "Genom att skriva egen musik och producera", "Genom att undvika fans", "Genom att byta namn"],
+        "options": [
+          "Genom att sluta uppträda",
+          "Genom att skriva egen musik och producera",
+          "Genom att undvika fans",
+          "Genom att byta namn"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är textens huvudbudskap?",
-        "options": ["Att berömmelse alltid är negativt", "Att unga artister inte förändras", "Att identitet formas i mötet mellan individ och publik", "Att sociala medier bör förbjudas"],
+        "options": [
+          "Att berömmelse alltid är negativt",
+          "Att unga artister inte förändras",
+          "Att identitet formas i mötet mellan individ och publik",
+          "Att sociala medier bör förbjudas"
+        ],
         "correct": 2
       }
     ],
@@ -25389,32 +25898,62 @@
     "questions": [
       {
         "q": "Hur beskrivs hennes tidiga musik?",
-        "options": ["Som mörk och experimentell", "Som kopplad till en tv-serie och ung publik", "Som klassisk opera", "Som instrumental jazz"],
+        "options": [
+          "Som mörk och experimentell",
+          "Som kopplad till en tv-serie och ung publik",
+          "Som klassisk opera",
+          "Som instrumental jazz"
+        ],
         "correct": 1
       },
       {
         "q": "Vad kännetecknade albumet Bangerz?",
-        "options": ["Enbart countrylåtar", "Tyst och akustisk stil", "Influenser från hiphop och elektronisk pop", "Barnvisor"],
+        "options": [
+          "Enbart countrylåtar",
+          "Tyst och akustisk stil",
+          "Influenser från hiphop och elektronisk pop",
+          "Barnvisor"
+        ],
         "correct": 2
       },
       {
         "q": "Varför har kritiker haft delade åsikter?",
-        "options": ["Hon slutade uppträda live", "Stilbytena kan tolkas olika", "Hon skrev inga egna texter", "Hon vann för många priser"],
+        "options": [
+          "Hon slutade uppträda live",
+          "Stilbytena kan tolkas olika",
+          "Hon skrev inga egna texter",
+          "Hon vann för många priser"
+        ],
         "correct": 1
       },
       {
         "q": "Vad har hänt med hennes sångteknik enligt texten?",
-        "options": ["Den har blivit svagare", "Den är oförändrad", "Den har blivit mer kraftfull", "Hon sjunger inte längre"],
+        "options": [
+          "Den har blivit svagare",
+          "Den är oförändrad",
+          "Den har blivit mer kraftfull",
+          "Hon sjunger inte längre"
+        ],
         "correct": 2
       },
       {
         "q": "Vad visar hennes återgång till rock och country?",
-        "options": ["Att hon vill prova olika genrer", "Att hon slutat med pop", "Att hon bara följer trender", "Att hon inte skriver musik längre"],
+        "options": [
+          "Att hon vill prova olika genrer",
+          "Att hon slutat med pop",
+          "Att hon bara följer trender",
+          "Att hon inte skriver musik längre"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är ett centralt tema i texten?",
-        "options": ["Att marknaden alltid styr allt", "Att artister bör undvika förändring", "Att publiken inte accepterar nya stilar", "Att musikalisk utveckling kan hålla en artist relevant"],
+        "options": [
+          "Att marknaden alltid styr allt",
+          "Att artister bör undvika förändring",
+          "Att publiken inte accepterar nya stilar",
+          "Att musikalisk utveckling kan hålla en artist relevant"
+        ],
         "correct": 3
       }
     ],
@@ -25429,32 +25968,62 @@
     "questions": [
       {
         "q": "Vad startade många av kontroverserna?",
-        "options": ["Hennes flytt till ett annat land", "Hennes förändrade scenframträdanden", "Ett uppehåll från musiken", "En konflikt med fans"],
+        "options": [
+          "Hennes flytt till ett annat land",
+          "Hennes förändrade scenframträdanden",
+          "Ett uppehåll från musiken",
+          "En konflikt med fans"
+        ],
         "correct": 1
       },
       {
         "q": "Vad handlade debatten ofta om?",
-        "options": ["Biljettpriser", "Tekniska problem på konserter", "Gränsen mellan frihet och ansvar", "Val av skivbolag"],
+        "options": [
+          "Biljettpriser",
+          "Tekniska problem på konserter",
+          "Gränsen mellan frihet och ansvar",
+          "Val av skivbolag"
+        ],
         "correct": 2
       },
       {
         "q": "Vad har vissa kommentatorer påpekat?",
-        "options": ["Att alla artister behandlas lika", "Att kvinnliga artister ofta granskas hårdare", "Att sociala medier saknar betydelse", "Att publiken inte bryr sig om image"],
+        "options": [
+          "Att alla artister behandlas lika",
+          "Att kvinnliga artister ofta granskas hårdare",
+          "Att sociala medier saknar betydelse",
+          "Att publiken inte bryr sig om image"
+        ],
         "correct": 1
       },
       {
         "q": "Hur kan negativ uppmärksamhet påverka en artist?",
-        "options": ["Den minskar alltid publiken", "Den gör att musiken förbjuds", "Den leder till pensionering", "Den kan öka synligheten"],
+        "options": [
+          "Den minskar alltid publiken",
+          "Den gör att musiken förbjuds",
+          "Den leder till pensionering",
+          "Den kan öka synligheten"
+        ],
         "correct": 3
       },
       {
         "q": "Hur har Miley beskrivit sina avsikter?",
-        "options": ["Att hon ville provocera med flit", "Att hon ville visa olika sidor av sig själv", "Att hon följde andras råd", "Att hon inte brydde sig om publiken"],
+        "options": [
+          "Att hon ville provocera med flit",
+          "Att hon ville visa olika sidor av sig själv",
+          "Att hon följde andras råd",
+          "Att hon inte brydde sig om publiken"
+        ],
         "correct": 1
       },
       {
         "q": "Vad visar hennes fall enligt texten?",
-        "options": ["Att normer och populärkultur påverkar varandra", "Att musik saknar samhällsbetydelse", "Att debatter snabbt försvinner", "Att alla kontroverser är planerade"],
+        "options": [
+          "Att normer och populärkultur påverkar varandra",
+          "Att musik saknar samhällsbetydelse",
+          "Att debatter snabbt försvinner",
+          "Att alla kontroverser är planerade"
+        ],
         "correct": 0
       }
     ],
@@ -25469,35 +26038,475 @@
     "questions": [
       {
         "q": "Vilka frågor har hon särskilt engagerat sig i?",
-        "options": ["Teknikutveckling och sport", "Hemlöshet bland unga och hbtq-rättigheter", "Skattepolitik", "Militära frågor"],
+        "options": [
+          "Teknikutveckling och sport",
+          "Hemlöshet bland unga och hbtq-rättigheter",
+          "Skattepolitik",
+          "Militära frågor"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är syftet med hennes stiftelse?",
-        "options": ["Att producera musik", "Att ordna konserter", "Att ge stöd till utsatta unga", "Att marknadsföra kläder"],
+        "options": [
+          "Att producera musik",
+          "Att ordna konserter",
+          "Att ge stöd till utsatta unga",
+          "Att marknadsföra kläder"
+        ],
         "correct": 2
       },
       {
         "q": "Hur kan fans påverkas av hennes engagemang?",
-        "options": ["De kan inspireras att engagera sig själva", "De slutar lyssna på musik", "De måste skänka pengar", "De får inga egna åsikter"],
+        "options": [
+          "De kan inspireras att engagera sig själva",
+          "De slutar lyssna på musik",
+          "De måste skänka pengar",
+          "De får inga egna åsikter"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menar vissa kritiker?",
-        "options": ["Att kändisar bör hålla sig till underhållning", "Att artister inte får rösta", "Att musik är farligt", "Att fans bestämmer politiken"],
+        "options": [
+          "Att kändisar bör hålla sig till underhållning",
+          "Att artister inte får rösta",
+          "Att musik är farligt",
+          "Att fans bestämmer politiken"
+        ],
         "correct": 0
       },
       {
         "q": "Hur ser Miley på att använda sin röst?",
-        "options": ["Hon tycker att man ska vara tyst", "Hon menar att tystnad är neutralt", "Hon anser att man bör påverka om man kan", "Hon undviker samhällsfrågor"],
+        "options": [
+          "Hon tycker att man ska vara tyst",
+          "Hon menar att tystnad är neutralt",
+          "Hon anser att man bör påverka om man kan",
+          "Hon undviker samhällsfrågor"
+        ],
         "correct": 2
       },
       {
         "q": "Vad är textens huvudidé?",
-        "options": ["Att artister inte bör delta i debatter", "Att samhällsengagemang kan vara en del av en artists roll", "Att musik och samhälle är helt separata", "Att kändisar alltid är eniga"],
+        "options": [
+          "Att artister inte bör delta i debatter",
+          "Att samhällsengagemang kan vara en del av en artists roll",
+          "Att musik och samhälle är helt separata",
+          "Att kändisar alltid är eniga"
+        ],
         "correct": 1
       }
     ],
     "word_count": 426
+  },
+  {
+    "id": "ak9-lotr-001",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Trilogins uppbyggnad och handling",
+    "text": "Sagan om ringen är en trilogi skriven av den brittiske författaren J.R.R. Tolkien. Verket publicerades i tre delar: \"Sagan om ringen: Härskarringen\", \"Sagan om ringen: Sagan om de två tornen\" och \"Sagan om ringen: Konungens återkomst\". Trots att böckerna ofta kallas en trilogi var de från början tänkta som ett sammanhängande verk, men delades upp av praktiska och ekonomiska skäl.\n\nBerättelsen utspelar sig i den fiktiva världen Midgård och kretsar kring den mäktiga ringen som smiddes av den mörke härskaren Sauron. Ringen ger sin bärare stor makt men korrumperar samtidigt den som använder den. När hobbiten Frodo får ansvaret att förstöra ringen inleds en farofylld resa mot Domedagsberget i landet Mordor.\n\nUnder resans gång bildas Ringens brödraskap, bestående av representanter från olika folk: hobbitar, människor, en alv, en dvärg och en trollkarl. Deras mål är gemensamt, men deras vägar skiljs åt när hotet från Sauron växer. I den andra delen fördjupas konflikten genom stora slag och inre prövningar. Den tredje delen knyter samman berättelsen genom avgörande strider och ringens slutliga öde.\n\nTrilogin växlar mellan storslagna krigsscener och personliga skildringar av rädsla, tvivel och hopp. Genom att följa flera parallella handlingar skapas en komplex struktur där små handlingar får stora konsekvenser.\n\nSagan om ringen handlar inte enbart om kampen mellan gott och ont, utan också om ansvar, vänskap och uppoffring. Det är samspelet mellan dessa teman som ger berättelsen dess djup och långvariga betydelse i litteraturhistorien.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför delades verket upp i tre delar?",
+        "options": [
+          "För att Tolkien ändrade handlingen",
+          "Av praktiska och ekonomiska skäl",
+          "För att läsarna krävde det",
+          "På grund av censur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ringens främsta egenskap enligt texten?",
+        "options": [
+          "Den gör bäraren odödlig",
+          "Den ger makt men korrumperar",
+          "Den kan tala med djur",
+          "Den lyser i mörkret"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter platsen där ringen måste förstöras?",
+        "options": [
+          "Vattnadal",
+          "Gondor",
+          "Domedagsberget",
+          "Isengård"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur skildras berättelsens struktur?",
+        "options": [
+          "Som en enkel rak handling",
+          "Genom parallella handlingar",
+          "Genom dagboksanteckningar",
+          "Genom brev mellan karaktärer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett centralt tema i trilogin?",
+        "options": [
+          "Teknisk utveckling",
+          "Ansvar och uppoffring",
+          "Ekonomisk tillväxt",
+          "Vetenskapliga upptäckter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket påstående sammanfattar textens huvudidé bäst?",
+        "options": [
+          "Trilogin är en enkel äventyrsberättelse",
+          "Böckerna handlar enbart om krig",
+          "Verket kombinerar stora slag med personliga prövningar",
+          "Berättelsen saknar djupare teman"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 486,
+      "fingerprint": "ak9-lotr-001",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-002",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Karaktärsutveckling i trilogin",
+    "text": "En av de mest framträdande aspekterna i Sagan om ringen är karaktärernas utveckling. Frodo börjar som en relativt obekymrad hobbit i Fylke men förändras gradvis under ringens tyngd. Uppdraget att bära ringen innebär inte bara fysiska faror utan också en psykisk kamp mot dess inflytande.\n\nSamwise Gamgi framstår först som en lojal följeslagare, men hans roll växer successivt. I de mest kritiska ögonblicken visar han mod och handlingskraft som är avgörande för uppdragets framgång. Genom Sam betonas vikten av trofasthet och vardagligt hjältemod.\n\nAragorn representerar en annan typ av utveckling. Han introduceras som en kringvandrande vandrare, men det avslöjas gradvis att han är arvtagare till Gondors tron. Hans resa handlar om att acceptera sitt ansvar och kliva fram som ledare. Denna utveckling speglar temat om att växa in i sin roll.\n\nÄven bifigurer som Boromir och Gollum har komplexa personligheter. Boromirs fall visar hur även goda avsikter kan korrumperas av maktbegär. Gollum är en tragisk gestalt som både väcker avsky och medkänsla. Hans inre konflikt mellan Sméagol och Gollum illustrerar ringens splittrande kraft.\n\nGenom dessa karaktärer utforskar Tolkien hur människor – och andra folk – reagerar under press. Vissa bryts ner, andra stärks. Förändringarna är sällan enkla eller entydiga, vilket ger berättelsen psykologiskt djup.\n\nKaraktärsutvecklingen gör att läsaren engageras känslomässigt. Det är inte bara världens öde som står på spel, utan också individernas moraliska val och personliga kamp.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur förändras Frodo under berättelsen?",
+        "options": [
+          "Han blir kung",
+          "Han påverkas psykiskt av ringens börda",
+          "Han lämnar uppdraget tidigt",
+          "Han förblir helt opåverkad"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad symboliserar Samwise enligt texten?",
+        "options": [
+          "Politiskt ledarskap",
+          "Teknisk kunskap",
+          "Trofasthet och vardagligt hjältemod",
+          "Militär strategi"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar Aragorns utveckling främst om?",
+        "options": [
+          "Att undvika ansvar",
+          "Att finna en magisk skatt",
+          "Att acceptera sin roll som ledare",
+          "Att lämna Midgård"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Boromirs öde?",
+        "options": [
+          "Att mod alltid räcker",
+          "Att maktbegär kan korrumpera även goda personer",
+          "Att människor inte påverkas av ringen",
+          "Att han saknar lojalitet från början"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur framställs Gollum?",
+        "options": [
+          "Som en entydigt ond figur",
+          "Som en komisk karaktär",
+          "Som en tragisk gestalt med inre konflikt",
+          "Som en hjälte utan brister"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudfokus?",
+        "options": [
+          "De stora slagen",
+          "Karaktärernas moraliska och psykologiska utveckling",
+          "Midgårds geografi",
+          "Ringens tekniska egenskaper"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 478,
+      "fingerprint": "ak9-lotr-002",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-003",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Teman och symbolik",
+    "text": "Sagan om ringen innehåller en rik symbolik som har analyserats av litteraturforskare i decennier. Ett centralt tema är kampen mellan gott och ont, men Tolkien undviker en förenklad uppdelning. Ondskan representeras inte bara av yttre fiender som Sauron utan också av den inre frestelsen att använda ringen för egna syften.\n\nRingen fungerar som en symbol för absolut makt. Den lockar genom att erbjuda kontroll och styrka, men priset är att bärarens moral gradvis bryts ner. Detta kan tolkas som en kommentar till hur makt kan korrumpera även den mest välmenande individ.\n\nEtt annat viktigt tema är hoppets betydelse i mörka tider. Trots överväldigande motstånd fortsätter karaktärerna att kämpa. Små handlingar av mod, särskilt från till synes obetydliga figurer, får avgörande konsekvenser. Tolkien betonar därmed att även den minsta person kan påverka historiens gång.\n\nNaturens roll är också framträdande. Skogar, berg och floder skildras som levande miljöer med egen betydelse. Kontrasten mellan det industriella Isengård och de gröna landskapen i Fylke kan ses som en kritik mot oreflekterad industrialisering.\n\nVänskap och gemenskap utgör ytterligare ett genomgående tema. Ringens brödraskap visar hur samarbete mellan olika folk är nödvändigt för att möta hotet. Skillnader i kultur och bakgrund övervinns genom ett gemensamt mål.\n\nGenom denna mångfacetterade symbolik förblir trilogin öppen för tolkning. Läsaren inbjuds att reflektera över makt, moral och ansvar i både den fiktiva världen och i verkligheten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad symboliserar ringen främst?",
+        "options": [
+          "Evig vänskap",
+          "Absolut makt",
+          "Naturens kraft",
+          "Teknologisk utveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur framställs ondskan i texten?",
+        "options": [
+          "Enbart som yttre fiender",
+          "Som både yttre hot och inre frestelse",
+          "Som ett missförstånd",
+          "Som humoristisk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betonas genom de små karaktärernas mod?",
+        "options": [
+          "Att styrka är oviktig",
+          "Att bara kungar förändrar historien",
+          "Att även den minsta kan påverka",
+          "Att ödet är förutbestämt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan kontrasten mellan Fylke och Isengård tolkas som?",
+        "options": [
+          "En slumpmässig miljöbeskrivning",
+          "En karta över Europa",
+          "En kritik mot industrialisering",
+          "En religiös symbol"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är trilogin öppen för tolkning?",
+        "options": [
+          "Den saknar tydliga teman",
+          "Den innehåller rik symbolik",
+          "Den är ofullständig",
+          "Den har flera författare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudsakliga fokus?",
+        "options": [
+          "Militära strategier",
+          "Böckernas publiceringshistoria",
+          "Teman och symbolik i berättelsen",
+          "Filmatiseringarnas effekter"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 482,
+      "fingerprint": "ak9-lotr-003",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-004",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Miljöer och världsbygge",
+    "text": "En avgörande faktor bakom Sagan om ringens genomslag är det omfattande världsbygget. Tolkien skapade inte enbart en bakgrund till handlingen, utan en hel värld med detaljerad historia, språk och geografi. Kartor över Midgård hjälper läsaren att följa karaktärernas långa resor.\n\nFylke framställs som en idyllisk landsbygd där hobbitar lever i fred och enkelhet. Kontrasten är stark mot Mordor, ett kargt och mörkt landskap präglat av aska och vulkanisk aktivitet. Dessa miljöer förstärker berättelsens moraliska dimensioner.\n\nStäder som Minas Tirith och fästningar som Helms klyfta bidrar till känslan av historisk tyngd. Arkitekturen och de gamla traditionerna antyder en lång och komplex bakgrund. Läsaren möter ruiner och minnen från tidigare epoker, vilket skapar en känsla av att världen existerade långt före huvudpersonernas tid.\n\nSpråken spelar också en central roll. Tolkien konstruerade flera alvspråk med egen grammatik och ljudlära. Dessa språk ger kulturerna i Midgård en särskild identitet och bidrar till autenticitet.\n\nVärldsbygget är inte enbart dekorativt, utan påverkar handlingen. Geografin avgör vilka vägar som är möjliga, och historiska konflikter påverkar relationerna mellan olika folk. På så sätt blir miljön en aktiv del av berättelsen.\n\nDet är denna noggrannhet som gör att läsaren kan uppleva Midgård som en levande och trovärdig värld. Världsbygget skapar en illusion av realism trots att berättelsen tillhör fantasylitteraturen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Tolkiens världsbygge?",
+        "options": [
+          "Brist på detaljer",
+          "Detaljerad historia och geografi",
+          "Enbart muntliga traditioner",
+          "Fokus på modern teknik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur beskrivs Fylke?",
+        "options": [
+          "Som en krigszon",
+          "Som en industriell stad",
+          "Som en fredlig landsbygd",
+          "Som ett ökenlandskap"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad bidrar ruiner och gamla traditioner till?",
+        "options": [
+          "Känslan av historisk tyngd",
+          "Komisk effekt",
+          "Snabbare tempo",
+          "Mindre trovärdighet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skapade Tolkien egna språk?",
+        "options": [
+          "För att dölja handlingen",
+          "För att förenkla berättelsen",
+          "För att ge kulturerna identitet",
+          "För att undvika översättningar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar geografin handlingen?",
+        "options": [
+          "Den har ingen betydelse",
+          "Den avgör möjliga vägar och konflikter",
+          "Den förändras ständigt",
+          "Den ersätts av kartor i slutet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudpoäng?",
+        "options": [
+          "Att miljön är oviktig",
+          "Att världsbygget skapar trovärdighet",
+          "Att trilogin saknar karta",
+          "Att språken är slumpmässiga"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 479,
+      "fingerprint": "ak9-lotr-004",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-005",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Makt, ansvar och moral",
+    "text": "I Sagan om ringen är frågan om makt och ansvar central. Ringen erbjuder enorm kraft, men den som bär den riskerar att förlora sin moraliska kompass. Detta skapar ett etiskt dilemma: är det rätt att använda ondskans verktyg för att bekämpa ondskan själv?\n\nFrodo accepterar uppdraget att bära ringen trots att han inte söker makt. Hans beslut grundas i en känsla av ansvar snarare än ambition. Samtidigt visar berättelsen att även den mest godhjärtade individ kan påverkas av frestelse.\n\nGandalf och Galadriel avstår medvetet från att ta ringen när de erbjuds den. De inser att deras goda avsikter inte skulle skydda dem från dess inflytande. Genom deras val betonas vikten av självinsikt och återhållsamhet.\n\nBoromirs försök att ta ringen illustrerar motsatsen. Han motiveras av viljan att försvara sitt folk, men hans handling visar hur lätt goda syften kan förvandlas till maktbegär. Hans senare ånger ger dock karaktären en tragisk värdighet.\n\nBerättelsen visar att verklig styrka inte alltid ligger i att dominera andra, utan i att avstå från makt. Det är genom uppoffring och samarbete som hotet till slut kan besegras.\n\nTrilogin ställer därmed frågor som sträcker sig bortom fantasyns värld. Hur bör makt användas? När blir ambition farlig? Genom sina karaktärers val uppmuntrar Tolkien läsaren att reflektera över moral och ansvar även i den egna verkligheten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket etiskt dilemma lyfts i texten?",
+        "options": [
+          "Om teknik ska förbjudas",
+          "Om man ska använda ondskans verktyg mot ondskan",
+          "Om krig alltid är rätt",
+          "Om vänskap är viktigare än lagar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad motiverar Frodos beslut att bära ringen?",
+        "options": [
+          "Maktbegär",
+          "Rädsla för kritik",
+          "Känsla av ansvar",
+          "Önskan om rikedom"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför avstår Gandalf och Galadriel från ringen?",
+        "options": [
+          "De är rädda för Sauron",
+          "De förstår att de kan korrumperas",
+          "De saknar mod",
+          "De vill lämna Midgård"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Boromirs handling?",
+        "options": [
+          "Att han är helt ond",
+          "Att han saknar lojalitet",
+          "Att goda syften kan leda fel",
+          "Att ringen är ofarlig"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur definieras verklig styrka enligt texten?",
+        "options": [
+          "Att dominera andra",
+          "Att samla rikedom",
+          "Att avstå från makt när det behövs",
+          "Att vinna alla strider"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad uppmanas läsaren att göra?",
+        "options": [
+          "Att ignorera moraliska frågor",
+          "Att analysera språken",
+          "Att jämföra filmerna med böckerna",
+          "Att reflektera över moral och ansvar"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 480,
+      "fingerprint": "ak9-lotr-005",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
   }
 ]
