@@ -24340,6 +24340,356 @@
     "word_count": 156
   },
   {
+    "id": "ak3-tema-021",
+    "title": "Marabou och den första chokladen",
+    "text": "Marabou är ett känt chokladmärke i Sverige. Företaget startade år 1916 i staden Sundbyberg. Namnet Marabou kommer från en fågel som heter maraboustork. Fågeln fanns i loggan under många år. När fabriken började göra choklad ville de skapa något som många skulle tycka om. De gjorde mjölkchoklad som var söt och mjuk. Snart blev chokladen populär i hela landet. Många familjer köpte den till helgen. Under åren har Marabou gjort flera olika smaker, som nötter och frukt. För att göra choklad behöver man kakao, socker och mjölk. Kakaon växer i varma länder långt från Sverige. När bönorna kommer hit rostas och blandas de innan chokladen formas i stora plattor. I dag säljs Marabou i många affärer, och många förknippar märket med fika och högtider.",
+    "grade": 3,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "När startade Marabou?",
+        "options": [
+          "År 1916",
+          "År 2016",
+          "År 1816",
+          "År 1950"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var låg den första fabriken?",
+        "options": [
+          "I Göteborg",
+          "I Sundbyberg",
+          "I Malmö",
+          "I Uppsala"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är marabou egentligen?",
+        "options": [
+          "En sorts kakaoböna",
+          "En stad i Sverige",
+          "En fågel",
+          "En maskin"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Var växer kakaon?",
+        "options": [
+          "I kalla berg",
+          "I svenska skogar",
+          "På isiga öar",
+          "I varma länder"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken sorts choklad blev först populär?",
+        "options": [
+          "Mjölkchoklad",
+          "Mörk bakchoklad",
+          "Vit choklad",
+          "Choklad med chili"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "När köpte många familjer choklad?",
+        "options": [
+          "Varje morgon",
+          "Till helgen",
+          "Bara på sommaren",
+          "Mitt i natten"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 158
+  },
+  {
+    "id": "ak3-tema-022",
+    "title": "Olika smaker av Marabou",
+    "text": "Marabou är mest känd för sin mjölkchoklad, men det finns många fler smaker. En del plattor innehåller hela nötter som ger ett krispigt ljud när man biter. Andra har russin eller små bitar av kex. Det finns också choklad med apelsinsmak eller karamell. Företaget provar ofta nya idéer för att se vad kunderna tycker om. Ibland gör de tillfälliga smaker som bara säljs under en kort tid. Många tycker om att dela en stor chokladkaka med familj eller vänner. Chokladen är uppdelad i rutor som är lätta att bryta loss. På förpackningen står det vilken smak det är och hur mycket den väger. Vissa människor föredrar mörkare choklad med mer kakao, medan andra vill ha den extra söt. Det finns alltså något för nästan alla smaker.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad är Marabou mest känd för?",
+        "options": [
+          "Mjölkchoklad",
+          "Glass",
+          "Läsk",
+          "Bröd"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan ge ett krispigt ljud när man biter?",
+        "options": [
+          "Russin",
+          "Hela nötter",
+          "Apelsinjuice",
+          "Sockerlag"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad står på förpackningen?",
+        "options": [
+          "En saga",
+          "Ett telefonnummer",
+          "Vilken smak det är",
+          "Ett recept på soppa"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur är chokladen uppdelad?",
+        "options": [
+          "I små kulor",
+          "I långa remsor",
+          "I stora block utan linjer",
+          "I rutor som är lätta att bryta"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur länge säljs vissa tillfälliga smaker?",
+        "options": [
+          "Under en kort tid",
+          "I hundra år",
+          "Alltid",
+          "Bara en dag"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vem kan man dela en chokladkaka med?",
+        "options": [
+          "Bara lärare",
+          "Familj eller vänner",
+          "Endast bagare",
+          "Ingen alls"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 157
+  },
+  {
+    "id": "ak3-tema-023",
+    "title": "Hur choklad blir till",
+    "text": "För att göra Marabous choklad börjar allt med kakaobönor. De växer på träd i varma länder nära ekvatorn. Bönder plockar bönorna och låter dem torka i solen. Sedan skickas de med båt till fabriker i andra länder. När bönorna kommer fram rostas de så att smaken blir starkare. Efter rostningen mals bönorna till en massa. I massan blandas socker och ibland mjölkpulver. Blandningen rörs länge tills den blir mjuk och len. Därefter hälls chokladen i formar som ger den rätt form. Formarna kyls så att chokladen stelnar. Till sist packas plattorna i papper och skickas till affärer. Det är en lång resa från kakaoträd till butikshylla. Många människor arbetar tillsammans för att vi ska kunna köpa en färdig chokladkaka.",
+    "grade": 3,
+    "category": "Teknik",
+    "questions": [
+      {
+        "q": "Var växer kakaobönor?",
+        "options": [
+          "I varma länder nära ekvatorn",
+          "På kalla fjäll",
+          "I svenska parker",
+          "Under marken"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad händer med bönorna efter att de plockats?",
+        "options": [
+          "De fryses direkt",
+          "De får torka i solen",
+          "De kastas bort",
+          "De kokas i vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför rostas bönorna?",
+        "options": [
+          "För att bli större",
+          "För att ändra färg till blå",
+          "För att smaken ska bli starkare",
+          "För att de ska bli kalla"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör man efter att chokladen hällts i formar?",
+        "options": [
+          "Man målar den",
+          "Man äter den direkt",
+          "Man värmer den igen",
+          "Man kyler den så att den stelnar"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur transporteras bönorna ofta till fabriker?",
+        "options": [
+          "Med båt",
+          "Med cykel",
+          "Med luftballong",
+          "Till fots"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad blandas i massan för att göra mjölkchoklad?",
+        "options": [
+          "Salt och peppar",
+          "Socker och mjölkpulver",
+          "Ris och majs",
+          "Bara vatten"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 158
+  },
+  {
+    "id": "ak3-tema-024",
+    "title": "En dag på chokladfabriken",
+    "text": "På en chokladfabrik arbetar många olika personer. Amir kör en maskin som blandar chokladen tills den blir len. Sofia kontrollerar att förpackningarna inte har några fel. Chen arbetar med att laga maskiner om de går sönder. Fatima planerar hur lastbilarna ska köra ut varorna till affärerna. Alla måste samarbeta för att arbetet ska fungera. I fabriken är det viktigt med rena händer och skyddskläder. Det finns regler för hur man ska arbeta säkert. Maskinerna kan vara både stora och snabba. Därför får nya anställda utbildning innan de börjar. På rasten kan personalen sitta tillsammans och fika. Många tycker att det luktar gott av kakao i lokalerna. Trots det är det hårt arbete att göra choklad varje dag. Utan alla dessa personer skulle ingen choklad nå fram till butikerna.",
+    "grade": 3,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vad gör Amir på fabriken?",
+        "options": [
+          "Han kör en maskin som blandar choklad",
+          "Han säljer glass",
+          "Han planterar kakaoträd",
+          "Han målar förpackningar hemma"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför får nya anställda utbildning?",
+        "options": [
+          "För att lära sig baka tårtor",
+          "För att arbeta säkert med maskiner",
+          "För att resa utomlands",
+          "För att byta jobb direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är viktigt i fabriken?",
+        "options": [
+          "Höga skor",
+          "Mörka lampor",
+          "Rena händer och skyddskläder",
+          "Öppna fönster hela tiden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör Fatima?",
+        "options": [
+          "Bakar kakor",
+          "Kör buss",
+          "Designar loggor",
+          "Planerar hur varor körs till affärer"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur beskriver många doften i fabriken?",
+        "options": [
+          "Den luktar gott av kakao",
+          "Den luktar rök",
+          "Den luktar fisk",
+          "Den luktar bensin"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför måste personalen samarbeta?",
+        "options": [
+          "För att vinna en tävling",
+          "För att arbetet ska fungera",
+          "För att slippa raster",
+          "För att stänga fabriken"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 156
+  },
+  {
+    "id": "ak3-tema-025",
+    "title": "Choklad och högtider",
+    "text": "Många förknippar Marabou med olika högtider. Till jul kan choklad vara en del av julgodiset som står på bordet. Under påsken gömmer vuxna ibland chokladägg som barnen får leta efter. På födelsedagar kan en chokladkaka vara en enkel present. En del tar med choklad när de ska hälsa på någon. Det kan vara ett sätt att visa uppskattning. Samtidigt är det bra att inte äta för mycket sötsaker. Kroppen mår bäst av varierad mat och rörelse. Därför äter många choklad ibland, men inte varje dag. Reklam för choklad kan synas på tv och i affärer, särskilt före stora helger. Då vill företagen påminna kunderna om sina produkter. För många människor är choklad kopplad till gemenskap och glädje, men också till ansvar.",
+    "grade": 3,
+    "category": "Hälsa",
+    "questions": [
+      {
+        "q": "När gömmer vuxna ibland chokladägg?",
+        "options": [
+          "Under påsken",
+          "På midsommar",
+          "På nationaldagen",
+          "I augusti"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var kan reklam för choklad synas?",
+        "options": [
+          "Bara i skogen",
+          "På tv och i affärer",
+          "Endast i bibliotek",
+          "På sjukhusväggar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför ska man inte äta för mycket sötsaker?",
+        "options": [
+          "För att de är dyra",
+          "För att de smälter",
+          "För att kroppen mår bäst av varierad mat",
+          "För att de är svåra att öppna"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad kan choklad vara på en födelsedag?",
+        "options": [
+          "En sport",
+          "En läxa",
+          "En medicin",
+          "En enkel present"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan choklad visa när man hälsar på någon?",
+        "options": [
+          "Uppskattning",
+          "Ilska",
+          "Trötthet",
+          "Rädsla"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "När syns reklam extra ofta?",
+        "options": [
+          "Mitt i natten varje dag",
+          "Före stora helger",
+          "Bara på sommaren",
+          "När det snöar"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 156
+  },
+  {
     "id": "ak5-tema-016",
     "title": "Från grå låda till PS5",
     "text": "En lördag lånade Amir sin mammas gamla spelmagasin. Där stod en artikel om hur den första PlayStation kom 1994. Sony hade tidigare gjort delar till andras konsoler, men ville skapa en egen. En stor skillnad var att spel skulle lagras på cd-skivor i stället för kassetter. Cd rymde mer och gjorde att spel kunde ha längre musik, korta filmsekvenser och större världar att utforska.\n\nNär PlayStation släpptes såg den grå ut och hade en handkontroll med knappar i olika former: triangel, cirkel, kryss och fyrkant. Amir läste att symbolerna inte bara var snygga. De skulle hjälpa spelare att komma ihåg vad knapparna gjorde. Efter några år kom DualShock-kontrollen med två styrspakar och vibration. Plötsligt kunde man smyga, svänga och sikta mer exakt, och när en bil krockade i ett racingspel kändes det i händerna.\n\nPå den tiden sparade man ofta på minneskort. Om man glömde kortet hos en kompis kunde man tvingas börja om från början. Amir tyckte det lät både jobbigt och lite spännande, som att varje spelsession var ett äventyr. I magasinet fanns listor över spel: äventyr, sport och pussel. Artikeln beskrev också hur små utvecklarteam kunde lyckas om de hade en tydlig idé och vågade testa nya saker.\n\nSedan kom PlayStation 2, som också kunde spela dvd. Många familjer köpte den både för spel och filmkvällar. PlayStation 3 och 4 fick bättre grafik och kunde kopplas upp mot internet. Då blev det lättare att spela med vänner som bodde långt bort, men också viktigare att tänka på lösenord och hur man pratar i chattar.\n\nI dag finns PlayStation 5, som laddar spel snabbt och kan visa mycket detaljer. Amir märkte att det viktigaste ändå inte var siffrorna. Han skrev i sin anteckningsbok: PlayStation blev populärt för att det kombinerade teknik med berättelser, och för att människor kunde dela upplevelser, både i samma soffa och online.",
