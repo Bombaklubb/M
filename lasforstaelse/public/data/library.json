@@ -24899,5 +24899,205 @@
       }
     ],
     "word_count": 480
+  },
+  {
+    "id": "ak5-tema-021",
+    "title": "Englands rugbylandslag genom tiderna",
+    "text": "Englands rugbylandslag är ett av de mest kända lagen i världen inom sporten rugby union. Laget representerar England i internationella matcher och har spelat sedan slutet av 1800-talet. Rugby är en fysisk sport där två lag försöker bära eller sparka en oval boll över motståndarnas mållinje för att göra poäng.\n\nEngland spelar sina hemmamatcher på arenan Twickenham i London. Arenan rymmer över 80 000 åskådare och kallas ibland för \"rugbyns hem\". Där samlas fans från hela landet för att heja fram sitt lag.\n\nEn av Englands största framgångar kom år 2003 när laget vann världsmästerskapet. Finalen spelades mot Australien och avgjordes i förlängning genom en så kallad \"drop goal\". Segern gjorde spelarna till hjältar och ökade intresset för rugby i hela landet.\n\nEngland deltar varje år i turneringen Six Nations tillsammans med Frankrike, Irland, Italien, Skottland och Wales. Matcher mellan England och de andra brittiska lagen är ofta extra känsloladdade eftersom det finns en lång historia av rivalitet.\n\nLaget består av spelare från olika klubbar runt om i England. Förbundskaptenen ansvarar för att ta ut truppen och planera taktiken. Spelarna tränar hårt för att orka hela matchen som är 80 minuter lång.\n\nRugby är inte lika stort som fotboll i England, men landslaget har ändå en stark plats i landets idrottskultur. Många barn och ungdomar drömmer om att en dag få bära den vita tröjan med den röda rosen på bröstet.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Var spelar England sina hemmamatcher?",
+        "options": ["På Wembley Stadium", "På Twickenham i London", "På en arena i Manchester", "På en mindre stadion i Birmingham"],
+        "correct": 1
+      },
+      {
+        "q": "Vad hände år 2003?",
+        "options": ["England vann världsmästerskapet", "England slutade sist i Six Nations", "Rugby förbjöds tillfälligt", "Laget bytte namn"],
+        "correct": 0
+      },
+      {
+        "q": "Hur lång är en rugbymatch enligt texten?",
+        "options": ["60 minuter", "70 minuter", "80 minuter", "90 minuter"],
+        "correct": 2
+      },
+      {
+        "q": "Vad kallas poängen som avgjorde VM-finalen 2003?",
+        "options": ["Straffspark", "Inkastspark", "Hörnmål", "Drop goal"],
+        "correct": 3
+      },
+      {
+        "q": "Vilken turnering spelar England varje år tillsammans med fem andra länder?",
+        "options": ["Champions League", "Premier Cup", "Six Nations", "World Series"],
+        "correct": 2
+      },
+      {
+        "q": "Vad symboliserar den röda rosen på tröjan?",
+        "options": ["En känd spelare", "Englands landslag", "En gammal arena", "En särskild taktik"],
+        "correct": 1
+      }
+    ],
+    "word_count": 309
+  },
+  {
+    "id": "ak5-tema-022",
+    "title": "Vägen till landslaget",
+    "text": "Att bli uttagen till Englands rugbylandslag är en dröm för många unga spelare. Resan börjar ofta i en lokal klubb där barn lär sig grunderna i spelet. De tränar passningar, tacklingar och hur man samarbetar som ett lag.\n\nNär spelarna blir äldre kan de få chansen att spela i större klubbar. I England finns en professionell liga där de bästa spelarna möts varje vecka. Förbundskaptenen följer matcherna noggrant för att hitta talanger som kan passa in i landslaget.\n\nDet räcker inte att bara vara stark eller snabb. En landslagsspelare måste också förstå taktik och kunna fatta snabba beslut under press. Eftersom rugby är en kontaktsport krävs det mod och disciplin. Spelarna måste följa reglerna noggrant för att undvika skador och straff.\n\nTräningen inför internationella matcher är intensiv. Spelarna samlas under korta perioder och tränar flera gånger om dagen. De analyserar tidigare matcher och diskuterar hur motståndarna brukar spela.\n\nKonkurrensen om platserna är hård. Bara ett begränsat antal spelare får vara med i matchtruppen. Det betyder att även duktiga spelare ibland måste vänta på sin chans.\n\nTrots pressen beskriver många spelare känslan av att sjunga nationalsången inför en fullsatt arena som något av det största i deras liv. Att representera sitt land innebär både ansvar och stolthet.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Var börjar ofta resan mot landslaget?",
+        "options": ["I en lokal klubb", "Direkt i landslaget", "På ett idrottsgymnasium utomlands", "I ett annat land"],
+        "correct": 0
+      },
+      {
+        "q": "Vad gör förbundskaptenen för att hitta nya spelare?",
+        "options": ["Lottar fram namn", "Följer ligamatcher och letar talanger", "Frågar publiken om råd", "Väljer bara tidigare landslagsspelare"],
+        "correct": 1
+      },
+      {
+        "q": "Varför krävs disciplin i rugby?",
+        "options": ["För att matcherna är korta", "För att publiken kräver det", "För att undvika skador och straff", "För att vinna fler medaljer"],
+        "correct": 2
+      },
+      {
+        "q": "Hur beskrivs konkurrensen om platserna?",
+        "options": ["Den är obetydlig", "Alla får spela lika mycket", "Den är måttlig", "Den är hård eftersom få platser finns"],
+        "correct": 3
+      },
+      {
+        "q": "Vad analyserar spelarna inför matcher?",
+        "options": ["Publikens åsikter", "Motståndarnas spel och tidigare matcher", "Vädret i andra länder", "Gamla fotbollsmatcher"],
+        "correct": 1
+      },
+      {
+        "q": "Hur känner många spelare när de sjunger nationalsången?",
+        "options": ["Likgiltighet", "Ilska", "Stolthet och ansvar", "Förvirring"],
+        "correct": 2
+      }
+    ],
+    "word_count": 308
+  },
+  {
+    "id": "ak5-tema-023",
+    "title": "Kända spelare i Englands rugbylandslag",
+    "text": "Genom åren har många skickliga spelare representerat Englands rugbylandslag. Vissa har blivit kända långt utanför rugbyns värld. En av de mest uppmärksammade spelarna var Jonny Wilkinson, som sparkade den avgörande poängen i VM-finalen 2003.\n\nEn annan viktig spelare har varit lagkaptener som lett laget både på och utanför planen. En kapten ansvarar för att motivera sina lagkamrater och tala med domaren under matchen. Det kräver både ledarskap och lugn.\n\nI modern tid har laget haft spelare med olika bakgrunder och spelstilar. Vissa är starka forwards som arbetar hårt i närkamperna, medan andra är snabba backar som gör försök genom att springa förbi motståndarna.\n\nMånga spelare engagerar sig också i samhället. De besöker skolor, deltar i välgörenhet och inspirerar unga att börja spela rugby. Flera berättar att de själva började spela tack vare en förebild de såg på tv.\n\nKarriären i landslaget kan vara både kort och lång. Skador, form och konkurrens påverkar hur länge en spelare får vara kvar. Därför försöker många ta vara på varje chans de får att spela.\n\nTrots att rugby är en tuff sport betonar många spelare vikten av respekt. De tackar alltid motståndarna efter matchen och följer sportens traditioner.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Vem sparkade den avgörande poängen i VM-finalen 2003?",
+        "options": ["Jonny Wilkinson", "Lagkaptenen 2010", "En australiensisk spelare", "Domaren"],
+        "correct": 0
+      },
+      {
+        "q": "Vad är en kaptens uppgift enligt texten?",
+        "options": ["Att sälja biljetter", "Att leda laget och tala med domaren", "Att bestämma matchens längd", "Att skriva reglerna"],
+        "correct": 1
+      },
+      {
+        "q": "Vad kännetecknar en forward?",
+        "options": ["Snabba löpningar på kanten", "Ansvar för publiken", "Arbete i närkamperna", "Att alltid sparka mål"],
+        "correct": 2
+      },
+      {
+        "q": "Hur engagerar sig många spelare utanför planen?",
+        "options": ["Genom att undvika media", "Genom att bara träna", "Genom att flytta utomlands", "Genom skolbesök och välgörenhet"],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan påverka hur länge en spelare stannar i landslaget?",
+        "options": ["Skador och konkurrens", "Färgen på tröjan", "Publikens klädsel", "Stadens storlek"],
+        "correct": 0
+      },
+      {
+        "q": "Vad betonar spelarna trots att sporten är tuff?",
+        "options": ["Att vinna till varje pris", "Respekt för motståndarna", "Att undvika träning", "Att spela utan regler"],
+        "correct": 1
+      }
+    ],
+    "word_count": 302
+  },
+  {
+    "id": "ak5-tema-024",
+    "title": "Rugbyregler och taktik",
+    "text": "För att förstå Englands rugbylandslag är det viktigt att känna till några grundläggande regler. Rugby spelas med en oval boll och två lag med femton spelare i varje lag. Målet är att göra fler poäng än motståndarna.\n\nPoäng kan göras på flera sätt. Ett försök ger fem poäng och sker när en spelare trycker ner bollen bakom motståndarnas mållinje. Efter ett försök får laget chansen att sparka en extra poäng. Det finns också straffsparkar och drop goals som ger tre poäng.\n\nBollen får bäras framåt, men passningar måste kastas bakåt eller åt sidan. Det gör att laget behöver planera sina rörelser noggrant. Spelarna måste samarbeta för att skapa utrymme på planen.\n\nTaktik handlar om att läsa spelet och anpassa sig. Ibland väljer laget att sparka bollen långt för att flytta spelet till motståndarnas planhalva. Andra gånger försöker de hålla bollen nära laget för att långsamt arbeta sig framåt.\n\nFörsvaret är lika viktigt som anfallet. Spelarna måste tackla säkert och stå rätt placerade för att stoppa motståndarnas attacker.\n\nGenom att kombinera styrka, snabbhet och smart taktik försöker England skapa fördelar i matcherna. Reglerna gör spelet rättvist och hjälper till att skydda spelarna.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Hur många spelare är det i varje lag?",
+        "options": ["Elva", "Tretton", "Femton", "Sjutton"],
+        "correct": 2
+      },
+      {
+        "q": "Hur många poäng ger ett försök?",
+        "options": ["Tre poäng", "Fem poäng", "Sju poäng", "En poäng"],
+        "correct": 1
+      },
+      {
+        "q": "Hur måste en passning kastas?",
+        "options": ["Bakåt eller åt sidan", "Alltid framåt", "Rakt upp i luften", "Mot publiken"],
+        "correct": 0
+      },
+      {
+        "q": "Varför sparkar laget ibland bollen långt?",
+        "options": ["För att avsluta matchen", "För att vila spelarna", "För att imponera på publiken", "För att flytta spelet till motståndarnas planhalva"],
+        "correct": 3
+      },
+      {
+        "q": "Vad är viktigt i försvaret?",
+        "options": ["Att undvika kontakt helt", "Att tackla säkert och stå rätt", "Att bara vänta på domaren", "Att alltid sparka bort bollen"],
+        "correct": 1
+      },
+      {
+        "q": "Vad kombinerar laget för att skapa fördelar?",
+        "options": ["Tur och slump", "Enbart snabbhet", "Styrka, snabbhet och taktik", "Publikens sånger"],
+        "correct": 2
+      }
+    ],
+    "word_count": 304
+  },
+  {
+    "id": "ak5-tema-025",
+    "title": "Fans och gemenskap",
+    "text": "Englands rugbylandslag har supportrar i alla åldrar. På matchdagar fylls gatorna runt arenan av människor som bär vita tröjor med den röda rosen. Familjer, vänner och skolklasser samlas för att uppleva stämningen tillsammans.\n\nBland fansen finns personer med olika bakgrund. Vissa har följt laget i flera decennier, medan andra är nya supportrar. Det finns också fans med funktionsvariationer som deltar tack vare tillgängliga platser på arenan.\n\nMånga beskriver matcherna som mer än bara sport. Det är en social händelse där man träffar andra och delar glädje och besvikelse. När laget vinner firar supportrarna tillsammans, och när laget förlorar stöttar de varandra.\n\nBarn som Amir, Ella och Noa kan drömma om att själva spela i landslaget en dag. De ser spelare med olika kroppstyper och erfarenheter, vilket visar att det finns flera sätt att bidra till ett lag.\n\nRugbyns traditioner är viktiga för fansen. De sjunger sånger före matchen och applåderar även motståndarna. Respekt är en central del av kulturen.\n\nGenom åren har landslaget blivit en symbol för gemenskap. Oavsett var i landet man bor kan man känna samhörighet när England spelar.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Vad bär många supportrar på matchdagar?",
+        "options": ["Blå halsdukar", "Vita tröjor med en röd ros", "Svarta kostymer", "Gröna jackor"],
+        "correct": 1
+      },
+      {
+        "q": "Vad gör matcherna till mer än bara sport enligt texten?",
+        "options": ["De är en social händelse", "De är obligatoriska", "De är gratis för alla", "De spelas varje dag"],
+        "correct": 0
+      },
+      {
+        "q": "Vad visar att laget är inkluderande?",
+        "options": ["Endast äldre får komma", "Inga barn deltar", "Tillgängliga platser för personer med funktionsvariationer", "Bara professionella får vara fans"],
+        "correct": 2
+      },
+      {
+        "q": "Hur reagerar fansen när laget förlorar?",
+        "options": ["De lämnar direkt arenan", "De slutar följa laget", "De buar alltid högt", "De stöttar varandra"],
+        "correct": 3
+      },
+      {
+        "q": "Vad är en viktig del av rugbyns kultur?",
+        "options": ["Respekt för motståndarna", "Att ignorera regler", "Att aldrig sjunga", "Att byta lag ofta"],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan barn som Amir, Ella och Noa känna?",
+        "options": ["Att rugby bara är för vuxna", "Att det finns flera sätt att bidra till ett lag", "Att bara snabba spelare lyckas", "Att man måste bo i London"],
+        "correct": 1
+      }
+    ],
+    "word_count": 300
   }
 ]
