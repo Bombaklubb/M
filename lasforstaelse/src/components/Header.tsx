@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           onClick={onHomeClick}
           className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
         >
-          <BookLogo size={120} />
+          <BookLogo size={56} />
         </button>
 
         {/* User info */}

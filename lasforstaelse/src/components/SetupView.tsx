@@ -76,9 +76,9 @@ export const SetupView: React.FC<SetupViewProps> = ({
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       {/* Header */}
-      <div className="text-center mb-10">
-        <div className="flex items-center justify-center mb-4">
-          <BookLogo size={160} />
+      <div className="text-center mb-4">
+        <div className="flex items-center justify-center">
+          <BookLogo size={260} />
         </div>
       </div>
 
