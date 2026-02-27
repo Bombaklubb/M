@@ -121,16 +121,6 @@ export const ResultView: React.FC<ResultViewProps> = ({
             </div>
           </div>
 
-          {/* Show/hide details */}
-          <div className="mb-6">
-            <button
-              onClick={() => setShowDetails(!showDetails)}
-              className="text-indigo-600 dark:text-indigo-400 font-medium py-2 hover:underline"
-            >
-              {showDetails ? '▲ Dölj svaren' : '▼ Visa svaren'}
-            </button>
-          </div>
-
           {/* New badges */}
           {newBadges.length > 0 && (
             <div className="bg-purple-50 dark:bg-purple-900/30 border-2 border-purple-200 dark:border-purple-700 rounded-xl p-4 mb-6">
@@ -152,6 +142,16 @@ export const ResultView: React.FC<ResultViewProps> = ({
               </div>
             </div>
           )}
+
+          {/* Show/hide details */}
+          <div className="mb-6">
+            <button
+              onClick={() => setShowDetails(!showDetails)}
+              className="text-indigo-600 dark:text-indigo-400 font-medium py-2 hover:underline"
+            >
+              {showDetails ? '▲ Dölj svaren' : '▼ Visa svaren'}
+            </button>
+          </div>
 
           {/* Actions - three level options */}
           <div className="flex flex-col gap-3">
