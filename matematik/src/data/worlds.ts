@@ -22,7 +22,7 @@ export const WORLDS: World[] = [
     id: 'dino',
     name: 'Dinosaurie Världen',
     subtitle: 'Grunderna – Åk 1–3',
-    emoji: '🦕',
+    emoji: '🦖',
     grades: ['1', '2', '3'],
     minGrade: 1,
     maxGrade: 3,
