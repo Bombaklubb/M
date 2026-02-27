@@ -25099,5 +25099,205 @@
       }
     ],
     "word_count": 300
+  },
+  {
+    "id": "ak2-tema-006",
+    "title": "Enhörningen i skogen",
+    "text": "Enhörningar är magiska djur som finns i sagor. De liknar hästar men har ett långt horn i pannan. Många berättelser säger att hornet kan lysa i mörkret. I en liten by bodde barnet Alva som älskade sagor om enhörningar. Varje kväll tittade hon ut genom fönstret mot skogen och hoppades få se en.\n\nEn morgon såg Alva något vitt mellan träden. Det rörde sig tyst och försiktigt. Hon vågade gå närmare och såg en enhörning med silverglänsande man. Den drack vatten ur bäcken. När enhörningen märkte Alva stod den stilla och tittade på henne. Sedan sprang den mjukt in bland träden igen. Alva log och visste att hon aldrig skulle glömma den stunden.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad har enhörningen i pannan?",
+        "options": ["Två små öron", "Ett långt horn", "En krona", "En blomma"],
+        "correct": 1
+      },
+      {
+        "q": "Var bodde Alva?",
+        "options": ["I en liten by", "I en stor stad", "På ett slott", "Vid havet"],
+        "correct": 0
+      },
+      {
+        "q": "Var såg Alva något vitt?",
+        "options": ["På himlen", "I sitt rum", "Mellan träden", "På vägen"],
+        "correct": 2
+      },
+      {
+        "q": "Vad gjorde enhörningen vid bäcken?",
+        "options": ["Sov", "Åt gräs", "Drack vatten", "Byggde bo"],
+        "correct": 2
+      },
+      {
+        "q": "Hur rörde sig enhörningen?",
+        "options": ["Högt och snabbt", "Tyst och försiktigt", "Argt och hårt", "Klantigt och långsamt"],
+        "correct": 1
+      },
+      {
+        "q": "Hur kände sig Alva efter mötet?",
+        "options": ["Rädd", "Arg", "Likgiltig", "Glad"],
+        "correct": 3
+      }
+    ],
+    "word_count": 140
+  },
+  {
+    "id": "ak2-tema-007",
+    "title": "Regnbågens enhörning",
+    "text": "I sagornas land finns en enhörning som heter Luma. Hon har vit päls och en man i alla regnbågens färger. När solen lyser skimrar hennes horn som en liten stjärna. Luma bor på en äng med mjukt gräs och färgglada blommor.\n\nVarje morgon springer hon över ängen och lämnar glittrande spår bakom sig. Barn som tror på magi kan ibland se spåren. En dag kom barnet Sam till ängen med sin morfar. Sam kände sig ledsen och satte sig på en sten. Då dök Luma upp. Hon stod en stund bredvid Sam och det kändes genast lite lättare i hjärtat. Sedan galopperade hon vidare mot skogen.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad heter enhörningen?",
+        "options": ["Luma", "Bella", "Nova", "Mira"],
+        "correct": 0
+      },
+      {
+        "q": "Var bor Luma?",
+        "options": ["På en äng", "I ett stall", "I en grotta", "På ett berg"],
+        "correct": 0
+      },
+      {
+        "q": "Vad lämnar hon efter sig när hon springer?",
+        "options": ["Fotspår i lera", "Glittrande spår", "Blommor", "Stenar"],
+        "correct": 1
+      },
+      {
+        "q": "Vem kom till ängen med sin morfar?",
+        "options": ["Alva", "Noa", "Sam", "Ella"],
+        "correct": 2
+      },
+      {
+        "q": "Hur kände sig Sam först?",
+        "options": ["Glad", "Trött", "Ledsen", "Arg"],
+        "correct": 2
+      },
+      {
+        "q": "Vad gjorde Luma sedan?",
+        "options": ["Somnade på stenen", "Stannade hela dagen", "Flög upp i luften", "Galopperade mot skogen"],
+        "correct": 3
+      }
+    ],
+    "word_count": 137
+  },
+  {
+    "id": "ak2-tema-008",
+    "title": "Enhörningen som hjälpte till",
+    "text": "En liten enhörning bodde nära en by där många barn lekte. Den hette Orion och var nyfiken på människorna. Varje kväll smög Orion fram till kanten av byn för att titta.\n\nEn dag tappade barnet Leila sin röda boll i en buske med taggar. Hon vågade inte ta tillbaka den. Orion såg vad som hände. Med sitt horn lyfte han försiktigt bort grenarna så att bollen blev fri. Leila blev förvånad men också glad.\n\nOrion sprang snabbt tillbaka mot ängen innan någon vuxen hann se honom. Leila berättade för sina vänner om den snälla enhörningen. Ingen visste säkert om det var sant, men många började hålla utkik efter glittrande spår på marken.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad hette enhörningen?",
+        "options": ["Orion", "Luma", "Sam", "Leo"],
+        "correct": 0
+      },
+      {
+        "q": "Vad tappade Leila?",
+        "options": ["En bok", "En röd boll", "En sko", "En hatt"],
+        "correct": 1
+      },
+      {
+        "q": "Var hamnade bollen?",
+        "options": ["I en bäck", "På taket", "I en buske med taggar", "På vägen"],
+        "correct": 2
+      },
+      {
+        "q": "Hur hjälpte Orion till?",
+        "options": ["Han sparkade bort bollen", "Han ropade på hjälp", "Han bar Leila hem", "Han lyfte bort grenarna med sitt horn"],
+        "correct": 3
+      },
+      {
+        "q": "Vart sprang Orion efteråt?",
+        "options": ["Till ängen", "Till skolan", "Till staden", "Till ett stall"],
+        "correct": 0
+      },
+      {
+        "q": "Vad började barnen hålla utkik efter?",
+        "options": ["Regnbågar", "Glittrande spår", "Stora fåglar", "Nya leksaker"],
+        "correct": 1
+      }
+    ],
+    "word_count": 131
+  },
+  {
+    "id": "ak2-tema-009",
+    "title": "Enhörningens hemlighet",
+    "text": "Det sägs att enhörningar bara visar sig för den som är snäll. I en skog nära en sjö bodde en gammal enhörning med gyllene horn. Den höll sig gömd bland träden.\n\nBarnet Noa brukade gå till sjön för att mata änderna. Noa var försiktig och skräpade aldrig ner. En kväll när solen gick ner hördes ett mjukt ljud bakom buskarna. Den gamla enhörningen klev fram.\n\nDen böjde sitt huvud och lät hornet lysa svagt. Noa stod stilla och log. Efter en stund försvann enhörningen lika tyst som den kommit. Noa berättade inte för alla, utan sparade mötet som en hemlighet i sitt hjärta.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Var bodde enhörningen?",
+        "options": ["I en stad", "I en skog nära en sjö", "På en bondgård", "På ett berg"],
+        "correct": 1
+      },
+      {
+        "q": "Vad brukade Noa göra vid sjön?",
+        "options": ["Fiska", "Mata änderna", "Bygga en båt", "Simma varje dag"],
+        "correct": 1
+      },
+      {
+        "q": "Hur lät hornet?",
+        "options": ["Det sjöng högt", "Det sprakade", "Det lyste svagt", "Det var helt mörkt"],
+        "correct": 2
+      },
+      {
+        "q": "När klev enhörningen fram?",
+        "options": ["Mitt på dagen", "Tidigt på morgonen", "När det regnade", "När solen gick ner"],
+        "correct": 3
+      },
+      {
+        "q": "Hur var Noa mot naturen?",
+        "options": ["Skräpade ner", "Var försiktig", "Plockade blommor hela tiden", "Skrek högt"],
+        "correct": 1
+      },
+      {
+        "q": "Vad gjorde Noa med sin upplevelse?",
+        "options": ["Berättade för hela skolan", "Glömde bort den", "Skrev om den i en tidning", "Sparade den som en hemlighet"],
+        "correct": 3
+      }
+    ],
+    "word_count": 125
+  },
+  {
+    "id": "ak2-tema-010",
+    "title": "Enhörningen och snön",
+    "text": "En kall vinterdag föll snön över fälten. I skogen bodde en ung enhörning som hette Frost. Hans päls var nästan lika vit som snön. När han gick lämnade han små spår bakom sig.\n\nBarnen Amina och Leo byggde en snögubbe nära skogen. Plötsligt såg de något röra sig mellan träden. Det var Frost som försiktigt klev ut på fältet. Han sniffade på snögubben och fnös till.\n\nAmina och Leo stod helt stilla. De ville inte skrämma honom. Frost tittade på dem med stora ögon och skrapade lätt med hoven i snön. Sedan vände han och sprang tillbaka in i skogen. Barnen viskade till varandra att de just hade sett något magiskt.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad hette enhörningen?",
+        "options": ["Orion", "Frost", "Luma", "Noa"],
+        "correct": 1
+      },
+      {
+        "q": "Vilken årstid var det?",
+        "options": ["Sommar", "Vår", "Höst", "Vinter"],
+        "correct": 3
+      },
+      {
+        "q": "Vad byggde Amina och Leo?",
+        "options": ["En koja", "En snögubbe", "En båt", "En bro"],
+        "correct": 1
+      },
+      {
+        "q": "Var kom Frost ifrån?",
+        "options": ["Från staden", "Från sjön", "Från skogen", "Från ett stall"],
+        "correct": 2
+      },
+      {
+        "q": "Hur reagerade barnen?",
+        "options": ["De sprang efter honom", "De stod stilla", "De ropade högt", "De kastade snö"],
+        "correct": 1
+      },
+      {
+        "q": "Vad tänkte barnen efteråt?",
+        "options": ["Att de drömde", "Att det var en vanlig häst", "Att de sett något magiskt", "Att det var farligt"],
+        "correct": 2
+      }
+    ],
+    "word_count": 133
   }
 ]
