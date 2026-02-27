@@ -342,7 +342,7 @@ function App() {
 
       {/* Kontaktinfo - visas endast på Setup-sidan */}
       {appState === AppState.SETUP && (
-        <div className="fixed bottom-4 left-4 text-sm text-slate-600 dark:text-slate-400 z-40">
+        <div className="fixed bottom-4 left-4 text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity z-40">
           Kontakt: <strong>martin.akdogan@enkoping.se</strong>
         </div>
       )}
