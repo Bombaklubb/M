@@ -23,11 +23,8 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
       <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-md w-full">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <BookLogo size={80} />
+            <BookLogo size={180} />
           </div>
-          <h1 className="text-4xl font-extrabold text-slate-800 mb-2">
-            Läsjakten
-          </h1>
           <p className="text-slate-500 text-lg">
             Din smarta läskompis
           </p>

@@ -268,7 +268,7 @@ function App() {
       <div className="min-h-screen bg-sky-50 dark:bg-slate-900 flex items-center justify-center">
         <div className="text-center">
           <div className="flex justify-center mb-4 animate-bounce">
-            <BookLogo size={80} />
+            <BookLogo size={120} />
           </div>
           <p className="text-xl text-slate-600 dark:text-slate-300">Laddar...</p>
         </div>
