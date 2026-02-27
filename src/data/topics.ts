@@ -1115,6 +1115,49 @@ export const TOPICS: Topic[] = [
   },
 
   // ============================================================
+  // ÅK 4-5: EKVATIONER (MELLANSTADIET)
+  // ============================================================
+  {
+    id: 'ekvationer-bas',
+    title: 'Ekvationer – grunderna',
+    icon: '🔢',
+    description: 'Hitta det okända talet med likheter och enkla ekvationer',
+    grades: ['4', '5'],
+    minGrade: 4,
+    color: 'from-rose-400 to-pink-600',
+    instruction: {
+      title: 'Ekvationer – hitta det okända',
+      text: 'En ekvation är en likhet med ett okänt tal – ett tal vi ska hitta! Vi kan skriva det okända som □ eller som x. Målet är att hitta vilket tal som gör likheten sann. Vi löser det genom att tänka: "Vad saknas för att det ska bli lika?"',
+      illustration: 'algebra',
+      examples: [
+        '□ + 7 = 15  →  □ = 15 − 7 = 8',
+        '6 · □ = 48  →  □ = 48 ÷ 6 = 8',
+        'x + 9 = 34  →  x = 34 − 9 = 25',
+        '5x = 45  →  x = 45 ÷ 5 = 9',
+      ],
+    },
+    exercises: [
+      { id: 'ekv-bas-1', type: 'fill-in', question: '□ + 7 = 15, vilket tal är □?', answer: '8', points: 10, explanation: '□ = 15 − 7 = 8.' },
+      { id: 'ekv-bas-2', type: 'fill-in', question: '24 − □ = 9, vilket tal är □?', answer: '15', points: 10, explanation: '□ = 24 − 9 = 15.' },
+      { id: 'ekv-bas-3', type: 'fill-in', question: '6 · □ = 48, vilket tal är □?', answer: '8', points: 10, explanation: '□ = 48 ÷ 6 = 8.' },
+      { id: 'ekv-bas-4', type: 'fill-in', question: '56 ÷ □ = 7, vilket tal är □?', answer: '8', points: 10, explanation: '□ = 56 ÷ 7 = 8.' },
+      { id: 'ekv-bas-5', type: 'fill-in', question: '□ + 13 = 29, vilket tal är □?', answer: '16', points: 10, explanation: '□ = 29 − 13 = 16.' },
+      { id: 'ekv-bas-6', type: 'fill-in', question: 'Leo hade några kulor. Han fick 7 kulor till av sin kompis. Nu har Leo 15 kulor. Hur många kulor hade han från början?', answer: '8', points: 15, explanation: '□ + 7 = 15 → □ = 15 − 7 = 8 kulor.' },
+      { id: 'ekv-bas-7', type: 'fill-in', question: 'En penna kostar 5 kr. Emma köper några pennor och betalar 35 kr. Hur många pennor köpte Emma?', answer: '7', points: 15, explanation: '5 · □ = 35 → □ = 35 ÷ 5 = 7 pennor.' },
+      { id: 'ekv-bas-8', type: 'fill-in', question: 'x + 9 = 34, vad är x?', answer: '25', points: 10, explanation: 'x = 34 − 9 = 25.' },
+      { id: 'ekv-bas-9', type: 'fill-in', question: 'x − 12 = 25, vad är x?', answer: '37', points: 10, explanation: 'x = 25 + 12 = 37.' },
+      { id: 'ekv-bas-10', type: 'fill-in', question: '5x = 45, vad är x?', answer: '9', points: 10, explanation: 'x = 45 ÷ 5 = 9.' },
+      { id: 'ekv-bas-11', type: 'fill-in', question: 'x/6 = 8, vad är x?', answer: '48', points: 10, explanation: 'x = 8 × 6 = 48.' },
+      { id: 'ekv-bas-12', type: 'multiple-choice', question: 'Vilket påstående stämmer om x = 4?', options: ['x + 3 = 8', 'x + 3 = 7', 'x + 3 = 6', 'x + 3 = 5'], correctIndex: 1, points: 10, explanation: 'x + 3 = 4 + 3 = 7. Alternativ B stämmer.' },
+      { id: 'ekv-bas-13', type: 'fill-in', question: '4x + 3 = 19, vad är x?', answer: '4', points: 15, explanation: '4x = 19 − 3 = 16, x = 16 ÷ 4 = 4.' },
+      { id: 'ekv-bas-14', type: 'fill-in', question: 'Varje biobiljett kostar x kr. Två biljetter och en popcorn för 30 kr kostar totalt 190 kr. Vad kostar en biobiljett?', answer: '80', points: 20, explanation: '2x + 30 = 190 → 2x = 160 → x = 80 kr.' },
+      { id: 'ekv-bas-15', type: 'fill-in', question: 'En rektangel har omkretsen 42 cm och längden 12 cm. Vad är bredden (b)?', answer: '9', points: 20, explanation: '2(12 + b) = 42 → 12 + b = 21 → b = 9 cm.' },
+      { id: 'ekv-bas-16', type: 'true-false', question: 'Om x = 6 är 3x − 8 = 10.', isTrue: true, points: 10, explanation: '3 × 6 − 8 = 18 − 8 = 10. Sant!' },
+      { id: 'ekv-bas-17', type: 'multiple-choice', question: 'Vilket värde på □ gör likheten 5 · □ + 1 = 21 sann?', options: ['3', '4', '5', '6'], correctIndex: 1, points: 15, explanation: '5 × 4 + 1 = 20 + 1 = 21. □ = 4.' },
+    ],
+  },
+
+  // ============================================================
   // ÅK 6-9: HÖGSTADIET
   // ============================================================
   {
@@ -1152,6 +1195,13 @@ export const TOPICS: Topic[] = [
       { id: 'alg-13', type: 'true-false', question: 'Om x = 3, är 4x − 5 = 7?', isTrue: true, points: 10, explanation: '4 × 3 − 5 = 12 − 5 = 7. Rätt!' },
       { id: 'alg-14', type: 'fill-in', question: '6x − 4 = 2x + 8, vad är x?', answer: '3', points: 20, explanation: '6x − 2x = 8 + 4, 4x = 12, x = 3.' },
       { id: 'alg-15', type: 'multiple-choice', question: 'Förenkla: 5x + 2x − 3x', options: ['4x', '10x', 'x', '4x²'], correctIndex: 0, points: 10, explanation: '(5 + 2 − 3)x = 4x.' },
+      { id: 'alg-16', type: 'fill-in', question: '3x + 7 = 28, vad är x?', answer: '7', points: 15, explanation: '3x = 28 − 7 = 21, x = 21 ÷ 3 = 7.' },
+      { id: 'alg-17', type: 'fill-in', question: '5x − 9 = 41, vad är x?', answer: '10', points: 15, explanation: '5x = 41 + 9 = 50, x = 50 ÷ 5 = 10.' },
+      { id: 'alg-18', type: 'multiple-choice', question: '2x + 4 = 3x − 6, vad är x?', options: ['8', '10', '12', '4'], correctIndex: 1, points: 20, explanation: '2x − 3x = −6 − 4, −x = −10, x = 10.' },
+      { id: 'alg-19', type: 'fill-in', question: '7(x − 2) = 35, vad är x?', answer: '7', points: 20, explanation: 'x − 2 = 35 ÷ 7 = 5, x = 5 + 2 = 7.' },
+      { id: 'alg-20', type: 'fill-in', question: '4x + 6 = 2x + 18, vad är x?', answer: '6', points: 20, explanation: '4x − 2x = 18 − 6, 2x = 12, x = 6.' },
+      { id: 'alg-21', type: 'fill-in', question: 'Summan av två tal är 30. Det ena är 12 mer än det andra. Vad är det minsta talet?', answer: '9', points: 20, explanation: 'x + (x + 12) = 30 → 2x + 12 = 30 → 2x = 18 → x = 9.' },
+      { id: 'alg-22', type: 'fill-in', question: 'En mobiltelefon kostar x kr. Med 20 % rabatt betalar du 2 400 kr. Vad kostar mobilen utan rabatt?', answer: '3000', points: 25, explanation: '0,8 · x = 2 400 → x = 2 400 ÷ 0,8 = 3 000 kr.' },
     ],
   },
   {
@@ -1187,6 +1237,22 @@ export const TOPICS: Topic[] = [
       { id: 'eq-12', type: 'true-false', question: 'x = −3 är lösning till 2x + 9 = 3', isTrue: true, points: 15, explanation: '2 × (−3) + 9 = −6 + 9 = 3. Rätt!' },
       { id: 'eq-13', type: 'fill-in', question: 'x/6 − 2 = 3, vad är x?', answer: '30', points: 20, explanation: 'x/6 = 5, x = 30.' },
       { id: 'eq-14', type: 'multiple-choice', question: '4(x + 1) = 2(2x + 3) – hur många lösningar finns?', options: ['x = 1', 'x = 0', 'Ingen lösning', 'Alla x är lösningar'], correctIndex: 2, points: 25, explanation: '4x + 4 = 4x + 6 → 4 = 6, omöjligt → ingen lösning.' },
+      { id: 'eq-15', type: 'fill-in', question: 'x/3 + 5 = 11, vad är x?', answer: '18', points: 15, explanation: 'x/3 = 11 − 5 = 6, x = 6 × 3 = 18.' },
+      { id: 'eq-16', type: 'fill-in', question: '2x/5 = 8, vad är x?', answer: '20', points: 15, explanation: '2x = 8 × 5 = 40, x = 40 ÷ 2 = 20.' },
+      { id: 'eq-17', type: 'fill-in', question: '4 − 3x = 19, vad är x?', answer: '-5', points: 20, explanation: '−3x = 19 − 4 = 15, x = 15 ÷ (−3) = −5.' },
+      { id: 'eq-18', type: 'fill-in', question: '5(x − 1) = 3x + 9, vad är x?', answer: '7', points: 20, explanation: '5x − 5 = 3x + 9, 2x = 14, x = 7.' },
+      { id: 'eq-19', type: 'fill-in', question: 'x/4 − 2 = 3, vad är x?', answer: '20', points: 15, explanation: 'x/4 = 5, x = 5 × 4 = 20.' },
+      { id: 'eq-20', type: 'fill-in', question: '3x − 7 = 2x + 5, vad är x?', answer: '12', points: 20, explanation: '3x − 2x = 5 + 7, x = 12.' },
+      { id: 'eq-21', type: 'fill-in', question: '2(x + 4) = 3x − 5, vad är x?', answer: '13', points: 20, explanation: '2x + 8 = 3x − 5, 8 + 5 = 3x − 2x, x = 13.' },
+      { id: 'eq-22', type: 'fill-in', question: '4(x − 3) + 2 = 2x + 6, vad är x?', answer: '8', points: 20, explanation: '4x − 12 + 2 = 2x + 6, 4x − 10 = 2x + 6, 2x = 16, x = 8.' },
+      { id: 'eq-23', type: 'multiple-choice', question: 'x/2 + x/3 = 10, vad är x?', options: ['10', '12', '15', '6'], correctIndex: 1, points: 25, explanation: 'Gemensam nämnare 6: 3x/6 + 2x/6 = 10, 5x/6 = 10, x = 12.' },
+      { id: 'eq-24', type: 'multiple-choice', question: '5 − 2(x − 1) = 3x, vad är x?', options: ['7/5', '5/7', '1', '2'], correctIndex: 0, points: 25, explanation: '5 − 2x + 2 = 3x, 7 = 5x, x = 7/5.' },
+      { id: 'eq-25', type: 'fill-in', question: '(x − 2)/3 = 4, vad är x?', answer: '14', points: 20, explanation: 'x − 2 = 4 × 3 = 12, x = 14.' },
+      { id: 'eq-26', type: 'fill-in', question: 'En taxi tar ut 40 kr i grundavgift och 14 kr per km. Du betalar 236 kr totalt. Hur många km körde du?', answer: '14', points: 25, explanation: '40 + 14x = 236 → 14x = 196 → x = 14 km.' },
+      { id: 'eq-27', type: 'fill-in', question: 'x² = 49, vad är det positiva värdet på x?', answer: '7', points: 20, explanation: 'x = √49 = 7.' },
+      { id: 'eq-28', type: 'multiple-choice', question: 'x² − 16 = 0, vilka är lösningarna?', options: ['x = 4', 'x = ±4', 'x = −4', 'x = 8'], correctIndex: 1, points: 20, explanation: 'x² = 16, x = ±4 (både positiv och negativ rot).' },
+      { id: 'eq-29', type: 'fill-in', question: '2x² = 18, vad är det positiva värdet på x?', answer: '3', points: 20, explanation: 'x² = 9, x = √9 = 3.' },
+      { id: 'eq-30', type: 'fill-in', question: 'En rektangel har arean 96 cm² och längden 12 cm. Vad är bredden?', answer: '8', points: 15, explanation: '12 × b = 96, b = 96 ÷ 12 = 8 cm.' },
     ],
   },
   {
@@ -1293,6 +1359,39 @@ export const TOPICS: Topic[] = [
       { id: 'fn-11', type: 'true-false', question: 'f(x) = 2x + 1 och g(x) = 2x − 3 är parallella linjer', isTrue: true, points: 15, explanation: 'Rätt! Båda har lutningen k=2. Parallella linjer har samma lutning.' },
       { id: 'fn-12', type: 'fill-in', question: 'f(x) = x² + 1. Vad är f(−3)?', answer: '10', points: 15, explanation: 'f(−3) = (−3)² + 1 = 9 + 1 = 10.' },
       { id: 'fn-13', type: 'multiple-choice', question: 'Skärningspunkten med x-axeln för f(x) = 2x − 6?', options: ['(0, −6)', '(3, 0)', '(−3, 0)', '(6, 0)'], correctIndex: 1, points: 20, explanation: 'Sätt f(x)=0: 2x − 6 = 0 → x = 3. Skärning: (3, 0).' },
+    ],
+  },
+
+  // ============================================================
+  // GYMNASIET – EKVATIONER
+  // ============================================================
+  {
+    id: 'ekvationer-gym',
+    title: 'Avancerade ekvationer',
+    icon: '🧮',
+    description: 'Parenteser, rationella uttryck och andragradsekvationer',
+    grades: ['gym1', 'gym2', 'gym3'],
+    minGrade: 10,
+    color: 'from-violet-600 to-indigo-800',
+    instruction: {
+      title: 'Avancerade ekvationer',
+      text: 'Nu utökar vi verktygslådan! Vi löser ekvationer med parenteser, rationella uttryck och andragradsekvationer. För andragradsekvationen ax² + bx + c = 0 används pq-formeln eller faktorisering.',
+      illustration: 'equations',
+      examples: [
+        '3(2x − 1) − 4x = 5  →  x = 4',
+        '(x + 3)/4 + (2x − 1)/3 = 5  →  x = 5',
+        'x² − 5x + 6 = 0  →  x = 2 eller x = 3',
+        '3/x = 6  →  x = 1/2',
+      ],
+    },
+    exercises: [
+      { id: 'ekvgym-1', type: 'fill-in', question: '3(2x − 1) − 4x = 5, vad är x?', answer: '4', points: 20, explanation: '6x − 3 − 4x = 5, 2x = 8, x = 4.' },
+      { id: 'ekvgym-2', type: 'fill-in', question: '(x + 3)/4 + (2x − 1)/3 = 5, vad är x?', answer: '5', points: 25, explanation: 'Multiplicera med 12: 3(x+3) + 4(2x−1) = 60, 3x+9+8x−4 = 60, 11x = 55, x = 5.' },
+      { id: 'ekvgym-3', type: 'multiple-choice', question: 'Lös andragradsekvationen x² − 5x + 6 = 0', options: ['x = 1 och x = 6', 'x = 2 och x = 3', 'x = −2 och x = −3', 'x = 5 och x = 1'], correctIndex: 1, points: 25, explanation: '(x−2)(x−3) = 0, x = 2 eller x = 3.' },
+      { id: 'ekvgym-4', type: 'multiple-choice', question: 'Lös andragradsekvationen 2x² − 7x + 3 = 0', options: ['x = 3 och x = 1/2', 'x = 7 och x = 2', 'x = 1 och x = 3/2', 'x = 2 och x = 3/2'], correctIndex: 0, points: 25, explanation: 'x = (7 ± √(49−24))/4 = (7 ± 5)/4, x = 3 eller x = 1/2.' },
+      { id: 'ekvgym-5', type: 'true-false', question: 'Ekvationen x² + 4x + 8 = 0 har ingen reell lösning.', isTrue: true, points: 20, explanation: 'Diskriminanten = 4² − 4·8 = 16 − 32 = −16 < 0. Ingen reell lösning.' },
+      { id: 'ekvgym-6', type: 'multiple-choice', question: 'Lös den rationella ekvationen 3/x = 6, vad är x?', options: ['2', '1/2', '18', '1/3'], correctIndex: 1, points: 20, explanation: 'x = 3/6 = 1/2. (Multiplicera: 3 = 6x → x = 1/2)' },
+      { id: 'ekvgym-7', type: 'multiple-choice', question: 'Lös den rationella ekvationen 2/(x − 1) = 4, vad är x?', options: ['3/2', '5', '2', '3'], correctIndex: 0, points: 20, explanation: '2 = 4(x−1), 2 = 4x − 4, 6 = 4x, x = 6/4 = 3/2.' },
     ],
   },
 
