@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Topic } from '../types';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
+import InteractiveClock from './InteractiveClock';
 
 // Inline SVG illustrations for each topic type
 function Illustration({ name }: { name: string }) {
@@ -225,7 +226,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
   // Pick a mini-challenge exercise – skip the first one so it's not the same as exercise 1
   const miniEx = topic.exercises.slice(1).find(
     e => e.type === 'fill-in' || e.type === 'multiple-choice' || e.type === 'true-false'
-  ) ?? topic.exercises[0];
+  );
 
   function checkMini(ans: string) {
     if (!miniEx) return;
@@ -319,6 +320,23 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
             <span className="bg-purple-100 text-purple-700 font-bold text-xs px-3 py-1 rounded-full">Steg 2 av 2 · Testa dig!</span>
           </div>
           <p className="text-gray-500 text-sm mb-3">Innan du börjar – svara på denna fråga:</p>
+
+          {/* Clock image – shown when exercise has a clockDisplay */}
+          {(miniEx as any).clockDisplay && (
+            <div className="flex flex-col items-center mb-4">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">🕐 Se klockan</p>
+              <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-3 inline-block">
+                <InteractiveClock
+                  hour={(miniEx as any).clockDisplay.hour}
+                  minute={(miniEx as any).clockDisplay.minute}
+                  onChange={() => {}}
+                  readOnly
+                  size={160}
+                />
+              </div>
+            </div>
+          )}
+
           <h2 className="text-xl font-black text-gray-800 mb-5">{miniEx.question}</h2>
 
           {miniEx.type === 'fill-in' && !miniAnswered && (
