@@ -36,7 +36,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
             ← Välj värld
           </button>
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-5xl">{world.emoji}</span>
+            <div className="text-5xl leading-none bg-white/25 rounded-2xl p-1.5 inline-flex items-center justify-center shadow-md flex-shrink-0">{world.emoji}</div>
             <div>
               <h1 className="text-2xl font-black">{world.name}</h1>
               <p className="text-white/80 text-sm">{world.subtitle}</p>
