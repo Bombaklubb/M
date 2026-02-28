@@ -75,8 +75,8 @@ export default function WorldSelect() {
             <img
               src="/mattejakten.png"
               alt="Mattejakten"
-              className="h-24 w-auto mb-2"
-              style={{ mixBlendMode: 'multiply' }}
+              className="h-36 w-auto mb-2"
+              style={{ clipPath: 'inset(5% round 16px)', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.5))' }}
             />
             <h2 className="text-white/80 text-sm font-bold uppercase tracking-widest text-center">
               ✨ Välj din värld
