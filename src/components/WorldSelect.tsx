@@ -3,12 +3,10 @@ import { useApp } from '../contexts/AppContext';
 import { WORLDS, gradeToWorld, getAccessibleWorlds } from '../data/worlds';
 import { gradeToNum } from '../data/topics';
 import { getPoints, initPoints, getProgress } from '../utils/storage';
-import { LEVEL_NAMES, LEVEL_THRESHOLDS } from '../types';
 import AppHeader from './AppHeader';
-import { ALL_AVATARS } from '../data/avatars';
 
 export default function WorldSelect() {
-  const { currentStudent, setView, logout } = useApp();
+  const { currentStudent, setView } = useApp();
   if (!currentStudent) return null;
 
   const points = getPoints(currentStudent.id) ?? initPoints(currentStudent.id);
@@ -16,13 +14,6 @@ export default function WorldSelect() {
   const gradeNum = gradeToNum(currentStudent.grade);
   const currentWorldId = gradeToWorld(currentStudent.grade);
   const accessibleWorlds = getAccessibleWorlds(gradeNum);
-
-  const levelName = LEVEL_NAMES[points.level];
-  const nextLevelPts = LEVEL_THRESHOLDS[points.level + 1] ?? LEVEL_THRESHOLDS[LEVEL_THRESHOLDS.length - 1];
-  const curLevelPts = LEVEL_THRESHOLDS[points.level] ?? 0;
-  const levelPct = nextLevelPts > curLevelPts
-    ? ((points.total - curLevelPts) / (nextLevelPts - curLevelPts)) * 100
-    : 100;
 
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(160deg,#0f2027,#203a43,#2c5364)' }}>
@@ -38,51 +29,24 @@ export default function WorldSelect() {
           }} />
       ))}
 
-      {/* Main content – push down past fixed header */}
+      {/* Main content */}
       <div className="relative pt-14">
-        {/* Player header */}
-        <div className="max-w-4xl mx-auto px-6 pt-6 pb-4">
-
-          {/* Avatar + info + points */}
-          <div className="flex items-center gap-3 mb-4">
-            <div className="text-5xl">{ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0]}</div>
-            <div className="flex-1 min-w-0">
-              <p className="font-black text-white text-xl leading-tight">{currentStudent.name}</p>
-              <p className="text-blue-200 text-sm">Nivå {points.level}: {levelName}</p>
-            </div>
-            <div className="bg-white/15 rounded-2xl px-4 py-2 text-center flex-shrink-0">
-              <p className="text-amber-300 font-black text-xl leading-tight">⭐ {points.total}</p>
-              <p className="text-white/60 text-xs font-semibold">poäng</p>
-            </div>
-          </div>
-
-          {/* Nav pills */}
-          <div className="flex gap-2 flex-wrap">
-            <button onClick={() => setView('my-page')}
-              className="bg-white/20 hover:bg-white/30 text-white text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              👤 Min sida
-            </button>
-            <button onClick={logout}
-              className="bg-white/10 hover:bg-white/20 text-white/60 text-sm font-bold px-4 py-2 rounded-xl transition-colors">
-              Logga ut
-            </button>
-          </div>
-        </div>
-
-        {/* Worlds grid */}
         <div className="max-w-4xl mx-auto px-6 pb-12">
-          <div className="flex flex-col items-center mb-4">
+
+          {/* Logo + titel */}
+          <div className="flex flex-col items-center pt-6 pb-5">
             <img
               src="/mattejakten.png"
               alt="Mattejakten"
-              className="h-36 w-auto mb-2"
-              style={{ clipPath: 'inset(5% round 16px)', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.5))' }}
+              className="h-44 w-auto"
+              style={{ clipPath: 'inset(5% round 20px)', filter: 'drop-shadow(0 6px 20px rgba(0,0,0,0.5))' }}
             />
-            <h2 className="text-white/80 text-sm font-bold uppercase tracking-widest text-center">
+            <h2 className="text-white/70 text-xs font-bold uppercase tracking-widest mt-3">
               ✨ Välj din värld
             </h2>
           </div>
 
+          {/* Worlds grid */}
           <div className="grid grid-cols-2 gap-4">
             {WORLDS.map(world => {
               const isCurrent = world.id === currentWorldId;
@@ -98,12 +62,10 @@ export default function WorldSelect() {
                   }`}
                 >
                   <div className={`bg-gradient-to-br ${world.bg} p-5 relative overflow-hidden h-full`}>
-                    {/* Decorative emojis background */}
                     <div className="absolute right-2 bottom-2 opacity-20 text-4xl leading-none">
                       {world.islandEmojis[0]}
                     </div>
 
-                    {/* Top row: emoji + current badge */}
                     <div className="flex items-start justify-between mb-3">
                       <div className="text-5xl leading-none bg-white/20 rounded-2xl p-1.5 inline-flex items-center justify-center shadow-lg">
                         {world.emoji}
@@ -115,13 +77,11 @@ export default function WorldSelect() {
                       )}
                     </div>
 
-                    {/* Name & subtitle */}
                     <h3 className="text-white font-black text-lg leading-tight mb-0.5">
                       {world.name}
                     </h3>
                     <p className="text-white/70 text-xs font-semibold mb-3">{world.subtitle}</p>
 
-                    {/* Progress */}
                     <div>
                       <div className="flex justify-between text-white/70 text-xs mb-1">
                         <span>{completed}/{world.topicIds.length} klara</span>
