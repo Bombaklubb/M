@@ -1504,6 +1504,154 @@ export const TOPICS: Topic[] = [
     ],
   },
 
+  // ============================================================
+  // MATEMATISKA BEGREPP – en per värld
+  // ============================================================
+
+  // --- Dino (Åk 1-3) ---
+  {
+    id: 'matematik-begrepp-lag',
+    title: 'Matematiska begrepp',
+    icon: '📖',
+    description: 'Lär dig ord som mer, mindre, störst, minst, jämnt och udda',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-lime-400 to-green-500',
+    instruction: {
+      title: 'Matematiska begrepp',
+      text: 'I matematik använder vi speciella ord. Mer och mindre hjälper oss jämföra antal. Störst och minst berättar vilket tal som är på toppen eller botten. Jämna tal (2, 4, 6, 8, 10...) kan delas i två lika delar. Udda tal (1, 3, 5, 7, 9...) kan det inte.',
+      illustration: 'matematik-begrepp',
+      examples: [
+        '7 > 4  →  sju är STÖRRE ÄN fyra',
+        '2 < 8  →  två är MINDRE ÄN åtta',
+        'Jämna tal: 2, 4, 6, 8, 10 ...',
+        'Udda tal: 1, 3, 5, 7, 9 ...',
+      ],
+    },
+    exercises: [
+      { id: 'mb-lag-1', type: 'multiple-choice', question: 'Vilket tal är STÖRST?', options: ['7', '3', 'De är lika', 'Ingen av dem'], correctIndex: 0, points: 10, explanation: '7 är störst – det är längre till höger på tallinjen.' },
+      { id: 'mb-lag-2', type: 'multiple-choice', question: 'Vilket tal är MINST av dessa: 9, 2, 6, 4?', options: ['9', '2', '6', '4'], correctIndex: 1, points: 10, explanation: '2 är minst av 9, 2, 6 och 4.' },
+      { id: 'mb-lag-3', type: 'multiple-choice', question: 'Vilket ord betyder "lika som"?', options: ['Mer', 'Lika med', 'Störst', 'Minst'], correctIndex: 1, points: 10, explanation: '"Lika med" (=) betyder att de två sidorna har samma värde.' },
+      { id: 'mb-lag-4', type: 'multiple-choice', question: 'Är 8 ett jämnt eller udda tal?', options: ['Jämnt', 'Udda', 'Inget av dem', 'Båda'], correctIndex: 0, points: 10, explanation: '8 är jämnt – det slutar på en jämn siffra och kan delas i 4 + 4.' },
+      { id: 'mb-lag-5', type: 'multiple-choice', question: 'Är 5 ett jämnt eller udda tal?', options: ['Jämnt', 'Udda', 'Inget av dem', 'Båda'], correctIndex: 1, points: 10, explanation: '5 är udda – det går inte att dela i två lika delar.' },
+      { id: 'mb-lag-6', type: 'true-false', question: '3 < 7  (tre är MINDRE än sju)', isTrue: true, points: 10, explanation: 'Rätt! 3 < 7 – symbolen < pekar mot det minsta talet.' },
+      { id: 'mb-lag-7', type: 'true-false', question: '10 är ett udda tal', isTrue: false, points: 10, explanation: 'Fel! 10 är ett JÄMNT tal (5 + 5 = 10).' },
+      { id: 'mb-lag-8', type: 'fill-in', question: 'Vilket tal kommer EFTER 6?', answer: '7', acceptableAnswers: ['7', 'sju'], points: 10, explanation: 'Talordningen: ... 5, 6, 7 ... Talet efter 6 är 7.' },
+      { id: 'mb-lag-9', type: 'fill-in', question: 'Vilket tal kommer FÖRE 9?', answer: '8', acceptableAnswers: ['8', 'åtta'], points: 10, explanation: 'Talordningen: ... 7, 8, 9 ... Talet före 9 är 8.' },
+      { id: 'mb-lag-10', type: 'multiple-choice', question: 'Vilket av dessa är ett JÄMNT tal?', options: ['1', '3', '4', '7'], correctIndex: 2, points: 10, explanation: '4 är det enda jämna talet i listan (1, 3 och 7 är udda).' },
+      { id: 'mb-lag-11', type: 'true-false', question: '0 är ett jämnt tal', isTrue: true, points: 10, explanation: 'Rätt! 0 är jämnt – det kan delas i 0 + 0.' },
+      { id: 'mb-lag-12', type: 'multiple-choice', question: 'Vad betyder symbolen ">"?', options: ['Minus', 'Är större än', 'Är lika med', 'Plus'], correctIndex: 1, points: 10, explanation: '> betyder "är större än". T.ex. 8 > 3.' },
+    ],
+  },
+
+  // --- Fantasy (Åk 4-6) ---
+  {
+    id: 'matematik-begrepp-mel',
+    title: 'Matematiska begrepp',
+    icon: '📖',
+    description: 'Faktor, produkt, kvot, täljare, nämnare, primtal och multiplar',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-violet-400 to-purple-500',
+    instruction: {
+      title: 'Matematiska begrepp',
+      text: 'Matematiker använder exakta ord för att beskriva räkneoperationer. En faktor är ett tal vi multiplicerar. Produkten är svaret. Vid division kallas svaret kvot. I ett bråk sitter täljaren ovanpå strecket och nämnaren nedanför. Multiplar av ett tal är dess tabell.',
+      illustration: 'matematik-begrepp',
+      examples: [
+        '3 × 4 = 12  →  3 och 4 är faktorer, 12 är produkten',
+        '18 ÷ 3 = 6  →  kvoten är 6',
+        'I bråket ³⁄₄: 3 är täljaren, 4 är nämnaren',
+        'Multiplar av 3: 3, 6, 9, 12, 15 ...',
+      ],
+    },
+    exercises: [
+      { id: 'mb-mel-1', type: 'multiple-choice', question: 'Vad kallas svaret vid multiplikation?', options: ['Differens', 'Produkt', 'Summa', 'Kvot'], correctIndex: 1, points: 10, explanation: 'Produkten är svaret vid multiplikation. T.ex. 4 × 5 = 20 – 20 är produkten.' },
+      { id: 'mb-mel-2', type: 'multiple-choice', question: 'Vad kallas svaret vid division?', options: ['Kvot', 'Produkt', 'Summa', 'Differens'], correctIndex: 0, points: 10, explanation: 'Kvoten är svaret vid division. T.ex. 12 ÷ 4 = 3 – 3 är kvoten.' },
+      { id: 'mb-mel-3', type: 'multiple-choice', question: 'I bråket ³⁄₄ – vad är TÄLJAREN?', options: ['4', '3', '7', '¾'], correctIndex: 1, points: 10, explanation: 'Täljaren sitter ovanpå bråkstrecket – det är 3.' },
+      { id: 'mb-mel-4', type: 'multiple-choice', question: 'I bråket ³⁄₄ – vad är NÄMNAREN?', options: ['3', '4', '7', '¼'], correctIndex: 1, points: 10, explanation: 'Nämnaren sitter nedanför bråkstrecket – det är 4.' },
+      { id: 'mb-mel-5', type: 'true-false', question: '12 är en multipel av 4', isTrue: true, points: 10, explanation: 'Rätt! 3 × 4 = 12, så 12 finns i 4:ans tabell.' },
+      { id: 'mb-mel-6', type: 'true-false', question: '7 är ett primtal', isTrue: true, points: 10, explanation: 'Rätt! 7 är bara delbart med 1 och 7 – det är ett primtal.' },
+      { id: 'mb-mel-7', type: 'multiple-choice', question: 'Vad kallas ett tal som bara är delbart med 1 och sig självt?', options: ['Jämnt tal', 'Primtal', 'Multipel', 'Faktor'], correctIndex: 1, points: 10, explanation: 'Primtal är tal med exakt två delare: 1 och sig självt. T.ex. 2, 3, 5, 7, 11...' },
+      { id: 'mb-mel-8', type: 'fill-in', question: 'Produkten av 6 × 7 = ?', answer: '42', points: 10, explanation: '6 × 7 = 42.' },
+      { id: 'mb-mel-9', type: 'multiple-choice', question: 'Vilka är FAKTORERNA i 5 × 8 = 40?', options: ['40 och 5', '5 och 8', '8 och 40', '5, 8 och 40'], correctIndex: 1, points: 10, explanation: 'Faktorerna är de tal vi multiplicerar – 5 och 8. Produkten (svaret) är 40.' },
+      { id: 'mb-mel-10', type: 'true-false', question: 'Summan av 13 och 7 är 20', isTrue: true, points: 10, explanation: 'Rätt! 13 + 7 = 20. Summa är svaret vid addition.' },
+      { id: 'mb-mel-11', type: 'fill-in', question: 'Kvoten av 36 ÷ 9 = ?', answer: '4', points: 10, explanation: '36 ÷ 9 = 4.' },
+      { id: 'mb-mel-12', type: 'multiple-choice', question: 'Vad kallas skillnaden mellan två tal?', options: ['Produkt', 'Summa', 'Differens', 'Kvot'], correctIndex: 2, points: 10, explanation: 'Differensen är svaret vid subtraktion. T.ex. 9 − 4 = 5 – 5 är differensen.' },
+    ],
+  },
+
+  // --- Sci-Fi (Åk 7-9) ---
+  {
+    id: 'matematik-begrepp-hog',
+    title: 'Matematiska begrepp',
+    icon: '📖',
+    description: 'Variabel, koefficient, konstant, term, ekvation och funktion',
+    grades: ['7', '8', '9'],
+    minGrade: 7,
+    color: 'from-cyan-500 to-blue-600',
+    instruction: {
+      title: 'Matematiska begrepp',
+      text: 'I algebra och avancerad matematik används exakta begrepp. En variabel (t.ex. x) representerar ett okänt värde. En konstant är ett fast värde. En koefficient är faktorn framför en variabel. Ett uttryck är en kombination av tal och variabler. En ekvation har alltid ett likhetstecken.',
+      illustration: 'matematik-begrepp',
+      examples: [
+        'I  3x + 5:  x är variabeln, 3 är koefficienten, 5 är konstanten',
+        '3x + 5 är ett uttryck med 2 termer',
+        '3x + 5 = 17 är en ekvation',
+        'f(x) = 2x + 1 är en funktion',
+      ],
+    },
+    exercises: [
+      { id: 'mb-hog-1', type: 'multiple-choice', question: 'Vad är en VARIABEL i algebra?', options: ['Ett fast tal', 'En okänd storhet', 'En formel', 'En ekvation'], correctIndex: 1, points: 10, explanation: 'En variabel (t.ex. x, y) representerar ett okänt eller föränderligt värde.' },
+      { id: 'mb-hog-2', type: 'multiple-choice', question: 'I uttrycket 5x + 3 – vad är KOEFFICIENTEN för x?', options: ['3', 'x', '5', '5x'], correctIndex: 2, points: 10, explanation: 'Koefficienten är faktorn framför variabeln. Här är det 5.' },
+      { id: 'mb-hog-3', type: 'multiple-choice', question: 'Vad kallas 3 i uttrycket 4x + 3?', options: ['Koefficient', 'Variabel', 'Konstant', 'Exponent'], correctIndex: 2, points: 10, explanation: '3 är en konstant – ett fast tal utan variabel.' },
+      { id: 'mb-hog-4', type: 'true-false', question: 'En ekvation innehåller alltid ett likhetstecken (=)', isTrue: true, points: 10, explanation: 'Rätt! En ekvation är ett påstående att två uttryck är lika, t.ex. 3x + 1 = 10.' },
+      { id: 'mb-hog-5', type: 'multiple-choice', question: 'Vad kallas de tillåtna x-värdena för en funktion?', options: ['Värdemängd', 'Definitionsmängd', 'Koordinater', 'Axlar'], correctIndex: 1, points: 10, explanation: 'Definitionsmängden (Df) är alla x-värden funktionen är definierad för.' },
+      { id: 'mb-hog-6', type: 'fill-in', question: 'I uttrycket 7x − 2 – hur många TERMER finns det?', answer: '2', acceptableAnswers: ['2', 'två'], points: 10, explanation: 'Termerna separeras av + och −. Här: 7x och −2, alltså 2 termer.' },
+      { id: 'mb-hog-7', type: 'true-false', question: 'x² + 3x + 5 är ett polynom', isTrue: true, points: 10, explanation: 'Rätt! Ett polynom är ett uttryck med en eller flera termer med icke-negativa heltalsexponenter.' },
+      { id: 'mb-hog-8', type: 'multiple-choice', question: 'Vad kallas linjen som en graf aldrig riktigt når?', options: ['Tangent', 'Asymptot', 'Sekant', 'Normal'], correctIndex: 1, points: 10, explanation: 'En asymptot är en linje som grafen närmar sig men aldrig når.' },
+      { id: 'mb-hog-9', type: 'multiple-choice', question: 'I koordinatsystemet – vad kallas den HORISONTELLA axeln?', options: ['y-axeln', 'x-axeln', 'Origo', 'Grafen'], correctIndex: 1, points: 10, explanation: 'Den horisontella axeln kallas x-axeln. Den vertikala kallas y-axeln.' },
+      { id: 'mb-hog-10', type: 'fill-in', question: 'I f(x) = 3x + 2 – vad är värdet av f(4)?', answer: '14', points: 15, explanation: 'f(4) = 3 × 4 + 2 = 12 + 2 = 14.' },
+      { id: 'mb-hog-11', type: 'true-false', question: 'En linjär funktion har alltid en rät linje som graf', isTrue: true, points: 10, explanation: 'Rätt! Formen y = kx + m ger alltid en rät linje.' },
+      { id: 'mb-hog-12', type: 'multiple-choice', question: 'I y = kx + m – vad representerar k?', options: ['y-skärningspunkten', 'x-värdet', 'Linjens lutning', 'Konstanten'], correctIndex: 2, points: 10, explanation: 'k är linjens lutning (riktningskoefficient). m är y-skärningspunkten.' },
+    ],
+  },
+
+  // --- Gym (Gym 1-3) ---
+  {
+    id: 'matematik-begrepp-gym',
+    title: 'Matematiska begrepp',
+    icon: '📖',
+    description: 'Derivata, integral, gränsvärde, definitionsmängd och asymptot',
+    grades: ['gym1', 'gym2', 'gym3'],
+    minGrade: 10,
+    color: 'from-indigo-500 to-purple-700',
+    instruction: {
+      title: 'Matematiska begrepp',
+      text: 'Gymnasiematematiken introducerar begrepp från analys och avancerad algebra. Derivatan f′(x) beskriver förändringshastigheten i varje punkt. Integralen ger arean under kurvan. Definitionsmängden Df är alla x-värden en funktion kan ta. Värdemängden Vf är alla möjliga y-värden.',
+      illustration: 'matematik-begrepp',
+      examples: [
+        'f′(x) är derivatan av f(x) – mäter förändringshastigheten',
+        'Df = alla tillåtna x-värden (definitionsmängd)',
+        'Vf = alla möjliga y-värden (värdemängd)',
+        'Asymptot: grafen närmar sig men når aldrig linjen',
+      ],
+    },
+    exercises: [
+      { id: 'mb-gym-1', type: 'multiple-choice', question: 'Vad mäter derivatan f′(x)?', options: ['Arean under kurvan', 'Förändringshastigheten', 'Funktionsvärdet', 'Integralen'], correctIndex: 1, points: 10, explanation: 'Derivatan mäter hur snabbt funktionen förändras – momentan förändringshastighet.' },
+      { id: 'mb-gym-2', type: 'multiple-choice', question: 'Vad kallas de x-värden en funktion kan ta?', options: ['Värdemängden', 'Definitionsmängden', 'Kodomänen', 'Intervallet'], correctIndex: 1, points: 10, explanation: 'Definitionsmängden Df innehåller alla tillåtna x-värden.' },
+      { id: 'mb-gym-3', type: 'true-false', question: 'Integralen ∫f(x)dx representerar arean under kurvan', isTrue: true, points: 10, explanation: 'Rätt! En bestämd integral ger arean mellan kurvan och x-axeln (med tecken).' },
+      { id: 'mb-gym-4', type: 'multiple-choice', question: 'Vad är derivatan av f(x) = x²?', options: ['x', '2x', 'x³', '2'], correctIndex: 1, points: 15, explanation: 'Regeln: d/dx(xⁿ) = n·xⁿ⁻¹. Här: d/dx(x²) = 2x¹ = 2x.' },
+      { id: 'mb-gym-5', type: 'multiple-choice', question: 'Vad kallas lim(x→a) f(x)?', options: ['Derivatan', 'Integralen', 'Gränsvärdet', 'Asymptoten'], correctIndex: 2, points: 10, explanation: 'lim(x→a) f(x) är gränsvärdet av f(x) när x närmar sig a.' },
+      { id: 'mb-gym-6', type: 'true-false', question: 'En asymptot är en linje som grafen aldrig faktiskt når', isTrue: true, points: 10, explanation: 'Rätt! Grafen kan komma oändligt nära asymptoten men aldrig beröra den.' },
+      { id: 'mb-gym-7', type: 'fill-in', question: 'Om f(x) = 3x², vad är f′(x)?', answer: '6x', acceptableAnswers: ['6x', '6·x'], points: 15, explanation: 'd/dx(3x²) = 3 · 2x = 6x.' },
+      { id: 'mb-gym-8', type: 'multiple-choice', question: 'Vad kallas f(x) = eˣ?', options: ['Polynomfunktion', 'Exponentialfunktion', 'Logaritmfunktion', 'Trigonometrisk funktion'], correctIndex: 1, points: 10, explanation: 'eˣ är den naturliga exponentialfunktionen med basen e ≈ 2,718.' },
+      { id: 'mb-gym-9', type: 'true-false', question: 'ln(e) = 1', isTrue: true, points: 10, explanation: 'Rätt! ln är logaritmen med basen e, och ln(e) = 1 per definition.' },
+      { id: 'mb-gym-10', type: 'fill-in', question: 'Derivatan av f(x) = 5x är?', answer: '5', points: 10, explanation: 'd/dx(5x) = 5. Derivatan av en linjär funktion är konstanten (lutningen).' },
+      { id: 'mb-gym-11', type: 'multiple-choice', question: 'Vilket betecknar VÄRDEMÄNGDEN av en funktion?', options: ['Df', 'Vf', 'f(x)', 'Dom(f)'], correctIndex: 1, points: 10, explanation: 'Vf betecknar värdemängden – alla möjliga utdata (y-värden) av funktionen.' },
+      { id: 'mb-gym-12', type: 'true-false', question: 'En funktion kan bara ha ett y-värde för varje x-värde', isTrue: true, points: 10, explanation: 'Rätt! Det är definitionen av en funktion – varje x ger exakt ett y.' },
+    ],
+  },
+
   // Extended Sci-Fi topics (Åk 7-9)
   ...SCIFI_EXTENDED_TOPICS,
 ];
