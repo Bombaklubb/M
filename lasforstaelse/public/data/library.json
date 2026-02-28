@@ -27268,5 +27268,169 @@
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
     }
+  },
+  {
+    "id": "ak7-tema-001",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Melodifestivalens historia och betydelse",
+    "text": "Melodifestivalen är en av Sveriges mest populära tv-tävlingar och har sänts nästan varje år sedan 1959. Programmet skapades för att välja Sveriges bidrag till Eurovision Song Contest. Under årtiondena har tävlingen utvecklats från en enkel musiktävling i en tv-studio till en stor turné med deltävlingar runt om i landet. I dag besöker Melodifestivalen flera svenska städer innan finalen avgörs i en större arena.\n\nFrån början var det en jury som bestämde vinnaren. Med tiden fick tittarna allt större inflytande genom telefonröstning och senare genom en särskild app. Det har gjort tävlingen mer interaktiv och engagerande. Samtidigt har diskussioner uppstått om hur rättvis röstningen är och om vissa artister gynnas av redan etablerade fanbaser.\n\nMelodifestivalen har också påverkat svensk musikindustri. Många artister har fått sina genombrott genom tävlingen. Exempelvis har både etablerade artister och helt nya namn kunnat nå en bred publik. Låtarna spelas flitigt på radio och strömningstjänster, och vinnaren får representera Sverige internationellt.\n\nProgrammet är mer än bara musik. Det är en stor produktion med avancerad scenteknik, koreografi och visuella effekter. Varje bidrag har tre minuter på sig att övertyga publiken, vilket ställer höga krav på både låtskrivare och artister. Numera skrivs många bidrag av professionella låtskrivarlag, ibland med internationella samarbeten.\n\nSamtidigt har Melodifestivalen fått kritik. Vissa menar att låtarna låter för lika varandra och att kommersiella intressen styr för mycket. Andra anser att tävlingen är en viktig tradition som samlar människor i olika åldrar. För många familjer har det blivit en återkommande lördagsaktivitet under vintern.\n\nSammanfattningsvis är Melodifestivalen både en musiktävling och ett kulturellt fenomen. Den speglar förändringar i samhället, teknikens utveckling och publikens smak. Oavsett om man älskar eller kritiserar tävlingen fortsätter den att engagera miljoner tittare varje år.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför skapades Melodifestivalen från början?",
+        "options": [
+          "För att välja Sveriges bidrag till Eurovision",
+          "För att ersätta alla andra musikprogram",
+          "För att stödja lokala körer",
+          "För att marknadsföra nya tv-kanaler"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur har publikens inflytande förändrats över tid?",
+        "options": [
+          "Publiken har alltid haft full kontroll",
+          "Tittarna har fått större möjlighet att rösta genom teknik",
+          "Röstningen har helt tagits bort",
+          "Endast internationella jurys avgör nu"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken kritik nämns i texten?",
+        "options": [
+          "Att tävlingen är för kort",
+          "Att den saknar publik",
+          "Att låtarna kan låta för lika och styras av kommersiella intressen",
+          "Att den bara sänds på radio"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar utvecklingen av tävlingen enligt texten?",
+        "options": [
+          "Att intresset har minskat varje år",
+          "Att bara unga tittar",
+          "Att juryn numera bestämmer allt",
+          "Att tävlingen har blivit en större och mer tekniskt avancerad produktion"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Melodifestivalens utveckling och betydelse",
+          "En enskild artists karriär",
+          "Hur man skriver en schlagerlåt",
+          "Eurovisions regler i detalj"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur beskrivs Melodifestivalen i slutet av texten?",
+        "options": [
+          "Som en tillfällig trend",
+          "Som ett kulturellt fenomen som engagerar många",
+          "Som en tävling utan betydelse",
+          "Som ett program bara för artister"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-001",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak7-tema-002",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Vägen från deltävling till final",
+    "text": "Melodifestivalen består av flera deltävlingar innan finalen avgörs. Upplägget gör att både artister och publik får följa en längre process. Varje deltävling innehåller ett antal bidrag som framförs live inför publik. Efter varje program går några bidrag direkt till final, medan andra får en ny chans genom ett uppsamlingsprogram.\n\nSystemet med deltävlingar infördes för att skapa större spänning och ge fler städer möjlighet att vara värdar. Det innebär också att produktionen turnerar runt i landet. För artisterna kan det vara både en möjlighet och en utmaning. De måste prestera flera gånger under press och hantera både positiva och negativa reaktioner.\n\nRöstningen sker genom en kombination av publikröster och internationella jurys i finalen. Syftet är att hitta ett bidrag som inte bara fungerar i Sverige utan också har potential internationellt. Det kan dock uppstå diskussioner om balansen mellan folklig smak och expertbedömning.\n\nUnder repetitionerna arbetar tekniker, dansare, producenter och stylister intensivt. En artist som deltar är sällan ensam, utan omges av ett helt team. Tre minuter på scen kräver veckor av planering. Ljussättning, kameravinklar och koreografi måste samspela för att skapa en helhet.\n\nFör unga tittare kan Melodifestivalen bli en första kontakt med hur tv-produktion fungerar. Programmet visar hur kultur, teknik och ekonomi hänger ihop. Samtidigt är det en tävling där känslor spelar stor roll. När resultatet presenteras kan glädje och besvikelse märkas tydligt.\n\nAtt ta sig till final är därför både en musikalisk och strategisk prestation. Det handlar inte bara om att ha en bra låt, utan också om att nå fram till publiken och skapa ett minnesvärt framträdande.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför infördes deltävlingar?",
+        "options": [
+          "För att minska antalet bidrag",
+          "För att skapa mer spänning och låta fler städer vara värdar",
+          "För att undvika publikröstning",
+          "För att göra tävlingen kortare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka är med och avgör finalresultatet?",
+        "options": [
+          "Endast svenska jurys",
+          "Bara publiken i arenan",
+          "Publiken och internationella jurys",
+          "En ensam programledare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar arbetet bakom scenen?",
+        "options": [
+          "Att artisten arbetar helt själv",
+          "Att tre minuter på scen kräver lång planering och samarbete",
+          "Att repetitionerna är oviktiga",
+          "Att tekniken inte spelar någon roll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan uppstå kring röstningen enligt texten?",
+        "options": [
+          "Diskussioner om balansen mellan publik och jury",
+          "Fullständig enighet varje år",
+          "Problem med att hitta artister",
+          "Att finalen ställs in"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkas artisterna av deltävlingarna?",
+        "options": [
+          "De slipper press",
+          "De uppträder bara en gång",
+          "De behöver inte förbereda sig",
+          "De måste prestera flera gånger under press"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Eurovisions historia",
+          "En specifik vinnarlåt",
+          "Processen från deltävling till final",
+          "Hur man röstar via appen"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 360,
+      "fingerprint": "ak7-tema-002",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
   }
 ]
