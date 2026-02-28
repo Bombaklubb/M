@@ -13,7 +13,12 @@ export default function AppHeader() {
           className="flex items-center gap-2 group"
           title="Till startsidan"
         >
-          <img src="/mattejakten.png" alt="Mattejakten" className="h-8 w-auto" />
+          <img
+            src="/mattejakten.png"
+            alt="Mattejakten"
+            className="h-10 w-auto"
+            style={{ mixBlendMode: 'multiply' }}
+          />
         </button>
       </div>
     </header>

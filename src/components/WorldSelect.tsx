@@ -71,9 +71,17 @@ export default function WorldSelect() {
 
         {/* Worlds grid */}
         <div className="max-w-4xl mx-auto px-6 pb-12">
-          <h2 className="text-white/80 text-sm font-bold uppercase tracking-widest text-center mb-5">
-            ✨ Välj din värld
-          </h2>
+          <div className="flex flex-col items-center mb-4">
+            <img
+              src="/mattejakten.png"
+              alt="Mattejakten"
+              className="h-24 w-auto mb-2"
+              style={{ mixBlendMode: 'multiply' }}
+            />
+            <h2 className="text-white/80 text-sm font-bold uppercase tracking-widest text-center">
+              ✨ Välj din värld
+            </h2>
+          </div>
 
           <div className="grid grid-cols-2 gap-4">
             {WORLDS.map(world => {
