@@ -3,8 +3,6 @@ import { useApp } from '../contexts/AppContext';
 import { getPoints, initPoints } from '../utils/storage';
 import { ALL_AVATARS } from '../data/avatars';
 
-import { MatteLogo } from './MatteLogo';
-
 export default function AppHeader() {
   const { currentStudent, setView, logout } = useApp();
 
@@ -27,7 +25,11 @@ export default function AppHeader() {
           className="flex items-center gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
           title="Till startsidan"
         >
-          <MatteLogo size={44} />
+          <img
+            src="/mattejakten.png"
+            alt="Mattejakten"
+            className="h-12 w-auto"
+          />
           <span className="text-white font-extrabold text-lg hidden sm:inline tracking-wide">
             Mattejakten
           </span>
