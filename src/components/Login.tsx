@@ -3,6 +3,7 @@ import { findOrCreateStudent } from '../utils/storage';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import { BASE_AVATARS } from '../data/avatars';
+import { MatteLogo } from './MatteLogo';
 
 const AVATARS = BASE_AVATARS;
 
@@ -37,13 +38,11 @@ export default function Login() {
       <div className="relative w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-6">
-          <img
-            src="/mattejakten.png"
-            alt="Mattejakten"
-            className="h-64 w-auto mx-auto mb-2"
-            style={{ mixBlendMode: 'multiply', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.5))' }}
-          />
-          <p className="text-blue-200 mt-1">Utforska matematikens världar!</p>
+          <div className="flex justify-center mb-3">
+            <MatteLogo size={160} />
+          </div>
+          <h1 className="text-4xl font-extrabold text-white mb-1">Mattejakten</h1>
+          <p className="text-blue-200">Utforska matematikens världar!</p>
           <div className="flex justify-center gap-2 mt-3 flex-wrap">
             {['🦕 Dino','🏰 Fantasy','🚀 Sci-Fi','🌌 Rymd'].map((w,i)=>(
               <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-white/70 font-semibold">{w}</span>
