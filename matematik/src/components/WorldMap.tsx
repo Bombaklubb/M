@@ -87,7 +87,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
         <h2 className="text-gray-700 font-bold text-sm uppercase tracking-widest mt-1">Kapitel</h2>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           {worldTopics.map((topic, idx) => {
             const tp = progress.find(p => p.topicId === topic.id);
             const stars = tp?.stars ?? 0;
