@@ -2,7 +2,8 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getPoints, initPoints } from '../utils/storage';
 import { ALL_AVATARS } from '../data/avatars';
-import { LEVEL_NAMES } from '../types';
+
+import { MatteLogo } from './MatteLogo';
 
 export default function AppHeader() {
   const { currentStudent, setView, logout } = useApp();
@@ -23,15 +24,13 @@ export default function AppHeader() {
         {/* Logo – vänster */}
         <button
           onClick={() => currentStudent && setView('dashboard')}
-          className="flex items-center gap-2 group flex-shrink-0"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
           title="Till startsidan"
         >
-          <img
-            src="/mattejakten.png"
-            alt="Mattejakten"
-            className="h-14 w-auto"
-            style={{ mixBlendMode: 'multiply', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.6))' }}
-          />
+          <MatteLogo size={44} />
+          <span className="text-white font-extrabold text-lg hidden sm:inline tracking-wide">
+            Mattejakten
+          </span>
         </button>
 
         {/* Användarinfo – höger (visas bara när inloggad) */}
