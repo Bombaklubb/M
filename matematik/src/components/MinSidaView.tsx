@@ -3,15 +3,17 @@ import AppHeader from './AppHeader';
 import Achievements from './Achievements';
 import StudentResults from './StudentResults';
 import AvatarPicker from './AvatarPicker';
+import CollectionView from './CollectionView';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS } from '../data/avatars';
 import { GRADE_LABELS } from '../types';
 
-type Tab = 'achievements' | 'results';
+type Tab = 'achievements' | 'results' | 'collection';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'achievements', label: 'Utmärkelser', icon: '🏆' },
   { id: 'results',      label: 'Resultat',    icon: '📊' },
+  { id: 'collection',   label: 'Samling',     icon: '🏅' },
 ];
 
 export default function MinSidaView() {
@@ -85,6 +87,7 @@ export default function MinSidaView() {
         <div className="pb-12">
           {activeTab === 'achievements' && <Achievements hideHeader />}
           {activeTab === 'results'      && <StudentResults hideHeader />}
+          {activeTab === 'collection'   && <CollectionView hideHeader />}
         </div>
       </div>
 
