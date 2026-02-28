@@ -87,42 +87,28 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
         <h2 className="text-gray-700 font-bold text-sm uppercase tracking-widest mt-1">Kapitel</h2>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-4 gap-2">
           {worldTopics.map((topic, idx) => {
             const tp = progress.find(p => p.topicId === topic.id);
-            const diff = getDifficultyLevel(currentStudent.id, topic.id);
-            const diffLabel = DIFFICULTY_LABELS[diff];
-            const diffColor = DIFFICULTY_COLORS[diff];
             const stars = tp?.stars ?? 0;
             const isCompleted = tp?.completed ?? false;
             const hasStarted = !!tp;
 
             return (
               <button key={topic.id} onClick={()=>selectTopic(topic)}
-                className="bg-white border border-gray-200 rounded-2xl p-3 shadow-sm hover:shadow-md hover:border-gray-300 hover:scale-[1.02] active:scale-[0.99] transition-all text-left">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center font-black text-white text-sm flex-shrink-0 bg-gradient-to-br ${topic.color} shadow-md`}>
-                    {idx + 1}
-                  </div>
-                  <div className="flex gap-1 flex-wrap">
-                    {isCompleted && <span className="bg-green-100 text-green-700 text-xs font-bold px-1.5 py-0.5 rounded-full">✓</span>}
-                    {!hasStarted && <span className="bg-blue-100 text-blue-700 text-xs font-bold px-1.5 py-0.5 rounded-full">Ny</span>}
-                  </div>
+                className="bg-white border border-gray-200 rounded-xl p-2.5 shadow-sm hover:shadow-md hover:border-gray-300 hover:scale-[1.03] active:scale-[0.98] transition-all text-left">
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-xs mb-1.5 bg-gradient-to-br ${topic.color} shadow-md`}>
+                  {isCompleted ? '✓' : idx + 1}
                 </div>
-                <p className="font-black text-gray-800 text-sm leading-tight mb-1">{topic.title}</p>
-                <p className="text-gray-400 text-xs line-clamp-2 mb-1.5">{topic.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-0.5">
-                    {[0,1,2].map(i=>(
-                      <span key={i} className={`text-sm ${i<stars?'text-yellow-400':'text-gray-200'}`}>★</span>
-                    ))}
-                  </div>
-                  {hasStarted && (
-                    <span className={`text-xs px-1.5 py-0.5 rounded-full font-bold ${diffColor}`}>
-                      {diffLabel}
-                    </span>
-                  )}
+                <p className="font-black text-gray-800 text-xs leading-tight mb-1 line-clamp-2">{topic.title}</p>
+                <div className="flex gap-0.5">
+                  {[0,1,2].map(i=>(
+                    <span key={i} className={`text-xs ${i<stars?'text-yellow-400':'text-gray-200'}`}>★</span>
+                  ))}
                 </div>
+                {!hasStarted && (
+                  <span className="inline-block mt-1 bg-blue-100 text-blue-700 text-[10px] font-bold px-1 py-0.5 rounded-full leading-none">Ny</span>
+                )}
               </button>
             );
           })}
