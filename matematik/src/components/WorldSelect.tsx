@@ -43,42 +43,16 @@ export default function WorldSelect() {
         {/* Player header */}
         <div className="max-w-4xl mx-auto px-6 pt-6 pb-4">
 
-          {/* Avatar + info + quick stats */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
-            <div className="flex items-center gap-3 flex-1 min-w-0">
-              <div className="text-5xl">{ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0]}</div>
-              <div>
-                <p className="font-black text-white text-xl leading-tight">{currentStudent.name}</p>
-                <p className="text-blue-200 text-sm">Nivå {points.level}: {levelName}</p>
-              </div>
+          {/* Avatar + info + points */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="text-5xl">{ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0]}</div>
+            <div className="flex-1 min-w-0">
+              <p className="font-black text-white text-xl leading-tight">{currentStudent.name}</p>
+              <p className="text-blue-200 text-sm">Nivå {points.level}: {levelName}</p>
             </div>
-
-            <div className="flex gap-2 flex-wrap">
-              <button onClick={() => setView('quick-drill')}
-                className="bg-amber-500 hover:bg-amber-400 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
-                ⚡ Snabbträning
-              </button>
-              <button onClick={() => setView('quest')}
-                className="bg-purple-500 hover:bg-purple-400 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
-                ⚔️ Äventyr
-              </button>
-              <button onClick={() => setView('error-bank')}
-                className="bg-red-500/80 hover:bg-red-500 text-white font-bold px-4 py-2 rounded-xl text-sm transition-colors">
-                💡 Försök igen
-              </button>
-            </div>
-          </div>
-
-          {/* Level bar */}
-          <div className="bg-white/10 rounded-2xl px-5 py-3 mb-4">
-            <div className="flex justify-between text-xs text-white/70 mb-2">
-              <span>⭐ {points.total} poäng</span>
-              <span>🔥 {points.streak} dagars streak</span>
-              <span>Nästa nivå: {nextLevelPts}p</span>
-            </div>
-            <div className="h-3 bg-white/20 rounded-full overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full transition-all"
-                style={{ width: `${Math.min(100, levelPct)}%` }} />
+            <div className="bg-white/15 rounded-2xl px-4 py-2 text-center flex-shrink-0">
+              <p className="text-amber-300 font-black text-xl leading-tight">⭐ {points.total}</p>
+              <p className="text-white/60 text-xs font-semibold">poäng</p>
             </div>
           </div>
 
