@@ -28088,5 +28088,415 @@
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
     }
+  },
+  {
+    "id": "ak4-natur-skog-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Skogens hemligheter",
+    "text": "En skog kan verka tyst, men den är full av liv. Där finns träd, buskar, svampar och många olika djur. På marken kryper myror och skalbaggar. I träden bygger fåglar sina bon.\n\nTräden är viktiga för både människor och djur. De ger syre som vi andas och skyddar marken mot stark vind. På hösten tappar många träd sina löv. Då ändrar skogen färg och blir gul, orange och röd.\n\nI skogen kan man plocka bär och svamp, men man måste veta vilka som är ätbara. Det är också viktigt att vara rädd om naturen. Man ska inte skräpa ner eller bryta grenar i onödan.\n\nSkogen är en plats för lek, vila och upptäckter. Många går dit för att promenera eller bara lyssna på fåglarnas sång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad finns i skogen enligt texten?",
+        "options": [
+          "Bara träd",
+          "Träd, djur och växter",
+          "Endast stora djur",
+          "Inga insekter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är träden viktiga för människor?",
+        "options": [
+          "De ger syre att andas",
+          "De gör att det alltid är varmt",
+          "De lyser på natten",
+          "De tar bort alla djur"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med många träd på hösten?",
+        "options": [
+          "De får fler löv",
+          "De blommar",
+          "De tappar sina löv",
+          "De blir blå"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man tänka på när man är i skogen?",
+        "options": [
+          "Att skräpa ner",
+          "Att bryta grenar",
+          "Att ropa högt hela tiden",
+          "Att vara rädd om naturen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man plocka i skogen?",
+        "options": [
+          "Bär och svamp",
+          "Bilar",
+          "Glass",
+          "Stolar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bygger ett hus",
+          "Skogens djurpark",
+          "Skogens liv och varför den är viktig",
+          "En resa till staden"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 203,
+      "fingerprint": "ak4-natur-skog-001",
+      "generatedAt": "2026-02-28T12:50:32.171Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-halsa-cykel-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "hälsa",
+    "title": "Att cykla säkert",
+    "text": "Att cykla är roligt och bra motion. Många barn cyklar till skolan eller till sina vänner. För att cykla säkert är det viktigt att använda hjälm. Hjälmen skyddar huvudet om man ramlar.\n\nDet är också viktigt att cykeln har fungerande bromsar och ringklocka. Om det är mörkt ute ska cykeln ha lampor och reflexer så att andra trafikanter ser dig.\n\nNär man cyklar i trafiken måste man följa regler. Man ska stanna vid rött ljus och visa med handen om man ska svänga. Det är bra att hålla uppsikt och inte använda mobilen när man cyklar.\n\nGenom att vara försiktig och följa reglerna minskar risken för olyckor. Då kan cyklingen vara både trygg och rolig.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Varför ska man använda hjälm?",
+        "options": [
+          "För att se snabb ut",
+          "För att skydda huvudet om man ramlar",
+          "För att den är snygg",
+          "För att slippa ringa på klockan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska cykeln ha när det är mörkt?",
+        "options": [
+          "Färgglada klistermärken",
+          "Extra stora hjul",
+          "Lampor och reflexer",
+          "En flagga"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man göra vid rött ljus?",
+        "options": [
+          "Cykla snabbare",
+          "Svänga direkt",
+          "Stanna",
+          "Hoppa av cykeln"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad bör man undvika när man cyklar?",
+        "options": [
+          "Att hålla i styret",
+          "Att titta framåt",
+          "Att använda mobilen",
+          "Att bromsa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är bra med att cykla enligt texten?",
+        "options": [
+          "Det är roligt och bra motion",
+          "Man slipper röra sig",
+          "Det är farligt",
+          "Man behöver ingen utrustning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Olika sorters cyklar",
+          "Hur man tävlar i cykel",
+          "Hur man lagar en cykel",
+          "Hur man cyklar säkert"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 190,
+      "fingerprint": "ak4-halsa-cykel-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-geo-vulkan-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Vulkaner och lava",
+    "text": "En vulkan är ett berg som kan få utbrott. Djupt nere i jorden finns het magma. När trycket blir för stort kan magman pressas upp genom vulkanen. När den kommer upp på marken kallas den lava.\n\nEtt vulkanutbrott kan vara farligt. Lava är mycket varm och kan förstöra hus och vägar. Det kan också komma aska som sprids i luften. Ibland måste människor flytta från sina hem för att vara säkra.\n\nSamtidigt kan vulkaner skapa ny mark. När lavan svalnar blir den hård sten. På vissa platser har nya öar bildats efter utbrott.\n\nForskare studerar vulkaner för att försöka förstå när de kan få utbrott. På så sätt kan man varna människor i tid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas magma när den kommer upp på marken?",
+        "options": [
+          "Sten",
+          "Lava",
+          "Sand",
+          "Rök"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var finns magma innan ett utbrott?",
+        "options": [
+          "Djupt nere i jorden",
+          "I molnen",
+          "I havet",
+          "I träden"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan spridas i luften vid ett utbrott?",
+        "options": [
+          "Snö",
+          "Regnbågar",
+          "Aska",
+          "Glass"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför studerar forskare vulkaner?",
+        "options": [
+          "För att göra dem större",
+          "För att samla lava som souvenir",
+          "För att bygga hus där",
+          "För att kunna varna människor i tid"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan hända när lava svalnar?",
+        "options": [
+          "Den blir hård sten",
+          "Den försvinner helt",
+          "Den blir vatten",
+          "Den blir mjukare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bestiger berg",
+          "Hur vulkaner fungerar",
+          "Olika sorters väder",
+          "Hur man odlar växter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 188,
+      "fingerprint": "ak4-geo-vulkan-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-vetenskap-rymd-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Rymden och planeterna",
+    "text": "Rymden är det stora området utanför jorden. Där finns planeter, stjärnor och galaxer. Jorden är en av åtta planeter som kretsar runt solen.\n\nSolen är en stjärna som ger oss ljus och värme. Månen kretsar runt jorden och lyser på natten. Ibland kan vi se planeter som Mars och Venus som små ljuspunkter på himlen.\n\nAstronauter är personer som reser ut i rymden med raketer. De arbetar på rymdstationer och gör experiment. I rymden finns nästan ingen luft, därför måste astronauter ha speciella dräkter.\n\nForskare använder teleskop för att studera rymden. Genom att titta på stjärnorna kan de lära sig mer om universum och hur det bildades.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många planeter kretsar runt solen enligt texten?",
+        "options": [
+          "Åtta",
+          "Fem",
+          "Tolv",
+          "Två"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är solen?",
+        "options": [
+          "En planet",
+          "En stjärna",
+          "En måne",
+          "En raket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behöver astronauter speciella dräkter?",
+        "options": [
+          "För att det är kallt i Sverige",
+          "För att visa vem de är",
+          "För att det nästan inte finns någon luft i rymden",
+          "För att kunna springa snabbare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder forskare för att studera rymden?",
+        "options": [
+          "Kikare för fåglar",
+          "Mikroskop",
+          "Ficklampor",
+          "Teleskop"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kretsar månen runt?",
+        "options": [
+          "Jorden",
+          "Solen",
+          "Mars",
+          "Venus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bygger en raket",
+          "Rymden och vad som finns där",
+          "Flygplan i Sverige",
+          "Hur man blir pilot"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 184,
+      "fingerprint": "ak4-vetenskap-rymd-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-varde-vanskap-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "värdegrund",
+    "title": "Vänskap i klassen",
+    "text": "I klass 4B går elever med olika intressen och bakgrunder. Amir gillar att rita serier, Maja spelar fotboll och Kim älskar att läsa böcker. I klassen finns också Noor som använder rullstol och är duktig på schack.\n\nIbland kan det bli missförstånd när man arbetar i grupp. Då är det viktigt att lyssna på varandra och försöka förstå. När eleverna planerade en klassfest hade alla olika idéer. Genom att samarbeta hittade de en lösning som alla var nöjda med.\n\nEn bra vän stöttar andra och säger ifrån om någon blir retad. I klassen har de bestämt att alla ska få vara med på rasterna. Det gör att fler känner sig trygga.\n\nVänskap handlar inte om att vara lika. Det handlar om att visa respekt och hjälpa varandra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gillar Amir att göra?",
+        "options": [
+          "Spela schack",
+          "Rita serier",
+          "Spela fotboll",
+          "Sjunga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder Noor enligt texten?",
+        "options": [
+          "Glasögon",
+          "Käpp",
+          "Rullstol",
+          "Hörapparat"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde eleverna när de hade olika idéer om klassfesten?",
+        "options": [
+          "De slutade prata med varandra",
+          "De samarbetade för att hitta en lösning",
+          "De lät en person bestämma allt",
+          "De ställde in festen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man göra om någon blir retad?",
+        "options": [
+          "Skratta",
+          "Gå därifrån",
+          "Låtsas som ingenting",
+          "Säga ifrån och stötta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad har klassen bestämt om rasterna?",
+        "options": [
+          "Att alla ska få vara med",
+          "Att bara några får leka",
+          "Att ingen får prata",
+          "Att man måste tävla"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Olika fritidsintressen",
+          "En klassresa",
+          "Vänskap och respekt i klassen",
+          "Hur man spelar schack"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 193,
+      "fingerprint": "ak4-varde-vanskap-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
   }
 ]
