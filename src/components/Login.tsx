@@ -40,8 +40,8 @@ export default function Login() {
           <img
             src="/mattejakten.png"
             alt="Mattejakten"
-            className="h-36 w-auto mx-auto mb-2"
-            style={{ mixBlendMode: 'multiply' }}
+            className="h-52 w-auto mx-auto mb-2"
+            style={{ clipPath: 'inset(5% round 16px)', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.5))' }}
           />
           <p className="text-blue-200 mt-1">Utforska matematikens världar!</p>
           <div className="flex justify-center gap-2 mt-3 flex-wrap">
