@@ -37,11 +37,12 @@ export default function Login() {
       <div className="relative w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl shadow-2xl mb-3"
-            style={{background:'linear-gradient(135deg,#f59e0b,#ef4444)'}}>
-            <span className="text-4xl">🎯</span>
-          </div>
-          <h1 className="text-5xl font-black text-white tracking-tight drop-shadow-lg">Mattejakten</h1>
+          <img
+            src="/mattejakten.png"
+            alt="Mattejakten"
+            className="h-36 w-auto mx-auto mb-2"
+            style={{ mixBlendMode: 'multiply' }}
+          />
           <p className="text-blue-200 mt-1">Utforska matematikens världar!</p>
           <div className="flex justify-center gap-2 mt-3 flex-wrap">
             {['🦕 Dino','🏰 Fantasy','🚀 Sci-Fi','🌌 Rymd'].map((w,i)=>(
