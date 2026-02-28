@@ -27432,5 +27432,169 @@
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
     }
+  },
+  {
+    "id": "ak4-tema-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "tv-spel",
+    "title": "Vad är Fortnite?",
+    "text": "Fortnite är ett populärt tv-spel som spelas av miljontals människor runt om i världen. Spelet går ut på att överleva på en ö tillsammans med många andra spelare. Man hoppar fallskärm från en flygande buss och landar på kartan. Där samlar man vapen, material och utrustning. Målet är att vara den sista spelaren eller det sista laget som är kvar.\n\nI Fortnite kan man spela ensam eller i lag. Många väljer att samarbeta med kompisar. Kommunikation och planering är viktigt för att vinna. Under spelets gång krymper en storm runt kartan. Den gör spelområdet mindre och tvingar spelarna att mötas.\n\nEn särskild sak med Fortnite är att man kan bygga väggar, trappor och skydd av material som trä, sten och metall. Det gör spelet annorlunda jämfört med många andra spel i samma genre. Spelare kan också ändra utseende på sina figurer genom så kallade skins.\n\nFortnite är gratis att ladda ner, men det finns saker i spelet som kostar pengar. Därför är det viktigt att tänka efter innan man köper något. Spelet har en åldersgräns och vuxna bör hjälpa yngre barn att förstå regler och säkerhet på nätet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är målet i Fortnite?",
+        "options": [
+          "Att bygga det största huset",
+          "Att samla flest skins",
+          "Att vara den sista spelaren eller laget kvar",
+          "Att flyga längst med bussen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur börjar en match i Fortnite?",
+        "options": [
+          "Man startar i en bil",
+          "Man hoppar fallskärm från en flygande buss",
+          "Man springer in från kanten av kartan",
+          "Man väljer en stad direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när stormen krymper?",
+        "options": [
+          "Spelområdet blir mindre",
+          "Alla spelare får mer liv",
+          "Matchen pausas",
+          "Kartan blir större"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör Fortnite annorlunda jämfört med många andra liknande spel?",
+        "options": [
+          "Att man kan bygga skydd av olika material",
+          "Att det bara finns en karta",
+          "Att man inte kan spela i lag",
+          "Att spelet saknar vapen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det bra att tänka efter innan man köper saker i spelet?",
+        "options": [
+          "För att spelet kan bli långsamt",
+          "För att vissa saker kostar riktiga pengar",
+          "För att man annars förlorar direkt",
+          "För att man inte får spela igen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man fuskar i spelet",
+          "Fortnites historia som företag",
+          "En speciell turnering",
+          "Vad Fortnite är och hur det fungerar"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 214,
+      "fingerprint": "ak4-tema-001",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-002",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "tv-spel",
+    "title": "Att spela tillsammans i Fortnite",
+    "text": "Många barn och vuxna tycker om att spela Fortnite tillsammans. Spelet gör det möjligt att bilda lag med två, tre eller fyra spelare. När man spelar i lag är samarbete viktigt. Spelarna kan prata med varandra genom headset och planera hur de ska röra sig på kartan.\n\nOm en spelare blir träffad kan lagkamrater hjälpa till att rädda personen. Det gör att man behöver tänka på varandra och inte bara på sig själv. Vissa lag delar upp roller, till exempel att en samlar material medan en annan letar efter bra utrustning.\n\nSamtidigt är det viktigt att följa regler och visa respekt. På nätet kan man möta människor man inte känner. Därför ska man inte dela personlig information. Det är också viktigt att ta pauser och inte spela för länge.\n\nFortnite kan vara roligt och socialt, men det kräver ansvar. Genom att samarbeta, vara schysst och tänka på säkerheten kan spelandet bli en positiv upplevelse för många.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många spelare kan vara i ett lag enligt texten?",
+        "options": [
+          "Endast en spelare",
+          "Två, tre eller fyra spelare",
+          "Minst tio spelare",
+          "Så många man vill"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan spelare prata med varandra under spelet?",
+        "options": [
+          "Genom brev",
+          "Genom att skriva på papper",
+          "Genom headset",
+          "Genom tv:n"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man undvika att dela på nätet?",
+        "options": [
+          "Personlig information",
+          "Speltips",
+          "Kartans namn",
+          "Vilken färg man gillar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det bra att ta pauser?",
+        "options": [
+          "För att spelet annars stängs av",
+          "För att bli bättre snabbare",
+          "För att visa respekt mot laget",
+          "För att inte spela för länge"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad behöver lagkamrater göra om någon blir träffad?",
+        "options": [
+          "Lämna matchen direkt",
+          "Ignorera personen",
+          "Hjälpa och rädda spelaren",
+          "Starta en ny match"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man laddar ner spelet",
+          "Hur man spelar tillsammans och tar ansvar",
+          "Vilka vapen som är starkast",
+          "Hur man ändrar sitt utseende"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 205,
+      "fingerprint": "ak4-tema-002",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
   }
 ]
