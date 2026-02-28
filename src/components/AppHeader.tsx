@@ -29,8 +29,8 @@ export default function AppHeader() {
           <img
             src="/mattejakten.png"
             alt="Mattejakten"
-            className="h-11 w-auto"
-            style={{ clipPath: 'inset(6% round 12px)', filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.5))' }}
+            className="h-14 w-auto"
+            style={{ mixBlendMode: 'multiply', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.6))' }}
           />
         </button>
 
