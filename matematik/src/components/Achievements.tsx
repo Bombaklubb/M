@@ -31,24 +31,24 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
     <div className={`min-h-screen ${hideHeader ? 'bg-transparent' : 'bg-gray-50'}`}>
       {!hideHeader && <AppHeader />}
 
-      {/* Header */}
-      <div className={`bg-gradient-to-r from-purple-600 to-indigo-700 text-white ${hideHeader ? 'pt-4' : 'pt-16'} pb-8 px-4`}>
-        <div className="max-w-lg mx-auto">
-          {!hideHeader && (
+      {/* Header – only shown when standalone (not inside a tab) */}
+      {!hideHeader && (
+        <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white pt-16 pb-8 px-4">
+          <div className="max-w-lg mx-auto">
             <button onClick={() => setView('my-results')} className="text-white/80 hover:text-white text-sm mb-4 block">
               ← Mina resultat
             </button>
-          )}
-          <h1 className="text-2xl font-black">🏆 Utmärkelser & Samling</h1>
-          <p className="text-white/80 mt-1">{totalUnlocked} av {totalPossible} upplåsta</p>
-          <div className="h-3 bg-white/30 rounded-full overflow-hidden mt-3">
-            <div
-              className="h-full bg-white rounded-full transition-all"
-              style={{ width: `${(totalUnlocked / totalPossible) * 100}%` }}
-            />
+            <h1 className="text-2xl font-black">🏆 Utmärkelser & Samling</h1>
+            <p className="text-white/80 mt-1">{totalUnlocked} av {totalPossible} upplåsta</p>
+            <div className="h-3 bg-white/30 rounded-full overflow-hidden mt-3">
+              <div
+                className="h-full bg-white rounded-full transition-all"
+                style={{ width: `${(totalUnlocked / totalPossible) * 100}%` }}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="max-w-lg mx-auto px-4 py-6 space-y-8">
 

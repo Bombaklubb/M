@@ -17,10 +17,6 @@
   }
 }
 
-/* Font size presets */
-html[data-font-size="sm"] { font-size: 14px; }
-html[data-font-size="md"] { font-size: 16px; }
-html[data-font-size="lg"] { font-size: 19px; }
 
 @layer components {
   .btn-primary {
