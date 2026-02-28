@@ -39,7 +39,7 @@ export default function WorldSelect() {
               <img
                 src="/mattejakten.png"
                 alt="Mattejakten"
-                className="h-24 w-auto"
+                className="h-36 w-auto"
               />
               <h1 className="text-4xl md:text-5xl font-extrabold text-white">
                 Mattejakten
