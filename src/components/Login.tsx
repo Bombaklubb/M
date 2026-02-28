@@ -40,15 +40,8 @@ export default function Login() {
           <img
             src="/mattejakten.png"
             alt="Mattejakten"
-            className="h-56 w-auto mx-auto mb-1"
+            className="h-72 w-auto mx-auto mb-1"
           />
-          <h1 className="text-4xl font-extrabold text-white mb-1">Mattejakten</h1>
-          <p className="text-blue-200">Utforska matematikens världar!</p>
-          <div className="flex justify-center gap-2 mt-3 flex-wrap">
-            {['🦕 Dino','🏰 Fantasy','🚀 Sci-Fi','🌌 Rymd'].map((w,i)=>(
-              <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-white/70 font-semibold">{w}</span>
-            ))}
-          </div>
         </div>
 
         {/* Card */}
