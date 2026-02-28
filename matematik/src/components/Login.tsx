@@ -3,7 +3,6 @@ import { findOrCreateStudent } from '../utils/storage';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import { BASE_AVATARS } from '../data/avatars';
-import { MatteLogo } from './MatteLogo';
 
 const AVATARS = BASE_AVATARS;
 
@@ -38,9 +37,11 @@ export default function Login() {
       <div className="relative w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="flex justify-center mb-3">
-            <MatteLogo size={160} />
-          </div>
+          <img
+            src="/mattejakten.png"
+            alt="Mattejakten"
+            className="h-56 w-auto mx-auto mb-1"
+          />
           <h1 className="text-4xl font-extrabold text-white mb-1">Mattejakten</h1>
           <p className="text-blue-200">Utforska matematikens världar!</p>
           <div className="flex justify-center gap-2 mt-3 flex-wrap">
