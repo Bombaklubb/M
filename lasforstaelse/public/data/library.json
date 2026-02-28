@@ -27678,5 +27678,415 @@
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
     }
+  },
+  {
+    "id": "ak4-tema-003",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Vad är sushi?",
+    "text": "Sushi är en maträtt som kommer från Japan. Den består oftast av ris som smaksätts med vinäger. Till riset lägger man olika saker, till exempel rå fisk, räkor, ägg eller grönsaker. Ibland rullas allt in i ett tunt sjögräs som kallas nori.\n\nDet finns många olika sorters sushi. En sort heter nigiri och är en liten risklump med något ovanpå. En annan sort är maki, som är rullar som skärs i bitar. Sushi äts ofta med pinnar, men det går också bra att använda gaffel.\n\nMånga tycker om sushi för att den är fräsch och färgglad. Andra tycker att det känns ovant med rå fisk. I Sverige har sushin blivit vanlig och finns i många städer. Vissa restauranger gör även vegetarisk sushi för den som inte vill äta fisk.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket land kommer sushi ifrån?",
+        "options": [
+          "Japan",
+          "Italien",
+          "Mexiko",
+          "Frankrike"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är nori?",
+        "options": [
+          "En sorts fisk",
+          "Ett tunt sjögräs som används runt sushi",
+          "En kryddig sås",
+          "En sorts ris"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter sushin som är en liten risklump med något ovanpå?",
+        "options": [
+          "Maki",
+          "Tempura",
+          "Nigiri",
+          "Taco"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker många om sushi enligt texten?",
+        "options": [
+          "Den är alltid billig",
+          "Den är mycket stark",
+          "Den serveras varm",
+          "Den är fräsch och färgglad"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man använda när man äter sushi?",
+        "options": [
+          "Pinnar eller gaffel",
+          "Sked och kniv",
+          "Bara händerna",
+          "Sugrör"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man odlar ris",
+          "Olika japanska sporter",
+          "Vad sushi är och hur den äts",
+          "Sveriges största restauranger"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 208,
+      "fingerprint": "ak4-tema-003",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-004",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Zara Larsson – en svensk artist",
+    "text": "Zara Larsson är en svensk sångerska som blev känd redan som barn. Hon vann tv-programmet Talang när hon var tio år gammal. Efter det började hon ge ut egen musik. Hennes låtar spelas både i Sverige och i andra länder.\n\nZara sjunger popmusik och har gjort flera kända låtar. Hon har samarbetat med artister från olika delar av världen. Hennes musik handlar ofta om vänskap, kärlek och att tro på sig själv.\n\nFörutom att sjunga är Zara känd för att säga vad hon tycker. Hon pratar öppet om jämställdhet och rättvisa. Många unga ser upp till henne som en förebild.\n\nHon uppträder på stora scener med dansare och ljusshower. Samtidigt arbetar hon hårt bakom kulisserna med att skriva och spela in ny musik. Zara Larsson är i dag en av Sveriges mest kända artister.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur blev Zara Larsson först känd?",
+        "options": [
+          "Genom en filmroll",
+          "Genom att vinna Talang",
+          "Genom en idrottstävling",
+          "Genom en bok hon skrev"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad sjunger Zara Larsson för sorts musik?",
+        "options": [
+          "Popmusik",
+          "Hårdrock",
+          "Opera",
+          "Jazz"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar hennes låtar ofta om?",
+        "options": [
+          "Rymden och planeter",
+          "Matlagning",
+          "Vänskap, kärlek och att tro på sig själv",
+          "Gamla sagor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är hon också känd för förutom musiken?",
+        "options": [
+          "Att vara tyst i intervjuer",
+          "Att tävla i simning",
+          "Att samla frimärken",
+          "Att prata om jämställdhet och rättvisa"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var uppträder hon ofta?",
+        "options": [
+          "På stora scener med ljusshower",
+          "Bara i små klassrum",
+          "Endast utomhus utan publik",
+          "I hemlighet utan publik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man skriver en låt",
+          "Zara Larssons väg till att bli artist",
+          "Svenska tv-program",
+          "Olika musikstilar i världen"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 205,
+      "fingerprint": "ak4-tema-004",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-005",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Italien – landet med pizza och historia",
+    "text": "Italien är ett land i södra Europa. Landet ser ut som en stövel på kartan. Huvudstaden heter Rom. Där finns många gamla byggnader från antiken, till exempel Colosseum.\n\nItalien är känt för sin mat. Många tänker på pizza och pasta när de hör namnet. Glassen gelato är också populär. I olika delar av landet lagar man maten på olika sätt.\n\nI Italien finns både höga berg och långa stränder. I norr ligger Alperna där man kan åka skidor. I söder är klimatet varmare och många turister badar i havet.\n\nFotboll är en populär sport i Italien. Många människor följer sina favoritlag noga. Landet har också en lång historia med konst och musik. Många turister besöker Italien för att uppleva både natur och kultur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Italiens huvudstad?",
+        "options": [
+          "Milano",
+          "Rom",
+          "Neapel",
+          "Venedig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är Italien känt för när det gäller mat?",
+        "options": [
+          "Sushi och tacos",
+          "Hamburgare och korv",
+          "Pizza och pasta",
+          "Nudlar och dumplings"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger Alperna i Italien?",
+        "options": [
+          "I norr",
+          "I söder",
+          "Mitt i Rom",
+          "På en ö"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man göra i Alperna enligt texten?",
+        "options": [
+          "Surfa",
+          "Vindsurfa",
+          "Åka skidor",
+          "Dyka"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken sport är populär i Italien?",
+        "options": [
+          "Baseboll",
+          "Ishockey",
+          "Cricket",
+          "Fotboll"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Italiens natur, mat och kultur",
+          "Ett italienskt fotbollslag",
+          "Hur man lagar gelato",
+          "En resa med tåg"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 202,
+      "fingerprint": "ak4-tema-005",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-006",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Grekland – öar och antika tempel",
+    "text": "Grekland är ett land i sydöstra Europa. Landet har många öar i Medelhavet. Huvudstaden heter Aten. Där finns den gamla byggnaden Akropolis som ligger högt på en kulle.\n\nGrekland har en lång historia. För länge sedan trodde människor på gudar som Zeus och Athena. Berättelserna om dem kallas myter. Många av dem läses fortfarande i dag.\n\nKlimatet i Grekland är varmt och soligt på sommaren. Därför reser många turister dit för att bada och njuta av solen. Havet är klart och blått.\n\nMaten i Grekland är ofta enkel och god. Man äter till exempel oliver, fetaost och grillat kött. Landet är också känt för sina vita hus med blå tak på vissa öar.\n\nGrekland är alltså ett land med både vacker natur och spännande historia.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Greklands huvudstad?",
+        "options": [
+          "Aten",
+          "Rom",
+          "Madrid",
+          "Paris"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ligger på en kulle i Aten?",
+        "options": [
+          "En modern skyskrapa",
+          "Akropolis",
+          "Ett fotbollsstadion",
+          "En hamn"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas berättelserna om Zeus och Athena?",
+        "options": [
+          "Lagar",
+          "Sånger",
+          "Myter",
+          "Nyheter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför reser många turister till Grekland?",
+        "options": [
+          "För att åka skidor",
+          "För att arbeta i fabriker",
+          "För att studera is",
+          "För att bada och njuta av solen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad är vanligt i grekisk mat enligt texten?",
+        "options": [
+          "Oliver och fetaost",
+          "Sushi och ris",
+          "Tacos och majs",
+          "Nudlar och soja"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Greklands klimat på vintern",
+          "En grekisk idrottsstjärna",
+          "Greklands natur och historia",
+          "Hur man bygger hus"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 205,
+      "fingerprint": "ak4-tema-006",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-007",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Spanien – sol och traditioner",
+    "text": "Spanien ligger i sydvästra Europa. Landet har kust mot både Medelhavet och Atlanten. Huvudstaden heter Madrid. I Spanien talar man spanska.\n\nMånga turister besöker Spanien för det varma klimatet. På sommaren är det ofta soligt och varmt. Det finns långa stränder där människor badar och solar.\n\nSpanien är också känt för sina traditioner. En känd dans heter flamenco. Den dansas med starka känslor och snabb musik. I vissa städer firas färgglada festivaler med parader och musik.\n\nMaten i Spanien är varierad. En känd rätt är paella som lagas med ris och olika ingredienser. Många äter också tapas, som är små rätter man delar.\n\nSpanien är ett land med både livliga städer och vacker natur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Spaniens huvudstad?",
+        "options": [
+          "Barcelona",
+          "Sevilla",
+          "Madrid",
+          "Valencia"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför reser många turister till Spanien?",
+        "options": [
+          "För det kalla klimatet",
+          "För det varma och soliga vädret",
+          "För att åka skidor året runt",
+          "För att studera vulkaner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är flamenco?",
+        "options": [
+          "En maträtt",
+          "En dans",
+          "En stad",
+          "En sport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är paella?",
+        "options": [
+          "En dans",
+          "En festival",
+          "En byggnad",
+          "En maträtt med ris"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilka hav ligger Spanien vid enligt texten?",
+        "options": [
+          "Medelhavet och Atlanten",
+          "Östersjön och Nordsjön",
+          "Stilla havet och Indiska oceanen",
+          "Svarta havet och Röda havet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Spaniens ekonomi",
+          "Spaniens sol, mat och traditioner",
+          "En spansk fotbollsspelare",
+          "Hur man lär sig spanska"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 201,
+      "fingerprint": "ak4-tema-007",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
   }
 ]
