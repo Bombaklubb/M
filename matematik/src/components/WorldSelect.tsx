@@ -4,6 +4,7 @@ import { WORLDS, gradeToWorld, getAccessibleWorlds } from '../data/worlds';
 import { gradeToNum } from '../data/topics';
 import { getPoints, initPoints, getProgress } from '../utils/storage';
 import AppHeader from './AppHeader';
+import { MatteLogo } from './MatteLogo';
 
 export default function WorldSelect() {
   const { currentStudent, setView } = useApp();
@@ -35,15 +36,15 @@ export default function WorldSelect() {
 
           {/* Logo + titel */}
           <div className="flex flex-col items-center pt-6 pb-5">
-            <img
-              src="/mattejakten.png"
-              alt="Mattejakten"
-              className="h-56 w-auto"
-              style={{ mixBlendMode: 'multiply', filter: 'drop-shadow(0 6px 20px rgba(0,0,0,0.5))' }}
-            />
-            <h2 className="text-white/70 text-xs font-bold uppercase tracking-widest mt-3">
+            <div className="flex items-center gap-4 mb-2">
+              <MatteLogo size={80} />
+              <h1 className="text-4xl md:text-5xl font-extrabold text-white">
+                Mattejakten
+              </h1>
+            </div>
+            <p className="text-white/50 text-xs font-bold uppercase tracking-widest">
               ✨ Välj din värld
-            </h2>
+            </p>
           </div>
 
           {/* Worlds grid */}
