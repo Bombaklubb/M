@@ -27596,5 +27596,87 @@
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
     }
+  },
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Michael Jacksons liv och karriär",
+    "text": "Michael Jackson föddes 1958 i Gary, Indiana, i USA. Redan som barn blev han känd genom gruppen The Jackson 5, där han sjöng tillsammans med sina bröder. Gruppen fick flera stora hits under slutet av 1960-talet och början av 1970-talet. Michaels starka röst och scennärvaro gjorde att han snabbt stack ut.\n\nUnder 1980-talet inledde han en framgångsrik solokarriär. Albumet \"Thriller\" från 1982 blev det mest sålda albumet i världen. Musikvideorna till låtar som \"Billie Jean\" och \"Beat It\" visades flitigt på tv-kanalen MTV och förändrade hur musik presenterades. Jackson kombinerade sång, dans och avancerad koreografi på ett sätt som påverkade många senare artister.\n\nHans dansstil, särskilt steget \"moonwalk\", blev världsberömd. Han var också känd för sina spektakulära konserter med stora scenshower. Samtidigt väckte hans privatliv stor uppmärksamhet i medierna. Rykten, rättsprocesser och hans förändrade utseende gjorde att han ofta var i centrum för debatt.\n\nMichael Jackson engagerade sig även i välgörenhet och deltog i projekt som samlade in pengar till människor i nöd. Trots framgångarna mötte han kritik och kontroverser. Vissa anklagelser mot honom ledde till rättegångar, där han i ett fall frikändes.\n\nNär han dog 2009 skapade det stor sorg bland fans världen över. Hans musik fortsätter att spelas och diskuteras. I dag ses han både som en av pophistoriens mest inflytelserika artister och som en person vars liv präglades av motsättningar.\n\nSammanfattningsvis är Michael Jackson en komplex figur i musikhistorien. Hans konstnärliga betydelse är svår att förneka, samtidigt som hans liv utanför scenen fortfarande väcker frågor och diskussioner.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur blev Michael Jackson först känd?",
+        "options": [
+          "Genom en solokarriär direkt efter skolan",
+          "Genom gruppen The Jackson 5 tillsammans med sina bröder",
+          "Genom att vara dansare i en tv-show",
+          "Genom att skriva låtar åt andra artister"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför anses albumet \"Thriller\" vara särskilt betydelsefullt?",
+        "options": [
+          "Det var hans första album",
+          "Det spelades bara in live",
+          "Det blev det mest sålda albumet i världen",
+          "Det innehöll bara lugna ballader"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade hans musikvideor musikindustrin?",
+        "options": [
+          "De minskade intresset för tv",
+          "De visade att videor kunde vara enkla och billiga",
+          "De förändrade hur musik presenterades genom att kombinera dans och berättande",
+          "De gjorde att radio blev viktigare än tv"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade hans scenframträdanden?",
+        "options": [
+          "Enbart akustisk gitarr",
+          "Små och enkla konserter",
+          "Inga dansinslag",
+          "Stora scenshower med avancerad koreografi"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket av följande nämns som en del av hans liv utanför musiken?",
+        "options": [
+          "Engagemang i välgörenhet och rättsprocesser",
+          "Karriär som politiker",
+          "Arbete som filmregissör",
+          "Studier vid universitet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudsakliga budskap?",
+        "options": [
+          "Att hans dans var viktigare än hans musik",
+          "Att han var helt okontroversiell",
+          "Att hans liv bara bestod av framgång",
+          "Att han var en inflytelserik men komplex person"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak8-tema-001",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
   }
 ]
