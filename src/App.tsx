@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+
 import Login from './components/Login';
 import WorldSelect from './components/WorldSelect';
 import WorldMap from './components/WorldMap';
@@ -145,11 +145,9 @@ function AppInner() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider>
-        <AppProvider>
-          <AppInner />
-        </AppProvider>
-      </ThemeProvider>
+      <AppProvider>
+        <AppInner />
+      </AppProvider>
     </ErrorBoundary>
   );
 }
