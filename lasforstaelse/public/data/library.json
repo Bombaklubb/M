@@ -28498,5 +28498,415 @@
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
     }
+  },
+  {
+    "id": "ak1-natur-katt-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Katten Max",
+    "text": "Max är en liten katt. Han bor i ett gult hus. På morgonen vaknar Max tidigt. Han sträcker på sig och jamar högt. Sedan går han till köket. Där står en skål med mat. Max äter och dricker vatten.\n\nEfter frukosten vill Max leka. Han jagar en röd boll över golvet. Bollen rullar snabbt. Max springer efter. Ibland gömmer han sig bakom soffan. Då tror han att ingen ser honom.\n\nNär det blir kväll är Max trött. Han kryper upp i sin mjuka korg. Där somnar han och drömmer om nya äventyr.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är Max för djur?",
+        "options": [
+          "En katt",
+          "En hund",
+          "En fågel",
+          "En fisk"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var bor Max?",
+        "options": [
+          "I en blå bil",
+          "I ett gult hus",
+          "I en skog",
+          "I en skola"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad leker Max med?",
+        "options": [
+          "En bok",
+          "En pinne",
+          "En röd boll",
+          "En hatt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var gömmer sig Max ibland?",
+        "options": [
+          "Bakom soffan",
+          "Under bordet ute",
+          "I badkaret",
+          "På taket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Max när det blir kväll?",
+        "options": [
+          "Han springer ut",
+          "Han äter igen",
+          "Han sover i sin korg",
+          "Han hoppar i vatten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En katt och hans dag",
+          "En lång resa",
+          "En stor fest",
+          "En bil som kör"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 87,
+      "fingerprint": "ak1-natur-katt-001",
+      "generatedAt": "2026-02-28T12:54:37.710Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-samhalle-skola-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "En dag i skolan",
+    "text": "Alva går i ettan. Hon tycker om sin skola. På morgonen hänger hon upp sin jacka. Sedan går hon in i klassrummet. Där sitter hennes vänner.\n\nLäraren ler och säger hej. Först läser de en kort saga. Alva räcker upp handen och svarar på en fråga. Efter det räknar klassen tal på tavlan.\n\nPå rasten leker Alva kull med Leo. De skrattar och springer fort. När klockan ringer går alla in igen.\n\nNär dagen är slut känner Alva sig glad. Hon har lärt sig nya saker.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken klass går Alva i?",
+        "options": [
+          "Ettan",
+          "Tvåan",
+          "Trean",
+          "Fyran"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör klassen först?",
+        "options": [
+          "Äter lunch",
+          "Läser en saga",
+          "Går hem",
+          "Har idrott"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Alva på rasten?",
+        "options": [
+          "Sover",
+          "Läser bok",
+          "Leker kull",
+          "Ritar tyst"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur känner sig Alva när dagen är slut?",
+        "options": [
+          "Arg",
+          "Trött",
+          "Rädd",
+          "Glad"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vem leker Alva med?",
+        "options": [
+          "Leo",
+          "Mamma",
+          "Rektorn",
+          "En hund"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En resa",
+          "En dag i skolan",
+          "En fotbollsmatch",
+          "Ett kalas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 88,
+      "fingerprint": "ak1-samhalle-skola-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-natur-regn-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Regnet kommer",
+    "text": "Det är mörka moln på himlen. Sara tittar ut genom fönstret. Snart börjar det regna. Dropparna faller på marken.\n\nSara tar på sig stövlar och regnjacka. Hon går ut i trädgården. Pölar bildas på vägen. Hon hoppar i en stor pöl. Plask!\n\nEfter en stund slutar regnet. Solen tittar fram igen. På himlen syns en regnbåge. Sara ler och springer in.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad finns på himlen först?",
+        "options": [
+          "Mörka moln",
+          "En stjärna",
+          "En ballong",
+          "Snö"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad tar Sara på sig?",
+        "options": [
+          "Badkläder",
+          "Stövlar och regnjacka",
+          "Pyjamas",
+          "Mössa och halsduk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hoppar Sara i?",
+        "options": [
+          "En säng",
+          "En låda",
+          "En pöl",
+          "En bil"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad syns på himlen efter regnet?",
+        "options": [
+          "En drake",
+          "Ett flygplan",
+          "En måne",
+          "En regnbåge"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var tittar Sara ut?",
+        "options": [
+          "Genom fönstret",
+          "Genom dörren",
+          "Under bordet",
+          "Bakom huset"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Snö på vintern",
+          "En regnig dag",
+          "En lång resa",
+          "En hund"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 82,
+      "fingerprint": "ak1-natur-regn-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-samhalle-buss-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Bussen till stan",
+    "text": "Omar ska åka buss med sin pappa. De går till hållplatsen. Där står flera människor och väntar.\n\nBussen kommer och dörrarna öppnas. Omar kliver på och sätter sig vid fönstret. Han ser bilar, hus och träd när bussen kör.\n\nEn kvinna med käpp går på vid nästa stopp. Pappa reser sig och ger henne sin plats. Omar tycker att det är snällt.\n\nNär de är framme trycker Omar på stoppknappen. Dörrarna öppnas och de kliver av.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem åker Omar med?",
+        "options": [
+          "Sin pappa",
+          "Sin lärare",
+          "Sin hund",
+          "Sin vän"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var sätter sig Omar?",
+        "options": [
+          "På golvet",
+          "Vid fönstret",
+          "Bakom chauffören",
+          "Längst bak"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör pappan när kvinnan går på?",
+        "options": [
+          "Han somnar",
+          "Han går av",
+          "Han ger henne sin plats",
+          "Han öppnar fönstret"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad trycker Omar på när de är framme?",
+        "options": [
+          "En lampa",
+          "En ratt",
+          "En klocka",
+          "Stoppknappen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var väntar de på bussen?",
+        "options": [
+          "Vid hållplatsen",
+          "I skogen",
+          "I en bil",
+          "På taket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En bussresa",
+          "En cykeltur",
+          "En lek",
+          "En fest"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 89,
+      "fingerprint": "ak1-samhalle-buss-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-natur-hund-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Hundvalpen Bella",
+    "text": "Bella är en liten hundvalp. Hon har mjuk päls och en viftande svans. Bella bor hos Kim och hens familj.\n\nPå morgonen går Kim ut med Bella. Valpen nosar på gräset och hittar en pinne. Hon vill leka och springer runt.\n\nBella måste lära sig att sitta och stanna. Kim tränar med lugn röst. När Bella gör rätt får hon beröm.\n\nPå kvällen är Bella trött. Hon lägger sig i sin bädd. Kim klappar henne försiktigt. Snart sover valpen gott.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är Bella för djur?",
+        "options": [
+          "En hundvalp",
+          "En katt",
+          "En kanin",
+          "En fågel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad hittar Bella ute?",
+        "options": [
+          "En boll",
+          "En pinne",
+          "En sko",
+          "En bok"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad tränar Kim Bella att göra?",
+        "options": [
+          "Flyga",
+          "Simma långt",
+          "Sitta och stanna",
+          "Rita"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad får Bella när hon gör rätt?",
+        "options": [
+          "Glass",
+          "En cykel",
+          "En hatt",
+          "Beröm"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var sover Bella?",
+        "options": [
+          "I sin bädd",
+          "I bilen",
+          "På taket",
+          "I köket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En resa",
+          "En hundvalp och hennes dag",
+          "En skola",
+          "En storm"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 88,
+      "fingerprint": "ak1-natur-hund-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
   }
 ]
