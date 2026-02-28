@@ -11,7 +11,6 @@ import StudentResults from './components/StudentResults';
 import Achievements from './components/Achievements';
 import TeacherLogin from './components/TeacherLogin';
 import TeacherView from './components/TeacherView';
-import QuickDrill from './components/QuickDrill';
 import ErrorBankView from './components/ErrorBankView';
 import QuestView from './components/QuestView';
 import CollectionView from './components/CollectionView';
@@ -110,7 +109,6 @@ function AppInner() {
           case 'topic-instruction': return selectedTopic ? <TopicInstruction topic={selectedTopic} /> : <WorldSelect />;
           case 'topic-exercise':    return selectedTopic ? <TopicExercise topic={selectedTopic} /> : <WorldSelect />;
           case 'topic-result':      return selectedTopic ? <TopicResult topic={selectedTopic} /> : <WorldSelect />;
-          case 'quick-drill':       return <QuickDrill />;
           case 'error-bank':        return <ErrorBankView />;
           case 'quest':             return <QuestView />;
           case 'collection':        return <CollectionView />;
