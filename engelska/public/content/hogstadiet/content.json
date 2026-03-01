@@ -118,8 +118,24 @@
           "id": "hog-g4-2",
           "type": "build-sentence",
           "instruction": "Report this question: 'Where do you live?' she asked me.",
-          "words": ["She", "asked", "me", "where", "I", "lived", "."],
-          "correctOrder": [0, 1, 2, 3, 4, 5, 6],
+          "words": [
+            "She",
+            "asked",
+            "me",
+            "where",
+            "I",
+            "lived",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
           "explanation": "Reported questions: no question word order (no inversion), backshift tense. 'do you live' → 'I lived'."
         }
       ]
@@ -139,7 +155,12 @@
           "id": "hog-r1-q1",
           "type": "on-the-line",
           "question": "How many hours per day do teenagers spend on social media, according to surveys?",
-          "options": ["Two to three hours", "Three to five hours", "Four to six hours", "Five to eight hours"],
+          "options": [
+            "Two to three hours",
+            "Three to five hours",
+            "Four to six hours",
+            "Five to eight hours"
+          ],
           "correctIndex": 2,
           "explanation": "The text states 'teenagers spend an average of four to six hours per day on these platforms'."
         },
@@ -218,6 +239,148 @@
           ],
           "correctIndex": 1,
           "explanation": "'Not mutually exclusive' means both can exist at the same time. We need both personal action and systemic change simultaneously."
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "hog-sp1-tricky",
+      "title": "Knepiga ord",
+      "description": "Ord som ofta stavas fel – träna på dem nu.",
+      "icon": "🧩",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-sp1-1",
+          "type": "multiple-choice",
+          "question": "Which is the correct spelling?",
+          "options": [
+            "necesary",
+            "necessary",
+            "necessery",
+            "neccesary"
+          ],
+          "correctIndex": 1,
+          "explanation": "Necessary: one C, two S's. N-E-C-E-S-S-A-R-Y."
+        },
+        {
+          "id": "hog-sp1-2",
+          "type": "multiple-choice",
+          "question": "Choose the correct spelling:",
+          "options": [
+            "beutiful",
+            "beautifull",
+            "beautiful",
+            "beautyful"
+          ],
+          "correctIndex": 2,
+          "explanation": "Beautiful: B-E-A-U-T-I-F-U-L."
+        },
+        {
+          "id": "hog-sp1-3",
+          "type": "fill-in-blank",
+          "sentence": "Did you ___ my email? (ta emot = receive)",
+          "answer": "receive",
+          "hint": "I before E except after C.",
+          "explanation": "Receive: R-E-C-E-I-V-E. After C, it's EI."
+        },
+        {
+          "id": "hog-sp1-4",
+          "type": "multiple-choice",
+          "question": "Which is correct?",
+          "options": [
+            "accomodation",
+            "accommodation",
+            "acommodation",
+            "acomodation"
+          ],
+          "correctIndex": 1,
+          "explanation": "Accommodation has double C and double M: A-C-C-O-M-M-O-D-A-T-I-O-N."
+        },
+        {
+          "id": "hog-sp1-5",
+          "type": "multiple-choice",
+          "question": "How do you spell 'separat'?",
+          "options": [
+            "seperate",
+            "separate",
+            "separrate",
+            "seperrate"
+          ],
+          "correctIndex": 1,
+          "explanation": "Separate: S-E-P-A-R-A-T-E. There's an 'a' in the middle, not 'e'."
+        }
+      ]
+    },
+    {
+      "id": "hog-sp2-irregular",
+      "title": "Oregelbundna verb",
+      "description": "Stava oregelbundna verbformer rätt.",
+      "icon": "🔀",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-sp2-1",
+          "type": "multiple-choice",
+          "question": "Past tense of 'write':",
+          "options": [
+            "writed",
+            "wroted",
+            "wrote",
+            "writ"
+          ],
+          "correctIndex": 2,
+          "explanation": "Write → wrote (past tense). W-R-O-T-E."
+        },
+        {
+          "id": "hog-sp2-2",
+          "type": "multiple-choice",
+          "question": "Past tense of 'bring':",
+          "options": [
+            "bringed",
+            "brung",
+            "brang",
+            "brought"
+          ],
+          "correctIndex": 3,
+          "explanation": "Bring → brought. B-R-O-U-G-H-T."
+        },
+        {
+          "id": "hog-sp2-3",
+          "type": "fill-in-blank",
+          "sentence": "She had ___ the letter before I arrived. (skrivit = written)",
+          "answer": "written",
+          "hint": "Write → wrote → written.",
+          "explanation": "Written is the past participle of write. W-R-I-T-T-E-N."
+        },
+        {
+          "id": "hog-sp2-4",
+          "type": "multiple-choice",
+          "question": "Past tense of 'catch':",
+          "options": [
+            "catched",
+            "caught",
+            "cought",
+            "cotched"
+          ],
+          "correctIndex": 1,
+          "explanation": "Catch → caught. C-A-U-G-H-T."
+        },
+        {
+          "id": "hog-sp2-5",
+          "type": "multiple-choice",
+          "question": "Past tense of 'know':",
+          "options": [
+            "knowed",
+            "knewed",
+            "knew",
+            "newed"
+          ],
+          "correctIndex": 2,
+          "explanation": "Know → knew. K-N-E-W. The K is silent."
         }
       ]
     }

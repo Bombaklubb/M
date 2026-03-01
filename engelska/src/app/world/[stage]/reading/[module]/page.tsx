@@ -107,7 +107,7 @@ export default function ReadingModulePage({ params }: Props) {
   // ─── Reading phase ────────────────────────────────────────────────────────
   if (phase === "reading") {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <Header student={student} />
 
         <div className={`${stage.bgClass} text-white`}>
@@ -169,7 +169,7 @@ export default function ReadingModulePage({ params }: Props) {
 
   // ─── Questions phase ──────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} />
 
       <div className={`${stage.bgClass} text-white`}>
