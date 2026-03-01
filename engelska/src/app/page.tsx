@@ -41,19 +41,10 @@ export default function HomePage() {
   // ─── Login screen ───────────────────────────────────────────────────────────
   if (!student) {
     return (
-      <div className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
-        {/* Background image */}
-        <img
-          src="/content/sprakdjungeln.png"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        {/* Djungelöverlay – täcker bildens text och ger djupkänsla */}
-        <div className="absolute inset-0 bg-jungle-900/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+      <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700 flex items-center justify-center p-4">
 
         {/* Login card */}
-        <div className="relative z-10 w-full max-w-md animate-slide-up">
+        <div className="w-full max-w-md animate-slide-up">
           {/* Title */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-black text-white text-shadow">
@@ -86,7 +77,7 @@ export default function HomePage() {
                 disabled={!nameInput.trim()}
                 className="w-full btn-primary bg-jungle-600 hover:bg-jungle-700 disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4"
               >
-                Starta jakten! 🚀
+                Starta jakten!
               </button>
             </form>
           </div>
