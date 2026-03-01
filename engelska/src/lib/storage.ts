@@ -48,8 +48,9 @@ export function saveStudent(data: StudentData): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
-export function createStudent(name: string): StudentData {
+export function createStudent(name: string, avatar?: string): StudentData {
   const data = defaultStudentData(name.trim());
+  if (avatar) data.avatar = avatar;
   saveStudent(data);
   return data;
 }

@@ -5,11 +5,13 @@ import Link from "next/link";
 import Header from "@/components/ui/Header";
 import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
+import { AVATARS } from "@/lib/avatars";
 import type { StudentData } from "@/lib/types";
 
 export default function HomePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [nameInput, setNameInput] = useState("");
+  const [selectedAvatar, setSelectedAvatar] = useState("ninja");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function HomePage() {
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     if (!nameInput.trim()) return;
-    const data = createStudent(nameInput.trim());
+    const data = createStudent(nameInput.trim(), selectedAvatar);
     setStudent(data);
   }
 
@@ -72,6 +74,32 @@ export default function HomePage() {
                 autoFocus
                 maxLength={30}
               />
+
+              {/* Avatar selection */}
+              <div>
+                <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Välj din karaktär</p>
+                <div className="grid grid-cols-6 gap-2">
+                  {AVATARS.map((avatar) => (
+                    <button
+                      key={avatar.id}
+                      type="button"
+                      onClick={() => setSelectedAvatar(avatar.id)}
+                      title={avatar.name}
+                      className={`aspect-square rounded-xl text-2xl flex items-center justify-center transition-all ${
+                        selectedAvatar === avatar.id
+                          ? "bg-jungle-100 dark:bg-jungle-800 ring-2 ring-jungle-500 scale-110"
+                          : "bg-gray-100 dark:bg-gray-700 hover:bg-jungle-50 dark:hover:bg-jungle-900/30"
+                      }`}
+                    >
+                      {avatar.emoji}
+                    </button>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 text-center">
+                  {AVATARS.find((a) => a.id === selectedAvatar)?.name}
+                </p>
+              </div>
+
               <button
                 type="submit"
                 disabled={!nameInput.trim()}

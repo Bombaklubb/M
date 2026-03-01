@@ -6,6 +6,8 @@ import Header from "@/components/ui/Header";
 import ProgressBar from "@/components/ui/ProgressBar";
 import { loadStudent, clearStudent, exportProgress, generateShareCode } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
+import { ACHIEVEMENTS, isUnlocked } from "@/lib/achievements";
+import { getAvatar } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
 
 export default function ProfilePage() {
@@ -36,10 +38,11 @@ export default function ProfilePage() {
     const s = student!.stages[stageId];
     const grammarMods = Object.values(s.grammarModules);
     const readingMods = Object.values(s.readingModules);
-    const all = [...grammarMods, ...readingMods];
+    const spellingMods = Object.values(s.spellingModules ?? {});
+    const all = [...grammarMods, ...readingMods, ...spellingMods];
     const completed = all.filter((m) => m.completed).length;
     const totalPoints = all.reduce((sum, m) => sum + m.points, 0);
-    return { completed, totalPoints, grammarMods, readingMods };
+    return { completed, totalPoints, grammarMods, readingMods, spellingMods };
   }
 
   function handleExport() {
@@ -82,8 +85,8 @@ export default function ProfilePage() {
         {/* Profile hero */}
         <div className="card bg-gradient-to-br from-gray-800 to-gray-900 text-white border-none dark:from-gray-700 dark:to-gray-800">
           <div className="flex items-center gap-4">
-            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-4xl">
-              {student.name.charAt(0).toUpperCase()}
+            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-5xl">
+              {getAvatar(student.avatar ?? "ninja").emoji}
             </div>
             <div>
               <h1 className="text-2xl font-black">{student.name}</h1>
@@ -102,9 +105,9 @@ export default function ProfilePage() {
           <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📊 Progression per stadie</h2>
           <div className="space-y-3">
             {STAGES.map((stage) => {
-              const { completed, totalPoints, grammarMods, readingMods } =
+              const { completed, totalPoints, grammarMods, readingMods, spellingMods } =
                 getStageStats(stage.id);
-              const total = grammarMods.length + readingMods.length;
+              const total = grammarMods.length + readingMods.length + spellingMods.length;
               const pct = total > 0 ? (completed / total) * 100 : 0;
 
               return (
@@ -138,8 +141,8 @@ export default function ProfilePage() {
                     />
 
                     {/* Detailed breakdown */}
-                    {(grammarMods.length > 0 || readingMods.length > 0) && (
-                      <div className="mt-3 grid grid-cols-2 gap-2">
+                    {(grammarMods.length > 0 || readingMods.length > 0 || spellingMods.length > 0) && (
+                      <div className="mt-3 grid grid-cols-3 gap-2">
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
                           <div className="font-semibold dark:text-gray-100">
                             {grammarMods.filter((m) => m.completed).length}/
@@ -154,12 +157,99 @@ export default function ProfilePage() {
                           </div>
                           <div className="text-gray-500 dark:text-gray-400">📖 Läsning</div>
                         </div>
+                        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
+                          <div className="font-semibold dark:text-gray-100">
+                            {spellingMods.filter((m) => m.completed).length}/
+                            {spellingMods.length}
+                          </div>
+                          <div className="text-gray-500 dark:text-gray-400">✏️ Stavning</div>
+                        </div>
                       </div>
                     )}
                   </div>
                 </Link>
               );
             })}
+          </div>
+        </div>
+
+        {/* Achievements */}
+        <div>
+          <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">🏅 Utmärkelser</h2>
+          <div className="space-y-4">
+            {STAGES.map((stage) => {
+              const stageAchievements = ACHIEVEMENTS.filter((a) => a.stageId === stage.id);
+              const unlockedCount = stageAchievements.filter((a) => isUnlocked(a, student!)).length;
+              return (
+                <div key={stage.id} className="card">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">{stage.emoji}</span>
+                    <h3 className="font-semibold text-gray-900 dark:text-gray-100">{stage.name}</h3>
+                    <span className="ml-auto text-xs text-gray-400 dark:text-gray-500">
+                      {unlockedCount}/{stageAchievements.length}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {stageAchievements.map((a) => {
+                      const unlocked = isUnlocked(a, student!);
+                      return (
+                        <div
+                          key={a.id}
+                          className={`flex items-center gap-2 rounded-xl p-2 transition-colors ${
+                            unlocked
+                              ? "bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800"
+                              : "bg-gray-50 dark:bg-gray-700/50 opacity-50"
+                          }`}
+                        >
+                          <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>
+                          <div className="min-w-0">
+                            <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
+                              {a.title}
+                            </p>
+                            <p className="text-xs text-gray-400 dark:text-gray-500 leading-tight truncate">{a.description}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Global achievements */}
+            <div className="card">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">🌍</span>
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100">Globala utmärkelser</h3>
+                <span className="ml-auto text-xs text-gray-400 dark:text-gray-500">
+                  {ACHIEVEMENTS.filter((a) => a.stageId === "global" && isUnlocked(a, student!)).length}/
+                  {ACHIEVEMENTS.filter((a) => a.stageId === "global").length}
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {ACHIEVEMENTS.filter((a) => a.stageId === "global").map((a) => {
+                  const unlocked = isUnlocked(a, student!);
+                  return (
+                    <div
+                      key={a.id}
+                      className={`flex items-center gap-2 rounded-xl p-2 transition-colors ${
+                        unlocked
+                          ? "bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800"
+                          : "bg-gray-50 dark:bg-gray-700/50 opacity-50"
+                      }`}
+                    >
+                      <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>
+                      <div className="min-w-0">
+                        <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
+                          {a.title}
+                        </p>
+                        <p className="text-xs text-gray-400 dark:text-gray-500 leading-tight truncate">{a.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
 

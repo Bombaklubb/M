@@ -121,6 +121,7 @@ export interface StageProgress {
 }
 
 export interface StudentData {
+  avatar?: string;
   name: string;
   createdAt: string;
   lastActive: string;
