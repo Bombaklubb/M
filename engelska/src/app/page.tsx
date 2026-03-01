@@ -203,8 +203,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* World map image */}
-        <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-8">
+        {/* World map image – interactive */}
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white mb-8 max-w-3xl mx-auto">
           <Image
             src="/content/engelskajakten.png"
             alt="Engelskajakten världskarta"
@@ -213,6 +213,27 @@ export default function HomePage() {
             className="w-full h-auto block"
             priority
           />
+          {/* Clickable zone overlays – positioned over each world in the image */}
+          {[
+            { id: "lagstadiet",    name: "The Jungle Camp",      emoji: "🌿", left: "4%",  top: "28%", width: "30%", height: "58%" },
+            { id: "mellanstadiet", name: "The City District",    emoji: "🏙️", left: "33%", top: "47%", width: "27%", height: "45%" },
+            { id: "hogstadiet",    name: "The Global Hub",       emoji: "🌐", left: "62%", top: "23%", width: "34%", height: "48%" },
+            { id: "gymnasiet",     name: "The Academic Summit",  emoji: "🏔️", left: "54%", top: "58%", width: "32%", height: "36%" },
+          ].map((zone) => (
+            <Link
+              key={zone.id}
+              href={`/world/${zone.id}`}
+              className="absolute group"
+              style={{ left: zone.left, top: zone.top, width: zone.width, height: zone.height }}
+            >
+              <div className="w-full h-full rounded-2xl transition-all duration-200 group-hover:bg-white/20 group-hover:ring-2 group-hover:ring-white/70 group-hover:shadow-lg relative">
+                {/* Tooltip */}
+                <span className="absolute bottom-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/70 text-white text-xs font-bold px-2.5 py-1 rounded-lg whitespace-nowrap pointer-events-none">
+                  {zone.emoji} {zone.name}
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
 
         {/* Stage cards */}
