@@ -87,9 +87,20 @@ export interface ReadingModule {
   questions: ReadingQuestion[];
 }
 
+export interface SpellingModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  exercises: GrammarExercise[];
+}
+
 export interface StageContent {
   grammar: GrammarModule[];
   reading: ReadingModule[];
+  spelling?: SpellingModule[];
 }
 
 // ─── Student progress (stored in localStorage) ───────────────────────────────
@@ -106,6 +117,7 @@ export interface StageProgress {
   stageId: StageId;
   grammarModules: Record<string, ModuleProgress>;
   readingModules: Record<string, ModuleProgress>;
+  spellingModules: Record<string, ModuleProgress>;
 }
 
 export interface StudentData {

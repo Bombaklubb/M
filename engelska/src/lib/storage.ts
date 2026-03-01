@@ -9,6 +9,7 @@ function emptyStageProgress(stageId: StageId): StageProgress {
     stageId,
     grammarModules: {},
     readingModules: {},
+    spellingModules: {},
   };
 }
 
@@ -63,24 +64,35 @@ export function clearStudent(): void {
 export function getModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading",
+  kind: "grammar" | "reading" | "spelling",
   moduleId: string
 ): ModuleProgress | null {
   const stage = data.stages[stageId];
-  const map = kind === "grammar" ? stage.grammarModules : stage.readingModules;
+  const map =
+    kind === "grammar"
+      ? stage.grammarModules
+      : kind === "reading"
+      ? stage.readingModules
+      : (stage.spellingModules ?? {});
   return map[moduleId] ?? null;
 }
 
 export function saveModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading",
+  kind: "grammar" | "reading" | "spelling",
   moduleId: string,
   points: number,
   completed: boolean
 ): StudentData {
   const stage = data.stages[stageId];
-  const map = kind === "grammar" ? stage.grammarModules : stage.readingModules;
+  if (!stage.spellingModules) stage.spellingModules = {};
+  const map =
+    kind === "grammar"
+      ? stage.grammarModules
+      : kind === "reading"
+      ? stage.readingModules
+      : stage.spellingModules;
   const existing = map[moduleId];
   const prevPoints = existing?.points ?? 0;
   const addedPoints = Math.max(0, points - prevPoints);

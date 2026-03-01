@@ -43,7 +43,12 @@
           "id": "gym-g2-1",
           "type": "multiple-choice",
           "question": "'The lights are on. She ___ be home.' Which modal expresses logical deduction (near certainty)?",
-          "options": ["might", "must", "could", "should"],
+          "options": [
+            "might",
+            "must",
+            "could",
+            "should"
+          ],
           "correctIndex": 1,
           "explanation": "'Must' expresses near certainty based on evidence. 'The lights are on → she must be home'."
         },
@@ -100,7 +105,12 @@
           "id": "gym-g4-1",
           "type": "multiple-choice",
           "question": "Which discourse marker best introduces a contrasting point?",
-          "options": ["Furthermore", "Nevertheless", "For instance", "As a result"],
+          "options": [
+            "Furthermore",
+            "Nevertheless",
+            "For instance",
+            "As a result"
+          ],
           "correctIndex": 1,
           "explanation": "'Nevertheless' introduces a contrast or concession. Furthermore adds information, For instance gives examples, As a result shows effect."
         },
@@ -108,8 +118,44 @@
           "id": "gym-g4-2",
           "type": "build-sentence",
           "instruction": "Build: 'While some critics argue that technology isolates people, others contend that it fosters global community.'",
-          "words": ["While", "some", "critics", "argue", "that", "technology", "isolates", "people", ",", "others", "contend", "that", "it", "fosters", "global", "community", "."],
-          "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+          "words": [
+            "While",
+            "some",
+            "critics",
+            "argue",
+            "that",
+            "technology",
+            "isolates",
+            "people",
+            ",",
+            "others",
+            "contend",
+            "that",
+            "it",
+            "fosters",
+            "global",
+            "community",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
           "explanation": "'While' introduces a concessive clause, elegantly presenting two opposing views in one sentence."
         }
       ]
@@ -130,7 +176,12 @@
           "id": "gym-r1-q1",
           "type": "on-the-line",
           "question": "What term does the author use to describe AI systems whose decision-making is not transparent?",
-          "options": ["Dark systems", "Black boxes", "Hidden networks", "Closed circuits"],
+          "options": [
+            "Dark systems",
+            "Black boxes",
+            "Hidden networks",
+            "Closed circuits"
+          ],
           "correctIndex": 1,
           "explanation": "The text refers to AI systems as 'black boxes' — a term used when the internal workings are not visible or understandable."
         },
@@ -176,7 +227,12 @@
           "id": "gym-r2-q1",
           "type": "on-the-line",
           "question": "What had Mira stopped doing with the morning briefings?",
-          "options": ["Receiving them", "Reading them in full", "Deleting them", "Sharing them with others"],
+          "options": [
+            "Receiving them",
+            "Reading them in full",
+            "Deleting them",
+            "Sharing them with others"
+          ],
           "correctIndex": 1,
           "explanation": "The text says 'Mira had long since stopped reading it in full.'"
         },
@@ -205,6 +261,148 @@
           ],
           "correctIndex": 1,
           "explanation": "The ending withholds whether Mira submits (writing an explanation) or resists (writing something subversive). Her thought about her daughter deepens the dilemma — does she comply or resist?"
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "gym-sp1-academic",
+      "title": "Akademiska ord",
+      "description": "Stava avancerade akademiska ord korrekt.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "gym-sp1-1",
+          "type": "multiple-choice",
+          "question": "Which is the correct spelling?",
+          "options": [
+            "analise",
+            "analyize",
+            "analyse",
+            "analyzze"
+          ],
+          "correctIndex": 2,
+          "explanation": "Analyse (British) / Analyze (American). A-N-A-L-Y-S-E."
+        },
+        {
+          "id": "gym-sp1-2",
+          "type": "multiple-choice",
+          "question": "Choose the correct spelling:",
+          "options": [
+            "hipothesis",
+            "hypothesis",
+            "hypothisis",
+            "hypothessis"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hypothesis: H-Y-P-O-T-H-E-S-I-S."
+        },
+        {
+          "id": "gym-sp1-3",
+          "type": "fill-in-blank",
+          "sentence": "The experiment supported the ___. (slutsats = conclusion)",
+          "answer": "conclusion",
+          "hint": "Con-clu-sion.",
+          "explanation": "Conclusion: C-O-N-C-L-U-S-I-O-N."
+        },
+        {
+          "id": "gym-sp1-4",
+          "type": "multiple-choice",
+          "question": "Which is correct?",
+          "options": [
+            "referance",
+            "reference",
+            "referense",
+            "reffrence"
+          ],
+          "correctIndex": 1,
+          "explanation": "Reference: R-E-F-E-R-E-N-C-E."
+        },
+        {
+          "id": "gym-sp1-5",
+          "type": "multiple-choice",
+          "question": "How do you spell 'argument' in the plural?",
+          "options": [
+            "arguements",
+            "arguments",
+            "argumments",
+            "arguiments"
+          ],
+          "correctIndex": 1,
+          "explanation": "Arguments: A-R-G-U-M-E-N-T-S. No extra E."
+        }
+      ]
+    },
+    {
+      "id": "gym-sp2-advanced",
+      "title": "Avancerade ord",
+      "description": "Ord som kräver precision – typiska för C- och A-nivå.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "gym-sp2-1",
+          "type": "multiple-choice",
+          "question": "Which is the correct spelling?",
+          "options": [
+            "ambigous",
+            "ambiguous",
+            "ambiguious",
+            "ambigious"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ambiguous: A-M-B-I-G-U-O-U-S."
+        },
+        {
+          "id": "gym-sp2-2",
+          "type": "multiple-choice",
+          "question": "Choose the correct spelling:",
+          "options": [
+            "controversal",
+            "controversiel",
+            "controversial",
+            "contraversial"
+          ],
+          "correctIndex": 2,
+          "explanation": "Controversial: C-O-N-T-R-O-V-E-R-S-I-A-L."
+        },
+        {
+          "id": "gym-sp2-3",
+          "type": "fill-in-blank",
+          "sentence": "Her ___ approach impressed the professor. (sofistikerade = sophisticated)",
+          "answer": "sophisticated",
+          "hint": "So-phis-ti-ca-ted.",
+          "explanation": "Sophisticated: S-O-P-H-I-S-T-I-C-A-T-E-D."
+        },
+        {
+          "id": "gym-sp2-4",
+          "type": "multiple-choice",
+          "question": "Which is correct?",
+          "options": [
+            "consequently",
+            "consequantly",
+            "consequentely",
+            "consequntly"
+          ],
+          "correctIndex": 0,
+          "explanation": "Consequently: C-O-N-S-E-Q-U-E-N-T-L-Y."
+        },
+        {
+          "id": "gym-sp2-5",
+          "type": "multiple-choice",
+          "question": "How do you spell 'oumbärlig'?",
+          "options": [
+            "indispensible",
+            "indispensable",
+            "indispencible",
+            "indispenseable"
+          ],
+          "correctIndex": 1,
+          "explanation": "Indispensable: ends in -ABLE, not -IBLE. I-N-D-I-S-P-E-N-S-A-B-L-E."
         }
       ]
     }

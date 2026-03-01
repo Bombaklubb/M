@@ -12,12 +12,7 @@ import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
 import { loadStudent, saveModuleProgress } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
-import type {
-  StudentData,
-  StageContent,
-  GrammarModule,
-  GrammarExercise,
-} from "@/lib/types";
+import type { StudentData, StageContent, SpellingModule, GrammarExercise } from "@/lib/types";
 
 const POINTS_PER_CORRECT = 10;
 
@@ -25,16 +20,15 @@ interface Props {
   params: Promise<{ stage: string; module: string }>;
 }
 
-export default function GrammarModulePage({ params }: Props) {
+export default function SpellingModulePage({ params }: Props) {
   const { stage: stageId, module: moduleId } = use(params);
   const stage = getStage(stageId);
   const router = useRouter();
 
   const [student, setStudent] = useState<StudentData | null>(null);
-  const [mod, setMod] = useState<GrammarModule | null>(null);
+  const [mod, setMod] = useState<SpellingModule | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Exercise state
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [showResult, setShowResult] = useState(false);
@@ -45,7 +39,7 @@ export default function GrammarModulePage({ params }: Props) {
     fetch(`/content/${stageId}/content.json`)
       .then((r) => r.json())
       .then((data: StageContent) => {
-        const found = data.grammar.find((m) => m.id === moduleId);
+        const found = data.spelling?.find((m) => m.id === moduleId);
         if (found) setMod(found);
       })
       .catch(() => {})
@@ -56,8 +50,8 @@ export default function GrammarModulePage({ params }: Props) {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-4xl animate-bounce-slow">{stage.emoji}</div>
+      <div className="min-h-screen flex items-center justify-center dark:bg-gray-900">
+        <div className="text-4xl animate-bounce-slow">✏️</div>
       </div>
     );
   }
@@ -67,28 +61,20 @@ export default function GrammarModulePage({ params }: Props) {
   const exercises = mod.exercises;
   const totalExercises = exercises.length;
   const currentExercise: GrammarExercise | undefined = exercises[currentIndex];
-  const progress = ((currentIndex) / totalExercises) * 100;
+  const progress = (currentIndex / totalExercises) * 100;
 
   function handleAnswer(correct: boolean) {
     const newResults = [...results, correct];
     setResults(newResults);
 
     if (currentIndex + 1 >= totalExercises) {
-      // Module done — compute score and save
       const totalCorrect = newResults.filter(Boolean).length;
       const pts = totalCorrect * POINTS_PER_CORRECT;
-      const passed = (totalCorrect / totalExercises) >= 0.6;
+      const passed = totalCorrect / totalExercises >= 0.6;
       const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
       if (student) {
-        const updated = saveModuleProgress(
-          student,
-          stage!.id,
-          "grammar",
-          mod!.id,
-          finalPts,
-          passed
-        );
+        const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, finalPts, passed);
         setStudent(updated);
       }
       setShowResult(true);
@@ -142,13 +128,12 @@ export default function GrammarModulePage({ params }: Props) {
       {/* Exercise card */}
       <main className="max-w-3xl mx-auto px-4 py-8">
         <div className="card min-h-[300px]">
-          {/* Exercise counter + type badge */}
           <div className="flex items-center justify-between mb-6">
             <span className="text-sm text-gray-400 dark:text-gray-500 font-medium">
               {currentIndex + 1} / {totalExercises}
             </span>
             {currentExercise && (
-              <span className="badge bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs">
+              <span className="badge bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-xs">
                 {currentExercise.type === "multiple-choice"
                   ? "🔘 Flerval"
                   : currentExercise.type === "fill-in-blank"
@@ -158,7 +143,6 @@ export default function GrammarModulePage({ params }: Props) {
             )}
           </div>
 
-          {/* Render exercise */}
           {currentExercise && (
             <div key={`${moduleId}-${currentIndex}`}>
               {currentExercise.type === "multiple-choice" && (
@@ -174,15 +158,13 @@ export default function GrammarModulePage({ params }: Props) {
           )}
         </div>
 
-        {/* Running score */}
         <div className="mt-4 flex justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
           <span>✓ {results.filter(Boolean).length} rätt</span>
           <span>✗ {results.filter((r) => !r).length} fel</span>
-          <span className="text-amber-600">⭐ {earnedPoints} poäng</span>
+          <span className="text-amber-600 dark:text-amber-400">⭐ {earnedPoints} poäng</span>
         </div>
       </main>
 
-      {/* Result modal */}
       {showResult && (
         <ResultModal
           points={earnedPoints}

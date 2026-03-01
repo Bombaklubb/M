@@ -43,7 +43,12 @@
           "id": "mel-g2-1",
           "type": "multiple-choice",
           "question": "What is the past simple form of 'go'?",
-          "options": ["goed", "went", "gone", "goes"],
+          "options": [
+            "goed",
+            "went",
+            "gone",
+            "goes"
+          ],
           "correctIndex": 1,
           "explanation": "'Go' is an irregular verb. Its past simple form is 'went'."
         },
@@ -69,7 +74,12 @@
           "id": "mel-g3-1",
           "type": "multiple-choice",
           "question": "What is the comparative form of 'big'?",
-          "options": ["more big", "biger", "bigger", "biggest"],
+          "options": [
+            "more big",
+            "biger",
+            "bigger",
+            "biggest"
+          ],
           "correctIndex": 2,
           "explanation": "Short adjectives: double the final consonant and add -er. big → bigger."
         },
@@ -95,7 +105,12 @@
           "id": "mel-g4-1",
           "type": "multiple-choice",
           "question": "Choose the correct preposition: 'The cat is ___ the table.'",
-          "options": ["on", "in", "at", "by"],
+          "options": [
+            "on",
+            "in",
+            "at",
+            "by"
+          ],
           "correctIndex": 0,
           "explanation": "'On' is used for surfaces: on the table, on the floor, on the shelf."
         },
@@ -103,8 +118,24 @@
           "id": "mel-g4-2",
           "type": "build-sentence",
           "instruction": "Build: 'The books are under the chair.'",
-          "words": ["The", "books", "are", "under", "the", "chair", "."],
-          "correctOrder": [0, 1, 2, 3, 4, 5, 6],
+          "words": [
+            "The",
+            "books",
+            "are",
+            "under",
+            "the",
+            "chair",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
           "explanation": "Under = nedanför/under. The books are under (beneath) the chair."
         }
       ]
@@ -124,7 +155,12 @@
           "id": "mel-r1-q1",
           "type": "on-the-line",
           "question": "What did Emma buy at the shopping centre?",
-          "options": ["A poster", "A pizza", "A book about space", "Clothes"],
+          "options": [
+            "A poster",
+            "A pizza",
+            "A book about space",
+            "Clothes"
+          ],
           "correctIndex": 2,
           "explanation": "The text says 'Emma bought a new book about space'."
         },
@@ -132,7 +168,12 @@
           "id": "mel-r1-q2",
           "type": "between-the-lines",
           "question": "How did they feel at the end of the day?",
-          "options": ["Tired and disappointed.", "Happy and satisfied.", "Bored and hungry.", "Worried about the time."],
+          "options": [
+            "Tired and disappointed.",
+            "Happy and satisfied.",
+            "Bored and hungry.",
+            "Worried about the time."
+          ],
           "correctIndex": 1,
           "explanation": "Liam said 'We should do this every weekend' and Emma smiled — they were clearly very happy with their day."
         },
@@ -198,6 +239,148 @@
           ],
           "correctIndex": 1,
           "explanation": "All living things need water. The water cycle continuously moves water around the planet, making it available. Without it, water would stay only in the oceans."
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "mel-sp1-everyday",
+      "title": "Vardagsord",
+      "description": "Stava vanliga engelska ord du använder varje dag.",
+      "icon": "📚",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-sp1-1",
+          "type": "multiple-choice",
+          "question": "Which is the correct spelling?",
+          "options": [
+            "freind",
+            "frend",
+            "friend",
+            "frind"
+          ],
+          "correctIndex": 2,
+          "explanation": "Friend is spelled F-R-I-E-N-D. Remember: fri-end."
+        },
+        {
+          "id": "mel-sp1-2",
+          "type": "multiple-choice",
+          "question": "Choose the correct spelling for 'skola':",
+          "options": [
+            "schol",
+            "school",
+            "sckool",
+            "scool"
+          ],
+          "correctIndex": 1,
+          "explanation": "School has a silent C: S-C-H-O-O-L."
+        },
+        {
+          "id": "mel-sp1-3",
+          "type": "fill-in-blank",
+          "sentence": "Every morning I eat ___. (frukost = breakfast)",
+          "answer": "breakfast",
+          "hint": "Break + fast.",
+          "explanation": "Breakfast = frukost. B-R-E-A-K-F-A-S-T."
+        },
+        {
+          "id": "mel-sp1-4",
+          "type": "multiple-choice",
+          "question": "Which is the correct spelling for 'vatten'?",
+          "options": [
+            "watter",
+            "weter",
+            "water",
+            "watr"
+          ],
+          "correctIndex": 2,
+          "explanation": "Water = vatten. W-A-T-E-R."
+        },
+        {
+          "id": "mel-sp1-5",
+          "type": "multiple-choice",
+          "question": "How do you spell 'lycklig'?",
+          "options": [
+            "hapy",
+            "happy",
+            "happi",
+            "hapey"
+          ],
+          "correctIndex": 1,
+          "explanation": "Happy has double P: H-A-P-P-Y."
+        }
+      ]
+    },
+    {
+      "id": "mel-sp2-verbs",
+      "title": "Vanliga verb",
+      "description": "Stava vanliga engelska verb rätt.",
+      "icon": "✍️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-sp2-1",
+          "type": "multiple-choice",
+          "question": "Choose the correct spelling for 'lyssna':",
+          "options": [
+            "lisen",
+            "listen",
+            "lissten",
+            "listin"
+          ],
+          "correctIndex": 1,
+          "explanation": "Listen has a silent T: L-I-S-T-E-N."
+        },
+        {
+          "id": "mel-sp2-2",
+          "type": "multiple-choice",
+          "question": "How do you spell 'skriva'?",
+          "options": [
+            "writ",
+            "write",
+            "rite",
+            "wriet"
+          ],
+          "correctIndex": 1,
+          "explanation": "Write has a silent W: W-R-I-T-E."
+        },
+        {
+          "id": "mel-sp2-3",
+          "type": "fill-in-blank",
+          "sentence": "I ___ English at school. (lär mig = learn)",
+          "answer": "learn",
+          "hint": "L-E-A-R-N.",
+          "explanation": "Learn = lära sig. L-E-A-R-N."
+        },
+        {
+          "id": "mel-sp2-4",
+          "type": "multiple-choice",
+          "question": "Which is the correct spelling for 'tala'?",
+          "options": [
+            "speek",
+            "spek",
+            "speak",
+            "speake"
+          ],
+          "correctIndex": 2,
+          "explanation": "Speak = tala. S-P-E-A-K."
+        },
+        {
+          "id": "mel-sp2-5",
+          "type": "multiple-choice",
+          "question": "How do you spell 'läsa'?",
+          "options": [
+            "reed",
+            "read",
+            "reade",
+            "reid"
+          ],
+          "correctIndex": 1,
+          "explanation": "Read = läsa. R-E-A-D."
         }
       ]
     }

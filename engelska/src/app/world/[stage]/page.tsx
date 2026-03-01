@@ -20,7 +20,7 @@ export default function WorldPage({ params }: Props) {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [content, setContent] = useState<StageContent | null>(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<"grammar" | "reading">("grammar");
+  const [activeTab, setActiveTab] = useState<"grammar" | "reading" | "spelling">("grammar");
 
   useEffect(() => {
     const s = loadStudent();
@@ -45,10 +45,14 @@ export default function WorldPage({ params }: Props) {
 
   const stageProgress = student?.stages[stage.id as keyof typeof student.stages];
 
-  function getModuleProgress(kind: "grammar" | "reading", moduleId: string) {
+  function getModuleProgress(kind: "grammar" | "reading" | "spelling", moduleId: string) {
     if (!stageProgress) return null;
     const map =
-      kind === "grammar" ? stageProgress.grammarModules : stageProgress.readingModules;
+      kind === "grammar"
+        ? stageProgress.grammarModules
+        : kind === "reading"
+        ? stageProgress.readingModules
+        : (stageProgress.spellingModules ?? {});
     return map[moduleId] ?? null;
   }
 
@@ -56,7 +60,7 @@ export default function WorldPage({ params }: Props) {
   function isModuleLocked(
     mods: Array<GrammarModule | ReadingModule>,
     index: number,
-    kind: "grammar" | "reading"
+    kind: "grammar" | "reading" | "spelling"
   ): boolean {
     if (index === 0) return false;
     const prev = mods[index - 1];
@@ -71,7 +75,7 @@ export default function WorldPage({ params }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} />
 
       {/* Hero – stage image */}
@@ -99,7 +103,7 @@ export default function WorldPage({ params }: Props) {
 
       {/* Stats bar */}
       {student && stageProgress && (
-        <div className="bg-white border-b border-gray-100">
+        <div className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
           <div className="max-w-5xl mx-auto px-4 py-4 flex gap-4 flex-wrap">
             {[
               {
@@ -112,10 +116,15 @@ export default function WorldPage({ params }: Props) {
                 count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,
                 total: content?.reading.length ?? 0,
               },
+              {
+                label: "Stavning",
+                count: Object.values(stageProgress.spellingModules ?? {}).filter((m) => m.completed).length,
+                total: content?.spelling?.length ?? 0,
+              },
             ].map(({ label, count, total }) => (
-              <div key={label} className="bg-gray-50 border border-gray-100 rounded-2xl px-4 py-3 text-center">
-                <div className="text-2xl font-black text-gray-900">{count}/{total}</div>
-                <div className="text-xs text-gray-500">{label} klara</div>
+              <div key={label} className="bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-gray-600 rounded-2xl px-4 py-3 text-center">
+                <div className="text-2xl font-black text-gray-900 dark:text-gray-100">{count}/{total}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">{label} klara</div>
               </div>
             ))}
           </div>
@@ -124,18 +133,18 @@ export default function WorldPage({ params }: Props) {
 
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Tabs */}
-        <div className="flex gap-2 mb-6 bg-gray-100 p-1 rounded-2xl w-fit">
-          {(["grammar", "reading"] as const).map((tab) => (
+        <div className="flex gap-2 mb-6 bg-gray-100 dark:bg-gray-800 p-1 rounded-2xl w-fit">
+          {(["grammar", "reading", "spelling"] as const).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
                 activeTab === tab
-                  ? "bg-white shadow text-gray-900"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "bg-white dark:bg-gray-600 shadow text-gray-900 dark:text-gray-100"
+                  : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
               }`}
             >
-              {tab === "grammar" ? "📝 Grammatik" : "📖 Läsförståelse"}
+              {tab === "grammar" ? "📝 Grammatik" : tab === "reading" ? "📖 Läsförståelse" : "✏️ Stavning"}
             </button>
           ))}
         </div>
@@ -148,7 +157,12 @@ export default function WorldPage({ params }: Props) {
           </div>
         ) : (
           <div className="space-y-4">
-            {(activeTab === "grammar" ? content.grammar : content.reading).map((mod, idx, arr) => (
+            {(activeTab === "grammar"
+              ? content.grammar
+              : activeTab === "reading"
+              ? content.reading
+              : (content.spelling ?? [])
+            ).map((mod, idx, arr) => (
               <ModuleCard
                 key={mod.id}
                 id={mod.id}
