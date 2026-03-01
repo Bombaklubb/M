@@ -1,0 +1,212 @@
+{
+  "grammar": [
+    {
+      "id": "gym-g1-advanced-tenses",
+      "title": "Advanced Tenses",
+      "description": "Past perfect, future perfect och progressiva former.",
+      "icon": "⏰",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "gym-g1-1",
+          "type": "multiple-choice",
+          "question": "Which sentence uses the past perfect correctly?",
+          "options": [
+            "When she arrived, he already left.",
+            "When she arrived, he had already left.",
+            "When she arrived, he has already left.",
+            "When she arrived, he was already leaving."
+          ],
+          "correctIndex": 1,
+          "explanation": "Past perfect (had + past participle) is used for an action completed BEFORE another past action. 'He had left' happened before 'she arrived'."
+        },
+        {
+          "id": "gym-g1-2",
+          "type": "fill-in-blank",
+          "sentence": "By the time you read this letter, I ___ (leave) the country.",
+          "answer": "will have left",
+          "hint": "Future perfect: will + have + past participle",
+          "explanation": "Future perfect (will + have + past participle) describes an action completed before a specific point in the future."
+        }
+      ]
+    },
+    {
+      "id": "gym-g2-modals-advanced",
+      "title": "Advanced Modal Verbs",
+      "description": "Modalverb för slutledning, möjlighet och kritik av dåtid.",
+      "icon": "🎭",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "gym-g2-1",
+          "type": "multiple-choice",
+          "question": "'The lights are on. She ___ be home.' Which modal expresses logical deduction (near certainty)?",
+          "options": ["might", "must", "could", "should"],
+          "correctIndex": 1,
+          "explanation": "'Must' expresses near certainty based on evidence. 'The lights are on → she must be home'."
+        },
+        {
+          "id": "gym-g2-2",
+          "type": "fill-in-blank",
+          "sentence": "You ___ have told me earlier! I would have helped.",
+          "answer": "should",
+          "hint": "To express that someone did not do something they were expected to do.",
+          "explanation": "'Should have + past participle' expresses regret or criticism about a past action that didn't happen."
+        }
+      ]
+    },
+    {
+      "id": "gym-g3-subjunctive",
+      "title": "The Subjunctive & Formal English",
+      "description": "Konjunktiv och formellt akademiskt språk.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "exercises": [
+        {
+          "id": "gym-g3-1",
+          "type": "multiple-choice",
+          "question": "Which sentence uses the subjunctive correctly?",
+          "options": [
+            "The committee recommended that he takes a break.",
+            "The committee recommended that he take a break.",
+            "The committee recommended that he took a break.",
+            "The committee recommended that he should takes a break."
+          ],
+          "correctIndex": 1,
+          "explanation": "The present subjunctive uses the base form (no -s for third person): 'that he take'. Used after recommend, suggest, insist, demand + that."
+        },
+        {
+          "id": "gym-g3-2",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (know) the answer to that question.",
+          "answer": "knew",
+          "hint": "Wishes about the present use past tense.",
+          "explanation": "After 'wish' for present situations, use past tense. 'I wish I knew' = I don't know, and I wish I did."
+        }
+      ]
+    },
+    {
+      "id": "gym-g4-discourse",
+      "title": "Cohesion & Discourse Markers",
+      "description": "Konnektiv och kohesion — hur man skapar flöde i text.",
+      "icon": "🔗",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "exercises": [
+        {
+          "id": "gym-g4-1",
+          "type": "multiple-choice",
+          "question": "Which discourse marker best introduces a contrasting point?",
+          "options": ["Furthermore", "Nevertheless", "For instance", "As a result"],
+          "correctIndex": 1,
+          "explanation": "'Nevertheless' introduces a contrast or concession. Furthermore adds information, For instance gives examples, As a result shows effect."
+        },
+        {
+          "id": "gym-g4-2",
+          "type": "build-sentence",
+          "instruction": "Build: 'While some critics argue that technology isolates people, others contend that it fosters global community.'",
+          "words": ["While", "some", "critics", "argue", "that", "technology", "isolates", "people", ",", "others", "contend", "that", "it", "fosters", "global", "community", "."],
+          "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+          "explanation": "'While' introduces a concessive clause, elegantly presenting two opposing views in one sentence."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "gym-r1-ai-ethics",
+      "title": "Artificial Intelligence: Promise and Peril",
+      "description": "En analytisk text om AI:s möjligheter och etiska utmaningar.",
+      "icon": "🤖",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "text": "The rapid advancement of artificial intelligence represents perhaps the most significant technological shift since the Industrial Revolution. From diagnosing cancer more accurately than oncologists to generating fluent text and realistic images, AI systems are reshaping what machines can do. Yet this transformation brings with it profound ethical, social, and philosophical questions that society has barely begun to grapple with.\n\nProponents of AI development argue that the technology holds enormous potential for human flourishing. Machine learning algorithms can identify patterns in medical data that would take human doctors years to detect, potentially saving millions of lives. In climate science, AI models can process vast quantities of environmental data, improving our ability to predict and respond to extreme weather events. Economically, automation is projected to create new categories of employment even as it displaces others — a pattern observed during every previous technological revolution.\n\nCritics, however, point to a range of serious concerns. The opacity of many AI systems — often described as 'black boxes' — makes it difficult to understand how decisions are made, raising accountability issues when those decisions affect employment, credit, or criminal justice. Algorithmic bias, where AI systems perpetuate or amplify existing social inequalities, has been documented in contexts ranging from facial recognition to hiring software.\n\nNavigating these questions requires interdisciplinary collaboration — technologists, ethicists, policymakers, and the public must engage together. The choices made in the next decade will shape the trajectory of this technology for generations to come.",
+      "author": "Adapted from a contemporary technology essay",
+      "questions": [
+        {
+          "id": "gym-r1-q1",
+          "type": "on-the-line",
+          "question": "What term does the author use to describe AI systems whose decision-making is not transparent?",
+          "options": ["Dark systems", "Black boxes", "Hidden networks", "Closed circuits"],
+          "correctIndex": 1,
+          "explanation": "The text refers to AI systems as 'black boxes' — a term used when the internal workings are not visible or understandable."
+        },
+        {
+          "id": "gym-r1-q2",
+          "type": "between-the-lines",
+          "question": "What does the author imply by comparing AI to 'every previous technological revolution' in the context of employment?",
+          "options": [
+            "That AI will destroy all jobs permanently.",
+            "That technological change typically both eliminates some jobs and creates new ones.",
+            "That previous revolutions had no impact on employment.",
+            "That AI is less disruptive than previous technologies."
+          ],
+          "correctIndex": 1,
+          "explanation": "The author says AI will 'create new categories of employment even as it displaces others — a pattern observed during every previous technological revolution', implying this is a recurring historical process."
+        },
+        {
+          "id": "gym-r1-q3",
+          "type": "beyond-the-lines",
+          "question": "A student argues: 'This text is biased because it only presents arguments for AI development.' Is this a valid criticism?",
+          "options": [
+            "Yes, the text only praises AI and ignores criticism.",
+            "No, the text is biased against AI and ignores its benefits.",
+            "No, the text presents both benefits and serious criticisms, and calls for collaborative decision-making.",
+            "Yes, the text fails to mention any real-world examples of AI."
+          ],
+          "correctIndex": 2,
+          "explanation": "The text dedicates equal attention to proponents (paragraph 2) and critics (paragraph 3). The conclusion calls for interdisciplinary collaboration — a balanced position. The student's claim is not valid."
+        }
+      ]
+    },
+    {
+      "id": "gym-r2-dystopia",
+      "title": "Extract: The Quiet Protocol",
+      "description": "Litterär text — dystopisk fiktion om kontroll och motstånd.",
+      "icon": "📚",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "text": "The morning briefing arrived at precisely 07:00, as it always did. Mira had long since stopped reading it in full. The language was the same — reassuring, measured, deliberately bland — and the message never varied: the situation was improving, the Protocol was working, patience was required.\n\nShe ate her breakfast standing at the window. Below, the street was almost empty. The few people who moved along the pavement did so quickly, heads angled downward, the particular gait of those who had learned that eye contact was an invitation to misunderstanding. Mira remembered — was it five years ago, six? — when this street had been full of voices, when arguments had spilled out from café tables onto the cobblestones.\n\nThe notification chimed. A flag had been placed on yesterday's search history. 'Climate of Solidarity, 1989' — a book, nothing more. She had been curious about a historical reference in an article. Now, presumably, she would need to explain herself.\n\nMira set down her coffee cup with the careful deliberateness she had cultivated over the past few years. She was not afraid, she told herself. Fear was useful only when there was still something to protect.\n\nShe thought of her daughter, asleep in the next room. Then she opened the reply window and began to type.",
+      "author": "Original fiction for Engelskajakten",
+      "questions": [
+        {
+          "id": "gym-r2-q1",
+          "type": "on-the-line",
+          "question": "What had Mira stopped doing with the morning briefings?",
+          "options": ["Receiving them", "Reading them in full", "Deleting them", "Sharing them with others"],
+          "correctIndex": 1,
+          "explanation": "The text says 'Mira had long since stopped reading it in full.'"
+        },
+        {
+          "id": "gym-r2-q2",
+          "type": "between-the-lines",
+          "question": "What does 'eye contact was an invitation to misunderstanding' reveal about the society?",
+          "options": [
+            "People in this society are naturally shy.",
+            "The society is one where social interaction is dangerous and monitored.",
+            "Eye contact is considered rude in this culture.",
+            "People are too busy to greet each other."
+          ],
+          "correctIndex": 1,
+          "explanation": "This phrase implies that even ordinary human contact carries risk — it could be misinterpreted or reported. This reveals a surveillance society where people self-censor out of fear."
+        },
+        {
+          "id": "gym-r2-q3",
+          "type": "beyond-the-lines",
+          "question": "The final sentence — 'Then she opened the reply window and began to type' — is deliberately ambiguous. What is the most significant aspect of this ambiguity?",
+          "options": [
+            "We don't know if Mira is a fast or slow typist.",
+            "It is unclear whether Mira is writing a compliant explanation or beginning an act of resistance.",
+            "We don't know who she is writing to.",
+            "It is unclear what time of day it is."
+          ],
+          "correctIndex": 1,
+          "explanation": "The ending withholds whether Mira submits (writing an explanation) or resists (writing something subversive). Her thought about her daughter deepens the dilemma — does she comply or resist?"
+        }
+      ]
+    }
+  ]
+}

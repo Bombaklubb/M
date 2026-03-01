@@ -1,0 +1,180 @@
+{
+  "grammar": [
+    {
+      "id": "lag-g1-alphabet",
+      "title": "The Alphabet",
+      "description": "Lär dig det engelska alfabetet och bokstävernas namn.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-g1-1",
+          "type": "multiple-choice",
+          "question": "How many letters are there in the English alphabet?",
+          "options": ["24", "25", "26", "28"],
+          "correctIndex": 2,
+          "explanation": "The English alphabet has 26 letters, from A to Z."
+        },
+        {
+          "id": "lag-g1-2",
+          "type": "fill-in-blank",
+          "sentence": "The first letter of the English alphabet is ___.",
+          "answer": "A",
+          "hint": "It is also the first letter of 'Apple'.",
+          "explanation": "A is the first letter. The alphabet starts A, B, C..."
+        }
+      ]
+    },
+    {
+      "id": "lag-g2-colors",
+      "title": "Colours & Numbers",
+      "description": "Färger och siffror på engelska — grunderna!",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-g2-1",
+          "type": "multiple-choice",
+          "question": "What colour is the sky on a sunny day?",
+          "options": ["red", "green", "blue", "yellow"],
+          "correctIndex": 2,
+          "explanation": "The sky is blue on a sunny day."
+        },
+        {
+          "id": "lag-g2-2",
+          "type": "fill-in-blank",
+          "sentence": "A banana is ___ in colour.",
+          "answer": "yellow",
+          "hint": "Think about the sun — same colour!",
+          "explanation": "A banana is yellow. Yellow = gul."
+        }
+      ]
+    },
+    {
+      "id": "lag-g3-greetings",
+      "title": "Greetings & Introductions",
+      "description": "Hälsa och presentera dig på engelska.",
+      "icon": "👋",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-g3-1",
+          "type": "multiple-choice",
+          "question": "How do you say 'Hej!' in English?",
+          "options": ["Goodbye!", "Hello!", "Thank you!", "Sorry!"],
+          "correctIndex": 1,
+          "explanation": "Hello or Hi is the most common greeting in English."
+        },
+        {
+          "id": "lag-g3-2",
+          "type": "build-sentence",
+          "instruction": "Build the sentence: 'Hello, my name is Maja.'",
+          "words": ["Hello", ",", "my", "name", "is", "Maja", "."],
+          "correctOrder": [0, 1, 2, 3, 4, 5, 6],
+          "explanation": "Start with the greeting, then introduce yourself: Hello, my name is..."
+        }
+      ]
+    },
+    {
+      "id": "lag-g4-animals",
+      "title": "Animals & Verbs",
+      "description": "Djur på engelska och enkla verb.",
+      "icon": "🐾",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "lag-g4-1",
+          "type": "multiple-choice",
+          "question": "What is the English word for 'hund'?",
+          "options": ["cat", "dog", "bird", "fish"],
+          "correctIndex": 1,
+          "explanation": "Hund = dog. Common pets: dog, cat, fish, rabbit."
+        },
+        {
+          "id": "lag-g4-2",
+          "type": "build-sentence",
+          "instruction": "Build the sentence: 'The dog can run fast.'",
+          "words": ["The", "dog", "can", "run", "fast", "."],
+          "correctOrder": [0, 1, 2, 3, 4, 5],
+          "explanation": "The + noun + can + verb + adverb is a common English sentence pattern."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "lag-r1-sam",
+      "title": "Sam's Day",
+      "description": "En kort berättelse om en dag i Sams liv.",
+      "icon": "☀️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "text": "Sam wakes up in the morning. He eats breakfast with his family.\n\nSam has a dog. The dog's name is Rex. Rex is big and brown.\n\nAfter breakfast, Sam goes to school. He likes school. His favourite subject is English!\n\nAfter school, Sam plays with Rex in the garden. They run and jump together. Sam is happy.",
+      "questions": [
+        {
+          "id": "lag-r1-q1",
+          "type": "on-the-line",
+          "question": "What is the name of Sam's dog?",
+          "options": ["Max", "Rex", "Buddy", "Spot"],
+          "correctIndex": 1,
+          "explanation": "The text says: 'The dog's name is Rex.'"
+        },
+        {
+          "id": "lag-r1-q2",
+          "type": "on-the-line",
+          "question": "What is Sam's favourite subject at school?",
+          "options": ["Maths", "Art", "PE", "English"],
+          "correctIndex": 3,
+          "explanation": "The text says 'His favourite subject is English!'"
+        },
+        {
+          "id": "lag-r1-q3",
+          "type": "beyond-the-lines",
+          "question": "What does the story tell us about Sam?",
+          "options": ["He is lazy and sad.", "He is a happy boy who loves his dog.", "He does not like dogs.", "He wants to be a teacher."],
+          "correctIndex": 1,
+          "explanation": "The story shows Sam is happy (last sentence), loves his dog Rex, and enjoys school — a happy, active boy."
+        }
+      ]
+    },
+    {
+      "id": "lag-r2-jungle",
+      "title": "Welcome to the Jungle Camp",
+      "description": "Läs om djungelläget och de vilda djuren.",
+      "icon": "🌿",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "text": "Deep in the jungle, there is a special camp. Animals live here. There are monkeys, parrots, and big cats.\n\nThe monkeys are funny. They jump from tree to tree. They eat bananas and fruit.\n\nThe parrots are very colourful. They can say words! 'Hello! Hello!' they say all day.\n\nThe big cats are strong and fast. They sleep in the sun. At night, they hunt for food.\n\nAt the camp, children can learn about these animals. It is a fun place to visit!",
+      "questions": [
+        {
+          "id": "lag-r2-q1",
+          "type": "on-the-line",
+          "question": "What do the monkeys eat?",
+          "options": ["meat", "fish", "bananas and fruit", "leaves only"],
+          "correctIndex": 2,
+          "explanation": "The text says the monkeys 'eat bananas and fruit'."
+        },
+        {
+          "id": "lag-r2-q2",
+          "type": "between-the-lines",
+          "question": "Why do the big cats sleep in the sun during the day?",
+          "options": ["Because they are sick", "Because they hunt at night and rest during the day", "Because they are afraid of the dark", "Because they like hot weather"],
+          "correctIndex": 1,
+          "explanation": "The text says they hunt at night. If they hunt at night, they probably rest during the day."
+        },
+        {
+          "id": "lag-r2-q3",
+          "type": "beyond-the-lines",
+          "question": "What is the main message of this text?",
+          "options": ["Jungles are dangerous and scary.", "The jungle camp is a great place to learn about animals.", "Parrots are the most important animals.", "Children should not visit jungles."],
+          "correctIndex": 1,
+          "explanation": "The text ends with 'It is a fun place to visit' — the text wants to tell us how great and educational the camp is."
+        }
+      ]
+    }
+  ]
+}

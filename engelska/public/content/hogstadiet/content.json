@@ -1,0 +1,225 @@
+{
+  "grammar": [
+    {
+      "id": "hog-g1-perfect",
+      "title": "Present Perfect",
+      "description": "Perfektum — om erfarenheter och nyligen avslutade händelser.",
+      "icon": "✅",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-g1-1",
+          "type": "multiple-choice",
+          "question": "Which sentence is in the present perfect?",
+          "options": [
+            "She visited Paris last year.",
+            "She has visited Paris.",
+            "She is visiting Paris.",
+            "She visits Paris often."
+          ],
+          "correctIndex": 1,
+          "explanation": "Present perfect = have/has + past participle. 'She has visited' = she has the experience of visiting Paris."
+        },
+        {
+          "id": "hog-g1-2",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (never/eat) sushi before.",
+          "answer": "have never eaten",
+          "hint": "Present perfect with 'never': have/has + never + past participle",
+          "explanation": "For experiences: I have never eaten sushi — it means this is an experience you haven't had yet."
+        }
+      ]
+    },
+    {
+      "id": "hog-g2-conditionals",
+      "title": "Conditional Sentences",
+      "description": "If-satser — typ 1 och 2 konditionalis.",
+      "icon": "🔀",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-g2-1",
+          "type": "multiple-choice",
+          "question": "Which is a correct First Conditional sentence?",
+          "options": [
+            "If it will rain, I would stay inside.",
+            "If it rains, I will stay inside.",
+            "If it rained, I will stay inside.",
+            "If it rains, I would stay inside."
+          ],
+          "correctIndex": 1,
+          "explanation": "First Conditional (real/possible situations): If + present simple, will + base verb."
+        },
+        {
+          "id": "hog-g2-2",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ (be) taller, I would play basketball.",
+          "answer": "were",
+          "hint": "Second Conditional uses past tense in the if-clause. 'Be' becomes 'were' for all subjects.",
+          "explanation": "Second Conditional (hypothetical/unreal): If + past simple (were for all), would + base verb."
+        }
+      ]
+    },
+    {
+      "id": "hog-g3-passive",
+      "title": "The Passive Voice",
+      "description": "Passivum — när objektet blir subjekt.",
+      "icon": "🔄",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-g3-1",
+          "type": "multiple-choice",
+          "question": "Which sentence is in the passive voice?",
+          "options": [
+            "The chef cooked the meal.",
+            "The meal was cooked by the chef.",
+            "The chef is cooking the meal.",
+            "The chef will cook the meal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Passive voice: be + past participle. 'The meal was cooked' — the meal receives the action."
+        },
+        {
+          "id": "hog-g3-2",
+          "type": "fill-in-blank",
+          "sentence": "The Eiffel Tower ___ (build) in 1889.",
+          "answer": "was built",
+          "hint": "Passive past simple: was/were + past participle",
+          "explanation": "Past passive: was/were + past participle. Build → built. 'was built' = someone built it (in the past)."
+        }
+      ]
+    },
+    {
+      "id": "hog-g4-reported",
+      "title": "Reported Speech",
+      "description": "Indirekt tal — återberätta vad någon sagt.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "hog-g4-1",
+          "type": "multiple-choice",
+          "question": "Direct: 'I am tired,' she said. What is the reported speech?",
+          "options": [
+            "She said that she is tired.",
+            "She said that she was tired.",
+            "She said that I am tired.",
+            "She said she is being tired."
+          ],
+          "correctIndex": 1,
+          "explanation": "In reported speech, we 'backshift' tenses: am/is → was. She said that she was tired."
+        },
+        {
+          "id": "hog-g4-2",
+          "type": "build-sentence",
+          "instruction": "Report this question: 'Where do you live?' she asked me.",
+          "words": ["She", "asked", "me", "where", "I", "lived", "."],
+          "correctOrder": [0, 1, 2, 3, 4, 5, 6],
+          "explanation": "Reported questions: no question word order (no inversion), backshift tense. 'do you live' → 'I lived'."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "hog-r1-social-media",
+      "title": "The Impact of Social Media",
+      "description": "Sociala mediers påverkan på ungdomar — en diskuterande text.",
+      "icon": "📱",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "text": "Social media platforms such as Instagram, TikTok, and Snapchat have become an integral part of modern teenage life. According to recent surveys, teenagers spend an average of four to six hours per day on these platforms. This raises important questions about both the benefits and drawbacks of social media.\n\nOn the positive side, social media enables young people to stay connected with friends and family, particularly those who live far away. It also provides a space for creative expression, allowing users to share art, music, and writing with a global audience. Furthermore, social media can be a powerful tool for raising awareness about social issues, as seen in various youth-led movements.\n\nHowever, there are serious concerns about the negative effects. Research suggests that excessive use of social media is linked to increased levels of anxiety and depression, particularly among girls. The constant comparison with carefully edited images can damage self-esteem. Additionally, cyberbullying remains a significant problem, with many young people experiencing harassment online.\n\nPsychologists recommend finding a healthy balance. Setting time limits, taking regular breaks, and focusing on positive, meaningful interactions are all strategies that can help. The key is not to avoid social media entirely, but to use it mindfully.",
+      "questions": [
+        {
+          "id": "hog-r1-q1",
+          "type": "on-the-line",
+          "question": "How many hours per day do teenagers spend on social media, according to surveys?",
+          "options": ["Two to three hours", "Three to five hours", "Four to six hours", "Five to eight hours"],
+          "correctIndex": 2,
+          "explanation": "The text states 'teenagers spend an average of four to six hours per day on these platforms'."
+        },
+        {
+          "id": "hog-r1-q2",
+          "type": "between-the-lines",
+          "question": "Why does the text mention 'carefully edited images' when discussing self-esteem?",
+          "options": [
+            "To show that photography is a popular hobby.",
+            "To suggest that people on social media only show perfect, unrealistic images, leading to unfair comparisons.",
+            "To prove that editing skills are important to learn.",
+            "To argue that all social media images are fake."
+          ],
+          "correctIndex": 1,
+          "explanation": "The text implies that people compare themselves to edited (not real) images, which creates an unfair standard and can make people feel inferior."
+        },
+        {
+          "id": "hog-r1-q3",
+          "type": "beyond-the-lines",
+          "question": "What is the author's overall position on social media?",
+          "options": [
+            "Social media is entirely harmful and should be banned for teenagers.",
+            "Social media is only positive if used for creative expression.",
+            "Social media has both benefits and drawbacks and should be used mindfully.",
+            "Research on social media is unreliable and should be ignored."
+          ],
+          "correctIndex": 2,
+          "explanation": "The author presents both sides and ends with advice on using it 'mindfully' — a balanced, nuanced view."
+        }
+      ]
+    },
+    {
+      "id": "hog-r2-climate",
+      "title": "Climate Change: What Can We Do?",
+      "description": "En argumenterande text om klimatförändringar och individens roll.",
+      "icon": "🌍",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "text": "Climate change is one of the most pressing issues of our time. Global temperatures have risen by approximately 1.1 degrees Celsius since pre-industrial times, leading to more frequent extreme weather events, rising sea levels, and loss of biodiversity.\n\nScientists agree that the primary cause is the emission of greenhouse gases — particularly carbon dioxide from burning fossil fuels such as coal, oil, and natural gas. While governments and corporations bear the greatest responsibility for tackling this crisis, individuals can also make a meaningful difference.\n\nOne of the most impactful personal choices is diet. Studies show that reducing meat consumption — particularly beef — can significantly lower one's carbon footprint, as livestock farming produces large amounts of methane, a powerful greenhouse gas. Choosing plant-based meals even two or three days a week can make a real difference.\n\nTransportation is another key area. Flying and driving private cars are among the most carbon-intensive activities. Choosing public transport, cycling, or walking when possible can substantially reduce emissions.\n\nCritics argue that individual actions are too small to matter when corporations produce the vast majority of global emissions. This is a valid point. However, consumer choices collectively influence corporate behaviour, and civic engagement — voting, protesting, contacting representatives — can drive systemic change.\n\nThe climate crisis requires action at every level. Individual responsibility and systemic change are not mutually exclusive — both are essential.",
+      "questions": [
+        {
+          "id": "hog-r2-q1",
+          "type": "on-the-line",
+          "question": "What does the text identify as the primary cause of climate change?",
+          "options": [
+            "Deforestation",
+            "Individual consumer choices",
+            "Emission of greenhouse gases from fossil fuels",
+            "Natural climate cycles"
+          ],
+          "correctIndex": 2,
+          "explanation": "The text says 'the primary cause is the emission of greenhouse gases — particularly carbon dioxide from burning fossil fuels'."
+        },
+        {
+          "id": "hog-r2-q2",
+          "type": "between-the-lines",
+          "question": "Why does the author mention diet changes 'even two or three days a week'?",
+          "options": [
+            "To suggest that becoming fully vegan is the only solution.",
+            "To make the suggestion feel achievable and not overwhelming.",
+            "To prove that diet is more important than transportation.",
+            "To encourage people to stop eating meat entirely."
+          ],
+          "correctIndex": 1,
+          "explanation": "By saying 'even two or three days a week', the author makes the suggestion feel small and manageable — not an extreme demand."
+        },
+        {
+          "id": "hog-r2-q3",
+          "type": "beyond-the-lines",
+          "question": "What does 'Individual responsibility and systemic change are not mutually exclusive' mean?",
+          "options": [
+            "Individuals and systems cannot work at the same time.",
+            "Both personal actions and large-scale policy changes are necessary and can work together.",
+            "Systemic change is more important than individual actions.",
+            "Individual actions are more important than systemic change."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Not mutually exclusive' means both can exist at the same time. We need both personal action and systemic change simultaneously."
+        }
+      ]
+    }
+  ]
+}

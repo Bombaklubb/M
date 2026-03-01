@@ -1,0 +1,205 @@
+{
+  "grammar": [
+    {
+      "id": "mel-g1-present-simple",
+      "title": "Present Simple",
+      "description": "Presens enkelt — hur vi berättar om vanor och fakta.",
+      "icon": "📅",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g1-1",
+          "type": "multiple-choice",
+          "question": "Which sentence uses the present simple correctly?",
+          "options": [
+            "She go to school every day.",
+            "She goes to school every day.",
+            "She is go to school every day.",
+            "She going to school every day."
+          ],
+          "correctIndex": 1,
+          "explanation": "With he/she/it in present simple, add -s to the verb: go → goes."
+        },
+        {
+          "id": "mel-g1-2",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (play) football every Saturday.",
+          "answer": "plays",
+          "hint": "Remember: he/she/it → add -s",
+          "explanation": "With he/she/it in present simple, we add -s: play → plays."
+        }
+      ]
+    },
+    {
+      "id": "mel-g2-past-simple",
+      "title": "Past Simple",
+      "description": "Preteritum — berätta om saker som hände.",
+      "icon": "⏳",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g2-1",
+          "type": "multiple-choice",
+          "question": "What is the past simple form of 'go'?",
+          "options": ["goed", "went", "gone", "goes"],
+          "correctIndex": 1,
+          "explanation": "'Go' is an irregular verb. Its past simple form is 'went'."
+        },
+        {
+          "id": "mel-g2-2",
+          "type": "fill-in-blank",
+          "sentence": "Yesterday, I ___ (walk) to school.",
+          "answer": "walked",
+          "hint": "Regular verbs: add -ed",
+          "explanation": "Regular verbs form past simple by adding -ed: walk → walked."
+        }
+      ]
+    },
+    {
+      "id": "mel-g3-adjectives",
+      "title": "Adjectives & Comparisons",
+      "description": "Adjektiv och att jämföra saker på engelska.",
+      "icon": "📊",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g3-1",
+          "type": "multiple-choice",
+          "question": "What is the comparative form of 'big'?",
+          "options": ["more big", "biger", "bigger", "biggest"],
+          "correctIndex": 2,
+          "explanation": "Short adjectives: double the final consonant and add -er. big → bigger."
+        },
+        {
+          "id": "mel-g3-2",
+          "type": "fill-in-blank",
+          "sentence": "Mount Everest is the ___ (high) mountain in the world.",
+          "answer": "highest",
+          "hint": "Use the superlative form.",
+          "explanation": "Superlative of high: the highest. Short adjective → the + adj + -est."
+        }
+      ]
+    },
+    {
+      "id": "mel-g4-prepositions",
+      "title": "Prepositions of Place & Time",
+      "description": "In, on, at, under — beskriv var och när saker är.",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "mel-g4-1",
+          "type": "multiple-choice",
+          "question": "Choose the correct preposition: 'The cat is ___ the table.'",
+          "options": ["on", "in", "at", "by"],
+          "correctIndex": 0,
+          "explanation": "'On' is used for surfaces: on the table, on the floor, on the shelf."
+        },
+        {
+          "id": "mel-g4-2",
+          "type": "build-sentence",
+          "instruction": "Build: 'The books are under the chair.'",
+          "words": ["The", "books", "are", "under", "the", "chair", "."],
+          "correctOrder": [0, 1, 2, 3, 4, 5, 6],
+          "explanation": "Under = nedanför/under. The books are under (beneath) the chair."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "mel-r1-city",
+      "title": "A Day in the City",
+      "description": "En dag på stan — läs och svara på frågor.",
+      "icon": "🏙️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "text": "Emma and her friend Liam decided to spend Saturday in the city. They took the bus into town and arrived at ten o'clock in the morning.\n\nFirst, they visited the big museum near the park. Emma loved the history section, but Liam preferred the science exhibition where you could try different experiments. They spent two hours there.\n\nAfterwards, they felt hungry, so they went to a small Italian restaurant around the corner. Emma ordered a pizza and Liam had pasta. The food was delicious.\n\nIn the afternoon, they walked through the shopping centre. Emma bought a new book about space, and Liam found a cool poster for his room.\n\nOn the bus home, they agreed it had been a fantastic day. 'We should do this every weekend,' said Liam. Emma smiled and nodded.",
+      "questions": [
+        {
+          "id": "mel-r1-q1",
+          "type": "on-the-line",
+          "question": "What did Emma buy at the shopping centre?",
+          "options": ["A poster", "A pizza", "A book about space", "Clothes"],
+          "correctIndex": 2,
+          "explanation": "The text says 'Emma bought a new book about space'."
+        },
+        {
+          "id": "mel-r1-q2",
+          "type": "between-the-lines",
+          "question": "How did they feel at the end of the day?",
+          "options": ["Tired and disappointed.", "Happy and satisfied.", "Bored and hungry.", "Worried about the time."],
+          "correctIndex": 1,
+          "explanation": "Liam said 'We should do this every weekend' and Emma smiled — they were clearly very happy with their day."
+        },
+        {
+          "id": "mel-r1-q3",
+          "type": "beyond-the-lines",
+          "question": "What does this text show about Emma and Liam's friendship?",
+          "options": [
+            "They argue a lot and have nothing in common.",
+            "They have different interests but enjoy spending time together.",
+            "They only spend time together because they have to.",
+            "Emma is always in charge of their plans."
+          ],
+          "correctIndex": 1,
+          "explanation": "They chose different things at the museum — different interests — but had a great time together. Good friends can have different tastes!"
+        }
+      ]
+    },
+    {
+      "id": "mel-r2-nature",
+      "title": "The Water Cycle",
+      "description": "En faktatetext om vattnets kretslopp.",
+      "icon": "💧",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "text": "Water is everywhere on Earth. It covers more than 70% of our planet's surface. But how does water travel around the Earth? The answer is the water cycle.\n\nThe water cycle has several stages. First, the sun heats up water in oceans, rivers, and lakes. This causes the water to evaporate — it turns from liquid into water vapour (a kind of gas) and rises into the air.\n\nWhen the water vapour rises high into the atmosphere, it cools down and turns back into tiny water droplets. These droplets form clouds. This process is called condensation.\n\nWhen clouds collect enough droplets, the water falls back to Earth as rain, snow, or hail. This is called precipitation.\n\nThe water then flows back into rivers, lakes, and oceans — and the whole cycle begins again. Without the water cycle, there would be no rain, no rivers, and no life on Earth.",
+      "questions": [
+        {
+          "id": "mel-r2-q1",
+          "type": "on-the-line",
+          "question": "What is condensation?",
+          "options": [
+            "When water flows into the sea.",
+            "When water vapour turns into water droplets.",
+            "When the sun heats water.",
+            "When rain falls to the ground."
+          ],
+          "correctIndex": 1,
+          "explanation": "The text says condensation is when water vapour 'cools down and turns back into tiny water droplets'."
+        },
+        {
+          "id": "mel-r2-q2",
+          "type": "between-the-lines",
+          "question": "Why is the sun important for the water cycle?",
+          "options": [
+            "It provides electricity for factories.",
+            "It heats water and causes evaporation, starting the cycle.",
+            "It makes clouds form.",
+            "It stops water from freezing."
+          ],
+          "correctIndex": 1,
+          "explanation": "The text says the cycle starts when 'the sun heats up water' causing evaporation — without the sun, the cycle wouldn't start."
+        },
+        {
+          "id": "mel-r2-q3",
+          "type": "beyond-the-lines",
+          "question": "Why does the author say 'Without the water cycle, there would be no life on Earth'?",
+          "options": [
+            "Because humans invented the water cycle.",
+            "Because all living things need water to survive, and the cycle makes water available.",
+            "Because the water cycle creates oxygen.",
+            "Because animals can only drink rainwater."
+          ],
+          "correctIndex": 1,
+          "explanation": "All living things need water. The water cycle continuously moves water around the planet, making it available. Without it, water would stay only in the oceans."
+        }
+      ]
+    }
+  ]
+}
