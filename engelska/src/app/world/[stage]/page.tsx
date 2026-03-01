@@ -63,56 +63,64 @@ export default function WorldPage({ params }: Props) {
     return !getModuleProgress(kind, prev.id)?.completed;
   }
 
+  const stageImages: Record<string, string> = {
+    lagstadiet: "/content/sprakdjungeln.png",
+    mellanstadiet: "/content/sprakstaden.png",
+    hogstadiet: "/content/sprakarenan.png",
+    gymnasiet: "/content/sprakakademin.png",
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header student={student} />
 
-      {/* Hero */}
-      <div className={`${stage.bgClass} text-white`}>
-        <div className="max-w-5xl mx-auto px-4 py-10">
+      {/* Hero – stage image */}
+      <div className="relative h-56 sm:h-72 overflow-hidden">
+        <img
+          src={stageImages[stage.id]}
+          alt={stage.name}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 flex flex-col justify-between p-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mb-4 transition-colors"
+            className="self-start inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm bg-black/30 hover:bg-black/50 px-3 py-1.5 rounded-full transition-colors"
           >
-            ← Tillbaka till världskartan
+            ← Tillbaka
           </Link>
-          <div className="flex items-center gap-4">
-            <span className="text-6xl">{stage.emoji}</span>
-            <div>
-              <h1 className="text-3xl font-black text-shadow">{stage.name}</h1>
-              <p className="text-white/70 font-medium">
-                {stage.subtitle} · {stage.grades}
-              </p>
-              <p className="text-white/80 mt-1 text-sm">{stage.description}</p>
-            </div>
+          <div>
+            <h1 className="text-3xl font-black text-white">{stage.name}</h1>
+            <p className="text-white/70 font-medium mt-0.5">{stage.subtitle} · {stage.grades}</p>
+            <p className="text-white/60 text-sm mt-1">{stage.description}</p>
           </div>
-
-          {/* Stats */}
-          {student && stageProgress && (
-            <div className="flex gap-4 mt-6 flex-wrap">
-              {[
-                {
-                  label: "Grammatik",
-                  count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length,
-                  total: content?.grammar.length ?? 0,
-                },
-                {
-                  label: "Läsning",
-                  count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,
-                  total: content?.reading.length ?? 0,
-                },
-              ].map(({ label, count, total }) => (
-                <div key={label} className="glass rounded-2xl px-4 py-3 text-center">
-                  <div className="text-2xl font-black">
-                    {count}/{total}
-                  </div>
-                  <div className="text-xs text-white/70">{label} klara</div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Stats bar */}
+      {student && stageProgress && (
+        <div className="bg-white border-b border-gray-100">
+          <div className="max-w-5xl mx-auto px-4 py-4 flex gap-4 flex-wrap">
+            {[
+              {
+                label: "Grammatik",
+                count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length,
+                total: content?.grammar.length ?? 0,
+              },
+              {
+                label: "Läsning",
+                count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,
+                total: content?.reading.length ?? 0,
+              },
+            ].map(({ label, count, total }) => (
+              <div key={label} className="bg-gray-50 border border-gray-100 rounded-2xl px-4 py-3 text-center">
+                <div className="text-2xl font-black text-gray-900">{count}/{total}</div>
+                <div className="text-xs text-gray-500">{label} klara</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Tabs */}
