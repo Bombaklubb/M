@@ -3,7 +3,7 @@ import type { Stage } from "./types";
 export const STAGES: Stage[] = [
   {
     id: "lagstadiet",
-    name: "The Jungle Camp",
+    name: "Språkdjungeln",
     subtitle: "Lågstadiet",
     emoji: "🌿",
     grades: "Åk 1–3",
@@ -17,7 +17,7 @@ export const STAGES: Stage[] = [
   },
   {
     id: "mellanstadiet",
-    name: "The City District",
+    name: "Språkstaden",
     subtitle: "Mellanstadiet",
     emoji: "🏙️",
     grades: "Åk 4–6",
@@ -31,7 +31,7 @@ export const STAGES: Stage[] = [
   },
   {
     id: "hogstadiet",
-    name: "The Global Hub",
+    name: "Språkarenan",
     subtitle: "Högstadiet",
     emoji: "🌐",
     grades: "Åk 7–9",
@@ -45,7 +45,7 @@ export const STAGES: Stage[] = [
   },
   {
     id: "gymnasiet",
-    name: "The Academic Summit",
+    name: "Språkakademin",
     subtitle: "Gymnasiet",
     emoji: "🏔️",
     grades: "Gymnasiet",
