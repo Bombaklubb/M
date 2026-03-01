@@ -148,26 +148,22 @@ export default function HomePage() {
 
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Welcome banner */}
-        <div className="mb-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-6 text-white">
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div>
-              <h1 className="text-2xl font-black">Hej, {student.name}! 👋</h1>
-              <p className="text-blue-100 mt-1">
-                Välj en värld och fortsätt din engelska resa.
-              </p>
+        <div className="mb-8 bg-white border border-gray-100 rounded-3xl shadow-sm p-5 flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <h1 className="text-2xl font-black text-gray-900">Hej, {student.name}! 👋</h1>
+            <p className="text-gray-500 mt-0.5 text-sm">Välj en värld och fortsätt din engelska resa.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="bg-amber-50 border border-amber-100 rounded-2xl px-5 py-3 text-center">
+              <div className="text-2xl font-black text-amber-700">⭐ {student.totalPoints}</div>
+              <div className="text-xs text-amber-600">totala poäng</div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="bg-white/20 rounded-2xl px-5 py-3 text-center">
-                <div className="text-3xl font-black">⭐ {student.totalPoints}</div>
-                <div className="text-xs text-white/70">totala poäng</div>
-              </div>
-              <Link
-                href="/profile"
-                className="bg-white/20 hover:bg-white/30 rounded-2xl px-4 py-3 text-center transition-colors text-sm font-medium"
-              >
-                👤 Min sida
-              </Link>
-            </div>
+            <Link
+              href="/profile"
+              className="bg-gray-100 hover:bg-gray-200 rounded-2xl px-4 py-3 text-center transition-colors text-sm font-medium text-gray-700"
+            >
+              👤 Min sida
+            </Link>
           </div>
         </div>
 
