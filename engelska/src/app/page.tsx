@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
-import ProgressBar from "@/components/ui/ProgressBar";
-import { loadStudent, createStudent, clearStudent, importProgress } from "@/lib/storage";
+import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
 
@@ -12,7 +11,6 @@ export default function HomePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [nameInput, setNameInput] = useState("");
   const [loading, setLoading] = useState(true);
-  const [importError, setImportError] = useState("");
 
   useEffect(() => {
     setStudent(loadStudent());
@@ -32,24 +30,10 @@ export default function HomePage() {
     setNameInput("");
   }
 
-  async function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    setImportError("");
-    try {
-      const data = await importProgress(file);
-      setStudent(data);
-    } catch (err) {
-      setImportError(err instanceof Error ? err.message : "Importfel");
-    }
-    e.target.value = "";
-  }
-
-
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-4xl animate-bounce-slow">🎯</div>
+        <div className="text-4xl animate-bounce-slow">🌿</div>
       </div>
     );
   }
@@ -57,23 +41,33 @@ export default function HomePage() {
   // ─── Login screen ───────────────────────────────────────────────────────────
   if (!student) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 flex items-center justify-center p-4">
-        <div className="w-full max-w-md animate-slide-up">
-          {/* Logo */}
+      <div className="relative min-h-screen flex items-center justify-center p-4 overflow-hidden">
+        {/* Background image */}
+        <img
+          src="/content/sprakdjungeln.png"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Djungelöverlay – täcker bildens text och ger djupkänsla */}
+        <div className="absolute inset-0 bg-jungle-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
+
+        {/* Login card */}
+        <div className="relative z-10 w-full max-w-md animate-slide-up">
+          {/* Title */}
           <div className="text-center mb-8">
-            <div className="text-7xl mb-4">🎯</div>
             <h1 className="text-4xl font-black text-white text-shadow">
               Engelskajakten
             </h1>
-            <p className="text-blue-200 mt-2 text-lg">
+            <p className="text-jungle-200 mt-2 text-lg">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
 
           {/* Login form */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-1">Välkommen!</h2>
-            <p className="text-gray-500 text-sm mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">Välkommen!</h2>
+            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
               Skriv ditt namn för att börja eller fortsätta.
             </p>
 
@@ -90,44 +84,11 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                className="w-full btn-primary bg-blue-500 hover:bg-blue-600 disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4"
+                className="w-full btn-primary bg-jungle-600 hover:bg-jungle-700 disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4"
               >
                 Starta jakten! 🚀
               </button>
             </form>
-
-            {/* Import */}
-            <div className="mt-6 pt-6 border-t border-gray-100">
-              <p className="text-xs text-gray-400 mb-2">
-                Har du sparat framsteg tidigare?
-              </p>
-              <label className="cursor-pointer inline-flex items-center gap-2 text-sm text-blue-500 hover:text-blue-700 font-medium">
-                📂 Importera framsteg
-                <input
-                  type="file"
-                  accept=".json"
-                  onChange={handleImport}
-                  className="sr-only"
-                />
-              </label>
-              {importError && (
-                <p className="text-red-500 text-xs mt-1">{importError}</p>
-              )}
-            </div>
-          </div>
-
-          {/* Stages preview */}
-          <div className="grid grid-cols-2 gap-3 mt-6">
-            {STAGES.map((s) => (
-              <div
-                key={s.id}
-                className="glass rounded-2xl p-4 text-white text-center"
-              >
-                <div className="text-3xl mb-1">{s.emoji}</div>
-                <div className="font-semibold text-sm">{s.name}</div>
-                <div className="text-xs text-white/70">{s.grades}</div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
