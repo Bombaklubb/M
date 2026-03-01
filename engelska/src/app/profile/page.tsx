@@ -43,11 +43,11 @@ export default function ProfilePage() {
   }
 
   function handleExport() {
-    exportProgress(student);
+    exportProgress(student!);
   }
 
   function handleShare() {
-    const code = generateShareCode(student);
+    const code = generateShareCode(student!);
     setShareCode(code);
     setShowShareCode(true);
   }
