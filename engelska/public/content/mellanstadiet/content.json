@@ -245,142 +245,327 @@
   ],
   "spelling": [
     {
-      "id": "mel-sp1-everyday",
-      "title": "Vardagsord",
-      "description": "Stava vanliga engelska ord du använder varje dag.",
-      "icon": "📚",
+      "id": "mel-sp1-skola-vardag",
+      "title": "Skola och vardag",
+      "description": "Stava skolord och vardagsord på engelska.",
+      "icon": "📖",
       "pointsRequired": 0,
-      "bonusPoints": 15,
+      "bonusPoints": 20,
       "exercises": [
         {
           "id": "mel-sp1-1",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling?",
+          "question": "Vilket ord stavas rätt? ('läxa')",
           "options": [
-            "freind",
-            "frend",
-            "friend",
-            "frind"
+            "homwork",
+            "homewerk",
+            "homework",
+            "homewurk"
           ],
           "correctIndex": 2,
-          "explanation": "Friend is spelled F-R-I-E-N-D. Remember: fri-end."
+          "explanation": "Homework stavas H-O-M-E-W-O-R-K."
         },
         {
           "id": "mel-sp1-2",
           "type": "multiple-choice",
-          "question": "Choose the correct spelling for 'skola':",
+          "question": "Vilket ord stavas rätt? ('ordbok')",
           "options": [
-            "schol",
-            "school",
-            "sckool",
-            "scool"
+            "dictionery",
+            "dictionnary",
+            "dictonary",
+            "dictionary"
           ],
-          "correctIndex": 1,
-          "explanation": "School has a silent C: S-C-H-O-O-L."
+          "correctIndex": 3,
+          "explanation": "Dictionary stavas D-I-C-T-I-O-N-A-R-Y."
         },
         {
           "id": "mel-sp1-3",
           "type": "fill-in-blank",
-          "sentence": "Every morning I eat ___. (frukost = breakfast)",
-          "answer": "breakfast",
-          "hint": "Break + fast.",
-          "explanation": "Breakfast = frukost. B-R-E-A-K-F-A-S-T."
+          "sentence": "My ___ shows what I have to do each day. (schema)",
+          "answer": "schedule",
+          "hint": "Börjar med SCH.",
+          "explanation": "Schedule = schema. Stavas S-C-H-E-D-U-L-E."
         },
         {
           "id": "mel-sp1-4",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'vatten'?",
+          "question": "Vilket ord stavas rätt? ('tangentbord')",
           "options": [
-            "watter",
-            "weter",
-            "water",
-            "watr"
+            "keybord",
+            "keybard",
+            "keybored",
+            "keyboard"
           ],
-          "correctIndex": 2,
-          "explanation": "Water = vatten. W-A-T-E-R."
+          "correctIndex": 3,
+          "explanation": "Keyboard stavas K-E-Y-B-O-A-R-D."
         },
         {
           "id": "mel-sp1-5",
-          "type": "multiple-choice",
-          "question": "How do you spell 'lycklig'?",
-          "options": [
-            "hapy",
-            "happy",
-            "happi",
-            "hapey"
-          ],
-          "correctIndex": 1,
-          "explanation": "Happy has double P: H-A-P-P-Y."
+          "type": "fill-in-blank",
+          "sentence": "I borrow books from the ___. (bibliotek)",
+          "answer": "library",
+          "hint": "Börjar med L.",
+          "explanation": "Library = bibliotek. Stavas L-I-B-R-A-R-Y."
         }
       ]
     },
     {
-      "id": "mel-sp2-verbs",
-      "title": "Vanliga verb",
-      "description": "Stava vanliga engelska verb rätt.",
+      "id": "mel-sp2-oregelbundna-verb",
+      "title": "Oregelbundna verb",
+      "description": "Stava oregelbundna verb och deras dåtidsformer.",
       "icon": "✍️",
       "pointsRequired": 0,
-      "bonusPoints": 15,
+      "bonusPoints": 20,
       "exercises": [
         {
           "id": "mel-sp2-1",
           "type": "multiple-choice",
-          "question": "Choose the correct spelling for 'lyssna':",
+          "question": "Vilket ord stavas rätt? (dåtid av 'think')",
           "options": [
-            "lisen",
-            "listen",
-            "lissten",
-            "listin"
+            "thout",
+            "thougt",
+            "thouht",
+            "thought"
           ],
-          "correctIndex": 1,
-          "explanation": "Listen has a silent T: L-I-S-T-E-N."
+          "correctIndex": 3,
+          "explanation": "Thought stavas T-H-O-U-G-H-T."
         },
         {
           "id": "mel-sp2-2",
-          "type": "multiple-choice",
-          "question": "How do you spell 'skriva'?",
-          "options": [
-            "writ",
-            "write",
-            "rite",
-            "wriet"
-          ],
-          "correctIndex": 1,
-          "explanation": "Write has a silent W: W-R-I-T-E."
+          "type": "fill-in-blank",
+          "sentence": "Yesterday I ___ a new book at the shop. (köpte)",
+          "answer": "bought",
+          "hint": "Dåtid av 'buy'. Börjar med B.",
+          "explanation": "Bought = köpte. Stavas B-O-U-G-H-T."
         },
         {
           "id": "mel-sp2-3",
-          "type": "fill-in-blank",
-          "sentence": "I ___ English at school. (lär mig = learn)",
-          "answer": "learn",
-          "hint": "L-E-A-R-N.",
-          "explanation": "Learn = lära sig. L-E-A-R-N."
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'bring')",
+          "options": [
+            "brougt",
+            "brough",
+            "brought",
+            "broughtt"
+          ],
+          "correctIndex": 2,
+          "explanation": "Brought stavas B-R-O-U-G-H-T."
         },
         {
           "id": "mel-sp2-4",
-          "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'tala'?",
-          "options": [
-            "speek",
-            "spek",
-            "speak",
-            "speake"
-          ],
-          "correctIndex": 2,
-          "explanation": "Speak = tala. S-P-E-A-K."
+          "type": "fill-in-blank",
+          "sentence": "We ___ the lost puppy in the garden. (hittade)",
+          "answer": "found",
+          "hint": "Dåtid av 'find'. Börjar med F.",
+          "explanation": "Found = hittade. Stavas F-O-U-N-D."
         },
         {
           "id": "mel-sp2-5",
           "type": "multiple-choice",
-          "question": "How do you spell 'läsa'?",
+          "question": "Vilket ord stavas rätt? (dåtid av 'come')",
           "options": [
-            "reed",
-            "read",
-            "reade",
-            "reid"
+            "cam",
+            "caime",
+            "camed",
+            "came"
           ],
-          "correctIndex": 1,
-          "explanation": "Read = läsa. R-E-A-D."
+          "correctIndex": 3,
+          "explanation": "Came stavas C-A-M-E."
+        }
+      ]
+    },
+    {
+      "id": "mel-sp3-platser",
+      "title": "Platser",
+      "description": "Stava ord för platser och byggnader på engelska.",
+      "icon": "🏙️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-sp3-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('sjukhus')",
+          "options": [
+            "hospitel",
+            "hospitall",
+            "hosptal",
+            "hospital"
+          ],
+          "correctIndex": 3,
+          "explanation": "Hospital stavas H-O-S-P-I-T-A-L."
+        },
+        {
+          "id": "mel-sp3-2",
+          "type": "fill-in-blank",
+          "sentence": "Planes take off and land at the ___. (flygplats)",
+          "answer": "airport",
+          "hint": "Börjar med A.",
+          "explanation": "Airport = flygplats. Stavas A-I-R-P-O-R-T."
+        },
+        {
+          "id": "mel-sp3-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('museum')",
+          "options": [
+            "musaeum",
+            "musem",
+            "museeum",
+            "museum"
+          ],
+          "correctIndex": 3,
+          "explanation": "Museum stavas M-U-S-E-U-M."
+        },
+        {
+          "id": "mel-sp3-4",
+          "type": "fill-in-blank",
+          "sentence": "Everest is the highest ___ in the world. (berg)",
+          "answer": "mountain",
+          "hint": "Börjar med M.",
+          "explanation": "Mountain = berg. Stavas M-O-U-N-T-A-I-N."
+        },
+        {
+          "id": "mel-sp3-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('ö')",
+          "options": [
+            "iland",
+            "islend",
+            "isalnd",
+            "island"
+          ],
+          "correctIndex": 3,
+          "explanation": "Island stavas I-S-L-A-N-D."
+        }
+      ]
+    },
+    {
+      "id": "mel-sp4-beskrivande",
+      "title": "Beskrivande ord",
+      "description": "Stava adjektiv och beskrivande ord på engelska.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-sp4-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('intressant')",
+          "options": [
+            "intresting",
+            "intersting",
+            "intaresting",
+            "interesting"
+          ],
+          "correctIndex": 3,
+          "explanation": "Interesting stavas I-N-T-E-R-E-S-T-I-N-G."
+        },
+        {
+          "id": "mel-sp4-2",
+          "type": "fill-in-blank",
+          "sentence": "It can be ___ to cross the street without looking. (farligt)",
+          "answer": "dangerous",
+          "hint": "Börjar med D.",
+          "explanation": "Dangerous = farligt. Stavas D-A-N-G-E-R-O-U-S."
+        },
+        {
+          "id": "mel-sp4-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('vacker')",
+          "options": [
+            "beautifull",
+            "beutiful",
+            "beautyful",
+            "beautiful"
+          ],
+          "correctIndex": 3,
+          "explanation": "Beautiful stavas B-E-A-U-T-I-F-U-L."
+        },
+        {
+          "id": "mel-sp4-4",
+          "type": "fill-in-blank",
+          "sentence": "Maths can be very ___ sometimes. (svårt)",
+          "answer": "difficult",
+          "hint": "Börjar med D.",
+          "explanation": "Difficult = svårt. Stavas D-I-F-F-I-C-U-L-T."
+        },
+        {
+          "id": "mel-sp4-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('viktig')",
+          "options": [
+            "importent",
+            "importannt",
+            "importand",
+            "important"
+          ],
+          "correctIndex": 3,
+          "explanation": "Important stavas I-M-P-O-R-T-A-N-T."
+        }
+      ]
+    },
+    {
+      "id": "mel-sp5-sambandsord",
+      "title": "Sambandsord",
+      "description": "Stava sambandsord och adverb på engelska.",
+      "icon": "🔗",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-sp5-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('eftersom/för att')",
+          "options": [
+            "becaus",
+            "becose",
+            "becausse",
+            "because"
+          ],
+          "correctIndex": 3,
+          "explanation": "Because stavas B-E-C-A-U-S-E."
+        },
+        {
+          "id": "mel-sp5-2",
+          "type": "fill-in-blank",
+          "sentence": "She was tired; ___, she went to bed early. (därför)",
+          "answer": "therefore",
+          "hint": "Börjar med TH.",
+          "explanation": "Therefore = därför. Stavas T-H-E-R-E-F-O-R-E."
+        },
+        {
+          "id": "mel-sp5-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('emellertid/dock')",
+          "options": [
+            "howevver",
+            "howaver",
+            "howevur",
+            "however"
+          ],
+          "correctIndex": 3,
+          "explanation": "However stavas H-O-W-E-V-E-R."
+        },
+        {
+          "id": "mel-sp5-4",
+          "type": "fill-in-blank",
+          "sentence": "The door opened ___. (plötsligt)",
+          "answer": "suddenly",
+          "hint": "Börjar med S.",
+          "explanation": "Suddenly = plötsligt. Stavas S-U-D-D-E-N-L-Y."
+        },
+        {
+          "id": "mel-sp5-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('äntligen')",
+          "options": [
+            "finaly",
+            "finelly",
+            "finnaly",
+            "finally"
+          ],
+          "correctIndex": 3,
+          "explanation": "Finally stavas F-I-N-A-L-L-Y."
         }
       ]
     }
