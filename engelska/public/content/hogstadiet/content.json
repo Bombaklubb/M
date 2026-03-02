@@ -139,6 +139,186 @@
           "explanation": "Reported questions: no question word order (no inversion), backshift tense. 'do you live' → 'I lived'."
         }
       ]
+    },
+    {
+      "id": "hog-g-advanced",
+      "title": "Advanced verb forms",
+      "description": "Perfekt, passiv, konditionalis och jämförelseformer.",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced-1",
+          "type": "fill-in-blank",
+          "sentence": "If it rains, we ___ (stay) inside.",
+          "answer": "will stay"
+        },
+        {
+          "id": "hog-g-advanced-2",
+          "type": "multiple-choice",
+          "question": "She has ___ her homework.",
+          "options": [
+            "do",
+            "did",
+            "done"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "hog-g-advanced-3",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (live) here for three years.",
+          "answer": "have lived"
+        },
+        {
+          "id": "hog-g-advanced-4",
+          "type": "multiple-choice",
+          "question": "This book ___ written in 1990.",
+          "options": [
+            "is",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced-5",
+          "type": "fill-in-blank",
+          "sentence": "He said that he ___ (be) tired.",
+          "answer": "was"
+        },
+        {
+          "id": "hog-g-advanced-6",
+          "type": "multiple-choice",
+          "question": "If I ___ more time, I would travel.",
+          "options": [
+            "have",
+            "had",
+            "will have"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced-7",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not finish) yet.",
+          "answer": "has not finished"
+        },
+        {
+          "id": "hog-g-advanced-8",
+          "type": "multiple-choice",
+          "question": "They were tired, ___ they continued.",
+          "options": [
+            "but",
+            "because",
+            "so"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced-9",
+          "type": "fill-in-blank",
+          "sentence": "The film was ___ (interesting) than the book.",
+          "answer": "more interesting"
+        },
+        {
+          "id": "hog-g-advanced-10",
+          "type": "multiple-choice",
+          "question": "This is the ___ movie I have seen.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "hog-g-advanced-11",
+          "type": "fill-in-blank",
+          "sentence": "He asked where I ___ (live).",
+          "answer": "lived"
+        },
+        {
+          "id": "hog-g-advanced-12",
+          "type": "multiple-choice",
+          "question": "She speaks English ___ than me.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced-13",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (build) a new school last year.",
+          "answer": "built"
+        },
+        {
+          "id": "hog-g-advanced-14",
+          "type": "multiple-choice",
+          "question": "The cake was ___ by my sister.",
+          "options": [
+            "make",
+            "made",
+            "making"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced-15",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (can) swim.",
+          "answer": "could"
+        },
+        {
+          "id": "hog-g-advanced-16",
+          "type": "multiple-choice",
+          "question": "She is interested ___ music.",
+          "options": [
+            "in",
+            "on",
+            "at"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced-17",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (already finish) the project.",
+          "answer": "have already finished"
+        },
+        {
+          "id": "hog-g-advanced-18",
+          "type": "multiple-choice",
+          "question": "He runs ___ than his brother.",
+          "options": [
+            "fast",
+            "faster",
+            "fastest"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced-19",
+          "type": "fill-in-blank",
+          "sentence": "If she had studied, she ___ (pass) the test.",
+          "answer": "would have passed"
+        },
+        {
+          "id": "hog-g-advanced-20",
+          "type": "multiple-choice",
+          "question": "They didn't know ___ to do.",
+          "options": [
+            "what",
+            "which",
+            "where"
+          ],
+          "correctIndex": 0
+        }
+      ]
     }
   ],
   "reading": [
