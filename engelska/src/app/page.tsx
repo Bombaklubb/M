@@ -150,43 +150,37 @@ export default function HomePage() {
     );
   }
 
-  // ─── Stage image map ────────────────────────────────────────────────────────
-  const stageImages: Record<string, string> = {
-    lagstadiet: "/content/sprakdjungeln.png",
-    mellanstadiet: "/content/sprakstaden.png",
-    hogstadiet: "/content/sprakarenan.png",
-    gymnasiet: "/content/sprakakademin.png",
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} onLogout={handleLogout} />
 
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        {/* Stage grid */}
-        <h2 className="text-2xl font-black text-gray-800 dark:text-gray-100 mb-4">Engelskajakten</h2>
-        <div className="grid grid-cols-2 gap-4">
-          {STAGES.map((stage) => (
-            <Link key={stage.id} href={`/world/${stage.id}`} className="group">
-              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video">
-                <img
-                  src={stageImages[stage.id]}
-                  alt={stage.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <span className="text-xl">{stage.emoji}</span>
-                    <h3 className="text-white font-black text-lg leading-tight">
-                      {stage.name}
-                    </h3>
-                  </div>
-                  <p className="text-white/70 text-sm">{stage.grades}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
+      <main className="max-w-5xl mx-auto px-4 py-4">
+        {/* Klickbar startsidebild */}
+        <div className="relative select-none">
+          <img
+            src="/content/basta-engelskajakten.png"
+            alt="Engelskajakten"
+            className="w-full h-auto block rounded-2xl shadow-lg"
+            draggable={false}
+          />
+
+          {/* Klickbara zoner över de 4 korten (nedre 78% av bilden, delad i 2×2) */}
+          <Link href="/world/lagstadiet" aria-label="Språkdjungeln"
+            className="absolute hover:bg-white/10 transition-colors rounded-xl"
+            style={{ top: "22%", left: "2%", width: "47%", height: "37%" }}
+          />
+          <Link href="/world/mellanstadiet" aria-label="Språkstaden"
+            className="absolute hover:bg-white/10 transition-colors rounded-xl"
+            style={{ top: "22%", left: "51%", width: "47%", height: "37%" }}
+          />
+          <Link href="/world/hogstadiet" aria-label="Språkarenan"
+            className="absolute hover:bg-white/10 transition-colors rounded-xl"
+            style={{ top: "61%", left: "2%", width: "47%", height: "37%" }}
+          />
+          <Link href="/world/gymnasiet" aria-label="Språkakademin"
+            className="absolute hover:bg-white/10 transition-colors rounded-xl"
+            style={{ top: "61%", left: "51%", width: "47%", height: "37%" }}
+          />
         </div>
       </main>
     </div>
