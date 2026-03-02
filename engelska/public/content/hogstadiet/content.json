@@ -319,6 +319,186 @@
           "correctIndex": 0
         }
       ]
+    },
+    {
+      "id": "hog-g-advanced2",
+      "title": "Advanced verb forms – del 2",
+      "description": "Fler övningar på perfekt, passiv, konditionalis och komparativ.",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced2-1",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (study) for two hours.",
+          "answer": "has studied"
+        },
+        {
+          "id": "hog-g-advanced2-2",
+          "type": "multiple-choice",
+          "question": "If I were you, I ___ apologise.",
+          "options": [
+            "will",
+            "would",
+            "can"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced2-3",
+          "type": "fill-in-blank",
+          "sentence": "The book ___ (write) in 2005.",
+          "answer": "was written"
+        },
+        {
+          "id": "hog-g-advanced2-4",
+          "type": "multiple-choice",
+          "question": "He asked me where I ___ from.",
+          "options": [
+            "am",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced2-5",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not finish) the task yet.",
+          "answer": "have not finished"
+        },
+        {
+          "id": "hog-g-advanced2-6",
+          "type": "multiple-choice",
+          "question": "This is ___ interesting book I have read.",
+          "options": [
+            "more",
+            "most",
+            "the most"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "hog-g-advanced2-7",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (go) to school when it started to rain.",
+          "answer": "was going"
+        },
+        {
+          "id": "hog-g-advanced2-8",
+          "type": "multiple-choice",
+          "question": "If it ___ tomorrow, we will stay home.",
+          "options": [
+            "rain",
+            "rains",
+            "rained"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced2-9",
+          "type": "fill-in-blank",
+          "sentence": "He said he ___ (be) tired.",
+          "answer": "was"
+        },
+        {
+          "id": "hog-g-advanced2-10",
+          "type": "multiple-choice",
+          "question": "The project must ___ finished today.",
+          "options": [
+            "be",
+            "been",
+            "being"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced2-11",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (have) more time.",
+          "answer": "had"
+        },
+        {
+          "id": "hog-g-advanced2-12",
+          "type": "multiple-choice",
+          "question": "She is good ___ maths.",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced2-13",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (live) here since 2020.",
+          "answer": "have lived"
+        },
+        {
+          "id": "hog-g-advanced2-14",
+          "type": "multiple-choice",
+          "question": "He runs ___ than me.",
+          "options": [
+            "fast",
+            "faster",
+            "fastest"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced2-15",
+          "type": "fill-in-blank",
+          "sentence": "The cake ___ (make) by my mother.",
+          "answer": "was made"
+        },
+        {
+          "id": "hog-g-advanced2-16",
+          "type": "multiple-choice",
+          "question": "If she had studied, she ___ passed.",
+          "options": [
+            "will have",
+            "would have",
+            "has"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced2-17",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (already see) that film.",
+          "answer": "have already seen"
+        },
+        {
+          "id": "hog-g-advanced2-18",
+          "type": "multiple-choice",
+          "question": "He didn't know ___ to say.",
+          "options": [
+            "what",
+            "where",
+            "why"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced2-19",
+          "type": "fill-in-blank",
+          "sentence": "The car ___ (drive) too fast.",
+          "answer": "was driven"
+        },
+        {
+          "id": "hog-g-advanced2-20",
+          "type": "multiple-choice",
+          "question": "She speaks English ___ than before.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "reading": [
