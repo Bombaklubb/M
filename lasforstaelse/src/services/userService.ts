@@ -284,6 +284,13 @@ export function getCompletedTextIds(user: User): string[] {
 }
 
 /**
+ * Hämta de senaste lästa texterna (för att undvika upprepning av teman)
+ */
+export function getRecentCompletedTexts(user: User, count: number = 10): CompletedText[] {
+  return user.completedTexts.slice(-count);
+}
+
+/**
  * Spara användare till "alla användare" listan (för lärarstatistik)
  */
 export function saveToAllUsers(user: User): void {
