@@ -56,15 +56,8 @@ export default function WorldPage({ params }: Props) {
     return map[moduleId] ?? null;
   }
 
-  // Linear unlocking: first module always open, each subsequent requires the previous to be completed
-  function isModuleLocked(
-    mods: Array<GrammarModule | ReadingModule>,
-    index: number,
-    kind: "grammar" | "reading" | "spelling"
-  ): boolean {
-    if (index === 0) return false;
-    const prev = mods[index - 1];
-    return !getModuleProgress(kind, prev.id)?.completed;
+  function isModuleLocked(): boolean {
+    return false;
   }
 
   const stageImages: Record<string, string> = {
@@ -172,7 +165,7 @@ export default function WorldPage({ params }: Props) {
                 kind={activeTab}
                 stage={stage}
                 progress={getModuleProgress(activeTab, mod.id)}
-                locked={isModuleLocked(arr, idx, activeTab)}
+                locked={isModuleLocked()}
                 prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
               />
             ))}
