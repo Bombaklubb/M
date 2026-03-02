@@ -267,142 +267,327 @@
   ],
   "spelling": [
     {
-      "id": "gym-sp1-academic",
-      "title": "Akademiska ord",
-      "description": "Stava avancerade akademiska ord korrekt.",
-      "icon": "🎓",
+      "id": "gym-sp1-analys",
+      "title": "Analys",
+      "description": "Stava akademiska analysord på engelska.",
+      "icon": "🔬",
       "pointsRequired": 0,
-      "bonusPoints": 25,
+      "bonusPoints": 30,
       "exercises": [
         {
           "id": "gym-sp1-1",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling?",
+          "question": "Vilket ord stavas rätt? ('hypotes')",
           "options": [
-            "analise",
-            "analyize",
-            "analyse",
-            "analyzze"
+            "hypothasis",
+            "hypothosis",
+            "hypothersis",
+            "hypothesis"
           ],
-          "correctIndex": 2,
-          "explanation": "Analyse (British) / Analyze (American). A-N-A-L-Y-S-E."
+          "correctIndex": 3,
+          "explanation": "Hypothesis stavas H-Y-P-O-T-H-E-S-I-S."
         },
         {
           "id": "gym-sp1-2",
-          "type": "multiple-choice",
-          "question": "Choose the correct spelling:",
-          "options": [
-            "hipothesis",
-            "hypothesis",
-            "hypothisis",
-            "hypothessis"
-          ],
-          "correctIndex": 1,
-          "explanation": "Hypothesis: H-Y-P-O-T-H-E-S-I-S."
+          "type": "fill-in-blank",
+          "sentence": "The ___ of the results was discussed in the conclusion. (betydelse)",
+          "answer": "significance",
+          "hint": "Börjar med S.",
+          "explanation": "Significance = betydelse. Stavas S-I-G-N-I-F-I-C-A-N-C-E."
         },
         {
           "id": "gym-sp1-3",
-          "type": "fill-in-blank",
-          "sentence": "The experiment supported the ___. (slutsats = conclusion)",
-          "answer": "conclusion",
-          "hint": "Con-clu-sion.",
-          "explanation": "Conclusion: C-O-N-C-L-U-S-I-O-N."
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('metodologi')",
+          "options": [
+            "methodolegy",
+            "methodollogy",
+            "methodolgy",
+            "methodology"
+          ],
+          "correctIndex": 3,
+          "explanation": "Methodology stavas M-E-T-H-O-D-O-L-O-G-Y."
         },
         {
           "id": "gym-sp1-4",
-          "type": "multiple-choice",
-          "question": "Which is correct?",
-          "options": [
-            "referance",
-            "reference",
-            "referense",
-            "reffrence"
-          ],
-          "correctIndex": 1,
-          "explanation": "Reference: R-E-F-E-R-E-N-C-E."
+          "type": "fill-in-blank",
+          "sentence": "A rainbow is a natural ___. (fenomen)",
+          "answer": "phenomenon",
+          "hint": "Börjar med PH. Slutar med ON.",
+          "explanation": "Phenomenon stavas P-H-E-N-O-M-E-N-O-N."
         },
         {
           "id": "gym-sp1-5",
           "type": "multiple-choice",
-          "question": "How do you spell 'argument' in the plural?",
+          "question": "Vilket ord stavas rätt? ('syntes')",
           "options": [
-            "arguements",
-            "arguments",
-            "argumments",
-            "arguiments"
+            "synthisis",
+            "synthasis",
+            "syntesis",
+            "synthesis"
           ],
-          "correctIndex": 1,
-          "explanation": "Arguments: A-R-G-U-M-E-N-T-S. No extra E."
+          "correctIndex": 3,
+          "explanation": "Synthesis stavas S-Y-N-T-H-E-S-I-S."
         }
       ]
     },
     {
-      "id": "gym-sp2-advanced",
-      "title": "Avancerade ord",
-      "description": "Ord som kräver precision – typiska för C- och A-nivå.",
-      "icon": "🏆",
+      "id": "gym-sp2-argumentation",
+      "title": "Argumentation",
+      "description": "Stava avancerade argumentationsord på engelska.",
+      "icon": "⚖️",
       "pointsRequired": 0,
-      "bonusPoints": 25,
+      "bonusPoints": 30,
       "exercises": [
         {
           "id": "gym-sp2-1",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling?",
+          "question": "Vilket ord stavas rätt? ('motargument')",
           "options": [
-            "ambigous",
-            "ambiguous",
-            "ambiguious",
-            "ambigious"
+            "counterarguement",
+            "countarargument",
+            "couterargument",
+            "counterargument"
           ],
-          "correctIndex": 1,
-          "explanation": "Ambiguous: A-M-B-I-G-U-O-U-S."
+          "correctIndex": 3,
+          "explanation": "Counterargument stavas C-O-U-N-T-E-R-A-R-G-U-M-E-N-T."
         },
         {
           "id": "gym-sp2-2",
-          "type": "multiple-choice",
-          "question": "Choose the correct spelling:",
-          "options": [
-            "controversal",
-            "controversiel",
-            "controversial",
-            "contraversial"
-          ],
-          "correctIndex": 2,
-          "explanation": "Controversial: C-O-N-T-R-O-V-E-R-S-I-A-L."
+          "type": "fill-in-blank",
+          "sentence": "The speaker's ___ was damaged by the false statistics. (trovärdighet)",
+          "answer": "credibility",
+          "hint": "Börjar med C.",
+          "explanation": "Credibility = trovärdighet. Stavas C-R-E-D-I-B-I-L-I-T-Y."
         },
         {
           "id": "gym-sp2-3",
-          "type": "fill-in-blank",
-          "sentence": "Her ___ approach impressed the professor. (sofistikerade = sophisticated)",
-          "answer": "sophisticated",
-          "hint": "So-phis-ti-ca-ted.",
-          "explanation": "Sophisticated: S-O-P-H-I-S-T-I-C-A-T-E-D."
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('övertygande')",
+          "options": [
+            "persuaseve",
+            "persvasive",
+            "perswasive",
+            "persuasive"
+          ],
+          "correctIndex": 3,
+          "explanation": "Persuasive stavas P-E-R-S-U-A-S-I-V-E."
         },
         {
           "id": "gym-sp2-4",
-          "type": "multiple-choice",
-          "question": "Which is correct?",
-          "options": [
-            "consequently",
-            "consequantly",
-            "consequentely",
-            "consequntly"
-          ],
-          "correctIndex": 0,
-          "explanation": "Consequently: C-O-N-S-E-Q-U-E-N-T-L-Y."
+          "type": "fill-in-blank",
+          "sentence": "The essay was ___, with each paragraph linking to the next. (sammanhängande)",
+          "answer": "coherent",
+          "hint": "Börjar med C.",
+          "explanation": "Coherent = sammanhängande. Stavas C-O-H-E-R-E-N-T."
         },
         {
           "id": "gym-sp2-5",
           "type": "multiple-choice",
-          "question": "How do you spell 'oumbärlig'?",
+          "question": "Vilket ord stavas rätt? ('betona')",
           "options": [
-            "indispensible",
-            "indispensable",
-            "indispencible",
-            "indispenseable"
+            "emphisise",
+            "emfasise",
+            "emphasisse",
+            "emphasise"
           ],
-          "correctIndex": 1,
-          "explanation": "Indispensable: ends in -ABLE, not -IBLE. I-N-D-I-S-P-E-N-S-A-B-L-E."
+          "correctIndex": 3,
+          "explanation": "Emphasise stavas E-M-P-H-A-S-I-S-E."
+        }
+      ]
+    },
+    {
+      "id": "gym-sp3-akademisk-stil",
+      "title": "Akademisk stil",
+      "description": "Stava akademiska stilmarkörer och sambandsord.",
+      "icon": "✒️",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "gym-sp3-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('följaktligen')",
+          "options": [
+            "consequentely",
+            "consequantly",
+            "consequentaly",
+            "consequently"
+          ],
+          "correctIndex": 3,
+          "explanation": "Consequently stavas C-O-N-S-E-Q-U-E-N-T-L-Y."
+        },
+        {
+          "id": "gym-sp3-2",
+          "type": "fill-in-blank",
+          "sentence": "___, more research is needed to confirm the results. (dessutom/vidare)",
+          "answer": "Furthermore",
+          "hint": "Börjar med F.",
+          "explanation": "Furthermore = dessutom. Stavas F-U-R-T-H-E-R-M-O-R-E."
+        },
+        {
+          "id": "gym-sp3-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('icke desto mindre')",
+          "options": [
+            "nevertheles",
+            "neverthless",
+            "nevertheles",
+            "nevertheless"
+          ],
+          "correctIndex": 3,
+          "explanation": "Nevertheless stavas N-E-V-E-R-T-H-E-L-E-S-S."
+        },
+        {
+          "id": "gym-sp3-4",
+          "type": "fill-in-blank",
+          "sentence": "The results were ___ published in a journal. (efterföljande/sedan)",
+          "answer": "subsequently",
+          "hint": "Börjar med S.",
+          "explanation": "Subsequently = efterföljande. Stavas S-U-B-S-E-Q-U-E-N-T-L-Y."
+        },
+        {
+          "id": "gym-sp3-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('hävdas/förmodligen')",
+          "options": [
+            "argueably",
+            "arguibly",
+            "arguabley",
+            "arguably"
+          ],
+          "correctIndex": 3,
+          "explanation": "Arguably stavas A-R-G-U-A-B-L-Y."
+        }
+      ]
+    },
+    {
+      "id": "gym-sp4-samhallsfragor",
+      "title": "Samhällsfrågor",
+      "description": "Stava ord för komplexa samhällsfrågor på engelska.",
+      "icon": "🏛️",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "gym-sp4-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('hållbarhet')",
+          "options": [
+            "sustainabillity",
+            "sustainabilty",
+            "sustainiability",
+            "sustainability"
+          ],
+          "correctIndex": 3,
+          "explanation": "Sustainability stavas S-U-S-T-A-I-N-A-B-I-L-I-T-Y."
+        },
+        {
+          "id": "gym-sp4-2",
+          "type": "fill-in-blank",
+          "sentence": "The ___ between rich and poor is growing. (ojämlikhet)",
+          "answer": "inequality",
+          "hint": "Börjar med IN.",
+          "explanation": "Inequality = ojämlikhet. Stavas I-N-E-Q-U-A-L-I-T-Y."
+        },
+        {
+          "id": "gym-sp4-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('ansvarsskyldighet')",
+          "options": [
+            "accountabillity",
+            "accountabilty",
+            "accountibilty",
+            "accountability"
+          ],
+          "correctIndex": 3,
+          "explanation": "Accountability stavas A-C-C-O-U-N-T-A-B-I-L-I-T-Y."
+        },
+        {
+          "id": "gym-sp4-4",
+          "type": "fill-in-blank",
+          "sentence": "Governments use cameras for ___ in public spaces. (övervakning)",
+          "answer": "surveillance",
+          "hint": "Börjar med S. Tänk på stavningen: sur-veil-lance.",
+          "explanation": "Surveillance = övervakning. Stavas S-U-R-V-E-I-L-L-A-N-C-E."
+        },
+        {
+          "id": "gym-sp4-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('representation')",
+          "options": [
+            "represantation",
+            "representetion",
+            "representasion",
+            "representation"
+          ],
+          "correctIndex": 3,
+          "explanation": "Representation stavas R-E-P-R-E-S-E-N-T-A-T-I-O-N."
+        }
+      ]
+    },
+    {
+      "id": "gym-sp5-svara-stavningsord",
+      "title": "Svåra stavningsord",
+      "description": "De allra svåraste engelska orden att stava rätt.",
+      "icon": "💎",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "gym-sp5-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('boende/logi')",
+          "options": [
+            "accomodation",
+            "acommodation",
+            "accommadation",
+            "accommodation"
+          ],
+          "correctIndex": 3,
+          "explanation": "Accommodation stavas A-C-C-O-M-M-O-D-A-T-I-O-N. Dubbel C och dubbel M."
+        },
+        {
+          "id": "gym-sp5-2",
+          "type": "fill-in-blank",
+          "sentence": "Please do not ___ the story. (överdriva)",
+          "answer": "exaggerate",
+          "hint": "Börjar med EX. Dubbel G i mitten.",
+          "explanation": "Exaggerate = överdriva. Stavas E-X-A-G-G-E-R-A-T-E."
+        },
+        {
+          "id": "gym-sp5-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('förekomst/händelse')",
+          "options": [
+            "occurence",
+            "occurrance",
+            "occurennce",
+            "occurrence"
+          ],
+          "correctIndex": 3,
+          "explanation": "Occurrence stavas O-C-C-U-R-R-E-N-C-E. Dubbel C och dubbel R."
+        },
+        {
+          "id": "gym-sp5-4",
+          "type": "fill-in-blank",
+          "sentence": "Listen to your ___ when making a difficult decision. (samvete)",
+          "answer": "conscience",
+          "hint": "Börjar med CON. Tyst SC i mitten.",
+          "explanation": "Conscience = samvete. Stavas C-O-N-S-C-I-E-N-C-E."
+        },
+        {
+          "id": "gym-sp5-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('samvetsgrann')",
+          "options": [
+            "conscientous",
+            "consciencious",
+            "conscentious",
+            "conscientious"
+          ],
+          "correctIndex": 3,
+          "explanation": "Conscientious stavas C-O-N-S-C-I-E-N-T-I-O-U-S."
         }
       ]
     }

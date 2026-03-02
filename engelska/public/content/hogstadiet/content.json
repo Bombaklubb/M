@@ -245,142 +245,327 @@
   ],
   "spelling": [
     {
-      "id": "hog-sp1-tricky",
-      "title": "Knepiga ord",
-      "description": "Ord som ofta stavas fel – träna på dem nu.",
-      "icon": "🧩",
+      "id": "hog-sp1-argumentation",
+      "title": "Argumentation",
+      "description": "Stava ord för argumentation och diskussion på engelska.",
+      "icon": "🗣️",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 25,
       "exercises": [
         {
           "id": "hog-sp1-1",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling?",
+          "question": "Vilket ord stavas rätt? ('bevis/belägg')",
           "options": [
-            "necesary",
-            "necessary",
-            "necessery",
-            "neccesary"
+            "evidance",
+            "evidensce",
+            "evidince",
+            "evidence"
           ],
-          "correctIndex": 1,
-          "explanation": "Necessary: one C, two S's. N-E-C-E-S-S-A-R-Y."
+          "correctIndex": 3,
+          "explanation": "Evidence stavas E-V-I-D-E-N-C-E."
         },
         {
           "id": "hog-sp1-2",
-          "type": "multiple-choice",
-          "question": "Choose the correct spelling:",
-          "options": [
-            "beutiful",
-            "beautifull",
-            "beautiful",
-            "beautyful"
-          ],
-          "correctIndex": 2,
-          "explanation": "Beautiful: B-E-A-U-T-I-F-U-L."
+          "type": "fill-in-blank",
+          "sentence": "Consider the problem from another ___. (perspektiv)",
+          "answer": "perspective",
+          "hint": "Börjar med P.",
+          "explanation": "Perspective = perspektiv. Stavas P-E-R-S-P-E-C-T-I-V-E."
         },
         {
           "id": "hog-sp1-3",
-          "type": "fill-in-blank",
-          "sentence": "Did you ___ my email? (ta emot = receive)",
-          "answer": "receive",
-          "hint": "I before E except after C.",
-          "explanation": "Receive: R-E-C-E-I-V-E. After C, it's EI."
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('konsekvens')",
+          "options": [
+            "consequense",
+            "consequance",
+            "consiquence",
+            "consequence"
+          ],
+          "correctIndex": 3,
+          "explanation": "Consequence stavas C-O-N-S-E-Q-U-E-N-C-E."
         },
         {
           "id": "hog-sp1-4",
-          "type": "multiple-choice",
-          "question": "Which is correct?",
-          "options": [
-            "accomodation",
-            "accommodation",
-            "acommodation",
-            "acomodation"
-          ],
-          "correctIndex": 1,
-          "explanation": "Accommodation has double C and double M: A-C-C-O-M-M-O-D-A-T-I-O-N."
+          "type": "fill-in-blank",
+          "sentence": "A ___ of the plan is that it costs too much. (nackdel)",
+          "answer": "disadvantage",
+          "hint": "Börjar med DIS.",
+          "explanation": "Disadvantage = nackdel. Stavas D-I-S-A-D-V-A-N-T-A-G-E."
         },
         {
           "id": "hog-sp1-5",
           "type": "multiple-choice",
-          "question": "How do you spell 'separat'?",
+          "question": "Vilket ord stavas rätt? ('fördel')",
           "options": [
-            "seperate",
-            "separate",
-            "separrate",
-            "seperrate"
+            "advantige",
+            "advantaje",
+            "advantedge",
+            "advantage"
           ],
-          "correctIndex": 1,
-          "explanation": "Separate: S-E-P-A-R-A-T-E. There's an 'a' in the middle, not 'e'."
+          "correctIndex": 3,
+          "explanation": "Advantage stavas A-D-V-A-N-T-A-G-E."
         }
       ]
     },
     {
-      "id": "hog-sp2-irregular",
-      "title": "Oregelbundna verb",
-      "description": "Stava oregelbundna verbformer rätt.",
-      "icon": "🔀",
+      "id": "hog-sp2-samhalle",
+      "title": "Samhälle",
+      "description": "Stava samhälls- och kulturord på engelska.",
+      "icon": "🌍",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 25,
       "exercises": [
         {
           "id": "hog-sp2-1",
           "type": "multiple-choice",
-          "question": "Past tense of 'write':",
+          "question": "Vilket ord stavas rätt? ('miljö')",
           "options": [
-            "writed",
-            "wroted",
-            "wrote",
-            "writ"
+            "enviroment",
+            "envirnoment",
+            "enviorment",
+            "environment"
           ],
-          "correctIndex": 2,
-          "explanation": "Write → wrote (past tense). W-R-O-T-E."
+          "correctIndex": 3,
+          "explanation": "Environment stavas E-N-V-I-R-O-N-M-E-N-T."
         },
         {
           "id": "hog-sp2-2",
-          "type": "multiple-choice",
-          "question": "Past tense of 'bring':",
-          "options": [
-            "bringed",
-            "brung",
-            "brang",
-            "brought"
-          ],
-          "correctIndex": 3,
-          "explanation": "Bring → brought. B-R-O-U-G-H-T."
+          "type": "fill-in-blank",
+          "sentence": "It is our ___ to take care of the planet. (ansvar)",
+          "answer": "responsibility",
+          "hint": "Börjar med R.",
+          "explanation": "Responsibility = ansvar. Stavas R-E-S-P-O-N-S-I-B-I-L-I-T-Y."
         },
         {
           "id": "hog-sp2-3",
-          "type": "fill-in-blank",
-          "sentence": "She had ___ the letter before I arrived. (skrivit = written)",
-          "answer": "written",
-          "hint": "Write → wrote → written.",
-          "explanation": "Written is the past participle of write. W-R-I-T-T-E-N."
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('teknologi')",
+          "options": [
+            "tecnology",
+            "technolgy",
+            "technolagy",
+            "technology"
+          ],
+          "correctIndex": 3,
+          "explanation": "Technology stavas T-E-C-H-N-O-L-O-G-Y."
         },
         {
           "id": "hog-sp2-4",
-          "type": "multiple-choice",
-          "question": "Past tense of 'catch':",
-          "options": [
-            "catched",
-            "caught",
-            "cought",
-            "cotched"
-          ],
-          "correctIndex": 1,
-          "explanation": "Catch → caught. C-A-U-G-H-T."
+          "type": "fill-in-blank",
+          "sentence": "Good ___ is essential in teamwork. (kommunikation)",
+          "answer": "communication",
+          "hint": "Börjar med C.",
+          "explanation": "Communication = kommunikation. Stavas C-O-M-M-U-N-I-C-A-T-I-O-N."
         },
         {
           "id": "hog-sp2-5",
           "type": "multiple-choice",
-          "question": "Past tense of 'know':",
+          "question": "Vilket ord stavas rätt? ('regering')",
           "options": [
-            "knowed",
-            "knewed",
-            "knew",
-            "newed"
+            "goverment",
+            "governement",
+            "governmant",
+            "government"
           ],
-          "correctIndex": 2,
-          "explanation": "Know → knew. K-N-E-W. The K is silent."
+          "correctIndex": 3,
+          "explanation": "Government stavas G-O-V-E-R-N-M-E-N-T."
+        }
+      ]
+    },
+    {
+      "id": "hog-sp3-oregelbundna-verb",
+      "title": "Oregelbundna verb",
+      "description": "Stava oregelbundna verb i presens och preteritum.",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp3-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'become')",
+          "options": [
+            "becam",
+            "becaame",
+            "becomed",
+            "became"
+          ],
+          "correctIndex": 3,
+          "explanation": "Became stavas B-E-C-A-M-E."
+        },
+        {
+          "id": "hog-sp3-2",
+          "type": "fill-in-blank",
+          "sentence": "He ___ his arm when he fell off the bike. (bröt)",
+          "answer": "broke",
+          "hint": "Dåtid av 'break'. Börjar med BR.",
+          "explanation": "Broke = bröt. Stavas B-R-O-K-E."
+        },
+        {
+          "id": "hog-sp3-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'choose')",
+          "options": [
+            "chosed",
+            "choosed",
+            "choze",
+            "chose"
+          ],
+          "correctIndex": 3,
+          "explanation": "Chose stavas C-H-O-S-E."
+        },
+        {
+          "id": "hog-sp3-4",
+          "type": "fill-in-blank",
+          "sentence": "The plant ___ quickly in the sunlight. (växte)",
+          "answer": "grew",
+          "hint": "Dåtid av 'grow'. Börjar med GR.",
+          "explanation": "Grew = växte. Stavas G-R-E-W."
+        },
+        {
+          "id": "hog-sp3-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'speak')",
+          "options": [
+            "spoked",
+            "speaked",
+            "spoak",
+            "spoke"
+          ],
+          "correctIndex": 3,
+          "explanation": "Spoke stavas S-P-O-K-E."
+        }
+      ]
+    },
+    {
+      "id": "hog-sp4-akademiska-ord",
+      "title": "Akademiska ord",
+      "description": "Stava viktiga akademiska ord för uppsatsskrivning.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp4-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('utvärdera')",
+          "options": [
+            "evalulate",
+            "evalurate",
+            "evaulate",
+            "evaluate"
+          ],
+          "correctIndex": 3,
+          "explanation": "Evaluate stavas E-V-A-L-U-A-T-E."
+        },
+        {
+          "id": "hog-sp4-2",
+          "type": "fill-in-blank",
+          "sentence": "Your essay needs a clear ___ at the start. (inledning)",
+          "answer": "introduction",
+          "hint": "Börjar med I.",
+          "explanation": "Introduction = inledning. Stavas I-N-T-R-O-D-U-C-T-I-O-N."
+        },
+        {
+          "id": "hog-sp4-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('stycke/paragraf')",
+          "options": [
+            "paragragh",
+            "paragraf",
+            "parograph",
+            "paragraph"
+          ],
+          "correctIndex": 3,
+          "explanation": "Paragraph stavas P-A-R-A-G-R-A-P-H."
+        },
+        {
+          "id": "hog-sp4-4",
+          "type": "fill-in-blank",
+          "sentence": "Your essay should end with a strong ___. (slutsats)",
+          "answer": "conclusion",
+          "hint": "Börjar med C.",
+          "explanation": "Conclusion = slutsats. Stavas C-O-N-C-L-U-S-I-O-N."
+        },
+        {
+          "id": "hog-sp4-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('sammanfatta')",
+          "options": [
+            "sumarise",
+            "summerize",
+            "sumarize",
+            "summarise"
+          ],
+          "correctIndex": 3,
+          "explanation": "Summarise stavas S-U-M-M-A-R-I-S-E."
+        }
+      ]
+    },
+    {
+      "id": "hog-sp5-stavningsutmaningar",
+      "title": "Stavningsutmaningar",
+      "description": "Knepiga engelska ord som ofta stavas fel.",
+      "icon": "🧠",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp5-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('genom')",
+          "options": [
+            "througt",
+            "threw",
+            "thruogh",
+            "through"
+          ],
+          "correctIndex": 3,
+          "explanation": "Through stavas T-H-R-O-U-G-H. Obs: 'threw' är dåtid av 'throw'."
+        },
+        {
+          "id": "hog-sp5-2",
+          "type": "fill-in-blank",
+          "sentence": "I have ___ friends to celebrate with. (tillräckligt många)",
+          "answer": "enough",
+          "hint": "Börjar med E. Slutar med GH (uttalas F).",
+          "explanation": "Enough stavas E-N-O-U-G-H."
+        },
+        {
+          "id": "hog-sp5-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('kunskap')",
+          "options": [
+            "knowlege",
+            "knowledg",
+            "knowladge",
+            "knowledge"
+          ],
+          "correctIndex": 3,
+          "explanation": "Knowledge stavas K-N-O-W-L-E-D-G-E. Obs: tyst K och W."
+        },
+        {
+          "id": "hog-sp5-4",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('nödvändig')",
+          "options": [
+            "neccessary",
+            "necesary",
+            "nessecary",
+            "necessary"
+          ],
+          "correctIndex": 3,
+          "explanation": "Necessary stavas N-E-C-E-S-S-A-R-Y. En C, dubbel S."
+        },
+        {
+          "id": "hog-sp5-5",
+          "type": "fill-in-blank",
+          "sentence": "Did you ___ my email? (ta emot/få)",
+          "answer": "receive",
+          "hint": "Kom ihåg: I before E except after C.",
+          "explanation": "Receive stavas R-E-C-E-I-V-E."
         }
       ]
     }

@@ -259,142 +259,332 @@
   ],
   "spelling": [
     {
-      "id": "lag-sp1-animals",
-      "title": "Djurord",
-      "description": "Välj den rätta stavningen av djurnamn på engelska.",
-      "icon": "🐾",
+      "id": "lag-sp1-skolan",
+      "title": "Skolan",
+      "description": "Stava ord som hör till skolan på engelska.",
+      "icon": "📚",
       "pointsRequired": 0,
       "bonusPoints": 15,
       "exercises": [
         {
           "id": "lag-sp1-1",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'katt'?",
+          "question": "Vilket ord stavas rätt? ('bok')",
           "options": [
-            "kat",
-            "cat",
-            "catt",
-            "katt"
+            "bok",
+            "book",
+            "booc",
+            "buke"
           ],
           "correctIndex": 1,
-          "explanation": "Cat is spelled C-A-T."
+          "explanation": "Book stavas B-O-O-K."
         },
         {
           "id": "lag-sp1-2",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'hund'?",
+          "question": "Vilket ord stavas rätt? ('penna/blyertspenna')",
           "options": [
-            "dog",
-            "dogg",
-            "dag",
-            "dug"
+            "pensil",
+            "pencell",
+            "pencil",
+            "pencill"
           ],
-          "correctIndex": 0,
-          "explanation": "Dog is spelled D-O-G."
+          "correctIndex": 2,
+          "explanation": "Pencil stavas P-E-N-C-I-L."
         },
         {
           "id": "lag-sp1-3",
-          "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'fisk'?",
-          "options": [
-            "fisk",
-            "fis",
-            "fish",
-            "fissh"
-          ],
-          "correctIndex": 2,
-          "explanation": "Fish is spelled F-I-S-H."
+          "type": "fill-in-blank",
+          "sentence": "My ___ helps me learn new things. (lärare)",
+          "answer": "teacher",
+          "hint": "Börjar med T.",
+          "explanation": "Teacher = lärare. Stavas T-E-A-C-H-E-R."
         },
         {
           "id": "lag-sp1-4",
           "type": "fill-in-blank",
-          "sentence": "A ___ says 'moo'. (ko)",
-          "answer": "cow",
-          "hint": "Starts with C.",
-          "explanation": "Cow = ko. Spelled C-O-W."
+          "sentence": "I ___ my name on the paper. (skriver)",
+          "answer": "write",
+          "hint": "Börjar med W (tyst W).",
+          "explanation": "Write = skriva. Stavas W-R-I-T-E."
         },
         {
           "id": "lag-sp1-5",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'fågel'?",
+          "question": "Vilket ord stavas rätt? ('skola')",
           "options": [
-            "brid",
-            "bird",
-            "byrd",
-            "birrd"
+            "skool",
+            "scool",
+            "sckool",
+            "school"
           ],
-          "correctIndex": 1,
-          "explanation": "Bird is spelled B-I-R-D."
+          "correctIndex": 3,
+          "explanation": "School stavas S-C-H-O-O-L."
         }
       ]
     },
     {
-      "id": "lag-sp2-colors",
-      "title": "Färger och siffror",
-      "description": "Stava färger och siffror på engelska.",
-      "icon": "🎨",
+      "id": "lag-sp2-djur",
+      "title": "Djur",
+      "description": "Stava djurnamn på engelska.",
+      "icon": "🐾",
       "pointsRequired": 0,
       "bonusPoints": 15,
       "exercises": [
         {
           "id": "lag-sp2-1",
           "type": "multiple-choice",
-          "question": "How do you spell 'röd' in English?",
+          "question": "Vilket ord stavas rätt? ('groda')",
           "options": [
-            "rad",
-            "red",
-            "rid",
-            "rod"
+            "frog",
+            "frogg",
+            "forg",
+            "frrog"
           ],
-          "correctIndex": 1,
-          "explanation": "Red is spelled R-E-D."
+          "correctIndex": 0,
+          "explanation": "Frog stavas F-R-O-G."
         },
         {
           "id": "lag-sp2-2",
           "type": "multiple-choice",
-          "question": "How do you spell 'blå' in English?",
+          "question": "Vilket ord stavas rätt? ('häst')",
           "options": [
-            "bloo",
-            "blew",
-            "blue",
-            "blua"
+            "hors",
+            "horss",
+            "horse",
+            "hourse"
           ],
           "correctIndex": 2,
-          "explanation": "Blue is spelled B-L-U-E."
+          "explanation": "Horse stavas H-O-R-S-E."
         },
         {
           "id": "lag-sp2-3",
           "type": "fill-in-blank",
-          "sentence": "The number after two is ___.",
-          "answer": "three",
-          "hint": "Starts with TH.",
-          "explanation": "Three = tre. Spelled T-H-R-E-E."
+          "sentence": "A ___ has long ears and hops. (kanin)",
+          "answer": "rabbit",
+          "hint": "Börjar med R.",
+          "explanation": "Rabbit = kanin. Stavas R-A-B-B-I-T."
         },
         {
           "id": "lag-sp2-4",
           "type": "multiple-choice",
-          "question": "Which is the correct spelling for 'grön'?",
+          "question": "Vilket ord stavas rätt? ('apa')",
           "options": [
-            "grean",
-            "grene",
-            "gren",
-            "green"
+            "monky",
+            "monkee",
+            "monkey",
+            "munkee"
           ],
-          "correctIndex": 3,
-          "explanation": "Green is spelled G-R-E-E-N."
+          "correctIndex": 2,
+          "explanation": "Monkey stavas M-O-N-K-E-Y."
         },
         {
           "id": "lag-sp2-5",
           "type": "multiple-choice",
-          "question": "How do you spell 'fyra' in English?",
+          "question": "Vilket ord stavas rätt? ('elefant')",
           "options": [
-            "four",
-            "for",
-            "fore",
-            "fower"
+            "elefant",
+            "elifant",
+            "elaphant",
+            "elephant"
           ],
-          "correctIndex": 0,
-          "explanation": "Four = fyra. Spelled F-O-U-R."
+          "correctIndex": 3,
+          "explanation": "Elephant stavas E-L-E-P-H-A-N-T."
+        }
+      ]
+    },
+    {
+      "id": "lag-sp3-farger",
+      "title": "Färger och former",
+      "description": "Stava färger och former på engelska.",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-sp3-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('gul')",
+          "options": [
+            "yelo",
+            "yellow",
+            "yelow",
+            "yollow"
+          ],
+          "correctIndex": 1,
+          "explanation": "Yellow stavas Y-E-L-L-O-W."
+        },
+        {
+          "id": "lag-sp3-2",
+          "type": "fill-in-blank",
+          "sentence": "A ___ has four equal sides. (kvadrat)",
+          "answer": "square",
+          "hint": "Börjar med S.",
+          "explanation": "Square = kvadrat. Stavas S-Q-U-A-R-E."
+        },
+        {
+          "id": "lag-sp3-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('orange')",
+          "options": [
+            "oranje",
+            "oranch",
+            "orenge",
+            "orange"
+          ],
+          "correctIndex": 3,
+          "explanation": "Orange stavas O-R-A-N-G-E."
+        },
+        {
+          "id": "lag-sp3-4",
+          "type": "fill-in-blank",
+          "sentence": "A ___ shape has no corners. (cirkel)",
+          "answer": "circle",
+          "hint": "Börjar med C.",
+          "explanation": "Circle = cirkel. Stavas C-I-R-C-L-E."
+        },
+        {
+          "id": "lag-sp3-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('lila')",
+          "options": [
+            "perpel",
+            "purpel",
+            "purpull",
+            "purple"
+          ],
+          "correctIndex": 3,
+          "explanation": "Purple stavas P-U-R-P-L-E."
+        }
+      ]
+    },
+    {
+      "id": "lag-sp4-kroppen",
+      "title": "Kroppen",
+      "description": "Stava kroppsdelar på engelska.",
+      "icon": "🧍",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-sp4-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('axel')",
+          "options": [
+            "sholeder",
+            "sholder",
+            "shouldur",
+            "shoulder"
+          ],
+          "correctIndex": 3,
+          "explanation": "Shoulder stavas S-H-O-U-L-D-E-R."
+        },
+        {
+          "id": "lag-sp4-2",
+          "type": "fill-in-blank",
+          "sentence": "You chew food with your ___. (tänder)",
+          "answer": "teeth",
+          "hint": "Börjar med T.",
+          "explanation": "Teeth = tänder. Stavas T-E-E-T-H."
+        },
+        {
+          "id": "lag-sp4-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('finger')",
+          "options": [
+            "fingger",
+            "figner",
+            "fingur",
+            "finger"
+          ],
+          "correctIndex": 3,
+          "explanation": "Finger stavas F-I-N-G-E-R."
+        },
+        {
+          "id": "lag-sp4-4",
+          "type": "fill-in-blank",
+          "sentence": "You bend your leg at the ___. (knä)",
+          "answer": "knee",
+          "hint": "Börjar med KN (tyst K).",
+          "explanation": "Knee = knä. Stavas K-N-E-E."
+        },
+        {
+          "id": "lag-sp4-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('mage')",
+          "options": [
+            "stomak",
+            "stommach",
+            "stomach",
+            "stomack"
+          ],
+          "correctIndex": 2,
+          "explanation": "Stomach stavas S-T-O-M-A-C-H."
+        }
+      ]
+    },
+    {
+      "id": "lag-sp5-vardag",
+      "title": "Vardag",
+      "description": "Stava vanliga vardagsord på engelska.",
+      "icon": "🌟",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-sp5-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('hejdå')",
+          "options": [
+            "goby",
+            "goodby",
+            "goodbye",
+            "goodbay"
+          ],
+          "correctIndex": 2,
+          "explanation": "Goodbye stavas G-O-O-D-B-Y-E."
+        },
+        {
+          "id": "lag-sp5-2",
+          "type": "fill-in-blank",
+          "sentence": "I am going to the park ___. (imorgon)",
+          "answer": "tomorrow",
+          "hint": "Börjar med T.",
+          "explanation": "Tomorrow = imorgon. Stavas T-O-M-O-R-R-O-W."
+        },
+        {
+          "id": "lag-sp5-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('igår')",
+          "options": [
+            "yesturday",
+            "yesterday",
+            "yisterday",
+            "yesterdey"
+          ],
+          "correctIndex": 1,
+          "explanation": "Yesterday stavas Y-E-S-T-E-R-D-A-Y."
+        },
+        {
+          "id": "lag-sp5-4",
+          "type": "fill-in-blank",
+          "sentence": "I need food because I am ___. (hungrig)",
+          "answer": "hungry",
+          "hint": "Börjar med H.",
+          "explanation": "Hungry = hungrig. Stavas H-U-N-G-R-Y."
+        },
+        {
+          "id": "lag-sp5-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('familj')",
+          "options": [
+            "familly",
+            "familie",
+            "famaly",
+            "family"
+          ],
+          "correctIndex": 3,
+          "explanation": "Family stavas F-A-M-I-L-Y."
         }
       ]
     }
