@@ -153,6 +153,186 @@
           "explanation": "The + noun + can + verb + adverb is a common English sentence pattern."
         }
       ]
+    },
+    {
+      "id": "lag-g-tobehave",
+      "title": "To be & have",
+      "description": "Öva på 'am/is/are' och 'have/has' – grunden i engelskan.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "lag-g-tobehave-1",
+          "type": "multiple-choice",
+          "question": "I ___ a cat.",
+          "options": [
+            "have",
+            "has",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-2",
+          "type": "multiple-choice",
+          "question": "She ___ my friend.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-3",
+          "type": "fill-in-blank",
+          "sentence": "This ___ a dog.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave-4",
+          "type": "fill-in-blank",
+          "sentence": "They ___ happy.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave-5",
+          "type": "multiple-choice",
+          "question": "He ___ five years old.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-6",
+          "type": "fill-in-blank",
+          "sentence": "We ___ in school.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave-7",
+          "type": "multiple-choice",
+          "question": "It ___ big.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-8",
+          "type": "fill-in-blank",
+          "sentence": "I ___ happy.",
+          "answer": "am"
+        },
+        {
+          "id": "lag-g-tobehave-9",
+          "type": "multiple-choice",
+          "question": "The dogs ___ small.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave-10",
+          "type": "fill-in-blank",
+          "sentence": "She ___ my teacher.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave-11",
+          "type": "multiple-choice",
+          "question": "I ___ 7 years old.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-12",
+          "type": "fill-in-blank",
+          "sentence": "We ___ friends.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave-13",
+          "type": "multiple-choice",
+          "question": "The cat ___ black.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-14",
+          "type": "fill-in-blank",
+          "sentence": "He ___ tall.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave-15",
+          "type": "multiple-choice",
+          "question": "They ___ in the park.",
+          "options": [
+            "are",
+            "is",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-16",
+          "type": "fill-in-blank",
+          "sentence": "It ___ a book.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave-17",
+          "type": "multiple-choice",
+          "question": "I ___ ready.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-18",
+          "type": "fill-in-blank",
+          "sentence": "She ___ kind.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave-19",
+          "type": "multiple-choice",
+          "question": "We ___ happy.",
+          "options": [
+            "are",
+            "is",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave-20",
+          "type": "fill-in-blank",
+          "sentence": "The bird ___ small.",
+          "answer": "is"
+        }
+      ]
     }
   ],
   "reading": [

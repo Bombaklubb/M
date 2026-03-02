@@ -159,6 +159,186 @@
           "explanation": "'While' introduces a concessive clause, elegantly presenting two opposing views in one sentence."
         }
       ]
+    },
+    {
+      "id": "gym-g-advanced",
+      "title": "Advanced grammar",
+      "description": "Inversioner, subjunktiv, avancerade relativ- och prepositionsfraser.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "gym-g-advanced-1",
+          "type": "fill-in-blank",
+          "sentence": "Had I known, I ___ (act) differently.",
+          "answer": "would have acted"
+        },
+        {
+          "id": "gym-g-advanced-2",
+          "type": "multiple-choice",
+          "question": "She insisted that he ___ immediately.",
+          "options": [
+            "leave",
+            "leaves",
+            "left"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-3",
+          "type": "fill-in-blank",
+          "sentence": "The results ___ (analyse) carefully before publication.",
+          "answer": "were analysed"
+        },
+        {
+          "id": "gym-g-advanced-4",
+          "type": "multiple-choice",
+          "question": "No sooner ___ he arrived than it started to rain.",
+          "options": [
+            "had",
+            "has",
+            "did"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-5",
+          "type": "fill-in-blank",
+          "sentence": "It is essential that she ___ (be) present.",
+          "answer": "be"
+        },
+        {
+          "id": "gym-g-advanced-6",
+          "type": "multiple-choice",
+          "question": "The proposal was rejected, ___ surprised everyone.",
+          "options": [
+            "which",
+            "who",
+            "that"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-7",
+          "type": "fill-in-blank",
+          "sentence": "He denied ___ (take) the money.",
+          "answer": "taking"
+        },
+        {
+          "id": "gym-g-advanced-8",
+          "type": "multiple-choice",
+          "question": "Rarely ___ such dedication.",
+          "options": [
+            "we see",
+            "do we see",
+            "we saw"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced-9",
+          "type": "fill-in-blank",
+          "sentence": "She would rather ___ (stay) home.",
+          "answer": "stay"
+        },
+        {
+          "id": "gym-g-advanced-10",
+          "type": "multiple-choice",
+          "question": "The book, ___ was published in 1920, is still relevant.",
+          "options": [
+            "which",
+            "who",
+            "where"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-11",
+          "type": "fill-in-blank",
+          "sentence": "Scarcely ___ they finished when the bell rang.",
+          "answer": "had"
+        },
+        {
+          "id": "gym-g-advanced-12",
+          "type": "multiple-choice",
+          "question": "He is capable ___ solving complex problems.",
+          "options": [
+            "of",
+            "to",
+            "for"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-13",
+          "type": "fill-in-blank",
+          "sentence": "The theory has been widely ___ (criticise).",
+          "answer": "criticised"
+        },
+        {
+          "id": "gym-g-advanced-14",
+          "type": "multiple-choice",
+          "question": "Neither the teacher nor the students ___ aware.",
+          "options": [
+            "was",
+            "were",
+            "is"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced-15",
+          "type": "fill-in-blank",
+          "sentence": "She suggested that he ___ (apply) for the position.",
+          "answer": "apply"
+        },
+        {
+          "id": "gym-g-advanced-16",
+          "type": "multiple-choice",
+          "question": "Hardly ever ___ such chaos.",
+          "options": [
+            "have we seen",
+            "we have seen",
+            "we saw"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-17",
+          "type": "fill-in-blank",
+          "sentence": "The data needs ___ (verify).",
+          "answer": "to be verified"
+        },
+        {
+          "id": "gym-g-advanced-18",
+          "type": "multiple-choice",
+          "question": "He objected ___ the decision.",
+          "options": [
+            "to",
+            "against",
+            "for"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced-19",
+          "type": "fill-in-blank",
+          "sentence": "Not until later ___ they realise the truth.",
+          "answer": "did"
+        },
+        {
+          "id": "gym-g-advanced-20",
+          "type": "multiple-choice",
+          "question": "She is regarded ___ an expert.",
+          "options": [
+            "as",
+            "like",
+            "for"
+          ],
+          "correctIndex": 0
+        }
+      ]
     }
   ],
   "reading": [

@@ -163,26 +163,6 @@ export default function HomePage() {
       <Header student={student} onLogout={handleLogout} />
 
       <main className="max-w-5xl mx-auto px-4 py-8">
-        {/* Welcome banner */}
-        <div className="mb-8 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl shadow-sm p-5 flex items-center justify-between flex-wrap gap-4">
-          <div>
-            <h1 className="text-2xl font-black text-gray-900 dark:text-gray-100">Hej, {student.name}! 👋</h1>
-            <p className="text-gray-500 dark:text-gray-400 mt-0.5 text-sm">Välj en värld och fortsätt din engelska resa.</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-100 dark:border-amber-700 rounded-2xl px-5 py-3 text-center">
-              <div className="text-2xl font-black text-amber-700 dark:text-amber-400">⭐ {student.totalPoints}</div>
-              <div className="text-xs text-amber-600 dark:text-amber-500">totala poäng</div>
-            </div>
-            <Link
-              href="/profile"
-              className="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-2xl px-4 py-3 text-center transition-colors text-sm font-medium text-gray-700 dark:text-gray-200"
-            >
-              👤 Min sida
-            </Link>
-          </div>
-        </div>
-
         {/* Stage grid */}
         <h2 className="text-2xl font-black text-gray-800 dark:text-gray-100 mb-4">Engelskajakten</h2>
         <div className="grid grid-cols-2 gap-4">

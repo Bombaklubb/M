@@ -139,6 +139,181 @@
           "explanation": "Under = nedanför/under. The books are under (beneath) the chair."
         }
       ]
+    },
+    {
+      "id": "mel-g-tenses",
+      "title": "Verb tenses",
+      "description": "Presens, preteritum och pågående form – öva verb i olika tider.",
+      "icon": "⏰",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g-tenses-1",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (play) football every day.",
+          "answer": "plays"
+        },
+        {
+          "id": "mel-g-tenses-2",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (go) to school on Mondays.",
+          "answer": "go"
+        },
+        {
+          "id": "mel-g-tenses-3",
+          "type": "multiple-choice",
+          "question": "We ___ TV yesterday.",
+          "options": [
+            "watch",
+            "watched",
+            "watching"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses-4",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (have) a dog.",
+          "answer": "has"
+        },
+        {
+          "id": "mel-g-tenses-5",
+          "type": "multiple-choice",
+          "question": "I ___ breakfast at 7 o'clock.",
+          "options": [
+            "eat",
+            "eats",
+            "ate"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses-6",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (be) tired.",
+          "answer": "are"
+        },
+        {
+          "id": "mel-g-tenses-7",
+          "type": "multiple-choice",
+          "question": "She ___ to music now.",
+          "options": [
+            "listen",
+            "listens",
+            "is listening"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "mel-g-tenses-8",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (do) our homework yesterday.",
+          "answer": "did"
+        },
+        {
+          "id": "mel-g-tenses-9",
+          "type": "multiple-choice",
+          "question": "He ___ a bike.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses-10",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (not like) milk.",
+          "answer": "do not like"
+        },
+        {
+          "id": "mel-g-tenses-11",
+          "type": "multiple-choice",
+          "question": "They ___ in the park now.",
+          "options": [
+            "play",
+            "are playing",
+            "played"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses-12",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (go) home yesterday.",
+          "answer": "went"
+        },
+        {
+          "id": "mel-g-tenses-13",
+          "type": "multiple-choice",
+          "question": "We ___ dinner at 6.",
+          "options": [
+            "have",
+            "has",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses-14",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (read) a book now.",
+          "answer": "is reading"
+        },
+        {
+          "id": "mel-g-tenses-15",
+          "type": "multiple-choice",
+          "question": "I ___ to school every day.",
+          "options": [
+            "walk",
+            "walks",
+            "walked"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses-16",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (see) a movie yesterday.",
+          "answer": "saw"
+        },
+        {
+          "id": "mel-g-tenses-17",
+          "type": "multiple-choice",
+          "question": "She ___ coffee every morning.",
+          "options": [
+            "drink",
+            "drinks",
+            "drank"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses-18",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (be) happy yesterday.",
+          "answer": "were"
+        },
+        {
+          "id": "mel-g-tenses-19",
+          "type": "multiple-choice",
+          "question": "He ___ playing football now.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses-20",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (buy) a new book yesterday.",
+          "answer": "bought"
+        }
+      ]
     }
   ],
   "reading": [
