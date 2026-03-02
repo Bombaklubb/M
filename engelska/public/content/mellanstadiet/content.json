@@ -494,6 +494,271 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "mel-g-tenses3",
+      "title": "Verb tenses – del 3",
+      "description": "Ännu fler övningar på verb i presens, preteritum och pågående form.",
+      "icon": "🕐",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g-tenses3-1",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (play) the piano.",
+          "answer": "plays"
+        },
+        {
+          "id": "mel-g-tenses3-2",
+          "type": "multiple-choice",
+          "question": "They ___ to school yesterday.",
+          "options": [
+            "go",
+            "went",
+            "gone"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-3",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (eat) breakfast every day.",
+          "answer": "eat"
+        },
+        {
+          "id": "mel-g-tenses3-4",
+          "type": "multiple-choice",
+          "question": "He ___ TV now.",
+          "options": [
+            "watch",
+            "watches",
+            "is watching"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "mel-g-tenses3-5",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (be) at home yesterday.",
+          "answer": "were"
+        },
+        {
+          "id": "mel-g-tenses3-6",
+          "type": "multiple-choice",
+          "question": "She ___ already finished.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses3-7",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (buy) a car last year.",
+          "answer": "bought"
+        },
+        {
+          "id": "mel-g-tenses3-8",
+          "type": "multiple-choice",
+          "question": "I ___ never seen that film.",
+          "options": [
+            "have",
+            "has",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses3-9",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (read) now.",
+          "answer": "is reading"
+        },
+        {
+          "id": "mel-g-tenses3-10",
+          "type": "multiple-choice",
+          "question": "We ___ dinner at six.",
+          "options": [
+            "have",
+            "has",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses3-11",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (walk) to school yesterday.",
+          "answer": "walked"
+        },
+        {
+          "id": "mel-g-tenses3-12",
+          "type": "multiple-choice",
+          "question": "They ___ playing outside.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-13",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (write) a letter yesterday.",
+          "answer": "wrote"
+        },
+        {
+          "id": "mel-g-tenses3-14",
+          "type": "multiple-choice",
+          "question": "He ___ breakfast every morning.",
+          "options": [
+            "eat",
+            "eats",
+            "ate"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-15",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (see) that movie.",
+          "answer": "have seen"
+        },
+        {
+          "id": "mel-g-tenses3-16",
+          "type": "multiple-choice",
+          "question": "She ___ to music yesterday.",
+          "options": [
+            "listen",
+            "listened",
+            "listens"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-17",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (be) tired now.",
+          "answer": "are"
+        },
+        {
+          "id": "mel-g-tenses3-18",
+          "type": "multiple-choice",
+          "question": "I ___ my homework last night.",
+          "options": [
+            "did",
+            "do",
+            "done"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses3-19",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (have) two sisters.",
+          "answer": "has"
+        },
+        {
+          "id": "mel-g-tenses3-20",
+          "type": "multiple-choice",
+          "question": "We ___ going home now.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-21",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (take) the bus yesterday.",
+          "answer": "took"
+        },
+        {
+          "id": "mel-g-tenses3-22",
+          "type": "multiple-choice",
+          "question": "They ___ finished the test.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-23",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (not like) coffee.",
+          "answer": "do not like"
+        },
+        {
+          "id": "mel-g-tenses3-24",
+          "type": "multiple-choice",
+          "question": "He ___ swimming now.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses3-25",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (go) to Spain last year.",
+          "answer": "went"
+        },
+        {
+          "id": "mel-g-tenses3-26",
+          "type": "multiple-choice",
+          "question": "She ___ English every day.",
+          "options": [
+            "study",
+            "studies",
+            "studied"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses3-27",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (come) late yesterday.",
+          "answer": "came"
+        },
+        {
+          "id": "mel-g-tenses3-28",
+          "type": "multiple-choice",
+          "question": "I ___ already eaten.",
+          "options": [
+            "have",
+            "has",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses3-29",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (make) a cake yesterday.",
+          "answer": "made"
+        },
+        {
+          "id": "mel-g-tenses3-30",
+          "type": "multiple-choice",
+          "question": "We ___ watching TV.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "reading": [

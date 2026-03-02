@@ -519,6 +519,271 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "gym-g-advanced3",
+      "title": "Advanced grammar – del 3",
+      "description": "Ännu fler övningar på inversion, subjunktiv och avancerade strukturer.",
+      "icon": "🎯",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "gym-g-advanced3-1",
+          "type": "fill-in-blank",
+          "sentence": "Had I realised, I ___ (act) sooner.",
+          "answer": "would have acted"
+        },
+        {
+          "id": "gym-g-advanced3-2",
+          "type": "multiple-choice",
+          "question": "It is essential that he ___ present.",
+          "options": [
+            "is",
+            "be",
+            "was"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced3-3",
+          "type": "fill-in-blank",
+          "sentence": "The article ___ (publish) next week.",
+          "answer": "will be published"
+        },
+        {
+          "id": "gym-g-advanced3-4",
+          "type": "multiple-choice",
+          "question": "Only later ___ they understand.",
+          "options": [
+            "did",
+            "do",
+            "have"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-5",
+          "type": "fill-in-blank",
+          "sentence": "She denied ___ (steal) the money.",
+          "answer": "stealing"
+        },
+        {
+          "id": "gym-g-advanced3-6",
+          "type": "multiple-choice",
+          "question": "Rarely ___ such dedication.",
+          "options": [
+            "do we see",
+            "we see",
+            "we saw"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-7",
+          "type": "fill-in-blank",
+          "sentence": "He would rather ___ (stay) home.",
+          "answer": "stay"
+        },
+        {
+          "id": "gym-g-advanced3-8",
+          "type": "multiple-choice",
+          "question": "The theory, ___ was controversial, gained support.",
+          "options": [
+            "which",
+            "who",
+            "where"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-9",
+          "type": "fill-in-blank",
+          "sentence": "Scarcely ___ they arrived when it started raining.",
+          "answer": "had"
+        },
+        {
+          "id": "gym-g-advanced3-10",
+          "type": "multiple-choice",
+          "question": "She objected ___ the decision.",
+          "options": [
+            "to",
+            "against",
+            "for"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-11",
+          "type": "fill-in-blank",
+          "sentence": "The essay needs ___ (edit).",
+          "answer": "to be edited"
+        },
+        {
+          "id": "gym-g-advanced3-12",
+          "type": "multiple-choice",
+          "question": "Neither the students nor the teacher ___ aware.",
+          "options": [
+            "was",
+            "were",
+            "is"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-13",
+          "type": "fill-in-blank",
+          "sentence": "He suggested that she ___ (apply).",
+          "answer": "apply"
+        },
+        {
+          "id": "gym-g-advanced3-14",
+          "type": "multiple-choice",
+          "question": "Hardly ever ___ we seen such chaos.",
+          "options": [
+            "have",
+            "have we",
+            "we have"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced3-15",
+          "type": "fill-in-blank",
+          "sentence": "The data ___ (analyse) carefully.",
+          "answer": "was analysed"
+        },
+        {
+          "id": "gym-g-advanced3-16",
+          "type": "multiple-choice",
+          "question": "She is regarded ___ an expert.",
+          "options": [
+            "as",
+            "like",
+            "for"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-17",
+          "type": "fill-in-blank",
+          "sentence": "Not until later ___ they realise the truth.",
+          "answer": "did"
+        },
+        {
+          "id": "gym-g-advanced3-18",
+          "type": "multiple-choice",
+          "question": "He insisted that she ___ immediately.",
+          "options": [
+            "leave",
+            "leaves",
+            "left"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-19",
+          "type": "fill-in-blank",
+          "sentence": "The proposal ___ (reject) last year.",
+          "answer": "was rejected"
+        },
+        {
+          "id": "gym-g-advanced3-20",
+          "type": "multiple-choice",
+          "question": "Were I you, I ___ reconsider.",
+          "options": [
+            "would",
+            "will",
+            "can"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-21",
+          "type": "fill-in-blank",
+          "sentence": "The research ___ (conduct) over five years.",
+          "answer": "was conducted"
+        },
+        {
+          "id": "gym-g-advanced3-22",
+          "type": "multiple-choice",
+          "question": "It was the first time she ___ abroad.",
+          "options": [
+            "has travelled",
+            "had travelled",
+            "travelled"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced3-23",
+          "type": "fill-in-blank",
+          "sentence": "No sooner ___ he arrived than it began.",
+          "answer": "had"
+        },
+        {
+          "id": "gym-g-advanced3-24",
+          "type": "multiple-choice",
+          "question": "She is capable ___ solving the problem.",
+          "options": [
+            "of",
+            "to",
+            "for"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-25",
+          "type": "fill-in-blank",
+          "sentence": "The findings ___ (present) at the conference.",
+          "answer": "were presented"
+        },
+        {
+          "id": "gym-g-advanced3-26",
+          "type": "multiple-choice",
+          "question": "Only by working hard ___ success achieved.",
+          "options": [
+            "can",
+            "will",
+            "is"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-27",
+          "type": "fill-in-blank",
+          "sentence": "He admitted ___ (break) the rule.",
+          "answer": "breaking"
+        },
+        {
+          "id": "gym-g-advanced3-28",
+          "type": "multiple-choice",
+          "question": "Seldom ___ we encounter such talent.",
+          "options": [
+            "do",
+            "we do",
+            "did"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced3-29",
+          "type": "fill-in-blank",
+          "sentence": "The contract ___ (sign) yesterday.",
+          "answer": "was signed"
+        },
+        {
+          "id": "gym-g-advanced3-30",
+          "type": "multiple-choice",
+          "question": "She would have succeeded if she ___ harder.",
+          "options": [
+            "worked",
+            "had worked",
+            "works"
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "reading": [
