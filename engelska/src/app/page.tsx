@@ -42,11 +42,32 @@ export default function HomePage() {
 
   // ─── Login screen ───────────────────────────────────────────────────────────
   if (!student) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700 flex items-center justify-center p-4">
+    const stageCards = [
+      { img: "/content/sprakdjungeln.png", name: "Språkdjungeln", label: "Åk 1–3" },
+      { img: "/content/sprakstaden.png",   name: "Språkstaden",   label: "Åk 4–6" },
+      { img: "/content/sprakarenan.png",   name: "Språkarenan",   label: "Åk 7–9" },
+      { img: "/content/sprakakademin.png", name: "Språkakademin", label: "Gymnasiet" },
+    ];
 
-        {/* Login card */}
-        <div className="w-full max-w-md animate-slide-up">
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700 flex items-center justify-center p-4 gap-6">
+
+        {/* Left: sprakdjungeln + sprakstaden */}
+        <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
+          {stageCards.slice(0, 2).map((s) => (
+            <div key={s.name} className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative">
+              <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="text-white font-bold text-sm leading-tight">{s.name}</p>
+                <p className="text-white/70 text-xs">{s.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Center: login card */}
+        <div className="w-full max-w-md animate-slide-up flex-shrink-0">
           {/* Title */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-black text-white text-shadow">
@@ -110,6 +131,21 @@ export default function HomePage() {
             </form>
           </div>
         </div>
+
+        {/* Right: sprakarenan + sprakakademin */}
+        <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
+          {stageCards.slice(2, 4).map((s) => (
+            <div key={s.name} className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative">
+              <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="text-white font-bold text-sm leading-tight">{s.name}</p>
+                <p className="text-white/70 text-xs">{s.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     );
   }
