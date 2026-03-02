@@ -159,24 +159,24 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} onLogout={handleLogout} />
 
-      <main className="max-w-3xl mx-auto px-4 py-6">
+      <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Welcome banner */}
-        <div className="mb-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-between flex-wrap gap-3">
+        <div className="mb-8 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl shadow-sm p-5 flex items-center justify-between flex-wrap gap-4">
           <div>
-            <h1 className="text-xl font-black text-white">Hej, {student.name}! 👋</h1>
-            <p className="text-jungle-200 mt-0.5 text-sm">Välj en värld och fortsätt din engelska resa.</p>
+            <h1 className="text-2xl font-black text-gray-900 dark:text-gray-100">Hej, {student.name}! 👋</h1>
+            <p className="text-gray-500 dark:text-gray-400 mt-0.5 text-sm">Välj en värld och fortsätt din engelska resa.</p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="bg-amber-500/20 border border-amber-400/30 rounded-xl px-4 py-2 text-center">
-              <div className="text-xl font-black text-amber-300">⭐ {student.totalPoints}</div>
-              <div className="text-xs text-amber-400">totala poäng</div>
+            <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-100 dark:border-amber-700 rounded-2xl px-5 py-3 text-center">
+              <div className="text-2xl font-black text-amber-700 dark:text-amber-400">⭐ {student.totalPoints}</div>
+              <div className="text-xs text-amber-600 dark:text-amber-500">totala poäng</div>
             </div>
             <Link
               href="/profile"
-              className="bg-white/10 hover:bg-white/20 rounded-xl px-4 py-2 text-center transition-colors text-sm font-medium text-white"
+              className="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-2xl px-4 py-3 text-center transition-colors text-sm font-medium text-gray-700 dark:text-gray-200"
             >
               👤 Min sida
             </Link>
@@ -184,25 +184,25 @@ export default function HomePage() {
         </div>
 
         {/* Stage grid */}
-        <h2 className="text-lg font-black text-jungle-100 mb-3">Engelskajakten</h2>
-        <div className="grid grid-cols-2 gap-3">
+        <h2 className="text-2xl font-black text-gray-800 dark:text-gray-100 mb-4">Engelskajakten</h2>
+        <div className="grid grid-cols-2 gap-4">
           {STAGES.map((stage) => (
             <Link key={stage.id} href={`/world/${stage.id}`} className="group">
-              <div className="relative rounded-xl overflow-hidden shadow-lg aspect-video">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video">
                 <img
                   src={stageImages[stage.id]}
                   alt={stage.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <div className="flex items-center gap-1.5 mb-0.5">
-                    <span className="text-base">{stage.emoji}</span>
-                    <h3 className="text-white font-black text-sm leading-tight">
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-xl">{stage.emoji}</span>
+                    <h3 className="text-white font-black text-lg leading-tight">
                       {stage.name}
                     </h3>
                   </div>
-                  <p className="text-white/70 text-xs">{stage.grades}</p>
+                  <p className="text-white/70 text-sm">{stage.grades}</p>
                 </div>
               </div>
             </Link>
