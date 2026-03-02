@@ -309,7 +309,7 @@ export default function ProfilePage() {
             {confirmReset && (
               <button
                 onClick={() => setConfirmReset(false)}
-                className="text-sm text-gray-400 hover:text-gray-600 w-full text-center"
+                className="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 w-full text-center"
               >
                 Avbryt
               </button>
@@ -337,7 +337,7 @@ export default function ProfilePage() {
                 </button>
                 <button
                   onClick={() => setShowShareCode(false)}
-                  className="flex-1 btn-secondary border-gray-300 text-gray-700 hover:bg-gray-50"
+                  className="flex-1 btn-secondary border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
                 >
                   Stäng
                 </button>
