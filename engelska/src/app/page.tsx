@@ -150,16 +150,24 @@ export default function HomePage() {
     );
   }
 
+  // ─── Stage image map ────────────────────────────────────────────────────────
+  const stageImages: Record<string, string> = {
+    lagstadiet: "/content/sprakdjungeln.png",
+    mellanstadiet: "/content/sprakstaden.png",
+    hogstadiet: "/content/sprakarenan.png",
+    gymnasiet: "/content/sprakakademin.png",
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} onLogout={handleLogout} />
 
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Welcome banner */}
-        <div className="mb-6 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl shadow-sm p-5 flex items-center justify-between flex-wrap gap-4">
+        <div className="mb-8 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-3xl shadow-sm p-5 flex items-center justify-between flex-wrap gap-4">
           <div>
             <h1 className="text-2xl font-black text-gray-900 dark:text-gray-100">Hej, {student.name}! 👋</h1>
-            <p className="text-gray-500 dark:text-gray-400 mt-0.5 text-sm">Klicka på en värld och fortsätt din engelska resa.</p>
+            <p className="text-gray-500 dark:text-gray-400 mt-0.5 text-sm">Välj en värld och fortsätt din engelska resa.</p>
           </div>
           <div className="flex items-center gap-3">
             <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-100 dark:border-amber-700 rounded-2xl px-5 py-3 text-center">
@@ -175,66 +183,30 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Interactive world map */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl select-none">
-          <img
-            src="/content/basta-engelskajakten.png"
-            alt="Engelskajakten – klicka på en värld"
-            className="w-full h-auto block"
-            draggable={false}
-          />
-
-          {/* Språkdjungeln – top-left card */}
-          <Link
-            href="/world/lagstadiet"
-            aria-label="Gå till Språkdjungeln (Åk 1–3)"
-            className="absolute group"
-            style={{ left: "3%", top: "16%", width: "46%", height: "38%" }}
-          >
-            <div className="w-full h-full rounded-3xl transition-all duration-200 group-hover:bg-white/20 group-hover:ring-4 ring-white/80 group-hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.2)]" />
-            <span className="absolute bottom-[10%] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/75 text-white text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
-              Språkdjungeln · Åk 1–3
-            </span>
-          </Link>
-
-          {/* Språkstaden – top-right card */}
-          <Link
-            href="/world/mellanstadiet"
-            aria-label="Gå till Språkstaden (Åk 4–6)"
-            className="absolute group"
-            style={{ left: "51%", top: "16%", width: "46%", height: "38%" }}
-          >
-            <div className="w-full h-full rounded-3xl transition-all duration-200 group-hover:bg-white/20 group-hover:ring-4 ring-white/80 group-hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.2)]" />
-            <span className="absolute bottom-[10%] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/75 text-white text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
-              Språkstaden · Åk 4–6
-            </span>
-          </Link>
-
-          {/* Språkarenan – bottom-left card */}
-          <Link
-            href="/world/hogstadiet"
-            aria-label="Gå till Språkarenan (Åk 7–9)"
-            className="absolute group"
-            style={{ left: "3%", top: "55%", width: "46%", height: "40%" }}
-          >
-            <div className="w-full h-full rounded-3xl transition-all duration-200 group-hover:bg-white/20 group-hover:ring-4 ring-white/80 group-hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.2)]" />
-            <span className="absolute bottom-[10%] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/75 text-white text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
-              Språkarenan · Åk 7–9
-            </span>
-          </Link>
-
-          {/* Språkakademin – bottom-right card */}
-          <Link
-            href="/world/gymnasiet"
-            aria-label="Gå till Språkakademin (Gymnasiet)"
-            className="absolute group"
-            style={{ left: "51%", top: "55%", width: "46%", height: "40%" }}
-          >
-            <div className="w-full h-full rounded-3xl transition-all duration-200 group-hover:bg-white/20 group-hover:ring-4 ring-white/80 group-hover:shadow-[inset_0_0_30px_rgba(255,255,255,0.2)]" />
-            <span className="absolute bottom-[10%] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/75 text-white text-xs font-bold px-3 py-1.5 rounded-full whitespace-nowrap pointer-events-none">
-              Språkakademin · Gymnasiet
-            </span>
-          </Link>
+        {/* Stage grid */}
+        <h2 className="text-2xl font-black text-gray-800 dark:text-gray-100 mb-4">Engelskajakten</h2>
+        <div className="grid grid-cols-2 gap-4">
+          {STAGES.map((stage) => (
+            <Link key={stage.id} href={`/world/${stage.id}`} className="group">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video">
+                <img
+                  src={stageImages[stage.id]}
+                  alt={stage.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="text-xl">{stage.emoji}</span>
+                    <h3 className="text-white font-black text-lg leading-tight">
+                      {stage.name}
+                    </h3>
+                  </div>
+                  <p className="text-white/70 text-sm">{stage.grades}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </main>
     </div>
