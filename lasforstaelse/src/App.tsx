@@ -14,6 +14,7 @@ import {
   logoutUser,
   recordResult,
   getCompletedTextIds,
+  getRecentCompletedTexts,
   updateAvatar,
 } from './services/userService';
 import { getRandomText } from './services/libraryService';
@@ -106,7 +107,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(grade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(grade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -182,7 +184,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(currentGrade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(currentGrade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -210,7 +213,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(newGrade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -238,7 +242,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(newGrade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
