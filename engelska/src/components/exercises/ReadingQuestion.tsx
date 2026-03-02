@@ -7,17 +7,17 @@ import { playCorrect, playWrong } from "@/lib/sounds";
 const LEVEL_LABELS: Record<string, { label: string; color: string; icon: string }> = {
   "on-the-line": {
     label: "På raden",
-    color: "bg-blue-100 text-blue-700",
+    color: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
     icon: "📄",
   },
   "between-the-lines": {
     label: "Mellan raderna",
-    color: "bg-purple-100 text-purple-700",
+    color: "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300",
     icon: "🔍",
   },
   "beyond-the-lines": {
     label: "Bortom raderna",
-    color: "bg-orange-100 text-orange-700",
+    color: "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300",
     icon: "💭",
   },
 };
@@ -46,15 +46,15 @@ export default function ReadingQuestion({ question, onAnswer }: Props) {
     const base =
       "w-full text-left px-5 py-4 rounded-xl border-2 font-medium transition-all duration-200 text-base ";
     if (!revealed) {
-      return base + "border-gray-200 hover:border-blue-400 hover:bg-blue-50 cursor-pointer";
+      return base + "border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 cursor-pointer";
     }
     if (idx === question.correctIndex) {
-      return base + "border-green-400 bg-green-50 text-green-800 animate-pop";
+      return base + "border-green-400 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300 animate-pop";
     }
     if (idx === selected && selected !== question.correctIndex) {
-      return base + "border-red-400 bg-red-50 text-red-800 animate-shake";
+      return base + "border-red-400 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 animate-shake";
     }
-    return base + "border-gray-100 bg-gray-50 text-gray-400";
+    return base + "border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-400 dark:text-gray-500";
   }
 
   return (
@@ -64,7 +64,7 @@ export default function ReadingQuestion({ question, onAnswer }: Props) {
         {level.icon} {level.label}
       </span>
 
-      <p className="text-lg font-semibold text-gray-800 leading-relaxed">
+      <p className="text-lg font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
         {question.question}
       </p>
 
@@ -91,7 +91,7 @@ export default function ReadingQuestion({ question, onAnswer }: Props) {
       </div>
 
       {revealed && question.explanation && (
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800 animate-slide-up">
+        <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-sm text-blue-800 dark:text-blue-200 animate-slide-up">
           💡 {question.explanation}
         </div>
       )}

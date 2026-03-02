@@ -131,19 +131,19 @@ export default function ReadingModulePage({ params }: Props) {
         <main className="max-w-3xl mx-auto px-4 py-8">
           <div className="card">
             {/* Reading instruction */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 flex gap-3">
+            <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 mb-6 flex gap-3">
               <span className="text-xl">📖</span>
-              <p className="text-blue-800 text-sm">
+              <p className="text-blue-800 dark:text-blue-200 text-sm">
                 Läs texten noggrant. Du får svara på frågor efteråt — du kan
                 scrolla tillbaka om du vill!
               </p>
             </div>
 
             {/* Text */}
-            <article className="prose prose-lg max-w-none text-gray-800 leading-relaxed mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">{mod.title}</h2>
+            <article className="prose prose-lg max-w-none text-gray-800 dark:text-gray-100 leading-relaxed mb-8">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">{mod.title}</h2>
               {mod.author && (
-                <p className="text-sm text-gray-500 italic mb-4">av {mod.author}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic mb-4">av {mod.author}</p>
               )}
               {mod.text.split("\n\n").map((para, i) => (
                 <p key={i} className="mb-4 text-base leading-7">
@@ -153,7 +153,7 @@ export default function ReadingModulePage({ params }: Props) {
             </article>
 
             {/* Continue button */}
-            <div className="flex justify-end border-t border-gray-100 pt-4">
+            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-4">
               <button
                 onClick={() => setPhase("questions")}
                 className="btn-primary bg-blue-500 hover:bg-blue-600"
