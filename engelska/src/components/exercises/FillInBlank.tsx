@@ -33,15 +33,15 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
 
   const borderColor =
     state === "correct"
-      ? "border-green-400 bg-green-50"
+      ? "border-green-400 bg-green-50 dark:bg-green-900/30"
       : state === "wrong"
-      ? "border-red-400 bg-red-50"
-      : "border-blue-300 bg-white focus-within:border-blue-500";
+      ? "border-red-400 bg-red-50 dark:bg-red-900/30"
+      : "border-blue-300 bg-white dark:bg-gray-700 dark:border-blue-600 focus-within:border-blue-500";
 
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Sentence with blank */}
-      <div className="text-xl font-medium text-gray-800 leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-2">
+      <div className="text-xl font-medium text-gray-800 dark:text-gray-100 leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-2">
         <span>{parts[0]}</span>
         <span
           className={`inline-flex items-center border-b-4 px-1 min-w-[80px] transition-colors duration-300 ${
@@ -74,7 +74,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Skriv ditt svar här..."
-              className="flex-1 px-4 py-3 text-lg bg-transparent outline-none"
+              className="flex-1 px-4 py-3 text-lg bg-transparent outline-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
               autoFocus
               autoComplete="off"
               autoCorrect="off"
@@ -106,8 +106,8 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
         <div
           className={`rounded-xl p-4 border animate-slide-up ${
             state === "correct"
-              ? "bg-green-50 border-green-200 text-green-800"
-              : "bg-red-50 border-red-200 text-red-800"
+              ? "bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700 text-green-800 dark:text-green-300"
+              : "bg-red-50 dark:bg-red-900/30 border-red-200 dark:border-red-700 text-red-800 dark:text-red-300"
           }`}
         >
           <p className="font-semibold">

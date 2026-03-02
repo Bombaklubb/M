@@ -48,16 +48,16 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
 
   return (
     <div className="space-y-6 animate-fade-in">
-      <p className="text-xl font-semibold text-gray-800">{exercise.instruction}</p>
+      <p className="text-xl font-semibold text-gray-800 dark:text-gray-100">{exercise.instruction}</p>
 
       {/* Sentence construction area */}
       <div
         className={`min-h-[64px] p-3 rounded-xl border-2 flex flex-wrap gap-2 items-start transition-colors ${
           state === "correct"
-            ? "border-green-400 bg-green-50"
+            ? "border-green-400 bg-green-50 dark:bg-green-900/30"
             : state === "wrong"
-            ? "border-red-400 bg-red-50"
-            : "border-dashed border-blue-300 bg-blue-50/50"
+            ? "border-red-400 bg-red-50 dark:bg-red-900/30"
+            : "border-dashed border-blue-300 dark:border-blue-600 bg-blue-50/50 dark:bg-blue-900/20"
         }`}
       >
         {placed.length === 0 && state === "idle" && (
@@ -72,10 +72,10 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
             disabled={state !== "idle"}
             className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all duration-150 ${
               state === "idle"
-                ? "bg-white border-blue-300 text-blue-800 hover:bg-red-50 hover:border-red-300 hover:text-red-700 active:scale-95"
+                ? "bg-white dark:bg-gray-700 border-blue-300 dark:border-blue-600 text-blue-800 dark:text-blue-300 hover:bg-red-50 dark:hover:bg-red-900/30 hover:border-red-300 hover:text-red-700 active:scale-95"
                 : state === "correct"
-                ? "bg-green-100 border-green-300 text-green-800"
-                : "bg-red-100 border-red-300 text-red-800"
+                ? "bg-green-100 dark:bg-green-900/30 border-green-300 dark:border-green-600 text-green-800 dark:text-green-300"
+                : "bg-red-100 dark:bg-red-900/30 border-red-300 dark:border-red-600 text-red-800 dark:text-red-300"
             }`}
           >
             {exercise.words[wordIdx]}
@@ -90,7 +90,7 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
             <button
               key={idx}
               onClick={() => addWord(idx)}
-              className="px-4 py-2 rounded-xl border-2 border-gray-200 bg-white text-gray-800 font-medium text-sm hover:border-blue-400 hover:bg-blue-50 active:scale-95 transition-all duration-150"
+              className="px-4 py-2 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 font-medium text-sm hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 active:scale-95 transition-all duration-150"
             >
               {exercise.words[idx]}
             </button>
@@ -122,8 +122,8 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
         <div
           className={`rounded-xl p-4 border animate-slide-up ${
             state === "correct"
-              ? "bg-green-50 border-green-200 text-green-800"
-              : "bg-red-50 border-red-200 text-red-800"
+              ? "bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700 text-green-800 dark:text-green-300"
+              : "bg-red-50 dark:bg-red-900/30 border-red-200 dark:border-red-700 text-red-800 dark:text-red-300"
           }`}
         >
           <p className="font-semibold">
