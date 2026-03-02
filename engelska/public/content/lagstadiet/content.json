@@ -333,6 +333,186 @@
           "answer": "is"
         }
       ]
+    },
+    {
+      "id": "lag-g-tobehave2",
+      "title": "To be & have – del 2",
+      "description": "Fler övningar på 'am/is/are' och 'have/has'.",
+      "icon": "🔡",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "lag-g-tobehave2-1",
+          "type": "multiple-choice",
+          "question": "She ___ a sister.",
+          "options": [
+            "have",
+            "has",
+            "am"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave2-2",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a dog.",
+          "answer": "have"
+        },
+        {
+          "id": "lag-g-tobehave2-3",
+          "type": "multiple-choice",
+          "question": "They ___ my friends.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave2-4",
+          "type": "fill-in-blank",
+          "sentence": "It ___ red.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave2-5",
+          "type": "multiple-choice",
+          "question": "We ___ a big house.",
+          "options": [
+            "have",
+            "has",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave2-6",
+          "type": "fill-in-blank",
+          "sentence": "He ___ happy today.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave2-7",
+          "type": "multiple-choice",
+          "question": "I ___ two brothers.",
+          "options": [
+            "have",
+            "has",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave2-8",
+          "type": "fill-in-blank",
+          "sentence": "She ___ my teacher.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave2-9",
+          "type": "multiple-choice",
+          "question": "The cat ___ small.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave2-10",
+          "type": "fill-in-blank",
+          "sentence": "They ___ in the park.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave2-11",
+          "type": "multiple-choice",
+          "question": "He ___ a bike.",
+          "options": [
+            "have",
+            "has",
+            "is"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave2-12",
+          "type": "fill-in-blank",
+          "sentence": "We ___ ready.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave2-13",
+          "type": "multiple-choice",
+          "question": "I ___ happy.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave2-14",
+          "type": "fill-in-blank",
+          "sentence": "It ___ a ball.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave2-15",
+          "type": "multiple-choice",
+          "question": "She ___ five years old.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave2-16",
+          "type": "fill-in-blank",
+          "sentence": "They ___ tall.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave2-17",
+          "type": "multiple-choice",
+          "question": "We ___ friends.",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave2-18",
+          "type": "fill-in-blank",
+          "sentence": "He ___ my brother.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave2-19",
+          "type": "multiple-choice",
+          "question": "I ___ a pencil.",
+          "options": [
+            "have",
+            "has",
+            "is"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave2-20",
+          "type": "fill-in-blank",
+          "sentence": "The dogs ___ big.",
+          "answer": "are"
+        }
+      ]
     }
   ],
   "reading": [
