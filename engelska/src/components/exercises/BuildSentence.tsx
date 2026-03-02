@@ -103,7 +103,7 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
         <div className="flex gap-3">
           <button
             onClick={reset}
-            className="btn-secondary border-gray-300 text-gray-600 hover:bg-gray-50 text-sm"
+            className="btn-secondary border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 text-sm"
           >
             🔄 Rensa
           </button>
