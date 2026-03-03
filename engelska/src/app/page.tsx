@@ -43,7 +43,7 @@ export default function HomePage() {
     ];
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700 flex items-center justify-center p-4 gap-6">
+      <div className="min-h-screen bg-black flex items-center justify-center p-4 gap-6">
 
         {/* Left: sprakdjungeln + sprakstaden */}
         <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
