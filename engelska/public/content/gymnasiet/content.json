@@ -19,14 +19,15 @@
             "When she arrived, he was already leaving."
           ],
           "correctIndex": 1,
-          "explanation": "Past perfect (had + past participle) is used for an action completed BEFORE another past action. 'He had left' happened before 'she arrived'."
+          "explanation": "Past perfect (had + past participle) is used for an action completed BEFORE another past action. 'He had left' happened before 'she arrived'.",
+          "hint": "Pluskvamperfekt (past perfect): had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse. T.ex. 'When she arrived, he had already left.'"
         },
         {
           "id": "gym-g1-2",
           "type": "fill-in-blank",
           "sentence": "By the time you read this letter, I ___ (leave) the country.",
           "answer": "will have left",
-          "hint": "Future perfect: will + have + past participle",
+          "hint": "Framtida perfekt: will have + perfektparticip. Handling som är avslutad vid en framtida tidpunkt.",
           "explanation": "Future perfect (will + have + past participle) describes an action completed before a specific point in the future."
         }
       ]
@@ -50,14 +51,15 @@
             "should"
           ],
           "correctIndex": 1,
-          "explanation": "'Must' expresses near certainty based on evidence. 'The lights are on → she must be home'."
+          "explanation": "'Must' expresses near certainty based on evidence. 'The lights are on → she must be home'.",
+          "hint": "Modalverb: must (stark skyldighet/slutsats), should (råd), might/could (möjlighet), would (hypotetisk)."
         },
         {
           "id": "gym-g2-2",
           "type": "fill-in-blank",
           "sentence": "You ___ have told me earlier! I would have helped.",
           "answer": "should",
-          "hint": "To express that someone did not do something they were expected to do.",
+          "hint": "'Should' uttrycker råd eller mild skyldighet. T.ex. 'You should see a doctor.'",
           "explanation": "'Should have + past participle' expresses regret or criticism about a past action that didn't happen."
         }
       ]
@@ -81,14 +83,15 @@
             "The committee recommended that he should takes a break."
           ],
           "correctIndex": 1,
-          "explanation": "The present subjunctive uses the base form (no -s for third person): 'that he take'. Used after recommend, suggest, insist, demand + that."
+          "explanation": "The present subjunctive uses the base form (no -s for third person): 'that he take'. Used after recommend, suggest, insist, demand + that.",
+          "hint": "Konjunktiv (subjunctive): after verb som recommend/insist/suggest + that används verbets grundform för alla pronomen. T.ex. 'The committee recommended that he resign.'"
         },
         {
           "id": "gym-g3-2",
           "type": "fill-in-blank",
           "sentence": "I wish I ___ (know) the answer to that question.",
           "answer": "knew",
-          "hint": "Wishes about the present use past tense.",
+          "hint": "Efter 'I wish' används konjunktiv past: were/knew/had (inte är/vet/har). Uttrycker ett önskemål om något som inte är sant.",
           "explanation": "After 'wish' for present situations, use past tense. 'I wish I knew' = I don't know, and I wish I did."
         }
       ]
@@ -112,7 +115,8 @@
             "As a result"
           ],
           "correctIndex": 1,
-          "explanation": "'Nevertheless' introduces a contrast or concession. Furthermore adds information, For instance gives examples, As a result shows effect."
+          "explanation": "'Nevertheless' introduces a contrast or concession. Furthermore adds information, For instance gives examples, As a result shows effect.",
+          "hint": "Kontrasterande diskursmarkörer: Nevertheless, However, Although, Despite, On the other hand."
         },
         {
           "id": "gym-g4-2",
@@ -172,7 +176,8 @@
           "id": "gym-g-advanced-1",
           "type": "fill-in-blank",
           "sentence": "Had I known, I ___ (act) differently.",
-          "answer": "would have acted"
+          "answer": "would have acted",
+          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
         },
         {
           "id": "gym-g-advanced-2",
@@ -183,13 +188,15 @@
             "leaves",
             "left"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Konjunktiv: grundformen används (utan -s) för alla pronomen. T.ex. 'it is essential that she be present'."
         },
         {
           "id": "gym-g-advanced-3",
           "type": "fill-in-blank",
           "sentence": "The results ___ (analyse) carefully before publication.",
-          "answer": "were analysed"
+          "answer": "were analysed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced-4",
@@ -200,13 +207,15 @@
             "has",
             "did"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced-5",
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
-          "answer": "be"
+          "answer": "be",
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
         },
         {
           "id": "gym-g-advanced-6",
@@ -217,13 +226,15 @@
             "who",
             "that"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced-7",
           "type": "fill-in-blank",
           "sentence": "He denied ___ (take) the money.",
-          "answer": "taking"
+          "answer": "taking",
+          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
         },
         {
           "id": "gym-g-advanced-8",
@@ -234,13 +245,15 @@
             "do we see",
             "we saw"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced-9",
           "type": "fill-in-blank",
           "sentence": "She would rather ___ (stay) home.",
-          "answer": "stay"
+          "answer": "stay",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced-10",
@@ -251,13 +264,15 @@
             "who",
             "where"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced-11",
           "type": "fill-in-blank",
           "sentence": "Scarcely ___ they finished when the bell rang.",
-          "answer": "had"
+          "answer": "had",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced-12",
@@ -268,13 +283,15 @@
             "to",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: lär dig vilka prepositioner som hör ihop med olika adjektiv (capable of, afraid of, good at...)."
         },
         {
           "id": "gym-g-advanced-13",
           "type": "fill-in-blank",
           "sentence": "The theory has been widely ___ (criticise).",
-          "answer": "criticised"
+          "answer": "criticised",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced-14",
@@ -285,13 +302,15 @@
             "were",
             "is"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
         },
         {
           "id": "gym-g-advanced-15",
           "type": "fill-in-blank",
           "sentence": "She suggested that he ___ (apply) for the position.",
-          "answer": "apply"
+          "answer": "apply",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced-16",
@@ -302,13 +321,15 @@
             "we have seen",
             "we saw"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced-17",
           "type": "fill-in-blank",
           "sentence": "The data needs ___ (verify).",
-          "answer": "to be verified"
+          "answer": "to be verified",
+          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
         },
         {
           "id": "gym-g-advanced-18",
@@ -319,13 +340,15 @@
             "against",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced-19",
           "type": "fill-in-blank",
           "sentence": "Not until later ___ they realise the truth.",
-          "answer": "did"
+          "answer": "did",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced-20",
@@ -336,7 +359,8 @@
             "like",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         }
       ]
     },
@@ -352,7 +376,8 @@
           "id": "gym-g-advanced2-1",
           "type": "fill-in-blank",
           "sentence": "Had she known, she ___ (act) differently.",
-          "answer": "would have acted"
+          "answer": "would have acted",
+          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
         },
         {
           "id": "gym-g-advanced2-2",
@@ -363,13 +388,15 @@
             "be",
             "was"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
         },
         {
           "id": "gym-g-advanced2-3",
           "type": "fill-in-blank",
           "sentence": "The results ___ (publish) next week.",
-          "answer": "will be published"
+          "answer": "will be published",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-4",
@@ -380,13 +407,15 @@
             "do",
             "have"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-5",
           "type": "fill-in-blank",
           "sentence": "She denied ___ (cheat) on the exam.",
-          "answer": "cheating"
+          "answer": "cheating",
+          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
         },
         {
           "id": "gym-g-advanced2-6",
@@ -397,13 +426,15 @@
             "do we see",
             "we saw"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced2-7",
           "type": "fill-in-blank",
           "sentence": "He would rather ___ (leave) early.",
-          "answer": "leave"
+          "answer": "leave",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-8",
@@ -414,13 +445,15 @@
             "who",
             "where"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-9",
           "type": "fill-in-blank",
           "sentence": "Scarcely ___ they arrived when it started to snow.",
-          "answer": "had"
+          "answer": "had",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced2-10",
@@ -431,13 +464,15 @@
             "against",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-11",
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (revise).",
-          "answer": "to be revised"
+          "answer": "to be revised",
+          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
         },
         {
           "id": "gym-g-advanced2-12",
@@ -448,13 +483,15 @@
             "were",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
         },
         {
           "id": "gym-g-advanced2-13",
           "type": "fill-in-blank",
           "sentence": "He suggested that she ___ (apply).",
-          "answer": "apply"
+          "answer": "apply",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-14",
@@ -465,13 +502,15 @@
             "have we",
             "we have"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced2-15",
           "type": "fill-in-blank",
           "sentence": "The data ___ (analyse) thoroughly.",
-          "answer": "was analysed"
+          "answer": "was analysed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced2-16",
@@ -482,13 +521,15 @@
             "like",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced2-17",
           "type": "fill-in-blank",
           "sentence": "Not until later ___ they realise the truth.",
-          "answer": "did"
+          "answer": "did",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced2-18",
@@ -499,13 +540,15 @@
             "leaves",
             "left"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Konjunktiv: grundformen används (utan -s) för alla pronomen. T.ex. 'it is essential that she be present'."
         },
         {
           "id": "gym-g-advanced2-19",
           "type": "fill-in-blank",
           "sentence": "The proposal ___ (reject) last year.",
-          "answer": "was rejected"
+          "answer": "was rejected",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced2-20",
@@ -516,7 +559,8 @@
             "would",
             "can"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         }
       ]
     },
@@ -532,7 +576,8 @@
           "id": "gym-g-advanced3-1",
           "type": "fill-in-blank",
           "sentence": "Had I realised, I ___ (act) sooner.",
-          "answer": "would have acted"
+          "answer": "would have acted",
+          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
         },
         {
           "id": "gym-g-advanced3-2",
@@ -543,13 +588,15 @@
             "be",
             "was"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
         },
         {
           "id": "gym-g-advanced3-3",
           "type": "fill-in-blank",
           "sentence": "The article ___ (publish) next week.",
-          "answer": "will be published"
+          "answer": "will be published",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-4",
@@ -560,13 +607,15 @@
             "do",
             "have"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-5",
           "type": "fill-in-blank",
           "sentence": "She denied ___ (steal) the money.",
-          "answer": "stealing"
+          "answer": "stealing",
+          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
         },
         {
           "id": "gym-g-advanced3-6",
@@ -577,13 +626,15 @@
             "we see",
             "we saw"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced3-7",
           "type": "fill-in-blank",
           "sentence": "He would rather ___ (stay) home.",
-          "answer": "stay"
+          "answer": "stay",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-8",
@@ -594,13 +645,15 @@
             "who",
             "where"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-9",
           "type": "fill-in-blank",
           "sentence": "Scarcely ___ they arrived when it started raining.",
-          "answer": "had"
+          "answer": "had",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced3-10",
@@ -611,13 +664,15 @@
             "against",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-11",
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (edit).",
-          "answer": "to be edited"
+          "answer": "to be edited",
+          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
         },
         {
           "id": "gym-g-advanced3-12",
@@ -628,13 +683,15 @@
             "were",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
         },
         {
           "id": "gym-g-advanced3-13",
           "type": "fill-in-blank",
           "sentence": "He suggested that she ___ (apply).",
-          "answer": "apply"
+          "answer": "apply",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-14",
@@ -645,13 +702,15 @@
             "have we",
             "we have"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced3-15",
           "type": "fill-in-blank",
           "sentence": "The data ___ (analyse) carefully.",
-          "answer": "was analysed"
+          "answer": "was analysed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced3-16",
@@ -662,13 +721,15 @@
             "like",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-17",
           "type": "fill-in-blank",
           "sentence": "Not until later ___ they realise the truth.",
-          "answer": "did"
+          "answer": "did",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced3-18",
@@ -679,13 +740,15 @@
             "leaves",
             "left"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Konjunktiv: grundformen används (utan -s) för alla pronomen. T.ex. 'it is essential that she be present'."
         },
         {
           "id": "gym-g-advanced3-19",
           "type": "fill-in-blank",
           "sentence": "The proposal ___ (reject) last year.",
-          "answer": "was rejected"
+          "answer": "was rejected",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced3-20",
@@ -696,13 +759,15 @@
             "will",
             "can"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-21",
           "type": "fill-in-blank",
           "sentence": "The research ___ (conduct) over five years.",
-          "answer": "was conducted"
+          "answer": "was conducted",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced3-22",
@@ -713,13 +778,15 @@
             "had travelled",
             "travelled"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-23",
           "type": "fill-in-blank",
           "sentence": "No sooner ___ he arrived than it began.",
-          "answer": "had"
+          "answer": "had",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced3-24",
@@ -730,13 +797,15 @@
             "to",
             "for"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: lär dig vilka prepositioner som hör ihop med olika adjektiv (capable of, afraid of, good at...)."
         },
         {
           "id": "gym-g-advanced3-25",
           "type": "fill-in-blank",
           "sentence": "The findings ___ (present) at the conference.",
-          "answer": "were presented"
+          "answer": "were presented",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced3-26",
@@ -747,13 +816,15 @@
             "will",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced3-27",
           "type": "fill-in-blank",
           "sentence": "He admitted ___ (break) the rule.",
-          "answer": "breaking"
+          "answer": "breaking",
+          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
         },
         {
           "id": "gym-g-advanced3-28",
@@ -764,13 +835,15 @@
             "we do",
             "did"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced3-29",
           "type": "fill-in-blank",
           "sentence": "The contract ___ (sign) yesterday.",
-          "answer": "was signed"
+          "answer": "was signed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced3-30",
@@ -781,7 +854,8 @@
             "had worked",
             "works"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         }
       ]
     },
@@ -797,121 +871,341 @@
           "id": "gym-g-advanced4-1",
           "type": "fill-in-blank",
           "sentence": "Had I known, I ___ (act) differently.",
-          "answer": "would have acted"
+          "answer": "would have acted",
+          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
         },
         {
           "id": "gym-g-advanced4-2",
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
-          "answer": "be"
+          "answer": "be",
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
         },
         {
           "id": "gym-g-advanced4-3",
           "type": "fill-in-blank",
           "sentence": "The results ___ (publish) next week.",
-          "answer": "will be published"
+          "answer": "will be published",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-4",
           "type": "fill-in-blank",
           "sentence": "Rarely ___ we see such talent.",
-          "answer": "do"
+          "answer": "do",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced4-5",
           "type": "fill-in-blank",
           "sentence": "She denied ___ (take) the money.",
-          "answer": "taking"
+          "answer": "taking",
+          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
         },
         {
           "id": "gym-g-advanced4-6",
           "type": "fill-in-blank",
           "sentence": "The theory, which ___ (be) controversial, gained support.",
-          "answer": "was"
+          "answer": "was",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-7",
           "type": "fill-in-blank",
           "sentence": "He would rather ___ (stay) home.",
-          "answer": "stay"
+          "answer": "stay",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-8",
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (revise).",
-          "answer": "to be revised"
+          "answer": "to be revised",
+          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
         },
         {
           "id": "gym-g-advanced4-9",
           "type": "fill-in-blank",
           "sentence": "Neither the teacher nor the students ___ aware.",
-          "answer": "were"
+          "answer": "were",
+          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
         },
         {
           "id": "gym-g-advanced4-10",
           "type": "fill-in-blank",
           "sentence": "He suggested that she ___ (apply).",
-          "answer": "apply"
+          "answer": "apply",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-11",
           "type": "fill-in-blank",
           "sentence": "The data ___ (analyse) carefully.",
-          "answer": "was analysed"
+          "answer": "was analysed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced4-12",
           "type": "fill-in-blank",
           "sentence": "Not until later ___ they realise the truth.",
-          "answer": "did"
+          "answer": "did",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced4-13",
           "type": "fill-in-blank",
           "sentence": "She is regarded ___ an expert.",
-          "answer": "as"
+          "answer": "as",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-14",
           "type": "fill-in-blank",
           "sentence": "Only then ___ we understand the problem.",
-          "answer": "did"
+          "answer": "did",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-15",
           "type": "fill-in-blank",
           "sentence": "The contract ___ (sign) yesterday.",
-          "answer": "was signed"
+          "answer": "was signed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         },
         {
           "id": "gym-g-advanced4-16",
           "type": "fill-in-blank",
           "sentence": "It was the first time she ___ (travel) abroad.",
-          "answer": "had travelled"
+          "answer": "had travelled",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-17",
           "type": "fill-in-blank",
           "sentence": "Scarcely ___ they arrived when it started to rain.",
-          "answer": "had"
+          "answer": "had",
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
         },
         {
           "id": "gym-g-advanced4-18",
           "type": "fill-in-blank",
           "sentence": "He objected ___ the proposal.",
-          "answer": "to"
+          "answer": "to",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-19",
           "type": "fill-in-blank",
           "sentence": "Were I you, I ___ reconsider.",
-          "answer": "would"
+          "answer": "would",
+          "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         },
         {
           "id": "gym-g-advanced4-20",
           "type": "fill-in-blank",
           "sentence": "She insisted that he ___ (leave) immediately.",
-          "answer": "leave"
+          "answer": "leave",
+          "hint": "Konjunktiv: grundformen används (utan -s) för alla pronomen. T.ex. 'it is essential that she be present'."
+        }
+      ]
+    },
+    {
+      "id": "gym-g-advanced5",
+      "title": "Avancerad grammatik – del 5",
+      "description": "Fler avancerade grammatikövningar.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "gym-g-advanced5-1",
+          "type": "multiple-choice",
+          "question": "Had they prepared better, they ___ succeeded.",
+          "options": [
+            "would",
+            "would have",
+            "will"
+          ],
+          "correctIndex": 1,
+          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+        },
+        {
+          "id": "gym-g-advanced5-2",
+          "type": "fill-in-blank",
+          "sentence": "It is crucial that he ___ (understand) the risks.",
+          "answer": "understand",
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+        },
+        {
+          "id": "gym-g-advanced5-3",
+          "type": "multiple-choice",
+          "question": "Only after the meeting ___ we realise the problem.",
+          "options": [
+            "did",
+            "have",
+            "were"
+          ],
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
+        },
+        {
+          "id": "gym-g-advanced5-4",
+          "type": "fill-in-blank",
+          "sentence": "The manuscript ___ (review) before publication.",
+          "answer": "was reviewed",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
+        },
+        {
+          "id": "gym-g-advanced5-5",
+          "type": "multiple-choice",
+          "question": "No sooner ___ she left than it started raining.",
+          "options": [
+            "had",
+            "has",
+            "did"
+          ],
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
+        },
+        {
+          "id": "gym-g-advanced5-6",
+          "type": "fill-in-blank",
+          "sentence": "He admitted ___ (lie) to the teacher.",
+          "answer": "lying",
+          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+        },
+        {
+          "id": "gym-g-advanced5-7",
+          "type": "multiple-choice",
+          "question": "Seldom ___ such innovation.",
+          "options": [
+            "we witness",
+            "do we witness",
+            "we witnessed"
+          ],
+          "correctIndex": 1,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
+        },
+        {
+          "id": "gym-g-advanced5-8",
+          "type": "fill-in-blank",
+          "sentence": "The issue needs ___ (address) immediately.",
+          "answer": "to be addressed",
+          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+        },
+        {
+          "id": "gym-g-advanced5-9",
+          "type": "multiple-choice",
+          "question": "Neither of the answers ___ correct.",
+          "options": [
+            "is",
+            "are",
+            "were"
+          ],
+          "correctIndex": 0,
+          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
+        },
+        {
+          "id": "gym-g-advanced5-10",
+          "type": "fill-in-blank",
+          "sentence": "She recommended that he ___ (seek) advice.",
+          "answer": "seek",
+          "hint": "Konjunktiv: grundformen används (utan -s) för alla pronomen. T.ex. 'it is essential that she be present'."
+        },
+        {
+          "id": "gym-g-advanced5-11",
+          "type": "multiple-choice",
+          "question": "Under no circumstances ___ this be tolerated.",
+          "options": [
+            "can",
+            "will",
+            "is"
+          ],
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
+        },
+        {
+          "id": "gym-g-advanced5-12",
+          "type": "fill-in-blank",
+          "sentence": "The results ___ (interpret) differently by researchers.",
+          "answer": "were interpreted",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
+        },
+        {
+          "id": "gym-g-advanced5-13",
+          "type": "multiple-choice",
+          "question": "It was not until later that she ___ the truth.",
+          "options": [
+            "discover",
+            "discovered",
+            "had discovered"
+          ],
+          "correctIndex": 1,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
+        },
+        {
+          "id": "gym-g-advanced5-14",
+          "type": "fill-in-blank",
+          "sentence": "He is capable ___ handling complex tasks.",
+          "answer": "of",
+          "hint": "Fast prepositionsfras: lär dig vilka prepositioner som hör ihop med olika adjektiv (capable of, afraid of, good at...)."
+        },
+        {
+          "id": "gym-g-advanced5-15",
+          "type": "multiple-choice",
+          "question": "Little ___ about the consequences.",
+          "options": [
+            "did they know",
+            "they knew",
+            "have they known"
+          ],
+          "correctIndex": 0,
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt. T.ex. 'Seldom do we see...' (ej 'we see')."
+        },
+        {
+          "id": "gym-g-advanced5-16",
+          "type": "fill-in-blank",
+          "sentence": "The proposal ___ (approve) unanimously.",
+          "answer": "was approved",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
+        },
+        {
+          "id": "gym-g-advanced5-17",
+          "type": "multiple-choice",
+          "question": "Were it not for her help, we ___ failed.",
+          "options": [
+            "would",
+            "would have",
+            "will"
+          ],
+          "correctIndex": 1,
+          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+        },
+        {
+          "id": "gym-g-advanced5-18",
+          "type": "fill-in-blank",
+          "sentence": "The data appears ___ (be) inaccurate.",
+          "answer": "to be",
+          "hint": "Infinitiv: verbet 'appear/seem' följs av 'to be'. T.ex. 'The data appears to be inaccurate.'"
+        },
+        {
+          "id": "gym-g-advanced5-19",
+          "type": "multiple-choice",
+          "question": "He spoke as if he ___ everything.",
+          "options": [
+            "know",
+            "knew",
+            "knows"
+          ],
+          "correctIndex": 1,
+          "hint": "'As if' + konjunktiv: 'knew' visar att situationen är osann/hypotetisk."
+        },
+        {
+          "id": "gym-g-advanced5-20",
+          "type": "fill-in-blank",
+          "sentence": "The experiment ___ (conduct) under strict conditions.",
+          "answer": "was conducted",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         }
       ]
     },
@@ -1220,14 +1514,15 @@
             "hypothesis"
           ],
           "correctIndex": 3,
-          "explanation": "Hypothesis stavas H-Y-P-O-T-H-E-S-I-S."
+          "explanation": "Hypothesis stavas H-Y-P-O-T-H-E-S-I-S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp1-2",
           "type": "fill-in-blank",
           "sentence": "The ___ of the results was discussed in the conclusion. (betydelse)",
           "answer": "significance",
-          "hint": "Börjar med S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Significance = betydelse. Stavas S-I-G-N-I-F-I-C-A-N-C-E."
         },
         {
@@ -1241,14 +1536,15 @@
             "methodology"
           ],
           "correctIndex": 3,
-          "explanation": "Methodology stavas M-E-T-H-O-D-O-L-O-G-Y."
+          "explanation": "Methodology stavas M-E-T-H-O-D-O-L-O-G-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp1-4",
           "type": "fill-in-blank",
           "sentence": "A rainbow is a natural ___. (fenomen)",
           "answer": "phenomenon",
-          "hint": "Börjar med PH. Slutar med ON.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Phenomenon stavas P-H-E-N-O-M-E-N-O-N."
         },
         {
@@ -1262,7 +1558,8 @@
             "synthesis"
           ],
           "correctIndex": 3,
-          "explanation": "Synthesis stavas S-Y-N-T-H-E-S-I-S."
+          "explanation": "Synthesis stavas S-Y-N-T-H-E-S-I-S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1285,14 +1582,15 @@
             "counterargument"
           ],
           "correctIndex": 3,
-          "explanation": "Counterargument stavas C-O-U-N-T-E-R-A-R-G-U-M-E-N-T."
+          "explanation": "Counterargument stavas C-O-U-N-T-E-R-A-R-G-U-M-E-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp2-2",
           "type": "fill-in-blank",
           "sentence": "The speaker's ___ was damaged by the false statistics. (trovärdighet)",
           "answer": "credibility",
-          "hint": "Börjar med C.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Credibility = trovärdighet. Stavas C-R-E-D-I-B-I-L-I-T-Y."
         },
         {
@@ -1306,14 +1604,15 @@
             "persuasive"
           ],
           "correctIndex": 3,
-          "explanation": "Persuasive stavas P-E-R-S-U-A-S-I-V-E."
+          "explanation": "Persuasive stavas P-E-R-S-U-A-S-I-V-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp2-4",
           "type": "fill-in-blank",
           "sentence": "The essay was ___, with each paragraph linking to the next. (sammanhängande)",
           "answer": "coherent",
-          "hint": "Börjar med C.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Coherent = sammanhängande. Stavas C-O-H-E-R-E-N-T."
         },
         {
@@ -1327,7 +1626,8 @@
             "emphasise"
           ],
           "correctIndex": 3,
-          "explanation": "Emphasise stavas E-M-P-H-A-S-I-S-E."
+          "explanation": "Emphasise stavas E-M-P-H-A-S-I-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1350,14 +1650,15 @@
             "consequently"
           ],
           "correctIndex": 3,
-          "explanation": "Consequently stavas C-O-N-S-E-Q-U-E-N-T-L-Y."
+          "explanation": "Consequently stavas C-O-N-S-E-Q-U-E-N-T-L-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp3-2",
           "type": "fill-in-blank",
           "sentence": "___, more research is needed to confirm the results. (dessutom/vidare)",
           "answer": "Furthermore",
-          "hint": "Börjar med F.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Furthermore = dessutom. Stavas F-U-R-T-H-E-R-M-O-R-E."
         },
         {
@@ -1371,14 +1672,15 @@
             "nevertheless"
           ],
           "correctIndex": 3,
-          "explanation": "Nevertheless stavas N-E-V-E-R-T-H-E-L-E-S-S."
+          "explanation": "Nevertheless stavas N-E-V-E-R-T-H-E-L-E-S-S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp3-4",
           "type": "fill-in-blank",
           "sentence": "The results were ___ published in a journal. (efterföljande/sedan)",
           "answer": "subsequently",
-          "hint": "Börjar med S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Subsequently = efterföljande. Stavas S-U-B-S-E-Q-U-E-N-T-L-Y."
         },
         {
@@ -1392,7 +1694,8 @@
             "arguably"
           ],
           "correctIndex": 3,
-          "explanation": "Arguably stavas A-R-G-U-A-B-L-Y."
+          "explanation": "Arguably stavas A-R-G-U-A-B-L-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1415,14 +1718,15 @@
             "sustainability"
           ],
           "correctIndex": 3,
-          "explanation": "Sustainability stavas S-U-S-T-A-I-N-A-B-I-L-I-T-Y."
+          "explanation": "Sustainability stavas S-U-S-T-A-I-N-A-B-I-L-I-T-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp4-2",
           "type": "fill-in-blank",
           "sentence": "The ___ between rich and poor is growing. (ojämlikhet)",
           "answer": "inequality",
-          "hint": "Börjar med IN.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Inequality = ojämlikhet. Stavas I-N-E-Q-U-A-L-I-T-Y."
         },
         {
@@ -1436,14 +1740,15 @@
             "accountability"
           ],
           "correctIndex": 3,
-          "explanation": "Accountability stavas A-C-C-O-U-N-T-A-B-I-L-I-T-Y."
+          "explanation": "Accountability stavas A-C-C-O-U-N-T-A-B-I-L-I-T-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp4-4",
           "type": "fill-in-blank",
           "sentence": "Governments use cameras for ___ in public spaces. (övervakning)",
           "answer": "surveillance",
-          "hint": "Börjar med S. Tänk på stavningen: sur-veil-lance.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Surveillance = övervakning. Stavas S-U-R-V-E-I-L-L-A-N-C-E."
         },
         {
@@ -1457,7 +1762,8 @@
             "representation"
           ],
           "correctIndex": 3,
-          "explanation": "Representation stavas R-E-P-R-E-S-E-N-T-A-T-I-O-N."
+          "explanation": "Representation stavas R-E-P-R-E-S-E-N-T-A-T-I-O-N.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1480,14 +1786,15 @@
             "accommodation"
           ],
           "correctIndex": 3,
-          "explanation": "Accommodation stavas A-C-C-O-M-M-O-D-A-T-I-O-N. Dubbel C och dubbel M."
+          "explanation": "Accommodation stavas A-C-C-O-M-M-O-D-A-T-I-O-N. Dubbel C och dubbel M.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp5-2",
           "type": "fill-in-blank",
           "sentence": "Please do not ___ the story. (överdriva)",
           "answer": "exaggerate",
-          "hint": "Börjar med EX. Dubbel G i mitten.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Exaggerate = överdriva. Stavas E-X-A-G-G-E-R-A-T-E."
         },
         {
@@ -1501,14 +1808,15 @@
             "occurrence"
           ],
           "correctIndex": 3,
-          "explanation": "Occurrence stavas O-C-C-U-R-R-E-N-C-E. Dubbel C och dubbel R."
+          "explanation": "Occurrence stavas O-C-C-U-R-R-E-N-C-E. Dubbel C och dubbel R.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "gym-sp5-4",
           "type": "fill-in-blank",
           "sentence": "Listen to your ___ when making a difficult decision. (samvete)",
           "answer": "conscience",
-          "hint": "Börjar med CON. Tyst SC i mitten.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Conscience = samvete. Stavas C-O-N-S-C-I-E-N-C-E."
         },
         {
@@ -1522,7 +1830,8 @@
             "conscientious"
           ],
           "correctIndex": 3,
-          "explanation": "Conscientious stavas C-O-N-S-C-I-E-N-T-I-O-U-S."
+          "explanation": "Conscientious stavas C-O-N-S-C-I-E-N-T-I-O-U-S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     }

@@ -19,14 +19,15 @@
             "28"
           ],
           "correctIndex": 2,
-          "explanation": "The English alphabet has 26 letters, from A to Z."
+          "explanation": "The English alphabet has 26 letters, from A to Z.",
+          "hint": "Det engelska alfabetet har 26 bokstäver – från A till Z."
         },
         {
           "id": "lag-g1-2",
           "type": "fill-in-blank",
           "sentence": "The first letter of the English alphabet is ___.",
           "answer": "A",
-          "hint": "It is also the first letter of 'Apple'.",
+          "hint": "Tänk på alfabetsordningen: A B C D E ... X Y Z.",
           "explanation": "A is the first letter. The alphabet starts A, B, C..."
         }
       ]
@@ -50,14 +51,15 @@
             "yellow"
           ],
           "correctIndex": 2,
-          "explanation": "The sky is blue on a sunny day."
+          "explanation": "The sky is blue on a sunny day.",
+          "hint": "Tänk på vilken färg det handlar om. Färger på engelska: red, blue, green, yellow, orange, purple, black, white..."
         },
         {
           "id": "lag-g2-2",
           "type": "fill-in-blank",
           "sentence": "A banana is ___ in colour.",
           "answer": "yellow",
-          "hint": "Think about the sun — same colour!",
+          "hint": "Tänk på vilken färg det handlar om. Färger på engelska: red, blue, green, yellow, orange, purple, black, white...",
           "explanation": "A banana is yellow. Yellow = gul."
         }
       ]
@@ -81,7 +83,8 @@
             "Sorry!"
           ],
           "correctIndex": 1,
-          "explanation": "Hello or Hi is the most common greeting in English."
+          "explanation": "Hello or Hi is the most common greeting in English.",
+          "hint": "Tänk på hur man hälsar och presenterar sig på engelska: Hello, Hi, Good morning, My name is..."
         },
         {
           "id": "lag-g3-2",
@@ -128,7 +131,8 @@
             "fish"
           ],
           "correctIndex": 1,
-          "explanation": "Hund = dog. Common pets: dog, cat, fish, rabbit."
+          "explanation": "Hund = dog. Common pets: dog, cat, fish, rabbit.",
+          "hint": "Djurnamn på engelska: dog (hund), cat (katt), bird (fågel), fish (fisk), horse (häst)..."
         },
         {
           "id": "lag-g4-2",
@@ -171,7 +175,8 @@
             "has",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave-2",
@@ -182,19 +187,22 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-3",
           "type": "fill-in-blank",
           "sentence": "This ___ a dog.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "'This' pekar på en sak (singularis) – använd 'is'."
         },
         {
           "id": "lag-g-tobehave-4",
           "type": "fill-in-blank",
           "sentence": "They ___ happy.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave-5",
@@ -205,13 +213,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-6",
           "type": "fill-in-blank",
           "sentence": "We ___ in school.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave-7",
@@ -222,13 +232,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-8",
           "type": "fill-in-blank",
           "sentence": "I ___ happy.",
-          "answer": "am"
+          "answer": "am",
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave-9",
@@ -239,13 +251,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Are' används med you, we, they och plurala substantiv."
         },
         {
           "id": "lag-g-tobehave-10",
           "type": "fill-in-blank",
           "sentence": "She ___ my teacher.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-11",
@@ -256,13 +270,15 @@
             "is",
             "are"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave-12",
           "type": "fill-in-blank",
           "sentence": "We ___ friends.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave-13",
@@ -273,13 +289,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "'Is' används med he, she, it och singulara substantiv."
         },
         {
           "id": "lag-g-tobehave-14",
           "type": "fill-in-blank",
           "sentence": "He ___ tall.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-15",
@@ -290,13 +308,15 @@
             "is",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave-16",
           "type": "fill-in-blank",
           "sentence": "It ___ a book.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-17",
@@ -307,13 +327,15 @@
             "is",
             "are"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave-18",
           "type": "fill-in-blank",
           "sentence": "She ___ kind.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave-19",
@@ -324,13 +346,15 @@
             "is",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave-20",
           "type": "fill-in-blank",
           "sentence": "The bird ___ small.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "'Is' används med he, she, it och singulara substantiv."
         }
       ]
     },
@@ -351,13 +375,15 @@
             "has",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'she' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
         },
         {
           "id": "lag-g-tobehave2-2",
           "type": "fill-in-blank",
           "sentence": "I ___ a dog.",
-          "answer": "have"
+          "answer": "have",
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave2-3",
@@ -368,13 +394,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave2-4",
           "type": "fill-in-blank",
           "sentence": "It ___ red.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave2-5",
@@ -385,13 +413,15 @@
             "has",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'we' använder vi 'have'. Exempel: They have a car."
         },
         {
           "id": "lag-g-tobehave2-6",
           "type": "fill-in-blank",
           "sentence": "He ___ happy today.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave2-7",
@@ -402,13 +432,15 @@
             "has",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave2-8",
           "type": "fill-in-blank",
           "sentence": "She ___ my teacher.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave2-9",
@@ -419,13 +451,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "'Is' används med he, she, it och singulara substantiv."
         },
         {
           "id": "lag-g-tobehave2-10",
           "type": "fill-in-blank",
           "sentence": "They ___ in the park.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave2-11",
@@ -436,13 +470,15 @@
             "has",
             "is"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'he' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
         },
         {
           "id": "lag-g-tobehave2-12",
           "type": "fill-in-blank",
           "sentence": "We ___ ready.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave2-13",
@@ -453,13 +489,15 @@
             "is",
             "are"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave2-14",
           "type": "fill-in-blank",
           "sentence": "It ___ a ball.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave2-15",
@@ -470,13 +508,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave2-16",
           "type": "fill-in-blank",
           "sentence": "They ___ tall.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave2-17",
@@ -487,13 +527,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave2-18",
           "type": "fill-in-blank",
           "sentence": "He ___ my brother.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave2-19",
@@ -504,13 +546,15 @@
             "has",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave2-20",
           "type": "fill-in-blank",
           "sentence": "The dogs ___ big.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "'Are' används med you, we, they och plurala substantiv."
         }
       ]
     },
@@ -531,13 +575,15 @@
             "has",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave3-2",
           "type": "fill-in-blank",
           "sentence": "She ___ happy.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-3",
@@ -548,13 +594,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave3-4",
           "type": "fill-in-blank",
           "sentence": "It ___ blue.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-5",
@@ -565,13 +613,15 @@
             "has",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'he' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
         },
         {
           "id": "lag-g-tobehave3-6",
           "type": "fill-in-blank",
           "sentence": "We ___ friends.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave3-7",
@@ -582,13 +632,15 @@
             "is",
             "are"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave3-8",
           "type": "fill-in-blank",
           "sentence": "The dog ___ big.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "'Is' används med he, she, it och singulara substantiv."
         },
         {
           "id": "lag-g-tobehave3-9",
@@ -599,13 +651,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave3-10",
           "type": "fill-in-blank",
           "sentence": "She ___ my sister.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-11",
@@ -616,13 +670,15 @@
             "has",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'we' använder vi 'have'. Exempel: They have a car."
         },
         {
           "id": "lag-g-tobehave3-12",
           "type": "fill-in-blank",
           "sentence": "He ___ tall.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-13",
@@ -633,13 +689,15 @@
             "has",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave3-14",
           "type": "fill-in-blank",
           "sentence": "They ___ in the park.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave3-15",
@@ -650,13 +708,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-16",
           "type": "fill-in-blank",
           "sentence": "She ___ kind.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-17",
@@ -667,13 +727,15 @@
             "is",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave3-18",
           "type": "fill-in-blank",
           "sentence": "He ___ my friend.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-19",
@@ -684,13 +746,15 @@
             "is",
             "are"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave3-20",
           "type": "fill-in-blank",
           "sentence": "The birds ___ small.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "'Are' används med you, we, they och plurala substantiv."
         },
         {
           "id": "lag-g-tobehave3-21",
@@ -701,13 +765,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-22",
           "type": "fill-in-blank",
           "sentence": "We ___ ready now.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave3-23",
@@ -718,13 +784,15 @@
             "has",
             "is"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'he' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
         },
         {
           "id": "lag-g-tobehave3-24",
           "type": "fill-in-blank",
           "sentence": "I ___ seven years old.",
-          "answer": "am"
+          "answer": "am",
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave3-25",
@@ -735,13 +803,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave3-26",
           "type": "fill-in-blank",
           "sentence": "It ___ green.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-27",
@@ -752,13 +822,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave3-28",
           "type": "fill-in-blank",
           "sentence": "She ___ at school.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave3-29",
@@ -769,13 +841,15 @@
             "has",
             "is"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave3-30",
           "type": "fill-in-blank",
           "sentence": "The cat ___ hungry.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "'Is' används med he, she, it och singulara substantiv."
         }
       ]
     },
@@ -791,121 +865,341 @@
           "id": "lag-g-tobehave4-1",
           "type": "fill-in-blank",
           "sentence": "I ___ ready.",
-          "answer": "am"
+          "answer": "am",
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave4-2",
           "type": "fill-in-blank",
           "sentence": "She ___ happy.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-3",
           "type": "fill-in-blank",
           "sentence": "They ___ friends.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave4-4",
           "type": "fill-in-blank",
           "sentence": "He ___ tall.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-5",
           "type": "fill-in-blank",
           "sentence": "We ___ at school.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave4-6",
           "type": "fill-in-blank",
           "sentence": "It ___ blue.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-7",
           "type": "fill-in-blank",
           "sentence": "I ___ a dog.",
-          "answer": "have"
+          "answer": "have",
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave4-8",
           "type": "fill-in-blank",
           "sentence": "She ___ a cat.",
-          "answer": "has"
+          "answer": "has",
+          "hint": "Med 'she' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
         },
         {
           "id": "lag-g-tobehave4-9",
           "type": "fill-in-blank",
           "sentence": "They ___ two books.",
-          "answer": "have"
+          "answer": "have",
+          "hint": "Med 'they' använder vi 'have'. Exempel: They have a car."
         },
         {
           "id": "lag-g-tobehave4-10",
           "type": "fill-in-blank",
           "sentence": "He ___ my brother.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-11",
           "type": "fill-in-blank",
           "sentence": "We ___ happy today.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave4-12",
           "type": "fill-in-blank",
           "sentence": "It ___ small.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-13",
           "type": "fill-in-blank",
           "sentence": "I ___ seven years old.",
-          "answer": "am"
+          "answer": "am",
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
         },
         {
           "id": "lag-g-tobehave4-14",
           "type": "fill-in-blank",
           "sentence": "She ___ my teacher.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-15",
           "type": "fill-in-blank",
           "sentence": "They ___ in the park.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
         },
         {
           "id": "lag-g-tobehave4-16",
           "type": "fill-in-blank",
           "sentence": "He ___ funny.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-17",
           "type": "fill-in-blank",
           "sentence": "We ___ ready now.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
         },
         {
           "id": "lag-g-tobehave4-18",
           "type": "fill-in-blank",
           "sentence": "It ___ green.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
         },
         {
           "id": "lag-g-tobehave4-19",
           "type": "fill-in-blank",
           "sentence": "I ___ a pencil.",
-          "answer": "have"
+          "answer": "have",
+          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
         },
         {
           "id": "lag-g-tobehave4-20",
           "type": "fill-in-blank",
           "sentence": "She ___ kind.",
-          "answer": "is"
+          "answer": "is",
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        }
+      ]
+    },
+    {
+      "id": "lag-g-tobehave5",
+      "title": "To be & have – del 5",
+      "description": "Fler övningar på 'am/is/are'.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "lag-g-tobehave5-1",
+          "type": "multiple-choice",
+          "question": "___ you happy?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 2,
+          "hint": "Med 'you' (du/ni) använder vi alltid 'are'. Exempel: You are my friend."
+        },
+        {
+          "id": "lag-g-tobehave5-2",
+          "type": "fill-in-blank",
+          "sentence": "This ___ my book.",
+          "answer": "is",
+          "hint": "'This' pekar på en sak (singularis) – använd 'is'."
+        },
+        {
+          "id": "lag-g-tobehave5-3",
+          "type": "multiple-choice",
+          "question": "___ she your sister?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1,
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-4",
+          "type": "fill-in-blank",
+          "sentence": "These ___ my shoes.",
+          "answer": "are",
+          "hint": "'These' pekar på flera saker (pluralis) – använd 'are'."
+        },
+        {
+          "id": "lag-g-tobehave5-5",
+          "type": "multiple-choice",
+          "question": "I ___ not tired.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
+        },
+        {
+          "id": "lag-g-tobehave5-6",
+          "type": "fill-in-blank",
+          "sentence": "He ___ not sad.",
+          "answer": "is",
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-7",
+          "type": "multiple-choice",
+          "question": "We ___ not late.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 2,
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
+        },
+        {
+          "id": "lag-g-tobehave5-8",
+          "type": "fill-in-blank",
+          "sentence": "It ___ not cold today.",
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-9",
+          "type": "multiple-choice",
+          "question": "___ they your friends?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 2,
+          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
+        },
+        {
+          "id": "lag-g-tobehave5-10",
+          "type": "fill-in-blank",
+          "sentence": "That ___ my teacher.",
+          "answer": "is",
+          "hint": "'That' pekar på en sak (singularis) – använd 'is'."
+        },
+        {
+          "id": "lag-g-tobehave5-11",
+          "type": "multiple-choice",
+          "question": "She ___ not angry.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 1,
+          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-12",
+          "type": "fill-in-blank",
+          "sentence": "I ___ not at home.",
+          "answer": "am",
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
+        },
+        {
+          "id": "lag-g-tobehave5-13",
+          "type": "multiple-choice",
+          "question": "___ he tall?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1,
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-14",
+          "type": "fill-in-blank",
+          "sentence": "The apples ___ red.",
+          "answer": "are",
+          "hint": "'Are' används med you, we, they och plurala substantiv."
+        },
+        {
+          "id": "lag-g-tobehave5-15",
+          "type": "multiple-choice",
+          "question": "We ___ not hungry.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 2,
+          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
+        },
+        {
+          "id": "lag-g-tobehave5-16",
+          "type": "fill-in-blank",
+          "sentence": "It ___ my pencil.",
+          "answer": "is",
+          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-17",
+          "type": "multiple-choice",
+          "question": "___ I late?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 0,
+          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
+        },
+        {
+          "id": "lag-g-tobehave5-18",
+          "type": "fill-in-blank",
+          "sentence": "Those ___ my books.",
+          "answer": "are",
+          "hint": "'Those' pekar på flera saker (pluralis) – använd 'are'."
+        },
+        {
+          "id": "lag-g-tobehave5-19",
+          "type": "multiple-choice",
+          "question": "He ___ not here.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 1,
+          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
+        },
+        {
+          "id": "lag-g-tobehave5-20",
+          "type": "fill-in-blank",
+          "sentence": "You ___ my best friend.",
+          "answer": "are",
+          "hint": "Med 'you' (du/ni) använder vi alltid 'are'. Exempel: You are my friend."
         }
       ]
     },
@@ -1212,7 +1506,8 @@
             "buke"
           ],
           "correctIndex": 1,
-          "explanation": "Book stavas B-O-O-K."
+          "explanation": "Book stavas B-O-O-K.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp1-2",
@@ -1225,14 +1520,15 @@
             "pencill"
           ],
           "correctIndex": 2,
-          "explanation": "Pencil stavas P-E-N-C-I-L."
+          "explanation": "Pencil stavas P-E-N-C-I-L.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp1-3",
           "type": "fill-in-blank",
           "sentence": "My ___ helps me learn new things. (lärare)",
           "answer": "teacher",
-          "hint": "Börjar med T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Teacher = lärare. Stavas T-E-A-C-H-E-R."
         },
         {
@@ -1240,7 +1536,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ my name on the paper. (skriver)",
           "answer": "write",
-          "hint": "Börjar med W (tyst W).",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Write = skriva. Stavas W-R-I-T-E."
         },
         {
@@ -1254,7 +1550,8 @@
             "school"
           ],
           "correctIndex": 3,
-          "explanation": "School stavas S-C-H-O-O-L."
+          "explanation": "School stavas S-C-H-O-O-L.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1277,7 +1574,8 @@
             "frrog"
           ],
           "correctIndex": 0,
-          "explanation": "Frog stavas F-R-O-G."
+          "explanation": "Frog stavas F-R-O-G.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp2-2",
@@ -1290,14 +1588,15 @@
             "hourse"
           ],
           "correctIndex": 2,
-          "explanation": "Horse stavas H-O-R-S-E."
+          "explanation": "Horse stavas H-O-R-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp2-3",
           "type": "fill-in-blank",
           "sentence": "A ___ has long ears and hops. (kanin)",
           "answer": "rabbit",
-          "hint": "Börjar med R.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Rabbit = kanin. Stavas R-A-B-B-I-T."
         },
         {
@@ -1311,7 +1610,8 @@
             "munkee"
           ],
           "correctIndex": 2,
-          "explanation": "Monkey stavas M-O-N-K-E-Y."
+          "explanation": "Monkey stavas M-O-N-K-E-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp2-5",
@@ -1324,7 +1624,8 @@
             "elephant"
           ],
           "correctIndex": 3,
-          "explanation": "Elephant stavas E-L-E-P-H-A-N-T."
+          "explanation": "Elephant stavas E-L-E-P-H-A-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1347,14 +1648,15 @@
             "yollow"
           ],
           "correctIndex": 1,
-          "explanation": "Yellow stavas Y-E-L-L-O-W."
+          "explanation": "Yellow stavas Y-E-L-L-O-W.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp3-2",
           "type": "fill-in-blank",
           "sentence": "A ___ has four equal sides. (kvadrat)",
           "answer": "square",
-          "hint": "Börjar med S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Square = kvadrat. Stavas S-Q-U-A-R-E."
         },
         {
@@ -1368,14 +1670,15 @@
             "orange"
           ],
           "correctIndex": 3,
-          "explanation": "Orange stavas O-R-A-N-G-E."
+          "explanation": "Orange stavas O-R-A-N-G-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp3-4",
           "type": "fill-in-blank",
           "sentence": "A ___ shape has no corners. (cirkel)",
           "answer": "circle",
-          "hint": "Börjar med C.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Circle = cirkel. Stavas C-I-R-C-L-E."
         },
         {
@@ -1389,7 +1692,8 @@
             "purple"
           ],
           "correctIndex": 3,
-          "explanation": "Purple stavas P-U-R-P-L-E."
+          "explanation": "Purple stavas P-U-R-P-L-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1412,14 +1716,15 @@
             "shoulder"
           ],
           "correctIndex": 3,
-          "explanation": "Shoulder stavas S-H-O-U-L-D-E-R."
+          "explanation": "Shoulder stavas S-H-O-U-L-D-E-R.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp4-2",
           "type": "fill-in-blank",
           "sentence": "You chew food with your ___. (tänder)",
           "answer": "teeth",
-          "hint": "Börjar med T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Teeth = tänder. Stavas T-E-E-T-H."
         },
         {
@@ -1433,14 +1738,15 @@
             "finger"
           ],
           "correctIndex": 3,
-          "explanation": "Finger stavas F-I-N-G-E-R."
+          "explanation": "Finger stavas F-I-N-G-E-R.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp4-4",
           "type": "fill-in-blank",
           "sentence": "You bend your leg at the ___. (knä)",
           "answer": "knee",
-          "hint": "Börjar med KN (tyst K).",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Knee = knä. Stavas K-N-E-E."
         },
         {
@@ -1454,7 +1760,8 @@
             "stomack"
           ],
           "correctIndex": 2,
-          "explanation": "Stomach stavas S-T-O-M-A-C-H."
+          "explanation": "Stomach stavas S-T-O-M-A-C-H.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1477,14 +1784,15 @@
             "goodbay"
           ],
           "correctIndex": 2,
-          "explanation": "Goodbye stavas G-O-O-D-B-Y-E."
+          "explanation": "Goodbye stavas G-O-O-D-B-Y-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp5-2",
           "type": "fill-in-blank",
           "sentence": "I am going to the park ___. (imorgon)",
           "answer": "tomorrow",
-          "hint": "Börjar med T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Tomorrow = imorgon. Stavas T-O-M-O-R-R-O-W."
         },
         {
@@ -1498,14 +1806,15 @@
             "yesterdey"
           ],
           "correctIndex": 1,
-          "explanation": "Yesterday stavas Y-E-S-T-E-R-D-A-Y."
+          "explanation": "Yesterday stavas Y-E-S-T-E-R-D-A-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "lag-sp5-4",
           "type": "fill-in-blank",
           "sentence": "I need food because I am ___. (hungrig)",
           "answer": "hungry",
-          "hint": "Börjar med H.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Hungry = hungrig. Stavas H-U-N-G-R-Y."
         },
         {
@@ -1519,7 +1828,8 @@
             "family"
           ],
           "correctIndex": 3,
-          "explanation": "Family stavas F-A-M-I-L-Y."
+          "explanation": "Family stavas F-A-M-I-L-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     }

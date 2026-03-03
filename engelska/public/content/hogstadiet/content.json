@@ -19,14 +19,15 @@
             "She visits Paris often."
           ],
           "correctIndex": 1,
-          "explanation": "Present perfect = have/has + past participle. 'She has visited' = she has the experience of visiting Paris."
+          "explanation": "Present perfect = have/has + past participle. 'She has visited' = she has the experience of visiting Paris.",
+          "hint": "Perfekt (present perfect) bildas med have/has + perfektparticip. Nyckelord: since, for, just, already, never, ever."
         },
         {
           "id": "hog-g1-2",
           "type": "fill-in-blank",
           "sentence": "I ___ (never/eat) sushi before.",
           "answer": "have never eaten",
-          "hint": "Present perfect with 'never': have/has + never + past participle",
+          "hint": "Nyckelord → perfekt: have/has + perfektparticip. T.ex. 'She has lived here since 2010.'",
           "explanation": "For experiences: I have never eaten sushi — it means this is an experience you haven't had yet."
         }
       ]
@@ -50,14 +51,15 @@
             "If it rains, I would stay inside."
           ],
           "correctIndex": 1,
-          "explanation": "First Conditional (real/possible situations): If + present simple, will + base verb."
+          "explanation": "First Conditional (real/possible situations): If + present simple, will + base verb.",
+          "hint": "Typ 1-konditionalis (möjlig situation): If + presens → will + grundform. T.ex. 'If it rains, I will stay home.'"
         },
         {
           "id": "hog-g2-2",
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) taller, I would play basketball.",
           "answer": "were",
-          "hint": "Second Conditional uses past tense in the if-clause. 'Be' becomes 'were' for all subjects.",
+          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform.",
           "explanation": "Second Conditional (hypothetical/unreal): If + past simple (were for all), would + base verb."
         }
       ]
@@ -81,14 +83,15 @@
             "The chef will cook the meal."
           ],
           "correctIndex": 1,
-          "explanation": "Passive voice: be + past participle. 'The meal was cooked' — the meal receives the action."
+          "explanation": "Passive voice: be + past participle. 'The meal was cooked' — the meal receives the action.",
+          "hint": "Passiv form: 'to be' i rätt form + perfektparticip. T.ex. 'The meal was cooked by the chef.'"
         },
         {
           "id": "hog-g3-2",
           "type": "fill-in-blank",
           "sentence": "The Eiffel Tower ___ (build) in 1889.",
           "answer": "was built",
-          "hint": "Passive past simple: was/were + past participle",
+          "hint": "Dåtid passiv: was/were + perfektparticip. T.ex. 'The tower was built in 1889.'",
           "explanation": "Past passive: was/were + past participle. Build → built. 'was built' = someone built it (in the past)."
         }
       ]
@@ -112,7 +115,8 @@
             "She said she is being tired."
           ],
           "correctIndex": 1,
-          "explanation": "In reported speech, we 'backshift' tenses: am/is → was. She said that she was tired."
+          "explanation": "In reported speech, we 'backshift' tenses: am/is → was. She said that she was tired.",
+          "hint": "Indirekt tal: 'is/am' → 'was'. Presens backas ett steg till dåtid."
         },
         {
           "id": "hog-g4-2",
@@ -152,7 +156,8 @@
           "id": "hog-g-advanced-1",
           "type": "fill-in-blank",
           "sentence": "If it rains, we ___ (stay) inside.",
-          "answer": "will stay"
+          "answer": "will stay",
+          "hint": "Typ 1-konditionalis: If + presens → will + grundform. Verklig möjlighet."
         },
         {
           "id": "hog-g-advanced-2",
@@ -163,13 +168,15 @@
             "did",
             "done"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Perfektparticip av verbet används här: 'done'. Kontrollera den oregelbundna formen."
         },
         {
           "id": "hog-g-advanced-3",
           "type": "fill-in-blank",
           "sentence": "They ___ (live) here for three years.",
-          "answer": "have lived"
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-4",
@@ -180,13 +187,15 @@
             "was",
             "were"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-5",
           "type": "fill-in-blank",
           "sentence": "He said that he ___ (be) tired.",
-          "answer": "was"
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-6",
@@ -197,13 +206,15 @@
             "had",
             "will have"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-7",
           "type": "fill-in-blank",
           "sentence": "She ___ (not finish) yet.",
-          "answer": "has not finished"
+          "answer": "has not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
         },
         {
           "id": "hog-g-advanced-8",
@@ -214,13 +225,15 @@
             "because",
             "so"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-9",
           "type": "fill-in-blank",
           "sentence": "The film was ___ (interesting) than the book.",
-          "answer": "more interesting"
+          "answer": "more interesting",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-10",
@@ -231,13 +244,15 @@
             "better",
             "best"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-11",
           "type": "fill-in-blank",
           "sentence": "He asked where I ___ (live).",
-          "answer": "lived"
+          "answer": "lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-12",
@@ -248,13 +263,15 @@
             "better",
             "best"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-13",
           "type": "fill-in-blank",
           "sentence": "They ___ (build) a new school last year.",
-          "answer": "built"
+          "answer": "built",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-14",
@@ -265,13 +282,15 @@
             "made",
             "making"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-15",
           "type": "fill-in-blank",
           "sentence": "I wish I ___ (can) swim.",
-          "answer": "could"
+          "answer": "could",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-16",
@@ -282,13 +301,15 @@
             "on",
             "at"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-17",
           "type": "fill-in-blank",
           "sentence": "We ___ (already finish) the project.",
-          "answer": "have already finished"
+          "answer": "have already finished",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-18",
@@ -299,13 +320,15 @@
             "faster",
             "fastest"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced-19",
           "type": "fill-in-blank",
           "sentence": "If she had studied, she ___ (pass) the test.",
-          "answer": "would have passed"
+          "answer": "would have passed",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
         },
         {
           "id": "hog-g-advanced-20",
@@ -316,7 +339,8 @@
             "which",
             "where"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         }
       ]
     },
@@ -332,7 +356,8 @@
           "id": "hog-g-advanced2-1",
           "type": "fill-in-blank",
           "sentence": "She ___ (study) for two hours.",
-          "answer": "has studied"
+          "answer": "has studied",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
         },
         {
           "id": "hog-g-advanced2-2",
@@ -343,13 +368,15 @@
             "would",
             "can"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Typ 2-konditionalis resultat: 'would' + grundform. Hypotetisk situation i nutid."
         },
         {
           "id": "hog-g-advanced2-3",
           "type": "fill-in-blank",
           "sentence": "The book ___ (write) in 2005.",
-          "answer": "was written"
+          "answer": "was written",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced2-4",
@@ -360,13 +387,15 @@
             "was",
             "were"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-5",
           "type": "fill-in-blank",
           "sentence": "They ___ (not finish) the task yet.",
-          "answer": "have not finished"
+          "answer": "have not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
         },
         {
           "id": "hog-g-advanced2-6",
@@ -377,13 +406,15 @@
             "most",
             "the most"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-7",
           "type": "fill-in-blank",
           "sentence": "She ___ (go) to school when it started to rain.",
-          "answer": "was going"
+          "answer": "was going",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
         },
         {
           "id": "hog-g-advanced2-8",
@@ -394,13 +425,15 @@
             "rains",
             "rained"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-9",
           "type": "fill-in-blank",
           "sentence": "He said he ___ (be) tired.",
-          "answer": "was"
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-10",
@@ -411,13 +444,15 @@
             "been",
             "being"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-11",
           "type": "fill-in-blank",
           "sentence": "I wish I ___ (have) more time.",
-          "answer": "had"
+          "answer": "had",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-12",
@@ -428,13 +463,15 @@
             "in",
             "on"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-13",
           "type": "fill-in-blank",
           "sentence": "They ___ (live) here since 2020.",
-          "answer": "have lived"
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-14",
@@ -445,13 +482,15 @@
             "faster",
             "fastest"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-15",
           "type": "fill-in-blank",
           "sentence": "The cake ___ (make) by my mother.",
-          "answer": "was made"
+          "answer": "was made",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-16",
@@ -462,13 +501,15 @@
             "would have",
             "has"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
         },
         {
           "id": "hog-g-advanced2-17",
           "type": "fill-in-blank",
           "sentence": "We ___ (already see) that film.",
-          "answer": "have already seen"
+          "answer": "have already seen",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-18",
@@ -479,13 +520,15 @@
             "where",
             "why"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced2-19",
           "type": "fill-in-blank",
           "sentence": "The car ___ (drive) too fast.",
-          "answer": "was driven"
+          "answer": "was driven",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced2-20",
@@ -496,7 +539,8 @@
             "better",
             "best"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         }
       ]
     },
@@ -512,7 +556,8 @@
           "id": "hog-g-advanced3-1",
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would study more.",
-          "answer": "were"
+          "answer": "were",
+          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform."
         },
         {
           "id": "hog-g-advanced3-2",
@@ -523,13 +568,15 @@
             "finished",
             "finishing"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Perfektparticip av verbet används här: 'finished'. Kontrollera den oregelbundna formen."
         },
         {
           "id": "hog-g-advanced3-3",
           "type": "fill-in-blank",
           "sentence": "They ___ (live) here since 2018.",
-          "answer": "have lived"
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-4",
@@ -540,13 +587,15 @@
             "was",
             "were"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-5",
           "type": "fill-in-blank",
           "sentence": "He said he ___ (go) home.",
-          "answer": "was going"
+          "answer": "was going",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
         },
         {
           "id": "hog-g-advanced3-6",
@@ -557,13 +606,15 @@
             "better",
             "best"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-7",
           "type": "fill-in-blank",
           "sentence": "She ___ (not see) him yet.",
-          "answer": "has not seen"
+          "answer": "has not seen",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
         },
         {
           "id": "hog-g-advanced3-8",
@@ -574,13 +625,15 @@
             "rain",
             "rained"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-9",
           "type": "fill-in-blank",
           "sentence": "The car ___ (steal) last night.",
-          "answer": "was stolen"
+          "answer": "was stolen",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced3-10",
@@ -591,13 +644,15 @@
             "faster",
             "fastest"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-11",
           "type": "fill-in-blank",
           "sentence": "We ___ (already finish) the project.",
-          "answer": "have already finished"
+          "answer": "have already finished",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-12",
@@ -608,13 +663,15 @@
             "at",
             "in"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-13",
           "type": "fill-in-blank",
           "sentence": "They ___ (watch) TV when I arrived.",
-          "answer": "were watching"
+          "answer": "were watching",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
         },
         {
           "id": "hog-g-advanced3-14",
@@ -625,13 +682,15 @@
             "will have",
             "has"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
         },
         {
           "id": "hog-g-advanced3-15",
           "type": "fill-in-blank",
           "sentence": "He asked where I ___ (live).",
-          "answer": "lived"
+          "answer": "lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-16",
@@ -642,13 +701,15 @@
             "most",
             "very"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-17",
           "type": "fill-in-blank",
           "sentence": "The cake ___ (eat) by the children.",
-          "answer": "was eaten"
+          "answer": "was eaten",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced3-18",
@@ -659,13 +720,15 @@
             "better",
             "best"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-19",
           "type": "fill-in-blank",
           "sentence": "I wish I ___ (can) help you.",
-          "answer": "could"
+          "answer": "could",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-20",
@@ -676,13 +739,15 @@
             "on",
             "at"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-21",
           "type": "fill-in-blank",
           "sentence": "They ___ (not finish) yet.",
-          "answer": "have not finished"
+          "answer": "have not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
         },
         {
           "id": "hog-g-advanced3-22",
@@ -693,13 +758,15 @@
             "worse",
             "worst"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-23",
           "type": "fill-in-blank",
           "sentence": "If I had known, I ___ (come).",
-          "answer": "would have come"
+          "answer": "would have come",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
         },
         {
           "id": "hog-g-advanced3-24",
@@ -710,13 +777,15 @@
             "because",
             "so"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-25",
           "type": "fill-in-blank",
           "sentence": "The letter ___ (send) yesterday.",
-          "answer": "was sent"
+          "answer": "was sent",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced3-26",
@@ -727,13 +796,15 @@
             "where",
             "which"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-27",
           "type": "fill-in-blank",
           "sentence": "We ___ (never see) such a storm.",
-          "answer": "have never seen"
+          "answer": "have never seen",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-28",
@@ -744,13 +815,15 @@
             "an",
             "the"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced3-29",
           "type": "fill-in-blank",
           "sentence": "She ___ (be) studying for hours.",
-          "answer": "has been"
+          "answer": "has been",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
         },
         {
           "id": "hog-g-advanced3-30",
@@ -761,7 +834,8 @@
             "had",
             "will have"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         }
       ]
     },
@@ -777,121 +851,341 @@
           "id": "hog-g-advanced4-1",
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would apologise.",
-          "answer": "were"
+          "answer": "were",
+          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform."
         },
         {
           "id": "hog-g-advanced4-2",
           "type": "fill-in-blank",
           "sentence": "She ___ (not finish) yet.",
-          "answer": "has not finished"
+          "answer": "has not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
         },
         {
           "id": "hog-g-advanced4-3",
           "type": "fill-in-blank",
           "sentence": "They ___ (live) here for three years.",
-          "answer": "have lived"
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-4",
           "type": "fill-in-blank",
           "sentence": "The house ___ (build) in 1990.",
-          "answer": "was built"
+          "answer": "was built",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced4-5",
           "type": "fill-in-blank",
           "sentence": "He said he ___ (be) tired.",
-          "answer": "was"
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-6",
           "type": "fill-in-blank",
           "sentence": "If she had studied, she ___ (pass).",
-          "answer": "would have passed"
+          "answer": "would have passed",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
         },
         {
           "id": "hog-g-advanced4-7",
           "type": "fill-in-blank",
           "sentence": "The film was ___ (interesting) than the book.",
-          "answer": "more interesting"
+          "answer": "more interesting",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-8",
           "type": "fill-in-blank",
           "sentence": "This is the ___ (good) day of my life.",
-          "answer": "best"
+          "answer": "best",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-9",
           "type": "fill-in-blank",
           "sentence": "She ___ (watch) TV when I arrived.",
-          "answer": "was watching"
+          "answer": "was watching",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
         },
         {
           "id": "hog-g-advanced4-10",
           "type": "fill-in-blank",
           "sentence": "The car ___ (steal) last night.",
-          "answer": "was stolen"
+          "answer": "was stolen",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
         },
         {
           "id": "hog-g-advanced4-11",
           "type": "fill-in-blank",
           "sentence": "I wish I ___ (can) swim.",
-          "answer": "could"
+          "answer": "could",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-12",
           "type": "fill-in-blank",
           "sentence": "They ___ (already finish) the project.",
-          "answer": "have already finished"
+          "answer": "have already finished",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-13",
           "type": "fill-in-blank",
           "sentence": "He asked where I ___ (live).",
-          "answer": "lived"
+          "answer": "lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-14",
           "type": "fill-in-blank",
           "sentence": "She speaks English ___ (good) than me.",
-          "answer": "better"
+          "answer": "better",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-15",
           "type": "fill-in-blank",
           "sentence": "If it ___ (rain), we will stay inside.",
-          "answer": "rains"
+          "answer": "rains",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-16",
           "type": "fill-in-blank",
           "sentence": "The cake ___ (make) by my sister.",
-          "answer": "was made"
+          "answer": "was made",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-17",
           "type": "fill-in-blank",
           "sentence": "We ___ (never see) such a storm.",
-          "answer": "have never seen"
+          "answer": "have never seen",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-18",
           "type": "fill-in-blank",
           "sentence": "He is interested ___ music.",
-          "answer": "in"
+          "answer": "in",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         },
         {
           "id": "hog-g-advanced4-19",
           "type": "fill-in-blank",
           "sentence": "She ___ (study) for two hours.",
-          "answer": "has studied"
+          "answer": "has studied",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
         },
         {
           "id": "hog-g-advanced4-20",
           "type": "fill-in-blank",
           "sentence": "If I had known, I ___ (come).",
-          "answer": "would have come"
+          "answer": "would have come",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        }
+      ]
+    },
+    {
+      "id": "hog-g-advanced5",
+      "title": "Avancerad grammatik – del 5",
+      "description": "Fler avancerade grammatikövningar.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced5-1",
+          "type": "multiple-choice",
+          "question": "If I ___ enough money, I would buy it.",
+          "options": [
+            "have",
+            "had",
+            "will have"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-2",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (work) here since last year.",
+          "answer": "has worked",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
+        },
+        {
+          "id": "hog-g-advanced5-3",
+          "type": "multiple-choice",
+          "question": "The book ___ by a famous author.",
+          "options": [
+            "wrote",
+            "written",
+            "was written"
+          ],
+          "correctIndex": 2,
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced5-4",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not know) the answer at that time.",
+          "answer": "did not know",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-5",
+          "type": "multiple-choice",
+          "question": "This exercise is ___ than the last one.",
+          "options": [
+            "easy",
+            "easier",
+            "easiest"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-6",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (drive) when the accident happened.",
+          "answer": "was driving",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
+        },
+        {
+          "id": "hog-g-advanced5-7",
+          "type": "multiple-choice",
+          "question": "If it had snowed, we ___ stayed home.",
+          "options": [
+            "would have",
+            "will have",
+            "would"
+          ],
+          "correctIndex": 0,
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced5-8",
+          "type": "fill-in-blank",
+          "sentence": "She asked if I ___ (be) ready.",
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-9",
+          "type": "multiple-choice",
+          "question": "The project ___ completed next week.",
+          "options": [
+            "is",
+            "will be",
+            "was"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (not see) him since Monday.",
+          "answer": "have not seen",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced5-11",
+          "type": "multiple-choice",
+          "question": "He is the ___ student in the class.",
+          "options": [
+            "smart",
+            "smarter",
+            "smartest"
+          ],
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (build) a bridge last year.",
+          "answer": "built",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-13",
+          "type": "multiple-choice",
+          "question": "She speaks ___ than her sister.",
+          "options": [
+            "clearly",
+            "more clearly",
+            "most clearly"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-14",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (be) taller.",
+          "answer": "were",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-15",
+          "type": "multiple-choice",
+          "question": "The homework must ___ finished today.",
+          "options": [
+            "be",
+            "been",
+            "being"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-16",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (not finish) when I arrived.",
+          "answer": "had not finished",
+          "hint": "Pluskvamperfekt: had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse."
+        },
+        {
+          "id": "hog-g-advanced5-17",
+          "type": "multiple-choice",
+          "question": "If she studies, she ___ pass the test.",
+          "options": [
+            "will",
+            "would",
+            "would have"
+          ],
+          "correctIndex": 0,
+          "hint": "Typ 1-konditionalis: If + presens → will + grundform. Verklig möjlighet."
+        },
+        {
+          "id": "hog-g-advanced5-18",
+          "type": "fill-in-blank",
+          "sentence": "The window ___ (break) during the storm.",
+          "answer": "was broken",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced5-19",
+          "type": "multiple-choice",
+          "question": "She is afraid ___ heights.",
+          "options": [
+            "of",
+            "for",
+            "with"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-20",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (already leave) when we got there.",
+          "answer": "had already left",
+          "hint": "Pluskvamperfekt: had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse."
         }
       ]
     },
@@ -1198,14 +1492,15 @@
             "evidence"
           ],
           "correctIndex": 3,
-          "explanation": "Evidence stavas E-V-I-D-E-N-C-E."
+          "explanation": "Evidence stavas E-V-I-D-E-N-C-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp1-2",
           "type": "fill-in-blank",
           "sentence": "Consider the problem from another ___. (perspektiv)",
           "answer": "perspective",
-          "hint": "Börjar med P.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Perspective = perspektiv. Stavas P-E-R-S-P-E-C-T-I-V-E."
         },
         {
@@ -1219,14 +1514,15 @@
             "consequence"
           ],
           "correctIndex": 3,
-          "explanation": "Consequence stavas C-O-N-S-E-Q-U-E-N-C-E."
+          "explanation": "Consequence stavas C-O-N-S-E-Q-U-E-N-C-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp1-4",
           "type": "fill-in-blank",
           "sentence": "A ___ of the plan is that it costs too much. (nackdel)",
           "answer": "disadvantage",
-          "hint": "Börjar med DIS.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Disadvantage = nackdel. Stavas D-I-S-A-D-V-A-N-T-A-G-E."
         },
         {
@@ -1240,7 +1536,8 @@
             "advantage"
           ],
           "correctIndex": 3,
-          "explanation": "Advantage stavas A-D-V-A-N-T-A-G-E."
+          "explanation": "Advantage stavas A-D-V-A-N-T-A-G-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1263,14 +1560,15 @@
             "environment"
           ],
           "correctIndex": 3,
-          "explanation": "Environment stavas E-N-V-I-R-O-N-M-E-N-T."
+          "explanation": "Environment stavas E-N-V-I-R-O-N-M-E-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp2-2",
           "type": "fill-in-blank",
           "sentence": "It is our ___ to take care of the planet. (ansvar)",
           "answer": "responsibility",
-          "hint": "Börjar med R.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Responsibility = ansvar. Stavas R-E-S-P-O-N-S-I-B-I-L-I-T-Y."
         },
         {
@@ -1284,14 +1582,15 @@
             "technology"
           ],
           "correctIndex": 3,
-          "explanation": "Technology stavas T-E-C-H-N-O-L-O-G-Y."
+          "explanation": "Technology stavas T-E-C-H-N-O-L-O-G-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp2-4",
           "type": "fill-in-blank",
           "sentence": "Good ___ is essential in teamwork. (kommunikation)",
           "answer": "communication",
-          "hint": "Börjar med C.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Communication = kommunikation. Stavas C-O-M-M-U-N-I-C-A-T-I-O-N."
         },
         {
@@ -1305,7 +1604,8 @@
             "government"
           ],
           "correctIndex": 3,
-          "explanation": "Government stavas G-O-V-E-R-N-M-E-N-T."
+          "explanation": "Government stavas G-O-V-E-R-N-M-E-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1328,14 +1628,15 @@
             "became"
           ],
           "correctIndex": 3,
-          "explanation": "Became stavas B-E-C-A-M-E."
+          "explanation": "Became stavas B-E-C-A-M-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp3-2",
           "type": "fill-in-blank",
           "sentence": "He ___ his arm when he fell off the bike. (bröt)",
           "answer": "broke",
-          "hint": "Dåtid av 'break'. Börjar med BR.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Broke = bröt. Stavas B-R-O-K-E."
         },
         {
@@ -1349,14 +1650,15 @@
             "chose"
           ],
           "correctIndex": 3,
-          "explanation": "Chose stavas C-H-O-S-E."
+          "explanation": "Chose stavas C-H-O-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp3-4",
           "type": "fill-in-blank",
           "sentence": "The plant ___ quickly in the sunlight. (växte)",
           "answer": "grew",
-          "hint": "Dåtid av 'grow'. Börjar med GR.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Grew = växte. Stavas G-R-E-W."
         },
         {
@@ -1370,7 +1672,8 @@
             "spoke"
           ],
           "correctIndex": 3,
-          "explanation": "Spoke stavas S-P-O-K-E."
+          "explanation": "Spoke stavas S-P-O-K-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1393,14 +1696,15 @@
             "evaluate"
           ],
           "correctIndex": 3,
-          "explanation": "Evaluate stavas E-V-A-L-U-A-T-E."
+          "explanation": "Evaluate stavas E-V-A-L-U-A-T-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp4-2",
           "type": "fill-in-blank",
           "sentence": "Your essay needs a clear ___ at the start. (inledning)",
           "answer": "introduction",
-          "hint": "Börjar med I.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Introduction = inledning. Stavas I-N-T-R-O-D-U-C-T-I-O-N."
         },
         {
@@ -1414,14 +1718,15 @@
             "paragraph"
           ],
           "correctIndex": 3,
-          "explanation": "Paragraph stavas P-A-R-A-G-R-A-P-H."
+          "explanation": "Paragraph stavas P-A-R-A-G-R-A-P-H.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp4-4",
           "type": "fill-in-blank",
           "sentence": "Your essay should end with a strong ___. (slutsats)",
           "answer": "conclusion",
-          "hint": "Börjar med C.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Conclusion = slutsats. Stavas C-O-N-C-L-U-S-I-O-N."
         },
         {
@@ -1435,7 +1740,8 @@
             "summarise"
           ],
           "correctIndex": 3,
-          "explanation": "Summarise stavas S-U-M-M-A-R-I-S-E."
+          "explanation": "Summarise stavas S-U-M-M-A-R-I-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1458,14 +1764,15 @@
             "through"
           ],
           "correctIndex": 3,
-          "explanation": "Through stavas T-H-R-O-U-G-H. Obs: 'threw' är dåtid av 'throw'."
+          "explanation": "Through stavas T-H-R-O-U-G-H. Obs: 'threw' är dåtid av 'throw'.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp5-2",
           "type": "fill-in-blank",
           "sentence": "I have ___ friends to celebrate with. (tillräckligt många)",
           "answer": "enough",
-          "hint": "Börjar med E. Slutar med GH (uttalas F).",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Enough stavas E-N-O-U-G-H."
         },
         {
@@ -1479,7 +1786,8 @@
             "knowledge"
           ],
           "correctIndex": 3,
-          "explanation": "Knowledge stavas K-N-O-W-L-E-D-G-E. Obs: tyst K och W."
+          "explanation": "Knowledge stavas K-N-O-W-L-E-D-G-E. Obs: tyst K och W.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp5-4",
@@ -1492,14 +1800,15 @@
             "necessary"
           ],
           "correctIndex": 3,
-          "explanation": "Necessary stavas N-E-C-E-S-S-A-R-Y. En C, dubbel S."
+          "explanation": "Necessary stavas N-E-C-E-S-S-A-R-Y. En C, dubbel S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "hog-sp5-5",
           "type": "fill-in-blank",
           "sentence": "Did you ___ my email? (ta emot/få)",
           "answer": "receive",
-          "hint": "Kom ihåg: I before E except after C.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Receive stavas R-E-C-E-I-V-E."
         }
       ]

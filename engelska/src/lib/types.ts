@@ -28,6 +28,7 @@ export interface MultipleChoiceExercise {
   question: string;
   options: string[];
   correctIndex: number;
+  hint?: string;
   explanation?: string;
 }
 
