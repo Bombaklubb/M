@@ -1183,6 +1183,216 @@
           "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         }
       ]
+    },
+    {
+      "id": "mel-g-mixed",
+      "title": "Blandad grammatik",
+      "description": "Presens vs kontinuerlig, some/any, objektspronomen, will vs going to och mer.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g-mixed-1",
+          "type": "multiple-choice",
+          "question": "She usually ___ (walk) to school.",
+          "options": [
+            "walk",
+            "walks"
+          ],
+          "correctIndex": 1,
+          "hint": "'Usually' visar en vana → presens (present simple). Med he/she/it: lägg till -s. 'She walks.'"
+        },
+        {
+          "id": "mel-g-mixed-2",
+          "type": "multiple-choice",
+          "question": "She ___ (walk) to school now.",
+          "options": [
+            "walks",
+            "is walking"
+          ],
+          "correctIndex": 1,
+          "hint": "'Now' visar pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing. 'She is walking.'"
+        },
+        {
+          "id": "mel-g-mixed-3",
+          "type": "multiple-choice",
+          "question": "I have ___ friends here.",
+          "options": [
+            "a few",
+            "a little"
+          ],
+          "correctIndex": 0,
+          "hint": "'A few' används med räkningsbara (countable) substantiv: a few friends, a few books. 'A little' med oräkningsbara: a little water."
+        },
+        {
+          "id": "mel-g-mixed-4",
+          "type": "multiple-choice",
+          "question": "There is ___ water left.",
+          "options": [
+            "a few",
+            "a little"
+          ],
+          "correctIndex": 1,
+          "hint": "'Water' är oräkningbart (uncountable) – det kan inte räknas med siffror. Oräkningbara → 'a little'."
+        },
+        {
+          "id": "mel-g-mixed-5",
+          "type": "multiple-choice",
+          "question": "This is ___ book.",
+          "options": [
+            "my",
+            "mine"
+          ],
+          "correctIndex": 0,
+          "hint": "'My' används FÖRE ett substantiv: 'my book'. 'Mine' används utan substantiv efter."
+        },
+        {
+          "id": "mel-g-mixed-6",
+          "type": "multiple-choice",
+          "question": "This book is ___.",
+          "options": [
+            "my",
+            "mine"
+          ],
+          "correctIndex": 1,
+          "hint": "Inga substantiv efter → 'mine'. 'This book is mine' = Det här är min bok."
+        },
+        {
+          "id": "mel-g-mixed-7",
+          "type": "multiple-choice",
+          "question": "Give it to ___.",
+          "options": [
+            "I",
+            "me"
+          ],
+          "correctIndex": 1,
+          "hint": "'Me' är objektspronomen (används efter prepositioner och som objekt). 'I' är subjektspronomen. 'Give it to me' – 'to' kräver objektsform."
+        },
+        {
+          "id": "mel-g-mixed-8",
+          "type": "multiple-choice",
+          "question": "She helped ___.",
+          "options": [
+            "we",
+            "us"
+          ],
+          "correctIndex": 1,
+          "hint": "'Us' är objektsform av 'we'. Verb + objekt → objektspronomen: me, you, him, her, it, us, them."
+        },
+        {
+          "id": "mel-g-mixed-9",
+          "type": "multiple-choice",
+          "question": "I think it ___ rain tomorrow.",
+          "options": [
+            "will",
+            "is going to"
+          ],
+          "correctIndex": 0,
+          "hint": "'Will' används för spontana beslut och förutsägelser utan bevis. 'I think' antyder en spontan tanke → 'will'."
+        },
+        {
+          "id": "mel-g-mixed-10",
+          "type": "multiple-choice",
+          "question": "Look at the clouds! It ___ rain.",
+          "options": [
+            "will",
+            "is going to"
+          ],
+          "correctIndex": 1,
+          "hint": "'Is going to' används när det finns bevis för framtiden (molnen = bevis). 'Look!' visar att vi ser ett tecken."
+        },
+        {
+          "id": "mel-g-mixed-11",
+          "type": "fill-in-blank",
+          "sentence": "She used to ___ (play) the piano.",
+          "answer": "play",
+          "hint": "'Used to' + verbets grundform beskriver en gammal vana som inte längre sker. T.ex. 'She used to play' = Hon brukade spela."
+        },
+        {
+          "id": "mel-g-mixed-12",
+          "type": "multiple-choice",
+          "question": "He is taller ___ me.",
+          "options": [
+            "than",
+            "that"
+          ],
+          "correctIndex": 0,
+          "hint": "'Than' används vid jämförelser med komparativ (-er). 'Taller than' = längre än. Inte 'that'."
+        },
+        {
+          "id": "mel-g-mixed-13",
+          "type": "multiple-choice",
+          "question": "I am interested ___ music.",
+          "options": [
+            "in",
+            "on"
+          ],
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: 'interested in'. Lär dig vanliga kombinationer: interested in, good at, afraid of."
+        },
+        {
+          "id": "mel-g-mixed-14",
+          "type": "fill-in-blank",
+          "sentence": "We have lived here ___ 2020.",
+          "answer": "since",
+          "hint": "'Since' + specifik tidpunkt (år, datum, klockslag). 'For' + tidsperiod (three years, a week). 2020 är en tidpunkt → 'since'."
+        },
+        {
+          "id": "mel-g-mixed-15",
+          "type": "fill-in-blank",
+          "sentence": "We have lived here ___ three years.",
+          "answer": "for",
+          "hint": "'For' + tidsperiod (how long). 'Since' + startpunkt (when). 'Three years' är en period → 'for'."
+        },
+        {
+          "id": "mel-g-mixed-16",
+          "type": "multiple-choice",
+          "question": "She is good ___ maths.",
+          "options": [
+            "at",
+            "in"
+          ],
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: 'good at' (bra på). T.ex. 'good at swimming', 'good at maths'. Inte 'good in'."
+        },
+        {
+          "id": "mel-g-mixed-17",
+          "type": "fill-in-blank",
+          "sentence": "He stopped ___ (talk) when the teacher came.",
+          "answer": "talking",
+          "hint": "'Stop' + gerund (-ing): 'stop talking' = sluta prata. 'Stop to do' = stanna för att göra något (annat)."
+        },
+        {
+          "id": "mel-g-mixed-18",
+          "type": "multiple-choice",
+          "question": "There are ___ students in the class.",
+          "options": [
+            "much",
+            "many"
+          ],
+          "correctIndex": 1,
+          "hint": "'Many' + räkningsbara (countable) substantiv: many students, many books. 'Much' + oräkningbara: much water, much time."
+        },
+        {
+          "id": "mel-g-mixed-19",
+          "type": "multiple-choice",
+          "question": "There isn't ___ sugar.",
+          "options": [
+            "many",
+            "much"
+          ],
+          "correctIndex": 1,
+          "hint": "'Sugar' är oräkningbart (uncountable) – det kan inte räknas med siffror. Oräkningbara → 'much'."
+        },
+        {
+          "id": "mel-g-mixed-20",
+          "type": "fill-in-blank",
+          "sentence": "We arrived ___ time.",
+          "answer": "on",
+          "hint": "Fast fras: 'on time' = i tid (punktligt). 'In time' = i tid (hinner). 'Arrived on time' = anlände punktligt."
+        }
+      ]
     }
   ],
   "reading": [

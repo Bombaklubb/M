@@ -1188,6 +1188,188 @@
           "hint": "Pluskvamperfekt: had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse."
         }
       ]
+    },
+    {
+      "id": "hog-g-mixed",
+      "title": "Blandad grammatik",
+      "description": "For/since, few/little, adjektiv vs adverb, indirekt tal, relativa pronomen och modala verb.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-mixed-1",
+          "type": "fill-in-blank",
+          "sentence": "I have lived here ___ five years.",
+          "answer": "for",
+          "hint": "'For' + tidsperiod (hur länge): 'for five years', 'for a week'. 'Since' + startpunkt: 'since 2018'."
+        },
+        {
+          "id": "hog-g-mixed-2",
+          "type": "fill-in-blank",
+          "sentence": "I have lived here ___ 2018.",
+          "answer": "since",
+          "hint": "'Since' + specifik startpunkt (år, datum, klockslag). 'For' + tidsperiod. 2018 är en tidpunkt → 'since'."
+        },
+        {
+          "id": "hog-g-mixed-3",
+          "type": "multiple-choice",
+          "question": "There are ___ people waiting.",
+          "options": [
+            "few",
+            "little"
+          ],
+          "correctIndex": 0,
+          "hint": "'Few' + räkningsbara (countable) substantiv: 'few people', 'few cars'. 'Little' + oräkningbara: 'little time', 'little money'."
+        },
+        {
+          "id": "hog-g-mixed-4",
+          "type": "multiple-choice",
+          "question": "There is ___ time left.",
+          "options": [
+            "few",
+            "little"
+          ],
+          "correctIndex": 1,
+          "hint": "'Time' (tid) är oräkningsbart → 'little'. Jämför: 'a few minutes' (räkningsbart) vs 'little time' (oräkningsbart)."
+        },
+        {
+          "id": "hog-g-mixed-5",
+          "type": "multiple-choice",
+          "question": "She is a ___ driver.",
+          "options": [
+            "careful",
+            "carefully"
+          ],
+          "correctIndex": 0,
+          "hint": "Adjektiv beskriver substantiv: 'a careful driver'. Adverb beskriver verb: 'She drives carefully'. Här beskrivs 'driver' (substantiv) → adjektiv."
+        },
+        {
+          "id": "hog-g-mixed-6",
+          "type": "multiple-choice",
+          "question": "She drives ___.",
+          "options": [
+            "careful",
+            "carefully"
+          ],
+          "correctIndex": 1,
+          "hint": "Adverb beskriver verb: 'She drives carefully'. Adjektiv beskriver substantiv. Här beskrivs 'drives' (verb) → adverb (-ly)."
+        },
+        {
+          "id": "hog-g-mixed-7",
+          "type": "fill-in-blank",
+          "sentence": "He used to ___ (live) here.",
+          "answer": "live",
+          "hint": "'Used to' + verbets grundform: beskriver en gammal vana/tillstånd. T.ex. 'He used to live here' = Han bodde här förr."
+        },
+        {
+          "id": "hog-g-mixed-8",
+          "type": "fill-in-blank",
+          "sentence": "He said: 'I will come.' → He said that he ___ come.",
+          "answer": "would",
+          "hint": "Indirekt tal: verbet backas ett steg. 'will' → 'would'. 'I' → 'he/she'. T.ex. 'I will' → 'he would'."
+        },
+        {
+          "id": "hog-g-mixed-9",
+          "type": "fill-in-blank",
+          "sentence": "The woman ___ car was stolen called the police.",
+          "answer": "whose",
+          "hint": "Relativt pronomen: 'whose' = vars/vars. Används för ägande. 'The woman whose car' = kvinnan vars bil. (who=subjekt, whom=objekt, whose=ägande)"
+        },
+        {
+          "id": "hog-g-mixed-10",
+          "type": "fill-in-blank",
+          "sentence": "You ___ wear a helmet (obligation).",
+          "answer": "must",
+          "hint": "'Must' uttrycker stark skyldighet/krav. 'May/can' = tillstånd. 'Should' = råd. Skyldighet → 'must'."
+        },
+        {
+          "id": "hog-g-mixed-11",
+          "type": "fill-in-blank",
+          "sentence": "You ___ leave early (permission).",
+          "answer": "may",
+          "hint": "'May' uttrycker tillstånd (formellt). 'Can' = informellt tillstånd. 'Must' = skyldighet. Tillstånd formellt → 'may'."
+        },
+        {
+          "id": "hog-g-mixed-12",
+          "type": "multiple-choice",
+          "question": "Despite ___ tired, she continued.",
+          "options": [
+            "being",
+            "to be"
+          ],
+          "correctIndex": 0,
+          "hint": "'Despite' följs alltid av gerund (-ing): 'despite being tired'. 'Although' däremot följs av en fullständig sats."
+        },
+        {
+          "id": "hog-g-mixed-13",
+          "type": "fill-in-blank",
+          "sentence": "We stayed home ___ it was raining.",
+          "answer": "because",
+          "hint": "'Because' (eftersom) introducer orsaken. 'Because' kan komma mitt i eller i början av meningen – samma mening, olika ordföljd."
+        },
+        {
+          "id": "hog-g-mixed-14",
+          "type": "multiple-choice",
+          "question": "He arrived ___ time.",
+          "options": [
+            "on",
+            "in"
+          ],
+          "correctIndex": 0,
+          "hint": "'On time' = punktligt (vid den bestämda tiden). 'In time' = i tid (hinner, inte för sent). 'Arrived on time' = kom punktligt."
+        },
+        {
+          "id": "hog-g-mixed-15",
+          "type": "fill-in-blank",
+          "sentence": "She has been studying ___ two hours.",
+          "answer": "for",
+          "hint": "'For' + tidsperiod: 'for two hours', 'for a week'. 'Since' + startpunkt. Två timmar är en period → 'for'."
+        },
+        {
+          "id": "hog-g-mixed-16",
+          "type": "fill-in-blank",
+          "sentence": "She has been studying ___ 5 o'clock.",
+          "answer": "since",
+          "hint": "'Since' + specifik startpunkt: 'since 5 o'clock'. 5 o'clock är en tidpunkt → 'since'."
+        },
+        {
+          "id": "hog-g-mixed-17",
+          "type": "fill-in-blank",
+          "sentence": "If you heat water, it ___ boil.",
+          "answer": "boils",
+          "hint": "Nollkonditional (Zero Conditional): If + presens → presens. Används för naturlagar och fakta. 'If you heat water, it boils.'"
+        },
+        {
+          "id": "hog-g-mixed-18",
+          "type": "multiple-choice",
+          "question": "He is ___ tired to continue.",
+          "options": [
+            "too",
+            "very"
+          ],
+          "correctIndex": 0,
+          "hint": "'Too' + adjektiv = för mycket (negativt resultat): 'too tired to continue' = för trött för att fortsätta. 'Very' förstärker utan negativt resultat."
+        },
+        {
+          "id": "hog-g-mixed-19",
+          "type": "fill-in-blank",
+          "sentence": "She stopped ___ (smoke) last year.",
+          "answer": "smoking",
+          "hint": "'Stop' + gerund (-ing) = sluta göra något. 'Stop to do' = stanna för att göra något annat. Hon slutade röka → 'stopped smoking'."
+        },
+        {
+          "id": "hog-g-mixed-20",
+          "type": "multiple-choice",
+          "question": "I look forward to ___ you.",
+          "options": [
+            "see",
+            "seeing"
+          ],
+          "correctIndex": 1,
+          "hint": "'Look forward to' + gerund (-ing). 'To' är här en preposition (inte infinitivmarkör) → -ing-form. 'Look forward to seeing you.'"
+        }
+      ]
     }
   ],
   "reading": [
