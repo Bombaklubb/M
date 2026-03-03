@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { ReadingQuestion as RQ } from "@/lib/types";
-import { playCorrect, playWrong } from "@/lib/sounds";
 
 const LEVEL_LABELS: Record<string, { label: string; color: string; icon: string }> = {
   "on-the-line": {
@@ -37,8 +36,6 @@ export default function ReadingQuestion({ question, onAnswer }: Props) {
     setSelected(idx);
     setRevealed(true);
     const correct = idx === question.correctIndex;
-    if (correct) playCorrect();
-    else playWrong();
     setTimeout(() => onAnswer(correct), 1200);
   }
 

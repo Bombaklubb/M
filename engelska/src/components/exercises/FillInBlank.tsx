@@ -2,7 +2,6 @@
 
 import { useState, useRef } from "react";
 import type { FillInBlankExercise } from "@/lib/types";
-import { playCorrect, playWrong } from "@/lib/sounds";
 
 interface Props {
   exercise: FillInBlankExercise;
@@ -22,8 +21,6 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
     const correct =
       input.trim().toLowerCase() === exercise.answer.toLowerCase();
     setState(correct ? "correct" : "wrong");
-    if (correct) playCorrect();
-    else playWrong();
     setTimeout(() => onAnswer(correct), 1300);
   }
 
