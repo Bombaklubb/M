@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { BuildSentenceExercise } from "@/lib/types";
-import { playCorrect, playWrong, playClick } from "@/lib/sounds";
 
 interface Props {
   exercise: BuildSentenceExercise;
@@ -18,13 +17,11 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
 
   function addWord(idx: number) {
     if (state !== "idle") return;
-    playClick();
     setPlaced((prev) => [...prev, idx]);
   }
 
   function removeWord(posInPlaced: number) {
     if (state !== "idle") return;
-    playClick();
     setPlaced((prev) => prev.filter((_, i) => i !== posInPlaced));
   }
 
@@ -34,8 +31,6 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
       placed.length === exercise.correctOrder.length &&
       placed.every((wordIdx, pos) => wordIdx === exercise.correctOrder[pos]);
     setState(correct ? "correct" : "wrong");
-    if (correct) playCorrect();
-    else playWrong();
     setTimeout(() => onAnswer(correct), 1400);
   }
 

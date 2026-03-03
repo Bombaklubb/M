@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { MultipleChoiceExercise } from "@/lib/types";
-import { playCorrect, playWrong } from "@/lib/sounds";
 
 interface Props {
   exercise: MultipleChoiceExercise;
@@ -19,8 +18,6 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
     setSelected(idx);
     setRevealed(true);
     const correct = idx === exercise.correctIndex;
-    if (correct) playCorrect();
-    else playWrong();
     setTimeout(() => onAnswer(correct), 1200);
   }
 

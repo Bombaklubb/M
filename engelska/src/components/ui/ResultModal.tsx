@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-import { playComplete } from "@/lib/sounds";
 
 interface ResultModalProps {
   points: number;
@@ -22,10 +20,6 @@ export default function ResultModal({
 }: ResultModalProps) {
   const pct = Math.round((totalCorrect / totalQuestions) * 100);
   const passed = pct >= 60;
-
-  useEffect(() => {
-    if (passed) playComplete();
-  }, [passed]);
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
