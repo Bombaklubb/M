@@ -2,5 +2,5 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- engelska/"
+  "ignoreCommand": "git diff --quiet ${VERCEL_GIT_PREVIOUS_SHA:-4b825dc642cb6eb9a060e54bf8d69288fbee4904} $VERCEL_GIT_COMMIT_SHA -- engelska/"
 }
