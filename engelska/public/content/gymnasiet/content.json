@@ -914,6 +914,186 @@
           "answer": "leave"
         }
       ]
+    },
+    {
+      "id": "gym-g-advanced5",
+      "title": "Avancerad grammatik – del 5",
+      "description": "Fler avancerade grammatikövningar.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "gym-g-advanced5-1",
+          "type": "multiple-choice",
+          "question": "Had they prepared better, they ___ succeeded.",
+          "options": [
+            "would",
+            "would have",
+            "will"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced5-2",
+          "type": "fill-in-blank",
+          "sentence": "It is crucial that he ___ (understand) the risks.",
+          "answer": "understand"
+        },
+        {
+          "id": "gym-g-advanced5-3",
+          "type": "multiple-choice",
+          "question": "Only after the meeting ___ we realise the problem.",
+          "options": [
+            "did",
+            "have",
+            "were"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced5-4",
+          "type": "fill-in-blank",
+          "sentence": "The manuscript ___ (review) before publication.",
+          "answer": "was reviewed"
+        },
+        {
+          "id": "gym-g-advanced5-5",
+          "type": "multiple-choice",
+          "question": "No sooner ___ she left than it started raining.",
+          "options": [
+            "had",
+            "has",
+            "did"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced5-6",
+          "type": "fill-in-blank",
+          "sentence": "He admitted ___ (lie) to the teacher.",
+          "answer": "lying"
+        },
+        {
+          "id": "gym-g-advanced5-7",
+          "type": "multiple-choice",
+          "question": "Seldom ___ such innovation.",
+          "options": [
+            "we witness",
+            "do we witness",
+            "we witnessed"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced5-8",
+          "type": "fill-in-blank",
+          "sentence": "The issue needs ___ (address) immediately.",
+          "answer": "to be addressed"
+        },
+        {
+          "id": "gym-g-advanced5-9",
+          "type": "multiple-choice",
+          "question": "Neither of the answers ___ correct.",
+          "options": [
+            "is",
+            "are",
+            "were"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced5-10",
+          "type": "fill-in-blank",
+          "sentence": "She recommended that he ___ (seek) advice.",
+          "answer": "seek"
+        },
+        {
+          "id": "gym-g-advanced5-11",
+          "type": "multiple-choice",
+          "question": "Under no circumstances ___ this be tolerated.",
+          "options": [
+            "can",
+            "will",
+            "is"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced5-12",
+          "type": "fill-in-blank",
+          "sentence": "The results ___ (interpret) differently by researchers.",
+          "answer": "were interpreted"
+        },
+        {
+          "id": "gym-g-advanced5-13",
+          "type": "multiple-choice",
+          "question": "It was not until later that she ___ the truth.",
+          "options": [
+            "discover",
+            "discovered",
+            "had discovered"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced5-14",
+          "type": "fill-in-blank",
+          "sentence": "He is capable ___ handling complex tasks.",
+          "answer": "of"
+        },
+        {
+          "id": "gym-g-advanced5-15",
+          "type": "multiple-choice",
+          "question": "Little ___ about the consequences.",
+          "options": [
+            "did they know",
+            "they knew",
+            "have they known"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "gym-g-advanced5-16",
+          "type": "fill-in-blank",
+          "sentence": "The proposal ___ (approve) unanimously.",
+          "answer": "was approved"
+        },
+        {
+          "id": "gym-g-advanced5-17",
+          "type": "multiple-choice",
+          "question": "Were it not for her help, we ___ failed.",
+          "options": [
+            "would",
+            "would have",
+            "will"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced5-18",
+          "type": "fill-in-blank",
+          "sentence": "The data appears ___ (be) inaccurate.",
+          "answer": "to be"
+        },
+        {
+          "id": "gym-g-advanced5-19",
+          "type": "multiple-choice",
+          "question": "He spoke as if he ___ everything.",
+          "options": [
+            "know",
+            "knew",
+            "knows"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "gym-g-advanced5-20",
+          "type": "fill-in-blank",
+          "sentence": "The experiment ___ (conduct) under strict conditions.",
+          "answer": "was conducted"
+        }
+      ]
     }
   ],
   "reading": [
