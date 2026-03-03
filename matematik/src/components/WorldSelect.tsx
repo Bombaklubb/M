@@ -5,11 +5,13 @@ export default function WorldSelect() {
   const { setView } = useApp();
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden"
+    <div className="relative w-full overflow-hidden"
       style={{
+        height: '100dvh',
+        minHeight: '100vh',
         backgroundImage: 'url("/Mattejakten startsida.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'top center',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#07071a',
       }}>
