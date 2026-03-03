@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Header from "@/components/ui/Header";
-import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
+import { loadStudent, createStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
 import type { StudentData } from "@/lib/types";
@@ -24,12 +23,6 @@ export default function HomePage() {
     if (!nameInput.trim()) return;
     const data = createStudent(nameInput.trim(), selectedAvatar);
     setStudent(data);
-  }
-
-  function handleLogout() {
-    clearStudent();
-    setStudent(null);
-    setNameInput("");
   }
 
   if (loading) {
@@ -151,8 +144,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <Header student={student} onLogout={handleLogout} />
+    <div className="min-h-screen bg-black">
 
       <main className="max-w-5xl mx-auto px-4 py-4">
         {/* Klickbar startsidebild */}
