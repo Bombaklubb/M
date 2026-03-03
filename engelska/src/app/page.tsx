@@ -164,22 +164,22 @@ export default function HomePage() {
             draggable={false}
           />
 
-          {/* Klickbara zoner över de 4 korten (nedre 78% av bilden, delad i 2×2) */}
+          {/* Klickbara zoner över de 4 korten */}
           <Link href="/world/lagstadiet" aria-label="Språkdjungeln"
             className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "22%", left: "2%", width: "47%", height: "37%" }}
+            style={{ top: "10%", left: "2%", width: "47%", height: "42%" }}
           />
           <Link href="/world/mellanstadiet" aria-label="Språkstaden"
             className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "22%", left: "51%", width: "47%", height: "37%" }}
+            style={{ top: "10%", left: "51%", width: "47%", height: "42%" }}
           />
           <Link href="/world/hogstadiet" aria-label="Språkarenan"
             className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "61%", left: "2%", width: "47%", height: "37%" }}
+            style={{ top: "55%", left: "2%", width: "47%", height: "42%" }}
           />
           <Link href="/world/gymnasiet" aria-label="Språkakademin"
             className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "61%", left: "51%", width: "47%", height: "37%" }}
+            style={{ top: "55%", left: "51%", width: "47%", height: "42%" }}
           />
         </div>
       </main>
