@@ -4,5 +4,5 @@
   "installCommand": "npm install",
   "framework": "vite",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- matematik/"
+  "ignoreCommand": "git diff --quiet ${VERCEL_GIT_PREVIOUS_SHA:-4b825dc642cb6eb9a060e54bf8d69288fbee4904} $VERCEL_GIT_COMMIT_SHA -- matematik/"
 }
