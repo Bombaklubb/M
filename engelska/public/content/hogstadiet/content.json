@@ -894,6 +894,186 @@
           "answer": "would have come"
         }
       ]
+    },
+    {
+      "id": "hog-g-advanced5",
+      "title": "Avancerad grammatik – del 5",
+      "description": "Fler avancerade grammatikövningar.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced5-1",
+          "type": "multiple-choice",
+          "question": "If I ___ enough money, I would buy it.",
+          "options": [
+            "have",
+            "had",
+            "will have"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced5-2",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (work) here since last year.",
+          "answer": "has worked"
+        },
+        {
+          "id": "hog-g-advanced5-3",
+          "type": "multiple-choice",
+          "question": "The book ___ by a famous author.",
+          "options": [
+            "wrote",
+            "written",
+            "was written"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "hog-g-advanced5-4",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not know) the answer at that time.",
+          "answer": "did not know"
+        },
+        {
+          "id": "hog-g-advanced5-5",
+          "type": "multiple-choice",
+          "question": "This exercise is ___ than the last one.",
+          "options": [
+            "easy",
+            "easier",
+            "easiest"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced5-6",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (drive) when the accident happened.",
+          "answer": "was driving"
+        },
+        {
+          "id": "hog-g-advanced5-7",
+          "type": "multiple-choice",
+          "question": "If it had snowed, we ___ stayed home.",
+          "options": [
+            "would have",
+            "will have",
+            "would"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced5-8",
+          "type": "fill-in-blank",
+          "sentence": "She asked if I ___ (be) ready.",
+          "answer": "was"
+        },
+        {
+          "id": "hog-g-advanced5-9",
+          "type": "multiple-choice",
+          "question": "The project ___ completed next week.",
+          "options": [
+            "is",
+            "will be",
+            "was"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced5-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (not see) him since Monday.",
+          "answer": "have not seen"
+        },
+        {
+          "id": "hog-g-advanced5-11",
+          "type": "multiple-choice",
+          "question": "He is the ___ student in the class.",
+          "options": [
+            "smart",
+            "smarter",
+            "smartest"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "hog-g-advanced5-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (build) a bridge last year.",
+          "answer": "built"
+        },
+        {
+          "id": "hog-g-advanced5-13",
+          "type": "multiple-choice",
+          "question": "She speaks ___ than her sister.",
+          "options": [
+            "clearly",
+            "more clearly",
+            "most clearly"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "hog-g-advanced5-14",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (be) taller.",
+          "answer": "were"
+        },
+        {
+          "id": "hog-g-advanced5-15",
+          "type": "multiple-choice",
+          "question": "The homework must ___ finished today.",
+          "options": [
+            "be",
+            "been",
+            "being"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced5-16",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (not finish) when I arrived.",
+          "answer": "had not finished"
+        },
+        {
+          "id": "hog-g-advanced5-17",
+          "type": "multiple-choice",
+          "question": "If she studies, she ___ pass the test.",
+          "options": [
+            "will",
+            "would",
+            "would have"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced5-18",
+          "type": "fill-in-blank",
+          "sentence": "The window ___ (break) during the storm.",
+          "answer": "was broken"
+        },
+        {
+          "id": "hog-g-advanced5-19",
+          "type": "multiple-choice",
+          "question": "She is afraid ___ heights.",
+          "options": [
+            "of",
+            "for",
+            "with"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "hog-g-advanced5-20",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (already leave) when we got there.",
+          "answer": "had already left"
+        }
+      ]
     }
   ],
   "reading": [

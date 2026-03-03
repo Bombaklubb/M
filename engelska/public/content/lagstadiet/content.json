@@ -908,6 +908,186 @@
           "answer": "is"
         }
       ]
+    },
+    {
+      "id": "lag-g-tobehave5",
+      "title": "To be & have – del 5",
+      "description": "Fler övningar på 'am/is/are'.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "lag-g-tobehave5-1",
+          "type": "multiple-choice",
+          "question": "___ you happy?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "lag-g-tobehave5-2",
+          "type": "fill-in-blank",
+          "sentence": "This ___ my book.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave5-3",
+          "type": "multiple-choice",
+          "question": "___ she your sister?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave5-4",
+          "type": "fill-in-blank",
+          "sentence": "These ___ my shoes.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave5-5",
+          "type": "multiple-choice",
+          "question": "I ___ not tired.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave5-6",
+          "type": "fill-in-blank",
+          "sentence": "He ___ not sad.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave5-7",
+          "type": "multiple-choice",
+          "question": "We ___ not late.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "lag-g-tobehave5-8",
+          "type": "fill-in-blank",
+          "sentence": "It ___ not cold today.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave5-9",
+          "type": "multiple-choice",
+          "question": "___ they your friends?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "lag-g-tobehave5-10",
+          "type": "fill-in-blank",
+          "sentence": "That ___ my teacher.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave5-11",
+          "type": "multiple-choice",
+          "question": "She ___ not angry.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave5-12",
+          "type": "fill-in-blank",
+          "sentence": "I ___ not at home.",
+          "answer": "am"
+        },
+        {
+          "id": "lag-g-tobehave5-13",
+          "type": "multiple-choice",
+          "question": "___ he tall?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave5-14",
+          "type": "fill-in-blank",
+          "sentence": "The apples ___ red.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave5-15",
+          "type": "multiple-choice",
+          "question": "We ___ not hungry.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "lag-g-tobehave5-16",
+          "type": "fill-in-blank",
+          "sentence": "It ___ my pencil.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave5-17",
+          "type": "multiple-choice",
+          "question": "___ I late?",
+          "options": [
+            "Am",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "lag-g-tobehave5-18",
+          "type": "fill-in-blank",
+          "sentence": "Those ___ my books.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave5-19",
+          "type": "multiple-choice",
+          "question": "He ___ not here.",
+          "options": [
+            "am",
+            "is",
+            "are"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "lag-g-tobehave5-20",
+          "type": "fill-in-blank",
+          "sentence": "You ___ my best friend.",
+          "answer": "are"
+        }
+      ]
     }
   ],
   "reading": [

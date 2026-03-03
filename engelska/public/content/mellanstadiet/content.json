@@ -889,6 +889,186 @@
           "answer": "have lived"
         }
       ]
+    },
+    {
+      "id": "mel-g-tenses5",
+      "title": "Verb & tider – del 5",
+      "description": "Fler övningar på verb och tempus.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g-tenses5-1",
+          "type": "multiple-choice",
+          "question": "She ___ to school by bus.",
+          "options": [
+            "go",
+            "goes",
+            "went"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses5-2",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not play) football yesterday.",
+          "answer": "did not play"
+        },
+        {
+          "id": "mel-g-tenses5-3",
+          "type": "multiple-choice",
+          "question": "I ___ already finished my homework.",
+          "options": [
+            "did",
+            "have",
+            "has"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses5-4",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (clean) his room every week.",
+          "answer": "cleans"
+        },
+        {
+          "id": "mel-g-tenses5-5",
+          "type": "multiple-choice",
+          "question": "We ___ lunch when it started to rain.",
+          "options": [
+            "have",
+            "had",
+            "were having"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "mel-g-tenses5-6",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not be) at school yesterday.",
+          "answer": "was not"
+        },
+        {
+          "id": "mel-g-tenses5-7",
+          "type": "multiple-choice",
+          "question": "They ___ just arrived.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses5-8",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (forget) my keys yesterday.",
+          "answer": "forgot"
+        },
+        {
+          "id": "mel-g-tenses5-9",
+          "type": "multiple-choice",
+          "question": "He ___ English since 2021.",
+          "options": [
+            "studies",
+            "studied",
+            "has studied"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "mel-g-tenses5-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (not watch) TV now.",
+          "answer": "are not watching"
+        },
+        {
+          "id": "mel-g-tenses5-11",
+          "type": "multiple-choice",
+          "question": "She ___ breakfast before school.",
+          "options": [
+            "eat",
+            "eats",
+            "ate"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "mel-g-tenses5-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (travel) to London last year.",
+          "answer": "travelled"
+        },
+        {
+          "id": "mel-g-tenses5-13",
+          "type": "multiple-choice",
+          "question": "I ___ never eaten sushi.",
+          "options": [
+            "have",
+            "has",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses5-14",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (draw) a picture now.",
+          "answer": "is drawing"
+        },
+        {
+          "id": "mel-g-tenses5-15",
+          "type": "multiple-choice",
+          "question": "We ___ friends for many years.",
+          "options": [
+            "are",
+            "were",
+            "have been"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "mel-g-tenses5-16",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not understand) the question.",
+          "answer": "does not understand"
+        },
+        {
+          "id": "mel-g-tenses5-17",
+          "type": "multiple-choice",
+          "question": "They ___ dinner when I called.",
+          "options": [
+            "have",
+            "had",
+            "were having"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "mel-g-tenses5-18",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (lose) my phone yesterday.",
+          "answer": "lost"
+        },
+        {
+          "id": "mel-g-tenses5-19",
+          "type": "multiple-choice",
+          "question": "He ___ already seen that movie.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "mel-g-tenses5-20",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (wait) for you since morning.",
+          "answer": "have waited"
+        }
+      ]
     }
   ],
   "reading": [
