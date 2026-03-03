@@ -778,6 +778,136 @@
           "answer": "is"
         }
       ]
+    },
+    {
+      "id": "lag-g-tobehave4",
+      "title": "To be & have – del 4",
+      "description": "Fler övningar på 'am/is/are' och 'have/has'.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "lag-g-tobehave4-1",
+          "type": "fill-in-blank",
+          "sentence": "I ___ ready.",
+          "answer": "am"
+        },
+        {
+          "id": "lag-g-tobehave4-2",
+          "type": "fill-in-blank",
+          "sentence": "She ___ happy.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-3",
+          "type": "fill-in-blank",
+          "sentence": "They ___ friends.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave4-4",
+          "type": "fill-in-blank",
+          "sentence": "He ___ tall.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-5",
+          "type": "fill-in-blank",
+          "sentence": "We ___ at school.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave4-6",
+          "type": "fill-in-blank",
+          "sentence": "It ___ blue.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-7",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a dog.",
+          "answer": "have"
+        },
+        {
+          "id": "lag-g-tobehave4-8",
+          "type": "fill-in-blank",
+          "sentence": "She ___ a cat.",
+          "answer": "has"
+        },
+        {
+          "id": "lag-g-tobehave4-9",
+          "type": "fill-in-blank",
+          "sentence": "They ___ two books.",
+          "answer": "have"
+        },
+        {
+          "id": "lag-g-tobehave4-10",
+          "type": "fill-in-blank",
+          "sentence": "He ___ my brother.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-11",
+          "type": "fill-in-blank",
+          "sentence": "We ___ happy today.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave4-12",
+          "type": "fill-in-blank",
+          "sentence": "It ___ small.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-13",
+          "type": "fill-in-blank",
+          "sentence": "I ___ seven years old.",
+          "answer": "am"
+        },
+        {
+          "id": "lag-g-tobehave4-14",
+          "type": "fill-in-blank",
+          "sentence": "She ___ my teacher.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-15",
+          "type": "fill-in-blank",
+          "sentence": "They ___ in the park.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave4-16",
+          "type": "fill-in-blank",
+          "sentence": "He ___ funny.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-17",
+          "type": "fill-in-blank",
+          "sentence": "We ___ ready now.",
+          "answer": "are"
+        },
+        {
+          "id": "lag-g-tobehave4-18",
+          "type": "fill-in-blank",
+          "sentence": "It ___ green.",
+          "answer": "is"
+        },
+        {
+          "id": "lag-g-tobehave4-19",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a pencil.",
+          "answer": "have"
+        },
+        {
+          "id": "lag-g-tobehave4-20",
+          "type": "fill-in-blank",
+          "sentence": "She ___ kind.",
+          "answer": "is"
+        }
+      ]
     }
   ],
   "reading": [

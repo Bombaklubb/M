@@ -784,6 +784,136 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "gym-g-advanced4",
+      "title": "Avancerad grammatik – del 4",
+      "description": "Fler avancerade grammatikövningar på gymnasienivå.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "gym-g-advanced4-1",
+          "type": "fill-in-blank",
+          "sentence": "Had I known, I ___ (act) differently.",
+          "answer": "would have acted"
+        },
+        {
+          "id": "gym-g-advanced4-2",
+          "type": "fill-in-blank",
+          "sentence": "It is essential that she ___ (be) present.",
+          "answer": "be"
+        },
+        {
+          "id": "gym-g-advanced4-3",
+          "type": "fill-in-blank",
+          "sentence": "The results ___ (publish) next week.",
+          "answer": "will be published"
+        },
+        {
+          "id": "gym-g-advanced4-4",
+          "type": "fill-in-blank",
+          "sentence": "Rarely ___ we see such talent.",
+          "answer": "do"
+        },
+        {
+          "id": "gym-g-advanced4-5",
+          "type": "fill-in-blank",
+          "sentence": "She denied ___ (take) the money.",
+          "answer": "taking"
+        },
+        {
+          "id": "gym-g-advanced4-6",
+          "type": "fill-in-blank",
+          "sentence": "The theory, which ___ (be) controversial, gained support.",
+          "answer": "was"
+        },
+        {
+          "id": "gym-g-advanced4-7",
+          "type": "fill-in-blank",
+          "sentence": "He would rather ___ (stay) home.",
+          "answer": "stay"
+        },
+        {
+          "id": "gym-g-advanced4-8",
+          "type": "fill-in-blank",
+          "sentence": "The essay needs ___ (revise).",
+          "answer": "to be revised"
+        },
+        {
+          "id": "gym-g-advanced4-9",
+          "type": "fill-in-blank",
+          "sentence": "Neither the teacher nor the students ___ aware.",
+          "answer": "were"
+        },
+        {
+          "id": "gym-g-advanced4-10",
+          "type": "fill-in-blank",
+          "sentence": "He suggested that she ___ (apply).",
+          "answer": "apply"
+        },
+        {
+          "id": "gym-g-advanced4-11",
+          "type": "fill-in-blank",
+          "sentence": "The data ___ (analyse) carefully.",
+          "answer": "was analysed"
+        },
+        {
+          "id": "gym-g-advanced4-12",
+          "type": "fill-in-blank",
+          "sentence": "Not until later ___ they realise the truth.",
+          "answer": "did"
+        },
+        {
+          "id": "gym-g-advanced4-13",
+          "type": "fill-in-blank",
+          "sentence": "She is regarded ___ an expert.",
+          "answer": "as"
+        },
+        {
+          "id": "gym-g-advanced4-14",
+          "type": "fill-in-blank",
+          "sentence": "Only then ___ we understand the problem.",
+          "answer": "did"
+        },
+        {
+          "id": "gym-g-advanced4-15",
+          "type": "fill-in-blank",
+          "sentence": "The contract ___ (sign) yesterday.",
+          "answer": "was signed"
+        },
+        {
+          "id": "gym-g-advanced4-16",
+          "type": "fill-in-blank",
+          "sentence": "It was the first time she ___ (travel) abroad.",
+          "answer": "had travelled"
+        },
+        {
+          "id": "gym-g-advanced4-17",
+          "type": "fill-in-blank",
+          "sentence": "Scarcely ___ they arrived when it started to rain.",
+          "answer": "had"
+        },
+        {
+          "id": "gym-g-advanced4-18",
+          "type": "fill-in-blank",
+          "sentence": "He objected ___ the proposal.",
+          "answer": "to"
+        },
+        {
+          "id": "gym-g-advanced4-19",
+          "type": "fill-in-blank",
+          "sentence": "Were I you, I ___ reconsider.",
+          "answer": "would"
+        },
+        {
+          "id": "gym-g-advanced4-20",
+          "type": "fill-in-blank",
+          "sentence": "She insisted that he ___ (leave) immediately.",
+          "answer": "leave"
+        }
+      ]
     }
   ],
   "reading": [

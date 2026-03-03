@@ -759,6 +759,136 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "mel-g-tenses4",
+      "title": "Verb & tider – del 4",
+      "description": "Fler övningar på verb i olika tempus.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g-tenses4-1",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (play) football every day.",
+          "answer": "plays"
+        },
+        {
+          "id": "mel-g-tenses4-2",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (go) to school yesterday.",
+          "answer": "went"
+        },
+        {
+          "id": "mel-g-tenses4-3",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (eat) breakfast now.",
+          "answer": "am eating"
+        },
+        {
+          "id": "mel-g-tenses4-4",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (have) two sisters.",
+          "answer": "has"
+        },
+        {
+          "id": "mel-g-tenses4-5",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (see) that film.",
+          "answer": "have seen"
+        },
+        {
+          "id": "mel-g-tenses4-6",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (walk) home yesterday.",
+          "answer": "walked"
+        },
+        {
+          "id": "mel-g-tenses4-7",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (be) tired now.",
+          "answer": "are"
+        },
+        {
+          "id": "mel-g-tenses4-8",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (write) a letter yesterday.",
+          "answer": "wrote"
+        },
+        {
+          "id": "mel-g-tenses4-9",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (watch) TV every evening.",
+          "answer": "watches"
+        },
+        {
+          "id": "mel-g-tenses4-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (buy) a car last year.",
+          "answer": "bought"
+        },
+        {
+          "id": "mel-g-tenses4-11",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (study) English every day.",
+          "answer": "studies"
+        },
+        {
+          "id": "mel-g-tenses4-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (come) late yesterday.",
+          "answer": "came"
+        },
+        {
+          "id": "mel-g-tenses4-13",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (do) my homework now.",
+          "answer": "am doing"
+        },
+        {
+          "id": "mel-g-tenses4-14",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (read) a book yesterday.",
+          "answer": "read"
+        },
+        {
+          "id": "mel-g-tenses4-15",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (be) at home yesterday.",
+          "answer": "were"
+        },
+        {
+          "id": "mel-g-tenses4-16",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (take) the bus yesterday.",
+          "answer": "took"
+        },
+        {
+          "id": "mel-g-tenses4-17",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (finish) the test.",
+          "answer": "have finished"
+        },
+        {
+          "id": "mel-g-tenses4-18",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (not like) milk.",
+          "answer": "do not like"
+        },
+        {
+          "id": "mel-g-tenses4-19",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (run) every day.",
+          "answer": "runs"
+        },
+        {
+          "id": "mel-g-tenses4-20",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (live) here since 2020.",
+          "answer": "have lived"
+        }
+      ]
     }
   ],
   "reading": [
