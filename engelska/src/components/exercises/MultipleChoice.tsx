@@ -12,6 +12,7 @@ interface Props {
 export default function MultipleChoice({ exercise, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   function handleSelect(idx: number) {
     if (revealed) return;
@@ -43,6 +44,26 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
       <p className="text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
         {exercise.question}
       </p>
+
+      {exercise.hint && (
+        <div className="rounded-xl overflow-hidden border border-amber-200 dark:border-amber-700">
+          <button
+            onClick={() => setShowHint(!showHint)}
+            className="w-full flex items-center justify-between px-4 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+          >
+            <span className="flex items-center gap-2">
+              <span>💡</span>
+              <span>Tips</span>
+            </span>
+            <span className="text-amber-500 text-xs">{showHint ? "▲" : "▼"}</span>
+          </button>
+          {showHint && (
+            <div className="px-4 py-3 text-sm text-amber-900 dark:text-amber-200 bg-amber-50/60 dark:bg-amber-900/10 border-t border-amber-200 dark:border-amber-700">
+              {exercise.hint}
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="space-y-3">
         {exercise.options.map((opt, idx) => (

@@ -19,14 +19,15 @@
             "She going to school every day."
           ],
           "correctIndex": 1,
-          "explanation": "With he/she/it in present simple, add -s to the verb: go → goes."
+          "explanation": "With he/she/it in present simple, add -s to the verb: go → goes.",
+          "hint": "Presens används för vanor och fakta. He/she/it-formen slutar på -s eller -es. T.ex. 'She goes to school every day.'"
         },
         {
           "id": "mel-g1-2",
           "type": "fill-in-blank",
           "sentence": "He ___ (play) football every Saturday.",
           "answer": "plays",
-          "hint": "Remember: he/she/it → add -s",
+          "hint": "Med 'he' i presens: lägg till -s (eller -es) på grundformen. T.ex. play → plays, go → goes.",
           "explanation": "With he/she/it in present simple, we add -s: play → plays."
         }
       ]
@@ -50,14 +51,15 @@
             "goes"
           ],
           "correctIndex": 1,
-          "explanation": "'Go' is an irregular verb. Its past simple form is 'went'."
+          "explanation": "'Go' is an irregular verb. Its past simple form is 'went'.",
+          "hint": "Datid (past simple): regelbundna verb + -ed (walk → walked). Oregelbundna verb: go → went, see → saw..."
         },
         {
           "id": "mel-g2-2",
           "type": "fill-in-blank",
           "sentence": "Yesterday, I ___ (walk) to school.",
           "answer": "walked",
-          "hint": "Regular verbs: add -ed",
+          "hint": "Tidsmarkörer som 'yesterday', 'last week', 'ago' signalerar datid (past simple).",
           "explanation": "Regular verbs form past simple by adding -ed: walk → walked."
         }
       ]
@@ -81,14 +83,15 @@
             "biggest"
           ],
           "correctIndex": 2,
-          "explanation": "Short adjectives: double the final consonant and add -er. big → bigger."
+          "explanation": "Short adjectives: double the final consonant and add -er. big → bigger.",
+          "hint": "Komparativ av korta adjektiv: lägg till -er. T.ex. big → bigger, fast → faster."
         },
         {
           "id": "mel-g3-2",
           "type": "fill-in-blank",
           "sentence": "Mount Everest is the ___ (high) mountain in the world.",
           "answer": "highest",
-          "hint": "Use the superlative form.",
+          "hint": "Superlativ av korta adjektiv: the + adjektiv + -est. T.ex. big → the biggest.",
           "explanation": "Superlative of high: the highest. Short adjective → the + adj + -est."
         }
       ]
@@ -112,7 +115,8 @@
             "by"
           ],
           "correctIndex": 0,
-          "explanation": "'On' is used for surfaces: on the table, on the floor, on the shelf."
+          "explanation": "'On' is used for surfaces: on the table, on the floor, on the shelf.",
+          "hint": "Preposition 'on': på en yta (on the table), på dagar (on Monday), på datum (on July 4th)."
         },
         {
           "id": "mel-g4-2",
@@ -152,13 +156,15 @@
           "id": "mel-g-tenses-1",
           "type": "fill-in-blank",
           "sentence": "She ___ (play) football every day.",
-          "answer": "plays"
+          "answer": "plays",
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses-2",
           "type": "fill-in-blank",
           "sentence": "They ___ (go) to school on Mondays.",
-          "answer": "go"
+          "answer": "go",
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses-3",
@@ -169,13 +175,15 @@
             "watched",
             "watching"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses-4",
           "type": "fill-in-blank",
           "sentence": "He ___ (have) a dog.",
-          "answer": "has"
+          "answer": "has",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses-5",
@@ -186,13 +194,15 @@
             "eats",
             "ate"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses-6",
           "type": "fill-in-blank",
           "sentence": "They ___ (be) tired.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses-7",
@@ -203,13 +213,15 @@
             "listens",
             "is listening"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses-8",
           "type": "fill-in-blank",
           "sentence": "We ___ (do) our homework yesterday.",
-          "answer": "did"
+          "answer": "did",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses-9",
@@ -220,13 +232,15 @@
             "have",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses-10",
           "type": "fill-in-blank",
           "sentence": "I ___ (not like) milk.",
-          "answer": "do not like"
+          "answer": "do not like",
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses-11",
@@ -237,13 +251,15 @@
             "are playing",
             "played"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses-12",
           "type": "fill-in-blank",
           "sentence": "She ___ (go) home yesterday.",
-          "answer": "went"
+          "answer": "went",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses-13",
@@ -254,13 +270,15 @@
             "has",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses-14",
           "type": "fill-in-blank",
           "sentence": "He ___ (read) a book now.",
-          "answer": "is reading"
+          "answer": "is reading",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses-15",
@@ -271,13 +289,15 @@
             "walks",
             "walked"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tidsadverb 'every/always/often/usually' → presens (present simple)."
         },
         {
           "id": "mel-g-tenses-16",
           "type": "fill-in-blank",
           "sentence": "They ___ (see) a movie yesterday.",
-          "answer": "saw"
+          "answer": "saw",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses-17",
@@ -288,13 +308,15 @@
             "drinks",
             "drank"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses-18",
           "type": "fill-in-blank",
           "sentence": "We ___ (be) happy yesterday.",
-          "answer": "were"
+          "answer": "were",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses-19",
@@ -305,13 +327,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses-20",
           "type": "fill-in-blank",
           "sentence": "I ___ (buy) a new book yesterday.",
-          "answer": "bought"
+          "answer": "bought",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         }
       ]
     },
@@ -327,7 +351,8 @@
           "id": "mel-g-tenses2-1",
           "type": "fill-in-blank",
           "sentence": "She ___ (walk) to school every day.",
-          "answer": "walks"
+          "answer": "walks",
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses2-2",
@@ -338,13 +363,15 @@
             "ate",
             "eaten"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-3",
           "type": "fill-in-blank",
           "sentence": "I ___ (watch) TV now.",
-          "answer": "am watching"
+          "answer": "am watching",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses2-4",
@@ -355,13 +382,15 @@
             "have",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         },
         {
           "id": "mel-g-tenses2-5",
           "type": "fill-in-blank",
           "sentence": "We ___ (play) football yesterday.",
-          "answer": "played"
+          "answer": "played",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-6",
@@ -372,13 +401,15 @@
             "listens",
             "listened"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses2-7",
           "type": "fill-in-blank",
           "sentence": "They ___ (be) at home now.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses2-8",
@@ -389,13 +420,15 @@
             "did",
             "done"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-9",
           "type": "fill-in-blank",
           "sentence": "He ___ (read) a book every evening.",
-          "answer": "reads"
+          "answer": "reads",
+          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses2-10",
@@ -406,13 +439,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses2-11",
           "type": "fill-in-blank",
           "sentence": "She ___ (buy) a new bag yesterday.",
-          "answer": "bought"
+          "answer": "bought",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-12",
@@ -423,13 +458,15 @@
             "lived",
             "living"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-13",
           "type": "fill-in-blank",
           "sentence": "I ___ (not like) fish.",
-          "answer": "do not like"
+          "answer": "do not like",
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses2-14",
@@ -440,13 +477,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses2-15",
           "type": "fill-in-blank",
           "sentence": "We ___ (see) a movie yesterday.",
-          "answer": "saw"
+          "answer": "saw",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-16",
@@ -457,13 +496,15 @@
             "does",
             "did"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses2-17",
           "type": "fill-in-blank",
           "sentence": "They ___ (have) a test tomorrow.",
-          "answer": "have"
+          "answer": "have",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses2-18",
@@ -474,13 +515,15 @@
             "has",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         },
         {
           "id": "mel-g-tenses2-19",
           "type": "fill-in-blank",
           "sentence": "He ___ (write) a letter yesterday.",
-          "answer": "wrote"
+          "answer": "wrote",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses2-20",
@@ -491,7 +534,8 @@
             "have",
             "had"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         }
       ]
     },
@@ -507,7 +551,8 @@
           "id": "mel-g-tenses3-1",
           "type": "fill-in-blank",
           "sentence": "She ___ (play) the piano.",
-          "answer": "plays"
+          "answer": "plays",
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses3-2",
@@ -518,13 +563,15 @@
             "went",
             "gone"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-3",
           "type": "fill-in-blank",
           "sentence": "I ___ (eat) breakfast every day.",
-          "answer": "eat"
+          "answer": "eat",
+          "hint": "Tidsadverb 'every/always/often/usually' → presens (present simple)."
         },
         {
           "id": "mel-g-tenses3-4",
@@ -535,13 +582,15 @@
             "watches",
             "is watching"
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses3-5",
           "type": "fill-in-blank",
           "sentence": "We ___ (be) at home yesterday.",
-          "answer": "were"
+          "answer": "were",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-6",
@@ -552,13 +601,15 @@
             "have",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         },
         {
           "id": "mel-g-tenses3-7",
           "type": "fill-in-blank",
           "sentence": "They ___ (buy) a car last year.",
-          "answer": "bought"
+          "answer": "bought",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-8",
@@ -569,13 +620,15 @@
             "has",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         },
         {
           "id": "mel-g-tenses3-9",
           "type": "fill-in-blank",
           "sentence": "He ___ (read) now.",
-          "answer": "is reading"
+          "answer": "is reading",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses3-10",
@@ -586,13 +639,15 @@
             "has",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses3-11",
           "type": "fill-in-blank",
           "sentence": "She ___ (walk) to school yesterday.",
-          "answer": "walked"
+          "answer": "walked",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-12",
@@ -603,13 +658,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses3-13",
           "type": "fill-in-blank",
           "sentence": "I ___ (write) a letter yesterday.",
-          "answer": "wrote"
+          "answer": "wrote",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-14",
@@ -620,13 +677,15 @@
             "eats",
             "ate"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses3-15",
           "type": "fill-in-blank",
           "sentence": "We ___ (see) that movie.",
-          "answer": "have seen"
+          "answer": "have seen",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses3-16",
@@ -637,13 +696,15 @@
             "listened",
             "listens"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-17",
           "type": "fill-in-blank",
           "sentence": "They ___ (be) tired now.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses3-18",
@@ -654,13 +715,15 @@
             "do",
             "done"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-19",
           "type": "fill-in-blank",
           "sentence": "He ___ (have) two sisters.",
-          "answer": "has"
+          "answer": "has",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses3-20",
@@ -671,13 +734,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses3-21",
           "type": "fill-in-blank",
           "sentence": "She ___ (take) the bus yesterday.",
-          "answer": "took"
+          "answer": "took",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-22",
@@ -688,13 +753,15 @@
             "have",
             "had"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses3-23",
           "type": "fill-in-blank",
           "sentence": "I ___ (not like) coffee.",
-          "answer": "do not like"
+          "answer": "do not like",
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses3-24",
@@ -705,13 +772,15 @@
             "are",
             "am"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses3-25",
           "type": "fill-in-blank",
           "sentence": "We ___ (go) to Spain last year.",
-          "answer": "went"
+          "answer": "went",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-26",
@@ -722,13 +791,15 @@
             "studies",
             "studied"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses3-27",
           "type": "fill-in-blank",
           "sentence": "They ___ (come) late yesterday.",
-          "answer": "came"
+          "answer": "came",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-28",
@@ -739,13 +810,15 @@
             "has",
             "had"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         },
         {
           "id": "mel-g-tenses3-29",
           "type": "fill-in-blank",
           "sentence": "He ___ (make) a cake yesterday.",
-          "answer": "made"
+          "answer": "made",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses3-30",
@@ -756,7 +829,8 @@
             "are",
             "am"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         }
       ]
     },
@@ -772,121 +846,341 @@
           "id": "mel-g-tenses4-1",
           "type": "fill-in-blank",
           "sentence": "She ___ (play) football every day.",
-          "answer": "plays"
+          "answer": "plays",
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses4-2",
           "type": "fill-in-blank",
           "sentence": "They ___ (go) to school yesterday.",
-          "answer": "went"
+          "answer": "went",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-3",
           "type": "fill-in-blank",
           "sentence": "I ___ (eat) breakfast now.",
-          "answer": "am eating"
+          "answer": "am eating",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses4-4",
           "type": "fill-in-blank",
           "sentence": "He ___ (have) two sisters.",
-          "answer": "has"
+          "answer": "has",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses4-5",
           "type": "fill-in-blank",
           "sentence": "We ___ (see) that film.",
-          "answer": "have seen"
+          "answer": "have seen",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses4-6",
           "type": "fill-in-blank",
           "sentence": "She ___ (walk) home yesterday.",
-          "answer": "walked"
+          "answer": "walked",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-7",
           "type": "fill-in-blank",
           "sentence": "They ___ (be) tired now.",
-          "answer": "are"
+          "answer": "are",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses4-8",
           "type": "fill-in-blank",
           "sentence": "I ___ (write) a letter yesterday.",
-          "answer": "wrote"
+          "answer": "wrote",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-9",
           "type": "fill-in-blank",
           "sentence": "He ___ (watch) TV every evening.",
-          "answer": "watches"
+          "answer": "watches",
+          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses4-10",
           "type": "fill-in-blank",
           "sentence": "We ___ (buy) a car last year.",
-          "answer": "bought"
+          "answer": "bought",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-11",
           "type": "fill-in-blank",
           "sentence": "She ___ (study) English every day.",
-          "answer": "studies"
+          "answer": "studies",
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses4-12",
           "type": "fill-in-blank",
           "sentence": "They ___ (come) late yesterday.",
-          "answer": "came"
+          "answer": "came",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-13",
           "type": "fill-in-blank",
           "sentence": "I ___ (do) my homework now.",
-          "answer": "am doing"
+          "answer": "am doing",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
         },
         {
           "id": "mel-g-tenses4-14",
           "type": "fill-in-blank",
           "sentence": "He ___ (read) a book yesterday.",
-          "answer": "read"
+          "answer": "read",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-15",
           "type": "fill-in-blank",
           "sentence": "We ___ (be) at home yesterday.",
-          "answer": "were"
+          "answer": "were",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-16",
           "type": "fill-in-blank",
           "sentence": "She ___ (take) the bus yesterday.",
-          "answer": "took"
+          "answer": "took",
+          "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         },
         {
           "id": "mel-g-tenses4-17",
           "type": "fill-in-blank",
           "sentence": "They ___ (finish) the test.",
-          "answer": "have finished"
+          "answer": "have finished",
+          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         },
         {
           "id": "mel-g-tenses4-18",
           "type": "fill-in-blank",
           "sentence": "I ___ (not like) milk.",
-          "answer": "do not like"
+          "answer": "do not like",
+          "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         },
         {
           "id": "mel-g-tenses4-19",
           "type": "fill-in-blank",
           "sentence": "He ___ (run) every day.",
-          "answer": "runs"
+          "answer": "runs",
+          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
         },
         {
           "id": "mel-g-tenses4-20",
           "type": "fill-in-blank",
           "sentence": "We ___ (live) here since 2020.",
-          "answer": "have lived"
+          "answer": "have lived",
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        }
+      ]
+    },
+    {
+      "id": "mel-g-tenses5",
+      "title": "Verb & tider – del 5",
+      "description": "Fler övningar på verb och tempus.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "mel-g-tenses5-1",
+          "type": "multiple-choice",
+          "question": "She ___ to school by bus.",
+          "options": [
+            "go",
+            "goes",
+            "went"
+          ],
+          "correctIndex": 1,
+          "hint": "Titta på subjektet 'she' och tidsmärket. Presens för he/she/it slutar på -s."
+        },
+        {
+          "id": "mel-g-tenses5-2",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not play) football yesterday.",
+          "answer": "did not play",
+          "hint": "Datid nekad: 'did not' + grundform (oavsett pronomen). T.ex. 'did not play'."
+        },
+        {
+          "id": "mel-g-tenses5-3",
+          "type": "multiple-choice",
+          "question": "I ___ already finished my homework.",
+          "options": [
+            "did",
+            "have",
+            "has"
+          ],
+          "correctIndex": 1,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        },
+        {
+          "id": "mel-g-tenses5-4",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (clean) his room every week.",
+          "answer": "cleans",
+          "hint": "Presens för he: grundform + -s/es. T.ex. play → plays, go → goes."
+        },
+        {
+          "id": "mel-g-tenses5-5",
+          "type": "multiple-choice",
+          "question": "We ___ lunch when it started to rain.",
+          "options": [
+            "have",
+            "had",
+            "were having"
+          ],
+          "correctIndex": 2,
+          "hint": "Pågående handling i dåtid: was/were + verb-ing. T.ex. 'were having dinner'."
+        },
+        {
+          "id": "mel-g-tenses5-6",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not be) at school yesterday.",
+          "answer": "was not",
+          "hint": "Dåtid av 'to be' nekad: 'was not' (I/he/she/it) eller 'were not' (you/we/they)."
+        },
+        {
+          "id": "mel-g-tenses5-7",
+          "type": "multiple-choice",
+          "question": "They ___ just arrived.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 1,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        },
+        {
+          "id": "mel-g-tenses5-8",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (forget) my keys yesterday.",
+          "answer": "forgot",
+          "hint": "Tidsmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
+        },
+        {
+          "id": "mel-g-tenses5-9",
+          "type": "multiple-choice",
+          "question": "He ___ English since 2021.",
+          "options": [
+            "studies",
+            "studied",
+            "has studied"
+          ],
+          "correctIndex": 2,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        },
+        {
+          "id": "mel-g-tenses5-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (not watch) TV now.",
+          "answer": "are not watching",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
+        },
+        {
+          "id": "mel-g-tenses5-11",
+          "type": "multiple-choice",
+          "question": "She ___ breakfast before school.",
+          "options": [
+            "eat",
+            "eats",
+            "ate"
+          ],
+          "correctIndex": 1,
+          "hint": "Titta på subjektet 'she' och tidsmärket. Presens för he/she/it slutar på -s."
+        },
+        {
+          "id": "mel-g-tenses5-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (travel) to London last year.",
+          "answer": "travelled",
+          "hint": "Tidsmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
+        },
+        {
+          "id": "mel-g-tenses5-13",
+          "type": "multiple-choice",
+          "question": "I ___ never eaten sushi.",
+          "options": [
+            "have",
+            "has",
+            "had"
+          ],
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        },
+        {
+          "id": "mel-g-tenses5-14",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (draw) a picture now.",
+          "answer": "is drawing",
+          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
+        },
+        {
+          "id": "mel-g-tenses5-15",
+          "type": "multiple-choice",
+          "question": "We ___ friends for many years.",
+          "options": [
+            "are",
+            "were",
+            "have been"
+          ],
+          "correctIndex": 2,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        },
+        {
+          "id": "mel-g-tenses5-16",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not understand) the question.",
+          "answer": "does not understand",
+          "hint": "Titta på subjektet 'she' och tidsmärket. Presens för he/she/it slutar på -s."
+        },
+        {
+          "id": "mel-g-tenses5-17",
+          "type": "multiple-choice",
+          "question": "They ___ dinner when I called.",
+          "options": [
+            "have",
+            "had",
+            "were having"
+          ],
+          "correctIndex": 2,
+          "hint": "Pågående handling i dåtid: was/were + verb-ing. T.ex. 'were having dinner'."
+        },
+        {
+          "id": "mel-g-tenses5-18",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (lose) my phone yesterday.",
+          "answer": "lost",
+          "hint": "Tidsmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
+        },
+        {
+          "id": "mel-g-tenses5-19",
+          "type": "multiple-choice",
+          "question": "He ___ already seen that movie.",
+          "options": [
+            "has",
+            "have",
+            "had"
+          ],
+          "correctIndex": 0,
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
+        },
+        {
+          "id": "mel-g-tenses5-20",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (wait) for you since morning.",
+          "answer": "have waited",
+          "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         }
       ]
     }
@@ -1013,7 +1307,8 @@
             "homewurk"
           ],
           "correctIndex": 2,
-          "explanation": "Homework stavas H-O-M-E-W-O-R-K."
+          "explanation": "Homework stavas H-O-M-E-W-O-R-K.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp1-2",
@@ -1026,14 +1321,15 @@
             "dictionary"
           ],
           "correctIndex": 3,
-          "explanation": "Dictionary stavas D-I-C-T-I-O-N-A-R-Y."
+          "explanation": "Dictionary stavas D-I-C-T-I-O-N-A-R-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp1-3",
           "type": "fill-in-blank",
           "sentence": "My ___ shows what I have to do each day. (schema)",
           "answer": "schedule",
-          "hint": "Börjar med SCH.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Schedule = schema. Stavas S-C-H-E-D-U-L-E."
         },
         {
@@ -1047,14 +1343,15 @@
             "keyboard"
           ],
           "correctIndex": 3,
-          "explanation": "Keyboard stavas K-E-Y-B-O-A-R-D."
+          "explanation": "Keyboard stavas K-E-Y-B-O-A-R-D.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp1-5",
           "type": "fill-in-blank",
           "sentence": "I borrow books from the ___. (bibliotek)",
           "answer": "library",
-          "hint": "Börjar med L.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Library = bibliotek. Stavas L-I-B-R-A-R-Y."
         }
       ]
@@ -1078,14 +1375,15 @@
             "thought"
           ],
           "correctIndex": 3,
-          "explanation": "Thought stavas T-H-O-U-G-H-T."
+          "explanation": "Thought stavas T-H-O-U-G-H-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp2-2",
           "type": "fill-in-blank",
           "sentence": "Yesterday I ___ a new book at the shop. (köpte)",
           "answer": "bought",
-          "hint": "Dåtid av 'buy'. Börjar med B.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Bought = köpte. Stavas B-O-U-G-H-T."
         },
         {
@@ -1099,14 +1397,15 @@
             "broughtt"
           ],
           "correctIndex": 2,
-          "explanation": "Brought stavas B-R-O-U-G-H-T."
+          "explanation": "Brought stavas B-R-O-U-G-H-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp2-4",
           "type": "fill-in-blank",
           "sentence": "We ___ the lost puppy in the garden. (hittade)",
           "answer": "found",
-          "hint": "Dåtid av 'find'. Börjar med F.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Found = hittade. Stavas F-O-U-N-D."
         },
         {
@@ -1120,7 +1419,8 @@
             "came"
           ],
           "correctIndex": 3,
-          "explanation": "Came stavas C-A-M-E."
+          "explanation": "Came stavas C-A-M-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1143,14 +1443,15 @@
             "hospital"
           ],
           "correctIndex": 3,
-          "explanation": "Hospital stavas H-O-S-P-I-T-A-L."
+          "explanation": "Hospital stavas H-O-S-P-I-T-A-L.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp3-2",
           "type": "fill-in-blank",
           "sentence": "Planes take off and land at the ___. (flygplats)",
           "answer": "airport",
-          "hint": "Börjar med A.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Airport = flygplats. Stavas A-I-R-P-O-R-T."
         },
         {
@@ -1164,14 +1465,15 @@
             "museum"
           ],
           "correctIndex": 3,
-          "explanation": "Museum stavas M-U-S-E-U-M."
+          "explanation": "Museum stavas M-U-S-E-U-M.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp3-4",
           "type": "fill-in-blank",
           "sentence": "Everest is the highest ___ in the world. (berg)",
           "answer": "mountain",
-          "hint": "Börjar med M.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Mountain = berg. Stavas M-O-U-N-T-A-I-N."
         },
         {
@@ -1185,7 +1487,8 @@
             "island"
           ],
           "correctIndex": 3,
-          "explanation": "Island stavas I-S-L-A-N-D."
+          "explanation": "Island stavas I-S-L-A-N-D.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1208,14 +1511,15 @@
             "interesting"
           ],
           "correctIndex": 3,
-          "explanation": "Interesting stavas I-N-T-E-R-E-S-T-I-N-G."
+          "explanation": "Interesting stavas I-N-T-E-R-E-S-T-I-N-G.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp4-2",
           "type": "fill-in-blank",
           "sentence": "It can be ___ to cross the street without looking. (farligt)",
           "answer": "dangerous",
-          "hint": "Börjar med D.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Dangerous = farligt. Stavas D-A-N-G-E-R-O-U-S."
         },
         {
@@ -1229,14 +1533,15 @@
             "beautiful"
           ],
           "correctIndex": 3,
-          "explanation": "Beautiful stavas B-E-A-U-T-I-F-U-L."
+          "explanation": "Beautiful stavas B-E-A-U-T-I-F-U-L.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp4-4",
           "type": "fill-in-blank",
           "sentence": "Maths can be very ___ sometimes. (svårt)",
           "answer": "difficult",
-          "hint": "Börjar med D.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Difficult = svårt. Stavas D-I-F-F-I-C-U-L-T."
         },
         {
@@ -1250,7 +1555,8 @@
             "important"
           ],
           "correctIndex": 3,
-          "explanation": "Important stavas I-M-P-O-R-T-A-N-T."
+          "explanation": "Important stavas I-M-P-O-R-T-A-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     },
@@ -1273,14 +1579,15 @@
             "because"
           ],
           "correctIndex": 3,
-          "explanation": "Because stavas B-E-C-A-U-S-E."
+          "explanation": "Because stavas B-E-C-A-U-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp5-2",
           "type": "fill-in-blank",
           "sentence": "She was tired; ___, she went to bed early. (därför)",
           "answer": "therefore",
-          "hint": "Börjar med TH.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Therefore = därför. Stavas T-H-E-R-E-F-O-R-E."
         },
         {
@@ -1294,14 +1601,15 @@
             "however"
           ],
           "correctIndex": 3,
-          "explanation": "However stavas H-O-W-E-V-E-R."
+          "explanation": "However stavas H-O-W-E-V-E-R.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         },
         {
           "id": "mel-sp5-4",
           "type": "fill-in-blank",
           "sentence": "The door opened ___. (plötsligt)",
           "answer": "suddenly",
-          "hint": "Börjar med S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Suddenly = plötsligt. Stavas S-U-D-D-E-N-L-Y."
         },
         {
@@ -1315,7 +1623,8 @@
             "finally"
           ],
           "correctIndex": 3,
-          "explanation": "Finally stavas F-I-N-A-L-L-Y."
+          "explanation": "Finally stavas F-I-N-A-L-L-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
       ]
     }
