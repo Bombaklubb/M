@@ -1185,182 +1185,212 @@
       ]
     },
     {
-      "id": "mel-g-tenses5",
-      "title": "Verb & tider – del 5",
-      "description": "Fler övningar på verb och tempus.",
+      "id": "mel-g-mixed",
+      "title": "Blandad grammatik",
+      "description": "Presens vs kontinuerlig, some/any, objektspronomen, will vs going to och mer.",
       "icon": "🔠",
       "pointsRequired": 0,
       "bonusPoints": 20,
       "exercises": [
         {
-          "id": "mel-g-tenses5-1",
+          "id": "mel-g-mixed-1",
           "type": "multiple-choice",
-          "question": "She ___ to school by bus.",
+          "question": "She usually ___ (walk) to school.",
           "options": [
-            "go",
-            "goes",
-            "went"
+            "walk",
+            "walks"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Usually' visar en vana → presens (present simple). Med he/she/it: lägg till -s. 'She walks.'"
         },
         {
-          "id": "mel-g-tenses5-2",
-          "type": "fill-in-blank",
-          "sentence": "They ___ (not play) football yesterday.",
-          "answer": "did not play"
-        },
-        {
-          "id": "mel-g-tenses5-3",
+          "id": "mel-g-mixed-2",
           "type": "multiple-choice",
-          "question": "I ___ already finished my homework.",
+          "question": "She ___ (walk) to school now.",
           "options": [
-            "did",
-            "have",
-            "has"
+            "walks",
+            "is walking"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Now' visar pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing. 'She is walking.'"
         },
         {
-          "id": "mel-g-tenses5-4",
-          "type": "fill-in-blank",
-          "sentence": "He ___ (clean) his room every week.",
-          "answer": "cleans"
-        },
-        {
-          "id": "mel-g-tenses5-5",
+          "id": "mel-g-mixed-3",
           "type": "multiple-choice",
-          "question": "We ___ lunch when it started to rain.",
+          "question": "I have ___ friends here.",
           "options": [
-            "have",
-            "had",
-            "were having"
+            "a few",
+            "a little"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'A few' används med räkningsbara (countable) substantiv: a few friends, a few books. 'A little' med oräkningsbara: a little water."
         },
         {
-          "id": "mel-g-tenses5-6",
-          "type": "fill-in-blank",
-          "sentence": "She ___ (not be) at school yesterday.",
-          "answer": "was not"
-        },
-        {
-          "id": "mel-g-tenses5-7",
+          "id": "mel-g-mixed-4",
           "type": "multiple-choice",
-          "question": "They ___ just arrived.",
+          "question": "There is ___ water left.",
           "options": [
-            "has",
-            "have",
-            "had"
+            "a few",
+            "a little"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Water' är oräkningbart (uncountable) – det kan inte räknas med siffror. Oräkningbara → 'a little'."
         },
         {
-          "id": "mel-g-tenses5-8",
-          "type": "fill-in-blank",
-          "sentence": "I ___ (forget) my keys yesterday.",
-          "answer": "forgot"
-        },
-        {
-          "id": "mel-g-tenses5-9",
+          "id": "mel-g-mixed-5",
           "type": "multiple-choice",
-          "question": "He ___ English since 2021.",
+          "question": "This is ___ book.",
           "options": [
-            "studies",
-            "studied",
-            "has studied"
+            "my",
+            "mine"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'My' används FÖRE ett substantiv: 'my book'. 'Mine' används utan substantiv efter."
         },
         {
-          "id": "mel-g-tenses5-10",
-          "type": "fill-in-blank",
-          "sentence": "We ___ (not watch) TV now.",
-          "answer": "are not watching"
-        },
-        {
-          "id": "mel-g-tenses5-11",
+          "id": "mel-g-mixed-6",
           "type": "multiple-choice",
-          "question": "She ___ breakfast before school.",
+          "question": "This book is ___.",
           "options": [
-            "eat",
-            "eats",
-            "ate"
+            "my",
+            "mine"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "Inga substantiv efter → 'mine'. 'This book is mine' = Det här är min bok."
         },
         {
-          "id": "mel-g-tenses5-12",
-          "type": "fill-in-blank",
-          "sentence": "They ___ (travel) to London last year.",
-          "answer": "travelled"
-        },
-        {
-          "id": "mel-g-tenses5-13",
+          "id": "mel-g-mixed-7",
           "type": "multiple-choice",
-          "question": "I ___ never eaten sushi.",
+          "question": "Give it to ___.",
           "options": [
-            "have",
-            "has",
-            "had"
+            "I",
+            "me"
           ],
-          "correctIndex": 0
+          "correctIndex": 1,
+          "hint": "'Me' är objektspronomen (används efter prepositioner och som objekt). 'I' är subjektspronomen. 'Give it to me' – 'to' kräver objektsform."
         },
         {
-          "id": "mel-g-tenses5-14",
-          "type": "fill-in-blank",
-          "sentence": "He ___ (draw) a picture now.",
-          "answer": "is drawing"
-        },
-        {
-          "id": "mel-g-tenses5-15",
+          "id": "mel-g-mixed-8",
           "type": "multiple-choice",
-          "question": "We ___ friends for many years.",
+          "question": "She helped ___.",
           "options": [
-            "are",
-            "were",
-            "have been"
+            "we",
+            "us"
           ],
-          "correctIndex": 2
+          "correctIndex": 1,
+          "hint": "'Us' är objektsform av 'we'. Verb + objekt → objektspronomen: me, you, him, her, it, us, them."
         },
         {
-          "id": "mel-g-tenses5-16",
-          "type": "fill-in-blank",
-          "sentence": "She ___ (not understand) the question.",
-          "answer": "does not understand"
-        },
-        {
-          "id": "mel-g-tenses5-17",
+          "id": "mel-g-mixed-9",
           "type": "multiple-choice",
-          "question": "They ___ dinner when I called.",
+          "question": "I think it ___ rain tomorrow.",
           "options": [
-            "have",
-            "had",
-            "were having"
+            "will",
+            "is going to"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'Will' används för spontana beslut och förutsägelser utan bevis. 'I think' antyder en spontan tanke → 'will'."
         },
         {
-          "id": "mel-g-tenses5-18",
-          "type": "fill-in-blank",
-          "sentence": "I ___ (lose) my phone yesterday.",
-          "answer": "lost"
-        },
-        {
-          "id": "mel-g-tenses5-19",
+          "id": "mel-g-mixed-10",
           "type": "multiple-choice",
-          "question": "He ___ already seen that movie.",
+          "question": "Look at the clouds! It ___ rain.",
           "options": [
-            "has",
-            "have",
-            "had"
+            "will",
+            "is going to"
           ],
-          "correctIndex": 0
+          "correctIndex": 1,
+          "hint": "'Is going to' används när det finns bevis för framtiden (molnen = bevis). 'Look!' visar att vi ser ett tecken."
         },
         {
-          "id": "mel-g-tenses5-20",
+          "id": "mel-g-mixed-11",
           "type": "fill-in-blank",
-          "sentence": "We ___ (wait) for you since morning.",
-          "answer": "have waited"
+          "sentence": "She used to ___ (play) the piano.",
+          "answer": "play",
+          "hint": "'Used to' + verbets grundform beskriver en gammal vana som inte längre sker. T.ex. 'She used to play' = Hon brukade spela."
+        },
+        {
+          "id": "mel-g-mixed-12",
+          "type": "multiple-choice",
+          "question": "He is taller ___ me.",
+          "options": [
+            "than",
+            "that"
+          ],
+          "correctIndex": 0,
+          "hint": "'Than' används vid jämförelser med komparativ (-er). 'Taller than' = längre än. Inte 'that'."
+        },
+        {
+          "id": "mel-g-mixed-13",
+          "type": "multiple-choice",
+          "question": "I am interested ___ music.",
+          "options": [
+            "in",
+            "on"
+          ],
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: 'interested in'. Lär dig vanliga kombinationer: interested in, good at, afraid of."
+        },
+        {
+          "id": "mel-g-mixed-14",
+          "type": "fill-in-blank",
+          "sentence": "We have lived here ___ 2020.",
+          "answer": "since",
+          "hint": "'Since' + specifik tidpunkt (år, datum, klockslag). 'For' + tidsperiod (three years, a week). 2020 är en tidpunkt → 'since'."
+        },
+        {
+          "id": "mel-g-mixed-15",
+          "type": "fill-in-blank",
+          "sentence": "We have lived here ___ three years.",
+          "answer": "for",
+          "hint": "'For' + tidsperiod (how long). 'Since' + startpunkt (when). 'Three years' är en period → 'for'."
+        },
+        {
+          "id": "mel-g-mixed-16",
+          "type": "multiple-choice",
+          "question": "She is good ___ maths.",
+          "options": [
+            "at",
+            "in"
+          ],
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: 'good at' (bra på). T.ex. 'good at swimming', 'good at maths'. Inte 'good in'."
+        },
+        {
+          "id": "mel-g-mixed-17",
+          "type": "fill-in-blank",
+          "sentence": "He stopped ___ (talk) when the teacher came.",
+          "answer": "talking",
+          "hint": "'Stop' + gerund (-ing): 'stop talking' = sluta prata. 'Stop to do' = stanna för att göra något (annat)."
+        },
+        {
+          "id": "mel-g-mixed-18",
+          "type": "multiple-choice",
+          "question": "There are ___ students in the class.",
+          "options": [
+            "much",
+            "many"
+          ],
+          "correctIndex": 1,
+          "hint": "'Many' + räkningsbara (countable) substantiv: many students, many books. 'Much' + oräkningbara: much water, much time."
+        },
+        {
+          "id": "mel-g-mixed-19",
+          "type": "multiple-choice",
+          "question": "There isn't ___ sugar.",
+          "options": [
+            "many",
+            "much"
+          ],
+          "correctIndex": 1,
+          "hint": "'Sugar' är oräkningbart (uncountable) – det kan inte räknas med siffror. Oräkningbara → 'much'."
+        },
+        {
+          "id": "mel-g-mixed-20",
+          "type": "fill-in-blank",
+          "sentence": "We arrived ___ time.",
+          "answer": "on",
+          "hint": "Fast fras: 'on time' = i tid (punktligt). 'In time' = i tid (hinner). 'Arrived on time' = anlände punktligt."
         }
       ]
     }

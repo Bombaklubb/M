@@ -1210,182 +1210,164 @@
       ]
     },
     {
-      "id": "gym-g-advanced5",
-      "title": "Avancerad grammatik – del 5",
-      "description": "Fler avancerade grammatikövningar.",
+      "id": "gym-g-mixed",
+      "title": "Blandad grammatik",
+      "description": "Passiv rapportering, nominalisering, inversion, klyvsatser, modala perfektformer och mer.",
       "icon": "🔠",
       "pointsRequired": 0,
       "bonusPoints": 20,
       "exercises": [
         {
-          "id": "gym-g-advanced5-1",
-          "type": "multiple-choice",
-          "question": "Had they prepared better, they ___ succeeded.",
-          "options": [
-            "would",
-            "would have",
-            "will"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "id": "gym-g-advanced5-2",
+          "id": "gym-g-mixed-1",
           "type": "fill-in-blank",
-          "sentence": "It is crucial that he ___ (understand) the risks.",
-          "answer": "understand"
+          "sentence": "She has been working here ___ 2015.",
+          "answer": "since",
+          "hint": "'Since' + specifik startpunkt (år, datum). 'For' + tidsperiod. 2015 är en tidpunkt → 'since'."
         },
         {
-          "id": "gym-g-advanced5-3",
-          "type": "multiple-choice",
-          "question": "Only after the meeting ___ we realise the problem.",
-          "options": [
-            "did",
-            "have",
-            "were"
-          ],
-          "correctIndex": 0
-        },
-        {
-          "id": "gym-g-advanced5-4",
+          "id": "gym-g-mixed-2",
           "type": "fill-in-blank",
-          "sentence": "The manuscript ___ (review) before publication.",
-          "answer": "was reviewed"
+          "sentence": "She has been working here ___ ten years.",
+          "answer": "for",
+          "hint": "'For' + tidsperiod (hur länge): 'for ten years'. 'Since' + startpunkt. Tio år är en period → 'for'."
         },
         {
-          "id": "gym-g-advanced5-5",
-          "type": "multiple-choice",
-          "question": "No sooner ___ she left than it started raining.",
-          "options": [
-            "had",
-            "has",
-            "did"
-          ],
-          "correctIndex": 0
-        },
-        {
-          "id": "gym-g-advanced5-6",
+          "id": "gym-g-mixed-3",
           "type": "fill-in-blank",
-          "sentence": "He admitted ___ (lie) to the teacher.",
-          "answer": "lying"
+          "sentence": "The company is ___ to be successful.",
+          "answer": "said",
+          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to be...'. Verbet 'say' → 'is said'."
         },
         {
-          "id": "gym-g-advanced5-7",
-          "type": "multiple-choice",
-          "question": "Seldom ___ such innovation.",
-          "options": [
-            "we witness",
-            "do we witness",
-            "we witnessed"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "id": "gym-g-advanced5-8",
+          "id": "gym-g-mixed-4",
           "type": "fill-in-blank",
-          "sentence": "The issue needs ___ (address) immediately.",
-          "answer": "to be addressed"
+          "sentence": "His ___ to cooperate surprised everyone.",
+          "answer": "refusal",
+          "hint": "Nominalisering: verbet 'refuse' → substantivet 'refusal'. Formellt språk omvandlar ofta verb till substantiv: decide→decision, arrive→arrival, refuse→refusal."
         },
         {
-          "id": "gym-g-advanced5-9",
+          "id": "gym-g-mixed-5",
           "type": "multiple-choice",
-          "question": "Neither of the answers ___ correct.",
+          "question": "She spoke ___ confidently.",
           "options": [
-            "is",
-            "are",
-            "were"
+            "very",
+            "highly"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "'Very' + adverb = mycket. 'Highly' används med vissa adjektiv (highly qualified, highly unlikely) men inte med adverb som 'confidently'."
         },
         {
-          "id": "gym-g-advanced5-10",
+          "id": "gym-g-mixed-6",
           "type": "fill-in-blank",
-          "sentence": "She recommended that he ___ (seek) advice.",
-          "answer": "seek"
+          "sentence": "Only after the exam ___ she realise her mistake.",
+          "answer": "did",
+          "hint": "Inversion: 'Only after...' inleder meningen → inverterad ordföljd: hjälpverb + subjekt. 'Only after the exam did she realise' (inte 'she realised')."
         },
         {
-          "id": "gym-g-advanced5-11",
+          "id": "gym-g-mixed-7",
+          "type": "fill-in-blank",
+          "sentence": "In spite of ___ tired, he continued.",
+          "answer": "being",
+          "hint": "'In spite of' + gerund (-ing): 'in spite of being tired'. Jämför: 'Although he was tired' (fullständig sats med 'although')."
+        },
+        {
+          "id": "gym-g-mixed-8",
+          "type": "fill-in-blank",
+          "sentence": "She ___ have forgotten (possibility).",
+          "answer": "might",
+          "hint": "Modal perfekt: modalverb + have + particip. 'Might have' = kan ha (möjlighet). 'Must have' = måste ha (slutledning). 'Should have' = borde ha (kritik)."
+        },
+        {
+          "id": "gym-g-mixed-9",
+          "type": "fill-in-blank",
+          "sentence": "The issue needs ___ (address) urgently.",
+          "answer": "to be addressed",
+          "hint": "Passiv infinitiv: 'needs to be addressed'. Strukturen 'need + to be + particip' visar att något behöver göras (av någon annan)."
+        },
+        {
+          "id": "gym-g-mixed-10",
+          "type": "fill-in-blank",
+          "sentence": "___ I need is more time.",
+          "answer": "What",
+          "hint": "Klyvsats (cleft sentence): 'What I need is...' Börja med 'What' för att betona vad man vill ha. 'What I need is more time' = Det jag behöver är mer tid."
+        },
+        {
+          "id": "gym-g-mixed-11",
           "type": "multiple-choice",
-          "question": "Under no circumstances ___ this be tolerated.",
+          "question": "The results were discussed ___ detail.",
           "options": [
-            "can",
-            "will",
-            "is"
+            "in",
+            "at"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: 'in detail' = i detalj/utförligt. 'At' passar inte här. Lär dig fasta fraser: in detail, in general, in public."
         },
         {
-          "id": "gym-g-advanced5-12",
+          "id": "gym-g-mixed-12",
           "type": "fill-in-blank",
-          "sentence": "The results ___ (interpret) differently by researchers.",
-          "answer": "were interpreted"
+          "sentence": "She suggested ___ (leave) early.",
+          "answer": "leaving",
+          "hint": "Gerund efter 'suggest': 'suggest doing'. Inte 'suggest to do'! Andra verb + gerund: admit, avoid, consider, deny, enjoy, finish, mind."
         },
         {
-          "id": "gym-g-advanced5-13",
+          "id": "gym-g-mixed-13",
+          "type": "fill-in-blank",
+          "sentence": "If he were more careful, he ___ avoid mistakes.",
+          "answer": "would",
+          "hint": "Typ 2-konditionalis: If + past subjunctive ('were') → 'would' + grundform. Uttrycker en hypotetisk situation i nutid."
+        },
+        {
+          "id": "gym-g-mixed-14",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ to be honest.",
+          "answer": "thought",
+          "hint": "Passiv rapportering: 'People think he is honest' → 'He is thought to be honest'. Verbet 'think' → 'is thought to be'."
+        },
+        {
+          "id": "gym-g-mixed-15",
           "type": "multiple-choice",
-          "question": "It was not until later that she ___ the truth.",
+          "question": "She is responsible ___ the project.",
           "options": [
-            "discover",
-            "discovered",
-            "had discovered"
+            "for",
+            "of"
           ],
-          "correctIndex": 1
+          "correctIndex": 0,
+          "hint": "Fast prepositionsfras: 'responsible for' (ansvarig för). 'Capable of', 'aware of', 'responsible for' – lär dig vilken preposition som hör till vilket adjektiv."
         },
         {
-          "id": "gym-g-advanced5-14",
+          "id": "gym-g-mixed-16",
           "type": "fill-in-blank",
-          "sentence": "He is capable ___ handling complex tasks.",
-          "answer": "of"
+          "sentence": "The data seems ___ (be) incorrect.",
+          "answer": "to be",
+          "hint": "'Seem/appear' + infinitiv: 'seems to be', 'appears to be'. Dessa länkverb följs av 'to' + infinitiv."
         },
         {
-          "id": "gym-g-advanced5-15",
-          "type": "multiple-choice",
-          "question": "Little ___ about the consequences.",
-          "options": [
-            "did they know",
-            "they knew",
-            "have they known"
-          ],
-          "correctIndex": 0
-        },
-        {
-          "id": "gym-g-advanced5-16",
+          "id": "gym-g-mixed-17",
           "type": "fill-in-blank",
-          "sentence": "The proposal ___ (approve) unanimously.",
-          "answer": "was approved"
+          "sentence": "They conducted an ___ into the matter.",
+          "answer": "investigation",
+          "hint": "Nominalisering: 'investigate' (verb) → 'investigation' (substantiv). Formellt skriftspråk föredrar ofta substantivformer: investigate→investigation, develop→development."
         },
         {
-          "id": "gym-g-advanced5-17",
-          "type": "multiple-choice",
-          "question": "Were it not for her help, we ___ failed.",
-          "options": [
-            "would",
-            "would have",
-            "will"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "id": "gym-g-advanced5-18",
+          "id": "gym-g-mixed-18",
           "type": "fill-in-blank",
-          "sentence": "The data appears ___ (be) inaccurate.",
-          "answer": "to be"
+          "sentence": "Never ___ I seen such chaos.",
+          "answer": "have",
+          "hint": "Inversion med 'never': negativt adverbial i början → inverterad ordföljd: Never + hjälpverb + subjekt. 'Never have I seen' (inte 'Never I have seen')."
         },
         {
-          "id": "gym-g-advanced5-19",
-          "type": "multiple-choice",
-          "question": "He spoke as if he ___ everything.",
-          "options": [
-            "know",
-            "knew",
-            "knows"
-          ],
-          "correctIndex": 1
-        },
-        {
-          "id": "gym-g-advanced5-20",
+          "id": "gym-g-mixed-19",
           "type": "fill-in-blank",
-          "sentence": "The experiment ___ (conduct) under strict conditions.",
-          "answer": "was conducted"
+          "sentence": "He is not old ___ to vote.",
+          "answer": "enough",
+          "hint": "'Too...to' = 'not...enough to': 'He is too young to vote' = 'He is not old enough to vote'. 'Enough' kommer EFTER adjektivet."
+        },
+        {
+          "id": "gym-g-mixed-20",
+          "type": "fill-in-blank",
+          "sentence": "They ___ have missed the train (certainty).",
+          "answer": "must",
+          "hint": "Modal perfekt för slutledning: 'must have' = måste ha (logisk slutsats om dåtid). 'Might have' = kan ha (möjlighet). 'Can't have' = kan inte ha."
         }
       ]
     }

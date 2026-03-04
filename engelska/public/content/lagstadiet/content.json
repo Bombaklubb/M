@@ -1204,182 +1204,224 @@
       ]
     },
     {
-      "id": "lag-g-tobehave5",
-      "title": "To be & have – del 5",
-      "description": "Fler övningar på 'am/is/are'.",
+      "id": "lag-g-mixed",
+      "title": "Blandad grammatik",
+      "description": "Possessiva pronomen, can, prepositioner, artiklar och oregelbundna pluralformer.",
       "icon": "🔠",
       "pointsRequired": 0,
       "bonusPoints": 20,
       "exercises": [
         {
-          "id": "lag-g-tobehave5-1",
+          "id": "lag-g-mixed-1",
           "type": "multiple-choice",
-          "question": "___ you happy?",
+          "question": "This is ___ book.",
           "options": [
-            "Am",
-            "Is",
-            "Are"
+            "my",
+            "mine"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'My' används FÖRE ett substantiv: 'my book'. 'Mine' används UTAN substantiv efter: 'The book is mine.'"
         },
         {
-          "id": "lag-g-tobehave5-2",
-          "type": "fill-in-blank",
-          "sentence": "This ___ my book.",
-          "answer": "is"
-        },
-        {
-          "id": "lag-g-tobehave5-3",
+          "id": "lag-g-mixed-2",
           "type": "multiple-choice",
-          "question": "___ she your sister?",
+          "question": "The book is ___.",
           "options": [
-            "Am",
-            "Is",
-            "Are"
+            "my",
+            "mine"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Mine' ersätter hela ägarfrasen. 'The book is mine' = Det är min bok (inget substantiv efter)."
         },
         {
-          "id": "lag-g-tobehave5-4",
-          "type": "fill-in-blank",
-          "sentence": "These ___ my shoes.",
-          "answer": "are"
-        },
-        {
-          "id": "lag-g-tobehave5-5",
+          "id": "lag-g-mixed-3",
           "type": "multiple-choice",
-          "question": "I ___ not tired.",
+          "question": "That is ___ dog.",
           "options": [
-            "am",
-            "is",
-            "are"
+            "his",
+            "he"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "hint": "'His' är possessivt (hans) och används FÖRE substantiv: 'his dog'. 'He' är subjektspronomen och passar inte här."
         },
         {
-          "id": "lag-g-tobehave5-6",
-          "type": "fill-in-blank",
-          "sentence": "He ___ not sad.",
-          "answer": "is"
-        },
-        {
-          "id": "lag-g-tobehave5-7",
+          "id": "lag-g-mixed-4",
           "type": "multiple-choice",
-          "question": "We ___ not late.",
+          "question": "These are ___ shoes.",
           "options": [
-            "am",
-            "is",
-            "are"
+            "their",
+            "they"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'Their' är possessivt (deras) och används FÖRE substantiv. 'They' är subjektspronomen (de)."
         },
         {
-          "id": "lag-g-tobehave5-8",
-          "type": "fill-in-blank",
-          "sentence": "It ___ not cold today.",
-          "answer": "is"
-        },
-        {
-          "id": "lag-g-tobehave5-9",
+          "id": "lag-g-mixed-5",
           "type": "multiple-choice",
-          "question": "___ they your friends?",
+          "question": "___ is my pencil.",
           "options": [
-            "Am",
-            "Is",
-            "Are"
+            "This",
+            "These"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'Pencil' (penna) är singular – en sak nära dig. Singular nära → 'This'. Plural nära → 'These'."
         },
         {
-          "id": "lag-g-tobehave5-10",
-          "type": "fill-in-blank",
-          "sentence": "That ___ my teacher.",
-          "answer": "is"
-        },
-        {
-          "id": "lag-g-tobehave5-11",
+          "id": "lag-g-mixed-6",
           "type": "multiple-choice",
-          "question": "She ___ not angry.",
+          "question": "___ are my books.",
           "options": [
-            "am",
-            "is",
-            "are"
+            "That",
+            "Those"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'Books' är plural – flera saker. Plural + längre bort → 'Those'. Singular + längre bort → 'That'."
         },
         {
-          "id": "lag-g-tobehave5-12",
+          "id": "lag-g-mixed-7",
           "type": "fill-in-blank",
-          "sentence": "I ___ not at home.",
-          "answer": "am"
+          "sentence": "Can you swim? Yes, I ___.",
+          "answer": "can",
+          "hint": "Korta svar med modalverb upprepar hjälpverbet: 'Yes, I can.' / 'No, I cannot.'"
         },
         {
-          "id": "lag-g-tobehave5-13",
+          "id": "lag-g-mixed-8",
+          "type": "fill-in-blank",
+          "sentence": "I ___ not swim.",
+          "answer": "can",
+          "hint": "Modalverb 'can' används för förmåga. Nekad form: 'cannot' eller 'can not'. Fyll i grundformen 'can'."
+        },
+        {
+          "id": "lag-g-mixed-9",
+          "type": "build-sentence",
+          "instruction": "Sätt orden i rätt ordning:",
+          "words": [
+            "door",
+            "Close",
+            "the"
+          ],
+          "correctOrder": [
+            1,
+            2,
+            0
+          ],
+          "hint": "Imperativmening (uppmaning): börja med verbet i grundform. 'Close the door' = Stäng dörren."
+        },
+        {
+          "id": "lag-g-mixed-10",
+          "type": "build-sentence",
+          "instruction": "Sätt orden i rätt ordning:",
+          "words": [
+            "down",
+            "Sit"
+          ],
+          "correctOrder": [
+            1,
+            0
+          ],
+          "hint": "Imperativmening: börja med verbet. 'Sit down' = Sätt dig. Verbet kommer alltid först."
+        },
+        {
+          "id": "lag-g-mixed-11",
           "type": "multiple-choice",
-          "question": "___ he tall?",
+          "question": "The cat is ___ the table.",
           "options": [
-            "Am",
-            "Is",
-            "Are"
+            "on",
+            "under",
+            "in"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "hint": "'On' = på ytan. 'Under' = under/nedanför. 'In' = inuti. Katten sitter under bordet."
         },
         {
-          "id": "lag-g-tobehave5-14",
-          "type": "fill-in-blank",
-          "sentence": "The apples ___ red.",
-          "answer": "are"
-        },
-        {
-          "id": "lag-g-tobehave5-15",
+          "id": "lag-g-mixed-12",
           "type": "multiple-choice",
-          "question": "We ___ not hungry.",
+          "question": "The book is ___ the bag.",
           "options": [
-            "am",
-            "is",
-            "are"
+            "in",
+            "on",
+            "at"
           ],
-          "correctIndex": 2
+          "correctIndex": 0,
+          "hint": "'In' = inuti något. 'On' = på ytan av något. Boken är inne i väskan."
         },
         {
-          "id": "lag-g-tobehave5-16",
-          "type": "fill-in-blank",
-          "sentence": "It ___ my pencil.",
-          "answer": "is"
-        },
-        {
-          "id": "lag-g-tobehave5-17",
+          "id": "lag-g-mixed-13",
           "type": "multiple-choice",
-          "question": "___ I late?",
+          "question": "This is ___ apple.",
           "options": [
-            "Am",
-            "Is",
-            "Are"
+            "a",
+            "an"
           ],
-          "correctIndex": 0
+          "correctIndex": 1,
+          "hint": "'An' används före ord som börjar med ett vokaljud (a, e, i, o, u). 'Apple' börjar med 'a' → an apple."
         },
         {
-          "id": "lag-g-tobehave5-18",
-          "type": "fill-in-blank",
-          "sentence": "Those ___ my books.",
-          "answer": "are"
-        },
-        {
-          "id": "lag-g-tobehave5-19",
+          "id": "lag-g-mixed-14",
           "type": "multiple-choice",
-          "question": "He ___ not here.",
+          "question": "That is ___ house.",
           "options": [
-            "am",
-            "is",
-            "are"
+            "a",
+            "an"
           ],
-          "correctIndex": 1
+          "correctIndex": 0,
+          "hint": "'A' används före ord som börjar med konsonantljud. 'House' börjar med 'h' (konsonant) → a house."
         },
         {
-          "id": "lag-g-tobehave5-20",
+          "id": "lag-g-mixed-15",
           "type": "fill-in-blank",
-          "sentence": "You ___ my best friend.",
-          "answer": "are"
+          "sentence": "One child, two ___",
+          "answer": "children",
+          "hint": "Oregelbunden plural: 'child' → 'children'. Inte 'childs'! Lär dig de vanligaste: child→children, man→men, woman→women."
+        },
+        {
+          "id": "lag-g-mixed-16",
+          "type": "fill-in-blank",
+          "sentence": "One foot, two ___",
+          "answer": "feet",
+          "hint": "Oregelbunden plural: 'foot' → 'feet'. Inte 'foots'! Liknande mönster: tooth→teeth, goose→geese."
+        },
+        {
+          "id": "lag-g-mixed-17",
+          "type": "multiple-choice",
+          "question": "It is ___ turn.",
+          "options": [
+            "your",
+            "you"
+          ],
+          "correctIndex": 0,
+          "hint": "'Your' (din/er) är possessivt och används FÖRE substantiv: 'your turn'. 'You' är subjektspronomen."
+        },
+        {
+          "id": "lag-g-mixed-18",
+          "type": "fill-in-blank",
+          "sentence": "Is this your book? Yes, it is ___.",
+          "answer": "mine",
+          "hint": "Svaret ersätter 'my book' – inget substantiv efter. Utan substantiv → 'mine' (inte 'my')."
+        },
+        {
+          "id": "lag-g-mixed-19",
+          "type": "multiple-choice",
+          "question": "The ball is ___ the chair.",
+          "options": [
+            "behind",
+            "on",
+            "in"
+          ],
+          "correctIndex": 0,
+          "hint": "'Behind' = bakom. 'On' = på ytan. 'In' = inuti. Bollen är bakom stolen."
+        },
+        {
+          "id": "lag-g-mixed-20",
+          "type": "multiple-choice",
+          "question": "The cat is ___ the boxes.",
+          "options": [
+            "between",
+            "under",
+            "after"
+          ],
+          "correctIndex": 0,
+          "hint": "'Between' = mellan (två eller fler saker). 'Under' = under. 'After' = efter. Katten sitter mellan lådorna."
         }
       ]
     }
