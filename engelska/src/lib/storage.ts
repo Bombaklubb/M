@@ -10,6 +10,8 @@ function emptyStageProgress(stageId: StageId): StageProgress {
     grammarModules: {},
     readingModules: {},
     spellingModules: {},
+    wordsearchModules: {},
+    crosswordModules: {},
   };
 }
 
@@ -65,35 +67,37 @@ export function clearStudent(): void {
 export function getModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading" | "spelling",
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword",
   moduleId: string
 ): ModuleProgress | null {
   const stage = data.stages[stageId];
   const map =
-    kind === "grammar"
-      ? stage.grammarModules
-      : kind === "reading"
-      ? stage.readingModules
-      : (stage.spellingModules ?? {});
+    kind === "grammar" ? stage.grammarModules
+    : kind === "reading" ? stage.readingModules
+    : kind === "spelling" ? (stage.spellingModules ?? {})
+    : kind === "wordsearch" ? (stage.wordsearchModules ?? {})
+    : (stage.crosswordModules ?? {});
   return map[moduleId] ?? null;
 }
 
 export function saveModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading" | "spelling",
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword",
   moduleId: string,
   points: number,
   completed: boolean
 ): StudentData {
   const stage = data.stages[stageId];
   if (!stage.spellingModules) stage.spellingModules = {};
+  if (!stage.wordsearchModules) stage.wordsearchModules = {};
+  if (!stage.crosswordModules) stage.crosswordModules = {};
   const map =
-    kind === "grammar"
-      ? stage.grammarModules
-      : kind === "reading"
-      ? stage.readingModules
-      : stage.spellingModules;
+    kind === "grammar" ? stage.grammarModules
+    : kind === "reading" ? stage.readingModules
+    : kind === "spelling" ? stage.spellingModules
+    : kind === "wordsearch" ? stage.wordsearchModules
+    : stage.crosswordModules;
   const existing = map[moduleId];
   const prevPoints = existing?.points ?? 0;
   const addedPoints = Math.max(0, points - prevPoints);

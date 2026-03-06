@@ -12,6 +12,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
   const [input, setInput] = useState("");
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
   const [showHint, setShowHint] = useState(false);
+  const [hintUnlocked, setHintUnlocked] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const parts = exercise.sentence.split("___");
@@ -21,6 +22,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
     const correct =
       input.trim().toLowerCase() === exercise.answer.toLowerCase();
     setState(correct ? "correct" : "wrong");
+    if (!correct) setHintUnlocked(true);
     setTimeout(() => onAnswer(correct), 1300);
   }
 
@@ -89,20 +91,28 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
 
           {exercise.hint && (
             <div className="rounded-xl overflow-hidden border border-amber-200 dark:border-amber-700">
-              <button
-                onClick={() => setShowHint(!showHint)}
-                className="w-full flex items-center justify-between px-4 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
-              >
-                <span className="flex items-center gap-2">
-                  <span>💡</span>
-                  <span>Tips</span>
-                </span>
-                <span className="text-amber-500 text-xs">{showHint ? "▲" : "▼"}</span>
-              </button>
-              {showHint && (
-                <div className="px-4 py-3 text-sm text-amber-900 dark:text-amber-200 bg-amber-50/60 dark:bg-amber-900/10 border-t border-amber-200 dark:border-amber-700">
-                  {exercise.hint}
+              {!hintUnlocked ? (
+                <div className="px-4 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 text-xs italic">
+                  💡 Tips visas om du svarar fel
                 </div>
+              ) : (
+                <>
+                  <button
+                    onClick={() => setShowHint(!showHint)}
+                    className="w-full flex items-center justify-between px-4 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span>💡</span>
+                      <span>Tips</span>
+                    </span>
+                    <span className="text-amber-500 text-xs">{showHint ? "▲" : "▼"}</span>
+                  </button>
+                  {showHint && (
+                    <div className="px-4 py-3 text-sm text-amber-900 dark:text-amber-200 bg-amber-50/60 dark:bg-amber-900/10 border-t border-amber-200 dark:border-amber-700">
+                      {exercise.hint}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           )}

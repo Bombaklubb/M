@@ -20,15 +20,185 @@
           ],
           "correctIndex": 1,
           "explanation": "With he/she/it in present simple, add -s to the verb: go → goes.",
-          "hint": "Presens används för vanor och fakta. He/she/it-formen slutar på -s eller -es. T.ex. 'She goes to school every day.'"
+          "hint": "He/she/it-formen slutar på -s eller -es."
         },
         {
           "id": "mel-g1-2",
           "type": "fill-in-blank",
           "sentence": "He ___ (play) football every Saturday.",
           "answer": "plays",
-          "hint": "Med 'he' i presens: lägg till -s (eller -es) på grundformen. T.ex. play → plays, go → goes.",
+          "hint": "Med 'he' i presens: lägg till -s på grundformen.",
           "explanation": "With he/she/it in present simple, we add -s: play → plays."
+        },
+        {
+          "id": "mel-g1-3",
+          "type": "multiple-choice",
+          "question": "Choose the correct present simple form: 'She ___ English every day.'",
+          "options": [
+            "study",
+            "studys",
+            "studies",
+            "is studying"
+          ],
+          "correctIndex": 2,
+          "explanation": "Verbs ending in consonant+y: change y to i and add -es. study → studies.",
+          "hint": "Slutar verbet på -y? Byt ut y mot -ies."
+        },
+        {
+          "id": "mel-g1-4",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (not/eat) meat.",
+          "answer": "don't eat",
+          "hint": "Negation i presens med I/you/we/they: don't + grundform.",
+          "explanation": "Negative present simple with we: don't + base verb."
+        },
+        {
+          "id": "mel-g1-5",
+          "type": "multiple-choice",
+          "question": "Which question is correct in present simple?",
+          "options": [
+            "Does she likes coffee?",
+            "Do she like coffee?",
+            "Does she like coffee?",
+            "Is she like coffee?"
+          ],
+          "correctIndex": 2,
+          "explanation": "Questions with he/she/it use 'does' + base verb (no -s on main verb).",
+          "hint": "Frågor med he/she/it: Does + subject + grundform?"
+        },
+        {
+          "id": "mel-g1-6",
+          "type": "fill-in-blank",
+          "sentence": "My brother ___ (watch) TV every evening.",
+          "answer": "watches",
+          "hint": "Verb som slutar på -ch: lägg till -es.",
+          "explanation": "Verbs ending in -ch add -es: watch → watches."
+        },
+        {
+          "id": "mel-g1-7",
+          "type": "build-sentence",
+          "instruction": "Build a correct present simple sentence.",
+          "words": [
+            "The",
+            "sun",
+            "rises",
+            "in",
+            "the",
+            "east",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "The sun rises in the east. – rise → rises with he/she/it."
+        },
+        {
+          "id": "mel-g1-8",
+          "type": "multiple-choice",
+          "question": "'They ___ to the gym three times a week.'",
+          "options": [
+            "goes",
+            "is going",
+            "go",
+            "does go"
+          ],
+          "correctIndex": 2,
+          "explanation": "With they, use the base form: go (no -s).",
+          "hint": "Med they/we/I/you: grundformen utan -s."
+        },
+        {
+          "id": "mel-g1-9",
+          "type": "fill-in-blank",
+          "sentence": "___ your sister speak French? (Do/Does)",
+          "answer": "Does",
+          "hint": "Med she/he/it i frågor: Does...?",
+          "explanation": "We use 'Does' for he/she/it in questions."
+        },
+        {
+          "id": "mel-g1-10",
+          "type": "multiple-choice",
+          "question": "Which sentence is negative present simple?",
+          "options": [
+            "She not like pizza.",
+            "She doesn't likes pizza.",
+            "She doesn't like pizza.",
+            "She isn't like pizza."
+          ],
+          "correctIndex": 2,
+          "explanation": "Negative with she/he/it: doesn't + base verb (no -s).",
+          "hint": "Negation med she: doesn't + grundform."
+        },
+        {
+          "id": "mel-g1-11",
+          "type": "fill-in-blank",
+          "sentence": "My dad ___ (have) a red car.",
+          "answer": "has",
+          "hint": "'Have' är oregelbundet: he/she/it has.",
+          "explanation": "'Have' is irregular: he/she/it has (not haves)."
+        },
+        {
+          "id": "mel-g1-12",
+          "type": "multiple-choice",
+          "question": "'The train ___ at 8 am every morning.'",
+          "options": [
+            "leave",
+            "leaves",
+            "is leaving",
+            "do leave"
+          ],
+          "correctIndex": 1,
+          "explanation": "Timetabled events use present simple. leave → leaves (he/she/it).",
+          "hint": "Tidtabeller och schema använder presens."
+        },
+        {
+          "id": "mel-g1-13",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (not/understand) this question.",
+          "answer": "don't understand",
+          "hint": "Negation med I: don't + grundform.",
+          "explanation": "Negative present simple with I: don't + base verb."
+        },
+        {
+          "id": "mel-g1-14",
+          "type": "build-sentence",
+          "instruction": "Build a correct present simple question.",
+          "words": [
+            "Does",
+            "he",
+            "play",
+            "the",
+            "guitar",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "Does he play the guitar? – he takes does in questions."
+        },
+        {
+          "id": "mel-g1-15",
+          "type": "multiple-choice",
+          "question": "Which is true about present simple?",
+          "options": [
+            "It is used for actions happening right now only.",
+            "It describes habits, facts, and routines.",
+            "It can only be used with 'I'.",
+            "It always ends in -ing."
+          ],
+          "correctIndex": 1,
+          "explanation": "Present simple describes habits (every day), facts (water boils), and routines.",
+          "hint": "Presens används för vanor, fakta och rutiner."
         }
       ]
     },
@@ -52,15 +222,183 @@
           ],
           "correctIndex": 1,
           "explanation": "'Go' is an irregular verb. Its past simple form is 'went'.",
-          "hint": "Datid (past simple): regelbundna verb + -ed (walk → walked). Oregelbundna verb: go → went, see → saw..."
+          "hint": "Oregelbundna verb: go → went."
         },
         {
           "id": "mel-g2-2",
           "type": "fill-in-blank",
           "sentence": "Yesterday, I ___ (walk) to school.",
           "answer": "walked",
-          "hint": "Tidsmarkörer som 'yesterday', 'last week', 'ago' signalerar datid (past simple).",
+          "hint": "Regelbundna verb + -ed i datid.",
           "explanation": "Regular verbs form past simple by adding -ed: walk → walked."
+        },
+        {
+          "id": "mel-g2-3",
+          "type": "multiple-choice",
+          "question": "Which sentence is in the past simple?",
+          "options": [
+            "She is going to the market.",
+            "She went to the market.",
+            "She goes to the market.",
+            "She has gone to the market."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Went' is the past simple form of go.",
+          "hint": "Datid (past simple) berättar om något som hände och är klart."
+        },
+        {
+          "id": "mel-g2-4",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (visit) our grandparents last weekend.",
+          "answer": "visited",
+          "hint": "Regelbundet verb: visit + -ed = visited.",
+          "explanation": "Regular verb: visit → visited (add -ed)."
+        },
+        {
+          "id": "mel-g2-5",
+          "type": "multiple-choice",
+          "question": "What is the past simple of 'see'?",
+          "options": [
+            "seed",
+            "sawed",
+            "saw",
+            "seen"
+          ],
+          "correctIndex": 2,
+          "explanation": "'See' is irregular: past simple is 'saw'.",
+          "hint": "see → saw (oregelbundet)"
+        },
+        {
+          "id": "mel-g2-6",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not/come) to the party last night.",
+          "answer": "didn't come",
+          "hint": "Negation i datid: didn't + grundform.",
+          "explanation": "Negative past simple: didn't + base verb."
+        },
+        {
+          "id": "mel-g2-7",
+          "type": "build-sentence",
+          "instruction": "Build a past simple sentence.",
+          "words": [
+            "Tom",
+            "played",
+            "chess",
+            "yesterday",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "Tom played chess yesterday. – regular verb play → played."
+        },
+        {
+          "id": "mel-g2-8",
+          "type": "multiple-choice",
+          "question": "'___ you enjoy the film last night?'",
+          "options": [
+            "Did",
+            "Does",
+            "Do",
+            "Was"
+          ],
+          "correctIndex": 0,
+          "explanation": "Questions in past simple use 'did' + base verb.",
+          "hint": "Frågor i datid: Did + subject + grundform?"
+        },
+        {
+          "id": "mel-g2-9",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (buy) new shoes at the mall.",
+          "answer": "bought",
+          "hint": "buy → bought (oregelbundet)",
+          "explanation": "'Buy' is irregular: buy → bought."
+        },
+        {
+          "id": "mel-g2-10",
+          "type": "multiple-choice",
+          "question": "What is the past simple of 'write'?",
+          "options": [
+            "writed",
+            "written",
+            "wrote",
+            "writ"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Write' is irregular: past simple is 'wrote'.",
+          "hint": "write → wrote (oregelbundet)"
+        },
+        {
+          "id": "mel-g2-11",
+          "type": "fill-in-blank",
+          "sentence": "___ he ___ (finish) his homework? Yes, he did.",
+          "answer": "Did ... finish",
+          "hint": "Fråga i datid: Did + subject + grundform?",
+          "explanation": "Did he finish…? – past simple question uses 'did' + base verb."
+        },
+        {
+          "id": "mel-g2-12",
+          "type": "multiple-choice",
+          "question": "Which time expression goes with past simple?",
+          "options": [
+            "every day",
+            "right now",
+            "last Monday",
+            "since Tuesday"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Last Monday' is a past time expression that signals past simple.",
+          "hint": "Tidsmarkörer för datid: yesterday, last week, ago..."
+        },
+        {
+          "id": "mel-g2-13",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (stop) running because I was tired.",
+          "answer": "stopped",
+          "hint": "Verb som slutar på konsonant-vokal-konsonant: dubblera sista konsonanten + -ed.",
+          "explanation": "Stop → stopped (double the final consonant before -ed)."
+        },
+        {
+          "id": "mel-g2-14",
+          "type": "build-sentence",
+          "instruction": "Build a past simple negative sentence.",
+          "words": [
+            "She",
+            "didn't",
+            "sleep",
+            "well",
+            "last",
+            "night",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "She didn't sleep well last night. – negative past simple."
+        },
+        {
+          "id": "mel-g2-15",
+          "type": "multiple-choice",
+          "question": "What is the past simple of 'have'?",
+          "options": [
+            "haved",
+            "had",
+            "have",
+            "has"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Have' is irregular: past simple is 'had'.",
+          "hint": "have → had (oregelbundet)"
         }
       ]
     },
@@ -75,24 +413,202 @@
         {
           "id": "mel-g3-1",
           "type": "multiple-choice",
-          "question": "What is the comparative form of 'big'?",
+          "question": "Which is the comparative form of 'big'?",
           "options": [
             "more big",
-            "biger",
+            "biggest",
             "bigger",
-            "biggest"
+            "biger"
           ],
           "correctIndex": 2,
-          "explanation": "Short adjectives: double the final consonant and add -er. big → bigger.",
-          "hint": "Komparativ av korta adjektiv: lägg till -er. T.ex. big → bigger, fast → faster."
+          "explanation": "Short adjectives: add -er. big → bigger (double the final consonant).",
+          "hint": "Korta adjektiv: -er. big → bigger."
         },
         {
           "id": "mel-g3-2",
           "type": "fill-in-blank",
           "sentence": "Mount Everest is the ___ (high) mountain in the world.",
           "answer": "highest",
-          "hint": "Superlativ av korta adjektiv: the + adjektiv + -est. T.ex. big → the biggest.",
-          "explanation": "Superlative of high: the highest. Short adjective → the + adj + -est."
+          "hint": "Superlativ av korta adjektiv: -est. high → highest.",
+          "explanation": "Superlative of short adjectives: add -est."
+        },
+        {
+          "id": "mel-g3-3",
+          "type": "multiple-choice",
+          "question": "Which is the superlative form of 'beautiful'?",
+          "options": [
+            "beautifulest",
+            "more beautiful",
+            "most beautiful",
+            "beautifuller"
+          ],
+          "correctIndex": 2,
+          "explanation": "Long adjectives (3+ syllables) use 'most' for superlative.",
+          "hint": "Långa adjektiv: most + adjektiv."
+        },
+        {
+          "id": "mel-g3-4",
+          "type": "fill-in-blank",
+          "sentence": "This test is ___ (difficult) than the last one.",
+          "answer": "more difficult",
+          "hint": "Långa adjektiv: more + adjektiv i komparativ.",
+          "explanation": "Long adjectives use 'more' for comparative: more difficult."
+        },
+        {
+          "id": "mel-g3-5",
+          "type": "multiple-choice",
+          "question": "'My bag is ___ than yours.' Choose the correct comparative of 'heavy'.",
+          "options": [
+            "more heavy",
+            "heavyer",
+            "heavier",
+            "heaviest"
+          ],
+          "correctIndex": 2,
+          "explanation": "Adjectives ending in -y: change y to i, add -er. heavy → heavier.",
+          "hint": "Adjektiv på -y: byt -y mot -ier."
+        },
+        {
+          "id": "mel-g3-6",
+          "type": "fill-in-blank",
+          "sentence": "Summer is ___ (hot) than spring.",
+          "answer": "hotter",
+          "hint": "Kort adjektiv som slutar på -t: dubblera konsonanten + -er.",
+          "explanation": "hot → hotter (double t before -er)."
+        },
+        {
+          "id": "mel-g3-7",
+          "type": "multiple-choice",
+          "question": "'This is ___ film I have ever seen.' Choose the correct superlative.",
+          "options": [
+            "the good",
+            "the better",
+            "the best",
+            "the most good"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Good' has irregular forms: good – better – best.",
+          "hint": "good → better → best (oregelbundet)"
+        },
+        {
+          "id": "mel-g3-8",
+          "type": "fill-in-blank",
+          "sentence": "Tom is ___ (tall) boy in class.",
+          "answer": "the tallest",
+          "hint": "Superlativ: the + -est.",
+          "explanation": "Superlative: the + adjective + -est. tallest = tallest."
+        },
+        {
+          "id": "mel-g3-9",
+          "type": "build-sentence",
+          "instruction": "Build a comparative sentence.",
+          "words": [
+            "A",
+            "car",
+            "is",
+            "faster",
+            "than",
+            "a",
+            "bicycle",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "explanation": "A car is faster than a bicycle. – comparative with -er."
+        },
+        {
+          "id": "mel-g3-10",
+          "type": "multiple-choice",
+          "question": "Which adjective describes a feeling?",
+          "options": [
+            "wooden",
+            "circular",
+            "angry",
+            "heavy"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Angry' describes an emotion/feeling. It answers 'How do you feel?'",
+          "hint": "Adjektiv kan beskriva känslor, utseende eller egenskaper."
+        },
+        {
+          "id": "mel-g3-11",
+          "type": "fill-in-blank",
+          "sentence": "This pizza is ___ (good) than the one we had yesterday.",
+          "answer": "better",
+          "hint": "good → better → best (oregelbundet)",
+          "explanation": "'Good' is irregular: comparative is 'better'."
+        },
+        {
+          "id": "mel-g3-12",
+          "type": "multiple-choice",
+          "question": "Ella is ___ as Tom. They are the same height.",
+          "options": [
+            "as tall",
+            "taller",
+            "the tallest",
+            "tall than"
+          ],
+          "correctIndex": 0,
+          "explanation": "To say two things are equal, use 'as + adjective + as'.",
+          "hint": "Lika jämförelse: as + adjektiv + as."
+        },
+        {
+          "id": "mel-g3-13",
+          "type": "fill-in-blank",
+          "sentence": "The Sahara is ___ (large) desert in the world.",
+          "answer": "the largest",
+          "hint": "Superlativ: the + -est.",
+          "explanation": "large → the largest. (drop e, add -st)"
+        },
+        {
+          "id": "mel-g3-14",
+          "type": "build-sentence",
+          "instruction": "Build a superlative sentence.",
+          "words": [
+            "She",
+            "is",
+            "the",
+            "most",
+            "intelligent",
+            "student",
+            "in",
+            "class",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "explanation": "She is the most intelligent student in class. – long adjective superlative."
+        },
+        {
+          "id": "mel-g3-15",
+          "type": "multiple-choice",
+          "question": "What is the comparative of 'bad'?",
+          "options": [
+            "badder",
+            "worse",
+            "more bad",
+            "bader"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Bad' is irregular: bad – worse – worst.",
+          "hint": "bad → worse → worst (oregelbundet)"
         }
       ]
     },
@@ -107,28 +623,174 @@
         {
           "id": "mel-g4-1",
           "type": "multiple-choice",
-          "question": "Choose the correct preposition: 'The cat is ___ the table.'",
+          "question": "'The book is ___ the table.' Which preposition of place fits?",
           "options": [
-            "on",
-            "in",
             "at",
-            "by"
+            "on",
+            "since",
+            "until"
           ],
-          "correctIndex": 0,
-          "explanation": "'On' is used for surfaces: on the table, on the floor, on the shelf.",
-          "hint": "Preposition 'on': på en yta (on the table), på dagar (on Monday), på datum (on July 4th)."
+          "correctIndex": 1,
+          "explanation": "'On' is used for surfaces: the book is on the table.",
+          "hint": "'On' = på en yta."
         },
         {
           "id": "mel-g4-2",
+          "type": "fill-in-blank",
+          "sentence": "The cat is hiding ___ the sofa.",
+          "answer": "under",
+          "hint": "'Under' = nedanför, under något.",
+          "explanation": "'Under' indicates position below something."
+        },
+        {
+          "id": "mel-g4-3",
+          "type": "multiple-choice",
+          "question": "'She arrived ___ Monday.' Which preposition of time is correct?",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "by"
+          ],
+          "correctIndex": 2,
+          "explanation": "Use 'on' with days of the week: on Monday.",
+          "hint": "'On' + dag i veckan/datum."
+        },
+        {
+          "id": "mel-g4-4",
+          "type": "fill-in-blank",
+          "sentence": "I was born ___ 2012.",
+          "answer": "in",
+          "hint": "'In' + år/månad/årstid.",
+          "explanation": "Use 'in' with years, months, and seasons: in 2012."
+        },
+        {
+          "id": "mel-g4-5",
+          "type": "multiple-choice",
+          "question": "'The meeting starts ___ 3 o'clock.' Choose the correct preposition.",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "correctIndex": 2,
+          "explanation": "Use 'at' with specific times: at 3 o'clock.",
+          "hint": "'At' + klockslag."
+        },
+        {
+          "id": "mel-g4-6",
+          "type": "fill-in-blank",
+          "sentence": "There is a supermarket ___ the school and the park.",
+          "answer": "between",
+          "hint": "'Between' = mellan (två saker).",
+          "explanation": "'Between' shows position in the middle of two things."
+        },
+        {
+          "id": "mel-g4-7",
           "type": "build-sentence",
-          "instruction": "Build: 'The books are under the chair.'",
+          "instruction": "Build a sentence with a preposition of place.",
           "words": [
             "The",
-            "books",
-            "are",
-            "under",
+            "dog",
+            "is",
+            "in",
+            "front",
+            "of",
             "the",
-            "chair",
+            "house",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "explanation": "The dog is in front of the house. – preposition of place."
+        },
+        {
+          "id": "mel-g4-8",
+          "type": "multiple-choice",
+          "question": "'We go to school ___ September ___ June.'",
+          "options": [
+            "from … to",
+            "in … at",
+            "on … in",
+            "at … on"
+          ],
+          "correctIndex": 0,
+          "explanation": "'From … to' shows duration: from September to June.",
+          "hint": "'From … to' = från … till."
+        },
+        {
+          "id": "mel-g4-9",
+          "type": "fill-in-blank",
+          "sentence": "She put her keys ___ her bag.",
+          "answer": "in",
+          "hint": "'In' = inuti något.",
+          "explanation": "'In' indicates position inside something."
+        },
+        {
+          "id": "mel-g4-10",
+          "type": "multiple-choice",
+          "question": "'He lives ___ the third floor.' Which preposition?",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "above"
+          ],
+          "correctIndex": 1,
+          "explanation": "Use 'on' with floors: on the third floor.",
+          "hint": "Våningsplan: on the first/second floor."
+        },
+        {
+          "id": "mel-g4-11",
+          "type": "fill-in-blank",
+          "sentence": "The train leaves ___ the morning.",
+          "answer": "in",
+          "hint": "'In' + del av dagen (morning, afternoon, evening).",
+          "explanation": "Use 'in' with parts of the day: in the morning."
+        },
+        {
+          "id": "mel-g4-12",
+          "type": "multiple-choice",
+          "question": "'The pharmacy is ___ the bank.' (next to it)",
+          "options": [
+            "next to",
+            "in front of",
+            "behind",
+            "between"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Next to' means directly beside something.",
+          "hint": "'Next to' = bredvid."
+        },
+        {
+          "id": "mel-g4-13",
+          "type": "fill-in-blank",
+          "sentence": "School starts ___ 8:30 every morning.",
+          "answer": "at",
+          "hint": "'At' + klockslag.",
+          "explanation": "Use 'at' for specific clock times: at 8:30."
+        },
+        {
+          "id": "mel-g4-14",
+          "type": "build-sentence",
+          "instruction": "Build a sentence with a preposition of time.",
+          "words": [
+            "We",
+            "always",
+            "visit",
+            "grandma",
+            "on",
+            "Sundays",
             "."
           ],
           "correctOrder": [
@@ -140,7 +802,21 @@
             5,
             6
           ],
-          "explanation": "Under = nedanför/under. The books are under (beneath) the chair."
+          "explanation": "We always visit grandma on Sundays. – 'on' + day."
+        },
+        {
+          "id": "mel-g4-15",
+          "type": "multiple-choice",
+          "question": "'The picture is hanging ___ the wall.'",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "under"
+          ],
+          "correctIndex": 1,
+          "explanation": "'On' is used for things attached to/placed on surfaces: on the wall.",
+          "hint": "'On' = på en yta eller vägg."
         }
       ]
     },
@@ -1835,6 +2511,218 @@
           "correctIndex": 3,
           "explanation": "Finally stavas F-I-N-A-L-L-Y.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        }
+      ]
+    }
+  ],
+  "wordsearch": [
+    {
+      "id": "mel-ws1-verbs",
+      "title": "Verb i rörelse",
+      "description": "Hitta verb som beskriver rörelser.",
+      "icon": "🏃",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "JUMP",
+          "clue": "Hoppa"
+        },
+        {
+          "word": "SWIM",
+          "clue": "Simma"
+        },
+        {
+          "word": "CLIMB",
+          "clue": "Klättra"
+        },
+        {
+          "word": "DANCE",
+          "clue": "Dansa"
+        },
+        {
+          "word": "THROW",
+          "clue": "Kasta"
+        },
+        {
+          "word": "CATCH",
+          "clue": "Fånga"
+        },
+        {
+          "word": "PUSH",
+          "clue": "Trycka"
+        },
+        {
+          "word": "PULL",
+          "clue": "Dra"
+        },
+        {
+          "word": "RIDE",
+          "clue": "Rida/åka"
+        },
+        {
+          "word": "SLEEP",
+          "clue": "Sova"
+        },
+        {
+          "word": "LAUGH",
+          "clue": "Skratta"
+        },
+        {
+          "word": "SHOUT",
+          "clue": "Ropa/skrika"
+        }
+      ]
+    },
+    {
+      "id": "mel-ws2-adjectives",
+      "title": "Adjektiv",
+      "description": "Hitta beskrivningsord gömda i rutnätet.",
+      "icon": "✨",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "HAPPY",
+          "clue": "Glad"
+        },
+        {
+          "word": "ANGRY",
+          "clue": "Arg"
+        },
+        {
+          "word": "BRAVE",
+          "clue": "Modig"
+        },
+        {
+          "word": "CLEVER",
+          "clue": "Smart"
+        },
+        {
+          "word": "HONEST",
+          "clue": "Ärlig"
+        },
+        {
+          "word": "FUNNY",
+          "clue": "Rolig"
+        },
+        {
+          "word": "QUIET",
+          "clue": "Tyst"
+        },
+        {
+          "word": "STRONG",
+          "clue": "Stark"
+        },
+        {
+          "word": "GENTLE",
+          "clue": "Snäll/varsam"
+        },
+        {
+          "word": "LAZY",
+          "clue": "Lat"
+        }
+      ]
+    }
+  ],
+  "crossword": [
+    {
+      "id": "mel-cw1-grammar",
+      "title": "Korsord: Grammatik",
+      "description": "Ord med grammatisk koppling.",
+      "icon": "📝",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "A diagram/chart showing information",
+          "answer": "MAP",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "An animal's home (also a cosy room)",
+          "answer": "DEN",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "Gone crazy (she went ___)",
+          "answer": "MAD",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "A playing card / excellent at something",
+          "answer": "ACE",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "A cooking pot (also: Peter ___)",
+          "answer": "PAN",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "mel-cw2-time",
+      "title": "Korsord: Tid och resa",
+      "description": "Ord om tid och transport.",
+      "icon": "⏰",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Belonging to her (hennes)",
+          "answer": "HER",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "A cooking pot",
+          "answer": "PAN",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "To jump lightly on one foot",
+          "answer": "HOP",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "A long period of history",
+          "answer": "ERA",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "To move fast on foot",
+          "answer": "RUN",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
         }
       ]
     }

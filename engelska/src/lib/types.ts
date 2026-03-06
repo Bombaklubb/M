@@ -98,10 +98,50 @@ export interface SpellingModule {
   exercises: GrammarExercise[];
 }
 
+// ─── Word Search ──────────────────────────────────────────────────────────────
+
+export interface WordSearchWord {
+  word: string;
+  clue: string;
+}
+
+export interface WordSearchModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  words: WordSearchWord[];
+}
+
+// ─── Crossword ────────────────────────────────────────────────────────────────
+
+export interface CrosswordClue {
+  number: number;
+  clue: string;
+  answer: string;
+  row: number;
+  col: number;
+  direction: "across" | "down";
+}
+
+export interface CrosswordModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  clues: CrosswordClue[];
+}
+
 export interface StageContent {
   grammar: GrammarModule[];
   reading: ReadingModule[];
   spelling?: SpellingModule[];
+  wordsearch?: WordSearchModule[];
+  crossword?: CrosswordModule[];
 }
 
 // ─── Student progress (stored in localStorage) ───────────────────────────────
@@ -119,6 +159,8 @@ export interface StageProgress {
   grammarModules: Record<string, ModuleProgress>;
   readingModules: Record<string, ModuleProgress>;
   spellingModules: Record<string, ModuleProgress>;
+  wordsearchModules: Record<string, ModuleProgress>;
+  crosswordModules: Record<string, ModuleProgress>;
 }
 
 export interface StudentData {

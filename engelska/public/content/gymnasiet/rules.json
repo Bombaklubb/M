@@ -1,0 +1,57 @@
+{
+  "sections": [
+    {
+      "id": "register",
+      "title": "Stilnivå: Formellt och Informellt",
+      "icon": "🎩",
+      "content": [
+        { "term": "Formellt register", "explanation": "Används i akademiska texter, affärsbrev och officiella sammanhang.", "examples": ["I wish to express my sincere gratitude. Furthermore, it should be noted that..."] },
+        { "term": "Informellt register", "explanation": "Används i vardagssamtal och personliga meddelanden.", "examples": ["Thanks so much! By the way, did you know..."] },
+        { "term": "Undvik i formell text", "explanation": "", "examples": ["Contractions (I'm, you're), slang, conversational connectors (well, anyway, so...)"] },
+        { "term": "Hedging (avsäkring)", "explanation": "Används i akademisk text för att nyansera påståenden.", "examples": ["It may be argued that..., This suggests that..., Evidence indicates that..."] }
+      ]
+    },
+    {
+      "id": "kohesion",
+      "title": "Kohesion & Diskursmarkörer",
+      "icon": "🔗",
+      "content": [
+        { "term": "Addition", "explanation": "Lägger till information.", "examples": ["Furthermore, Moreover, In addition, Additionally, What is more"] },
+        { "term": "Kontrast", "explanation": "Visar motargument.", "examples": ["However, Nevertheless, On the other hand, Despite this, In contrast"] },
+        { "term": "Orsak & Följd", "explanation": "", "examples": ["Therefore, Consequently, As a result, Thus, Hence"] },
+        { "term": "Exemplifiering", "explanation": "", "examples": ["For instance, For example, Such as, To illustrate"] },
+        { "term": "Sammanfattning", "explanation": "", "examples": ["In conclusion, To summarise, Overall, In short, On balance"] }
+      ]
+    },
+    {
+      "id": "modalverb",
+      "title": "Modalverb – Avancerad nivå",
+      "icon": "🔧",
+      "content": [
+        { "term": "Epistemic modality (slutledning)", "explanation": "Uttrycker graden av säkerhet.", "examples": ["must have (säker), should have (förväntad), might/could have (möjlig), can't have (omöjlig)"] },
+        { "term": "Deontic modality (skyldighet)", "explanation": "Uttrycker tillåtelse och skyldighet.", "examples": ["must/have to (obligatorisk), should (rekommenderad), may/can (tillåten), needn't (onödig)"] },
+        { "term": "would rather / had better", "explanation": "", "examples": ["I would rather stay home. You had better leave now."] }
+      ]
+    },
+    {
+      "id": "subjunktiv",
+      "title": "Subjunktiv & Formella konstruktioner",
+      "icon": "📐",
+      "content": [
+        { "term": "Mandative Subjunctive", "explanation": "Grundformen (utan -s) används efter suggest, recommend, insist, require + that-sats.", "examples": ["I suggest that she attend the meeting. It is vital that every student pass."] },
+        { "term": "Were-subjunctive", "explanation": "If I were you... (alla personer, formellt)", "examples": ["If she were to resign, it would be a great loss."] },
+        { "term": "Formella inversionskonstruktioner", "explanation": "", "examples": ["Were he to fail... / Should you need help... / Had I known..."] }
+      ]
+    },
+    {
+      "id": "ramsor",
+      "title": "Skriv- och analysknep",
+      "icon": "✍️",
+      "content": [
+        { "term": "PEEL-strukturen", "explanation": "Point → Evidence → Explanation → Link. Struktur för analyssatser.", "examples": [] },
+        { "term": "Signalord i texter", "explanation": "Lär dig känna igen hur diskursmarkörer signalerar textens struktur.", "examples": ["First(ly)... Second(ly)... Finally... → uppräkning", "Although... / However... → kontrast"] },
+        { "term": "Akademiska verbfraser", "explanation": "", "examples": ["This paper examines / argues / demonstrates / explores / investigates..."] }
+      ]
+    }
+  ]
+}
