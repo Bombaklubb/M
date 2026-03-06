@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="40" fill="#e8f4f8"/>
+  <!-- Head -->
+  <circle cx="40" cy="22" r="12" fill="#f5c89a"/>
+  <!-- Hair -->
+  <ellipse cx="40" cy="12" rx="12" ry="7" fill="#5c3d1e"/>
+  <!-- Jersey body – red top half, white bottom half with red stripes -->
+  <rect x="22" y="34" width="36" height="22" rx="4" fill="#cc0000"/>
+  <rect x="30" y="34" width="8" height="22" fill="white"/>
+  <rect x="42" y="34" width="8" height="22" fill="white"/>
+  <!-- Collar -->
+  <rect x="35" y="33" width="10" height="5" rx="2" fill="white"/>
+  <!-- Arms -->
+  <rect x="12" y="34" width="11" height="8" rx="4" fill="#cc0000"/>
+  <rect x="57" y="34" width="11" height="8" rx="4" fill="#cc0000"/>
+  <!-- Shorts – black -->
+  <rect x="24" y="55" width="15" height="12" rx="2" fill="#222"/>
+  <rect x="41" y="55" width="15" height="12" rx="2" fill="#222"/>
+  <!-- Socks – red/white stripes -->
+  <rect x="24" y="67" width="12" height="8" rx="2" fill="#cc0000"/>
+  <rect x="44" y="67" width="12" height="8" rx="2" fill="#cc0000"/>
+  <!-- Boots -->
+  <ellipse cx="30" cy="75" rx="8" ry="4" fill="#333"/>
+  <ellipse cx="50" cy="75" rx="8" ry="4" fill="#333"/>
+  <!-- Football -->
+  <circle cx="62" cy="62" r="8" fill="white" stroke="#333" stroke-width="1"/>
+  <path d="M62 55 L65 59 L62 63 L59 59 Z" fill="#333"/>
+  <path d="M70 62 L66 65 L62 63 L65 59 Z" fill="#333"/>
+  <path d="M54 62 L58 65 L62 63 L59 59 Z" fill="#333"/>
+  <!-- Number 10 on jersey -->
+  <text x="37" y="50" font-size="8" font-weight="bold" fill="#cc0000" font-family="Arial">10</text>
+</svg>

@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import type { BuildSentenceExercise } from "@/lib/types";
-import { playCorrect, playWrong, playClick } from "@/lib/sounds";
+
+function shuffle(arr: number[]): number[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 interface Props {
   exercise: BuildSentenceExercise;
@@ -14,18 +22,21 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
   const [placed, setPlaced] = useState<number[]>([]);
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
   const [showHint, setShowHint] = useState(false);
+  // Shuffled display order – stable for the lifetime of this exercise instance
+  const [shuffledOrder] = useState<number[]>(() =>
+    shuffle(exercise.words.map((_, i) => i))
+  );
 
-  const available = exercise.words.map((_, idx) => idx).filter((idx) => !placed.includes(idx));
+  // Available words in shuffled order (excluding already placed)
+  const available = shuffledOrder.filter((idx) => !placed.includes(idx));
 
   function addWord(idx: number) {
     if (state !== "idle") return;
-    playClick();
     setPlaced((prev) => [...prev, idx]);
   }
 
   function removeWord(posInPlaced: number) {
     if (state !== "idle") return;
-    playClick();
     setPlaced((prev) => prev.filter((_, i) => i !== posInPlaced));
   }
 
@@ -35,8 +46,6 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
       placed.length === exercise.correctOrder.length &&
       placed.every((wordIdx, pos) => wordIdx === exercise.correctOrder[pos]);
     setState(correct ? "correct" : "wrong");
-    if (correct) playCorrect();
-    else playWrong();
   }
 
   function reset() {

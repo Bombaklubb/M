@@ -2721,6 +2721,106 @@
           "clue": "Plats och tid för handlingen"
         }
       ]
+    },
+    {
+      "id": "gym-ws3-academic-words",
+      "title": "Akademiska nyckelord",
+      "description": "Hitta avancerade akademiska ord som används i uppsatser och analyser.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "HYPOTHESIS",
+          "clue": "hypotes"
+        },
+        {
+          "word": "METHODOLOGY",
+          "clue": "metodik"
+        },
+        {
+          "word": "PERSPECTIVE",
+          "clue": "perspektiv"
+        },
+        {
+          "word": "SIGNIFICANT",
+          "clue": "betydelsefull/signifikant"
+        },
+        {
+          "word": "EMPIRICAL",
+          "clue": "empirisk"
+        },
+        {
+          "word": "PARADIGM",
+          "clue": "paradigm"
+        },
+        {
+          "word": "SYNTHESIS",
+          "clue": "syntes"
+        },
+        {
+          "word": "CRITERION",
+          "clue": "kriterium"
+        },
+        {
+          "word": "INFERENCE",
+          "clue": "slutledning"
+        },
+        {
+          "word": "ABSTRACT",
+          "clue": "sammanfattning/abstrakt"
+        }
+      ]
+    },
+    {
+      "id": "gym-ws4-global-issues",
+      "title": "Globala frågor",
+      "description": "Hitta ord kopplade till viktiga globala samhällsfrågor.",
+      "icon": "🌐",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "INEQUALITY",
+          "clue": "ojämlikhet"
+        },
+        {
+          "word": "DEMOCRACY",
+          "clue": "demokrati"
+        },
+        {
+          "word": "MIGRATION",
+          "clue": "migration"
+        },
+        {
+          "word": "GOVERNANCE",
+          "clue": "styrning/förvaltning"
+        },
+        {
+          "word": "DIPLOMACY",
+          "clue": "diplomati"
+        },
+        {
+          "word": "SOVEREIGNTY",
+          "clue": "suveränitet"
+        },
+        {
+          "word": "GLOBALISATION",
+          "clue": "globalisering"
+        },
+        {
+          "word": "IDEOLOGY",
+          "clue": "ideologi"
+        },
+        {
+          "word": "CORRUPTION",
+          "clue": "korruption"
+        },
+        {
+          "word": "SANCTIONS",
+          "clue": "sanktioner"
+        }
+      ]
     }
   ],
   "crossword": [

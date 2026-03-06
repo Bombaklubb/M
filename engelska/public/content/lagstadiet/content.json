@@ -2798,6 +2798,106 @@
           "clue": "Man mäter med den — linjal"
         }
       ]
+    },
+    {
+      "id": "lag-ws3-family-food",
+      "title": "Familj och mat",
+      "description": "Hitta ord för familjemedlemmar och maträtter på engelska.",
+      "icon": "🍎",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "words": [
+        {
+          "word": "MOTHER",
+          "clue": "mamma"
+        },
+        {
+          "word": "FATHER",
+          "clue": "pappa"
+        },
+        {
+          "word": "SISTER",
+          "clue": "syster"
+        },
+        {
+          "word": "BROTHER",
+          "clue": "bror"
+        },
+        {
+          "word": "APPLE",
+          "clue": "äpple"
+        },
+        {
+          "word": "BREAD",
+          "clue": "bröd"
+        },
+        {
+          "word": "MILK",
+          "clue": "mjölk"
+        },
+        {
+          "word": "CAKE",
+          "clue": "tårta"
+        },
+        {
+          "word": "RICE",
+          "clue": "ris"
+        },
+        {
+          "word": "FISH",
+          "clue": "fisk"
+        }
+      ]
+    },
+    {
+      "id": "lag-ws4-numbers-weather",
+      "title": "Siffror och väder",
+      "description": "Hitta siffror och väderord på engelska i ordsökningen.",
+      "icon": "🌤️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "words": [
+        {
+          "word": "ONE",
+          "clue": "ett"
+        },
+        {
+          "word": "TWO",
+          "clue": "två"
+        },
+        {
+          "word": "THREE",
+          "clue": "tre"
+        },
+        {
+          "word": "FOUR",
+          "clue": "fyra"
+        },
+        {
+          "word": "FIVE",
+          "clue": "fem"
+        },
+        {
+          "word": "SUN",
+          "clue": "sol"
+        },
+        {
+          "word": "RAIN",
+          "clue": "regn"
+        },
+        {
+          "word": "SNOW",
+          "clue": "snö"
+        },
+        {
+          "word": "WIND",
+          "clue": "vind"
+        },
+        {
+          "word": "CLOUD",
+          "clue": "moln"
+        }
+      ]
     }
   ],
   "crossword": [
