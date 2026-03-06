@@ -9,6 +9,14 @@ import { loadStudent } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, GrammarModule, ReadingModule } from "@/lib/types";
 
+interface GrammarTip {
+  title_en: string;
+  title_sv: string;
+  rule: string;
+  example: string;
+  tip: string;
+}
+
 interface Props {
   params: Promise<{ stage: string }>;
 }
@@ -20,7 +28,8 @@ export default function WorldPage({ params }: Props) {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [content, setContent] = useState<StageContent | null>(null);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<"grammar" | "reading" | "spelling">("grammar");
+  const [activeTab, setActiveTab] = useState<"grammar" | "reading" | "spelling" | "tips">("grammar");
+  const [tips, setTips] = useState<GrammarTip[]>([]);
 
   useEffect(() => {
     const s = loadStudent();
@@ -31,6 +40,10 @@ export default function WorldPage({ params }: Props) {
       .then((data: StageContent) => setContent(data))
       .catch(() => setContent(null))
       .finally(() => setLoading(false));
+    fetch("/content/grammar-tips.json")
+      .then((r) => r.json())
+      .then((data: GrammarTip[]) => setTips(data))
+      .catch(() => {});
   }, [stageId]);
 
   if (!stage) return notFound();
@@ -127,7 +140,7 @@ export default function WorldPage({ params }: Props) {
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Tabs */}
         <div className="flex gap-2 mb-6 bg-gray-100 dark:bg-gray-800 p-1 rounded-2xl w-fit">
-          {(["grammar", "reading", "spelling"] as const).map((tab) => (
+          {(["grammar", "reading", "spelling", "tips"] as const).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -137,13 +150,32 @@ export default function WorldPage({ params }: Props) {
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
               }`}
             >
-              {tab === "grammar" ? "📝 Grammatik" : tab === "reading" ? "📖 Läsförståelse" : "✏️ Stavning"}
+              {tab === "grammar" ? "📝 Grammatik" : tab === "reading" ? "📖 Läsförståelse" : tab === "spelling" ? "✏️ Stavning" : "💡 Tips"}
             </button>
           ))}
         </div>
 
-        {/* Module list */}
-        {!content ? (
+        {/* Tips tab */}
+        {activeTab === "tips" ? (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {tips.map((t) => (
+              <div key={t.title_en} className="card space-y-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">💡</span>
+                  <div>
+                    <div className="font-bold text-gray-900 dark:text-gray-100 text-sm">{t.title_sv}</div>
+                    <div className="text-xs text-gray-400">{t.title_en}</div>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-700 dark:text-gray-300 font-medium">{t.rule}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 italic">{t.example}</p>
+                <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-3 py-2 text-xs text-amber-800 dark:text-amber-300">
+                  {t.tip}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : !content ? (
           <div className="card text-center py-12 text-gray-400">
             <div className="text-4xl mb-3">📭</div>
             <p>Kunde inte ladda innehåll.</p>
@@ -162,9 +194,9 @@ export default function WorldPage({ params }: Props) {
                 title={mod.title}
                 description={mod.description}
                 icon={mod.icon}
-                kind={activeTab}
+                kind={activeTab === "tips" ? "grammar" : activeTab}
                 stage={stage}
-                progress={getModuleProgress(activeTab, mod.id)}
+                progress={getModuleProgress(activeTab === "tips" ? "grammar" : activeTab, mod.id)}
                 locked={isModuleLocked()}
                 prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
               />

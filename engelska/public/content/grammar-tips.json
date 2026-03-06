@@ -1,0 +1,142 @@
+[
+  {
+    "title_en": "Be Verb (Is / Am / Are)",
+    "title_sv": "Be-verb (Is / Am / Are)",
+    "rule": "I → am. He/She/It → is. You/We/They → are.",
+    "example": "I am happy. She is tall. They are friends.",
+    "tip": "Ramsa: I am – You are – He/She/It is – We are – They are."
+  },
+  {
+    "title_en": "Have / Has",
+    "title_sv": "Have / Has",
+    "rule": "I/You/We/They use have. He/She/It uses has.",
+    "example": "I have a dog. She has a cat.",
+    "tip": "Minnesregel: He, She, It – HAS."
+  },
+  {
+    "title_en": "Present Simple",
+    "title_sv": "Presens",
+    "rule": "He/She/It takes -s in present simple.",
+    "example": "I play football. She plays football.",
+    "tip": "He, She, It – don't forget the S."
+  },
+  {
+    "title_en": "A / An",
+    "title_sv": "A / An",
+    "rule": "Use 'an' before vowel sounds.",
+    "example": "a dog, a house, an apple, an orange",
+    "tip": "Vokalljud → använd AN."
+  },
+  {
+    "title_en": "Plural Forms",
+    "title_sv": "Plural",
+    "rule": "Most nouns add -s or -es.",
+    "example": "dog → dogs, box → boxes, baby → babies",
+    "tip": "Oregelbundna: child → children, man → men."
+  },
+  {
+    "title_en": "Question Words",
+    "title_sv": "Frågeord",
+    "rule": "Question words start many questions.",
+    "example": "What is your name? Where do you live?",
+    "tip": "WH words: What, Where, When, Why, Who, Which, How."
+  },
+  {
+    "title_en": "Some / Any",
+    "title_sv": "Some / Any",
+    "rule": "Some in positive sentences, any in questions and negatives.",
+    "example": "I have some apples. Do you have any apples?",
+    "tip": "Some = ja-sats. Any = fråga eller nej-sats."
+  },
+  {
+    "title_en": "Much / Many",
+    "title_sv": "Much / Many",
+    "rule": "Many for countable nouns. Much for uncountable nouns.",
+    "example": "many books, much water",
+    "tip": "Räknebara → many. Oräknebara → much."
+  },
+  {
+    "title_en": "Comparatives",
+    "title_sv": "Komparation",
+    "rule": "Short adjectives add -er. Long adjectives use more.",
+    "example": "tall → taller, beautiful → more beautiful",
+    "tip": "Kort ord → -er. Långt ord → more."
+  },
+  {
+    "title_en": "Superlatives",
+    "title_sv": "Superlativ",
+    "rule": "Short adjectives add -est. Long adjectives use most.",
+    "example": "tall → tallest, beautiful → most beautiful",
+    "tip": "Superlativ jämför tre eller fler saker."
+  },
+  {
+    "title_en": "Prepositions of Place",
+    "title_sv": "Lägesord",
+    "rule": "Prepositions describe where something is.",
+    "example": "The cat is under the table.",
+    "tip": "Vanliga: in, on, under, behind, between."
+  },
+  {
+    "title_en": "Prepositions of Time",
+    "title_sv": "Tidsord",
+    "rule": "Use different prepositions for time.",
+    "example": "in 2020, on Monday, at 3 o'clock",
+    "tip": "In – months/years. On – days. At – clock time."
+  },
+  {
+    "title_en": "Object Pronouns",
+    "title_sv": "Objektspronomen",
+    "rule": "Object pronouns replace the object in a sentence.",
+    "example": "She helped me. I saw them.",
+    "tip": "me, you, him, her, it, us, them."
+  },
+  {
+    "title_en": "Possessive Words",
+    "title_sv": "Ägande ord",
+    "rule": "Possessive words show who owns something.",
+    "example": "my book, her car, their house",
+    "tip": "my, your, his, her, our, their."
+  },
+  {
+    "title_en": "Since / For",
+    "title_sv": "Since / For",
+    "rule": "Since = starting point. For = period of time.",
+    "example": "since 2020, for three years",
+    "tip": "Since = start. For = tid."
+  },
+  {
+    "title_en": "Conditionals",
+    "title_sv": "Villkorssatser",
+    "rule": "Used for situations with conditions.",
+    "example": "If it rains, we will stay home.",
+    "tip": "If + present → will."
+  },
+  {
+    "title_en": "Passive Voice",
+    "title_sv": "Passiv form",
+    "rule": "Passive voice focuses on the action, not the person.",
+    "example": "The book was written in 1990.",
+    "tip": "Be + past participle."
+  },
+  {
+    "title_en": "Adjective vs Adverb",
+    "title_sv": "Adjektiv eller adverb",
+    "rule": "Adjectives describe nouns. Adverbs describe verbs.",
+    "example": "She is quick. She runs quickly.",
+    "tip": "Många adverb slutar på -ly."
+  },
+  {
+    "title_en": "Word Order",
+    "title_sv": "Ordföljd",
+    "rule": "English word order is usually Subject + Verb + Object.",
+    "example": "I eat apples.",
+    "tip": "Subjekt → Verb → Objekt."
+  },
+  {
+    "title_en": "Common Mistakes",
+    "title_sv": "Vanliga misstag",
+    "rule": "Some errors are common for Swedish learners.",
+    "example": "She has a dog (not She have). He doesn't like pizza (not He don't).",
+    "tip": "Tänk på He/She/It + s."
+  }
+]
