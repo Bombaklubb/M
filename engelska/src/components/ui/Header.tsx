@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent } from "@/lib/storage";
+import HeroAvatar from "@/components/ui/HeroAvatar";
 import type { StudentData } from "@/lib/types";
 
 interface HeaderProps {
@@ -44,6 +45,20 @@ export default function Header({ student, onLogout }: HeaderProps) {
               <span className="text-amber-500 text-sm">⭐</span>
               <span className="text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
             </div>
+
+            {/* Hero button */}
+            <Link
+              href="/hero"
+              title="Min hjälte"
+              className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-b from-sky-100 to-sky-50 dark:from-sky-900/40 dark:to-sky-800/20 border border-sky-200 dark:border-sky-700 hover:border-sky-400 dark:hover:border-sky-500 transition-all overflow-hidden touch-manipulation"
+            >
+              <HeroAvatar
+                heroId={student.hero?.heroId ?? "explorer"}
+                skinTone={student.hero?.skinTone ?? "light"}
+                equippedAttributes={student.hero?.equippedAttributes ?? []}
+                size={32}
+              />
+            </Link>
 
             {/* Student name – links to Min sida, hidden on mobile */}
             <Link
