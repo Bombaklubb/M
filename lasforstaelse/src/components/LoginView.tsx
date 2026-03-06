@@ -19,7 +19,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-md w-full">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
@@ -79,7 +79,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
       </div>
 
       {/* Signatur */}
-      <div className="fixed bottom-2 right-3 text-xs text-purple-200 opacity-60 hover:opacity-100 transition-opacity">
+      <div className="fixed bottom-2 right-3 text-xs text-gray-400 opacity-60 hover:opacity-100 transition-opacity">
         Läsjakten av Martin Akdogan
       </div>
     </div>
