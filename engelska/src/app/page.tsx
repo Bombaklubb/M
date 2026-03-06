@@ -50,7 +50,7 @@ export default function HomePage() {
     ];
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700 flex items-center justify-center p-4 gap-6">
+      <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 flex items-center justify-center p-4 gap-6">
 
         {/* Left: sprakdjungeln + sprakstaden */}
         <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
@@ -73,7 +73,7 @@ export default function HomePage() {
             <h1 className="text-4xl font-black text-white text-shadow">
               Engelskajakten
             </h1>
-            <p className="text-jungle-200 mt-2 text-lg">
+            <p className="text-gray-300 mt-2 text-lg">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
@@ -108,8 +108,8 @@ export default function HomePage() {
                       title={avatar.name}
                       className={`aspect-square rounded-xl text-2xl flex items-center justify-center transition-all overflow-hidden ${
                         selectedAvatar === avatar.id
-                          ? "bg-jungle-100 dark:bg-jungle-800 ring-2 ring-jungle-500 scale-110"
-                          : "bg-gray-100 dark:bg-gray-700 hover:bg-jungle-50 dark:hover:bg-jungle-900/30"
+                          ? "bg-gray-200 dark:bg-gray-600 ring-2 ring-gray-500 scale-110"
+                          : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
                       }`}
                     >
                       {avatar.image ? (
@@ -128,7 +128,7 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                className="w-full btn-primary bg-jungle-600 hover:bg-jungle-700 disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4"
+                className="w-full btn-primary bg-gray-900 hover:bg-black disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4"
               >
                 Starta jakten!
               </button>
