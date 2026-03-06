@@ -26,3 +26,8 @@ dist-ssr
 # Backup files (keeping these in git for download)
 # *.zip
 # library-backup-*.json
+
+# Next.js build artifacts (root level)
+.next/
+next-env.d.ts
+tsconfig.tsbuildinfo
