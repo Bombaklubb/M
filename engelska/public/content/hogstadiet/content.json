@@ -13,22 +13,192 @@
           "type": "multiple-choice",
           "question": "Which sentence is in the present perfect?",
           "options": [
-            "She visited Paris last year.",
-            "She has visited Paris.",
-            "She is visiting Paris.",
-            "She visits Paris often."
+            "She went to Paris.",
+            "She has been to Paris.",
+            "She goes to Paris.",
+            "She is going to Paris."
           ],
           "correctIndex": 1,
-          "explanation": "Present perfect = have/has + past participle. 'She has visited' = she has the experience of visiting Paris.",
-          "hint": "Perfekt (present perfect) bildas med have/has + perfektparticip. Nyckelord: since, for, just, already, never, ever."
+          "explanation": "'Has been' uses have/has + past participle. This is present perfect.",
+          "hint": "Present perfect: have/has + past participle."
         },
         {
           "id": "hog-g1-2",
           "type": "fill-in-blank",
-          "sentence": "I ___ (never/eat) sushi before.",
-          "answer": "have never eaten",
-          "hint": "Nyckelord → perfekt: have/has + perfektparticip. T.ex. 'She has lived here since 2010.'",
-          "explanation": "For experiences: I have never eaten sushi — it means this is an experience you haven't had yet."
+          "sentence": "I ___ (never/see) a whale before.",
+          "answer": "have never seen",
+          "hint": "Present perfect med 'never': have/has + never + past participle.",
+          "explanation": "Present perfect: have + never + past participle. see → seen."
+        },
+        {
+          "id": "hog-g1-3",
+          "type": "multiple-choice",
+          "question": "'We ___ in this house for ten years.' Choose the correct form.",
+          "options": [
+            "live",
+            "lived",
+            "have lived",
+            "are living"
+          ],
+          "correctIndex": 2,
+          "explanation": "'For ten years' with an ongoing situation uses present perfect: have lived.",
+          "hint": "'For' + tidsperiod med ongoing situation → present perfect."
+        },
+        {
+          "id": "hog-g1-4",
+          "type": "fill-in-blank",
+          "sentence": "___ you ever ___ (eat) sushi?",
+          "answer": "Have ... eaten",
+          "hint": "Frågekonstruktion: Have + subject + past participle?",
+          "explanation": "Present perfect question: Have you ever eaten...?"
+        },
+        {
+          "id": "hog-g1-5",
+          "type": "multiple-choice",
+          "question": "What is the past participle of 'write'?",
+          "options": [
+            "wrote",
+            "writed",
+            "written",
+            "writing"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Write' is irregular: write – wrote – written.",
+          "hint": "write → wrote → written"
+        },
+        {
+          "id": "hog-g1-6",
+          "type": "fill-in-blank",
+          "sentence": "She ___ just ___ (finish) her homework.",
+          "answer": "has ... finished",
+          "hint": "'Just' med present perfect: has/have + just + past participle.",
+          "explanation": "'Just' signals recent completion in present perfect."
+        },
+        {
+          "id": "hog-g1-7",
+          "type": "build-sentence",
+          "instruction": "Build a present perfect sentence.",
+          "words": [
+            "They",
+            "have",
+            "already",
+            "eaten",
+            "dinner",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "They have already eaten dinner. – 'already' signals present perfect."
+        },
+        {
+          "id": "hog-g1-8",
+          "type": "multiple-choice",
+          "question": "'___ she ___ (call) yet?' Choose the correct form.",
+          "options": [
+            "Did she call",
+            "Has she called",
+            "Does she call",
+            "Is she calling"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Yet' in questions signals present perfect: Has she called yet?",
+          "hint": "'Yet' i frågor → present perfect."
+        },
+        {
+          "id": "hog-g1-9",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (not/reply) to my message yet.",
+          "answer": "hasn't replied",
+          "hint": "Negation i present perfect: hasn't/haven't + past participle.",
+          "explanation": "Negative present perfect with he: hasn't + past participle."
+        },
+        {
+          "id": "hog-g1-10",
+          "type": "multiple-choice",
+          "question": "What is the past participle of 'go'?",
+          "options": [
+            "went",
+            "goed",
+            "gone",
+            "going"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Go' is irregular: go – went – gone.",
+          "hint": "go → went → gone"
+        },
+        {
+          "id": "hog-g1-11",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (live) here since 2018.",
+          "answer": "have lived",
+          "hint": "'Since' + startpunkt → present perfect.",
+          "explanation": "'Since' marks the starting point of an action continuing to now: have lived."
+        },
+        {
+          "id": "hog-g1-12",
+          "type": "multiple-choice",
+          "question": "Which adverb is typical for present perfect?",
+          "options": [
+            "yesterday",
+            "last year",
+            "already",
+            "in 2020"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Already' signals completed actions relevant to now – used with present perfect.",
+          "hint": "Typiska adverb: already, yet, just, ever, never, since, for."
+        },
+        {
+          "id": "hog-g1-13",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (visit) Rome three times.",
+          "answer": "have visited",
+          "hint": "Antal gånger + no specific past time → present perfect.",
+          "explanation": "Present perfect for experiences (number of times): have visited."
+        },
+        {
+          "id": "hog-g1-14",
+          "type": "build-sentence",
+          "instruction": "Build a present perfect negative sentence.",
+          "words": [
+            "I",
+            "haven't",
+            "seen",
+            "that",
+            "film",
+            "yet",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "I haven't seen that film yet. – 'yet' in negative present perfect."
+        },
+        {
+          "id": "hog-g1-15",
+          "type": "multiple-choice",
+          "question": "What is the difference between 'I saw the film' and 'I have seen the film'?",
+          "options": [
+            "No difference – they mean the same.",
+            "'I saw' refers to a specific past time; 'I have seen' focuses on the experience.",
+            "'I have seen' is past simple; 'I saw' is present perfect.",
+            "'I saw' is more formal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Past simple (saw) refers to a finished time; present perfect (have seen) focuses on the result/experience now.",
+          "hint": "Past simple: specifik tid. Present perfect: upplevelse/resultat nu."
         }
       ]
     },
@@ -43,24 +213,210 @@
         {
           "id": "hog-g2-1",
           "type": "multiple-choice",
-          "question": "Which is a correct First Conditional sentence?",
+          "question": "Which is a correct first conditional sentence?",
           "options": [
-            "If it will rain, I would stay inside.",
-            "If it rains, I will stay inside.",
-            "If it rained, I will stay inside.",
-            "If it rains, I would stay inside."
+            "If she will study, she will pass.",
+            "If she studies, she will pass.",
+            "If she studied, she would pass.",
+            "If she study, she passes."
           ],
           "correctIndex": 1,
-          "explanation": "First Conditional (real/possible situations): If + present simple, will + base verb.",
-          "hint": "Typ 1-konditionalis (möjlig situation): If + presens → will + grundform. T.ex. 'If it rains, I will stay home.'"
+          "explanation": "First conditional: If + present simple, will + base verb.",
+          "hint": "1. konditionalis: If + presens, will + grundform."
         },
         {
           "id": "hog-g2-2",
           "type": "fill-in-blank",
-          "sentence": "If I ___ (be) taller, I would play basketball.",
+          "sentence": "If it ___ (rain) tomorrow, we'll stay at home.",
+          "answer": "rains",
+          "hint": "1. konditionalis: If + presens (inte will) i if-satsen.",
+          "explanation": "First conditional: if-clause uses present simple (rains, not 'will rain')."
+        },
+        {
+          "id": "hog-g2-3",
+          "type": "multiple-choice",
+          "question": "Which is a correct second conditional sentence?",
+          "options": [
+            "If I have a million dollars, I buy a yacht.",
+            "If I had a million dollars, I would buy a yacht.",
+            "If I had a million dollars, I will buy a yacht.",
+            "If I have a million dollars, I would buy a yacht."
+          ],
+          "correctIndex": 1,
+          "explanation": "Second conditional: If + past simple, would + base verb.",
+          "hint": "2. konditionalis (hypotetisk): If + preteritum, would + grundform."
+        },
+        {
+          "id": "hog-g2-4",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ (be) taller, I would be a basketball player.",
           "answer": "were",
-          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform.",
-          "explanation": "Second Conditional (hypothetical/unreal): If + past simple (were for all), would + base verb."
+          "hint": "I 2. konditionalis används 'were' (inte 'was') för alla personer.",
+          "explanation": "In 2nd conditional, use 'were' for all subjects: If I were…"
+        },
+        {
+          "id": "hog-g2-5",
+          "type": "multiple-choice",
+          "question": "'If she ___ harder, she would have passed the test.' (3rd conditional)",
+          "options": [
+            "studies",
+            "studied",
+            "had studied",
+            "has studied"
+          ],
+          "correctIndex": 2,
+          "explanation": "Third conditional: If + past perfect, would have + past participle.",
+          "hint": "3. konditionalis: If + past perfect, would have + past participle."
+        },
+        {
+          "id": "hog-g2-6",
+          "type": "fill-in-blank",
+          "sentence": "If you heat water to 100°C, it ___ (boil). (Zero conditional)",
+          "answer": "boils",
+          "hint": "Noll-konditionalis (faktum): If + presens, presens.",
+          "explanation": "Zero conditional (facts): If + present simple, present simple."
+        },
+        {
+          "id": "hog-g2-7",
+          "type": "build-sentence",
+          "instruction": "Build a first conditional sentence.",
+          "words": [
+            "If",
+            "you",
+            "miss",
+            "the",
+            "bus,",
+            "you",
+            "will",
+            "be",
+            "late",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "explanation": "If you miss the bus, you will be late. – first conditional."
+        },
+        {
+          "id": "hog-g2-8",
+          "type": "multiple-choice",
+          "question": "'If I ___ you, I would apologize.' Choose the correct form.",
+          "options": [
+            "am",
+            "was",
+            "were",
+            "have been"
+          ],
+          "correctIndex": 2,
+          "explanation": "In 2nd conditional, 'were' is used for all persons (formal).",
+          "hint": "2. konditionalis: If I were you… (inte 'was')."
+        },
+        {
+          "id": "hog-g2-9",
+          "type": "fill-in-blank",
+          "sentence": "If they had left earlier, they ___ (not/miss) the train.",
+          "answer": "wouldn't have missed",
+          "hint": "3. konditionalis: would have + past participle i huvudsatsen.",
+          "explanation": "Third conditional: wouldn't have + past participle."
+        },
+        {
+          "id": "hog-g2-10",
+          "type": "multiple-choice",
+          "question": "Which conditional type talks about a real, possible future situation?",
+          "options": [
+            "Zero conditional",
+            "First conditional",
+            "Second conditional",
+            "Third conditional"
+          ],
+          "correctIndex": 1,
+          "explanation": "First conditional describes real, possible future situations: If + present, will…",
+          "hint": "1. konditionalis = möjlig, verklig situation i framtiden."
+        },
+        {
+          "id": "hog-g2-11",
+          "type": "fill-in-blank",
+          "sentence": "If you ___ (touch) fire, you get burned. (Zero conditional)",
+          "answer": "touch",
+          "hint": "Noll-konditionalis: If + presens, presens.",
+          "explanation": "Zero conditional for general truths: if + present simple."
+        },
+        {
+          "id": "hog-g2-12",
+          "type": "build-sentence",
+          "instruction": "Build a second conditional sentence.",
+          "words": [
+            "If",
+            "she",
+            "had",
+            "more",
+            "time,",
+            "she",
+            "would",
+            "travel",
+            "the",
+            "world",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "explanation": "If she had more time, she would travel the world. – 2nd conditional."
+        },
+        {
+          "id": "hog-g2-13",
+          "type": "multiple-choice",
+          "question": "What does the third conditional express?",
+          "options": [
+            "A general truth",
+            "A possible future event",
+            "A regret or imagined past",
+            "A current habit"
+          ],
+          "correctIndex": 2,
+          "explanation": "Third conditional refers to the past: imagining a different outcome, often expressing regret.",
+          "hint": "3. konditionalis handlar om ett tänkt (ej verkligt) förflutet."
+        },
+        {
+          "id": "hog-g2-14",
+          "type": "fill-in-blank",
+          "sentence": "___ you come to the party if we invited you? (2nd conditional)",
+          "answer": "Would",
+          "hint": "Huvudsats i 2. konditionalis börjar med Would.",
+          "explanation": "2nd conditional main clause: Would + subject + base verb."
+        },
+        {
+          "id": "hog-g2-15",
+          "type": "multiple-choice",
+          "question": "'Unless you hurry, you ___ the bus.' Choose the correct form.",
+          "options": [
+            "miss",
+            "will miss",
+            "would miss",
+            "would have missed"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Unless' = 'if not'. Unless you hurry = If you don't hurry → first conditional.",
+          "hint": "Unless = if not. Välj rätt konditionalisform."
         }
       ]
     },
@@ -80,19 +436,197 @@
             "The chef cooked the meal.",
             "The meal was cooked by the chef.",
             "The chef is cooking the meal.",
-            "The chef will cook the meal."
+            "The chef has cooked the meal."
           ],
           "correctIndex": 1,
-          "explanation": "Passive voice: be + past participle. 'The meal was cooked' — the meal receives the action.",
-          "hint": "Passiv form: 'to be' i rätt form + perfektparticip. T.ex. 'The meal was cooked by the chef.'"
+          "explanation": "Passive: be + past participle. 'was cooked' is passive.",
+          "hint": "Passiv: be + past participle. Vem som gör handlingen är sekundärt."
         },
         {
           "id": "hog-g3-2",
           "type": "fill-in-blank",
-          "sentence": "The Eiffel Tower ___ (build) in 1889.",
-          "answer": "was built",
-          "hint": "Dåtid passiv: was/were + perfektparticip. T.ex. 'The tower was built in 1889.'",
-          "explanation": "Past passive: was/were + past participle. Build → built. 'was built' = someone built it (in the past)."
+          "sentence": "English ___ (speak) all over the world.",
+          "answer": "is spoken",
+          "hint": "Passiv presens: is/are + past participle.",
+          "explanation": "Present passive: is/are + past participle. speak → spoken."
+        },
+        {
+          "id": "hog-g3-3",
+          "type": "multiple-choice",
+          "question": "Change to passive: 'They built this bridge in 1900.'",
+          "options": [
+            "This bridge built in 1900.",
+            "This bridge was built in 1900.",
+            "This bridge is built in 1900.",
+            "This bridge has built in 1900."
+          ],
+          "correctIndex": 1,
+          "explanation": "Past passive: was/were + past participle. build → built.",
+          "hint": "Passiv datid: was/were + past participle."
+        },
+        {
+          "id": "hog-g3-4",
+          "type": "fill-in-blank",
+          "sentence": "The window ___ (break) by the football yesterday.",
+          "answer": "was broken",
+          "hint": "Passiv datid: was + past participle.",
+          "explanation": "Past passive: was + past participle. break → broken."
+        },
+        {
+          "id": "hog-g3-5",
+          "type": "multiple-choice",
+          "question": "'The report ___ finished by tomorrow.' Choose the correct passive form.",
+          "options": [
+            "will finish",
+            "will be finished",
+            "is finished",
+            "has been finished"
+          ],
+          "correctIndex": 1,
+          "explanation": "Future passive: will be + past participle.",
+          "hint": "Passiv futurum: will be + past participle."
+        },
+        {
+          "id": "hog-g3-6",
+          "type": "fill-in-blank",
+          "sentence": "A new hospital ___ (build) in the city centre.",
+          "answer": "is being built",
+          "hint": "Passiv pågående presens: is/are being + past participle.",
+          "explanation": "Present continuous passive: is/are being + past participle."
+        },
+        {
+          "id": "hog-g3-7",
+          "type": "build-sentence",
+          "instruction": "Build a passive sentence.",
+          "words": [
+            "The",
+            "cake",
+            "was",
+            "baked",
+            "by",
+            "my",
+            "mother",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "explanation": "The cake was baked by my mother. – past passive with 'by'."
+        },
+        {
+          "id": "hog-g3-8",
+          "type": "multiple-choice",
+          "question": "When do we use the passive voice?",
+          "options": [
+            "Always, instead of active voice.",
+            "When the agent is unknown, unimportant, or obvious.",
+            "Only in formal writing.",
+            "Only in past tense."
+          ],
+          "correctIndex": 1,
+          "explanation": "We use passive when the doer is unknown, unimportant, or when we focus on the action/result.",
+          "hint": "Passiv används när vem som gör handlingen är okänt, oviktigt eller underförstått."
+        },
+        {
+          "id": "hog-g3-9",
+          "type": "fill-in-blank",
+          "sentence": "The winner ___ (announce) soon.",
+          "answer": "will be announced",
+          "hint": "Passiv futurum: will be + past participle.",
+          "explanation": "Future passive: will be + past participle. announce → announced."
+        },
+        {
+          "id": "hog-g3-10",
+          "type": "multiple-choice",
+          "question": "'Many cars ___ every year in Sweden.' Choose the correct passive.",
+          "options": [
+            "produce",
+            "are produced",
+            "were produced",
+            "has been produced"
+          ],
+          "correctIndex": 1,
+          "explanation": "Present passive with plural subject: are + past participle.",
+          "hint": "Passiv presens med pluralsubjekt: are + past participle."
+        },
+        {
+          "id": "hog-g3-11",
+          "type": "fill-in-blank",
+          "sentence": "The letter ___ (write) by Emma yesterday.",
+          "answer": "was written",
+          "hint": "Passiv datid: was + past participle.",
+          "explanation": "Past passive: was + past participle. write → written."
+        },
+        {
+          "id": "hog-g3-12",
+          "type": "build-sentence",
+          "instruction": "Change to passive: 'Scientists have discovered a new planet.'",
+          "words": [
+            "A",
+            "new",
+            "planet",
+            "has",
+            "been",
+            "discovered",
+            "by",
+            "scientists",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "explanation": "A new planet has been discovered by scientists. – present perfect passive."
+        },
+        {
+          "id": "hog-g3-13",
+          "type": "multiple-choice",
+          "question": "'The thief ___ (arrest) by the police.' Past passive?",
+          "options": [
+            "arrested",
+            "was arrested",
+            "is arrested",
+            "arrests"
+          ],
+          "correctIndex": 1,
+          "explanation": "Past passive: was/were + past participle. arrest → arrested.",
+          "hint": "Passiv datid: was/were + past participle."
+        },
+        {
+          "id": "hog-g3-14",
+          "type": "fill-in-blank",
+          "sentence": "These cars ___ (manufacture) in Germany.",
+          "answer": "are manufactured",
+          "hint": "Passiv presens med plural: are + past participle.",
+          "explanation": "Present passive plural: are + past participle."
+        },
+        {
+          "id": "hog-g3-15",
+          "type": "multiple-choice",
+          "question": "'By whom ___ this poem written?' Choose the correct passive question.",
+          "options": [
+            "is",
+            "was",
+            "were",
+            "has"
+          ],
+          "correctIndex": 1,
+          "explanation": "'This poem was written' – past passive → question: was this poem written?",
+          "hint": "Passiv frågekonstruktion: was/were + subject + past participle?"
         }
       ]
     },
@@ -107,28 +641,102 @@
         {
           "id": "hog-g4-1",
           "type": "multiple-choice",
-          "question": "Direct: 'I am tired,' she said. What is the reported speech?",
+          "question": "'\"I love pizza,\" she said.' → Reported speech?",
           "options": [
-            "She said that she is tired.",
-            "She said that she was tired.",
-            "She said that I am tired.",
-            "She said she is being tired."
+            "She said she loved pizza.",
+            "She said she loves pizza.",
+            "She said she love pizza.",
+            "She said I love pizza."
           ],
-          "correctIndex": 1,
-          "explanation": "In reported speech, we 'backshift' tenses: am/is → was. She said that she was tired.",
-          "hint": "Indirekt tal: 'is/am' → 'was'. Presens backas ett steg till dåtid."
+          "correctIndex": 0,
+          "explanation": "In reported speech, present simple (love) shifts back to past simple (loved).",
+          "hint": "Indirekt tal: presens → preteritum."
         },
         {
           "id": "hog-g4-2",
+          "type": "fill-in-blank",
+          "sentence": "'I will help you.' → He said he ___ help me.",
+          "answer": "would",
+          "hint": "'will' i direkt tal → 'would' i indirekt tal.",
+          "explanation": "'Will' backshifts to 'would' in reported speech."
+        },
+        {
+          "id": "hog-g4-3",
+          "type": "multiple-choice",
+          "question": "'\"We are leaving now,\" they said.' → Reported speech?",
+          "options": [
+            "They said they are leaving now.",
+            "They said they were leaving.",
+            "They said we were leaving.",
+            "They said they will leave."
+          ],
+          "correctIndex": 1,
+          "explanation": "Present continuous (are leaving) shifts to past continuous (were leaving) in reported speech.",
+          "hint": "Pågående presens → pågående preteritum i indirekt tal."
+        },
+        {
+          "id": "hog-g4-4",
+          "type": "fill-in-blank",
+          "sentence": "'\"I have seen that film,\" she said.' → She said she ___ that film.",
+          "answer": "had seen",
+          "hint": "Present perfect → past perfect i indirekt tal.",
+          "explanation": "Present perfect (have seen) → past perfect (had seen) in reported speech."
+        },
+        {
+          "id": "hog-g4-5",
+          "type": "multiple-choice",
+          "question": "'\"Can you swim?\" he asked her.' → Reported question?",
+          "options": [
+            "He asked her if she can swim.",
+            "He asked her if she could swim.",
+            "He asked her could she swim.",
+            "He asked her if can she swim."
+          ],
+          "correctIndex": 1,
+          "explanation": "Yes/no questions in reported speech: asked if/whether + subject + verb. 'can' → 'could'.",
+          "hint": "Ja/nej-frågor i indirekt tal: asked if/whether + subjekt + verb."
+        },
+        {
+          "id": "hog-g4-6",
+          "type": "fill-in-blank",
+          "sentence": "'\"Don't open the window,\" the teacher said.' → The teacher told us ___ open the window.",
+          "answer": "not to",
+          "hint": "Negation i indirekt uppmaning: told + not to + grundform.",
+          "explanation": "Reported commands (negative): told us not to + base verb."
+        },
+        {
+          "id": "hog-g4-7",
+          "type": "multiple-choice",
+          "question": "What happens to 'this' in reported speech?",
+          "options": [
+            "It stays as 'this'.",
+            "It changes to 'that'.",
+            "It changes to 'these'.",
+            "It is deleted."
+          ],
+          "correctIndex": 1,
+          "explanation": "'This' typically becomes 'that' in reported speech (time and place references change).",
+          "hint": "Dempronomen ändras: this → that, here → there, now → then."
+        },
+        {
+          "id": "hog-g4-8",
+          "type": "fill-in-blank",
+          "sentence": "'\"Where do you live?\" she asked.' → She asked me where I ___.",
+          "answer": "lived",
+          "hint": "Indirekt fråga: frågepronomen + subjekt + verb (ej frågeordning).",
+          "explanation": "Reported questions use statement word order: where I lived (not where did I live)."
+        },
+        {
+          "id": "hog-g4-9",
           "type": "build-sentence",
-          "instruction": "Report this question: 'Where do you live?' she asked me.",
+          "instruction": "Build a reported speech sentence.",
           "words": [
-            "She",
-            "asked",
-            "me",
-            "where",
-            "I",
-            "lived",
+            "He",
+            "said",
+            "that",
+            "he",
+            "was",
+            "tired",
             "."
           ],
           "correctOrder": [
@@ -140,7 +748,89 @@
             5,
             6
           ],
-          "explanation": "Reported questions: no question word order (no inversion), backshift tense. 'do you live' → 'I lived'."
+          "explanation": "He said that he was tired. – 'am' → 'was' in reported speech."
+        },
+        {
+          "id": "hog-g4-10",
+          "type": "multiple-choice",
+          "question": "'\"I'll call you tomorrow,\" she promised.' → Reported speech?",
+          "options": [
+            "She promised she will call me tomorrow.",
+            "She promised she would call me the next day.",
+            "She promised she calls me tomorrow.",
+            "She promised she called me the day before."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Will' → 'would'; 'tomorrow' → 'the next day' in reported speech.",
+          "hint": "'tomorrow' → 'the next day'; 'will' → 'would'."
+        },
+        {
+          "id": "hog-g4-11",
+          "type": "fill-in-blank",
+          "sentence": "'\"Study hard,\" the teacher said.' → The teacher told us ___ hard.",
+          "answer": "to study",
+          "hint": "Uppmaningar i indirekt tal: told + to + grundform.",
+          "explanation": "Reported commands: told us to + base verb."
+        },
+        {
+          "id": "hog-g4-12",
+          "type": "multiple-choice",
+          "question": "When do we NOT need to backshift tenses in reported speech?",
+          "options": [
+            "Always backshift.",
+            "When the reporting verb is in the present tense.",
+            "Only in formal writing.",
+            "When reporting questions."
+          ],
+          "correctIndex": 1,
+          "explanation": "If the reporting verb is present (says, tells), no backshift is needed.",
+          "hint": "Om rapporteringsverbet är i presens behöver tempus inte backsiftas."
+        },
+        {
+          "id": "hog-g4-13",
+          "type": "fill-in-blank",
+          "sentence": "'\"Are you coming?\" she asked.' → She asked me if I ___ coming.",
+          "answer": "was",
+          "hint": "'Are' → 'was' i indirekt fråga.",
+          "explanation": "'Are' backshifts to 'was' in reported speech."
+        },
+        {
+          "id": "hog-g4-14",
+          "type": "build-sentence",
+          "instruction": "Build a reported question.",
+          "words": [
+            "She",
+            "asked",
+            "where",
+            "he",
+            "had",
+            "been",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "She asked where he had been. – 'had been' = backshift from 'has been'/'was'."
+        },
+        {
+          "id": "hog-g4-15",
+          "type": "multiple-choice",
+          "question": "'\"I can't come,\" he said.' → Reported speech?",
+          "options": [
+            "He said he can't come.",
+            "He said he couldn't come.",
+            "He said he won't come.",
+            "He said he shouldn't come."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Can't' → 'couldn't' in reported speech.",
+          "hint": "can → could; can't → couldn't i indirekt tal."
         }
       ]
     },
@@ -1812,6 +2502,210 @@
           "answer": "receive",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Receive stavas R-E-C-E-I-V-E."
+        }
+      ]
+    }
+  ],
+  "wordsearch": [
+    {
+      "id": "hog-ws1-grammar-terms",
+      "title": "Grammatiktermer",
+      "description": "Hitta engelska grammatiktermer i rutnätet.",
+      "icon": "📖",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "SUBJECT",
+          "clue": "Grammatikterm: subjekt"
+        },
+        {
+          "word": "OBJECT",
+          "clue": "Grammatikterm: objekt"
+        },
+        {
+          "word": "CLAUSE",
+          "clue": "Sats (with subject + verb)"
+        },
+        {
+          "word": "PASSIVE",
+          "clue": "Passiv form av verb"
+        },
+        {
+          "word": "PERFECT",
+          "clue": "Tempus: present ___"
+        },
+        {
+          "word": "MODAL",
+          "clue": "Hjälpverb (can, should, must)"
+        },
+        {
+          "word": "TENSE",
+          "clue": "Verbform för tid"
+        },
+        {
+          "word": "PHRASE",
+          "clue": "Ordgrupp utan subjekt+predikat"
+        },
+        {
+          "word": "PRONOUN",
+          "clue": "Ord som ersätter substantiv"
+        },
+        {
+          "word": "ADVERB",
+          "clue": "Beskriver verb eller adjektiv"
+        }
+      ]
+    },
+    {
+      "id": "hog-ws2-irregular-verbs",
+      "title": "Oregelbundna verb",
+      "description": "Hitta oregelbundna verbformer.",
+      "icon": "🔄",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "BOUGHT",
+          "clue": "Past form of 'buy'"
+        },
+        {
+          "word": "TAUGHT",
+          "clue": "Past form of 'teach'"
+        },
+        {
+          "word": "THOUGHT",
+          "clue": "Past form of 'think'"
+        },
+        {
+          "word": "CAUGHT",
+          "clue": "Past form of 'catch'"
+        },
+        {
+          "word": "BROUGHT",
+          "clue": "Past form of 'bring'"
+        },
+        {
+          "word": "WROTE",
+          "clue": "Past form of 'write'"
+        },
+        {
+          "word": "SPOKE",
+          "clue": "Past form of 'speak'"
+        },
+        {
+          "word": "CHOSE",
+          "clue": "Past form of 'choose'"
+        },
+        {
+          "word": "DROVE",
+          "clue": "Past form of 'drive'"
+        },
+        {
+          "word": "FROZE",
+          "clue": "Past form of 'freeze'"
+        }
+      ]
+    }
+  ],
+  "crossword": [
+    {
+      "id": "hog-cw1-grammar",
+      "title": "Korsord: Grammatik",
+      "description": "Ord kopplade till engelska grammatik.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "A small furry pet (katt)",
+          "answer": "CAT",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Past tense of 'win'",
+          "answer": "WON",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "Farm animal giving milk",
+          "answer": "COW",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "In the past ('three days ___')",
+          "answer": "AGO",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "A type of metal / small can",
+          "answer": "TIN",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw2-vocabulary",
+      "title": "Korsord: Vokabulär",
+      "description": "Ord ur vardagsvokabulären.",
+      "icon": "📚",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "The star that gives us light and heat",
+          "answer": "SUN",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Past tense of 'meet'",
+          "answer": "MET",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "The total when you add numbers",
+          "answer": "SUM",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "To make use of something",
+          "answer": "USE",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "A mesh for catching fish or for a goal",
+          "answer": "NET",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
         }
       ]
     }

@@ -11,24 +11,204 @@
         {
           "id": "gym-g1-1",
           "type": "multiple-choice",
-          "question": "Which sentence uses the past perfect correctly?",
+          "question": "'By the time she arrived, the film ___ already ___.' Choose the correct tense.",
           "options": [
-            "When she arrived, he already left.",
-            "When she arrived, he had already left.",
-            "When she arrived, he has already left.",
-            "When she arrived, he was already leaving."
+            "had / started",
+            "has / started",
+            "was / started",
+            "did / start"
           ],
-          "correctIndex": 1,
-          "explanation": "Past perfect (had + past participle) is used for an action completed BEFORE another past action. 'He had left' happened before 'she arrived'.",
-          "hint": "Pluskvamperfekt (past perfect): had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse. T.ex. 'When she arrived, he had already left.'"
+          "correctIndex": 0,
+          "explanation": "Past perfect: had + past participle. Describes an action completed before another past action.",
+          "hint": "Past perfect: had + past participle – något som hände INNAN en annan förfluten händelse."
         },
         {
           "id": "gym-g1-2",
           "type": "fill-in-blank",
-          "sentence": "By the time you read this letter, I ___ (leave) the country.",
-          "answer": "will have left",
-          "hint": "Framtida perfekt: will have + perfektparticip. Handling som är avslutad vid en framtida tidpunkt.",
-          "explanation": "Future perfect (will + have + past participle) describes an action completed before a specific point in the future."
+          "sentence": "She ___ (work) for the company for five years before she resigned.",
+          "answer": "had been working",
+          "hint": "Past perfect continuous: had been + -ing – pågående handling fram till en punkt i det förflutna.",
+          "explanation": "Past perfect continuous: had been + -ing verb. Shows duration up to a past point."
+        },
+        {
+          "id": "gym-g1-3",
+          "type": "multiple-choice",
+          "question": "'I ___ to London three times this year.' Choose the correct tense.",
+          "options": [
+            "went",
+            "had gone",
+            "have been",
+            "was going"
+          ],
+          "correctIndex": 2,
+          "explanation": "Present perfect (have been) for experiences in an unfinished time period (this year).",
+          "hint": "'This year' (ej avslutat) + erfarenhet → present perfect."
+        },
+        {
+          "id": "gym-g1-4",
+          "type": "fill-in-blank",
+          "sentence": "While he ___ (read), the phone rang.",
+          "answer": "was reading",
+          "hint": "Past continuous för pågående handling som avbryts av simple past.",
+          "explanation": "Past continuous (was reading) for background action interrupted by past simple (rang)."
+        },
+        {
+          "id": "gym-g1-5",
+          "type": "multiple-choice",
+          "question": "'He realised he ___ his keys at home.' Which tense?",
+          "options": [
+            "left",
+            "was leaving",
+            "has left",
+            "had left"
+          ],
+          "correctIndex": 3,
+          "explanation": "Past perfect (had left) for action before another past action (realised).",
+          "hint": "Past perfect: handling INNAN en annan preteritumshandling."
+        },
+        {
+          "id": "gym-g1-6",
+          "type": "fill-in-blank",
+          "sentence": "By 2030, scientists ___ (develop) a cure for many diseases.",
+          "answer": "will have developed",
+          "hint": "Future perfect: will have + past participle – färdigt INNAN en framtida tidpunkt.",
+          "explanation": "Future perfect: will have + past participle. Completed before a future point."
+        },
+        {
+          "id": "gym-g1-7",
+          "type": "build-sentence",
+          "instruction": "Build a sentence using past perfect.",
+          "words": [
+            "He",
+            "had",
+            "finished",
+            "the",
+            "report",
+            "before",
+            "the",
+            "meeting",
+            "started",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "explanation": "He had finished the report before the meeting started. – past perfect for prior action."
+        },
+        {
+          "id": "gym-g1-8",
+          "type": "multiple-choice",
+          "question": "'She ___ in New York when she met her husband.' Choose the correct tense.",
+          "options": [
+            "lived",
+            "was living",
+            "has lived",
+            "had lived"
+          ],
+          "correctIndex": 1,
+          "explanation": "Past continuous (was living) for background circumstances around a specific past event.",
+          "hint": "Past continuous: bakgrundshandling när något annat hände."
+        },
+        {
+          "id": "gym-g1-9",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (travel) for six hours when the engine broke down.",
+          "answer": "had been travelling",
+          "hint": "Past perfect continuous: had been + -ing – pågående handling innan ett avbrott i det förflutna.",
+          "explanation": "Past perfect continuous: had been + -ing. Emphasises duration before a past event."
+        },
+        {
+          "id": "gym-g1-10",
+          "type": "multiple-choice",
+          "question": "'By the end of this lesson, we ___ all the verb tenses.' Future perfect?",
+          "options": [
+            "will learn",
+            "will be learning",
+            "will have learned",
+            "are going to learn"
+          ],
+          "correctIndex": 2,
+          "explanation": "Future perfect (will have learned) for completion before a future deadline.",
+          "hint": "Future perfect: will have + past participle – klart INNAN en framtida tidpunkt."
+        },
+        {
+          "id": "gym-g1-11",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (not/see) this film before, so I'm excited.",
+          "answer": "haven't seen",
+          "hint": "Present perfect för erfarenhet (eller brist på erfarenhet) fram till nu.",
+          "explanation": "Present perfect for experience up to now: haven't seen."
+        },
+        {
+          "id": "gym-g1-12",
+          "type": "multiple-choice",
+          "question": "Which tense best completes: '___ all morning; that's why I'm tired now.'",
+          "options": [
+            "I studied",
+            "I have been studying",
+            "I had studied",
+            "I study"
+          ],
+          "correctIndex": 1,
+          "explanation": "Present perfect continuous (have been studying) shows a recent activity with a present result.",
+          "hint": "Present perfect continuous: pågående aktivitet nyligen → resultat nu."
+        },
+        {
+          "id": "gym-g1-13",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (write) her novel for three years before it was published.",
+          "answer": "had been writing",
+          "hint": "Past perfect continuous för pågående aktivitet fram till en punkt i det förflutna.",
+          "explanation": "Past perfect continuous: had been writing – emphasises duration before publication."
+        },
+        {
+          "id": "gym-g1-14",
+          "type": "build-sentence",
+          "instruction": "Build a future perfect sentence.",
+          "words": [
+            "By",
+            "next",
+            "year,",
+            "she",
+            "will",
+            "have",
+            "graduated",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "explanation": "By next year, she will have graduated. – future perfect."
+        },
+        {
+          "id": "gym-g1-15",
+          "type": "multiple-choice",
+          "question": "'She looked tired because she ___ all night.' Choose the correct tense.",
+          "options": [
+            "studies",
+            "has studied",
+            "had been studying",
+            "will study"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past perfect continuous (had been studying) shows a prolonged past activity causing a past state.",
+          "hint": "Past perfect continuous: förklara ett förflutet tillstånd med en pågående aktivitet."
         }
       ]
     },
@@ -43,24 +223,200 @@
         {
           "id": "gym-g2-1",
           "type": "multiple-choice",
-          "question": "'The lights are on. She ___ be home.' Which modal expresses logical deduction (near certainty)?",
+          "question": "'You ___ have told me earlier. I could have helped.' Which modal?",
           "options": [
-            "might",
-            "must",
+            "should",
             "could",
-            "should"
+            "might",
+            "must"
           ],
-          "correctIndex": 1,
-          "explanation": "'Must' expresses near certainty based on evidence. 'The lights are on → she must be home'.",
-          "hint": "Modalverb: must (stark skyldighet/slutsats), should (råd), might/could (möjlighet), would (hypotetisk)."
+          "correctIndex": 0,
+          "explanation": "'Should have + past participle' expresses criticism or regret about a past action.",
+          "hint": "'should have' = borde ha (kritik eller ånger om förflutet)."
         },
         {
           "id": "gym-g2-2",
           "type": "fill-in-blank",
-          "sentence": "You ___ have told me earlier! I would have helped.",
-          "answer": "should",
-          "hint": "'Should' uttrycker råd eller mild skyldighet. T.ex. 'You should see a doctor.'",
-          "explanation": "'Should have + past participle' expresses regret or criticism about a past action that didn't happen."
+          "sentence": "She ___ have left already — her coat is gone.",
+          "answer": "must",
+          "hint": "'must have' = nästan säkert att något hände (logisk slutledning).",
+          "explanation": "'Must have + past participle' = logical deduction about the past."
+        },
+        {
+          "id": "gym-g2-3",
+          "type": "multiple-choice",
+          "question": "'He ___ have taken the last bus — I'm not sure.' Which modal expresses possibility?",
+          "options": [
+            "must",
+            "should",
+            "might",
+            "would"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Might have + past participle' expresses possibility about the past.",
+          "hint": "'might have' = möjligen hände något i det förflutna."
+        },
+        {
+          "id": "gym-g2-4",
+          "type": "fill-in-blank",
+          "sentence": "You ___ have worried so much — everything is fine!",
+          "answer": "needn't",
+          "hint": "'needn't have' = det var onödigt (det du gjorde var inte nödvändigt).",
+          "explanation": "'Needn't have + past participle' = it wasn't necessary (but you did it)."
+        },
+        {
+          "id": "gym-g2-5",
+          "type": "multiple-choice",
+          "question": "'I wish I ___ taken the job.' Which form is correct?",
+          "options": [
+            "had",
+            "have",
+            "would have",
+            "did"
+          ],
+          "correctIndex": 0,
+          "explanation": "'I wish + past perfect' expresses regret about a past situation.",
+          "hint": "'I wish + past perfect' = ånger om förflutet."
+        },
+        {
+          "id": "gym-g2-6",
+          "type": "fill-in-blank",
+          "sentence": "She would rather ___ (stay) home than go to the party.",
+          "answer": "stay",
+          "hint": "'would rather' + grundform (inte infinitiv med to).",
+          "explanation": "'Would rather' + base verb (without 'to')."
+        },
+        {
+          "id": "gym-g2-7",
+          "type": "build-sentence",
+          "instruction": "Build a sentence expressing logical deduction.",
+          "words": [
+            "He",
+            "must",
+            "have",
+            "forgotten",
+            "the",
+            "meeting",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "He must have forgotten the meeting. – 'must have' for past deduction."
+        },
+        {
+          "id": "gym-g2-8",
+          "type": "multiple-choice",
+          "question": "'You ___ park here — it's illegal!' Which modal expresses prohibition?",
+          "options": [
+            "shouldn't",
+            "couldn't",
+            "mustn't",
+            "mightn't"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Mustn't' expresses prohibition (it is not allowed).",
+          "hint": "'mustn't' = förbjudet. Skilj från 'needn't' (onödigt)."
+        },
+        {
+          "id": "gym-g2-9",
+          "type": "fill-in-blank",
+          "sentence": "She ___ have been lying — the evidence proved it.",
+          "answer": "couldn't",
+          "hint": "'couldn't have' = det var omöjligt att något hände.",
+          "explanation": "'Couldn't have + past participle' = it was impossible."
+        },
+        {
+          "id": "gym-g2-10",
+          "type": "multiple-choice",
+          "question": "Which sentence expresses ability in the past?",
+          "options": [
+            "She can swim.",
+            "She could swim when she was young.",
+            "She would swim.",
+            "She should swim."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Could' expresses past ability (was able to).",
+          "hint": "'could' = förmåga i det förflutna."
+        },
+        {
+          "id": "gym-g2-11",
+          "type": "fill-in-blank",
+          "sentence": "It ___ rain later — bring an umbrella just in case.",
+          "answer": "might",
+          "hint": "'might' = osäker möjlighet.",
+          "explanation": "'Might' expresses uncertain possibility."
+        },
+        {
+          "id": "gym-g2-12",
+          "type": "build-sentence",
+          "instruction": "Build a sentence expressing regret.",
+          "words": [
+            "I",
+            "should",
+            "have",
+            "studied",
+            "harder",
+            "for",
+            "the",
+            "exam",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "explanation": "I should have studied harder for the exam. – regret about the past."
+        },
+        {
+          "id": "gym-g2-13",
+          "type": "multiple-choice",
+          "question": "'By now, she ___ arrived in Tokyo.' Which modal expresses a confident deduction about the present?",
+          "options": [
+            "must have",
+            "should have",
+            "might have",
+            "could have"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Must have' shows confident logical deduction about a completed action.",
+          "hint": "Säker logisk slutledning om förflutet: must have."
+        },
+        {
+          "id": "gym-g2-14",
+          "type": "fill-in-blank",
+          "sentence": "You ___ (have to) wear a suit — it's a casual event.",
+          "answer": "don't have to",
+          "hint": "'don't have to' = inte nödvändigt (ej förbjudet).",
+          "explanation": "'Don't have to' = not necessary (different from 'mustn't' which is prohibition)."
+        },
+        {
+          "id": "gym-g2-15",
+          "type": "multiple-choice",
+          "question": "'She ___ be at home — her lights are on.' Which modal fits best?",
+          "options": [
+            "must",
+            "should",
+            "would",
+            "might"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Must' for strong deduction based on evidence: lights are on → she must be home.",
+          "hint": "Stark slutledning baserad på bevis: must."
         }
       ]
     },
@@ -77,68 +433,179 @@
           "type": "multiple-choice",
           "question": "Which sentence uses the subjunctive correctly?",
           "options": [
-            "The committee recommended that he takes a break.",
-            "The committee recommended that he take a break.",
-            "The committee recommended that he took a break.",
-            "The committee recommended that he should takes a break."
+            "I suggest that she studies more.",
+            "I suggest that she study more.",
+            "I suggest that she should studying.",
+            "I suggest that she is studying."
           ],
           "correctIndex": 1,
-          "explanation": "The present subjunctive uses the base form (no -s for third person): 'that he take'. Used after recommend, suggest, insist, demand + that.",
-          "hint": "Konjunktiv (subjunctive): after verb som recommend/insist/suggest + that används verbets grundform för alla pronomen. T.ex. 'The committee recommended that he resign.'"
+          "explanation": "The mandative subjunctive uses the base form after verbs like suggest, recommend, insist: 'she study' (not 'studies').",
+          "hint": "Mandative subjunctive: after suggest/recommend + that-clause, use base verb."
         },
         {
           "id": "gym-g3-2",
           "type": "fill-in-blank",
-          "sentence": "I wish I ___ (know) the answer to that question.",
-          "answer": "knew",
-          "hint": "Efter 'I wish' används konjunktiv past: were/knew/had (inte är/vet/har). Uttrycker ett önskemål om något som inte är sant.",
-          "explanation": "After 'wish' for present situations, use past tense. 'I wish I knew' = I don't know, and I wish I did."
-        }
-      ]
-    },
-    {
-      "id": "gym-g4-discourse",
-      "title": "Cohesion & Discourse Markers",
-      "description": "Konnektiv och kohesion — hur man skapar flöde i text.",
-      "icon": "🔗",
-      "pointsRequired": 0,
-      "bonusPoints": 40,
-      "exercises": [
-        {
-          "id": "gym-g4-1",
-          "type": "multiple-choice",
-          "question": "Which discourse marker best introduces a contrasting point?",
-          "options": [
-            "Furthermore",
-            "Nevertheless",
-            "For instance",
-            "As a result"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Nevertheless' introduces a contrast or concession. Furthermore adds information, For instance gives examples, As a result shows effect.",
-          "hint": "Kontrasterande diskursmarkörer: Nevertheless, However, Although, Despite, On the other hand."
+          "sentence": "The board recommended that the CEO ___ (resign) immediately.",
+          "answer": "resign",
+          "hint": "Subjunktiv: grundform utan -s efter 'recommend that'.",
+          "explanation": "Mandative subjunctive: base form (resign) without -s, regardless of subject."
         },
         {
-          "id": "gym-g4-2",
+          "id": "gym-g3-3",
+          "type": "multiple-choice",
+          "question": "Which phrase is a formal alternative to 'sorry'?",
+          "options": [
+            "I'm super sorry",
+            "Please accept my sincere apologies",
+            "My bad",
+            "Oops, sorry about that"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Please accept my sincere apologies' is a formal expression of regret.",
+          "hint": "Formella ursäkter: 'Please accept my apologies' / 'I sincerely apologise'."
+        },
+        {
+          "id": "gym-g3-4",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ (be) you, I would reconsider. (Subjunctive/formal)",
+          "answer": "were",
+          "hint": "Subjunktiv med 'were': If I were you… (formellt, för alla person).",
+          "explanation": "Subjunctive: 'were' for all persons in formal/literary conditional: If I were you."
+        },
+        {
+          "id": "gym-g3-5",
+          "type": "multiple-choice",
+          "question": "Which is the most formal way to begin a letter?",
+          "options": [
+            "Hey there,",
+            "Hi,",
+            "Dear Sir or Madam,",
+            "What's up,"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Dear Sir or Madam,' is the formal salutation used when the recipient is unknown.",
+          "hint": "Formell brevhälsning: Dear Sir or Madam,"
+        },
+        {
+          "id": "gym-g3-6",
+          "type": "fill-in-blank",
+          "sentence": "The committee demanded that the report ___ (submit) by Friday.",
+          "answer": "be submitted",
+          "hint": "Mandative subjunctive i passiv: be + past participle.",
+          "explanation": "Passive mandative subjunctive: demanded that + subject + be + past participle."
+        },
+        {
+          "id": "gym-g3-7",
+          "type": "multiple-choice",
+          "question": "'It is vital that every student ___ the examination.' Subjunctive?",
+          "options": [
+            "passes",
+            "pass",
+            "passed",
+            "passing"
+          ],
+          "correctIndex": 1,
+          "explanation": "After 'it is vital that', use base form (subjunctive): every student pass.",
+          "hint": "After 'it is + adjective + that': use base form (subjunctive)."
+        },
+        {
+          "id": "gym-g3-8",
+          "type": "fill-in-blank",
+          "sentence": "I would like to ___ my deepest gratitude for your assistance.",
+          "answer": "express",
+          "hint": "Formellt uttryck: 'would like to express my deepest gratitude'.",
+          "explanation": "Formal expression: 'I would like to express my deepest gratitude'."
+        },
+        {
+          "id": "gym-g3-9",
           "type": "build-sentence",
-          "instruction": "Build: 'While some critics argue that technology isolates people, others contend that it fosters global community.'",
+          "instruction": "Build a formal sentence with subjunctive.",
           "words": [
-            "While",
-            "some",
-            "critics",
-            "argue",
+            "It",
+            "is",
+            "essential",
             "that",
-            "technology",
-            "isolates",
-            "people",
-            ",",
-            "others",
-            "contend",
-            "that",
-            "it",
-            "fosters",
-            "global",
-            "community",
+            "every",
+            "member",
+            "attend",
+            "the",
+            "meeting",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "explanation": "It is essential that every member attend the meeting. – mandative subjunctive (attend, not attends)."
+        },
+        {
+          "id": "gym-g3-10",
+          "type": "multiple-choice",
+          "question": "Which sentence uses the most formal register?",
+          "options": [
+            "Can you send me the file?",
+            "Could you send me the file?",
+            "I was wondering if you might be able to send me the file.",
+            "Send me the file."
+          ],
+          "correctIndex": 2,
+          "explanation": "Using tentative structures ('I was wondering if…') is the most polite/formal.",
+          "hint": "Tentativa strukturer (I was wondering…) är mest formella."
+        },
+        {
+          "id": "gym-g3-11",
+          "type": "fill-in-blank",
+          "sentence": "Were he to arrive late, the meeting would start without him. (= If he ___ late...)",
+          "answer": "arrived",
+          "hint": "'Were + subject + to + infinitive' är en formell konditionalisstruktur.",
+          "explanation": "'Were he to arrive' is a formal inversion equivalent to 'If he arrived'."
+        },
+        {
+          "id": "gym-g3-12",
+          "type": "multiple-choice",
+          "question": "'___ God save the Queen!' Which mood is this?",
+          "options": [
+            "Indicative",
+            "Imperative",
+            "Subjunctive",
+            "Conditional"
+          ],
+          "correctIndex": 2,
+          "explanation": "'God save the Queen' is an optative subjunctive – expressing a wish or prayer.",
+          "hint": "'God save...' är en önskande/bedjande subjunktiv."
+        },
+        {
+          "id": "gym-g3-13",
+          "type": "fill-in-blank",
+          "sentence": "I would be most grateful if you ___ (could) forward the document at your earliest convenience.",
+          "answer": "could",
+          "hint": "Formell förfrågan med 'if you could...' + 'at your earliest convenience'.",
+          "explanation": "Formal request: I would be most grateful if you could + base verb."
+        },
+        {
+          "id": "gym-g3-14",
+          "type": "build-sentence",
+          "instruction": "Build a formal polite request.",
+          "words": [
+            "I",
+            "was",
+            "wondering",
+            "if",
+            "you",
+            "could",
+            "assist",
+            "me",
+            "with",
+            "this",
+            "matter",
             "."
           ],
           "correctOrder": [
@@ -153,14 +620,241 @@
             8,
             9,
             10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16
+            11
           ],
-          "explanation": "'While' introduces a concessive clause, elegantly presenting two opposing views in one sentence."
+          "explanation": "I was wondering if you could assist me with this matter. – formal/polite register."
+        },
+        {
+          "id": "gym-g3-15",
+          "type": "multiple-choice",
+          "question": "Which verb does NOT typically trigger the mandative subjunctive?",
+          "options": [
+            "recommend",
+            "insist",
+            "suggest",
+            "think"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Think' does not trigger the mandative subjunctive. 'Recommend', 'insist', 'suggest' do.",
+          "hint": "Mandative subjunctive triggas av: recommend, insist, suggest, demand, require, propose."
+        }
+      ]
+    },
+    {
+      "id": "gym-g4-discourse",
+      "title": "Cohesion & Discourse Markers",
+      "description": "Konnektiv och kohesion — hur man skapar flöde i text.",
+      "icon": "🔗",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "exercises": [
+        {
+          "id": "gym-g4-1",
+          "type": "multiple-choice",
+          "question": "Which word is a discourse marker that introduces a contrast?",
+          "options": [
+            "Furthermore",
+            "However",
+            "Therefore",
+            "In addition"
+          ],
+          "correctIndex": 1,
+          "explanation": "'However' introduces a contrast or counterargument.",
+          "hint": "'However' = kontrast/motargument."
+        },
+        {
+          "id": "gym-g4-2",
+          "type": "fill-in-blank",
+          "sentence": "The project was successful. ___, it took longer than expected.",
+          "answer": "However",
+          "hint": "Kontrastmarkör: However (däremot/dock).",
+          "explanation": "'However' signals a contrast between the two sentences."
+        },
+        {
+          "id": "gym-g4-3",
+          "type": "multiple-choice",
+          "question": "Which sentence best uses a discourse marker to add information?",
+          "options": [
+            "She is talented. However, she works hard.",
+            "She is talented. Furthermore, she works hard.",
+            "She is talented. Therefore, she works hard.",
+            "She is talented. In contrast, she works hard."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Furthermore' adds information/supports the previous point.",
+          "hint": "'Furthermore' / 'Moreover' / 'In addition' = lägger till information."
+        },
+        {
+          "id": "gym-g4-4",
+          "type": "fill-in-blank",
+          "sentence": "The weather was terrible. ___, we decided to cancel the trip.",
+          "answer": "Therefore",
+          "hint": "Följdmarkör: Therefore / As a result / Consequently.",
+          "explanation": "'Therefore' shows cause and effect: bad weather → cancel the trip."
+        },
+        {
+          "id": "gym-g4-5",
+          "type": "multiple-choice",
+          "question": "'___ her lack of experience, she performed brilliantly.' Which cohesion device?",
+          "options": [
+            "Because of",
+            "Despite",
+            "Although",
+            "Since"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Despite' + noun phrase shows contrast without a full clause.",
+          "hint": "'Despite' + substantivfras = trots (utan fullständig sats)."
+        },
+        {
+          "id": "gym-g4-6",
+          "type": "fill-in-blank",
+          "sentence": "Prices have risen. ___ ___, consumer spending has fallen.",
+          "answer": "As a result",
+          "hint": "Kausal kohesion: As a result / Therefore / Consequently.",
+          "explanation": "'As a result' shows the consequence of rising prices."
+        },
+        {
+          "id": "gym-g4-7",
+          "type": "build-sentence",
+          "instruction": "Build a sentence using a discourse marker of concession.",
+          "words": [
+            "Although",
+            "the",
+            "film",
+            "was",
+            "long,",
+            "it",
+            "was",
+            "very",
+            "entertaining",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "explanation": "Although the film was long, it was very entertaining. – concession with 'although'."
+        },
+        {
+          "id": "gym-g4-8",
+          "type": "multiple-choice",
+          "question": "Which discourse marker is used to introduce an example?",
+          "options": [
+            "Nevertheless",
+            "For instance",
+            "On the other hand",
+            "In conclusion"
+          ],
+          "correctIndex": 1,
+          "explanation": "'For instance' (= 'for example') introduces an illustrative example.",
+          "hint": "'For instance' / 'For example' / 'Such as' = ger exempel."
+        },
+        {
+          "id": "gym-g4-9",
+          "type": "fill-in-blank",
+          "sentence": "The new policy has many advantages. ___, it reduces costs and improves efficiency.",
+          "answer": "For example",
+          "hint": "Exempelmarkör: For example / For instance.",
+          "explanation": "'For example' introduces an illustration of the stated advantages."
+        },
+        {
+          "id": "gym-g4-10",
+          "type": "multiple-choice",
+          "question": "Which sentence uses a reference word (cohesive device) correctly?",
+          "options": [
+            "Maria passed the exam. She was delighted with this result.",
+            "Maria passed the exam. He was delighted with this result.",
+            "Maria passed the exam. It was delighted with this result.",
+            "Maria passed the exam. They was delighted with this result."
+          ],
+          "correctIndex": 0,
+          "explanation": "'She' refers back to 'Maria'; 'this result' refers back to 'the exam result'.",
+          "hint": "Referensord ska stämma i kön och antal med det de syftar på."
+        },
+        {
+          "id": "gym-g4-11",
+          "type": "fill-in-blank",
+          "sentence": "He trained every day. ___, he won the championship.",
+          "answer": "Consequently",
+          "hint": "Kausal kohesion: Consequently / As a result / Therefore.",
+          "explanation": "'Consequently' shows the result of daily training."
+        },
+        {
+          "id": "gym-g4-12",
+          "type": "multiple-choice",
+          "question": "Which word best signals a summary or conclusion?",
+          "options": [
+            "Moreover",
+            "Nevertheless",
+            "In conclusion",
+            "On the contrary"
+          ],
+          "correctIndex": 2,
+          "explanation": "'In conclusion' signals the final summary of an essay or argument.",
+          "hint": "'In conclusion' / 'To summarise' = sammanfattning."
+        },
+        {
+          "id": "gym-g4-13",
+          "type": "fill-in-blank",
+          "sentence": "The two proposals differ significantly. The first focuses on cost reduction; ___, the second prioritises quality.",
+          "answer": "whereas",
+          "hint": "'Whereas' / 'while' = jämförande kontrast inom en mening.",
+          "explanation": "'Whereas' introduces a contrasting idea within the same sentence."
+        },
+        {
+          "id": "gym-g4-14",
+          "type": "build-sentence",
+          "instruction": "Build a sentence using a discourse marker of addition.",
+          "words": [
+            "The",
+            "food",
+            "was",
+            "excellent",
+            ".",
+            "Moreover,",
+            "the",
+            "service",
+            "was",
+            "impeccable",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "explanation": "The food was excellent. Moreover, the service was impeccable. – addition marker."
+        },
+        {
+          "id": "gym-g4-15",
+          "type": "multiple-choice",
+          "question": "'The plan was approved. ___, it was implemented immediately.' Which marker shows sequence?",
+          "options": [
+            "In contrast",
+            "Subsequently",
+            "However",
+            "Although"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Subsequently' means 'after that' – it shows temporal sequence.",
+          "hint": "'Subsequently' / 'Then' / 'Afterwards' = sedan, därefter (tidssekvens)."
         }
       ]
     },
@@ -1814,6 +2508,210 @@
           "correctIndex": 3,
           "explanation": "Conscientious stavas C-O-N-S-C-I-E-N-T-I-O-U-S.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        }
+      ]
+    }
+  ],
+  "wordsearch": [
+    {
+      "id": "gym-ws1-discourse",
+      "title": "Diskursmarkörer",
+      "description": "Hitta akademiska diskursmarkörer i rutnätet.",
+      "icon": "✍️",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "HOWEVER",
+          "clue": "Kontrast: men, dock"
+        },
+        {
+          "word": "THEREFORE",
+          "clue": "Följd: därför"
+        },
+        {
+          "word": "MOREOVER",
+          "clue": "Addition: dessutom"
+        },
+        {
+          "word": "ALTHOUGH",
+          "clue": "Medgivande: även om"
+        },
+        {
+          "word": "DESPITE",
+          "clue": "Kontrast + substantivfras"
+        },
+        {
+          "word": "CONSEQUENTLY",
+          "clue": "Följd: följaktligen"
+        },
+        {
+          "word": "FURTHERMORE",
+          "clue": "Addition: vidare"
+        },
+        {
+          "word": "NEVERTHELESS",
+          "clue": "Kontrast: ändå"
+        },
+        {
+          "word": "WHEREAS",
+          "clue": "Jämförande kontrast"
+        },
+        {
+          "word": "SUBSEQUENTLY",
+          "clue": "Tidssekvens: därefter"
+        }
+      ]
+    },
+    {
+      "id": "gym-ws2-literary",
+      "title": "Litterära termer",
+      "description": "Hitta litteraturvetenskapliga termer.",
+      "icon": "📜",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "METAPHOR",
+          "clue": "Jämförelse utan 'like' eller 'as'"
+        },
+        {
+          "word": "SIMILE",
+          "clue": "Jämförelse med 'like' eller 'as'"
+        },
+        {
+          "word": "IRONY",
+          "clue": "Säger en sak, menar en annan"
+        },
+        {
+          "word": "NARRATOR",
+          "clue": "Berättarrösten i texten"
+        },
+        {
+          "word": "THEME",
+          "clue": "Textens huvudämne/budskap"
+        },
+        {
+          "word": "PLOT",
+          "clue": "Handlingen i en berättelse"
+        },
+        {
+          "word": "SYMBOL",
+          "clue": "Objekt som representerar något abstrakt"
+        },
+        {
+          "word": "GENRE",
+          "clue": "Textkategori (sci-fi, romance...)"
+        },
+        {
+          "word": "TONE",
+          "clue": "Stämning/känsla i texten"
+        },
+        {
+          "word": "SETTING",
+          "clue": "Plats och tid för handlingen"
+        }
+      ]
+    }
+  ],
+  "crossword": [
+    {
+      "id": "gym-cw1-advanced",
+      "title": "Korsord: Avancerat",
+      "description": "Utmanande korsord med akademisk vokabulär.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "A visual representation of an area",
+          "answer": "MAP",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "A cosy room / an animal's lair",
+          "answer": "DEN",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "Furious / mentally unwell (informal)",
+          "answer": "MAD",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "An expert / a service ace in tennis",
+          "answer": "ACE",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "Peter ___ / a cooking pan",
+          "answer": "PAN",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "gym-cw2-formal",
+      "title": "Korsord: Formellt register",
+      "description": "Ord du möter i akademiska och formella texter.",
+      "icon": "📋",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Belonging to her — a formal pronoun",
+          "answer": "HER",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "A wide, flat cooking vessel",
+          "answer": "PAN",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "To move with light bounds",
+          "answer": "HOP",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "A historical period ('the ___ of digitalisation')",
+          "answer": "ERA",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "To sprint / a scoring ___ in baseball",
+          "answer": "RUN",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
         }
       ]
     }

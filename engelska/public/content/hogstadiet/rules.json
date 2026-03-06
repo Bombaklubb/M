@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "id": "ordklasser",
+      "title": "Ordklasser & Satsdelar",
+      "icon": "🏷️",
+      "content": [
+        { "term": "Subjekt (Subject)", "explanation": "Den som utför handlingen i meningen.", "examples": ["The dog barked. She studied hard."] },
+        { "term": "Predikat (Predicate/Verb)", "explanation": "Verbfrasen i meningen.", "examples": ["The dog barked loudly."] },
+        { "term": "Objekt (Object)", "explanation": "Den/det som handlingen riktar sig mot.", "examples": ["She reads books. I gave him the letter."] },
+        { "term": "Relativ bisats", "explanation": "Inleds med who, which, that, whose.", "examples": ["The man who called... The book that I read..."] },
+        { "term": "Nominalfras", "explanation": "Substantiv + bestämningar.", "examples": ["the old grey cat", "a very interesting idea"] }
+      ]
+    },
+    {
+      "id": "plural",
+      "title": "Räknebara & Icke-räknebara substantiv",
+      "icon": "📦",
+      "content": [
+        { "term": "Räknebara (Countable)", "explanation": "Kan räknas, kan pluraliseras.", "examples": ["one apple, two apples; a car, many cars"] },
+        { "term": "Icke-räknebara (Uncountable)", "explanation": "Kan ej räknas direkt. Kräver mätuttryck.", "examples": ["water, advice, information, furniture, news"] },
+        { "term": "Some/Any", "explanation": "Some i påståenden, any i frågor och negationer.", "examples": ["I have some water. Do you have any milk?"] },
+        { "term": "Much/Many", "explanation": "Much med uncountable, many med countable.", "examples": ["much water, many people, much time, many books"] }
+      ]
+    },
+    {
+      "id": "tempus",
+      "title": "Avancerade Tider",
+      "icon": "⏱️",
+      "content": [
+        { "term": "Present Perfect", "explanation": "have/has + past participle. Erfarenhet eller relevans nu.", "examples": ["I have been to Paris. She has finished."] },
+        { "term": "Past Perfect", "explanation": "had + past participle. Händelse INNAN en annan förfluten händelse.", "examples": ["She had left when I arrived."] },
+        { "term": "Passive Voice", "explanation": "be + past participle. Fokus på handlingen, inte utföraren.", "examples": ["The window was broken. English is spoken worldwide."] },
+        { "term": "Conditional Sentences", "explanation": "0 (fakta), 1 (möjlig framtid), 2 (hypotetisk), 3 (tänkt förflutet).", "examples": ["If it rains, I stay. If I won, I would travel. If I had known, I would have called."] }
+      ]
+    },
+    {
+      "id": "vanliga-fel",
+      "title": "Vanliga fel att undvika",
+      "icon": "⚠️",
+      "content": [
+        { "term": "their / there / they're", "explanation": "their = deras; there = där; they're = they are.", "examples": ["Their dog is there. They're happy."] },
+        { "term": "its / it's", "explanation": "its = dess (ägande); it's = it is.", "examples": ["The cat licked its paw. It's a great day."] },
+        { "term": "then / than", "explanation": "then = sedan (tid); than = än (jämförelse).", "examples": ["First we eat, then we study. She is taller than me."] },
+        { "term": "affect / effect", "explanation": "affect = påverka (verb); effect = effekt (substantiv).", "examples": ["The weather affects my mood. The effect was surprising."] }
+      ]
+    },
+    {
+      "id": "ramsor",
+      "title": "Grammatikknep",
+      "icon": "🎵",
+      "content": [
+        { "term": "Present Perfect vs Past Simple", "explanation": "Specific past time → Past Simple. No specific time / relevance now → Present Perfect.", "examples": ["I saw her yesterday. (past) — I have seen that film. (experience)"] },
+        { "term": "Passive bildas", "explanation": "Subject + be (rätt tempus) + past participle (+ by + agent).", "examples": ["The cake was baked by my mum."] },
+        { "term": "Reported speech – tempusskifte", "explanation": "am→was, is→was, will→would, can→could, have→had.", "examples": ["\"I am tired\" → She said she was tired."] }
+      ]
+    }
+  ]
+}

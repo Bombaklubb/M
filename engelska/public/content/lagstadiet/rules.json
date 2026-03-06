@@ -1,0 +1,44 @@
+{
+  "sections": [
+    {
+      "id": "ordklasser",
+      "title": "Ordklasser",
+      "icon": "🏷️",
+      "content": [
+        { "term": "Substantiv (Noun)", "explanation": "Namn på saker, djur och platser.", "examples": ["cat, dog, school, apple, London"] },
+        { "term": "Verb", "explanation": "Ord som beskriver vad någon gör eller är.", "examples": ["run, eat, is, play, jump"] },
+        { "term": "Adjektiv (Adjective)", "explanation": "Ord som beskriver hur något ser ut eller känns.", "examples": ["big, small, happy, red, fast"] },
+        { "term": "Pronomen (Pronoun)", "explanation": "Ord som ersätter ett substantiv.", "examples": ["I, you, he, she, it, we, they"] }
+      ]
+    },
+    {
+      "id": "plural",
+      "title": "Pluralregler (Flertal)",
+      "icon": "📦",
+      "content": [
+        { "term": "Vanligaste regeln: lägg till -s", "explanation": "De flesta substantiv får bara -s i plural.", "examples": ["cat → cats", "dog → dogs", "book → books"] },
+        { "term": "Slutar på -s, -x, -ch, -sh: lägg till -es", "explanation": "", "examples": ["bus → buses", "box → boxes", "bench → benches"] },
+        { "term": "Oregelbundna (lär dig utantill!)", "explanation": "", "examples": ["man → men", "woman → women", "child → children", "mouse → mice", "foot → feet", "tooth → teeth"] }
+      ]
+    },
+    {
+      "id": "artiklar",
+      "title": "Artiklar: A och AN",
+      "icon": "🔤",
+      "content": [
+        { "term": "A + konsonantljud", "explanation": "Använd 'a' framför ord som börjar med ett konsonantljud.", "examples": ["a cat", "a dog", "a big apple"] },
+        { "term": "AN + vokalljud (a, e, i, o, u)", "explanation": "Använd 'an' framför ord som börjar med ett vokalljud.", "examples": ["an apple", "an elephant", "an ice cream"] }
+      ]
+    },
+    {
+      "id": "ramsor",
+      "title": "Ramsor och knep",
+      "icon": "🎵",
+      "content": [
+        { "term": "A och AN", "explanation": "\"A is before a consonant sound, AN is before a vowel — a cat, an apple, remember this rule!\"", "examples": [] },
+        { "term": "Be-verbet", "explanation": "I am, you are, he/she/it is, we are, they are", "examples": ["I am happy", "She is tall", "They are friends"] },
+        { "term": "Stora bokstäver", "explanation": "Engelska använder stor bokstav i namn på personer, länder, städer och månader.", "examples": ["Sweden, London, Emma, Monday, January"] }
+      ]
+    }
+  ]
+}

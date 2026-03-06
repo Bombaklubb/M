@@ -9,7 +9,7 @@ interface ModuleCardProps {
   title: string;
   description: string;
   icon: string;
-  kind: "grammar" | "reading" | "spelling";
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword";
   stage: Stage;
   progress: ModuleProgress | null;
   locked: boolean;
@@ -31,21 +31,24 @@ export default function ModuleCard({
   const pct = progress?.completed ? 100 : 0;
 
   const kindLabel =
-    kind === "grammar" ? "📝 Grammatik" : kind === "reading" ? "📖 Läsning" : "✏️ Stavning";
+    kind === "grammar" ? "📝 Grammatik"
+    : kind === "reading" ? "📖 Läsning"
+    : kind === "spelling" ? "✏️ Stavning"
+    : kind === "wordsearch" ? "🔍 Ordsökning"
+    : "🔠 Korsord";
 
   if (locked) {
     return (
-      <div className="card opacity-60 cursor-not-allowed select-none">
-        <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-2xl flex-shrink-0">
+      <div className="rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 opacity-60 cursor-not-allowed select-none">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-base flex-shrink-0">
             🔒
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-gray-500 dark:text-gray-400">{title}</h3>
-            <p className="text-sm text-gray-400 dark:text-gray-500 mt-0.5">{description}</p>
+            <h3 className="font-semibold text-gray-500 dark:text-gray-400 text-sm">{title}</h3>
             {prevModuleTitle && (
-              <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
-                Klara &quot;{prevModuleTitle}&quot; först för att låsa upp den här.
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+                Klara &quot;{prevModuleTitle}&quot; först
               </p>
             )}
           </div>
@@ -57,16 +60,16 @@ export default function ModuleCard({
   return (
     <Link href={href} className="block group">
       <div
-        className={`card border-2 transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 ${
+        className={`rounded-xl border-2 bg-white dark:bg-gray-800 px-4 py-3 transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 ${
           progress?.completed
             ? `${stage.borderClass} bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700`
             : "border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600"
         }`}
       >
-        <div className="flex items-start gap-4">
+        <div className="flex items-center gap-3">
           {/* Icon */}
           <div
-            className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform group-hover:scale-110 ${
+            className={`w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 transition-transform group-hover:scale-110 ${
               progress?.completed ? stage.colorClass + " text-white" : "bg-gray-100 dark:bg-gray-700"
             }`}
           >
@@ -75,22 +78,22 @@ export default function ModuleCard({
 
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
+            <div className="flex items-center gap-2">
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm truncate">{title}</h3>
               {progress?.completed && (
-                <span className="badge bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs">
+                <span className="badge bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs flex-shrink-0">
                   ✓ Klar
                 </span>
               )}
-              <span className="badge bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs ml-auto">
+              <span className="badge bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-xs ml-auto flex-shrink-0">
                 {kindLabel}
               </span>
             </div>
 
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-2">{description}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 truncate">{description}</p>
 
-            {/* Progress */}
-            <div className="mt-3 flex items-center gap-3">
+            {/* Progress bar */}
+            <div className="mt-2 flex items-center gap-2">
               <div className="flex-1">
                 <ProgressBar
                   value={pct}
