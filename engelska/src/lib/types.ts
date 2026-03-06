@@ -173,6 +173,7 @@ export type SkinTone = "light" | "light_brown" | "dark";
 export interface HeroConfig {
   heroId: string;
   skinTone: SkinTone;
+  gender?: "boy" | "girl";
   equippedAttributes: string[];
 }
 

@@ -40,13 +40,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {/* Nav */}
         {student && (
           <nav className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-            {/* Points badge – hidden on xs */}
-            <div className="hidden xs:flex items-center gap-1 sm:gap-1.5 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full">
-              <span className="text-amber-500 text-sm">⭐</span>
-              <span className="text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
-            </div>
-
-            {/* Hero button */}
+            {/* Hero button – left of points */}
             <Link
               href="/hero"
               title="Min hjälte"
@@ -55,10 +49,17 @@ export default function Header({ student, onLogout }: HeaderProps) {
               <HeroAvatar
                 heroId={student.hero?.heroId ?? "explorer"}
                 skinTone={student.hero?.skinTone ?? "light"}
+                gender={student.hero?.gender ?? "boy"}
                 equippedAttributes={student.hero?.equippedAttributes ?? []}
                 size={32}
               />
             </Link>
+
+            {/* Points badge – hidden on xs */}
+            <div className="hidden xs:flex items-center gap-1 sm:gap-1.5 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full">
+              <span className="text-amber-500 text-sm">⭐</span>
+              <span className="text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
+            </div>
 
             {/* Student name – links to Min sida, hidden on mobile */}
             <Link
