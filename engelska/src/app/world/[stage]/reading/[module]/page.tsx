@@ -111,7 +111,7 @@ export default function ReadingModulePage({ params }: Props) {
         <Header student={student} />
 
         <div className={`${stage.bgClass} text-white`}>
-          <div className="max-w-3xl mx-auto px-4 py-6">
+          <div className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
             <Link
               href={`/world/${stageId}`}
               className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
@@ -128,8 +128,8 @@ export default function ReadingModulePage({ params }: Props) {
           </div>
         </div>
 
-        <main className="max-w-3xl mx-auto px-4 py-8">
-          <div className="card space-y-5">
+        <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
+          <div className="card space-y-4">
             <div className="flex items-center gap-2">
               <span className="text-2xl">📚</span>
               <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
@@ -142,7 +142,7 @@ export default function ReadingModulePage({ params }: Props) {
                 {mod.helpText.map((tip, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-4 py-3 text-amber-900 dark:text-amber-200 text-sm"
+                    className="flex items-start gap-2.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-amber-900 dark:text-amber-200 text-sm leading-relaxed"
                   >
                     <span className="text-amber-500 mt-0.5 flex-shrink-0">💡</span>
                     <span>{tip}</span>
@@ -150,16 +150,16 @@ export default function ReadingModulePage({ params }: Props) {
                 ))}
               </ul>
             ) : (
-              <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-blue-800 dark:text-blue-200 text-sm">
+              <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-3 sm:p-4 text-blue-800 dark:text-blue-200 text-sm">
                 <p>Läs texten noggrant. Försök förstå vad som händer och varför.</p>
                 <p className="mt-2">Du kan läsa texten igen medan du svarar på frågorna!</p>
               </div>
             )}
 
-            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-4">
+            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-3 sm:pt-4">
               <button
                 onClick={() => setPhase("reading")}
-                className="btn-primary bg-blue-500 hover:bg-blue-600"
+                className="btn-primary bg-blue-500 hover:bg-blue-600 w-full sm:w-auto justify-center"
               >
                 Läs texten →
               </button>
@@ -194,7 +194,7 @@ export default function ReadingModulePage({ params }: Props) {
           </div>
         </div>
 
-        <main className="max-w-3xl mx-auto px-4 py-8">
+        <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
           <div className="card">
             {/* Reading instruction */}
             <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 mb-6 flex gap-3">
@@ -261,7 +261,7 @@ export default function ReadingModulePage({ params }: Props) {
         </div>
       </div>
 
-      <main className="max-w-3xl mx-auto px-4 py-8 space-y-4">
+      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8 space-y-4">
         {/* Re-read link */}
         <button
           onClick={() => setPhase("reading")}
@@ -270,7 +270,7 @@ export default function ReadingModulePage({ params }: Props) {
           ← Läs texten igen
         </button>
 
-        <div className="card min-h-[280px]">
+        <div className="card min-h-[240px] sm:min-h-[280px]">
           <div className="flex items-center justify-between mb-6">
             <span className="text-sm text-gray-400 font-medium">
               {currentIndex + 1} / {totalQuestions}

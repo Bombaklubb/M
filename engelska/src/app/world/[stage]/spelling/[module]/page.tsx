@@ -122,8 +122,8 @@ export default function SpellingModulePage({ params }: Props) {
           </div>
         </div>
 
-        <main className="max-w-3xl mx-auto px-4 py-8">
-          <div className="card space-y-5">
+        <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
+          <div className="card space-y-4">
             <div className="flex items-center gap-2">
               <span className="text-2xl">📚</span>
               <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
@@ -136,7 +136,7 @@ export default function SpellingModulePage({ params }: Props) {
                 {mod.helpText.map((tip, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-4 py-3 text-amber-900 dark:text-amber-200 text-sm"
+                    className="flex items-start gap-2.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-amber-900 dark:text-amber-200 text-sm leading-relaxed"
                   >
                     <span className="text-amber-500 mt-0.5 flex-shrink-0">💡</span>
                     <span>{tip}</span>
@@ -144,7 +144,7 @@ export default function SpellingModulePage({ params }: Props) {
                 ))}
               </ul>
             ) : (
-              <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-blue-800 dark:text-blue-200 text-sm">
+              <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-3 sm:p-4 text-blue-800 dark:text-blue-200 text-sm">
                 <p>{mod.description}</p>
                 <p className="mt-2 text-blue-600 dark:text-blue-300 text-xs">
                   Övningen innehåller {totalExercises} frågor. Läs varje fråga noga innan du svarar!
@@ -152,10 +152,10 @@ export default function SpellingModulePage({ params }: Props) {
               </div>
             )}
 
-            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-4">
+            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-3 sm:pt-4">
               <button
                 onClick={() => setPhase("exercises")}
-                className="btn-primary bg-blue-500 hover:bg-blue-600"
+                className="btn-primary bg-blue-500 hover:bg-blue-600 w-full sm:w-auto justify-center"
               >
                 Börja övningen →
               </button>
@@ -197,8 +197,8 @@ export default function SpellingModulePage({ params }: Props) {
       </div>
 
       {/* Exercise card */}
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <div className="card min-h-[300px]">
+      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
+        <div className="card min-h-[260px] sm:min-h-[300px]">
           <div className="flex items-center justify-between mb-6">
             <span className="text-sm text-gray-400 dark:text-gray-500 font-medium">
               {currentIndex + 1} / {totalExercises}

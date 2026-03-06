@@ -22,7 +22,7 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
 
   function optionStyle(idx: number): string {
     const base =
-      "w-full text-left px-5 py-4 rounded-xl border-2 font-medium transition-all duration-200 text-base ";
+      "w-full text-left px-4 py-3.5 sm:px-5 sm:py-4 rounded-xl border-2 font-medium transition-all duration-200 text-sm sm:text-base touch-manipulation ";
     if (!revealed) {
       return base + "border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 active:scale-98 cursor-pointer";
     }
@@ -37,7 +37,7 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
 
   return (
     <div className="space-y-4 animate-fade-in">
-      <p className="text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
+      <p className="text-base sm:text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
         {exercise.question}
       </p>
 

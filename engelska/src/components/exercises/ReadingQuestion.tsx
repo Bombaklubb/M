@@ -41,7 +41,7 @@ export default function ReadingQuestion({ question, onAnswer, isLast }: Props) {
 
   function optionStyle(idx: number): string {
     const base =
-      "w-full text-left px-5 py-4 rounded-xl border-2 font-medium transition-all duration-200 text-base ";
+      "w-full text-left px-4 py-3.5 sm:px-5 sm:py-4 rounded-xl border-2 font-medium transition-all duration-200 text-sm sm:text-base touch-manipulation ";
     if (!revealed) {
       return base + "border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 cursor-pointer";
     }
@@ -61,7 +61,7 @@ export default function ReadingQuestion({ question, onAnswer, isLast }: Props) {
         {level.icon} {level.label}
       </span>
 
-      <p className="text-lg font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
+      <p className="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
         {question.question}
       </p>
 

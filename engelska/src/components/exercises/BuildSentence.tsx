@@ -48,7 +48,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
 
   return (
     <div className="space-y-6 animate-fade-in">
-      <p className="text-xl font-semibold text-gray-800 dark:text-gray-100">{exercise.instruction}</p>
+      <p className="text-base sm:text-xl font-semibold text-gray-800 dark:text-gray-100">{exercise.instruction}</p>
 
       {/* Tips */}
       {exercise.hint && (
@@ -111,7 +111,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
             <button
               key={idx}
               onClick={() => addWord(idx)}
-              className="px-4 py-2 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 font-medium text-sm hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 active:scale-95 transition-all duration-150"
+              className="px-3 py-2 sm:px-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 font-medium text-sm hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 active:scale-95 transition-all duration-150 touch-manipulation"
             >
               {exercise.words[idx]}
             </button>

@@ -36,9 +36,9 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
       : "border-blue-300 bg-white dark:bg-gray-700 dark:border-blue-600 focus-within:border-blue-500";
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-5 animate-fade-in">
       {/* Sentence with blank */}
-      <div className="text-xl font-medium text-gray-800 dark:text-gray-100 leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-2">
+      <div className="text-base sm:text-xl font-medium text-gray-800 dark:text-gray-100 leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-2">
         <span>{parts[0]}</span>
         <span
           className={`inline-flex items-center border-b-4 px-1 min-w-[80px] transition-colors duration-300 ${
