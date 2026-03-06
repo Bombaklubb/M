@@ -168,6 +168,14 @@ export interface StageProgress {
   crosswordModules: Record<string, ModuleProgress>;
 }
 
+export type SkinTone = "light" | "light_brown" | "dark";
+
+export interface HeroConfig {
+  heroId: string;
+  skinTone: SkinTone;
+  equippedAttributes: string[];
+}
+
 export interface StudentData {
   avatar?: string;
   name: string;
@@ -175,6 +183,7 @@ export interface StudentData {
   lastActive: string;
   totalPoints: number;
   stages: Record<StageId, StageProgress>;
+  hero?: HeroConfig;
 }
 
 // ─── Exercise session (in-memory, not persisted) ──────────────────────────────

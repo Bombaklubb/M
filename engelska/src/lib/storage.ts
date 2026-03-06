@@ -1,4 +1,4 @@
-import type { StudentData, StageId, ModuleProgress, StageProgress } from "./types";
+import type { StudentData, StageId, ModuleProgress, StageProgress, HeroConfig } from "./types";
 
 const STORAGE_KEY = "engelskajakten_student";
 
@@ -60,6 +60,13 @@ export function createStudent(name: string, avatar?: string): StudentData {
 export function clearStudent(): void {
   if (typeof window === "undefined") return;
   localStorage.removeItem(STORAGE_KEY);
+}
+
+export function saveHero(hero: HeroConfig): void {
+  const data = loadStudent();
+  if (!data) return;
+  data.hero = hero;
+  saveStudent(data);
 }
 
 // ─── Module progress helpers ──────────────────────────────────────────────────
