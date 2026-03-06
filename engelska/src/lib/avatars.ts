@@ -2,6 +2,7 @@ export interface Avatar {
   id: string;
   emoji: string;
   name: string;
+  image?: string; // optional path to a custom image in /public
 }
 
 export const AVATARS: Avatar[] = [
@@ -29,6 +30,7 @@ export const AVATARS: Avatar[] = [
   { id: "pirate",     emoji: "🏴‍☠️",  name: "Piraten" },
   { id: "detective",  emoji: "🕵️",   name: "Detektiven" },
   { id: "frog",       emoji: "🐸",   name: "Grodan" },
+  { id: "footballer", emoji: "⚽",   name: "Fotbollsspelaren", image: "/avatars/footballer.svg" },
 ];
 
 export function getAvatar(id: string): Avatar {

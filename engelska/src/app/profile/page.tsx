@@ -52,8 +52,8 @@ export default function ProfilePage() {
         {/* Profile hero */}
         <div className="card bg-gradient-to-br from-gray-800 to-gray-900 text-white border-none dark:from-gray-700 dark:to-gray-800">
           <div className="flex items-center gap-4">
-            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-5xl">
-              {getAvatar(student.avatar ?? "ninja").emoji}
+            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-5xl overflow-hidden">
+              {(() => { const av = getAvatar(student.avatar ?? "ninja"); return av.image ? <img src={av.image} alt={av.name} className="w-full h-full object-contain p-1" /> : av.emoji; })()}
             </div>
             <div>
               <h1 className="text-2xl font-black">{student.name}</h1>

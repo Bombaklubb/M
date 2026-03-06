@@ -2709,6 +2709,106 @@
           "clue": "Past form of 'freeze'"
         }
       ]
+    },
+    {
+      "id": "hog-ws3-environment",
+      "title": "Miljö och klimat",
+      "description": "Hitta viktiga ord om miljö och klimat på engelska.",
+      "icon": "🌱",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "words": [
+        {
+          "word": "POLLUTION",
+          "clue": "föroreningar"
+        },
+        {
+          "word": "CLIMATE",
+          "clue": "klimat"
+        },
+        {
+          "word": "RENEWABLE",
+          "clue": "förnybar (energi)"
+        },
+        {
+          "word": "RECYCLING",
+          "clue": "återvinning"
+        },
+        {
+          "word": "EXTINCTION",
+          "clue": "utrotning"
+        },
+        {
+          "word": "FOSSIL",
+          "clue": "fossil (bränsle)"
+        },
+        {
+          "word": "HABITAT",
+          "clue": "livsmiljö"
+        },
+        {
+          "word": "BIODIVERSITY",
+          "clue": "biologisk mångfald"
+        },
+        {
+          "word": "CARBON",
+          "clue": "kol(dioxid)"
+        },
+        {
+          "word": "DROUGHT",
+          "clue": "torka"
+        }
+      ]
+    },
+    {
+      "id": "hog-ws4-technology",
+      "title": "Teknik och samhälle",
+      "description": "Hitta ord om teknik och samhälle i ordsökningen.",
+      "icon": "💻",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "words": [
+        {
+          "word": "ARTIFICIAL",
+          "clue": "artificiell (intelligens)"
+        },
+        {
+          "word": "ALGORITHM",
+          "clue": "algoritm"
+        },
+        {
+          "word": "DATABASE",
+          "clue": "databas"
+        },
+        {
+          "word": "SOFTWARE",
+          "clue": "mjukvara"
+        },
+        {
+          "word": "NETWORK",
+          "clue": "nätverk"
+        },
+        {
+          "word": "DIGITAL",
+          "clue": "digital"
+        },
+        {
+          "word": "PRIVACY",
+          "clue": "integritet"
+        },
+        {
+          "word": "HACKING",
+          "clue": "hackning"
+        },
+        {
+          "word": "WIRELESS",
+          "clue": "trådlös"
+        },
+        {
+          "word": "STREAMING",
+          "clue": "streaming"
+        }
+      ]
     }
   ],
   "crossword": [

@@ -106,13 +106,17 @@ export default function HomePage() {
                       type="button"
                       onClick={() => setSelectedAvatar(avatar.id)}
                       title={avatar.name}
-                      className={`aspect-square rounded-xl text-2xl flex items-center justify-center transition-all ${
+                      className={`aspect-square rounded-xl text-2xl flex items-center justify-center transition-all overflow-hidden ${
                         selectedAvatar === avatar.id
                           ? "bg-jungle-100 dark:bg-jungle-800 ring-2 ring-jungle-500 scale-110"
                           : "bg-gray-100 dark:bg-gray-700 hover:bg-jungle-50 dark:hover:bg-jungle-900/30"
                       }`}
                     >
-                      {avatar.emoji}
+                      {avatar.image ? (
+                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-0.5" />
+                      ) : (
+                        avatar.emoji
+                      )}
                     </button>
                   ))}
                 </div>

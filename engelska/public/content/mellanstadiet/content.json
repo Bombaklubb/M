@@ -2725,6 +2725,114 @@
           "clue": "Lat"
         }
       ]
+    },
+    {
+      "id": "mel-ws3-countries-cities",
+      "title": "Länder och städer",
+      "description": "Hitta engelska namn på kända länder och städer.",
+      "icon": "🌍",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "words": [
+        {
+          "word": "FRANCE",
+          "clue": "Frankrike"
+        },
+        {
+          "word": "GERMANY",
+          "clue": "Tyskland"
+        },
+        {
+          "word": "SPAIN",
+          "clue": "Spanien"
+        },
+        {
+          "word": "ITALY",
+          "clue": "Italien"
+        },
+        {
+          "word": "LONDON",
+          "clue": "Englands huvudstad"
+        },
+        {
+          "word": "PARIS",
+          "clue": "Frankrikes huvudstad"
+        },
+        {
+          "word": "BERLIN",
+          "clue": "Tysklands huvudstad"
+        },
+        {
+          "word": "ROME",
+          "clue": "Italiens huvudstad"
+        },
+        {
+          "word": "SWEDEN",
+          "clue": "Sverige på engelska"
+        },
+        {
+          "word": "EUROPE",
+          "clue": "kontinent vi bor i"
+        },
+        {
+          "word": "AMERICA",
+          "clue": "kontinent med USA"
+        },
+        {
+          "word": "CHINA",
+          "clue": "Kina på engelska"
+        }
+      ]
+    },
+    {
+      "id": "mel-ws4-sports-hobbies",
+      "title": "Sport och hobbies",
+      "description": "Hitta sport- och hobbyord i denna ordsökning.",
+      "icon": "⚽",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "words": [
+        {
+          "word": "FOOTBALL",
+          "clue": "fotboll"
+        },
+        {
+          "word": "SWIMMING",
+          "clue": "simning"
+        },
+        {
+          "word": "TENNIS",
+          "clue": "tennis"
+        },
+        {
+          "word": "DANCING",
+          "clue": "dans"
+        },
+        {
+          "word": "PAINTING",
+          "clue": "målning"
+        },
+        {
+          "word": "COOKING",
+          "clue": "matlagning"
+        },
+        {
+          "word": "READING",
+          "clue": "läsning"
+        },
+        {
+          "word": "CYCLING",
+          "clue": "cykling"
+        },
+        {
+          "word": "RUNNING",
+          "clue": "löpning"
+        },
+        {
+          "word": "SINGING",
+          "clue": "sång"
+        }
+      ]
     }
   ],
   "crossword": [
