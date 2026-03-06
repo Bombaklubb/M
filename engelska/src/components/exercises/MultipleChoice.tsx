@@ -6,9 +6,10 @@ import type { MultipleChoiceExercise } from "@/lib/types";
 interface Props {
   exercise: MultipleChoiceExercise;
   onAnswer: (correct: boolean) => void;
+  isLast?: boolean;
 }
 
-export default function MultipleChoice({ exercise, onAnswer }: Props) {
+export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [showHint, setShowHint] = useState(false);
@@ -17,8 +18,6 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
     if (revealed) return;
     setSelected(idx);
     setRevealed(true);
-    const correct = idx === exercise.correctIndex;
-    setTimeout(() => onAnswer(correct), 1200);
   }
 
   function optionStyle(idx: number): string {
@@ -87,6 +86,17 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
       {revealed && exercise.explanation && (
         <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-sm text-blue-800 dark:text-blue-200 animate-slide-up">
           💡 {exercise.explanation}
+        </div>
+      )}
+
+      {revealed && (
+        <div className="flex justify-end pt-2">
+          <button
+            onClick={() => onAnswer(selected === exercise.correctIndex)}
+            className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
+          >
+            {isLast ? "Visa resultat →" : "Nästa fråga →"}
+          </button>
         </div>
       )}
     </div>

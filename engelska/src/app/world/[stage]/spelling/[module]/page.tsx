@@ -29,6 +29,7 @@ export default function SpellingModulePage({ params }: Props) {
   const [mod, setMod] = useState<SpellingModule | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const [phase, setPhase] = useState<"intro" | "exercises">("intro");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [showResult, setShowResult] = useState(false);
@@ -79,7 +80,7 @@ export default function SpellingModulePage({ params }: Props) {
       }
       setShowResult(true);
     } else {
-      setTimeout(() => setCurrentIndex((i) => i + 1), 300);
+      setCurrentIndex((i) => i + 1);
     }
   }
 
@@ -87,6 +88,7 @@ export default function SpellingModulePage({ params }: Props) {
     setCurrentIndex(0);
     setResults([]);
     setShowResult(false);
+    setPhase("intro");
   }
 
   function handleContinue() {
@@ -96,6 +98,75 @@ export default function SpellingModulePage({ params }: Props) {
   const totalCorrect = results.filter(Boolean).length;
   const earnedPoints = totalCorrect * POINTS_PER_CORRECT;
 
+  // ─── Intro / help phase ───────────────────────────────────────────────────
+  if (phase === "intro") {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+        <Header student={student} />
+
+        <div className={`${stage.bgClass} text-white`}>
+          <div className="max-w-3xl mx-auto px-4 py-6">
+            <Link
+              href={`/world/${stageId}`}
+              className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
+            >
+              ← {stage.name}
+            </Link>
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">{mod.icon}</span>
+              <div>
+                <h1 className="text-xl font-black text-shadow">{mod.title}</h1>
+                <p className="text-white/70 text-sm">{mod.description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main className="max-w-3xl mx-auto px-4 py-8">
+          <div className="card space-y-5">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">📚</span>
+              <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                Tänk på det här innan du börjar!
+              </h2>
+            </div>
+
+            {mod.helpText && mod.helpText.length > 0 ? (
+              <ul className="space-y-3">
+                {mod.helpText.map((tip, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-4 py-3 text-amber-900 dark:text-amber-200 text-sm"
+                  >
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">💡</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-blue-800 dark:text-blue-200 text-sm">
+                <p>{mod.description}</p>
+                <p className="mt-2 text-blue-600 dark:text-blue-300 text-xs">
+                  Övningen innehåller {totalExercises} frågor. Läs varje fråga noga innan du svarar!
+                </p>
+              </div>
+            )}
+
+            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-4">
+              <button
+                onClick={() => setPhase("exercises")}
+                className="btn-primary bg-blue-500 hover:bg-blue-600"
+              >
+                Börja övningen →
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  // ─── Exercise phase ───────────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} />
@@ -146,13 +217,25 @@ export default function SpellingModulePage({ params }: Props) {
           {currentExercise && (
             <div key={`${moduleId}-${currentIndex}`}>
               {currentExercise.type === "multiple-choice" && (
-                <MultipleChoice exercise={currentExercise} onAnswer={handleAnswer} />
+                <MultipleChoice
+                  exercise={currentExercise}
+                  onAnswer={handleAnswer}
+                  isLast={currentIndex + 1 === totalExercises}
+                />
               )}
               {currentExercise.type === "fill-in-blank" && (
-                <FillInBlank exercise={currentExercise} onAnswer={handleAnswer} />
+                <FillInBlank
+                  exercise={currentExercise}
+                  onAnswer={handleAnswer}
+                  isLast={currentIndex + 1 === totalExercises}
+                />
               )}
               {currentExercise.type === "build-sentence" && (
-                <BuildSentence exercise={currentExercise} onAnswer={handleAnswer} />
+                <BuildSentence
+                  exercise={currentExercise}
+                  onAnswer={handleAnswer}
+                  isLast={currentIndex + 1 === totalExercises}
+                />
               )}
             </div>
           )}

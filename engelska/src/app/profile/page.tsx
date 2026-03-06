@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
 import ProgressBar from "@/components/ui/ProgressBar";
-import { loadStudent, clearStudent, exportProgress, generateShareCode } from "@/lib/storage";
+import { loadStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { ACHIEVEMENTS, isUnlocked } from "@/lib/achievements";
 import { getAvatar } from "@/lib/avatars";
@@ -12,10 +12,6 @@ import type { StudentData, StageId } from "@/lib/types";
 
 export default function ProfilePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
-  const [showShareCode, setShowShareCode] = useState(false);
-  const [shareCode, setShareCode] = useState("");
-  const [codeCopied, setCodeCopied] = useState(false);
-  const [confirmReset, setConfirmReset] = useState(false);
 
   useEffect(() => {
     setStudent(loadStudent());
@@ -43,35 +39,6 @@ export default function ProfilePage() {
     const completed = all.filter((m) => m.completed).length;
     const totalPoints = all.reduce((sum, m) => sum + m.points, 0);
     return { completed, totalPoints, grammarMods, readingMods, spellingMods };
-  }
-
-  function handleExport() {
-    exportProgress(student!);
-  }
-
-  function handleShare() {
-    const code = generateShareCode(student!);
-    setShareCode(code);
-    setShowShareCode(true);
-  }
-
-  async function handleCopyCode() {
-    try {
-      await navigator.clipboard.writeText(shareCode);
-      setCodeCopied(true);
-      setTimeout(() => setCodeCopied(false), 2000);
-    } catch {
-      // fallback: select text
-    }
-  }
-
-  function handleReset() {
-    if (!confirmReset) {
-      setConfirmReset(true);
-      return;
-    }
-    clearStudent();
-    window.location.href = "/";
   }
 
   const joinDate = new Date(student.createdAt).toLocaleDateString("sv-SE");
@@ -253,98 +220,6 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="card">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">⚙️ Hantera data</h2>
-          <div className="space-y-3">
-            {/* Export */}
-            <button
-              onClick={handleExport}
-              className="w-full btn-secondary border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 justify-start gap-3"
-            >
-              <span className="text-xl">💾</span>
-              <div className="text-left">
-                <div className="font-semibold">Exportera framsteg</div>
-                <div className="text-xs text-gray-400">
-                  Spara en .json-fil med dina framsteg
-                </div>
-              </div>
-            </button>
-
-            {/* Share code */}
-            <button
-              onClick={handleShare}
-              className="w-full btn-secondary border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 justify-start gap-3"
-            >
-              <span className="text-xl">🔗</span>
-              <div className="text-left">
-                <div className="font-semibold">Dela framstegskod</div>
-                <div className="text-xs text-gray-400">
-                  Generera en kod att visa för lärare/förälder
-                </div>
-              </div>
-            </button>
-
-            {/* Reset */}
-            <button
-              onClick={handleReset}
-              className={`w-full btn-secondary justify-start gap-3 transition-colors ${
-                confirmReset
-                  ? "border-red-400 text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
-                  : "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
-              }`}
-            >
-              <span className="text-xl">🗑️</span>
-              <div className="text-left">
-                <div className="font-semibold">
-                  {confirmReset ? "Bekräfta: ta bort all data?" : "Återställ framsteg"}
-                </div>
-                <div className="text-xs text-gray-400">
-                  {confirmReset
-                    ? "Klicka igen för att bekräfta – detta går inte att ångra!"
-                    : "Börja om från noll"}
-                </div>
-              </div>
-            </button>
-            {confirmReset && (
-              <button
-                onClick={() => setConfirmReset(false)}
-                className="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 w-full text-center"
-              >
-                Avbryt
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Share code modal */}
-        {showShareCode && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-md w-full animate-slide-up">
-              <h3 className="text-xl font-bold dark:text-gray-100 mb-2">🔗 Framstegskod</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">
-                Kopiera denna kod och visa den för din lärare eller förälder.
-              </p>
-              <div className="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl p-3 font-mono text-xs break-all max-h-32 overflow-y-auto text-gray-600 dark:text-gray-300 mb-4">
-                {shareCode}
-              </div>
-              <div className="flex gap-3">
-                <button
-                  onClick={handleCopyCode}
-                  className="flex-1 btn-primary bg-blue-500 hover:bg-blue-600"
-                >
-                  {codeCopied ? "✓ Kopierad!" : "📋 Kopiera"}
-                </button>
-                <button
-                  onClick={() => setShowShareCode(false)}
-                  className="flex-1 btn-secondary border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
-                >
-                  Stäng
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </main>
     </div>
   );

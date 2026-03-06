@@ -47,6 +47,7 @@ export interface BuildSentenceExercise {
   instruction: string;
   words: string[];       // words in scrambled order
   correctOrder: number[]; // indices into words[] forming correct sentence
+  hint?: string;
   explanation?: string;
 }
 
@@ -61,6 +62,7 @@ export interface ReadingQuestion {
   question: string;
   options: string[];
   correctIndex: number;
+  hint?: string;
   explanation?: string;
 }
 
@@ -73,6 +75,7 @@ export interface GrammarModule {
   icon: string;
   pointsRequired: number; // total points needed to unlock (0 = always open)
   bonusPoints: number;    // extra points for completing the module
+  helpText?: string[];    // tips/rules shown before exercises start
   exercises: GrammarExercise[];
 }
 
@@ -83,6 +86,7 @@ export interface ReadingModule {
   icon: string;
   pointsRequired: number;
   bonusPoints: number;
+  helpText?: string[];    // tips/rules shown before reading starts
   text: string;
   author?: string;
   questions: ReadingQuestion[];
@@ -95,6 +99,7 @@ export interface SpellingModule {
   icon: string;
   pointsRequired: number;
   bonusPoints: number;
+  helpText?: string[];    // tips/rules shown before exercises start
   exercises: GrammarExercise[];
 }
 

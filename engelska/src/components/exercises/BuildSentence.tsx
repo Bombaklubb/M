@@ -7,12 +7,13 @@ import { playCorrect, playWrong, playClick } from "@/lib/sounds";
 interface Props {
   exercise: BuildSentenceExercise;
   onAnswer: (correct: boolean) => void;
+  isLast?: boolean;
 }
 
-export default function BuildSentence({ exercise, onAnswer }: Props) {
-  // Track which words have been placed and their order
-  const [placed, setPlaced] = useState<number[]>([]); // indices into exercise.words
+export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
+  const [placed, setPlaced] = useState<number[]>([]);
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
+  const [showHint, setShowHint] = useState(false);
 
   const available = exercise.words.map((_, idx) => idx).filter((idx) => !placed.includes(idx));
 
@@ -36,7 +37,6 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
     setState(correct ? "correct" : "wrong");
     if (correct) playCorrect();
     else playWrong();
-    setTimeout(() => onAnswer(correct), 1400);
   }
 
   function reset() {
@@ -49,6 +49,27 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
   return (
     <div className="space-y-6 animate-fade-in">
       <p className="text-xl font-semibold text-gray-800 dark:text-gray-100">{exercise.instruction}</p>
+
+      {/* Tips */}
+      {exercise.hint && (
+        <div className="rounded-xl overflow-hidden border border-amber-200 dark:border-amber-700">
+          <button
+            onClick={() => setShowHint(!showHint)}
+            className="w-full flex items-center justify-between px-4 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+          >
+            <span className="flex items-center gap-2">
+              <span>💡</span>
+              <span>Tips</span>
+            </span>
+            <span className="text-amber-500 text-xs">{showHint ? "▲" : "▼"}</span>
+          </button>
+          {showHint && (
+            <div className="px-4 py-3 text-sm text-amber-900 dark:text-amber-200 bg-amber-50/60 dark:bg-amber-900/10 border-t border-amber-200 dark:border-amber-700">
+              {exercise.hint}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Sentence construction area */}
       <div
@@ -134,6 +155,17 @@ export default function BuildSentence({ exercise, onAnswer }: Props) {
           {exercise.explanation && (
             <p className="text-sm mt-1 opacity-80">💡 {exercise.explanation}</p>
           )}
+        </div>
+      )}
+
+      {state !== "idle" && (
+        <div className="flex justify-end pt-2">
+          <button
+            onClick={() => onAnswer(state === "correct")}
+            className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
+          >
+            {isLast ? "Visa resultat →" : "Nästa fråga →"}
+          </button>
         </div>
       )}
     </div>
