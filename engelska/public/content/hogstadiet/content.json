@@ -200,6 +200,13 @@
           "explanation": "Past simple (saw) refers to a finished time; present perfect (have seen) focuses on the result/experience now.",
           "hint": "Past simple: specifik tid. Present perfect: upplevelse/resultat nu."
         }
+      ],
+      "helpText": [
+        "Present perfect bildas med: have/has + past participle (verbets 3:e form).",
+        "Används för: erfarenheter (Have you ever...?), nyligen avslutade händelser (I have just finished), och situationer som startade i förr men gäller nu (I have lived here for 10 years).",
+        "Signalerord: ever, never, just, already, yet, recently, for (tidsperiod), since (startpunkt).",
+        "Skillnad mot past simple: 'I saw her yesterday' (past simple – specifik tid, avslutat) vs 'I have seen her' (present perfect – koppling till nu, ingen specifik tid).",
+        "Exempel: She has never been to Japan. ✔  They have already eaten. ✔"
       ]
     },
     {
@@ -418,6 +425,13 @@
           "explanation": "'Unless' = 'if not'. Unless you hurry = If you don't hurry → first conditional.",
           "hint": "Unless = if not. Välj rätt konditionalisform."
         }
+      ],
+      "helpText": [
+        "If-satser (konditionalis) används för att prata om villkor och vad som händer om något är sant.",
+        "Typ 0 – allmänna sanningar: If + present simple, present simple. Ex: If you heat water to 100°C, it boils.",
+        "Typ 1 – realistiskt/möjligt: If + present simple, will + grundform. Ex: If it rains, I will stay home.",
+        "Typ 2 – hypotetiskt/osannolikt nu: If + past simple, would + grundform. Ex: If I had a million pounds, I would travel the world.",
+        "Tänk: Är det möjligt och troligt? → Typ 1 (will). Är det en dröm eller osannolikt? → Typ 2 (would)."
       ]
     },
     {
@@ -628,6 +642,13 @@
           "explanation": "'This poem was written' – past passive → question: was this poem written?",
           "hint": "Passiv frågekonstruktion: was/were + subject + past participle?"
         }
+      ],
+      "helpText": [
+        "Passiv form fokuserar på VAD som händer eller HUR något är, inte VEM som gör det.",
+        "Bildas med: am/is/are + past participle (presens passiv). was/were + past participle (dåtid passiv).",
+        "Aktiv: The chef cooks the food. → Passiv: The food is cooked (by the chef).",
+        "Aktiv: Someone broke the window. → Passiv: The window was broken.",
+        "Tips: Om du vill säga VEM som utförde handlingen, lägg till 'by + person' i slutet."
       ]
     },
     {
@@ -832,6 +853,13 @@
           "explanation": "'Can't' → 'couldn't' in reported speech.",
           "hint": "can → could; can't → couldn't i indirekt tal."
         }
+      ],
+      "helpText": [
+        "Indirekt tal (reported speech) = du återberättar vad någon SA, utan att citera exakt.",
+        "Verbformen 'backas ett steg tillbaka i tid': am/is → was, will → would, can → could, have → had.",
+        "Pronomen ändras utifrån vem som talar: He said, 'I am tired.' → He said (that) he was tired.",
+        "Say vs tell: say sätts utan objekt (He said that...). Tell kräver objekt (He told me that...).",
+        "Tänk: Backa ett tempussteg och ändra pronomen. 'I will come' → He said he would come."
       ]
     },
     {
@@ -1032,6 +1060,13 @@
           "correctIndex": 0,
           "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         }
+      ],
+      "helpText": [
+        "Avancerade verbformer – du kombinerar perfect, passiv, konditionalis och komparativ.",
+        "Present perfect: have/has + past participle (koppling till nu).",
+        "Passiv: am/is/are + past participle (fokus på objekt, inte subjekt).",
+        "Komparativ + superlativ: mer komplexa adjektiv med more/most + oregelbundna former.",
+        "Tips: Läs meningen noggrant – vad är subjektet, vad händer, och när händer det?"
       ]
     },
     {
@@ -1232,6 +1267,12 @@
           "correctIndex": 1,
           "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         }
+      ],
+      "helpText": [
+        "Fler övningar på avancerade verbformer – fokusera på kontexten i varje mening.",
+        "Konditionalis typ 2: If + past simple, would + grundform – hypotetiska situationer.",
+        "Passiv preteritum: was/were + past participle. Ex: The letter was written yesterday.",
+        "Tips: Titta på signalerorden (if, by, has, was, more, most) – de avslöjar vilken form som behövs."
       ]
     },
     {
@@ -1527,6 +1568,12 @@
           "correctIndex": 1,
           "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
         }
+      ],
+      "helpText": [
+        "Sista rundan på avancerade former – blanda dina kunskaper!",
+        "Kom ihåg skillnaden: 'She was singing' (past continuous) vs 'She sang' (past simple).",
+        "Reported speech + passiv kan kombineras: 'It was said that he had left.'",
+        "Tips: Läs hela meningen, identifiera subjektet, och bestäm tempus utifrån context."
       ]
     },
     {
@@ -1677,6 +1724,12 @@
           "answer": "would have come",
           "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
         }
+      ],
+      "helpText": [
+        "Avancerad grammatik – fler blandade strukturer.",
+        "Relativa pronomen: who (person), which (sak), that (person eller sak), whose (ägande).",
+        "Ex: The woman who called is my teacher. The book that I read was great.",
+        "Tips: Vad syftar bisatsen på? En person → who. En sak → which eller that."
       ]
     },
     {
@@ -1877,6 +1930,12 @@
           "answer": "had already left",
           "hint": "Pluskvamperfekt: had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse."
         }
+      ],
+      "helpText": [
+        "Avancerade grammatikövningar – var uppmärksam på detaljer!",
+        "Modala verb: must/have to (krav), should (råd), might/may (möjlighet), can (förmåga).",
+        "Ex: You must wear a seatbelt. You should study more. It might rain tomorrow.",
+        "Tips: Hur säker är du? must (100%) → should (råd) → might/could (kanske) → can't (omöjligt)."
       ]
     },
     {
@@ -2059,6 +2118,13 @@
           "correctIndex": 1,
           "hint": "'Look forward to' + gerund (-ing). 'To' är här en preposition (inte infinitivmarkör) → -ing-form. 'Look forward to seeing you.'"
         }
+      ],
+      "helpText": [
+        "Blandad grammatik – du tränar på flera regler på en gång. Läs noggrant!",
+        "For vs since: for + tidsperiod (for three years). since + startpunkt (since 2020).",
+        "Few/little: few + räknebart (few books). little + oräknebart (little water).",
+        "Adjektiv vs adverb: adjektiv beskriver substantiv (a fast car). adverb beskriver verb (he runs fast).",
+        "Tips: Identifiera ordklassen – beskriver ordet ett substantiv eller ett verb?"
       ]
     }
   ],
@@ -2111,6 +2177,12 @@
           "correctIndex": 2,
           "explanation": "The author presents both sides and ends with advice on using it 'mindfully' — a balanced, nuanced view."
         }
+      ],
+      "helpText": [
+        "Det här är en diskuterande text – den presenterar argument för OCH emot.",
+        "Läs för att förstå: Vad är textens huvudbudskap? Vilka argument ges?",
+        "'Mellan raderna'-frågor kräver slutledning – vad antyder och IMPLICERAR texten?",
+        "Tips: Markera nyckelmeningar som sammanfattar varje stycke – de innehåller ofta svar."
       ]
     },
     {
@@ -2161,6 +2233,12 @@
           "correctIndex": 1,
           "explanation": "'Not mutually exclusive' means both can exist at the same time. We need both personal action and systemic change simultaneously."
         }
+      ],
+      "helpText": [
+        "Det här är en argumenterande text – identifiera avsändarens STÅNDPUNKT och argument.",
+        "Texten kan ha en tydlig vinkel – fråga dig: vad vill författaren att du ska tänka?",
+        "'Bortom raderna'-frågor kräver att du reflekterar och kopplar till egna erfarenheter.",
+        "Tips: Läs inledning och avslutning extra noga – där brukar huvudbudskapet finnas."
       ]
     }
   ],
@@ -2231,6 +2309,11 @@
           "explanation": "Advantage stavas A-D-V-A-N-T-A-G-E.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Argumentationsord används när du diskuterar, debatterar och argumenterar på engelska.",
+        "Centrala ord: argument, evidence, therefore, however, moreover, claim, support, oppose.",
+        "Tips: Lär dig orden i sammanhang – tänk på vilken typ av text de hör hemma i."
       ]
     },
     {
@@ -2299,6 +2382,11 @@
           "explanation": "Government stavas G-O-V-E-R-N-M-E-N-T.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Samhälls- och kulturord är viktiga för att kunna diskutera aktuella ämnen på engelska.",
+        "Centrala ord: democracy, equality, environment, government, culture, society, tradition.",
+        "Tips: Koppla varje ord till ett ämne du känner till – det hjälper dig komma ihåg stavningen."
       ]
     },
     {
@@ -2367,6 +2455,11 @@
           "explanation": "Spoke stavas S-P-O-K-E.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Oregelbundna verb måste du kunna i alla tre former: infinitiv – preteritum – perfektparticip.",
+        "Vanliga tripplar: speak/spoke/spoken, write/wrote/written, break/broke/broken, know/knew/known.",
+        "Tips: Lär dig fem tripplar åt gången. Upprepa dem högt: 'speak – spoke – spoken'."
       ]
     },
     {
@@ -2435,6 +2528,11 @@
           "explanation": "Summarise stavas S-U-M-M-A-R-I-S-E.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Akademiska ord (Academic Word List) förekommer i vetenskapliga texter och uppsatser.",
+        "Vanliga ord: analyse, significant, concept, establish, evidence, factor, individual, occur.",
+        "Tips: Dela upp långa ord: sig-ni-fi-cant. Stavningen följer ofta latinska eller franska mönster."
       ]
     },
     {
@@ -2503,6 +2601,11 @@
           "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Receive stavas R-E-C-E-I-V-E."
         }
+      ],
+      "helpText": [
+        "Dessa ord stavas ofta fel – var extra uppmärksam på stumma bokstäver och ovanliga kombinationer!",
+        "Knep: 'necessary' – ett C, två S. 'beginning' – dubbelt N. 'separate' – tänk 'there is A rat in separate'.",
+        "Tips: Identifiera vilken del av ordet du brukar stava fel och fokusera extra på den."
       ]
     }
   ],

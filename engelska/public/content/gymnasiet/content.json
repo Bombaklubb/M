@@ -210,6 +210,14 @@
           "explanation": "Past perfect continuous (had been studying) shows a prolonged past activity causing a past state.",
           "hint": "Past perfect continuous: förklara ett förflutet tillstånd med en pågående aktivitet."
         }
+      ],
+      "helpText": [
+        "Avancerade tempus – du lär dig skilja på händelser i tid med precision.",
+        "Past perfect: had + past participle – en handling FÄRDIG innan en annan preteritumshandling. Ex: 'She had already left when I arrived.'",
+        "Past continuous: was/were + -ing – pågående bakgrundshandling som avbryts. Ex: 'I was reading when the phone rang.'",
+        "Past perfect continuous: had been + -ing – pågående handling under en period i det förflutna. Ex: 'She had been working for six hours.'",
+        "Future perfect: will have + past participle – klart INNAN en framtida tidpunkt. Ex: 'By 2030, they will have finished the project.'",
+        "Tänk: Vilken händelse kom FÖRST? Den händelsen → past perfect."
       ]
     },
     {
@@ -418,6 +426,13 @@
           "explanation": "'Must' for strong deduction based on evidence: lights are on → she must be home.",
           "hint": "Stark slutledning baserad på bevis: must."
         }
+      ],
+      "helpText": [
+        "Avancerade modalverb används för att uttrycka grader av säkerhet, möjlighet och kritik.",
+        "Slutledning om nu: must be (säker), could/might be (möjlig), can't be (omöjlig).",
+        "Slutledning om dåtid: must have + pp (säkert), could have + pp (möjligen), should have + pp (borde ha), needn't have + pp (behövde inte ha).",
+        "Ex: 'He must have forgotten.' (säker) / 'She might have left early.' (möjlig) / 'You should have told me.' (kritik)",
+        "Tänk: Hur säker är du? must (nästan 100%) → could/might (50%) → can't (0%)."
       ]
     },
     {
@@ -638,6 +653,13 @@
           "explanation": "'Think' does not trigger the mandative subjunctive. 'Recommend', 'insist', 'suggest' do.",
           "hint": "Mandative subjunctive triggas av: recommend, insist, suggest, demand, require, propose."
         }
+      ],
+      "helpText": [
+        "Konjunktiv (subjunctive) används i formellt och akademiskt språk för önskningar, krav och hypotetiska situationer.",
+        "Were-konjunktiv: 'If I were you, I would...' / 'I wish I were taller.' (alltid 'were', aldrig 'was' i formellt språk)",
+        "Formell that-konjunktiv (base form): 'The committee recommends that he apply for the post.' (inte 'applies')",
+        "Formella fraser: 'It is essential that...' / 'I suggest that...' / 'They demanded that...' + base form",
+        "Tips: I formella texter och tal – sättet konjunktiv signalerar sofistikerat språkbruk."
       ]
     },
     {
@@ -856,6 +878,14 @@
           "explanation": "'Subsequently' means 'after that' – it shows temporal sequence.",
           "hint": "'Subsequently' / 'Then' / 'Afterwards' = sedan, därefter (tidssekvens)."
         }
+      ],
+      "helpText": [
+        "Diskursmarkörer (cohesion devices) skapar logik, flöde och sammanhang i din text.",
+        "Addition: furthermore, moreover, in addition, what is more – lägger till argument.",
+        "Kontrast: however, nevertheless, on the other hand, in contrast, yet – kontrasterar argument.",
+        "Orsak/verkan: therefore, consequently, as a result, thus, hence – visar logisk följd.",
+        "Exempel: for instance, for example, such as, namely, to illustrate.",
+        "Tips: Välj konnektiv utifrån LOGIKEN – lägger du till (moreover), kontrasterar du (however), eller förklarar du (therefore)?"
       ]
     },
     {
@@ -1056,6 +1086,13 @@
           "correctIndex": 0,
           "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         }
+      ],
+      "helpText": [
+        "Avancerade grammatikstrukturer – inversion, relativa pronomen, prepositionsfraser.",
+        "Inversion: I formellt/stilistiskt språk vänds ordföljden. Ex: 'Never have I seen such beauty.' / 'Rarely does she complain.'",
+        "Relativa pronomen: who (subjekt/objekt, person), whom (objekt, formellt), whose (ägande), which (sak).",
+        "Ex: 'The professor, whose research I admire, gave a lecture.' (inskjuten bisats)",
+        "Tips: Inversion sker ofta efter negativa adverb: never, rarely, seldom, hardly, not only."
       ]
     },
     {
@@ -1256,6 +1293,13 @@
           "correctIndex": 1,
           "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         }
+      ],
+      "helpText": [
+        "Fler avancerade strukturer – fokusera på meningsbyggnad och stil.",
+        "Avancerade konditionalis: Typ 3 (hade hänt men hände inte): If + had + pp, would have + pp.",
+        "Ex: 'If she had studied harder, she would have passed the exam.'",
+        "Mixed conditionals: blandar typ 2 och 3. Ex: 'If I had taken that job, I would be rich now.'",
+        "Tips: Typ 3 = ångrar något i dåtiden. Mixed = dåtid påverkar nutid."
       ]
     },
     {
@@ -1551,6 +1595,12 @@
           "correctIndex": 1,
           "hint": "Tänk på den avancerade grammatikregeln: inversion, konjunktiv, passiv, gerund eller konditionalis?"
         }
+      ],
+      "helpText": [
+        "Ännu fler avancerade strukturer – du är på gymnasienivå, var präcis och nyanserad!",
+        "Nominalisering: verbhandlingar omvandlas till substantiv för formellt språk. 'The company decided' → 'The company's decision'.",
+        "Klyvsatser (cleft sentences): 'It was John who broke the window.' (fokuserar på John)",
+        "Tips: Nominalisering gör texten mer akademisk och objektiv."
       ]
     },
     {
@@ -1701,6 +1751,12 @@
           "answer": "leave",
           "hint": "Konjunktiv: grundformen används (utan -s) för alla pronomen. T.ex. 'it is essential that she be present'."
         }
+      ],
+      "helpText": [
+        "Avancerade grammatikövningar på gymnasienivå.",
+        "Passiv rapportering: 'It is believed that...', 'He is said to...', 'They are thought to have...'",
+        "Ex: 'Scientists believe the drug is effective.' → 'The drug is believed to be effective.'",
+        "Tips: Passiv rapportering används i akademiska och journalistiska texter för att distansera sig från påståendet."
       ]
     },
     {
@@ -1901,6 +1957,12 @@
           "answer": "was conducted",
           "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen snarare än utför den."
         }
+      ],
+      "helpText": [
+        "Sista avancerade grammatikövningen – kombinera alla strukturer!",
+        "Tänk igenom: Vilket tempus? Aktiv eller passiv? Konnektiv? Inversion?",
+        "I avancerat engelskt skrivande är VARIATIONEN viktig – blanda meningstyper och strukturer.",
+        "Tips: Läs varje mening högt i huvudet – låter det naturligt och precist på engelska?"
       ]
     },
     {
@@ -2063,6 +2125,14 @@
           "answer": "must",
           "hint": "Modal perfekt för slutledning: 'must have' = måste ha (logisk slutsats om dåtid). 'Might have' = kan ha (möjlighet). 'Can't have' = kan inte ha."
         }
+      ],
+      "helpText": [
+        "Blandad avancerad grammatik – maximalt fokus krävs!",
+        "Passiv rapportering: 'It is said that...', 'She is thought to be...'",
+        "Nominalisering: 'decide' → 'decision', 'develop' → 'development', 'analyse' → 'analysis'.",
+        "Klyvsats: 'It is the methodology that needs revision.' – lyfter fram viktigt element.",
+        "Modala perfektformer: 'should have', 'could have', 'must have' – slutledning om dåtid.",
+        "Tips: I avancerat engelskt skrivande varierar du strukturerna – undvik alltid börja med 'I'."
       ]
     }
   ],
@@ -2116,6 +2186,13 @@
           "correctIndex": 2,
           "explanation": "The text dedicates equal attention to proponents (paragraph 2) and critics (paragraph 3). The conclusion calls for interdisciplinary collaboration — a balanced position. The student's claim is not valid."
         }
+      ],
+      "helpText": [
+        "Det här är en analytisk text – identifiera textens argument, motargument och slutsats.",
+        "Akademiska texter har ofta en TES (claim) som stöds av EVIDENS (evidence).",
+        "Läs kritiskt: Vad är välgrundat? Vad är en åsikt? Vad är ett faktapåstående?",
+        "'Bortom raderna'-frågor kräver att du applicerar textens idéer på nya situationer.",
+        "Tips: Identifiera nyckeltermer och definitioner – de är centrala för frågorna."
       ]
     },
     {
@@ -2167,6 +2244,13 @@
           "correctIndex": 1,
           "explanation": "The ending withholds whether Mira submits (writing an explanation) or resists (writing something subversive). Her thought about her daughter deepens the dilemma — does she comply or resist?"
         }
+      ],
+      "helpText": [
+        "Det här är en litterär text – fokusera på karaktärer, tema, språkliga val och symbolik.",
+        "Litterär analys: Vad antyder texten? Vilken stämning skapas? Vilka teman finns?",
+        "Dystopisk fiktion utforskar ofta teman som kontroll, makt och motstånd.",
+        "'Mellan raderna' och 'bortom raderna'-frågor dominerar – det handlar om tolkning!",
+        "Tips: Lägg märke till ord med stark laddning – de avslöjar textens perspektiv."
       ]
     }
   ],
@@ -2237,6 +2321,11 @@
           "explanation": "Synthesis stavas S-Y-N-T-H-E-S-I-S.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Akademiska analysord förekommer i uppsatser, rapporter och vetenskapliga texter.",
+        "Centrala ord: analyse, evaluate, interpret, conclude, demonstrate, indicate, suggest.",
+        "Tips: Många analytiska ord slutar på -ate (evaluate, demonstrate) eller -ify (identify, clarify)."
       ]
     },
     {
@@ -2305,6 +2394,11 @@
           "explanation": "Emphasise stavas E-M-P-H-A-S-I-S-E.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Avancerade argumentationsord för debatter, essäer och akademiska diskussioner.",
+        "Centrala ord: substantiate, corroborate, refute, contradict, concede, premise, assertion.",
+        "Tips: Dela upp långa ord i delar – 'cor-rob-or-ate'. Latin/franska rötter dyker upp ofta."
       ]
     },
     {
@@ -2373,6 +2467,11 @@
           "explanation": "Arguably stavas A-R-G-U-A-B-L-Y.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Akademiska stilmarkörer och konnektiv för professionella och formella texter.",
+        "Centrala ord: consequently, furthermore, nevertheless, notwithstanding, henceforth.",
+        "Tips: Lär dig ett ord per dag och använd det aktivt i din skrivning – det fastnar bäst så."
       ]
     },
     {
@@ -2441,6 +2540,11 @@
           "explanation": "Representation stavas R-E-P-R-E-S-E-N-T-A-T-I-O-N.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Ord för komplexa samhällsfrågor – viktiga i diskussioner om politik, miljö och etik.",
+        "Centrala ord: sustainability, inequality, infrastructure, legislation, implementation.",
+        "Tips: Koppla varje ord till en aktuell nyhet eller debatt du känner till."
       ]
     },
     {
@@ -2509,6 +2613,11 @@
           "explanation": "Conscientious stavas C-O-N-S-C-I-E-N-T-I-O-U-S.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "De allra svåraste engelska orden att stava rätt – var extra noga med varje bokstav!",
+        "Vanliga fel: accommodation (2 c, 2 m), occurrence (2 c, 2 r), embarrassment (2 r, 2 s).",
+        "Tips: Lär dig ett minnesknep per ord. 'necessary': ett C, två S – 'Never Eat Cake, Eat Salad Sandwiches'."
       ]
     }
   ],

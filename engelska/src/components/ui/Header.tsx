@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent } from "@/lib/storage";
 import type { StudentData } from "@/lib/types";
@@ -12,7 +12,6 @@ interface HeaderProps {
 }
 
 export default function Header({ student, onLogout }: HeaderProps) {
-  const pathname = usePathname();
   const router = useRouter();
   const { dark, toggle } = useDarkMode();
 
@@ -31,52 +30,44 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 font-bold text-xl text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
+          className="flex items-center gap-1.5 sm:gap-2 font-bold text-lg sm:text-xl text-gray-900 dark:text-white hover:opacity-80 transition-opacity min-w-0"
         >
-          <span className="text-2xl">🔭</span>
-          <span>Engelskajakten</span>
+          <span className="text-xl sm:text-2xl flex-shrink-0">🔭</span>
+          <span className="truncate">Engelskajakten</span>
         </Link>
 
         {/* Nav */}
         {student && (
-          <nav className="flex items-center gap-2">
-            <Link
-              href="/profile"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                pathname === "/profile"
-                  ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-                  : "text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
-            >
-              👤 Min sida
-            </Link>
-
-            {/* Points badge */}
-            <div className="ml-1 flex items-center gap-1.5 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 px-3 py-1.5 rounded-full">
-              <span className="text-amber-500">⭐</span>
-              <span className="text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
+          <nav className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+            {/* Points badge – hidden on xs */}
+            <div className="hidden xs:flex items-center gap-1 sm:gap-1.5 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full">
+              <span className="text-amber-500 text-sm">⭐</span>
+              <span className="text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
             </div>
 
-            {/* Student name */}
-            <span className="text-sm text-gray-600 dark:text-gray-300 hidden sm:block ml-1">
-              Hej, <strong>{student.name}</strong>!
-            </span>
-
-            {/* Logga ut */}
-            <button
-              onClick={handleLogout}
-              className="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+            {/* Student name – links to Min sida, hidden on mobile */}
+            <Link
+              href="/profile"
+              className="text-sm font-semibold text-gray-700 dark:text-gray-200 hidden sm:block px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
-              Logga ut
-            </button>
+              {student.name}
+            </Link>
 
             {/* Dark mode toggle */}
             <button
               onClick={toggle}
-              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors touch-manipulation"
               aria-label={dark ? "Ljust läge" : "Mörkt läge"}
             >
               {dark ? "☀️" : "🌙"}
+            </button>
+
+            {/* Logga ut */}
+            <button
+              onClick={handleLogout}
+              className="px-2 sm:px-3 py-2 rounded-lg text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 dark:hover:text-red-400 transition-colors touch-manipulation"
+            >
+              Logga ut
             </button>
           </nav>
         )}

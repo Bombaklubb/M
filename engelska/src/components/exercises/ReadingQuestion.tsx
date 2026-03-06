@@ -24,24 +24,24 @@ const LEVEL_LABELS: Record<string, { label: string; color: string; icon: string 
 interface Props {
   question: RQ;
   onAnswer: (correct: boolean) => void;
+  isLast?: boolean;
 }
 
-export default function ReadingQuestion({ question, onAnswer }: Props) {
+export default function ReadingQuestion({ question, onAnswer, isLast }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
+  const [showHint, setShowHint] = useState(false);
   const level = LEVEL_LABELS[question.type] ?? LEVEL_LABELS["on-the-line"];
 
   function handleSelect(idx: number) {
     if (revealed) return;
     setSelected(idx);
     setRevealed(true);
-    const correct = idx === question.correctIndex;
-    setTimeout(() => onAnswer(correct), 1200);
   }
 
   function optionStyle(idx: number): string {
     const base =
-      "w-full text-left px-5 py-4 rounded-xl border-2 font-medium transition-all duration-200 text-base ";
+      "w-full text-left px-4 py-3.5 sm:px-5 sm:py-4 rounded-xl border-2 font-medium transition-all duration-200 text-sm sm:text-base touch-manipulation ";
     if (!revealed) {
       return base + "border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 cursor-pointer";
     }
@@ -61,9 +61,30 @@ export default function ReadingQuestion({ question, onAnswer }: Props) {
         {level.icon} {level.label}
       </span>
 
-      <p className="text-lg font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
+      <p className="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
         {question.question}
       </p>
+
+      {/* Tips */}
+      {question.hint && (
+        <div className="rounded-xl overflow-hidden border border-amber-200 dark:border-amber-700">
+          <button
+            onClick={() => setShowHint(!showHint)}
+            className="w-full flex items-center justify-between px-4 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-sm font-medium hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+          >
+            <span className="flex items-center gap-2">
+              <span>💡</span>
+              <span>Tips</span>
+            </span>
+            <span className="text-amber-500 text-xs">{showHint ? "▲" : "▼"}</span>
+          </button>
+          {showHint && (
+            <div className="px-4 py-3 text-sm text-amber-900 dark:text-amber-200 bg-amber-50/60 dark:bg-amber-900/10 border-t border-amber-200 dark:border-amber-700">
+              {question.hint}
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="space-y-3">
         {question.options.map((opt, idx) => (
@@ -90,6 +111,17 @@ export default function ReadingQuestion({ question, onAnswer }: Props) {
       {revealed && question.explanation && (
         <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-sm text-blue-800 dark:text-blue-200 animate-slide-up">
           💡 {question.explanation}
+        </div>
+      )}
+
+      {revealed && (
+        <div className="flex justify-end pt-2">
+          <button
+            onClick={() => onAnswer(selected === question.correctIndex)}
+            className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
+          >
+            {isLast ? "Visa resultat →" : "Nästa fråga →"}
+          </button>
         </div>
       )}
     </div>

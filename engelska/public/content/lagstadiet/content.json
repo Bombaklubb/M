@@ -208,6 +208,12 @@
           "hint": "Används med I.",
           "explanation": "Med I använder vi 'am'. I am eight years old."
         }
+      ],
+      "helpText": [
+        "Be-verbet (att vara) ändras beroende på vem du talar om – precis som 'är' på svenska gör vi det på engelska med tre olika former.",
+        "Regel: I → am | He / She / It → is | You / We / They → are",
+        "Exempel: I am happy. ✔  She is my friend. ✔  We are at school. ✔",
+        "Tips: Om du kan byta ut orden mot 'he/she/it' → skriv IS. Kan du byta mot 'we/they'? → skriv ARE."
       ]
     },
     {
@@ -409,6 +415,12 @@
           "hint": "My friends = they, använd 'have'.",
           "explanation": "My friends = de (they). Vi använder 'have'. My friends have nice backpacks."
         }
+      ],
+      "helpText": [
+        "Have/has betyder 'ha'. Ha/has följer samma mönster som am/is/are.",
+        "Regel: I / You / We / They → have | He / She / It → has",
+        "Exempel: I have a dog. ✔  She has a cat. ✔  They have two books. ✔",
+        "Tips: Om du skulle använda IS → använd HAS. Om du skulle använda ARE → använd HAVE."
       ]
     },
     {
@@ -614,6 +626,12 @@
           "correctIndex": 3,
           "explanation": "Yellow börjar med konsonantljudet Y, så vi använder 'a'. A yellow bird."
         }
+      ],
+      "helpText": [
+        "A eller an? Det beror på hur nästa ord LÅTER, inte hur det stavas!",
+        "A används före konsonantljud: a dog, a cat, a big house, a university (u låter 'ju').",
+        "An används före vokalljud (a, e, i, o, u): an apple, an orange, an elephant, an umbrella.",
+        "Tips: Läs ordet högt – börjar det med ett vokalljud? Då an! Annars a."
       ]
     },
     {
@@ -806,6 +824,12 @@
           "hint": "Lägg till -s.",
           "explanation": "Pencil bildar plural med -s. We have four pencils."
         }
+      ],
+      "helpText": [
+        "Plural = flertal (mer än en sak). På engelska lägger vi oftast till -s i slutet.",
+        "Regel: de flesta ord + s. Ord som slutar på -s, -x, -z, -ch, -sh → lägg till -es: bus→buses, box→boxes.",
+        "Oregelbundna former du måste memorera: child→children, man→men, woman→women, mouse→mice, tooth→teeth.",
+        "Tips: Tänk dig att du räknar: one cat → two cats. One child → two children."
       ]
     },
     {
@@ -990,6 +1014,12 @@
           "correctIndex": 3,
           "explanation": "'These' = nära + flera. These are my books."
         }
+      ],
+      "helpText": [
+        "Pekord hjälper oss peka ut saker: är de NÄRA dig eller LÅNGT BORT?",
+        "Nära + en sak: this (denna). Nära + flera saker: these (dessa).",
+        "Långt bort + en sak: that (den där). Långt bort + flera saker: those (de där).",
+        "Tips: Tänk 'th-IS' = IS nära (singular) och 'th-OSE' = OSA-ffar bort (plural)."
       ]
     },
     {
@@ -1182,6 +1212,12 @@
           "hint": "You → your",
           "explanation": "You → your. Du ska borsta dina tänder varje dag. You should brush your teeth every day."
         }
+      ],
+      "helpText": [
+        "Ägande adjektiv berättar VEM som äger något och står alltid FÖRE substantivet.",
+        "Regel: I→my, You→your, He→his, She→her, It→its, We→our, They→their.",
+        "Exempel: This is my book. ✔  He loves his dog. ✔  We like our teacher. ✔",
+        "Tips: Byt ut personen mot det ägande adjektivet – aldrig 'I book', alltid 'my book'!"
       ]
     },
     {
@@ -1366,6 +1402,12 @@
           "correctIndex": 2,
           "explanation": "Ours ersätter 'our bike'. The green bike is ours."
         }
+      ],
+      "helpText": [
+        "Ägande pronomen ERSÄTTER hela substantivfrasen – de står ensamma utan substantiv.",
+        "Regel: my→mine, your→yours, his→his, her→hers, our→ours, their→theirs.",
+        "Exempel: 'This is my book' → 'This book is mine.' (mine ersätter 'my book')",
+        "Tips: Adjektiv + substantiv → pronomen. 'Her cat' → 'The cat is hers.'"
       ]
     },
     {
@@ -1567,6 +1609,12 @@
           ],
           "explanation": "Sex stolar (plural) → There are. There are six chairs at the table."
         }
+      ],
+      "helpText": [
+        "'There is' och 'there are' används för att säga att något FINNS på ett ställe.",
+        "Regel: There IS + en sak (singular). There ARE + flera saker (plural).",
+        "Exempel: There is a cat on the chair. ✔  There are three apples in the bowl. ✔",
+        "Tips: Titta på substantivet efter – är det ensamt? → IS. Är det flera? → ARE."
       ]
     },
     {
@@ -1759,6 +1807,12 @@
           "hint": "Börja frågan med Can.",
           "explanation": "Frågor med can: Can you speak English?"
         }
+      ],
+      "helpText": [
+        "'Can' används för att berätta vad du KLARAR AV att göra (förmåga).",
+        "Viktigt: efter 'can' och 'can't' kommer ALLTID grundformen av verbet – aldrig -s!",
+        "Can't = cannot (kan inte). Exempel: I can swim. ✔  She can't fly. ✔  He can draw. ✔",
+        "Tips: Can förändras aldrig! Aldrig 'She cans' – alltid 'She can'."
       ]
     },
     {
@@ -1969,6 +2023,12 @@
           ],
           "explanation": "'On' = ovanpå. My cat sleeps on my bed."
         }
+      ],
+      "helpText": [
+        "Lägesord berättar VAR något befinner sig.",
+        "In = inuti (in the box), on = på en yta (on the table), under = under, next to = bredvid, behind = bakom.",
+        "Exempel: The cat is in the box. ✔  The book is on the desk. ✔  The bag is under the chair. ✔",
+        "Tips: Föreställ dig en låda – är katten inuti, ovanpå eller bakom den?"
       ]
     },
     {
@@ -2159,6 +2219,12 @@
           "hint": "Upprepa hjälpverbet have.",
           "explanation": "Have you got...? → Yes, I have."
         }
+      ],
+      "helpText": [
+        "Korta svar på ja/nej-frågor: repetera hjälpverbet från frågan – lägg INTE till andra ord!",
+        "Mönster: Are you...? → Yes, I am. / No, I'm not.  Is she...? → Yes, she is. / No, she isn't.",
+        "Can he...? → Yes, he can. / No, he can't.  Do they...? → Yes, they do. / No, they don't.",
+        "Tips: Lyssna på FÖRSTA verbet i frågan (is/are/can/do) – det är det du upprepar i svaret!"
       ]
     }
   ],
@@ -2211,6 +2277,11 @@
           "correctIndex": 1,
           "explanation": "The story shows Sam is happy (last sentence), loves his dog Rex, and enjoys school — a happy, active boy."
         }
+      ],
+      "helpText": [
+        "Läsförståelse handlar om att förstå VAD texten berättar – inte att kunna varje ord.",
+        "Läs texten en gång för helheten. Läs den igen och leta efter svar på frågorna.",
+        "Tips: 'På raden'-frågor = svaret finns direkt i texten. Hitta meningen och läs om den!"
       ]
     },
     {
@@ -2261,6 +2332,11 @@
           "correctIndex": 1,
           "explanation": "The text ends with 'It is a fun place to visit' — the text wants to tell us how great and educational the camp is."
         }
+      ],
+      "helpText": [
+        "Läs texten noggrant – svaren på frågorna finns i texten!",
+        "Om du inte förstår ett ord, läs meningarna runt det – kontexten ger ofta ledtrådar.",
+        "Tips: Du kan alltid gå tillbaka och läsa texten igen under frågorna."
       ]
     }
   ],
@@ -2328,6 +2404,11 @@
           "correctIndex": 3,
           "explanation": "School stavas S-C-H-O-O-L."
         }
+      ],
+      "helpText": [
+        "Stava engelska ord: läs ordet högt och försök se det framför dig bokstav för bokstav.",
+        "Skolord du ska kunna: pencil, book, teacher, classroom, ruler, eraser, desk, chair.",
+        "Tips: Dela upp långa ord i delar – 'class-room', 'black-board'. Det blir lättare!"
       ]
     },
     {
@@ -2398,6 +2479,11 @@
           "correctIndex": 3,
           "explanation": "Elephant stavas E-L-E-P-H-A-N-T."
         }
+      ],
+      "helpText": [
+        "Djurnamn på engelska kan se konstiga ut men det finns mönster!",
+        "Vanliga djur: cat, dog, bird, fish, horse, elephant, lion, tiger, rabbit, mouse.",
+        "Tips: Tänk på hur djuret ser ut eller låter – det kan hjälpa dig komma ihåg stavningen."
       ]
     },
     {
@@ -2463,6 +2549,12 @@
           "correctIndex": 3,
           "explanation": "Purple stavas P-U-R-P-L-E."
         }
+      ],
+      "helpText": [
+        "Färger och former är viktiga basord på engelska.",
+        "Färger: red, blue, green, yellow, orange, purple, pink, brown, black, white.",
+        "Former: circle, square, triangle, rectangle, star, heart.",
+        "Tips: Koppla ihop färgen med något du känner igen – red som röd, blue som blå!"
       ]
     },
     {
@@ -2528,6 +2620,11 @@
           "correctIndex": 2,
           "explanation": "Stomach stavas S-T-O-M-A-C-H."
         }
+      ],
+      "helpText": [
+        "Kroppsdelar på engelska – många liknar svenska ord!",
+        "Vanliga ord: head, eye, ear, nose, mouth, arm, hand, leg, foot.",
+        "Tips: Peka på kroppsdelen medan du stavar – det hjälper minnet!"
       ]
     },
     {
@@ -2593,6 +2690,11 @@
           "correctIndex": 3,
           "explanation": "Family stavas F-A-M-I-L-Y."
         }
+      ],
+      "helpText": [
+        "Vardagsord är de ord du stöter på mest i det dagliga livet.",
+        "Tänk på situationer: hemma, i skolan, i affären – vilka ord behöver du?",
+        "Tips: Läs varje ord högt, stava det tyst för dig själv, och skriv det utan att titta."
       ]
     }
   ],

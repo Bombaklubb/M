@@ -200,6 +200,13 @@
           "explanation": "Present simple describes habits (every day), facts (water boils), and routines.",
           "hint": "Presens används för vanor, fakta och rutiner."
         }
+      ],
+      "helpText": [
+        "Present simple (presens) använder vi för vanor, rutiner och fakta som alltid stämmer.",
+        "Regel: Med he/she/it → lägg till -s (play→plays). Slutar på -ch/-sh/-x/-o → -es (watch→watches). Slutar på konsonant+y → -ies (study→studies).",
+        "Negation: I/you/we/they + don't + grundform. He/she/it + doesn't + grundform.",
+        "Frågor: Do you...? / Does she...? (OBS: inte 'Does she likes?' – verb i grundform efter does!)",
+        "Signalerord: always, usually, often, sometimes, never, every day/week."
       ]
     },
     {
@@ -400,6 +407,13 @@
           "explanation": "'Have' is irregular: past simple is 'had'.",
           "hint": "have → had (oregelbundet)"
         }
+      ],
+      "helpText": [
+        "Past simple (preteritum) används för händelser som är HELT AVSLUTADE i det förflutna.",
+        "Regelbundna verb: lägg till -ed. walk→walked, play→played, stop→stopped (dubbla konsonant).",
+        "Oregelbundna verb måste memoreras: go→went, eat→ate, see→saw, have→had, come→came, take→took.",
+        "Negation + frågor: använd did/didn't + GRUNDFORM. 'Did she go?' / 'She didn't go.' (inte 'She didn't went'!)",
+        "Signalerord: yesterday, last week, ago, in 2010, when I was young."
       ]
     },
     {
@@ -610,6 +624,13 @@
           "explanation": "'Bad' is irregular: bad – worse – worst.",
           "hint": "bad → worse → worst (oregelbundet)"
         }
+      ],
+      "helpText": [
+        "Adjektiv beskriver substantiv: big, small, fast, beautiful, interesting.",
+        "Komparativ (jämföra 2 saker): korta adjektiv + -er: bigger, faster. Långa adjektiv (3+ stavelser): more + adjektiv: more interesting, more beautiful.",
+        "Superlativ (störst av alla): korta adjektiv: the + -est: the biggest. Långa: the most + adjektiv: the most interesting.",
+        "Oregelbundna: good→better→the best, bad→worse→the worst, far→farther→the farthest.",
+        "Tänk: Jämför du 2 saker? → komparativ (-er/more). Jämför du med ALLA? → superlativ (the -est/most)."
       ]
     },
     {
@@ -818,6 +839,12 @@
           "explanation": "'On' is used for things attached to/placed on surfaces: on the wall.",
           "hint": "'On' = på en yta eller vägg."
         }
+      ],
+      "helpText": [
+        "In, on, at används både för PLATS och TID – men med olika mönster!",
+        "Tid: in + lång period (in the morning, in January, in 2024). on + dag/datum (on Monday, on 5 March). at + exakt tidpunkt (at 8 o'clock, at noon, at night).",
+        "Plats: in = inuti (in the box, in Sweden). on = på en yta (on the table, on the wall). at = vid en punkt (at school, at the bus stop).",
+        "Tänk för tid: in (år/månad) → on (dag) → at (klockslag) – stor enhet till liten enhet!"
       ]
     },
     {
@@ -1013,6 +1040,13 @@
           "answer": "bought",
           "hint": "Tidmarkörer som 'yesterday', 'last year', 'ago' → datid (past simple)."
         }
+      ],
+      "helpText": [
+        "I den här övningen tränar du på att välja rätt tempus (verb-tid).",
+        "Present simple: vanor och fakta (She walks to school every day).",
+        "Past simple: avslutat i det förflutna (She walked to school yesterday).",
+        "Present continuous: pågår just nu (She is walking to school now).",
+        "Tänk: NÄR händer det? Nu = continuous. Alltid/vana = simple. Förr, klart = past."
       ]
     },
     {
@@ -1213,6 +1247,13 @@
           "correctIndex": 1,
           "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
         }
+      ],
+      "helpText": [
+        "Fortsätt öva på att välja rätt tempus – titta noga på tidsuttrycken i meningen!",
+        "Signalord för past simple: yesterday, last night, ago, in [år].",
+        "Signalord för present simple: always, usually, every day, often.",
+        "Signalord för present continuous: now, at the moment, currently, look! listen!",
+        "Tips: Hitta signalordet i meningen – det berättar ofta vilken tid du ska använda."
       ]
     },
     {
@@ -1508,6 +1549,12 @@
           "correctIndex": 1,
           "hint": "Tänk på vilket tempus som passar: vilket är tidsmärket i meningen?"
         }
+      ],
+      "helpText": [
+        "Nu blandas tempus – var uppmärksam på kontexten i varje mening!",
+        "Läs hela meningen innan du väljer – ibland hjälper den andra halvan av meningen.",
+        "Past simple vs present perfect: past simple = avslutat, specifik tid. Present perfect = koppling till nu.",
+        "Exempel: 'I saw her yesterday' (past simple). 'I have seen her' (present perfect, kopplat till nu)."
       ]
     },
     {
@@ -1658,6 +1705,12 @@
           "answer": "have lived",
           "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         }
+      ],
+      "helpText": [
+        "Fler tempusövningar – fokusera på om handlingen är avslutad eller pågående!",
+        "Past continuous (was/were + -ing): en pågående handling i det förflutna som avbryts.",
+        "Exempel: 'I was reading when the phone rang.' (läste = pågående, ringde = avbryter).",
+        "Tänk: Pågick det (was/were + -ing)? Avbröts det av något (past simple)?"
       ]
     },
     {
@@ -1858,6 +1911,11 @@
           "answer": "have waited",
           "hint": "Nyckelord som since/for/just/already/never → perfekt: have/has + perfektparticip."
         }
+      ],
+      "helpText": [
+        "Sista tempus-övningen – du klarar det här!",
+        "Kom ihåg: hitta tidsuttrycken och signalorden i varje mening.",
+        "Tänk igenom: Vana? → present simple. Avslutat i förr? → past simple. Pågår nu? → present continuous."
       ]
     },
     {
@@ -2068,6 +2126,13 @@
           "answer": "on",
           "hint": "Fast fras: 'on time' = i tid (punktligt). 'In time' = i tid (hinner). 'Arrived on time' = anlände punktligt."
         }
+      ],
+      "helpText": [
+        "Blandad grammatik – här tränar du på flera regler på en gång.",
+        "Some/any: some används i påståenden (I have some apples), any i frågor och negationer (Do you have any? / I don't have any).",
+        "Objektspronomen: I→me, he→him, she→her, they→them, we→us. 'Give it to me, not him!'",
+        "Will vs going to: will = spontant beslut/förutsägelse. Going to = planerat beslut.",
+        "Tips: Läs varje fråga noga – ibland avslöjar resten av meningen vilken regel som gäller."
       ]
     }
   ],
@@ -2120,6 +2185,12 @@
           "correctIndex": 1,
           "explanation": "They chose different things at the museum — different interests — but had a great time together. Good friends can have different tastes!"
         }
+      ],
+      "helpText": [
+        "Läsförståelse: leta efter svar på frågorna direkt i texten – svaren finns där!",
+        "Läs texten en gång för helheten, sen en gång med frågorna i tankarna.",
+        "'Mellan raderna'-frågor kräver att du tänker till – vad ANTYDER texten?",
+        "Tips: Du kan alltid scrolla tillbaka och läsa texten igen under frågorna."
       ]
     },
     {
@@ -2170,6 +2241,11 @@
           "correctIndex": 1,
           "explanation": "All living things need water. The water cycle continuously moves water around the planet, making it available. Without it, water would stay only in the oceans."
         }
+      ],
+      "helpText": [
+        "Det här är en faktatetext – leta efter specifika fakta och siffror som svar.",
+        "Faktatexter har ofta en tydlig struktur: inledning, fakta, slutsats.",
+        "Tips: Nyckelord i frågorna hjälper dig hitta rätt stycke i texten."
       ]
     }
   ],
@@ -2240,6 +2316,11 @@
           "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
           "explanation": "Library = bibliotek. Stavas L-I-B-R-A-R-Y."
         }
+      ],
+      "helpText": [
+        "Skolord och vardagsord – de ord du behöver mest i engelska varje dag.",
+        "Trick: Dela upp långa ord. 'home-work', 'class-mate', 'text-book'.",
+        "Tips: Läs ordet, täck det, stava det, kontrollera. Upprepa tills du kan det!"
       ]
     },
     {
@@ -2308,6 +2389,11 @@
           "explanation": "Came stavas C-A-M-E.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Oregelbundna verb har en specialform i preteritum – du måste lära dig dem utantill.",
+        "Vanliga par: go/went, eat/ate, see/saw, have/had, come/came, take/took, write/wrote.",
+        "Tips: Lär dig dem i tripplar: infinitiv – preteritum – perfektparticip: go – went – gone."
       ]
     },
     {
@@ -2376,6 +2462,11 @@
           "explanation": "Island stavas I-S-L-A-N-D.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Ord för platser och byggnader – vanliga ord när du beskriver var du är.",
+        "Vanliga platser: library, hospital, museum, restaurant, supermarket, pharmacy, cinema.",
+        "Tips: Koppla varje plats till vad man gör där – det hjälper dig minnas stavningen."
       ]
     },
     {
@@ -2444,6 +2535,11 @@
           "explanation": "Important stavas I-M-P-O-R-T-A-N-T.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Adjektiv och beskrivande ord – bygg upp ditt ordförråd för att beskriva saker mer exakt.",
+        "Tänk på komparativ och superlativ när du stavar: beautiful/more beautiful/most beautiful.",
+        "Tips: Läs varje ord och försök använda det i en mening – det fastnar bättre!"
       ]
     },
     {
@@ -2512,6 +2608,12 @@
           "explanation": "Finally stavas F-I-N-A-L-L-Y.",
           "hint": "Tänk noggrant på grammatikregeln för denna fråga."
         }
+      ],
+      "helpText": [
+        "Sambandsord (connectors) hjälper dig bygga längre och mer flytande meningar och texter.",
+        "Addition: and, also, furthermore, moreover. Kontrast: but, however, although, on the other hand.",
+        "Orsak: because, since, as. Resultat: so, therefore, thus.",
+        "Tips: Lär dig ett sambandsord i taget och öva att använda det i egna meningar."
       ]
     }
   ],
