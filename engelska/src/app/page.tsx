@@ -1,8 +1,9 @@
 "use client";
-// deploy trigger
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { loadStudent, createStudent } from "@/lib/storage";
+import Header from "@/components/ui/Header";
+import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
 import type { StudentData } from "@/lib/types";
@@ -25,6 +26,12 @@ export default function HomePage() {
     setStudent(data);
   }
 
+  function handleLogout() {
+    clearStudent();
+    setStudent(null);
+    setNameInput("");
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -43,7 +50,7 @@ export default function HomePage() {
     ];
 
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center p-4 gap-6">
+      <div className="min-h-screen bg-gradient-to-br from-jungle-900 via-jungle-800 to-jungle-700 flex items-center justify-center p-4 gap-6">
 
         {/* Left: sprakdjungeln + sprakstaden */}
         <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
@@ -144,7 +151,8 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Header student={student} onLogout={handleLogout} />
 
       <main className="max-w-5xl mx-auto px-4 py-4">
         {/* Klickbar startsidebild */}

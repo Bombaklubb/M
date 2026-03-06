@@ -1,1428 +1,288 @@
 {
   "grammar": [
     {
-      "id": "lag-g1-alphabet",
-      "title": "The Alphabet",
-      "description": "Lär dig det engelska alfabetet och bokstävernas namn.",
+      "id": "lag-g1-be-verb",
+      "title": "Is – Am – Are (Be-verb)",
+      "description": "Lär dig använda is, am och are på rätt sätt.",
       "icon": "🔤",
       "pointsRequired": 0,
       "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g1-1",
-          "type": "multiple-choice",
-          "question": "How many letters are there in the English alphabet?",
-          "options": [
-            "24",
-            "25",
-            "26",
-            "28"
-          ],
-          "correctIndex": 2,
-          "explanation": "The English alphabet has 26 letters, from A to Z.",
-          "hint": "Det engelska alfabetet har 26 bokstäver – från A till Z."
-        },
-        {
-          "id": "lag-g1-2",
-          "type": "fill-in-blank",
-          "sentence": "The first letter of the English alphabet is ___.",
-          "answer": "A",
-          "hint": "Tänk på alfabetsordningen: A B C D E ... X Y Z.",
-          "explanation": "A is the first letter. The alphabet starts A, B, C..."
-        }
+        {"id": "lag-g1-1", "type": "multiple-choice", "question": "Välj rätt ord: 'I ___ happy.'", "options": ["is", "am", "are", "be"], "correctIndex": 1, "explanation": "Vi använder 'am' med I. I am happy."},
+        {"id": "lag-g1-2", "type": "multiple-choice", "question": "Välj rätt ord: 'She ___ my friend.'", "options": ["am", "are", "is", "be"], "correctIndex": 2, "explanation": "Vi använder 'is' med she/he/it. She is my friend."},
+        {"id": "lag-g1-3", "type": "multiple-choice", "question": "Välj rätt ord: 'They ___ at school.'", "options": ["is", "am", "be", "are"], "correctIndex": 3, "explanation": "Vi använder 'are' med they/we/you. They are at school."},
+        {"id": "lag-g1-4", "type": "fill-in-blank", "sentence": "I ___ a student.", "answer": "am", "hint": "Används med I.", "explanation": "Med I använder vi alltid 'am'. I am a student."},
+        {"id": "lag-g1-5", "type": "fill-in-blank", "sentence": "The cat ___ small.", "answer": "is", "hint": "Används med he/she/it.", "explanation": "The cat = it, så vi använder 'is'. The cat is small."},
+        {"id": "lag-g1-6", "type": "fill-in-blank", "sentence": "We ___ good friends.", "answer": "are", "hint": "Används med we/they/you.", "explanation": "Med we använder vi 'are'. We are good friends."},
+        {"id": "lag-g1-7", "type": "multiple-choice", "question": "Välj rätt ord: 'He ___ tall.'", "options": ["are", "am", "is", "were"], "correctIndex": 2, "explanation": "Vi använder 'is' med he. He is tall."},
+        {"id": "lag-g1-8", "type": "multiple-choice", "question": "Välj rätt ord: 'You ___ very kind.'", "options": ["is", "am", "are", "be"], "correctIndex": 2, "explanation": "Vi använder 'are' med you. You are very kind."},
+        {"id": "lag-g1-9", "type": "fill-in-blank", "sentence": "It ___ a sunny day.", "answer": "is", "hint": "Används med he/she/it.", "explanation": "Med it använder vi 'is'. It is a sunny day."},
+        {"id": "lag-g1-10", "type": "fill-in-blank", "sentence": "My brothers ___ funny.", "answer": "are", "hint": "Används med they/we/you.", "explanation": "My brothers = de (they), så vi använder 'are'. My brothers are funny."},
+        {"id": "lag-g1-11", "type": "build-sentence", "instruction": "Bygg meningen: 'She is my sister.'", "words": ["She", "is", "my", "sister", "."], "correctOrder": [0, 1, 2, 3, 4], "explanation": "She is my sister. Vi använder 'is' med she."},
+        {"id": "lag-g1-12", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["I is tired.", "I are tired.", "I am tired.", "I be tired."], "correctIndex": 2, "explanation": "Med I använder vi alltid 'am'. I am tired."},
+        {"id": "lag-g1-13", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["They is happy.", "They am happy.", "They be happy.", "They are happy."], "correctIndex": 3, "explanation": "Med they använder vi 'are'. They are happy."},
+        {"id": "lag-g1-14", "type": "fill-in-blank", "sentence": "My dog and cat ___ outside.", "answer": "are", "hint": "Två saker = plural, använd 'are'.", "explanation": "När det är flera saker (plural) använder vi 'are'. My dog and cat are outside."},
+        {"id": "lag-g1-15", "type": "build-sentence", "instruction": "Bygg meningen: 'We are at home.'", "words": ["We", "are", "at", "home", "."], "correctOrder": [0, 1, 2, 3, 4], "explanation": "We are at home. Med we använder vi 'are'."},
+        {"id": "lag-g1-16", "type": "multiple-choice", "question": "Välj rätt ord: 'The flowers ___ beautiful.'", "options": ["is", "am", "are", "be"], "correctIndex": 2, "explanation": "The flowers = flera blommor (plural), så vi använder 'are'. The flowers are beautiful."},
+        {"id": "lag-g1-17", "type": "fill-in-blank", "sentence": "I ___ eight years old.", "answer": "am", "hint": "Används med I.", "explanation": "Med I använder vi 'am'. I am eight years old."}
       ]
     },
     {
-      "id": "lag-g2-colors",
-      "title": "Colours & Numbers",
-      "description": "Färger och siffror på engelska — grunderna!",
-      "icon": "🎨",
+      "id": "lag-g2-have-has",
+      "title": "Have – Has (Att ha)",
+      "description": "Lär dig när du ska använda have och has.",
+      "icon": "🤲",
       "pointsRequired": 0,
       "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g2-1",
-          "type": "multiple-choice",
-          "question": "What colour is the sky on a sunny day?",
-          "options": [
-            "red",
-            "green",
-            "blue",
-            "yellow"
-          ],
-          "correctIndex": 2,
-          "explanation": "The sky is blue on a sunny day.",
-          "hint": "Tänk på vilken färg det handlar om. Färger på engelska: red, blue, green, yellow, orange, purple, black, white..."
-        },
-        {
-          "id": "lag-g2-2",
-          "type": "fill-in-blank",
-          "sentence": "A banana is ___ in colour.",
-          "answer": "yellow",
-          "hint": "Tänk på vilken färg det handlar om. Färger på engelska: red, blue, green, yellow, orange, purple, black, white...",
-          "explanation": "A banana is yellow. Yellow = gul."
-        }
+        {"id": "lag-g2-1", "type": "multiple-choice", "question": "Välj rätt ord: 'I ___ a red bike.'", "options": ["has", "have", "haves", "having"], "correctIndex": 1, "explanation": "Med I/you/we/they använder vi 'have'. I have a red bike."},
+        {"id": "lag-g2-2", "type": "multiple-choice", "question": "Välj rätt ord: 'She ___ long hair.'", "options": ["have", "haves", "has", "having"], "correctIndex": 2, "explanation": "Med she/he/it använder vi 'has'. She has long hair."},
+        {"id": "lag-g2-3", "type": "fill-in-blank", "sentence": "My dog ___ a brown tail.", "answer": "has", "hint": "My dog = it, använd 'has'.", "explanation": "My dog = it. Med he/she/it använder vi 'has'. My dog has a brown tail."},
+        {"id": "lag-g2-4", "type": "fill-in-blank", "sentence": "We ___ a big house.", "answer": "have", "hint": "Används med I/you/we/they.", "explanation": "Med we använder vi 'have'. We have a big house."},
+        {"id": "lag-g2-5", "type": "multiple-choice", "question": "Välj rätt ord: 'He ___ two brothers.'", "options": ["have", "haves", "having", "has"], "correctIndex": 3, "explanation": "Med he/she/it använder vi 'has'. He has two brothers."},
+        {"id": "lag-g2-6", "type": "multiple-choice", "question": "Välj rätt ord: 'They ___ a pet fish.'", "options": ["has", "haves", "having", "have"], "correctIndex": 3, "explanation": "Med they använder vi 'have'. They have a pet fish."},
+        {"id": "lag-g2-7", "type": "fill-in-blank", "sentence": "The bird ___ colorful feathers.", "answer": "has", "hint": "The bird = it, använd 'has'.", "explanation": "The bird = it. Vi använder 'has'. The bird has colorful feathers."},
+        {"id": "lag-g2-8", "type": "fill-in-blank", "sentence": "You ___ a great smile.", "answer": "have", "hint": "Används med I/you/we/they.", "explanation": "Med you använder vi 'have'. You have a great smile."},
+        {"id": "lag-g2-9", "type": "build-sentence", "instruction": "Bygg meningen: 'He has a new book.'", "words": ["He", "has", "a", "new", "book", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "He has a new book. Med he använder vi 'has'."},
+        {"id": "lag-g2-10", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["She have a cat.", "She haves a cat.", "She has a cat.", "She having a cat."], "correctIndex": 2, "explanation": "Med she använder vi 'has'. She has a cat."},
+        {"id": "lag-g2-11", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["They has toys.", "They haves toys.", "They having toys.", "They have toys."], "correctIndex": 3, "explanation": "Med they använder vi 'have'. They have toys."},
+        {"id": "lag-g2-12", "type": "fill-in-blank", "sentence": "My teacher ___ a black pen.", "answer": "has", "hint": "My teacher = he/she, använd 'has'.", "explanation": "My teacher = han/hon. Vi använder 'has'. My teacher has a black pen."},
+        {"id": "lag-g2-13", "type": "fill-in-blank", "sentence": "I ___ blue eyes.", "answer": "have", "hint": "Används med I.", "explanation": "Med I använder vi 'have'. I have blue eyes."},
+        {"id": "lag-g2-14", "type": "multiple-choice", "question": "Välj rätt ord: 'The tree ___ green leaves.'", "options": ["have", "haves", "has", "having"], "correctIndex": 2, "explanation": "The tree = it. Med it använder vi 'has'. The tree has green leaves."},
+        {"id": "lag-g2-15", "type": "build-sentence", "instruction": "Bygg meningen: 'We have a new car.'", "words": ["We", "have", "a", "new", "car", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "We have a new car. Med we använder vi 'have'."},
+        {"id": "lag-g2-16", "type": "fill-in-blank", "sentence": "My friends ___ nice backpacks.", "answer": "have", "hint": "My friends = they, använd 'have'.", "explanation": "My friends = de (they). Vi använder 'have'. My friends have nice backpacks."}
       ]
     },
     {
-      "id": "lag-g3-greetings",
-      "title": "Greetings & Introductions",
-      "description": "Hälsa och presentera dig på engelska.",
-      "icon": "👋",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "lag-g3-1",
-          "type": "multiple-choice",
-          "question": "How do you say 'Hej!' in English?",
-          "options": [
-            "Goodbye!",
-            "Hello!",
-            "Thank you!",
-            "Sorry!"
-          ],
-          "correctIndex": 1,
-          "explanation": "Hello or Hi is the most common greeting in English.",
-          "hint": "Tänk på hur man hälsar och presenterar sig på engelska: Hello, Hi, Good morning, My name is..."
-        },
-        {
-          "id": "lag-g3-2",
-          "type": "build-sentence",
-          "instruction": "Build the sentence: 'Hello, my name is Maja.'",
-          "words": [
-            "Hello",
-            ",",
-            "my",
-            "name",
-            "is",
-            "Maja",
-            "."
-          ],
-          "correctOrder": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "explanation": "Start with the greeting, then introduce yourself: Hello, my name is..."
-        }
-      ]
-    },
-    {
-      "id": "lag-g4-animals",
-      "title": "Animals & Verbs",
-      "description": "Djur på engelska och enkla verb.",
-      "icon": "🐾",
-      "pointsRequired": 0,
-      "bonusPoints": 20,
-      "exercises": [
-        {
-          "id": "lag-g4-1",
-          "type": "multiple-choice",
-          "question": "What is the English word for 'hund'?",
-          "options": [
-            "cat",
-            "dog",
-            "bird",
-            "fish"
-          ],
-          "correctIndex": 1,
-          "explanation": "Hund = dog. Common pets: dog, cat, fish, rabbit.",
-          "hint": "Djurnamn på engelska: dog (hund), cat (katt), bird (fågel), fish (fisk), horse (häst)..."
-        },
-        {
-          "id": "lag-g4-2",
-          "type": "build-sentence",
-          "instruction": "Build the sentence: 'The dog can run fast.'",
-          "words": [
-            "The",
-            "dog",
-            "can",
-            "run",
-            "fast",
-            "."
-          ],
-          "correctOrder": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "explanation": "The + noun + can + verb + adverb is a common English sentence pattern."
-        }
-      ]
-    },
-    {
-      "id": "lag-g-tobehave",
-      "title": "To be & have",
-      "description": "Öva på 'am/is/are' och 'have/has' – grunden i engelskan.",
-      "icon": "🔤",
-      "pointsRequired": 0,
-      "bonusPoints": 20,
-      "exercises": [
-        {
-          "id": "lag-g-tobehave-1",
-          "type": "multiple-choice",
-          "question": "I ___ a cat.",
-          "options": [
-            "have",
-            "has",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave-2",
-          "type": "multiple-choice",
-          "question": "She ___ my friend.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-3",
-          "type": "fill-in-blank",
-          "sentence": "This ___ a dog.",
-          "answer": "is",
-          "hint": "'This' pekar på en sak (singularis) – använd 'is'."
-        },
-        {
-          "id": "lag-g-tobehave-4",
-          "type": "fill-in-blank",
-          "sentence": "They ___ happy.",
-          "answer": "are",
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave-5",
-          "type": "multiple-choice",
-          "question": "He ___ five years old.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-6",
-          "type": "fill-in-blank",
-          "sentence": "We ___ in school.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave-7",
-          "type": "multiple-choice",
-          "question": "It ___ big.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-8",
-          "type": "fill-in-blank",
-          "sentence": "I ___ happy.",
-          "answer": "am",
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave-9",
-          "type": "multiple-choice",
-          "question": "The dogs ___ small.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "'Are' används med you, we, they och plurala substantiv."
-        },
-        {
-          "id": "lag-g-tobehave-10",
-          "type": "fill-in-blank",
-          "sentence": "She ___ my teacher.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-11",
-          "type": "multiple-choice",
-          "question": "I ___ 7 years old.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave-12",
-          "type": "fill-in-blank",
-          "sentence": "We ___ friends.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave-13",
-          "type": "multiple-choice",
-          "question": "The cat ___ black.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "'Is' används med he, she, it och singulara substantiv."
-        },
-        {
-          "id": "lag-g-tobehave-14",
-          "type": "fill-in-blank",
-          "sentence": "He ___ tall.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-15",
-          "type": "multiple-choice",
-          "question": "They ___ in the park.",
-          "options": [
-            "are",
-            "is",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave-16",
-          "type": "fill-in-blank",
-          "sentence": "It ___ a book.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-17",
-          "type": "multiple-choice",
-          "question": "I ___ ready.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave-18",
-          "type": "fill-in-blank",
-          "sentence": "She ___ kind.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave-19",
-          "type": "multiple-choice",
-          "question": "We ___ happy.",
-          "options": [
-            "are",
-            "is",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave-20",
-          "type": "fill-in-blank",
-          "sentence": "The bird ___ small.",
-          "answer": "is",
-          "hint": "'Is' används med he, she, it och singulara substantiv."
-        }
-      ]
-    },
-    {
-      "id": "lag-g-tobehave2",
-      "title": "To be & have – del 2",
-      "description": "Fler övningar på 'am/is/are' och 'have/has'.",
+      "id": "lag-g3-a-an",
+      "title": "A / An (Obestämd artikel)",
+      "description": "Lär dig skillnaden mellan a och an.",
       "icon": "🔡",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g-tobehave2-1",
-          "type": "multiple-choice",
-          "question": "She ___ a sister.",
-          "options": [
-            "have",
-            "has",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'she' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
-        },
-        {
-          "id": "lag-g-tobehave2-2",
-          "type": "fill-in-blank",
-          "sentence": "I ___ a dog.",
-          "answer": "have",
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave2-3",
-          "type": "multiple-choice",
-          "question": "They ___ my friends.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave2-4",
-          "type": "fill-in-blank",
-          "sentence": "It ___ red.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave2-5",
-          "type": "multiple-choice",
-          "question": "We ___ a big house.",
-          "options": [
-            "have",
-            "has",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'we' använder vi 'have'. Exempel: They have a car."
-        },
-        {
-          "id": "lag-g-tobehave2-6",
-          "type": "fill-in-blank",
-          "sentence": "He ___ happy today.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave2-7",
-          "type": "multiple-choice",
-          "question": "I ___ two brothers.",
-          "options": [
-            "have",
-            "has",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave2-8",
-          "type": "fill-in-blank",
-          "sentence": "She ___ my teacher.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave2-9",
-          "type": "multiple-choice",
-          "question": "The cat ___ small.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "'Is' används med he, she, it och singulara substantiv."
-        },
-        {
-          "id": "lag-g-tobehave2-10",
-          "type": "fill-in-blank",
-          "sentence": "They ___ in the park.",
-          "answer": "are",
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave2-11",
-          "type": "multiple-choice",
-          "question": "He ___ a bike.",
-          "options": [
-            "have",
-            "has",
-            "is"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'he' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
-        },
-        {
-          "id": "lag-g-tobehave2-12",
-          "type": "fill-in-blank",
-          "sentence": "We ___ ready.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave2-13",
-          "type": "multiple-choice",
-          "question": "I ___ happy.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave2-14",
-          "type": "fill-in-blank",
-          "sentence": "It ___ a ball.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave2-15",
-          "type": "multiple-choice",
-          "question": "She ___ five years old.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave2-16",
-          "type": "fill-in-blank",
-          "sentence": "They ___ tall.",
-          "answer": "are",
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave2-17",
-          "type": "multiple-choice",
-          "question": "We ___ friends.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave2-18",
-          "type": "fill-in-blank",
-          "sentence": "He ___ my brother.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave2-19",
-          "type": "multiple-choice",
-          "question": "I ___ a pencil.",
-          "options": [
-            "have",
-            "has",
-            "is"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave2-20",
-          "type": "fill-in-blank",
-          "sentence": "The dogs ___ big.",
-          "answer": "are",
-          "hint": "'Are' används med you, we, they och plurala substantiv."
-        }
+        {"id": "lag-g3-1", "type": "multiple-choice", "question": "Välj rätt: '___ apple'", "options": ["a", "an", "the", "some"], "correctIndex": 1, "explanation": "Apple börjar med vokalljudet A, så vi använder 'an'. An apple."},
+        {"id": "lag-g3-2", "type": "multiple-choice", "question": "Välj rätt: '___ dog'", "options": ["an", "the", "a", "some"], "correctIndex": 2, "explanation": "Dog börjar med konsonanten D, så vi använder 'a'. A dog."},
+        {"id": "lag-g3-3", "type": "fill-in-blank", "sentence": "I have ___ orange.", "answer": "an", "hint": "Orange börjar med vokalljudet O.", "explanation": "Orange börjar med vokalljudet O, så vi använder 'an'. I have an orange."},
+        {"id": "lag-g3-4", "type": "fill-in-blank", "sentence": "She has ___ red hat.", "answer": "a", "hint": "Red börjar med konsonanten R.", "explanation": "Red börjar med konsonanten R, så vi använder 'a'. She has a red hat."},
+        {"id": "lag-g3-5", "type": "multiple-choice", "question": "Välj rätt: '___ elephant'", "options": ["a", "the", "some", "an"], "correctIndex": 3, "explanation": "Elephant börjar med vokalljudet E, så vi använder 'an'. An elephant."},
+        {"id": "lag-g3-6", "type": "multiple-choice", "question": "Välj rätt: '___ book'", "options": ["an", "the", "a", "some"], "correctIndex": 2, "explanation": "Book börjar med konsonanten B, så vi använder 'a'. A book."},
+        {"id": "lag-g3-7", "type": "fill-in-blank", "sentence": "There is ___ umbrella by the door.", "answer": "an", "hint": "Umbrella börjar med vokalljudet U.", "explanation": "Umbrella börjar med vokalljudet U, så vi använder 'an'. There is an umbrella by the door."},
+        {"id": "lag-g3-8", "type": "fill-in-blank", "sentence": "I see ___ cat in the garden.", "answer": "a", "hint": "Cat börjar med konsonanten C.", "explanation": "Cat börjar med konsonanten C, så vi använder 'a'. I see a cat in the garden."},
+        {"id": "lag-g3-9", "type": "multiple-choice", "question": "Välj rätt: '___ ice cream'", "options": ["a", "the", "an", "some"], "correctIndex": 2, "explanation": "Ice cream börjar med vokalljudet I, så vi använder 'an'. An ice cream."},
+        {"id": "lag-g3-10", "type": "multiple-choice", "question": "Välj rätt: '___ big house'", "options": ["an", "the", "a", "some"], "correctIndex": 2, "explanation": "Big börjar med konsonanten B, så vi använder 'a'. A big house."},
+        {"id": "lag-g3-11", "type": "fill-in-blank", "sentence": "He is eating ___ egg.", "answer": "an", "hint": "Egg börjar med vokalljudet E.", "explanation": "Egg börjar med vokalljudet E, så vi använder 'an'. He is eating an egg."},
+        {"id": "lag-g3-12", "type": "fill-in-blank", "sentence": "We have ___ new teacher.", "answer": "a", "hint": "New börjar med konsonantljudet N.", "explanation": "New börjar med konsonantljudet N, så vi använder 'a'. We have a new teacher."},
+        {"id": "lag-g3-13", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["I saw an big dog.", "I saw a big dog.", "I saw the big dog one.", "I saw big dog."], "correctIndex": 1, "explanation": "Big börjar med konsonanten B, så vi använder 'a'. I saw a big dog."},
+        {"id": "lag-g3-14", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["She has a orange.", "She has the orange one.", "She has an orange.", "She has orange."], "correctIndex": 2, "explanation": "Orange börjar med vokalljudet O, så vi använder 'an'. She has an orange."},
+        {"id": "lag-g3-15", "type": "build-sentence", "instruction": "Bygg meningen: 'I have an old book.'", "words": ["I", "have", "an", "old", "book", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Old börjar med vokalljudet O, så vi använder 'an'. I have an old book."},
+        {"id": "lag-g3-16", "type": "fill-in-blank", "sentence": "There is ___ ant on the leaf.", "answer": "an", "hint": "Ant börjar med vokalljudet A.", "explanation": "Ant börjar med vokalljudet A, så vi använder 'an'. There is an ant on the leaf."},
+        {"id": "lag-g3-17", "type": "multiple-choice", "question": "Välj rätt: '___ yellow bird'", "options": ["an", "the", "some", "a"], "correctIndex": 3, "explanation": "Yellow börjar med konsonantljudet Y, så vi använder 'a'. A yellow bird."}
       ]
     },
     {
-      "id": "lag-g-tobehave3",
-      "title": "To be & have – del 3",
-      "description": "Ännu fler övningar på 'am/is/are' och 'have/has'.",
-      "icon": "🔠",
+      "id": "lag-g4-plural",
+      "title": "Plural Forms (Plural)",
+      "description": "Lär dig hur man bildar plural (flertal) på engelska.",
+      "icon": "🔢",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g-tobehave3-1",
-          "type": "multiple-choice",
-          "question": "I ___ a brother.",
-          "options": [
-            "have",
-            "has",
-            "is"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave3-2",
-          "type": "fill-in-blank",
-          "sentence": "She ___ happy.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-3",
-          "type": "multiple-choice",
-          "question": "They ___ at school.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave3-4",
-          "type": "fill-in-blank",
-          "sentence": "It ___ blue.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-5",
-          "type": "multiple-choice",
-          "question": "He ___ a bike.",
-          "options": [
-            "have",
-            "has",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'he' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
-        },
-        {
-          "id": "lag-g-tobehave3-6",
-          "type": "fill-in-blank",
-          "sentence": "We ___ friends.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave3-7",
-          "type": "multiple-choice",
-          "question": "I ___ ready.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave3-8",
-          "type": "fill-in-blank",
-          "sentence": "The dog ___ big.",
-          "answer": "is",
-          "hint": "'Is' används med he, she, it och singulara substantiv."
-        },
-        {
-          "id": "lag-g-tobehave3-9",
-          "type": "multiple-choice",
-          "question": "They ___ five years old.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave3-10",
-          "type": "fill-in-blank",
-          "sentence": "She ___ my sister.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-11",
-          "type": "multiple-choice",
-          "question": "We ___ a cat.",
-          "options": [
-            "have",
-            "has",
-            "is"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'we' använder vi 'have'. Exempel: They have a car."
-        },
-        {
-          "id": "lag-g-tobehave3-12",
-          "type": "fill-in-blank",
-          "sentence": "He ___ tall.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-13",
-          "type": "multiple-choice",
-          "question": "I ___ two pencils.",
-          "options": [
-            "have",
-            "has",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave3-14",
-          "type": "fill-in-blank",
-          "sentence": "They ___ in the park.",
-          "answer": "are",
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave3-15",
-          "type": "multiple-choice",
-          "question": "It ___ a ball.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-16",
-          "type": "fill-in-blank",
-          "sentence": "She ___ kind.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-17",
-          "type": "multiple-choice",
-          "question": "We ___ happy today.",
-          "options": [
-            "are",
-            "is",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave3-18",
-          "type": "fill-in-blank",
-          "sentence": "He ___ my friend.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-19",
-          "type": "multiple-choice",
-          "question": "I ___ at home.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave3-20",
-          "type": "fill-in-blank",
-          "sentence": "The birds ___ small.",
-          "answer": "are",
-          "hint": "'Are' används med you, we, they och plurala substantiv."
-        },
-        {
-          "id": "lag-g-tobehave3-21",
-          "type": "multiple-choice",
-          "question": "She ___ a teacher.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-22",
-          "type": "fill-in-blank",
-          "sentence": "We ___ ready now.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave3-23",
-          "type": "multiple-choice",
-          "question": "He ___ a dog.",
-          "options": [
-            "have",
-            "has",
-            "is"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'he' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
-        },
-        {
-          "id": "lag-g-tobehave3-24",
-          "type": "fill-in-blank",
-          "sentence": "I ___ seven years old.",
-          "answer": "am",
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave3-25",
-          "type": "multiple-choice",
-          "question": "They ___ my classmates.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave3-26",
-          "type": "fill-in-blank",
-          "sentence": "It ___ green.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-27",
-          "type": "multiple-choice",
-          "question": "We ___ brothers.",
-          "options": [
-            "is",
-            "are",
-            "am"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave3-28",
-          "type": "fill-in-blank",
-          "sentence": "She ___ at school.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave3-29",
-          "type": "multiple-choice",
-          "question": "I ___ a book.",
-          "options": [
-            "have",
-            "has",
-            "is"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave3-30",
-          "type": "fill-in-blank",
-          "sentence": "The cat ___ hungry.",
-          "answer": "is",
-          "hint": "'Is' används med he, she, it och singulara substantiv."
-        }
+        {"id": "lag-g4-1", "type": "multiple-choice", "question": "Vad är plural av 'cat'?", "options": ["cates", "cats", "catt", "catts"], "correctIndex": 1, "explanation": "De flesta ord bildar plural med -s. Cat → cats."},
+        {"id": "lag-g4-2", "type": "multiple-choice", "question": "Vad är plural av 'box'?", "options": ["boxs", "boxes", "boxis", "boxxes"], "correctIndex": 1, "explanation": "Ord som slutar på -x bildar plural med -es. Box → boxes."},
+        {"id": "lag-g4-3", "type": "fill-in-blank", "sentence": "I have two ___. (dog)", "answer": "dogs", "hint": "Lägg till -s.", "explanation": "Dog bildar plural med -s. I have two dogs."},
+        {"id": "lag-g4-4", "type": "fill-in-blank", "sentence": "There are five ___ in the tree. (bird)", "answer": "birds", "hint": "Lägg till -s.", "explanation": "Bird bildar plural med -s. There are five birds in the tree."},
+        {"id": "lag-g4-5", "type": "multiple-choice", "question": "Vad är plural av 'child'?", "options": ["childs", "childes", "childrens", "children"], "correctIndex": 3, "explanation": "Child är ett oregelbundet ord. Plural är 'children', inte 'childs'."},
+        {"id": "lag-g4-6", "type": "multiple-choice", "question": "Vad är plural av 'tooth'?", "options": ["tooths", "teethes", "teeths", "teeth"], "correctIndex": 3, "explanation": "Tooth är ett oregelbundet ord. Plural är 'teeth'."},
+        {"id": "lag-g4-7", "type": "fill-in-blank", "sentence": "She has three ___. (book)", "answer": "books", "hint": "Lägg till -s.", "explanation": "Book bildar plural med -s. She has three books."},
+        {"id": "lag-g4-8", "type": "fill-in-blank", "sentence": "The ___ are playing outside. (child)", "answer": "children", "hint": "Oregelbundet plural av child.", "explanation": "Child har oregelbundet plural: children. The children are playing outside."},
+        {"id": "lag-g4-9", "type": "multiple-choice", "question": "Vad är plural av 'bus'?", "options": ["buss", "busies", "buses", "buss"], "correctIndex": 2, "explanation": "Ord som slutar på -s bildar plural med -es. Bus → buses."},
+        {"id": "lag-g4-10", "type": "multiple-choice", "question": "Vad är plural av 'man'?", "options": ["mans", "manes", "man", "men"], "correctIndex": 3, "explanation": "Man är ett oregelbundet ord. Plural är 'men'."},
+        {"id": "lag-g4-11", "type": "fill-in-blank", "sentence": "I see two ___. (fox)", "answer": "foxes", "hint": "Fox slutar på -x, lägg till -es.", "explanation": "Fox slutar på -x, så plural blir foxes. I see two foxes."},
+        {"id": "lag-g4-12", "type": "fill-in-blank", "sentence": "The ___ are eating grass. (cow)", "answer": "cows", "hint": "Lägg till -s.", "explanation": "Cow bildar plural med -s. The cows are eating grass."},
+        {"id": "lag-g4-13", "type": "multiple-choice", "question": "Vad är plural av 'fish'?", "options": ["fishs", "fishies", "fishes", "fish"], "correctIndex": 3, "explanation": "Fish kan vara både singular och plural. One fish, two fish."},
+        {"id": "lag-g4-14", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["I have two foots.", "I have two foot.", "I have two feets.", "I have two feet."], "correctIndex": 3, "explanation": "Foot har oregelbundet plural: feet. I have two feet."},
+        {"id": "lag-g4-15", "type": "build-sentence", "instruction": "Bygg meningen: 'The dogs are running fast.'", "words": ["The", "dogs", "are", "running", "fast", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Dogs är plural av dog. The dogs are running fast."},
+        {"id": "lag-g4-16", "type": "fill-in-blank", "sentence": "We have four ___. (pencil)", "answer": "pencils", "hint": "Lägg till -s.", "explanation": "Pencil bildar plural med -s. We have four pencils."}
       ]
     },
     {
-      "id": "lag-g-tobehave4",
-      "title": "To be & have – del 4",
-      "description": "Fler övningar på 'am/is/are' och 'have/has'.",
-      "icon": "🔠",
+      "id": "lag-g5-demonstratives",
+      "title": "This – That – These – Those (Pekord)",
+      "description": "Lär dig använda this, that, these och those.",
+      "icon": "👆",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g-tobehave4-1",
-          "type": "fill-in-blank",
-          "sentence": "I ___ ready.",
-          "answer": "am",
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave4-2",
-          "type": "fill-in-blank",
-          "sentence": "She ___ happy.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-3",
-          "type": "fill-in-blank",
-          "sentence": "They ___ friends.",
-          "answer": "are",
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave4-4",
-          "type": "fill-in-blank",
-          "sentence": "He ___ tall.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-5",
-          "type": "fill-in-blank",
-          "sentence": "We ___ at school.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave4-6",
-          "type": "fill-in-blank",
-          "sentence": "It ___ blue.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-7",
-          "type": "fill-in-blank",
-          "sentence": "I ___ a dog.",
-          "answer": "have",
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave4-8",
-          "type": "fill-in-blank",
-          "sentence": "She ___ a cat.",
-          "answer": "has",
-          "hint": "Med 'she' (3:e person singular) använder vi 'has'. Exempel: She has a cat."
-        },
-        {
-          "id": "lag-g-tobehave4-9",
-          "type": "fill-in-blank",
-          "sentence": "They ___ two books.",
-          "answer": "have",
-          "hint": "Med 'they' använder vi 'have'. Exempel: They have a car."
-        },
-        {
-          "id": "lag-g-tobehave4-10",
-          "type": "fill-in-blank",
-          "sentence": "He ___ my brother.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-11",
-          "type": "fill-in-blank",
-          "sentence": "We ___ happy today.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave4-12",
-          "type": "fill-in-blank",
-          "sentence": "It ___ small.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-13",
-          "type": "fill-in-blank",
-          "sentence": "I ___ seven years old.",
-          "answer": "am",
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave4-14",
-          "type": "fill-in-blank",
-          "sentence": "She ___ my teacher.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-15",
-          "type": "fill-in-blank",
-          "sentence": "They ___ in the park.",
-          "answer": "are",
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave4-16",
-          "type": "fill-in-blank",
-          "sentence": "He ___ funny.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-17",
-          "type": "fill-in-blank",
-          "sentence": "We ___ ready now.",
-          "answer": "are",
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave4-18",
-          "type": "fill-in-blank",
-          "sentence": "It ___ green.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave4-19",
-          "type": "fill-in-blank",
-          "sentence": "I ___ a pencil.",
-          "answer": "have",
-          "hint": "Med 'I' använder vi 'have'. Exempel: I have a dog."
-        },
-        {
-          "id": "lag-g-tobehave4-20",
-          "type": "fill-in-blank",
-          "sentence": "She ___ kind.",
-          "answer": "is",
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        }
+        {"id": "lag-g5-1", "type": "multiple-choice", "question": "Vilket ord använder vi för något nära oss – ETT föremål?", "options": ["that", "those", "these", "this"], "correctIndex": 3, "explanation": "'This' används för ett föremål som är nära dig. This book (den här boken)."},
+        {"id": "lag-g5-2", "type": "multiple-choice", "question": "Vilket ord använder vi för något långt borta – ETT föremål?", "options": ["this", "these", "that", "those"], "correctIndex": 2, "explanation": "'That' används för ett föremål som är långt borta. That house (det där huset)."},
+        {"id": "lag-g5-3", "type": "fill-in-blank", "sentence": "___ is my pencil. (nära dig, ett)", "answer": "This", "hint": "Nära + ett föremål.", "explanation": "'This' = nära + ett föremål. This is my pencil."},
+        {"id": "lag-g5-4", "type": "fill-in-blank", "sentence": "___ are my shoes. (nära dig, flera)", "answer": "These", "hint": "Nära + flera föremål.", "explanation": "'These' = nära + flera föremål. These are my shoes."},
+        {"id": "lag-g5-5", "type": "multiple-choice", "question": "Välj rätt: 'Peka på flera saker långt borta: ___ are big trees.'", "options": ["this", "that", "these", "those"], "correctIndex": 3, "explanation": "'Those' används för flera föremål som är långt borta. Those are big trees."},
+        {"id": "lag-g5-6", "type": "multiple-choice", "question": "Välj rätt: '___ dog is cute.' (hunden är precis bredvid dig)", "options": ["that", "those", "these", "this"], "correctIndex": 3, "explanation": "'This' = nära + ett. This dog is cute."},
+        {"id": "lag-g5-7", "type": "fill-in-blank", "sentence": "___ clouds look dark. (moln långt borta, flera)", "answer": "Those", "hint": "Långt borta + flera föremål.", "explanation": "'Those' = långt borta + flera. Those clouds look dark."},
+        {"id": "lag-g5-8", "type": "fill-in-blank", "sentence": "___ is a beautiful flower. (nära dig, en blomma)", "answer": "This", "hint": "Nära + ett föremål.", "explanation": "'This' = nära + ett. This is a beautiful flower."},
+        {"id": "lag-g5-9", "type": "multiple-choice", "question": "Välj rätt: '___ birds are singing.' (fåglarna är nära dig, flera)", "options": ["that", "this", "those", "these"], "correctIndex": 3, "explanation": "'These' = nära + flera. These birds are singing."},
+        {"id": "lag-g5-10", "type": "multiple-choice", "question": "Välj rätt: '___ mountain is very tall.' (berget är långt borta, ett)", "options": ["these", "those", "this", "that"], "correctIndex": 3, "explanation": "'That' = långt borta + ett. That mountain is very tall."},
+        {"id": "lag-g5-11", "type": "build-sentence", "instruction": "Bygg meningen: 'That is a big elephant.'", "words": ["That", "is", "a", "big", "elephant", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "That is a big elephant. 'That' används för ett föremål långt borta."},
+        {"id": "lag-g5-12", "type": "fill-in-blank", "sentence": "___ are my best friends. (nära, flera)", "answer": "These", "hint": "Nära + flera.", "explanation": "'These' = nära + flera. These are my best friends."},
+        {"id": "lag-g5-13", "type": "multiple-choice", "question": "Vilken mening är rätt? (Ett äpple precis framför dig)", "options": ["That apple is red.", "Those apple is red.", "These apple is red.", "This apple is red."], "correctIndex": 3, "explanation": "Nära + ett = this. This apple is red."},
+        {"id": "lag-g5-14", "type": "fill-in-blank", "sentence": "___ house over there is yellow.", "answer": "That", "hint": "Långt borta + ett.", "explanation": "'That' = långt borta + ett. That house over there is yellow."},
+        {"id": "lag-g5-15", "type": "multiple-choice", "question": "Välj rätt: '___ are my books.' (böckerna är precis hos dig, flera)", "options": ["that", "those", "this", "these"], "correctIndex": 3, "explanation": "'These' = nära + flera. These are my books."}
       ]
     },
     {
-      "id": "lag-g-tobehave5",
-      "title": "To be & have – del 5",
-      "description": "Fler övningar på 'am/is/are'.",
-      "icon": "🔠",
+      "id": "lag-g6-possessive-adj",
+      "title": "Possessive Adjectives (Ägande ord: my, your, his, her)",
+      "description": "Lär dig ägande ord som my, your, his, her, its, our, their.",
+      "icon": "🏷️",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g-tobehave5-1",
-          "type": "multiple-choice",
-          "question": "___ you happy?",
-          "options": [
-            "Am",
-            "Is",
-            "Are"
-          ],
-          "correctIndex": 2,
-          "hint": "Med 'you' (du/ni) använder vi alltid 'are'. Exempel: You are my friend."
-        },
-        {
-          "id": "lag-g-tobehave5-2",
-          "type": "fill-in-blank",
-          "sentence": "This ___ my book.",
-          "answer": "is",
-          "hint": "'This' pekar på en sak (singularis) – använd 'is'."
-        },
-        {
-          "id": "lag-g-tobehave5-3",
-          "type": "multiple-choice",
-          "question": "___ she your sister?",
-          "options": [
-            "Am",
-            "Is",
-            "Are"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-4",
-          "type": "fill-in-blank",
-          "sentence": "These ___ my shoes.",
-          "answer": "are",
-          "hint": "'These' pekar på flera saker (pluralis) – använd 'are'."
-        },
-        {
-          "id": "lag-g-tobehave5-5",
-          "type": "multiple-choice",
-          "question": "I ___ not tired.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave5-6",
-          "type": "fill-in-blank",
-          "sentence": "He ___ not sad.",
-          "answer": "is",
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-7",
-          "type": "multiple-choice",
-          "question": "We ___ not late.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 2,
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave5-8",
-          "type": "fill-in-blank",
-          "sentence": "It ___ not cold today.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-9",
-          "type": "multiple-choice",
-          "question": "___ they your friends?",
-          "options": [
-            "Am",
-            "Is",
-            "Are"
-          ],
-          "correctIndex": 2,
-          "hint": "Med 'they' (de) använder vi 'are'. Exempel: They are friends."
-        },
-        {
-          "id": "lag-g-tobehave5-10",
-          "type": "fill-in-blank",
-          "sentence": "That ___ my teacher.",
-          "answer": "is",
-          "hint": "'That' pekar på en sak (singularis) – använd 'is'."
-        },
-        {
-          "id": "lag-g-tobehave5-11",
-          "type": "multiple-choice",
-          "question": "She ___ not angry.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'she' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-12",
-          "type": "fill-in-blank",
-          "sentence": "I ___ not at home.",
-          "answer": "am",
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave5-13",
-          "type": "multiple-choice",
-          "question": "___ he tall?",
-          "options": [
-            "Am",
-            "Is",
-            "Are"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-14",
-          "type": "fill-in-blank",
-          "sentence": "The apples ___ red.",
-          "answer": "are",
-          "hint": "'Are' används med you, we, they och plurala substantiv."
-        },
-        {
-          "id": "lag-g-tobehave5-15",
-          "type": "multiple-choice",
-          "question": "We ___ not hungry.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 2,
-          "hint": "Med 'we' (vi) använder vi 'are'. Exempel: We are late."
-        },
-        {
-          "id": "lag-g-tobehave5-16",
-          "type": "fill-in-blank",
-          "sentence": "It ___ my pencil.",
-          "answer": "is",
-          "hint": "Med 'it' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-17",
-          "type": "multiple-choice",
-          "question": "___ I late?",
-          "options": [
-            "Am",
-            "Is",
-            "Are"
-          ],
-          "correctIndex": 0,
-          "hint": "Med 'I' (jag) använder vi alltid 'am'. Exempel: I am happy."
-        },
-        {
-          "id": "lag-g-tobehave5-18",
-          "type": "fill-in-blank",
-          "sentence": "Those ___ my books.",
-          "answer": "are",
-          "hint": "'Those' pekar på flera saker (pluralis) – använd 'are'."
-        },
-        {
-          "id": "lag-g-tobehave5-19",
-          "type": "multiple-choice",
-          "question": "He ___ not here.",
-          "options": [
-            "am",
-            "is",
-            "are"
-          ],
-          "correctIndex": 1,
-          "hint": "Med 'he' (3:e person singular) använder vi 'is'. Exempel: She is tall."
-        },
-        {
-          "id": "lag-g-tobehave5-20",
-          "type": "fill-in-blank",
-          "sentence": "You ___ my best friend.",
-          "answer": "are",
-          "hint": "Med 'you' (du/ni) använder vi alltid 'are'. Exempel: You are my friend."
-        }
+        {"id": "lag-g6-1", "type": "multiple-choice", "question": "Välj rätt: 'I have a cat. ___ cat is black.'", "options": ["Your", "His", "My", "Her"], "correctIndex": 2, "explanation": "I → My. Mitt kattdjur. My cat is black."},
+        {"id": "lag-g6-2", "type": "multiple-choice", "question": "Välj rätt: 'She has a bag. ___ bag is pink.'", "options": ["His", "Her", "My", "Their"], "correctIndex": 1, "explanation": "She → Her. Hennes väska. Her bag is pink."},
+        {"id": "lag-g6-3", "type": "fill-in-blank", "sentence": "He has a bike. ___ bike is blue.", "answer": "His", "hint": "He → His", "explanation": "He → His. Hans cykel. His bike is blue."},
+        {"id": "lag-g6-4", "type": "fill-in-blank", "sentence": "We have a house. ___ house is big.", "answer": "Our", "hint": "We → Our", "explanation": "We → Our. Vårt hus. Our house is big."},
+        {"id": "lag-g6-5", "type": "multiple-choice", "question": "Välj rätt: 'You have a phone. ___ phone is new.'", "options": ["My", "His", "Your", "Her"], "correctIndex": 2, "explanation": "You → Your. Din telefon. Your phone is new."},
+        {"id": "lag-g6-6", "type": "multiple-choice", "question": "Välj rätt: 'They have a garden. ___ garden is lovely.'", "options": ["Our", "Their", "His", "Your"], "correctIndex": 1, "explanation": "They → Their. Deras trädgård. Their garden is lovely."},
+        {"id": "lag-g6-7", "type": "fill-in-blank", "sentence": "The dog has a bone. ___ bone is big.", "answer": "Its", "hint": "It → Its", "explanation": "The dog = it → its. Hundens ben. Its bone is big."},
+        {"id": "lag-g6-8", "type": "fill-in-blank", "sentence": "I love ___ family.", "answer": "my", "hint": "I → my", "explanation": "I → my. Jag älskar min familj. I love my family."},
+        {"id": "lag-g6-9", "type": "multiple-choice", "question": "Välj rätt: 'She likes ___ teacher.'", "options": ["his", "my", "their", "her"], "correctIndex": 3, "explanation": "She → her. Hon gillar sin lärare. She likes her teacher."},
+        {"id": "lag-g6-10", "type": "multiple-choice", "question": "Välj rätt: 'He forgot ___ lunch box.'", "options": ["her", "my", "his", "their"], "correctIndex": 2, "explanation": "He → his. Han glömde sin matlåda. He forgot his lunch box."},
+        {"id": "lag-g6-11", "type": "fill-in-blank", "sentence": "We play with ___ friends.", "answer": "our", "hint": "We → our", "explanation": "We → our. Vi leker med våra vänner. We play with our friends."},
+        {"id": "lag-g6-12", "type": "fill-in-blank", "sentence": "They eat ___ lunch at school.", "answer": "their", "hint": "They → their", "explanation": "They → their. De äter sin lunch i skolan. They eat their lunch at school."},
+        {"id": "lag-g6-13", "type": "build-sentence", "instruction": "Bygg meningen: 'My dog is very fast.'", "words": ["My", "dog", "is", "very", "fast", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "My dog is very fast. My = mitt/min (I → My)."},
+        {"id": "lag-g6-14", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["She has lost her keys.", "She has lost his keys.", "She has lost my keys.", "She has lost your keys."], "correctIndex": 0, "explanation": "She → her. Hon har tappat sina nycklar. She has lost her keys."},
+        {"id": "lag-g6-15", "type": "multiple-choice", "question": "Välj rätt: 'Can you help me find ___ hat?'", "options": ["your", "his", "my", "their"], "correctIndex": 2, "explanation": "Jag (I) frågar om min hatt → my. Can you help me find my hat?"},
+        {"id": "lag-g6-16", "type": "fill-in-blank", "sentence": "You should brush ___ teeth every day.", "answer": "your", "hint": "You → your", "explanation": "You → your. Du ska borsta dina tänder varje dag. You should brush your teeth every day."}
       ]
     },
     {
-      "id": "lag-g-mixed",
-      "title": "Blandad grammatik",
-      "description": "Possessiva pronomen, can, prepositioner, artiklar och oregelbundna pluralformer.",
-      "icon": "🔠",
+      "id": "lag-g7-possessive-pron",
+      "title": "Possessive Pronouns (Ägande pronomen: mine, yours)",
+      "description": "Lär dig ägande pronomen som mine, yours, his, hers, ours, theirs.",
+      "icon": "🙋",
       "pointsRequired": 0,
-      "bonusPoints": 20,
+      "bonusPoints": 15,
       "exercises": [
-        {
-          "id": "lag-g-mixed-1",
-          "type": "multiple-choice",
-          "question": "This is ___ book.",
-          "options": [
-            "my",
-            "mine"
-          ],
-          "correctIndex": 0,
-          "hint": "'My' används FÖRE ett substantiv: 'my book'. 'Mine' används UTAN substantiv efter: 'The book is mine.'"
-        },
-        {
-          "id": "lag-g-mixed-2",
-          "type": "multiple-choice",
-          "question": "The book is ___.",
-          "options": [
-            "my",
-            "mine"
-          ],
-          "correctIndex": 1,
-          "hint": "'Mine' ersätter hela ägarfrasen. 'The book is mine' = Det är min bok (inget substantiv efter)."
-        },
-        {
-          "id": "lag-g-mixed-3",
-          "type": "multiple-choice",
-          "question": "That is ___ dog.",
-          "options": [
-            "his",
-            "he"
-          ],
-          "correctIndex": 0,
-          "hint": "'His' är possessivt (hans) och används FÖRE substantiv: 'his dog'. 'He' är subjektspronomen och passar inte här."
-        },
-        {
-          "id": "lag-g-mixed-4",
-          "type": "multiple-choice",
-          "question": "These are ___ shoes.",
-          "options": [
-            "their",
-            "they"
-          ],
-          "correctIndex": 0,
-          "hint": "'Their' är possessivt (deras) och används FÖRE substantiv. 'They' är subjektspronomen (de)."
-        },
-        {
-          "id": "lag-g-mixed-5",
-          "type": "multiple-choice",
-          "question": "___ is my pencil.",
-          "options": [
-            "This",
-            "These"
-          ],
-          "correctIndex": 0,
-          "hint": "'Pencil' (penna) är singular – en sak nära dig. Singular nära → 'This'. Plural nära → 'These'."
-        },
-        {
-          "id": "lag-g-mixed-6",
-          "type": "multiple-choice",
-          "question": "___ are my books.",
-          "options": [
-            "That",
-            "Those"
-          ],
-          "correctIndex": 1,
-          "hint": "'Books' är plural – flera saker. Plural + längre bort → 'Those'. Singular + längre bort → 'That'."
-        },
-        {
-          "id": "lag-g-mixed-7",
-          "type": "fill-in-blank",
-          "sentence": "Can you swim? Yes, I ___.",
-          "answer": "can",
-          "hint": "Korta svar med modalverb upprepar hjälpverbet: 'Yes, I can.' / 'No, I cannot.'"
-        },
-        {
-          "id": "lag-g-mixed-8",
-          "type": "fill-in-blank",
-          "sentence": "I ___ not swim.",
-          "answer": "can",
-          "hint": "Modalverb 'can' används för förmåga. Nekad form: 'cannot' eller 'can not'. Fyll i grundformen 'can'."
-        },
-        {
-          "id": "lag-g-mixed-9",
-          "type": "build-sentence",
-          "instruction": "Sätt orden i rätt ordning:",
-          "words": [
-            "door",
-            "Close",
-            "the"
-          ],
-          "correctOrder": [
-            1,
-            2,
-            0
-          ],
-          "hint": "Imperativmening (uppmaning): börja med verbet i grundform. 'Close the door' = Stäng dörren."
-        },
-        {
-          "id": "lag-g-mixed-10",
-          "type": "build-sentence",
-          "instruction": "Sätt orden i rätt ordning:",
-          "words": [
-            "down",
-            "Sit"
-          ],
-          "correctOrder": [
-            1,
-            0
-          ],
-          "hint": "Imperativmening: börja med verbet. 'Sit down' = Sätt dig. Verbet kommer alltid först."
-        },
-        {
-          "id": "lag-g-mixed-11",
-          "type": "multiple-choice",
-          "question": "The cat is ___ the table.",
-          "options": [
-            "on",
-            "under",
-            "in"
-          ],
-          "correctIndex": 1,
-          "hint": "'On' = på ytan. 'Under' = under/nedanför. 'In' = inuti. Katten sitter under bordet."
-        },
-        {
-          "id": "lag-g-mixed-12",
-          "type": "multiple-choice",
-          "question": "The book is ___ the bag.",
-          "options": [
-            "in",
-            "on",
-            "at"
-          ],
-          "correctIndex": 0,
-          "hint": "'In' = inuti något. 'On' = på ytan av något. Boken är inne i väskan."
-        },
-        {
-          "id": "lag-g-mixed-13",
-          "type": "multiple-choice",
-          "question": "This is ___ apple.",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 1,
-          "hint": "'An' används före ord som börjar med ett vokaljud (a, e, i, o, u). 'Apple' börjar med 'a' → an apple."
-        },
-        {
-          "id": "lag-g-mixed-14",
-          "type": "multiple-choice",
-          "question": "That is ___ house.",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 0,
-          "hint": "'A' används före ord som börjar med konsonantljud. 'House' börjar med 'h' (konsonant) → a house."
-        },
-        {
-          "id": "lag-g-mixed-15",
-          "type": "fill-in-blank",
-          "sentence": "One child, two ___",
-          "answer": "children",
-          "hint": "Oregelbunden plural: 'child' → 'children'. Inte 'childs'! Lär dig de vanligaste: child→children, man→men, woman→women."
-        },
-        {
-          "id": "lag-g-mixed-16",
-          "type": "fill-in-blank",
-          "sentence": "One foot, two ___",
-          "answer": "feet",
-          "hint": "Oregelbunden plural: 'foot' → 'feet'. Inte 'foots'! Liknande mönster: tooth→teeth, goose→geese."
-        },
-        {
-          "id": "lag-g-mixed-17",
-          "type": "multiple-choice",
-          "question": "It is ___ turn.",
-          "options": [
-            "your",
-            "you"
-          ],
-          "correctIndex": 0,
-          "hint": "'Your' (din/er) är possessivt och används FÖRE substantiv: 'your turn'. 'You' är subjektspronomen."
-        },
-        {
-          "id": "lag-g-mixed-18",
-          "type": "fill-in-blank",
-          "sentence": "Is this your book? Yes, it is ___.",
-          "answer": "mine",
-          "hint": "Svaret ersätter 'my book' – inget substantiv efter. Utan substantiv → 'mine' (inte 'my')."
-        },
-        {
-          "id": "lag-g-mixed-19",
-          "type": "multiple-choice",
-          "question": "The ball is ___ the chair.",
-          "options": [
-            "behind",
-            "on",
-            "in"
-          ],
-          "correctIndex": 0,
-          "hint": "'Behind' = bakom. 'On' = på ytan. 'In' = inuti. Bollen är bakom stolen."
-        },
-        {
-          "id": "lag-g-mixed-20",
-          "type": "multiple-choice",
-          "question": "The cat is ___ the boxes.",
-          "options": [
-            "between",
-            "under",
-            "after"
-          ],
-          "correctIndex": 0,
-          "hint": "'Between' = mellan (två eller fler saker). 'Under' = under. 'After' = efter. Katten sitter mellan lådorna."
-        }
+        {"id": "lag-g7-1", "type": "multiple-choice", "question": "'This is my book.' Säg samma sak med pronomen: 'This book is ___.'", "options": ["my", "mine", "me", "I"], "correctIndex": 1, "explanation": "Mine ersätter 'my + noun'. This book is mine. (Den här boken är min.)"},
+        {"id": "lag-g7-2", "type": "multiple-choice", "question": "'That is your pencil.' Säg samma sak: 'That pencil is ___.'", "options": ["you", "your", "yours", "yourself"], "correctIndex": 2, "explanation": "Yours ersätter 'your + noun'. That pencil is yours. (Den där pennan är din.)"},
+        {"id": "lag-g7-3", "type": "fill-in-blank", "sentence": "The red ball is ___. (mitt)", "answer": "mine", "hint": "I → mine", "explanation": "Mine = mitt/min. The red ball is mine."},
+        {"id": "lag-g7-4", "type": "fill-in-blank", "sentence": "Is that coat ___? (din)", "answer": "yours", "hint": "You → yours", "explanation": "Yours = din/ditt. Is that coat yours?"},
+        {"id": "lag-g7-5", "type": "multiple-choice", "question": "'This is his bag.' Säg samma sak: 'This bag is ___.'", "options": ["him", "he", "his", "her"], "correctIndex": 2, "explanation": "His används som både possessive adjective och possessive pronoun. This bag is his."},
+        {"id": "lag-g7-6", "type": "multiple-choice", "question": "'That is her hat.' Säg samma sak: 'That hat is ___.'", "options": ["her", "hers", "she", "him"], "correctIndex": 1, "explanation": "Hers ersätter 'her + noun'. That hat is hers. (Den där hatten är hennes.)"},
+        {"id": "lag-g7-7", "type": "fill-in-blank", "sentence": "The blue car is ___. (vår)", "answer": "ours", "hint": "We → ours", "explanation": "Ours = vår/vårt. The blue car is ours."},
+        {"id": "lag-g7-8", "type": "fill-in-blank", "sentence": "That house is ___. (deras)", "answer": "theirs", "hint": "They → theirs", "explanation": "Theirs = deras. That house is theirs."},
+        {"id": "lag-g7-9", "type": "multiple-choice", "question": "Välj rätt: 'This is not my pen. It is ___.' (den är din)", "options": ["mine", "my", "yours", "your"], "correctIndex": 2, "explanation": "Yours ersätter 'your pen'. It is yours."},
+        {"id": "lag-g7-10", "type": "multiple-choice", "question": "Välj rätt: 'These are not your shoes. They are ___.' (de är mina)", "options": ["mine", "my", "me", "I"], "correctIndex": 0, "explanation": "Mine ersätter 'my shoes'. They are mine."},
+        {"id": "lag-g7-11", "type": "fill-in-blank", "sentence": "That dog is not ours. It is ___. (deras)", "answer": "theirs", "hint": "They → theirs", "explanation": "Theirs = deras. It is theirs."},
+        {"id": "lag-g7-12", "type": "fill-in-blank", "sentence": "Is this book ___? (hans)", "answer": "his", "hint": "He → his", "explanation": "His fungerar både som adjektiv och pronomen. Is this book his?"},
+        {"id": "lag-g7-13", "type": "build-sentence", "instruction": "Bygg meningen: 'That red bag is hers.'", "words": ["That", "red", "bag", "is", "hers", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Hers ersätter 'her bag'. That red bag is hers."},
+        {"id": "lag-g7-14", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["This sandwich is my.", "This sandwich is me.", "This sandwich is mine.", "This sandwich is I."], "correctIndex": 2, "explanation": "Mine används ensamt (utan substantiv). This sandwich is mine."},
+        {"id": "lag-g7-15", "type": "multiple-choice", "question": "Välj rätt: 'The green bike is ___.' (cykel tillhör vi/oss)", "options": ["we", "our", "ours", "us"], "correctIndex": 2, "explanation": "Ours ersätter 'our bike'. The green bike is ours."}
+      ]
+    },
+    {
+      "id": "lag-g8-there-is",
+      "title": "There is / There are (Det finns)",
+      "description": "Lär dig använda 'there is' och 'there are' för att säga vad som finns.",
+      "icon": "🗺️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {"id": "lag-g8-1", "type": "multiple-choice", "question": "Välj rätt: '___ a cat on the sofa.'", "options": ["There are", "There have", "There is", "There am"], "correctIndex": 2, "explanation": "En katt (singular) → There is. There is a cat on the sofa."},
+        {"id": "lag-g8-2", "type": "multiple-choice", "question": "Välj rätt: '___ three birds in the tree.'", "options": ["There is", "There am", "There be", "There are"], "correctIndex": 3, "explanation": "Tre fåglar (plural) → There are. There are three birds in the tree."},
+        {"id": "lag-g8-3", "type": "fill-in-blank", "sentence": "There ___ a big park near my house.", "answer": "is", "hint": "En park = singular.", "explanation": "En park (singular) → there is. There is a big park near my house."},
+        {"id": "lag-g8-4", "type": "fill-in-blank", "sentence": "There ___ many children in the playground.", "answer": "are", "hint": "Many children = plural.", "explanation": "Many children (plural) → there are. There are many children in the playground."},
+        {"id": "lag-g8-5", "type": "multiple-choice", "question": "Välj rätt: '___ an apple on the table.'", "options": ["There are", "There have", "There is", "There am"], "correctIndex": 2, "explanation": "Ett äpple (singular) → There is. There is an apple on the table."},
+        {"id": "lag-g8-6", "type": "multiple-choice", "question": "Välj rätt: '___ two dogs in the garden.'", "options": ["There is", "There am", "There have", "There are"], "correctIndex": 3, "explanation": "Två hundar (plural) → There are. There are two dogs in the garden."},
+        {"id": "lag-g8-7", "type": "fill-in-blank", "sentence": "There ___ a nice teacher in our school.", "answer": "is", "hint": "En lärare = singular.", "explanation": "En lärare (singular) → there is. There is a nice teacher in our school."},
+        {"id": "lag-g8-8", "type": "fill-in-blank", "sentence": "There ___ five books on the shelf.", "answer": "are", "hint": "Five books = plural.", "explanation": "Five books (plural) → there are. There are five books on the shelf."},
+        {"id": "lag-g8-9", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["There are a dog.", "There is a dog.", "There am a dog.", "There have a dog."], "correctIndex": 1, "explanation": "En hund (singular) → There is a dog."},
+        {"id": "lag-g8-10", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["There is four cats.", "There am four cats.", "There are four cats.", "There have four cats."], "correctIndex": 2, "explanation": "Fyra katter (plural) → There are four cats."},
+        {"id": "lag-g8-11", "type": "build-sentence", "instruction": "Bygg meningen: 'There is a sun in the sky.'", "words": ["There", "is", "a", "sun", "in", "the", "sky", "."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "En sol (singular) → There is. There is a sun in the sky."},
+        {"id": "lag-g8-12", "type": "fill-in-blank", "sentence": "There ___ no milk in the glass.", "answer": "is", "hint": "Mjölk = singular.", "explanation": "Milk (singular) → there is. There is no milk in the glass."},
+        {"id": "lag-g8-13", "type": "fill-in-blank", "sentence": "There ___ a lot of flowers in the garden.", "answer": "are", "hint": "Many flowers = plural.", "explanation": "Many flowers (plural) → there are. There are a lot of flowers in the garden."},
+        {"id": "lag-g8-14", "type": "multiple-choice", "question": "Välj rätt: '___ a rainbow after the rain.'", "options": ["There are", "There were", "There is", "There have"], "correctIndex": 2, "explanation": "En regnbåge (singular) → There is. There is a rainbow after the rain."},
+        {"id": "lag-g8-15", "type": "build-sentence", "instruction": "Bygg meningen: 'There are six chairs at the table.'", "words": ["There", "are", "six", "chairs", "at", "the", "table", "."], "correctOrder": [0, 1, 2, 3, 4, 5, 6, 7], "explanation": "Sex stolar (plural) → There are. There are six chairs at the table."}
+      ]
+    },
+    {
+      "id": "lag-g9-can",
+      "title": "Can / Can't (Kunna)",
+      "description": "Lär dig använda can och can't för att prata om förmågor.",
+      "icon": "💪",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {"id": "lag-g9-1", "type": "multiple-choice", "question": "Hur säger man 'Jag kan simma' på engelska?", "options": ["I am swim.", "I swim can.", "I can swim.", "I cans swim."], "correctIndex": 2, "explanation": "Can + verb (grundform). I can swim. Can ändras aldrig – inte 'cans'."},
+        {"id": "lag-g9-2", "type": "multiple-choice", "question": "Hur säger man 'Hon kan inte flyga' på engelska?", "options": ["She can't fly.", "She cans't fly.", "She can't flies.", "She is can't fly."], "correctIndex": 0, "explanation": "Can't = cannot (kort form). She can't fly."},
+        {"id": "lag-g9-3", "type": "fill-in-blank", "sentence": "I ___ ride a bike.", "answer": "can", "hint": "Jag kan cykla.", "explanation": "Can + verb grundform. I can ride a bike."},
+        {"id": "lag-g9-4", "type": "fill-in-blank", "sentence": "He ___ speak three languages.", "answer": "can", "hint": "Han kan prata tre språk.", "explanation": "Can ändras inte efter he/she/it. He can speak three languages."},
+        {"id": "lag-g9-5", "type": "multiple-choice", "question": "Välj rätt: 'Birds ___ fly.'", "options": ["cans", "can't", "can", "are can"], "correctIndex": 2, "explanation": "Fåglar kan flyga. Birds can fly."},
+        {"id": "lag-g9-6", "type": "multiple-choice", "question": "Välj rätt: 'Fish ___ climb trees.'", "options": ["can", "cans", "be can't", "can't"], "correctIndex": 3, "explanation": "Fiskar kan inte klättra i träd. Fish can't climb trees."},
+        {"id": "lag-g9-7", "type": "fill-in-blank", "sentence": "She ___ play the piano very well.", "answer": "can", "hint": "Hon kan spela piano.", "explanation": "Can + verb grundform. She can play the piano very well."},
+        {"id": "lag-g9-8", "type": "fill-in-blank", "sentence": "I ___ find my shoes! (inte)", "answer": "can't", "hint": "Jag kan INTE hitta mina skor.", "explanation": "Can't = cannot. I can't find my shoes!"},
+        {"id": "lag-g9-9", "type": "multiple-choice", "question": "Välj rätt: 'My baby brother ___ walk yet.'", "options": ["can", "cans", "can't", "is can"], "correctIndex": 2, "explanation": "Han kan inte gå än. My baby brother can't walk yet."},
+        {"id": "lag-g9-10", "type": "multiple-choice", "question": "Välj rätt: '___ you help me please?'", "options": ["Is", "Are", "Do", "Can"], "correctIndex": 3, "explanation": "Fråga med can: Can you help me please?"},
+        {"id": "lag-g9-11", "type": "fill-in-blank", "sentence": "Dogs ___ bark. (kan)", "answer": "can", "hint": "Hundar kan skälla.", "explanation": "Can + verb grundform. Dogs can bark."},
+        {"id": "lag-g9-12", "type": "fill-in-blank", "sentence": "Cats ___ bark. (kan inte)", "answer": "can't", "hint": "Katter kan INTE skälla.", "explanation": "Can't = cannot. Cats can't bark."},
+        {"id": "lag-g9-13", "type": "build-sentence", "instruction": "Bygg meningen: 'She can run very fast.'", "words": ["She", "can", "run", "very", "fast", "."], "correctOrder": [0, 1, 2, 3, 4, 5], "explanation": "Can + verb grundform (run, inte runs). She can run very fast."},
+        {"id": "lag-g9-14", "type": "multiple-choice", "question": "Vilken mening är rätt?", "options": ["He cans swim.", "He can swims.", "He can swim.", "He is can swim."], "correctIndex": 2, "explanation": "Can ändras aldrig + verb grundform. He can swim."},
+        {"id": "lag-g9-15", "type": "multiple-choice", "question": "Vilken fråga är rätt?", "options": ["Is you can dance?", "Do you can dance?", "Can you dance?", "You can dance?"], "correctIndex": 2, "explanation": "Frågor med can: Can + subject + verb? Can you dance?"},
+        {"id": "lag-g9-16", "type": "fill-in-blank", "sentence": "___ you speak English? (fråga)", "answer": "Can", "hint": "Börja frågan med Can.", "explanation": "Frågor med can: Can you speak English?"}
+      ]
+    },
+    {
+      "id": "lag-g10-prepositions-place",
+      "title": "Prepositions of Place (Lägesord: in, on, under)",
+      "description": "Lär dig lägesord som in, on, under, next to och behind.",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {"id": "lag-g10-1", "type": "multiple-choice", "question": "Katten sitter inuti lådan. Välj rätt: 'The cat is ___ the box.'", "options": ["on", "under", "in", "next to"], "correctIndex": 2, "explanation": "'In' = inuti. The cat is in the box."},
+        {"id": "lag-g10-2", "type": "multiple-choice", "question": "Boken ligger ovanpå bordet. Välj rätt: 'The book is ___ the table.'", "options": ["in", "under", "behind", "on"], "correctIndex": 3, "explanation": "'On' = ovanpå. The book is on the table."},
+        {"id": "lag-g10-3", "type": "fill-in-blank", "sentence": "The dog is ___ the chair. (under stolen)", "answer": "under", "hint": "Under = nedanför.", "explanation": "'Under' = under/nedanför. The dog is under the chair."},
+        {"id": "lag-g10-4", "type": "fill-in-blank", "sentence": "My keys are ___ my bag. (inuti)", "answer": "in", "hint": "'In' = inuti.", "explanation": "'In' = inuti. My keys are in my bag."},
+        {"id": "lag-g10-5", "type": "multiple-choice", "question": "Lampan sitter precis ovanpå bordet. Välj rätt: 'The lamp is ___ the desk.'", "options": ["in", "under", "behind", "on"], "correctIndex": 3, "explanation": "'On' = ovanpå. The lamp is on the desk."},
+        {"id": "lag-g10-6", "type": "multiple-choice", "question": "Bilen parkerar bakom huset. Välj rätt: 'The car is ___ the house.'", "options": ["in", "on", "behind", "under"], "correctIndex": 2, "explanation": "'Behind' = bakom. The car is behind the house."},
+        {"id": "lag-g10-7", "type": "fill-in-blank", "sentence": "The school is ___ to the park. (bredvid)", "answer": "next", "hint": "Next to = bredvid.", "explanation": "'Next to' = bredvid. The school is next to the park."},
+        {"id": "lag-g10-8", "type": "fill-in-blank", "sentence": "The bird is sitting ___ the fence. (ovanpå)", "answer": "on", "hint": "'On' = ovanpå.", "explanation": "'On' = ovanpå. The bird is sitting on the fence."},
+        {"id": "lag-g10-9", "type": "multiple-choice", "question": "Välj rätt: 'There are fish ___ the water.'", "options": ["on", "behind", "under", "in"], "correctIndex": 3, "explanation": "Fiskar är inuti vattnet → 'in'. There are fish in the water."},
+        {"id": "lag-g10-10", "type": "multiple-choice", "question": "Välj rätt: 'The shoes are ___ the bed.'", "options": ["on", "in", "under", "next to"], "correctIndex": 2, "explanation": "Skorna är under sängen → 'under'. The shoes are under the bed."},
+        {"id": "lag-g10-11", "type": "build-sentence", "instruction": "Bygg meningen: 'The ball is under the table.'", "words": ["The", "ball", "is", "under", "the", "table", "."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "'Under' = under. The ball is under the table."},
+        {"id": "lag-g10-12", "type": "fill-in-blank", "sentence": "My pencil case is ___ my bag. (inuti)", "answer": "in", "hint": "'In' = inuti.", "explanation": "'In' = inuti. My pencil case is in my bag."},
+        {"id": "lag-g10-13", "type": "multiple-choice", "question": "Välj rätt: 'Please put the cup ___ the shelf.'", "options": ["in", "under", "behind", "on"], "correctIndex": 3, "explanation": "Sätt koppen ovanpå hyllan → 'on'. Please put the cup on the shelf."},
+        {"id": "lag-g10-14", "type": "fill-in-blank", "sentence": "The teacher is standing ___ the board. (bredvid)", "answer": "next to", "hint": "Next to = bredvid.", "explanation": "'Next to' = bredvid. The teacher is standing next to the board."},
+        {"id": "lag-g10-15", "type": "multiple-choice", "question": "Välj rätt: 'I found my toy ___ the sofa.' (bakom sofan)", "options": ["in", "on", "under", "behind"], "correctIndex": 3, "explanation": "Bakom sofan → 'behind'. I found my toy behind the sofa."},
+        {"id": "lag-g10-16", "type": "build-sentence", "instruction": "Bygg meningen: 'My cat sleeps on my bed.'", "words": ["My", "cat", "sleeps", "on", "my", "bed", "."], "correctOrder": [0, 1, 2, 3, 4, 5, 6], "explanation": "'On' = ovanpå. My cat sleeps on my bed."}
+      ]
+    },
+    {
+      "id": "lag-g11-short-answers",
+      "title": "Short Answers (Korta svar)",
+      "description": "Lär dig svara kort på yes/no-frågor på engelska.",
+      "icon": "✅",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {"id": "lag-g11-1", "type": "multiple-choice", "question": "'Are you happy?' – Svara ja med kort svar.", "options": ["Yes, I do.", "Yes, I am.", "Yes, I is.", "Yes, am."], "correctIndex": 1, "explanation": "Are you...? → Yes, I am. / No, I'm not. Vi upprepar hjälpverbet 'are' → am (för I)."},
+        {"id": "lag-g11-2", "type": "multiple-choice", "question": "'Is she at home?' – Svara nej med kort svar.", "options": ["No, she isn't.", "No, she aren't.", "No, she not.", "No, she amn't."], "correctIndex": 0, "explanation": "Is she...? → No, she isn't. (isn't = is not)"},
+        {"id": "lag-g11-3", "type": "fill-in-blank", "sentence": "'Are they your friends?' – 'Yes, they ___.'", "answer": "are", "hint": "Upprepa hjälpverbet från frågan.", "explanation": "Are they...? → Yes, they are. Vi upprepar hjälpverbet 'are'."},
+        {"id": "lag-g11-4", "type": "fill-in-blank", "sentence": "'Is it cold outside?' – 'No, it ___.'", "answer": "isn't", "hint": "Negativt svar med is: isn't.", "explanation": "Is it...? → No, it isn't. (isn't = is not)"},
+        {"id": "lag-g11-5", "type": "multiple-choice", "question": "'Can you swim?' – Svara ja med kort svar.", "options": ["Yes, I do.", "Yes, I am.", "Yes, I can.", "Yes, can."], "correctIndex": 2, "explanation": "Can you...? → Yes, I can. Vi upprepar hjälpverbet 'can'."},
+        {"id": "lag-g11-6", "type": "multiple-choice", "question": "'Can he play guitar?' – Svara nej med kort svar.", "options": ["No, he can't.", "No, he don't.", "No, he isn't.", "No, he not."], "correctIndex": 0, "explanation": "Can he...? → No, he can't. (can't = cannot)"},
+        {"id": "lag-g11-7", "type": "fill-in-blank", "sentence": "'Can they come to the party?' – 'Yes, they ___.'", "answer": "can", "hint": "Upprepa hjälpverbet can.", "explanation": "Can they...? → Yes, they can."},
+        {"id": "lag-g11-8", "type": "fill-in-blank", "sentence": "'Is your dog big?' – 'Yes, it ___.'", "answer": "is", "hint": "Upprepa hjälpverbet is.", "explanation": "Is your dog...? → Yes, it is. (Vi säger 'it' om djur.)"},
+        {"id": "lag-g11-9", "type": "multiple-choice", "question": "'Are you hungry?' – Svara nej med kort svar.", "options": ["No, I isn't.", "No, I not.", "No, I amn't.", "No, I'm not."], "correctIndex": 3, "explanation": "Are you...? → No, I'm not. (I'm not = I am not)"},
+        {"id": "lag-g11-10", "type": "multiple-choice", "question": "'Have you got a brother?' – Svara ja med kort svar.", "options": ["Yes, I do.", "Yes, I have.", "Yes, I am.", "Yes, I can."], "correctIndex": 1, "explanation": "Have you got...? → Yes, I have. Vi upprepar hjälpverbet 'have'."},
+        {"id": "lag-g11-11", "type": "fill-in-blank", "sentence": "'Has she got a pet?' – 'No, she ___.'", "answer": "hasn't", "hint": "Negativt svar med has: hasn't.", "explanation": "Has she got...? → No, she hasn't. (hasn't = has not)"},
+        {"id": "lag-g11-12", "type": "fill-in-blank", "sentence": "'Are we late?' – 'No, we ___.'", "answer": "aren't", "hint": "Negativt svar med are: aren't.", "explanation": "Are we...? → No, we aren't. (aren't = are not)"},
+        {"id": "lag-g11-13", "type": "build-sentence", "instruction": "Bygg svaret: 'Yes, I am.' (svar på 'Are you a student?')", "words": ["Yes", ",", "I", "am", "."], "correctOrder": [0, 1, 2, 3, 4], "explanation": "Are you...? → Yes, I am. Kort svar upprepar hjälpverbet."},
+        {"id": "lag-g11-14", "type": "multiple-choice", "question": "'Is the cat sleeping?' – Svara ja med kort svar.", "options": ["Yes, it does.", "Yes, it has.", "Yes, it is.", "Yes, it are."], "correctIndex": 2, "explanation": "Is the cat...? → Yes, it is. Vi upprepar 'is' och använder 'it' för djur."},
+        {"id": "lag-g11-15", "type": "multiple-choice", "question": "'Can you read this word?' – Svara nej med kort svar.", "options": ["No, I don't.", "No, I can't.", "No, I haven't.", "No, I am not."], "correctIndex": 1, "explanation": "Can you...? → No, I can't. Vi upprepar 'can' i negativ form."},
+        {"id": "lag-g11-16", "type": "fill-in-blank", "sentence": "'Have you got a pencil?' – 'Yes, I ___.'", "answer": "have", "hint": "Upprepa hjälpverbet have.", "explanation": "Have you got...? → Yes, I have."}
       ]
     }
   ],
@@ -1436,45 +296,9 @@
       "bonusPoints": 20,
       "text": "Sam wakes up in the morning. He eats breakfast with his family.\n\nSam has a dog. The dog's name is Rex. Rex is big and brown.\n\nAfter breakfast, Sam goes to school. He likes school. His favourite subject is English!\n\nAfter school, Sam plays with Rex in the garden. They run and jump together. Sam is happy.",
       "questions": [
-        {
-          "id": "lag-r1-q1",
-          "type": "on-the-line",
-          "question": "What is the name of Sam's dog?",
-          "options": [
-            "Max",
-            "Rex",
-            "Buddy",
-            "Spot"
-          ],
-          "correctIndex": 1,
-          "explanation": "The text says: 'The dog's name is Rex.'"
-        },
-        {
-          "id": "lag-r1-q2",
-          "type": "on-the-line",
-          "question": "What is Sam's favourite subject at school?",
-          "options": [
-            "Maths",
-            "Art",
-            "PE",
-            "English"
-          ],
-          "correctIndex": 3,
-          "explanation": "The text says 'His favourite subject is English!'"
-        },
-        {
-          "id": "lag-r1-q3",
-          "type": "beyond-the-lines",
-          "question": "What does the story tell us about Sam?",
-          "options": [
-            "He is lazy and sad.",
-            "He is a happy boy who loves his dog.",
-            "He does not like dogs.",
-            "He wants to be a teacher."
-          ],
-          "correctIndex": 1,
-          "explanation": "The story shows Sam is happy (last sentence), loves his dog Rex, and enjoys school — a happy, active boy."
-        }
+        {"id": "lag-r1-q1","type": "on-the-line","question": "What is the name of Sam's dog?","options": ["Max","Rex","Buddy","Spot"],"correctIndex": 1,"explanation": "The text says: 'The dog's name is Rex.'"},
+        {"id": "lag-r1-q2","type": "on-the-line","question": "What is Sam's favourite subject at school?","options": ["Maths","Art","PE","English"],"correctIndex": 3,"explanation": "The text says 'His favourite subject is English!'"},
+        {"id": "lag-r1-q3","type": "beyond-the-lines","question": "What does the story tell us about Sam?","options": ["He is lazy and sad.","He is a happy boy who loves his dog.","He does not like dogs.","He wants to be a teacher."],"correctIndex": 1,"explanation": "The story shows Sam is happy (last sentence), loves his dog Rex, and enjoys school — a happy, active boy."}
       ]
     },
     {
@@ -1486,394 +310,17 @@
       "bonusPoints": 20,
       "text": "Deep in the jungle, there is a special camp. Animals live here. There are monkeys, parrots, and big cats.\n\nThe monkeys are funny. They jump from tree to tree. They eat bananas and fruit.\n\nThe parrots are very colourful. They can say words! 'Hello! Hello!' they say all day.\n\nThe big cats are strong and fast. They sleep in the sun. At night, they hunt for food.\n\nAt the camp, children can learn about these animals. It is a fun place to visit!",
       "questions": [
-        {
-          "id": "lag-r2-q1",
-          "type": "on-the-line",
-          "question": "What do the monkeys eat?",
-          "options": [
-            "meat",
-            "fish",
-            "bananas and fruit",
-            "leaves only"
-          ],
-          "correctIndex": 2,
-          "explanation": "The text says the monkeys 'eat bananas and fruit'."
-        },
-        {
-          "id": "lag-r2-q2",
-          "type": "between-the-lines",
-          "question": "Why do the big cats sleep in the sun during the day?",
-          "options": [
-            "Because they are sick",
-            "Because they hunt at night and rest during the day",
-            "Because they are afraid of the dark",
-            "Because they like hot weather"
-          ],
-          "correctIndex": 1,
-          "explanation": "The text says they hunt at night. If they hunt at night, they probably rest during the day."
-        },
-        {
-          "id": "lag-r2-q3",
-          "type": "beyond-the-lines",
-          "question": "What is the main message of this text?",
-          "options": [
-            "Jungles are dangerous and scary.",
-            "The jungle camp is a great place to learn about animals.",
-            "Parrots are the most important animals.",
-            "Children should not visit jungles."
-          ],
-          "correctIndex": 1,
-          "explanation": "The text ends with 'It is a fun place to visit' — the text wants to tell us how great and educational the camp is."
-        }
+        {"id": "lag-r2-q1","type": "on-the-line","question": "What do the monkeys eat?","options": ["meat","fish","bananas and fruit","leaves only"],"correctIndex": 2,"explanation": "The text says the monkeys 'eat bananas and fruit'."},
+        {"id": "lag-r2-q2","type": "between-the-lines","question": "Why do the big cats sleep in the sun during the day?","options": ["Because they are sick","Because they hunt at night and rest during the day","Because they are afraid of the dark","Because they like hot weather"],"correctIndex": 1,"explanation": "The text says they hunt at night. If they hunt at night, they probably rest during the day."},
+        {"id": "lag-r2-q3","type": "beyond-the-lines","question": "What is the main message of this text?","options": ["Jungles are dangerous and scary.","The jungle camp is a great place to learn about animals.","Parrots are the most important animals.","Children should not visit jungles."],"correctIndex": 1,"explanation": "The text ends with 'It is a fun place to visit' — the text wants to tell us how great and educational the camp is."}
       ]
     }
   ],
   "spelling": [
-    {
-      "id": "lag-sp1-skolan",
-      "title": "Skolan",
-      "description": "Stava ord som hör till skolan på engelska.",
-      "icon": "📚",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "lag-sp1-1",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('bok')",
-          "options": [
-            "bok",
-            "book",
-            "booc",
-            "buke"
-          ],
-          "correctIndex": 1,
-          "explanation": "Book stavas B-O-O-K.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp1-2",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('penna/blyertspenna')",
-          "options": [
-            "pensil",
-            "pencell",
-            "pencil",
-            "pencill"
-          ],
-          "correctIndex": 2,
-          "explanation": "Pencil stavas P-E-N-C-I-L.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp1-3",
-          "type": "fill-in-blank",
-          "sentence": "My ___ helps me learn new things. (lärare)",
-          "answer": "teacher",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Teacher = lärare. Stavas T-E-A-C-H-E-R."
-        },
-        {
-          "id": "lag-sp1-4",
-          "type": "fill-in-blank",
-          "sentence": "I ___ my name on the paper. (skriver)",
-          "answer": "write",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Write = skriva. Stavas W-R-I-T-E."
-        },
-        {
-          "id": "lag-sp1-5",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('skola')",
-          "options": [
-            "skool",
-            "scool",
-            "sckool",
-            "school"
-          ],
-          "correctIndex": 3,
-          "explanation": "School stavas S-C-H-O-O-L.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        }
-      ]
-    },
-    {
-      "id": "lag-sp2-djur",
-      "title": "Djur",
-      "description": "Stava djurnamn på engelska.",
-      "icon": "🐾",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "lag-sp2-1",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('groda')",
-          "options": [
-            "frog",
-            "frogg",
-            "forg",
-            "frrog"
-          ],
-          "correctIndex": 0,
-          "explanation": "Frog stavas F-R-O-G.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp2-2",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('häst')",
-          "options": [
-            "hors",
-            "horss",
-            "horse",
-            "hourse"
-          ],
-          "correctIndex": 2,
-          "explanation": "Horse stavas H-O-R-S-E.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp2-3",
-          "type": "fill-in-blank",
-          "sentence": "A ___ has long ears and hops. (kanin)",
-          "answer": "rabbit",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Rabbit = kanin. Stavas R-A-B-B-I-T."
-        },
-        {
-          "id": "lag-sp2-4",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('apa')",
-          "options": [
-            "monky",
-            "monkee",
-            "monkey",
-            "munkee"
-          ],
-          "correctIndex": 2,
-          "explanation": "Monkey stavas M-O-N-K-E-Y.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp2-5",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('elefant')",
-          "options": [
-            "elefant",
-            "elifant",
-            "elaphant",
-            "elephant"
-          ],
-          "correctIndex": 3,
-          "explanation": "Elephant stavas E-L-E-P-H-A-N-T.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        }
-      ]
-    },
-    {
-      "id": "lag-sp3-farger",
-      "title": "Färger och former",
-      "description": "Stava färger och former på engelska.",
-      "icon": "🎨",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "lag-sp3-1",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('gul')",
-          "options": [
-            "yelo",
-            "yellow",
-            "yelow",
-            "yollow"
-          ],
-          "correctIndex": 1,
-          "explanation": "Yellow stavas Y-E-L-L-O-W.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp3-2",
-          "type": "fill-in-blank",
-          "sentence": "A ___ has four equal sides. (kvadrat)",
-          "answer": "square",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Square = kvadrat. Stavas S-Q-U-A-R-E."
-        },
-        {
-          "id": "lag-sp3-3",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('orange')",
-          "options": [
-            "oranje",
-            "oranch",
-            "orenge",
-            "orange"
-          ],
-          "correctIndex": 3,
-          "explanation": "Orange stavas O-R-A-N-G-E.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp3-4",
-          "type": "fill-in-blank",
-          "sentence": "A ___ shape has no corners. (cirkel)",
-          "answer": "circle",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Circle = cirkel. Stavas C-I-R-C-L-E."
-        },
-        {
-          "id": "lag-sp3-5",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('lila')",
-          "options": [
-            "perpel",
-            "purpel",
-            "purpull",
-            "purple"
-          ],
-          "correctIndex": 3,
-          "explanation": "Purple stavas P-U-R-P-L-E.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        }
-      ]
-    },
-    {
-      "id": "lag-sp4-kroppen",
-      "title": "Kroppen",
-      "description": "Stava kroppsdelar på engelska.",
-      "icon": "🧍",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "lag-sp4-1",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('axel')",
-          "options": [
-            "sholeder",
-            "sholder",
-            "shouldur",
-            "shoulder"
-          ],
-          "correctIndex": 3,
-          "explanation": "Shoulder stavas S-H-O-U-L-D-E-R.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp4-2",
-          "type": "fill-in-blank",
-          "sentence": "You chew food with your ___. (tänder)",
-          "answer": "teeth",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Teeth = tänder. Stavas T-E-E-T-H."
-        },
-        {
-          "id": "lag-sp4-3",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('finger')",
-          "options": [
-            "fingger",
-            "figner",
-            "fingur",
-            "finger"
-          ],
-          "correctIndex": 3,
-          "explanation": "Finger stavas F-I-N-G-E-R.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp4-4",
-          "type": "fill-in-blank",
-          "sentence": "You bend your leg at the ___. (knä)",
-          "answer": "knee",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Knee = knä. Stavas K-N-E-E."
-        },
-        {
-          "id": "lag-sp4-5",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('mage')",
-          "options": [
-            "stomak",
-            "stommach",
-            "stomach",
-            "stomack"
-          ],
-          "correctIndex": 2,
-          "explanation": "Stomach stavas S-T-O-M-A-C-H.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        }
-      ]
-    },
-    {
-      "id": "lag-sp5-vardag",
-      "title": "Vardag",
-      "description": "Stava vanliga vardagsord på engelska.",
-      "icon": "🌟",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "lag-sp5-1",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('hejdå')",
-          "options": [
-            "goby",
-            "goodby",
-            "goodbye",
-            "goodbay"
-          ],
-          "correctIndex": 2,
-          "explanation": "Goodbye stavas G-O-O-D-B-Y-E.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp5-2",
-          "type": "fill-in-blank",
-          "sentence": "I am going to the park ___. (imorgon)",
-          "answer": "tomorrow",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Tomorrow = imorgon. Stavas T-O-M-O-R-R-O-W."
-        },
-        {
-          "id": "lag-sp5-3",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('igår')",
-          "options": [
-            "yesturday",
-            "yesterday",
-            "yisterday",
-            "yesterdey"
-          ],
-          "correctIndex": 1,
-          "explanation": "Yesterday stavas Y-E-S-T-E-R-D-A-Y.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        },
-        {
-          "id": "lag-sp5-4",
-          "type": "fill-in-blank",
-          "sentence": "I need food because I am ___. (hungrig)",
-          "answer": "hungry",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
-          "explanation": "Hungry = hungrig. Stavas H-U-N-G-R-Y."
-        },
-        {
-          "id": "lag-sp5-5",
-          "type": "multiple-choice",
-          "question": "Vilket ord stavas rätt? ('familj')",
-          "options": [
-            "familly",
-            "familie",
-            "famaly",
-            "family"
-          ],
-          "correctIndex": 3,
-          "explanation": "Family stavas F-A-M-I-L-Y.",
-          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
-        }
-      ]
-    }
+    {"id": "lag-sp1-skolan","title": "Skolan","description": "Stava ord som hör till skolan på engelska.","icon": "📚","pointsRequired": 0,"bonusPoints": 15,"exercises": [{"id": "lag-sp1-1","type": "multiple-choice","question": "Vilket ord stavas rätt? ('bok')","options": ["bok","book","booc","buke"],"correctIndex": 1,"explanation": "Book stavas B-O-O-K."},{"id": "lag-sp1-2","type": "multiple-choice","question": "Vilket ord stavas rätt? ('penna/blyertspenna')","options": ["pensil","pencell","pencil","pencill"],"correctIndex": 2,"explanation": "Pencil stavas P-E-N-C-I-L."},{"id": "lag-sp1-3","type": "fill-in-blank","sentence": "My ___ helps me learn new things. (lärare)","answer": "teacher","hint": "Börjar med T.","explanation": "Teacher = lärare. Stavas T-E-A-C-H-E-R."},{"id": "lag-sp1-4","type": "fill-in-blank","sentence": "I ___ my name on the paper. (skriver)","answer": "write","hint": "Börjar med W (tyst W).","explanation": "Write = skriva. Stavas W-R-I-T-E."},{"id": "lag-sp1-5","type": "multiple-choice","question": "Vilket ord stavas rätt? ('skola')","options": ["skool","scool","sckool","school"],"correctIndex": 3,"explanation": "School stavas S-C-H-O-O-L."}]},
+    {"id": "lag-sp2-djur","title": "Djur","description": "Stava djurnamn på engelska.","icon": "🐾","pointsRequired": 0,"bonusPoints": 15,"exercises": [{"id": "lag-sp2-1","type": "multiple-choice","question": "Vilket ord stavas rätt? ('groda')","options": ["frog","frogg","forg","frrog"],"correctIndex": 0,"explanation": "Frog stavas F-R-O-G."},{"id": "lag-sp2-2","type": "multiple-choice","question": "Vilket ord stavas rätt? ('häst')","options": ["hors","horss","horse","hourse"],"correctIndex": 2,"explanation": "Horse stavas H-O-R-S-E."},{"id": "lag-sp2-3","type": "fill-in-blank","sentence": "A ___ has long ears and hops. (kanin)","answer": "rabbit","hint": "Börjar med R.","explanation": "Rabbit = kanin. Stavas R-A-B-B-I-T."},{"id": "lag-sp2-4","type": "multiple-choice","question": "Vilket ord stavas rätt? ('apa')","options": ["monky","monkee","monkey","munkee"],"correctIndex": 2,"explanation": "Monkey stavas M-O-N-K-E-Y."},{"id": "lag-sp2-5","type": "multiple-choice","question": "Vilket ord stavas rätt? ('elefant')","options": ["elefant","elifant","elaphant","elephant"],"correctIndex": 3,"explanation": "Elephant stavas E-L-E-P-H-A-N-T."}]},
+    {"id": "lag-sp3-farger","title": "Färger och former","description": "Stava färger och former på engelska.","icon": "🎨","pointsRequired": 0,"bonusPoints": 15,"exercises": [{"id": "lag-sp3-1","type": "multiple-choice","question": "Vilket ord stavas rätt? ('gul')","options": ["yelo","yellow","yelow","yollow"],"correctIndex": 1,"explanation": "Yellow stavas Y-E-L-L-O-W."},{"id": "lag-sp3-2","type": "fill-in-blank","sentence": "A ___ has four equal sides. (kvadrat)","answer": "square","hint": "Börjar med S.","explanation": "Square = kvadrat. Stavas S-Q-U-A-R-E."},{"id": "lag-sp3-3","type": "multiple-choice","question": "Vilket ord stavas rätt? ('orange')","options": ["oranje","oranch","orenge","orange"],"correctIndex": 3,"explanation": "Orange stavas O-R-A-N-G-E."},{"id": "lag-sp3-4","type": "fill-in-blank","sentence": "A ___ shape has no corners. (cirkel)","answer": "circle","hint": "Börjar med C.","explanation": "Circle = cirkel. Stavas C-I-R-C-L-E."},{"id": "lag-sp3-5","type": "multiple-choice","question": "Vilket ord stavas rätt? ('lila')","options": ["perpel","purpel","purpull","purple"],"correctIndex": 3,"explanation": "Purple stavas P-U-R-P-L-E."}]},
+    {"id": "lag-sp4-kroppen","title": "Kroppen","description": "Stava kroppsdelar på engelska.","icon": "🧍","pointsRequired": 0,"bonusPoints": 15,"exercises": [{"id": "lag-sp4-1","type": "multiple-choice","question": "Vilket ord stavas rätt? ('axel')","options": ["sholeder","sholder","shouldur","shoulder"],"correctIndex": 3,"explanation": "Shoulder stavas S-H-O-U-L-D-E-R."},{"id": "lag-sp4-2","type": "fill-in-blank","sentence": "You chew food with your ___. (tänder)","answer": "teeth","hint": "Börjar med T.","explanation": "Teeth = tänder. Stavas T-E-E-T-H."},{"id": "lag-sp4-3","type": "multiple-choice","question": "Vilket ord stavas rätt? ('finger')","options": ["fingger","figner","fingur","finger"],"correctIndex": 3,"explanation": "Finger stavas F-I-N-G-E-R."},{"id": "lag-sp4-4","type": "fill-in-blank","sentence": "You bend your leg at the ___. (knä)","answer": "knee","hint": "Börjar med KN (tyst K).","explanation": "Knee = knä. Stavas K-N-E-E."},{"id": "lag-sp4-5","type": "multiple-choice","question": "Vilket ord stavas rätt? ('mage')","options": ["stomak","stommach","stomach","stomack"],"correctIndex": 2,"explanation": "Stomach stavas S-T-O-M-A-C-H."}]},
+    {"id": "lag-sp5-vardag","title": "Vardag","description": "Stava vanliga vardagsord på engelska.","icon": "🌟","pointsRequired": 0,"bonusPoints": 15,"exercises": [{"id": "lag-sp5-1","type": "multiple-choice","question": "Vilket ord stavas rätt? ('hejdå')","options": ["goby","goodby","goodbye","goodbay"],"correctIndex": 2,"explanation": "Goodbye stavas G-O-O-D-B-Y-E."},{"id": "lag-sp5-2","type": "fill-in-blank","sentence": "I am going to the park ___. (imorgon)","answer": "tomorrow","hint": "Börjar med T.","explanation": "Tomorrow = imorgon. Stavas T-O-M-O-R-R-O-W."},{"id": "lag-sp5-3","type": "multiple-choice","question": "Vilket ord stavas rätt? ('igår')","options": ["yesturday","yesterday","yisterday","yesterdey"],"correctIndex": 1,"explanation": "Yesterday stavas Y-E-S-T-E-R-D-A-Y."},{"id": "lag-sp5-4","type": "fill-in-blank","sentence": "I need food because I am ___. (hungrig)","answer": "hungry","hint": "Börjar med H.","explanation": "Hungry = hungrig. Stavas H-U-N-G-R-Y."},{"id": "lag-sp5-5","type": "multiple-choice","question": "Vilket ord stavas rätt? ('familj')","options": ["familly","familie","famaly","family"],"correctIndex": 3,"explanation": "Family stavas F-A-M-I-L-Y."}]}
   ]
 }
