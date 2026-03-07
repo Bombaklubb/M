@@ -26,6 +26,27 @@ const SKIN_PREVIEW: Record<SkinTone, string> = {
   dark:        "#7B4828",
 };
 
+// Hero-specific gradient colors for the preview panel
+const HERO_GRADIENT: Record<string, { from: string; to: string; glow: string }> = {
+  explorer:   { from: "#FEF3C7", to: "#FDE68A", glow: "#F59E0B" },
+  scientist:  { from: "#DBEAFE", to: "#BFDBFE", glow: "#3B82F6" },
+  athlete:    { from: "#DBEAFE", to: "#93C5FD", glow: "#1D4ED8" },
+  footballer: { from: "#FEE2E2", to: "#FECACA", glow: "#DC2626" },
+  wizard:     { from: "#EDE9FE", to: "#DDD6FE", glow: "#7C3AED" },
+  inventor:   { from: "#D1FAE5", to: "#A7F3D0", glow: "#059669" },
+  scholar:    { from: "#FEE2E2", to: "#FECACA", glow: "#991B1B" },
+};
+
+const HERO_CARD_BG: Record<string, string> = {
+  explorer:   "bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800",
+  scientist:  "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800",
+  athlete:    "bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800",
+  footballer: "bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800",
+  wizard:     "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800",
+  inventor:   "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800",
+  scholar:    "bg-rose-50 dark:bg-rose-900/20 border-rose-200 dark:border-rose-800",
+};
+
 const ATTR_ICONS: Record<string, string> = {
   // hats
   headband:       "🎀",
@@ -144,10 +165,19 @@ export default function HeroPage() {
           ← Tillbaka
         </Link>
 
-        <h1 className="text-2xl font-black text-gray-900 dark:text-gray-100 mb-1">⚔️ Min hjälte</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-          Samla poäng för att låsa upp nya hjältar och tillbehör!
-        </p>
+        <div className="mb-6">
+          <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1 flex items-center gap-2">
+            <span className="text-2xl">⚔️</span> Min hjälte
+          </h1>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Samla poäng för att låsa upp nya hjältar och tillbehör!
+          </p>
+          {student && (
+            <div className="mt-2 inline-flex items-center gap-1.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-full px-3 py-1 text-sm font-semibold text-amber-700 dark:text-amber-400">
+              ⭐ {student.totalPoints} poäng totalt
+            </div>
+          )}
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-6">
 
@@ -156,16 +186,36 @@ export default function HeroPage() {
 
             {/* Hero preview */}
             <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-4 flex flex-col items-center gap-2 w-full">
-              <div className="bg-gradient-to-b from-sky-100 to-sky-50 dark:from-sky-900/30 dark:to-sky-800/20 rounded-2xl p-4 w-full flex justify-center">
-                <HeroAvatar
-                  heroId={hero.heroId}
-                  skinTone={hero.skinTone}
-                  gender={gender}
-                  equippedAttributes={hero.equippedAttributes}
-                  size={120}
-                />
-              </div>
-              <p className="font-bold text-gray-900 dark:text-gray-100 text-sm">
+              {(() => {
+                const g = HERO_GRADIENT[hero.heroId] ?? HERO_GRADIENT.explorer;
+                return (
+                  <div
+                    className="rounded-2xl p-4 w-full flex justify-center relative overflow-hidden"
+                    style={{
+                      background: `linear-gradient(160deg, ${g.from} 0%, ${g.to} 100%)`,
+                      boxShadow: `0 0 24px 4px ${g.glow}33 inset`,
+                    }}
+                  >
+                    {/* Decorative circles */}
+                    <div
+                      className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full opacity-20"
+                      style={{ background: g.glow }}
+                    />
+                    <div
+                      className="absolute -top-4 -left-4 w-16 h-16 rounded-full opacity-10"
+                      style={{ background: g.glow }}
+                    />
+                    <HeroAvatar
+                      heroId={hero.heroId}
+                      skinTone={hero.skinTone}
+                      gender={gender}
+                      equippedAttributes={hero.equippedAttributes}
+                      size={130}
+                    />
+                  </div>
+                );
+              })()}
+              <p className="font-black text-gray-900 dark:text-gray-100 text-base tracking-tight">
                 {HERO_TYPES.find((h) => h.id === hero.heroId)?.name_sv ?? hero.heroId}
               </p>
               <p className="text-xs text-gray-400">
@@ -234,14 +284,14 @@ export default function HeroPage() {
                       onClick={() => !locked && save({ ...hero, heroId: h.id })}
                       className={`relative flex flex-col items-center gap-0.5 p-2 rounded-xl border-2 transition-all ${
                         active
-                          ? "border-blue-500 bg-blue-50 dark:bg-blue-900/30"
+                          ? `${HERO_CARD_BG[h.id] ?? ""} ring-2 ring-offset-1 ring-blue-400 scale-105 shadow-md`
                           : locked
-                          ? "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-55 cursor-not-allowed"
-                          : "border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700 hover:bg-blue-50/50 cursor-pointer"
+                          ? "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-55 cursor-not-allowed grayscale"
+                          : `border-gray-100 dark:border-gray-700 hover:scale-105 hover:shadow-md hover:${HERO_CARD_BG[h.id] ?? "bg-blue-50/50"} cursor-pointer`
                       }`}
                     >
                       <div className="w-10 h-14 flex items-center justify-center">
-                        <HeroAvatar heroId={h.id} skinTone={hero.skinTone} gender={gender} equippedAttributes={[]} size={36} />
+                        <HeroAvatar heroId={h.id} skinTone={hero.skinTone} gender={gender} equippedAttributes={[]} size={38} />
                       </div>
                       <span className="text-xs font-semibold text-gray-700 dark:text-gray-200 text-center leading-tight">
                         {h.name_sv}
@@ -249,7 +299,7 @@ export default function HeroPage() {
                       {locked
                         ? <span className="text-xs text-gray-400">🔒{h.unlock_points}p</span>
                         : active
-                        ? <span className="text-xs text-blue-600 dark:text-blue-400 font-bold">✓</span>
+                        ? <span className="text-xs text-blue-600 dark:text-blue-400 font-bold">✓ Aktiv</span>
                         : null
                       }
                     </button>
