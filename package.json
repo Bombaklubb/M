@@ -8,6 +8,8 @@
     "build": "cd lasforstaelse && npm run build",
     "generate": "node scripts/generate_library.mjs",
     "matematik:dev": "cd matematik && npm run dev",
-    "matematik:build": "cd matematik && npm run build"
+    "matematik:build": "cd matematik && npm run build",
+    "engelska:dev": "cd engelska && npm run dev",
+    "engelska:build": "cd engelska && npm run build"
   }
 }

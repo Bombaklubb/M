@@ -1,0 +1,4331 @@
+{
+  "grammar": [
+    {
+      "id": "hog-g1-perfect",
+      "title": "Present Perfect",
+      "description": "Perfektum — om erfarenheter och nyligen avslutade händelser.",
+      "icon": "✅",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-g1-1",
+          "type": "multiple-choice",
+          "question": "Which sentence is in the present perfect?",
+          "options": [
+            "She went to Paris.",
+            "She has been to Paris.",
+            "She goes to Paris.",
+            "She is going to Paris."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Has been' uses have/has + past participle. This is present perfect.",
+          "hint": "Present perfect: have/has + past participle."
+        },
+        {
+          "id": "hog-g1-2",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (never/see) a whale before.",
+          "answer": "have never seen",
+          "hint": "Present perfect med 'never': have/has + never + past participle.",
+          "explanation": "Present perfect: have + never + past participle. see → seen."
+        },
+        {
+          "id": "hog-g1-3",
+          "type": "multiple-choice",
+          "question": "'We ___ in this house for ten years.' Choose the correct form.",
+          "options": [
+            "live",
+            "lived",
+            "have lived",
+            "are living"
+          ],
+          "correctIndex": 2,
+          "explanation": "'For ten years' with an ongoing situation uses present perfect: have lived.",
+          "hint": "'For' + tidsperiod med ongoing situation → present perfect."
+        },
+        {
+          "id": "hog-g1-4",
+          "type": "fill-in-blank",
+          "sentence": "___ you ever ___ (eat) sushi?",
+          "answer": "Have ... eaten",
+          "hint": "Frågekonstruktion: Have + subject + past participle?",
+          "explanation": "Present perfect question: Have you ever eaten...?"
+        },
+        {
+          "id": "hog-g1-5",
+          "type": "multiple-choice",
+          "question": "What is the past participle of 'write'?",
+          "options": [
+            "wrote",
+            "writed",
+            "written",
+            "writing"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Write' is irregular: write – wrote – written.",
+          "hint": "write → wrote → written"
+        },
+        {
+          "id": "hog-g1-6",
+          "type": "fill-in-blank",
+          "sentence": "She ___ just ___ (finish) her homework.",
+          "answer": "has ... finished",
+          "hint": "'Just' med present perfect: has/have + just + past participle.",
+          "explanation": "'Just' signals recent completion in present perfect."
+        },
+        {
+          "id": "hog-g1-7",
+          "type": "build-sentence",
+          "instruction": "Build a present perfect sentence.",
+          "words": [
+            "They",
+            "have",
+            "already",
+            "eaten",
+            "dinner",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "They have already eaten dinner. – 'already' signals present perfect."
+        },
+        {
+          "id": "hog-g1-8",
+          "type": "multiple-choice",
+          "question": "'___ she ___ (call) yet?' Choose the correct form.",
+          "options": [
+            "Did she call",
+            "Has she called",
+            "Does she call",
+            "Is she calling"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Yet' in questions signals present perfect: Has she called yet?",
+          "hint": "'Yet' i frågor → present perfect."
+        },
+        {
+          "id": "hog-g1-9",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (not/reply) to my message yet.",
+          "answer": "hasn't replied",
+          "hint": "Negation i present perfect: hasn't/haven't + past participle.",
+          "explanation": "Negative present perfect with he: hasn't + past participle."
+        },
+        {
+          "id": "hog-g1-10",
+          "type": "multiple-choice",
+          "question": "What is the past participle of 'go'?",
+          "options": [
+            "went",
+            "goed",
+            "gone",
+            "going"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Go' is irregular: go – went – gone.",
+          "hint": "go → went → gone"
+        },
+        {
+          "id": "hog-g1-11",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (live) here since 2018.",
+          "answer": "have lived",
+          "hint": "'Since' + startpunkt → present perfect.",
+          "explanation": "'Since' marks the starting point of an action continuing to now: have lived."
+        },
+        {
+          "id": "hog-g1-12",
+          "type": "multiple-choice",
+          "question": "Which adverb is typical for present perfect?",
+          "options": [
+            "yesterday",
+            "last year",
+            "already",
+            "in 2020"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Already' signals completed actions relevant to now – used with present perfect.",
+          "hint": "Typiska adverb: already, yet, just, ever, never, since, for."
+        },
+        {
+          "id": "hog-g1-13",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (visit) Rome three times.",
+          "answer": "have visited",
+          "hint": "Antal gånger + no specific past time → present perfect.",
+          "explanation": "Present perfect for experiences (number of times): have visited."
+        },
+        {
+          "id": "hog-g1-14",
+          "type": "build-sentence",
+          "instruction": "Build a present perfect negative sentence.",
+          "words": [
+            "I",
+            "haven't",
+            "seen",
+            "that",
+            "film",
+            "yet",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "I haven't seen that film yet. – 'yet' in negative present perfect."
+        },
+        {
+          "id": "hog-g1-15",
+          "type": "multiple-choice",
+          "question": "What is the difference between 'I saw the film' and 'I have seen the film'?",
+          "options": [
+            "No difference – they mean the same.",
+            "'I saw' refers to a specific past time; 'I have seen' focuses on the experience.",
+            "'I have seen' is past simple; 'I saw' is present perfect.",
+            "'I saw' is more formal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Past simple (saw) refers to a finished time; present perfect (have seen) focuses on the result/experience now.",
+          "hint": "Past simple: specifik tid. Present perfect: upplevelse/resultat nu."
+        }
+      ],
+      "helpText": [
+        "Present perfect bildas med: have/has + past participle (verbets 3:e form).",
+        "Används för: erfarenheter (Have you ever...?), nyligen avslutade händelser (I have just finished), och situationer som startade i förr men gäller nu (I have lived here for 10 years).",
+        "Signalerord: ever, never, just, already, yet, recently, for (tidsperiod), since (startpunkt).",
+        "Skillnad mot past simple: 'I saw her yesterday' (past simple – specifik tid, avslutat) vs 'I have seen her' (present perfect – koppling till nu, ingen specifik tid).",
+        "Exempel: She has never been to Japan. ✔  They have already eaten. ✔"
+      ]
+    },
+    {
+      "id": "hog-g2-conditionals",
+      "title": "Conditional Sentences",
+      "description": "If-satser — typ 1 och 2 konditionalis.",
+      "icon": "🔀",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-g2-1",
+          "type": "multiple-choice",
+          "question": "Which is a correct first conditional sentence?",
+          "options": [
+            "If she will study, she will pass.",
+            "If she studies, she will pass.",
+            "If she studied, she would pass.",
+            "If she study, she passes."
+          ],
+          "correctIndex": 1,
+          "explanation": "First conditional: If + present simple, will + base verb.",
+          "hint": "1. konditionalis: If + presens, will + grundform."
+        },
+        {
+          "id": "hog-g2-2",
+          "type": "fill-in-blank",
+          "sentence": "If it ___ (rain) tomorrow, we'll stay at home.",
+          "answer": "rains",
+          "hint": "1. konditionalis: If + presens (inte will) i if-satsen.",
+          "explanation": "First conditional: if-clause uses present simple (rains, not 'will rain')."
+        },
+        {
+          "id": "hog-g2-3",
+          "type": "multiple-choice",
+          "question": "Which is a correct second conditional sentence?",
+          "options": [
+            "If I have a million dollars, I buy a yacht.",
+            "If I had a million dollars, I would buy a yacht.",
+            "If I had a million dollars, I will buy a yacht.",
+            "If I have a million dollars, I would buy a yacht."
+          ],
+          "correctIndex": 1,
+          "explanation": "Second conditional: If + past simple, would + base verb.",
+          "hint": "2. konditionalis (hypotetisk): If + preteritum, would + grundform."
+        },
+        {
+          "id": "hog-g2-4",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ (be) taller, I would be a basketball player.",
+          "answer": "were",
+          "hint": "I 2. konditionalis används 'were' (inte 'was') för alla personer.",
+          "explanation": "In 2nd conditional, use 'were' for all subjects: If I were…"
+        },
+        {
+          "id": "hog-g2-5",
+          "type": "multiple-choice",
+          "question": "'If she ___ harder, she would have passed the test.' (3rd conditional)",
+          "options": [
+            "studies",
+            "studied",
+            "had studied",
+            "has studied"
+          ],
+          "correctIndex": 2,
+          "explanation": "Third conditional: If + past perfect, would have + past participle.",
+          "hint": "3. konditionalis: If + past perfect, would have + past participle."
+        },
+        {
+          "id": "hog-g2-6",
+          "type": "fill-in-blank",
+          "sentence": "If you heat water to 100°C, it ___ (boil). (Zero conditional)",
+          "answer": "boils",
+          "hint": "Noll-konditionalis (faktum): If + presens, presens.",
+          "explanation": "Zero conditional (facts): If + present simple, present simple."
+        },
+        {
+          "id": "hog-g2-7",
+          "type": "build-sentence",
+          "instruction": "Build a first conditional sentence.",
+          "words": [
+            "If",
+            "you",
+            "miss",
+            "the",
+            "bus,",
+            "you",
+            "will",
+            "be",
+            "late",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "explanation": "If you miss the bus, you will be late. – first conditional."
+        },
+        {
+          "id": "hog-g2-8",
+          "type": "multiple-choice",
+          "question": "'If I ___ you, I would apologize.' Choose the correct form.",
+          "options": [
+            "am",
+            "was",
+            "were",
+            "have been"
+          ],
+          "correctIndex": 2,
+          "explanation": "In 2nd conditional, 'were' is used for all persons (formal).",
+          "hint": "2. konditionalis: If I were you… (inte 'was')."
+        },
+        {
+          "id": "hog-g2-9",
+          "type": "fill-in-blank",
+          "sentence": "If they had left earlier, they ___ (not/miss) the train.",
+          "answer": "wouldn't have missed",
+          "hint": "3. konditionalis: would have + past participle i huvudsatsen.",
+          "explanation": "Third conditional: wouldn't have + past participle."
+        },
+        {
+          "id": "hog-g2-10",
+          "type": "multiple-choice",
+          "question": "Which conditional type talks about a real, possible future situation?",
+          "options": [
+            "Zero conditional",
+            "First conditional",
+            "Second conditional",
+            "Third conditional"
+          ],
+          "correctIndex": 1,
+          "explanation": "First conditional describes real, possible future situations: If + present, will…",
+          "hint": "1. konditionalis = möjlig, verklig situation i framtiden."
+        },
+        {
+          "id": "hog-g2-11",
+          "type": "fill-in-blank",
+          "sentence": "If you ___ (touch) fire, you get burned. (Zero conditional)",
+          "answer": "touch",
+          "hint": "Noll-konditionalis: If + presens, presens.",
+          "explanation": "Zero conditional for general truths: if + present simple."
+        },
+        {
+          "id": "hog-g2-12",
+          "type": "build-sentence",
+          "instruction": "Build a second conditional sentence.",
+          "words": [
+            "If",
+            "she",
+            "had",
+            "more",
+            "time,",
+            "she",
+            "would",
+            "travel",
+            "the",
+            "world",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "explanation": "If she had more time, she would travel the world. – 2nd conditional."
+        },
+        {
+          "id": "hog-g2-13",
+          "type": "multiple-choice",
+          "question": "What does the third conditional express?",
+          "options": [
+            "A general truth",
+            "A possible future event",
+            "A regret or imagined past",
+            "A current habit"
+          ],
+          "correctIndex": 2,
+          "explanation": "Third conditional refers to the past: imagining a different outcome, often expressing regret.",
+          "hint": "3. konditionalis handlar om ett tänkt (ej verkligt) förflutet."
+        },
+        {
+          "id": "hog-g2-14",
+          "type": "fill-in-blank",
+          "sentence": "___ you come to the party if we invited you? (2nd conditional)",
+          "answer": "Would",
+          "hint": "Huvudsats i 2. konditionalis börjar med Would.",
+          "explanation": "2nd conditional main clause: Would + subject + base verb."
+        },
+        {
+          "id": "hog-g2-15",
+          "type": "multiple-choice",
+          "question": "'Unless you hurry, you ___ the bus.' Choose the correct form.",
+          "options": [
+            "miss",
+            "will miss",
+            "would miss",
+            "would have missed"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Unless' = 'if not'. Unless you hurry = If you don't hurry → first conditional.",
+          "hint": "Unless = if not. Välj rätt konditionalisform."
+        }
+      ],
+      "helpText": [
+        "If-satser (konditionalis) används för att prata om villkor och vad som händer om något är sant.",
+        "Typ 0 – allmänna sanningar: If + present simple, present simple. Ex: If you heat water to 100°C, it boils.",
+        "Typ 1 – realistiskt/möjligt: If + present simple, will + grundform. Ex: If it rains, I will stay home.",
+        "Typ 2 – hypotetiskt/osannolikt nu: If + past simple, would + grundform. Ex: If I had a million pounds, I would travel the world.",
+        "Tänk: Är det möjligt och troligt? → Typ 1 (will). Är det en dröm eller osannolikt? → Typ 2 (would)."
+      ]
+    },
+    {
+      "id": "hog-g3-passive",
+      "title": "The Passive Voice",
+      "description": "Passivum — när objektet blir subjekt.",
+      "icon": "🔄",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-g3-1",
+          "type": "multiple-choice",
+          "question": "Which sentence is in the passive voice?",
+          "options": [
+            "The chef cooked the meal.",
+            "The meal was cooked by the chef.",
+            "The chef is cooking the meal.",
+            "The chef has cooked the meal."
+          ],
+          "correctIndex": 1,
+          "explanation": "Passive: be + past participle. 'was cooked' is passive.",
+          "hint": "Passiv: be + past participle. Vem som gör handlingen är sekundärt."
+        },
+        {
+          "id": "hog-g3-2",
+          "type": "fill-in-blank",
+          "sentence": "English ___ (speak) all over the world.",
+          "answer": "is spoken",
+          "hint": "Passiv presens: is/are + past participle.",
+          "explanation": "Present passive: is/are + past participle. speak → spoken."
+        },
+        {
+          "id": "hog-g3-3",
+          "type": "multiple-choice",
+          "question": "Change to passive: 'They built this bridge in 1900.'",
+          "options": [
+            "This bridge built in 1900.",
+            "This bridge was built in 1900.",
+            "This bridge is built in 1900.",
+            "This bridge has built in 1900."
+          ],
+          "correctIndex": 1,
+          "explanation": "Past passive: was/were + past participle. build → built.",
+          "hint": "Passiv datid: was/were + past participle."
+        },
+        {
+          "id": "hog-g3-4",
+          "type": "fill-in-blank",
+          "sentence": "The window ___ (break) by the football yesterday.",
+          "answer": "was broken",
+          "hint": "Passiv datid: was + past participle.",
+          "explanation": "Past passive: was + past participle. break → broken."
+        },
+        {
+          "id": "hog-g3-5",
+          "type": "multiple-choice",
+          "question": "'The report ___ finished by tomorrow.' Choose the correct passive form.",
+          "options": [
+            "will finish",
+            "will be finished",
+            "is finished",
+            "has been finished"
+          ],
+          "correctIndex": 1,
+          "explanation": "Future passive: will be + past participle.",
+          "hint": "Passiv futurum: will be + past participle."
+        },
+        {
+          "id": "hog-g3-6",
+          "type": "fill-in-blank",
+          "sentence": "A new hospital ___ (build) in the city centre.",
+          "answer": "is being built",
+          "hint": "Passiv pågående presens: is/are being + past participle.",
+          "explanation": "Present continuous passive: is/are being + past participle."
+        },
+        {
+          "id": "hog-g3-7",
+          "type": "build-sentence",
+          "instruction": "Build a passive sentence.",
+          "words": [
+            "The",
+            "cake",
+            "was",
+            "baked",
+            "by",
+            "my",
+            "mother",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "explanation": "The cake was baked by my mother. – past passive with 'by'."
+        },
+        {
+          "id": "hog-g3-8",
+          "type": "multiple-choice",
+          "question": "When do we use the passive voice?",
+          "options": [
+            "Always, instead of active voice.",
+            "When the agent is unknown, unimportant, or obvious.",
+            "Only in formal writing.",
+            "Only in past tense."
+          ],
+          "correctIndex": 1,
+          "explanation": "We use passive when the doer is unknown, unimportant, or when we focus on the action/result.",
+          "hint": "Passiv används när vem som gör handlingen är okänt, oviktigt eller underförstått."
+        },
+        {
+          "id": "hog-g3-9",
+          "type": "fill-in-blank",
+          "sentence": "The winner ___ (announce) soon.",
+          "answer": "will be announced",
+          "hint": "Passiv futurum: will be + past participle.",
+          "explanation": "Future passive: will be + past participle. announce → announced."
+        },
+        {
+          "id": "hog-g3-10",
+          "type": "multiple-choice",
+          "question": "'Many cars ___ every year in Sweden.' Choose the correct passive.",
+          "options": [
+            "produce",
+            "are produced",
+            "were produced",
+            "has been produced"
+          ],
+          "correctIndex": 1,
+          "explanation": "Present passive with plural subject: are + past participle.",
+          "hint": "Passiv presens med pluralsubjekt: are + past participle."
+        },
+        {
+          "id": "hog-g3-11",
+          "type": "fill-in-blank",
+          "sentence": "The letter ___ (write) by Emma yesterday.",
+          "answer": "was written",
+          "hint": "Passiv datid: was + past participle.",
+          "explanation": "Past passive: was + past participle. write → written."
+        },
+        {
+          "id": "hog-g3-12",
+          "type": "build-sentence",
+          "instruction": "Change to passive: 'Scientists have discovered a new planet.'",
+          "words": [
+            "A",
+            "new",
+            "planet",
+            "has",
+            "been",
+            "discovered",
+            "by",
+            "scientists",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "explanation": "A new planet has been discovered by scientists. – present perfect passive."
+        },
+        {
+          "id": "hog-g3-13",
+          "type": "multiple-choice",
+          "question": "'The thief ___ (arrest) by the police.' Past passive?",
+          "options": [
+            "arrested",
+            "was arrested",
+            "is arrested",
+            "arrests"
+          ],
+          "correctIndex": 1,
+          "explanation": "Past passive: was/were + past participle. arrest → arrested.",
+          "hint": "Passiv datid: was/were + past participle."
+        },
+        {
+          "id": "hog-g3-14",
+          "type": "fill-in-blank",
+          "sentence": "These cars ___ (manufacture) in Germany.",
+          "answer": "are manufactured",
+          "hint": "Passiv presens med plural: are + past participle.",
+          "explanation": "Present passive plural: are + past participle."
+        },
+        {
+          "id": "hog-g3-15",
+          "type": "multiple-choice",
+          "question": "'By whom ___ this poem written?' Choose the correct passive question.",
+          "options": [
+            "is",
+            "was",
+            "were",
+            "has"
+          ],
+          "correctIndex": 1,
+          "explanation": "'This poem was written' – past passive → question: was this poem written?",
+          "hint": "Passiv frågekonstruktion: was/were + subject + past participle?"
+        }
+      ],
+      "helpText": [
+        "Passiv form fokuserar på VAD som händer eller HUR något är, inte VEM som gör det.",
+        "Bildas med: am/is/are + past participle (presens passiv). was/were + past participle (dåtid passiv).",
+        "Aktiv: The chef cooks the food. → Passiv: The food is cooked (by the chef).",
+        "Aktiv: Someone broke the window. → Passiv: The window was broken.",
+        "Tips: Om du vill säga VEM som utförde handlingen, lägg till 'by + person' i slutet."
+      ]
+    },
+    {
+      "id": "hog-g4-reported",
+      "title": "Reported Speech",
+      "description": "Indirekt tal — återberätta vad någon sagt.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "exercises": [
+        {
+          "id": "hog-g4-1",
+          "type": "multiple-choice",
+          "question": "'\"I love pizza,\" she said.' → Reported speech?",
+          "options": [
+            "She said she loved pizza.",
+            "She said she loves pizza.",
+            "She said she love pizza.",
+            "She said I love pizza."
+          ],
+          "correctIndex": 0,
+          "explanation": "In reported speech, present simple (love) shifts back to past simple (loved).",
+          "hint": "Indirekt tal: presens → preteritum."
+        },
+        {
+          "id": "hog-g4-2",
+          "type": "fill-in-blank",
+          "sentence": "'I will help you.' → He said he ___ help me.",
+          "answer": "would",
+          "hint": "'will' i direkt tal → 'would' i indirekt tal.",
+          "explanation": "'Will' backshifts to 'would' in reported speech."
+        },
+        {
+          "id": "hog-g4-3",
+          "type": "multiple-choice",
+          "question": "'\"We are leaving now,\" they said.' → Reported speech?",
+          "options": [
+            "They said they are leaving now.",
+            "They said they were leaving.",
+            "They said we were leaving.",
+            "They said they will leave."
+          ],
+          "correctIndex": 1,
+          "explanation": "Present continuous (are leaving) shifts to past continuous (were leaving) in reported speech.",
+          "hint": "Pågående presens → pågående preteritum i indirekt tal."
+        },
+        {
+          "id": "hog-g4-4",
+          "type": "fill-in-blank",
+          "sentence": "'\"I have seen that film,\" she said.' → She said she ___ that film.",
+          "answer": "had seen",
+          "hint": "Present perfect → past perfect i indirekt tal.",
+          "explanation": "Present perfect (have seen) → past perfect (had seen) in reported speech."
+        },
+        {
+          "id": "hog-g4-5",
+          "type": "multiple-choice",
+          "question": "'\"Can you swim?\" he asked her.' → Reported question?",
+          "options": [
+            "He asked her if she can swim.",
+            "He asked her if she could swim.",
+            "He asked her could she swim.",
+            "He asked her if can she swim."
+          ],
+          "correctIndex": 1,
+          "explanation": "Yes/no questions in reported speech: asked if/whether + subject + verb. 'can' → 'could'.",
+          "hint": "Ja/nej-frågor i indirekt tal: asked if/whether + subjekt + verb."
+        },
+        {
+          "id": "hog-g4-6",
+          "type": "fill-in-blank",
+          "sentence": "'\"Don't open the window,\" the teacher said.' → The teacher told us ___ open the window.",
+          "answer": "not to",
+          "hint": "Negation i indirekt uppmaning: told + not to + grundform.",
+          "explanation": "Reported commands (negative): told us not to + base verb."
+        },
+        {
+          "id": "hog-g4-7",
+          "type": "multiple-choice",
+          "question": "What happens to 'this' in reported speech?",
+          "options": [
+            "It stays as 'this'.",
+            "It changes to 'that'.",
+            "It changes to 'these'.",
+            "It is deleted."
+          ],
+          "correctIndex": 1,
+          "explanation": "'This' typically becomes 'that' in reported speech (time and place references change).",
+          "hint": "Dempronomen ändras: this → that, here → there, now → then."
+        },
+        {
+          "id": "hog-g4-8",
+          "type": "fill-in-blank",
+          "sentence": "'\"Where do you live?\" she asked.' → She asked me where I ___.",
+          "answer": "lived",
+          "hint": "Indirekt fråga: frågepronomen + subjekt + verb (ej frågeordning).",
+          "explanation": "Reported questions use statement word order: where I lived (not where did I live)."
+        },
+        {
+          "id": "hog-g4-9",
+          "type": "build-sentence",
+          "instruction": "Build a reported speech sentence.",
+          "words": [
+            "He",
+            "said",
+            "that",
+            "he",
+            "was",
+            "tired",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "He said that he was tired. – 'am' → 'was' in reported speech."
+        },
+        {
+          "id": "hog-g4-10",
+          "type": "multiple-choice",
+          "question": "'\"I'll call you tomorrow,\" she promised.' → Reported speech?",
+          "options": [
+            "She promised she will call me tomorrow.",
+            "She promised she would call me the next day.",
+            "She promised she calls me tomorrow.",
+            "She promised she called me the day before."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Will' → 'would'; 'tomorrow' → 'the next day' in reported speech.",
+          "hint": "'tomorrow' → 'the next day'; 'will' → 'would'."
+        },
+        {
+          "id": "hog-g4-11",
+          "type": "fill-in-blank",
+          "sentence": "'\"Study hard,\" the teacher said.' → The teacher told us ___ hard.",
+          "answer": "to study",
+          "hint": "Uppmaningar i indirekt tal: told + to + grundform.",
+          "explanation": "Reported commands: told us to + base verb."
+        },
+        {
+          "id": "hog-g4-12",
+          "type": "multiple-choice",
+          "question": "When do we NOT need to backshift tenses in reported speech?",
+          "options": [
+            "Always backshift.",
+            "When the reporting verb is in the present tense.",
+            "Only in formal writing.",
+            "When reporting questions."
+          ],
+          "correctIndex": 1,
+          "explanation": "If the reporting verb is present (says, tells), no backshift is needed.",
+          "hint": "Om rapporteringsverbet är i presens behöver tempus inte backsiftas."
+        },
+        {
+          "id": "hog-g4-13",
+          "type": "fill-in-blank",
+          "sentence": "'\"Are you coming?\" she asked.' → She asked me if I ___ coming.",
+          "answer": "was",
+          "hint": "'Are' → 'was' i indirekt fråga.",
+          "explanation": "'Are' backshifts to 'was' in reported speech."
+        },
+        {
+          "id": "hog-g4-14",
+          "type": "build-sentence",
+          "instruction": "Build a reported question.",
+          "words": [
+            "She",
+            "asked",
+            "where",
+            "he",
+            "had",
+            "been",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "She asked where he had been. – 'had been' = backshift from 'has been'/'was'."
+        },
+        {
+          "id": "hog-g4-15",
+          "type": "multiple-choice",
+          "question": "'\"I can't come,\" he said.' → Reported speech?",
+          "options": [
+            "He said he can't come.",
+            "He said he couldn't come.",
+            "He said he won't come.",
+            "He said he shouldn't come."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Can't' → 'couldn't' in reported speech.",
+          "hint": "can → could; can't → couldn't i indirekt tal."
+        }
+      ],
+      "helpText": [
+        "Indirekt tal (reported speech) = du återberättar vad någon SA, utan att citera exakt.",
+        "Verbformen 'backas ett steg tillbaka i tid': am/is → was, will → would, can → could, have → had.",
+        "Pronomen ändras utifrån vem som talar: He said, 'I am tired.' → He said (that) he was tired.",
+        "Say vs tell: say sätts utan objekt (He said that...). Tell kräver objekt (He told me that...).",
+        "Tänk: Backa ett tempussteg och ändra pronomen. 'I will come' → He said he would come."
+      ]
+    },
+    {
+      "id": "hog-g-advanced",
+      "title": "Advanced verb forms",
+      "description": "Perfekt, passiv, konditionalis och jämförelseformer.",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced-1",
+          "type": "fill-in-blank",
+          "sentence": "If it rains, we ___ (stay) inside.",
+          "answer": "will stay",
+          "hint": "Typ 1-konditionalis: If + presens → will + grundform. Verklig möjlighet."
+        },
+        {
+          "id": "hog-g-advanced-2",
+          "type": "multiple-choice",
+          "question": "She has ___ her homework.",
+          "options": [
+            "do",
+            "did",
+            "done"
+          ],
+          "correctIndex": 2,
+          "hint": "Perfektparticip av verbet används här: 'done'. Kontrollera den oregelbundna formen."
+        },
+        {
+          "id": "hog-g-advanced-3",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (live) here for three years.",
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-4",
+          "type": "multiple-choice",
+          "question": "This book ___ written in 1990.",
+          "options": [
+            "is",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-5",
+          "type": "fill-in-blank",
+          "sentence": "He said that he ___ (be) tired.",
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-6",
+          "type": "multiple-choice",
+          "question": "If I ___ more time, I would travel.",
+          "options": [
+            "have",
+            "had",
+            "will have"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-7",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not finish) yet.",
+          "answer": "has not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced-8",
+          "type": "multiple-choice",
+          "question": "They were tired, ___ they continued.",
+          "options": [
+            "but",
+            "because",
+            "so"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-9",
+          "type": "fill-in-blank",
+          "sentence": "The film was ___ (interesting) than the book.",
+          "answer": "more interesting",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-10",
+          "type": "multiple-choice",
+          "question": "This is the ___ movie I have seen.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-11",
+          "type": "fill-in-blank",
+          "sentence": "He asked where I ___ (live).",
+          "answer": "lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-12",
+          "type": "multiple-choice",
+          "question": "She speaks English ___ than me.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-13",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (build) a new school last year.",
+          "answer": "built",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-14",
+          "type": "multiple-choice",
+          "question": "The cake was ___ by my sister.",
+          "options": [
+            "make",
+            "made",
+            "making"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-15",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (can) swim.",
+          "answer": "could",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-16",
+          "type": "multiple-choice",
+          "question": "She is interested ___ music.",
+          "options": [
+            "in",
+            "on",
+            "at"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-17",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (already finish) the project.",
+          "answer": "have already finished",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-18",
+          "type": "multiple-choice",
+          "question": "He runs ___ than his brother.",
+          "options": [
+            "fast",
+            "faster",
+            "fastest"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced-19",
+          "type": "fill-in-blank",
+          "sentence": "If she had studied, she ___ (pass) the test.",
+          "answer": "would have passed",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced-20",
+          "type": "multiple-choice",
+          "question": "They didn't know ___ to do.",
+          "options": [
+            "what",
+            "which",
+            "where"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        }
+      ],
+      "helpText": [
+        "Avancerade verbformer – du kombinerar perfect, passiv, konditionalis och komparativ.",
+        "Present perfect: have/has + past participle (koppling till nu).",
+        "Passiv: am/is/are + past participle (fokus på objekt, inte subjekt).",
+        "Komparativ + superlativ: mer komplexa adjektiv med more/most + oregelbundna former.",
+        "Tips: Läs meningen noggrant – vad är subjektet, vad händer, och när händer det?"
+      ]
+    },
+    {
+      "id": "hog-g-advanced2",
+      "title": "Advanced verb forms – del 2",
+      "description": "Fler övningar på perfekt, passiv, konditionalis och komparativ.",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced2-1",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (study) for two hours.",
+          "answer": "has studied",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
+        },
+        {
+          "id": "hog-g-advanced2-2",
+          "type": "multiple-choice",
+          "question": "If I were you, I ___ apologise.",
+          "options": [
+            "will",
+            "would",
+            "can"
+          ],
+          "correctIndex": 1,
+          "hint": "Typ 2-konditionalis resultat: 'would' + grundform. Hypotetisk situation i nutid."
+        },
+        {
+          "id": "hog-g-advanced2-3",
+          "type": "fill-in-blank",
+          "sentence": "The book ___ (write) in 2005.",
+          "answer": "was written",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced2-4",
+          "type": "multiple-choice",
+          "question": "He asked me where I ___ from.",
+          "options": [
+            "am",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-5",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not finish) the task yet.",
+          "answer": "have not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced2-6",
+          "type": "multiple-choice",
+          "question": "This is ___ interesting book I have read.",
+          "options": [
+            "more",
+            "most",
+            "the most"
+          ],
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-7",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (go) to school when it started to rain.",
+          "answer": "was going",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
+        },
+        {
+          "id": "hog-g-advanced2-8",
+          "type": "multiple-choice",
+          "question": "If it ___ tomorrow, we will stay home.",
+          "options": [
+            "rain",
+            "rains",
+            "rained"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-9",
+          "type": "fill-in-blank",
+          "sentence": "He said he ___ (be) tired.",
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-10",
+          "type": "multiple-choice",
+          "question": "The project must ___ finished today.",
+          "options": [
+            "be",
+            "been",
+            "being"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-11",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (have) more time.",
+          "answer": "had",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-12",
+          "type": "multiple-choice",
+          "question": "She is good ___ maths.",
+          "options": [
+            "at",
+            "in",
+            "on"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-13",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (live) here since 2020.",
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-14",
+          "type": "multiple-choice",
+          "question": "He runs ___ than me.",
+          "options": [
+            "fast",
+            "faster",
+            "fastest"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-15",
+          "type": "fill-in-blank",
+          "sentence": "The cake ___ (make) by my mother.",
+          "answer": "was made",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-16",
+          "type": "multiple-choice",
+          "question": "If she had studied, she ___ passed.",
+          "options": [
+            "will have",
+            "would have",
+            "has"
+          ],
+          "correctIndex": 1,
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced2-17",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (already see) that film.",
+          "answer": "have already seen",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-18",
+          "type": "multiple-choice",
+          "question": "He didn't know ___ to say.",
+          "options": [
+            "what",
+            "where",
+            "why"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced2-19",
+          "type": "fill-in-blank",
+          "sentence": "The car ___ (drive) too fast.",
+          "answer": "was driven",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced2-20",
+          "type": "multiple-choice",
+          "question": "She speaks English ___ than before.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        }
+      ],
+      "helpText": [
+        "Fler övningar på avancerade verbformer – fokusera på kontexten i varje mening.",
+        "Konditionalis typ 2: If + past simple, would + grundform – hypotetiska situationer.",
+        "Passiv preteritum: was/were + past participle. Ex: The letter was written yesterday.",
+        "Tips: Titta på signalerorden (if, by, has, was, more, most) – de avslöjar vilken form som behövs."
+      ]
+    },
+    {
+      "id": "hog-g-advanced3",
+      "title": "Advanced verb forms – del 3",
+      "description": "Ännu fler övningar på perfekt, passiv, konditionalis och komparativ.",
+      "icon": "🌩️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced3-1",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ (be) you, I would study more.",
+          "answer": "were",
+          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform."
+        },
+        {
+          "id": "hog-g-advanced3-2",
+          "type": "multiple-choice",
+          "question": "She has ___ her homework.",
+          "options": [
+            "finish",
+            "finished",
+            "finishing"
+          ],
+          "correctIndex": 1,
+          "hint": "Perfektparticip av verbet används här: 'finished'. Kontrollera den oregelbundna formen."
+        },
+        {
+          "id": "hog-g-advanced3-3",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (live) here since 2018.",
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-4",
+          "type": "multiple-choice",
+          "question": "The house ___ built in 1995.",
+          "options": [
+            "is",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-5",
+          "type": "fill-in-blank",
+          "sentence": "He said he ___ (go) home.",
+          "answer": "was going",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
+        },
+        {
+          "id": "hog-g-advanced3-6",
+          "type": "multiple-choice",
+          "question": "This is the ___ day of my life.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-7",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not see) him yet.",
+          "answer": "has not seen",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced3-8",
+          "type": "multiple-choice",
+          "question": "If it ___ tomorrow, we will stay inside.",
+          "options": [
+            "rains",
+            "rain",
+            "rained"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-9",
+          "type": "fill-in-blank",
+          "sentence": "The car ___ (steal) last night.",
+          "answer": "was stolen",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced3-10",
+          "type": "multiple-choice",
+          "question": "He runs ___ than me.",
+          "options": [
+            "fast",
+            "faster",
+            "fastest"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-11",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (already finish) the project.",
+          "answer": "have already finished",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-12",
+          "type": "multiple-choice",
+          "question": "She is afraid ___ spiders.",
+          "options": [
+            "of",
+            "at",
+            "in"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-13",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (watch) TV when I arrived.",
+          "answer": "were watching",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
+        },
+        {
+          "id": "hog-g-advanced3-14",
+          "type": "multiple-choice",
+          "question": "If she had tried, she ___ succeeded.",
+          "options": [
+            "would have",
+            "will have",
+            "has"
+          ],
+          "correctIndex": 0,
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced3-15",
+          "type": "fill-in-blank",
+          "sentence": "He asked where I ___ (live).",
+          "answer": "lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-16",
+          "type": "multiple-choice",
+          "question": "This book is ___ interesting than that one.",
+          "options": [
+            "more",
+            "most",
+            "very"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-17",
+          "type": "fill-in-blank",
+          "sentence": "The cake ___ (eat) by the children.",
+          "answer": "was eaten",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced3-18",
+          "type": "multiple-choice",
+          "question": "She speaks English ___ than before.",
+          "options": [
+            "good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-19",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (can) help you.",
+          "answer": "could",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-20",
+          "type": "multiple-choice",
+          "question": "He is interested ___ history.",
+          "options": [
+            "in",
+            "on",
+            "at"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-21",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not finish) yet.",
+          "answer": "have not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced3-22",
+          "type": "multiple-choice",
+          "question": "The film was ___ than I expected.",
+          "options": [
+            "bad",
+            "worse",
+            "worst"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-23",
+          "type": "fill-in-blank",
+          "sentence": "If I had known, I ___ (come).",
+          "answer": "would have come",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced3-24",
+          "type": "multiple-choice",
+          "question": "She was tired, ___ she continued.",
+          "options": [
+            "but",
+            "because",
+            "so"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-25",
+          "type": "fill-in-blank",
+          "sentence": "The letter ___ (send) yesterday.",
+          "answer": "was sent",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced3-26",
+          "type": "multiple-choice",
+          "question": "He didn't know ___ to do.",
+          "options": [
+            "what",
+            "where",
+            "which"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-27",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (never see) such a storm.",
+          "answer": "have never seen",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-28",
+          "type": "multiple-choice",
+          "question": "This is ___ best solution.",
+          "options": [
+            "a",
+            "an",
+            "the"
+          ],
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced3-29",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (be) studying for hours.",
+          "answer": "has been",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
+        },
+        {
+          "id": "hog-g-advanced3-30",
+          "type": "multiple-choice",
+          "question": "If I ___ more money, I would travel.",
+          "options": [
+            "have",
+            "had",
+            "will have"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        }
+      ],
+      "helpText": [
+        "Sista rundan på avancerade former – blanda dina kunskaper!",
+        "Kom ihåg skillnaden: 'She was singing' (past continuous) vs 'She sang' (past simple).",
+        "Reported speech + passiv kan kombineras: 'It was said that he had left.'",
+        "Tips: Läs hela meningen, identifiera subjektet, och bestäm tempus utifrån context."
+      ]
+    },
+    {
+      "id": "hog-g-advanced4",
+      "title": "Avancerad grammatik – del 4",
+      "description": "Fler avancerade grammatikövningar.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced4-1",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ (be) you, I would apologise.",
+          "answer": "were",
+          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform."
+        },
+        {
+          "id": "hog-g-advanced4-2",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (not finish) yet.",
+          "answer": "has not finished",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced4-3",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (live) here for three years.",
+          "answer": "have lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-4",
+          "type": "fill-in-blank",
+          "sentence": "The house ___ (build) in 1990.",
+          "answer": "was built",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced4-5",
+          "type": "fill-in-blank",
+          "sentence": "He said he ___ (be) tired.",
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-6",
+          "type": "fill-in-blank",
+          "sentence": "If she had studied, she ___ (pass).",
+          "answer": "would have passed",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced4-7",
+          "type": "fill-in-blank",
+          "sentence": "The film was ___ (interesting) than the book.",
+          "answer": "more interesting",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-8",
+          "type": "fill-in-blank",
+          "sentence": "This is the ___ (good) day of my life.",
+          "answer": "best",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-9",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (watch) TV when I arrived.",
+          "answer": "was watching",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
+        },
+        {
+          "id": "hog-g-advanced4-10",
+          "type": "fill-in-blank",
+          "sentence": "The car ___ (steal) last night.",
+          "answer": "was stolen",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced4-11",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (can) swim.",
+          "answer": "could",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (already finish) the project.",
+          "answer": "have already finished",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-13",
+          "type": "fill-in-blank",
+          "sentence": "He asked where I ___ (live).",
+          "answer": "lived",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-14",
+          "type": "fill-in-blank",
+          "sentence": "She speaks English ___ (good) than me.",
+          "answer": "better",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-15",
+          "type": "fill-in-blank",
+          "sentence": "If it ___ (rain), we will stay inside.",
+          "answer": "rains",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-16",
+          "type": "fill-in-blank",
+          "sentence": "The cake ___ (make) by my sister.",
+          "answer": "was made",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-17",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (never see) such a storm.",
+          "answer": "have never seen",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-18",
+          "type": "fill-in-blank",
+          "sentence": "He is interested ___ music.",
+          "answer": "in",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced4-19",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (study) for two hours.",
+          "answer": "has studied",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
+        },
+        {
+          "id": "hog-g-advanced4-20",
+          "type": "fill-in-blank",
+          "sentence": "If I had known, I ___ (come).",
+          "answer": "would have come",
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        }
+      ],
+      "helpText": [
+        "Avancerad grammatik – fler blandade strukturer.",
+        "Relativa pronomen: who (person), which (sak), that (person eller sak), whose (ägande).",
+        "Ex: The woman who called is my teacher. The book that I read was great.",
+        "Tips: Vad syftar bisatsen på? En person → who. En sak → which eller that."
+      ]
+    },
+    {
+      "id": "hog-g-advanced5",
+      "title": "Avancerad grammatik – del 5",
+      "description": "Fler avancerade grammatikövningar.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-advanced5-1",
+          "type": "multiple-choice",
+          "question": "If I ___ enough money, I would buy it.",
+          "options": [
+            "have",
+            "had",
+            "will have"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-2",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (work) here since last year.",
+          "answer": "has worked",
+          "hint": "Perfekt: have/has + perfektparticip. Visar koppling mellan dåtid och nutid."
+        },
+        {
+          "id": "hog-g-advanced5-3",
+          "type": "multiple-choice",
+          "question": "The book ___ by a famous author.",
+          "options": [
+            "wrote",
+            "written",
+            "was written"
+          ],
+          "correctIndex": 2,
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced5-4",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (not know) the answer at that time.",
+          "answer": "did not know",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-5",
+          "type": "multiple-choice",
+          "question": "This exercise is ___ than the last one.",
+          "options": [
+            "easy",
+            "easier",
+            "easiest"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-6",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (drive) when the accident happened.",
+          "answer": "was driving",
+          "hint": "Pågående handling i dåtid: was/were + verb-ing."
+        },
+        {
+          "id": "hog-g-advanced5-7",
+          "type": "multiple-choice",
+          "question": "If it had snowed, we ___ stayed home.",
+          "options": [
+            "would have",
+            "will have",
+            "would"
+          ],
+          "correctIndex": 0,
+          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+        },
+        {
+          "id": "hog-g-advanced5-8",
+          "type": "fill-in-blank",
+          "sentence": "She asked if I ___ (be) ready.",
+          "answer": "was",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-9",
+          "type": "multiple-choice",
+          "question": "The project ___ completed next week.",
+          "options": [
+            "is",
+            "will be",
+            "was"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (not see) him since Monday.",
+          "answer": "have not seen",
+          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+        },
+        {
+          "id": "hog-g-advanced5-11",
+          "type": "multiple-choice",
+          "question": "He is the ___ student in the class.",
+          "options": [
+            "smart",
+            "smarter",
+            "smartest"
+          ],
+          "correctIndex": 2,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (build) a bridge last year.",
+          "answer": "built",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-13",
+          "type": "multiple-choice",
+          "question": "She speaks ___ than her sister.",
+          "options": [
+            "clearly",
+            "more clearly",
+            "most clearly"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-14",
+          "type": "fill-in-blank",
+          "sentence": "I wish I ___ (be) taller.",
+          "answer": "were",
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-15",
+          "type": "multiple-choice",
+          "question": "The homework must ___ finished today.",
+          "options": [
+            "be",
+            "been",
+            "being"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-16",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (not finish) when I arrived.",
+          "answer": "had not finished",
+          "hint": "Pluskvamperfekt: had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse."
+        },
+        {
+          "id": "hog-g-advanced5-17",
+          "type": "multiple-choice",
+          "question": "If she studies, she ___ pass the test.",
+          "options": [
+            "will",
+            "would",
+            "would have"
+          ],
+          "correctIndex": 0,
+          "hint": "Typ 1-konditionalis: If + presens → will + grundform. Verklig möjlighet."
+        },
+        {
+          "id": "hog-g-advanced5-18",
+          "type": "fill-in-blank",
+          "sentence": "The window ___ (break) during the storm.",
+          "answer": "was broken",
+          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+        },
+        {
+          "id": "hog-g-advanced5-19",
+          "type": "multiple-choice",
+          "question": "She is afraid ___ heights.",
+          "options": [
+            "of",
+            "for",
+            "with"
+          ],
+          "correctIndex": 0,
+          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+        },
+        {
+          "id": "hog-g-advanced5-20",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (already leave) when we got there.",
+          "answer": "had already left",
+          "hint": "Pluskvamperfekt: had + perfektparticip. Händelse som skedde FÖRE en annan dåtidshändelse."
+        }
+      ],
+      "helpText": [
+        "Avancerade grammatikövningar – var uppmärksam på detaljer!",
+        "Modala verb: must/have to (krav), should (råd), might/may (möjlighet), can (förmåga).",
+        "Ex: You must wear a seatbelt. You should study more. It might rain tomorrow.",
+        "Tips: Hur säker är du? must (100%) → should (råd) → might/could (kanske) → can't (omöjligt)."
+      ]
+    },
+    {
+      "id": "hog-g-mixed",
+      "title": "Blandad grammatik",
+      "description": "For/since, few/little, adjektiv vs adverb, indirekt tal, relativa pronomen och modala verb.",
+      "icon": "🔠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "exercises": [
+        {
+          "id": "hog-g-mixed-1",
+          "type": "fill-in-blank",
+          "sentence": "I have lived here ___ five years.",
+          "answer": "for",
+          "hint": "Tänk på skillnaden: 'for' används med tidsperioder (hur länge?), medan 'since' används med en startpunkt (när startade det?). Vad är det för typ av tidsuttryck i meningen?"
+        },
+        {
+          "id": "hog-g-mixed-2",
+          "type": "fill-in-blank",
+          "sentence": "I have lived here ___ 2018.",
+          "answer": "since",
+          "hint": "Fråga dig: är '2018' en tidsperiod eller en startpunkt i tid? Välj det ord som passar för den typen av tidsuttryck."
+        },
+        {
+          "id": "hog-g-mixed-3",
+          "type": "multiple-choice",
+          "question": "There are ___ people waiting.",
+          "options": [
+            "few",
+            "little"
+          ],
+          "correctIndex": 0,
+          "hint": "'Few' + räkningsbara (countable) substantiv: 'few people', 'few cars'. 'Little' + oräkningbara: 'little time', 'little money'."
+        },
+        {
+          "id": "hog-g-mixed-4",
+          "type": "multiple-choice",
+          "question": "There is ___ time left.",
+          "options": [
+            "few",
+            "little"
+          ],
+          "correctIndex": 1,
+          "hint": "'Time' (tid) är oräkningsbart → 'little'. Jämför: 'a few minutes' (räkningsbart) vs 'little time' (oräkningsbart)."
+        },
+        {
+          "id": "hog-g-mixed-5",
+          "type": "multiple-choice",
+          "question": "She is a ___ driver.",
+          "options": [
+            "careful",
+            "carefully"
+          ],
+          "correctIndex": 0,
+          "hint": "Adjektiv beskriver substantiv: 'a careful driver'. Adverb beskriver verb: 'She drives carefully'. Här beskrivs 'driver' (substantiv) → adjektiv."
+        },
+        {
+          "id": "hog-g-mixed-6",
+          "type": "multiple-choice",
+          "question": "She drives ___.",
+          "options": [
+            "careful",
+            "carefully"
+          ],
+          "correctIndex": 1,
+          "hint": "Adverb beskriver verb: 'She drives carefully'. Adjektiv beskriver substantiv. Här beskrivs 'drives' (verb) → adverb (-ly)."
+        },
+        {
+          "id": "hog-g-mixed-7",
+          "type": "fill-in-blank",
+          "sentence": "He used to ___ (live) here.",
+          "answer": "live",
+          "hint": "'Used to' kräver alltid att verbet böjs på ett visst sätt. Tänk på hur du kombinerar hjälpverb med huvudverb på engelska."
+        },
+        {
+          "id": "hog-g-mixed-8",
+          "type": "fill-in-blank",
+          "sentence": "He said: 'I will come.' → He said that he ___ come.",
+          "answer": "would",
+          "hint": "Vid indirekt tal 'backas' tempuset ett steg. Vad händer med 'will' när man rapporterar vad någon sade?"
+        },
+        {
+          "id": "hog-g-mixed-9",
+          "type": "fill-in-blank",
+          "sentence": "The woman ___ car was stolen called the police.",
+          "answer": "whose",
+          "hint": "Relativpronomen väljs beroende på vad de syftar på. Vilket relativpronomen används för att visa ägande/tillhörighet?"
+        },
+        {
+          "id": "hog-g-mixed-10",
+          "type": "fill-in-blank",
+          "sentence": "You ___ wear a helmet (obligation).",
+          "answer": "must",
+          "hint": "Modalverb har olika styrka: råd, tillstånd eller skyldighet. Ledtråden i parentesen anger vilken typ av modal du ska använda."
+        },
+        {
+          "id": "hog-g-mixed-11",
+          "type": "fill-in-blank",
+          "sentence": "You ___ leave early (permission).",
+          "answer": "may",
+          "hint": "Ledtråden i parentesen hjälper dig. Vilket modalverb används formellt för att ge tillstånd?"
+        },
+        {
+          "id": "hog-g-mixed-12",
+          "type": "multiple-choice",
+          "question": "Despite ___ tired, she continued.",
+          "options": [
+            "being",
+            "to be"
+          ],
+          "correctIndex": 0,
+          "hint": "'Despite' följs alltid av gerund (-ing): 'despite being tired'. 'Although' däremot följs av en fullständig sats."
+        },
+        {
+          "id": "hog-g-mixed-13",
+          "type": "fill-in-blank",
+          "sentence": "We stayed home ___ it was raining.",
+          "answer": "because",
+          "hint": "Konjunktioner kopplar ihop satser och visar relationen dem emellan. Meningen handlar om orsak – varför stannade de hemma?"
+        },
+        {
+          "id": "hog-g-mixed-14",
+          "type": "multiple-choice",
+          "question": "He arrived ___ time.",
+          "options": [
+            "on",
+            "in"
+          ],
+          "correctIndex": 0,
+          "hint": "'On time' = punktligt (vid den bestämda tiden). 'In time' = i tid (hinner, inte för sent). 'Arrived on time' = kom punktligt."
+        },
+        {
+          "id": "hog-g-mixed-15",
+          "type": "fill-in-blank",
+          "sentence": "She has been studying ___ two hours.",
+          "answer": "for",
+          "hint": "Tänk på om tidsuttrycket i meningen anger en period (hur länge?) eller en startpunkt. Välj rätt preposition."
+        },
+        {
+          "id": "hog-g-mixed-16",
+          "type": "fill-in-blank",
+          "sentence": "She has been studying ___ 5 o'clock.",
+          "answer": "since",
+          "hint": "'5 o'clock' – är det en tidsperiod eller en specifik tidpunkt? Välj prepositionen som passar den typen av tidsuttryck."
+        },
+        {
+          "id": "hog-g-mixed-17",
+          "type": "fill-in-blank",
+          "sentence": "If you heat water, it ___ boil.",
+          "answer": "boils",
+          "hint": "Zero conditional (nollkonditional) används för fakta och naturlagar. Tänk på vilket tempus som används i båda satserna."
+        },
+        {
+          "id": "hog-g-mixed-18",
+          "type": "multiple-choice",
+          "question": "He is ___ tired to continue.",
+          "options": [
+            "too",
+            "very"
+          ],
+          "correctIndex": 0,
+          "hint": "'Too' + adjektiv = för mycket (negativt resultat): 'too tired to continue' = för trött för att fortsätta. 'Very' förstärker utan negativt resultat."
+        },
+        {
+          "id": "hog-g-mixed-19",
+          "type": "fill-in-blank",
+          "sentence": "She enjoys ___ (read) in the evenings.",
+          "answer": "reading",
+          "hint": "Verbet 'enjoy' kombineras alltid med en viss verbform. Tänk på vilken form av verbet som används efter verb som enjoy, finish, avoid."
+        },
+        {
+          "id": "hog-g-mixed-20",
+          "type": "multiple-choice",
+          "question": "I look forward to ___ you.",
+          "options": [
+            "see",
+            "seeing"
+          ],
+          "correctIndex": 1,
+          "hint": "'Look forward to' + gerund (-ing). 'To' är här en preposition (inte infinitivmarkör) → -ing-form. 'Look forward to seeing you.'"
+        }
+      ],
+      "helpText": [
+        "Blandad grammatik – du tränar på flera regler på en gång. Läs noggrant!",
+        "For vs since: for + tidsperiod (for three years). since + startpunkt (since 2020).",
+        "Few/little: few + räknebart (few books). little + oräknebart (little water).",
+        "Adjektiv vs adverb: adjektiv beskriver substantiv (a fast car). adverb beskriver verb (he runs fast).",
+        "Tips: Identifiera ordklassen – beskriver ordet ett substantiv eller ett verb?"
+      ]
+    },
+    {
+      "id": "hog-g11-nouns",
+      "title": "Substantiv – Avancerat",
+      "description": "Räknebara och icke-räknebara substantiv, kollektiv och komplex plural.",
+      "icon": "📦",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g11-1",
+          "type": "multiple-choice",
+          "question": "Vilket substantiv är icke-räknebart?",
+          "options": [
+            "chair",
+            "information",
+            "idea",
+            "problem"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Information' är icke-räknebart – man kan inte säga 'an information' eller 'two informations'."
+        },
+        {
+          "id": "hog-g11-2",
+          "type": "multiple-choice",
+          "question": "'The ___ is good.' Välj rätt alternativ:",
+          "options": [
+            "advices",
+            "advice",
+            "an advice",
+            "advices"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Advice' är icke-räknebart – inga -s och ingen artikel 'an'. The advice is good."
+        },
+        {
+          "id": "hog-g11-3",
+          "type": "fill-in-blank",
+          "sentence": "Can you give me some ___? (advice)",
+          "answer": "advice",
+          "hint": "Räknebart eller icke-räknebart?",
+          "explanation": "'Advice' är icke-räknebart. Säg 'some advice', inte 'some advices'."
+        },
+        {
+          "id": "hog-g11-4",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'criterion'?",
+          "options": [
+            "criterions",
+            "criterias",
+            "criteria",
+            "criterions"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Criterion' är ett latinskt lånord. Plural → criteria."
+        },
+        {
+          "id": "hog-g11-5",
+          "type": "multiple-choice",
+          "question": "'The committee ___ split on the issue.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 0,
+          "explanation": "I brittisk engelska behandlas kollektiva substantiv (committee) som plural → are."
+        },
+        {
+          "id": "hog-g11-6",
+          "type": "fill-in-blank",
+          "sentence": "She needs ___ furniture for her new apartment.",
+          "answer": "some",
+          "hint": "Räknebart eller icke-räknebart?",
+          "explanation": "'Furniture' är icke-räknebart → 'some furniture', inte 'a furniture'."
+        },
+        {
+          "id": "hog-g11-7",
+          "type": "multiple-choice",
+          "question": "'___ of her hair had turned grey.' Välj rätt:",
+          "options": [
+            "Some",
+            "A few",
+            "Many",
+            "Several"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Hair' är icke-räknebart → some. 'A few' och 'many' används med räknebara."
+        },
+        {
+          "id": "hog-g11-8",
+          "type": "multiple-choice",
+          "question": "Vad är korrekt form?",
+          "options": [
+            "two oxes",
+            "two ox",
+            "two oxen",
+            "two oxs"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Ox' → 'oxen' är en oregelbunden pluralform."
+        },
+        {
+          "id": "hog-g11-9",
+          "type": "fill-in-blank",
+          "sentence": "The media ___ reporting on the story. (is/are)",
+          "answer": "are",
+          "hint": "Är media singular eller plural?",
+          "explanation": "'Media' (urspr. plural av medium) tar ofta 'are' i modern engelska."
+        },
+        {
+          "id": "hog-g11-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He gave me several ___ .' (piece of advice)",
+          "options": [
+            "piece of advices",
+            "pieces of advice",
+            "pieces of advices",
+            "piece of advice"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Advice' räknas med 'pieces': several pieces of advice."
+        }
+      ]
+    },
+    {
+      "id": "hog-g12-adj-adv",
+      "title": "Adjektiv & Adverb – Avancerat",
+      "description": "Komparation, ordföljd och svåra fall med adjektiv och adverb.",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g12-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She speaks English ___.'",
+          "options": [
+            "fluent",
+            "fluently",
+            "more fluent",
+            "most fluent"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Speaks' är ett verb, så vi behöver ett adverb → fluently."
+        },
+        {
+          "id": "hog-g12-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt ordföljd: 'a ___ Italian silk scarf'",
+          "options": [
+            "beautiful old",
+            "old beautiful",
+            "Italian old beautiful",
+            "silk Italian beautiful"
+          ],
+          "correctIndex": 0,
+          "explanation": "Adjektivordföljd: opinion → age → material → origin. Beautiful (opinion) old (age) Italian silk scarf."
+        },
+        {
+          "id": "hog-g12-3",
+          "type": "fill-in-blank",
+          "sentence": "This is the ___ (bad) result we have ever had.",
+          "answer": "worst",
+          "hint": "Superlativform av bad?",
+          "explanation": "Bad → worse → worst. Superlativ: worst."
+        },
+        {
+          "id": "hog-g12-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I feel ___ today.' (hälsa)",
+          "options": [
+            "badly",
+            "more bad",
+            "bad",
+            "worst"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'feel' (länkverb) följer adjektivet → bad (inte adverbet badly)."
+        },
+        {
+          "id": "hog-g12-5",
+          "type": "multiple-choice",
+          "question": "'The ___ you study, the ___ you become.' Välj rätt:",
+          "options": [
+            "more / more smarter",
+            "more / smarter",
+            "harder / smarter",
+            "hardest / smartest"
+          ],
+          "correctIndex": 2,
+          "explanation": "'The + comparative, the + comparative': The harder you study, the smarter you become."
+        },
+        {
+          "id": "hog-g12-6",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ (far) away from home than I thought.",
+          "answer": "farther/further",
+          "hint": "Komparativ av far?",
+          "explanation": "Far → farther (avstånd) / further (bildligt). Båda accepteras."
+        },
+        {
+          "id": "hog-g12-7",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'This movie is ___ interesting than the last one.'",
+          "options": [
+            "more",
+            "most",
+            "much more",
+            "very most"
+          ],
+          "correctIndex": 0,
+          "explanation": "Komparativ med tvåstaviga+ adjektiv: more interesting."
+        },
+        {
+          "id": "hog-g12-8",
+          "type": "multiple-choice",
+          "question": "'She sings ___.' Vilket adverb är rätt?",
+          "options": [
+            "beautiful",
+            "beautifully",
+            "more beautiful",
+            "beautifuller"
+          ],
+          "correctIndex": 1,
+          "explanation": "Adverb bildas ofta med -ly: beautifully."
+        },
+        {
+          "id": "hog-g12-9",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ (little) motivated than before.",
+          "answer": "less",
+          "hint": "Komparativ av little?",
+          "explanation": "Little → less → least. Less motivated."
+        },
+        {
+          "id": "hog-g12-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'That was a ___ presentation.' (positiv bedömning, nästan perfekt)",
+          "options": [
+            "near perfect",
+            "nearly perfect",
+            "nearly-perfect",
+            "near perfectly"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Nearly' är adverb → nearly perfect presentation."
+        }
+      ]
+    },
+    {
+      "id": "hog-g13-do-does",
+      "title": "Do / Does / Did – Hjälpverb",
+      "description": "Avancerad användning av do/does/did i frågor, betoning och negationer.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g13-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She ___ study every day.' (betoning – det är sant!)",
+          "options": [
+            "does",
+            "do",
+            "is",
+            "has"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Does' kan användas för betoning: She DOES study every day (det stämmer verkligen!)."
+        },
+        {
+          "id": "hog-g13-2",
+          "type": "multiple-choice",
+          "question": "'They claimed he never paid. But he ___ pay.' Välj rätt:",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "was"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past tense med betoning: he DID pay (men de påstår motsatsen)."
+        },
+        {
+          "id": "hog-g13-3",
+          "type": "fill-in-blank",
+          "sentence": "Never ___ I expect such a result.",
+          "answer": "did",
+          "hint": "Inversion efter negativt adverb.",
+          "explanation": "'Never did I expect' – inversion med 'do/did' efter negativa adverbial."
+        },
+        {
+          "id": "hog-g13-4",
+          "type": "multiple-choice",
+          "question": "'___ you understand what I mean?' – formal stil",
+          "options": [
+            "Do",
+            "Does",
+            "Did",
+            "Are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Formell fråga i presens med you → Do you understand?"
+        },
+        {
+          "id": "hog-g13-5",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'Rarely ___ she make mistakes.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Inversion med negativt adverb 'rarely' + tredje person singular → does. Rarely does she..."
+        },
+        {
+          "id": "hog-g13-6",
+          "type": "fill-in-blank",
+          "sentence": "Little ___ he know about the danger.",
+          "answer": "did",
+          "hint": "Inversion med 'little' i preteritum.",
+          "explanation": "'Little did he know' – fast uttryck med inversion och did."
+        },
+        {
+          "id": "hog-g13-7",
+          "type": "multiple-choice",
+          "question": "'I don't like coffee.' 'Neither ___ I.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "am"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Neither do I' = Jag heller inte. Agreement i presens med I."
+        },
+        {
+          "id": "hog-g13-8",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She doesn't exercise, but she ___ eat healthily.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Betoning i tredje person presens: she DOES eat healthily."
+        },
+        {
+          "id": "hog-g13-9",
+          "type": "fill-in-blank",
+          "sentence": "Not only ___ he speak French, he also speaks German.",
+          "answer": "does",
+          "hint": "Inversion med 'not only' i presens, tredje person.",
+          "explanation": "'Not only does he...' – inversion med does efter 'not only'."
+        },
+        {
+          "id": "hog-g13-10",
+          "type": "multiple-choice",
+          "question": "'Did she finish the project?' → 'Yes, she ___.'",
+          "options": [
+            "did",
+            "does",
+            "do",
+            "was"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kortsvar i preteritum: Yes, she did."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"DO betonar, DID betonade – 'She DOES care!' – tro på det sade!\"",
+        "Do/does/did används som stödverb i frågor, negationer OCH för betoning (emphatic).",
+        "Betoning: I DO like it! She DOES know! He DID call you! (för att understryka att det är sant)",
+        "Frågeinversion: Rarely does she complain. Never did he give up. (negativt adverbial → inversion)",
+        "Exempel: Do you ever doubt yourself? – I do doubt myself sometimes, but I do believe in hard work. ✔",
+        "Tips: Did + grundform för betoning i dåtid: 'She said she didn't, but she DID go.' ✔"
+      ]
+    },
+    {
+      "id": "hog-g14-a-an",
+      "title": "A / An – Avancerat",
+      "description": "Svåra fall med obestämd artikel och när man utelämnar artikeln.",
+      "icon": "🔡",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g14-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He is ___ honest politician.' (sällsynt variant!)",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Honest' → H är tyst, börjar med vokalljudet 'o' → an honest politician."
+        },
+        {
+          "id": "hog-g14-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ MBA degree'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'MBA' uttalas 'em-bee-ay' – börjar med vokalljudet 'em' → an MBA degree."
+        },
+        {
+          "id": "hog-g14-3",
+          "type": "fill-in-blank",
+          "sentence": "She had ___ idea that changed everything.",
+          "answer": "an",
+          "hint": "Vilket ljud börjar 'idea' med?",
+          "explanation": "'Idea' börjar med vokalljudet 'I' → an idea."
+        },
+        {
+          "id": "hog-g14-4",
+          "type": "multiple-choice",
+          "question": "'He became ___ MP after years of work.' Välj rätt:",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'MP' (Member of Parliament) uttalas 'em-pee' → börjar med vokalljudet 'em' → an MP."
+        },
+        {
+          "id": "hog-g14-5",
+          "type": "multiple-choice",
+          "question": "'___ unique opportunity' – välj rätt:",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Unique' uttalas 'yoo-neek' – börjar med konsonantljudet Y → a unique opportunity."
+        },
+        {
+          "id": "hog-g14-6",
+          "type": "multiple-choice",
+          "question": "När använder man INGEN artikel? 'She goes to ___ hospital every day (som sjuksköterska).'",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "– (ingen artikel)"
+          ],
+          "correctIndex": 3,
+          "explanation": "När man talar om institutioner i sin 'funktion' (hospital = för att jobba), utelämnas artikeln i brittisk engelska."
+        },
+        {
+          "id": "hog-g14-7",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ European who speaks perfect English.",
+          "answer": "a",
+          "hint": "Vilket ljud börjar 'European' med?",
+          "explanation": "'European' uttalas 'yoo-ruh-pee-un' → konsonantljudet Y → a European."
+        },
+        {
+          "id": "hog-g14-8",
+          "type": "multiple-choice",
+          "question": "'She was ___ first to arrive.' Välj rätt:",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "–"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'first' (ordningstal, superlativ) → the. She was the first to arrive."
+        },
+        {
+          "id": "hog-g14-9",
+          "type": "multiple-choice",
+          "question": "'___ dog is man's best friend.' (generellt påstående) Välj rätt:",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "–"
+          ],
+          "correctIndex": 0,
+          "explanation": "Generellt påstående om en art → A dog is man's best friend. (alternativt 'Dogs are...')"
+        },
+        {
+          "id": "hog-g14-10",
+          "type": "multiple-choice",
+          "question": "'___ Nile is the longest river in Africa.' Välj rätt:",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "–"
+          ],
+          "correctIndex": 2,
+          "explanation": "Floder, hav, bergskedjor → the. The Nile."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Vokalljudet styr – AN ger sig till känna! H tyst som i 'hour'? AN får ränna!\"",
+        "A/an styrs av UTTALET av nästa ord – inte stavningen.",
+        "Tyst h → an: an hour, an honest politician, an honour.",
+        "U som 'ju' → a: a university, a unique opportunity, a union.",
+        "Exempel: It was an honour to meet her. ✔  He studied at a European university. ✔  An MP spoke today. ✔",
+        "Tips: Förkortningar – kolla hur du uttalar första bokstaven: an MP (em-pi), a CEO (si-i-o) ✔"
+      ]
+    },
+    {
+      "id": "hog-g15-be-verb",
+      "title": "Is / Am / Are – Svåra fall",
+      "description": "Komplexa fall med be-verbet: kongruens, passiv och konstruktioner.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g15-1",
+          "type": "multiple-choice",
+          "question": "'The number of students ___ increasing.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "'The number of' tar singular → is. The number of students is increasing."
+        },
+        {
+          "id": "hog-g15-2",
+          "type": "multiple-choice",
+          "question": "'A number of problems ___ been identified.' Välj rätt:",
+          "options": [
+            "is",
+            "am",
+            "be",
+            "are"
+          ],
+          "correctIndex": 3,
+          "explanation": "'A number of' tar plural → are. A number of problems are..."
+        },
+        {
+          "id": "hog-g15-3",
+          "type": "fill-in-blank",
+          "sentence": "Neither the students nor the teacher ___ ready.",
+          "answer": "is",
+          "hint": "'Neither...nor': närmaste substantiv styr.",
+          "explanation": "Med 'neither...nor' styr det närmaste substantivet (teacher = singular) → is."
+        },
+        {
+          "id": "hog-g15-4",
+          "type": "multiple-choice",
+          "question": "'The rich ___ not always happy.' Välj rätt:",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "'The + adjektiv' som substantivfras (the rich = rika människor) → plural → are."
+        },
+        {
+          "id": "hog-g15-5",
+          "type": "multiple-choice",
+          "question": "'Each of the answers ___ correct.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Each of' tar alltid singular → is. Each of the answers is correct."
+        },
+        {
+          "id": "hog-g15-6",
+          "type": "fill-in-blank",
+          "sentence": "There ___ neither milk nor eggs in the fridge.",
+          "answer": "is",
+          "hint": "'Neither...nor' med uncountable: milk styr.",
+          "explanation": "'Neither milk nor eggs' – närmaste substantiv (eggs) är plural → are. OBS: Accepteras båda."
+        },
+        {
+          "id": "hog-g15-7",
+          "type": "multiple-choice",
+          "question": "'The police ___ investigating the matter.' Välj rätt:",
+          "options": [
+            "is",
+            "am",
+            "be",
+            "are"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Police' är kollektivt och tas alltid som plural i engelska → are."
+        },
+        {
+          "id": "hog-g15-8",
+          "type": "multiple-choice",
+          "question": "'Twenty dollars ___ a lot for a child.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "Belopp som en enhet → singular → is. Twenty dollars is a lot."
+        },
+        {
+          "id": "hog-g15-9",
+          "type": "fill-in-blank",
+          "sentence": "Not all students ___ the same.",
+          "answer": "are",
+          "hint": "Plural subjekt, ingen specialregel.",
+          "explanation": "'Students' = plural → are."
+        },
+        {
+          "id": "hog-g15-10",
+          "type": "multiple-choice",
+          "question": "'The majority of the population ___ in favour.' Välj rätt:",
+          "options": [
+            "am",
+            "be",
+            "are",
+            "is"
+          ],
+          "correctIndex": 2,
+          "explanation": "'The majority of' + plural noun → plural → are."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"The number IS, a number ARE – kollektiv? Det beror på hur de går!\"",
+        "Be-verbet i svåra fall: kongruens med komplexa subjekt.",
+        "The number of + plural → singular: The number of students is increasing. ✔",
+        "A number of + plural → plural: A number of problems are unsolved. ✔",
+        "Kollektiv: 'The team is winning.' (enhet) vs 'The team are arguing.' (individer – brittisk engelska) ✔",
+        "Exempel: Neither of them is wrong. ✔  Each of the answers is correct. ✔  The news is shocking. ✔"
+      ]
+    },
+    {
+      "id": "hog-g16-have-has",
+      "title": "Have / Has – Avancerat",
+      "description": "Have/has i idiom, kausativa konstruktioner och svåra fall.",
+      "icon": "✋",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g16-1",
+          "type": "multiple-choice",
+          "question": "'I ___ my car repaired yesterday.' Välj rätt (kausativ):",
+          "options": [
+            "made",
+            "had",
+            "did",
+            "let"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kausativ konstruktion: have + objekt + past participle. I had my car repaired."
+        },
+        {
+          "id": "hog-g16-2",
+          "type": "multiple-choice",
+          "question": "'She ___ her hair cut every month.' Välj rätt:",
+          "options": [
+            "does",
+            "makes",
+            "has",
+            "lets"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kausativ: have + objekt + past participle. She has her hair cut."
+        },
+        {
+          "id": "hog-g16-3",
+          "type": "fill-in-blank",
+          "sentence": "We ___ no choice but to leave.",
+          "answer": "had",
+          "hint": "Preteritum av have.",
+          "explanation": "Had no choice = hade inget val. Korrekt preteritumform."
+        },
+        {
+          "id": "hog-g16-4",
+          "type": "multiple-choice",
+          "question": "'Do you ___ any objections?' – formellt",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Do you have' = formell frågeform. You → have."
+        },
+        {
+          "id": "hog-g16-5",
+          "type": "multiple-choice",
+          "question": "'He ___ difficulty understanding the instructions.' Välj rätt:",
+          "options": [
+            "have",
+            "had",
+            "is",
+            "does"
+          ],
+          "correctIndex": 1,
+          "explanation": "Preteritum + singular: He had difficulty understanding."
+        },
+        {
+          "id": "hog-g16-6",
+          "type": "fill-in-blank",
+          "sentence": "They ___ a great time at the concert.",
+          "answer": "had",
+          "hint": "Preteritum av have.",
+          "explanation": "Had a great time = hade det jättebra. Preteritum: had."
+        },
+        {
+          "id": "hog-g16-7",
+          "type": "multiple-choice",
+          "question": "'She ___ it in for me ever since I got the promotion.' (idiom)",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "is"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Have it in for someone' = ha ett horn i sidan till ngn. She has it in for me."
+        },
+        {
+          "id": "hog-g16-8",
+          "type": "multiple-choice",
+          "question": "'I ___ to admit, this is impressive.' Välj rätt (modal-liknande):",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Have to' = måste. Med I → have to."
+        },
+        {
+          "id": "hog-g16-9",
+          "type": "fill-in-blank",
+          "sentence": "The company ___ its headquarters moved to Stockholm.",
+          "answer": "had",
+          "hint": "Kausativ konstruktion, preteritum.",
+          "explanation": "Kausativ: had + objekt + past participle. The company had its headquarters moved."
+        },
+        {
+          "id": "hog-g16-10",
+          "type": "multiple-choice",
+          "question": "'Do you ___ the time?' – informellt",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "Do you have the time? = Vet du vad klockan är? You → have."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"HAD it done – kausativ fint! Have something done – låt någon annan grina!\"",
+        "Kausativ konstruktion: have/get + objekt + past participle (= låta/få någon göra något).",
+        "Have something done: I had my hair cut. She had her car repaired. ✔",
+        "Get something done (mer informellt): I need to get this fixed. ✔",
+        "Presens perfekt: have/has + past participle → She has lived here for years. ✔",
+        "Exempel: We had the house painted last summer. ✔  Have you ever had your phone stolen? ✔"
+      ]
+    },
+    {
+      "id": "hog-g17-demonstratives",
+      "title": "This / That / These / Those – Avancerat",
+      "description": "Pekord i avancerade konstruktioner och idiom.",
+      "icon": "👆",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g17-1",
+          "type": "multiple-choice",
+          "question": "'___ who work hard tend to succeed.' Välj rätt:",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those who' = de som. Those who work hard tend to succeed."
+        },
+        {
+          "id": "hog-g17-2",
+          "type": "multiple-choice",
+          "question": "'The situation is more complex than ___ described in the report.' Välj rätt:",
+          "options": [
+            "this",
+            "these",
+            "that",
+            "those"
+          ],
+          "correctIndex": 2,
+          "explanation": "Syftar tillbaka på en situation (singular, nämnd): that. More complex than that described..."
+        },
+        {
+          "id": "hog-g17-3",
+          "type": "fill-in-blank",
+          "sentence": "___ said, let's move on to the next topic.",
+          "answer": "That",
+          "hint": "Fast uttryck: '___  said'",
+          "explanation": "'That said' = Med det sagt. Fast adverbiellt uttryck."
+        },
+        {
+          "id": "hog-g17-4",
+          "type": "multiple-choice",
+          "question": "'At ___ time, nobody knew what would happen.' Välj rätt:",
+          "options": [
+            "this",
+            "that",
+            "these",
+            "those"
+          ],
+          "correctIndex": 1,
+          "explanation": "Syftar på en tidpunkt i förfluten tid → that. At that time..."
+        },
+        {
+          "id": "hog-g17-5",
+          "type": "multiple-choice",
+          "question": "'___ are the times that try men's souls.' (klassiskt citat)",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 2,
+          "explanation": "'These are the times' – nuvarande tid, plural → these."
+        },
+        {
+          "id": "hog-g17-6",
+          "type": "fill-in-blank",
+          "sentence": "___ is not to say that the plan is perfect.",
+          "answer": "That",
+          "hint": "Fast idiomatiskt uttryck.",
+          "explanation": "'That is not to say' = Det betyder inte att... Fast uttryck."
+        },
+        {
+          "id": "hog-g17-7",
+          "type": "multiple-choice",
+          "question": "'Her early works differ greatly from ___ of her later period.' Välj rätt:",
+          "options": [
+            "this",
+            "these",
+            "that",
+            "those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those of her later period' – plural, syftar på 'works'. Those = de (verk)."
+        },
+        {
+          "id": "hog-g17-8",
+          "type": "multiple-choice",
+          "question": "'___ being said, I still think we should try.' Välj rätt:",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 1,
+          "explanation": "'That being said' = Med det sagt. Fast uttryck."
+        },
+        {
+          "id": "hog-g17-9",
+          "type": "fill-in-blank",
+          "sentence": "In ___ days, people rarely travelled abroad.",
+          "answer": "those",
+          "hint": "Pratar om gamla tider, plural.",
+          "explanation": "'In those days' = på den tiden. Fast uttryck för förfluten tid."
+        },
+        {
+          "id": "hog-g17-10",
+          "type": "multiple-choice",
+          "question": "'The results of the experiment are consistent with ___ of previous studies.' Välj rätt:",
+          "options": [
+            "this",
+            "that",
+            "these",
+            "those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those of previous studies' – plural (results). Syftar på plural noun."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Those WHO gör meningar fina – this/that i text bygger stilen din-a!\"",
+        "Pekorden används idiomatiskt och i mer komplexa sammanhang på högstadienivå.",
+        "Those who / Those of us who: Those who work hard tend to succeed. ✔",
+        "That i relativsatser: The book that I read was fascinating. ✔",
+        "This/that för att referera till tidigare sagt: That's a good point. This is why it matters. ✔",
+        "Exempel: Those of you who are ready may begin. ✔  This suggests that the theory is correct. ✔"
+      ]
+    },
+    {
+      "id": "hog-g18-there-is-are",
+      "title": "There is / There are – Avancerat",
+      "description": "Komplex kongruens, formella konstruktioner och there-satser.",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g18-1",
+          "type": "multiple-choice",
+          "question": "'There ___ a number of issues to address.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 0,
+          "explanation": "'A number of issues' (plural intention) → are. There are a number of issues."
+        },
+        {
+          "id": "hog-g18-2",
+          "type": "multiple-choice",
+          "question": "'There ___ no evidence to support this claim.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Evidence' är icke-räknebart → singular → is. There is no evidence."
+        },
+        {
+          "id": "hog-g18-3",
+          "type": "fill-in-blank",
+          "sentence": "There ___ neither time nor resources available.",
+          "answer": "is",
+          "hint": "'Neither...nor': närmaste substantiv (resources = plural). OBS: grammatiskt omstritt.",
+          "explanation": "Med 'neither...nor' styr närmaste substantiv. Resources = plural → are. Men 'neither time nor resources' → formellt is (time styr) accepteras också."
+        },
+        {
+          "id": "hog-g18-4",
+          "type": "multiple-choice",
+          "question": "'There ___ said to be ancient ruins beneath the city.' Välj rätt:",
+          "options": [
+            "are",
+            "is",
+            "am",
+            "be"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Ruins' = plural → are. There are said to be ancient ruins..."
+        },
+        {
+          "id": "hog-g18-5",
+          "type": "multiple-choice",
+          "question": "Formellt: '___ any objection to this proposal?' Välj rätt:",
+          "options": [
+            "Are there",
+            "Is there",
+            "There are",
+            "There is"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Any objection' = singular → Is there any objection?"
+        },
+        {
+          "id": "hog-g18-6",
+          "type": "fill-in-blank",
+          "sentence": "There ___ countless stars in the universe.",
+          "answer": "are",
+          "hint": "Oräkneliga stjärnor = plural.",
+          "explanation": "'Countless stars' = plural → are. There are countless stars."
+        },
+        {
+          "id": "hog-g18-7",
+          "type": "multiple-choice",
+          "question": "'There ___ to be a misunderstanding.' (verkar vara) Välj rätt:",
+          "options": [
+            "seems",
+            "seem",
+            "appears",
+            "is"
+          ],
+          "correctIndex": 0,
+          "explanation": "'There seems to be' = Det verkar finnas. Singular → seems."
+        },
+        {
+          "id": "hog-g18-8",
+          "type": "multiple-choice",
+          "question": "'There is no smoke without fire.' Denna mening innebär:",
+          "options": [
+            "Det finns ingen rök utan eld (bokstavligt)",
+            "Rök och eld är orelaterade",
+            "Där det är rök finns det eld (idiom: rykten har grund)",
+            "Det är farligt att röka"
+          ],
+          "correctIndex": 2,
+          "explanation": "'No smoke without fire' = idiom som betyder att rykten ofta har en grund."
+        },
+        {
+          "id": "hog-g18-9",
+          "type": "fill-in-blank",
+          "sentence": "There ___ been significant progress in this field.",
+          "answer": "has",
+          "hint": "Present perfect med there.",
+          "explanation": "'There has been' = det har skett. Singular (progress) → has."
+        },
+        {
+          "id": "hog-g18-10",
+          "type": "multiple-choice",
+          "question": "'There ___ many occasions when I doubted myself.' (preteritum) Välj rätt:",
+          "options": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctIndex": 3,
+          "explanation": "Preteritum plural (many occasions) → were. There were many occasions..."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"A number ARE – the number IS! There's a trick att lära i detta vis!\"",
+        "There is/are i avancerade konstruktioner – kongruens och formellt språk.",
+        "A number of → are: There are a number of issues to address. ✔",
+        "The number of → is: There is a large number of applicants. ✔",
+        "Formellt: There exists / There remain: There remains much to be done. ✔",
+        "Exempel: There have been several attempts. ✔  There seems to be a misunderstanding. ✔"
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "hog-r1-social-media",
+      "title": "The Impact of Social Media",
+      "description": "Sociala mediers påverkan på ungdomar — en diskuterande text.",
+      "icon": "📱",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "text": "Social media platforms such as Instagram, TikTok, and Snapchat have become an integral part of modern teenage life. According to recent surveys, teenagers spend an average of four to six hours per day on these platforms. This raises important questions about both the benefits and drawbacks of social media.\n\nOn the positive side, social media enables young people to stay connected with friends and family, particularly those who live far away. It also provides a space for creative expression, allowing users to share art, music, and writing with a global audience. Furthermore, social media can be a powerful tool for raising awareness about social issues, as seen in various youth-led movements.\n\nHowever, there are serious concerns about the negative effects. Research suggests that excessive use of social media is linked to increased levels of anxiety and depression, particularly among girls. The constant comparison with carefully edited images can damage self-esteem. Additionally, cyberbullying remains a significant problem, with many young people experiencing harassment online.\n\nPsychologists recommend finding a healthy balance. Setting time limits, taking regular breaks, and focusing on positive, meaningful interactions are all strategies that can help. The key is not to avoid social media entirely, but to use it mindfully.",
+      "questions": [
+        {
+          "id": "hog-r1-q1",
+          "type": "on-the-line",
+          "question": "How many hours per day do teenagers spend on social media, according to surveys?",
+          "options": [
+            "Two to three hours",
+            "Three to five hours",
+            "Four to six hours",
+            "Five to eight hours"
+          ],
+          "correctIndex": 2,
+          "explanation": "The text states 'teenagers spend an average of four to six hours per day on these platforms'."
+        },
+        {
+          "id": "hog-r1-q2",
+          "type": "between-the-lines",
+          "question": "Why does the text mention 'carefully edited images' when discussing self-esteem?",
+          "options": [
+            "To show that photography is a popular hobby.",
+            "To suggest that people on social media only show perfect, unrealistic images, leading to unfair comparisons.",
+            "To prove that editing skills are important to learn.",
+            "To argue that all social media images are fake."
+          ],
+          "correctIndex": 1,
+          "explanation": "The text implies that people compare themselves to edited (not real) images, which creates an unfair standard and can make people feel inferior."
+        },
+        {
+          "id": "hog-r1-q3",
+          "type": "beyond-the-lines",
+          "question": "What is the author's overall position on social media?",
+          "options": [
+            "Social media is entirely harmful and should be banned for teenagers.",
+            "Social media is only positive if used for creative expression.",
+            "Social media has both benefits and drawbacks and should be used mindfully.",
+            "Research on social media is unreliable and should be ignored."
+          ],
+          "correctIndex": 2,
+          "explanation": "The author presents both sides and ends with advice on using it 'mindfully' — a balanced, nuanced view."
+        }
+      ],
+      "helpText": [
+        "Det här är en diskuterande text – den presenterar argument för OCH emot.",
+        "Läs för att förstå: Vad är textens huvudbudskap? Vilka argument ges?",
+        "'Mellan raderna'-frågor kräver slutledning – vad antyder och IMPLICERAR texten?",
+        "Tips: Markera nyckelmeningar som sammanfattar varje stycke – de innehåller ofta svar."
+      ]
+    },
+    {
+      "id": "hog-r2-climate",
+      "title": "Climate Change: What Can We Do?",
+      "description": "En argumenterande text om klimatförändringar och individens roll.",
+      "icon": "🌍",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "text": "Climate change is one of the most pressing issues of our time. Global temperatures have risen by approximately 1.1 degrees Celsius since pre-industrial times, leading to more frequent extreme weather events, rising sea levels, and loss of biodiversity.\n\nScientists agree that the primary cause is the emission of greenhouse gases — particularly carbon dioxide from burning fossil fuels such as coal, oil, and natural gas. While governments and corporations bear the greatest responsibility for tackling this crisis, individuals can also make a meaningful difference.\n\nOne of the most impactful personal choices is diet. Studies show that reducing meat consumption — particularly beef — can significantly lower one's carbon footprint, as livestock farming produces large amounts of methane, a powerful greenhouse gas. Choosing plant-based meals even two or three days a week can make a real difference.\n\nTransportation is another key area. Flying and driving private cars are among the most carbon-intensive activities. Choosing public transport, cycling, or walking when possible can substantially reduce emissions.\n\nCritics argue that individual actions are too small to matter when corporations produce the vast majority of global emissions. This is a valid point. However, consumer choices collectively influence corporate behaviour, and civic engagement — voting, protesting, contacting representatives — can drive systemic change.\n\nThe climate crisis requires action at every level. Individual responsibility and systemic change are not mutually exclusive — both are essential.",
+      "questions": [
+        {
+          "id": "hog-r2-q1",
+          "type": "on-the-line",
+          "question": "What does the text identify as the primary cause of climate change?",
+          "options": [
+            "Deforestation",
+            "Individual consumer choices",
+            "Emission of greenhouse gases from fossil fuels",
+            "Natural climate cycles"
+          ],
+          "correctIndex": 2,
+          "explanation": "The text says 'the primary cause is the emission of greenhouse gases — particularly carbon dioxide from burning fossil fuels'."
+        },
+        {
+          "id": "hog-r2-q2",
+          "type": "between-the-lines",
+          "question": "Why does the author mention diet changes 'even two or three days a week'?",
+          "options": [
+            "To suggest that becoming fully vegan is the only solution.",
+            "To make the suggestion feel achievable and not overwhelming.",
+            "To prove that diet is more important than transportation.",
+            "To encourage people to stop eating meat entirely."
+          ],
+          "correctIndex": 1,
+          "explanation": "By saying 'even two or three days a week', the author makes the suggestion feel small and manageable — not an extreme demand."
+        },
+        {
+          "id": "hog-r2-q3",
+          "type": "beyond-the-lines",
+          "question": "What does 'Individual responsibility and systemic change are not mutually exclusive' mean?",
+          "options": [
+            "Individuals and systems cannot work at the same time.",
+            "Both personal actions and large-scale policy changes are necessary and can work together.",
+            "Systemic change is more important than individual actions.",
+            "Individual actions are more important than systemic change."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Not mutually exclusive' means both can exist at the same time. We need both personal action and systemic change simultaneously."
+        }
+      ],
+      "helpText": [
+        "Det här är en argumenterande text – identifiera avsändarens STÅNDPUNKT och argument.",
+        "Texten kan ha en tydlig vinkel – fråga dig: vad vill författaren att du ska tänka?",
+        "'Bortom raderna'-frågor kräver att du reflekterar och kopplar till egna erfarenheter.",
+        "Tips: Läs inledning och avslutning extra noga – där brukar huvudbudskapet finnas."
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "hog-sp1-argumentation",
+      "title": "Argumentation",
+      "description": "Stava ord för argumentation och diskussion på engelska.",
+      "icon": "🗣️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp1-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('bevis/belägg')",
+          "options": [
+            "evidance",
+            "evidensce",
+            "evidince",
+            "evidence"
+          ],
+          "correctIndex": 3,
+          "explanation": "Evidence stavas E-V-I-D-E-N-C-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp1-2",
+          "type": "fill-in-blank",
+          "sentence": "Consider the problem from another ___. (perspektiv)",
+          "answer": "perspective",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Perspective = perspektiv. Stavas P-E-R-S-P-E-C-T-I-V-E."
+        },
+        {
+          "id": "hog-sp1-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('konsekvens')",
+          "options": [
+            "consequense",
+            "consequance",
+            "consiquence",
+            "consequence"
+          ],
+          "correctIndex": 3,
+          "explanation": "Consequence stavas C-O-N-S-E-Q-U-E-N-C-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp1-4",
+          "type": "fill-in-blank",
+          "sentence": "A ___ of the plan is that it costs too much. (nackdel)",
+          "answer": "disadvantage",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Disadvantage = nackdel. Stavas D-I-S-A-D-V-A-N-T-A-G-E."
+        },
+        {
+          "id": "hog-sp1-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('fördel')",
+          "options": [
+            "advantige",
+            "advantaje",
+            "advantedge",
+            "advantage"
+          ],
+          "correctIndex": 3,
+          "explanation": "Advantage stavas A-D-V-A-N-T-A-G-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        }
+      ],
+      "helpText": [
+        "Argumentationsord används när du diskuterar, debatterar och argumenterar på engelska.",
+        "Centrala ord: argument, evidence, therefore, however, moreover, claim, support, oppose.",
+        "Tips: Lär dig orden i sammanhang – tänk på vilken typ av text de hör hemma i."
+      ]
+    },
+    {
+      "id": "hog-sp2-samhalle",
+      "title": "Samhälle",
+      "description": "Stava samhälls- och kulturord på engelska.",
+      "icon": "🌍",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp2-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('miljö')",
+          "options": [
+            "enviroment",
+            "envirnoment",
+            "enviorment",
+            "environment"
+          ],
+          "correctIndex": 3,
+          "explanation": "Environment stavas E-N-V-I-R-O-N-M-E-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp2-2",
+          "type": "fill-in-blank",
+          "sentence": "It is our ___ to take care of the planet. (ansvar)",
+          "answer": "responsibility",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Responsibility = ansvar. Stavas R-E-S-P-O-N-S-I-B-I-L-I-T-Y."
+        },
+        {
+          "id": "hog-sp2-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('teknologi')",
+          "options": [
+            "tecnology",
+            "technolgy",
+            "technolagy",
+            "technology"
+          ],
+          "correctIndex": 3,
+          "explanation": "Technology stavas T-E-C-H-N-O-L-O-G-Y.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp2-4",
+          "type": "fill-in-blank",
+          "sentence": "Good ___ is essential in teamwork. (kommunikation)",
+          "answer": "communication",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Communication = kommunikation. Stavas C-O-M-M-U-N-I-C-A-T-I-O-N."
+        },
+        {
+          "id": "hog-sp2-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('regering')",
+          "options": [
+            "goverment",
+            "governement",
+            "governmant",
+            "government"
+          ],
+          "correctIndex": 3,
+          "explanation": "Government stavas G-O-V-E-R-N-M-E-N-T.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        }
+      ],
+      "helpText": [
+        "Samhälls- och kulturord är viktiga för att kunna diskutera aktuella ämnen på engelska.",
+        "Centrala ord: democracy, equality, environment, government, culture, society, tradition.",
+        "Tips: Koppla varje ord till ett ämne du känner till – det hjälper dig komma ihåg stavningen."
+      ]
+    },
+    {
+      "id": "hog-sp3-oregelbundna-verb",
+      "title": "Oregelbundna verb",
+      "description": "Stava oregelbundna verb i presens och preteritum.",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp3-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'become')",
+          "options": [
+            "becam",
+            "becaame",
+            "becomed",
+            "became"
+          ],
+          "correctIndex": 3,
+          "explanation": "Became stavas B-E-C-A-M-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp3-2",
+          "type": "fill-in-blank",
+          "sentence": "He ___ his arm when he fell off the bike. (bröt)",
+          "answer": "broke",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Broke = bröt. Stavas B-R-O-K-E."
+        },
+        {
+          "id": "hog-sp3-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'choose')",
+          "options": [
+            "chosed",
+            "choosed",
+            "choze",
+            "chose"
+          ],
+          "correctIndex": 3,
+          "explanation": "Chose stavas C-H-O-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp3-4",
+          "type": "fill-in-blank",
+          "sentence": "The plant ___ quickly in the sunlight. (växte)",
+          "answer": "grew",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Grew = växte. Stavas G-R-E-W."
+        },
+        {
+          "id": "hog-sp3-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? (dåtid av 'speak')",
+          "options": [
+            "spoked",
+            "speaked",
+            "spoak",
+            "spoke"
+          ],
+          "correctIndex": 3,
+          "explanation": "Spoke stavas S-P-O-K-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        }
+      ],
+      "helpText": [
+        "Oregelbundna verb måste du kunna i alla tre former: infinitiv – preteritum – perfektparticip.",
+        "Vanliga tripplar: speak/spoke/spoken, write/wrote/written, break/broke/broken, know/knew/known.",
+        "Tips: Lär dig fem tripplar åt gången. Upprepa dem högt: 'speak – spoke – spoken'."
+      ]
+    },
+    {
+      "id": "hog-sp4-akademiska-ord",
+      "title": "Akademiska ord",
+      "description": "Stava viktiga akademiska ord för uppsatsskrivning.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp4-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('utvärdera')",
+          "options": [
+            "evalulate",
+            "evalurate",
+            "evaulate",
+            "evaluate"
+          ],
+          "correctIndex": 3,
+          "explanation": "Evaluate stavas E-V-A-L-U-A-T-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp4-2",
+          "type": "fill-in-blank",
+          "sentence": "Your essay needs a clear ___ at the start. (inledning)",
+          "answer": "introduction",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Introduction = inledning. Stavas I-N-T-R-O-D-U-C-T-I-O-N."
+        },
+        {
+          "id": "hog-sp4-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('stycke/paragraf')",
+          "options": [
+            "paragragh",
+            "paragraf",
+            "parograph",
+            "paragraph"
+          ],
+          "correctIndex": 3,
+          "explanation": "Paragraph stavas P-A-R-A-G-R-A-P-H.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp4-4",
+          "type": "fill-in-blank",
+          "sentence": "Your essay should end with a strong ___. (slutsats)",
+          "answer": "conclusion",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Conclusion = slutsats. Stavas C-O-N-C-L-U-S-I-O-N."
+        },
+        {
+          "id": "hog-sp4-5",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('sammanfatta')",
+          "options": [
+            "sumarise",
+            "summerize",
+            "sumarize",
+            "summarise"
+          ],
+          "correctIndex": 3,
+          "explanation": "Summarise stavas S-U-M-M-A-R-I-S-E.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        }
+      ],
+      "helpText": [
+        "Akademiska ord (Academic Word List) förekommer i vetenskapliga texter och uppsatser.",
+        "Vanliga ord: analyse, significant, concept, establish, evidence, factor, individual, occur.",
+        "Tips: Dela upp långa ord: sig-ni-fi-cant. Stavningen följer ofta latinska eller franska mönster."
+      ]
+    },
+    {
+      "id": "hog-sp5-stavningsutmaningar",
+      "title": "Stavningsutmaningar",
+      "description": "Knepiga engelska ord som ofta stavas fel.",
+      "icon": "🧠",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "exercises": [
+        {
+          "id": "hog-sp5-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('genom')",
+          "options": [
+            "througt",
+            "threw",
+            "thruogh",
+            "through"
+          ],
+          "correctIndex": 3,
+          "explanation": "Through stavas T-H-R-O-U-G-H. Obs: 'threw' är dåtid av 'throw'.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp5-2",
+          "type": "fill-in-blank",
+          "sentence": "I have ___ friends to celebrate with. (tillräckligt många)",
+          "answer": "enough",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Enough stavas E-N-O-U-G-H."
+        },
+        {
+          "id": "hog-sp5-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('kunskap')",
+          "options": [
+            "knowlege",
+            "knowledg",
+            "knowladge",
+            "knowledge"
+          ],
+          "correctIndex": 3,
+          "explanation": "Knowledge stavas K-N-O-W-L-E-D-G-E. Obs: tyst K och W.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp5-4",
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt? ('nödvändig')",
+          "options": [
+            "neccessary",
+            "necesary",
+            "nessecary",
+            "necessary"
+          ],
+          "correctIndex": 3,
+          "explanation": "Necessary stavas N-E-C-E-S-S-A-R-Y. En C, dubbel S.",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga."
+        },
+        {
+          "id": "hog-sp5-5",
+          "type": "fill-in-blank",
+          "sentence": "Did you ___ my email? (ta emot/få)",
+          "answer": "receive",
+          "hint": "Tänk noggrant på grammatikregeln för denna fråga.",
+          "explanation": "Receive stavas R-E-C-E-I-V-E."
+        }
+      ],
+      "helpText": [
+        "Dessa ord stavas ofta fel – var extra uppmärksam på stumma bokstäver och ovanliga kombinationer!",
+        "Knep: 'necessary' – ett C, två S. 'beginning' – dubbelt N. 'separate' – tänk 'there is A rat in separate'.",
+        "Tips: Identifiera vilken del av ordet du brukar stava fel och fokusera extra på den."
+      ]
+    }
+  ],
+  "wordsearch": [
+    {
+      "id": "hog-ws1-grammar-terms",
+      "title": "Grammatiktermer",
+      "description": "Hitta engelska grammatiktermer i rutnätet.",
+      "icon": "📖",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "SUBJECT",
+          "clue": "Grammatikterm: subjekt"
+        },
+        {
+          "word": "OBJECT",
+          "clue": "Grammatikterm: objekt"
+        },
+        {
+          "word": "CLAUSE",
+          "clue": "Sats (with subject + verb)"
+        },
+        {
+          "word": "PASSIVE",
+          "clue": "Passiv form av verb"
+        },
+        {
+          "word": "PERFECT",
+          "clue": "Tempus: present ___"
+        },
+        {
+          "word": "MODAL",
+          "clue": "Hjälpverb (can, should, must)"
+        },
+        {
+          "word": "TENSE",
+          "clue": "Verbform för tid"
+        },
+        {
+          "word": "PHRASE",
+          "clue": "Ordgrupp utan subjekt+predikat"
+        },
+        {
+          "word": "PRONOUN",
+          "clue": "Ord som ersätter substantiv"
+        },
+        {
+          "word": "ADVERB",
+          "clue": "Beskriver verb eller adjektiv"
+        }
+      ]
+    },
+    {
+      "id": "hog-ws2-irregular-verbs",
+      "title": "Oregelbundna verb",
+      "description": "Hitta oregelbundna verbformer.",
+      "icon": "🔄",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "words": [
+        {
+          "word": "BOUGHT",
+          "clue": "Past form of 'buy'"
+        },
+        {
+          "word": "TAUGHT",
+          "clue": "Past form of 'teach'"
+        },
+        {
+          "word": "THOUGHT",
+          "clue": "Past form of 'think'"
+        },
+        {
+          "word": "CAUGHT",
+          "clue": "Past form of 'catch'"
+        },
+        {
+          "word": "BROUGHT",
+          "clue": "Past form of 'bring'"
+        },
+        {
+          "word": "WROTE",
+          "clue": "Past form of 'write'"
+        },
+        {
+          "word": "SPOKE",
+          "clue": "Past form of 'speak'"
+        },
+        {
+          "word": "CHOSE",
+          "clue": "Past form of 'choose'"
+        },
+        {
+          "word": "DROVE",
+          "clue": "Past form of 'drive'"
+        },
+        {
+          "word": "FROZE",
+          "clue": "Past form of 'freeze'"
+        }
+      ]
+    },
+    {
+      "id": "hog-ws3-environment",
+      "title": "Miljö och klimat",
+      "description": "Hitta viktiga ord om miljö och klimat på engelska.",
+      "icon": "🌱",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "words": [
+        {
+          "word": "POLLUTION",
+          "clue": "föroreningar"
+        },
+        {
+          "word": "CLIMATE",
+          "clue": "klimat"
+        },
+        {
+          "word": "RENEWABLE",
+          "clue": "förnybar (energi)"
+        },
+        {
+          "word": "RECYCLING",
+          "clue": "återvinning"
+        },
+        {
+          "word": "EXTINCTION",
+          "clue": "utrotning"
+        },
+        {
+          "word": "FOSSIL",
+          "clue": "fossil (bränsle)"
+        },
+        {
+          "word": "HABITAT",
+          "clue": "livsmiljö"
+        },
+        {
+          "word": "BIODIVERSITY",
+          "clue": "biologisk mångfald"
+        },
+        {
+          "word": "CARBON",
+          "clue": "kol(dioxid)"
+        },
+        {
+          "word": "DROUGHT",
+          "clue": "torka"
+        }
+      ]
+    },
+    {
+      "id": "hog-ws4-technology",
+      "title": "Teknik och samhälle",
+      "description": "Hitta ord om teknik och samhälle i ordsökningen.",
+      "icon": "💻",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "words": [
+        {
+          "word": "ARTIFICIAL",
+          "clue": "artificiell (intelligens)"
+        },
+        {
+          "word": "ALGORITHM",
+          "clue": "algoritm"
+        },
+        {
+          "word": "DATABASE",
+          "clue": "databas"
+        },
+        {
+          "word": "SOFTWARE",
+          "clue": "mjukvara"
+        },
+        {
+          "word": "NETWORK",
+          "clue": "nätverk"
+        },
+        {
+          "word": "DIGITAL",
+          "clue": "digital"
+        },
+        {
+          "word": "PRIVACY",
+          "clue": "integritet"
+        },
+        {
+          "word": "HACKING",
+          "clue": "hackning"
+        },
+        {
+          "word": "WIRELESS",
+          "clue": "trådlös"
+        },
+        {
+          "word": "STREAMING",
+          "clue": "streaming"
+        }
+      ]
+    }
+  ],
+  "crossword": [
+    {
+      "id": "hog-cw1-grammar",
+      "title": "Korsord: Grammatik",
+      "description": "Ord kopplade till engelska grammatik.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "A small furry pet (katt)",
+          "answer": "CAT",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Past tense of 'win'",
+          "answer": "WON",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "Farm animal giving milk",
+          "answer": "COW",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "In the past ('three days ___')",
+          "answer": "AGO",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "A type of metal / small can",
+          "answer": "TIN",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw2-vocabulary",
+      "title": "Korsord: Vokabulär",
+      "description": "Ord ur vardagsvokabulären.",
+      "icon": "📚",
+      "pointsRequired": 0,
+      "bonusPoints": 40,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "The star that gives us light and heat",
+          "answer": "SUN",
+          "row": 0,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Past tense of 'meet'",
+          "answer": "MET",
+          "row": 2,
+          "col": 1,
+          "direction": "across"
+        },
+        {
+          "number": 1,
+          "clue": "The total when you add numbers",
+          "answer": "SUM",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        },
+        {
+          "number": 3,
+          "clue": "To make use of something",
+          "answer": "USE",
+          "row": 0,
+          "col": 2,
+          "direction": "down"
+        },
+        {
+          "number": 4,
+          "clue": "A mesh for catching fish or for a goal",
+          "answer": "NET",
+          "row": 0,
+          "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw3",
+      "title": "Grammatik – avancerat",
+      "description": "Grammatikbegrepp och avancerade ord",
+      "icon": "📖",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Att hålla med",
+          "answer": "AGREE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En valv/båge",
+          "answer": "ARCH",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Tjäna/förtjäna",
+          "answer": "EARN",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Tom",
+          "answer": "EMPTY",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Riklig/rikligt",
+          "answer": "AMPLE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Gjord",
+          "answer": "MADE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Ordning/beställa",
+          "answer": "ORDER",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Grammatik",
+          "answer": "GRAMMAR",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw4",
+      "title": "Klimat och miljö",
+      "description": "Klimat- och miljöord",
+      "icon": "🌱",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Annars",
+          "answer": "ELSE",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Binda",
+          "answer": "BIND",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Dyka upp/framträda",
+          "answer": "EMERGE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Förtjäna",
+          "answer": "EARN",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Ovanpå",
+          "answer": "ATOP",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Nerv",
+          "answer": "NERVE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Klimat",
+          "answer": "CLIMATE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw5",
+      "title": "Samhälle och politik",
+      "description": "Samhälls- och politikord",
+      "icon": "🗳️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Åt sidan",
+          "answer": "ASIDE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Djärv/tydlig",
+          "answer": "BOLD",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Assistent",
+          "answer": "AIDE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Bäst",
+          "answer": "BEST",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Ovanpå",
+          "answer": "ATOP",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Ja (i votering)",
+          "answer": "AYE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Samhälle",
+          "answer": "SOCIETY",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw6",
+      "title": "Kultur och historia",
+      "description": "Kulturella och historiska ord",
+      "icon": "🎭",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Bygga",
+          "answer": "BUILD",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "En älg",
+          "answer": "ELK",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Atom",
+          "answer": "ATOM",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Bulle",
+          "answer": "BUN",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Malm",
+          "answer": "ORE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Att se",
+          "answer": "SEE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Kultur",
+          "answer": "CULTURE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw7",
+      "title": "Frihet och rättigheter",
+      "description": "Ord om frihet och rättigheter",
+      "icon": "✊",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Ofta",
+          "answer": "OFTEN",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Konst",
+          "answer": "ART",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Topp (på ett berg)",
+          "answer": "PEAK",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Utrustning/växel",
+          "answer": "GEAR",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Anpassa",
+          "answer": "ADAPT",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En låda",
+          "answer": "BOX",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Avge/sända",
+          "answer": "EMIT",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Frihet",
+          "answer": "FREEDOM",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    }
+  ]
+}

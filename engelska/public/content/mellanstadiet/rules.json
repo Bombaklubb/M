@@ -1,0 +1,51 @@
+{
+  "sections": [
+    {
+      "id": "ordklasser",
+      "title": "Ordklasser",
+      "icon": "🏷️",
+      "content": [
+        { "term": "Substantiv (Noun)", "explanation": "Namn på saker, djur, platser och idéer.", "examples": ["freedom, table, London, happiness"] },
+        { "term": "Verb", "explanation": "Handlingsord och tillståndsord.", "examples": ["run, think, is, has, can"] },
+        { "term": "Adjektiv (Adjective)", "explanation": "Beskriver substantiv.", "examples": ["tall, beautiful, fast, expensive"] },
+        { "term": "Adverb", "explanation": "Beskriver verb eller adjektiv. Bildas ofta med -ly.", "examples": ["quickly, slowly, very, often, always"] },
+        { "term": "Preposition", "explanation": "Visar relation i tid eller rum.", "examples": ["in, on, at, before, after, between"] },
+        { "term": "Konjunktion (Conjunction)", "explanation": "Binder ihop ord och meningar.", "examples": ["and, but, or, because, although, when"] }
+      ]
+    },
+    {
+      "id": "plural",
+      "title": "Pluralregler",
+      "icon": "📦",
+      "content": [
+        { "term": "Lägg till -s", "explanation": "Vanligaste regeln.", "examples": ["book → books", "chair → chairs"] },
+        { "term": "Slutar på -s/-x/-ch/-sh: lägg till -es", "explanation": "", "examples": ["bus → buses", "church → churches"] },
+        { "term": "Slutar på konsonant + y: byt till -ies", "explanation": "", "examples": ["city → cities", "baby → babies", "story → stories"] },
+        { "term": "Slutar på -f/-fe: byt till -ves", "explanation": "", "examples": ["leaf → leaves", "knife → knives", "wolf → wolves"] },
+        { "term": "Oregelbundna (lär dig utantill!)", "explanation": "", "examples": ["man → men", "child → children", "mouse → mice", "sheep → sheep", "fish → fish", "tooth → teeth"] }
+      ]
+    },
+    {
+      "id": "tempus",
+      "title": "Verbformer & Tider",
+      "icon": "⏱️",
+      "content": [
+        { "term": "Present Simple (Presens)", "explanation": "Vanor, fakta och sanningar. He/she/it + -s/-es.", "examples": ["I play tennis. She plays tennis every day."] },
+        { "term": "Past Simple (Preteritum)", "explanation": "Avslutade handlingar i det förflutna. Regelbundna: +ed.", "examples": ["I walked to school. She went home."] },
+        { "term": "Present Continuous (Pågående)", "explanation": "Pågående nu. be + verb-ing.", "examples": ["I am reading. They are playing football."] },
+        { "term": "Hjälpverb", "explanation": "Verb som hjälper andra verb.", "examples": ["can (kunna), should (borde), must (måste), will (ska)"] }
+      ]
+    },
+    {
+      "id": "ramsor",
+      "title": "Ramsor och knep",
+      "icon": "🎵",
+      "content": [
+        { "term": "I before E except after C", "explanation": "I skrivs före E utom efter C: believe, receive.", "examples": ["believe, achieve, receive, ceiling"] },
+        { "term": "He/she/it + -s i presens", "explanation": "Glöm inte -s (eller -es) när subjektet är he/she/it.", "examples": ["She plays, He watches, It goes"] },
+        { "term": "Oregelbundna verb — vanligaste", "explanation": "go→went, see→saw, do→did, have→had, come→came, take→took, give→gave, get→got", "examples": [] },
+        { "term": "Negation i presens", "explanation": "I/you/we/they + don't, He/she/it + doesn't", "examples": ["I don't know. She doesn't like it."] }
+      ]
+    }
+  ]
+}

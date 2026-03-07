@@ -19,15 +19,12 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-md w-full">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <BookLogo size={80} />
+            <BookLogo size={180} />
           </div>
-          <h1 className="text-4xl font-extrabold text-slate-800 mb-2">
-            Läsjakten
-          </h1>
           <p className="text-slate-500 text-lg">
             Din smarta läskompis
           </p>
@@ -39,14 +36,14 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               htmlFor="name"
               className="block text-base font-bold text-slate-700 mb-2"
             >
-              Ditt användarnamn i skolan
+              Vad heter du?
             </label>
             <input
               type="text"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Skriv ditt namn..."
+              placeholder=""
               className="w-full p-4 text-lg rounded-xl bg-white border-2 border-slate-200 focus:border-purple-500 focus:outline-none transition-colors"
               autoFocus
               maxLength={30}
@@ -82,7 +79,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
       </div>
 
       {/* Signatur */}
-      <div className="fixed bottom-2 right-3 text-xs text-purple-200 opacity-60 hover:opacity-100 transition-opacity">
+      <div className="fixed bottom-2 right-3 text-xs text-gray-400 opacity-60 hover:opacity-100 transition-opacity">
         Läsjakten av Martin Akdogan
       </div>
     </div>

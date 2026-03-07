@@ -64,7 +64,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <div className="animate-bounce">
-              <BookLogo size={64} />
+              <BookLogo size={120} />
             </div>
           </div>
           <p className="text-xl text-slate-600">Laddar texter...</p>
@@ -76,12 +76,9 @@ export const SetupView: React.FC<SetupViewProps> = ({
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       {/* Header */}
-      <div className="text-center mb-10">
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <BookLogo size={56} />
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 dark:text-white">
-            Läsjakten
-          </h1>
+      <div className="text-center mb-4">
+        <div className="flex items-center justify-center">
+          <BookLogo size={260} />
         </div>
       </div>
 

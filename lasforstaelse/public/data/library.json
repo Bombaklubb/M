@@ -24340,6 +24340,356 @@
     "word_count": 156
   },
   {
+    "id": "ak3-tema-021",
+    "title": "Marabou och den första chokladen",
+    "text": "Marabou är ett känt chokladmärke i Sverige. Företaget startade år 1916 i staden Sundbyberg. Namnet Marabou kommer från en fågel som heter maraboustork. Fågeln fanns i loggan under många år. När fabriken började göra choklad ville de skapa något som många skulle tycka om. De gjorde mjölkchoklad som var söt och mjuk. Snart blev chokladen populär i hela landet. Många familjer köpte den till helgen. Under åren har Marabou gjort flera olika smaker, som nötter och frukt. För att göra choklad behöver man kakao, socker och mjölk. Kakaon växer i varma länder långt från Sverige. När bönorna kommer hit rostas och blandas de innan chokladen formas i stora plattor. I dag säljs Marabou i många affärer, och många förknippar märket med fika och högtider.",
+    "grade": 3,
+    "category": "Historia",
+    "questions": [
+      {
+        "q": "När startade Marabou?",
+        "options": [
+          "År 1916",
+          "År 2016",
+          "År 1816",
+          "År 1950"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var låg den första fabriken?",
+        "options": [
+          "I Göteborg",
+          "I Sundbyberg",
+          "I Malmö",
+          "I Uppsala"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är marabou egentligen?",
+        "options": [
+          "En sorts kakaoböna",
+          "En stad i Sverige",
+          "En fågel",
+          "En maskin"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Var växer kakaon?",
+        "options": [
+          "I kalla berg",
+          "I svenska skogar",
+          "På isiga öar",
+          "I varma länder"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken sorts choklad blev först populär?",
+        "options": [
+          "Mjölkchoklad",
+          "Mörk bakchoklad",
+          "Vit choklad",
+          "Choklad med chili"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "När köpte många familjer choklad?",
+        "options": [
+          "Varje morgon",
+          "Till helgen",
+          "Bara på sommaren",
+          "Mitt i natten"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 158
+  },
+  {
+    "id": "ak3-tema-022",
+    "title": "Olika smaker av Marabou",
+    "text": "Marabou är mest känd för sin mjölkchoklad, men det finns många fler smaker. En del plattor innehåller hela nötter som ger ett krispigt ljud när man biter. Andra har russin eller små bitar av kex. Det finns också choklad med apelsinsmak eller karamell. Företaget provar ofta nya idéer för att se vad kunderna tycker om. Ibland gör de tillfälliga smaker som bara säljs under en kort tid. Många tycker om att dela en stor chokladkaka med familj eller vänner. Chokladen är uppdelad i rutor som är lätta att bryta loss. På förpackningen står det vilken smak det är och hur mycket den väger. Vissa människor föredrar mörkare choklad med mer kakao, medan andra vill ha den extra söt. Det finns alltså något för nästan alla smaker.",
+    "grade": 3,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad är Marabou mest känd för?",
+        "options": [
+          "Mjölkchoklad",
+          "Glass",
+          "Läsk",
+          "Bröd"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan ge ett krispigt ljud när man biter?",
+        "options": [
+          "Russin",
+          "Hela nötter",
+          "Apelsinjuice",
+          "Sockerlag"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad står på förpackningen?",
+        "options": [
+          "En saga",
+          "Ett telefonnummer",
+          "Vilken smak det är",
+          "Ett recept på soppa"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur är chokladen uppdelad?",
+        "options": [
+          "I små kulor",
+          "I långa remsor",
+          "I stora block utan linjer",
+          "I rutor som är lätta att bryta"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur länge säljs vissa tillfälliga smaker?",
+        "options": [
+          "Under en kort tid",
+          "I hundra år",
+          "Alltid",
+          "Bara en dag"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vem kan man dela en chokladkaka med?",
+        "options": [
+          "Bara lärare",
+          "Familj eller vänner",
+          "Endast bagare",
+          "Ingen alls"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 157
+  },
+  {
+    "id": "ak3-tema-023",
+    "title": "Hur choklad blir till",
+    "text": "För att göra Marabous choklad börjar allt med kakaobönor. De växer på träd i varma länder nära ekvatorn. Bönder plockar bönorna och låter dem torka i solen. Sedan skickas de med båt till fabriker i andra länder. När bönorna kommer fram rostas de så att smaken blir starkare. Efter rostningen mals bönorna till en massa. I massan blandas socker och ibland mjölkpulver. Blandningen rörs länge tills den blir mjuk och len. Därefter hälls chokladen i formar som ger den rätt form. Formarna kyls så att chokladen stelnar. Till sist packas plattorna i papper och skickas till affärer. Det är en lång resa från kakaoträd till butikshylla. Många människor arbetar tillsammans för att vi ska kunna köpa en färdig chokladkaka.",
+    "grade": 3,
+    "category": "Teknik",
+    "questions": [
+      {
+        "q": "Var växer kakaobönor?",
+        "options": [
+          "I varma länder nära ekvatorn",
+          "På kalla fjäll",
+          "I svenska parker",
+          "Under marken"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad händer med bönorna efter att de plockats?",
+        "options": [
+          "De fryses direkt",
+          "De får torka i solen",
+          "De kastas bort",
+          "De kokas i vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför rostas bönorna?",
+        "options": [
+          "För att bli större",
+          "För att ändra färg till blå",
+          "För att smaken ska bli starkare",
+          "För att de ska bli kalla"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör man efter att chokladen hällts i formar?",
+        "options": [
+          "Man målar den",
+          "Man äter den direkt",
+          "Man värmer den igen",
+          "Man kyler den så att den stelnar"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur transporteras bönorna ofta till fabriker?",
+        "options": [
+          "Med båt",
+          "Med cykel",
+          "Med luftballong",
+          "Till fots"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad blandas i massan för att göra mjölkchoklad?",
+        "options": [
+          "Salt och peppar",
+          "Socker och mjölkpulver",
+          "Ris och majs",
+          "Bara vatten"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 158
+  },
+  {
+    "id": "ak3-tema-024",
+    "title": "En dag på chokladfabriken",
+    "text": "På en chokladfabrik arbetar många olika personer. Amir kör en maskin som blandar chokladen tills den blir len. Sofia kontrollerar att förpackningarna inte har några fel. Chen arbetar med att laga maskiner om de går sönder. Fatima planerar hur lastbilarna ska köra ut varorna till affärerna. Alla måste samarbeta för att arbetet ska fungera. I fabriken är det viktigt med rena händer och skyddskläder. Det finns regler för hur man ska arbeta säkert. Maskinerna kan vara både stora och snabba. Därför får nya anställda utbildning innan de börjar. På rasten kan personalen sitta tillsammans och fika. Många tycker att det luktar gott av kakao i lokalerna. Trots det är det hårt arbete att göra choklad varje dag. Utan alla dessa personer skulle ingen choklad nå fram till butikerna.",
+    "grade": 3,
+    "category": "Samhälle",
+    "questions": [
+      {
+        "q": "Vad gör Amir på fabriken?",
+        "options": [
+          "Han kör en maskin som blandar choklad",
+          "Han säljer glass",
+          "Han planterar kakaoträd",
+          "Han målar förpackningar hemma"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför får nya anställda utbildning?",
+        "options": [
+          "För att lära sig baka tårtor",
+          "För att arbeta säkert med maskiner",
+          "För att resa utomlands",
+          "För att byta jobb direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är viktigt i fabriken?",
+        "options": [
+          "Höga skor",
+          "Mörka lampor",
+          "Rena händer och skyddskläder",
+          "Öppna fönster hela tiden"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gör Fatima?",
+        "options": [
+          "Bakar kakor",
+          "Kör buss",
+          "Designar loggor",
+          "Planerar hur varor körs till affärer"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur beskriver många doften i fabriken?",
+        "options": [
+          "Den luktar gott av kakao",
+          "Den luktar rök",
+          "Den luktar fisk",
+          "Den luktar bensin"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför måste personalen samarbeta?",
+        "options": [
+          "För att vinna en tävling",
+          "För att arbetet ska fungera",
+          "För att slippa raster",
+          "För att stänga fabriken"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 156
+  },
+  {
+    "id": "ak3-tema-025",
+    "title": "Choklad och högtider",
+    "text": "Många förknippar Marabou med olika högtider. Till jul kan choklad vara en del av julgodiset som står på bordet. Under påsken gömmer vuxna ibland chokladägg som barnen får leta efter. På födelsedagar kan en chokladkaka vara en enkel present. En del tar med choklad när de ska hälsa på någon. Det kan vara ett sätt att visa uppskattning. Samtidigt är det bra att inte äta för mycket sötsaker. Kroppen mår bäst av varierad mat och rörelse. Därför äter många choklad ibland, men inte varje dag. Reklam för choklad kan synas på tv och i affärer, särskilt före stora helger. Då vill företagen påminna kunderna om sina produkter. För många människor är choklad kopplad till gemenskap och glädje, men också till ansvar.",
+    "grade": 3,
+    "category": "Hälsa",
+    "questions": [
+      {
+        "q": "När gömmer vuxna ibland chokladägg?",
+        "options": [
+          "Under påsken",
+          "På midsommar",
+          "På nationaldagen",
+          "I augusti"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var kan reklam för choklad synas?",
+        "options": [
+          "Bara i skogen",
+          "På tv och i affärer",
+          "Endast i bibliotek",
+          "På sjukhusväggar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför ska man inte äta för mycket sötsaker?",
+        "options": [
+          "För att de är dyra",
+          "För att de smälter",
+          "För att kroppen mår bäst av varierad mat",
+          "För att de är svåra att öppna"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad kan choklad vara på en födelsedag?",
+        "options": [
+          "En sport",
+          "En läxa",
+          "En medicin",
+          "En enkel present"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan choklad visa när man hälsar på någon?",
+        "options": [
+          "Uppskattning",
+          "Ilska",
+          "Trötthet",
+          "Rädsla"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "När syns reklam extra ofta?",
+        "options": [
+          "Mitt i natten varje dag",
+          "Före stora helger",
+          "Bara på sommaren",
+          "När det snöar"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 156
+  },
+  {
     "id": "ak5-tema-016",
     "title": "Från grå låda till PS5",
     "text": "En lördag lånade Amir sin mammas gamla spelmagasin. Där stod en artikel om hur den första PlayStation kom 1994. Sony hade tidigare gjort delar till andras konsoler, men ville skapa en egen. En stor skillnad var att spel skulle lagras på cd-skivor i stället för kassetter. Cd rymde mer och gjorde att spel kunde ha längre musik, korta filmsekvenser och större världar att utforska.\n\nNär PlayStation släpptes såg den grå ut och hade en handkontroll med knappar i olika former: triangel, cirkel, kryss och fyrkant. Amir läste att symbolerna inte bara var snygga. De skulle hjälpa spelare att komma ihåg vad knapparna gjorde. Efter några år kom DualShock-kontrollen med två styrspakar och vibration. Plötsligt kunde man smyga, svänga och sikta mer exakt, och när en bil krockade i ett racingspel kändes det i händerna.\n\nPå den tiden sparade man ofta på minneskort. Om man glömde kortet hos en kompis kunde man tvingas börja om från början. Amir tyckte det lät både jobbigt och lite spännande, som att varje spelsession var ett äventyr. I magasinet fanns listor över spel: äventyr, sport och pussel. Artikeln beskrev också hur små utvecklarteam kunde lyckas om de hade en tydlig idé och vågade testa nya saker.\n\nSedan kom PlayStation 2, som också kunde spela dvd. Många familjer köpte den både för spel och filmkvällar. PlayStation 3 och 4 fick bättre grafik och kunde kopplas upp mot internet. Då blev det lättare att spela med vänner som bodde långt bort, men också viktigare att tänka på lösenord och hur man pratar i chattar.\n\nI dag finns PlayStation 5, som laddar spel snabbt och kan visa mycket detaljer. Amir märkte att det viktigaste ändå inte var siffrorna. Han skrev i sin anteckningsbok: PlayStation blev populärt för att det kombinerade teknik med berättelser, och för att människor kunde dela upplevelser, både i samma soffa och online.",
@@ -24698,8 +25048,7 @@
       }
     ],
     "word_count": 307
-  }
-,
+  },
   {
     "id": "ak9-tema-016",
     "title": "Giorgio Armani och idén om tyst elegans",
@@ -24709,32 +25058,62 @@
     "questions": [
       {
         "q": "Vilken tidig erfarenhet beskriver texten som viktig för Armani?",
-        "options": ["Arbete med skyltning och försäljning i modebranschen", "Att han var professionell idrottare i Italien", "Att han utbildade sig till jurist och domare", "Att han arbetade som kock på ett hotell"],
+        "options": [
+          "Arbete med skyltning och försäljning i modebranschen",
+          "Att han var professionell idrottare i Italien",
+          "Att han utbildade sig till jurist och domare",
+          "Att han arbetade som kock på ett hotell"
+        ],
         "correct": 0
       },
       {
         "q": "Hur beskrivs Armanis elegans i texten?",
-        "options": ["Den bygger mest på starka färger och stora logotyper", "Den är avskalad och inte högljudd", "Den handlar främst om ovanliga hattar och smycken", "Den utgår från att plaggen ska se slitna ut"],
+        "options": [
+          "Den bygger mest på starka färger och stora logotyper",
+          "Den är avskalad och inte högljudd",
+          "Den handlar främst om ovanliga hattar och smycken",
+          "Den utgår från att plaggen ska se slitna ut"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken förändring av kavajen lyfts fram som typisk för Armani?",
-        "options": ["Mycket hårda axlar och stel konstruktion", "Kortare ärmar för att visa klockan", "Mjukare axlar och mindre stel passform", "Insydda metalltrådar för extra glans"],
+        "options": [
+          "Mycket hårda axlar och stel konstruktion",
+          "Kortare ärmar för att visa klockan",
+          "Mjukare axlar och mindre stel passform",
+          "Insydda metalltrådar för extra glans"
+        ],
         "correct": 2
       },
       {
         "q": "Vad menar texten att 1980-talets kostymtrend också kunde kritiseras för?",
-        "options": ["Att den gjorde kläder för billiga att köpa", "Att den tog bort alla könsnormer helt", "Att den gjorde reklam förbjuden", "Att den kunde öka pressen att passa in i en företagskultur"],
+        "options": [
+          "Att den gjorde kläder för billiga att köpa",
+          "Att den tog bort alla könsnormer helt",
+          "Att den gjorde reklam förbjuden",
+          "Att den kunde öka pressen att passa in i en företagskultur"
+        ],
         "correct": 3
       },
       {
         "q": "Varför är flera olika linjer viktiga i en lyxkoncern enligt texten?",
-        "options": ["De kan skilja sig i pris, kvalitet, målgrupp och försäljningsplats", "De gör att företaget slipper tänka på varumärket", "De finns bara för att förvirra kunderna", "De gör att alla plagg måste tillverkas i samma fabrik"],
+        "options": [
+          "De kan skilja sig i pris, kvalitet, målgrupp och försäljningsplats",
+          "De gör att företaget slipper tänka på varumärket",
+          "De finns bara för att förvirra kunderna",
+          "De gör att alla plagg måste tillverkas i samma fabrik"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken större fråga används Armani som exempel på i slutet?",
-        "options": ["Hur man kan vinna en sportturnering med rätt kläder", "Hur ett företag kan kombinera design, status och ansvar", "Hur man snabbt blir känd på sociala medier", "Hur man undviker att använda modeord i reklam"],
+        "options": [
+          "Hur man kan vinna en sportturnering med rätt kläder",
+          "Hur ett företag kan kombinera design, status och ansvar",
+          "Hur man snabbt blir känd på sociala medier",
+          "Hur man undviker att använda modeord i reklam"
+        ],
         "correct": 1
       }
     ],
@@ -24749,32 +25128,62 @@
     "questions": [
       {
         "q": "Vad menar texten med att mode kan fungera som ett språk?",
-        "options": ["Att plagg kan signalera budskap om roll och identitet", "Att alla kläder har skrivna texter på sig", "Att man måste tala italienska för att bära kostym", "Att kostymer bara används i teater"],
+        "options": [
+          "Att plagg kan signalera budskap om roll och identitet",
+          "Att alla kläder har skrivna texter på sig",
+          "Att man måste tala italienska för att bära kostym",
+          "Att kostymer bara används i teater"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken fråga uppstod när fler kvinnor tog plats i yrken där kostym var norm?",
-        "options": ["Om kostymen skulle förbjudas i offentliga rum", "Om man måste klä sig som män för att ses som professionell", "Om alla måste bära exakt samma färg varje dag", "Om kostymer bara skulle sys för hand"],
+        "options": [
+          "Om kostymen skulle förbjudas i offentliga rum",
+          "Om man måste klä sig som män för att ses som professionell",
+          "Om alla måste bära exakt samma färg varje dag",
+          "Om kostymer bara skulle sys för hand"
+        ],
         "correct": 1
       },
       {
         "q": "Hur beskriver texten Armanis syn på kostymen?",
-        "options": ["Som en rustning som ska göra bäraren hårdare", "Som ett verktyg som underlättar rörelse och arbete", "Som ett skämtplagg som inte hör hemma i arbetslivet", "Som något som alltid måste vara så tajt som möjligt"],
+        "options": [
+          "Som en rustning som ska göra bäraren hårdare",
+          "Som ett verktyg som underlättar rörelse och arbete",
+          "Som ett skämtplagg som inte hör hemma i arbetslivet",
+          "Som något som alltid måste vara så tajt som möjligt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket exempel används för att visa hur material och färg påverkar tolkningen?",
-        "options": ["Att en mörk ull ofta uppfattas som formell", "Att alla tyger känns likadana för betraktaren", "Att ljusa färger alltid signalerar sorg", "Att struktur i tyg bara syns på nära håll och saknar betydelse"],
+        "options": [
+          "Att en mörk ull ofta uppfattas som formell",
+          "Att alla tyger känns likadana för betraktaren",
+          "Att ljusa färger alltid signalerar sorg",
+          "Att struktur i tyg bara syns på nära håll och saknar betydelse"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menar texten med att det finns en klassdimension i lyxkostymer?",
-        "options": ["Att lyx alltid gör människor otrevliga", "Att status kan handla om både pengar och att kunna sociala koder", "Att bara studenter får bära kostym", "Att kostymer bara fungerar i ett visst land"],
+        "options": [
+          "Att lyx alltid gör människor otrevliga",
+          "Att status kan handla om både pengar och att kunna sociala koder",
+          "Att bara studenter får bära kostym",
+          "Att kostymer bara fungerar i ett visst land"
+        ],
         "correct": 1
       },
       {
         "q": "Vilken utveckling nämns som en orsak till att kostymens roll ifrågasätts i dag?",
-        "options": ["Att ull har slutat produceras helt", "Att reklam för kläder blivit olaglig", "Att alla arbetsplatser kräver uniform", "Att distansarbete och mer informella kontor blivit vanligare"],
+        "options": [
+          "Att ull har slutat produceras helt",
+          "Att reklam för kläder blivit olaglig",
+          "Att alla arbetsplatser kräver uniform",
+          "Att distansarbete och mer informella kontor blivit vanligare"
+        ],
         "correct": 3
       }
     ],
@@ -24789,32 +25198,62 @@
     "questions": [
       {
         "q": "Vad menar texten med att man måste tänka i hela livscykler?",
-        "options": ["Att man bara ska titta på plaggets färg och form", "Att man ska se hela kedjan från råvara till avfall", "Att man ska köpa samma plagg varje vecka", "Att man alltid ska kasta kläder efter en säsong"],
+        "options": [
+          "Att man bara ska titta på plaggets färg och form",
+          "Att man ska se hela kedjan från råvara till avfall",
+          "Att man ska köpa samma plagg varje vecka",
+          "Att man alltid ska kasta kläder efter en säsong"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket ord förklaras i texten som att kunna följa var och hur en produkt tillverkats?",
-        "options": ["Spårbarhet", "Siluett", "Kampanj", "Säsongsrea"],
+        "options": [
+          "Spårbarhet",
+          "Siluett",
+          "Kampanj",
+          "Säsongsrea"
+        ],
         "correct": 0
       },
       {
         "q": "Vilket exempel används för att visa att råvaror kan påverka klimat och mark?",
-        "options": ["En kavaj i ull kopplad till djurhållning", "En plastpåse kopplad till bibliotek", "En tröja i bomull kopplad till snickeri", "En scarf kopplad till biltrafik i städer"],
+        "options": [
+          "En kavaj i ull kopplad till djurhållning",
+          "En plastpåse kopplad till bibliotek",
+          "En tröja i bomull kopplad till snickeri",
+          "En scarf kopplad till biltrafik i städer"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken invändning tar texten upp mot idén att lyx alltid innebär mindre konsumtion?",
-        "options": ["Att lyx aldrig säljs internationellt", "Att trender och kollektioner ändå kan driva köp", "Att ull inte går att färga", "Att second hand är förbjudet för dyra märken"],
+        "options": [
+          "Att lyx aldrig säljs internationellt",
+          "Att trender och kollektioner ändå kan driva köp",
+          "Att ull inte går att färga",
+          "Att second hand är förbjudet för dyra märken"
+        ],
         "correct": 1
       },
       {
         "q": "Vad säger texten om arbetsvillkor i textilindustrin?",
-        "options": ["Att problem bara finns i ett enda land", "Att risker kan finnas även där regelverk är starkare om kontrollen brister", "Att löner alltid är högre i hela branschen än i andra yrken", "Att olyckor är omöjliga om plagget är dyrt"],
+        "options": [
+          "Att problem bara finns i ett enda land",
+          "Att risker kan finnas även där regelverk är starkare om kontrollen brister",
+          "Att löner alltid är högre i hela branschen än i andra yrken",
+          "Att olyckor är omöjliga om plagget är dyrt"
+        ],
         "correct": 1
       },
       {
         "q": "Vilket av följande nämns som ett sätt för konsumenter att påverka?",
-        "options": ["Att undvika att laga kläder så att man köper nytt", "Att bara följa reklam utan att fråga något", "Att använda plagg längre eller välja second hand", "Att alltid kräva att allt sys i samma butik"],
+        "options": [
+          "Att undvika att laga kläder så att man köper nytt",
+          "Att bara följa reklam utan att fråga något",
+          "Att använda plagg längre eller välja second hand",
+          "Att alltid kräva att allt sys i samma butik"
+        ],
         "correct": 2
       }
     ],
@@ -24829,32 +25268,62 @@
     "questions": [
       {
         "q": "Vilken väg säger texten att många först möter Armani genom?",
-        "options": ["Genom filmer, galor eller reklam", "Genom att själva sy i en skräddarskola", "Genom att läsa kemirapporter om färgning", "Genom kommunala idrottstävlingar"],
+        "options": [
+          "Genom filmer, galor eller reklam",
+          "Genom att själva sy i en skräddarskola",
+          "Genom att läsa kemirapporter om färgning",
+          "Genom kommunala idrottstävlingar"
+        ],
         "correct": 0
       },
       {
         "q": "Varför kan samarbeten med kändisar vara riskabla för ett varumärke enligt texten?",
-        "options": ["För att kläderna alltid blir billigare", "För att en skandal kan påverka varumärkets rykte", "För att film inte innehåller känslor", "För att publiken aldrig lägger märke till kläder"],
+        "options": [
+          "För att kläderna alltid blir billigare",
+          "För att en skandal kan påverka varumärkets rykte",
+          "För att film inte innehåller känslor",
+          "För att publiken aldrig lägger märke till kläder"
+        ],
         "correct": 1
       },
       {
         "q": "Hur beskrivs Armanis uttryck i marknadsföring?",
-        "options": ["Igenkännligt utan att skrika", "Alltid fullt av neonfärger och stora slagord", "Bara sportigt och lekfullt", "Medvetet slarvigt och trasigt"],
+        "options": [
+          "Igenkännligt utan att skrika",
+          "Alltid fullt av neonfärger och stora slagord",
+          "Bara sportigt och lekfullt",
+          "Medvetet slarvigt och trasigt"
+        ],
         "correct": 0
       },
       {
         "q": "Vad menar texten att reklam sällan visar?",
-        "options": ["Att människor kan känna inspiration", "Att personal kan bemöta kunder olika", "Att en kampanj bygger en dröm", "Att fabriker, transporter och plaggets fortsatta liv ingår i helheten"],
+        "options": [
+          "Att människor kan känna inspiration",
+          "Att personal kan bemöta kunder olika",
+          "Att en kampanj bygger en dröm",
+          "Att fabriker, transporter och plaggets fortsatta liv ingår i helheten"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken typ av dröm kopplas ofta till lyxmode i texten?",
-        "options": ["Att man blir bäst på ett instrument direkt", "Att man kan framstå som samlad och framgångsrik", "Att man slipper gå i skolan", "Att man alltid får resa gratis"],
+        "options": [
+          "Att man blir bäst på ett instrument direkt",
+          "Att man kan framstå som samlad och framgångsrik",
+          "Att man slipper gå i skolan",
+          "Att man alltid får resa gratis"
+        ],
         "correct": 1
       },
       {
         "q": "Vad är huvudfrågan i slutet av texten?",
-        "options": ["Om film alltid är bättre än böcker", "Om kändisar borde designa kläder själva", "Om vi väljer budskapet själva eller låter det välja oss", "Om alla borde bära samma färg i reklam"],
+        "options": [
+          "Om film alltid är bättre än böcker",
+          "Om kändisar borde designa kläder själva",
+          "Om vi väljer budskapet själva eller låter det välja oss",
+          "Om alla borde bära samma färg i reklam"
+        ],
         "correct": 2
       }
     ],
@@ -24869,35 +25338,3575 @@
     "questions": [
       {
         "q": "Vilken grundfråga startade gruppens arbete med?",
-        "options": ["Om priset beror på material, arbete, varumärke eller allt tillsammans", "Om Armani bara gör sportkläder", "Om alla kopior är lagliga i Sverige", "Om reklam alltid säger sanningen"],
+        "options": [
+          "Om priset beror på material, arbete, varumärke eller allt tillsammans",
+          "Om Armani bara gör sportkläder",
+          "Om alla kopior är lagliga i Sverige",
+          "Om reklam alltid säger sanningen"
+        ],
         "correct": 0
       },
       {
         "q": "Vilken punkt la Noor till utöver material och arbete?",
-        "options": ["Att priset främst beror på vädret", "Att varumärkesvärde kan vara en stor del av priset", "Att alla plagg måste vara handmålade", "Att lyx alltid är billigare i längden"],
+        "options": [
+          "Att priset främst beror på vädret",
+          "Att varumärkesvärde kan vara en stor del av priset",
+          "Att alla plagg måste vara handmålade",
+          "Att lyx alltid är billigare i längden"
+        ],
         "correct": 1
       },
       {
         "q": "Varför invände Kim mot att köpa fejk, enligt texten?",
-        "options": ["För att kopior kan kopplas till dåliga arbetsvillkor och att kunder kan bli lurade", "För att fejk alltid är tillverkat av guld", "För att äkta varor aldrig säljs online", "För att kopior inte påverkar någon alls"],
+        "options": [
+          "För att kopior kan kopplas till dåliga arbetsvillkor och att kunder kan bli lurade",
+          "För att fejk alltid är tillverkat av guld",
+          "För att äkta varor aldrig säljs online",
+          "För att kopior inte påverkar någon alls"
+        ],
         "correct": 0
       },
       {
         "q": "Vad säger texten om att avgöra om något är äkta eller fejk?",
-        "options": ["Det räcker alltid att titta på färgen", "Ett enda tecken, som etiketten, är alltid säkert", "Man kan aldrig få några ledtrådar alls", "Flera saker kan ge ledtrådar, men inget enskilt tecken räcker alltid"],
+        "options": [
+          "Det räcker alltid att titta på färgen",
+          "Ett enda tecken, som etiketten, är alltid säkert",
+          "Man kan aldrig få några ledtrådar alls",
+          "Flera saker kan ge ledtrådar, men inget enskilt tecken räcker alltid"
+        ],
         "correct": 3
       },
       {
         "q": "Vilken konsekvens nämner Noor om marknaden fylls av kopior?",
-        "options": ["Att märket kan förlora kontroll över sitt rykte", "Att alla priser automatiskt sänks till noll", "Att butiker slutar existera överallt", "Att material blir oviktigt för konsumenter"],
+        "options": [
+          "Att märket kan förlora kontroll över sitt rykte",
+          "Att alla priser automatiskt sänks till noll",
+          "Att butiker slutar existera överallt",
+          "Att material blir oviktigt för konsumenter"
+        ],
         "correct": 0
       },
       {
         "q": "Vad är textens huvudsakliga budskap i slutet?",
-        "options": ["Att man alltid ska köpa den dyraste versionen", "Att kopior är den bästa lösningen för alla", "Att köpval handlar om etik, konsumtion och identitet, inte bara utseende", "Att mode inte har någon koppling till samhället"],
+        "options": [
+          "Att man alltid ska köpa den dyraste versionen",
+          "Att kopior är den bästa lösningen för alla",
+          "Att köpval handlar om etik, konsumtion och identitet, inte bara utseende",
+          "Att mode inte har någon koppling till samhället"
+        ],
         "correct": 2
       }
     ],
     "word_count": 480
+  },
+  {
+    "id": "ak5-tema-021",
+    "title": "Englands rugbylandslag genom tiderna",
+    "text": "Englands rugbylandslag är ett av de mest kända lagen i världen inom sporten rugby union. Laget representerar England i internationella matcher och har spelat sedan slutet av 1800-talet. Rugby är en fysisk sport där två lag försöker bära eller sparka en oval boll över motståndarnas mållinje för att göra poäng.\n\nEngland spelar sina hemmamatcher på arenan Twickenham i London. Arenan rymmer över 80 000 åskådare och kallas ibland för \"rugbyns hem\". Där samlas fans från hela landet för att heja fram sitt lag.\n\nEn av Englands största framgångar kom år 2003 när laget vann världsmästerskapet. Finalen spelades mot Australien och avgjordes i förlängning genom en så kallad \"drop goal\". Segern gjorde spelarna till hjältar och ökade intresset för rugby i hela landet.\n\nEngland deltar varje år i turneringen Six Nations tillsammans med Frankrike, Irland, Italien, Skottland och Wales. Matcher mellan England och de andra brittiska lagen är ofta extra känsloladdade eftersom det finns en lång historia av rivalitet.\n\nLaget består av spelare från olika klubbar runt om i England. Förbundskaptenen ansvarar för att ta ut truppen och planera taktiken. Spelarna tränar hårt för att orka hela matchen som är 80 minuter lång.\n\nRugby är inte lika stort som fotboll i England, men landslaget har ändå en stark plats i landets idrottskultur. Många barn och ungdomar drömmer om att en dag få bära den vita tröjan med den röda rosen på bröstet.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Var spelar England sina hemmamatcher?",
+        "options": [
+          "På Wembley Stadium",
+          "På Twickenham i London",
+          "På en arena i Manchester",
+          "På en mindre stadion i Birmingham"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad hände år 2003?",
+        "options": [
+          "England vann världsmästerskapet",
+          "England slutade sist i Six Nations",
+          "Rugby förbjöds tillfälligt",
+          "Laget bytte namn"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur lång är en rugbymatch enligt texten?",
+        "options": [
+          "60 minuter",
+          "70 minuter",
+          "80 minuter",
+          "90 minuter"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad kallas poängen som avgjorde VM-finalen 2003?",
+        "options": [
+          "Straffspark",
+          "Inkastspark",
+          "Hörnmål",
+          "Drop goal"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vilken turnering spelar England varje år tillsammans med fem andra länder?",
+        "options": [
+          "Champions League",
+          "Premier Cup",
+          "Six Nations",
+          "World Series"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad symboliserar den röda rosen på tröjan?",
+        "options": [
+          "En känd spelare",
+          "Englands landslag",
+          "En gammal arena",
+          "En särskild taktik"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 309
+  },
+  {
+    "id": "ak5-tema-022",
+    "title": "Vägen till landslaget",
+    "text": "Att bli uttagen till Englands rugbylandslag är en dröm för många unga spelare. Resan börjar ofta i en lokal klubb där barn lär sig grunderna i spelet. De tränar passningar, tacklingar och hur man samarbetar som ett lag.\n\nNär spelarna blir äldre kan de få chansen att spela i större klubbar. I England finns en professionell liga där de bästa spelarna möts varje vecka. Förbundskaptenen följer matcherna noggrant för att hitta talanger som kan passa in i landslaget.\n\nDet räcker inte att bara vara stark eller snabb. En landslagsspelare måste också förstå taktik och kunna fatta snabba beslut under press. Eftersom rugby är en kontaktsport krävs det mod och disciplin. Spelarna måste följa reglerna noggrant för att undvika skador och straff.\n\nTräningen inför internationella matcher är intensiv. Spelarna samlas under korta perioder och tränar flera gånger om dagen. De analyserar tidigare matcher och diskuterar hur motståndarna brukar spela.\n\nKonkurrensen om platserna är hård. Bara ett begränsat antal spelare får vara med i matchtruppen. Det betyder att även duktiga spelare ibland måste vänta på sin chans.\n\nTrots pressen beskriver många spelare känslan av att sjunga nationalsången inför en fullsatt arena som något av det största i deras liv. Att representera sitt land innebär både ansvar och stolthet.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Var börjar ofta resan mot landslaget?",
+        "options": [
+          "I en lokal klubb",
+          "Direkt i landslaget",
+          "På ett idrottsgymnasium utomlands",
+          "I ett annat land"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad gör förbundskaptenen för att hitta nya spelare?",
+        "options": [
+          "Lottar fram namn",
+          "Följer ligamatcher och letar talanger",
+          "Frågar publiken om råd",
+          "Väljer bara tidigare landslagsspelare"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Varför krävs disciplin i rugby?",
+        "options": [
+          "För att matcherna är korta",
+          "För att publiken kräver det",
+          "För att undvika skador och straff",
+          "För att vinna fler medaljer"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur beskrivs konkurrensen om platserna?",
+        "options": [
+          "Den är obetydlig",
+          "Alla får spela lika mycket",
+          "Den är måttlig",
+          "Den är hård eftersom få platser finns"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad analyserar spelarna inför matcher?",
+        "options": [
+          "Publikens åsikter",
+          "Motståndarnas spel och tidigare matcher",
+          "Vädret i andra länder",
+          "Gamla fotbollsmatcher"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur känner många spelare när de sjunger nationalsången?",
+        "options": [
+          "Likgiltighet",
+          "Ilska",
+          "Stolthet och ansvar",
+          "Förvirring"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 308
+  },
+  {
+    "id": "ak5-tema-023",
+    "title": "Kända spelare i Englands rugbylandslag",
+    "text": "Genom åren har många skickliga spelare representerat Englands rugbylandslag. Vissa har blivit kända långt utanför rugbyns värld. En av de mest uppmärksammade spelarna var Jonny Wilkinson, som sparkade den avgörande poängen i VM-finalen 2003.\n\nEn annan viktig spelare har varit lagkaptener som lett laget både på och utanför planen. En kapten ansvarar för att motivera sina lagkamrater och tala med domaren under matchen. Det kräver både ledarskap och lugn.\n\nI modern tid har laget haft spelare med olika bakgrunder och spelstilar. Vissa är starka forwards som arbetar hårt i närkamperna, medan andra är snabba backar som gör försök genom att springa förbi motståndarna.\n\nMånga spelare engagerar sig också i samhället. De besöker skolor, deltar i välgörenhet och inspirerar unga att börja spela rugby. Flera berättar att de själva började spela tack vare en förebild de såg på tv.\n\nKarriären i landslaget kan vara både kort och lång. Skador, form och konkurrens påverkar hur länge en spelare får vara kvar. Därför försöker många ta vara på varje chans de får att spela.\n\nTrots att rugby är en tuff sport betonar många spelare vikten av respekt. De tackar alltid motståndarna efter matchen och följer sportens traditioner.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Vem sparkade den avgörande poängen i VM-finalen 2003?",
+        "options": [
+          "Jonny Wilkinson",
+          "Lagkaptenen 2010",
+          "En australiensisk spelare",
+          "Domaren"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är en kaptens uppgift enligt texten?",
+        "options": [
+          "Att sälja biljetter",
+          "Att leda laget och tala med domaren",
+          "Att bestämma matchens längd",
+          "Att skriva reglerna"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kännetecknar en forward?",
+        "options": [
+          "Snabba löpningar på kanten",
+          "Ansvar för publiken",
+          "Arbete i närkamperna",
+          "Att alltid sparka mål"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur engagerar sig många spelare utanför planen?",
+        "options": [
+          "Genom att undvika media",
+          "Genom att bara träna",
+          "Genom att flytta utomlands",
+          "Genom skolbesök och välgörenhet"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad kan påverka hur länge en spelare stannar i landslaget?",
+        "options": [
+          "Skador och konkurrens",
+          "Färgen på tröjan",
+          "Publikens klädsel",
+          "Stadens storlek"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad betonar spelarna trots att sporten är tuff?",
+        "options": [
+          "Att vinna till varje pris",
+          "Respekt för motståndarna",
+          "Att undvika träning",
+          "Att spela utan regler"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 302
+  },
+  {
+    "id": "ak5-tema-024",
+    "title": "Rugbyregler och taktik",
+    "text": "För att förstå Englands rugbylandslag är det viktigt att känna till några grundläggande regler. Rugby spelas med en oval boll och två lag med femton spelare i varje lag. Målet är att göra fler poäng än motståndarna.\n\nPoäng kan göras på flera sätt. Ett försök ger fem poäng och sker när en spelare trycker ner bollen bakom motståndarnas mållinje. Efter ett försök får laget chansen att sparka en extra poäng. Det finns också straffsparkar och drop goals som ger tre poäng.\n\nBollen får bäras framåt, men passningar måste kastas bakåt eller åt sidan. Det gör att laget behöver planera sina rörelser noggrant. Spelarna måste samarbeta för att skapa utrymme på planen.\n\nTaktik handlar om att läsa spelet och anpassa sig. Ibland väljer laget att sparka bollen långt för att flytta spelet till motståndarnas planhalva. Andra gånger försöker de hålla bollen nära laget för att långsamt arbeta sig framåt.\n\nFörsvaret är lika viktigt som anfallet. Spelarna måste tackla säkert och stå rätt placerade för att stoppa motståndarnas attacker.\n\nGenom att kombinera styrka, snabbhet och smart taktik försöker England skapa fördelar i matcherna. Reglerna gör spelet rättvist och hjälper till att skydda spelarna.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Hur många spelare är det i varje lag?",
+        "options": [
+          "Elva",
+          "Tretton",
+          "Femton",
+          "Sjutton"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur många poäng ger ett försök?",
+        "options": [
+          "Tre poäng",
+          "Fem poäng",
+          "Sju poäng",
+          "En poäng"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur måste en passning kastas?",
+        "options": [
+          "Bakåt eller åt sidan",
+          "Alltid framåt",
+          "Rakt upp i luften",
+          "Mot publiken"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför sparkar laget ibland bollen långt?",
+        "options": [
+          "För att avsluta matchen",
+          "För att vila spelarna",
+          "För att imponera på publiken",
+          "För att flytta spelet till motståndarnas planhalva"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad är viktigt i försvaret?",
+        "options": [
+          "Att undvika kontakt helt",
+          "Att tackla säkert och stå rätt",
+          "Att bara vänta på domaren",
+          "Att alltid sparka bort bollen"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kombinerar laget för att skapa fördelar?",
+        "options": [
+          "Tur och slump",
+          "Enbart snabbhet",
+          "Styrka, snabbhet och taktik",
+          "Publikens sånger"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 304
+  },
+  {
+    "id": "ak5-tema-025",
+    "title": "Fans och gemenskap",
+    "text": "Englands rugbylandslag har supportrar i alla åldrar. På matchdagar fylls gatorna runt arenan av människor som bär vita tröjor med den röda rosen. Familjer, vänner och skolklasser samlas för att uppleva stämningen tillsammans.\n\nBland fansen finns personer med olika bakgrund. Vissa har följt laget i flera decennier, medan andra är nya supportrar. Det finns också fans med funktionsvariationer som deltar tack vare tillgängliga platser på arenan.\n\nMånga beskriver matcherna som mer än bara sport. Det är en social händelse där man träffar andra och delar glädje och besvikelse. När laget vinner firar supportrarna tillsammans, och när laget förlorar stöttar de varandra.\n\nBarn som Amir, Ella och Noa kan drömma om att själva spela i landslaget en dag. De ser spelare med olika kroppstyper och erfarenheter, vilket visar att det finns flera sätt att bidra till ett lag.\n\nRugbyns traditioner är viktiga för fansen. De sjunger sånger före matchen och applåderar även motståndarna. Respekt är en central del av kulturen.\n\nGenom åren har landslaget blivit en symbol för gemenskap. Oavsett var i landet man bor kan man känna samhörighet när England spelar.",
+    "grade": 5,
+    "category": "Sport",
+    "questions": [
+      {
+        "q": "Vad bär många supportrar på matchdagar?",
+        "options": [
+          "Blå halsdukar",
+          "Vita tröjor med en röd ros",
+          "Svarta kostymer",
+          "Gröna jackor"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad gör matcherna till mer än bara sport enligt texten?",
+        "options": [
+          "De är en social händelse",
+          "De är obligatoriska",
+          "De är gratis för alla",
+          "De spelas varje dag"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad visar att laget är inkluderande?",
+        "options": [
+          "Endast äldre får komma",
+          "Inga barn deltar",
+          "Tillgängliga platser för personer med funktionsvariationer",
+          "Bara professionella får vara fans"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur reagerar fansen när laget förlorar?",
+        "options": [
+          "De lämnar direkt arenan",
+          "De slutar följa laget",
+          "De buar alltid högt",
+          "De stöttar varandra"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad är en viktig del av rugbyns kultur?",
+        "options": [
+          "Respekt för motståndarna",
+          "Att ignorera regler",
+          "Att aldrig sjunga",
+          "Att byta lag ofta"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad kan barn som Amir, Ella och Noa känna?",
+        "options": [
+          "Att rugby bara är för vuxna",
+          "Att det finns flera sätt att bidra till ett lag",
+          "Att bara snabba spelare lyckas",
+          "Att man måste bo i London"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 300
+  },
+  {
+    "id": "ak2-tema-006",
+    "title": "Enhörningen i skogen",
+    "text": "Enhörningar är magiska djur som finns i sagor. De liknar hästar men har ett långt horn i pannan. Många berättelser säger att hornet kan lysa i mörkret. I en liten by bodde barnet Alva som älskade sagor om enhörningar. Varje kväll tittade hon ut genom fönstret mot skogen och hoppades få se en.\n\nEn morgon såg Alva något vitt mellan träden. Det rörde sig tyst och försiktigt. Hon vågade gå närmare och såg en enhörning med silverglänsande man. Den drack vatten ur bäcken. När enhörningen märkte Alva stod den stilla och tittade på henne. Sedan sprang den mjukt in bland träden igen. Alva log och visste att hon aldrig skulle glömma den stunden.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad har enhörningen i pannan?",
+        "options": [
+          "Två små öron",
+          "Ett långt horn",
+          "En krona",
+          "En blomma"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Var bodde Alva?",
+        "options": [
+          "I en liten by",
+          "I en stor stad",
+          "På ett slott",
+          "Vid havet"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var såg Alva något vitt?",
+        "options": [
+          "På himlen",
+          "I sitt rum",
+          "Mellan träden",
+          "På vägen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gjorde enhörningen vid bäcken?",
+        "options": [
+          "Sov",
+          "Åt gräs",
+          "Drack vatten",
+          "Byggde bo"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur rörde sig enhörningen?",
+        "options": [
+          "Högt och snabbt",
+          "Tyst och försiktigt",
+          "Argt och hårt",
+          "Klantigt och långsamt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur kände sig Alva efter mötet?",
+        "options": [
+          "Rädd",
+          "Arg",
+          "Likgiltig",
+          "Glad"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 140
+  },
+  {
+    "id": "ak2-tema-007",
+    "title": "Regnbågens enhörning",
+    "text": "I sagornas land finns en enhörning som heter Luma. Hon har vit päls och en man i alla regnbågens färger. När solen lyser skimrar hennes horn som en liten stjärna. Luma bor på en äng med mjukt gräs och färgglada blommor.\n\nVarje morgon springer hon över ängen och lämnar glittrande spår bakom sig. Barn som tror på magi kan ibland se spåren. En dag kom barnet Sam till ängen med sin morfar. Sam kände sig ledsen och satte sig på en sten. Då dök Luma upp. Hon stod en stund bredvid Sam och det kändes genast lite lättare i hjärtat. Sedan galopperade hon vidare mot skogen.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad heter enhörningen?",
+        "options": [
+          "Luma",
+          "Bella",
+          "Nova",
+          "Mira"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Var bor Luma?",
+        "options": [
+          "På en äng",
+          "I ett stall",
+          "I en grotta",
+          "På ett berg"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad lämnar hon efter sig när hon springer?",
+        "options": [
+          "Fotspår i lera",
+          "Glittrande spår",
+          "Blommor",
+          "Stenar"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vem kom till ängen med sin morfar?",
+        "options": [
+          "Alva",
+          "Noa",
+          "Sam",
+          "Ella"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur kände sig Sam först?",
+        "options": [
+          "Glad",
+          "Trött",
+          "Ledsen",
+          "Arg"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad gjorde Luma sedan?",
+        "options": [
+          "Somnade på stenen",
+          "Stannade hela dagen",
+          "Flög upp i luften",
+          "Galopperade mot skogen"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 137
+  },
+  {
+    "id": "ak2-tema-008",
+    "title": "Enhörningen som hjälpte till",
+    "text": "En liten enhörning bodde nära en by där många barn lekte. Den hette Orion och var nyfiken på människorna. Varje kväll smög Orion fram till kanten av byn för att titta.\n\nEn dag tappade barnet Leila sin röda boll i en buske med taggar. Hon vågade inte ta tillbaka den. Orion såg vad som hände. Med sitt horn lyfte han försiktigt bort grenarna så att bollen blev fri. Leila blev förvånad men också glad.\n\nOrion sprang snabbt tillbaka mot ängen innan någon vuxen hann se honom. Leila berättade för sina vänner om den snälla enhörningen. Ingen visste säkert om det var sant, men många började hålla utkik efter glittrande spår på marken.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad hette enhörningen?",
+        "options": [
+          "Orion",
+          "Luma",
+          "Sam",
+          "Leo"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad tappade Leila?",
+        "options": [
+          "En bok",
+          "En röd boll",
+          "En sko",
+          "En hatt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Var hamnade bollen?",
+        "options": [
+          "I en bäck",
+          "På taket",
+          "I en buske med taggar",
+          "På vägen"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur hjälpte Orion till?",
+        "options": [
+          "Han sparkade bort bollen",
+          "Han ropade på hjälp",
+          "Han bar Leila hem",
+          "Han lyfte bort grenarna med sitt horn"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vart sprang Orion efteråt?",
+        "options": [
+          "Till ängen",
+          "Till skolan",
+          "Till staden",
+          "Till ett stall"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad började barnen hålla utkik efter?",
+        "options": [
+          "Regnbågar",
+          "Glittrande spår",
+          "Stora fåglar",
+          "Nya leksaker"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 131
+  },
+  {
+    "id": "ak2-tema-009",
+    "title": "Enhörningens hemlighet",
+    "text": "Det sägs att enhörningar bara visar sig för den som är snäll. I en skog nära en sjö bodde en gammal enhörning med gyllene horn. Den höll sig gömd bland träden.\n\nBarnet Noa brukade gå till sjön för att mata änderna. Noa var försiktig och skräpade aldrig ner. En kväll när solen gick ner hördes ett mjukt ljud bakom buskarna. Den gamla enhörningen klev fram.\n\nDen böjde sitt huvud och lät hornet lysa svagt. Noa stod stilla och log. Efter en stund försvann enhörningen lika tyst som den kommit. Noa berättade inte för alla, utan sparade mötet som en hemlighet i sitt hjärta.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Var bodde enhörningen?",
+        "options": [
+          "I en stad",
+          "I en skog nära en sjö",
+          "På en bondgård",
+          "På ett berg"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad brukade Noa göra vid sjön?",
+        "options": [
+          "Fiska",
+          "Mata änderna",
+          "Bygga en båt",
+          "Simma varje dag"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur lät hornet?",
+        "options": [
+          "Det sjöng högt",
+          "Det sprakade",
+          "Det lyste svagt",
+          "Det var helt mörkt"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "När klev enhörningen fram?",
+        "options": [
+          "Mitt på dagen",
+          "Tidigt på morgonen",
+          "När det regnade",
+          "När solen gick ner"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur var Noa mot naturen?",
+        "options": [
+          "Skräpade ner",
+          "Var försiktig",
+          "Plockade blommor hela tiden",
+          "Skrek högt"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad gjorde Noa med sin upplevelse?",
+        "options": [
+          "Berättade för hela skolan",
+          "Glömde bort den",
+          "Skrev om den i en tidning",
+          "Sparade den som en hemlighet"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 125
+  },
+  {
+    "id": "ak2-tema-010",
+    "title": "Enhörningen och snön",
+    "text": "En kall vinterdag föll snön över fälten. I skogen bodde en ung enhörning som hette Frost. Hans päls var nästan lika vit som snön. När han gick lämnade han små spår bakom sig.\n\nBarnen Amina och Leo byggde en snögubbe nära skogen. Plötsligt såg de något röra sig mellan träden. Det var Frost som försiktigt klev ut på fältet. Han sniffade på snögubben och fnös till.\n\nAmina och Leo stod helt stilla. De ville inte skrämma honom. Frost tittade på dem med stora ögon och skrapade lätt med hoven i snön. Sedan vände han och sprang tillbaka in i skogen. Barnen viskade till varandra att de just hade sett något magiskt.",
+    "grade": 2,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad hette enhörningen?",
+        "options": [
+          "Orion",
+          "Frost",
+          "Luma",
+          "Noa"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vilken årstid var det?",
+        "options": [
+          "Sommar",
+          "Vår",
+          "Höst",
+          "Vinter"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Vad byggde Amina och Leo?",
+        "options": [
+          "En koja",
+          "En snögubbe",
+          "En båt",
+          "En bro"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Var kom Frost ifrån?",
+        "options": [
+          "Från staden",
+          "Från sjön",
+          "Från skogen",
+          "Från ett stall"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur reagerade barnen?",
+        "options": [
+          "De sprang efter honom",
+          "De stod stilla",
+          "De ropade högt",
+          "De kastade snö"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad tänkte barnen efteråt?",
+        "options": [
+          "Att de drömde",
+          "Att det var en vanlig häst",
+          "Att de sett något magiskt",
+          "Att det var farligt"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 133
+  },
+  {
+    "id": "ak7-tema-001",
+    "title": "Miley Cyrus – från barnstjärna till världsartist",
+    "text": "Miley Cyrus föddes år 1992 i USA och växte upp i en familj där musik var en naturlig del av vardagen. Hennes pappa är countrysångare, och redan som liten fick hon följa med bakom scenen på konserter. Det gjorde att hon tidigt blev van vid rampljuset och började drömma om en egen karriär.\n\nDet stora genombrottet kom när hon fick huvudrollen i tv-serien Hannah Montana. Serien handlade om en tonåring som levde ett dubbelliv som vanlig elev och hemlig popstjärna. Programmet blev en enorm succé och gjorde Miley känd över hela världen. Många unga tittare identifierade sig med temat om identitet och att försöka passa in.\n\nSamtidigt som serien sändes släppte hon musik kopplad till rollen. Låtarna toppade listor och turnéerna sålde slut. Men efter några år ville Miley förändra sin image. Hon upplevde att publiken hade svårt att skilja mellan henne och karaktären hon spelade.\n\nNär hon senare släppte albumet Bangerz markerade hon en tydlig nystart. Musiken fick en mer vuxen stil och texterna handlade om självständighet och frihet. Förändringen väckte starka reaktioner. Vissa hyllade hennes mod att utvecklas, medan andra tyckte att hon gick för långt.\n\nUnder åren har Miley fortsatt att experimentera med olika musikstilar, från pop och hiphop till rock och country. Hon har betonat vikten av att vara sann mot sig själv, även när det innebär att möta kritik. I intervjuer har hon berättat om pressen som följer med kändisskap, särskilt när man blir berömd i ung ålder.\n\nUtöver musiken har hon engagerat sig i frågor som rör hemlöshet och ungas rättigheter. Hon har startat en organisation som arbetar för att stötta utsatta ungdomar. På så sätt har hon försökt använda sin berömmelse till något mer än bara underhållning.\n\nMiley Cyrus karriär visar hur svårt det kan vara att växa upp inför en global publik. Hennes resa speglar både möjligheterna och utmaningarna i att forma sin identitet i offentligheten.",
+    "grade": 7,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad bidrog till att Miley tidigt blev van vid rampljuset?",
+        "options": [
+          "Hon gick i en teaterskola som barn",
+          "Hon följde med sin pappa på konserter",
+          "Hon vann en sångtävling i skolan",
+          "Hon spelade i reklamfilmer som liten"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad handlade tv-serien Hannah Montana om?",
+        "options": [
+          "En artist som slutade sjunga",
+          "En familj som flyttade ofta",
+          "En tonåring med ett hemligt popstjärneliv",
+          "En grupp elever i en musikklass"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför ville Miley förändra sin image?",
+        "options": [
+          "Hon ville byta skivbolag",
+          "Publiken blandade ihop henne med rollen",
+          "Hon tröttnade på att turnera",
+          "Serien fick låga tittarsiffror"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur reagerade omvärlden på albumet Bangerz?",
+        "options": [
+          "Alla var positiva",
+          "Ingen märkte förändringen",
+          "Reaktionerna var starka och delade",
+          "Albumet förbjöds i flera länder"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilka ämnen har hon engagerat sig i utanför musiken?",
+        "options": [
+          "Sport och tävlingsidrott",
+          "Hemlöshet och ungas rättigheter",
+          "Teknisk utveckling",
+          "Militärfrågor"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar hennes karriär enligt texten?",
+        "options": [
+          "Att kändisskap alltid är enkelt",
+          "Att barndomsroller är svåra att lämna",
+          "Att musikbranschen inte förändras",
+          "Att identitet kan vara svår att forma offentligt"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 432
+  },
+  {
+    "id": "ak7-tema-002",
+    "title": "Att växa upp i offentligheten",
+    "text": "När Miley Cyrus slog igenom som tonåring blev hon snabbt en av världens mest igenkända unga stjärnor. Att vara känd i så ung ålder innebär särskilda utmaningar. Medier följer varje steg, och sociala medier gör att rykten kan spridas på några minuter.\n\nUnder tiden med Hannah Montana byggdes en tydlig bild av Miley som en glad och relativt oskyldig tonårsidol. Den bilden skapades inte bara av serien utan också av marknadsföring, intervjuer och fansens förväntningar. När hon senare förändrade sin stil uppstod en konflikt mellan publikens gamla bild och hennes nya uttryck.\n\nMånga forskare menar att unga kändisar ofta hamnar i en situation där deras personliga utveckling tolkas som en offentlig händelse. För en vanlig tonåring sker förändringar mer privat. För Miley diskuterades klädval, musikstil och relationer öppet i pressen.\n\nSamtidigt gav berömmelsen henne stora möjligheter. Hon kunde nå ut till miljoner människor med sin musik och sina budskap. När hon talade om psykisk hälsa och rätten att vara sig själv lyssnade många unga fans noga.\n\nEn viktig del av hennes resa har varit att ta kontroll över sin egen berättelse. Genom att skriva egen musik och delta i produktionen har hon försökt påverka hur hon framställs. Det är ett sätt att minska avståndet mellan den privata personen och den offentliga bilden.\n\nKritiker har ibland ifrågasatt hennes val, men hon har återkommande betonat att förändring är en naturlig del av att bli vuxen. Hennes karriär kan därför ses som ett exempel på hur identitet formas i mötet mellan individ och publik.\n\nAtt växa upp i offentligheten innebär både privilegier och press. Miley Cyrus erfarenheter visar hur komplicerat det kan vara att hitta balansen mellan andras förväntningar och den egna viljan.",
+    "grade": 7,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad gör kändisskap i ung ålder särskilt utmanande enligt texten?",
+        "options": [
+          "Att man måste resa hela tiden",
+          "Att medier och sociala medier granskar allt",
+          "Att man inte får tjäna pengar",
+          "Att man inte får byta stil"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur skapades bilden av Miley som tonårsidol?",
+        "options": [
+          "Genom marknadsföring, serien och fansens förväntningar",
+          "Enbart genom hennes familj",
+          "Genom skolans regler",
+          "Bara genom hennes klädval"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Varför blev hennes förändring kontroversiell?",
+        "options": [
+          "Hon slutade helt med musik",
+          "Hon flyttade utomlands",
+          "Den nya stilen krockade med den gamla bilden",
+          "Hon vägrade intervjuer"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vilken fördel gav berömmelsen henne?",
+        "options": [
+          "Hon slapp kritik",
+          "Hon kunde påverka många med sina budskap",
+          "Hon behövde inte arbeta",
+          "Hon slapp sociala medier"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur har hon försökt ta kontroll över sin berättelse?",
+        "options": [
+          "Genom att sluta uppträda",
+          "Genom att skriva egen musik och producera",
+          "Genom att undvika fans",
+          "Genom att byta namn"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att berömmelse alltid är negativt",
+          "Att unga artister inte förändras",
+          "Att identitet formas i mötet mellan individ och publik",
+          "Att sociala medier bör förbjudas"
+        ],
+        "correct": 2
+      }
+    ],
+    "word_count": 428
+  },
+  {
+    "id": "ak7-tema-003",
+    "title": "Musikalisk utveckling och stilbyten",
+    "text": "Miley Cyrus musikaliska karriär kännetecknas av tydliga stilförändringar. I början var hennes musik starkt kopplad till tv-serien Hannah Montana och riktade sig främst till en ung publik. Låtarna hade enkla budskap om vänskap och drömmar.\n\nEfter att serien avslutats började hon experimentera mer. Albumet Bangerz innehöll influenser från hiphop och elektronisk pop. Texterna blev mer personliga och handlade om relationer, självständighet och att bryta normer. För många fans blev det en överraskning.\n\nSenare återvände hon delvis till sina rötter genom att spela in musik med tydligare inslag av rock och country. Den variationen visar att hon inte vill låsa sig vid en enda genre. I intervjuer har hon sagt att musik ska spegla den person man är just då i livet.\n\nMusikkritiker har haft delade åsikter om hennes förändringar. Vissa menar att hon är modig och kreativ, medan andra tycker att stilbytena kan uppfattas som strategiska sätt att skapa uppmärksamhet. Det väcker frågan om hur mycket av en artists utveckling som är konstnärlig och hur mycket som påverkas av marknaden.\n\nTrots kritiken har flera av hennes låtar nått höga placeringar på topplistor världen över. Hon har också uppträtt på stora galor och prisats för sin röst. Många framhåller att hennes sångteknik har utvecklats och blivit mer kraftfull med åren.\n\nMiley Cyrus karriär illustrerar hur en artist kan förändras över tid utan att helt förlora sin publik. Genom att våga testa nya uttryck har hon fortsatt vara relevant i en bransch som ständigt förändras.",
+    "grade": 7,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Hur beskrivs hennes tidiga musik?",
+        "options": [
+          "Som mörk och experimentell",
+          "Som kopplad till en tv-serie och ung publik",
+          "Som klassisk opera",
+          "Som instrumental jazz"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad kännetecknade albumet Bangerz?",
+        "options": [
+          "Enbart countrylåtar",
+          "Tyst och akustisk stil",
+          "Influenser från hiphop och elektronisk pop",
+          "Barnvisor"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Varför har kritiker haft delade åsikter?",
+        "options": [
+          "Hon slutade uppträda live",
+          "Stilbytena kan tolkas olika",
+          "Hon skrev inga egna texter",
+          "Hon vann för många priser"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad har hänt med hennes sångteknik enligt texten?",
+        "options": [
+          "Den har blivit svagare",
+          "Den är oförändrad",
+          "Den har blivit mer kraftfull",
+          "Hon sjunger inte längre"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad visar hennes återgång till rock och country?",
+        "options": [
+          "Att hon vill prova olika genrer",
+          "Att hon slutat med pop",
+          "Att hon bara följer trender",
+          "Att hon inte skriver musik längre"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad är ett centralt tema i texten?",
+        "options": [
+          "Att marknaden alltid styr allt",
+          "Att artister bör undvika förändring",
+          "Att publiken inte accepterar nya stilar",
+          "Att musikalisk utveckling kan hålla en artist relevant"
+        ],
+        "correct": 3
+      }
+    ],
+    "word_count": 427
+  },
+  {
+    "id": "ak7-tema-004",
+    "title": "Kontroverser och offentlig debatt",
+    "text": "Miley Cyrus karriär har inte bara handlat om musik utan också om uppmärksammade kontroverser. När hon förändrade sin stil i början av 2010-talet diskuterades hennes scenframträdanden flitigt i medier världen över. Vissa ansåg att hon bröt mot förväntningarna på hur en tidigare barnstjärna borde uppträda.\n\nDebatten handlade ofta om gränsen mellan konstnärlig frihet och ansvar. Kritiker menade att hennes framträdanden kunde påverka unga fans negativt. Andra försvarade henne och betonade att hon som vuxen artist hade rätt att uttrycka sig fritt.\n\nKontroverserna visar hur starka normer som finns kring kön och kändisskap. Flera kommentatorer har påpekat att kvinnliga artister ofta granskas hårdare än manliga kollegor när de förändrar sin image. Därför blev diskussionen om Miley också en del av en större samhällsdebatt.\n\nSamtidigt kan uppmärksamhet, även negativ sådan, bidra till ökad synlighet. I en konkurrensutsatt musikbransch kan debatt göra att fler lyssnar av nyfikenhet. Det betyder dock inte att alla kontroverser är planerade.\n\nMiley har själv sagt att hon ibland känt sig missförstådd. Hon har förklarat att hennes mål varit att visa olika sidor av sig själv, inte att provocera för sakens skull. Med tiden har delar av kritiken tonats ner, och fokus har i större utsträckning återgått till hennes musik.\n\nFallet Miley Cyrus visar hur populärkultur och samhällsnormer hänger samman. En artists val kan bli startpunkten för bredare diskussioner om frihet, ansvar och identitet.",
+    "grade": 7,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vad startade många av kontroverserna?",
+        "options": [
+          "Hennes flytt till ett annat land",
+          "Hennes förändrade scenframträdanden",
+          "Ett uppehåll från musiken",
+          "En konflikt med fans"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad handlade debatten ofta om?",
+        "options": [
+          "Biljettpriser",
+          "Tekniska problem på konserter",
+          "Gränsen mellan frihet och ansvar",
+          "Val av skivbolag"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad har vissa kommentatorer påpekat?",
+        "options": [
+          "Att alla artister behandlas lika",
+          "Att kvinnliga artister ofta granskas hårdare",
+          "Att sociala medier saknar betydelse",
+          "Att publiken inte bryr sig om image"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Hur kan negativ uppmärksamhet påverka en artist?",
+        "options": [
+          "Den minskar alltid publiken",
+          "Den gör att musiken förbjuds",
+          "Den leder till pensionering",
+          "Den kan öka synligheten"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Hur har Miley beskrivit sina avsikter?",
+        "options": [
+          "Att hon ville provocera med flit",
+          "Att hon ville visa olika sidor av sig själv",
+          "Att hon följde andras råd",
+          "Att hon inte brydde sig om publiken"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad visar hennes fall enligt texten?",
+        "options": [
+          "Att normer och populärkultur påverkar varandra",
+          "Att musik saknar samhällsbetydelse",
+          "Att debatter snabbt försvinner",
+          "Att alla kontroverser är planerade"
+        ],
+        "correct": 0
+      }
+    ],
+    "word_count": 425
+  },
+  {
+    "id": "ak7-tema-005",
+    "title": "Engagemang och samhällspåverkan",
+    "text": "Förutom sin musik är Miley Cyrus känd för sitt samhällsengagemang. Hon har bland annat arbetat för att uppmärksamma hemlöshet bland unga och för att stärka rättigheter för hbtq-personer. Genom intervjuer och sociala medier har hon försökt använda sin plattform för att sprida kunskap.\n\nHon har också startat en stiftelse som samarbetar med olika organisationer. Målet är att ge stöd till unga människor som lever i utsatthet. Genom kampanjer och insamlingar har stiftelsen samlat in pengar till projekt som erbjuder boende och rådgivning.\n\nAtt en känd artist engagerar sig i samhällsfrågor kan ha stor betydelse. Fans som ser upp till en idol kan inspireras att själva engagera sig. Samtidigt finns det de som menar att kändisar bör hålla sig till underhållning. Diskussionen handlar om vilken roll offentliga personer bör ha i politiska och sociala frågor.\n\nMiley har argumenterat för att tystnad också är ett ställningstagande. Hon menar att den som har möjlighet att påverka bör använda sin röst. Det synsättet har gjort henne till en tydlig profil i vissa samhällsdebatter.\n\nEngagemanget har inte alltid varit okontroversiellt, men det har bidragit till att bredda bilden av henne som artist. Hon framstår inte enbart som popstjärna utan också som aktiv medborgare.\n\nSammanfattningsvis visar Miley Cyrus hur kultur och samhälle kan samspela. En artist kan både underhålla och delta i viktiga diskussioner om rättvisa och mänskliga rättigheter.",
+    "grade": 7,
+    "category": "Kultur",
+    "questions": [
+      {
+        "q": "Vilka frågor har hon särskilt engagerat sig i?",
+        "options": [
+          "Teknikutveckling och sport",
+          "Hemlöshet bland unga och hbtq-rättigheter",
+          "Skattepolitik",
+          "Militära frågor"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Vad är syftet med hennes stiftelse?",
+        "options": [
+          "Att producera musik",
+          "Att ordna konserter",
+          "Att ge stöd till utsatta unga",
+          "Att marknadsföra kläder"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Hur kan fans påverkas av hennes engagemang?",
+        "options": [
+          "De kan inspireras att engagera sig själva",
+          "De slutar lyssna på musik",
+          "De måste skänka pengar",
+          "De får inga egna åsikter"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Vad menar vissa kritiker?",
+        "options": [
+          "Att kändisar bör hålla sig till underhållning",
+          "Att artister inte får rösta",
+          "Att musik är farligt",
+          "Att fans bestämmer politiken"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Hur ser Miley på att använda sin röst?",
+        "options": [
+          "Hon tycker att man ska vara tyst",
+          "Hon menar att tystnad är neutralt",
+          "Hon anser att man bör påverka om man kan",
+          "Hon undviker samhällsfrågor"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Att artister inte bör delta i debatter",
+          "Att samhällsengagemang kan vara en del av en artists roll",
+          "Att musik och samhälle är helt separata",
+          "Att kändisar alltid är eniga"
+        ],
+        "correct": 1
+      }
+    ],
+    "word_count": 426
+  },
+  {
+    "id": "ak9-lotr-001",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Trilogins uppbyggnad och handling",
+    "text": "Sagan om ringen är en trilogi skriven av den brittiske författaren J.R.R. Tolkien. Verket publicerades i tre delar: \"Sagan om ringen: Härskarringen\", \"Sagan om ringen: Sagan om de två tornen\" och \"Sagan om ringen: Konungens återkomst\". Trots att böckerna ofta kallas en trilogi var de från början tänkta som ett sammanhängande verk, men delades upp av praktiska och ekonomiska skäl.\n\nBerättelsen utspelar sig i den fiktiva världen Midgård och kretsar kring den mäktiga ringen som smiddes av den mörke härskaren Sauron. Ringen ger sin bärare stor makt men korrumperar samtidigt den som använder den. När hobbiten Frodo får ansvaret att förstöra ringen inleds en farofylld resa mot Domedagsberget i landet Mordor.\n\nUnder resans gång bildas Ringens brödraskap, bestående av representanter från olika folk: hobbitar, människor, en alv, en dvärg och en trollkarl. Deras mål är gemensamt, men deras vägar skiljs åt när hotet från Sauron växer. I den andra delen fördjupas konflikten genom stora slag och inre prövningar. Den tredje delen knyter samman berättelsen genom avgörande strider och ringens slutliga öde.\n\nTrilogin växlar mellan storslagna krigsscener och personliga skildringar av rädsla, tvivel och hopp. Genom att följa flera parallella handlingar skapas en komplex struktur där små handlingar får stora konsekvenser.\n\nSagan om ringen handlar inte enbart om kampen mellan gott och ont, utan också om ansvar, vänskap och uppoffring. Det är samspelet mellan dessa teman som ger berättelsen dess djup och långvariga betydelse i litteraturhistorien.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför delades verket upp i tre delar?",
+        "options": [
+          "För att Tolkien ändrade handlingen",
+          "Av praktiska och ekonomiska skäl",
+          "För att läsarna krävde det",
+          "På grund av censur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ringens främsta egenskap enligt texten?",
+        "options": [
+          "Den gör bäraren odödlig",
+          "Den ger makt men korrumperar",
+          "Den kan tala med djur",
+          "Den lyser i mörkret"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter platsen där ringen måste förstöras?",
+        "options": [
+          "Vattnadal",
+          "Gondor",
+          "Domedagsberget",
+          "Isengård"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur skildras berättelsens struktur?",
+        "options": [
+          "Som en enkel rak handling",
+          "Genom parallella handlingar",
+          "Genom dagboksanteckningar",
+          "Genom brev mellan karaktärer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett centralt tema i trilogin?",
+        "options": [
+          "Teknisk utveckling",
+          "Ansvar och uppoffring",
+          "Ekonomisk tillväxt",
+          "Vetenskapliga upptäckter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket påstående sammanfattar textens huvudidé bäst?",
+        "options": [
+          "Trilogin är en enkel äventyrsberättelse",
+          "Böckerna handlar enbart om krig",
+          "Verket kombinerar stora slag med personliga prövningar",
+          "Berättelsen saknar djupare teman"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 486,
+      "fingerprint": "ak9-lotr-001",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-002",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Karaktärsutveckling i trilogin",
+    "text": "En av de mest framträdande aspekterna i Sagan om ringen är karaktärernas utveckling. Frodo börjar som en relativt obekymrad hobbit i Fylke men förändras gradvis under ringens tyngd. Uppdraget att bära ringen innebär inte bara fysiska faror utan också en psykisk kamp mot dess inflytande.\n\nSamwise Gamgi framstår först som en lojal följeslagare, men hans roll växer successivt. I de mest kritiska ögonblicken visar han mod och handlingskraft som är avgörande för uppdragets framgång. Genom Sam betonas vikten av trofasthet och vardagligt hjältemod.\n\nAragorn representerar en annan typ av utveckling. Han introduceras som en kringvandrande vandrare, men det avslöjas gradvis att han är arvtagare till Gondors tron. Hans resa handlar om att acceptera sitt ansvar och kliva fram som ledare. Denna utveckling speglar temat om att växa in i sin roll.\n\nÄven bifigurer som Boromir och Gollum har komplexa personligheter. Boromirs fall visar hur även goda avsikter kan korrumperas av maktbegär. Gollum är en tragisk gestalt som både väcker avsky och medkänsla. Hans inre konflikt mellan Sméagol och Gollum illustrerar ringens splittrande kraft.\n\nGenom dessa karaktärer utforskar Tolkien hur människor – och andra folk – reagerar under press. Vissa bryts ner, andra stärks. Förändringarna är sällan enkla eller entydiga, vilket ger berättelsen psykologiskt djup.\n\nKaraktärsutvecklingen gör att läsaren engageras känslomässigt. Det är inte bara världens öde som står på spel, utan också individernas moraliska val och personliga kamp.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur förändras Frodo under berättelsen?",
+        "options": [
+          "Han blir kung",
+          "Han påverkas psykiskt av ringens börda",
+          "Han lämnar uppdraget tidigt",
+          "Han förblir helt opåverkad"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad symboliserar Samwise enligt texten?",
+        "options": [
+          "Politiskt ledarskap",
+          "Teknisk kunskap",
+          "Trofasthet och vardagligt hjältemod",
+          "Militär strategi"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar Aragorns utveckling främst om?",
+        "options": [
+          "Att undvika ansvar",
+          "Att finna en magisk skatt",
+          "Att acceptera sin roll som ledare",
+          "Att lämna Midgård"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Boromirs öde?",
+        "options": [
+          "Att mod alltid räcker",
+          "Att maktbegär kan korrumpera även goda personer",
+          "Att människor inte påverkas av ringen",
+          "Att han saknar lojalitet från början"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur framställs Gollum?",
+        "options": [
+          "Som en entydigt ond figur",
+          "Som en komisk karaktär",
+          "Som en tragisk gestalt med inre konflikt",
+          "Som en hjälte utan brister"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudfokus?",
+        "options": [
+          "De stora slagen",
+          "Karaktärernas moraliska och psykologiska utveckling",
+          "Midgårds geografi",
+          "Ringens tekniska egenskaper"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 478,
+      "fingerprint": "ak9-lotr-002",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-003",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Teman och symbolik",
+    "text": "Sagan om ringen innehåller en rik symbolik som har analyserats av litteraturforskare i decennier. Ett centralt tema är kampen mellan gott och ont, men Tolkien undviker en förenklad uppdelning. Ondskan representeras inte bara av yttre fiender som Sauron utan också av den inre frestelsen att använda ringen för egna syften.\n\nRingen fungerar som en symbol för absolut makt. Den lockar genom att erbjuda kontroll och styrka, men priset är att bärarens moral gradvis bryts ner. Detta kan tolkas som en kommentar till hur makt kan korrumpera även den mest välmenande individ.\n\nEtt annat viktigt tema är hoppets betydelse i mörka tider. Trots överväldigande motstånd fortsätter karaktärerna att kämpa. Små handlingar av mod, särskilt från till synes obetydliga figurer, får avgörande konsekvenser. Tolkien betonar därmed att även den minsta person kan påverka historiens gång.\n\nNaturens roll är också framträdande. Skogar, berg och floder skildras som levande miljöer med egen betydelse. Kontrasten mellan det industriella Isengård och de gröna landskapen i Fylke kan ses som en kritik mot oreflekterad industrialisering.\n\nVänskap och gemenskap utgör ytterligare ett genomgående tema. Ringens brödraskap visar hur samarbete mellan olika folk är nödvändigt för att möta hotet. Skillnader i kultur och bakgrund övervinns genom ett gemensamt mål.\n\nGenom denna mångfacetterade symbolik förblir trilogin öppen för tolkning. Läsaren inbjuds att reflektera över makt, moral och ansvar i både den fiktiva världen och i verkligheten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad symboliserar ringen främst?",
+        "options": [
+          "Evig vänskap",
+          "Absolut makt",
+          "Naturens kraft",
+          "Teknologisk utveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur framställs ondskan i texten?",
+        "options": [
+          "Enbart som yttre fiender",
+          "Som både yttre hot och inre frestelse",
+          "Som ett missförstånd",
+          "Som humoristisk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betonas genom de små karaktärernas mod?",
+        "options": [
+          "Att styrka är oviktig",
+          "Att bara kungar förändrar historien",
+          "Att även den minsta kan påverka",
+          "Att ödet är förutbestämt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan kontrasten mellan Fylke och Isengård tolkas som?",
+        "options": [
+          "En slumpmässig miljöbeskrivning",
+          "En karta över Europa",
+          "En kritik mot industrialisering",
+          "En religiös symbol"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är trilogin öppen för tolkning?",
+        "options": [
+          "Den saknar tydliga teman",
+          "Den innehåller rik symbolik",
+          "Den är ofullständig",
+          "Den har flera författare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudsakliga fokus?",
+        "options": [
+          "Militära strategier",
+          "Böckernas publiceringshistoria",
+          "Teman och symbolik i berättelsen",
+          "Filmatiseringarnas effekter"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 482,
+      "fingerprint": "ak9-lotr-003",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-004",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Miljöer och världsbygge",
+    "text": "En avgörande faktor bakom Sagan om ringens genomslag är det omfattande världsbygget. Tolkien skapade inte enbart en bakgrund till handlingen, utan en hel värld med detaljerad historia, språk och geografi. Kartor över Midgård hjälper läsaren att följa karaktärernas långa resor.\n\nFylke framställs som en idyllisk landsbygd där hobbitar lever i fred och enkelhet. Kontrasten är stark mot Mordor, ett kargt och mörkt landskap präglat av aska och vulkanisk aktivitet. Dessa miljöer förstärker berättelsens moraliska dimensioner.\n\nStäder som Minas Tirith och fästningar som Helms klyfta bidrar till känslan av historisk tyngd. Arkitekturen och de gamla traditionerna antyder en lång och komplex bakgrund. Läsaren möter ruiner och minnen från tidigare epoker, vilket skapar en känsla av att världen existerade långt före huvudpersonernas tid.\n\nSpråken spelar också en central roll. Tolkien konstruerade flera alvspråk med egen grammatik och ljudlära. Dessa språk ger kulturerna i Midgård en särskild identitet och bidrar till autenticitet.\n\nVärldsbygget är inte enbart dekorativt, utan påverkar handlingen. Geografin avgör vilka vägar som är möjliga, och historiska konflikter påverkar relationerna mellan olika folk. På så sätt blir miljön en aktiv del av berättelsen.\n\nDet är denna noggrannhet som gör att läsaren kan uppleva Midgård som en levande och trovärdig värld. Världsbygget skapar en illusion av realism trots att berättelsen tillhör fantasylitteraturen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Tolkiens världsbygge?",
+        "options": [
+          "Brist på detaljer",
+          "Detaljerad historia och geografi",
+          "Enbart muntliga traditioner",
+          "Fokus på modern teknik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur beskrivs Fylke?",
+        "options": [
+          "Som en krigszon",
+          "Som en industriell stad",
+          "Som en fredlig landsbygd",
+          "Som ett ökenlandskap"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad bidrar ruiner och gamla traditioner till?",
+        "options": [
+          "Känslan av historisk tyngd",
+          "Komisk effekt",
+          "Snabbare tempo",
+          "Mindre trovärdighet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skapade Tolkien egna språk?",
+        "options": [
+          "För att dölja handlingen",
+          "För att förenkla berättelsen",
+          "För att ge kulturerna identitet",
+          "För att undvika översättningar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar geografin handlingen?",
+        "options": [
+          "Den har ingen betydelse",
+          "Den avgör möjliga vägar och konflikter",
+          "Den förändras ständigt",
+          "Den ersätts av kartor i slutet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudpoäng?",
+        "options": [
+          "Att miljön är oviktig",
+          "Att världsbygget skapar trovärdighet",
+          "Att trilogin saknar karta",
+          "Att språken är slumpmässiga"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 479,
+      "fingerprint": "ak9-lotr-004",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak9-lotr-005",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Makt, ansvar och moral",
+    "text": "I Sagan om ringen är frågan om makt och ansvar central. Ringen erbjuder enorm kraft, men den som bär den riskerar att förlora sin moraliska kompass. Detta skapar ett etiskt dilemma: är det rätt att använda ondskans verktyg för att bekämpa ondskan själv?\n\nFrodo accepterar uppdraget att bära ringen trots att han inte söker makt. Hans beslut grundas i en känsla av ansvar snarare än ambition. Samtidigt visar berättelsen att även den mest godhjärtade individ kan påverkas av frestelse.\n\nGandalf och Galadriel avstår medvetet från att ta ringen när de erbjuds den. De inser att deras goda avsikter inte skulle skydda dem från dess inflytande. Genom deras val betonas vikten av självinsikt och återhållsamhet.\n\nBoromirs försök att ta ringen illustrerar motsatsen. Han motiveras av viljan att försvara sitt folk, men hans handling visar hur lätt goda syften kan förvandlas till maktbegär. Hans senare ånger ger dock karaktären en tragisk värdighet.\n\nBerättelsen visar att verklig styrka inte alltid ligger i att dominera andra, utan i att avstå från makt. Det är genom uppoffring och samarbete som hotet till slut kan besegras.\n\nTrilogin ställer därmed frågor som sträcker sig bortom fantasyns värld. Hur bör makt användas? När blir ambition farlig? Genom sina karaktärers val uppmuntrar Tolkien läsaren att reflektera över moral och ansvar även i den egna verkligheten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket etiskt dilemma lyfts i texten?",
+        "options": [
+          "Om teknik ska förbjudas",
+          "Om man ska använda ondskans verktyg mot ondskan",
+          "Om krig alltid är rätt",
+          "Om vänskap är viktigare än lagar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad motiverar Frodos beslut att bära ringen?",
+        "options": [
+          "Maktbegär",
+          "Rädsla för kritik",
+          "Känsla av ansvar",
+          "Önskan om rikedom"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför avstår Gandalf och Galadriel från ringen?",
+        "options": [
+          "De är rädda för Sauron",
+          "De förstår att de kan korrumperas",
+          "De saknar mod",
+          "De vill lämna Midgård"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Boromirs handling?",
+        "options": [
+          "Att han är helt ond",
+          "Att han saknar lojalitet",
+          "Att goda syften kan leda fel",
+          "Att ringen är ofarlig"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur definieras verklig styrka enligt texten?",
+        "options": [
+          "Att dominera andra",
+          "Att samla rikedom",
+          "Att avstå från makt när det behövs",
+          "Att vinna alla strider"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad uppmanas läsaren att göra?",
+        "options": [
+          "Att ignorera moraliska frågor",
+          "Att analysera språken",
+          "Att jämföra filmerna med böckerna",
+          "Att reflektera över moral och ansvar"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 480,
+      "fingerprint": "ak9-lotr-005",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak10-ai-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "Vad är artificiell intelligens?",
+    "text": "Artificiell intelligens, ofta förkortat AI, syftar på datorprogram som kan utföra uppgifter som traditionellt kräver mänsklig intelligens. Dessa uppgifter inkluderar inlärning, problemlösning, mönsterigenkänning och beslutsfattande. Till skillnad från vanliga program som följer fördefinierade regler kan AI-system lära sig från data och anpassa sitt beteende över tid.\n\nDet finns olika typer av AI. Svag AI, eller smal AI, är specialiserad på en enda uppgift, till exempel att rekommendera filmer eller identifiera ansikten i fotografier. Stark AI, som ännu inte existerar, skulle kunna utföra alla intellektuella uppgifter som en människa kan. Mellan dessa ytterligheter utvecklas generativa AI-system som kan producera text, bilder och musik.\n\nMaskininlärning är en central teknik inom AI. Istället för att programmeras med explicita regler tränas systemen på stora mängder data. Genom att identifiera mönster kan de sedan göra förutsägelser eller beslut om ny information. Djupinlärning, en form av maskininlärning inspirerad av hjärnans struktur, har möjliggjort stora framsteg inom bild- och språkbehandling.\n\nAI-system påverkar redan vår vardag på många sätt. Sökmotorer, sociala mediers flöden och översättningsverktyg drivs av AI. Inom sjukvården används AI för att analysera medicinska bilder, och inom transport utvecklas självkörande fordon.\n\nSamtidigt väcker tekniken frågor om transparens och kontroll. Hur fattar ett AI-system sina beslut? Vem ansvarar när ett system gör fel? Dessa frågor blir allt viktigare i takt med att AI integreras i fler samhällsområden.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad skiljer AI från vanliga datorprogram?",
+        "options": [
+          "AI är alltid snabbare",
+          "AI kan lära sig från data",
+          "AI kräver mer minne",
+          "AI fungerar utan elektricitet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas AI som är specialiserad på en enda uppgift?",
+        "options": [
+          "Stark AI",
+          "Generativ AI",
+          "Svag AI",
+          "Superdator"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är maskininlärning?",
+        "options": [
+          "Robotar som bygger datorer",
+          "System som tränas på data",
+          "Program med fasta regler",
+          "Fysisk datorutrustning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämns hjärnans struktur i texten?",
+        "options": [
+          "För att kritisera AI",
+          "Som inspiration för djupinlärning",
+          "För att visa att AI är medvetet",
+          "Som historisk bakgrund"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lyfts frågan om ansvar?",
+        "options": [
+          "Eftersom AI alltid gör rätt",
+          "Eftersom det är oklart vem som ansvarar för fel",
+          "Eftersom ingen använder AI",
+          "Eftersom AI har juridiska rättigheter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket påstående sammanfattar texten bäst?",
+        "options": [
+          "AI är en enkel teknik utan utmaningar",
+          "AI omfattar system som lär sig och påverkar samhället",
+          "AI existerar endast i forskning",
+          "AI är farligare än användbart"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 432,
+      "fingerprint": "ak10-ai-001",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak10-ai-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "teknik",
+    "title": "AI i arbetslivet",
+    "text": "Artificiell intelligens förändrar arbetsmarknaden på flera sätt. Vissa arbetsuppgifter automatiseras, vilket leder till att traditionella roller försvinner eller omdefinieras. Samtidigt skapas nya yrken som kräver kompetens inom dataanalys, AI-utveckling och etisk granskning av algoritmiska system.\n\nHistoriskt har teknologiska skiften alltid inneburit både förlust och tillkomst av jobb. Industrialiseringen ersatte hantverk med fabriksarbete, medan digitaliseringen skapade helt nya branscher. AI-revolutionen följer ett liknande mönster, men förändringens hastighet är större än tidigare.\n\nYrken med rutinmässiga och repetitiva uppgifter är särskilt utsatta. Dataregistrering, enklare kundtjänst och vissa administrativa funktioner kan redan i dag utföras av AI-system. Samtidigt är yrken som kräver kreativitet, empati och komplex social interaktion svårare att automatisera.\n\nEn viktig fråga är hur samhället ska hantera övergångsperioden. Utbildningssystem behöver anpassas för att förbereda kommande generationer på en arbetsmarknad där livslångt lärande blir normen. Omskolning av befintlig arbetskraft är också avgörande.\n\nDet finns olika perspektiv på AI:s effekter. Vissa betonar produktivitetsvinster och möjligheten att frigöra människor från tråkiga uppgifter. Andra varnar för ökad ojämlikhet om AI-vinster koncentreras till ett fåtal företag och individer.\n\nOavsett perspektiv står det klart att AI kommer att påverka hur vi arbetar. Förmågan att samarbeta med AI-system, förstå deras begränsningar och reflektera kritiskt över deras resultat blir allt viktigare kompetenser.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilka yrken är särskilt utsatta för automatisering?",
+        "options": [
+          "Kreativa yrken",
+          "Rutinmässiga och repetitiva jobb",
+          "Sociala yrken",
+          "Chefspositioner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad jämförs AI-revolutionen med i texten?",
+        "options": [
+          "Klimatförändringar",
+          "Tidigare teknologiska skiften",
+          "Politiska revolutioner",
+          "Kulturella trender"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför betonas livslångt lärande?",
+        "options": [
+          "För att arbetsmarknaden förändras snabbt",
+          "För att utbildning blir billigare",
+          "För att alla ska bli AI-utvecklare",
+          "För att pensionsåldern höjs"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär varningen om ökad ojämlikhet?",
+        "options": [
+          "Att AI är tekniskt begränsad",
+          "Att vinsterna kan fördelas ojämnt",
+          "Att alla förlorar på AI",
+          "Att utbildning blir sämre"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är empati svår att automatisera?",
+        "options": [
+          "Den kräver mänsklig förståelse",
+          "Den är tekniskt enkel",
+          "Den behövs inte i arbetslivet",
+          "AI har redan ersatt den"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "AI tar alla jobb",
+          "AI påverkar arbetsmarknaden men skapar också möjligheter",
+          "AI har ingen effekt på arbetslivet",
+          "Endast programmerare påverkas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 398,
+      "fingerprint": "ak10-ai-002",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak10-ai-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "etik",
+    "title": "Etiska utmaningar med AI",
+    "text": "I takt med att AI-system får större inflytande över beslut som påverkar människors liv uppstår en rad etiska frågor. Dessa handlar om rättvisa, transparens, integritet och ansvar. Att hantera dessa utmaningar är avgörande för att säkerställa att AI-utvecklingen gynnar samhället som helhet.\n\nEtt centralt problem är algoritmisk bias. AI-system tränas på historisk data, vilket innebär att de kan ärva och förstärka befintliga fördomar. Om ett rekryteringsverktyg tränas på data där män dominerat kommer det att favorisera manliga kandidater. Liknande problem har identifierats inom kreditbedömning, brottsförutsägelse och ansiktsigenkänning.\n\nTransparens är en annan utmaning. Många AI-system, särskilt djupinlärningsmodeller, fungerar som svarta lådor vars beslut är svåra att förklara. När ett AI-system nekar någon ett lån eller föreslår en diagnos är det problematiskt om beslutet inte kan motiveras.\n\nIntegritetsfrågor aktualiseras av AI:s förmåga att analysera stora mängder persondata. Ansiktsigenkänning i offentliga miljöer, prediktiv polisverksamhet och personlig reklam baserad på beteendeanalys väcker frågor om övervakningens gränser.\n\nVem bär ansvaret när ett AI-system orsakar skada? Om en självkörande bil orsakar en olycka är det tillverkaren, programmeraren eller användaren som ska hållas ansvarig? Nuvarande rättssystem är inte alltid anpassade för dessa situationer.\n\nFör att möta utmaningarna utvecklas olika ramverk för etisk AI. Principer som rättvisa, förklarbarhet och ansvarsskyldighet lyfts fram. Regleringar som EU:s AI-förordning syftar till att säkerställa att högrisk-AI uppfyller grundläggande krav.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är algoritmisk bias?",
+        "options": [
+          "En typ av datavirus",
+          "Att AI ärver fördomar från träningsdata",
+          "En mätmetod för AI-prestanda",
+          "En programmeringsteknik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför kallas vissa AI-system för svarta lådor?",
+        "options": [
+          "De är fysiskt svarta",
+          "Deras beslut är svåra att förklara",
+          "De saknar strömförsörjning",
+          "De är hemligstämplade"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket exempel ges på integritetsproblem?",
+        "options": [
+          "Skolundervisning",
+          "Ansiktsigenkänning i offentliga miljöer",
+          "Väderrapporter",
+          "Bibliotekssystem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är ansvarsfrågan komplicerad?",
+        "options": [
+          "Eftersom AI aldrig gör fel",
+          "Eftersom flera aktörer är inblandade",
+          "Eftersom lagen förbjuder AI",
+          "Eftersom AI har juridisk status"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är syftet med EU:s AI-förordning?",
+        "options": [
+          "Att förbjuda all AI",
+          "Att säkerställa grundläggande krav för högrisk-AI",
+          "Att öka AI-utvecklingens hastighet",
+          "Att ta bort transparenskrav"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilken är textens huvudtes?",
+        "options": [
+          "AI saknar etiska problem",
+          "AI-utvecklingen kräver etiska ramverk",
+          "Endast transparens är viktigt",
+          "Reglering är onödig"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 412,
+      "fingerprint": "ak10-ai-003",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak10-ai-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "samhälle",
+    "title": "AI och demokratin",
+    "text": "Artificiell intelligens har potential att både stärka och underminera demokratiska processer. Å ena sidan kan AI användas för att förbättra offentlig förvaltning, öka medborgares tillgång till information och effektivisera beslutsfattande. Å andra sidan finns risker kopplade till desinformation, övervakning och maktkoncentration.\n\nSociala mediers algoritmer, som drivs av AI, påverkar vilken information medborgare exponeras för. Systemens mål att maximera engagemang kan leda till att sensationellt eller polariserande innehåll sprids snabbare än nyanserade nyheter. Filterbubbor uppstår när användare främst ser innehåll som bekräftar deras befintliga åsikter.\n\nGenerativ AI har gjort det enklare att skapa övertygande falskt innehåll. Deepfakes, alltså manipulerade video- eller ljudinspelningar, kan användas för att sprida desinformation om politiska motståndare. Detta utmanar medborgarnas förmåga att bedöma informationens trovärdighet.\n\nSamtidigt kan AI stödja faktakontroll och identifiering av desinformation. Automatiserade system kan flagga misstänkt innehåll för mänsklig granskning. Utmaningen är att balansera effektivitet med risken för censur av legitima åsikter.\n\nÖvervakningsteknik som ansiktsigenkänning och prediktiv analys kan användas av auktoritära regimer för att kontrollera medborgare. Men även i demokratier väcker sådan teknik frågor om avvägningen mellan säkerhet och frihet.\n\nMaktkoncentration är ytterligare en demokratisk utmaning. De företag som kontrollerar AI-utvecklingen och tillgången till data får stort inflytande. Frågan om hur denna makt ska regleras och balanseras är central för demokratins framtid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är filterbubbor enligt texten?",
+        "options": [
+          "Fysiska skydd för datorer",
+          "När användare främst ser bekräftande innehåll",
+          "En typ av AI-algoritm",
+          "Säkerhetsåtgärder online"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är deepfakes?",
+        "options": [
+          "Verkliga nyhetsrapporter",
+          "Manipulerade video- eller ljudinspelningar",
+          "Sociala medie-konton",
+          "Faktakontrollverktyg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan AI stödja faktakontroll?",
+        "options": [
+          "Genom att blockera all information",
+          "Genom att flagga misstänkt innehåll",
+          "Genom att stänga sociala medier",
+          "Genom att ta bort alla algoritmer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan maximerat engagemang vara problematiskt?",
+        "options": [
+          "Det gör användare produktiva",
+          "Det kan sprida polariserande innehåll",
+          "Det minskar informationstillgången",
+          "Det förbjuds av lag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är maktkoncentration ett demokratiskt problem?",
+        "options": [
+          "Eftersom AI företag har stort inflytande",
+          "Eftersom AI är för dyrt",
+          "Eftersom alla har lika tillgång",
+          "Eftersom regleringar saknas helt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens centrala budskap?",
+        "options": [
+          "AI är enbart positivt för demokratin",
+          "AI har både möjligheter och risker för demokratin",
+          "AI bör förbjudas i politiken",
+          "Demokrati påverkas inte av teknik"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 394,
+      "fingerprint": "ak10-ai-004",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak10-ai-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "framtid",
+    "title": "AI:s framtid – möjligheter och osäkerheter",
+    "text": "Framtiden för artificiell intelligens är föremål för intensiv debatt bland forskare, teknikföretag och samhällsanalytiker. Medan vissa ser möjligheter till genombrott som kan lösa globala problem, varnar andra för existentiella risker. Osäkerheten är stor, men konsekvenserna av de val vi gör i dag kan bli avgörande.\n\nOptimisterna pekar på AI:s potential inom medicin, klimatforskning och vetenskaplig upptäckt. AI kan analysera molekylära strukturer för att utveckla nya läkemedel, optimera energisystem för att minska utsläpp och accelerera forskning inom fysik och biologi. Dessa tillämpningar kan förbättra livskvaliteten för miljarder människor.\n\nAndra forskare fokuserar på risker. En central oro gäller så kallad artificiell generell intelligens (AGI) – system med mänsklig nivå av kognitiva förmågor. Om sådana system utvecklas utan tillräckliga säkerhetsåtgärder kan konsekvenserna bli oförutsägbara. Frågor om kontroll och målstyrning blir då avgörande.\n\nPå kortare sikt finns mer konkreta utmaningar. Hur säkerställer vi att AI-system är robusta och pålitliga? Hur förhindrar vi missbruk av tekniken för desinformation eller cyberattacker? Hur fördelar vi nyttan av AI på ett rättvist sätt?\n\nInternationell samordning blir allt viktigare. AI-kapplöpningen mellan länder och företag riskerar att prioritera hastighet framför säkerhet. Initiativ för gemensamma standarder och regler växer fram, men implementeringen är utmanande.\n\nFramtiden är inte förutbestämd. Genom aktiva val kring forskning, reglering och utbildning kan samhället påverka hur AI utvecklas. Att engagera sig i dessa frågor är därför inte bara en angelägenhet för experter, utan för alla medborgare.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är AGI enligt texten?",
+        "options": [
+          "En AI-företagsgrupp",
+          "System med mänsklig kognitiv nivå",
+          "Ett programmeringsspråk",
+          "En regleringsmyndighet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka positiva tillämpningar nämns?",
+        "options": [
+          "Sociala medier och reklam",
+          "Medicin, klimatforskning och vetenskap",
+          "Underhållning och spel",
+          "Militära tillämpningar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad riskerar AI-kapplöpningen att leda till?",
+        "options": [
+          "Bättre internationellt samarbete",
+          "Att hastighet prioriteras före säkerhet",
+          "Långsammare teknikutveckling",
+          "Färre AI-forskare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är målstyrning viktig för AGI?",
+        "options": [
+          "För att spara energi",
+          "För att säkerställa att systemet agerar som avsett",
+          "För att öka beräkningshastigheten",
+          "För att minska kostnader"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar texten med att framtiden inte är förutbestämd?",
+        "options": [
+          "Att AI inte fungerar",
+          "Att samhällets val påverkar utvecklingen",
+          "Att forskare saknar kunskap",
+          "Att reglering är omöjlig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad uppmanar texten läsaren att göra?",
+        "options": [
+          "Att undvika all AI",
+          "Att lita på att experter löser problemen",
+          "Att engagera sig i frågor om AI:s utveckling",
+          "Att fokusera på andra frågor"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 402,
+      "fingerprint": "ak10-ai-005",
+      "generatedAt": "2026-02-27T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak7-tema-001",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Melodifestivalens historia och betydelse",
+    "text": "Melodifestivalen är en av Sveriges mest populära tv-tävlingar och har sänts nästan varje år sedan 1959. Programmet skapades för att välja Sveriges bidrag till Eurovision Song Contest. Under årtiondena har tävlingen utvecklats från en enkel musiktävling i en tv-studio till en stor turné med deltävlingar runt om i landet. I dag besöker Melodifestivalen flera svenska städer innan finalen avgörs i en större arena.\n\nFrån början var det en jury som bestämde vinnaren. Med tiden fick tittarna allt större inflytande genom telefonröstning och senare genom en särskild app. Det har gjort tävlingen mer interaktiv och engagerande. Samtidigt har diskussioner uppstått om hur rättvis röstningen är och om vissa artister gynnas av redan etablerade fanbaser.\n\nMelodifestivalen har också påverkat svensk musikindustri. Många artister har fått sina genombrott genom tävlingen. Exempelvis har både etablerade artister och helt nya namn kunnat nå en bred publik. Låtarna spelas flitigt på radio och strömningstjänster, och vinnaren får representera Sverige internationellt.\n\nProgrammet är mer än bara musik. Det är en stor produktion med avancerad scenteknik, koreografi och visuella effekter. Varje bidrag har tre minuter på sig att övertyga publiken, vilket ställer höga krav på både låtskrivare och artister. Numera skrivs många bidrag av professionella låtskrivarlag, ibland med internationella samarbeten.\n\nSamtidigt har Melodifestivalen fått kritik. Vissa menar att låtarna låter för lika varandra och att kommersiella intressen styr för mycket. Andra anser att tävlingen är en viktig tradition som samlar människor i olika åldrar. För många familjer har det blivit en återkommande lördagsaktivitet under vintern.\n\nSammanfattningsvis är Melodifestivalen både en musiktävling och ett kulturellt fenomen. Den speglar förändringar i samhället, teknikens utveckling och publikens smak. Oavsett om man älskar eller kritiserar tävlingen fortsätter den att engagera miljoner tittare varje år.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför skapades Melodifestivalen från början?",
+        "options": [
+          "För att välja Sveriges bidrag till Eurovision",
+          "För att ersätta alla andra musikprogram",
+          "För att stödja lokala körer",
+          "För att marknadsföra nya tv-kanaler"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur har publikens inflytande förändrats över tid?",
+        "options": [
+          "Publiken har alltid haft full kontroll",
+          "Tittarna har fått större möjlighet att rösta genom teknik",
+          "Röstningen har helt tagits bort",
+          "Endast internationella jurys avgör nu"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken kritik nämns i texten?",
+        "options": [
+          "Att tävlingen är för kort",
+          "Att den saknar publik",
+          "Att låtarna kan låta för lika och styras av kommersiella intressen",
+          "Att den bara sänds på radio"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar utvecklingen av tävlingen enligt texten?",
+        "options": [
+          "Att intresset har minskat varje år",
+          "Att bara unga tittar",
+          "Att juryn numera bestämmer allt",
+          "Att tävlingen har blivit en större och mer tekniskt avancerad produktion"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Melodifestivalens utveckling och betydelse",
+          "En enskild artists karriär",
+          "Hur man skriver en schlagerlåt",
+          "Eurovisions regler i detalj"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur beskrivs Melodifestivalen i slutet av texten?",
+        "options": [
+          "Som en tillfällig trend",
+          "Som ett kulturellt fenomen som engagerar många",
+          "Som en tävling utan betydelse",
+          "Som ett program bara för artister"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-001",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak7-tema-002",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Vägen från deltävling till final",
+    "text": "Melodifestivalen består av flera deltävlingar innan finalen avgörs. Upplägget gör att både artister och publik får följa en längre process. Varje deltävling innehåller ett antal bidrag som framförs live inför publik. Efter varje program går några bidrag direkt till final, medan andra får en ny chans genom ett uppsamlingsprogram.\n\nSystemet med deltävlingar infördes för att skapa större spänning och ge fler städer möjlighet att vara värdar. Det innebär också att produktionen turnerar runt i landet. För artisterna kan det vara både en möjlighet och en utmaning. De måste prestera flera gånger under press och hantera både positiva och negativa reaktioner.\n\nRöstningen sker genom en kombination av publikröster och internationella jurys i finalen. Syftet är att hitta ett bidrag som inte bara fungerar i Sverige utan också har potential internationellt. Det kan dock uppstå diskussioner om balansen mellan folklig smak och expertbedömning.\n\nUnder repetitionerna arbetar tekniker, dansare, producenter och stylister intensivt. En artist som deltar är sällan ensam, utan omges av ett helt team. Tre minuter på scen kräver veckor av planering. Ljussättning, kameravinklar och koreografi måste samspela för att skapa en helhet.\n\nFör unga tittare kan Melodifestivalen bli en första kontakt med hur tv-produktion fungerar. Programmet visar hur kultur, teknik och ekonomi hänger ihop. Samtidigt är det en tävling där känslor spelar stor roll. När resultatet presenteras kan glädje och besvikelse märkas tydligt.\n\nAtt ta sig till final är därför både en musikalisk och strategisk prestation. Det handlar inte bara om att ha en bra låt, utan också om att nå fram till publiken och skapa ett minnesvärt framträdande.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför infördes deltävlingar?",
+        "options": [
+          "För att minska antalet bidrag",
+          "För att skapa mer spänning och låta fler städer vara värdar",
+          "För att undvika publikröstning",
+          "För att göra tävlingen kortare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka är med och avgör finalresultatet?",
+        "options": [
+          "Endast svenska jurys",
+          "Bara publiken i arenan",
+          "Publiken och internationella jurys",
+          "En ensam programledare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar arbetet bakom scenen?",
+        "options": [
+          "Att artisten arbetar helt själv",
+          "Att tre minuter på scen kräver lång planering och samarbete",
+          "Att repetitionerna är oviktiga",
+          "Att tekniken inte spelar någon roll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan uppstå kring röstningen enligt texten?",
+        "options": [
+          "Diskussioner om balansen mellan publik och jury",
+          "Fullständig enighet varje år",
+          "Problem med att hitta artister",
+          "Att finalen ställs in"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkas artisterna av deltävlingarna?",
+        "options": [
+          "De slipper press",
+          "De uppträder bara en gång",
+          "De behöver inte förbereda sig",
+          "De måste prestera flera gånger under press"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Eurovisions historia",
+          "En specifik vinnarlåt",
+          "Processen från deltävling till final",
+          "Hur man röstar via appen"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 360,
+      "fingerprint": "ak7-tema-002",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "tv-spel",
+    "title": "Vad är Fortnite?",
+    "text": "Fortnite är ett populärt tv-spel som spelas av miljontals människor runt om i världen. Spelet går ut på att överleva på en ö tillsammans med många andra spelare. Man hoppar fallskärm från en flygande buss och landar på kartan. Där samlar man vapen, material och utrustning. Målet är att vara den sista spelaren eller det sista laget som är kvar.\n\nI Fortnite kan man spela ensam eller i lag. Många väljer att samarbeta med kompisar. Kommunikation och planering är viktigt för att vinna. Under spelets gång krymper en storm runt kartan. Den gör spelområdet mindre och tvingar spelarna att mötas.\n\nEn särskild sak med Fortnite är att man kan bygga väggar, trappor och skydd av material som trä, sten och metall. Det gör spelet annorlunda jämfört med många andra spel i samma genre. Spelare kan också ändra utseende på sina figurer genom så kallade skins.\n\nFortnite är gratis att ladda ner, men det finns saker i spelet som kostar pengar. Därför är det viktigt att tänka efter innan man köper något. Spelet har en åldersgräns och vuxna bör hjälpa yngre barn att förstå regler och säkerhet på nätet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är målet i Fortnite?",
+        "options": [
+          "Att bygga det största huset",
+          "Att samla flest skins",
+          "Att vara den sista spelaren eller laget kvar",
+          "Att flyga längst med bussen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur börjar en match i Fortnite?",
+        "options": [
+          "Man startar i en bil",
+          "Man hoppar fallskärm från en flygande buss",
+          "Man springer in från kanten av kartan",
+          "Man väljer en stad direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när stormen krymper?",
+        "options": [
+          "Spelområdet blir mindre",
+          "Alla spelare får mer liv",
+          "Matchen pausas",
+          "Kartan blir större"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör Fortnite annorlunda jämfört med många andra liknande spel?",
+        "options": [
+          "Att man kan bygga skydd av olika material",
+          "Att det bara finns en karta",
+          "Att man inte kan spela i lag",
+          "Att spelet saknar vapen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det bra att tänka efter innan man köper saker i spelet?",
+        "options": [
+          "För att spelet kan bli långsamt",
+          "För att vissa saker kostar riktiga pengar",
+          "För att man annars förlorar direkt",
+          "För att man inte får spela igen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man fuskar i spelet",
+          "Fortnites historia som företag",
+          "En speciell turnering",
+          "Vad Fortnite är och hur det fungerar"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 214,
+      "fingerprint": "ak4-tema-001",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-002",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "tv-spel",
+    "title": "Att spela tillsammans i Fortnite",
+    "text": "Många barn och vuxna tycker om att spela Fortnite tillsammans. Spelet gör det möjligt att bilda lag med två, tre eller fyra spelare. När man spelar i lag är samarbete viktigt. Spelarna kan prata med varandra genom headset och planera hur de ska röra sig på kartan.\n\nOm en spelare blir träffad kan lagkamrater hjälpa till att rädda personen. Det gör att man behöver tänka på varandra och inte bara på sig själv. Vissa lag delar upp roller, till exempel att en samlar material medan en annan letar efter bra utrustning.\n\nSamtidigt är det viktigt att följa regler och visa respekt. På nätet kan man möta människor man inte känner. Därför ska man inte dela personlig information. Det är också viktigt att ta pauser och inte spela för länge.\n\nFortnite kan vara roligt och socialt, men det kräver ansvar. Genom att samarbeta, vara schysst och tänka på säkerheten kan spelandet bli en positiv upplevelse för många.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många spelare kan vara i ett lag enligt texten?",
+        "options": [
+          "Endast en spelare",
+          "Två, tre eller fyra spelare",
+          "Minst tio spelare",
+          "Så många man vill"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan spelare prata med varandra under spelet?",
+        "options": [
+          "Genom brev",
+          "Genom att skriva på papper",
+          "Genom headset",
+          "Genom tv:n"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man undvika att dela på nätet?",
+        "options": [
+          "Personlig information",
+          "Speltips",
+          "Kartans namn",
+          "Vilken färg man gillar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det bra att ta pauser?",
+        "options": [
+          "För att spelet annars stängs av",
+          "För att bli bättre snabbare",
+          "För att visa respekt mot laget",
+          "För att inte spela för länge"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad behöver lagkamrater göra om någon blir träffad?",
+        "options": [
+          "Lämna matchen direkt",
+          "Ignorera personen",
+          "Hjälpa och rädda spelaren",
+          "Starta en ny match"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man laddar ner spelet",
+          "Hur man spelar tillsammans och tar ansvar",
+          "Vilka vapen som är starkast",
+          "Hur man ändrar sitt utseende"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 205,
+      "fingerprint": "ak4-tema-002",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Michael Jacksons liv och karriär",
+    "text": "Michael Jackson föddes 1958 i Gary, Indiana, i USA. Redan som barn blev han känd genom gruppen The Jackson 5, där han sjöng tillsammans med sina bröder. Gruppen fick flera stora hits under slutet av 1960-talet och början av 1970-talet. Michaels starka röst och scennärvaro gjorde att han snabbt stack ut.\n\nUnder 1980-talet inledde han en framgångsrik solokarriär. Albumet \"Thriller\" från 1982 blev det mest sålda albumet i världen. Musikvideorna till låtar som \"Billie Jean\" och \"Beat It\" visades flitigt på tv-kanalen MTV och förändrade hur musik presenterades. Jackson kombinerade sång, dans och avancerad koreografi på ett sätt som påverkade många senare artister.\n\nHans dansstil, särskilt steget \"moonwalk\", blev världsberömd. Han var också känd för sina spektakulära konserter med stora scenshower. Samtidigt väckte hans privatliv stor uppmärksamhet i medierna. Rykten, rättsprocesser och hans förändrade utseende gjorde att han ofta var i centrum för debatt.\n\nMichael Jackson engagerade sig även i välgörenhet och deltog i projekt som samlade in pengar till människor i nöd. Trots framgångarna mötte han kritik och kontroverser. Vissa anklagelser mot honom ledde till rättegångar, där han i ett fall frikändes.\n\nNär han dog 2009 skapade det stor sorg bland fans världen över. Hans musik fortsätter att spelas och diskuteras. I dag ses han både som en av pophistoriens mest inflytelserika artister och som en person vars liv präglades av motsättningar.\n\nSammanfattningsvis är Michael Jackson en komplex figur i musikhistorien. Hans konstnärliga betydelse är svår att förneka, samtidigt som hans liv utanför scenen fortfarande väcker frågor och diskussioner.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur blev Michael Jackson först känd?",
+        "options": [
+          "Genom en solokarriär direkt efter skolan",
+          "Genom gruppen The Jackson 5 tillsammans med sina bröder",
+          "Genom att vara dansare i en tv-show",
+          "Genom att skriva låtar åt andra artister"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför anses albumet \"Thriller\" vara särskilt betydelsefullt?",
+        "options": [
+          "Det var hans första album",
+          "Det spelades bara in live",
+          "Det blev det mest sålda albumet i världen",
+          "Det innehöll bara lugna ballader"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade hans musikvideor musikindustrin?",
+        "options": [
+          "De minskade intresset för tv",
+          "De visade att videor kunde vara enkla och billiga",
+          "De förändrade hur musik presenterades genom att kombinera dans och berättande",
+          "De gjorde att radio blev viktigare än tv"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade hans scenframträdanden?",
+        "options": [
+          "Enbart akustisk gitarr",
+          "Små och enkla konserter",
+          "Inga dansinslag",
+          "Stora scenshower med avancerad koreografi"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket av följande nämns som en del av hans liv utanför musiken?",
+        "options": [
+          "Engagemang i välgörenhet och rättsprocesser",
+          "Karriär som politiker",
+          "Arbete som filmregissör",
+          "Studier vid universitet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudsakliga budskap?",
+        "options": [
+          "Att hans dans var viktigare än hans musik",
+          "Att han var helt okontroversiell",
+          "Att hans liv bara bestod av framgång",
+          "Att han var en inflytelserik men komplex person"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak8-tema-001",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-003",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Vad är sushi?",
+    "text": "Sushi är en maträtt som kommer från Japan. Den består oftast av ris som smaksätts med vinäger. Till riset lägger man olika saker, till exempel rå fisk, räkor, ägg eller grönsaker. Ibland rullas allt in i ett tunt sjögräs som kallas nori.\n\nDet finns många olika sorters sushi. En sort heter nigiri och är en liten risklump med något ovanpå. En annan sort är maki, som är rullar som skärs i bitar. Sushi äts ofta med pinnar, men det går också bra att använda gaffel.\n\nMånga tycker om sushi för att den är fräsch och färgglad. Andra tycker att det känns ovant med rå fisk. I Sverige har sushin blivit vanlig och finns i många städer. Vissa restauranger gör även vegetarisk sushi för den som inte vill äta fisk.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket land kommer sushi ifrån?",
+        "options": [
+          "Japan",
+          "Italien",
+          "Mexiko",
+          "Frankrike"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är nori?",
+        "options": [
+          "En sorts fisk",
+          "Ett tunt sjögräs som används runt sushi",
+          "En kryddig sås",
+          "En sorts ris"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter sushin som är en liten risklump med något ovanpå?",
+        "options": [
+          "Maki",
+          "Tempura",
+          "Nigiri",
+          "Taco"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker många om sushi enligt texten?",
+        "options": [
+          "Den är alltid billig",
+          "Den är mycket stark",
+          "Den serveras varm",
+          "Den är fräsch och färgglad"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man använda när man äter sushi?",
+        "options": [
+          "Pinnar eller gaffel",
+          "Sked och kniv",
+          "Bara händerna",
+          "Sugrör"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man odlar ris",
+          "Olika japanska sporter",
+          "Vad sushi är och hur den äts",
+          "Sveriges största restauranger"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 208,
+      "fingerprint": "ak4-tema-003",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-004",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Zara Larsson – en svensk artist",
+    "text": "Zara Larsson är en svensk sångerska som blev känd redan som barn. Hon vann tv-programmet Talang när hon var tio år gammal. Efter det började hon ge ut egen musik. Hennes låtar spelas både i Sverige och i andra länder.\n\nZara sjunger popmusik och har gjort flera kända låtar. Hon har samarbetat med artister från olika delar av världen. Hennes musik handlar ofta om vänskap, kärlek och att tro på sig själv.\n\nFörutom att sjunga är Zara känd för att säga vad hon tycker. Hon pratar öppet om jämställdhet och rättvisa. Många unga ser upp till henne som en förebild.\n\nHon uppträder på stora scener med dansare och ljusshower. Samtidigt arbetar hon hårt bakom kulisserna med att skriva och spela in ny musik. Zara Larsson är i dag en av Sveriges mest kända artister.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur blev Zara Larsson först känd?",
+        "options": [
+          "Genom en filmroll",
+          "Genom att vinna Talang",
+          "Genom en idrottstävling",
+          "Genom en bok hon skrev"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad sjunger Zara Larsson för sorts musik?",
+        "options": [
+          "Popmusik",
+          "Hårdrock",
+          "Opera",
+          "Jazz"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar hennes låtar ofta om?",
+        "options": [
+          "Rymden och planeter",
+          "Matlagning",
+          "Vänskap, kärlek och att tro på sig själv",
+          "Gamla sagor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är hon också känd för förutom musiken?",
+        "options": [
+          "Att vara tyst i intervjuer",
+          "Att tävla i simning",
+          "Att samla frimärken",
+          "Att prata om jämställdhet och rättvisa"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var uppträder hon ofta?",
+        "options": [
+          "På stora scener med ljusshower",
+          "Bara i små klassrum",
+          "Endast utomhus utan publik",
+          "I hemlighet utan publik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man skriver en låt",
+          "Zara Larssons väg till att bli artist",
+          "Svenska tv-program",
+          "Olika musikstilar i världen"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 205,
+      "fingerprint": "ak4-tema-004",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-005",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Italien – landet med pizza och historia",
+    "text": "Italien är ett land i södra Europa. Landet ser ut som en stövel på kartan. Huvudstaden heter Rom. Där finns många gamla byggnader från antiken, till exempel Colosseum.\n\nItalien är känt för sin mat. Många tänker på pizza och pasta när de hör namnet. Glassen gelato är också populär. I olika delar av landet lagar man maten på olika sätt.\n\nI Italien finns både höga berg och långa stränder. I norr ligger Alperna där man kan åka skidor. I söder är klimatet varmare och många turister badar i havet.\n\nFotboll är en populär sport i Italien. Många människor följer sina favoritlag noga. Landet har också en lång historia med konst och musik. Många turister besöker Italien för att uppleva både natur och kultur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Italiens huvudstad?",
+        "options": [
+          "Milano",
+          "Rom",
+          "Neapel",
+          "Venedig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är Italien känt för när det gäller mat?",
+        "options": [
+          "Sushi och tacos",
+          "Hamburgare och korv",
+          "Pizza och pasta",
+          "Nudlar och dumplings"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger Alperna i Italien?",
+        "options": [
+          "I norr",
+          "I söder",
+          "Mitt i Rom",
+          "På en ö"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man göra i Alperna enligt texten?",
+        "options": [
+          "Surfa",
+          "Vindsurfa",
+          "Åka skidor",
+          "Dyka"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken sport är populär i Italien?",
+        "options": [
+          "Baseboll",
+          "Ishockey",
+          "Cricket",
+          "Fotboll"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Italiens natur, mat och kultur",
+          "Ett italienskt fotbollslag",
+          "Hur man lagar gelato",
+          "En resa med tåg"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 202,
+      "fingerprint": "ak4-tema-005",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-006",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Grekland – öar och antika tempel",
+    "text": "Grekland är ett land i sydöstra Europa. Landet har många öar i Medelhavet. Huvudstaden heter Aten. Där finns den gamla byggnaden Akropolis som ligger högt på en kulle.\n\nGrekland har en lång historia. För länge sedan trodde människor på gudar som Zeus och Athena. Berättelserna om dem kallas myter. Många av dem läses fortfarande i dag.\n\nKlimatet i Grekland är varmt och soligt på sommaren. Därför reser många turister dit för att bada och njuta av solen. Havet är klart och blått.\n\nMaten i Grekland är ofta enkel och god. Man äter till exempel oliver, fetaost och grillat kött. Landet är också känt för sina vita hus med blå tak på vissa öar.\n\nGrekland är alltså ett land med både vacker natur och spännande historia.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Greklands huvudstad?",
+        "options": [
+          "Aten",
+          "Rom",
+          "Madrid",
+          "Paris"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ligger på en kulle i Aten?",
+        "options": [
+          "En modern skyskrapa",
+          "Akropolis",
+          "Ett fotbollsstadion",
+          "En hamn"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas berättelserna om Zeus och Athena?",
+        "options": [
+          "Lagar",
+          "Sånger",
+          "Myter",
+          "Nyheter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför reser många turister till Grekland?",
+        "options": [
+          "För att åka skidor",
+          "För att arbeta i fabriker",
+          "För att studera is",
+          "För att bada och njuta av solen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad är vanligt i grekisk mat enligt texten?",
+        "options": [
+          "Oliver och fetaost",
+          "Sushi och ris",
+          "Tacos och majs",
+          "Nudlar och soja"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Greklands klimat på vintern",
+          "En grekisk idrottsstjärna",
+          "Greklands natur och historia",
+          "Hur man bygger hus"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 205,
+      "fingerprint": "ak4-tema-006",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-tema-007",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Spanien – sol och traditioner",
+    "text": "Spanien ligger i sydvästra Europa. Landet har kust mot både Medelhavet och Atlanten. Huvudstaden heter Madrid. I Spanien talar man spanska.\n\nMånga turister besöker Spanien för det varma klimatet. På sommaren är det ofta soligt och varmt. Det finns långa stränder där människor badar och solar.\n\nSpanien är också känt för sina traditioner. En känd dans heter flamenco. Den dansas med starka känslor och snabb musik. I vissa städer firas färgglada festivaler med parader och musik.\n\nMaten i Spanien är varierad. En känd rätt är paella som lagas med ris och olika ingredienser. Många äter också tapas, som är små rätter man delar.\n\nSpanien är ett land med både livliga städer och vacker natur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter Spaniens huvudstad?",
+        "options": [
+          "Barcelona",
+          "Sevilla",
+          "Madrid",
+          "Valencia"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför reser många turister till Spanien?",
+        "options": [
+          "För det kalla klimatet",
+          "För det varma och soliga vädret",
+          "För att åka skidor året runt",
+          "För att studera vulkaner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är flamenco?",
+        "options": [
+          "En maträtt",
+          "En dans",
+          "En stad",
+          "En sport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är paella?",
+        "options": [
+          "En dans",
+          "En festival",
+          "En byggnad",
+          "En maträtt med ris"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilka hav ligger Spanien vid enligt texten?",
+        "options": [
+          "Medelhavet och Atlanten",
+          "Östersjön och Nordsjön",
+          "Stilla havet och Indiska oceanen",
+          "Svarta havet och Röda havet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Spaniens ekonomi",
+          "Spaniens sol, mat och traditioner",
+          "En spansk fotbollsspelare",
+          "Hur man lär sig spanska"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 201,
+      "fingerprint": "ak4-tema-007",
+      "generatedAt": "2026-02-28T00:00:00.000Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-natur-skog-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "natur",
+    "title": "Skogens hemligheter",
+    "text": "En skog kan verka tyst, men den är full av liv. Där finns träd, buskar, svampar och många olika djur. På marken kryper myror och skalbaggar. I träden bygger fåglar sina bon.\n\nTräden är viktiga för både människor och djur. De ger syre som vi andas och skyddar marken mot stark vind. På hösten tappar många träd sina löv. Då ändrar skogen färg och blir gul, orange och röd.\n\nI skogen kan man plocka bär och svamp, men man måste veta vilka som är ätbara. Det är också viktigt att vara rädd om naturen. Man ska inte skräpa ner eller bryta grenar i onödan.\n\nSkogen är en plats för lek, vila och upptäckter. Många går dit för att promenera eller bara lyssna på fåglarnas sång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad finns i skogen enligt texten?",
+        "options": [
+          "Bara träd",
+          "Träd, djur och växter",
+          "Endast stora djur",
+          "Inga insekter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är träden viktiga för människor?",
+        "options": [
+          "De ger syre att andas",
+          "De gör att det alltid är varmt",
+          "De lyser på natten",
+          "De tar bort alla djur"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med många träd på hösten?",
+        "options": [
+          "De får fler löv",
+          "De blommar",
+          "De tappar sina löv",
+          "De blir blå"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man tänka på när man är i skogen?",
+        "options": [
+          "Att skräpa ner",
+          "Att bryta grenar",
+          "Att ropa högt hela tiden",
+          "Att vara rädd om naturen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man plocka i skogen?",
+        "options": [
+          "Bär och svamp",
+          "Bilar",
+          "Glass",
+          "Stolar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bygger ett hus",
+          "Skogens djurpark",
+          "Skogens liv och varför den är viktig",
+          "En resa till staden"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 203,
+      "fingerprint": "ak4-natur-skog-001",
+      "generatedAt": "2026-02-28T12:50:32.171Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-halsa-cykel-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "hälsa",
+    "title": "Att cykla säkert",
+    "text": "Att cykla är roligt och bra motion. Många barn cyklar till skolan eller till sina vänner. För att cykla säkert är det viktigt att använda hjälm. Hjälmen skyddar huvudet om man ramlar.\n\nDet är också viktigt att cykeln har fungerande bromsar och ringklocka. Om det är mörkt ute ska cykeln ha lampor och reflexer så att andra trafikanter ser dig.\n\nNär man cyklar i trafiken måste man följa regler. Man ska stanna vid rött ljus och visa med handen om man ska svänga. Det är bra att hålla uppsikt och inte använda mobilen när man cyklar.\n\nGenom att vara försiktig och följa reglerna minskar risken för olyckor. Då kan cyklingen vara både trygg och rolig.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Varför ska man använda hjälm?",
+        "options": [
+          "För att se snabb ut",
+          "För att skydda huvudet om man ramlar",
+          "För att den är snygg",
+          "För att slippa ringa på klockan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska cykeln ha när det är mörkt?",
+        "options": [
+          "Färgglada klistermärken",
+          "Extra stora hjul",
+          "Lampor och reflexer",
+          "En flagga"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man göra vid rött ljus?",
+        "options": [
+          "Cykla snabbare",
+          "Svänga direkt",
+          "Stanna",
+          "Hoppa av cykeln"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad bör man undvika när man cyklar?",
+        "options": [
+          "Att hålla i styret",
+          "Att titta framåt",
+          "Att använda mobilen",
+          "Att bromsa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är bra med att cykla enligt texten?",
+        "options": [
+          "Det är roligt och bra motion",
+          "Man slipper röra sig",
+          "Det är farligt",
+          "Man behöver ingen utrustning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Olika sorters cyklar",
+          "Hur man tävlar i cykel",
+          "Hur man lagar en cykel",
+          "Hur man cyklar säkert"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 190,
+      "fingerprint": "ak4-halsa-cykel-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-geo-vulkan-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "geografi",
+    "title": "Vulkaner och lava",
+    "text": "En vulkan är ett berg som kan få utbrott. Djupt nere i jorden finns het magma. När trycket blir för stort kan magman pressas upp genom vulkanen. När den kommer upp på marken kallas den lava.\n\nEtt vulkanutbrott kan vara farligt. Lava är mycket varm och kan förstöra hus och vägar. Det kan också komma aska som sprids i luften. Ibland måste människor flytta från sina hem för att vara säkra.\n\nSamtidigt kan vulkaner skapa ny mark. När lavan svalnar blir den hård sten. På vissa platser har nya öar bildats efter utbrott.\n\nForskare studerar vulkaner för att försöka förstå när de kan få utbrott. På så sätt kan man varna människor i tid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas magma när den kommer upp på marken?",
+        "options": [
+          "Sten",
+          "Lava",
+          "Sand",
+          "Rök"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var finns magma innan ett utbrott?",
+        "options": [
+          "Djupt nere i jorden",
+          "I molnen",
+          "I havet",
+          "I träden"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan spridas i luften vid ett utbrott?",
+        "options": [
+          "Snö",
+          "Regnbågar",
+          "Aska",
+          "Glass"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför studerar forskare vulkaner?",
+        "options": [
+          "För att göra dem större",
+          "För att samla lava som souvenir",
+          "För att bygga hus där",
+          "För att kunna varna människor i tid"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan hända när lava svalnar?",
+        "options": [
+          "Den blir hård sten",
+          "Den försvinner helt",
+          "Den blir vatten",
+          "Den blir mjukare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bestiger berg",
+          "Hur vulkaner fungerar",
+          "Olika sorters väder",
+          "Hur man odlar växter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 188,
+      "fingerprint": "ak4-geo-vulkan-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-vetenskap-rymd-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "vetenskap",
+    "title": "Rymden och planeterna",
+    "text": "Rymden är det stora området utanför jorden. Där finns planeter, stjärnor och galaxer. Jorden är en av åtta planeter som kretsar runt solen.\n\nSolen är en stjärna som ger oss ljus och värme. Månen kretsar runt jorden och lyser på natten. Ibland kan vi se planeter som Mars och Venus som små ljuspunkter på himlen.\n\nAstronauter är personer som reser ut i rymden med raketer. De arbetar på rymdstationer och gör experiment. I rymden finns nästan ingen luft, därför måste astronauter ha speciella dräkter.\n\nForskare använder teleskop för att studera rymden. Genom att titta på stjärnorna kan de lära sig mer om universum och hur det bildades.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur många planeter kretsar runt solen enligt texten?",
+        "options": [
+          "Åtta",
+          "Fem",
+          "Tolv",
+          "Två"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är solen?",
+        "options": [
+          "En planet",
+          "En stjärna",
+          "En måne",
+          "En raket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behöver astronauter speciella dräkter?",
+        "options": [
+          "För att det är kallt i Sverige",
+          "För att visa vem de är",
+          "För att det nästan inte finns någon luft i rymden",
+          "För att kunna springa snabbare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder forskare för att studera rymden?",
+        "options": [
+          "Kikare för fåglar",
+          "Mikroskop",
+          "Ficklampor",
+          "Teleskop"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kretsar månen runt?",
+        "options": [
+          "Jorden",
+          "Solen",
+          "Mars",
+          "Venus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man bygger en raket",
+          "Rymden och vad som finns där",
+          "Flygplan i Sverige",
+          "Hur man blir pilot"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 184,
+      "fingerprint": "ak4-vetenskap-rymd-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak4-varde-vanskap-001",
+    "grade": 4,
+    "genre": "faktatext",
+    "theme": "värdegrund",
+    "title": "Vänskap i klassen",
+    "text": "I klass 4B går elever med olika intressen och bakgrunder. Amir gillar att rita serier, Maja spelar fotboll och Kim älskar att läsa böcker. I klassen finns också Noor som använder rullstol och är duktig på schack.\n\nIbland kan det bli missförstånd när man arbetar i grupp. Då är det viktigt att lyssna på varandra och försöka förstå. När eleverna planerade en klassfest hade alla olika idéer. Genom att samarbeta hittade de en lösning som alla var nöjda med.\n\nEn bra vän stöttar andra och säger ifrån om någon blir retad. I klassen har de bestämt att alla ska få vara med på rasterna. Det gör att fler känner sig trygga.\n\nVänskap handlar inte om att vara lika. Det handlar om att visa respekt och hjälpa varandra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gillar Amir att göra?",
+        "options": [
+          "Spela schack",
+          "Rita serier",
+          "Spela fotboll",
+          "Sjunga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder Noor enligt texten?",
+        "options": [
+          "Glasögon",
+          "Käpp",
+          "Rullstol",
+          "Hörapparat"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde eleverna när de hade olika idéer om klassfesten?",
+        "options": [
+          "De slutade prata med varandra",
+          "De samarbetade för att hitta en lösning",
+          "De lät en person bestämma allt",
+          "De ställde in festen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska man göra om någon blir retad?",
+        "options": [
+          "Skratta",
+          "Gå därifrån",
+          "Låtsas som ingenting",
+          "Säga ifrån och stötta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad har klassen bestämt om rasterna?",
+        "options": [
+          "Att alla ska få vara med",
+          "Att bara några får leka",
+          "Att ingen får prata",
+          "Att man måste tävla"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Olika fritidsintressen",
+          "En klassresa",
+          "Vänskap och respekt i klassen",
+          "Hur man spelar schack"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 193,
+      "fingerprint": "ak4-varde-vanskap-001",
+      "generatedAt": "2026-02-28T12:50:32.184Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-natur-katt-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Katten Max",
+    "text": "Max är en liten katt. Han bor i ett gult hus. På morgonen vaknar Max tidigt. Han sträcker på sig och jamar högt. Sedan går han till köket. Där står en skål med mat. Max äter och dricker vatten.\n\nEfter frukosten vill Max leka. Han jagar en röd boll över golvet. Bollen rullar snabbt. Max springer efter. Ibland gömmer han sig bakom soffan. Då tror han att ingen ser honom.\n\nNär det blir kväll är Max trött. Han kryper upp i sin mjuka korg. Där somnar han och drömmer om nya äventyr.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är Max för djur?",
+        "options": [
+          "En katt",
+          "En hund",
+          "En fågel",
+          "En fisk"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var bor Max?",
+        "options": [
+          "I en blå bil",
+          "I ett gult hus",
+          "I en skog",
+          "I en skola"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad leker Max med?",
+        "options": [
+          "En bok",
+          "En pinne",
+          "En röd boll",
+          "En hatt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var gömmer sig Max ibland?",
+        "options": [
+          "Bakom soffan",
+          "Under bordet ute",
+          "I badkaret",
+          "På taket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Max när det blir kväll?",
+        "options": [
+          "Han springer ut",
+          "Han äter igen",
+          "Han sover i sin korg",
+          "Han hoppar i vatten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En katt och hans dag",
+          "En lång resa",
+          "En stor fest",
+          "En bil som kör"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 87,
+      "fingerprint": "ak1-natur-katt-001",
+      "generatedAt": "2026-02-28T12:54:37.710Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-samhalle-skola-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "En dag i skolan",
+    "text": "Alva går i ettan. Hon tycker om sin skola. På morgonen hänger hon upp sin jacka. Sedan går hon in i klassrummet. Där sitter hennes vänner.\n\nLäraren ler och säger hej. Först läser de en kort saga. Alva räcker upp handen och svarar på en fråga. Efter det räknar klassen tal på tavlan.\n\nPå rasten leker Alva kull med Leo. De skrattar och springer fort. När klockan ringer går alla in igen.\n\nNär dagen är slut känner Alva sig glad. Hon har lärt sig nya saker.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken klass går Alva i?",
+        "options": [
+          "Ettan",
+          "Tvåan",
+          "Trean",
+          "Fyran"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör klassen först?",
+        "options": [
+          "Äter lunch",
+          "Läser en saga",
+          "Går hem",
+          "Har idrott"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Alva på rasten?",
+        "options": [
+          "Sover",
+          "Läser bok",
+          "Leker kull",
+          "Ritar tyst"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur känner sig Alva när dagen är slut?",
+        "options": [
+          "Arg",
+          "Trött",
+          "Rädd",
+          "Glad"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vem leker Alva med?",
+        "options": [
+          "Leo",
+          "Mamma",
+          "Rektorn",
+          "En hund"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En resa",
+          "En dag i skolan",
+          "En fotbollsmatch",
+          "Ett kalas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 88,
+      "fingerprint": "ak1-samhalle-skola-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-natur-regn-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Regnet kommer",
+    "text": "Det är mörka moln på himlen. Sara tittar ut genom fönstret. Snart börjar det regna. Dropparna faller på marken.\n\nSara tar på sig stövlar och regnjacka. Hon går ut i trädgården. Pölar bildas på vägen. Hon hoppar i en stor pöl. Plask!\n\nEfter en stund slutar regnet. Solen tittar fram igen. På himlen syns en regnbåge. Sara ler och springer in.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad finns på himlen först?",
+        "options": [
+          "Mörka moln",
+          "En stjärna",
+          "En ballong",
+          "Snö"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad tar Sara på sig?",
+        "options": [
+          "Badkläder",
+          "Stövlar och regnjacka",
+          "Pyjamas",
+          "Mössa och halsduk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hoppar Sara i?",
+        "options": [
+          "En säng",
+          "En låda",
+          "En pöl",
+          "En bil"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad syns på himlen efter regnet?",
+        "options": [
+          "En drake",
+          "Ett flygplan",
+          "En måne",
+          "En regnbåge"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var tittar Sara ut?",
+        "options": [
+          "Genom fönstret",
+          "Genom dörren",
+          "Under bordet",
+          "Bakom huset"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Snö på vintern",
+          "En regnig dag",
+          "En lång resa",
+          "En hund"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 82,
+      "fingerprint": "ak1-natur-regn-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-samhalle-buss-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Bussen till stan",
+    "text": "Omar ska åka buss med sin pappa. De går till hållplatsen. Där står flera människor och väntar.\n\nBussen kommer och dörrarna öppnas. Omar kliver på och sätter sig vid fönstret. Han ser bilar, hus och träd när bussen kör.\n\nEn kvinna med käpp går på vid nästa stopp. Pappa reser sig och ger henne sin plats. Omar tycker att det är snällt.\n\nNär de är framme trycker Omar på stoppknappen. Dörrarna öppnas och de kliver av.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem åker Omar med?",
+        "options": [
+          "Sin pappa",
+          "Sin lärare",
+          "Sin hund",
+          "Sin vän"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var sätter sig Omar?",
+        "options": [
+          "På golvet",
+          "Vid fönstret",
+          "Bakom chauffören",
+          "Längst bak"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör pappan när kvinnan går på?",
+        "options": [
+          "Han somnar",
+          "Han går av",
+          "Han ger henne sin plats",
+          "Han öppnar fönstret"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad trycker Omar på när de är framme?",
+        "options": [
+          "En lampa",
+          "En ratt",
+          "En klocka",
+          "Stoppknappen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var väntar de på bussen?",
+        "options": [
+          "Vid hållplatsen",
+          "I skogen",
+          "I en bil",
+          "På taket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En bussresa",
+          "En cykeltur",
+          "En lek",
+          "En fest"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 89,
+      "fingerprint": "ak1-samhalle-buss-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak1-natur-hund-001",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Hundvalpen Bella",
+    "text": "Bella är en liten hundvalp. Hon har mjuk päls och en viftande svans. Bella bor hos Kim och hens familj.\n\nPå morgonen går Kim ut med Bella. Valpen nosar på gräset och hittar en pinne. Hon vill leka och springer runt.\n\nBella måste lära sig att sitta och stanna. Kim tränar med lugn röst. När Bella gör rätt får hon beröm.\n\nPå kvällen är Bella trött. Hon lägger sig i sin bädd. Kim klappar henne försiktigt. Snart sover valpen gott.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är Bella för djur?",
+        "options": [
+          "En hundvalp",
+          "En katt",
+          "En kanin",
+          "En fågel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad hittar Bella ute?",
+        "options": [
+          "En boll",
+          "En pinne",
+          "En sko",
+          "En bok"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad tränar Kim Bella att göra?",
+        "options": [
+          "Flyga",
+          "Simma långt",
+          "Sitta och stanna",
+          "Rita"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad får Bella när hon gör rätt?",
+        "options": [
+          "Glass",
+          "En cykel",
+          "En hatt",
+          "Beröm"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var sover Bella?",
+        "options": [
+          "I sin bädd",
+          "I bilen",
+          "På taket",
+          "I köket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "En resa",
+          "En hundvalp och hennes dag",
+          "En skola",
+          "En storm"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 88,
+      "fingerprint": "ak1-natur-hund-001",
+      "generatedAt": "2026-02-28T12:54:37.718Z",
+      "model": "claude"
+    }
   }
 ]

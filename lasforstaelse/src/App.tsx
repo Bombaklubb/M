@@ -7,7 +7,6 @@ import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
-import { StudentMessageBox } from './components/StudentMessageBox';
 import { BookLogo } from './components/BookLogo';
 import {
   loginUser,
@@ -15,6 +14,7 @@ import {
   logoutUser,
   recordResult,
   getCompletedTextIds,
+  getRecentCompletedTexts,
   updateAvatar,
 } from './services/userService';
 import { getRandomText } from './services/libraryService';
@@ -32,8 +32,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
   const [showTeacher, setShowTeacher] = useState(false);
-  const [showMessageBox, setShowMessageBox] = useState(false);
-  const quizStartTime = useRef<number | null>(null);
+    const quizStartTime = useRef<number | null>(null);
 
   // Ladda användare vid start
   useEffect(() => {
@@ -108,7 +107,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(grade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(grade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -184,7 +184,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(currentGrade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(currentGrade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -212,7 +213,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(newGrade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -240,7 +242,8 @@ function App() {
     setLoading(true);
 
     const completedIds = getCompletedTextIds(user);
-    const text = await getRandomText(newGrade, completedIds);
+    const recentTexts = getRecentCompletedTexts(user, 10);
+    const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
       setCurrentText(text);
@@ -270,7 +273,7 @@ function App() {
       <div className="min-h-screen bg-sky-50 dark:bg-slate-900 flex items-center justify-center">
         <div className="text-center">
           <div className="flex justify-center mb-4 animate-bounce">
-            <BookLogo size={80} />
+            <BookLogo size={120} />
           </div>
           <p className="text-xl text-slate-600 dark:text-slate-300">Laddar...</p>
         </div>
@@ -342,23 +345,11 @@ function App() {
         )}
       </main>
 
-      {/* Meddelandeknapp */}
-      <button
-        onClick={() => setShowMessageBox(true)}
-        className="fixed bottom-6 left-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:shadow-xl transition-all z-40 group"
-        title="Skicka meddelande till läraren"
-        aria-label="Skicka meddelande till läraren"
-      >
-        <span className="text-2xl">💬</span>
-      </button>
-
-      {/* Meddelanderuta */}
-      {showMessageBox && user && (
-        <StudentMessageBox
-          studentName={user.name}
-          studentAvatar={user.avatar}
-          onClose={() => setShowMessageBox(false)}
-        />
+      {/* Kontaktinfo - visas endast på Setup-sidan */}
+      {appState === AppState.SETUP && (
+        <div className="fixed bottom-4 left-4 text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity z-40">
+          Kontakt: <strong>martin.akdogan@enkoping.se</strong>
+        </div>
       )}
 
       {/* Lärarvy (öppnas med Ctrl+Shift+L) */}

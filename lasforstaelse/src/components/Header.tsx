@@ -19,10 +19,9 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
         {/* Logo */}
         <button
           onClick={onHomeClick}
-          className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+          className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
         >
-          <BookLogo size={36} />
-          <span className="text-xl font-extrabold text-purple-700 dark:text-purple-400">Läsjakten</span>
+          <BookLogo size={56} />
         </button>
 
         {/* User info */}
