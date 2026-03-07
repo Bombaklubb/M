@@ -49,7 +49,7 @@ export default function Login() {
           <h2 className="text-2xl font-black text-gray-800 mb-4">Skriv ditt namn 🏫</h2>
           <input type="text" value={name} onChange={e=>setName(e.target.value)}
             onKeyDown={e=>e.key==='Enter'&&doLogin()}
-            className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-lg font-bold focus:outline-none focus:border-amber-400 transition-colors mb-5"
+            className="w-full border-2 border-gray-200 rounded-2xl px-4 py-3.5 text-lg font-bold text-gray-800 bg-white focus:outline-none focus:border-amber-400 transition-colors mb-5"
             autoFocus/>
 
           <h3 className="text-lg font-black text-gray-800 mb-1">Välj din hjälte! ⚔️</h3>
