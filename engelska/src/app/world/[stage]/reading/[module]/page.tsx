@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
-import ProgressBar from "@/components/ui/ProgressBar";
 import ResultModal from "@/components/ui/ResultModal";
 import ReadingQuestionComponent from "@/components/exercises/ReadingQuestion";
 import { loadStudent, saveModuleProgress } from "@/lib/storage";
@@ -18,7 +17,7 @@ interface Props {
   params: Promise<{ stage: string; module: string }>;
 }
 
-type Phase = "intro" | "reading" | "questions" | "done";
+type Phase = "intro" | "reading" | "done";
 
 export default function ReadingModulePage({ params }: Props) {
   const { stage: stageId, module: moduleId } = use(params);
@@ -75,12 +74,7 @@ export default function ReadingModulePage({ params }: Props) {
 
       if (student) {
         const updated = saveModuleProgress(
-          student,
-          stage!.id,
-          "reading",
-          mod!.id,
-          finalPts,
-          passed
+          student, stage!.id, "reading", mod!.id, finalPts, passed
         );
         setStudent(updated);
       }
@@ -104,14 +98,14 @@ export default function ReadingModulePage({ params }: Props) {
   const totalCorrect = results.filter(Boolean).length;
   const earnedPoints = totalCorrect * POINTS_PER_CORRECT;
 
-  // ─── Intro / help phase ───────────────────────────────────────────────────
+  // ─── Intro phase ────────────────────────────────────────────────────────────
   if (phase === "intro") {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <Header student={student} />
 
         <div className={`${stage.bgClass} text-white`}>
-          <div className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+          <div className="max-w-5xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
             <Link
               href={`/world/${stageId}`}
               className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
@@ -151,8 +145,7 @@ export default function ReadingModulePage({ params }: Props) {
               </ul>
             ) : (
               <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-3 sm:p-4 text-blue-800 dark:text-blue-200 text-sm">
-                <p>Läs texten noggrant. Försök förstå vad som händer och varför.</p>
-                <p className="mt-2">Du kan läsa texten igen medan du svarar på frågorna!</p>
+                <p>Läs texten noggrant. Frågorna visas bredvid texten – du kan läsa om när du vill!</p>
               </div>
             )}
 
@@ -161,7 +154,7 @@ export default function ReadingModulePage({ params }: Props) {
                 onClick={() => setPhase("reading")}
                 className="btn-primary bg-blue-500 hover:bg-blue-600 w-full sm:w-auto justify-center"
               >
-                Läs texten →
+                Börja läsa →
               </button>
             </div>
           </div>
@@ -170,128 +163,108 @@ export default function ReadingModulePage({ params }: Props) {
     );
   }
 
-  // ─── Reading phase ────────────────────────────────────────────────────────
-  if (phase === "reading") {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-        <Header student={student} />
-
-        <div className={`${stage.bgClass} text-white`}>
-          <div className="max-w-3xl mx-auto px-4 py-6">
-            <Link
-              href={`/world/${stageId}`}
-              className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
-            >
-              ← {stage.name}
-            </Link>
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">{mod.icon}</span>
-              <div>
-                <h1 className="text-xl font-black text-shadow">{mod.title}</h1>
-                <p className="text-white/70 text-sm">📖 Läsförståelse · {mod.description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
-          <div className="card">
-            {/* Reading instruction */}
-            <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 mb-6 flex gap-3">
-              <span className="text-xl">📖</span>
-              <p className="text-blue-800 dark:text-blue-200 text-sm">
-                Läs texten noggrant. Du får svara på frågor efteråt — du kan
-                scrolla tillbaka om du vill!
-              </p>
-            </div>
-
-            {/* Text */}
-            <article className="prose prose-lg max-w-none text-gray-800 dark:text-gray-100 leading-relaxed mb-8">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">{mod.title}</h2>
-              {mod.author && (
-                <p className="text-sm text-gray-500 dark:text-gray-400 italic mb-4">av {mod.author}</p>
-              )}
-              {mod.text.split("\n\n").map((para, i) => (
-                <p key={i} className="mb-4 text-base leading-7">
-                  {para}
-                </p>
-              ))}
-            </article>
-
-            {/* Continue button */}
-            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-4">
-              <button
-                onClick={() => setPhase("questions")}
-                className="btn-primary bg-blue-500 hover:bg-blue-600"
-              >
-                Svara på frågor →
-              </button>
-            </div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-  // ─── Questions phase ──────────────────────────────────────────────────────
+  // ─── Reading + Questions split view ─────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} />
 
+      {/* Coloured banner */}
       <div className={`${stage.bgClass} text-white`}>
-        <div className="max-w-3xl mx-auto px-4 py-6">
+        <div className="max-w-5xl mx-auto px-4 py-4">
           <Link
             href={`/world/${stageId}`}
-            className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
+            className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-2 transition-colors"
           >
             ← {stage.name}
           </Link>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl">{mod.icon}</span>
-            <div>
-              <h1 className="text-xl font-black text-shadow">{mod.title}</h1>
-              <p className="text-white/70 text-sm">Frågor om texten</p>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">{mod.icon}</span>
+              <div>
+                <h1 className="text-lg font-black text-shadow">{mod.title}</h1>
+                <p className="text-white/70 text-sm">{mod.description}</p>
+              </div>
+            </div>
+            {/* Progress indicator */}
+            <div className="flex-shrink-0 text-sm text-white/80 font-semibold">
+              Fråga {Math.min(currentIndex + 1, totalQuestions)}/{totalQuestions}
             </div>
           </div>
-          <ProgressBar
-            value={(currentIndex / totalQuestions) * 100}
-            colorClass="bg-white/80"
-            label={`Fråga ${currentIndex + 1} av ${totalQuestions}`}
-          />
         </div>
       </div>
 
-      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8 space-y-4">
-        {/* Re-read link */}
-        <button
-          onClick={() => setPhase("reading")}
-          className="text-sm text-blue-500 hover:text-blue-700 transition-colors"
-        >
-          ← Läs texten igen
-        </button>
+      {/* Split layout: text left, question right */}
+      <main className="max-w-5xl mx-auto px-3 sm:px-4 py-4">
+        <div className="flex flex-col lg:flex-row gap-4 items-start">
 
-        <div className="card min-h-[240px] sm:min-h-[280px]">
-          <div className="flex items-center justify-between mb-6">
-            <span className="text-sm text-gray-400 font-medium">
-              {currentIndex + 1} / {totalQuestions}
-            </span>
+          {/* ── Left: Reading text (sticky on desktop) ── */}
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-20">
+            <div className="card h-full">
+              <div className="flex items-center gap-2 mb-3 pb-3 border-b border-gray-100 dark:border-gray-700">
+                <span className="text-lg">📖</span>
+                <h2 className="font-bold text-gray-900 dark:text-gray-100 text-sm">Läs texten</h2>
+                <span className="ml-auto text-xs text-gray-400">Du kan scrolla</span>
+              </div>
+              <div className="overflow-y-auto max-h-[60vh] lg:max-h-[calc(100vh-200px)] pr-1">
+                {mod.author && (
+                  <p className="text-xs text-gray-400 italic mb-3">av {mod.author}</p>
+                )}
+                {mod.text.split("\n\n").map((para, i) => (
+                  <p key={i} className="mb-4 text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-100">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {currentQuestion && (
-            <div key={`${moduleId}-q-${currentIndex}`}>
-              <ReadingQuestionComponent
-                question={currentQuestion}
-                onAnswer={handleAnswer}
-                isLast={currentIndex + 1 === totalQuestions}
-              />
+          {/* ── Right: Questions ── */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-4">
+            {/* Score bar */}
+            <div className="flex gap-4 text-sm text-gray-500 dark:text-gray-400 px-1">
+              <span className="text-green-600 dark:text-green-400 font-semibold">✓ {results.filter(Boolean).length} rätt</span>
+              <span className="text-red-500 dark:text-red-400 font-semibold">✗ {results.filter((r) => !r).length} fel</span>
+              <span className="text-amber-600 dark:text-amber-400 font-semibold">⭐ {earnedPoints} p</span>
             </div>
-          )}
-        </div>
 
-        <div className="flex justify-center gap-4 text-sm text-gray-500">
-          <span>✓ {results.filter(Boolean).length} rätt</span>
-          <span>✗ {results.filter((r) => !r).length} fel</span>
-          <span className="text-amber-600">⭐ {earnedPoints} poäng</span>
+            {/* Progress dots */}
+            <div className="flex gap-1.5 flex-wrap px-1">
+              {questions.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-2 rounded-full transition-all ${
+                    i < results.length
+                      ? results[i] ? "bg-green-500 w-5" : "bg-red-400 w-5"
+                      : i === currentIndex
+                      ? "bg-blue-500 w-5"
+                      : "bg-gray-200 dark:bg-gray-700 w-3"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Current question */}
+            <div className="card min-h-[220px]">
+              {currentQuestion && !showResult && (
+                <div key={`${moduleId}-q-${currentIndex}`}>
+                  <ReadingQuestionComponent
+                    question={currentQuestion}
+                    onAnswer={handleAnswer}
+                    isLast={currentIndex + 1 === totalQuestions}
+                  />
+                </div>
+              )}
+              {showResult && (
+                <div className="flex flex-col items-center justify-center py-8 gap-3 text-center">
+                  <span className="text-5xl">{totalCorrect >= totalQuestions * 0.6 ? "🎉" : "💪"}</span>
+                  <p className="font-bold text-gray-900 dark:text-gray-100">
+                    {totalCorrect} av {totalQuestions} rätt!
+                  </p>
+                  <p className="text-amber-600 font-semibold">⭐ {earnedPoints} poäng</p>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </main>
 

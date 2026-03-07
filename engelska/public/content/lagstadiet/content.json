@@ -2226,6 +2226,381 @@
         "Can he...? → Yes, he can. / No, he can't.  Do they...? → Yes, they do. / No, they don't.",
         "Tips: Lyssna på FÖRSTA verbet i frågan (is/are/can/do) – det är det du upprepar i svaret!"
       ]
+    },
+    {
+      "id": "lag-g12-nouns",
+      "title": "Substantiv (Nouns)",
+      "description": "Lär dig vad ett substantiv är och hur man skriver dem.",
+      "icon": "📦",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-g12-1",
+          "type": "multiple-choice",
+          "question": "Vilket av dessa ord är ett substantiv (namn på en sak, person eller plats)?",
+          "options": [
+            "run",
+            "cat",
+            "happy",
+            "quickly"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Cat' är ett substantiv – det är ett djur (en sak). 'Run' är ett verb, 'happy' är ett adjektiv och 'quickly' är ett adverb."
+        },
+        {
+          "id": "lag-g12-2",
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett substantiv?",
+          "options": [
+            "blue",
+            "school",
+            "swim",
+            "very"
+          ],
+          "correctIndex": 1,
+          "explanation": "'School' är ett substantiv – det är en plats."
+        },
+        {
+          "id": "lag-g12-3",
+          "type": "multiple-choice",
+          "question": "Vilket är INTE ett substantiv?",
+          "options": [
+            "dog",
+            "table",
+            "tall",
+            "house"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Tall' är ett adjektiv som beskriver hur något ser ut, inte ett namn på en sak."
+        },
+        {
+          "id": "lag-g12-4",
+          "type": "multiple-choice",
+          "question": "Välj substantivet i meningen: 'The dog runs fast.'",
+          "options": [
+            "the",
+            "dog",
+            "runs",
+            "fast"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Dog' är ett substantiv – det är ett djur."
+        },
+        {
+          "id": "lag-g12-5",
+          "type": "fill-in-blank",
+          "sentence": "A ___ is a place where you learn. (school/run)",
+          "answer": "school",
+          "hint": "Det är en plats.",
+          "explanation": "School (skola) är ett substantiv – en plats vi kan namnge."
+        },
+        {
+          "id": "lag-g12-6",
+          "type": "fill-in-blank",
+          "sentence": "A ___ is an animal with four legs. (cat/jump)",
+          "answer": "cat",
+          "hint": "Det är ett djur.",
+          "explanation": "Cat (katt) är ett substantiv – ett djurnamn."
+        },
+        {
+          "id": "lag-g12-7",
+          "type": "multiple-choice",
+          "question": "Hur många substantiv finns i meningen 'The girl has a dog'?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 1,
+          "explanation": "Girl och dog är båda substantiv. The och has är inte substantiv."
+        },
+        {
+          "id": "lag-g12-8",
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett substantiv?",
+          "options": [
+            "quickly",
+            "beautiful",
+            "teacher",
+            "sleep"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Teacher' (lärare) är ett substantiv – en person."
+        },
+        {
+          "id": "lag-g12-9",
+          "type": "fill-in-blank",
+          "sentence": "A ___ is a building where people live. (house/big)",
+          "answer": "house",
+          "hint": "Det är en plats/byggnad.",
+          "explanation": "House (hus) är ett substantiv – en plats."
+        },
+        {
+          "id": "lag-g12-10",
+          "type": "multiple-choice",
+          "question": "Välj det substantiv som är en plats:",
+          "options": [
+            "park",
+            "green",
+            "walk",
+            "slowly"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Park' är ett substantiv som beskriver en plats."
+        }
+      ]
+    },
+    {
+      "id": "lag-g13-adj-adv",
+      "title": "Adjektiv & Adverb",
+      "description": "Ord som beskriver saker och hur man gör saker.",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-g13-1",
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett adjektiv (beskriver hur något ser ut/är)?",
+          "options": [
+            "run",
+            "big",
+            "school",
+            "quickly"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Big' (stor) är ett adjektiv – det beskriver en sak."
+        },
+        {
+          "id": "lag-g13-2",
+          "type": "multiple-choice",
+          "question": "Välj adjektivet: 'The ___ cat sat on the mat.'",
+          "options": [
+            "sat",
+            "on",
+            "fluffy",
+            "mat"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Fluffy' (lurvig) beskriver katten – det är ett adjektiv."
+        },
+        {
+          "id": "lag-g13-3",
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett adverb (beskriver hur man gör något)?",
+          "options": [
+            "fast",
+            "cat",
+            "blue",
+            "house"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Fast' (snabbt) är ett adverb – det beskriver HUR man gör något."
+        },
+        {
+          "id": "lag-g13-4",
+          "type": "fill-in-blank",
+          "sentence": "The dog runs ___. (fast/big)",
+          "answer": "fast",
+          "hint": "Hur springer hunden?",
+          "explanation": "'Fast' (snabbt) är ett adverb som beskriver HUR hunden springer."
+        },
+        {
+          "id": "lag-g13-5",
+          "type": "multiple-choice",
+          "question": "'She has a ___ dress.' Vilket ord passar bäst?",
+          "options": [
+            "run",
+            "beautiful",
+            "slowly",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Beautiful' (vacker) är ett adjektiv som beskriver klänningen."
+        },
+        {
+          "id": "lag-g13-6",
+          "type": "fill-in-blank",
+          "sentence": "The sun is ___. (bright/quickly)",
+          "answer": "bright",
+          "hint": "Det beskriver solen.",
+          "explanation": "'Bright' (ljus/stark) är ett adjektiv som beskriver solen."
+        },
+        {
+          "id": "lag-g13-7",
+          "type": "multiple-choice",
+          "question": "Vilket är ett adjektiv?",
+          "options": [
+            "slowly",
+            "happily",
+            "happy",
+            "quickly"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Happy' (glad) är adjektivet – adverbet är 'happily'."
+        },
+        {
+          "id": "lag-g13-8",
+          "type": "multiple-choice",
+          "question": "'He sings ___.' Vilket passar?",
+          "options": [
+            "loud",
+            "loudly",
+            "louder",
+            "loudest"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Loudly' (högt) är ett adverb – det beskriver HUR han sjunger."
+        },
+        {
+          "id": "lag-g13-9",
+          "type": "fill-in-blank",
+          "sentence": "She is a ___ girl. (kind/kindly)",
+          "answer": "kind",
+          "hint": "Adjektiv beskriver substantiv.",
+          "explanation": "'Kind' (snäll) är adjektivet. 'Kindly' är adverb."
+        },
+        {
+          "id": "lag-g13-10",
+          "type": "multiple-choice",
+          "question": "'The ___ bird flew away.' Välj adjektivet:",
+          "options": [
+            "flew",
+            "away",
+            "small",
+            "quickly"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Small' (liten) är adjektivet – det beskriver fågeln."
+        }
+      ]
+    },
+    {
+      "id": "lag-g14-do-does",
+      "title": "Do / Does",
+      "description": "Lär dig använda do och does i frågor och negationer.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "lag-g14-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ you like ice cream?'",
+          "options": [
+            "Does",
+            "Do",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med I/you/we/they använder vi 'Do'. Do you like ice cream?"
+        },
+        {
+          "id": "lag-g14-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ she play football?'",
+          "options": [
+            "Do",
+            "Are",
+            "Does",
+            "Is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med he/she/it använder vi 'Does'. Does she play football?"
+        },
+        {
+          "id": "lag-g14-3",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I ___ not like vegetables.'",
+          "options": [
+            "does",
+            "do",
+            "is",
+            "am"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med I använder vi 'do not' (don't) för att neka. I do not like vegetables."
+        },
+        {
+          "id": "lag-g14-4",
+          "type": "fill-in-blank",
+          "sentence": "___ your brother have a dog?",
+          "answer": "Does",
+          "hint": "Han = he, så vilket ord passar?",
+          "explanation": "Med he/she/it använder vi 'Does' i frågor."
+        },
+        {
+          "id": "lag-g14-5",
+          "type": "fill-in-blank",
+          "sentence": "___ you like pizza?",
+          "answer": "Do",
+          "hint": "Du = you, vilket ord passar?",
+          "explanation": "Med you använder vi 'Do' i frågor."
+        },
+        {
+          "id": "lag-g14-6",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'They ___ not play outside.'",
+          "options": [
+            "does",
+            "do",
+            "is",
+            "are"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med they använder vi 'do not'. They do not play outside."
+        },
+        {
+          "id": "lag-g14-7",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ it rain in the winter?'",
+          "options": [
+            "Do",
+            "Am",
+            "Does",
+            "Are"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med it använder vi 'Does'. Does it rain in winter?"
+        },
+        {
+          "id": "lag-g14-8",
+          "type": "fill-in-blank",
+          "sentence": "She ___ not like spiders.",
+          "answer": "does",
+          "hint": "Hon = she, vilket ord passar?",
+          "explanation": "Med she använder vi 'does not' för att neka."
+        },
+        {
+          "id": "lag-g14-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ we need to go now?'",
+          "options": [
+            "Does",
+            "Is",
+            "Do",
+            "Are"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med we använder vi 'Do'. Do we need to go now?"
+        },
+        {
+          "id": "lag-g14-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He ___ not eat fish.'",
+          "options": [
+            "do",
+            "am",
+            "does",
+            "is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med he använder vi 'does not'. He does not eat fish."
+        }
+      ]
     }
   ],
   "reading": [
@@ -2997,6 +3372,296 @@
           "answer": "NET",
           "row": 0,
           "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "lag-cw3",
+      "title": "Djur och natur",
+      "description": "Djur och naturord på engelska",
+      "icon": "🐾",
+      "pointsRequired": 0,
+      "bonusPoints": 16,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Ett ägg",
+          "answer": "EGG",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En båge",
+          "answer": "ARC",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Ett öra",
+          "answer": "EAR",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "En apa",
+          "answer": "APE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Ett bi",
+          "answer": "BEE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En druva",
+          "answer": "GRAPE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "lag-cw4",
+      "title": "Hem och familj",
+      "description": "Hemmet och familjen på engelska",
+      "icon": "🏠",
+      "pointsRequired": 0,
+      "bonusPoints": 16,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "En apa",
+          "answer": "APE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En bil",
+          "answer": "CAR",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Stor",
+          "answer": "BIG",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "En myra",
+          "answer": "ANT",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Åt (past of eat)",
+          "answer": "ATE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Att måla / en färg (paint)",
+          "answer": "PAINT",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "lag-cw5",
+      "title": "Djur på gården",
+      "description": "Djur man kan hitta på en gård",
+      "icon": "🐄",
+      "pointsRequired": 0,
+      "bonusPoints": 16,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Hon",
+          "answer": "SHE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En spjälsäng",
+          "answer": "COT",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Noahs ___",
+          "answer": "ARK",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Att fråga",
+          "answer": "ASK",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Ett bi",
+          "answer": "BEE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En häst",
+          "answer": "HORSE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "lag-cw6",
+      "title": "Drömmar och himmel",
+      "description": "Ord om drömmar, himmel och rymd",
+      "icon": "🌙",
+      "pointsRequired": 0,
+      "bonusPoints": 16,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "En kant",
+          "answer": "EDGE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En båge",
+          "answer": "ARC",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Att se",
+          "answer": "SEE",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Ett öra",
+          "answer": "EAR",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "En emu (stor fågel)",
+          "answer": "EMU",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En dröm",
+          "answer": "DREAM",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "lag-cw7",
+      "title": "Tid och mat",
+      "description": "Tid och mat på engelska",
+      "icon": "🍽️",
+      "pointsRequired": 0,
+      "bonusPoints": 16,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Ess i kortspel",
+          "answer": "ACE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Ale (en dryck)",
+          "answer": "ALE",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Ko-ljud",
+          "answer": "MOO",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Is",
+          "answer": "ICE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Åka skidor",
+          "answer": "SKI",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En klocka",
+          "answer": "CLOCK",
+          "row": 0,
+          "col": 1,
           "direction": "down"
         }
       ]
