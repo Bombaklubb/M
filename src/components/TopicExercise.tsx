@@ -121,7 +121,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   const isLastExercise = currentIdx === topic.exercises.length - 1;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
       <AppHeader />
       {/* Top bar */}
       <div className={`bg-gradient-to-r ${topic.color} text-white px-4 pt-16 pb-3`}>
@@ -159,28 +159,28 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
 
       {/* Exercise area */}
       <div className="flex-1 max-w-lg mx-auto w-full px-4 py-6">
-        <div className="bg-white rounded-3xl shadow-md p-6 mb-4">
+        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-4">
           {/* Points badge */}
           <div className="flex justify-between items-center mb-4">
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
-              exercise.type === 'multiple-choice'  ? 'bg-blue-100 text-blue-700' :
-              exercise.type === 'fill-in'          ? 'bg-purple-100 text-purple-700' :
-                                                     'bg-green-100 text-green-700'
+              exercise.type === 'multiple-choice'  ? 'bg-blue-500/30 text-blue-300' :
+              exercise.type === 'fill-in'          ? 'bg-purple-500/30 text-purple-300' :
+                                                     'bg-emerald-500/30 text-emerald-300'
             }`}>
               {exercise.type === 'multiple-choice'   ? '🔘 Flerval' :
                exercise.type === 'fill-in'           ? '✏️ Fritext' :
                                                        '✅ Sant/Falskt'}
             </span>
-            <span className="text-sm font-bold text-amber-600">+{exercise.points}p</span>
+            <span className="text-sm font-bold text-amber-400">+{exercise.points}p</span>
           </div>
 
           {/* Static clock display – shown when exercise.clockDisplay is set */}
           {exercise.clockDisplay && (
             <div className="flex flex-col items-center mb-5">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">
+              <p className="text-xs font-bold text-white/40 uppercase tracking-wide mb-2">
                 🕐 Se klockan
               </p>
-              <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-3 inline-block">
+              <div className="bg-white/10 rounded-2xl border border-white/20 p-3 inline-block">
                 <InteractiveClock
                   hour={exercise.clockDisplay.hour}
                   minute={exercise.clockDisplay.minute}
@@ -193,7 +193,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           )}
 
           {/* Question */}
-          <h2 className="text-xl font-bold text-gray-800 mb-4 leading-snug">
+          <h2 className="text-xl font-bold text-white mb-4 leading-snug">
             {exercise.question}
           </h2>
 
@@ -202,7 +202,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             <div className="mb-5">
               <button
                 onClick={() => setShowHint(h => !h)}
-                className="flex items-center gap-2 text-sm font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-4 py-2 rounded-xl transition-colors w-full"
+                className="flex items-center gap-2 text-sm font-bold text-amber-300 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 px-4 py-2 rounded-xl transition-colors w-full"
               >
                 <span>🤔</span>
                 <span>{showHint ? 'Dölj tips' : 'Tänk så här'}</span>
@@ -245,8 +245,8 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           )}
           {/* Rätt svar – kort bekräftelse */}
           {showExplanation && state.correct && (
-            <div className="mt-4 rounded-2xl px-4 py-3 bg-green-50 border border-green-200 animate-fade-in">
-              <p className="text-green-700 font-black">🎉 Rätt! Bra jobbat!</p>
+            <div className="mt-4 rounded-2xl px-4 py-3 bg-emerald-500/20 border border-emerald-400/40 animate-fade-in">
+              <p className="text-emerald-300 font-black">🎉 Rätt! Bra jobbat!</p>
             </div>
           )}
           {/* Fel svar – rik förklaring med bildstöd */}
@@ -276,10 +276,10 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
               key={i}
               className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
                 i < currentIdx
-                  ? states[i].correct ? 'bg-green-400 text-white' : 'bg-red-400 text-white'
+                  ? states[i].correct ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'
                   : i === currentIdx
-                  ? 'bg-blue-500 text-white ring-2 ring-blue-300'
-                  : 'bg-gray-200 text-gray-400'
+                  ? 'bg-blue-500 text-white ring-2 ring-blue-300/50'
+                  : 'bg-white/10 text-white/40'
               }`}
             >
               {i < currentIdx
@@ -303,11 +303,11 @@ function MultipleChoiceAnswers({
   return (
     <div className="grid gap-3">
       {exercise.options.map((opt, i) => {
-        let cls = 'border-2 border-gray-200 bg-gray-50 text-gray-700 hover:border-blue-400 hover:bg-blue-50';
+        let cls = 'border-2 border-white/15 bg-white/5 text-white hover:border-blue-400 hover:bg-blue-500/20';
         if (state.answered) {
-          if (i === exercise.correctIndex) cls = 'border-2 border-green-400 bg-green-50 text-green-800';
-          else if (state.userAnswer === String(i)) cls = 'border-2 border-red-400 bg-red-50 text-red-700';
-          else cls = 'border-2 border-gray-200 bg-gray-50 text-gray-400 opacity-60';
+          if (i === exercise.correctIndex) cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200';
+          else if (state.userAnswer === String(i)) cls = 'border-2 border-rose-400 bg-rose-500/20 text-rose-200';
+          else cls = 'border-2 border-white/10 bg-white/5 text-white/30 opacity-60';
         }
         return (
           <button
@@ -316,7 +316,7 @@ function MultipleChoiceAnswers({
             disabled={state.answered}
             className={`w-full text-left px-5 py-3 rounded-2xl font-semibold text-base transition-all ${cls} ${!state.answered ? 'cursor-pointer active:scale-98' : 'cursor-default'}`}
           >
-            <span className="font-bold text-gray-400 mr-2">
+            <span className="font-bold text-white/40 mr-2">
               {String.fromCharCode(65 + i)}.
             </span>
             {opt}
@@ -336,12 +336,12 @@ function TrueFalseAnswers({ state, onAnswer }: {
   return (
     <div className="grid grid-cols-2 gap-4">
       {[true, false].map(val => {
-        let cls = 'border-2 border-gray-200 bg-gray-50 text-gray-700 hover:border-green-400 hover:bg-green-50';
+        let cls = 'border-2 border-white/15 bg-white/5 text-white hover:border-emerald-400 hover:bg-emerald-500/20';
         if (state.answered) {
-          if (state.correct && state.userAnswer === String(val)) cls = 'border-2 border-green-400 bg-green-50 text-green-800';
-          else if (!state.correct && state.userAnswer === String(val)) cls = 'border-2 border-red-400 bg-red-50 text-red-700';
-          else if (state.correct && state.userAnswer !== String(val)) cls = 'border-2 border-gray-200 bg-gray-50 text-gray-400';
-          else cls = 'border-2 border-green-400 bg-green-50 text-green-800'; // Show correct
+          if (state.correct && state.userAnswer === String(val)) cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200';
+          else if (!state.correct && state.userAnswer === String(val)) cls = 'border-2 border-rose-400 bg-rose-500/20 text-rose-200';
+          else if (state.correct && state.userAnswer !== String(val)) cls = 'border-2 border-white/10 bg-white/5 text-white/30';
+          else cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200'; // Show correct
         }
         return (
           <button
@@ -369,7 +369,7 @@ function FillInAnswer({ exercise, state, input, inputRef, onChange, onSubmit }: 
   return (
     <div className="space-y-3">
       {exercise.hint && !state.answered && (
-        <p className="text-sm text-amber-600 bg-amber-50 rounded-xl px-3 py-2">
+        <p className="text-sm text-amber-300 bg-amber-500/20 border border-amber-400/30 rounded-xl px-3 py-2">
           💡 Tips: {exercise.hint}
         </p>
       )}
@@ -385,8 +385,10 @@ function FillInAnswer({ exercise, state, input, inputRef, onChange, onSubmit }: 
           placeholder="Skriv ditt svar..."
           className={`flex-1 border-2 rounded-2xl px-4 py-3 text-lg font-bold focus:outline-none transition-colors ${
             state.answered
-              ? state.correct ? 'border-green-400 bg-green-50 text-green-700' : 'border-red-400 bg-red-50 text-red-600'
-              : 'border-gray-200 focus:border-blue-500'
+              ? state.correct
+                ? 'border-emerald-400 bg-emerald-500/20 text-emerald-300'
+                : 'border-rose-400 bg-rose-500/20 text-rose-300'
+              : 'bg-white/10 border-white/20 text-white placeholder-white/30 focus:border-blue-400'
           }`}
         />
         {!state.answered && (
@@ -445,7 +447,7 @@ function ClockSetAnswers({
       </div>
 
       {/* Digital display */}
-      <p className="text-center text-3xl font-black text-gray-800 tabular-nums">
+      <p className="text-center text-3xl font-black text-white tabular-nums">
         {fmt(hour, minute)}
       </p>
 
@@ -454,38 +456,38 @@ function ClockSetAnswers({
           {/* Step controls */}
           <div className="grid grid-cols-2 gap-3">
             {/* Hour */}
-            <div className="bg-gray-50 rounded-2xl p-2 text-center">
-              <p className="text-xs font-bold text-gray-500 mb-1">⏱ Timme</p>
+            <div className="bg-white/8 border border-white/15 rounded-2xl p-2 text-center">
+              <p className="text-xs font-bold text-white/50 mb-1">⏱ Timme</p>
               <div className="flex items-center justify-center gap-2">
                 <button
                   onClick={() => setHour(h => (h === 1 ? 12 : h - 1))}
-                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 text-white text-lg font-bold hover:bg-white/20 transition-colors"
                 >‹</button>
-                <span className="w-6 text-center font-black text-xl">{hour}</span>
+                <span className="w-6 text-center font-black text-xl text-white">{hour}</span>
                 <button
                   onClick={() => setHour(h => (h === 12 ? 1 : h + 1))}
-                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 text-white text-lg font-bold hover:bg-white/20 transition-colors"
                 >›</button>
               </div>
             </div>
             {/* Minute */}
-            <div className="bg-gray-50 rounded-2xl p-2 text-center">
-              <p className="text-xs font-bold text-gray-500 mb-1">⏰ Minut</p>
+            <div className="bg-white/8 border border-white/15 rounded-2xl p-2 text-center">
+              <p className="text-xs font-bold text-white/50 mb-1">⏰ Minut</p>
               <div className="flex items-center justify-center gap-2">
                 <button
                   onClick={() => setMinute(m => (m === 0 ? 55 : m - 5))}
-                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 text-white text-lg font-bold hover:bg-white/20 transition-colors"
                 >‹</button>
-                <span className="w-8 text-center font-black text-xl">{String(minute).padStart(2, '0')}</span>
+                <span className="w-8 text-center font-black text-xl text-white">{String(minute).padStart(2, '0')}</span>
                 <button
                   onClick={() => setMinute(m => (m === 55 ? 0 : m + 5))}
-                  className="w-9 h-9 rounded-full bg-white border border-gray-200 text-lg font-bold hover:bg-gray-100 transition-colors"
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 text-white text-lg font-bold hover:bg-white/20 transition-colors"
                 >›</button>
               </div>
             </div>
           </div>
 
-          <p className="text-xs text-center text-gray-400">
+          <p className="text-xs text-center text-white/40">
             Dra på klockan eller använd knapparna · Inre cirkel = timme · Yttre = minut
           </p>
 
@@ -505,13 +507,13 @@ function ClockSetAnswers({
 
 function WrongAnswerExplanation({ exercise }: { exercise: Exercise }) {
   return (
-    <div className="mt-4 rounded-2xl overflow-hidden border-2 border-red-300 animate-fade-in">
-      <div className="bg-red-500 px-4 py-2.5">
-        <p className="text-white font-black">❌ Inte riktigt — så här tänker man:</p>
+    <div className="mt-4 rounded-2xl overflow-hidden border border-rose-400/40 animate-fade-in">
+      <div className="bg-rose-500/30 px-4 py-2.5">
+        <p className="text-rose-200 font-black">❌ Inte riktigt — så här tänker man:</p>
       </div>
-      <div className="bg-red-50 px-4 py-3 space-y-2">
+      <div className="bg-rose-500/10 px-4 py-3 space-y-2">
         {exercise.explanation && (
-          <p className="text-sm text-red-700 leading-relaxed">{exercise.explanation}</p>
+          <p className="text-sm text-rose-300 leading-relaxed">{exercise.explanation}</p>
         )}
         <ExerciseVisual exercise={exercise} />
       </div>
@@ -582,9 +584,9 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
           size={150}
         />
         <div>
-          <p className="text-xs font-bold text-gray-500 mb-1">Rätt tid:</p>
-          <p className="text-3xl font-black text-green-700 tabular-nums">{fmtH}:{fmtM}</p>
-          <p className="text-xs text-gray-500 mt-2">
+          <p className="text-xs font-bold text-white/50 mb-1">Rätt tid:</p>
+          <p className="text-3xl font-black text-emerald-400 tabular-nums">{fmtH}:{fmtM}</p>
+          <p className="text-xs text-white/40 mt-2">
             Kort visare (mörk) → {ex.targetHour}<br />
             Lång visare (blå) → {ex.targetMinute} min
           </p>
@@ -597,8 +599,8 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
   if (exercise.type === 'multiple-choice') {
     const ex = exercise as MultipleChoiceExercise;
     return (
-      <div className="mt-1 bg-green-100 border border-green-300 rounded-xl px-4 py-2.5">
-        <p className="text-sm font-black text-green-800">✓ Rätt svar: {ex.options[ex.correctIndex]}</p>
+      <div className="mt-1 bg-emerald-500/20 border border-emerald-400/40 rounded-xl px-4 py-2.5">
+        <p className="text-sm font-black text-emerald-300">✓ Rätt svar: {ex.options[ex.correctIndex]}</p>
       </div>
     );
   }
@@ -607,8 +609,8 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
   if (exercise.type === 'true-false') {
     const ex = exercise as TrueFalseExercise;
     return (
-      <div className="mt-1 bg-green-100 border border-green-300 rounded-xl px-4 py-2.5">
-        <p className="text-sm font-black text-green-800">
+      <div className="mt-1 bg-emerald-500/20 border border-emerald-400/40 rounded-xl px-4 py-2.5">
+        <p className="text-sm font-black text-emerald-300">
           ✓ Rätt svar: {ex.isTrue ? '👍 Sant' : '👎 Falskt'}
         </p>
       </div>
@@ -625,7 +627,7 @@ function NumberLineAdd({ a, b }: { a: number; b: number }) {
   const cellW = Math.max(22, Math.min(32, Math.floor(300 / (sum + 1))));
   return (
     <div className="mt-2">
-      <p className="text-xs font-bold text-gray-500 mb-1">📏 Tallinjen — räkna {b} steg från {a}:</p>
+      <p className="text-xs font-bold text-white/50 mb-1">📏 Tallinjen — räkna {b} steg från {a}:</p>
       <div className="overflow-x-auto pb-1">
         <div className="flex items-end" style={{ gap: 2 }}>
           {cells.map(n => (
@@ -658,7 +660,7 @@ function NumberLineSub({ a, b }: { a: number; b: number }) {
   const cellW = Math.max(22, Math.min(32, Math.floor(300 / (a + 1))));
   return (
     <div className="mt-2">
-      <p className="text-xs font-bold text-gray-500 mb-1">📏 Tallinjen — räkna {b} steg tillbaka från {a}:</p>
+      <p className="text-xs font-bold text-white/50 mb-1">📏 Tallinjen — räkna {b} steg tillbaka från {a}:</p>
       <div className="overflow-x-auto pb-1">
         <div className="flex items-end" style={{ gap: 2 }}>
           {cells.map(n => (
@@ -689,7 +691,7 @@ function DotGrid({ rows, cols }: { rows: number; cols: number }) {
   const product = rows * cols;
   return (
     <div className="mt-2">
-      <p className="text-xs font-bold text-gray-500 mb-1.5">🔵 Prickar — {cols} kolumner × {rows} rader:</p>
+      <p className="text-xs font-bold text-white/50 mb-1.5">🔵 Prickar — {cols} kolumner × {rows} rader:</p>
       <div className="overflow-x-auto">
         <div className="flex flex-col gap-1.5 inline-flex">
           {Array.from({ length: rows }, (_, r) => (
@@ -702,7 +704,7 @@ function DotGrid({ rows, cols }: { rows: number; cols: number }) {
           ))}
         </div>
       </div>
-      <p className="text-sm font-black text-gray-700 mt-1.5">{rows} rader × {cols} = <span className="text-green-700">{product}</span></p>
+      <p className="text-sm font-black text-white/80 mt-1.5">{rows} rader × {cols} = <span className="text-emerald-400">{product}</span></p>
     </div>
   );
 }
@@ -712,9 +714,9 @@ function DotGrid({ rows, cols }: { rows: number; cols: number }) {
 function HintPanel({ exercise }: { exercise: Exercise }) {
   const hint = generateHint(exercise);
   return (
-    <div className="mt-2 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 animate-fade-in">
-      <p className="text-xs font-black text-amber-800 uppercase tracking-wide mb-2">💡 Strategi – tänk så här:</p>
-      <p className="text-sm text-amber-900 leading-relaxed whitespace-pre-line">{hint}</p>
+    <div className="mt-2 bg-amber-500/15 border border-amber-400/30 rounded-2xl px-4 py-3 animate-fade-in">
+      <p className="text-xs font-black text-amber-300 uppercase tracking-wide mb-2">💡 Strategi – tänk så här:</p>
+      <p className="text-sm text-amber-200 leading-relaxed whitespace-pre-line">{hint}</p>
     </div>
   );
 }
@@ -812,16 +814,16 @@ function generateHint(exercise: Exercise): string {
 /** Step-by-step calculation display. */
 function StepCalc({ title, lines, answer }: { title: string; lines: string[]; answer: string }) {
   return (
-    <div className="mt-2 bg-white rounded-xl border border-gray-200 overflow-hidden">
-      <div className="bg-gray-50 px-3 py-1.5 border-b border-gray-200">
-        <p className="text-xs font-bold text-gray-500">{title}</p>
+    <div className="mt-2 bg-white/8 rounded-xl border border-white/15 overflow-hidden">
+      <div className="bg-white/5 px-3 py-1.5 border-b border-white/10">
+        <p className="text-xs font-bold text-white/50">{title}</p>
       </div>
       <div className="px-3 py-2 space-y-0.5">
         {lines.map((line, i) => (
           <p key={i} className={`font-mono ${
             i === lines.length - 1
-              ? 'font-black text-green-700 text-base border-t border-gray-100 pt-1 mt-1'
-              : 'text-sm text-gray-600'
+              ? 'font-black text-emerald-400 text-base border-t border-white/10 pt-1 mt-1'
+              : 'text-sm text-white/70'
           }`}>
             {line}
           </p>
