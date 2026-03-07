@@ -3,6 +3,7 @@ import { useApp } from '../contexts/AppContext';
 import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
 import { getProgress, getPoints } from '../utils/storage';
+import { ALL_AVATARS } from '../data/avatars';
 
 export default function WorldSelect() {
   const { currentStudent, logout, setView } = useApp();
@@ -10,6 +11,7 @@ export default function WorldSelect() {
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
   const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
   const totalPoints = pointsRecord?.totalPoints ?? 0;
+  const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
 
   return (
     <div
@@ -33,33 +35,28 @@ export default function WorldSelect() {
         ))}
       </div>
 
-      {/* Top bar: stjärna + poäng, användarnamn, logga ut */}
+      {/* Top bar: avatar + namn + poäng, logga ut */}
       <div className="relative z-10 flex items-center justify-between px-4 pt-4 pb-2">
-        {/* Poäng */}
+        {/* Avatar + namn + poäng */}
         <div
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
+          className="flex items-center gap-2 px-3 py-1.5 rounded-full"
           style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
         >
-          <span className="text-yellow-400 text-base">⭐</span>
+          <span className="text-xl leading-none">{avatarEmoji}</span>
+          <span className="text-white font-bold text-sm">{currentStudent?.name ?? ''}</span>
+          <span className="text-white/30 text-sm">·</span>
+          <span className="text-yellow-400 text-sm">⭐</span>
           <span className="text-white font-bold text-sm">{totalPoints}</span>
         </div>
 
-        {/* Användarnamn + logga ut */}
-        <div className="flex items-center gap-2">
-          <span
-            className="text-white/80 font-semibold text-sm px-3 py-1.5 rounded-full"
-            style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
-          >
-            {currentStudent?.name ?? ''}
-          </span>
-          <button
-            onClick={logout}
-            className="text-white/60 text-sm px-3 py-1.5 rounded-full transition-all hover:bg-white/10 active:scale-95"
-            style={{ border: '1px solid rgba(255,255,255,0.15)' }}
-          >
-            Logga ut
-          </button>
-        </div>
+        {/* Logga ut */}
+        <button
+          onClick={logout}
+          className="text-white/60 text-sm px-3 py-1.5 rounded-full transition-all hover:bg-white/10 active:scale-95"
+          style={{ border: '1px solid rgba(255,255,255,0.15)' }}
+        >
+          Logga ut
+        </button>
       </div>
 
       {/* Logo som titel */}
