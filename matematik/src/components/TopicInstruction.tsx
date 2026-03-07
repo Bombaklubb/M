@@ -273,28 +273,28 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
 
   // ---- LEARN PHASE ----
   if (phase === 'learn') return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
       <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
-        <div className="bg-white rounded-3xl shadow-md p-6 mb-6">
+        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-6">
           <div className="flex items-center gap-2 mb-4">
-            <span className="bg-blue-100 text-blue-700 font-bold text-xs px-3 py-1 rounded-full">Steg 1 av 2 · Lär dig</span>
+            <span className="bg-blue-500/30 text-blue-300 font-bold text-xs px-3 py-1 rounded-full">Steg 1 av 2 · Lär dig</span>
           </div>
-          <h2 className="text-xl font-bold text-gray-800 mb-4">📖 {topic.instruction.title}</h2>
+          <h2 className="text-xl font-bold text-white mb-4">📖 {topic.instruction.title}</h2>
 
-          <div className="rounded-2xl overflow-hidden mb-5 bg-gray-50">
+          <div className="rounded-2xl overflow-hidden mb-5 bg-white/5 border border-white/10">
             <Illustration name={topic.instruction.illustration} />
           </div>
 
-          <p className="text-gray-700 leading-relaxed text-base mb-5">{topic.instruction.text}</p>
+          <p className="text-white/80 leading-relaxed text-base mb-5">{topic.instruction.text}</p>
 
           {topic.instruction.examples && (
-            <div className="bg-blue-50 rounded-2xl p-4">
-              <p className="font-bold text-blue-800 mb-2">💡 Exempel:</p>
+            <div className="bg-blue-500/20 border border-blue-400/30 rounded-2xl p-4">
+              <p className="font-bold text-blue-300 mb-2">💡 Exempel:</p>
               <ul className="space-y-1">
                 {topic.instruction.examples.map((ex, i) => (
-                  <li key={i} className="text-blue-700 font-mono text-sm">{ex}</li>
+                  <li key={i} className="text-blue-200 font-mono text-sm">{ex}</li>
                 ))}
               </ul>
             </div>
@@ -311,21 +311,21 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
 
   // ---- MINI CHALLENGE ----
   if (phase === 'mini' && miniEx) return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
       <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
-        <div className="bg-white rounded-3xl shadow-md p-6 mb-5">
+        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-5">
           <div className="flex items-center gap-2 mb-4">
-            <span className="bg-purple-100 text-purple-700 font-bold text-xs px-3 py-1 rounded-full">Steg 2 av 2 · Testa dig!</span>
+            <span className="bg-purple-500/30 text-purple-300 font-bold text-xs px-3 py-1 rounded-full">Steg 2 av 2 · Testa dig!</span>
           </div>
-          <p className="text-gray-500 text-sm mb-3">Innan du börjar – svara på denna fråga:</p>
+          <p className="text-white/50 text-sm mb-3">Innan du börjar – svara på denna fråga:</p>
 
           {/* Clock image – shown when exercise has a clockDisplay */}
           {(miniEx as any).clockDisplay && (
             <div className="flex flex-col items-center mb-4">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">🕐 Se klockan</p>
-              <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-3 inline-block">
+              <p className="text-xs font-bold text-white/40 uppercase tracking-wide mb-2">🕐 Se klockan</p>
+              <div className="bg-white/10 rounded-2xl border border-white/20 p-3 inline-block">
                 <InteractiveClock
                   hour={(miniEx as any).clockDisplay.hour}
                   minute={(miniEx as any).clockDisplay.minute}
@@ -337,7 +337,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
             </div>
           )}
 
-          <h2 className="text-xl font-black text-gray-800 mb-5">{miniEx.question}</h2>
+          <h2 className="text-xl font-black text-white mb-5">{miniEx.question}</h2>
 
           {miniEx.type === 'fill-in' && !miniAnswered && (
             <div className="flex gap-3">
@@ -345,7 +345,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
                 onChange={e => setMiniInput(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && miniInput.trim() && checkMini(miniInput.trim())}
                 placeholder="Ditt svar..."
-                className={`flex-1 border-2 border-gray-200 rounded-2xl px-4 py-3 text-lg font-bold focus:outline-none focus:border-purple-400`}/>
+                className="flex-1 bg-white/10 border-2 border-white/20 text-white placeholder-white/30 rounded-2xl px-4 py-3 text-lg font-bold focus:outline-none focus:border-purple-400"/>
               <button onClick={() => miniInput.trim() && checkMini(miniInput.trim())}
                 className="bg-purple-500 text-white font-bold px-5 rounded-2xl hover:bg-purple-400">✓</button>
             </div>
@@ -355,8 +355,8 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
             <div className="grid gap-3">
               {(miniEx as any).options.map((opt: string, i: number) => (
                 <button key={i} onClick={() => checkMini(String(i))}
-                  className="text-left px-5 py-3 rounded-2xl font-semibold border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all">
-                  <span className="text-gray-400 font-bold mr-2">{String.fromCharCode(65 + i)}.</span>{opt}
+                  className="text-left px-5 py-3 rounded-2xl font-semibold border-2 border-white/15 bg-white/5 text-white hover:border-purple-400 hover:bg-purple-500/20 transition-all">
+                  <span className="text-white/40 font-bold mr-2">{String.fromCharCode(65 + i)}.</span>{opt}
                 </button>
               ))}
             </div>
@@ -366,7 +366,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
             <div className="grid grid-cols-2 gap-4">
               {[true, false].map(val => (
                 <button key={String(val)} onClick={() => checkMini(String(val))}
-                  className="py-5 rounded-2xl font-black text-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all">
+                  className="py-5 rounded-2xl font-black text-xl border-2 border-white/15 bg-white/5 text-white hover:border-purple-400 hover:bg-purple-500/20 transition-all">
                   {val ? '👍 Sant' : '👎 Falskt'}
                 </button>
               ))}
@@ -374,11 +374,11 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
           )}
 
           {miniAnswered && (
-            <div className={`rounded-2xl p-4 mt-3 ${miniCorrect ? 'bg-green-50 border border-green-200' : 'bg-orange-50 border border-orange-200'}`}>
-              <p className={`font-black text-lg mb-1 ${miniCorrect ? 'text-green-700' : 'text-orange-700'}`}>
+            <div className={`rounded-2xl p-4 mt-3 ${miniCorrect ? 'bg-emerald-500/20 border border-emerald-400/40' : 'bg-amber-500/20 border border-amber-400/40'}`}>
+              <p className={`font-black text-lg mb-1 ${miniCorrect ? 'text-emerald-300' : 'text-amber-300'}`}>
                 {miniCorrect ? '🎉 Precis rätt!' : '💪 Bra försök!'}
               </p>
-              <p className={`text-sm ${miniCorrect ? 'text-green-600' : 'text-orange-600'}`}>{miniEx.explanation}</p>
+              <p className={`text-sm ${miniCorrect ? 'text-emerald-400' : 'text-amber-400'}`}>{miniEx.explanation}</p>
             </div>
           )}
         </div>
