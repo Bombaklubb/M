@@ -552,6 +552,11 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
         <path d="M20,52 Q10,80 18,110 Q28,118 40,114 Q52,118 62,110 Q70,80 60,52" fill="#DC2626" opacity="0.92" />
       )}
 
+      {/* Belt / waistband */}
+      {!isFootballer && (
+        <rect x="18" y="82" width="44" height="5" rx="2" fill="#111827" opacity="0.5" />
+      )}
+
       {/* Legs – footballer has shorts */}
       {isFootballer ? (
         <>
@@ -675,27 +680,46 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
       {/* Head */}
       <circle cx="40" cy="28" r="19" fill={skin.base} />
 
+      {/* Ears */}
+      <ellipse cx="21" cy="29" rx="3.5" ry="4.5" fill={skin.base} />
+      <ellipse cx="59" cy="29" rx="3.5" ry="4.5" fill={skin.base} />
+      <ellipse cx="21" cy="29" rx="1.8" ry="2.5" fill={skin.lip} opacity="0.25" />
+      <ellipse cx="59" cy="29" rx="1.8" ry="2.5" fill={skin.lip} opacity="0.25" />
+
       {/* Hair */}
       {gender === "girl"
         ? <GirlHair heroId={heroId} color={hairColor} />
         : <BoyHair  heroId={heroId} color={hairColor} />
       }
 
-      {/* Eyes */}
-      <circle cx="33" cy="26" r="3" fill="#1F2937" />
-      <circle cx="47" cy="26" r="3" fill="#1F2937" />
-      <circle cx="34.2" cy="24.8" r="1" fill="white" />
-      <circle cx="48.2" cy="24.8" r="1" fill="white" />
+      {/* Eyes – whites */}
+      <ellipse cx="33" cy="26" rx="4" ry="3.5" fill="white" />
+      <ellipse cx="47" cy="26" rx="4" ry="3.5" fill="white" />
+      {/* Irises */}
+      <circle cx="33" cy="26.5" r="2.5" fill="#3B82F6" />
+      <circle cx="47" cy="26.5" r="2.5" fill="#3B82F6" />
+      {/* Pupils */}
+      <circle cx="33" cy="26.5" r="1.5" fill="#1F2937" />
+      <circle cx="47" cy="26.5" r="1.5" fill="#1F2937" />
+      {/* Highlights */}
+      <circle cx="34" cy="25.2" r="0.9" fill="white" />
+      <circle cx="48" cy="25.2" r="0.9" fill="white" />
 
       {/* Eyebrows */}
       <path d="M29,21 Q33,19 37,21" stroke={hairColor} strokeWidth="1.8" fill="none" strokeLinecap="round" />
       <path d="M43,21 Q47,19 51,21" stroke={hairColor} strokeWidth="1.8" fill="none" strokeLinecap="round" />
 
       {/* Nose */}
-      <circle cx="40" cy="31" r="1.2" fill="#B87040" opacity="0.5" />
+      <ellipse cx="40" cy="31" rx="1.8" ry="1.2" fill={skin.base} stroke={skin.lip} strokeWidth="0.6" opacity="0.6" />
+
+      {/* Cheeks */}
+      <ellipse cx="30" cy="34" rx="4" ry="2.5" fill="#F87171" opacity="0.18" />
+      <ellipse cx="50" cy="34" rx="4" ry="2.5" fill="#F87171" opacity="0.18" />
 
       {/* Mouth */}
-      <path d="M34,36 Q40,41 46,36" fill="none" stroke={skin.lip} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M34,36 Q40,42 46,36" fill="none" stroke={skin.lip} strokeWidth="2" strokeLinecap="round" />
+      {/* Smile highlight */}
+      <path d="M36,36 Q40,39 44,36" fill="none" stroke={skin.lip} strokeWidth="0.6" opacity="0.4" strokeLinecap="round" />
 
       {/* Glasses */}
       {hasGlasses && (
