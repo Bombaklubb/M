@@ -210,10 +210,11 @@
         }
       ],
       "helpText": [
-        "Be-verbet (att vara) ändras beroende på vem du talar om – precis som 'är' på svenska gör vi det på engelska med tre olika former.",
+        "🎵 Ramsa: \"I am, you are – he is, she is! We, you, they are – lär dig nu vis!\"",
+        "Be-verbet (att vara) har tre former: AM, IS och ARE.",
         "Regel: I → am | He / She / It → is | You / We / They → are",
         "Exempel: I am happy. ✔  She is my friend. ✔  We are at school. ✔",
-        "Tips: Om du kan byta ut orden mot 'he/she/it' → skriv IS. Kan du byta mot 'we/they'? → skriv ARE."
+        "Tips: Kan du byta ut ordet mot 'he/she/it'? → skriv IS. Mot 'we/they'? → skriv ARE."
       ]
     },
     {
@@ -417,10 +418,11 @@
         }
       ],
       "helpText": [
-        "Have/has betyder 'ha'. Ha/has följer samma mönster som am/is/are.",
+        "🎵 Ramsa: \"I have, you have – he HAS, hon HAS! S:et dyker upp – precis som IS!\"",
+        "Have/has betyder 'ha'. Mönstret liknar am/is/are.",
         "Regel: I / You / We / They → have | He / She / It → has",
         "Exempel: I have a dog. ✔  She has a cat. ✔  They have two books. ✔",
-        "Tips: Om du skulle använda IS → använd HAS. Om du skulle använda ARE → använd HAVE."
+        "Tips: Om du skulle skriva IS → skriv HAS. Om du skulle skriva ARE → skriv HAVE."
       ]
     },
     {
@@ -628,6 +630,7 @@
         }
       ],
       "helpText": [
+        "🎵 Ramsa: \"Börjar det med vokalljud – AN är rätt! Börjar det med konsonant – A är lätt!\"",
         "A eller an? Det beror på hur nästa ord LÅTER, inte hur det stavas!",
         "A används före konsonantljud: a dog, a cat, a big house, a university (u låter 'ju').",
         "An används före vokalljud (a, e, i, o, u): an apple, an orange, an elephant, an umbrella.",
@@ -1016,10 +1019,11 @@
         }
       ],
       "helpText": [
+        "🎵 Ramsa: \"THIS och THESE är nära mig – THAT och THOSE är långt därifrån! Singular utan S – plural med S!\"",
         "Pekord hjälper oss peka ut saker: är de NÄRA dig eller LÅNGT BORT?",
-        "Nära + en sak: this (denna). Nära + flera saker: these (dessa).",
+        "Nära + en sak: this (denna/dette). Nära + flera saker: these (dessa).",
         "Långt bort + en sak: that (den där). Långt bort + flera saker: those (de där).",
-        "Tips: Tänk 'th-IS' = IS nära (singular) och 'th-OSE' = OSA-ffar bort (plural)."
+        "Exempel: This is my pen. ✔  These are my books. ✔  That house is big. ✔  Those birds are pretty. ✔"
       ]
     },
     {
@@ -1611,10 +1615,11 @@
         }
       ],
       "helpText": [
+        "🎵 Ramsa: \"En sak finns? THERE IS! Flera saker? THERE ARE! IS och ARE – precis som alltid!\"",
         "'There is' och 'there are' används för att säga att något FINNS på ett ställe.",
         "Regel: There IS + en sak (singular). There ARE + flera saker (plural).",
         "Exempel: There is a cat on the chair. ✔  There are three apples in the bowl. ✔",
-        "Tips: Titta på substantivet efter – är det ensamt? → IS. Är det flera? → ARE."
+        "Tips: Titta på substantivet efter there is/are – är det ensamt? → IS. Är det flera? → ARE."
       ]
     },
     {
@@ -2600,6 +2605,13 @@
           "correctIndex": 2,
           "explanation": "Med he använder vi 'does not'. He does not eat fish."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"I, you, we, they – DO det bäst! Han, hon, det – DOES – S på fest!\"",
+        "Do och does är hjälpverb för att ställa frågor och bilda negationer.",
+        "Regel: I / You / We / They → do / don't | He / She / It → does / doesn't",
+        "Exempel: Do you like cats? ✔  Does she play football? ✔  I don't know. ✔  He doesn't come. ✔",
+        "Tips: Ser du 'he', 'she' eller 'it'? Skriv DOES. Annars DO."
       ]
     }
   ],

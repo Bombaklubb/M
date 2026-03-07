@@ -2383,6 +2383,14 @@
           "correctIndex": 3,
           "explanation": "Med the teacher (= she/he) använder vi 'Does'."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"DO frågar och DON'T nekar – DOES och DOESN'T, S:et märker vi!\"",
+        "Do/does används i frågor och negationer i presens (nuet).",
+        "Regel: He / She / It → does / doesn't | I / You / We / They → do / don't",
+        "Frågans ordföljd: Do/Does + subjekt + verb (grundform)? → Does she speak French?",
+        "Exempel: Do they live here? – Yes, they do. ✔  She doesn't like spiders. ✔  Does he know the answer? ✔",
+        "Tips: Efter does/doesn't → verbet ska vara i grundform (ALDRIG does she speaks ✗)."
       ]
     },
     {
@@ -2494,6 +2502,14 @@
           "correctIndex": 1,
           "explanation": "'Apple' börjar med vokalljudet A → 'an apple'."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Vokalljud i munnen – AN ska dit! Konsonantljud? A är split!\"",
+        "A/an är obestämda artiklar. Välj utifrån hur nästa ord LÅTER.",
+        "A före konsonantljud: a book, a car, a uniform (u låter 'ju'), a European.",
+        "An före vokalljud: an idea, an hour (h är tyst!), an honest man, an MP.",
+        "Exempel: She has a dog and an umbrella. ✔  It takes an hour. ✔  He is a university student. ✔",
+        "Tips: 'An hour' – h är tyst, så det låter 'our' → vokalljud → an."
       ]
     },
     {
@@ -2619,6 +2635,14 @@
           "correctIndex": 2,
           "explanation": "Med I använder vi alltid 'am'. I am not sure."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"I am, you are – he IS, she IS! We are, they are – lätt är vis!\"",
+        "Be-verbet används i frågor, negationer och pågående handlingar (present continuous).",
+        "Frågor: Am I late? Is she coming? Are they ready?",
+        "Negationer: I am not (I'm not). He is not (He isn't). We are not (We aren't).",
+        "Exempel: Is she at home? – Yes, she is. ✔  They aren't playing today. ✔  Am I right? ✔",
+        "Tips: Frågans ordföljd: Is/Am/Are + subjekt + resten av meningen?"
       ]
     },
     {
@@ -2744,6 +2768,14 @@
           "correctIndex": 3,
           "explanation": "'Each student' = singular (he/she/it) → has."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Have eller has – kolla vem som äger! He/she/it = HAS, resten HAVE beger!\"",
+        "Have/has visar ägande eller används i presens perfekt (present perfect).",
+        "Regel: He / She / It → has | I / You / We / They → have",
+        "Frågor och negationer: Do you have...? Does she have...? I don't have... She doesn't have...",
+        "Exempel: She has a new bike. ✔  Do you have a pen? ✔  He doesn't have time. ✔",
+        "Tips: I frågor och negationer – använd do/does + have (aldrig 'does she has' ✗)."
       ]
     },
     {
@@ -2869,6 +2901,14 @@
           "correctIndex": 3,
           "explanation": "'These days' är ett fast uttryck som means 'nuförtiden'."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"THIS och THESE är nära mig – THAT och THOSE är långt härifrån! Singular utan S – plural med S!\"",
+        "Pekorden visar om något är nära (this/these) eller långt borta (that/those).",
+        "Singular: this (nära) – that (långt borta). Plural: these (nära) – those (långt borta).",
+        "Som pronomen: This is great! That was fun! These are mine. Those look heavy.",
+        "Exempel: This book is interesting. ✔  Those mountains are far away. ✔  Are these your keys? ✔",
+        "Tips: Tänk: THIS/THESE = nära = HERE. THAT/THOSE = längre bort = THERE."
       ]
     },
     {
@@ -2994,6 +3034,14 @@
           "correctIndex": 0,
           "explanation": "Anything = singular/uncountable → Is there anything interesting?"
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"THERE IS en sak – THERE ARE ett gäng! Singular IS, plural ARE – håll det i sträng!\"",
+        "There is/there are används för att berätta att något finns eller existerar.",
+        "Regel: There is + singular. There are + plural.",
+        "Frågor: Is there a...? Are there any...? Negationer: There isn't a... There aren't any...",
+        "Exempel: There is a problem. ✔  There are many students here. ✔  Is there any milk left? ✔",
+        "Tips: Kolla vad som kommer efter – ett eller flera? Det avgör is eller are."
       ]
     }
   ],

@@ -2500,6 +2500,14 @@
           "correctIndex": 0,
           "explanation": "Kortsvar i preteritum: Yes, she did."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"DO betonar, DID betonade – 'She DOES care!' – tro på det sade!\"",
+        "Do/does/did används som stödverb i frågor, negationer OCH för betoning (emphatic).",
+        "Betoning: I DO like it! She DOES know! He DID call you! (för att understryka att det är sant)",
+        "Frågeinversion: Rarely does she complain. Never did he give up. (negativt adverbial → inversion)",
+        "Exempel: Do you ever doubt yourself? – I do doubt myself sometimes, but I do believe in hard work. ✔",
+        "Tips: Did + grundform för betoning i dåtid: 'She said she didn't, but she DID go.' ✔"
       ]
     },
     {
@@ -2622,6 +2630,14 @@
           "correctIndex": 2,
           "explanation": "Floder, hav, bergskedjor → the. The Nile."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Vokalljudet styr – AN ger sig till känna! H tyst som i 'hour'? AN får ränna!\"",
+        "A/an styrs av UTTALET av nästa ord – inte stavningen.",
+        "Tyst h → an: an hour, an honest politician, an honour.",
+        "U som 'ju' → a: a university, a unique opportunity, a union.",
+        "Exempel: It was an honour to meet her. ✔  He studied at a European university. ✔  An MP spoke today. ✔",
+        "Tips: Förkortningar – kolla hur du uttalar första bokstaven: an MP (em-pi), a CEO (si-i-o) ✔"
       ]
     },
     {
@@ -2747,6 +2763,14 @@
           "correctIndex": 2,
           "explanation": "'The majority of' + plural noun → plural → are."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"The number IS, a number ARE – kollektiv? Det beror på hur de går!\"",
+        "Be-verbet i svåra fall: kongruens med komplexa subjekt.",
+        "The number of + plural → singular: The number of students is increasing. ✔",
+        "A number of + plural → plural: A number of problems are unsolved. ✔",
+        "Kollektiv: 'The team is winning.' (enhet) vs 'The team are arguing.' (individer – brittisk engelska) ✔",
+        "Exempel: Neither of them is wrong. ✔  Each of the answers is correct. ✔  The news is shocking. ✔"
       ]
     },
     {
@@ -2872,6 +2896,14 @@
           "correctIndex": 1,
           "explanation": "Do you have the time? = Vet du vad klockan är? You → have."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"HAD it done – kausativ fint! Have something done – låt någon annan grina!\"",
+        "Kausativ konstruktion: have/get + objekt + past participle (= låta/få någon göra något).",
+        "Have something done: I had my hair cut. She had her car repaired. ✔",
+        "Get something done (mer informellt): I need to get this fixed. ✔",
+        "Presens perfekt: have/has + past participle → She has lived here for years. ✔",
+        "Exempel: We had the house painted last summer. ✔  Have you ever had your phone stolen? ✔"
       ]
     },
     {
@@ -2997,6 +3029,14 @@
           "correctIndex": 3,
           "explanation": "'Those of previous studies' – plural (results). Syftar på plural noun."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Those WHO gör meningar fina – this/that i text bygger stilen din-a!\"",
+        "Pekorden används idiomatiskt och i mer komplexa sammanhang på högstadienivå.",
+        "Those who / Those of us who: Those who work hard tend to succeed. ✔",
+        "That i relativsatser: The book that I read was fascinating. ✔",
+        "This/that för att referera till tidigare sagt: That's a good point. This is why it matters. ✔",
+        "Exempel: Those of you who are ready may begin. ✔  This suggests that the theory is correct. ✔"
       ]
     },
     {
@@ -3122,6 +3162,14 @@
           "correctIndex": 3,
           "explanation": "Preteritum plural (many occasions) → were. There were many occasions..."
         }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"A number ARE – the number IS! There's a trick att lära i detta vis!\"",
+        "There is/are i avancerade konstruktioner – kongruens och formellt språk.",
+        "A number of → are: There are a number of issues to address. ✔",
+        "The number of → is: There is a large number of applicants. ✔",
+        "Formellt: There exists / There remain: There remains much to be done. ✔",
+        "Exempel: There have been several attempts. ✔  There seems to be a misunderstanding. ✔"
       ]
     }
   ],
