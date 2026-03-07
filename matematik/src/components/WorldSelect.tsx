@@ -60,11 +60,11 @@ export default function WorldSelect() {
       </div>
 
       {/* Logo som titel */}
-      <div className="relative z-10 pt-4 pb-4 text-center px-4">
+      <div className="relative z-10 pt-2 pb-4 text-center px-4">
         <img
           src="/mattejakten.png"
           alt="Mattejakten"
-          className="h-36 w-auto mx-auto drop-shadow-lg"
+          className="h-40 w-auto mx-auto drop-shadow-lg"
         />
       </div>
 
