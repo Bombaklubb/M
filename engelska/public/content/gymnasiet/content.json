@@ -2923,6 +2923,352 @@
           "direction": "down"
         }
       ]
+    },
+    {
+      "id": "gym-cw3",
+      "title": "Globalisering",
+      "description": "Globala och akademiska ord",
+      "icon": "🌐",
+      "pointsRequired": 0,
+      "bonusPoints": 22,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Agent/ombud",
+          "answer": "AGENT",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Välja/väljas",
+          "answer": "ELECT",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Klara sig",
+          "answer": "COPE",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Kapabel",
+          "answer": "ABLE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Huvud-/stor",
+          "answer": "MAJOR",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Elit",
+          "answer": "ELITE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Global/världsomspännande",
+          "answer": "GLOBAL",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "gym-cw4",
+      "title": "Teori och vetenskap",
+      "description": "Vetenskapliga och filosofiska begrepp",
+      "icon": "🔬",
+      "pointsRequired": 0,
+      "bonusPoints": 22,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Atom",
+          "answer": "ATOM",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Framåt",
+          "answer": "AHEAD",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "En bänk",
+          "answer": "BENCH",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Kod",
+          "answer": "CODE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Uppstå/uppkomma",
+          "answer": "ARISE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Ögon",
+          "answer": "EYES",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Teori",
+          "answer": "THEORY",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "gym-cw5",
+      "title": "Debatt och argumentation",
+      "description": "Ord för debatt och argumentation",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 22,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Skicklig",
+          "answer": "ADEPT",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En koj/sovplats",
+          "answer": "BERTH",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Kapabel",
+          "answer": "ABLE",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Massa",
+          "answer": "MASS",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Gottgöra/sona",
+          "answer": "ATONE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En häck/att undvika",
+          "answer": "HEDGE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Debatt",
+          "answer": "DEBATE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "gym-cw6",
+      "title": "Etik och moral",
+      "description": "Etik och moralfilosofiska ord",
+      "icon": "⚖️",
+      "pointsRequired": 0,
+      "bonusPoints": 22,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Tro/övertygelse",
+          "answer": "BELIEF",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Fullständig/att uttala",
+          "answer": "UTTER",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Framåt",
+          "answer": "AHEAD",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Assistent",
+          "answer": "AIDE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Topp/höjdpunkt",
+          "answer": "ACME",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Åt sidan",
+          "answer": "ASIDE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Etik",
+          "answer": "ETHICS",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "gym-cw7",
+      "title": "Forskning och analys",
+      "description": "Ord från vetenskaplig forskning",
+      "icon": "🔭",
+      "pointsRequired": 0,
+      "bonusPoints": 22,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Valv/båge",
+          "answer": "ARCH",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Var försiktig",
+          "answer": "BEWARE",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Tillgång/resurs",
+          "answer": "ASSET",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Hämta",
+          "answer": "FETCH",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Tjäna/förtjäna",
+          "answer": "EARN",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Ordning/beställa",
+          "answer": "ORDER",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Framåt",
+          "answer": "AHEAD",
+          "row": 7,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 9,
+          "clue": "Forskning",
+          "answer": "RESEARCH",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
     }
   ]
 }

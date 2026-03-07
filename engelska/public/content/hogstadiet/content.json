@@ -1951,14 +1951,14 @@
           "type": "fill-in-blank",
           "sentence": "I have lived here ___ five years.",
           "answer": "for",
-          "hint": "'For' + tidsperiod (hur länge): 'for five years', 'for a week'. 'Since' + startpunkt: 'since 2018'."
+          "hint": "Tänk på skillnaden: 'for' används med tidsperioder (hur länge?), medan 'since' används med en startpunkt (när startade det?). Vad är det för typ av tidsuttryck i meningen?"
         },
         {
           "id": "hog-g-mixed-2",
           "type": "fill-in-blank",
           "sentence": "I have lived here ___ 2018.",
           "answer": "since",
-          "hint": "'Since' + specifik startpunkt (år, datum, klockslag). 'For' + tidsperiod. 2018 är en tidpunkt → 'since'."
+          "hint": "Fråga dig: är '2018' en tidsperiod eller en startpunkt i tid? Välj det ord som passar för den typen av tidsuttryck."
         },
         {
           "id": "hog-g-mixed-3",
@@ -2009,35 +2009,35 @@
           "type": "fill-in-blank",
           "sentence": "He used to ___ (live) here.",
           "answer": "live",
-          "hint": "'Used to' + verbets grundform: beskriver en gammal vana/tillstånd. T.ex. 'He used to live here' = Han bodde här förr."
+          "hint": "'Used to' kräver alltid att verbet böjs på ett visst sätt. Tänk på hur du kombinerar hjälpverb med huvudverb på engelska."
         },
         {
           "id": "hog-g-mixed-8",
           "type": "fill-in-blank",
           "sentence": "He said: 'I will come.' → He said that he ___ come.",
           "answer": "would",
-          "hint": "Indirekt tal: verbet backas ett steg. 'will' → 'would'. 'I' → 'he/she'. T.ex. 'I will' → 'he would'."
+          "hint": "Vid indirekt tal 'backas' tempuset ett steg. Vad händer med 'will' när man rapporterar vad någon sade?"
         },
         {
           "id": "hog-g-mixed-9",
           "type": "fill-in-blank",
           "sentence": "The woman ___ car was stolen called the police.",
           "answer": "whose",
-          "hint": "Relativt pronomen: 'whose' = vars/vars. Används för ägande. 'The woman whose car' = kvinnan vars bil. (who=subjekt, whom=objekt, whose=ägande)"
+          "hint": "Relativpronomen väljs beroende på vad de syftar på. Vilket relativpronomen används för att visa ägande/tillhörighet?"
         },
         {
           "id": "hog-g-mixed-10",
           "type": "fill-in-blank",
           "sentence": "You ___ wear a helmet (obligation).",
           "answer": "must",
-          "hint": "'Must' uttrycker stark skyldighet/krav. 'May/can' = tillstånd. 'Should' = råd. Skyldighet → 'must'."
+          "hint": "Modalverb har olika styrka: råd, tillstånd eller skyldighet. Ledtråden i parentesen anger vilken typ av modal du ska använda."
         },
         {
           "id": "hog-g-mixed-11",
           "type": "fill-in-blank",
           "sentence": "You ___ leave early (permission).",
           "answer": "may",
-          "hint": "'May' uttrycker tillstånd (formellt). 'Can' = informellt tillstånd. 'Must' = skyldighet. Tillstånd formellt → 'may'."
+          "hint": "Ledtråden i parentesen hjälper dig. Vilket modalverb används formellt för att ge tillstånd?"
         },
         {
           "id": "hog-g-mixed-12",
@@ -2055,7 +2055,7 @@
           "type": "fill-in-blank",
           "sentence": "We stayed home ___ it was raining.",
           "answer": "because",
-          "hint": "'Because' (eftersom) introducer orsaken. 'Because' kan komma mitt i eller i början av meningen – samma mening, olika ordföljd."
+          "hint": "Konjunktioner kopplar ihop satser och visar relationen dem emellan. Meningen handlar om orsak – varför stannade de hemma?"
         },
         {
           "id": "hog-g-mixed-14",
@@ -2073,21 +2073,21 @@
           "type": "fill-in-blank",
           "sentence": "She has been studying ___ two hours.",
           "answer": "for",
-          "hint": "'For' + tidsperiod: 'for two hours', 'for a week'. 'Since' + startpunkt. Två timmar är en period → 'for'."
+          "hint": "Tänk på om tidsuttrycket i meningen anger en period (hur länge?) eller en startpunkt. Välj rätt preposition."
         },
         {
           "id": "hog-g-mixed-16",
           "type": "fill-in-blank",
           "sentence": "She has been studying ___ 5 o'clock.",
           "answer": "since",
-          "hint": "'Since' + specifik startpunkt: 'since 5 o'clock'. 5 o'clock är en tidpunkt → 'since'."
+          "hint": "'5 o'clock' – är det en tidsperiod eller en specifik tidpunkt? Välj prepositionen som passar den typen av tidsuttryck."
         },
         {
           "id": "hog-g-mixed-17",
           "type": "fill-in-blank",
           "sentence": "If you heat water, it ___ boil.",
           "answer": "boils",
-          "hint": "Nollkonditional (Zero Conditional): If + presens → presens. Används för naturlagar och fakta. 'If you heat water, it boils.'"
+          "hint": "Zero conditional (nollkonditional) används för fakta och naturlagar. Tänk på vilket tempus som används i båda satserna."
         },
         {
           "id": "hog-g-mixed-18",
@@ -2103,9 +2103,9 @@
         {
           "id": "hog-g-mixed-19",
           "type": "fill-in-blank",
-          "sentence": "She stopped ___ (smoke) last year.",
-          "answer": "smoking",
-          "hint": "'Stop' + gerund (-ing) = sluta göra något. 'Stop to do' = stanna för att göra något annat. Hon slutade röka → 'stopped smoking'."
+          "sentence": "She enjoys ___ (read) in the evenings.",
+          "answer": "reading",
+          "hint": "Verbet 'enjoy' kombineras alltid med en viss verbform. Tänk på vilken form av verbet som används efter verb som enjoy, finish, avoid."
         },
         {
           "id": "hog-g-mixed-20",
@@ -2125,6 +2125,1003 @@
         "Few/little: few + räknebart (few books). little + oräknebart (little water).",
         "Adjektiv vs adverb: adjektiv beskriver substantiv (a fast car). adverb beskriver verb (he runs fast).",
         "Tips: Identifiera ordklassen – beskriver ordet ett substantiv eller ett verb?"
+      ]
+    },
+    {
+      "id": "hog-g11-nouns",
+      "title": "Substantiv – Avancerat",
+      "description": "Räknebara och icke-räknebara substantiv, kollektiv och komplex plural.",
+      "icon": "📦",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g11-1",
+          "type": "multiple-choice",
+          "question": "Vilket substantiv är icke-räknebart?",
+          "options": [
+            "chair",
+            "information",
+            "idea",
+            "problem"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Information' är icke-räknebart – man kan inte säga 'an information' eller 'two informations'."
+        },
+        {
+          "id": "hog-g11-2",
+          "type": "multiple-choice",
+          "question": "'The ___ is good.' Välj rätt alternativ:",
+          "options": [
+            "advices",
+            "advice",
+            "an advice",
+            "advices"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Advice' är icke-räknebart – inga -s och ingen artikel 'an'. The advice is good."
+        },
+        {
+          "id": "hog-g11-3",
+          "type": "fill-in-blank",
+          "sentence": "Can you give me some ___? (advice)",
+          "answer": "advice",
+          "hint": "Räknebart eller icke-räknebart?",
+          "explanation": "'Advice' är icke-räknebart. Säg 'some advice', inte 'some advices'."
+        },
+        {
+          "id": "hog-g11-4",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'criterion'?",
+          "options": [
+            "criterions",
+            "criterias",
+            "criteria",
+            "criterions"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Criterion' är ett latinskt lånord. Plural → criteria."
+        },
+        {
+          "id": "hog-g11-5",
+          "type": "multiple-choice",
+          "question": "'The committee ___ split on the issue.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 0,
+          "explanation": "I brittisk engelska behandlas kollektiva substantiv (committee) som plural → are."
+        },
+        {
+          "id": "hog-g11-6",
+          "type": "fill-in-blank",
+          "sentence": "She needs ___ furniture for her new apartment.",
+          "answer": "some",
+          "hint": "Räknebart eller icke-räknebart?",
+          "explanation": "'Furniture' är icke-räknebart → 'some furniture', inte 'a furniture'."
+        },
+        {
+          "id": "hog-g11-7",
+          "type": "multiple-choice",
+          "question": "'___ of her hair had turned grey.' Välj rätt:",
+          "options": [
+            "Some",
+            "A few",
+            "Many",
+            "Several"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Hair' är icke-räknebart → some. 'A few' och 'many' används med räknebara."
+        },
+        {
+          "id": "hog-g11-8",
+          "type": "multiple-choice",
+          "question": "Vad är korrekt form?",
+          "options": [
+            "two oxes",
+            "two ox",
+            "two oxen",
+            "two oxs"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Ox' → 'oxen' är en oregelbunden pluralform."
+        },
+        {
+          "id": "hog-g11-9",
+          "type": "fill-in-blank",
+          "sentence": "The media ___ reporting on the story. (is/are)",
+          "answer": "are",
+          "hint": "Är media singular eller plural?",
+          "explanation": "'Media' (urspr. plural av medium) tar ofta 'are' i modern engelska."
+        },
+        {
+          "id": "hog-g11-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He gave me several ___ .' (piece of advice)",
+          "options": [
+            "piece of advices",
+            "pieces of advice",
+            "pieces of advices",
+            "piece of advice"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Advice' räknas med 'pieces': several pieces of advice."
+        }
+      ]
+    },
+    {
+      "id": "hog-g12-adj-adv",
+      "title": "Adjektiv & Adverb – Avancerat",
+      "description": "Komparation, ordföljd och svåra fall med adjektiv och adverb.",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g12-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She speaks English ___.'",
+          "options": [
+            "fluent",
+            "fluently",
+            "more fluent",
+            "most fluent"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Speaks' är ett verb, så vi behöver ett adverb → fluently."
+        },
+        {
+          "id": "hog-g12-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt ordföljd: 'a ___ Italian silk scarf'",
+          "options": [
+            "beautiful old",
+            "old beautiful",
+            "Italian old beautiful",
+            "silk Italian beautiful"
+          ],
+          "correctIndex": 0,
+          "explanation": "Adjektivordföljd: opinion → age → material → origin. Beautiful (opinion) old (age) Italian silk scarf."
+        },
+        {
+          "id": "hog-g12-3",
+          "type": "fill-in-blank",
+          "sentence": "This is the ___ (bad) result we have ever had.",
+          "answer": "worst",
+          "hint": "Superlativform av bad?",
+          "explanation": "Bad → worse → worst. Superlativ: worst."
+        },
+        {
+          "id": "hog-g12-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I feel ___ today.' (hälsa)",
+          "options": [
+            "badly",
+            "more bad",
+            "bad",
+            "worst"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'feel' (länkverb) följer adjektivet → bad (inte adverbet badly)."
+        },
+        {
+          "id": "hog-g12-5",
+          "type": "multiple-choice",
+          "question": "'The ___ you study, the ___ you become.' Välj rätt:",
+          "options": [
+            "more / more smarter",
+            "more / smarter",
+            "harder / smarter",
+            "hardest / smartest"
+          ],
+          "correctIndex": 2,
+          "explanation": "'The + comparative, the + comparative': The harder you study, the smarter you become."
+        },
+        {
+          "id": "hog-g12-6",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ (far) away from home than I thought.",
+          "answer": "farther/further",
+          "hint": "Komparativ av far?",
+          "explanation": "Far → farther (avstånd) / further (bildligt). Båda accepteras."
+        },
+        {
+          "id": "hog-g12-7",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'This movie is ___ interesting than the last one.'",
+          "options": [
+            "more",
+            "most",
+            "much more",
+            "very most"
+          ],
+          "correctIndex": 0,
+          "explanation": "Komparativ med tvåstaviga+ adjektiv: more interesting."
+        },
+        {
+          "id": "hog-g12-8",
+          "type": "multiple-choice",
+          "question": "'She sings ___.' Vilket adverb är rätt?",
+          "options": [
+            "beautiful",
+            "beautifully",
+            "more beautiful",
+            "beautifuller"
+          ],
+          "correctIndex": 1,
+          "explanation": "Adverb bildas ofta med -ly: beautifully."
+        },
+        {
+          "id": "hog-g12-9",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ (little) motivated than before.",
+          "answer": "less",
+          "hint": "Komparativ av little?",
+          "explanation": "Little → less → least. Less motivated."
+        },
+        {
+          "id": "hog-g12-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'That was a ___ presentation.' (positiv bedömning, nästan perfekt)",
+          "options": [
+            "near perfect",
+            "nearly perfect",
+            "nearly-perfect",
+            "near perfectly"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Nearly' är adverb → nearly perfect presentation."
+        }
+      ]
+    },
+    {
+      "id": "hog-g13-do-does",
+      "title": "Do / Does / Did – Hjälpverb",
+      "description": "Avancerad användning av do/does/did i frågor, betoning och negationer.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g13-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She ___ study every day.' (betoning – det är sant!)",
+          "options": [
+            "does",
+            "do",
+            "is",
+            "has"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Does' kan användas för betoning: She DOES study every day (det stämmer verkligen!)."
+        },
+        {
+          "id": "hog-g13-2",
+          "type": "multiple-choice",
+          "question": "'They claimed he never paid. But he ___ pay.' Välj rätt:",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "was"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past tense med betoning: he DID pay (men de påstår motsatsen)."
+        },
+        {
+          "id": "hog-g13-3",
+          "type": "fill-in-blank",
+          "sentence": "Never ___ I expect such a result.",
+          "answer": "did",
+          "hint": "Inversion efter negativt adverb.",
+          "explanation": "'Never did I expect' – inversion med 'do/did' efter negativa adverbial."
+        },
+        {
+          "id": "hog-g13-4",
+          "type": "multiple-choice",
+          "question": "'___ you understand what I mean?' – formal stil",
+          "options": [
+            "Do",
+            "Does",
+            "Did",
+            "Are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Formell fråga i presens med you → Do you understand?"
+        },
+        {
+          "id": "hog-g13-5",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'Rarely ___ she make mistakes.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Inversion med negativt adverb 'rarely' + tredje person singular → does. Rarely does she..."
+        },
+        {
+          "id": "hog-g13-6",
+          "type": "fill-in-blank",
+          "sentence": "Little ___ he know about the danger.",
+          "answer": "did",
+          "hint": "Inversion med 'little' i preteritum.",
+          "explanation": "'Little did he know' – fast uttryck med inversion och did."
+        },
+        {
+          "id": "hog-g13-7",
+          "type": "multiple-choice",
+          "question": "'I don't like coffee.' 'Neither ___ I.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "am"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Neither do I' = Jag heller inte. Agreement i presens med I."
+        },
+        {
+          "id": "hog-g13-8",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She doesn't exercise, but she ___ eat healthily.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Betoning i tredje person presens: she DOES eat healthily."
+        },
+        {
+          "id": "hog-g13-9",
+          "type": "fill-in-blank",
+          "sentence": "Not only ___ he speak French, he also speaks German.",
+          "answer": "does",
+          "hint": "Inversion med 'not only' i presens, tredje person.",
+          "explanation": "'Not only does he...' – inversion med does efter 'not only'."
+        },
+        {
+          "id": "hog-g13-10",
+          "type": "multiple-choice",
+          "question": "'Did she finish the project?' → 'Yes, she ___.'",
+          "options": [
+            "did",
+            "does",
+            "do",
+            "was"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kortsvar i preteritum: Yes, she did."
+        }
+      ]
+    },
+    {
+      "id": "hog-g14-a-an",
+      "title": "A / An – Avancerat",
+      "description": "Svåra fall med obestämd artikel och när man utelämnar artikeln.",
+      "icon": "🔡",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g14-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He is ___ honest politician.' (sällsynt variant!)",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Honest' → H är tyst, börjar med vokalljudet 'o' → an honest politician."
+        },
+        {
+          "id": "hog-g14-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ MBA degree'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'MBA' uttalas 'em-bee-ay' – börjar med vokalljudet 'em' → an MBA degree."
+        },
+        {
+          "id": "hog-g14-3",
+          "type": "fill-in-blank",
+          "sentence": "She had ___ idea that changed everything.",
+          "answer": "an",
+          "hint": "Vilket ljud börjar 'idea' med?",
+          "explanation": "'Idea' börjar med vokalljudet 'I' → an idea."
+        },
+        {
+          "id": "hog-g14-4",
+          "type": "multiple-choice",
+          "question": "'He became ___ MP after years of work.' Välj rätt:",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'MP' (Member of Parliament) uttalas 'em-pee' → börjar med vokalljudet 'em' → an MP."
+        },
+        {
+          "id": "hog-g14-5",
+          "type": "multiple-choice",
+          "question": "'___ unique opportunity' – välj rätt:",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Unique' uttalas 'yoo-neek' – börjar med konsonantljudet Y → a unique opportunity."
+        },
+        {
+          "id": "hog-g14-6",
+          "type": "multiple-choice",
+          "question": "När använder man INGEN artikel? 'She goes to ___ hospital every day (som sjuksköterska).'",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "– (ingen artikel)"
+          ],
+          "correctIndex": 3,
+          "explanation": "När man talar om institutioner i sin 'funktion' (hospital = för att jobba), utelämnas artikeln i brittisk engelska."
+        },
+        {
+          "id": "hog-g14-7",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ European who speaks perfect English.",
+          "answer": "a",
+          "hint": "Vilket ljud börjar 'European' med?",
+          "explanation": "'European' uttalas 'yoo-ruh-pee-un' → konsonantljudet Y → a European."
+        },
+        {
+          "id": "hog-g14-8",
+          "type": "multiple-choice",
+          "question": "'She was ___ first to arrive.' Välj rätt:",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "–"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'first' (ordningstal, superlativ) → the. She was the first to arrive."
+        },
+        {
+          "id": "hog-g14-9",
+          "type": "multiple-choice",
+          "question": "'___ dog is man's best friend.' (generellt påstående) Välj rätt:",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "–"
+          ],
+          "correctIndex": 0,
+          "explanation": "Generellt påstående om en art → A dog is man's best friend. (alternativt 'Dogs are...')"
+        },
+        {
+          "id": "hog-g14-10",
+          "type": "multiple-choice",
+          "question": "'___ Nile is the longest river in Africa.' Välj rätt:",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "–"
+          ],
+          "correctIndex": 2,
+          "explanation": "Floder, hav, bergskedjor → the. The Nile."
+        }
+      ]
+    },
+    {
+      "id": "hog-g15-be-verb",
+      "title": "Is / Am / Are – Svåra fall",
+      "description": "Komplexa fall med be-verbet: kongruens, passiv och konstruktioner.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g15-1",
+          "type": "multiple-choice",
+          "question": "'The number of students ___ increasing.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "'The number of' tar singular → is. The number of students is increasing."
+        },
+        {
+          "id": "hog-g15-2",
+          "type": "multiple-choice",
+          "question": "'A number of problems ___ been identified.' Välj rätt:",
+          "options": [
+            "is",
+            "am",
+            "be",
+            "are"
+          ],
+          "correctIndex": 3,
+          "explanation": "'A number of' tar plural → are. A number of problems are..."
+        },
+        {
+          "id": "hog-g15-3",
+          "type": "fill-in-blank",
+          "sentence": "Neither the students nor the teacher ___ ready.",
+          "answer": "is",
+          "hint": "'Neither...nor': närmaste substantiv styr.",
+          "explanation": "Med 'neither...nor' styr det närmaste substantivet (teacher = singular) → is."
+        },
+        {
+          "id": "hog-g15-4",
+          "type": "multiple-choice",
+          "question": "'The rich ___ not always happy.' Välj rätt:",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "'The + adjektiv' som substantivfras (the rich = rika människor) → plural → are."
+        },
+        {
+          "id": "hog-g15-5",
+          "type": "multiple-choice",
+          "question": "'Each of the answers ___ correct.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Each of' tar alltid singular → is. Each of the answers is correct."
+        },
+        {
+          "id": "hog-g15-6",
+          "type": "fill-in-blank",
+          "sentence": "There ___ neither milk nor eggs in the fridge.",
+          "answer": "is",
+          "hint": "'Neither...nor' med uncountable: milk styr.",
+          "explanation": "'Neither milk nor eggs' – närmaste substantiv (eggs) är plural → are. OBS: Accepteras båda."
+        },
+        {
+          "id": "hog-g15-7",
+          "type": "multiple-choice",
+          "question": "'The police ___ investigating the matter.' Välj rätt:",
+          "options": [
+            "is",
+            "am",
+            "be",
+            "are"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Police' är kollektivt och tas alltid som plural i engelska → are."
+        },
+        {
+          "id": "hog-g15-8",
+          "type": "multiple-choice",
+          "question": "'Twenty dollars ___ a lot for a child.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "Belopp som en enhet → singular → is. Twenty dollars is a lot."
+        },
+        {
+          "id": "hog-g15-9",
+          "type": "fill-in-blank",
+          "sentence": "Not all students ___ the same.",
+          "answer": "are",
+          "hint": "Plural subjekt, ingen specialregel.",
+          "explanation": "'Students' = plural → are."
+        },
+        {
+          "id": "hog-g15-10",
+          "type": "multiple-choice",
+          "question": "'The majority of the population ___ in favour.' Välj rätt:",
+          "options": [
+            "am",
+            "be",
+            "are",
+            "is"
+          ],
+          "correctIndex": 2,
+          "explanation": "'The majority of' + plural noun → plural → are."
+        }
+      ]
+    },
+    {
+      "id": "hog-g16-have-has",
+      "title": "Have / Has – Avancerat",
+      "description": "Have/has i idiom, kausativa konstruktioner och svåra fall.",
+      "icon": "✋",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g16-1",
+          "type": "multiple-choice",
+          "question": "'I ___ my car repaired yesterday.' Välj rätt (kausativ):",
+          "options": [
+            "made",
+            "had",
+            "did",
+            "let"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kausativ konstruktion: have + objekt + past participle. I had my car repaired."
+        },
+        {
+          "id": "hog-g16-2",
+          "type": "multiple-choice",
+          "question": "'She ___ her hair cut every month.' Välj rätt:",
+          "options": [
+            "does",
+            "makes",
+            "has",
+            "lets"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kausativ: have + objekt + past participle. She has her hair cut."
+        },
+        {
+          "id": "hog-g16-3",
+          "type": "fill-in-blank",
+          "sentence": "We ___ no choice but to leave.",
+          "answer": "had",
+          "hint": "Preteritum av have.",
+          "explanation": "Had no choice = hade inget val. Korrekt preteritumform."
+        },
+        {
+          "id": "hog-g16-4",
+          "type": "multiple-choice",
+          "question": "'Do you ___ any objections?' – formellt",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Do you have' = formell frågeform. You → have."
+        },
+        {
+          "id": "hog-g16-5",
+          "type": "multiple-choice",
+          "question": "'He ___ difficulty understanding the instructions.' Välj rätt:",
+          "options": [
+            "have",
+            "had",
+            "is",
+            "does"
+          ],
+          "correctIndex": 1,
+          "explanation": "Preteritum + singular: He had difficulty understanding."
+        },
+        {
+          "id": "hog-g16-6",
+          "type": "fill-in-blank",
+          "sentence": "They ___ a great time at the concert.",
+          "answer": "had",
+          "hint": "Preteritum av have.",
+          "explanation": "Had a great time = hade det jättebra. Preteritum: had."
+        },
+        {
+          "id": "hog-g16-7",
+          "type": "multiple-choice",
+          "question": "'She ___ it in for me ever since I got the promotion.' (idiom)",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "is"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Have it in for someone' = ha ett horn i sidan till ngn. She has it in for me."
+        },
+        {
+          "id": "hog-g16-8",
+          "type": "multiple-choice",
+          "question": "'I ___ to admit, this is impressive.' Välj rätt (modal-liknande):",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Have to' = måste. Med I → have to."
+        },
+        {
+          "id": "hog-g16-9",
+          "type": "fill-in-blank",
+          "sentence": "The company ___ its headquarters moved to Stockholm.",
+          "answer": "had",
+          "hint": "Kausativ konstruktion, preteritum.",
+          "explanation": "Kausativ: had + objekt + past participle. The company had its headquarters moved."
+        },
+        {
+          "id": "hog-g16-10",
+          "type": "multiple-choice",
+          "question": "'Do you ___ the time?' – informellt",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "Do you have the time? = Vet du vad klockan är? You → have."
+        }
+      ]
+    },
+    {
+      "id": "hog-g17-demonstratives",
+      "title": "This / That / These / Those – Avancerat",
+      "description": "Pekord i avancerade konstruktioner och idiom.",
+      "icon": "👆",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g17-1",
+          "type": "multiple-choice",
+          "question": "'___ who work hard tend to succeed.' Välj rätt:",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those who' = de som. Those who work hard tend to succeed."
+        },
+        {
+          "id": "hog-g17-2",
+          "type": "multiple-choice",
+          "question": "'The situation is more complex than ___ described in the report.' Välj rätt:",
+          "options": [
+            "this",
+            "these",
+            "that",
+            "those"
+          ],
+          "correctIndex": 2,
+          "explanation": "Syftar tillbaka på en situation (singular, nämnd): that. More complex than that described..."
+        },
+        {
+          "id": "hog-g17-3",
+          "type": "fill-in-blank",
+          "sentence": "___ said, let's move on to the next topic.",
+          "answer": "That",
+          "hint": "Fast uttryck: '___  said'",
+          "explanation": "'That said' = Med det sagt. Fast adverbiellt uttryck."
+        },
+        {
+          "id": "hog-g17-4",
+          "type": "multiple-choice",
+          "question": "'At ___ time, nobody knew what would happen.' Välj rätt:",
+          "options": [
+            "this",
+            "that",
+            "these",
+            "those"
+          ],
+          "correctIndex": 1,
+          "explanation": "Syftar på en tidpunkt i förfluten tid → that. At that time..."
+        },
+        {
+          "id": "hog-g17-5",
+          "type": "multiple-choice",
+          "question": "'___ are the times that try men's souls.' (klassiskt citat)",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 2,
+          "explanation": "'These are the times' – nuvarande tid, plural → these."
+        },
+        {
+          "id": "hog-g17-6",
+          "type": "fill-in-blank",
+          "sentence": "___ is not to say that the plan is perfect.",
+          "answer": "That",
+          "hint": "Fast idiomatiskt uttryck.",
+          "explanation": "'That is not to say' = Det betyder inte att... Fast uttryck."
+        },
+        {
+          "id": "hog-g17-7",
+          "type": "multiple-choice",
+          "question": "'Her early works differ greatly from ___ of her later period.' Välj rätt:",
+          "options": [
+            "this",
+            "these",
+            "that",
+            "those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those of her later period' – plural, syftar på 'works'. Those = de (verk)."
+        },
+        {
+          "id": "hog-g17-8",
+          "type": "multiple-choice",
+          "question": "'___ being said, I still think we should try.' Välj rätt:",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 1,
+          "explanation": "'That being said' = Med det sagt. Fast uttryck."
+        },
+        {
+          "id": "hog-g17-9",
+          "type": "fill-in-blank",
+          "sentence": "In ___ days, people rarely travelled abroad.",
+          "answer": "those",
+          "hint": "Pratar om gamla tider, plural.",
+          "explanation": "'In those days' = på den tiden. Fast uttryck för förfluten tid."
+        },
+        {
+          "id": "hog-g17-10",
+          "type": "multiple-choice",
+          "question": "'The results of the experiment are consistent with ___ of previous studies.' Välj rätt:",
+          "options": [
+            "this",
+            "that",
+            "these",
+            "those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those of previous studies' – plural (results). Syftar på plural noun."
+        }
+      ]
+    },
+    {
+      "id": "hog-g18-there-is-are",
+      "title": "There is / There are – Avancerat",
+      "description": "Komplex kongruens, formella konstruktioner och there-satser.",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "hog-g18-1",
+          "type": "multiple-choice",
+          "question": "'There ___ a number of issues to address.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 0,
+          "explanation": "'A number of issues' (plural intention) → are. There are a number of issues."
+        },
+        {
+          "id": "hog-g18-2",
+          "type": "multiple-choice",
+          "question": "'There ___ no evidence to support this claim.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Evidence' är icke-räknebart → singular → is. There is no evidence."
+        },
+        {
+          "id": "hog-g18-3",
+          "type": "fill-in-blank",
+          "sentence": "There ___ neither time nor resources available.",
+          "answer": "is",
+          "hint": "'Neither...nor': närmaste substantiv (resources = plural). OBS: grammatiskt omstritt.",
+          "explanation": "Med 'neither...nor' styr närmaste substantiv. Resources = plural → are. Men 'neither time nor resources' → formellt is (time styr) accepteras också."
+        },
+        {
+          "id": "hog-g18-4",
+          "type": "multiple-choice",
+          "question": "'There ___ said to be ancient ruins beneath the city.' Välj rätt:",
+          "options": [
+            "are",
+            "is",
+            "am",
+            "be"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Ruins' = plural → are. There are said to be ancient ruins..."
+        },
+        {
+          "id": "hog-g18-5",
+          "type": "multiple-choice",
+          "question": "Formellt: '___ any objection to this proposal?' Välj rätt:",
+          "options": [
+            "Are there",
+            "Is there",
+            "There are",
+            "There is"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Any objection' = singular → Is there any objection?"
+        },
+        {
+          "id": "hog-g18-6",
+          "type": "fill-in-blank",
+          "sentence": "There ___ countless stars in the universe.",
+          "answer": "are",
+          "hint": "Oräkneliga stjärnor = plural.",
+          "explanation": "'Countless stars' = plural → are. There are countless stars."
+        },
+        {
+          "id": "hog-g18-7",
+          "type": "multiple-choice",
+          "question": "'There ___ to be a misunderstanding.' (verkar vara) Välj rätt:",
+          "options": [
+            "seems",
+            "seem",
+            "appears",
+            "is"
+          ],
+          "correctIndex": 0,
+          "explanation": "'There seems to be' = Det verkar finnas. Singular → seems."
+        },
+        {
+          "id": "hog-g18-8",
+          "type": "multiple-choice",
+          "question": "'There is no smoke without fire.' Denna mening innebär:",
+          "options": [
+            "Det finns ingen rök utan eld (bokstavligt)",
+            "Rök och eld är orelaterade",
+            "Där det är rök finns det eld (idiom: rykten har grund)",
+            "Det är farligt att röka"
+          ],
+          "correctIndex": 2,
+          "explanation": "'No smoke without fire' = idiom som betyder att rykten ofta har en grund."
+        },
+        {
+          "id": "hog-g18-9",
+          "type": "fill-in-blank",
+          "sentence": "There ___ been significant progress in this field.",
+          "answer": "has",
+          "hint": "Present perfect med there.",
+          "explanation": "'There has been' = det har skett. Singular (progress) → has."
+        },
+        {
+          "id": "hog-g18-10",
+          "type": "multiple-choice",
+          "question": "'There ___ many occasions when I doubted myself.' (preteritum) Välj rätt:",
+          "options": [
+            "is",
+            "are",
+            "was",
+            "were"
+          ],
+          "correctIndex": 3,
+          "explanation": "Preteritum plural (many occasions) → were. There were many occasions..."
+        }
       ]
     }
   ],
@@ -2908,6 +3905,376 @@
           "answer": "NET",
           "row": 0,
           "col": 3,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw3",
+      "title": "Grammatik – avancerat",
+      "description": "Grammatikbegrepp och avancerade ord",
+      "icon": "📖",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Att hålla med",
+          "answer": "AGREE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "En valv/båge",
+          "answer": "ARCH",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Tjäna/förtjäna",
+          "answer": "EARN",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Tom",
+          "answer": "EMPTY",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Riklig/rikligt",
+          "answer": "AMPLE",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Gjord",
+          "answer": "MADE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Ordning/beställa",
+          "answer": "ORDER",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Grammatik",
+          "answer": "GRAMMAR",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw4",
+      "title": "Klimat och miljö",
+      "description": "Klimat- och miljöord",
+      "icon": "🌱",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Annars",
+          "answer": "ELSE",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Binda",
+          "answer": "BIND",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Dyka upp/framträda",
+          "answer": "EMERGE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Förtjäna",
+          "answer": "EARN",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Ovanpå",
+          "answer": "ATOP",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Nerv",
+          "answer": "NERVE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Klimat",
+          "answer": "CLIMATE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw5",
+      "title": "Samhälle och politik",
+      "description": "Samhälls- och politikord",
+      "icon": "🗳️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Åt sidan",
+          "answer": "ASIDE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Djärv/tydlig",
+          "answer": "BOLD",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Assistent",
+          "answer": "AIDE",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Bäst",
+          "answer": "BEST",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Ovanpå",
+          "answer": "ATOP",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Ja (i votering)",
+          "answer": "AYE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Samhälle",
+          "answer": "SOCIETY",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw6",
+      "title": "Kultur och historia",
+      "description": "Kulturella och historiska ord",
+      "icon": "🎭",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Smärta",
+          "answer": "ACHE",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Bygga",
+          "answer": "BUILD",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "En älg",
+          "answer": "ELK",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Atom",
+          "answer": "ATOM",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Bulle",
+          "answer": "BUN",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "Malm",
+          "answer": "ORE",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Att se",
+          "answer": "SEE",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Kultur",
+          "answer": "CULTURE",
+          "row": 0,
+          "col": 1,
+          "direction": "down"
+        }
+      ]
+    },
+    {
+      "id": "hog-cw7",
+      "title": "Frihet och rättigheter",
+      "description": "Ord om frihet och rättigheter",
+      "icon": "✊",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "clues": [
+        {
+          "number": 1,
+          "clue": "Ofta",
+          "answer": "OFTEN",
+          "row": 0,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 2,
+          "clue": "Konst",
+          "answer": "ART",
+          "row": 1,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 3,
+          "clue": "Topp (på ett berg)",
+          "answer": "PEAK",
+          "row": 2,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 4,
+          "clue": "Utrustning/växel",
+          "answer": "GEAR",
+          "row": 3,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 5,
+          "clue": "Anpassa",
+          "answer": "ADAPT",
+          "row": 4,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 6,
+          "clue": "En låda",
+          "answer": "BOX",
+          "row": 5,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 7,
+          "clue": "Avge/sända",
+          "answer": "EMIT",
+          "row": 6,
+          "col": 0,
+          "direction": "across"
+        },
+        {
+          "number": 8,
+          "clue": "Frihet",
+          "answer": "FREEDOM",
+          "row": 0,
+          "col": 1,
           "direction": "down"
         }
       ]
