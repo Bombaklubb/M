@@ -35,8 +35,8 @@ export default function WorldSelect() {
         ))}
       </div>
 
-      {/* Top bar: avatar + namn + poäng, logga ut */}
-      <div className="relative z-10 flex items-center justify-between px-4 pt-4 pb-2">
+      {/* Top bar: höger – avatar + namn + poäng + logga ut */}
+      <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
         {/* Avatar + namn + poäng */}
         <div
           className="flex items-center gap-2 px-3 py-1.5 rounded-full"
