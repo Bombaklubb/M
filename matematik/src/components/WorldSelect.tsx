@@ -2,12 +2,14 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
-import { getProgress } from '../utils/storage';
+import { getProgress, getPoints } from '../utils/storage';
 
 export default function WorldSelect() {
-  const { currentStudent, setView } = useApp();
+  const { currentStudent, logout, setView } = useApp();
 
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
+  const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
+  const totalPoints = pointsRecord?.totalPoints ?? 0;
 
   return (
     <div
@@ -31,17 +33,42 @@ export default function WorldSelect() {
         ))}
       </div>
 
-      {/* Header */}
-      <div className="relative z-10 pt-10 pb-4 text-center px-4">
+      {/* Top bar: stjärna + poäng, användarnamn, logga ut */}
+      <div className="relative z-10 flex items-center justify-between px-4 pt-4 pb-2">
+        {/* Poäng */}
+        <div
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
+          style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+        >
+          <span className="text-yellow-400 text-base">⭐</span>
+          <span className="text-white font-bold text-sm">{totalPoints}</span>
+        </div>
+
+        {/* Användarnamn + logga ut */}
+        <div className="flex items-center gap-2">
+          <span
+            className="text-white/80 font-semibold text-sm px-3 py-1.5 rounded-full"
+            style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+          >
+            {currentStudent?.name ?? ''}
+          </span>
+          <button
+            onClick={logout}
+            className="text-white/60 text-sm px-3 py-1.5 rounded-full transition-all hover:bg-white/10 active:scale-95"
+            style={{ border: '1px solid rgba(255,255,255,0.15)' }}
+          >
+            Logga ut
+          </button>
+        </div>
+      </div>
+
+      {/* Logo som titel */}
+      <div className="relative z-10 pt-4 pb-4 text-center px-4">
         <img
           src="/mattejakten.png"
           alt="Mattejakten"
-          className="h-20 w-auto mx-auto mb-3 drop-shadow-lg"
+          className="h-36 w-auto mx-auto drop-shadow-lg"
         />
-        <h1 className="text-3xl font-black text-white tracking-wide drop-shadow-md">
-          Mattejakten
-        </h1>
-        <p className="text-white/50 text-sm mt-1">Upptäck matematikens världar</p>
       </div>
 
       {/* Divider */}
