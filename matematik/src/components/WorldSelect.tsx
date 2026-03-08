@@ -38,8 +38,9 @@ export default function WorldSelect() {
       {/* Top bar: höger – avatar + namn + poäng + logga ut */}
       <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
         {/* Avatar + namn + poäng */}
-        <div
-          className="flex items-center gap-2 px-3 py-1.5 rounded-full"
+        <button
+          onClick={() => setView('my-page')}
+          className="flex items-center gap-2 px-3 py-1.5 rounded-full transition-all hover:bg-white/20 active:scale-95"
           style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
         >
           <span className="text-xl leading-none">{avatarEmoji}</span>
@@ -47,7 +48,7 @@ export default function WorldSelect() {
           <span className="text-white/30 text-sm">·</span>
           <span className="text-yellow-400 text-sm">⭐</span>
           <span className="text-white font-bold text-sm">{totalPoints}</span>
-        </div>
+        </button>
 
         {/* Logga ut */}
         <button
