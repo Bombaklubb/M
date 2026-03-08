@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent } from "@/lib/storage";
 import HeroAvatar from "@/components/ui/HeroAvatar";
+import { getAvatar } from "@/lib/avatars";
 import type { StudentData } from "@/lib/types";
 
 interface HeaderProps {
@@ -31,12 +32,12 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center hover:opacity-80 transition-opacity min-w-0 flex-shrink-0"
+          className="flex items-center hover:opacity-80 transition-opacity min-w-0 flex-shrink-0 rounded-xl overflow-hidden bg-white dark:bg-transparent"
         >
           <img
             src="/engelskajakten-logo.png"
             alt="Engelskajakten"
-            className="h-10 sm:h-11 w-auto object-contain"
+            className="h-14 sm:h-16 w-auto object-contain"
           />
         </Link>
 
@@ -64,13 +65,25 @@ export default function Header({ student, onLogout }: HeaderProps) {
               <span className="text-xs sm:text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
             </div>
 
-            {/* Student name – links to Min sida, hidden on mobile */}
-            <Link
-              href="/profile"
-              className="text-sm font-semibold text-gray-700 dark:text-gray-200 hidden sm:block px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              {student.name}
-            </Link>
+            {/* Student avatar + name – links to Min sida */}
+            {(() => {
+              const av = getAvatar(student.avatar ?? "ninja");
+              return (
+                <Link
+                  href="/profile"
+                  className="hidden sm:flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center flex-shrink-0 border border-gray-200 dark:border-gray-600">
+                    {av.image ? (
+                      <img src={av.image} alt={av.name} className="w-full h-full object-contain" />
+                    ) : (
+                      <span className="text-lg leading-none">{av.emoji}</span>
+                    )}
+                  </div>
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">{student.name}</span>
+                </Link>
+              );
+            })()}
 
             {/* Dark mode toggle */}
             <button
