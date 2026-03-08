@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Grammatik-mästare">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+  </defs>
+  <!-- Star shape -->
+  <polygon points="40,5 47,27 70,27 52,41 59,63 40,49 21,63 28,41 10,27 33,27"
+           fill="url(#bg)" stroke="#b45309" stroke-width="1.5"/>
+  <!-- Inner star highlight -->
+  <polygon points="40,12 45,27 60,27 48,36 53,51 40,42 27,51 32,36 20,27 35,27"
+           fill="#fef3c7" opacity="0.4"/>
+  <!-- Grammar "A" symbol -->
+  <text x="40" y="46" text-anchor="middle" font-size="22" font-weight="bold" fill="#92400e" font-family="serif">A</text>
+  <!-- Crown on top -->
+  <polygon points="28,20 33,14 40,18 47,14 52,20" fill="#f59e0b" stroke="#b45309" stroke-width="1"/>
+  <circle cx="28" cy="20" r="2" fill="#fbbf24"/>
+  <circle cx="40" cy="18" r="2" fill="#fbbf24"/>
+  <circle cx="52" cy="20" r="2" fill="#fbbf24"/>
+</svg>
