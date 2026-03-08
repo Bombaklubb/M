@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Cowboyen">
+  <!-- Background – sunset desert -->
+  <circle cx="64" cy="64" r="62" fill="#7c2d12"/>
+  <radialGradient id="cbbg" cx="50%" cy="30%" r="60%">
+    <stop offset="0%" stop-color="#fb923c" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#7c2d12" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#cbbg)"/>
+  <!-- Sunset horizon -->
+  <ellipse cx="64" cy="115" rx="55" ry="20" fill="#fb923c" opacity="0.3"/>
+  <!-- Cactus silhouettes -->
+  <rect x="8" y="90" width="6" height="30" rx="3" fill="#15803d" opacity="0.5"/>
+  <rect x="6" y="95" width="10" height="5" rx="2.5" fill="#15803d" opacity="0.5"/>
+  <rect x="112" y="88" width="6" height="32" rx="3" fill="#15803d" opacity="0.5"/>
+  <rect x="110" y="93" width="10" height="5" rx="2.5" fill="#15803d" opacity="0.5"/>
+  <!-- Body (denim shirt) -->
+  <path d="M36,128 Q40,88 54,78 Q59,75 64,75 Q69,75 74,78 Q88,88 92,128Z" fill="#1d4ed8"/>
+  <!-- Shirt details (yoke) -->
+  <path d="M54,78 Q64,74 74,78 L70,92 Q64,88 58,92Z" fill="#2563eb"/>
+  <!-- Shirt buttons -->
+  <circle cx="64" cy="84" r="1.5" fill="#93c5fd"/>
+  <circle cx="64" cy="90" r="1.5" fill="#93c5fd"/>
+  <circle cx="64" cy="96" r="1.5" fill="#93c5fd"/>
+  <!-- Shirt pocket -->
+  <rect x="70" y="82" width="10" height="8" rx="1" fill="#2563eb" stroke="#1d4ed8" stroke-width="1"/>
+  <!-- Bandana/neckerchief -->
+  <path d="M50,78 Q64,84 78,78 L72,70 Q64,76 56,70Z" fill="#dc2626"/>
+  <!-- Belt -->
+  <rect x="42" y="96" width="44" height="8" rx="3" fill="#92400e"/>
+  <rect x="57" y="94" width="14" height="12" rx="2" fill="#b45309"/>
+  <!-- Belt buckle with star -->
+  <rect x="59" y="96" width="10" height="8" rx="1" fill="#fbbf24"/>
+  <polygon points="64,97 65.5,101 69,101 66,103 67.5,107 64,105 60.5,107 62,103 59,101 62.5,101" fill="#d97706" transform="scale(0.5) translate(64,98)"/>
+  <!-- Arms -->
+  <rect x="14" y="78" width="22" height="32" rx="8" fill="#1d4ed8"/>
+  <rect x="92" y="78" width="22" height="32" rx="8" fill="#1d4ed8"/>
+  <ellipse cx="25" cy="110" rx="11" ry="8" fill="#fcd34d"/>
+  <ellipse cx="103" cy="110" rx="11" ry="8" fill="#fcd34d"/>
+  <!-- Holster/gun hint -->
+  <rect x="94" y="108" width="5" height="14" rx="2" fill="#78350f"/>
+  <!-- Neck -->
+  <rect x="57" y="60" width="14" height="18" rx="6" fill="#fcd34d"/>
+  <!-- Head -->
+  <ellipse cx="64" cy="48" rx="24" ry="26" fill="#fcd34d"/>
+  <!-- Cowboy hat (iconic wide brim) -->
+  <!-- Hat brim (very wide) -->
+  <ellipse cx="64" cy="28" rx="36" ry="7" fill="#92400e"/>
+  <!-- Hat crown -->
+  <path d="M36,28 Q38,8 64,6 Q90,8 92,28Z" fill="#78350f"/>
+  <!-- Hat crease -->
+  <path d="M44,20 Q56,16 72,16 Q80,20 84,24" fill="none" stroke="#92400e" stroke-width="2"/>
+  <!-- Hat band -->
+  <rect x="38" y="26" width="52" height="5" rx="2" fill="#fbbf24"/>
+  <!-- Hat band details -->
+  <circle cx="56" cy="28.5" r="1.5" fill="#d97706"/>
+  <circle cx="64" cy="28.5" r="1.5" fill="#d97706"/>
+  <circle cx="72" cy="28.5" r="1.5" fill="#d97706"/>
+  <!-- Sheriff star on hat -->
+  <polygon points="64,11 65.2,15 69,15 66,17 67.2,21 64,19 60.8,21 62,17 59,15 62.8,15" fill="#fbbf24" stroke="#d97706" stroke-width="0.5"/>
+  <!-- Hair (sideburns) -->
+  <path d="M40,36 Q36,44 38,52 Q42,48 44,42Z" fill="#92400e"/>
+  <path d="M88,36 Q92,44 90,52 Q86,48 84,42Z" fill="#92400e"/>
+  <!-- Eyes -->
+  <ellipse cx="52" cy="48" rx="7" ry="6.5" fill="white"/>
+  <ellipse cx="76" cy="48" rx="7" ry="6.5" fill="white"/>
+  <circle cx="52" cy="49" r="5" fill="#92400e"/>
+  <circle cx="76" cy="49" r="5" fill="#92400e"/>
+  <circle cx="52" cy="49" r="2.5" fill="#111"/>
+  <circle cx="76" cy="49" r="2.5" fill="#111"/>
+  <circle cx="53.5" cy="47.5" r="1.5" fill="white"/>
+  <circle cx="77.5" cy="47.5" r="1.5" fill="white"/>
+  <!-- Squinting (cowboy look) -->
+  <path d="M46,44 L58,44" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+  <path d="M70,44 L82,44" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+  <!-- Stubble/five o'clock shadow -->
+  <ellipse cx="64" cy="60" rx="14" ry="8" fill="#fcd34d"/>
+  <path d="M52,56 Q60,60 68,56 Q72,60 76,56" fill="none" stroke="#d97706" stroke-width="0.8" opacity="0.5"/>
+  <!-- Nose -->
+  <ellipse cx="64" cy="55" rx="4" ry="3" fill="#f0b888"/>
+  <!-- Smile (confident) -->
+  <path d="M55,62 Q64,70 73,62" stroke="#b45309" stroke-width="2.5" fill="#fda4af" stroke-linecap="round"/>
+  <!-- Toothpick/straw in mouth -->
+  <line x1="72" y1="62" x2="86" y2="56" stroke="#92400e" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

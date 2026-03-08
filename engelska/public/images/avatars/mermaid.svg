@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Sjöjungfrun">
+  <!-- Background – deep ocean -->
+  <circle cx="64" cy="64" r="62" fill="#0c4a6e"/>
+  <radialGradient id="mbg" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#0c4a6e" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#mbg)"/>
+  <!-- Bubbles -->
+  <circle cx="16" cy="50" r="4" fill="none" stroke="#7dd3fc" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="22" cy="30" r="2.5" fill="none" stroke="#7dd3fc" stroke-width="1" opacity="0.4"/>
+  <circle cx="108" cy="60" r="3" fill="none" stroke="#7dd3fc" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="112" cy="35" r="2" fill="none" stroke="#bae6fd" stroke-width="1" opacity="0.4"/>
+  <!-- Seaweed -->
+  <path d="M14,128 Q18,110 14,95 Q18,80 14,65" stroke="#16a34a" stroke-width="3" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M112,128 Q108,112 112,98 Q108,84 112,70" stroke="#16a34a" stroke-width="2.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <!-- Mermaid tail -->
+  <path d="M40,90 Q30,105 28,128 L64,122 L100,128 Q98,105 88,90Z" fill="#0d9488"/>
+  <!-- Tail scales pattern -->
+  <path d="M44,95 Q52,90 60,95 Q68,90 76,95 Q84,90 88,95" fill="none" stroke="#0f766e" stroke-width="1.5" opacity="0.8"/>
+  <path d="M38,104 Q46,98 56,104 Q64,98 72,104 Q80,98 90,104" fill="none" stroke="#0f766e" stroke-width="1.5" opacity="0.8"/>
+  <path d="M30,114 Q42,108 54,114 Q64,108 74,114 Q86,108 98,114" fill="none" stroke="#0f766e" stroke-width="1.5" opacity="0.8"/>
+  <!-- Tail fin -->
+  <path d="M28,128 Q40,112 52,120 Q64,126 76,120 Q88,112 100,128Z" fill="#14b8a6"/>
+  <path d="M40,124 Q52,116 64,122 Q76,116 88,124" fill="none" stroke="#0d9488" stroke-width="1.5"/>
+  <!-- Seashell top -->
+  <path d="M46,76 Q50,68 64,66 Q78,68 82,76 L78,82 Q68,78 64,78 Q60,78 50,82Z" fill="#f97316"/>
+  <!-- Shell details -->
+  <line x1="64" y1="66" x2="64" y2="82" stroke="#ea580c" stroke-width="1" opacity="0.6"/>
+  <line x1="52" y1="70" x2="56" y2="82" stroke="#ea580c" stroke-width="1" opacity="0.6"/>
+  <line x1="76" y1="70" x2="72" y2="82" stroke="#ea580c" stroke-width="1" opacity="0.6"/>
+  <!-- Arms -->
+  <path d="M46,76 Q30,80 22,96 Q28,102 36,98 Q42,90 48,84Z" fill="#fcd34d"/>
+  <path d="M82,76 Q98,80 106,96 Q100,102 92,98 Q86,90 80,84Z" fill="#fcd34d"/>
+  <!-- Hands with webbed fingers suggestion -->
+  <ellipse cx="20" cy="98" rx="8" ry="6" fill="#fcd34d"/>
+  <ellipse cx="108" cy="98" rx="8" ry="6" fill="#fcd34d"/>
+  <!-- Neck -->
+  <rect x="57" y="62" width="14" height="16" rx="6" fill="#fcd34d"/>
+  <!-- Head -->
+  <ellipse cx="64" cy="48" rx="24" ry="26" fill="#fcd34d"/>
+  <!-- Long flowing hair -->
+  <path d="M40,30 Q30,50 30,72 Q38,66 42,56 Q40,44 40,32Z" fill="#a855f7"/>
+  <path d="M88,30 Q98,50 98,72 Q90,66 86,56 Q88,44 88,32Z" fill="#a855f7"/>
+  <ellipse cx="64" cy="26" rx="26" ry="14" fill="#a855f7"/>
+  <!-- Hair with ocean flow -->
+  <path d="M30,60 Q36,68 34,78" fill="none" stroke="#7e22ce" stroke-width="2" opacity="0.6"/>
+  <path d="M98,60 Q92,68 94,78" fill="none" stroke="#7e22ce" stroke-width="2" opacity="0.6"/>
+  <!-- Hair highlight -->
+  <path d="M50,20 Q64,16 78,20" fill="none" stroke="#d8b4fe" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  <!-- Starfish hair clip -->
+  <polygon points="82,28 84,22 86,28 92,28 87,32 89,38 84,34 79,38 81,32 76,28" fill="#f97316" transform="scale(0.6) translate(70,18)"/>
+  <!-- Seashell hair clips -->
+  <ellipse cx="42" cy="28" rx="5" ry="3" fill="#fb923c" transform="rotate(-20 42 28)"/>
+  <!-- Eyes (oceanic blue-green) -->
+  <ellipse cx="52" cy="46" rx="7.5" ry="7" fill="white"/>
+  <ellipse cx="76" cy="46" rx="7.5" ry="7" fill="white"/>
+  <circle cx="53" cy="47" r="5.5" fill="#0891b2"/>
+  <circle cx="77" cy="47" r="5.5" fill="#0891b2"/>
+  <circle cx="53" cy="47" r="3" fill="#111"/>
+  <circle cx="77" cy="47" r="3" fill="#111"/>
+  <circle cx="54.5" cy="45.5" r="2" fill="white"/>
+  <circle cx="78.5" cy="45.5" r="2" fill="white"/>
+  <!-- Eyelashes -->
+  <path d="M46,40 Q50,36 55,40" stroke="#111" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M73,40 Q78,36 84,40" stroke="#111" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Cheek blush -->
+  <ellipse cx="43" cy="54" rx="6" ry="4" fill="#fda4af" opacity="0.4"/>
+  <ellipse cx="85" cy="54" rx="6" ry="4" fill="#fda4af" opacity="0.4"/>
+  <!-- Nose -->
+  <ellipse cx="64" cy="53" rx="3" ry="2" fill="#f0b888"/>
+  <!-- Mouth -->
+  <path d="M56,60 Q64,67 72,60" stroke="#e11d48" stroke-width="2" fill="#fda4af" stroke-linecap="round"/>
+  <!-- Pearl crown -->
+  <path d="M44,28 Q64,22 84,28" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-dasharray="4,3"/>
+  <circle cx="64" cy="24" r="4" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <circle cx="52" cy="26" r="3" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+  <circle cx="76" cy="26" r="3" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+</svg>
