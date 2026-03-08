@@ -15,6 +15,16 @@ export interface CollectibleItem {
 export const COLLECTION_ITEMS: CollectibleItem[] = [
   // ── Dino world ──────────────────────────────────────────────────────────────
   {
+    id: 'dino-logic-lamp',
+    worldId: 'dino',
+    name: 'Logiklyktan',
+    emoji: '🔦',
+    description: 'Lyste upp rimligheten i urtiden!',
+    rarity: 'rare',
+    unlockCondition: 'Klara Rimlighetsövningen (Dino)',
+    statUnlock: (s) => s.progress.some(p => p.topicId === 'rimlighetsoevningar-lag' && p.completed),
+  },
+  {
     id: 'dino-baby',
     worldId: 'dino',
     name: 'Baby Dino',
@@ -57,6 +67,26 @@ export const COLLECTION_ITEMS: CollectibleItem[] = [
 
   // ── Fantasy world ────────────────────────────────────────────────────────────
   {
+    id: 'fantasy-truth-mirror',
+    worldId: 'fantasy',
+    name: 'Sanningens spegel',
+    emoji: '🪞',
+    description: 'Avslöjar sant och falskt med magi!',
+    rarity: 'rare',
+    unlockCondition: 'Klara Rimlighetsövningen (Fantasy)',
+    statUnlock: (s) => s.progress.some(p => p.topicId === 'rimlighetsoevningar-mel' && p.completed),
+  },
+  {
+    id: 'weekly-trophy',
+    worldId: 'fantasy',
+    name: 'Veckotroféet',
+    emoji: '🏆',
+    description: 'Vunnit av veckans mästare!',
+    rarity: 'rare',
+    unlockCondition: 'Samla 100 poäng på en vecka',
+    statUnlock: (s) => s.points.weeklyPoints >= 100,
+  },
+  {
     id: 'castle-flag',
     worldId: 'fantasy',
     name: 'Borgens fana',
@@ -98,6 +128,26 @@ export const COLLECTION_ITEMS: CollectibleItem[] = [
   },
 
   // ── Sci-fi world ─────────────────────────────────────────────────────────────
+  {
+    id: 'scifi-logic-chip',
+    worldId: 'scifi',
+    name: 'Logikprocessorn',
+    emoji: '🧮',
+    description: 'Beräknar rimlighet i rymdfart!',
+    rarity: 'epic',
+    unlockCondition: 'Klara Rimlighetsövningen (Sci-Fi)',
+    statUnlock: (s) => s.progress.some(p => p.topicId === 'rimlighetsoevningar-hog' && p.completed),
+  },
+  {
+    id: 'tenday-badge',
+    worldId: 'scifi',
+    name: 'Aktivitetsbrickan',
+    emoji: '🎖️',
+    description: 'Tio dagar av rymdmatematik!',
+    rarity: 'epic',
+    unlockCondition: 'Var aktiv totalt 10 dagar',
+    statUnlock: (s) => s.daysActive >= 10,
+  },
   {
     id: 'space-badge',
     worldId: 'scifi',
@@ -160,6 +210,28 @@ export const COLLECTION_ITEMS: CollectibleItem[] = [
   },
 
   // ── Gym world ─────────────────────────────────────────────────────────────────
+  {
+    id: 'gym-logic-eye',
+    worldId: 'gym',
+    name: 'Universums logik',
+    emoji: '👁️',
+    description: 'Ser igenom universums matematiska sanning!',
+    rarity: 'epic',
+    unlockCondition: 'Klara Rimlighetsövningen (Gym)',
+    statUnlock: (s) => s.progress.some(p => p.topicId === 'rimlighetsoevningar-gym' && p.completed),
+  },
+  {
+    id: 'all-rimlighet-compass',
+    worldId: 'gym',
+    name: 'Världskompass',
+    emoji: '🧭',
+    description: 'Klarade rimlighetsövningar i ALLA världar!',
+    rarity: 'legendary',
+    unlockCondition: 'Klara ALLA 4 Rimlighetsövningar',
+    statUnlock: (s) =>
+      ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym']
+        .every(id => s.progress.some(p => p.topicId === id && p.completed)),
+  },
   {
     id: 'telescope',
     worldId: 'gym',
