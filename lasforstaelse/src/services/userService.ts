@@ -81,10 +81,10 @@ export function loginUser(name: string, avatar?: string): User {
   const existingUser = findUserByName(name);
 
   if (existingUser) {
-    // Uppdatera senaste aktivitet och eventuellt avatar om den inte finns
+    // Uppdatera senaste aktivitet och avatar
     const updatedUser = {
       ...existingUser,
-      avatar: existingUser.avatar || avatar || AVATAR_OPTIONS[0],
+      avatar: avatar || existingUser.avatar || AVATAR_OPTIONS[0],
       lastActivity: new Date().toISOString(),
     };
     saveUser(updatedUser);
