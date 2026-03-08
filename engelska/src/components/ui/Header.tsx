@@ -32,7 +32,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center hover:opacity-80 transition-opacity min-w-0 flex-shrink-0 rounded-xl overflow-hidden bg-white dark:bg-transparent"
+          className="flex items-center hover:opacity-80 transition-opacity min-w-0 flex-shrink-0 rounded-xl overflow-hidden bg-white dark:bg-gray-900"
         >
           <img
             src="/engelskajakten-logo.png"
