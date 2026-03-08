@@ -47,8 +47,18 @@ export default {
         'star-pop': 'starPop 0.6s ease-out',
         'confetti': 'confetti 0.8s ease-out',
         'pulse-slow': 'pulse 3s infinite',
+        'legendaryPulse': 'legendaryPulse 3s ease-in-out infinite',
+        'shimmer': 'shimmer 2s linear infinite',
       },
       keyframes: {
+        legendaryPulse: {
+          '0%, 100%': { boxShadow: '0 4px 28px rgba(251,191,36,0.25)', borderColor: 'rgba(251,191,36,0.5)' },
+          '50%': { boxShadow: '0 4px 36px rgba(251,191,36,0.55)', borderColor: 'rgba(251,191,36,0.9)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
           '50%': { transform: 'scale(1.05)' },
