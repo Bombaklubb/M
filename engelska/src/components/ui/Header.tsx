@@ -67,7 +67,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
             {/* Student avatar + name – links to Min sida */}
             {(() => {
-              const av = getAvatar(student.avatarId ?? "ninja");
+              const av = getAvatar(student.avatar ?? "ninja");
               return (
                 <Link
                   href="/profile"
