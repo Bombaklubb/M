@@ -590,3 +590,4 @@ export function deleteMessage(messageId: string): void {
 export function getUnreadMessageCount(): number {
   return getStudentMessages().filter(m => !m.read).length;
 }
+
