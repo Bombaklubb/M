@@ -43,7 +43,7 @@ export const AvatarPicker: React.FC<AvatarPickerProps> = ({
         </div>
       )}
 
-      <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 gap-2.5 md:gap-3 max-h-[400px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-indigo-200 scrollbar-track-transparent">
+      <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 gap-2.5 md:gap-3">
         {AVATAR_OPTIONS.map((avatar) => (
           <button
             key={avatar}
