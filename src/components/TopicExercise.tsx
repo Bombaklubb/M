@@ -165,10 +165,12 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
               exercise.type === 'multiple-choice'  ? 'bg-blue-500/30 text-blue-300' :
               exercise.type === 'fill-in'          ? 'bg-purple-500/30 text-purple-300' :
+              topic.tags?.includes('rimlighet')    ? 'bg-amber-500/30 text-amber-300' :
                                                      'bg-emerald-500/30 text-emerald-300'
             }`}>
               {exercise.type === 'multiple-choice'   ? '🔘 Flerval' :
                exercise.type === 'fill-in'           ? '✏️ Fritext' :
+               topic.tags?.includes('rimlighet')     ? '⚖️ Rimlighet' :
                                                        '✅ Sant/Falskt'}
             </span>
             <span className="text-sm font-bold text-amber-400">+{exercise.points}p</span>
@@ -224,6 +226,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             <TrueFalseAnswers
               state={state}
               onAnswer={answerTrueFalse}
+              isRimlighet={topic.tags?.includes('rimlighet') ?? false}
             />
           )}
           {exercise.type === 'fill-in' && (
@@ -329,32 +332,58 @@ function MultipleChoiceAnswers({
   );
 }
 
-function TrueFalseAnswers({ state, onAnswer }: {
+function TrueFalseAnswers({ state, onAnswer, isRimlighet = false }: {
   state: ExerciseState;
   onAnswer: (v: boolean) => void;
+  isRimlighet?: boolean;
 }) {
+  const buttons: { val: boolean; label: string; icon: string; hoverCls: string }[] = isRimlighet
+    ? [
+        { val: true,  label: 'Rimligt',    icon: '✅', hoverCls: 'hover:border-emerald-400 hover:bg-emerald-500/20 hover:shadow-emerald-500/30' },
+        { val: false, label: 'Orimligt',   icon: '❌', hoverCls: 'hover:border-rose-400 hover:bg-rose-500/20 hover:shadow-rose-500/30' },
+      ]
+    : [
+        { val: true,  label: 'Sant',       icon: '👍', hoverCls: 'hover:border-emerald-400 hover:bg-emerald-500/20' },
+        { val: false, label: 'Falskt',     icon: '👎', hoverCls: 'hover:border-rose-400 hover:bg-rose-500/20' },
+      ];
+
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {[true, false].map(val => {
-        let cls = 'border-2 border-white/15 bg-white/5 text-white hover:border-emerald-400 hover:bg-emerald-500/20';
-        if (state.answered) {
-          if (state.correct && state.userAnswer === String(val)) cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200';
-          else if (!state.correct && state.userAnswer === String(val)) cls = 'border-2 border-rose-400 bg-rose-500/20 text-rose-200';
-          else if (state.correct && state.userAnswer !== String(val)) cls = 'border-2 border-white/10 bg-white/5 text-white/30';
-          else cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200'; // Show correct
-        }
-        return (
-          <button
-            key={String(val)}
-            onClick={() => onAnswer(val)}
-            disabled={state.answered}
-            className={`py-5 rounded-2xl font-black text-2xl transition-all ${cls} ${!state.answered ? 'cursor-pointer hover:scale-105' : ''}`}
-          >
-            {val ? '👍 Sant' : '👎 Falskt'}
-          </button>
-        );
-      })}
-    </div>
+    <>
+      {isRimlighet && !state.answered && (
+        <div className="flex items-center justify-center gap-2 mb-4 px-4 py-2.5 rounded-2xl bg-amber-500/10 border border-amber-400/30">
+          <span className="text-xl">⚖️</span>
+          <p className="text-sm font-bold text-amber-300">Är påståendet rimligt eller orimligt?</p>
+        </div>
+      )}
+      <div className="grid grid-cols-2 gap-4">
+        {buttons.map(({ val, label, icon, hoverCls }) => {
+          let cls = `border-2 border-white/15 bg-white/5 text-white ${hoverCls} hover:shadow-lg`;
+          if (state.answered) {
+            const isUserChoice = state.userAnswer === String(val);
+            const isCorrectAnswer = val === true
+              ? state.correct && isUserChoice || !state.correct && !isUserChoice
+              : !state.correct && isUserChoice || state.correct && !isUserChoice;
+            // For true-false: correct answer is (isTrue) which we don't have here,
+            // so use: if user chose this AND correct → green; user chose this AND wrong → red; otherwise dim
+            if (isUserChoice && state.correct) cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200 shadow-lg shadow-emerald-500/20';
+            else if (isUserChoice && !state.correct) cls = 'border-2 border-rose-400 bg-rose-500/20 text-rose-200 shadow-lg shadow-rose-500/20';
+            else if (!isUserChoice && !state.correct) cls = 'border-2 border-emerald-400/60 bg-emerald-500/10 text-emerald-300/70';
+            else cls = 'border-2 border-white/10 bg-white/5 text-white/30';
+          }
+          return (
+            <button
+              key={String(val)}
+              onClick={() => onAnswer(val)}
+              disabled={state.answered}
+              className={`py-5 rounded-2xl font-black text-xl transition-all duration-200 flex flex-col items-center gap-1 ${cls} ${!state.answered ? 'cursor-pointer hover:scale-105 active:scale-95' : ''}`}
+            >
+              <span className="text-3xl">{icon}</span>
+              <span>{label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </>
   );
 }
 
