@@ -3,6 +3,27 @@ import { Achievement, StudentStats } from '../types';
 export const ACHIEVEMENTS: Achievement[] = [
   // COMMON
   {
+    id: 'rimlighetsprövaren',
+    title: 'Rimlighetsprövaren',
+    description: 'Klara din första Rimlighetsövning',
+    icon: '🔍',
+    color: 'from-lime-400 to-green-500',
+    rarity: 'common',
+    condition: (s) => s.progress.some(
+      p => p.completed &&
+      ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym'].includes(p.topicId)
+    ),
+  },
+  {
+    id: 'veckostjärna',
+    title: 'Veckostjärna',
+    description: 'Samla 100 poäng på en vecka',
+    icon: '📅',
+    color: 'from-sky-400 to-blue-500',
+    rarity: 'common',
+    condition: (s) => s.points.weeklyPoints >= 100,
+  },
+  {
     id: 'first-exercise',
     title: 'Första steget',
     description: 'Slutför din allra första övning',
@@ -58,6 +79,44 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   // RARE
   {
+    id: 'logikdetektiven',
+    title: 'Logikdetektiven',
+    description: 'Klara Rimlighetsövningar i 2 olika världar',
+    icon: '🔎',
+    color: 'from-teal-400 to-cyan-600',
+    rarity: 'rare',
+    condition: (s) =>
+      ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym']
+        .filter(id => s.progress.some(p => p.topicId === id && p.completed)).length >= 2,
+  },
+  {
+    id: 'femdagarsmästaren',
+    title: 'Femdagarsmästaren',
+    description: 'Var aktiv totalt 5 dagar',
+    icon: '📆',
+    color: 'from-blue-400 to-indigo-500',
+    rarity: 'rare',
+    condition: (s) => s.daysActive >= 5,
+  },
+  {
+    id: 'perfektion-trio',
+    title: 'Perfektionstrio',
+    description: 'Klara 3 ämnen med 100% rätt',
+    icon: '🎯',
+    color: 'from-rose-400 to-pink-600',
+    rarity: 'rare',
+    condition: (s) => s.progress.filter(p => p.bestScore === 100).length >= 3,
+  },
+  {
+    id: 'veckolegenden',
+    title: 'Veckolegenden',
+    description: 'Samla 300 poäng på en vecka',
+    icon: '🏅',
+    color: 'from-amber-400 to-yellow-600',
+    rarity: 'rare',
+    condition: (s) => s.points.weeklyPoints >= 300,
+  },
+  {
     id: 'three-topics',
     title: 'Bred kunskap',
     description: 'Slutför 3 olika ämnesområden',
@@ -94,6 +153,26 @@ export const ACHIEVEMENTS: Achievement[] = [
     condition: (s) => s.progress.some(p => p.stars === 3),
   },
   // EPIC
+  {
+    id: 'rimlighetsmästaren',
+    title: 'Rimlighetsmästaren',
+    description: 'Klara Rimlighetsövningar i minst 3 världar',
+    icon: '⚖️',
+    color: 'from-emerald-500 to-teal-700',
+    rarity: 'epic',
+    condition: (s) =>
+      ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym']
+        .filter(id => s.progress.some(p => p.topicId === id && p.completed)).length >= 3,
+  },
+  {
+    id: 'tio-dagar',
+    title: 'Tio Dagar Stark',
+    description: 'Var aktiv totalt 10 dagar',
+    icon: '💪',
+    color: 'from-blue-500 to-indigo-700',
+    rarity: 'epic',
+    condition: (s) => s.daysActive >= 10,
+  },
   {
     id: 'five-topics',
     title: 'Matematikälskare',
@@ -134,6 +213,26 @@ export const ACHIEVEMENTS: Achievement[] = [
     condition: (s) => s.completedTopics >= 10,
   },
   // LEGENDARY
+  {
+    id: 'fullständig-rimlighet',
+    title: 'Fullständig Rimlighet',
+    description: 'Klara ALLA 4 Rimlighetsövningar',
+    icon: '🧠',
+    color: 'from-violet-500 via-purple-600 to-indigo-700',
+    rarity: 'legendary',
+    condition: (s) =>
+      ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym']
+        .every(id => s.progress.some(p => p.topicId === id && p.completed)),
+  },
+  {
+    id: 'månadsaktiv',
+    title: 'Månadsaktiv',
+    description: 'Var aktiv totalt 30 dagar',
+    icon: '🌙',
+    color: 'from-indigo-500 via-blue-600 to-cyan-600',
+    rarity: 'legendary',
+    condition: (s) => s.daysActive >= 30,
+  },
   {
     id: 'all-topics',
     title: 'Matematikmästaren',
