@@ -19,13 +19,13 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 max-w-md w-full">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-orange-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-3xl shadow-[0_12px_40px_rgba(79,70,229,0.15)] p-8 md:p-12 max-w-md w-full border-2 border-indigo-100">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <BookLogo size={180} />
           </div>
-          <p className="text-slate-500 text-lg">
+          <p className="text-indigo-400 text-lg font-medium">
             Din smarta läskompis
           </p>
         </div>
@@ -34,7 +34,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
           <div>
             <label
               htmlFor="name"
-              className="block text-base font-bold text-slate-700 mb-2"
+              className="block text-base font-bold text-indigo-900 mb-2"
             >
               Vad heter du?
             </label>
@@ -44,14 +44,14 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder=""
-              className="w-full p-4 text-lg rounded-xl bg-white border-2 border-slate-200 focus:border-purple-500 focus:outline-none transition-colors"
+              className="w-full p-4 text-lg rounded-2xl bg-white border-2 border-indigo-200 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 focus:outline-none transition-all duration-200 shadow-[inset_0_2px_4px_rgba(0,0,0,0.04)]"
               autoFocus
               maxLength={30}
             />
           </div>
 
           <div>
-            <label className="block text-base font-bold text-slate-700 mb-3">
+            <label className="block text-base font-bold text-indigo-900 mb-3">
               Välj din avatar
             </label>
             <AvatarPicker
@@ -63,23 +63,23 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
           <button
             type="submit"
             disabled={!name.trim()}
-            className={`w-full py-4 px-6 rounded-xl text-white font-bold text-xl shadow-lg transition-all ${
+            className={`w-full py-4 px-6 rounded-2xl text-white font-bold text-xl transition-all duration-200 cursor-pointer ${
               name.trim()
-                ? 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 hover:shadow-xl transform hover:scale-[1.02]'
-                : 'bg-slate-300 cursor-not-allowed'
+                ? 'bg-gradient-to-r from-orange-500 to-amber-500 shadow-[0_6px_20px_rgba(249,115,22,0.35),inset_0_-2px_4px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_25px_rgba(249,115,22,0.45)] hover:scale-[1.02] active:scale-[0.98] border-2 border-orange-400'
+                : 'bg-slate-200 border-2 border-slate-300 cursor-not-allowed shadow-none'
             }`}
           >
             Börja din läsning
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-slate-200 text-center text-slate-400 text-sm">
+        <div className="mt-8 pt-6 border-t border-indigo-100 text-center text-indigo-300 text-sm">
           <p>Läsjakten hjälper dig att träna läsförståelse på din nivå</p>
         </div>
       </div>
 
       {/* Signatur */}
-      <div className="fixed bottom-2 right-3 text-xs text-gray-400 opacity-60 hover:opacity-100 transition-opacity">
+      <div className="fixed bottom-2 right-3 text-xs text-indigo-300 opacity-60 hover:opacity-100 transition-opacity">
         Läsjakten av Martin Akdogan
       </div>
     </div>
