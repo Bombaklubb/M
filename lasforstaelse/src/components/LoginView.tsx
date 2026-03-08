@@ -19,7 +19,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-orange-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-[0_12px_40px_rgba(79,70,229,0.15)] p-8 md:p-12 max-w-md w-full border-2 border-indigo-100">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
