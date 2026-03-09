@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent } from "@/lib/storage";
-import { getAvatar } from "@/lib/avatars";
+import { getAvatar, type Avatar } from "@/lib/avatars";
+
+function AvatarImg({ av }: { av: Avatar }) {
+  const [error, setError] = useState(false);
+  if (!av.image || error) return <span className="text-lg leading-none">{av.emoji}</span>;
+  return <img src={av.image} alt={av.name} className="w-full h-full object-contain" onError={() => setError(true)} />;
+}
 
 const DB_SKIN: Record<string, string> = {
   light: "fddbb4", light_brown: "c58540", dark: "7b4828",
@@ -89,11 +96,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
                   className="hidden sm:flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center flex-shrink-0 border border-gray-200 dark:border-gray-600">
-                    {av.image ? (
-                      <img src={av.image} alt={av.name} className="w-full h-full object-contain" />
-                    ) : (
-                      <span className="text-lg leading-none">{av.emoji}</span>
-                    )}
+                    <AvatarImg av={av} />
                   </div>
                   <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">{student.name}</span>
                 </Link>

@@ -77,7 +77,7 @@
         {
           "id": "hog-g1-7",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'De har redan ätit middag.'",
+          "instruction": "Bygg meningen: 'De har redan ätit middag.'",
           "words": [
             "They",
             "have",
@@ -165,7 +165,7 @@
         {
           "id": "hog-g1-14",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'Jag har inte sett den filmen än.'",
+          "instruction": "Bygg meningen: 'Jag har inte sett den filmen än.'",
           "words": [
             "I",
             "haven't",
@@ -286,7 +286,7 @@
         {
           "id": "hog-g2-7",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'Om du missar bussen, kommer du att bli sen.'",
+          "instruction": "Bygg meningen: 'Om du missar bussen, kommer du att bli sen.'",
           "words": [
             "If",
             "you",
@@ -360,7 +360,7 @@
         {
           "id": "hog-g2-12",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'Om hon hade mer tid, skulle hon resa världen runt.'",
+          "instruction": "Bygg meningen: 'Om hon hade mer tid, skulle hon resa världen runt.'",
           "words": [
             "If",
             "she",
@@ -511,7 +511,7 @@
         {
           "id": "hog-g3-7",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'Kakan bakades av min mamma.'",
+          "instruction": "Bygg meningen: 'Kakan bakades av min mamma.'",
           "words": [
             "The",
             "cake",
@@ -581,7 +581,7 @@
         {
           "id": "hog-g3-12",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'En ny planet har upptäckts av forskare.'",
+          "instruction": "Bygg meningen: 'En ny planet har upptäckts av forskare.'",
           "words": [
             "A",
             "new",
@@ -750,7 +750,7 @@
         {
           "id": "hog-g4-9",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'Han sa att han var trött.'",
+          "instruction": "Bygg meningen: 'Han sa att han var trött.'",
           "words": [
             "He",
             "said",
@@ -818,7 +818,7 @@
         {
           "id": "hog-g4-14",
           "type": "build-sentence",
-          "instruction": "Bygg meningen på engelska: 'Hon frågade var han hade varit.'",
+          "instruction": "Bygg meningen: 'Hon frågade var han hade varit.'",
           "words": [
             "She",
             "asked",
