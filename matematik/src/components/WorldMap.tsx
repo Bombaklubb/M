@@ -8,7 +8,7 @@ import { GRADE_LABELS } from '../types';
 import AppHeader from './AppHeader';
 
 export default function WorldMap({ worldId }: { worldId: WorldId }) {
-  const { currentStudent, selectTopic, setView } = useApp();
+  const { currentStudent, selectTopic, setView, startSluttest } = useApp();
   const [showAll, setShowAll] = useState(false);
   if (!currentStudent) return null;
 
@@ -118,6 +118,29 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           <div className="text-center py-10 text-white/40">
             <p className="text-4xl mb-2">📚</p>
             <p>Inga kapitel hittades för denna värld</p>
+          </div>
+        )}
+
+        {/* Sluttest button */}
+        {worldTopics.length > 0 && (
+          <div className="mt-2 mb-4">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-3 mb-3">
+              <p className="text-white/40 text-xs text-center leading-relaxed">
+                ✨ Klara med alla kapitel? Testa dina kunskaper med ett sluttest!
+              </p>
+            </div>
+            <button
+              onClick={() => startSluttest(worldId)}
+              className={`w-full bg-gradient-to-r ${world.bg} text-white font-black text-lg py-4 px-6 rounded-2xl hover:scale-[1.02] hover:shadow-2xl active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-3 relative overflow-hidden`}
+            >
+              <span className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity rounded-2xl" />
+              <span className="text-2xl">🏆</span>
+              <span>Sluttest – Testa allt!</span>
+              <span className="text-xl opacity-80">→</span>
+            </button>
+            <p className="text-center text-white/30 text-xs mt-2">
+              Frågor från alla {worldTopics.length} kapitel
+            </p>
           </div>
         )}
       </div>

@@ -16,18 +16,21 @@ import { WorldId } from '../data/worlds';
 export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
-  | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page';
+  | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
+  | 'sluttest';
 
 interface AppContextValue {
   currentStudent: Student | null;
   currentView: ExtendedView;
   selectedTopic: Topic | null;
   isTeacher: boolean;
+  sluttestWorldId: WorldId | null;
   login: (student: Student) => void;
   logout: () => void;
   setView: (view: ExtendedView) => void;
   selectTopic: (topic: Topic) => void;
   setTeacher: (val: boolean) => void;
+  startSluttest: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number };
   updateAvatar: (avatarIndex: number) => void;
@@ -40,6 +43,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [currentView, setCurrentView] = useState<ExtendedView>(getCurrentStudent() ? 'dashboard' : 'login');
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isTeacher, setIsTeacherState] = useState(false);
+  const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
 
   const login = useCallback((student: Student) => {
     setCurrentStudent(student);
@@ -65,6 +69,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const setTeacher = useCallback((val: boolean) => {
     setIsTeacherState(val);
     setCurrentView(val ? 'teacher' : 'dashboard');
+  }, []);
+
+  const startSluttest = useCallback((worldId: WorldId) => {
+    setSluttestWorldId(worldId);
+    setCurrentView('sluttest');
   }, []);
 
   const getStudentStats = useCallback((student: Student) => {
@@ -110,7 +119,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, login, logout, setView, selectTopic, setTeacher, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, login, logout, setView, selectTopic, setTeacher, startSluttest, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );
