@@ -205,7 +205,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && input.trim() && checkAnswer(input.trim())}
                 placeholder="Ditt svar..."
-                className="flex-1 border-2 border-gray-200 rounded-2xl px-4 py-3 text-lg font-bold focus:outline-none focus:border-purple-400" />
+                className="flex-1 border-2 border-gray-200 rounded-2xl px-4 py-3 text-lg font-bold text-gray-800 placeholder-gray-400 bg-white focus:outline-none focus:border-purple-400" />
               <button onClick={() => input.trim() && checkAnswer(input.trim())}
                 className="bg-purple-500 text-white font-bold px-5 rounded-2xl hover:bg-purple-400">✓</button>
             </div>
@@ -215,7 +215,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
             <div className="grid gap-3">
               {(currentStep.options ?? []).map((opt, i) => (
                 <button key={i} onClick={() => checkAnswer(String(i))}
-                  className="text-left px-5 py-3 rounded-2xl font-semibold border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all">
+                  className="text-left px-5 py-3 rounded-2xl font-semibold border-2 border-gray-200 text-gray-800 bg-white hover:border-purple-400 hover:bg-purple-50 transition-all">
                   <span className="text-gray-400 font-bold mr-2">{String.fromCharCode(65 + i)}.</span>{opt}
                 </button>
               ))}
@@ -226,7 +226,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
             <div className="grid grid-cols-2 gap-4">
               {[true, false].map(val => (
                 <button key={String(val)} onClick={() => checkAnswer(String(val))}
-                  className="py-5 rounded-2xl font-black text-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all">
+                  className="py-5 rounded-2xl font-black text-xl border-2 border-gray-200 text-gray-800 bg-white hover:border-purple-400 hover:bg-purple-50 transition-all">
                   {val ? '👍 Sant' : '👎 Falskt'}
                 </button>
               ))}

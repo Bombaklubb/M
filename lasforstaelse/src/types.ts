@@ -104,9 +104,12 @@ export interface CompletedText {
 
 // Tillgängliga avatarer
 export const AVATAR_OPTIONS = [
+  // Djur
   '🦊', '🐼', '🦁', '🐯', '🐻', '🐨', '🐸', '🦉',
   '🦋', '🐙', '🦈', '🐬', '🦄', '🐲', '🤖', '👾',
-  '🧙', '🧚', '🦸', '🥷', '🎨', '🚀', '⭐', '🌈'
+  '🧙', '🧚', '🦸', '🥷', '🎨', '🚀', '⭐', '🌈',
+  // Nya avatarer
+  '🐶', '🐱', '🐰', '🦝', '🦜', '🐧', '🦩', '🐢', '🦀', '🎪'
 ];
 
 // Användarprofil (sparas i localStorage)

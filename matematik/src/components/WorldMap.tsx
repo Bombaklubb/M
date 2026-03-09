@@ -24,7 +24,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
   const completed = worldTopics.filter(t => progress.some(p => p.topicId === t.id && p.completed)).length;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
       <AppHeader />
       {/* World header */}
       <div className={`bg-gradient-to-r ${world.bg} text-white pb-6 pt-16 px-4 relative overflow-hidden`}>
@@ -76,16 +76,16 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
       <div className="max-w-lg mx-auto px-4 py-5 space-y-3">
         {/* Quest shortcut */}
         <button onClick={()=>setView('quest')}
-          className="w-full bg-white border border-gray-200 rounded-2xl p-4 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all text-left flex items-center gap-3">
+          className="w-full bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 hover:bg-white/12 hover:scale-[1.02] transition-all text-left flex items-center gap-3">
           <span className="text-2xl">⚔️</span>
           <div>
-            <p className="font-black text-gray-800 text-sm">Äventyr</p>
-            <p className="text-gray-500 text-xs">Berättelseproblem</p>
+            <p className="font-black text-white text-sm">Äventyr</p>
+            <p className="text-white/50 text-xs">Berättelseproblem</p>
           </div>
-          <span className="ml-auto text-gray-300 text-xl">→</span>
+          <span className="ml-auto text-white/30 text-xl">→</span>
         </button>
 
-        <h2 className="text-gray-700 font-bold text-sm uppercase tracking-widest mt-1">Kapitel</h2>
+        <h2 className="text-white/50 font-bold text-sm uppercase tracking-widest mt-1">Kapitel</h2>
 
         <div className="grid grid-cols-3 gap-2">
           {worldTopics.map((topic, idx) => {
@@ -96,18 +96,18 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
             return (
               <button key={topic.id} onClick={()=>selectTopic(topic)}
-                className="bg-white border border-gray-200 rounded-xl p-2.5 shadow-sm hover:shadow-md hover:border-gray-300 hover:scale-[1.03] active:scale-[0.98] transition-all text-left">
+                className="bg-white/8 backdrop-blur-md border border-white/15 rounded-xl p-2.5 hover:bg-white/15 hover:border-white/30 hover:scale-[1.03] active:scale-[0.98] transition-all text-left">
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-xs mb-1.5 bg-gradient-to-br ${topic.color} shadow-md`}>
                   {isCompleted ? '✓' : idx + 1}
                 </div>
-                <p className="font-black text-gray-800 text-xs leading-tight mb-1 line-clamp-2">{topic.title}</p>
+                <p className="font-black text-white text-xs leading-tight mb-1 line-clamp-2">{topic.title}</p>
                 <div className="flex gap-0.5">
                   {[0,1,2].map(i=>(
-                    <span key={i} className={`text-xs ${i<stars?'text-yellow-400':'text-gray-200'}`}>★</span>
+                    <span key={i} className={`text-xs ${i<stars?'text-yellow-400':'text-white/20'}`}>★</span>
                   ))}
                 </div>
                 {!hasStarted && (
-                  <span className="inline-block mt-1 bg-blue-100 text-blue-700 text-[10px] font-bold px-1 py-0.5 rounded-full leading-none">Ny</span>
+                  <span className="inline-block mt-1 bg-blue-500/30 text-blue-300 text-[10px] font-bold px-1 py-0.5 rounded-full leading-none">Ny</span>
                 )}
               </button>
             );
@@ -115,7 +115,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
         </div>
 
         {worldTopics.length === 0 && (
-          <div className="text-center py-10 text-gray-400">
+          <div className="text-center py-10 text-white/40">
             <p className="text-4xl mb-2">📚</p>
             <p>Inga kapitel hittades för denna värld</p>
           </div>

@@ -1,3 +1,4 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "ignoreCommand": "git diff-tree --no-commit-id -r --name-only -m HEAD -- lasforstaelse/ kallkritik/ api/ | grep -q . && exit 1 || exit 0"
 }

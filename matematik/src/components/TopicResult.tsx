@@ -31,27 +31,27 @@ export default function TopicResult({ topic }: { topic: Topic }) {
     .map(ea => ACHIEVEMENTS.find(a => a.id === ea.achievementId))
     .filter(Boolean);
 
-  const scoreColor = score >= 80 ? 'text-green-600' : score >= 50 ? 'text-amber-600' : 'text-red-500';
+  const scoreColor = score >= 80 ? 'text-emerald-400' : score >= 50 ? 'text-amber-400' : 'text-rose-400';
   const grade = score >= 90 ? 'Utmärkt! 🌟' : score >= 70 ? 'Bra jobbat! 👍' : score >= 50 ? 'Godkänt! ✅' : 'Försök igen! 💪';
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex flex-col items-center justify-start pt-24 pb-10 px-4">
+    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
       <AppHeader />
       <div className={`w-full max-w-md transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         {/* Result card */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-5">
+        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-8 mb-5">
           {/* Header */}
           <div className="text-center mb-6">
             <div className="text-6xl mb-3">{topic.icon}</div>
-            <h1 className="text-2xl font-black text-gray-800">{topic.title}</h1>
-            <p className="text-gray-500">Avklarad!</p>
+            <h1 className="text-2xl font-black text-white">{topic.title}</h1>
+            <p className="text-white/50">Avklarad!</p>
           </div>
 
           {/* Score circle */}
           <div className="flex flex-col items-center mb-6">
             <div className={`text-7xl font-black ${scoreColor} mb-1`}>{score}%</div>
-            <p className="text-xl font-bold text-gray-700">{grade}</p>
-            <p className="text-gray-500 text-sm mt-1">{correct} av {total} rätt</p>
+            <p className="text-xl font-bold text-white/80">{grade}</p>
+            <p className="text-white/50 text-sm mt-1">{correct} av {total} rätt</p>
           </div>
 
           {/* Stars */}
@@ -70,21 +70,21 @@ export default function TopicResult({ topic }: { topic: Topic }) {
           </div>
 
           {/* Points earned */}
-          <div className="bg-amber-50 rounded-2xl p-4 text-center mb-4">
-            <p className="text-amber-700 font-bold text-lg">🏆 Poäng totalt: {points.total}</p>
-            <p className="text-amber-600 text-sm">Nivå {points.level} – {points.streak} dagars streak 🔥</p>
+          <div className="bg-amber-500/20 border border-amber-400/40 rounded-2xl p-4 text-center mb-4">
+            <p className="text-amber-300 font-bold text-lg">🏆 Poäng totalt: {points.total}</p>
+            <p className="text-amber-400 text-sm">Nivå {points.level} – {points.streak} dagars streak 🔥</p>
           </div>
 
           {/* New achievements */}
           {newAchievements.length > 0 && (
-            <div className="bg-purple-50 rounded-2xl p-4 mb-4 animate-bounce-in">
-              <p className="font-bold text-purple-800 mb-2">🎖️ Nytt märke!</p>
+            <div className="bg-purple-500/20 border border-purple-400/40 rounded-2xl p-4 mb-4 animate-bounce-in">
+              <p className="font-bold text-purple-300 mb-2">🎖️ Nytt märke!</p>
               {newAchievements.map((ach, i) => ach && (
                 <div key={i} className="flex items-center gap-2">
                   <span className="text-2xl">{ach.icon}</span>
                   <div>
-                    <p className="font-bold text-purple-700">{ach.title}</p>
-                    <p className="text-purple-600 text-xs">{ach.description}</p>
+                    <p className="font-bold text-purple-300">{ach.title}</p>
+                    <p className="text-purple-400 text-xs">{ach.description}</p>
                   </div>
                 </div>
               ))}
@@ -96,7 +96,7 @@ export default function TopicResult({ topic }: { topic: Topic }) {
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => setView('topic-instruction')}
-            className="bg-white border-2 border-gray-200 text-gray-700 font-bold py-4 rounded-2xl hover:bg-gray-50 transition-colors"
+            className="bg-white/8 backdrop-blur-md border border-white/15 text-white font-bold py-4 rounded-2xl hover:bg-white/15 transition-colors"
           >
             🔄 Försök igen
           </button>
@@ -109,7 +109,7 @@ export default function TopicResult({ topic }: { topic: Topic }) {
         </div>
         <button
           onClick={() => setView('my-results')}
-          className="w-full mt-3 bg-gray-100 text-gray-600 font-bold py-3 rounded-2xl hover:bg-gray-200 transition-colors"
+          className="w-full mt-3 bg-white/8 border border-white/15 text-white/70 font-bold py-3 rounded-2xl hover:bg-white/15 transition-colors"
         >
           📊 Se mina resultat
         </button>
