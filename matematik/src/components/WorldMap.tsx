@@ -8,7 +8,7 @@ import { GRADE_LABELS } from '../types';
 import AppHeader from './AppHeader';
 
 export default function WorldMap({ worldId }: { worldId: WorldId }) {
-  const { currentStudent, selectTopic, setView, startSluttest } = useApp();
+  const { currentStudent, selectTopic, setView, startSluttest, startQuest } = useApp();
   const [showAll, setShowAll] = useState(false);
   if (!currentStudent) return null;
 
@@ -75,7 +75,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
       {/* Topics */}
       <div className="max-w-lg mx-auto px-4 py-5 space-y-3">
         {/* Quest shortcut */}
-        <button onClick={()=>setView('quest')}
+        <button onClick={()=>startQuest(worldId)}
           className="w-full bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 hover:bg-white/12 hover:scale-[1.02] transition-all text-left flex items-center gap-3">
           <span className="text-2xl">⚔️</span>
           <div>
