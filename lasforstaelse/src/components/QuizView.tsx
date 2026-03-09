@@ -7,6 +7,42 @@ interface QuizViewProps {
   onShowText: () => void;
 }
 
+// Bionic reading: gör första delen av varje ord fetstilt för lättare läsning
+const applyBionicReading = (text: string): React.ReactNode[] => {
+  return text.split(' ').map((word, index) => {
+    if (word.length === 0) return null;
+
+    // Ta bort punktuation för att beräkna fetstil-längd
+    const cleanWord = word.replace(/[.,!?;:'"()-]/g, '');
+    const boldLength = Math.ceil(cleanWord.length * 0.4); // 40% av ordet fetstilt
+
+    // Hitta var den faktiska texten börjar (skippa inledande punktuation)
+    let startIdx = 0;
+    while (startIdx < word.length && /[.,!?;:'"()-]/.test(word[startIdx])) {
+      startIdx++;
+    }
+
+    // Beräkna slutpositionen för fetstilt text
+    let boldEndIdx = startIdx + boldLength;
+
+    // Se till att vi inte överskrider ordets längd
+    if (boldEndIdx > word.length) boldEndIdx = word.length;
+
+    const before = word.slice(0, startIdx);
+    const boldPart = word.slice(startIdx, boldEndIdx);
+    const normalPart = word.slice(boldEndIdx);
+
+    return (
+      <span key={index}>
+        {before}
+        <strong className="font-bold">{boldPart}</strong>
+        {normalPart}
+        {' '}
+      </span>
+    );
+  });
+};
+
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; category: string }> = {
   literal: { label: 'På raderna', emoji: '🔍', category: 'På raderna' },
   inferens: { label: 'Mellan raderna', emoji: '🧠', category: 'Mellan raderna' },
@@ -30,6 +66,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showText, setShowText] = useState(true);
   const [textSize, setTextSize] = useState<TextSize>('medium');
+  const [bionicReading, setBionicReading] = useState(false);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -138,6 +175,20 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   >
                     A
                   </button>
+                  <div className="h-4 w-px bg-slate-300 dark:bg-slate-600 mx-1 hidden sm:block" />
+                  <button
+                    onClick={() => setBionicReading(!bionicReading)}
+                    className={`px-2 py-1 rounded text-xs font-bold transition-all ${
+                      bionicReading
+                        ? 'bg-amber-500 text-white'
+                        : 'bg-slate-200 text-slate-600 hover:bg-slate-300 dark:bg-slate-700 dark:text-slate-300'
+                    }`}
+                    title="Bionic Reading - fetstil på ordets början för lättare läsning"
+                    aria-label="Bionic Reading"
+                    aria-pressed={bionicReading}
+                  >
+                    <span className="font-black">Bio</span>nic
+                  </button>
                   <button
                     onClick={() => setShowText(false)}
                     className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
@@ -146,11 +197,21 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   </button>
                 </div>
               </div>
+              {/* Bildstöd för åk 1-2 */}
+              {text.imageUrl && text.grade <= 2 && (
+                <div className="mb-4">
+                  <img
+                    src={text.imageUrl}
+                    alt={`Bild till ${text.title}`}
+                    className="w-full max-h-64 object-contain rounded-lg bg-slate-100 dark:bg-slate-700"
+                  />
+                </div>
+              )}
               <div className="prose prose-lg max-w-none dark:prose-invert">
                 <div className="space-y-4">
                   {paragraphs.map((para, idx) => (
                     <p key={idx} className={`leading-relaxed text-slate-700 dark:text-slate-300 ${textSizeClasses[textSize]}`}>
-                      {para}
+                      {bionicReading ? applyBionicReading(para) : para}
                     </p>
                   ))}
                 </div>

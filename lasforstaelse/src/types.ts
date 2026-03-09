@@ -21,6 +21,7 @@ export interface LibraryText {
   title: string;
   text: string;
   questions: LibraryQuestion[];
+  imageUrl?: string; // Bildstöd för yngre elever (åk 1-2)
   meta?: {
     wordCount: number;
     fingerprint: string;
