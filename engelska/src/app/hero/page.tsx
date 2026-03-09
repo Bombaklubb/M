@@ -239,15 +239,13 @@ export default function HeroPage() {
                       style={{ background: g.glow }}
                     />
                     <div
-                      className="absolute -top-4 -left-4 w-16 h-16 rounded-full opacity-10"
+                      className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full opacity-10"
                       style={{ background: g.glow }}
                     />
-                    <HeroAvatar
-                      heroId={hero.heroId}
-                      skinTone={hero.skinTone}
-                      gender={gender}
-                      equippedAttributes={hero.equippedAttributes}
-                      size={130}
+                    <img
+                      src={heroDbUrl(hero.heroId, hero.skinTone, gender)}
+                      alt={HERO_TYPES.find((h) => h.id === hero.heroId)?.name_sv ?? hero.heroId}
+                      className="w-32 h-32 object-contain rounded-2xl"
                     />
                   </div>
                 );

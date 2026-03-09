@@ -116,7 +116,7 @@
         {
           "id": "lag-g1-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'She is my sister.'",
+          "instruction": "Bygg meningen på engelska: 'Hon är min syster.'",
           "words": [
             "She",
             "is",
@@ -170,7 +170,7 @@
         {
           "id": "lag-g1-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'We are at home.'",
+          "instruction": "Bygg meningen på engelska: 'Vi är hemma.'",
           "words": [
             "We",
             "are",
@@ -312,7 +312,7 @@
         {
           "id": "lag-g2-9",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'He has a new book.'",
+          "instruction": "Bygg meningen på engelska: 'Han har en ny bok.'",
           "words": [
             "He",
             "has",
@@ -389,7 +389,7 @@
         {
           "id": "lag-g2-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'We have a new car.'",
+          "instruction": "Bygg meningen på engelska: 'Vi har en ny bil.'",
           "words": [
             "We",
             "have",
@@ -588,7 +588,7 @@
         {
           "id": "lag-g3-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'I have an old book.'",
+          "instruction": "Bygg meningen på engelska: 'Jag har en gammal bok.'",
           "words": [
             "I",
             "have",
@@ -800,7 +800,7 @@
         {
           "id": "lag-g4-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'The dogs are running fast.'",
+          "instruction": "Bygg meningen på engelska: 'Hundarna springer snabbt.'",
           "words": [
             "The",
             "dogs",
@@ -956,7 +956,7 @@
         {
           "id": "lag-g5-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'That is a big elephant.'",
+          "instruction": "Bygg meningen på engelska: 'Det är en stor elefant.'",
           "words": [
             "That",
             "is",
@@ -1163,7 +1163,7 @@
         {
           "id": "lag-g6-13",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'My dog is very fast.'",
+          "instruction": "Bygg meningen på engelska: 'Min hund är väldigt snabb.'",
           "words": [
             "My",
             "dog",
@@ -1361,7 +1361,7 @@
         {
           "id": "lag-g7-13",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'That red bag is hers.'",
+          "instruction": "Bygg meningen på engelska: 'Den där röda väskan är hennes.'",
           "words": [
             "That",
             "red",
@@ -1535,7 +1535,7 @@
         {
           "id": "lag-g8-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'There is a sun in the sky.'",
+          "instruction": "Bygg meningen på engelska: 'Det finns en sol på himlen.'",
           "words": [
             "There",
             "is",
@@ -1590,7 +1590,7 @@
         {
           "id": "lag-g8-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'There are six chairs at the table.'",
+          "instruction": "Bygg meningen på engelska: 'Det finns sex stolar vid bordet.'",
           "words": [
             "There",
             "are",
@@ -1759,7 +1759,7 @@
         {
           "id": "lag-g9-13",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'She can run very fast.'",
+          "instruction": "Bygg meningen på engelska: 'Hon kan springa väldigt snabbt.'",
           "words": [
             "She",
             "can",
@@ -1941,7 +1941,7 @@
         {
           "id": "lag-g10-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'The ball is under the table.'",
+          "instruction": "Bygg meningen på engelska: 'Bollen är under bordet.'",
           "words": [
             "The",
             "ball",
@@ -2007,7 +2007,7 @@
         {
           "id": "lag-g10-16",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'My cat sleeps on my bed.'",
+          "instruction": "Bygg meningen på engelska: 'Min katt sover i min säng.'",
           "words": [
             "My",
             "cat",
@@ -2167,13 +2167,16 @@
           "type": "fill-in-blank",
           "sentence": "'Are we late?' – 'No, we ___.'",
           "answer": "aren't",
+          "alternativeAnswers": [
+            "are not"
+          ],
           "hint": "Negativt svar med are: aren't.",
           "explanation": "Are we...? → No, we aren't. (aren't = are not)"
         },
         {
           "id": "lag-g11-13",
           "type": "build-sentence",
-          "instruction": "Bygg svaret: 'Yes, I am.' (svar på 'Are you a student?')",
+          "instruction": "Svara ja på frågan 'Are you a student?' på engelska.",
           "words": [
             "Yes",
             ",",

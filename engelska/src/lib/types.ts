@@ -37,6 +37,7 @@ export interface FillInBlankExercise {
   type: "fill-in-blank";
   sentence: string; // Use ___ for blank
   answer: string;
+  alternativeAnswers?: string[]; // other accepted answers
   hint?: string;
   explanation?: string;
 }

@@ -77,7 +77,7 @@
         {
           "id": "gym-g1-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence using past perfect.",
+          "instruction": "Bygg meningen på engelska: 'Han hade avslutat rapporten innan mötet började.'",
           "words": [
             "He",
             "had",
@@ -173,7 +173,7 @@
         {
           "id": "gym-g1-14",
           "type": "build-sentence",
-          "instruction": "Build a future perfect sentence.",
+          "instruction": "Bygg meningen på engelska: 'Nästa år kommer hon att ha tagit examen.'",
           "words": [
             "By",
             "next",
@@ -297,7 +297,7 @@
         {
           "id": "gym-g2-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence expressing logical deduction.",
+          "instruction": "Bygg meningen på engelska: 'Han måste ha glömt mötet.'",
           "words": [
             "He",
             "must",
@@ -365,7 +365,7 @@
         {
           "id": "gym-g2-12",
           "type": "build-sentence",
-          "instruction": "Build a sentence expressing regret.",
+          "instruction": "Bygg meningen på engelska: 'Jag borde ha studerat hårdare inför provet.'",
           "words": [
             "I",
             "should",
@@ -534,7 +534,7 @@
         {
           "id": "gym-g3-9",
           "type": "build-sentence",
-          "instruction": "Build a formal sentence with subjunctive.",
+          "instruction": "Bygg meningen på engelska: 'Det är viktigt att varje medlem deltar i mötet.'",
           "words": [
             "It",
             "is",
@@ -608,7 +608,7 @@
         {
           "id": "gym-g3-14",
           "type": "build-sentence",
-          "instruction": "Build a formal polite request.",
+          "instruction": "Bygg meningen på engelska: 'Jag undrade om du kunde hjälpa mig med den här frågan.'",
           "words": [
             "I",
             "was",
@@ -739,7 +739,7 @@
         {
           "id": "gym-g4-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence using a discourse marker of concession.",
+          "instruction": "Bygg meningen på engelska: 'Även om filmen var lång, var den väldigt underhållande.'",
           "words": [
             "Although",
             "the",
@@ -835,7 +835,7 @@
         {
           "id": "gym-g4-14",
           "type": "build-sentence",
-          "instruction": "Build a sentence using a discourse marker of addition.",
+          "instruction": "Bygg meningarna på engelska: 'Maten var utmärkt. Dessutom var servicen oklanderlig.'",
           "words": [
             "The",
             "food",
