@@ -119,17 +119,21 @@ export default function WorldPage({ params }: Props) {
         <div className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
           <div className="max-w-5xl mx-auto px-4 py-3 flex gap-3 flex-wrap">
             {[
-              { label: "Grammatik", count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length, total: content?.grammar.length ?? 0 },
-              { label: "Läsning", count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length, total: content?.reading.length ?? 0 },
-              { label: "Stavning", count: Object.values(stageProgress.spellingModules ?? {}).filter((m) => m.completed).length, total: content?.spelling?.length ?? 0 },
-              { label: "Ordsök.", count: Object.values(stageProgress.wordsearchModules ?? {}).filter((m) => m.completed).length, total: content?.wordsearch?.length ?? 0 },
-              { label: "Korsord", count: Object.values(stageProgress.crosswordModules ?? {}).filter((m) => m.completed).length, total: content?.crossword?.length ?? 0 },
-            ].map(({ label, count, total }) => (
-              <div key={label} className="bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-gray-600 rounded-xl px-3 py-2 text-center">
-                <div className="text-xl font-black text-gray-900 dark:text-gray-100">{count}/{total}</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
-              </div>
-            ))}
+              { label: "Grammatik", icon: "📝", count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length, total: content?.grammar.length ?? 0 },
+              { label: "Läsning",   icon: "📖", count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length, total: content?.reading.length ?? 0 },
+              { label: "Stavning",  icon: "✏️", count: Object.values(stageProgress.spellingModules ?? {}).filter((m) => m.completed).length, total: content?.spelling?.length ?? 0 },
+              { label: "Ordsök.",   icon: "🔍", count: Object.values(stageProgress.wordsearchModules ?? {}).filter((m) => m.completed).length, total: content?.wordsearch?.length ?? 0 },
+              { label: "Korsord",   icon: "🔠", count: Object.values(stageProgress.crosswordModules ?? {}).filter((m) => m.completed).length, total: content?.crossword?.length ?? 0 },
+            ].map(({ label, icon, count, total }) => {
+              const done = total > 0 && count === total;
+              return (
+                <div key={label} className={`border rounded-xl px-3 py-2 text-center transition-colors ${done ? `${stage.borderClass} bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-700` : "bg-gray-50 dark:bg-gray-700 border-gray-100 dark:border-gray-600"}`}>
+                  <div className="text-base">{icon}</div>
+                  <div className={`text-lg font-black ${done ? stage.textClass : "text-gray-900 dark:text-gray-100"}`}>{count}/{total}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}
@@ -144,8 +148,8 @@ export default function WorldPage({ params }: Props) {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 ${
                   activeTab === tab.id
-                    ? "bg-white dark:bg-gray-600 shadow text-gray-900 dark:text-gray-100"
-                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+                    ? `${stage.colorClass} text-white shadow-md`
+                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/50 dark:hover:bg-gray-700/50"
                 }`}
               >
                 {tab.label}

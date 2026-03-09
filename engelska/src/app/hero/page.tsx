@@ -3,6 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import type { IconType } from "react-icons";
+import {
+  GiBandana, GiWesternHat, GiWinterHat, GiCaptainHatProfile, GiPartyHat,
+  GiSombrero, GiWizardFace, GiTopHat, GiCrown, GiVikingHelmet, GiGraduateCap,
+  GiShirt, GiHoodie, GiRobe, GiLabCoat, GiSportMedal, GiCape,
+  GiTrenchBodyArmor, GiArmorVest, GiChestArmor, GiSuits,
+  GiPencil, GiBackpack, GiSpectacles, GiSoccerBall, GiCompass,
+  GiPhotoCamera, GiSwordBrandish, GiSpellBook, GiGuitar, GiWizardStaff,
+  GiSpyglass, GiTrophyCup,
+  GiFlowerEmblem, GiRainbowStar, GiSparkles, GiFireball, GiSnowflake1,
+  GiGlowingArtifact, GiCloudRing, GiLightningTrio, GiShadowFollower, GiGoldBar,
+} from "react-icons/gi";
 import Header from "@/components/ui/Header";
 import HeroAvatar from "@/components/ui/HeroAvatar";
 import { loadStudent, saveStudent } from "@/lib/storage";
@@ -26,6 +38,31 @@ const SKIN_PREVIEW: Record<SkinTone, string> = {
   dark:        "#7B4828",
 };
 
+// DiceBear skin tone mapping
+const DB_SKIN: Record<string, string> = {
+  light:       "fddbb4",
+  light_brown: "c58540",
+  dark:        "7b4828",
+};
+
+// DiceBear hero thumbnails – seed + bg per hero type
+const DB_HERO: Record<string, { seed: string; bg: string }> = {
+  explorer:   { seed: "Upptackaren",  bg: "b45309" },
+  scientist:  { seed: "Forskaren",    bg: "1e3a8a" },
+  athlete:    { seed: "Idrottaren",   bg: "3730a3" },
+  footballer: { seed: "Fotbollaren",  bg: "991b1b" },
+  wizard:     { seed: "Trollkarlen2", bg: "4c1d95" },
+  inventor:   { seed: "Uppfinnaren",  bg: "064e3b" },
+  scholar:    { seed: "Akademikern",  bg: "881337" },
+};
+
+function heroDbUrl(heroId: string, skinTone: string, gender: string) {
+  const h = DB_HERO[heroId] ?? DB_HERO.explorer;
+  const skin = DB_SKIN[skinTone] ?? DB_SKIN.light;
+  const genderSeed = gender === "girl" ? `${h.seed}-g` : h.seed;
+  return `https://api.dicebear.com/9.x/adventurer/svg?seed=${genderSeed}&backgroundColor=${h.bg}&backgroundType=gradientLinear&radius=50&skinColor=${skin}`;
+}
+
 // Hero-specific gradient colors for the preview panel
 const HERO_GRADIENT: Record<string, { from: string; to: string; glow: string }> = {
   explorer:   { from: "#FEF3C7", to: "#FDE68A", glow: "#F59E0B" },
@@ -47,54 +84,54 @@ const HERO_CARD_BG: Record<string, string> = {
   scholar:    "bg-rose-50 dark:bg-rose-900/20 border-rose-200 dark:border-rose-800",
 };
 
-const ATTR_ICONS: Record<string, string> = {
+const ATTR_ICON_COMPONENTS: Record<string, IconType> = {
   // hats
-  headband:       "🎀",
-  explorer_hat:   "🎩",
-  beanie:         "🧶",
-  cap:            "🧢",
-  santa_hat:      "🎅",
-  cowboy_hat:     "🤠",
-  wizard_hat:     "🔮",
-  top_hat:        "🎩",
-  crown:          "👑",
-  viking_helmet:  "⚔️",
-  graduation_cap: "🎓",
+  headband:       GiBandana,
+  explorer_hat:   GiWesternHat,
+  beanie:         GiWinterHat,
+  cap:            GiCaptainHatProfile,
+  santa_hat:      GiPartyHat,
+  cowboy_hat:     GiSombrero,
+  wizard_hat:     GiWizardFace,
+  top_hat:        GiTopHat,
+  crown:          GiCrown,
+  viking_helmet:  GiVikingHelmet,
+  graduation_cap: GiGraduateCap,
   // shirts
-  tshirt:          "⭐",
-  hoodie:          "👕",
-  striped_shirt:   "👔",
-  lab_coat:        "🥼",
-  sport_jersey:    "🏅",
-  cape:            "🦸",
-  explorer_jacket: "🧥",
-  winter_jacket:   "🧣",
-  armor_shirt:     "🛡️",
-  tuxedo:          "🤵",
+  tshirt:          GiShirt,
+  hoodie:          GiHoodie,
+  striped_shirt:   GiRobe,
+  lab_coat:        GiLabCoat,
+  sport_jersey:    GiSportMedal,
+  cape:            GiCape,
+  explorer_jacket: GiTrenchBodyArmor,
+  winter_jacket:   GiArmorVest,
+  armor_shirt:     GiChestArmor,
+  tuxedo:          GiSuits,
   // accessories
-  pencil:       "✏️",
-  backpack:     "🎒",
-  glasses:      "👓",
-  football_ball:"⚽",
-  compass:      "🧭",
-  camera:       "📷",
-  sword:        "⚔️",
-  book:         "📚",
-  guitar:       "🎸",
-  magic_wand:   "🪄",
-  telescope:    "🔭",
-  trophy:       "🏆",
+  pencil:        GiPencil,
+  backpack:      GiBackpack,
+  glasses:       GiSpectacles,
+  football_ball: GiSoccerBall,
+  compass:       GiCompass,
+  camera:        GiPhotoCamera,
+  sword:         GiSwordBrandish,
+  book:          GiSpellBook,
+  guitar:        GiGuitar,
+  magic_wand:    GiWizardStaff,
+  telescope:     GiSpyglass,
+  trophy:        GiTrophyCup,
   // effects
-  flower_wreath: "🌸",
-  rainbow_trail: "🌈",
-  sparkles:      "✨",
-  fire_aura:     "🔥",
-  ice_aura:      "❄️",
-  star_glow:     "⭐",
-  cloud_halo:    "☁️",
-  lightning:     "⚡",
-  shadow_clone:  "👥",
-  golden_shine:  "🌟",
+  flower_wreath: GiFlowerEmblem,
+  rainbow_trail: GiRainbowStar,
+  sparkles:      GiSparkles,
+  fire_aura:     GiFireball,
+  ice_aura:      GiSnowflake1,
+  star_glow:     GiGlowingArtifact,
+  cloud_halo:    GiCloudRing,
+  lightning:     GiLightningTrio,
+  shadow_clone:  GiShadowFollower,
+  golden_shine:  GiGoldBar,
 };
 
 export default function HeroPage() {
@@ -290,8 +327,12 @@ export default function HeroPage() {
                           : `border-gray-100 dark:border-gray-700 hover:scale-105 hover:shadow-md hover:${HERO_CARD_BG[h.id] ?? "bg-blue-50/50"} cursor-pointer`
                       }`}
                     >
-                      <div className="w-10 h-14 flex items-center justify-center">
-                        <HeroAvatar heroId={h.id} skinTone={hero.skinTone} gender={gender} equippedAttributes={[]} size={38} />
+                      <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-full">
+                        <img
+                          src={heroDbUrl(h.id, hero.skinTone, gender)}
+                          alt={h.name_sv}
+                          className="w-10 h-10 object-cover"
+                        />
                       </div>
                       <span className="text-xs font-semibold text-gray-700 dark:text-gray-200 text-center leading-tight">
                         {h.name_sv}
@@ -343,7 +384,12 @@ export default function HeroPage() {
                           : "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-50 cursor-not-allowed"
                       }`}
                     >
-                      <span className="text-lg">{ATTR_ICONS[attr.id] ?? "❓"}</span>
+                      {(() => {
+                        const Icon = ATTR_ICON_COMPONENTS[attr.id];
+                        return Icon
+                          ? <Icon size={24} className={equipped ? "text-green-600 dark:text-green-400" : unlocked ? "text-gray-600 dark:text-gray-300" : "text-gray-400"} />
+                          : <span className="text-lg">❓</span>;
+                      })()}
                       <span className="text-xs font-medium text-gray-700 dark:text-gray-200 leading-tight">
                         {attr.name_sv}
                       </span>

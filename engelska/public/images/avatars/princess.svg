@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Prinsessan">
+  <!-- Background -->
+  <circle cx="64" cy="64" r="62" fill="#9d174d"/>
+  <radialGradient id="pbg" cx="50%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#f9a8d4" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#9d174d" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#pbg)"/>
+  <!-- Stars/sparkles -->
+  <circle cx="20" cy="22" r="2" fill="#fde68a" opacity="0.8"/>
+  <circle cx="108" cy="18" r="1.5" fill="#fde68a" opacity="0.7"/>
+  <circle cx="112" cy="95" r="1.5" fill="#fde68a" opacity="0.6"/>
+  <circle cx="14" cy="90" r="1" fill="#fde68a" opacity="0.7"/>
+  <path d="M105,35 L107,30 L109,35 L114,37 L109,39 L107,44 L105,39 L100,37Z" fill="#fde68a" opacity="0.7"/>
+  <path d="M16,50 L17.5,46 L19,50 L23,51.5 L19,53 L17.5,57 L16,53 L12,51.5Z" fill="#fde68a" opacity="0.6"/>
+  <!-- Dress/body -->
+  <path d="M30,128 Q35,95 50,85 Q57,82 64,82 Q71,82 78,85 Q93,95 98,128Z" fill="#f472b6"/>
+  <!-- Dress gradient overlay -->
+  <path d="M40,128 Q44,100 55,90 Q60,87 64,87 Q68,87 73,90 Q84,100 88,128Z" fill="#fbcfe8"/>
+  <!-- Dress sparkles -->
+  <circle cx="50" cy="105" r="2" fill="white" opacity="0.5"/>
+  <circle cx="78" cy="110" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="64" cy="98" r="1.5" fill="white" opacity="0.4"/>
+  <!-- Sash/belt -->
+  <path d="M48,84 Q64,80 80,84 L78,90 Q64,86 50,90Z" fill="#f9a8d4"/>
+  <!-- Neck -->
+  <rect x="57" y="65" width="14" height="18" rx="6" fill="#fcd34d"/>
+  <!-- Pearl necklace -->
+  <path d="M52,75 Q64,80 76,75" fill="none" stroke="#f9fafb" stroke-width="2.5" stroke-dasharray="3,2"/>
+  <!-- Head -->
+  <ellipse cx="64" cy="50" rx="24" ry="26" fill="#fcd34d"/>
+  <!-- Hair (long, flowing) -->
+  <ellipse cx="64" cy="30" rx="26" ry="18" fill="#f59e0b"/>
+  <path d="M40,30 Q32,50 34,75 Q42,70 46,60 Q44,50 44,40Z" fill="#f59e0b"/>
+  <path d="M88,30 Q96,50 94,75 Q86,70 82,60 Q84,50 84,40Z" fill="#f59e0b"/>
+  <!-- Hair highlight -->
+  <path d="M50,22 Q60,18 72,22" fill="none" stroke="#fde68a" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <!-- Tiara/Crown -->
+  <path d="M44,30 L48,18 L54,28 L64,14 L74,28 L80,18 L84,30Z" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+  <!-- Crown gems -->
+  <circle cx="64" cy="17" r="4" fill="#f43f5e"/>
+  <circle cx="54" cy="26" r="3" fill="#a78bfa"/>
+  <circle cx="74" cy="26" r="3" fill="#34d399"/>
+  <circle cx="48" cy="21" r="2" fill="#fbbf24"/>
+  <circle cx="80" cy="21" r="2" fill="#fbbf24"/>
+  <!-- Crown band -->
+  <rect x="44" y="29" width="40" height="5" rx="2" fill="#fbbf24" stroke="#d97706" stroke-width="0.5"/>
+  <!-- Eyes -->
+  <ellipse cx="52" cy="48" rx="7" ry="6.5" fill="white"/>
+  <ellipse cx="76" cy="48" rx="7" ry="6.5" fill="white"/>
+  <circle cx="53" cy="49" r="4.5" fill="#7c3aed"/>
+  <circle cx="77" cy="49" r="4.5" fill="#7c3aed"/>
+  <circle cx="53" cy="49" r="2.5" fill="#111"/>
+  <circle cx="77" cy="49" r="2.5" fill="#111"/>
+  <circle cx="54.5" cy="47.5" r="1.5" fill="white"/>
+  <circle cx="78.5" cy="47.5" r="1.5" fill="white"/>
+  <!-- Eyelashes -->
+  <path d="M46,44 Q48,41 52,43" stroke="#111" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M70,43 Q74,41 80,44" stroke="#111" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Cheek blush -->
+  <ellipse cx="44" cy="56" rx="6" ry="4" fill="#fda4af" opacity="0.5"/>
+  <ellipse cx="84" cy="56" rx="6" ry="4" fill="#fda4af" opacity="0.5"/>
+  <!-- Nose -->
+  <ellipse cx="64" cy="55" rx="3.5" ry="2.5" fill="#f0b888"/>
+  <!-- Mouth -->
+  <path d="M56,62 Q64,70 72,62" stroke="#e11d48" stroke-width="2.5" fill="#fda4af" stroke-linecap="round"/>
+  <!-- Arms -->
+  <ellipse cx="34" cy="90" rx="12" ry="9" fill="#f472b6"/>
+  <ellipse cx="94" cy="90" rx="12" ry="9" fill="#f472b6"/>
+  <ellipse cx="28" cy="97" rx="9" ry="7" fill="#fcd34d"/>
+  <ellipse cx="100" cy="97" rx="9" ry="7" fill="#fcd34d"/>
+  <!-- Magic wand (right hand) -->
+  <line x1="104" y1="96" x2="118" y2="74" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+  <path d="M118,74 L121,68 L118,72 L115,67 L117,73 L111,72 L116,75Z" fill="#fbbf24"/>
+  <circle cx="118" cy="70" r="5" fill="#f43f5e" opacity="0.8"/>
+  <circle cx="118" cy="70" r="3" fill="#fde68a"/>
+</svg>

@@ -6,7 +6,7 @@ import Header from "@/components/ui/Header";
 import ProgressBar from "@/components/ui/ProgressBar";
 import { loadStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
-import { ACHIEVEMENTS, isUnlocked } from "@/lib/achievements";
+import { ACHIEVEMENTS, ACHIEVEMENT_ICONS, isUnlocked } from "@/lib/achievements";
 import { getAvatar } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
 
@@ -168,7 +168,12 @@ export default function ProfilePage() {
                               : "bg-gray-50 dark:bg-gray-700/50 opacity-50"
                           }`}
                         >
-                          <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>
+                          {(() => {
+                            const Icon = ACHIEVEMENT_ICONS[a.id];
+                            return unlocked && Icon
+                              ? <Icon size={22} className="flex-shrink-0 text-amber-600 dark:text-amber-400" />
+                              : <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>;
+                          })()}
                           <div className="min-w-0">
                             <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
                               {a.title}
@@ -205,7 +210,12 @@ export default function ProfilePage() {
                           : "bg-gray-50 dark:bg-gray-700/50 opacity-50"
                       }`}
                     >
-                      <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>
+                      {(() => {
+                        const Icon = ACHIEVEMENT_ICONS[a.id];
+                        return unlocked && Icon
+                          ? <Icon size={22} className="flex-shrink-0 text-amber-600 dark:text-amber-400" />
+                          : <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>;
+                      })()}
                       <div className="min-w-0">
                         <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
                           {a.title}

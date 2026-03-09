@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Grodan">
+  <!-- Background – lily pond -->
+  <circle cx="64" cy="64" r="62" fill="#14532d"/>
+  <radialGradient id="frogbg" cx="50%" cy="50%" r="55%">
+    <stop offset="0%" stop-color="#4ade80" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#14532d" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#frogbg)"/>
+  <!-- Water ripples -->
+  <ellipse cx="30" cy="108" rx="18" ry="6" fill="#166534" opacity="0.5"/>
+  <ellipse cx="96" cy="112" rx="14" ry="5" fill="#166534" opacity="0.4"/>
+  <!-- Lily pad -->
+  <ellipse cx="64" cy="115" rx="35" ry="12" fill="#16a34a"/>
+  <path d="M64,103 L64,115" stroke="#15803d" stroke-width="1.5" opacity="0.5"/>
+  <!-- Frog body -->
+  <ellipse cx="64" cy="85" rx="34" ry="28" fill="#4ade80"/>
+  <!-- Body shading -->
+  <ellipse cx="64" cy="90" rx="28" ry="20" fill="#86efac" opacity="0.4"/>
+  <!-- Belly (lighter) -->
+  <ellipse cx="64" cy="90" rx="20" ry="16" fill="#bbf7d0"/>
+  <!-- Belly spots -->
+  <ellipse cx="58" cy="88" rx="5" ry="4" fill="#86efac" opacity="0.5"/>
+  <ellipse cx="72" cy="90" rx="4" ry="3" fill="#86efac" opacity="0.4"/>
+  <!-- Back legs -->
+  <ellipse cx="28" cy="102" rx="18" ry="12" fill="#22c55e" transform="rotate(-20 28 102)"/>
+  <ellipse cx="100" cy="102" rx="18" ry="12" fill="#22c55e" transform="rotate(20 100 102)"/>
+  <!-- Webbed feet -->
+  <ellipse cx="16" cy="114" rx="14" ry="8" fill="#16a34a"/>
+  <path d="M10,114 Q16,108 22,114" fill="none" stroke="#15803d" stroke-width="1.5"/>
+  <path d="M12,118 Q16,112 20,118" fill="none" stroke="#15803d" stroke-width="1.5"/>
+  <ellipse cx="112" cy="114" rx="14" ry="8" fill="#16a34a"/>
+  <path d="M106,114 Q112,108 118,114" fill="none" stroke="#15803d" stroke-width="1.5"/>
+  <path d="M108,118 Q112,112 116,118" fill="none" stroke="#15803d" stroke-width="1.5"/>
+  <!-- Front arms -->
+  <ellipse cx="34" cy="82" rx="16" ry="10" fill="#4ade80" transform="rotate(-30 34 82)"/>
+  <ellipse cx="94" cy="82" rx="16" ry="10" fill="#4ade80" transform="rotate(30 94 82)"/>
+  <!-- Front feet/hands (small, webbed) -->
+  <ellipse cx="20" cy="78" rx="10" ry="7" fill="#22c55e"/>
+  <ellipse cx="108" cy="78" rx="10" ry="7" fill="#22c55e"/>
+  <!-- Head (big frog head) -->
+  <ellipse cx="64" cy="54" rx="32" ry="28" fill="#4ade80"/>
+  <!-- Top of head (slightly darker) -->
+  <ellipse cx="64" cy="42" rx="28" ry="16" fill="#22c55e"/>
+  <!-- Big protruding eyes on top of head -->
+  <ellipse cx="44" cy="38" rx="14" ry="13" fill="#4ade80"/>
+  <ellipse cx="84" cy="38" rx="14" ry="13" fill="#4ade80"/>
+  <!-- Eye whites -->
+  <ellipse cx="44" cy="37" rx="11" ry="10" fill="#fef9c3"/>
+  <ellipse cx="84" cy="37" rx="11" ry="10" fill="#fef9c3"/>
+  <!-- Pupils (big, cute, golden) -->
+  <circle cx="44" cy="37" r="8" fill="#ca8a04"/>
+  <circle cx="84" cy="37" r="8" fill="#ca8a04"/>
+  <circle cx="44" cy="37" r="5" fill="#111"/>
+  <circle cx="84" cy="37" r="5" fill="#111"/>
+  <!-- Eye shine -->
+  <circle cx="46" cy="34" r="3" fill="white"/>
+  <circle cx="86" cy="34" r="3" fill="white"/>
+  <circle cx="49" cy="38" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="89" cy="38" r="1.5" fill="white" opacity="0.7"/>
+  <!-- Nostrils -->
+  <ellipse cx="58" cy="56" rx="3" ry="2" fill="#16a34a"/>
+  <ellipse cx="70" cy="56" rx="3" ry="2" fill="#16a34a"/>
+  <!-- Wide frog mouth (goes far across) -->
+  <path d="M36,64 Q50,76 64,74 Q78,76 92,64" stroke="#15803d" stroke-width="3" fill="#86efac" stroke-linecap="round"/>
+  <!-- Mouth opening / smile -->
+  <path d="M40,66 Q52,72 64,70 Q76,72 88,66" fill="#16a34a"/>
+  <!-- Tongue -->
+  <ellipse cx="64" cy="72" rx="10" ry="4" fill="#f87171" opacity="0.7"/>
+  <!-- Spots on back -->
+  <ellipse cx="50" cy="62" rx="5" ry="4" fill="#16a34a" opacity="0.4"/>
+  <ellipse cx="78" cy="60" rx="5" ry="4" fill="#16a34a" opacity="0.4"/>
+  <!-- Crown (frog prince hint) -->
+  <path d="M52,36 L55,28 L60,35 L64,24 L68,35 L73,28 L76,36Z" fill="#fbbf24" stroke="#d97706" stroke-width="1" opacity="0.8"/>
+</svg>

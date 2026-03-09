@@ -60,17 +60,19 @@ export default function ModuleCard({
   return (
     <Link href={href} className="block group">
       <div
-        className={`rounded-xl border-2 bg-white dark:bg-gray-800 px-4 py-3 transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 ${
+        className={`rounded-2xl border-2 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 ${
           progress?.completed
-            ? `${stage.borderClass} bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700`
+            ? `${stage.borderClass} bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-750`
             : "border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600"
         }`}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           {/* Icon */}
           <div
-            className={`w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0 transition-transform group-hover:scale-110 ${
-              progress?.completed ? stage.colorClass + " text-white" : "bg-gray-100 dark:bg-gray-700"
+            className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 transition-transform group-hover:scale-110 shadow-sm ${
+              progress?.completed
+                ? stage.colorClass + " text-white shadow-md"
+                : "bg-gray-100 dark:bg-gray-700"
             }`}
           >
             {progress?.completed ? "✓" : icon}
@@ -79,13 +81,13 @@ export default function ModuleCard({
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm truncate">{title}</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 text-sm truncate">{title}</h3>
               {progress?.completed && (
-                <span className="badge bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs flex-shrink-0">
+                <span className="badge bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs flex-shrink-0 font-semibold">
                   ✓ Klar
                 </span>
               )}
-              <span className="badge bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-xs ml-auto flex-shrink-0">
+              <span className="badge bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 text-xs ml-auto flex-shrink-0">
                 {kindLabel}
               </span>
             </div>
@@ -93,7 +95,7 @@ export default function ModuleCard({
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 truncate">{description}</p>
 
             {/* Progress bar */}
-            <div className="mt-2 flex items-center gap-2">
+            <div className="mt-2.5 flex items-center gap-2">
               <div className="flex-1">
                 <ProgressBar
                   value={pct}
@@ -109,8 +111,13 @@ export default function ModuleCard({
                 />
               </div>
               {progress && (
-                <span className="text-xs text-amber-600 dark:text-amber-400 font-medium flex-shrink-0">
-                  ⭐ {progress.points}
+                <span className="text-xs text-amber-600 dark:text-amber-400 font-semibold flex-shrink-0">
+                  ⭐ {progress.points}p
+                </span>
+              )}
+              {!progress && (
+                <span className="text-xs font-semibold flex-shrink-0 text-gray-400 dark:text-gray-500">
+                  Starta →
                 </span>
               )}
             </div>

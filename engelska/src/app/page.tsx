@@ -69,11 +69,14 @@ export default function HomePage() {
         {/* Center: login card */}
         <div className="w-full max-w-md animate-slide-up flex-shrink-0">
           {/* Title */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-black text-white text-shadow">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-emerald-500 shadow-xl shadow-emerald-900/40 mb-4 text-4xl">
+              🌿
+            </div>
+            <h1 className="text-5xl font-black text-white text-shadow tracking-tight">
               Engelskajakten
             </h1>
-            <p className="text-gray-300 mt-2 text-lg">
+            <p className="text-emerald-300 mt-2 text-base font-medium">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
@@ -98,29 +101,29 @@ export default function HomePage() {
 
               {/* Avatar selection */}
               <div>
-                <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Välj din karaktär</p>
-                <div className="grid grid-cols-6 gap-2">
+                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Välj din karaktär</p>
+                <div className="grid grid-cols-5 gap-2">
                   {AVATARS.map((avatar) => (
                     <button
                       key={avatar.id}
                       type="button"
                       onClick={() => setSelectedAvatar(avatar.id)}
                       title={avatar.name}
-                      className={`aspect-square rounded-xl text-2xl flex items-center justify-center transition-all overflow-hidden ${
+                      className={`aspect-square rounded-2xl flex items-center justify-center transition-all duration-150 overflow-hidden text-2xl ${
                         selectedAvatar === avatar.id
-                          ? "bg-gray-200 dark:bg-gray-600 ring-2 ring-gray-500 scale-110"
-                          : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
+                          ? "ring-3 ring-offset-2 ring-emerald-500 scale-110 shadow-lg bg-emerald-50 dark:bg-emerald-900/30"
+                          : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 hover:scale-105"
                       }`}
                     >
                       {avatar.image ? (
-                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-0.5" />
+                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-1" />
                       ) : (
                         avatar.emoji
                       )}
                     </button>
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 text-center">
+                <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400 mt-2 text-center">
                   {AVATARS.find((a) => a.id === selectedAvatar)?.name}
                 </p>
               </div>
@@ -128,7 +131,7 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                className="w-full btn-primary bg-gray-900 hover:bg-black disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4"
+                className="w-full btn-primary bg-emerald-500 hover:bg-emerald-600 active:scale-95 disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4 rounded-2xl shadow-lg shadow-emerald-200 dark:shadow-none focus:ring-4 focus:ring-emerald-300"
               >
                 Starta jakten!
               </button>
