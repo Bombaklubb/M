@@ -4,8 +4,21 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent } from "@/lib/storage";
-import HeroAvatar from "@/components/ui/HeroAvatar";
 import { getAvatar } from "@/lib/avatars";
+
+const DB_SKIN: Record<string, string> = {
+  light: "fddbb4", light_brown: "c58540", dark: "7b4828",
+};
+const DB_HERO_BG: Record<string, string> = {
+  explorer: "b45309", scientist: "1e3a8a", athlete: "3730a3",
+  footballer: "991b1b", wizard: "4c1d95", inventor: "064e3b", scholar: "881337",
+};
+function heroDbUrl(heroId: string, skinTone: string, gender: string) {
+  const bg = DB_HERO_BG[heroId] ?? "b45309";
+  const skin = DB_SKIN[skinTone] ?? "fddbb4";
+  const seed = heroId + (gender === "girl" ? "-g" : "");
+  return `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}&backgroundColor=${bg}&backgroundType=gradientLinear&radius=50&skinColor=${skin}`;
+}
 import type { StudentData } from "@/lib/types";
 
 interface HeaderProps {
@@ -50,12 +63,14 @@ export default function Header({ student, onLogout }: HeaderProps) {
               title="Min hjälte"
               className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-b from-sky-100 to-sky-50 dark:from-sky-900/40 dark:to-sky-800/20 border border-sky-200 dark:border-sky-700 hover:border-sky-400 dark:hover:border-sky-500 transition-all overflow-hidden touch-manipulation"
             >
-              <HeroAvatar
-                heroId={student.hero?.heroId ?? "explorer"}
-                skinTone={student.hero?.skinTone ?? "light"}
-                gender={student.hero?.gender ?? "boy"}
-                equippedAttributes={student.hero?.equippedAttributes ?? []}
-                size={32}
+              <img
+                src={heroDbUrl(
+                  student.hero?.heroId ?? "explorer",
+                  student.hero?.skinTone ?? "light",
+                  student.hero?.gender ?? "boy"
+                )}
+                alt="Min hjälte"
+                className="w-9 h-9 object-cover"
               />
             </Link>
 

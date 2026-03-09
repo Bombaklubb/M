@@ -26,6 +26,31 @@ const SKIN_PREVIEW: Record<SkinTone, string> = {
   dark:        "#7B4828",
 };
 
+// DiceBear skin tone mapping
+const DB_SKIN: Record<string, string> = {
+  light:       "fddbb4",
+  light_brown: "c58540",
+  dark:        "7b4828",
+};
+
+// DiceBear hero thumbnails – seed + bg per hero type
+const DB_HERO: Record<string, { seed: string; bg: string }> = {
+  explorer:   { seed: "Upptackaren",  bg: "b45309" },
+  scientist:  { seed: "Forskaren",    bg: "1e3a8a" },
+  athlete:    { seed: "Idrottaren",   bg: "3730a3" },
+  footballer: { seed: "Fotbollaren",  bg: "991b1b" },
+  wizard:     { seed: "Trollkarlen2", bg: "4c1d95" },
+  inventor:   { seed: "Uppfinnaren",  bg: "064e3b" },
+  scholar:    { seed: "Akademikern",  bg: "881337" },
+};
+
+function heroDbUrl(heroId: string, skinTone: string, gender: string) {
+  const h = DB_HERO[heroId] ?? DB_HERO.explorer;
+  const skin = DB_SKIN[skinTone] ?? DB_SKIN.light;
+  const genderSeed = gender === "girl" ? `${h.seed}-g` : h.seed;
+  return `https://api.dicebear.com/9.x/adventurer/svg?seed=${genderSeed}&backgroundColor=${h.bg}&backgroundType=gradientLinear&radius=50&skinColor=${skin}`;
+}
+
 // Hero-specific gradient colors for the preview panel
 const HERO_GRADIENT: Record<string, { from: string; to: string; glow: string }> = {
   explorer:   { from: "#FEF3C7", to: "#FDE68A", glow: "#F59E0B" },
@@ -290,8 +315,12 @@ export default function HeroPage() {
                           : `border-gray-100 dark:border-gray-700 hover:scale-105 hover:shadow-md hover:${HERO_CARD_BG[h.id] ?? "bg-blue-50/50"} cursor-pointer`
                       }`}
                     >
-                      <div className="w-10 h-14 flex items-center justify-center">
-                        <HeroAvatar heroId={h.id} skinTone={hero.skinTone} gender={gender} equippedAttributes={[]} size={38} />
+                      <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-full">
+                        <img
+                          src={heroDbUrl(h.id, hero.skinTone, gender)}
+                          alt={h.name_sv}
+                          className="w-10 h-10 object-cover"
+                        />
                       </div>
                       <span className="text-xs font-semibold text-gray-700 dark:text-gray-200 text-center leading-tight">
                         {h.name_sv}
