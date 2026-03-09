@@ -1,4 +1,14 @@
 import type { StudentData, StageId } from "./types";
+import type { IconType } from "react-icons";
+import {
+  GiSprout, GiScrollQuill, GiOpenBook, GiPencil, GiLeafSwirl,
+  GiBullseye, GiStarMedal, GiDiamondTrophy, GiTrophyCup, GiLaurelCrown,
+  GiMagnifyingGlass, GiCrossedSwords,
+  GiWorld, GiStarKey, GiCastleRuins, GiLaurels,
+  GiEarthAmerica, GiFireball, GiSwordsEmblem, GiImperialCrown,
+  GiMountainClimbing, GiGraduateCap, GiMountaintop, GiGems,
+  GiRocketFlight, GiStrong, GiStarFormation, GiCrown, GiSoccerBall,
+} from "react-icons/gi";
 
 export interface Achievement {
   id: string;
@@ -137,3 +147,34 @@ export function isUnlocked(a: Achievement, student: StudentData): boolean {
   if (a.id === `${prefix}-12`) return cross >= 1;
   return false;
 }
+
+// ─── Game-icons components per achievement ID ─────────────────────────────────
+// Pattern: -1 = entrant, -2 = grammar, -3 = reading, -4 = spelling,
+//          -5 = stage master, -6 = triple, -7 = points I, -8 = points II,
+//          -9 = hero, -10 = legend, -11 = wordsearch, -12 = crossword
+export const ACHIEVEMENT_ICONS: Record<string, IconType> = {
+  // Språkdjungeln (lagstadiet)
+  "lag-1":  GiSprout,        "lag-2":  GiScrollQuill,  "lag-3":  GiOpenBook,
+  "lag-4":  GiPencil,        "lag-5":  GiLeafSwirl,    "lag-6":  GiBullseye,
+  "lag-7":  GiStarMedal,     "lag-8":  GiDiamondTrophy,"lag-9":  GiTrophyCup,
+  "lag-10": GiLaurelCrown,   "lag-11": GiMagnifyingGlass, "lag-12": GiCrossedSwords,
+  // Språkstaden (mellanstadiet)
+  "mel-1":  GiWorld,         "mel-2":  GiScrollQuill,  "mel-3":  GiOpenBook,
+  "mel-4":  GiPencil,        "mel-5":  GiStarKey,      "mel-6":  GiBullseye,
+  "mel-7":  GiStarMedal,     "mel-8":  GiDiamondTrophy,"mel-9":  GiTrophyCup,
+  "mel-10": GiLaurels,       "mel-11": GiMagnifyingGlass, "mel-12": GiCrossedSwords,
+  // Språkarenan (hogstadiet)
+  "hog-1":  GiEarthAmerica,  "hog-2":  GiScrollQuill,  "hog-3":  GiOpenBook,
+  "hog-4":  GiPencil,        "hog-5":  GiFireball,     "hog-6":  GiBullseye,
+  "hog-7":  GiStarMedal,     "hog-8":  GiDiamondTrophy,"hog-9":  GiSwordsEmblem,
+  "hog-10": GiImperialCrown, "hog-11": GiMagnifyingGlass, "hog-12": GiCrossedSwords,
+  // Språkakademin (gymnasiet)
+  "gym-1":  GiMountainClimbing,"gym-2": GiScrollQuill, "gym-3":  GiOpenBook,
+  "gym-4":  GiPencil,        "gym-5":  GiGems,         "gym-6":  GiBullseye,
+  "gym-7":  GiStarMedal,     "gym-8":  GiDiamondTrophy,"gym-9":  GiGraduateCap,
+  "gym-10": GiMountaintop,   "gym-11": GiMagnifyingGlass, "gym-12": GiCrossedSwords,
+  // Global
+  "global-1": GiRocketFlight, "global-2": GiStrong,    "global-3": GiEarthAmerica,
+  "global-4": GiStarFormation,"global-5": GiCrown,     "global-6": GiSoccerBall,
+  "global-7": GiGraduateCap,
+};

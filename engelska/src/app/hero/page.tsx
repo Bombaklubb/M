@@ -3,6 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import type { IconType } from "react-icons";
+import {
+  GiBandana, GiWesternHat, GiWinterHat, GiCaptainHatProfile, GiPartyHat,
+  GiSombrero, GiWizardFace, GiTopHat, GiCrown, GiVikingHelmet, GiGraduateCap,
+  GiShirt, GiHoodie, GiRobe, GiLabCoat, GiSportMedal, GiCape,
+  GiTrenchBodyArmor, GiArmorVest, GiChestArmor, GiSuits,
+  GiPencil, GiBackpack, GiSpectacles, GiSoccerBall, GiCompass,
+  GiPhotoCamera, GiSwordBrandish, GiSpellBook, GiGuitar, GiWizardStaff,
+  GiSpyglass, GiTrophyCup,
+  GiFlowerEmblem, GiRainbowStar, GiSparkles, GiFireball, GiSnowflake1,
+  GiGlowingArtifact, GiCloudRing, GiLightningTrio, GiShadowFollower, GiGoldBar,
+} from "react-icons/gi";
 import Header from "@/components/ui/Header";
 import HeroAvatar from "@/components/ui/HeroAvatar";
 import { loadStudent, saveStudent } from "@/lib/storage";
@@ -72,54 +84,54 @@ const HERO_CARD_BG: Record<string, string> = {
   scholar:    "bg-rose-50 dark:bg-rose-900/20 border-rose-200 dark:border-rose-800",
 };
 
-const ATTR_ICONS: Record<string, string> = {
+const ATTR_ICON_COMPONENTS: Record<string, IconType> = {
   // hats
-  headband:       "🎀",
-  explorer_hat:   "🎩",
-  beanie:         "🧶",
-  cap:            "🧢",
-  santa_hat:      "🎅",
-  cowboy_hat:     "🤠",
-  wizard_hat:     "🔮",
-  top_hat:        "🎩",
-  crown:          "👑",
-  viking_helmet:  "⚔️",
-  graduation_cap: "🎓",
+  headband:       GiBandana,
+  explorer_hat:   GiWesternHat,
+  beanie:         GiWinterHat,
+  cap:            GiCaptainHatProfile,
+  santa_hat:      GiPartyHat,
+  cowboy_hat:     GiSombrero,
+  wizard_hat:     GiWizardFace,
+  top_hat:        GiTopHat,
+  crown:          GiCrown,
+  viking_helmet:  GiVikingHelmet,
+  graduation_cap: GiGraduateCap,
   // shirts
-  tshirt:          "⭐",
-  hoodie:          "👕",
-  striped_shirt:   "👔",
-  lab_coat:        "🥼",
-  sport_jersey:    "🏅",
-  cape:            "🦸",
-  explorer_jacket: "🧥",
-  winter_jacket:   "🧣",
-  armor_shirt:     "🛡️",
-  tuxedo:          "🤵",
+  tshirt:          GiShirt,
+  hoodie:          GiHoodie,
+  striped_shirt:   GiRobe,
+  lab_coat:        GiLabCoat,
+  sport_jersey:    GiSportMedal,
+  cape:            GiCape,
+  explorer_jacket: GiTrenchBodyArmor,
+  winter_jacket:   GiArmorVest,
+  armor_shirt:     GiChestArmor,
+  tuxedo:          GiSuits,
   // accessories
-  pencil:       "✏️",
-  backpack:     "🎒",
-  glasses:      "👓",
-  football_ball:"⚽",
-  compass:      "🧭",
-  camera:       "📷",
-  sword:        "⚔️",
-  book:         "📚",
-  guitar:       "🎸",
-  magic_wand:   "🪄",
-  telescope:    "🔭",
-  trophy:       "🏆",
+  pencil:        GiPencil,
+  backpack:      GiBackpack,
+  glasses:       GiSpectacles,
+  football_ball: GiSoccerBall,
+  compass:       GiCompass,
+  camera:        GiPhotoCamera,
+  sword:         GiSwordBrandish,
+  book:          GiSpellBook,
+  guitar:        GiGuitar,
+  magic_wand:    GiWizardStaff,
+  telescope:     GiSpyglass,
+  trophy:        GiTrophyCup,
   // effects
-  flower_wreath: "🌸",
-  rainbow_trail: "🌈",
-  sparkles:      "✨",
-  fire_aura:     "🔥",
-  ice_aura:      "❄️",
-  star_glow:     "⭐",
-  cloud_halo:    "☁️",
-  lightning:     "⚡",
-  shadow_clone:  "👥",
-  golden_shine:  "🌟",
+  flower_wreath: GiFlowerEmblem,
+  rainbow_trail: GiRainbowStar,
+  sparkles:      GiSparkles,
+  fire_aura:     GiFireball,
+  ice_aura:      GiSnowflake1,
+  star_glow:     GiGlowingArtifact,
+  cloud_halo:    GiCloudRing,
+  lightning:     GiLightningTrio,
+  shadow_clone:  GiShadowFollower,
+  golden_shine:  GiGoldBar,
 };
 
 export default function HeroPage() {
@@ -372,7 +384,12 @@ export default function HeroPage() {
                           : "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-50 cursor-not-allowed"
                       }`}
                     >
-                      <span className="text-lg">{ATTR_ICONS[attr.id] ?? "❓"}</span>
+                      {(() => {
+                        const Icon = ATTR_ICON_COMPONENTS[attr.id];
+                        return Icon
+                          ? <Icon size={24} className={equipped ? "text-green-600 dark:text-green-400" : unlocked ? "text-gray-600 dark:text-gray-300" : "text-gray-400"} />
+                          : <span className="text-lg">❓</span>;
+                      })()}
                       <span className="text-xs font-medium text-gray-700 dark:text-gray-200 leading-tight">
                         {attr.name_sv}
                       </span>
