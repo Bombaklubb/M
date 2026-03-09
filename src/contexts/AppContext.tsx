@@ -25,12 +25,14 @@ interface AppContextValue {
   selectedTopic: Topic | null;
   isTeacher: boolean;
   sluttestWorldId: WorldId | null;
+  questWorldId: WorldId | null;
   login: (student: Student) => void;
   logout: () => void;
   setView: (view: ExtendedView) => void;
   selectTopic: (topic: Topic) => void;
   setTeacher: (val: boolean) => void;
   startSluttest: (worldId: WorldId) => void;
+  startQuest: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number };
   updateAvatar: (avatarIndex: number) => void;
@@ -44,6 +46,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [isTeacher, setIsTeacherState] = useState(false);
   const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
+  const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
 
   const login = useCallback((student: Student) => {
     setCurrentStudent(student);
@@ -74,6 +77,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const startSluttest = useCallback((worldId: WorldId) => {
     setSluttestWorldId(worldId);
     setCurrentView('sluttest');
+  }, []);
+
+  const startQuest = useCallback((worldId: WorldId) => {
+    setQuestWorldId(worldId);
+    setCurrentView('quest');
   }, []);
 
   const getStudentStats = useCallback((student: Student) => {
@@ -119,7 +127,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, login, logout, setView, selectTopic, setTeacher, startSluttest, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );
