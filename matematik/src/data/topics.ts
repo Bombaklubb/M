@@ -268,10 +268,10 @@ export const TOPICS: Topic[] = [
       text: 'En klocka har två visare. Den KORTA (tjocka) mörka visaren visar timmar. Den LÅNGA (tunna) blå visaren visar minuter. En timme är 60 minuter. "Halv" betyder att halva timmen har gått = 30 minuter. Dra på klockan för att ställa in visarna!',
       illustration: 'clock',
       examples: [
-        '🕐 Klockan 3:00 – kort visare på 3, lång visare på 12',
-        '🕧 Klockan 6:30 (halv sju) – lång visare på 6',
-        '🕑 Klockan 2:15 (kvart över två) – lång visare på 3',
-        '🕒 Klockan 5:45 (kvart i sex) – lång visare på 9',
+        '🕐 Klockan 03:00 – kort visare på 3, lång visare på 12',
+        '🕧 Klockan 06:30 (halv sju) – lång visare på 6',
+        '🕑 Klockan 14:15 (kvart över två em) – lång visare på 3',
+        '🕒 Klockan 17:45 (kvart i sex em) – lång visare på 9',
       ],
     },
     exercises: [
