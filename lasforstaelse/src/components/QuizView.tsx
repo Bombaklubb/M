@@ -1,3 +1,4 @@
+// Läsjakten - Quiz komponent
 import React, { useState } from 'react';
 import { LibraryText, UserAnswers } from '../types';
 
