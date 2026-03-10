@@ -190,6 +190,43 @@ function Illustration({ name }: { name: string }) {
         <text x="100" y="115" textAnchor="middle" fontSize="9" fill="#0e7490">f(x)=x² → f'(x)=2x</text>
       </svg>
     ),
+    'clock': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#1e1b4b" rx="12"/>
+        {/* Clock face */}
+        <circle cx="100" cy="60" r="50" fill="#312e81" stroke="#6366f1" strokeWidth="2"/>
+        <circle cx="100" cy="60" r="46" fill="none" stroke="#4338ca" strokeWidth="0.5"/>
+        {/* Hour numbers */}
+        {[12,1,2,3,4,5,6,7,8,9,10,11].map((n, i) => {
+          const angle = (i * 30 - 90) * Math.PI / 180;
+          return (
+            <text key={n} x={100 + 38 * Math.cos(angle)} y={60 + 38 * Math.sin(angle) + 3}
+              textAnchor="middle" fontSize="9" fill="#a5b4fc" fontWeight="bold">{n}</text>
+          );
+        })}
+        {/* Tick marks */}
+        {Array.from({length: 60}, (_, i) => {
+          const angle = (i * 6 - 90) * Math.PI / 180;
+          const isMajor = i % 5 === 0;
+          const r1 = isMajor ? 42 : 44;
+          return (
+            <line key={i}
+              x1={100 + r1 * Math.cos(angle)} y1={60 + r1 * Math.sin(angle)}
+              x2={100 + 46 * Math.cos(angle)} y2={60 + 46 * Math.sin(angle)}
+              stroke={isMajor ? "#818cf8" : "#4338ca"} strokeWidth={isMajor ? 1.5 : 0.8}/>
+          );
+        })}
+        {/* Hour hand (short, dark) – pointing to 3 */}
+        <line x1="100" y1="60" x2="126" y2="60" stroke="#1e1b4b" strokeWidth="4" strokeLinecap="round"/>
+        {/* Minute hand (long, blue) – pointing to 12 */}
+        <line x1="100" y1="60" x2="100" y2="20" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round"/>
+        {/* Center dot */}
+        <circle cx="100" cy="60" r="3" fill="#6366f1"/>
+        {/* Labels */}
+        <text x="148" y="63" fontSize="8" fill="#c7d2fe">← timmar</text>
+        <text x="103" y="18" fontSize="8" fill="#93c5fd">← minuter</text>
+      </svg>
+    ),
     'probability': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
         <rect width="200" height="120" fill="#fdf4ff" rx="12"/>
