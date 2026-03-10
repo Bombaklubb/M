@@ -162,7 +162,8 @@
       "fingerprint": "sample004",
       "generatedAt": "2025-01-01T00:00:00.000Z",
       "model": "sample"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-1770206312610-60669b",
@@ -328,11 +329,11 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-gpt-002",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
     "theme": "natur",
     "title": "En tur i skogen",
@@ -415,7 +416,7 @@
   },
   {
     "id": "ak2-gpt-003",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En rolig rast",
@@ -494,11 +495,11 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1566464882255-9085f248c7de?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-gpt-004",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
     "theme": "skola",
     "title": "Högläsning i 2B",
@@ -577,11 +578,11 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-gpt-005",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
     "theme": "familj",
     "title": "Söndag i simhallen",
@@ -660,7 +661,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-gpt-001",
@@ -742,7 +743,8 @@
       "fingerprint": "gpt9-001",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-gpt-002",
@@ -824,7 +826,8 @@
       "fingerprint": "gpt9-002",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-gpt-003",
@@ -906,7 +909,8 @@
       "fingerprint": "gpt9-003",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-gpt-004",
@@ -988,7 +992,8 @@
       "fingerprint": "gpt9-004",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-gpt-005",
@@ -1070,7 +1075,8 @@
       "fingerprint": "gpt9-005",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-vanskap-001",
@@ -1131,7 +1137,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-natur-002",
@@ -1191,7 +1197,8 @@
       "fingerprint": "gpt3-002",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-skola-003",
@@ -1251,7 +1258,8 @@
       "fingerprint": "gpt3-003",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-sport-004",
@@ -1311,7 +1319,8 @@
       "fingerprint": "gpt3-004",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-familj-005",
@@ -1372,7 +1381,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-djur-006",
@@ -1433,7 +1442,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-etik-007",
@@ -1494,7 +1503,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-vetenskap-008",
@@ -1555,7 +1564,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-samhalle-009",
@@ -1616,7 +1625,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-existens-010",
@@ -1676,7 +1685,8 @@
       "fingerprint": "gpt3-010",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-djur-011",
@@ -1736,7 +1746,8 @@
       "fingerprint": "gpt3-011",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-natur-012",
@@ -1796,11 +1807,12 @@
       "fingerprint": "gpt3-012",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-skola-013",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "skola",
     "title": "Så fungerar en rast",
@@ -1857,7 +1869,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1566464882255-9085f248c7de?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-sport-014",
@@ -1917,7 +1929,8 @@
       "fingerprint": "gpt3-014",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-familj-015",
@@ -1977,7 +1990,8 @@
       "fingerprint": "gpt3-015",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-vanskap-016",
@@ -2038,7 +2052,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-samhalle-017",
@@ -2099,7 +2113,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-etik-018",
@@ -2159,7 +2173,8 @@
       "fingerprint": "gpt3-018",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-vetenskap-019",
@@ -2220,7 +2235,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1559599076-9c61d8e1b77c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-existens-020",
@@ -2280,7 +2295,8 @@
       "fingerprint": "gpt3-020",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-vanskap-01",
@@ -2362,7 +2378,8 @@
       "fingerprint": "gpt6-001",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-natur-02",
@@ -2444,7 +2461,8 @@
       "fingerprint": "gpt6-002",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-teknik-04",
@@ -2526,7 +2544,8 @@
       "fingerprint": "gpt6-003",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-samhalle-06",
@@ -2608,7 +2627,8 @@
       "fingerprint": "gpt6-004",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-miljo-09",
@@ -2690,7 +2710,8 @@
       "fingerprint": "gpt6-005",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-vanskap-01",
@@ -2772,7 +2793,8 @@
       "fingerprint": "gpt4-001",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-natur-02",
@@ -2854,7 +2876,8 @@
       "fingerprint": "gpt4-002",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-vetenskap-03",
@@ -2936,7 +2959,8 @@
       "fingerprint": "gpt4-003",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-historia-04",
@@ -3018,7 +3042,8 @@
       "fingerprint": "gpt4-004",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-teknik-05",
@@ -3100,7 +3125,8 @@
       "fingerprint": "gpt4-005",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-miljo-01",
@@ -3182,7 +3208,8 @@
       "fingerprint": "gpt4-001",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-teknik-02",
@@ -3264,7 +3291,8 @@
       "fingerprint": "gpt4-002",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-historia-03",
@@ -3346,7 +3374,8 @@
       "fingerprint": "gpt4-003",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-etik-04",
@@ -3428,7 +3457,8 @@
       "fingerprint": "gpt4-004",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-musik-05",
@@ -3510,7 +3540,8 @@
       "fingerprint": "gpt4-005",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-vanskap-01",
@@ -3592,7 +3623,8 @@
       "fingerprint": "gpt4-001",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-natur-02",
@@ -3674,7 +3706,8 @@
       "fingerprint": "gpt4-002",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-teknik-03",
@@ -3756,7 +3789,8 @@
       "fingerprint": "gpt4-003",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-samhalle-04",
@@ -3838,7 +3872,8 @@
       "fingerprint": "gpt4-004",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-etik-05",
@@ -3920,7 +3955,8 @@
       "fingerprint": "gpt4-005",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-vetenskap-11",
@@ -4002,7 +4038,8 @@
       "fingerprint": "gpt4-006",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-historia-12",
@@ -4084,7 +4121,8 @@
       "fingerprint": "gpt4-007",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-sport-13",
@@ -4166,7 +4204,8 @@
       "fingerprint": "gpt4-008",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-samhalle-14",
@@ -4248,7 +4287,8 @@
       "fingerprint": "gpt4-009",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-musik-15",
@@ -4330,7 +4370,8 @@
       "fingerprint": "gpt4-010",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-vetenskap-01",
@@ -4412,7 +4453,8 @@
       "fingerprint": "gpt4-001",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-samhalle-02",
@@ -4494,7 +4536,8 @@
       "fingerprint": "gpt4-002",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-historia-03",
@@ -4576,7 +4619,8 @@
       "fingerprint": "gpt4-003",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-musik-04",
@@ -4658,7 +4702,8 @@
       "fingerprint": "gpt4-004",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-etik-05",
@@ -4740,7 +4785,8 @@
       "fingerprint": "gpt4-005",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-vetenskap-01",
@@ -4822,7 +4868,8 @@
       "fingerprint": "gpt4-gy01",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-teknik-02",
@@ -4904,7 +4951,8 @@
       "fingerprint": "gpt4-gy02",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-samhalle-03",
@@ -4986,7 +5034,8 @@
       "fingerprint": "gpt4-gy03",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-historia-04",
@@ -5068,7 +5117,8 @@
       "fingerprint": "gpt4-gy04",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-etik-05",
@@ -5150,7 +5200,8 @@
       "fingerprint": "gpt4-gy05",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-vanskap-01",
@@ -5232,7 +5283,8 @@
       "fingerprint": "gpt4-ak2-01",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-natur-02",
@@ -5314,7 +5366,8 @@
       "fingerprint": "gpt4-ak2-02",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-teknik-03",
@@ -5396,7 +5449,8 @@
       "fingerprint": "gpt4-ak2-03",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-miljo-04",
@@ -5561,7 +5615,8 @@
       "fingerprint": "gpt4-ak2-05",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-etik-06",
@@ -5643,7 +5698,8 @@
       "fingerprint": "gpt4-ak2-06",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-historia-07",
@@ -5725,7 +5781,8 @@
       "fingerprint": "gpt4-ak2-07",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-vanskap-01",
@@ -5807,7 +5864,8 @@
       "fingerprint": "gpt4-ak1-01",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-natur-02",
@@ -5973,7 +6031,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-miljo-04",
@@ -6056,7 +6114,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-musik-05",
@@ -6139,11 +6197,11 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-etik-06",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "etik",
     "title": "Pennan som försvann",
@@ -6222,7 +6280,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-historia-07",
@@ -6305,7 +6363,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-vanskap-08",
@@ -6388,7 +6446,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-natur-09",
@@ -6471,7 +6529,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-teknik-10",
@@ -6554,7 +6612,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-musik-11",
@@ -6637,7 +6695,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-etik-12",
@@ -6720,7 +6778,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-001",
@@ -6874,7 +6932,7 @@
         "correct": 3
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-003",
@@ -6951,7 +7009,7 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-004",
@@ -7105,7 +7163,7 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-vanskap-01",
@@ -7187,7 +7245,8 @@
       "fingerprint": "gpt4-ak5-01",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-natur-02",
@@ -7269,7 +7328,8 @@
       "fingerprint": "gpt4-ak5-02",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-teknik-03",
@@ -7351,7 +7411,8 @@
       "fingerprint": "gpt4-ak5-03",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-samhalle-04",
@@ -7433,7 +7494,8 @@
       "fingerprint": "gpt4-ak5-04",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-etik-05",
@@ -7515,7 +7577,8 @@
       "fingerprint": "gpt4-ak5-05",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-vanskap-01",
@@ -7591,7 +7654,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-miljo-02",
@@ -7667,7 +7731,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-historia-03",
@@ -7743,7 +7808,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-teknik-04",
@@ -7819,7 +7885,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-sport-05",
@@ -7895,7 +7962,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-vetenskap-06",
@@ -7971,7 +8039,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-etik-07",
@@ -8047,7 +8116,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-vanskap-01",
@@ -8123,7 +8193,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-natur-02",
@@ -8199,7 +8270,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-historia-03",
@@ -8275,7 +8347,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-teknik-04",
@@ -8351,7 +8424,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-miljo-05",
@@ -8427,7 +8501,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-vanskap-01",
@@ -8503,7 +8578,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-miljo-02",
@@ -8579,7 +8655,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-historia-03",
@@ -8655,7 +8732,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-vetenskap-04",
@@ -8731,7 +8809,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-musik-05",
@@ -8807,7 +8886,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-natur-01",
@@ -8883,7 +8963,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-vanskap-02",
@@ -8959,7 +9040,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1566464882255-9085f248c7de?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-teknik-03",
@@ -9035,7 +9117,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-miljo-04",
@@ -9111,7 +9194,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-etik-05",
@@ -9187,11 +9271,12 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-vanskap-01",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Plats i kön",
@@ -9264,11 +9349,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-natur-02",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "natur",
     "title": "Ett frö blir en blomma",
@@ -9341,11 +9426,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-teknik-03",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Lampan som lyste",
@@ -9418,11 +9503,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-musik-04",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "musik",
     "title": "Trumma i magen",
@@ -9495,11 +9580,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-miljo-05",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "miljö",
     "title": "Pappret i fel låda",
@@ -9572,11 +9657,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-sport-06",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "Ett nytt hopp",
@@ -9649,11 +9734,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1461896836934- voices?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-samhalle-07",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Hjälparen på övergångsstället",
@@ -9726,11 +9811,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-historia-08",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "historia",
     "title": "Farmors gamla leksak",
@@ -9803,11 +9888,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1581579438747-104c53d7c498?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-vetenskap-09",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "vetenskap",
     "title": "Skugga och sol",
@@ -9880,11 +9965,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-etik-10",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "etik",
     "title": "Låna och lämna tillbaka",
@@ -9957,7 +10042,7 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-samhalle-01",
@@ -10033,7 +10118,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-teknik-02",
@@ -10109,7 +10195,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-historia-03",
@@ -10185,7 +10272,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-etik-04",
@@ -10261,7 +10349,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-vetenskap-05",
@@ -10337,7 +10426,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-vanskap-01",
@@ -10407,7 +10497,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-natur-02",
@@ -10477,7 +10568,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-teknik-03",
@@ -10547,7 +10639,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-miljo-04",
@@ -10617,7 +10710,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-sport-05",
@@ -10687,7 +10781,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf9a8b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-musik-06",
@@ -10757,11 +10852,12 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-vanskap-101",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Den blå vanten",
@@ -10822,11 +10918,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-vinter-102",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vinter",
     "title": "Snögubben som lutade",
@@ -10893,11 +10989,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1610973625444-9b8c0d1e1a8c?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-bocker-103",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "böcker",
     "title": "Boken om rävar",
@@ -10958,11 +11054,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-skola-104",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "skola",
     "title": "En tand i servetten",
@@ -11029,11 +11125,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-konst-105",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "konst",
     "title": "Regnbågen på papperet",
@@ -11100,7 +11196,7 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-vatten-001",
@@ -11164,7 +11260,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bibliotek-002",
@@ -11234,7 +11331,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bin-003",
@@ -11299,7 +11397,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-atervinning-004",
@@ -11369,7 +11468,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-kartor-005",
@@ -11433,7 +11533,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "gym-kallkritik-001",
@@ -11503,7 +11604,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gym-ai-skola-002",
@@ -11573,7 +11675,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop"
   },
   {
     "id": "gym-stad-transport-003",
@@ -11643,7 +11746,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gym-berattelse-val-004",
@@ -11713,7 +11817,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gym-stress-studievanor-005",
@@ -11783,7 +11888,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-uni-001",
@@ -11854,7 +11960,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-uni-002",
@@ -11925,7 +12032,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-uni-003",
@@ -11996,7 +12104,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-uni-004",
@@ -12067,7 +12176,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "gy-uni-005",
@@ -12138,7 +12248,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "uni-tema-001",
@@ -12202,7 +12313,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "uni-tema-002",
@@ -12266,7 +12378,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "uni-tema-003",
@@ -12331,7 +12444,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "uni-tema-004",
@@ -12396,7 +12510,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "uni-tema-005",
@@ -12461,7 +12576,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-001",
@@ -12532,7 +12648,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-002",
@@ -12603,7 +12720,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-003",
@@ -12674,7 +12792,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-004",
@@ -12745,7 +12864,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-005",
@@ -12816,7 +12936,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-001",
@@ -12886,7 +13007,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-002",
@@ -12956,7 +13078,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-003",
@@ -13026,7 +13149,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-004",
@@ -13096,7 +13220,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-005",
@@ -13166,7 +13291,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-001",
@@ -13236,7 +13362,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-002",
@@ -13306,7 +13433,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-003",
@@ -13376,7 +13504,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-004",
@@ -13446,7 +13575,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-005",
@@ -13516,7 +13646,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-006",
@@ -13598,7 +13729,8 @@
       "fingerprint": "ak7-tema-006",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-007",
@@ -13680,7 +13812,8 @@
       "fingerprint": "ak7-tema-007",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-008",
@@ -13762,7 +13895,8 @@
       "fingerprint": "ak7-tema-008",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-009",
@@ -13844,7 +13978,8 @@
       "fingerprint": "ak7-tema-009",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-010",
@@ -13926,7 +14061,8 @@
       "fingerprint": "ak7-tema-010",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-001",
@@ -13997,7 +14133,8 @@
         "correct": 3
       }
     ],
-    "word_count": 457
+    "word_count": 457,
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-002",
@@ -14068,7 +14205,8 @@
         "correct": 2
       }
     ],
-    "word_count": 452
+    "word_count": 452,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-003",
@@ -14139,7 +14277,8 @@
         "correct": 2
       }
     ],
-    "word_count": 456
+    "word_count": 456,
+    "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-004",
@@ -14210,7 +14349,8 @@
         "correct": 1
       }
     ],
-    "word_count": 454
+    "word_count": 454,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-005",
@@ -14281,7 +14421,8 @@
         "correct": 3
       }
     ],
-    "word_count": 460
+    "word_count": 460,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-001",
@@ -14351,7 +14492,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-002",
@@ -14421,7 +14563,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-003",
@@ -14491,7 +14634,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-004",
@@ -14561,7 +14705,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-005",
@@ -14631,7 +14776,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-006",
@@ -14701,7 +14847,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-007",
@@ -14771,7 +14918,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-008",
@@ -14841,7 +14989,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-009",
@@ -14911,7 +15060,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-010",
@@ -14981,7 +15131,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-001",
@@ -15052,7 +15203,8 @@
         "correct": 1
       }
     ],
-    "word_count": 300
+    "word_count": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-002",
@@ -15123,7 +15275,8 @@
         "correct": 0
       }
     ],
-    "word_count": 300
+    "word_count": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-003",
@@ -15194,7 +15347,8 @@
         "correct": 1
       }
     ],
-    "word_count": 300
+    "word_count": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-004",
@@ -15265,7 +15419,8 @@
         "correct": 2
       }
     ],
-    "word_count": 300
+    "word_count": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-005",
@@ -15336,7 +15491,8 @@
         "correct": 0
       }
     ],
-    "word_count": 300
+    "word_count": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-006",
@@ -15406,7 +15562,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-007",
@@ -15476,7 +15633,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-008",
@@ -15546,7 +15704,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-009",
@@ -15616,7 +15775,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-010",
@@ -15686,7 +15846,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-001",
@@ -15756,7 +15917,8 @@
         "correct": 0
       }
     ],
-    "word_count": 389
+    "word_count": 389,
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-002",
@@ -15826,7 +15988,8 @@
         "correct": 2
       }
     ],
-    "word_count": 380
+    "word_count": 380,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-003",
@@ -15896,7 +16059,8 @@
         "correct": 0
       }
     ],
-    "word_count": 381
+    "word_count": 381,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-004",
@@ -15966,7 +16130,8 @@
         "correct": 1
       }
     ],
-    "word_count": 379
+    "word_count": 379,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-005",
@@ -16036,7 +16201,8 @@
         "correct": 3
       }
     ],
-    "word_count": 396
+    "word_count": 396,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-001",
@@ -16106,7 +16272,8 @@
         "correct": 2
       }
     ],
-    "word_count": 274
+    "word_count": 274,
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-002",
@@ -16176,7 +16343,8 @@
         "correct": 3
       }
     ],
-    "word_count": 326
+    "word_count": 326,
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-003",
@@ -16246,7 +16414,8 @@
         "correct": 3
       }
     ],
-    "word_count": 334
+    "word_count": 334,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-004",
@@ -16316,7 +16485,8 @@
         "correct": 1
       }
     ],
-    "word_count": 325
+    "word_count": 325,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-005",
@@ -16386,7 +16556,8 @@
         "correct": 3
       }
     ],
-    "word_count": 329
+    "word_count": 329,
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-006",
@@ -16455,7 +16626,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-007",
@@ -16524,7 +16696,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-008",
@@ -16593,7 +16766,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-009",
@@ -16662,7 +16836,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-010",
@@ -16731,7 +16906,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-001",
@@ -16801,7 +16977,8 @@
         "correct": 3
       }
     ],
-    "word_count": 124
+    "word_count": 124,
+    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-002",
@@ -16871,7 +17048,8 @@
         "correct": 1
       }
     ],
-    "word_count": 138
+    "word_count": 138,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-003",
@@ -16941,7 +17119,8 @@
         "correct": 0
       }
     ],
-    "word_count": 137
+    "word_count": 137,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-004",
@@ -17011,7 +17190,8 @@
         "correct": 1
       }
     ],
-    "word_count": 150
+    "word_count": 150,
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-005",
@@ -17081,11 +17261,12 @@
         "correct": 0
       }
     ],
-    "word_count": 149
+    "word_count": 149,
+    "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "Natur & Miljö",
     "title": "Fröet i fickan",
@@ -17158,11 +17339,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "Samhälle",
     "title": "Bussen till badhuset",
@@ -17239,7 +17420,7 @@
   },
   {
     "id": "ak1-tema-003",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "Kultur",
     "title": "Boken med stora bilder",
@@ -17312,11 +17493,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "Hälsa",
     "title": "Pulkan i backen",
@@ -17389,11 +17570,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1610208282647-1d0ab7e7f0fd?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "Natur & Miljö",
     "title": "Sortera hemma",
@@ -17466,11 +17647,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-006",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "Den nya kompisen",
@@ -17547,7 +17728,7 @@
   },
   {
     "id": "ak1-tema-007",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "djur",
     "title": "Hunden på promenaden",
@@ -17620,11 +17801,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-008",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "mat",
     "title": "Pannkaksdagen",
@@ -17697,11 +17878,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-009",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "årstider",
     "title": "Regnet som slutade",
@@ -17774,11 +17955,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-010",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "skola",
     "title": "Visningstunden",
@@ -17851,7 +18032,7 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-006",
@@ -17926,7 +18107,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-007",
@@ -18001,7 +18183,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-008",
@@ -18076,7 +18259,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-009",
@@ -18151,7 +18335,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-010",
@@ -18226,7 +18411,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-011",
@@ -18296,7 +18482,8 @@
         "correct": 1
       }
     ],
-    "word_count": 138
+    "word_count": 138,
+    "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-012",
@@ -18366,7 +18553,8 @@
         "correct": 2
       }
     ],
-    "word_count": 140
+    "word_count": 140,
+    "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-013",
@@ -18436,7 +18624,8 @@
         "correct": 3
       }
     ],
-    "word_count": 134
+    "word_count": 134,
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-014",
@@ -18506,7 +18695,8 @@
         "correct": 2
       }
     ],
-    "word_count": 142
+    "word_count": 142,
+    "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-015",
@@ -18576,7 +18766,8 @@
         "correct": 2
       }
     ],
-    "word_count": 155
+    "word_count": 155,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-006",
@@ -18647,7 +18838,8 @@
         "correct": 2
       }
     ],
-    "word_count": 425
+    "word_count": 425,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-007",
@@ -18718,7 +18910,8 @@
         "correct": 2
       }
     ],
-    "word_count": 398
+    "word_count": 398,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-008",
@@ -18789,7 +18982,8 @@
         "correct": 1
       }
     ],
-    "word_count": 410
+    "word_count": 410,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-009",
@@ -18860,7 +19054,8 @@
         "correct": 2
       }
     ],
-    "word_count": 395
+    "word_count": 395,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-010",
@@ -18931,7 +19126,8 @@
         "correct": 1
       }
     ],
-    "word_count": 402
+    "word_count": 402,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-006",
@@ -19001,7 +19197,8 @@
         "correct": 2
       }
     ],
-    "word_count": 385
+    "word_count": 385,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-007",
@@ -19071,7 +19268,8 @@
         "correct": 1
       }
     ],
-    "word_count": 398
+    "word_count": 398,
+    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-008",
@@ -19141,7 +19339,8 @@
         "correct": 2
       }
     ],
-    "word_count": 390
+    "word_count": 390,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-009",
@@ -19211,7 +19410,8 @@
         "correct": 1
       }
     ],
-    "word_count": 395
+    "word_count": 395,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-010",
@@ -19281,7 +19481,8 @@
         "correct": 1
       }
     ],
-    "word_count": 380
+    "word_count": 380,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-001",
@@ -19357,7 +19558,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-002",
@@ -19433,7 +19635,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-003",
@@ -19509,7 +19712,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-004",
@@ -19585,7 +19789,8 @@
         ],
         "correct": 3
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-005",
@@ -19661,7 +19866,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-011",
@@ -19737,7 +19943,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-012",
@@ -19813,7 +20020,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-013",
@@ -19889,7 +20097,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-014",
@@ -19965,7 +20174,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-015",
@@ -20041,7 +20251,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-tema-001",
@@ -20123,7 +20334,8 @@
       "fingerprint": "ak10-tema-001",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-tema-002",
@@ -20205,7 +20417,8 @@
       "fingerprint": "ak10-tema-002",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-tema-003",
@@ -20287,7 +20500,8 @@
       "fingerprint": "ak10-tema-003",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-tema-004",
@@ -20369,7 +20583,8 @@
       "fingerprint": "ak10-tema-004",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-tema-005",
@@ -20451,7 +20666,8 @@
       "fingerprint": "ak10-tema-005",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "manual"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-011",
@@ -20521,7 +20737,8 @@
         "correct": 2
       }
     ],
-    "word_count": 456
+    "word_count": 456,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-012",
@@ -20591,7 +20808,8 @@
         "correct": 2
       }
     ],
-    "word_count": 468
+    "word_count": 468,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-013",
@@ -20661,7 +20879,8 @@
         "correct": 1
       }
     ],
-    "word_count": 451
+    "word_count": 451,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-014",
@@ -20731,7 +20950,8 @@
         "correct": 0
       }
     ],
-    "word_count": 431
+    "word_count": 431,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-015",
@@ -20801,7 +21021,8 @@
         "correct": 1
       }
     ],
-    "word_count": 492
+    "word_count": 492,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bamse-001",
@@ -20872,7 +21093,8 @@
         "correct": 0
       }
     ],
-    "word_count": 258
+    "word_count": 258,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bamse-002",
@@ -20943,7 +21165,8 @@
         "correct": 1
       }
     ],
-    "word_count": 271
+    "word_count": 271,
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bamse-003",
@@ -21014,7 +21237,8 @@
         "correct": 2
       }
     ],
-    "word_count": 285
+    "word_count": 285,
+    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bamse-004",
@@ -21085,7 +21309,8 @@
         "correct": 0
       }
     ],
-    "word_count": 278
+    "word_count": 278,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-bamse-005",
@@ -21156,7 +21381,8 @@
         "correct": 1
       }
     ],
-    "word_count": 286
+    "word_count": 286,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-011",
@@ -21226,7 +21452,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-012",
@@ -21296,7 +21523,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-013",
@@ -21366,7 +21594,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-014",
@@ -21436,7 +21665,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf9a8b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-015",
@@ -21506,7 +21736,8 @@
         ],
         "correct": 0
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-011",
@@ -21576,7 +21807,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-012",
@@ -21646,7 +21878,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-013",
@@ -21716,7 +21949,8 @@
         ],
         "correct": 1
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-014",
@@ -21786,7 +22020,8 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-015",
@@ -21856,11 +22091,12 @@
         ],
         "correct": 2
       }
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-011",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "djur",
     "title": "Fågeln på fönsterbrädan",
@@ -21937,7 +22173,7 @@
   },
   {
     "id": "ak1-tema-012",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "familj",
     "title": "Storasyster hjälper till",
@@ -22010,11 +22246,11 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-013",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "väder",
     "title": "Vattenpölen",
@@ -22087,11 +22323,11 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-014",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "fantasi",
     "title": "Lådan som blev en båt",
@@ -22164,11 +22400,11 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-015",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hjälpsamhet",
     "title": "Mössan i trädet",
@@ -22241,7 +22477,7 @@
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-011",
@@ -22311,7 +22547,8 @@
         "correct": 1
       }
     ],
-    "word_count": 274
+    "word_count": 274,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-012",
@@ -22381,7 +22618,8 @@
         "correct": 1
       }
     ],
-    "word_count": 327
+    "word_count": 327,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-013",
@@ -22451,7 +22689,8 @@
         "correct": 1
       }
     ],
-    "word_count": 327
+    "word_count": 327,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-014",
@@ -22521,7 +22760,8 @@
         "correct": 3
       }
     ],
-    "word_count": 339
+    "word_count": 339,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-015",
@@ -22591,7 +22831,8 @@
         "correct": 1
       }
     ],
-    "word_count": 314
+    "word_count": 314,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-016",
@@ -22673,7 +22914,8 @@
       "fingerprint": "claude-opus-ak7-016",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "claude-opus-4-5"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-017",
@@ -22755,7 +22997,8 @@
       "fingerprint": "claude-opus-ak7-017",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "claude-opus-4-5"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-018",
@@ -22837,7 +23080,8 @@
       "fingerprint": "claude-opus-ak7-018",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "claude-opus-4-5"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-019",
@@ -22919,7 +23163,8 @@
       "fingerprint": "claude-opus-ak7-019",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "claude-opus-4-5"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-020",
@@ -23001,7 +23246,8 @@
       "fingerprint": "claude-opus-ak7-020",
       "generatedAt": "2026-02-15T00:00:00.000Z",
       "model": "claude-opus-4-5"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-016",
@@ -23071,7 +23317,8 @@
         "correct": 1
       }
     ],
-    "word_count": 307
+    "word_count": 307,
+    "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-017",
@@ -23141,7 +23388,8 @@
         "correct": 1
       }
     ],
-    "word_count": 304
+    "word_count": 304,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-018",
@@ -23211,7 +23459,8 @@
         "correct": 2
       }
     ],
-    "word_count": 318
+    "word_count": 318,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-019",
@@ -23281,7 +23530,8 @@
         "correct": 3
       }
     ],
-    "word_count": 310
+    "word_count": 310,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-020",
@@ -23351,7 +23601,8 @@
         "correct": 2
       }
     ],
-    "word_count": 295
+    "word_count": 295,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-021",
@@ -23421,7 +23672,8 @@
         "correct": 1
       }
     ],
-    "word_count": 282
+    "word_count": 282,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-022",
@@ -23491,7 +23743,8 @@
         "correct": 2
       }
     ],
-    "word_count": 298
+    "word_count": 298,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-023",
@@ -23561,7 +23814,8 @@
         "correct": 0
       }
     ],
-    "word_count": 303
+    "word_count": 303,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-024",
@@ -23631,7 +23885,8 @@
         "correct": 1
       }
     ],
-    "word_count": 310
+    "word_count": 310,
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-tema-025",
@@ -23701,7 +23956,8 @@
         "correct": 0
       }
     ],
-    "word_count": 290
+    "word_count": 290,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-001",
@@ -23771,7 +24027,8 @@
         "correct": 1
       }
     ],
-    "word_count": 279
+    "word_count": 279,
+    "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-002",
@@ -23841,7 +24098,8 @@
         "correct": 1
       }
     ],
-    "word_count": 265
+    "word_count": 265,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-003",
@@ -23911,7 +24169,8 @@
         "correct": 1
       }
     ],
-    "word_count": 310
+    "word_count": 310,
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-004",
@@ -23981,7 +24240,8 @@
         "correct": 1
       }
     ],
-    "word_count": 270
+    "word_count": 270,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-005",
@@ -24051,7 +24311,8 @@
         "correct": 1
       }
     ],
-    "word_count": 282
+    "word_count": 282,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-016",
@@ -24121,7 +24382,8 @@
         "correct": 2
       }
     ],
-    "word_count": 158
+    "word_count": 158,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-017",
@@ -24191,7 +24453,8 @@
         "correct": 3
       }
     ],
-    "word_count": 163
+    "word_count": 163,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-018",
@@ -24261,7 +24524,8 @@
         "correct": 0
       }
     ],
-    "word_count": 157
+    "word_count": 157,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-019",
@@ -24331,7 +24595,8 @@
         "correct": 1
       }
     ],
-    "word_count": 155
+    "word_count": 155,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-020",
@@ -24401,7 +24666,8 @@
         "correct": 2
       }
     ],
-    "word_count": 156
+    "word_count": 156,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-021",
@@ -24471,7 +24737,8 @@
         "correct": 1
       }
     ],
-    "word_count": 158
+    "word_count": 158,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-022",
@@ -24541,7 +24808,8 @@
         "correct": 1
       }
     ],
-    "word_count": 157
+    "word_count": 157,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-023",
@@ -24611,7 +24879,8 @@
         "correct": 1
       }
     ],
-    "word_count": 158
+    "word_count": 158,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-024",
@@ -24681,7 +24950,8 @@
         "correct": 1
       }
     ],
-    "word_count": 156
+    "word_count": 156,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-025",
@@ -24751,7 +25021,8 @@
         "correct": 1
       }
     ],
-    "word_count": 156
+    "word_count": 156,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-016",
@@ -24823,7 +25094,8 @@
         "correct": 3
       }
     ],
-    "word_count": 308
+    "word_count": 308,
+    "imageUrl": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-017",
@@ -24895,7 +25167,8 @@
         "correct": 3
       }
     ],
-    "word_count": 308
+    "word_count": 308,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-018",
@@ -24967,7 +25240,8 @@
         "correct": 3
       }
     ],
-    "word_count": 311
+    "word_count": 311,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-019",
@@ -25039,7 +25313,8 @@
         "correct": 3
       }
     ],
-    "word_count": 302
+    "word_count": 302,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-020",
@@ -25111,7 +25386,8 @@
         "correct": 3
       }
     ],
-    "word_count": 307
+    "word_count": 307,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-016",
@@ -25181,7 +25457,8 @@
         "correct": 1
       }
     ],
-    "word_count": 479
+    "word_count": 479,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-017",
@@ -25251,7 +25528,8 @@
         "correct": 3
       }
     ],
-    "word_count": 481
+    "word_count": 481,
+    "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-018",
@@ -25321,7 +25599,8 @@
         "correct": 2
       }
     ],
-    "word_count": 481
+    "word_count": 481,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-019",
@@ -25391,7 +25670,8 @@
         "correct": 2
       }
     ],
-    "word_count": 476
+    "word_count": 476,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-tema-020",
@@ -25461,7 +25741,8 @@
         "correct": 2
       }
     ],
-    "word_count": 480
+    "word_count": 480,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-021",
@@ -25531,7 +25812,8 @@
         "correct": 1
       }
     ],
-    "word_count": 309
+    "word_count": 309,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-022",
@@ -25601,7 +25883,8 @@
         "correct": 2
       }
     ],
-    "word_count": 308
+    "word_count": 308,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-023",
@@ -25671,7 +25954,8 @@
         "correct": 1
       }
     ],
-    "word_count": 302
+    "word_count": 302,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-024",
@@ -25741,7 +26025,8 @@
         "correct": 2
       }
     ],
-    "word_count": 304
+    "word_count": 304,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak5-tema-025",
@@ -25811,7 +26096,8 @@
         "correct": 1
       }
     ],
-    "word_count": 300
+    "word_count": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-006",
@@ -25953,7 +26239,7 @@
       }
     ],
     "word_count": 137,
-    "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-008",
@@ -26024,7 +26310,7 @@
       }
     ],
     "word_count": 131,
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-009",
@@ -26095,7 +26381,7 @@
       }
     ],
     "word_count": 125,
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop"
   },
   {
     "id": "ak2-tema-010",
@@ -26236,7 +26522,8 @@
         "correct": 3
       }
     ],
-    "word_count": 432
+    "word_count": 432,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-002",
@@ -26306,7 +26593,8 @@
         "correct": 2
       }
     ],
-    "word_count": 428
+    "word_count": 428,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-003",
@@ -26376,7 +26664,8 @@
         "correct": 3
       }
     ],
-    "word_count": 427
+    "word_count": 427,
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-004",
@@ -26446,7 +26735,8 @@
         "correct": 0
       }
     ],
-    "word_count": 425
+    "word_count": 425,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-005",
@@ -26516,7 +26806,8 @@
         "correct": 1
       }
     ],
-    "word_count": 426
+    "word_count": 426,
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-lotr-001",
@@ -26598,7 +26889,8 @@
       "fingerprint": "ak9-lotr-001",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-lotr-002",
@@ -26680,7 +26972,8 @@
       "fingerprint": "ak9-lotr-002",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-lotr-003",
@@ -26762,7 +27055,8 @@
       "fingerprint": "ak9-lotr-003",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-lotr-004",
@@ -26844,7 +27138,8 @@
       "fingerprint": "ak9-lotr-004",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak9-lotr-005",
@@ -26926,7 +27221,8 @@
       "fingerprint": "ak9-lotr-005",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-ai-001",
@@ -27008,7 +27304,8 @@
       "fingerprint": "ak10-ai-001",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-ai-002",
@@ -27090,7 +27387,8 @@
       "fingerprint": "ak10-ai-002",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-ai-003",
@@ -27172,7 +27470,8 @@
       "fingerprint": "ak10-ai-003",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-ai-004",
@@ -27254,7 +27553,8 @@
       "fingerprint": "ak10-ai-004",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-ai-005",
@@ -27336,7 +27636,8 @@
       "fingerprint": "ak10-ai-005",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-001",
@@ -27418,7 +27719,8 @@
       "fingerprint": "ak7-tema-001",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-002",
@@ -27500,7 +27802,8 @@
       "fingerprint": "ak7-tema-002",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-001",
@@ -27582,7 +27885,8 @@
       "fingerprint": "ak4-tema-001",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-002",
@@ -27664,7 +27968,8 @@
       "fingerprint": "ak4-tema-002",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-001",
@@ -27746,7 +28051,8 @@
       "fingerprint": "ak8-tema-001",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-003",
@@ -27828,7 +28134,8 @@
       "fingerprint": "ak4-tema-003",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-004",
@@ -27910,7 +28217,8 @@
       "fingerprint": "ak4-tema-004",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-005",
@@ -27992,7 +28300,8 @@
       "fingerprint": "ak4-tema-005",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-006",
@@ -28074,7 +28383,8 @@
       "fingerprint": "ak4-tema-006",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-tema-007",
@@ -28156,7 +28466,8 @@
       "fingerprint": "ak4-tema-007",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-natur-skog-001",
@@ -28238,7 +28549,8 @@
       "fingerprint": "ak4-natur-skog-001",
       "generatedAt": "2026-02-28T12:50:32.171Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-halsa-cykel-001",
@@ -28320,7 +28632,8 @@
       "fingerprint": "ak4-halsa-cykel-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-geo-vulkan-001",
@@ -28402,7 +28715,8 @@
       "fingerprint": "ak4-geo-vulkan-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-vetenskap-rymd-001",
@@ -28484,7 +28798,8 @@
       "fingerprint": "ak4-vetenskap-rymd-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak4-varde-vanskap-001",
@@ -28566,11 +28881,12 @@
       "fingerprint": "ak4-varde-vanskap-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-natur-katt-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten Max",
@@ -28649,11 +28965,11 @@
       "generatedAt": "2026-02-28T12:54:37.710Z",
       "model": "claude"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-samhalle-skola-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "En dag i skolan",
@@ -28732,11 +29048,11 @@
       "generatedAt": "2026-02-28T12:54:37.718Z",
       "model": "claude"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-natur-regn-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Regnet kommer",
@@ -28815,11 +29131,11 @@
       "generatedAt": "2026-02-28T12:54:37.718Z",
       "model": "claude"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-samhalle-buss-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Bussen till stan",
@@ -28898,11 +29214,11 @@
       "generatedAt": "2026-02-28T12:54:37.718Z",
       "model": "claude"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-natur-hund-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Hundvalpen Bella",
@@ -28981,6 +29297,6 @@
       "generatedAt": "2026-02-28T12:54:37.718Z",
       "model": "claude"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop"
   }
 ]
