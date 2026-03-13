@@ -1,32 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
-import { clearStudent } from "@/lib/storage";
+import { clearStudent, loadGamification } from "@/lib/storage";
 import { getAvatar, type Avatar } from "@/lib/avatars";
+import type { StudentData } from "@/lib/types";
 
 function AvatarImg({ av }: { av: Avatar }) {
   const [error, setError] = useState(false);
   if (!av.image || error) return <span className="text-lg leading-none">{av.emoji}</span>;
   return <img src={av.image} alt={av.name} className="w-full h-full object-contain" onError={() => setError(true)} />;
 }
-
-const DB_SKIN: Record<string, string> = {
-  light: "fddbb4", light_brown: "c58540", dark: "7b4828",
-};
-const DB_HERO_BG: Record<string, string> = {
-  explorer: "b45309", scientist: "1e3a8a", athlete: "3730a3",
-  footballer: "991b1b", wizard: "4c1d95", inventor: "064e3b", scholar: "881337",
-};
-function heroDbUrl(heroId: string, skinTone: string, gender: string) {
-  const bg = DB_HERO_BG[heroId] ?? "b45309";
-  const skin = DB_SKIN[skinTone] ?? "fddbb4";
-  const seed = heroId + (gender === "girl" ? "-g" : "");
-  return `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}&backgroundColor=${bg}&backgroundType=gradientLinear&radius=50&skinColor=${skin}`;
-}
-import type { StudentData } from "@/lib/types";
 
 interface HeaderProps {
   student: StudentData | null;
@@ -36,6 +22,13 @@ interface HeaderProps {
 export default function Header({ student, onLogout }: HeaderProps) {
   const router = useRouter();
   const { dark, toggle } = useDarkMode();
+  const [unopenedChests, setUnopenedChests] = useState(0);
+
+  useEffect(() => {
+    if (!student) return;
+    const gam = loadGamification();
+    setUnopenedChests(gam.chests.filter((c) => !c.opened).length);
+  }, [student]);
 
   function handleLogout() {
     if (onLogout) {
@@ -48,12 +41,12 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
   return (
     <header
-      className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b-3 border-indigo-100 dark:border-gray-700 sticky top-0 z-50"
+      className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-indigo-100 dark:border-gray-700 sticky top-0 z-50"
       style={{
         boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.08), 0 6px 12px -4px rgba(99, 102, 241, 0.1)"
       }}
     >
-      <div className="max-w-5xl mx-auto px-4 h-18 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -69,27 +62,24 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {/* Nav */}
         {student && (
           <nav className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            {/* Hero button – left of points */}
+            {/* Hemliga kistor button */}
             <Link
-              href="/hero"
-              title="Min hjälte"
-              className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-sky-100 to-sky-50 dark:from-sky-900/40 dark:to-sky-800/20 border-2 border-sky-200 dark:border-sky-700 hover:border-sky-400 dark:hover:border-sky-500 hover:scale-110 transition-all overflow-hidden touch-manipulation cursor-pointer"
+              href="/kistor"
+              title="Hemliga kistor"
+              className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 dark:hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer"
               style={{
-                boxShadow: "0 3px 0 0 rgba(14, 165, 233, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
               }}
             >
-              <img
-                src={heroDbUrl(
-                  student.hero?.heroId ?? "explorer",
-                  student.hero?.skinTone ?? "light",
-                  student.hero?.gender ?? "boy"
-                )}
-                alt="Min hjälte"
-                className="w-10 h-10 object-cover"
-              />
+              <span className="text-lg leading-none select-none">🏆</span>
+              {unopenedChests > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[16px] h-4 px-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  {unopenedChests > 9 ? "9+" : unopenedChests}
+                </span>
+              )}
             </Link>
 
-            {/* Points badge – hidden on xs */}
+            {/* Points badge */}
             <div
               className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default"
               style={{
@@ -100,7 +90,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
               <span className="text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
             </div>
 
-            {/* Student avatar + name – links to Min sida */}
+            {/* Student avatar + name – links to profile */}
             {(() => {
               const av = getAvatar(student.avatar ?? "ninja");
               return (

@@ -10,9 +10,11 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
+import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
-import type { StudentData, StageContent, SpellingModule, GrammarExercise } from "@/lib/types";
+import type { StudentData, StageContent, SpellingModule, GrammarExercise, ChestType, MysteryBoxReward } from "@/lib/types";
 
 const POINTS_PER_CORRECT = 10;
 
@@ -33,6 +35,9 @@ export default function SpellingModulePage({ params }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [showResult, setShowResult] = useState(false);
+  const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
+  const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
+  const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
 
   useEffect(() => {
     const s = loadStudent();
@@ -77,6 +82,37 @@ export default function SpellingModulePage({ params }: Props) {
       if (student) {
         const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, finalPts, passed);
         setStudent(updated);
+
+        const gam = loadGamification();
+        const prevPoints = student.totalPoints;
+        const newPoints = updated.totalPoints;
+        const prevEx = gam.exercisesCompleted;
+        const newEx = prevEx + 1;
+        const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
+        const exChests = chestsEarnedFromExercises(prevEx, newEx, gam.exerciseMilestonesRewarded);
+        const allNewChests = [...pointChests.map((c) => c.chest), ...exChests.map((c) => c.chest)];
+        const firstChest = allNewChests[0];
+        const wasBossUnlocked = gam.bossUnlocked;
+        const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
+        const mystery = rollMysteryBox(gam.badges);
+        const extraMysteryChest = mystery?.type === "chest" && mystery.chestType
+          ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
+          : [];
+        const mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
+        const mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
+        saveGamification({
+          ...gam,
+          chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
+          badges: mysteryBadge && !gam.badges.includes(mysteryBadge) ? [...gam.badges, mysteryBadge] : gam.badges,
+          exercisesCompleted: newEx,
+          bossUnlocked: nowBossUnlocked,
+          pointsMilestonesRewarded: [...gam.pointsMilestonesRewarded, ...pointChests.map((c) => c.milestone)],
+          exerciseMilestonesRewarded: [...gam.exerciseMilestonesRewarded, ...exChests.map((c) => c.milestone)],
+        });
+        if (mysteryPoints > 0) setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
+        if (firstChest) setChestEarned(firstChest.type as ChestType);
+        if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
+        if (mystery) setMysteryBox(mystery);
       }
       setShowResult(true);
     } else {
@@ -92,6 +128,15 @@ export default function SpellingModulePage({ params }: Props) {
   }
 
   function handleContinue() {
+    if (mysteryBox) {
+      setShowResult(false);
+    } else {
+      router.push(`/world/${stageId}`);
+    }
+  }
+
+  function handleMysteryClose() {
+    setMysteryBox(null);
     router.push(`/world/${stageId}`);
   }
 
@@ -254,9 +299,15 @@ export default function SpellingModulePage({ params }: Props) {
           bonusPoints={mod.bonusPoints}
           totalCorrect={totalCorrect}
           totalQuestions={totalExercises}
+          chestEarned={chestEarned}
+          bossUnlocked={bossJustUnlocked}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
+      )}
+
+      {!showResult && mysteryBox && (
+        <MysteryBoxPopup reward={mysteryBox} onClose={handleMysteryClose} />
       )}
     </div>
   );
