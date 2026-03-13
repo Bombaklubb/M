@@ -470,7 +470,7 @@ function ClockSetAnswers({
           hour={hour}
           minute={minute}
           onChange={handleTimeChange}
-          readOnly={state.answered}
+          readOnly
           size={210}
         />
       </div>
@@ -515,10 +515,6 @@ function ClockSetAnswers({
               </div>
             </div>
           </div>
-
-          <p className="text-xs text-center text-white/40">
-            Dra på klockan eller använd knapparna · Inre cirkel = timme · Yttre = minut
-          </p>
 
           <button
             onClick={handleSubmit}
