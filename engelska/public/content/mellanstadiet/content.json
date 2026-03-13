@@ -860,7 +860,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (play) football every day.",
           "answer": "plays",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses-2",
@@ -1012,7 +1012,7 @@
             "drank"
           ],
           "correctIndex": 1,
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses-18",
@@ -1062,7 +1062,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (walk) to school every day.",
           "answer": "walks",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses2-2",
@@ -1112,7 +1112,7 @@
             "listened"
           ],
           "correctIndex": 1,
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses2-7",
@@ -1138,7 +1138,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (read) a book every evening.",
           "answer": "reads",
-          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses2-10",
@@ -1269,7 +1269,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (play) the piano.",
           "answer": "plays",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses3-2",
@@ -1395,7 +1395,7 @@
             "ate"
           ],
           "correctIndex": 1,
-          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses3-15",
@@ -1509,7 +1509,7 @@
             "studied"
           ],
           "correctIndex": 1,
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses3-27",
@@ -1570,7 +1570,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (play) football every day.",
           "answer": "plays",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-2",
@@ -1626,7 +1626,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (watch) TV every evening.",
           "answer": "watches",
-          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-10",
@@ -1640,7 +1640,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (study) English every day.",
           "answer": "studies",
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-12",
@@ -1696,7 +1696,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (run) every day.",
           "answer": "runs",
-          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-20",
@@ -1738,7 +1738,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (not play) football yesterday.",
           "answer": "did not play",
-          "hint": "Datid nekad: 'did not' + grundform (oavsett pronomen). T.ex. 'did not play'."
+          "hint": "Datid nekad: 'did not' + grundform (oavsett pronomen). T.ex. 'did not work'."
         },
         {
           "id": "mel-g-tenses5-3",
@@ -1757,7 +1757,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (clean) his room every week.",
           "answer": "cleans",
-          "hint": "Presens för he: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för he: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses5-5",
