@@ -188,6 +188,39 @@ export interface StudentData {
   hero?: HeroConfig;
 }
 
+// ─── Gamification ─────────────────────────────────────────────────────────────
+
+export type ChestType = "wood" | "silver" | "gold";
+
+export interface Chest {
+  id: string;
+  type: ChestType;
+  earnedAt: string;
+  opened: boolean;
+  openedReward?: string; // description shown after opening
+}
+
+export type MysteryRewardType = "points" | "chest" | "badge";
+
+export interface MysteryBoxReward {
+  type: MysteryRewardType;
+  points?: number;
+  chestType?: ChestType;
+  badgeId?: string;
+  description: string;
+}
+
+export interface GamificationData {
+  chests: Chest[];
+  badges: string[];
+  exercisesCompleted: number;
+  bossUnlocked: boolean;
+  bossLastAttempt?: string;
+  bossWins: number;
+  pointsMilestonesRewarded: number[]; // total-point thresholds already rewarded
+  exerciseMilestonesRewarded: number[]; // exercise-count thresholds already rewarded
+}
+
 // ─── Exercise session (in-memory, not persisted) ──────────────────────────────
 
 export interface ExerciseResult {
