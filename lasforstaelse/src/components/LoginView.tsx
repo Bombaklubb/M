@@ -18,9 +18,54 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
     }
   };
 
+  // Decorative floating elements for the background
+  const floatingElements = [
+    // Books
+    { emoji: '📖', size: 'text-3xl', top: '8%', left: '5%', delay: '0s', duration: '20s' },
+    { emoji: '📚', size: 'text-4xl', top: '15%', right: '8%', delay: '2s', duration: '25s' },
+    { emoji: '📕', size: 'text-2xl', top: '70%', left: '3%', delay: '5s', duration: '22s' },
+    { emoji: '📗', size: 'text-3xl', top: '80%', right: '5%', delay: '8s', duration: '18s' },
+    { emoji: '📘', size: 'text-2xl', top: '40%', left: '2%', delay: '3s', duration: '24s' },
+    // Exploration items
+    { emoji: '🔍', size: 'text-2xl', top: '25%', left: '7%', delay: '4s', duration: '21s' },
+    { emoji: '🧭', size: 'text-3xl', top: '60%', right: '4%', delay: '6s', duration: '23s' },
+    { emoji: '🗺️', size: 'text-2xl', top: '45%', right: '6%', delay: '1s', duration: '19s' },
+    // Nature elements
+    { emoji: '🍃', size: 'text-xl', top: '12%', left: '12%', delay: '7s', duration: '16s' },
+    { emoji: '🌿', size: 'text-2xl', top: '85%', left: '10%', delay: '9s', duration: '17s' },
+    { emoji: '🌲', size: 'text-3xl', top: '5%', right: '15%', delay: '0s', duration: '26s' },
+    { emoji: '🌳', size: 'text-2xl', top: '75%', right: '12%', delay: '4s', duration: '20s' },
+    // Stars and sparkles
+    { emoji: '✨', size: 'text-xl', top: '20%', left: '15%', delay: '2s', duration: '14s' },
+    { emoji: '⭐', size: 'text-lg', top: '30%', right: '10%', delay: '5s', duration: '15s' },
+    { emoji: '💫', size: 'text-xl', top: '55%', left: '8%', delay: '3s', duration: '13s' },
+    { emoji: '🌟', size: 'text-lg', top: '65%', right: '15%', delay: '7s', duration: '16s' },
+  ];
+
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-4">
-      <div className="bg-white rounded-3xl shadow-[0_12px_40px_rgba(79,70,229,0.15)] p-8 md:p-12 max-w-md w-full border-2 border-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Animated floating background elements */}
+      {floatingElements.map((el, index) => (
+        <div
+          key={index}
+          className={`absolute ${el.size} opacity-20 pointer-events-none select-none`}
+          style={{
+            top: el.top,
+            left: el.left,
+            right: el.right,
+            animation: `float ${el.duration} ease-in-out infinite`,
+            animationDelay: el.delay,
+          }}
+        >
+          {el.emoji}
+        </div>
+      ))}
+
+      {/* Subtle radial glow behind the card */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative z-10 bg-white rounded-3xl shadow-[0_12px_40px_rgba(79,70,229,0.15)] p-8 md:p-12 max-w-md w-full border-2 border-indigo-100">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <BookLogo size={180} />
