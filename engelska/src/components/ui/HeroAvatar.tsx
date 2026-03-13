@@ -33,6 +33,19 @@ const SHIRT_BASE: Record<string, string> = {
   scholar:    "#991B1B",
 };
 
+const SHIRT_COLORS: Record<string, string> = {
+  hoodie:          "#6B7280",
+  lab_coat:        "#F3F4F6",
+  explorer_jacket: "#92400E",
+  armor_shirt:     "#9CA3AF",
+  tshirt:          "#EC4899",
+  striped_shirt:   "#3B82F6",
+  sport_jersey:    "#059669",
+  winter_jacket:   "#1E40AF",
+  tuxedo:          "#111827",
+  academic_robe:   "#4C1D95",
+};
+
 const PANTS_BASE: Record<string, string> = {
   explorer:   "#292524",
   scientist:  "#374151",
@@ -351,6 +364,23 @@ function HeldItem({ id }: { id: string }) {
           <rect x="4" y="12" width="8" height="2" rx="1" fill="#F59E0B" />
         </g>
       );
+    case "medal":
+      return (
+        <g transform="translate(60,60)">
+          <rect x="4" y="-4" width="6" height="10" rx="1" fill="#DC2626" />
+          <circle cx="7" cy="10" r="8" fill="#F59E0B" />
+          <circle cx="7" cy="10" r="5" fill="#FCD34D" />
+          <polygon points="7,5 8.5,9 13,9 9.5,11.5 11,15.5 7,13 3,15.5 4.5,11.5 1,9 5.5,9" fill="#F59E0B" />
+        </g>
+      );
+    case "magnifying_glass":
+      return (
+        <g transform="translate(56,58)">
+          <circle cx="9" cy="8" r="9" fill="none" stroke="#374151" strokeWidth="2.5" />
+          <circle cx="9" cy="8" r="6.5" fill="#BAE6FD" opacity="0.45" />
+          <line x1="15.5" y1="14.5" x2="22" y2="22" stroke="#374151" strokeWidth="3" strokeLinecap="round" />
+        </g>
+      );
     default:
       return null;
   }
@@ -479,6 +509,53 @@ function Effect({ id, uid }: { id: string; uid: string }) {
           ))}
         </>
       );
+    case "magic_swirl":
+      return (
+        <g opacity="0.82">
+          <path d="M40,120 Q10,90 12,60 Q14,30 40,20 Q66,30 68,60 Q70,90 40,120" fill="none" stroke="#8B5CF6" strokeWidth="3" />
+          <path d="M40,110 Q18,85 20,60 Q22,38 40,30 Q58,38 58,60 Q58,85 40,110" fill="none" stroke="#C4B5FD" strokeWidth="1.5" />
+          {[[8,35],[72,35],[8,85],[72,85]].map(([x,y],i) => (
+            <circle key={i} cx={x} cy={y} r="2.5" fill="#A78BFA" opacity="0.8" />
+          ))}
+        </g>
+      );
+    case "energy_ring":
+      return (
+        <g>
+          <ellipse cx="40" cy="108" rx="32" ry="9" fill="none" stroke="#F59E0B" strokeWidth="3" opacity="0.85" />
+          <ellipse cx="40" cy="108" rx="32" ry="9" fill="none" stroke="#FCD34D" strokeWidth="1.5" opacity="0.4" />
+          <ellipse cx="40" cy="100" rx="24" ry="7" fill="none" stroke="#F97316" strokeWidth="2" opacity="0.6" />
+          {[[10,105],[70,105],[18,95],[62,95]].map(([x,y],i) => (
+            <circle key={i} cx={x} cy={y} r="2" fill="#FCD34D" opacity="0.8" />
+          ))}
+        </g>
+      );
+    case "light_beam":
+      return (
+        <>
+          <defs>
+            <linearGradient id={`lb-${uid}`} x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stopColor="#FBBF24" stopOpacity="0.65" />
+              <stop offset="100%" stopColor="#FBBF24" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path d={`M22,0 L2,130 L78,130 L58,0Z`} fill={`url(#lb-${uid})`} />
+          <ellipse cx="40" cy="4" rx="16" ry="6" fill="#FBBF24" opacity="0.45" />
+        </>
+      );
+    case "sparkle_dust":
+      return (
+        <g>
+          {[
+            [10,15,"#F472B6",3],[68,22,"#FCD34D",2.5],[4,60,"#60A5FA",2],
+            [76,55,"#34D399",2.5],[12,100,"#A78BFA",3],[66,95,"#F97316",2.5],
+            [38,5,"#FCD34D",3],[40,125,"#F472B6",2],[22,42,"#60A5FA",1.8],
+            [58,40,"#FCD34D",2],[30,80,"#A78BFA",2.2],[50,75,"#34D399",1.8],
+          ].map(([x,y,color,r],i) => (
+            <circle key={i} cx={x} cy={y} r={r} fill={color as string} opacity="0.85" />
+          ))}
+        </g>
+      );
     default:
       return null;
   }
@@ -493,9 +570,9 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
   const pants = PANTS_BASE[heroId] ?? "#292524";
 
   const ALL_HATS = ["explorer_hat","cap","wizard_hat","graduation_cap","beanie","crown","santa_hat","cowboy_hat","top_hat","headband","viking_helmet"];
-  const ALL_SHIRTS = ["hoodie","lab_coat","explorer_jacket","armor_shirt","tshirt","striped_shirt","sport_jersey","cape","winter_jacket","tuxedo"];
-  const ALL_ACC = ["compass","magic_wand","book","trophy","pencil","football_ball","camera","sword","guitar","telescope"];
-  const ALL_EFFECTS = ["star_glow","rainbow_trail","sparkles","fire_aura","ice_aura","cloud_halo","lightning","flower_wreath","shadow_clone","golden_shine"];
+  const ALL_SHIRTS = ["hoodie","lab_coat","explorer_jacket","armor_shirt","tshirt","striped_shirt","sport_jersey","cape","winter_jacket","tuxedo","academic_robe"];
+  const ALL_ACC = ["compass","magic_wand","book","trophy","pencil","football_ball","camera","sword","guitar","telescope","medal","magnifying_glass"];
+  const ALL_EFFECTS = ["star_glow","rainbow_trail","sparkles","fire_aura","ice_aura","cloud_halo","lightning","flower_wreath","shadow_clone","golden_shine","magic_swirl","energy_ring","light_beam","sparkle_dust"];
 
   const equippedHat      = equippedAttributes.find((a) => ALL_HATS.includes(a));
   const equippedShirt    = equippedAttributes.find((a) => ALL_SHIRTS.includes(a));
@@ -504,17 +581,9 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
   const hasGlasses       = equippedAttributes.includes("glasses");
   const hasBackpack      = equippedAttributes.includes("backpack");
 
-  const shirtColor =
-    equippedShirt === "hoodie"          ? "#6B7280" :
-    equippedShirt === "lab_coat"        ? "#F3F4F6" :
-    equippedShirt === "explorer_jacket" ? "#92400E" :
-    equippedShirt === "armor_shirt"     ? "#9CA3AF" :
-    equippedShirt === "tshirt"          ? "#EC4899" :
-    equippedShirt === "striped_shirt"   ? "#3B82F6" :
-    equippedShirt === "sport_jersey"    ? "#059669" :
-    equippedShirt === "winter_jacket"   ? "#1E40AF" :
-    equippedShirt === "tuxedo"          ? "#111827" :
-    baseShirt;
+  const shirtColor = equippedShirt
+    ? (SHIRT_COLORS[equippedShirt] ?? baseShirt)
+    : baseShirt;
 
   const isFootballer = heroId === "footballer";
 
@@ -530,7 +599,7 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
       {equippedEffect === "shadow_clone" && <Effect id="shadow_clone" uid={uid} />}
 
       {/* Background glow effects */}
-      {equippedEffect && equippedEffect !== "shadow_clone" && equippedEffect !== "flower_wreath" && equippedEffect !== "cloud_halo" && equippedEffect !== "sparkles" && (
+      {equippedEffect && equippedEffect !== "shadow_clone" && equippedEffect !== "flower_wreath" && equippedEffect !== "cloud_halo" && equippedEffect !== "sparkles" && equippedEffect !== "sparkle_dust" && (
         <Effect id={equippedEffect} uid={uid} />
       )}
 
@@ -667,6 +736,18 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
           <line x1="42" y1="76" x2="42" y2="84" stroke="#4B5563" strokeWidth="1" />
         </>
       )}
+      {equippedShirt === "academic_robe" && (
+        <>
+          {/* Wide lapels */}
+          <path d="M40,52 L28,66 L30,86 L40,78" fill="#6D28D9" stroke="#4C1D95" strokeWidth="0.8" />
+          <path d="M40,52 L52,66 L50,86 L40,78" fill="#6D28D9" stroke="#4C1D95" strokeWidth="0.8" />
+          {/* White collar trim */}
+          <path d="M32,52 Q40,58 48,52" fill="none" stroke="white" strokeWidth="1.5" />
+          {/* Robe panels on sleeves */}
+          <rect x="8"  y="50" width="4" height="28" rx="1" fill="#6D28D9" />
+          <rect x="68" y="50" width="4" height="28" rx="1" fill="#6D28D9" />
+        </>
+      )}
       {equippedShirt === "tshirt" && (
         <>
           <circle cx="40" cy="68" r="8" fill="none" stroke="white" strokeWidth="1.2" opacity="0.6" />
@@ -736,9 +817,10 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
       {equippedHat && <Hat hatId={equippedHat} shirtColor={shirtColor} />}
 
       {/* Foreground effects (over body, under UI) */}
-      {equippedEffect === "flower_wreath" && <Effect id="flower_wreath" uid={uid} />}
-      {equippedEffect === "cloud_halo"    && <Effect id="cloud_halo"    uid={uid} />}
-      {equippedEffect === "sparkles"      && <Effect id="sparkles"      uid={uid} />}
+      {equippedEffect === "flower_wreath"  && <Effect id="flower_wreath"  uid={uid} />}
+      {equippedEffect === "cloud_halo"     && <Effect id="cloud_halo"     uid={uid} />}
+      {equippedEffect === "sparkles"       && <Effect id="sparkles"       uid={uid} />}
+      {equippedEffect === "sparkle_dust"   && <Effect id="sparkle_dust"   uid={uid} />}
     </svg>
   );
 }
