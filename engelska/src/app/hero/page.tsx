@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Header from "@/components/ui/Header";
 import HeroAvatar from "@/components/ui/HeroAvatar";
 import ItemIcon from "@/components/ui/ItemIcon";
+import Image from "next/image";
 import { loadStudent, saveStudent } from "@/lib/storage";
 import {
   HERO_TYPES,
@@ -19,6 +20,33 @@ import type { StudentData, SkinTone, HeroConfig } from "@/lib/types";
 
 type AttrTab = HeroAttribute["type"];
 type Gender = "boy" | "girl";
+
+/** Visar AI-genererad PNG om den finns, annars SVG-fallback */
+function HeroAvatarImage({
+  heroId, gender, skinTone, size, className,
+}: {
+  heroId: string; gender: Gender; skinTone: SkinTone; size: number; className?: string;
+}) {
+  const [imgFailed, setImgFailed] = useState(false);
+  const src = `/images/avatars/hero/hero-${gender}-${heroId}.png`;
+  if (!imgFailed) {
+    return (
+      <Image
+        src={src}
+        alt={`${gender}-${heroId}`}
+        width={size}
+        height={size}
+        className={className}
+        style={{ objectFit: "cover", borderRadius: 8 }}
+        onError={() => setImgFailed(true)}
+        unoptimized
+      />
+    );
+  }
+  return (
+    <HeroAvatar heroId={heroId} skinTone={skinTone} gender={gender} equippedAttributes={[]} size={size} />
+  );
+}
 
 const SKIN_TONES: SkinTone[] = ["light", "light_brown", "dark"];
 const SKIN_PREVIEW: Record<SkinTone, string> = {
@@ -218,13 +246,11 @@ export default function HeroPage() {
                           : "border-gray-100 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 hover:scale-105 hover:shadow cursor-pointer"
                       }`}
                     >
-                      {/* Base avatar – no items */}
                       <div className={locked ? "grayscale" : ""}>
-                        <HeroAvatar
+                        <HeroAvatarImage
                           heroId={h.id}
                           skinTone={hero.skinTone}
                           gender="boy"
-                          equippedAttributes={[]}
                           size={46}
                         />
                       </div>
@@ -260,11 +286,10 @@ export default function HeroPage() {
                       }`}
                     >
                       <div className={locked ? "grayscale" : ""}>
-                        <HeroAvatar
+                        <HeroAvatarImage
                           heroId={h.id}
                           skinTone={hero.skinTone}
                           gender="girl"
-                          equippedAttributes={[]}
                           size={46}
                         />
                       </div>
