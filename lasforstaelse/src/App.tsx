@@ -305,8 +305,53 @@ function App() {
     );
   }
 
+  // Decorative floating elements for the background
+  const floatingElements = [
+    // Books
+    { emoji: '📖', size: 'text-3xl', top: '12%', left: '5%', delay: '0s', duration: '20s' },
+    { emoji: '📚', size: 'text-4xl', top: '18%', right: '8%', delay: '2s', duration: '25s' },
+    { emoji: '📕', size: 'text-2xl', top: '70%', left: '3%', delay: '5s', duration: '22s' },
+    { emoji: '📗', size: 'text-3xl', top: '80%', right: '5%', delay: '8s', duration: '18s' },
+    { emoji: '📘', size: 'text-2xl', top: '45%', left: '2%', delay: '3s', duration: '24s' },
+    // Exploration items
+    { emoji: '🔍', size: 'text-2xl', top: '28%', left: '7%', delay: '4s', duration: '21s' },
+    { emoji: '🧭', size: 'text-3xl', top: '60%', right: '4%', delay: '6s', duration: '23s' },
+    { emoji: '🗺️', size: 'text-2xl', top: '48%', right: '6%', delay: '1s', duration: '19s' },
+    // Nature elements
+    { emoji: '🍃', size: 'text-xl', top: '15%', left: '12%', delay: '7s', duration: '16s' },
+    { emoji: '🌿', size: 'text-2xl', top: '85%', left: '10%', delay: '9s', duration: '17s' },
+    { emoji: '🌲', size: 'text-3xl', top: '8%', right: '15%', delay: '0s', duration: '26s' },
+    { emoji: '🌳', size: 'text-2xl', top: '75%', right: '12%', delay: '4s', duration: '20s' },
+    // Stars and sparkles
+    { emoji: '✨', size: 'text-xl', top: '22%', left: '15%', delay: '2s', duration: '14s' },
+    { emoji: '⭐', size: 'text-lg', top: '35%', right: '10%', delay: '5s', duration: '15s' },
+    { emoji: '💫', size: 'text-xl', top: '55%', left: '8%', delay: '3s', duration: '13s' },
+    { emoji: '🌟', size: 'text-lg', top: '65%', right: '15%', delay: '7s', duration: '16s' },
+  ];
+
   return (
-    <div className="min-h-screen bg-sky-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden">
+      {/* Animated floating background elements - only show on setup page */}
+      {appState === AppState.SETUP && (
+        <>
+          {floatingElements.map((el, index) => (
+            <div
+              key={index}
+              className={`absolute ${el.size} opacity-30 dark:opacity-20 pointer-events-none select-none z-0`}
+              style={{
+                top: el.top,
+                left: el.left,
+                right: el.right,
+                animation: `float ${el.duration} ease-in-out infinite`,
+                animationDelay: el.delay,
+              }}
+            >
+              {el.emoji}
+            </div>
+          ))}
+        </>
+      )}
+
       <Header
         user={user}
         onLogout={handleLogout}
@@ -314,7 +359,7 @@ function App() {
         onProfileClick={() => setShowProfile(true)}
       />
 
-      <main>
+      <main className="relative z-10">
         {appState === AppState.SETUP && (
           <SetupView
             onSelectGrade={handleSelectGrade}
