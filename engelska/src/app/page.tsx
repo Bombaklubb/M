@@ -50,17 +50,24 @@ export default function HomePage() {
     ];
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 flex items-center justify-center p-4 gap-6">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-emerald-50 flex items-center justify-center p-4 gap-6">
 
         {/* Left: sprakdjungeln + sprakstaden */}
         <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
-          {stageCards.slice(0, 2).map((s) => (
-            <div key={s.name} className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative">
+          {stageCards.slice(0, 2).map((s, i) => (
+            <div
+              key={s.name}
+              className="rounded-3xl overflow-hidden aspect-[4/3] relative border-3 border-white/50 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+              style={{
+                boxShadow: "0 6px 0 0 rgba(99, 102, 241, 0.2), 0 10px 20px -4px rgba(99, 102, 241, 0.15)",
+                animation: `float 3s ease-in-out infinite ${i * 0.5}s`
+              }}
+            >
               <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="text-white font-bold text-sm leading-tight">{s.name}</p>
-                <p className="text-white/70 text-xs">{s.label}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-white font-bold text-base leading-tight drop-shadow-lg">{s.name}</p>
+                <p className="text-white/80 text-sm font-medium">{s.label}</p>
               </div>
             </div>
           ))}
@@ -70,25 +77,35 @@ export default function HomePage() {
         <div className="w-full max-w-md animate-slide-up flex-shrink-0">
           {/* Title */}
           <div className="text-center mb-6">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-emerald-500 shadow-xl shadow-emerald-900/40 mb-4 text-4xl">
+            <div
+              className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br from-emerald-400 to-emerald-600 mb-4 text-5xl animate-float border-4 border-emerald-300"
+              style={{
+                boxShadow: "0 8px 0 0 rgba(16, 185, 129, 0.4), 0 12px 24px -4px rgba(16, 185, 129, 0.3), inset 0 4px 8px 0 rgba(255, 255, 255, 0.4)"
+              }}
+            >
               🌿
             </div>
-            <h1 className="text-5xl font-black text-white text-shadow tracking-tight">
+            <h1 className="text-5xl font-black text-indigo-900 tracking-tight drop-shadow-sm">
               Engelskajakten
             </h1>
-            <p className="text-emerald-300 mt-2 text-base font-medium">
+            <p className="text-emerald-600 mt-2 text-lg font-bold">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
 
-          {/* Login form */}
-          <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1">Välkommen!</h2>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
+          {/* Login form - Clay card */}
+          <div
+            className="bg-white rounded-4xl p-8 border-3 border-indigo-100"
+            style={{
+              boxShadow: "0 8px 0 0 rgba(99, 102, 241, 0.15), 0 16px 32px -8px rgba(99, 102, 241, 0.2), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
+            }}
+          >
+            <h2 className="text-2xl font-bold text-indigo-900 mb-1">Välkommen!</h2>
+            <p className="text-indigo-400 text-base mb-6 font-medium">
               Skriv ditt namn för att börja eller fortsätta.
             </p>
 
-            <form onSubmit={handleLogin} className="space-y-4">
+            <form onSubmit={handleLogin} className="space-y-5">
               <input
                 type="text"
                 value={nameInput}
@@ -101,19 +118,24 @@ export default function HomePage() {
 
               {/* Avatar selection */}
               <div>
-                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Välj din karaktär</p>
-                <div className="grid grid-cols-5 gap-2">
+                <p className="text-base font-bold text-indigo-700 mb-3">Välj din karaktär</p>
+                <div className="grid grid-cols-5 gap-3">
                   {AVATARS.map((avatar) => (
                     <button
                       key={avatar.id}
                       type="button"
                       onClick={() => setSelectedAvatar(avatar.id)}
                       title={avatar.name}
-                      className={`aspect-square rounded-2xl flex items-center justify-center transition-all duration-150 overflow-hidden text-2xl ${
+                      className={`aspect-square rounded-2xl flex items-center justify-center transition-all duration-200 overflow-hidden text-2xl cursor-pointer border-3 ${
                         selectedAvatar === avatar.id
-                          ? "ring-3 ring-offset-2 ring-emerald-500 scale-110 shadow-lg bg-emerald-50 dark:bg-emerald-900/30"
-                          : "bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 hover:scale-105"
+                          ? "border-emerald-400 scale-110 bg-emerald-50"
+                          : "border-indigo-100 bg-indigo-50 hover:border-indigo-300 hover:scale-105"
                       }`}
+                      style={{
+                        boxShadow: selectedAvatar === avatar.id
+                          ? "0 4px 0 0 rgba(16, 185, 129, 0.3), 0 6px 12px -2px rgba(16, 185, 129, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                          : "0 3px 0 0 rgba(99, 102, 241, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                      }}
                     >
                       {avatar.image ? (
                         <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-1" />
@@ -123,7 +145,7 @@ export default function HomePage() {
                     </button>
                   ))}
                 </div>
-                <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400 mt-2 text-center">
+                <p className="text-sm font-bold text-emerald-600 mt-3 text-center">
                   {AVATARS.find((a) => a.id === selectedAvatar)?.name}
                 </p>
               </div>
@@ -131,9 +153,9 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                className="w-full btn-primary bg-emerald-500 hover:bg-emerald-600 active:scale-95 disabled:bg-gray-200 disabled:text-gray-400 text-lg py-4 rounded-2xl shadow-lg shadow-emerald-200 dark:shadow-none focus:ring-4 focus:ring-emerald-300"
+                className="w-full btn-primary bg-gradient-to-br from-emerald-400 to-emerald-600 hover:from-emerald-500 hover:to-emerald-700 disabled:from-gray-200 disabled:to-gray-300 disabled:text-gray-400 text-xl py-4 rounded-2xl border-3 border-emerald-300 disabled:border-gray-200"
               >
-                Starta jakten!
+                Starta jakten! 🚀
               </button>
             </form>
           </div>
@@ -141,13 +163,20 @@ export default function HomePage() {
 
         {/* Right: sprakarenan + sprakakademin */}
         <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
-          {stageCards.slice(2, 4).map((s) => (
-            <div key={s.name} className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative">
+          {stageCards.slice(2, 4).map((s, i) => (
+            <div
+              key={s.name}
+              className="rounded-3xl overflow-hidden aspect-[4/3] relative border-3 border-white/50 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+              style={{
+                boxShadow: "0 6px 0 0 rgba(99, 102, 241, 0.2), 0 10px 20px -4px rgba(99, 102, 241, 0.15)",
+                animation: `float 3s ease-in-out infinite ${(i + 2) * 0.5}s`
+              }}
+            >
               <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="text-white font-bold text-sm leading-tight">{s.name}</p>
-                <p className="text-white/70 text-xs">{s.label}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/70 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-white font-bold text-base leading-tight drop-shadow-lg">{s.name}</p>
+                <p className="text-white/80 text-sm font-medium">{s.label}</p>
               </div>
             </div>
           ))}
