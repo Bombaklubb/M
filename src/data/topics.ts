@@ -265,7 +265,7 @@ export const TOPICS: Topic[] = [
     color: 'from-amber-400 to-yellow-500',
     instruction: {
       title: 'Klockan – läsa och ställa in tid',
-      text: 'En klocka har två visare. Den KORTA (tjocka) mörka visaren visar timmar. Den LÅNGA (tunna) blå visaren visar minuter. En timme är 60 minuter. "Halv" betyder att halva timmen har gått = 30 minuter. Dra på klockan för att ställa in visarna!',
+      text: 'En klocka har två visare. Den KORTA (tjocka) mörka visaren visar timmar. Den LÅNGA (tunna) blå visaren visar minuter. En timme är 60 minuter. "Halv" betyder att halva timmen har gått = 30 minuter. Använd knapparna för att ställa in visarna!',
       illustration: 'clock',
       examples: [
         '🕐 Klockan 03:00 – kort visare på 3, lång visare på 12',
@@ -285,28 +285,26 @@ export const TOPICS: Topic[] = [
       // ── Läs klockan – hela timmar ─────────────────────────────────────────
       { id: 'klk-14', type: 'multiple-choice', clockDisplay: { hour: 7, minute: 0 }, question: 'Det är morgon. Vad visar klockan?', options: ['6:00', '7:00', '8:00', '12:07'], correctIndex: 1, points: 10, explanation: 'Den korta visaren pekar på 7, den långa pekar på 12. Det är klockan 7:00 (07:00 i 24h).' },
       { id: 'klk-15', type: 'multiple-choice', clockDisplay: { hour: 11, minute: 0 }, question: 'Det är förmiddag. Vad visar klockan?', options: ['10:00', '12:00', '11:00', '1:00'], correctIndex: 2, points: 10, explanation: 'Den korta visaren pekar på 11, den långa pekar på 12. Det är klockan 11:00 (11:00 i 24h).' },
-      { id: 'klk-16', type: 'fill-in', clockDisplay: { hour: 5, minute: 0 }, question: 'Det är tidigt på morgonen. Skriv vad klockan visar (t:mm)', answer: '5:00', acceptableAnswers: ['05:00'], points: 10, explanation: 'Den korta visaren pekar på 5, den långa på 12 → klockan 5:00 (05:00 i 24h).' },
+      { id: 'klk-16', type: 'fill-in', clockDisplay: { hour: 5, minute: 0 }, question: 'Det är tidigt på morgonen. Skriv vad klockan visar (tt:mm)', answer: '05:00', acceptableAnswers: ['5:00'], hint: 'Titta på klockan: den korta mörka visaren pekar på timmen, den långa blå pekar på 12 = 0 minuter. Skriv som tt:mm, t.ex. 05:00.', points: 10, explanation: 'Den korta visaren pekar på 5, den långa på 12 → klockan 05:00 (05:00 i 24h-format).' },
 
       // ── Läs klockan – halva timmar ────────────────────────────────────────
       { id: 'klk-17', type: 'multiple-choice', clockDisplay: { hour: 8, minute: 30 }, question: 'Det är morgon. Vad visar klockan?', options: ['8:00', '9:30', '8:30', '7:30'], correctIndex: 2, points: 10, explanation: 'Den korta visaren är halvvägs mellan 8 och 9. Den långa (blå) pekar på 6 = 30 minuter. Klockan är 8:30 (08:30 i 24h).' },
       { id: 'klk-18', type: 'multiple-choice', clockDisplay: { hour: 1, minute: 30 }, question: 'Det är eftermiddag. Hur säger man den här tiden på svenska?', options: ['Halv ett', 'Halv två', 'Halv tre', 'Kvart i två'], correctIndex: 1, points: 10, explanation: '1:30 em = halv två (13:30 i 24h). "Halv" = halvvägs INNAN nästa timme. Nästa timme är 2, alltså "halv två".' },
-      { id: 'klk-19', type: 'fill-in', clockDisplay: { hour: 10, minute: 30 }, question: 'Det är förmiddag. Skriv vad klockan visar (t:mm)', answer: '10:30', acceptableAnswers: ['halv elva'], points: 10, explanation: 'Den korta visaren pekar halvvägs mellan 10 och 11. Den långa på 6. Klockan 10:30 = halv elva (10:30 i 24h).' },
+      { id: 'klk-19', type: 'fill-in', clockDisplay: { hour: 10, minute: 30 }, question: 'Det är förmiddag. Skriv vad klockan visar (tt:mm)', answer: '10:30', acceptableAnswers: ['halv elva'], hint: 'Titta på klockan: den korta mörka visaren är halvvägs mellan 10 och 11. Den långa blå pekar på 6 = 30 minuter. Skriv som tt:mm.', points: 10, explanation: 'Den korta visaren pekar halvvägs mellan 10 och 11. Den långa på 6. Klockan 10:30 = halv elva (10:30 i 24h).' },
 
       // ── Läs klockan – kvartar ─────────────────────────────────────────────
       { id: 'klk-20', type: 'multiple-choice', clockDisplay: { hour: 4, minute: 15 }, question: 'Det är eftermiddag. Vad visar klockan?', options: ['15:15', '16:15', '16:45', '17:15'], correctIndex: 1, points: 10, explanation: 'Den korta visaren har passerat 4. Den långa (blå) pekar på 3 = 15 minuter. Klockan är 16:15 på eftermiddagen (kvart över 4).' },
       { id: 'klk-21', type: 'multiple-choice', clockDisplay: { hour: 2, minute: 45 }, question: 'Det är eftermiddag. Vad visar klockan?', options: ['14:15', '15:45', '14:45', '15:15'], correctIndex: 2, points: 10, explanation: 'Den korta visaren är nära 3. Den långa (blå) pekar på 9 = 45 minuter. Klockan är 14:45 på eftermiddagen (kvart i 3).' },
 
-      // ── Interaktiva klockuppgifter – hela timmar ──────────────────────────
-      { id: 'klk-6', type: 'clock-set', question: '⏰ Det är eftermiddag (15:00). Ställ klockan på 3:00 em — klockan tre', targetHour: 3, targetMinute: 0, points: 10, explanation: 'Klockan tre på eftermiddagen (15:00): den korta (mörka) visaren pekar på 3. Den långa (blå) pekar på 12.' },
-      { id: 'klk-7', type: 'clock-set', question: '⏰ Det är kväll (18:00). Ställ klockan på 6:00 em — klockan sex', targetHour: 6, targetMinute: 0, points: 10, explanation: 'Klockan sex på kvällen (18:00): den korta visaren pekar på 6. Den långa pekar på 12.' },
-      { id: 'klk-8', type: 'clock-set', question: '⏰ Det är förmiddag (09:00). Ställ klockan på 9:00 fm — klockan nio', targetHour: 9, targetMinute: 0, points: 10, explanation: 'Klockan nio på förmiddagen (09:00): den korta visaren pekar på 9. Den långa pekar på 12.' },
-      { id: 'klk-9', type: 'clock-set', question: '⏰ Det är mitt på dagen (12:00). Ställ klockan på 12:00', targetHour: 12, targetMinute: 0, points: 10, explanation: 'Klockan 12:00 mitt på dagen: BÅDA visarna pekar på 12!' },
-      // ── Interaktiva klockuppgifter – halva timmar ─────────────────────────
-      { id: 'klk-10', type: 'clock-set', question: '⏰ Det är natt (03:30). Ställ klockan på halv 4 — klockan 3:30', targetHour: 3, targetMinute: 30, points: 10, explanation: 'Halv fyra på natten (03:30): den korta visaren är halvvägs mellan 3 och 4. Den långa (blå) pekar på 6.' },
-      { id: 'klk-11', type: 'clock-set', question: '⏰ Det är morgon (06:30). Ställ klockan på halv 7 — klockan 6:30', targetHour: 6, targetMinute: 30, points: 10, explanation: 'Halv sju på morgonen (06:30): den korta visaren är halvvägs mellan 6 och 7. Den långa (blå) pekar på 6.' },
-      // ── Interaktiva klockuppgifter – kvartar ─────────────────────────────
-      { id: 'klk-12', type: 'clock-set', question: '⏰ Det är eftermiddag (14:15). Ställ klockan på kvart över 2 — klockan 2:15 em', targetHour: 2, targetMinute: 15, points: 10, explanation: 'Kvart = 15 minuter. Kvart över 2 på eftermiddagen (14:15). Den långa (blå) visaren pekar på 3.' },
-      { id: 'klk-13', type: 'clock-set', question: '⏰ Det är eftermiddag (17:45). Ställ klockan på kvart i 6 — klockan 5:45 em', targetHour: 5, targetMinute: 45, points: 10, explanation: 'Kvart i sex på eftermiddagen (17:45) = 15 minuter kvar till klockan sex. Den långa (blå) visaren pekar på 9.' },
+      // ── Interaktiva klockuppgifter ────────────────────────────────────────
+      { id: 'klk-6', type: 'clock-set', question: '⏰ Det är eftermiddag. Ställ klockan på 15:00.', targetHour: 3, targetMinute: 0, points: 10, explanation: 'Klockan 15:00 (tre på eftermiddagen): den korta (mörka) visaren pekar på 3. Den långa (blå) pekar på 12.' },
+      { id: 'klk-7', type: 'clock-set', question: '⏰ Det är eftermiddag. Ställ klockan på 15:20 (tjugo över tre).', targetHour: 3, targetMinute: 20, points: 10, explanation: 'Klockan 15:20: den korta visaren är lite förbi 3. Den långa (blå) visaren pekar på 4 = 20 minuter.' },
+      { id: 'klk-8', type: 'clock-set', question: '⏰ Det är förmiddag. Ställ klockan på 09:55 (fem i tio).', targetHour: 9, targetMinute: 55, points: 10, explanation: 'Klockan 09:55 = fem minuter kvar till 10:00. Den korta visaren är nära 10. Den långa (blå) pekar på 11 = 55 minuter.' },
+      { id: 'klk-9', type: 'clock-set', question: '⏰ Det är mitt på dagen. Ställ klockan på 12:00.', targetHour: 12, targetMinute: 0, points: 10, explanation: 'Klockan 12:00 mitt på dagen: BÅDA visarna pekar på 12!' },
+      { id: 'klk-10', type: 'clock-set', question: '⏰ Det är morgon. Ställ klockan på 06:10 (tio över sex).', targetHour: 6, targetMinute: 10, points: 10, explanation: 'Klockan 06:10: den korta visaren precis förbi 6. Den långa (blå) visaren pekar på 2 = 10 minuter.' },
+      { id: 'klk-11', type: 'clock-set', question: '⏰ Det är morgon. Ställ klockan på 08:40 (tjugo i nio).', targetHour: 8, targetMinute: 40, points: 10, explanation: 'Klockan 08:40 = 20 minuter kvar till 09:00. Den korta visaren är nära 9. Den långa (blå) visaren pekar på 8 = 40 minuter.' },
+      { id: 'klk-12', type: 'clock-set', question: '⏰ Det är eftermiddag. Ställ klockan på 16:05 (fem över fyra).', targetHour: 4, targetMinute: 5, points: 10, explanation: 'Klockan 16:05: den korta visaren precis förbi 4. Den långa (blå) visaren pekar på 1 = 5 minuter.' },
+      { id: 'klk-13', type: 'clock-set', question: '⏰ Det är kväll. Ställ klockan på 19:50 (tio i åtta).', targetHour: 7, targetMinute: 50, points: 10, explanation: 'Klockan 19:50 = tio minuter kvar till 20:00. Den korta visaren är nära 8. Den långa (blå) visaren pekar på 10 = 50 minuter.' },
     ],
   },
 
