@@ -17266,388 +17266,418 @@
   },
   {
     "id": "ak1-tema-001",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
-    "theme": "Natur & Miljö",
-    "title": "Fröet i fickan",
-    "text": "På rasten hittar Lina ett litet frö vid gungan. Hon stoppar fröet i fickan och visar det för sin kompis Noor. De går till skolans lilla odlingslåda. Där finns jord och en vattenkanna. Lina gör ett litet hål med fingret. Noor lägger fröet i hålet och täcker med jord. Sedan vattnar de försiktigt. \"Nu får vi vänta,\" säger Lina. De tittar på lådan varje dag för att se om något grönt kommer upp.",
+    "theme": "Hälsa",
+    "title": "I parken",
+    "text": "Ali går till parken efter skolan. Solen skiner och vinden är svag. I parken finns en rutschkana en gunga och ett stort träd. Ali möter sin vän Mira. De gungar högt och skrattar. Sedan äter de äppelbitar som Ali hade med sig hemifrån.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var hittade Lina fröet?",
+        "q": "Vart går Ali efter skolan?",
         "options": [
-          "Vid gungan",
-          "I klassrummet",
-          "I matsalen",
-          "Vid busshållplatsen"
+          "Till parken",
+          "Till affären",
+          "Till biblioteket",
+          "Till simhallen"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vem lägger fröet i hålet?",
+        "q": "Vem möter Ali i parken?",
         "options": [
-          "Lina",
-          "Noor",
-          "Läraren",
-          "Vaktmästaren"
+          "Sin lärare",
+          "Mira",
+          "Sin pappa",
+          "En granne"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad gör de efter att fröet är i jorden?",
+        "q": "Vad finns i parken?",
         "options": [
-          "De vattnar försiktigt",
-          "De tar upp fröet igen",
-          "De ritar en bild",
-          "De går hem direkt"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Varför säger Lina att de måste vänta?",
-        "options": [
-          "För att fröet behöver tid att växa",
-          "För att jorden är slut",
-          "För att vattenkannan är trasig på nytt",
-          "För att rasten är för kort"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad tittar de efter varje dag?",
-        "options": [
-          "En ny gunga",
-          "Något grönt som kommer upp",
-          "En ny vattenkanna",
-          "En boll som rullar på nytt"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inferens",
-        "q": "Vad handlar texten mest om?",
-        "options": [
-          "Att vinna en tävling så klart",
-          "Att plantera ett frö i skolan",
-          "Att bygga en koja",
-          "Att köpa nya kläder"
-        ],
-        "correct": 1
-      }
-    ],
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop"
-  },
-  {
-    "id": "ak1-tema-002",
-    "grade": 2,
-    "genre": "berättelse",
-    "theme": "Samhälle",
-    "title": "Bussen till badhuset",
-    "text": "På lördagen ska Amir och hans pappa åka buss till badhuset. Amir har packat badbyxor och en liten handduk. Vid hållplatsen blåser det lite kallt. Pappa håller upp busskortet när bussen kommer. De sätter sig längst fram. Amir tittar ut genom fönstret och räknar röda bilar. När de är framme ser Amir en stor skylt med en simmande fisk. \"Nu är vi här!\" säger pappa, och Amir ler.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Vilken dag åker Amir och pappa till badhuset?",
-        "options": [
-          "På lördagen",
-          "På måndagen",
-          "På onsdagen",
-          "På fredagen"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad har Amir packat?",
-        "options": [
-          "En mössa och en bok",
-          "Badbyxor och en liten handduk",
-          "En boll och en tröja",
-          "En lunchlåda och en penna på nytt"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Var sitter de på bussen?",
-        "options": [
-          "Längst bak på nytt",
-          "I mitten",
-          "Längst fram",
-          "På golvet"
+          "En pool",
+          "En buss",
+          "En rutschkana och en gunga",
+          "En biograf"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad gör Amir när han tittar ut genom fönstret?",
+        "q": "Vad gör Ali och Mira tillsammans?",
         "options": [
-          "Han sover",
-          "Han räknar röda bilar",
-          "Han läser en tidning",
-          "Han ropar till chauffören"
+          "De läser böcker",
+          "De spelar fotboll",
+          "De cyklar",
+          "De gungar och skrattar"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad ser Amir när de är framme?",
+        "q": "Vad äter de?",
         "options": [
-          "En stor skylt med en simmande fisk",
-          "En hög med snö",
-          "En cykel som vält på eget initiativ",
-          "En stor hund"
+          "Äppelbitar",
+          "Glass",
+          "Morötter",
+          "Smörgåsar"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Varför ler Amir på slutet?",
+        "type": "literal",
+        "q": "Hur är vädret?",
         "options": [
-          "För att han tappade busskortet på nytt",
-          "För att han är framme vid badhuset",
-          "För att vinden blev starkare",
-          "För att bussen körde fel"
+          "Det regnar",
+          "Solen skiner",
+          "Det snöar",
+          "Det stormar"
         ],
         "correct": 1
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=600&h=400&fit=crop",
+    "meta": {
+      "wordCount": 43,
+      "fingerprint": "ak1-tema-001-v2",
+      "generatedAt": "2026-03-13T00:00:00.000Z",
+      "model": "updated"
+    }
   },
   {
-    "id": "ak1-tema-003",
-    "grade": 2,
+    "id": "ak1-tema-002",
+    "grade": 1,
     "genre": "berättelse",
-    "theme": "Kultur",
-    "title": "Boken med stora bilder",
-    "text": "Alex går till biblioteket efter skolan. Alex säger \"hen\" när någon frågar. Vid dörren möter Alex sin granne Sam, som använder rullstol. De rullar och går tillsammans mellan hyllorna. En bibliotekarie visar en bok med stora bilder om djur. Alex väljer en sida med en uggla. Sam pekar på en räv. De sitter vid ett bord och bläddrar långsamt. När det är dags att gå hem lånar de boken och lovar att läsa mer nästa gång.",
+    "theme": "Samhälle",
+    "title": "Noor cyklar till skolan",
+    "text": "På morgonen cyklar Noor till skolan. Vägen går förbi en liten sjö. Ibland ser Noor ankor som simmar där. När hon kommer fram låser hon cykeln vid stället. Sedan går hon in i klassrummet och säger hej till läraren och sina vänner.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vart går Alex efter skolan?",
+        "q": "Hur tar Noor sig till skolan?",
         "options": [
-          "Till biblioteket",
-          "Till sjukhuset på nytt",
-          "Till en affär",
-          "Till en pool"
+          "Hon går",
+          "Hon åker buss",
+          "Hon cyklar",
+          "Hon springer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad finns vid vägen?",
+        "options": [
+          "En park",
+          "En fotbollsplan",
+          "En skog",
+          "En liten sjö"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilka djur ser Noor ibland?",
+        "options": [
+          "Ankor",
+          "Katter",
+          "Hästar",
+          "Hundar"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vem möter Alex vid dörren?",
+        "q": "Vad gör Noor när hon kommer fram?",
         "options": [
-          "En kusin",
-          "Sam",
-          "En hund",
+          "Hon låser cykeln",
+          "Hon äter frukt",
+          "Hon ringer hem",
+          "Hon leker"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var går Noor sedan?",
+        "options": [
+          "Till matsalen",
+          "Till gympasalen",
+          "Till klassrummet",
+          "Till biblioteket"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Noor till läraren och vännerna?",
+        "options": [
+          "Hej då",
+          "Tack",
+          "God natt",
+          "Hej"
+        ],
+        "correct": 3
+      }
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    "meta": {
+      "wordCount": 42,
+      "fingerprint": "ak1-tema-002-v2",
+      "generatedAt": "2026-03-13T00:00:00.000Z",
+      "model": "updated"
+    }
+  },
+  {
+    "id": "ak1-tema-003",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "Kultur",
+    "title": "Baka bröd",
+    "text": "Sam och deras morfar bakar bröd en lördag. Köket doftar varmt av mjöl och jäst. Sam rör i degen medan morfar formar små limpor. Katten Luna sitter på stolen och tittar. När brödet är klart äter de det med smör och ost.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem bakar tillsammans med Sam?",
+        "options": [
+          "En vän",
+          "Morfar",
+          "En granne",
           "En lärare"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad handlar boken om?",
+        "q": "Vad doftar i köket?",
         "options": [
-          "Bilar",
-          "Planeter",
-          "Djur",
-          "Mat"
+          "Soppa",
+          "Ris",
+          "Mjöl och jäst",
+          "Te"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vilket djur väljer Alex att titta på?",
+        "q": "Vad heter katten?",
         "options": [
-          "En katt på nytt",
-          "En uggla",
-          "En häst",
-          "En fisk"
+          "Milo",
+          "Bella",
+          "Tiger",
+          "Luna"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Sam med degen?",
+        "options": [
+          "Rör i den",
+          "Kastar den",
+          "Tvättar den",
+          "Målar den"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter katten?",
+        "options": [
+          "På golvet",
+          "På stolen",
+          "I fönstret",
+          "Under bordet"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad gör de vid bordet?",
+        "q": "Vad äter de på brödet?",
         "options": [
-          "De springer runt",
-          "De bläddrar långsamt i boken",
-          "De spelar fotboll av misstag",
-          "De målar väggar"
+          "Sylt",
+          "Choklad",
+          "Smör och ost",
+          "Glass"
         ],
-        "correct": 1
-      },
-      {
-        "type": "inferens",
-        "q": "Varför lånar de boken?",
-        "options": [
-          "För att ge bort den på nytt",
-          "För att läsa mer nästa gång",
-          "För att gömma den",
-          "För att riva sidor"
-        ],
-        "correct": 1
+        "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop",
+    "meta": {
+      "wordCount": 42,
+      "fingerprint": "ak1-tema-003-v2",
+      "generatedAt": "2026-03-13T00:00:00.000Z",
+      "model": "updated"
+    }
   },
   {
     "id": "ak1-tema-004",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
-    "theme": "Hälsa",
-    "title": "Pulkan i backen",
-    "text": "Det har snöat hela natten. På morgonen ser Maja att gården är vit. Hon tar på sig overall och varma vantar. Hennes storebror Leo drar fram en röd pulka. De går till en liten backe nära huset. Först åker Leo, och pulkan glider snabbt. Sedan är det Majas tur. Hon håller hårt i snöret och skrattar när hon kommer ner. De bygger en liten snögubbe också, innan de går in och dricker varm choklad.",
+    "theme": "Sport",
+    "title": "Basket på skolgården",
+    "text": "Elin spelar basket på skolgården tillsammans med sin vän Leo. Leo använder rullstol men kastar bollen mycket säkert. De turas om att skjuta mot korgen. Flera klasskamrater hejar. När bollen går i korgen ropar alla ja och skrattar efteråt också.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad har hänt under natten?",
+        "q": "Vilken sport spelar Elin och Leo?",
         "options": [
-          "Det har snöat",
-          "Det har regnat varmt",
-          "Det har varit åska",
-          "Det har blåst sand"
+          "Fotboll",
+          "Tennis",
+          "Handboll",
+          "Basket"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var spelar de?",
+        "options": [
+          "På skolgården",
+          "I skogen",
+          "Vid sjön",
+          "I biblioteket"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vilken färg har pulkan?",
+        "q": "Vad använder Leo?",
         "options": [
-          "Blå",
-          "Grön",
-          "Röd",
-          "Gul"
+          "Cykel",
+          "Rullstol",
+          "Skateboard",
+          "Sparkcykel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de mot korgen?",
+        "options": [
+          "Ritar",
+          "Springer",
+          "Skjuter bollen",
+          "Tvättar"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vem åker först i backen?",
+        "q": "Vad gör klasskamraterna?",
         "options": [
-          "Maja",
-          "Leo",
-          "En granne",
-          "En hund"
+          "De går hem",
+          "De läser",
+          "De äter",
+          "De hejar"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Hur känns det när Maja åker?",
+        "q": "Vad ropar alla när bollen går i?",
         "options": [
-          "Hon blir arg",
-          "Hon skrattar",
-          "Hon somnar",
-          "Hon blir helt tyst"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör de mer än att åka pulka?",
-        "options": [
-          "De planterar frön",
-          "De bygger en liten snögubbe",
-          "De målar ett staket på nytt",
-          "De fiskar i sjön"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad dricker de när de går in?",
-        "options": [
-          "Varm choklad",
-          "Kall saft",
-          "Mjölk med is",
-          "Citronvatten"
+          "Ja",
+          "Nej",
+          "Hallå",
+          "Stopp"
         ],
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1610208282647-1d0ab7e7f0fd?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&h=400&fit=crop",
+    "meta": {
+      "wordCount": 40,
+      "fingerprint": "ak1-tema-004-v2",
+      "generatedAt": "2026-03-13T00:00:00.000Z",
+      "model": "updated"
+    }
   },
   {
     "id": "ak1-tema-005",
-    "grade": 2,
+    "grade": 1,
     "genre": "berättelse",
-    "theme": "Natur & Miljö",
-    "title": "Sortera hemma",
-    "text": "I köket står tre lådor. En är för papper, en för plast och en för metall. Elin hjälper sin mamma att sortera. Hon håller i en tom yoghurtburk och tittar noga. \"Är det plast?\" frågar hon. Mamma nickar. Elin sköljer burken lite och lägger den i rätt låda. Sedan hittar hon en gammal konservburk. Den lägger hon i metall. När de är klara knyter de ihop påsen och går ut till återvinningsstationen tillsammans.",
+    "theme": "Kultur",
+    "title": "På biblioteket",
+    "text": "Familjen Kim åker buss till biblioteket på söndagen. Där finns många böcker och mjuka kuddar att sitta på. Minstingen Hana väljer en bok om djur. Storebror Min läser om rymden. Deras pappa hittar en kokbok som han vill prova hemma.",
     "questions": [
       {
         "type": "literal",
-        "q": "Hur många lådor står i köket?",
+        "q": "Hur åker familjen till biblioteket?",
         "options": [
-          "Två",
-          "Tre",
-          "Fyra",
-          "En"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad är en låda till?",
-        "options": [
-          "Papper",
-          "Godis",
-          "Kläder",
-          "Leksaker"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör Elin med yoghurtburken innan hon lägger den i lådan?",
-        "options": [
-          "Hon målar den",
-          "Hon sköljer den lite",
-          "Hon fyller den med vatten",
-          "Hon gömmer den"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Var lägger Elin konservburken?",
-        "options": [
-          "I papper",
-          "I plast",
-          "I metall",
-          "I soporna direkt"
+          "Med bil",
+          "Med cykel",
+          "Med buss",
+          "Till fots"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vart går de när de är klara?",
+        "q": "Vilken dag åker de dit?",
         "options": [
-          "Till skolan",
-          "Till återvinningsstationen",
-          "Till badhuset",
-          "Till lekparken av en slump"
+          "Måndag",
+          "Onsdag",
+          "Fredag",
+          "Söndag"
         ],
-        "correct": 1
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad väljer Hana?",
+        "options": [
+          "En bok om djur",
+          "En karta",
+          "En tidning",
+          "En film"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad läser Min om?",
+        "options": [
+          "Rymden",
+          "Havet",
+          "Tåg",
+          "Dinosaurier"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad hittar pappan?",
+        "options": [
+          "En sagobok",
+          "En sportbok",
+          "En kokbok",
+          "En historiebok"
+        ],
+        "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Vad handlar texten mest om?",
+        "q": "Vad vill han göra hemma?",
         "options": [
-          "Att baka bröd",
-          "Att sortera och återvinna",
-          "Att spela ett spel på nytt",
-          "Att köpa en cykel"
+          "Sova",
+          "Måla",
+          "Bygga",
+          "Prova laga mat"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&h=400&fit=crop",
+    "meta": {
+      "wordCount": 40,
+      "fingerprint": "ak1-tema-005-v2",
+      "generatedAt": "2026-03-13T00:00:00.000Z",
+      "model": "updated"
+    }
   },
   {
     "id": "ak1-tema-006",
@@ -29298,5 +29328,415 @@
       "model": "claude"
     },
     "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak3-tema-001",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Äppelträdet i trädgården",
+    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var står äppelträdet i berättelsen?",
+        "options": [
+          "I en trädgård i Uppsala",
+          "På en bondgård i Skåne",
+          "I en park i Stockholm",
+          "På en skolgård"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka plockar äpplena tillsammans med mormor?",
+        "options": [
+          "Amina och Sara",
+          "Amina och Leo",
+          "Leo och Amir",
+          "Amina och Lina"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg kan äpplen ha enligt texten?",
+        "options": [
+          "Blå",
+          "Lila",
+          "Röda, gröna eller gula",
+          "Svarta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Varför sparar familjen några äpplen i källaren?",
+        "options": [
+          "För att sälja dem senare",
+          "För att ge dem till skolan",
+          "För att gömma dem",
+          "För att de ska hålla längre"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gillar Leo att dricka efter skolan?",
+        "options": [
+          "Äppeljuice",
+          "Mjölk",
+          "Varm choklad",
+          "Apelsinjuice"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger mormor att äpplen är nyttiga?",
+        "options": [
+          "De växer snabbt",
+          "De innehåller vitaminer och fibrer",
+          "De är lätta att plocka",
+          "De luktar gott"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-001",
+      "generatedAt": "2026-03-13T12:58:05.127Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-002",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Besök i äppelodlingen",
+    "text": "En klass i årskurs tre åker på utflykt till en stor äppelodling. Odlingen ligger utanför en liten stad och där växer hundratals träd i långa rader. Guiden som möter eleverna heter Noor. Hen berättar hur man planterar ett äppelträd och hur lång tid det tar innan trädet börjar ge frukt. Eleverna får också lära sig att bin är viktiga eftersom de hjälper blommorna att bli till äpplen. Utan bin skulle skörden bli mycket mindre. Klassen får gå mellan träden och titta noga på frukterna. Vissa äpplen är fortfarande små medan andra nästan är färdiga att plocka. Till slut får alla elever plocka varsitt äpple och smaka. Många tycker att smaken är både söt och lite syrlig. Noor berättar att odlare måste arbeta hela året med sina träd. De beskär grenar, vattnar jorden och skyddar frukten mot skadedjur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vart åker klassen på utflykt?",
+        "options": [
+          "Till en äppelodling",
+          "Till ett museum",
+          "Till en strand",
+          "Till en sporthall"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter guiden som möter eleverna?",
+        "options": [
+          "Sara",
+          "Noor",
+          "Elin",
+          "Jonas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför är bin viktiga enligt texten?",
+        "options": [
+          "De äter skadedjur",
+          "De gör honung åt odlaren",
+          "De hjälper blommorna bli till äpplen",
+          "De skyddar träden från kyla"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad får eleverna göra i slutet av besöket?",
+        "options": [
+          "Plantera ett träd",
+          "Samla löv",
+          "Köpa juice",
+          "Plocka och smaka ett äpple"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur växer träden i odlingen?",
+        "options": [
+          "I långa rader",
+          "I små krukor",
+          "På ett berg",
+          "Inne i växthus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör odlare för att ta hand om träden?",
+        "options": [
+          "Målar stammen",
+          "Beskär grenar och vattnar",
+          "Flyttar träden varje år",
+          "Plockar alla blad"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-002",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-003",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "Äpplet som föll",
+    "text": "En dag sitter Samir i en park och gör sin läxa. Han sitter under ett stort äppelträd. Plötsligt faller ett äpple ner från en gren och landar i gräset bredvid honom. Samir plockar upp äpplet och tittar nyfiket på det. Han undrar varför äpplen alltid faller ner mot marken och inte upp mot himlen. Hans vän Maja, som också är i parken, säger att det beror på något som kallas tyngdkraft. Tyngdkraften drar allt mot jorden. Samir tycker att det låter spännande och bestämmer sig för att fråga sin lärare nästa dag. Innan de går hem delar Samir och Maja på äpplet. De tycker att det smakar friskt och lite syrligt. Samir tänker att ett enkelt äpple kan få människor att ställa stora frågor om hur världen fungerar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter Samir när berättelsen börjar?",
+        "options": [
+          "I en park under ett äppelträd",
+          "På en buss",
+          "I ett klassrum",
+          "På en fotbollsplan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer plötsligt i början av texten?",
+        "options": [
+          "Det börjar regna",
+          "Ett äpple faller ner",
+          "En hund springer förbi",
+          "En boll landar bredvid honom"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Maja att det beror på när äpplen faller?",
+        "options": [
+          "Vinden",
+          "Regnet",
+          "Tyngdkraften",
+          "Trädets rötter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Samir nästa dag enligt planen?",
+        "options": [
+          "Planterar ett träd",
+          "Går tillbaka till parken",
+          "Köper fler äpplen",
+          "Frågar sin lärare"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur smakar äpplet enligt barnen?",
+        "options": [
+          "Friskt och lite syrligt",
+          "Mycket salt",
+          "Väldigt bittert",
+          "Som choklad"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad får äpplet Samir att göra?",
+        "options": [
+          "Springa hem",
+          "Ställa stora frågor",
+          "Somna i parken",
+          "Rita ett träd"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-003",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-004",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "kultur",
+    "title": "Äppelpajen på caféet",
+    "text": "I en liten stad finns ett café som är känt för sin äppelpaj. Caféet drivs av Alex och deras pappa. Varje morgon skär de färska äpplen i tunna skivor. Sedan blandar de äpplena med lite socker och kanel. Doften sprider sig snabbt i köket. När pajen bakas i ugnen luktar hela caféet gott. Många gäster kommer just för att smaka pajen. En äldre kvinna säger att den påminner henne om när hon var barn. Alex tycker om att höra sådana berättelser från gästerna. Ibland hjälper Alex kompis Kim till efter skolan. Kim serverar pajen med lite vaniljsås. Gästerna sitter länge och pratar medan de äter. Alex tycker att äpplen är speciella eftersom de kan göra människor både mätta och glada.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är caféet känt för?",
+        "options": [
+          "Äppelpaj",
+          "Glass",
+          "Smörgåsar",
+          "Soppa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad blandar de med äpplena?",
+        "options": [
+          "Salt och peppar",
+          "Socker och kanel",
+          "Mjölk och honung",
+          "Ris och smör"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem hjälper ibland till efter skolan?",
+        "options": [
+          "Sara",
+          "Leo",
+          "Kim",
+          "Oskar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad serveras ofta till pajen?",
+        "options": [
+          "Grädde",
+          "Glass",
+          "Yoghurt",
+          "Vaniljsås"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad sprider sig i köket när de bakar?",
+        "options": [
+          "En god doft",
+          "Mycket rök",
+          "Kallt luftdrag",
+          "Höga ljud"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker Alex att äpplen är speciella?",
+        "options": [
+          "De växer snabbt",
+          "De gör människor mätta och glada",
+          "De är dyra att köpa",
+          "De finns bara på hösten"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-004",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-005",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Tävlingen med äpplen",
+    "text": "På skolans höstfest ordnar lärarna en rolig tävling med äpplen. Eleverna delas in i små lag. Varje lag får en skål med vatten där flera äpplen flyter. Uppgiften är att få upp ett äpple utan att använda händerna. Barnen måste istället försöka ta äpplet med munnen. Det blir mycket skratt när någon nästan lyckas men äpplet glider iväg igen. Läraren Maria förklarar att äpplen flyter eftersom de innehåller mycket luft inuti. Därför sjunker de inte till botten. Efter tävlingen får alla äta äpplena eller ta med dem hem. Vinnarlaget får också en liten korg med extra frukt. Många elever säger att det var den roligaste delen av hela höstfesten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När sker tävlingen?",
+        "options": [
+          "På skolans höstfest",
+          "På sommarlovet",
+          "Under en idrottslektion",
+          "På en klassresa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger äpplena i början av tävlingen?",
+        "options": [
+          "I en låda",
+          "I en skål med vatten",
+          "På ett bord",
+          "I en korg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur ska eleverna få upp äpplena?",
+        "options": [
+          "Med sked",
+          "Med händerna",
+          "Med munnen",
+          "Med en pinne"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Varför flyter äpplena enligt läraren?",
+        "options": [
+          "De är mycket kalla",
+          "De är täckta av skal",
+          "De är väldigt lätta",
+          "De innehåller mycket luft"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad får vinnarlaget?",
+        "options": [
+          "En korg med extra frukt",
+          "En fotboll",
+          "En bok",
+          "En medalj"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tycker många elever om tävlingen?",
+        "options": [
+          "Den var svårast",
+          "Den var roligast",
+          "Den var kortast",
+          "Den var tråkig"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-005",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
   }
 ]

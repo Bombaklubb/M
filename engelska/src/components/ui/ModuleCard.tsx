@@ -39,15 +39,22 @@ export default function ModuleCard({
 
   if (locked) {
     return (
-      <div className="rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 opacity-60 cursor-not-allowed select-none">
+      <div
+        className="rounded-2xl border-3 border-indigo-100 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 opacity-50 cursor-not-allowed select-none"
+        style={{
+          boxShadow: "0 3px 0 0 rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.5)"
+        }}
+      >
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-base flex-shrink-0">
+          <div
+            className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-gray-700 flex items-center justify-center text-lg flex-shrink-0 border-2 border-indigo-100 dark:border-gray-600"
+          >
             🔒
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-gray-500 dark:text-gray-400 text-sm">{title}</h3>
+            <h3 className="font-bold text-indigo-300 dark:text-gray-400 text-sm">{title}</h3>
             {prevModuleTitle && (
-              <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+              <p className="text-xs text-indigo-300 dark:text-gray-500 mt-0.5 font-medium">
                 Klara &quot;{prevModuleTitle}&quot; först
               </p>
             )}
@@ -60,20 +67,30 @@ export default function ModuleCard({
   return (
     <Link href={href} className="block group">
       <div
-        className={`rounded-2xl border-2 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-0.5 ${
+        className={`rounded-3xl border-3 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer ${
           progress?.completed
-            ? `${stage.borderClass} bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-750`
-            : "border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600"
+            ? `${stage.borderClass} bg-gradient-to-br from-white to-indigo-50/50`
+            : "border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
         }`}
+        style={{
+          boxShadow: progress?.completed
+            ? "0 5px 0 0 rgba(34, 197, 94, 0.25), 0 8px 16px -4px rgba(34, 197, 94, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+            : "0 4px 0 0 rgba(99, 102, 241, 0.15), 0 8px 16px -4px rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+        }}
       >
         <div className="flex items-center gap-4">
           {/* Icon */}
           <div
-            className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 transition-transform group-hover:scale-110 shadow-sm ${
+            className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-3 border-3 ${
               progress?.completed
-                ? stage.colorClass + " text-white shadow-md"
-                : "bg-gray-100 dark:bg-gray-700"
+                ? stage.colorClass + " text-white border-white/30"
+                : "bg-indigo-50 dark:bg-gray-700 border-indigo-100 dark:border-gray-600"
             }`}
+            style={{
+              boxShadow: progress?.completed
+                ? "0 3px 0 0 rgba(0, 0, 0, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.3)"
+                : "0 3px 0 0 rgba(99, 102, 241, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+            }}
           >
             {progress?.completed ? "✓" : icon}
           </div>
@@ -81,42 +98,49 @@ export default function ModuleCard({
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 text-sm truncate">{title}</h3>
+              <h3 className="font-bold text-indigo-900 dark:text-gray-100 text-base truncate">{title}</h3>
               {progress?.completed && (
-                <span className="badge bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs flex-shrink-0 font-semibold">
+                <span
+                  className="badge bg-emerald-100 text-emerald-700 text-xs flex-shrink-0 border-2 border-emerald-200"
+                  style={{ boxShadow: "0 2px 0 0 rgba(16, 185, 129, 0.2)" }}
+                >
                   ✓ Klar
                 </span>
               )}
-              <span className="badge bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500 text-xs ml-auto flex-shrink-0">
+              <span
+                className="badge bg-indigo-50 dark:bg-gray-700 text-indigo-400 dark:text-gray-400 text-xs ml-auto flex-shrink-0 border-2 border-indigo-100 dark:border-gray-600"
+              >
                 {kindLabel}
               </span>
             </div>
 
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 truncate">{description}</p>
+            <p className="text-sm text-indigo-400 dark:text-gray-400 mt-1 truncate font-medium">{description}</p>
 
             {/* Progress bar */}
-            <div className="mt-2.5 flex items-center gap-2">
+            <div className="mt-3 flex items-center gap-3">
               <div className="flex-1">
                 <ProgressBar
                   value={pct}
                   colorClass={
                     stage.id === "lagstadiet"
-                      ? "bg-jungle-500"
+                      ? "bg-gradient-to-r from-jungle-400 to-jungle-500"
                       : stage.id === "mellanstadiet"
-                      ? "bg-city-500"
+                      ? "bg-gradient-to-r from-city-400 to-city-500"
                       : stage.id === "hogstadiet"
-                      ? "bg-global-500"
-                      : "bg-summit-600"
+                      ? "bg-gradient-to-r from-global-400 to-global-500"
+                      : "bg-gradient-to-r from-summit-500 to-summit-600"
                   }
                 />
               </div>
               {progress && (
-                <span className="text-xs text-amber-600 dark:text-amber-400 font-semibold flex-shrink-0">
+                <span
+                  className="text-sm text-amber-600 dark:text-amber-400 font-bold flex-shrink-0 flex items-center gap-1"
+                >
                   ⭐ {progress.points}p
                 </span>
               )}
               {!progress && (
-                <span className="text-xs font-semibold flex-shrink-0 text-gray-400 dark:text-gray-500">
+                <span className="text-sm font-bold flex-shrink-0 text-indigo-400 dark:text-gray-500 group-hover:text-indigo-600 transition-colors">
                   Starta →
                 </span>
               )}

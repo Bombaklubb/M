@@ -192,39 +192,60 @@ function Illustration({ name }: { name: string }) {
     ),
     'clock': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#1e1b4b" rx="12"/>
-        {/* Clock face */}
-        <circle cx="100" cy="60" r="50" fill="#312e81" stroke="#6366f1" strokeWidth="2"/>
-        <circle cx="100" cy="60" r="46" fill="none" stroke="#4338ca" strokeWidth="0.5"/>
-        {/* Hour numbers */}
-        {[12,1,2,3,4,5,6,7,8,9,10,11].map((n, i) => {
-          const angle = (i * 30 - 90) * Math.PI / 180;
-          return (
-            <text key={n} x={100 + 38 * Math.cos(angle)} y={60 + 38 * Math.sin(angle) + 3}
-              textAnchor="middle" fontSize="9" fill="#a5b4fc" fontWeight="bold">{n}</text>
-          );
-        })}
-        {/* Tick marks */}
-        {Array.from({length: 60}, (_, i) => {
-          const angle = (i * 6 - 90) * Math.PI / 180;
-          const isMajor = i % 5 === 0;
-          const r1 = isMajor ? 42 : 44;
+        {/* Background */}
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Glow behind clock */}
+        <circle cx="62" cy="60" r="54" fill="#312e81" opacity="0.4"/>
+        {/* Clock face – warm cream, high contrast */}
+        <circle cx="62" cy="60" r="49" fill="#fffbf0" stroke="#fde68a" strokeWidth="3"/>
+        {/* Tick marks: 12 major */}
+        {Array.from({length: 12}, (_, i) => {
+          const a = (i / 12) * 2 * Math.PI;
+          const isMajor = i % 3 === 0;
+          const r1 = isMajor ? 40 : 44;
           return (
             <line key={i}
-              x1={100 + r1 * Math.cos(angle)} y1={60 + r1 * Math.sin(angle)}
-              x2={100 + 46 * Math.cos(angle)} y2={60 + 46 * Math.sin(angle)}
-              stroke={isMajor ? "#818cf8" : "#4338ca"} strokeWidth={isMajor ? 1.5 : 0.8}/>
+              x1={62 + r1 * Math.sin(a)} y1={60 - r1 * Math.cos(a)}
+              x2={62 + 48 * Math.sin(a)} y2={60 - 48 * Math.cos(a)}
+              stroke={isMajor ? "#374151" : "#9ca3af"}
+              strokeWidth={isMajor ? 2.5 : 1.2}
+              strokeLinecap="round"/>
           );
         })}
-        {/* Hour hand (short, dark) – pointing to 3 */}
-        <line x1="100" y1="60" x2="126" y2="60" stroke="#1e1b4b" strokeWidth="4" strokeLinecap="round"/>
-        {/* Minute hand (long, blue) – pointing to 12 */}
-        <line x1="100" y1="60" x2="100" y2="20" stroke="#60a5fa" strokeWidth="2.5" strokeLinecap="round"/>
+        {/* Hour numbers: 12, 3, 6, 9 */}
+        <text x="62" y="21" textAnchor="middle" fontSize="9" fontWeight="900" fill="#111827">12</text>
+        <text x="105" y="64" textAnchor="middle" fontSize="9" fontWeight="900" fill="#111827">3</text>
+        <text x="62" y="106" textAnchor="middle" fontSize="9" fontWeight="900" fill="#111827">6</text>
+        <text x="19" y="64" textAnchor="middle" fontSize="9" fontWeight="900" fill="#111827">9</text>
+        {/* Hour hand → 3:00 (pointing right) */}
+        <line x1="62" y1="60" x2="89" y2="60" stroke="#1e293b" strokeWidth="6" strokeLinecap="round"/>
+        {/* Minute hand ↑ 12:00 (pointing up) */}
+        <line x1="62" y1="60" x2="62" y2="20" stroke="#3b82f6" strokeWidth="4" strokeLinecap="round"/>
         {/* Center dot */}
-        <circle cx="100" cy="60" r="3" fill="#6366f1"/>
-        {/* Labels */}
-        <text x="148" y="63" fontSize="8" fill="#c7d2fe">← timmar</text>
-        <text x="103" y="18" fontSize="8" fill="#93c5fd">← minuter</text>
+        <circle cx="62" cy="60" r="5" fill="#1e293b"/>
+        <circle cx="62" cy="60" r="2.2" fill="#60a5fa"/>
+        {/* TIMMAR badge (amber) with arrow to hour hand */}
+        <rect x="103" y="52" width="56" height="18" rx="9" fill="#f59e0b"/>
+        <text x="131" y="62" textAnchor="middle" fontSize="8.5" fontWeight="900" fill="#1e293b">TIMMAR</text>
+        <polygon points="102,61 108,56 108,66" fill="#f59e0b"/>
+        <text x="112" y="79" fontSize="6.5" fontWeight="700" fill="#fcd34d">kort mörk visare</text>
+        {/* MINUTER badge (blue) with dashed line to minute hand tip */}
+        <rect x="98" y="13" width="60" height="18" rx="9" fill="#3b82f6"/>
+        <text x="128" y="23" textAnchor="middle" fontSize="8.5" fontWeight="900" fill="white">MINUTER</text>
+        <line x1="62" y1="20" x2="97" y2="21" stroke="#60a5fa" strokeWidth="1.5" strokeDasharray="3 2" strokeLinecap="round"/>
+        <circle cx="62" cy="20" r="3" fill="#60a5fa"/>
+        <text x="100" y="39" fontSize="6.5" fontWeight="700" fill="#93c5fd">lång blå visare</text>
+        {/* Digital display */}
+        <rect x="116" y="84" width="74" height="28" rx="10" fill="#0f2744" stroke="#3b82f6" strokeWidth="1.2"/>
+        <text x="153" y="96" textAnchor="middle" fontSize="7" fontWeight="700" fill="#60a5fa">Digitalt:</text>
+        <text x="153" y="108" textAnchor="middle" fontSize="12" fontWeight="900" fill="#fbbf24">03:00</text>
+        {/* Decorative stars */}
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.8"/>
+        <circle cx="14" cy="16" r="1.3" fill="#fbbf24" opacity="0.5"/>
+        <circle cx="4" cy="19" r="1.5" fill="#818cf8" opacity="0.6"/>
+        <circle cx="193" cy="7" r="1.8" fill="#60a5fa" opacity="0.7"/>
+        <circle cx="198" cy="15" r="1.2" fill="#fbbf24" opacity="0.4"/>
+        <circle cx="7" cy="108" r="1.5" fill="#34d399" opacity="0.6"/>
       </svg>
     ),
     'probability': (
@@ -238,6 +259,206 @@ function Illustration({ name }: { name: string }) {
         <text x="100" y="78" textAnchor="middle" fontSize="10" fill="#7e22ce">P(krona)=½</text>
         <text x="160" y="45" textAnchor="middle" fontSize="30">🪙</text>
         <text x="160" y="78" textAnchor="middle" fontSize="10" fill="#7e22ce">50%</text>
+      </svg>
+    ),
+
+    'number-line': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Glow */}
+        <rect x="15" y="50" width="170" height="22" rx="11" fill="#312e81" opacity="0.5"/>
+        {/* Main number line */}
+        <line x1="18" y1="61" x2="182" y2="61" stroke="#818cf8" strokeWidth="2.5"/>
+        {/* Left arrow */}
+        <polygon points="14,61 22,57 22,65" fill="#818cf8"/>
+        {/* Right arrow */}
+        <polygon points="186,61 178,57 178,65" fill="#818cf8"/>
+        {/* Tick marks and numbers 0–10 */}
+        {[0,1,2,3,4,5,6,7,8,9,10].map(n => {
+          const x = 22 + n * 16;
+          return (
+            <g key={n}>
+              <line x1={x} y1="55" x2={x} y2="67" stroke={n === 0 ? "#fbbf24" : n === 10 ? "#34d399" : "#a5b4fc"} strokeWidth={n === 0 || n === 10 ? 2.5 : 1.5}/>
+              <text x={x} y="78" textAnchor="middle" fontSize="8.5" fontWeight="900"
+                fill={n === 0 ? "#fbbf24" : n === 10 ? "#34d399" : "#c7d2fe"}>{n}</text>
+            </g>
+          );
+        })}
+        {/* Jump arc example: 3→6 */}
+        <path d="M 70 58 Q 87 30 102 58" fill="none" stroke="#f43f5e" strokeWidth="2" strokeLinecap="round"/>
+        <polygon points="102,58 97,50 106,51" fill="#f43f5e"/>
+        <text x="86" y="28" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#f43f5e">+3</text>
+        {/* Label */}
+        <text x="100" y="100" textAnchor="middle" fontSize="8" fontWeight="700" fill="#818cf8">Tallinjen</text>
+        {/* Stars */}
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="10" r="1.5" fill="#60a5fa" opacity="0.6"/>
+      </svg>
+    ),
+
+    'count-to-100': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* 10 rows of 10 blocks */}
+        {Array.from({length: 5}, (_, row) =>
+          Array.from({length: 10}, (_, col) => {
+            const n = row * 10 + col + 1;
+            const colors = ['#f43f5e','#f59e0b','#22c55e','#3b82f6','#a855f7'];
+            return (
+              <rect key={n} x={15 + col * 17} y={12 + row * 18} width="15" height="15" rx="3"
+                fill={colors[row]} opacity="0.85"/>
+            );
+          })
+        )}
+        {/* Labels */}
+        <text x="100" y="107" textAnchor="middle" fontSize="8" fontWeight="700" fill="#a5b4fc">10 × 10 = 100</text>
+        <text x="5" y="20" fontSize="7" fill="#f43f5e" fontWeight="700">10</text>
+        <text x="5" y="38" fontSize="7" fill="#f59e0b" fontWeight="700">20</text>
+        <text x="5" y="56" fontSize="7" fill="#22c55e" fontWeight="700">30</text>
+        <text x="5" y="74" fontSize="7" fill="#3b82f6" fontWeight="700">40</text>
+        <text x="5" y="92" fontSize="7" fill="#a855f7" fontWeight="700">50</text>
+        <circle cx="185" cy="10" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="18" r="1.5" fill="#60a5fa" opacity="0.5"/>
+      </svg>
+    ),
+
+    'units': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Ruler */}
+        <rect x="10" y="20" width="130" height="22" rx="4" fill="#fbbf24" opacity="0.9"/>
+        {[0,1,2,3,4,5,6,7,8,9,10,11,12].map(i => (
+          <g key={i}>
+            <line x1={10 + i * 10} y1="20" x2={10 + i * 10} y2={i % 5 === 0 ? 30 : 27} stroke="#1e293b" strokeWidth={i % 5 === 0 ? 2 : 1}/>
+            {i % 5 === 0 && <text key={`t${i}`} x={10 + i * 10} y="38" textAnchor="middle" fontSize="7" fontWeight="700" fill="#fbbf24">{i} cm</text>}
+          </g>
+        ))}
+        <text x="80" y="14" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#fcd34d">Linjal / cm</text>
+        {/* Weight scale icon */}
+        <circle cx="158" cy="38" r="18" fill="#312e81" stroke="#818cf8" strokeWidth="1.5"/>
+        <text x="158" y="34" textAnchor="middle" fontSize="8" fontWeight="700" fill="#a5b4fc">500 g</text>
+        <text x="158" y="44" textAnchor="middle" fontSize="6.5" fill="#c7d2fe">= 0,5 kg</text>
+        <text x="158" y="65" textAnchor="middle" fontSize="7" fill="#818cf8">Vikt</text>
+        {/* Liter bottle shape */}
+        <rect x="15" y="65" width="22" height="40" rx="5" fill="#0891b2" opacity="0.8"/>
+        <rect x="22" y="60" width="8" height="8" rx="2" fill="#0891b2"/>
+        <text x="26" y="90" textAnchor="middle" fontSize="7" fontWeight="900" fill="white">1 L</text>
+        <text x="26" y="112" textAnchor="middle" fontSize="7" fill="#60a5fa">Volym</text>
+        {/* Thermometer */}
+        <rect x="55" y="62" width="10" height="38" rx="5" fill="#1e293b" stroke="#f43f5e" strokeWidth="1.5"/>
+        <rect x="57" y="75" width="6" height="25" rx="3" fill="#f43f5e" opacity="0.9"/>
+        <circle cx="60" cy="100" r="6" fill="#f43f5e"/>
+        <text x="60" y="112" textAnchor="middle" fontSize="7" fill="#fca5a5">°C</text>
+        <text x="75" y="85" fontSize="6.5" fill="#f87171">Temp.</text>
+        {/* Stars */}
+        <circle cx="190" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="8" cy="112" r="1.5" fill="#34d399" opacity="0.6"/>
+      </svg>
+    ),
+
+    'perimeter': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Rectangle shape */}
+        <rect x="30" y="20" width="80" height="55" rx="4" fill="none" stroke="#22c55e" strokeWidth="3" strokeDasharray="5 3"/>
+        <rect x="30" y="20" width="80" height="55" rx="4" fill="#052e16" opacity="0.5"/>
+        {/* Side labels */}
+        <text x="70" y="15" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fbbf24">8 m</text>
+        <text x="70" y="85" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fbbf24">8 m</text>
+        <text x="22" y="50" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fbbf24">5 m</text>
+        <text x="118" y="50" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fbbf24">5 m</text>
+        {/* Arrows along sides */}
+        <line x1="30" y1="14" x2="110" y2="14" stroke="#22c55e" strokeWidth="1.5" strokeDasharray="none"/>
+        <polygon points="28,14 34,11 34,17" fill="#22c55e"/>
+        <polygon points="112,14 106,11 106,17" fill="#22c55e"/>
+        {/* Formula */}
+        <rect x="130" y="25" width="62" height="52" rx="10" fill="#1e3a1e" stroke="#22c55e" strokeWidth="1.2"/>
+        <text x="161" y="42" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#86efac">Omkrets =</text>
+        <text x="161" y="56" textAnchor="middle" fontSize="8" fontWeight="900" fill="#fbbf24">2×(l+b)</text>
+        <text x="161" y="70" textAnchor="middle" fontSize="7.5" fill="#86efac">= 2×(8+5)</text>
+        <text x="161" y="82" textAnchor="middle" fontSize="9" fontWeight="900" fill="#34d399">= 26 m</text>
+        {/* Stars */}
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="112" r="1.5" fill="#34d399" opacity="0.6"/>
+        <text x="100" y="110" textAnchor="middle" fontSize="8" fontWeight="700" fill="#4ade80">Omkrets</text>
+      </svg>
+    ),
+
+    'fraction': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#fff7ed" rx="12"/>
+        <circle cx="40" cy="60" r="30" fill="none" stroke="#f97316" strokeWidth="3"/>
+        <path d="M40,30 A30,30 0 0,1 70,60 L40,60 Z" fill="#fb923c" opacity="0.8"/>
+        <text x="40" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">¼</text>
+        <circle cx="110" cy="60" r="30" fill="none" stroke="#f97316" strokeWidth="3"/>
+        <path d="M110,30 A30,30 0 0,1 140,60 L110,60 Z" fill="#fb923c" opacity="0.8"/>
+        <path d="M110,60 L140,60 A30,30 0 0,1 110,90 Z" fill="#fb923c" opacity="0.8"/>
+        <text x="110" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">½</text>
+        <circle cx="170" cy="60" r="22" fill="#fb923c" opacity="0.8"/>
+        <text x="170" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">Hel!</text>
+      </svg>
+    ),
+
+    'matematik-begrepp': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Colorful math symbol badges */}
+        <rect x="8" y="12" width="32" height="32" rx="10" fill="#f43f5e" opacity="0.9"/>
+        <text x="24" y="32" textAnchor="middle" fontSize="20" fontWeight="900" fill="white">+</text>
+        <rect x="48" y="12" width="32" height="32" rx="10" fill="#f59e0b" opacity="0.9"/>
+        <text x="64" y="32" textAnchor="middle" fontSize="20" fontWeight="900" fill="white">−</text>
+        <rect x="88" y="12" width="32" height="32" rx="10" fill="#22c55e" opacity="0.9"/>
+        <text x="104" y="32" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">×</text>
+        <rect x="128" y="12" width="32" height="32" rx="10" fill="#3b82f6" opacity="0.9"/>
+        <text x="144" y="32" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">÷</text>
+        <rect x="168" y="12" width="24" height="32" rx="10" fill="#a855f7" opacity="0.9"/>
+        <text x="180" y="32" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">=</text>
+        {/* Second row */}
+        <rect x="8" y="54" width="32" height="32" rx="10" fill="#06b6d4" opacity="0.9"/>
+        <text x="24" y="74" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">&lt;</text>
+        <rect x="48" y="54" width="32" height="32" rx="10" fill="#ec4899" opacity="0.9"/>
+        <text x="64" y="74" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">&gt;</text>
+        <rect x="88" y="54" width="32" height="32" rx="10" fill="#f97316" opacity="0.9"/>
+        <text x="104" y="74" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">?</text>
+        <rect x="128" y="54" width="32" height="32" rx="10" fill="#84cc16" opacity="0.9"/>
+        <text x="144" y="74" textAnchor="middle" fontSize="16" fontWeight="900" fill="white">%</text>
+        <rect x="168" y="54" width="24" height="32" rx="10" fill="#f43f5e" opacity="0.9"/>
+        <text x="180" y="74" textAnchor="middle" fontSize="18" fontWeight="900" fill="white">π</text>
+        {/* Label */}
+        <text x="100" y="105" textAnchor="middle" fontSize="9" fontWeight="700" fill="#a5b4fc">Matematiska begrepp</text>
+        {/* Stars */}
+        <circle cx="6" cy="108" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="194" cy="108" r="2" fill="#60a5fa" opacity="0.7"/>
+      </svg>
+    ),
+
+    'rimlighetsoevning': (
+      <svg viewBox="0 0 200 120" className="w-full h-full">
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Balance beam */}
+        <rect x="95" y="55" width="10" height="40" rx="3" fill="#818cf8"/>
+        <circle cx="100" cy="98" r="10" fill="#4338ca" stroke="#6366f1" strokeWidth="1.5"/>
+        {/* Beam */}
+        <rect x="20" y="52" width="160" height="6" rx="3" fill="#6366f1"/>
+        {/* Left pan */}
+        <line x1="35" y1="58" x2="35" y2="72" stroke="#60a5fa" strokeWidth="2"/>
+        <line x1="25" y1="58" x2="45" y2="58" stroke="#60a5fa" strokeWidth="1.5"/>
+        <rect x="18" y="72" width="34" height="22" rx="6" fill="#22c55e" opacity="0.8"/>
+        <text x="35" y="86" textAnchor="middle" fontSize="8" fontWeight="900" fill="white">Rimligt?</text>
+        {/* Right pan */}
+        <line x1="165" y1="58" x2="165" y2="72" stroke="#60a5fa" strokeWidth="2"/>
+        <line x1="155" y1="58" x2="175" y2="58" stroke="#60a5fa" strokeWidth="1.5"/>
+        <rect x="148" y="72" width="34" height="22" rx="6" fill="#f43f5e" opacity="0.8"/>
+        <text x="165" y="86" textAnchor="middle" fontSize="8" fontWeight="900" fill="white">Orimligt?</text>
+        {/* Question marks */}
+        <text x="35" y="48" textAnchor="middle" fontSize="18" fontWeight="900" fill="#fbbf24">?</text>
+        <text x="165" y="48" textAnchor="middle" fontSize="18" fontWeight="900" fill="#f87171">!</text>
+        {/* Label */}
+        <text x="100" y="112" textAnchor="middle" fontSize="8" fontWeight="700" fill="#a5b4fc">Är det rimligt?</text>
+        {/* Stars */}
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#60a5fa" opacity="0.6"/>
+        <circle cx="8" cy="18" r="1.2" fill="#818cf8" opacity="0.5"/>
       </svg>
     ),
   };

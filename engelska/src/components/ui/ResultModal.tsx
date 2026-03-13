@@ -38,15 +38,20 @@ export default function ResultModal({
   const passed = pct >= 60;
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
-      <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-md w-full text-center animate-slide-up">
-        <div className="text-6xl mb-4">{passed ? "🎉" : "💪"}</div>
+    <div className="fixed inset-0 bg-indigo-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
+      <div
+        className="bg-white dark:bg-gray-800 rounded-4xl p-8 max-w-md w-full text-center animate-slide-up border-4 border-indigo-100 dark:border-gray-700"
+        style={{
+          boxShadow: "0 10px 0 0 rgba(99, 102, 241, 0.15), 0 20px 40px -8px rgba(99, 102, 241, 0.25), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
+        }}
+      >
+        <div className="text-7xl mb-4 animate-bounce-slow">{passed ? "🎉" : "💪"}</div>
 
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-3xl font-black text-indigo-900 dark:text-gray-100 mb-2">
           {passed ? "Bra jobbat!" : "Försök igen!"}
         </h2>
 
-        <p className="text-gray-500 dark:text-gray-400 mb-6">
+        <p className="text-indigo-400 dark:text-gray-400 mb-6 text-lg font-medium">
           {passed
             ? "Du klarade övningen med godkänt resultat."
             : "Du är nästan framme – öva lite till!"}
@@ -55,30 +60,40 @@ export default function ResultModal({
         {/* Score ring */}
         <div className="flex justify-center mb-6">
           <div
-            className={`w-28 h-28 rounded-full flex flex-col items-center justify-center border-8 ${
-              passed ? "border-green-400 bg-green-50 dark:bg-green-900/30" : "border-orange-400 bg-orange-50 dark:bg-orange-900/30"
+            className={`w-32 h-32 rounded-full flex flex-col items-center justify-center border-4 ${
+              passed ? "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/30" : "border-orange-400 bg-orange-50 dark:bg-orange-900/30"
             }`}
+            style={{
+              boxShadow: passed
+                ? "0 6px 0 0 rgba(16, 185, 129, 0.3), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
+                : "0 6px 0 0 rgba(251, 146, 60, 0.3), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
+            }}
           >
-            <span className={`text-3xl font-black ${passed ? "text-green-600 dark:text-green-400" : "text-orange-600 dark:text-orange-400"}`}>
+            <span className={`text-4xl font-black ${passed ? "text-emerald-600 dark:text-emerald-400" : "text-orange-600 dark:text-orange-400"}`}>
               {pct}%
             </span>
-            <span className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+            <span className="text-sm text-indigo-400 dark:text-gray-400 mt-1 font-bold">
               {totalCorrect}/{totalQuestions}
             </span>
           </div>
         </div>
 
         {/* Points */}
-        <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 rounded-2xl p-4 mb-6">
-          <div className="flex items-center justify-center gap-2 text-amber-700 dark:text-amber-300">
-            <span className="text-2xl">⭐</span>
+        <div
+          className="bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-3 border-amber-300 dark:border-amber-700 rounded-2xl p-5 mb-6"
+          style={{
+            boxShadow: "0 4px 0 0 rgba(245, 158, 11, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+          }}
+        >
+          <div className="flex items-center justify-center gap-3 text-amber-700 dark:text-amber-300">
+            <span className="text-3xl">⭐</span>
             <div>
-              <span className="text-2xl font-black">{points}</span>
-              <span className="text-sm ml-1">poäng</span>
+              <span className="text-3xl font-black">{points}</span>
+              <span className="text-lg ml-1 font-bold">poäng</span>
             </div>
           </div>
           {bonusPoints > 0 && passed && (
-            <p className="text-xs text-amber-600 dark:text-amber-400 mt-1">
+            <p className="text-sm text-amber-600 dark:text-amber-400 mt-2 font-bold">
               + {bonusPoints} bonuspoäng för godkänt! 🏆
             </p>
           )}
@@ -115,16 +130,16 @@ export default function ResultModal({
         )}
 
         {/* Buttons */}
-        <div className="flex gap-3">
+        <div className="flex gap-4">
           <button
             onClick={onRetry}
-            className="flex-1 btn-secondary border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+            className="flex-1 btn-secondary border-indigo-200 dark:border-gray-600 text-indigo-600 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-700"
           >
             🔄 Försök igen
           </button>
           <button
             onClick={onContinue}
-            className="flex-1 btn-primary bg-blue-500 hover:bg-blue-600"
+            className="flex-1 btn-primary bg-gradient-to-br from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 border-3 border-indigo-400"
           >
             Fortsätt →
           </button>

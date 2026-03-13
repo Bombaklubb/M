@@ -35,19 +35,29 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function buildQuestions(topicIds: string[]): SluttestQuestion[] {
+function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestion[] {
   const topics = topicIds
     .map(id => TOPICS.find(t => t.id === id))
     .filter(Boolean) as Topic[];
   if (topics.length === 0) return [];
-  const qPerTopic = topics.length <= 6 ? 3 : topics.length <= 10 ? 2 : 1;
+
+  // Scale questions per topic so total is at least 25
+  const qPerTopic = topics.length <= 6 ? 4 : topics.length <= 12 ? 3 : topics.length <= 20 ? 2 : 1;
+
   const all: SluttestQuestion[] = [];
   for (const topic of topics) {
-    for (const ex of shuffle(topic.exercises).slice(0, qPerTopic)) {
+    // For lågstadiet: only pick from the easier first 60% of each topic's exercises
+    const pool = easierPool
+      ? topic.exercises.slice(0, Math.max(3, Math.ceil(topic.exercises.length * 0.6)))
+      : topic.exercises;
+    for (const ex of shuffle(pool).slice(0, qPerTopic)) {
       all.push({ exercise: ex, topic });
     }
   }
-  return shuffle(all).slice(0, 20);
+
+  // Target 25–30 questions
+  const target = Math.min(Math.max(25, all.length), 30);
+  return shuffle(all).slice(0, target);
 }
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
@@ -59,7 +69,7 @@ export default function SluttestView() {
 
   const world = WORLDS.find(w => w.id === sluttestWorldId);
   const questions = useMemo(
-    () => (world ? buildQuestions(world.topicIds) : []),
+    () => (world ? buildQuestions(world.topicIds, world.maxGrade <= 3) : []),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [sluttestWorldId]
   );
