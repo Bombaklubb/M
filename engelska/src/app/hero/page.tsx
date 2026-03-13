@@ -11,7 +11,6 @@ import { loadStudent, saveStudent } from "@/lib/storage";
 import {
   HERO_TYPES,
   HERO_ATTRIBUTES,
-  SKIN_TONE_LABELS,
   ATTRIBUTE_TYPE_LABELS,
   isAttributeUnlocked,
   type HeroAttribute,
@@ -19,21 +18,22 @@ import {
 import type { StudentData, SkinTone, HeroConfig } from "@/lib/types";
 
 type AttrTab = HeroAttribute["type"];
-type Gender = "boy" | "girl";
 
 /** Visar AI-genererad PNG om den finns, annars SVG-fallback */
 function HeroAvatarImage({
-  heroId, gender, skinTone, size, className,
+  heroId, size, className,
 }: {
-  heroId: string; gender: Gender; skinTone: SkinTone; size: number; className?: string;
+  heroId: string; size: number; className?: string;
 }) {
+  const gender = "boy";
+  const skinTone: SkinTone = "light";
   const [imgFailed, setImgFailed] = useState(false);
   const src = `/images/avatars/hero/hero-${gender}-${heroId}.png`;
   if (!imgFailed) {
     return (
       <Image
         src={src}
-        alt={`${gender}-${heroId}`}
+        alt={heroId}
         width={size}
         height={size}
         className={className}
@@ -44,16 +44,9 @@ function HeroAvatarImage({
     );
   }
   return (
-    <HeroAvatar heroId={heroId} skinTone={skinTone} gender={gender} equippedAttributes={[]} size={size} />
+    <HeroAvatar heroId={heroId} skinTone="light" gender="boy" equippedAttributes={[]} size={size} />
   );
 }
-
-const SKIN_TONES: SkinTone[] = ["light", "light_brown", "dark"];
-const SKIN_PREVIEW: Record<SkinTone, string> = {
-  light:       "#FDDBB4",
-  light_brown: "#C58540",
-  dark:        "#7B4828",
-};
 
 const HERO_GRADIENT: Record<string, { from: string; to: string; glow: string }> = {
   explorer:   { from: "#FEF3C7", to: "#FDE68A", glow: "#F59E0B" },
@@ -74,6 +67,7 @@ export default function HeroPage() {
     gender: "boy",
     equippedAttributes: [],
   });
+
   const [activeTab, setActiveTab] = useState<AttrTab>("hat");
 
   useEffect(() => {
@@ -119,7 +113,6 @@ export default function HeroPage() {
     );
   }
 
-  const gender: Gender = hero.gender ?? "boy";
   const g = HERO_GRADIENT[hero.heroId] ?? HERO_GRADIENT.explorer;
 
   return (
@@ -167,8 +160,8 @@ export default function HeroPage() {
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full opacity-10" style={{ background: g.glow }} />
                 <HeroAvatar
                   heroId={hero.heroId}
-                  skinTone={hero.skinTone}
-                  gender={gender}
+                  skinTone="light"
+                  gender="boy"
                   equippedAttributes={hero.equippedAttributes}
                   size={130}
                 />
@@ -176,29 +169,6 @@ export default function HeroPage() {
               <p className="font-black text-gray-900 dark:text-gray-100 text-base tracking-tight">
                 {HERO_TYPES.find((h) => h.id === hero.heroId)?.name_sv ?? hero.heroId}
               </p>
-              <p className="text-xs text-gray-400">
-                {gender === "girl" ? "Flicka" : "Pojke"} · {SKIN_TONE_LABELS[hero.skinTone]}
-              </p>
-            </div>
-
-            {/* Skin tone */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-3 w-full">
-              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Hudton</p>
-              <div className="flex gap-2 justify-center">
-                {SKIN_TONES.map((tone) => (
-                  <button
-                    key={tone}
-                    onClick={() => save({ ...hero, skinTone: tone })}
-                    title={SKIN_TONE_LABELS[tone]}
-                    className={`w-10 h-10 rounded-full border-2 transition-all ${
-                      hero.skinTone === tone
-                        ? "border-blue-500 scale-110 shadow"
-                        : "border-gray-200 dark:border-gray-600 hover:scale-105"
-                    }`}
-                    style={{ backgroundColor: SKIN_PREVIEW[tone] }}
-                  />
-                ))}
-              </div>
             </div>
 
             {/* Equipped items summary */}
@@ -222,21 +192,18 @@ export default function HeroPage() {
           {/* ── RIGHT: Avatar grid + items ────────────────────────────────────── */}
           <div className="flex-1 flex flex-col gap-4">
 
-            {/* 14 base avatars: 7 boys + 7 girls */}
+            {/* Hero selection */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-4">
               <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">Välj hjälte</p>
-
-              {/* Boys row */}
-              <p className="text-xs text-gray-400 dark:text-gray-500 mb-1.5 font-medium">Pojkar</p>
-              <div className="grid grid-cols-7 gap-1.5 mb-3">
+              <div className="grid grid-cols-7 gap-1.5">
                 {HERO_TYPES.map((h) => {
                   const locked = student.totalPoints < h.unlock_points;
-                  const active = hero.heroId === h.id && gender === "boy";
+                  const active = hero.heroId === h.id;
                   return (
                     <button
-                      key={`boy-${h.id}`}
+                      key={h.id}
                       disabled={locked}
-                      onClick={() => !locked && save({ ...hero, heroId: h.id, gender: "boy" })}
+                      onClick={() => !locked && save({ ...hero, heroId: h.id })}
                       title={locked ? `🔒 ${h.unlock_points}p krävs` : h.name_sv}
                       className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border-2 transition-all ${
                         active
@@ -247,57 +214,13 @@ export default function HeroPage() {
                       }`}
                     >
                       <div className={locked ? "grayscale" : ""}>
-                        <HeroAvatarImage
-                          heroId={h.id}
-                          skinTone={hero.skinTone}
-                          gender="boy"
-                          size={46}
-                        />
+                        <HeroAvatarImage heroId={h.id} size={46} />
                       </div>
                       {locked && (
                         <span className="absolute top-0.5 right-0.5 text-xs leading-none">🔒</span>
                       )}
                       {active && (
                         <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-bold leading-none">✓</span>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Girls row */}
-              <p className="text-xs text-gray-400 dark:text-gray-500 mb-1.5 font-medium">Flickor</p>
-              <div className="grid grid-cols-7 gap-1.5">
-                {HERO_TYPES.map((h) => {
-                  const locked = student.totalPoints < h.unlock_points;
-                  const active = hero.heroId === h.id && gender === "girl";
-                  return (
-                    <button
-                      key={`girl-${h.id}`}
-                      disabled={locked}
-                      onClick={() => !locked && save({ ...hero, heroId: h.id, gender: "girl" })}
-                      title={locked ? `🔒 ${h.unlock_points}p krävs` : h.name_sv}
-                      className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border-2 transition-all ${
-                        active
-                          ? "border-pink-500 bg-pink-50 dark:bg-pink-900/30 ring-2 ring-offset-1 ring-pink-400 scale-105 shadow-md"
-                          : locked
-                          ? "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-50 cursor-not-allowed"
-                          : "border-gray-100 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-600 hover:scale-105 hover:shadow cursor-pointer"
-                      }`}
-                    >
-                      <div className={locked ? "grayscale" : ""}>
-                        <HeroAvatarImage
-                          heroId={h.id}
-                          skinTone={hero.skinTone}
-                          gender="girl"
-                          size={46}
-                        />
-                      </div>
-                      {locked && (
-                        <span className="absolute top-0.5 right-0.5 text-xs leading-none">🔒</span>
-                      )}
-                      {active && (
-                        <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-bold leading-none">✓</span>
                       )}
                     </button>
                   );
