@@ -324,15 +324,9 @@ export default function KistorPage() {
             )}
           </h2>
           {unopened.length === 0 ? (
-            <div
-              className="rounded-3xl p-8 text-center"
-              style={{
-                border: "2px dashed #d1d5db",
-                background: "rgba(249,250,251,0.8)",
-              }}
-            >
+            <div className="rounded-3xl p-8 text-center border-2 border-dashed border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800">
               <p className="text-5xl mb-3">🏅</p>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Inga kistor just nu. Slutför övningar för att tjäna kistor!
               </p>
             </div>
@@ -393,34 +387,26 @@ export default function KistorPage() {
         )}
 
         {/* How to earn chests */}
-        <section
-          className="rounded-3xl p-5"
-          style={{
-            background: "linear-gradient(135deg, #eff6ff, #dbeafe)",
-            border: "2px solid #93c5fd",
-          }}
-        >
+        <section className="rounded-3xl p-5 bg-blue-50 dark:bg-blue-950 border-2 border-blue-200 dark:border-blue-700">
           <h3 className="font-bold text-blue-900 dark:text-blue-100 mb-3 flex items-center gap-2">
             <span>💡</span> Hur tjänar man kistor?
           </h3>
-          <ul className="space-y-2 text-sm text-blue-800 dark:text-blue-200">
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 mt-0.5">📦</span>
-              <span><strong>Trälåda:</strong> Samla 100 poäng eller slutför 5 övningar</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 mt-0.5">🪙</span>
-              <span><strong>Silverlåda:</strong> Samla 300 poäng eller slutför 15 övningar</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 mt-0.5">🏆</span>
-              <span><strong>Guldlåda:</strong> Samla 1000 poäng eller slutför 30 övningar</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-blue-500 mt-0.5">🎁</span>
-              <span><strong>Mysterylåda:</strong> Slumpmässig chans efter varje övning!</span>
-            </li>
+          <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-2">Poängmilstolpar</p>
+          <ul className="space-y-1.5 text-sm text-blue-900 dark:text-blue-100 mb-4">
+            <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> 100, 200, 600 poäng</span></li>
+            <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> 300, 500, 750, 1 500, 2 000 poäng</span></li>
+            <li className="flex items-start gap-2"><span>🏆</span><span><strong>Guldlåda:</strong> 1 000, 2 500, 3 500, 5 000, 7 000, 10 000, 15 000 poäng</span></li>
           </ul>
+          <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-2">Övningsmilstolpar</p>
+          <ul className="space-y-1.5 text-sm text-blue-900 dark:text-blue-100 mb-4">
+            <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> 5, 10 övningar</span></li>
+            <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> 15, 20, 40 övningar</span></li>
+            <li className="flex items-start gap-2"><span>🏆</span><span><strong>Guldlåda:</strong> 30, 60, 75, 100, 150 övningar</span></li>
+          </ul>
+          <div className="flex items-start gap-2 text-sm text-blue-900 dark:text-blue-100 pt-2 border-t border-blue-200 dark:border-blue-700">
+            <span>🎁</span>
+            <span><strong>Mysterylåda:</strong> Slumpmässig chans efter varje övning!</span>
+          </div>
         </section>
       </main>
 

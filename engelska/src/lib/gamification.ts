@@ -11,20 +11,35 @@ export const BOSS_UNLOCK_THRESHOLD = 5; // exercises needed to unlock boss
 export const MYSTERY_BOX_CHANCE = 0.15; // 15% chance after each exercise
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
-  { points: 100, type: "wood" },
-  { points: 300, type: "silver" },
-  { points: 600, type: "wood" },
-  { points: 1000, type: "gold" },
-  { points: 1500, type: "silver" },
-  { points: 2500, type: "gold" },
+  { points: 100,   type: "wood" },
+  { points: 200,   type: "wood" },    // NEW
+  { points: 300,   type: "silver" },
+  { points: 500,   type: "silver" },  // NEW
+  { points: 600,   type: "wood" },
+  { points: 750,   type: "silver" },  // NEW
+  { points: 1000,  type: "gold" },
+  { points: 1500,  type: "silver" },
+  { points: 2000,  type: "silver" },  // NEW
+  { points: 2500,  type: "gold" },
+  { points: 3500,  type: "gold" },    // NEW
+  { points: 5000,  type: "gold" },    // NEW
+  { points: 7000,  type: "gold" },    // NEW
+  { points: 10000, type: "gold" },    // NEW
+  { points: 15000, type: "gold" },    // NEW
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
-  { exercises: 5, type: "wood" },
-  { exercises: 15, type: "silver" },
-  { exercises: 30, type: "gold" },
-  { exercises: 50, type: "silver" },
-  { exercises: 75, type: "gold" },
+  { exercises: 5,   type: "wood" },
+  { exercises: 10,  type: "wood" },   // NEW
+  { exercises: 15,  type: "silver" },
+  { exercises: 20,  type: "silver" }, // NEW
+  { exercises: 30,  type: "gold" },
+  { exercises: 40,  type: "silver" }, // NEW
+  { exercises: 50,  type: "silver" },
+  { exercises: 60,  type: "gold" },   // NEW
+  { exercises: 75,  type: "gold" },
+  { exercises: 100, type: "gold" },   // NEW
+  { exercises: 150, type: "gold" },   // NEW
 ];
 
 // ─── Chest reward tables ──────────────────────────────────────────────────────
