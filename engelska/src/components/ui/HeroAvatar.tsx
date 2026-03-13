@@ -767,7 +767,9 @@ export default function HeroAvatar({ heroId, skinTone, gender = "boy", equippedA
       <ellipse cx="21" cy="29" rx="1.8" ry="2.5" fill={skin.lip} opacity="0.25" />
       <ellipse cx="59" cy="29" rx="1.8" ry="2.5" fill={skin.lip} opacity="0.25" />
 
-      {/* Hair */}
+      {/* Hair base – covers full top semicircle so no skin shows through at sides */}
+      <path d="M21,28 A19,19 0 0 0 59,28 Z" fill={hairColor} />
+      {/* Hair style detail */}
       {gender === "girl"
         ? <GirlHair heroId={heroId} color={hairColor} />
         : <BoyHair  heroId={heroId} color={hairColor} />
