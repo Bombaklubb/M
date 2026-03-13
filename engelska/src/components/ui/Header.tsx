@@ -6,14 +6,13 @@ import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent, loadGamification } from "@/lib/storage";
 import { getAvatar, type Avatar } from "@/lib/avatars";
+import type { StudentData } from "@/lib/types";
 
 function AvatarImg({ av }: { av: Avatar }) {
   const [error, setError] = useState(false);
   if (!av.image || error) return <span className="text-lg leading-none">{av.emoji}</span>;
   return <img src={av.image} alt={av.name} className="w-full h-full object-contain" onError={() => setError(true)} />;
 }
-
-import type { StudentData } from "@/lib/types";
 
 interface HeaderProps {
   student: StudentData | null;
@@ -42,12 +41,12 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
   return (
     <header
-      className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b-3 border-indigo-100 dark:border-gray-700 sticky top-0 z-50"
+      className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-indigo-100 dark:border-gray-700 sticky top-0 z-50"
       style={{
         boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.08), 0 6px 12px -4px rgba(99, 102, 241, 0.1)"
       }}
     >
-      <div className="max-w-5xl mx-auto px-4 h-18 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -62,12 +61,15 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
         {/* Nav */}
         {student && (
-          <nav className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-            {/* Hemliga kistor – left of points */}
+          <nav className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            {/* Hemliga kistor button */}
             <Link
               href="/kistor"
               title="Hemliga kistor"
-              className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-400 dark:border-amber-600 hover:border-amber-500 dark:hover:border-amber-400 transition-all touch-manipulation shadow-sm"
+              className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 dark:hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer"
+              style={{
+                boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+              }}
             >
               <span className="text-lg leading-none select-none">🏆</span>
               {unopenedChests > 0 && (
@@ -75,28 +77,9 @@ export default function Header({ student, onLogout }: HeaderProps) {
                   {unopenedChests > 9 ? "9+" : unopenedChests}
                 </span>
               )}
-          <nav className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            {/* Hero button – left of points */}
-            <Link
-              href="/hero"
-              title="Min hjälte"
-              className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-sky-100 to-sky-50 dark:from-sky-900/40 dark:to-sky-800/20 border-2 border-sky-200 dark:border-sky-700 hover:border-sky-400 dark:hover:border-sky-500 hover:scale-110 transition-all overflow-hidden touch-manipulation cursor-pointer"
-              style={{
-                boxShadow: "0 3px 0 0 rgba(14, 165, 233, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
-              }}
-            >
-              <img
-                src={heroDbUrl(
-                  student.hero?.heroId ?? "explorer",
-                  student.hero?.skinTone ?? "light",
-                  student.hero?.gender ?? "boy"
-                )}
-                alt="Min hjälte"
-                className="w-10 h-10 object-cover"
-              />
             </Link>
 
-            {/* Points badge – hidden on xs */}
+            {/* Points badge */}
             <div
               className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default"
               style={{
@@ -107,7 +90,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
               <span className="text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
             </div>
 
-            {/* Student avatar + name – links to Min sida */}
+            {/* Student avatar + name – links to profile */}
             {(() => {
               const av = getAvatar(student.avatar ?? "ninja");
               return (
