@@ -173,7 +173,7 @@ export default function WorldPage({ params }: Props) {
                   </summary>
                   <div className="mt-4 space-y-3 pt-3 border-t border-gray-100 dark:border-gray-700">
                     {section.content.map((item, i) => (
-                      <div key={i} className="bg-gray-50 dark:bg-gray-750 rounded-xl px-4 py-3">
+                      <div key={i} className="bg-gray-100 dark:bg-gray-700 rounded-xl px-4 py-3">
                         <div className="font-semibold text-sm text-gray-800 dark:text-gray-100">{item.term}</div>
                         {item.explanation && (
                           <div className="text-sm text-gray-600 dark:text-gray-300 mt-0.5">{item.explanation}</div>
