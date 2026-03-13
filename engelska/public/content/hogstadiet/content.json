@@ -64,7 +64,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Write' is irregular: write – wrote – written.",
-          "hint": "write → wrote → written"
+          "hint": "Det här verbet är oregelbundet med tre distinkta former."
         },
         {
           "id": "hog-g1-6",
@@ -130,7 +130,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Go' is irregular: go – went – gone.",
-          "hint": "go → went → gone"
+          "hint": "Det här verbet är oregelbundet med tre distinkta former."
         },
         {
           "id": "hog-g1-11",
@@ -258,7 +258,7 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) taller, I would be a basketball player.",
           "answer": "were",
-          "hint": "I 2. konditionalis används 'were' (inte 'was') för alla personer.",
+          "hint": "I hypotetiska konstruktioner används en speciell form av 'be' oavsett pronomen.",
           "explanation": "In 2nd conditional, use 'were' for all subjects: If I were…"
         },
         {
@@ -408,7 +408,7 @@
           "type": "fill-in-blank",
           "sentence": "___ you come to the party if we invited you? (2nd conditional)",
           "answer": "Would",
-          "hint": "Huvudsats i 2. konditionalis börjar med Would.",
+          "hint": "Vilket modalverb används i huvudsatsen vid en hypotetisk 2. konditionalis?",
           "explanation": "2nd conditional main clause: Would + subject + base verb."
         },
         {
@@ -678,7 +678,7 @@
           "type": "fill-in-blank",
           "sentence": "'I will help you.' → He said he ___ help me.",
           "answer": "would",
-          "hint": "'will' i direkt tal → 'would' i indirekt tal.",
+          "hint": "Modalverb i direkt tal förändras bakåt i tid i indirekt tal.",
           "explanation": "'Will' backshifts to 'would' in reported speech."
         },
         {
@@ -722,7 +722,7 @@
           "type": "fill-in-blank",
           "sentence": "'\"Don't open the window,\" the teacher said.' → The teacher told us ___ open the window.",
           "answer": "not to",
-          "hint": "Negation i indirekt uppmaning: told + not to + grundform.",
+          "hint": "Negativ indirekt uppmaning: told + negationsord + infinitiv.",
           "explanation": "Reported commands (negative): told us not to + base verb."
         },
         {
@@ -812,7 +812,7 @@
           "type": "fill-in-blank",
           "sentence": "'\"Are you coming?\" she asked.' → She asked me if I ___ coming.",
           "answer": "was",
-          "hint": "'Are' → 'was' i indirekt fråga.",
+          "hint": "Verb skiftar bakåt i tid i indirekt tal – vad är preteritumform av verbet i frågan?",
           "explanation": "'Are' backshifts to 'was' in reported speech."
         },
         {
@@ -1951,7 +1951,7 @@
           "type": "fill-in-blank",
           "sentence": "I have lived here ___ five years.",
           "answer": "for",
-          "hint": "Tänk på skillnaden: 'for' används med tidsperioder (hur länge?), medan 'since' används med en startpunkt (när startade det?). Vad är det för typ av tidsuttryck i meningen?"
+          "hint": "Tänk: är tidsuttrycket i meningen en period (hur länge?) eller en startpunkt (sedan när)?"
         },
         {
           "id": "hog-g-mixed-2",

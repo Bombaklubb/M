@@ -229,7 +229,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Go' is an irregular verb. Its past simple form is 'went'.",
-          "hint": "Oregelbundna verb: go → went."
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         },
         {
           "id": "mel-g2-2",
@@ -273,7 +273,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'See' is irregular: past simple is 'saw'.",
-          "hint": "see → saw (oregelbundet)"
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         },
         {
           "id": "mel-g2-6",
@@ -322,7 +322,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (buy) new shoes at the mall.",
           "answer": "bought",
-          "hint": "buy → bought (oregelbundet)",
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed.",
           "explanation": "'Buy' is irregular: buy → bought."
         },
         {
@@ -337,7 +337,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Write' is irregular: past simple is 'wrote'.",
-          "hint": "write → wrote (oregelbundet)"
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         },
         {
           "id": "mel-g2-11",
@@ -405,7 +405,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Have' is irregular: past simple is 'had'.",
-          "hint": "have → had (oregelbundet)"
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         }
       ],
       "helpText": [
@@ -436,14 +436,14 @@
           ],
           "correctIndex": 2,
           "explanation": "Short adjectives: add -er. big → bigger (double the final consonant).",
-          "hint": "Korta adjektiv: -er. big → bigger."
+          "hint": "Korta adjektiv (1–2 stavelser) bildar komparativ med ändelsen -er."
         },
         {
           "id": "mel-g3-2",
           "type": "fill-in-blank",
           "sentence": "Mount Everest is the ___ (high) mountain in the world.",
           "answer": "highest",
-          "hint": "Superlativ av korta adjektiv: -est. high → highest.",
+          "hint": "Korta adjektiv bildar superlativ med ändelsen -est.",
           "explanation": "Superlative of short adjectives: add -est."
         },
         {
@@ -502,7 +502,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Good' has irregular forms: good – better – best.",
-          "hint": "good → better → best (oregelbundet)"
+          "hint": "Det här adjektivet bildar komparativ och superlativ oregelbundet."
         },
         {
           "id": "mel-g3-8",
@@ -557,7 +557,7 @@
           "type": "fill-in-blank",
           "sentence": "This pizza is ___ (good) than the one we had yesterday.",
           "answer": "better",
-          "hint": "good → better → best (oregelbundet)",
+          "hint": "Det här adjektivet bildar komparativ och superlativ oregelbundet.",
           "explanation": "'Good' is irregular: comparative is 'better'."
         },
         {
@@ -622,7 +622,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Bad' is irregular: bad – worse – worst.",
-          "hint": "bad → worse → worst (oregelbundet)"
+          "hint": "Det här adjektivet bildar komparativ oregelbundet."
         }
       ],
       "helpText": [
