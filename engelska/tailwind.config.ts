@@ -18,7 +18,15 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Baloo 2", "Comic Neue", "system-ui", "sans-serif"],
+      },
+      borderWidth: {
+        "3": "3px",
+        "4": "4px",
+      },
+      borderRadius: {
+        "3xl": "1.5rem",
+        "4xl": "2rem",
       },
       colors: {
         jungle: {
@@ -72,6 +80,9 @@ const config: Config = {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.4s ease-out",
         "pop": "pop 0.3s ease-out",
+        "wiggle": "wiggle 0.5s ease-in-out",
+        "float": "float 3s ease-in-out infinite",
+        "squish": "squish 0.2s ease-out",
       },
       keyframes: {
         fadeIn: {
@@ -86,6 +97,19 @@ const config: Config = {
           "0%": { transform: "scale(0.9)" },
           "50%": { transform: "scale(1.05)" },
           "100%": { transform: "scale(1)" },
+        },
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        squish: {
+          "0%": { transform: "scale(1, 1)" },
+          "50%": { transform: "scale(1.1, 0.9)" },
+          "100%": { transform: "scale(1, 1)" },
         },
       },
     },
