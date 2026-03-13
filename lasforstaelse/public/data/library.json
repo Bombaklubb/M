@@ -29298,5 +29298,415 @@
       "model": "claude"
     },
     "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak3-tema-001",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Äppelträdet i trädgården",
+    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var står äppelträdet i berättelsen?",
+        "options": [
+          "I en trädgård i Uppsala",
+          "På en bondgård i Skåne",
+          "I en park i Stockholm",
+          "På en skolgård"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka plockar äpplena tillsammans med mormor?",
+        "options": [
+          "Amina och Sara",
+          "Amina och Leo",
+          "Leo och Amir",
+          "Amina och Lina"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg kan äpplen ha enligt texten?",
+        "options": [
+          "Blå",
+          "Lila",
+          "Röda, gröna eller gula",
+          "Svarta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Varför sparar familjen några äpplen i källaren?",
+        "options": [
+          "För att sälja dem senare",
+          "För att ge dem till skolan",
+          "För att gömma dem",
+          "För att de ska hålla längre"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gillar Leo att dricka efter skolan?",
+        "options": [
+          "Äppeljuice",
+          "Mjölk",
+          "Varm choklad",
+          "Apelsinjuice"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger mormor att äpplen är nyttiga?",
+        "options": [
+          "De växer snabbt",
+          "De innehåller vitaminer och fibrer",
+          "De är lätta att plocka",
+          "De luktar gott"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-001",
+      "generatedAt": "2026-03-13T12:58:05.127Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-002",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Besök i äppelodlingen",
+    "text": "En klass i årskurs tre åker på utflykt till en stor äppelodling. Odlingen ligger utanför en liten stad och där växer hundratals träd i långa rader. Guiden som möter eleverna heter Noor. Hen berättar hur man planterar ett äppelträd och hur lång tid det tar innan trädet börjar ge frukt. Eleverna får också lära sig att bin är viktiga eftersom de hjälper blommorna att bli till äpplen. Utan bin skulle skörden bli mycket mindre. Klassen får gå mellan träden och titta noga på frukterna. Vissa äpplen är fortfarande små medan andra nästan är färdiga att plocka. Till slut får alla elever plocka varsitt äpple och smaka. Många tycker att smaken är både söt och lite syrlig. Noor berättar att odlare måste arbeta hela året med sina träd. De beskär grenar, vattnar jorden och skyddar frukten mot skadedjur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vart åker klassen på utflykt?",
+        "options": [
+          "Till en äppelodling",
+          "Till ett museum",
+          "Till en strand",
+          "Till en sporthall"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter guiden som möter eleverna?",
+        "options": [
+          "Sara",
+          "Noor",
+          "Elin",
+          "Jonas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför är bin viktiga enligt texten?",
+        "options": [
+          "De äter skadedjur",
+          "De gör honung åt odlaren",
+          "De hjälper blommorna bli till äpplen",
+          "De skyddar träden från kyla"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad får eleverna göra i slutet av besöket?",
+        "options": [
+          "Plantera ett träd",
+          "Samla löv",
+          "Köpa juice",
+          "Plocka och smaka ett äpple"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur växer träden i odlingen?",
+        "options": [
+          "I långa rader",
+          "I små krukor",
+          "På ett berg",
+          "Inne i växthus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör odlare för att ta hand om träden?",
+        "options": [
+          "Målar stammen",
+          "Beskär grenar och vattnar",
+          "Flyttar träden varje år",
+          "Plockar alla blad"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-002",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-003",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "Äpplet som föll",
+    "text": "En dag sitter Samir i en park och gör sin läxa. Han sitter under ett stort äppelträd. Plötsligt faller ett äpple ner från en gren och landar i gräset bredvid honom. Samir plockar upp äpplet och tittar nyfiket på det. Han undrar varför äpplen alltid faller ner mot marken och inte upp mot himlen. Hans vän Maja, som också är i parken, säger att det beror på något som kallas tyngdkraft. Tyngdkraften drar allt mot jorden. Samir tycker att det låter spännande och bestämmer sig för att fråga sin lärare nästa dag. Innan de går hem delar Samir och Maja på äpplet. De tycker att det smakar friskt och lite syrligt. Samir tänker att ett enkelt äpple kan få människor att ställa stora frågor om hur världen fungerar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter Samir när berättelsen börjar?",
+        "options": [
+          "I en park under ett äppelträd",
+          "På en buss",
+          "I ett klassrum",
+          "På en fotbollsplan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer plötsligt i början av texten?",
+        "options": [
+          "Det börjar regna",
+          "Ett äpple faller ner",
+          "En hund springer förbi",
+          "En boll landar bredvid honom"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger Maja att det beror på när äpplen faller?",
+        "options": [
+          "Vinden",
+          "Regnet",
+          "Tyngdkraften",
+          "Trädets rötter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Samir nästa dag enligt planen?",
+        "options": [
+          "Planterar ett träd",
+          "Går tillbaka till parken",
+          "Köper fler äpplen",
+          "Frågar sin lärare"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur smakar äpplet enligt barnen?",
+        "options": [
+          "Friskt och lite syrligt",
+          "Mycket salt",
+          "Väldigt bittert",
+          "Som choklad"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad får äpplet Samir att göra?",
+        "options": [
+          "Springa hem",
+          "Ställa stora frågor",
+          "Somna i parken",
+          "Rita ett träd"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-003",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-004",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "kultur",
+    "title": "Äppelpajen på caféet",
+    "text": "I en liten stad finns ett café som är känt för sin äppelpaj. Caféet drivs av Alex och deras pappa. Varje morgon skär de färska äpplen i tunna skivor. Sedan blandar de äpplena med lite socker och kanel. Doften sprider sig snabbt i köket. När pajen bakas i ugnen luktar hela caféet gott. Många gäster kommer just för att smaka pajen. En äldre kvinna säger att den påminner henne om när hon var barn. Alex tycker om att höra sådana berättelser från gästerna. Ibland hjälper Alex kompis Kim till efter skolan. Kim serverar pajen med lite vaniljsås. Gästerna sitter länge och pratar medan de äter. Alex tycker att äpplen är speciella eftersom de kan göra människor både mätta och glada.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är caféet känt för?",
+        "options": [
+          "Äppelpaj",
+          "Glass",
+          "Smörgåsar",
+          "Soppa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad blandar de med äpplena?",
+        "options": [
+          "Salt och peppar",
+          "Socker och kanel",
+          "Mjölk och honung",
+          "Ris och smör"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem hjälper ibland till efter skolan?",
+        "options": [
+          "Sara",
+          "Leo",
+          "Kim",
+          "Oskar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad serveras ofta till pajen?",
+        "options": [
+          "Grädde",
+          "Glass",
+          "Yoghurt",
+          "Vaniljsås"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad sprider sig i köket när de bakar?",
+        "options": [
+          "En god doft",
+          "Mycket rök",
+          "Kallt luftdrag",
+          "Höga ljud"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tycker Alex att äpplen är speciella?",
+        "options": [
+          "De växer snabbt",
+          "De gör människor mätta och glada",
+          "De är dyra att köpa",
+          "De finns bara på hösten"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-004",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
+  },
+  {
+    "id": "ak3-tema-005",
+    "grade": 3,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Tävlingen med äpplen",
+    "text": "På skolans höstfest ordnar lärarna en rolig tävling med äpplen. Eleverna delas in i små lag. Varje lag får en skål med vatten där flera äpplen flyter. Uppgiften är att få upp ett äpple utan att använda händerna. Barnen måste istället försöka ta äpplet med munnen. Det blir mycket skratt när någon nästan lyckas men äpplet glider iväg igen. Läraren Maria förklarar att äpplen flyter eftersom de innehåller mycket luft inuti. Därför sjunker de inte till botten. Efter tävlingen får alla äta äpplena eller ta med dem hem. Vinnarlaget får också en liten korg med extra frukt. Många elever säger att det var den roligaste delen av hela höstfesten.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När sker tävlingen?",
+        "options": [
+          "På skolans höstfest",
+          "På sommarlovet",
+          "Under en idrottslektion",
+          "På en klassresa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger äpplena i början av tävlingen?",
+        "options": [
+          "I en låda",
+          "I en skål med vatten",
+          "På ett bord",
+          "I en korg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur ska eleverna få upp äpplena?",
+        "options": [
+          "Med sked",
+          "Med händerna",
+          "Med munnen",
+          "Med en pinne"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Varför flyter äpplena enligt läraren?",
+        "options": [
+          "De är mycket kalla",
+          "De är täckta av skal",
+          "De är väldigt lätta",
+          "De innehåller mycket luft"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad får vinnarlaget?",
+        "options": [
+          "En korg med extra frukt",
+          "En fotboll",
+          "En bok",
+          "En medalj"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tycker många elever om tävlingen?",
+        "options": [
+          "Den var svårast",
+          "Den var roligast",
+          "Den var kortast",
+          "Den var tråkig"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 150,
+      "fingerprint": "ak3-tema-005",
+      "generatedAt": "2026-03-13T12:58:05.128Z",
+      "model": "claude"
+    }
   }
 ]
