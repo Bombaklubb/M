@@ -3200,6 +3200,421 @@
     "imageUrl": "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=600&h=400&fit=crop"
   },
   {
+    "id": "ak1-tema-016",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Katten i trädgården",
+    "text": "Ella går ut i trädgården på morgonen Gräset är vått efter nattens regn Plötsligt ser hon en liten katt Katten sitter under ett äppelträd och tittar på henne Ella hämtar lite vatten till katten Sedan springer katten vidare",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var går Ella?",
+        "options": [
+          "Till trädgården",
+          "Till skolan",
+          "Till affären",
+          "Till stranden"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur är gräset?",
+        "options": [
+          "Torrt",
+          "Vått",
+          "Gult",
+          "Snöigt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ser Ella?",
+        "options": [
+          "En hund",
+          "En fågel",
+          "En katt",
+          "En kanin"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter katten?",
+        "options": [
+          "På taket",
+          "Vid dörren",
+          "I busken",
+          "Under ett äppelträd"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad hämtar Ella?",
+        "options": [
+          "Vatten",
+          "Mjölk",
+          "Bröd",
+          "En boll"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör katten till sist?",
+        "options": [
+          "Sover",
+          "Springer vidare",
+          "Äter mat",
+          "Hoppar upp"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 37,
+      "fingerprint": "tema-ak1-tema-016",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-017",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Bollen på skolgården",
+    "text": "Noah och Kim leker på skolgården De sparkar en blå boll mellan sig Bollen rullar plötsligt mot staketet Kim springer snabbt och hämtar den Sedan fortsätter de spela och skrattar högt",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var leker Noah och Kim?",
+        "options": [
+          "På skolgården",
+          "I skogen",
+          "I klassrummet",
+          "På stranden"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har bollen?",
+        "options": [
+          "Röd",
+          "Blå",
+          "Grön",
+          "Gul"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör bollen?",
+        "options": [
+          "Hoppar upp",
+          "Flyger iväg",
+          "Rullar mot staketet",
+          "Fastnar i trädet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem hämtar bollen?",
+        "options": [
+          "Noah",
+          "Läraren",
+          "Ella",
+          "Kim"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör de sedan?",
+        "options": [
+          "Spelar vidare",
+          "Går hem",
+          "Äter lunch",
+          "Sätter sig"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur låter de när de leker?",
+        "options": [
+          "Viskar",
+          "Skrattar",
+          "Sjunger",
+          "Ropar argt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 31,
+      "fingerprint": "tema-ak1-tema-017",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-018",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vetenskap",
+    "title": "En bok om havet",
+    "text": "I klassrummet läser Amir en bok Boken handlar om havet Där finns bilder på fiskar och stora valar Amir visar en bild för sin vän Sara De tycker att valen ser mycket stor ut",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var läser Amir?",
+        "options": [
+          "I klassrummet",
+          "På bussen",
+          "I parken",
+          "I köket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar boken om?",
+        "options": [
+          "Skogen",
+          "Havet",
+          "Rymden",
+          "Staden"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka djur finns i boken?",
+        "options": [
+          "Katter",
+          "Hästar",
+          "Fiskar",
+          "Hundar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem visar Amir bilden för?",
+        "options": [
+          "Läraren",
+          "Sin pappa",
+          "Sin syster",
+          "Sara"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad ser de på bilden?",
+        "options": [
+          "En val",
+          "En buss",
+          "Ett träd",
+          "En cykel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur tycker de att valen ser ut?",
+        "options": [
+          "Liten",
+          "Mycket stor",
+          "Rund",
+          "Snabb"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 31,
+      "fingerprint": "tema-ak1-tema-018",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-019",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "kultur",
+    "title": "Bakning hemma",
+    "text": "Maja bakar bullar med sin pappa De blandar mjöl socker och smör Degen blir mjuk i skålen När bullarna är klara luktar köket gott Maja lägger en bulle på en tallrik och smakar",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bakar Maja?",
+        "options": [
+          "Bullar",
+          "Kakor",
+          "Bröd",
+          "Pizza"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem bakar hon med?",
+        "options": [
+          "Sin vän",
+          "Sin pappa",
+          "Sin lärare",
+          "Sin granne"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad blandar de?",
+        "options": [
+          "Ris och vatten",
+          "Pasta och ost",
+          "Mjöl socker och smör",
+          "Potatis och salt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur luktar köket?",
+        "options": [
+          "Konstigt",
+          "Rökigt",
+          "Kallt",
+          "Gott"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lägger Maja på tallriken?",
+        "options": [
+          "En bulle",
+          "En kaka",
+          "Ett äpple",
+          "En smörgås"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör hon sedan?",
+        "options": [
+          "Springer ut",
+          "Smakar",
+          "Diskar",
+          "Sover"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 30,
+      "fingerprint": "tema-ak1-tema-019",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-020",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "geografi",
+    "title": "Resan med tåget",
+    "text": "Leo och hans mormor åker tåg till en annan stad De sitter vid fönstret och ser träd hus och sjöar Tåget går snabbt Leo räknar många röda hus på vägen",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem åker Leo med?",
+        "options": [
+          "Mormor",
+          "Pappa",
+          "Vän",
+          "Lärare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad åker de med?",
+        "options": [
+          "Bil",
+          "Tåg",
+          "Buss",
+          "Båt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter de?",
+        "options": [
+          "Vid dörren",
+          "Vid gången",
+          "Vid fönstret",
+          "I mitten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur går tåget?",
+        "options": [
+          "Långsamt",
+          "Tyst",
+          "Hackigt",
+          "Snabbt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad räknar Leo?",
+        "options": [
+          "Röda hus",
+          "Träd",
+          "Bilar",
+          "Fåglar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad ser de utanför?",
+        "options": [
+          "Bara vägar",
+          "Träd hus och sjöar",
+          "Bara skog",
+          "Ingenting"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 28,
+      "fingerprint": "tema-ak1-tema-020",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&h=400&fit=crop"
+  },
+  {
     "id": "ak1-vanskap-01",
     "grade": 2,
     "genre": "berättelse",
