@@ -27570,5 +27570,835 @@
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-041",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "En boll på gården",
+    "text": "Leo och Sara leker på gården efter skolan De har en röd boll Leo kastar bollen högt Sara fångar den De skrattar och kastar igen Solen lyser över gården",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var leker Leo och Sara?",
+        "options": [
+          "På gården",
+          "I skogen",
+          "I köket",
+          "På bussen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har bollen?",
+        "options": [
+          "Blå",
+          "Röd",
+          "Grön",
+          "Gul"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Leo med bollen?",
+        "options": [
+          "Tappar den",
+          "Sparkar den",
+          "Kastar den",
+          "Gömmer den"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Sara?",
+        "options": [
+          "Springer hem",
+          "Sover",
+          "Ritar",
+          "Fångar bollen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör de när de leker?",
+        "options": [
+          "Skrattar",
+          "Gråter",
+          "Viskar",
+          "Sover"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör solen?",
+        "options": [
+          "Regnar",
+          "Lyser",
+          "Blåser",
+          "Snöar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 27,
+      "fingerprint": "tema-ak1-tema-041",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1461896836934- voices08abafa?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-042",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Katten på trappan",
+    "text": "Maja öppnar dörren på morgonen På trappan sitter en liten katt Katten är grå och tittar på Maja Hon hämtar lite vatten Katten dricker och går sedan vidare",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När öppnar Maja dörren?",
+        "options": [
+          "På morgonen",
+          "På kvällen",
+          "På natten",
+          "På rasten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter katten?",
+        "options": [
+          "På taket",
+          "På trappan",
+          "På bordet",
+          "På stolen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har katten?",
+        "options": [
+          "Svart",
+          "Vit",
+          "Grå",
+          "Orange"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad hämtar Maja?",
+        "options": [
+          "Mat",
+          "Mjölk",
+          "Bröd",
+          "Vatten"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör katten?",
+        "options": [
+          "Dricker",
+          "Sover",
+          "Flyger",
+          "Hoppar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör katten sedan?",
+        "options": [
+          "Stannar",
+          "Går vidare",
+          "Lägger sig",
+          "Jamnar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 26,
+      "fingerprint": "tema-ak1-tema-042",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-043",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "kultur",
+    "title": "Boken om djur",
+    "text": "Ali sitter i klassrummet och läser en bok Boken handlar om djur Han ser bilder på elefanter och apor Ali visar en bild för sin vän Kim",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter Ali?",
+        "options": [
+          "I klassrummet",
+          "I parken",
+          "I bussen",
+          "I skogen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Ali?",
+        "options": [
+          "Springer",
+          "Läser",
+          "Ritar",
+          "Hoppar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar boken om?",
+        "options": [
+          "Bilar",
+          "Hus",
+          "Djur",
+          "Mat"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilket djur finns i boken?",
+        "options": [
+          "Hund",
+          "Katt",
+          "Häst",
+          "Elefant"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Ali?",
+        "options": [
+          "En bild",
+          "En stol",
+          "En boll",
+          "En penna"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vem visar han bilden för?",
+        "options": [
+          "Sara",
+          "Kim",
+          "Maja",
+          "Leo"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23,
+      "fingerprint": "tema-ak1-tema-043",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-044",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Glass på torget",
+    "text": "Noor och hennes pappa går till torget Det är varmt Noor köper en jordgubbsglass Pappan köper chokladglass De sitter på en bänk och äter",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem går Noor med?",
+        "options": [
+          "Pappa",
+          "Mamma",
+          "Vän",
+          "Lärare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur är vädret?",
+        "options": [
+          "Kallt",
+          "Varmt",
+          "Snöigt",
+          "Regnigt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad köper Noor?",
+        "options": [
+          "Bröd",
+          "Juice",
+          "Glass",
+          "Frukt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken smak har pappans glass?",
+        "options": [
+          "Vanilj",
+          "Citron",
+          "Jordgubb",
+          "Choklad"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Var sitter de?",
+        "options": [
+          "På en bänk",
+          "På golvet",
+          "I bilen",
+          "På taket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör de?",
+        "options": [
+          "Springer",
+          "Äter",
+          "Läser",
+          "Sover"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22,
+      "fingerprint": "tema-ak1-tema-044",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-045",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "hälsa",
+    "title": "Den nya cykeln",
+    "text": "Ella har fått en ny cykel Den är blå Ella cyklar långsamt på gården Hennes vän Amir springer bredvid och hejar",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har Ella fått?",
+        "options": [
+          "En cykel",
+          "En bok",
+          "En boll",
+          "En stol"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har cykeln?",
+        "options": [
+          "Röd",
+          "Blå",
+          "Grön",
+          "Gul"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur cyklar Ella först?",
+        "options": [
+          "Snabbt",
+          "Bakåt",
+          "Långsamt",
+          "Inte alls"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem springer bredvid?",
+        "options": [
+          "Sara",
+          "Leo",
+          "Kim",
+          "Amir"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Var cyklar hon?",
+        "options": [
+          "På gården",
+          "I skogen",
+          "På bussen",
+          "I huset"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör Amir?",
+        "options": [
+          "Sover",
+          "Hejar",
+          "Äter",
+          "Sitter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 18,
+      "fingerprint": "tema-ak1-tema-045",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-046",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Fågeln i trädet",
+    "text": "Milo går i skogen med sin mormor De hör en fågel sjunga Fågeln sitter i ett träd Milo tittar upp och ler",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var går Milo?",
+        "options": [
+          "I skogen",
+          "I staden",
+          "I huset",
+          "I skolan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem går han med?",
+        "options": [
+          "Pappa",
+          "Mormor",
+          "Läraren",
+          "Vännen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hör de?",
+        "options": [
+          "En bil",
+          "En hund",
+          "En fågel",
+          "En katt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter fågeln?",
+        "options": [
+          "På marken",
+          "På stenen",
+          "På taket",
+          "I trädet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör Milo?",
+        "options": [
+          "Ler",
+          "Springer",
+          "Sover",
+          "Ropar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör fågeln?",
+        "options": [
+          "Sover",
+          "Sjunger",
+          "Äter",
+          "Flyger"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 19,
+      "fingerprint": "tema-ak1-tema-046",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-047",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "samhälle",
+    "title": "Bussen",
+    "text": "Sara väntar på bussen vid hållplatsen Bussen kommer snart Hon kliver på och sätter sig vid fönstret",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var väntar Sara?",
+        "options": [
+          "Vid hållplatsen",
+          "I skogen",
+          "I huset",
+          "I skolan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad väntar hon på?",
+        "options": [
+          "Tåget",
+          "Bussen",
+          "Båten",
+          "Taxin"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör hon sedan?",
+        "options": [
+          "Springer",
+          "Sover",
+          "Kliver på",
+          "Hoppar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var sätter hon sig?",
+        "options": [
+          "På golvet",
+          "Vid dörren",
+          "Bak i bussen",
+          "Vid fönstret"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kommer?",
+        "options": [
+          "Bussen",
+          "Tåget",
+          "Bilen",
+          "Cykeln"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör Sara först?",
+        "options": [
+          "Springer",
+          "Väntar",
+          "Sover",
+          "Äter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 14,
+      "fingerprint": "tema-ak1-tema-047",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-048",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "kultur",
+    "title": "Rita i klassrummet",
+    "text": "I klassrummet ritar Kim en stor sol Solen är gul Hennes vän Leo ritar ett träd bredvid",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var ritar Kim?",
+        "options": [
+          "I klassrummet",
+          "I skogen",
+          "I parken",
+          "I bussen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ritar Kim?",
+        "options": [
+          "En bil",
+          "En sol",
+          "En katt",
+          "En stol"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har solen?",
+        "options": [
+          "Blå",
+          "Röd",
+          "Gul",
+          "Grön"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ritar Leo?",
+        "options": [
+          "En boll",
+          "Ett hus",
+          "En stol",
+          "Ett träd"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur är solen?",
+        "options": [
+          "Stor",
+          "Liten",
+          "Mörk",
+          "Kall"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vem är Kims vän?",
+        "options": [
+          "Maja",
+          "Leo",
+          "Ali",
+          "Sara"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 15,
+      "fingerprint": "tema-ak1-tema-048",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-049",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "natur",
+    "title": "Snögubben",
+    "text": "Det snöar ute Leo och Noor bygger en snögubbe De gör ögon av stenar och en näsa av en morot",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad faller från himlen?",
+        "options": [
+          "Snö",
+          "Regn",
+          "Löv",
+          "Sand"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem bygger snögubben?",
+        "options": [
+          "Leo och Kim",
+          "Leo och Noor",
+          "Sara och Ali",
+          "Maja och Amir"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de ögon av?",
+        "options": [
+          "Löv",
+          "Glass",
+          "Stenar",
+          "Pinnar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör de näsan av?",
+        "options": [
+          "Ett äpple",
+          "En pinne",
+          "En potatis",
+          "En morot"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bygger de?",
+        "options": [
+          "En snögubbe",
+          "Ett hus",
+          "En båt",
+          "En bil"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur är vädret?",
+        "options": [
+          "Varmt",
+          "Snöigt",
+          "Soligt",
+          "Blåsigt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 17,
+      "fingerprint": "tema-ak1-tema-049",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak1-tema-050",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "hälsa",
+    "title": "Lunch i skolan",
+    "text": "I skolans matsal äter eleverna lunch Idag finns soppa och bröd Amir sitter bredvid sin vän Maja",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var äter eleverna?",
+        "options": [
+          "I matsalen",
+          "I skogen",
+          "I bussen",
+          "I parken"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad finns till lunch?",
+        "options": [
+          "Pasta",
+          "Soppa",
+          "Pizza",
+          "Ris"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem sitter bredvid Amir?",
+        "options": [
+          "Leo",
+          "Sara",
+          "Maja",
+          "Kim"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad äter de?",
+        "options": [
+          "Glass",
+          "Frukt",
+          "Kakor",
+          "Lunch"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad äter de till soppan?",
+        "options": [
+          "Bröd",
+          "Ris",
+          "Pasta",
+          "Potatis"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Var sitter Maja?",
+        "options": [
+          "Vid Amir",
+          "Vid dörren",
+          "Vid fönstret",
+          "Vid läraren"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 15,
+      "fingerprint": "tema-ak1-tema-050",
+      "generatedAt": "2026-03-14T00:00:00.000Z",
+      "model": "manual"
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop"
   }
 ]
