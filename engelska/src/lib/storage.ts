@@ -1,4 +1,7 @@
-import type { StudentData, StageId, ModuleProgress, StageProgress, HeroConfig } from "./types";
+import type { StudentData, StageId, ModuleProgress, StageProgress, HeroConfig, GamificationData } from "./types";
+import { defaultGamificationData } from "./gamification";
+
+const GAMIFICATION_KEY = "engelskajakten_gamification";
 
 const STORAGE_KEY = "engelskajakten_student";
 
@@ -120,6 +123,29 @@ export function saveModuleProgress(
   data.totalPoints += addedPoints;
   saveStudent(data);
   return { ...data };
+}
+
+// ─── Gamification persistence ─────────────────────────────────────────────────
+
+export function loadGamification(): GamificationData {
+  if (typeof window === "undefined") return defaultGamificationData();
+  try {
+    const raw = localStorage.getItem(GAMIFICATION_KEY);
+    if (!raw) return defaultGamificationData();
+    return JSON.parse(raw) as GamificationData;
+  } catch {
+    return defaultGamificationData();
+  }
+}
+
+export function saveGamification(data: GamificationData): void {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(GAMIFICATION_KEY, JSON.stringify(data));
+}
+
+export function clearGamification(): void {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem(GAMIFICATION_KEY);
 }
 
 // ─── Export / Import progress ─────────────────────────────────────────────────

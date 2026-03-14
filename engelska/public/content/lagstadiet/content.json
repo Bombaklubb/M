@@ -116,7 +116,7 @@
         {
           "id": "lag-g1-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'She is my sister.'",
+          "instruction": "Bygg meningen: 'Hon är min syster.'",
           "words": [
             "She",
             "is",
@@ -170,7 +170,7 @@
         {
           "id": "lag-g1-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'We are at home.'",
+          "instruction": "Bygg meningen: 'Vi är hemma.'",
           "words": [
             "We",
             "are",
@@ -312,7 +312,7 @@
         {
           "id": "lag-g2-9",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'He has a new book.'",
+          "instruction": "Bygg meningen: 'Han har en ny bok.'",
           "words": [
             "He",
             "has",
@@ -389,7 +389,7 @@
         {
           "id": "lag-g2-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'We have a new car.'",
+          "instruction": "Bygg meningen: 'Vi har en ny bil.'",
           "words": [
             "We",
             "have",
@@ -588,7 +588,7 @@
         {
           "id": "lag-g3-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'I have an old book.'",
+          "instruction": "Bygg meningen: 'Jag har en gammal bok.'",
           "words": [
             "I",
             "have",
@@ -630,7 +630,6 @@
         }
       ],
       "helpText": [
-        "🎵 Ramsa: \"Börjar det med vokalljud – AN är rätt! Börjar det med konsonant – A är lätt!\"",
         "A eller an? Det beror på hur nästa ord LÅTER, inte hur det stavas!",
         "A används före konsonantljud: a dog, a cat, a big house, a university (u låter 'ju').",
         "An används före vokalljud (a, e, i, o, u): an apple, an orange, an elephant, an umbrella.",
@@ -800,7 +799,7 @@
         {
           "id": "lag-g4-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'The dogs are running fast.'",
+          "instruction": "Bygg meningen: 'Hundarna springer snabbt.'",
           "words": [
             "The",
             "dogs",
@@ -956,7 +955,7 @@
         {
           "id": "lag-g5-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'That is a big elephant.'",
+          "instruction": "Bygg meningen: 'Det är en stor elefant.'",
           "words": [
             "That",
             "is",
@@ -1065,7 +1064,7 @@
           "type": "fill-in-blank",
           "sentence": "He has a bike. ___ bike is blue.",
           "answer": "His",
-          "hint": "He → His",
+          "hint": "Vilket possessivt pronomen hör till 'he'?",
           "explanation": "He → His. Hans cykel. His bike is blue."
         },
         {
@@ -1073,7 +1072,7 @@
           "type": "fill-in-blank",
           "sentence": "We have a house. ___ house is big.",
           "answer": "Our",
-          "hint": "We → Our",
+          "hint": "Vilket possessivt pronomen hör till 'we'?",
           "explanation": "We → Our. Vårt hus. Our house is big."
         },
         {
@@ -1107,7 +1106,7 @@
           "type": "fill-in-blank",
           "sentence": "The dog has a bone. ___ bone is big.",
           "answer": "Its",
-          "hint": "It → Its",
+          "hint": "Vilket possessivt pronomen hör till 'it'?",
           "explanation": "The dog = it → its. Hundens ben. Its bone is big."
         },
         {
@@ -1115,7 +1114,7 @@
           "type": "fill-in-blank",
           "sentence": "I love ___ family.",
           "answer": "my",
-          "hint": "I → my",
+          "hint": "Vilket possessivt pronomen (adjektivisk form) hör till 'I'?",
           "explanation": "I → my. Jag älskar min familj. I love my family."
         },
         {
@@ -1149,7 +1148,7 @@
           "type": "fill-in-blank",
           "sentence": "We play with ___ friends.",
           "answer": "our",
-          "hint": "We → our",
+          "hint": "Vilket possessivt pronomen hör till 'we'?",
           "explanation": "We → our. Vi leker med våra vänner. We play with our friends."
         },
         {
@@ -1157,13 +1156,13 @@
           "type": "fill-in-blank",
           "sentence": "They eat ___ lunch at school.",
           "answer": "their",
-          "hint": "They → their",
+          "hint": "Vilket possessivt pronomen hör till 'they'?",
           "explanation": "They → their. De äter sin lunch i skolan. They eat their lunch at school."
         },
         {
           "id": "lag-g6-13",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'My dog is very fast.'",
+          "instruction": "Bygg meningen: 'Min hund är väldigt snabb.'",
           "words": [
             "My",
             "dog",
@@ -1213,7 +1212,7 @@
           "type": "fill-in-blank",
           "sentence": "You should brush ___ teeth every day.",
           "answer": "your",
-          "hint": "You → your",
+          "hint": "Vilket possessivt pronomen hör till 'you'?",
           "explanation": "You → your. Du ska borsta dina tänder varje dag. You should brush your teeth every day."
         }
       ],
@@ -1263,7 +1262,7 @@
           "type": "fill-in-blank",
           "sentence": "The red ball is ___. (mitt)",
           "answer": "mine",
-          "hint": "I → mine",
+          "hint": "Vilket självständigt possessivt pronomen hör till 'I'?",
           "explanation": "Mine = mitt/min. The red ball is mine."
         },
         {
@@ -1271,7 +1270,7 @@
           "type": "fill-in-blank",
           "sentence": "Is that coat ___? (din)",
           "answer": "yours",
-          "hint": "You → yours",
+          "hint": "Vilket självständigt possessivt pronomen hör till 'you'?",
           "explanation": "Yours = din/ditt. Is that coat yours?"
         },
         {
@@ -1305,7 +1304,7 @@
           "type": "fill-in-blank",
           "sentence": "The blue car is ___. (vår)",
           "answer": "ours",
-          "hint": "We → ours",
+          "hint": "Vilket självständigt possessivt pronomen hör till 'we'?",
           "explanation": "Ours = vår/vårt. The blue car is ours."
         },
         {
@@ -1313,7 +1312,7 @@
           "type": "fill-in-blank",
           "sentence": "That house is ___. (deras)",
           "answer": "theirs",
-          "hint": "They → theirs",
+          "hint": "Vilket självständigt possessivt pronomen hör till 'they'?",
           "explanation": "Theirs = deras. That house is theirs."
         },
         {
@@ -1347,7 +1346,7 @@
           "type": "fill-in-blank",
           "sentence": "That dog is not ours. It is ___. (deras)",
           "answer": "theirs",
-          "hint": "They → theirs",
+          "hint": "Vilket självständigt possessivt pronomen hör till 'they'?",
           "explanation": "Theirs = deras. It is theirs."
         },
         {
@@ -1355,13 +1354,13 @@
           "type": "fill-in-blank",
           "sentence": "Is this book ___? (hans)",
           "answer": "his",
-          "hint": "He → his",
+          "hint": "Vilket possessivt pronomen hör till 'he'?",
           "explanation": "His fungerar både som adjektiv och pronomen. Is this book his?"
         },
         {
           "id": "lag-g7-13",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'That red bag is hers.'",
+          "instruction": "Bygg meningen: 'Den där röda väskan är hennes.'",
           "words": [
             "That",
             "red",
@@ -1535,7 +1534,7 @@
         {
           "id": "lag-g8-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'There is a sun in the sky.'",
+          "instruction": "Bygg meningen: 'Det finns en sol på himlen.'",
           "words": [
             "There",
             "is",
@@ -1590,7 +1589,7 @@
         {
           "id": "lag-g8-15",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'There are six chairs at the table.'",
+          "instruction": "Bygg meningen: 'Det finns sex stolar vid bordet.'",
           "words": [
             "There",
             "are",
@@ -1661,7 +1660,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ ride a bike.",
           "answer": "can",
-          "hint": "Jag kan cykla.",
+          "hint": "Läs meningen – uttrycker den förmåga eller oförmåga?",
           "explanation": "Can + verb grundform. I can ride a bike."
         },
         {
@@ -1669,7 +1668,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ speak three languages.",
           "answer": "can",
-          "hint": "Han kan prata tre språk.",
+          "hint": "Läs meningen – är den positiv eller negativ?",
           "explanation": "Can ändras inte efter he/she/it. He can speak three languages."
         },
         {
@@ -1703,7 +1702,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ play the piano very well.",
           "answer": "can",
-          "hint": "Hon kan spela piano.",
+          "hint": "Läs meningen – uttrycker den förmåga eller oförmåga?",
           "explanation": "Can + verb grundform. She can play the piano very well."
         },
         {
@@ -1711,7 +1710,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ find my shoes! (inte)",
           "answer": "can't",
-          "hint": "Jag kan INTE hitta mina skor.",
+          "hint": "Läs meningen – är det en positiv förmåga eller en negation?",
           "explanation": "Can't = cannot. I can't find my shoes!"
         },
         {
@@ -1745,7 +1744,7 @@
           "type": "fill-in-blank",
           "sentence": "Dogs ___ bark. (kan)",
           "answer": "can",
-          "hint": "Hundar kan skälla.",
+          "hint": "Läs meningen – uttrycker den förmåga eller oförmåga?",
           "explanation": "Can + verb grundform. Dogs can bark."
         },
         {
@@ -1753,13 +1752,13 @@
           "type": "fill-in-blank",
           "sentence": "Cats ___ bark. (kan inte)",
           "answer": "can't",
-          "hint": "Katter kan INTE skälla.",
+          "hint": "Läs meningen – är det en positiv förmåga eller en negation?",
           "explanation": "Can't = cannot. Cats can't bark."
         },
         {
           "id": "lag-g9-13",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'She can run very fast.'",
+          "instruction": "Bygg meningen: 'Hon kan springa väldigt snabbt.'",
           "words": [
             "She",
             "can",
@@ -1941,7 +1940,7 @@
         {
           "id": "lag-g10-11",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'The ball is under the table.'",
+          "instruction": "Bygg meningen: 'Bollen är under bordet.'",
           "words": [
             "The",
             "ball",
@@ -2007,7 +2006,7 @@
         {
           "id": "lag-g10-16",
           "type": "build-sentence",
-          "instruction": "Bygg meningen: 'My cat sleeps on my bed.'",
+          "instruction": "Bygg meningen: 'Min katt sover i min säng.'",
           "words": [
             "My",
             "cat",
@@ -2167,13 +2166,16 @@
           "type": "fill-in-blank",
           "sentence": "'Are we late?' – 'No, we ___.'",
           "answer": "aren't",
+          "alternativeAnswers": [
+            "are not"
+          ],
           "hint": "Negativt svar med are: aren't.",
           "explanation": "Are we...? → No, we aren't. (aren't = are not)"
         },
         {
           "id": "lag-g11-13",
           "type": "build-sentence",
-          "instruction": "Bygg svaret: 'Yes, I am.' (svar på 'Are you a student?')",
+          "instruction": "Svara ja på frågan 'Are you a student?' på engelska.",
           "words": [
             "Yes",
             ",",

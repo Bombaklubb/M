@@ -77,7 +77,7 @@
         {
           "id": "mel-g1-7",
           "type": "build-sentence",
-          "instruction": "Build a correct present simple sentence.",
+          "instruction": "Bygg meningen: 'Solen går upp i öst.'",
           "words": [
             "The",
             "sun",
@@ -167,7 +167,7 @@
         {
           "id": "mel-g1-14",
           "type": "build-sentence",
-          "instruction": "Build a correct present simple question.",
+          "instruction": "Bygg frågan: 'Spelar han gitarr?'",
           "words": [
             "Does",
             "he",
@@ -229,7 +229,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Go' is an irregular verb. Its past simple form is 'went'.",
-          "hint": "Oregelbundna verb: go → went."
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         },
         {
           "id": "mel-g2-2",
@@ -273,7 +273,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'See' is irregular: past simple is 'saw'.",
-          "hint": "see → saw (oregelbundet)"
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         },
         {
           "id": "mel-g2-6",
@@ -286,7 +286,7 @@
         {
           "id": "mel-g2-7",
           "type": "build-sentence",
-          "instruction": "Build a past simple sentence.",
+          "instruction": "Bygg meningen: 'Tom spelade schack igår.'",
           "words": [
             "Tom",
             "played",
@@ -322,7 +322,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (buy) new shoes at the mall.",
           "answer": "bought",
-          "hint": "buy → bought (oregelbundet)",
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed.",
           "explanation": "'Buy' is irregular: buy → bought."
         },
         {
@@ -337,7 +337,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Write' is irregular: past simple is 'wrote'.",
-          "hint": "write → wrote (oregelbundet)"
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         },
         {
           "id": "mel-g2-11",
@@ -372,7 +372,7 @@
         {
           "id": "mel-g2-14",
           "type": "build-sentence",
-          "instruction": "Build a past simple negative sentence.",
+          "instruction": "Bygg meningen: 'Hon sov inte bra igår kväll.'",
           "words": [
             "She",
             "didn't",
@@ -405,7 +405,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Have' is irregular: past simple is 'had'.",
-          "hint": "have → had (oregelbundet)"
+          "hint": "Det här verbet bildar datid oregelbundet – inte med -ed."
         }
       ],
       "helpText": [
@@ -436,14 +436,14 @@
           ],
           "correctIndex": 2,
           "explanation": "Short adjectives: add -er. big → bigger (double the final consonant).",
-          "hint": "Korta adjektiv: -er. big → bigger."
+          "hint": "Korta adjektiv (1–2 stavelser) bildar komparativ med ändelsen -er."
         },
         {
           "id": "mel-g3-2",
           "type": "fill-in-blank",
           "sentence": "Mount Everest is the ___ (high) mountain in the world.",
           "answer": "highest",
-          "hint": "Superlativ av korta adjektiv: -est. high → highest.",
+          "hint": "Korta adjektiv bildar superlativ med ändelsen -est.",
           "explanation": "Superlative of short adjectives: add -est."
         },
         {
@@ -502,7 +502,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Good' has irregular forms: good – better – best.",
-          "hint": "good → better → best (oregelbundet)"
+          "hint": "Det här adjektivet bildar komparativ och superlativ oregelbundet."
         },
         {
           "id": "mel-g3-8",
@@ -515,7 +515,7 @@
         {
           "id": "mel-g3-9",
           "type": "build-sentence",
-          "instruction": "Build a comparative sentence.",
+          "instruction": "Bygg meningen: 'En bil är snabbare än en cykel.'",
           "words": [
             "A",
             "car",
@@ -557,7 +557,7 @@
           "type": "fill-in-blank",
           "sentence": "This pizza is ___ (good) than the one we had yesterday.",
           "answer": "better",
-          "hint": "good → better → best (oregelbundet)",
+          "hint": "Det här adjektivet bildar komparativ och superlativ oregelbundet.",
           "explanation": "'Good' is irregular: comparative is 'better'."
         },
         {
@@ -585,7 +585,7 @@
         {
           "id": "mel-g3-14",
           "type": "build-sentence",
-          "instruction": "Build a superlative sentence.",
+          "instruction": "Bygg meningen: 'Hon är den mest intelligenta eleven i klassen.'",
           "words": [
             "She",
             "is",
@@ -622,7 +622,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Bad' is irregular: bad – worse – worst.",
-          "hint": "bad → worse → worst (oregelbundet)"
+          "hint": "Det här adjektivet bildar komparativ oregelbundet."
         }
       ],
       "helpText": [
@@ -710,7 +710,7 @@
         {
           "id": "mel-g4-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence with a preposition of place.",
+          "instruction": "Bygg meningen: 'Hunden är framför huset.'",
           "words": [
             "The",
             "dog",
@@ -804,7 +804,7 @@
         {
           "id": "mel-g4-14",
           "type": "build-sentence",
-          "instruction": "Build a sentence with a preposition of time.",
+          "instruction": "Bygg meningen: 'Vi besöker alltid mormor på söndagar.'",
           "words": [
             "We",
             "always",
@@ -860,7 +860,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (play) football every day.",
           "answer": "plays",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses-2",
@@ -1012,7 +1012,7 @@
             "drank"
           ],
           "correctIndex": 1,
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses-18",
@@ -1062,7 +1062,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (walk) to school every day.",
           "answer": "walks",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses2-2",
@@ -1112,7 +1112,7 @@
             "listened"
           ],
           "correctIndex": 1,
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses2-7",
@@ -1138,7 +1138,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (read) a book every evening.",
           "answer": "reads",
-          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses2-10",
@@ -1269,7 +1269,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (play) the piano.",
           "answer": "plays",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses3-2",
@@ -1395,7 +1395,7 @@
             "ate"
           ],
           "correctIndex": 1,
-          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses3-15",
@@ -1509,7 +1509,7 @@
             "studied"
           ],
           "correctIndex": 1,
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses3-27",
@@ -1570,7 +1570,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (play) football every day.",
           "answer": "plays",
-          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'she': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-2",
@@ -1626,7 +1626,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (watch) TV every evening.",
           "answer": "watches",
-          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för he/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-10",
@@ -1640,7 +1640,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (study) English every day.",
           "answer": "studies",
-          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för she/she/it: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-12",
@@ -1696,7 +1696,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (run) every day.",
           "answer": "runs",
-          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. play → plays, go → goes."
+          "hint": "Presens för 'he': lägg till -s/es på grundformen. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses4-20",
@@ -1738,7 +1738,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (not play) football yesterday.",
           "answer": "did not play",
-          "hint": "Datid nekad: 'did not' + grundform (oavsett pronomen). T.ex. 'did not play'."
+          "hint": "Datid nekad: 'did not' + grundform (oavsett pronomen). T.ex. 'did not work'."
         },
         {
           "id": "mel-g-tenses5-3",
@@ -1757,7 +1757,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (clean) his room every week.",
           "answer": "cleans",
-          "hint": "Presens för he: grundform + -s/es. T.ex. play → plays, go → goes."
+          "hint": "Presens för he: grundform + -s/es. T.ex. work → works, catch → catches."
         },
         {
           "id": "mel-g-tenses5-5",

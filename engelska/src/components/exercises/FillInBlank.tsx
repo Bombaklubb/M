@@ -17,10 +17,18 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
 
   const parts = exercise.sentence.split("___");
 
+  function normalizeAnswer(s: string) {
+    return s.trim().toLowerCase()
+      // normalize curly/typographic apostrophes to straight apostrophe
+      .replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC]/g, "'");
+  }
+
   function handleSubmit() {
     if (state !== "idle" || !input.trim()) return;
-    const correct =
-      input.trim().toLowerCase() === exercise.answer.toLowerCase();
+    const given = normalizeAnswer(input);
+    const expected = normalizeAnswer(exercise.answer);
+    const alternatives = (exercise.alternativeAnswers ?? []).map(normalizeAnswer);
+    const correct = given === expected || alternatives.includes(given);
     setState(correct ? "correct" : "wrong");
   }
 

@@ -77,7 +77,7 @@
         {
           "id": "gym-g1-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence using past perfect.",
+          "instruction": "Bygg meningen: 'Han hade avslutat rapporten innan mötet började.'",
           "words": [
             "He",
             "had",
@@ -173,7 +173,7 @@
         {
           "id": "gym-g1-14",
           "type": "build-sentence",
-          "instruction": "Build a future perfect sentence.",
+          "instruction": "Bygg meningen: 'Nästa år kommer hon att ha tagit examen.'",
           "words": [
             "By",
             "next",
@@ -297,7 +297,7 @@
         {
           "id": "gym-g2-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence expressing logical deduction.",
+          "instruction": "Bygg meningen: 'Han måste ha glömt mötet.'",
           "words": [
             "He",
             "must",
@@ -365,7 +365,7 @@
         {
           "id": "gym-g2-12",
           "type": "build-sentence",
-          "instruction": "Build a sentence expressing regret.",
+          "instruction": "Bygg meningen: 'Jag borde ha studerat hårdare inför provet.'",
           "words": [
             "I",
             "should",
@@ -534,7 +534,7 @@
         {
           "id": "gym-g3-9",
           "type": "build-sentence",
-          "instruction": "Build a formal sentence with subjunctive.",
+          "instruction": "Bygg meningen: 'Det är viktigt att varje medlem deltar i mötet.'",
           "words": [
             "It",
             "is",
@@ -608,7 +608,7 @@
         {
           "id": "gym-g3-14",
           "type": "build-sentence",
-          "instruction": "Build a formal polite request.",
+          "instruction": "Bygg meningen: 'Jag undrade om du kunde hjälpa mig med den här frågan.'",
           "words": [
             "I",
             "was",
@@ -689,7 +689,7 @@
           "type": "fill-in-blank",
           "sentence": "The project was successful. ___, it took longer than expected.",
           "answer": "However",
-          "hint": "Kontrastmarkör: However (däremot/dock).",
+          "hint": "Vilket typ av kohesionssignal behövs här – kontrast, tillägg eller konsekvens?",
           "explanation": "'However' signals a contrast between the two sentences."
         },
         {
@@ -711,7 +711,7 @@
           "type": "fill-in-blank",
           "sentence": "The weather was terrible. ___, we decided to cancel the trip.",
           "answer": "Therefore",
-          "hint": "Följdmarkör: Therefore / As a result / Consequently.",
+          "hint": "Meningen kräver ett kohesionssignal som visar konsekvens eller följd.",
           "explanation": "'Therefore' shows cause and effect: bad weather → cancel the trip."
         },
         {
@@ -733,13 +733,13 @@
           "type": "fill-in-blank",
           "sentence": "Prices have risen. ___ ___, consumer spending has fallen.",
           "answer": "As a result",
-          "hint": "Kausal kohesion: As a result / Therefore / Consequently.",
+          "hint": "Meningen kräver en fras som visar orsak och verkan.",
           "explanation": "'As a result' shows the consequence of rising prices."
         },
         {
           "id": "gym-g4-7",
           "type": "build-sentence",
-          "instruction": "Build a sentence using a discourse marker of concession.",
+          "instruction": "Bygg meningen: 'Även om filmen var lång, var den väldigt underhållande.'",
           "words": [
             "Although",
             "the",
@@ -785,7 +785,7 @@
           "type": "fill-in-blank",
           "sentence": "The new policy has many advantages. ___, it reduces costs and improves efficiency.",
           "answer": "For example",
-          "hint": "Exempelmarkör: For example / For instance.",
+          "hint": "Meningen kräver ett uttryck som introducerar ett konkret exempel.",
           "explanation": "'For example' introduces an illustration of the stated advantages."
         },
         {
@@ -807,7 +807,7 @@
           "type": "fill-in-blank",
           "sentence": "He trained every day. ___, he won the championship.",
           "answer": "Consequently",
-          "hint": "Kausal kohesion: Consequently / As a result / Therefore.",
+          "hint": "Meningen kräver ett ord som visar konsekvens.",
           "explanation": "'Consequently' shows the result of daily training."
         },
         {
@@ -829,13 +829,13 @@
           "type": "fill-in-blank",
           "sentence": "The two proposals differ significantly. The first focuses on cost reduction; ___, the second prioritises quality.",
           "answer": "whereas",
-          "hint": "'Whereas' / 'while' = jämförande kontrast inom en mening.",
+          "hint": "Meningen kräver en konjunktion för att visa jämförande kontrast.",
           "explanation": "'Whereas' introduces a contrasting idea within the same sentence."
         },
         {
           "id": "gym-g4-14",
           "type": "build-sentence",
-          "instruction": "Build a sentence using a discourse marker of addition.",
+          "instruction": "Bygg meningarna: 'Maten var utmärkt. Dessutom var servicen oklanderlig.'",
           "words": [
             "The",
             "food",
@@ -901,7 +901,7 @@
           "type": "fill-in-blank",
           "sentence": "Had I known, I ___ (act) differently.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced-2",
@@ -958,7 +958,7 @@
           "type": "fill-in-blank",
           "sentence": "He denied ___ (take) the money.",
           "answer": "taking",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced-8",
@@ -1053,7 +1053,7 @@
           "type": "fill-in-blank",
           "sentence": "The data needs ___ (verify).",
           "answer": "to be verified",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced-18",
@@ -1108,7 +1108,7 @@
           "type": "fill-in-blank",
           "sentence": "Had she known, she ___ (act) differently.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced2-2",
@@ -1146,7 +1146,7 @@
           "type": "fill-in-blank",
           "sentence": "She denied ___ (cheat) on the exam.",
           "answer": "cheating",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced2-6",
@@ -1203,7 +1203,7 @@
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (revise).",
           "answer": "to be revised",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced2-12",
@@ -1315,7 +1315,7 @@
           "type": "fill-in-blank",
           "sentence": "Had I realised, I ___ (act) sooner.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced3-2",
@@ -1353,7 +1353,7 @@
           "type": "fill-in-blank",
           "sentence": "She denied ___ (steal) the money.",
           "answer": "stealing",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced3-6",
@@ -1410,7 +1410,7 @@
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (edit).",
           "answer": "to be edited",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced3-12",
@@ -1562,7 +1562,7 @@
           "type": "fill-in-blank",
           "sentence": "He admitted ___ (break) the rule.",
           "answer": "breaking",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced3-28",
@@ -1616,7 +1616,7 @@
           "type": "fill-in-blank",
           "sentence": "Had I known, I ___ (act) differently.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced4-2",
@@ -1644,7 +1644,7 @@
           "type": "fill-in-blank",
           "sentence": "She denied ___ (take) the money.",
           "answer": "taking",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced4-6",
@@ -1665,7 +1665,7 @@
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (revise).",
           "answer": "to be revised",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced4-9",
@@ -1777,7 +1777,7 @@
             "will"
           ],
           "correctIndex": 1,
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced5-2",
@@ -1822,7 +1822,7 @@
           "type": "fill-in-blank",
           "sentence": "He admitted ___ (lie) to the teacher.",
           "answer": "lying",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced5-7",
@@ -1841,7 +1841,7 @@
           "type": "fill-in-blank",
           "sentence": "The issue needs ___ (address) immediately.",
           "answer": "to be addressed",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced5-9",
@@ -1929,7 +1929,7 @@
             "will"
           ],
           "correctIndex": 1,
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced5-18",
@@ -1978,14 +1978,14 @@
           "type": "fill-in-blank",
           "sentence": "She has been working here ___ 2015.",
           "answer": "since",
-          "hint": "'Since' + specifik startpunkt (år, datum). 'For' + tidsperiod. 2015 är en tidpunkt → 'since'."
+          "hint": "Tänk: är tidsuttrycket en period (hur länge?) eller en startpunkt (sedan när)?"
         },
         {
           "id": "gym-g-mixed-2",
           "type": "fill-in-blank",
           "sentence": "She has been working here ___ ten years.",
           "answer": "for",
-          "hint": "'For' + tidsperiod (hur länge): 'for ten years'. 'Since' + startpunkt. Tio år är en period → 'for'."
+          "hint": "Tänk: är tidsuttrycket en period (hur länge?) eller en startpunkt (sedan när)?"
         },
         {
           "id": "gym-g-mixed-3",
@@ -1999,7 +1999,7 @@
           "type": "fill-in-blank",
           "sentence": "His ___ to cooperate surprised everyone.",
           "answer": "refusal",
-          "hint": "Nominalisering: verbet 'refuse' → substantivet 'refusal'. Formellt språk omvandlar ofta verb till substantiv: decide→decision, arrive→arrival, refuse→refusal."
+          "hint": "Nominalisering: vilket substantiv bildas av det verb som syns i meningen?"
         },
         {
           "id": "gym-g-mixed-5",
@@ -2017,21 +2017,21 @@
           "type": "fill-in-blank",
           "sentence": "Only after the exam ___ she realise her mistake.",
           "answer": "did",
-          "hint": "Inversion: 'Only after...' inleder meningen → inverterad ordföljd: hjälpverb + subjekt. 'Only after the exam did she realise' (inte 'she realised')."
+          "hint": "Inversion med 'Only after...': vilket hjälpverb hör till subjektet i den inverterade satsen?"
         },
         {
           "id": "gym-g-mixed-7",
           "type": "fill-in-blank",
           "sentence": "In spite of ___ tired, he continued.",
           "answer": "being",
-          "hint": "'In spite of' + gerund (-ing): 'in spite of being tired'. Jämför: 'Although he was tired' (fullständig sats med 'although')."
+          "hint": "'In spite of' följs av gerundium. Vilken form av verbet ska användas?"
         },
         {
           "id": "gym-g-mixed-8",
           "type": "fill-in-blank",
           "sentence": "She ___ have forgotten (possibility).",
           "answer": "might",
-          "hint": "Modal perfekt: modalverb + have + particip. 'Might have' = kan ha (möjlighet). 'Must have' = måste ha (slutledning). 'Should have' = borde ha (kritik)."
+          "hint": "Vilket modalverb passar för att uttrycka en möjlighet (inte säkerhet)?"
         },
         {
           "id": "gym-g-mixed-9",
@@ -2045,7 +2045,7 @@
           "type": "fill-in-blank",
           "sentence": "___ I need is more time.",
           "answer": "What",
-          "hint": "Klyvsats (cleft sentence): 'What I need is...' Börja med 'What' för att betona vad man vill ha. 'What I need is more time' = Det jag behöver är mer tid."
+          "hint": "Det här är en klyvsats (cleft sentence). Vilket ord inleder vanligtvis en klyvsats som fokuserar på ett objekt?"
         },
         {
           "id": "gym-g-mixed-11",
@@ -2070,7 +2070,7 @@
           "type": "fill-in-blank",
           "sentence": "If he were more careful, he ___ avoid mistakes.",
           "answer": "would",
-          "hint": "Typ 2-konditionalis: If + past subjunctive ('were') → 'would' + grundform. Uttrycker en hypotetisk situation i nutid."
+          "hint": "Typ 2-konditionalis: vilket modalverb används i huvudsatsen?"
         },
         {
           "id": "gym-g-mixed-14",
@@ -2102,28 +2102,28 @@
           "type": "fill-in-blank",
           "sentence": "They conducted an ___ into the matter.",
           "answer": "investigation",
-          "hint": "Nominalisering: 'investigate' (verb) → 'investigation' (substantiv). Formellt skriftspråk föredrar ofta substantivformer: investigate→investigation, develop→development."
+          "hint": "Nominalisering: vilket substantiv bildas av det verb som syns i meningen?"
         },
         {
           "id": "gym-g-mixed-18",
           "type": "fill-in-blank",
           "sentence": "Never ___ I seen such chaos.",
           "answer": "have",
-          "hint": "Inversion med 'never': negativt adverbial i början → inverterad ordföljd: Never + hjälpverb + subjekt. 'Never have I seen' (inte 'Never I have seen')."
+          "hint": "Inversion med negativt adverbial: vilket hjälpverb hör till subjektet i denna mening?"
         },
         {
           "id": "gym-g-mixed-19",
           "type": "fill-in-blank",
           "sentence": "He is not old ___ to vote.",
           "answer": "enough",
-          "hint": "'Too...to' = 'not...enough to': 'He is too young to vote' = 'He is not old enough to vote'. 'Enough' kommer EFTER adjektivet."
+          "hint": "Jämför: 'too [adjektiv] to' omvandlas till 'not [adjektiv] ___ to'. Vilket ord saknas?"
         },
         {
           "id": "gym-g-mixed-20",
           "type": "fill-in-blank",
           "sentence": "They ___ have missed the train (certainty).",
           "answer": "must",
-          "hint": "Modal perfekt för slutledning: 'must have' = måste ha (logisk slutsats om dåtid). 'Might have' = kan ha (möjlighet). 'Can't have' = kan inte ha."
+          "hint": "Vilket modalverb passar för att uttrycka en logisk slutsats om något som har hänt?"
         }
       ],
       "helpText": [

@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Comic+Neue:wght@300;400;700&display=swap');
 
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Baloo 2', 'Comic Neue', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-indigo-50 text-indigo-900;
   }
 
   .dark body {
@@ -21,36 +21,103 @@
 }
 
 @layer components {
+  /* Claymorphism card - soft 3D, chunky, playful */
   .card {
-    @apply bg-white rounded-2xl shadow-md p-4 sm:p-6 border border-gray-100;
+    @apply bg-white rounded-3xl p-4 sm:p-6 border-3 border-indigo-100;
+    box-shadow:
+      0 4px 0 0 rgba(99, 102, 241, 0.15),
+      0 8px 16px -4px rgba(99, 102, 241, 0.1),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.8);
   }
 
   .dark .card {
-    @apply bg-gray-800 border-gray-700 shadow-gray-900 text-gray-100;
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+    box-shadow:
+      0 4px 0 0 rgba(0, 0, 0, 0.3),
+      0 8px 16px -4px rgba(0, 0, 0, 0.2),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.05);
   }
 
+  /* Clay button - chunky, 3D press effect */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 rounded-xl font-semibold text-white transition-all duration-200 active:scale-95 touch-manipulation;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 rounded-2xl font-bold text-white transition-all duration-200 cursor-pointer border-3 border-transparent;
+    box-shadow:
+      0 4px 0 0 rgba(0, 0, 0, 0.2),
+      0 6px 12px -2px rgba(0, 0, 0, 0.15),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 0 rgba(0, 0, 0, 0.2),
+      0 10px 20px -2px rgba(0, 0, 0, 0.2),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
+  }
+  .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow:
+      0 1px 0 0 rgba(0, 0, 0, 0.2),
+      0 2px 4px -1px rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 rounded-xl font-medium border-2 transition-all duration-200 active:scale-95 touch-manipulation;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 rounded-2xl font-bold border-3 transition-all duration-200 cursor-pointer bg-white;
+    box-shadow:
+      0 3px 0 0 rgba(99, 102, 241, 0.2),
+      0 4px 8px -2px rgba(99, 102, 241, 0.1),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.8);
+  }
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+  }
+  .btn-secondary:active {
+    transform: translateY(1px);
+    box-shadow:
+      0 1px 0 0 rgba(99, 102, 241, 0.2),
+      inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   }
 
+  /* Clay input field */
   .input-field {
-    @apply w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-blue-400 dark:focus:border-blue-500 focus:outline-none text-lg transition-colors;
+    @apply w-full px-5 py-4 rounded-2xl border-3 border-indigo-200 bg-white text-indigo-900 placeholder:text-indigo-300 focus:border-indigo-400 focus:outline-none text-lg transition-all font-medium;
+    box-shadow:
+      inset 0 3px 6px -2px rgba(99, 102, 241, 0.1),
+      0 2px 0 0 rgba(255, 255, 255, 0.8);
+  }
+  .input-field:focus {
+    box-shadow:
+      inset 0 3px 6px -2px rgba(99, 102, 241, 0.15),
+      0 0 0 4px rgba(99, 102, 241, 0.1);
   }
 
+  .dark .input-field {
+    @apply border-gray-600 bg-gray-700 text-gray-100 placeholder:text-gray-500 focus:border-indigo-500;
+  }
+
+  /* Clay badge */
   .badge {
-    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-bold;
+    box-shadow:
+      0 2px 0 0 rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px 0 rgba(255, 255, 255, 0.5);
   }
 
+  /* Clay progress bar */
   .progress-bar-track {
-    @apply w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden;
+    @apply w-full h-4 bg-indigo-100 rounded-full overflow-hidden border-2 border-indigo-200/50;
+    box-shadow: inset 0 2px 4px -1px rgba(99, 102, 241, 0.2);
   }
 
   .progress-bar-fill {
     @apply h-full rounded-full transition-all duration-700 ease-out;
+    box-shadow:
+      inset 0 -2px 4px 0 rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .progress-bar-track {
+    @apply bg-gray-700 border-gray-600;
   }
 }
 
