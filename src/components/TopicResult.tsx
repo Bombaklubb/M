@@ -5,10 +5,59 @@ import { useApp } from '../contexts/AppContext';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { calcStars } from '../utils/storage';
+import { CHEST_META } from '../utils/chestStorage';
+
+// ─── Mystery Box Popup (inline) ───────────────────────────────────────────────
+function MysteryPopup({ description, onClose }: { description: string; onClose: () => void }) {
+  const [opened, setOpened] = useState(false);
+  return (
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[60] p-4">
+      <div
+        className="rounded-3xl p-8 max-w-sm w-full text-center"
+        style={{
+          background: 'linear-gradient(135deg, #1a0a2e, #0d0d2b)',
+          border: '3px solid #a855f7',
+          boxShadow: '0 8px 40px rgba(168,85,247,0.35)',
+        }}
+      >
+        {!opened ? (
+          <>
+            <div className="text-7xl mb-4 animate-bounce" style={{ animationDuration: '1s' }}>🎁</div>
+            <h2 className="text-2xl font-black text-purple-400 mb-2">Mysterylåda!</h2>
+            <p className="text-white/60 mb-6 text-sm">Du hittade en mysterylåda! Klicka för att öppna.</p>
+            <button
+              onClick={() => setOpened(true)}
+              className="w-full py-3 rounded-2xl font-bold text-white text-lg cursor-pointer active:scale-95 transition-all"
+              style={{ background: 'linear-gradient(135deg, #a855f7, #7c3aed)', border: '3px solid #7c3aed' }}
+            >
+              Öppna lådan!
+            </button>
+          </>
+        ) : (
+          <>
+            <div className="text-7xl mb-4">⭐</div>
+            <h2 className="text-2xl font-black text-purple-400 mb-2">Du vann!</h2>
+            <p className="text-lg font-bold text-white/90 mb-6">{description}</p>
+            <button
+              onClick={onClose}
+              className="w-full py-3 rounded-2xl font-bold text-white cursor-pointer active:scale-95 transition-all"
+              style={{ background: 'linear-gradient(135deg, #22c55e, #16a34a)', border: '3px solid #16a34a' }}
+            >
+              Häftigt! Fortsätt →
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function TopicResult({ topic }: { topic: Topic }) {
-  const { currentStudent, setView, getStudentStats } = useApp();
+  const { currentStudent, setView, getStudentStats, pendingChestResult, clearPendingChestResult } = useApp();
   const [visible, setVisible] = useState(false);
+  const [showMystery, setShowMystery] = useState(
+    !!pendingChestResult?.mysteryReward
+  );
 
   useEffect(() => {
     setTimeout(() => setVisible(true), 100);
@@ -90,6 +139,32 @@ export default function TopicResult({ topic }: { topic: Topic }) {
               ))}
             </div>
           )}
+
+          {/* New chests earned */}
+          {pendingChestResult && pendingChestResult.newChests.length > 0 && (
+            <div
+              className="rounded-2xl p-4 mb-4"
+              style={{
+                background: 'linear-gradient(135deg, rgba(245,158,11,0.15), rgba(217,119,6,0.1))',
+                border: '2px solid rgba(245,158,11,0.4)',
+              }}
+            >
+              <p className="font-bold text-amber-300 mb-2">
+                🎁 {pendingChestResult.newChests.length === 1 ? 'Ny kista intjänad!' : `${pendingChestResult.newChests.length} nya kistor intjänade!`}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {pendingChestResult.newChests.map((chest, i) => (
+                  <span key={i} className="text-2xl">{CHEST_META[chest.type].emoji}</span>
+                ))}
+              </div>
+              <button
+                onClick={() => setView('kistor')}
+                className="mt-2 text-xs text-amber-400 underline cursor-pointer hover:text-amber-300 transition-colors"
+              >
+                Öppna mina kistor →
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Action buttons */}
@@ -114,6 +189,17 @@ export default function TopicResult({ topic }: { topic: Topic }) {
           📊 Se mina resultat
         </button>
       </div>
+
+      {/* Mystery box popup */}
+      {showMystery && pendingChestResult?.mysteryReward && (
+        <MysteryPopup
+          description={pendingChestResult.mysteryReward.description}
+          onClose={() => {
+            setShowMystery(false);
+            clearPendingChestResult();
+          }}
+        />
+      )}
     </div>
   );
 }

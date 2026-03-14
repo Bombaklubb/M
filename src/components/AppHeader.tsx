@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getPoints, initPoints } from '../utils/storage';
+import { loadGamification } from '../utils/chestStorage';
 import { ALL_AVATARS } from '../data/avatars';
 
 export default function AppHeader() {
@@ -13,6 +14,10 @@ export default function AppHeader() {
   const avatarEmoji = currentStudent
     ? (ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0])
     : null;
+
+  const unopenedChests = currentStudent
+    ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
+    : 0;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-14
@@ -38,6 +43,20 @@ export default function AppHeader() {
         {/* Användarinfo – höger (visas bara när inloggad) */}
         {currentStudent && points && (
           <div className="flex items-center gap-2">
+
+            {/* Kistor */}
+            <button
+              onClick={() => setView('kistor')}
+              className="relative flex items-center gap-1 bg-amber-700/30 border border-amber-600/40 px-3 py-1.5 rounded-full hover:bg-amber-700/50 transition-colors cursor-pointer"
+              title="Mina kistor"
+            >
+              <span className="text-base leading-none">🏆</span>
+              {unopenedChests > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-black rounded-full flex items-center justify-center px-0.5">
+                  {unopenedChests}
+                </span>
+              )}
+            </button>
 
             {/* Poäng */}
             <div className="flex items-center gap-1 bg-amber-500/20 border border-amber-400/40 px-3 py-1.5 rounded-full">
