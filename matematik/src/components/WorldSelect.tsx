@@ -3,6 +3,7 @@ import { useApp } from '../contexts/AppContext';
 import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
 import { getProgress, getPoints } from '../utils/storage';
+import { loadGamification } from '../utils/chestStorage';
 import { ALL_AVATARS } from '../data/avatars';
 
 export default function WorldSelect() {
@@ -12,6 +13,9 @@ export default function WorldSelect() {
   const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
   const totalPoints = pointsRecord?.totalPoints ?? 0;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
+  const unopenedChests = currentStudent
+    ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
+    : 0;
 
   return (
     <div
@@ -35,8 +39,23 @@ export default function WorldSelect() {
         ))}
       </div>
 
-      {/* Top bar: höger – avatar + namn + poäng + logga ut */}
+      {/* Top bar: höger – kistor + avatar + namn + poäng + logga ut */}
       <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
+        {/* Kistor */}
+        <button
+          onClick={() => setView('kistor')}
+          className="relative flex items-center gap-1 px-3 py-1.5 rounded-full transition-all hover:bg-white/20 active:scale-95 cursor-pointer"
+          style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
+          title="Mina kistor"
+        >
+          <span className="text-xl leading-none">🏆</span>
+          {unopenedChests > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-black rounded-full flex items-center justify-center px-0.5">
+              {unopenedChests}
+            </span>
+          )}
+        </button>
+
         {/* Avatar + namn + poäng */}
         <button
           onClick={() => setView('my-page')}
