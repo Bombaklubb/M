@@ -16,6 +16,7 @@ import QuestView from './components/QuestView';
 import CollectionView from './components/CollectionView';
 import MinSidaView from './components/MinSidaView';
 import SluttestView from './components/SluttestView';
+import KistorView from './components/KistorView';
 
 // ─── Error Boundary ─────────────────────────────────────────────────────────
 // Catches any uncaught error in the React tree and shows a recovery screen
@@ -119,6 +120,7 @@ function AppInner() {
           case 'teacher-login':     return <TeacherLogin />;
           case 'teacher':           return <TeacherView />;
           case 'sluttest':          return <SluttestView />;
+          case 'kistor':            return <KistorView />;
           default:                  return <Login />;
         }
       })()}
