@@ -194,6 +194,37 @@ export interface StudentMessage {
   read: boolean;
 }
 
+// === CHESTS / GAMIFICATION ===
+export type ChestType = 'wood' | 'silver' | 'gold';
+
+export interface MattChest {
+  id: string;
+  type: ChestType;
+  earnedAt: string;
+  opened: boolean;
+  openedReward?: string;
+}
+
+export type MysteryRewardType = 'points' | 'chest' | 'badge';
+
+export interface MysteryBoxReward {
+  type: MysteryRewardType;
+  points?: number;
+  chestType?: ChestType;
+  badgeId?: string;
+  description: string;
+}
+
+export interface MattGamificationData {
+  chests: MattChest[];
+  badges: string[];
+  exercisesCompleted: number;
+  bossUnlocked: boolean;
+  bossWins: number;
+  pointsMilestonesRewarded: number[];
+  exerciseMilestonesRewarded: number[];
+}
+
 // === APP STATE ===
 export type AppView =
   | 'login'
