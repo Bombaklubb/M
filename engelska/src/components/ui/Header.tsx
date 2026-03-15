@@ -7,6 +7,7 @@ import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent, loadGamification } from "@/lib/storage";
 import { getAvatar, type Avatar } from "@/lib/avatars";
 import type { StudentData } from "@/lib/types";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 function AvatarImg({ av }: { av: Avatar }) {
   const [error, setError] = useState(false);
@@ -81,13 +82,17 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
             {/* Points badge */}
             <div
-              className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default"
+              className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default transition-all hover:scale-105"
               style={{
                 boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
               }}
             >
               <span className="text-amber-500 text-base">⭐</span>
-              <span className="text-sm font-bold text-amber-700 dark:text-amber-400">{student.totalPoints}</span>
+              <NumberTicker
+                value={student.totalPoints}
+                className="text-sm font-bold text-amber-700 dark:text-amber-400"
+                duration={600}
+              />
             </div>
 
             {/* Student avatar + name – links to profile */}
