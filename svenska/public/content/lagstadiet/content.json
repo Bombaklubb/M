@@ -1,0 +1,250 @@
+{
+  "grammar": [
+    {
+      "id": "substantiv-1",
+      "title": "Substantiv – saker och djur",
+      "description": "Lär dig känna igen substantiv",
+      "icon": "🐶",
+      "bonusPoints": 20,
+      "helpText": [
+        "Substantiv är namn på saker, djur och personer.",
+        "Exempel: hund, boll, flicka, hus.",
+        "Fråga dig: Vad är det? Vem är det? – Svaret är oftast ett substantiv!"
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett substantiv?",
+          "options": ["springer", "katt", "glad", "snabbt"],
+          "correctIndex": 1,
+          "explanation": "'Katt' är ett substantiv – det är ett djur."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket av dessa är INTE ett substantiv?",
+          "options": ["boll", "äpple", "hoppa", "cykel"],
+          "correctIndex": 2,
+          "explanation": "'Hoppa' är ett verb – det är en handling."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Fyll i rätt ord: 'Hunden leker med en ___.'",
+          "answer": "boll",
+          "hint": "Det är något runt man kan kasta.",
+          "explanation": "'Boll' är ett substantiv som passar i meningen."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur många substantiv finns i meningen: 'Flickan matar katten'?",
+          "options": ["1", "2", "3", "0"],
+          "correctIndex": 1,
+          "explanation": "'Flickan' och 'katten' är de två substantiven."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg meningen med substantivet först!",
+          "words": ["Hunden", "leker", "i", "trädgården"],
+          "correctOrder": [0, 1, 2, 3],
+          "explanation": "'Hunden' och 'trädgården' är substantiv i meningen."
+        }
+      ]
+    },
+    {
+      "id": "verb-1",
+      "title": "Verb – vad vi gör",
+      "description": "Lär dig känna igen verb",
+      "icon": "🏃",
+      "bonusPoints": 20,
+      "helpText": [
+        "Verb är handlingsord – de berättar vad någon GÖR.",
+        "Exempel: springer, äter, sover, leker.",
+        "Fråga dig: Vad gör personen/djuret? – Svaret är ett verb!"
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett verb?",
+          "options": ["hund", "blå", "springer", "stor"],
+          "correctIndex": 2,
+          "explanation": "'Springer' är ett verb – det är en handling."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Katten ___ mjölk. Välj rätt verb!",
+          "options": ["söt", "vit", "dricker", "liten"],
+          "correctIndex": 2,
+          "explanation": "'Dricker' är ett verb som passar i meningen."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Fyll i ett verb: 'Barnen ___ i parken.'",
+          "answer": "leker",
+          "hint": "Det är något barn gör ute när de har roligt.",
+          "explanation": "'Leker' är ett verb som passar bra."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket verb passar bäst? 'Fågeln ___ högt upp i luften.'",
+          "options": ["äter", "flyger", "sover", "simmar"],
+          "correctIndex": 1,
+          "explanation": "Fåglar flyger – 'flyger' är rätt verb!"
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: börja med vem, sedan vad de gör!",
+          "words": ["Pojken", "cyklar", "till", "skolan"],
+          "correctOrder": [0, 1, 2, 3],
+          "explanation": "'Cyklar' är verbet i meningen."
+        }
+      ]
+    },
+    {
+      "id": "adjektiv-1",
+      "title": "Adjektiv – hur saker är",
+      "description": "Lär dig beskriva med adjektiv",
+      "icon": "🎨",
+      "bonusPoints": 20,
+      "helpText": [
+        "Adjektiv beskriver hur något ser ut eller känns.",
+        "Exempel: stor, liten, glad, söt, röd.",
+        "Fråga dig: Hur är det? – Svaret är ett adjektiv!"
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord är ett adjektiv?",
+          "options": ["boll", "hoppar", "glad", "skolan"],
+          "correctIndex": 2,
+          "explanation": "'Glad' beskriver hur någon mår – det är ett adjektiv."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Den ___ bilen körde fort. Vilket adjektiv passar?",
+          "options": ["springer", "röda", "skolan", "äter"],
+          "correctIndex": 1,
+          "explanation": "'Röda' beskriver bilens färg – det är ett adjektiv."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Fyll i ett adjektiv: 'Katten är väldigt ___.'",
+          "answer": "söt",
+          "hint": "Det är något man tycker om att titta på.",
+          "explanation": "'Söt' är ett adjektiv som beskriver katten."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur många adjektiv finns i: 'Den stora, snälla björnen sover'?",
+          "options": ["1", "2", "3", "0"],
+          "correctIndex": 1,
+          "explanation": "'Stora' och 'snälla' är de två adjektiven."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg meningen med adjektivet på rätt plats!",
+          "words": ["Den", "lilla", "hunden", "skäller"],
+          "correctOrder": [0, 1, 2, 3],
+          "explanation": "'Lilla' är adjektivet som beskriver hunden."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "saga-1",
+      "title": "Rävens list",
+      "description": "En saga om en smart räv",
+      "icon": "🦊",
+      "bonusPoints": 25,
+      "helpText": [
+        "Läs sagan noga – vad händer och varför?",
+        "Tänk på vad karaktärerna gör och känner."
+      ],
+      "author": "Fri saga",
+      "text": "Det var en gång en räv som bodde i skogen. Räven var känd för att vara mycket smart.\n\nEn dag hittade räven ett stort hål i marken. I hålet låg en kruka fylld med honung. Men hålet var för djupt – räven kom inte åt honungen.\n\nRäven tänkte och tänkte. Plötsligt fick den en idé! Den sprang till floden och drack mycket vatten. Sedan sprang den tillbaka och spydde vattnet i hålet. Nu flöt honungskrukan upp!\n\nRäven drack all söt honung och var nöjd. 'Det lönar sig att tänka!' sa räven.",
+      "questions": [
+        {
+          "type": "on-the-line",
+          "question": "Vad hittade räven i hålet?",
+          "options": ["En guldkruka", "En kruka med honung", "En kruka med vatten", "En sten"],
+          "correctIndex": 1,
+          "explanation": "I hålet låg en kruka fylld med honung."
+        },
+        {
+          "type": "on-the-line",
+          "question": "Var bodde räven?",
+          "options": ["I en stad", "Vid havet", "I skogen", "På en farm"],
+          "correctIndex": 2,
+          "explanation": "Räven bodde i skogen."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Varför sprang räven till floden?",
+          "options": ["För att simma", "För att träffa kompisar", "För att hämta vatten till sin plan", "För att dricka för att den var törstig"],
+          "correctIndex": 2,
+          "hint": "Tänk på vad räven ville åstadkomma!",
+          "explanation": "Räven hade en plan – den ville fylla hålet med vatten så honungskrukan flöt upp."
+        },
+        {
+          "type": "beyond-the-lines",
+          "question": "Vilket budskap har sagan?",
+          "options": ["Honung är gott", "Det lönar sig att tänka och använda sin hjärna", "Man ska alltid springa fort", "Rävar är farliga"],
+          "correctIndex": 1,
+          "hint": "Vad säger räven i slutet av sagan?",
+          "explanation": "Sagans budskap är att intelligens och list lönar sig."
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "stavning-1",
+      "title": "Bokstäver Å, Ä, Ö",
+      "description": "Öva på de svenska specialbokstäverna",
+      "icon": "🇸🇪",
+      "bonusPoints": 20,
+      "helpText": [
+        "Svenska har tre speciella bokstäver: Å, Ä och Ö.",
+        "Å låter som 'o' i 'ord'.",
+        "Ä låter som 'e' i 'äta'.",
+        "Ö låter som i 'öga'."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Hur stavas djuret som säger 'muu'?",
+          "options": ["ko", "kå", "kou", "koo"],
+          "correctIndex": 0,
+          "explanation": "Ko stavas med vanligt 'o'."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord är rätt stavat?",
+          "options": ["äpple", "apple", "äppel", "äpla"],
+          "correctIndex": 0,
+          "explanation": "'Äpple' stavas med ä och dubbelt p och e."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Fyll i rätt bokstav: 'B_rjan' (start på något)",
+          "answer": "ö",
+          "hint": "Ordet är 'början' – vilken specialbokstav fattas?",
+          "explanation": "'Början' stavas med ö: B-Ö-R-J-A-N."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord stavas rätt?",
+          "options": ["oga", "öga", "öoga", "åga"],
+          "correctIndex": 1,
+          "explanation": "'Öga' stavas med ö."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur stavas det svenska för 'year'?",
+          "options": ["ar", "år", "aar", "aor"],
+          "correctIndex": 1,
+          "explanation": "'År' stavas med å – ett av årets 12 månader tar ett år."
+        }
+      ]
+    }
+  ]
+}

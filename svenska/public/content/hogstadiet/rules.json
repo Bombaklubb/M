@@ -1,0 +1,70 @@
+{
+  "sections": [
+    {
+      "id": "bisatser",
+      "title": "Huvud- och bisatser",
+      "icon": "🧩",
+      "content": [
+        {
+          "term": "Huvudsats",
+          "explanation": "En sats som kan stå ensam och bilda en fullständig mening.",
+          "examples": ["Jag vet.", "Vi stannade hemma.", "Hon sjunger."]
+        },
+        {
+          "term": "Bisats",
+          "explanation": "En sats som är beroende av huvudsatsen och inleds av ett bindeord.",
+          "examples": ["...att du har rätt", "...eftersom det regnade", "...när hon kom"]
+        },
+        {
+          "term": "Vanliga bindeord",
+          "explanation": "Ord som inleder bisatser.",
+          "examples": ["att, om, när, eftersom, fast, trots att, som, vilken, vars"]
+        }
+      ]
+    },
+    {
+      "id": "skiljetecken",
+      "title": "Skiljetecken",
+      "icon": "⁉️",
+      "content": [
+        {
+          "term": "Punkt (.)",
+          "explanation": "Avslutar en påståendemening.",
+          "examples": ["Jag heter Maja.", "Solen skiner idag."]
+        },
+        {
+          "term": "Kommatecken (,)",
+          "explanation": "Används vid uppräkningar, inskott och ibland bisatser.",
+          "examples": ["Jag köpte äpplen, päron och bananer.", "Ja, det stämmer."]
+        },
+        {
+          "term": "Kolon (:)",
+          "explanation": "Inleder en lista, förklaring eller direkt anföring.",
+          "examples": ["Vi behöver: mjölk, bröd och ägg.", "Han sa: 'Hej!'"]
+        },
+        {
+          "term": "Semikolon (;)",
+          "explanation": "Förbinder två nära relaterade meningar utan konjunktion.",
+          "examples": ["Det regnade; vi stannade inne.", "Hon kom tidigt; han kom sent."]
+        }
+      ]
+    },
+    {
+      "id": "de-dem",
+      "title": "De och dem",
+      "icon": "👥",
+      "content": [
+        {
+          "term": "De – subjektsform",
+          "explanation": "Används när 'de' är subjekt (utför handlingen). Tips: byt mot 'vi'.",
+          "examples": ["De spelar fotboll. (Vi spelar fotboll ✓)", "De kom tidigt. (Vi kom tidigt ✓)"]
+        },
+        {
+          "term": "Dem – objektsform",
+          "explanation": "Används när 'dem' är objekt (tar emot handlingen). Tips: byt mot 'oss'.",
+          "examples": ["Jag såg dem. (Jag såg oss ✓)", "Vi hälsade på dem. (Vi hälsade på oss ✓)"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+// ─── Stage / World definitions ───────────────────────────────────────────────
+
+export type StageId = "lagstadiet" | "mellanstadiet" | "hogstadiet" | "gymnasiet";
+
+export interface Stage {
+  id: StageId;
+  name: string;
+  subtitle: string;
+  emoji: string;
+  colorClass: string;
+  bgClass: string;
+  borderClass: string;
+  textClass: string;
+  buttonClass: string;
+  grades: string;
+  description: string;
+  locked: boolean;
+}
+
+// ─── Exercise types ───────────────────────────────────────────────────────────
+
+export type GrammarExerciseType = "multiple-choice" | "fill-in-blank" | "build-sentence";
+export type ReadingQuestionType = "on-the-line" | "between-the-lines" | "beyond-the-lines";
+
+export interface MultipleChoiceExercise {
+  id: string;
+  type: "multiple-choice";
+  question: string;
+  options: string[];
+  correctIndex: number;
+  hint?: string;
+  explanation?: string;
+}
+
+export interface FillInBlankExercise {
+  id: string;
+  type: "fill-in-blank";
+  sentence: string;
+  answer: string;
+  alternativeAnswers?: string[];
+  hint?: string;
+  explanation?: string;
+}
+
+export interface BuildSentenceExercise {
+  id: string;
+  type: "build-sentence";
+  instruction: string;
+  words: string[];
+  correctOrder: number[];
+  hint?: string;
+  explanation?: string;
+}
+
+export type GrammarExercise =
+  | MultipleChoiceExercise
+  | FillInBlankExercise
+  | BuildSentenceExercise;
+
+export interface ReadingQuestion {
+  id: string;
+  type: ReadingQuestionType;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  hint?: string;
+  explanation?: string;
+}
+
+// ─── Module definitions ───────────────────────────────────────────────────────
+
+export interface GrammarModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  helpText?: string[];
+  exercises: GrammarExercise[];
+}
+
+export interface ReadingModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  helpText?: string[];
+  text: string;
+  author?: string;
+  questions: ReadingQuestion[];
+}
+
+export interface SpellingModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  helpText?: string[];
+  exercises: GrammarExercise[];
+}
+
+// ─── Word Search ──────────────────────────────────────────────────────────────
+
+export interface WordSearchWord {
+  word: string;
+  clue: string;
+}
+
+export interface WordSearchModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  words: WordSearchWord[];
+}
+
+// ─── Crossword ────────────────────────────────────────────────────────────────
+
+export interface CrosswordClue {
+  number: number;
+  clue: string;
+  answer: string;
+  row: number;
+  col: number;
+  direction: "across" | "down";
+}
+
+export interface CrosswordModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  clues: CrosswordClue[];
+}
+
+export interface StageContent {
+  grammar: GrammarModule[];
+  reading: ReadingModule[];
+  spelling?: SpellingModule[];
+  wordsearch?: WordSearchModule[];
+  crossword?: CrosswordModule[];
+}
+
+// ─── Student progress (stored in localStorage) ───────────────────────────────
+
+export interface ModuleProgress {
+  moduleId: string;
+  completed: boolean;
+  points: number;
+  attempts: number;
+  lastAttempt: string;
+}
+
+export interface StageProgress {
+  stageId: StageId;
+  grammarModules: Record<string, ModuleProgress>;
+  readingModules: Record<string, ModuleProgress>;
+  spellingModules: Record<string, ModuleProgress>;
+  wordsearchModules: Record<string, ModuleProgress>;
+  crosswordModules: Record<string, ModuleProgress>;
+}
+
+export type SkinTone = "light" | "light_brown" | "dark";
+
+export interface HeroConfig {
+  heroId: string;
+  skinTone: SkinTone;
+  gender?: "boy" | "girl";
+  equippedAttributes: string[];
+}
+
+export interface StudentData {
+  avatar?: string;
+  name: string;
+  createdAt: string;
+  lastActive: string;
+  totalPoints: number;
+  stages: Record<StageId, StageProgress>;
+  hero?: HeroConfig;
+}
+
+// ─── Gamification ─────────────────────────────────────────────────────────────
+
+export type ChestType = "wood" | "silver" | "gold";
+
+export interface Chest {
+  id: string;
+  type: ChestType;
+  earnedAt: string;
+  opened: boolean;
+  openedReward?: string;
+}
+
+export type MysteryRewardType = "points" | "chest" | "badge";
+
+export interface MysteryBoxReward {
+  type: MysteryRewardType;
+  points?: number;
+  chestType?: ChestType;
+  badgeId?: string;
+  description: string;
+}
+
+export interface GamificationData {
+  chests: Chest[];
+  badges: string[];
+  exercisesCompleted: number;
+  bossUnlocked: boolean;
+  bossLastAttempt?: string;
+  bossWins: number;
+  pointsMilestonesRewarded: number[];
+  exerciseMilestonesRewarded: number[];
+}
+
+// ─── Exercise session (in-memory, not persisted) ──────────────────────────────
+
+export interface ExerciseResult {
+  exerciseId: string;
+  correct: boolean;
+  pointsEarned: number;
+}

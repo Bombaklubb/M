@@ -1,0 +1,95 @@
+{
+  "sections": [
+    {
+      "id": "retorik",
+      "title": "Retorik och stilfigurer",
+      "icon": "🎤",
+      "content": [
+        {
+          "term": "Logos",
+          "explanation": "Appell till förnuftet – fakta, statistik, logiska argument.",
+          "examples": ["Forskning visar att...", "Statistiken bevisar...", "Logiken kräver att..."]
+        },
+        {
+          "term": "Ethos",
+          "explanation": "Appell till trovärdighet – vem talar och varför ska vi lita på dem?",
+          "examples": ["Som läkare kan jag säga...", "Enligt experterna...", "Min erfarenhet visar..."]
+        },
+        {
+          "term": "Pathos",
+          "explanation": "Appell till känslor – engagera mottagaren emotionellt.",
+          "examples": ["Tänk på barnen som lider...", "Vi kan inte blunda för...", "Detta är en katastrof."]
+        },
+        {
+          "term": "Metafor",
+          "explanation": "En bild där något kallas något annat utan 'som' eller 'lika'.",
+          "examples": ["Livet är en resa.", "Du är mitt solsken.", "Ordet är ett svärd."]
+        },
+        {
+          "term": "Liknelse",
+          "explanation": "En jämförelse med 'som' eller 'lika'.",
+          "examples": ["Snabb som vinden.", "Stark som en björn.", "Tyst som natten."]
+        },
+        {
+          "term": "Anafor",
+          "explanation": "Upprepning av ord i början av meningar för att skapa rytm och kraft.",
+          "examples": ["Vi ska kämpa. Vi ska vinna. Vi ska lyckas.", "Jag drömmer om... Jag hoppas på..."]
+        }
+      ]
+    },
+    {
+      "id": "texttyper",
+      "title": "Texttyper och syften",
+      "icon": "📄",
+      "content": [
+        {
+          "term": "Argumenterande text",
+          "explanation": "Syftar till att övertala läsaren. Innehåller tes, argument och belägga.",
+          "examples": ["Debattartikel", "Insändare", "Recension"]
+        },
+        {
+          "term": "Utredande text",
+          "explanation": "Undersöker ett ämne allsidigt utan att ta ställning.",
+          "examples": ["PM", "Rapport", "Utredning"]
+        },
+        {
+          "term": "Berättande text",
+          "explanation": "Berättar en historia med händelseförlopp, karaktärer och miljö.",
+          "examples": ["Roman", "Novell", "Saga"]
+        },
+        {
+          "term": "Informerande text",
+          "explanation": "Förmedlar fakta och information objektivt.",
+          "examples": ["Lärobok", "Manual", "Nyhetsartikel"]
+        }
+      ]
+    },
+    {
+      "id": "avancerad-interpunktion",
+      "title": "Avancerad interpunktion",
+      "icon": "—",
+      "content": [
+        {
+          "term": "Tankstreck (–)",
+          "explanation": "Markerar inskott, paus eller ersätter parentes för dramatisk effekt.",
+          "examples": ["Sverige – landet i norr – är vackert.", "Hon log – och allt förändrades."]
+        },
+        {
+          "term": "Kolon (:)",
+          "explanation": "Inleder lista, förklaring eller direktcitat.",
+          "examples": ["Vi behöver: mjölk och bröd.", "Han sa: 'Hej!'"]
+        },
+        {
+          "term": "Semikolon (;)",
+          "explanation": "Förbinder nära relaterade meningar utan konjunktion.",
+          "examples": ["Hon kom tidigt; han kom sent.", "Det regnade; vi stannade inne."]
+        },
+        {
+          "term": "Apostrof (')",
+          "explanation": "Markerar genitiv vid s/x/z-namn, eller utelämnade ljud.",
+          "examples": ["Jonas' bok", "Felix' cykel", "'ello istället för 'hello'"]
+        }
+      ]
+    }
+  ]
+}
