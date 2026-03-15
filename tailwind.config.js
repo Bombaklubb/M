@@ -49,6 +49,10 @@ export default {
         'pulse-slow': 'pulse 3s infinite',
         'legendaryPulse': 'legendaryPulse 3s ease-in-out infinite',
         'shimmer': 'shimmer 2s linear infinite',
+        // Magic UI
+        'meteor': 'meteor 5s linear infinite',
+        'shimmer-slide': 'shimmer-slide 3s linear infinite',
+        'gradient-shift': 'gradient-shift 3s linear infinite',
       },
       keyframes: {
         legendaryPulse: {
@@ -77,6 +81,21 @@ export default {
           '0%': { transform: 'scale(0) rotate(-30deg)', opacity: '0' },
           '60%': { transform: 'scale(1.3) rotate(10deg)' },
           '100%': { transform: 'scale(1) rotate(0deg)', opacity: '1' },
+        },
+        // Magic UI keyframes
+        meteor: {
+          '0%': { transform: 'rotate(var(--angle, 215deg)) translateX(0)', opacity: '1' },
+          '70%': { opacity: '1' },
+          '100%': { transform: 'rotate(var(--angle, 215deg)) translateX(-500px)', opacity: '0' },
+        },
+        'shimmer-slide': {
+          '0%': { transform: 'translateX(-100%) rotate(0deg)' },
+          '100%': { transform: 'translateX(100%) rotate(0deg)' },
+        },
+        'gradient-shift': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
       },
     },
