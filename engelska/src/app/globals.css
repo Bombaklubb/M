@@ -5,6 +5,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Comic+Neue:wght@300;400;700&display=swap');
 
 @layer base {
+  :root {
+    --background: 238 100% 99%;
+    --foreground: 239 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 239 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 239 50% 15%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 238 100% 96%;
+    --secondary-foreground: 239 50% 15%;
+    --muted: 238 100% 96%;
+    --muted-foreground: 239 20% 55%;
+    --accent: 238 100% 96%;
+    --accent-foreground: 239 50% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 238 60% 90%;
+    --input: 238 60% 90%;
+    --ring: 239 84% 67%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 224 40% 8%;
+    --foreground: 210 40% 95%;
+    --card: 224 30% 13%;
+    --card-foreground: 210 40% 95%;
+    --popover: 224 30% 13%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 25% 18%;
+    --secondary-foreground: 210 40% 95%;
+    --muted: 224 25% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 224 25% 18%;
+    --accent-foreground: 210 40% 95%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 224 20% 25%;
+    --input: 224 20% 25%;
+    --ring: 239 84% 67%;
+  }
+
   html {
     font-family: 'Baloo 2', 'Comic Neue', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -149,6 +194,36 @@
   0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-6px); }
   75% { transform: translateX(6px); }
+}
+
+/* MagicUI animations */
+@keyframes border-beam {
+  100% { offset-distance: 100%; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes shimmer-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes number-ticker {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+@keyframes aurora {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 /* Scrollbar styling */
