@@ -1,0 +1,22 @@
+name: Sync Mattejakten
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'matematik/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to mattejakten
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/Bombaklubb/mattejakten.git
+          git subtree push --prefix=matematik target main

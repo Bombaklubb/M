@@ -1,0 +1,22 @@
+name: Sync Engelskajakten
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'engelska/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to engelskajakten
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/Bombaklubb/engelskajakten.git
+          git subtree push --prefix=engelska target main
