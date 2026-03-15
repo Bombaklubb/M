@@ -23,5 +23,5 @@ jobs:
           git subtree split --prefix=engelska -b engelska-split
 
           # Clone target repo and force-push
-          git remote add target https://x-access-token:${{ secrets.SVENSKA_TOKEN }}@github.com/Bombaklubb/engelskajakten.git
+          git remote add target https://x-access-token:${{ secrets.ENGELSKA_TOKEN }}@github.com/Bombaklubb/engelskajakten.git
           git push target engelska-split:main --force
