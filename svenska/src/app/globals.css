@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Comic+Neue:wght@300;400;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Baloo 2', 'Comic Neue', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sv-50 text-sv-900;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  /* Claymorphism card – Swedish style */
+  .card {
+    @apply bg-white rounded-3xl p-4 sm:p-6 border-3 border-sv-100;
+    box-shadow:
+      0 4px 0 0 rgba(0, 106, 167, 0.12),
+      0 8px 16px -4px rgba(0, 106, 167, 0.08),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .dark .card {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+    box-shadow:
+      0 4px 0 0 rgba(0, 0, 0, 0.3),
+      0 8px 16px -4px rgba(0, 0, 0, 0.2),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Clay button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 rounded-2xl font-bold text-white transition-all duration-200 cursor-pointer border-3 border-transparent;
+    box-shadow:
+      0 4px 0 0 rgba(0, 0, 0, 0.2),
+      0 6px 12px -2px rgba(0, 0, 0, 0.15),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 0 rgba(0, 0, 0, 0.2),
+      0 10px 20px -2px rgba(0, 0, 0, 0.2),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
+  }
+  .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow:
+      0 1px 0 0 rgba(0, 0, 0, 0.2),
+      0 2px 4px -1px rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 rounded-2xl font-bold border-3 transition-all duration-200 cursor-pointer bg-white;
+    box-shadow:
+      0 3px 0 0 rgba(0, 106, 167, 0.18),
+      0 4px 8px -2px rgba(0, 106, 167, 0.1),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.8);
+  }
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+  }
+  .btn-secondary:active {
+    transform: translateY(1px);
+    box-shadow:
+      0 1px 0 0 rgba(0, 106, 167, 0.18),
+      inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* Clay input field */
+  .input-field {
+    @apply w-full px-5 py-4 rounded-2xl border-3 border-sv-200 bg-white text-sv-900 placeholder:text-sv-300 focus:border-sv-500 focus:outline-none text-lg transition-all font-medium;
+    box-shadow:
+      inset 0 3px 6px -2px rgba(0, 106, 167, 0.08),
+      0 2px 0 0 rgba(255, 255, 255, 0.8);
+  }
+  .input-field:focus {
+    box-shadow:
+      inset 0 3px 6px -2px rgba(0, 106, 167, 0.12),
+      0 0 0 4px rgba(0, 106, 167, 0.1);
+  }
+
+  .dark .input-field {
+    @apply border-gray-600 bg-gray-700 text-gray-100 placeholder:text-gray-500 focus:border-sv-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-bold;
+    box-shadow:
+      0 2px 0 0 rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .progress-bar-track {
+    @apply w-full h-4 bg-sv-100 rounded-full overflow-hidden border-2 border-sv-200/50;
+    box-shadow: inset 0 2px 4px -1px rgba(0, 106, 167, 0.15);
+  }
+
+  .progress-bar-fill {
+    @apply h-full rounded-full transition-all duration-700 ease-out;
+    box-shadow:
+      inset 0 -2px 4px 0 rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .progress-bar-track {
+    @apply bg-gray-700 border-gray-600;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .glass {
+    @apply bg-white/20 backdrop-blur-sm border border-white/30;
+  }
+
+  .animate-pop {
+    animation: pop 0.3s ease-out;
+  }
+
+  .animate-shake {
+    animation: shake 0.4s ease-in-out;
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}

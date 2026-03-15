@@ -1,0 +1,65 @@
+{
+  "sections": [
+    {
+      "id": "satsdelar",
+      "title": "Satsdelar",
+      "icon": "🔍",
+      "content": [
+        {
+          "term": "Subjekt",
+          "explanation": "Den som utför handlingen i meningen. Svarar på frågan 'Vem?' eller 'Vad?'",
+          "examples": ["Lisa läser.", "Hunden springer.", "De leker."]
+        },
+        {
+          "term": "Predikat",
+          "explanation": "Verbet i meningen – vad subjektet gör.",
+          "examples": ["Lisa läser.", "Hunden springer.", "Vi spelar fotboll."]
+        },
+        {
+          "term": "Objekt",
+          "explanation": "Det som handlingen riktas mot. Svarar på 'Vem?' eller 'Vad?' efter predikatet.",
+          "examples": ["Jag äter en smörgås.", "Han läser en bok.", "Vi ser filmen."]
+        }
+      ]
+    },
+    {
+      "id": "tempus",
+      "title": "Tempus (tidsformer)",
+      "icon": "⏰",
+      "content": [
+        {
+          "term": "Presens (nutid)",
+          "explanation": "Något händer nu.",
+          "examples": ["Jag läser.", "De springer.", "Hon sjunger."]
+        },
+        {
+          "term": "Preteritum (dåtid)",
+          "explanation": "Något hände förr. Lägg ofta till -ade, -te eller ändra vokalen.",
+          "examples": ["Jag läste.", "De sprang.", "Hon sjöng."]
+        },
+        {
+          "term": "Perfekt",
+          "explanation": "Något har hänt och är kopplat till nutiden. Använd 'har' + supinum.",
+          "examples": ["Jag har läst boken.", "De har sprungit.", "Hon har sjungit."]
+        }
+      ]
+    },
+    {
+      "id": "pronomen",
+      "title": "Pronomen",
+      "icon": "👥",
+      "content": [
+        {
+          "term": "Personliga pronomen",
+          "explanation": "Ersätter namn och substantiv för att undvika upprepning.",
+          "examples": ["jag, du, han, hon, det, vi, ni, de"]
+        },
+        {
+          "term": "Reflexiva pronomen",
+          "explanation": "Syftar tillbaka på subjektet.",
+          "examples": ["sig, mig, dig, oss, er"]
+        }
+      ]
+    }
+  ]
+}

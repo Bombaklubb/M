@@ -1,0 +1,65 @@
+{
+  "sections": [
+    {
+      "id": "ordklasser",
+      "title": "Ordklasser",
+      "icon": "📝",
+      "content": [
+        {
+          "term": "Substantiv",
+          "explanation": "Namn på saker, djur och personer.",
+          "examples": ["hund", "boll", "flicka", "hus", "skola"]
+        },
+        {
+          "term": "Verb",
+          "explanation": "Ord som beskriver handlingar – vad man gör.",
+          "examples": ["springer", "äter", "sover", "leker", "hoppar"]
+        },
+        {
+          "term": "Adjektiv",
+          "explanation": "Ord som beskriver hur något ser ut eller är.",
+          "examples": ["stor", "liten", "glad", "röd", "söt"]
+        }
+      ]
+    },
+    {
+      "id": "specialbokstaver",
+      "title": "Svenska specialbokstäver",
+      "icon": "🇸🇪",
+      "content": [
+        {
+          "term": "Å (å)",
+          "explanation": "Används i ord som 'år', 'åka', 'hål'.",
+          "examples": ["år", "åka", "hål", "gå", "stå"]
+        },
+        {
+          "term": "Ä (ä)",
+          "explanation": "Används i ord som 'äta', 'äpple', 'bär'.",
+          "examples": ["äta", "äpple", "bär", "läsa", "häst"]
+        },
+        {
+          "term": "Ö (ö)",
+          "explanation": "Används i ord som 'öga', 'öra', 'böcker'.",
+          "examples": ["öga", "öra", "böcker", "söt", "grön"]
+        }
+      ]
+    },
+    {
+      "id": "meningsbyggnad",
+      "title": "Hur man bygger en mening",
+      "icon": "🏗️",
+      "content": [
+        {
+          "term": "En mening börjar med stor bokstav",
+          "explanation": "Det första ordet i en mening skrivs alltid med stor bokstav.",
+          "examples": ["Hunden springer.", "Katten sover.", "Barnen leker."]
+        },
+        {
+          "term": "En mening slutar med punkt",
+          "explanation": "När meningen är klar sätter man en punkt (.) i slutet.",
+          "examples": ["Jag heter Maja.", "Vi bor i Sverige.", "Solen skiner."]
+        }
+      ]
+    }
+  ]
+}
