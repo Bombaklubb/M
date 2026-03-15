@@ -1,5 +1,7 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "installCommand": "npm install && cd lasforstaelse && npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "lasforstaelse/dist",
   "ignoreCommand": "git diff-tree --no-commit-id -r --name-only -m HEAD -- lasforstaelse/ kallkritik/ api/ | grep -q . && exit 1 || exit 0"
 }
