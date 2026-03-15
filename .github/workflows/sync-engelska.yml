@@ -18,5 +18,10 @@ jobs:
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "GitHub Actions"
+
+          # Extract engelska/ as a standalone branch
+          git subtree split --prefix=engelska -b engelska-split
+
+          # Clone target repo and force-push
           git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/Bombaklubb/engelskajakten.git
-          git subtree push --prefix=engelska target main
+          git push target engelska-split:main --force
