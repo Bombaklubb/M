@@ -2,6 +2,7 @@
 
 Gratis engelskträningsapp för åk 1–gymnasiet. Byggd med Next.js, fullt statisk export.
 
+
 ## Kom igång
 
 ```bash
