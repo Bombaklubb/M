@@ -21,11 +21,14 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           owner: Bombaklubb
-          repositories: mattejakten
+          repositories: mattejakten,M
 
       - name: Push to mattejakten
+        env:
+          TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "GitHub Actions"
-          git remote add target https://x-access-token:${{ steps.generate-token.outputs.token }}@github.com/Bombaklubb/mattejakten.git
+          git config --global url."https://x-access-token:${TOKEN}@github.com/".insteadOf "https://github.com/"
+          git remote add target https://github.com/Bombaklubb/mattejakten.git
           git subtree push --prefix=matematik target main
