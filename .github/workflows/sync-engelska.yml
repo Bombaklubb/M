@@ -31,4 +31,4 @@ jobs:
           git config user.name "GitHub Actions"
           git config --local --unset-all http.https://github.com/.extraheader || true
           git subtree split --prefix=engelska -b deploy-engelska
-          git push "https://x-access-token:${TOKEN}@github.com/Bombaklubb/engelskajakten.git" deploy-engelska:main
+          git push --force "https://x-access-token:${TOKEN}@github.com/Bombaklubb/engelskajakten.git" deploy-engelska:main
