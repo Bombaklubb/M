@@ -44,6 +44,16 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     exerciseStartRef.current = Date.now();
   }, [currentIdx]);
 
+  // Press Enter again after answering to go to next question
+  useEffect(() => {
+    if (!state.answered) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') handleNext();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [state.answered, currentIdx]);
+
   function answerMultipleChoice(idx: number) {
     if (state.answered) return;
     const ex = exercise as MultipleChoiceExercise;
@@ -574,8 +584,8 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
     return <StepCalc title="Räkna så här:" lines={[`${a} − ${b} = ?`, `${a} − ${b} = ${diff}`]} answer={String(diff)} />;
   }
 
-  // ── Multiplication: "X × Y" or "X x Y" ──────────────────────────────────
-  const multMatch = q.match(/(\d+)\s*[×xX*]\s*(\d+)/);
+  // ── Multiplication: "X × Y", "X · Y", or "X x Y" ────────────────────────
+  const multMatch = q.match(/(\d+)\s*[×·xX*]\s*(\d+)/);
   if (multMatch && exercise.type === 'fill-in') {
     const a = parseInt(multMatch[1]), b = parseInt(multMatch[2]);
     const prod = a * b;
@@ -796,6 +806,16 @@ function generateHint(exercise: Exercise): string {
   // Percent / proportional change
   if (/procent|%|rabatt|ökning|minskning|förändring/i.test(q)) {
     return 'Procent – förändringsfaktorn:\n• Ökning med p%: multiplicera med (1 + p/100)\n  Exempel: +20% → × 1,20\n• Minskning med p%: multiplicera med (1 − p/100)\n  Exempel: 15% rabatt → × 0,85\n• Procentuell förändring: (nytt − gammalt) ÷ gammalt × 100%';
+  }
+
+  // "Test if a given value satisfies equation" (true/false pattern: "Om x = N, är ...")
+  if (/\bOm\s+[a-zA-Z]\s*=\s*[-\d]|\b[a-zA-Z]\s*=\s*[-\d]+\s+är\s+lösning/i.test(q) && exercise.type === 'true-false') {
+    return 'Testa värdet – sätt in och räkna:\n1. Byt ut bokstaven mot det givna talet\n2. Räkna ut vänster sida\n3. Räkna ut höger sida\n4. Sant om sidorna är lika, Falskt om de skiljer sig\nExempel: Om x = 3, är 2x + 1 = 7?\n→ 2·3 + 1 = 6 + 1 = 7 ✓ Sant!';
+  }
+
+  // Reverse-percentage: find original price given discounted price
+  if (/rabatt.*kr|kr.*rabatt|originalpris|utan rabatt|före rabatt|0,[0-9]+\s*[·×]\s*x/i.test(q)) {
+    return 'Hitta originalpriset – baklänges procent:\n1. Med X% rabatt betalar du (100−X)% av originalet\n   Exempel: 20% rabatt → betalar 80% → faktor 0,8\n2. Sätt upp: faktor · x = pris du betalade\n3. Lös: x = priset du betalade ÷ faktor\nExempel: 0,8 · x = 2 400 → x = 2 400 ÷ 0,8 = 3 000 kr';
   }
 
   // Equations / algebra

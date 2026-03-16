@@ -127,7 +127,7 @@ export interface PointsRecord {
 export const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 800, 1200, 1800, 2500, 3500, 5000];
 export const LEVEL_NAMES = [
   'Nybörjare', 'Räknare', 'Mattenisse', 'Talälskare',
-  'Formelmästare', 'Algebran', 'Geometrien', 'Statistikern',
+  'Formelmästare', 'Algebristen', 'Problemlösaren', 'Statistikern',
   'Mattestjärnan', 'Matematikern', 'Matte-Legenden',
 ];
 export const LEVEL_COLORS = [
