@@ -22,7 +22,13 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           owner: Bombaklubb
-          repositories: engelskajakten,M
+
+      - name: Debug token
+        env:
+          TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          echo "Token length: ${#TOKEN}"
+          echo "Token starts with: ${TOKEN:0:4}..."
 
       - name: Push to engelskajakten
         env:
