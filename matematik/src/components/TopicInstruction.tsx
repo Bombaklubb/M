@@ -28,19 +28,26 @@ function Illustration({ name }: { name: string }) {
     'addition-basic': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
         <rect width="200" height="120" fill="#eff6ff" rx="12"/>
-        <text x="20" y="65" fontSize="36">🍎🍎</text>
-        <text x="90" y="68" fontSize="30" fontWeight="bold" fill="#2563eb">+</text>
-        <text x="115" y="65" fontSize="36">🍎🍎🍎</text>
-        <text x="100" y="100" textAnchor="middle" fontSize="12" fill="#1d4ed8" fontWeight="bold">2 + 3 = 5</text>
+        <text x="10"  y="65" fontSize="26">🍎</text>
+        <text x="38"  y="65" fontSize="26">🍎</text>
+        <text x="72"  y="68" fontSize="22" fontWeight="bold" fill="#2563eb">+</text>
+        <text x="98"  y="65" fontSize="26">🍎</text>
+        <text x="126" y="65" fontSize="26">🍎</text>
+        <text x="154" y="65" fontSize="26">🍎</text>
+        <text x="100" y="102" textAnchor="middle" fontSize="12" fill="#1d4ed8" fontWeight="bold">2 + 3 = 5</text>
       </svg>
     ),
     'subtraction-basic': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
         <rect width="200" height="120" fill="#fef2f2" rx="12"/>
-        <text x="15" y="60" fontSize="28">🍎🍎🍎🍎🍎</text>
-        <text x="55" y="95" fontSize="16" fill="#dc2626" fontWeight="bold">5 - 2 = 3 🍎</text>
-        <line x1="15" y1="45" x2="75" y2="75" stroke="#ef4444" strokeWidth="3" strokeLinecap="round"/>
-        <line x1="40" y1="45" x2="100" y2="75" stroke="#ef4444" strokeWidth="3" strokeLinecap="round"/>
+        <text x="8"  y="60" fontSize="26">🍎</text>
+        <text x="40" y="60" fontSize="26">🍎</text>
+        <text x="72" y="60" fontSize="26">🍎</text>
+        <text x="104" y="60" fontSize="26">🍎</text>
+        <text x="136" y="60" fontSize="26">🍎</text>
+        <line x1="8"  y1="38" x2="68"  y2="72" stroke="#ef4444" strokeWidth="3" strokeLinecap="round"/>
+        <line x1="40" y1="38" x2="100" y2="72" stroke="#ef4444" strokeWidth="3" strokeLinecap="round"/>
+        <text x="100" y="100" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">5 - 2 = 3</text>
       </svg>
     ),
     'shapes-basic': (
@@ -69,9 +76,14 @@ function Illustration({ name }: { name: string }) {
     'division': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
         <rect width="200" height="120" fill="#f0fdfa" rx="12"/>
-        <text x="10" y="45" fontSize="28">🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕</text>
-        <text x="100" y="75" textAnchor="middle" fontSize="14" fill="#0f766e">12 pizzor ÷ 4 kompisar</text>
-        <text x="100" y="100" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#0d9488">= 3 vardera 🍕🍕🍕</text>
+        {[0,1,2,3,4,5].map(i => (
+          <text key={i} x={8 + i * 30} y="40" fontSize="22">🍕</text>
+        ))}
+        {[0,1,2,3,4,5].map(i => (
+          <text key={i+6} x={8 + i * 30} y="70" fontSize="22">🍕</text>
+        ))}
+        <text x="100" y="90" textAnchor="middle" fontSize="11" fill="#0f766e">12 pizzor ÷ 4 kompisar</text>
+        <text x="100" y="108" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#0d9488">= 3 vardera</text>
       </svg>
     ),
     'fractions': (
