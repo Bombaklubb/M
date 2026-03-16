@@ -63,7 +63,7 @@ export const WORLDS: World[] = [
     accentHex: '#3b82f6',
     cardBg: 'bg-blue-50',
     topicIds: [
-      'algebra-intro', 'ekvationer', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet',
+      'algebra-intro', 'ekvationer', 'ekvationer-avancerad', 'ekvationer-sf', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet',
       // Tal & räknefärdighet
       'prioritering', 'negativa-tal', 'avrundning', 'standardform', 'potenser',
       // Bråk, decimaltal, procent
