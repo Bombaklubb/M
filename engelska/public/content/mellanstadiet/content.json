@@ -3043,6 +3043,644 @@
         "Will vs going to: will = spontant beslut/förutsägelse. Going to = planerat beslut.",
         "Tips: Läs varje fråga noga – ibland avslöjar resten av meningen vilken regel som gäller."
       ]
+    },
+    {
+      "id": "mel-v1-gronsaker",
+      "title": "Grönsaker (Vegetables)",
+      "description": "Lär dig engelska ord för grönsaker.",
+      "icon": "🥦",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🥦 Grönsaker på engelska – hälsosamt och lärorikt!",
+        "morot = carrot | potatis = potato | tomat = tomato",
+        "gurka = cucumber | lök = onion | paprika = bell pepper",
+        "sallad = lettuce | broccoli = broccoli | majs = corn",
+        "ärta = pea | blomkål = cauliflower | spenat = spinach"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v1-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'morot' på engelska?",
+          "options": [
+            "cabbage",
+            "carrot",
+            "celery",
+            "corn"
+          ],
+          "correctIndex": 1,
+          "explanation": "Morot = carrot. Rabbits love carrots!"
+        },
+        {
+          "id": "mel-v1-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'potatis' på engelska?",
+          "options": [
+            "parsnip",
+            "pumpkin",
+            "potato",
+            "pea"
+          ],
+          "correctIndex": 2,
+          "explanation": "Potatis = potato. Plural: potatoes. Chips are made from potatoes!"
+        },
+        {
+          "id": "mel-v1-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tomat' på engelska?",
+          "options": [
+            "turnip",
+            "tomato",
+            "thyme",
+            "taro"
+          ],
+          "correctIndex": 1,
+          "explanation": "Tomat = tomato. A tomato is technically a fruit!"
+        },
+        {
+          "id": "mel-v1-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gurka' på engelska?",
+          "options": [
+            "courgette",
+            "celery",
+            "cucumber",
+            "cabbage"
+          ],
+          "correctIndex": 2,
+          "explanation": "Gurka = cucumber. Cucumbers are cool and refreshing!"
+        },
+        {
+          "id": "mel-v1-5",
+          "type": "fill-in-blank",
+          "sentence": "Jag hackar ___ (lök på engelska) och tårarna rinner.",
+          "answer": "onion",
+          "hint": "Lök = o _ _ _ _",
+          "explanation": "Lök = onion. Cutting onions makes your eyes water!"
+        },
+        {
+          "id": "mel-v1-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'paprika' på engelska?",
+          "options": [
+            "pepper",
+            "parsley",
+            "potato",
+            "pumpkin"
+          ],
+          "correctIndex": 0,
+          "explanation": "Paprika = bell pepper (eller pepper). Peppers can be red, yellow or green!"
+        },
+        {
+          "id": "mel-v1-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'broccoli' på engelska?",
+          "options": [
+            "brussels sprouts",
+            "broccoli",
+            "bok choy",
+            "beet"
+          ],
+          "correctIndex": 1,
+          "explanation": "Broccoli = broccoli. Nästan samma ord!"
+        },
+        {
+          "id": "mel-v1-8",
+          "type": "fill-in-blank",
+          "sentence": "Jag äter ___ (ärtor på engelska) med min fisk.",
+          "answer": "peas",
+          "hint": "Ärta = pea, ärtor = p _ _ _",
+          "explanation": "Ärta = pea, ärtor = peas. Peas are small and green!"
+        },
+        {
+          "id": "mel-v1-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'majs' på engelska?",
+          "options": [
+            "carrot",
+            "cabbage",
+            "celery",
+            "corn"
+          ],
+          "correctIndex": 3,
+          "explanation": "Majs = corn. Corn grows tall in the summer!"
+        },
+        {
+          "id": "mel-v1-10",
+          "type": "multiple-choice",
+          "question": "Vad heter 'sallad' (grönsaken) på engelska?",
+          "options": [
+            "salad",
+            "lettuce",
+            "leek",
+            "lime"
+          ],
+          "correctIndex": 1,
+          "explanation": "Sallad (grönsaken) = lettuce. Salad (rätten) = salad. Lettuce is used in salads!"
+        },
+        {
+          "id": "mel-v1-11",
+          "type": "fill-in-blank",
+          "sentence": "___ (Blomkål på engelska) ser ut som ett vitt träd.",
+          "answer": "Cauliflower",
+          "hint": "Blomkål = c _ _ _ _ _ _ _ _ _",
+          "explanation": "Blomkål = cauliflower. Cauliflower looks like a white tree!"
+        },
+        {
+          "id": "mel-v1-12",
+          "type": "multiple-choice",
+          "question": "Vad heter 'spenat' på engelska?",
+          "options": [
+            "spinach",
+            "sprout",
+            "squash",
+            "swede"
+          ],
+          "correctIndex": 0,
+          "explanation": "Spenat = spinach. Popeye loves spinach!"
+        }
+      ]
+    },
+    {
+      "id": "mel-v2-mat",
+      "title": "Mat (Food)",
+      "description": "Lär dig engelska ord för vanliga maträtter och livsmedel.",
+      "icon": "🍽️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🍽️ Mat på engelska – ät och prata!",
+        "bröd = bread | ost = cheese | ägg = egg | kyckling = chicken",
+        "kött = meat | ris = rice | pasta = pasta | soppa = soup",
+        "smörgås = sandwich | pannkaka = pancake | glass = ice cream",
+        "frukost = breakfast | lunch = lunch | middag = dinner"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v2-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bröd' på engelska?",
+          "options": [
+            "butter",
+            "bread",
+            "bowl",
+            "broth"
+          ],
+          "correctIndex": 1,
+          "explanation": "Bröd = bread. Bread is baked in an oven!"
+        },
+        {
+          "id": "mel-v2-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ost' på engelska?",
+          "options": [
+            "cream",
+            "cake",
+            "cheese",
+            "chips"
+          ],
+          "correctIndex": 2,
+          "explanation": "Ost = cheese. Cheese is made from milk!"
+        },
+        {
+          "id": "mel-v2-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ägg' på engelska?",
+          "options": [
+            "eel",
+            "egg",
+            "ear",
+            "edge"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ägg = egg. Eggs come from chickens!"
+        },
+        {
+          "id": "mel-v2-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kyckling' på engelska?",
+          "options": [
+            "cheese",
+            "chips",
+            "chili",
+            "chicken"
+          ],
+          "correctIndex": 3,
+          "explanation": "Kyckling = chicken. Chicken is a popular meat."
+        },
+        {
+          "id": "mel-v2-5",
+          "type": "fill-in-blank",
+          "sentence": "Jag äter ___ (ris på engelska) med mitt curry.",
+          "answer": "rice",
+          "hint": "Ris = r _ _ _",
+          "explanation": "Ris = rice. Rice is eaten all over the world!"
+        },
+        {
+          "id": "mel-v2-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'soppa' på engelska?",
+          "options": [
+            "stew",
+            "sauce",
+            "soup",
+            "salad"
+          ],
+          "correctIndex": 2,
+          "explanation": "Soppa = soup. Tomato soup is delicious!"
+        },
+        {
+          "id": "mel-v2-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'smörgås' på engelska?",
+          "options": [
+            "snack",
+            "sandwich",
+            "sausage",
+            "salad"
+          ],
+          "correctIndex": 1,
+          "explanation": "Smörgås = sandwich. I made a cheese sandwich."
+        },
+        {
+          "id": "mel-v2-8",
+          "type": "fill-in-blank",
+          "sentence": "Till frukost äter vi ___ (pannkakor på engelska).",
+          "answer": "pancakes",
+          "hint": "Pannkaka = pancake, pannkakor = p _ _ _ _ _ _ _ _",
+          "explanation": "Pannkaka = pancake. Pancakes are great with maple syrup!"
+        },
+        {
+          "id": "mel-v2-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'glass' på engelska?",
+          "options": [
+            "ice cream",
+            "iced coffee",
+            "iced tea",
+            "ice water"
+          ],
+          "correctIndex": 0,
+          "explanation": "Glass = ice cream. I love chocolate ice cream!"
+        },
+        {
+          "id": "mel-v2-10",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kött' på engelska?",
+          "options": [
+            "meal",
+            "menu",
+            "milk",
+            "meat"
+          ],
+          "correctIndex": 3,
+          "explanation": "Kött = meat. Beef, pork and lamb are types of meat."
+        },
+        {
+          "id": "mel-v2-11",
+          "type": "fill-in-blank",
+          "sentence": "Vi lagar ___ (pasta på engelska) till middag.",
+          "answer": "pasta",
+          "hint": "Pasta = p _ _ _ _",
+          "explanation": "Pasta = pasta. Nästan samma ord!"
+        },
+        {
+          "id": "mel-v2-12",
+          "type": "multiple-choice",
+          "question": "Vad heter 'frukost' på engelska?",
+          "options": [
+            "brunch",
+            "breakfast",
+            "bread",
+            "bowl"
+          ],
+          "correctIndex": 1,
+          "explanation": "Frukost = breakfast. Breakfast is the first meal of the day."
+        }
+      ]
+    },
+    {
+      "id": "mel-v3-lagesord",
+      "title": "Lägesord (Prepositions of Place)",
+      "description": "Lär dig engelska lägesord och hur de används i meningar.",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📍 Lägesord berättar VAR något är!",
+        "i = in | på = on | under = under/below",
+        "bakom = behind | framför = in front of | bredvid = next to",
+        "mellan = between | ovanför = above | nedanför = below",
+        "nära = near | inuti = inside | utanför = outside",
+        "Tips: Tänk på en låda – saker kan vara in, on, under, beside eller behind den!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v3-1",
+          "type": "multiple-choice",
+          "question": "'Katten sitter UNDER bordet.' Vilket engelskt lägesord passar?",
+          "options": [
+            "above",
+            "over",
+            "under",
+            "below"
+          ],
+          "correctIndex": 2,
+          "explanation": "Under = under. The cat sits under the table."
+        },
+        {
+          "id": "mel-v3-2",
+          "type": "multiple-choice",
+          "question": "'Boken ligger PÅ hyllan.' Vilket engelskt lägesord passar?",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "correctIndex": 1,
+          "explanation": "På (yta) = on. The book is on the shelf."
+        },
+        {
+          "id": "mel-v3-3",
+          "type": "multiple-choice",
+          "question": "'Nyckeln är I väskan.' Vilket engelskt lägesord passar?",
+          "options": [
+            "on",
+            "at",
+            "in",
+            "by"
+          ],
+          "correctIndex": 2,
+          "explanation": "I (inuti något) = in. The key is in the bag."
+        },
+        {
+          "id": "mel-v3-4",
+          "type": "multiple-choice",
+          "question": "Hur säger man 'bakom' på engelska?",
+          "options": [
+            "beside",
+            "between",
+            "before",
+            "behind"
+          ],
+          "correctIndex": 3,
+          "explanation": "Bakom = behind. The cat is hiding behind the sofa."
+        },
+        {
+          "id": "mel-v3-5",
+          "type": "fill-in-blank",
+          "sentence": "The school is ___ (bredvid på engelska) the park.",
+          "answer": "next to",
+          "hint": "Bredvid = n _ _ _  t _",
+          "explanation": "Bredvid = next to. The school is next to the park."
+        },
+        {
+          "id": "mel-v3-6",
+          "type": "multiple-choice",
+          "question": "Hur säger man 'framför' på engelska?",
+          "options": [
+            "in front of",
+            "in back of",
+            "inside",
+            "instead of"
+          ],
+          "correctIndex": 0,
+          "explanation": "Framför = in front of. She stood in front of the class."
+        },
+        {
+          "id": "mel-v3-7",
+          "type": "multiple-choice",
+          "question": "'Hunden sitter MELLAN barnen.' Vilket engelskt ord passar?",
+          "options": [
+            "beside",
+            "among",
+            "between",
+            "below"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mellan (två saker) = between. The dog sits between the children."
+        },
+        {
+          "id": "mel-v3-8",
+          "type": "fill-in-blank",
+          "sentence": "The lamp is ___ (ovanför på engelska) the table.",
+          "answer": "above",
+          "hint": "Ovanför = a _ _ _ _",
+          "explanation": "Ovanför = above. The lamp hangs above the table."
+        },
+        {
+          "id": "mel-v3-9",
+          "type": "multiple-choice",
+          "question": "Hur säger man 'utanför' på engelska?",
+          "options": [
+            "inside",
+            "inside out",
+            "outside",
+            "out there"
+          ],
+          "correctIndex": 2,
+          "explanation": "Utanför = outside. The children played outside."
+        },
+        {
+          "id": "mel-v3-10",
+          "type": "multiple-choice",
+          "question": "'Parken är NÄRA skolan.' Vilket engelskt ord passar?",
+          "options": [
+            "near",
+            "nearly",
+            "next",
+            "narrow"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nära = near. The park is near the school."
+        },
+        {
+          "id": "mel-v3-11",
+          "type": "fill-in-blank",
+          "sentence": "There is a cat ___ (inuti/inne i) the box.",
+          "answer": "inside",
+          "hint": "Inuti = i _ _ _ _ _",
+          "explanation": "Inuti/inne i = inside. There is a cat inside the box."
+        },
+        {
+          "id": "mel-v3-12",
+          "type": "multiple-choice",
+          "question": "Välj rätt lägesord: 'The ball is ___ the chair and the table.'",
+          "options": [
+            "behind",
+            "between",
+            "below",
+            "beside"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mellan = between. The ball is between the chair and the table."
+        }
+      ]
+    },
+    {
+      "id": "mel-v4-frageord",
+      "title": "Frågeord (Question Words)",
+      "description": "Lär dig de engelska frågeorden och hur de används.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "❓ Frågeord använder vi för att ställa frågor!",
+        "vem = who | vad = what | var = where | när = when",
+        "varför = why | hur = how | vilket/vilken = which",
+        "vems = whose | hur mycket = how much | hur många = how many",
+        "Tips: Frågeord kommer alltid FÖRST i en engelska fråga."
+      ],
+      "exercises": [
+        {
+          "id": "mel-v4-1",
+          "type": "multiple-choice",
+          "question": "'___ is your name?' – Vilket frågeord passar? (Vad är ditt namn?)",
+          "options": [
+            "Who",
+            "Where",
+            "What",
+            "When"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vad = what. What is your name? – Vi frågar om en sak/information."
+        },
+        {
+          "id": "mel-v4-2",
+          "type": "multiple-choice",
+          "question": "'___ is your best friend?' – Vilket frågeord? (Vem är din bästa vän?)",
+          "options": [
+            "What",
+            "Who",
+            "Where",
+            "Which"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vem = who. Who is your best friend? – Vi frågar om en PERSON."
+        },
+        {
+          "id": "mel-v4-3",
+          "type": "multiple-choice",
+          "question": "'___ do you live?' – Vilket frågeord? (Var bor du?)",
+          "options": [
+            "When",
+            "Why",
+            "What",
+            "Where"
+          ],
+          "correctIndex": 3,
+          "explanation": "Var = where. Where do you live? – Vi frågar om en PLATS."
+        },
+        {
+          "id": "mel-v4-4",
+          "type": "multiple-choice",
+          "question": "'___ does school start?' – Vilket frågeord? (När börjar skolan?)",
+          "options": [
+            "Why",
+            "When",
+            "Where",
+            "How"
+          ],
+          "correctIndex": 1,
+          "explanation": "När = when. When does school start? – Vi frågar om TID."
+        },
+        {
+          "id": "mel-v4-5",
+          "type": "multiple-choice",
+          "question": "'___ are you sad?' – Vilket frågeord? (Varför är du ledsen?)",
+          "options": [
+            "Who",
+            "What",
+            "Why",
+            "Where"
+          ],
+          "correctIndex": 2,
+          "explanation": "Varför = why. Why are you sad? – Vi frågar om ORSAK."
+        },
+        {
+          "id": "mel-v4-6",
+          "type": "fill-in-blank",
+          "sentence": "___ (Hur på engelska) do you get to school?",
+          "answer": "How",
+          "hint": "Hur = H _ _",
+          "explanation": "Hur = how. How do you get to school? – Vi frågar om SÄTT."
+        },
+        {
+          "id": "mel-v4-7",
+          "type": "multiple-choice",
+          "question": "'___ bag is this?' – Vilket frågeord? (Vems väska är det?)",
+          "options": [
+            "Who",
+            "Whom",
+            "Whose",
+            "Which"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vems = whose. Whose bag is this? – Vi frågar om TILLHÖRIGHET."
+        },
+        {
+          "id": "mel-v4-8",
+          "type": "multiple-choice",
+          "question": "'___ colour do you prefer?' – Vilket frågeord? (Vilken färg föredrar du?)",
+          "options": [
+            "What",
+            "Which",
+            "Who",
+            "Where"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vilket/vilken = which. Which colour do you prefer? – Vi väljer mellan alternativ."
+        },
+        {
+          "id": "mel-v4-9",
+          "type": "fill-in-blank",
+          "sentence": "___ (Hur mycket på engelska) does it cost?",
+          "answer": "How much",
+          "hint": "Hur mycket = H _ _  m _ _ _",
+          "explanation": "Hur mycket = how much. How much does it cost? – Vi frågar om pris/mängd."
+        },
+        {
+          "id": "mel-v4-10",
+          "type": "multiple-choice",
+          "question": "'___ people are coming to the party?' (Hur många...)",
+          "options": [
+            "How much",
+            "How many",
+            "How often",
+            "How long"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hur många = how many. How many people are coming? – Vi räknar saker."
+        },
+        {
+          "id": "mel-v4-11",
+          "type": "multiple-choice",
+          "question": "Välj rätt frågeord: '___ did you go on holiday?' (Vart åkte du på semester?)",
+          "options": [
+            "What",
+            "When",
+            "Where",
+            "Who"
+          ],
+          "correctIndex": 2,
+          "explanation": "Var/vart = where. Where did you go on holiday?"
+        },
+        {
+          "id": "mel-v4-12",
+          "type": "multiple-choice",
+          "question": "Välj rätt frågeord: '___ invented the telephone?' (Vem uppfann telefonen?)",
+          "options": [
+            "What",
+            "Why",
+            "Where",
+            "Who"
+          ],
+          "correctIndex": 3,
+          "explanation": "Vem = who. Who invented the telephone? Alexander Graham Bell!"
+        }
+      ]
     }
   ],
   "reading": [
