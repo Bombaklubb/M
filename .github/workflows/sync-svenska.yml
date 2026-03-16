@@ -14,9 +14,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: Bombaklubb
+          repositories: svenskajakten
+
       - name: Push to svenskajakten
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "GitHub Actions"
-          git remote add target https://x-access-token:${{ secrets.SVENSKA_TOKEN }}@github.com/Bombaklubb/svenskajakten.git
+          git remote add target https://x-access-token:${{ steps.generate-token.outputs.token }}@github.com/Bombaklubb/svenskajakten.git
           git subtree push --prefix=svenska target main
