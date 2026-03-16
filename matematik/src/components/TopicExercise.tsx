@@ -5,6 +5,7 @@ import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import AppHeader from './AppHeader';
 import InteractiveClock from './InteractiveClock';
+import { Progress } from './ui/progress';
 
 interface ExerciseState {
   answered: boolean;
@@ -141,19 +142,17 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             </span>
           </div>
           {/* Progress bar */}
-          <div className="h-2 bg-white/30 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-white rounded-full transition-all duration-500"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
+          <Progress value={progress} className="h-2.5 bg-white/20" />
         </div>
       </div>
 
       {/* Celebration overlay */}
       {showCelebration && (
         <div className="fixed inset-0 pointer-events-none flex items-center justify-center z-50">
-          <div className="text-8xl animate-bounce-in">⭐</div>
+          <div className="flex flex-col items-center gap-2 animate-bounce-in">
+            <div className="text-8xl drop-shadow-[0_0_30px_rgba(251,191,36,0.9)]">⭐</div>
+            <div className="text-2xl font-black text-white drop-shadow-lg tracking-wide">Rätt!</div>
+          </div>
         </div>
       )}
 
@@ -248,8 +247,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           )}
           {/* Rätt svar – kort bekräftelse */}
           {showExplanation && state.correct && (
-            <div className="mt-4 rounded-2xl px-4 py-3 bg-emerald-500/20 border border-emerald-400/40 animate-fade-in">
-              <p className="text-emerald-300 font-black">🎉 Rätt! Bra jobbat!</p>
+            <div className="mt-4 rounded-2xl px-4 py-4 bg-emerald-500/20 border-2 border-emerald-400/60 animate-fade-in shadow-lg shadow-emerald-500/10">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">🎉</span>
+                <div>
+                  <p className="text-emerald-300 font-black text-lg">Rätt svar!</p>
+                  <p className="text-emerald-400/70 text-xs">+{exercise.points} poäng</p>
+                </div>
+                <span className="ml-auto text-emerald-400 text-2xl font-black">✓</span>
+              </div>
             </div>
           )}
           {/* Fel svar – rik förklaring med bildstöd */}
