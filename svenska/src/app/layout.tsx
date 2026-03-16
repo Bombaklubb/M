@@ -10,6 +10,15 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
   },
+  openGraph: {
+    images: [
+      {
+        url: "https://svenskajakten.vercel.app/svenskajakten-logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
