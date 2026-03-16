@@ -45,9 +45,9 @@ export const SetupView: React.FC<SetupViewProps> = ({
   };
 
   const getGradeLabel = (grade: number): string => {
-    if (grade <= 3) return 'Lagstadiet (ak 1-3)';
-    if (grade <= 6) return 'Mellanstadiet (ak 4-6)';
-    if (grade <= 9) return 'Hogstadiet (ak 7-9)';
+    if (grade <= 3) return 'Lågstadiet (åk 1-3)';
+    if (grade <= 6) return 'Mellanstadiet (åk 4-6)';
+    if (grade <= 9) return 'Högstadiet (åk 7-9)';
     return 'Gymnasiet';
   };
 
@@ -131,7 +131,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Borja ditt lasaventyr
+              Börja ditt läsäventyr
             </motion.h2>
 
             {/* Grade display */}
@@ -211,7 +211,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                 >
-                  Inga texter annu - kommer snart!
+                  Inga texter ännu - kommer snart!
                 </motion.div>
               )}
             </AnimatePresence>
@@ -229,7 +229,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                 size="xl"
                 className="w-full text-xl"
               >
-                Borja lasa!
+                Börja läsa!
               </Button>
             </motion.div>
           </CardContent>
