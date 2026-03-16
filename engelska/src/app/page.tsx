@@ -266,10 +266,10 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} onLogout={handleLogout} />
 
-      <main className="max-w-5xl mx-auto px-4 py-6">
+      <main className="max-w-5xl mx-auto px-4 py-3">
 
         {/* Welcome banner */}
-        <div className="mb-5 animate-fade-in">
+        <div className="mb-3 animate-fade-in">
           <h2 className="text-2xl font-black text-indigo-900 dark:text-gray-100">
             Hej, {student.name}! 👋
           </h2>
@@ -292,7 +292,7 @@ export default function HomePage() {
                   gradientColor={`${beamColors[0]}20`}
                   className="relative rounded-3xl overflow-hidden border-3 border-white/20 dark:border-gray-700/50 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer"
                   style={{
-                    aspectRatio: "4/5",
+                    aspectRatio: "16/9",
                     boxShadow: hasProgress
                       ? `0 8px 0 0 ${beamColors[0]}35, 0 12px 28px -4px ${beamColors[0]}20`
                       : "0 6px 0 0 rgba(99,102,241,0.12), 0 10px 20px -4px rgba(99,102,241,0.08)",
