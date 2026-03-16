@@ -1,6 +1,915 @@
 {
   "grammar": [
     {
+      "id": "mel-g5-nouns",
+      "title": "Substantiv – Singular & Plural",
+      "description": "Hur man bildar plural av substantiv, inklusive oregelbundna former.",
+      "icon": "📦",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g5-1",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'child'?",
+          "options": [
+            "childs",
+            "childes",
+            "children",
+            "child"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Child' är ett oregelbundet substantiv. Plural är 'children'."
+        },
+        {
+          "id": "mel-g5-2",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'box'?",
+          "options": [
+            "boxs",
+            "box",
+            "boxes",
+            "boxies"
+          ],
+          "correctIndex": 2,
+          "explanation": "Substantiv som slutar på -x, -s, -sh, -ch får -es i plural: boxes."
+        },
+        {
+          "id": "mel-g5-3",
+          "type": "fill-in-blank",
+          "sentence": "One mouse, two ___.",
+          "answer": "mice",
+          "hint": "Oregelbunden pluralform.",
+          "explanation": "'Mouse' → 'mice' är ett oregelbundet substantiv."
+        },
+        {
+          "id": "mel-g5-4",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'city'?",
+          "options": [
+            "citys",
+            "cities",
+            "cityes",
+            "city"
+          ],
+          "correctIndex": 1,
+          "explanation": "Substantiv som slutar på -y (med konsonant före) → byt y mot -ies: cities."
+        },
+        {
+          "id": "mel-g5-5",
+          "type": "fill-in-blank",
+          "sentence": "One leaf, two ___.",
+          "answer": "leaves",
+          "hint": "Slutar på -f eller -fe.",
+          "explanation": "Substantiv som slutar på -f/-fe → byt mot -ves: leaf → leaves."
+        },
+        {
+          "id": "mel-g5-6",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'woman'?",
+          "options": [
+            "womans",
+            "women",
+            "womes",
+            "womens"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Woman' → 'women' är ett oregelbundet substantiv."
+        },
+        {
+          "id": "mel-g5-7",
+          "type": "multiple-choice",
+          "question": "Vilket av dessa är ett räknebart substantiv?",
+          "options": [
+            "water",
+            "music",
+            "apple",
+            "love"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Apple' är räknebart – du kan säga 'one apple, two apples'. Water, music och love är icke-räknebara."
+        },
+        {
+          "id": "mel-g5-8",
+          "type": "fill-in-blank",
+          "sentence": "I have two ___ (tooth) in my pocket.",
+          "answer": "teeth",
+          "hint": "Oregelbunden pluralform av tooth.",
+          "explanation": "tooth → teeth är oregelbundet."
+        },
+        {
+          "id": "mel-g5-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt plural: 'There are three ___ in the sky.' (sheep)",
+          "options": [
+            "sheeps",
+            "sheep",
+            "sheepes",
+            "sheepies"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Sheep' har samma form i singular och plural."
+        },
+        {
+          "id": "mel-g5-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She reads many ___ every summer.' (book)",
+          "options": [
+            "book",
+            "books",
+            "bookes",
+            "booky"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vanliga substantiv får bara -s i plural: books."
+        }
+      ]
+    },
+    {
+      "id": "mel-g6-do-does",
+      "title": "Do / Does – Frågor & Negationer",
+      "description": "Använd do och does rätt i frågor och nekande meningar.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g6-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ your parents work in the city?'",
+          "options": [
+            "Does",
+            "Do",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med your parents (= they) använder vi 'Do'. Do your parents work...?"
+        },
+        {
+          "id": "mel-g6-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'My sister ___ not like horror movies.'",
+          "options": [
+            "do",
+            "am",
+            "does",
+            "is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med she (my sister) använder vi 'does not'. My sister does not like..."
+        },
+        {
+          "id": "mel-g6-3",
+          "type": "fill-in-blank",
+          "sentence": "___ the dog bark at night?",
+          "answer": "Does",
+          "hint": "Hunden = it, vilket hjälpverb passar?",
+          "explanation": "Med it/he/she använder vi 'does' i frågor."
+        },
+        {
+          "id": "mel-g6-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'We ___ not understand the question.'",
+          "options": [
+            "does",
+            "is",
+            "do",
+            "are"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med we använder vi 'do not'. We do not understand..."
+        },
+        {
+          "id": "mel-g6-5",
+          "type": "fill-in-blank",
+          "sentence": "___ you enjoy reading books?",
+          "answer": "Do",
+          "hint": "Du = you, vilket ord passar?",
+          "explanation": "Med you/I/we/they använder vi 'do' i frågor."
+        },
+        {
+          "id": "mel-g6-6",
+          "type": "multiple-choice",
+          "question": "Välj rätt svar: 'Does she speak French?' → 'Yes, she ___.'",
+          "options": [
+            "do",
+            "does",
+            "is",
+            "speaks"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kortsvar med does: Yes, she does."
+        },
+        {
+          "id": "mel-g6-7",
+          "type": "multiple-choice",
+          "question": "'___ it make sense?' Välj rätt:",
+          "options": [
+            "Do",
+            "Are",
+            "Does",
+            "Is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med it använder vi 'Does'. Does it make sense?"
+        },
+        {
+          "id": "mel-g6-8",
+          "type": "fill-in-blank",
+          "sentence": "He ___ not know the answer.",
+          "answer": "does",
+          "hint": "Han = he, vilket hjälpverb?",
+          "explanation": "Med he/she/it använder vi 'does not' för att neka."
+        },
+        {
+          "id": "mel-g6-9",
+          "type": "multiple-choice",
+          "question": "'Do they like sport?' → 'No, they ___.'",
+          "options": [
+            "don't",
+            "doesn't",
+            "aren't",
+            "isn't"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kortsvar: No, they don't. (do not → don't)"
+        },
+        {
+          "id": "mel-g6-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ the teacher explain clearly?'",
+          "options": [
+            "Do",
+            "Are",
+            "Is",
+            "Does"
+          ],
+          "correctIndex": 3,
+          "explanation": "Med the teacher (= she/he) använder vi 'Does'."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"DO frågar och DON'T nekar – DOES och DOESN'T, S:et märker vi!\"",
+        "Do/does används i frågor och negationer i presens (nuet).",
+        "Regel: He / She / It → does / doesn't | I / You / We / They → do / don't",
+        "Frågans ordföljd: Do/Does + subjekt + verb (grundform)? → Does she speak French?",
+        "Exempel: Do they live here? – Yes, they do. ✔  She doesn't like spiders. ✔  Does he know the answer? ✔",
+        "Tips: Efter does/doesn't → verbet ska vara i grundform (ALDRIG does she speaks ✗)."
+      ]
+    },
+    {
+      "id": "mel-g7-a-an",
+      "title": "A / An – Obestämd artikel",
+      "description": "När använder man 'a' och när 'an'?",
+      "icon": "🔡",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g7-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ umbrella'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Umbrella' börjar med vokalljudet U, så vi använder 'an'."
+        },
+        {
+          "id": "mel-g7-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ university'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 0,
+          "explanation": "'University' börjar med ljudet 'yoo' (som konsonant), så vi använder 'a'."
+        },
+        {
+          "id": "mel-g7-3",
+          "type": "fill-in-blank",
+          "sentence": "She is ___ honest person.",
+          "answer": "an",
+          "hint": "Börjar 'honest' med ett vokalljud?",
+          "explanation": "'Honest' uttalas 'onest' – H:et är tyst! Det börjar med vokalljudet O → 'an honest'."
+        },
+        {
+          "id": "mel-g7-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ hour'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Hour' uttalas 'aur' – H:et är tyst. Det börjar med vokalljudet → 'an hour'."
+        },
+        {
+          "id": "mel-g7-5",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ European country'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 0,
+          "explanation": "'European' uttalas 'yoo-ro-pee-an' – börjar med konsonantljudet Y → 'a European'."
+        },
+        {
+          "id": "mel-g7-6",
+          "type": "fill-in-blank",
+          "sentence": "I saw ___ elephant at the zoo.",
+          "answer": "an",
+          "hint": "Vilket ljud börjar elefant med?",
+          "explanation": "'Elephant' börjar med vokalljudet E → 'an elephant'."
+        },
+        {
+          "id": "mel-g7-7",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He is ___ engineer.'",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Engineer' börjar med vokalljudet E → 'an engineer'."
+        },
+        {
+          "id": "mel-g7-8",
+          "type": "fill-in-blank",
+          "sentence": "She wants to be ___ nurse.",
+          "answer": "a",
+          "hint": "Vilket ljud börjar nurse med?",
+          "explanation": "'Nurse' börjar med konsonantljudet N → 'a nurse'."
+        },
+        {
+          "id": "mel-g7-9",
+          "type": "multiple-choice",
+          "question": "'___ one-way street' – välj rätt:",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 0,
+          "explanation": "'One' uttalas 'wun' – börjar med konsonantljudet W → 'a one-way street'."
+        },
+        {
+          "id": "mel-g7-10",
+          "type": "multiple-choice",
+          "question": "'___ apple ___ day keeps the doctor away.' Välj rätt för det första tomrummet:",
+          "options": [
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Apple' börjar med vokalljudet A → 'an apple'."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Vokalljud i munnen – AN ska dit! Konsonantljud? A är split!\"",
+        "A/an är obestämda artiklar. Välj utifrån hur nästa ord LÅTER.",
+        "A före konsonantljud: a book, a car, a uniform (u låter 'ju'), a European.",
+        "An före vokalljud: an idea, an hour (h är tyst!), an honest man, an MP.",
+        "Exempel: She has a dog and an umbrella. ✔  It takes an hour. ✔  He is a university student. ✔",
+        "Tips: 'An hour' – h är tyst, så det låter 'our' → vokalljud → an."
+      ]
+    },
+    {
+      "id": "mel-g8-be-verb",
+      "title": "Is / Am / Are – Be-verbets former",
+      "description": "Använd rätt form av be-verbet i olika situationer.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g8-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'The books ___ on the shelf.'",
+          "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Books' = plural → are. The books are on the shelf."
+        },
+        {
+          "id": "mel-g8-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'Neither the cat nor the dog ___ outside.'",
+          "options": [
+            "are",
+            "am",
+            "were",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "Med 'neither...nor' styr det närmaste substantivet (dog) formen → is."
+        },
+        {
+          "id": "mel-g8-3",
+          "type": "fill-in-blank",
+          "sentence": "My friends and I ___ going to the cinema.",
+          "answer": "are",
+          "hint": "Vi = we/friends+I, vilket ord passar?",
+          "explanation": "'My friends and I' = we → are. We are going to the cinema."
+        },
+        {
+          "id": "mel-g8-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'The news ___ interesting today.'",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "'News' är singulart på engelska → is. The news is interesting."
+        },
+        {
+          "id": "mel-g8-5",
+          "type": "fill-in-blank",
+          "sentence": "Each of the students ___ responsible.",
+          "answer": "is",
+          "hint": "'Each of' = singulart, vilket ord passar?",
+          "explanation": "'Each of' tar singular → is. Each of the students is responsible."
+        },
+        {
+          "id": "mel-g8-6",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'There ___ many people at the party.'",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Many people' = plural → are. There are many people."
+        },
+        {
+          "id": "mel-g8-7",
+          "type": "multiple-choice",
+          "question": "'Mathematics ___ my favourite subject.' Välj rätt:",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "Ämnesnamn som slutar på -ics är singulara → is. Mathematics is..."
+        },
+        {
+          "id": "mel-g8-8",
+          "type": "fill-in-blank",
+          "sentence": "You and your sister ___ welcome here.",
+          "answer": "are",
+          "hint": "You + sister = vi/de, vilket ord?",
+          "explanation": "You and your sister = they/we → are."
+        },
+        {
+          "id": "mel-g8-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'The team ___ playing well tonight.'",
+          "options": [
+            "am",
+            "are",
+            "is",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Team' som kollektiv enhet → is (brit. Eng. varierar). The team is playing well."
+        },
+        {
+          "id": "mel-g8-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I ___ not sure about that.'",
+          "options": [
+            "is",
+            "are",
+            "am",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med I använder vi alltid 'am'. I am not sure."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"I am, you are – he IS, she IS! We are, they are – lätt är vis!\"",
+        "Be-verbet används i frågor, negationer och pågående handlingar (present continuous).",
+        "Frågor: Am I late? Is she coming? Are they ready?",
+        "Negationer: I am not (I'm not). He is not (He isn't). We are not (We aren't).",
+        "Exempel: Is she at home? – Yes, she is. ✔  They aren't playing today. ✔  Am I right? ✔",
+        "Tips: Frågans ordföljd: Is/Am/Are + subjekt + resten av meningen?"
+      ]
+    },
+    {
+      "id": "mel-g9-have-has",
+      "title": "Have / Has",
+      "description": "Lär dig skillnaden mellan have och has.",
+      "icon": "✋",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g9-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She ___ a new bicycle.'",
+          "options": [
+            "have",
+            "has",
+            "haves",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med she/he/it använder vi 'has'. She has a new bicycle."
+        },
+        {
+          "id": "mel-g9-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'We ___ a lot of homework today.'",
+          "options": [
+            "has",
+            "is",
+            "have",
+            "haves"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med we/you/they/I använder vi 'have'. We have a lot of homework."
+        },
+        {
+          "id": "mel-g9-3",
+          "type": "fill-in-blank",
+          "sentence": "The dog ___ a long tail.",
+          "answer": "has",
+          "hint": "Hunden = it, vilket ord?",
+          "explanation": "Med it (hunden) använder vi 'has'. The dog has a long tail."
+        },
+        {
+          "id": "mel-g9-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I ___ two brothers.'",
+          "options": [
+            "has",
+            "haves",
+            "have",
+            "is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med I använder vi 'have'. I have two brothers."
+        },
+        {
+          "id": "mel-g9-5",
+          "type": "fill-in-blank",
+          "sentence": "They ___ three cats at home.",
+          "answer": "have",
+          "hint": "De = they, vilket ord?",
+          "explanation": "Med they/we/you/I använder vi 'have'."
+        },
+        {
+          "id": "mel-g9-6",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'He ___ a great sense of humour.'",
+          "options": [
+            "have",
+            "are",
+            "is",
+            "has"
+          ],
+          "correctIndex": 3,
+          "explanation": "Med he använder vi 'has'. He has a great sense of humour."
+        },
+        {
+          "id": "mel-g9-7",
+          "type": "multiple-choice",
+          "question": "'My parents ___ a house in the countryside.' Välj rätt:",
+          "options": [
+            "has",
+            "have",
+            "is",
+            "are"
+          ],
+          "correctIndex": 1,
+          "explanation": "'My parents' = they → have. My parents have a house."
+        },
+        {
+          "id": "mel-g9-8",
+          "type": "fill-in-blank",
+          "sentence": "Our school ___ a big library.",
+          "answer": "has",
+          "hint": "Skolan = it, vilket ord?",
+          "explanation": "Med it (skolan) använder vi 'has'. Our school has a big library."
+        },
+        {
+          "id": "mel-g9-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'You ___ a really good idea!'",
+          "options": [
+            "has",
+            "is",
+            "have",
+            "are"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med you använder vi 'have'. You have a really good idea!"
+        },
+        {
+          "id": "mel-g9-10",
+          "type": "multiple-choice",
+          "question": "'Each student ___ a textbook.' Välj rätt:",
+          "options": [
+            "have",
+            "are",
+            "is",
+            "has"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Each student' = singular (he/she/it) → has."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"Have eller has – kolla vem som äger! He/she/it = HAS, resten HAVE beger!\"",
+        "Have/has visar ägande eller används i presens perfekt (present perfect).",
+        "Regel: He / She / It → has | I / You / We / They → have",
+        "Frågor och negationer: Do you have...? Does she have...? I don't have... She doesn't have...",
+        "Exempel: She has a new bike. ✔  Do you have a pen? ✔  He doesn't have time. ✔",
+        "Tips: I frågor och negationer – använd do/does + have (aldrig 'does she has' ✗)."
+      ]
+    },
+    {
+      "id": "mel-g10-demonstratives",
+      "title": "This / That / These / Those",
+      "description": "Pekord för nära och längre bort, singular och plural.",
+      "icon": "👆",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g10-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ book here is mine.' (nära/singular)",
+          "options": [
+            "That",
+            "Those",
+            "These",
+            "This"
+          ],
+          "correctIndex": 3,
+          "explanation": "Nära + singular = This. This book here is mine."
+        },
+        {
+          "id": "mel-g10-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ mountains over there are beautiful.' (långt bort/plural)",
+          "options": [
+            "This",
+            "These",
+            "Those",
+            "That"
+          ],
+          "correctIndex": 2,
+          "explanation": "Långt bort + plural = Those. Those mountains are beautiful."
+        },
+        {
+          "id": "mel-g10-3",
+          "type": "fill-in-blank",
+          "sentence": "___ are my friends. (pekar på folk bredvid sig)",
+          "answer": "These",
+          "hint": "Nära + plural = ?",
+          "explanation": "Nära + plural = These. These are my friends."
+        },
+        {
+          "id": "mel-g10-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ car over there is fast.' (singular/långt)",
+          "options": [
+            "This",
+            "These",
+            "Those",
+            "That"
+          ],
+          "correctIndex": 3,
+          "explanation": "Långt bort + singular = That. That car over there is fast."
+        },
+        {
+          "id": "mel-g10-5",
+          "type": "fill-in-blank",
+          "sentence": "Is ___ your pen? (pekar på penna nära dig)",
+          "answer": "this",
+          "hint": "Nära + singular = ?",
+          "explanation": "This (nära + singular). Is this your pen?"
+        },
+        {
+          "id": "mel-g10-6",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ are interesting books. (håller i dem)",
+          "options": [
+            "That",
+            "This",
+            "Those",
+            "These"
+          ],
+          "correctIndex": 3,
+          "explanation": "Nära + plural = These. These are interesting books."
+        },
+        {
+          "id": "mel-g10-7",
+          "type": "multiple-choice",
+          "question": "'___ was a great film!' (pratar om en film du precis sett)",
+          "options": [
+            "These",
+            "Those",
+            "That",
+            "This"
+          ],
+          "correctIndex": 2,
+          "explanation": "Syftar på något specifikt/just passat → That. That was a great film!"
+        },
+        {
+          "id": "mel-g10-8",
+          "type": "fill-in-blank",
+          "sentence": "Look at ___ stars! (stjärnor långt bort, plural)",
+          "answer": "those",
+          "hint": "Långt bort + plural = ?",
+          "explanation": "Those (långt bort + plural). Look at those stars!"
+        },
+        {
+          "id": "mel-g10-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'Can I try ___ shoes? (i butiken, pekar på skor du håller i)",
+          "options": [
+            "those",
+            "that",
+            "this",
+            "these"
+          ],
+          "correctIndex": 3,
+          "explanation": "Nära + plural = These. Can I try these shoes?"
+        },
+        {
+          "id": "mel-g10-10",
+          "type": "multiple-choice",
+          "question": "'___ days, everyone uses smartphones.' Välj rätt:",
+          "options": [
+            "This",
+            "That",
+            "Those",
+            "These"
+          ],
+          "correctIndex": 3,
+          "explanation": "'These days' är ett fast uttryck som means 'nuförtiden'."
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"THIS och THESE är nära mig – THAT och THOSE är långt härifrån! Singular utan S – plural med S!\"",
+        "Pekorden visar om något är nära (this/these) eller långt borta (that/those).",
+        "Singular: this (nära) – that (långt borta). Plural: these (nära) – those (långt borta).",
+        "Som pronomen: This is great! That was fun! These are mine. Those look heavy.",
+        "Exempel: This book is interesting. ✔  Those mountains are far away. ✔  Are these your keys? ✔",
+        "Tips: Tänk: THIS/THESE = nära = HERE. THAT/THOSE = längre bort = THERE."
+      ]
+    },
+    {
+      "id": "mel-g11-there-is-are",
+      "title": "There is / There are",
+      "description": "Hur man pratar om vad som finns på en plats.",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "exercises": [
+        {
+          "id": "mel-g11-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ a cat in the garden.'",
+          "options": [
+            "There are",
+            "There is",
+            "There am",
+            "There be"
+          ],
+          "correctIndex": 1,
+          "explanation": "En katt = singular → There is a cat in the garden."
+        },
+        {
+          "id": "mel-g11-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ many students in the classroom.'",
+          "options": [
+            "There is",
+            "There am",
+            "There are",
+            "There be"
+          ],
+          "correctIndex": 2,
+          "explanation": "Many students = plural → There are many students."
+        },
+        {
+          "id": "mel-g11-3",
+          "type": "fill-in-blank",
+          "sentence": "___ two books on the table.",
+          "answer": "There are",
+          "hint": "Två böcker = plural.",
+          "explanation": "Plural → There are two books on the table."
+        },
+        {
+          "id": "mel-g11-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt negation: '___ no milk in the fridge.'",
+          "options": [
+            "There aren't",
+            "There isn't",
+            "There wasn't",
+            "There weren't"
+          ],
+          "correctIndex": 1,
+          "explanation": "Milk = uncountable/singular → There isn't any milk."
+        },
+        {
+          "id": "mel-g11-5",
+          "type": "fill-in-blank",
+          "sentence": "___ a problem with the computer.",
+          "answer": "There is",
+          "hint": "Ett problem = singular.",
+          "explanation": "Singular → There is a problem with the computer."
+        },
+        {
+          "id": "mel-g11-6",
+          "type": "multiple-choice",
+          "question": "Frågeform: '___ any water in the bottle?'",
+          "options": [
+            "Is there",
+            "Are there",
+            "There is",
+            "There are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Singular/uncountable → Is there any water?"
+        },
+        {
+          "id": "mel-g11-7",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ a lot of noise outside.'",
+          "options": [
+            "There are",
+            "There is",
+            "There am",
+            "Is there"
+          ],
+          "correctIndex": 1,
+          "explanation": "'A lot of noise' = uncountable singular → There is a lot of noise."
+        },
+        {
+          "id": "mel-g11-8",
+          "type": "fill-in-blank",
+          "sentence": "___ several reasons for this.",
+          "answer": "There are",
+          "hint": "Flera orsaker = plural.",
+          "explanation": "Plural (several reasons) → There are several reasons."
+        },
+        {
+          "id": "mel-g11-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ fifty states in the USA.'",
+          "options": [
+            "There is",
+            "There be",
+            "There are",
+            "Is there"
+          ],
+          "correctIndex": 2,
+          "explanation": "Fifty states = plural → There are fifty states."
+        },
+        {
+          "id": "mel-g11-10",
+          "type": "multiple-choice",
+          "question": "'___ anything interesting on TV tonight?'",
+          "options": [
+            "Is there",
+            "Are there",
+            "There is",
+            "There are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Anything = singular/uncountable → Is there anything interesting?"
+        }
+      ],
+      "helpText": [
+        "🎵 Ramsa: \"THERE IS en sak – THERE ARE ett gäng! Singular IS, plural ARE – håll det i sträng!\"",
+        "There is/there are används för att berätta att något finns eller existerar.",
+        "Regel: There is + singular. There are + plural.",
+        "Frågor: Is there a...? Are there any...? Negationer: There isn't a... There aren't any...",
+        "Exempel: There is a problem. ✔  There are many students here. ✔  Is there any milk left? ✔",
+        "Tips: Kolla vad som kommer efter – ett eller flera? Det avgör is eller are."
+      ]
+    },
+    {
       "id": "mel-g1-present-simple",
       "title": "Present Simple",
       "description": "Presens enkelt — hur vi berättar om vanor och fakta.",
@@ -2133,915 +3042,6 @@
         "Objektspronomen: I→me, he→him, she→her, they→them, we→us. 'Give it to me, not him!'",
         "Will vs going to: will = spontant beslut/förutsägelse. Going to = planerat beslut.",
         "Tips: Läs varje fråga noga – ibland avslöjar resten av meningen vilken regel som gäller."
-      ]
-    },
-    {
-      "id": "mel-g5-nouns",
-      "title": "Substantiv – Singular & Plural",
-      "description": "Hur man bildar plural av substantiv, inklusive oregelbundna former.",
-      "icon": "📦",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g5-1",
-          "type": "multiple-choice",
-          "question": "Vad är plural av 'child'?",
-          "options": [
-            "childs",
-            "childes",
-            "children",
-            "child"
-          ],
-          "correctIndex": 2,
-          "explanation": "'Child' är ett oregelbundet substantiv. Plural är 'children'."
-        },
-        {
-          "id": "mel-g5-2",
-          "type": "multiple-choice",
-          "question": "Vad är plural av 'box'?",
-          "options": [
-            "boxs",
-            "box",
-            "boxes",
-            "boxies"
-          ],
-          "correctIndex": 2,
-          "explanation": "Substantiv som slutar på -x, -s, -sh, -ch får -es i plural: boxes."
-        },
-        {
-          "id": "mel-g5-3",
-          "type": "fill-in-blank",
-          "sentence": "One mouse, two ___.",
-          "answer": "mice",
-          "hint": "Oregelbunden pluralform.",
-          "explanation": "'Mouse' → 'mice' är ett oregelbundet substantiv."
-        },
-        {
-          "id": "mel-g5-4",
-          "type": "multiple-choice",
-          "question": "Vad är plural av 'city'?",
-          "options": [
-            "citys",
-            "cities",
-            "cityes",
-            "city"
-          ],
-          "correctIndex": 1,
-          "explanation": "Substantiv som slutar på -y (med konsonant före) → byt y mot -ies: cities."
-        },
-        {
-          "id": "mel-g5-5",
-          "type": "fill-in-blank",
-          "sentence": "One leaf, two ___.",
-          "answer": "leaves",
-          "hint": "Slutar på -f eller -fe.",
-          "explanation": "Substantiv som slutar på -f/-fe → byt mot -ves: leaf → leaves."
-        },
-        {
-          "id": "mel-g5-6",
-          "type": "multiple-choice",
-          "question": "Vad är plural av 'woman'?",
-          "options": [
-            "womans",
-            "women",
-            "womes",
-            "womens"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Woman' → 'women' är ett oregelbundet substantiv."
-        },
-        {
-          "id": "mel-g5-7",
-          "type": "multiple-choice",
-          "question": "Vilket av dessa är ett räknebart substantiv?",
-          "options": [
-            "water",
-            "music",
-            "apple",
-            "love"
-          ],
-          "correctIndex": 2,
-          "explanation": "'Apple' är räknebart – du kan säga 'one apple, two apples'. Water, music och love är icke-räknebara."
-        },
-        {
-          "id": "mel-g5-8",
-          "type": "fill-in-blank",
-          "sentence": "I have two ___ (tooth) in my pocket.",
-          "answer": "teeth",
-          "hint": "Oregelbunden pluralform av tooth.",
-          "explanation": "tooth → teeth är oregelbundet."
-        },
-        {
-          "id": "mel-g5-9",
-          "type": "multiple-choice",
-          "question": "Välj rätt plural: 'There are three ___ in the sky.' (sheep)",
-          "options": [
-            "sheeps",
-            "sheep",
-            "sheepes",
-            "sheepies"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Sheep' har samma form i singular och plural."
-        },
-        {
-          "id": "mel-g5-10",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'She reads many ___ every summer.' (book)",
-          "options": [
-            "book",
-            "books",
-            "bookes",
-            "booky"
-          ],
-          "correctIndex": 1,
-          "explanation": "Vanliga substantiv får bara -s i plural: books."
-        }
-      ]
-    },
-    {
-      "id": "mel-g6-do-does",
-      "title": "Do / Does – Frågor & Negationer",
-      "description": "Använd do och does rätt i frågor och nekande meningar.",
-      "icon": "❓",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g6-1",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ your parents work in the city?'",
-          "options": [
-            "Does",
-            "Do",
-            "Is",
-            "Are"
-          ],
-          "correctIndex": 1,
-          "explanation": "Med your parents (= they) använder vi 'Do'. Do your parents work...?"
-        },
-        {
-          "id": "mel-g6-2",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'My sister ___ not like horror movies.'",
-          "options": [
-            "do",
-            "am",
-            "does",
-            "is"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med she (my sister) använder vi 'does not'. My sister does not like..."
-        },
-        {
-          "id": "mel-g6-3",
-          "type": "fill-in-blank",
-          "sentence": "___ the dog bark at night?",
-          "answer": "Does",
-          "hint": "Hunden = it, vilket hjälpverb passar?",
-          "explanation": "Med it/he/she använder vi 'does' i frågor."
-        },
-        {
-          "id": "mel-g6-4",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'We ___ not understand the question.'",
-          "options": [
-            "does",
-            "is",
-            "do",
-            "are"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med we använder vi 'do not'. We do not understand..."
-        },
-        {
-          "id": "mel-g6-5",
-          "type": "fill-in-blank",
-          "sentence": "___ you enjoy reading books?",
-          "answer": "Do",
-          "hint": "Du = you, vilket ord passar?",
-          "explanation": "Med you/I/we/they använder vi 'do' i frågor."
-        },
-        {
-          "id": "mel-g6-6",
-          "type": "multiple-choice",
-          "question": "Välj rätt svar: 'Does she speak French?' → 'Yes, she ___.'",
-          "options": [
-            "do",
-            "does",
-            "is",
-            "speaks"
-          ],
-          "correctIndex": 1,
-          "explanation": "Kortsvar med does: Yes, she does."
-        },
-        {
-          "id": "mel-g6-7",
-          "type": "multiple-choice",
-          "question": "'___ it make sense?' Välj rätt:",
-          "options": [
-            "Do",
-            "Are",
-            "Does",
-            "Is"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med it använder vi 'Does'. Does it make sense?"
-        },
-        {
-          "id": "mel-g6-8",
-          "type": "fill-in-blank",
-          "sentence": "He ___ not know the answer.",
-          "answer": "does",
-          "hint": "Han = he, vilket hjälpverb?",
-          "explanation": "Med he/she/it använder vi 'does not' för att neka."
-        },
-        {
-          "id": "mel-g6-9",
-          "type": "multiple-choice",
-          "question": "'Do they like sport?' → 'No, they ___.'",
-          "options": [
-            "don't",
-            "doesn't",
-            "aren't",
-            "isn't"
-          ],
-          "correctIndex": 0,
-          "explanation": "Kortsvar: No, they don't. (do not → don't)"
-        },
-        {
-          "id": "mel-g6-10",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ the teacher explain clearly?'",
-          "options": [
-            "Do",
-            "Are",
-            "Is",
-            "Does"
-          ],
-          "correctIndex": 3,
-          "explanation": "Med the teacher (= she/he) använder vi 'Does'."
-        }
-      ],
-      "helpText": [
-        "🎵 Ramsa: \"DO frågar och DON'T nekar – DOES och DOESN'T, S:et märker vi!\"",
-        "Do/does används i frågor och negationer i presens (nuet).",
-        "Regel: He / She / It → does / doesn't | I / You / We / They → do / don't",
-        "Frågans ordföljd: Do/Does + subjekt + verb (grundform)? → Does she speak French?",
-        "Exempel: Do they live here? – Yes, they do. ✔  She doesn't like spiders. ✔  Does he know the answer? ✔",
-        "Tips: Efter does/doesn't → verbet ska vara i grundform (ALDRIG does she speaks ✗)."
-      ]
-    },
-    {
-      "id": "mel-g7-a-an",
-      "title": "A / An – Obestämd artikel",
-      "description": "När använder man 'a' och när 'an'?",
-      "icon": "🔡",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g7-1",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ umbrella'",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Umbrella' börjar med vokalljudet U, så vi använder 'an'."
-        },
-        {
-          "id": "mel-g7-2",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ university'",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 0,
-          "explanation": "'University' börjar med ljudet 'yoo' (som konsonant), så vi använder 'a'."
-        },
-        {
-          "id": "mel-g7-3",
-          "type": "fill-in-blank",
-          "sentence": "She is ___ honest person.",
-          "answer": "an",
-          "hint": "Börjar 'honest' med ett vokalljud?",
-          "explanation": "'Honest' uttalas 'onest' – H:et är tyst! Det börjar med vokalljudet O → 'an honest'."
-        },
-        {
-          "id": "mel-g7-4",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ hour'",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Hour' uttalas 'aur' – H:et är tyst. Det börjar med vokalljudet → 'an hour'."
-        },
-        {
-          "id": "mel-g7-5",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ European country'",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 0,
-          "explanation": "'European' uttalas 'yoo-ro-pee-an' – börjar med konsonantljudet Y → 'a European'."
-        },
-        {
-          "id": "mel-g7-6",
-          "type": "fill-in-blank",
-          "sentence": "I saw ___ elephant at the zoo.",
-          "answer": "an",
-          "hint": "Vilket ljud börjar elefant med?",
-          "explanation": "'Elephant' börjar med vokalljudet E → 'an elephant'."
-        },
-        {
-          "id": "mel-g7-7",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'He is ___ engineer.'",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Engineer' börjar med vokalljudet E → 'an engineer'."
-        },
-        {
-          "id": "mel-g7-8",
-          "type": "fill-in-blank",
-          "sentence": "She wants to be ___ nurse.",
-          "answer": "a",
-          "hint": "Vilket ljud börjar nurse med?",
-          "explanation": "'Nurse' börjar med konsonantljudet N → 'a nurse'."
-        },
-        {
-          "id": "mel-g7-9",
-          "type": "multiple-choice",
-          "question": "'___ one-way street' – välj rätt:",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 0,
-          "explanation": "'One' uttalas 'wun' – börjar med konsonantljudet W → 'a one-way street'."
-        },
-        {
-          "id": "mel-g7-10",
-          "type": "multiple-choice",
-          "question": "'___ apple ___ day keeps the doctor away.' Välj rätt för det första tomrummet:",
-          "options": [
-            "a",
-            "an"
-          ],
-          "correctIndex": 1,
-          "explanation": "'Apple' börjar med vokalljudet A → 'an apple'."
-        }
-      ],
-      "helpText": [
-        "🎵 Ramsa: \"Vokalljud i munnen – AN ska dit! Konsonantljud? A är split!\"",
-        "A/an är obestämda artiklar. Välj utifrån hur nästa ord LÅTER.",
-        "A före konsonantljud: a book, a car, a uniform (u låter 'ju'), a European.",
-        "An före vokalljud: an idea, an hour (h är tyst!), an honest man, an MP.",
-        "Exempel: She has a dog and an umbrella. ✔  It takes an hour. ✔  He is a university student. ✔",
-        "Tips: 'An hour' – h är tyst, så det låter 'our' → vokalljud → an."
-      ]
-    },
-    {
-      "id": "mel-g8-be-verb",
-      "title": "Is / Am / Are – Be-verbets former",
-      "description": "Använd rätt form av be-verbet i olika situationer.",
-      "icon": "🔤",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g8-1",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'The books ___ on the shelf.'",
-          "options": [
-            "am",
-            "is",
-            "are",
-            "be"
-          ],
-          "correctIndex": 2,
-          "explanation": "'Books' = plural → are. The books are on the shelf."
-        },
-        {
-          "id": "mel-g8-2",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'Neither the cat nor the dog ___ outside.'",
-          "options": [
-            "are",
-            "am",
-            "were",
-            "is"
-          ],
-          "correctIndex": 3,
-          "explanation": "Med 'neither...nor' styr det närmaste substantivet (dog) formen → is."
-        },
-        {
-          "id": "mel-g8-3",
-          "type": "fill-in-blank",
-          "sentence": "My friends and I ___ going to the cinema.",
-          "answer": "are",
-          "hint": "Vi = we/friends+I, vilket ord passar?",
-          "explanation": "'My friends and I' = we → are. We are going to the cinema."
-        },
-        {
-          "id": "mel-g8-4",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'The news ___ interesting today.'",
-          "options": [
-            "are",
-            "am",
-            "is",
-            "be"
-          ],
-          "correctIndex": 2,
-          "explanation": "'News' är singulart på engelska → is. The news is interesting."
-        },
-        {
-          "id": "mel-g8-5",
-          "type": "fill-in-blank",
-          "sentence": "Each of the students ___ responsible.",
-          "answer": "is",
-          "hint": "'Each of' = singulart, vilket ord passar?",
-          "explanation": "'Each of' tar singular → is. Each of the students is responsible."
-        },
-        {
-          "id": "mel-g8-6",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'There ___ many people at the party.'",
-          "options": [
-            "is",
-            "am",
-            "are",
-            "be"
-          ],
-          "correctIndex": 2,
-          "explanation": "'Many people' = plural → are. There are many people."
-        },
-        {
-          "id": "mel-g8-7",
-          "type": "multiple-choice",
-          "question": "'Mathematics ___ my favourite subject.' Välj rätt:",
-          "options": [
-            "are",
-            "am",
-            "is",
-            "be"
-          ],
-          "correctIndex": 2,
-          "explanation": "Ämnesnamn som slutar på -ics är singulara → is. Mathematics is..."
-        },
-        {
-          "id": "mel-g8-8",
-          "type": "fill-in-blank",
-          "sentence": "You and your sister ___ welcome here.",
-          "answer": "are",
-          "hint": "You + sister = vi/de, vilket ord?",
-          "explanation": "You and your sister = they/we → are."
-        },
-        {
-          "id": "mel-g8-9",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'The team ___ playing well tonight.'",
-          "options": [
-            "am",
-            "are",
-            "is",
-            "be"
-          ],
-          "correctIndex": 2,
-          "explanation": "'Team' som kollektiv enhet → is (brit. Eng. varierar). The team is playing well."
-        },
-        {
-          "id": "mel-g8-10",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'I ___ not sure about that.'",
-          "options": [
-            "is",
-            "are",
-            "am",
-            "be"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med I använder vi alltid 'am'. I am not sure."
-        }
-      ],
-      "helpText": [
-        "🎵 Ramsa: \"I am, you are – he IS, she IS! We are, they are – lätt är vis!\"",
-        "Be-verbet används i frågor, negationer och pågående handlingar (present continuous).",
-        "Frågor: Am I late? Is she coming? Are they ready?",
-        "Negationer: I am not (I'm not). He is not (He isn't). We are not (We aren't).",
-        "Exempel: Is she at home? – Yes, she is. ✔  They aren't playing today. ✔  Am I right? ✔",
-        "Tips: Frågans ordföljd: Is/Am/Are + subjekt + resten av meningen?"
-      ]
-    },
-    {
-      "id": "mel-g9-have-has",
-      "title": "Have / Has",
-      "description": "Lär dig skillnaden mellan have och has.",
-      "icon": "✋",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g9-1",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'She ___ a new bicycle.'",
-          "options": [
-            "have",
-            "has",
-            "haves",
-            "is"
-          ],
-          "correctIndex": 1,
-          "explanation": "Med she/he/it använder vi 'has'. She has a new bicycle."
-        },
-        {
-          "id": "mel-g9-2",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'We ___ a lot of homework today.'",
-          "options": [
-            "has",
-            "is",
-            "have",
-            "haves"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med we/you/they/I använder vi 'have'. We have a lot of homework."
-        },
-        {
-          "id": "mel-g9-3",
-          "type": "fill-in-blank",
-          "sentence": "The dog ___ a long tail.",
-          "answer": "has",
-          "hint": "Hunden = it, vilket ord?",
-          "explanation": "Med it (hunden) använder vi 'has'. The dog has a long tail."
-        },
-        {
-          "id": "mel-g9-4",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'I ___ two brothers.'",
-          "options": [
-            "has",
-            "haves",
-            "have",
-            "is"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med I använder vi 'have'. I have two brothers."
-        },
-        {
-          "id": "mel-g9-5",
-          "type": "fill-in-blank",
-          "sentence": "They ___ three cats at home.",
-          "answer": "have",
-          "hint": "De = they, vilket ord?",
-          "explanation": "Med they/we/you/I använder vi 'have'."
-        },
-        {
-          "id": "mel-g9-6",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'He ___ a great sense of humour.'",
-          "options": [
-            "have",
-            "are",
-            "is",
-            "has"
-          ],
-          "correctIndex": 3,
-          "explanation": "Med he använder vi 'has'. He has a great sense of humour."
-        },
-        {
-          "id": "mel-g9-7",
-          "type": "multiple-choice",
-          "question": "'My parents ___ a house in the countryside.' Välj rätt:",
-          "options": [
-            "has",
-            "have",
-            "is",
-            "are"
-          ],
-          "correctIndex": 1,
-          "explanation": "'My parents' = they → have. My parents have a house."
-        },
-        {
-          "id": "mel-g9-8",
-          "type": "fill-in-blank",
-          "sentence": "Our school ___ a big library.",
-          "answer": "has",
-          "hint": "Skolan = it, vilket ord?",
-          "explanation": "Med it (skolan) använder vi 'has'. Our school has a big library."
-        },
-        {
-          "id": "mel-g9-9",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'You ___ a really good idea!'",
-          "options": [
-            "has",
-            "is",
-            "have",
-            "are"
-          ],
-          "correctIndex": 2,
-          "explanation": "Med you använder vi 'have'. You have a really good idea!"
-        },
-        {
-          "id": "mel-g9-10",
-          "type": "multiple-choice",
-          "question": "'Each student ___ a textbook.' Välj rätt:",
-          "options": [
-            "have",
-            "are",
-            "is",
-            "has"
-          ],
-          "correctIndex": 3,
-          "explanation": "'Each student' = singular (he/she/it) → has."
-        }
-      ],
-      "helpText": [
-        "🎵 Ramsa: \"Have eller has – kolla vem som äger! He/she/it = HAS, resten HAVE beger!\"",
-        "Have/has visar ägande eller används i presens perfekt (present perfect).",
-        "Regel: He / She / It → has | I / You / We / They → have",
-        "Frågor och negationer: Do you have...? Does she have...? I don't have... She doesn't have...",
-        "Exempel: She has a new bike. ✔  Do you have a pen? ✔  He doesn't have time. ✔",
-        "Tips: I frågor och negationer – använd do/does + have (aldrig 'does she has' ✗)."
-      ]
-    },
-    {
-      "id": "mel-g10-demonstratives",
-      "title": "This / That / These / Those",
-      "description": "Pekord för nära och längre bort, singular och plural.",
-      "icon": "👆",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g10-1",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ book here is mine.' (nära/singular)",
-          "options": [
-            "That",
-            "Those",
-            "These",
-            "This"
-          ],
-          "correctIndex": 3,
-          "explanation": "Nära + singular = This. This book here is mine."
-        },
-        {
-          "id": "mel-g10-2",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ mountains over there are beautiful.' (långt bort/plural)",
-          "options": [
-            "This",
-            "These",
-            "Those",
-            "That"
-          ],
-          "correctIndex": 2,
-          "explanation": "Långt bort + plural = Those. Those mountains are beautiful."
-        },
-        {
-          "id": "mel-g10-3",
-          "type": "fill-in-blank",
-          "sentence": "___ are my friends. (pekar på folk bredvid sig)",
-          "answer": "These",
-          "hint": "Nära + plural = ?",
-          "explanation": "Nära + plural = These. These are my friends."
-        },
-        {
-          "id": "mel-g10-4",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ car over there is fast.' (singular/långt)",
-          "options": [
-            "This",
-            "These",
-            "Those",
-            "That"
-          ],
-          "correctIndex": 3,
-          "explanation": "Långt bort + singular = That. That car over there is fast."
-        },
-        {
-          "id": "mel-g10-5",
-          "type": "fill-in-blank",
-          "sentence": "Is ___ your pen? (pekar på penna nära dig)",
-          "answer": "this",
-          "hint": "Nära + singular = ?",
-          "explanation": "This (nära + singular). Is this your pen?"
-        },
-        {
-          "id": "mel-g10-6",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ are interesting books. (håller i dem)",
-          "options": [
-            "That",
-            "This",
-            "Those",
-            "These"
-          ],
-          "correctIndex": 3,
-          "explanation": "Nära + plural = These. These are interesting books."
-        },
-        {
-          "id": "mel-g10-7",
-          "type": "multiple-choice",
-          "question": "'___ was a great film!' (pratar om en film du precis sett)",
-          "options": [
-            "These",
-            "Those",
-            "That",
-            "This"
-          ],
-          "correctIndex": 2,
-          "explanation": "Syftar på något specifikt/just passat → That. That was a great film!"
-        },
-        {
-          "id": "mel-g10-8",
-          "type": "fill-in-blank",
-          "sentence": "Look at ___ stars! (stjärnor långt bort, plural)",
-          "answer": "those",
-          "hint": "Långt bort + plural = ?",
-          "explanation": "Those (långt bort + plural). Look at those stars!"
-        },
-        {
-          "id": "mel-g10-9",
-          "type": "multiple-choice",
-          "question": "Välj rätt: 'Can I try ___ shoes? (i butiken, pekar på skor du håller i)",
-          "options": [
-            "those",
-            "that",
-            "this",
-            "these"
-          ],
-          "correctIndex": 3,
-          "explanation": "Nära + plural = These. Can I try these shoes?"
-        },
-        {
-          "id": "mel-g10-10",
-          "type": "multiple-choice",
-          "question": "'___ days, everyone uses smartphones.' Välj rätt:",
-          "options": [
-            "This",
-            "That",
-            "Those",
-            "These"
-          ],
-          "correctIndex": 3,
-          "explanation": "'These days' är ett fast uttryck som means 'nuförtiden'."
-        }
-      ],
-      "helpText": [
-        "🎵 Ramsa: \"THIS och THESE är nära mig – THAT och THOSE är långt härifrån! Singular utan S – plural med S!\"",
-        "Pekorden visar om något är nära (this/these) eller långt borta (that/those).",
-        "Singular: this (nära) – that (långt borta). Plural: these (nära) – those (långt borta).",
-        "Som pronomen: This is great! That was fun! These are mine. Those look heavy.",
-        "Exempel: This book is interesting. ✔  Those mountains are far away. ✔  Are these your keys? ✔",
-        "Tips: Tänk: THIS/THESE = nära = HERE. THAT/THOSE = längre bort = THERE."
-      ]
-    },
-    {
-      "id": "mel-g11-there-is-are",
-      "title": "There is / There are",
-      "description": "Hur man pratar om vad som finns på en plats.",
-      "icon": "📍",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "exercises": [
-        {
-          "id": "mel-g11-1",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ a cat in the garden.'",
-          "options": [
-            "There are",
-            "There is",
-            "There am",
-            "There be"
-          ],
-          "correctIndex": 1,
-          "explanation": "En katt = singular → There is a cat in the garden."
-        },
-        {
-          "id": "mel-g11-2",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ many students in the classroom.'",
-          "options": [
-            "There is",
-            "There am",
-            "There are",
-            "There be"
-          ],
-          "correctIndex": 2,
-          "explanation": "Many students = plural → There are many students."
-        },
-        {
-          "id": "mel-g11-3",
-          "type": "fill-in-blank",
-          "sentence": "___ two books on the table.",
-          "answer": "There are",
-          "hint": "Två böcker = plural.",
-          "explanation": "Plural → There are two books on the table."
-        },
-        {
-          "id": "mel-g11-4",
-          "type": "multiple-choice",
-          "question": "Välj rätt negation: '___ no milk in the fridge.'",
-          "options": [
-            "There aren't",
-            "There isn't",
-            "There wasn't",
-            "There weren't"
-          ],
-          "correctIndex": 1,
-          "explanation": "Milk = uncountable/singular → There isn't any milk."
-        },
-        {
-          "id": "mel-g11-5",
-          "type": "fill-in-blank",
-          "sentence": "___ a problem with the computer.",
-          "answer": "There is",
-          "hint": "Ett problem = singular.",
-          "explanation": "Singular → There is a problem with the computer."
-        },
-        {
-          "id": "mel-g11-6",
-          "type": "multiple-choice",
-          "question": "Frågeform: '___ any water in the bottle?'",
-          "options": [
-            "Is there",
-            "Are there",
-            "There is",
-            "There are"
-          ],
-          "correctIndex": 0,
-          "explanation": "Singular/uncountable → Is there any water?"
-        },
-        {
-          "id": "mel-g11-7",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ a lot of noise outside.'",
-          "options": [
-            "There are",
-            "There is",
-            "There am",
-            "Is there"
-          ],
-          "correctIndex": 1,
-          "explanation": "'A lot of noise' = uncountable singular → There is a lot of noise."
-        },
-        {
-          "id": "mel-g11-8",
-          "type": "fill-in-blank",
-          "sentence": "___ several reasons for this.",
-          "answer": "There are",
-          "hint": "Flera orsaker = plural.",
-          "explanation": "Plural (several reasons) → There are several reasons."
-        },
-        {
-          "id": "mel-g11-9",
-          "type": "multiple-choice",
-          "question": "Välj rätt: '___ fifty states in the USA.'",
-          "options": [
-            "There is",
-            "There be",
-            "There are",
-            "Is there"
-          ],
-          "correctIndex": 2,
-          "explanation": "Fifty states = plural → There are fifty states."
-        },
-        {
-          "id": "mel-g11-10",
-          "type": "multiple-choice",
-          "question": "'___ anything interesting on TV tonight?'",
-          "options": [
-            "Is there",
-            "Are there",
-            "There is",
-            "There are"
-          ],
-          "correctIndex": 0,
-          "explanation": "Anything = singular/uncountable → Is there anything interesting?"
-        }
-      ],
-      "helpText": [
-        "🎵 Ramsa: \"THERE IS en sak – THERE ARE ett gäng! Singular IS, plural ARE – håll det i sträng!\"",
-        "There is/there are används för att berätta att något finns eller existerar.",
-        "Regel: There is + singular. There are + plural.",
-        "Frågor: Is there a...? Are there any...? Negationer: There isn't a... There aren't any...",
-        "Exempel: There is a problem. ✔  There are many students here. ✔  Is there any milk left? ✔",
-        "Tips: Kolla vad som kommer efter – ett eller flera? Det avgör is eller are."
       ]
     }
   ],
