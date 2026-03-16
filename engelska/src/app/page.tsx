@@ -165,6 +165,7 @@ export default function HomePage() {
               colorTo="#a855f7"
               borderWidth={2}
             />
+            <div className="relative">
             <h2 className="text-2xl font-bold text-indigo-900 mb-1">Välkommen!</h2>
             <p className="text-indigo-400 text-base mb-6 font-medium">
               Skriv ditt namn för att börja eller fortsätta.
@@ -232,6 +233,7 @@ export default function HomePage() {
                 Starta jakten! 🚀
               </ShimmerButton>
             </form>
+            </div>
           </div>
         </div>
 
