@@ -3,6 +3,5 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- matematik/ || exit 1"
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
