@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   description:
     "En gratis svenskträningsapp för åk 1–gymnasiet. Grammatikövningar och läsförståelse i fyra spännande världar.",
   keywords: ["svenska", "skola", "övningar", "grammatik", "läsförståelse", "gratis"],
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export const viewport: Viewport = {
