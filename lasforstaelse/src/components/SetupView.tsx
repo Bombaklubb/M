@@ -103,15 +103,15 @@ export const SetupView: React.FC<SetupViewProps> = ({
   const colors = getGradeColor(selectedGrade);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <div className="max-w-2xl mx-auto px-4 py-4">
       {/* Header */}
       <motion.div
-        className="text-center mb-6"
+        className="text-center mb-3"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex items-center justify-center">
-          <BookLogo size={220} />
+          <BookLogo size={140} />
         </div>
       </motion.div>
 
@@ -121,12 +121,12 @@ export const SetupView: React.FC<SetupViewProps> = ({
         transition={{ delay: 0.2 }}
       >
         <Card className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-white/20 shadow-2xl overflow-hidden">
-          <BorderBeam size={250} duration={12} colorFrom="#6366f1" colorTo="#22c55e" />
+          <BorderBeam size={200} duration={12} colorFrom="#6366f1" colorTo="#22c55e" />
 
-          <CardContent className="p-6 md:p-8">
+          <CardContent className="p-4 md:p-6">
             {/* Title */}
             <motion.h2
-              className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center"
+              className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4 text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -136,7 +136,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
             {/* Grade display */}
             <motion.div
-              className="text-center mb-8"
+              className="text-center mb-4"
               layout
             >
               <AnimatePresence mode="wait">
@@ -147,7 +147,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   className={cn(
-                    "inline-flex items-center justify-center w-28 h-28 rounded-3xl text-5xl font-bold text-white mb-3 shadow-xl",
+                    "inline-flex items-center justify-center w-20 h-20 rounded-2xl text-4xl font-bold text-white mb-2 shadow-xl",
                     `bg-gradient-to-br ${colors.gradient}`
                   )}
                 >
@@ -155,7 +155,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                 </motion.div>
               </AnimatePresence>
               <motion.div
-                className={cn("text-lg font-semibold", colors.text)}
+                className={cn("text-base font-semibold", colors.text)}
                 key={`label-${selectedGrade}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -166,7 +166,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
             {/* Grade selector buttons */}
             <motion.div
-              className="grid grid-cols-5 md:grid-cols-10 gap-2 mb-8"
+              className="grid grid-cols-5 md:grid-cols-10 gap-2 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -178,7 +178,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                     key={item.grade}
                     onClick={() => setSelectedGrade(item.grade)}
                     className={cn(
-                      "relative py-3 md:py-4 rounded-xl font-bold text-sm md:text-base transition-all duration-200",
+                      "relative py-2 md:py-3 rounded-xl font-bold text-sm transition-all duration-200",
                       item.grade === selectedGrade
                         ? `bg-gradient-to-br ${itemColors.gradient} text-white shadow-lg`
                         : "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"
@@ -226,8 +226,8 @@ export const SetupView: React.FC<SetupViewProps> = ({
                 onClick={handleStart}
                 disabled={!textCounts[selectedGrade] || textCounts[selectedGrade] === 0}
                 variant="success"
-                size="xl"
-                className="w-full text-xl"
+                size="lg"
+                className="w-full text-lg"
               >
                 Börja läsa!
               </Button>
