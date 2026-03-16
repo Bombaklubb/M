@@ -6,6 +6,9 @@ import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { calcStars } from '../utils/storage';
 import { CHEST_META } from '../utils/chestStorage';
+import { NumberTicker } from './magicui/number-ticker';
+import { Confetti } from './magicui/confetti';
+import { SparklesText } from './magicui/sparkles-text';
 
 // ─── Mystery Box Popup (inline) ───────────────────────────────────────────────
 function MysteryPopup({ description, onClose }: { description: string; onClose: () => void }) {
@@ -55,6 +58,7 @@ function MysteryPopup({ description, onClose }: { description: string; onClose: 
 export default function TopicResult({ topic }: { topic: Topic }) {
   const { currentStudent, setView, getStudentStats, pendingChestResult, clearPendingChestResult } = useApp();
   const [visible, setVisible] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
   const [showMystery, setShowMystery] = useState(
     !!pendingChestResult?.mysteryReward
   );
@@ -81,37 +85,55 @@ export default function TopicResult({ topic }: { topic: Topic }) {
     .filter(Boolean);
 
   const scoreColor = score >= 80 ? 'text-emerald-400' : score >= 50 ? 'text-amber-400' : 'text-rose-400';
-  const grade = score >= 90 ? 'Utmärkt! 🌟' : score >= 70 ? 'Bra jobbat! 👍' : score >= 50 ? 'Godkänt! ✅' : 'Försök igen! 💪';
+  const grade = score >= 90 ? 'Utmärkt!' : score >= 70 ? 'Bra jobbat!' : score >= 50 ? 'Godkänt!' : 'Försök igen!';
+  const gradeEmoji = score >= 90 ? '🌟' : score >= 70 ? '👍' : score >= 50 ? '✅' : '💪';
+
+  // Starta confetti när visible=true och score är bra
+  useEffect(() => {
+    if (visible && score >= 70) {
+      setTimeout(() => setShowConfetti(true), 300);
+    }
+  }, [visible, score]);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
+      <Confetti active={showConfetti} duration={3000} />
       <AppHeader />
       <div className={`w-full max-w-md transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         {/* Result card */}
         <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-8 mb-5">
           {/* Header */}
           <div className="text-center mb-6">
-            <div className="text-6xl mb-3">{topic.icon}</div>
+            <div className="text-6xl mb-3 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">{topic.icon}</div>
             <h1 className="text-2xl font-black text-white">{topic.title}</h1>
             <p className="text-white/50">Avklarad!</p>
           </div>
 
-          {/* Score circle */}
+          {/* Score */}
           <div className="flex flex-col items-center mb-6">
-            <div className={`text-7xl font-black ${scoreColor} mb-1`}>{score}%</div>
-            <p className="text-xl font-bold text-white/80">{grade}</p>
+            <div className={`text-7xl font-black ${scoreColor} mb-1 tabular-nums`}>
+              <NumberTicker value={score} delay={0.3} className={scoreColor} />%
+            </div>
+            <SparklesText
+              className="text-xl font-bold text-white/80"
+              sparkleCount={score >= 70 ? 6 : 0}
+            >
+              {grade} {gradeEmoji}
+            </SparklesText>
             <p className="text-white/50 text-sm mt-1">{correct} av {total} rätt</p>
           </div>
 
           {/* Stars */}
-          <div className="flex justify-center gap-3 mb-6">
+          <div className="flex justify-center gap-4 mb-6">
             {[0, 1, 2].map(i => (
               <span
                 key={i}
-                className={`text-5xl transition-all duration-300 ${
-                  i < stars ? 'animate-star-pop' : 'opacity-20'
+                className={`text-5xl transition-all duration-500 ${
+                  i < stars
+                    ? 'animate-star-pop drop-shadow-[0_0_12px_rgba(251,191,36,0.8)]'
+                    : 'opacity-15 grayscale'
                 }`}
-                style={{ animationDelay: `${i * 200}ms` }}
+                style={{ animationDelay: `${i * 250 + 500}ms` }}
               >
                 ⭐
               </span>
@@ -120,7 +142,9 @@ export default function TopicResult({ topic }: { topic: Topic }) {
 
           {/* Points earned */}
           <div className="bg-amber-500/20 border border-amber-400/40 rounded-2xl p-4 text-center mb-4">
-            <p className="text-amber-300 font-bold text-lg">🏆 Poäng totalt: {points.total}</p>
+            <p className="text-amber-300 font-bold text-lg">
+              🏆 Poäng totalt: <NumberTicker value={points.total} delay={0.8} className="text-amber-300 font-bold" />
+            </p>
             <p className="text-amber-400 text-sm">Nivå {points.level} – {points.streak} dagars streak 🔥</p>
           </div>
 
