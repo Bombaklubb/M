@@ -3171,6 +3171,323 @@
         "Formellt: There exists / There remain: There remains much to be done. ✔",
         "Exempel: There have been several attempts. ✔  There seems to be a misunderstanding. ✔"
       ]
+    },
+    {
+      "id": "hog-v1-aktiviteter",
+      "title": "Aktiviteter (Activities)",
+      "description": "Lär dig engelska ord och fraser för aktiviteter och hobbies.",
+      "icon": "🏃",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🏃 Aktiviteter och hobbies på engelska!",
+        "simma = swim | springa = run | laga mat = cook | rita = draw",
+        "sjunga = sing | dansa = dance | cykla = cycle/ride a bike",
+        "klättra = climb | fotografera = take photos | måla = paint",
+        "Tips: I Present Simple lägger vi till -s för he/she/it: she swims, he runs."
+      ],
+      "exercises": [
+        {
+          "id": "hog-v1-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'simma' på engelska?",
+          "options": [
+            "run",
+            "ski",
+            "swim",
+            "skate"
+          ],
+          "correctIndex": 2,
+          "explanation": "Simma = swim. She swims every morning."
+        },
+        {
+          "id": "hog-v1-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'laga mat' på engelska?",
+          "options": [
+            "bake",
+            "cook",
+            "clean",
+            "craft"
+          ],
+          "correctIndex": 1,
+          "explanation": "Laga mat = cook. He loves to cook Italian food."
+        },
+        {
+          "id": "hog-v1-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'klättra' på engelska?",
+          "options": [
+            "crawl",
+            "crouch",
+            "climb",
+            "cruise"
+          ],
+          "correctIndex": 2,
+          "explanation": "Klättra = climb. They climbed the mountain."
+        },
+        {
+          "id": "hog-v1-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fotografera' på engelska?",
+          "options": [
+            "film",
+            "draw",
+            "paint",
+            "take photos"
+          ],
+          "correctIndex": 3,
+          "explanation": "Fotografera = take photos. I love to take photos of nature."
+        },
+        {
+          "id": "hog-v1-5",
+          "type": "fill-in-blank",
+          "sentence": "I enjoy ___ (sjunga på engelska) in the school choir.",
+          "answer": "singing",
+          "hint": "Sjunga = sing → singing (i -ing form)",
+          "explanation": "Sjunga = sing. After enjoy, we use the -ing form: singing."
+        },
+        {
+          "id": "hog-v1-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'måla (tavlor)' på engelska?",
+          "options": [
+            "draw",
+            "paint",
+            "print",
+            "pen"
+          ],
+          "correctIndex": 1,
+          "explanation": "Måla = paint (tavlor/konstmålning). Draw = rita med penna/papper."
+        },
+        {
+          "id": "hog-v1-7",
+          "type": "multiple-choice",
+          "question": "'She ___ every weekend.' Vilket alternativ passar för 'dansar'?",
+          "options": [
+            "dances",
+            "dance",
+            "dancing",
+            "danced"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dansa = dance. Med she/he/it lägger vi till -s: she dances."
+        },
+        {
+          "id": "hog-v1-8",
+          "type": "fill-in-blank",
+          "sentence": "He likes ___ (cykla på engelska) to work.",
+          "answer": "cycling",
+          "hint": "Cykla = cycle → cycling",
+          "explanation": "Cykla = cycle. After likes, we use -ing form: cycling."
+        },
+        {
+          "id": "hog-v1-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'skriva' på engelska?",
+          "options": [
+            "read",
+            "type",
+            "write",
+            "draw"
+          ],
+          "correctIndex": 2,
+          "explanation": "Skriva = write. I like to write short stories."
+        },
+        {
+          "id": "hog-v1-10",
+          "type": "multiple-choice",
+          "question": "Vilket verb betyder 'springa' på engelska?",
+          "options": [
+            "walk",
+            "run",
+            "jog",
+            "sprint"
+          ],
+          "correctIndex": 1,
+          "explanation": "Springa = run (allmänt). Jog = jogga, sprint = spurta."
+        },
+        {
+          "id": "hog-v1-11",
+          "type": "multiple-choice",
+          "question": "Vad heter 'läsa (böcker)' på engelska?",
+          "options": [
+            "look",
+            "read",
+            "study",
+            "browse"
+          ],
+          "correctIndex": 1,
+          "explanation": "Läsa (böcker) = read. I read for an hour before bed."
+        },
+        {
+          "id": "hog-v1-12",
+          "type": "fill-in-blank",
+          "sentence": "They spent the evening ___ (rita på engelska) portraits.",
+          "answer": "drawing",
+          "hint": "Rita = draw → drawing",
+          "explanation": "Rita = draw. After spent the evening, we use the -ing form: drawing."
+        }
+      ]
+    },
+    {
+      "id": "hog-v2-kanslor",
+      "title": "Känslor (Emotions)",
+      "description": "Lär dig engelska ord för känslor och hur de används i meningar.",
+      "icon": "😊",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "😊 Känsloord på engelska – berätta hur du mår!",
+        "glad = happy | ledsen = sad | arg = angry | rädd = scared/afraid",
+        "förvånad = surprised | trött = tired | nervös = nervous",
+        "stolt = proud | ensam = lonely | förvirrad = confused",
+        "entusiastisk = enthusiastic | avslappnad = relaxed",
+        "Tips: 'I feel + adjektiv' eller 'I am + adjektiv' – båda fungerar!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v2-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'glad' på engelska?",
+          "options": [
+            "sad",
+            "angry",
+            "happy",
+            "excited"
+          ],
+          "correctIndex": 2,
+          "explanation": "Glad = happy. I am happy today!"
+        },
+        {
+          "id": "hog-v2-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ledsen' på engelska?",
+          "options": [
+            "tired",
+            "sad",
+            "bored",
+            "lonely"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ledsen = sad. She felt sad after the bad news."
+        },
+        {
+          "id": "hog-v2-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'arg' på engelska?",
+          "options": [
+            "anxious",
+            "annoyed",
+            "angry",
+            "afraid"
+          ],
+          "correctIndex": 2,
+          "explanation": "Arg = angry. He was very angry about the situation."
+        },
+        {
+          "id": "hog-v2-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'rädd' på engelska?",
+          "options": [
+            "afraid",
+            "angry",
+            "ashamed",
+            "anxious"
+          ],
+          "correctIndex": 0,
+          "explanation": "Rädd = afraid (eller scared). I was afraid of the dark."
+        },
+        {
+          "id": "hog-v2-5",
+          "type": "fill-in-blank",
+          "sentence": "She was ___ (förvånad på engelska) by the unexpected gift.",
+          "answer": "surprised",
+          "hint": "Förvånad = s _ _ _ _ _ _ _ _",
+          "explanation": "Förvånad = surprised. She was surprised by the gift."
+        },
+        {
+          "id": "hog-v2-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'trött' på engelska?",
+          "options": [
+            "tired",
+            "tense",
+            "troubled",
+            "timid"
+          ],
+          "correctIndex": 0,
+          "explanation": "Trött = tired. I feel tired after the long day."
+        },
+        {
+          "id": "hog-v2-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'nervös' på engelska?",
+          "options": [
+            "noisy",
+            "nasty",
+            "nervous",
+            "narrow"
+          ],
+          "correctIndex": 2,
+          "explanation": "Nervös = nervous. I was nervous before the exam."
+        },
+        {
+          "id": "hog-v2-8",
+          "type": "fill-in-blank",
+          "sentence": "She felt ___ (stolt på engelska) of her achievement.",
+          "answer": "proud",
+          "hint": "Stolt = p _ _ _ _",
+          "explanation": "Stolt = proud. She felt proud of her hard work."
+        },
+        {
+          "id": "hog-v2-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ensam' på engelska?",
+          "options": [
+            "alone",
+            "lonely",
+            "lost",
+            "left out"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ensam (känslan) = lonely. Alone = fysiskt ensam. He felt lonely without his friends."
+        },
+        {
+          "id": "hog-v2-10",
+          "type": "multiple-choice",
+          "question": "Vad heter 'förvirrad' på engelska?",
+          "options": [
+            "curious",
+            "confused",
+            "concerned",
+            "calm"
+          ],
+          "correctIndex": 1,
+          "explanation": "Förvirrad = confused. I was confused by the instructions."
+        },
+        {
+          "id": "hog-v2-11",
+          "type": "fill-in-blank",
+          "sentence": "The crowd was ___ (entusiastisk på engelska) about the concert.",
+          "answer": "enthusiastic",
+          "hint": "Entusiastisk = e _ _ _ _ _ _ _ _ _ _",
+          "explanation": "Entusiastisk = enthusiastic. The crowd was enthusiastic!"
+        },
+        {
+          "id": "hog-v2-12",
+          "type": "multiple-choice",
+          "question": "Vad heter 'avslappnad' på engelska?",
+          "options": [
+            "rested",
+            "relaxed",
+            "relieved",
+            "refreshed"
+          ],
+          "correctIndex": 1,
+          "explanation": "Avslappnad = relaxed. I feel relaxed after yoga."
+        }
+      ]
     }
   ],
   "reading": [
