@@ -30,6 +30,5 @@ jobs:
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "GitHub Actions"
-          git config --global url."https://x-access-token:${TOKEN}@github.com/".insteadOf "https://github.com/"
-          git remote add target https://github.com/Bombaklubb/engelskajakten.git
-          git subtree push --prefix=engelska target main
+          git subtree split --prefix=engelska -b deploy-engelska
+          git push "https://x-access-token:${TOKEN}@github.com/Bombaklubb/engelskajakten.git" deploy-engelska:main
