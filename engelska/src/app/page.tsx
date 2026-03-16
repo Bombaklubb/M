@@ -6,11 +6,57 @@ import Header from "@/components/ui/Header";
 import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
-import type { StudentData } from "@/lib/types";
+import type { StudentData, StageId } from "@/lib/types";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { MagicCard } from "@/components/magicui/magic-card";
+import { NumberTicker } from "@/components/magicui/number-ticker";
+
+const stageImages: Record<string, string> = {
+  lagstadiet:    "/content/sprakdjungeln.png",
+  mellanstadiet: "/content/sprakstaden.png",
+  hogstadiet:    "/content/sprakarenan.png",
+  gymnasiet:     "/content/sprakakademin.png",
+};
+
+const stageGradients: Record<string, string> = {
+  lagstadiet:    "from-emerald-950/90",
+  mellanstadiet: "from-blue-950/90",
+  hogstadiet:    "from-purple-950/90",
+  gymnasiet:     "from-gray-950/90",
+};
+
+const stageBeams: Record<string, [string, string]> = {
+  lagstadiet:    ["#4ade80", "#22c55e"],
+  mellanstadiet: ["#60a5fa", "#3b82f6"],
+  hogstadiet:    ["#c084fc", "#a855f7"],
+  gymnasiet:     ["#9ca3af", "#6b7280"],
+};
+
+function getStagePoints(student: StudentData, stageId: string): number {
+  const sp = student.stages[stageId as StageId];
+  if (!sp) return 0;
+  let pts = 0;
+  for (const m of Object.values(sp.grammarModules   ?? {})) pts += m.points;
+  for (const m of Object.values(sp.readingModules   ?? {})) pts += m.points;
+  for (const m of Object.values(sp.spellingModules  ?? {})) pts += m.points;
+  for (const m of Object.values(sp.wordsearchModules ?? {})) pts += m.points;
+  for (const m of Object.values(sp.crosswordModules ?? {})) pts += m.points;
+  return pts;
+}
+
+function getStageCompleted(student: StudentData, stageId: string): number {
+  const sp = student.stages[stageId as StageId];
+  if (!sp) return 0;
+  let done = 0;
+  for (const m of Object.values(sp.grammarModules   ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.readingModules   ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.spellingModules  ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.wordsearchModules ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.crosswordModules ?? {})) if (m.completed) done++;
+  return done;
+}
 
 export default function HomePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
@@ -215,37 +261,102 @@ export default function HomePage() {
     );
   }
 
+  // ─── Logged-in: stage selection dashboard ──────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} onLogout={handleLogout} />
 
-      <main className="max-w-5xl mx-auto px-4 py-4">
-        {/* Klickbar startsidebild */}
-        <div className="relative select-none">
-          <img
-            src="/content/basta-engelskajakten.png"
-            alt="Engelskajakten"
-            className="w-full h-auto block rounded-2xl shadow-lg"
-            draggable={false}
-          />
+      <main className="max-w-5xl mx-auto px-4 py-6">
 
-          {/* Klickbara zoner över de 4 korten */}
-          <Link href="/world/lagstadiet" aria-label="Språkdjungeln"
-            className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "10%", left: "2%", width: "47%", height: "42%" }}
-          />
-          <Link href="/world/mellanstadiet" aria-label="Språkstaden"
-            className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "10%", left: "51%", width: "47%", height: "42%" }}
-          />
-          <Link href="/world/hogstadiet" aria-label="Språkarenan"
-            className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "55%", left: "2%", width: "47%", height: "42%" }}
-          />
-          <Link href="/world/gymnasiet" aria-label="Språkakademin"
-            className="absolute hover:bg-white/10 transition-colors rounded-xl"
-            style={{ top: "55%", left: "51%", width: "47%", height: "42%" }}
-          />
+        {/* Welcome banner */}
+        <div className="mb-5 animate-fade-in">
+          <h2 className="text-2xl font-black text-indigo-900 dark:text-gray-100">
+            Hej, {student.name}! 👋
+          </h2>
+          <p className="text-indigo-400 dark:text-gray-400 font-medium text-sm mt-0.5">
+            Välj en värld och fortsätt din engelska resa.
+          </p>
+        </div>
+
+        {/* Stage cards grid */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          {STAGES.map((stage, i) => {
+            const pts  = getStagePoints(student, stage.id);
+            const done = getStageCompleted(student, stage.id);
+            const beamColors = stageBeams[stage.id];
+            const hasProgress = pts > 0 || done > 0;
+
+            return (
+              <Link key={stage.id} href={`/world/${stage.id}`} className="block group">
+                <MagicCard
+                  gradientColor={`${beamColors[0]}20`}
+                  className="relative rounded-3xl overflow-hidden border-3 border-white/20 dark:border-gray-700/50 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer"
+                  style={{
+                    aspectRatio: "4/5",
+                    boxShadow: hasProgress
+                      ? `0 8px 0 0 ${beamColors[0]}35, 0 12px 28px -4px ${beamColors[0]}20`
+                      : "0 6px 0 0 rgba(99,102,241,0.12), 0 10px 20px -4px rgba(99,102,241,0.08)",
+                    animation: `float 4s ease-in-out infinite ${i * 0.4}s`
+                  } as React.CSSProperties}
+                >
+                  {/* Background image */}
+                  <img
+                    src={stageImages[stage.id]}
+                    alt={stage.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  {/* Gradient overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-t ${stageGradients[stage.id]} via-black/30 to-transparent`} />
+
+                  {/* BorderBeam on stages with progress */}
+                  {hasProgress && (
+                    <BorderBeam
+                      size={220}
+                      duration={8}
+                      colorFrom={beamColors[0]}
+                      colorTo={beamColors[1]}
+                      borderWidth={2.5}
+                    />
+                  )}
+
+                  {/* Top-right badge */}
+                  {done > 0 && (
+                    <div className="absolute top-3 right-3">
+                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 flex items-center gap-1">
+                        ✓ {done}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Bottom content */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="text-3xl mb-1.5 drop-shadow-lg">{stage.emoji}</div>
+                    <h3 className="text-white font-black text-base sm:text-lg leading-tight drop-shadow-lg">
+                      {stage.name}
+                    </h3>
+                    <p className="text-white/65 text-xs font-medium mt-0.5">{stage.grades}</p>
+
+                    {pts > 0 ? (
+                      <div className="mt-2 flex items-center gap-1">
+                        <span className="text-amber-400 text-sm">⭐</span>
+                        <NumberTicker
+                          value={pts}
+                          className="text-white font-bold text-sm"
+                          duration={800}
+                        />
+                        <span className="text-white/55 text-xs ml-0.5">p</span>
+                      </div>
+                    ) : (
+                      <p className="mt-2 text-white/50 text-xs font-medium group-hover:text-white/80 transition-colors">
+                        Börja här →
+                      </p>
+                    )}
+                  </div>
+                </MagicCard>
+              </Link>
+            );
+          })}
         </div>
       </main>
     </div>

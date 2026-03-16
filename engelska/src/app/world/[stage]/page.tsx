@@ -8,6 +8,8 @@ import ModuleCard from "@/components/ui/ModuleCard";
 import { loadStudent } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent } from "@/lib/types";
+import { NumberTicker } from "@/components/magicui/number-ticker";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 interface RuleItem {
   term: string;
@@ -117,7 +119,7 @@ export default function WorldPage({ params }: Props) {
       {/* Stats bar */}
       {student && stageProgress && (
         <div className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
-          <div className="max-w-5xl mx-auto px-4 py-3 flex gap-3 flex-wrap">
+          <div className="max-w-5xl mx-auto px-4 py-3 flex gap-2 sm:gap-3 flex-wrap">
             {[
               { label: "Grammatik", icon: "📝", count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length, total: content?.grammar.length ?? 0 },
               { label: "Läsning",   icon: "📖", count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length, total: content?.reading.length ?? 0 },
@@ -125,12 +127,33 @@ export default function WorldPage({ params }: Props) {
               { label: "Ordsök.",   icon: "🔍", count: Object.values(stageProgress.wordsearchModules ?? {}).filter((m) => m.completed).length, total: content?.wordsearch?.length ?? 0 },
               { label: "Korsord",   icon: "🔠", count: Object.values(stageProgress.crosswordModules ?? {}).filter((m) => m.completed).length, total: content?.crossword?.length ?? 0 },
             ].map(({ label, icon, count, total }) => {
-              const done = total > 0 && count === total;
+              const allDone = total > 0 && count === total;
+              const hasProgress = count > 0;
               return (
-                <div key={label} className={`border rounded-xl px-3 py-2 text-center transition-colors ${done ? `${stage.borderClass} bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-700` : "bg-gray-50 dark:bg-gray-700 border-gray-100 dark:border-gray-600"}`}>
-                  <div className="text-base">{icon}</div>
-                  <div className={`text-lg font-black ${done ? stage.textClass : "text-gray-900 dark:text-gray-100"}`}>{count}/{total}</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
+                <div
+                  key={label}
+                  className={`relative overflow-hidden border-2 rounded-2xl px-3 py-2.5 text-center transition-all duration-200 flex-1 min-w-[60px] ${
+                    allDone
+                      ? `${stage.borderClass} bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 shadow-sm`
+                      : "bg-gray-50 dark:bg-gray-700/80 border-gray-100 dark:border-gray-600"
+                  }`}
+                  style={allDone ? {
+                    boxShadow: "0 3px 0 0 rgba(34,197,94,0.15), inset 0 1px 3px 0 rgba(255,255,255,0.7)"
+                  } : undefined}
+                >
+                  {allDone && (
+                    <BorderBeam size={80} duration={6} colorFrom="#4ade80" colorTo="#22c55e" borderWidth={1.5} />
+                  )}
+                  <div className="text-sm mb-0.5">{icon}</div>
+                  <div className={`font-black text-base leading-none flex items-center justify-center gap-0.5 ${allDone ? stage.textClass : hasProgress ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
+                    {hasProgress ? (
+                      <NumberTicker value={count} className={allDone ? stage.textClass : "text-gray-900 dark:text-gray-100"} duration={600} />
+                    ) : (
+                      <span>0</span>
+                    )}
+                    <span className="text-gray-400 dark:text-gray-500 font-bold text-sm">/{total}</span>
+                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 font-medium">{label}</div>
                 </div>
               );
             })}
