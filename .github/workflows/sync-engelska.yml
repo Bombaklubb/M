@@ -23,18 +23,12 @@ jobs:
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           owner: Bombaklubb
 
-      - name: Debug token
-        env:
-          TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: |
-          echo "Token length: ${#TOKEN}"
-          echo "Token starts with: ${TOKEN:0:4}..."
-
       - name: Push to engelskajakten
         env:
           TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "GitHub Actions"
+          git config --local --unset-all http.https://github.com/.extraheader || true
           git subtree split --prefix=engelska -b deploy-engelska
           git push "https://x-access-token:${TOKEN}@github.com/Bombaklubb/engelskajakten.git" deploy-engelska:main
