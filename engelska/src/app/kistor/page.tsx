@@ -499,7 +499,7 @@ export default function KistorPage() {
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {[
-                  { emoji: "📦", label: "Trälåda",    value: "100, 200, 600 p",                           bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
+                  { emoji: "📦", label: "Trälåda",    value: "25, 50, 100, 200, 600 p",                  bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
                   { emoji: "🪙", label: "Silverlåda", value: "300, 500, 750, 1 500, 2 000 p",            bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
                   { emoji: "🏆", label: "Guldlåda",   value: "1 000, 2 500, 5 000, 10 000, 15 000 p",   bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
                 ].map((row) => (
@@ -519,7 +519,7 @@ export default function KistorPage() {
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {[
-                  { emoji: "📦", label: "Trälåda",    value: "5, 10 övningar",                      bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
+                  { emoji: "📦", label: "Trälåda",    value: "1, 3, 5, 10 övningar",                bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
                   { emoji: "🪙", label: "Silverlåda", value: "15, 20, 40, 50 övningar",             bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
                   { emoji: "🏆", label: "Guldlåda",   value: "30, 60, 75, 100, 150 övningar",      bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
                 ].map((row) => (
@@ -542,7 +542,7 @@ export default function KistorPage() {
               <span className="text-xl leading-none">🎁</span>
               <div>
                 <p className="text-white/80 text-xs font-bold">Mysterylåda</p>
-                <p className="text-white/50 text-[10px] mt-0.5">15% chans att få en slumpmässig belöning efter varje övning!</p>
+                <p className="text-white/50 text-[10px] mt-0.5">Extra hög chans i början – upp till 50% de första övningarna!</p>
               </div>
             </div>
           </div>

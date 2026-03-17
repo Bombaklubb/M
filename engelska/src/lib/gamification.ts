@@ -11,35 +11,39 @@ export const BOSS_UNLOCK_THRESHOLD = 5; // exercises needed to unlock boss
 export const MYSTERY_BOX_CHANCE = 0.15; // 15% chance after each exercise
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
+  { points: 25,    type: "wood" },    // Snabb första belöning
+  { points: 50,    type: "wood" },    // Snabb andra belöning
   { points: 100,   type: "wood" },
-  { points: 200,   type: "wood" },    // NEW
+  { points: 200,   type: "wood" },
   { points: 300,   type: "silver" },
-  { points: 500,   type: "silver" },  // NEW
+  { points: 500,   type: "silver" },
   { points: 600,   type: "wood" },
-  { points: 750,   type: "silver" },  // NEW
+  { points: 750,   type: "silver" },
   { points: 1000,  type: "gold" },
   { points: 1500,  type: "silver" },
-  { points: 2000,  type: "silver" },  // NEW
+  { points: 2000,  type: "silver" },
   { points: 2500,  type: "gold" },
-  { points: 3500,  type: "gold" },    // NEW
-  { points: 5000,  type: "gold" },    // NEW
-  { points: 7000,  type: "gold" },    // NEW
-  { points: 10000, type: "gold" },    // NEW
-  { points: 15000, type: "gold" },    // NEW
+  { points: 3500,  type: "gold" },
+  { points: 5000,  type: "gold" },
+  { points: 7000,  type: "gold" },
+  { points: 10000, type: "gold" },
+  { points: 15000, type: "gold" },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
+  { exercises: 1,   type: "wood" },   // Direkt första belöning
+  { exercises: 3,   type: "wood" },   // Snabb uppföljning
   { exercises: 5,   type: "wood" },
-  { exercises: 10,  type: "wood" },   // NEW
+  { exercises: 10,  type: "wood" },
   { exercises: 15,  type: "silver" },
-  { exercises: 20,  type: "silver" }, // NEW
+  { exercises: 20,  type: "silver" },
   { exercises: 30,  type: "gold" },
-  { exercises: 40,  type: "silver" }, // NEW
+  { exercises: 40,  type: "silver" },
   { exercises: 50,  type: "silver" },
-  { exercises: 60,  type: "gold" },   // NEW
+  { exercises: 60,  type: "gold" },
   { exercises: 75,  type: "gold" },
-  { exercises: 100, type: "gold" },   // NEW
-  { exercises: 150, type: "gold" },   // NEW
+  { exercises: 100, type: "gold" },
+  { exercises: 150, type: "gold" },
 ];
 
 // ─── Chest reward tables ──────────────────────────────────────────────────────
@@ -238,9 +242,17 @@ export function chestsEarnedFromExercises(
   return earned;
 }
 
-/** 15% chance to get a mystery box reward. Returns null if no box. */
-export function rollMysteryBox(badges: string[]): MysteryBoxReward | null {
-  if (Math.random() > MYSTERY_BOX_CHANCE) return null;
+/** Returns mystery box chance based on how many exercises completed (higher early on). */
+function getMysteryBoxChance(exercisesCompleted: number): number {
+  if (exercisesCompleted < 3)  return 0.50; // 50% för de tre första
+  if (exercisesCompleted < 8)  return 0.35; // 35% för övning 3–7
+  if (exercisesCompleted < 15) return 0.22; // 22% för övning 8–14
+  return MYSTERY_BOX_CHANCE;                // 15% normalt
+}
+
+/** Rolls for a mystery box reward. Pass exercisesCompleted for higher early-game chance. */
+export function rollMysteryBox(badges: string[], exercisesCompleted = 99): MysteryBoxReward | null {
+  if (Math.random() > getMysteryBoxChance(exercisesCompleted)) return null;
 
   const roll = Math.random();
   if (roll < 0.5) {

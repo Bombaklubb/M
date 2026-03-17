@@ -130,7 +130,7 @@ export default function GrammarModulePage({ params }: Props) {
           wasBossUnlocked || newExercises >= BOSS_UNLOCK_THRESHOLD;
 
         // Mystery box
-        const mystery = rollMysteryBox(gam.badges);
+        const mystery = rollMysteryBox(gam.badges, newExercises);
         let extraMysteryChest = mystery?.type === "chest" && mystery.chestType
           ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
           : [];
