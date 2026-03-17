@@ -12,11 +12,12 @@ import {
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
+  chestsEarnedFromTopicEvent,
   rollMysteryBox, BOSS_UNLOCK_THRESHOLD,
 } from '../utils/chestStorage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { TOPICS } from '../data/topics';
-import { WorldId } from '../data/worlds';
+import { WORLDS, WorldId } from '../data/worlds';
 
 export type ExtendedView =
   | AppView
@@ -147,7 +148,28 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
     const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
     const exerciseChests = chestsEarnedFromExercises(prevExercises, newExercises, gam.exerciseMilestonesRewarded);
-    const allNewChests = [...pointChests, ...exerciseChests];
+
+    // Topic / world completion chests
+    const progressAfter = getProgress(currentStudent.id);
+    const worldForTopic = WORLDS.find(w => w.topicIds.includes(topicId));
+    const allWorldTopicsCompleted = worldForTopic
+      ? TOPICS.filter(t => worldForTopic.topicIds.includes(t.id))
+          .every(t => progressAfter.some(p => p.topicId === t.id && p.completed))
+      : false;
+    const topicEventResult = chestsEarnedFromTopicEvent({
+      topicId,
+      worldId: worldForTopic?.id ?? null,
+      score,
+      stars,
+      allWorldTopicsCompleted,
+      gam,
+    });
+
+    const allNewChests = [
+      ...pointChests,
+      ...exerciseChests,
+      ...topicEventResult.chests.map(c => ({ chest: c })),
+    ];
 
     const mysteryReward = rollMysteryBox(gam.badges);
     let updatedBadges = [...gam.badges];
@@ -186,6 +208,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         ...gam.exerciseMilestonesRewarded,
         ...exerciseChests.map(c => c.milestone),
       ],
+      topicCompletionChestsRewarded: topicEventResult.topicCompletionChestsRewarded,
+      topic3StarChestsRewarded: topicEventResult.topic3StarChestsRewarded,
+      topicPerfectChestsRewarded: topicEventResult.topicPerfectChestsRewarded,
+      worldCompletionChestsRewarded: topicEventResult.worldCompletionChestsRewarded,
     };
     saveGamification(currentStudent.id, updatedGam);
 
