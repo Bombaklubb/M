@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Header from "@/components/ui/Header";
+import { useDarkMode } from "@/lib/useDarkMode";
 import {
   loadStudent,
   saveStudent,
@@ -21,77 +22,54 @@ import {
 } from "@/lib/gamification";
 import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
 
-// ─── Chest Card ───────────────────────────────────────────────────────────────
+const BG_LIGHT = "linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%)";
+const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, #040b1c 80%, #020810 100%)";
 
-function ChestCard({
-  chest,
-  onOpen,
-}: {
-  chest: Chest;
-  onOpen: (id: string) => void;
-}) {
+// ─── Chest Card (unopened) ────────────────────────────────────────────────────
+
+function ChestCard({ chest, onOpen }: { chest: Chest; onOpen: (id: string) => void }) {
   const meta = CHEST_META[chest.type];
   const [animating, setAnimating] = useState(false);
 
   function handleClick() {
     if (chest.opened || animating) return;
     setAnimating(true);
-    setTimeout(() => {
-      onOpen(chest.id);
-      setAnimating(false);
-    }, 500);
+    setTimeout(() => { onOpen(chest.id); setAnimating(false); }, 500);
   }
+
+  const gradients: Record<ChestType, string> = {
+    wood:   "linear-gradient(135deg, #92400e, #78350f)",
+    silver: "linear-gradient(135deg, #64748b, #475569)",
+    gold:   "linear-gradient(135deg, #d97706, #b45309)",
+  };
+  const glows: Record<ChestType, string> = {
+    wood:   "rgba(146,64,14,0.5)",
+    silver: "rgba(100,116,139,0.5)",
+    gold:   "rgba(245,158,11,0.6)",
+  };
 
   return (
     <div
       onClick={handleClick}
-      className={`relative flex flex-col items-center p-5 rounded-3xl transition-all ${
-        !chest.opened
-          ? `bg-gradient-to-br ${meta.color} hover:scale-105 active:scale-95 cursor-pointer`
-          : "bg-gray-100 dark:bg-gray-700 cursor-default opacity-60"
-      }`}
+      className="relative flex flex-col items-center p-4 rounded-2xl cursor-pointer select-none"
       style={{
-        border: "3px solid",
-        borderColor: chest.opened ? "#cbd5e1" : "rgba(255,255,255,0.3)",
-        boxShadow: chest.opened
-          ? "none"
-          : `0 6px 20px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.3)`,
+        background: gradients[chest.type],
+        border: "2px solid rgba(255,255,255,0.2)",
+        boxShadow: `0 6px 24px ${glows[chest.type]}, inset 0 1px 0 rgba(255,255,255,0.25)`,
         transform: animating ? "scale(1.08) rotate(-3deg)" : "scale(1)",
-        transition: "transform 0.15s ease-out, box-shadow 0.15s",
+        transition: "transform 0.15s ease-out, box-shadow 0.2s",
       }}
+      onMouseEnter={(e) => { if (!animating) e.currentTarget.style.transform = "scale(1.04) translateY(-2px)"; }}
+      onMouseLeave={(e) => { if (!animating) e.currentTarget.style.transform = "scale(1)"; }}
     >
-      {/* Chest emoji */}
       <span
-        className="text-5xl mb-3 select-none"
-        style={{
-          filter: chest.opened ? "grayscale(1)" : "none",
-          animation: animating ? "shake 0.4s ease-in-out" : "none",
-        }}
+        className="text-4xl mb-2 select-none leading-none"
+        style={{ animation: animating ? "shake 0.4s ease-in-out" : "none" }}
       >
-        {chest.opened ? "🔓" : meta.emoji}
+        {meta.emoji}
       </span>
-
-      <span
-        className={`text-sm font-bold mb-1 ${
-          chest.opened
-            ? "text-gray-400 dark:text-gray-500"
-            : "text-white"
-        }`}
-      >
-        {meta.label}
-      </span>
-
-      {chest.opened ? (
-        <span className="text-xs text-gray-400 dark:text-gray-500">Öppnad</span>
-      ) : (
-        <span className="text-xs text-white/80 mt-1">Tryck för att öppna</span>
-      )}
-
-      {chest.opened && chest.openedReward && (
-        <p className="mt-2 text-xs text-center text-gray-500 dark:text-gray-400 leading-snug">
-          {chest.openedReward}
-        </p>
-      )}
+      <span className="text-xs font-bold text-white/90">{meta.label}</span>
+      <span className="text-[10px] text-white/60 mt-1">Tryck för att öppna</span>
 
       <style jsx>{`
         @keyframes shake {
@@ -106,46 +84,196 @@ function ChestCard({
   );
 }
 
-// ─── Reward Popup ─────────────────────────────────────────────────────────────
+// ─── Trophy Shelf ─────────────────────────────────────────────────────────────
 
-interface RewardResult {
-  description: string;
-  points: number;
-}
+const SHELF_CONFIGS: { type: ChestType; label: string; shelfColor: string; itemGlow: string; itemBg: string; badge: string }[] = [
+  {
+    type: "gold",
+    label: "Guldkistor",
+    shelfColor: "linear-gradient(90deg, #78350f, #d97706 30%, #fbbf24 50%, #d97706 70%, #78350f)",
+    itemBg: "linear-gradient(135deg, #451a03, #78350f)",
+    itemGlow: "rgba(251,191,36,0.5)",
+    badge: "#fbbf24",
+  },
+  {
+    type: "silver",
+    label: "Silverkistor",
+    shelfColor: "linear-gradient(90deg, #1e293b, #64748b 30%, #cbd5e1 50%, #64748b 70%, #1e293b)",
+    itemBg: "linear-gradient(135deg, #1e293b, #475569)",
+    itemGlow: "rgba(203,213,225,0.4)",
+    badge: "#cbd5e1",
+  },
+  {
+    type: "wood",
+    label: "Trälådor",
+    shelfColor: "linear-gradient(90deg, #431407, #92400e 30%, #c2652a 50%, #92400e 70%, #431407)",
+    itemBg: "linear-gradient(135deg, #431407, #7c2d12)",
+    itemGlow: "rgba(194,101,42,0.4)",
+    badge: "#fdba74",
+  },
+];
 
-function RewardPopup({
-  result,
-  onClose,
-}: {
-  result: RewardResult;
-  onClose: () => void;
-}) {
+function TrofHylla({ chests }: { chests: Chest[] }) {
+  const opened = chests.filter((c) => c.opened);
+  const totalByType = (t: ChestType) => opened.filter((c) => c.type === t).length;
+
+  if (opened.length === 0) {
+    return (
+      <section>
+        <SectionTitle emoji="🪵" title="Trofhylla" subtitle="Din samling av öppnade kistor" />
+        <div
+          className="rounded-2xl p-8 text-center"
+          style={{
+            background: "linear-gradient(135deg, #1c0d00, #2d1a00)",
+            border: "2px solid rgba(146,64,14,0.4)",
+            boxShadow: "inset 0 2px 8px rgba(0,0,0,0.4)",
+          }}
+        >
+          <div className="text-5xl mb-3 opacity-40">🪵</div>
+          <p className="text-amber-300/60 text-sm font-medium">Hyllan är tom</p>
+          <p className="text-white/30 text-xs mt-1">Öppna kistor och fyll hyllan med troféer!</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+    <section>
+      <SectionTitle emoji="🪵" title="Trofhylla" subtitle="Din samling av öppnade kistor" />
+
+      {/* Stats bar */}
+      <div className="flex gap-3 mb-4 flex-wrap">
+        {[
+          { type: "gold"   as ChestType, label: "Guld",   emoji: "🏆", color: "#fbbf24" },
+          { type: "silver" as ChestType, label: "Silver", emoji: "🪙", color: "#cbd5e1" },
+          { type: "wood"   as ChestType, label: "Trä",    emoji: "📦", color: "#fdba74" },
+        ].map(({ type, label, emoji, color }) => (
+          <div
+            key={type}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl"
+            style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
+          >
+            <span className="text-base leading-none">{emoji}</span>
+            <span className="text-sm font-bold" style={{ color }}>{totalByType(type)}</span>
+            <span className="text-white/40 text-xs">{label}</span>
+          </div>
+        ))}
+        <div
+          className="flex items-center gap-2 px-3 py-1.5 rounded-xl ml-auto"
+          style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
+        >
+          <span className="text-white/50 text-xs">Totalt</span>
+          <span className="text-white font-bold text-sm">{opened.length}</span>
+        </div>
+      </div>
+
+      {/* The shelf unit */}
       <div
-        className="bg-white dark:bg-gray-800 rounded-3xl p-8 max-w-sm w-full text-center"
+        className="rounded-2xl overflow-hidden"
         style={{
-          border: "3px solid #f59e0b",
-          boxShadow: "0 8px 32px rgba(245,158,11,0.35), 0 2px 8px rgba(0,0,0,0.2)",
+          background: "linear-gradient(180deg, #1c0d00 0%, #2d1800 100%)",
+          border: "2px solid rgba(146,64,14,0.5)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
         }}
       >
-        <div className="text-6xl mb-4" style={{ animation: "popIn 0.4s cubic-bezier(0.36,0.07,0.19,0.97)" }}>
-          🎉
-        </div>
-        <h2 className="text-2xl font-black text-amber-700 dark:text-amber-300 mb-3">
-          Lådan är öppnad!
-        </h2>
-        <p className="text-base font-semibold text-gray-800 dark:text-gray-100 mb-6 leading-relaxed">
-          {result.description}
-        </p>
+        {SHELF_CONFIGS.filter((sc) => totalByType(sc.type) > 0).map((sc, idx, arr) => {
+          const items = opened.filter((c) => c.type === sc.type);
+          return (
+            <div key={sc.type}>
+              {/* Shelf level */}
+              <div className="px-4 pt-4 pb-0">
+                {/* Label */}
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xs font-bold uppercase tracking-widest" style={{ color: sc.badge }}>
+                    {sc.label}
+                  </span>
+                  <span
+                    className="text-xs font-bold px-2 py-0.5 rounded-full"
+                    style={{ background: "rgba(255,255,255,0.08)", color: sc.badge }}
+                  >
+                    {items.length}
+                  </span>
+                </div>
+
+                {/* Chest items */}
+                <div className="flex flex-wrap gap-2 pb-4">
+                  {items.map((chest) => (
+                    <ShelfChest key={chest.id} chest={chest} bg={sc.itemBg} glow={sc.itemGlow} badge={sc.badge} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Shelf plank */}
+              <div
+                className="h-3"
+                style={{
+                  background: sc.shelfColor,
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15)",
+                }}
+              />
+
+              {/* Gap between shelves (not after last) */}
+              {idx < arr.length - 1 && <div className="h-1" style={{ background: "rgba(0,0,0,0.3)" }} />}
+            </div>
+          );
+        })}
+
+        {/* Bottom base of shelf unit */}
+        <div className="h-3" style={{ background: "linear-gradient(90deg, #431407, #78350f 30%, #92400e 50%, #78350f 70%, #431407)", boxShadow: "inset 0 2px 4px rgba(0,0,0,0.4)" }} />
+      </div>
+    </section>
+  );
+}
+
+function ShelfChest({ chest, bg, glow, badge }: { chest: Chest; bg: string; glow: string; badge: string }) {
+  const meta = CHEST_META[chest.type];
+  const date = new Date(chest.earnedAt).toLocaleDateString("sv-SE", { month: "short", day: "numeric" });
+  const [hover, setHover] = useState(false);
+
+  return (
+    <div
+      className="relative flex flex-col items-center px-2.5 pt-2.5 pb-2 rounded-xl cursor-default transition-all duration-200"
+      style={{
+        background: bg,
+        border: `1px solid rgba(255,255,255,0.12)`,
+        boxShadow: hover ? `0 0 16px ${glow}, 0 4px 12px rgba(0,0,0,0.4)` : `0 2px 6px rgba(0,0,0,0.3)`,
+        transform: hover ? "translateY(-3px) scale(1.05)" : "scale(1)",
+        minWidth: "56px",
+      }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      title={chest.openedReward ?? meta.label}
+    >
+      <span className="text-2xl leading-none mb-1">{meta.emoji}</span>
+      <span className="text-[9px] font-bold" style={{ color: badge }}>{date}</span>
+      {/* Shine line */}
+      <div className="absolute top-1.5 left-2.5 right-2.5 h-px bg-white/15 rounded-full" />
+    </div>
+  );
+}
+
+// ─── Reward Popup ─────────────────────────────────────────────────────────────
+
+interface RewardResult { description: string; points: number }
+
+function RewardPopup({ result, onClose }: { result: RewardResult; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <div
+        className="rounded-3xl p-7 max-w-sm w-full text-center animate-slide-up"
+        style={{
+          background: "rgba(255,255,255,0.97)",
+          border: "3px solid #f59e0b",
+          boxShadow: "0 12px 40px rgba(245,158,11,0.4), 0 4px 12px rgba(0,0,0,0.3)",
+        }}
+      >
+        <div className="text-5xl mb-4" style={{ animation: "popIn 0.4s cubic-bezier(0.36,0.07,0.19,0.97)" }}>🎉</div>
+        <h2 className="text-xl font-black text-amber-700 mb-2">Lådan är öppnad!</h2>
+        <p className="text-sm font-semibold text-gray-700 mb-5 leading-relaxed">{result.description}</p>
         <button
           onClick={onClose}
-          className="w-full py-3 rounded-2xl font-bold text-white text-base cursor-pointer transition-all active:scale-95"
-          style={{
-            background: "linear-gradient(135deg, #f59e0b, #d97706)",
-            border: "3px solid #d97706",
-            boxShadow: "0 4px 12px rgba(217,119,6,0.4)",
-          }}
+          className="w-full py-3 rounded-2xl font-bold text-white text-sm cursor-pointer transition-all active:scale-95"
+          style={{ background: "linear-gradient(135deg, #f59e0b, #d97706)", boxShadow: "0 4px 12px rgba(217,119,6,0.4)" }}
         >
           Toppen! ✓
         </button>
@@ -161,10 +289,30 @@ function RewardPopup({
   );
 }
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function SectionTitle({ emoji, title, subtitle }: { emoji: string; title: string; subtitle?: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-4">
+      <span
+        className="w-9 h-9 flex items-center justify-center rounded-xl text-lg flex-shrink-0"
+        style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)" }}
+      >
+        {emoji}
+      </span>
+      <div>
+        <h2 className="text-base font-black text-white leading-tight">{title}</h2>
+        {subtitle && <p className="text-white/40 text-xs">{subtitle}</p>}
+      </div>
+    </div>
+  );
+}
+
 // ─── Main page ────────────────────────────────────────────────────────────────
 
 export default function KistorPage() {
   const router = useRouter();
+  const { dark } = useDarkMode();
   const [student, setStudent] = useState<StudentData | null>(null);
   const [gam, setGam] = useState<GamificationData | null>(null);
   const [rewardResult, setRewardResult] = useState<RewardResult | null>(null);
@@ -178,27 +326,20 @@ export default function KistorPage() {
 
   if (!student || !gam) return null;
 
+  const bg = dark ? BG_DARK : BG_LIGHT;
   const unopened = gam.chests.filter((c) => !c.opened);
-  const opened = gam.chests.filter((c) => c.opened);
   const exercisesLeft = Math.max(0, BOSS_UNLOCK_THRESHOLD - gam.exercisesCompleted);
 
   function handleOpenChest(chestId: string) {
     if (!gam || !student) return;
-
     const chest = gam.chests.find((c) => c.id === chestId);
     if (!chest || chest.opened) return;
 
     let result: { points: number; badge?: string; bonusChest?: Chest; description: string };
+    if (chest.type === "wood")       result = { ...openWoodChest(), badge: undefined, bonusChest: undefined };
+    else if (chest.type === "silver") result = openSilverChest(gam.badges);
+    else                              result = openGoldChest(gam.badges);
 
-    if (chest.type === "wood") {
-      result = { ...openWoodChest(), badge: undefined, bonusChest: undefined };
-    } else if (chest.type === "silver") {
-      result = openSilverChest(gam.badges);
-    } else {
-      result = openGoldChest(gam.badges);
-    }
-
-    // Update gamification
     const newChests = gam.chests.map((c) =>
       c.id === chestId ? { ...c, opened: true, openedReward: result.description } : c
     );
@@ -211,7 +352,6 @@ export default function KistorPage() {
     saveGamification(newGam);
     setGam({ ...newGam });
 
-    // Update student points
     const updatedStudent = { ...student, totalPoints: student.totalPoints + result.points };
     saveStudent(updatedStudent);
     setStudent(updatedStudent);
@@ -220,118 +360,96 @@ export default function KistorPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen" style={{ background: bg }}>
       <Header student={student} />
 
-      {/* Hero banner */}
-      <div
-        className="text-white"
-        style={{
-          background: "linear-gradient(135deg, #92400e, #b45309, #d97706)",
-        }}
-      >
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
+      {/* Page header */}
+      <div className="max-w-3xl mx-auto px-4 pt-5 pb-2">
+        <Link href="/" className="inline-flex items-center gap-1.5 text-white/50 hover:text-white/80 text-xs mb-4 transition-colors">
+          ← Tillbaka
+        </Link>
+        <div className="flex items-center gap-3 mb-6">
+          <div
+            className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+            style={{ background: "linear-gradient(135deg, #92400e, #d97706)", boxShadow: "0 0 24px rgba(217,119,6,0.4)" }}
           >
-            ← Tillbaka
-          </Link>
-          <div className="flex items-center gap-3">
-            <span className="text-4xl">🏆</span>
-            <div>
-              <h1 className="text-2xl font-black">Hemliga Kistor</h1>
-              <p className="text-white/70 text-sm">
-                Öppna kistor och vinn belöningar!
-              </p>
-            </div>
+            🏆
+          </div>
+          <div>
+            <h1 className="text-xl font-black text-white">Hemliga Kistor</h1>
+            <p className="text-white/50 text-xs">Öppna kistor och bygg din trofhylla</p>
           </div>
         </div>
       </div>
 
-      <main className="max-w-4xl mx-auto px-4 py-6 space-y-8">
+      <main className="max-w-3xl mx-auto px-4 pb-10 space-y-8">
 
-        {/* Boss challenge card */}
+        {/* ─── Boss challenge ── */}
         <div
-          className="rounded-3xl p-5"
+          className="rounded-2xl p-4"
           style={{
             background: gam.bossUnlocked
-              ? "linear-gradient(135deg, #7f1d1d, #991b1b, #dc2626)"
-              : "linear-gradient(135deg, #374151, #4b5563)",
-            border: "3px solid",
-            borderColor: gam.bossUnlocked ? "#ef4444" : "#6b7280",
-            boxShadow: gam.bossUnlocked
-              ? "0 6px 24px rgba(239,68,68,0.35), inset 0 1px 0 rgba(255,255,255,0.1)"
-              : "none",
+              ? "linear-gradient(135deg, #7f1d1d, #991b1b)"
+              : "rgba(255,255,255,0.07)",
+            border: `1px solid ${gam.bossUnlocked ? "rgba(239,68,68,0.5)" : "rgba(255,255,255,0.1)"}`,
+            boxShadow: gam.bossUnlocked ? "0 4px 20px rgba(239,68,68,0.25)" : "none",
           }}
         >
-          <div className="flex items-center justify-between flex-wrap gap-4">
+          <div className="flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-3">
-              <span className="text-4xl">{gam.bossUnlocked ? "⚔️" : "🔒"}</span>
+              <span className="text-3xl">{gam.bossUnlocked ? "⚔️" : "🔒"}</span>
               <div>
-                <h2 className="text-lg font-black text-white">Boss Challenge</h2>
-                <p className="text-white/70 text-sm">
+                <h2 className="text-sm font-black text-white">Boss Challenge</h2>
+                <p className="text-white/60 text-xs">
                   {gam.bossUnlocked
-                    ? `Utmana bossen! Du har vunnit ${gam.bossWins} gång${gam.bossWins !== 1 ? "er" : ""}.`
-                    : `Slutför ${exercisesLeft} övning${exercisesLeft !== 1 ? "ar" : ""} till för att låsa upp.`}
+                    ? `Du har vunnit ${gam.bossWins} gång${gam.bossWins !== 1 ? "er" : ""} – vinn för att få trälåda!`
+                    : `Slutför ${exercisesLeft} övning${exercisesLeft !== 1 ? "ar" : ""} till för att låsa upp`}
                 </p>
               </div>
             </div>
-            {gam.bossUnlocked && (
+            {gam.bossUnlocked ? (
               <Link
                 href="/boss"
-                className="px-5 py-2.5 rounded-2xl font-bold text-sm text-red-900 cursor-pointer transition-all active:scale-95"
-                style={{
-                  background: "linear-gradient(135deg, #fef2f2, #fee2e2)",
-                  border: "2px solid #fca5a5",
-                  boxShadow: "0 3px 10px rgba(0,0,0,0.15)",
-                }}
+                className="px-4 py-2 rounded-xl font-bold text-xs text-red-900 cursor-pointer transition-all active:scale-95 flex-shrink-0"
+                style={{ background: "linear-gradient(135deg, #fef2f2, #fee2e2)", border: "1px solid #fca5a5" }}
               >
-                Utmana bossen! ⚔️
+                Utmana ⚔️
               </Link>
-            )}
-            {!gam.bossUnlocked && (
-              <div className="text-white/50 text-sm font-medium">
-                {gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD} övningar
+            ) : (
+              <div className="flex items-center gap-2">
+                <div
+                  className="h-1.5 w-24 rounded-full overflow-hidden"
+                  style={{ background: "rgba(255,255,255,0.1)" }}
+                >
+                  <div
+                    className="h-full bg-white/50 rounded-full transition-all"
+                    style={{ width: `${Math.min(100, (gam.exercisesCompleted / BOSS_UNLOCK_THRESHOLD) * 100)}%` }}
+                  />
+                </div>
+                <span className="text-white/40 text-xs">{gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}</span>
               </div>
             )}
           </div>
-
-          {/* Progress bar */}
-          {!gam.bossUnlocked && (
-            <div className="mt-4">
-              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-white/40 rounded-full transition-all"
-                  style={{
-                    width: `${Math.min(100, (gam.exercisesCompleted / BOSS_UNLOCK_THRESHOLD) * 100)}%`,
-                  }}
-                />
-              </div>
-            </div>
-          )}
         </div>
 
-        {/* Unopened chests */}
+        {/* ─── Unopened chests ── */}
         <section>
-          <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-            <span>🎁</span>
-            Oöppnade kistor
-            {unopened.length > 0 && (
-              <span className="ml-1 px-2 py-0.5 text-xs font-bold bg-amber-500 text-white rounded-full">
-                {unopened.length}
-              </span>
-            )}
-          </h2>
+          <SectionTitle
+            emoji="🎁"
+            title={`Oöppnade kistor${unopened.length > 0 ? ` (${unopened.length})` : ""}`}
+            subtitle="Klicka på en kista för att öppna den"
+          />
           {unopened.length === 0 ? (
-            <div className="rounded-3xl p-8 text-center border-2 border-dashed border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800">
-              <p className="text-5xl mb-3">🏅</p>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Inga kistor just nu. Slutför övningar för att tjäna kistor!
-              </p>
+            <div
+              className="rounded-2xl p-8 text-center"
+              style={{ background: "rgba(255,255,255,0.05)", border: "1px dashed rgba(255,255,255,0.15)" }}
+            >
+              <div className="text-4xl mb-3 opacity-40">🎁</div>
+              <p className="text-white/50 text-sm font-medium">Inga oöppnade kistor</p>
+              <p className="text-white/30 text-xs mt-1">Slutför övningar och nå poängmål för att tjäna kistor</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
               {unopened.map((chest) => (
                 <ChestCard key={chest.id} chest={chest} onOpen={handleOpenChest} />
               ))}
@@ -339,31 +457,29 @@ export default function KistorPage() {
           )}
         </section>
 
-        {/* Badges */}
+        {/* ─── Trophy shelf ── */}
+        <TrofHylla chests={gam.chests} />
+
+        {/* ─── Badges ── */}
         {gam.badges.length > 0 && (
           <section>
-            <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <span>🎖️</span>
-              Dina märken ({gam.badges.length})
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <SectionTitle emoji="🎖️" title={`Märken (${gam.badges.length}/${ALL_BADGES.length})`} subtitle="Samla alla märken i appen" />
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
               {gam.badges.map((badgeId) => {
                 const badge = getBadge(badgeId);
                 if (!badge) return null;
                 return (
                   <div
                     key={badgeId}
-                    className="flex flex-col items-center p-4 rounded-3xl"
+                    className="flex flex-col items-center p-4 rounded-2xl"
                     style={{
-                      background: "linear-gradient(135deg, #4f46e5, #7c3aed)",
-                      border: "3px solid #7c3aed",
-                      boxShadow: "0 4px 16px rgba(124,58,237,0.3), inset 0 1px 0 rgba(255,255,255,0.2)",
+                      background: "linear-gradient(135deg, #312e81, #4c1d95)",
+                      border: "1px solid rgba(167,139,250,0.3)",
+                      boxShadow: "0 4px 16px rgba(124,58,237,0.25)",
                     }}
                   >
-                    <span className="text-3xl mb-2">{badge.emoji}</span>
-                    <span className="text-xs font-bold text-white text-center leading-snug">
-                      {badge.label}
-                    </span>
+                    <span className="text-3xl mb-2 leading-none">{badge.emoji}</span>
+                    <span className="text-[10px] font-bold text-violet-200 text-center leading-snug">{badge.label}</span>
                   </div>
                 );
               })}
@@ -371,51 +487,71 @@ export default function KistorPage() {
           </section>
         )}
 
-        {/* Opened chests history */}
-        {opened.length > 0 && (
-          <section>
-            <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <span>🔓</span>
-              Öppnade kistor ({opened.length})
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {opened.map((chest) => (
-                <ChestCard key={chest.id} chest={chest} onOpen={() => {}} />
-              ))}
+        {/* ─── How to earn chests ── */}
+        <section>
+          <SectionTitle emoji="💡" title="Hur tjänar man kistor?" />
+          <div
+            className="rounded-2xl p-4 space-y-4"
+            style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}
+          >
+            {/* Point milestones */}
+            <div>
+              <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                {[
+                  { emoji: "📦", label: "Trälåda",    value: "100, 200, 600 p",                           bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
+                  { emoji: "🪙", label: "Silverlåda", value: "300, 500, 750, 1 500, 2 000 p",            bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
+                  { emoji: "🏆", label: "Guldlåda",   value: "1 000, 2 500, 5 000, 10 000, 15 000 p",   bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
+                ].map((row) => (
+                  <div key={row.label} className="flex items-start gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
+                    <span className="text-xl leading-none mt-0.5">{row.emoji}</span>
+                    <div>
+                      <p className="text-white/80 text-xs font-bold">{row.label}</p>
+                      <p className="text-white/50 text-[10px] leading-tight mt-0.5">{row.value}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          </section>
-        )}
 
-        {/* How to earn chests */}
-        <section className="rounded-3xl p-5 bg-blue-50 dark:bg-blue-950 border-2 border-blue-200 dark:border-blue-700">
-          <h3 className="font-bold text-blue-900 dark:text-blue-100 mb-3 flex items-center gap-2">
-            <span>💡</span> Hur tjänar man kistor?
-          </h3>
-          <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-2">Poängmilstolpar</p>
-          <ul className="space-y-1.5 text-sm text-blue-900 dark:text-blue-100 mb-4">
-            <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> 100, 200, 600 poäng</span></li>
-            <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> 300, 500, 750, 1 500, 2 000 poäng</span></li>
-            <li className="flex items-start gap-2"><span>🏆</span><span><strong>Guldlåda:</strong> 1 000, 2 500, 3 500, 5 000, 7 000, 10 000, 15 000 poäng</span></li>
-          </ul>
-          <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-2">Övningsmilstolpar</p>
-          <ul className="space-y-1.5 text-sm text-blue-900 dark:text-blue-100 mb-4">
-            <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> 5, 10 övningar</span></li>
-            <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> 15, 20, 40 övningar</span></li>
-            <li className="flex items-start gap-2"><span>🏆</span><span><strong>Guldlåda:</strong> 30, 60, 75, 100, 150 övningar</span></li>
-          </ul>
-          <div className="flex items-start gap-2 text-sm text-blue-900 dark:text-blue-100 pt-2 border-t border-blue-200 dark:border-blue-700">
-            <span>🎁</span>
-            <span><strong>Mysterylåda:</strong> Slumpmässig chans efter varje övning!</span>
+            {/* Exercise milestones */}
+            <div>
+              <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                {[
+                  { emoji: "📦", label: "Trälåda",    value: "5, 10 övningar",                      bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
+                  { emoji: "🪙", label: "Silverlåda", value: "15, 20, 40, 50 övningar",             bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
+                  { emoji: "🏆", label: "Guldlåda",   value: "30, 60, 75, 100, 150 övningar",      bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
+                ].map((row) => (
+                  <div key={row.label} className="flex items-start gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
+                    <span className="text-xl leading-none mt-0.5">{row.emoji}</span>
+                    <div>
+                      <p className="text-white/80 text-xs font-bold">{row.label}</p>
+                      <p className="text-white/50 text-[10px] leading-tight mt-0.5">{row.value}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mystery box */}
+            <div
+              className="flex items-center gap-3 p-3 rounded-xl"
+              style={{ background: "rgba(49,46,129,0.4)", border: "1px solid rgba(139,92,246,0.3)" }}
+            >
+              <span className="text-xl leading-none">🎁</span>
+              <div>
+                <p className="text-white/80 text-xs font-bold">Mysterylåda</p>
+                <p className="text-white/50 text-[10px] mt-0.5">15% chans att få en slumpmässig belöning efter varje övning!</p>
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
 
-      {/* Reward popup */}
       {rewardResult && (
-        <RewardPopup
-          result={rewardResult}
-          onClose={() => setRewardResult(null)}
-        />
+        <RewardPopup result={rewardResult} onClose={() => setRewardResult(null)} />
       )}
     </div>
   );
