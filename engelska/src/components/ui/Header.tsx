@@ -44,9 +44,9 @@ export default function Header({ student, onLogout }: HeaderProps) {
     <header
       className="backdrop-blur-md sticky top-0 z-50"
       style={{
-        background: "rgba(8,13,30,0.85)",
-        borderBottom: "1px solid rgba(255,255,255,0.07)",
-        boxShadow: "0 4px 20px rgba(0,0,0,0.4)"
+        background: "rgba(255,255,255,0.92)",
+        borderBottom: "1px solid rgba(29,78,216,0.12)",
+        boxShadow: "0 4px 20px rgba(10,36,99,0.08)"
       }}
     >
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -71,8 +71,8 @@ export default function Header({ student, onLogout }: HeaderProps) {
               title="Hemliga kistor"
               className="relative flex items-center justify-center w-10 h-10 rounded-xl hover:scale-110 transition-all touch-manipulation cursor-pointer"
               style={{
-                background: "rgba(255,255,255,0.07)",
-                border: "1px solid rgba(255,255,255,0.12)",
+                background: "rgba(10,36,99,0.06)",
+                border: "1px solid rgba(10,36,99,0.1)",
               }}
             >
               <span className="text-lg leading-none select-none">🏆</span>
@@ -87,14 +87,14 @@ export default function Header({ student, onLogout }: HeaderProps) {
             <div
               className="hidden xs:flex items-center gap-1.5 px-3 py-1.5 rounded-xl cursor-default transition-all hover:scale-105"
               style={{
-                background: "rgba(255,255,255,0.07)",
-                border: "1px solid rgba(255,255,255,0.12)",
+                background: "rgba(10,36,99,0.06)",
+                border: "1px solid rgba(10,36,99,0.1)",
               }}
             >
               <span className="text-amber-500 text-base">⭐</span>
               <NumberTicker
                 value={student.totalPoints}
-                className="text-sm font-bold text-amber-300"
+                className="text-sm font-bold text-amber-600"
                 duration={600}
               />
             </div>
@@ -112,11 +112,11 @@ export default function Header({ student, onLogout }: HeaderProps) {
                 >
                   <div
                     className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center flex-shrink-0"
-                    style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)" }}
+                    style={{ background: "rgba(10,36,99,0.06)", border: "1px solid rgba(10,36,99,0.12)" }}
                   >
                     <AvatarImg av={av} />
                   </div>
-                  <span className="text-sm font-bold text-white/80">{student.name}</span>
+                  <span className="text-sm font-bold text-blue-900/80">{student.name}</span>
                 </Link>
               );
             })()}
@@ -124,7 +124,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Dark mode toggle */}
             <button
               onClick={toggle}
-              className="p-2.5 rounded-xl text-white/40 hover:text-white/70 hover:bg-white/07 transition-all touch-manipulation cursor-pointer"
+              className="p-2.5 rounded-xl text-blue-900/40 hover:text-blue-900/70 hover:bg-blue-900/05 transition-all touch-manipulation cursor-pointer"
               aria-label={dark ? "Ljust läge" : "Mörkt läge"}
             >
               {dark ? "☀️" : "🌙"}
@@ -133,7 +133,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Logga ut */}
             <button
               onClick={handleLogout}
-              className="px-3 sm:px-4 py-2 rounded-xl text-sm font-bold text-white/40 hover:text-red-400 hover:bg-red-500/10 transition-all touch-manipulation cursor-pointer"
+              className="px-3 sm:px-4 py-2 rounded-xl text-sm font-bold text-blue-900/40 hover:text-red-600 hover:bg-red-500/10 transition-all touch-manipulation cursor-pointer"
             >
               Logga ut
             </button>
@@ -144,7 +144,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {!student && (
           <button
             onClick={toggle}
-            className="p-2.5 rounded-xl text-white/40 hover:text-white/70 transition-all cursor-pointer"
+            className="p-2.5 rounded-xl text-blue-900/40 hover:text-blue-900/70 transition-all cursor-pointer"
             aria-label={dark ? "Ljust läge" : "Mörkt läge"}
           >
             {dark ? "☀️" : "🌙"}

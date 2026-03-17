@@ -88,8 +88,8 @@ export default function HomePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0a1128" }}>
-        <div className="w-10 h-10 border-4 border-blue-700/30 border-t-blue-400 rounded-full animate-spin" />
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#eef2fb" }}>
+        <div className="w-10 h-10 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
       </div>
     );
   }
@@ -99,14 +99,14 @@ export default function HomePage() {
     return (
       <div
         className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #080d1e 0%, #0f1c3f 50%, #080d1e 100%)" }}
+        style={{ background: "linear-gradient(135deg, #dde8ff 0%, #f5f8ff 50%, #dde8ff 100%)" }}
       >
         {/* Floating decorative letters */}
         <div className="pointer-events-none absolute inset-0 select-none" aria-hidden="true">
           {FLOAT_ITEMS.map((item) => (
             <span
               key={item.text + item.x}
-              className="absolute font-black text-white/[0.05] animate-float"
+              className="absolute font-black text-blue-900/[0.07] animate-float"
               style={{
                 left: item.x,
                 top: item.y,
@@ -123,12 +123,12 @@ export default function HomePage() {
         {/* Subtle glow orbs — blue and red */}
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           <div
-            className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-15 blur-3xl"
-            style={{ background: "radial-gradient(circle, #1d4ed8, transparent)" }}
+            className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-25 blur-3xl"
+            style={{ background: "radial-gradient(circle, #93c5fd, transparent)" }}
           />
           <div
-            className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full opacity-10 blur-3xl"
-            style={{ background: "radial-gradient(circle, #dc2626, transparent)" }}
+            className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full opacity-20 blur-3xl"
+            style={{ background: "radial-gradient(circle, #fca5a5, transparent)" }}
           />
         </div>
 
@@ -139,7 +139,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center mb-6">
             <div
               className="w-20 h-20 rounded-2xl overflow-hidden mb-4 animate-float"
-              style={{ boxShadow: "0 0 40px rgba(29,78,216,0.5), 0 0 80px rgba(220,38,38,0.2)" }}
+              style={{ boxShadow: "0 0 30px rgba(29,78,216,0.25), 0 0 50px rgba(220,38,38,0.1)" }}
             >
               <img
                 src="/content/engelskajakten-icon.png"
@@ -147,10 +147,10 @@ export default function HomePage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl font-black tracking-tight" style={{ color: "#ffffff" }}>
+            <h1 className="text-4xl font-black tracking-tight" style={{ color: "#0a2463" }}>
               Engelskajakten
             </h1>
-            <p className="text-blue-300 text-sm font-medium mt-1">
+            <p className="text-blue-600 text-sm font-medium mt-1">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
@@ -159,17 +159,17 @@ export default function HomePage() {
           <div
             className="rounded-3xl p-6"
             style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.09)",
+              background: "rgba(255,255,255,0.85)",
+              border: "1px solid rgba(29,78,216,0.15)",
               backdropFilter: "blur(20px)",
-              boxShadow: "0 25px 60px rgba(0,0,0,0.6)",
+              boxShadow: "0 20px 50px rgba(10,36,99,0.12)",
             }}
           >
             <form onSubmit={handleLogin} className="space-y-5">
 
               {/* Name input */}
               <div>
-                <label className="block text-sm font-bold mb-2" style={{ color: "rgba(255,255,255,0.6)" }}>
+                <label className="block text-sm font-bold mb-2" style={{ color: "rgba(10,36,99,0.6)" }}>
                   Vad heter du?
                 </label>
                 <input
@@ -179,17 +179,17 @@ export default function HomePage() {
                   placeholder="Ditt namn..."
                   autoFocus
                   maxLength={30}
-                  className="w-full px-4 py-3.5 rounded-2xl text-white placeholder-white/25 text-base font-medium focus:outline-none transition-all"
+                  className="w-full px-4 py-3.5 rounded-2xl text-blue-900 placeholder-blue-900/25 text-base font-medium focus:outline-none transition-all"
                   style={{
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    background: "rgba(10,36,99,0.04)",
+                    border: "1px solid rgba(10,36,99,0.15)",
                   }}
                   onFocus={(e) => {
-                    e.currentTarget.style.border = "1px solid rgba(59,130,246,0.7)";
-                    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(59,130,246,0.15)";
+                    e.currentTarget.style.border = "1px solid rgba(29,78,216,0.7)";
+                    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(29,78,216,0.12)";
                   }}
                   onBlur={(e) => {
-                    e.currentTarget.style.border = "1px solid rgba(255,255,255,0.1)";
+                    e.currentTarget.style.border = "1px solid rgba(10,36,99,0.15)";
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 />
@@ -197,7 +197,7 @@ export default function HomePage() {
 
               {/* Avatar selection */}
               <div>
-                <p className="text-sm font-bold mb-2" style={{ color: "rgba(255,255,255,0.6)" }}>
+                <p className="text-sm font-bold mb-2" style={{ color: "rgba(10,36,99,0.6)" }}>
                   Välj din karaktär
                 </p>
                 <div className="grid grid-cols-5 gap-2">
@@ -210,11 +210,11 @@ export default function HomePage() {
                       className="aspect-square rounded-xl flex items-center justify-center transition-all duration-200 overflow-hidden cursor-pointer"
                       style={{
                         background: selectedAvatar === avatar.id
-                          ? "rgba(29,78,216,0.35)"
-                          : "rgba(255,255,255,0.05)",
+                          ? "rgba(29,78,216,0.12)"
+                          : "rgba(10,36,99,0.04)",
                         border: selectedAvatar === avatar.id
-                          ? "2px solid rgba(59,130,246,0.8)"
-                          : "2px solid rgba(255,255,255,0.07)",
+                          ? "2px solid rgba(29,78,216,0.8)"
+                          : "2px solid rgba(10,36,99,0.1)",
                         transform: selectedAvatar === avatar.id ? "scale(1.1)" : "scale(1)",
                         boxShadow: selectedAvatar === avatar.id
                           ? "0 0 12px rgba(59,130,246,0.4)"
@@ -234,7 +234,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 {selectedAvatar && (
-                  <p className="text-xs font-medium text-blue-300 mt-2 text-center">
+                  <p className="text-xs font-medium text-blue-600 mt-2 text-center">
                     {AVATARS.find((a) => a.id === selectedAvatar)?.name}
                   </p>
                 )}
@@ -260,7 +260,7 @@ export default function HomePage() {
           </div>
 
           {/* Footer */}
-          <p className="text-center text-xs mt-6" style={{ color: "rgba(255,255,255,0.15)" }}>
+          <p className="text-center text-xs mt-6" style={{ color: "rgba(10,36,99,0.3)" }}>
             Kontakt: martin.akdogan@enkoping.se
           </p>
         </div>
@@ -272,7 +272,7 @@ export default function HomePage() {
   return (
     <div
       className="min-h-screen"
-      style={{ background: "linear-gradient(135deg, #080d1e 0%, #0f1c3f 50%, #080d1e 100%)" }}
+      style={{ background: "linear-gradient(135deg, #dde8ff 0%, #f5f8ff 50%, #dde8ff 100%)" }}
     >
       <Header student={student} onLogout={handleLogout} />
 
@@ -290,7 +290,7 @@ export default function HomePage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-white/35 text-xs font-bold tracking-widest uppercase">
+          <p className="text-blue-900/45 text-xs font-bold tracking-widest uppercase">
             Välj din värld
           </p>
         </div>
@@ -307,8 +307,9 @@ export default function HomePage() {
                 <div
                   className="rounded-2xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.08)",
+                    background: "rgba(255,255,255,0.88)",
+                    border: "1px solid rgba(29,78,216,0.12)",
+                    boxShadow: "0 4px 20px rgba(10,36,99,0.08)",
                   }}
                 >
                   {/* Image header */}
@@ -345,10 +346,10 @@ export default function HomePage() {
 
                   {/* Card body */}
                   <div className="p-4">
-                    <h3 className="text-white font-black text-base leading-tight">
+                    <h3 className="text-blue-900 font-black text-base leading-tight">
                       {stage.name}
                     </h3>
-                    <p className="text-white/35 text-xs mt-0.5">{stage.subtitle}</p>
+                    <p className="text-blue-900/50 text-xs mt-0.5">{stage.subtitle}</p>
 
                     <div className="flex items-center justify-between mt-3">
                       {pts > 0 ? (
@@ -359,10 +360,10 @@ export default function HomePage() {
                             className="text-amber-300 font-bold text-sm"
                             duration={800}
                           />
-                          <span className="text-white/30 text-xs">p</span>
+                          <span className="text-blue-900/40 text-xs">p</span>
                         </div>
                       ) : (
-                        <span className="text-white/25 text-xs font-medium">
+                        <span className="text-blue-900/40 text-xs font-medium">
                           Inte börjat än
                         </span>
                       )}
@@ -385,7 +386,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="text-center py-6 text-xs" style={{ color: "rgba(255,255,255,0.12)" }}>
+      <footer className="text-center py-6 text-xs" style={{ color: "rgba(10,36,99,0.35)" }}>
         <span>Kontakt: martin.akdogan@enkoping.se</span>
         <span className="mx-3">·</span>
         <span>Engelskajakten av Martin Akdogan</span>
