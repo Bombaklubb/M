@@ -271,17 +271,17 @@ export default function HomePage() {
       <main className="max-w-5xl mx-auto px-4 py-3">
 
         {/* Welcome banner */}
-        <div className="mb-3 animate-fade-in">
-          <h2 className="text-2xl font-black text-indigo-900 dark:text-gray-100">
+        <div className="mb-2 animate-fade-in">
+          <h2 className="text-xl font-black text-indigo-900 dark:text-gray-100">
             Hej, {student.name}! 👋
           </h2>
-          <p className="text-indigo-400 dark:text-gray-400 font-medium text-sm mt-0.5">
+          <p className="text-indigo-400 dark:text-gray-400 font-medium text-xs mt-0.5">
             Välj en värld och fortsätt din engelska resa.
           </p>
         </div>
 
         {/* Stage cards grid */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 gap-2">
           {STAGES.map((stage, i) => {
             const pts  = getStagePoints(student, stage.id);
             const done = getStageCompleted(student, stage.id);
@@ -292,12 +292,12 @@ export default function HomePage() {
               <Link key={stage.id} href={`/world/${stage.id}`} className="block group">
                 <MagicCard
                   gradientColor={`${beamColors[0]}20`}
-                  className="relative rounded-3xl overflow-hidden border-3 border-white/20 dark:border-gray-700/50 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer"
+                  className="relative rounded-2xl overflow-hidden border-2 border-white/20 dark:border-gray-700/50 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl cursor-pointer"
                   style={{
-                    aspectRatio: "16/9",
+                    aspectRatio: "3/1",
                     boxShadow: hasProgress
-                      ? `0 8px 0 0 ${beamColors[0]}35, 0 12px 28px -4px ${beamColors[0]}20`
-                      : "0 6px 0 0 rgba(99,102,241,0.12), 0 10px 20px -4px rgba(99,102,241,0.08)",
+                      ? `0 5px 0 0 ${beamColors[0]}35, 0 8px 20px -4px ${beamColors[0]}20`
+                      : "0 4px 0 0 rgba(99,102,241,0.12), 0 8px 16px -4px rgba(99,102,241,0.08)",
                     animation: `float 4s ease-in-out infinite ${i * 0.4}s`
                   } as React.CSSProperties}
                 >
@@ -314,43 +314,42 @@ export default function HomePage() {
                   {/* BorderBeam on stages with progress */}
                   {hasProgress && (
                     <BorderBeam
-                      size={220}
+                      size={180}
                       duration={8}
                       colorFrom={beamColors[0]}
                       colorTo={beamColors[1]}
-                      borderWidth={2.5}
+                      borderWidth={2}
                     />
                   )}
 
                   {/* Top-right badge */}
                   {done > 0 && (
-                    <div className="absolute top-3 right-3">
-                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 flex items-center gap-1">
+                    <div className="absolute top-2 right-2">
+                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2 py-0.5 rounded-full border border-white/30 flex items-center gap-1">
                         ✓ {done}
                       </span>
                     </div>
                   )}
 
                   {/* Bottom content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <div className="text-3xl mb-1.5 drop-shadow-lg">{stage.emoji}</div>
-                    <h3 className="text-white font-black text-base sm:text-lg leading-tight drop-shadow-lg">
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <h3 className="text-white font-black text-sm leading-tight drop-shadow-lg">
                       {stage.name}
                     </h3>
-                    <p className="text-white/65 text-xs font-medium mt-0.5">{stage.grades}</p>
+                    <p className="text-white/65 text-xs font-medium">{stage.grades}</p>
 
                     {pts > 0 ? (
-                      <div className="mt-2 flex items-center gap-1">
-                        <span className="text-amber-400 text-sm">⭐</span>
+                      <div className="mt-1 flex items-center gap-1">
+                        <span className="text-amber-400 text-xs">⭐</span>
                         <NumberTicker
                           value={pts}
-                          className="text-white font-bold text-sm"
+                          className="text-white font-bold text-xs"
                           duration={800}
                         />
-                        <span className="text-white/55 text-xs ml-0.5">p</span>
+                        <span className="text-white/55 text-xs">p</span>
                       </div>
                     ) : (
-                      <p className="mt-2 text-white/50 text-xs font-medium group-hover:text-white/80 transition-colors">
+                      <p className="mt-1 text-white/50 text-xs font-medium group-hover:text-white/80 transition-colors">
                         Börja här →
                       </p>
                     )}
