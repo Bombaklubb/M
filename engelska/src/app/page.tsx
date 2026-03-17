@@ -136,12 +136,12 @@ export default function HomePage() {
           {/* Title */}
           <div className="text-center mb-3">
             <div
-              className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 mb-2 text-3xl animate-float border-3 border-emerald-300"
+              className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-2 animate-float overflow-hidden"
               style={{
-                boxShadow: "0 5px 0 0 rgba(16, 185, 129, 0.4), 0 8px 18px -4px rgba(16, 185, 129, 0.3), inset 0 3px 6px 0 rgba(255, 255, 255, 0.4)"
+                boxShadow: "0 5px 0 0 rgba(59, 130, 246, 0.4), 0 8px 18px -4px rgba(59, 130, 246, 0.3)"
               }}
             >
-              🌿
+              <img src="/content/engelskajakten-icon.png" alt="Engelskajakten" className="w-full h-full object-cover" />
             </div>
             <h1 className="text-3xl font-black tracking-tight drop-shadow-sm">
               <AnimatedGradientText>Engelskajakten</AnimatedGradientText>
