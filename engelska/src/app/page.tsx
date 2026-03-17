@@ -321,7 +321,7 @@ export default function HomePage() {
                     <div
                       className="absolute inset-0"
                       style={{
-                        background: `linear-gradient(to bottom, ${accent.from}99, ${accent.to}dd)`,
+                        background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55))",
                       }}
                     />
                     {/* Grade badge */}
