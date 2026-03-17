@@ -88,6 +88,10 @@ export function defaultGamificationData(): MattGamificationData {
     bossWins: 0,
     pointsMilestonesRewarded: [],
     exerciseMilestonesRewarded: [],
+    topicCompletionChestsRewarded: [],
+    topic3StarChestsRewarded: [],
+    topicPerfectChestsRewarded: [],
+    worldCompletionChestsRewarded: [],
   };
 }
 
@@ -97,7 +101,8 @@ export function loadGamification(studentId: string): MattGamificationData {
   try {
     const raw = localStorage.getItem(GAM_KEY(studentId));
     if (!raw) return defaultGamificationData();
-    return JSON.parse(raw) as MattGamificationData;
+    // Merge with defaults so old data gets the new fields
+    return { ...defaultGamificationData(), ...(JSON.parse(raw) as MattGamificationData) };
   } catch {
     return defaultGamificationData();
   }
@@ -230,4 +235,69 @@ export function openGoldChest(badges: string[]): {
 
 export function getMathBadge(id: string) {
   return MATH_BADGES.find(b => b.id === id);
+}
+
+// ─── Topic / World completion chests ─────────────────────────────────────────
+
+/**
+ * Chests earned from completing a topic for the first time, getting 3 stars,
+ * getting a perfect score (100%), or completing all topics in a world.
+ * Returns new chests and the updated tracking arrays.
+ */
+export function chestsEarnedFromTopicEvent(opts: {
+  topicId: string;
+  worldId: string | null;
+  score: number;             // 0–100
+  stars: number;             // 0–3
+  allWorldTopicsCompleted: boolean;
+  gam: MattGamificationData;
+}): {
+  chests: MattChest[];
+  topicCompletionChestsRewarded: string[];
+  topic3StarChestsRewarded: string[];
+  topicPerfectChestsRewarded: string[];
+  worldCompletionChestsRewarded: string[];
+} {
+  const newChests: MattChest[] = [];
+  const tc = [...(opts.gam.topicCompletionChestsRewarded ?? [])];
+  const t3 = [...(opts.gam.topic3StarChestsRewarded ?? [])];
+  const tp = [...(opts.gam.topicPerfectChestsRewarded ?? [])];
+  const wc = [...(opts.gam.worldCompletionChestsRewarded ?? [])];
+
+  const now = new Date().toISOString();
+  function mkChest(type: ChestType, suffix: string): MattChest {
+    return { id: `chest_${Date.now()}_${suffix}`, type, earnedAt: now, opened: false };
+  }
+
+  // 1. First completion (score >= 50) → wood chest
+  if (opts.score >= 50 && !tc.includes(opts.topicId)) {
+    newChests.push(mkChest('wood', 'tc'));
+    tc.push(opts.topicId);
+  }
+
+  // 2. First 3-star completion → silver chest
+  if (opts.stars === 3 && !t3.includes(opts.topicId)) {
+    newChests.push(mkChest('silver', 't3'));
+    t3.push(opts.topicId);
+  }
+
+  // 3. First perfect score (100%) → silver chest
+  if (opts.score === 100 && !tp.includes(opts.topicId)) {
+    newChests.push(mkChest('silver', 'tp'));
+    tp.push(opts.topicId);
+  }
+
+  // 4. First time all topics in a world are completed → gold chest
+  if (opts.allWorldTopicsCompleted && opts.worldId && !wc.includes(opts.worldId)) {
+    newChests.push(mkChest('gold', 'wc'));
+    wc.push(opts.worldId);
+  }
+
+  return {
+    chests: newChests,
+    topicCompletionChestsRewarded: tc,
+    topic3StarChestsRewarded: t3,
+    topicPerfectChestsRewarded: tp,
+    worldCompletionChestsRewarded: wc,
+  };
 }

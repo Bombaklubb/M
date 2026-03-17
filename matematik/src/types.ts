@@ -223,6 +223,14 @@ export interface MattGamificationData {
   bossWins: number;
   pointsMilestonesRewarded: number[];
   exerciseMilestonesRewarded: number[];
+  /** topicIds that already gave a completion chest */
+  topicCompletionChestsRewarded: string[];
+  /** topicIds that already gave a 3-star chest */
+  topic3StarChestsRewarded: string[];
+  /** topicIds that already gave a perfect-score chest */
+  topicPerfectChestsRewarded: string[];
+  /** worldIds that already gave a world-completion gold chest */
+  worldCompletionChestsRewarded: string[];
 }
 
 // === APP STATE ===
