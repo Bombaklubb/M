@@ -93,7 +93,7 @@ export default function WorldSelect() {
         <img
           src="/mattejakten.png"
           alt="Mattejakten"
-          className="h-40 w-auto mx-auto drop-shadow-lg"
+          className="h-56 w-auto mx-auto drop-shadow-lg"
         />
       </div>
 

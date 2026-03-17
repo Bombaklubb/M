@@ -24,7 +24,7 @@ export default function Login() {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center p-4 pt-20 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center p-4 pt-14 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
     >
       <AppHeader />
@@ -47,17 +47,17 @@ export default function Login() {
 
       <div className="relative w-full max-w-md">
         {/* Logo */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <img
             src="/mattejakten.png"
             alt="Mattejakten"
-            className="h-72 w-auto mx-auto mb-1 drop-shadow-2xl"
+            className="h-40 w-auto mx-auto mb-1 drop-shadow-2xl"
           />
         </div>
 
         {/* Card with BorderBeam */}
         <div
-          className="relative rounded-3xl p-7 shadow-2xl"
+          className="relative rounded-3xl p-5 shadow-2xl"
           style={{
             background: 'rgba(255,255,255,0.07)',
             backdropFilter: 'blur(20px)',
@@ -72,7 +72,7 @@ export default function Login() {
             borderWidth={1.5}
           />
 
-          <h2 className="text-2xl font-black text-white mb-4">
+          <h2 className="text-xl font-black text-white mb-3">
             <AnimatedGradientText colorFrom="#fbbf24" colorTo="#a78bfa" speed={0.8}>
               Skriv ditt namn
             </AnimatedGradientText>
@@ -86,18 +86,18 @@ export default function Login() {
             onKeyDown={e => e.key === 'Enter' && doLogin()}
             placeholder="Ditt namn..."
             autoFocus
-            className="mb-5 text-lg font-bold"
+            className="mb-4 text-base font-bold"
           />
 
-          <h3 className="text-lg font-black text-white mb-1">Välj din hjälte! ⚔️</h3>
-          <p className="text-white/40 text-sm mb-4">Vem ska utforska matematikens världar?</p>
+          <h3 className="text-base font-black text-white mb-1">Välj din hjälte! ⚔️</h3>
+          <p className="text-white/40 text-xs mb-3">Vem ska utforska matematikens världar?</p>
 
-          <div className="grid grid-cols-4 gap-3 mb-5">
+          <div className="grid grid-cols-4 gap-2 mb-4">
             {AVATARS.map((a, i) => (
               <button
                 key={i}
                 onClick={() => setAvatar(i)}
-                className={`text-4xl p-3 rounded-2xl transition-all cursor-pointer ${
+                className={`text-3xl p-2 rounded-2xl transition-all cursor-pointer ${
                   avatar === i
                     ? 'bg-amber-500/20 ring-2 ring-amber-400 scale-110 shadow-lg shadow-amber-400/20'
                     : 'bg-white/5 hover:bg-white/10 hover:scale-105'
@@ -113,7 +113,7 @@ export default function Login() {
           )}
 
           <ShimmerButton
-            className="w-full py-4 text-xl font-black rounded-2xl"
+            className="w-full py-3 text-lg font-black rounded-2xl"
             background="linear-gradient(135deg, #f59e0b, #ef4444)"
             shimmerColor="rgba(255,255,255,0.6)"
             onClick={doLogin}
