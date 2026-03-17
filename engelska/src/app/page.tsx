@@ -100,7 +100,7 @@ export default function HomePage() {
     ];
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-emerald-50 flex items-center justify-center p-4 gap-6 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-emerald-50 flex items-center justify-center p-3 gap-4 relative overflow-hidden">
 
         {/* Background decorative orbs */}
         <div className="pointer-events-none absolute inset-0">
@@ -110,52 +110,52 @@ export default function HomePage() {
         </div>
 
         {/* Left: sprakdjungeln + sprakstaden */}
-        <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
+        <div className="hidden lg:flex flex-col gap-3 w-48 xl:w-56 flex-shrink-0">
           {stageCards.slice(0, 2).map((s, i) => (
             <MagicCard
               key={s.name}
               gradientColor="#6366f130"
-              className="rounded-3xl overflow-hidden aspect-[4/3] relative border-3 border-white/60 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="rounded-2xl overflow-hidden aspect-[4/3] relative border-2 border-white/60 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               style={{
-                boxShadow: "0 6px 0 0 rgba(99, 102, 241, 0.2), 0 10px 20px -4px rgba(99, 102, 241, 0.15)",
+                boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.2), 0 8px 16px -4px rgba(99, 102, 241, 0.15)",
                 animation: `float 3s ease-in-out infinite ${i * 0.5}s`
               } as React.CSSProperties}
             >
               <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
               <div className={`absolute inset-0 bg-gradient-to-t ${s.gradient} to-transparent`} />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="text-white font-bold text-base leading-tight drop-shadow-lg">{s.name}</p>
-                <p className="text-white/80 text-sm font-medium">{s.label}</p>
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="text-white font-bold text-sm leading-tight drop-shadow-lg">{s.name}</p>
+                <p className="text-white/80 text-xs font-medium">{s.label}</p>
               </div>
             </MagicCard>
           ))}
         </div>
 
         {/* Center: login card */}
-        <div className="w-full max-w-md animate-slide-up flex-shrink-0">
+        <div className="w-full max-w-sm animate-slide-up flex-shrink-0">
           {/* Title */}
-          <div className="text-center mb-6">
+          <div className="text-center mb-3">
             <div
-              className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br from-emerald-400 to-emerald-600 mb-4 text-5xl animate-float border-4 border-emerald-300"
+              className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-400 to-emerald-600 mb-2 text-3xl animate-float border-3 border-emerald-300"
               style={{
-                boxShadow: "0 8px 0 0 rgba(16, 185, 129, 0.4), 0 12px 24px -4px rgba(16, 185, 129, 0.3), inset 0 4px 8px 0 rgba(255, 255, 255, 0.4)"
+                boxShadow: "0 5px 0 0 rgba(16, 185, 129, 0.4), 0 8px 18px -4px rgba(16, 185, 129, 0.3), inset 0 3px 6px 0 rgba(255, 255, 255, 0.4)"
               }}
             >
               🌿
             </div>
-            <h1 className="text-5xl font-black tracking-tight drop-shadow-sm">
+            <h1 className="text-3xl font-black tracking-tight drop-shadow-sm">
               <AnimatedGradientText>Engelskajakten</AnimatedGradientText>
             </h1>
-            <p className="text-emerald-600 mt-2 text-lg font-bold">
+            <p className="text-emerald-600 mt-1 text-sm font-bold">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
 
           {/* Login form - Clay card with BorderBeam */}
           <div
-            className="relative bg-white rounded-4xl p-8 border-3 border-indigo-100 overflow-hidden"
+            className="relative bg-white rounded-3xl p-5 border-2 border-indigo-100 overflow-hidden"
             style={{
-              boxShadow: "0 8px 0 0 rgba(99, 102, 241, 0.15), 0 16px 32px -8px rgba(99, 102, 241, 0.2), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
+              boxShadow: "0 6px 0 0 rgba(99, 102, 241, 0.15), 0 12px 24px -8px rgba(99, 102, 241, 0.2), inset 0 3px 6px 0 rgba(255, 255, 255, 0.8)"
             }}
           >
             <BorderBeam
@@ -166,52 +166,52 @@ export default function HomePage() {
               borderWidth={2}
             />
             <div className="relative">
-            <h2 className="text-2xl font-bold text-indigo-900 mb-1">Välkommen!</h2>
-            <p className="text-indigo-400 text-base mb-6 font-medium">
+            <h2 className="text-lg font-bold text-indigo-900 mb-0.5">Välkommen!</h2>
+            <p className="text-indigo-400 text-sm mb-3 font-medium">
               Skriv ditt namn för att börja eller fortsätta.
             </p>
 
-            <form onSubmit={handleLogin} className="space-y-5">
+            <form onSubmit={handleLogin} className="space-y-3">
               <input
                 type="text"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 placeholder="Ditt namn..."
-                className="input-field text-xl"
+                className="input-field text-base"
                 autoFocus
                 maxLength={30}
               />
 
               {/* Avatar selection */}
               <div>
-                <p className="text-base font-bold text-indigo-700 mb-3">Välj din karaktär</p>
-                <div className="grid grid-cols-5 gap-3">
+                <p className="text-sm font-bold text-indigo-700 mb-2">Välj din karaktär</p>
+                <div className="grid grid-cols-5 gap-2">
                   {AVATARS.map((avatar) => (
                     <button
                       key={avatar.id}
                       type="button"
                       onClick={() => setSelectedAvatar(avatar.id)}
                       title={avatar.name}
-                      className={`aspect-square rounded-2xl flex items-center justify-center transition-all duration-200 overflow-hidden text-2xl cursor-pointer border-3 ${
+                      className={`aspect-square rounded-xl flex items-center justify-center transition-all duration-200 overflow-hidden text-xl cursor-pointer border-2 ${
                         selectedAvatar === avatar.id
                           ? "border-emerald-400 scale-110 bg-emerald-50"
                           : "border-indigo-100 bg-indigo-50 hover:border-indigo-300 hover:scale-105"
                       }`}
                       style={{
                         boxShadow: selectedAvatar === avatar.id
-                          ? "0 4px 0 0 rgba(16, 185, 129, 0.3), 0 6px 12px -2px rgba(16, 185, 129, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
-                          : "0 3px 0 0 rgba(99, 102, 241, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                          ? "0 3px 0 0 rgba(16, 185, 129, 0.3), 0 4px 8px -2px rgba(16, 185, 129, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                          : "0 2px 0 0 rgba(99, 102, 241, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
                       }}
                     >
                       {avatar.image ? (
-                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-1" />
+                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-0.5" />
                       ) : (
                         avatar.emoji
                       )}
                     </button>
                   ))}
                 </div>
-                <p className="text-sm font-bold text-emerald-600 mt-3 text-center">
+                <p className="text-xs font-bold text-emerald-600 mt-1.5 text-center">
                   {AVATARS.find((a) => a.id === selectedAvatar)?.name}
                 </p>
               </div>
@@ -223,11 +223,11 @@ export default function HomePage() {
                   ? "linear-gradient(135deg, #10b981, #059669)"
                   : "linear-gradient(135deg, #d1d5db, #9ca3af)"
                 }
-                className="w-full text-xl py-4 rounded-2xl disabled:cursor-not-allowed disabled:opacity-70"
+                className="w-full text-base py-3 rounded-xl disabled:cursor-not-allowed disabled:opacity-70"
                 style={{
                   boxShadow: nameInput.trim()
-                    ? "0 4px 0 0 rgba(5, 150, 105, 0.4), 0 6px 16px -2px rgba(5, 150, 105, 0.3)"
-                    : "0 3px 0 0 rgba(0,0,0,0.1)"
+                    ? "0 3px 0 0 rgba(5, 150, 105, 0.4), 0 5px 12px -2px rgba(5, 150, 105, 0.3)"
+                    : "0 2px 0 0 rgba(0,0,0,0.1)"
                 } as React.CSSProperties}
               >
                 Starta jakten! 🚀
@@ -238,22 +238,22 @@ export default function HomePage() {
         </div>
 
         {/* Right: sprakarenan + sprakakademin */}
-        <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
+        <div className="hidden lg:flex flex-col gap-3 w-48 xl:w-56 flex-shrink-0">
           {stageCards.slice(2, 4).map((s, i) => (
             <MagicCard
               key={s.name}
               gradientColor="#8b5cf630"
-              className="rounded-3xl overflow-hidden aspect-[4/3] relative border-3 border-white/60 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="rounded-2xl overflow-hidden aspect-[4/3] relative border-2 border-white/60 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               style={{
-                boxShadow: "0 6px 0 0 rgba(99, 102, 241, 0.2), 0 10px 20px -4px rgba(99, 102, 241, 0.15)",
+                boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.2), 0 8px 16px -4px rgba(99, 102, 241, 0.15)",
                 animation: `float 3s ease-in-out infinite ${(i + 2) * 0.5}s`
               } as React.CSSProperties}
             >
               <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
               <div className={`absolute inset-0 bg-gradient-to-t ${s.gradient} to-transparent`} />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="text-white font-bold text-base leading-tight drop-shadow-lg">{s.name}</p>
-                <p className="text-white/80 text-sm font-medium">{s.label}</p>
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="text-white font-bold text-sm leading-tight drop-shadow-lg">{s.name}</p>
+                <p className="text-white/80 text-xs font-medium">{s.label}</p>
               </div>
             </MagicCard>
           ))}
