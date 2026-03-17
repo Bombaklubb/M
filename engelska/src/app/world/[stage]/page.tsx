@@ -57,7 +57,7 @@ export default function WorldPage({ params }: Props) {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-en-50">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-4xl animate-bounce-slow">{stage.emoji}</div>
       </div>
     );
@@ -86,7 +86,7 @@ export default function WorldPage({ params }: Props) {
   ];
 
   return (
-    <div className="min-h-screen bg-en-50 dark:bg-gray-900">
+    <div className="min-h-screen flex flex-col">
       <Header student={student} />
 
       {/* Hero */}
@@ -111,7 +111,7 @@ export default function WorldPage({ params }: Props) {
 
       {/* Stats bar */}
       {student && stageProgress && (
-        <div className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+        <div className="bg-white/95 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
           <div className="max-w-5xl mx-auto px-4 py-3 flex gap-3 flex-wrap">
             {[
               { label: "Grammatik", icon: "📝", count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length,                  total: content?.grammar.length ?? 0 },
@@ -145,6 +145,7 @@ export default function WorldPage({ params }: Props) {
         </div>
       )}
 
+      <div className="flex-1 bg-white/95 dark:bg-gray-900/95">
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Tabs */}
         <div className="overflow-x-auto pb-1 mb-6">
@@ -242,6 +243,7 @@ export default function WorldPage({ params }: Props) {
           </div>
         )}
       </main>
+      </div>
     </div>
   );
 }

@@ -65,70 +65,39 @@ export default function HomePage() {
 
   // ─── Login screen ────────────────────────────────────────────────────────────
   if (!student) {
-    const stageCards = STAGES.map((s) => ({
-      emoji: s.emoji,
-      name: s.name,
-      label: s.grades,
-      color: s.bgClass,
-    }));
-
     return (
-      <div
-        className="min-h-screen flex items-center justify-center p-4 gap-6"
-        style={{
-          background: "linear-gradient(135deg, #e8f0fd 0%, #f0f4ff 30%, #fff5f5 70%, #f0f8ff 100%)"
-        }}
-      >
-        {/* Left stage cards */}
-        <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
-          {stageCards.slice(0, 2).map((s, i) => (
-            <div
-              key={s.name}
-              className={`rounded-3xl overflow-hidden aspect-[4/3] relative border-3 border-white/50 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${s.color}`}
-              style={{
-                boxShadow: "0 6px 0 0 rgba(37, 99, 235, 0.2), 0 10px 20px -4px rgba(37, 99, 235, 0.15)",
-                animation: `float 3s ease-in-out infinite ${i * 0.5}s`
-              }}
-            >
-              <div className="absolute inset-0 flex flex-col justify-end p-5">
-                <div className="text-4xl mb-2">{s.emoji}</div>
-                <p className="text-white font-bold text-base leading-tight drop-shadow-lg">{s.name}</p>
-                <p className="text-white/80 text-sm font-medium">{s.label}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="min-h-screen flex items-center justify-center p-4">
+        <div className="w-full max-w-md animate-slide-up">
 
-        {/* Center: login card */}
-        <div className="w-full max-w-md animate-slide-up flex-shrink-0">
           {/* Title */}
           <div className="text-center mb-6">
             <div
-              className="inline-flex items-center justify-center w-24 h-24 rounded-3xl mb-4 text-5xl animate-float border-4 border-white/60"
+              className="inline-flex items-center justify-center w-24 h-24 rounded-3xl mb-4 text-5xl animate-float border-4 border-white/30"
               style={{
-                background: "linear-gradient(135deg, #2563eb, #1e40af)",
-                boxShadow: "0 8px 0 0 rgba(30, 64, 175, 0.4), 0 12px 24px -4px rgba(37, 99, 235, 0.3), inset 0 4px 8px 0 rgba(255, 255, 255, 0.3)"
+                background: "rgba(255,255,255,0.15)",
+                backdropFilter: "blur(8px)",
+                boxShadow: "0 8px 0 0 rgba(0,0,0,0.2), 0 12px 24px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4)"
               }}
             >
               🇬🇧
             </div>
-            <h1 className="text-5xl font-black tracking-tight drop-shadow-sm" style={{ color: "#1e3268" }}>
+            <h1 className="text-5xl font-black tracking-tight text-white drop-shadow-lg">
               Engelskajakten
             </h1>
-            <p className="mt-2 text-lg font-bold" style={{ color: "#2563eb" }}>
+            <p className="mt-2 text-lg font-bold text-white/80">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
 
           {/* Login card */}
           <div
-            className="bg-white rounded-4xl p-8 border-3 border-en-100"
+            className="bg-white rounded-4xl p-8"
             style={{
-              boxShadow: "0 8px 0 0 rgba(37, 99, 235, 0.12), 0 16px 32px -8px rgba(37, 99, 235, 0.18), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
+              boxShadow: "0 8px 0 0 rgba(0,0,0,0.2), 0 20px 40px -8px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.9)"
             }}
           >
             <h2 className="text-2xl font-bold mb-1" style={{ color: "#1e3268" }}>Välkommen!</h2>
-            <p className="text-en-400 text-base mb-6 font-medium">
+            <p className="text-gray-500 text-base mb-6 font-medium">
               Skriv ditt namn för att börja eller fortsätta.
             </p>
 
@@ -160,8 +129,8 @@ export default function HomePage() {
                       }`}
                       style={{
                         boxShadow: selectedAvatar === avatar.id
-                          ? "0 4px 0 0 rgba(37, 99, 235, 0.3), 0 6px 12px -2px rgba(37, 99, 235, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
-                          : "0 3px 0 0 rgba(37, 99, 235, 0.12), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                          ? "0 4px 0 0 rgba(37,99,235,0.3), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
+                          : "0 3px 0 0 rgba(37,99,235,0.1), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
                       }}
                     >
                       {avatar.image ? (
@@ -172,7 +141,7 @@ export default function HomePage() {
                     </button>
                   ))}
                 </div>
-                <p className="text-sm font-bold mt-3 text-center" style={{ color: "#2563eb" }}>
+                <p className="text-sm font-bold mt-3 text-center text-en-500">
                   {AVATARS.find((a) => a.id === selectedAvatar)?.name}
                 </p>
               </div>
@@ -180,33 +149,13 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                className="w-full btn-primary text-xl py-4 rounded-2xl border-3 border-en-400 disabled:from-gray-200 disabled:to-gray-300 disabled:text-gray-400 disabled:border-gray-200"
-                style={{ background: nameInput.trim() ? "linear-gradient(135deg, #dc2626, #b91c1c)" : undefined }}
+                className="w-full btn-primary text-xl py-4 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed"
+                style={{ background: nameInput.trim() ? "linear-gradient(135deg, #dc2626, #b91c1c)" : "rgba(0,0,0,0.1)" }}
               >
                 Starta jakten! 🚀
               </button>
             </form>
           </div>
-        </div>
-
-        {/* Right stage cards */}
-        <div className="hidden lg:flex flex-col gap-4 w-64 xl:w-72 flex-shrink-0">
-          {stageCards.slice(2, 4).map((s, i) => (
-            <div
-              key={s.name}
-              className={`rounded-3xl overflow-hidden aspect-[4/3] relative border-3 border-white/50 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${s.color}`}
-              style={{
-                boxShadow: "0 6px 0 0 rgba(37, 99, 235, 0.2), 0 10px 20px -4px rgba(37, 99, 235, 0.15)",
-                animation: `float 3s ease-in-out infinite ${(i + 2) * 0.5}s`
-              }}
-            >
-              <div className="absolute inset-0 flex flex-col justify-end p-5">
-                <div className="text-4xl mb-2">{s.emoji}</div>
-                <p className="text-white font-bold text-base leading-tight drop-shadow-lg">{s.name}</p>
-                <p className="text-white/80 text-sm font-medium">{s.label}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     );
@@ -214,14 +163,14 @@ export default function HomePage() {
 
   // ─── Logged in – stage selection ─────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-en-50 dark:bg-gray-900">
+    <div className="min-h-screen">
       <Header student={student} onLogout={handleLogout} />
 
       <main className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
-          <h2 className="text-2xl font-black text-en-900 dark:text-gray-100">Välj din värld</h2>
-          <p className="text-en-400 dark:text-gray-400 font-medium mt-1">
-            Välkommen tillbaka, {student.name}! Totalt ⭐ {student.totalPoints} poäng.
+          <h2 className="text-2xl font-black text-white drop-shadow">Välj din värld</h2>
+          <p className="text-white/70 font-medium mt-1">
+            Välkommen tillbaka, {student.name}! Vilket stadie vill du träna på?
           </p>
         </div>
 

@@ -12,11 +12,15 @@
   }
 
   body {
-    @apply bg-en-50 text-en-900;
+    background: linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 28%, #9f1239 62%, #dc2626 100%) fixed;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #ffffff;
   }
 
   .dark body {
-    @apply bg-gray-900 text-gray-100;
+    background: linear-gradient(160deg, #0a0f2e 0%, #0d1a4a 28%, #450a0a 62%, #6b0f0f 100%) fixed;
+    background-attachment: fixed;
   }
 }
 
