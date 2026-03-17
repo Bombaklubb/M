@@ -502,7 +502,8 @@ export default function KistorView() {
             <div>
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Avklara kapitel</p>
               <ul className="space-y-1.5 text-sm text-blue-100/80">
-                <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> Klara ett kapitel för första gången (≥50%)</span></li>
+                <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> Klara ditt allra första kapitel!</span></li>
+                <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> Klara ett nytt kapitel för första gången (≥50%)</span></li>
                 <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> Få 3 stjärnor på ett kapitel för första gången</span></li>
                 <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> Perfekt poäng (100%) på ett kapitel</span></li>
                 <li className="flex items-start gap-2"><span>🏆</span><span><strong>Guldlåda:</strong> Klara alla kapitel i en hel värld!</span></li>
@@ -511,22 +512,22 @@ export default function KistorView() {
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Poäng-milstolpar</p>
               <ul className="space-y-1 text-sm text-blue-100/80">
-                <li className="flex gap-2"><span>📦</span><span>100, 200, 600 p</span></li>
+                <li className="flex gap-2"><span>📦</span><span>50, 100, 200, 600 p</span></li>
                 <li className="flex gap-2"><span>🪙</span><span>300, 500, 750, 1 500, 2 000 p</span></li>
                 <li className="flex gap-2"><span>🏆</span><span>1 000, 2 500, 3 500, 5 000 p</span></li>
               </ul>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
-              <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Övningsmilstolpar</p>
+              <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Klarade kapitel (antal)</p>
               <ul className="space-y-1 text-sm text-blue-100/80">
-                <li className="flex gap-2"><span>📦</span><span>5, 10 övningar</span></li>
-                <li className="flex gap-2"><span>🪙</span><span>15, 20, 40 övningar</span></li>
-                <li className="flex gap-2"><span>🏆</span><span>30, 60, 75, 100 övningar</span></li>
+                <li className="flex gap-2"><span>📦</span><span>1, 2, 3, 5, 10 kapitel</span></li>
+                <li className="flex gap-2"><span>🪙</span><span>15, 20, 40 kapitel</span></li>
+                <li className="flex gap-2"><span>🏆</span><span>30, 60, 75, 100 kapitel</span></li>
               </ul>
             </div>
             <div className="flex items-start gap-2 text-sm text-blue-100/80 border-t border-blue-400/20 pt-3">
               <span>🎁</span>
-              <span><strong>Mysterylåda:</strong> Slumpmässig chans (15%) efter varje övning!</span>
+              <span><strong>Mysterylåda:</strong> 25% chans de 5 första kapitlen, 15% därefter!</span>
             </div>
           </div>
         </section>

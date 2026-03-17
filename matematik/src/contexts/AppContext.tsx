@@ -171,7 +171,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       ...topicEventResult.chests.map(c => ({ chest: c })),
     ];
 
-    const mysteryReward = rollMysteryBox(gam.badges);
+    const mysteryReward = rollMysteryBox(gam.badges, prevExercises);
     let updatedBadges = [...gam.badges];
     let mysteryChest: MattChest | null = null;
 
