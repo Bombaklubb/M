@@ -57,8 +57,10 @@
   }
 
   body {
-    background: #eef2fb;
-    color: #0a2463;
+    background: linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%) fixed;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #ffffff;
   }
 }
 
@@ -231,8 +233,8 @@
   @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full;
+  @apply bg-white/20 rounded-full;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400;
+  @apply bg-white/35;
 }

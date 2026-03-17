@@ -9,7 +9,7 @@ import { AVATARS } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 
-// Stage accent colors (British-inspired palette: navy, red, white)
+// Stage accent colors
 const stageAccents: Record<string, { from: string; to: string; badge: string }> = {
   lagstadiet:    { from: "#14532d", to: "#166534", badge: "#4ade80" },
   mellanstadiet: { from: "#0f2b6b", to: "#1d4ed8", badge: "#93c5fd" },
@@ -62,6 +62,8 @@ const FLOAT_ITEMS = [
   { text: "X", x: "59%", y: "91%", size: "2rem",   delay: "3s",   dur: "6s"  },
 ];
 
+const BG = "linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%)";
+
 export default function HomePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [nameInput, setNameInput] = useState("");
@@ -88,8 +90,8 @@ export default function HomePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: "#eef2fb" }}>
-        <div className="w-10 h-10 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
+      <div className="min-h-screen flex items-center justify-center" style={{ background: BG }}>
+        <div className="w-10 h-10 border-4 border-white/20 border-t-white rounded-full animate-spin" />
       </div>
     );
   }
@@ -99,14 +101,14 @@ export default function HomePage() {
     return (
       <div
         className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #dde8ff 0%, #f5f8ff 50%, #dde8ff 100%)" }}
+        style={{ background: BG }}
       >
         {/* Floating decorative letters */}
         <div className="pointer-events-none absolute inset-0 select-none" aria-hidden="true">
           {FLOAT_ITEMS.map((item) => (
             <span
               key={item.text + item.x}
-              className="absolute font-black text-blue-900/[0.07] animate-float"
+              className="absolute font-black text-white/[0.07] animate-float"
               style={{
                 left: item.x,
                 top: item.y,
@@ -120,15 +122,19 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Subtle glow orbs — blue and red */}
+        {/* Glow orbs */}
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           <div
-            className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-25 blur-3xl"
-            style={{ background: "radial-gradient(circle, #93c5fd, transparent)" }}
+            className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full opacity-20 blur-3xl"
+            style={{ background: "radial-gradient(circle, #3b82f6, transparent)" }}
           />
           <div
-            className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full opacity-20 blur-3xl"
-            style={{ background: "radial-gradient(circle, #fca5a5, transparent)" }}
+            className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-25 blur-3xl"
+            style={{ background: "radial-gradient(circle, #dc2626, transparent)" }}
+          />
+          <div
+            className="absolute top-3/4 left-1/2 w-64 h-64 rounded-full opacity-10 blur-3xl"
+            style={{ background: "radial-gradient(circle, #ffffff, transparent)" }}
           />
         </div>
 
@@ -138,8 +144,8 @@ export default function HomePage() {
           {/* Logo & title */}
           <div className="flex flex-col items-center mb-6">
             <div
-              className="w-20 h-20 rounded-2xl overflow-hidden mb-4 animate-float"
-              style={{ boxShadow: "0 0 30px rgba(29,78,216,0.25), 0 0 50px rgba(220,38,38,0.1)" }}
+              className="w-22 h-22 rounded-2xl overflow-hidden mb-4 animate-float"
+              style={{ boxShadow: "0 0 40px rgba(59,130,246,0.6), 0 0 80px rgba(220,38,38,0.25)" }}
             >
               <img
                 src="/content/engelskajakten-icon.png"
@@ -147,10 +153,10 @@ export default function HomePage() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl font-black tracking-tight" style={{ color: "#0a2463" }}>
+            <h1 className="text-4xl font-black tracking-tight text-white drop-shadow-lg">
               Engelskajakten
             </h1>
-            <p className="text-blue-600 text-sm font-medium mt-1">
+            <p className="text-blue-200 text-sm font-medium mt-1">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
@@ -159,17 +165,17 @@ export default function HomePage() {
           <div
             className="rounded-3xl p-6"
             style={{
-              background: "rgba(255,255,255,0.85)",
-              border: "1px solid rgba(29,78,216,0.15)",
-              backdropFilter: "blur(20px)",
-              boxShadow: "0 20px 50px rgba(10,36,99,0.12)",
+              background: "rgba(255,255,255,0.97)",
+              border: "1px solid rgba(255,255,255,0.4)",
+              backdropFilter: "blur(24px)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.15), inset 0 1px 0 rgba(255,255,255,0.8)",
             }}
           >
             <form onSubmit={handleLogin} className="space-y-5">
 
               {/* Name input */}
               <div>
-                <label className="block text-sm font-bold mb-2" style={{ color: "rgba(10,36,99,0.6)" }}>
+                <label className="block text-sm font-bold mb-2 text-blue-900/70">
                   Vad heter du?
                 </label>
                 <input
@@ -179,17 +185,13 @@ export default function HomePage() {
                   placeholder="Ditt namn..."
                   autoFocus
                   maxLength={30}
-                  className="w-full px-4 py-3.5 rounded-2xl text-blue-900 placeholder-blue-900/25 text-base font-medium focus:outline-none transition-all"
-                  style={{
-                    background: "rgba(10,36,99,0.04)",
-                    border: "1px solid rgba(10,36,99,0.15)",
-                  }}
+                  className="w-full px-4 py-3.5 rounded-2xl text-blue-900 placeholder-blue-900/30 text-base font-medium focus:outline-none transition-all bg-blue-50/60 border border-blue-200"
                   onFocus={(e) => {
-                    e.currentTarget.style.border = "1px solid rgba(29,78,216,0.7)";
+                    e.currentTarget.style.borderColor = "rgba(29,78,216,0.7)";
                     e.currentTarget.style.boxShadow = "0 0 0 3px rgba(29,78,216,0.12)";
                   }}
                   onBlur={(e) => {
-                    e.currentTarget.style.border = "1px solid rgba(10,36,99,0.15)";
+                    e.currentTarget.style.borderColor = "";
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 />
@@ -197,7 +199,7 @@ export default function HomePage() {
 
               {/* Avatar selection */}
               <div>
-                <p className="text-sm font-bold mb-2" style={{ color: "rgba(10,36,99,0.6)" }}>
+                <p className="text-sm font-bold mb-2 text-blue-900/70">
                   Välj din karaktär
                 </p>
                 <div className="grid grid-cols-5 gap-2">
@@ -217,7 +219,7 @@ export default function HomePage() {
                           : "2px solid rgba(10,36,99,0.1)",
                         transform: selectedAvatar === avatar.id ? "scale(1.1)" : "scale(1)",
                         boxShadow: selectedAvatar === avatar.id
-                          ? "0 0 12px rgba(59,130,246,0.4)"
+                          ? "0 0 12px rgba(29,78,216,0.3)"
                           : "none",
                       }}
                     >
@@ -248,9 +250,9 @@ export default function HomePage() {
                 style={{
                   background: nameInput.trim()
                     ? "linear-gradient(135deg, #dc2626, #b91c1c)"
-                    : "rgba(255,255,255,0.08)",
+                    : "rgba(10,36,99,0.1)",
                   boxShadow: nameInput.trim()
-                    ? "0 4px 20px rgba(220,38,38,0.45)"
+                    ? "0 4px 20px rgba(220,38,38,0.5), inset 0 1px 0 rgba(255,255,255,0.2)"
                     : "none",
                 }}
               >
@@ -260,7 +262,7 @@ export default function HomePage() {
           </div>
 
           {/* Footer */}
-          <p className="text-center text-xs mt-6" style={{ color: "rgba(10,36,99,0.3)" }}>
+          <p className="text-center text-xs mt-6 text-white/30">
             Kontakt: martin.akdogan@enkoping.se
           </p>
         </div>
@@ -270,10 +272,7 @@ export default function HomePage() {
 
   // ─── Logged-in: stage selection ──────────────────────────────────────────────
   return (
-    <div
-      className="min-h-screen"
-      style={{ background: "linear-gradient(135deg, #dde8ff 0%, #f5f8ff 50%, #dde8ff 100%)" }}
-    >
+    <div className="min-h-screen" style={{ background: BG }}>
       <Header student={student} onLogout={handleLogout} />
 
       <main className="max-w-3xl mx-auto px-4 py-6">
@@ -282,7 +281,7 @@ export default function HomePage() {
         <div className="flex flex-col items-center mb-8 animate-fade-in">
           <div
             className="w-20 h-20 rounded-2xl overflow-hidden mb-4"
-            style={{ boxShadow: "0 0 40px rgba(29,78,216,0.4), 0 0 60px rgba(220,38,38,0.15)" }}
+            style={{ boxShadow: "0 0 40px rgba(59,130,246,0.5), 0 0 80px rgba(220,38,38,0.2)" }}
           >
             <img
               src="/content/engelskajakten-icon.png"
@@ -290,7 +289,7 @@ export default function HomePage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-blue-900/45 text-xs font-bold tracking-widest uppercase">
+          <p className="text-white/50 text-xs font-bold tracking-widest uppercase">
             Välj din värld
           </p>
         </div>
@@ -305,11 +304,11 @@ export default function HomePage() {
             return (
               <Link key={stage.id} href={`/world/${stage.id}`} className="block group cursor-pointer">
                 <div
-                  className="rounded-2xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl"
+                  className="rounded-2xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-2xl"
                   style={{
-                    background: "rgba(255,255,255,0.88)",
-                    border: "1px solid rgba(29,78,216,0.12)",
-                    boxShadow: "0 4px 20px rgba(10,36,99,0.08)",
+                    background: "rgba(255,255,255,0.97)",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.1)",
                   }}
                 >
                   {/* Image header */}
@@ -322,7 +321,7 @@ export default function HomePage() {
                     <div
                       className="absolute inset-0"
                       style={{
-                        background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55))",
+                        background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.45))",
                       }}
                     />
                     {/* Grade badge */}
@@ -330,7 +329,7 @@ export default function HomePage() {
                       className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full"
                       style={{
                         background: "rgba(0,0,0,0.45)",
-                        border: `1px solid ${accent.badge}50`,
+                        border: `1px solid ${accent.badge}60`,
                         color: accent.badge,
                       }}
                     >
@@ -354,10 +353,10 @@ export default function HomePage() {
                     <div className="flex items-center justify-between mt-3">
                       {pts > 0 ? (
                         <div className="flex items-center gap-1.5">
-                          <span className="text-amber-400 text-sm">⭐</span>
+                          <span className="text-amber-500 text-sm">⭐</span>
                           <NumberTicker
                             value={pts}
-                            className="text-amber-300 font-bold text-sm"
+                            className="text-amber-600 font-bold text-sm"
                             duration={800}
                           />
                           <span className="text-blue-900/40 text-xs">p</span>
@@ -368,10 +367,11 @@ export default function HomePage() {
                         </span>
                       )}
                       <span
-                        className="text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200"
+                        className="text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200 group-hover:shadow-md"
                         style={{
-                          background: "rgba(220,38,38,0.8)",
+                          background: "linear-gradient(135deg, #dc2626, #b91c1c)",
                           color: "white",
+                          boxShadow: "0 2px 8px rgba(220,38,38,0.4)",
                         }}
                       >
                         Öppna →
@@ -386,7 +386,7 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="text-center py-6 text-xs" style={{ color: "rgba(10,36,99,0.35)" }}>
+      <footer className="text-center py-6 text-xs text-white/25">
         <span>Kontakt: martin.akdogan@enkoping.se</span>
         <span className="mx-3">·</span>
         <span>Engelskajakten av Martin Akdogan</span>
