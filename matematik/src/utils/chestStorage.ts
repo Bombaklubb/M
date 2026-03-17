@@ -3,9 +3,11 @@ import type { ChestType, MattChest, MattGamificationData, MysteryBoxReward } fro
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 export const BOSS_UNLOCK_THRESHOLD = 5; // övningar för att låsa upp boss
-export const MYSTERY_BOX_CHANCE = 0.15; // 15% chans efter varje övning
+export const MYSTERY_BOX_CHANCE_EARLY = 0.25; // 25% chans under de 5 första topics
+export const MYSTERY_BOX_CHANCE = 0.15;       // 15% chans därefter
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
+  { points: 50,    type: 'wood' },   // ← ny: nås redan i första sessionen
   { points: 100,   type: 'wood' },
   { points: 200,   type: 'wood' },
   { points: 300,   type: 'silver' },
@@ -24,6 +26,9 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
+  { exercises: 1,   type: 'wood' },  // ← ny: första klarade topic direkt!
+  { exercises: 2,   type: 'wood' },  // ← ny
+  { exercises: 3,   type: 'wood' },  // ← ny
   { exercises: 5,   type: 'wood' },
   { exercises: 10,  type: 'wood' },
   { exercises: 15,  type: 'silver' },
@@ -161,9 +166,13 @@ export function chestsEarnedFromExercises(
   return earned;
 }
 
-/** 15% chance to get a mystery box reward. Returns null if no box. */
-export function rollMysteryBox(badges: string[]): MysteryBoxReward | null {
-  if (Math.random() > MYSTERY_BOX_CHANCE) return null;
+/**
+ * Mystery box roll. 25% chance for the first 5 topics, 15% after that.
+ * exercisesCompleted = number of topics finished so far (before this one).
+ */
+export function rollMysteryBox(badges: string[], exercisesCompleted = 99): MysteryBoxReward | null {
+  const chance = exercisesCompleted < 5 ? MYSTERY_BOX_CHANCE_EARLY : MYSTERY_BOX_CHANCE;
+  if (Math.random() > chance) return null;
   const roll = Math.random();
   if (roll < 0.5) {
     const pts = Math.floor(Math.random() * 41) + 10;
@@ -269,9 +278,11 @@ export function chestsEarnedFromTopicEvent(opts: {
     return { id: `chest_${Date.now()}_${suffix}`, type, earnedAt: now, opened: false };
   }
 
-  // 1. First completion (score >= 50) → wood chest
+  // 1. First completion (score >= 50)
+  //    Very first topic ever → silver (big wow moment), subsequent → wood
   if (opts.score >= 50 && !tc.includes(opts.topicId)) {
-    newChests.push(mkChest('wood', 'tc'));
+    const isFirst = opts.gam.topicCompletionChestsRewarded.length === 0;
+    newChests.push(mkChest(isFirst ? 'silver' : 'wood', 'tc'));
     tc.push(opts.topicId);
   }
 
