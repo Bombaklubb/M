@@ -42,8 +42,6 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
               <p className="text-white/80 text-sm">{world.subtitle}</p>
             </div>
           </div>
-          <p className="text-white/70 text-sm italic mb-4">"{world.storyIntro}"</p>
-
           {/* Progress */}
           <div className="bg-white/20 rounded-2xl p-3 mb-4">
             <div className="flex justify-between text-sm text-white/80 mb-1.5">
