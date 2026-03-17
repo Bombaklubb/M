@@ -7,11 +7,15 @@ import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
-import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { MagicCard } from "@/components/magicui/magic-card";
 import { NumberTicker } from "@/components/magicui/number-ticker";
+
+// Stage accent colors (British-inspired palette: navy, red, white)
+const stageAccents: Record<string, { from: string; to: string; badge: string }> = {
+  lagstadiet:    { from: "#14532d", to: "#166534", badge: "#4ade80" },
+  mellanstadiet: { from: "#0f2b6b", to: "#1d4ed8", badge: "#93c5fd" },
+  hogstadiet:    { from: "#7f1d1d", to: "#b91c1c", badge: "#fca5a5" },
+  gymnasiet:     { from: "#1f2937", to: "#374151", badge: "#d1d5db" },
+};
 
 const stageImages: Record<string, string> = {
   lagstadiet:    "/content/sprakdjungeln.png",
@@ -20,29 +24,15 @@ const stageImages: Record<string, string> = {
   gymnasiet:     "/content/sprakakademin.png",
 };
 
-const stageGradients: Record<string, string> = {
-  lagstadiet:    "from-emerald-950/90",
-  mellanstadiet: "from-blue-950/90",
-  hogstadiet:    "from-purple-950/90",
-  gymnasiet:     "from-gray-950/90",
-};
-
-const stageBeams: Record<string, [string, string]> = {
-  lagstadiet:    ["#4ade80", "#22c55e"],
-  mellanstadiet: ["#60a5fa", "#3b82f6"],
-  hogstadiet:    ["#c084fc", "#a855f7"],
-  gymnasiet:     ["#9ca3af", "#6b7280"],
-};
-
 function getStagePoints(student: StudentData, stageId: string): number {
   const sp = student.stages[stageId as StageId];
   if (!sp) return 0;
   let pts = 0;
-  for (const m of Object.values(sp.grammarModules   ?? {})) pts += m.points;
-  for (const m of Object.values(sp.readingModules   ?? {})) pts += m.points;
-  for (const m of Object.values(sp.spellingModules  ?? {})) pts += m.points;
+  for (const m of Object.values(sp.grammarModules    ?? {})) pts += m.points;
+  for (const m of Object.values(sp.readingModules    ?? {})) pts += m.points;
+  for (const m of Object.values(sp.spellingModules   ?? {})) pts += m.points;
   for (const m of Object.values(sp.wordsearchModules ?? {})) pts += m.points;
-  for (const m of Object.values(sp.crosswordModules ?? {})) pts += m.points;
+  for (const m of Object.values(sp.crosswordModules  ?? {})) pts += m.points;
   return pts;
 }
 
@@ -50,13 +40,27 @@ function getStageCompleted(student: StudentData, stageId: string): number {
   const sp = student.stages[stageId as StageId];
   if (!sp) return 0;
   let done = 0;
-  for (const m of Object.values(sp.grammarModules   ?? {})) if (m.completed) done++;
-  for (const m of Object.values(sp.readingModules   ?? {})) if (m.completed) done++;
-  for (const m of Object.values(sp.spellingModules  ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.grammarModules    ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.readingModules    ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.spellingModules   ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.wordsearchModules ?? {})) if (m.completed) done++;
-  for (const m of Object.values(sp.crosswordModules ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.crosswordModules  ?? {})) if (m.completed) done++;
   return done;
 }
+
+// Decorative floating letters for background
+const FLOAT_ITEMS = [
+  { text: "A", x: "6%",  y: "10%", size: "2.5rem", delay: "0s",   dur: "6s"  },
+  { text: "B", x: "87%", y: "7%",  size: "2rem",   delay: "0.8s", dur: "7s"  },
+  { text: "C", x: "4%",  y: "68%", size: "3rem",   delay: "1.5s", dur: "5s"  },
+  { text: "D", x: "91%", y: "63%", size: "1.8rem", delay: "2s",   dur: "8s"  },
+  { text: "E", x: "14%", y: "86%", size: "2rem",   delay: "0.4s", dur: "6.5s"},
+  { text: "F", x: "79%", y: "83%", size: "2.5rem", delay: "1.2s", dur: "7s"  },
+  { text: "?", x: "74%", y: "28%", size: "2.8rem", delay: "0.6s", dur: "5.5s"},
+  { text: "!", x: "19%", y: "38%", size: "2rem",   delay: "1.8s", dur: "6s"  },
+  { text: "Z", x: "49%", y: "4%",  size: "1.6rem", delay: "2.5s", dur: "7.5s"},
+  { text: "X", x: "59%", y: "91%", size: "2rem",   delay: "3s",   dur: "6s"  },
+];
 
 export default function HomePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
@@ -84,107 +88,118 @@ export default function HomePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-4xl animate-bounce-slow">🌿</div>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: "#0a1128" }}>
+        <div className="w-10 h-10 border-4 border-blue-700/30 border-t-blue-400 rounded-full animate-spin" />
       </div>
     );
   }
 
-  // ─── Login screen ───────────────────────────────────────────────────────────
+  // ─── Login screen ────────────────────────────────────────────────────────────
   if (!student) {
-    const stageCards = [
-      { img: "/content/sprakdjungeln.png", name: "Språkdjungeln", label: "Åk 1–3", gradient: "from-emerald-900/80" },
-      { img: "/content/sprakstaden.png",   name: "Språkstaden",   label: "Åk 4–6", gradient: "from-blue-900/80" },
-      { img: "/content/sprakarenan.png",   name: "Språkarenan",   label: "Åk 7–9", gradient: "from-purple-900/80" },
-      { img: "/content/sprakakademin.png", name: "Språkakademin", label: "Gymnasiet", gradient: "from-gray-900/80" },
-    ];
-
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-emerald-50 flex items-center justify-center p-3 gap-4 relative overflow-hidden">
-
-        {/* Background decorative orbs */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-300/20 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "1.5s" }} />
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-emerald-300/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "3s" }} />
-        </div>
-
-        {/* Left: sprakdjungeln + sprakstaden */}
-        <div className="hidden lg:flex flex-col gap-3 w-48 xl:w-56 flex-shrink-0">
-          {stageCards.slice(0, 2).map((s, i) => (
-            <MagicCard
-              key={s.name}
-              gradientColor="#6366f130"
-              className="rounded-2xl overflow-hidden aspect-[4/3] relative border-2 border-white/60 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      <div
+        className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #080d1e 0%, #0f1c3f 50%, #080d1e 100%)" }}
+      >
+        {/* Floating decorative letters */}
+        <div className="pointer-events-none absolute inset-0 select-none" aria-hidden="true">
+          {FLOAT_ITEMS.map((item) => (
+            <span
+              key={item.text + item.x}
+              className="absolute font-black text-white/[0.05] animate-float"
               style={{
-                boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.2), 0 8px 16px -4px rgba(99, 102, 241, 0.15)",
-                animation: `float 3s ease-in-out infinite ${i * 0.5}s`
-              } as React.CSSProperties}
+                left: item.x,
+                top: item.y,
+                fontSize: item.size,
+                animationDuration: item.dur,
+                animationDelay: item.delay,
+              }}
             >
-              <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
-              <div className={`absolute inset-0 bg-gradient-to-t ${s.gradient} to-transparent`} />
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="text-white font-bold text-sm leading-tight drop-shadow-lg">{s.name}</p>
-                <p className="text-white/80 text-xs font-medium">{s.label}</p>
-              </div>
-            </MagicCard>
+              {item.text}
+            </span>
           ))}
         </div>
 
-        {/* Center: login card */}
-        <div className="w-full max-w-sm animate-slide-up flex-shrink-0">
-          {/* Title */}
-          <div className="text-center mb-3">
+        {/* Subtle glow orbs — blue and red */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          <div
+            className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-15 blur-3xl"
+            style={{ background: "radial-gradient(circle, #1d4ed8, transparent)" }}
+          />
+          <div
+            className="absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full opacity-10 blur-3xl"
+            style={{ background: "radial-gradient(circle, #dc2626, transparent)" }}
+          />
+        </div>
+
+        {/* Login card */}
+        <div className="relative w-full max-w-md animate-slide-up z-10">
+
+          {/* Logo & title */}
+          <div className="flex flex-col items-center mb-6">
             <div
-              className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-2 animate-float overflow-hidden"
-              style={{
-                boxShadow: "0 5px 0 0 rgba(59, 130, 246, 0.4), 0 8px 18px -4px rgba(59, 130, 246, 0.3)"
-              }}
+              className="w-20 h-20 rounded-2xl overflow-hidden mb-4 animate-float"
+              style={{ boxShadow: "0 0 40px rgba(29,78,216,0.5), 0 0 80px rgba(220,38,38,0.2)" }}
             >
-              <img src="/content/engelskajakten-icon.png" alt="Engelskajakten" className="w-full h-full object-cover" />
+              <img
+                src="/content/engelskajakten-icon.png"
+                alt="Engelskajakten"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <h1 className="text-3xl font-black tracking-tight drop-shadow-sm">
-              <AnimatedGradientText>Engelskajakten</AnimatedGradientText>
+            <h1 className="text-4xl font-black tracking-tight" style={{ color: "#ffffff" }}>
+              Engelskajakten
             </h1>
-            <p className="text-emerald-600 mt-1 text-sm font-bold">
+            <p className="text-blue-300 text-sm font-medium mt-1">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
 
-          {/* Login form - Clay card with BorderBeam */}
+          {/* Card */}
           <div
-            className="relative bg-white rounded-3xl p-5 border-2 border-indigo-100 overflow-hidden"
+            className="rounded-3xl p-6"
             style={{
-              boxShadow: "0 6px 0 0 rgba(99, 102, 241, 0.15), 0 12px 24px -8px rgba(99, 102, 241, 0.2), inset 0 3px 6px 0 rgba(255, 255, 255, 0.8)"
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.09)",
+              backdropFilter: "blur(20px)",
+              boxShadow: "0 25px 60px rgba(0,0,0,0.6)",
             }}
           >
-            <BorderBeam
-              size={300}
-              duration={12}
-              colorFrom="#6366f1"
-              colorTo="#a855f7"
-              borderWidth={2}
-            />
-            <div className="relative">
-            <h2 className="text-lg font-bold text-indigo-900 mb-0.5">Välkommen!</h2>
-            <p className="text-indigo-400 text-sm mb-3 font-medium">
-              Skriv ditt namn för att börja eller fortsätta.
-            </p>
+            <form onSubmit={handleLogin} className="space-y-5">
 
-            <form onSubmit={handleLogin} className="space-y-3">
-              <input
-                type="text"
-                value={nameInput}
-                onChange={(e) => setNameInput(e.target.value)}
-                placeholder="Ditt namn..."
-                className="input-field text-base"
-                autoFocus
-                maxLength={30}
-              />
+              {/* Name input */}
+              <div>
+                <label className="block text-sm font-bold mb-2" style={{ color: "rgba(255,255,255,0.6)" }}>
+                  Vad heter du?
+                </label>
+                <input
+                  type="text"
+                  value={nameInput}
+                  onChange={(e) => setNameInput(e.target.value)}
+                  placeholder="Ditt namn..."
+                  autoFocus
+                  maxLength={30}
+                  className="w-full px-4 py-3.5 rounded-2xl text-white placeholder-white/25 text-base font-medium focus:outline-none transition-all"
+                  style={{
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.border = "1px solid rgba(59,130,246,0.7)";
+                    e.currentTarget.style.boxShadow = "0 0 0 3px rgba(59,130,246,0.15)";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.border = "1px solid rgba(255,255,255,0.1)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                />
+              </div>
 
               {/* Avatar selection */}
               <div>
-                <p className="text-sm font-bold text-indigo-700 mb-2">Välj din karaktär</p>
+                <p className="text-sm font-bold mb-2" style={{ color: "rgba(255,255,255,0.6)" }}>
+                  Välj din karaktär
+                </p>
                 <div className="grid grid-cols-5 gap-2">
                   {AVATARS.map((avatar) => (
                     <button
@@ -192,174 +207,189 @@ export default function HomePage() {
                       type="button"
                       onClick={() => setSelectedAvatar(avatar.id)}
                       title={avatar.name}
-                      className={`aspect-square rounded-xl flex items-center justify-center transition-all duration-200 overflow-hidden text-xl cursor-pointer border-2 ${
-                        selectedAvatar === avatar.id
-                          ? "border-emerald-400 scale-110 bg-emerald-50"
-                          : "border-indigo-100 bg-indigo-50 hover:border-indigo-300 hover:scale-105"
-                      }`}
+                      className="aspect-square rounded-xl flex items-center justify-center transition-all duration-200 overflow-hidden cursor-pointer"
                       style={{
+                        background: selectedAvatar === avatar.id
+                          ? "rgba(29,78,216,0.35)"
+                          : "rgba(255,255,255,0.05)",
+                        border: selectedAvatar === avatar.id
+                          ? "2px solid rgba(59,130,246,0.8)"
+                          : "2px solid rgba(255,255,255,0.07)",
+                        transform: selectedAvatar === avatar.id ? "scale(1.1)" : "scale(1)",
                         boxShadow: selectedAvatar === avatar.id
-                          ? "0 3px 0 0 rgba(16, 185, 129, 0.3), 0 4px 8px -2px rgba(16, 185, 129, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
-                          : "0 2px 0 0 rgba(99, 102, 241, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                          ? "0 0 12px rgba(59,130,246,0.4)"
+                          : "none",
                       }}
                     >
                       {avatar.image ? (
-                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-0.5" />
+                        <img
+                          src={avatar.image}
+                          alt={avatar.name}
+                          className="w-full h-full object-contain p-0.5"
+                        />
                       ) : (
-                        avatar.emoji
+                        <span className="text-xl">{avatar.emoji}</span>
                       )}
                     </button>
                   ))}
                 </div>
-                <p className="text-xs font-bold text-emerald-600 mt-1.5 text-center">
-                  {AVATARS.find((a) => a.id === selectedAvatar)?.name}
-                </p>
+                {selectedAvatar && (
+                  <p className="text-xs font-medium text-blue-300 mt-2 text-center">
+                    {AVATARS.find((a) => a.id === selectedAvatar)?.name}
+                  </p>
+                )}
               </div>
 
-              <ShimmerButton
+              {/* Submit */}
+              <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                background={nameInput.trim()
-                  ? "linear-gradient(135deg, #10b981, #059669)"
-                  : "linear-gradient(135deg, #d1d5db, #9ca3af)"
-                }
-                className="w-full text-base py-3 rounded-xl disabled:cursor-not-allowed disabled:opacity-70"
+                className="w-full py-3.5 rounded-2xl font-black text-white text-base transition-all duration-200 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{
+                  background: nameInput.trim()
+                    ? "linear-gradient(135deg, #dc2626, #b91c1c)"
+                    : "rgba(255,255,255,0.08)",
                   boxShadow: nameInput.trim()
-                    ? "0 3px 0 0 rgba(5, 150, 105, 0.4), 0 5px 12px -2px rgba(5, 150, 105, 0.3)"
-                    : "0 2px 0 0 rgba(0,0,0,0.1)"
-                } as React.CSSProperties}
+                    ? "0 4px 20px rgba(220,38,38,0.45)"
+                    : "none",
+                }}
               >
-                Starta jakten! 🚀
-              </ShimmerButton>
+                Starta jakten!
+              </button>
             </form>
-            </div>
           </div>
-        </div>
 
-        {/* Right: sprakarenan + sprakakademin */}
-        <div className="hidden lg:flex flex-col gap-3 w-48 xl:w-56 flex-shrink-0">
-          {stageCards.slice(2, 4).map((s, i) => (
-            <MagicCard
-              key={s.name}
-              gradientColor="#8b5cf630"
-              className="rounded-2xl overflow-hidden aspect-[4/3] relative border-2 border-white/60 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              style={{
-                boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.2), 0 8px 16px -4px rgba(99, 102, 241, 0.15)",
-                animation: `float 3s ease-in-out infinite ${(i + 2) * 0.5}s`
-              } as React.CSSProperties}
-            >
-              <img src={s.img} alt={s.name} className="w-full h-full object-cover" />
-              <div className={`absolute inset-0 bg-gradient-to-t ${s.gradient} to-transparent`} />
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="text-white font-bold text-sm leading-tight drop-shadow-lg">{s.name}</p>
-                <p className="text-white/80 text-xs font-medium">{s.label}</p>
-              </div>
-            </MagicCard>
-          ))}
+          {/* Footer */}
+          <p className="text-center text-xs mt-6" style={{ color: "rgba(255,255,255,0.15)" }}>
+            Kontakt: martin.akdogan@enkoping.se
+          </p>
         </div>
-
       </div>
     );
   }
 
-  // ─── Logged-in: stage selection dashboard ──────────────────────────────────
+  // ─── Logged-in: stage selection ──────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div
+      className="min-h-screen"
+      style={{ background: "linear-gradient(135deg, #080d1e 0%, #0f1c3f 50%, #080d1e 100%)" }}
+    >
       <Header student={student} onLogout={handleLogout} />
 
-      <main className="max-w-5xl mx-auto px-4 py-3">
+      <main className="max-w-3xl mx-auto px-4 py-6">
 
-        {/* Welcome banner */}
-        <div className="mb-2 animate-fade-in">
-          <h2 className="text-xl font-black text-indigo-900 dark:text-gray-100">
-            Hej, {student.name}! 👋
-          </h2>
-          <p className="text-indigo-400 dark:text-gray-400 font-medium text-xs mt-0.5">
-            Välj en värld och fortsätt din engelska resa.
+        {/* Logo + heading */}
+        <div className="flex flex-col items-center mb-8 animate-fade-in">
+          <div
+            className="w-20 h-20 rounded-2xl overflow-hidden mb-4"
+            style={{ boxShadow: "0 0 40px rgba(29,78,216,0.4), 0 0 60px rgba(220,38,38,0.15)" }}
+          >
+            <img
+              src="/content/engelskajakten-icon.png"
+              alt="Engelskajakten"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <p className="text-white/35 text-xs font-bold tracking-widest uppercase">
+            Välj din värld
           </p>
         </div>
 
-        {/* Stage cards grid */}
-        <div className="grid grid-cols-2 gap-2">
-          {STAGES.map((stage, i) => {
-            const pts  = getStagePoints(student, stage.id);
-            const done = getStageCompleted(student, stage.id);
-            const beamColors = stageBeams[stage.id];
-            const hasProgress = pts > 0 || done > 0;
+        {/* Stage cards — 2-column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {STAGES.map((stage) => {
+            const pts    = getStagePoints(student, stage.id);
+            const done   = getStageCompleted(student, stage.id);
+            const accent = stageAccents[stage.id];
 
             return (
-              <Link key={stage.id} href={`/world/${stage.id}`} className="block group">
-                <MagicCard
-                  gradientColor={`${beamColors[0]}20`}
-                  className="relative rounded-2xl overflow-hidden border-2 border-white/20 dark:border-gray-700/50 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl cursor-pointer"
+              <Link key={stage.id} href={`/world/${stage.id}`} className="block group cursor-pointer">
+                <div
+                  className="rounded-2xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-2xl"
                   style={{
-                    aspectRatio: "3/1",
-                    boxShadow: hasProgress
-                      ? `0 5px 0 0 ${beamColors[0]}35, 0 8px 20px -4px ${beamColors[0]}20`
-                      : "0 4px 0 0 rgba(99,102,241,0.12), 0 8px 16px -4px rgba(99,102,241,0.08)",
-                    animation: `float 4s ease-in-out infinite ${i * 0.4}s`
-                  } as React.CSSProperties}
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                  }}
                 >
-                  {/* Background image */}
-                  <img
-                    src={stageImages[stage.id]}
-                    alt={stage.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-
-                  {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t ${stageGradients[stage.id]} via-black/30 to-transparent`} />
-
-                  {/* BorderBeam on stages with progress */}
-                  {hasProgress && (
-                    <BorderBeam
-                      size={180}
-                      duration={8}
-                      colorFrom={beamColors[0]}
-                      colorTo={beamColors[1]}
-                      borderWidth={2}
+                  {/* Image header */}
+                  <div className="relative h-32 overflow-hidden">
+                    <img
+                      src={stageImages[stage.id]}
+                      alt={stage.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                  )}
-
-                  {/* Top-right badge */}
-                  {done > 0 && (
-                    <div className="absolute top-2 right-2">
-                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2 py-0.5 rounded-full border border-white/30 flex items-center gap-1">
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: `linear-gradient(to bottom, ${accent.from}99, ${accent.to}dd)`,
+                      }}
+                    />
+                    {/* Grade badge */}
+                    <span
+                      className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full"
+                      style={{
+                        background: "rgba(0,0,0,0.45)",
+                        border: `1px solid ${accent.badge}50`,
+                        color: accent.badge,
+                      }}
+                    >
+                      {stage.grades}
+                    </span>
+                    {/* Completed badge */}
+                    {done > 0 && (
+                      <span className="absolute top-3 right-3 text-xs font-bold text-white bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full border border-white/30">
                         ✓ {done}
                       </span>
-                    </div>
-                  )}
-
-                  {/* Bottom content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <h3 className="text-white font-black text-sm leading-tight drop-shadow-lg">
-                      {stage.name}
-                    </h3>
-                    <p className="text-white/65 text-xs font-medium">{stage.grades}</p>
-
-                    {pts > 0 ? (
-                      <div className="mt-1 flex items-center gap-1">
-                        <span className="text-amber-400 text-xs">⭐</span>
-                        <NumberTicker
-                          value={pts}
-                          className="text-white font-bold text-xs"
-                          duration={800}
-                        />
-                        <span className="text-white/55 text-xs">p</span>
-                      </div>
-                    ) : (
-                      <p className="mt-1 text-white/50 text-xs font-medium group-hover:text-white/80 transition-colors">
-                        Börja här →
-                      </p>
                     )}
                   </div>
-                </MagicCard>
+
+                  {/* Card body */}
+                  <div className="p-4">
+                    <h3 className="text-white font-black text-base leading-tight">
+                      {stage.name}
+                    </h3>
+                    <p className="text-white/35 text-xs mt-0.5">{stage.subtitle}</p>
+
+                    <div className="flex items-center justify-between mt-3">
+                      {pts > 0 ? (
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-amber-400 text-sm">⭐</span>
+                          <NumberTicker
+                            value={pts}
+                            className="text-amber-300 font-bold text-sm"
+                            duration={800}
+                          />
+                          <span className="text-white/30 text-xs">p</span>
+                        </div>
+                      ) : (
+                        <span className="text-white/25 text-xs font-medium">
+                          Inte börjat än
+                        </span>
+                      )}
+                      <span
+                        className="text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-200"
+                        style={{
+                          background: "rgba(220,38,38,0.8)",
+                          color: "white",
+                        }}
+                      >
+                        Öppna →
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </Link>
             );
           })}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-xs" style={{ color: "rgba(255,255,255,0.12)" }}>
+        <span>Kontakt: martin.akdogan@enkoping.se</span>
+        <span className="mx-3">·</span>
+        <span>Engelskajakten av Martin Akdogan</span>
+      </footer>
     </div>
   );
 }

@@ -42,9 +42,11 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
   return (
     <header
-      className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-indigo-100 dark:border-gray-700 sticky top-0 z-50"
+      className="backdrop-blur-md sticky top-0 z-50"
       style={{
-        boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.08), 0 6px 12px -4px rgba(99, 102, 241, 0.1)"
+        background: "rgba(8,13,30,0.85)",
+        borderBottom: "1px solid rgba(255,255,255,0.07)",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.4)"
       }}
     >
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -67,9 +69,10 @@ export default function Header({ student, onLogout }: HeaderProps) {
             <Link
               href="/kistor"
               title="Hemliga kistor"
-              className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 dark:hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer"
+              className="relative flex items-center justify-center w-10 h-10 rounded-xl hover:scale-110 transition-all touch-manipulation cursor-pointer"
               style={{
-                boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                background: "rgba(255,255,255,0.07)",
+                border: "1px solid rgba(255,255,255,0.12)",
               }}
             >
               <span className="text-lg leading-none select-none">🏆</span>
@@ -82,15 +85,16 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
             {/* Points badge */}
             <div
-              className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default transition-all hover:scale-105"
+              className="hidden xs:flex items-center gap-1.5 px-3 py-1.5 rounded-xl cursor-default transition-all hover:scale-105"
               style={{
-                boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+                background: "rgba(255,255,255,0.07)",
+                border: "1px solid rgba(255,255,255,0.12)",
               }}
             >
               <span className="text-amber-500 text-base">⭐</span>
               <NumberTicker
                 value={student.totalPoints}
-                className="text-sm font-bold text-amber-700 dark:text-amber-400"
+                className="text-sm font-bold text-amber-300"
                 duration={600}
               />
             </div>
@@ -101,15 +105,18 @@ export default function Header({ student, onLogout }: HeaderProps) {
               return (
                 <Link
                   href="/profile"
-                  className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-indigo-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-indigo-200"
+                  className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl transition-all cursor-pointer"
+                  style={{ borderRadius: "12px" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.07)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
                 >
                   <div
-                    className="w-9 h-9 rounded-xl overflow-hidden bg-indigo-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0 border-2 border-indigo-200 dark:border-gray-600"
-                    style={{ boxShadow: "0 2px 0 0 rgba(99, 102, 241, 0.15)" }}
+                    className="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center flex-shrink-0"
+                    style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)" }}
                   >
                     <AvatarImg av={av} />
                   </div>
-                  <span className="text-sm font-bold text-indigo-700 dark:text-gray-200">{student.name}</span>
+                  <span className="text-sm font-bold text-white/80">{student.name}</span>
                 </Link>
               );
             })()}
@@ -117,7 +124,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Dark mode toggle */}
             <button
               onClick={toggle}
-              className="p-2.5 rounded-xl text-indigo-400 dark:text-gray-400 hover:bg-indigo-50 dark:hover:bg-gray-800 hover:text-indigo-600 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-indigo-200"
+              className="p-2.5 rounded-xl text-white/40 hover:text-white/70 hover:bg-white/07 transition-all touch-manipulation cursor-pointer"
               aria-label={dark ? "Ljust läge" : "Mörkt läge"}
             >
               {dark ? "☀️" : "🌙"}
@@ -126,7 +133,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Logga ut */}
             <button
               onClick={handleLogout}
-              className="px-3 sm:px-4 py-2 rounded-xl text-sm font-bold text-indigo-400 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 dark:hover:text-red-400 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
+              className="px-3 sm:px-4 py-2 rounded-xl text-sm font-bold text-white/40 hover:text-red-400 hover:bg-red-500/10 transition-all touch-manipulation cursor-pointer"
             >
               Logga ut
             </button>
@@ -137,7 +144,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {!student && (
           <button
             onClick={toggle}
-            className="p-2.5 rounded-xl text-indigo-400 dark:text-gray-400 hover:bg-indigo-50 dark:hover:bg-gray-800 transition-all cursor-pointer"
+            className="p-2.5 rounded-xl text-white/40 hover:text-white/70 transition-all cursor-pointer"
             aria-label={dark ? "Ljust läge" : "Mörkt läge"}
           >
             {dark ? "☀️" : "🌙"}

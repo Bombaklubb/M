@@ -57,11 +57,8 @@
   }
 
   body {
-    @apply bg-indigo-50 text-indigo-900;
-  }
-
-  .dark body {
-    @apply bg-gray-900 text-gray-100;
+    background: #080d1e;
+    color: #ffffff;
   }
 }
 
