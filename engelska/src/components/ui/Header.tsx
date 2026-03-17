@@ -44,9 +44,9 @@ export default function Header({ student, onLogout }: HeaderProps) {
     <header
       className="backdrop-blur-md sticky top-0 z-50"
       style={{
-        background: "rgba(255,255,255,0.92)",
-        borderBottom: "1px solid rgba(29,78,216,0.12)",
-        boxShadow: "0 4px 20px rgba(10,36,99,0.08)"
+        background: "rgba(255,255,255,0.94)",
+        borderBottom: "3px solid rgba(220,38,38,0.75)",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.25)"
       }}
     >
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -107,7 +107,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
                   href="/profile"
                   className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl transition-all cursor-pointer"
                   style={{ borderRadius: "12px" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(255,255,255,0.07)"; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(10,36,99,0.06)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
                 >
                   <div
