@@ -7,6 +7,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    // Dynamic stage classes used in stages.ts / world pages
+    { pattern: /^(from|via|to|bg|border|text)-(ord|gram|text|acad)-\d+$/ },
+    { pattern: /^bg-gradient-to-(br|bl|tr|tl|r|l|t|b)$/ },
+  ],
   theme: {
     screens: {
       xs: "400px",
