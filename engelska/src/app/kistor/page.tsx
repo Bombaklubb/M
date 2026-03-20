@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Header from "@/components/ui/Header";
@@ -19,11 +19,30 @@ import {
   openWoodChest,
   openSilverChest,
   openGoldChest,
+  openRubyChest,
+  openDiamondChest,
+  openEmeraldChest,
 } from "@/lib/gamification";
 import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
 
 const BG_LIGHT = "linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%)";
 const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, #040b1c 80%, #020810 100%)";
+
+// ─── Chest sprite image ───────────────────────────────────────────────────────
+
+function ChestImage({ type, className }: { type: ChestType; className?: string }) {
+  return (
+    <div
+      className={className}
+      style={{
+        backgroundImage: "url('/content/kistor.png')",
+        backgroundSize: "300% 200%",
+        backgroundPosition: CHEST_META[type].spritePos,
+        backgroundRepeat: "no-repeat",
+      }}
+    />
+  );
+}
 
 // ─── Chest Card (unopened) ────────────────────────────────────────────────────
 
@@ -37,39 +56,34 @@ function ChestCard({ chest, onOpen }: { chest: Chest; onOpen: (id: string) => vo
     setTimeout(() => { onOpen(chest.id); setAnimating(false); }, 500);
   }
 
-  const gradients: Record<ChestType, string> = {
-    wood:   "linear-gradient(135deg, #92400e, #78350f)",
-    silver: "linear-gradient(135deg, #64748b, #475569)",
-    gold:   "linear-gradient(135deg, #d97706, #b45309)",
-  };
   const glows: Record<ChestType, string> = {
-    wood:   "rgba(146,64,14,0.5)",
-    silver: "rgba(100,116,139,0.5)",
-    gold:   "rgba(245,158,11,0.6)",
+    wood:    "rgba(146,64,14,0.5)",
+    silver:  "rgba(100,116,139,0.5)",
+    gold:    "rgba(245,158,11,0.6)",
+    ruby:    "rgba(220,38,38,0.6)",
+    diamond: "rgba(56,189,248,0.6)",
+    emerald: "rgba(16,185,129,0.6)",
   };
 
   return (
     <div
       onClick={handleClick}
-      className="relative flex flex-col items-center p-4 rounded-2xl cursor-pointer select-none"
+      className="relative flex flex-col items-center p-3 rounded-2xl cursor-pointer select-none"
       style={{
-        background: gradients[chest.type],
-        border: "2px solid rgba(255,255,255,0.2)",
-        boxShadow: `0 6px 24px ${glows[chest.type]}, inset 0 1px 0 rgba(255,255,255,0.25)`,
+        background: "rgba(0,0,0,0.3)",
+        border: "2px solid rgba(255,255,255,0.15)",
+        boxShadow: `0 6px 24px ${glows[chest.type]}, inset 0 1px 0 rgba(255,255,255,0.15)`,
         transform: animating ? "scale(1.08) rotate(-3deg)" : "scale(1)",
         transition: "transform 0.15s ease-out, box-shadow 0.2s",
       }}
       onMouseEnter={(e) => { if (!animating) e.currentTarget.style.transform = "scale(1.04) translateY(-2px)"; }}
       onMouseLeave={(e) => { if (!animating) e.currentTarget.style.transform = "scale(1)"; }}
     >
-      <span
-        className="text-4xl mb-2 select-none leading-none"
-        style={{ animation: animating ? "shake 0.4s ease-in-out" : "none" }}
-      >
-        {meta.emoji}
-      </span>
-      <span className="text-xs font-bold text-white/90">{meta.label}</span>
-      <span className="text-[10px] text-white/60 mt-1">Tryck för att öppna</span>
+      <div style={{ animation: animating ? "shake 0.4s ease-in-out" : "none" }}>
+        <ChestImage type={chest.type} className="w-16 h-12 mb-1" />
+      </div>
+      <span className="text-[10px] font-bold text-white/90">{meta.label}</span>
+      <span className="text-[9px] text-white/50 mt-0.5">Tryck för att öppna</span>
 
       <style jsx>{`
         @keyframes shake {
@@ -88,6 +102,30 @@ function ChestCard({ chest, onOpen }: { chest: Chest; onOpen: (id: string) => vo
 
 const SHELF_CONFIGS: { type: ChestType; label: string; shelfColor: string; itemGlow: string; itemBg: string; badge: string }[] = [
   {
+    type: "emerald",
+    label: "Smaragdkistor",
+    shelfColor: "linear-gradient(90deg, #064e3b, #059669 30%, #34d399 50%, #059669 70%, #064e3b)",
+    itemBg: "linear-gradient(135deg, #064e3b, #065f46)",
+    itemGlow: "rgba(52,211,153,0.5)",
+    badge: "#34d399",
+  },
+  {
+    type: "diamond",
+    label: "Diamantkistor",
+    shelfColor: "linear-gradient(90deg, #0c4a6e, #0284c7 30%, #7dd3fc 50%, #0284c7 70%, #0c4a6e)",
+    itemBg: "linear-gradient(135deg, #0c4a6e, #075985)",
+    itemGlow: "rgba(125,211,252,0.5)",
+    badge: "#7dd3fc",
+  },
+  {
+    type: "ruby",
+    label: "Rubinkistor",
+    shelfColor: "linear-gradient(90deg, #7f1d1d, #dc2626 30%, #fca5a5 50%, #dc2626 70%, #7f1d1d)",
+    itemBg: "linear-gradient(135deg, #7f1d1d, #991b1b)",
+    itemGlow: "rgba(252,165,165,0.5)",
+    badge: "#fca5a5",
+  },
+  {
     type: "gold",
     label: "Guldkistor",
     shelfColor: "linear-gradient(90deg, #78350f, #d97706 30%, #fbbf24 50%, #d97706 70%, #78350f)",
@@ -105,7 +143,7 @@ const SHELF_CONFIGS: { type: ChestType; label: string; shelfColor: string; itemG
   },
   {
     type: "wood",
-    label: "Trälådor",
+    label: "Bronslådor",
     shelfColor: "linear-gradient(90deg, #431407, #92400e 30%, #c2652a 50%, #92400e 70%, #431407)",
     itemBg: "linear-gradient(135deg, #431407, #7c2d12)",
     itemGlow: "rgba(194,101,42,0.4)",
@@ -142,22 +180,25 @@ function TrofHylla({ chests }: { chests: Chest[] }) {
       <SectionTitle emoji="🪵" title="Trofhylla" subtitle="Din samling av öppnade kistor" />
 
       {/* Stats bar */}
-      <div className="flex gap-3 mb-4 flex-wrap">
-        {[
-          { type: "gold"   as ChestType, label: "Guld",   emoji: "🏆", color: "#fbbf24" },
-          { type: "silver" as ChestType, label: "Silver", emoji: "🪙", color: "#cbd5e1" },
-          { type: "wood"   as ChestType, label: "Trä",    emoji: "📦", color: "#fdba74" },
-        ].map(({ type, label, emoji, color }) => (
-          <div
-            key={type}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-xl"
-            style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
-          >
-            <span className="text-base leading-none">{emoji}</span>
-            <span className="text-sm font-bold" style={{ color }}>{totalByType(type)}</span>
-            <span className="text-white/40 text-xs">{label}</span>
-          </div>
-        ))}
+      <div className="flex gap-2 mb-4 flex-wrap">
+        {(["emerald", "diamond", "ruby", "gold", "silver", "wood"] as ChestType[]).map((type) => {
+          const count = totalByType(type);
+          if (count === 0) return null;
+          const colors: Record<ChestType, string> = {
+            emerald: "#34d399", diamond: "#7dd3fc", ruby: "#fca5a5",
+            gold: "#fbbf24", silver: "#cbd5e1", wood: "#fdba74",
+          };
+          return (
+            <div
+              key={type}
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl"
+              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
+            >
+              <ChestImage type={type} className="w-5 h-4" />
+              <span className="text-sm font-bold" style={{ color: colors[type] }}>{count}</span>
+            </div>
+          );
+        })}
         <div
           className="flex items-center gap-2 px-3 py-1.5 rounded-xl ml-auto"
           style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
@@ -244,7 +285,7 @@ function ShelfChest({ chest, bg, glow, badge }: { chest: Chest; bg: string; glow
       onMouseLeave={() => setHover(false)}
       title={chest.openedReward ?? meta.label}
     >
-      <span className="text-2xl leading-none mb-1">{meta.emoji}</span>
+      <ChestImage type={chest.type} className="w-10 h-8 mb-1" />
       <span className="text-[9px] font-bold" style={{ color: badge }}>{date}</span>
       {/* Shine line */}
       <div className="absolute top-1.5 left-2.5 right-2.5 h-px bg-white/15 rounded-full" />
@@ -336,9 +377,12 @@ export default function KistorPage() {
     if (!chest || chest.opened) return;
 
     let result: { points: number; badge?: string; bonusChest?: Chest; description: string };
-    if (chest.type === "wood")       result = { ...openWoodChest(), badge: undefined, bonusChest: undefined };
-    else if (chest.type === "silver") result = openSilverChest(gam.badges);
-    else                              result = openGoldChest(gam.badges);
+    if (chest.type === "wood")         result = { ...openWoodChest(), badge: undefined, bonusChest: undefined };
+    else if (chest.type === "silver")  result = openSilverChest(gam.badges);
+    else if (chest.type === "gold")    result = openGoldChest(gam.badges);
+    else if (chest.type === "ruby")    result = openRubyChest(gam.badges);
+    else if (chest.type === "diamond") result = openDiamondChest(gam.badges);
+    else                               result = openEmeraldChest(gam.badges);
 
     const newChests = gam.chests.map((c) =>
       c.id === chestId ? { ...c, opened: true, openedReward: result.description } : c
@@ -370,10 +414,10 @@ export default function KistorPage() {
         </Link>
         <div className="flex items-center gap-3 mb-6">
           <div
-            className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
+            className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden"
             style={{ background: "linear-gradient(135deg, #92400e, #d97706)", boxShadow: "0 0 24px rgba(217,119,6,0.4)" }}
           >
-            🏆
+            <ChestImage type="gold" className="w-11 h-9" />
           </div>
           <div>
             <h1 className="text-xl font-black text-white">Hemliga Kistor</h1>
@@ -498,15 +542,15 @@ export default function KistorPage() {
             <div>
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {[
-                  { emoji: "📦", label: "Trälåda",    value: "25, 50, 100, 200, 600 p",                  bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
-                  { emoji: "🪙", label: "Silverlåda", value: "300, 500, 750, 1 500, 2 000 p",            bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
-                  { emoji: "🏆", label: "Guldlåda",   value: "1 000, 2 500, 5 000, 10 000, 15 000 p",   bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
-                ].map((row) => (
-                  <div key={row.label} className="flex items-start gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
-                    <span className="text-xl leading-none mt-0.5">{row.emoji}</span>
+                {([
+                  { type: "wood"   as ChestType, value: "25, 50, 100, 200, 600 p",                bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
+                  { type: "silver" as ChestType, value: "300, 500, 750, 1 500, 2 000 p",          bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
+                  { type: "gold"   as ChestType, value: "1 000, 2 500, 5 000, 10 000, 15 000 p", bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
+                ]).map((row) => (
+                  <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
+                    <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
                     <div>
-                      <p className="text-white/80 text-xs font-bold">{row.label}</p>
+                      <p className="text-white/80 text-xs font-bold">{CHEST_META[row.type].label}</p>
                       <p className="text-white/50 text-[10px] leading-tight mt-0.5">{row.value}</p>
                     </div>
                   </div>
@@ -518,15 +562,15 @@ export default function KistorPage() {
             <div>
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {[
-                  { emoji: "📦", label: "Trälåda",    value: "1, 3, 5, 10 övningar",                bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
-                  { emoji: "🪙", label: "Silverlåda", value: "15, 20, 40, 50 övningar",             bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
-                  { emoji: "🏆", label: "Guldlåda",   value: "30, 60, 75, 100, 150 övningar",      bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
-                ].map((row) => (
-                  <div key={row.label} className="flex items-start gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
-                    <span className="text-xl leading-none mt-0.5">{row.emoji}</span>
+                {([
+                  { type: "wood"   as ChestType, value: "1, 3, 5, 10 övningar",           bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
+                  { type: "silver" as ChestType, value: "15, 20, 40, 50 övningar",        bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
+                  { type: "gold"   as ChestType, value: "30, 60, 75, 100, 150 övningar",  bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
+                ]).map((row) => (
+                  <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
+                    <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
                     <div>
-                      <p className="text-white/80 text-xs font-bold">{row.label}</p>
+                      <p className="text-white/80 text-xs font-bold">{CHEST_META[row.type].label}</p>
                       <p className="text-white/50 text-[10px] leading-tight mt-0.5">{row.value}</p>
                     </div>
                   </div>
