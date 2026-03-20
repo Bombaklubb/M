@@ -70,78 +70,78 @@ export default function HomePage() {
         <div className="w-full max-w-md animate-slide-up">
 
           {/* Title */}
-          <div className="text-center mb-6">
+          <div className="text-center mb-4">
             <div
-              className="inline-flex items-center justify-center w-24 h-24 rounded-3xl mb-4 text-5xl animate-float border-4 border-white/30"
+              className="inline-flex items-center justify-center w-20 h-20 rounded-3xl mb-3 animate-float border-4 border-white/30 overflow-hidden"
               style={{
                 background: "rgba(255,255,255,0.15)",
                 backdropFilter: "blur(8px)",
                 boxShadow: "0 8px 0 0 rgba(0,0,0,0.2), 0 12px 24px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4)"
               }}
             >
-              🇬🇧
+              <img src="/engelskajakten-logo.png" alt="Union Jack" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-5xl font-black tracking-tight text-white drop-shadow-lg">
+            <h1 className="text-4xl font-black tracking-tight text-white drop-shadow-lg">
               Engelskajakten
             </h1>
-            <p className="mt-2 text-lg font-bold text-white/80">
+            <p className="mt-1 text-base font-bold text-white/80">
               Lär dig engelska på ett roligt sätt!
             </p>
           </div>
 
           {/* Login card */}
           <div
-            className="bg-white rounded-4xl p-8"
+            className="bg-white rounded-4xl p-5"
             style={{
               boxShadow: "0 8px 0 0 rgba(0,0,0,0.2), 0 20px 40px -8px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.9)"
             }}
           >
-            <h2 className="text-2xl font-bold mb-1" style={{ color: "#1e3268" }}>Välkommen!</h2>
-            <p className="text-gray-500 text-base mb-6 font-medium">
+            <h2 className="text-xl font-bold mb-0.5" style={{ color: "#1e3268" }}>Välkommen!</h2>
+            <p className="text-gray-500 text-sm mb-4 font-medium">
               Skriv ditt namn för att börja eller fortsätta.
             </p>
 
-            <form onSubmit={handleLogin} className="space-y-5">
+            <form onSubmit={handleLogin} className="space-y-3">
               <input
                 type="text"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 placeholder="Ditt namn..."
-                className="input-field text-xl"
+                className="input-field !py-2.5 !text-base"
                 autoFocus
                 maxLength={30}
               />
 
               {/* Avatar selection */}
               <div>
-                <p className="text-base font-bold mb-3" style={{ color: "#1e40af" }}>Välj din karaktär</p>
-                <div className="grid grid-cols-5 gap-3">
+                <p className="text-sm font-bold mb-2" style={{ color: "#1e40af" }}>Välj din karaktär</p>
+                <div className="grid grid-cols-6 gap-1.5">
                   {AVATARS.map((avatar) => (
                     <button
                       key={avatar.id}
                       type="button"
                       onClick={() => setSelectedAvatar(avatar.id)}
                       title={avatar.name}
-                      className={`aspect-square rounded-2xl flex items-center justify-center transition-all duration-200 overflow-hidden text-2xl cursor-pointer border-3 ${
+                      className={`aspect-square rounded-xl flex items-center justify-center transition-all duration-200 overflow-hidden text-xl cursor-pointer border-2 ${
                         selectedAvatar === avatar.id
                           ? "border-en-400 scale-110 bg-en-50"
                           : "border-en-100 bg-en-50 hover:border-en-300 hover:scale-105"
                       }`}
                       style={{
                         boxShadow: selectedAvatar === avatar.id
-                          ? "0 4px 0 0 rgba(37,99,235,0.3), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
-                          : "0 3px 0 0 rgba(37,99,235,0.1), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
+                          ? "0 3px 0 0 rgba(37,99,235,0.3), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
+                          : "0 2px 0 0 rgba(37,99,235,0.1), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
                       }}
                     >
                       {avatar.image ? (
-                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-1" />
+                        <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-0.5" />
                       ) : (
                         avatar.emoji
                       )}
                     </button>
                   ))}
                 </div>
-                <p className="text-sm font-bold mt-3 text-center text-en-500">
+                <p className="text-xs font-bold mt-1.5 text-center text-en-500">
                   {AVATARS.find((a) => a.id === selectedAvatar)?.name}
                 </p>
               </div>
@@ -149,7 +149,7 @@ export default function HomePage() {
               <button
                 type="submit"
                 disabled={!nameInput.trim()}
-                className="w-full btn-primary text-xl py-4 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-full btn-primary text-base py-3 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{ background: nameInput.trim() ? "linear-gradient(135deg, #dc2626, #b91c1c)" : "rgba(0,0,0,0.1)" }}
               >
                 Starta jakten! 🚀
