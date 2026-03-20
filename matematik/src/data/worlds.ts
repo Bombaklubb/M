@@ -46,7 +46,7 @@ export const WORLDS: World[] = [
     accent: 'purple',
     accentHex: '#8b5cf6',
     cardBg: 'bg-purple-50',
-    topicIds: ['multiplikation-intro', 'division-intro', 'klockan-mel', 'brak', 'decimaler', 'procent', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'brak-2', 'decimal-procent', 'huvudrakning', 'geometri-mel', 'statistik-mel', 'ekvationer-bas', 'matematik-begrepp-mel', 'rimlighetsoevningar-mel'],
+    topicIds: ['multiplikation-intro', 'division-intro', 'klockan-mel', 'brak-steg-1', 'decimaler', 'procent-steg-1', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'brak-steg-2', 'procent-steg-2', 'huvudrakning', 'geometri-mel', 'statistik-mel', 'ekvationer-bas', 'matematik-begrepp-mel', 'rimlighetsoevningar-mel'],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
   },
@@ -63,11 +63,11 @@ export const WORLDS: World[] = [
     accentHex: '#3b82f6',
     cardBg: 'bg-blue-50',
     topicIds: [
-      'algebra-intro', 'ekvationer', 'ekvationer-avancerad', 'ekvationer-sf', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet',
+      'algebra-steg-1', 'algebra-steg-2', 'algebra-steg-3', 'ekvationer-steg-1', 'ekvationer-steg-2', 'ekvationer-steg-3', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet',
       // Tal & räknefärdighet
-      'prioritering', 'negativa-tal', 'avrundning', 'standardform', 'potenser',
+      'prioritering', 'negativa-tal', 'avrundning', 'standardform', 'potenser-steg-1', 'potenser-steg-2', 'potenser-steg-3',
       // Bråk, decimaltal, procent
-      'brak-avancerat', 'procent-forandring', 'procentenheter',
+      'brak-steg-3', 'procent-steg-3',
       // Algebra
       'forenkla-uttryck', 'distributiva-lagen', 'formler-variabler',
       // Funktioner & koordinater
