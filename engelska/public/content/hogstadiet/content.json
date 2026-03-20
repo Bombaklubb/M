@@ -3488,6 +3488,282 @@
           "explanation": "Avslappnad = relaxed. I feel relaxed after yoga."
         }
       ]
+    },
+    {
+      "id": "hog-fill1-past-tense",
+      "title": "Fylla i: Past Tense (preteritum)",
+      "description": "Skriv rätt form av verbet i preteritum.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "Regelbundna verb: lägg till -ed",
+        "  play → played  |  walk → walked  |  watch → watched",
+        "",
+        "Oregelbundna verb (måste läras utantill):",
+        "  go → went  |  eat → ate  |  write → wrote",
+        "  see → saw  |  meet → met",
+        "",
+        "Presens vs preteritum:",
+        "  is → was  |  are → were"
+      ],
+      "exercises": [
+        {
+          "id": "hog-fill1-1",
+          "type": "fill-in-blank",
+          "sentence": "Yesterday I ___ to school. (go)",
+          "answer": "went",
+          "hint": "go är oregelbundet: go → went",
+          "explanation": "go → went (oregelbundet preteritum)."
+        },
+        {
+          "id": "hog-fill1-2",
+          "type": "fill-in-blank",
+          "sentence": "She ___ lunch at noon. (eat)",
+          "answer": "ate",
+          "hint": "eat är oregelbundet: eat → ate",
+          "explanation": "eat → ate."
+        },
+        {
+          "id": "hog-fill1-3",
+          "type": "fill-in-blank",
+          "sentence": "They ___ football yesterday. (play)",
+          "answer": "played",
+          "hint": "Regelbundet verb: add -ed",
+          "explanation": "play → played."
+        },
+        {
+          "id": "hog-fill1-4",
+          "type": "fill-in-blank",
+          "sentence": "He ___ a letter last night. (write)",
+          "answer": "wrote",
+          "hint": "write är oregelbundet: write → wrote",
+          "explanation": "write → wrote."
+        },
+        {
+          "id": "hog-fill1-5",
+          "type": "multiple-choice",
+          "question": "I ___ to school yesterday. (walk)",
+          "options": [
+            "walk",
+            "walked",
+            "walking",
+            "walks"
+          ],
+          "correctIndex": 1,
+          "explanation": "Yesterday → preteritum: walked."
+        },
+        {
+          "id": "hog-fill1-6",
+          "type": "multiple-choice",
+          "question": "She ___ happy yesterday. (is/was)",
+          "options": [
+            "is",
+            "are",
+            "were",
+            "was"
+          ],
+          "correctIndex": 3,
+          "explanation": "Yesterday → preteritum: she was."
+        },
+        {
+          "id": "hog-fill1-7",
+          "type": "fill-in-blank",
+          "sentence": "We ___ the film last night. (watch)",
+          "answer": "watched",
+          "hint": "Regelbundet: add -ed",
+          "explanation": "watch → watched."
+        },
+        {
+          "id": "hog-fill1-8",
+          "type": "fill-in-blank",
+          "sentence": "He ___ his friend at the station. (meet)",
+          "answer": "met",
+          "hint": "meet är oregelbundet: meet → met",
+          "explanation": "meet → met."
+        },
+        {
+          "id": "hog-fill1-9",
+          "type": "multiple-choice",
+          "question": "They ___ football last week.",
+          "options": [
+            "play",
+            "plays",
+            "playing",
+            "played"
+          ],
+          "correctIndex": 3,
+          "explanation": "Last week → preteritum: played."
+        },
+        {
+          "id": "hog-fill1-10",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a great film last Friday. (see)",
+          "answer": "saw",
+          "hint": "see är oregelbundet: see → saw",
+          "explanation": "see → saw."
+        },
+        {
+          "id": "hog-fill1-11",
+          "type": "multiple-choice",
+          "question": "They ___ at home yesterday. (are/were)",
+          "options": [
+            "are",
+            "is",
+            "am",
+            "were"
+          ],
+          "correctIndex": 3,
+          "explanation": "Yesterday → preteritum: they were."
+        },
+        {
+          "id": "hog-fill1-12",
+          "type": "fill-in-blank",
+          "sentence": "She ___ her keys this morning. (find)",
+          "answer": "found",
+          "hint": "find är oregelbundet: find → found",
+          "explanation": "find → found."
+        }
+      ]
+    },
+    {
+      "id": "hog-fill2-comparative",
+      "title": "Fylla i: Komparativ, superlativ & frågeform",
+      "description": "Jämförelseformer och frågebildning med be-verb.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "Komparativ (jämförelse): adjektiv + -er + than",
+        "  big → bigger  |  fast → faster  |  tall → taller",
+        "",
+        "Superlativ (yttersta graden): the + adjektiv + -est",
+        "  big → biggest  |  fast → fastest  |  tall → tallest",
+        "",
+        "OBS: korta adjektiv på konsonant dubbleras: big → bigger/biggest",
+        "Oregelbundna: good → better → best  |  bad → worse → worst",
+        "",
+        "Frågeform med be-verb: flytta verbet framför subjektet",
+        "  You are happy. → Are you happy?"
+      ],
+      "exercises": [
+        {
+          "id": "hog-fill2-1",
+          "type": "fill-in-blank",
+          "sentence": "This book is ___ than that one. (big)",
+          "answer": "bigger",
+          "hint": "Komparativ: korta adjektiv + -er (dubblera konsonant)",
+          "explanation": "big → bigger (dubblera g)."
+        },
+        {
+          "id": "hog-fill2-2",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ than me. (fast)",
+          "answer": "faster",
+          "hint": "Komparativ: + -er",
+          "explanation": "fast → faster."
+        },
+        {
+          "id": "hog-fill2-3",
+          "type": "multiple-choice",
+          "question": "She is ___ than her sister. (tall)",
+          "options": [
+            "most tall",
+            "taller",
+            "tallest",
+            "more tall"
+          ],
+          "correctIndex": 1,
+          "explanation": "Komparativ av korta adjektiv: + -er. tall → taller."
+        },
+        {
+          "id": "hog-fill2-4",
+          "type": "fill-in-blank",
+          "sentence": "This is the ___ house on the street. (big)",
+          "answer": "biggest",
+          "hint": "Superlativ: the + adjektiv + -est (dubblera konsonant)",
+          "explanation": "big → biggest."
+        },
+        {
+          "id": "hog-fill2-5",
+          "type": "fill-in-blank",
+          "sentence": "She is the ___ runner in the class. (fast)",
+          "answer": "fastest",
+          "hint": "Superlativ: the + adjektiv + -est",
+          "explanation": "fast → fastest."
+        },
+        {
+          "id": "hog-fill2-6",
+          "type": "multiple-choice",
+          "question": "He is the ___ student in class. (smart)",
+          "options": [
+            "smarter",
+            "more smart",
+            "smartest",
+            "most smart"
+          ],
+          "correctIndex": 2,
+          "explanation": "Superlativ av korta adjektiv: the + -est. smart → smartest."
+        },
+        {
+          "id": "hog-fill2-7",
+          "type": "fill-in-blank",
+          "sentence": "You are happy. → ___ you happy?",
+          "answer": "Are",
+          "hint": "Flytta be-verbet framför subjektet",
+          "explanation": "Are you happy? – inverterar be-verbet."
+        },
+        {
+          "id": "hog-fill2-8",
+          "type": "fill-in-blank",
+          "sentence": "She is here. → ___ she here?",
+          "answer": "Is",
+          "hint": "Flytta be-verbet framför subjektet",
+          "explanation": "Is she here?"
+        },
+        {
+          "id": "hog-fill2-9",
+          "type": "multiple-choice",
+          "question": "They are students. → ___ they students?",
+          "options": [
+            "Do",
+            "Does",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 3,
+          "explanation": "Are they students? – inverterar be-verbet."
+        },
+        {
+          "id": "hog-fill2-10",
+          "type": "fill-in-blank",
+          "sentence": "This is the ___ film I have ever seen. (good)",
+          "answer": "best",
+          "hint": "good → better → best (oregelbunden)",
+          "explanation": "good → better → best."
+        },
+        {
+          "id": "hog-fill2-11",
+          "type": "fill-in-blank",
+          "sentence": "That was the ___ day of my life. (bad)",
+          "answer": "worst",
+          "hint": "bad → worse → worst (oregelbunden)",
+          "explanation": "bad → worse → worst."
+        },
+        {
+          "id": "hog-fill2-12",
+          "type": "multiple-choice",
+          "question": "He is ___ than his brother. (good)",
+          "options": [
+            "gooder",
+            "more good",
+            "better",
+            "best"
+          ],
+          "correctIndex": 2,
+          "explanation": "good → better (oregelbunden komparativ)."
+        }
+      ]
     }
   ],
   "reading": [
