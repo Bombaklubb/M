@@ -163,10 +163,10 @@ export default function HomePage() {
 
   // ─── Logged in – stage selection ─────────────────────────────────────────────
   return (
-    <div className="min-h-screen">
+    <div className="h-screen flex flex-col">
       <Header student={student} onLogout={handleLogout} />
 
-      <main className="max-w-5xl mx-auto px-4 py-4">
+      <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-4 flex flex-col min-h-0">
         <div className="mb-3">
           <h2 className="text-xl font-black text-white drop-shadow">Välj din värld</h2>
           <p className="text-white/70 font-medium text-sm mt-0.5">
@@ -174,52 +174,52 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3 min-h-0">
           {STAGES.map((stage) => {
             const pts  = getStagePoints(student, stage.id);
             const done = getStageCompleted(student, stage.id);
 
             return (
-              <Link key={stage.id} href={`/world/${stage.id}`} className="block group">
+              <Link key={stage.id} href={`/world/${stage.id}`} className="block group h-full">
                 <div
-                  className={`relative rounded-2xl overflow-hidden border-3 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer ${stage.borderClass}`}
+                  className={`relative rounded-2xl overflow-hidden border-3 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer h-full flex flex-col ${stage.borderClass}`}
                   style={{
                     boxShadow: "0 4px 0 0 rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.2)",
                   }}
                 >
-                  {/* Background */}
-                  <div className={`${stage.bgClass} px-4 py-3`}>
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl drop-shadow-lg flex-shrink-0">{stage.emoji}</span>
+                  {/* Background – grows to fill available height */}
+                  <div className={`flex-1 ${stage.bgClass} px-5 py-5 flex items-center`}>
+                    <div className="flex items-center gap-4 w-full">
+                      <span className="text-5xl drop-shadow-lg flex-shrink-0">{stage.emoji}</span>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between gap-2">
-                          <h3 className="text-base font-black text-white text-shadow leading-tight">{stage.name}</h3>
+                          <h3 className="text-xl font-black text-white text-shadow leading-tight">{stage.name}</h3>
                           {pts > 0 && (
                             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-0.5 flex items-center gap-1 flex-shrink-0">
-                              <span className="text-yellow-300 text-xs">⭐</span>
-                              <span className="text-white font-bold text-xs">{pts}</span>
+                              <span className="text-yellow-300 text-sm">⭐</span>
+                              <span className="text-white font-bold text-sm">{pts}</span>
                             </div>
                           )}
                         </div>
-                        <p className="text-white/70 font-medium text-xs mt-0.5">{stage.subtitle} · {stage.grades}</p>
+                        <p className="text-white/70 font-medium text-sm mt-1">{stage.subtitle} · {stage.grades}</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Footer */}
-                  <div className="bg-white dark:bg-gray-800 px-4 py-2.5 flex items-center justify-between">
+                  <div className="bg-white dark:bg-gray-800 px-5 py-3 flex items-center justify-between">
                     {done > 0 ? (
-                      <span className="text-xs font-semibold flex items-center gap-1 text-green-600 dark:text-green-400">
-                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
+                      <span className="text-sm font-semibold flex items-center gap-1 text-green-600 dark:text-green-400">
+                        <span className="w-2 h-2 rounded-full bg-green-500 inline-block" />
                         {done} modul{done !== 1 ? "er" : ""} klarade
                       </span>
                     ) : (
-                      <span className="text-xs font-semibold text-gray-400 dark:text-gray-500">
+                      <span className="text-sm font-semibold text-gray-400 dark:text-gray-500">
                         Inte börjat än
                       </span>
                     )}
                     <span
-                      className="text-xs font-bold px-3 py-1 rounded-lg text-white transition-transform group-hover:scale-105"
+                      className="text-sm font-bold px-4 py-1.5 rounded-lg text-white transition-transform group-hover:scale-105"
                       style={{ background: "linear-gradient(135deg, #dc2626, #b91c1c)" }}
                     >
                       Öppna →
