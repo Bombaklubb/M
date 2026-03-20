@@ -52,7 +52,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ a student.",
           "answer": "am",
-          "hint": "Används med I.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "Med I använder vi alltid 'am'. I am a student."
         },
         {
@@ -60,7 +60,7 @@
           "type": "fill-in-blank",
           "sentence": "The cat ___ small.",
           "answer": "is",
-          "hint": "Används med he/she/it.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "The cat = it, så vi använder 'is'. The cat is small."
         },
         {
@@ -68,7 +68,7 @@
           "type": "fill-in-blank",
           "sentence": "We ___ good friends.",
           "answer": "are",
-          "hint": "Används med we/they/you.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "Med we använder vi 'are'. We are good friends."
         },
         {
@@ -102,7 +102,7 @@
           "type": "fill-in-blank",
           "sentence": "It ___ a sunny day.",
           "answer": "is",
-          "hint": "Används med he/she/it.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "Med it använder vi 'is'. It is a sunny day."
         },
         {
@@ -110,7 +110,7 @@
           "type": "fill-in-blank",
           "sentence": "My brothers ___ funny.",
           "answer": "are",
-          "hint": "Används med they/we/you.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "My brothers = de (they), så vi använder 'are'. My brothers are funny."
         },
         {
@@ -164,7 +164,7 @@
           "type": "fill-in-blank",
           "sentence": "My dog and cat ___ outside.",
           "answer": "are",
-          "hint": "Två saker = plural, använd 'are'.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "När det är flera saker (plural) använder vi 'are'. My dog and cat are outside."
         },
         {
@@ -205,7 +205,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ eight years old.",
           "answer": "am",
-          "hint": "Används med I.",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/They are",
           "explanation": "Med I använder vi 'am'. I am eight years old."
         }
       ],
@@ -256,7 +256,7 @@
           "type": "fill-in-blank",
           "sentence": "My dog ___ a brown tail.",
           "answer": "has",
-          "hint": "My dog = it, använd 'has'.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "My dog = it. Med he/she/it använder vi 'has'. My dog has a brown tail."
         },
         {
@@ -264,7 +264,7 @@
           "type": "fill-in-blank",
           "sentence": "We ___ a big house.",
           "answer": "have",
-          "hint": "Används med I/you/we/they.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "Med we använder vi 'have'. We have a big house."
         },
         {
@@ -298,7 +298,7 @@
           "type": "fill-in-blank",
           "sentence": "The bird ___ colorful feathers.",
           "answer": "has",
-          "hint": "The bird = it, använd 'has'.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "The bird = it. Vi använder 'has'. The bird has colorful feathers."
         },
         {
@@ -306,7 +306,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ a great smile.",
           "answer": "have",
-          "hint": "Används med I/you/we/they.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "Med you använder vi 'have'. You have a great smile."
         },
         {
@@ -362,7 +362,7 @@
           "type": "fill-in-blank",
           "sentence": "My teacher ___ a black pen.",
           "answer": "has",
-          "hint": "My teacher = he/she, använd 'has'.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "My teacher = han/hon. Vi använder 'has'. My teacher has a black pen."
         },
         {
@@ -370,7 +370,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ blue eyes.",
           "answer": "have",
-          "hint": "Används med I.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "Med I använder vi 'have'. I have blue eyes."
         },
         {
@@ -413,7 +413,7 @@
           "type": "fill-in-blank",
           "sentence": "My friends ___ nice backpacks.",
           "answer": "have",
-          "hint": "My friends = they, använd 'have'.",
+          "hint": "Ramsa: I have – You have – He/She/It has – We/They have",
           "explanation": "My friends = de (they). Vi använder 'have'. My friends have nice backpacks."
         }
       ],

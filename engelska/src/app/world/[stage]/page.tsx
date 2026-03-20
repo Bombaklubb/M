@@ -145,7 +145,7 @@ export default function WorldPage({ params }: Props) {
         </div>
       )}
 
-      <div className="flex-1 bg-white/95 dark:bg-gray-900/95">
+      <div className="flex-1 bg-white/95 dark:bg-gray-900/95 text-gray-900 dark:text-gray-100">
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Tabs */}
         <div className="overflow-x-auto pb-1 mb-6">
