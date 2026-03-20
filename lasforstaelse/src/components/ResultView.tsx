@@ -20,7 +20,7 @@ interface ResultViewProps {
 }
 
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string }> = {
-  literal: { label: 'Pa raderna', emoji: '🔍' },
+  literal: { label: 'På raderna', emoji: '🔍' },
   inferens: { label: 'Mellan raderna', emoji: '🧠' },
   sammanfatta: { label: 'Sammanfatta', emoji: '📝' },
   ord: { label: 'Ord & begrepp', emoji: '📖' },
@@ -40,7 +40,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   const [showDetails, setShowDetails] = useState(false);
   const [animatedPercentage, setAnimatedPercentage] = useState(0);
 
-  // Berakna resultat for flervalsfragor
+  // Beräkna resultat för flervalsfrågor
   const results = text.questions.map((q, index) => {
     const userAnswerIndex = answers[index] !== undefined ? Number(answers[index]) : -1;
     const isCorrect = userAnswerIndex === q.correct;
@@ -75,11 +75,11 @@ export const ResultView: React.FC<ResultViewProps> = ({
   };
 
   const getMessage = () => {
-    if (percentage === 100) return 'Perfekt! Alla ratt!';
-    if (percentage >= 80) return 'Jattebra jobbat!';
+    if (percentage === 100) return 'Perfekt! Alla rätt!';
+    if (percentage >= 80) return 'Jättebra jobbat!';
     if (percentage >= 60) return 'Bra jobbat!';
-    if (percentage >= 40) return 'Bra forsok!';
-    return 'Fortsatt trana!';
+    if (percentage >= 40) return 'Bra försök!';
+    return 'Fortsätt träna!';
   };
 
   const getGradientColor = () => {
@@ -129,7 +129,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                 transition={{ delay: 0.5 }}
               >
                 Du fick <span className="font-bold text-indigo-600 dark:text-indigo-400">{correctCount}</span> av{' '}
-                <span className="font-bold dark:text-white">{totalQuestions}</span> ratt
+                <span className="font-bold dark:text-white">{totalQuestions}</span> rätt
               </motion.p>
 
               {/* Score circle with gradient */}
@@ -195,7 +195,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     ⭐
                   </motion.span>
                   <span className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-600 dark:from-amber-400 dark:to-yellow-400 bg-clip-text text-transparent">
-                    +{pointsEarned} poang
+                    +{pointsEarned} poäng
                   </span>
                 </div>
               </motion.div>
@@ -210,7 +210,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     transition={{ delay: 1.1 }}
                   >
                     <h3 className="font-bold text-violet-900 dark:text-violet-200 mb-4 text-lg">
-                      🎉 Nya utmarkelser!
+                      🎉 Nya utmärkelser!
                     </h3>
                     <div className="flex flex-wrap gap-3 justify-center">
                       {newBadges.map((badge, idx) => (
@@ -249,7 +249,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   >
                     ▼
                   </motion.span>
-                  {showDetails ? 'Dolj svaren' : 'Visa svaren'}
+                  {showDetails ? 'Dölj svaren' : 'Visa svaren'}
                 </button>
               </motion.div>
 
@@ -267,7 +267,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   size="lg"
                   className="w-full justify-center"
                 >
-                  ↓ Ny text, lagre niva
+                  ↓ Ny text, lägre nivå
                 </Button>
                 <Button
                   onClick={onNextText}
@@ -275,7 +275,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   size="xl"
                   className="w-full text-lg font-bold"
                 >
-                  Ny text, samma niva →
+                  Ny text, samma nivå →
                 </Button>
                 <Button
                   onClick={onNextTextHigher}
@@ -284,7 +284,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   size="lg"
                   className="w-full justify-center"
                 >
-                  ↑ Ny text, hogre niva
+                  ↑ Ny text, högre nivå
                 </Button>
               </motion.div>
             </CardContent>
@@ -302,7 +302,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
             >
               {results.map((result, index) => {
                 const typeInfo = QUESTION_TYPE_LABELS[result.question.type] || {
-                  label: 'Fraga',
+                  label: 'Fråga',
                   emoji: '❓',
                 };
 
@@ -387,7 +387,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                                     </span>
                                     {isCorrectAnswer && (
                                       <span className="text-emerald-600 dark:text-emerald-400 text-xs font-semibold px-2 py-1 bg-emerald-100 dark:bg-emerald-900/50 rounded-lg">
-                                        Ratt svar
+                                        Rätt svar
                                       </span>
                                     )}
                                     {isUserAnswer && !result.isCorrect && (

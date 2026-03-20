@@ -125,10 +125,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">{text.title}</h2>
           <div className="flex items-center gap-3 mt-1">
             <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300">
-              {text.grade === 10 ? 'Gymnasiet' : `Ak ${text.grade}`}
+              {text.grade === 10 ? 'Gymnasiet' : `Åk ${text.grade}`}
             </span>
             <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">
-              {text.genre === 'berattelse' ? '📖 Berattelse' : '📰 Faktatext'}
+              {text.genre === 'berättelse' ? '📖 Berättelse' : '📰 Faktatext'}
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400">{wordCount} ord</span>
           </div>
@@ -182,7 +182,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       )}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      title="Bionic Reading - fetstil pa ordets borjan for lattare lasning"
+                      title="Bionic Reading - fetstil på ordets början för lättare läsning"
                       aria-label="Bionic Reading"
                       aria-pressed={bionicReading}
                     >
@@ -192,7 +192,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       onClick={() => setShowText(false)}
                       className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
                     >
-                      Visa fragor →
+                      Visa frågor →
                     </button>
                   </div>
                 </div>
@@ -251,13 +251,13 @@ export const QuizView: React.FC<QuizViewProps> = ({
               <CardContent className="p-4">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-bold text-slate-700 dark:text-slate-200">
-                    Fraga {currentQuestion + 1} av {totalQuestions}
+                    Fråga {currentQuestion + 1} av {totalQuestions}
                   </span>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">
                     {Object.keys(answers).length}/{totalQuestions} besvarade
                   </span>
                 </div>
-                <div className="h-3 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden" role="progressbar" aria-valuenow={currentQuestion + 1} aria-valuemin={1} aria-valuemax={totalQuestions} aria-label={`Fraga ${currentQuestion + 1} av ${totalQuestions}`}>
+                <div className="h-3 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden" role="progressbar" aria-valuenow={currentQuestion + 1} aria-valuemin={1} aria-valuemax={totalQuestions} aria-label={`Fråga ${currentQuestion + 1} av ${totalQuestions}`}>
                   <motion.div
                     className="h-full bg-gradient-to-r from-violet-500 via-indigo-500 to-cyan-500 rounded-full"
                     initial={{ width: 0 }}
@@ -372,7 +372,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                         variant="outline"
                         className="px-4"
                       >
-                        ← Foregaende
+                        ← Föregående
                       </Button>
                       {isLastQuestion ? (
                         <Button
@@ -382,7 +382,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                           size="lg"
                           className="flex-1 text-lg font-bold"
                         >
-                          {allAnswered ? 'Ratta svaren!' : `Svara pa alla (${Object.keys(answers).length}/${totalQuestions})`}
+                          {allAnswered ? 'Rätta svaren!' : `Svara på alla (${Object.keys(answers).length}/${totalQuestions})`}
                         </Button>
                       ) : (
                         <Button
@@ -390,7 +390,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                           variant="gradient"
                           className="flex-1"
                         >
-                          Nasta fraga →
+                          Nästa fråga →
                         </Button>
                       )}
                     </div>
@@ -402,7 +402,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
             {/* All Questions Overview */}
             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl overflow-hidden">
               <CardContent className="p-4">
-                <h4 className="text-sm font-bold text-slate-700 dark:text-slate-200 mb-3">Oversikt</h4>
+                <h4 className="text-sm font-bold text-slate-700 dark:text-slate-200 mb-3">Översikt</h4>
                 <div className="grid grid-cols-6 gap-2">
                   {questions.map((_q, idx) => (
                     <motion.button
