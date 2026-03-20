@@ -9,197 +9,374 @@ function Illustration({ name }: { name: string }) {
   const illustrations: Record<string, React.ReactNode> = {
     'count-to-10': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#f0fdf4" rx="12"/>
-        {[0,1,2,3,4].map(i => (
-          <g key={i} transform={`translate(${20 + i*36}, 30)`}>
-            <circle cx="12" cy="12" r="12" fill="#4ade80"/>
-            <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="white">{i+1}</text>
-          </g>
-        ))}
-        {[0,1,2,3,4].map(i => (
-          <g key={i+5} transform={`translate(${20 + i*36}, 75)`}>
-            <circle cx="12" cy="12" r="12" fill="#86efac"/>
-            <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="bold" fill="white">{i+6}</text>
-          </g>
-        ))}
-        <text x="100" y="115" textAnchor="middle" fontSize="10" fill="#16a34a">Räkna 1 till 10!</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <circle cx="100" cy="60" r="52" fill="#1e1b4b" opacity="0.5"/>
+        {[0,1,2,3,4,5,6,7,8,9].map(i => {
+          const row = Math.floor(i / 5);
+          const col = i % 5;
+          const colors = ['#f43f5e','#f59e0b','#22c55e','#3b82f6','#a855f7','#06b6d4','#ec4899','#84cc16','#f97316','#818cf8'];
+          return (
+            <g key={i} transform={`translate(${25 + col * 34}, ${22 + row * 46})`}>
+              <circle cx="12" cy="12" r="14" fill={colors[i]} opacity="0.9"/>
+              <circle cx="12" cy="12" r="14" fill="url(#shine)" opacity="0.3"/>
+              <text x="12" y="17" textAnchor="middle" fontSize="14" fontWeight="900" fill="white">{i+1}</text>
+            </g>
+          );
+        })}
+        <text x="100" y="113" textAnchor="middle" fontSize="8" fontWeight="700" fill="#a5b4fc">Räkna 1 till 10!</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="10" r="1.5" fill="#60a5fa" opacity="0.6"/>
       </svg>
     ),
     'addition-basic': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#eff6ff" rx="12"/>
-        <text x="10"  y="65" fontSize="26">🍎</text>
-        <text x="38"  y="65" fontSize="26">🍎</text>
-        <text x="72"  y="68" fontSize="22" fontWeight="bold" fill="#2563eb">+</text>
-        <text x="98"  y="65" fontSize="26">🍎</text>
-        <text x="126" y="65" fontSize="26">🍎</text>
-        <text x="154" y="65" fontSize="26">🍎</text>
-        <text x="100" y="102" textAnchor="middle" fontSize="12" fill="#1d4ed8" fontWeight="bold">2 + 3 = 5</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <rect x="8" y="25" width="70" height="70" rx="12" fill="#1e3a5f" stroke="#3b82f6" strokeWidth="1.5"/>
+        <text x="20" y="62" fontSize="22">🍎</text>
+        <text x="46" y="62" fontSize="22">🍎</text>
+        <text x="31" y="84" textAnchor="middle" fontSize="9" fontWeight="700" fill="#93c5fd">2 äpplen</text>
+        <rect x="8" y="72" width="70" height="0" rx="0" fill="none"/>
+        <text x="86" y="65" textAnchor="middle" fontSize="28" fontWeight="900" fill="#f59e0b">+</text>
+        <rect x="101" y="25" width="91" height="70" rx="12" fill="#1e3a1e" stroke="#22c55e" strokeWidth="1.5"/>
+        <text x="110" y="62" fontSize="22">🍎</text>
+        <text x="136" y="62" fontSize="22">🍎</text>
+        <text x="162" y="62" fontSize="22">🍎</text>
+        <text x="146" y="84" textAnchor="middle" fontSize="9" fontWeight="700" fill="#86efac">3 äpplen</text>
+        <rect x="60" y="103" width="80" height="14" rx="7" fill="#1e3a5f"/>
+        <text x="100" y="113" textAnchor="middle" fontSize="10" fontWeight="900" fill="#fbbf24">2 + 3 = 5 ✓</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#60a5fa" opacity="0.6"/>
       </svg>
     ),
     'subtraction-basic': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fef2f2" rx="12"/>
-        <text x="8"  y="60" fontSize="26">🍎</text>
-        <text x="40" y="60" fontSize="26">🍎</text>
-        <text x="72" y="60" fontSize="26">🍎</text>
-        <text x="104" y="60" fontSize="26">🍎</text>
-        <text x="136" y="60" fontSize="26">🍎</text>
-        <line x1="8"  y1="38" x2="68"  y2="72" stroke="#ef4444" strokeWidth="3" strokeLinecap="round"/>
-        <line x1="40" y1="38" x2="100" y2="72" stroke="#ef4444" strokeWidth="3" strokeLinecap="round"/>
-        <text x="100" y="100" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="bold">5 - 2 = 3</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <rect x="8" y="20" width="184" height="60" rx="12" fill="#2d1a1a" stroke="#f43f5e" strokeWidth="1.5"/>
+        {[0,1,2,3,4].map(i => (
+          <text key={i} x={20 + i*36} y="60" fontSize="24"
+            opacity={i < 2 ? 0.3 : 0.95}>🍎</text>
+        ))}
+        {[0,1].map(i => (
+          <g key={i}>
+            <line x1={16 + i*36} y1="32" x2={44 + i*36} y2="68" stroke="#f43f5e" strokeWidth="3" strokeLinecap="round"/>
+            <line x1={44 + i*36} y1="32" x2={16 + i*36} y2="68" stroke="#f43f5e" strokeWidth="3" strokeLinecap="round"/>
+          </g>
+        ))}
+        <text x="164" y="55" textAnchor="middle" fontSize="24" fontWeight="900" fill="#f43f5e">− 2</text>
+        <rect x="55" y="90" width="90" height="22" rx="11" fill="#3d1515" stroke="#f43f5e" strokeWidth="1"/>
+        <text x="100" y="104" textAnchor="middle" fontSize="11" fontWeight="900" fill="#fca5a5">5 − 2 = 3 ✓</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#f43f5e" opacity="0.6"/>
       </svg>
     ),
     'shapes-basic': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#faf5ff" rx="12"/>
-        <circle cx="30" cy="60" r="22" fill="#a78bfa" opacity="0.8"/>
-        <text x="30" y="95" textAnchor="middle" fontSize="9" fill="#7c3aed">Cirkel</text>
-        <rect x="60" y="38" width="44" height="44" fill="#818cf8" rx="4" opacity="0.8"/>
-        <text x="82" y="95" textAnchor="middle" fontSize="9" fill="#4338ca">Kvadrat</text>
-        <polygon points="127,38 105,82 149,82" fill="#6ee7b7" opacity="0.8"/>
-        <text x="127" y="95" textAnchor="middle" fontSize="9" fill="#059669">Triangel</text>
-        <rect x="155" y="46" width="38" height="28" fill="#fbbf24" rx="4" opacity="0.8"/>
-        <text x="174" y="95" textAnchor="middle" fontSize="9" fill="#d97706">Rektangel</text>
+        <defs>
+          <radialGradient id="gCircle" cx="40%" cy="35%"><stop offset="0%" stopColor="#c4b5fd"/><stop offset="100%" stopColor="#7c3aed"/></radialGradient>
+          <radialGradient id="gSquare" cx="40%" cy="35%"><stop offset="0%" stopColor="#93c5fd"/><stop offset="100%" stopColor="#1d4ed8"/></radialGradient>
+          <radialGradient id="gTri" cx="50%" cy="30%"><stop offset="0%" stopColor="#6ee7b7"/><stop offset="100%" stopColor="#047857"/></radialGradient>
+          <radialGradient id="gRect" cx="40%" cy="35%"><stop offset="0%" stopColor="#fde68a"/><stop offset="100%" stopColor="#d97706"/></radialGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <circle cx="25" cy="54" r="52" fill="#1e1b4b" opacity="0.3"/>
+        <circle cx="30" cy="52" r="22" fill="url(#gCircle)" stroke="#a78bfa" strokeWidth="1.5"/>
+        <text x="30" y="84" textAnchor="middle" fontSize="8" fontWeight="700" fill="#c4b5fd">Cirkel</text>
+        <rect x="60" y="30" width="40" height="40" rx="4" fill="url(#gSquare)" stroke="#60a5fa" strokeWidth="1.5"/>
+        <text x="80" y="84" textAnchor="middle" fontSize="8" fontWeight="700" fill="#93c5fd">Kvadrat</text>
+        <polygon points="123,30 103,78 143,78" fill="url(#gTri)" stroke="#34d399" strokeWidth="1.5"/>
+        <text x="123" y="92" textAnchor="middle" fontSize="8" fontWeight="700" fill="#6ee7b7">Triangel</text>
+        <rect x="152" y="40" width="40" height="28" rx="4" fill="url(#gRect)" stroke="#fbbf24" strokeWidth="1.5"/>
+        <text x="172" y="84" textAnchor="middle" fontSize="8" fontWeight="700" fill="#fde68a">Rektangel</text>
+        <text x="100" y="112" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#818cf8">Former och figurer</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="10" r="1.5" fill="#a78bfa" opacity="0.6"/>
       </svg>
     ),
     'multiplication': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fffbeb" rx="12"/>
+        <defs>
+          <radialGradient id="gDot" cx="35%" cy="30%"><stop offset="0%" stopColor="#fde68a"/><stop offset="100%" stopColor="#d97706"/></radialGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <rect x="8" y="10" width="110" height="100" rx="12" fill="#1c1a0e" stroke="#f59e0b" strokeWidth="1.5" opacity="0.9"/>
         {[0,1,2].map(row => [0,1,2,3].map(col => (
-          <circle key={`${row}-${col}`} cx={25 + col*30} cy={25 + row*30} r="10" fill="#f59e0b" opacity="0.8"/>
+          <g key={`${row}-${col}`} transform={`translate(${20 + col*26}, ${22 + row*26})`}>
+            <circle cx="8" cy="8" r="9" fill="url(#gDot)" stroke="#fbbf24" strokeWidth="0.8"/>
+          </g>
         )))}
-        <text x="150" y="55" textAnchor="middle" fontSize="22" fontWeight="bold" fill="#d97706">3×4</text>
-        <text x="150" y="80" textAnchor="middle" fontSize="28" fontWeight="black" fill="#92400e">= 12</text>
+        <text x="59" y="105" textAnchor="middle" fontSize="8" fontWeight="700" fill="#fcd34d">3 rader × 4 kolumner</text>
+        <rect x="126" y="25" width="66" height="70" rx="12" fill="#2d1f00" stroke="#f59e0b" strokeWidth="1.5"/>
+        <text x="159" y="58" textAnchor="middle" fontSize="20" fontWeight="900" fill="#fbbf24">3 × 4</text>
+        <text x="159" y="82" textAnchor="middle" fontSize="22" fontWeight="900" fill="#f59e0b">= 12</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#f59e0b" opacity="0.6"/>
       </svg>
     ),
     'division': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#f0fdfa" rx="12"/>
-        {[0,1,2,3,4,5].map(i => (
-          <text key={i} x={8 + i * 30} y="40" fontSize="22">🍕</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <rect x="8" y="8" width="184" height="58" rx="12" fill="#0d2626" stroke="#22c55e" strokeWidth="1.5"/>
+        {[0,1,2,3,4,5,6,7,8,9,10,11].map(i => (
+          <text key={i} x={14 + (i%6)*30} y={i < 6 ? 34 : 56} fontSize="19">🍕</text>
         ))}
-        {[0,1,2,3,4,5].map(i => (
-          <text key={i+6} x={8 + i * 30} y="70" fontSize="22">🍕</text>
+        <line x1="10" y1="75" x2="190" y2="75" stroke="#22c55e" strokeWidth="1.5" strokeDasharray="5 3"/>
+        {[0,1,2,3].map(i => (
+          <g key={i}>
+            <circle cx={22 + i*48} cy="97" r="12" fill="#134e4a" stroke="#34d399" strokeWidth="1.5"/>
+            <text x={22 + i*48} y="101" textAnchor="middle" fontSize="10" fontWeight="900" fill="#6ee7b7">×3</text>
+          </g>
         ))}
-        <text x="100" y="90" textAnchor="middle" fontSize="11" fill="#0f766e">12 pizzor ÷ 4 kompisar</text>
-        <text x="100" y="108" textAnchor="middle" fontSize="13" fontWeight="bold" fill="#0d9488">= 3 vardera</text>
+        <text x="100" y="116" textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#34d399">12 ÷ 4 = 3 vardera</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="10" r="1.5" fill="#34d399" opacity="0.6"/>
       </svg>
     ),
     'fractions': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fff7ed" rx="12"/>
-        <circle cx="40" cy="60" r="30" fill="none" stroke="#f97316" strokeWidth="3"/>
-        <path d="M40,30 A30,30 0 0,1 70,60 L40,60 Z" fill="#fb923c" opacity="0.8"/>
-        <text x="40" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">¼</text>
-        <circle cx="110" cy="60" r="30" fill="none" stroke="#f97316" strokeWidth="3"/>
-        <path d="M110,30 A30,30 0 0,1 140,60 L110,60 Z" fill="#fb923c" opacity="0.8"/>
-        <path d="M110,60 L140,60 A30,30 0 0,1 110,90 Z" fill="#fb923c" opacity="0.8"/>
-        <text x="110" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">½</text>
-        <circle cx="170" cy="60" r="22" fill="#fb923c" opacity="0.8"/>
-        <text x="170" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">Hel!</text>
+        <defs>
+          <radialGradient id="gPie" cx="40%" cy="35%"><stop offset="0%" stopColor="#fdba74"/><stop offset="100%" stopColor="#c2410c"/></radialGradient>
+          <radialGradient id="gPieFull" cx="40%" cy="35%"><stop offset="0%" stopColor="#fbbf24"/><stop offset="100%" stopColor="#d97706"/></radialGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <circle cx="100" cy="60" r="55" fill="#1c1206" opacity="0.4"/>
+        {/* 1/4 pie */}
+        <circle cx="35" cy="57" r="28" fill="#2d1a08" stroke="#f97316" strokeWidth="2"/>
+        <path d="M35,29 A28,28 0 0,1 63,57 L35,57 Z" fill="url(#gPie)"/>
+        <text x="35" y="95" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fb923c">¼</text>
+        {/* 1/2 pie */}
+        <circle cx="105" cy="57" r="28" fill="#2d1a08" stroke="#f97316" strokeWidth="2"/>
+        <path d="M105,29 A28,28 0 0,1 133,57 A28,28 0 0,1 105,85 Z" fill="url(#gPie)"/>
+        <text x="105" y="95" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fb923c">½</text>
+        {/* Full */}
+        <circle cx="170" cy="57" r="24" fill="url(#gPieFull)" stroke="#fbbf24" strokeWidth="2"/>
+        <text x="170" y="52" textAnchor="middle" fontSize="8" fontWeight="700" fill="#1c1206">HEL</text>
+        <text x="170" y="63" textAnchor="middle" fontSize="12" fontWeight="900" fill="#1c1206">1</text>
+        <text x="170" y="95" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fbbf24">Hel!</text>
+        <text x="100" y="112" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#a5b4fc">Delar av en helhet</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#f97316" opacity="0.6"/>
       </svg>
     ),
     'decimals': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fdf4ff" rx="12"/>
-        <rect x="10" y="25" width="80" height="60" fill="#e879f9" rx="6" opacity="0.3"/>
-        <rect x="10" y="25" width="40" height="60" fill="#e879f9" rx="6" opacity="0.6"/>
-        <text x="50" y="58" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#a21caf">0,5</text>
-        <text x="50" y="100" textAnchor="middle" fontSize="11" fill="#7e22ce">Hälften</text>
-        <rect x="110" y="25" width="80" height="60" fill="#818cf8" rx="6" opacity="0.3"/>
-        <rect x="110" y="25" width="20" height="60" fill="#818cf8" rx="6" opacity="0.6"/>
-        <text x="150" y="58" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#3730a3">0,25</text>
-        <text x="150" y="100" textAnchor="middle" fontSize="11" fill="#4338ca">En fjärdedel</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Bar 0.5 */}
+        <rect x="10" y="22" width="82" height="52" rx="10" fill="#2d1a40" stroke="#a855f7" strokeWidth="1.5"/>
+        <rect x="13" y="25" width="76" height="46" rx="8" fill="#1a0a2e" opacity="0.8"/>
+        <rect x="13" y="25" width="38" height="46" rx="8" fill="#a855f7" opacity="0.85"/>
+        <text x="51" y="52" textAnchor="middle" fontSize="17" fontWeight="900" fill="white">0,5</text>
+        <text x="51" y="87" textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#c084fc">Hälften (½)</text>
+        {/* Bar 0.25 */}
+        <rect x="108" y="22" width="82" height="52" rx="10" fill="#1a2040" stroke="#60a5fa" strokeWidth="1.5"/>
+        <rect x="111" y="25" width="76" height="46" rx="8" fill="#0a1020" opacity="0.8"/>
+        <rect x="111" y="25" width="19" height="46" rx="8" fill="#3b82f6" opacity="0.9"/>
+        <text x="149" y="52" textAnchor="middle" fontSize="17" fontWeight="900" fill="white">0,25</text>
+        <text x="149" y="87" textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#93c5fd">En fjärdedel (¼)</text>
+        <text x="100" y="110" textAnchor="middle" fontSize="8" fontWeight="700" fill="#a5b4fc">Decimaler – delar av ett heltal</text>
+        <circle cx="8" cy="8" r="2" fill="#a855f7" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#60a5fa" opacity="0.6"/>
       </svg>
     ),
     'percent': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#f0f9ff" rx="12"/>
-        <rect x="10" y="20" width="180" height="20" fill="#e0f2fe" rx="4"/>
-        <rect x="10" y="20" width="90" height="20" fill="#0ea5e9" rx="4"/>
-        <text x="100" y="57" textAnchor="middle" fontSize="13" fill="#0369a1">50% = hälften</text>
-        <rect x="10" y="65" width="180" height="20" fill="#e0f2fe" rx="4"/>
-        <rect x="10" y="65" width="18" height="20" fill="#0ea5e9" rx="4"/>
-        <text x="100" y="100" textAnchor="middle" fontSize="13" fill="#0369a1">10% = en tiondel</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <circle cx="100" cy="60" r="55" fill="#0c1a2e" opacity="0.5"/>
+        {/* 50% bar */}
+        <text x="12" y="32" fontSize="8.5" fontWeight="700" fill="#60a5fa">50%</text>
+        <rect x="36" y="20" width="156" height="18" rx="9" fill="#1e3a5f" stroke="#3b82f6" strokeWidth="1"/>
+        <rect x="36" y="20" width="78" height="18" rx="9" fill="#3b82f6"/>
+        <text x="75" y="32" textAnchor="middle" fontSize="8" fontWeight="900" fill="white">hälften</text>
+        {/* 25% bar */}
+        <text x="12" y="56" fontSize="8.5" fontWeight="700" fill="#34d399">25%</text>
+        <rect x="36" y="44" width="156" height="18" rx="9" fill="#0d2e1e" stroke="#22c55e" strokeWidth="1"/>
+        <rect x="36" y="44" width="39" height="18" rx="9" fill="#22c55e"/>
+        <text x="55" y="56" textAnchor="middle" fontSize="8" fontWeight="900" fill="white">¼</text>
+        {/* 10% bar */}
+        <text x="12" y="80" fontSize="8.5" fontWeight="700" fill="#fbbf24">10%</text>
+        <rect x="36" y="68" width="156" height="18" rx="9" fill="#2d2006" stroke="#f59e0b" strokeWidth="1"/>
+        <rect x="36" y="68" width="15.6" height="18" rx="9" fill="#f59e0b"/>
+        <text x="12" y="104" fontSize="7.5" fontWeight="700" fill="#f59e0b">100%</text>
+        <rect x="36" y="92" width="156" height="18" rx="9" fill="#f59e0b"/>
+        <text x="114" y="104" textAnchor="middle" fontSize="8" fontWeight="900" fill="#1c1206">= allt (1 hel)</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#60a5fa" opacity="0.6"/>
       </svg>
     ),
     'algebra': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#f5f3ff" rx="12"/>
-        <rect x="10" y="35" width="80" height="50" fill="#ddd6fe" rx="8"/>
-        <text x="50" y="55" textAnchor="middle" fontSize="14" fill="#7c3aed">x + 5</text>
-        <text x="50" y="75" textAnchor="middle" fontSize="11" fill="#6d28d9">= 8</text>
-        <text x="100" y="65" textAnchor="middle" fontSize="20" fill="#7c3aed">→</text>
-        <rect x="110" y="35" width="80" height="50" fill="#c4b5fd" rx="8"/>
-        <text x="150" y="55" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#4c1d95">x = 3</text>
-        <text x="150" y="75" textAnchor="middle" fontSize="11" fill="#5b21b6">Löst!</text>
+        <defs>
+          <linearGradient id="gAlgL" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#312e81"/><stop offset="100%" stopColor="#1e1b4b"/></linearGradient>
+          <linearGradient id="gAlgR" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#4c1d95"/><stop offset="100%" stopColor="#5b21b6"/></linearGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <rect x="8" y="28" width="80" height="64" rx="12" fill="url(#gAlgL)" stroke="#818cf8" strokeWidth="1.5"/>
+        <text x="48" y="55" textAnchor="middle" fontSize="18" fontWeight="900" fill="#c4b5fd">x + 5</text>
+        <line x1="18" y1="65" x2="78" y2="65" stroke="#818cf8" strokeWidth="1" strokeDasharray="3 2"/>
+        <text x="48" y="80" textAnchor="middle" fontSize="14" fontWeight="700" fill="#818cf8">= 8</text>
+        <text x="100" y="64" textAnchor="middle" fontSize="26" fontWeight="900" fill="#a855f7">→</text>
+        <rect x="112" y="28" width="80" height="64" rx="12" fill="url(#gAlgR)" stroke="#a78bfa" strokeWidth="1.5"/>
+        <text x="152" y="55" textAnchor="middle" fontSize="22" fontWeight="900" fill="#e9d5ff">x = 3</text>
+        <rect x="126" y="68" width="52" height="16" rx="8" fill="#7c3aed" opacity="0.8"/>
+        <text x="152" y="79" textAnchor="middle" fontSize="9" fontWeight="900" fill="white">Löst! ✓</text>
+        <text x="100" y="110" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#a5b4fc">Algebra – hitta det okända</text>
+        <circle cx="8" cy="8" r="2" fill="#a855f7" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#818cf8" opacity="0.6"/>
       </svg>
     ),
     'equations': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#eff6ff" rx="12"/>
-        <text x="100" y="35" textAnchor="middle" fontSize="16" fontWeight="bold" fill="#1e40af">⚖️ Ekvation</text>
-        <line x1="10" y1="65" x2="190" y2="65" stroke="#3b82f6" strokeWidth="3"/>
-        <text x="50" y="55" textAnchor="middle" fontSize="14" fill="#1d4ed8">2x + 4</text>
-        <text x="150" y="55" textAnchor="middle" fontSize="14" fill="#1d4ed8">= 12</text>
-        <text x="50" y="90" textAnchor="middle" fontSize="13" fill="#1e40af">2x = 8</text>
-        <text x="150" y="90" textAnchor="middle" fontSize="13" fill="#1e40af">x = 4 ✓</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Balance beam visual */}
+        <rect x="92" y="72" width="16" height="30" rx="4" fill="#3b82f6"/>
+        <circle cx="100" cy="104" r="8" fill="#1d4ed8" stroke="#60a5fa" strokeWidth="1.5"/>
+        <rect x="18" y="66" width="164" height="8" rx="4" fill="#1d4ed8"/>
+        {/* Left pan */}
+        <rect x="12" y="40" width="68" height="28" rx="8" fill="#1e3a5f" stroke="#60a5fa" strokeWidth="1.5"/>
+        <text x="46" y="52" textAnchor="middle" fontSize="13" fontWeight="900" fill="#93c5fd">2x + 4</text>
+        <text x="46" y="62" textAnchor="middle" fontSize="8" fill="#60a5fa">Vänster sida</text>
+        {/* Right pan */}
+        <rect x="120" y="40" width="68" height="28" rx="8" fill="#1e3a5f" stroke="#fbbf24" strokeWidth="1.5"/>
+        <text x="154" y="52" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fde68a">= 12</text>
+        <text x="154" y="62" textAnchor="middle" fontSize="8" fill="#fbbf24">Höger sida</text>
+        {/* Steps */}
+        <text x="32" y="22" textAnchor="middle" fontSize="9" fontWeight="700" fill="#818cf8">2x=8</text>
+        <text x="100" y="22" textAnchor="middle" fontSize="11" fontWeight="900" fill="#a855f7">→</text>
+        <rect x="126" y="12" width="60" height="18" rx="9" fill="#4c1d95"/>
+        <text x="156" y="23" textAnchor="middle" fontSize="10" fontWeight="900" fill="#e9d5ff">x = 4 ✓</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#60a5fa" opacity="0.6"/>
       </svg>
     ),
     'statistics': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#f0fdf4" rx="12"/>
-        {[40,65,50,80,55].map((h, i) => (
-          <rect key={i} x={15 + i*36} y={100-h} width="26" height={h} fill="#22c55e" rx="4" opacity="0.8"/>
+        <defs>
+          <linearGradient id="gBar1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stopColor="#4ade80"/><stop offset="100%" stopColor="#15803d"/></linearGradient>
+          <linearGradient id="gBar2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stopColor="#34d399"/><stop offset="100%" stopColor="#047857"/></linearGradient>
+          <linearGradient id="gBar3" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stopColor="#6ee7b7"/><stop offset="100%" stopColor="#065f46"/></linearGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <rect x="10" y="8" width="180" height="100" rx="10" fill="#071a12" opacity="0.8"/>
+        {/* Grid lines */}
+        {[20,40,60,80].map(y => (
+          <line key={y} x1="28" y1={108-y} x2="188" y2={108-y} stroke="#1a3a2a" strokeWidth="1"/>
         ))}
-        <line x1="10" y1="100" x2="190" y2="100" stroke="#15803d" strokeWidth="2"/>
-        <text x="100" y="115" textAnchor="middle" fontSize="10" fill="#15803d">Stapeldiagram</text>
+        {/* Bars with gradient-like colors */}
+        {[40,65,50,80,55].map((h, i) => {
+          const fills = ['url(#gBar1)','url(#gBar2)','url(#gBar1)','url(#gBar3)','url(#gBar2)'];
+          return (
+            <g key={i}>
+              <rect x={30 + i*32} y={108-h} width="22" height={h} fill={fills[i]} rx="4 4 0 0"/>
+              <rect x={30 + i*32} y={108-h} width="22" height="4" rx="4 4 0 0" fill="white" opacity="0.25"/>
+            </g>
+          );
+        })}
+        <line x1="28" y1="108" x2="188" y2="108" stroke="#22c55e" strokeWidth="2"/>
+        <line x1="28" y1="8" x2="28" y2="108" stroke="#22c55e" strokeWidth="2"/>
+        <text x="100" y="118" textAnchor="middle" fontSize="8" fontWeight="700" fill="#4ade80">Stapeldiagram</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#22c55e" opacity="0.6"/>
       </svg>
     ),
     'geometry-area': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#f7fee7" rx="12"/>
-        <rect x="10" y="20" width="80" height="60" fill="#84cc16" opacity="0.5" rx="4"/>
-        <text x="50" y="47" textAnchor="middle" fontSize="11" fill="#365314">längd = 8</text>
-        <text x="50" y="62" textAnchor="middle" fontSize="11" fill="#365314">bredd = 6</text>
-        <text x="50" y="92" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#3f6212">A=48 m²</text>
-        <polygon points="120,20 160,80 180,80" fill="#4ade80" opacity="0.7"/>
-        <text x="155" y="97" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#166534">Triangel</text>
+        <defs>
+          <linearGradient id="gRect2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#84cc16" stopOpacity="0.7"/><stop offset="100%" stopColor="#365314" stopOpacity="0.9"/></linearGradient>
+          <linearGradient id="gTri2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#34d399" stopOpacity="0.7"/><stop offset="100%" stopColor="#064e3b" stopOpacity="0.9"/></linearGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Rectangle area */}
+        <rect x="8" y="18" width="88" height="64" rx="8" fill="url(#gRect2)" stroke="#84cc16" strokeWidth="1.5"/>
+        {/* dimension arrows */}
+        <line x1="8" y1="12" x2="96" y2="12" stroke="#a3e635" strokeWidth="1.5"/>
+        <polygon points="6,12 12,9 12,15" fill="#a3e635"/>
+        <polygon points="98,12 92,9 92,15" fill="#a3e635"/>
+        <text x="52" y="10" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#a3e635">8 m</text>
+        <text x="100" y="38" fontSize="7.5" fontWeight="700" fill="#a3e635">6 m</text>
+        <rect x="30" y="48" width="46" height="20" rx="6" fill="#052e16" opacity="0.8"/>
+        <text x="53" y="61" textAnchor="middle" fontSize="10" fontWeight="900" fill="#4ade80">A = 48 m²</text>
+        <text x="52" y="95" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#86efac">Rektangel: l × b</text>
+        {/* Triangle */}
+        <polygon points="122,18 150,82 186,82" fill="url(#gTri2)" stroke="#34d399" strokeWidth="1.5"/>
+        <rect x="130" y="46" width="46" height="18" rx="6" fill="#052e16" opacity="0.8"/>
+        <text x="153" y="57" textAnchor="middle" fontSize="9" fontWeight="900" fill="#34d399">A = ½bh</text>
+        <text x="154" y="95" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#6ee7b7">Triangel: ½×b×h</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="10" r="1.5" fill="#4ade80" opacity="0.6"/>
       </svg>
     ),
     'functions': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fff1f2" rx="12"/>
-        <line x1="10" y1="100" x2="190" y2="100" stroke="#9f1239" strokeWidth="1.5"/>
-        <line x1="20" y1="10" x2="20" y2="110" stroke="#9f1239" strokeWidth="1.5"/>
-        <polyline points="20,100 60,80 100,60 140,40 180,20" fill="none" stroke="#e11d48" strokeWidth="2.5"/>
-        <text x="155" y="35" fontSize="11" fill="#be123c" fontWeight="bold">f(x)=2x+1</text>
-        <text x="100" y="115" textAnchor="middle" fontSize="9" fill="#9f1239">Linjär funktion (rät linje)</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Grid */}
+        {[20,40,60,80].map(y => <line key={y} x1="22" y1={y} x2="190" y2={y} stroke="#1e2a4a" strokeWidth="1"/>)}
+        {[50,80,110,140,170].map(x => <line key={x} x1={x} y1="10" x2={x} y2="105" stroke="#1e2a4a" strokeWidth="1"/>)}
+        {/* Axes */}
+        <line x1="22" y1="10" x2="22" y2="108" stroke="#3b82f6" strokeWidth="2"/>
+        <line x1="18" y1="105" x2="192" y2="105" stroke="#3b82f6" strokeWidth="2"/>
+        <polygon points="22,8 18,16 26,16" fill="#3b82f6"/>
+        <polygon points="194,105 186,101 186,109" fill="#3b82f6"/>
+        {/* Line f(x)=2x+1 */}
+        <polyline points="22,103 62,83 102,63 142,43 182,23" fill="none" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round"/>
+        {/* Glow on line */}
+        <polyline points="22,103 62,83 102,63 142,43 182,23" fill="none" stroke="#f43f5e" strokeWidth="5" strokeLinecap="round" opacity="0.2"/>
+        {/* Dots on line */}
+        {[[22,103],[62,83],[102,63],[142,43]].map(([x,y],i) => (
+          <circle key={i} cx={x} cy={y} r="4" fill="#f43f5e" stroke="#0f0e2e" strokeWidth="1.5"/>
+        ))}
+        {/* Label */}
+        <rect x="108" y="10" width="76" height="18" rx="9" fill="#3d0818"/>
+        <text x="146" y="22" textAnchor="middle" fontSize="9.5" fontWeight="900" fill="#f87171">f(x) = 2x + 1</text>
+        <text x="100" y="117" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#818cf8">Linjär funktion (rät linje)</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#f43f5e" opacity="0.6"/>
       </svg>
     ),
     'trigonometry': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fffbeb" rx="12"/>
-        <polygon points="20,100 160,100 20,20" fill="none" stroke="#d97706" strokeWidth="2.5"/>
-        <text x="90" y="115" textAnchor="middle" fontSize="10" fill="#92400e">Hypotenusa</text>
-        <text x="7" y="62" fontSize="9" fill="#92400e">Motstående</text>
-        <path d="M20,100 A20,20 0 0,1 36,86" fill="none" stroke="#f59e0b" strokeWidth="2"/>
-        <text x="42" y="95" fontSize="10" fill="#d97706" fontWeight="bold">v</text>
-        <text x="120" y="55" fontSize="11" fill="#b45309">sin(v)=m/h</text>
-        <text x="120" y="72" fontSize="11" fill="#b45309">cos(v)=l/h</text>
-        <text x="120" y="89" fontSize="11" fill="#b45309">tan(v)=m/l</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <polygon points="18,105 155,105 18,20" fill="#1c1206" stroke="#f59e0b" strokeWidth="2.5"/>
+        {/* Hypotenuse glow */}
+        <line x1="18" y1="20" x2="155" y2="105" stroke="#f59e0b" strokeWidth="1" opacity="0.3"/>
+        {/* Side labels */}
+        <text x="82" y="117" textAnchor="middle" fontSize="8.5" fontWeight="700" fill="#fcd34d">Liggande (l)</text>
+        <text x="6" y="65" fontSize="7.5" fontWeight="700" fill="#fcd34d" transform="rotate(-90,8,65)">Stående (m)</text>
+        <text x="82" y="55" textAnchor="middle" fontSize="8" fontWeight="700" fill="#fbbf24" transform="rotate(-35,82,55)">Hypotenusa (h)</text>
+        {/* Angle arc */}
+        <path d="M18,105 A22,22 0 0,1 36,88" fill="none" stroke="#22c55e" strokeWidth="2"/>
+        <text x="44" y="100" fontSize="11" fontWeight="900" fill="#34d399">v</text>
+        {/* Formulas box */}
+        <rect x="118" y="14" width="76" height="60" rx="10" fill="#0d2206" stroke="#22c55e" strokeWidth="1.2"/>
+        <text x="156" y="28" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#86efac">Trigonometri</text>
+        <text x="156" y="42" textAnchor="middle" fontSize="9" fontWeight="900" fill="#fbbf24">sin(v)=m/h</text>
+        <text x="156" y="55" textAnchor="middle" fontSize="9" fontWeight="900" fill="#60a5fa">cos(v)=l/h</text>
+        <text x="156" y="68" textAnchor="middle" fontSize="9" fontWeight="900" fill="#f43f5e">tan(v)=m/l</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#f59e0b" opacity="0.6"/>
       </svg>
     ),
     'derivatives': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#ecfeff" rx="12"/>
-        <line x1="10" y1="100" x2="190" y2="100" stroke="#0e7490" strokeWidth="1.5"/>
-        <line x1="20" y1="10" x2="20" y2="110" stroke="#0e7490" strokeWidth="1.5"/>
-        <path d="M25,95 Q60,90 100,60 Q140,30 175,15" fill="none" stroke="#0891b2" strokeWidth="2.5"/>
-        <line x1="60" y1="95" x2="140" y2="35" stroke="#ef4444" strokeWidth="2" strokeDasharray="4"/>
-        <text x="145" y="30" fontSize="10" fill="#dc2626" fontWeight="bold">f'(x)=lutning</text>
-        <text x="100" y="115" textAnchor="middle" fontSize="9" fill="#0e7490">f(x)=x² → f'(x)=2x</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* Grid */}
+        {[20,40,60,80].map(y => <line key={y} x1="22" y1={y} x2="190" y2={y} stroke="#0e2a3a" strokeWidth="1"/>)}
+        {/* Axes */}
+        <line x1="22" y1="10" x2="22" y2="108" stroke="#0891b2" strokeWidth="2"/>
+        <line x1="18" y1="105" x2="192" y2="105" stroke="#0891b2" strokeWidth="2"/>
+        <polygon points="22,8 18,16 26,16" fill="#0891b2"/>
+        <polygon points="194,105 186,101 186,109" fill="#0891b2"/>
+        {/* f(x)=x² curve */}
+        <path d="M22,105 Q60,104 80,85 Q110,55 140,30 Q165,12 188,8" fill="none" stroke="#06b6d4" strokeWidth="2.5" strokeLinecap="round"/>
+        <path d="M22,105 Q60,104 80,85 Q110,55 140,30 Q165,12 188,8" fill="none" stroke="#06b6d4" strokeWidth="6" strokeLinecap="round" opacity="0.15"/>
+        {/* Tangent line */}
+        <line x1="50" y1="98" x2="160" y2="30" stroke="#ef4444" strokeWidth="2" strokeDasharray="5 3"/>
+        {/* Touch point */}
+        <circle cx="100" cy="65" r="5" fill="#f43f5e" stroke="#0f0e2e" strokeWidth="1.5"/>
+        {/* Labels */}
+        <rect x="115" y="8" width="72" height="16" rx="8" fill="#0e2a3a"/>
+        <text x="151" y="19" textAnchor="middle" fontSize="8.5" fontWeight="900" fill="#f87171">f'(x) = lutning</text>
+        <text x="100" y="117" textAnchor="middle" fontSize="8" fontWeight="700" fill="#22d3ee">f(x)=x² → f'(x)=2x</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="112" r="1.5" fill="#06b6d4" opacity="0.6"/>
       </svg>
     ),
     'clock': (
@@ -262,15 +439,28 @@ function Illustration({ name }: { name: string }) {
     ),
     'probability': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fdf4ff" rx="12"/>
-        <rect x="10" y="25" width="40" height="40" rx="8" fill="#a855f7" opacity="0.8"/>
-        <circle cx="30" cy="45" r="5" fill="white"/>
-        <text x="30" y="78" textAnchor="middle" fontSize="10" fill="#7e22ce">P(⚄)=1/6</text>
-        <circle cx="100" cy="55" r="28" fill="#c084fc" opacity="0.4"/>
-        <text x="100" y="50" textAnchor="middle" fontSize="18">🎰</text>
-        <text x="100" y="78" textAnchor="middle" fontSize="10" fill="#7e22ce">P(krona)=½</text>
-        <text x="160" y="45" textAnchor="middle" fontSize="30">🪙</text>
-        <text x="160" y="78" textAnchor="middle" fontSize="10" fill="#7e22ce">50%</text>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        <circle cx="100" cy="60" r="55" fill="#1a0a2e" opacity="0.4"/>
+        {/* Die */}
+        <rect x="10" y="22" width="50" height="50" rx="10" fill="#312e81" stroke="#818cf8" strokeWidth="2"/>
+        {[[18,30],[18,47],[35,47],[52,30],[52,47],[35,30]].map(([cx,cy],i) => (
+          i < 5 ? <circle key={i} cx={cx} cy={cy} r="4" fill="white" opacity="0.9"/> : null
+        ))}
+        <text x="35" y="85" textAnchor="middle" fontSize="9" fontWeight="700" fill="#a5b4fc">P(⚄) = 1/6</text>
+        {/* Coin */}
+        <circle cx="100" cy="48" r="26" fill="#d97706" stroke="#fbbf24" strokeWidth="2"/>
+        <circle cx="100" cy="48" r="20" fill="#b45309" stroke="#fcd34d" strokeWidth="1"/>
+        <text x="100" y="44" textAnchor="middle" fontSize="10" fontWeight="900" fill="#fde68a">KR</text>
+        <text x="100" y="56" textAnchor="middle" fontSize="8" fill="#fde68a">KRONA</text>
+        <text x="100" y="86" textAnchor="middle" fontSize="9" fontWeight="700" fill="#fcd34d">P(krona) = ½</text>
+        {/* Bar chart for probability */}
+        <rect x="148" y="22" width="44" height="70" rx="8" fill="#0d1a3a" stroke="#3b82f6" strokeWidth="1.5"/>
+        <rect x="153" y="52" width="14" height="36" rx="3" fill="#60a5fa"/>
+        <rect x="173" y="35" width="14" height="53" rx="3" fill="#3b82f6"/>
+        <text x="160" y="98" textAnchor="middle" fontSize="7" fill="#93c5fd">50% 100%</text>
+        <text x="100" y="110" textAnchor="middle" fontSize="8" fontWeight="700" fill="#a5b4fc">Sannolikhet – chansen att något händer</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#a855f7" opacity="0.6"/>
       </svg>
     ),
 
@@ -398,16 +588,31 @@ function Illustration({ name }: { name: string }) {
 
     'fraction': (
       <svg viewBox="0 0 200 120" className="w-full h-full">
-        <rect width="200" height="120" fill="#fff7ed" rx="12"/>
-        <circle cx="40" cy="60" r="30" fill="none" stroke="#f97316" strokeWidth="3"/>
-        <path d="M40,30 A30,30 0 0,1 70,60 L40,60 Z" fill="#fb923c" opacity="0.8"/>
-        <text x="40" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">¼</text>
-        <circle cx="110" cy="60" r="30" fill="none" stroke="#f97316" strokeWidth="3"/>
-        <path d="M110,30 A30,30 0 0,1 140,60 L110,60 Z" fill="#fb923c" opacity="0.8"/>
-        <path d="M110,60 L140,60 A30,30 0 0,1 110,90 Z" fill="#fb923c" opacity="0.8"/>
-        <text x="110" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">½</text>
-        <circle cx="170" cy="60" r="22" fill="#fb923c" opacity="0.8"/>
-        <text x="170" y="100" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="bold">Hel!</text>
+        <defs>
+          <radialGradient id="gFrac" cx="40%" cy="35%"><stop offset="0%" stopColor="#fdba74"/><stop offset="100%" stopColor="#c2410c"/></radialGradient>
+        </defs>
+        <rect width="200" height="120" fill="#0f0e2e" rx="12"/>
+        {/* 1/4 */}
+        <circle cx="35" cy="55" r="26" fill="#2d1a08" stroke="#f97316" strokeWidth="2"/>
+        <path d="M35,29 A26,26 0 0,1 61,55 L35,55 Z" fill="url(#gFrac)"/>
+        <line x1="35" y1="29" x2="35" y2="55" stroke="#f97316" strokeWidth="1.5" opacity="0.6"/>
+        <text x="35" y="91" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fb923c">¼</text>
+        {/* 1/2 + 1/4 */}
+        <circle cx="105" cy="55" r="26" fill="#2d1a08" stroke="#f97316" strokeWidth="2"/>
+        <path d="M105,29 A26,26 0 0,1 131,55 A26,26 0 0,1 105,81 Z" fill="url(#gFrac)"/>
+        <path d="M105,29 A26,26 0 0,0 79,55 L105,55 Z" fill="#f97316" opacity="0.3"/>
+        <line x1="105" y1="29" x2="105" y2="81" stroke="#f97316" strokeWidth="1.5" opacity="0.6"/>
+        <line x1="79" y1="55" x2="131" y2="55" stroke="#f97316" strokeWidth="1.5" opacity="0.6"/>
+        <text x="105" y="91" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fb923c">½+¼</text>
+        {/* 3/4 */}
+        <circle cx="170" cy="55" r="26" fill="#2d1a08" stroke="#fbbf24" strokeWidth="2"/>
+        <path d="M170,29 A26,26 0 0,1 196,55 A26,26 0 0,1 170,81 A26,26 0 0,1 144,55 Z" fill="url(#gFrac)" opacity="0.9"/>
+        <line x1="170" y1="29" x2="170" y2="55" stroke="#fbbf24" strokeWidth="1.5" opacity="0.6"/>
+        <line x1="144" y1="55" x2="196" y2="55" stroke="#fbbf24" strokeWidth="1.5" opacity="0.6"/>
+        <text x="170" y="91" textAnchor="middle" fontSize="13" fontWeight="900" fill="#fbbf24">¾</text>
+        <text x="100" y="110" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#a5b4fc">Addition av bråk</text>
+        <circle cx="8" cy="8" r="2" fill="#fbbf24" opacity="0.7"/>
+        <circle cx="192" cy="8" r="1.5" fill="#f97316" opacity="0.6"/>
       </svg>
     ),
 
