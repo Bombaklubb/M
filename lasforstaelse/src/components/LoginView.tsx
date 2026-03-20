@@ -116,7 +116,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               </Sparkles>
             </motion.div>
             <CardDescription className="text-indigo-500 dark:text-indigo-400 text-lg font-medium">
-              Din smarta laskompis
+              Din smarta läskompis
             </CardDescription>
           </CardHeader>
 
@@ -150,7 +150,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                 transition={{ delay: 0.4 }}
               >
                 <label className="block text-base font-bold text-slate-800 dark:text-slate-200 mb-3">
-                  Valj din avatar
+                  Välj din avatar
                 </label>
                 <AvatarPicker
                   selectedAvatar={selectedAvatar}
@@ -170,7 +170,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                   size="xl"
                   className="w-full"
                 >
-                  Borja din lasning
+                  Börja din läsning
                 </Button>
               </motion.div>
             </form>
@@ -182,7 +182,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               transition={{ delay: 0.6 }}
             >
               <p className="text-slate-500 dark:text-slate-400 text-sm">
-                Lasjakten hjalper dig att trana lasforstaelse pa din niva
+                Läsjakten hjälper dig att träna läsförståelse på din nivå
               </p>
             </motion.div>
           </CardContent>
@@ -196,7 +196,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        Lasjakten av Martin Akdogan
+        Läsjakten av Martin Akdogan
       </motion.div>
     </div>
   );

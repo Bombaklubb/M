@@ -5,7 +5,7 @@
     "genre": "berättelse",
     "theme": "djur",
     "title": "Katten Maja",
-    "text": "Maja är en katt. Hon är svart och vit. Maja bor hos Lisa. Varje dag leker de. Maja gillar att jaga bollar. Lisa ger Maja mat. Maja är glad.",
+    "text": "Maja är en katt. Hon är svart och vit. Maja bor hos. Lisa. Varje dag leker de. Maja gillar att jaga bollar. Lisa ger. Maja mat. Maja är glad.",
     "questions": [
       {
         "type": "literal",
@@ -1990,7 +1990,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Leo går till skolan",
-    "text": "Leo går till skolan en tidig morgon Det är kallt men solen lyser På vägen ser han en hund och en buss I klassrummet väntar läraren Mia De ska läsa en bok om djur Leo tycker mest om rävar och vill rita en räv efter lektionen",
+    "text": "Leo går till skolan en tidig morgon. Det är kallt men solen lyser. På vägen ser han en hund och en buss. I klassrummet väntar läraren Mia. De ska läsa en bok om djur. Leo tycker mest om rävar och vill rita en räv efter lektionen.",
     "questions": [
       {
         "type": "literal",
@@ -2073,7 +2073,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Besök på biblioteket",
-    "text": "Sara och hennes pappa åker till biblioteket på lördag Sara gillar lugna platser där man kan läsa Hon lånar en bok om rymden Där finns bilder på planeter och stjärnor Pappan väljer en bok om mat De sitter tysta och läser tillsammans",
+    "text": "Sara och hennes pappa åker till biblioteket på lördag. Sara gillar lugna platser där man kan läsa. Hon lånar en bok om rymden. Där finns bilder på planeter och stjärnor. Pappan väljer en bok om mat. De sitter tysta och läser tillsammans.",
     "questions": [
       {
         "type": "literal",
@@ -2156,7 +2156,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "I parken",
-    "text": "Ali cyklar till parken efter skolan Hans vän Kim väntar vid den stora eken De tar med en boll Först spelar de fotboll på gräset Sedan vilar de på en bänk och dricker vatten Himlen är blå och vinden känns varm",
+    "text": "Ali cyklar till parken efter skolan. Hans vän Kim väntar vid den stora eken. De tar med en boll. Först spelar de fotboll på gräset. Sedan vilar de på en bänk och dricker vatten. Himlen är blå och vinden känns varm.",
     "questions": [
       {
         "type": "literal",
@@ -2239,7 +2239,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Tomater på balkongen",
-    "text": "Nova bor med sin mamma och sin morfar Morfar gillar att odla tomater på balkongen Nova hjälper till att vattna plantorna varje kväll En dag blir tomaterna röda och stora Då gör familjen en sallad tillsammans i köket De äter och skrattar",
+    "text": "Nova bor med sin mamma och sin morfar. Morfar gillar att odla tomater på balkongen. Nova hjälper till att vattna plantorna varje kväll. En dag blir tomaterna röda och stora. Då gör familjen en sallad tillsammans i köket. De äter och skrattar.",
     "questions": [
       {
         "type": "literal",
@@ -2322,7 +2322,7 @@
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Linas robot",
-    "text": "Lina har en liten robot som kan köra på golvet Hennes syskon Amir bygger banor av böcker och klossar Roboten följer linjer som Lina ritar med tejp Ibland fastnar den vid stolen Då flyttar Amir hindret så roboten kan fortsätta",
+    "text": "Lina har en liten robot som kan köra på golvet. Hennes syskon. Amir bygger banor av böcker och klossar. Roboten följer linjer som. Lina ritar med tejp. Ibland fastnar den vid stolen. Då flyttar. Amir hindret så roboten kan fortsätta.",
     "questions": [
       {
         "type": "literal",
@@ -2405,7 +2405,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Idrottslektionen",
-    "text": "På idrotten springer klassen runt den lilla planen Läraren Samir blåser i en visselpipa när tiden börjar Ella springer snabbt men Leo tar längre steg Efter två varv stannar alla och andas Sedan gör de roliga hopp tillsammans på gräset",
+    "text": "På idrotten springer klassen runt den lilla planen. Läraren Samir blåser i en visselpipa när tiden börjar. Ella springer snabbt men. Leo tar längre steg. Efter två varv stannar alla och andas. Sedan gör de roliga hopp tillsammans på gräset.",
     "questions": [
       {
         "type": "literal",
@@ -2488,7 +2488,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snigeln",
-    "text": "Milo och Alex hittar en snigel efter regnet Den kryper långsamt över stigen Barnen tittar noga på de små hornen Alex hämtar ett löv så snigeln kan krypa upp Sedan lägger de lövet i gräset bredvid stigen och väntar lite",
+    "text": "Milo och Alex hittar en snigel efter regnet. Den kryper långsamt över stigen. Barnen tittar noga på de små hornen. Alex hämtar ett löv så snigeln kan krypa upp. Sedan lägger de lövet i gräset bredvid stigen och väntar lite.",
     "questions": [
       {
         "type": "literal",
@@ -2571,7 +2571,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Sagostund",
-    "text": "På kvällen släcker familjen lamporna i vardagsrummet De tänder ett litet ljus på bordet Maja läser högt ur en sagobok Hennes lillebror Noor lyssnar och håller sin filt Utanför fönstret syns månen Den lyser lugnt över husen i natten stilla",
+    "text": "På kvällen släcker familjen lamporna i vardagsrummet. De tänder ett litet ljus på bordet. Maja läser högt ur en sagobok. Hennes lillebror. Noor lyssnar och håller sin filt. Utanför fönstret syns månen. Den lyser lugnt över husen i natten stilla.",
     "questions": [
       {
         "type": "literal",
@@ -2654,7 +2654,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Temadag i skogen",
-    "text": "Skolan har en temadag om natur Eleverna går ut i skogen nära skolan De letar efter olika löv på marken Läraren visar hur man kan känna skillnad på ek och björk Till slut gör klassen en affisch med löv och färger",
+    "text": "Skolan har en temadag om natur. Eleverna går ut i skogen nära skolan. De letar efter olika löv på marken. Läraren visar hur man kan känna skillnad på ek och björk. Till slut gör klassen en affisch med löv och färger.",
     "questions": [
       {
         "type": "literal",
@@ -2737,7 +2737,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Cykel till skolan",
-    "text": "En morgon missar bussen hållplatsen där Oskar väntar Han blir först orolig Då kommer grannen Fatima förbi med sin cykel Hon frågar om Oskar vill åka bakpå De cyklar lugnt till skolan och hinner före lektionen den första idag tillsammans",
+    "text": "En morgon missar bussen hållplatsen där. Oskar väntar. Han blir först orolig. Då kommer grannen Fatima förbi med sin cykel. Hon frågar om Oskar vill åka bakpå. De cyklar lugnt till skolan och hinner före lektionen den första idag tillsammans.",
     "questions": [
       {
         "type": "literal",
@@ -3205,7 +3205,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten i trädgården",
-    "text": "Ella går ut i trädgården på morgonen Gräset är vått efter nattens regn Plötsligt ser hon en liten katt Katten sitter under ett äppelträd och tittar på henne Ella hämtar lite vatten till katten Sedan springer katten vidare",
+    "text": "Ella går ut i trädgården på morgonen. Gräset är vått efter nattens regn. Plötsligt ser hon en liten katt. Katten sitter under ett äppelträd och tittar på henne. Ella hämtar lite vatten till katten. Sedan springer katten vidare.",
     "questions": [
       {
         "type": "literal",
@@ -3288,7 +3288,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen på skolgården",
-    "text": "Noah och Kim leker på skolgården De sparkar en blå boll mellan sig Bollen rullar plötsligt mot staketet Kim springer snabbt och hämtar den Sedan fortsätter de spela och skrattar högt",
+    "text": "Noah och Kim leker på skolgården. De sparkar en blå boll mellan sig. Bollen rullar plötsligt mot staketet. Kim springer snabbt och hämtar den. Sedan fortsätter de spela och skrattar högt.",
     "questions": [
       {
         "type": "literal",
@@ -3371,7 +3371,7 @@
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "En bok om havet",
-    "text": "I klassrummet läser Amir en bok Boken handlar om havet Där finns bilder på fiskar och stora valar Amir visar en bild för sin vän Sara De tycker att valen ser mycket stor ut",
+    "text": "I klassrummet läser. Amir en bok. Boken handlar om havet. Där finns bilder på fiskar och stora valar. Amir visar en bild för sin vän Sara. De tycker att valen ser mycket stor ut.",
     "questions": [
       {
         "type": "literal",
@@ -3454,7 +3454,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Bakning hemma",
-    "text": "Maja bakar bullar med sin pappa De blandar mjöl socker och smör Degen blir mjuk i skålen När bullarna är klara luktar köket gott Maja lägger en bulle på en tallrik och smakar",
+    "text": "Maja bakar bullar med sin pappa. De blandar mjöl socker och smör. Degen blir mjuk i skålen. När bullarna är klara luktar köket gott. Maja lägger en bulle på en tallrik och smakar.",
     "questions": [
       {
         "type": "literal",
@@ -3537,7 +3537,7 @@
     "genre": "berättelse",
     "theme": "geografi",
     "title": "Resan med tåget",
-    "text": "Leo och hans mormor åker tåg till en annan stad De sitter vid fönstret och ser träd hus och sjöar Tåget går snabbt Leo räknar många röda hus på vägen",
+    "text": "Leo och hans mormor åker tåg till en annan stad. De sitter vid fönstret och ser träd hus och sjöar. Tåget går snabbt. Leo räknar många röda hus på vägen.",
     "questions": [
       {
         "type": "literal",
@@ -3620,7 +3620,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen i parken",
-    "text": "Leo och Kim leker i parken efter skolan De har en röd boll Leo kastar bollen högt Kim fångar den och skrattar Sedan sparkar de bollen över gräset Solen skiner och vinden är svag",
+    "text": "Leo och Kim leker i parken efter skolan. De har en röd boll. Leo kastar bollen högt. Kim fångar den och skrattar. Sedan sparkar de bollen över gräset. Solen skiner och vinden är svag.",
     "questions": [
       {
         "type": "literal",
@@ -3703,7 +3703,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten på trappan",
-    "text": "Maja öppnar dörren på morgonen På trappan sitter en grå katt Katten tittar lugnt på Maja Hon hämtar lite vatten i en skål Katten dricker och går sedan vidare",
+    "text": "Maja öppnar dörren på morgonen. På trappan sitter en grå katt. Katten tittar lugnt på Maja. Hon hämtar lite vatten i en skål. Katten dricker och går sedan vidare.",
     "questions": [
       {
         "type": "literal",
@@ -3786,7 +3786,7 @@
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "Boken om rymden",
-    "text": "Ali sitter i klassrummet och läser en bok Boken handlar om rymden Där finns bilder på planeter och stjärnor Ali visar en stor planet för sin vän Sara",
+    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om rymden. Där finns bilder på planeter och stjärnor. Ali visar en stor planet för sin vän Sara.",
     "questions": [
       {
         "type": "literal",
@@ -3869,7 +3869,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Glass i solen",
-    "text": "Noor och hennes pappa går till torget Det är varmt Noor köper en jordgubbsglass Pappan köper en glass med choklad De sitter på en bänk och äter långsamt",
+    "text": "Noor och hennes pappa går till torget. Det är varmt. Noor köper en jordgubbsglass. Pappan köper en glass med choklad. De sitter på en bänk och äter långsamt.",
     "questions": [
       {
         "type": "literal",
@@ -3952,7 +3952,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Cykeln",
-    "text": "Ella har fått en ny cykel Den är blå och blank Först cyklar hon långsamt på gården Sedan cyklar hon snabbare Hennes vän Amir springer bredvid och hejar",
+    "text": "Ella har fått en ny cykel. Den är blå och blank. Först cyklar hon långsamt på gården. Sedan cyklar hon snabbare. Hennes vän Amir springer bredvid och hejar.",
     "questions": [
       {
         "type": "literal",
@@ -4035,7 +4035,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Fågeln i trädet",
-    "text": "Milo går i skogen med sin mormor De hör en fågel sjunga högt Fågeln sitter i ett grönt träd Milo tittar upp och ler",
+    "text": "Milo går i skogen med sin mormor. De hör en fågel sjunga högt. Fågeln sitter i ett grönt träd. Milo tittar upp och ler.",
     "questions": [
       {
         "type": "literal",
@@ -4118,7 +4118,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Bussen",
-    "text": "Sara väntar på bussen vid hållplatsen Bussen kommer snart Hon kliver på och sätter sig vid fönstret Utanför ser hon hus och träd",
+    "text": "Sara väntar på bussen vid hållplatsen. Bussen kommer snart. Hon kliver på och sätter sig vid fönstret. Utanför ser hon hus och träd.",
     "questions": [
       {
         "type": "literal",
@@ -4201,7 +4201,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Rita i klassrummet",
-    "text": "I klassrummet ritar Kim en stor sol Solen är gul och rund Hennes vän Leo ritar ett träd bredvid",
+    "text": "I klassrummet ritar. Kim en stor sol. Solen är gul och rund. Hennes vän Leo ritar ett träd bredvid.",
     "questions": [
       {
         "type": "literal",
@@ -4284,7 +4284,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snögubben",
-    "text": "Det snöar ute Leo och Noor bygger en snögubbe De gör ögon av stenar och en näsa av en morot",
+    "text": "Det snöar ute. Leo och Noor bygger en snögubbe. De gör ögon av stenar och en näsa av en morot.",
     "questions": [
       {
         "type": "literal",
@@ -4367,7 +4367,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Lunch i skolan",
-    "text": "I skolans matsal äter eleverna lunch Idag finns soppa och bröd Amir tycker soppan är god Han sitter bredvid sin vän Maja",
+    "text": "I skolans matsal äter eleverna lunch. Idag finns soppa och bröd. Amir tycker soppan är god. Han sitter bredvid sin vän Maja.",
     "questions": [
       {
         "type": "literal",
@@ -4450,7 +4450,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen på gården",
-    "text": "Ella och Leo leker på gården efter skolan De har en blå boll Ella kastar bollen Leo fångar den De skrattar och kastar igen Solen lyser och det är varmt",
+    "text": "Ella och Leo leker på gården efter skolan. De har en blå boll. Ella kastar bollen. Leo fångar den. De skrattar och kastar igen. Solen lyser och det är varmt.",
     "questions": [
       {
         "type": "literal",
@@ -4533,7 +4533,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten vid huset",
-    "text": "Milo går ut från huset På trappan sitter en liten katt Katten är svart Milo sätter sig lugnt bredvid Katten tittar på honom och jamar mjukt",
+    "text": "Milo går ut från huset. På trappan sitter en liten katt. Katten är svart. Milo sätter sig lugnt bredvid. Katten tittar på honom och jamar mjukt.",
     "questions": [
       {
         "type": "literal",
@@ -4616,7 +4616,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Boken i klassrummet",
-    "text": "Ali sitter i klassrummet och läser en bok Boken handlar om djur Han ser en bild på en stor elefant Ali visar bilden för sin vän Sara",
+    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om djur. Han ser en bild på en stor elefant. Ali visar bilden för sin vän Sara.",
     "questions": [
       {
         "type": "literal",
@@ -4699,7 +4699,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Glass på torget",
-    "text": "Noor och hennes pappa går till torget Det är varmt Noor köper en jordgubbsglass Pappan köper chokladglass De sitter på en bänk och äter",
+    "text": "Noor och hennes pappa går till torget. Det är varmt. Noor köper en jordgubbsglass. Pappan köper chokladglass. De sitter på en bänk och äter.",
     "questions": [
       {
         "type": "literal",
@@ -4782,7 +4782,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Cykeln",
-    "text": "Ella har en ny cykel Den är röd Ella cyklar långsamt på gården Hennes vän Amir springer bredvid och hejar",
+    "text": "Ella har en ny cykel. Den är röd. Ella cyklar långsamt på gården. Hennes vän Amir springer bredvid och hejar.",
     "questions": [
       {
         "type": "literal",
@@ -4865,7 +4865,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Fågeln i trädet",
-    "text": "Maja går i skogen med sin mormor De hör en fågel sjunga Fågeln sitter i ett träd Maja tittar upp och ler",
+    "text": "Maja går i skogen med sin mormor. De hör en fågel sjunga. Fågeln sitter i ett träd. Maja tittar upp och ler.",
     "questions": [
       {
         "type": "literal",
@@ -4948,7 +4948,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Bussen",
-    "text": "Sara väntar på bussen vid hållplatsen Bussen kommer Sara kliver på och sätter sig vid fönstret",
+    "text": "Sara väntar på bussen vid hållplatsen. Bussen kommer. Sara kliver på och sätter sig vid fönstret.",
     "questions": [
       {
         "type": "literal",
@@ -5031,7 +5031,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Rita en sol",
-    "text": "I klassrummet ritar Kim en stor sol Solen är gul Hennes vän Leo ritar ett träd bredvid",
+    "text": "I klassrummet ritar. Kim en stor sol. Solen är gul. Hennes vän Leo ritar ett träd bredvid.",
     "questions": [
       {
         "type": "literal",
@@ -5114,7 +5114,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snögubben",
-    "text": "Det snöar ute Leo och Noor bygger en snögubbe De gör ögon av stenar och en näsa av en morot",
+    "text": "Det snöar ute. Leo och Noor bygger en snögubbe. De gör ögon av stenar och en näsa av en morot.",
     "questions": [
       {
         "type": "literal",
@@ -5197,7 +5197,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Lunch i skolan",
-    "text": "I skolans matsal äter eleverna lunch Idag finns soppa och bröd Amir sitter bredvid sin vän Maja",
+    "text": "I skolans matsal äter eleverna lunch. Idag finns soppa och bröd. Amir sitter bredvid sin vän Maja.",
     "questions": [
       {
         "type": "literal",
@@ -6649,7 +6649,7 @@
     "genre": "berättelse",
     "theme": "djur",
     "title": "Maja är hungrig",
-    "text": "Katten Maja bor hos Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
+    "text": "Katten. Maja bor hos. Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
     "questions": [
       {
         "type": "literal",
@@ -6732,7 +6732,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "En tur i skogen",
-    "text": "På lördagen går Sara och pappa till skogen. De följer en smal stig. Solen lyser mellan träden. Sara hittar en stor kotte och en blank sten. De hör en hackspett som knackar. När de vilar dricker de varm choklad ur en termos och ler.",
+    "text": "På lördagen går. Sara och pappa till skogen. De följer en smal stig. Solen lyser mellan träden. Sara hittar en stor kotte och en blank sten. De hör en hackspett som knackar. När de vilar dricker de varm choklad ur en termos och ler.",
     "questions": [
       {
         "type": "literal",
@@ -6815,7 +6815,7 @@
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En rolig rast",
-    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger Ali: \"Tack, du gjorde min rast rolig.\"",
+    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer. Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger. Ali: \"Tack, du gjorde min rast rolig.\".",
     "questions": [
       {
         "type": "literal",
@@ -6898,7 +6898,7 @@
     "genre": "berättelse",
     "theme": "skola",
     "title": "Högläsning i 2B",
-    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
+    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men. Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
     "questions": [
       {
         "type": "literal",
@@ -6981,7 +6981,7 @@
     "genre": "berättelse",
     "theme": "familj",
     "title": "Söndag i simhallen",
-    "text": "På söndag ska familjen åka till simhallen. Storasyster Lina packar handdukar. Lillebror Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
+    "text": "På söndag ska familjen åka till simhallen. Storasyster. Lina packar handdukar. Lillebror. Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar. Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
     "questions": [
       {
         "type": "literal",
@@ -27577,7 +27577,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "En boll på gården",
-    "text": "Leo och Sara leker på gården efter skolan De har en röd boll Leo kastar bollen högt Sara fångar den De skrattar och kastar igen Solen lyser över gården",
+    "text": "Leo och Sara leker på gården efter skolan. De har en röd boll. Leo kastar bollen högt. Sara fångar den. De skrattar och kastar igen. Solen lyser över gården.",
     "questions": [
       {
         "type": "literal",
@@ -27660,7 +27660,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten på trappan",
-    "text": "Maja öppnar dörren på morgonen På trappan sitter en liten katt Katten är grå och tittar på Maja Hon hämtar lite vatten Katten dricker och går sedan vidare",
+    "text": "Maja öppnar dörren på morgonen. På trappan sitter en liten katt. Katten är grå och tittar på Maja. Hon hämtar lite vatten. Katten dricker och går sedan vidare.",
     "questions": [
       {
         "type": "literal",
@@ -27743,7 +27743,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Boken om djur",
-    "text": "Ali sitter i klassrummet och läser en bok Boken handlar om djur Han ser bilder på elefanter och apor Ali visar en bild för sin vän Kim",
+    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om djur. Han ser bilder på elefanter och apor. Ali visar en bild för sin vän Kim.",
     "questions": [
       {
         "type": "literal",
@@ -27826,7 +27826,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Glass på torget",
-    "text": "Noor och hennes pappa går till torget Det är varmt Noor köper en jordgubbsglass Pappan köper chokladglass De sitter på en bänk och äter",
+    "text": "Noor och hennes pappa går till torget. Det är varmt. Noor köper en jordgubbsglass. Pappan köper chokladglass. De sitter på en bänk och äter.",
     "questions": [
       {
         "type": "literal",
@@ -27909,7 +27909,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Den nya cykeln",
-    "text": "Ella har fått en ny cykel Den är blå Ella cyklar långsamt på gården Hennes vän Amir springer bredvid och hejar",
+    "text": "Ella har fått en ny cykel. Den är blå. Ella cyklar långsamt på gården. Hennes vän Amir springer bredvid och hejar.",
     "questions": [
       {
         "type": "literal",
@@ -27992,7 +27992,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Fågeln i trädet",
-    "text": "Milo går i skogen med sin mormor De hör en fågel sjunga Fågeln sitter i ett träd Milo tittar upp och ler",
+    "text": "Milo går i skogen med sin mormor. De hör en fågel sjunga. Fågeln sitter i ett träd. Milo tittar upp och ler.",
     "questions": [
       {
         "type": "literal",
@@ -28075,7 +28075,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Bussen",
-    "text": "Sara väntar på bussen vid hållplatsen Bussen kommer snart Hon kliver på och sätter sig vid fönstret",
+    "text": "Sara väntar på bussen vid hållplatsen. Bussen kommer snart. Hon kliver på och sätter sig vid fönstret.",
     "questions": [
       {
         "type": "literal",
@@ -28158,7 +28158,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Rita i klassrummet",
-    "text": "I klassrummet ritar Kim en stor sol Solen är gul Hennes vän Leo ritar ett träd bredvid",
+    "text": "I klassrummet ritar. Kim en stor sol. Solen är gul. Hennes vän Leo ritar ett träd bredvid.",
     "questions": [
       {
         "type": "literal",
@@ -28241,7 +28241,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snögubben",
-    "text": "Det snöar ute Leo och Noor bygger en snögubbe De gör ögon av stenar och en näsa av en morot",
+    "text": "Det snöar ute. Leo och Noor bygger en snögubbe. De gör ögon av stenar och en näsa av en morot.",
     "questions": [
       {
         "type": "literal",
@@ -28324,7 +28324,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Lunch i skolan",
-    "text": "I skolans matsal äter eleverna lunch Idag finns soppa och bröd Amir sitter bredvid sin vän Maja",
+    "text": "I skolans matsal äter eleverna lunch. Idag finns soppa och bröd. Amir sitter bredvid sin vän Maja.",
     "questions": [
       {
         "type": "literal",
