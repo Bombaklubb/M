@@ -3403,6 +3403,344 @@
           "explanation": "Finger = finger. Nästan samma ord! I have ten fingers."
         }
       ]
+    },
+    {
+      "id": "lag-fill1-be-verb",
+      "title": "Fylla i: is / am / are",
+      "description": "Skriv rätt form av 'to be' i varje mening.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "Regler för 'to be':",
+        "I → am",
+        "You → are",
+        "He / She / It → is",
+        "We / They → are"
+      ],
+      "exercises": [
+        {
+          "id": "lag-fill1-1",
+          "type": "fill-in-blank",
+          "sentence": "I ___ happy.",
+          "answer": "am",
+          "hint": "Ramsa: I am, You are, He/She/It is, We/They are",
+          "explanation": "Med I använder vi alltid 'am'. I am happy."
+        },
+        {
+          "id": "lag-fill1-2",
+          "type": "fill-in-blank",
+          "sentence": "They ___ playing.",
+          "answer": "are",
+          "hint": "They → are",
+          "explanation": "Med they använder vi 'are'. They are playing."
+        },
+        {
+          "id": "lag-fill1-3",
+          "type": "fill-in-blank",
+          "sentence": "She ___ my friend.",
+          "answer": "is",
+          "hint": "She → is",
+          "explanation": "Med she använder vi 'is'. She is my friend."
+        },
+        {
+          "id": "lag-fill1-4",
+          "type": "fill-in-blank",
+          "sentence": "We ___ at home.",
+          "answer": "are",
+          "hint": "We → are",
+          "explanation": "Med we använder vi 'are'. We are at home."
+        },
+        {
+          "id": "lag-fill1-5",
+          "type": "fill-in-blank",
+          "sentence": "He ___ tall.",
+          "answer": "is",
+          "hint": "He → is",
+          "explanation": "Med he använder vi 'is'. He is tall."
+        },
+        {
+          "id": "lag-fill1-6",
+          "type": "fill-in-blank",
+          "sentence": "You ___ my friend.",
+          "answer": "are",
+          "hint": "You → are",
+          "explanation": "Med you använder vi 'are'. You are my friend."
+        },
+        {
+          "id": "lag-fill1-7",
+          "type": "fill-in-blank",
+          "sentence": "The dog ___ big.",
+          "answer": "is",
+          "hint": "The dog = it → is",
+          "explanation": "The dog = it, så vi använder 'is'. The dog is big."
+        },
+        {
+          "id": "lag-fill1-8",
+          "type": "fill-in-blank",
+          "sentence": "I ___ eight years old.",
+          "answer": "am",
+          "explanation": "Med I använder vi 'am'. I am eight years old."
+        },
+        {
+          "id": "lag-fill1-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'They ___ playing.'",
+          "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "They → are. They are playing."
+        },
+        {
+          "id": "lag-fill1-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She ___ at school.'",
+          "options": [
+            "am",
+            "are",
+            "be",
+            "is"
+          ],
+          "correctIndex": 3,
+          "explanation": "She → is. She is at school."
+        }
+      ]
+    },
+    {
+      "id": "lag-fill2-s-form",
+      "title": "Fylla i: run / runs, eat / eats",
+      "description": "Välj rätt verbform – grundform eller -s-form.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "Regel för presens:",
+        "I / You / We / They → grundform (play, eat, run)",
+        "He / She / It → lägg till -s (plays, eats, runs)",
+        "OBS: 'have' → 'has' med he/she/it"
+      ],
+      "exercises": [
+        {
+          "id": "lag-fill2-1",
+          "type": "multiple-choice",
+          "question": "He ___ fast.",
+          "options": [
+            "run",
+            "runs",
+            "running",
+            "ranned"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med he lägger vi till -s: he runs."
+        },
+        {
+          "id": "lag-fill2-2",
+          "type": "multiple-choice",
+          "question": "I ___ lunch.",
+          "options": [
+            "eats",
+            "eating",
+            "eat",
+            "ate"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med I använder vi grundformen: I eat."
+        },
+        {
+          "id": "lag-fill2-3",
+          "type": "multiple-choice",
+          "question": "They ___ football.",
+          "options": [
+            "plays",
+            "playing",
+            "played",
+            "play"
+          ],
+          "correctIndex": 3,
+          "explanation": "Med they använder vi grundformen: they play."
+        },
+        {
+          "id": "lag-fill2-4",
+          "type": "fill-in-blank",
+          "sentence": "She ___ to school every day. (walk)",
+          "answer": "walks",
+          "hint": "She → lägg till -s",
+          "explanation": "She walks – vi lägger till -s med she."
+        },
+        {
+          "id": "lag-fill2-5",
+          "type": "fill-in-blank",
+          "sentence": "I ___ my homework. (do)",
+          "answer": "do",
+          "hint": "I → grundform, ingen -s",
+          "explanation": "I do – ingen -s med I."
+        },
+        {
+          "id": "lag-fill2-6",
+          "type": "multiple-choice",
+          "question": "She ___ a book.",
+          "options": [
+            "read",
+            "reads",
+            "reading",
+            "readed"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med she lägger vi till -s: she reads."
+        },
+        {
+          "id": "lag-fill2-7",
+          "type": "multiple-choice",
+          "question": "We ___ a song.",
+          "options": [
+            "sings",
+            "sing",
+            "singing",
+            "singed"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med we använder vi grundformen: we sing."
+        },
+        {
+          "id": "lag-fill2-8",
+          "type": "fill-in-blank",
+          "sentence": "He ___ a dog. (have)",
+          "answer": "has",
+          "hint": "'have' ändrar form med he/she/it: has",
+          "explanation": "He has – 'have' blir 'has' med he/she/it."
+        },
+        {
+          "id": "lag-fill2-9",
+          "type": "multiple-choice",
+          "question": "My dog ___ to run.",
+          "options": [
+            "like",
+            "likes",
+            "liking",
+            "liked"
+          ],
+          "correctIndex": 1,
+          "explanation": "My dog = it → likes."
+        },
+        {
+          "id": "lag-fill2-10",
+          "type": "fill-in-blank",
+          "sentence": "They ___ together. (play)",
+          "answer": "play",
+          "hint": "They → grundform, ingen -s",
+          "explanation": "They play – ingen -s med they."
+        }
+      ]
+    },
+    {
+      "id": "lag-fill3-plural",
+      "title": "Fylla i: Plural (flertal)",
+      "description": "Skriv flertalformen – lägg till -s eller -es.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "Regler för plural:",
+        "De flesta ord: lägg till -s (cat → cats, dog → dogs)",
+        "Ord på -x, -s, -sh, -ch: lägg till -es (box → boxes, bus → buses)",
+        "Oregelbundna: child → children, fish → fish"
+      ],
+      "exercises": [
+        {
+          "id": "lag-fill3-1",
+          "type": "fill-in-blank",
+          "sentence": "One cat → two ___.",
+          "answer": "cats",
+          "hint": "Lägg till -s",
+          "explanation": "cat → cats. De flesta ord får bara -s."
+        },
+        {
+          "id": "lag-fill3-2",
+          "type": "fill-in-blank",
+          "sentence": "One dog → two ___.",
+          "answer": "dogs",
+          "hint": "Lägg till -s",
+          "explanation": "dog → dogs."
+        },
+        {
+          "id": "lag-fill3-3",
+          "type": "fill-in-blank",
+          "sentence": "One book → two ___.",
+          "answer": "books",
+          "hint": "Lägg till -s",
+          "explanation": "book → books."
+        },
+        {
+          "id": "lag-fill3-4",
+          "type": "fill-in-blank",
+          "sentence": "One apple → two ___.",
+          "answer": "apples",
+          "hint": "Lägg till -s",
+          "explanation": "apple → apples."
+        },
+        {
+          "id": "lag-fill3-5",
+          "type": "fill-in-blank",
+          "sentence": "One box → two ___.",
+          "answer": "boxes",
+          "hint": "Slutar på -x → lägg till -es",
+          "explanation": "box → boxes: ord på -x får -es."
+        },
+        {
+          "id": "lag-fill3-6",
+          "type": "fill-in-blank",
+          "sentence": "One bus → two ___.",
+          "answer": "buses",
+          "hint": "Slutar på -s → lägg till -es",
+          "explanation": "bus → buses."
+        },
+        {
+          "id": "lag-fill3-7",
+          "type": "multiple-choice",
+          "question": "One fish → two ___",
+          "options": [
+            "fishs",
+            "fishes",
+            "fish",
+            "fishies"
+          ],
+          "correctIndex": 2,
+          "explanation": "'fish' är oregelbundet – plural är också 'fish'."
+        },
+        {
+          "id": "lag-fill3-8",
+          "type": "fill-in-blank",
+          "sentence": "One tree → two ___.",
+          "answer": "trees",
+          "hint": "Lägg till -s",
+          "explanation": "tree → trees."
+        },
+        {
+          "id": "lag-fill3-9",
+          "type": "multiple-choice",
+          "question": "One child → two ___",
+          "options": [
+            "childs",
+            "childes",
+            "children",
+            "child"
+          ],
+          "correctIndex": 2,
+          "explanation": "'child' är oregelbundet – plural är 'children'."
+        },
+        {
+          "id": "lag-fill3-10",
+          "type": "fill-in-blank",
+          "sentence": "One bird → two ___.",
+          "answer": "birds",
+          "hint": "Lägg till -s",
+          "explanation": "bird → birds."
+        }
+      ]
     }
   ],
   "reading": [

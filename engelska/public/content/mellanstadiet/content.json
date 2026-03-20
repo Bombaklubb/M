@@ -3681,6 +3681,270 @@
           "explanation": "Vem = who. Who invented the telephone? Alexander Graham Bell!"
         }
       ]
+    },
+    {
+      "id": "mel-fill1-be-have-do",
+      "title": "Fylla i: is/am/are – have/has – do/does",
+      "description": "Skriv rätt hjälpverb i varje mening.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "is / am / are:",
+        "  I → am  |  He/She/It → is  |  We/You/They → are",
+        "",
+        "have / has:",
+        "  I/You/We/They → have  |  He/She/It → has",
+        "",
+        "do / does (i frågor):",
+        "  I/You/We/They → Do  |  He/She/It → Does"
+      ],
+      "exercises": [
+        {
+          "id": "mel-fill1-1",
+          "type": "fill-in-blank",
+          "sentence": "We ___ ready.",
+          "answer": "are",
+          "hint": "We → are",
+          "explanation": "We are ready."
+        },
+        {
+          "id": "mel-fill1-2",
+          "type": "fill-in-blank",
+          "sentence": "I ___ tired.",
+          "answer": "am",
+          "hint": "I → am",
+          "explanation": "I am tired."
+        },
+        {
+          "id": "mel-fill1-3",
+          "type": "fill-in-blank",
+          "sentence": "It ___ raining.",
+          "answer": "is",
+          "hint": "It → is",
+          "explanation": "It is raining."
+        },
+        {
+          "id": "mel-fill1-4",
+          "type": "fill-in-blank",
+          "sentence": "She ___ a bike.",
+          "answer": "has",
+          "hint": "She → has",
+          "explanation": "She has a bike."
+        },
+        {
+          "id": "mel-fill1-5",
+          "type": "fill-in-blank",
+          "sentence": "They ___ two dogs.",
+          "answer": "have",
+          "hint": "They → have",
+          "explanation": "They have two dogs."
+        },
+        {
+          "id": "mel-fill1-6",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a pencil.",
+          "answer": "have",
+          "hint": "I → have",
+          "explanation": "I have a pencil."
+        },
+        {
+          "id": "mel-fill1-7",
+          "type": "fill-in-blank",
+          "sentence": "___ you like pizza?",
+          "answer": "Do",
+          "hint": "You → Do (fråga)",
+          "explanation": "Do you like pizza?"
+        },
+        {
+          "id": "mel-fill1-8",
+          "type": "fill-in-blank",
+          "sentence": "___ she play football?",
+          "answer": "Does",
+          "hint": "She → Does (fråga)",
+          "explanation": "Does she play football?"
+        },
+        {
+          "id": "mel-fill1-9",
+          "type": "fill-in-blank",
+          "sentence": "___ they go to school?",
+          "answer": "Do",
+          "hint": "They → Do (fråga)",
+          "explanation": "Do they go to school?"
+        },
+        {
+          "id": "mel-fill1-10",
+          "type": "multiple-choice",
+          "question": "___ he like coffee?",
+          "options": [
+            "Do",
+            "Does",
+            "Is",
+            "Has"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med he/she/it använder vi 'Does' i frågor."
+        },
+        {
+          "id": "mel-fill1-11",
+          "type": "multiple-choice",
+          "question": "She ___ a new phone.",
+          "options": [
+            "have",
+            "am",
+            "has",
+            "do"
+          ],
+          "correctIndex": 2,
+          "explanation": "She/he/it → has."
+        },
+        {
+          "id": "mel-fill1-12",
+          "type": "fill-in-blank",
+          "sentence": "He ___ at the library now.",
+          "answer": "is",
+          "hint": "He → is",
+          "explanation": "He is at the library."
+        }
+      ]
+    },
+    {
+      "id": "mel-fill2-there-prep",
+      "title": "Fylla i: there is/are + prepositioner",
+      "description": "Skriv 'is' eller 'are' efter 'there', välj rätt preposition.",
+      "icon": "✏️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "there is / there are:",
+        "  Singular (en sak) → There IS",
+        "  Plural (flera saker) → There ARE",
+        "",
+        "Prepositioner:",
+        "  on = på  |  in = i  |  under = under"
+      ],
+      "exercises": [
+        {
+          "id": "mel-fill2-1",
+          "type": "fill-in-blank",
+          "sentence": "There ___ a cat on the sofa.",
+          "answer": "is",
+          "hint": "Singular (en katt) → is",
+          "explanation": "There is a cat (singular → is)."
+        },
+        {
+          "id": "mel-fill2-2",
+          "type": "fill-in-blank",
+          "sentence": "There ___ two cars outside.",
+          "answer": "are",
+          "hint": "Plural (två bilar) → are",
+          "explanation": "There are two cars (plural → are)."
+        },
+        {
+          "id": "mel-fill2-3",
+          "type": "fill-in-blank",
+          "sentence": "There ___ many students in the class.",
+          "answer": "are",
+          "hint": "Many students = plural → are",
+          "explanation": "There are many students (plural → are)."
+        },
+        {
+          "id": "mel-fill2-4",
+          "type": "multiple-choice",
+          "question": "There ___ a book on the desk.",
+          "options": [
+            "are",
+            "am",
+            "is",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "Book = singular → there is."
+        },
+        {
+          "id": "mel-fill2-5",
+          "type": "multiple-choice",
+          "question": "There ___ three dogs in the garden.",
+          "options": [
+            "is",
+            "am",
+            "be",
+            "are"
+          ],
+          "correctIndex": 3,
+          "explanation": "Three dogs = plural → there are."
+        },
+        {
+          "id": "mel-fill2-6",
+          "type": "multiple-choice",
+          "question": "The book is ___ the table.",
+          "options": [
+            "in",
+            "on",
+            "under",
+            "at"
+          ],
+          "correctIndex": 1,
+          "explanation": "'on the table' = ovanpå bordet."
+        },
+        {
+          "id": "mel-fill2-7",
+          "type": "multiple-choice",
+          "question": "The cat is ___ the box.",
+          "options": [
+            "on",
+            "over",
+            "in",
+            "at"
+          ],
+          "correctIndex": 2,
+          "explanation": "'in the box' = inuti lådan."
+        },
+        {
+          "id": "mel-fill2-8",
+          "type": "multiple-choice",
+          "question": "The shoes are ___ the bed.",
+          "options": [
+            "on",
+            "in",
+            "above",
+            "under"
+          ],
+          "correctIndex": 3,
+          "explanation": "'under the bed' = under sängen."
+        },
+        {
+          "id": "mel-fill2-9",
+          "type": "fill-in-blank",
+          "sentence": "The pen is ___ the table. (ovanpå)",
+          "answer": "on",
+          "hint": "ovanpå = on",
+          "explanation": "on the table = ovanpå bordet."
+        },
+        {
+          "id": "mel-fill2-10",
+          "type": "fill-in-blank",
+          "sentence": "The keys are ___ the bag. (inuti)",
+          "answer": "in",
+          "hint": "inuti = in",
+          "explanation": "in the bag = inuti väskan."
+        },
+        {
+          "id": "mel-fill2-11",
+          "type": "fill-in-blank",
+          "sentence": "There ___ a red car outside.",
+          "answer": "is",
+          "hint": "Singular → is",
+          "explanation": "There is a red car."
+        },
+        {
+          "id": "mel-fill2-12",
+          "type": "fill-in-blank",
+          "sentence": "The ball is ___ the chair. (under)",
+          "answer": "under",
+          "explanation": "under the chair = under stolen."
+        }
+      ]
     }
   ],
   "reading": [
