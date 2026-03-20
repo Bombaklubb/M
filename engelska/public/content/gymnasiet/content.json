@@ -247,7 +247,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ have left already — her coat is gone.",
           "answer": "must",
-          "hint": "'must have' = nästan säkert att något hände (logisk slutledning).",
+          "hint": "Modal + have + particip: vilket modalverb passar för logisk slutledning/säkerhet?",
           "explanation": "'Must have + past participle' = logical deduction about the past."
         },
         {
@@ -269,7 +269,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ have worried so much — everything is fine!",
           "answer": "needn't",
-          "hint": "'needn't have' = det var onödigt (det du gjorde var inte nödvändigt).",
+          "hint": "Tänk: 'needn't have' vs 'didn't need to' – vilket antyder att du faktiskt gjorde det?",
           "explanation": "'Needn't have + past participle' = it wasn't necessary (but you did it)."
         },
         {
@@ -337,7 +337,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ have been lying — the evidence proved it.",
           "answer": "couldn't",
-          "hint": "'couldn't have' = det var omöjligt att något hände.",
+          "hint": "Modal + have + particip: vilket modalverb visar omöjlighet i dåtid?",
           "explanation": "'Couldn't have + past participle' = it was impossible."
         },
         {
@@ -359,7 +359,7 @@
           "type": "fill-in-blank",
           "sentence": "It ___ rain later — bring an umbrella just in case.",
           "answer": "might",
-          "hint": "'might' = osäker möjlighet.",
+          "hint": "Osäker möjlighet: vilket modalverb används för 'kanske' eller 'möjligen'?",
           "explanation": "'Might' expresses uncertain possibility."
         },
         {
@@ -409,7 +409,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ (have to) wear a suit — it's a casual event.",
           "answer": "don't have to",
-          "hint": "'don't have to' = inte nödvändigt (ej förbjudet).",
+          "hint": "Tänk: 'don't have to' = inte nödvändigt, 'must not' = förbjudet. Vilket passar?",
           "explanation": "'Don't have to' = not necessary (different from 'mustn't' which is prohibition)."
         },
         {
@@ -484,7 +484,7 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would reconsider. (Subjunctive/formal)",
           "answer": "were",
-          "hint": "Subjunktiv med 'were': If I were you… (formellt, för alla person).",
+          "hint": "Konjunktiv med 'If I were you': subjunktiv används för hypotetiska situationer. Vilket pronomen + form?",
           "explanation": "Subjunctive: 'were' for all persons in formal/literary conditional: If I were you."
         },
         {
@@ -528,7 +528,7 @@
           "type": "fill-in-blank",
           "sentence": "I would like to ___ my deepest gratitude for your assistance.",
           "answer": "express",
-          "hint": "Formellt uttryck: 'would like to express my deepest gratitude'.",
+          "hint": "Formellt uttryck: 'I would like to ___ my deepest gratitude' – vilket verb hör ihop?",
           "explanation": "Formal expression: 'I would like to express my deepest gratitude'."
         },
         {
@@ -602,7 +602,7 @@
           "type": "fill-in-blank",
           "sentence": "I would be most grateful if you ___ (could) forward the document at your earliest convenience.",
           "answer": "could",
-          "hint": "Formell förfrågan med 'if you could...' + 'at your earliest convenience'.",
+          "hint": "Formell förfrågan: 'I would be most grateful if you ___ forward...' – vilket modalverb?",
           "explanation": "Formal request: I would be most grateful if you could + base verb."
         },
         {
@@ -939,7 +939,7 @@
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
           "answer": "be",
-          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform"
         },
         {
           "id": "gym-g-advanced-6",
@@ -1623,7 +1623,7 @@
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
           "answer": "be",
-          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform"
         },
         {
           "id": "gym-g-advanced4-3",
@@ -1992,7 +1992,7 @@
           "type": "fill-in-blank",
           "sentence": "The company is ___ to be successful.",
           "answer": "said",
-          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to be...'. Verbet 'say' → 'is said'."
+          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to...'"
         },
         {
           "id": "gym-g-mixed-4",
@@ -2038,7 +2038,7 @@
           "type": "fill-in-blank",
           "sentence": "The issue needs ___ (address) urgently.",
           "answer": "to be addressed",
-          "hint": "Passiv infinitiv: 'needs to be addressed'. Strukturen 'need + to be + particip' visar att något behöver göras (av någon annan)."
+          "hint": "Passiv infinitiv: 'needs + to be + perfektparticip' – vad är particip av 'address'?"
         },
         {
           "id": "gym-g-mixed-10",
@@ -2077,7 +2077,7 @@
           "type": "fill-in-blank",
           "sentence": "He is ___ to be honest.",
           "answer": "thought",
-          "hint": "Passiv rapportering: 'People think he is honest' → 'He is thought to be honest'. Verbet 'think' → 'is thought to be'."
+          "hint": "Passiv rapportering: 'People think he is...' → 'He is ___ to be...' – vilket verb?"
         },
         {
           "id": "gym-g-mixed-15",
@@ -2095,7 +2095,7 @@
           "type": "fill-in-blank",
           "sentence": "The data seems ___ (be) incorrect.",
           "answer": "to be",
-          "hint": "'Seem/appear' + infinitiv: 'seems to be', 'appears to be'. Dessa länkverb följs av 'to' + infinitiv."
+          "hint": "'Seem/appear' + infinitiv: vilket ord inleder infinitiv?"
         },
         {
           "id": "gym-g-mixed-17",

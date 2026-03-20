@@ -932,7 +932,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (not finish) yet.",
           "answer": "has not finished",
-          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+          "hint": "Perfekt nekad: have/has + not + perfektparticip av verbet"
         },
         {
           "id": "hog-g-advanced-8",
@@ -1288,7 +1288,7 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would study more.",
           "answer": "were",
-          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform."
+          "hint": "Typ 2-konditionalis: If + past subjunctive → would + grundform. Vilket pronomen är det?"
         },
         {
           "id": "hog-g-advanced3-2",
@@ -1589,14 +1589,14 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would apologise.",
           "answer": "were",
-          "hint": "Typ 2-konditionalis: If + past subjunctive ('were' för alla pronomen) → would + grundform."
+          "hint": "Typ 2-konditionalis: If + past subjunctive → would + grundform. Vilket pronomen är det?"
         },
         {
           "id": "hog-g-advanced4-2",
           "type": "fill-in-blank",
           "sentence": "She ___ (not finish) yet.",
           "answer": "has not finished",
-          "hint": "Perfekt nekad: have/has not + perfektparticip. T.ex. 'She has not finished yet.'"
+          "hint": "Perfekt nekad: have/has + not + perfektparticip av verbet"
         },
         {
           "id": "hog-g-advanced4-3",
@@ -1610,7 +1610,7 @@
           "type": "fill-in-blank",
           "sentence": "The house ___ (build) in 1990.",
           "answer": "was built",
-          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+          "hint": "Inversion: när ett negativt/begränsande adverbial inleder meningen → hjälpverb + subjekt"
         },
         {
           "id": "hog-g-advanced4-5",
@@ -1673,7 +1673,7 @@
           "type": "fill-in-blank",
           "sentence": "He asked where I ___ (live).",
           "answer": "lived",
-          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+          "hint": "Tänk: preposition + adjektiv = fast fras. Vilket preposition hör till 'regarded'?"
         },
         {
           "id": "hog-g-advanced4-14",
@@ -1871,7 +1871,7 @@
           "type": "fill-in-blank",
           "sentence": "I wish I ___ (be) taller.",
           "answer": "were",
-          "hint": "Tänk på tempus och satsstruktur – konditionalis, perfekt, eller passiv?"
+          "hint": "Adjektiv + preposition: lär dig fasta fraser som 'afraid of', 'good at', 'interested in'..."
         },
         {
           "id": "hog-g-advanced5-15",
@@ -1909,7 +1909,7 @@
           "type": "fill-in-blank",
           "sentence": "The window ___ (break) during the storm.",
           "answer": "was broken",
-          "hint": "Passiv form: was/were + perfektparticip. Subjektet utsätts för handlingen."
+          "hint": "Vissa länkverb (appear, seem) följs av infinitiv. Vilken preposition inleder infinitiv?"
         },
         {
           "id": "hog-g-advanced5-19",
@@ -2588,7 +2588,7 @@
           "type": "fill-in-blank",
           "sentence": "He is ___ European who speaks perfect English.",
           "answer": "a",
-          "hint": "Vilket ljud börjar 'European' med?",
+          "hint": "Titta på ljudet, inte bokstaven. Hur uttalas första ljudet i ordet?",
           "explanation": "'European' uttalas 'yoo-ruh-pee-un' → konsonantljudet Y → a European."
         },
         {
@@ -3078,7 +3078,7 @@
           "type": "fill-in-blank",
           "sentence": "There ___ neither time nor resources available.",
           "answer": "is",
-          "hint": "'Neither...nor': närmaste substantiv (resources = plural). OBS: grammatiskt omstritt.",
+          "hint": "'Neither...nor': titta på närmaste substantiv – singular eller plural?",
           "explanation": "Med 'neither...nor' styr närmaste substantiv. Resources = plural → are. Men 'neither time nor resources' → formellt is (time styr) accepteras också."
         },
         {
@@ -3244,7 +3244,7 @@
           "type": "fill-in-blank",
           "sentence": "I enjoy ___ (sjunga på engelska) in the school choir.",
           "answer": "singing",
-          "hint": "Sjunga = sing → singing (i -ing form)",
+          "hint": "Lägg till -ing till verbets grundform",
           "explanation": "Sjunga = sing. After enjoy, we use the -ing form: singing."
         },
         {
@@ -3278,7 +3278,7 @@
           "type": "fill-in-blank",
           "sentence": "He likes ___ (cykla på engelska) to work.",
           "answer": "cycling",
-          "hint": "Cykla = cycle → cycling",
+          "hint": "Lägg till -ing till verbets grundform",
           "explanation": "Cykla = cycle. After likes, we use -ing form: cycling."
         },
         {
@@ -3325,7 +3325,7 @@
           "type": "fill-in-blank",
           "sentence": "They spent the evening ___ (rita på engelska) portraits.",
           "answer": "drawing",
-          "hint": "Rita = draw → drawing",
+          "hint": "Lägg till -ing till verbets grundform",
           "explanation": "Rita = draw. After spent the evening, we use the -ing form: drawing."
         }
       ]
@@ -3513,7 +3513,7 @@
           "type": "fill-in-blank",
           "sentence": "Yesterday I ___ to school. (go)",
           "answer": "went",
-          "hint": "go är oregelbundet: go → went",
+          "hint": "Oregelbundna verb ändrar form i preteritum – se verblistpa!",
           "explanation": "go → went (oregelbundet preteritum)."
         },
         {
@@ -3521,7 +3521,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ lunch at noon. (eat)",
           "answer": "ate",
-          "hint": "eat är oregelbundet: eat → ate",
+          "hint": "Oregelbundna verb ändrar form i preteritum – se verblistpa!",
           "explanation": "eat → ate."
         },
         {
@@ -3537,7 +3537,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ a letter last night. (write)",
           "answer": "wrote",
-          "hint": "write är oregelbundet: write → wrote",
+          "hint": "Oregelbundna verb ändrar form i preteritum – se verblistpa!",
           "explanation": "write → wrote."
         },
         {
@@ -3579,7 +3579,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ his friend at the station. (meet)",
           "answer": "met",
-          "hint": "meet är oregelbundet: meet → met",
+          "hint": "Oregelbundna verb ändrar form i preteritum – se verblistpa!",
           "explanation": "meet → met."
         },
         {
@@ -3600,7 +3600,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ a great film last Friday. (see)",
           "answer": "saw",
-          "hint": "see är oregelbundet: see → saw",
+          "hint": "Oregelbundna verb ändrar form i preteritum – se verblistpa!",
           "explanation": "see → saw."
         },
         {
@@ -3621,7 +3621,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ her keys this morning. (find)",
           "answer": "found",
-          "hint": "find är oregelbundet: find → found",
+          "hint": "Oregelbundna verb ändrar form i preteritum – se verblistpa!",
           "explanation": "find → found."
         }
       ]
@@ -3739,7 +3739,7 @@
           "type": "fill-in-blank",
           "sentence": "This is the ___ film I have ever seen. (good)",
           "answer": "best",
-          "hint": "good → better → best (oregelbunden)",
+          "hint": "good har oregelbundna jämförelseformer – tänk på 'bättre' och 'bäst'",
           "explanation": "good → better → best."
         },
         {
@@ -3747,7 +3747,7 @@
           "type": "fill-in-blank",
           "sentence": "That was the ___ day of my life. (bad)",
           "answer": "worst",
-          "hint": "bad → worse → worst (oregelbunden)",
+          "hint": "bad har oregelbundna jämförelseformer – tänk på 'sämre' och 'sämst'",
           "explanation": "bad → worse → worst."
         },
         {
