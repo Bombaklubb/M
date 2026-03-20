@@ -1,17 +1,21 @@
 "use client";
 
 import type { ChestType } from "@/lib/types";
+import { CHEST_META } from "@/lib/gamification";
 
-const CHEST_LABELS: Record<ChestType, string> = {
-  wood: "Trälåda",
-  silver: "Silverlåda",
-  gold: "Guldlåda",
-};
-const CHEST_EMOJIS: Record<ChestType, string> = {
-  wood: "📦",
-  silver: "🪙",
-  gold: "🏆",
-};
+function ChestImage({ type }: { type: ChestType }) {
+  return (
+    <div
+      className="w-10 h-8 flex-shrink-0"
+      style={{
+        backgroundImage: "url('/content/kistor.png')",
+        backgroundSize: "300% 200%",
+        backgroundPosition: CHEST_META[type].spritePos,
+        backgroundRepeat: "no-repeat",
+      }}
+    />
+  );
+}
 
 interface ResultModalProps {
   points: number;
@@ -102,10 +106,10 @@ export default function ResultModal({
         {/* Chest earned notification */}
         {chestEarned && (
           <div className="bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-400 dark:border-amber-600 rounded-2xl p-3 mb-4 flex items-center gap-3">
-            <span className="text-3xl">{CHEST_EMOJIS[chestEarned]}</span>
+            <ChestImage type={chestEarned} />
             <div className="text-left">
               <p className="text-sm font-bold text-amber-800 dark:text-amber-300">
-                Du fick en {CHEST_LABELS[chestEarned]}!
+                Du fick en {CHEST_META[chestEarned].label}!
               </p>
               <p className="text-xs text-amber-600 dark:text-amber-400">
                 Öppna den på Hemliga kistor-sidan.

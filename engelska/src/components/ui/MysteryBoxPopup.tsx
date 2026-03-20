@@ -1,24 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import type { MysteryBoxReward } from "@/lib/types";
+import type { MysteryBoxReward, ChestType } from "@/lib/types";
+import { CHEST_META } from "@/lib/gamification";
 
 interface MysteryBoxPopupProps {
   reward: MysteryBoxReward;
   onClose: () => void;
 }
 
-const REWARD_ICONS: Record<string, string> = {
-  points: "⭐",
-  chest: "📦",
-  badge: "🎖️",
-};
-
-const CHEST_ICONS: Record<string, string> = {
-  wood: "📦",
-  silver: "🪙",
-  gold: "🏆",
-};
+function ChestImage({ type }: { type: ChestType }) {
+  return (
+    <div
+      className="w-16 h-14 mx-auto"
+      style={{
+        backgroundImage: "url('/content/kistor.png')",
+        backgroundSize: "300% 200%",
+        backgroundPosition: CHEST_META[type].spritePos,
+        backgroundRepeat: "no-repeat",
+      }}
+    />
+  );
+}
 
 export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProps) {
   const [opened, setOpened] = useState(false);
@@ -27,9 +30,7 @@ export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProp
     setOpened(true);
   }
 
-  const icon = reward.type === "chest" && reward.chestType
-    ? CHEST_ICONS[reward.chestType]
-    : REWARD_ICONS[reward.type];
+  const REWARD_ICONS: Record<string, string> = { points: "⭐", badge: "🎖️" };
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 animate-fade-in">
@@ -71,12 +72,15 @@ export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProp
           <>
             {/* Mystery box opened state */}
             <div
-              className="text-7xl mb-4 select-none"
+              className="mb-4 select-none"
               style={{
                 animation: "pop 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97)",
               }}
             >
-              {icon}
+              {reward.type === "chest" && reward.chestType
+                ? <ChestImage type={reward.chestType} />
+                : <span className="text-7xl">{REWARD_ICONS[reward.type]}</span>
+              }
             </div>
             <h2 className="text-2xl font-black text-purple-700 dark:text-purple-300 mb-2">
               Du vann!
