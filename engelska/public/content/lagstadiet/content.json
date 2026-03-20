@@ -464,7 +464,7 @@
           "type": "fill-in-blank",
           "sentence": "I have ___ orange.",
           "answer": "an",
-          "hint": "Orange börjar med vokalljudet O.",
+          "hint": "Använd 'an' när nästa ord börjar med ett vokalljud (a, e, i, o, u).",
           "explanation": "Orange börjar med vokalljudet O, så vi använder 'an'. I have an orange."
         },
         {
@@ -472,7 +472,7 @@
           "type": "fill-in-blank",
           "sentence": "She has ___ red hat.",
           "answer": "a",
-          "hint": "Red börjar med konsonanten R.",
+          "hint": "Använd 'a' när nästa ord börjar med ett konsonantljud.",
           "explanation": "Red börjar med konsonanten R, så vi använder 'a'. She has a red hat."
         },
         {
@@ -514,7 +514,7 @@
           "type": "fill-in-blank",
           "sentence": "I see ___ cat in the garden.",
           "answer": "a",
-          "hint": "Cat börjar med konsonanten C.",
+          "hint": "Använd 'a' när nästa ord börjar med ett konsonantljud.",
           "explanation": "Cat börjar med konsonanten C, så vi använder 'a'. I see a cat in the garden."
         },
         {
@@ -556,7 +556,7 @@
           "type": "fill-in-blank",
           "sentence": "We have ___ new teacher.",
           "answer": "a",
-          "hint": "New börjar med konsonantljudet N.",
+          "hint": "Använd 'a' när nästa ord börjar med ett konsonantljud.",
           "explanation": "New börjar med konsonantljudet N, så vi använder 'a'. We have a new teacher."
         },
         {
@@ -612,7 +612,7 @@
           "type": "fill-in-blank",
           "sentence": "There is ___ ant on the leaf.",
           "answer": "an",
-          "hint": "Ant börjar med vokalljudet A.",
+          "hint": "Använd 'an' när nästa ord börjar med ett vokalljud (a, e, i, o, u).",
           "explanation": "Ant börjar med vokalljudet A, så vi använder 'an'. There is an ant on the leaf."
         },
         {
@@ -1808,7 +1808,7 @@
           "type": "fill-in-blank",
           "sentence": "___ you speak English? (fråga)",
           "answer": "Can",
-          "hint": "Börja frågan med Can.",
+          "hint": "I en fråga: vilket hjälpverb använder man med 'can'?",
           "explanation": "Frågor med can: Can you speak English?"
         }
       ],
@@ -1858,7 +1858,7 @@
           "type": "fill-in-blank",
           "sentence": "The dog is ___ the chair. (under stolen)",
           "answer": "under",
-          "hint": "Under = nedanför.",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar här?",
           "explanation": "'Under' = under/nedanför. The dog is under the chair."
         },
         {
@@ -1866,7 +1866,7 @@
           "type": "fill-in-blank",
           "sentence": "My keys are ___ my bag. (inuti)",
           "answer": "in",
-          "hint": "'In' = inuti.",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar här?",
           "explanation": "'In' = inuti. My keys are in my bag."
         },
         {
@@ -1900,7 +1900,7 @@
           "type": "fill-in-blank",
           "sentence": "The school is ___ to the park. (bredvid)",
           "answer": "next",
-          "hint": "Next to = bredvid.",
+          "hint": "Tänk: bredvid = next ___ (fraser med to hör ihop)",
           "explanation": "'Next to' = bredvid. The school is next to the park."
         },
         {
@@ -1908,7 +1908,7 @@
           "type": "fill-in-blank",
           "sentence": "The bird is sitting ___ the fence. (ovanpå)",
           "answer": "on",
-          "hint": "'On' = ovanpå.",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar här?",
           "explanation": "'On' = ovanpå. The bird is sitting on the fence."
         },
         {
@@ -1966,7 +1966,7 @@
           "type": "fill-in-blank",
           "sentence": "My pencil case is ___ my bag. (inuti)",
           "answer": "in",
-          "hint": "'In' = inuti.",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar här?",
           "explanation": "'In' = inuti. My pencil case is in my bag."
         },
         {
@@ -1987,7 +1987,7 @@
           "type": "fill-in-blank",
           "sentence": "The teacher is standing ___ the board. (bredvid)",
           "answer": "next to",
-          "hint": "Next to = bredvid.",
+          "hint": "Tänk: bredvid = next ___ (fraser med to hör ihop)",
           "explanation": "'Next to' = bredvid. The teacher is standing next to the board."
         },
         {
@@ -2082,7 +2082,7 @@
           "type": "fill-in-blank",
           "sentence": "'Is it cold outside?' – 'No, it ___.'",
           "answer": "isn't",
-          "hint": "Negativt svar med is: isn't.",
+          "hint": "Negativt kort svar med 'is': skriv is + not i kortform",
           "explanation": "Is it...? → No, it isn't. (isn't = is not)"
         },
         {
@@ -2116,7 +2116,7 @@
           "type": "fill-in-blank",
           "sentence": "'Can they come to the party?' – 'Yes, they ___.'",
           "answer": "can",
-          "hint": "Upprepa hjälpverbet can.",
+          "hint": "Kort svar: upprepa hjälpverbet från frågan",
           "explanation": "Can they...? → Yes, they can."
         },
         {
@@ -2124,7 +2124,7 @@
           "type": "fill-in-blank",
           "sentence": "'Is your dog big?' – 'Yes, it ___.'",
           "answer": "is",
-          "hint": "Upprepa hjälpverbet is.",
+          "hint": "Kort svar: upprepa hjälpverbet från frågan",
           "explanation": "Is your dog...? → Yes, it is. (Vi säger 'it' om djur.)"
         },
         {
@@ -2158,7 +2158,7 @@
           "type": "fill-in-blank",
           "sentence": "'Has she got a pet?' – 'No, she ___.'",
           "answer": "hasn't",
-          "hint": "Negativt svar med has: hasn't.",
+          "hint": "Negativt kort svar med 'has': skriv has + not i kortform",
           "explanation": "Has she got...? → No, she hasn't. (hasn't = has not)"
         },
         {
@@ -2169,7 +2169,7 @@
           "alternativeAnswers": [
             "are not"
           ],
-          "hint": "Negativt svar med are: aren't.",
+          "hint": "Negativt kort svar med 'are': skriv are + not i kortform",
           "explanation": "Are we...? → No, we aren't. (aren't = are not)"
         },
         {
@@ -2223,7 +2223,7 @@
           "type": "fill-in-blank",
           "sentence": "'Have you got a pencil?' – 'Yes, I ___.'",
           "answer": "have",
-          "hint": "Upprepa hjälpverbet have.",
+          "hint": "Kort svar: upprepa hjälpverbet från frågan",
           "explanation": "Have you got...? → Yes, I have."
         }
       ],
@@ -3228,7 +3228,7 @@
           "type": "fill-in-blank",
           "sentence": "En ___ (melon på engelska) är stor och rund.",
           "answer": "melon",
-          "hint": "Melon = m _ _ _ _",
+          "hint": "Tänk på en stor, rund frukt – den äts ofta på sommaren",
           "explanation": "Melon = melon. Nästan samma ord!"
         },
         {
@@ -3432,7 +3432,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ playing.",
           "answer": "are",
-          "hint": "They → are",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "Med they använder vi 'are'. They are playing."
         },
         {
@@ -3440,7 +3440,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ my friend.",
           "answer": "is",
-          "hint": "She → is",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "Med she använder vi 'is'. She is my friend."
         },
         {
@@ -3448,7 +3448,7 @@
           "type": "fill-in-blank",
           "sentence": "We ___ at home.",
           "answer": "are",
-          "hint": "We → are",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "Med we använder vi 'are'. We are at home."
         },
         {
@@ -3456,7 +3456,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ tall.",
           "answer": "is",
-          "hint": "He → is",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "Med he använder vi 'is'. He is tall."
         },
         {
@@ -3464,7 +3464,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ my friend.",
           "answer": "are",
-          "hint": "You → are",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "Med you använder vi 'are'. You are my friend."
         },
         {
@@ -3472,7 +3472,7 @@
           "type": "fill-in-blank",
           "sentence": "The dog ___ big.",
           "answer": "is",
-          "hint": "The dog = it → is",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "The dog = it, så vi använder 'is'. The dog is big."
         },
         {
@@ -3610,7 +3610,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ a dog. (have)",
           "answer": "has",
-          "hint": "'have' ändrar form med he/she/it: has",
+          "hint": "Ramsa: I/You/We/They have – He/She/It has",
           "explanation": "He has – 'have' blir 'has' med he/she/it."
         },
         {

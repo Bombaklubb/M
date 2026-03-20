@@ -323,7 +323,7 @@
           "type": "fill-in-blank",
           "sentence": "I saw ___ elephant at the zoo.",
           "answer": "an",
-          "hint": "Vilket ljud börjar elefant med?",
+          "hint": "Använd 'an' när nästa ord börjar med ett vokalljud (a, e, i, o, u).",
           "explanation": "'Elephant' börjar med vokalljudet E → 'an elephant'."
         },
         {
@@ -342,7 +342,7 @@
           "type": "fill-in-blank",
           "sentence": "She wants to be ___ nurse.",
           "answer": "a",
-          "hint": "Vilket ljud börjar nurse med?",
+          "hint": "Använd 'a' när nästa ord börjar med ett konsonantljud.",
           "explanation": "'Nurse' börjar med konsonantljudet N → 'a nurse'."
         },
         {
@@ -1026,7 +1026,7 @@
           "type": "fill-in-blank",
           "sentence": "___ your sister speak French? (Do/Does)",
           "answer": "Does",
-          "hint": "Med she/he/it i frågor: Does...?",
+          "hint": "Frågor: I/You/We/They → Do, He/She/It → Does",
           "explanation": "We use 'Does' for he/she/it in questions."
         },
         {
@@ -1048,7 +1048,7 @@
           "type": "fill-in-blank",
           "sentence": "My dad ___ (have) a red car.",
           "answer": "has",
-          "hint": "'Have' är oregelbundet: he/she/it has.",
+          "hint": "Ramsa: I/You/We/They have – He/She/It has",
           "explanation": "'Have' is irregular: he/she/it has (not haves)."
         },
         {
@@ -1167,7 +1167,7 @@
           "type": "fill-in-blank",
           "sentence": "We ___ (visit) our grandparents last weekend.",
           "answer": "visited",
-          "hint": "Regelbundet verb: visit + -ed = visited.",
+          "hint": "Regelbundna verb: lägg till -ed. Verbet 'visit' är regelbundet.",
           "explanation": "Regular verb: visit → visited (add -ed)."
         },
         {
@@ -1569,7 +1569,7 @@
           "type": "fill-in-blank",
           "sentence": "The cat is hiding ___ the sofa.",
           "answer": "under",
-          "hint": "'Under' = nedanför, under något.",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar?",
           "explanation": "'Under' indicates position below something."
         },
         {
@@ -1591,7 +1591,7 @@
           "type": "fill-in-blank",
           "sentence": "I was born ___ 2012.",
           "answer": "in",
-          "hint": "'In' + år/månad/årstid.",
+          "hint": "Prepositioner med tid: in (år/månad/årstid), on (dag), at (klockslag)",
           "explanation": "Use 'in' with years, months, and seasons: in 2012."
         },
         {
@@ -1613,7 +1613,7 @@
           "type": "fill-in-blank",
           "sentence": "There is a supermarket ___ the school and the park.",
           "answer": "between",
-          "hint": "'Between' = mellan (två saker).",
+          "hint": "Tänk: 'between' = mellan, 'among' = bland (mer än två)",
           "explanation": "'Between' shows position in the middle of two things."
         },
         {
@@ -1663,7 +1663,7 @@
           "type": "fill-in-blank",
           "sentence": "She put her keys ___ her bag.",
           "answer": "in",
-          "hint": "'In' = inuti något.",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar?",
           "explanation": "'In' indicates position inside something."
         },
         {
@@ -1685,7 +1685,7 @@
           "type": "fill-in-blank",
           "sentence": "The train leaves ___ the morning.",
           "answer": "in",
-          "hint": "'In' + del av dagen (morning, afternoon, evening).",
+          "hint": "Prepositioner med tid: in (år/månad/årstid), on (dag), at (klockslag) – del av dagen?",
           "explanation": "Use 'in' with parts of the day: in the morning."
         },
         {
@@ -1707,7 +1707,7 @@
           "type": "fill-in-blank",
           "sentence": "School starts ___ 8:30 every morning.",
           "answer": "at",
-          "hint": "'At' + klockslag.",
+          "hint": "Prepositioner med tid: in (år/månad/årstid), on (dag), at (klockslag) – klockslag?",
           "explanation": "Use 'at' for specific clock times: at 8:30."
         },
         {
@@ -1795,7 +1795,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (have) a dog.",
           "answer": "has",
-          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
+          "hint": "Ramsa: I/You/We/They have – He/She/It has"
         },
         {
           "id": "mel-g-tenses-5",
@@ -2028,7 +2028,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (be) at home now.",
           "answer": "are",
-          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are"
         },
         {
           "id": "mel-g-tenses2-8",
@@ -2123,7 +2123,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (have) a test tomorrow.",
           "answer": "have",
-          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
+          "hint": "Ramsa: I/You/We/They have – He/She/It has"
         },
         {
           "id": "mel-g-tenses2-18",
@@ -2330,7 +2330,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (be) tired now.",
           "answer": "are",
-          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are"
         },
         {
           "id": "mel-g-tenses3-18",
@@ -2349,7 +2349,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (have) two sisters.",
           "answer": "has",
-          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
+          "hint": "Ramsa: I/You/We/They have – He/She/It has"
         },
         {
           "id": "mel-g-tenses3-20",
@@ -2500,7 +2500,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ (have) two sisters.",
           "answer": "has",
-          "hint": "Perfekt: have/has + perfektparticip. I/you/we/they → have. He/she/it → has."
+          "hint": "Ramsa: I/You/We/They have – He/She/It has"
         },
         {
           "id": "mel-g-tenses4-5",
@@ -2521,7 +2521,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ (be) tired now.",
           "answer": "are",
-          "hint": "Pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing."
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are"
         },
         {
           "id": "mel-g-tenses4-8",
@@ -2685,7 +2685,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ (not be) at school yesterday.",
           "answer": "was not",
-          "hint": "Dåtid av 'to be' nekad: 'was not' (I/he/she/it) eller 'were not' (you/we/they)."
+          "hint": "Preteritum av 'to be': I/he/she/it → was, you/we/they → were. Nekad form?"
         },
         {
           "id": "mel-g-tenses5-7",
@@ -2950,7 +2950,7 @@
           "type": "fill-in-blank",
           "sentence": "She used to ___ (play) the piano.",
           "answer": "play",
-          "hint": "'Used to' + verbets grundform beskriver en gammal vana som inte längre sker. T.ex. 'She used to play' = Hon brukade spela."
+          "hint": "'Used to' följs alltid av verbets grundform (infinitiv utan 'to')"
         },
         {
           "id": "mel-g-mixed-12",
@@ -2979,14 +2979,14 @@
           "type": "fill-in-blank",
           "sentence": "We have lived here ___ 2020.",
           "answer": "since",
-          "hint": "'Since' + specifik tidpunkt (år, datum, klockslag). 'For' + tidsperiod (three years, a week). 2020 är en tidpunkt → 'since'."
+          "hint": "'Since' + specifik tidpunkt (år, datum). 'For' + tidsperiod (three years). Vilket passar?"
         },
         {
           "id": "mel-g-mixed-15",
           "type": "fill-in-blank",
           "sentence": "We have lived here ___ three years.",
           "answer": "for",
-          "hint": "'For' + tidsperiod (how long). 'Since' + startpunkt (when). 'Three years' är en period → 'for'."
+          "hint": "'For' + tidsperiod (hur länge). 'Since' + startpunkt (när). Vilket passar?"
         },
         {
           "id": "mel-g-mixed-16",
@@ -3004,7 +3004,7 @@
           "type": "fill-in-blank",
           "sentence": "He stopped ___ (talk) when the teacher came.",
           "answer": "talking",
-          "hint": "'Stop' + gerund (-ing): 'stop talking' = sluta prata. 'Stop to do' = stanna för att göra något (annat)."
+          "hint": "Vissa verb (stop, enjoy, finish) följs av -ing. Andra (want, decide) följs av to + infinitiv."
         },
         {
           "id": "mel-g-mixed-18",
@@ -3033,7 +3033,7 @@
           "type": "fill-in-blank",
           "sentence": "We arrived ___ time.",
           "answer": "on",
-          "hint": "Fast fras: 'on time' = i tid (punktligt). 'In time' = i tid (hinner). 'Arrived on time' = anlände punktligt."
+          "hint": "Lär dig fasta fraser: 'on time' (punktligt) vs 'in time' (i tid/hinner). Vilket passar?"
         }
       ],
       "helpText": [
@@ -3342,7 +3342,7 @@
           "type": "fill-in-blank",
           "sentence": "Vi lagar ___ (pasta på engelska) till middag.",
           "answer": "pasta",
-          "hint": "Pasta = p _ _ _ _",
+          "hint": "Det är en populär italiensk maträtt gjord av mjöl och vatten",
           "explanation": "Pasta = pasta. Nästan samma ord!"
         },
         {
@@ -3705,7 +3705,7 @@
           "type": "fill-in-blank",
           "sentence": "We ___ ready.",
           "answer": "are",
-          "hint": "We → are",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "We are ready."
         },
         {
@@ -3713,7 +3713,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ tired.",
           "answer": "am",
-          "hint": "I → am",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "I am tired."
         },
         {
@@ -3721,7 +3721,7 @@
           "type": "fill-in-blank",
           "sentence": "It ___ raining.",
           "answer": "is",
-          "hint": "It → is",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "It is raining."
         },
         {
@@ -3729,7 +3729,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ a bike.",
           "answer": "has",
-          "hint": "She → has",
+          "hint": "Ramsa: I/You/We/They have – He/She/It has",
           "explanation": "She has a bike."
         },
         {
@@ -3737,7 +3737,7 @@
           "type": "fill-in-blank",
           "sentence": "They ___ two dogs.",
           "answer": "have",
-          "hint": "They → have",
+          "hint": "Ramsa: I/You/We/They have – He/She/It has",
           "explanation": "They have two dogs."
         },
         {
@@ -3745,7 +3745,7 @@
           "type": "fill-in-blank",
           "sentence": "I ___ a pencil.",
           "answer": "have",
-          "hint": "I → have",
+          "hint": "Ramsa: I/You/We/They have – He/She/It has",
           "explanation": "I have a pencil."
         },
         {
@@ -3753,7 +3753,7 @@
           "type": "fill-in-blank",
           "sentence": "___ you like pizza?",
           "answer": "Do",
-          "hint": "You → Do (fråga)",
+          "hint": "Frågor: I/You/We/They → hjälpverb Do, He/She/It → hjälpverb Does",
           "explanation": "Do you like pizza?"
         },
         {
@@ -3761,7 +3761,7 @@
           "type": "fill-in-blank",
           "sentence": "___ she play football?",
           "answer": "Does",
-          "hint": "She → Does (fråga)",
+          "hint": "Frågor: I/You/We/They → hjälpverb Do, He/She/It → hjälpverb Does",
           "explanation": "Does she play football?"
         },
         {
@@ -3769,7 +3769,7 @@
           "type": "fill-in-blank",
           "sentence": "___ they go to school?",
           "answer": "Do",
-          "hint": "They → Do (fråga)",
+          "hint": "Frågor: I/You/We/They → hjälpverb Do, He/She/It → hjälpverb Does",
           "explanation": "Do they go to school?"
         },
         {
@@ -3803,7 +3803,7 @@
           "type": "fill-in-blank",
           "sentence": "He ___ at the library now.",
           "answer": "is",
-          "hint": "He → is",
+          "hint": "Ramsa: I am – You are – He/She/It is – We/You/They are",
           "explanation": "He is at the library."
         }
       ]
@@ -3829,7 +3829,7 @@
           "type": "fill-in-blank",
           "sentence": "There ___ a cat on the sofa.",
           "answer": "is",
-          "hint": "Singular (en katt) → is",
+          "hint": "Titta på substantivet efter 'there': är det en eller flera?",
           "explanation": "There is a cat (singular → is)."
         },
         {
@@ -3837,7 +3837,7 @@
           "type": "fill-in-blank",
           "sentence": "There ___ two cars outside.",
           "answer": "are",
-          "hint": "Plural (två bilar) → are",
+          "hint": "Titta på substantivet efter 'there': är det en eller flera?",
           "explanation": "There are two cars (plural → are)."
         },
         {
@@ -3845,7 +3845,7 @@
           "type": "fill-in-blank",
           "sentence": "There ___ many students in the class.",
           "answer": "are",
-          "hint": "Many students = plural → are",
+          "hint": "Titta på substantivet efter 'there': är det en eller flera?",
           "explanation": "There are many students (plural → are)."
         },
         {
@@ -3918,7 +3918,7 @@
           "type": "fill-in-blank",
           "sentence": "The pen is ___ the table. (ovanpå)",
           "answer": "on",
-          "hint": "ovanpå = on",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar?",
           "explanation": "on the table = ovanpå bordet."
         },
         {
@@ -3926,7 +3926,7 @@
           "type": "fill-in-blank",
           "sentence": "The keys are ___ the bag. (inuti)",
           "answer": "in",
-          "hint": "inuti = in",
+          "hint": "Tre lägesord: on (ovanpå), in (inuti), under (nedanför) – vilket passar?",
           "explanation": "in the bag = inuti väskan."
         },
         {
@@ -3934,7 +3934,7 @@
           "type": "fill-in-blank",
           "sentence": "There ___ a red car outside.",
           "answer": "is",
-          "hint": "Singular → is",
+          "hint": "Titta på substantivet efter 'there': är det en eller flera?",
           "explanation": "There is a red car."
         },
         {
