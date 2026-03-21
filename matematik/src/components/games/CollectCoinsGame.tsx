@@ -4,6 +4,13 @@ import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, getGameDifficulty, loadGameProgress } from '../../utils/gameStorage';
+import { WORLDS } from '../../data/worlds';
+
+// ── Constants ────────────────────────────────────────────────────────────────
+
+const QUESTION_TIMER = 15; // seconds per question
+const FALL_INTERVAL_MS = 80; // ms between fall updates
+const FALL_STEP = 0.5; // % per interval — items reach 78% in ~12.5s (comfortable within 15s timer)
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -59,8 +66,10 @@ function buildOptions(ex: GameExercise): AnswerOption[] {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function CollectCoinsGame() {
-  const { currentStudent, setView } = useApp();
+  const { currentStudent, setView, gameWorldId } = useApp();
   const grade = currentStudent?.grade ?? '5';
+  const worldData = gameWorldId ? WORLDS.find(w => w.id === gameWorldId) : null;
+  const worldGradeRange = worldData ? { minGrade: worldData.minGrade, maxGrade: worldData.maxGrade } : undefined;
 
   const gameProgress = currentStudent
     ? loadGameProgress(currentStudent.id).games['collect-coins']
@@ -82,16 +91,19 @@ export default function CollectCoinsGame() {
   const [lives, setLives] = useState(3);
   const [feedback, setFeedback] = useState<'coin' | 'hit' | null>(null);
   const [answered, setAnswered] = useState(false);
+  const [questionTimer, setQuestionTimer] = useState(QUESTION_TIMER);
   const [timings, setTimings] = useState<number[]>([]);
   const questionStartRef = useRef(Date.now());
   const idCounter = useRef(0);
+  const fallIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const questionTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const currentEx = exercises[currentIdx];
 
   // ── Start ────────────────────────────────────────────────────────────────
 
   const startGame = useCallback(() => {
-    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false']);
+    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false'], worldGradeRange);
     setExercises(pool);
     setCurrentIdx(0);
     setResults([]);
@@ -105,9 +117,11 @@ export default function CollectCoinsGame() {
     setAnswered(false);
     setPlayerLane(0);
     setTimings([]);
+    setQuestionTimer(QUESTION_TIMER);
     idCounter.current = 0;
     setPhase('playing');
-  }, [grade, gameLevel, exerciseCount]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [grade, gameLevel, exerciseCount, worldGradeRange]);
 
   // ── Load options when question changes ────────────────────────────────────
 
@@ -117,9 +131,10 @@ export default function CollectCoinsGame() {
       setOptions(opts);
       setAnswered(false);
       setFeedback(null);
+      setQuestionTimer(QUESTION_TIMER);
       questionStartRef.current = Date.now();
 
-      // Add floating items for correct/wrong
+      // Add floating items
       const newItems: FloatingItem[] = opts.map(opt => ({
         id: idCounter.current++,
         text: opt.text,
@@ -131,21 +146,70 @@ export default function CollectCoinsGame() {
     }
   }, [currentIdx, phase, currentEx]);
 
-  // ── Animate items falling ─────────────────────────────────────────────────
+  // ── Fall animation ────────────────────────────────────────────────────────
 
   useEffect(() => {
-    if (phase !== 'playing') return;
-    const interval = setInterval(() => {
-      setItems(prev => prev.map(item => ({ ...item, y: item.y + 2 })));
-    }, 50);
-    return () => clearInterval(interval);
-  }, [phase]);
+    if (phase !== 'playing' || answered) {
+      clearInterval(fallIntervalRef.current!);
+      return;
+    }
+    fallIntervalRef.current = setInterval(() => {
+      setItems(prev => prev.map(item => ({ ...item, y: item.y + FALL_STEP })));
+    }, FALL_INTERVAL_MS);
+    return () => clearInterval(fallIntervalRef.current!);
+  }, [phase, answered, currentIdx]);
 
-  // ── Detect collision when items reach player ──────────────────────────────
+  // ── Question countdown timer ──────────────────────────────────────────────
+
+  useEffect(() => {
+    if (phase !== 'playing' || answered) {
+      clearInterval(questionTimerRef.current!);
+      return;
+    }
+    questionTimerRef.current = setInterval(() => {
+      setQuestionTimer(t => {
+        if (t <= 1) {
+          clearInterval(questionTimerRef.current!);
+          handleTimeout();
+          return 0;
+        }
+        return t - 1;
+      });
+    }, 1000);
+    return () => clearInterval(questionTimerRef.current!);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, answered, currentIdx]);
+
+  const handleTimeout = useCallback(() => {
+    if (answered) return;
+    setAnswered(true);
+    const timeSpent = QUESTION_TIMER;
+    setTimings(t => [...t, timeSpent]);
+    setResults(r => [...r, false]);
+    setStreak(0);
+    const newLives = lives - 1;
+    setLives(newLives);
+    setFeedback('hit');
+    if (newLives <= 0) {
+      setTimeout(() => setPhase('result'), 700);
+      return;
+    }
+    setTimeout(() => {
+      setItems([]);
+      setCurrentIdx(i => {
+        const next = i + 1;
+        if (next >= exercises.length) { setPhase('result'); return i; }
+        return next;
+      });
+    }, 700);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answered, lives, exercises.length]);
+
+  // ── Collision detection when items reach player zone ──────────────────────
 
   useEffect(() => {
     if (answered) return;
-    const nearItems = items.filter(item => item.y >= 78 && item.y <= 95);
+    const nearItems = items.filter(item => item.y >= 76 && item.y <= 90);
     for (const item of nearItems) {
       if (item.lane === playerLane) {
         handleCollect(item);
@@ -157,6 +221,7 @@ export default function CollectCoinsGame() {
 
   const handleCollect = (item: FloatingItem) => {
     if (answered) return;
+    clearInterval(questionTimerRef.current!);
     setAnswered(true);
     const timeSpent = (Date.now() - questionStartRef.current) / 1000;
     setTimings(t => [...t, timeSpent]);
@@ -182,15 +247,15 @@ export default function CollectCoinsGame() {
 
     setTimeout(() => {
       setItems([]);
-      if (currentIdx + 1 >= exercises.length) {
-        setPhase('result');
-      } else {
-        setCurrentIdx(i => i + 1);
-      }
+      setCurrentIdx(i => {
+        const next = i + 1;
+        if (next >= exercises.length) { setPhase('result'); return i; }
+        return next;
+      });
     }, 600);
   };
 
-  // ── Lane switch on tap ────────────────────────────────────────────────────
+  // ── Lane switch ───────────────────────────────────────────────────────────
 
   const switchLane = (lane: number) => {
     if (answered) return;
@@ -236,6 +301,9 @@ export default function CollectCoinsGame() {
             </p>
             <div className="bg-white/10 rounded-2xl p-4 mb-6 text-sm space-y-2">
               <div className="flex justify-between text-white/80">
+                <span>Tid per fråga</span><span className="font-bold text-cyan-400">{QUESTION_TIMER}s</span>
+              </div>
+              <div className="flex justify-between text-white/80">
                 <span>Frågor</span><span className="font-bold text-white">{exerciseCount} st</span>
               </div>
               <div className="flex justify-between text-white/80">
@@ -246,7 +314,7 @@ export default function CollectCoinsGame() {
               </div>
             </div>
             <div className="text-xs text-white/50 mb-6">
-              💡 Klicka på vänster eller höger bana för att byta!
+              💡 Klicka på vänster eller höger bana för att byta! Du har 15 sekunder per fråga.
             </div>
             <button
               onClick={startGame}
@@ -254,7 +322,7 @@ export default function CollectCoinsGame() {
             >
               Starta!
             </button>
-            <button onClick={() => setView('games')} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
+            <button onClick={() => setView('games' as any)} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
           </motion.div>
         </div>
       </div>
@@ -311,7 +379,7 @@ export default function CollectCoinsGame() {
               <button onClick={startGame} className="flex-1 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold rounded-xl hover:opacity-90 transition active:scale-95">
                 Spela igen
               </button>
-              <button onClick={() => setView('games')} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
+              <button onClick={() => setView('games' as any)} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
                 Tillbaka
               </button>
             </div>
@@ -324,13 +392,15 @@ export default function CollectCoinsGame() {
   // ── Render: Playing ───────────────────────────────────────────────────────
 
   if (!currentEx) return null;
+  const timerPct = (questionTimer / QUESTION_TIMER) * 100;
+  const timerColor = questionTimer <= 5 ? 'bg-rose-500' : questionTimer <= 9 ? 'bg-amber-500' : 'bg-cyan-500';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
       <AppHeader />
       <div className="max-w-lg mx-auto px-4 pt-20 pb-4 flex flex-col" style={{ height: '100vh' }}>
         {/* HUD */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <span className="text-yellow-400 font-bold">🪙 {coins}</span>
             <span className="text-amber-400 font-bold text-sm">🎯 {score}</span>
@@ -338,13 +408,30 @@ export default function CollectCoinsGame() {
               <motion.span key={streak} initial={{ scale: 1.4 }} animate={{ scale: 1 }} className="text-orange-400 font-black text-sm">🔥 {streak}</motion.span>
             )}
           </div>
+          <motion.span
+            className={`text-xl font-black ${questionTimer <= 5 ? 'text-rose-400' : 'text-white'}`}
+            animate={questionTimer <= 5 ? { scale: [1, 1.15, 1] } : {}}
+            transition={{ repeat: Infinity, duration: 0.9 }}
+          >
+            {questionTimer}s
+          </motion.span>
           <div className="flex gap-1">
             {[...Array(3)].map((_, i) => (
-              <span key={i} className={`text-lg ${i < lives ? 'text-red-400' : 'text-white/20'}`}>❤️</span>
+              <span key={i} className={`text-base ${i < lives ? 'text-red-400' : 'text-white/20'}`}>❤️</span>
             ))}
           </div>
-          <span className="text-white/50 text-sm">{currentIdx + 1}/{exercises.length}</span>
         </div>
+
+        {/* Timer bar */}
+        <div className="h-1.5 bg-white/10 rounded-full mb-2 overflow-hidden">
+          <motion.div
+            className={`h-full rounded-full ${timerColor} transition-colors`}
+            animate={{ width: `${timerPct}%` }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+
+        <div className="text-white/40 text-xs text-right mb-1">{currentIdx + 1}/{exercises.length}</div>
 
         {/* Question */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-3 text-center">
@@ -352,7 +439,7 @@ export default function CollectCoinsGame() {
         </div>
 
         {/* Game area - two lanes */}
-        <div className="flex-1 relative flex gap-3 min-h-0" style={{ minHeight: 200 }}>
+        <div className="flex-1 flex gap-3 min-h-0" style={{ minHeight: 200 }}>
           {[0, 1].map(lane => {
             const laneItems = items.filter(item => item.lane === lane);
             const isPlayerLane = playerLane === lane;
@@ -360,22 +447,22 @@ export default function CollectCoinsGame() {
               <button
                 key={lane}
                 onClick={() => switchLane(lane)}
-                className={`flex-1 relative rounded-2xl overflow-hidden transition-all ${
+                className={`flex-1 relative rounded-2xl overflow-hidden transition-all cursor-pointer ${
                   isPlayerLane
                     ? 'border-2 border-yellow-400/60 bg-yellow-900/20'
                     : 'border border-white/10 bg-white/5'
                 }`}
               >
                 {/* Lane label */}
-                <div className="absolute top-2 left-0 right-0 text-center text-white/30 text-xs">
+                <div className="absolute top-2 left-0 right-0 text-center text-white/30 text-xs pointer-events-none">
                   {lane === 0 ? 'Vänster' : 'Höger'}
                 </div>
 
                 {/* Falling items */}
                 {laneItems.map(item => (
-                  <motion.div
+                  <div
                     key={item.id}
-                    className="absolute left-0 right-0 flex justify-center"
+                    className="absolute left-0 right-0 flex justify-center pointer-events-none"
                     style={{ top: `${item.y}%` }}
                   >
                     <div className={`px-4 py-2 rounded-full font-black text-sm shadow-lg ${
@@ -385,12 +472,12 @@ export default function CollectCoinsGame() {
                     }`}>
                       {item.isCoin ? '🪙' : '💣'} {item.text}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
 
                 {/* Player */}
                 {isPlayerLane && (
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center pointer-events-none">
                     <motion.div
                       animate={feedback === 'coin' ? { scale: [1, 1.3, 1] } : feedback === 'hit' ? { x: [-5, 5, -4, 4, 0] } : {}}
                       transition={{ duration: 0.3 }}
@@ -421,9 +508,9 @@ export default function CollectCoinsGame() {
           </AnimatePresence>
         </div>
 
-        {/* Instruction hint */}
-        <p className="text-center text-white/30 text-xs mt-3">
-          Klicka på rätt bana för att samla myntet!
+        {/* Instruction */}
+        <p className="text-center text-white/25 text-xs mt-2">
+          Klicka på rätt bana för att samla myntet — du har {QUESTION_TIMER}s!
         </p>
       </div>
     </div>

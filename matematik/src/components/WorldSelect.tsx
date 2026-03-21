@@ -106,29 +106,6 @@ export default function WorldSelect() {
         <div className="h-px bg-white/15 flex-1" />
       </div>
 
-      {/* Spel-knapp */}
-      <div className="relative z-10 px-4 max-w-lg mx-auto mb-5">
-        <button
-          onClick={() => setView('games')}
-          className="w-full group relative text-left rounded-2xl p-4 cursor-pointer transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
-          style={{
-            background: 'linear-gradient(135deg, rgba(139,92,246,0.25) 0%, rgba(236,72,153,0.25) 100%)',
-            border: '1px solid rgba(139,92,246,0.4)',
-          }}
-        >
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-3xl shadow-lg flex-shrink-0">
-              🎮
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-white font-black text-base leading-tight">Spel</h3>
-              <p className="text-purple-200/60 text-xs mt-0.5">Boss Battle, Tidsattack, Mynt och mer!</p>
-            </div>
-            <span className="text-purple-300 text-lg flex-shrink-0">→</span>
-          </div>
-        </button>
-      </div>
-
       {/* World cards 2×2 with BorderBeam on hover */}
       <div className="relative z-10 grid grid-cols-2 gap-3 px-4 max-w-lg mx-auto pb-8">
         {WORLDS.map(world => {

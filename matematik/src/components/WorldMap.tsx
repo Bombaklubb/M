@@ -8,7 +8,7 @@ import { GRADE_LABELS } from '../types';
 import AppHeader from './AppHeader';
 
 export default function WorldMap({ worldId }: { worldId: WorldId }) {
-  const { currentStudent, selectTopic, setView, startSluttest, startQuest } = useApp();
+  const { currentStudent, selectTopic, setView, startSluttest, startQuest, startGames } = useApp();
   const [showAll, setShowAll] = useState(false);
   if (!currentStudent) return null;
 
@@ -72,16 +72,27 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
       {/* Topics */}
       <div className="max-w-lg mx-auto px-4 py-5 space-y-3">
-        {/* Quest shortcut */}
-        <button onClick={()=>startQuest(worldId)}
-          className="w-full bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 hover:bg-white/12 hover:scale-[1.02] transition-all text-left flex items-center gap-3">
-          <span className="text-2xl">⚔️</span>
-          <div>
-            <p className="font-black text-white text-sm">Äventyr</p>
-            <p className="text-white/50 text-xs">Berättelseproblem</p>
-          </div>
-          <span className="ml-auto text-white/30 text-xl">→</span>
-        </button>
+        {/* Quest + Spel shortcuts side by side */}
+        <div className="grid grid-cols-2 gap-2">
+          <button onClick={()=>startQuest(worldId)}
+            className="bg-white/8 backdrop-blur-md border border-white/15 rounded-2xl p-4 hover:bg-white/12 hover:scale-[1.02] transition-all text-left flex items-center gap-2">
+            <span className="text-xl">⚔️</span>
+            <div className="min-w-0">
+              <p className="font-black text-white text-sm">Äventyr</p>
+              <p className="text-white/50 text-xs truncate">Berättelseproblem</p>
+            </div>
+          </button>
+          <button onClick={()=>startGames(worldId)}
+            className={`relative overflow-hidden bg-white/8 backdrop-blur-md border border-white/20 rounded-2xl p-4 hover:bg-white/12 hover:scale-[1.02] transition-all text-left flex items-center gap-2`}
+            style={{ borderColor: `${world.accentHex}55` }}
+          >
+            <span className="text-xl">🎮</span>
+            <div className="min-w-0">
+              <p className="font-black text-white text-sm">Spel</p>
+              <p className="text-white/50 text-xs truncate">Träna med spel!</p>
+            </div>
+          </button>
+        </div>
 
         <h2 className="text-white/50 font-bold text-sm uppercase tracking-widest mt-1">Kapitel</h2>
 
