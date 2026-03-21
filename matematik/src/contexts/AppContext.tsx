@@ -23,7 +23,8 @@ export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
   | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
-  | 'sluttest' | 'kistor';
+  | 'sluttest' | 'kistor'
+  | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins';
 
 interface AppContextValue {
   currentStudent: Student | null;
