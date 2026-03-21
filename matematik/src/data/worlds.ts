@@ -46,7 +46,19 @@ export const WORLDS: World[] = [
     accent: 'purple',
     accentHex: '#8b5cf6',
     cardBg: 'bg-purple-50',
-    topicIds: ['multiplikation-intro', 'division-intro', 'klockan-mel', 'brak-steg-1', 'decimaler', 'procent-steg-1', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'brak-steg-2', 'procent-steg-2', 'huvudrakning', 'geometri-mel', 'statistik-mel', 'ekvationer-bas', 'matematik-begrepp-mel', 'rimlighetsoevningar-mel'],
+    topicIds: [
+      // Multiplikation & division
+      'multiplikation-steg-1', 'multiplikation-steg-2', 'multiplikation-steg-3',
+      'division-steg-1', 'division-steg-2', 'division-steg-3',
+      // Bråk
+      'brak-steg-1', 'brak-steg-2', 'brak-steg-3',
+      // Procent
+      'procent-steg-1', 'procent-steg-2', 'procent-steg-3',
+      // Ekvationer
+      'ekvationer-mel-steg-1', 'ekvationer-mel-steg-2', 'ekvationer-mel-steg-3',
+      // Övrigt
+      'klockan-mel', 'decimaler', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'huvudrakning', 'geometri-mel', 'statistik-mel', 'matematik-begrepp-mel', 'rimlighetsoevningar-mel',
+    ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
   },

@@ -97,8 +97,14 @@ export default {
           '50%': { backgroundPosition: '100% 50%' },
           '100%': { backgroundPosition: '0% 50%' },
         },
+        'border-beam': {
+          '100%': { offsetDistance: '100%' },
+        },
+      },
+      animation: {
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 }
