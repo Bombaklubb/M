@@ -4,6 +4,7 @@ import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, loadGameProgress } from '../../utils/gameStorage';
+import { WORLDS } from '../../data/worlds';
 
 const GAME_DURATION = 60; // seconds
 
@@ -12,8 +13,10 @@ type Phase = 'intro' | 'playing' | 'result';
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function TimeAttackGame() {
-  const { currentStudent, setView } = useApp();
+  const { currentStudent, setView, gameWorldId } = useApp();
   const grade = currentStudent?.grade ?? '5';
+  const worldData = gameWorldId ? WORLDS.find(w => w.id === gameWorldId) : null;
+  const worldGradeRange = worldData ? { minGrade: worldData.minGrade, maxGrade: worldData.maxGrade } : undefined;
 
   const gameProgress = currentStudent
     ? loadGameProgress(currentStudent.id).games['time-attack']
@@ -39,7 +42,7 @@ export default function TimeAttackGame() {
 
   const startGame = useCallback(() => {
     // Load a large pool, we'll cycle through as many as time allows
-    const pool = getGameExercisePool(grade, gameLevel, 100, ['multiple-choice', 'fill-in', 'true-false']);
+    const pool = getGameExercisePool(grade, gameLevel, 100, ['multiple-choice', 'fill-in', 'true-false'], worldGradeRange);
     setExercises(pool);
     setCurrentIdx(0);
     setResults([]);
@@ -202,7 +205,7 @@ export default function TimeAttackGame() {
             >
               Starta!
             </button>
-            <button onClick={() => setView('games')} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
+            <button onClick={() => setView('games' as any)} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
           </motion.div>
         </div>
       </div>
@@ -256,7 +259,7 @@ export default function TimeAttackGame() {
               <button onClick={startGame} className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-bold rounded-xl hover:opacity-90 transition active:scale-95">
                 Spela igen
               </button>
-              <button onClick={() => setView('games')} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
+              <button onClick={() => setView('games' as any)} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
                 Tillbaka
               </button>
             </div>

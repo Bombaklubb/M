@@ -16,13 +16,22 @@ export function getGameExercisePool(
   gameLevel: number,
   count: number,
   filterTypes?: string[], // optionally limit to certain exercise types
+  worldGradeRange?: { minGrade: number; maxGrade: number }, // constrain to a world's grade band
 ): GameExercise[] {
-  const { maxGrade } = getGameDifficulty(gameLevel);
-  const studentGrade = gradeToNum(grade);
-  const effectiveMaxGrade = Math.min(studentGrade + 1, maxGrade);
+  let topics: typeof TOPICS;
 
-  // Get all topics up to the effective grade
-  const topics = TOPICS.filter(t => t.minGrade <= effectiveMaxGrade);
+  if (worldGradeRange) {
+    // World-scoped mode: only topics that belong to this world's grade band
+    topics = TOPICS.filter(
+      t => t.minGrade >= worldGradeRange.minGrade && t.minGrade <= worldGradeRange.maxGrade,
+    );
+  } else {
+    const { maxGrade } = getGameDifficulty(gameLevel);
+    const studentGrade = gradeToNum(grade);
+    const effectiveMaxGrade = Math.min(studentGrade + 1, maxGrade);
+    // Get all topics up to the effective grade
+    topics = TOPICS.filter(t => t.minGrade <= effectiveMaxGrade);
+  }
 
   // Build exercise pool
   let pool: GameExercise[] = [];

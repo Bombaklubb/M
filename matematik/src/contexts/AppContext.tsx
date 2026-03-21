@@ -33,6 +33,7 @@ interface AppContextValue {
   isTeacher: boolean;
   sluttestWorldId: WorldId | null;
   questWorldId: WorldId | null;
+  gameWorldId: WorldId | null;
   pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null;
   clearPendingChestResult: () => void;
   login: (student: Student) => void;
@@ -42,6 +43,7 @@ interface AppContextValue {
   setTeacher: (val: boolean) => void;
   startSluttest: (worldId: WorldId) => void;
   startQuest: (worldId: WorldId) => void;
+  startGames: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null };
   updateAvatar: (avatarIndex: number) => void;
@@ -56,6 +58,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [isTeacher, setIsTeacherState] = useState(false);
   const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
+  const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
 
   const login = useCallback((student: Student) => {
@@ -92,6 +95,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const startQuest = useCallback((worldId: WorldId) => {
     setQuestWorldId(worldId);
     setCurrentView('quest');
+  }, []);
+
+  const startGames = useCallback((worldId: WorldId) => {
+    setGameWorldId(worldId);
+    setCurrentView('games');
   }, []);
 
   const getStudentStats = useCallback((student: Student) => {
@@ -230,7 +238,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

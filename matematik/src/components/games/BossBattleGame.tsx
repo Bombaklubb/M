@@ -4,6 +4,7 @@ import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, getGameDifficulty, loadGameProgress } from '../../utils/gameStorage';
+import { WORLDS } from '../../data/worlds';
 
 // ── Boss config ──────────────────────────────────────────────────────────────
 
@@ -46,8 +47,10 @@ function buildOptions(ex: GameExercise): AnswerOption[] {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export default function BossBattleGame() {
-  const { currentStudent, setView } = useApp();
+  const { currentStudent, setView, gameWorldId } = useApp();
   const grade = currentStudent?.grade ?? '5';
+  const worldData = gameWorldId ? WORLDS.find(w => w.id === gameWorldId) : null;
+  const worldGradeRange = worldData ? { minGrade: worldData.minGrade, maxGrade: worldData.maxGrade } : undefined;
 
   const gameProgress = currentStudent
     ? loadGameProgress(currentStudent.id).games['boss-battle']
@@ -81,7 +84,7 @@ export default function BossBattleGame() {
   // ── Start ────────────────────────────────────────────────────────────────
 
   const startGame = useCallback(() => {
-    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false']);
+    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false'], worldGradeRange);
     setExercises(pool);
     setCurrentIdx(0);
     setResults([]);
@@ -221,7 +224,7 @@ export default function BossBattleGame() {
             >
               Anfalla!
             </button>
-            <button onClick={() => setView('games')} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
+            <button onClick={() => setView('games' as any)} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
           </motion.div>
         </div>
       </div>
@@ -276,7 +279,7 @@ export default function BossBattleGame() {
               <button onClick={startGame} className="flex-1 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold rounded-xl hover:opacity-90 transition active:scale-95">
                 Spela igen
               </button>
-              <button onClick={() => setView('games')} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
+              <button onClick={() => setView('games' as any)} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
                 Tillbaka
               </button>
             </div>

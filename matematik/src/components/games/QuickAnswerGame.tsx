@@ -4,6 +4,7 @@ import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, getGameDifficulty, loadGameProgress } from '../../utils/gameStorage';
+import { WORLDS } from '../../data/worlds';
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -43,8 +44,10 @@ function buildOptions(ex: GameExercise): AnswerOption[] {
 // ── Main Component ───────────────────────────────────────────────────────────
 
 export default function QuickAnswerGame() {
-  const { currentStudent, setView } = useApp();
+  const { currentStudent, setView, gameWorldId } = useApp();
   const grade = currentStudent?.grade ?? '5';
+  const worldData = gameWorldId ? WORLDS.find(w => w.id === gameWorldId) : null;
+  const worldGradeRange = worldData ? { minGrade: worldData.minGrade, maxGrade: worldData.maxGrade } : undefined;
 
   const gameProgress = currentStudent
     ? loadGameProgress(currentStudent.id).games['quick-answer']
@@ -74,7 +77,7 @@ export default function QuickAnswerGame() {
   // ── Start Game ───────────────────────────────────────────────────────────
 
   const startGame = useCallback(() => {
-    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false']);
+    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false'], worldGradeRange);
     setExercises(pool);
     setCurrentIdx(0);
     setResults([]);
@@ -232,7 +235,7 @@ export default function QuickAnswerGame() {
             >
               Starta spelet!
             </button>
-            <button onClick={() => setView('games')} className="mt-4 text-indigo-300 text-sm hover:text-white transition">
+            <button onClick={() => setView('games' as any)} className="mt-4 text-indigo-300 text-sm hover:text-white transition">
               ← Tillbaka
             </button>
           </motion.div>
@@ -301,7 +304,7 @@ export default function QuickAnswerGame() {
                 Spela igen
               </button>
               <button
-                onClick={() => setView('games')}
+                onClick={() => setView('games' as any)}
                 className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95"
               >
                 Tillbaka
