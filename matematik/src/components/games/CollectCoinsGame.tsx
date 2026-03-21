@@ -475,15 +475,53 @@ export default function CollectCoinsGame() {
                   </div>
                 ))}
 
-                {/* Player */}
+                {/* Player – race car SVG */}
                 {isPlayerLane && (
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center pointer-events-none">
                     <motion.div
-                      animate={feedback === 'coin' ? { scale: [1, 1.3, 1] } : feedback === 'hit' ? { x: [-5, 5, -4, 4, 0] } : {}}
-                      transition={{ duration: 0.3 }}
-                      className="text-4xl"
+                      animate={
+                        feedback === 'coin'
+                          ? { scale: [1, 1.25, 1], filter: ['drop-shadow(0 0 0px #facc15)', 'drop-shadow(0 0 12px #facc15)', 'drop-shadow(0 0 0px #facc15)'] }
+                          : feedback === 'hit'
+                          ? { x: [-6, 6, -5, 5, 0], filter: ['drop-shadow(0 0 0px #ef4444)', 'drop-shadow(0 0 10px #ef4444)', 'drop-shadow(0 0 0px #ef4444)'] }
+                          : {}
+                      }
+                      transition={{ duration: 0.35 }}
                     >
-                      🏃
+                      <svg
+                        viewBox="0 0 64 28"
+                        width="72"
+                        height="32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        {/* Body */}
+                        <path d="M6 20 Q4 20 3 18 L3 15 Q3 13 6 12 L14 8 Q18 5 26 5 L42 5 Q50 5 54 8 L59 12 Q62 13 62 15 L62 18 Q61 20 59 20 Z" fill="#ef4444" />
+                        {/* Cockpit */}
+                        <path d="M22 11 L24 5.5 Q26 5 28 5 L38 5 Q40 5 42 5.5 L44 11 Z" fill="#1e1b4b" opacity="0.9" />
+                        <path d="M24 10 L25.5 6 Q27 5.5 28 5.5 L37 5.5 Q38.5 5.5 40 6 L42 10 Z" fill="#4f46e5" opacity="0.5" />
+                        {/* Side stripe */}
+                        <rect x="14" y="13" width="36" height="2.5" rx="1" fill="#fbbf24" opacity="0.85" />
+                        {/* Nose */}
+                        <path d="M59 12 L63 14 L63 16 L59 17 Z" fill="#b91c1c" />
+                        {/* Tail fin */}
+                        <path d="M6 12 L3 10 L2 13 L3 15 Z" fill="#b91c1c" />
+                        {/* Wheels */}
+                        <circle cx="16" cy="21" r="5.5" fill="#1f2937" />
+                        <circle cx="16" cy="21" r="3" fill="#374151" />
+                        <circle cx="16" cy="21" r="1.2" fill="#9ca3af" />
+                        <circle cx="50" cy="21" r="5.5" fill="#1f2937" />
+                        <circle cx="50" cy="21" r="3" fill="#374151" />
+                        <circle cx="50" cy="21" r="1.2" fill="#9ca3af" />
+                        {/* Exhaust flames (animated via CSS) */}
+                        <g className="origin-right">
+                          <ellipse cx="2" cy="16" rx="3" ry="1.5" fill="#f97316" opacity="0.9" />
+                          <ellipse cx="0.5" cy="16" rx="1.5" ry="0.8" fill="#fbbf24" opacity="0.7" />
+                        </g>
+                        {/* Number */}
+                        <text x="32" y="17" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold" fontFamily="sans-serif">01</text>
+                      </svg>
                     </motion.div>
                   </div>
                 )}

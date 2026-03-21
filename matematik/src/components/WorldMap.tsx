@@ -16,7 +16,10 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
   const points = getPoints(currentStudent.id) ?? initPoints(currentStudent.id);
   const progress = getProgress(currentStudent.id);
 
-  const worldTopics = TOPICS.filter(t => world.topicIds.includes(t.id));
+  // Respect the topicIds order defined in worlds.ts (not TOPICS array order)
+  const worldTopics = world.topicIds
+    .map(id => TOPICS.find(t => t.id === id))
+    .filter(Boolean) as typeof TOPICS;
   const allRelevant = showAll
     ? TOPICS.filter(t => !world.topicIds.includes(t.id) && worldTopics.length > 0)
     : [];
@@ -79,7 +82,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
             <span className="text-xl">⚔️</span>
             <div className="min-w-0">
               <p className="font-black text-white text-sm">Äventyr</p>
-              <p className="text-white/50 text-xs truncate">Berättelseproblem</p>
+              <p className="text-white/50 text-xs truncate">Berättelseutmaning</p>
             </div>
           </button>
           <button onClick={()=>startGames(worldId)}
