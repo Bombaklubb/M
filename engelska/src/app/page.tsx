@@ -37,11 +37,20 @@ export default function HomePage() {
   const [nameInput,      setNameInput]      = useState("");
   const [selectedAvatar, setSelectedAvatar] = useState("ninja");
   const [loading,        setLoading]        = useState(true);
+  const [returningName,  setReturningName]  = useState<string | null>(null);
 
   useEffect(() => {
     setStudent(loadStudent());
     setLoading(false);
   }, []);
+
+  // Check if the typed name belongs to an existing student on this device
+  function handleNameChange(value: string) {
+    setNameInput(value);
+    if (typeof window === "undefined") return;
+    const key = `engelskajakten_student_${value.toLowerCase().trim()}`;
+    setReturningName(value.trim().length >= 2 && localStorage.getItem(key) ? value.trim() : null);
+  }
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -105,12 +114,22 @@ export default function HomePage() {
               <input
                 type="text"
                 value={nameInput}
-                onChange={(e) => setNameInput(e.target.value)}
+                onChange={(e) => handleNameChange(e.target.value)}
                 placeholder="Ditt namn..."
                 className="input-field !py-2.5 !text-base"
                 autoFocus
                 maxLength={30}
               />
+
+              {/* Returning student indicator */}
+              {returningName && (
+                <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-green-50 border border-green-200">
+                  <span className="text-green-600 text-base">✓</span>
+                  <p className="text-green-700 text-sm font-semibold">
+                    Hej {returningName}! Din sparade progress hämtas.
+                  </p>
+                </div>
+              )}
 
               {/* Avatar selection */}
               <div>
@@ -152,7 +171,7 @@ export default function HomePage() {
                 className="w-full btn-primary text-base py-3 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{ background: nameInput.trim() ? "linear-gradient(135deg, #dc2626, #b91c1c)" : "rgba(0,0,0,0.1)" }}
               >
-                Starta jakten! 🚀
+                {returningName ? "Fortsätt jakten! →" : "Starta jakten! 🚀"}
               </button>
             </form>
           </div>
