@@ -3764,6 +3764,380 @@
           "explanation": "good → better (oregelbunden komparativ)."
         }
       ]
+    },
+    {
+      "id": "hog-sluttest",
+      "title": "Sluttest – Grammatik",
+      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är sluttestet för hela grammatikdelen!",
+        "Frågorna täcker allt du tränat på: present perfect, konditionalis, passiv form, indirekt tal, avancerade verbformer och mer.",
+        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-st-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I ___ never been to Japan.'",
+          "options": [
+            "have",
+            "has",
+            "had",
+            "am"
+          ],
+          "correctIndex": 0,
+          "explanation": "Present Perfect bildas med have/has + past participle. I have never been."
+        },
+        {
+          "id": "hog-st-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She ___ just finished her homework.'",
+          "options": [
+            "have",
+            "has",
+            "had",
+            "is"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med he/she/it använder vi 'has' i present perfect. She has just finished."
+        },
+        {
+          "id": "hog-st-3",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'They ___ lived here for ten years.'",
+          "options": [
+            "have",
+            "has",
+            "had",
+            "are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Med they (pluralis) använder vi 'have'. They have lived here for ten years."
+        },
+        {
+          "id": "hog-st-4",
+          "type": "multiple-choice",
+          "question": "Typ 1-konditionalis: 'If it rains, we ___ stay inside.'",
+          "options": [
+            "will",
+            "would",
+            "might",
+            "are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Typ 1 konditionalis: If + present simple, will + grundform. We will stay inside."
+        },
+        {
+          "id": "hog-st-5",
+          "type": "multiple-choice",
+          "question": "Typ 2-konditionalis: 'If I had a million euros, I ___ travel the world.'",
+          "options": [
+            "will",
+            "would",
+            "should",
+            "could"
+          ],
+          "correctIndex": 1,
+          "explanation": "Typ 2 konditionalis: If + past simple, would + grundform. I would travel."
+        },
+        {
+          "id": "hog-st-6",
+          "type": "multiple-choice",
+          "question": "Passiv form: 'The window ___ broken by the children.'",
+          "options": [
+            "is",
+            "was",
+            "were",
+            "had"
+          ],
+          "correctIndex": 1,
+          "explanation": "Passiv i past tense: was/were + past participle. The window was broken."
+        },
+        {
+          "id": "hog-st-7",
+          "type": "multiple-choice",
+          "question": "Passiv form: 'The book ___ written in 1850.'",
+          "options": [
+            "was",
+            "were",
+            "is",
+            "has"
+          ],
+          "correctIndex": 0,
+          "explanation": "Passiv past tense med singular subjekt: was + past participle. Was written."
+        },
+        {
+          "id": "hog-st-8",
+          "type": "multiple-choice",
+          "question": "Indirekt tal: 'She said she ___ tired.'",
+          "options": [
+            "is",
+            "was",
+            "were",
+            "has been"
+          ],
+          "correctIndex": 1,
+          "explanation": "I indirekt tal ändras 'is' till 'was' (backshift). She said she was tired."
+        },
+        {
+          "id": "hog-st-9",
+          "type": "multiple-choice",
+          "question": "Indirekt tal: 'He told me he ___ finished.'",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "is"
+          ],
+          "correctIndex": 2,
+          "explanation": "I indirekt tal ändras 'has' till 'had' (backshift). He told me he had finished."
+        },
+        {
+          "id": "hog-st-10",
+          "type": "multiple-choice",
+          "question": "Past Perfect: 'By the time we arrived, she ___ already left.'",
+          "options": [
+            "has",
+            "have",
+            "had",
+            "was"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past Perfect bildas med 'had' + past participle. She had already left."
+        },
+        {
+          "id": "hog-st-11",
+          "type": "multiple-choice",
+          "question": "Past Perfect: 'They couldn't find the key because they ___ lost it.'",
+          "options": [
+            "have",
+            "has",
+            "had",
+            "were"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past Perfect: had + past participle. They had lost it."
+        },
+        {
+          "id": "hog-st-12",
+          "type": "multiple-choice",
+          "question": "Futurum: 'I think it ___ rain tomorrow.'",
+          "options": [
+            "will",
+            "shall",
+            "is",
+            "are"
+          ],
+          "correctIndex": 0,
+          "explanation": "Vi använder 'will' för förutsägelser om framtiden. It will rain."
+        },
+        {
+          "id": "hog-st-13",
+          "type": "multiple-choice",
+          "question": "Going to: 'Look at those clouds! It ___ rain.'",
+          "options": [
+            "will",
+            "is going to",
+            "would",
+            "shall"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Going to' används för planer och uppenbara händelser. It is going to rain."
+        },
+        {
+          "id": "hog-st-14",
+          "type": "multiple-choice",
+          "question": "Modalverb (skyldighet): 'You ___ wear a seatbelt in a car.'",
+          "options": [
+            "should",
+            "might",
+            "must",
+            "could"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Must' uttrycker stark skyldighet/krav. You must wear a seatbelt."
+        },
+        {
+          "id": "hog-st-15",
+          "type": "multiple-choice",
+          "question": "Modalverb (osäkerhet): 'She ___ be at home. I'm not sure.'",
+          "options": [
+            "must",
+            "might",
+            "should",
+            "will"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Might' uttrycker osäkerhet/möjlighet. She might be at home."
+        },
+        {
+          "id": "hog-st-16",
+          "type": "multiple-choice",
+          "question": "Indirekt fråga: 'She asked where ___ from.'",
+          "options": [
+            "I come",
+            "do I come",
+            "I came",
+            "came I"
+          ],
+          "correctIndex": 2,
+          "explanation": "I indirekta frågor används rak ordföljd + backshift. She asked where I came from."
+        },
+        {
+          "id": "hog-st-17",
+          "type": "multiple-choice",
+          "question": "Present Perfect-fråga: '___ you ever eaten sushi?'",
+          "options": [
+            "Do",
+            "Did",
+            "Have",
+            "Has"
+          ],
+          "correctIndex": 2,
+          "explanation": "Present Perfect fråga med 'you': Have you ever eaten sushi?"
+        },
+        {
+          "id": "hog-st-18",
+          "type": "multiple-choice",
+          "question": "Passiv fråga: '___ the letter sent?'",
+          "options": [
+            "Did",
+            "Is",
+            "Was",
+            "Were"
+          ],
+          "correctIndex": 2,
+          "explanation": "Passiv fråga i past tense (singular): Was the letter sent?"
+        },
+        {
+          "id": "hog-st-19",
+          "type": "multiple-choice",
+          "question": "Typ 3-konditionalis: 'If she ___ harder, she would have passed.'",
+          "options": [
+            "studied",
+            "had studied",
+            "would study",
+            "studies"
+          ],
+          "correctIndex": 1,
+          "explanation": "Typ 3 konditionalis: If + past perfect, would have + past participle."
+        },
+        {
+          "id": "hog-st-20",
+          "type": "multiple-choice",
+          "question": "Aktiv → passiv: 'Someone cleaned the office.' → 'The office ___ cleaned.'",
+          "options": [
+            "is",
+            "was",
+            "has",
+            "were"
+          ],
+          "correctIndex": 1,
+          "explanation": "Passiv past tense: was + past participle. The office was cleaned."
+        },
+        {
+          "id": "hog-st-21",
+          "type": "multiple-choice",
+          "question": "Present Perfect vs Past Simple: '___ you see the film last night?'",
+          "options": [
+            "Have",
+            "Did",
+            "Has",
+            "Do"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Last night' är en specifik tidpunkt → Past Simple. Did you see the film?"
+        },
+        {
+          "id": "hog-st-22",
+          "type": "multiple-choice",
+          "question": "Typ 2-konditionalis: 'What ___ you do if you won the lottery?'",
+          "options": [
+            "do",
+            "did",
+            "would",
+            "will"
+          ],
+          "correctIndex": 2,
+          "explanation": "Typ 2 konditionalis med 'what': What would you do if you won...?"
+        },
+        {
+          "id": "hog-st-23",
+          "type": "fill-in-blank",
+          "sentence": "I ___ never tried skydiving. (present perfect)",
+          "answer": "have",
+          "explanation": "Present Perfect med 'I': I have never tried..."
+        },
+        {
+          "id": "hog-st-24",
+          "type": "fill-in-blank",
+          "sentence": "The letter was ___ by my teacher. (write)",
+          "answer": "written",
+          "explanation": "Passiv form kräver past participle. Write → written."
+        },
+        {
+          "id": "hog-st-25",
+          "type": "fill-in-blank",
+          "sentence": "If it rains, I ___ take an umbrella. (typ 1)",
+          "answer": "will",
+          "explanation": "Typ 1 konditionalis: If + present simple, will + grundform."
+        },
+        {
+          "id": "hog-st-26",
+          "type": "fill-in-blank",
+          "sentence": "She told me she ___ going to the gym. (indirekt tal, was/is)",
+          "answer": "was",
+          "explanation": "Backshift i indirekt tal: 'is going' → 'was going'."
+        },
+        {
+          "id": "hog-st-27",
+          "type": "fill-in-blank",
+          "sentence": "The homework must ___ done by Friday. (passiv)",
+          "answer": "be",
+          "explanation": "Modal + passiv: must + be + past participle. Must be done."
+        },
+        {
+          "id": "hog-st-28",
+          "type": "fill-in-blank",
+          "sentence": "If I were rich, I ___ buy a yacht. (typ 2)",
+          "answer": "would",
+          "explanation": "Typ 2 konditionalis: If + past simple, would + grundform."
+        },
+        {
+          "id": "hog-st-29",
+          "type": "fill-in-blank",
+          "sentence": "The window ___ broken yesterday. (passiv past tense)",
+          "answer": "was",
+          "explanation": "Passiv past tense med singular: was + past participle."
+        },
+        {
+          "id": "hog-st-30",
+          "type": "fill-in-blank",
+          "sentence": "He asked where I ___ from. (indirekt fråga)",
+          "answer": "came",
+          "explanation": "Backshift i indirekt fråga: 'come' → 'came'."
+        },
+        {
+          "id": "hog-st-31",
+          "type": "fill-in-blank",
+          "sentence": "___ you ever been to England?",
+          "answer": "Have",
+          "explanation": "Present Perfect fråga med 'you': Have you ever been...?"
+        },
+        {
+          "id": "hog-st-32",
+          "type": "fill-in-blank",
+          "sentence": "She ___ have forgotten – she never forgets anything! (modal, omöjlighet)",
+          "answer": "can't",
+          "alternativeAnswers": [
+            "cannot"
+          ],
+          "explanation": "'Can't have' + past participle uttrycker att något omöjligen kan ha hänt."
+        }
+      ]
     }
   ],
   "reading": [

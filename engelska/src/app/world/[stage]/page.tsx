@@ -217,20 +217,35 @@ export default function WorldPage({ params }: Props) {
               : activeTab === "spelling" ? (content.spelling   ?? [])
               : activeTab === "wordsearch" ? (content.wordsearch ?? [])
               : (content.crossword ?? [])
-            ).map((mod, idx, arr) => (
-              <ModuleCard
-                key={mod.id}
-                id={mod.id}
-                title={mod.title}
-                description={mod.description}
-                icon={mod.icon}
-                kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword"}
-                stage={stage}
-                progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword", mod.id)}
-                locked={false}
-                prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
-              />
-            ))}
+            ).map((mod, idx, arr) => {
+              const isFinalTest = mod.id.endsWith("-sluttest");
+              return (
+                <div key={mod.id}>
+                  {isFinalTest && (
+                    <div className="flex items-center gap-3 my-5">
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
+                      <div className="flex items-center gap-2 bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-full px-4 py-1.5 text-amber-700 dark:text-amber-300 font-bold text-sm">
+                        <span>🏆</span>
+                        <span>Sluttest</span>
+                      </div>
+                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
+                    </div>
+                  )}
+                  <ModuleCard
+                    id={mod.id}
+                    title={mod.title}
+                    description={mod.description}
+                    icon={mod.icon}
+                    kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword"}
+                    stage={stage}
+                    progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword", mod.id)}
+                    locked={false}
+                    prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
+                    isFinalTest={isFinalTest}
+                  />
+                </div>
+              );
+            })}
             {(
               (activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) ||
               (activeTab === "crossword"  && (content.crossword  ?? []).length === 0)

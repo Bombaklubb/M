@@ -3945,6 +3945,377 @@
           "explanation": "under the chair = under stolen."
         }
       ]
+    },
+    {
+      "id": "mel-sluttest",
+      "title": "Sluttest – Grammatik",
+      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är sluttestet för hela grammatikdelen!",
+        "Frågorna täcker allt du tränat på: present simple, past simple, adjektiv & komparativ, prepositioner, verb tider och mycket mer.",
+        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-st-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt form: 'She ___ to school every day.'",
+          "options": [
+            "go",
+            "goes",
+            "goed",
+            "going"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med he/she/it i present simple lägger vi till -s eller -es. She goes to school."
+        },
+        {
+          "id": "mel-st-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt form: 'They ___ eat meat.' (negation)",
+          "options": [
+            "don't",
+            "doesn't",
+            "isn't",
+            "aren't"
+          ],
+          "correctIndex": 0,
+          "explanation": "Med I/you/we/they använder vi 'don't' i negationer. They don't eat meat."
+        },
+        {
+          "id": "mel-st-3",
+          "type": "multiple-choice",
+          "question": "Välj rätt form: 'I ___ a great film yesterday.'",
+          "options": [
+            "see",
+            "saw",
+            "seen",
+            "sees"
+          ],
+          "correctIndex": 1,
+          "explanation": "'See' är oregelbundet. Past tense = saw. I saw a great film."
+        },
+        {
+          "id": "mel-st-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt negation i past tense: 'She ___ the answer.'",
+          "options": [
+            "didn't know",
+            "doesn't know",
+            "not know",
+            "knew not"
+          ],
+          "correctIndex": 0,
+          "explanation": "I past simple negation använder vi 'didn't + grundform'. She didn't know."
+        },
+        {
+          "id": "mel-st-5",
+          "type": "multiple-choice",
+          "question": "Välj rätt form: 'We ___ to the park last Saturday.'",
+          "options": [
+            "go",
+            "goes",
+            "goed",
+            "went"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Go' är oregelbundet. Past tense = went. We went to the park."
+        },
+        {
+          "id": "mel-st-6",
+          "type": "multiple-choice",
+          "question": "Välj superlativ: 'This is the ___ cake I've ever eaten.' (good)",
+          "options": [
+            "gooder",
+            "more good",
+            "best",
+            "goodest"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Good' har oregelbunden superlativ: best. The best cake."
+        },
+        {
+          "id": "mel-st-7",
+          "type": "multiple-choice",
+          "question": "Välj komparativ: 'My bag is ___ than yours.' (heavy)",
+          "options": [
+            "more heavy",
+            "heavyer",
+            "heavier",
+            "heaviest"
+          ],
+          "correctIndex": 2,
+          "explanation": "Adjektiv på -y ändras till -ier i komparativ. Heavier than."
+        },
+        {
+          "id": "mel-st-8",
+          "type": "multiple-choice",
+          "question": "Välj rätt preposition: 'I brush my teeth ___ night.'",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
+          "correctIndex": 2,
+          "explanation": "'At' används med klockslag och delar av dagen: at night, at noon."
+        },
+        {
+          "id": "mel-st-9",
+          "type": "multiple-choice",
+          "question": "Välj rätt preposition: 'She was born ___ April.'",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "by"
+          ],
+          "correctIndex": 2,
+          "explanation": "'In' används med månader och år: in April, in 2010."
+        },
+        {
+          "id": "mel-st-10",
+          "type": "multiple-choice",
+          "question": "Välj rätt preposition: 'We met ___ the bus stop.'",
+          "options": [
+            "in",
+            "on",
+            "at",
+            "to"
+          ],
+          "correctIndex": 2,
+          "explanation": "'At' används med specifika platser och punkter: at the bus stop."
+        },
+        {
+          "id": "mel-st-11",
+          "type": "multiple-choice",
+          "question": "Välj rätt frågeord: '___ do you live?'",
+          "options": [
+            "What",
+            "How",
+            "Where",
+            "When"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Where' frågar om plats. Where do you live?"
+        },
+        {
+          "id": "mel-st-12",
+          "type": "multiple-choice",
+          "question": "Välj rätt frågeord: '___ old are you?'",
+          "options": [
+            "What",
+            "How",
+            "Where",
+            "When"
+          ],
+          "correctIndex": 1,
+          "explanation": "'How old' frågar om ålder. How old are you?"
+        },
+        {
+          "id": "mel-st-13",
+          "type": "multiple-choice",
+          "question": "Välj rätt artikel: 'I saw ___ elephant at the zoo.'",
+          "options": [
+            "a",
+            "an",
+            "the",
+            "–"
+          ],
+          "correctIndex": 1,
+          "explanation": "'An' används före vokalljud. 'Elephant' börjar med e. An elephant."
+        },
+        {
+          "id": "mel-st-14",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ many books on the shelf.'",
+          "options": [
+            "There is",
+            "There are",
+            "There be",
+            "It is"
+          ],
+          "correctIndex": 1,
+          "explanation": "'There are' används med plural. There are many books."
+        },
+        {
+          "id": "mel-st-15",
+          "type": "multiple-choice",
+          "question": "Välj rätt frågeform: '___ your sister play tennis?'",
+          "options": [
+            "Do",
+            "Does",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med 'he/she/it' använder vi 'does' i frågor. Does your sister play tennis?"
+        },
+        {
+          "id": "mel-st-16",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ you like chocolate?'",
+          "options": [
+            "Does",
+            "Are",
+            "Do",
+            "Is"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'I/you/we/they' använder vi 'do' i frågor. Do you like chocolate?"
+        },
+        {
+          "id": "mel-st-17",
+          "type": "multiple-choice",
+          "question": "Välj rätt past tense: 'He ___ his homework before dinner.'",
+          "options": [
+            "do",
+            "does",
+            "did",
+            "done"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past tense av 'do' är 'did'. He did his homework."
+        },
+        {
+          "id": "mel-st-18",
+          "type": "multiple-choice",
+          "question": "Välj rätt past tense: 'She ___ a letter to her friend.'",
+          "options": [
+            "write",
+            "writes",
+            "wrote",
+            "written"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Write' är oregelbundet. Past tense = wrote. She wrote a letter."
+        },
+        {
+          "id": "mel-st-19",
+          "type": "multiple-choice",
+          "question": "Välj rätt komparativ: 'The film was ___ than the book.' (exciting)",
+          "options": [
+            "excitinger",
+            "most exciting",
+            "more exciting",
+            "exciting"
+          ],
+          "correctIndex": 2,
+          "explanation": "Längre adjektiv bildar komparativ med 'more'. More exciting than."
+        },
+        {
+          "id": "mel-st-20",
+          "type": "multiple-choice",
+          "question": "Välj rätt preposition: 'I walk to school ___ Mondays.'",
+          "options": [
+            "at",
+            "in",
+            "by",
+            "on"
+          ],
+          "correctIndex": 3,
+          "explanation": "'On' används med dagar i veckan: on Mondays, on Friday."
+        },
+        {
+          "id": "mel-st-21",
+          "type": "multiple-choice",
+          "question": "Välj rätt past tense: 'I ___ my keys!' said Tom.",
+          "options": [
+            "lose",
+            "looses",
+            "lost",
+            "losed"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Lose' är oregelbundet. Past tense = lost. I lost my keys."
+        },
+        {
+          "id": "mel-st-22",
+          "type": "multiple-choice",
+          "question": "Välj rätt negation: 'She ___ watch TV last night.'",
+          "options": [
+            "doesn't",
+            "not",
+            "didn't",
+            "wasn't"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past simple negation: didn't + grundform. She didn't watch TV."
+        },
+        {
+          "id": "mel-st-23",
+          "type": "fill-in-blank",
+          "sentence": "She ___ to school every day. (go)",
+          "answer": "goes",
+          "explanation": "Med she i present simple: she goes. Kom ihåg -es efter go."
+        },
+        {
+          "id": "mel-st-24",
+          "type": "fill-in-blank",
+          "sentence": "We ___ London last year. (visit)",
+          "answer": "visited",
+          "explanation": "Regelbundet verb i past simple: visited. We visited London."
+        },
+        {
+          "id": "mel-st-25",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ than his brother. (tall – komparativ)",
+          "answer": "taller",
+          "explanation": "Korta adjektiv bildar komparativ med -er. Taller than."
+        },
+        {
+          "id": "mel-st-26",
+          "type": "fill-in-blank",
+          "sentence": "I get up ___ seven o'clock.",
+          "answer": "at",
+          "explanation": "'At' används med klockslag. At seven o'clock."
+        },
+        {
+          "id": "mel-st-27",
+          "type": "fill-in-blank",
+          "sentence": "___ she like swimming? Yes, she does.",
+          "answer": "Does",
+          "explanation": "Med she i frågor: Does she like...?"
+        },
+        {
+          "id": "mel-st-28",
+          "type": "fill-in-blank",
+          "sentence": "The cat ___ eat vegetables. (negation, present simple)",
+          "answer": "doesn't",
+          "explanation": "Med he/she/it i negation: doesn't + grundform."
+        },
+        {
+          "id": "mel-st-29",
+          "type": "fill-in-blank",
+          "sentence": "This is the ___ day of my life! (good – superlativ)",
+          "answer": "best",
+          "explanation": "Superlativ av 'good' är 'best'. Oregelbundet ord."
+        },
+        {
+          "id": "mel-st-30",
+          "type": "fill-in-blank",
+          "sentence": "___ they at school yesterday? No, they weren't.",
+          "answer": "Were",
+          "explanation": "Past tense av 'are' (they) i frågeform: Were they...?"
+        },
+        {
+          "id": "mel-st-31",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a ghost last night! (see)",
+          "answer": "saw",
+          "explanation": "'See' är oregelbundet. Past tense = saw. I saw a ghost."
+        },
+        {
+          "id": "mel-st-32",
+          "type": "fill-in-blank",
+          "sentence": "She is the ___ girl in the class. (tall – superlativ)",
+          "answer": "tallest",
+          "explanation": "Superlativ av korta adjektiv bildas med -est. The tallest."
+        }
+      ]
     }
   ],
   "reading": [

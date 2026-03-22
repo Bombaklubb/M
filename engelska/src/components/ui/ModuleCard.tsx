@@ -16,6 +16,7 @@ interface ModuleCardProps {
   progress: ModuleProgress | null;
   locked: boolean;
   prevModuleTitle: string | null;
+  isFinalTest?: boolean;
 }
 
 const stageBeamColors: Record<string, [string, string]> = {
@@ -35,6 +36,7 @@ export default function ModuleCard({
   progress,
   locked,
   prevModuleTitle,
+  isFinalTest = false,
 }: ModuleCardProps) {
   const href = `/world/${stage.id}/${kind}/${id}`;
   const pct = progress?.completed ? 100 : 0;
@@ -72,6 +74,93 @@ export default function ModuleCard({
     );
   }
 
+  // ── Final Test special card ──────────────────────────────────────────────────
+  if (isFinalTest) {
+    return (
+      <Link href={href} className="block group">
+        <div
+          className={`relative overflow-hidden rounded-3xl border-3 px-5 py-5 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer ${
+            progress?.completed
+              ? "border-amber-400 dark:border-amber-500 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/30 dark:to-yellow-900/20"
+              : "border-amber-300 dark:border-amber-600 bg-gradient-to-br from-amber-50/80 to-orange-50/60 dark:from-amber-900/20 dark:to-orange-900/10 group-hover:border-amber-400"
+          }`}
+          style={{
+            boxShadow: progress?.completed
+              ? "0 5px 0 0 rgba(245, 158, 11, 0.35), 0 8px 20px -4px rgba(245, 158, 11, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.9)"
+              : "0 4px 0 0 rgba(245, 158, 11, 0.25), 0 8px 16px -4px rgba(245, 158, 11, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+          }}
+        >
+          <BorderBeam
+            size={220}
+            duration={8}
+            colorFrom="#f59e0b"
+            colorTo="#fbbf24"
+            borderWidth={2.5}
+          />
+
+          <div className="flex items-center gap-4">
+            {/* Trophy icon */}
+            <div
+              className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110 border-3 ${
+                progress?.completed
+                  ? "bg-gradient-to-br from-amber-400 to-yellow-500 border-amber-300 text-white"
+                  : "bg-gradient-to-br from-amber-100 to-yellow-100 dark:from-amber-800/50 dark:to-yellow-800/30 border-amber-200 dark:border-amber-600"
+              }`}
+              style={{
+                boxShadow: progress?.completed
+                  ? "0 4px 0 0 rgba(180, 83, 9, 0.4), inset 0 2px 4px 0 rgba(255,255,255,0.4)"
+                  : "0 3px 0 0 rgba(245, 158, 11, 0.3), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
+              }}
+            >
+              {progress?.completed ? "✓" : "🏆"}
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="font-black text-amber-900 dark:text-amber-100 text-base">{title}</h3>
+                {progress?.completed ? (
+                  <span
+                    className="badge bg-amber-100 text-amber-700 dark:bg-amber-800/50 dark:text-amber-300 text-xs flex-shrink-0 border-2 border-amber-300 dark:border-amber-600 font-bold"
+                    style={{ boxShadow: "0 2px 0 0 rgba(180,83,9,0.2)" }}
+                  >
+                    ✓ Klar
+                  </span>
+                ) : (
+                  <span className="badge bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 text-xs flex-shrink-0 border-2 border-amber-200 dark:border-amber-700 font-bold">
+                    SLUTTEST
+                  </span>
+                )}
+              </div>
+
+              <p className="text-sm text-amber-700 dark:text-amber-300 mt-1 font-medium">{description}</p>
+
+              <div className="mt-3 flex items-center gap-3">
+                <div className="flex-1">
+                  <ProgressBar
+                    value={pct}
+                    colorClass="bg-gradient-to-r from-amber-400 to-yellow-400"
+                  />
+                </div>
+                {progress && (
+                  <span className="text-sm text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">
+                    ⭐ {progress.points}p
+                  </span>
+                )}
+                {!progress && (
+                  <span className="text-sm font-bold flex-shrink-0 text-amber-500 group-hover:text-amber-700 dark:text-amber-400 transition-colors">
+                    Testa dig →
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Link>
+    );
+  }
+
+  // ── Standard card ─────────────────────────────────────────────────────────
   return (
     <Link href={href} className="block group">
       <MagicCard
