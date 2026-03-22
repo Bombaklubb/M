@@ -98,7 +98,7 @@ export default function ModuleCard({
             borderWidth={2.5}
           />
 
-          <div className="flex items-center gap-4">
+          <div className="relative z-10 flex items-center gap-4">
             {/* Trophy icon */}
             <div
               className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110 border-3 ${
