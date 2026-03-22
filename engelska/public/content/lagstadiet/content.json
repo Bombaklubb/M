@@ -3741,6 +3741,377 @@
           "explanation": "bird → birds."
         }
       ]
+    },
+    {
+      "id": "lag-sluttest",
+      "title": "Sluttest – Grammatik",
+      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är sluttestet för hela grammatikdelen!",
+        "Frågorna täcker allt du har tränat på: be-verb, have/has, artiklar, plural, demonstrativa pronomen, ägandeord, can, there is/are, prepositioner och mer.",
+        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-st-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt ord: 'I ___ eight years old.'",
+          "options": [
+            "is",
+            "am",
+            "are",
+            "be"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med 'I' använder vi alltid 'am'. I am eight years old."
+        },
+        {
+          "id": "lag-st-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt ord: 'My dog ___ very funny.'",
+          "options": [
+            "am",
+            "are",
+            "is",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'he/she/it' (singularis) använder vi 'is'. My dog is very funny."
+        },
+        {
+          "id": "lag-st-3",
+          "type": "multiple-choice",
+          "question": "Välj rätt ord: 'We ___ best friends.'",
+          "options": [
+            "am",
+            "is",
+            "are",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'we/you/they' (pluralis) använder vi 'are'. We are best friends."
+        },
+        {
+          "id": "lag-st-4",
+          "type": "multiple-choice",
+          "question": "Välj rätt ord: 'She ___ a new dress.'",
+          "options": [
+            "have",
+            "has",
+            "haves",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med 'he/she/it' använder vi 'has'. She has a new dress."
+        },
+        {
+          "id": "lag-st-5",
+          "type": "multiple-choice",
+          "question": "Välj rätt ord: 'My friends ___ a puppy.'",
+          "options": [
+            "has",
+            "haves",
+            "have",
+            "having"
+          ],
+          "correctIndex": 2,
+          "explanation": "Med 'I/you/we/they' använder vi 'have'. My friends have a puppy."
+        },
+        {
+          "id": "lag-st-6",
+          "type": "multiple-choice",
+          "question": "Vilken artikel är rätt? '___ orange'",
+          "options": [
+            "A",
+            "An",
+            "The",
+            "–"
+          ],
+          "correctIndex": 1,
+          "explanation": "'An' används före ord som börjar med vokalljud (a, e, i, o, u). An orange."
+        },
+        {
+          "id": "lag-st-7",
+          "type": "multiple-choice",
+          "question": "Vilken artikel är rätt? '___ big bus'",
+          "options": [
+            "An",
+            "A",
+            "The",
+            "–"
+          ],
+          "correctIndex": 1,
+          "explanation": "'A' används före ord som börjar med konsonantljud. A big bus."
+        },
+        {
+          "id": "lag-st-8",
+          "type": "multiple-choice",
+          "question": "Vad är plural? 'one cat / two ___'",
+          "options": [
+            "cats",
+            "cates",
+            "catis",
+            "cat"
+          ],
+          "correctIndex": 0,
+          "explanation": "De flesta ord bildar plural med -s. Two cats."
+        },
+        {
+          "id": "lag-st-9",
+          "type": "multiple-choice",
+          "question": "Vad är plural av 'tooth'?",
+          "options": [
+            "tooths",
+            "teeth",
+            "teeths",
+            "toothes"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Tooth' är ett oregelbundet ord. Plural är 'teeth'."
+        },
+        {
+          "id": "lag-st-10",
+          "type": "multiple-choice",
+          "question": "Peka på något nära dig: '___ is my pencil.'",
+          "options": [
+            "That",
+            "Those",
+            "This",
+            "These"
+          ],
+          "correctIndex": 2,
+          "explanation": "'This' används om ett föremål som är nära (singular). This is my pencil."
+        },
+        {
+          "id": "lag-st-11",
+          "type": "multiple-choice",
+          "question": "Peka på flera saker långt borta: '___ are her books.'",
+          "options": [
+            "This",
+            "That",
+            "These",
+            "Those"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Those' används om flera föremål långt borta. Those are her books."
+        },
+        {
+          "id": "lag-st-12",
+          "type": "multiple-choice",
+          "question": "Hur säger man 'vår hund'?",
+          "options": [
+            "Our dog",
+            "Ours dog",
+            "We dog",
+            "Us dog"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Our' är ägandeadjektiv för 'we'. Our dog."
+        },
+        {
+          "id": "lag-st-13",
+          "type": "multiple-choice",
+          "question": "Boken tillhör mig: 'The book is ___.'",
+          "options": [
+            "my",
+            "mine",
+            "me",
+            "I"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Mine' är ägandepronomenet för 'I'. The book is mine."
+        },
+        {
+          "id": "lag-st-14",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'She ___ play the piano.'",
+          "options": [
+            "can",
+            "cans",
+            "is can",
+            "are can"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Can' böjs inte efter subjektet. She can play the piano."
+        },
+        {
+          "id": "lag-st-15",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'I ___ fly, I am not a bird!'",
+          "options": [
+            "can",
+            "cans",
+            "can't",
+            "not can"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Can't' (cannot) används för att säga att man inte kan göra något."
+        },
+        {
+          "id": "lag-st-16",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ a spider on the wall!'",
+          "options": [
+            "There are",
+            "There is",
+            "There be",
+            "It are"
+          ],
+          "correctIndex": 1,
+          "explanation": "'There is' används med singular (ett spindel). There is a spider."
+        },
+        {
+          "id": "lag-st-17",
+          "type": "multiple-choice",
+          "question": "Välj rätt: '___ five children in the garden.'",
+          "options": [
+            "There is",
+            "There are",
+            "There be",
+            "It is"
+          ],
+          "correctIndex": 1,
+          "explanation": "'There are' används med plural (fem barn). There are five children."
+        },
+        {
+          "id": "lag-st-18",
+          "type": "multiple-choice",
+          "question": "Var är boken? 'The book is ___ the bag.'",
+          "options": [
+            "in",
+            "at",
+            "to",
+            "from"
+          ],
+          "correctIndex": 0,
+          "explanation": "'In' = inne i. The book is in the bag."
+        },
+        {
+          "id": "lag-st-19",
+          "type": "multiple-choice",
+          "question": "Var sitter katten? 'The cat is ___ the chair.'",
+          "options": [
+            "in",
+            "to",
+            "on",
+            "at"
+          ],
+          "correctIndex": 2,
+          "explanation": "'On' = på ytan av. The cat is on the chair."
+        },
+        {
+          "id": "lag-st-20",
+          "type": "multiple-choice",
+          "question": "'Are you hungry?' 'Yes, ___'",
+          "options": [
+            "I am",
+            "I is",
+            "I are",
+            "am I"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kort svar på Are you...? = Yes, I am. / No, I'm not."
+        },
+        {
+          "id": "lag-st-21",
+          "type": "multiple-choice",
+          "question": "___ she like cats?",
+          "options": [
+            "Do",
+            "Does",
+            "Is",
+            "Are"
+          ],
+          "correctIndex": 1,
+          "explanation": "Med 'he/she/it' i frågor använder vi 'does'. Does she like cats?"
+        },
+        {
+          "id": "lag-st-22",
+          "type": "multiple-choice",
+          "question": "'___ you play football?'",
+          "options": [
+            "Does",
+            "Is",
+            "Are",
+            "Do"
+          ],
+          "correctIndex": 3,
+          "explanation": "Med 'I/you/we/they' i frågor använder vi 'do'. Do you play football?"
+        },
+        {
+          "id": "lag-st-23",
+          "type": "fill-in-blank",
+          "sentence": "My cat ___ white and fluffy.",
+          "answer": "is",
+          "explanation": "Vi använder 'is' med 'my cat' (= he/she/it, singular)."
+        },
+        {
+          "id": "lag-st-24",
+          "type": "fill-in-blank",
+          "sentence": "I ___ a new pencil case.",
+          "answer": "have",
+          "explanation": "Vi använder 'have' med 'I'. I have a new pencil case."
+        },
+        {
+          "id": "lag-st-25",
+          "type": "fill-in-blank",
+          "sentence": "I want ___ egg for breakfast.",
+          "answer": "an",
+          "explanation": "'Egg' börjar med vokalljud (e), så vi använder 'an'. An egg."
+        },
+        {
+          "id": "lag-st-26",
+          "type": "fill-in-blank",
+          "sentence": "The plural of 'foot' is ___.",
+          "answer": "feet",
+          "explanation": "'Foot' är oregelbundet. Plural = feet."
+        },
+        {
+          "id": "lag-st-27",
+          "type": "fill-in-blank",
+          "sentence": "___ dog is very fluffy. (The dog belongs to them.)",
+          "answer": "Their",
+          "explanation": "'Their' = deras. Their dog is very fluffy."
+        },
+        {
+          "id": "lag-st-28",
+          "type": "fill-in-blank",
+          "sentence": "She ___ ride a horse.",
+          "answer": "can",
+          "explanation": "'Can' uttrycker förmåga. She can ride a horse."
+        },
+        {
+          "id": "lag-st-29",
+          "type": "fill-in-blank",
+          "sentence": "___ are two windows in my bedroom.",
+          "answer": "There",
+          "explanation": "Vi börjar meningen med 'There are' för att beskriva vad som finns någonstans."
+        },
+        {
+          "id": "lag-st-30",
+          "type": "fill-in-blank",
+          "sentence": "___ you swim? (Fråga om förmåga)",
+          "answer": "Can",
+          "explanation": "'Can you...?' är frågeform av can. Can you swim?"
+        },
+        {
+          "id": "lag-st-31",
+          "type": "fill-in-blank",
+          "sentence": "The cat is ___ the box. (inne i)",
+          "answer": "in",
+          "explanation": "'In' = inne i något. The cat is in the box."
+        },
+        {
+          "id": "lag-st-32",
+          "type": "fill-in-blank",
+          "sentence": "Is that your book? No, it is ___. (Det tillhör mig.)",
+          "answer": "mine",
+          "explanation": "'Mine' är ägandepronomenet för 'I'. It is mine."
+        }
+      ]
     }
   ],
   "reading": [
