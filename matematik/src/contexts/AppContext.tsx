@@ -24,7 +24,8 @@ export type ExtendedView =
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
   | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
   | 'sluttest' | 'kistor'
-  | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins';
+  | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins'
+  | 'game-memory' | 'game-hangman';
 
 interface AppContextValue {
   currentStudent: Student | null;
