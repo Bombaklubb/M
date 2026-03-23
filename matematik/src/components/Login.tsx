@@ -6,7 +6,6 @@ import { BASE_AVATARS } from '../data/avatars';
 import { Meteors } from './magicui/meteors';
 import { BorderBeam } from './magicui/border-beam';
 import { AnimatedGradientText } from './magicui/animated-gradient-text';
-import { ShimmerButton } from './magicui/shimmer-button';
 import { Input } from './ui/input';
 
 const AVATARS = BASE_AVATARS;
@@ -173,15 +172,16 @@ export default function Login() {
             <p className="text-red-400 text-sm mb-3 animate-fade-in">{error}</p>
           )}
 
-          <ShimmerButton
-            className="w-full py-3 text-lg font-black rounded-2xl"
-            background="linear-gradient(180deg, #f97316 0%, #c2560a 100%)"
-            shimmerColor="rgba(255,255,255,0.5)"
+          <button
             onClick={doLogin}
-            style={{ boxShadow: '0 4px 20px rgba(249,115,22,0.5), 0 2px 0 rgba(0,0,0,0.3)' }}
+            className="w-full py-3 text-lg font-black rounded-2xl text-white transition-all hover:scale-105 active:scale-95"
+            style={{
+              background: 'linear-gradient(180deg, #f97316 0%, #c2560a 100%)',
+              boxShadow: '0 4px 20px rgba(249,115,22,0.5), 0 2px 0 rgba(0,0,0,0.3)',
+            }}
           >
             {AVATARS[avatar]} Starta äventyret! →
-          </ShimmerButton>
+          </button>
 
           <p className="text-center mt-4 text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
             Kontakt – martin.akdogan@enkoping.se
