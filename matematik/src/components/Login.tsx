@@ -182,10 +182,6 @@ export default function Login() {
           >
             {AVATARS[avatar]} Starta äventyret! →
           </button>
-
-          <p className="text-center mt-4 text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            Kontakt – martin.akdogan@enkoping.se
-          </p>
         </div>
       </div>
     </div>
