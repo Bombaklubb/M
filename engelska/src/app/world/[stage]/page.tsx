@@ -244,7 +244,7 @@ export default function WorldPage({ params }: Props) {
           </div>
 
         ) : (
-          <div className="space-y-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {(
               activeTab === "grammar"    ? content.grammar
               : activeTab === "reading" ? content.reading
@@ -254,7 +254,7 @@ export default function WorldPage({ params }: Props) {
             ).map((mod, idx, arr) => {
               const isFinalTest = mod.id.endsWith("-sluttest");
               return (
-                <BlurFade key={mod.id} delay={idx * 0.04} duration={0.35}>
+                <BlurFade key={mod.id} delay={idx * 0.04} duration={0.35} className={isFinalTest ? "sm:col-span-2" : ""}>
                   {isFinalTest && (
                     <div className="flex items-center gap-3 my-5">
                       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
