@@ -18,7 +18,7 @@ function MysteryPopup({ description, onClose }: { description: string; onClose: 
       <div
         className="rounded-3xl p-8 max-w-sm w-full text-center"
         style={{
-          background: 'linear-gradient(135deg, #1a0a2e, #0d0d2b)',
+          background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)',
           border: '3px solid #a855f7',
           boxShadow: '0 8px 40px rgba(168,85,247,0.35)',
         }}
@@ -96,12 +96,12 @@ export default function TopicResult({ topic }: { topic: Topic }) {
   }, [visible, score]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
+    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
       <Confetti active={showConfetti} duration={3000} />
       <AppHeader />
       <div className={`w-full max-w-md transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         {/* Result card */}
-        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-8 mb-5">
+        <div className="rounded-3xl p-8 mb-5" style={{ background: "rgba(40,8,32,0.82)", backdropFilter: "blur(20px)", border: "1px solid rgba(200,140,50,0.28)", boxShadow: "0 8px 32px rgba(0,0,0,0.5)" }}>
           {/* Header */}
           <div className="text-center mb-6">
             <div className="text-6xl mb-3 drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">{topic.icon}</div>

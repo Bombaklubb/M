@@ -748,11 +748,11 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
 
   // ---- LEARN PHASE ----
   if (phase === 'learn') return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
       <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
-        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-6">
+        <div className="rounded-3xl p-6 mb-6" style={{ background: 'rgba(40,8,32,0.82)', backdropFilter: 'blur(20px)', border: '1px solid rgba(200,140,50,0.28)', boxShadow: '0 8px 32px rgba(0,0,0,0.5)' }}>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-blue-500/30 text-blue-300 font-bold text-xs px-3 py-1 rounded-full">Steg 1 av 2 · Lär dig</span>
           </div>
@@ -786,11 +786,11 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
 
   // ---- MINI CHALLENGE ----
   if (phase === 'mini' && miniEx) return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
+    <div className="min-h-screen" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
       <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
-        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-5">
+        <div className="rounded-3xl p-6 mb-5" style={{ background: 'rgba(40,8,32,0.82)', backdropFilter: 'blur(20px)', border: '1px solid rgba(200,140,50,0.28)', boxShadow: '0 8px 32px rgba(0,0,0,0.5)' }}>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-purple-500/30 text-purple-300 font-bold text-xs px-3 py-1 rounded-full">Steg 2 av 2 · Testa dig!</span>
           </div>
