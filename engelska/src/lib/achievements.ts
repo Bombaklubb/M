@@ -26,11 +26,10 @@ function stageStats(student: StudentData, stageId: StageId) {
   const read  = Object.values(s.readingModules).filter((m) => m.completed);
   const spell = Object.values(s.spellingModules    ?? {}).filter((m) => m.completed);
   const ws    = Object.values(s.wordsearchModules  ?? {}).filter((m) => m.completed);
-  const cross = Object.values(s.crosswordModules   ?? {}).filter((m) => m.completed);
-  const all   = [...gram, ...read, ...spell, ...ws, ...cross];
+  const all   = [...gram, ...read, ...spell, ...ws];
   const points = all.reduce((sum, m) => sum + m.points, 0);
   return { gram: gram.length, read: read.length, spell: spell.length,
-           ws: ws.length, cross: cross.length, total: all.length, points };
+           ws: ws.length, total: all.length, points };
 }
 
 // ─── Definitions ─────────────────────────────────────────────────────────────
@@ -48,7 +47,6 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: "lag-9",  stageId: "lagstadiet", icon: "🏆", title: "Djungelhjälte",      description: "Klara 10 moduler i Språkdjungeln." },
   { id: "lag-10", stageId: "lagstadiet", icon: "🌟", title: "Djungelkung",        description: "Klara 18 moduler i Språkdjungeln." },
   { id: "lag-11", stageId: "lagstadiet", icon: "🔍", title: "Ordjägaren I",       description: "Klara en ordsökningsmodul i Språkdjungeln." },
-  { id: "lag-12", stageId: "lagstadiet", icon: "🔠", title: "Korsordsmästaren I", description: "Klara en korsordmodul i Språkdjungeln." },
 
   // ── Språkstaden ────────────────────────────────────────────────────────────
   { id: "mel-1",  stageId: "mellanstadiet", icon: "🏙️", title: "Stadsnykomling",      description: "Klara din första modul i Språkstaden." },
@@ -62,7 +60,6 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: "mel-9",  stageId: "mellanstadiet", icon: "🏆", title: "Stadshjälte",         description: "Klara 10 moduler i Språkstaden." },
   { id: "mel-10", stageId: "mellanstadiet", icon: "🌟", title: "Stadslegende",        description: "Klara 18 moduler i Språkstaden." },
   { id: "mel-11", stageId: "mellanstadiet", icon: "🔍", title: "Ordjägaren II",       description: "Klara en ordsökningsmodul i Språkstaden." },
-  { id: "mel-12", stageId: "mellanstadiet", icon: "🔠", title: "Korsordsmästaren II", description: "Klara en korsordmodul i Språkstaden." },
 
   // ── Språkarenan ────────────────────────────────────────────────────────────
   { id: "hog-1",  stageId: "hogstadiet", icon: "🌐", title: "Arenaentrant",       description: "Klara din första modul i Språkarenan." },
@@ -76,7 +73,6 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: "hog-9",  stageId: "hogstadiet", icon: "🏆", title: "Arenamästare",       description: "Klara 10 moduler i Språkarenan." },
   { id: "hog-10", stageId: "hogstadiet", icon: "🌟", title: "Arenalegende",       description: "Klara 18 moduler i Språkarenan." },
   { id: "hog-11", stageId: "hogstadiet", icon: "🔍", title: "Ordjägaren III",     description: "Klara en ordsökningsmodul i Språkarenan." },
-  { id: "hog-12", stageId: "hogstadiet", icon: "🔠", title: "Korsordsmästaren III", description: "Klara en korsordmodul i Språkarenan." },
 
   // ── Språkakademin ──────────────────────────────────────────────────────────
   { id: "gym-1",  stageId: "gymnasiet", icon: "🏔️", title: "Akademiklättrare",     description: "Klara din första modul i Språkakademin." },
@@ -90,7 +86,6 @@ export const ACHIEVEMENTS: Achievement[] = [
   { id: "gym-9",  stageId: "gymnasiet", icon: "🏆", title: "Akademimästare",       description: "Klara 10 moduler i Språkakademin." },
   { id: "gym-10", stageId: "gymnasiet", icon: "🌟", title: "Akademilegende",       description: "Klara 18 moduler i Språkakademin." },
   { id: "gym-11", stageId: "gymnasiet", icon: "🔍", title: "Ordjägaren IV",        description: "Klara en ordsökningsmodul i Språkakademin." },
-  { id: "gym-12", stageId: "gymnasiet", icon: "🔠", title: "Korsordsmästaren IV",  description: "Klara en korsordmodul i Språkakademin." },
 
   // ── Globala ────────────────────────────────────────────────────────────────
   { id: "global-1", stageId: "global", icon: "🚀", title: "Första steget",       description: "Klara din allra första modul." },
@@ -126,7 +121,7 @@ export function isUnlocked(a: Achievement, student: StudentData): boolean {
   }
 
   const sid = a.stageId as StageId;
-  const { gram, read, spell, ws, cross, total, points } = stageStats(student, sid);
+  const { gram, read, spell, ws, total, points } = stageStats(student, sid);
 
   const prefix = sid === "lagstadiet" ? "lag"
     : sid === "mellanstadiet" ? "mel"
@@ -144,14 +139,13 @@ export function isUnlocked(a: Achievement, student: StudentData): boolean {
   if (a.id === `${prefix}-9`)  return total >= 10;
   if (a.id === `${prefix}-10`) return total >= 18;
   if (a.id === `${prefix}-11`) return ws >= 1;
-  if (a.id === `${prefix}-12`) return cross >= 1;
   return false;
 }
 
 // ─── Game-icons components per achievement ID ─────────────────────────────────
 // Pattern: -1 = entrant, -2 = grammar, -3 = reading, -4 = spelling,
 //          -5 = stage master, -6 = triple, -7 = points I, -8 = points II,
-//          -9 = hero, -10 = legend, -11 = wordsearch, -12 = crossword
+//          -9 = hero, -10 = legend, -11 = wordsearch
 export const ACHIEVEMENT_ICONS: Record<string, IconType> = {
   // Språkdjungeln (lagstadiet)
   "lag-1":  GiSprout,        "lag-2":  GiScrollQuill,  "lag-3":  GiOpenBook,

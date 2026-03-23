@@ -27,7 +27,7 @@ interface Props {
   params: Promise<{ stage: string }>;
 }
 
-type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "regler";
+type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "regler";
 
 export default function WorldPage({ params }: Props) {
   const { stage: stageId } = use(params);
@@ -65,14 +65,13 @@ export default function WorldPage({ params }: Props) {
 
   const stageProgress = student?.stages[stage.id as keyof typeof student.stages];
 
-  function getModuleProgress(kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword", moduleId: string) {
+  function getModuleProgress(kind: "grammar" | "reading" | "spelling" | "wordsearch", moduleId: string) {
     if (!stageProgress) return null;
     const map =
       kind === "grammar"    ? stageProgress.grammarModules
       : kind === "reading"  ? stageProgress.readingModules
       : kind === "spelling" ? (stageProgress.spellingModules    ?? {})
-      : kind === "wordsearch" ? (stageProgress.wordsearchModules ?? {})
-      : (stageProgress.crosswordModules ?? {});
+      : (stageProgress.wordsearchModules ?? {});
     return map[moduleId] ?? null;
   }
 
@@ -82,7 +81,6 @@ export default function WorldPage({ params }: Props) {
     { id: "spelling",   label: "✏️ Stavning" },
     { id: "regler",     label: "📐 Språkregler" },
     { id: "wordsearch", label: "🔍 Ordsökning" },
-    { id: "crossword",  label: "🔠 Korsord" },
   ];
 
   return (
@@ -118,7 +116,6 @@ export default function WorldPage({ params }: Props) {
               { label: "Läsning",   icon: "📖", count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,                  total: content?.reading.length ?? 0 },
               { label: "Stavning",  icon: "✏️", count: Object.values(stageProgress.spellingModules    ?? {}).filter((m) => m.completed).length,        total: content?.spelling?.length ?? 0 },
               { label: "Ordsök.",   icon: "🔍", count: Object.values(stageProgress.wordsearchModules  ?? {}).filter((m) => m.completed).length,        total: content?.wordsearch?.length ?? 0 },
-              { label: "Korsord",   icon: "🔠", count: Object.values(stageProgress.crosswordModules   ?? {}).filter((m) => m.completed).length,        total: content?.crossword?.length ?? 0 },
             ].map(({ label, icon, count, total }) => {
               const done = total > 0 && count === total;
               return (
@@ -216,7 +213,7 @@ export default function WorldPage({ params }: Props) {
               : activeTab === "reading" ? content.reading
               : activeTab === "spelling" ? (content.spelling   ?? [])
               : activeTab === "wordsearch" ? (content.wordsearch ?? [])
-              : (content.crossword ?? [])
+              : (content.wordsearch ?? [])
             ).map((mod, idx, arr) => {
               const isFinalTest = mod.id.endsWith("-sluttest");
               return (
@@ -236,9 +233,9 @@ export default function WorldPage({ params }: Props) {
                     title={mod.title}
                     description={mod.description}
                     icon={mod.icon}
-                    kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword"}
+                    kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch"}
                     stage={stage}
-                    progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword", mod.id)}
+                    progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch", mod.id)}
                     locked={false}
                     prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
                     isFinalTest={isFinalTest}
@@ -246,12 +243,9 @@ export default function WorldPage({ params }: Props) {
                 </div>
               );
             })}
-            {(
-              (activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) ||
-              (activeTab === "crossword"  && (content.crossword  ?? []).length === 0)
-            ) && (
+            {(activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) && (
               <div className="card text-center py-10 text-gray-400">
-                <div className="text-3xl mb-2">{activeTab === "wordsearch" ? "🔍" : "🔠"}</div>
+                <div className="text-3xl mb-2">🔍</div>
                 <p>Inga moduler tillgängliga ännu.</p>
               </div>
             )}
