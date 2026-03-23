@@ -104,7 +104,7 @@ export default function ModuleCard({
   if (locked) {
     return (
       <div
-        className="rounded-2xl border-3 border-indigo-100 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 opacity-50 cursor-not-allowed select-none"
+        className="h-full rounded-2xl border-3 border-indigo-100 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 opacity-50 cursor-not-allowed select-none"
         style={{ boxShadow: "0 3px 0 0 rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.5)" }}
       >
         <div className="flex items-center gap-3">
@@ -127,9 +127,9 @@ export default function ModuleCard({
   // ── Final Test ────────────────────────────────────────────────────────────────
   if (isFinalTest) {
     return (
-      <Link href={href} className="block group">
+      <Link href={href} className="block group h-full">
         <div
-          className="rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer"
+          className="h-full rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer"
           style={{
             background: progress?.completed
               ? "linear-gradient(135deg, #f59e0b, #fbbf24, #f97316, #eab308, #f59e0b)"
@@ -142,7 +142,7 @@ export default function ModuleCard({
           }}
         >
           <div
-            className={`rounded-[22px] px-5 py-5 ${
+            className={`h-full rounded-[22px] px-5 py-5 ${
               progress?.completed
                 ? "bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/80 dark:to-yellow-950/60"
                 : "bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-850"
@@ -213,10 +213,10 @@ export default function ModuleCard({
 
   // ── Standard card ─────────────────────────────────────────────────────────────
   return (
-    <Link href={href} className="block group">
+    <Link href={href} className="block group h-full">
       <MagicCard
         gradientColor={`${beamColors[0]}18`}
-        className={`rounded-3xl border-3 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
+        className={`h-full rounded-3xl border-3 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
           progress?.completed
             ? `${stage.borderClass} bg-gradient-to-br from-white to-indigo-50/50`
             : "border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
