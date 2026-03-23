@@ -50,39 +50,39 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
 
 export const CHEST_META: Record<
   ChestType,
-  { label: string; emoji: string; spritePos: string; color: string; borderColor: string; shadowColor: string; description: string }
+  { label: string; emoji: string; image: string; color: string; borderColor: string; shadowColor: string; description: string }
 > = {
   wood: {
-    label: "Bronslåda",
+    label: "Bronskista",
     emoji: "📦",
-    spritePos: "0% 0%",
+    image: "/content/bronskista.png",
     color: "from-amber-600 to-amber-800",
     borderColor: "border-amber-700",
     shadowColor: "shadow-amber-900/40",
-    description: "En bronslåda med belöningar.",
+    description: "En bronskista med belöningar.",
   },
   silver: {
-    label: "Silverlåda",
+    label: "Silverkista",
     emoji: "🪙",
-    spritePos: "50% 0%",
+    image: "/content/silverkista.png",
     color: "from-slate-400 to-slate-600",
     borderColor: "border-slate-500",
     shadowColor: "shadow-slate-700/40",
-    description: "En glänsande silverlåda med bra belöningar.",
+    description: "En glänsande silverkista med bra belöningar.",
   },
   gold: {
-    label: "Guldlåda",
+    label: "Guldkista",
     emoji: "🏆",
-    spritePos: "100% 0%",
+    image: "/content/guldkista.png",
     color: "from-yellow-400 to-amber-500",
     borderColor: "border-yellow-500",
     shadowColor: "shadow-yellow-600/40",
-    description: "En praktfull guldlåda med de bästa belöningarna!",
+    description: "En praktfull guldkista med de bästa belöningarna!",
   },
   ruby: {
     label: "Rubinkista",
     emoji: "💎",
-    spritePos: "0% 100%",
+    image: "/content/rubinkista.png",
     color: "from-red-500 to-red-700",
     borderColor: "border-red-600",
     shadowColor: "shadow-red-900/40",
@@ -91,7 +91,7 @@ export const CHEST_META: Record<
   diamond: {
     label: "Diamantkista",
     emoji: "💠",
-    spritePos: "50% 100%",
+    image: "/content/diamantkista.png",
     color: "from-sky-300 to-blue-500",
     borderColor: "border-sky-400",
     shadowColor: "shadow-blue-700/40",
@@ -100,7 +100,7 @@ export const CHEST_META: Record<
   emerald: {
     label: "Smaragdkista",
     emoji: "🟢",
-    spritePos: "100% 100%",
+    image: "/content/smaragdkista.png",
     color: "from-emerald-500 to-green-700",
     borderColor: "border-emerald-600",
     shadowColor: "shadow-green-900/40",
@@ -298,7 +298,7 @@ export function rollMysteryBox(badges: string[], exercisesCompleted = 99): Myste
     return {
       type: "chest",
       chestType: "wood",
-      description: "En bronslåda!",
+      description: "En bronskista!",
     };
   } else {
     // Badge (pick one the student doesn't have yet)
@@ -352,7 +352,7 @@ export function openSilverChest(badges: string[]): {
   const desc = [
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
-    bonusChest ? "Bonus: Trälåda!" : null,
+    bonusChest ? "Bonus: Bronskista!" : null,
   ]
     .filter(Boolean)
     .join(" • ");
@@ -382,7 +382,7 @@ export function openGoldChest(badges: string[]): {
   const desc = [
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
-    bonusChest ? "Bonus: Silverlåda!" : null,
+    bonusChest ? "Bonus: Silverkista!" : null,
   ]
     .filter(Boolean)
     .join(" • ");
@@ -411,7 +411,7 @@ export function openRubyChest(badges: string[]): {
   const desc = [
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
-    bonusChest ? "Bonus: Silverlåda!" : null,
+    bonusChest ? "Bonus: Silverkista!" : null,
   ].filter(Boolean).join(" • ");
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
@@ -432,7 +432,7 @@ export function openDiamondChest(badges: string[]): {
   const desc = [
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
-    bonusChest ? "Bonus: Guldlåda!" : null,
+    bonusChest ? "Bonus: Guldkista!" : null,
   ].filter(Boolean).join(" • ");
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
