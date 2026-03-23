@@ -109,7 +109,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
               boxShadow: "0 3px 0 0 rgba(30,64,175,0.4), inset 0 1px 0 rgba(255,255,255,0.2)"
             }}
           >
-            <img src="/engelskajakten-logo.png" alt="Engelskajakten" className="w-full h-full object-contain" />
+            <img src="/union-jack.svg" alt="Union Jack" className="w-full h-full object-cover" />
           </div>
           <span className="font-black text-xl text-en-800 dark:text-white hidden sm:block tracking-tight">
             Engelskajakten
