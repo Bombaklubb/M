@@ -9,6 +9,8 @@ import { loadStudent } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent } from "@/lib/types";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 interface RuleItem {
   term: string;
@@ -75,12 +77,41 @@ export default function WorldPage({ params }: Props) {
     return map[moduleId] ?? null;
   }
 
+  // SVG icons for tabs
+  const tabIcons: Record<Tab, React.ReactNode> = {
+    grammar: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
+    reading: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+    spelling: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+      </svg>
+    ),
+    regler: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+    ),
+    wordsearch: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    ),
+  };
+
   const tabs: { id: Tab; label: string }[] = [
-    { id: "grammar",    label: "📝 Grammatik" },
-    { id: "reading",    label: "📖 Läsning" },
-    { id: "spelling",   label: "✏️ Stavning" },
-    { id: "regler",     label: "📐 Språkregler" },
-    { id: "wordsearch", label: "🔍 Ordsökning" },
+    { id: "grammar",    label: "Grammatik" },
+    { id: "reading",    label: "Läsning" },
+    { id: "spelling",   label: "Stavning" },
+    { id: "regler",     label: "Språkregler" },
+    { id: "wordsearch", label: "Ordsökning" },
   ];
 
   return (
@@ -112,27 +143,30 @@ export default function WorldPage({ params }: Props) {
         <div className="bg-white/95 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
           <div className="max-w-5xl mx-auto px-4 py-3 flex gap-3 flex-wrap">
             {[
-              { label: "Grammatik", icon: "📝", count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length,                  total: content?.grammar.length ?? 0 },
-              { label: "Läsning",   icon: "📖", count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,                  total: content?.reading.length ?? 0 },
-              { label: "Stavning",  icon: "✏️", count: Object.values(stageProgress.spellingModules    ?? {}).filter((m) => m.completed).length,        total: content?.spelling?.length ?? 0 },
-              { label: "Ordsök.",   icon: "🔍", count: Object.values(stageProgress.wordsearchModules  ?? {}).filter((m) => m.completed).length,        total: content?.wordsearch?.length ?? 0 },
+              { label: "Grammatik", icon: tabIcons.grammar,    count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length,             total: content?.grammar.length ?? 0 },
+              { label: "Läsning",   icon: tabIcons.reading,    count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,             total: content?.reading.length ?? 0 },
+              { label: "Stavning",  icon: tabIcons.spelling,   count: Object.values(stageProgress.spellingModules    ?? {}).filter((m) => m.completed).length,   total: content?.spelling?.length ?? 0 },
+              { label: "Ordsök.",   icon: tabIcons.wordsearch, count: Object.values(stageProgress.wordsearchModules  ?? {}).filter((m) => m.completed).length,   total: content?.wordsearch?.length ?? 0 },
             ].map(({ label, icon, count, total }) => {
               const done = total > 0 && count === total;
               return (
                 <div
                   key={label}
-                  className={`relative overflow-hidden border rounded-xl px-3 py-2 text-center transition-colors ${
+                  className={`relative overflow-hidden border-2 rounded-2xl px-3 py-2 text-center transition-all duration-200 cursor-default ${
                     done
                       ? `${stage.borderClass} bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-700`
                       : "bg-gray-50 dark:bg-gray-700 border-gray-100 dark:border-gray-600"
                   }`}
+                  style={{ boxShadow: done ? "0 3px 0 0 rgba(0,0,0,0.08)" : undefined }}
                 >
                   {done && (
                     <BorderBeam size={80} duration={6} colorFrom="#ffffff" colorTo="rgba(255,255,255,0.4)" borderWidth={1.5} />
                   )}
-                  <div className="text-base">{icon}</div>
+                  <div className={`flex justify-center mb-0.5 ${done ? stage.textClass : "text-gray-500 dark:text-gray-400"}`}>
+                    {icon}
+                  </div>
                   <div className={`text-lg font-black ${done ? stage.textClass : "text-gray-900 dark:text-gray-100"}`}>
-                    {count}/{total}
+                    <NumberTicker value={count} duration={600} suffix={`/${total}`} />
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
                 </div>
@@ -151,13 +185,16 @@ export default function WorldPage({ params }: Props) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   activeTab === tab.id
                     ? `${stage.colorClass} text-white shadow-md`
-                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/50 dark:hover:bg-gray-700/50"
+                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/60 dark:hover:bg-gray-700/50"
                 }`}
+                style={activeTab === tab.id ? { boxShadow: "0 3px 0 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)" } : {}}
               >
-                {tab.label}
+                {tabIcons[tab.id]}
+                <span className="hidden sm:inline">{tab.label}</span>
+                <span className="sm:hidden">{tab.label.split(" ")[0]}</span>
               </button>
             ))}
           </div>
@@ -217,12 +254,16 @@ export default function WorldPage({ params }: Props) {
             ).map((mod, idx, arr) => {
               const isFinalTest = mod.id.endsWith("-sluttest");
               return (
-                <div key={mod.id}>
+                <BlurFade key={mod.id} delay={idx * 0.04} duration={0.35}>
                   {isFinalTest && (
                     <div className="flex items-center gap-3 my-5">
                       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
-                      <div className="flex items-center gap-2 bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-full px-4 py-1.5 text-amber-700 dark:text-amber-300 font-bold text-sm">
-                        <span>🏆</span>
+                      <div className="flex items-center gap-2 bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-full px-4 py-1.5 text-amber-700 dark:text-amber-300 font-bold text-sm"
+                        style={{ boxShadow: "0 3px 0 0 rgba(245,158,11,0.15)" }}>
+                        <svg className="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M6 9H4a2 2 0 0 1-2-2V5h4" /><path d="M18 9h2a2 2 0 0 0 2-2V5h-4" />
+                          <path d="M12 17c-4 0-7-3-7-7V5h14v5c0 4-3 7-7 7z" /><path d="M12 17v4" /><path d="M8 21h8" />
+                        </svg>
                         <span>Sluttest</span>
                       </div>
                       <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
@@ -240,7 +281,7 @@ export default function WorldPage({ params }: Props) {
                     prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
                     isFinalTest={isFinalTest}
                   />
-                </div>
+                </BlurFade>
               );
             })}
             {(activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) && (
