@@ -16,7 +16,6 @@ function getStagePoints(student: StudentData, stageId: string): number {
   for (const m of Object.values(sp.readingModules    ?? {})) pts += m.points;
   for (const m of Object.values(sp.spellingModules   ?? {})) pts += m.points;
   for (const m of Object.values(sp.wordsearchModules ?? {})) pts += m.points;
-  for (const m of Object.values(sp.crosswordModules  ?? {})) pts += m.points;
   return pts;
 }
 
@@ -28,7 +27,6 @@ function getStageCompleted(student: StudentData, stageId: string): number {
   for (const m of Object.values(sp.readingModules    ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.spellingModules   ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.wordsearchModules ?? {})) if (m.completed) done++;
-  for (const m of Object.values(sp.crosswordModules  ?? {})) if (m.completed) done++;
   return done;
 }
 

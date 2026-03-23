@@ -11,7 +11,7 @@ interface ModuleCardProps {
   title: string;
   description: string;
   icon: string;
-  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword";
+  kind: "grammar" | "reading" | "spelling" | "wordsearch";
   stage: Stage;
   progress: ModuleProgress | null;
   locked: boolean;
@@ -46,8 +46,7 @@ export default function ModuleCard({
     kind === "grammar" ? "📝 Grammatik"
     : kind === "reading" ? "📖 Läsning"
     : kind === "spelling" ? "✏️ Stavning"
-    : kind === "wordsearch" ? "🔍 Ordsökning"
-    : "🔠 Korsord";
+    : "🔍 Ordsökning";
 
   if (locked) {
     return (
