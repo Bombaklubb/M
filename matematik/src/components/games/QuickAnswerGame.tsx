@@ -408,7 +408,7 @@ export default function QuickAnswerGame() {
               exit={{ opacity: 0 }}
               className={`text-center mt-4 text-lg font-black ${feedback === 'correct' ? 'text-emerald-400' : 'text-rose-400'}`}
             >
-              {feedback === 'correct' ? `+${Math.round(currentEx.points * combo)} ✓` : '✗ Fel!'}
+              {feedback === 'correct' ? `+${Math.round(currentEx.points * combo)} ✓` : 'Tyvärr, försök igen'}
             </motion.div>
           )}
         </AnimatePresence>

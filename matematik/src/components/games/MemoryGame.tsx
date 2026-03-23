@@ -6,56 +6,56 @@ import { WorldId } from '../../data/worlds';
 import { recordGameSession, loadGameProgress } from '../../utils/gameStorage';
 import AppHeader from '../AppHeader';
 
-// ── Word pairs per world ──────────────────────────────────────────────────────
+// ── Math pairs per world ──────────────────────────────────────────────────────
 
-const WORD_PAIRS: Record<WorldId, { sv: string; en: string }[]> = {
+const MATH_PAIRS: Record<WorldId, { question: string; answer: string }[]> = {
   dino: [
-    { sv: 'tal', en: 'number' },
-    { sv: 'cirkel', en: 'circle' },
-    { sv: 'triangel', en: 'triangle' },
-    { sv: 'kvadrat', en: 'square' },
-    { sv: 'hälften', en: 'half' },
-    { sv: 'dubbelt', en: 'double' },
-    { sv: 'klocka', en: 'clock' },
-    { sv: 'mätning', en: 'measurement' },
-    { sv: 'addition', en: 'addition' },
-    { sv: 'subtraktion', en: 'subtraction' },
+    { question: '2 + 3', answer: '5' },
+    { question: '10 − 4', answer: '6' },
+    { question: '3 × 4', answer: '12' },
+    { question: '8 ÷ 2', answer: '4' },
+    { question: '½ av 10', answer: '5' },
+    { question: 'Dubbelt av 6', answer: '12' },
+    { question: '7 + 8', answer: '15' },
+    { question: '20 − 9', answer: '11' },
+    { question: '5 × 3', answer: '15' },
+    { question: '9 ÷ 3', answer: '3' },
   ],
   fantasy: [
-    { sv: 'procent', en: 'percent' },
-    { sv: 'bråk', en: 'fraction' },
-    { sv: 'ekvation', en: 'equation' },
-    { sv: 'decimal', en: 'decimal' },
-    { sv: 'vinkel', en: 'angle' },
-    { sv: 'diagram', en: 'diagram' },
-    { sv: 'koordinat', en: 'coordinate' },
-    { sv: 'primtal', en: 'prime number' },
-    { sv: 'multiplikation', en: 'multiplication' },
-    { sv: 'geometri', en: 'geometry' },
+    { question: '50% av 80', answer: '40' },
+    { question: '¼ av 40', answer: '10' },
+    { question: '2x = 10, x =', answer: '5' },
+    { question: '3²', answer: '9' },
+    { question: '√25', answer: '5' },
+    { question: '3 × 7', answer: '21' },
+    { question: '100 ÷ 4', answer: '25' },
+    { question: '¾ av 12', answer: '9' },
+    { question: '2³', answer: '8' },
+    { question: '25% av 60', answer: '15' },
   ],
   scifi: [
-    { sv: 'algebra', en: 'algebra' },
-    { sv: 'variabel', en: 'variable' },
-    { sv: 'funktion', en: 'function' },
-    { sv: 'exponent', en: 'exponent' },
-    { sv: 'statistik', en: 'statistics' },
-    { sv: 'sannolikhet', en: 'probability' },
-    { sv: 'proportion', en: 'proportion' },
-    { sv: 'negativa tal', en: 'negative numbers' },
-    { sv: 'koordinater', en: 'coordinates' },
-    { sv: 'pythagoras', en: 'pythagoras' },
+    { question: 'x + 5 = 12, x =', answer: '7' },
+    { question: '3x = 15, x =', answer: '5' },
+    { question: '2⁴', answer: '16' },
+    { question: '√64', answer: '8' },
+    { question: '3² + 4²', answer: '25' },
+    { question: '−3 + 7', answer: '4' },
+    { question: '2x + 3 = 11, x =', answer: '4' },
+    { question: '(−2)²', answer: '4' },
+    { question: '5² − 3²', answer: '16' },
+    { question: '4x = 24, x =', answer: '6' },
   ],
   gym: [
-    { sv: 'derivata', en: 'derivative' },
-    { sv: 'trigonometri', en: 'trigonometry' },
-    { sv: 'logaritm', en: 'logarithm' },
-    { sv: 'integral', en: 'integral' },
-    { sv: 'vektor', en: 'vector' },
-    { sv: 'asymptot', en: 'asymptote' },
-    { sv: 'polynom', en: 'polynomial' },
-    { sv: 'gränsvärde', en: 'limit' },
-    { sv: 'matris', en: 'matrix' },
-    { sv: 'komplex tal', en: 'complex number' },
+    { question: 'sin(90°)', answer: '1' },
+    { question: 'cos(0°)', answer: '1' },
+    { question: 'log₁₀(100)', answer: '2' },
+    { question: 'tan(45°)', answer: '1' },
+    { question: 'log₂(8)', answer: '3' },
+    { question: 'sin²x + cos²x', answer: '1' },
+    { question: "d/dx(x²)", answer: '2x' },
+    { question: "d/dx(sin x)", answer: 'cos x' },
+    { question: 'e⁰', answer: '1' },
+    { question: 'log₁₀(1)', answer: '0' },
   ],
 };
 
@@ -67,7 +67,7 @@ type Phase = 'select' | 'playing' | 'victory';
 interface MemCard {
   id: number;
   pairId: number;
-  lang: 'sv' | 'en';
+  type: 'question' | 'answer';
   word: string;
   flipped: boolean;
   matched: boolean;
@@ -108,11 +108,11 @@ function shuffle<T>(arr: T[]): T[] {
 
 function buildCards(worldId: WorldId, difficulty: Difficulty): MemCard[] {
   const count = PAIR_COUNTS[difficulty];
-  const pairs = shuffle(WORD_PAIRS[worldId] ?? WORD_PAIRS.dino).slice(0, count);
+  const pairs = shuffle(MATH_PAIRS[worldId] ?? MATH_PAIRS.dino).slice(0, count);
   const cards: MemCard[] = [];
   pairs.forEach((pair, pairId) => {
-    cards.push({ id: pairId * 2,     pairId, lang: 'sv', word: pair.sv, flipped: false, matched: false });
-    cards.push({ id: pairId * 2 + 1, pairId, lang: 'en', word: pair.en, flipped: false, matched: false });
+    cards.push({ id: pairId * 2,     pairId, type: 'question', word: pair.question, flipped: false, matched: false });
+    cards.push({ id: pairId * 2 + 1, pairId, type: 'answer',   word: pair.answer,   flipped: false, matched: false });
   });
   return shuffle(cards);
 }
@@ -178,7 +178,7 @@ export default function MemoryGame() {
       const c2 = { ...card };
 
       setTimeout(() => {
-        const isMatch = c1.pairId === c2.pairId && c1.lang !== c2.lang;
+        const isMatch = c1.pairId === c2.pairId && c1.type !== c2.type;
         if (isMatch) {
           setCards(prev => prev.map(c =>
             c.id === id1 || c.id === cardId ? { ...c, matched: true, flipped: true } : c
@@ -236,7 +236,7 @@ export default function MemoryGame() {
           <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} className="text-center mb-8">
             <div className="text-6xl mb-3">🃏</div>
             <h1 className="text-3xl font-black text-white mb-2">Memory</h1>
-            <p className="text-white/50 text-sm">Para ihop svenska ord med engelska!</p>
+            <p className="text-white/50 text-sm">Para ihop frågan med rätt svar!</p>
             <p className="text-white/40 text-xs mt-1">{world?.name}</p>
             {progress?.games['memory']?.totalPlays > 0 && (
               <div className={`mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-sm font-semibold ${theme.badgeBg} ${theme.badgeText}`}>
@@ -348,8 +348,8 @@ export default function MemoryGame() {
 
         {/* Legend */}
         <div className="flex gap-3 mb-3 justify-center text-xs text-white/40 font-semibold">
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm bg-blue-600/60 inline-block"/>🇸🇪 Svenska</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm bg-rose-600/60 inline-block"/>🇬🇧 Engelska</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm bg-blue-600/60 inline-block"/>❓ Fråga</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm bg-rose-600/60 inline-block"/>✏️ Svar</span>
           <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm bg-emerald-600/60 inline-block"/>✓ Match!</span>
         </div>
 
@@ -370,7 +370,7 @@ export default function MemoryGame() {
                   ${card.matched
                     ? 'bg-emerald-800/60 border-2 border-emerald-500/60 cursor-default'
                     : card.flipped
-                      ? card.lang === 'sv'
+                      ? card.type === 'question'
                         ? 'bg-blue-800/60 border-2 border-blue-500/60'
                         : 'bg-rose-800/60 border-2 border-rose-500/60'
                       : `bg-gradient-to-br ${theme.cardBack} border border-white/10 hover:border-white/25`
@@ -378,14 +378,14 @@ export default function MemoryGame() {
               >
                 {card.matched ? (
                   <>
-                    <span className="text-base mb-0.5">{card.lang === 'sv' ? '🇸🇪' : '🇬🇧'}</span>
+                    <span className="text-base mb-0.5">{card.type === 'question' ? '❓' : '✏️'}</span>
                     <span className="text-emerald-300 text-center leading-tight" style={{ fontSize: '10px' }}>{card.word}</span>
                     <span className="text-emerald-400 text-xs font-black absolute top-0.5 right-1">✓</span>
                   </>
                 ) : card.flipped ? (
                   <>
-                    <span className="text-base mb-0.5">{card.lang === 'sv' ? '🇸🇪' : '🇬🇧'}</span>
-                    <span className={`text-center leading-tight font-black ${card.lang === 'sv' ? 'text-blue-200' : 'text-rose-200'}`}
+                    <span className="text-base mb-0.5">{card.type === 'question' ? '❓' : '✏️'}</span>
+                    <span className={`text-center leading-tight font-black ${card.type === 'question' ? 'text-blue-200' : 'text-rose-200'}`}
                       style={{ fontSize: difficulty === 'hard' ? '9px' : '11px' }}>
                       {card.word}
                     </span>
