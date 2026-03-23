@@ -14,21 +14,21 @@ import type { MattChest, MattGamificationData, ChestType } from '../types';
 const SHELF_ROWS: { type: ChestType; label: string; gradient: string; glow: string; shelfBg: string }[] = [
   {
     type: 'gold',
-    label: 'Guldlådor',
+    label: 'Guldkistor',
     gradient: 'from-yellow-300 via-amber-400 to-yellow-500',
     glow: 'rgba(251,191,36,0.55)',
     shelfBg: 'linear-gradient(135deg, #78350f 0%, #92400e 40%, #b45309 100%)',
   },
   {
     type: 'silver',
-    label: 'Silverlådor',
+    label: 'Silverkistor',
     gradient: 'from-slate-300 via-slate-200 to-slate-400',
     glow: 'rgba(203,213,225,0.5)',
     shelfBg: 'linear-gradient(135deg, #1e293b 0%, #334155 40%, #475569 100%)',
   },
   {
     type: 'wood',
-    label: 'Trälådor',
+    label: 'Bronskistor',
     gradient: 'from-amber-700 via-amber-600 to-amber-800',
     glow: 'rgba(180,83,9,0.4)',
     shelfBg: 'linear-gradient(135deg, #431407 0%, #7c2d12 40%, #92400e 100%)',
@@ -83,14 +83,14 @@ function TrophyShelf({ chests }: { chests: MattChest[] }) {
                     }}
                   >
                     <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                      className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden"
                       style={{
                         background: `radial-gradient(circle at 35% 35%, rgba(255,255,255,0.25), transparent 60%)`,
                         boxShadow: `0 4px 12px ${row.glow}, inset 0 1px 0 rgba(255,255,255,0.3)`,
                         border: '1px solid rgba(255,255,255,0.2)',
                       }}
                     >
-                      {CHEST_META[chest.type].emoji}
+                      <img src={CHEST_META[chest.type].image} alt={CHEST_META[chest.type].label} className="w-10 h-10 object-contain" />
                     </div>
                   </div>
                 ))}
@@ -166,12 +166,12 @@ function ChestCard({ chest, onOpen }: { chest: MattChest; onOpen: (id: string) =
         className="absolute inset-0 rounded-3xl pointer-events-none"
         style={{ background: 'radial-gradient(circle at 30% 25%, rgba(255,255,255,0.2), transparent 55%)' }}
       />
-      <span
-        className="text-5xl mb-3"
+      <img
+        src={meta.image}
+        alt={meta.label}
+        className="w-20 h-20 object-contain mb-3"
         style={{ animation: animating ? 'chest-shake 0.4s ease-in-out' : 'none' }}
-      >
-        {meta.emoji}
-      </span>
+      />
       <span className="text-sm font-bold text-white mb-1">{meta.label}</span>
       <span className="text-xs text-white/70 mt-1">Tryck för att öppna</span>
     </div>
@@ -193,10 +193,10 @@ function RewardPopup({ description, chestType, onClose }: { description: string;
         }}
       >
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(245,158,11,0.12), transparent 60%)' }} />
-        <div className="text-6xl mb-1" style={{ animation: 'pop-in 0.4s cubic-bezier(0.36,0.07,0.19,0.97)' }}>
-          {meta.emoji}
+        <div className="flex justify-center mb-1" style={{ animation: 'pop-in 0.4s cubic-bezier(0.36,0.07,0.19,0.97)' }}>
+          <img src={meta.image} alt={meta.label} className="w-24 h-24 object-contain" />
         </div>
-        <h2 className="text-2xl font-black text-amber-400 mb-1">Lådan är öppnad!</h2>
+        <h2 className="text-2xl font-black text-amber-400 mb-1">Kistan är öppnad!</h2>
         <p className="text-white/50 text-xs mb-4">{meta.label}</p>
         <div
           className="rounded-2xl px-4 py-3 mb-6"
@@ -346,9 +346,9 @@ export default function KistorView() {
 
           {/* Stats row */}
           <div className="flex gap-2">
-            <StatBadge emoji="🏆" count={goldCount}   label="Guld"   gradient="from-yellow-300 to-amber-500" />
-            <StatBadge emoji="🪙" count={silverCount} label="Silver" gradient="from-slate-200 to-slate-400" />
-            <StatBadge emoji="📦" count={woodCount}   label="Trä"    gradient="from-amber-600 to-amber-800" />
+            <StatBadge emoji="🥇" count={goldCount}   label="Guld"   gradient="from-yellow-300 to-amber-500" />
+            <StatBadge emoji="🥈" count={silverCount} label="Silver" gradient="from-slate-200 to-slate-400" />
+            <StatBadge emoji="🥉" count={woodCount}   label="Brons"  gradient="from-amber-600 to-amber-800" />
             <StatBadge emoji="📬" count={unopened.length} label="Väntar" gradient="from-purple-400 to-violet-500" />
           </div>
         </div>
@@ -502,32 +502,32 @@ export default function KistorView() {
             <div>
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Avklara kapitel</p>
               <ul className="space-y-1.5 text-sm text-blue-100/80">
-                <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> Klara ditt allra första kapitel!</span></li>
-                <li className="flex items-start gap-2"><span>📦</span><span><strong>Trälåda:</strong> Klara ett nytt kapitel för första gången (≥50%)</span></li>
-                <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> Få 3 stjärnor på ett kapitel för första gången</span></li>
-                <li className="flex items-start gap-2"><span>🪙</span><span><strong>Silverlåda:</strong> Perfekt poäng (100%) på ett kapitel</span></li>
-                <li className="flex items-start gap-2"><span>🏆</span><span><strong>Guldlåda:</strong> Klara alla kapitel i en hel värld!</span></li>
+                <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> Klara ditt allra första kapitel!</span></li>
+                <li className="flex items-start gap-2"><span>🥉</span><span><strong>Bronskista:</strong> Klara ett nytt kapitel för första gången (≥50%)</span></li>
+                <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> Få 3 stjärnor på ett kapitel för första gången</span></li>
+                <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> Perfekt poäng (100%) på ett kapitel</span></li>
+                <li className="flex items-start gap-2"><span>🥇</span><span><strong>Guldkista:</strong> Klara alla kapitel i en hel värld!</span></li>
               </ul>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Poäng-milstolpar</p>
               <ul className="space-y-1 text-sm text-blue-100/80">
-                <li className="flex gap-2"><span>📦</span><span>50, 100, 200, 600 p</span></li>
-                <li className="flex gap-2"><span>🪙</span><span>300, 500, 750, 1 500, 2 000 p</span></li>
-                <li className="flex gap-2"><span>🏆</span><span>1 000, 2 500, 3 500, 5 000 p</span></li>
+                <li className="flex gap-2"><span>🥉</span><span>50, 100, 200, 600 p</span></li>
+                <li className="flex gap-2"><span>🥈</span><span>300, 500, 750, 1 500, 2 000 p</span></li>
+                <li className="flex gap-2"><span>🥇</span><span>1 000, 2 500, 3 500, 5 000 p</span></li>
               </ul>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Klarade kapitel (antal)</p>
               <ul className="space-y-1 text-sm text-blue-100/80">
-                <li className="flex gap-2"><span>📦</span><span>1, 2, 3, 5, 10 kapitel</span></li>
-                <li className="flex gap-2"><span>🪙</span><span>15, 20, 40 kapitel</span></li>
-                <li className="flex gap-2"><span>🏆</span><span>30, 60, 75, 100 kapitel</span></li>
+                <li className="flex gap-2"><span>🥉</span><span>1, 2, 3, 5, 10 kapitel</span></li>
+                <li className="flex gap-2"><span>🥈</span><span>15, 20, 40 kapitel</span></li>
+                <li className="flex gap-2"><span>🥇</span><span>30, 60, 75, 100 kapitel</span></li>
               </ul>
             </div>
             <div className="flex items-start gap-2 text-sm text-blue-100/80 border-t border-blue-400/20 pt-3">
               <span>🎁</span>
-              <span><strong>Mysterylåda:</strong> 25% chans de 5 första kapitlen, 15% därefter!</span>
+              <span><strong>Mysterykista:</strong> 25% chans de 5 första kapitlen, 15% därefter!</span>
             </div>
           </div>
         </section>
