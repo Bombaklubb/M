@@ -32,14 +32,10 @@ const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, 
 
 function ChestImage({ type, className }: { type: ChestType; className?: string }) {
   return (
-    <div
-      className={className}
-      style={{
-        backgroundImage: "url('/content/kistor.png')",
-        backgroundSize: "300% 200%",
-        backgroundPosition: CHEST_META[type].spritePos,
-        backgroundRepeat: "no-repeat",
-      }}
+    <img
+      src={CHEST_META[type].image}
+      alt={CHEST_META[type].label}
+      className={`object-contain ${className ?? ""}`}
     />
   );
 }
@@ -309,7 +305,7 @@ function RewardPopup({ result, onClose }: { result: RewardResult; onClose: () =>
         }}
       >
         <div className="text-5xl mb-4" style={{ animation: "popIn 0.4s cubic-bezier(0.36,0.07,0.19,0.97)" }}>🎉</div>
-        <h2 className="text-xl font-black text-amber-700 mb-2">Lådan är öppnad!</h2>
+        <h2 className="text-xl font-black text-amber-700 mb-2">Kistan är öppnad!</h2>
         <p className="text-sm font-semibold text-gray-700 mb-5 leading-relaxed">{result.description}</p>
         <button
           onClick={onClose}
@@ -446,7 +442,7 @@ export default function KistorPage() {
                 <h2 className="text-sm font-black text-white">Boss Challenge</h2>
                 <p className="text-white/60 text-xs">
                   {gam.bossUnlocked
-                    ? `Du har vunnit ${gam.bossWins} gång${gam.bossWins !== 1 ? "er" : ""} – vinn för att få trälåda!`
+                    ? `Du har vunnit ${gam.bossWins} gång${gam.bossWins !== 1 ? "er" : ""} – vinn för att få bronskista!`
                     : `Slutför ${exercisesLeft} övning${exercisesLeft !== 1 ? "ar" : ""} till för att låsa upp`}
                 </p>
               </div>
@@ -585,7 +581,7 @@ export default function KistorPage() {
             >
               <span className="text-xl leading-none">🎁</span>
               <div>
-                <p className="text-white/80 text-xs font-bold">Mysterylåda</p>
+                <p className="text-white/80 text-xs font-bold">Mysterykista</p>
                 <p className="text-white/50 text-[10px] mt-0.5">Extra hög chans i början – upp till 50% de första övningarna!</p>
               </div>
             </div>

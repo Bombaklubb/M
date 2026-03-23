@@ -5,14 +5,10 @@ import { CHEST_META } from "@/lib/gamification";
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
-    <div
-      className="w-10 h-8 flex-shrink-0"
-      style={{
-        backgroundImage: "url('/content/kistor.png')",
-        backgroundSize: "300% 200%",
-        backgroundPosition: CHEST_META[type].spritePos,
-        backgroundRepeat: "no-repeat",
-      }}
+    <img
+      src={CHEST_META[type].image}
+      alt={CHEST_META[type].label}
+      className="w-10 h-10 flex-shrink-0 object-contain"
     />
   );
 }

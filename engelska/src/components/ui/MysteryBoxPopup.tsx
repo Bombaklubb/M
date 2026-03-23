@@ -11,14 +11,10 @@ interface MysteryBoxPopupProps {
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
-    <div
-      className="w-16 h-14 mx-auto"
-      style={{
-        backgroundImage: "url('/content/kistor.png')",
-        backgroundSize: "300% 200%",
-        backgroundPosition: CHEST_META[type].spritePos,
-        backgroundRepeat: "no-repeat",
-      }}
+    <img
+      src={CHEST_META[type].image}
+      alt={CHEST_META[type].label}
+      className="w-16 h-16 mx-auto object-contain"
     />
   );
 }
@@ -51,10 +47,10 @@ export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProp
               🎁
             </div>
             <h2 className="text-2xl font-black text-purple-700 dark:text-purple-300 mb-2">
-              Mysterylåda!
+              Mysterykista!
             </h2>
             <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
-              Du hittade en mysterylåda! Klicka för att öppna den.
+              Du hittade en mysterykista! Klicka för att öppna den.
             </p>
             <button
               onClick={handleOpen}
@@ -65,7 +61,7 @@ export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProp
                 boxShadow: "0 4px 12px rgba(124,58,237,0.4), inset 0 1px 0 rgba(255,255,255,0.2)",
               }}
             >
-              Öppna lådan!
+              Öppna kistan!
             </button>
           </>
         ) : (
