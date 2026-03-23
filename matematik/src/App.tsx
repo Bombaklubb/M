@@ -18,10 +18,10 @@ import MinSidaView from './components/MinSidaView';
 import SluttestView from './components/SluttestView';
 import KistorView from './components/KistorView';
 import GamesHub from './components/games/GamesHub';
-import QuickAnswerGame from './components/games/QuickAnswerGame';
-import BossBattleGame from './components/games/BossBattleGame';
 import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
+import MemoryGame from './components/games/MemoryGame';
+import HangmanGame from './components/games/HangmanGame';
 
 // ─── Error Boundary ─────────────────────────────────────────────────────────
 // Catches any uncaught error in the React tree and shows a recovery screen
@@ -127,10 +127,10 @@ function AppInner() {
           case 'sluttest':          return <SluttestView />;
           case 'kistor':            return <KistorView />;
           case 'games':             return <GamesHub />;
-          case 'game-quick-answer': return <QuickAnswerGame />;
-          case 'game-boss-battle':  return <BossBattleGame />;
           case 'game-time-attack':  return <TimeAttackGame />;
           case 'game-collect-coins': return <CollectCoinsGame />;
+          case 'game-memory':       return <MemoryGame />;
+          case 'game-hangman':      return <HangmanGame />;
           default:                  return <Login />;
         }
       })()}

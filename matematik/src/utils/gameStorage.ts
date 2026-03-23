@@ -1,7 +1,7 @@
 // ── Game Storage ────────────────────────────────────────────────────────
 // Persists per-student game progress in localStorage
 
-export type GameId = 'quick-answer' | 'boss-battle' | 'time-attack' | 'collect-coins';
+export type GameId = 'quick-answer' | 'boss-battle' | 'time-attack' | 'collect-coins' | 'memory' | 'hangman';
 
 export interface GameProgress {
   gameId: GameId;
@@ -55,6 +55,16 @@ const DEFAULT_PROGRESS: Record<GameId, GameProgress> = {
   },
   'collect-coins': {
     gameId: 'collect-coins', level: 1, highScore: 0, totalPlays: 0,
+    bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
+    totalXP: 0, unlockedAt: '', lastPlayed: '',
+  },
+  'memory': {
+    gameId: 'memory', level: 1, highScore: 0, totalPlays: 0,
+    bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
+    totalXP: 0, unlockedAt: '', lastPlayed: '',
+  },
+  'hangman': {
+    gameId: 'hangman', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
     totalXP: 0, unlockedAt: '', lastPlayed: '',
   },
