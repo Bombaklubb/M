@@ -132,7 +132,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   const isLastExercise = currentIdx === topic.exercises.length - 1;
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
       <AppHeader />
       {/* Top bar */}
       <div className={`bg-gradient-to-r ${topic.color} text-white px-4 pt-16 pb-3`}>
@@ -168,7 +168,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
 
       {/* Exercise area */}
       <div className="flex-1 max-w-lg mx-auto w-full px-4 py-6">
-        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-4">
+        <div className="rounded-3xl p-6 mb-4" style={{ background: 'rgba(40,8,32,0.82)', backdropFilter: 'blur(20px)', border: '1px solid rgba(200,140,50,0.28)', boxShadow: '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,220,100,0.07)' }}>
           {/* Points badge */}
           <div className="flex justify-between items-center mb-4">
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
@@ -278,11 +278,14 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
         {state.answered && (
           <button
             onClick={handleNext}
-            className={`w-full font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all animate-slide-up ${
-              isLastExercise
-                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white'
-                : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-            }`}
+            className="w-full font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all animate-slide-up text-white"
+            style={isLastExercise ? {
+              background: 'linear-gradient(180deg, #22c55e 0%, #15803d 100%)',
+              boxShadow: '0 4px 20px rgba(34,197,94,0.45), 0 2px 0 rgba(0,0,0,0.3)',
+            } : {
+              background: 'linear-gradient(180deg, #f97316 0%, #c2560a 100%)',
+              boxShadow: '0 4px 20px rgba(249,115,22,0.45), 0 2px 0 rgba(0,0,0,0.3)',
+            }}
           >
             {isLastExercise ? '🏁 Se resultat!' : 'Nästa →'}
           </button>
@@ -297,9 +300,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
                 i < currentIdx
                   ? states[i].correct ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'
                   : i === currentIdx
-                  ? 'bg-blue-500 text-white ring-2 ring-blue-300/50'
-                  : 'bg-white/10 text-white/40'
+                  ? 'text-white ring-2 ring-amber-400/50'
+                  : 'text-white/40'
               }`}
+              style={i === currentIdx ? {
+                background: 'linear-gradient(180deg, #f97316, #c2560a)',
+                boxShadow: '0 2px 8px rgba(249,115,22,0.45)',
+              } : i >= currentIdx ? {
+                background: 'rgba(255,255,255,0.08)',
+              } : undefined}
             >
               {i < currentIdx
                 ? states[i].correct ? '✓' : '✗'
@@ -322,7 +331,8 @@ function MultipleChoiceAnswers({
   return (
     <div className="grid gap-3">
       {exercise.options.map((opt, i) => {
-        let cls = 'border-2 border-white/15 bg-white/5 text-white hover:border-blue-400 hover:bg-blue-500/20';
+        let cls = 'border-2 text-white hover:scale-[1.01]';
+        let sty: React.CSSProperties = { background: 'rgba(40,8,32,0.70)', borderColor: 'rgba(200,140,50,0.28)' };
         if (state.answered) {
           if (i === exercise.correctIndex) cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200';
           else if (state.userAnswer === String(i)) cls = 'border-2 border-rose-400 bg-rose-500/20 text-rose-200';
@@ -333,6 +343,7 @@ function MultipleChoiceAnswers({
             key={i}
             onClick={() => onAnswer(i)}
             disabled={state.answered}
+            style={!state.answered ? sty : undefined}
             className={`w-full text-left px-5 py-3 rounded-2xl font-semibold text-base transition-all ${cls} ${!state.answered ? 'cursor-pointer active:scale-98' : 'cursor-default'}`}
           >
             <span className="font-bold text-white/40 mr-2">
@@ -433,13 +444,21 @@ function FillInAnswer({ exercise, state, input, inputRef, onChange, onSubmit }: 
               ? state.correct
                 ? 'border-emerald-400 bg-emerald-500/20 text-emerald-300'
                 : 'border-rose-400 bg-rose-500/20 text-rose-300'
-              : 'bg-white/10 border-white/20 text-white placeholder-white/30 focus:border-blue-400'
+              : 'text-white placeholder-white/30 focus:outline-none'
           }`}
+          style={!state.answered ? {
+            background: 'rgba(30,8,40,0.80)',
+            border: '2px solid rgba(200,140,50,0.35)',
+          } : undefined}
         />
         {!state.answered && (
           <button
             onClick={onSubmit}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-5 rounded-2xl transition-colors"
+            className="font-black text-white px-5 rounded-2xl transition-all hover:scale-105 active:scale-95"
+            style={{
+              background: 'linear-gradient(180deg, #f59e0b 0%, #b45309 100%)',
+              boxShadow: '0 3px 12px rgba(245,158,11,0.45)',
+            }}
           >
             ✓
           </button>

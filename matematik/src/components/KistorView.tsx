@@ -187,7 +187,7 @@ function RewardPopup({ description, chestType, onClose }: { description: string;
       <div
         className="rounded-3xl p-8 max-w-sm w-full text-center relative overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #1a0a2e, #0d0d2b)',
+          background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)',
           border: '3px solid #f59e0b',
           boxShadow: '0 8px 48px rgba(245,158,11,0.45), 0 2px 8px rgba(0,0,0,0.5)',
         }}
@@ -229,7 +229,7 @@ function MysteryBoxPopup({ description, onClose }: { description: string; onClos
       <div
         className="rounded-3xl p-8 max-w-sm w-full text-center"
         style={{
-          background: 'linear-gradient(135deg, #1a0a2e, #0d0d2b)',
+          background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)',
           border: '3px solid #a855f7',
           boxShadow: '0 8px 40px rgba(168,85,247,0.35)',
         }}
@@ -320,7 +320,7 @@ export default function KistorView() {
   return (
     <div
       className="min-h-screen"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
 
