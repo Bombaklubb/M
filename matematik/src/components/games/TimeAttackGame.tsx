@@ -408,7 +408,7 @@ export default function TimeAttackGame() {
               exit={{ opacity: 0 }}
               className={`text-center mt-3 text-lg font-black ${feedback === 'correct' ? 'text-emerald-400' : 'text-rose-400'}`}
             >
-              {feedback === 'correct' ? '✓ Rätt!' : '✗ Fel!'}
+              {feedback === 'correct' ? '✓ Rätt!' : 'Tyvärr, försök igen'}
             </motion.div>
           )}
         </AnimatePresence>
