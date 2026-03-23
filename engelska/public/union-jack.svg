@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36">
+  <!-- Blue field -->
+  <rect width="60" height="36" fill="#012169"/>
+
+  <!-- St Andrew's Cross – white diagonals (full) -->
+  <line x1="0" y1="0" x2="60" y2="36" stroke="white" stroke-width="7.2"/>
+  <line x1="60" y1="0" x2="0" y2="36" stroke="white" stroke-width="7.2"/>
+
+  <!-- St Patrick's Cross – red counterchanged saltire -->
+  <!-- Top-left to bottom-right: red only on lower-left of each diagonal -->
+  <path d="M0,0 L30,18" stroke="#C8102E" stroke-width="2.4" stroke-dasharray="100"/>
+  <path d="M30,18 L60,36" stroke="#C8102E" stroke-width="2.4"/>
+  <!-- Top-right to bottom-left: red only on lower-right of each diagonal -->
+  <path d="M60,0 L30,18" stroke="#C8102E" stroke-width="2.4"/>
+  <path d="M30,18 L0,36" stroke="#C8102E" stroke-width="2.4"/>
+
+  <!-- St George's Cross fimbriation (white) -->
+  <rect x="22.8" y="0" width="14.4" height="36" fill="white"/>
+  <rect x="0" y="10.8" width="60" height="14.4" fill="white"/>
+
+  <!-- St George's Cross (red) -->
+  <rect x="25.2" y="0" width="9.6" height="36" fill="#C8102E"/>
+  <rect x="0" y="13.2" width="60" height="9.6" fill="#C8102E"/>
+</svg>
