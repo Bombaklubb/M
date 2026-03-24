@@ -207,7 +207,7 @@ export default function WorldPage({ params }: Props) {
         </div>
 
         {/* Language rules */}
-        {activeTab === "regler" ? (
+        {activeTab === "regler" && (
           <div className="space-y-4">
             {rules.length === 0 ? (
               <div className="card text-center py-8 text-gray-400">Laddar regler...</div>
@@ -242,61 +242,63 @@ export default function WorldPage({ params }: Props) {
               ))
             )}
           </div>
+        )}
 
-        ) : !content ? (
-          <div className="card text-center py-12 text-gray-400">
-            <div className="text-4xl mb-3">📭</div>
-            <p>Kunde inte ladda innehåll.</p>
-          </div>
-
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {(
-              activeTab === "grammar"    ? content.grammar
-              : activeTab === "reading" ? content.reading
-              : activeTab === "spelling" ? (content.spelling   ?? [])
-              : activeTab === "wordsearch" ? (content.wordsearch ?? [])
-              : (content.wordsearch ?? [])
-            ).map((mod, idx, arr) => {
-              const isFinalTest = mod.id.endsWith("-sluttest");
-              return (
-                <BlurFade key={mod.id} delay={idx * 0.04} duration={0.35} className={isFinalTest ? "sm:col-span-2" : ""}>
-                  {isFinalTest && (
-                    <div className="flex items-center gap-3 my-5">
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
-                      <div className="flex items-center gap-2 bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-full px-4 py-1.5 text-amber-700 dark:text-amber-300 font-bold text-sm"
-                        style={{ boxShadow: "0 3px 0 0 rgba(245,158,11,0.15)" }}>
-                        <svg className="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M6 9H4a2 2 0 0 1-2-2V5h4" /><path d="M18 9h2a2 2 0 0 0 2-2V5h-4" />
-                          <path d="M12 17c-4 0-7-3-7-7V5h14v5c0 4-3 7-7 7z" /><path d="M12 17v4" /><path d="M8 21h8" />
-                        </svg>
-                        <span>Sluttest</span>
+        {/* Module grid (grammar / reading / spelling / wordsearch) */}
+        {activeTab !== "regler" && activeTab !== "spel" && (
+          !content ? (
+            <div className="card text-center py-12 text-gray-400">
+              <div className="text-4xl mb-3">📭</div>
+              <p>Kunde inte ladda innehåll.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {(
+                activeTab === "grammar"    ? content.grammar
+                : activeTab === "reading" ? content.reading
+                : activeTab === "spelling" ? (content.spelling   ?? [])
+                : (content.wordsearch ?? [])
+              ).map((mod, idx, arr) => {
+                const isFinalTest = mod.id.endsWith("-sluttest");
+                return (
+                  <BlurFade key={mod.id} delay={idx * 0.04} duration={0.35} className={isFinalTest ? "sm:col-span-2" : ""}>
+                    {isFinalTest && (
+                      <div className="flex items-center gap-3 my-5">
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
+                        <div className="flex items-center gap-2 bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-full px-4 py-1.5 text-amber-700 dark:text-amber-300 font-bold text-sm"
+                          style={{ boxShadow: "0 3px 0 0 rgba(245,158,11,0.15)" }}>
+                          <svg className="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M6 9H4a2 2 0 0 1-2-2V5h4" /><path d="M18 9h2a2 2 0 0 0 2-2V5h-4" />
+                            <path d="M12 17c-4 0-7-3-7-7V5h14v5c0 4-3 7-7 7z" /><path d="M12 17v4" /><path d="M8 21h8" />
+                          </svg>
+                          <span>Sluttest</span>
+                        </div>
+                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
                       </div>
-                      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 dark:via-amber-600 to-transparent" />
-                    </div>
-                  )}
-                  <ModuleCard
-                    id={mod.id}
-                    title={mod.title}
-                    description={mod.description}
-                    icon={mod.icon}
-                    kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch"}
-                    stage={stage}
-                    progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch", mod.id)}
-                    locked={false}
-                    prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
-                    isFinalTest={isFinalTest}
-                  />
-                </BlurFade>
-              );
-            })}
-            {(activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) && (
-              <div className="card text-center py-10 text-gray-400">
-                <div className="text-3xl mb-2">🔍</div>
-                <p>Inga moduler tillgängliga ännu.</p>
-              </div>
-            )}
-          </div>
+                    )}
+                    <ModuleCard
+                      id={mod.id}
+                      title={mod.title}
+                      description={mod.description}
+                      icon={mod.icon}
+                      kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch"}
+                      stage={stage}
+                      progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch", mod.id)}
+                      locked={false}
+                      prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
+                      isFinalTest={isFinalTest}
+                    />
+                  </BlurFade>
+                );
+              })}
+              {(activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) && (
+                <div className="card text-center py-10 text-gray-400 sm:col-span-2">
+                  <div className="text-3xl mb-2">🔍</div>
+                  <p>Inga moduler tillgängliga ännu.</p>
+                </div>
+              )}
+            </div>
+          )
         )}
 
         {/* Games hub */}
@@ -308,31 +310,33 @@ export default function WorldPage({ params }: Props) {
               <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Träna engelskan med roliga spel!</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link
-                href={`/world/${stage.id}/spel/memory`}
-                className={`card group border-3 transition-all duration-200 hover:-translate-y-1 cursor-pointer ${stage.borderClass}`}
-                style={{ boxShadow: "0 4px 0 0 rgba(99,102,241,0.15), 0 8px 16px -4px rgba(99,102,241,0.1)" }}
-              >
-                <div className="flex items-start gap-4">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 border-3 ${stage.colorClass} border-white/20`}
-                    style={{ boxShadow: "0 3px 0 0 rgba(0,0,0,0.15)" }}>
-                    🃏
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-black text-gray-900 dark:text-gray-100 text-base">Memory</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Para ihop svenska ord med engelska översättningar!</p>
-                    <div className="mt-2 flex gap-2 flex-wrap text-xs">
-                      <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-0.5 rounded-full font-semibold">🟢 Lätt – 8 kort</span>
-                      <span className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2 py-0.5 rounded-full font-semibold">🟡 Medel – 14 kort</span>
-                      <span className="bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-0.5 rounded-full font-semibold">🔴 Svår – 20 kort</span>
+              {[
+                { href: "memory",     emoji: "🃏", title: "Memory",        sub: "Para ihop svenska med engelska!",       desc: "Lätt (8 kort) • Medel (14 kort) • Svår (20 kort). Hitta alla par!", gradient: "from-teal-500 via-cyan-500 to-blue-500" },
+                { href: "hangman",    emoji: "❤️", title: "Hänga gubben",  sub: "6 liv – gissa rätt bokstav!",          desc: "Gissa engelska ord bokstav för bokstav. Skolvänlig variant med hjärtan!", gradient: "from-pink-500 via-rose-500 to-red-500" },
+                { href: "tidsattack", emoji: "⏱️", title: "Tidsattack",    sub: "60 sekunder – hur många hinner du?",   desc: "Ord & fraser på engelska. Svara snabbt – snabb som blixten!", gradient: "from-cyan-500 via-blue-500 to-indigo-500" },
+                { href: "samlamynt",  emoji: "🪙", title: "Samla mynt",    sub: "Rätt svar = samla, fel = hinder!",     desc: "Spring och samla mynt genom att välja rätt engelsk översättning.", gradient: "from-yellow-500 via-amber-500 to-orange-500" },
+              ].map((game) => (
+                <Link
+                  key={game.href}
+                  href={`/world/${stage.id}/spel/${game.href}`}
+                  className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${game.gradient} p-[2px] cursor-pointer group`}
+                >
+                  <div className="relative bg-[#080818]/92 rounded-2xl p-5 h-full backdrop-blur-sm transition-colors group-hover:bg-[#080818]/80">
+                    <div className="flex items-start gap-3 mb-3">
+                      <span className="text-4xl">{game.emoji}</span>
+                      <div>
+                        <h3 className="text-lg font-black text-white leading-tight">{game.title}</h3>
+                        <p className="text-xs font-semibold text-white/60">{game.sub}</p>
+                      </div>
                     </div>
+                    <p className="text-sm text-white/70 leading-snug">{game.desc}</p>
                   </div>
-                  <span className="text-gray-300 dark:text-gray-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors text-xl flex-shrink-0">→</span>
-                </div>
-              </Link>
+                </Link>
+              ))}
             </div>
           </div>
         )}
+
       </main>
       </div>
     </div>
