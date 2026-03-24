@@ -28,7 +28,7 @@ interface Props {
   params: Promise<{ stage: string }>;
 }
 
-type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "regler";
+type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel" | "regler";
 
 export default function WorldPage({ params }: Props) {
   const { stage: stageId } = use(params);
@@ -66,13 +66,14 @@ export default function WorldPage({ params }: Props) {
 
   const stageProgress = student?.stages[stage.id as keyof typeof student.stages];
 
-  function getModuleProgress(kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword", moduleId: string) {
+  function getModuleProgress(kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel", moduleId: string) {
     if (!stageProgress) return null;
     const map =
       kind === "grammar" ? stageProgress.grammarModules
       : kind === "reading" ? stageProgress.readingModules
       : kind === "spelling" ? (stageProgress.spellingModules ?? {})
       : kind === "wordsearch" ? (stageProgress.wordsearchModules ?? {})
+      : kind === "spel" ? (stageProgress.spelModules ?? {})
       : (stageProgress.crosswordModules ?? {});
     return map[moduleId] ?? null;
   }
@@ -88,6 +89,7 @@ export default function WorldPage({ params }: Props) {
     { id: "grammar", label: "📝 Grammatik" },
     { id: "reading", label: "📖 Läsning" },
     { id: "spelling", label: "✏️ Stavning" },
+    { id: "spel", label: "🎮 Spel" },
     { id: "regler", label: "📐 Språkregler" },
     { id: "wordsearch", label: "🔍 Ordsökning" },
     { id: "crossword", label: "🔠 Korsord" },
@@ -124,6 +126,7 @@ export default function WorldPage({ params }: Props) {
               { label: "Grammatik", icon: "📝", count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length, total: content?.grammar.length ?? 0 },
               { label: "Läsning",   icon: "📖", count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length, total: content?.reading.length ?? 0 },
               { label: "Stavning",  icon: "✏️", count: Object.values(stageProgress.spellingModules ?? {}).filter((m) => m.completed).length, total: content?.spelling?.length ?? 0 },
+              { label: "Spel",      icon: "🎮", count: Object.values(stageProgress.spelModules ?? {}).filter((m) => m.completed).length, total: content?.spel?.length ?? 0 },
               { label: "Ordsök.",   icon: "🔍", count: Object.values(stageProgress.wordsearchModules ?? {}).filter((m) => m.completed).length, total: content?.wordsearch?.length ?? 0 },
               { label: "Korsord",   icon: "🔠", count: Object.values(stageProgress.crosswordModules ?? {}).filter((m) => m.completed).length, total: content?.crossword?.length ?? 0 },
             ].map(({ label, icon, count, total }) => {
@@ -231,6 +234,7 @@ export default function WorldPage({ params }: Props) {
               : activeTab === "reading" ? content.reading
               : activeTab === "spelling" ? (content.spelling ?? [])
               : activeTab === "wordsearch" ? (content.wordsearch ?? [])
+              : activeTab === "spel" ? (content.spel ?? [])
               : (content.crossword ?? [])
             ).map((mod, idx, arr) => (
               <ModuleCard
@@ -239,19 +243,22 @@ export default function WorldPage({ params }: Props) {
                 title={mod.title}
                 description={mod.description}
                 icon={mod.icon}
-                kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword"}
+                kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel"}
                 stage={stage}
-                progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword", mod.id)}
+                progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel", mod.id)}
                 locked={false}
                 prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
               />
             ))}
             {(
               (activeTab === "wordsearch" && (content.wordsearch ?? []).length === 0) ||
-              (activeTab === "crossword" && (content.crossword ?? []).length === 0)
+              (activeTab === "crossword" && (content.crossword ?? []).length === 0) ||
+              (activeTab === "spel" && (content.spel ?? []).length === 0)
             ) && (
               <div className="card text-center py-10 text-gray-400">
-                <div className="text-3xl mb-2">{activeTab === "wordsearch" ? "🔍" : "🔠"}</div>
+                <div className="text-3xl mb-2">
+                  {activeTab === "wordsearch" ? "🔍" : activeTab === "spel" ? "🎮" : "🔠"}
+                </div>
                 <p>Inga moduler tillgängliga ännu.</p>
               </div>
             )}

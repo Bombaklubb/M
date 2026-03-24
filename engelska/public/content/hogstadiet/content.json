@@ -4327,5 +4327,197 @@
         }
       ]
     }
+  ],
+  "spel": [
+    {
+      "id": "hog-spel-1-grammatik",
+      "title": "Samla mynt – Avancerad grammatik",
+      "description": "Utmana dig med svårare grammatik och samla mynt!",
+      "icon": "🧠",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "hog-spel-1-q1",
+          "question": "Välj korrekt mening:",
+          "options": [
+            "If I would have more money, I could travel.",
+            "If I had more money, I could travel.",
+            "If I have more money, I can travel.",
+            "If I will have more money, I could travel."
+          ],
+          "correctIndex": 1,
+          "explanation": "Villkorssats typ 2: 'If + past simple, would + verb'. 'If I had more money, I could travel.'"
+        },
+        {
+          "id": "hog-spel-1-q2",
+          "question": "Vilket är korrekt i reported speech? Han sa: 'I am tired.'",
+          "options": [
+            "He said that he is tired.",
+            "He said that he was tired.",
+            "He said that he will be tired.",
+            "He said that he has been tired."
+          ],
+          "correctIndex": 1,
+          "explanation": "I reported speech backshiftar vi tempus: 'am' → 'was'."
+        },
+        {
+          "id": "hog-spel-1-q3",
+          "question": "Välj rätt form: 'She ___ to Paris twice.'",
+          "options": [
+            "has been",
+            "was",
+            "went",
+            "is been"
+          ],
+          "correctIndex": 0,
+          "explanation": "Present perfect används för erfarenheter: 'has been'."
+        },
+        {
+          "id": "hog-spel-1-q4",
+          "question": "Vilket ord passar bäst? 'Despite ___ tired, she finished the race.'",
+          "options": ["be", "being", "been", "was"],
+          "correctIndex": 1,
+          "explanation": "Efter 'despite' + gerund: 'Despite being tired...'"
+        },
+        {
+          "id": "hog-spel-1-q5",
+          "question": "Välj rätt passiv form: 'The letter ___ yesterday.'",
+          "options": [
+            "was sent",
+            "were sent",
+            "is sent",
+            "has sent"
+          ],
+          "correctIndex": 0,
+          "explanation": "Passiv i past simple: 'was/were + past participle'."
+        },
+        {
+          "id": "hog-spel-1-q6",
+          "question": "Vilket är korrekt? 'I wish I ___ taller.'",
+          "options": ["am", "was", "were", "will be"],
+          "correctIndex": 2,
+          "explanation": "Efter 'I wish' används were (subjunctive) för alla pronomen."
+        },
+        {
+          "id": "hog-spel-1-q7",
+          "question": "Välj rätt: 'Not only ___ she speak French, but also Spanish.'",
+          "options": ["does", "do", "is", "has"],
+          "correctIndex": 0,
+          "explanation": "Inversion efter 'not only': 'Not only does she...'."
+        },
+        {
+          "id": "hog-spel-1-q8",
+          "question": "Vad är skillnaden mellan 'used to' och 'would'?",
+          "options": [
+            "Ingen skillnad, de är identiska",
+            "'Used to' kan beskriva tillstånd, 'would' bara handlingar",
+            "'Would' kan beskriva tillstånd, 'used to' bara handlingar",
+            "Båda beskriver bara framtida planer"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Used to' kan säga 'I used to be shy', men 'would' används bara för upprepade handlingar."
+        },
+        {
+          "id": "hog-spel-1-q9",
+          "question": "Välj korrekt relativ bisats: 'The book ___ I borrowed was interesting.'",
+          "options": ["who", "which", "what", "whom"],
+          "correctIndex": 1,
+          "explanation": "'Which' används för saker. 'Who' används för personer."
+        },
+        {
+          "id": "hog-spel-1-q10",
+          "question": "Välj rätt: 'By the time she arrived, we ___ for two hours.'",
+          "options": [
+            "waited",
+            "have waited",
+            "had been waiting",
+            "were waiting"
+          ],
+          "correctIndex": 2,
+          "explanation": "Past perfect continuous: en pågående handling som slutade vid ett tidigare tillfälle i det förflutna."
+        }
+      ]
+    },
+    {
+      "id": "hog-spel-2-ordforrad",
+      "title": "Samla mynt – Avancerat ordförråd",
+      "description": "Utöka ditt ordförråd med svårare engelska ord!",
+      "icon": "📚",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "hog-spel-2-q1",
+          "question": "Vad betyder 'ambiguous'?",
+          "options": ["tydlig", "tvetydig", "ambitiös", "annorlunda"],
+          "correctIndex": 1,
+          "explanation": "'Ambiguous' betyder tvetydig – något kan tolkas på flera sätt."
+        },
+        {
+          "id": "hog-spel-2-q2",
+          "question": "Vad betyder 'inevitable'?",
+          "options": ["omöjlig", "oundviklig", "osynlig", "oförutsägbar"],
+          "correctIndex": 1,
+          "explanation": "'Inevitable' betyder oundviklig – något som måste hända."
+        },
+        {
+          "id": "hog-spel-2-q3",
+          "question": "Vad betyder 'persevere'?",
+          "options": ["ge upp", "uthärda/kämpa vidare", "bevara", "förfölja"],
+          "correctIndex": 1,
+          "explanation": "'Persevere' betyder kämpa vidare, hålla ut trots svårigheter."
+        },
+        {
+          "id": "hog-spel-2-q4",
+          "question": "Vad betyder 'eloquent'?",
+          "options": ["tystlåten", "vältalig", "elegant", "elak"],
+          "correctIndex": 1,
+          "explanation": "'Eloquent' betyder vältalig – att uttrycka sig skickligt."
+        },
+        {
+          "id": "hog-spel-2-q5",
+          "question": "Vad är synonymt med 'enormous'?",
+          "options": ["tiny", "ordinary", "huge", "narrow"],
+          "correctIndex": 2,
+          "explanation": "'Enormous' och 'huge' är synonymer – båda betyder enorm/jättestor."
+        },
+        {
+          "id": "hog-spel-2-q6",
+          "question": "Vad betyder 'collaborate'?",
+          "options": ["konkurrera", "samarbeta", "kommunicera", "kontrollera"],
+          "correctIndex": 1,
+          "explanation": "'Collaborate' betyder samarbeta."
+        },
+        {
+          "id": "hog-spel-2-q7",
+          "question": "Vad är motsatsen till 'vague'?",
+          "options": ["clear", "dark", "slow", "weak"],
+          "correctIndex": 0,
+          "explanation": "'Vague' = otydlig. Motsatsen är 'clear' = tydlig."
+        },
+        {
+          "id": "hog-spel-2-q8",
+          "question": "Vad betyder 'fluctuate'?",
+          "options": ["sjunka", "stiga", "variera upp och ner", "stagnera"],
+          "correctIndex": 2,
+          "explanation": "'Fluctuate' betyder variera/pendla upp och ner."
+        },
+        {
+          "id": "hog-spel-2-q9",
+          "question": "Välj rätt synonym till 'hostile':",
+          "options": ["friendly", "neutral", "aggressive", "passive"],
+          "correctIndex": 2,
+          "explanation": "'Hostile' = fientlig. Synonym: 'aggressive'."
+        },
+        {
+          "id": "hog-spel-2-q10",
+          "question": "Vad betyder 'sustain'?",
+          "options": ["förstöra", "uppehålla/underhålla", "ersätta", "minska"],
+          "correctIndex": 1,
+          "explanation": "'Sustain' betyder uppehålla, bibehålla eller stödja."
+        }
+      ]
+    }
   ]
 }

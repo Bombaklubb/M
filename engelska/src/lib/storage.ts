@@ -15,6 +15,7 @@ function emptyStageProgress(stageId: StageId): StageProgress {
     spellingModules: {},
     wordsearchModules: {},
     crosswordModules: {},
+    spelModules: {},
   };
 }
 
@@ -77,7 +78,7 @@ export function saveHero(hero: HeroConfig): void {
 export function getModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword",
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel",
   moduleId: string
 ): ModuleProgress | null {
   const stage = data.stages[stageId];
@@ -86,6 +87,7 @@ export function getModuleProgress(
     : kind === "reading" ? stage.readingModules
     : kind === "spelling" ? (stage.spellingModules ?? {})
     : kind === "wordsearch" ? (stage.wordsearchModules ?? {})
+    : kind === "spel" ? (stage.spelModules ?? {})
     : (stage.crosswordModules ?? {});
   return map[moduleId] ?? null;
 }
@@ -93,7 +95,7 @@ export function getModuleProgress(
 export function saveModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword",
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel",
   moduleId: string,
   points: number,
   completed: boolean
@@ -102,11 +104,13 @@ export function saveModuleProgress(
   if (!stage.spellingModules) stage.spellingModules = {};
   if (!stage.wordsearchModules) stage.wordsearchModules = {};
   if (!stage.crosswordModules) stage.crosswordModules = {};
+  if (!stage.spelModules) stage.spelModules = {};
   const map =
     kind === "grammar" ? stage.grammarModules
     : kind === "reading" ? stage.readingModules
     : kind === "spelling" ? stage.spellingModules
     : kind === "wordsearch" ? stage.wordsearchModules
+    : kind === "spel" ? stage.spelModules
     : stage.crosswordModules;
   const existing = map[moduleId];
   const prevPoints = existing?.points ?? 0;

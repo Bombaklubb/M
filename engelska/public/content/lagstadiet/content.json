@@ -3680,5 +3680,167 @@
         }
       ]
     }
+  ],
+  "spel": [
+    {
+      "id": "lag-spel-1-djur",
+      "title": "Samla mynt – Djur",
+      "description": "Lär dig engelska djurord och samla mynt!",
+      "icon": "🐾",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "lag-spel-1-q1",
+          "question": "Vad heter 'katt' på engelska?",
+          "options": ["dog", "cat", "bird", "fish"],
+          "correctIndex": 1,
+          "explanation": "'Cat' betyder katt på engelska."
+        },
+        {
+          "id": "lag-spel-1-q2",
+          "question": "Vad heter 'hund' på engelska?",
+          "options": ["cat", "horse", "dog", "cow"],
+          "correctIndex": 2,
+          "explanation": "'Dog' betyder hund på engelska."
+        },
+        {
+          "id": "lag-spel-1-q3",
+          "question": "Vad heter 'fågel' på engelska?",
+          "options": ["fish", "bird", "frog", "rabbit"],
+          "correctIndex": 1,
+          "explanation": "'Bird' betyder fågel på engelska."
+        },
+        {
+          "id": "lag-spel-1-q4",
+          "question": "Vad heter 'fisk' på engelska?",
+          "options": ["fish", "frog", "fox", "fly"],
+          "correctIndex": 0,
+          "explanation": "'Fish' betyder fisk på engelska."
+        },
+        {
+          "id": "lag-spel-1-q5",
+          "question": "Vad heter 'häst' på engelska?",
+          "options": ["hen", "horse", "hare", "hippo"],
+          "correctIndex": 1,
+          "explanation": "'Horse' betyder häst på engelska."
+        },
+        {
+          "id": "lag-spel-1-q6",
+          "question": "Vad heter 'ko' på engelska?",
+          "options": ["cat", "crab", "cow", "crane"],
+          "correctIndex": 2,
+          "explanation": "'Cow' betyder ko på engelska."
+        },
+        {
+          "id": "lag-spel-1-q7",
+          "question": "Vad heter 'kanin' på engelska?",
+          "options": ["rat", "rabbit", "raccoon", "robin"],
+          "correctIndex": 1,
+          "explanation": "'Rabbit' betyder kanin på engelska."
+        },
+        {
+          "id": "lag-spel-1-q8",
+          "question": "Vad heter 'orm' på engelska?",
+          "options": ["shark", "snail", "snake", "spider"],
+          "correctIndex": 2,
+          "explanation": "'Snake' betyder orm på engelska."
+        },
+        {
+          "id": "lag-spel-1-q9",
+          "question": "Vad heter 'lejon' på engelska?",
+          "options": ["leopard", "lion", "lizard", "llama"],
+          "correctIndex": 1,
+          "explanation": "'Lion' betyder lejon på engelska."
+        },
+        {
+          "id": "lag-spel-1-q10",
+          "question": "Vad heter 'elefant' på engelska?",
+          "options": ["eagle", "eel", "elephant", "elk"],
+          "correctIndex": 2,
+          "explanation": "'Elephant' betyder elefant på engelska."
+        }
+      ]
+    },
+    {
+      "id": "lag-spel-2-farger",
+      "title": "Samla mynt – Färger",
+      "description": "Kan du alla färger på engelska? Samla mynt och ta reda på det!",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "lag-spel-2-q1",
+          "question": "Vad heter 'röd' på engelska?",
+          "options": ["blue", "green", "red", "yellow"],
+          "correctIndex": 2,
+          "explanation": "'Red' betyder röd på engelska."
+        },
+        {
+          "id": "lag-spel-2-q2",
+          "question": "Vad heter 'blå' på engelska?",
+          "options": ["black", "blue", "brown", "beige"],
+          "correctIndex": 1,
+          "explanation": "'Blue' betyder blå på engelska."
+        },
+        {
+          "id": "lag-spel-2-q3",
+          "question": "Vad heter 'gul' på engelska?",
+          "options": ["yellow", "orange", "green", "white"],
+          "correctIndex": 0,
+          "explanation": "'Yellow' betyder gul på engelska."
+        },
+        {
+          "id": "lag-spel-2-q4",
+          "question": "Vad heter 'grön' på engelska?",
+          "options": ["grey", "gold", "green", "grape"],
+          "correctIndex": 2,
+          "explanation": "'Green' betyder grön på engelska."
+        },
+        {
+          "id": "lag-spel-2-q5",
+          "question": "Vad heter 'svart' på engelska?",
+          "options": ["silver", "black", "brown", "blue"],
+          "correctIndex": 1,
+          "explanation": "'Black' betyder svart på engelska."
+        },
+        {
+          "id": "lag-spel-2-q6",
+          "question": "Vad heter 'vit' på engelska?",
+          "options": ["violet", "white", "wine", "wheat"],
+          "correctIndex": 1,
+          "explanation": "'White' betyder vit på engelska."
+        },
+        {
+          "id": "lag-spel-2-q7",
+          "question": "Vad heter 'rosa' på engelska?",
+          "options": ["purple", "peach", "pink", "plum"],
+          "correctIndex": 2,
+          "explanation": "'Pink' betyder rosa på engelska."
+        },
+        {
+          "id": "lag-spel-2-q8",
+          "question": "Vad heter 'orange' på engelska?",
+          "options": ["olive", "orange", "ochre", "onyx"],
+          "correctIndex": 1,
+          "explanation": "'Orange' är samma ord på engelska!"
+        },
+        {
+          "id": "lag-spel-2-q9",
+          "question": "Vad heter 'lila' på engelska?",
+          "options": ["lilac", "purple", "plum", "pink"],
+          "correctIndex": 1,
+          "explanation": "'Purple' eller 'violet' betyder lila på engelska."
+        },
+        {
+          "id": "lag-spel-2-q10",
+          "question": "Vad heter 'brun' på engelska?",
+          "options": ["black", "blue", "beige", "brown"],
+          "correctIndex": 3,
+          "explanation": "'Brown' betyder brun på engelska."
+        }
+      ]
+    }
   ]
 }

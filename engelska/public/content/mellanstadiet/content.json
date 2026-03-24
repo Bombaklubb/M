@@ -4135,5 +4135,167 @@
         }
       ]
     }
+  ],
+  "spel": [
+    {
+      "id": "mel-spel-1-verb",
+      "title": "Samla mynt – Oregelbundna verb",
+      "description": "Träna på oregelbundna verb i past tense och samla mynt!",
+      "icon": "⚡",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "mel-spel-1-q1",
+          "question": "Vad är past tense av 'go'?",
+          "options": ["goed", "gone", "went", "going"],
+          "correctIndex": 2,
+          "explanation": "'Go' → 'went' i past tense. Det är oregelbundet!"
+        },
+        {
+          "id": "mel-spel-1-q2",
+          "question": "Vad är past tense av 'eat'?",
+          "options": ["eated", "ate", "eaten", "eted"],
+          "correctIndex": 1,
+          "explanation": "'Eat' → 'ate' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q3",
+          "question": "Vad är past tense av 'see'?",
+          "options": ["seed", "sawed", "saw", "seen"],
+          "correctIndex": 2,
+          "explanation": "'See' → 'saw' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q4",
+          "question": "Vad är past tense av 'come'?",
+          "options": ["comed", "came", "comes", "coming"],
+          "correctIndex": 1,
+          "explanation": "'Come' → 'came' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q5",
+          "question": "Vad är past tense av 'run'?",
+          "options": ["runned", "ran", "ranned", "run"],
+          "correctIndex": 1,
+          "explanation": "'Run' → 'ran' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q6",
+          "question": "Vad är past tense av 'write'?",
+          "options": ["writed", "written", "wrote", "writ"],
+          "correctIndex": 2,
+          "explanation": "'Write' → 'wrote' i past tense. Past participle är 'written'."
+        },
+        {
+          "id": "mel-spel-1-q7",
+          "question": "Vad är past tense av 'take'?",
+          "options": ["taked", "took", "taken", "takes"],
+          "correctIndex": 1,
+          "explanation": "'Take' → 'took' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q8",
+          "question": "Vad är past tense av 'give'?",
+          "options": ["gived", "given", "gave", "gives"],
+          "correctIndex": 2,
+          "explanation": "'Give' → 'gave' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q9",
+          "question": "Vad är past tense av 'know'?",
+          "options": ["knowed", "known", "knew", "knows"],
+          "correctIndex": 2,
+          "explanation": "'Know' → 'knew' i past tense."
+        },
+        {
+          "id": "mel-spel-1-q10",
+          "question": "Vad är past tense av 'think'?",
+          "options": ["thinked", "thought", "thinks", "thing"],
+          "correctIndex": 1,
+          "explanation": "'Think' → 'thought' i past tense."
+        }
+      ]
+    },
+    {
+      "id": "mel-spel-2-prepositioner",
+      "title": "Samla mynt – Prepositioner",
+      "description": "Lär dig rätt prepositioner på engelska!",
+      "icon": "📍",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "mel-spel-2-q1",
+          "question": "Välj rätt preposition: 'She is waiting ___ the bus.'",
+          "options": ["on", "for", "at", "in"],
+          "correctIndex": 1,
+          "explanation": "'Wait for' – man väntar PÅ något/någon med 'for'."
+        },
+        {
+          "id": "mel-spel-2-q2",
+          "question": "Välj rätt preposition: 'He lives ___ London.'",
+          "options": ["at", "on", "in", "by"],
+          "correctIndex": 2,
+          "explanation": "Man bor 'in' en stad: 'He lives in London.'"
+        },
+        {
+          "id": "mel-spel-2-q3",
+          "question": "Välj rätt preposition: 'The book is ___ the table.'",
+          "options": ["at", "on", "in", "over"],
+          "correctIndex": 1,
+          "explanation": "'On' används när något ligger på en yta."
+        },
+        {
+          "id": "mel-spel-2-q4",
+          "question": "Välj rätt preposition: 'I wake up ___ 7 o'clock.'",
+          "options": ["in", "on", "at", "by"],
+          "correctIndex": 2,
+          "explanation": "'At' används med klockslag: 'at 7 o'clock'."
+        },
+        {
+          "id": "mel-spel-2-q5",
+          "question": "Välj rätt preposition: 'She was born ___ Monday.'",
+          "options": ["in", "at", "on", "by"],
+          "correctIndex": 2,
+          "explanation": "'On' används med veckodagar: 'on Monday'."
+        },
+        {
+          "id": "mel-spel-2-q6",
+          "question": "Välj rätt preposition: 'They go swimming ___ summer.'",
+          "options": ["on", "at", "in", "during"],
+          "correctIndex": 2,
+          "explanation": "'In' används med årstider: 'in summer'."
+        },
+        {
+          "id": "mel-spel-2-q7",
+          "question": "Välj rätt: 'The cat jumped ___ the box.'",
+          "options": ["into", "onto", "in", "at"],
+          "correctIndex": 0,
+          "explanation": "'Into' används när man rör sig in i något."
+        },
+        {
+          "id": "mel-spel-2-q8",
+          "question": "Välj rätt: 'She walked ___ the bridge.'",
+          "options": ["under", "through", "across", "over"],
+          "correctIndex": 2,
+          "explanation": "'Across' betyder tvärs över – hon gick över bron."
+        },
+        {
+          "id": "mel-spel-2-q9",
+          "question": "Välj rätt: 'The cinema is ___ the supermarket.'",
+          "options": ["next to", "next of", "close with", "beside of"],
+          "correctIndex": 0,
+          "explanation": "'Next to' betyder bredvid."
+        },
+        {
+          "id": "mel-spel-2-q10",
+          "question": "Välj rätt: 'I've known her ___ years.'",
+          "options": ["since", "for", "during", "ago"],
+          "correctIndex": 1,
+          "explanation": "'For' används med en tidsperiod (for years, for months)."
+        }
+      ]
+    }
   ]
 }

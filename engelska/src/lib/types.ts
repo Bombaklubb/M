@@ -142,12 +142,33 @@ export interface CrosswordModule {
   clues: CrosswordClue[];
 }
 
+// ─── Coin Game (Samla mynt) ───────────────────────────────────────────────────
+
+export interface CoinGameQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation?: string;
+}
+
+export interface CoinGameModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  questions: CoinGameQuestion[];
+}
+
 export interface StageContent {
   grammar: GrammarModule[];
   reading: ReadingModule[];
   spelling?: SpellingModule[];
   wordsearch?: WordSearchModule[];
   crossword?: CrosswordModule[];
+  spel?: CoinGameModule[];
 }
 
 // ─── Student progress (stored in localStorage) ───────────────────────────────
@@ -167,6 +188,7 @@ export interface StageProgress {
   spellingModules: Record<string, ModuleProgress>;
   wordsearchModules: Record<string, ModuleProgress>;
   crosswordModules: Record<string, ModuleProgress>;
+  spelModules: Record<string, ModuleProgress>;
 }
 
 export type SkinTone = "light" | "light_brown" | "dark";
