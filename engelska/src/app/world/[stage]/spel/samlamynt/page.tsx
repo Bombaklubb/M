@@ -247,7 +247,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
                   : runnerAnim === "stumble" ? "translate-x-1 opacity-70"
                   : ""
                 }`}
-                style={{ filter: feedback === "correct" ? "drop-shadow(0 0 6px #fbbf24)" : undefined }}
+                style={{ filter: feedback === "correct" ? "drop-shadow(0 0 6px #fbbf24)" : undefined, transform: "scaleX(-1)" }}
               >
                 🏃
               </span>
