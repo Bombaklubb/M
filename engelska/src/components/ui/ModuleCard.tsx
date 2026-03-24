@@ -12,7 +12,7 @@ interface ModuleCardProps {
   title: string;
   description: string;
   icon: string;
-  kind: "grammar" | "reading" | "spelling" | "wordsearch";
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "spel";
   stage: Stage;
   progress: ModuleProgress | null;
   locked: boolean;
@@ -80,6 +80,10 @@ const kindLabels: Record<string, { label: string; icon: React.ReactNode }> = {
   wordsearch: {
     label: "Ordsökning",
     icon: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>,
+  },
+  spel: {
+    label: "Spel",
+    icon: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
   },
 };
 
