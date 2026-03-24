@@ -29,7 +29,7 @@ interface Props {
   params: Promise<{ stage: string }>;
 }
 
-type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "regler";
+type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "regler" | "spel";
 
 export default function WorldPage({ params }: Props) {
   const { stage: stageId } = use(params);
@@ -104,6 +104,11 @@ export default function WorldPage({ params }: Props) {
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
     ),
+    spel: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
   };
 
   const tabs: { id: Tab; label: string }[] = [
@@ -112,6 +117,7 @@ export default function WorldPage({ params }: Props) {
     { id: "spelling",   label: "Stavning" },
     { id: "regler",     label: "Språkregler" },
     { id: "wordsearch", label: "Ordsökning" },
+    { id: "spel",       label: "Spel" },
   ];
 
   return (
@@ -290,6 +296,41 @@ export default function WorldPage({ params }: Props) {
                 <p>Inga moduler tillgängliga ännu.</p>
               </div>
             )}
+          </div>
+        )}
+
+        {/* Games hub */}
+        {activeTab === "spel" && (
+          <div>
+            <div className="mb-6 text-center">
+              <div className="text-4xl mb-2">🎮</div>
+              <h2 className="text-xl font-black text-gray-900 dark:text-gray-100">Spel</h2>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Träna engelskan med roliga spel!</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link
+                href={`/world/${stage.id}/spel/memory`}
+                className={`card group border-3 transition-all duration-200 hover:-translate-y-1 cursor-pointer ${stage.borderClass}`}
+                style={{ boxShadow: "0 4px 0 0 rgba(99,102,241,0.15), 0 8px 16px -4px rgba(99,102,241,0.1)" }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 border-3 ${stage.colorClass} border-white/20`}
+                    style={{ boxShadow: "0 3px 0 0 rgba(0,0,0,0.15)" }}>
+                    🃏
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-black text-gray-900 dark:text-gray-100 text-base">Memory</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Para ihop svenska ord med engelska översättningar!</p>
+                    <div className="mt-2 flex gap-2 flex-wrap text-xs">
+                      <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-0.5 rounded-full font-semibold">🟢 Lätt – 8 kort</span>
+                      <span className="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 px-2 py-0.5 rounded-full font-semibold">🟡 Medel – 14 kort</span>
+                      <span className="bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-2 py-0.5 rounded-full font-semibold">🔴 Svår – 20 kort</span>
+                    </div>
+                  </div>
+                  <span className="text-gray-300 dark:text-gray-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 transition-colors text-xl flex-shrink-0">→</span>
+                </div>
+              </Link>
+            </div>
           </div>
         )}
       </main>
