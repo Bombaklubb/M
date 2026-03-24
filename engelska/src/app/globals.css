@@ -5,51 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Comic+Neue:wght@300;400;700&display=swap');
 
 @layer base {
-  :root {
-    --background: 238 100% 99%;
-    --foreground: 239 50% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 239 50% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 239 50% 15%;
-    --primary: 239 84% 67%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 238 100% 96%;
-    --secondary-foreground: 239 50% 15%;
-    --muted: 238 100% 96%;
-    --muted-foreground: 239 20% 55%;
-    --accent: 238 100% 96%;
-    --accent-foreground: 239 50% 15%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 238 60% 90%;
-    --input: 238 60% 90%;
-    --ring: 239 84% 67%;
-    --radius: 1rem;
-  }
-
-  .dark {
-    --background: 224 40% 8%;
-    --foreground: 210 40% 95%;
-    --card: 224 30% 13%;
-    --card-foreground: 210 40% 95%;
-    --popover: 224 30% 13%;
-    --popover-foreground: 210 40% 95%;
-    --primary: 239 84% 67%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 224 25% 18%;
-    --secondary-foreground: 210 40% 95%;
-    --muted: 224 25% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 224 25% 18%;
-    --accent-foreground: 210 40% 95%;
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 224 20% 25%;
-    --input: 224 20% 25%;
-    --ring: 239 84% 67%;
-  }
-
   html {
     font-family: 'Baloo 2', 'Comic Neue', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -57,21 +12,29 @@
   }
 
   body {
-    @apply bg-indigo-50 text-indigo-900;
+    background: linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 28%, #9f1239 62%, #dc2626 100%) fixed;
+    background-attachment: fixed;
+    min-height: 100vh;
+    /* White text works on the gradient background, but exercise/content pages
+       override with bg-gray-50/bg-white which need dark text – those pages
+       must set text color explicitly or use .card which sets text-gray-900. */
+    color: #ffffff;
   }
 
+
   .dark body {
-    @apply bg-gray-900 text-gray-100;
+    background: linear-gradient(160deg, #0a0f2e 0%, #0d1a4a 28%, #450a0a 62%, #6b0f0f 100%) fixed;
+    background-attachment: fixed;
   }
 }
 
 @layer components {
-  /* Claymorphism card - soft 3D, chunky, playful */
+  /* Claymorphism card – English style */
   .card {
-    @apply bg-white rounded-3xl p-4 sm:p-6 border-3 border-indigo-100;
+    @apply bg-white rounded-3xl p-4 sm:p-6 border-3 border-en-100 text-gray-900;
     box-shadow:
-      0 4px 0 0 rgba(99, 102, 241, 0.15),
-      0 8px 16px -4px rgba(99, 102, 241, 0.1),
+      0 4px 0 0 rgba(37, 99, 235, 0.12),
+      0 8px 16px -4px rgba(37, 99, 235, 0.08),
       inset 0 2px 4px 0 rgba(255, 255, 255, 0.8);
   }
 
@@ -83,7 +46,7 @@
       inset 0 2px 4px 0 rgba(255, 255, 255, 0.05);
   }
 
-  /* Clay button - chunky, 3D press effect */
+  /* Clay button */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 rounded-2xl font-bold text-white transition-all duration-200 cursor-pointer border-3 border-transparent;
     box-shadow:
@@ -109,38 +72,41 @@
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 rounded-2xl font-bold border-3 transition-all duration-200 cursor-pointer bg-white;
     box-shadow:
-      0 3px 0 0 rgba(99, 102, 241, 0.2),
-      0 4px 8px -2px rgba(99, 102, 241, 0.1),
+      0 3px 0 0 rgba(37, 99, 235, 0.18),
+      0 4px 8px -2px rgba(37, 99, 235, 0.1),
       inset 0 2px 4px 0 rgba(255, 255, 255, 0.8);
   }
-  .btn-secondary:hover {
-    transform: translateY(-2px);
-  }
+  .btn-secondary:hover  { transform: translateY(-2px); }
   .btn-secondary:active {
     transform: translateY(1px);
     box-shadow:
-      0 1px 0 0 rgba(99, 102, 241, 0.2),
+      0 1px 0 0 rgba(37, 99, 235, 0.18),
       inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
   }
 
   /* Clay input field */
   .input-field {
-    @apply w-full px-5 py-4 rounded-2xl border-3 border-indigo-200 bg-white text-indigo-900 placeholder:text-indigo-300 focus:border-indigo-400 focus:outline-none text-lg transition-all font-medium;
+    @apply w-full px-5 py-4 rounded-2xl border-3 border-en-200 bg-white text-en-900 focus:border-en-500 focus:outline-none text-lg transition-all font-medium;
     box-shadow:
-      inset 0 3px 6px -2px rgba(99, 102, 241, 0.1),
+      inset 0 3px 6px -2px rgba(37, 99, 235, 0.08),
       0 2px 0 0 rgba(255, 255, 255, 0.8);
+  }
+  .input-field::placeholder {
+    color: theme('colors.en.300');
   }
   .input-field:focus {
     box-shadow:
-      inset 0 3px 6px -2px rgba(99, 102, 241, 0.15),
-      0 0 0 4px rgba(99, 102, 241, 0.1);
+      inset 0 3px 6px -2px rgba(37, 99, 235, 0.12),
+      0 0 0 4px rgba(37, 99, 235, 0.1);
   }
 
   .dark .input-field {
-    @apply border-gray-600 bg-gray-700 text-gray-100 placeholder:text-gray-500 focus:border-indigo-500;
+    @apply border-gray-600 bg-gray-700 text-gray-100 focus:border-en-400;
+  }
+  .dark .input-field::placeholder {
+    color: theme('colors.gray.500');
   }
 
-  /* Clay badge */
   .badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-bold;
     box-shadow:
@@ -148,10 +114,9 @@
       inset 0 1px 2px 0 rgba(255, 255, 255, 0.5);
   }
 
-  /* Clay progress bar */
   .progress-bar-track {
-    @apply w-full h-4 bg-indigo-100 rounded-full overflow-hidden border-2 border-indigo-200/50;
-    box-shadow: inset 0 2px 4px -1px rgba(99, 102, 241, 0.2);
+    @apply w-full h-4 bg-en-100 rounded-full overflow-hidden border-2 border-en-200/50;
+    box-shadow: inset 0 2px 4px -1px rgba(37, 99, 235, 0.15);
   }
 
   .progress-bar-fill {
@@ -175,67 +140,50 @@
     @apply bg-white/20 backdrop-blur-sm border border-white/30;
   }
 
-  .animate-pop {
-    animation: pop 0.3s ease-out;
-  }
-
-  .animate-shake {
-    animation: shake 0.4s ease-in-out;
-  }
+  .animate-pop   { animation: pop   0.3s ease-out; }
+  .animate-shake { animation: shake 0.4s ease-in-out; }
 }
 
 @keyframes pop {
-  0% { transform: scale(0.9); }
-  50% { transform: scale(1.05); }
+  0%   { transform: scale(0.9); }
+  50%  { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-6px); }
-  75% { transform: translateX(6px); }
+  25%       { transform: translateX(-6px); }
+  75%       { transform: translateX(6px); }
 }
 
-/* MagicUI animations */
+/* MagicUI keyframes */
 @keyframes border-beam {
   100% { offset-distance: 100%; }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-@keyframes shimmer-slide {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
 }
 
 @keyframes number-ticker {
   from { transform: translateY(0); }
-  to { transform: translateY(-100%); }
+  to   { transform: translateY(-100%); }
 }
 
 @keyframes aurora {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%, 100% { background-position: 0%   50%; }
+  50%       { background-position: 100% 50%; }
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-300 rounded-full;
-}
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-400;
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-transparent; }
+::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-gray-400; }

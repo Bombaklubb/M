@@ -1,14 +1,17 @@
+import type React from "react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
 interface AnimatedGradientTextProps {
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export function AnimatedGradientText({
   children,
   className,
+  style,
 }: AnimatedGradientTextProps) {
   return (
     <span
@@ -20,6 +23,7 @@ export function AnimatedGradientText({
         WebkitTextFillColor: "transparent",
         backgroundClip: "text",
         animation: "gradient 4s linear infinite",
+        ...style,
       }}
       className={cn("font-bold", className)}
     >

@@ -94,7 +94,7 @@ export default function ReadingModulePage({ params }: Props) {
         const firstChest = allNewChests[0];
         const wasBossUnlocked = gam.bossUnlocked;
         const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
-        const mystery = rollMysteryBox(gam.badges);
+        const mystery = rollMysteryBox(gam.badges, newEx);
         const extraMysteryChest = mystery?.type === "chest" && mystery.chestType
           ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
           : [];
@@ -146,7 +146,7 @@ export default function ReadingModulePage({ params }: Props) {
   // ─── Intro phase ────────────────────────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <Header student={student} />
 
         <div className={`${stage.bgClass} text-white`}>
@@ -210,7 +210,7 @@ export default function ReadingModulePage({ params }: Props) {
 
   // ─── Reading + Questions split view ─────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <Header student={student} />
 
       {/* Coloured banner */}

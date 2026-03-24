@@ -11,66 +11,100 @@ export const BOSS_UNLOCK_THRESHOLD = 5; // exercises needed to unlock boss
 export const MYSTERY_BOX_CHANCE = 0.15; // 15% chance after each exercise
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
+  { points: 25,    type: "wood" },    // Snabb första belöning
+  { points: 50,    type: "wood" },    // Snabb andra belöning
   { points: 100,   type: "wood" },
-  { points: 200,   type: "wood" },    // NEW
+  { points: 200,   type: "wood" },
   { points: 300,   type: "silver" },
-  { points: 500,   type: "silver" },  // NEW
+  { points: 500,   type: "silver" },
   { points: 600,   type: "wood" },
-  { points: 750,   type: "silver" },  // NEW
+  { points: 750,   type: "silver" },
   { points: 1000,  type: "gold" },
   { points: 1500,  type: "silver" },
-  { points: 2000,  type: "silver" },  // NEW
+  { points: 2000,  type: "silver" },
   { points: 2500,  type: "gold" },
-  { points: 3500,  type: "gold" },    // NEW
-  { points: 5000,  type: "gold" },    // NEW
-  { points: 7000,  type: "gold" },    // NEW
-  { points: 10000, type: "gold" },    // NEW
-  { points: 15000, type: "gold" },    // NEW
+  { points: 3500,  type: "gold" },
+  { points: 5000,  type: "gold" },
+  { points: 7000,  type: "gold" },
+  { points: 10000, type: "gold" },
+  { points: 15000, type: "gold" },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
+  { exercises: 1,   type: "wood" },   // Direkt första belöning
+  { exercises: 3,   type: "wood" },   // Snabb uppföljning
   { exercises: 5,   type: "wood" },
-  { exercises: 10,  type: "wood" },   // NEW
+  { exercises: 10,  type: "wood" },
   { exercises: 15,  type: "silver" },
-  { exercises: 20,  type: "silver" }, // NEW
+  { exercises: 20,  type: "silver" },
   { exercises: 30,  type: "gold" },
-  { exercises: 40,  type: "silver" }, // NEW
+  { exercises: 40,  type: "silver" },
   { exercises: 50,  type: "silver" },
-  { exercises: 60,  type: "gold" },   // NEW
+  { exercises: 60,  type: "gold" },
   { exercises: 75,  type: "gold" },
-  { exercises: 100, type: "gold" },   // NEW
-  { exercises: 150, type: "gold" },   // NEW
+  { exercises: 100, type: "gold" },
+  { exercises: 150, type: "gold" },
 ];
 
 // ─── Chest reward tables ──────────────────────────────────────────────────────
 
 export const CHEST_META: Record<
   ChestType,
-  { label: string; emoji: string; color: string; borderColor: string; shadowColor: string; description: string }
+  { label: string; emoji: string; image: string; color: string; borderColor: string; shadowColor: string; description: string }
 > = {
   wood: {
-    label: "Trälåda",
+    label: "Bronskista",
     emoji: "📦",
+    image: "/content/bronskista.png",
     color: "from-amber-600 to-amber-800",
     borderColor: "border-amber-700",
     shadowColor: "shadow-amber-900/40",
-    description: "En enkel trälåda med små belöningar.",
+    description: "En bronskista med belöningar.",
   },
   silver: {
-    label: "Silverlåda",
+    label: "Silverkista",
     emoji: "🪙",
+    image: "/content/silverkista.png",
     color: "from-slate-400 to-slate-600",
     borderColor: "border-slate-500",
     shadowColor: "shadow-slate-700/40",
-    description: "En glänsande silverlåda med bra belöningar.",
+    description: "En glänsande silverkista med bra belöningar.",
   },
   gold: {
-    label: "Guldlåda",
+    label: "Guldkista",
     emoji: "🏆",
+    image: "/content/guldkista.png",
     color: "from-yellow-400 to-amber-500",
     borderColor: "border-yellow-500",
     shadowColor: "shadow-yellow-600/40",
-    description: "En praktfull guldlåda med de bästa belöningarna!",
+    description: "En praktfull guldkista med de bästa belöningarna!",
+  },
+  ruby: {
+    label: "Rubinkista",
+    emoji: "💎",
+    image: "/content/rubinkista.png",
+    color: "from-red-500 to-red-700",
+    borderColor: "border-red-600",
+    shadowColor: "shadow-red-900/40",
+    description: "En sällsynt rubinkista med stora belöningar!",
+  },
+  diamond: {
+    label: "Diamantkista",
+    emoji: "💠",
+    image: "/content/diamantkista.png",
+    color: "from-sky-300 to-blue-500",
+    borderColor: "border-sky-400",
+    shadowColor: "shadow-blue-700/40",
+    description: "En makalös diamantkista med enorma belöningar!",
+  },
+  emerald: {
+    label: "Smaragdkista",
+    emoji: "🟢",
+    image: "/content/smaragdkista.png",
+    color: "from-emerald-500 to-green-700",
+    borderColor: "border-emerald-600",
+    shadowColor: "shadow-green-900/40",
+    description: "Den legendariska smaragdkistan med de allra bästa belöningarna!",
   },
 };
 
@@ -238,9 +272,17 @@ export function chestsEarnedFromExercises(
   return earned;
 }
 
-/** 15% chance to get a mystery box reward. Returns null if no box. */
-export function rollMysteryBox(badges: string[]): MysteryBoxReward | null {
-  if (Math.random() > MYSTERY_BOX_CHANCE) return null;
+/** Returns mystery box chance based on how many exercises completed (higher early on). */
+function getMysteryBoxChance(exercisesCompleted: number): number {
+  if (exercisesCompleted < 3)  return 0.50; // 50% för de tre första
+  if (exercisesCompleted < 8)  return 0.35; // 35% för övning 3–7
+  if (exercisesCompleted < 15) return 0.22; // 22% för övning 8–14
+  return MYSTERY_BOX_CHANCE;                // 15% normalt
+}
+
+/** Rolls for a mystery box reward. Pass exercisesCompleted for higher early-game chance. */
+export function rollMysteryBox(badges: string[], exercisesCompleted = 99): MysteryBoxReward | null {
+  if (Math.random() > getMysteryBoxChance(exercisesCompleted)) return null;
 
   const roll = Math.random();
   if (roll < 0.5) {
@@ -252,11 +294,11 @@ export function rollMysteryBox(badges: string[]): MysteryBoxReward | null {
       description: `+${pts} bonuspoäng!`,
     };
   } else if (roll < 0.75) {
-    // Wood chest
+    // Bronze chest
     return {
       type: "chest",
       chestType: "wood",
-      description: "En trälåda!",
+      description: "En bronskista!",
     };
   } else {
     // Badge (pick one the student doesn't have yet)
@@ -310,7 +352,7 @@ export function openSilverChest(badges: string[]): {
   const desc = [
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
-    bonusChest ? "Bonus: Trälåda!" : null,
+    bonusChest ? "Bonus: Bronskista!" : null,
   ]
     .filter(Boolean)
     .join(" • ");
@@ -340,7 +382,7 @@ export function openGoldChest(badges: string[]): {
   const desc = [
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
-    bonusChest ? "Bonus: Silverlåda!" : null,
+    bonusChest ? "Bonus: Silverkista!" : null,
   ]
     .filter(Boolean)
     .join(" • ");
@@ -351,6 +393,69 @@ export function openGoldChest(badges: string[]): {
     bonusChest,
     description: desc,
   };
+}
+
+/** Compute chest rewards when opening a ruby chest. */
+export function openRubyChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: Chest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 201) + 300; // 300-500
+  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = Math.random() < 0.4 ? makeChest("silver") : undefined;
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    bonusChest ? "Bonus: Silverkista!" : null,
+  ].filter(Boolean).join(" • ");
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Compute chest rewards when opening a diamond chest. */
+export function openDiamondChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: Chest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 401) + 500; // 500-900
+  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = Math.random() < 0.4 ? makeChest("gold") : undefined;
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    bonusChest ? "Bonus: Guldkista!" : null,
+  ].filter(Boolean).join(" • ");
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Compute chest rewards when opening an emerald chest. */
+export function openEmeraldChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: Chest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 501) + 1000; // 1000-1500
+  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = Math.random() < 0.5 ? makeChest("ruby") : undefined;
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    bonusChest ? "Bonus: Rubinkista!" : null,
+  ].filter(Boolean).join(" • ");
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
 /** Default gamification data. */

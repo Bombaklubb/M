@@ -14,7 +14,7 @@ const EMO = `${DB}/fun-emoji/svg`;    // spöket
 
 export const AVATARS: Avatar[] = [
   { id: "ninja",      emoji: "🥷",  name: "Ninjan",
-    image: `${PIX}?seed=Ninjan&backgroundColor=1e1b4b&backgroundType=gradientLinear&radius=50` },
+    image: `${ADV}?seed=Ninjan&backgroundColor=1e1b4b&backgroundType=gradientLinear&radius=50` },
   { id: "wizard",     emoji: "🧙",  name: "Trollkarlen",
     image: `${ADV}?seed=Trollkarlen&backgroundColor=4a1d96&backgroundType=gradientLinear&radius=50` },
   { id: "fox",        emoji: "🦊",  name: "Räven",

@@ -1,28 +1,32 @@
 "use client";
+
 import Link from "next/link";
 import ProgressBar from "./ProgressBar";
 import type { ModuleProgress, Stage } from "@/lib/types";
 import { MagicCard } from "@/components/magicui/magic-card";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { NumberTicker } from "@/components/magicui/number-ticker";
+
 interface ModuleCardProps {
   id: string;
   title: string;
   description: string;
   icon: string;
-  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel";
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "spel";
   stage: Stage;
   progress: ModuleProgress | null;
   locked: boolean;
   prevModuleTitle: string | null;
   isFinalTest?: boolean;
 }
+
 const stageBeamColors: Record<string, [string, string]> = {
   lagstadiet:    ["#4ade80", "#22c55e"],
   mellanstadiet: ["#60a5fa", "#3b82f6"],
   hogstadiet:    ["#c084fc", "#a855f7"],
   gymnasiet:     ["#9ca3af", "#6b7280"],
 };
+
 function IconCheck({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
@@ -30,6 +34,7 @@ function IconCheck({ className = "w-5 h-5" }: { className?: string }) {
     </svg>
   );
 }
+
 function IconLock({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -38,6 +43,7 @@ function IconLock({ className = "w-5 h-5" }: { className?: string }) {
     </svg>
   );
 }
+
 function IconTrophy({ className = "w-7 h-7" }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -49,6 +55,7 @@ function IconTrophy({ className = "w-7 h-7" }: { className?: string }) {
     </svg>
   );
 }
+
 function IconStar({ className = "w-4 h-4" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -56,6 +63,7 @@ function IconStar({ className = "w-4 h-4" }: { className?: string }) {
     </svg>
   );
 }
+
 const kindLabels: Record<string, { label: string; icon: React.ReactNode }> = {
   grammar: {
     label: "Grammatik",
@@ -73,15 +81,12 @@ const kindLabels: Record<string, { label: string; icon: React.ReactNode }> = {
     label: "Ordsökning",
     icon: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>,
   },
-  crossword: {
-    label: "Korsord",
-    icon: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h7" /></svg>,
-  },
   spel: {
     label: "Spel",
     icon: <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
   },
 };
+
 export default function ModuleCard({
   id,
   title,
@@ -98,6 +103,7 @@ export default function ModuleCard({
   const pct = progress?.completed ? 100 : 0;
   const beamColors = stageBeamColors[stage.id] ?? ["#6366f1", "#a855f7"];
   const kindInfo = kindLabels[kind];
+
   // ── Locked ───────────────────────────────────────────────────────────────────
   if (locked) {
     return (
@@ -121,6 +127,7 @@ export default function ModuleCard({
       </div>
     );
   }
+
   // ── Final Test ────────────────────────────────────────────────────────────────
   if (isFinalTest) {
     return (
@@ -164,6 +171,7 @@ export default function ModuleCard({
                   : <IconTrophy className="w-7 h-7" />
                 }
               </div>
+
               {/* Content */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
@@ -181,7 +189,9 @@ export default function ModuleCard({
                     </span>
                   )}
                 </div>
+
                 <p className="text-sm text-amber-700 dark:text-amber-300 mt-1 font-medium">{description}</p>
+
                 <div className="mt-3 flex items-center gap-3">
                   <div className="flex-1">
                     <ProgressBar value={pct} colorClass="bg-gradient-to-r from-amber-400 to-yellow-400" />
@@ -204,6 +214,7 @@ export default function ModuleCard({
       </Link>
     );
   }
+
   // ── Standard card ─────────────────────────────────────────────────────────────
   return (
     <Link href={href} className="block group h-full">
@@ -223,6 +234,7 @@ export default function ModuleCard({
         {progress?.completed && (
           <BorderBeam size={180} duration={10} colorFrom={beamColors[0]} colorTo={beamColors[1]} borderWidth={2} />
         )}
+
         <div className="flex items-center gap-4">
           {/* Icon */}
           <div
@@ -242,6 +254,7 @@ export default function ModuleCard({
               : <span>{icon}</span>
             }
           </div>
+
           {/* Content */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
@@ -259,7 +272,9 @@ export default function ModuleCard({
                 <span>{kindInfo?.label}</span>
               </span>
             </div>
+
             <p className="text-sm text-indigo-400 dark:text-gray-400 mt-1 truncate font-medium">{description}</p>
+
             <div className="mt-3 flex items-center gap-3">
               <div className="flex-1">
                 <ProgressBar

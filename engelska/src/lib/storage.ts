@@ -1,9 +1,20 @@
 import type { StudentData, StageId, ModuleProgress, StageProgress, HeroConfig, GamificationData } from "./types";
 import { defaultGamificationData } from "./gamification";
 
-const GAMIFICATION_KEY = "engelskajakten_gamification";
+// ─── Storage keys ─────────────────────────────────────────────────────────────
 
-const STORAGE_KEY = "engelskajakten_student";
+/** Tracks which student is currently logged in (just the name, lowercased). */
+const ACTIVE_KEY = "engelskajakten_active";
+
+/** Per-name key for student progress. */
+function studentKey(name: string) {
+  return `engelskajakten_student_${name.toLowerCase().trim()}`;
+}
+
+/** Per-name key for gamification data. */
+function gamKey(name: string) {
+  return `engelskajakten_gamification_${name.toLowerCase().trim()}`;
+}
 
 // ─── Default structures ───────────────────────────────────────────────────────
 
@@ -14,7 +25,6 @@ function emptyStageProgress(stageId: StageId): StageProgress {
     readingModules: {},
     spellingModules: {},
     wordsearchModules: {},
-    crosswordModules: {},
     spelModules: {},
   };
 }
@@ -40,9 +50,31 @@ function defaultStudentData(name: string): StudentData {
 export function loadStudent(): StudentData | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    return JSON.parse(raw) as StudentData;
+    // Read the active session name
+    const activeName = localStorage.getItem(ACTIVE_KEY);
+    if (activeName) {
+      const raw = localStorage.getItem(studentKey(activeName));
+      if (raw) return JSON.parse(raw) as StudentData;
+    }
+
+    // ── Migration from old single-key system ──────────────────────────────────
+    const oldStudentRaw = localStorage.getItem("engelskajakten_student");
+    if (oldStudentRaw) {
+      const data = JSON.parse(oldStudentRaw) as StudentData;
+      // Save under new name-based key
+      localStorage.setItem(studentKey(data.name), oldStudentRaw);
+      localStorage.setItem(ACTIVE_KEY, data.name.toLowerCase().trim());
+      localStorage.removeItem("engelskajakten_student");
+      // Also migrate gamification
+      const oldGam = localStorage.getItem("engelskajakten_gamification");
+      if (oldGam) {
+        localStorage.setItem(gamKey(data.name), oldGam);
+        localStorage.removeItem("engelskajakten_gamification");
+      }
+      return data;
+    }
+
+    return null;
   } catch {
     return null;
   }
@@ -51,19 +83,46 @@ export function loadStudent(): StudentData | null {
 export function saveStudent(data: StudentData): void {
   if (typeof window === "undefined") return;
   data.lastActive = new Date().toISOString();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  localStorage.setItem(studentKey(data.name), JSON.stringify(data));
+  localStorage.setItem(ACTIVE_KEY, data.name.toLowerCase().trim());
 }
 
+/**
+ * Logs in a student by name.
+ * - If a student with this name already exists on this device → restores their data.
+ * - Otherwise → creates a fresh student.
+ */
 export function createStudent(name: string, avatar?: string): StudentData {
-  const data = defaultStudentData(name.trim());
+  if (typeof window === "undefined") return defaultStudentData(name);
+
+  const trimmed = name.trim();
+  const existingRaw = localStorage.getItem(studentKey(trimmed));
+  if (existingRaw) {
+    try {
+      const existing = JSON.parse(existingRaw) as StudentData;
+      // Update avatar only if the student explicitly chose a new one
+      if (avatar) existing.avatar = avatar;
+      saveStudent(existing);
+      return existing;
+    } catch {
+      // Corrupt data – fall through to create fresh
+    }
+  }
+
+  // New student
+  const data = defaultStudentData(trimmed);
   if (avatar) data.avatar = avatar;
   saveStudent(data);
   return data;
 }
 
+/**
+ * Logs out the current student.
+ * Clears the active session but KEEPS the student's progress data on this device.
+ */
 export function clearStudent(): void {
   if (typeof window === "undefined") return;
-  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem(ACTIVE_KEY);
 }
 
 export function saveHero(hero: HeroConfig): void {
@@ -78,7 +137,7 @@ export function saveHero(hero: HeroConfig): void {
 export function getModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel",
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "spel",
   moduleId: string
 ): ModuleProgress | null {
   const stage = data.stages[stageId];
@@ -86,16 +145,15 @@ export function getModuleProgress(
     kind === "grammar" ? stage.grammarModules
     : kind === "reading" ? stage.readingModules
     : kind === "spelling" ? (stage.spellingModules ?? {})
-    : kind === "wordsearch" ? (stage.wordsearchModules ?? {})
     : kind === "spel" ? (stage.spelModules ?? {})
-    : (stage.crosswordModules ?? {});
+    : (stage.wordsearchModules ?? {});
   return map[moduleId] ?? null;
 }
 
 export function saveModuleProgress(
   data: StudentData,
   stageId: StageId,
-  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "crossword" | "spel",
+  kind: "grammar" | "reading" | "spelling" | "wordsearch" | "spel",
   moduleId: string,
   points: number,
   completed: boolean
@@ -103,15 +161,13 @@ export function saveModuleProgress(
   const stage = data.stages[stageId];
   if (!stage.spellingModules) stage.spellingModules = {};
   if (!stage.wordsearchModules) stage.wordsearchModules = {};
-  if (!stage.crosswordModules) stage.crosswordModules = {};
   if (!stage.spelModules) stage.spelModules = {};
   const map =
     kind === "grammar" ? stage.grammarModules
     : kind === "reading" ? stage.readingModules
     : kind === "spelling" ? stage.spellingModules
-    : kind === "wordsearch" ? stage.wordsearchModules
     : kind === "spel" ? stage.spelModules
-    : stage.crosswordModules;
+    : stage.wordsearchModules;
   const existing = map[moduleId];
   const prevPoints = existing?.points ?? 0;
   const addedPoints = Math.max(0, points - prevPoints);
@@ -134,7 +190,9 @@ export function saveModuleProgress(
 export function loadGamification(): GamificationData {
   if (typeof window === "undefined") return defaultGamificationData();
   try {
-    const raw = localStorage.getItem(GAMIFICATION_KEY);
+    const activeName = localStorage.getItem(ACTIVE_KEY);
+    if (!activeName) return defaultGamificationData();
+    const raw = localStorage.getItem(gamKey(activeName));
     if (!raw) return defaultGamificationData();
     return JSON.parse(raw) as GamificationData;
   } catch {
@@ -144,12 +202,16 @@ export function loadGamification(): GamificationData {
 
 export function saveGamification(data: GamificationData): void {
   if (typeof window === "undefined") return;
-  localStorage.setItem(GAMIFICATION_KEY, JSON.stringify(data));
+  const activeName = localStorage.getItem(ACTIVE_KEY);
+  if (!activeName) return;
+  localStorage.setItem(gamKey(activeName), JSON.stringify(data));
 }
 
 export function clearGamification(): void {
   if (typeof window === "undefined") return;
-  localStorage.removeItem(GAMIFICATION_KEY);
+  const activeName = localStorage.getItem(ACTIVE_KEY);
+  if (!activeName) return;
+  localStorage.removeItem(gamKey(activeName));
 }
 
 // ─── Export / Import progress ─────────────────────────────────────────────────

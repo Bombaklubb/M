@@ -247,7 +247,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ have left already — her coat is gone.",
           "answer": "must",
-          "hint": "'must have' = nästan säkert att något hände (logisk slutledning).",
+          "hint": "Modal + have + particip: vilket modalverb passar för logisk slutledning/säkerhet?",
           "explanation": "'Must have + past participle' = logical deduction about the past."
         },
         {
@@ -269,7 +269,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ have worried so much — everything is fine!",
           "answer": "needn't",
-          "hint": "'needn't have' = det var onödigt (det du gjorde var inte nödvändigt).",
+          "hint": "Tänk: 'needn't have' vs 'didn't need to' – vilket antyder att du faktiskt gjorde det?",
           "explanation": "'Needn't have + past participle' = it wasn't necessary (but you did it)."
         },
         {
@@ -337,7 +337,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ have been lying — the evidence proved it.",
           "answer": "couldn't",
-          "hint": "'couldn't have' = det var omöjligt att något hände.",
+          "hint": "Modal + have + particip: vilket modalverb visar omöjlighet i dåtid?",
           "explanation": "'Couldn't have + past participle' = it was impossible."
         },
         {
@@ -359,7 +359,7 @@
           "type": "fill-in-blank",
           "sentence": "It ___ rain later — bring an umbrella just in case.",
           "answer": "might",
-          "hint": "'might' = osäker möjlighet.",
+          "hint": "Osäker möjlighet: vilket modalverb används för 'kanske' eller 'möjligen'?",
           "explanation": "'Might' expresses uncertain possibility."
         },
         {
@@ -409,7 +409,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ (have to) wear a suit — it's a casual event.",
           "answer": "don't have to",
-          "hint": "'don't have to' = inte nödvändigt (ej förbjudet).",
+          "hint": "Tänk: 'don't have to' = inte nödvändigt, 'must not' = förbjudet. Vilket passar?",
           "explanation": "'Don't have to' = not necessary (different from 'mustn't' which is prohibition)."
         },
         {
@@ -484,7 +484,7 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would reconsider. (Subjunctive/formal)",
           "answer": "were",
-          "hint": "Subjunktiv med 'were': If I were you… (formellt, för alla person).",
+          "hint": "Konjunktiv med 'If I were you': subjunktiv används för hypotetiska situationer. Vilket pronomen + form?",
           "explanation": "Subjunctive: 'were' for all persons in formal/literary conditional: If I were you."
         },
         {
@@ -528,7 +528,7 @@
           "type": "fill-in-blank",
           "sentence": "I would like to ___ my deepest gratitude for your assistance.",
           "answer": "express",
-          "hint": "Formellt uttryck: 'would like to express my deepest gratitude'.",
+          "hint": "Formellt uttryck: 'I would like to ___ my deepest gratitude' – vilket verb hör ihop?",
           "explanation": "Formal expression: 'I would like to express my deepest gratitude'."
         },
         {
@@ -602,7 +602,7 @@
           "type": "fill-in-blank",
           "sentence": "I would be most grateful if you ___ (could) forward the document at your earliest convenience.",
           "answer": "could",
-          "hint": "Formell förfrågan med 'if you could...' + 'at your earliest convenience'.",
+          "hint": "Formell förfrågan: 'I would be most grateful if you ___ forward...' – vilket modalverb?",
           "explanation": "Formal request: I would be most grateful if you could + base verb."
         },
         {
@@ -939,7 +939,7 @@
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
           "answer": "be",
-          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform"
         },
         {
           "id": "gym-g-advanced-6",
@@ -1623,7 +1623,7 @@
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
           "answer": "be",
-          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform"
         },
         {
           "id": "gym-g-advanced4-3",
@@ -1992,7 +1992,7 @@
           "type": "fill-in-blank",
           "sentence": "The company is ___ to be successful.",
           "answer": "said",
-          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to be...'. Verbet 'say' → 'is said'."
+          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to...'"
         },
         {
           "id": "gym-g-mixed-4",
@@ -2038,7 +2038,7 @@
           "type": "fill-in-blank",
           "sentence": "The issue needs ___ (address) urgently.",
           "answer": "to be addressed",
-          "hint": "Passiv infinitiv: 'needs to be addressed'. Strukturen 'need + to be + particip' visar att något behöver göras (av någon annan)."
+          "hint": "Passiv infinitiv: 'needs + to be + perfektparticip' – vad är particip av 'address'?"
         },
         {
           "id": "gym-g-mixed-10",
@@ -2077,7 +2077,7 @@
           "type": "fill-in-blank",
           "sentence": "He is ___ to be honest.",
           "answer": "thought",
-          "hint": "Passiv rapportering: 'People think he is honest' → 'He is thought to be honest'. Verbet 'think' → 'is thought to be'."
+          "hint": "Passiv rapportering: 'People think he is...' → 'He is ___ to be...' – vilket verb?"
         },
         {
           "id": "gym-g-mixed-15",
@@ -2095,7 +2095,7 @@
           "type": "fill-in-blank",
           "sentence": "The data seems ___ (be) incorrect.",
           "answer": "to be",
-          "hint": "'Seem/appear' + infinitiv: 'seems to be', 'appears to be'. Dessa länkverb följs av 'to' + infinitiv."
+          "hint": "'Seem/appear' + infinitiv: vilket ord inleder infinitiv?"
         },
         {
           "id": "gym-g-mixed-17",
@@ -2133,6 +2133,377 @@
         "Klyvsats: 'It is the methodology that needs revision.' – lyfter fram viktigt element.",
         "Modala perfektformer: 'should have', 'could have', 'must have' – slutledning om dåtid.",
         "Tips: I avancerat engelskt skrivande varierar du strukturerna – undvik alltid börja med 'I'."
+      ]
+    },
+    {
+      "id": "gym-sluttest",
+      "title": "Sluttest – Grammatik",
+      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är sluttestet för hela grammatikdelen!",
+        "Frågorna täcker allt du tränat på: avancerade verb tider, modalverb, konjunktiv, diskursmarkörer, inversion och formellt språk.",
+        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-st-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'You ___ have told me earlier!' (förebråelse om det förflutna)",
+          "options": [
+            "must",
+            "should",
+            "would",
+            "might"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Should have' + past participle uttrycker förebråelse om något som borde ha gjorts."
+        },
+        {
+          "id": "gym-st-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'By now, she ___ have arrived.' (säkerhet om nuet)",
+          "options": [
+            "would",
+            "could",
+            "must",
+            "might"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Must have' + past participle uttrycker säker slutledning om nuet eller det förflutna."
+        },
+        {
+          "id": "gym-st-3",
+          "type": "multiple-choice",
+          "question": "Konjunktiv: 'It is essential that he ___ present at the meeting.'",
+          "options": [
+            "is",
+            "be",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1,
+          "explanation": "Konjunktiv (subjunctive) används efter 'it is essential/important/vital that'. Formen är grundform."
+        },
+        {
+          "id": "gym-st-4",
+          "type": "multiple-choice",
+          "question": "Konjunktiv: 'If I ___ you, I would apologize immediately.'",
+          "options": [
+            "am",
+            "was",
+            "were",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "I hypotetiska konditionalis (typ 2) används 'were' för alla personer (formellt). If I were you."
+        },
+        {
+          "id": "gym-st-5",
+          "type": "multiple-choice",
+          "question": "Diskursmarkör (kontrast): '___, many people struggle with mental health.'",
+          "options": [
+            "However",
+            "Nonetheless",
+            "Nowadays",
+            "In conclusion"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Nowadays' introducerar en tidsmässig kontext om nutiden. Nowadays, many people struggle..."
+        },
+        {
+          "id": "gym-st-6",
+          "type": "multiple-choice",
+          "question": "Diskursmarkör: 'The project was well planned. ___, it failed to meet its deadlines.'",
+          "options": [
+            "Furthermore",
+            "Consequently",
+            "Nevertheless",
+            "Therefore"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Nevertheless' uttrycker kontrast/trots allt. Det project misslyckades trots god planering."
+        },
+        {
+          "id": "gym-st-7",
+          "type": "multiple-choice",
+          "question": "Inversion: 'Only then ___ she realize her mistake.'",
+          "options": [
+            "did",
+            "was",
+            "had",
+            "could"
+          ],
+          "correctIndex": 0,
+          "explanation": "Negativ inversion med 'Only then': Only then + hjälpverb + subjekt. Only then did she realize."
+        },
+        {
+          "id": "gym-st-8",
+          "type": "multiple-choice",
+          "question": "Passiv – Future Perfect: 'The contract ___ by the end of the week.'",
+          "options": [
+            "will be signed",
+            "will sign",
+            "is signing",
+            "signs"
+          ],
+          "correctIndex": 0,
+          "explanation": "Passiv i futurum: will be + past participle. The contract will be signed."
+        },
+        {
+          "id": "gym-st-9",
+          "type": "multiple-choice",
+          "question": "Blandat konditionalis: 'If she ___ the job, she would be working there now.'",
+          "options": [
+            "got",
+            "had got",
+            "gets",
+            "get"
+          ],
+          "correctIndex": 1,
+          "explanation": "Blandat konditionalis: If + past perfect (om det förflutna), would + nu (om nuet)."
+        },
+        {
+          "id": "gym-st-10",
+          "type": "multiple-choice",
+          "question": "Perfekt infinitiv: 'She appears ___ the answer all along.'",
+          "options": [
+            "to know",
+            "to have known",
+            "knowing",
+            "to be knowing"
+          ],
+          "correctIndex": 1,
+          "explanation": "'To have known' (perfekt infinitiv) indikerar att kunskapen gäller ett förflutet tillstånd."
+        },
+        {
+          "id": "gym-st-11",
+          "type": "multiple-choice",
+          "question": "Konjunktiv i indirekt tal: 'He demanded that she ___ on time.'",
+          "options": [
+            "is",
+            "was",
+            "be",
+            "were"
+          ],
+          "correctIndex": 2,
+          "explanation": "Konjunktiv efter 'demand that': He demanded that she be on time. (grundform)"
+        },
+        {
+          "id": "gym-st-12",
+          "type": "multiple-choice",
+          "question": "Relativklausul: 'The man, ___ I met yesterday, is a doctor.'",
+          "options": [
+            "who",
+            "whom",
+            "which",
+            "whose"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Whom' används som objekt i relativsatsen (formellt). The man, whom I met..."
+        },
+        {
+          "id": "gym-st-13",
+          "type": "multiple-choice",
+          "question": "Relativklausul: 'The film, ___ I found rather dull, won several awards.'",
+          "options": [
+            "who",
+            "whom",
+            "which",
+            "whose"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Which' används om saker/fenomen (ej personer). The film, which I found dull..."
+        },
+        {
+          "id": "gym-st-14",
+          "type": "multiple-choice",
+          "question": "Emfatisk 'do': 'I ___ want to help, but I was too busy.'",
+          "options": [
+            "do",
+            "did",
+            "have",
+            "was"
+          ],
+          "correctIndex": 1,
+          "explanation": "Emfatisk 'did' förstärker ett påstående om det förflutna. I did want to help."
+        },
+        {
+          "id": "gym-st-15",
+          "type": "multiple-choice",
+          "question": "Ellips/substitution: 'John likes jazz and so ___ Mary.'",
+          "options": [
+            "does",
+            "do",
+            "is",
+            "likes"
+          ],
+          "correctIndex": 0,
+          "explanation": "'So does' används för att bekräfta att samma sak gäller (med he/she/it). So does Mary."
+        },
+        {
+          "id": "gym-st-16",
+          "type": "multiple-choice",
+          "question": "Future Perfect: 'By this time tomorrow, she ___ her exam.'",
+          "options": [
+            "will finish",
+            "will have finished",
+            "finishes",
+            "is finishing"
+          ],
+          "correctIndex": 1,
+          "explanation": "Future Perfect: will have + past participle. She will have finished her exam."
+        },
+        {
+          "id": "gym-st-17",
+          "type": "multiple-choice",
+          "question": "Typ 3-konditionalis: 'Had I known earlier, I ___ differently.'",
+          "options": [
+            "would act",
+            "would have acted",
+            "had acted",
+            "acted"
+          ],
+          "correctIndex": 1,
+          "explanation": "Typ 3: If I had known = Had I known. Följdsats: would have + past participle."
+        },
+        {
+          "id": "gym-st-18",
+          "type": "multiple-choice",
+          "question": "Nominalisering: 'The ___ of the new policy caused controversy.' (introduce)",
+          "options": [
+            "introduce",
+            "introduction",
+            "introducing",
+            "introduced"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nominalisering: verbet 'introduce' → substantivet 'introduction'. Typiskt i akademiskt skrivande."
+        },
+        {
+          "id": "gym-st-19",
+          "type": "multiple-choice",
+          "question": "Modal past – omöjlighet: 'She ___ have forgotten – she never forgets anything.'",
+          "options": [
+            "can't",
+            "mustn't",
+            "shouldn't",
+            "won't"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Can't have' + past participle uttrycker att något omöjligen kan ha hänt."
+        },
+        {
+          "id": "gym-st-20",
+          "type": "multiple-choice",
+          "question": "Inversion: 'Never ___ I seen such a beautiful painting.'",
+          "options": [
+            "have",
+            "had",
+            "did",
+            "was"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Never have I' – inversion med present perfect. Never have I seen such beauty."
+        },
+        {
+          "id": "gym-st-21",
+          "type": "multiple-choice",
+          "question": "Cleft-mening: 'It was ___ who first described the theory.'",
+          "options": [
+            "Einstein",
+            "him",
+            "he",
+            "himself"
+          ],
+          "correctIndex": 0,
+          "explanation": "Cleft-meningar lyfter fram ett specifikt element. It was Einstein who first described it."
+        },
+        {
+          "id": "gym-st-22",
+          "type": "multiple-choice",
+          "question": "Diskursmarkör (slutsats): '___, we must take immediate action on climate change.'",
+          "options": [
+            "Furthermore",
+            "In contrast",
+            "To conclude",
+            "Likewise"
+          ],
+          "correctIndex": 2,
+          "explanation": "'To conclude' signalerar att en slutsats presenteras. Typisk markör i formella texter."
+        },
+        {
+          "id": "gym-st-23",
+          "type": "fill-in-blank",
+          "sentence": "It is vital that every student ___ present at the ceremony.",
+          "answer": "be",
+          "explanation": "Konjunktiv efter 'it is vital that': grundform av verbet. Be present."
+        },
+        {
+          "id": "gym-st-24",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ in charge, I would change everything. (konjunktiv)",
+          "answer": "were",
+          "explanation": "I hypotetiska konditionalis används 'were' för alla personer (formellt). If I were."
+        },
+        {
+          "id": "gym-st-25",
+          "type": "fill-in-blank",
+          "sentence": "By next year, she will ___ completed the course.",
+          "answer": "have",
+          "explanation": "Future Perfect: will have + past participle. Will have completed."
+        },
+        {
+          "id": "gym-st-26",
+          "type": "fill-in-blank",
+          "sentence": "The problem, ___ affects millions of people, needs urgent attention.",
+          "answer": "which",
+          "explanation": "'Which' används i icke-restriktiv relativsats om ett fenomen/sak."
+        },
+        {
+          "id": "gym-st-27",
+          "type": "fill-in-blank",
+          "sentence": "Only when she left ___ he realize how much she meant to him.",
+          "answer": "did",
+          "explanation": "Inversion med 'only when': Only when + sats + hjälpverb + subjekt. Only when she left did he realize."
+        },
+        {
+          "id": "gym-st-28",
+          "type": "fill-in-blank",
+          "sentence": "Not only ___ she win the race, but she also set a new record.",
+          "answer": "did",
+          "explanation": "Inversion med 'not only': Not only did she win... (hjälpverb + subjekt)"
+        },
+        {
+          "id": "gym-st-29",
+          "type": "fill-in-blank",
+          "sentence": "She demanded that he ___ her an explanation immediately.",
+          "answer": "give",
+          "explanation": "Konjunktiv efter 'demand that': She demanded that he give. (grundform, ej gives)"
+        },
+        {
+          "id": "gym-st-30",
+          "type": "fill-in-blank",
+          "sentence": "The report must ___ submitted by all students before Friday.",
+          "answer": "be",
+          "explanation": "Passiv modal konstruktion: must + be + past participle. Must be submitted."
+        },
+        {
+          "id": "gym-st-31",
+          "type": "fill-in-blank",
+          "sentence": "He seems to ___ known about this for years. (perfekt infinitiv)",
+          "answer": "have",
+          "explanation": "Perfekt infinitiv: to + have + past participle. To have known."
+        },
+        {
+          "id": "gym-st-32",
+          "type": "fill-in-blank",
+          "sentence": "Such was her talent ___ she won every competition she entered.",
+          "answer": "that",
+          "explanation": "'Such...that' är en resultatkonstruktion. Such was her talent that she won everything."
+        }
       ]
     }
   ],

@@ -121,27 +121,6 @@ export interface WordSearchModule {
   words: WordSearchWord[];
 }
 
-// ─── Crossword ────────────────────────────────────────────────────────────────
-
-export interface CrosswordClue {
-  number: number;
-  clue: string;
-  answer: string;
-  row: number;
-  col: number;
-  direction: "across" | "down";
-}
-
-export interface CrosswordModule {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  pointsRequired: number;
-  bonusPoints: number;
-  clues: CrosswordClue[];
-}
-
 // ─── Coin Game (Samla mynt) ───────────────────────────────────────────────────
 
 export interface CoinGameQuestion {
@@ -167,7 +146,6 @@ export interface StageContent {
   reading: ReadingModule[];
   spelling?: SpellingModule[];
   wordsearch?: WordSearchModule[];
-  crossword?: CrosswordModule[];
   spel?: CoinGameModule[];
 }
 
@@ -187,8 +165,7 @@ export interface StageProgress {
   readingModules: Record<string, ModuleProgress>;
   spellingModules: Record<string, ModuleProgress>;
   wordsearchModules: Record<string, ModuleProgress>;
-  crosswordModules: Record<string, ModuleProgress>;
-  spelModules: Record<string, ModuleProgress>;
+  spelModules?: Record<string, ModuleProgress>;
 }
 
 export type SkinTone = "light" | "light_brown" | "dark";
@@ -212,7 +189,7 @@ export interface StudentData {
 
 // ─── Gamification ─────────────────────────────────────────────────────────────
 
-export type ChestType = "wood" | "silver" | "gold";
+export type ChestType = "wood" | "silver" | "gold" | "ruby" | "diamond" | "emerald";
 
 export interface Chest {
   id: string;

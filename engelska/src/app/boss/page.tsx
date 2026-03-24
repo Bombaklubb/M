@@ -194,7 +194,7 @@ export default function BossPage() {
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex items-start gap-2">
                 <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
-                Vinn: Bonuspoäng + märket "Bossbesegrare" + trälåda!
+                Vinn: Bonuspoäng + märket "Bossbesegrare" + bronskista!
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-orange-500 mt-0.5 flex-shrink-0">↺</span>
@@ -388,8 +388,8 @@ export default function BossPage() {
                 <p className="text-xs text-green-500">Bossbesegrare</p>
               </div>
               <div className="bg-white rounded-2xl p-3 border border-green-200">
-                <p className="text-2xl">📦</p>
-                <p className="text-xs text-green-500">Trälåda!</p>
+                <img src="/content/bronskista.png" alt="Bronskista" className="w-8 h-8 mx-auto object-contain" />
+                <p className="text-xs text-green-500">Bronskista!</p>
               </div>
             </div>
 
