@@ -252,7 +252,7 @@ export default function WorldPage({ params }: Props) {
               <p>Kunde inte ladda innehåll.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-10">
               {(
                 activeTab === "grammar"    ? content.grammar
                 : activeTab === "reading" ? content.reading

@@ -129,7 +129,7 @@ export default function ModuleCard({
     return (
       <Link href={href} className="block group h-full">
         <div
-          className="h-full rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer"
+          className="h-full rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden"
           style={{
             background: progress?.completed
               ? "linear-gradient(135deg, #f59e0b, #fbbf24, #f97316, #eab308, #f59e0b)"
@@ -141,11 +141,12 @@ export default function ModuleCard({
               : "0 4px 0 0 rgba(245,158,11,0.25), 0 8px 20px -4px rgba(245,158,11,0.2)",
           }}
         >
+          <BorderBeam size={300} duration={5} colorFrom="#fef08a" colorTo="#f97316" borderWidth={3} />
           <div
-            className={`h-full rounded-[22px] px-5 py-5 ${
+            className={`h-full rounded-[22px] px-5 py-4 ${
               progress?.completed
-                ? "bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/80 dark:to-yellow-950/60"
-                : "bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-850"
+                ? "bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950/80 dark:to-yellow-950/60"
+                : "bg-gradient-to-br from-amber-50 via-yellow-50/70 to-orange-50 dark:from-gray-800 dark:via-amber-950/20 dark:to-gray-850"
             }`}
           >
             <div className="flex items-center gap-4">
