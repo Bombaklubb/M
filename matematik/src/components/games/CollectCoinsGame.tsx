@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, useAnimate } from 'motion/react';
+import { motion, useAnimate, AnimatePresence } from 'motion/react';
 import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
@@ -89,7 +89,6 @@ export default function CollectCoinsGame() {
     setSelected(null);
     setRevealed(false);
     setRunnerX(0);
-    setShake(false);
     setTimings([]);
     questionStartRef.current = Date.now();
     setPhase('playing');
@@ -173,34 +172,73 @@ export default function CollectCoinsGame() {
 
   if (phase === 'intro') {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
+      <div className="min-h-screen bg-gradient-to-b from-[#0a0920] via-[#13113a] to-[#0a0920]">
         <AppHeader />
-        <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16">
-          <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center max-w-sm">
-            <div className="text-7xl mb-4">🏃</div>
-            <h1 className="text-3xl font-black text-white mb-2">Samla mynt!</h1>
-            <p className="text-yellow-300 text-sm mb-6 leading-relaxed">
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16 pb-8">
+          <motion.div
+            initial={{ scale: 0.85, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            className="text-center w-full max-w-sm"
+          >
+            {/* Hero icon */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+              className="text-8xl mb-4 select-none"
+            >
+              🏃
+            </motion.div>
+
+            <h1 className="text-4xl font-black text-white mb-2 tracking-tight">Samla mynt!</h1>
+            <p className="text-indigo-200 text-sm mb-7 leading-relaxed max-w-xs mx-auto">
               Svara rätt och löparen springer framåt och samlar ett guldmynt.
               Svarar du fel stannar löparen och du förlorar ett liv.
             </p>
-            <div className="bg-white/10 rounded-2xl p-4 mb-6 text-sm space-y-2">
-              <div className="flex justify-between text-white/80">
-                <span>Frågor</span><span className="font-bold text-white">{exerciseCount} st</span>
+
+            {/* Stats card */}
+            <div className="bg-white/[0.07] border border-white/10 rounded-2xl p-4 mb-6 space-y-2.5">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-white/60 flex items-center gap-2">
+                  <span className="text-base">❓</span> Frågor
+                </span>
+                <span className="font-bold text-white bg-indigo-500/30 px-2.5 py-0.5 rounded-full text-xs">
+                  {exerciseCount} st
+                </span>
               </div>
-              <div className="flex justify-between text-white/80">
-                <span>Liv</span><span className="font-bold text-yellow-300">🛡️🛡️🛡️</span>
+              <div className="h-px bg-white/5" />
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-white/60 flex items-center gap-2">
+                  <span className="text-base">🛡️</span> Liv
+                </span>
+                <div className="flex gap-1">
+                  {[...Array(MAX_LIVES)].map((_, i) => (
+                    <span key={i} className="text-lg">🛡️</span>
+                  ))}
+                </div>
               </div>
-              <div className="flex justify-between text-white/80">
-                <span>Din nivå</span><span className="font-bold text-amber-400">Level {gameLevel}</span>
+              <div className="h-px bg-white/5" />
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-white/60 flex items-center gap-2">
+                  <span className="text-base">⭐</span> Din nivå
+                </span>
+                <span className="font-bold text-amber-400 text-sm">Level {gameLevel}</span>
               </div>
             </div>
+
+            {/* CTA */}
             <button
               onClick={startGame}
-              className="w-full py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-black text-lg rounded-2xl hover:opacity-90 transition active:scale-95"
+              className="w-full py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black text-xl rounded-2xl shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-[1.02] transition-all duration-200 active:scale-95 cursor-pointer"
             >
-              Starta!
+              Starta! 🚀
             </button>
-            <button onClick={() => setView('games' as any)} className="mt-4 text-indigo-300 text-sm hover:text-white transition">← Tillbaka</button>
+            <button
+              onClick={() => setView('games' as any)}
+              className="mt-4 text-indigo-300/70 text-sm hover:text-indigo-200 transition-colors duration-200 cursor-pointer"
+            >
+              ← Tillbaka
+            </button>
           </motion.div>
         </div>
       </div>
@@ -215,48 +253,73 @@ export default function CollectCoinsGame() {
     const avgTime = timings.length ? timings.reduce((a, b) => a + b, 0) / timings.length : 8;
     const xp = calculateGameXP(correct, total || 1, 0, 1, lives > 0 && correct === total, avgTime);
     const weakTopics = analyzeWeakTopics(exercises.slice(0, total), results);
+    const isPerfect = coins === total;
+    const isGood = coins >= total * 0.7;
+    const trophy = isPerfect ? '🏆' : isGood ? '🥇' : '🪙';
+    const headline = isPerfect ? 'Perfekt!' : isGood ? 'Bra jobbat!' : 'Fortsätt träna!';
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
+      <div className="min-h-screen bg-gradient-to-b from-[#0a0920] via-[#13113a] to-[#0a0920]">
         <AppHeader />
-        <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16">
-          <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center max-w-sm w-full">
-            <div className="text-6xl mb-3">{coins === total ? '🏆' : coins >= total * 0.7 ? '🥇' : '🪙'}</div>
-            <h2 className="text-2xl font-black text-white mb-1">
-              {coins === total ? 'Perfekt!' : coins >= total * 0.7 ? 'Bra jobbat!' : 'Fortsätt träna!'}
-            </h2>
-            <p className="text-yellow-300 text-sm mb-5">{coins} mynt samlade</p>
+        <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16 pb-8">
+          <motion.div
+            initial={{ scale: 0.85, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+            className="text-center w-full max-w-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.3, rotate: -15 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ type: 'spring', stiffness: 260, damping: 18, delay: 0.15 }}
+              className="text-7xl mb-3 select-none"
+            >
+              {trophy}
+            </motion.div>
 
-            <div className="grid grid-cols-2 gap-3 mb-5">
+            <h2 className="text-3xl font-black text-white mb-1 tracking-tight">{headline}</h2>
+            <p className="text-amber-400 text-sm mb-6">{coins} av {total} mynt samlade</p>
+
+            {/* Stats row */}
+            <div className="grid grid-cols-2 gap-3 mb-4">
               {[
-                { label: 'Mynt', value: coins, emoji: '🪙' },
-                { label: 'Poäng', value: score, emoji: '🎯' },
+                { label: 'Mynt', value: coins, icon: '🪙', color: 'from-amber-500/20 to-amber-600/10 border-amber-500/30' },
+                { label: 'Poäng', value: score, icon: '🎯', color: 'from-indigo-500/20 to-indigo-600/10 border-indigo-500/30' },
               ].map(s => (
-                <div key={s.label} className="bg-white/10 rounded-xl p-3 text-center">
-                  <div className="text-xl">{s.emoji}</div>
-                  <div className="text-white font-black text-lg">{s.value}</div>
-                  <div className="text-white/50 text-xs">{s.label}</div>
+                <div key={s.label} className={`bg-gradient-to-b ${s.color} border rounded-2xl p-4 text-center`}>
+                  <div className="text-2xl mb-1 select-none">{s.icon}</div>
+                  <div className="text-white font-black text-2xl">{s.value}</div>
+                  <div className="text-white/50 text-xs mt-0.5">{s.label}</div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-amber-500/20 border border-amber-400/40 rounded-xl p-4 mb-5">
-              <div className="text-amber-300 font-black text-2xl">+{xp} XP</div>
-              <div className="text-amber-200/70 text-xs">intjänat denna omgång</div>
+            {/* XP banner */}
+            <div className="bg-gradient-to-r from-amber-500/25 to-orange-500/15 border border-amber-400/30 rounded-2xl px-4 py-4 mb-4 shadow-inner">
+              <div className="text-amber-300 font-black text-3xl">+{xp} XP</div>
+              <div className="text-amber-200/60 text-xs mt-0.5">intjänat denna omgång</div>
             </div>
 
             {weakTopics.length > 0 && (
-              <div className="bg-rose-900/30 border border-rose-400/30 rounded-xl p-4 mb-5 text-left">
-                <p className="text-rose-300 font-bold text-sm mb-1">📚 Träna mer på:</p>
-                {weakTopics.map(t => (<p key={t} className="text-rose-200/80 text-xs">• {t}</p>))}
+              <div className="bg-rose-900/20 border border-rose-500/25 rounded-2xl p-4 mb-4 text-left">
+                <p className="text-rose-300 font-bold text-sm mb-2">📚 Träna mer på:</p>
+                {weakTopics.map(t => (
+                  <p key={t} className="text-rose-200/70 text-xs leading-relaxed">• {t}</p>
+                ))}
               </div>
             )}
 
             <div className="flex gap-3">
-              <button onClick={startGame} className="flex-1 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold rounded-xl hover:opacity-90 transition active:scale-95">
+              <button
+                onClick={startGame}
+                className="flex-1 py-3.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-bold rounded-xl shadow-md shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-[1.02] transition-all duration-200 active:scale-95 cursor-pointer"
+              >
                 Spela igen
               </button>
-              <button onClick={() => setView('games' as any)} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition active:scale-95">
+              <button
+                onClick={() => setView('games' as any)}
+                className="flex-1 py-3.5 bg-white/[0.07] border border-white/10 text-white/80 font-bold rounded-xl hover:bg-white/[0.12] transition-all duration-200 active:scale-95 cursor-pointer"
+              >
                 Tillbaka
               </button>
             </div>
@@ -275,66 +338,122 @@ export default function CollectCoinsGame() {
   const correctIdx = options.findIndex(o => o.isCorrect);
 
   function optionStyle(idx: number): string {
-    const base = 'w-full text-left px-3 py-3 rounded-xl border-2 font-semibold transition-all duration-200 text-sm flex items-center gap-2.5 ';
+    const base = 'w-full text-left px-3.5 py-3.5 rounded-xl border-2 font-semibold transition-all duration-200 text-sm flex items-center gap-3 min-h-[52px] ';
     if (!revealed) {
-      return base + 'border-white/20 bg-white/5 text-white hover:border-yellow-400/60 hover:bg-yellow-900/20 cursor-pointer active:scale-95';
+      return base + 'border-white/15 bg-white/[0.06] text-white hover:border-indigo-400/60 hover:bg-indigo-900/30 cursor-pointer active:scale-[0.98]';
     }
     if (idx === correctIdx) {
-      return base + 'border-green-400 bg-green-900/40 text-green-300';
+      return base + 'border-emerald-400/70 bg-emerald-900/35 text-emerald-200';
     }
     if (idx === selected && !options[idx].isCorrect) {
-      return base + 'border-red-400 bg-red-900/40 text-red-300';
+      return base + 'border-rose-400/70 bg-rose-900/35 text-rose-200';
     }
-    return base + 'border-white/10 bg-white/5 text-white/40';
+    return base + 'border-white/5 bg-white/[0.03] text-white/30 cursor-not-allowed';
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
+    <div className="min-h-screen bg-gradient-to-b from-[#0a0920] via-[#13113a] to-[#0a0920]">
       <AppHeader />
-      <div className="max-w-lg mx-auto px-4 pt-20 pb-6 space-y-4">
+      <div className="max-w-lg mx-auto px-4 pt-20 pb-6 space-y-3">
 
-        {/* HUD */}
+        {/* ── Coin progress dots ── */}
+        <div className="flex gap-1.5 flex-wrap justify-center">
+          {exercises.map((_, i) => {
+            const status = results[i];
+            return (
+              <div
+                key={i}
+                className={`h-2 rounded-full transition-all duration-300 flex-1 min-w-[14px] max-w-[32px] ${
+                  status === true
+                    ? 'bg-amber-400'
+                    : status === false
+                    ? 'bg-rose-400'
+                    : i === currentIdx
+                    ? 'bg-indigo-400'
+                    : 'bg-white/15'
+                }`}
+              />
+            );
+          })}
+        </div>
+
+        {/* ── HUD ── */}
         <div className="flex items-center justify-between">
-          <span className="text-yellow-400 font-bold">🪙 {coins}</span>
-          <span className="text-white/50 text-sm">{currentIdx + 1}/{exercises.length}</span>
-          <div className="flex gap-1">
+          <div className="flex items-center gap-1.5 bg-amber-500/15 border border-amber-400/20 rounded-full px-3 py-1">
+            <span className="text-base select-none">🪙</span>
+            <span className="text-amber-300 font-bold text-sm">{coins}</span>
+          </div>
+          <span className="text-white/40 text-xs font-medium">{currentIdx + 1} / {exercises.length}</span>
+          <div className="flex gap-1.5">
             {[...Array(MAX_LIVES)].map((_, i) => (
-              <span key={i} className={`text-xl transition-all duration-300 ${i < lives ? 'opacity-100' : 'opacity-20 grayscale'}`}>🛡️</span>
+              <motion.span
+                key={i}
+                animate={i === lives && revealed && !options[selected ?? -1]?.isCorrect ? { scale: [1, 1.4, 0.8, 1] } : {}}
+                transition={{ duration: 0.4 }}
+                className={`text-xl select-none transition-all duration-300 ${i < lives ? 'opacity-100' : 'opacity-20 grayscale'}`}
+              >
+                🛡️
+              </motion.span>
             ))}
           </div>
         </div>
 
-        {/* Runner track */}
-        <div className="rounded-2xl overflow-hidden border-2 border-white/10">
-          <div className="relative bg-sky-300/20 backdrop-blur-sm" style={{ height: 80 }}>
+        {/* ── Runner track ── */}
+        <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg">
+          {/* Sky */}
+          <div
+            className="relative overflow-hidden"
+            style={{
+              height: 88,
+              background: 'linear-gradient(to bottom, #1e1b6e 0%, #2d3a8c 50%, #3b5fc4 100%)',
+            }}
+          >
+            {/* Stars (static decoration) */}
+            {[14, 28, 42, 60, 72, 85].map((left, i) => (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-white/60 rounded-full"
+                style={{ left: `${left}%`, top: `${[20, 35, 15, 40, 25, 30][i]}%` }}
+              />
+            ))}
+            {/* Runner */}
             <motion.div
               ref={runnerScope}
-              className="absolute bottom-0 text-3xl select-none"
+              className="absolute select-none"
               animate={{ left: `${runnerX}%` }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              style={{ lineHeight: 1 }}
+              style={{ bottom: 4, lineHeight: 1, fontSize: 32 }}
             >
               🏃
             </motion.div>
           </div>
-          <div className="bg-green-600/40 h-3 relative">
-            <div className="absolute inset-0 flex items-center px-4 gap-3">
-              {Array.from({ length: 12 }).map((_, i) => (
-                <div key={i} className="flex-1 h-0.5 bg-green-400/40 rounded" />
+          {/* Ground */}
+          <div
+            className="relative h-4"
+            style={{ background: 'linear-gradient(to bottom, #16a34a, #15803d)' }}
+          >
+            <div className="absolute inset-0 flex items-center px-3 gap-2">
+              {Array.from({ length: 14 }).map((_, i) => (
+                <div key={i} className="flex-1 h-0.5 bg-green-300/30 rounded" />
               ))}
             </div>
           </div>
         </div>
 
-        {/* Question */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
+        {/* ── Question card ── */}
+        <div className="bg-white/[0.06] border border-white/10 rounded-2xl p-4 shadow-xl">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-lg">🪙</span>
-            <span className="text-sm font-bold text-amber-400">Mynt {currentIdx + 1} av {exercises.length}</span>
+            <span className="text-base select-none">🪙</span>
+            <span className="text-xs font-bold text-amber-400 uppercase tracking-wide">
+              Mynt {currentIdx + 1} av {exercises.length}
+            </span>
           </div>
-          <p className="text-white text-base font-bold leading-snug mb-4">{currentEx.question}</p>
 
-          {/* Answer buttons */}
+          <p className="text-white text-[15px] font-bold leading-snug mb-4 min-h-[2.5rem]">
+            {currentEx.question}
+          </p>
+
+          {/* ── Answer buttons ── */}
           <div className="grid grid-cols-2 gap-2">
             {options.map((opt, idx) => (
               <button
@@ -343,41 +462,54 @@ export default function CollectCoinsGame() {
                 onClick={() => handleSelect(idx)}
                 disabled={revealed}
               >
-                <span className={`w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold flex-shrink-0 ${
-                  revealed && idx === correctIdx
-                    ? 'bg-green-500 border-green-500 text-white'
-                    : revealed && idx === selected && !options[idx].isCorrect
-                    ? 'bg-red-500 border-red-500 text-white'
-                    : ''
-                }`}>
+                <span
+                  className={`w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-[11px] font-black flex-shrink-0 transition-colors duration-200 ${
+                    revealed && idx === correctIdx
+                      ? 'bg-emerald-500 border-emerald-500 text-white'
+                      : revealed && idx === selected && !options[idx].isCorrect
+                      ? 'bg-rose-500 border-rose-500 text-white'
+                      : ''
+                  }`}
+                >
                   {revealed && idx === correctIdx
                     ? '✓'
                     : revealed && idx === selected && !options[idx].isCorrect
                     ? '✗'
                     : LABELS[idx] ?? String(idx + 1)}
                 </span>
-                <span className="leading-tight">{opt.text}</span>
+                <span className="leading-snug">{opt.text}</span>
               </button>
             ))}
           </div>
 
-          {/* Next button */}
-          {revealed && (
-            <div className="flex justify-end mt-3">
-              <button
-                onClick={handleNext}
-                className={`px-5 py-2.5 rounded-xl font-bold text-sm text-white transition active:scale-95 ${
-                  isGameOver
-                    ? 'bg-gray-600 hover:bg-gray-500'
-                    : options[selected ?? -1]?.isCorrect
-                    ? 'bg-green-500 hover:bg-green-600'
-                    : 'bg-orange-500 hover:bg-orange-600'
-                }`}
+          {/* ── Feedback & Next ── */}
+          <AnimatePresence>
+            {revealed && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="flex items-center justify-between mt-4 pt-3 border-t border-white/8"
               >
-                {isLastQuestion || isGameOver ? 'Visa resultat →' : 'Nästa mynt →'}
-              </button>
-            </div>
-          )}
+                <span className={`text-sm font-bold ${options[selected ?? -1]?.isCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {options[selected ?? -1]?.isCorrect ? '✓ Rätt svar!' : '✗ Fel svar'}
+                </span>
+                <button
+                  onClick={handleNext}
+                  className={`px-5 py-2 rounded-xl font-bold text-sm text-white transition-all duration-200 active:scale-95 cursor-pointer shadow-md ${
+                    isGameOver
+                      ? 'bg-gray-600 hover:bg-gray-500 shadow-gray-900/30'
+                      : options[selected ?? -1]?.isCorrect
+                      ? 'bg-emerald-500 hover:bg-emerald-400 shadow-emerald-900/30'
+                      : 'bg-orange-500 hover:bg-orange-400 shadow-orange-900/30'
+                  }`}
+                >
+                  {isLastQuestion || isGameOver ? 'Visa resultat →' : 'Nästa mynt →'}
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
       </div>
