@@ -422,7 +422,7 @@ export default function CollectCoinsGame() {
               className="absolute select-none"
               animate={{ left: `${runnerX}%` }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              style={{ bottom: 4, lineHeight: 1, fontSize: 32 }}
+              style={{ bottom: 4, lineHeight: 1, fontSize: 32, scaleX: -1 }}
             >
               🏃
             </motion.div>
