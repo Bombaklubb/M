@@ -133,7 +133,7 @@ export default function ModuleCard({
     return (
       <Link href={href} className="block group h-full">
         <div
-          className="h-full rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden"
+          className="h-full rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer"
           style={{
             background: progress?.completed
               ? "linear-gradient(135deg, #f59e0b, #fbbf24, #f97316, #eab308, #f59e0b)"
@@ -145,7 +145,6 @@ export default function ModuleCard({
               : "0 4px 0 0 rgba(245,158,11,0.25), 0 8px 20px -4px rgba(245,158,11,0.2)",
           }}
         >
-          <BorderBeam size={300} duration={5} colorFrom="#fef08a" colorTo="#f97316" borderWidth={3} />
           <div
             className={`h-full rounded-[22px] px-5 py-4 ${
               progress?.completed
