@@ -41,8 +41,8 @@ function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestio
     .filter(Boolean) as Topic[];
   if (topics.length === 0) return [];
 
-  // Scale questions per topic so total is at least 25
-  const qPerTopic = topics.length <= 6 ? 4 : topics.length <= 12 ? 3 : topics.length <= 20 ? 2 : 1;
+  // Scale questions per topic so total is always at least 30
+  const qPerTopic = Math.ceil(30 / topics.length);
 
   const all: SluttestQuestion[] = [];
   for (const topic of topics) {
@@ -55,8 +55,8 @@ function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestio
     }
   }
 
-  // Target 25–30 questions
-  const target = Math.min(Math.max(25, all.length), 30);
+  // Target exactly 30 questions
+  const target = Math.min(all.length, 30);
   return shuffle(all).slice(0, target);
 }
 
