@@ -29964,6 +29964,417 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
+  },
+
+  {
+    "id": "ak7-tema-041",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Vatten – en livsviktig resurs",
+    "text": "Vatten är en av de viktigaste resurserna på jorden. Alla levande organismer behöver vatten för att överleva, och människor använder det varje dag till att dricka, laga mat, tvätta och producera varor. Trots att ungefär 70 procent av jordens yta är täckt av vatten är det bara en liten del som är sötvatten och kan användas direkt av människor.\n\nSötvatten finns i sjöar, floder och grundvatten. I många delar av världen är tillgången på rent vatten begränsad. Detta kan bero på klimatförändringar, föroreningar eller att vatten används snabbare än det hinner återbildas. Brist på vatten kan leda till problem med hälsa, jordbruk och ekonomisk utveckling.\n\nFör att skydda vattenresurser är det viktigt att använda vatten på ett hållbart sätt. Det innebär att minska slöseri, rena förorenat vatten och skydda naturen. Teknik spelar också en viktig roll, till exempel genom vattenrening och avsaltning av havsvatten.\n\nInternationellt samarbete är ofta nödvändigt eftersom många floder och sjöar delas av flera länder. Konflikter kan uppstå om vattenresurser, men samarbete kan också leda till bättre lösningar.\n\nGenom att förstå hur viktigt vatten är kan människor bidra till att använda det mer ansvarsfullt och säkra tillgången för framtida generationer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur stor del av jordens yta är täckt av vatten?",
+        "options": [
+          "Ungefär 30 procent",
+          "Ungefär 50 procent",
+          "Ungefär 70 procent",
+          "Ungefär 90 procent"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var finns sötvatten?",
+        "options": [
+          "I hav och oceaner",
+          "I sjöar, floder och grundvatten",
+          "Endast i moln",
+          "I is på solen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan orsaka vattenbrist?",
+        "options": [
+          "För mycket regn",
+          "Kalla temperaturer",
+          "Att vatten används för långsamt",
+          "Klimatförändringar och föroreningar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär hållbar användning av vatten?",
+        "options": [
+          "Att använda mer vatten",
+          "Att minska slöseri och skydda resurser",
+          "Att sluta använda vatten",
+          "Att endast använda havsvatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför behövs internationellt samarbete?",
+        "options": [
+          "För att bygga fler hus",
+          "För att dela teknik",
+          "För att många vattenkällor delas mellan länder",
+          "För att minska regn"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Vatten är oviktigt",
+          "Endast vissa behöver vatten",
+          "Vatten är viktigt och måste användas ansvarsfullt",
+          "Allt vatten är farligt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak7-tema-041",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-042",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Demokrati och beslut i samhället",
+    "text": "Demokrati är ett sätt att styra ett land där folket har makten. I en demokrati får medborgarna vara med och påverka beslut, ofta genom att rösta i val. Sverige är ett exempel på ett demokratiskt land där invånarna väljer politiker som fattar beslut i riksdagen.\n\nDet finns olika nivåer av demokratiska beslut. På lokal nivå fattar kommuner beslut om till exempel skolor och kollektivtrafik. På nationell nivå beslutar riksdagen om lagar och budget. Det finns också internationella samarbeten där länder fattar gemensamma beslut.\n\nEn viktig del av demokratin är yttrandefrihet. Det innebär att människor får uttrycka sina åsikter utan att bli straffade. Pressfrihet och mötesfrihet är också centrala delar.\n\nTrots detta finns det utmaningar. Alla deltar inte i val, och vissa grupper kan ha svårare att göra sina röster hörda. Desinformation, alltså falsk information, kan också påverka hur människor tänker och röstar.\n\nFör att demokratin ska fungera bra krävs att människor är informerade och engagerade. Skolan spelar en viktig roll genom att lära elever om hur samhället fungerar.\n\nGenom att delta i val och samhällsdebatt kan medborgare påverka sin framtid och bidra till ett mer rättvist samhälle.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad innebär demokrati?",
+        "options": [
+          "Att en person bestämmer allt",
+          "Att folket har makten",
+          "Att företag styr landet",
+          "Att lagar inte behövs"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur påverkar medborgare beslut?",
+        "options": [
+          "Genom att arbeta i fabriker",
+          "Genom att resa",
+          "Genom att rösta i val",
+          "Genom att undvika politik"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad beslutar riksdagen om?",
+        "options": [
+          "Endast skolor",
+          "Lagar och budget",
+          "Sport och fritid",
+          "Väderprognoser"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är yttrandefrihet?",
+        "options": [
+          "Att inte få prata",
+          "Att bara politiker får tala",
+          "Att uttrycka åsikter fritt",
+          "Att skriva hemliga texter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en utmaning för demokratin?",
+        "options": [
+          "För många val",
+          "Att alla röstar",
+          "Desinformation och lågt deltagande",
+          "För mycket kunskap"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad krävs för att demokratin ska fungera?",
+        "options": [
+          "Att ingen bryr sig",
+          "Att människor är informerade och engagerade",
+          "Att bara ledare bestämmer",
+          "Att val avskaffas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-042",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-043",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Rymden och universum",
+    "text": "Universum är allt som finns – planeter, stjärnor, galaxer och tomrum. Vår egen planet, jorden, är en del av solsystemet som kretsar kring solen. Solen är en stjärna, och det finns miljarder andra stjärnor i vår galax, Vintergatan.\n\nRymden är enorm och svår att förstå. Avstånd mäts ofta i ljusår, vilket är den sträcka ljuset färdas på ett år. Eftersom ljuset färdas mycket snabbt kan ett ljusår vara en mycket lång sträcka.\n\nForskare använder teleskop och rymdsonder för att studera universum. Genom dessa verktyg har man upptäckt nya planeter och lärt sig mer om hur stjärnor bildas och dör. Svarta hål är ett exempel på ett fenomen som fortfarande forskas mycket om.\n\nRymdforskning har också lett till teknik som används på jorden, till exempel satelliter som används för kommunikation och väderprognoser.\n\nTrots alla upptäckter finns det fortfarande mycket vi inte vet om universum. Det gör rymden till ett spännande område för forskning och framtida upptäckter.\n\nGenom att studera rymden kan människor förstå mer om sin egen plats i universum.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är universum?",
+        "options": [
+          "Endast jorden",
+          "Alla planeter nära solen",
+          "Allt som finns",
+          "Endast stjärnor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är solen?",
+        "options": [
+          "En planet",
+          "En stjärna",
+          "En galax",
+          "Ett svart hål"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett ljusår?",
+        "options": [
+          "En tidsperiod",
+          "Ett mått på vikt",
+          "Ett mått på avstånd",
+          "Ett mått på temperatur"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder forskare för att studera rymden?",
+        "options": [
+          "Bilar",
+          "Böcker",
+          "Kameror",
+          "Teleskop och rymdsonder"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett svart hål?",
+        "options": [
+          "En typ av planet",
+          "Ett område i rymden som forskas om",
+          "En stjärna som lyser starkt",
+          "En satellit"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har rymdforskning bidragit till?",
+        "options": [
+          "Satelliter och teknik",
+          "Färre upptäckter",
+          "Mindre kunskap",
+          "Inga förändringar"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 426,
+      "fingerprint": "ak7-tema-043",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-044",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Musik",
+    "title": "Musikens roll i människors liv",
+    "text": "Musik har alltid varit en viktig del av människors liv. Den används för att uttrycka känslor, berätta historier och skapa gemenskap. Musik finns i många olika genrer, som pop, rock, hiphop och klassisk musik, och människor kan ha väldigt olika musiksmak.\n\nMusik påverkar hur vi känner oss. En lugn låt kan göra oss avslappnade, medan en snabb låt kan ge energi. Många använder musik för att koncentrera sig eller för att koppla av efter en lång dag.\n\nMusik spelar också en viktig roll i kulturer runt om i världen. Traditionell musik kan berätta om ett lands historia och identitet. Samtidigt sprids musik snabbt globalt genom internet, vilket gör att olika stilar blandas.\n\nAtt spela ett instrument eller sjunga kan utveckla både kreativitet och disciplin. Många arbetar professionellt med musik, men det är också en vanlig hobby.\n\nMusik kan dessutom föra människor samman. Konserter och festivaler ger människor möjlighet att dela upplevelser.\n\nSammanfattningsvis är musik mer än bara underhållning – den är en viktig del av både individens liv och samhället.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad används musik till?",
+        "options": [
+          "Endast arbete",
+          "Att uttrycka känslor och skapa gemenskap",
+          "Bara utbildning",
+          "Endast tävling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan musik påverka oss?",
+        "options": [
+          "Den påverkar inte känslor",
+          "Den kan ändra hur vi känner oss",
+          "Den gör oss alltid trötta",
+          "Den stoppar tankar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar traditionell musik?",
+        "options": [
+          "Endast nutid",
+          "Ett lands historia och identitet",
+          "Bara ekonomi",
+          "Endast teknik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan man utveckla genom att spela musik?",
+        "options": [
+          "Endast styrka",
+          "Endast snabbhet",
+          "Kreativitet och disciplin",
+          "Endast minne"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer på konserter?",
+        "options": [
+          "Människor arbetar",
+          "Människor delar upplevelser",
+          "Människor studerar",
+          "Människor sover"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Musik är oviktig",
+          "Musik är bara hobby",
+          "Musik påverkar människor och samhälle",
+          "Musik är svårt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 427,
+      "fingerprint": "ak7-tema-044",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-045",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Värdegrund",
+    "title": "Vänskap och respekt",
+    "text": "Vänskap är en viktig del av livet för många människor. En bra vän kan ge stöd, glädje och trygghet. Vänskap bygger på tillit, respekt och att man bryr sig om varandra.\n\nRespekt innebär att acceptera andra människor som de är, även om man tycker olika. I en vänskap är det viktigt att lyssna, vara ärlig och visa hänsyn. Konflikter kan uppstå, men de kan lösas genom samtal och förståelse.\n\nAlla människor är olika, och det kan vara en styrka i en vänskap. Personer med olika bakgrund, intressen eller förmågor kan lära av varandra. Till exempel kan Alex, som använder rullstol, och Sam, som älskar sport, hitta sätt att umgås och ha roligt tillsammans.\n\nIbland kan grupptryck påverka vänskap. Det kan vara svårt att stå upp för sig själv eller andra. Därför är det viktigt att våga säga ifrån om något känns fel.\n\nSkolan är en plats där många vänskaper bildas. Genom att visa respekt och inkludera andra kan man bidra till en trygg miljö.\n\nVänskap handlar inte om att vara lika, utan om att acceptera och uppskatta varandra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bygger vänskap på?",
+        "options": [
+          "Tävling",
+          "Tillit och respekt",
+          "Pengar",
+          "Regler"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär respekt?",
+        "options": [
+          "Att alltid hålla med",
+          "Att acceptera andra som de är",
+          "Att ignorera andra",
+          "Att bestämma över andra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan konflikter lösas?",
+        "options": [
+          "Genom att bråka mer",
+          "Genom att ignorera problemet",
+          "Genom samtal och förståelse",
+          "Genom att lämna vänskapen direkt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar exemplet med Alex och Sam?",
+        "options": [
+          "Att olikheter kan vara en styrka",
+          "Att man måste vara lika",
+          "Att vänskap är svårt",
+          "Att sport är viktigast"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är grupptryck?",
+        "options": [
+          "Att arbeta i grupp",
+          "Att påverkas av andra att göra något",
+          "Att studera tillsammans",
+          "Att spela spel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Vänskap kräver att man är lika",
+          "Vänskap handlar om respekt och acceptans",
+          "Vänskap är oviktig",
+          "Vänskap är lätt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 425,
+      "fingerprint": "ak7-tema-045",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 
 ]
