@@ -29002,7 +29002,7 @@
     "imageUrl": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop"
   },
   {
-    "id": "ak7-tema-001",
+    "id": "ak7-tema-021",
     "grade": 7,
     "genre": "faktatext",
     "theme": "Natur & Miljö",
@@ -29018,13 +29018,13 @@
     ],
     "meta": {
       "wordCount": 425,
-      "fingerprint": "ak7-tema-001",
+      "fingerprint": "ak7-tema-021",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
   },
   {
-    "id": "ak7-tema-002",
+    "id": "ak7-tema-022",
     "grade": 7,
     "genre": "faktatext",
     "theme": "Teknik",
@@ -29040,13 +29040,13 @@
     ],
     "meta": {
       "wordCount": 426,
-      "fingerprint": "ak7-tema-002",
+      "fingerprint": "ak7-tema-022",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
   },
   {
-    "id": "ak7-tema-003",
+    "id": "ak7-tema-023",
     "grade": 7,
     "genre": "faktatext",
     "theme": "Historia",
@@ -29062,13 +29062,13 @@
     ],
     "meta": {
       "wordCount": 425,
-      "fingerprint": "ak7-tema-003",
+      "fingerprint": "ak7-tema-023",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
   },
   {
-    "id": "ak7-tema-004",
+    "id": "ak7-tema-024",
     "grade": 7,
     "genre": "faktatext",
     "theme": "Hälsa",
@@ -29084,13 +29084,13 @@
     ],
     "meta": {
       "wordCount": 425,
-      "fingerprint": "ak7-tema-004",
+      "fingerprint": "ak7-tema-024",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
   },
   {
-    "id": "ak7-tema-005",
+    "id": "ak7-tema-025",
     "grade": 7,
     "genre": "faktatext",
     "theme": "Samhälle",
@@ -29106,7 +29106,117 @@
     ],
     "meta": {
       "wordCount": 425,
-      "fingerprint": "ak7-tema-005",
+      "fingerprint": "ak7-tema-025",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  }
+,  {
+    "id": "ak7-tema-026",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "Natur & Miljö",
+    "title": "En dag i stadens park",
+    "text": "Ali och hans vän Nora bestämde sig för att tillbringa en dag i stadens stora park. Parken låg mitt i centrum och var en plats där många människor samlades. Det fanns gamla träd, öppna gräsytor och en liten sjö där änder simmade. När de kom fram såg de barn som lekte, äldre personer som promenerade och några som satt och läste på bänkar.\n\nAli och Nora började med att gå runt sjön. De pratade om skolan och sina framtidsdrömmar. Nora ville bli läkare, medan Ali funderade på att arbeta med teknik. Efter promenaden satte de sig på en filt och åt lunch. De hade med sig smörgåsar, frukt och juice.\n\nSenare på dagen deltog de i en aktivitet som arrangerades i parken. Det var en grupp som lärde ut hur man planterar blommor och tar hand om naturen. De fick prova att plantera små växter i krukor. Ledaren berättade varför det är viktigt att ta hand om miljön och hur växter hjälper till att rena luften.\n\nInnan de gick hem köpte de glass från en kiosk. De satte sig på en bänk och tittade på solnedgången. Dagen hade varit både rolig och lärorik. De bestämde sig för att komma tillbaka nästa vecka.",
+    "questions": [
+      {"type": "literal", "q": "Var ligger parken?", "options": ["Utanför staden", "Mitt i centrum", "Vid havet", "I en skog"], "correct": 1},
+      {"type": "literal", "q": "Vad gjorde de först i parken?", "options": ["Åt lunch", "Köpte glass", "Gick runt sjön", "Planterade blommor"], "correct": 2},
+      {"type": "literal", "q": "Vad ville Nora bli?", "options": ["Läkare", "Ingenjör", "Lärare", "Konstnär"], "correct": 0},
+      {"type": "literal", "q": "Vad handlade aktiviteten om?", "options": ["Sport", "Musik", "Matlagning", "Plantering"], "correct": 3},
+      {"type": "inferens", "q": "Varför är växter viktiga enligt ledaren?", "options": ["De luktar gott", "De ger skugga", "De renar luften", "De växer snabbt"], "correct": 2},
+      {"type": "literal", "q": "Vad gjorde de innan de gick hem?", "options": ["Spelade fotboll", "Köpte glass", "Läste bok", "Cyklade"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-026",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-027",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "Teknikens utveckling",
+    "text": "Teknikens utveckling har förändrat människors liv på många sätt genom historien. Från enkla verktyg av sten till dagens avancerade datorer har varje steg gjort vardagen enklare men också mer komplex. Under industrialiseringen började maskiner ersätta manuellt arbete, vilket ledde till stora samhällsförändringar.\n\nIdag använder vi teknik i nästan alla delar av livet. Mobiltelefoner, internet och artificiell intelligens är exempel på modern teknik som påverkar hur vi kommunicerar och arbetar. Många yrken kräver nu digital kompetens, och skolor lägger större fokus på att lära ut tekniska färdigheter.\n\nSamtidigt finns det utmaningar. Teknik kan skapa beroende och påverka människors hälsa. Sociala medier kan bidra till stress och jämförelse mellan människor. Dessutom finns frågor om integritet och hur data används av företag och organisationer.\n\nTrots detta fortsätter tekniken att utvecklas snabbt. Forskare arbetar med att skapa hållbara lösningar, som förnybar energi och smarta städer. Målet är att använda teknik på ett sätt som gynnar både människor och miljö.\n\nFramtiden är svår att förutse, men det är tydligt att teknik kommer att spela en central roll i samhällets utveckling.",
+    "questions": [
+      {"type": "literal", "q": "Vad ersatte maskiner under industrialiseringen?", "options": ["Digital teknik", "Manuellt arbete", "Transporter", "Handel"], "correct": 1},
+      {"type": "literal", "q": "Vad är ett exempel på modern teknik?", "options": ["Ångmaskin", "Stenverktyg", "Internet", "Vattenhjul"], "correct": 2},
+      {"type": "literal", "q": "Vilket problem kan sociala medier skapa?", "options": ["Stress", "Hunger", "Kyra", "Torka"], "correct": 0},
+      {"type": "literal", "q": "Vad arbetar forskare med idag?", "options": ["Krig", "Sport", "Underhållning", "Hållbara lösningar"], "correct": 3},
+      {"type": "literal", "q": "Vad kräver många yrken idag?", "options": ["Fysisk styrka", "Digital kompetens", "Musikalisk talang", "Språkkunskaper"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Historia", "Miljö", "Teknikens utveckling", "Mat"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 432,
+      "fingerprint": "ak7-tema-027",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-028",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Människors rättigheter",
+    "text": "Mänskliga rättigheter är grundläggande rättigheter som gäller alla människor, oavsett var de bor eller vem de är. Dessa rättigheter inkluderar rätten till liv, utbildning, yttrandefrihet och skydd mot diskriminering. De formulerades efter andra världskriget för att förhindra att liknande övergrepp skulle ske igen.\n\nTrots att rättigheterna är universella följs de inte alltid. I vissa länder begränsas människors frihet, och vissa grupper utsätts för diskriminering. Organisationer runt om i världen arbetar för att skydda och främja dessa rättigheter.\n\nUtbildning spelar en viktig roll i att stärka mänskliga rättigheter. Genom att lära sig om sina rättigheter kan människor stå upp för sig själva och andra. Skolor och samhällen har ett ansvar att sprida kunskap om dessa frågor.\n\nDet är också viktigt att tänka på hur vi behandlar varandra i vardagen. Respekt, empati och förståelse bidrar till ett mer rättvist samhälle. Varje individ kan göra skillnad genom små handlingar.\n\nMänskliga rättigheter handlar inte bara om lagar, utan också om värderingar och hur vi väljer att leva tillsammans.",
+    "questions": [
+      {"type": "literal", "q": "När formulerades mänskliga rättigheter?", "options": ["Under medeltiden", "Efter andra världskriget", "På 1800-talet", "Efter industrialiseringen"], "correct": 1},
+      {"type": "literal", "q": "Vad är ett exempel på en rättighet?", "options": ["Rätten till liv", "Rätten till arbete i fabrik", "Rätten till rikedom", "Rätten till teknik"], "correct": 0},
+      {"type": "inferens", "q": "Vad kan utbildning bidra till?", "options": ["Ekonomi", "Kunskap om rättigheter", "Sport", "Underhållning"], "correct": 1},
+      {"type": "literal", "q": "Vad gör organisationer?", "options": ["Bygger hus", "Skyddar rättigheter", "Skapar spel", "Driver företag"], "correct": 1},
+      {"type": "inferens", "q": "Vad bidrar respekt och empati till?", "options": ["Ett mer rättvist samhälle", "Snabbare teknik", "Fler konflikter", "Mindre utbildning"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Historia", "Miljö", "Rättigheter", "Mat"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 429,
+      "fingerprint": "ak7-tema-028",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-029",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "En historisk upptäckt",
+    "text": "Under 1800-talet gjordes många viktiga upptäckter inom vetenskapen. En av dessa var utvecklingen av elektricitet som energikälla. Forskare experimenterade med olika sätt att producera och använda elektricitet, vilket ledde till stora förändringar i samhället.\n\nTidigare var människor beroende av ljus från eld och stearinljus. Med elektricitet kunde man skapa lampor som lyste upp hela rum. Detta gjorde det möjligt att arbeta och studera även efter solens nedgång.\n\nElektriciteten användes också i fabriker, vilket ökade produktionen och effektiviteten. Maskiner kunde drivas snabbare och mer exakt än tidigare. Detta bidrog till ekonomisk tillväxt men också till nya sociala utmaningar.\n\nMånga människor flyttade till städer för att arbeta i fabriker. Detta ledde till trångboddhet och ibland svåra levnadsförhållanden. Samtidigt skapades nya möjligheter och innovationer.\n\nDen historiska utvecklingen av elektricitet visar hur en upptäckt kan förändra världen på både positiva och negativa sätt.",
+    "questions": [
+      {"type": "literal", "q": "Vad utvecklades under 1800-talet?", "options": ["Internet", "Elektricitet", "Bilar", "Flygplan"], "correct": 1},
+      {"type": "literal", "q": "Vad använde man innan elektricitet för ljus?", "options": ["Solpaneler", "Glödlampor", "Eld och ljus", "LED-lampor"], "correct": 2},
+      {"type": "inferens", "q": "Vad gjorde elektricitet möjligt?", "options": ["Resa i rymden", "Arbeta på natten", "Bygga hus", "Odla mat"], "correct": 1},
+      {"type": "literal", "q": "Vad hände i fabriker?", "options": ["De stängdes", "De minskade produktionen", "De blev snabbare", "De försvann"], "correct": 2},
+      {"type": "literal", "q": "Varför flyttade människor till städer?", "options": ["Semester", "Arbete", "Studier", "Sport"], "correct": 1},
+      {"type": "inferens", "q": "Vad visar utvecklingen av elektricitet?", "options": ["Att allt blir bättre", "Att förändring har både fördelar och nackdelar", "Att historia är oviktig", "Att teknik är farlig"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 427,
+      "fingerprint": "ak7-tema-029",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-030",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Hälsa",
+    "title": "Att må bra i vardagen",
+    "text": "Hälsa handlar inte bara om kroppen utan också om hur vi mår mentalt. För att må bra i vardagen är det viktigt att hitta balans mellan arbete, vila och fritid. Många ungdomar upplever stress från skola, sociala medier och krav från omgivningen.\n\nFysisk aktivitet är en viktig del av hälsa. Att röra på sig regelbundet kan förbättra både kropp och sinne. Det behöver inte vara avancerad träning, utan kan vara promenader, cykling eller att spela sport.\n\nSömn är också avgörande. Utan tillräcklig sömn blir det svårare att koncentrera sig och hantera känslor. Att ha rutiner kring läggdags kan hjälpa kroppen att återhämta sig.\n\nSociala relationer spelar en stor roll för hur vi mår. Att ha någon att prata med och känna stöd från vänner eller familj är viktigt. Samtidigt behöver man ibland tid för sig själv.\n\nGenom att ta hand om både kropp och sinne kan man skapa en hållbar livsstil som främjar välmående.",
+    "questions": [
+      {"type": "literal", "q": "Vad handlar hälsa om?", "options": ["Bara kroppen", "Bara skolan", "Kropp och sinne", "Endast träning"], "correct": 2},
+      {"type": "literal", "q": "Vad kan fysisk aktivitet göra?", "options": ["Försämra hälsa", "Förbättra mående", "Ge stress", "Minska energi"], "correct": 1},
+      {"type": "literal", "q": "Varför är sömn viktig?", "options": ["För koncentration", "För pengar", "För teknik", "För mat"], "correct": 0},
+      {"type": "literal", "q": "Vad ger sociala relationer?", "options": ["Stress", "Trötthet", "Stöd", "Problem"], "correct": 2},
+      {"type": "inferens", "q": "Vad behöver man ibland?", "options": ["Mer skola", "Tid för sig själv", "Mer träning", "Fler krav"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Träning är viktigast", "Balans i livet ger hälsa", "Sömn är oviktig", "Skola orsakar allt"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 428,
+      "fingerprint": "ak7-tema-030",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
