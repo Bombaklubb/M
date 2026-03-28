@@ -29009,12 +29009,72 @@
     "title": "Ett förändrat klimat",
     "text": "Klimatförändringar är en av de största utmaningarna som världen står inför idag. Forskare har länge varnat för att ökade utsläpp av växthusgaser, som koldioxid och metan, påverkar jordens temperatur. När temperaturen stiger förändras vädermönster, vilket kan leda till extremväder som torka, översvämningar och kraftiga stormar. Dessa förändringar påverkar både naturen och människors livsvillkor.\n\nEn viktig orsak till klimatförändringarna är människans användning av fossila bränslen, såsom kol, olja och naturgas. När dessa bränslen förbränns frigörs stora mängder koldioxid som samlas i atmosfären. Detta förstärker växthuseffekten, vilket innebär att mer värme stannar kvar på jorden.\n\nKonsekvenserna märks redan idag. Isar i Arktis smälter snabbare än tidigare, havsnivåerna stiger och vissa djurarter riskerar att försvinna. Samtidigt påverkas människor genom att jordbruket får svårare att producera mat i vissa områden.\n\nDet finns dock lösningar. Många länder satsar på förnybar energi, som sol- och vindkraft. Genom att minska användningen av fossila bränslen kan utsläppen minska. Även individer kan bidra genom att resa mer hållbart och minska sin energiförbrukning.\n\nAtt förstå klimatförändringarna är viktigt för att kunna fatta beslut som skyddar både miljön och framtida generationer.",
     "questions": [
-      {"type": "literal", "q": "Vad är en huvudorsak till klimatförändringar?", "options": ["Fossila bränslen", "Solens variationer", "Vulkanutbrott", "Havsströmmar"], "correct": 0},
-      {"type": "literal", "q": "Vad innebär förstärkt växthuseffekt?", "options": ["Kallare klimat", "Mer värme stannar kvar", "Mindre syre", "Svagare sol"], "correct": 1},
-      {"type": "literal", "q": "Vilken effekt nämns i texten?", "options": ["Fler skogar", "Mindre regn", "Smältande isar", "Stabilt väder"], "correct": 2},
-      {"type": "literal", "q": "Vad är en lösning?", "options": ["Mer kol", "Fler fabriker", "Mindre el", "Förnybar energi"], "correct": 3},
-      {"type": "inferens", "q": "Hur påverkas jordbruket?", "options": ["Svårare i vissa områden", "Alltid lättare", "Ingen påverkan", "Flyttar till havet"], "correct": 0},
-      {"type": "inferens", "q": "Vad kan individer göra?", "options": ["Flyga mer", "Minska energi", "Köra mer bil", "Undvika återvinning"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad är en huvudorsak till klimatförändringar?",
+        "options": [
+          "Fossila bränslen",
+          "Solens variationer",
+          "Vulkanutbrott",
+          "Havsströmmar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär förstärkt växthuseffekt?",
+        "options": [
+          "Kallare klimat",
+          "Mer värme stannar kvar",
+          "Mindre syre",
+          "Svagare sol"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken effekt nämns i texten?",
+        "options": [
+          "Fler skogar",
+          "Mindre regn",
+          "Smältande isar",
+          "Stabilt väder"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en lösning?",
+        "options": [
+          "Mer kol",
+          "Fler fabriker",
+          "Mindre el",
+          "Förnybar energi"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkas jordbruket?",
+        "options": [
+          "Svårare i vissa områden",
+          "Alltid lättare",
+          "Ingen påverkan",
+          "Flyttar till havet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan individer göra?",
+        "options": [
+          "Flyga mer",
+          "Minska energi",
+          "Köra mer bil",
+          "Undvika återvinning"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 425,
@@ -29031,12 +29091,72 @@
     "title": "Digitala spår",
     "text": "När människor använder internet lämnar de ofta efter sig digitala spår. Det kan handla om vilka sidor man besöker, vad man söker efter och vilka appar man använder. Dessa spår samlas in av företag och organisationer för olika syften. Ibland används informationen för att förbättra tjänster, men den kan också användas för riktad reklam.\n\nMånga tänker inte på hur mycket information de delar. När man accepterar villkor utan att läsa dem kan man ge bort rättigheter till sina egna uppgifter. Detta kan innebära att företag lagrar och analyserar beteenden över lång tid.\n\nSamtidigt finns det lagar som ska skydda användare. Inom EU finns regler som kräver att företag måste informera om hur data används. Användare har också rätt att begära att deras information tas bort.\n\nDet är viktigt att vara medveten om sin digitala närvaro. Genom att använda starka lösenord, vara försiktig med vad man delar och kontrollera inställningar kan man skydda sin integritet.\n\nDigitala spår är en naturlig del av det moderna samhället, men det kräver kunskap för att hantera dem på ett säkert sätt.",
     "questions": [
-      {"type": "literal", "q": "Vad är digitala spår?", "options": ["Information om vad man gör online", "Fysiska märken på datorer", "Virus i nätverk", "Gamla filer"], "correct": 0},
-      {"type": "literal", "q": "Varför samlas data in?", "options": ["För att radera internet", "För tjänster och reklam", "För att stoppa teknik", "För att minska appar"], "correct": 1},
-      {"type": "inferens", "q": "Vad kan hända om man inte läser villkor?", "options": ["Man får virus direkt", "Telefonen slutar fungera", "Man delar data utan att veta", "Internet stängs"], "correct": 2},
-      {"type": "literal", "q": "Vad ger EU:s regler?", "options": ["Gratis internet", "Snabbare datorer", "Färre appar", "Skydd och rättigheter"], "correct": 3},
-      {"type": "literal", "q": "Hur kan man skydda sig?", "options": ["Starka lösenord", "Inte använda internet", "Aldrig installera appar", "Stänga av wifi"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Teknikens historia", "Digital integritet", "Dataspel", "Programmering"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad är digitala spår?",
+        "options": [
+          "Information om vad man gör online",
+          "Fysiska märken på datorer",
+          "Virus i nätverk",
+          "Gamla filer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Varför samlas data in?",
+        "options": [
+          "För att radera internet",
+          "För tjänster och reklam",
+          "För att stoppa teknik",
+          "För att minska appar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan hända om man inte läser villkor?",
+        "options": [
+          "Man får virus direkt",
+          "Telefonen slutar fungera",
+          "Man delar data utan att veta",
+          "Internet stängs"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ger EU:s regler?",
+        "options": [
+          "Gratis internet",
+          "Snabbare datorer",
+          "Färre appar",
+          "Skydd och rättigheter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan man skydda sig?",
+        "options": [
+          "Starka lösenord",
+          "Inte använda internet",
+          "Aldrig installera appar",
+          "Stänga av wifi"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Teknikens historia",
+          "Digital integritet",
+          "Dataspel",
+          "Programmering"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 426,
@@ -29053,12 +29173,72 @@
     "title": "Vikingarnas resor",
     "text": "Vikingarna var skickliga sjöfarare som levde under tidig medeltid. De reste över stora delar av Europa och nådde till och med Nordamerika. Deras båtar var välbyggda och kunde färdas både på öppet hav och i floder.\n\nResorna hade olika syften. Ibland handlade det om handel, där vikingarna bytte varor som pälsar och järn mot silver och andra produkter. I andra fall var det plundringståg, där de anföll kuststäder.\n\nVikingarna var inte bara krigare. De var också bönder, hantverkare och handelsmän. I deras samhällen fanns lagar och regler som styrde livet.\n\nKontakten med andra kulturer ledde till att idéer och varor spreds. Vikingarna tog med sig nya influenser hem, vilket förändrade deras samhälle över tid.\n\nDeras resor har haft stor betydelse för historien och visar hur människor tidigt kunde knyta kontakter över långa avstånd.",
     "questions": [
-      {"type": "literal", "q": "Vad var vikingarna kända för?", "options": ["Sjöfart", "Flygning", "Industrin", "Vetenskap"], "correct": 0},
-      {"type": "literal", "q": "Vad gjorde de under handel?", "options": ["Krigade", "Bytte varor", "Byggde hus", "Skrev böcker"], "correct": 1},
-      {"type": "literal", "q": "Vilket annat yrke hade de?", "options": ["Piloter", "Lärare", "Bönder", "Astronomer"], "correct": 2},
-      {"type": "literal", "q": "Vad spreds genom resor?", "options": ["Endast pengar", "Endast vapen", "Ingenting", "Idéer och varor"], "correct": 3},
-      {"type": "inferens", "q": "Var reste de?", "options": ["Europa och längre", "Endast Norden", "Endast Afrika", "Endast Asien"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad visar deras resor?", "options": ["Att handel var oviktig", "Att kontakter kunde knytas långt bort", "Att resor var ovanliga", "Att havet var farligt"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad var vikingarna kända för?",
+        "options": [
+          "Sjöfart",
+          "Flygning",
+          "Industrin",
+          "Vetenskap"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde de under handel?",
+        "options": [
+          "Krigade",
+          "Bytte varor",
+          "Byggde hus",
+          "Skrev böcker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket annat yrke hade de?",
+        "options": [
+          "Piloter",
+          "Lärare",
+          "Bönder",
+          "Astronomer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad spreds genom resor?",
+        "options": [
+          "Endast pengar",
+          "Endast vapen",
+          "Ingenting",
+          "Idéer och varor"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Var reste de?",
+        "options": [
+          "Europa och längre",
+          "Endast Norden",
+          "Endast Afrika",
+          "Endast Asien"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad visar deras resor?",
+        "options": [
+          "Att handel var oviktig",
+          "Att kontakter kunde knytas långt bort",
+          "Att resor var ovanliga",
+          "Att havet var farligt"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 425,
@@ -29075,12 +29255,72 @@
     "title": "Hur kroppen får energi",
     "text": "Människokroppen behöver energi för att fungera. Denna energi kommer från maten vi äter. När vi bryter ner maten i kroppen omvandlas den till näringsämnen som kan användas av cellerna.\n\nKolhydrater, fetter och proteiner är de viktigaste energikällorna. Kolhydrater ger snabb energi, medan fetter lagras och används senare. Proteiner används främst för att bygga upp kroppen, men kan också ge energi.\n\nNär kroppen behöver energi sker kemiska processer i cellerna. Syre spelar en viktig roll i dessa processer. Utan syre kan kroppen inte producera energi lika effektivt.\n\nFysisk aktivitet ökar energibehovet. Därför behöver personer som tränar mer också äta mer. Samtidigt är det viktigt att äta varierat för att få i sig alla näringsämnen.\n\nEn balanserad kost och regelbunden rörelse hjälper kroppen att fungera optimalt.",
     "questions": [
-      {"type": "literal", "q": "Var kommer energi ifrån?", "options": ["Mat", "Sömn", "Luft", "Vatten"], "correct": 0},
-      {"type": "literal", "q": "Vilket ämne ger snabb energi?", "options": ["Fett", "Kolhydrater", "Protein", "Vitaminer"], "correct": 1},
-      {"type": "literal", "q": "Vad behövs för energiproduktion?", "options": ["Koldioxid", "Salt", "Syre", "Ljus"], "correct": 2},
-      {"type": "literal", "q": "Vad händer vid träning?", "options": ["Mindre behov", "Ingen skillnad", "Samma behov", "Ökat behov"], "correct": 3},
-      {"type": "inferens", "q": "Vad används protein främst till?", "options": ["Bygga kroppen", "Ge snabb energi", "Lagra fett", "Kyler kroppen"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad är viktigt för hälsa?", "options": ["Endast vila", "Balanserad kost", "Bara träning", "Socker"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Var kommer energi ifrån?",
+        "options": [
+          "Mat",
+          "Sömn",
+          "Luft",
+          "Vatten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket ämne ger snabb energi?",
+        "options": [
+          "Fett",
+          "Kolhydrater",
+          "Protein",
+          "Vitaminer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad behövs för energiproduktion?",
+        "options": [
+          "Koldioxid",
+          "Salt",
+          "Syre",
+          "Ljus"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer vid träning?",
+        "options": [
+          "Mindre behov",
+          "Ingen skillnad",
+          "Samma behov",
+          "Ökat behov"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad används protein främst till?",
+        "options": [
+          "Bygga kroppen",
+          "Ge snabb energi",
+          "Lagra fett",
+          "Kyler kroppen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är viktigt för hälsa?",
+        "options": [
+          "Endast vila",
+          "Balanserad kost",
+          "Bara träning",
+          "Socker"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 425,
@@ -29097,12 +29337,72 @@
     "title": "Att leva tillsammans",
     "text": "I ett samhälle lever människor tillsammans trots att de kan ha olika bakgrund, åsikter och livssituationer. För att det ska fungera behövs regler, respekt och förståelse.\n\nDemokrati innebär att människor får vara med och bestämma genom val. Alla röster ska ha lika värde. Samtidigt innebär det ansvar att lyssna på andra och respektera beslut.\n\nMångfald är en styrka i samhället. När människor med olika erfarenheter möts kan nya idéer uppstå. Det kan handla om språk, kultur eller olika sätt att leva.\n\nKonflikter kan uppstå, men de kan lösas genom dialog. Att prata med varandra och försöka förstå olika perspektiv är viktigt.\n\nGenom att visa hänsyn och samarbeta kan människor skapa ett tryggt och fungerande samhälle där fler känner sig inkluderade.",
     "questions": [
-      {"type": "literal", "q": "Vad krävs för att leva tillsammans?", "options": ["Respekt", "Tystnad", "Likhet", "Enighet"], "correct": 0},
-      {"type": "literal", "q": "Vad innebär demokrati?", "options": ["En bestämmer", "Alla får vara med och bestämma", "Ingen röstar", "Endast ledare"], "correct": 1},
-      {"type": "literal", "q": "Vad kan mångfald leda till?", "options": ["Färre idéer", "Konflikter alltid", "Nya idéer", "Ingen förändring"], "correct": 2},
-      {"type": "literal", "q": "Hur kan konflikter lösas?", "options": ["Ignorera", "Bråka", "Undvika", "Dialog"], "correct": 3},
-      {"type": "inferens", "q": "Vad betyder inkludering?", "options": ["Alla känner sig delaktiga", "Få deltar", "Ingen deltar", "Endast vissa"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad är viktigt i samhället?", "options": ["Samarbete", "Tävling", "Makt", "Tystnad"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad krävs för att leva tillsammans?",
+        "options": [
+          "Respekt",
+          "Tystnad",
+          "Likhet",
+          "Enighet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär demokrati?",
+        "options": [
+          "En bestämmer",
+          "Alla får vara med och bestämma",
+          "Ingen röstar",
+          "Endast ledare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan mångfald leda till?",
+        "options": [
+          "Färre idéer",
+          "Konflikter alltid",
+          "Nya idéer",
+          "Ingen förändring"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan konflikter lösas?",
+        "options": [
+          "Ignorera",
+          "Bråka",
+          "Undvika",
+          "Dialog"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betyder inkludering?",
+        "options": [
+          "Alla känner sig delaktiga",
+          "Få deltar",
+          "Ingen deltar",
+          "Endast vissa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är viktigt i samhället?",
+        "options": [
+          "Samarbete",
+          "Tävling",
+          "Makt",
+          "Tystnad"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 425,
@@ -29110,8 +29410,8 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
-  }
-,  {
+  },
+  {
     "id": "ak7-tema-026",
     "grade": 7,
     "genre": "berättelse",
@@ -29119,12 +29419,72 @@
     "title": "En dag i stadens park",
     "text": "Ali och hans vän Nora bestämde sig för att tillbringa en dag i stadens stora park. Parken låg mitt i centrum och var en plats där många människor samlades. Det fanns gamla träd, öppna gräsytor och en liten sjö där änder simmade. När de kom fram såg de barn som lekte, äldre personer som promenerade och några som satt och läste på bänkar.\n\nAli och Nora började med att gå runt sjön. De pratade om skolan och sina framtidsdrömmar. Nora ville bli läkare, medan Ali funderade på att arbeta med teknik. Efter promenaden satte de sig på en filt och åt lunch. De hade med sig smörgåsar, frukt och juice.\n\nSenare på dagen deltog de i en aktivitet som arrangerades i parken. Det var en grupp som lärde ut hur man planterar blommor och tar hand om naturen. De fick prova att plantera små växter i krukor. Ledaren berättade varför det är viktigt att ta hand om miljön och hur växter hjälper till att rena luften.\n\nInnan de gick hem köpte de glass från en kiosk. De satte sig på en bänk och tittade på solnedgången. Dagen hade varit både rolig och lärorik. De bestämde sig för att komma tillbaka nästa vecka.",
     "questions": [
-      {"type": "literal", "q": "Var ligger parken?", "options": ["Utanför staden", "Mitt i centrum", "Vid havet", "I en skog"], "correct": 1},
-      {"type": "literal", "q": "Vad gjorde de först i parken?", "options": ["Åt lunch", "Köpte glass", "Gick runt sjön", "Planterade blommor"], "correct": 2},
-      {"type": "literal", "q": "Vad ville Nora bli?", "options": ["Läkare", "Ingenjör", "Lärare", "Konstnär"], "correct": 0},
-      {"type": "literal", "q": "Vad handlade aktiviteten om?", "options": ["Sport", "Musik", "Matlagning", "Plantering"], "correct": 3},
-      {"type": "inferens", "q": "Varför är växter viktiga enligt ledaren?", "options": ["De luktar gott", "De ger skugga", "De renar luften", "De växer snabbt"], "correct": 2},
-      {"type": "literal", "q": "Vad gjorde de innan de gick hem?", "options": ["Spelade fotboll", "Köpte glass", "Läste bok", "Cyklade"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Var ligger parken?",
+        "options": [
+          "Utanför staden",
+          "Mitt i centrum",
+          "Vid havet",
+          "I en skog"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde de först i parken?",
+        "options": [
+          "Åt lunch",
+          "Köpte glass",
+          "Gick runt sjön",
+          "Planterade blommor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ville Nora bli?",
+        "options": [
+          "Läkare",
+          "Ingenjör",
+          "Lärare",
+          "Konstnär"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlade aktiviteten om?",
+        "options": [
+          "Sport",
+          "Musik",
+          "Matlagning",
+          "Plantering"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är växter viktiga enligt ledaren?",
+        "options": [
+          "De luktar gott",
+          "De ger skugga",
+          "De renar luften",
+          "De växer snabbt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde de innan de gick hem?",
+        "options": [
+          "Spelade fotboll",
+          "Köpte glass",
+          "Läste bok",
+          "Cyklade"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29141,12 +29501,72 @@
     "title": "Teknikens utveckling",
     "text": "Teknikens utveckling har förändrat människors liv på många sätt genom historien. Från enkla verktyg av sten till dagens avancerade datorer har varje steg gjort vardagen enklare men också mer komplex. Under industrialiseringen började maskiner ersätta manuellt arbete, vilket ledde till stora samhällsförändringar.\n\nIdag använder vi teknik i nästan alla delar av livet. Mobiltelefoner, internet och artificiell intelligens är exempel på modern teknik som påverkar hur vi kommunicerar och arbetar. Många yrken kräver nu digital kompetens, och skolor lägger större fokus på att lära ut tekniska färdigheter.\n\nSamtidigt finns det utmaningar. Teknik kan skapa beroende och påverka människors hälsa. Sociala medier kan bidra till stress och jämförelse mellan människor. Dessutom finns frågor om integritet och hur data används av företag och organisationer.\n\nTrots detta fortsätter tekniken att utvecklas snabbt. Forskare arbetar med att skapa hållbara lösningar, som förnybar energi och smarta städer. Målet är att använda teknik på ett sätt som gynnar både människor och miljö.\n\nFramtiden är svår att förutse, men det är tydligt att teknik kommer att spela en central roll i samhällets utveckling.",
     "questions": [
-      {"type": "literal", "q": "Vad ersatte maskiner under industrialiseringen?", "options": ["Digital teknik", "Manuellt arbete", "Transporter", "Handel"], "correct": 1},
-      {"type": "literal", "q": "Vad är ett exempel på modern teknik?", "options": ["Ångmaskin", "Stenverktyg", "Internet", "Vattenhjul"], "correct": 2},
-      {"type": "literal", "q": "Vilket problem kan sociala medier skapa?", "options": ["Stress", "Hunger", "Kyra", "Torka"], "correct": 0},
-      {"type": "literal", "q": "Vad arbetar forskare med idag?", "options": ["Krig", "Sport", "Underhållning", "Hållbara lösningar"], "correct": 3},
-      {"type": "literal", "q": "Vad kräver många yrken idag?", "options": ["Fysisk styrka", "Digital kompetens", "Musikalisk talang", "Språkkunskaper"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Historia", "Miljö", "Teknikens utveckling", "Mat"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "Vad ersatte maskiner under industrialiseringen?",
+        "options": [
+          "Digital teknik",
+          "Manuellt arbete",
+          "Transporter",
+          "Handel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett exempel på modern teknik?",
+        "options": [
+          "Ångmaskin",
+          "Stenverktyg",
+          "Internet",
+          "Vattenhjul"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilket problem kan sociala medier skapa?",
+        "options": [
+          "Stress",
+          "Hunger",
+          "Kyra",
+          "Torka"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad arbetar forskare med idag?",
+        "options": [
+          "Krig",
+          "Sport",
+          "Underhållning",
+          "Hållbara lösningar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kräver många yrken idag?",
+        "options": [
+          "Fysisk styrka",
+          "Digital kompetens",
+          "Musikalisk talang",
+          "Språkkunskaper"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Historia",
+          "Miljö",
+          "Teknikens utveckling",
+          "Mat"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 432,
@@ -29163,12 +29583,72 @@
     "title": "Människors rättigheter",
     "text": "Mänskliga rättigheter är grundläggande rättigheter som gäller alla människor, oavsett var de bor eller vem de är. Dessa rättigheter inkluderar rätten till liv, utbildning, yttrandefrihet och skydd mot diskriminering. De formulerades efter andra världskriget för att förhindra att liknande övergrepp skulle ske igen.\n\nTrots att rättigheterna är universella följs de inte alltid. I vissa länder begränsas människors frihet, och vissa grupper utsätts för diskriminering. Organisationer runt om i världen arbetar för att skydda och främja dessa rättigheter.\n\nUtbildning spelar en viktig roll i att stärka mänskliga rättigheter. Genom att lära sig om sina rättigheter kan människor stå upp för sig själva och andra. Skolor och samhällen har ett ansvar att sprida kunskap om dessa frågor.\n\nDet är också viktigt att tänka på hur vi behandlar varandra i vardagen. Respekt, empati och förståelse bidrar till ett mer rättvist samhälle. Varje individ kan göra skillnad genom små handlingar.\n\nMänskliga rättigheter handlar inte bara om lagar, utan också om värderingar och hur vi väljer att leva tillsammans.",
     "questions": [
-      {"type": "literal", "q": "När formulerades mänskliga rättigheter?", "options": ["Under medeltiden", "Efter andra världskriget", "På 1800-talet", "Efter industrialiseringen"], "correct": 1},
-      {"type": "literal", "q": "Vad är ett exempel på en rättighet?", "options": ["Rätten till liv", "Rätten till arbete i fabrik", "Rätten till rikedom", "Rätten till teknik"], "correct": 0},
-      {"type": "inferens", "q": "Vad kan utbildning bidra till?", "options": ["Ekonomi", "Kunskap om rättigheter", "Sport", "Underhållning"], "correct": 1},
-      {"type": "literal", "q": "Vad gör organisationer?", "options": ["Bygger hus", "Skyddar rättigheter", "Skapar spel", "Driver företag"], "correct": 1},
-      {"type": "inferens", "q": "Vad bidrar respekt och empati till?", "options": ["Ett mer rättvist samhälle", "Snabbare teknik", "Fler konflikter", "Mindre utbildning"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Historia", "Miljö", "Rättigheter", "Mat"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "När formulerades mänskliga rättigheter?",
+        "options": [
+          "Under medeltiden",
+          "Efter andra världskriget",
+          "På 1800-talet",
+          "Efter industrialiseringen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett exempel på en rättighet?",
+        "options": [
+          "Rätten till liv",
+          "Rätten till arbete i fabrik",
+          "Rätten till rikedom",
+          "Rätten till teknik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan utbildning bidra till?",
+        "options": [
+          "Ekonomi",
+          "Kunskap om rättigheter",
+          "Sport",
+          "Underhållning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör organisationer?",
+        "options": [
+          "Bygger hus",
+          "Skyddar rättigheter",
+          "Skapar spel",
+          "Driver företag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bidrar respekt och empati till?",
+        "options": [
+          "Ett mer rättvist samhälle",
+          "Snabbare teknik",
+          "Fler konflikter",
+          "Mindre utbildning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Historia",
+          "Miljö",
+          "Rättigheter",
+          "Mat"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 429,
@@ -29185,12 +29665,72 @@
     "title": "En historisk upptäckt",
     "text": "Under 1800-talet gjordes många viktiga upptäckter inom vetenskapen. En av dessa var utvecklingen av elektricitet som energikälla. Forskare experimenterade med olika sätt att producera och använda elektricitet, vilket ledde till stora förändringar i samhället.\n\nTidigare var människor beroende av ljus från eld och stearinljus. Med elektricitet kunde man skapa lampor som lyste upp hela rum. Detta gjorde det möjligt att arbeta och studera även efter solens nedgång.\n\nElektriciteten användes också i fabriker, vilket ökade produktionen och effektiviteten. Maskiner kunde drivas snabbare och mer exakt än tidigare. Detta bidrog till ekonomisk tillväxt men också till nya sociala utmaningar.\n\nMånga människor flyttade till städer för att arbeta i fabriker. Detta ledde till trångboddhet och ibland svåra levnadsförhållanden. Samtidigt skapades nya möjligheter och innovationer.\n\nDen historiska utvecklingen av elektricitet visar hur en upptäckt kan förändra världen på både positiva och negativa sätt.",
     "questions": [
-      {"type": "literal", "q": "Vad utvecklades under 1800-talet?", "options": ["Internet", "Elektricitet", "Bilar", "Flygplan"], "correct": 1},
-      {"type": "literal", "q": "Vad använde man innan elektricitet för ljus?", "options": ["Solpaneler", "Glödlampor", "Eld och ljus", "LED-lampor"], "correct": 2},
-      {"type": "inferens", "q": "Vad gjorde elektricitet möjligt?", "options": ["Resa i rymden", "Arbeta på natten", "Bygga hus", "Odla mat"], "correct": 1},
-      {"type": "literal", "q": "Vad hände i fabriker?", "options": ["De stängdes", "De minskade produktionen", "De blev snabbare", "De försvann"], "correct": 2},
-      {"type": "literal", "q": "Varför flyttade människor till städer?", "options": ["Semester", "Arbete", "Studier", "Sport"], "correct": 1},
-      {"type": "inferens", "q": "Vad visar utvecklingen av elektricitet?", "options": ["Att allt blir bättre", "Att förändring har både fördelar och nackdelar", "Att historia är oviktig", "Att teknik är farlig"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad utvecklades under 1800-talet?",
+        "options": [
+          "Internet",
+          "Elektricitet",
+          "Bilar",
+          "Flygplan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad använde man innan elektricitet för ljus?",
+        "options": [
+          "Solpaneler",
+          "Glödlampor",
+          "Eld och ljus",
+          "LED-lampor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gjorde elektricitet möjligt?",
+        "options": [
+          "Resa i rymden",
+          "Arbeta på natten",
+          "Bygga hus",
+          "Odla mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände i fabriker?",
+        "options": [
+          "De stängdes",
+          "De minskade produktionen",
+          "De blev snabbare",
+          "De försvann"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Varför flyttade människor till städer?",
+        "options": [
+          "Semester",
+          "Arbete",
+          "Studier",
+          "Sport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar utvecklingen av elektricitet?",
+        "options": [
+          "Att allt blir bättre",
+          "Att förändring har både fördelar och nackdelar",
+          "Att historia är oviktig",
+          "Att teknik är farlig"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 427,
@@ -29207,12 +29747,72 @@
     "title": "Att må bra i vardagen",
     "text": "Hälsa handlar inte bara om kroppen utan också om hur vi mår mentalt. För att må bra i vardagen är det viktigt att hitta balans mellan arbete, vila och fritid. Många ungdomar upplever stress från skola, sociala medier och krav från omgivningen.\n\nFysisk aktivitet är en viktig del av hälsa. Att röra på sig regelbundet kan förbättra både kropp och sinne. Det behöver inte vara avancerad träning, utan kan vara promenader, cykling eller att spela sport.\n\nSömn är också avgörande. Utan tillräcklig sömn blir det svårare att koncentrera sig och hantera känslor. Att ha rutiner kring läggdags kan hjälpa kroppen att återhämta sig.\n\nSociala relationer spelar en stor roll för hur vi mår. Att ha någon att prata med och känna stöd från vänner eller familj är viktigt. Samtidigt behöver man ibland tid för sig själv.\n\nGenom att ta hand om både kropp och sinne kan man skapa en hållbar livsstil som främjar välmående.",
     "questions": [
-      {"type": "literal", "q": "Vad handlar hälsa om?", "options": ["Bara kroppen", "Bara skolan", "Kropp och sinne", "Endast träning"], "correct": 2},
-      {"type": "literal", "q": "Vad kan fysisk aktivitet göra?", "options": ["Försämra hälsa", "Förbättra mående", "Ge stress", "Minska energi"], "correct": 1},
-      {"type": "literal", "q": "Varför är sömn viktig?", "options": ["För koncentration", "För pengar", "För teknik", "För mat"], "correct": 0},
-      {"type": "literal", "q": "Vad ger sociala relationer?", "options": ["Stress", "Trötthet", "Stöd", "Problem"], "correct": 2},
-      {"type": "inferens", "q": "Vad behöver man ibland?", "options": ["Mer skola", "Tid för sig själv", "Mer träning", "Fler krav"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Träning är viktigast", "Balans i livet ger hälsa", "Sömn är oviktig", "Skola orsakar allt"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad handlar hälsa om?",
+        "options": [
+          "Bara kroppen",
+          "Bara skolan",
+          "Kropp och sinne",
+          "Endast träning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan fysisk aktivitet göra?",
+        "options": [
+          "Försämra hälsa",
+          "Förbättra mående",
+          "Ge stress",
+          "Minska energi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför är sömn viktig?",
+        "options": [
+          "För koncentration",
+          "För pengar",
+          "För teknik",
+          "För mat"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ger sociala relationer?",
+        "options": [
+          "Stress",
+          "Trötthet",
+          "Stöd",
+          "Problem"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad behöver man ibland?",
+        "options": [
+          "Mer skola",
+          "Tid för sig själv",
+          "Mer träning",
+          "Fler krav"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Träning är viktigast",
+          "Balans i livet ger hälsa",
+          "Sömn är oviktig",
+          "Skola orsakar allt"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 428,
@@ -29220,8 +29820,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
-  }
-,
+  },
   {
     "id": "ak8-tema-016",
     "grade": 8,
@@ -29230,12 +29829,72 @@
     "title": "Klimatförändringar och ansvar",
     "text": "Klimatförändringar är en av de största utmaningarna i vår tid. Forskare har visat att jordens temperatur ökar, vilket till stor del beror på utsläpp av växthusgaser från mänskliga aktiviteter. Förbränning av fossila bränslen, som kol och olja, bidrar till ökade nivåer av koldioxid i atmosfären.\n\nKonsekvenserna av klimatförändringar märks redan idag. Glaciärer smälter, havsnivåer stiger och extremväder som värmeböljor och kraftiga stormar blir vanligare. Dessa förändringar påverkar både människor och djur. Vissa arter riskerar att dö ut när deras livsmiljöer förändras.\n\nSamtidigt diskuteras vem som har ansvar för att minska utsläppen. Industriländer har historiskt stått för stora utsläpp, medan utvecklingsländer ofta drabbas hårdast av konsekvenserna. Detta skapar en komplex fråga om rättvisa och ansvar.\n\nIndivider kan också bidra genom att göra mer hållbara val i vardagen, till exempel genom att minska sin energiförbrukning och välja miljövänliga transportmedel. Även små förändringar kan tillsammans göra stor skillnad.\n\nFör att hantera klimatförändringarna krävs samarbete på global nivå, där länder, företag och individer arbetar tillsammans för en mer hållbar framtid.",
     "questions": [
-      {"type": "literal", "q": "Vad är en huvudorsak till klimatförändringar?", "options": ["Ökad nederbörd", "Utsläpp av växthusgaser", "Fler vulkanutbrott", "Minskad skogsavverkning"], "correct": 1},
-      {"type": "literal", "q": "Vilken konsekvens nämns i texten?", "options": ["Fler skogar", "Stigande havsnivåer", "Mindre vind", "Färre djurarter i städer"], "correct": 1},
-      {"type": "literal", "q": "Vad händer med vissa djurarter?", "options": ["De blir fler", "De flyttar till städer", "De riskerar att dö ut", "De blir större"], "correct": 2},
-      {"type": "inferens", "q": "Vad handlar diskussionen om ansvar om?", "options": ["Vem som äger naturen", "Vem som orsakat och påverkas mest", "Vilka djur som är viktigast", "Hur vädret förändras"], "correct": 1},
-      {"type": "literal", "q": "Hur kan individer bidra?", "options": ["Genom att resa mer", "Genom att minska energianvändning", "Genom att ignorera problemet", "Genom att bygga fler hus"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Klimatförändringar är oviktiga", "Endast forskare kan lösa problemet", "Samarbete behövs för att hantera klimatet", "Vädret går inte att påverka"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "Vad är en huvudorsak till klimatförändringar?",
+        "options": [
+          "Ökad nederbörd",
+          "Utsläpp av växthusgaser",
+          "Fler vulkanutbrott",
+          "Minskad skogsavverkning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken konsekvens nämns i texten?",
+        "options": [
+          "Fler skogar",
+          "Stigande havsnivåer",
+          "Mindre vind",
+          "Färre djurarter i städer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med vissa djurarter?",
+        "options": [
+          "De blir fler",
+          "De flyttar till städer",
+          "De riskerar att dö ut",
+          "De blir större"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar diskussionen om ansvar om?",
+        "options": [
+          "Vem som äger naturen",
+          "Vem som orsakat och påverkas mest",
+          "Vilka djur som är viktigast",
+          "Hur vädret förändras"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan individer bidra?",
+        "options": [
+          "Genom att resa mer",
+          "Genom att minska energianvändning",
+          "Genom att ignorera problemet",
+          "Genom att bygga fler hus"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Klimatförändringar är oviktiga",
+          "Endast forskare kan lösa problemet",
+          "Samarbete behövs för att hantera klimatet",
+          "Vädret går inte att påverka"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 457,
@@ -29252,12 +29911,72 @@
     "title": "Demokrati och deltagande",
     "text": "Demokrati är ett styrelseskick där makten utgår från folket. Genom val får medborgare möjlighet att påverka vilka som ska fatta beslut i samhället. I en demokrati finns också grundläggande rättigheter, som yttrandefrihet och mötesfrihet, som gör det möjligt att uttrycka åsikter och delta i samhällsdebatten.\n\nDet finns olika former av demokrati. I representativ demokrati väljer medborgarna representanter som fattar beslut åt dem. I direkt demokrati deltar medborgarna själva i beslutsfattandet, till exempel genom folkomröstningar.\n\nFör att en demokrati ska fungera krävs mer än bara val. Det är viktigt att människor är informerade och engagerade. Medier spelar en central roll genom att sprida information och granska makthavare.\n\nSamtidigt finns utmaningar. Lågt valdeltagande kan minska legitimiteten i besluten, och spridning av falsk information kan påverka hur människor uppfattar verkligheten. Därför är källkritik en viktig del av ett demokratiskt samhälle.\n\nGenom att delta aktivt, till exempel genom att rösta, diskutera och engagera sig i frågor, kan medborgare bidra till att stärka demokratin.",
     "questions": [
-      {"type": "literal", "q": "Vad innebär demokrati?", "options": ["Att en person bestämmer allt", "Att makten utgår från folket", "Att endast experter styr", "Att lagar saknas"], "correct": 1},
-      {"type": "literal", "q": "Vad är representativ demokrati?", "options": ["Alla röstar varje dag", "Medborgare väljer representanter", "Ingen får rösta", "Endast politiker röstar"], "correct": 1},
-      {"type": "literal", "q": "Vad gör medier i en demokrati?", "options": ["Bygger hus", "Sprider information och granskar", "Bestämmer lagar", "Skapar konflikter"], "correct": 1},
-      {"type": "inferens", "q": "Vad kan lågt valdeltagande leda till?", "options": ["Starkare beslut", "Minskad legitimitet", "Fler val", "Mindre ansvar"], "correct": 1},
-      {"type": "literal", "q": "Vad är källkritik viktigt för?", "options": ["Att laga mat", "Att förstå information", "Att resa", "Att spela spel"], "correct": 1},
-      {"type": "inferens", "q": "Hur kan medborgare stärka demokratin?", "options": ["Genom att ignorera politik", "Genom att delta aktivt", "Genom att undvika rösta", "Genom att bara följa andra"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad innebär demokrati?",
+        "options": [
+          "Att en person bestämmer allt",
+          "Att makten utgår från folket",
+          "Att endast experter styr",
+          "Att lagar saknas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är representativ demokrati?",
+        "options": [
+          "Alla röstar varje dag",
+          "Medborgare väljer representanter",
+          "Ingen får rösta",
+          "Endast politiker röstar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör medier i en demokrati?",
+        "options": [
+          "Bygger hus",
+          "Sprider information och granskar",
+          "Bestämmer lagar",
+          "Skapar konflikter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan lågt valdeltagande leda till?",
+        "options": [
+          "Starkare beslut",
+          "Minskad legitimitet",
+          "Fler val",
+          "Mindre ansvar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är källkritik viktigt för?",
+        "options": [
+          "Att laga mat",
+          "Att förstå information",
+          "Att resa",
+          "Att spela spel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan medborgare stärka demokratin?",
+        "options": [
+          "Genom att ignorera politik",
+          "Genom att delta aktivt",
+          "Genom att undvika rösta",
+          "Genom att bara följa andra"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 456,
@@ -29274,12 +29993,72 @@
     "title": "Rymdens utforskning",
     "text": "Människans intresse för rymden har funnits i tusentals år, men det var först under 1900-talet som tekniken gjorde det möjligt att resa dit. Under rymdkapplöpningen tävlade stormakter om att nå viktiga milstolpar, som att skicka upp satelliter och landa på månen.\n\nRymdforskning har lett till många tekniska framsteg. Satelliter används idag för kommunikation, väderprognoser och navigation. Genom teleskop kan forskare studera avlägsna galaxer och få kunskap om universums utveckling.\n\nSamtidigt är rymdfärder kostsamma och innebär risker. Astronauter utsätts för faror som strålning och extrema temperaturer. Trots detta fortsätter forskningen, eftersom den kan ge svar på stora frågor om universum och livets ursprung.\n\nPå senare tid har även privata företag börjat engagera sig i rymdresor. Detta har lett till nya möjligheter men också nya diskussioner om regler och ansvar.\n\nRymdens utforskning visar människans nyfikenhet och vilja att förstå det okända.",
     "questions": [
-      {"type": "literal", "q": "När blev rymdresor möjliga?", "options": ["1800-talet", "1900-talet", "2000-talet", "Medeltiden"], "correct": 1},
-      {"type": "literal", "q": "Vad används satelliter till?", "options": ["Jordbruk", "Kommunikation och navigation", "Byggarbete", "Transport av varor"], "correct": 1},
-      {"type": "literal", "q": "Vilken risk finns för astronauter?", "options": ["Regn", "Strålning", "Vind", "Snö"], "correct": 1},
-      {"type": "literal", "q": "Vad har privata företag gjort?", "options": ["Slutat forska", "Börjat delta i rymdresor", "Förbjudit resor", "Byggt städer i rymden"], "correct": 1},
-      {"type": "inferens", "q": "Vad kan rymdforskning ge svar på?", "options": ["Endast väder", "Universums frågor", "Sportresultat", "Ekonomi"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad visar rymdens utforskning?", "options": ["Att teknik är oviktig", "Människans nyfikenhet", "Att rymden är farlig", "Att forskning är onödig"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "När blev rymdresor möjliga?",
+        "options": [
+          "1800-talet",
+          "1900-talet",
+          "2000-talet",
+          "Medeltiden"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad används satelliter till?",
+        "options": [
+          "Jordbruk",
+          "Kommunikation och navigation",
+          "Byggarbete",
+          "Transport av varor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken risk finns för astronauter?",
+        "options": [
+          "Regn",
+          "Strålning",
+          "Vind",
+          "Snö"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har privata företag gjort?",
+        "options": [
+          "Slutat forska",
+          "Börjat delta i rymdresor",
+          "Förbjudit resor",
+          "Byggt städer i rymden"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan rymdforskning ge svar på?",
+        "options": [
+          "Endast väder",
+          "Universums frågor",
+          "Sportresultat",
+          "Ekonomi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad visar rymdens utforskning?",
+        "options": [
+          "Att teknik är oviktig",
+          "Människans nyfikenhet",
+          "Att rymden är farlig",
+          "Att forskning är onödig"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 452,
@@ -29296,12 +30075,72 @@
     "title": "Kultur och identitet",
     "text": "Kultur handlar om de värderingar, traditioner och uttryck som människor delar. Det kan handla om språk, musik, mat och sätt att leva. Kultur formas både av historiska händelser och av nutida influenser.\n\nIdentitet är hur en person ser på sig själv och sin plats i världen. Den påverkas av faktorer som familj, vänner, samhälle och erfarenheter. Många människor har flera kulturella tillhörigheter samtidigt.\n\nI dagens globaliserade värld möts olika kulturer oftare än tidigare. Detta kan leda till ökad förståelse, men också till konflikter om värderingar och normer. Därför är det viktigt med respekt och dialog.\n\nKultur förändras ständigt. Nya idéer och influenser blandas med gamla traditioner. Till exempel kan musik från olika delar av världen kombineras och skapa nya genrer.\n\nGenom att förstå både sin egen och andras kultur kan människor bygga broar och skapa ett mer inkluderande samhälle.",
     "questions": [
-      {"type": "literal", "q": "Vad ingår i kultur?", "options": ["Endast språk", "Värderingar och traditioner", "Bara kläder", "Endast historia"], "correct": 1},
-      {"type": "literal", "q": "Vad påverkar identitet?", "options": ["Endast skola", "Familj och erfarenheter", "Bara arbete", "Endast fritid"], "correct": 1},
-      {"type": "inferens", "q": "Vad kan globalisering leda till?", "options": ["Mindre kontakt", "Ökad förståelse och konflikter", "Inga förändringar", "Färre idéer"], "correct": 1},
-      {"type": "literal", "q": "Hur förändras kultur?", "options": ["Den är statisk", "Den förändras över tid", "Den försvinner", "Den är oföränderlig"], "correct": 1},
-      {"type": "inferens", "q": "Vad kan musikexemplet visa?", "options": ["Att musik är gammal", "Att kulturer kan blandas", "Att musik är oviktig", "Att traditioner försvinner"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Kultur är oviktig", "Identitet är fast", "Förståelse skapar inkludering", "Globalisering är dålig"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "Vad ingår i kultur?",
+        "options": [
+          "Endast språk",
+          "Värderingar och traditioner",
+          "Bara kläder",
+          "Endast historia"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad påverkar identitet?",
+        "options": [
+          "Endast skola",
+          "Familj och erfarenheter",
+          "Bara arbete",
+          "Endast fritid"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan globalisering leda till?",
+        "options": [
+          "Mindre kontakt",
+          "Ökad förståelse och konflikter",
+          "Inga förändringar",
+          "Färre idéer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur förändras kultur?",
+        "options": [
+          "Den är statisk",
+          "Den förändras över tid",
+          "Den försvinner",
+          "Den är oföränderlig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan musikexemplet visa?",
+        "options": [
+          "Att musik är gammal",
+          "Att kulturer kan blandas",
+          "Att musik är oviktig",
+          "Att traditioner försvinner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Kultur är oviktig",
+          "Identitet är fast",
+          "Förståelse skapar inkludering",
+          "Globalisering är dålig"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 451,
@@ -29318,12 +30157,72 @@
     "title": "Ungas hälsa i en digital värld",
     "text": "I dagens samhälle spelar digitala medier en stor roll i ungas liv. Många använder sociala plattformar dagligen för att kommunicera, dela innehåll och hålla kontakt med vänner. Detta kan ha både positiva och negativa effekter på hälsan.\n\nEn fördel är att unga kan hitta gemenskap och stöd online. Personer som känner sig ensamma kan hitta andra med liknande intressen eller erfarenheter. Samtidigt kan ständig uppkoppling skapa stress och press att vara tillgänglig.\n\nForskning visar att jämförelse med andra på sociala medier kan påverka självkänslan negativt. Bilder och inlägg visar ofta en idealiserad bild av verkligheten, vilket kan leda till känslor av otillräcklighet.\n\nDet är viktigt att utveckla en medveten användning av digitala medier. Att ta pauser, begränsa skärmtid och reflektera över innehållet man tar del av kan bidra till bättre välmående.\n\nSkola och vuxna har en viktig roll i att stödja unga i att navigera den digitala världen på ett hälsosamt sätt.",
     "questions": [
-      {"type": "literal", "q": "Vad används sociala medier till?", "options": ["Endast arbete", "Kommunikation och delning", "Bara studier", "Endast sport"], "correct": 1},
-      {"type": "literal", "q": "Vilken positiv effekt nämns?", "options": ["Mer stress", "Gemenskap", "Sämre sömn", "Mindre kontakt"], "correct": 1},
-      {"type": "literal", "q": "Vad kan påverka självkänslan negativt?", "options": ["Studier", "Jämförelse med andra", "Träning", "Familj"], "correct": 1},
-      {"type": "literal", "q": "Vad visar inlägg ofta?", "options": ["Verkligheten exakt", "Idealiserad bild", "Bara fakta", "Endast nyheter"], "correct": 1},
-      {"type": "literal", "q": "Hur kan man må bättre?", "options": ["Mer skärmtid", "Ta pauser", "Aldrig använda teknik", "Isolera sig"], "correct": 1},
-      {"type": "inferens", "q": "Vad är vuxnas roll?", "options": ["Ignorera unga", "Stödja och vägleda", "Kontrollera allt", "Förbjuda internet"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad används sociala medier till?",
+        "options": [
+          "Endast arbete",
+          "Kommunikation och delning",
+          "Bara studier",
+          "Endast sport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken positiv effekt nämns?",
+        "options": [
+          "Mer stress",
+          "Gemenskap",
+          "Sämre sömn",
+          "Mindre kontakt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan påverka självkänslan negativt?",
+        "options": [
+          "Studier",
+          "Jämförelse med andra",
+          "Träning",
+          "Familj"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad visar inlägg ofta?",
+        "options": [
+          "Verkligheten exakt",
+          "Idealiserad bild",
+          "Bara fakta",
+          "Endast nyheter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan man må bättre?",
+        "options": [
+          "Mer skärmtid",
+          "Ta pauser",
+          "Aldrig använda teknik",
+          "Isolera sig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är vuxnas roll?",
+        "options": [
+          "Ignorera unga",
+          "Stödja och vägleda",
+          "Kontrollera allt",
+          "Förbjuda internet"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 453,
@@ -29331,8 +30230,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
-  }
-,
+  },
   {
     "id": "ak7-tema-031",
     "grade": 7,
@@ -29341,12 +30239,72 @@
     "title": "En oväntad vänskap",
     "text": "Sofia hade nyligen flyttat till en ny stad och kände sig osäker i sin nya skola. Hon saknade sina gamla vänner och tyckte att allt kändes främmande. På rasterna satt hon ofta ensam och tittade på de andra eleverna som redan verkade känna varandra.\n\nEn dag satte sig Alex bredvid henne i matsalen. Alex identifierade sig som icke-binär och var känd i klassen för att vara öppen och vänlig. De började prata om musik och upptäckte att de hade liknande smak. Samtalet gjorde Sofia mer avslappnad.\n\nUnder de följande veckorna började de umgås mer. Alex introducerade Sofia för fler klasskamrater, och snart kände hon sig mer inkluderad. Sofia märkte också att Alex ibland blev ifrågasatt av andra, men Alex stod upp för sig själv och förklarade lugnt sin identitet.\n\nSofia lärde sig mycket om respekt och vikten av att acceptera människor som de är. Hon insåg att vänskap kan uppstå på oväntade sätt och att det krävs mod att vara sig själv.\n\nEfter några månader kände Sofia att hon hade hittat sin plats. Hon var inte längre ensam och hade fått både nya vänner och nya perspektiv.",
     "questions": [
-      {"type": "literal", "q": "Varför kände sig Sofia osäker i början?", "options": ["Hon hade för mycket läxor", "Hon hade flyttat till en ny stad", "Hon gillade inte skolan", "Hon var sjuk"], "correct": 1},
-      {"type": "literal", "q": "Var träffade Sofia Alex första gången?", "options": ["I klassrummet", "På skolgården", "I matsalen", "På bussen"], "correct": 2},
-      {"type": "literal", "q": "Vad hade Sofia och Alex gemensamt?", "options": ["Sportintresse", "Musiksmak", "Favoritämne", "Familjebakgrund"], "correct": 1},
-      {"type": "literal", "q": "Hur reagerade Alex när hen blev ifrågasatt?", "options": ["Blev arg", "Ignorerade allt", "Bytte skola", "Förklarade lugnt"], "correct": 3},
-      {"type": "inferens", "q": "Vad lärde sig Sofia?", "options": ["Att undvika andra", "Att vara bäst i klassen", "Vikten av respekt", "Att byta skola"], "correct": 2},
-      {"type": "sammanfatta", "q": "Vad är textens huvudbudskap?", "options": ["Skolan är svår", "Vänskap och acceptans är viktigt", "Man ska alltid vara ensam", "Musik är viktigast"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Varför kände sig Sofia osäker i början?",
+        "options": [
+          "Hon hade för mycket läxor",
+          "Hon hade flyttat till en ny stad",
+          "Hon gillade inte skolan",
+          "Hon var sjuk"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var träffade Sofia Alex första gången?",
+        "options": [
+          "I klassrummet",
+          "På skolgården",
+          "I matsalen",
+          "På bussen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad hade Sofia och Alex gemensamt?",
+        "options": [
+          "Sportintresse",
+          "Musiksmak",
+          "Favoritämne",
+          "Familjebakgrund"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur reagerade Alex när hen blev ifrågasatt?",
+        "options": [
+          "Blev arg",
+          "Ignorerade allt",
+          "Bytte skola",
+          "Förklarade lugnt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad lärde sig Sofia?",
+        "options": [
+          "Att undvika andra",
+          "Att vara bäst i klassen",
+          "Vikten av respekt",
+          "Att byta skola"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Skolan är svår",
+          "Vänskap och acceptans är viktigt",
+          "Man ska alltid vara ensam",
+          "Musik är viktigast"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 431,
@@ -29363,12 +30321,72 @@
     "title": "Vattnets kretslopp",
     "text": "Vattnets kretslopp är en naturlig process som ständigt pågår på jorden. Solens energi gör att vatten i hav, sjöar och floder avdunstar och stiger upp i atmosfären som vattenånga. När vattenångan kyls ner bildas moln.\n\nSå småningom faller vattnet tillbaka till jorden som nederbörd, till exempel regn eller snö. En del av vattnet rinner ner i marken och blir grundvatten, medan annat rinner tillbaka till sjöar och hav.\n\nVattnets kretslopp är viktigt för livet på jorden. Det förser växter, djur och människor med färskt vatten. Utan detta kretslopp skulle många ekosystem inte fungera.\n\nMänniskans aktiviteter kan påverka kretsloppet. Föroreningar kan spridas med vatten och påverka både miljö och hälsa. Därför är det viktigt att skydda våra vattenresurser.\n\nGenom att förstå vattnets kretslopp kan vi bättre ta hand om naturen och säkerställa att framtida generationer har tillgång till rent vatten.",
     "questions": [
-      {"type": "literal", "q": "Vad gör solen i kretsloppet?", "options": ["Skapar moln direkt", "Avdunstar vatten", "Kyler ner vatten", "Stoppar regn"], "correct": 1},
-      {"type": "literal", "q": "Vad bildas när vattenånga kyls ner?", "options": ["Vind", "Moln", "Snö direkt", "Isberg"], "correct": 1},
-      {"type": "literal", "q": "Vad kallas vatten i marken?", "options": ["Havsvatten", "Regnvatten", "Grundvatten", "Saltvatten"], "correct": 2},
-      {"type": "inferens", "q": "Varför är kretsloppet viktigt?", "options": ["För transport", "För energi", "För teknik", "För liv på jorden"], "correct": 3},
-      {"type": "literal", "q": "Hur kan människor påverka?", "options": ["Genom föroreningar", "Genom att minska solen", "Genom att stoppa regn", "Genom att skapa moln"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Väder", "Vattnets kretslopp", "Energi", "Djur"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad gör solen i kretsloppet?",
+        "options": [
+          "Skapar moln direkt",
+          "Avdunstar vatten",
+          "Kyler ner vatten",
+          "Stoppar regn"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad bildas när vattenånga kyls ner?",
+        "options": [
+          "Vind",
+          "Moln",
+          "Snö direkt",
+          "Isberg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas vatten i marken?",
+        "options": [
+          "Havsvatten",
+          "Regnvatten",
+          "Grundvatten",
+          "Saltvatten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är kretsloppet viktigt?",
+        "options": [
+          "För transport",
+          "För energi",
+          "För teknik",
+          "För liv på jorden"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan människor påverka?",
+        "options": [
+          "Genom föroreningar",
+          "Genom att minska solen",
+          "Genom att stoppa regn",
+          "Genom att skapa moln"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Väder",
+          "Vattnets kretslopp",
+          "Energi",
+          "Djur"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29385,12 +30403,72 @@
     "title": "Medeltidens städer",
     "text": "Under medeltiden växte många städer fram i Europa. Dessa städer var ofta omgivna av murar som skydd mot fiender. Inom murarna fanns smala gator, marknadsplatser och kyrkor som var viktiga samlingsplatser.\n\nHandel spelade en central roll i städernas utveckling. Köpmän reste mellan olika platser och bytte varor som tyg, kryddor och metaller. Marknader var livliga och viktiga för ekonomin.\n\nLivet i städerna var dock inte alltid enkelt. Trångboddhet och dålig hygien kunde leda till sjukdomar. Bränder var också vanliga eftersom många hus var byggda av trä.\n\nTrots svårigheterna lockade städerna människor med möjligheter till arbete och handel. Hantverkare organiserade sig i skrån, där de lärde ut sina yrken till lärlingar.\n\nMedeltidens städer lade grunden för dagens moderna samhällen och visar hur människor samarbetade för att skapa fungerande samhällen.",
     "questions": [
-      {"type": "literal", "q": "Varför hade städer murar?", "options": ["För dekoration", "För skydd", "För handel", "För vatten"], "correct": 1},
-      {"type": "literal", "q": "Vad var viktigt i städerna?", "options": ["Skogar", "Marknadsplatser", "Fält", "Hav"], "correct": 1},
-      {"type": "literal", "q": "Vad gjorde köpmän?", "options": ["Byggde hus", "Bytte varor", "Undervisade", "Jagade"], "correct": 1},
-      {"type": "literal", "q": "Vilket problem fanns i städerna?", "options": ["För mycket plats", "Dålig hygien", "För lite handel", "Inga kyrkor"], "correct": 1},
-      {"type": "literal", "q": "Vad var skrån?", "options": ["Skolor", "Organisationer för hantverkare", "Kyrkor", "Marknader"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad visar texten?", "options": ["Att städer var perfekta", "Hur städer utvecklades", "Att handel var oviktig", "Att människor levde ensamma"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Varför hade städer murar?",
+        "options": [
+          "För dekoration",
+          "För skydd",
+          "För handel",
+          "För vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var viktigt i städerna?",
+        "options": [
+          "Skogar",
+          "Marknadsplatser",
+          "Fält",
+          "Hav"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde köpmän?",
+        "options": [
+          "Byggde hus",
+          "Bytte varor",
+          "Undervisade",
+          "Jagade"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket problem fanns i städerna?",
+        "options": [
+          "För mycket plats",
+          "Dålig hygien",
+          "För lite handel",
+          "Inga kyrkor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var skrån?",
+        "options": [
+          "Skolor",
+          "Organisationer för hantverkare",
+          "Kyrkor",
+          "Marknader"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad visar texten?",
+        "options": [
+          "Att städer var perfekta",
+          "Hur städer utvecklades",
+          "Att handel var oviktig",
+          "Att människor levde ensamma"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 428,
@@ -29407,12 +30485,72 @@
     "title": "Hur kroppen reagerar på stress",
     "text": "Stress är en naturlig reaktion i kroppen som uppstår när vi känner oss hotade eller pressade. När vi upplever stress aktiveras kroppens alarmsystem, vilket gör att pulsen ökar och vi blir mer alerta.\n\nKortvarig stress kan vara hjälpsam, till exempel inför ett prov eller en tävling. Den kan ge extra energi och fokus. Men långvarig stress kan påverka hälsan negativt och leda till problem som sömnsvårigheter och koncentrationssvårigheter.\n\nDet finns olika sätt att hantera stress. Att planera sin tid, ta pauser och prata med någon kan minska stressnivån. Fysisk aktivitet och avslappningstekniker som djupandning kan också hjälpa.\n\nDet är viktigt att känna igen signaler på stress i tid. Genom att lyssna på kroppen kan man undvika att stressen blir överväldigande.\n\nAtt förstå hur kroppen reagerar på stress kan hjälpa oss att må bättre och hantera utmaningar i vardagen.",
     "questions": [
-      {"type": "literal", "q": "Vad händer i kroppen vid stress?", "options": ["Pulsen minskar", "Pulsen ökar", "Man blir trött direkt", "Man somnar"], "correct": 1},
-      {"type": "literal", "q": "När kan stress vara hjälpsam?", "options": ["Vid vila", "Inför prov", "När man sover", "Vid semester"], "correct": 1},
-      {"type": "literal", "q": "Vad kan långvarig stress leda till?", "options": ["Bättre sömn", "Koncentrationssvårigheter", "Mer energi", "Bättre minne"], "correct": 1},
-      {"type": "literal", "q": "Hur kan man minska stress?", "options": ["Ignorera den", "Planera och ta pauser", "Jobba mer", "Undvika alla människor"], "correct": 1},
-      {"type": "inferens", "q": "Varför är det viktigt att känna igen stress?", "options": ["För att öka den", "För att undvika problem", "För att tävla bättre", "För att bli trött"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Stress är alltid dåligt", "Stress kan förstås och hanteras", "Man ska undvika allt", "Stress är oviktig"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad händer i kroppen vid stress?",
+        "options": [
+          "Pulsen minskar",
+          "Pulsen ökar",
+          "Man blir trött direkt",
+          "Man somnar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "När kan stress vara hjälpsam?",
+        "options": [
+          "Vid vila",
+          "Inför prov",
+          "När man sover",
+          "Vid semester"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan långvarig stress leda till?",
+        "options": [
+          "Bättre sömn",
+          "Koncentrationssvårigheter",
+          "Mer energi",
+          "Bättre minne"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan man minska stress?",
+        "options": [
+          "Ignorera den",
+          "Planera och ta pauser",
+          "Jobba mer",
+          "Undvika alla människor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det viktigt att känna igen stress?",
+        "options": [
+          "För att öka den",
+          "För att undvika problem",
+          "För att tävla bättre",
+          "För att bli trött"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Stress är alltid dåligt",
+          "Stress kan förstås och hanteras",
+          "Man ska undvika allt",
+          "Stress är oviktig"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 429,
@@ -29429,12 +30567,72 @@
     "title": "Fotbollens betydelse",
     "text": "Fotboll är en av världens mest populära sporter och spelas i nästan alla länder. Sporten kräver både fysisk uthållighet och samarbete mellan spelare. Målet är att göra fler mål än motståndaren.\n\nFotboll har också en viktig social roll. Den kan förena människor från olika bakgrunder och skapa gemenskap. Många ungdomar deltar i lag och lär sig viktiga värderingar som respekt och lagarbete.\n\nProfessionell fotboll är en stor industri med klubbar, ligor och internationella turneringar. Spelare kan bli kända och inspirera andra.\n\nSamtidigt finns utmaningar, som press på spelare och risk för skador. Det är viktigt att träna på ett säkert sätt och att ha balans mellan sport och andra delar av livet.\n\nFotbollens betydelse sträcker sig därför bortom planen och påverkar både individer och samhällen.",
     "questions": [
-      {"type": "literal", "q": "Vad är målet i fotboll?", "options": ["Att springa mest", "Att göra mål", "Att passa bollen", "Att försvara"], "correct": 1},
-      {"type": "literal", "q": "Vad kräver fotboll?", "options": ["Endast styrka", "Samarbete och uthållighet", "Endast teknik", "Tur"], "correct": 1},
-      {"type": "inferens", "q": "Vad kan fotboll skapa?", "options": ["Konflikter", "Gemenskap", "Stress", "Problem"], "correct": 1},
-      {"type": "literal", "q": "Vad är professionell fotboll?", "options": ["Skolspel", "En industri", "En hobby", "Ett spel utan regler"], "correct": 1},
-      {"type": "literal", "q": "Vilken risk finns?", "options": ["För lite träning", "Skador", "Ingen publik", "För lite lag"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Fotboll är bara lek", "Fotboll påverkar samhället", "Fotboll är farligt", "Fotboll är enkelt"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad är målet i fotboll?",
+        "options": [
+          "Att springa mest",
+          "Att göra mål",
+          "Att passa bollen",
+          "Att försvara"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kräver fotboll?",
+        "options": [
+          "Endast styrka",
+          "Samarbete och uthållighet",
+          "Endast teknik",
+          "Tur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan fotboll skapa?",
+        "options": [
+          "Konflikter",
+          "Gemenskap",
+          "Stress",
+          "Problem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är professionell fotboll?",
+        "options": [
+          "Skolspel",
+          "En industri",
+          "En hobby",
+          "Ett spel utan regler"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken risk finns?",
+        "options": [
+          "För lite träning",
+          "Skador",
+          "Ingen publik",
+          "För lite lag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Fotboll är bara lek",
+          "Fotboll påverkar samhället",
+          "Fotboll är farligt",
+          "Fotboll är enkelt"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 427,
@@ -29442,8 +30640,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
-  }
-,
+  },
   {
     "id": "ak7-tema-036",
     "grade": 7,
@@ -29452,12 +30649,72 @@
     "title": "Skogen som förändras",
     "text": "Skogen har länge varit en viktig del av Sveriges natur och kultur. Den ger oss syre, material till byggnader och en plats för rekreation. Men idag förändras skogen snabbare än tidigare, delvis på grund av klimatförändringar. När temperaturen stiger påverkas både djur och växter. Vissa arter får svårare att överleva medan andra sprider sig till nya områden.\n\nEn tydlig förändring är att granen, som är vanlig i Sverige, har börjat få problem i varmare klimat. Samtidigt klarar sig lövträd som ek och bok bättre. Detta gör att skogens sammansättning sakta förändras. För skogsägare innebär det att de behöver tänka annorlunda kring vilka träd de planterar.\n\nÄven skadedjur påverkas av klimatet. Barkborren är ett exempel på en insekt som har blivit vanligare. Den angriper granar och kan snabbt döda stora områden av skog. När vintrarna blir mildare överlever fler barkborrar, vilket leder till större skador.\n\nSamtidigt finns det åtgärder som kan minska problemen. Forskare och skogsbrukare arbetar tillsammans för att hitta lösningar. Det kan handla om att plantera fler olika sorters träd, så att skogen blir mer motståndskraftig. En varierad skog klarar förändringar bättre än en skog med bara en trädart.\n\nFör människor är skogen också viktig för hälsa och välbefinnande. Många går dit för att promenera, plocka svamp eller bara koppla av. Därför är det viktigt att vi tar hand om skogen och anpassar oss till de förändringar som sker. Genom att förstå vad som händer kan vi fatta bättre beslut för framtiden.",
     "questions": [
-      {"type": "literal", "q": "Vad är en viktig orsak till att skogen förändras?", "options": ["Ökad turism", "Klimatförändringar", "Mindre nederbörd", "Färre djur"], "correct": 1},
-      {"type": "literal", "q": "Vilket träd har fått problem i varmare klimat?", "options": ["Ek", "Björk", "Gran", "Tall"], "correct": 2},
-      {"type": "literal", "q": "Vad gör barkborren?", "options": ["Den pollinerar blommor", "Den äter löv", "Den sprider frön", "Den angriper granar"], "correct": 3},
-      {"type": "inferens", "q": "Varför är en varierad skog bättre?", "options": ["Den är billigare att plantera", "Den växer snabbare", "Den lockar fler turister", "Den klarar förändringar bättre"], "correct": 3},
-      {"type": "literal", "q": "Vad kan skogsägare behöva göra?", "options": ["Plantera andra träd", "Sluta använda skogen", "Bygga fler vägar", "Minska djurpopulationer"], "correct": 0},
-      {"type": "inferens", "q": "Varför är skogen viktig för människor?", "options": ["Den ger internet", "Den är en plats för vila", "Den producerar elektricitet", "Den ersätter städer"], "correct": 1}
+      {
+        "type": "literal",
+        "q": "Vad är en viktig orsak till att skogen förändras?",
+        "options": [
+          "Ökad turism",
+          "Klimatförändringar",
+          "Mindre nederbörd",
+          "Färre djur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket träd har fått problem i varmare klimat?",
+        "options": [
+          "Ek",
+          "Björk",
+          "Gran",
+          "Tall"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör barkborren?",
+        "options": [
+          "Den pollinerar blommor",
+          "Den äter löv",
+          "Den sprider frön",
+          "Den angriper granar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är en varierad skog bättre?",
+        "options": [
+          "Den är billigare att plantera",
+          "Den växer snabbare",
+          "Den lockar fler turister",
+          "Den klarar förändringar bättre"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan skogsägare behöva göra?",
+        "options": [
+          "Plantera andra träd",
+          "Sluta använda skogen",
+          "Bygga fler vägar",
+          "Minska djurpopulationer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är skogen viktig för människor?",
+        "options": [
+          "Den ger internet",
+          "Den är en plats för vila",
+          "Den producerar elektricitet",
+          "Den ersätter städer"
+        ],
+        "correct": 1
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29474,12 +30731,72 @@
     "title": "Hur lagar skapas",
     "text": "I Sverige styrs landet genom demokrati, vilket innebär att folket har makt att påverka besluten. Ett viktigt område är hur lagar skapas. Processen börjar ofta med att regeringen eller riksdagen föreslår en ny lag, vilket kallas för en proposition eller motion.\n\nNär ett förslag har lagts fram granskas det av ett utskott i riksdagen. Utskottet består av politiker från olika partier som diskuterar och analyserar förslaget. De kan föreslå ändringar innan det går vidare till omröstning.\n\nEfter granskningen röstar riksdagen om förslaget. Om en majoritet röstar ja blir det en ny lag. Om inte, avslås förslaget. Denna process är viktig för att säkerställa att olika perspektiv tas i beaktande innan ett beslut fattas.\n\nMen lagar kan också påverkas av EU. Sverige är medlem i Europeiska unionen, och vissa lagar måste följa gemensamma regler. Det innebär att svenska politiker ibland måste anpassa nationella lagar efter beslut som fattas på EU-nivå.\n\nDet är också möjligt för medborgare att påverka. Genom att rösta i val kan människor välja vilka politiker som ska representera dem. Dessutom kan man delta i debatter, skriva insändare eller engagera sig i organisationer.\n\nAtt förstå hur lagar skapas är viktigt för att kunna vara en aktiv medborgare. Genom kunskap om processen blir det lättare att se hur beslut fattas och hur man själv kan påverka samhället.",
     "questions": [
-      {"type": "literal", "q": "Vad kallas ett lagförslag från regeringen?", "options": ["Debatt", "Motion", "Proposition", "Beslut"], "correct": 2},
-      {"type": "literal", "q": "Vad gör ett utskott?", "options": ["Röstar direkt", "Granskar förslag", "Skapar lagar ensamt", "Bestämmer skatter"], "correct": 1},
-      {"type": "literal", "q": "När blir en lag giltig?", "options": ["När kungen säger ja", "När alla partier är överens", "När riksdagen röstar ja", "När EU bestämmer"], "correct": 2},
-      {"type": "literal", "q": "Hur kan EU påverka svenska lagar?", "options": ["Genom att stoppa val", "Genom att skriva lokala regler", "Genom att kräva anpassning", "Genom att välja regering"], "correct": 2},
-      {"type": "literal", "q": "Hur kan medborgare påverka?", "options": ["Genom att rösta", "Genom att skriva lagar själva", "Genom att ignorera politik", "Genom att stoppa riksdagen"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad är huvudidén med demokrati?", "options": ["Att staten styr allt", "Att en person bestämmer", "Att företag styr landet", "Att folket har makt"], "correct": 3}
+      {
+        "type": "literal",
+        "q": "Vad kallas ett lagförslag från regeringen?",
+        "options": [
+          "Debatt",
+          "Motion",
+          "Proposition",
+          "Beslut"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör ett utskott?",
+        "options": [
+          "Röstar direkt",
+          "Granskar förslag",
+          "Skapar lagar ensamt",
+          "Bestämmer skatter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "När blir en lag giltig?",
+        "options": [
+          "När kungen säger ja",
+          "När alla partier är överens",
+          "När riksdagen röstar ja",
+          "När EU bestämmer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan EU påverka svenska lagar?",
+        "options": [
+          "Genom att stoppa val",
+          "Genom att skriva lokala regler",
+          "Genom att kräva anpassning",
+          "Genom att välja regering"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan medborgare påverka?",
+        "options": [
+          "Genom att rösta",
+          "Genom att skriva lagar själva",
+          "Genom att ignorera politik",
+          "Genom att stoppa riksdagen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudidén med demokrati?",
+        "options": [
+          "Att staten styr allt",
+          "Att en person bestämmer",
+          "Att företag styr landet",
+          "Att folket har makt"
+        ],
+        "correct": 3
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29496,12 +30813,72 @@
     "title": "En inkluderande skola",
     "text": "I en skola möts människor med olika bakgrunder, erfarenheter och förutsättningar. En inkluderande skola handlar om att alla elever ska känna sig välkomna och ha möjlighet att lyckas, oavsett vem de är. Det kan handla om kön, språk, funktionsvariation eller familjesituation.\n\nTill exempel kan Amir, som nyligen flyttat till Sverige, behöva extra stöd i språket. Samtidigt kan Alex, som är icke-binär, behöva en miljö där hen känner sig respekterad. Lina kanske använder rullstol och behöver en skola som är tillgänglig rent fysiskt.\n\nLärare spelar en viktig roll i att skapa en inkluderande miljö. De kan anpassa undervisningen så att alla elever får möjlighet att förstå och delta. Det kan innebära olika sätt att förklara, använda bilder eller ge extra tid.\n\nElever har också ett ansvar. Genom att visa respekt och vara öppna för olikheter kan de bidra till en bättre skolmiljö. Att stå upp för någon som blir behandlad illa är ett viktigt steg.\n\nEn inkluderande skola handlar inte bara om regler, utan också om värderingar. Det handlar om att se varje individ som unik och värdefull. När elever känner sig trygga och accepterade ökar också deras möjligheter att lära sig.\n\nI längden bidrar detta till ett mer rättvist samhälle. Genom att tidigt lära sig om respekt och inkludering kan unga människor ta med sig dessa värderingar in i vuxenlivet.",
     "questions": [
-      {"type": "literal", "q": "Vad betyder en inkluderande skola?", "options": ["Att alla behandlas lika", "Att alla känner sig välkomna", "Att bara vissa elever lyckas", "Att regler saknas"], "correct": 1},
-      {"type": "literal", "q": "Vad kan Amir behöva?", "options": ["Mer idrott", "Språkstöd", "Mindre undervisning", "Ny skola"], "correct": 1},
-      {"type": "literal", "q": "Vad behöver Lina?", "options": ["Fler läxor", "En större klass", "Fysisk tillgänglighet", "Kortare dagar"], "correct": 2},
-      {"type": "literal", "q": "Vad kan elever göra?", "options": ["Ignorera andra", "Skapa konflikter", "Visa respekt", "Bestämma regler"], "correct": 2},
-      {"type": "inferens", "q": "Vad händer när elever känner sig trygga?", "options": ["De lär sig bättre", "De slutar studera", "De blir stressade", "De byter skola"], "correct": 0},
-      {"type": "sammanfatta", "q": "Vad bidrar inkludering till i längden?", "options": ["Fler regler", "Mindre variation", "Ett mer rättvist samhälle", "Hårdare skola"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "Vad betyder en inkluderande skola?",
+        "options": [
+          "Att alla behandlas lika",
+          "Att alla känner sig välkomna",
+          "Att bara vissa elever lyckas",
+          "Att regler saknas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan Amir behöva?",
+        "options": [
+          "Mer idrott",
+          "Språkstöd",
+          "Mindre undervisning",
+          "Ny skola"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad behöver Lina?",
+        "options": [
+          "Fler läxor",
+          "En större klass",
+          "Fysisk tillgänglighet",
+          "Kortare dagar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan elever göra?",
+        "options": [
+          "Ignorera andra",
+          "Skapa konflikter",
+          "Visa respekt",
+          "Bestämma regler"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad händer när elever känner sig trygga?",
+        "options": [
+          "De lär sig bättre",
+          "De slutar studera",
+          "De blir stressade",
+          "De byter skola"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad bidrar inkludering till i längden?",
+        "options": [
+          "Fler regler",
+          "Mindre variation",
+          "Ett mer rättvist samhälle",
+          "Hårdare skola"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29518,12 +30895,72 @@
     "title": "Vad är artificiell intelligens?",
     "text": "Artificiell intelligens, ofta förkortat AI, är teknik som gör att datorer kan utföra uppgifter som vanligtvis kräver mänsklig intelligens. Det kan handla om att känna igen bilder, förstå språk eller fatta beslut.\n\nAI används redan i många delar av samhället. Till exempel kan mobiltelefoner använda AI för att känna igen ansikten i bilder. Streamingtjänster använder AI för att rekommendera filmer baserat på vad du tidigare har sett.\n\nTekniken bygger ofta på stora mängder data. Genom att analysera data kan AI-system hitta mönster och lära sig över tid. Detta kallas maskininlärning.\n\nMen AI väcker också frågor. Vem ansvarar om ett AI-system gör fel? Hur skyddas människors integritet när stora mängder data samlas in? Dessa frågor diskuteras av forskare, politiker och företag.\n\nDet finns också en oro för att AI kan ersätta vissa jobb. Samtidigt kan tekniken skapa nya möjligheter och yrken. Historiskt har ny teknik ofta förändrat arbetsmarknaden snarare än att helt ta bort jobb.\n\nFör att använda AI på ett bra sätt krävs kunskap och regler. Genom att förstå tekniken kan människor fatta informerade beslut och använda AI på ett ansvarsfullt sätt.",
     "questions": [
-      {"type": "literal", "q": "Vad betyder AI?", "options": ["Automatisk information", "Artificiell intelligens", "Avancerad internet", "Allmän innovation"], "correct": 1},
-      {"type": "literal", "q": "Vad kan AI göra?", "options": ["Bygga hus själv", "Känna igen bilder", "Skapa elektricitet", "Stänga internet"], "correct": 1},
-      {"type": "literal", "q": "Vad är maskininlärning?", "options": ["När datorer lagar sig själva", "När människor lär datorer", "När datorer lär sig från data", "När internet uppdateras"], "correct": 2},
-      {"type": "inferens", "q": "Vilken fråga väcker AI?", "options": ["Hur man bygger datorer", "Vem som ansvarar vid fel", "Hur man lagar mat", "Hur man skriver böcker"], "correct": 1},
-      {"type": "inferens", "q": "Hur påverkar AI jobb?", "options": ["Tar bort alla jobb", "Skapar inga förändringar", "Förändrar arbetsmarknaden", "Stoppar arbete"], "correct": 2},
-      {"type": "sammanfatta", "q": "Vad behövs för att använda AI bra?", "options": ["Mindre teknik", "Fler spel", "Kunskap och regler", "Snabbare datorer"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "Vad betyder AI?",
+        "options": [
+          "Automatisk information",
+          "Artificiell intelligens",
+          "Avancerad internet",
+          "Allmän innovation"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan AI göra?",
+        "options": [
+          "Bygga hus själv",
+          "Känna igen bilder",
+          "Skapa elektricitet",
+          "Stänga internet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är maskininlärning?",
+        "options": [
+          "När datorer lagar sig själva",
+          "När människor lär datorer",
+          "När datorer lär sig från data",
+          "När internet uppdateras"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken fråga väcker AI?",
+        "options": [
+          "Hur man bygger datorer",
+          "Vem som ansvarar vid fel",
+          "Hur man lagar mat",
+          "Hur man skriver böcker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar AI jobb?",
+        "options": [
+          "Tar bort alla jobb",
+          "Skapar inga förändringar",
+          "Förändrar arbetsmarknaden",
+          "Stoppar arbete"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad behövs för att använda AI bra?",
+        "options": [
+          "Mindre teknik",
+          "Fler spel",
+          "Kunskap och regler",
+          "Snabbare datorer"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29540,12 +30977,72 @@
     "title": "Musikens påverkan",
     "text": "Musik har alltid varit en viktig del av människors liv. Den används för att uttrycka känslor, berätta historier och skapa gemenskap. Olika kulturer har sina egna musiktraditioner, men samtidigt kan musik förena människor över hela världen.\n\nForskning visar att musik kan påverka hur vi mår. Lugn musik kan hjälpa oss att slappna av, medan snabb musik kan ge energi. Därför används musik ofta inom träning, terapi och undervisning.\n\nMusik kan också påverka minnet. Många upplever att de lättare minns information om den kopplas till en melodi. Det är en anledning till att sånger används i undervisning, särskilt för yngre elever.\n\nSamtidigt förändras musikens roll med tekniken. Idag lyssnar många via streamingtjänster istället för att köpa skivor. Det har gjort musik mer tillgänglig, men också förändrat hur artister tjänar pengar.\n\nMusik kan också vara ett sätt att påverka samhället. Genom texter kan artister ta upp viktiga frågor och inspirera till förändring. Historiskt har musik spelat en roll i olika rörelser för rättvisa.\n\nOavsett genre eller stil fortsätter musik att vara en kraftfull del av människors liv. Den påverkar våra känslor, vårt minne och vår kultur på många sätt.",
     "questions": [
-      {"type": "literal", "q": "Vad används musik ofta till?", "options": ["Att bygga saker", "Att uttrycka känslor", "Att mäta tid", "Att laga mat"], "correct": 1},
-      {"type": "literal", "q": "Hur kan lugn musik påverka oss?", "options": ["Göra oss stressade", "Ge oss energi", "Hjälpa oss att slappna av", "Göra oss hungriga"], "correct": 2},
-      {"type": "inferens", "q": "Vad kan musik hjälpa med i skolan?", "options": ["Att springa snabbare", "Att minnas bättre", "Att skriva prov", "Att räkna matte"], "correct": 1},
-      {"type": "literal", "q": "Hur har tekniken förändrat musik?", "options": ["Färre lyssnar", "Alla spelar instrument", "Musik är svårare att få tag på", "Streaming har ökat tillgången"], "correct": 3},
-      {"type": "inferens", "q": "Vad kan artister göra genom musik?", "options": ["Sälja produkter", "Påverka samhället", "Stoppa lagar", "Skapa teknik"], "correct": 1},
-      {"type": "sammanfatta", "q": "Vad är textens huvudidé?", "options": ["Musik är oviktig", "Musik används bara i skolan", "Musik påverkar människor på många sätt", "Musik är samma överallt"], "correct": 2}
+      {
+        "type": "literal",
+        "q": "Vad används musik ofta till?",
+        "options": [
+          "Att bygga saker",
+          "Att uttrycka känslor",
+          "Att mäta tid",
+          "Att laga mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kan lugn musik påverka oss?",
+        "options": [
+          "Göra oss stressade",
+          "Ge oss energi",
+          "Hjälpa oss att slappna av",
+          "Göra oss hungriga"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan musik hjälpa med i skolan?",
+        "options": [
+          "Att springa snabbare",
+          "Att minnas bättre",
+          "Att skriva prov",
+          "Att räkna matte"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur har tekniken förändrat musik?",
+        "options": [
+          "Färre lyssnar",
+          "Alla spelar instrument",
+          "Musik är svårare att få tag på",
+          "Streaming har ökat tillgången"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan artister göra genom musik?",
+        "options": [
+          "Sälja produkter",
+          "Påverka samhället",
+          "Stoppa lagar",
+          "Skapa teknik"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Musik är oviktig",
+          "Musik används bara i skolan",
+          "Musik påverkar människor på många sätt",
+          "Musik är samma överallt"
+        ],
+        "correct": 2
+      }
     ],
     "meta": {
       "wordCount": 430,
@@ -29554,7 +31051,6 @@
       "model": "manual"
     }
   },
-
   {
     "id": "ak8-tema-001",
     "grade": 8,
@@ -29965,7 +31461,6 @@
       "model": "manual"
     }
   },
-
   {
     "id": "ak7-tema-041",
     "grade": 7,
@@ -30376,7 +31871,6 @@
       "model": "manual"
     }
   },
-
   {
     "id": "ak8-tema-021",
     "grade": 8,
@@ -30787,7 +32281,6 @@
       "model": "manual"
     }
   },
-
   {
     "id": "ak8-tema-026",
     "grade": 8,
@@ -31198,7 +32691,6 @@
       "model": "manual"
     }
   },
-
   {
     "id": "ak7-tema-046",
     "grade": 7,
@@ -31444,6 +32936,415 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "informativ",
+    "theme": "Kultur",
+    "title": "Sminkets roll i samhället",
+    "text": "Smink har använts i tusentals år i olika kulturer, både för estetiska och praktiska syften. I det gamla Egypten användes kajal inte bara för att framhäva ögonen utan också för att skydda mot solen och infektioner. Idag används smink främst för att uttrycka identitet, stil och kreativitet, men också i professionella sammanhang som film och teater.\n\nFör många ungdomar är smink en del av vardagen. Det kan handla om att känna sig mer självsäker eller att experimentera med olika uttryck. Samtidigt finns det en debatt om skönhetsideal och hur sociala medier påverkar ungas självbild. Bilder som redigeras och filtreras kan skapa orealistiska förväntningar.\n\nDet finns också en växande rörelse som förespråkar naturlighet och att man inte ska känna sig tvungen att använda smink. Vissa väljer att helt avstå, medan andra ser det som en konstform.\n\nSminkindustrin har dessutom börjat fokusera mer på hållbarhet. Produkter utvecklas för att vara miljövänliga och inte testas på djur. Konsumenter blir allt mer medvetna om vad de köper.\n\nSammanfattningsvis är smink mer än bara utseende. Det handlar om identitet, påverkan från samhället och individuella val.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför användes kajal i det gamla Egypten?",
+        "options": [
+          "Endast för skönhet",
+          "För att skydda ögonen och mot solen",
+          "För att visa status i krig",
+          "För att färga huden"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad påverkar ungas syn på smink idag?",
+        "options": [
+          "Skolböcker",
+          "Sociala medier och ideal",
+          "Väderförhållanden",
+          "Sportaktiviteter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär rörelsen för naturlighet?",
+        "options": [
+          "Att alla måste använda smink",
+          "Att smink förbjuds",
+          "Att man inte ska känna sig tvungen att använda smink",
+          "Att bara naturliga färger används"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur förändras sminkindustrin?",
+        "options": [
+          "Den minskar snabbt",
+          "Den blir billigare",
+          "Den fokuserar mer på hållbarhet",
+          "Den slutar sälja produkter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan smink vara enligt texten?",
+        "options": [
+          "Endast en vana",
+          "En konstform och uttryck",
+          "En medicin",
+          "En regel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Smink är onödigt",
+          "Smink är farligt",
+          "Smink är bara för skådespelare",
+          "Smink handlar om identitet och val"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 176,
+      "fingerprint": "ak8-tema-001",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-002",
+    "grade": 8,
+    "genre": "informativ",
+    "theme": "Teknik",
+    "title": "Båtens utveckling genom tiden",
+    "text": "Båtar har spelat en avgörande roll i människans historia. Redan under forntiden byggdes enkla farkoster av trä, vass och djurhudar. Dessa användes för fiske, transport och handel. Med tiden utvecklades tekniken och båtar blev större och mer avancerade.\n\nUnder medeltiden började man bygga segelbåtar som kunde färdas långa sträckor över hav. Detta gjorde det möjligt att utforska nya delar av världen och etablera handelsvägar. Senare kom ångdrivna fartyg, vilket revolutionerade sjöfarten genom att göra resor mer pålitliga.\n\nIdag finns många olika typer av båtar, från små fritidsbåtar till stora containerfartyg. Modern teknik har gjort dem säkrare och mer effektiva. Samtidigt har miljöfrågor blivit allt viktigare. Utsläpp från fartyg påverkar hav och klimat.\n\nForskare arbetar därför med att utveckla mer miljövänliga lösningar, som eldrivna båtar och alternativa bränslen. Detta är viktigt för att minska påverkan på naturen.\n\nBåtar fortsätter att vara en central del av transport och handel, men framtiden kräver nya lösningar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad användes tidiga båtar främst till?",
+        "options": [
+          "Sport och tävling",
+          "Fiske och transport",
+          "Turism",
+          "Militär träning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad möjliggjorde segelbåtar?",
+        "options": [
+          "Kortare resor",
+          "Snabbare bilar",
+          "Långa resor och upptäckter",
+          "Flygning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gjorde ångfartyg viktiga?",
+        "options": [
+          "De var billigare",
+          "De var färgglada",
+          "De gjorde resor mer pålitliga",
+          "De användes bara i krig"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket problem nämns med moderna fartyg?",
+        "options": [
+          "De är för små",
+          "De går för långsamt",
+          "De påverkar miljön",
+          "De är svåra att styra"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad utvecklar forskare idag?",
+        "options": [
+          "Större segel",
+          "Miljövänliga lösningar",
+          "Snabbare motorer utan hänsyn",
+          "Billigare träbåtar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudidén i texten?",
+        "options": [
+          "Båtar är gamla",
+          "Båtar används inte längre",
+          "Båtens utveckling och framtida utmaningar",
+          "Båtar är farliga"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 170,
+      "fingerprint": "ak8-tema-002",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-003",
+    "grade": 8,
+    "genre": "informativ",
+    "theme": "Samhälle",
+    "title": "Bilens påverkan på samhället",
+    "text": "Bilen har förändrat hur människor lever och rör sig. När bilen blev vanlig under 1900-talet ökade möjligheten att resa längre sträckor snabbt. Det påverkade var människor kunde bo och arbeta. Städer växte och vägnät byggdes ut.\n\nSamtidigt har bilen också haft negativa effekter. Utsläpp från bensin- och dieseldrivna bilar bidrar till luftföroreningar och klimatförändringar. Trafikolyckor är ett annat problem som påverkar många människor varje år.\n\nIdag pågår en omställning mot mer hållbara alternativ. Elbilar blir allt vanligare och utvecklingen går snabbt framåt. Många länder satsar på kollektivtrafik och cykelvägar för att minska bilberoendet.\n\nFör unga människor kan bilen symbolisera frihet, men också ansvar. Att köra bil kräver kunskap om regler och hänsyn till andra trafikanter.\n\nBilens roll i framtiden är fortfarande osäker, men det är tydligt att förändringar behövs för att minska dess negativa påverkan.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad möjliggjorde bilen?",
+        "options": [
+          "Kortare arbetsdagar",
+          "Längre och snabbare resor",
+          "Fler skolor",
+          "Billigare mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilket problem orsakar bilar?",
+        "options": [
+          "Mindre trafik",
+          "Luftföroreningar",
+          "Färre vägar",
+          "Mindre handel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett alternativ till vanliga bilar?",
+        "options": [
+          "Segelbåtar",
+          "Hästar",
+          "Elbilar",
+          "Flygplan"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad symboliserar bilen för unga?",
+        "options": [
+          "Regler",
+          "Arbete",
+          "Historia",
+          "Frihet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kräver bilkörning?",
+        "options": [
+          "Tur",
+          "Kunskap och ansvar",
+          "Pengar endast",
+          "Snabbhet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Bilar är perfekta",
+          "Bilar ska förbjudas direkt",
+          "Bilens påverkan och behov av förändring",
+          "Bilar används inte längre"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 168,
+      "fingerprint": "ak8-tema-003",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-004",
+    "grade": 8,
+    "genre": "informativ",
+    "theme": "Djur",
+    "title": "Kattens beteende och relation till människor",
+    "text": "Katter är ett av de vanligaste husdjuren i världen. De har levt tillsammans med människor i tusentals år, men till skillnad från hundar har de behållit mycket av sitt självständiga beteende. Katter jagar ofta ensamma och kan klara sig själva under kortare perioder.\n\nTrots detta kan katter skapa starka band till sina ägare. De kommunicerar genom kroppsspråk, ljud och beteenden som att spinna eller stryka sig mot människor. Forskning visar att katter kan känna igen sina ägares röster och reagera på dem.\n\nKatter är också kända för sin nyfikenhet. De utforskar gärna nya miljöer och kan tillbringa lång tid med att observera sin omgivning. Samtidigt behöver de trygghet och rutiner för att må bra.\n\nDet finns olika uppfattningar om hur katter ska hållas. Vissa menar att de bör få gå fritt utomhus, medan andra förespråkar innekatter för att skydda både djuret och naturen.\n\nKattens roll som husdjur fortsätter att utvecklas i takt med att människors livsstil förändras.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur skiljer sig katter från hundar enligt texten?",
+        "options": [
+          "De är större",
+          "De är mer självständiga",
+          "De är farligare",
+          "De lever kortare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur visar katter kontakt med människor?",
+        "options": [
+          "Genom att tala",
+          "Genom kroppsspråk och ljud",
+          "Genom att skriva",
+          "Genom att springa bort"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar forskning om katter?",
+        "options": [
+          "De kan inte höra",
+          "De känner inte människor",
+          "De känner igen röster",
+          "De alltid sover"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är katter kända för?",
+        "options": [
+          "Lathet",
+          "Aggressivitet",
+          "Tystnad",
+          "Nyfikenhet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad behöver katter för att må bra?",
+        "options": [
+          "Endast mat",
+          "Trygghet och rutiner",
+          "Stora hus",
+          "Höga ljud"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad diskuteras kring katter?",
+        "options": [
+          "Vad de äter",
+          "Hur de sover",
+          "Om de ska vara ute eller inne",
+          "Hur gamla de blir"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 178,
+      "fingerprint": "ak8-tema-004",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-005",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "Samhälle",
+    "title": "Skönhet, teknik och identitet",
+    "text": "Leila och Robin diskuterade hur olika intressen påverkar människors identitet. Leila var intresserad av smink och följde flera kreatörer på nätet. Hon såg smink som ett sätt att uttrycka känslor och stil. Robin däremot var mer intresserad av bilar och teknik. Hen gillade att förstå hur motorer fungerar och följde utvecklingen av elbilar.\n\nSamtalet mellan dem visade att intressen kan vara väldigt olika, men ändå lika viktiga. De började jämföra hur deras intressen påverkades av samhället. Leila märkte att skönhetsideal ofta styrs av trender, medan Robin såg hur teknik påverkas av innovation och miljökrav.\n\nDe insåg också att båda deras intressen kunde kopplas till större frågor. Sminkindustrin diskuterar hållbarhet och djurtester, medan bilindustrin arbetar med klimatpåverkan och framtida lösningar.\n\nTill slut kom de fram till att identitet inte handlar om ett enda intresse. Det är en kombination av erfarenheter, värderingar och val.\n\nSamtalet gjorde att de förstod varandra bättre och uppskattade sina olikheter.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad var Leila intresserad av?",
+        "options": [
+          "Sport",
+          "Smink",
+          "Båtar",
+          "Film"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gillade Robin att förstå?",
+        "options": [
+          "Musik",
+          "Motorer och teknik",
+          "Historia",
+          "Matlagning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad jämförde de?",
+        "options": [
+          "Skolor",
+          "Väder",
+          "Hur intressen påverkas av samhället",
+          "Familjer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kopplades smink till?",
+        "options": [
+          "Sport",
+          "Transport",
+          "Mat",
+          "Hållbarhet och djurtester"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kom de fram till om identitet?",
+        "options": [
+          "Den är enkel",
+          "Den består av flera delar",
+          "Den ändras aldrig",
+          "Den styrs av andra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad ledde samtalet till?",
+        "options": [
+          "Bråk",
+          "Missförstånd",
+          "Likgiltighet",
+          "Ökad förståelse"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 176,
+      "fingerprint": "ak8-tema-005",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
-
 ]
