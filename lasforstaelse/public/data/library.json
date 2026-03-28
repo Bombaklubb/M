@@ -30786,6 +30786,417 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
+  },
+
+  {
+    "id": "ak8-tema-026",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Sociala medier och påverkan",
+    "text": "Sociala medier har blivit en central del av många människors vardag. Plattformar där användare kan dela bilder, filmer och åsikter gör det möjligt att nå ut till många på kort tid. Detta har förändrat hur vi kommunicerar och hur information sprids i samhället.\n\nEn viktig aspekt är hur sociala medier påverkar vår självbild. Många användare jämför sig med andra, vilket ibland kan leda till känslor av otillräcklighet. Bilder och inlägg visar ofta en idealiserad version av verkligheten, vilket kan skapa orealistiska förväntningar.\n\nSamtidigt erbjuder sociala medier möjligheter. De kan användas för att sprida kunskap, organisera kampanjer och skapa gemenskap. Många rörelser för mänskliga rättigheter har fått ökad uppmärksamhet genom dessa plattformar.\n\nProblemet uppstår när falsk information sprids. Eftersom innehåll delas snabbt kan det vara svårt att avgöra vad som är sant. Detta ställer krav på användarnas källkritiska förmåga.\n\nForskare menar att balans är viktigt. Att använda sociala medier medvetet och reflekterat kan minska negativa effekter.\n\nSammanfattningsvis är sociala medier ett kraftfullt verktyg som både kan påverka individer och samhället i stort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har sociala medier förändrat?",
+        "options": [
+          "Hur vi äter",
+          "Hur vi kommunicerar",
+          "Hur vi sover",
+          "Hur vi tränar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan sociala medier påverka självbilden?",
+        "options": [
+          "Genom att minska jämförelser",
+          "Genom att skapa känslor av otillräcklighet",
+          "Genom att förbättra minnet",
+          "Genom att öka sömn"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en positiv användning av sociala medier?",
+        "options": [
+          "Sprida falsk information",
+          "Skapa konflikter",
+          "Organisera kampanjer",
+          "Undvika kontakt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett problem som nämns?",
+        "options": [
+          "För lite information",
+          "För långsam spridning",
+          "Falsk information sprids",
+          "För få användare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad krävs av användare enligt texten?",
+        "options": [
+          "Källkritik",
+          "Teknisk utbildning",
+          "Programmering",
+          "Träning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Sociala medier är onödiga",
+          "De är alltid negativa",
+          "De är kraftfulla och kräver ansvar",
+          "De ska förbjudas"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak8-tema-026",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-027",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Vattnets kretslopp",
+    "text": "Vattnets kretslopp beskriver hur vatten rör sig mellan hav, land och atmosfär. Processen börjar med avdunstning, där vatten från hav och sjöar omvandlas till vattenånga och stiger upp i luften.\n\nNär vattenångan kyls ner bildas moln genom en process som kallas kondensation. Dessa moln kan sedan leda till nederbörd i form av regn, snö eller hagel.\n\nNär nederbörden når marken kan vattnet rinna ner i sjöar och hav eller tränga ner i marken och bli grundvatten. En del av vattnet tas också upp av växter, som sedan avger det genom transpiration.\n\nKretsloppet är viktigt för livet på jorden. Det fördelar vatten och hjälper till att reglera klimatet.\n\nMänniskans aktiviteter kan påverka kretsloppet. Föroreningar och klimatförändringar kan förändra hur vatten rör sig och lagras.\n\nGenom att förstå vattnets kretslopp kan vi bättre skydda våra vattenresurser.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är avdunstning?",
+        "options": [
+          "När vatten fryser",
+          "När vatten blir till ånga",
+          "När vatten faller som regn",
+          "När vatten lagras i marken"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kallas processen när moln bildas?",
+        "options": [
+          "Avdunstning",
+          "Kondensation",
+          "Transpiration",
+          "Nederbörd"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer vid nederbörd?",
+        "options": [
+          "Vatten stiger upp",
+          "Moln försvinner",
+          "Vatten faller till marken",
+          "Vatten värms upp"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är grundvatten?",
+        "options": [
+          "Vatten i havet",
+          "Vatten i moln",
+          "Vatten i luften",
+          "Vatten i marken"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är kretsloppet viktigt?",
+        "options": [
+          "Det skapar energi",
+          "Det fördelar vatten",
+          "Det stoppar vind",
+          "Det minskar solen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan påverka kretsloppet?",
+        "options": [
+          "Endast växter",
+          "Endast djur",
+          "Människans aktiviteter",
+          "Endast väder"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak8-tema-027",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-028",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "Skönlitteratur",
+    "title": "En dag i biblioteket",
+    "text": "Mira hade alltid gillat bibliotek, men den här dagen var speciell. Hon skulle träffa sin nya studiegrupp för första gången. Gruppen bestod av Amir, som älskade historia, Elin som var intresserad av teknik och Noor som nyligen flyttat till staden.\n\nTill en början var stämningen lite spänd. Ingen visste riktigt hur de skulle börja. Men efter en stund började de prata om uppgiften de fått i skolan.\n\nDe insåg snabbt att de hade olika styrkor. Amir bidrog med fakta, Elin förklarade tekniska begrepp och Noor ställde frågor som fick dem att tänka djupare. Mira höll ihop arbetet och såg till att alla kom till tals.\n\nUnder arbetets gång uppstod diskussioner. Ibland tyckte de olika, men de lärde sig att lyssna och argumentera sakligt.\n\nNär de var klara med uppgiften kände de stolthet. De hade inte bara lärt sig mer om ämnet, utan också om samarbete.\n\nMira gick hem med en ny känsla av tillhörighet och insåg att olikheter kan vara en styrka.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var utspelar sig berättelsen?",
+        "options": [
+          "I en skola",
+          "På ett bibliotek",
+          "I ett hem",
+          "I en park"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var speciellt med dagen?",
+        "options": [
+          "Hon skulle läsa en bok",
+          "Hon skulle träffa en studiegrupp",
+          "Hon skulle resa bort",
+          "Hon skulle skriva prov"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad bidrog Amir med?",
+        "options": [
+          "Teknik",
+          "Frågor",
+          "Fakta",
+          "Organisation"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur löste de konflikter?",
+        "options": [
+          "Genom att ignorera dem",
+          "Genom att sluta arbeta",
+          "Genom att rösta",
+          "Genom att diskutera sakligt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad lärde sig gruppen?",
+        "options": [
+          "Att arbeta ensam är bäst",
+          "Att olikheter kan vara en styrka",
+          "Att undvika diskussioner",
+          "Att arbeta snabbare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur kände sig Mira i slutet?",
+        "options": [
+          "Orolig",
+          "Arg",
+          "Trött",
+          "Tillhörighet"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak8-tema-028",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-029",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Industrialiseringen",
+    "text": "Industrialiseringen var en period av stora förändringar som började i slutet av 1700-talet. Under denna tid gick samhället från jordbruk till industriell produktion.\n\nNya maskiner, som ångmaskinen, gjorde det möjligt att producera varor snabbare och billigare. Fabriker växte fram i städerna och många människor flyttade dit för att arbeta.\n\nArbetsvillkoren var ofta svåra. Många arbetade långa dagar under farliga förhållanden. Barnarbete var också vanligt.\n\nSamtidigt ledde industrialiseringen till ekonomisk tillväxt och teknisk utveckling. Nya transportmedel som järnvägar gjorde det lättare att resa och transportera varor.\n\nMed tiden infördes lagar för att förbättra arbetsvillkoren. Fackföreningar bildades för att kämpa för arbetarnas rättigheter.\n\nIndustrialiseringen har haft stor betydelse för det moderna samhället och påverkar oss fortfarande idag.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När började industrialiseringen?",
+        "options": [
+          "På 1900-talet",
+          "På 1800-talet",
+          "I slutet av 1700-talet",
+          "På 2000-talet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad möjliggjorde snabbare produktion?",
+        "options": [
+          "Handarbete",
+          "Ångmaskinen",
+          "Djurkraft",
+          "Vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände med städerna?",
+        "options": [
+          "De minskade",
+          "De blev tomma",
+          "De växte",
+          "De försvann"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur var arbetsvillkoren?",
+        "options": [
+          "Alltid bra",
+          "Mycket korta dagar",
+          "Säkra och enkla",
+          "Ofta svåra"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad bildades för att hjälpa arbetare?",
+        "options": [
+          "Fackföreningar",
+          "Skolor",
+          "Företag",
+          "Banker"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Industrialiseringen var oviktig",
+          "Den förändrade samhället mycket",
+          "Den stoppade utveckling",
+          "Den gällde bara fabriker"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak8-tema-029",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-030",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Hälsa",
+    "title": "Kroppens energisystem",
+    "text": "Människokroppen behöver energi för att fungera. Denna energi kommer från maten vi äter. När vi bryter ner maten omvandlas den till energi som kroppen kan använda.\n\nDet finns olika energisystem i kroppen. Vid korta och intensiva aktiviteter används främst snabba energisystem som inte kräver syre. Vid längre aktiviteter används system som behöver syre, vilket kallas aerob energi.\n\nKolhydrater, fett och proteiner är viktiga näringsämnen. Kolhydrater ger snabb energi, medan fett används vid längre aktiviteter. Proteiner används främst för att bygga upp kroppen.\n\nTräning påverkar hur effektivt kroppen använder energi. Regelbunden träning kan förbättra både styrka och uthållighet.\n\nVila och återhämtning är också viktiga. Utan tillräcklig vila kan kroppen inte reparera sig.\n\nGenom att förstå kroppens energisystem kan vi träna smartare och må bättre.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varifrån får kroppen energi?",
+        "options": [
+          "Sömn",
+          "Mat",
+          "Vatten",
+          "Luft"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "När används snabba energisystem?",
+        "options": [
+          "Vid vila",
+          "Vid långsam gång",
+          "Vid intensiva aktiviteter",
+          "Vid sömn"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kräver aerob energi?",
+        "options": [
+          "Syre",
+          "Fett",
+          "Socker",
+          "Vila"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ger snabb energi?",
+        "options": [
+          "Fett",
+          "Protein",
+          "Vitaminer",
+          "Kolhydrater"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad förbättrar träning?",
+        "options": [
+          "Endast vikt",
+          "Styrka och uthållighet",
+          "Hårväxt",
+          "Synen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är vila viktig?",
+        "options": [
+          "För att bli trött",
+          "För att reparera kroppen",
+          "För att minska energi",
+          "För att undvika mat"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak8-tema-030",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 
 ]
