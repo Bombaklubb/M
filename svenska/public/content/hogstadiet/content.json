@@ -1,0 +1,266 @@
+{
+  "grammar": [
+    {
+      "id": "bisatser-1",
+      "title": "Huvud- och bisatser",
+      "description": "Förstå hur meningar är uppbyggda",
+      "icon": "🧩",
+      "bonusPoints": 35,
+      "helpText": [
+        "En huvudsats kan stå för sig själv och är en fullständig mening.",
+        "En bisats är beroende av huvudsatsen och inleds av ett bindeord.",
+        "Vanliga bindeord: att, om, när, eftersom, fast, om, som.",
+        "Exempel: 'Jag vet (HS) att du har rätt (BS)'."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vad är bisatsen i: 'Jag vet att hon kommer'?",
+          "options": ["Jag vet", "att hon kommer", "hon kommer", "Jag vet att"],
+          "correctIndex": 1,
+          "explanation": "'att hon kommer' är bisatsen – den inleds av bindeordet 'att' och kan inte stå ensam."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord inleder bisatsen i: 'Vi stannade hemma eftersom det regnade'?",
+          "options": ["Vi", "stannade", "eftersom", "regnade"],
+          "correctIndex": 2,
+          "explanation": "'Eftersom' är ett bindeord som inleder bisatsen."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Fyll i ett lämpligt bindeord: 'Hon frågade ___ tåget hade gått.'",
+          "answer": "om",
+          "hint": "Hon undrar om det är sant eller inte.",
+          "explanation": "'Om' är ett bindeord som passar för indirekt fråga."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilken mening innehåller en bisats?",
+          "options": ["Solen skiner.", "Katten sover på mattan.", "Jag tror att det blir regn.", "Vi åt frukost tidigt."],
+          "correctIndex": 2,
+          "explanation": "'Jag tror att det blir regn' – 'att det blir regn' är bisatsen."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: huvudsats + bisats!",
+          "words": ["Jag", "vet", "att", "du", "har", "rätt"],
+          "correctOrder": [0, 1, 2, 3, 4, 5],
+          "explanation": "'Jag vet' är huvudsatsen, 'att du har rätt' är bisatsen."
+        }
+      ]
+    },
+    {
+      "id": "ordbildning-1",
+      "title": "Ordbildning – sammansatta ord",
+      "description": "Hur nya ord bildas av flera ord",
+      "icon": "🔤",
+      "bonusPoints": 30,
+      "helpText": [
+        "Svenska ord kan sättas ihop till sammansatta ord.",
+        "Exempel: hus + dörr = husdörr.",
+        "Det sista ledet anger vad det är, det första preciserar.",
+        "Fogevokal s används ibland: lands + väg = landsväg."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord är sammansatt av 'sol' och 'ros'?",
+          "options": ["solros", "rossol", "ros-sol", "sols"],
+          "correctIndex": 0,
+          "explanation": "'Solros' – en blomma som vänder sig mot solen."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Bilda ett ord av 'arbets' + 'plats': ___",
+          "answer": "arbetsplats",
+          "hint": "Var man arbetar.",
+          "explanation": "'Arbetsplats' = platsen där man arbetar."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad kallas det sista ledet i ett sammansatt ord?",
+          "options": ["Förled", "Efterled", "Fogevokal", "Stam"],
+          "correctIndex": 1,
+          "explanation": "Det sista ledet kallas efterled och anger vad ordet är."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket av dessa är ett sammansatt ord?",
+          "options": ["springer", "snabb", "skolbuss", "läser"],
+          "correctIndex": 2,
+          "explanation": "'Skolbuss' = skola + buss – ett sammansatt ord."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg en mening med ett sammansatt ord!",
+          "words": ["Busschauffören", "körde", "till", "centralstationen"],
+          "correctOrder": [0, 1, 2, 3],
+          "explanation": "'Busschauffören' och 'centralstationen' är sammansatta ord."
+        }
+      ]
+    },
+    {
+      "id": "interpunktion-1",
+      "title": "Skiljetecken",
+      "description": "Punkt, komma, frågetecken och mer",
+      "icon": "⁉️",
+      "bonusPoints": 30,
+      "helpText": [
+        "Punkt (.) – avslutar en påståendemening.",
+        "Kommatecken (,) – pauser, uppräkningar, bisatser.",
+        "Frågetecken (?) – avslutar en fråga.",
+        "Utropstecken (!) – känsla, befallning.",
+        "Kolon (:) – inleder en lista eller förklaring."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket tecken passar bäst: 'Vad heter du___'",
+          "options": [".", ",", "?", "!"],
+          "correctIndex": 2,
+          "explanation": "En fråga avslutas med frågetecken."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Var behövs ett kommatecken? 'Jag köpte äpplen päron och bananer.'",
+          "options": ["Bara efter äpplen", "Efter äpplen och päron", "I slutet", "Det behövs inget komma"],
+          "correctIndex": 1,
+          "explanation": "Vid uppräkning används komma: 'äpplen, päron och bananer'."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Vilket tecken saknas? 'Hjälp___ Jag kan inte simma!'",
+          "answer": "!",
+          "hint": "Det är ett nödrop.",
+          "explanation": "Utropstecken används för starka känslor och rop."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur sätter man komma med bisats? 'Jag köpte bröd ___ eftersom jag var hungrig.'",
+          "options": ["Komma före 'eftersom'", "Komma efter 'eftersom'", "Inget komma behövs", "Komma i slutet"],
+          "correctIndex": 0,
+          "explanation": "Komma används ofta före bisatsen: 'Jag köpte bröd, eftersom jag var hungrig.'"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket tecken inleder en lista? 'Vi behöver följande___'",
+          "options": [".", ",", ":", "?"],
+          "correctIndex": 2,
+          "explanation": "Kolon används för att inleda en lista eller förklaring."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "artikel-1",
+      "title": "Klimatförändringarna",
+      "description": "En faktatext om klimat och miljö",
+      "icon": "🌍",
+      "bonusPoints": 35,
+      "helpText": [
+        "Faktatexten förklarar ett ämne objektivt.",
+        "Lägg märke till orsak och verkan i texten.",
+        "Tänk kritiskt: vad är fakta och vad är åsikt?"
+      ],
+      "author": "Anpassad faktartext",
+      "text": "Jordens medeltemperatur har stigit med ungefär 1,1 grader sedan industrialismens början på 1800-talet. Denna uppvärmning kallas för klimatförändring och beror till stor del på mänskliga aktiviteter.\n\nNär vi bränner fossila bränslen som olja, kol och naturgas, frigörs koldioxid och andra växthusgaser. Dessa gaser fångar solens värme i atmosfären, likt ett stort täcke runt jorden. Effekten kallas för växthuseffekten.\n\nKlimatförändringarna leder till flera allvarliga konsekvenser. Isarna smälter vid polerna, vilket höjer havsytans nivå. Extrema väderhändelser som orkaner, torka och översvämningar blir vanligare och kraftigare.\n\nFör att bromsa klimatförändringarna måste utsläppen av växthusgaser minska kraftigt. Lösningar inkluderar förnybar energi som sol- och vindkraft, elektrifiering av transporter, och mer hållbara matvanor.\n\nMånga länder har undertecknat Parisavtalet, som syftar till att begränsa den globala uppvärmningen till under 2 grader.",
+      "questions": [
+        {
+          "type": "on-the-line",
+          "question": "Hur mycket har jordens medeltemperatur stigit sedan 1800-talet?",
+          "options": ["0,5 grader", "1,1 grader", "2 grader", "3 grader"],
+          "correctIndex": 1,
+          "explanation": "Texten säger att temperaturen har stigit med ungefär 1,1 grader."
+        },
+        {
+          "type": "on-the-line",
+          "question": "Vad kallas effekten när växthusgaser fångar värme i atmosfären?",
+          "options": ["Klimateffekten", "Koldioxideffekten", "Växthuseffekten", "Soleffekten"],
+          "correctIndex": 2,
+          "explanation": "Effekten kallas för växthuseffekten."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Varför jämförs växthusgaserna med 'ett stort täcke'?",
+          "options": ["För att de är varma", "För att de fångar värme och hindrar den från att stiga ut", "För att de skyddar mot regn", "För att de är tjocka"],
+          "correctIndex": 1,
+          "hint": "Tänk på vad ett täcke gör när du sover.",
+          "explanation": "Precis som ett täcke håller värmen kvar, håller växthusgaserna solens värme kvar i atmosfären."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Vilket av följande är INTE en konsekvens av klimatförändringarna enligt texten?",
+          "options": ["Smältande isar", "Stigande hav", "Fler jordbävningar", "Kraftigare orkaner"],
+          "correctIndex": 2,
+          "explanation": "Texten nämner inte jordbävningar som en konsekvens av klimatförändringarna."
+        },
+        {
+          "type": "beyond-the-lines",
+          "question": "Vad är troligtvis syftet med texten?",
+          "options": ["Att skrämma läsaren", "Att informera och uppmuntra till handling", "Att underhålla", "Att sälja förnybar energi"],
+          "correctIndex": 1,
+          "hint": "Vad gör texten – informerar, underhåller eller övertalar?",
+          "explanation": "Texten informerar om klimatproblematiken och lyfter lösningar, vilket tyder på en uppmaning till handling."
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "homofoner-1",
+      "title": "Homofoner",
+      "description": "Ord som låter lika men stavas olika",
+      "icon": "👂",
+      "bonusPoints": 30,
+      "helpText": [
+        "Homofoner är ord som låter likadant men har olika stavning och betydelse.",
+        "Exempel: 'de' / 'dem', 'av' / 'af', 'ord' / 'årt'.",
+        "Vanliga förväxlingar: 'de/dem', 'sin/sig', 'honom/han'."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket är rätt: 'Jag såg ___ på stan.' (syftande på flera personer)",
+          "options": ["de", "dem", "di", "dom"],
+          "correctIndex": 1,
+          "explanation": "Objekt i meningen = 'dem'. Jag såg VEM? Dem."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket är rätt: '___ har rätt.' (subjekt = de personer vi talar om)",
+          "options": ["Dem", "De", "Dom", "Di"],
+          "correctIndex": 1,
+          "explanation": "Subjekt i meningen = 'de'. De har rätt – vem har rätt? De."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Välj rätt: 'Kalle tvättade ___ händer.' (Kalle tvättade sina egna händer)",
+          "answer": "sina",
+          "hint": "Reflexivt ägande – Kalle tvättade HANS EGNA händer.",
+          "explanation": "'Sina' används reflexivt när ägaren är subjektet i meningen."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket är rätt i: 'Ge boken till ___.' (du ger boken till en pojke)",
+          "options": ["han", "honom", "hans", "sin"],
+          "correctIndex": 1,
+          "explanation": "Object = 'honom'. Man ger till VEM? Honom."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket alternativ är korrekt?",
+          "options": [
+            "Dem kom tidigt till mötet.",
+            "De kom tidigt till mötet.",
+            "Dom kom tidigt till mötet.",
+            "Di kom tidigt till mötet."
+          ],
+          "correctIndex": 1,
+          "explanation": "'De' används som subjekt i skriftlig svenska."
+        }
+      ]
+    }
+  ]
+}

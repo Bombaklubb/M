@@ -1,0 +1,253 @@
+{
+  "grammar": [
+    {
+      "id": "retorik-1",
+      "title": "Retoriska grepp",
+      "description": "Konsten att övertala och engagera",
+      "icon": "🎤",
+      "bonusPoints": 40,
+      "helpText": [
+        "Retorik är konsten att kommunicera effektivt och övertygande.",
+        "Tre klassiska retoriska medel: Logos (förnuft/fakta), Ethos (trovärdighet), Pathos (känslor).",
+        "Stilfigurer som metafor, liknelse och anaforer gör texten mer levande."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vad kallas det retoriska grepp där man vädjar till mottagarens känslor?",
+          "options": ["Logos", "Ethos", "Pathos", "Etos"],
+          "correctIndex": 2,
+          "explanation": "Pathos syftar till att väcka känslor hos lyssnaren/läsaren."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket av följande är en metafor?",
+          "options": [
+            "Hon springer som en vind.",
+            "Hennes leende var en sol som lyste upp rummet.",
+            "Livet är svårt.",
+            "Han är lång."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Hennes leende var en sol' – leendet KALLAS sol, inte jämförs med (det hade varit en liknelse)."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad kallas upprepning av ord i början av meningar? ('Vi ska vinna. Vi ska kämpa. Vi ska lyckas.')",
+          "options": ["Metafor", "Anafor", "Liknelse", "Alliteration"],
+          "correctIndex": 1,
+          "explanation": "Anafor = upprepning av ord/fraser i början av på varandra följande meningar."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "En retorisk fråga är en fråga som inte förväntar sig ett svar utan syftar till att ___.",
+          "answer": "övertala",
+          "hint": "Vad vill talaren uppnå med frågan?",
+          "explanation": "Retoriska frågor används för att övertala och engagera, inte för att få ett faktiskt svar."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket retoriskt grepp används i: 'Livet är en resa med många korsvägar'?",
+          "options": ["Liknelse", "Metafor", "Anafor", "Klimax"],
+          "correctIndex": 1,
+          "explanation": "Livet KALLAS en resa (inte 'som en resa') = metafor."
+        }
+      ]
+    },
+    {
+      "id": "argumentationsanalys-1",
+      "title": "Argumentationsanalys",
+      "description": "Analysera och värdera argument",
+      "icon": "⚖️",
+      "bonusPoints": 45,
+      "helpText": [
+        "Ett argument består av en tes (påstående) och belägg (stöd/bevis).",
+        "Bedöm om argumentet är hållbart: är beläggen relevanta och tillförlitliga?",
+        "Identifiera felslut: övergeneralisering, halvsanning, falska dilemman."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vad kallas ett arguments centrala påstående som man vill bevisa?",
+          "options": ["Belägg", "Tes", "Slutledning", "Premiss"],
+          "correctIndex": 1,
+          "explanation": "Tesen är det centrala påståendet som argumentet syftar till att bevisa."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket av följande är ett felslut (övergeneralisering)?",
+          "options": [
+            "Forskning visar att motion förbättrar hälsan.",
+            "Min granne röker och lever länge, alltså är rökning ofarligt.",
+            "Studier med 10 000 deltagare visar att sömn är viktig.",
+            "Experter är eniga om att klimatförändringarna är mänskligt orsakade."
+          ],
+          "correctIndex": 1,
+          "explanation": "Att dra slutsatser från ett enskilt exempel är en övergeneralisering."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Argumentet 'Du är antingen med oss eller mot oss' är ett exempel på ___ dilemma.",
+          "answer": "falskt",
+          "hint": "Det presenterar bara två alternativ när fler kan finnas.",
+          "explanation": "Ett falskt dilemma reducerar felaktigt komplexa frågor till bara två alternativ."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad gör ett argument mer trovärdigt (stärker ethos)?",
+          "options": [
+            "Att använda starka känsloladdade ord",
+            "Att hänvisa till vetenskapliga studier och experter",
+            "Att upprepa påståendet många gånger",
+            "Att använda retoriska frågor"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hänvisningar till forskning och experter stärker ethos – avsändarens trovärdighet."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad kallas det när man angriper en person istället för deras argument?",
+          "options": ["Logik", "Ad hominem", "Tes", "Belägg"],
+          "correctIndex": 1,
+          "explanation": "Ad hominem = man angriper personen bakom argumentet snarare än argumentet självt."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "essä-1",
+      "title": "Frihetens pris",
+      "description": "En essä om frihet och ansvar",
+      "icon": "📜",
+      "bonusPoints": 40,
+      "helpText": [
+        "En essä blandar fakta, analys och personliga reflektioner.",
+        "Lägg märke till avsändarens perspektiv och argumentation.",
+        "Fundera på vad som är fakta, vad som är tolkning och vad som är åsikt."
+      ],
+      "author": "Fri essä",
+      "text": "Frihet är ett av de ord vi använder mest och förstår minst. Vi talar om yttrandefrihet, rörelsefrihet, frihet från förtryck – men sällan frågar vi oss: vad innebär det egentligen att vara fri?\n\nFilosofen Jean-Paul Sartre hävdade att människan är 'dömd till frihet'. Vi kan inte undgå att göra val – även att inte välja är ett val. Denna radikala frihet innebär ett djupt ansvar: vi är ansvariga för våra handlingar och kan inte skylla på omständigheter eller öde.\n\nMen frihet existerar aldrig i ett vakuum. Min frihet slutar där din börjar. Det är paradoxen i det liberala samhällets hjärta: för att alla ska kunna vara fria måste allas frihet begränsas. Lagar, normer och konventioner är inte kedjor utan strukturer som möjliggör frihet.\n\nI den digitala tidsåldern har friheten fått nya dimensioner och nya begränsningar. Sociala medier ger oss plattformar för yttrandefrihet, men skapar också ekkammare där vi bara möter åsikter som liknar våra egna. Algoritmerna väljer åt oss – och varje gång de gör det, minskar vår verkliga frihet lite.\n\nKanske är den sanna friheten inte frånvaron av begränsningar, utan förmågan att handla i enlighet med sina djupaste värderingar – oavsett yttre tryck och inre begär.",
+      "questions": [
+        {
+          "type": "on-the-line",
+          "question": "Vilket påstående tillskrivs Jean-Paul Sartre i texten?",
+          "options": [
+            "Frihet är en illusion.",
+            "Människan är dömd till frihet.",
+            "Ansvar föregår frihet.",
+            "Friheten slutar vid lagens gräns."
+          ],
+          "correctIndex": 1,
+          "explanation": "Sartre hävdade att människan är 'dömd till frihet'."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Vad menar skribenten med att 'lagar och normer möjliggör frihet'?",
+          "options": [
+            "Lagar är onödiga",
+            "Utan gemensamma regler kan ingen vara fri utan att kränka andras frihet",
+            "Staten ska bestämma vad frihet innebär",
+            "Frihet kräver lydnad"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på paradoxen: Min frihet slutar där din börjar.",
+          "explanation": "Utan regler som begränsar hur vi behandlar varandra kan ingen verklig frihet existera."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Vad är skribentens kritik mot sociala medier?",
+          "options": [
+            "De tar för mycket tid",
+            "De är fulla av falsk information",
+            "Algoritmerna begränsar vår verkliga frihet",
+            "De är farliga för unga"
+          ],
+          "correctIndex": 2,
+          "explanation": "Skribenten menar att algoritmerna väljer åt oss och därmed minskar vår genuina frihet."
+        },
+        {
+          "type": "beyond-the-lines",
+          "question": "Vilken av följande bäst sammanfattar essäns huvudtes?",
+          "options": [
+            "Frihet är omöjlig i ett modernt samhälle",
+            "Frihet är mer komplex än en frånvaro av begränsningar",
+            "Sociala medier är ett hot mot demokratin",
+            "Sartre hade rätt om allt"
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten utforskar frihetens paradoxer och leder läsaren mot en nyanserad förståelse av frihetsbegreppet."
+        },
+        {
+          "type": "beyond-the-lines",
+          "question": "Vilken retorisk strategi används i den sista meningen?",
+          "options": [
+            "Anafor",
+            "En metaforisk omdefinition av frihetsbegreppet",
+            "En statistisk sammanfattning",
+            "Ad hominem"
+          ],
+          "correctIndex": 1,
+          "explanation": "Skribenten omdefinierar frihet metaforiskt: från frånvaro av kedjor till förmågan att leva enligt sina värderingar."
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "interpunktion-avancerad",
+      "title": "Avancerad interpunktion",
+      "description": "Tankstreck, citattecken och mer",
+      "icon": "—",
+      "bonusPoints": 35,
+      "helpText": [
+        "Tankstreck (–) används för inskott, paus eller dialog.",
+        "Citattecken (« » eller \"\") används för direkta citat.",
+        "Apostrof (') markerar genitiv i vissa fall eller uteslutna bokstäver.",
+        "Parentes () anger tilläggsinfo som kan uteslutas utan att meningen påverkas."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket tecken passar bäst i: 'Hon log_och det förändrade allt.'",
+          "options": [".", ",", "–", "!"],
+          "correctIndex": 2,
+          "explanation": "Tankstreck kan markera en dramatisk paus eller ett inskott."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur skriver man korrekt när man citerar någon direkt?",
+          "options": [
+            "Han sa, jag är trött.",
+            "Han sa: 'Jag är trött.'",
+            "Han sa jag är trött!",
+            "Han sa – jag är trött"
+          ],
+          "correctIndex": 1,
+          "explanation": "Direkta citat inleds med kolon och skrivs inom citattecken."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Vilket tecken markerar ett inskott/parentes i meningen: 'Sverige _landet i norr_ är känt för sin natur'?",
+          "answer": "–",
+          "hint": "Det är ett tankstreck.",
+          "explanation": "Tankstreck (–) används för att rama in ett inskott."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur skriver man korrekt genitiv av 'Jonas'?",
+          "options": ["Jonas's bok", "Jonas bok", "Jonas' bok", "Jonases bok"],
+          "correctIndex": 2,
+          "explanation": "När ett namn slutar på s, x eller z skrivs genitiv med bara apostrof: Jonas' bok."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad kallas utelämning av bokstäver i tal? Ex: 'dom' istället för 'de/dem'",
+          "options": ["Elision", "Apostrof", "Synkope", "Apokope"],
+          "correctIndex": 0,
+          "explanation": "Elision är utelämning av ljud, vanligt i talspråk."
+        }
+      ]
+    }
+  ]
+}

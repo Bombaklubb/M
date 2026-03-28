@@ -1,0 +1,257 @@
+{
+  "grammar": [
+    {
+      "id": "satsdelar-1",
+      "title": "Subjekt och predikat",
+      "description": "Hitta meningens kärna",
+      "icon": "🔍",
+      "bonusPoints": 25,
+      "helpText": [
+        "Subjektet är den som GÖR något i meningen – oftast ett substantiv eller pronomen.",
+        "Predikatet är verbet – vad subjektet gör.",
+        "Exempel: 'Hunden (subjekt) springer (predikat) fort.'"
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vad är subjektet i meningen: 'Lisa läser en bok'?",
+          "options": ["läser", "bok", "Lisa", "en"],
+          "correctIndex": 2,
+          "explanation": "'Lisa' är den som utför handlingen – det är subjektet."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad är predikatet i: 'Katten sover på soffan'?",
+          "options": ["katten", "soffan", "sover", "på"],
+          "correctIndex": 2,
+          "explanation": "'Sover' är verbet och predikatet i meningen."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Subjektet i 'De tre pojkarna spelar fotboll' är ___.",
+          "answer": "De tre pojkarna",
+          "hint": "Vem spelar fotboll?",
+          "explanation": "'De tre pojkarna' är subjektet – de är de som spelar."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket är predikatet i: 'Solen skiner starkt idag'?",
+          "options": ["Solen", "skiner", "starkt", "idag"],
+          "correctIndex": 1,
+          "explanation": "'Skiner' är verbet/predikatet."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: subjekt + predikat + objekt!",
+          "words": ["Maja", "åt", "ett", "äpple"],
+          "correctOrder": [0, 1, 2, 3],
+          "explanation": "'Maja' är subjektet, 'åt' är predikatet, 'ett äpple' är objektet."
+        }
+      ]
+    },
+    {
+      "id": "pronomen-1",
+      "title": "Pronomen",
+      "description": "Ord som ersätter substantiv",
+      "icon": "👥",
+      "bonusPoints": 25,
+      "helpText": [
+        "Pronomen ersätter substantiv för att undvika upprepningar.",
+        "Vanliga pronomen: jag, du, han, hon, det, vi, ni, de.",
+        "Exempel: 'Lisa är glad. Hon sjunger.' (Hon ersätter Lisa)"
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket pronomen ersätter 'Erik och Maja'?",
+          "options": ["han", "hon", "de", "det"],
+          "correctIndex": 2,
+          "explanation": "När det handlar om flera personer används 'de'."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Kalle är trött. ___ vill sova.",
+          "answer": "Han",
+          "hint": "Kalle är en pojke – vilket pronomen används?",
+          "explanation": "'Han' ersätter Kalle eftersom Kalle är en pojke."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket pronomen passar? 'Boken är tjock. ___ har 500 sidor.'",
+          "options": ["Han", "Hon", "Den", "De"],
+          "correctIndex": 2,
+          "explanation": "En sak (boken) ersätts med 'den'."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket pronomen används när man talar om sig själv?",
+          "options": ["du", "jag", "ni", "vi"],
+          "correctIndex": 1,
+          "explanation": "'Jag' används när man talar om sig själv."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Bygg meningen med rätt pronomen!",
+          "words": ["Hon", "och", "jag", "är", "kompisar"],
+          "correctOrder": [0, 1, 2, 3, 4],
+          "explanation": "'Hon och jag' – man sätter alltid den andra personen före 'jag'."
+        }
+      ]
+    },
+    {
+      "id": "tempus-1",
+      "title": "Tempus – dåtid och nutid",
+      "description": "När händer det – nu eller förr?",
+      "icon": "⏰",
+      "bonusPoints": 30,
+      "helpText": [
+        "Tempus visar NÄR något händer.",
+        "Nutid (presens): Det händer nu. Ex: 'Jag läser.'",
+        "Dåtid (preteritum): Det hände förr. Ex: 'Jag läste.'",
+        "Vanligt mönster: läsa → läste, skriva → skrev, hoppa → hoppade."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket tempus är: 'Igår spelade vi fotboll'?",
+          "options": ["Nutid", "Dåtid", "Framtid", "Ingen av dem"],
+          "correctIndex": 1,
+          "explanation": "'Igår' och 'spelade' visar att det hände i dåtid."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Skriv i dåtid: 'Idag hoppar hon' → 'Igår ___ hon.'",
+          "answer": "hoppade",
+          "hint": "Lägg till -ade på hoppa.",
+          "explanation": "'Hoppa' blir 'hoppade' i dåtid."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vad är nutidsform av 'sprang'?",
+          "options": ["springer", "sprang", "springa", "sprungit"],
+          "correctIndex": 0,
+          "explanation": "'Springer' är nutidsformen, 'sprang' är dåtid."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket verb är i dåtid?",
+          "options": ["sjunger", "sjöng", "sjunga", "sjungit"],
+          "correctIndex": 1,
+          "explanation": "'Sjöng' är dåtidsformen av 'sjunga/sjunger'."
+        },
+        {
+          "type": "build-sentence",
+          "instruction": "Sätt ihop meningen i dåtid!",
+          "words": ["Förra", "veckan", "cyklade", "vi", "till", "sjön"],
+          "correctOrder": [0, 1, 2, 3, 4, 5],
+          "explanation": "'Förra veckan' och 'cyklade' visar att det hände i dåtid."
+        }
+      ]
+    }
+  ],
+  "reading": [
+    {
+      "id": "novell-1",
+      "title": "Sommarstugan",
+      "description": "En berättelse om sommar och vänskap",
+      "icon": "🏡",
+      "bonusPoints": 30,
+      "helpText": [
+        "Läs texten noggrant och tänk på hur karaktärerna känner sig.",
+        "Lägg märke till detaljer – de kan vara viktiga för frågorna."
+      ],
+      "author": "Fri berättelse",
+      "text": "Varje sommar åkte Lina och hennes familj till en röd stuga vid en liten sjö. Lina älskade sommarstugan mer än något annat ställe i hela världen.\n\nMen det här sommaren var annorlunda. Linas bästa vän Emma hade flyttat till en annan stad. Lina kände sig ensam medan hon packade sin väska.\n\n'Det kommer att bli bra', sa mamman och klappade Lina på axeln. 'Du kanske träffar nya kompisar vid sjön.'\n\nLina trodde inte på det. Men när de anlände till stugan stod det ett nytt hus bredvid deras. Och utanför stod en flicka med röda flätor och ett leende.\n\n'Hej! Jag heter Saga. Vill du fiska med mig?' sa flickan.\n\nLina kände hur leendet spred sig på hennes egna läppar. Kanske skulle den här sommaren inte bli så ensam ändå.",
+      "questions": [
+        {
+          "type": "on-the-line",
+          "question": "Vad hette Linas bästa vän?",
+          "options": ["Saga", "Emma", "Maja", "Anna"],
+          "correctIndex": 1,
+          "explanation": "Linas bästa vän hette Emma."
+        },
+        {
+          "type": "on-the-line",
+          "question": "Vad hade hänt med Linas vän Emma?",
+          "options": ["Hon var sjuk", "Hon hade sommarjobb", "Hon hade flyttat till en annan stad", "Hon var på semester"],
+          "correctIndex": 2,
+          "explanation": "Emma hade flyttat till en annan stad."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Hur mådde Lina i början av berättelsen?",
+          "options": ["Hon var glad och förväntansfull", "Hon var ledsen och ensam", "Hon var arg på Emma", "Hon var trött"],
+          "correctIndex": 1,
+          "hint": "Tänk på varför hon packade väskan med tunga tankar.",
+          "explanation": "Lina kände sig ensam utan sin bästa vän Emma."
+        },
+        {
+          "type": "beyond-the-lines",
+          "question": "Vad tror du händer nästa sommar?",
+          "options": ["Lina slutar åka till sommarstugan", "Lina och Saga har blivit bästa vänner", "Lina träffar aldrig Saga igen", "Emma kommer tillbaka"],
+          "correctIndex": 1,
+          "hint": "Hur slutar berättelsen?",
+          "explanation": "Berättelsen slutar positivt – Saga och Lina verkar bli vänner."
+        },
+        {
+          "type": "between-the-lines",
+          "question": "Varför frågade Saga om Lina ville fiska?",
+          "options": ["Hon ville ha hjälp med fisket", "Hon ville bli kompis med Lina", "Hon ville visa var sjön låg", "Hon var uttråkad"],
+          "correctIndex": 1,
+          "explanation": "Saga var ny och ville lära känna sin granne Lina."
+        }
+      ]
+    }
+  ],
+  "spelling": [
+    {
+      "id": "dubbelkonsonant-1",
+      "title": "Dubbelkonsonanter",
+      "description": "När skriver man dubbla konsonanter?",
+      "icon": "✏️",
+      "bonusPoints": 25,
+      "helpText": [
+        "En kort vokal (betonad) följs oftast av dubbel konsonant.",
+        "Exempel: 'katt' (kort a), 'hatt' (kort a), 'gulle' (kort u).",
+        "Jämför: 'mat' (lång a) vs 'matt' (kort a)."
+      ],
+      "exercises": [
+        {
+          "type": "multiple-choice",
+          "question": "Vilket ord är rätt stavat?",
+          "options": ["katt", "kat", "kaat", "katt"],
+          "correctIndex": 0,
+          "explanation": "'Katt' stavas med dubbelt t – kort vokal kräver dubbel konsonant."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilken stavning är korrekt för djuret som skäller?",
+          "options": ["hund", "hundd", "hhund", "huund"],
+          "correctIndex": 0,
+          "explanation": "'Hund' – här är u-et långt, därför ingen dubbelkonsonant."
+        },
+        {
+          "type": "fill-in-blank",
+          "question": "Stavning: 'Han bär en ha_.' (något man har på huvudet)",
+          "answer": "tt",
+          "hint": "Hat eller hatt? Tänk på om vokalen är lång eller kort.",
+          "explanation": "'Hatt' – kort a-ljud kräver dubbelt t. 'Hat' (med långt a) betyder något annat!"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Vilket är rätt: 'brev' eller 'brevv'?",
+          "options": ["brev", "brevv", "breev", "bbrev"],
+          "correctIndex": 0,
+          "explanation": "'Brev' – e-et är långt, därför ingen dubbelkonsonant."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Hur stavas det lilla djuret som springer i hjulet?",
+          "options": ["mus", "muss", "muus", "mús"],
+          "correctIndex": 0,
+          "explanation": "'Mus' – u-et är långt, därför ingen dubbelkonsonant."
+        }
+      ]
+    }
+  ]
+}
