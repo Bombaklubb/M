@@ -289,3 +289,33 @@ export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
     icon: '🔬',
   },
 };
+
+// ─── Gamification / Kistor ─────────────────────────────────────────────────────
+
+export type ChestType = 'bronze' | 'silver' | 'gold' | 'emerald' | 'ruby' | 'diamond';
+
+export interface Chest {
+  id: string;
+  type: ChestType;
+  earnedAt: string;
+  opened: boolean;
+  openedReward?: string;
+}
+
+export type MysteryRewardType = 'points' | 'chest' | 'badge';
+
+export interface MysteryBoxReward {
+  type: MysteryRewardType;
+  points?: number;
+  chestType?: ChestType;
+  badgeId?: string;
+  description: string;
+}
+
+export interface GamificationData {
+  chests: Chest[];
+  gamificationBadges: string[];
+  textsCompleted: number;
+  pointsMilestonesRewarded: number[];
+  textMilestonesRewarded: number[];
+}
