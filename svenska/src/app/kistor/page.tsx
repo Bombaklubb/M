@@ -353,17 +353,82 @@ export default function KistorPage() {
           </section>
         )}
 
-        {/* Opened chests history */}
+        {/* Trophy Shelf - Opened chests */}
         {opened.length > 0 && (
           <section>
             <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <span>🔓</span>
-              Öppnade kistor ({opened.length})
+              <span>🏛️</span>
+              Trofehylla
+              <span className="ml-1 px-2 py-0.5 text-xs font-bold bg-amber-600 text-white rounded-full">
+                {opened.length} kistor
+              </span>
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {opened.map((chest) => (
-                <ChestCard key={chest.id} chest={chest} onOpen={() => {}} />
-              ))}
+            <div
+              className="rounded-3xl overflow-hidden"
+              style={{
+                background: "linear-gradient(180deg, #fef3c7 0%, #fde68a 100%)",
+                border: "4px solid #92400e",
+                boxShadow: "0 8px 32px rgba(146,64,14,0.25), inset 0 2px 0 rgba(255,255,255,0.5)",
+              }}
+            >
+              {/* Group chests by type */}
+              {(["gold", "silver", "wood"] as ChestType[]).map((type) => {
+                const chestsOfType = opened.filter((c) => c.type === type);
+                if (chestsOfType.length === 0) return null;
+                const meta = CHEST_META[type];
+                return (
+                  <div key={type} className="border-b-4 border-amber-700/30 last:border-b-0">
+                    <div className="px-4 py-3 bg-amber-800/10 flex items-center gap-2">
+                      <span className="text-2xl">{meta.emoji}</span>
+                      <span className="font-bold text-amber-900">{meta.label}</span>
+                      <span className="ml-1 px-2 py-0.5 text-xs font-bold bg-amber-700 text-white rounded-full">
+                        x{chestsOfType.length}
+                      </span>
+                    </div>
+                    <div
+                      className="p-4"
+                      style={{
+                        background: "linear-gradient(180deg, rgba(120,53,15,0.1) 0%, transparent 100%)",
+                      }}
+                    >
+                      <div className="flex flex-wrap gap-3">
+                        {chestsOfType.map((chest) => (
+                          <div
+                            key={chest.id}
+                            className="flex flex-col items-center p-3 rounded-2xl transition-transform hover:scale-105"
+                            style={{
+                              background: `linear-gradient(135deg, ${
+                                type === "gold" ? "#fef08a, #fbbf24" :
+                                type === "silver" ? "#e2e8f0, #94a3b8" :
+                                "#d97706, #b45309"
+                              })`,
+                              border: "3px solid",
+                              borderColor: type === "gold" ? "#ca8a04" : type === "silver" ? "#64748b" : "#92400e",
+                              boxShadow: "0 4px 12px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.4)",
+                              minWidth: "70px",
+                            }}
+                          >
+                            <span className="text-2xl mb-1">{meta.emoji}</span>
+                            {chest.openedReward && (
+                              <span className="text-xs font-bold text-center text-gray-800 leading-tight">
+                                {chest.openedReward.split("•")[0].trim()}
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                      {/* Decorative shelf line */}
+                      <div
+                        className="mt-3 h-2 rounded-full"
+                        style={{
+                          background: "linear-gradient(90deg, transparent, #92400e 10%, #78350f 50%, #92400e 90%, transparent)",
+                          boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}
