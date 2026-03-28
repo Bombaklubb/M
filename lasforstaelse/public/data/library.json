@@ -31197,6 +31197,253 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
+  },
+
+  {
+    "id": "ak7-tema-046",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "Tv spel",
+    "title": "Spelet som förändrade allt",
+    "text": "När Amir började spela ett nytt onlinespel märkte han snabbt att det inte var som andra spel. Det handlade inte bara om att vinna strider, utan om att samarbeta med andra spelare från olika delar av världen. Spelet krävde strategi, kommunikation och tålamod. Amir spelade tillsammans med en grupp där alla hade olika roller.\n\nEn av spelarna, Lin, var särskilt bra på att planera. Hon såg mönster i spelet och kunde förutse vad motståndarna skulle göra. Amir lärde sig mycket av henne. Han insåg att spelet inte bara handlade om snabba reflexer, utan också om att tänka flera steg framåt.\n\nSamtidigt märkte Amir att spelet tog mycket tid. Han började prioritera bort läxor och träning. Hans föräldrar blev oroliga och pratade med honom om balans. Amir insåg att även om spelet var roligt, var det viktigt att inte låta det ta över.\n\nEfter ett tag bestämde han sig för att sätta gränser. Han spelade fortfarande, men bara efter att ha gjort sina uppgifter. Det gjorde att han kunde njuta mer av spelet utan att känna stress. Erfarenheten lärde honom att ansvar och nöje måste gå hand i hand.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad var speciellt med spelet Amir började spela?",
+        "options": [
+          "Det hade bättre grafik än andra spel",
+          "Det fokuserade på samarbete och strategi",
+          "Det var gratis att spela",
+          "Det hade inga regler"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad bidrog Lin med i gruppen?",
+        "options": [
+          "Snabba attacker",
+          "Hög poäng",
+          "Planering och analys",
+          "Nya spelidéer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad började Amir prioritera bort?",
+        "options": [
+          "Sömn och mat",
+          "Familjetid",
+          "Skola och träning",
+          "Vänner i spelet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blev Amirs föräldrar oroliga?",
+        "options": [
+          "Han spelade för lite",
+          "Han förstod inte spelet",
+          "Han tappade intresse för allt annat",
+          "Han vann för ofta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Amir för att få bättre balans?",
+        "options": [
+          "Slutade spela helt",
+          "Spelade mer på helger",
+          "Satte gränser för sitt spelande",
+          "Bytte spel"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Spel är alltid dåliga",
+          "Strategi är viktigare än snabbhet",
+          "Man ska spela ensam",
+          "Balans mellan ansvar och nöje är viktigt"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 180,
+      "fingerprint": "ak7-tema-046",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-047",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "Djur",
+    "title": "Vargen i fjällen",
+    "text": "I de svenska fjällen lever vargen i små flockar. Vargen är ett rovdjur som jagar tillsammans med andra i gruppen. Genom samarbete kan de fälla större byten som älgar. Flocken har ofta en tydlig ledare, men alla medlemmar har viktiga roller.\n\nForskare har länge studerat vargar för att förstå deras beteende. De har upptäckt att vargar kommunicerar genom ljud, kroppsspråk och dofter. Ett ylande kan höras över långa avstånd och används för att hålla kontakt med flocken.\n\nSamtidigt finns det konflikter mellan människor och vargar. Vissa bönder oroar sig för sina djur, medan andra vill skydda vargen som en viktig del av naturen. Diskussionen handlar ofta om hur man ska hitta en balans mellan olika intressen.\n\nVargen spelar en viktig roll i ekosystemet. Genom att jaga vissa djur hjälper den till att hålla naturen i balans. Utan rovdjur kan vissa arter bli för många och påverka miljön negativt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur jagar vargar oftast?",
+        "options": [
+          "Ensamma",
+          "I flock",
+          "Med människor",
+          "På natten bara"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad använder vargar för att kommunicera?",
+        "options": [
+          "Endast ljud",
+          "Färger",
+          "Ljus",
+          "Ljud, kroppsspråk och dofter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför studerar forskare vargar?",
+        "options": [
+          "För att tämja dem",
+          "För att förstå deras beteende",
+          "För att jaga dem",
+          "För att sälja dem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar konflikten om?",
+        "options": [
+          "Matbrist",
+          "Turism",
+          "Balans mellan skydd och jordbruk",
+          "Väder"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken roll har vargen i naturen?",
+        "options": [
+          "Den förstör ekosystem",
+          "Den är oviktig",
+          "Den skrämmer människor",
+          "Den hjälper till att hålla balans"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Vargar är farliga",
+          "Vargar är husdjur",
+          "Vargens roll och konflikter kring den",
+          "Fjällen är kalla"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 153,
+      "fingerprint": "ak7-tema-047",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-048",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "Film",
+    "title": "En film med djupare mening",
+    "text": "När Sara såg filmen första gången tänkte hon mest på handlingen. Det var en spännande berättelse om en ung person som försökte hitta sin plats i världen. Men när hon såg filmen igen upptäckte hon något mer.\n\nFilmen använde symboler och bilder för att visa känslor och teman. Till exempel återkom en spegel flera gånger. Den verkade representera hur huvudpersonen såg på sig själv. Ju mer filmen gick framåt, desto mer förändrades spegelns betydelse.\n\nLäraren i skolan förklarade att filmer ofta har flera lager. Det som syns på ytan är bara en del av berättelsen. Under finns budskap om identitet, val och konsekvenser.\n\nSara började tänka på hur hon själv tolkar filmer. Hon insåg att olika personer kan förstå samma film på olika sätt. Det gjorde att hon började uppskatta filmer mer, eftersom de kunde betyda olika saker beroende på vem som tittar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad lade Sara först märke till?",
+        "options": [
+          "Musiken",
+          "Symbolerna",
+          "Handlingen",
+          "Skådespelarna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad representerade spegeln i filmen?",
+        "options": [
+          "Tid",
+          "Självbild",
+          "Väder",
+          "Vänskap"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad menade läraren med flera lager?",
+        "options": [
+          "Flera filmer samtidigt",
+          "Att filmen är lång",
+          "Att filmen har dolda budskap",
+          "Att filmen har många karaktärer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad insåg Sara?",
+        "options": [
+          "Alla tycker lika",
+          "Filmer är enkla",
+          "Endast experter förstår film",
+          "Tolkningar kan vara olika"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad förändrades hos Sara?",
+        "options": [
+          "Hon slutade titta på film",
+          "Hon började analysera mer",
+          "Hon blev skådespelare",
+          "Hon såg färre filmer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Filmer är tråkiga",
+          "Symboler är oviktiga",
+          "Filmer kan tolkas på olika sätt",
+          "Filmer är bara underhållning"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 170,
+      "fingerprint": "ak7-tema-048",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 
 ]
