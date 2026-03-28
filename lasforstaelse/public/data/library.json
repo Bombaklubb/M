@@ -29553,5 +29553,417 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
+  },
+
+  {
+    "id": "ak8-tema-001",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Klimatförändringar och deras konsekvenser",
+    "text": "Klimatförändringar är ett av de största globala problemen i vår tid. De orsakas främst av människans utsläpp av växthusgaser som koldioxid och metan. Dessa gaser bildar ett lager i atmosfären som gör att värmen från solen stannar kvar på jorden. Detta leder till en ökad medeltemperatur, vilket i sin tur påverkar väder, hav och ekosystem.\n\nEn av de mest synliga konsekvenserna är smältande glaciärer och isar i polarområdena. När isen smälter stiger havsnivån, vilket hotar kuststäder och lågt liggande områden. Samtidigt blir extrema väderhändelser, som värmeböljor, stormar och kraftiga regn, allt vanligare.\n\nKlimatförändringar påverkar även djur och växter. Många arter får svårt att anpassa sig till de snabba förändringarna och riskerar att dö ut. Jordbruket påverkas också, eftersom förändrade temperaturer och nederbördsmönster kan göra det svårare att odla mat.\n\nFör att minska klimatförändringarna behöver människor förändra sina vanor. Det handlar bland annat om att minska användningen av fossila bränslen, satsa på förnybar energi och konsumera mer hållbart. Internationella samarbeten, som klimatavtal, är också viktiga för att länder ska arbeta tillsammans.\n\nTrots att situationen är allvarlig finns det hopp. Forskning och teknikutveckling ger nya lösningar, och allt fler människor engagerar sig i miljöfrågor. Genom gemensamma insatser kan vi påverka framtiden och minska de negativa effekterna.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är huvudorsaken till klimatförändringar enligt texten?",
+        "options": [
+          "Naturliga variationer i klimatet",
+          "Människans utsläpp av växthusgaser",
+          "Förändringar i jordens bana",
+          "Ökad solaktivitet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer när glaciärer smälter?",
+        "options": [
+          "Havsnivån sjunker",
+          "Temperaturen minskar",
+          "Havsnivån stiger",
+          "Vädret blir stabilare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur påverkas djur av klimatförändringar?",
+        "options": [
+          "De får mer mat",
+          "De anpassar sig snabbt",
+          "De påverkas inte",
+          "De kan få svårt att överleva"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilken lösning nämns i texten?",
+        "options": [
+          "Öka användningen av fossila bränslen",
+          "Minska utsläpp och använda förnybar energi",
+          "Bygga fler fabriker",
+          "Sluta odla mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med extrema väderhändelser?",
+        "options": [
+          "De minskar",
+          "De försvinner helt",
+          "De blir vanligare",
+          "De påverkar inte människor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad ger hopp enligt texten?",
+        "options": [
+          "Att problemet löser sig självt",
+          "Att människor ignorerar problemet",
+          "Forskning och engagemang",
+          "Att klimatet blir kallare"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak8-tema-001",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-002",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Industrialiseringen och samhällets förändring",
+    "text": "Industrialiseringen var en period av stora förändringar som började i slutet av 1700-talet i Storbritannien och spreds till andra delar av världen. Den innebar att produktionen gick från att vara hantverksbaserad till att ske i fabriker med hjälp av maskiner. En viktig uppfinning var ångmaskinen, som gjorde det möjligt att producera varor snabbare och i större mängder.\n\nNär fabriker byggdes flyttade många människor från landsbygden till städerna för att arbeta. Detta ledde till snabb urbanisering och att städer växte kraftigt. Arbetsvillkoren var ofta hårda, med långa arbetsdagar och låg lön, även för barn.\n\nIndustrialiseringen förändrade också ekonomin. Företag växte fram och handel ökade. Samtidigt uppstod nya samhällsklasser, som arbetarklassen och borgarklassen. Skillnaderna mellan rika och fattiga blev tydligare.\n\nMed tiden började människor protestera mot dåliga arbetsvillkor. Fackföreningar bildades för att kämpa för bättre löner och kortare arbetsdagar. Reformer infördes så småningom, vilket förbättrade levnadsförhållandena.\n\nIndustrialiseringen bidrog också till teknisk utveckling och förbättrad levnadsstandard för många. Samtidigt skapade den miljöproblem och sociala utmaningar som fortfarande påverkar samhället idag.\n\nDenna period visar hur tekniska framsteg kan förändra hela samhällen, både positivt och negativt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var började industrialiseringen?",
+        "options": [
+          "Frankrike",
+          "USA",
+          "Storbritannien",
+          "Tyskland"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde ångmaskinen möjlig?",
+        "options": [
+          "Snabbare transporter",
+          "Effektivare produktion",
+          "Bättre jordbruk",
+          "Mindre arbete"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför flyttade människor till städer?",
+        "options": [
+          "För att studera",
+          "För att resa",
+          "För att arbeta i fabriker",
+          "För att odla mark"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad var ett problem under industrialiseringen?",
+        "options": [
+          "För få arbetstillfällen",
+          "För korta arbetsdagar",
+          "Hårda arbetsvillkor",
+          "För mycket fritid"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kämpade fackföreningar för?",
+        "options": [
+          "Sämre löner",
+          "Kortare arbetsdagar och bättre villkor",
+          "Fler fabriker",
+          "Mindre utbildning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad visar industrialiseringen?",
+        "options": [
+          "Att teknik inte påverkar samhället",
+          "Att förändringar alltid är negativa",
+          "Att utveckling bara gynnar rika",
+          "Att tekniska framsteg kan påverka samhället mycket"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak8-tema-002",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-003",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "Digital teknik i vardagen",
+    "text": "Digital teknik har blivit en central del av människors vardag. Mobiltelefoner, datorer och internet används för kommunikation, arbete, studier och underhållning. Den snabba tekniska utvecklingen har förändrat hur vi lever och interagerar med varandra.\n\nEn viktig del av digital teknik är internet, som gör det möjligt att dela information globalt på några sekunder. Sociala medier gör det lätt att hålla kontakt med vänner, men kan också påverka hur människor ser på sig själva och andra.\n\nDigitalisering har också förändrat arbetslivet. Många yrken kräver idag teknisk kompetens, och nya jobb har skapats inom IT och digitala tjänster. Samtidigt har vissa traditionella yrken minskat i betydelse.\n\nDet finns även risker med digital teknik. Integritet och säkerhet är viktiga frågor, eftersom personlig information kan spridas eller missbrukas. Dessutom kan överdriven skärmtid påverka hälsa och koncentration.\n\nTrots dessa utmaningar erbjuder digital teknik stora möjligheter. Den kan användas för utbildning, innovation och problemlösning. Genom att använda tekniken ansvarsfullt kan människor dra nytta av dess fördelar samtidigt som riskerna minimeras.\n\nFramtiden kommer sannolikt att präglas ännu mer av digital teknik, vilket gör det viktigt att förstå dess påverkan.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad används digital teknik främst till?",
+        "options": [
+          "Endast arbete",
+          "Kommunikation och underhållning",
+          "Bara studier",
+          "Endast spel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör internet möjligt?",
+        "options": [
+          "Att resa snabbare",
+          "Att dela information globalt",
+          "Att bygga hus",
+          "Att odla mat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur har arbetslivet förändrats?",
+        "options": [
+          "Färre jobb kräver teknik",
+          "Inga nya jobb har skapats",
+          "Fler jobb kräver teknisk kompetens",
+          "Alla jobbar hemifrån"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken risk nämns i texten?",
+        "options": [
+          "För lite information",
+          "Ingen kommunikation",
+          "Ökad fysisk aktivitet",
+          "Problem med integritet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan teknik användas positivt?",
+        "options": [
+          "För utbildning och innovation",
+          "För att minska kunskap",
+          "För att undvika arbete",
+          "För att stoppa utveckling"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är viktigt framöver?",
+        "options": [
+          "Att ignorera teknik",
+          "Att förstå dess påverkan",
+          "Att sluta använda internet",
+          "Att minska utbildning"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak8-tema-003",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-004",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Mänskliga rättigheter i världen",
+    "text": "Mänskliga rättigheter är grundläggande rättigheter som alla människor har, oavsett kön, ålder, bakgrund eller religion. De inkluderar rätten till liv, frihet, utbildning och yttrandefrihet. Dessa rättigheter är fastställda i internationella dokument, som FN:s deklaration om de mänskliga rättigheterna.\n\nTrots detta respekteras inte rättigheterna överallt. I vissa länder begränsas människors frihet att uttrycka sina åsikter eller leva som de vill. Diskriminering och orättvisor är fortfarande vanliga problem.\n\nOrganisationer arbetar för att skydda och främja mänskliga rättigheter. De dokumenterar övergrepp, informerar allmänheten och påverkar politiska beslut. Aktivister spelar också en viktig roll genom att protestera och sprida kunskap.\n\nUtbildning är en viktig del i arbetet för mänskliga rättigheter. Genom att lära sig om sina rättigheter kan människor bättre försvara dem. Skolor och samhällen har därför en viktig uppgift att sprida kunskap.\n\nMänskliga rättigheter handlar inte bara om lagar, utan också om värderingar och respekt. Varje individ kan bidra genom att behandla andra rättvist och stå upp mot orättvisor.\n\nArbetet för mänskliga rättigheter är ständigt pågående och kräver engagemang från hela världen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är mänskliga rättigheter?",
+        "options": [
+          "Regler för skolor",
+          "Rättigheter som alla människor har",
+          "Lagar för företag",
+          "Regler för resor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Var finns dessa rättigheter beskrivna?",
+        "options": [
+          "I romaner",
+          "I FN:s deklaration",
+          "I skolböcker",
+          "I reklam"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett problem enligt texten?",
+        "options": [
+          "För mycket frihet",
+          "Alla följer regler",
+          "Rättigheter respekteras inte överallt",
+          "Ingen utbildning finns"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör organisationer?",
+        "options": [
+          "Bygger hus",
+          "Dokumenterar övergrepp",
+          "Skapar spel",
+          "Reser runt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är utbildning viktig?",
+        "options": [
+          "För att minska kunskap",
+          "För att förstå och försvara rättigheter",
+          "För att undvika ansvar",
+          "För att skapa regler"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan individer göra?",
+        "options": [
+          "Ignorera orättvisor",
+          "Bryta mot lagar",
+          "Behandla andra rättvist",
+          "Undvika kontakt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 450,
+      "fingerprint": "ak8-tema-004",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-005",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Idrottens betydelse för hälsa och samhälle",
+    "text": "Idrott spelar en viktig roll både för individens hälsa och för samhället. Genom fysisk aktivitet stärks kroppen, konditionen förbättras och risken för vissa sjukdomar minskar. Regelbunden träning kan också bidra till bättre mental hälsa genom att minska stress och öka välbefinnandet.\n\nIdrott handlar inte bara om fysisk prestation, utan också om gemenskap. Många människor deltar i lagidrotter där samarbete och kommunikation är viktiga. Detta kan stärka sociala relationer och skapa en känsla av tillhörighet.\n\nPå samhällsnivå kan idrott bidra till integration. Människor från olika bakgrunder möts och samarbetar, vilket kan minska fördomar och öka förståelsen. Idrottsevenemang kan också skapa stolthet och gemenskap i ett samhälle.\n\nSamtidigt finns det utmaningar. Pressen att prestera kan leda till stress, och i vissa fall förekommer doping eller osunda träningsvanor. Det är därför viktigt att idrott utövas på ett hälsosamt och ansvarsfullt sätt.\n\nSkolan har en viktig roll i att uppmuntra fysisk aktivitet och ge elever möjlighet att prova olika idrotter. Detta kan bidra till att skapa goda vanor som varar livet ut.\n\nSammanfattningsvis är idrott en viktig del av både individens liv och samhället i stort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad förbättras genom träning?",
+        "options": [
+          "Endast styrka",
+          "Endast snabbhet",
+          "Kondition och hälsa",
+          "Endast balans"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar idrott mental hälsa?",
+        "options": [
+          "Ökar stress",
+          "Minskar välbefinnande",
+          "Har ingen effekt",
+          "Kan minska stress"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad lär man sig i lagidrott?",
+        "options": [
+          "Att arbeta ensam",
+          "Samarbete och kommunikation",
+          "Att undvika andra",
+          "Att tävla själv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan idrott påverka samhället?",
+        "options": [
+          "Skapa konflikter",
+          "Öka isolering",
+          "Minska förståelse",
+          "Främja integration"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilket problem nämns?",
+        "options": [
+          "För lite träning",
+          "Doping och stress",
+          "Ingen gemenskap",
+          "För få idrotter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är skolans roll?",
+        "options": [
+          "Stoppa idrott",
+          "Ge möjlighet till aktivitet",
+          "Minska rörelse",
+          "Fokusera på teori"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak8-tema-005",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
+
 ]
