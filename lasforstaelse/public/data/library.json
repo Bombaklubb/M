@@ -29332,4 +29332,115 @@
       "model": "manual"
     }
   }
+,
+  {
+    "id": "ak7-tema-031",
+    "grade": 7,
+    "genre": "berättelse",
+    "theme": "Värdegrund",
+    "title": "En oväntad vänskap",
+    "text": "Sofia hade nyligen flyttat till en ny stad och kände sig osäker i sin nya skola. Hon saknade sina gamla vänner och tyckte att allt kändes främmande. På rasterna satt hon ofta ensam och tittade på de andra eleverna som redan verkade känna varandra.\n\nEn dag satte sig Alex bredvid henne i matsalen. Alex identifierade sig som icke-binär och var känd i klassen för att vara öppen och vänlig. De började prata om musik och upptäckte att de hade liknande smak. Samtalet gjorde Sofia mer avslappnad.\n\nUnder de följande veckorna började de umgås mer. Alex introducerade Sofia för fler klasskamrater, och snart kände hon sig mer inkluderad. Sofia märkte också att Alex ibland blev ifrågasatt av andra, men Alex stod upp för sig själv och förklarade lugnt sin identitet.\n\nSofia lärde sig mycket om respekt och vikten av att acceptera människor som de är. Hon insåg att vänskap kan uppstå på oväntade sätt och att det krävs mod att vara sig själv.\n\nEfter några månader kände Sofia att hon hade hittat sin plats. Hon var inte längre ensam och hade fått både nya vänner och nya perspektiv.",
+    "questions": [
+      {"type": "literal", "q": "Varför kände sig Sofia osäker i början?", "options": ["Hon hade för mycket läxor", "Hon hade flyttat till en ny stad", "Hon gillade inte skolan", "Hon var sjuk"], "correct": 1},
+      {"type": "literal", "q": "Var träffade Sofia Alex första gången?", "options": ["I klassrummet", "På skolgården", "I matsalen", "På bussen"], "correct": 2},
+      {"type": "literal", "q": "Vad hade Sofia och Alex gemensamt?", "options": ["Sportintresse", "Musiksmak", "Favoritämne", "Familjebakgrund"], "correct": 1},
+      {"type": "literal", "q": "Hur reagerade Alex när hen blev ifrågasatt?", "options": ["Blev arg", "Ignorerade allt", "Bytte skola", "Förklarade lugnt"], "correct": 3},
+      {"type": "inferens", "q": "Vad lärde sig Sofia?", "options": ["Att undvika andra", "Att vara bäst i klassen", "Vikten av respekt", "Att byta skola"], "correct": 2},
+      {"type": "sammanfatta", "q": "Vad är textens huvudbudskap?", "options": ["Skolan är svår", "Vänskap och acceptans är viktigt", "Man ska alltid vara ensam", "Musik är viktigast"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak7-tema-031",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-032",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Vattnets kretslopp",
+    "text": "Vattnets kretslopp är en naturlig process som ständigt pågår på jorden. Solens energi gör att vatten i hav, sjöar och floder avdunstar och stiger upp i atmosfären som vattenånga. När vattenångan kyls ner bildas moln.\n\nSå småningom faller vattnet tillbaka till jorden som nederbörd, till exempel regn eller snö. En del av vattnet rinner ner i marken och blir grundvatten, medan annat rinner tillbaka till sjöar och hav.\n\nVattnets kretslopp är viktigt för livet på jorden. Det förser växter, djur och människor med färskt vatten. Utan detta kretslopp skulle många ekosystem inte fungera.\n\nMänniskans aktiviteter kan påverka kretsloppet. Föroreningar kan spridas med vatten och påverka både miljö och hälsa. Därför är det viktigt att skydda våra vattenresurser.\n\nGenom att förstå vattnets kretslopp kan vi bättre ta hand om naturen och säkerställa att framtida generationer har tillgång till rent vatten.",
+    "questions": [
+      {"type": "literal", "q": "Vad gör solen i kretsloppet?", "options": ["Skapar moln direkt", "Avdunstar vatten", "Kyler ner vatten", "Stoppar regn"], "correct": 1},
+      {"type": "literal", "q": "Vad bildas när vattenånga kyls ner?", "options": ["Vind", "Moln", "Snö direkt", "Isberg"], "correct": 1},
+      {"type": "literal", "q": "Vad kallas vatten i marken?", "options": ["Havsvatten", "Regnvatten", "Grundvatten", "Saltvatten"], "correct": 2},
+      {"type": "inferens", "q": "Varför är kretsloppet viktigt?", "options": ["För transport", "För energi", "För teknik", "För liv på jorden"], "correct": 3},
+      {"type": "literal", "q": "Hur kan människor påverka?", "options": ["Genom föroreningar", "Genom att minska solen", "Genom att stoppa regn", "Genom att skapa moln"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Väder", "Vattnets kretslopp", "Energi", "Djur"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-032",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-033",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Medeltidens städer",
+    "text": "Under medeltiden växte många städer fram i Europa. Dessa städer var ofta omgivna av murar som skydd mot fiender. Inom murarna fanns smala gator, marknadsplatser och kyrkor som var viktiga samlingsplatser.\n\nHandel spelade en central roll i städernas utveckling. Köpmän reste mellan olika platser och bytte varor som tyg, kryddor och metaller. Marknader var livliga och viktiga för ekonomin.\n\nLivet i städerna var dock inte alltid enkelt. Trångboddhet och dålig hygien kunde leda till sjukdomar. Bränder var också vanliga eftersom många hus var byggda av trä.\n\nTrots svårigheterna lockade städerna människor med möjligheter till arbete och handel. Hantverkare organiserade sig i skrån, där de lärde ut sina yrken till lärlingar.\n\nMedeltidens städer lade grunden för dagens moderna samhällen och visar hur människor samarbetade för att skapa fungerande samhällen.",
+    "questions": [
+      {"type": "literal", "q": "Varför hade städer murar?", "options": ["För dekoration", "För skydd", "För handel", "För vatten"], "correct": 1},
+      {"type": "literal", "q": "Vad var viktigt i städerna?", "options": ["Skogar", "Marknadsplatser", "Fält", "Hav"], "correct": 1},
+      {"type": "literal", "q": "Vad gjorde köpmän?", "options": ["Byggde hus", "Bytte varor", "Undervisade", "Jagade"], "correct": 1},
+      {"type": "literal", "q": "Vilket problem fanns i städerna?", "options": ["För mycket plats", "Dålig hygien", "För lite handel", "Inga kyrkor"], "correct": 1},
+      {"type": "literal", "q": "Vad var skrån?", "options": ["Skolor", "Organisationer för hantverkare", "Kyrkor", "Marknader"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad visar texten?", "options": ["Att städer var perfekta", "Hur städer utvecklades", "Att handel var oviktig", "Att människor levde ensamma"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 428,
+      "fingerprint": "ak7-tema-033",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-034",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Hälsa",
+    "title": "Hur kroppen reagerar på stress",
+    "text": "Stress är en naturlig reaktion i kroppen som uppstår när vi känner oss hotade eller pressade. När vi upplever stress aktiveras kroppens alarmsystem, vilket gör att pulsen ökar och vi blir mer alerta.\n\nKortvarig stress kan vara hjälpsam, till exempel inför ett prov eller en tävling. Den kan ge extra energi och fokus. Men långvarig stress kan påverka hälsan negativt och leda till problem som sömnsvårigheter och koncentrationssvårigheter.\n\nDet finns olika sätt att hantera stress. Att planera sin tid, ta pauser och prata med någon kan minska stressnivån. Fysisk aktivitet och avslappningstekniker som djupandning kan också hjälpa.\n\nDet är viktigt att känna igen signaler på stress i tid. Genom att lyssna på kroppen kan man undvika att stressen blir överväldigande.\n\nAtt förstå hur kroppen reagerar på stress kan hjälpa oss att må bättre och hantera utmaningar i vardagen.",
+    "questions": [
+      {"type": "literal", "q": "Vad händer i kroppen vid stress?", "options": ["Pulsen minskar", "Pulsen ökar", "Man blir trött direkt", "Man somnar"], "correct": 1},
+      {"type": "literal", "q": "När kan stress vara hjälpsam?", "options": ["Vid vila", "Inför prov", "När man sover", "Vid semester"], "correct": 1},
+      {"type": "literal", "q": "Vad kan långvarig stress leda till?", "options": ["Bättre sömn", "Koncentrationssvårigheter", "Mer energi", "Bättre minne"], "correct": 1},
+      {"type": "literal", "q": "Hur kan man minska stress?", "options": ["Ignorera den", "Planera och ta pauser", "Jobba mer", "Undvika alla människor"], "correct": 1},
+      {"type": "inferens", "q": "Varför är det viktigt att känna igen stress?", "options": ["För att öka den", "För att undvika problem", "För att tävla bättre", "För att bli trött"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Stress är alltid dåligt", "Stress kan förstås och hanteras", "Man ska undvika allt", "Stress är oviktig"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 429,
+      "fingerprint": "ak7-tema-034",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-035",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Fotbollens betydelse",
+    "text": "Fotboll är en av världens mest populära sporter och spelas i nästan alla länder. Sporten kräver både fysisk uthållighet och samarbete mellan spelare. Målet är att göra fler mål än motståndaren.\n\nFotboll har också en viktig social roll. Den kan förena människor från olika bakgrunder och skapa gemenskap. Många ungdomar deltar i lag och lär sig viktiga värderingar som respekt och lagarbete.\n\nProfessionell fotboll är en stor industri med klubbar, ligor och internationella turneringar. Spelare kan bli kända och inspirera andra.\n\nSamtidigt finns utmaningar, som press på spelare och risk för skador. Det är viktigt att träna på ett säkert sätt och att ha balans mellan sport och andra delar av livet.\n\nFotbollens betydelse sträcker sig därför bortom planen och påverkar både individer och samhällen.",
+    "questions": [
+      {"type": "literal", "q": "Vad är målet i fotboll?", "options": ["Att springa mest", "Att göra mål", "Att passa bollen", "Att försvara"], "correct": 1},
+      {"type": "literal", "q": "Vad kräver fotboll?", "options": ["Endast styrka", "Samarbete och uthållighet", "Endast teknik", "Tur"], "correct": 1},
+      {"type": "inferens", "q": "Vad kan fotboll skapa?", "options": ["Konflikter", "Gemenskap", "Stress", "Problem"], "correct": 1},
+      {"type": "literal", "q": "Vad är professionell fotboll?", "options": ["Skolspel", "En industri", "En hobby", "Ett spel utan regler"], "correct": 1},
+      {"type": "literal", "q": "Vilken risk finns?", "options": ["För lite träning", "Skador", "Ingen publik", "För lite lag"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Fotboll är bara lek", "Fotboll påverkar samhället", "Fotboll är farligt", "Fotboll är enkelt"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 427,
+      "fingerprint": "ak7-tema-035",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  }
 ]
