@@ -45,15 +45,23 @@ function ChestCard({ chest, onOpen }: ChestCardProps) {
         transition: 'transform 0.15s ease-out, box-shadow 0.15s',
       }}
     >
-      <span
-        className="text-5xl mb-3 select-none"
-        style={{
-          filter: chest.opened ? 'grayscale(1)' : 'none',
-          animation: animating ? 'shake 0.4s ease-in-out' : 'none',
-        }}
-      >
-        {chest.opened ? '🔓' : meta.emoji}
-      </span>
+      {chest.opened ? (
+        <span
+          className="text-5xl mb-3 select-none"
+          style={{ filter: 'grayscale(1)' }}
+        >
+          🔓
+        </span>
+      ) : (
+        <img
+          src={meta.image}
+          alt={meta.label}
+          className="w-16 h-16 mb-3 select-none object-contain"
+          style={{
+            animation: animating ? 'shake 0.4s ease-in-out' : 'none',
+          }}
+        />
+      )}
 
       <span
         className={`text-sm font-bold mb-1 ${
@@ -284,21 +292,21 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
           </h3>
           <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Poängmilstolpar</p>
           <ul className="space-y-1.5 text-sm text-sky-900 dark:text-sky-100 mb-4">
-            <li className="flex items-start gap-2"><span>🥉</span><span><strong>Bronskista:</strong> 10 – 200 poäng</span></li>
-            <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> 300 – 4 000 poäng</span></li>
-            <li className="flex items-start gap-2"><span>🥇</span><span><strong>Guldkista:</strong> 1 000 – 7 000 poäng</span></li>
-            <li className="flex items-start gap-2"><span>💚</span><span><strong>Smaragdkista:</strong> 8 000 – 12 000 poäng</span></li>
-            <li className="flex items-start gap-2"><span>❤️</span><span><strong>Rubinkista:</strong> 15 000 – 20 000 poäng</span></li>
-            <li className="flex items-start gap-2"><span>💎</span><span><strong>Diamantkista:</strong> 25 000 – 40 000 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronskista" className="w-6 h-6 object-contain" /><span><strong>Bronskista:</strong> 10 – 200 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silverkista" className="w-6 h-6 object-contain" /><span><strong>Silverkista:</strong> 300 – 4 000 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Guldkista" className="w-6 h-6 object-contain" /><span><strong>Guldkista:</strong> 1 000 – 7 000 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Smaragdkista" className="w-6 h-6 object-contain" /><span><strong>Smaragdkista:</strong> 8 000 – 12 000 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Rubinkista" className="w-6 h-6 object-contain" /><span><strong>Rubinkista:</strong> 15 000 – 20 000 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamantkista" className="w-6 h-6 object-contain" /><span><strong>Diamantkista:</strong> 25 000 – 40 000 poäng</span></li>
           </ul>
           <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Läsmilstolpar</p>
           <ul className="space-y-1.5 text-sm text-sky-900 dark:text-sky-100 mb-4">
-            <li className="flex items-start gap-2"><span>🥉</span><span><strong>Bronskista:</strong> 1 – 55 texter</span></li>
-            <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> 12 – 90 texter</span></li>
-            <li className="flex items-start gap-2"><span>🥇</span><span><strong>Guldkista:</strong> 30 – 125 texter</span></li>
-            <li className="flex items-start gap-2"><span>💚</span><span><strong>Smaragdkista:</strong> 150 – 200 texter</span></li>
-            <li className="flex items-start gap-2"><span>❤️</span><span><strong>Rubinkista:</strong> 250 – 300 texter</span></li>
-            <li className="flex items-start gap-2"><span>💎</span><span><strong>Diamantkista:</strong> 400 – 500 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronskista" className="w-6 h-6 object-contain" /><span><strong>Bronskista:</strong> 1 – 55 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silverkista" className="w-6 h-6 object-contain" /><span><strong>Silverkista:</strong> 12 – 90 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Guldkista" className="w-6 h-6 object-contain" /><span><strong>Guldkista:</strong> 30 – 125 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Smaragdkista" className="w-6 h-6 object-contain" /><span><strong>Smaragdkista:</strong> 150 – 200 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Rubinkista" className="w-6 h-6 object-contain" /><span><strong>Rubinkista:</strong> 250 – 300 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamantkista" className="w-6 h-6 object-contain" /><span><strong>Diamantkista:</strong> 400 – 500 texter</span></li>
           </ul>
           <div className="flex items-start gap-2 text-sm text-sky-900 dark:text-sky-100 pt-2 border-t border-sky-200 dark:border-slate-700">
             <span>🎁</span>
