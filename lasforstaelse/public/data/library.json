@@ -29221,4 +29221,115 @@
       "model": "manual"
     }
   }
+,
+  {
+    "id": "ak8-tema-016",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Klimatförändringar och ansvar",
+    "text": "Klimatförändringar är en av de största utmaningarna i vår tid. Forskare har visat att jordens temperatur ökar, vilket till stor del beror på utsläpp av växthusgaser från mänskliga aktiviteter. Förbränning av fossila bränslen, som kol och olja, bidrar till ökade nivåer av koldioxid i atmosfären.\n\nKonsekvenserna av klimatförändringar märks redan idag. Glaciärer smälter, havsnivåer stiger och extremväder som värmeböljor och kraftiga stormar blir vanligare. Dessa förändringar påverkar både människor och djur. Vissa arter riskerar att dö ut när deras livsmiljöer förändras.\n\nSamtidigt diskuteras vem som har ansvar för att minska utsläppen. Industriländer har historiskt stått för stora utsläpp, medan utvecklingsländer ofta drabbas hårdast av konsekvenserna. Detta skapar en komplex fråga om rättvisa och ansvar.\n\nIndivider kan också bidra genom att göra mer hållbara val i vardagen, till exempel genom att minska sin energiförbrukning och välja miljövänliga transportmedel. Även små förändringar kan tillsammans göra stor skillnad.\n\nFör att hantera klimatförändringarna krävs samarbete på global nivå, där länder, företag och individer arbetar tillsammans för en mer hållbar framtid.",
+    "questions": [
+      {"type": "literal", "q": "Vad är en huvudorsak till klimatförändringar?", "options": ["Ökad nederbörd", "Utsläpp av växthusgaser", "Fler vulkanutbrott", "Minskad skogsavverkning"], "correct": 1},
+      {"type": "literal", "q": "Vilken konsekvens nämns i texten?", "options": ["Fler skogar", "Stigande havsnivåer", "Mindre vind", "Färre djurarter i städer"], "correct": 1},
+      {"type": "literal", "q": "Vad händer med vissa djurarter?", "options": ["De blir fler", "De flyttar till städer", "De riskerar att dö ut", "De blir större"], "correct": 2},
+      {"type": "inferens", "q": "Vad handlar diskussionen om ansvar om?", "options": ["Vem som äger naturen", "Vem som orsakat och påverkas mest", "Vilka djur som är viktigast", "Hur vädret förändras"], "correct": 1},
+      {"type": "literal", "q": "Hur kan individer bidra?", "options": ["Genom att resa mer", "Genom att minska energianvändning", "Genom att ignorera problemet", "Genom att bygga fler hus"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Klimatförändringar är oviktiga", "Endast forskare kan lösa problemet", "Samarbete behövs för att hantera klimatet", "Vädret går inte att påverka"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 457,
+      "fingerprint": "ak8-tema-016",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-017",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Demokrati och deltagande",
+    "text": "Demokrati är ett styrelseskick där makten utgår från folket. Genom val får medborgare möjlighet att påverka vilka som ska fatta beslut i samhället. I en demokrati finns också grundläggande rättigheter, som yttrandefrihet och mötesfrihet, som gör det möjligt att uttrycka åsikter och delta i samhällsdebatten.\n\nDet finns olika former av demokrati. I representativ demokrati väljer medborgarna representanter som fattar beslut åt dem. I direkt demokrati deltar medborgarna själva i beslutsfattandet, till exempel genom folkomröstningar.\n\nFör att en demokrati ska fungera krävs mer än bara val. Det är viktigt att människor är informerade och engagerade. Medier spelar en central roll genom att sprida information och granska makthavare.\n\nSamtidigt finns utmaningar. Lågt valdeltagande kan minska legitimiteten i besluten, och spridning av falsk information kan påverka hur människor uppfattar verkligheten. Därför är källkritik en viktig del av ett demokratiskt samhälle.\n\nGenom att delta aktivt, till exempel genom att rösta, diskutera och engagera sig i frågor, kan medborgare bidra till att stärka demokratin.",
+    "questions": [
+      {"type": "literal", "q": "Vad innebär demokrati?", "options": ["Att en person bestämmer allt", "Att makten utgår från folket", "Att endast experter styr", "Att lagar saknas"], "correct": 1},
+      {"type": "literal", "q": "Vad är representativ demokrati?", "options": ["Alla röstar varje dag", "Medborgare väljer representanter", "Ingen får rösta", "Endast politiker röstar"], "correct": 1},
+      {"type": "literal", "q": "Vad gör medier i en demokrati?", "options": ["Bygger hus", "Sprider information och granskar", "Bestämmer lagar", "Skapar konflikter"], "correct": 1},
+      {"type": "inferens", "q": "Vad kan lågt valdeltagande leda till?", "options": ["Starkare beslut", "Minskad legitimitet", "Fler val", "Mindre ansvar"], "correct": 1},
+      {"type": "literal", "q": "Vad är källkritik viktigt för?", "options": ["Att laga mat", "Att förstå information", "Att resa", "Att spela spel"], "correct": 1},
+      {"type": "inferens", "q": "Hur kan medborgare stärka demokratin?", "options": ["Genom att ignorera politik", "Genom att delta aktivt", "Genom att undvika rösta", "Genom att bara följa andra"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 456,
+      "fingerprint": "ak8-tema-017",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-018",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Rymdens utforskning",
+    "text": "Människans intresse för rymden har funnits i tusentals år, men det var först under 1900-talet som tekniken gjorde det möjligt att resa dit. Under rymdkapplöpningen tävlade stormakter om att nå viktiga milstolpar, som att skicka upp satelliter och landa på månen.\n\nRymdforskning har lett till många tekniska framsteg. Satelliter används idag för kommunikation, väderprognoser och navigation. Genom teleskop kan forskare studera avlägsna galaxer och få kunskap om universums utveckling.\n\nSamtidigt är rymdfärder kostsamma och innebär risker. Astronauter utsätts för faror som strålning och extrema temperaturer. Trots detta fortsätter forskningen, eftersom den kan ge svar på stora frågor om universum och livets ursprung.\n\nPå senare tid har även privata företag börjat engagera sig i rymdresor. Detta har lett till nya möjligheter men också nya diskussioner om regler och ansvar.\n\nRymdens utforskning visar människans nyfikenhet och vilja att förstå det okända.",
+    "questions": [
+      {"type": "literal", "q": "När blev rymdresor möjliga?", "options": ["1800-talet", "1900-talet", "2000-talet", "Medeltiden"], "correct": 1},
+      {"type": "literal", "q": "Vad används satelliter till?", "options": ["Jordbruk", "Kommunikation och navigation", "Byggarbete", "Transport av varor"], "correct": 1},
+      {"type": "literal", "q": "Vilken risk finns för astronauter?", "options": ["Regn", "Strålning", "Vind", "Snö"], "correct": 1},
+      {"type": "literal", "q": "Vad har privata företag gjort?", "options": ["Slutat forska", "Börjat delta i rymdresor", "Förbjudit resor", "Byggt städer i rymden"], "correct": 1},
+      {"type": "inferens", "q": "Vad kan rymdforskning ge svar på?", "options": ["Endast väder", "Universums frågor", "Sportresultat", "Ekonomi"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad visar rymdens utforskning?", "options": ["Att teknik är oviktig", "Människans nyfikenhet", "Att rymden är farlig", "Att forskning är onödig"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak8-tema-018",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-019",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Kultur och identitet",
+    "text": "Kultur handlar om de värderingar, traditioner och uttryck som människor delar. Det kan handla om språk, musik, mat och sätt att leva. Kultur formas både av historiska händelser och av nutida influenser.\n\nIdentitet är hur en person ser på sig själv och sin plats i världen. Den påverkas av faktorer som familj, vänner, samhälle och erfarenheter. Många människor har flera kulturella tillhörigheter samtidigt.\n\nI dagens globaliserade värld möts olika kulturer oftare än tidigare. Detta kan leda till ökad förståelse, men också till konflikter om värderingar och normer. Därför är det viktigt med respekt och dialog.\n\nKultur förändras ständigt. Nya idéer och influenser blandas med gamla traditioner. Till exempel kan musik från olika delar av världen kombineras och skapa nya genrer.\n\nGenom att förstå både sin egen och andras kultur kan människor bygga broar och skapa ett mer inkluderande samhälle.",
+    "questions": [
+      {"type": "literal", "q": "Vad ingår i kultur?", "options": ["Endast språk", "Värderingar och traditioner", "Bara kläder", "Endast historia"], "correct": 1},
+      {"type": "literal", "q": "Vad påverkar identitet?", "options": ["Endast skola", "Familj och erfarenheter", "Bara arbete", "Endast fritid"], "correct": 1},
+      {"type": "inferens", "q": "Vad kan globalisering leda till?", "options": ["Mindre kontakt", "Ökad förståelse och konflikter", "Inga förändringar", "Färre idéer"], "correct": 1},
+      {"type": "literal", "q": "Hur förändras kultur?", "options": ["Den är statisk", "Den förändras över tid", "Den försvinner", "Den är oföränderlig"], "correct": 1},
+      {"type": "inferens", "q": "Vad kan musikexemplet visa?", "options": ["Att musik är gammal", "Att kulturer kan blandas", "Att musik är oviktig", "Att traditioner försvinner"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad är huvudbudskapet?", "options": ["Kultur är oviktig", "Identitet är fast", "Förståelse skapar inkludering", "Globalisering är dålig"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak8-tema-019",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-020",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Hälsa",
+    "title": "Ungas hälsa i en digital värld",
+    "text": "I dagens samhälle spelar digitala medier en stor roll i ungas liv. Många använder sociala plattformar dagligen för att kommunicera, dela innehåll och hålla kontakt med vänner. Detta kan ha både positiva och negativa effekter på hälsan.\n\nEn fördel är att unga kan hitta gemenskap och stöd online. Personer som känner sig ensamma kan hitta andra med liknande intressen eller erfarenheter. Samtidigt kan ständig uppkoppling skapa stress och press att vara tillgänglig.\n\nForskning visar att jämförelse med andra på sociala medier kan påverka självkänslan negativt. Bilder och inlägg visar ofta en idealiserad bild av verkligheten, vilket kan leda till känslor av otillräcklighet.\n\nDet är viktigt att utveckla en medveten användning av digitala medier. Att ta pauser, begränsa skärmtid och reflektera över innehållet man tar del av kan bidra till bättre välmående.\n\nSkola och vuxna har en viktig roll i att stödja unga i att navigera den digitala världen på ett hälsosamt sätt.",
+    "questions": [
+      {"type": "literal", "q": "Vad används sociala medier till?", "options": ["Endast arbete", "Kommunikation och delning", "Bara studier", "Endast sport"], "correct": 1},
+      {"type": "literal", "q": "Vilken positiv effekt nämns?", "options": ["Mer stress", "Gemenskap", "Sämre sömn", "Mindre kontakt"], "correct": 1},
+      {"type": "literal", "q": "Vad kan påverka självkänslan negativt?", "options": ["Studier", "Jämförelse med andra", "Träning", "Familj"], "correct": 1},
+      {"type": "literal", "q": "Vad visar inlägg ofta?", "options": ["Verkligheten exakt", "Idealiserad bild", "Bara fakta", "Endast nyheter"], "correct": 1},
+      {"type": "literal", "q": "Hur kan man må bättre?", "options": ["Mer skärmtid", "Ta pauser", "Aldrig använda teknik", "Isolera sig"], "correct": 1},
+      {"type": "inferens", "q": "Vad är vuxnas roll?", "options": ["Ignorera unga", "Stödja och vägleda", "Kontrollera allt", "Förbjuda internet"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 453,
+      "fingerprint": "ak8-tema-020",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  }
 ]
