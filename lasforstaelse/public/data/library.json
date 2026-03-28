@@ -29000,5 +29000,115 @@
       "model": "manual"
     },
     "imageUrl": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak7-tema-001",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Ett förändrat klimat",
+    "text": "Klimatförändringar är en av de största utmaningarna som världen står inför idag. Forskare har länge varnat för att ökade utsläpp av växthusgaser, som koldioxid och metan, påverkar jordens temperatur. När temperaturen stiger förändras vädermönster, vilket kan leda till extremväder som torka, översvämningar och kraftiga stormar. Dessa förändringar påverkar både naturen och människors livsvillkor.\n\nEn viktig orsak till klimatförändringarna är människans användning av fossila bränslen, såsom kol, olja och naturgas. När dessa bränslen förbränns frigörs stora mängder koldioxid som samlas i atmosfären. Detta förstärker växthuseffekten, vilket innebär att mer värme stannar kvar på jorden.\n\nKonsekvenserna märks redan idag. Isar i Arktis smälter snabbare än tidigare, havsnivåerna stiger och vissa djurarter riskerar att försvinna. Samtidigt påverkas människor genom att jordbruket får svårare att producera mat i vissa områden.\n\nDet finns dock lösningar. Många länder satsar på förnybar energi, som sol- och vindkraft. Genom att minska användningen av fossila bränslen kan utsläppen minska. Även individer kan bidra genom att resa mer hållbart och minska sin energiförbrukning.\n\nAtt förstå klimatförändringarna är viktigt för att kunna fatta beslut som skyddar både miljön och framtida generationer.",
+    "questions": [
+      {"type": "literal", "q": "Vad är en huvudorsak till klimatförändringar?", "options": ["Fossila bränslen", "Solens variationer", "Vulkanutbrott", "Havsströmmar"], "correct": 0},
+      {"type": "literal", "q": "Vad innebär förstärkt växthuseffekt?", "options": ["Kallare klimat", "Mer värme stannar kvar", "Mindre syre", "Svagare sol"], "correct": 1},
+      {"type": "literal", "q": "Vilken effekt nämns i texten?", "options": ["Fler skogar", "Mindre regn", "Smältande isar", "Stabilt väder"], "correct": 2},
+      {"type": "literal", "q": "Vad är en lösning?", "options": ["Mer kol", "Fler fabriker", "Mindre el", "Förnybar energi"], "correct": 3},
+      {"type": "inferens", "q": "Hur påverkas jordbruket?", "options": ["Svårare i vissa områden", "Alltid lättare", "Ingen påverkan", "Flyttar till havet"], "correct": 0},
+      {"type": "inferens", "q": "Vad kan individer göra?", "options": ["Flyga mer", "Minska energi", "Köra mer bil", "Undvika återvinning"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 425,
+      "fingerprint": "ak7-tema-001",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-002",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "Digitala spår",
+    "text": "När människor använder internet lämnar de ofta efter sig digitala spår. Det kan handla om vilka sidor man besöker, vad man söker efter och vilka appar man använder. Dessa spår samlas in av företag och organisationer för olika syften. Ibland används informationen för att förbättra tjänster, men den kan också användas för riktad reklam.\n\nMånga tänker inte på hur mycket information de delar. När man accepterar villkor utan att läsa dem kan man ge bort rättigheter till sina egna uppgifter. Detta kan innebära att företag lagrar och analyserar beteenden över lång tid.\n\nSamtidigt finns det lagar som ska skydda användare. Inom EU finns regler som kräver att företag måste informera om hur data används. Användare har också rätt att begära att deras information tas bort.\n\nDet är viktigt att vara medveten om sin digitala närvaro. Genom att använda starka lösenord, vara försiktig med vad man delar och kontrollera inställningar kan man skydda sin integritet.\n\nDigitala spår är en naturlig del av det moderna samhället, men det kräver kunskap för att hantera dem på ett säkert sätt.",
+    "questions": [
+      {"type": "literal", "q": "Vad är digitala spår?", "options": ["Information om vad man gör online", "Fysiska märken på datorer", "Virus i nätverk", "Gamla filer"], "correct": 0},
+      {"type": "literal", "q": "Varför samlas data in?", "options": ["För att radera internet", "För tjänster och reklam", "För att stoppa teknik", "För att minska appar"], "correct": 1},
+      {"type": "inferens", "q": "Vad kan hända om man inte läser villkor?", "options": ["Man får virus direkt", "Telefonen slutar fungera", "Man delar data utan att veta", "Internet stängs"], "correct": 2},
+      {"type": "literal", "q": "Vad ger EU:s regler?", "options": ["Gratis internet", "Snabbare datorer", "Färre appar", "Skydd och rättigheter"], "correct": 3},
+      {"type": "literal", "q": "Hur kan man skydda sig?", "options": ["Starka lösenord", "Inte använda internet", "Aldrig installera appar", "Stänga av wifi"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad handlar texten främst om?", "options": ["Teknikens historia", "Digital integritet", "Dataspel", "Programmering"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 426,
+      "fingerprint": "ak7-tema-002",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-003",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Vikingarnas resor",
+    "text": "Vikingarna var skickliga sjöfarare som levde under tidig medeltid. De reste över stora delar av Europa och nådde till och med Nordamerika. Deras båtar var välbyggda och kunde färdas både på öppet hav och i floder.\n\nResorna hade olika syften. Ibland handlade det om handel, där vikingarna bytte varor som pälsar och järn mot silver och andra produkter. I andra fall var det plundringståg, där de anföll kuststäder.\n\nVikingarna var inte bara krigare. De var också bönder, hantverkare och handelsmän. I deras samhällen fanns lagar och regler som styrde livet.\n\nKontakten med andra kulturer ledde till att idéer och varor spreds. Vikingarna tog med sig nya influenser hem, vilket förändrade deras samhälle över tid.\n\nDeras resor har haft stor betydelse för historien och visar hur människor tidigt kunde knyta kontakter över långa avstånd.",
+    "questions": [
+      {"type": "literal", "q": "Vad var vikingarna kända för?", "options": ["Sjöfart", "Flygning", "Industrin", "Vetenskap"], "correct": 0},
+      {"type": "literal", "q": "Vad gjorde de under handel?", "options": ["Krigade", "Bytte varor", "Byggde hus", "Skrev böcker"], "correct": 1},
+      {"type": "literal", "q": "Vilket annat yrke hade de?", "options": ["Piloter", "Lärare", "Bönder", "Astronomer"], "correct": 2},
+      {"type": "literal", "q": "Vad spreds genom resor?", "options": ["Endast pengar", "Endast vapen", "Ingenting", "Idéer och varor"], "correct": 3},
+      {"type": "inferens", "q": "Var reste de?", "options": ["Europa och längre", "Endast Norden", "Endast Afrika", "Endast Asien"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad visar deras resor?", "options": ["Att handel var oviktig", "Att kontakter kunde knytas långt bort", "Att resor var ovanliga", "Att havet var farligt"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 425,
+      "fingerprint": "ak7-tema-003",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-004",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Hälsa",
+    "title": "Hur kroppen får energi",
+    "text": "Människokroppen behöver energi för att fungera. Denna energi kommer från maten vi äter. När vi bryter ner maten i kroppen omvandlas den till näringsämnen som kan användas av cellerna.\n\nKolhydrater, fetter och proteiner är de viktigaste energikällorna. Kolhydrater ger snabb energi, medan fetter lagras och används senare. Proteiner används främst för att bygga upp kroppen, men kan också ge energi.\n\nNär kroppen behöver energi sker kemiska processer i cellerna. Syre spelar en viktig roll i dessa processer. Utan syre kan kroppen inte producera energi lika effektivt.\n\nFysisk aktivitet ökar energibehovet. Därför behöver personer som tränar mer också äta mer. Samtidigt är det viktigt att äta varierat för att få i sig alla näringsämnen.\n\nEn balanserad kost och regelbunden rörelse hjälper kroppen att fungera optimalt.",
+    "questions": [
+      {"type": "literal", "q": "Var kommer energi ifrån?", "options": ["Mat", "Sömn", "Luft", "Vatten"], "correct": 0},
+      {"type": "literal", "q": "Vilket ämne ger snabb energi?", "options": ["Fett", "Kolhydrater", "Protein", "Vitaminer"], "correct": 1},
+      {"type": "literal", "q": "Vad behövs för energiproduktion?", "options": ["Koldioxid", "Salt", "Syre", "Ljus"], "correct": 2},
+      {"type": "literal", "q": "Vad händer vid träning?", "options": ["Mindre behov", "Ingen skillnad", "Samma behov", "Ökat behov"], "correct": 3},
+      {"type": "inferens", "q": "Vad används protein främst till?", "options": ["Bygga kroppen", "Ge snabb energi", "Lagra fett", "Kyler kroppen"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad är viktigt för hälsa?", "options": ["Endast vila", "Balanserad kost", "Bara träning", "Socker"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 425,
+      "fingerprint": "ak7-tema-004",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-005",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Att leva tillsammans",
+    "text": "I ett samhälle lever människor tillsammans trots att de kan ha olika bakgrund, åsikter och livssituationer. För att det ska fungera behövs regler, respekt och förståelse.\n\nDemokrati innebär att människor får vara med och bestämma genom val. Alla röster ska ha lika värde. Samtidigt innebär det ansvar att lyssna på andra och respektera beslut.\n\nMångfald är en styrka i samhället. När människor med olika erfarenheter möts kan nya idéer uppstå. Det kan handla om språk, kultur eller olika sätt att leva.\n\nKonflikter kan uppstå, men de kan lösas genom dialog. Att prata med varandra och försöka förstå olika perspektiv är viktigt.\n\nGenom att visa hänsyn och samarbeta kan människor skapa ett tryggt och fungerande samhälle där fler känner sig inkluderade.",
+    "questions": [
+      {"type": "literal", "q": "Vad krävs för att leva tillsammans?", "options": ["Respekt", "Tystnad", "Likhet", "Enighet"], "correct": 0},
+      {"type": "literal", "q": "Vad innebär demokrati?", "options": ["En bestämmer", "Alla får vara med och bestämma", "Ingen röstar", "Endast ledare"], "correct": 1},
+      {"type": "literal", "q": "Vad kan mångfald leda till?", "options": ["Färre idéer", "Konflikter alltid", "Nya idéer", "Ingen förändring"], "correct": 2},
+      {"type": "literal", "q": "Hur kan konflikter lösas?", "options": ["Ignorera", "Bråka", "Undvika", "Dialog"], "correct": 3},
+      {"type": "inferens", "q": "Vad betyder inkludering?", "options": ["Alla känner sig delaktiga", "Få deltar", "Ingen deltar", "Endast vissa"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad är viktigt i samhället?", "options": ["Samarbete", "Tävling", "Makt", "Tystnad"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 425,
+      "fingerprint": "ak7-tema-005",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
