@@ -30375,6 +30375,417 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     }
+  },
+
+  {
+    "id": "ak8-tema-021",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Den digitala identiteten",
+    "text": "I dagens samhälle spelar den digitala identiteten en allt större roll. När vi använder sociala medier, e-post eller olika appar lämnar vi spår efter oss. Dessa spår består av information som namn, bilder, kommentarer och beteenden. Tillsammans skapar de en bild av vilka vi är på nätet. Många tänker inte på att denna bild kan påverka hur andra ser oss, både nu och i framtiden. Till exempel kan en arbetsgivare söka efter en persons namn och hitta gamla inlägg eller bilder.\n\nSamtidigt finns det fördelar med en digital identitet. Det blir enklare att hålla kontakt med vänner, dela information och delta i samhällsdebatter. För företag och organisationer är det också ett sätt att nå ut till människor snabbt. Problemet uppstår när personlig information sprids utan kontroll eller används på fel sätt.\n\nIntegritet handlar om rätten att bestämma över sin egen information. Många länder har lagar som ska skydda individens integritet, men ansvaret ligger också på användaren. Det är viktigt att tänka efter innan man publicerar något. Frågor som \"Vem kan se detta?\" och \"Hur kan det uppfattas?\" är centrala.\n\nEn annan aspekt är anonymitet. Vissa väljer att vara anonyma på nätet för att kunna uttrycka sig fritt. Det kan vara positivt, men också leda till problem som hatkommentarer och trakasserier. Därför diskuteras ofta balansen mellan yttrandefrihet och ansvar.\n\nSammanfattningsvis är den digitala identiteten något som alla behöver förstå och hantera med omsorg. Genom att vara medveten om sina val kan man skapa en tryggare och mer positiv närvaro online.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad menas med digital identitet?",
+        "options": [
+          "En persons ekonomi",
+          "Information om en person på nätet",
+          "Ett lösenord",
+          "En typ av dator"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kan gamla inlägg vara viktiga?",
+        "options": [
+          "De tar plats i mobilen",
+          "De kan påverka hur andra ser dig",
+          "De kostar pengar",
+          "De försvinner snabbt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en fördel med digital identitet?",
+        "options": [
+          "Svårare att kommunicera",
+          "Mindre information delas",
+          "Enklare kontakt med andra",
+          "Färre lagar behövs"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär integritet?",
+        "options": [
+          "Att dela allt offentligt",
+          "Att följa regler på internet",
+          "Att skydda datorn",
+          "Att bestämma över sin information"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan anonymitet leda till?",
+        "options": [
+          "Både frihet och problem",
+          "Bara positiva effekter",
+          "Ingen förändring",
+          "Att internet försvinner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Teknik är farlig",
+          "Man ska undvika internet",
+          "Digital identitet kräver ansvar",
+          "Sociala medier är bäst"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 456,
+      "fingerprint": "ak8-tema-021",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-022",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Klimatförändringar och ansvar",
+    "text": "Klimatförändringar är en av de största utmaningarna världen står inför idag. De orsakas främst av ökade utsläpp av växthusgaser, som koldioxid, från mänskliga aktiviteter. Dessa utsläpp kommer bland annat från transporter, industri och energiproduktion. När mängden växthusgaser ökar, stiger jordens temperatur.\n\nKonsekvenserna av klimatförändringarna märks redan. Glaciärer smälter, havsnivåer stiger och extremväder som värmeböljor och kraftiga stormar blir vanligare. Detta påverkar både naturen och människor. I vissa områden blir det svårare att odla mat, vilket kan leda till brist och konflikter.\n\nSamtidigt finns det möjligheter att minska problemen. Genom att använda förnybar energi, som sol och vind, kan utsläppen minska. Även små förändringar i vardagen kan göra skillnad, till exempel att cykla istället för att åka bil eller att minska matsvinn.\n\nAnsvar är en viktig del av lösningen. Det handlar både om individuella val och politiska beslut. Länder samarbetar genom internationella avtal för att begränsa utsläppen, men det krävs att dessa följs.\n\nMånga unga engagerar sig idag i klimatfrågan. De deltar i demonstrationer och sprider kunskap. Detta visar att förändring är möjlig, men att det kräver engagemang från alla nivåer i samhället.\n\nKlimatfrågan handlar inte bara om miljö, utan också om rättvisa. De som påverkas mest är ofta de som bidragit minst till problemet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad orsakar främst klimatförändringar?",
+        "options": [
+          "Naturliga årstider",
+          "Växthusgaser från mänsklig aktivitet",
+          "Regn och snö",
+          "Solens rörelse"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken konsekvens nämns i texten?",
+        "options": [
+          "Mindre vind",
+          "Lägre temperatur",
+          "Smältande glaciärer",
+          "Kortare dagar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett sätt att minska utsläpp?",
+        "options": [
+          "Köra mer bil",
+          "Använda förnybar energi",
+          "Bygga fler fabriker",
+          "Sluta resa helt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär ansvar enligt texten?",
+        "options": [
+          "Endast politiska beslut",
+          "Endast individers val",
+          "Både individuella och gemensamma insatser",
+          "Ingen påverkan alls"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör många unga idag?",
+        "options": [
+          "Ignorerar frågan",
+          "Flyttar utomlands",
+          "Engagerar sig i klimatfrågan",
+          "Arbetar i fabriker"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar klimatfrågan också om?",
+        "options": [
+          "Teknikutveckling",
+          "Ekonomi enbart",
+          "Sport och fritid",
+          "Rättvisa mellan människor"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak8-tema-022",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-023",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Ett ovanligt lag",
+    "text": "I en mellanstor stad startades ett basketlag där spelarna hade olika bakgrunder och förutsättningar. Alex var lagkapten och använde rullstol efter en olycka. Kim identifierade sig som icke-binär och var lagets bästa skytt. Samira hade nyligen flyttat till landet och kämpade med språket, medan Leo var äldre än de andra och hade spelat basket i många år.\n\nTräningarna var inte alltid enkla. De behövde anpassa övningarna så att alla kunde delta. I början uppstod missförstånd, särskilt när kommunikationen brast. Men med tiden lärde de sig att samarbeta och lyssna på varandra.\n\nTränaren fokuserade inte bara på teknik, utan också på respekt och gemenskap. Hen betonade att varje spelare bidrog med något unikt. När laget började förstå detta förändrades dynamiken.\n\nUnder en viktig turnering mötte de ett lag som verkade starkare. Trots det spelade de med stort engagemang och stödde varandra hela tiden. Matchen blev jämn, och i slutet avgjorde Kim med ett avgörande skott.\n\nEfter matchen insåg de att deras styrka låg i mångfalden. De hade olika erfarenheter, men just det gjorde dem starkare tillsammans.\n\nHistorien om laget visar att samarbete och respekt kan övervinna många hinder, både på och utanför planen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gjorde laget speciellt?",
+        "options": [
+          "De var professionella",
+          "De hade olika bakgrunder",
+          "De tränade varje dag",
+          "De vann alltid"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken utmaning hade laget i början?",
+        "options": [
+          "Brist på pengar",
+          "Dålig utrustning",
+          "Svårt att samarbeta",
+          "För få matcher"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad fokuserade tränaren på?",
+        "options": [
+          "Endast resultat",
+          "Teknik och respekt",
+          "Snabb träning",
+          "Individuell prestation"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände i turneringen?",
+        "options": [
+          "De förlorade direkt",
+          "Matchen avbröts",
+          "De vann enkelt",
+          "Kim avgjorde matchen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad var lagets styrka?",
+        "options": [
+          "Deras längd",
+          "Deras utrustning",
+          "Deras mångfald",
+          "Deras erfarenhet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens budskap?",
+        "options": [
+          "Sport är oviktigt",
+          "Mångfald stärker gruppen",
+          "Man ska träna mer",
+          "Individen är viktigast"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak8-tema-023",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-024",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Tryckpressens betydelse",
+    "text": "När tryckpressen utvecklades på 1400-talet förändrades samhället i grunden. Innan dess skrevs böcker för hand, vilket gjorde dem dyra och ovanliga. Med tryckpressen kunde texter produceras snabbare och i större mängder.\n\nDetta ledde till att fler människor fick tillgång till kunskap. Böcker blev billigare och kunde spridas över större områden. Utbildning blev mer tillgänglig, och fler lärde sig läsa.\n\nTryckpressen spelade också en viktig roll i spridningen av idéer. Under reformationen användes den för att sprida religiösa texter och kritik mot kyrkan. Detta bidrog till stora förändringar i Europa.\n\nSamtidigt fanns det motstånd. Vissa makthavare försökte kontrollera vad som fick tryckas, eftersom de var rädda för att förlora inflytande.\n\nPå lång sikt bidrog tryckpressen till utvecklingen av vetenskap, demokrati och yttrandefrihet. Den gjorde det möjligt för människor att dela tankar och diskutera idéer på ett helt nytt sätt.\n\nIdag kan vi se likheter med internet, som också sprider information snabbt. Precis som då finns både möjligheter och utmaningar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad förändrades med tryckpressen?",
+        "options": [
+          "Transporter",
+          "Hur böcker producerades",
+          "Klimatet",
+          "Jordbruket"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad blev en effekt?",
+        "options": [
+          "Färre böcker",
+          "Dyrare utbildning",
+          "Mer tillgång till kunskap",
+          "Mindre läsning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur användes tryckpressen under reformationen?",
+        "options": [
+          "För att bygga kyrkor",
+          "För att sprida idéer",
+          "För att stoppa böcker",
+          "För att skapa pengar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför försökte vissa kontrollera tryckning?",
+        "options": [
+          "För att spara papper",
+          "För att hjälpa läsare",
+          "För att undvika konkurrens",
+          "För att behålla makt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad bidrog tryckpressen till?",
+        "options": [
+          "Vetenskap och demokrati",
+          "Krig",
+          "Mindre utbildning",
+          "Färre idéer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad jämförs med tryckpressen idag?",
+        "options": [
+          "Radio",
+          "TV",
+          "Internet",
+          "Telefon"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 453,
+      "fingerprint": "ak8-tema-024",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak8-tema-025",
+    "grade": 8,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Hur hjärnan lär sig",
+    "text": "Hjärnan är ett komplext organ som ständigt förändras. När vi lär oss något nytt skapas kopplingar mellan nervceller. Dessa kopplingar stärks när vi repeterar information eller använder kunskapen i praktiken.\n\nForskning visar att sömn är viktig för inlärning. Under sömnen bearbetar hjärnan dagens intryck och förstärker minnen. Utan tillräcklig sömn blir det svårare att koncentrera sig och komma ihåg saker.\n\nÄven motivation spelar en stor roll. När vi är intresserade av något aktiveras belöningssystem i hjärnan, vilket gör att vi lär oss snabbare. Känslor kan alltså påverka hur effektivt vi lär oss.\n\nVariation i studier är också viktigt. Att kombinera olika metoder, som att läsa, diskutera och skriva, kan förbättra förståelsen. Pauser är en annan viktig faktor, eftersom hjärnan behöver tid att vila.\n\nStress kan däremot ha negativ effekt. För mycket stress kan göra det svårare att tänka klart och minnas information.\n\nGenom att förstå hur hjärnan fungerar kan vi utveckla bättre strategier för lärande och nå våra mål mer effektivt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad händer när vi lär oss något nytt?",
+        "options": [
+          "Hjärnan krymper",
+          "Kopplingar mellan nervceller skapas",
+          "Blodet minskar",
+          "Minnet försvinner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är sömn viktig?",
+        "options": [
+          "Den gör oss starkare",
+          "Den sparar energi",
+          "Den hjälper hjärnan bearbeta minnen",
+          "Den minskar hunger"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad påverkar motivation?",
+        "options": [
+          "Belöningssystemet",
+          "Musklerna",
+          "Synen",
+          "Hjärtat"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan förbättra inlärning?",
+        "options": [
+          "Endast läsa",
+          "Ingen paus",
+          "Variation i studier",
+          "Stress"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör stress?",
+        "options": [
+          "Förbättrar minnet",
+          "Försvårar tänkande",
+          "Ökar sömn",
+          "Minskar behov av pauser"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Hjärnan är oviktig",
+          "Man ska undvika studier",
+          "Lärande kräver disciplin",
+          "Förstå hjärnan förbättrar lärande"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak8-tema-025",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 
 ]
