@@ -29443,4 +29443,115 @@
       "model": "manual"
     }
   }
+,
+  {
+    "id": "ak7-tema-036",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Natur & Miljö",
+    "title": "Skogen som förändras",
+    "text": "Skogen har länge varit en viktig del av Sveriges natur och kultur. Den ger oss syre, material till byggnader och en plats för rekreation. Men idag förändras skogen snabbare än tidigare, delvis på grund av klimatförändringar. När temperaturen stiger påverkas både djur och växter. Vissa arter får svårare att överleva medan andra sprider sig till nya områden.\n\nEn tydlig förändring är att granen, som är vanlig i Sverige, har börjat få problem i varmare klimat. Samtidigt klarar sig lövträd som ek och bok bättre. Detta gör att skogens sammansättning sakta förändras. För skogsägare innebär det att de behöver tänka annorlunda kring vilka träd de planterar.\n\nÄven skadedjur påverkas av klimatet. Barkborren är ett exempel på en insekt som har blivit vanligare. Den angriper granar och kan snabbt döda stora områden av skog. När vintrarna blir mildare överlever fler barkborrar, vilket leder till större skador.\n\nSamtidigt finns det åtgärder som kan minska problemen. Forskare och skogsbrukare arbetar tillsammans för att hitta lösningar. Det kan handla om att plantera fler olika sorters träd, så att skogen blir mer motståndskraftig. En varierad skog klarar förändringar bättre än en skog med bara en trädart.\n\nFör människor är skogen också viktig för hälsa och välbefinnande. Många går dit för att promenera, plocka svamp eller bara koppla av. Därför är det viktigt att vi tar hand om skogen och anpassar oss till de förändringar som sker. Genom att förstå vad som händer kan vi fatta bättre beslut för framtiden.",
+    "questions": [
+      {"type": "literal", "q": "Vad är en viktig orsak till att skogen förändras?", "options": ["Ökad turism", "Klimatförändringar", "Mindre nederbörd", "Färre djur"], "correct": 1},
+      {"type": "literal", "q": "Vilket träd har fått problem i varmare klimat?", "options": ["Ek", "Björk", "Gran", "Tall"], "correct": 2},
+      {"type": "literal", "q": "Vad gör barkborren?", "options": ["Den pollinerar blommor", "Den äter löv", "Den sprider frön", "Den angriper granar"], "correct": 3},
+      {"type": "inferens", "q": "Varför är en varierad skog bättre?", "options": ["Den är billigare att plantera", "Den växer snabbare", "Den lockar fler turister", "Den klarar förändringar bättre"], "correct": 3},
+      {"type": "literal", "q": "Vad kan skogsägare behöva göra?", "options": ["Plantera andra träd", "Sluta använda skogen", "Bygga fler vägar", "Minska djurpopulationer"], "correct": 0},
+      {"type": "inferens", "q": "Varför är skogen viktig för människor?", "options": ["Den ger internet", "Den är en plats för vila", "Den producerar elektricitet", "Den ersätter städer"], "correct": 1}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-036",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-037",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Hur lagar skapas",
+    "text": "I Sverige styrs landet genom demokrati, vilket innebär att folket har makt att påverka besluten. Ett viktigt område är hur lagar skapas. Processen börjar ofta med att regeringen eller riksdagen föreslår en ny lag, vilket kallas för en proposition eller motion.\n\nNär ett förslag har lagts fram granskas det av ett utskott i riksdagen. Utskottet består av politiker från olika partier som diskuterar och analyserar förslaget. De kan föreslå ändringar innan det går vidare till omröstning.\n\nEfter granskningen röstar riksdagen om förslaget. Om en majoritet röstar ja blir det en ny lag. Om inte, avslås förslaget. Denna process är viktig för att säkerställa att olika perspektiv tas i beaktande innan ett beslut fattas.\n\nMen lagar kan också påverkas av EU. Sverige är medlem i Europeiska unionen, och vissa lagar måste följa gemensamma regler. Det innebär att svenska politiker ibland måste anpassa nationella lagar efter beslut som fattas på EU-nivå.\n\nDet är också möjligt för medborgare att påverka. Genom att rösta i val kan människor välja vilka politiker som ska representera dem. Dessutom kan man delta i debatter, skriva insändare eller engagera sig i organisationer.\n\nAtt förstå hur lagar skapas är viktigt för att kunna vara en aktiv medborgare. Genom kunskap om processen blir det lättare att se hur beslut fattas och hur man själv kan påverka samhället.",
+    "questions": [
+      {"type": "literal", "q": "Vad kallas ett lagförslag från regeringen?", "options": ["Debatt", "Motion", "Proposition", "Beslut"], "correct": 2},
+      {"type": "literal", "q": "Vad gör ett utskott?", "options": ["Röstar direkt", "Granskar förslag", "Skapar lagar ensamt", "Bestämmer skatter"], "correct": 1},
+      {"type": "literal", "q": "När blir en lag giltig?", "options": ["När kungen säger ja", "När alla partier är överens", "När riksdagen röstar ja", "När EU bestämmer"], "correct": 2},
+      {"type": "literal", "q": "Hur kan EU påverka svenska lagar?", "options": ["Genom att stoppa val", "Genom att skriva lokala regler", "Genom att kräva anpassning", "Genom att välja regering"], "correct": 2},
+      {"type": "literal", "q": "Hur kan medborgare påverka?", "options": ["Genom att rösta", "Genom att skriva lagar själva", "Genom att ignorera politik", "Genom att stoppa riksdagen"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad är huvudidén med demokrati?", "options": ["Att staten styr allt", "Att en person bestämmer", "Att företag styr landet", "Att folket har makt"], "correct": 3}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-037",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-038",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Värdegrund",
+    "title": "En inkluderande skola",
+    "text": "I en skola möts människor med olika bakgrunder, erfarenheter och förutsättningar. En inkluderande skola handlar om att alla elever ska känna sig välkomna och ha möjlighet att lyckas, oavsett vem de är. Det kan handla om kön, språk, funktionsvariation eller familjesituation.\n\nTill exempel kan Amir, som nyligen flyttat till Sverige, behöva extra stöd i språket. Samtidigt kan Alex, som är icke-binär, behöva en miljö där hen känner sig respekterad. Lina kanske använder rullstol och behöver en skola som är tillgänglig rent fysiskt.\n\nLärare spelar en viktig roll i att skapa en inkluderande miljö. De kan anpassa undervisningen så att alla elever får möjlighet att förstå och delta. Det kan innebära olika sätt att förklara, använda bilder eller ge extra tid.\n\nElever har också ett ansvar. Genom att visa respekt och vara öppna för olikheter kan de bidra till en bättre skolmiljö. Att stå upp för någon som blir behandlad illa är ett viktigt steg.\n\nEn inkluderande skola handlar inte bara om regler, utan också om värderingar. Det handlar om att se varje individ som unik och värdefull. När elever känner sig trygga och accepterade ökar också deras möjligheter att lära sig.\n\nI längden bidrar detta till ett mer rättvist samhälle. Genom att tidigt lära sig om respekt och inkludering kan unga människor ta med sig dessa värderingar in i vuxenlivet.",
+    "questions": [
+      {"type": "literal", "q": "Vad betyder en inkluderande skola?", "options": ["Att alla behandlas lika", "Att alla känner sig välkomna", "Att bara vissa elever lyckas", "Att regler saknas"], "correct": 1},
+      {"type": "literal", "q": "Vad kan Amir behöva?", "options": ["Mer idrott", "Språkstöd", "Mindre undervisning", "Ny skola"], "correct": 1},
+      {"type": "literal", "q": "Vad behöver Lina?", "options": ["Fler läxor", "En större klass", "Fysisk tillgänglighet", "Kortare dagar"], "correct": 2},
+      {"type": "literal", "q": "Vad kan elever göra?", "options": ["Ignorera andra", "Skapa konflikter", "Visa respekt", "Bestämma regler"], "correct": 2},
+      {"type": "inferens", "q": "Vad händer när elever känner sig trygga?", "options": ["De lär sig bättre", "De slutar studera", "De blir stressade", "De byter skola"], "correct": 0},
+      {"type": "sammanfatta", "q": "Vad bidrar inkludering till i längden?", "options": ["Fler regler", "Mindre variation", "Ett mer rättvist samhälle", "Hårdare skola"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-038",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-039",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "Vad är artificiell intelligens?",
+    "text": "Artificiell intelligens, ofta förkortat AI, är teknik som gör att datorer kan utföra uppgifter som vanligtvis kräver mänsklig intelligens. Det kan handla om att känna igen bilder, förstå språk eller fatta beslut.\n\nAI används redan i många delar av samhället. Till exempel kan mobiltelefoner använda AI för att känna igen ansikten i bilder. Streamingtjänster använder AI för att rekommendera filmer baserat på vad du tidigare har sett.\n\nTekniken bygger ofta på stora mängder data. Genom att analysera data kan AI-system hitta mönster och lära sig över tid. Detta kallas maskininlärning.\n\nMen AI väcker också frågor. Vem ansvarar om ett AI-system gör fel? Hur skyddas människors integritet när stora mängder data samlas in? Dessa frågor diskuteras av forskare, politiker och företag.\n\nDet finns också en oro för att AI kan ersätta vissa jobb. Samtidigt kan tekniken skapa nya möjligheter och yrken. Historiskt har ny teknik ofta förändrat arbetsmarknaden snarare än att helt ta bort jobb.\n\nFör att använda AI på ett bra sätt krävs kunskap och regler. Genom att förstå tekniken kan människor fatta informerade beslut och använda AI på ett ansvarsfullt sätt.",
+    "questions": [
+      {"type": "literal", "q": "Vad betyder AI?", "options": ["Automatisk information", "Artificiell intelligens", "Avancerad internet", "Allmän innovation"], "correct": 1},
+      {"type": "literal", "q": "Vad kan AI göra?", "options": ["Bygga hus själv", "Känna igen bilder", "Skapa elektricitet", "Stänga internet"], "correct": 1},
+      {"type": "literal", "q": "Vad är maskininlärning?", "options": ["När datorer lagar sig själva", "När människor lär datorer", "När datorer lär sig från data", "När internet uppdateras"], "correct": 2},
+      {"type": "inferens", "q": "Vilken fråga väcker AI?", "options": ["Hur man bygger datorer", "Vem som ansvarar vid fel", "Hur man lagar mat", "Hur man skriver böcker"], "correct": 1},
+      {"type": "inferens", "q": "Hur påverkar AI jobb?", "options": ["Tar bort alla jobb", "Skapar inga förändringar", "Förändrar arbetsmarknaden", "Stoppar arbete"], "correct": 2},
+      {"type": "sammanfatta", "q": "Vad behövs för att använda AI bra?", "options": ["Mindre teknik", "Fler spel", "Kunskap och regler", "Snabbare datorer"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-039",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak7-tema-040",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Musik",
+    "title": "Musikens påverkan",
+    "text": "Musik har alltid varit en viktig del av människors liv. Den används för att uttrycka känslor, berätta historier och skapa gemenskap. Olika kulturer har sina egna musiktraditioner, men samtidigt kan musik förena människor över hela världen.\n\nForskning visar att musik kan påverka hur vi mår. Lugn musik kan hjälpa oss att slappna av, medan snabb musik kan ge energi. Därför används musik ofta inom träning, terapi och undervisning.\n\nMusik kan också påverka minnet. Många upplever att de lättare minns information om den kopplas till en melodi. Det är en anledning till att sånger används i undervisning, särskilt för yngre elever.\n\nSamtidigt förändras musikens roll med tekniken. Idag lyssnar många via streamingtjänster istället för att köpa skivor. Det har gjort musik mer tillgänglig, men också förändrat hur artister tjänar pengar.\n\nMusik kan också vara ett sätt att påverka samhället. Genom texter kan artister ta upp viktiga frågor och inspirera till förändring. Historiskt har musik spelat en roll i olika rörelser för rättvisa.\n\nOavsett genre eller stil fortsätter musik att vara en kraftfull del av människors liv. Den påverkar våra känslor, vårt minne och vår kultur på många sätt.",
+    "questions": [
+      {"type": "literal", "q": "Vad används musik ofta till?", "options": ["Att bygga saker", "Att uttrycka känslor", "Att mäta tid", "Att laga mat"], "correct": 1},
+      {"type": "literal", "q": "Hur kan lugn musik påverka oss?", "options": ["Göra oss stressade", "Ge oss energi", "Hjälpa oss att slappna av", "Göra oss hungriga"], "correct": 2},
+      {"type": "inferens", "q": "Vad kan musik hjälpa med i skolan?", "options": ["Att springa snabbare", "Att minnas bättre", "Att skriva prov", "Att räkna matte"], "correct": 1},
+      {"type": "literal", "q": "Hur har tekniken förändrat musik?", "options": ["Färre lyssnar", "Alla spelar instrument", "Musik är svårare att få tag på", "Streaming har ökat tillgången"], "correct": 3},
+      {"type": "inferens", "q": "Vad kan artister göra genom musik?", "options": ["Sälja produkter", "Påverka samhället", "Stoppa lagar", "Skapa teknik"], "correct": 1},
+      {"type": "sammanfatta", "q": "Vad är textens huvudidé?", "options": ["Musik är oviktig", "Musik används bara i skolan", "Musik påverkar människor på många sätt", "Musik är samma överallt"], "correct": 2}
+    ],
+    "meta": {
+      "wordCount": 430,
+      "fingerprint": "ak7-tema-040",
+      "generatedAt": "2026-03-28T00:00:00.000Z",
+      "model": "manual"
+    }
+  }
 ]
