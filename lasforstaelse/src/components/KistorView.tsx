@@ -17,15 +17,53 @@ interface OpenedChestDisplayProps {
 function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
   const meta = CHEST_META[chest.type];
 
-  // Färger för guld-glöd baserat på kisttyp
-  const glowColors: Record<ChestType, string> = {
-    bronze: 'rgba(205, 127, 50, 0.6)',
-    silver: 'rgba(192, 192, 192, 0.6)',
-    gold: 'rgba(255, 215, 0, 0.7)',
-    emerald: 'rgba(80, 200, 120, 0.6)',
-    ruby: 'rgba(224, 17, 95, 0.6)',
-    diamond: 'rgba(185, 242, 255, 0.7)',
+  // CSS-filter för att färga mynt baserat på kisttyp
+  const coinFilters: Record<ChestType, string> = {
+    bronze: 'sepia(100%) saturate(200%) brightness(0.85) hue-rotate(-10deg)',
+    silver: 'grayscale(100%) brightness(1.3)',
+    gold: 'none',
+    emerald: 'sepia(100%) saturate(300%) brightness(0.9) hue-rotate(75deg)',
+    ruby: 'sepia(100%) saturate(400%) brightness(0.9) hue-rotate(-30deg)',
+    diamond: 'sepia(100%) saturate(200%) brightness(1.2) hue-rotate(160deg)',
   };
+
+  const coinFilter = coinFilters[chest.type];
+
+  // Färger för skattkammareffekten baserat på kisttyp
+  const treasureColors: Record<ChestType, { gradient: string; glitter: string; glow: string }> = {
+    bronze: {
+      gradient: 'linear-gradient(to bottom, #CD7F32 0%, #A0522D 50%, #8B4513 100%)',
+      glitter: 'linear-gradient(135deg, #D4A574, #CD7F32)',
+      glow: '#CD7F32',
+    },
+    silver: {
+      gradient: 'linear-gradient(to bottom, #E8E8E8 0%, #C0C0C0 50%, #A8A8A8 100%)',
+      glitter: 'linear-gradient(135deg, #F5F5F5, #C0C0C0)',
+      glow: '#C0C0C0',
+    },
+    gold: {
+      gradient: 'linear-gradient(to bottom, #FFD700 0%, #FFA500 50%, #CC8400 100%)',
+      glitter: 'linear-gradient(135deg, #FFE066, #FFD700)',
+      glow: '#FFD700',
+    },
+    emerald: {
+      gradient: 'linear-gradient(to bottom, #50C878 0%, #3CB371 50%, #2E8B57 100%)',
+      glitter: 'linear-gradient(135deg, #7FFFD4, #50C878)',
+      glow: '#50C878',
+    },
+    ruby: {
+      gradient: 'linear-gradient(to bottom, #E0115F 0%, #C41E3A 50%, #9B111E 100%)',
+      glitter: 'linear-gradient(135deg, #FF6B6B, #E0115F)',
+      glow: '#E0115F',
+    },
+    diamond: {
+      gradient: 'linear-gradient(to bottom, #B9F2FF 0%, #87CEEB 50%, #6BB3D9 100%)',
+      glitter: 'linear-gradient(135deg, #E0FFFF, #B9F2FF)',
+      glow: '#B9F2FF',
+    },
+  };
+
+  const treasure = treasureColors[chest.type];
 
   return (
     <div className="relative flex flex-col items-center group">
@@ -36,20 +74,11 @@ function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
           filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))',
         }}
       >
-        {/* Guld-glöd bakom kistan */}
-        <div
-          className="absolute inset-0 blur-xl opacity-80 animate-pulse"
-          style={{
-            background: `radial-gradient(circle at center, ${glowColors[chest.type]}, transparent 70%)`,
-            transform: 'scale(1.5)',
-          }}
-        />
-
-        {/* Guldmynt som sticker upp */}
+        {/* Mynt som sticker upp - färgade baserat på kisttyp */}
         <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-0.5 z-10">
-          <span className="text-lg animate-bounce" style={{ animationDelay: '0ms', animationDuration: '2s' }}>🪙</span>
-          <span className="text-xl animate-bounce" style={{ animationDelay: '200ms', animationDuration: '2.2s' }}>🪙</span>
-          <span className="text-lg animate-bounce" style={{ animationDelay: '100ms', animationDuration: '1.9s' }}>🪙</span>
+          <span className="text-lg animate-bounce" style={{ animationDelay: '0ms', animationDuration: '2s', filter: coinFilter }}>🪙</span>
+          <span className="text-xl animate-bounce" style={{ animationDelay: '200ms', animationDuration: '2.2s', filter: coinFilter }}>🪙</span>
+          <span className="text-lg animate-bounce" style={{ animationDelay: '100ms', animationDuration: '1.9s', filter: coinFilter }}>🪙</span>
         </div>
 
         {/* Öppet lock (roterad kistbild) */}
@@ -83,19 +112,19 @@ function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-6 rounded-t-lg overflow-hidden"
             style={{
-              background: 'linear-gradient(to bottom, #FFD700 0%, #FFA500 50%, #CC8400 100%)',
+              background: treasure.gradient,
               boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.5)',
             }}
           >
-            {/* Guldglitter */}
+            {/* Glitter */}
             <div className="absolute inset-0 flex flex-wrap justify-center gap-0.5 p-0.5">
               {[...Array(6)].map((_, i) => (
                 <div
                   key={i}
                   className="w-1.5 h-1.5 rounded-full"
                   style={{
-                    background: 'linear-gradient(135deg, #FFE066, #FFD700)',
-                    boxShadow: '0 0 2px #FFD700',
+                    background: treasure.glitter,
+                    boxShadow: `0 0 2px ${treasure.glow}`,
                   }}
                 />
               ))}
