@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Chest, GamificationData } from '../types';
+import { User, Chest, GamificationData, ChestType } from '../types';
 import {
   CHEST_META,
   ALL_GAMIFICATION_BADGES,
@@ -8,6 +8,213 @@ import {
   loadGamification,
   saveGamification,
 } from '../lib/gamification';
+
+// ─── Öppnad kista med guld (för trofehyllan) ───────────────────────────────────
+interface OpenedChestDisplayProps {
+  chest: Chest;
+}
+
+function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
+  const meta = CHEST_META[chest.type];
+
+  // Färger för guld-glöd baserat på kisttyp
+  const glowColors: Record<ChestType, string> = {
+    bronze: 'rgba(205, 127, 50, 0.6)',
+    silver: 'rgba(192, 192, 192, 0.6)',
+    gold: 'rgba(255, 215, 0, 0.7)',
+    emerald: 'rgba(80, 200, 120, 0.6)',
+    ruby: 'rgba(224, 17, 95, 0.6)',
+    diamond: 'rgba(185, 242, 255, 0.7)',
+  };
+
+  return (
+    <div className="relative flex flex-col items-center group">
+      {/* Kistans bas med öppet lock */}
+      <div
+        className="relative"
+        style={{
+          filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))',
+        }}
+      >
+        {/* Guld-glöd bakom kistan */}
+        <div
+          className="absolute inset-0 blur-xl opacity-80 animate-pulse"
+          style={{
+            background: `radial-gradient(circle at center, ${glowColors[chest.type]}, transparent 70%)`,
+            transform: 'scale(1.5)',
+          }}
+        />
+
+        {/* Guldmynt som sticker upp */}
+        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-0.5 z-10">
+          <span className="text-lg animate-bounce" style={{ animationDelay: '0ms', animationDuration: '2s' }}>🪙</span>
+          <span className="text-xl animate-bounce" style={{ animationDelay: '200ms', animationDuration: '2.2s' }}>🪙</span>
+          <span className="text-lg animate-bounce" style={{ animationDelay: '100ms', animationDuration: '1.9s' }}>🪙</span>
+        </div>
+
+        {/* Öppet lock (roterad kistbild) */}
+        <div
+          className="absolute -top-6 left-1/2 z-20"
+          style={{
+            transform: 'translateX(-50%) rotateX(60deg) scale(0.6)',
+            transformOrigin: 'bottom center',
+            opacity: 0.9,
+          }}
+        >
+          <img
+            src={meta.image}
+            alt={`${meta.label} lock`}
+            className="w-12 h-12 object-contain"
+            style={{
+              clipPath: 'inset(0 0 50% 0)',
+              filter: 'brightness(1.1)',
+            }}
+          />
+        </div>
+
+        {/* Huvudkistan (nedre del) */}
+        <div className="relative z-0">
+          <img
+            src={meta.image}
+            alt={meta.label}
+            className="w-16 h-16 object-contain relative z-10"
+          />
+          {/* Skattkammer-effekt */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-6 rounded-t-lg overflow-hidden"
+            style={{
+              background: 'linear-gradient(to bottom, #FFD700 0%, #FFA500 50%, #CC8400 100%)',
+              boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.5)',
+            }}
+          >
+            {/* Guldglitter */}
+            <div className="absolute inset-0 flex flex-wrap justify-center gap-0.5 p-0.5">
+              {[...Array(6)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-1.5 h-1.5 rounded-full"
+                  style={{
+                    background: 'linear-gradient(135deg, #FFE066, #FFD700)',
+                    boxShadow: '0 0 2px #FFD700',
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Etikett */}
+      <span className="mt-3 text-xs font-bold text-amber-800 dark:text-amber-200 text-center">
+        {meta.label}
+      </span>
+      <span className="text-[10px] text-amber-600 dark:text-amber-400">
+        +{chest.openedReward?.match(/\+(\d+)/)?.[1] || '?'} poäng
+      </span>
+    </div>
+  );
+}
+
+// ─── Trofehylla för öppnade kistor ─────────────────────────────────────────────
+interface TrophyShelfProps {
+  chests: Chest[];
+}
+
+function TrophyShelf({ chests }: TrophyShelfProps) {
+  if (chests.length === 0) return null;
+
+  // Gruppera kistor per rad (4 per rad)
+  const rows: Chest[][] = [];
+  for (let i = 0; i < chests.length; i += 4) {
+    rows.push(chests.slice(i, i + 4));
+  }
+
+  return (
+    <section className="space-y-6">
+      <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
+        <span>🏆</span>
+        Trofehylla ({chests.length})
+      </h2>
+
+      <div
+        className="relative rounded-3xl overflow-hidden p-6"
+        style={{
+          background: 'linear-gradient(180deg, #5D4037 0%, #4E342E 50%, #3E2723 100%)',
+          boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.2)',
+        }}
+      >
+        {/* Trästruktur-mönster */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              90deg,
+              transparent,
+              transparent 20px,
+              rgba(0,0,0,0.1) 20px,
+              rgba(0,0,0,0.1) 21px
+            )`,
+          }}
+        />
+
+        {/* Dekorativ kant högst upp */}
+        <div
+          className="absolute top-0 left-0 right-0 h-3"
+          style={{
+            background: 'linear-gradient(180deg, #8D6E63 0%, #6D4C41 100%)',
+            borderBottom: '2px solid #5D4037',
+          }}
+        />
+
+        <div className="relative space-y-8 pt-2">
+          {rows.map((row, rowIndex) => (
+            <div key={rowIndex} className="relative">
+              {/* Hyllplan */}
+              <div
+                className="absolute -bottom-4 left-0 right-0 h-4"
+                style={{
+                  background: 'linear-gradient(180deg, #8D6E63 0%, #6D4C41 50%, #5D4037 100%)',
+                  borderRadius: '0 0 4px 4px',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
+                }}
+              >
+                {/* Kantdetalj */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-1"
+                  style={{
+                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1) 50%, transparent)',
+                  }}
+                />
+              </div>
+
+              {/* Kistor på hyllan */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 pb-2">
+                {row.map((chest) => (
+                  <OpenedChestDisplay key={chest.id} chest={chest} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Golvskugga */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-6"
+          style={{
+            background: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.4))',
+          }}
+        />
+      </div>
+
+      <style>{`
+        @keyframes shimmer {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+      `}</style>
+    </section>
+  );
+}
 
 interface ChestCardProps {
   chest: Chest;
@@ -270,20 +477,8 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
           </section>
         )}
 
-        {/* Opened chests history */}
-        {opened.length > 0 && (
-          <section>
-            <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <span>🔓</span>
-              Öppnade kistor ({opened.length})
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {opened.map((chest) => (
-                <ChestCard key={chest.id} chest={chest} onOpen={() => {}} />
-              ))}
-            </div>
-          </section>
-        )}
+        {/* Trofehylla med öppnade kistor */}
+        <TrophyShelf chests={opened} />
 
         {/* How to earn chests */}
         <section className="rounded-3xl p-5 bg-sky-50 dark:bg-slate-800 border-2 border-sky-200 dark:border-slate-700">
