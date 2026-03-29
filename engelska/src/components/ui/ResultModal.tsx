@@ -1,11 +1,25 @@
 "use client";
 
+import type { ChestType } from "@/lib/types";
+import { CHEST_META } from "@/lib/gamification";
+
+function ChestImage({ type }: { type: ChestType }) {
+  return (
+    <img
+      src={CHEST_META[type].image}
+      alt={CHEST_META[type].label}
+      className="w-10 h-10 flex-shrink-0 object-contain"
+    />
+  );
+}
 
 interface ResultModalProps {
   points: number;
   bonusPoints: number;
   totalCorrect: number;
   totalQuestions: number;
+  chestEarned?: ChestType;
+  bossUnlocked?: boolean;
   onContinue: () => void;
   onRetry: () => void;
 }
@@ -15,6 +29,8 @@ export default function ResultModal({
   bonusPoints,
   totalCorrect,
   totalQuestions,
+  chestEarned,
+  bossUnlocked,
   onContinue,
   onRetry,
 }: ResultModalProps) {
@@ -82,6 +98,36 @@ export default function ResultModal({
             </p>
           )}
         </div>
+
+        {/* Chest earned notification */}
+        {chestEarned && (
+          <div className="bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-400 dark:border-amber-600 rounded-2xl p-3 mb-4 flex items-center gap-3">
+            <ChestImage type={chestEarned} />
+            <div className="text-left">
+              <p className="text-sm font-bold text-amber-800 dark:text-amber-300">
+                Du fick en {CHEST_META[chestEarned].label}!
+              </p>
+              <p className="text-xs text-amber-600 dark:text-amber-400">
+                Öppna den på Hemliga kistor-sidan.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Boss unlocked notification */}
+        {bossUnlocked && (
+          <div className="bg-red-50 dark:bg-red-900/30 border-2 border-red-400 dark:border-red-600 rounded-2xl p-3 mb-4 flex items-center gap-3">
+            <span className="text-3xl">⚔️</span>
+            <div className="text-left">
+              <p className="text-sm font-bold text-red-800 dark:text-red-300">
+                Boss Challenge upplåst!
+              </p>
+              <p className="text-xs text-red-600 dark:text-red-400">
+                Gå till Hemliga kistor för att utmana bossen.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Buttons */}
         <div className="flex gap-4">

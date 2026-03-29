@@ -137,7 +137,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'level-5',
     title: 'Halvvägs upp',
-    description: 'Nå nivå 5: Formelmästare',
+    description: 'Nå nivå 5: Algebristen',
     icon: '⭐',
     color: 'from-amber-400 to-orange-600',
     rarity: 'rare',

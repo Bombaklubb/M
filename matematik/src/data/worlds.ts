@@ -30,7 +30,18 @@ export const WORLDS: World[] = [
     accent: 'emerald',
     accentHex: '#10b981',
     cardBg: 'bg-emerald-50',
-    topicIds: ['rakna-till-10', 'addition-bas', 'subtraktion-bas', 'former-och-figurer', 'klockan', 'rakna-till-100', 'enheter', 'taluppfattning-lag-1', 'taluppfattning-lag-2', 'addition-strategier', 'subtraktion-strategier', 'likheter-monster', 'problemlosning-lag', 'matematik-begrepp-lag', 'rimlighetsoevningar-lag'],
+    topicIds: [
+      // Tal & räkning (rad 1–2)
+      'rakna-till-10', 'rakna-till-100', 'enheter',
+      'taluppfattning-lag-1', 'taluppfattning-lag-2', 'likheter-monster',
+      // Addition & subtraktion (rad 3–4)
+      'addition-bas', 'addition-strategier', 'subtraktion-bas',
+      'subtraktion-strategier', 'former-och-figurer', 'klockan',
+      // Övrigt (rad 5)
+      'problemlosning-lag', 'matematik-begrepp-lag', 'rimlighetsoevningar-lag',
+      // Geometri – vinklar & symmetri
+      'vinklar-lag', 'symmetri-lag',
+    ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
   },
@@ -46,7 +57,28 @@ export const WORLDS: World[] = [
     accent: 'purple',
     accentHex: '#8b5cf6',
     cardBg: 'bg-purple-50',
-    topicIds: ['multiplikation-intro', 'division-intro', 'klockan-mel', 'brak', 'decimaler', 'procent', 'geometri-omfang', 'taluppfattning-1', 'taluppfattning-2', 'primtal-faktorer', 'brak-2', 'decimal-procent', 'huvudrakning', 'geometri-mel', 'statistik-mel', 'ekvationer-bas', 'matematik-begrepp-mel', 'rimlighetsoevningar-mel'],
+    topicIds: [
+      // Multiplikation Steg 1–3 (rad 1)
+      'multiplikation-steg-1', 'multiplikation-steg-2', 'multiplikation-steg-3',
+      // Division Steg 1–3 (rad 2)
+      'division-steg-1', 'division-steg-2', 'division-steg-3',
+      // Bråk Steg 1–3 (rad 3)
+      'brak-steg-1', 'brak-steg-2', 'brak-steg-3',
+      // Procent Steg 1–3 (rad 4)
+      'procent-steg-1', 'procent-steg-2', 'procent-steg-3',
+      // Ekvationer Steg 1–3 (rad 5)
+      'ekvationer-mel-steg-1', 'ekvationer-mel-steg-2', 'ekvationer-mel-steg-3',
+      // Tal & decimaltal (rad 6)
+      'klockan-mel', 'decimaler', 'taluppfattning-1',
+      // Taluppfattning & strategier (rad 7)
+      'taluppfattning-2', 'primtal-faktorer', 'huvudrakning',
+      // Geometri & statistik (rad 8)
+      'geometri-omfang', 'geometri-mel', 'statistik-mel',
+      // Övrigt (rad 9)
+      'matematik-begrepp-mel', 'rimlighetsoevningar-mel',
+      // Geometri – vinklar & symmetri
+      'vinklar-mel', 'symmetri-mel',
+    ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
   },
@@ -63,25 +95,34 @@ export const WORLDS: World[] = [
     accentHex: '#3b82f6',
     cardBg: 'bg-blue-50',
     topicIds: [
-      'algebra-intro', 'ekvationer', 'statistik', 'geometri-area', 'funktioner', 'sannolikhet',
-      // Tal & räknefärdighet
-      'prioritering', 'negativa-tal', 'avrundning', 'standardform', 'potenser',
-      // Bråk, decimaltal, procent
-      'brak-avancerat', 'procent-forandring', 'procentenheter',
-      // Algebra
-      'forenkla-uttryck', 'distributiva-lagen', 'formler-variabler',
-      // Funktioner & koordinater
-      'koordinatsystem', 'rata-linjen',
-      // Proportioner, skala & enheter
+      // Algebra Steg 1–3 (rad 1)
+      'algebra-steg-1', 'algebra-steg-2', 'algebra-steg-3',
+      // Ekvationer Steg 1–3 (rad 2)
+      'ekvationer-steg-1', 'ekvationer-steg-2', 'ekvationer-steg-3',
+      // Potenser Steg 1–3 (rad 3)
+      'potenser-steg-1', 'potenser-steg-2', 'potenser-steg-3',
+      // Bråk Steg 1–3 (rad 4 — alla steg samlade)
+      'brak-steg-1', 'brak-steg-2', 'brak-steg-3',
+      // Procent Steg 1–3 (rad 5 — alla steg samlade)
+      'procent-steg-1', 'procent-steg-2', 'procent-steg-3',
+      // Tal & räknefärdighet (rad 6)
+      'negativa-tal', 'avrundning', 'prioritering',
+      // Algebraiska uttryck (rad 7)
+      'standardform', 'forenkla-uttryck', 'distributiva-lagen',
+      // Formler & koordinater (rad 8)
+      'formler-variabler', 'koordinatsystem', 'rata-linjen',
+      // Proportioner & skala (rad 9)
       'proportioner', 'skala', 'enhetsomvandlingar-hog',
-      // Geometri
+      // Geometri (rad 10)
       'vinkelregler', 'pythagoras', 'geometri-volym',
-      // Statistik & problemlösning
-      'statistik-spridning', 'problemlosning-hog',
-      // Begrepp
-      'matematik-begrepp-hog',
-      // Rimlighet
-      'rimlighetsoevningar-hog',
+      // Funktioner & statistik (rad 11)
+      'funktioner', 'sannolikhet', 'statistik',
+      // Area & problemlösning (rad 12)
+      'geometri-area', 'statistik-spridning', 'problemlosning-hog',
+      // Övrigt (rad 13)
+      'matematik-begrepp-hog', 'rimlighetsoevningar-hog',
+      // Geometri – symmetri
+      'symmetri-hog',
     ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',
@@ -98,7 +139,14 @@ export const WORLDS: World[] = [
     accent: 'indigo',
     accentHex: '#6366f1',
     cardBg: 'bg-indigo-50',
-    topicIds: ['trigonometri', 'derivata', 'sannolikhet', 'funktioner', 'ekvationer-gym', 'matematik-begrepp-gym', 'rimlighetsoevningar-gym'],
+    topicIds: [
+      // Funktioner & ekvationer (rad 1)
+      'ekvationer-gym', 'funktioner', 'trigonometri',
+      // Derivata & sannolikhet (rad 2)
+      'derivata', 'sannolikhet', 'matematik-begrepp-gym',
+      // Övrigt (rad 3)
+      'rimlighetsoevningar-gym',
+    ],
     islandEmojis: ['🌠', '🔭', '🪐', '⭐', '🌙', '💫'],
     storyIntro: 'Mästare på avancerad matematik – lösa universums mysterier!',
   },

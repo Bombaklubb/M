@@ -127,7 +127,7 @@ export interface PointsRecord {
 export const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 800, 1200, 1800, 2500, 3500, 5000];
 export const LEVEL_NAMES = [
   'Nybörjare', 'Räknare', 'Mattenisse', 'Talälskare',
-  'Formelmästare', 'Algebran', 'Geometrien', 'Statistikern',
+  'Formelmästare', 'Algebristen', 'Problemlösaren', 'Statistikern',
   'Mattestjärnan', 'Matematikern', 'Matte-Legenden',
 ];
 export const LEVEL_COLORS = [
@@ -192,6 +192,45 @@ export interface StudentMessage {
   message: string;
   sentAt: string;
   read: boolean;
+}
+
+// === CHESTS / GAMIFICATION ===
+export type ChestType = 'wood' | 'silver' | 'gold';
+
+export interface MattChest {
+  id: string;
+  type: ChestType;
+  earnedAt: string;
+  opened: boolean;
+  openedReward?: string;
+}
+
+export type MysteryRewardType = 'points' | 'chest' | 'badge';
+
+export interface MysteryBoxReward {
+  type: MysteryRewardType;
+  points?: number;
+  chestType?: ChestType;
+  badgeId?: string;
+  description: string;
+}
+
+export interface MattGamificationData {
+  chests: MattChest[];
+  badges: string[];
+  exercisesCompleted: number;
+  bossUnlocked: boolean;
+  bossWins: number;
+  pointsMilestonesRewarded: number[];
+  exerciseMilestonesRewarded: number[];
+  /** topicIds that already gave a completion chest */
+  topicCompletionChestsRewarded: string[];
+  /** topicIds that already gave a 3-star chest */
+  topic3StarChestsRewarded: string[];
+  /** topicIds that already gave a perfect-score chest */
+  topicPerfectChestsRewarded: string[];
+  /** worldIds that already gave a world-completion gold chest */
+  worldCompletionChestsRewarded: string[];
 }
 
 // === APP STATE ===

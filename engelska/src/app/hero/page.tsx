@@ -3,25 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import type { IconType } from "react-icons";
-import {
-  GiBandana, GiWesternHat, GiWinterHat, GiCaptainHatProfile, GiPartyHat,
-  GiSombrero, GiWizardFace, GiTopHat, GiCrown, GiVikingHelmet, GiGraduateCap,
-  GiShirt, GiHoodie, GiRobe, GiLabCoat, GiSportMedal, GiCape,
-  GiTrenchBodyArmor, GiArmorVest, GiChestArmor, GiSuits,
-  GiPencil, GiBackpack, GiSpectacles, GiSoccerBall, GiCompass,
-  GiPhotoCamera, GiSwordBrandish, GiSpellBook, GiGuitar, GiWizardStaff,
-  GiSpyglass, GiTrophyCup,
-  GiFlowerEmblem, GiRainbowStar, GiSparkles, GiFireball, GiSnowflake1,
-  GiGlowingArtifact, GiCloudRing, GiLightningTrio, GiShadowFollower, GiGoldBar,
-} from "react-icons/gi";
 import Header from "@/components/ui/Header";
 import HeroAvatar from "@/components/ui/HeroAvatar";
+import ItemIcon from "@/components/ui/ItemIcon";
+import Image from "next/image";
 import { loadStudent, saveStudent } from "@/lib/storage";
 import {
   HERO_TYPES,
   HERO_ATTRIBUTES,
-  SKIN_TONE_LABELS,
   ATTRIBUTE_TYPE_LABELS,
   isAttributeUnlocked,
   type HeroAttribute,
@@ -29,41 +18,36 @@ import {
 import type { StudentData, SkinTone, HeroConfig } from "@/lib/types";
 
 type AttrTab = HeroAttribute["type"];
-type Gender = "boy" | "girl";
 
-const SKIN_TONES: SkinTone[] = ["light", "light_brown", "dark"];
-const SKIN_PREVIEW: Record<SkinTone, string> = {
-  light:       "#FDDBB4",
-  light_brown: "#C58540",
-  dark:        "#7B4828",
-};
-
-// DiceBear skin tone mapping
-const DB_SKIN: Record<string, string> = {
-  light:       "fddbb4",
-  light_brown: "c58540",
-  dark:        "7b4828",
-};
-
-// DiceBear hero thumbnails – seed + bg per hero type
-const DB_HERO: Record<string, { seed: string; bg: string }> = {
-  explorer:   { seed: "Upptackaren",  bg: "b45309" },
-  scientist:  { seed: "Forskaren",    bg: "1e3a8a" },
-  athlete:    { seed: "Idrottaren",   bg: "3730a3" },
-  footballer: { seed: "Fotbollaren",  bg: "991b1b" },
-  wizard:     { seed: "Trollkarlen2", bg: "4c1d95" },
-  inventor:   { seed: "Uppfinnaren",  bg: "064e3b" },
-  scholar:    { seed: "Akademikern",  bg: "881337" },
-};
-
-function heroDbUrl(heroId: string, skinTone: string, gender: string) {
-  const h = DB_HERO[heroId] ?? DB_HERO.explorer;
-  const skin = DB_SKIN[skinTone] ?? DB_SKIN.light;
-  const genderSeed = gender === "girl" ? `${h.seed}-g` : h.seed;
-  return `https://api.dicebear.com/9.x/adventurer/svg?seed=${genderSeed}&backgroundColor=${h.bg}&backgroundType=gradientLinear&radius=50&skinColor=${skin}`;
+/** Visar AI-genererad PNG om den finns, annars SVG-fallback */
+function HeroAvatarImage({
+  heroId, size, className,
+}: {
+  heroId: string; size: number; className?: string;
+}) {
+  const gender = "boy";
+  const skinTone: SkinTone = "light";
+  const [imgFailed, setImgFailed] = useState(false);
+  const src = `/images/avatars/hero/hero-${gender}-${heroId}.png`;
+  if (!imgFailed) {
+    return (
+      <Image
+        src={src}
+        alt={heroId}
+        width={size}
+        height={size}
+        className={className}
+        style={{ objectFit: "cover", borderRadius: 8 }}
+        onError={() => setImgFailed(true)}
+        unoptimized
+      />
+    );
+  }
+  return (
+    <HeroAvatar heroId={heroId} skinTone="light" gender="boy" equippedAttributes={[]} size={size} />
+  );
 }
 
-// Hero-specific gradient colors for the preview panel
 const HERO_GRADIENT: Record<string, { from: string; to: string; glow: string }> = {
   explorer:   { from: "#FEF3C7", to: "#FDE68A", glow: "#F59E0B" },
   scientist:  { from: "#DBEAFE", to: "#BFDBFE", glow: "#3B82F6" },
@@ -72,66 +56,6 @@ const HERO_GRADIENT: Record<string, { from: string; to: string; glow: string }> 
   wizard:     { from: "#EDE9FE", to: "#DDD6FE", glow: "#7C3AED" },
   inventor:   { from: "#D1FAE5", to: "#A7F3D0", glow: "#059669" },
   scholar:    { from: "#FEE2E2", to: "#FECACA", glow: "#991B1B" },
-};
-
-const HERO_CARD_BG: Record<string, string> = {
-  explorer:   "bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800",
-  scientist:  "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800",
-  athlete:    "bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800",
-  footballer: "bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800",
-  wizard:     "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800",
-  inventor:   "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800",
-  scholar:    "bg-rose-50 dark:bg-rose-900/20 border-rose-200 dark:border-rose-800",
-};
-
-const ATTR_ICON_COMPONENTS: Record<string, IconType> = {
-  // hats
-  headband:       GiBandana,
-  explorer_hat:   GiWesternHat,
-  beanie:         GiWinterHat,
-  cap:            GiCaptainHatProfile,
-  santa_hat:      GiPartyHat,
-  cowboy_hat:     GiSombrero,
-  wizard_hat:     GiWizardFace,
-  top_hat:        GiTopHat,
-  crown:          GiCrown,
-  viking_helmet:  GiVikingHelmet,
-  graduation_cap: GiGraduateCap,
-  // shirts
-  tshirt:          GiShirt,
-  hoodie:          GiHoodie,
-  striped_shirt:   GiRobe,
-  lab_coat:        GiLabCoat,
-  sport_jersey:    GiSportMedal,
-  cape:            GiCape,
-  explorer_jacket: GiTrenchBodyArmor,
-  winter_jacket:   GiArmorVest,
-  armor_shirt:     GiChestArmor,
-  tuxedo:          GiSuits,
-  // accessories
-  pencil:        GiPencil,
-  backpack:      GiBackpack,
-  glasses:       GiSpectacles,
-  football_ball: GiSoccerBall,
-  compass:       GiCompass,
-  camera:        GiPhotoCamera,
-  sword:         GiSwordBrandish,
-  book:          GiSpellBook,
-  guitar:        GiGuitar,
-  magic_wand:    GiWizardStaff,
-  telescope:     GiSpyglass,
-  trophy:        GiTrophyCup,
-  // effects
-  flower_wreath: GiFlowerEmblem,
-  rainbow_trail: GiRainbowStar,
-  sparkles:      GiSparkles,
-  fire_aura:     GiFireball,
-  ice_aura:      GiSnowflake1,
-  star_glow:     GiGlowingArtifact,
-  cloud_halo:    GiCloudRing,
-  lightning:     GiLightningTrio,
-  shadow_clone:  GiShadowFollower,
-  golden_shine:  GiGoldBar,
 };
 
 export default function HeroPage() {
@@ -143,6 +67,7 @@ export default function HeroPage() {
     gender: "boy",
     equippedAttributes: [],
   });
+
   const [activeTab, setActiveTab] = useState<AttrTab>("hat");
 
   useEffect(() => {
@@ -188,13 +113,13 @@ export default function HeroPage() {
     );
   }
 
-  const gender: Gender = hero.gender ?? "boy";
+  const g = HERO_GRADIENT[hero.heroId] ?? HERO_GRADIENT.explorer;
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} />
 
-      <main className="max-w-3xl mx-auto px-4 py-6">
+      <main className="max-w-4xl mx-auto px-4 py-6">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4"
@@ -202,7 +127,8 @@ export default function HeroPage() {
           ← Tillbaka
         </Link>
 
-        <div className="mb-6">
+        {/* Page heading */}
+        <div className="mb-5">
           <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1 flex items-center gap-2">
             <span className="text-2xl">⚔️</span> Min hjälte
           </h1>
@@ -216,99 +142,60 @@ export default function HeroPage() {
           )}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6">
+        <div className="flex flex-col sm:flex-row gap-5">
 
-          {/* ── Left: preview + skin + gender ── */}
-          <div className="flex flex-col items-center gap-4 sm:w-48 flex-shrink-0">
+          {/* ── LEFT: Hero preview ─────────────────────────────────────────────── */}
+          <div className="flex flex-col items-center gap-4 sm:w-52 flex-shrink-0">
 
-            {/* Hero preview */}
+            {/* Preview card */}
             <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-4 flex flex-col items-center gap-2 w-full">
-              {(() => {
-                const g = HERO_GRADIENT[hero.heroId] ?? HERO_GRADIENT.explorer;
-                return (
-                  <div
-                    className="rounded-2xl p-4 w-full flex justify-center relative overflow-hidden"
-                    style={{
-                      background: `linear-gradient(160deg, ${g.from} 0%, ${g.to} 100%)`,
-                      boxShadow: `0 0 24px 4px ${g.glow}33 inset`,
-                    }}
-                  >
-                    {/* Decorative circles */}
-                    <div
-                      className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full opacity-20"
-                      style={{ background: g.glow }}
-                    />
-                    <div
-                      className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full opacity-10"
-                      style={{ background: g.glow }}
-                    />
-                    <img
-                      src={heroDbUrl(hero.heroId, hero.skinTone, gender)}
-                      alt={HERO_TYPES.find((h) => h.id === hero.heroId)?.name_sv ?? hero.heroId}
-                      className="w-32 h-32 object-contain rounded-2xl"
-                    />
-                  </div>
-                );
-              })()}
+              <div
+                className="rounded-2xl p-4 w-full flex justify-center relative overflow-hidden"
+                style={{
+                  background: `linear-gradient(160deg, ${g.from} 0%, ${g.to} 100%)`,
+                  boxShadow: `0 0 24px 4px ${g.glow}33 inset`,
+                }}
+              >
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full opacity-20" style={{ background: g.glow }} />
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full opacity-10" style={{ background: g.glow }} />
+                <HeroAvatar
+                  heroId={hero.heroId}
+                  skinTone="light"
+                  gender="boy"
+                  equippedAttributes={hero.equippedAttributes}
+                  size={130}
+                />
+              </div>
               <p className="font-black text-gray-900 dark:text-gray-100 text-base tracking-tight">
                 {HERO_TYPES.find((h) => h.id === hero.heroId)?.name_sv ?? hero.heroId}
               </p>
-              <p className="text-xs text-gray-400">
-                {gender === "girl" ? "Flicka" : "Pojke"} · {SKIN_TONE_LABELS[hero.skinTone]}
-              </p>
             </div>
 
-            {/* Gender selector */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-3 w-full">
-              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Kön</p>
-              <div className="flex gap-2">
-                {(["boy", "girl"] as Gender[]).map((g) => (
-                  <button
-                    key={g}
-                    onClick={() => save({ ...hero, gender: g })}
-                    className={`flex-1 flex flex-col items-center gap-1 py-2 rounded-xl border-2 transition-all ${
-                      gender === g
-                        ? "border-blue-500 bg-blue-50 dark:bg-blue-900/30"
-                        : "border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700"
-                    }`}
-                  >
-                    <span className="text-xl">{g === "boy" ? "👦" : "👧"}</span>
-                    <span className="text-xs font-semibold text-gray-700 dark:text-gray-200">
-                      {g === "boy" ? "Pojke" : "Flicka"}
-                    </span>
-                  </button>
-                ))}
+            {/* Equipped items summary */}
+            {hero.equippedAttributes.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-3 w-full">
+                <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Påklädd</p>
+                <div className="flex flex-wrap gap-1">
+                  {hero.equippedAttributes.map((id) => {
+                    const attr = HERO_ATTRIBUTES.find((a) => a.id === id);
+                    return attr ? (
+                      <span key={id} className="inline-flex items-center gap-1 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium px-2 py-0.5 rounded-full border border-green-200 dark:border-green-700">
+                        ✓ {attr.name_sv}
+                      </span>
+                    ) : null;
+                  })}
+                </div>
               </div>
-            </div>
-
-            {/* Skin tone */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-3 w-full">
-              <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">Hudton</p>
-              <div className="flex gap-2 justify-center">
-                {SKIN_TONES.map((tone) => (
-                  <button
-                    key={tone}
-                    onClick={() => save({ ...hero, skinTone: tone })}
-                    title={SKIN_TONE_LABELS[tone]}
-                    className={`w-9 h-9 rounded-full border-2 transition-all ${
-                      hero.skinTone === tone
-                        ? "border-blue-500 scale-110 shadow"
-                        : "border-gray-200 dark:border-gray-600 hover:scale-105"
-                    }`}
-                    style={{ backgroundColor: SKIN_PREVIEW[tone] }}
-                  />
-                ))}
-              </div>
-            </div>
+            )}
           </div>
 
-          {/* ── Right: hero type + attributes ── */}
+          {/* ── RIGHT: Avatar grid + items ────────────────────────────────────── */}
           <div className="flex-1 flex flex-col gap-4">
 
-            {/* Hero type */}
+            {/* Hero selection */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-4">
               <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">Välj hjälte</p>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-7 gap-1.5">
                 {HERO_TYPES.map((h) => {
                   const locked = student.totalPoints < h.unlock_points;
                   const active = hero.heroId === h.id;
@@ -317,38 +204,34 @@ export default function HeroPage() {
                       key={h.id}
                       disabled={locked}
                       onClick={() => !locked && save({ ...hero, heroId: h.id })}
-                      className={`relative flex flex-col items-center gap-0.5 p-2 rounded-xl border-2 transition-all ${
+                      title={locked ? `🔒 ${h.unlock_points}p krävs` : h.name_sv}
+                      className={`relative flex flex-col items-center gap-0.5 p-1.5 rounded-xl border-2 transition-all ${
                         active
-                          ? `${HERO_CARD_BG[h.id] ?? ""} ring-2 ring-offset-1 ring-blue-400 scale-105 shadow-md`
+                          ? "border-blue-500 bg-blue-50 dark:bg-blue-900/30 ring-2 ring-offset-1 ring-blue-400 scale-105 shadow-md"
                           : locked
-                          ? "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-55 cursor-not-allowed grayscale"
-                          : `border-gray-100 dark:border-gray-700 hover:scale-105 hover:shadow-md hover:${HERO_CARD_BG[h.id] ?? "bg-blue-50/50"} cursor-pointer`
+                          ? "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-50 cursor-not-allowed"
+                          : "border-gray-100 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 hover:scale-105 hover:shadow cursor-pointer"
                       }`}
                     >
-                      <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-full">
-                        <img
-                          src={heroDbUrl(h.id, hero.skinTone, gender)}
-                          alt={h.name_sv}
-                          className="w-10 h-10 object-cover"
-                        />
+                      <div className={locked ? "grayscale" : ""}>
+                        <HeroAvatarImage heroId={h.id} size={46} />
                       </div>
-                      <span className="text-xs font-semibold text-gray-700 dark:text-gray-200 text-center leading-tight">
-                        {h.name_sv}
-                      </span>
-                      {locked
-                        ? <span className="text-xs text-gray-400">🔒{h.unlock_points}p</span>
-                        : active
-                        ? <span className="text-xs text-blue-600 dark:text-blue-400 font-bold">✓ Aktiv</span>
-                        : null
-                      }
+                      {locked && (
+                        <span className="absolute top-0.5 right-0.5 text-xs leading-none">🔒</span>
+                      )}
+                      {active && (
+                        <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-bold leading-none">✓</span>
+                      )}
                     </button>
                   );
                 })}
               </div>
             </div>
 
-            {/* Attributes */}
+            {/* Item customization */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-4">
+
+              {/* Tabs */}
               <div className="flex gap-1 mb-4 bg-gray-100 dark:bg-gray-700 rounded-xl p-1">
                 {tabs.map((tab) => (
                   <button
@@ -357,7 +240,7 @@ export default function HeroPage() {
                     className={`flex-1 text-xs font-semibold py-1.5 rounded-lg transition-all ${
                       activeTab === tab
                         ? "bg-white dark:bg-gray-600 shadow text-gray-900 dark:text-gray-100"
-                        : "text-gray-500 dark:text-gray-400 hover:text-gray-700"
+                        : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                     }`}
                   >
                     {ATTRIBUTE_TYPE_LABELS[tab]}
@@ -365,7 +248,8 @@ export default function HeroPage() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-4 xs:grid-cols-5 gap-2">
+              {/* Item grid */}
+              <div className="grid grid-cols-4 gap-2">
                 {HERO_ATTRIBUTES.filter((a) => a.type === activeTab).map((attr) => {
                   const unlocked = isAttributeUnlocked(attr, student.totalPoints, hogstadietCompleted);
                   const equipped = hero.equippedAttributes.includes(attr.id);
@@ -374,30 +258,49 @@ export default function HeroPage() {
                       key={attr.id}
                       disabled={!unlocked}
                       onClick={() => unlocked && toggleAttribute(attr.id, activeTab)}
-                      className={`flex flex-col items-center gap-0.5 p-2 rounded-xl border-2 text-center transition-all ${
+                      className={`relative flex flex-col items-center gap-1 p-2 rounded-xl border-2 text-center transition-all ${
                         equipped
-                          ? "border-green-500 bg-green-50 dark:bg-green-900/30"
+                          ? "border-green-500 bg-green-50 dark:bg-green-900/30 shadow-sm"
                           : unlocked
-                          ? "border-gray-100 dark:border-gray-700 hover:border-blue-200 dark:hover:border-blue-700 hover:bg-blue-50/50 cursor-pointer"
+                          ? "border-gray-100 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 hover:bg-blue-50/60 dark:hover:bg-blue-900/20 cursor-pointer hover:scale-105"
                           : "border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/30 opacity-50 cursor-not-allowed"
                       }`}
                     >
-                      {(() => {
-                        const Icon = ATTR_ICON_COMPONENTS[attr.id];
-                        return Icon
-                          ? <Icon size={24} className={equipped ? "text-green-600 dark:text-green-400" : unlocked ? "text-gray-600 dark:text-gray-300" : "text-gray-400"} />
-                          : <span className="text-lg">❓</span>;
-                      })()}
-                      <span className="text-xs font-medium text-gray-700 dark:text-gray-200 leading-tight">
+                      {/* Item illustration */}
+                      <div className="relative">
+                        <ItemIcon itemId={attr.id} size={44} />
+                        {/* Lock overlay */}
+                        {!unlocked && (
+                          <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-900/20 dark:bg-gray-900/40">
+                            <span className="text-lg">🔒</span>
+                          </div>
+                        )}
+                        {/* Equipped check */}
+                        {equipped && (
+                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center shadow">
+                            <svg viewBox="0 0 12 12" width="10" height="10" fill="none">
+                              <path d="M2 6l3 3 5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Item name */}
+                      <span className={`text-xs font-medium leading-tight ${
+                        equipped
+                          ? "text-green-700 dark:text-green-400"
+                          : unlocked
+                          ? "text-gray-700 dark:text-gray-200"
+                          : "text-gray-400"
+                      }`}>
                         {attr.name_sv}
                       </span>
+
+                      {/* Unlock cost */}
                       {!unlocked && (
                         <span className="text-xs text-gray-400">
-                          🔒{attr.unlock_condition ? "Spel." : `${attr.unlock_points}p`}
+                          {attr.unlock_condition ? "Spel." : `${attr.unlock_points}p`}
                         </span>
-                      )}
-                      {equipped && (
-                        <span className="text-xs text-green-600 dark:text-green-400 font-bold">På!</span>
                       )}
                     </button>
                   );

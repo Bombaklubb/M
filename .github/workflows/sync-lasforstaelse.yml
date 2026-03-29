@@ -1,0 +1,31 @@
+name: Sync Läsjakten
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'lasforstaelse/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: Bombaklubb
+          repositories: lasjakten
+
+      - name: Push to lasjakten
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git remote add target https://x-access-token:${{ steps.generate-token.outputs.token }}@github.com/Bombaklubb/lasjakten.git
+          git subtree push --prefix=lasforstaelse target main

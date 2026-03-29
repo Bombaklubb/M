@@ -1,0 +1,34 @@
+name: Sync Engelskajakten
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'engelska/**'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: Bombaklubb
+
+      - name: Push to engelskajakten
+        env:
+          TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git config --local --unset-all http.https://github.com/.extraheader || true
+          git subtree split --prefix=engelska -b deploy-engelska
+          git push --force "https://x-access-token:${TOKEN}@github.com/Bombaklubb/engelskajakten.git" deploy-engelska:main

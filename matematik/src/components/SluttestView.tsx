@@ -35,19 +35,29 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function buildQuestions(topicIds: string[]): SluttestQuestion[] {
+function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestion[] {
   const topics = topicIds
     .map(id => TOPICS.find(t => t.id === id))
     .filter(Boolean) as Topic[];
   if (topics.length === 0) return [];
-  const qPerTopic = topics.length <= 6 ? 3 : topics.length <= 10 ? 2 : 1;
+
+  // Scale questions per topic so total is always at least 30
+  const qPerTopic = Math.ceil(30 / topics.length);
+
   const all: SluttestQuestion[] = [];
   for (const topic of topics) {
-    for (const ex of shuffle(topic.exercises).slice(0, qPerTopic)) {
+    // For lågstadiet: only pick from the easier first 60% of each topic's exercises
+    const pool = easierPool
+      ? topic.exercises.slice(0, Math.max(3, Math.ceil(topic.exercises.length * 0.6)))
+      : topic.exercises;
+    for (const ex of shuffle(pool).slice(0, qPerTopic)) {
       all.push({ exercise: ex, topic });
     }
   }
-  return shuffle(all).slice(0, 20);
+
+  // Target exactly 30 questions
+  const target = Math.min(all.length, 30);
+  return shuffle(all).slice(0, target);
 }
 
 // ─── Root ─────────────────────────────────────────────────────────────────────
@@ -59,7 +69,7 @@ export default function SluttestView() {
 
   const world = WORLDS.find(w => w.id === sluttestWorldId);
   const questions = useMemo(
-    () => (world ? buildQuestions(world.topicIds) : []),
+    () => (world ? buildQuestions(world.topicIds, world.maxGrade <= 3) : []),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [sluttestWorldId]
   );
@@ -116,7 +126,7 @@ function Intro({
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
       <div
@@ -247,7 +257,7 @@ function Test({
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
 
@@ -463,7 +473,7 @@ function Result({
   return (
     <div
       className="min-h-screen pb-10"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
       <div className={`max-w-md mx-auto px-4 pt-20 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

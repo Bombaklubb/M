@@ -7,9 +7,11 @@ import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import ReadingQuestionComponent from "@/components/exercises/ReadingQuestion";
-import { loadStudent, saveModuleProgress } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
+import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
-import type { StudentData, StageContent, ReadingModule } from "@/lib/types";
+import type { StudentData, StageContent, ReadingModule, ChestType, MysteryBoxReward } from "@/lib/types";
 
 const POINTS_PER_CORRECT = 10;
 
@@ -32,6 +34,9 @@ export default function ReadingModulePage({ params }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [showResult, setShowResult] = useState(false);
+  const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
+  const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
+  const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
 
   useEffect(() => {
     const s = loadStudent();
@@ -77,6 +82,37 @@ export default function ReadingModulePage({ params }: Props) {
           student, stage!.id, "reading", mod!.id, finalPts, passed
         );
         setStudent(updated);
+
+        const gam = loadGamification();
+        const prevPoints = student.totalPoints;
+        const newPoints = updated.totalPoints;
+        const prevEx = gam.exercisesCompleted;
+        const newEx = prevEx + 1;
+        const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
+        const exChests = chestsEarnedFromExercises(prevEx, newEx, gam.exerciseMilestonesRewarded);
+        const allNewChests = [...pointChests.map((c) => c.chest), ...exChests.map((c) => c.chest)];
+        const firstChest = allNewChests[0];
+        const wasBossUnlocked = gam.bossUnlocked;
+        const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
+        const mystery = rollMysteryBox(gam.badges, newEx);
+        const extraMysteryChest = mystery?.type === "chest" && mystery.chestType
+          ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
+          : [];
+        const mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
+        const mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
+        saveGamification({
+          ...gam,
+          chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
+          badges: mysteryBadge && !gam.badges.includes(mysteryBadge) ? [...gam.badges, mysteryBadge] : gam.badges,
+          exercisesCompleted: newEx,
+          bossUnlocked: nowBossUnlocked,
+          pointsMilestonesRewarded: [...gam.pointsMilestonesRewarded, ...pointChests.map((c) => c.milestone)],
+          exerciseMilestonesRewarded: [...gam.exerciseMilestonesRewarded, ...exChests.map((c) => c.milestone)],
+        });
+        if (mysteryPoints > 0) setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
+        if (firstChest) setChestEarned(firstChest.type as ChestType);
+        if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
+        if (mystery) setMysteryBox(mystery);
       }
       setShowResult(true);
     } else {
@@ -92,6 +128,15 @@ export default function ReadingModulePage({ params }: Props) {
   }
 
   function handleContinue() {
+    if (mysteryBox) {
+      setShowResult(false);
+    } else {
+      router.push(`/world/${stageId}`);
+    }
+  }
+
+  function handleMysteryClose() {
+    setMysteryBox(null);
     router.push(`/world/${stageId}`);
   }
 
@@ -101,7 +146,7 @@ export default function ReadingModulePage({ params }: Props) {
   // ─── Intro phase ────────────────────────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <Header student={student} />
 
         <div className={`${stage.bgClass} text-white`}>
@@ -165,7 +210,7 @@ export default function ReadingModulePage({ params }: Props) {
 
   // ─── Reading + Questions split view ─────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <Header student={student} />
 
       {/* Coloured banner */}
@@ -274,9 +319,15 @@ export default function ReadingModulePage({ params }: Props) {
           bonusPoints={mod.bonusPoints}
           totalCorrect={totalCorrect}
           totalQuestions={totalQuestions}
+          chestEarned={chestEarned}
+          bossUnlocked={bossJustUnlocked}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
+      )}
+
+      {!showResult && mysteryBox && (
+        <MysteryBoxPopup reward={mysteryBox} onClose={handleMysteryClose} />
       )}
     </div>
   );

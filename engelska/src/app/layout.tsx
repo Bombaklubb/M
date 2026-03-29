@@ -6,6 +6,19 @@ export const metadata: Metadata = {
   description:
     "En gratis engelskträningsapp för åk 1–gymnasiet. Grammatikövningar och läsförståelse i fyra spännande världar.",
   keywords: ["engelska", "skola", "övningar", "grammatik", "läsförståelse", "gratis"],
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://engelskajakten.vercel.app/engelskajakten-logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {

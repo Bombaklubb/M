@@ -721,4 +721,40 @@ export const SCIFI_EXTENDED_TOPICS: Topic[] = [
     ],
   },
 
+  // ─── SYMMETRI – HÖGSTADIET ────────────────────────────────────────────────
+  {
+    id: 'symmetri-hog',
+    title: 'Symmetri',
+    icon: '🪞',
+    description: 'Spegling i koordinatsystem, rotationssymmetri, jämna och udda funktioner',
+    grades: ['7', '8', '9'],
+    minGrade: 7,
+    color: 'from-pink-600 to-rose-700',
+    instruction: {
+      title: 'Symmetri i matematik',
+      text: 'Spegling i x-axeln: (x, y) → (x, −y). Spegling i y-axeln: (x, y) → (−x, y). Spegling i origo (punktsymmetri): (x, y) → (−x, −y). Jämn funktion: f(−x) = f(x), symmetrisk kring y-axeln. Udda funktion: f(−x) = −f(x), symmetrisk kring origo. Rotationssymmetri: ordningen anger hur många gånger figuren ser likadan ut per varv.',
+      illustration: 'shapes-basic',
+      examples: [
+        'f(x) = x² är jämn: f(−2) = 4 = f(2)',
+        'f(x) = x³ är udda: f(−2) = −8 = −f(2)',
+        '(3, −5) speglat i origo → (−3, 5)',
+        'Regelbunden n-hörning: ordning n',
+      ],
+    },
+    exercises: [
+      { id: 'shog-1', type: 'multiple-choice', question: 'Punkten (4, −3) speglas i x-axeln. Ny koordinat?', options: ['(−4, −3)', '(4, 3)', '(−4, 3)', '(3, 4)'], correctIndex: 1, points: 10, explanation: 'Spegling i x-axeln: y byter tecken → (4, 3).' },
+      { id: 'shog-2', type: 'multiple-choice', question: 'Punkten (−2, 5) speglas i y-axeln. Ny koordinat?', options: ['(2, 5)', '(−2, −5)', '(2, −5)', '(5, 2)'], correctIndex: 0, points: 10, explanation: 'Spegling i y-axeln: x byter tecken → (2, 5).' },
+      { id: 'shog-3', type: 'multiple-choice', question: 'Punkten (3, 4) speglas i origo. Ny koordinat?', options: ['(3, −4)', '(−3, 4)', '(−3, −4)', '(4, 3)'], correctIndex: 2, points: 10, explanation: 'Spegling i origo: båda koordinaterna byter tecken → (−3, −4).' },
+      { id: 'shog-4', type: 'true-false', question: 'Funktionen f(x) = x² är symmetrisk kring y-axeln.', isTrue: true, points: 10, explanation: 'Sant! f(x) = x² är en jämn funktion: f(−x) = (−x)² = x² = f(x).' },
+      { id: 'shog-5', type: 'true-false', question: 'Funktionen f(x) = x³ är symmetrisk kring y-axeln.', isTrue: false, points: 10, explanation: 'Falskt! x³ är en udda funktion, symmetrisk kring origo (inte y-axeln).' },
+      { id: 'shog-6', type: 'multiple-choice', question: 'Vilket påstående gäller för en jämn funktion?', options: ['f(−x) = −f(x)', 'f(−x) = f(x)', 'f(x) = −f(x)', 'f(0) = 0'], correctIndex: 1, points: 10, explanation: 'Jämn funktion: f(−x) = f(x). Grafen är symmetrisk kring y-axeln.' },
+      { id: 'shog-7', type: 'fill-in', question: 'Rotationssymmetrins ordning för en regelbunden hexagon?', answer: '6', points: 10, explanation: 'En regelbunden hexagon ser likadan ut 6 gånger per varv (var 60°).' },
+      { id: 'shog-8', type: 'multiple-choice', question: 'Vilken funktion är udda?', options: ['f(x) = x² + 1', 'f(x) = |x|', 'f(x) = x³', 'f(x) = cos(x)'], correctIndex: 2, points: 10, explanation: 'f(x) = x³ är udda: f(−x) = (−x)³ = −x³ = −f(x).' },
+      { id: 'shog-9', type: 'fill-in', question: 'Punkten (a, b) speglas i origo. x-koordinaten på spegelpunkten?', answer: '-a', acceptableAnswers: ['−a', '-a'], points: 10, explanation: 'Spegling i origo: (a, b) → (−a, −b). x-koordinaten blir −a.' },
+      { id: 'shog-10', type: 'true-false', question: 'En funktion kan vara både jämn och udda.', isTrue: true, points: 10, explanation: 'Sant! f(x) = 0 (nollfunktionen) uppfyller f(−x) = f(x) och f(−x) = −f(x) samtidigt.' },
+      { id: 'shog-11', type: 'multiple-choice', question: 'Vilken ordning av rotationssymmetri har en regelbunden triangel?', options: ['1', '2', '3', '6'], correctIndex: 2, points: 10, explanation: 'En liksidig triangel ser likadan ut 3 gånger per varv → ordning 3.' },
+      { id: 'shog-12', type: 'multiple-choice', question: 'Parabeln y = x² − 4 har symmetriaxeln?', options: ['y = 0', 'x = 4', 'x = 0', 'y = −4'], correctIndex: 2, points: 10, explanation: 'y = x² − 4 är jämn; symmetriaxeln är y-axeln, dvs x = 0.' },
+    ],
+  },
+
 ];

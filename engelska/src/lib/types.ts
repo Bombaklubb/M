@@ -121,25 +121,24 @@ export interface WordSearchModule {
   words: WordSearchWord[];
 }
 
-// ─── Crossword ────────────────────────────────────────────────────────────────
+// ─── Coin Game (Samla mynt) ───────────────────────────────────────────────────
 
-export interface CrosswordClue {
-  number: number;
-  clue: string;
-  answer: string;
-  row: number;
-  col: number;
-  direction: "across" | "down";
+export interface CoinGameQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation?: string;
 }
 
-export interface CrosswordModule {
+export interface CoinGameModule {
   id: string;
   title: string;
   description: string;
   icon: string;
   pointsRequired: number;
   bonusPoints: number;
-  clues: CrosswordClue[];
+  questions: CoinGameQuestion[];
 }
 
 export interface StageContent {
@@ -147,7 +146,7 @@ export interface StageContent {
   reading: ReadingModule[];
   spelling?: SpellingModule[];
   wordsearch?: WordSearchModule[];
-  crossword?: CrosswordModule[];
+  spel?: CoinGameModule[];
 }
 
 // ─── Student progress (stored in localStorage) ───────────────────────────────
@@ -166,7 +165,7 @@ export interface StageProgress {
   readingModules: Record<string, ModuleProgress>;
   spellingModules: Record<string, ModuleProgress>;
   wordsearchModules: Record<string, ModuleProgress>;
-  crosswordModules: Record<string, ModuleProgress>;
+  spelModules?: Record<string, ModuleProgress>;
 }
 
 export type SkinTone = "light" | "light_brown" | "dark";
@@ -186,6 +185,39 @@ export interface StudentData {
   totalPoints: number;
   stages: Record<StageId, StageProgress>;
   hero?: HeroConfig;
+}
+
+// ─── Gamification ─────────────────────────────────────────────────────────────
+
+export type ChestType = "wood" | "silver" | "gold" | "ruby" | "diamond" | "emerald";
+
+export interface Chest {
+  id: string;
+  type: ChestType;
+  earnedAt: string;
+  opened: boolean;
+  openedReward?: string; // description shown after opening
+}
+
+export type MysteryRewardType = "points" | "chest" | "badge";
+
+export interface MysteryBoxReward {
+  type: MysteryRewardType;
+  points?: number;
+  chestType?: ChestType;
+  badgeId?: string;
+  description: string;
+}
+
+export interface GamificationData {
+  chests: Chest[];
+  badges: string[];
+  exercisesCompleted: number;
+  bossUnlocked: boolean;
+  bossLastAttempt?: string;
+  bossWins: number;
+  pointsMilestonesRewarded: number[]; // total-point thresholds already rewarded
+  exerciseMilestonesRewarded: number[]; // exercise-count thresholds already rewarded
 }
 
 // ─── Exercise session (in-memory, not persisted) ──────────────────────────────

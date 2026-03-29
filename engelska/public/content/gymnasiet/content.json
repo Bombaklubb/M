@@ -247,7 +247,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ have left already — her coat is gone.",
           "answer": "must",
-          "hint": "'must have' = nästan säkert att något hände (logisk slutledning).",
+          "hint": "Modal + have + particip: vilket modalverb passar för logisk slutledning/säkerhet?",
           "explanation": "'Must have + past participle' = logical deduction about the past."
         },
         {
@@ -269,7 +269,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ have worried so much — everything is fine!",
           "answer": "needn't",
-          "hint": "'needn't have' = det var onödigt (det du gjorde var inte nödvändigt).",
+          "hint": "Tänk: 'needn't have' vs 'didn't need to' – vilket antyder att du faktiskt gjorde det?",
           "explanation": "'Needn't have + past participle' = it wasn't necessary (but you did it)."
         },
         {
@@ -337,7 +337,7 @@
           "type": "fill-in-blank",
           "sentence": "She ___ have been lying — the evidence proved it.",
           "answer": "couldn't",
-          "hint": "'couldn't have' = det var omöjligt att något hände.",
+          "hint": "Modal + have + particip: vilket modalverb visar omöjlighet i dåtid?",
           "explanation": "'Couldn't have + past participle' = it was impossible."
         },
         {
@@ -359,7 +359,7 @@
           "type": "fill-in-blank",
           "sentence": "It ___ rain later — bring an umbrella just in case.",
           "answer": "might",
-          "hint": "'might' = osäker möjlighet.",
+          "hint": "Osäker möjlighet: vilket modalverb används för 'kanske' eller 'möjligen'?",
           "explanation": "'Might' expresses uncertain possibility."
         },
         {
@@ -409,7 +409,7 @@
           "type": "fill-in-blank",
           "sentence": "You ___ (have to) wear a suit — it's a casual event.",
           "answer": "don't have to",
-          "hint": "'don't have to' = inte nödvändigt (ej förbjudet).",
+          "hint": "Tänk: 'don't have to' = inte nödvändigt, 'must not' = förbjudet. Vilket passar?",
           "explanation": "'Don't have to' = not necessary (different from 'mustn't' which is prohibition)."
         },
         {
@@ -484,7 +484,7 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would reconsider. (Subjunctive/formal)",
           "answer": "were",
-          "hint": "Subjunktiv med 'were': If I were you… (formellt, för alla person).",
+          "hint": "Konjunktiv med 'If I were you': subjunktiv används för hypotetiska situationer. Vilket pronomen + form?",
           "explanation": "Subjunctive: 'were' for all persons in formal/literary conditional: If I were you."
         },
         {
@@ -528,7 +528,7 @@
           "type": "fill-in-blank",
           "sentence": "I would like to ___ my deepest gratitude for your assistance.",
           "answer": "express",
-          "hint": "Formellt uttryck: 'would like to express my deepest gratitude'.",
+          "hint": "Formellt uttryck: 'I would like to ___ my deepest gratitude' – vilket verb hör ihop?",
           "explanation": "Formal expression: 'I would like to express my deepest gratitude'."
         },
         {
@@ -602,7 +602,7 @@
           "type": "fill-in-blank",
           "sentence": "I would be most grateful if you ___ (could) forward the document at your earliest convenience.",
           "answer": "could",
-          "hint": "Formell förfrågan med 'if you could...' + 'at your earliest convenience'.",
+          "hint": "Formell förfrågan: 'I would be most grateful if you ___ forward...' – vilket modalverb?",
           "explanation": "Formal request: I would be most grateful if you could + base verb."
         },
         {
@@ -689,7 +689,7 @@
           "type": "fill-in-blank",
           "sentence": "The project was successful. ___, it took longer than expected.",
           "answer": "However",
-          "hint": "Kontrastmarkör: However (däremot/dock).",
+          "hint": "Vilket typ av kohesionssignal behövs här – kontrast, tillägg eller konsekvens?",
           "explanation": "'However' signals a contrast between the two sentences."
         },
         {
@@ -711,7 +711,7 @@
           "type": "fill-in-blank",
           "sentence": "The weather was terrible. ___, we decided to cancel the trip.",
           "answer": "Therefore",
-          "hint": "Följdmarkör: Therefore / As a result / Consequently.",
+          "hint": "Meningen kräver ett kohesionssignal som visar konsekvens eller följd.",
           "explanation": "'Therefore' shows cause and effect: bad weather → cancel the trip."
         },
         {
@@ -733,7 +733,7 @@
           "type": "fill-in-blank",
           "sentence": "Prices have risen. ___ ___, consumer spending has fallen.",
           "answer": "As a result",
-          "hint": "Kausal kohesion: As a result / Therefore / Consequently.",
+          "hint": "Meningen kräver en fras som visar orsak och verkan.",
           "explanation": "'As a result' shows the consequence of rising prices."
         },
         {
@@ -785,7 +785,7 @@
           "type": "fill-in-blank",
           "sentence": "The new policy has many advantages. ___, it reduces costs and improves efficiency.",
           "answer": "For example",
-          "hint": "Exempelmarkör: For example / For instance.",
+          "hint": "Meningen kräver ett uttryck som introducerar ett konkret exempel.",
           "explanation": "'For example' introduces an illustration of the stated advantages."
         },
         {
@@ -807,7 +807,7 @@
           "type": "fill-in-blank",
           "sentence": "He trained every day. ___, he won the championship.",
           "answer": "Consequently",
-          "hint": "Kausal kohesion: Consequently / As a result / Therefore.",
+          "hint": "Meningen kräver ett ord som visar konsekvens.",
           "explanation": "'Consequently' shows the result of daily training."
         },
         {
@@ -829,7 +829,7 @@
           "type": "fill-in-blank",
           "sentence": "The two proposals differ significantly. The first focuses on cost reduction; ___, the second prioritises quality.",
           "answer": "whereas",
-          "hint": "'Whereas' / 'while' = jämförande kontrast inom en mening.",
+          "hint": "Meningen kräver en konjunktion för att visa jämförande kontrast.",
           "explanation": "'Whereas' introduces a contrasting idea within the same sentence."
         },
         {
@@ -901,7 +901,7 @@
           "type": "fill-in-blank",
           "sentence": "Had I known, I ___ (act) differently.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced-2",
@@ -939,7 +939,7 @@
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
           "answer": "be",
-          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform"
         },
         {
           "id": "gym-g-advanced-6",
@@ -958,7 +958,7 @@
           "type": "fill-in-blank",
           "sentence": "He denied ___ (take) the money.",
           "answer": "taking",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced-8",
@@ -1053,7 +1053,7 @@
           "type": "fill-in-blank",
           "sentence": "The data needs ___ (verify).",
           "answer": "to be verified",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced-18",
@@ -1108,7 +1108,7 @@
           "type": "fill-in-blank",
           "sentence": "Had she known, she ___ (act) differently.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced2-2",
@@ -1146,7 +1146,7 @@
           "type": "fill-in-blank",
           "sentence": "She denied ___ (cheat) on the exam.",
           "answer": "cheating",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced2-6",
@@ -1203,7 +1203,7 @@
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (revise).",
           "answer": "to be revised",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced2-12",
@@ -1315,7 +1315,7 @@
           "type": "fill-in-blank",
           "sentence": "Had I realised, I ___ (act) sooner.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced3-2",
@@ -1353,7 +1353,7 @@
           "type": "fill-in-blank",
           "sentence": "She denied ___ (steal) the money.",
           "answer": "stealing",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced3-6",
@@ -1410,7 +1410,7 @@
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (edit).",
           "answer": "to be edited",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced3-12",
@@ -1562,7 +1562,7 @@
           "type": "fill-in-blank",
           "sentence": "He admitted ___ (break) the rule.",
           "answer": "breaking",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced3-28",
@@ -1616,14 +1616,14 @@
           "type": "fill-in-blank",
           "sentence": "Had I known, I ___ (act) differently.",
           "answer": "would have acted",
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced4-2",
           "type": "fill-in-blank",
           "sentence": "It is essential that she ___ (be) present.",
           "answer": "be",
-          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform för alla pronomen."
+          "hint": "Konjunktiv: efter 'it is vital/crucial/essential/important that' → verbets grundform"
         },
         {
           "id": "gym-g-advanced4-3",
@@ -1644,7 +1644,7 @@
           "type": "fill-in-blank",
           "sentence": "She denied ___ (take) the money.",
           "answer": "taking",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced4-6",
@@ -1665,7 +1665,7 @@
           "type": "fill-in-blank",
           "sentence": "The essay needs ___ (revise).",
           "answer": "to be revised",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced4-9",
@@ -1777,7 +1777,7 @@
             "will"
           ],
           "correctIndex": 1,
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced5-2",
@@ -1822,7 +1822,7 @@
           "type": "fill-in-blank",
           "sentence": "He admitted ___ (lie) to the teacher.",
           "answer": "lying",
-          "hint": "Gerund (verb + -ing): används efter verb som admit, enjoy, avoid, deny, regret. T.ex. 'admitted lying'."
+          "hint": "Gerund (-ing): vilka verb följs av gerundium? Titta på verbet precis före luckan."
         },
         {
           "id": "gym-g-advanced5-7",
@@ -1841,7 +1841,7 @@
           "type": "fill-in-blank",
           "sentence": "The issue needs ___ (address) immediately.",
           "answer": "to be addressed",
-          "hint": "Passiv infinitiv: to be + perfektparticip. T.ex. 'needs to be addressed' = behöver åtgärdas."
+          "hint": "Passiv infinitiv: verbet behöver en konstruktion med 'to be' följt av particip."
         },
         {
           "id": "gym-g-advanced5-9",
@@ -1929,7 +1929,7 @@
             "will"
           ],
           "correctIndex": 1,
-          "hint": "Typ 3-konditionalis, resultatsatsen: 'would have' + perfektparticip. T.ex. 'I would have acted differently.'"
+          "hint": "Typ 3-konditionalis i resultatsatsen: vilket modalverb + konstruktion används för en omöjlig situation i dåtid?"
         },
         {
           "id": "gym-g-advanced5-18",
@@ -1978,28 +1978,28 @@
           "type": "fill-in-blank",
           "sentence": "She has been working here ___ 2015.",
           "answer": "since",
-          "hint": "'Since' + specifik startpunkt (år, datum). 'For' + tidsperiod. 2015 är en tidpunkt → 'since'."
+          "hint": "Tänk: är tidsuttrycket en period (hur länge?) eller en startpunkt (sedan när)?"
         },
         {
           "id": "gym-g-mixed-2",
           "type": "fill-in-blank",
           "sentence": "She has been working here ___ ten years.",
           "answer": "for",
-          "hint": "'For' + tidsperiod (hur länge): 'for ten years'. 'Since' + startpunkt. Tio år är en period → 'for'."
+          "hint": "Tänk: är tidsuttrycket en period (hur länge?) eller en startpunkt (sedan när)?"
         },
         {
           "id": "gym-g-mixed-3",
           "type": "fill-in-blank",
           "sentence": "The company is ___ to be successful.",
           "answer": "said",
-          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to be...'. Verbet 'say' → 'is said'."
+          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to...'"
         },
         {
           "id": "gym-g-mixed-4",
           "type": "fill-in-blank",
           "sentence": "His ___ to cooperate surprised everyone.",
           "answer": "refusal",
-          "hint": "Nominalisering: verbet 'refuse' → substantivet 'refusal'. Formellt språk omvandlar ofta verb till substantiv: decide→decision, arrive→arrival, refuse→refusal."
+          "hint": "Nominalisering: vilket substantiv bildas av det verb som syns i meningen?"
         },
         {
           "id": "gym-g-mixed-5",
@@ -2017,35 +2017,35 @@
           "type": "fill-in-blank",
           "sentence": "Only after the exam ___ she realise her mistake.",
           "answer": "did",
-          "hint": "Inversion: 'Only after...' inleder meningen → inverterad ordföljd: hjälpverb + subjekt. 'Only after the exam did she realise' (inte 'she realised')."
+          "hint": "Inversion med 'Only after...': vilket hjälpverb hör till subjektet i den inverterade satsen?"
         },
         {
           "id": "gym-g-mixed-7",
           "type": "fill-in-blank",
           "sentence": "In spite of ___ tired, he continued.",
           "answer": "being",
-          "hint": "'In spite of' + gerund (-ing): 'in spite of being tired'. Jämför: 'Although he was tired' (fullständig sats med 'although')."
+          "hint": "'In spite of' följs av gerundium. Vilken form av verbet ska användas?"
         },
         {
           "id": "gym-g-mixed-8",
           "type": "fill-in-blank",
           "sentence": "She ___ have forgotten (possibility).",
           "answer": "might",
-          "hint": "Modal perfekt: modalverb + have + particip. 'Might have' = kan ha (möjlighet). 'Must have' = måste ha (slutledning). 'Should have' = borde ha (kritik)."
+          "hint": "Vilket modalverb passar för att uttrycka en möjlighet (inte säkerhet)?"
         },
         {
           "id": "gym-g-mixed-9",
           "type": "fill-in-blank",
           "sentence": "The issue needs ___ (address) urgently.",
           "answer": "to be addressed",
-          "hint": "Passiv infinitiv: 'needs to be addressed'. Strukturen 'need + to be + particip' visar att något behöver göras (av någon annan)."
+          "hint": "Passiv infinitiv: 'needs + to be + perfektparticip' – vad är particip av 'address'?"
         },
         {
           "id": "gym-g-mixed-10",
           "type": "fill-in-blank",
           "sentence": "___ I need is more time.",
           "answer": "What",
-          "hint": "Klyvsats (cleft sentence): 'What I need is...' Börja med 'What' för att betona vad man vill ha. 'What I need is more time' = Det jag behöver är mer tid."
+          "hint": "Det här är en klyvsats (cleft sentence). Vilket ord inleder vanligtvis en klyvsats som fokuserar på ett objekt?"
         },
         {
           "id": "gym-g-mixed-11",
@@ -2070,14 +2070,14 @@
           "type": "fill-in-blank",
           "sentence": "If he were more careful, he ___ avoid mistakes.",
           "answer": "would",
-          "hint": "Typ 2-konditionalis: If + past subjunctive ('were') → 'would' + grundform. Uttrycker en hypotetisk situation i nutid."
+          "hint": "Typ 2-konditionalis: vilket modalverb används i huvudsatsen?"
         },
         {
           "id": "gym-g-mixed-14",
           "type": "fill-in-blank",
           "sentence": "He is ___ to be honest.",
           "answer": "thought",
-          "hint": "Passiv rapportering: 'People think he is honest' → 'He is thought to be honest'. Verbet 'think' → 'is thought to be'."
+          "hint": "Passiv rapportering: 'People think he is...' → 'He is ___ to be...' – vilket verb?"
         },
         {
           "id": "gym-g-mixed-15",
@@ -2095,35 +2095,35 @@
           "type": "fill-in-blank",
           "sentence": "The data seems ___ (be) incorrect.",
           "answer": "to be",
-          "hint": "'Seem/appear' + infinitiv: 'seems to be', 'appears to be'. Dessa länkverb följs av 'to' + infinitiv."
+          "hint": "'Seem/appear' + infinitiv: vilket ord inleder infinitiv?"
         },
         {
           "id": "gym-g-mixed-17",
           "type": "fill-in-blank",
           "sentence": "They conducted an ___ into the matter.",
           "answer": "investigation",
-          "hint": "Nominalisering: 'investigate' (verb) → 'investigation' (substantiv). Formellt skriftspråk föredrar ofta substantivformer: investigate→investigation, develop→development."
+          "hint": "Nominalisering: vilket substantiv bildas av det verb som syns i meningen?"
         },
         {
           "id": "gym-g-mixed-18",
           "type": "fill-in-blank",
           "sentence": "Never ___ I seen such chaos.",
           "answer": "have",
-          "hint": "Inversion med 'never': negativt adverbial i början → inverterad ordföljd: Never + hjälpverb + subjekt. 'Never have I seen' (inte 'Never I have seen')."
+          "hint": "Inversion med negativt adverbial: vilket hjälpverb hör till subjektet i denna mening?"
         },
         {
           "id": "gym-g-mixed-19",
           "type": "fill-in-blank",
           "sentence": "He is not old ___ to vote.",
           "answer": "enough",
-          "hint": "'Too...to' = 'not...enough to': 'He is too young to vote' = 'He is not old enough to vote'. 'Enough' kommer EFTER adjektivet."
+          "hint": "Jämför: 'too [adjektiv] to' omvandlas till 'not [adjektiv] ___ to'. Vilket ord saknas?"
         },
         {
           "id": "gym-g-mixed-20",
           "type": "fill-in-blank",
           "sentence": "They ___ have missed the train (certainty).",
           "answer": "must",
-          "hint": "Modal perfekt för slutledning: 'must have' = måste ha (logisk slutsats om dåtid). 'Might have' = kan ha (möjlighet). 'Can't have' = kan inte ha."
+          "hint": "Vilket modalverb passar för att uttrycka en logisk slutsats om något som har hänt?"
         }
       ],
       "helpText": [
@@ -2133,6 +2133,377 @@
         "Klyvsats: 'It is the methodology that needs revision.' – lyfter fram viktigt element.",
         "Modala perfektformer: 'should have', 'could have', 'must have' – slutledning om dåtid.",
         "Tips: I avancerat engelskt skrivande varierar du strukturerna – undvik alltid börja med 'I'."
+      ]
+    },
+    {
+      "id": "gym-sluttest",
+      "title": "Sluttest – Grammatik",
+      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är sluttestet för hela grammatikdelen!",
+        "Frågorna täcker allt du tränat på: avancerade verb tider, modalverb, konjunktiv, diskursmarkörer, inversion och formellt språk.",
+        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-st-1",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'You ___ have told me earlier!' (förebråelse om det förflutna)",
+          "options": [
+            "must",
+            "should",
+            "would",
+            "might"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Should have' + past participle uttrycker förebråelse om något som borde ha gjorts."
+        },
+        {
+          "id": "gym-st-2",
+          "type": "multiple-choice",
+          "question": "Välj rätt: 'By now, she ___ have arrived.' (säkerhet om nuet)",
+          "options": [
+            "would",
+            "could",
+            "must",
+            "might"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Must have' + past participle uttrycker säker slutledning om nuet eller det förflutna."
+        },
+        {
+          "id": "gym-st-3",
+          "type": "multiple-choice",
+          "question": "Konjunktiv: 'It is essential that he ___ present at the meeting.'",
+          "options": [
+            "is",
+            "be",
+            "was",
+            "were"
+          ],
+          "correctIndex": 1,
+          "explanation": "Konjunktiv (subjunctive) används efter 'it is essential/important/vital that'. Formen är grundform."
+        },
+        {
+          "id": "gym-st-4",
+          "type": "multiple-choice",
+          "question": "Konjunktiv: 'If I ___ you, I would apologize immediately.'",
+          "options": [
+            "am",
+            "was",
+            "were",
+            "be"
+          ],
+          "correctIndex": 2,
+          "explanation": "I hypotetiska konditionalis (typ 2) används 'were' för alla personer (formellt). If I were you."
+        },
+        {
+          "id": "gym-st-5",
+          "type": "multiple-choice",
+          "question": "Diskursmarkör (kontrast): '___, many people struggle with mental health.'",
+          "options": [
+            "However",
+            "Nonetheless",
+            "Nowadays",
+            "In conclusion"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Nowadays' introducerar en tidsmässig kontext om nutiden. Nowadays, many people struggle..."
+        },
+        {
+          "id": "gym-st-6",
+          "type": "multiple-choice",
+          "question": "Diskursmarkör: 'The project was well planned. ___, it failed to meet its deadlines.'",
+          "options": [
+            "Furthermore",
+            "Consequently",
+            "Nevertheless",
+            "Therefore"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Nevertheless' uttrycker kontrast/trots allt. Det project misslyckades trots god planering."
+        },
+        {
+          "id": "gym-st-7",
+          "type": "multiple-choice",
+          "question": "Inversion: 'Only then ___ she realize her mistake.'",
+          "options": [
+            "did",
+            "was",
+            "had",
+            "could"
+          ],
+          "correctIndex": 0,
+          "explanation": "Negativ inversion med 'Only then': Only then + hjälpverb + subjekt. Only then did she realize."
+        },
+        {
+          "id": "gym-st-8",
+          "type": "multiple-choice",
+          "question": "Passiv – Future Perfect: 'The contract ___ by the end of the week.'",
+          "options": [
+            "will be signed",
+            "will sign",
+            "is signing",
+            "signs"
+          ],
+          "correctIndex": 0,
+          "explanation": "Passiv i futurum: will be + past participle. The contract will be signed."
+        },
+        {
+          "id": "gym-st-9",
+          "type": "multiple-choice",
+          "question": "Blandat konditionalis: 'If she ___ the job, she would be working there now.'",
+          "options": [
+            "got",
+            "had got",
+            "gets",
+            "get"
+          ],
+          "correctIndex": 1,
+          "explanation": "Blandat konditionalis: If + past perfect (om det förflutna), would + nu (om nuet)."
+        },
+        {
+          "id": "gym-st-10",
+          "type": "multiple-choice",
+          "question": "Perfekt infinitiv: 'She appears ___ the answer all along.'",
+          "options": [
+            "to know",
+            "to have known",
+            "knowing",
+            "to be knowing"
+          ],
+          "correctIndex": 1,
+          "explanation": "'To have known' (perfekt infinitiv) indikerar att kunskapen gäller ett förflutet tillstånd."
+        },
+        {
+          "id": "gym-st-11",
+          "type": "multiple-choice",
+          "question": "Konjunktiv i indirekt tal: 'He demanded that she ___ on time.'",
+          "options": [
+            "is",
+            "was",
+            "be",
+            "were"
+          ],
+          "correctIndex": 2,
+          "explanation": "Konjunktiv efter 'demand that': He demanded that she be on time. (grundform)"
+        },
+        {
+          "id": "gym-st-12",
+          "type": "multiple-choice",
+          "question": "Relativklausul: 'The man, ___ I met yesterday, is a doctor.'",
+          "options": [
+            "who",
+            "whom",
+            "which",
+            "whose"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Whom' används som objekt i relativsatsen (formellt). The man, whom I met..."
+        },
+        {
+          "id": "gym-st-13",
+          "type": "multiple-choice",
+          "question": "Relativklausul: 'The film, ___ I found rather dull, won several awards.'",
+          "options": [
+            "who",
+            "whom",
+            "which",
+            "whose"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Which' används om saker/fenomen (ej personer). The film, which I found dull..."
+        },
+        {
+          "id": "gym-st-14",
+          "type": "multiple-choice",
+          "question": "Emfatisk 'do': 'I ___ want to help, but I was too busy.'",
+          "options": [
+            "do",
+            "did",
+            "have",
+            "was"
+          ],
+          "correctIndex": 1,
+          "explanation": "Emfatisk 'did' förstärker ett påstående om det förflutna. I did want to help."
+        },
+        {
+          "id": "gym-st-15",
+          "type": "multiple-choice",
+          "question": "Ellips/substitution: 'John likes jazz and so ___ Mary.'",
+          "options": [
+            "does",
+            "do",
+            "is",
+            "likes"
+          ],
+          "correctIndex": 0,
+          "explanation": "'So does' används för att bekräfta att samma sak gäller (med he/she/it). So does Mary."
+        },
+        {
+          "id": "gym-st-16",
+          "type": "multiple-choice",
+          "question": "Future Perfect: 'By this time tomorrow, she ___ her exam.'",
+          "options": [
+            "will finish",
+            "will have finished",
+            "finishes",
+            "is finishing"
+          ],
+          "correctIndex": 1,
+          "explanation": "Future Perfect: will have + past participle. She will have finished her exam."
+        },
+        {
+          "id": "gym-st-17",
+          "type": "multiple-choice",
+          "question": "Typ 3-konditionalis: 'Had I known earlier, I ___ differently.'",
+          "options": [
+            "would act",
+            "would have acted",
+            "had acted",
+            "acted"
+          ],
+          "correctIndex": 1,
+          "explanation": "Typ 3: If I had known = Had I known. Följdsats: would have + past participle."
+        },
+        {
+          "id": "gym-st-18",
+          "type": "multiple-choice",
+          "question": "Nominalisering: 'The ___ of the new policy caused controversy.' (introduce)",
+          "options": [
+            "introduce",
+            "introduction",
+            "introducing",
+            "introduced"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nominalisering: verbet 'introduce' → substantivet 'introduction'. Typiskt i akademiskt skrivande."
+        },
+        {
+          "id": "gym-st-19",
+          "type": "multiple-choice",
+          "question": "Modal past – omöjlighet: 'She ___ have forgotten – she never forgets anything.'",
+          "options": [
+            "can't",
+            "mustn't",
+            "shouldn't",
+            "won't"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Can't have' + past participle uttrycker att något omöjligen kan ha hänt."
+        },
+        {
+          "id": "gym-st-20",
+          "type": "multiple-choice",
+          "question": "Inversion: 'Never ___ I seen such a beautiful painting.'",
+          "options": [
+            "have",
+            "had",
+            "did",
+            "was"
+          ],
+          "correctIndex": 0,
+          "explanation": "'Never have I' – inversion med present perfect. Never have I seen such beauty."
+        },
+        {
+          "id": "gym-st-21",
+          "type": "multiple-choice",
+          "question": "Cleft-mening: 'It was ___ who first described the theory.'",
+          "options": [
+            "Einstein",
+            "him",
+            "he",
+            "himself"
+          ],
+          "correctIndex": 0,
+          "explanation": "Cleft-meningar lyfter fram ett specifikt element. It was Einstein who first described it."
+        },
+        {
+          "id": "gym-st-22",
+          "type": "multiple-choice",
+          "question": "Diskursmarkör (slutsats): '___, we must take immediate action on climate change.'",
+          "options": [
+            "Furthermore",
+            "In contrast",
+            "To conclude",
+            "Likewise"
+          ],
+          "correctIndex": 2,
+          "explanation": "'To conclude' signalerar att en slutsats presenteras. Typisk markör i formella texter."
+        },
+        {
+          "id": "gym-st-23",
+          "type": "fill-in-blank",
+          "sentence": "It is vital that every student ___ present at the ceremony.",
+          "answer": "be",
+          "explanation": "Konjunktiv efter 'it is vital that': grundform av verbet. Be present."
+        },
+        {
+          "id": "gym-st-24",
+          "type": "fill-in-blank",
+          "sentence": "If I ___ in charge, I would change everything. (konjunktiv)",
+          "answer": "were",
+          "explanation": "I hypotetiska konditionalis används 'were' för alla personer (formellt). If I were."
+        },
+        {
+          "id": "gym-st-25",
+          "type": "fill-in-blank",
+          "sentence": "By next year, she will ___ completed the course.",
+          "answer": "have",
+          "explanation": "Future Perfect: will have + past participle. Will have completed."
+        },
+        {
+          "id": "gym-st-26",
+          "type": "fill-in-blank",
+          "sentence": "The problem, ___ affects millions of people, needs urgent attention.",
+          "answer": "which",
+          "explanation": "'Which' används i icke-restriktiv relativsats om ett fenomen/sak."
+        },
+        {
+          "id": "gym-st-27",
+          "type": "fill-in-blank",
+          "sentence": "Only when she left ___ he realize how much she meant to him.",
+          "answer": "did",
+          "explanation": "Inversion med 'only when': Only when + sats + hjälpverb + subjekt. Only when she left did he realize."
+        },
+        {
+          "id": "gym-st-28",
+          "type": "fill-in-blank",
+          "sentence": "Not only ___ she win the race, but she also set a new record.",
+          "answer": "did",
+          "explanation": "Inversion med 'not only': Not only did she win... (hjälpverb + subjekt)"
+        },
+        {
+          "id": "gym-st-29",
+          "type": "fill-in-blank",
+          "sentence": "She demanded that he ___ her an explanation immediately.",
+          "answer": "give",
+          "explanation": "Konjunktiv efter 'demand that': She demanded that he give. (grundform, ej gives)"
+        },
+        {
+          "id": "gym-st-30",
+          "type": "fill-in-blank",
+          "sentence": "The report must ___ submitted by all students before Friday.",
+          "answer": "be",
+          "explanation": "Passiv modal konstruktion: must + be + past participle. Must be submitted."
+        },
+        {
+          "id": "gym-st-31",
+          "type": "fill-in-blank",
+          "sentence": "He seems to ___ known about this for years. (perfekt infinitiv)",
+          "answer": "have",
+          "explanation": "Perfekt infinitiv: to + have + past participle. To have known."
+        },
+        {
+          "id": "gym-st-32",
+          "type": "fill-in-blank",
+          "sentence": "Such was her talent ___ she won every competition she entered.",
+          "answer": "that",
+          "explanation": "'Such...that' är en resultatkonstruktion. Such was her talent that she won everything."
+        }
       ]
     }
   ],
@@ -3267,6 +3638,248 @@
           "row": 0,
           "col": 1,
           "direction": "down"
+        }
+      ]
+    }
+  ],
+  "spel": [
+    {
+      "id": "gym-spel-1-idiom",
+      "title": "Samla mynt – Idiom och fraser",
+      "description": "Lär dig vanliga engelska idiom och samla mynt!",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "gym-spel-1-q1",
+          "question": "Vad betyder idiomet 'hit the nail on the head'?",
+          "options": [
+            "Slå på ett spik bokstavligen",
+            "Träffa rätt / säga exakt rätt sak",
+            "Misslyckas med något",
+            "Arbeta hårt"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Hit the nail on the head' = säga precis rätt, träffa rätt."
+        },
+        {
+          "id": "gym-spel-1-q2",
+          "question": "Vad betyder 'bite off more than you can chew'?",
+          "options": [
+            "Äta för snabbt",
+            "Ta på sig mer än man klarar",
+            "Vara girig",
+            "Prata med munnen full"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ta på sig mer ansvar eller uppgifter än man kan hantera."
+        },
+        {
+          "id": "gym-spel-1-q3",
+          "question": "Vad betyder 'under the weather'?",
+          "options": [
+            "Det regnar",
+            "Känna sig sjuk/dålig",
+            "Vara utomhus",
+            "Ha dålig ekonomi"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Feeling under the weather' = känna sig sjuk eller ledsen."
+        },
+        {
+          "id": "gym-spel-1-q4",
+          "question": "Vad betyder 'beat around the bush'?",
+          "options": [
+            "Gå direkt på saken",
+            "Promenera i skogen",
+            "Undvika det egentliga ämnet",
+            "Arbeta i trädgården"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Beat around the bush' = undvika att säga det viktiga direkt."
+        },
+        {
+          "id": "gym-spel-1-q5",
+          "question": "Vad betyder 'once in a blue moon'?",
+          "options": [
+            "Varje månad",
+            "Vid fullmåne",
+            "Väldigt sällan",
+            "En natt i månaden"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Once in a blue moon' = mycket sällan, nästan aldrig."
+        },
+        {
+          "id": "gym-spel-1-q6",
+          "question": "Vad betyder 'break the ice'?",
+          "options": [
+            "Bryta is bokstavligen",
+            "Förstöra något",
+            "Starta en konversation och lätta stämningen",
+            "Avsluta ett möte"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Break the ice' = göra något för att lätta på stämningen i en ny situation."
+        },
+        {
+          "id": "gym-spel-1-q7",
+          "question": "Vad betyder 'cost an arm and a leg'?",
+          "options": [
+            "Vara billigt",
+            "Vara väldigt dyrt",
+            "Vara skadligt för kroppen",
+            "Handla om sjukvård"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Cost an arm and a leg' = vara extremt dyrt."
+        },
+        {
+          "id": "gym-spel-1-q8",
+          "question": "Vad betyder 'spill the beans'?",
+          "options": [
+            "Laga mat",
+            "Avslöja en hemlighet",
+            "Göra en röra",
+            "Glömma något viktigt"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Spill the beans' = avslöja en hemlighet av misstag."
+        },
+        {
+          "id": "gym-spel-1-q9",
+          "question": "Vad betyder 'the ball is in your court'?",
+          "options": [
+            "Du ska spela tennis",
+            "Du måste fatta beslutet",
+            "Det är ditt fel",
+            "Du vinner"
+          ],
+          "correctIndex": 1,
+          "explanation": "'The ball is in your court' = det är upp till dig att agera eller bestämma."
+        },
+        {
+          "id": "gym-spel-1-q10",
+          "question": "Vad betyder 'burn bridges'?",
+          "options": [
+            "Förstöra en fysisk bro",
+            "Ta risker",
+            "Förstöra relationer permanent",
+            "Arbeta som brandman"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Burn bridges' = förstöra relationer eller möjligheter för framtiden."
+        }
+      ]
+    },
+    {
+      "id": "gym-spel-2-akademiskt",
+      "title": "Samla mynt – Akademisk engelska",
+      "description": "Öva på akademiskt och formellt språk!",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "gym-spel-2-q1",
+          "question": "Vilket ord är mest formellt/akademiskt för 'use'?",
+          "options": ["apply", "utilize", "employ", "Alla är likvärdigt formella"],
+          "correctIndex": 3,
+          "explanation": "'Apply', 'utilize' och 'employ' är alla mer formella alternativ till 'use'."
+        },
+        {
+          "id": "gym-spel-2-q2",
+          "question": "Vad är ett bra akademiskt ord för 'show'?",
+          "options": ["demonstrate", "prove", "indicate", "Alla passar i akademisk text"],
+          "correctIndex": 3,
+          "explanation": "I akademisk text kan man använda 'demonstrate', 'indicate', 'illustrate', 'reveal' m.fl."
+        },
+        {
+          "id": "gym-spel-2-q3",
+          "question": "Vilket är korrekt i ett formellt brev?",
+          "options": [
+            "Hey, I'm writing about...",
+            "Dear Sir/Madam, I am writing to...",
+            "Hi there, I wanna talk about...",
+            "To whoever, I need to say..."
+          ],
+          "correctIndex": 1,
+          "explanation": "Formella brev börjar med 'Dear Sir/Madam' och undviker förkortningar."
+        },
+        {
+          "id": "gym-spel-2-q4",
+          "question": "Vilken fras introducerar bäst ett motargument i en essä?",
+          "options": [
+            "But some people think...",
+            "However, it could be argued that...",
+            "On the other hand, you know...",
+            "Wait, actually..."
+          ],
+          "correctIndex": 1,
+          "explanation": "'However, it could be argued that...' är den mest formella och akademiska varianten."
+        },
+        {
+          "id": "gym-spel-2-q5",
+          "question": "Vad betyder den akademiska termen 'substantiate'?",
+          "options": [
+            "Motbevisa",
+            "Undersöka",
+            "Stödja med bevis",
+            "Sammanfatta"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Substantiate' = styrka eller stödja ett påstående med bevis."
+        },
+        {
+          "id": "gym-spel-2-q6",
+          "question": "Vilken mening är skriven i akademisk passiv form?",
+          "options": [
+            "We found that the results were significant.",
+            "The results were found to be significant.",
+            "I think the results are significant.",
+            "You can see that results are significant."
+          ],
+          "correctIndex": 1,
+          "explanation": "Akademisk text undviker ofta 'I/we' och föredrar passiv konstruktion."
+        },
+        {
+          "id": "gym-spel-2-q7",
+          "question": "Vad är ett bättre akademiskt ord för 'good'?",
+          "options": ["nice", "beneficial", "cool", "okay"],
+          "correctIndex": 1,
+          "explanation": "'Beneficial' (fördelaktig) är ett mer precist och akademiskt ord än 'good'."
+        },
+        {
+          "id": "gym-spel-2-q8",
+          "question": "Vilken fras fungerar bäst som avslutning i en akademisk essä?",
+          "options": [
+            "So that's basically it.",
+            "In conclusion, the evidence suggests that...",
+            "To wrap things up, I think...",
+            "Anyway, that's my point."
+          ],
+          "correctIndex": 1,
+          "explanation": "'In conclusion' är den standardiserade akademiska frasen för slutsatser."
+        },
+        {
+          "id": "gym-spel-2-q9",
+          "question": "Vad betyder 'albeit'?",
+          "options": ["ändå", "även om", "trots allt", "alltid"],
+          "correctIndex": 1,
+          "explanation": "'Albeit' är ett formellt ord som betyder 'even though' / 'although'."
+        },
+        {
+          "id": "gym-spel-2-q10",
+          "question": "Vilken fras visar bäst på orsak-verkan i akademisk text?",
+          "options": [
+            "because of this thing that happened",
+            "Consequently, this led to...",
+            "so yeah, that's why...",
+            "Due to this, like..."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Consequently' är en akademisk konjunktionsadverb för orsak-verkan."
         }
       ]
     }

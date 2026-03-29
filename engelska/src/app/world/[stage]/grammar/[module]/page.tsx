@@ -10,7 +10,15 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import {
+  chestsEarnedFromPoints,
+  chestsEarnedFromExercises,
+  rollMysteryBox,
+  BOSS_UNLOCK_THRESHOLD,
+} from "@/lib/gamification";
+import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
+import type { ChestType, MysteryBoxReward } from "@/lib/types";
 import { getStage } from "@/lib/stages";
 import type {
   StudentData,
@@ -39,6 +47,9 @@ export default function GrammarModulePage({ params }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [showResult, setShowResult] = useState(false);
+  const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
+  const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
+  const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
 
   useEffect(() => {
     const s = loadStudent();
@@ -90,6 +101,74 @@ export default function GrammarModulePage({ params }: Props) {
           passed
         );
         setStudent(updated);
+
+        // ── Gamification ──────────────────────────────────────────────
+        const gam = loadGamification();
+        const prevPoints = student.totalPoints;
+        const newPoints = updated.totalPoints;
+        const prevExercises = gam.exercisesCompleted;
+        const newExercises = prevExercises + 1;
+
+        // Chests from points
+        const pointChests = chestsEarnedFromPoints(
+          prevPoints, newPoints, gam.pointsMilestonesRewarded
+        );
+        // Chests from exercise count
+        const exChests = chestsEarnedFromExercises(
+          prevExercises, newExercises, gam.exerciseMilestonesRewarded
+        );
+
+        const allNewChests = [
+          ...pointChests.map((c) => c.chest),
+          ...exChests.map((c) => c.chest),
+        ];
+        const firstChest = allNewChests[0];
+
+        // Boss unlock check
+        const wasBossUnlocked = gam.bossUnlocked;
+        const nowBossUnlocked =
+          wasBossUnlocked || newExercises >= BOSS_UNLOCK_THRESHOLD;
+
+        // Mystery box
+        const mystery = rollMysteryBox(gam.badges, newExercises);
+        let extraMysteryChest = mystery?.type === "chest" && mystery.chestType
+          ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
+          : [];
+        let mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
+        let mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
+
+        const newGam = {
+          ...gam,
+          chests: [
+            ...gam.chests,
+            ...allNewChests,
+            ...extraMysteryChest,
+          ],
+          badges: mysteryBadge && !gam.badges.includes(mysteryBadge)
+            ? [...gam.badges, mysteryBadge]
+            : gam.badges,
+          exercisesCompleted: newExercises,
+          bossUnlocked: nowBossUnlocked,
+          pointsMilestonesRewarded: [
+            ...gam.pointsMilestonesRewarded,
+            ...pointChests.map((c) => c.milestone),
+          ],
+          exerciseMilestonesRewarded: [
+            ...gam.exerciseMilestonesRewarded,
+            ...exChests.map((c) => c.milestone),
+          ],
+        };
+        saveGamification(newGam);
+
+        // Apply mystery box points to student
+        if (mysteryPoints > 0) {
+          const withMystery = { ...updated, totalPoints: updated.totalPoints + mysteryPoints };
+          setStudent(withMystery);
+        }
+
+        if (firstChest) setChestEarned(firstChest.type as ChestType);
+        if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
+        if (mystery) setMysteryBox(mystery);
       }
       setShowResult(true);
     } else {
@@ -105,6 +184,16 @@ export default function GrammarModulePage({ params }: Props) {
   }
 
   function handleContinue() {
+    if (mysteryBox) {
+      setShowResult(false);
+      // mysteryBox popup will show, then navigate on close
+    } else {
+      router.push(`/world/${stageId}`);
+    }
+  }
+
+  function handleMysteryClose() {
+    setMysteryBox(null);
     router.push(`/world/${stageId}`);
   }
 
@@ -114,7 +203,7 @@ export default function GrammarModulePage({ params }: Props) {
   // ─── Intro / help phase ───────────────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <Header student={student} />
 
         <div className={`${stage.bgClass} text-white`}>
@@ -181,7 +270,7 @@ export default function GrammarModulePage({ params }: Props) {
 
   // ─── Exercise phase ───────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <Header student={student} />
 
       {/* Progress header */}
@@ -271,9 +360,16 @@ export default function GrammarModulePage({ params }: Props) {
           bonusPoints={mod.bonusPoints}
           totalCorrect={totalCorrect}
           totalQuestions={totalExercises}
+          chestEarned={chestEarned}
+          bossUnlocked={bossJustUnlocked}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
+      )}
+
+      {/* Mystery box popup */}
+      {!showResult && mysteryBox && (
+        <MysteryBoxPopup reward={mysteryBox} onClose={handleMysteryClose} />
       )}
     </div>
   );

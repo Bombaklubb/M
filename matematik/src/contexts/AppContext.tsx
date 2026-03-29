@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import {
-  Student, AppView, Topic,
-  
+  Student, AppView, Topic, MattChest, MysteryBoxReward,
+
 } from '../types';
 import {
   getCurrentStudent, setCurrentStudent, getProgress,
@@ -9,15 +9,23 @@ import {
   grantAchievement, saveTopicProgress, calcStars,
   recordTopicSession, saveStudent,
 } from '../utils/storage';
+import {
+  loadGamification, saveGamification,
+  chestsEarnedFromPoints, chestsEarnedFromExercises,
+  chestsEarnedFromTopicEvent,
+  rollMysteryBox, BOSS_UNLOCK_THRESHOLD,
+} from '../utils/chestStorage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { TOPICS } from '../data/topics';
-import { WorldId } from '../data/worlds';
+import { WORLDS, WorldId } from '../data/worlds';
 
 export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
   | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
-  | 'sluttest';
+  | 'sluttest' | 'kistor'
+  | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins'
+  | 'game-memory' | 'game-hangman';
 
 interface AppContextValue {
   currentStudent: Student | null;
@@ -26,6 +34,9 @@ interface AppContextValue {
   isTeacher: boolean;
   sluttestWorldId: WorldId | null;
   questWorldId: WorldId | null;
+  gameWorldId: WorldId | null;
+  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null;
+  clearPendingChestResult: () => void;
   login: (student: Student) => void;
   logout: () => void;
   setView: (view: ExtendedView) => void;
@@ -33,8 +44,9 @@ interface AppContextValue {
   setTeacher: (val: boolean) => void;
   startSluttest: (worldId: WorldId) => void;
   startQuest: (worldId: WorldId) => void;
+  startGames: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
-  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number };
+  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null };
   updateAvatar: (avatarIndex: number) => void;
 }
 
@@ -47,6 +59,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [isTeacher, setIsTeacherState] = useState(false);
   const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
+  const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
+  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
 
   const login = useCallback((student: Student) => {
     setCurrentStudent(student);
@@ -84,6 +98,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('quest');
   }, []);
 
+  const startGames = useCallback((worldId: WorldId) => {
+    setGameWorldId(worldId);
+    setCurrentView('games');
+  }, []);
+
   const getStudentStats = useCallback((student: Student) => {
     const progress = getProgress(student.id);
     const points = getPoints(student.id) ?? initPoints(student.id);
@@ -98,6 +117,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  const clearPendingChestResult = useCallback(() => setPendingChestResult(null), []);
+
   const updateAvatar = useCallback((avatarIndex: number) => {
     if (!currentStudent) return;
     const updated = { ...currentStudent, avatar: avatarIndex };
@@ -107,13 +128,19 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent]);
 
   const submitTopicResult = useCallback((topicId: string, correct: number, total: number, timeSpent: number) => {
-    if (!currentStudent) return { newAchievements: [], pointsGained: 0 };
+    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null };
     const score = total > 0 ? Math.round((correct / total) * 100) : 0;
     const stars = calcStars(score);
     const basePoints = correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
     saveTopicProgress(currentStudent.id, { topicId, completed: score >= 50, bestScore: score, totalAttempts: 1, correctAnswers: correct, totalQuestions: total, lastAttempt: new Date().toISOString(), stars, timeSpent });
     recordTopicSession(currentStudent.id, topicId, correct, total);
+
+    // Track points before adding to detect milestones
+    const prevPoints = getPoints(currentStudent.id)?.total ?? 0;
     addPoints(currentStudent.id, basePoints);
+    const newPoints = prevPoints + basePoints;
+
+    // Achievements
     const stats = getStudentStats(currentStudent);
     const alreadyEarned = new Set(getAchievements(currentStudent.id).map(a => a.achievementId));
     const newAchievements: string[] = [];
@@ -123,11 +150,96 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         newAchievements.push(ach.id);
       }
     }
-    return { newAchievements, pointsGained: basePoints };
+
+    // Chest gamification
+    const gam = loadGamification(currentStudent.id);
+    const prevExercises = gam.exercisesCompleted;
+    const newExercises = prevExercises + 1;
+
+    const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
+    const exerciseChests = chestsEarnedFromExercises(prevExercises, newExercises, gam.exerciseMilestonesRewarded);
+
+    // Topic / world completion chests
+    const progressAfter = getProgress(currentStudent.id);
+    const worldForTopic = WORLDS.find(w => w.topicIds.includes(topicId));
+    const allWorldTopicsCompleted = worldForTopic
+      ? TOPICS.filter(t => worldForTopic.topicIds.includes(t.id))
+          .every(t => progressAfter.some(p => p.topicId === t.id && p.completed))
+      : false;
+    const topicEventResult = chestsEarnedFromTopicEvent({
+      topicId,
+      worldId: worldForTopic?.id ?? null,
+      score,
+      stars,
+      allWorldTopicsCompleted,
+      gam,
+    });
+
+    const allNewChests = [
+      ...pointChests,
+      ...exerciseChests,
+      ...topicEventResult.chests.map(c => ({ chest: c })),
+    ];
+
+    const mysteryReward = rollMysteryBox(gam.badges, prevExercises);
+    let updatedBadges = [...gam.badges];
+    let mysteryChest: MattChest | null = null;
+
+    if (mysteryReward) {
+      if (mysteryReward.type === 'badge' && mysteryReward.badgeId && !updatedBadges.includes(mysteryReward.badgeId)) {
+        updatedBadges.push(mysteryReward.badgeId);
+      } else if (mysteryReward.type === 'chest' && mysteryReward.chestType) {
+        mysteryChest = {
+          id: `chest_${Date.now()}_mystery`,
+          type: mysteryReward.chestType,
+          earnedAt: new Date().toISOString(),
+          opened: false,
+        };
+      } else if (mysteryReward.type === 'points' && mysteryReward.points) {
+        addPoints(currentStudent.id, mysteryReward.points);
+      }
+    }
+
+    const updatedGam = {
+      ...gam,
+      chests: [
+        ...gam.chests,
+        ...allNewChests.map(c => c.chest),
+        ...(mysteryChest ? [mysteryChest] : []),
+      ],
+      badges: updatedBadges,
+      exercisesCompleted: newExercises,
+      bossUnlocked: gam.bossUnlocked || newExercises >= BOSS_UNLOCK_THRESHOLD,
+      pointsMilestonesRewarded: [
+        ...gam.pointsMilestonesRewarded,
+        ...pointChests.map(c => c.milestone),
+      ],
+      exerciseMilestonesRewarded: [
+        ...gam.exerciseMilestonesRewarded,
+        ...exerciseChests.map(c => c.milestone),
+      ],
+      topicCompletionChestsRewarded: topicEventResult.topicCompletionChestsRewarded,
+      topic3StarChestsRewarded: topicEventResult.topic3StarChestsRewarded,
+      topicPerfectChestsRewarded: topicEventResult.topicPerfectChestsRewarded,
+      worldCompletionChestsRewarded: topicEventResult.worldCompletionChestsRewarded,
+    };
+    saveGamification(currentStudent.id, updatedGam);
+
+    const chestResult = {
+      newChests: allNewChests.map(c => c.chest),
+      mysteryReward,
+    };
+    setPendingChestResult(chestResult);
+
+    return {
+      newAchievements,
+      pointsGained: basePoints,
+      ...chestResult,
+    };
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );
