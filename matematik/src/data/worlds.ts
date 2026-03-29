@@ -39,6 +39,8 @@ export const WORLDS: World[] = [
       'subtraktion-strategier', 'former-och-figurer', 'klockan',
       // Övrigt (rad 5)
       'problemlosning-lag', 'matematik-begrepp-lag', 'rimlighetsoevningar-lag',
+      // Geometri – vinklar & symmetri
+      'vinklar-lag', 'symmetri-lag',
     ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
@@ -74,6 +76,8 @@ export const WORLDS: World[] = [
       'geometri-omfang', 'geometri-mel', 'statistik-mel',
       // Övrigt (rad 9)
       'matematik-begrepp-mel', 'rimlighetsoevningar-mel',
+      // Geometri – vinklar & symmetri
+      'vinklar-mel', 'symmetri-mel',
     ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
@@ -117,6 +121,8 @@ export const WORLDS: World[] = [
       'geometri-area', 'statistik-spridning', 'problemlosning-hog',
       // Övrigt (rad 13)
       'matematik-begrepp-hog', 'rimlighetsoevningar-hog',
+      // Geometri – symmetri
+      'symmetri-hog',
     ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',
