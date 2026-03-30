@@ -7,7 +7,7 @@ export const MYSTERY_BOX_CHANCE_EARLY = 0.25; // 25% chans under de 5 första to
 export const MYSTERY_BOX_CHANCE = 0.15;       // 15% chans därefter
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
-  { points: 50,    type: 'wood' },   // ← ny: nås redan i första sessionen
+  { points: 50,    type: 'wood' },
   { points: 100,   type: 'wood' },
   { points: 200,   type: 'wood' },
   { points: 300,   type: 'silver' },
@@ -18,17 +18,18 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 1500,  type: 'silver' },
   { points: 2000,  type: 'silver' },
   { points: 2500,  type: 'gold' },
-  { points: 3500,  type: 'gold' },
-  { points: 5000,  type: 'gold' },
-  { points: 7000,  type: 'gold' },
-  { points: 10000, type: 'gold' },
-  { points: 15000, type: 'gold' },
+  { points: 3500,  type: 'rubin' },
+  { points: 5000,  type: 'rubin' },
+  { points: 7000,  type: 'smaragd' },
+  { points: 10000, type: 'smaragd' },
+  { points: 15000, type: 'diamant' },
+  { points: 20000, type: 'diamant' },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
-  { exercises: 1,   type: 'wood' },  // ← ny: första klarade topic direkt!
-  { exercises: 2,   type: 'wood' },  // ← ny
-  { exercises: 3,   type: 'wood' },  // ← ny
+  { exercises: 1,   type: 'wood' },
+  { exercises: 2,   type: 'wood' },
+  { exercises: 3,   type: 'wood' },
   { exercises: 5,   type: 'wood' },
   { exercises: 10,  type: 'wood' },
   { exercises: 15,  type: 'silver' },
@@ -37,9 +38,9 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
   { exercises: 40,  type: 'silver' },
   { exercises: 50,  type: 'silver' },
   { exercises: 60,  type: 'gold' },
-  { exercises: 75,  type: 'gold' },
-  { exercises: 100, type: 'gold' },
-  { exercises: 150, type: 'gold' },
+  { exercises: 75,  type: 'rubin' },
+  { exercises: 100, type: 'smaragd' },
+  { exercises: 150, type: 'diamant' },
 ];
 
 export const CHEST_META: Record<
@@ -48,24 +49,45 @@ export const CHEST_META: Record<
 > = {
   wood: {
     label: 'Bronskista',
-    emoji: '📦',
+    emoji: '🟫',
     image: '/bronskista.png',
     gradient: 'from-amber-700 to-amber-900',
-    description: 'En bronskvista med små belöningar.',
+    description: 'En bronskista med små belöningar.',
   },
   silver: {
     label: 'Silverkista',
-    emoji: '🪙',
+    emoji: '⬜',
     image: '/silverkista.png',
     gradient: 'from-slate-400 to-slate-600',
     description: 'En glänsande silverkista med bra belöningar.',
   },
   gold: {
     label: 'Guldkista',
-    emoji: '🏆',
+    emoji: '🟡',
     image: '/guldkista.png',
     gradient: 'from-yellow-400 to-amber-500',
     description: 'En praktfull guldkista med de bästa belöningarna!',
+  },
+  rubin: {
+    label: 'Rubinkista',
+    emoji: '🔴',
+    image: '/rubinkista.png',
+    gradient: 'from-red-500 to-rose-700',
+    description: 'En lysande rubinkista med fantastiska belöningar!',
+  },
+  smaragd: {
+    label: 'Smaragdkista',
+    emoji: '🟢',
+    image: '/smaragdkista.png',
+    gradient: 'from-emerald-400 to-green-600',
+    description: 'En ädel smaragdkista för de mest hängivna!',
+  },
+  diamant: {
+    label: 'Diamantkista',
+    emoji: '💎',
+    image: '/diamantkista.png',
+    gradient: 'from-cyan-300 via-blue-400 to-violet-500',
+    description: 'Den ultimata diamantkistan – extremt sällsynt!',
   },
 };
 
@@ -245,6 +267,69 @@ export function openGoldChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
+/** Open a rubin chest → points 400-700 + badge + possible bonus gold chest */
+export function openRubinChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: MattChest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 301) + 400;
+  const available = MATH_BADGES.filter(b => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = Math.random() < 0.35 ? makeChest('gold') : undefined;
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    bonusChest ? 'Bonus: Guldkista!' : null,
+  ].filter(Boolean).join(' • ');
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Open a smaragd chest → points 700-1200 + badge + possible bonus rubin chest */
+export function openSmaragdChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: MattChest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 501) + 700;
+  const available = MATH_BADGES.filter(b => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = Math.random() < 0.3 ? makeChest('rubin') : undefined;
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    bonusChest ? 'Bonus: Rubinkista!' : null,
+  ].filter(Boolean).join(' • ');
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Open a diamant chest → points 1200-2000 + badge + guaranteed bonus gold chest */
+export function openDiamantChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: MattChest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 801) + 1200;
+  const available = MATH_BADGES.filter(b => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = makeChest('smaragd'); // guaranteed bonus
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    'Bonus: Smaragdkista!',
+  ].filter(Boolean).join(' • ');
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
 export function getMathBadge(id: string) {
   return MATH_BADGES.find(b => b.id === id);
 }
@@ -301,9 +386,9 @@ export function chestsEarnedFromTopicEvent(opts: {
     tp.push(opts.topicId);
   }
 
-  // 4. First time all topics in a world are completed → gold chest
+  // 4. First time all topics in a world are completed → rubin chest
   if (opts.allWorldTopicsCompleted && opts.worldId && !wc.includes(opts.worldId)) {
-    newChests.push(mkChest('gold', 'wc'));
+    newChests.push(mkChest('rubin', 'wc'));
     wc.push(opts.worldId);
   }
 

@@ -5,6 +5,7 @@ import {
   loadGamification, saveGamification,
   CHEST_META, MATH_BADGES, BOSS_UNLOCK_THRESHOLD, getMathBadge,
   openWoodChest, openSilverChest, openGoldChest,
+  openRubinChest, openSmaragdChest, openDiamantChest,
 } from '../utils/chestStorage';
 import { addPoints, getPoints, initPoints } from '../utils/storage';
 import type { MattChest, MattGamificationData, ChestType } from '../types';
@@ -12,6 +13,27 @@ import type { MattChest, MattGamificationData, ChestType } from '../types';
 // ─── Trophy Shelf ─────────────────────────────────────────────────────────────
 
 const SHELF_ROWS: { type: ChestType; label: string; gradient: string; glow: string; shelfBg: string }[] = [
+  {
+    type: 'diamant',
+    label: 'Diamantkistor',
+    gradient: 'from-cyan-300 via-blue-400 to-violet-500',
+    glow: 'rgba(99,202,247,0.65)',
+    shelfBg: 'linear-gradient(135deg, #0c1445 0%, #1e3a8a 40%, #312e81 100%)',
+  },
+  {
+    type: 'smaragd',
+    label: 'Smaragdkistor',
+    gradient: 'from-emerald-300 via-green-400 to-teal-500',
+    glow: 'rgba(52,211,153,0.55)',
+    shelfBg: 'linear-gradient(135deg, #064e3b 0%, #065f46 40%, #047857 100%)',
+  },
+  {
+    type: 'rubin',
+    label: 'Rubinkistor',
+    gradient: 'from-red-400 via-rose-400 to-pink-500',
+    glow: 'rgba(239,68,68,0.5)',
+    shelfBg: 'linear-gradient(135deg, #4c0519 0%, #881337 40%, #9f1239 100%)',
+  },
   {
     type: 'gold',
     label: 'Guldkistor',
@@ -282,9 +304,12 @@ export default function KistorView() {
 
   const unopened = gam.chests.filter(c => !c.opened);
   const opened = gam.chests.filter(c => c.opened);
-  const goldCount = opened.filter(c => c.type === 'gold').length;
-  const silverCount = opened.filter(c => c.type === 'silver').length;
-  const woodCount = opened.filter(c => c.type === 'wood').length;
+  const diamantCount = opened.filter(c => c.type === 'diamant').length;
+  const smaragdCount = opened.filter(c => c.type === 'smaragd').length;
+  const rubinCount   = opened.filter(c => c.type === 'rubin').length;
+  const goldCount    = opened.filter(c => c.type === 'gold').length;
+  const silverCount  = opened.filter(c => c.type === 'silver').length;
+  const woodCount    = opened.filter(c => c.type === 'wood').length;
   const exercisesLeft = Math.max(0, BOSS_UNLOCK_THRESHOLD - gam.exercisesCompleted);
 
   function handleOpenChest(chestId: string) {
@@ -297,8 +322,14 @@ export default function KistorView() {
       result = { ...openWoodChest() };
     } else if (chest.type === 'silver') {
       result = openSilverChest(gam.badges);
-    } else {
+    } else if (chest.type === 'gold') {
       result = openGoldChest(gam.badges);
+    } else if (chest.type === 'rubin') {
+      result = openRubinChest(gam.badges);
+    } else if (chest.type === 'smaragd') {
+      result = openSmaragdChest(gam.badges);
+    } else {
+      result = openDiamantChest(gam.badges);
     }
 
     const newChests = gam.chests.map(c =>
@@ -345,11 +376,14 @@ export default function KistorView() {
           </div>
 
           {/* Stats row */}
-          <div className="flex gap-2">
-            <StatBadge emoji="🥇" count={goldCount}   label="Guld"   gradient="from-yellow-300 to-amber-500" />
-            <StatBadge emoji="🥈" count={silverCount} label="Silver" gradient="from-slate-200 to-slate-400" />
-            <StatBadge emoji="🥉" count={woodCount}   label="Brons"  gradient="from-amber-600 to-amber-800" />
-            <StatBadge emoji="📬" count={unopened.length} label="Väntar" gradient="from-purple-400 to-violet-500" />
+          <div className="flex gap-1.5 flex-wrap">
+            {diamantCount > 0 && <StatBadge emoji="💎" count={diamantCount} label="Diamant" gradient="from-cyan-300 to-violet-500" />}
+            {smaragdCount > 0 && <StatBadge emoji="🟢" count={smaragdCount} label="Smaragd" gradient="from-emerald-300 to-teal-500" />}
+            {rubinCount   > 0 && <StatBadge emoji="🔴" count={rubinCount}   label="Rubin"   gradient="from-red-400 to-rose-600" />}
+            <StatBadge emoji="🟡" count={goldCount}        label="Guld"    gradient="from-yellow-300 to-amber-500" />
+            <StatBadge emoji="⬜" count={silverCount}      label="Silver"  gradient="from-slate-200 to-slate-400" />
+            <StatBadge emoji="🟫" count={woodCount}        label="Brons"   gradient="from-amber-600 to-amber-800" />
+            <StatBadge emoji="📬" count={unopened.length}  label="Väntar"  gradient="from-purple-400 to-violet-500" />
           </div>
         </div>
       </div>
@@ -502,27 +536,33 @@ export default function KistorView() {
             <div>
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Avklara kapitel</p>
               <ul className="space-y-1.5 text-sm text-blue-100/80">
-                <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> Klara ditt allra första kapitel!</span></li>
-                <li className="flex items-start gap-2"><span>🥉</span><span><strong>Bronskista:</strong> Klara ett nytt kapitel för första gången (≥50%)</span></li>
-                <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> Få 3 stjärnor på ett kapitel för första gången</span></li>
-                <li className="flex items-start gap-2"><span>🥈</span><span><strong>Silverkista:</strong> Perfekt poäng (100%) på ett kapitel</span></li>
-                <li className="flex items-start gap-2"><span>🥇</span><span><strong>Guldkista:</strong> Klara alla kapitel i en hel värld!</span></li>
+                <li className="flex items-start gap-2"><span>⬜</span><span><strong>Silverkista:</strong> Klara ditt allra första kapitel!</span></li>
+                <li className="flex items-start gap-2"><span>🟫</span><span><strong>Bronskista:</strong> Klara ett nytt kapitel för första gången (≥50%)</span></li>
+                <li className="flex items-start gap-2"><span>⬜</span><span><strong>Silverkista:</strong> Få 3 stjärnor på ett kapitel för första gången</span></li>
+                <li className="flex items-start gap-2"><span>⬜</span><span><strong>Silverkista:</strong> Perfekt poäng (100%) på ett kapitel</span></li>
+                <li className="flex items-start gap-2"><span>🔴</span><span><strong>Rubinkista:</strong> Klara alla kapitel i en hel värld!</span></li>
               </ul>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Poäng-milstolpar</p>
               <ul className="space-y-1 text-sm text-blue-100/80">
-                <li className="flex gap-2"><span>🥉</span><span>50, 100, 200, 600 p</span></li>
-                <li className="flex gap-2"><span>🥈</span><span>300, 500, 750, 1 500, 2 000 p</span></li>
-                <li className="flex gap-2"><span>🥇</span><span>1 000, 2 500, 3 500, 5 000 p</span></li>
+                <li className="flex gap-2"><span>🟫</span><span>50, 100, 200, 600 p</span></li>
+                <li className="flex gap-2"><span>⬜</span><span>300, 500, 750, 1 500, 2 000 p</span></li>
+                <li className="flex gap-2"><span>🟡</span><span>1 000, 2 500 p</span></li>
+                <li className="flex gap-2"><span>🔴</span><span>3 500, 5 000 p</span></li>
+                <li className="flex gap-2"><span>🟢</span><span>7 000, 10 000 p</span></li>
+                <li className="flex gap-2"><span>💎</span><span>15 000, 20 000 p</span></li>
               </ul>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Klarade kapitel (antal)</p>
               <ul className="space-y-1 text-sm text-blue-100/80">
-                <li className="flex gap-2"><span>🥉</span><span>1, 2, 3, 5, 10 kapitel</span></li>
-                <li className="flex gap-2"><span>🥈</span><span>15, 20, 40 kapitel</span></li>
-                <li className="flex gap-2"><span>🥇</span><span>30, 60, 75, 100 kapitel</span></li>
+                <li className="flex gap-2"><span>🟫</span><span>1, 2, 3, 5, 10 kapitel</span></li>
+                <li className="flex gap-2"><span>⬜</span><span>15, 20, 40 kapitel</span></li>
+                <li className="flex gap-2"><span>🟡</span><span>30, 60 kapitel</span></li>
+                <li className="flex gap-2"><span>🔴</span><span>75 kapitel</span></li>
+                <li className="flex gap-2"><span>🟢</span><span>100 kapitel</span></li>
+                <li className="flex gap-2"><span>💎</span><span>150 kapitel</span></li>
               </ul>
             </div>
             <div className="flex items-start gap-2 text-sm text-blue-100/80 border-t border-blue-400/20 pt-3">
