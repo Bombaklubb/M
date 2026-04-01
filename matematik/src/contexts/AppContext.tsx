@@ -12,17 +12,20 @@ import {
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
+  chestsEarnedFromTopicEvent,
   rollMysteryBox, BOSS_UNLOCK_THRESHOLD,
 } from '../utils/chestStorage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { TOPICS } from '../data/topics';
-import { WorldId } from '../data/worlds';
+import { WORLDS, WorldId } from '../data/worlds';
 
 export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
   | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
-  | 'sluttest' | 'kistor';
+  | 'sluttest' | 'kistor'
+  | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins'
+  | 'game-memory' | 'game-hangman';
 
 interface AppContextValue {
   currentStudent: Student | null;
@@ -31,6 +34,7 @@ interface AppContextValue {
   isTeacher: boolean;
   sluttestWorldId: WorldId | null;
   questWorldId: WorldId | null;
+  gameWorldId: WorldId | null;
   pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null;
   clearPendingChestResult: () => void;
   login: (student: Student) => void;
@@ -40,6 +44,7 @@ interface AppContextValue {
   setTeacher: (val: boolean) => void;
   startSluttest: (worldId: WorldId) => void;
   startQuest: (worldId: WorldId) => void;
+  startGames: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null };
   updateAvatar: (avatarIndex: number) => void;
@@ -54,6 +59,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [isTeacher, setIsTeacherState] = useState(false);
   const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
+  const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
 
   const login = useCallback((student: Student) => {
@@ -90,6 +96,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const startQuest = useCallback((worldId: WorldId) => {
     setQuestWorldId(worldId);
     setCurrentView('quest');
+  }, []);
+
+  const startGames = useCallback((worldId: WorldId) => {
+    setGameWorldId(worldId);
+    setCurrentView('games');
   }, []);
 
   const getStudentStats = useCallback((student: Student) => {
@@ -147,9 +158,30 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
     const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
     const exerciseChests = chestsEarnedFromExercises(prevExercises, newExercises, gam.exerciseMilestonesRewarded);
-    const allNewChests = [...pointChests, ...exerciseChests];
 
-    const mysteryReward = rollMysteryBox(gam.badges);
+    // Topic / world completion chests
+    const progressAfter = getProgress(currentStudent.id);
+    const worldForTopic = WORLDS.find(w => w.topicIds.includes(topicId));
+    const allWorldTopicsCompleted = worldForTopic
+      ? TOPICS.filter(t => worldForTopic.topicIds.includes(t.id))
+          .every(t => progressAfter.some(p => p.topicId === t.id && p.completed))
+      : false;
+    const topicEventResult = chestsEarnedFromTopicEvent({
+      topicId,
+      worldId: worldForTopic?.id ?? null,
+      score,
+      stars,
+      allWorldTopicsCompleted,
+      gam,
+    });
+
+    const allNewChests = [
+      ...pointChests,
+      ...exerciseChests,
+      ...topicEventResult.chests.map(c => ({ chest: c })),
+    ];
+
+    const mysteryReward = rollMysteryBox(gam.badges, prevExercises);
     let updatedBadges = [...gam.badges];
     let mysteryChest: MattChest | null = null;
 
@@ -186,6 +218,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         ...gam.exerciseMilestonesRewarded,
         ...exerciseChests.map(c => c.milestone),
       ],
+      topicCompletionChestsRewarded: topicEventResult.topicCompletionChestsRewarded,
+      topic3StarChestsRewarded: topicEventResult.topic3StarChestsRewarded,
+      topicPerfectChestsRewarded: topicEventResult.topicPerfectChestsRewarded,
+      worldCompletionChestsRewarded: topicEventResult.worldCompletionChestsRewarded,
     };
     saveGamification(currentStudent.id, updatedGam);
 
@@ -203,7 +239,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

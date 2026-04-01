@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { getTextCountByGrade } from '../services/libraryService';
 import { BookLogo } from './BookLogo';
+import { Button } from './ui/button';
+import { Card, CardContent } from './ui/card';
+import { BorderBeam } from './ui/border-beam';
+import { cn } from '@/lib/utils';
 
 interface SetupViewProps {
   onSelectGrade: (grade: number) => void;
@@ -46,11 +51,27 @@ export const SetupView: React.FC<SetupViewProps> = ({
     return 'Gymnasiet';
   };
 
-  const getGradeLabelColor = (grade: number): string => {
-    if (grade <= 3) return 'text-green-600';
-    if (grade <= 6) return 'text-blue-600';
-    if (grade <= 9) return 'text-purple-600';
-    return 'text-orange-600';
+  const getGradeColor = (grade: number): { bg: string; text: string; gradient: string } => {
+    if (grade <= 3) return {
+      bg: 'bg-emerald-500',
+      text: 'text-emerald-600 dark:text-emerald-400',
+      gradient: 'from-emerald-500 to-teal-500'
+    };
+    if (grade <= 6) return {
+      bg: 'bg-blue-500',
+      text: 'text-blue-600 dark:text-blue-400',
+      gradient: 'from-blue-500 to-cyan-500'
+    };
+    if (grade <= 9) return {
+      bg: 'bg-violet-500',
+      text: 'text-violet-600 dark:text-violet-400',
+      gradient: 'from-violet-500 to-purple-500'
+    };
+    return {
+      bg: 'bg-amber-500',
+      text: 'text-amber-600 dark:text-amber-400',
+      gradient: 'from-amber-500 to-orange-500'
+    };
   };
 
   const getGradeDisplayText = (grade: number): string => {
@@ -61,78 +82,159 @@ export const SetupView: React.FC<SetupViewProps> = ({
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="text-center">
-          <div className="flex justify-center mb-4">
-            <div className="animate-bounce">
-              <BookLogo size={120} />
-            </div>
-          </div>
-          <p className="text-xl text-slate-600">Laddar texter...</p>
-        </div>
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            className="flex justify-center mb-4"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <BookLogo size={120} />
+          </motion.div>
+          <p className="text-xl text-slate-600 dark:text-slate-400">Laddar texter...</p>
+        </motion.div>
       </div>
     );
   }
 
+  const colors = getGradeColor(selectedGrade);
+
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <div className="max-w-2xl mx-auto px-4 py-4">
       {/* Header */}
-      <div className="text-center mb-4">
+      <motion.div
+        className="text-center mb-3"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <div className="flex items-center justify-center">
-          <BookLogo size={260} />
+          <BookLogo size={140} />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white dark:bg-slate-800 p-6 md:p-8 rounded-3xl shadow-lg">
-        {/* Välj svårighetsgrad */}
-        <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-6 text-center">Börja ditt läsäventyr</h2>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Card className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-white/20 shadow-2xl overflow-hidden">
+          <BorderBeam size={200} duration={12} colorFrom="#6366f1" colorTo="#22c55e" />
 
-          {/* Grade display */}
-          <div className="text-center mb-6">
-            <div className="text-6xl font-bold text-indigo-600 dark:text-indigo-400">{getGradeDisplayText(selectedGrade)}</div>
-            <div className={`text-lg font-semibold ${getGradeLabelColor(selectedGrade)}`}>
-              {getGradeLabel(selectedGrade)}
-            </div>
-          </div>
+          <CardContent className="p-4 md:p-6">
+            {/* Title */}
+            <motion.h2
+              className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4 text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              Börja ditt läsäventyr
+            </motion.h2>
 
-          {/* Grade selector buttons */}
-          <div className="flex justify-between items-center gap-1 md:gap-2 mb-2">
-            {GRADE_LABELS.map((item) => (
-              <button
-                key={item.grade}
-                onClick={() => setSelectedGrade(item.grade)}
-                className={`flex-1 py-3 md:py-4 rounded-xl font-bold text-sm md:text-base transition-all ${
-                  item.grade === selectedGrade
-                    ? 'bg-indigo-600 text-white shadow-lg scale-105'
-                    : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
-                }`}
+            {/* Grade display */}
+            <motion.div
+              className="text-center mb-4"
+              layout
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={selectedGrade}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  className={cn(
+                    "inline-flex items-center justify-center w-20 h-20 rounded-2xl text-4xl font-bold text-white mb-2 shadow-xl",
+                    `bg-gradient-to-br ${colors.gradient}`
+                  )}
+                >
+                  {getGradeDisplayText(selectedGrade)}
+                </motion.div>
+              </AnimatePresence>
+              <motion.div
+                className={cn("text-base font-semibold", colors.text)}
+                key={`label-${selectedGrade}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
               >
-                {item.label}
-              </button>
-            ))}
-          </div>
+                {getGradeLabel(selectedGrade)}
+              </motion.div>
+            </motion.div>
 
-          {/* No-texts fallback (hidden count) */}
-          {textCounts[selectedGrade] !== undefined && textCounts[selectedGrade] === 0 && (
-            <div className="text-center mt-4 text-sm text-slate-500 dark:text-slate-400">
-              Inga texter ännu - kommer snart!
-            </div>
-          )}
-        </div>
+            {/* Grade selector buttons */}
+            <motion.div
+              className="grid grid-cols-5 md:grid-cols-10 gap-2 mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              {GRADE_LABELS.map((item, index) => {
+                const itemColors = getGradeColor(item.grade);
+                return (
+                  <motion.button
+                    key={item.grade}
+                    onClick={() => setSelectedGrade(item.grade)}
+                    className={cn(
+                      "relative py-2 md:py-3 rounded-xl font-bold text-sm transition-all duration-200",
+                      item.grade === selectedGrade
+                        ? `bg-gradient-to-br ${itemColors.gradient} text-white shadow-lg`
+                        : "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"
+                    )}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 * index }}
+                  >
+                    {item.label}
+                    {item.grade === selectedGrade && (
+                      <motion.div
+                        className="absolute inset-0 rounded-xl ring-2 ring-white/50"
+                        layoutId="selectedGrade"
+                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      />
+                    )}
+                  </motion.button>
+                );
+              })}
+            </motion.div>
 
-        {/* Start button */}
-        <button
-          onClick={handleStart}
-          disabled={!textCounts[selectedGrade] || textCounts[selectedGrade] === 0}
-          className={`w-full py-4 px-6 rounded-xl text-white font-bold text-xl shadow-lg transition-all ${
-            textCounts[selectedGrade] && textCounts[selectedGrade] > 0
-              ? 'bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 hover:shadow-xl transform hover:scale-[1.02]'
-              : 'bg-slate-300 dark:bg-slate-600 cursor-not-allowed'
-          }`}
-        >
-          Börja läsa!
-        </button>
-      </div>
+            {/* No-texts fallback */}
+            <AnimatePresence>
+              {textCounts[selectedGrade] !== undefined && textCounts[selectedGrade] === 0 && (
+                <motion.div
+                  className="text-center mb-4 text-sm text-slate-500 dark:text-slate-400"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                >
+                  Inga texter ännu - kommer snart!
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Start button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <Button
+                onClick={handleStart}
+                disabled={!textCounts[selectedGrade] || textCounts[selectedGrade] === 0}
+                variant="success"
+                size="lg"
+                className="w-full text-lg"
+              >
+                Börja läsa!
+              </Button>
+            </motion.div>
+          </CardContent>
+        </Card>
+      </motion.div>
     </div>
   );
 };

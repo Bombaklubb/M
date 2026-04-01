@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { AppState, User, LibraryText, UserAnswers, Badge, QuestionResult } from './types';
+import { AppState, User, LibraryText, UserAnswers, Badge, QuestionResult, Chest } from './types';
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';
 import { SetupView } from './components/SetupView';
@@ -7,6 +7,7 @@ import { QuizView } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
+import { KistorView } from './components/KistorView';
 import { BookLogo } from './components/BookLogo';
 import {
   loginUser,
@@ -16,8 +17,16 @@ import {
   getCompletedTextIds,
   getRecentCompletedTexts,
   updateAvatar,
+  saveUser,
 } from './services/userService';
 import { getRandomText } from './services/libraryService';
+import {
+  loadGamification,
+  saveGamification,
+  chestsEarnedFromPoints,
+  chestsEarnedFromTexts,
+  rollMysteryBox,
+} from './lib/gamification';
 
 function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -32,7 +41,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
   const [showTeacher, setShowTeacher] = useState(false);
-    const quizStartTime = useRef<number | null>(null);
+  const [showKistor, setShowKistor] = useState(false);
+  const quizStartTime = useRef<number | null>(null);
 
   // Ladda användare vid start
   useEffect(() => {
@@ -96,7 +106,22 @@ function App() {
     setUserAnswers({});
     setLastResult(null);
     setShowProfile(false);
+    setShowKistor(false);
     setAppState(AppState.LOGIN);
+  };
+
+  // Handle points update from chests
+  const handleChestPointsUpdate = (points: number) => {
+    if (!user) return;
+    const updatedUser = { ...user, totalPoints: user.totalPoints + points };
+    saveUser(updatedUser);
+    setUser(updatedUser);
+  };
+
+  // Get number of unopened chests
+  const getUnopenedChestsCount = (): number => {
+    const gam = loadGamification();
+    return gam.chests.filter((c) => !c.opened).length;
   };
 
   // Välj årskurs och hämta en text - gå direkt till quiz (side-by-side)
@@ -155,6 +180,48 @@ function App() {
       readingTimeSeconds
     );
 
+    // Check for chest milestones
+    const gam = loadGamification();
+    const prevPoints = user.totalPoints;
+    const newPoints = updatedUser.totalPoints;
+    const prevTexts = user.completedTexts.length;
+    const newTexts = updatedUser.completedTexts.length;
+
+    const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
+    const textChests = chestsEarnedFromTexts(prevTexts, newTexts, gam.textMilestonesRewarded);
+    const mysteryReward = rollMysteryBox(gam.gamificationBadges);
+
+    const newChests: Chest[] = [
+      ...pointChests.map(c => c.chest),
+      ...textChests.map(c => c.chest),
+    ];
+
+    // Add mystery box chest if applicable
+    if (mysteryReward && mysteryReward.type === 'chest' && mysteryReward.chestType) {
+      newChests.push({
+        id: `mystery_${Date.now()}`,
+        type: mysteryReward.chestType,
+        earnedAt: new Date().toISOString(),
+        opened: false,
+      });
+    }
+
+    // Update gamification data
+    const updatedGam = {
+      ...gam,
+      chests: [...gam.chests, ...newChests],
+      textsCompleted: newTexts,
+      pointsMilestonesRewarded: [
+        ...gam.pointsMilestonesRewarded,
+        ...pointChests.map(c => c.milestone),
+      ],
+      textMilestonesRewarded: [
+        ...gam.textMilestonesRewarded,
+        ...textChests.map(c => c.milestone),
+      ],
+    };
+    saveGamification(updatedGam);
+
     setUser(updatedUser);
     setLastResult({ pointsEarned, newBadges });
     setAppState(AppState.RESULT);
@@ -168,6 +235,7 @@ function App() {
     setUserAnswers({});
     setLastResult(null);
     setShowProfile(false);
+    setShowKistor(false);
     setAppState(AppState.SETUP);
     window.scrollTo(0, 0);
   };
@@ -295,6 +363,8 @@ function App() {
           onLogout={handleLogout}
           onHomeClick={handleRestart}
           onProfileClick={() => setShowProfile(false)}
+          onKistorClick={() => { setShowProfile(false); setShowKistor(true); }}
+          unopenedChests={getUnopenedChestsCount()}
         />
         <ProfileView
           user={user}
@@ -302,6 +372,17 @@ function App() {
           onAvatarChange={handleAvatarChange}
         />
       </div>
+    );
+  }
+
+  // Kistor view
+  if (showKistor) {
+    return (
+      <KistorView
+        user={user}
+        onClose={() => setShowKistor(false)}
+        onPointsUpdate={handleChestPointsUpdate}
+      />
     );
   }
 
@@ -357,6 +438,8 @@ function App() {
         onLogout={handleLogout}
         onHomeClick={handleRestart}
         onProfileClick={() => setShowProfile(true)}
+        onKistorClick={() => setShowKistor(true)}
+        unopenedChests={getUnopenedChestsCount()}
       />
 
       <main className="relative z-10">

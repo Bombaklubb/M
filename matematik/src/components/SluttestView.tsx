@@ -41,8 +41,8 @@ function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestio
     .filter(Boolean) as Topic[];
   if (topics.length === 0) return [];
 
-  // Scale questions per topic so total is at least 25
-  const qPerTopic = topics.length <= 6 ? 4 : topics.length <= 12 ? 3 : topics.length <= 20 ? 2 : 1;
+  // Scale questions per topic so total is always at least 30
+  const qPerTopic = Math.ceil(30 / topics.length);
 
   const all: SluttestQuestion[] = [];
   for (const topic of topics) {
@@ -55,8 +55,8 @@ function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestio
     }
   }
 
-  // Target 25–30 questions
-  const target = Math.min(Math.max(25, all.length), 30);
+  // Target exactly 30 questions
+  const target = Math.min(all.length, 30);
   return shuffle(all).slice(0, target);
 }
 
@@ -126,7 +126,7 @@ function Intro({
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
       <div
@@ -257,7 +257,7 @@ function Test({
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
 
@@ -473,7 +473,7 @@ function Result({
   return (
     <div
       className="min-h-screen pb-10"
-      style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
     >
       <AppHeader />
       <div className={`max-w-md mx-auto px-4 pt-20 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

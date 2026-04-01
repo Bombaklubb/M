@@ -121,11 +121,32 @@ export interface WordSearchModule {
   words: WordSearchWord[];
 }
 
+// ─── Coin Game (Samla mynt) ───────────────────────────────────────────────────
+
+export interface CoinGameQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation?: string;
+}
+
+export interface CoinGameModule {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  pointsRequired: number;
+  bonusPoints: number;
+  questions: CoinGameQuestion[];
+}
+
 export interface StageContent {
   grammar: GrammarModule[];
   reading: ReadingModule[];
   spelling?: SpellingModule[];
   wordsearch?: WordSearchModule[];
+  spel?: CoinGameModule[];
 }
 
 // ─── Student progress (stored in localStorage) ───────────────────────────────
@@ -144,6 +165,7 @@ export interface StageProgress {
   readingModules: Record<string, ModuleProgress>;
   spellingModules: Record<string, ModuleProgress>;
   wordsearchModules: Record<string, ModuleProgress>;
+  spelModules?: Record<string, ModuleProgress>;
 }
 
 export type SkinTone = "light" | "light_brown" | "dark";

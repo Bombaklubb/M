@@ -3641,5 +3641,247 @@
         }
       ]
     }
+  ],
+  "spel": [
+    {
+      "id": "gym-spel-1-idiom",
+      "title": "Samla mynt – Idiom och fraser",
+      "description": "Lär dig vanliga engelska idiom och samla mynt!",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "gym-spel-1-q1",
+          "question": "Vad betyder idiomet 'hit the nail on the head'?",
+          "options": [
+            "Slå på ett spik bokstavligen",
+            "Träffa rätt / säga exakt rätt sak",
+            "Misslyckas med något",
+            "Arbeta hårt"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Hit the nail on the head' = säga precis rätt, träffa rätt."
+        },
+        {
+          "id": "gym-spel-1-q2",
+          "question": "Vad betyder 'bite off more than you can chew'?",
+          "options": [
+            "Äta för snabbt",
+            "Ta på sig mer än man klarar",
+            "Vara girig",
+            "Prata med munnen full"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ta på sig mer ansvar eller uppgifter än man kan hantera."
+        },
+        {
+          "id": "gym-spel-1-q3",
+          "question": "Vad betyder 'under the weather'?",
+          "options": [
+            "Det regnar",
+            "Känna sig sjuk/dålig",
+            "Vara utomhus",
+            "Ha dålig ekonomi"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Feeling under the weather' = känna sig sjuk eller ledsen."
+        },
+        {
+          "id": "gym-spel-1-q4",
+          "question": "Vad betyder 'beat around the bush'?",
+          "options": [
+            "Gå direkt på saken",
+            "Promenera i skogen",
+            "Undvika det egentliga ämnet",
+            "Arbeta i trädgården"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Beat around the bush' = undvika att säga det viktiga direkt."
+        },
+        {
+          "id": "gym-spel-1-q5",
+          "question": "Vad betyder 'once in a blue moon'?",
+          "options": [
+            "Varje månad",
+            "Vid fullmåne",
+            "Väldigt sällan",
+            "En natt i månaden"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Once in a blue moon' = mycket sällan, nästan aldrig."
+        },
+        {
+          "id": "gym-spel-1-q6",
+          "question": "Vad betyder 'break the ice'?",
+          "options": [
+            "Bryta is bokstavligen",
+            "Förstöra något",
+            "Starta en konversation och lätta stämningen",
+            "Avsluta ett möte"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Break the ice' = göra något för att lätta på stämningen i en ny situation."
+        },
+        {
+          "id": "gym-spel-1-q7",
+          "question": "Vad betyder 'cost an arm and a leg'?",
+          "options": [
+            "Vara billigt",
+            "Vara väldigt dyrt",
+            "Vara skadligt för kroppen",
+            "Handla om sjukvård"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Cost an arm and a leg' = vara extremt dyrt."
+        },
+        {
+          "id": "gym-spel-1-q8",
+          "question": "Vad betyder 'spill the beans'?",
+          "options": [
+            "Laga mat",
+            "Avslöja en hemlighet",
+            "Göra en röra",
+            "Glömma något viktigt"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Spill the beans' = avslöja en hemlighet av misstag."
+        },
+        {
+          "id": "gym-spel-1-q9",
+          "question": "Vad betyder 'the ball is in your court'?",
+          "options": [
+            "Du ska spela tennis",
+            "Du måste fatta beslutet",
+            "Det är ditt fel",
+            "Du vinner"
+          ],
+          "correctIndex": 1,
+          "explanation": "'The ball is in your court' = det är upp till dig att agera eller bestämma."
+        },
+        {
+          "id": "gym-spel-1-q10",
+          "question": "Vad betyder 'burn bridges'?",
+          "options": [
+            "Förstöra en fysisk bro",
+            "Ta risker",
+            "Förstöra relationer permanent",
+            "Arbeta som brandman"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Burn bridges' = förstöra relationer eller möjligheter för framtiden."
+        }
+      ]
+    },
+    {
+      "id": "gym-spel-2-akademiskt",
+      "title": "Samla mynt – Akademisk engelska",
+      "description": "Öva på akademiskt och formellt språk!",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "questions": [
+        {
+          "id": "gym-spel-2-q1",
+          "question": "Vilket ord är mest formellt/akademiskt för 'use'?",
+          "options": ["apply", "utilize", "employ", "Alla är likvärdigt formella"],
+          "correctIndex": 3,
+          "explanation": "'Apply', 'utilize' och 'employ' är alla mer formella alternativ till 'use'."
+        },
+        {
+          "id": "gym-spel-2-q2",
+          "question": "Vad är ett bra akademiskt ord för 'show'?",
+          "options": ["demonstrate", "prove", "indicate", "Alla passar i akademisk text"],
+          "correctIndex": 3,
+          "explanation": "I akademisk text kan man använda 'demonstrate', 'indicate', 'illustrate', 'reveal' m.fl."
+        },
+        {
+          "id": "gym-spel-2-q3",
+          "question": "Vilket är korrekt i ett formellt brev?",
+          "options": [
+            "Hey, I'm writing about...",
+            "Dear Sir/Madam, I am writing to...",
+            "Hi there, I wanna talk about...",
+            "To whoever, I need to say..."
+          ],
+          "correctIndex": 1,
+          "explanation": "Formella brev börjar med 'Dear Sir/Madam' och undviker förkortningar."
+        },
+        {
+          "id": "gym-spel-2-q4",
+          "question": "Vilken fras introducerar bäst ett motargument i en essä?",
+          "options": [
+            "But some people think...",
+            "However, it could be argued that...",
+            "On the other hand, you know...",
+            "Wait, actually..."
+          ],
+          "correctIndex": 1,
+          "explanation": "'However, it could be argued that...' är den mest formella och akademiska varianten."
+        },
+        {
+          "id": "gym-spel-2-q5",
+          "question": "Vad betyder den akademiska termen 'substantiate'?",
+          "options": [
+            "Motbevisa",
+            "Undersöka",
+            "Stödja med bevis",
+            "Sammanfatta"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Substantiate' = styrka eller stödja ett påstående med bevis."
+        },
+        {
+          "id": "gym-spel-2-q6",
+          "question": "Vilken mening är skriven i akademisk passiv form?",
+          "options": [
+            "We found that the results were significant.",
+            "The results were found to be significant.",
+            "I think the results are significant.",
+            "You can see that results are significant."
+          ],
+          "correctIndex": 1,
+          "explanation": "Akademisk text undviker ofta 'I/we' och föredrar passiv konstruktion."
+        },
+        {
+          "id": "gym-spel-2-q7",
+          "question": "Vad är ett bättre akademiskt ord för 'good'?",
+          "options": ["nice", "beneficial", "cool", "okay"],
+          "correctIndex": 1,
+          "explanation": "'Beneficial' (fördelaktig) är ett mer precist och akademiskt ord än 'good'."
+        },
+        {
+          "id": "gym-spel-2-q8",
+          "question": "Vilken fras fungerar bäst som avslutning i en akademisk essä?",
+          "options": [
+            "So that's basically it.",
+            "In conclusion, the evidence suggests that...",
+            "To wrap things up, I think...",
+            "Anyway, that's my point."
+          ],
+          "correctIndex": 1,
+          "explanation": "'In conclusion' är den standardiserade akademiska frasen för slutsatser."
+        },
+        {
+          "id": "gym-spel-2-q9",
+          "question": "Vad betyder 'albeit'?",
+          "options": ["ändå", "även om", "trots allt", "alltid"],
+          "correctIndex": 1,
+          "explanation": "'Albeit' är ett formellt ord som betyder 'even though' / 'although'."
+        },
+        {
+          "id": "gym-spel-2-q10",
+          "question": "Vilken fras visar bäst på orsak-verkan i akademisk text?",
+          "options": [
+            "because of this thing that happened",
+            "Consequently, this led to...",
+            "so yeah, that's why...",
+            "Due to this, like..."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Consequently' är en akademisk konjunktionsadverb för orsak-verkan."
+        }
+      ]
+    }
   ]
 }

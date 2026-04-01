@@ -9,7 +9,7 @@ import { gradeToWorld } from '../data/worlds';
 
 type Phase = 'list' | 'intro' | 'step' | 'result';
 
-const DARK_BG = 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)';
+const DARK_BG = 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)';
 
 export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView, questWorldId } = useApp();

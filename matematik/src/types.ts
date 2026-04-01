@@ -127,7 +127,7 @@ export interface PointsRecord {
 export const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 800, 1200, 1800, 2500, 3500, 5000];
 export const LEVEL_NAMES = [
   'Nybörjare', 'Räknare', 'Mattenisse', 'Talälskare',
-  'Formelmästare', 'Algebran', 'Geometrien', 'Statistikern',
+  'Formelmästare', 'Algebristen', 'Problemlösaren', 'Statistikern',
   'Mattestjärnan', 'Matematikern', 'Matte-Legenden',
 ];
 export const LEVEL_COLORS = [
@@ -195,7 +195,7 @@ export interface StudentMessage {
 }
 
 // === CHESTS / GAMIFICATION ===
-export type ChestType = 'wood' | 'silver' | 'gold';
+export type ChestType = 'wood' | 'silver' | 'gold' | 'rubin' | 'smaragd' | 'diamant';
 
 export interface MattChest {
   id: string;
@@ -223,6 +223,14 @@ export interface MattGamificationData {
   bossWins: number;
   pointsMilestonesRewarded: number[];
   exerciseMilestonesRewarded: number[];
+  /** topicIds that already gave a completion chest */
+  topicCompletionChestsRewarded: string[];
+  /** topicIds that already gave a 3-star chest */
+  topic3StarChestsRewarded: string[];
+  /** topicIds that already gave a perfect-score chest */
+  topicPerfectChestsRewarded: string[];
+  /** worldIds that already gave a world-completion gold chest */
+  worldCompletionChestsRewarded: string[];
 }
 
 // === APP STATE ===

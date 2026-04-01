@@ -36,9 +36,11 @@ export function saveStudent(student: Student): void {
 
 export function findOrCreateStudent(name: string, grade: Grade, avatar: number): Student {
   const students = getAllStudents();
-  // Find by name (case insensitive) and grade
+  // Find by name only (case insensitive).
+  // Do NOT filter on grade — grade can be changed via teacher view and must not
+  // cause a new account to be created on the next login.
   const existing = students.find(
-    s => s.name.toLowerCase() === name.toLowerCase() && s.grade === grade
+    s => s.name.toLowerCase() === name.toLowerCase()
   );
   if (existing) {
     // Always apply the avatar selected at login

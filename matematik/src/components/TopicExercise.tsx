@@ -5,6 +5,7 @@ import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import AppHeader from './AppHeader';
 import InteractiveClock from './InteractiveClock';
+import { Progress } from './ui/progress';
 
 interface ExerciseState {
   answered: boolean;
@@ -42,6 +43,16 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     setShowHint(false);
     exerciseStartRef.current = Date.now();
   }, [currentIdx]);
+
+  // Press Enter again after answering to go to next question
+  useEffect(() => {
+    if (!state.answered) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Enter') handleNext();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [state.answered, currentIdx]);
 
   function answerMultipleChoice(idx: number) {
     if (state.answered) return;
@@ -121,7 +132,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   const isLastExercise = currentIdx === topic.exercises.length - 1;
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(135deg, #07071a 0%, #0d0d2b 50%, #1a0a2e 100%)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
       <AppHeader />
       {/* Top bar */}
       <div className={`bg-gradient-to-r ${topic.color} text-white px-4 pt-16 pb-3`}>
@@ -141,25 +152,23 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             </span>
           </div>
           {/* Progress bar */}
-          <div className="h-2 bg-white/30 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-white rounded-full transition-all duration-500"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
+          <Progress value={progress} className="h-2.5 bg-white/20" />
         </div>
       </div>
 
       {/* Celebration overlay */}
       {showCelebration && (
         <div className="fixed inset-0 pointer-events-none flex items-center justify-center z-50">
-          <div className="text-8xl animate-bounce-in">⭐</div>
+          <div className="flex flex-col items-center gap-2 animate-bounce-in">
+            <div className="text-8xl drop-shadow-[0_0_30px_rgba(251,191,36,0.9)]">⭐</div>
+            <div className="text-2xl font-black text-white drop-shadow-lg tracking-wide">Rätt!</div>
+          </div>
         </div>
       )}
 
       {/* Exercise area */}
       <div className="flex-1 max-w-lg mx-auto w-full px-4 py-6">
-        <div className="bg-white/8 backdrop-blur-md border border-white/15 rounded-3xl p-6 mb-4">
+        <div className="rounded-3xl p-6 mb-4" style={{ background: 'rgba(40,8,32,0.82)', backdropFilter: 'blur(20px)', border: '1px solid rgba(200,140,50,0.28)', boxShadow: '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,220,100,0.07)' }}>
           {/* Points badge */}
           <div className="flex justify-between items-center mb-4">
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
@@ -248,8 +257,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           )}
           {/* Rätt svar – kort bekräftelse */}
           {showExplanation && state.correct && (
-            <div className="mt-4 rounded-2xl px-4 py-3 bg-emerald-500/20 border border-emerald-400/40 animate-fade-in">
-              <p className="text-emerald-300 font-black">🎉 Rätt! Bra jobbat!</p>
+            <div className="mt-4 rounded-2xl px-4 py-4 bg-emerald-500/20 border-2 border-emerald-400/60 animate-fade-in shadow-lg shadow-emerald-500/10">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">🎉</span>
+                <div>
+                  <p className="text-emerald-300 font-black text-lg">Rätt svar!</p>
+                  <p className="text-emerald-400/70 text-xs">+{exercise.points} poäng</p>
+                </div>
+                <span className="ml-auto text-emerald-400 text-2xl font-black">✓</span>
+              </div>
             </div>
           )}
           {/* Fel svar – rik förklaring med bildstöd */}
@@ -262,11 +278,14 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
         {state.answered && (
           <button
             onClick={handleNext}
-            className={`w-full font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all animate-slide-up ${
-              isLastExercise
-                ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white'
-                : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-            }`}
+            className="w-full font-black text-xl py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all animate-slide-up text-white"
+            style={isLastExercise ? {
+              background: 'linear-gradient(180deg, #22c55e 0%, #15803d 100%)',
+              boxShadow: '0 4px 20px rgba(34,197,94,0.45), 0 2px 0 rgba(0,0,0,0.3)',
+            } : {
+              background: 'linear-gradient(180deg, #f97316 0%, #c2560a 100%)',
+              boxShadow: '0 4px 20px rgba(249,115,22,0.45), 0 2px 0 rgba(0,0,0,0.3)',
+            }}
           >
             {isLastExercise ? '🏁 Se resultat!' : 'Nästa →'}
           </button>
@@ -281,9 +300,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
                 i < currentIdx
                   ? states[i].correct ? 'bg-emerald-500 text-white' : 'bg-rose-500 text-white'
                   : i === currentIdx
-                  ? 'bg-blue-500 text-white ring-2 ring-blue-300/50'
-                  : 'bg-white/10 text-white/40'
+                  ? 'text-white ring-2 ring-amber-400/50'
+                  : 'text-white/40'
               }`}
+              style={i === currentIdx ? {
+                background: 'linear-gradient(180deg, #f97316, #c2560a)',
+                boxShadow: '0 2px 8px rgba(249,115,22,0.45)',
+              } : i >= currentIdx ? {
+                background: 'rgba(255,255,255,0.08)',
+              } : undefined}
             >
               {i < currentIdx
                 ? states[i].correct ? '✓' : '✗'
@@ -306,7 +331,8 @@ function MultipleChoiceAnswers({
   return (
     <div className="grid gap-3">
       {exercise.options.map((opt, i) => {
-        let cls = 'border-2 border-white/15 bg-white/5 text-white hover:border-blue-400 hover:bg-blue-500/20';
+        let cls = 'border-2 text-white hover:scale-[1.01]';
+        let sty: React.CSSProperties = { background: 'rgba(40,8,32,0.70)', borderColor: 'rgba(200,140,50,0.28)' };
         if (state.answered) {
           if (i === exercise.correctIndex) cls = 'border-2 border-emerald-400 bg-emerald-500/20 text-emerald-200';
           else if (state.userAnswer === String(i)) cls = 'border-2 border-rose-400 bg-rose-500/20 text-rose-200';
@@ -317,6 +343,7 @@ function MultipleChoiceAnswers({
             key={i}
             onClick={() => onAnswer(i)}
             disabled={state.answered}
+            style={!state.answered ? sty : undefined}
             className={`w-full text-left px-5 py-3 rounded-2xl font-semibold text-base transition-all ${cls} ${!state.answered ? 'cursor-pointer active:scale-98' : 'cursor-default'}`}
           >
             <span className="font-bold text-white/40 mr-2">
@@ -417,13 +444,21 @@ function FillInAnswer({ exercise, state, input, inputRef, onChange, onSubmit }: 
               ? state.correct
                 ? 'border-emerald-400 bg-emerald-500/20 text-emerald-300'
                 : 'border-rose-400 bg-rose-500/20 text-rose-300'
-              : 'bg-white/10 border-white/20 text-white placeholder-white/30 focus:border-blue-400'
+              : 'text-white placeholder-white/30 focus:outline-none'
           }`}
+          style={!state.answered ? {
+            background: 'rgba(30,8,40,0.80)',
+            border: '2px solid rgba(200,140,50,0.35)',
+          } : undefined}
         />
         {!state.answered && (
           <button
             onClick={onSubmit}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-5 rounded-2xl transition-colors"
+            className="font-black text-white px-5 rounded-2xl transition-all hover:scale-105 active:scale-95"
+            style={{
+              background: 'linear-gradient(180deg, #f59e0b 0%, #b45309 100%)',
+              boxShadow: '0 3px 12px rgba(245,158,11,0.45)',
+            }}
           >
             ✓
           </button>
@@ -568,8 +603,8 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
     return <StepCalc title="Räkna så här:" lines={[`${a} − ${b} = ?`, `${a} − ${b} = ${diff}`]} answer={String(diff)} />;
   }
 
-  // ── Multiplication: "X × Y" or "X x Y" ──────────────────────────────────
-  const multMatch = q.match(/(\d+)\s*[×xX*]\s*(\d+)/);
+  // ── Multiplication: "X × Y", "X · Y", or "X x Y" ────────────────────────
+  const multMatch = q.match(/(\d+)\s*[×·xX*]\s*(\d+)/);
   if (multMatch && exercise.type === 'fill-in') {
     const a = parseInt(multMatch[1]), b = parseInt(multMatch[2]);
     const prod = a * b;
@@ -790,6 +825,16 @@ function generateHint(exercise: Exercise): string {
   // Percent / proportional change
   if (/procent|%|rabatt|ökning|minskning|förändring/i.test(q)) {
     return 'Procent – förändringsfaktorn:\n• Ökning med p%: multiplicera med (1 + p/100)\n  Exempel: +20% → × 1,20\n• Minskning med p%: multiplicera med (1 − p/100)\n  Exempel: 15% rabatt → × 0,85\n• Procentuell förändring: (nytt − gammalt) ÷ gammalt × 100%';
+  }
+
+  // "Test if a given value satisfies equation" (true/false pattern: "Om x = N, är ...")
+  if (/\bOm\s+[a-zA-Z]\s*=\s*[-\d]|\b[a-zA-Z]\s*=\s*[-\d]+\s+är\s+lösning/i.test(q) && exercise.type === 'true-false') {
+    return 'Testa värdet – sätt in och räkna:\n1. Byt ut bokstaven mot det givna talet\n2. Räkna ut vänster sida\n3. Räkna ut höger sida\n4. Sant om sidorna är lika, Falskt om de skiljer sig\nExempel: Om x = 3, är 2x + 1 = 7?\n→ 2·3 + 1 = 6 + 1 = 7 ✓ Sant!';
+  }
+
+  // Reverse-percentage: find original price given discounted price
+  if (/rabatt.*kr|kr.*rabatt|originalpris|utan rabatt|före rabatt|0,[0-9]+\s*[·×]\s*x/i.test(q)) {
+    return 'Hitta originalpriset – baklänges procent:\n1. Med X% rabatt betalar du (100−X)% av originalet\n   Exempel: 20% rabatt → betalar 80% → faktor 0,8\n2. Sätt upp: faktor · x = pris du betalade\n3. Lös: x = priset du betalade ÷ faktor\nExempel: 0,8 · x = 2 400 → x = 2 400 ÷ 0,8 = 3 000 kr';
   }
 
   // Equations / algebra
