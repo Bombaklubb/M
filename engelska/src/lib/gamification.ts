@@ -28,6 +28,11 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 7000,  type: "gold" },
   { points: 10000, type: "gold" },
   { points: 15000, type: "gold" },
+  { points: 20000, type: "ruby" },
+  { points: 30000, type: "ruby" },
+  { points: 35000, type: "diamond" },
+  { points: 50000, type: "diamond" },
+  { points: 75000, type: "emerald" },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
@@ -44,6 +49,9 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
   { exercises: 75,  type: "gold" },
   { exercises: 100, type: "gold" },
   { exercises: 150, type: "gold" },
+  { exercises: 200, type: "ruby" },
+  { exercises: 300, type: "diamond" },
+  { exercises: 500, type: "emerald" },
 ];
 
 // ─── Chest reward tables ──────────────────────────────────────────────────────
