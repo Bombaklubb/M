@@ -30,11 +30,12 @@ const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, 
 
 // ─── Chest sprite image ───────────────────────────────────────────────────────
 
-function ChestImage({ type, className }: { type: ChestType; className?: string }) {
+function ChestImage({ type, className, open }: { type: ChestType; className?: string; open?: boolean }) {
+  const meta = CHEST_META[type];
   return (
     <img
-      src={CHEST_META[type].image}
-      alt={CHEST_META[type].label}
+      src={open ? meta.openImage : meta.image}
+      alt={meta.label}
       className={`object-contain ${className ?? ""}`}
     />
   );
@@ -281,7 +282,7 @@ function ShelfChest({ chest, bg, glow, badge }: { chest: Chest; bg: string; glow
       onMouseLeave={() => setHover(false)}
       title={chest.openedReward ?? meta.label}
     >
-      <ChestImage type={chest.type} className="w-10 h-8 mb-1" />
+      <ChestImage type={chest.type} className="w-10 h-8 mb-1" open />
       <span className="text-[9px] font-bold" style={{ color: badge }}>{date}</span>
       {/* Shine line */}
       <div className="absolute top-1.5 left-2.5 right-2.5 h-px bg-white/15 rounded-full" />
