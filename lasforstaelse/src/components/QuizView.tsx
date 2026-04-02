@@ -387,10 +387,11 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       ) : (
                         <Button
                           onClick={handleNext}
-                          variant="gradient"
+                          disabled={selectedAnswer === undefined}
+                          variant={selectedAnswer !== undefined ? "gradient" : "secondary"}
                           className="flex-1"
                         >
-                          Nästa fråga →
+                          {selectedAnswer !== undefined ? 'Nästa fråga →' : 'Välj ett svar först'}
                         </Button>
                       )}
                     </div>

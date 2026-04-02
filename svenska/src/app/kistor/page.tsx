@@ -101,6 +101,186 @@ function ChestCard({
   );
 }
 
+// Open chest display for trophy shelf
+function OpenChestDisplay({
+  chest,
+  size = "normal",
+}: {
+  chest: Chest;
+  size?: "small" | "normal";
+}) {
+  const isSmall = size === "small";
+  const baseSize = isSmall ? 60 : 80;
+  const lidHeight = isSmall ? 18 : 24;
+  const bodyHeight = isSmall ? 30 : 40;
+
+  // Colors based on chest type
+  const colors = {
+    wood: {
+      body: "linear-gradient(180deg, #b45309 0%, #92400e 50%, #78350f 100%)",
+      lid: "linear-gradient(180deg, #d97706 0%, #b45309 100%)",
+      trim: "#78350f",
+      inner: "linear-gradient(180deg, #451a03 0%, #78350f 100%)",
+      glow: "rgba(251, 191, 36, 0.3)",
+    },
+    silver: {
+      body: "linear-gradient(180deg, #94a3b8 0%, #64748b 50%, #475569 100%)",
+      lid: "linear-gradient(180deg, #cbd5e1 0%, #94a3b8 100%)",
+      trim: "#475569",
+      inner: "linear-gradient(180deg, #1e293b 0%, #334155 100%)",
+      glow: "rgba(226, 232, 240, 0.4)",
+    },
+    gold: {
+      body: "linear-gradient(180deg, #fbbf24 0%, #d97706 50%, #b45309 100%)",
+      lid: "linear-gradient(180deg, #fef08a 0%, #fbbf24 100%)",
+      trim: "#92400e",
+      inner: "linear-gradient(180deg, #78350f 0%, #92400e 100%)",
+      glow: "rgba(251, 191, 36, 0.5)",
+    },
+  };
+
+  const c = colors[chest.type];
+
+  return (
+    <div
+      className="relative flex flex-col items-center cursor-pointer transition-transform hover:scale-105"
+      style={{ width: baseSize, height: baseSize + 10 }}
+    >
+      {/* Glow effect */}
+      <div
+        className="absolute inset-0 rounded-full blur-xl opacity-60"
+        style={{
+          background: c.glow,
+          transform: "scale(1.2)",
+        }}
+      />
+
+      {/* Open Lid */}
+      <div
+        className="absolute z-20"
+        style={{
+          width: baseSize - 8,
+          height: lidHeight,
+          top: -2,
+          left: 4,
+          background: c.lid,
+          borderRadius: `${isSmall ? 6 : 8}px ${isSmall ? 6 : 8}px 2px 2px`,
+          border: `2px solid ${c.trim}`,
+          borderBottom: "none",
+          transform: "perspective(100px) rotateX(-45deg)",
+          transformOrigin: "bottom center",
+          boxShadow: `inset 0 2px 4px rgba(255,255,255,0.3), 0 -2px 8px rgba(0,0,0,0.2)`,
+        }}
+      >
+        {/* Lid clasp */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{
+            bottom: 2,
+            width: isSmall ? 10 : 14,
+            height: isSmall ? 6 : 8,
+            background: chest.type === "gold" ? "#fef08a" : chest.type === "silver" ? "#e2e8f0" : "#fbbf24",
+            borderRadius: "2px",
+            border: `1px solid ${c.trim}`,
+          }}
+        />
+      </div>
+
+      {/* Chest Body */}
+      <div
+        className="absolute z-10"
+        style={{
+          width: baseSize - 8,
+          height: bodyHeight,
+          bottom: 8,
+          left: 4,
+          background: c.body,
+          borderRadius: `4px 4px ${isSmall ? 8 : 10}px ${isSmall ? 8 : 10}px`,
+          border: `2px solid ${c.trim}`,
+          boxShadow: `inset 0 -4px 8px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.25)`,
+        }}
+      >
+        {/* Inner dark area with gold */}
+        <div
+          className="absolute overflow-hidden"
+          style={{
+            top: 2,
+            left: 3,
+            right: 3,
+            height: isSmall ? 14 : 18,
+            background: c.inner,
+            borderRadius: "2px 2px 4px 4px",
+          }}
+        >
+          {/* Gold coins inside */}
+          <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-0.5 pb-0.5">
+            {[...Array(isSmall ? 3 : 5)].map((_, i) => (
+              <div
+                key={i}
+                className="rounded-full"
+                style={{
+                  width: isSmall ? 8 : 10,
+                  height: isSmall ? 8 : 10,
+                  background: "linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #d97706 100%)",
+                  border: "1px solid #b45309",
+                  boxShadow: "inset 0 1px 2px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.3)",
+                  transform: `translateY(${i % 2 === 0 ? 0 : -3}px)`,
+                }}
+              />
+            ))}
+          </div>
+          {/* Sparkle effect */}
+          <div
+            className="absolute"
+            style={{
+              top: 2,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: isSmall ? 4 : 6,
+              height: isSmall ? 4 : 6,
+              background: "radial-gradient(circle, #fef9c3 0%, transparent 70%)",
+              animation: "sparkle 1.5s ease-in-out infinite",
+            }}
+          />
+        </div>
+
+        {/* Horizontal bands */}
+        <div
+          className="absolute left-0 right-0"
+          style={{
+            bottom: isSmall ? 6 : 8,
+            height: 2,
+            background: c.trim,
+            opacity: 0.5,
+          }}
+        />
+      </div>
+
+      {/* Points label */}
+      {chest.openedReward && (
+        <div
+          className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap z-30"
+          style={{
+            fontSize: isSmall ? 9 : 11,
+            fontWeight: 700,
+            color: "#92400e",
+            textShadow: "0 1px 2px rgba(255,255,255,0.8)",
+          }}
+        >
+          {chest.openedReward.match(/\+\d+\s*poäng/)?.[0] || ""}
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes sparkle {
+          0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(0.8); }
+          50% { opacity: 1; transform: translateX(-50%) scale(1.2); }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 interface RewardResult {
   description: string;
   points: number;
@@ -353,17 +533,70 @@ export default function KistorPage() {
           </section>
         )}
 
-        {/* Opened chests history */}
+        {/* Trophy Shelf - Opened chests */}
         {opened.length > 0 && (
           <section>
             <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <span>🔓</span>
-              Öppnade kistor ({opened.length})
+              <span>🏛️</span>
+              Trofehylla
+              <span className="ml-1 px-2 py-0.5 text-xs font-bold bg-amber-600 text-white rounded-full">
+                {opened.length} kistor
+              </span>
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {opened.map((chest) => (
-                <ChestCard key={chest.id} chest={chest} onOpen={() => {}} />
-              ))}
+            <div
+              className="rounded-3xl overflow-hidden"
+              style={{
+                background: "linear-gradient(180deg, #fef3c7 0%, #fde68a 50%, #f5d77a 100%)",
+                border: "4px solid #92400e",
+                boxShadow: "0 8px 32px rgba(146,64,14,0.25), inset 0 2px 0 rgba(255,255,255,0.5)",
+              }}
+            >
+              {/* Group chests by type */}
+              {(["gold", "silver", "wood"] as ChestType[]).map((type) => {
+                const chestsOfType = opened.filter((c) => c.type === type);
+                if (chestsOfType.length === 0) return null;
+                const meta = CHEST_META[type];
+                return (
+                  <div key={type} className="border-b-4 border-amber-700/20 last:border-b-0">
+                    <div className="px-4 py-3 bg-amber-800/10 flex items-center gap-2">
+                      <span className="text-2xl">{meta.emoji}</span>
+                      <span className="font-bold text-amber-900">{meta.label}</span>
+                      <span className="ml-1 px-2 py-0.5 text-xs font-bold bg-amber-700 text-white rounded-full">
+                        x{chestsOfType.length}
+                      </span>
+                    </div>
+                    {/* Shelf with open chests */}
+                    <div className="relative px-4 pb-4 pt-2">
+                      {/* Wooden shelf background */}
+                      <div
+                        className="absolute left-4 right-4 bottom-4 h-4 rounded-lg"
+                        style={{
+                          background: "linear-gradient(180deg, #92400e 0%, #78350f 50%, #451a03 100%)",
+                          boxShadow: "0 4px 8px rgba(0,0,0,0.3), inset 0 2px 0 rgba(255,255,255,0.1)",
+                        }}
+                      />
+                      {/* Wood grain texture */}
+                      <div
+                        className="absolute left-4 right-4 bottom-4 h-4 rounded-lg opacity-20"
+                        style={{
+                          background: "repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 40px)",
+                        }}
+                      />
+
+                      {/* Chests on shelf */}
+                      <div className="relative flex flex-wrap justify-center gap-4 pb-2">
+                        {chestsOfType.map((chest) => (
+                          <OpenChestDisplay
+                            key={chest.id}
+                            chest={chest}
+                            size="normal"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}

@@ -8,9 +8,11 @@ interface HeaderProps {
   onLogout: () => void;
   onHomeClick: () => void;
   onProfileClick?: () => void;
+  onKistorClick?: () => void;
+  unopenedChests?: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick }) => {
+export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, unopenedChests = 0 }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
@@ -35,6 +37,23 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           >
             <span className="text-xl">{darkMode ? '☀️' : '🌙'}</span>
           </button>
+
+          {/* Kistor button */}
+          {onKistorClick && (
+            <button
+              onClick={onKistorClick}
+              className="relative flex items-center justify-center w-10 h-10 rounded-full bg-amber-50 dark:bg-amber-900/30 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition-colors border border-amber-200 dark:border-amber-700"
+              title="Kistor"
+              aria-label="Visa kistor"
+            >
+              <img src="/content/guldkista.png" alt="Kistor" className="w-6 h-6 object-contain" />
+              {unopenedChests > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] flex items-center justify-center px-1 text-[10px] font-bold bg-red-500 text-white rounded-full">
+                  {unopenedChests}
+                </span>
+              )}
+            </button>
+          )}
 
           {/* Points */}
           <div className="flex items-center space-x-1 md:space-x-2 bg-yellow-50 dark:bg-yellow-900/30 px-3 md:px-4 py-2 rounded-full border border-yellow-200 dark:border-yellow-700">

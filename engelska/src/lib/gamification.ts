@@ -28,6 +28,11 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 7000,  type: "gold" },
   { points: 10000, type: "gold" },
   { points: 15000, type: "gold" },
+  { points: 20000, type: "ruby" },
+  { points: 30000, type: "ruby" },
+  { points: 35000, type: "diamond" },
+  { points: 50000, type: "diamond" },
+  { points: 75000, type: "emerald" },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
@@ -44,18 +49,22 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
   { exercises: 75,  type: "gold" },
   { exercises: 100, type: "gold" },
   { exercises: 150, type: "gold" },
+  { exercises: 200, type: "ruby" },
+  { exercises: 300, type: "diamond" },
+  { exercises: 500, type: "emerald" },
 ];
 
 // ─── Chest reward tables ──────────────────────────────────────────────────────
 
 export const CHEST_META: Record<
   ChestType,
-  { label: string; emoji: string; image: string; color: string; borderColor: string; shadowColor: string; description: string }
+  { label: string; emoji: string; image: string; openImage: string; color: string; borderColor: string; shadowColor: string; description: string }
 > = {
   wood: {
     label: "Bronskista",
     emoji: "📦",
     image: "/content/bronskista.png",
+    openImage: "/content/bronskista-oppen.png",
     color: "from-amber-600 to-amber-800",
     borderColor: "border-amber-700",
     shadowColor: "shadow-amber-900/40",
@@ -65,6 +74,7 @@ export const CHEST_META: Record<
     label: "Silverkista",
     emoji: "🪙",
     image: "/content/silverkista.png",
+    openImage: "/content/silverkista-oppen.png",
     color: "from-slate-400 to-slate-600",
     borderColor: "border-slate-500",
     shadowColor: "shadow-slate-700/40",
@@ -74,6 +84,7 @@ export const CHEST_META: Record<
     label: "Guldkista",
     emoji: "🏆",
     image: "/content/guldkista.png",
+    openImage: "/content/guldkista-oppen.png",
     color: "from-yellow-400 to-amber-500",
     borderColor: "border-yellow-500",
     shadowColor: "shadow-yellow-600/40",
@@ -83,6 +94,7 @@ export const CHEST_META: Record<
     label: "Rubinkista",
     emoji: "💎",
     image: "/content/rubinkista.png",
+    openImage: "/content/rubinkista-oppen.png",
     color: "from-red-500 to-red-700",
     borderColor: "border-red-600",
     shadowColor: "shadow-red-900/40",
@@ -92,6 +104,7 @@ export const CHEST_META: Record<
     label: "Diamantkista",
     emoji: "💠",
     image: "/content/diamantkista.png",
+    openImage: "/content/diamantkista-oppen.png",
     color: "from-sky-300 to-blue-500",
     borderColor: "border-sky-400",
     shadowColor: "shadow-blue-700/40",
@@ -101,6 +114,7 @@ export const CHEST_META: Record<
     label: "Smaragdkista",
     emoji: "🟢",
     image: "/content/smaragdkista.png",
+    openImage: "/content/smaragdkista-oppen.png",
     color: "from-emerald-500 to-green-700",
     borderColor: "border-emerald-600",
     shadowColor: "shadow-green-900/40",

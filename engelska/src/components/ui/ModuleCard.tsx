@@ -146,10 +146,10 @@ export default function ModuleCard({
           }}
         >
           <div
-            className={`h-full rounded-[22px] px-5 py-5 ${
+            className={`h-full rounded-[22px] px-5 py-4 ${
               progress?.completed
-                ? "bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/80 dark:to-yellow-950/60"
-                : "bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-800 dark:to-gray-850"
+                ? "bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950/80 dark:to-yellow-950/60"
+                : "bg-gradient-to-br from-amber-50 via-yellow-50/70 to-orange-50 dark:from-gray-800 dark:via-amber-950/20 dark:to-gray-850"
             }`}
           >
             <div className="flex items-center gap-4">

@@ -30,11 +30,12 @@ const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, 
 
 // ─── Chest sprite image ───────────────────────────────────────────────────────
 
-function ChestImage({ type, className }: { type: ChestType; className?: string }) {
+function ChestImage({ type, className, open }: { type: ChestType; className?: string; open?: boolean }) {
+  const meta = CHEST_META[type];
   return (
     <img
-      src={CHEST_META[type].image}
-      alt={CHEST_META[type].label}
+      src={open ? meta.openImage : meta.image}
+      alt={meta.label}
       className={`object-contain ${className ?? ""}`}
     />
   );
@@ -281,7 +282,7 @@ function ShelfChest({ chest, bg, glow, badge }: { chest: Chest; bg: string; glow
       onMouseLeave={() => setHover(false)}
       title={chest.openedReward ?? meta.label}
     >
-      <ChestImage type={chest.type} className="w-10 h-8 mb-1" />
+      <ChestImage type={chest.type} className="w-10 h-8 mb-1" open />
       <span className="text-[9px] font-bold" style={{ color: badge }}>{date}</span>
       {/* Shine line */}
       <div className="absolute top-1.5 left-2.5 right-2.5 h-px bg-white/15 rounded-full" />
@@ -537,11 +538,14 @@ export default function KistorPage() {
             {/* Point milestones */}
             <div>
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
-                  { type: "wood"   as ChestType, value: "25, 50, 100, 200, 600 p",                bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
-                  { type: "silver" as ChestType, value: "300, 500, 750, 1 500, 2 000 p",          bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
-                  { type: "gold"   as ChestType, value: "1 000, 2 500, 5 000, 10 000, 15 000 p", bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
+                  { type: "wood"    as ChestType, value: "25, 50, 100, 200, 600 p",                  bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
+                  { type: "silver"  as ChestType, value: "300, 500, 750, 1 500, 2 000 p",            bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
+                  { type: "gold"    as ChestType, value: "1 000, 2 500, 5 000, 10 000, 15 000 p",    bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
+                  { type: "ruby"    as ChestType, value: "20 000, 30 000 p",                          bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
+                  { type: "diamond" as ChestType, value: "35 000, 50 000 p",                          bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
+                  { type: "emerald" as ChestType, value: "75 000 p",                                  bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
                 ]).map((row) => (
                   <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
@@ -557,11 +561,14 @@ export default function KistorPage() {
             {/* Exercise milestones */}
             <div>
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
-                  { type: "wood"   as ChestType, value: "1, 3, 5, 10 övningar",           bg: "rgba(120,53,15,0.4)",  border: "rgba(217,119,6,0.3)"   },
-                  { type: "silver" as ChestType, value: "15, 20, 40, 50 övningar",        bg: "rgba(30,41,59,0.6)",   border: "rgba(148,163,184,0.3)" },
-                  { type: "gold"   as ChestType, value: "30, 60, 75, 100, 150 övningar",  bg: "rgba(120,53,15,0.4)",  border: "rgba(251,191,36,0.3)"  },
+                  { type: "wood"    as ChestType, value: "1, 3, 5, 10 övningar",            bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
+                  { type: "silver"  as ChestType, value: "15, 20, 40, 50 övningar",         bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
+                  { type: "gold"    as ChestType, value: "30, 60, 75, 100, 150 övningar",   bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
+                  { type: "ruby"    as ChestType, value: "200 övningar",                     bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
+                  { type: "diamond" as ChestType, value: "300 övningar",                     bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
+                  { type: "emerald" as ChestType, value: "500 övningar",                     bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
                 ]).map((row) => (
                   <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
