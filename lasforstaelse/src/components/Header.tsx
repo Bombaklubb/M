@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
               title="Kistor"
               aria-label="Visa kistor"
             >
-              <span className="text-xl">🎁</span>
+              <img src="/content/guldkista.png" alt="Kistor" className="w-6 h-6 object-contain" />
               {unopenedChests > 0 && (
                 <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] flex items-center justify-center px-1 text-[10px] font-bold bg-red-500 text-white rounded-full">
                   {unopenedChests}
