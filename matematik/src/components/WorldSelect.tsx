@@ -45,7 +45,7 @@ export default function WorldSelect() {
 
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
   const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
-  const totalPoints = pointsRecord?.totalPoints ?? 0;
+  const totalPoints = pointsRecord?.total ?? 0;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
   const unopenedChests = currentStudent
     ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
