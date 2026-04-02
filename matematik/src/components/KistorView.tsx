@@ -541,7 +541,7 @@ export default function KistorView() {
             {(() => {
               const imgStyle: React.CSSProperties = {
                 width: '26px', height: '26px',
-                objectFit: 'contain', objectPosition: 'left center', display: 'block',
+                objectFit: 'contain', objectPosition: 'center', display: 'block',
               };
               const cellStyle: React.CSSProperties = {
                 width: '30px', minWidth: '30px',
