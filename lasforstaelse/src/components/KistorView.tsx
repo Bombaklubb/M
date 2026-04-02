@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Chest, GamificationData, ChestType } from '../types';
+import { User, Chest, GamificationData } from '../types';
 import {
   CHEST_META,
   ALL_GAMIFICATION_BADGES,
@@ -9,7 +9,7 @@ import {
   saveGamification,
 } from '../lib/gamification';
 
-// ─── Öppnad kista med guld (för trofehyllan) ───────────────────────────────────
+// ─── Öppnad kista (för trofehyllan) ───────────────────────────────────────────
 interface OpenedChestDisplayProps {
   chest: Chest;
 }
@@ -17,120 +17,19 @@ interface OpenedChestDisplayProps {
 function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
   const meta = CHEST_META[chest.type];
 
-  // CSS-filter för att färga mynt baserat på kisttyp
-  const coinFilters: Record<ChestType, string> = {
-    bronze: 'sepia(100%) saturate(200%) brightness(0.85) hue-rotate(-10deg)',
-    silver: 'grayscale(100%) brightness(1.3)',
-    gold: 'none',
-    emerald: 'sepia(100%) saturate(300%) brightness(0.9) hue-rotate(75deg)',
-    ruby: 'sepia(100%) saturate(400%) brightness(0.9) hue-rotate(-30deg)',
-    diamond: 'sepia(100%) saturate(200%) brightness(1.2) hue-rotate(160deg)',
-  };
-
-  const coinFilter = coinFilters[chest.type];
-
-  // Färger för skattkammareffekten baserat på kisttyp
-  const treasureColors: Record<ChestType, { gradient: string; glitter: string; glow: string }> = {
-    bronze: {
-      gradient: 'linear-gradient(to bottom, #CD7F32 0%, #A0522D 50%, #8B4513 100%)',
-      glitter: 'linear-gradient(135deg, #D4A574, #CD7F32)',
-      glow: '#CD7F32',
-    },
-    silver: {
-      gradient: 'linear-gradient(to bottom, #E8E8E8 0%, #C0C0C0 50%, #A8A8A8 100%)',
-      glitter: 'linear-gradient(135deg, #F5F5F5, #C0C0C0)',
-      glow: '#C0C0C0',
-    },
-    gold: {
-      gradient: 'linear-gradient(to bottom, #FFD700 0%, #FFA500 50%, #CC8400 100%)',
-      glitter: 'linear-gradient(135deg, #FFE066, #FFD700)',
-      glow: '#FFD700',
-    },
-    emerald: {
-      gradient: 'linear-gradient(to bottom, #50C878 0%, #3CB371 50%, #2E8B57 100%)',
-      glitter: 'linear-gradient(135deg, #7FFFD4, #50C878)',
-      glow: '#50C878',
-    },
-    ruby: {
-      gradient: 'linear-gradient(to bottom, #E0115F 0%, #C41E3A 50%, #9B111E 100%)',
-      glitter: 'linear-gradient(135deg, #FF6B6B, #E0115F)',
-      glow: '#E0115F',
-    },
-    diamond: {
-      gradient: 'linear-gradient(to bottom, #B9F2FF 0%, #87CEEB 50%, #6BB3D9 100%)',
-      glitter: 'linear-gradient(135deg, #E0FFFF, #B9F2FF)',
-      glow: '#B9F2FF',
-    },
-  };
-
-  const treasure = treasureColors[chest.type];
-
   return (
     <div className="relative flex flex-col items-center group">
-      {/* Kistans bas med öppet lock */}
       <div
         className="relative"
         style={{
           filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))',
         }}
       >
-        {/* Mynt som sticker upp - färgade baserat på kisttyp */}
-        <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex gap-0.5 z-10">
-          <span className="text-lg animate-bounce" style={{ animationDelay: '0ms', animationDuration: '2s', filter: coinFilter }}>🪙</span>
-          <span className="text-xl animate-bounce" style={{ animationDelay: '200ms', animationDuration: '2.2s', filter: coinFilter }}>🪙</span>
-          <span className="text-lg animate-bounce" style={{ animationDelay: '100ms', animationDuration: '1.9s', filter: coinFilter }}>🪙</span>
-        </div>
-
-        {/* Öppet lock (roterad kistbild) */}
-        <div
-          className="absolute -top-6 left-1/2 z-20"
-          style={{
-            transform: 'translateX(-50%) rotateX(60deg) scale(0.6)',
-            transformOrigin: 'bottom center',
-            opacity: 0.9,
-          }}
-        >
-          <img
-            src={meta.image}
-            alt={`${meta.label} lock`}
-            className="w-12 h-12 object-contain"
-            style={{
-              clipPath: 'inset(0 0 50% 0)',
-              filter: 'brightness(1.1)',
-            }}
-          />
-        </div>
-
-        {/* Huvudkistan (nedre del) */}
-        <div className="relative z-0">
-          <img
-            src={meta.image}
-            alt={meta.label}
-            className="w-16 h-16 object-contain relative z-10"
-          />
-          {/* Skattkammer-effekt */}
-          <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-6 rounded-t-lg overflow-hidden"
-            style={{
-              background: treasure.gradient,
-              boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.5)',
-            }}
-          >
-            {/* Glitter */}
-            <div className="absolute inset-0 flex flex-wrap justify-center gap-0.5 p-0.5">
-              {[...Array(6)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-1.5 h-1.5 rounded-full"
-                  style={{
-                    background: treasure.glitter,
-                    boxShadow: `0 0 2px ${treasure.glow}`,
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <img
+          src={meta.openedImage}
+          alt={`${meta.label} öppnad`}
+          className="w-16 h-16 object-contain"
+        />
       </div>
 
       {/* Etikett */}
