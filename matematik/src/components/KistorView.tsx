@@ -112,7 +112,7 @@ function TrophyShelf({ chests }: { chests: MattChest[] }) {
                         border: '1px solid rgba(255,255,255,0.2)',
                       }}
                     >
-                      <img src={CHEST_META[chest.type].image} alt={CHEST_META[chest.type].label} className="w-10 h-10 object-contain" />
+                      <img src={CHEST_META[chest.type].openImage} alt={CHEST_META[chest.type].label} className="w-10 h-10 object-contain" />
                     </div>
                   </div>
                 ))}

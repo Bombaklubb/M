@@ -45,12 +45,13 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
 
 export const CHEST_META: Record<
   ChestType,
-  { label: string; emoji: string; image: string; gradient: string; description: string }
+  { label: string; emoji: string; image: string; openImage: string; gradient: string; description: string }
 > = {
   wood: {
     label: 'Bronskista',
     emoji: '🟫',
     image: '/bronskista.png',
+    openImage: '/oppen-brons.png',
     gradient: 'from-amber-700 to-amber-900',
     description: 'En bronskista med små belöningar.',
   },
@@ -58,6 +59,7 @@ export const CHEST_META: Record<
     label: 'Silverkista',
     emoji: '⬜',
     image: '/silverkista.png',
+    openImage: '/oppen-silver.png',
     gradient: 'from-slate-400 to-slate-600',
     description: 'En glänsande silverkista med bra belöningar.',
   },
@@ -65,6 +67,7 @@ export const CHEST_META: Record<
     label: 'Guldkista',
     emoji: '🟡',
     image: '/guldkista.png',
+    openImage: '/oppen-guld.png',
     gradient: 'from-yellow-400 to-amber-500',
     description: 'En praktfull guldkista med de bästa belöningarna!',
   },
@@ -72,6 +75,7 @@ export const CHEST_META: Record<
     label: 'Rubinkista',
     emoji: '🔴',
     image: '/rubinkista.png',
+    openImage: '/oppen-rubin.png',
     gradient: 'from-red-500 to-rose-700',
     description: 'En lysande rubinkista med fantastiska belöningar!',
   },
@@ -79,6 +83,7 @@ export const CHEST_META: Record<
     label: 'Smaragdkista',
     emoji: '🟢',
     image: '/smaragdkista.png',
+    openImage: '/oppen-smaragd.png',
     gradient: 'from-emerald-400 to-green-600',
     description: 'En ädel smaragdkista för de mest hängivna!',
   },
@@ -86,6 +91,7 @@ export const CHEST_META: Record<
     label: 'Diamantkista',
     emoji: '💎',
     image: '/diamantkista.png',
+    openImage: '/oppen-diamant.png',
     gradient: 'from-cyan-300 via-blue-400 to-violet-500',
     description: 'Den ultimata diamantkistan – extremt sällsynt!',
   },
