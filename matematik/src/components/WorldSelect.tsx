@@ -211,9 +211,6 @@ export default function WorldSelect() {
         })}
       </div>
 
-      <p className="text-center pb-8 text-xs" style={{ color: 'rgba(255,255,255,0.22)' }}>
-        Kontakt – martin.akdogan@enkoping.se
-      </p>
     </div>
   );
 }
