@@ -79,12 +79,13 @@ export const TEXT_CHEST_MILESTONES: { texts: number; type: ChestType }[] = [
 
 export const CHEST_META: Record<
   ChestType,
-  { label: string; emoji: string; image: string; color: string; borderColor: string; shadowColor: string; description: string }
+  { label: string; emoji: string; image: string; openedImage: string; color: string; borderColor: string; shadowColor: string; description: string }
 > = {
   bronze: {
     label: 'Bronskista',
     emoji: '🥉',
     image: '/content/bronskista.png',
+    openedImage: '/content/oppen-kista-brons.png',
     color: 'from-amber-600 to-amber-800',
     borderColor: 'border-amber-700',
     shadowColor: 'shadow-amber-900/40',
@@ -94,6 +95,7 @@ export const CHEST_META: Record<
     label: 'Silverkista',
     emoji: '🥈',
     image: '/content/silverkista.png',
+    openedImage: '/content/oppen-kista-silver.png',
     color: 'from-slate-400 to-slate-600',
     borderColor: 'border-slate-500',
     shadowColor: 'shadow-slate-700/40',
@@ -103,6 +105,7 @@ export const CHEST_META: Record<
     label: 'Guldkista',
     emoji: '🥇',
     image: '/content/guldkista.png',
+    openedImage: '/content/oppen-kista-guld.png',
     color: 'from-yellow-400 to-amber-500',
     borderColor: 'border-yellow-500',
     shadowColor: 'shadow-yellow-600/40',
@@ -112,6 +115,7 @@ export const CHEST_META: Record<
     label: 'Smaragdkista',
     emoji: '💚',
     image: '/content/smaragdkista.png',
+    openedImage: '/content/oppen-kista-smaragd.png',
     color: 'from-emerald-400 to-emerald-600',
     borderColor: 'border-emerald-500',
     shadowColor: 'shadow-emerald-600/40',
@@ -121,6 +125,7 @@ export const CHEST_META: Record<
     label: 'Rubinkista',
     emoji: '❤️',
     image: '/content/rubinkista.png',
+    openedImage: '/content/oppen-kista-rubin.png',
     color: 'from-red-400 to-red-600',
     borderColor: 'border-red-500',
     shadowColor: 'shadow-red-600/40',
@@ -130,6 +135,7 @@ export const CHEST_META: Record<
     label: 'Diamantkista',
     emoji: '💎',
     image: '/content/diamantkista.png',
+    openedImage: '/content/oppen-kista-diamant.png',
     color: 'from-cyan-300 to-blue-500',
     borderColor: 'border-cyan-400',
     shadowColor: 'shadow-cyan-500/40',
