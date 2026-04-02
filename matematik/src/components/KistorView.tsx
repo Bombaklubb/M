@@ -539,38 +539,38 @@ export default function KistorView() {
           <div className="space-y-4">
             <div>
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Avklara kapitel</p>
-              <ul className="space-y-1.5 text-sm text-blue-100/80">
-                <li className="flex items-center gap-2"><img src="/silverkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Silver" /><span><strong>Silverkista:</strong> Klara ditt allra första kapitel!</span></li>
-                <li className="flex items-center gap-2"><img src="/bronskista.png"  className="w-6 h-6 object-contain flex-shrink-0" alt="Brons"  /><span><strong>Bronskista:</strong> Klara ett nytt kapitel för första gången (≥50%)</span></li>
-                <li className="flex items-center gap-2"><img src="/silverkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Silver" /><span><strong>Silverkista:</strong> Få 3 stjärnor på ett kapitel för första gången</span></li>
-                <li className="flex items-center gap-2"><img src="/silverkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Silver" /><span><strong>Silverkista:</strong> Perfekt poäng (100%) på ett kapitel</span></li>
-                <li className="flex items-center gap-2"><img src="/rubinkista.png"  className="w-6 h-6 object-contain flex-shrink-0" alt="Rubin"  /><span><strong>Rubinkista:</strong> Klara alla kapitel i en hel värld!</span></li>
-              </ul>
+              <div className="grid gap-y-1.5 text-sm text-blue-100/80" style={{ gridTemplateColumns: '28px 1fr' }}>
+                <img src="/silverkista.png" className="w-6 h-6 object-contain" alt="Silver" /><span><strong>Silverkista:</strong> Klara ditt allra första kapitel!</span>
+                <img src="/bronskista.png"  className="w-6 h-6 object-contain" alt="Brons"  /><span><strong>Bronskista:</strong> Klara ett nytt kapitel för första gången (≥50%)</span>
+                <img src="/silverkista.png" className="w-6 h-6 object-contain" alt="Silver" /><span><strong>Silverkista:</strong> Få 3 stjärnor på ett kapitel för första gången</span>
+                <img src="/silverkista.png" className="w-6 h-6 object-contain" alt="Silver" /><span><strong>Silverkista:</strong> Perfekt poäng (100%) på ett kapitel</span>
+                <img src="/rubinkista.png"  className="w-6 h-6 object-contain" alt="Rubin"  /><span><strong>Rubinkista:</strong> Klara alla kapitel i en hel värld!</span>
+              </div>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Poäng-milstolpar</p>
-              <ul className="space-y-1.5 text-sm text-blue-100/80">
-                <li className="flex items-center gap-2"><img src="/bronskista.png"   className="w-6 h-6 object-contain flex-shrink-0" alt="Brons"   /><span><strong>Bronskista:</strong> 50 – 600 p</span></li>
-                <li className="flex items-center gap-2"><img src="/silverkista.png"  className="w-6 h-6 object-contain flex-shrink-0" alt="Silver"  /><span><strong>Silverkista:</strong> 300 – 2 000 p</span></li>
-                <li className="flex items-center gap-2"><img src="/guldkista.png"    className="w-6 h-6 object-contain flex-shrink-0" alt="Guld"    /><span><strong>Guldkista:</strong> 1 000 – 2 500 p</span></li>
-                <li className="flex items-center gap-2"><img src="/rubinkista.png"   className="w-6 h-6 object-contain flex-shrink-0" alt="Rubin"   /><span><strong>Rubinkista:</strong> 3 500 – 5 000 p</span></li>
-                <li className="flex items-center gap-2"><img src="/smaragdkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Smaragd" /><span><strong>Smaragdkista:</strong> 7 000 – 10 000 p</span></li>
-                <li className="flex items-center gap-2"><img src="/diamantkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Diamant" /><span><strong>Diamantkista:</strong> 15 000 – 20 000 p</span></li>
-              </ul>
+              <div className="grid gap-y-1.5 text-sm text-blue-100/80" style={{ gridTemplateColumns: '28px 1fr' }}>
+                <img src="/bronskista.png"   className="w-6 h-6 object-contain" alt="Brons"   /><span><strong>Bronskista:</strong> 50 – 600 p</span>
+                <img src="/silverkista.png"  className="w-6 h-6 object-contain" alt="Silver"  /><span><strong>Silverkista:</strong> 300 – 2 000 p</span>
+                <img src="/guldkista.png"    className="w-6 h-6 object-contain" alt="Guld"    /><span><strong>Guldkista:</strong> 1 000 – 2 500 p</span>
+                <img src="/rubinkista.png"   className="w-6 h-6 object-contain" alt="Rubin"   /><span><strong>Rubinkista:</strong> 3 500 – 5 000 p</span>
+                <img src="/smaragdkista.png" className="w-6 h-6 object-contain" alt="Smaragd" /><span><strong>Smaragdkista:</strong> 7 000 – 10 000 p</span>
+                <img src="/diamantkista.png" className="w-6 h-6 object-contain" alt="Diamant" /><span><strong>Diamantkista:</strong> 15 000 – 20 000 p</span>
+              </div>
             </div>
             <div className="border-t border-blue-400/20 pt-3">
               <p className="text-xs font-black text-blue-400 uppercase tracking-widest mb-2">Klarade kapitel (antal)</p>
-              <ul className="space-y-1.5 text-sm text-blue-100/80">
-                <li className="flex items-center gap-2"><img src="/bronskista.png"   className="w-6 h-6 object-contain flex-shrink-0" alt="Brons"   /><span><strong>Bronskista:</strong> 1 – 10 kapitel</span></li>
-                <li className="flex items-center gap-2"><img src="/silverkista.png"  className="w-6 h-6 object-contain flex-shrink-0" alt="Silver"  /><span><strong>Silverkista:</strong> 15 – 40 kapitel</span></li>
-                <li className="flex items-center gap-2"><img src="/guldkista.png"    className="w-6 h-6 object-contain flex-shrink-0" alt="Guld"    /><span><strong>Guldkista:</strong> 30 – 60 kapitel</span></li>
-                <li className="flex items-center gap-2"><img src="/rubinkista.png"   className="w-6 h-6 object-contain flex-shrink-0" alt="Rubin"   /><span><strong>Rubinkista:</strong> 75 kapitel</span></li>
-                <li className="flex items-center gap-2"><img src="/smaragdkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Smaragd" /><span><strong>Smaragdkista:</strong> 100 kapitel</span></li>
-                <li className="flex items-center gap-2"><img src="/diamantkista.png" className="w-6 h-6 object-contain flex-shrink-0" alt="Diamant" /><span><strong>Diamantkista:</strong> 150 kapitel</span></li>
-              </ul>
+              <div className="grid gap-y-1.5 text-sm text-blue-100/80" style={{ gridTemplateColumns: '28px 1fr' }}>
+                <img src="/bronskista.png"   className="w-6 h-6 object-contain" alt="Brons"   /><span><strong>Bronskista:</strong> 1 – 10 kapitel</span>
+                <img src="/silverkista.png"  className="w-6 h-6 object-contain" alt="Silver"  /><span><strong>Silverkista:</strong> 15 – 40 kapitel</span>
+                <img src="/guldkista.png"    className="w-6 h-6 object-contain" alt="Guld"    /><span><strong>Guldkista:</strong> 30 – 60 kapitel</span>
+                <img src="/rubinkista.png"   className="w-6 h-6 object-contain" alt="Rubin"   /><span><strong>Rubinkista:</strong> 75 kapitel</span>
+                <img src="/smaragdkista.png" className="w-6 h-6 object-contain" alt="Smaragd" /><span><strong>Smaragdkista:</strong> 100 kapitel</span>
+                <img src="/diamantkista.png" className="w-6 h-6 object-contain" alt="Diamant" /><span><strong>Diamantkista:</strong> 150 kapitel</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-sm text-blue-100/80 border-t border-blue-400/20 pt-3">
-              <span className="text-xl flex-shrink-0">🎁</span>
+            <div className="grid items-center gap-x-2 text-sm text-blue-100/80 border-t border-blue-400/20 pt-3" style={{ gridTemplateColumns: '28px 1fr' }}>
+              <span className="text-xl">🎁</span>
               <span><strong>Mysterykista:</strong> 25% chans de 5 första kapitlen, 15% därefter!</span>
             </div>
           </div>
