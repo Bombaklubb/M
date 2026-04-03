@@ -80,23 +80,6 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
             </div>
           </div>
 
-          {/* World switcher */}
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {WORLDS.map(w => (
-              <button
-                key={w.id}
-                onClick={() => setView(`world-${w.id}` as any)}
-                className={`flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-sm font-bold transition-all ${
-                  w.id === worldId
-                    ? 'bg-white text-gray-800 shadow-md'
-                    : 'bg-white/20 text-white hover:bg-white/30'
-                }`}
-              >
-                <span>{w.emoji}</span>
-                <span className="hidden sm:inline">{w.name.split(' ')[0]}</span>
-              </button>
-            ))}
-          </div>
         </div>
       </div>
 
