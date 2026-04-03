@@ -533,7 +533,7 @@ export const TOPICS: Topic[] = [
       { id: 'div2-9', type: 'true-false', question: '55 ÷ 5 = 11', isTrue: true, points: 10, explanation: 'Rätt! 5×11=55.' },
       { id: 'div2-10', type: 'multiple-choice', question: '31 äpplen delas ut lika till 6 kompisar. Hur många får var och en och hur många är kvar?', options: ['5 st, rest 1', '6 st, rest 1', '5 st, rest 5', '4 st, rest 7'], correctIndex: 0, points: 15, explanation: '31 ÷ 6 = 5 rest 1. (6×5=30, rest=1)' },
       { id: 'div2-11', type: 'fill-in', question: '90 ÷ 9 = ?', answer: '10', points: 10, explanation: '90 ÷ 9 = 10.' },
-      { id: 'div2-12', type: 'fill-in', question: '75 ÷ 5 = ?', answer: '15', points: 10, explanation: '75 ÷ 5 = 15. (70÷5=14 → nej, 5×15=75)' },
+      { id: 'div2-12', type: 'fill-in', question: '75 ÷ 5 = ?', answer: '15', points: 10, explanation: '5 × 15 = 75, alltså 75 ÷ 5 = 15.' },
       { id: 'div2-13', type: 'multiple-choice', question: '100 ÷ 6 = ?', options: ['15 rest 4', '16 rest 4', '17 rest 2', '16 rest 5'], correctIndex: 1, points: 15, explanation: '100 ÷ 6 = 16 rest 4. (6×16=96, 100−96=4)' },
       { id: 'div2-14', type: 'fill-in', question: '120 ÷ 8 = ?', answer: '15', points: 10, explanation: '120 ÷ 8 = 15. (8×15=120)' },
     ],
