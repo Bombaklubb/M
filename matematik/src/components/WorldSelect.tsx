@@ -141,7 +141,7 @@ export default function WorldSelect() {
           const pct = worldTopics.length ? Math.round((completed / worldTopics.length) * 100) : 0;
           const worldPoints = progress
             .filter(p => worldTopics.some(t => t.id === p.topicId))
-            .reduce((sum, p) => sum + (p.points ?? 0), 0);
+            .reduce((sum, p) => sum + (p.correctAnswers ?? 0) * 10, 0);
 
           return (
             <button
