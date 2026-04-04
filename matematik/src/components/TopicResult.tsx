@@ -173,12 +173,27 @@ export default function TopicResult({ topic }: { topic: Topic }) {
                 border: '2px solid rgba(245,158,11,0.4)',
               }}
             >
-              <p className="font-bold text-amber-300 mb-2">
-                🎁 {pendingChestResult.newChests.length === 1 ? 'Ny kista intjänad!' : `${pendingChestResult.newChests.length} nya kistor intjänade!`}
-              </p>
+              <div className="flex items-center gap-2 mb-3">
+                {pendingChestResult.newChests.slice(0, 1).map((chest, i) => (
+                  <img
+                    key={i}
+                    src={CHEST_META[chest.type].image}
+                    alt={CHEST_META[chest.type].label}
+                    className="w-10 h-10 object-contain"
+                  />
+                ))}
+                <p className="font-bold text-amber-300">
+                  {pendingChestResult.newChests.length === 1 ? 'Ny kista intjänad!' : `${pendingChestResult.newChests.length} nya kistor intjänade!`}
+                </p>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {pendingChestResult.newChests.map((chest, i) => (
-                  <span key={i} className="text-2xl">{CHEST_META[chest.type].emoji}</span>
+                  <img
+                    key={i}
+                    src={CHEST_META[chest.type].image}
+                    alt={CHEST_META[chest.type].label}
+                    className="w-16 h-16 object-contain"
+                  />
                 ))}
               </div>
               <button
