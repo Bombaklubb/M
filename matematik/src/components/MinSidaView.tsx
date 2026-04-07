@@ -7,6 +7,7 @@ import CollectionView from './CollectionView';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS } from '../data/avatars';
 import { GRADE_LABELS } from '../types';
+import { getPoints, initPoints } from '../utils/storage';
 
 type Tab = 'achievements' | 'results' | 'collection';
 
@@ -24,6 +25,9 @@ export default function MinSidaView() {
   if (!currentStudent) return null;
 
   const avatarEmoji = ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0];
+  const points = getPoints(currentStudent.id) ?? initPoints(currentStudent.id);
+  const aktivSedan = currentStudent.createdAt?.split('T')[0] ?? '';
+  const senastAktiv = points.lastActiveDate || new Date().toISOString().split('T')[0];
 
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(160deg,#0f2027,#203a43,#2c5364)' }}>
@@ -62,6 +66,8 @@ export default function MinSidaView() {
           <div className="min-w-0">
             <p className="text-white font-black text-xl leading-tight truncate">{currentStudent.name}</p>
             <p className="text-white/60 text-sm">{GRADE_LABELS[currentStudent.grade]}</p>
+            {aktivSedan && <p className="text-white/50 text-xs mt-0.5">Aktiv sedan {aktivSedan}</p>}
+            <p className="text-white/50 text-xs">Senast aktiv: {senastAktiv}</p>
           </div>
         </div>
 
