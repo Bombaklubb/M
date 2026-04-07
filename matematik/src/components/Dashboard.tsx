@@ -54,6 +54,8 @@ export default function Dashboard() {
               <div>
                 <p className="font-bold text-lg">{currentStudent.name}</p>
                 <p className="text-white/80 text-sm">{GRADE_LABELS[currentStudent.grade]}</p>
+                {currentStudent.createdAt && <p className="text-white/60 text-xs mt-0.5">Aktiv sedan {currentStudent.createdAt.split('T')[0]}</p>}
+                <p className="text-white/60 text-xs">Senast aktiv: {points.lastActiveDate || new Date().toISOString().split('T')[0]}</p>
               </div>
             </div>
             <div className="flex gap-2">
