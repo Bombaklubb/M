@@ -3112,6 +3112,40 @@ export const TOPICS: Topic[] = [
       { id: 'tk-10', type: 'fill-in', question: 'Du har 6 äpplen. Hur många äpplen till behöver du för att ha 10?', answer: '4', points: 10, explanation: '6 + 4 = 10. Du behöver 4 äpplen till. Sex och fyra är tio-kamrater!' },
     ],
   },
+
+  // ─── SANNOLIKHET & STATISTIK – LÅGSTADIET ────────────────
+  {
+    id: 'sannolikhet-lag',
+    title: 'Sannolikhet & statistik',
+    icon: '🎲',
+    description: 'Troligt, möjligt och omöjligt – förstå chans och data',
+    grades: ['2', '3'],
+    minGrade: 2,
+    color: 'from-fuchsia-400 to-purple-600',
+    instruction: {
+      title: 'Chans och data!',
+      text: 'Sannolikhet handlar om chansen att något händer. Omöjligt – kan aldrig hända. Möjligt – kan hända. Säkert – händer alltid. Statistik handlar om att samla och förstå data, till exempel att räkna hur många som gillar olika saker och se vad som är vanligast.',
+      illustration: 'numbers',
+      examples: [
+        'Omöjligt: slå 7 med en tärning (1–6)',
+        'Möjligt: slå 3 med en tärning',
+        'Säkert: slå ett tal under 7 med en tärning',
+        'Vanligast = det som förekommer flest gånger',
+      ],
+    },
+    exercises: [
+      { id: 'spl-1', type: 'true-false', question: 'Det är omöjligt att slå en 7:a med en vanlig tärning (siffrorna 1–6).', isTrue: true, points: 10, explanation: 'Sant! En vanlig tärning har sidorna 1, 2, 3, 4, 5 och 6. Det finns ingen 7:a, så det är omöjligt.' },
+      { id: 'spl-2', type: 'multiple-choice', question: '5 barn gillar fotboll, 3 gillar simning och 2 gillar cykling. Vilken sport är vanligast?', options: ['Simning', 'Cykling', 'Fotboll', 'Lika många'], correctIndex: 2, points: 10, explanation: 'Fotboll fick 5 röster – flest. Det är den vanligaste sporten i gruppen.' },
+      { id: 'spl-3', type: 'multiple-choice', question: 'Du kastar ett mynt. Vad kan hända?', options: ['Bara krona', 'Krona eller klave', 'Bara klave', 'Ingenting'], correctIndex: 1, points: 10, explanation: 'Ett mynt har två sidor: krona och klave. Båda utfallen är möjliga.' },
+      { id: 'spl-4', type: 'true-false', question: 'Det är säkert att du får ett tal som är 6 eller lägre om du kastar en vanlig tärning (1–6).', isTrue: true, points: 10, explanation: 'Sant! Alla sidor på tärningen (1, 2, 3, 4, 5, 6) är 6 eller lägre. Det händer alltid.' },
+      { id: 'spl-5', type: 'multiple-choice', question: 'I en burk finns 4 röda och 1 blå kula. Vilken färg är det störst chans att dra?', options: ['Blå', 'Lika stor chans', 'Röd', 'Omöjligt att veta'], correctIndex: 2, points: 10, explanation: '4 av 5 kulor är röda. Det är störst chans att dra en röd kula.' },
+      { id: 'spl-6', type: 'fill-in', question: 'Väderdata en vecka: sol, sol, regn, sol, regn, sol, regn. Hur många soldagar var det?', answer: '4', points: 10, explanation: 'Sol förekommer 4 gånger: dag 1, 2, 4 och 6. Det var 4 soldagar.' },
+      { id: 'spl-7', type: 'true-false', question: 'Om det bara finns röda kulor i en påse är det omöjligt att dra en blå kula.', isTrue: true, points: 10, explanation: 'Sant! Om det inte finns några blå kulor i påsen kan man aldrig dra en blå. Det är omöjligt.' },
+      { id: 'spl-8', type: 'fill-in', question: '4 barn gillar äpple och 6 barn gillar banan. Hur många barn tillfrågades totalt?', answer: '10', points: 10, explanation: '4 + 6 = 10. Totalt tillfrågades 10 barn.' },
+      { id: 'spl-9', type: 'multiple-choice', question: 'Klass röstade om favoritfärg: Röd = 4, Blå = 7, Gul = 2. Vilken färg fick flest röster?', options: ['Röd', 'Gul', 'Alla lika', 'Blå'], correctIndex: 3, points: 10, explanation: 'Blå fick 7 röster – flest av alla. Blå vann omröstningen.' },
+      { id: 'spl-10', type: 'multiple-choice', question: 'En påse har 8 gröna och 2 gula kulor. Vad är mest troligt när du drar en kula?', options: ['Gul', 'Lika troligt', 'Grön', 'Omöjligt att säga'], correctIndex: 2, points: 10, explanation: '8 av 10 kulor är gröna. Det är mycket mer troligt att dra en grön kula.' },
+    ],
+  },
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
