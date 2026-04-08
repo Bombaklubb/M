@@ -82,6 +82,8 @@ export const WORLDS: World[] = [
       'vinklar-mel', 'symmetri-mel',
       // Tallinjen, Omvandling & Positionssystemet
       'tallinjen-mel', 'omv-mat-mel', 'omv-vikt-mel', 'position-mel',
+      // Rationella tal
+      'rationella-brak-mel',
     ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
@@ -127,6 +129,8 @@ export const WORLDS: World[] = [
       'matematik-begrepp-hog', 'rimlighetsoevningar-hog',
       // Geometri – symmetri
       'symmetri-hog',
+      // Rationella tal
+      'rationella-brak-hog',
     ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',

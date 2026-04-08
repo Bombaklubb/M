@@ -3010,6 +3010,74 @@ export const TOPICS: Topic[] = [
       { id: 'psm-10', type: 'multiple-choice', question: 'I talet 46 780, vilken siffra är på tiotusentalens plats?', options: ['6', '4', '7', '8'], correctIndex: 1, points: 10, explanation: 'I 46 780: 4 = tiotusental, 6 = tusental, 7 = hundratal, 8 = tiotal, 0 = ental.' },
     ],
   },
+
+  // ─── RATIONELLA TAL – BRÅK, MELLANSTADIET ────────────────
+  {
+    id: 'rationella-brak-mel',
+    title: 'Rationella tal – Bråk',
+    icon: '🔢',
+    description: 'Jämför, förenkla och beräkna med bråk',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-rose-400 to-pink-600',
+    instruction: {
+      title: 'Bråk – täljare och nämnare!',
+      text: 'Ett bråk skrivs som täljare/nämnare. Täljaren visar hur många delar vi har. Nämnaren visar hur många delar helheten är delad i. 3/4 = 3 delar av 4. Förenkla bråk genom att dela täljare och nämnare med samma tal. Addera bråk med samma nämnare direkt: 1/5 + 2/5 = 3/5.',
+      illustration: 'fractions',
+      examples: [
+        '4/8 = 1/2 (dela med 4)',
+        '1/4 + 2/4 = 3/4',
+        '3/4 = 0,75',
+        '1/3 av 12 = 4',
+      ],
+    },
+    exercises: [
+      { id: 'rbm-1', type: 'multiple-choice', question: 'Vilket bråk är störst?', options: ['1/3', '2/3', '1/4', '1/2'], correctIndex: 1, points: 10, explanation: '2/3 ≈ 0,667. De andra är: 1/3 ≈ 0,333, 1/4 = 0,25, 1/2 = 0,5. Störst är 2/3.' },
+      { id: 'rbm-2', type: 'fill-in', question: 'Förenkla bråket 4/8 så långt som möjligt.', answer: '1/2', points: 10, explanation: '4/8 ÷ 4 = 1/2. Dela täljare och nämnare med 4.' },
+      { id: 'rbm-3', type: 'fill-in', question: 'Beräkna: 1/4 + 2/4', answer: '3/4', points: 10, explanation: 'Nämnarna är lika (4), så addera täljarna: 1 + 2 = 3. Svar: 3/4.' },
+      { id: 'rbm-4', type: 'true-false', question: '3/6 är lika med 1/2.', isTrue: true, points: 10, explanation: 'Sant! 3/6 ÷ 3 = 1/2. De är ekvivalenta bråk och representerar samma storlek.' },
+      { id: 'rbm-5', type: 'multiple-choice', question: 'Beräkna: 5/8 − 2/8', options: ['3/16', '2/8', '3/8', '7/8'], correctIndex: 2, points: 10, explanation: '5/8 − 2/8 = 3/8. Nämnarna är lika, subtrahera täljarna: 5 − 2 = 3.' },
+      { id: 'rbm-6', type: 'fill-in', question: 'Skriv bråket 3/4 som decimaltal.', answer: '0,75', acceptableAnswers: ['0.75'], points: 10, explanation: '3 ÷ 4 = 0,75. Bråket 3/4 är detsamma som decimaltalet 0,75.' },
+      { id: 'rbm-7', type: 'fill-in', question: 'Hur mycket är 1/2 av 20?', answer: '10', points: 10, explanation: '20 ÷ 2 = 10. En halv av 20 är 10.' },
+      { id: 'rbm-8', type: 'true-false', question: '2/3 är större än 3/4.', isTrue: false, points: 10, explanation: 'Falskt! 2/3 ≈ 0,667 och 3/4 = 0,75. Eftersom 0,667 < 0,75 är 2/3 mindre än 3/4.' },
+      { id: 'rbm-9', type: 'multiple-choice', question: 'Beräkna: 2/5 + 1/5', options: ['3/10', '3/5', '2/5', '1'], correctIndex: 1, points: 10, explanation: '2/5 + 1/5 = 3/5. Nämnarna är lika, addera täljarna: 2 + 1 = 3.' },
+      { id: 'rbm-10', type: 'fill-in', question: 'Förenkla bråket 6/9 så långt som möjligt.', answer: '2/3', points: 10, explanation: '6/9 ÷ 3 = 2/3. Dela täljare och nämnare med 3 (deras SGD).' },
+    ],
+  },
+
+  // ─── RATIONELLA TAL – BRÅK, HÖGSTADIET ───────────────────
+  {
+    id: 'rationella-brak-hog',
+    title: 'Rationella tal – Bråk',
+    icon: '🔢',
+    description: 'Räkna med bråk, negativa tal och olikämniga nämnare',
+    grades: ['7', '8', '9'],
+    minGrade: 7,
+    color: 'from-pink-500 to-rose-700',
+    instruction: {
+      title: 'Rationella tal och bråkräkning!',
+      text: 'Rationella tal är alla tal som kan skrivas som bråk p/q (q ≠ 0). Det inkluderar heltal, bråk och negativa tal. Vid addition/subtraktion med olikämniga nämnare: hitta minsta gemensamma nämnare (MGN). Multiplikation: täljare × täljare / nämnare × nämnare. Division: multiplicera med det omvända bråket.',
+      illustration: 'fractions',
+      examples: [
+        '1/3 + 1/4 = 4/12 + 3/12 = 7/12',
+        '3/4 × 2/3 = 6/12 = 1/2',
+        '2/3 ÷ 4/9 = 2/3 × 9/4 = 18/12 = 3/2',
+        '−2/3 + 1/2 = −4/6 + 3/6 = −1/6',
+      ],
+    },
+    exercises: [
+      { id: 'rbh-1', type: 'fill-in', question: 'Beräkna: 1/3 + 1/4. Ange svaret som ett bråk.', answer: '7/12', points: 10, explanation: 'MGN = 12. 1/3 = 4/12, 1/4 = 3/12. 4/12 + 3/12 = 7/12.' },
+      { id: 'rbh-2', type: 'fill-in', question: 'Beräkna: 3/4 × 2/3. Förenkla svaret.', answer: '1/2', acceptableAnswers: ['6/12', '3/6'], points: 10, explanation: '3 × 2 = 6 (täljare), 4 × 3 = 12 (nämnare). 6/12 = 1/2.' },
+      { id: 'rbh-3', type: 'multiple-choice', question: 'Beräkna: 2/3 ÷ 4/9', options: ['8/27', '3/2', '6/12', '1/6'], correctIndex: 1, points: 10, explanation: '2/3 ÷ 4/9 = 2/3 × 9/4 = 18/12 = 3/2. Vänd det andra bråket och multiplicera.' },
+      { id: 'rbh-4', type: 'fill-in', question: 'Förenkla bråket 15/25 så långt som möjligt.', answer: '3/5', points: 10, explanation: '15/25 ÷ 5 = 3/5. Dela täljare och nämnare med 5 (SGD = 5).' },
+      { id: 'rbh-5', type: 'true-false', question: '−3/4 > −1/2 (−3/4 är större än −1/2).', isTrue: false, points: 10, explanation: 'Falskt! −3/4 = −0,75 och −1/2 = −0,5. Eftersom −0,75 < −0,5 är −3/4 mindre än −1/2.' },
+      { id: 'rbh-6', type: 'fill-in', question: 'Beräkna: 5/6 − 2/9. Ange svaret som ett bråk.', answer: '11/18', points: 10, explanation: 'MGN = 18. 5/6 = 15/18, 2/9 = 4/18. 15/18 − 4/18 = 11/18.' },
+      { id: 'rbh-7', type: 'true-false', question: 'Alla heltal är rationella tal.', isTrue: true, points: 10, explanation: 'Sant! Varje heltal n kan skrivas som n/1, vilket är ett bråk. Därför är alla heltal rationella tal.' },
+      { id: 'rbh-8', type: 'fill-in', question: 'Beräkna: (−2/3) + 1/2. Ange svaret som ett bråk.', answer: '-1/6', acceptableAnswers: ['−1/6'], points: 10, explanation: 'MGN = 6. −2/3 = −4/6, 1/2 = 3/6. −4/6 + 3/6 = −1/6.' },
+      { id: 'rbh-9', type: 'fill-in', question: 'Beräkna: 3/4 ÷ 3/8.', answer: '2', points: 10, explanation: '3/4 ÷ 3/8 = 3/4 × 8/3 = 24/12 = 2. Vänd det andra bråket och multiplicera.' },
+      { id: 'rbh-10', type: 'multiple-choice', question: 'Vilket av följande är INTE ett rationellt tal?', options: ['3/7', '−5', '√2', '0'], correctIndex: 2, points: 10, explanation: '√2 ≈ 1,41421... är ett irrationellt tal – det kan inte skrivas exakt som ett bråk p/q.' },
+    ],
+  },
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
