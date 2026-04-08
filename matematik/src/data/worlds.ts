@@ -43,6 +43,8 @@ export const WORLDS: World[] = [
       'vinklar-lag', 'symmetri-lag',
       // Tallinjen, Omvandling & Positionssystemet
       'tallinjen-lag', 'omv-mat-lag', 'omv-vikt-lag', 'position-lag',
+      // Tio kamraterna
+      'tio-kamraterna',
     ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
