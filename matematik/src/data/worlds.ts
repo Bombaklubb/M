@@ -41,6 +41,8 @@ export const WORLDS: World[] = [
       'problemlosning-lag', 'matematik-begrepp-lag', 'rimlighetsoevningar-lag',
       // Geometri – vinklar & symmetri
       'vinklar-lag', 'symmetri-lag',
+      // Tallinjen, Omvandling & Positionssystemet
+      'tallinjen-lag', 'omv-mat-lag', 'omv-vikt-lag', 'position-lag',
     ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
@@ -78,6 +80,8 @@ export const WORLDS: World[] = [
       'matematik-begrepp-mel', 'rimlighetsoevningar-mel',
       // Geometri – vinklar & symmetri
       'vinklar-mel', 'symmetri-mel',
+      // Tallinjen, Omvandling & Positionssystemet
+      'tallinjen-mel', 'omv-mat-mel', 'omv-vikt-mel', 'position-mel',
     ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
