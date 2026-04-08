@@ -3078,6 +3078,40 @@ export const TOPICS: Topic[] = [
       { id: 'rbh-10', type: 'multiple-choice', question: 'Vilket av följande är INTE ett rationellt tal?', options: ['3/7', '−5', '√2', '0'], correctIndex: 2, points: 10, explanation: '√2 ≈ 1,41421... är ett irrationellt tal – det kan inte skrivas exakt som ett bråk p/q.' },
     ],
   },
+
+  // ─── TIO KAMRATERNA – LÅGSTADIET ─────────────────────────
+  {
+    id: 'tio-kamraterna',
+    title: 'Tio kamraterna',
+    icon: '🤝',
+    description: 'Lär dig alla talpar som tillsammans blir 10',
+    grades: ['1', '2'],
+    minGrade: 1,
+    color: 'from-yellow-400 to-orange-500',
+    instruction: {
+      title: 'Tio kamraterna – par som blir 10!',
+      text: 'Tio kamraterna är de talpar som tillsammans bildar 10. Det är bra att kunna dem utantill! 1+9, 2+8, 3+7, 4+6, 5+5, 6+4, 7+3, 8+2, 9+1. Varje tal mellan 0 och 10 har exakt en tio-kamrat.',
+      illustration: 'numbers',
+      examples: [
+        '3 + 7 = 10  →  3 och 7 är tio-kamrater',
+        '6 + 4 = 10  →  6 och 4 är tio-kamrater',
+        '5 + 5 = 10  →  5 är sin egen tio-kamrat',
+        '9 + 1 = 10  →  9 och 1 är tio-kamrater',
+      ],
+    },
+    exercises: [
+      { id: 'tk-1', type: 'fill-in', question: 'Vad saknas? 3 + __ = 10', answer: '7', points: 10, explanation: '3 + 7 = 10. Tre och sju är tio-kamrater!' },
+      { id: 'tk-2', type: 'fill-in', question: 'Vad saknas? 7 + __ = 10', answer: '3', points: 10, explanation: '7 + 3 = 10. Sju och tre är tio-kamrater!' },
+      { id: 'tk-3', type: 'multiple-choice', question: 'Vilket talpar summerar till 10?', options: ['4 och 5', '3 och 8', '4 och 6', '2 och 7'], correctIndex: 2, points: 10, explanation: '4 + 6 = 10. De är tio-kamrater! De andra summerar till 9, 11 och 9.' },
+      { id: 'tk-4', type: 'fill-in', question: 'Vad saknas? 5 + __ = 10', answer: '5', points: 10, explanation: '5 + 5 = 10. Fem är sin egen tio-kamrat – precis halva vägen till 10!' },
+      { id: 'tk-5', type: 'true-false', question: '8 + 2 = 10. Åtta och två är tio-kamrater.', isTrue: true, points: 10, explanation: 'Sant! 8 + 2 = 10. Åtta och två är tio-kamrater.' },
+      { id: 'tk-6', type: 'fill-in', question: 'Vad saknas? 1 + __ = 10', answer: '9', points: 10, explanation: '1 + 9 = 10. Ett och nio är tio-kamrater!' },
+      { id: 'tk-7', type: 'true-false', question: '6 + 5 = 10. Sex och fem är tio-kamrater.', isTrue: false, points: 10, explanation: 'Falskt! 6 + 5 = 11, inte 10. Tio-kamraten till 6 är 4, eftersom 6 + 4 = 10.' },
+      { id: 'tk-8', type: 'multiple-choice', question: 'Vilket tal är tio-kamrat till 4?', options: ['4', '5', '7', '6'], correctIndex: 3, points: 10, explanation: '4 + 6 = 10. Tio-kamraten till 4 är 6!' },
+      { id: 'tk-9', type: 'fill-in', question: 'Vad saknas? 9 + __ = 10', answer: '1', points: 10, explanation: '9 + 1 = 10. Nio och ett är tio-kamrater!' },
+      { id: 'tk-10', type: 'fill-in', question: 'Du har 6 äpplen. Hur många äpplen till behöver du för att ha 10?', answer: '4', points: 10, explanation: '6 + 4 = 10. Du behöver 4 äpplen till. Sex och fyra är tio-kamrater!' },
+    ],
+  },
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
