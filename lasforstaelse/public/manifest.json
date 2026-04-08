@@ -9,14 +9,10 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/book-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/book-512.png",
+      "src": "/lasjakten-favicon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
