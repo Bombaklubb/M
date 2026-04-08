@@ -2806,6 +2806,142 @@ export const TOPICS: Topic[] = [
       { id: 'tlm-15', type: 'multiple-choice', question: 'En tallinje 0–5. Var sitter bråket 5/2?', options: ['1,5', '2', '2,5', '3'], correctIndex: 2, points: 15, explanation: '5/2 = 2,5. Det sitter halvvägs mellan 2 och 3 på tallinjen.' },
     ],
   },
+
+  // ─── OMVANDLING MÄTNING – LÅGSTADIET ─────────────────────
+  {
+    id: 'omv-mat-lag',
+    title: 'Omvandling – Mätning',
+    icon: '📐',
+    description: 'Omvandla mellan mm, cm, dm och m',
+    grades: ['2', '3'],
+    minGrade: 2,
+    color: 'from-teal-400 to-cyan-600',
+    instruction: {
+      title: 'Omvandling av längd!',
+      text: 'Det finns olika enheter för längd. 10 mm = 1 cm. 10 cm = 1 dm. 10 dm = 1 m. 100 cm = 1 m. Att omvandla betyder att skriva samma längd med en annan enhet.',
+      illustration: 'numbers',
+      examples: [
+        '10 mm = 1 cm',
+        '10 cm = 1 dm',
+        '100 cm = 1 m',
+        '2 m = 200 cm',
+      ],
+    },
+    exercises: [
+      { id: 'oml-1', type: 'fill-in', question: 'Hur många cm är 1 m?', answer: '100', points: 10, explanation: '1 m = 100 cm. Meter är 100 gånger större än centimeter.' },
+      { id: 'oml-2', type: 'multiple-choice', question: 'Hur många mm är 1 cm?', options: ['5', '10', '100', '1000'], correctIndex: 1, points: 10, explanation: '1 cm = 10 mm. Centimeter är 10 gånger större än millimeter.' },
+      { id: 'oml-3', type: 'fill-in', question: 'Hur många cm är 2 m?', answer: '200', points: 10, explanation: '1 m = 100 cm, så 2 m = 2 × 100 = 200 cm.' },
+      { id: 'oml-4', type: 'true-false', question: '1 dm = 10 cm.', isTrue: true, points: 10, explanation: 'Sant! 1 decimeter (dm) är lika med 10 centimeter (cm).' },
+      { id: 'oml-5', type: 'fill-in', question: 'Hur många cm är 3 dm?', answer: '30', points: 10, explanation: '1 dm = 10 cm, så 3 dm = 3 × 10 = 30 cm.' },
+      { id: 'oml-6', type: 'multiple-choice', question: '50 cm = ? dm', options: ['5', '50', '500', '0,5'], correctIndex: 0, points: 10, explanation: '50 cm ÷ 10 = 5 dm. Det går 10 cm på 1 dm.' },
+      { id: 'oml-7', type: 'fill-in', question: 'Hur många mm är 5 cm?', answer: '50', points: 10, explanation: '1 cm = 10 mm, så 5 cm = 5 × 10 = 50 mm.' },
+      { id: 'oml-8', type: 'true-false', question: '100 cm är lika med 1 m.', isTrue: true, points: 10, explanation: 'Sant! 100 centimeter = 1 meter. De är exakt lika långa.' },
+      { id: 'oml-9', type: 'multiple-choice', question: 'En linjal är 30 cm lång. Hur lång är den i dm?', options: ['3', '30', '300', '0,3'], correctIndex: 0, points: 10, explanation: '30 cm ÷ 10 = 3 dm. 30 cm och 3 dm är samma längd.' },
+      { id: 'oml-10', type: 'fill-in', question: 'Hur många cm är 1 m och 50 cm totalt?', answer: '150', points: 10, explanation: '1 m = 100 cm. 100 cm + 50 cm = 150 cm.' },
+    ],
+  },
+
+  // ─── OMVANDLING MÄTNING – MELLANSTADIET ──────────────────
+  {
+    id: 'omv-mat-mel',
+    title: 'Omvandling – Mätning',
+    icon: '📐',
+    description: 'Omvandla längdenheter inklusive km och decimaler',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-cyan-500 to-teal-700',
+    instruction: {
+      title: 'Längdomvandling med decimaler!',
+      text: 'Nu omvandlar vi även kilometer och decimaler. 1 km = 1 000 m. 1 m = 10 dm = 100 cm = 1 000 mm. Decimaler: 0,5 km = 500 m. 2,5 m = 250 cm.',
+      illustration: 'numbers',
+      examples: [
+        '1 km = 1 000 m',
+        '0,5 km = 500 m',
+        '2,5 m = 250 cm',
+        '3 500 m = 3,5 km',
+      ],
+    },
+    exercises: [
+      { id: 'omm-1', type: 'fill-in', question: 'Hur många m är 1 km?', answer: '1000', points: 10, explanation: '1 km = 1 000 m. Kilo betyder 1 000.' },
+      { id: 'omm-2', type: 'multiple-choice', question: '2,5 km = ? m', options: ['25', '250', '2500', '25000'], correctIndex: 2, points: 10, explanation: '2,5 × 1 000 = 2 500 m. Multiplicera km med 1 000 för att få m.' },
+      { id: 'omm-3', type: 'fill-in', question: '350 cm = ? m. Skriv som decimaltal.', answer: '3,5', acceptableAnswers: ['3.5'], points: 10, explanation: '350 ÷ 100 = 3,5 m. Dividera cm med 100 för att få m.' },
+      { id: 'omm-4', type: 'true-false', question: '4 500 m = 4,5 km.', isTrue: true, points: 10, explanation: 'Sant! 4 500 ÷ 1 000 = 4,5. Dividera meter med 1 000 för att få km.' },
+      { id: 'omm-5', type: 'fill-in', question: '1,2 m = ? cm', answer: '120', points: 10, explanation: '1,2 × 100 = 120 cm. Multiplicera m med 100 för att få cm.' },
+      { id: 'omm-6', type: 'multiple-choice', question: '750 m = ? km', options: ['7,5', '75', '0,75', '0,075'], correctIndex: 2, points: 10, explanation: '750 ÷ 1 000 = 0,75 km. Dividera meter med 1 000 för att få km.' },
+      { id: 'omm-7', type: 'fill-in', question: 'En väg är 2 km och 300 m lång. Hur lång är den i meter?', answer: '2300', points: 10, explanation: '2 km = 2 000 m. 2 000 + 300 = 2 300 m.' },
+      { id: 'omm-8', type: 'true-false', question: '0,5 km är samma som 500 m.', isTrue: true, points: 10, explanation: 'Sant! 0,5 × 1 000 = 500. En halv kilometer är 500 meter.' },
+      { id: 'omm-9', type: 'multiple-choice', question: '2 m 35 cm = ? cm', options: ['235', '253', '2035', '23,5'], correctIndex: 0, points: 10, explanation: '2 m = 200 cm. 200 + 35 = 235 cm.' },
+      { id: 'omm-10', type: 'fill-in', question: '2,8 m = ? cm', answer: '280', points: 10, explanation: '2,8 × 100 = 280 cm. Multiplicera meter med 100 för att få cm.' },
+    ],
+  },
+
+  // ─── OMVANDLING VIKT – LÅGSTADIET ────────────────────────
+  {
+    id: 'omv-vikt-lag',
+    title: 'Omvandling – Vikt',
+    icon: '⚖️',
+    description: 'Omvandla mellan gram och kilogram',
+    grades: ['2', '3'],
+    minGrade: 2,
+    color: 'from-amber-400 to-orange-500',
+    instruction: {
+      title: 'Gram och kilogram!',
+      text: '1 kg (kilogram) = 1 000 g (gram). Kilogram är den större enheten. Gram är den mindre enheten. En banan väger ungefär 100 g. En mjölkförpackning väger 1 kg.',
+      illustration: 'numbers',
+      examples: [
+        '1 kg = 1 000 g',
+        '2 kg = 2 000 g',
+        '3 000 g = 3 kg',
+        '1 kg 500 g = 1 500 g',
+      ],
+    },
+    exercises: [
+      { id: 'ovl-1', type: 'fill-in', question: 'Hur många gram är 1 kg?', answer: '1000', points: 10, explanation: '1 kg = 1 000 g. Kilo betyder 1 000.' },
+      { id: 'ovl-2', type: 'multiple-choice', question: 'Hur många gram är 2 kg?', options: ['200', '20', '2000', '20000'], correctIndex: 2, points: 10, explanation: '1 kg = 1 000 g, så 2 kg = 2 × 1 000 = 2 000 g.' },
+      { id: 'ovl-3', type: 'fill-in', question: '3 000 g = ? kg', answer: '3', points: 10, explanation: '3 000 ÷ 1 000 = 3. Dividera gram med 1 000 för att få kg.' },
+      { id: 'ovl-4', type: 'true-false', question: '1 kg är tyngre än 900 g.', isTrue: true, points: 10, explanation: 'Sant! 1 kg = 1 000 g, och 1 000 g > 900 g. Alltså är 1 kg tyngre.' },
+      { id: 'ovl-5', type: 'multiple-choice', question: '1 kg 500 g = ? g', options: ['150', '1500', '15000', '1050'], correctIndex: 1, points: 10, explanation: '1 kg = 1 000 g. 1 000 + 500 = 1 500 g.' },
+      { id: 'ovl-6', type: 'fill-in', question: 'Hur många gram är 4 kg?', answer: '4000', points: 10, explanation: '4 × 1 000 = 4 000 g. Multiplicera kg med 1 000 för att få gram.' },
+      { id: 'ovl-7', type: 'true-false', question: '2 000 g är lika med 2 kg.', isTrue: true, points: 10, explanation: 'Sant! 2 000 g ÷ 1 000 = 2 kg. De väger exakt lika.' },
+      { id: 'ovl-8', type: 'multiple-choice', question: '5 000 g = ? kg', options: ['50', '500', '5', '0,5'], correctIndex: 2, points: 10, explanation: '5 000 ÷ 1 000 = 5 kg.' },
+      { id: 'ovl-9', type: 'fill-in', question: 'En kasse väger 2 kg och 300 g. Hur mycket väger den i gram?', answer: '2300', points: 10, explanation: '2 kg = 2 000 g. 2 000 + 300 = 2 300 g.' },
+      { id: 'ovl-10', type: 'true-false', question: '500 g är lika med 5 kg.', isTrue: false, points: 10, explanation: 'Falskt! 500 g ÷ 1 000 = 0,5 kg, inte 5 kg. 5 kg = 5 000 g.' },
+    ],
+  },
+
+  // ─── OMVANDLING VIKT – MELLANSTADIET ─────────────────────
+  {
+    id: 'omv-vikt-mel',
+    title: 'Omvandling – Vikt',
+    icon: '⚖️',
+    description: 'Omvandla vikt inklusive ton och decimaler',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-orange-500 to-red-600',
+    instruction: {
+      title: 'Vikt med ton och decimaler!',
+      text: '1 ton = 1 000 kg. 1 kg = 1 000 g. Decimaler: 0,5 kg = 500 g. 2,5 ton = 2 500 kg. Omvandla genom att multiplicera (mindre → större enhet ÷) eller dividera (större → mindre enhet ×).',
+      illustration: 'numbers',
+      examples: [
+        '1 ton = 1 000 kg',
+        '0,5 kg = 500 g',
+        '2,5 ton = 2 500 kg',
+        '3 250 g = 3,25 kg',
+      ],
+    },
+    exercises: [
+      { id: 'ovm-1', type: 'fill-in', question: 'Hur många kg är 1 ton?', answer: '1000', points: 10, explanation: '1 ton = 1 000 kg. Ton används för mycket tunga föremål.' },
+      { id: 'ovm-2', type: 'multiple-choice', question: '2,5 kg = ? g', options: ['25', '250', '2500', '25000'], correctIndex: 2, points: 10, explanation: '2,5 × 1 000 = 2 500 g. Multiplicera kg med 1 000 för att få gram.' },
+      { id: 'ovm-3', type: 'fill-in', question: '750 g = ? kg. Skriv som decimaltal.', answer: '0,75', acceptableAnswers: ['0.75'], points: 10, explanation: '750 ÷ 1 000 = 0,75 kg. Dividera gram med 1 000 för att få kg.' },
+      { id: 'ovm-4', type: 'true-false', question: '1,5 ton = 1 500 kg.', isTrue: true, points: 10, explanation: 'Sant! 1,5 × 1 000 = 1 500 kg. En och en halv ton är 1 500 kg.' },
+      { id: 'ovm-5', type: 'fill-in', question: '3 250 g = ? kg. Skriv som decimaltal.', answer: '3,25', acceptableAnswers: ['3.25'], points: 10, explanation: '3 250 ÷ 1 000 = 3,25 kg.' },
+      { id: 'ovm-6', type: 'multiple-choice', question: '2 ton 500 kg = ? kg', options: ['2050', '2500', '25000', '205'], correctIndex: 1, points: 10, explanation: '2 ton = 2 000 kg. 2 000 + 500 = 2 500 kg.' },
+      { id: 'ovm-7', type: 'fill-in', question: '0,5 kg = ? g', answer: '500', points: 10, explanation: '0,5 × 1 000 = 500 g. En halv kilogram är 500 gram.' },
+      { id: 'ovm-8', type: 'true-false', question: '4 500 g = 4,5 kg.', isTrue: true, points: 10, explanation: 'Sant! 4 500 ÷ 1 000 = 4,5 kg.' },
+      { id: 'ovm-9', type: 'multiple-choice', question: '2 000 kg = ? ton', options: ['0,2', '20', '2', '200'], correctIndex: 2, points: 10, explanation: '2 000 ÷ 1 000 = 2 ton. 2 000 kg är lika med 2 ton.' },
+      { id: 'ovm-10', type: 'fill-in', question: 'En elefant väger 4 ton. Hur mycket väger den i kg?', answer: '4000', points: 10, explanation: '4 × 1 000 = 4 000 kg. En elefant väger 4 000 kilogram.' },
+    ],
+  },
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
