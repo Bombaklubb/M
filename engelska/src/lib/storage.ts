@@ -1,4 +1,4 @@
-import type { StudentData, StageId, ModuleProgress, StageProgress, HeroConfig, GamificationData } from "./types";
+import type { StudentData, StageId, ModuleProgress, StageProgress, GamificationData } from "./types";
 import { defaultGamificationData } from "./gamification";
 
 // ─── Storage keys ─────────────────────────────────────────────────────────────
@@ -123,13 +123,6 @@ export function createStudent(name: string, avatar?: string): StudentData {
 export function clearStudent(): void {
   if (typeof window === "undefined") return;
   localStorage.removeItem(ACTIVE_KEY);
-}
-
-export function saveHero(hero: HeroConfig): void {
-  const data = loadStudent();
-  if (!data) return;
-  data.hero = hero;
-  saveStudent(data);
 }
 
 // ─── Module progress helpers ──────────────────────────────────────────────────
