@@ -7,8 +7,8 @@ export const metadata: Metadata = {
     "En gratis engelskträningsapp för åk 1–gymnasiet. Grammatikövningar och läsförståelse i fyra spännande världar.",
   keywords: ["engelska", "skola", "övningar", "grammatik", "läsförståelse", "gratis"],
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/union-jack.svg",
+    apple: "/union-jack.svg",
   },
   openGraph: {
     images: [
