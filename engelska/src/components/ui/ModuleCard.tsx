@@ -222,12 +222,12 @@ export default function ModuleCard({
         gradientColor={`${beamColors[0]}18`}
         className={`h-full rounded-3xl border-3 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
           progress?.completed
-            ? `${stage.borderClass} bg-gradient-to-br from-white to-indigo-50/50`
+            ? `${stage.borderClass} bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/20`
             : "border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
         }`}
         style={{
           boxShadow: progress?.completed
-            ? "0 5px 0 0 rgba(34, 197, 94, 0.25), 0 8px 16px -4px rgba(34, 197, 94, 0.15), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+            ? "0 5px 0 0 rgba(34, 197, 94, 0.3), 0 8px 16px -4px rgba(34, 197, 94, 0.2)"
             : "0 4px 0 0 rgba(99, 102, 241, 0.15), 0 8px 16px -4px rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
         } as React.CSSProperties}
       >
@@ -273,7 +273,7 @@ export default function ModuleCard({
               </span>
             </div>
 
-            <p className="text-sm text-indigo-400 dark:text-gray-400 mt-1 truncate font-medium">{description}</p>
+            <p className={`text-sm mt-1 truncate font-medium ${progress?.completed ? "text-emerald-700 dark:text-emerald-300" : "text-indigo-400 dark:text-gray-400"}`}>{description}</p>
 
             <div className="mt-3 flex items-center gap-3">
               <div className="flex-1">

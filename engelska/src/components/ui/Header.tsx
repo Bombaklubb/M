@@ -150,7 +150,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
               return (
                 <Link
                   href="/profile"
-                  className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl hover:bg-en-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-en-200"
+                  className="flex items-center gap-2 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-en-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-en-200 touch-manipulation"
                 >
                   <div
                     className="w-8 h-8 rounded-xl overflow-hidden bg-en-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0 border-2 border-en-200 dark:border-gray-600"
@@ -158,7 +158,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
                   >
                     <AvatarImg av={av} />
                   </div>
-                  <span className="text-sm font-bold text-en-700 dark:text-gray-200">{student.name}</span>
+                  <span className="hidden sm:inline text-sm font-bold text-en-700 dark:text-gray-200">{student.name}</span>
                 </Link>
               );
             })()}
