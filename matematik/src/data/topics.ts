@@ -2942,6 +2942,74 @@ export const TOPICS: Topic[] = [
       { id: 'ovm-10', type: 'fill-in', question: 'En elefant väger 4 ton. Hur mycket väger den i kg?', answer: '4000', points: 10, explanation: '4 × 1 000 = 4 000 kg. En elefant väger 4 000 kilogram.' },
     ],
   },
+
+  // ─── POSITIONSSYSTEMET – LÅGSTADIET ──────────────────────
+  {
+    id: 'position-lag',
+    title: 'Positionssystemet',
+    icon: '🔢',
+    description: 'Förstå ental, tiotal och hundratal',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-violet-400 to-purple-600',
+    instruction: {
+      title: 'Varje siffra har sin plats!',
+      text: 'I positionssystemet bestäms siffrans värde av var den står i talet. Ental (1:or) är längst till höger. Tiotal (10:or) är ett steg till vänster. Hundratal (100:or) är ytterligare ett steg till vänster. Exempel: i 347 är 3 = 3 hundratal, 4 = 4 tiotal, 7 = 7 ental.',
+      illustration: 'numbers',
+      examples: [
+        'I 47: siffran 4 = 4 tiotal, siffran 7 = 7 ental',
+        'I 230: 2 hundratal, 3 tiotal, 0 ental',
+        '3 tiotal + 5 ental = 35',
+        '2 hundratal + 0 tiotal + 8 ental = 208',
+      ],
+    },
+    exercises: [
+      { id: 'psl-1', type: 'fill-in', question: 'Vilken siffra är på tiotalens plats i talet 47?', answer: '4', points: 10, explanation: 'I 47: siffran 4 är på tiotalens plats (= 4 tiotal = 40). Siffran 7 är på ental.' },
+      { id: 'psl-2', type: 'fill-in', question: 'Hur många ental har talet 53?', answer: '3', points: 10, explanation: 'I 53: siffran 5 är tiotal, siffran 3 är ental. Svaret är 3 ental.' },
+      { id: 'psl-3', type: 'fill-in', question: 'Vilket tal har 3 tiotal och 5 ental?', answer: '35', points: 10, explanation: '3 tiotal = 30. 30 + 5 ental = 35.' },
+      { id: 'psl-4', type: 'true-false', question: 'I talet 62 är siffran 6 på tiotalens plats.', isTrue: true, points: 10, explanation: 'Sant! I 62: 6 är på tiotalens plats (= 60) och 2 är på ental (= 2).' },
+      { id: 'psl-5', type: 'multiple-choice', question: 'Vilket tal har 2 hundratal, 3 tiotal och 1 ental?', options: ['123', '321', '231', '213'], correctIndex: 2, points: 10, explanation: '2 hundratal = 200. 3 tiotal = 30. 1 ental = 1. 200 + 30 + 1 = 231.' },
+      { id: 'psl-6', type: 'fill-in', question: 'Hur många hundratal har talet 345?', answer: '3', points: 10, explanation: 'I 345: siffran 3 är på hundratals plats. Det finns 3 hundratal (= 300).' },
+      { id: 'psl-7', type: 'true-false', question: 'I talet 205 finns det 0 tiotal.', isTrue: true, points: 10, explanation: 'Sant! I 205: 2 = hundratal, 0 = tiotal, 5 = ental. Siffran 0 visar att det inte finns några tiotal.' },
+      { id: 'psl-8', type: 'fill-in', question: 'Skriv talet: 5 hundratal, 0 tiotal och 8 ental.', answer: '508', points: 10, explanation: '500 + 0 + 8 = 508. Nollan håller platsen för tiotal.' },
+      { id: 'psl-9', type: 'multiple-choice', question: 'I talet 174, vilken siffra är på ental?', options: ['1', '7', '4', '17'], correctIndex: 2, points: 10, explanation: 'I 174: 1 = hundratal, 7 = tiotal, 4 = ental. Ental är alltid längst till höger.' },
+      { id: 'psl-10', type: 'fill-in', question: '47 = 4 tiotal och ? ental', answer: '7', points: 10, explanation: '47 = 40 + 7. De sju enheterna på ental-platsen är 7 ental.' },
+    ],
+  },
+
+  // ─── POSITIONSSYSTEMET – MELLANSTADIET ───────────────────
+  {
+    id: 'position-mel',
+    title: 'Positionssystemet',
+    icon: '🔢',
+    description: 'Tusental, tiotusental och decimalers platsvärde',
+    grades: ['4', '5', '6'],
+    minGrade: 4,
+    color: 'from-purple-500 to-indigo-700',
+    instruction: {
+      title: 'Positionssystemet – stora tal och decimaler!',
+      text: 'Positionssystemet gäller även stora tal och decimaler. Tusental (1 000), tiotusental (10 000), hundratusental (100 000). Till höger om decimaltecknet: tiondel (0,1) och hundradel (0,01). I 3,47: 3 = ental, 4 = tiondel, 7 = hundradel.',
+      illustration: 'numbers',
+      examples: [
+        'I 12 345: 1=tiotusental, 2=tusental, 3=hundratal, 4=tiotal, 5=ental',
+        'I 3,47: 3=ental, 4=tiondel, 7=hundradel',
+        '5 000 + 300 + 7 = 5 307',
+        '0,4 = 4 tiondelar',
+      ],
+    },
+    exercises: [
+      { id: 'psm-1', type: 'fill-in', question: 'Vilket tal bildas av: 3 tusental, 2 hundratal, 4 tiotal och 5 ental?', answer: '3245', points: 10, explanation: '3 000 + 200 + 40 + 5 = 3 245.' },
+      { id: 'psm-2', type: 'fill-in', question: 'I talet 4 867, vilken siffra är på tusentalens plats?', answer: '4', points: 10, explanation: 'I 4 867: 4 = tusental, 8 = hundratal, 6 = tiotal, 7 = ental.' },
+      { id: 'psm-3', type: 'multiple-choice', question: 'I decimaltalet 3,47 – vilken siffra är på tiondedelarnas plats?', options: ['3', '4', '7', '47'], correctIndex: 1, points: 10, explanation: 'I 3,47: 3 = ental, 4 = tiondelar, 7 = hundradels. Tiondelar är det första steget till höger om kommat.' },
+      { id: 'psm-4', type: 'true-false', question: 'I talet 12 345 är siffran 2 på tusentalens plats.', isTrue: true, points: 10, explanation: 'Sant! I 12 345: 1 = tiotusental, 2 = tusental, 3 = hundratal, 4 = tiotal, 5 = ental.' },
+      { id: 'psm-5', type: 'fill-in', question: 'Skriv som tal: 5 tusental, 3 hundratal, 0 tiotal och 7 ental.', answer: '5307', points: 10, explanation: '5 000 + 300 + 0 + 7 = 5 307. Nollan håller tiotalens plats.' },
+      { id: 'psm-6', type: 'fill-in', question: 'I decimaltalet 7,56, vilken siffra är på hundradelsplatsen?', answer: '6', points: 10, explanation: 'I 7,56: 7 = ental, 5 = tiondelar, 6 = hundradels. Hundradels är det andra steget till höger om kommat.' },
+      { id: 'psm-7', type: 'multiple-choice', question: 'Vilket värde representerar siffran 3 i talet 3 000?', options: ['3', '30', '300', '3000'], correctIndex: 3, points: 10, explanation: 'I 3 000 är 3 på tusentalens plats. Platsvärdet är 3 × 1 000 = 3 000.' },
+      { id: 'psm-8', type: 'true-false', question: 'I decimaltalet 0,4 är siffran 4 på tiondedelarnas plats.', isTrue: true, points: 10, explanation: 'Sant! 0,4 = 4 tiondelar. Tiondelar är direkt till höger om kommatecknet.' },
+      { id: 'psm-9', type: 'fill-in', question: 'Skriv som ett tal: 20 000 + 5 000 + 300 + 40 + 2', answer: '25342', points: 10, explanation: '20 000 + 5 000 = 25 000. 25 000 + 300 = 25 300. 25 300 + 40 + 2 = 25 342.' },
+      { id: 'psm-10', type: 'multiple-choice', question: 'I talet 46 780, vilken siffra är på tiotusentalens plats?', options: ['6', '4', '7', '8'], correctIndex: 1, points: 10, explanation: 'I 46 780: 4 = tiotusental, 6 = tusental, 7 = hundratal, 8 = tiotal, 0 = ental.' },
+    ],
+  },
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
