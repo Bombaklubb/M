@@ -21,7 +21,7 @@ export default function WorldSelect() {
     <div
       className="min-h-screen relative overflow-x-hidden"
       style={{
-        backgroundImage: "url('/Solig glänta i den förtrollade skogen.png')",
+        backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
