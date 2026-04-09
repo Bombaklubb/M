@@ -62,7 +62,15 @@ export default function WorldSelect() {
     : 0;
 
   return (
-    <div className="min-h-screen relative overflow-x-hidden">
+    <div
+      className="min-h-screen relative overflow-x-hidden"
+      style={{
+        backgroundImage: "url('/Mattejakten startsida.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
 
       {/* Decorative math symbols */}
       <MathDecorations />
