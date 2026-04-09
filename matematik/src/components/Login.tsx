@@ -3,44 +3,10 @@ import { findOrCreateStudent } from '../utils/storage';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import { BASE_AVATARS } from '../data/avatars';
-import { Meteors } from './magicui/meteors';
 import { BorderBeam } from './magicui/border-beam';
-import { AnimatedGradientText } from './magicui/animated-gradient-text';
 import { Input } from './ui/input';
 
 const AVATARS = BASE_AVATARS;
-
-// Star field component
-function StarField() {
-  const stars = Array.from({ length: 55 }, (_, i) => ({
-    x: (i * 1.618 * 7.3) % 100,
-    y: (i * 2.718 * 5.7) % 100,
-    size: i % 7 === 0 ? 2.5 : i % 3 === 0 ? 1.5 : 1,
-    duration: 2 + (i % 4) * 1.2,
-    delay: (i * 0.37) % 4,
-    opacity: 0.15 + (i % 5) * 0.12,
-  }));
-
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      {stars.map((s, i) => (
-        <div
-          key={i}
-          className="absolute rounded-full bg-white twinkle-star"
-          style={{
-            width: s.size,
-            height: s.size,
-            top: `${s.y}%`,
-            left: `${s.x}%`,
-            opacity: s.opacity,
-            '--duration': `${s.duration}s`,
-            '--delay': `${s.delay}s`,
-          } as React.CSSProperties}
-        />
-      ))}
-    </div>
-  );
-}
 
 export default function Login() {
   const { login } = useApp();
@@ -56,30 +22,26 @@ export default function Login() {
   return (
     <div
       className="min-h-screen flex items-center justify-center p-4 pt-14 relative overflow-hidden"
-      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
+      style={{
+        backgroundImage: "url('/Solig glänta i den förtrollade skogen.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <AppHeader />
 
-      {/* Stars */}
-      <StarField />
-
-      {/* Magic UI – Meteors */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <Meteors number={10} minDuration={6} maxDuration={14} />
-      </div>
-
       {/* Floating math symbols */}
-      {['➕','➖','✖️','➗','π','√','∑','∞'].map((s, i) => (
+      {['+', '−', '×', '÷', 'π', '√', '∑', '∞'].map((s, i) => (
         <div
           key={i}
-          className="absolute select-none pointer-events-none"
+          className="absolute select-none pointer-events-none font-black"
           style={{
             top: `${8 + (i * 12) % 80}%`,
             left: `${4 + (i * 13) % 88}%`,
             transform: `rotate(${i * 22}deg)`,
-            color: 'rgba(200,140,50,0.06)',
+            color: 'rgba(120,80,10,0.08)',
             fontSize: '5rem',
-            fontWeight: 900,
           }}
         >
           {s}
@@ -93,7 +55,7 @@ export default function Login() {
             src="/mattejakten.png"
             alt="Mattejakten"
             className="h-40 w-auto mx-auto mb-1 drop-shadow-2xl"
-            style={{ filter: 'drop-shadow(0 0 30px rgba(245,158,11,0.35))' }}
+            style={{ filter: 'drop-shadow(0 4px 20px rgba(120,80,10,0.30))' }}
           />
         </div>
 
@@ -101,10 +63,10 @@ export default function Login() {
         <div
           className="relative rounded-3xl p-5 shadow-2xl"
           style={{
-            background: 'rgba(40, 8, 32, 0.82)',
+            background: 'rgba(255, 248, 220, 0.90)',
             backdropFilter: 'blur(24px)',
-            border: '1px solid rgba(200, 140, 50, 0.35)',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,220,100,0.10)',
+            border: '1px solid rgba(180, 130, 40, 0.45)',
+            boxShadow: '0 8px 40px rgba(120,80,10,0.25), inset 0 1px 0 rgba(255,255,255,0.9)',
           }}
         >
           <BorderBeam
@@ -115,11 +77,8 @@ export default function Login() {
             borderWidth={1.5}
           />
 
-          <h2 className="text-xl font-black text-white mb-3">
-            <AnimatedGradientText colorFrom="#fbbf24" colorTo="#a78bfa" speed={0.8}>
-              Skriv ditt namn
-            </AnimatedGradientText>
-            {' '}<span className="text-white">🏫</span>
+          <h2 className="text-xl font-black mb-3" style={{ color: '#5c3a00' }}>
+            Skriv ditt namn 🏫
           </h2>
 
           <div className="mb-4">
@@ -132,15 +91,15 @@ export default function Login() {
               autoFocus
               className="text-base font-bold"
               style={{
-                background: 'rgba(30, 8, 40, 0.80)',
-                border: '1px solid rgba(200,140,50,0.35)',
-                color: 'white',
+                background: 'rgba(255, 255, 255, 0.80)',
+                border: '1px solid rgba(180,130,40,0.40)',
+                color: '#1f2937',
               }}
             />
           </div>
 
-          <h3 className="text-base font-black text-white mb-1">Välj din hjälte! ⚔️</h3>
-          <p className="mb-3" style={{ color: 'rgba(255,255,255,0.40)', fontSize: '0.75rem' }}>
+          <h3 className="text-base font-black mb-1" style={{ color: '#5c3a00' }}>Välj din hjälte! ⚔️</h3>
+          <p className="mb-3 text-xs" style={{ color: 'rgba(92,58,0,0.60)' }}>
             Vem ska utforska matematikens världar?
           </p>
 
@@ -150,17 +109,15 @@ export default function Login() {
                 key={i}
                 onClick={() => setAvatar(i)}
                 className={`text-3xl p-2 rounded-2xl transition-all cursor-pointer ${
-                  avatar === i
-                    ? 'scale-110 shadow-lg'
-                    : 'hover:scale-105'
+                  avatar === i ? 'scale-110 shadow-lg' : 'hover:scale-105'
                 }`}
                 style={avatar === i ? {
-                  background: 'rgba(245,158,11,0.18)',
-                  border: '2px solid rgba(245,158,11,0.75)',
+                  background: 'rgba(245,158,11,0.20)',
+                  border: '2px solid rgba(180,130,40,0.75)',
                   boxShadow: '0 0 16px rgba(245,158,11,0.35)',
                 } : {
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.10)',
+                  background: 'rgba(255,255,255,0.50)',
+                  border: '1px solid rgba(180,130,40,0.25)',
                 }}
               >
                 {a}
@@ -169,7 +126,7 @@ export default function Login() {
           </div>
 
           {error && (
-            <p className="text-red-400 text-sm mb-3 animate-fade-in">{error}</p>
+            <p className="text-red-500 text-sm mb-3 animate-fade-in">{error}</p>
           )}
 
           <button
