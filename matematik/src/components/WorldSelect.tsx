@@ -2,13 +2,20 @@ import { useApp } from '../contexts/AppContext';
 import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
 import { getProgress, getPoints } from '../utils/storage';
+import { loadGamification } from '../utils/chestStorage';
+import { ALL_AVATARS } from '../data/avatars';
 import { BorderBeam } from './magicui/border-beam';
 
 export default function WorldSelect() {
-  const { currentStudent, setView } = useApp();
+  const { currentStudent, logout, setView } = useApp();
 
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
   const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
+  const totalPoints = pointsRecord?.total ?? 0;
+  const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
+  const unopenedChests = currentStudent
+    ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
+    : 0;
 
   return (
     <div
@@ -16,23 +23,70 @@ export default function WorldSelect() {
       style={{
         backgroundImage: "url('/Mattejakten världar i en fantasiskog.png')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center top',
+        backgroundPosition: 'center -100px',
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Spacer for fixed AppHeader */}
-      <div className="h-14" />
+      {/* Top bar – real clickable buttons */}
+      <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
 
-      {/* Spacer to push cards down into the forest clearing */}
-      <div className="h-28" />
+        {/* Kistor */}
+        <button
+          onClick={() => setView('kistor')}
+          className="relative flex items-center gap-1 px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          style={{
+            background: 'rgba(255, 248, 220, 0.82)',
+            border: '1px solid rgba(180, 130, 40, 0.50)',
+            boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
+          }}
+          title="Mina kistor"
+        >
+          <span className="text-xl leading-none">🏆</span>
+          {unopenedChests > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-black rounded-full flex items-center justify-center px-0.5">
+              {unopenedChests}
+            </span>
+          )}
+        </button>
+
+        {/* Avatar + namn + poäng */}
+        <button
+          onClick={() => setView('my-page')}
+          className="flex items-center gap-2 px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          style={{
+            background: 'rgba(255, 248, 220, 0.82)',
+            border: '1px solid rgba(180, 130, 40, 0.50)',
+            boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
+          }}
+        >
+          <span className="text-xl leading-none">{avatarEmoji}</span>
+          <span className="font-bold text-sm" style={{ color: '#5c3a00' }}>{currentStudent?.name ?? ''}</span>
+          <span className="text-amber-600 text-sm">·</span>
+          <span className="text-amber-500 text-sm">⭐</span>
+          <span className="font-bold text-sm" style={{ color: '#92400e' }}>{totalPoints}</span>
+        </button>
+
+        {/* Logga ut */}
+        <button
+          onClick={logout}
+          className="text-sm px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          style={{
+            background: 'rgba(255, 248, 220, 0.70)',
+            border: '1px solid rgba(180, 130, 40, 0.35)',
+            color: '#78350f',
+          }}
+        >
+          Logga ut
+        </button>
+      </div>
 
       {/* Välj din värld */}
-      <div className="relative z-10 flex items-center justify-center gap-3 mb-4 px-8">
-        <div className="h-px flex-1" style={{ background: 'rgba(251,146,60,0.30)' }} />
-        <span className="font-bold text-[11px] tracking-widest uppercase" style={{ color: 'rgba(120,60,10,0.75)' }}>
+      <div className="relative z-10 flex items-center justify-center gap-3 mt-3 mb-4 px-8">
+        <div className="h-px flex-1" style={{ background: 'rgba(180,130,40,0.35)' }} />
+        <span className="font-bold text-[11px] tracking-widest uppercase" style={{ color: 'rgba(120,60,10,0.80)' }}>
           ✦ Välj din värld ✦
         </span>
-        <div className="h-px flex-1" style={{ background: 'rgba(251,146,60,0.30)' }} />
+        <div className="h-px flex-1" style={{ background: 'rgba(180,130,40,0.35)' }} />
       </div>
 
       {/* World cards 2×2 */}
@@ -55,7 +109,7 @@ export default function WorldSelect() {
               style={{
                 background: 'rgba(255, 248, 220, 0.88)',
                 backdropFilter: 'blur(16px)',
-                border: '1px solid rgba(200, 150, 60, 0.45)',
+                border: '1px solid rgba(180, 130, 40, 0.45)',
                 boxShadow: '0 6px 28px rgba(120,80,20,0.20), inset 0 1px 0 rgba(255,255,255,0.9)',
               }}
               aria-label={world.name}
@@ -79,26 +133,26 @@ export default function WorldSelect() {
 
               {/* Points + progress count */}
               <div className="flex items-center gap-1.5 mb-2">
-                <span className="text-xs font-black" style={{ color: '#ea580c' }}>⭐ {worldPoints}</span>
+                <span className="text-xs font-black" style={{ color: '#b45309' }}>⭐ {worldPoints}</span>
                 <span className="text-xs text-gray-400">
                   · {completed}/{worldTopics.length} klara
                 </span>
               </div>
 
               {/* Progress bar */}
-              <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(200,150,60,0.20)' }}>
+              <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(180,130,40,0.20)' }}>
                 <div
                   className="h-full rounded-full transition-all duration-500 progress-gold"
                   style={{ width: `${pct}%` }}
                 />
               </div>
               {pct > 0 && pct < 100 && (
-                <div className="text-right text-[10px] mt-0.5" style={{ color: 'rgba(234,88,12,0.65)' }}>
+                <div className="text-right text-[10px] mt-0.5" style={{ color: 'rgba(180,90,10,0.75)' }}>
                   {pct}%
                 </div>
               )}
               {pct === 100 && (
-                <div className="text-right text-[10px] mt-0.5 font-bold" style={{ color: '#ea580c' }}>
+                <div className="text-right text-[10px] mt-0.5 font-bold" style={{ color: '#b45309' }}>
                   ✓ Klar!
                 </div>
               )}
