@@ -224,9 +224,6 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           </div>
         )}
 
-        <p className="text-center pb-4 text-xs text-gray-400">
-          Kontakt – martin.akdogan@enkoping.se
-        </p>
       </div>
     </div>
   );

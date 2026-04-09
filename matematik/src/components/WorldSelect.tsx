@@ -171,10 +171,6 @@ export default function WorldSelect() {
         })}
       </div>
 
-      {/* Bottom tagline */}
-      <p className="relative z-10 text-center pb-4 text-xs" style={{ color: 'rgba(120,60,10,0.50)' }}>
-        Kontakt – martin.akdogan@enkoping.se
-      </p>
 
     </div>
   );

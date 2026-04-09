@@ -137,14 +137,14 @@ function AppInner() {
 
       {/* Footer – alltid synlig */}
       <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-        <span className="text-white/50 text-xs font-semibold"
-          style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        <span className="text-xs font-semibold"
+          style={{ color: 'rgba(80,50,10,0.55)', textShadow: '0 1px 3px rgba(255,255,255,0.8)' }}>
           Mattejakten av Martin Akdogan
         </span>
       </div>
       <div className="fixed bottom-2 left-3 z-40 pointer-events-none select-none">
-        <span className="text-white/50 text-xs font-semibold"
-          style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+        <span className="text-xs font-semibold"
+          style={{ color: 'rgba(80,50,10,0.55)', textShadow: '0 1px 3px rgba(255,255,255,0.8)' }}>
           Kontakt – martin.akdogan@enkoping.se
         </span>
       </div>
