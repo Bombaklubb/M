@@ -35,7 +35,7 @@ export default function AppHeader() {
             className="h-12 w-auto drop-shadow-lg"
           />
           <span className="font-extrabold text-lg hidden sm:inline tracking-wide"
-            style={{ color: '#fcd34d', textShadow: '0 0 16px rgba(245,158,11,0.5)' }}>
+            style={{ color: '#ea580c' }}>
             Mattejakten
           </span>
         </button>
@@ -49,9 +49,9 @@ export default function AppHeader() {
               onClick={() => setView('kistor')}
               className="relative flex items-center gap-1 px-3 py-1.5 rounded-full hover:scale-105 transition-all cursor-pointer"
               style={{
-                background: 'rgba(180, 83, 9, 0.25)',
-                border: '1px solid rgba(200, 140, 50, 0.45)',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+                background: 'rgba(251, 146, 60, 0.12)',
+                border: '1px solid rgba(251, 146, 60, 0.40)',
+                boxShadow: '0 2px 8px rgba(251,146,60,0.15)'
               }}
               title="Mina kistor"
             >
@@ -63,31 +63,26 @@ export default function AppHeader() {
               )}
             </button>
 
-            {/* Poäng */}
-            <div
-              className="flex items-center gap-1 px-3 py-1.5 rounded-full star-badge"
-            >
-              <span className="text-base leading-none">⭐</span>
-              <span className="font-bold text-sm">{points.total}</span>
-            </div>
-
-            {/* Avatar + namn */}
+            {/* Avatar + namn + poäng */}
             <button
               onClick={() => setView('my-page')}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full transition-all hover:scale-105"
               style={{
-                background: 'rgba(50, 12, 38, 0.70)',
-                border: '1px solid rgba(200, 130, 50, 0.30)',
+                background: 'rgba(255, 255, 255, 0.85)',
+                border: '1px solid rgba(251, 146, 60, 0.35)',
               }}
             >
               <span className="text-base leading-none">{avatarEmoji}</span>
-              <span className="text-white font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
+              <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
+              <span className="text-orange-400 text-sm">⭐</span>
+              <span className="font-bold text-sm hidden sm:inline" style={{ color: '#ea580c' }}>{points.total}</span>
             </button>
 
             {/* Logga ut */}
             <button
               onClick={logout}
-              className="text-white/50 hover:text-white/80 font-medium text-sm transition-colors hidden sm:block"
+              className="text-gray-500 hover:text-gray-700 font-medium text-sm transition-colors hidden sm:block px-2 py-1.5 rounded-full"
+              style={{ border: '1px solid rgba(251,146,60,0.25)' }}
             >
               Logga ut
             </button>
