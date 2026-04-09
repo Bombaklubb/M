@@ -23,7 +23,7 @@ export default function Login() {
     <div
       className="min-h-screen flex items-center justify-center p-4 pt-14 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/Solig glänta i den förtrollade skogen.png')",
+        backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
