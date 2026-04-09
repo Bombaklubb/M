@@ -12,9 +12,9 @@
   }
 
   body {
-    background: linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%);
+    background: linear-gradient(160deg, #fff7ed 0%, #ffedd5 35%, #fefce8 65%, #fff7ed 100%);
     background-attachment: fixed;
-    color: white;
+    color: #1f2937;
     overscroll-behavior: none;
   }
 }
@@ -29,34 +29,34 @@
   }
 
   .card {
-    background: rgba(50, 12, 38, 0.70);
+    background: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(200, 130, 50, 0.28);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,220,100,0.08);
+    border: 1px solid rgba(251, 146, 60, 0.35);
+    box-shadow: 0 4px 24px rgba(251,146,60,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
     @apply rounded-2xl p-4;
   }
 
   .glass {
-    background: rgba(50, 12, 38, 0.65);
+    background: rgba(255, 255, 255, 0.80);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(200, 130, 50, 0.25);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    border: 1px solid rgba(251, 146, 60, 0.25);
+    box-shadow: 0 4px 20px rgba(251,146,60,0.10);
     @apply rounded-2xl;
   }
 
   .glass-card {
-    background: rgba(50, 12, 38, 0.70);
+    background: rgba(255, 255, 255, 0.90);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(200, 130, 50, 0.30);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,220,100,0.10);
+    border: 1px solid rgba(251, 146, 60, 0.30);
+    box-shadow: 0 8px 32px rgba(251,146,60,0.15), inset 0 1px 0 rgba(255,255,255,0.9);
     @apply rounded-3xl p-6;
   }
 
   .game-card {
-    background: rgba(45, 10, 35, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(200, 140, 50, 0.32);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,210,80,0.09);
+    border: 1px solid rgba(251, 146, 60, 0.32);
+    box-shadow: 0 6px 28px rgba(251,146,60,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
     @apply rounded-2xl;
   }
 
@@ -79,16 +79,16 @@
 
   .star-badge {
     @apply flex items-center gap-1 px-3 py-1.5 rounded-full font-bold text-sm;
-    background: rgba(245, 158, 11, 0.20);
-    border: 1px solid rgba(245, 158, 11, 0.45);
-    color: #fcd34d;
+    background: rgba(249, 115, 22, 0.12);
+    border: 1px solid rgba(249, 115, 22, 0.40);
+    color: #ea580c;
   }
 
   .header-bar {
-    background: rgba(18, 3, 24, 0.88);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(180, 110, 40, 0.25);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(251, 146, 60, 0.30);
+    box-shadow: 0 2px 20px rgba(251,146,60,0.10);
   }
 }
 
@@ -137,7 +137,7 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(200,140,50,0.3);
+  background: rgba(251,146,60,0.35);
   border-radius: 2px;
 }
 

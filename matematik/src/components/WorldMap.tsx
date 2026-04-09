@@ -26,10 +26,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
   const completed = worldTopics.filter(t => progress.some(p => p.topicId === t.id && p.completed)).length;
 
   return (
-    <div
-      className="min-h-screen"
-      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
-    >
+    <div className="min-h-screen">
       <AppHeader />
 
       {/* World header */}
@@ -91,35 +88,35 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
             onClick={() => startQuest(worldId)}
             className="rounded-2xl p-4 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
             style={{
-              background: 'rgba(40, 8, 32, 0.75)',
+              background: 'rgba(255, 255, 255, 0.88)',
               backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(200, 140, 50, 0.28)',
+              border: '1px solid rgba(251, 146, 60, 0.30)',
             }}
           >
             <span className="text-xl">⚔️</span>
             <div className="min-w-0">
-              <p className="font-black text-white text-sm">Äventyr</p>
-              <p className="text-xs truncate" style={{ color: 'rgba(255,255,255,0.45)' }}>Berättelseutmaning</p>
+              <p className="font-black text-gray-800 text-sm">Äventyr</p>
+              <p className="text-xs truncate text-gray-500">Berättelseutmaning</p>
             </div>
           </button>
           <button
             onClick={() => startGames(worldId)}
             className="relative overflow-hidden rounded-2xl p-4 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
             style={{
-              background: 'rgba(40, 8, 32, 0.75)',
+              background: 'rgba(255, 255, 255, 0.88)',
               backdropFilter: 'blur(12px)',
-              border: `1px solid ${world.accentHex}55`,
+              border: `1px solid ${world.accentHex}66`,
             }}
           >
             <span className="text-xl">🎮</span>
             <div className="min-w-0">
-              <p className="font-black text-white text-sm">Spel</p>
-              <p className="text-xs truncate" style={{ color: 'rgba(255,255,255,0.45)' }}>Träna med spel!</p>
+              <p className="font-black text-gray-800 text-sm">Spel</p>
+              <p className="text-xs truncate text-gray-500">Träna med spel!</p>
             </div>
           </button>
         </div>
 
-        <h2 className="font-bold text-sm uppercase tracking-widest" style={{ color: 'rgba(200,160,80,0.65)' }}>
+        <h2 className="font-bold text-sm uppercase tracking-widest" style={{ color: 'rgba(234,88,12,0.65)' }}>
           ✦ Kapitel
         </h2>
 
@@ -136,14 +133,14 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
                 onClick={() => selectTopic(topic)}
                 className="rounded-xl p-2.5 hover:scale-[1.04] active:scale-[0.98] transition-all text-left"
                 style={{
-                  background: 'rgba(40, 8, 32, 0.75)',
+                  background: 'rgba(255, 255, 255, 0.88)',
                   backdropFilter: 'blur(12px)',
                   border: isCompleted
-                    ? '1px solid rgba(245,158,11,0.50)'
-                    : '1px solid rgba(200,140,50,0.22)',
+                    ? '1px solid rgba(249,115,22,0.50)'
+                    : '1px solid rgba(251,146,60,0.25)',
                   boxShadow: isCompleted
-                    ? '0 0 12px rgba(245,158,11,0.15)'
-                    : '0 4px 12px rgba(0,0,0,0.35)',
+                    ? '0 0 12px rgba(249,115,22,0.20)'
+                    : '0 4px 12px rgba(251,146,60,0.10)',
                 }}
               >
                 <div
@@ -151,13 +148,13 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
                 >
                   {isCompleted ? '✓' : idx + 1}
                 </div>
-                <p className="font-black text-white text-xs leading-tight mb-1 line-clamp-2">{topic.title}</p>
+                <p className="font-black text-gray-800 text-xs leading-tight mb-1 line-clamp-2">{topic.title}</p>
                 <div className="flex gap-0.5">
                   {[0, 1, 2].map(i => (
                     <span
                       key={i}
                       className="text-xs"
-                      style={{ color: i < stars ? '#fbbf24' : 'rgba(255,255,255,0.18)' }}
+                      style={{ color: i < stars ? '#f97316' : 'rgba(0,0,0,0.15)' }}
                     >
                       ★
                     </span>
@@ -181,7 +178,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
         </div>
 
         {worldTopics.length === 0 && (
-          <div className="text-center py-10" style={{ color: 'rgba(255,255,255,0.35)' }}>
+          <div className="text-center py-10 text-gray-400">
             <p className="text-4xl mb-2">📚</p>
             <p>Inga kapitel hittades för denna värld</p>
           </div>
@@ -193,11 +190,11 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
             <div
               className="rounded-2xl p-3 mb-3"
               style={{
-                background: 'rgba(40, 8, 32, 0.60)',
-                border: '1px solid rgba(200,140,50,0.18)',
+                background: 'rgba(255, 255, 255, 0.70)',
+                border: '1px solid rgba(251,146,60,0.25)',
               }}
             >
-              <p className="text-xs text-center leading-relaxed" style={{ color: 'rgba(255,255,255,0.38)' }}>
+              <p className="text-xs text-center leading-relaxed text-gray-500">
                 ✨ Klara med alla kapitel? Testa dina kunskaper med ett sluttest!
               </p>
             </div>
@@ -211,13 +208,13 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
               <span>Sluttest – Testa allt!</span>
               <span className="text-xl opacity-80">→</span>
             </button>
-            <p className="text-center text-xs mt-2" style={{ color: 'rgba(255,255,255,0.28)' }}>
+            <p className="text-center text-xs mt-2 text-gray-400">
               Frågor från alla {worldTopics.length} kapitel
             </p>
           </div>
         )}
 
-        <p className="text-center pb-4 text-xs" style={{ color: 'rgba(255,255,255,0.22)' }}>
+        <p className="text-center pb-4 text-xs text-gray-400">
           Kontakt – martin.akdogan@enkoping.se
         </p>
       </div>
