@@ -26,7 +26,16 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
   const completed = worldTopics.filter(t => progress.some(p => p.topicId === t.id && p.completed)).length;
 
   return (
-    <div className="min-h-screen">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: "url('/Solig glänta i den förtrollade skogen.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+      }}
+    >
       <AppHeader />
 
       {/* World header */}
