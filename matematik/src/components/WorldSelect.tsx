@@ -65,7 +65,7 @@ export default function WorldSelect() {
     <div
       className="min-h-screen relative overflow-x-hidden"
       style={{
-        backgroundImage: "url('/Mattejakten startsida med världar.png')",
+        backgroundImage: "url('/Mattejakten världar i en fantasiskog.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
