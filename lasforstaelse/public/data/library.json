@@ -9688,7 +9688,8 @@
       "fingerprint": "ak3-tema-004",
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-005",
@@ -28418,7 +28419,7 @@
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-044",
