@@ -50,18 +50,18 @@ export default function Login() {
 
       <div className="relative w-full max-w-md">
         {/* Logo */}
-        <div className="text-center mb-4 animate-float">
+        <div className="text-center mb-2 animate-float">
           <img
             src="/mattejakten.png"
             alt="Mattejakten"
-            className="h-40 w-auto mx-auto mb-1 drop-shadow-2xl"
+            className="h-24 w-auto mx-auto mb-1 drop-shadow-2xl"
             style={{ filter: 'drop-shadow(0 4px 20px rgba(120,80,10,0.30))' }}
           />
         </div>
 
         {/* Card */}
         <div
-          className="relative rounded-3xl p-5 shadow-2xl"
+          className="relative rounded-3xl p-4 shadow-2xl"
           style={{
             background: 'rgba(255, 248, 220, 0.90)',
             backdropFilter: 'blur(24px)',
@@ -77,11 +77,11 @@ export default function Login() {
             borderWidth={1.5}
           />
 
-          <h2 className="text-xl font-black mb-3" style={{ color: '#5c3a00' }}>
+          <h2 className="text-base font-black mb-2" style={{ color: '#5c3a00' }}>
             Skriv ditt namn 🏫
           </h2>
 
-          <div className="mb-4">
+          <div className="mb-3">
             <Input
               type="text"
               value={name}
@@ -98,17 +98,14 @@ export default function Login() {
             />
           </div>
 
-          <h3 className="text-base font-black mb-1" style={{ color: '#5c3a00' }}>Välj din hjälte! ⚔️</h3>
-          <p className="mb-3 text-xs" style={{ color: 'rgba(92,58,0,0.60)' }}>
-            Vem ska utforska matematikens världar?
-          </p>
+          <h3 className="text-sm font-black mb-1" style={{ color: '#5c3a00' }}>Välj din hjälte! ⚔️</h3>
 
-          <div className="grid grid-cols-4 gap-2 mb-4">
+          <div className="grid grid-cols-5 gap-1.5 mb-3">
             {AVATARS.map((a, i) => (
               <button
                 key={i}
                 onClick={() => setAvatar(i)}
-                className={`text-3xl p-2 rounded-2xl transition-all cursor-pointer ${
+                className={`text-2xl p-1.5 rounded-xl transition-all cursor-pointer ${
                   avatar === i ? 'scale-110 shadow-lg' : 'hover:scale-105'
                 }`}
                 style={avatar === i ? {
