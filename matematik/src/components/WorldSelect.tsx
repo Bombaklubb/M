@@ -21,12 +21,27 @@ export default function WorldSelect() {
     <div
       className="min-h-screen relative overflow-x-hidden"
       style={{
-        backgroundImage: "url('/Mattejakten världar i en fantasiskog.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center -100px',
-        backgroundRepeat: 'no-repeat',
+        background: 'linear-gradient(160deg, #fff7ed 0%, #ffedd5 35%, #fefce8 65%, #fff7ed 100%)',
       }}
     >
+      {/* Forest background – only visible in upper portion */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/Mattejakten världar i en fantasiskog.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center -100px',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Gradient overlay: forest visible at top, fades to page bg before world cards */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, transparent 0%, transparent 28%, rgba(255,241,213,0.80) 50%, #ffedd5 68%)',
+          }}
+        />
+      </div>
       {/* Top bar – real clickable buttons */}
       <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
 
