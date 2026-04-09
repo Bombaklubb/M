@@ -80,6 +80,16 @@ export default function WorldSelect() {
         </button>
       </div>
 
+      {/* Logo – svävande */}
+      <div className="relative z-10 pt-2 pb-1 text-center px-4 animate-float">
+        <img
+          src="/mattejakten.png"
+          alt="Mattejakten"
+          className="h-32 w-auto mx-auto drop-shadow-lg"
+          style={{ filter: 'drop-shadow(0 4px 16px rgba(120,80,10,0.30))' }}
+        />
+      </div>
+
       {/* Välj din värld */}
       <div className="relative z-10 flex items-center justify-center gap-3 mt-3 mb-4 px-8">
         <div className="h-px flex-1" style={{ background: 'rgba(180,130,40,0.35)' }} />
