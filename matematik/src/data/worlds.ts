@@ -26,9 +26,9 @@ export const WORLDS: World[] = [
     grades: ['1', '2', '3'],
     minGrade: 1,
     maxGrade: 3,
-    bg: 'from-green-400 via-emerald-500 to-teal-600',
+    bg: 'from-teal-100 via-emerald-100 to-green-200',
     accent: 'emerald',
-    accentHex: '#10b981',
+    accentHex: '#34d399',
     cardBg: 'bg-emerald-50',
     topicIds: [
       // Tal & räkning (rad 1–2)
@@ -59,9 +59,9 @@ export const WORLDS: World[] = [
     grades: ['4', '5', '6'],
     minGrade: 4,
     maxGrade: 6,
-    bg: 'from-purple-500 via-violet-500 to-fuchsia-600',
+    bg: 'from-violet-100 via-purple-100 to-fuchsia-200',
     accent: 'purple',
-    accentHex: '#8b5cf6',
+    accentHex: '#a78bfa',
     cardBg: 'bg-purple-50',
     topicIds: [
       // Multiplikation Steg 1–3 (rad 1)
@@ -100,9 +100,9 @@ export const WORLDS: World[] = [
     grades: ['7', '8', '9'],
     minGrade: 7,
     maxGrade: 9,
-    bg: 'from-blue-600 via-indigo-600 to-cyan-600',
+    bg: 'from-sky-100 via-blue-100 to-cyan-200',
     accent: 'blue',
-    accentHex: '#3b82f6',
+    accentHex: '#60a5fa',
     cardBg: 'bg-blue-50',
     topicIds: [
       // Algebra Steg 1–3 (rad 1)
@@ -147,9 +147,9 @@ export const WORLDS: World[] = [
     grades: ['gym1', 'gym2', 'gym3'],
     minGrade: 10,
     maxGrade: 12,
-    bg: 'from-slate-700 via-indigo-800 to-purple-900',
-    accent: 'indigo',
-    accentHex: '#6366f1',
+    bg: 'from-orange-100 via-rose-100 to-pink-200',
+    accent: 'rose',
+    accentHex: '#fb7185',
     cardBg: 'bg-indigo-50',
     topicIds: [
       // Funktioner & ekvationer (rad 1)
