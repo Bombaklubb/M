@@ -85,7 +85,7 @@ export default function WorldSelect() {
         <img
           src="/mattejakten.png"
           alt="Mattejakten"
-          className="h-32 w-auto mx-auto drop-shadow-lg"
+          className="h-48 w-auto mx-auto drop-shadow-lg"
           style={{ filter: 'drop-shadow(0 4px 16px rgba(120,80,10,0.30))' }}
         />
       </div>
