@@ -47,6 +47,8 @@ export const WORLDS: World[] = [
       'tio-kamraterna',
       // Sannolikhet & statistik
       'sannolikhet-lag',
+      // Nya kapitel
+      'halften-dubbelt', 'storleksordna-tal', 'overgang-ental-tiotal', 'fore-och-efter',
     ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',

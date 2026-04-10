@@ -3146,6 +3146,143 @@ export const TOPICS: Topic[] = [
       { id: 'spl-10', type: 'multiple-choice', question: 'En påse har 8 gröna och 2 gula kulor. Vad är mest troligt när du drar en kula?', options: ['Gul', 'Lika troligt', 'Grön', 'Omöjligt att säga'], correctIndex: 2, points: 10, explanation: '8 av 10 kulor är gröna. Det är mycket mer troligt att dra en grön kula.' },
     ],
   },
+
+  // ─── HÄLFTEN OCH DUBBELT – LÅGSTADIET ────────────────────
+  {
+    id: 'halften-dubbelt',
+    title: 'Hälften och dubbelt',
+    icon: '✂️',
+    description: 'Lär dig beräkna hälften och dubbelt av tal',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-pink-400 to-rose-500',
+    instruction: {
+      title: 'Hälften och dubbelt!',
+      text: 'Dubbelt av ett tal = talet + talet (eller talet × 2). Hälften av ett tal = dela på 2. Dubbelt och hälften är varandras motsatser! Om dubbelt av 4 är 8, så är hälften av 8 = 4.',
+      illustration: 'numbers',
+      examples: [
+        'Dubbelt av 3 = 3 + 3 = 6',
+        'Dubbelt av 5 = 5 × 2 = 10',
+        'Hälften av 8 = 8 ÷ 2 = 4',
+        'Hälften av 14 = 14 ÷ 2 = 7',
+      ],
+    },
+    exercises: [
+      { id: 'hd-1', type: 'fill-in', question: 'Vad är dubbelt av 4?', answer: '8', points: 10, explanation: 'Dubbelt av 4 = 4 + 4 = 8.' },
+      { id: 'hd-2', type: 'fill-in', question: 'Vad är hälften av 10?', answer: '5', points: 10, explanation: 'Hälften av 10 = 10 ÷ 2 = 5.' },
+      { id: 'hd-3', type: 'multiple-choice', question: 'Vad är dubbelt av 7?', options: ['12', '14', '13', '16'], correctIndex: 1, points: 10, explanation: 'Dubbelt av 7 = 7 + 7 = 14.' },
+      { id: 'hd-4', type: 'fill-in', question: 'Vad är hälften av 16?', answer: '8', points: 10, explanation: 'Hälften av 16 = 16 ÷ 2 = 8.' },
+      { id: 'hd-5', type: 'true-false', question: 'Dubbelt av 6 är 12.', isTrue: true, points: 10, explanation: 'Sant! 6 + 6 = 12. Dubbelt av 6 är 12.' },
+      { id: 'hd-6', type: 'fill-in', question: 'Vad är dubbelt av 9?', answer: '18', points: 10, explanation: 'Dubbelt av 9 = 9 + 9 = 18.' },
+      { id: 'hd-7', type: 'true-false', question: 'Hälften av 12 är 5.', isTrue: false, points: 10, explanation: 'Falskt! Hälften av 12 = 12 ÷ 2 = 6.' },
+      { id: 'hd-8', type: 'multiple-choice', question: 'Lisa har 5 äpplen. Hon vill ha dubbelt så många. Hur många behöver hon totalt?', options: ['7', '8', '10', '12'], correctIndex: 2, points: 10, explanation: 'Dubbelt av 5 = 5 + 5 = 10. Lisa behöver 10 äpplen totalt.' },
+      { id: 'hd-9', type: 'fill-in', question: 'Hälften av vilket tal är 6?', answer: '12', points: 10, explanation: 'Om hälften är 6, så är hela talet 6 + 6 = 12. Kolla: hälften av 12 = 6. ✓' },
+      { id: 'hd-10', type: 'multiple-choice', question: 'Vad är hälften av 20?', options: ['8', '9', '11', '10'], correctIndex: 3, points: 10, explanation: 'Hälften av 20 = 20 ÷ 2 = 10.' },
+    ],
+  },
+
+  // ─── STORLEKSORDNA TAL – LÅGSTADIET ──────────────────────
+  {
+    id: 'storleksordna-tal',
+    title: 'Storleksordna tal',
+    icon: '📊',
+    description: 'Ordna tal från minst till störst och jämför med < och >',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-cyan-400 to-blue-500',
+    instruction: {
+      title: 'Storleksordna tal!',
+      text: 'Att storleksordna tal betyder att ordna dem från minst till störst (eller störst till minst). Vi använder tecknen: < betyder "är mindre än", > betyder "är större än", = betyder "är lika med". Pilen/munnen äter alltid det STÖRRE talet!',
+      illustration: 'numbers',
+      examples: [
+        '3 < 7 (3 är mindre än 7)',
+        '9 > 4 (9 är större än 4)',
+        'Minst till störst: 2, 5, 8, 11',
+        'Störst till minst: 15, 10, 7, 3',
+      ],
+    },
+    exercises: [
+      { id: 'st-1', type: 'multiple-choice', question: 'Ordna talen från minst till störst: 7, 2, 9, 4', options: ['7, 4, 2, 9', '2, 4, 7, 9', '9, 7, 4, 2', '4, 2, 7, 9'], correctIndex: 1, points: 10, explanation: '2 är minst, sedan 4, 7 och störst är 9. Rätt ordning: 2, 4, 7, 9.' },
+      { id: 'st-2', type: 'true-false', question: '15 > 9. Femton är större än nio.', isTrue: true, points: 10, explanation: 'Sant! 15 är större än 9. Vi skriver 15 > 9.' },
+      { id: 'st-3', type: 'fill-in', question: 'Vilket tal är störst: 12, 8, 17, 5?', answer: '17', points: 10, explanation: '17 är störst av talen 12, 8, 17 och 5.' },
+      { id: 'st-4', type: 'multiple-choice', question: 'Vilket tecken passar? 6 __ 10', options: ['>', '=', '<', '+'], correctIndex: 2, points: 10, explanation: '6 är mindre än 10, så vi skriver 6 < 10.' },
+      { id: 'st-5', type: 'fill-in', question: 'Vilket tal är minst: 3, 11, 7, 1?', answer: '1', points: 10, explanation: '1 är minst av talen 3, 11, 7 och 1.' },
+      { id: 'st-6', type: 'true-false', question: '8 < 8. Åtta är mindre än åtta.', isTrue: false, points: 10, explanation: 'Falskt! 8 = 8. Åtta är lika med åtta, inte mindre.' },
+      { id: 'st-7', type: 'multiple-choice', question: 'Ordna talen från störst till minst: 5, 13, 1, 8', options: ['13, 8, 5, 1', '1, 5, 8, 13', '13, 5, 8, 1', '8, 13, 5, 1'], correctIndex: 0, points: 10, explanation: 'Störst är 13, sedan 8, 5 och minst är 1. Rätt ordning: 13, 8, 5, 1.' },
+      { id: 'st-8', type: 'fill-in', question: 'Skriv det minsta heltalet som är större än 4.', answer: '5', points: 10, explanation: 'Det minsta heltalet som är större än 4 är 5. Alltså 4 < 5.' },
+      { id: 'st-9', type: 'multiple-choice', question: 'Vilka tre tal är i rätt ordning, minst till störst?', options: ['10, 6, 14', '6, 10, 14', '14, 10, 6', '6, 14, 10'], correctIndex: 1, points: 10, explanation: '6 < 10 < 14. Rätt ordning minst till störst: 6, 10, 14.' },
+      { id: 'st-10', type: 'true-false', question: '20 > 19. Tjugo är större än nitton.', isTrue: true, points: 10, explanation: 'Sant! 20 är ett mer än 19, så 20 > 19.' },
+    ],
+  },
+
+  // ─── ÖVERGÅNG ENTAL TILL TIOTAL – LÅGSTADIET ─────────────
+  {
+    id: 'overgang-ental-tiotal',
+    title: 'Övergång ental till tiotal',
+    icon: '🔟',
+    description: 'Öva addition och subtraktion över tiogränsen',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-orange-400 to-amber-500',
+    instruction: {
+      title: 'Över tiogränsen!',
+      text: 'När vi adderar och summan blir mer än 9 passerar vi en tiogräns! Exempel: 8 + 5. Vi vet att 8 + 2 = 10. Då har vi 3 kvar (5 − 2 = 3). Alltså: 8 + 5 = 10 + 3 = 13. Vi "fyller upp" till 10 och räknar vidare. Samma trick bakåt vid subtraktion!',
+      illustration: 'numbers',
+      examples: [
+        '9 + 4: 9 + 1 = 10, plus 3 kvar = 13',
+        '7 + 6: 7 + 3 = 10, plus 3 kvar = 13',
+        '12 − 5: 12 − 2 = 10, minus 3 kvar = 7',
+        '11 − 4: 11 − 1 = 10, minus 3 kvar = 7',
+      ],
+    },
+    exercises: [
+      { id: 'oet-1', type: 'fill-in', question: 'Beräkna: 9 + 4 = ?', answer: '13', points: 10, explanation: '9 + 1 = 10, sedan 3 kvar. 10 + 3 = 13.' },
+      { id: 'oet-2', type: 'fill-in', question: 'Beräkna: 8 + 5 = ?', answer: '13', points: 10, explanation: '8 + 2 = 10, sedan 3 kvar. 10 + 3 = 13.' },
+      { id: 'oet-3', type: 'multiple-choice', question: 'Beräkna: 7 + 6 = ?', options: ['11', '12', '13', '14'], correctIndex: 2, points: 10, explanation: '7 + 3 = 10, sedan 3 kvar. 10 + 3 = 13.' },
+      { id: 'oet-4', type: 'fill-in', question: 'Beräkna: 13 − 5 = ?', answer: '8', points: 10, explanation: '13 − 3 = 10, sedan 2 kvar att dra av. 10 − 2 = 8.' },
+      { id: 'oet-5', type: 'true-false', question: '9 + 3 = 11', isTrue: false, points: 10, explanation: 'Falskt! 9 + 1 = 10, sedan 2 kvar. 10 + 2 = 12. Rätt svar är 12.' },
+      { id: 'oet-6', type: 'fill-in', question: 'Beräkna: 6 + 7 = ?', answer: '13', points: 10, explanation: '6 + 4 = 10, sedan 3 kvar. 10 + 3 = 13.' },
+      { id: 'oet-7', type: 'multiple-choice', question: 'Beräkna: 15 − 7 = ?', options: ['6', '7', '8', '9'], correctIndex: 2, points: 10, explanation: '15 − 5 = 10, sedan 2 kvar att dra av. 10 − 2 = 8.' },
+      { id: 'oet-8', type: 'fill-in', question: 'Beräkna: 8 + 7 = ?', answer: '15', points: 10, explanation: '8 + 2 = 10, sedan 5 kvar. 10 + 5 = 15.' },
+      { id: 'oet-9', type: 'true-false', question: '11 − 3 = 8', isTrue: true, points: 10, explanation: 'Sant! 11 − 1 = 10, sedan 2 kvar att dra av. 10 − 2 = 8.' },
+      { id: 'oet-10', type: 'multiple-choice', question: 'Beräkna: 9 + 6 = ?', options: ['14', '15', '16', '13'], correctIndex: 1, points: 10, explanation: '9 + 1 = 10, sedan 5 kvar. 10 + 5 = 15.' },
+    ],
+  },
+
+  // ─── VILKET TAL KOMMER FÖRE OCH EFTER – LÅGSTADIET ───────
+  {
+    id: 'fore-och-efter',
+    title: 'Vilket tal kommer före och efter',
+    icon: '↔️',
+    description: 'Hitta granntalen – talet precis före och precis efter',
+    grades: ['1', '2', '3'],
+    minGrade: 1,
+    color: 'from-lime-400 to-green-500',
+    instruction: {
+      title: 'Granntal – före och efter!',
+      text: 'Varje tal har ett granntal precis före och ett precis efter. Talet före är ett MINDRE (−1). Talet efter är ett STÖRRE (+1). Exempel: Talet 7 – talet före är 6, talet efter är 8. Tänk på tallinjen!',
+      illustration: 'numbers',
+      examples: [
+        'Före 5 → 4     |    Efter 5 → 6',
+        'Före 10 → 9    |    Efter 10 → 11',
+        'Före 19 → 18   |    Efter 19 → 20',
+        'Före 100 → 99  |    Efter 100 → 101',
+      ],
+    },
+    exercises: [
+      { id: 'foe-1', type: 'fill-in', question: 'Vilket tal kommer precis EFTER 7?', answer: '8', points: 10, explanation: 'Talet efter 7 är 8. Vi räknar ett steg framåt på tallinjen.' },
+      { id: 'foe-2', type: 'fill-in', question: 'Vilket tal kommer precis FÖRE 5?', answer: '4', points: 10, explanation: 'Talet före 5 är 4. Vi tar ett steg bakåt på tallinjen.' },
+      { id: 'foe-3', type: 'multiple-choice', question: 'Vilket tal kommer precis EFTER 9?', options: ['8', '11', '10', '7'], correctIndex: 2, points: 10, explanation: 'Talet efter 9 är 10. Vi passerar tiogränsen!' },
+      { id: 'foe-4', type: 'fill-in', question: 'Vilket tal kommer precis FÖRE 10?', answer: '9', points: 10, explanation: 'Talet före 10 är 9. Nio är granntalet precis innan tio.' },
+      { id: 'foe-5', type: 'true-false', question: 'Talet precis efter 14 är 15.', isTrue: true, points: 10, explanation: 'Sant! 14 + 1 = 15. Talet efter 14 är 15.' },
+      { id: 'foe-6', type: 'fill-in', question: 'Vilket tal kommer precis EFTER 19?', answer: '20', points: 10, explanation: 'Talet efter 19 är 20. Vi passerar tjugo!' },
+      { id: 'foe-7', type: 'multiple-choice', question: 'Vilket tal saknas: __, 12, 13?', options: ['10', '14', '11', '9'], correctIndex: 2, points: 10, explanation: 'Talet före 12 är 11. Rätt ordning: 11, 12, 13.' },
+      { id: 'foe-8', type: 'fill-in', question: 'Vilket tal kommer precis FÖRE 20?', answer: '19', points: 10, explanation: 'Talet före 20 är 19. Nitton är granntalet precis innan tjugo.' },
+      { id: 'foe-9', type: 'multiple-choice', question: 'Vilket tal saknas: 17, __, 19?', options: ['16', '20', '15', '18'], correctIndex: 3, points: 10, explanation: 'Mellan 17 och 19 finns 18. Rätt ordning: 17, 18, 19.' },
+      { id: 'foe-10', type: 'true-false', question: 'Talet precis före 30 är 29.', isTrue: true, points: 10, explanation: 'Sant! 30 − 1 = 29. Tjugonio är granntalet precis innan trettio.' },
+    ],
+  },
+
 ];
 
 export const getTopicsForGrade = (grade: string): Topic[] => {
