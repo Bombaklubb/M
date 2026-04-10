@@ -29,7 +29,7 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
     <div
       className="min-h-screen"
       style={{
-        backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
+        backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
