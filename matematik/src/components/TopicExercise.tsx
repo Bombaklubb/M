@@ -132,7 +132,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   const isLastExercise = currentIdx === topic.exercises.length - 1;
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       <AppHeader />
       {/* Top bar */}
       <div className={`bg-gradient-to-r ${topic.color} text-white px-4 pt-16 pb-3`}>
