@@ -9,7 +9,13 @@ import { gradeToWorld } from '../data/worlds';
 
 type Phase = 'list' | 'intro' | 'step' | 'result';
 
-const DARK_BG = 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)';
+const DARK_BG_STYLE: React.CSSProperties = {
+  backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+};
 
 export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView, questWorldId } = useApp();
@@ -89,7 +95,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- LIST ----
   if (phase === 'list') return (
-    <div className="min-h-screen" style={{ background: DARK_BG }}>
+    <div className="min-h-screen" style={DARK_BG_STYLE}>
       <div className={`bg-gradient-to-r ${world.bg} text-white py-6 px-4`}>
         <div className="max-w-lg mx-auto">
           {!hideHeader && (
@@ -155,7 +161,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- INTRO ----
   if (phase === 'intro') return (
-    <div className="min-h-screen flex flex-col" style={{ background: DARK_BG }}>
+    <div className="min-h-screen flex flex-col" style={DARK_BG_STYLE}>
       <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
         <div className="text-8xl mb-5 animate-bounce">{selectedQuest.emoji}</div>
         <h1 className="text-3xl font-black text-white mb-3">{selectedQuest.title}</h1>
@@ -183,7 +189,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- STEP ----
   if (phase === 'step') return (
-    <div className="min-h-screen" style={{ background: DARK_BG }}>
+    <div className="min-h-screen" style={DARK_BG_STYLE}>
       {/* Header */}
       <div className={`bg-gradient-to-r ${selectedQuest.storyColor} text-white py-4 px-4`}>
         <div className="max-w-lg mx-auto">
@@ -274,7 +280,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   // ---- RESULT ----
   const item = COLLECTION_ITEMS.find(i => i.id === selectedQuest.rewardItem);
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6" style={{ background: DARK_BG }}>
+    <div className="min-h-screen flex flex-col items-center justify-center p-6" style={DARK_BG_STYLE}>
       <div className="w-full max-w-sm text-center">
         <div className="text-8xl mb-4 animate-bounce">{selectedQuest.emoji}</div>
         <h1 className="text-4xl font-black text-white mb-2">Äventyret klart!</h1>

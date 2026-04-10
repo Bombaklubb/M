@@ -126,7 +126,7 @@ function Intro({
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
+      style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}
     >
       <AppHeader />
       <div
@@ -257,7 +257,7 @@ function Test({
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
+      style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}
     >
       <AppHeader />
 
@@ -473,7 +473,7 @@ function Result({
   return (
     <div
       className="min-h-screen pb-10"
-      style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}
+      style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}
     >
       <AppHeader />
       <div className={`max-w-md mx-auto px-4 pt-20 transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
