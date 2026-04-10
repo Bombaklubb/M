@@ -31,7 +31,7 @@ export default function MinSidaView() {
 
   return (
     <div className="min-h-screen" style={{
-      backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+      backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
