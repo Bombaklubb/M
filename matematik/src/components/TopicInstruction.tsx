@@ -748,7 +748,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
 
   // ---- LEARN PHASE ----
   if (phase === 'learn') return (
-    <div className="min-h-screen" style={{ backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
+    <div className="min-h-screen" style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">
@@ -786,7 +786,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
 
   // ---- MINI CHALLENGE ----
   if (phase === 'mini' && miniEx) return (
-    <div className="min-h-screen" style={{ backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
+    <div className="min-h-screen" style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       <AppHeader />
       <Header />
       <div className="max-w-lg mx-auto px-4 py-6">

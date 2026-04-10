@@ -18,7 +18,7 @@ function MysteryPopup({ description, onClose }: { description: string; onClose: 
       <div
         className="rounded-3xl p-8 max-w-sm w-full text-center"
         style={{
-          backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed',
+          backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed',
           border: '3px solid #a855f7',
           boxShadow: '0 8px 40px rgba(168,85,247,0.35)',
         }}
@@ -96,7 +96,7 @@ export default function TopicResult({ topic }: { topic: Topic }) {
   }, [visible, score]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
+    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       <Confetti active={showConfetti} duration={3000} />
       <AppHeader />
       <div className={`w-full max-w-md transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
