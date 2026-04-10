@@ -10,7 +10,7 @@ import { gradeToWorld } from '../data/worlds';
 type Phase = 'list' | 'intro' | 'step' | 'result';
 
 const DARK_BG_STYLE: React.CSSProperties = {
-  backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+  backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
