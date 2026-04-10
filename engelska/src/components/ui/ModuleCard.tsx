@@ -220,10 +220,10 @@ export default function ModuleCard({
     <Link href={href} className="block group h-full">
       <MagicCard
         gradientColor={`${beamColors[0]}18`}
-        className={`h-full rounded-3xl border-3 bg-white dark:bg-gray-800 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
+        className={`h-full rounded-3xl border-3 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
           progress?.completed
-            ? `${stage.borderClass} bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/20`
-            : "border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
+            ? `${stage.borderClass} bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-950/30 dark:to-green-950/20`
+            : "bg-white dark:bg-gray-800 border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
         }`}
         style={{
           boxShadow: progress?.completed
@@ -238,21 +238,23 @@ export default function ModuleCard({
         <div className="flex items-center gap-4">
           {/* Icon */}
           <div
-            className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-3 border-3 ${
+            className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-3 border-3 relative ${
               progress?.completed
-                ? stage.colorClass + " border-white/30"
+                ? "bg-emerald-100 dark:bg-emerald-900/50 border-emerald-300 dark:border-emerald-700"
                 : "bg-indigo-50 dark:bg-gray-700 border-indigo-100 dark:border-gray-600"
             }`}
             style={{
               boxShadow: progress?.completed
-                ? "0 3px 0 0 rgba(0,0,0,0.2), inset 0 2px 4px 0 rgba(255,255,255,0.3)"
+                ? "0 3px 0 0 rgba(16,185,129,0.25), inset 0 2px 4px 0 rgba(255,255,255,0.5)"
                 : "0 3px 0 0 rgba(99,102,241,0.15), inset 0 2px 4px 0 rgba(255,255,255,0.8)"
             }}
           >
-            {progress?.completed
-              ? <IconCheck className="w-7 h-7 text-white" />
-              : <span>{icon}</span>
-            }
+            <span>{icon}</span>
+            {progress?.completed && (
+              <div className="absolute -bottom-1.5 -right-1.5 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-white dark:border-gray-800">
+                <IconCheck className="w-3 h-3 text-white" />
+              </div>
+            )}
           </div>
 
           {/* Content */}
