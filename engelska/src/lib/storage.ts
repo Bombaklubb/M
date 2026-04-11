@@ -6,6 +6,9 @@ import { defaultGamificationData } from "./gamification";
 /** Tracks which student is currently logged in (just the name, lowercased). */
 const ACTIVE_KEY = "engelskajakten_active";
 
+/** Tracks when the current session started (ISO string). */
+const SESSION_START_KEY = "engelskajakten_session_start";
+
 /** Per-name key for student progress. */
 function studentKey(name: string) {
   return `engelskajakten_student_${name.toLowerCase().trim()}`;
@@ -96,6 +99,10 @@ export function createStudent(name: string, avatar?: string): StudentData {
   if (typeof window === "undefined") return defaultStudentData(name);
 
   const trimmed = name.trim();
+
+  // Mark session start time
+  localStorage.setItem(SESSION_START_KEY, new Date().toISOString());
+
   const existingRaw = localStorage.getItem(studentKey(trimmed));
   if (existingRaw) {
     try {
@@ -117,12 +124,22 @@ export function createStudent(name: string, avatar?: string): StudentData {
 }
 
 /**
+ * Returns the ISO string for when the current session started,
+ * or null if no session is active.
+ */
+export function getSessionStart(): string | null {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem(SESSION_START_KEY);
+}
+
+/**
  * Logs out the current student.
  * Clears the active session but KEEPS the student's progress data on this device.
  */
 export function clearStudent(): void {
   if (typeof window === "undefined") return;
   localStorage.removeItem(ACTIVE_KEY);
+  localStorage.removeItem(SESSION_START_KEY);
 }
 
 // ─── Module progress helpers ──────────────────────────────────────────────────
