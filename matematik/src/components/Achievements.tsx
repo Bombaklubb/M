@@ -112,13 +112,23 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
 
         {/* ── MÄRKEN / ACHIEVEMENTS ──────────────────────────────────────── */}
         <section>
-          <h2 className="text-base font-black text-gray-700 mb-5 flex items-center gap-2 flex-wrap">
+          {/* Min tid i appen */}
+          <div className="mb-4 rounded-2xl px-4 py-3 flex items-center gap-3"
+            style={{
+              background: 'rgba(255,237,213,0.80)',
+              border: '1.5px solid rgba(251,146,60,0.50)',
+              boxShadow: '0 2px 10px rgba(251,146,60,0.15)',
+            }}>
+            <span className="text-2xl">⏱</span>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#ea580c' }}>Min tid i appen</p>
+              <p className="text-xl font-black" style={{ color: '#7c2d12' }}>{timeLabel}</p>
+            </div>
+          </div>
+
+          <h2 className="text-base font-black text-gray-700 mb-5 flex items-center gap-2">
             🎖️ Märken
             <span className="text-sm font-normal text-gray-400">({earned.length}/{ACHIEVEMENTS.length})</span>
-            <span className="ml-auto flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full"
-              style={{ background: 'rgba(251,146,60,0.15)', color: '#c2410c' }}>
-              ⏱ Min tid: {timeLabel}
-            </span>
           </h2>
 
           <div className="space-y-7">
