@@ -27,9 +27,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
   const errors = worldTopicIds
     ? allErrors.filter(e => worldTopicIds.includes(e.topicId))
     : allErrors;
-  const repairList = errors
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 10);
+  const repairList = errors.sort((a, b) => b.count - a.count);
 
   const backView = worldId ? `world-${worldId}` as any : 'dashboard';
 
@@ -39,8 +37,6 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
     const ex = topic?.exercises.find(e => e.id === entry.exerciseId);
     return ex ? { ...ex, topicId: entry.topicId, topicTitle: topic!.title, entry } : null;
   }).filter(Boolean) as any[];
-
-  const REPAIR_LIMIT = Math.min(10, repairExercises.length);
 
   const currentRepair = repairExercises[repairIdx];
 
@@ -119,7 +115,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
           <>
             <button onClick={()=>{ setRepairIdx(0); setPhase('repair'); setAnswered(false); setInput(''); }}
               className="w-full bg-gradient-to-r from-red-500 to-rose-600 text-white font-black py-4 rounded-2xl text-lg shadow-lg hover:scale-[1.02] transition-all mb-5">
-              🔁 Träna på mina {REPAIR_LIMIT} felsvar!
+              🔁 Träna på mina {repairExercises.length} felsvar!
             </button>
 
             <h2 className="text-white font-bold text-sm uppercase tracking-widest mb-3">Dina felsvar</h2>
