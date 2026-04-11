@@ -37,13 +37,13 @@ export default function RootLayout({
         {children}
         {/* Kontakt – vänster nedre hörn */}
         <div className="fixed bottom-2 left-3 z-40 pointer-events-none select-none">
-          <span className="text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity pointer-events-auto">
+          <span className="text-sm text-slate-600 dark:text-slate-400 opacity-90 hover:opacity-100 transition-opacity pointer-events-auto">
             Kontakt: martin.akdogan@enkoping.se
           </span>
         </div>
         {/* Signatur – höger nedre hörn */}
         <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-          <span className="text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity">
+          <span className="text-sm text-slate-600 dark:text-slate-400 opacity-90 hover:opacity-100 transition-opacity">
             Engelskajakten av Martin Akdogan
           </span>
         </div>
