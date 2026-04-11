@@ -7,7 +7,7 @@ import {
   getCurrentStudent, setCurrentStudent, getProgress,
   getPoints, initPoints, getAchievements, addPoints,
   grantAchievement, saveTopicProgress, calcStars,
-  recordTopicSession, saveStudent,
+  recordTopicSession, saveStudent, addAppMinutes,
 } from '../utils/storage';
 import {
   loadGamification, saveGamification,
@@ -66,15 +66,22 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentStudent(student);
     setCurrentStudentState(student);
     initPoints(student.id);
+    sessionStorage.setItem('math_session_start', Date.now().toString());
     setCurrentView('dashboard');
   }, []);
 
   const logout = useCallback(() => {
+    const start = sessionStorage.getItem('math_session_start');
+    if (start && currentStudent) {
+      const mins = Math.floor((Date.now() - parseInt(start)) / 60000);
+      addAppMinutes(currentStudent.id, mins);
+    }
+    sessionStorage.removeItem('math_session_start');
     setCurrentStudent(null);
     setCurrentStudentState(null);
     setCurrentView('login');
     setIsTeacherState(false);
-  }, []);
+  }, [currentStudent]);
 
   const setView = useCallback((view: ExtendedView) => setCurrentView(view), []);
 

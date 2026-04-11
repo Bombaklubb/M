@@ -3,7 +3,7 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { ACHIEVEMENTS, RARITY_LABELS, RARITY_COLORS } from '../data/achievements';
 import { COLLECTION_ITEMS, RARITY_COLORS as COL_COLORS, RARITY_LABELS as COL_LABELS } from '../data/collection';
-import { getAchievements } from '../utils/storage';
+import { getAchievements, getAppMinutes } from '../utils/storage';
 import { getCollection } from '../utils/questStorage';
 import { WORLDS } from '../data/worlds';
 
@@ -68,6 +68,14 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
   const totalPossible = ACHIEVEMENTS.length + COLLECTION_ITEMS.length;
   const pct = (totalUnlocked / totalPossible) * 100;
 
+  const storedMins = getAppMinutes(currentStudent.id);
+  const sessionStart = sessionStorage.getItem('math_session_start');
+  const sessionMins = sessionStart ? Math.floor((Date.now() - parseInt(sessionStart)) / 60000) : 0;
+  const totalMins = storedMins + sessionMins;
+  const timeLabel = totalMins >= 60
+    ? `${Math.floor(totalMins / 60)} t ${totalMins % 60} min`
+    : `${totalMins} min`;
+
   const byRarity = ['common', 'rare', 'epic', 'legendary'] as const;
 
   return (
@@ -104,9 +112,13 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
 
         {/* ── MÄRKEN / ACHIEVEMENTS ──────────────────────────────────────── */}
         <section>
-          <h2 className="text-base font-black text-gray-700 mb-5 flex items-center gap-2">
+          <h2 className="text-base font-black text-gray-700 mb-5 flex items-center gap-2 flex-wrap">
             🎖️ Märken
             <span className="text-sm font-normal text-gray-400">({earned.length}/{ACHIEVEMENTS.length})</span>
+            <span className="ml-auto flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full"
+              style={{ background: 'rgba(251,146,60,0.15)', color: '#c2410c' }}>
+              ⏱ Min tid: {timeLabel}
+            </span>
           </h2>
 
           <div className="space-y-7">
