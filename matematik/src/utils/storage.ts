@@ -316,6 +316,21 @@ export function importAllData(data: Record<string, unknown>): void {
   window.location.reload();
 }
 
+// ======================== APP TIME ========================
+
+export function getAppMinutes(studentId: string): number {
+  try {
+    const data = localStorage.getItem(`math_time_${studentId}`);
+    return data ? (JSON.parse(data).totalMinutes ?? 0) : 0;
+  } catch { return 0; }
+}
+
+export function addAppMinutes(studentId: string, minutes: number): void {
+  if (minutes <= 0) return;
+  const current = getAppMinutes(studentId);
+  localStorage.setItem(`math_time_${studentId}`, JSON.stringify({ totalMinutes: current + minutes }));
+}
+
 // ======================== HELPERS ========================
 
 function getWeekStart(): string {
