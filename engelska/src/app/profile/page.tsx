@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
 import ProgressBar from "@/components/ui/ProgressBar";
-import { loadStudent } from "@/lib/storage";
+import { loadStudent, getSessionStart } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { ACHIEVEMENTS, ACHIEVEMENT_ICONS, isUnlocked } from "@/lib/achievements";
 import { getAvatar } from "@/lib/avatars";
@@ -12,9 +12,22 @@ import type { StudentData, StageId } from "@/lib/types";
 
 export default function ProfilePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
+  const [sessionMinutes, setSessionMinutes] = useState(0);
 
   useEffect(() => {
     setStudent(loadStudent());
+
+    const sessionStart = getSessionStart();
+    if (sessionStart) {
+      const startTime = new Date(sessionStart).getTime();
+      const update = () => {
+        const elapsed = Math.floor((Date.now() - startTime) / 60000);
+        setSessionMinutes(elapsed);
+      };
+      update();
+      const interval = setInterval(update, 60000);
+      return () => clearInterval(interval);
+    }
   }, []);
 
   if (!student) {
@@ -59,6 +72,9 @@ export default function ProfilePage() {
               <h1 className="text-2xl font-black">{student.name}</h1>
               <p className="text-gray-300 text-sm">Aktiv sedan {joinDate}</p>
               <p className="text-gray-300 text-sm">Senast aktiv: {lastActive}</p>
+              <p className="text-gray-300 text-sm mt-1">
+                Min tid i appen: <span className="text-white font-semibold">{sessionMinutes} min</span>
+              </p>
             </div>
             <div className="ml-auto text-center">
               <div className="text-4xl font-black">⭐ {student.totalPoints}</div>
