@@ -5,7 +5,7 @@ import type { FillInBlankExercise } from "@/lib/types";
 
 interface Props {
   exercise: FillInBlankExercise;
-  onAnswer: (correct: boolean) => void;
+  onAnswer: (correct: boolean, userAnswer: string, correctAnswer: string) => void;
   isLast?: boolean;
 }
 
@@ -137,7 +137,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
       {state !== "idle" && (
         <div className="flex justify-end pt-2">
           <button
-            onClick={() => onAnswer(state === "correct")}
+            onClick={() => onAnswer(state === "correct", input, exercise.answer)}
             className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}

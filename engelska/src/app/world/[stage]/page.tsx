@@ -11,6 +11,8 @@ import type { StudentData, StageContent } from "@/lib/types";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { NumberTicker } from "@/components/magicui/number-ticker";
+import ForsokaIgen from "@/components/ui/ForsokaIgen";
+import { getErrorCount } from "@/lib/errorBank";
 
 interface RuleItem {
   term: string;
@@ -29,7 +31,7 @@ interface Props {
   params: Promise<{ stage: string }>;
 }
 
-type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "regler" | "spel";
+type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "regler" | "spel" | "forsokaigen";
 
 export default function WorldPage({ params }: Props) {
   const { stage: stageId } = use(params);
@@ -109,15 +111,23 @@ export default function WorldPage({ params }: Props) {
         <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
+    forsokaigen: (
+      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    ),
   };
 
+  const errorCount = student ? getErrorCount(student.name, stageId) : 0;
+
   const tabs: { id: Tab; label: string }[] = [
-    { id: "grammar",    label: "Grammatik" },
-    { id: "reading",    label: "Läsning" },
-    { id: "spelling",   label: "Stavning" },
-    { id: "regler",     label: "Språkregler" },
-    { id: "wordsearch", label: "Ordsökning" },
-    { id: "spel",       label: "Spel" },
+    { id: "grammar",      label: "Grammatik" },
+    { id: "reading",      label: "Läsning" },
+    { id: "spelling",     label: "Stavning" },
+    { id: "regler",       label: "Språkregler" },
+    { id: "wordsearch",   label: "Ordsökning" },
+    { id: "spel",         label: "Spel" },
+    { id: "forsokaigen",  label: "Försök igen" },
   ];
 
   return (
@@ -191,7 +201,7 @@ export default function WorldPage({ params }: Props) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                className={`relative flex items-center gap-1.5 px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   activeTab === tab.id
                     ? `${stage.colorClass} text-white shadow-md`
                     : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/60 dark:hover:bg-gray-700/50"
@@ -201,6 +211,13 @@ export default function WorldPage({ params }: Props) {
                 {tabIcons[tab.id]}
                 <span className="hidden sm:inline">{tab.label}</span>
                 <span className="sm:hidden">{tab.label.split(" ")[0]}</span>
+                {tab.id === "forsokaigen" && errorCount > 0 && (
+                  <span className={`ml-0.5 min-w-[18px] h-[18px] px-1 rounded-full text-[10px] font-black flex items-center justify-center ${
+                    activeTab === tab.id ? "bg-white/30 text-white" : "bg-red-500 text-white"
+                  }`}>
+                    {errorCount}
+                  </span>
+                )}
               </button>
             ))}
           </div>
@@ -299,6 +316,19 @@ export default function WorldPage({ params }: Props) {
               )}
             </div>
           )
+        )}
+
+        {/* Försök igen */}
+        {activeTab === "forsokaigen" && (
+          <div>
+            {student ? (
+              <ForsokaIgen student={student} stageId={stageId} stage={stage} />
+            ) : (
+              <div className="card text-center py-10 text-gray-400">
+                Logga in för att se dina misstag.
+              </div>
+            )}
+          </div>
         )}
 
         {/* Games hub */}
