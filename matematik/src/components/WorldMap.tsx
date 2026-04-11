@@ -4,17 +4,20 @@ import { WORLDS, WorldId } from '../data/worlds';
 import { TOPICS } from '../data/topics';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { getDifficultyLevel, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../utils/adaptive';
+import { getErrorBank } from '../utils/errorBank';
 import { GRADE_LABELS } from '../types';
 import AppHeader from './AppHeader';
 
 export default function WorldMap({ worldId }: { worldId: WorldId }) {
-  const { currentStudent, selectTopic, setView, startSluttest, startQuest, startGames } = useApp();
+  const { currentStudent, selectTopic, setView, startSluttest, startQuest, startGames, startErrorBank } = useApp();
   const [showAll, setShowAll] = useState(false);
   if (!currentStudent) return null;
 
   const world = WORLDS.find(w => w.id === worldId)!;
   const points = getPoints(currentStudent.id) ?? initPoints(currentStudent.id);
   const progress = getProgress(currentStudent.id);
+  const errorCount = getErrorBank(currentStudent.id)
+    .filter(e => world.topicIds.includes(e.topicId)).length;
 
   const worldTopics = world.topicIds
     .map(id => TOPICS.find(t => t.id === id))
@@ -92,11 +95,11 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
       {/* Content */}
       <div className="max-w-lg mx-auto px-4 py-5 space-y-3">
-        {/* Quest + Spel shortcuts */}
-        <div className="grid grid-cols-2 gap-2">
+        {/* Quest + Spel + Försök igen shortcuts */}
+        <div className="grid grid-cols-3 gap-2">
           <button
             onClick={() => startQuest(worldId)}
-            className="rounded-2xl p-4 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
+            className="rounded-2xl p-3 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
             style={{
               background: 'rgba(255, 255, 255, 0.88)',
               backdropFilter: 'blur(12px)',
@@ -105,13 +108,13 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           >
             <span className="text-xl">⚔️</span>
             <div className="min-w-0">
-              <p className="font-black text-gray-800 text-sm">Äventyr</p>
-              <p className="text-xs truncate text-gray-500">Berättelseutmaning</p>
+              <p className="font-black text-gray-800 text-xs">Äventyr</p>
+              <p className="text-[10px] truncate text-gray-500">Berättelse</p>
             </div>
           </button>
           <button
             onClick={() => startGames(worldId)}
-            className="relative overflow-hidden rounded-2xl p-4 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
+            className="relative overflow-hidden rounded-2xl p-3 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
             style={{
               background: 'rgba(255, 255, 255, 0.88)',
               backdropFilter: 'blur(12px)',
@@ -120,9 +123,31 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           >
             <span className="text-xl">🎮</span>
             <div className="min-w-0">
-              <p className="font-black text-gray-800 text-sm">Spel</p>
-              <p className="text-xs truncate text-gray-500">Träna med spel!</p>
+              <p className="font-black text-gray-800 text-xs">Spel</p>
+              <p className="text-[10px] truncate text-gray-500">Träna med spel</p>
             </div>
+          </button>
+          <button
+            onClick={() => startErrorBank(worldId)}
+            className="relative rounded-2xl p-3 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
+            style={{
+              background: 'rgba(255, 255, 255, 0.88)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(239,68,68,0.35)',
+            }}
+          >
+            <span className="text-xl">🔁</span>
+            <div className="min-w-0">
+              <p className="font-black text-gray-800 text-xs">Försök igen</p>
+              <p className="text-[10px] truncate text-gray-500">
+                {errorCount > 0 ? `${errorCount} felsvar` : 'Öva felsvar'}
+              </p>
+            </div>
+            {errorCount > 0 && (
+              <span className="absolute top-1.5 right-1.5 min-w-[18px] h-[18px] bg-red-500 text-white text-[10px] font-black rounded-full flex items-center justify-center px-0.5">
+                {errorCount}
+              </span>
+            )}
           </button>
         </div>
 

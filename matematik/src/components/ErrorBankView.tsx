@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getErrorBank, getRepairExercises, clearError } from '../utils/errorBank';
 import { TOPICS } from '../data/topics';
+import { WORLDS, WorldId } from '../data/worlds';
 import { addPoints } from '../utils/storage';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
@@ -9,7 +10,7 @@ import { FillInExercise, MultipleChoiceExercise, TrueFalseExercise } from '../ty
 
 type Phase = 'list' | 'repair';
 
-export default function ErrorBankView() {
+export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
   const { currentStudent, setView } = useApp();
   const [phase, setPhase] = useState<Phase>('list');
   const [repairIdx, setRepairIdx] = useState(0);
@@ -19,8 +20,18 @@ export default function ErrorBankView() {
   const [correctCount, setCorrectCount] = useState(0);
   if (!currentStudent) return null;
 
-  const errors = getErrorBank(currentStudent.id);
-  const repairList = getRepairExercises(currentStudent.id, 5);
+  const world = worldId ? WORLDS.find(w => w.id === worldId) : null;
+  const worldTopicIds = world ? world.topicIds : null;
+
+  const allErrors = getErrorBank(currentStudent.id);
+  const errors = worldTopicIds
+    ? allErrors.filter(e => worldTopicIds.includes(e.topicId))
+    : allErrors;
+  const repairList = errors
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  const backView = worldId ? `world-${worldId}` as any : 'dashboard';
 
   // Build repair exercises from error topics
   const repairExercises = repairList.map(entry => {
@@ -28,6 +39,8 @@ export default function ErrorBankView() {
     const ex = topic?.exercises.find(e => e.id === entry.exerciseId);
     return ex ? { ...ex, topicId: entry.topicId, topicTitle: topic!.title, entry } : null;
   }).filter(Boolean) as any[];
+
+  const REPAIR_LIMIT = Math.min(10, repairExercises.length);
 
   const currentRepair = repairExercises[repairIdx];
 
@@ -75,41 +88,46 @@ export default function ErrorBankView() {
 
   // ---- LIST VIEW ----
   if (phase === 'list') return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-red-500 to-rose-600 text-white py-6 px-4">
+    <div className="min-h-screen" style={{
+      backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+      backgroundSize: 'cover', backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed',
+    }}>
+      <div className="bg-gradient-to-r from-red-600/90 to-rose-700/90 text-white py-6 px-4 pt-16">
         <div className="max-w-lg mx-auto">
-          <button onClick={()=>setView('dashboard')} className="text-white/70 hover:text-white text-sm mb-3 block">← Tillbaka</button>
-          <h1 className="text-2xl font-black">💡 Försök igen</h1>
+          <button onClick={()=>setView(backView)} className="text-white/70 hover:text-white text-sm mb-3 block">← {world ? world.name : 'Tillbaka'}</button>
+          <h1 className="text-2xl font-black">🔁 Försök igen</h1>
           <p className="text-white/80 mt-1 text-sm">
-            {errors.length === 0 ? 'Inga misstag registrerade ännu!' : `${errors.length} uppgifter att förbättra`}
+            {errors.length === 0 ? 'Inga felsvar registrerade ännu!' : `${errors.length} uppgifter att öva på`}
+            {world ? ` i ${world.name}` : ''}
           </p>
         </div>
       </div>
 
       <div className="max-w-lg mx-auto px-4 py-5">
         {errors.length === 0 ? (
-          <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
+          <div className="bg-white/90 rounded-2xl p-8 text-center shadow-sm">
             <div className="text-5xl mb-3">🎉</div>
-            <p className="font-bold text-gray-700 text-lg">Tomt i felbanken!</p>
-            <p className="text-gray-400 text-sm mt-1">Du har inga misstag att träna på. Kör vidare!</p>
-            <button onClick={()=>setView('quick-drill')}
-              className="mt-4 bg-amber-500 text-white font-bold py-2 px-6 rounded-xl hover:bg-amber-400 transition-colors">
-              ⚡ Snabbträning istället
+            <p className="font-bold text-gray-700 text-lg">Inga felsvar här!</p>
+            <p className="text-gray-400 text-sm mt-1">Svara fel på uppgifter i kapitlena — de hamnar här.</p>
+            <button onClick={()=>setView(backView)}
+              className="mt-4 bg-rose-500 text-white font-bold py-2 px-6 rounded-xl hover:bg-rose-400 transition-colors">
+              ← Tillbaka
             </button>
           </div>
         ) : (
           <>
             <button onClick={()=>{ setRepairIdx(0); setPhase('repair'); setAnswered(false); setInput(''); }}
               className="w-full bg-gradient-to-r from-red-500 to-rose-600 text-white font-black py-4 rounded-2xl text-lg shadow-lg hover:scale-[1.02] transition-all mb-5">
-              🔧 Träna på mina {Math.min(5, repairList.length)} vanligaste misstag!
+              🔁 Träna på mina {REPAIR_LIMIT} felsvar!
             </button>
 
-            <h2 className="text-gray-700 font-bold text-sm uppercase tracking-widest mb-3">Dina misstag</h2>
+            <h2 className="text-white font-bold text-sm uppercase tracking-widest mb-3">Dina felsvar</h2>
             <div className="space-y-3">
               {errors.slice(0, 20).map(entry => {
                 const topic = TOPICS.find(t => t.id === entry.topicId);
                 return (
-                  <div key={entry.id} className="bg-white rounded-2xl p-4 shadow-sm">
+                  <div key={entry.id} className="bg-white/90 rounded-2xl p-4 shadow-sm">
                     <div className="flex items-start gap-3">
                       <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0 bg-gradient-to-br ${topic?.color ?? 'from-gray-300 to-gray-400'} shadow-sm`}>
                         {topic?.icon ?? '📚'}
@@ -140,11 +158,14 @@ export default function ErrorBankView() {
 
   // ---- REPAIR VIEW ----
   if (!currentRepair) return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="text-center">
+    <div className="min-h-screen flex items-center justify-center p-4" style={{
+      backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+      backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed',
+    }}>
+      <div className="text-center bg-white/90 rounded-3xl p-10 shadow-lg">
         <div className="text-5xl mb-3">✅</div>
-        <p className="font-bold text-gray-700">Alla reparationsuppgifter klara!</p>
-        <button onClick={()=>{setPhase('list');setRepairIdx(0);}} className="mt-4 bg-blue-500 text-white font-bold py-2 px-6 rounded-xl">Tillbaka</button>
+        <p className="font-bold text-gray-700 text-lg">Alla felsvar klara!</p>
+        <button onClick={()=>{setPhase('list');setRepairIdx(0);}} className="mt-4 bg-rose-500 text-white font-bold py-2 px-6 rounded-xl">Tillbaka</button>
       </div>
     </div>
   );
@@ -152,11 +173,15 @@ export default function ErrorBankView() {
   const topic = TOPICS.find(t => t.id === currentRepair.topicId);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-red-500 to-rose-600 text-white py-4 px-4">
+    <div className="min-h-screen" style={{
+      backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+      backgroundSize: 'cover', backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed',
+    }}>
+      <div className="bg-gradient-to-r from-red-600/90 to-rose-700/90 text-white py-4 px-4 pt-16">
         <div className="max-w-lg mx-auto">
           <div className="flex justify-between items-center">
-            <button onClick={()=>setPhase('list')} className="text-white/70 hover:text-white text-sm">← Felbank</button>
+            <button onClick={()=>setPhase('list')} className="text-white/70 hover:text-white text-sm">← Felsvar</button>
             <span className="font-bold text-sm">{repairIdx+1} / {repairExercises.length}</span>
             <span className="font-bold text-sm">{correctCount} ✓</span>
           </div>

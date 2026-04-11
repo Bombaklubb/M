@@ -89,7 +89,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, EBSta
 // ─── App Inner ───────────────────────────────────────────────────────────────
 
 function AppInner() {
-  const { currentView, selectedTopic, setView } = useApp();
+  const { currentView, selectedTopic, setView, errorBankWorldId } = useApp();
 
   // Ctrl+Shift+P öppnar lärarvy
   useEffect(() => {
@@ -116,7 +116,7 @@ function AppInner() {
           case 'topic-instruction': return selectedTopic ? <TopicInstruction topic={selectedTopic} /> : <WorldSelect />;
           case 'topic-exercise':    return selectedTopic ? <TopicExercise topic={selectedTopic} /> : <WorldSelect />;
           case 'topic-result':      return selectedTopic ? <TopicResult topic={selectedTopic} /> : <WorldSelect />;
-          case 'error-bank':        return <ErrorBankView />;
+          case 'error-bank':        return <ErrorBankView worldId={errorBankWorldId ?? undefined} />;
           case 'quest':             return <QuestView />;
           case 'collection':        return <CollectionView />;
           case 'my-page':          return <MinSidaView />;
