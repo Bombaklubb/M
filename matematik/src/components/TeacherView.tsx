@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useCallback } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getAllStudents, getProgress, getPoints, getAchievements, getSessions, exportAllData, importAllData } from '../utils/storage';
 import { TOPICS } from '../data/topics';
@@ -11,10 +11,24 @@ import {
 } from '../utils/messages';
 import { ALL_AVATARS } from '../data/avatars';
 
+interface LiveStats {
+  activeNow: number;
+  visitorsToday: number;
+  visitorsMonth: number;
+  totalExercises: number;
+  totalErrors: number;
+  totalTimeMinutes: number;
+  topErrors: { topic: string; count: number }[];
+  daily14: { date: string; exercises: number; visitors: number }[];
+}
+
 export default function TeacherView() {
   const { setTeacher } = useApp();
-  const [tab, setTab] = useState<'overview' | 'students' | 'topics' | 'messages' | 'settings'>('overview');
+  const [tab, setTab] = useState<'overview' | 'students' | 'topics' | 'messages' | 'settings' | 'usage'>('overview');
   const [messages, setMessages] = useState<StudentMessage[]>([]);
+  const [liveStats, setLiveStats] = useState<LiveStats | null>(null);
+  const [liveLoading, setLiveLoading] = useState(false);
+  const [liveError, setLiveError] = useState<string | null>(null);
 
   // Load messages whenever the tab changes to 'messages'
   useEffect(() => {
@@ -126,8 +140,29 @@ export default function TeacherView() {
     return { student: s, pts, completed, accuracy, achievements: achs.length };
   }).sort((a, b) => (b.pts?.total ?? 0) - (a.pts?.total ?? 0)), [allStudents]);
 
+  const fetchLiveStats = useCallback(async () => {
+    setLiveLoading(true);
+    setLiveError(null);
+    try {
+      const res = await fetch(`/api/teacher-stats?password=${encodeURIComponent('Korsängen')}`);
+      if (res.status === 401) throw new Error('Åtkomst nekad – kontrollera lösenordet');
+      if (!res.ok) throw new Error('Redis är inte konfigurerat ännu');
+      const data = await res.json();
+      setLiveStats(data);
+    } catch (e: any) {
+      setLiveError(e.message ?? 'Okänt fel');
+    } finally {
+      setLiveLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (tab === 'usage' && !liveStats) fetchLiveStats();
+  }, [tab]);
+
   const tabs: { id: typeof tab; label: string; icon: string }[] = [
     { id: 'overview',  label: 'Översikt',     icon: '📊' },
+    { id: 'usage',     label: 'Användning',   icon: '🌐' },
     { id: 'students',  label: 'Elever',        icon: '👥' },
     { id: 'topics',    label: 'Ämnen',         icon: '📚' },
     { id: 'messages',  label: 'Meddelanden',   icon: '💬' },
@@ -262,6 +297,128 @@ export default function TeacherView() {
                 </div>
               )}
             </div>
+          </div>
+        )}
+
+        {/* USAGE TAB */}
+        {tab === 'usage' && (
+          <div className="space-y-5 animate-fade-in">
+            {/* Header row */}
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="font-black text-gray-800 text-lg">🌐 Appanvändning</h2>
+                <p className="text-xs text-gray-400 mt-0.5">Anonymiserad aggregerad statistik · GDPR-säkrad</p>
+              </div>
+              <button
+                onClick={fetchLiveStats}
+                disabled={liveLoading}
+                className="flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-800 transition-colors disabled:opacity-50"
+              >
+                {liveLoading ? '⏳' : '🔄'} Uppdatera
+              </button>
+            </div>
+
+            {liveError && (
+              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-sm text-amber-800">
+                <p className="font-bold mb-1">⚠️ Redis är inte konfigurerat</p>
+                <p>{liveError}</p>
+                <p className="mt-2 text-xs">Gå till Vercel → mattejakten → Storage → Skapa KV-databas och koppla projektet. Lägg sedan till <code>TEACHER_PASSWORD=Korsängen</code> i miljövariabler.</p>
+              </div>
+            )}
+
+            {liveLoading && (
+              <div className="text-center py-10 text-gray-400">
+                <div className="text-3xl mb-2">⏳</div>
+                <p>Hämtar statistik…</p>
+              </div>
+            )}
+
+            {liveStats && !liveLoading && (
+              <>
+                {/* ÖVERSIKT */}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Översikt</p>
+                  <div className="flex gap-3 overflow-x-auto pb-1">
+                    {/* Inloggade nu – green border */}
+                    <div className="flex-shrink-0 w-36 border-2 border-green-400 rounded-2xl p-4 text-center bg-white">
+                      <div className="flex justify-center mb-1">
+                        <span className="w-5 h-5 rounded-full bg-green-400 inline-block animate-pulse" />
+                      </div>
+                      <p className="text-3xl font-black text-gray-800">{liveStats.activeNow}</p>
+                      <p className="text-xs text-gray-500 mt-1">Inloggade nu</p>
+                    </div>
+                    <LiveCard emoji="💻" label="Unika enheter" value={String(liveStats.visitorsToday)} />
+                    <LiveCard emoji="📝" label="Uppgifter gjorda" value={String(liveStats.totalExercises)} />
+                    <LiveCard emoji="🚀" label="Sessioner" value={String(liveStats.visitorsMonth)} />
+                    <LiveCard
+                      emoji="⏱"
+                      label="Total tid"
+                      value={liveStats.totalTimeMinutes >= 60
+                        ? `${Math.floor(liveStats.totalTimeMinutes / 60)} t ${liveStats.totalTimeMinutes % 60} min`
+                        : `${liveStats.totalTimeMinutes} min`}
+                    />
+                    <LiveCard emoji="❌" label="Felaktiga svar" value={String(liveStats.totalErrors)} />
+                  </div>
+                </div>
+
+                {/* 14-day horizontal bar chart */}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+                    Dagliga uppgifter – senaste 14 dagarna
+                  </p>
+                  <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-3">
+                    {liveStats.daily14.map(({ date, exercises }) => {
+                      const max = Math.max(...liveStats.daily14.map(d => d.exercises), 1);
+                      const pct = exercises > 0 ? Math.max(1, (exercises / max) * 100) : 1;
+                      const label = new Date(date + 'T12:00:00').toLocaleDateString('sv-SE', {
+                        day: 'numeric', month: 'short',
+                      });
+                      return (
+                        <div key={date} className="flex items-center gap-3">
+                          <span className="text-xs text-gray-400 w-14 text-right flex-shrink-0">{label}</span>
+                          <div className="flex-1 h-4 bg-gray-100 rounded-full overflow-hidden">
+                            <div
+                              className="h-full rounded-full transition-all duration-500"
+                              style={{
+                                width: `${pct}%`,
+                                background: exercises > 0 ? '#6366f1' : '#e5e7eb',
+                                minWidth: '4px',
+                              }}
+                            />
+                          </div>
+                          <span className="text-xs text-gray-500 w-5 text-right flex-shrink-0">{exercises}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Top errors */}
+                {liveStats.topErrors.length > 0 && (
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">
+                      Vanligaste felsvar per ämne
+                    </p>
+                    <div className="bg-white border border-gray-100 rounded-2xl p-5 space-y-3">
+                      {liveStats.topErrors.map((e, i) => {
+                        const max = liveStats.topErrors[0]?.count ?? 1;
+                        const pct = (e.count / max) * 100;
+                        return (
+                          <div key={e.topic} className="flex items-center gap-3">
+                            <span className="text-xs font-bold text-gray-400 w-4 flex-shrink-0">#{i + 1}</span>
+                            <span className="text-xs text-gray-600 w-32 flex-shrink-0 truncate">{e.topic}</span>
+                            <div className="flex-1 h-4 bg-gray-100 rounded-full overflow-hidden">
+                              <div className="h-full bg-red-400 rounded-full" style={{ width: `${pct}%` }} />
+                            </div>
+                            <span className="text-xs text-red-600 font-bold w-6 text-right flex-shrink-0">{e.count}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         )}
 
@@ -491,6 +648,16 @@ function StatCard({ icon, label, value, color }: { icon: string; label: string; 
       <div className="text-2xl mb-1">{icon}</div>
       <div className="text-2xl font-black">{value}</div>
       <div className="text-xs font-semibold opacity-80">{label}</div>
+    </div>
+  );
+}
+
+function LiveCard({ emoji, label, value }: { emoji: string; label: string; value: string }) {
+  return (
+    <div className="flex-shrink-0 w-36 border border-gray-200 rounded-2xl p-4 text-center bg-white">
+      <div className="text-2xl mb-1">{emoji}</div>
+      <p className="text-3xl font-black text-gray-800">{value}</p>
+      <p className="text-xs text-gray-500 mt-1">{label}</p>
     </div>
   );
 }
