@@ -19,6 +19,11 @@ import {
   updateAvatar,
   saveUser,
 } from './services/userService';
+import {
+  trackPageView,
+  startSession,
+  trackTaskComplete,
+} from './services/analyticsService';
 import { getRandomText } from './services/libraryService';
 import {
   loadGamification,
@@ -52,6 +57,12 @@ function App() {
       setAppState(AppState.SETUP);
     }
     setLoading(false);
+  }, []);
+
+  // Starta anonym analytics (GDPR-säkrad)
+  useEffect(() => {
+    trackPageView();
+    startSession();
   }, []);
 
   // Keyboard shortcut för lärarvy (F8 eller Ctrl+Shift+P)
@@ -158,6 +169,8 @@ function App() {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
       questionResults.push({ questionType: q.type, correct: isCorrect });
+      // Spåra anonym statistik (GDPR-säkrad)
+      trackTaskComplete(isCorrect, q.type);
       return count + (isCorrect ? 1 : 0);
     }, 0);
 
