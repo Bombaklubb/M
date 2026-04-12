@@ -3,6 +3,7 @@ import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExerc
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
+import { trackAnswer } from '../utils/analytics';
 import AppHeader from './AppHeader';
 import InteractiveClock from './InteractiveClock';
 import { Progress } from './ui/progress';
@@ -87,6 +88,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
 
   function commitAnswer(userAnswer: string, correct: boolean) {
     const elapsed = Date.now() - exerciseStartRef.current;
+    trackAnswer(topic.title, correct);
     // Adaptive difficulty + error bank tracking
     if (currentStudent) {
       updateAdaptive(currentStudent.id, topic.id, correct, elapsed);

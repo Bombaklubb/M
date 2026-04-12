@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
 import {
   Student, AppView, Topic, MattChest, MysteryBoxReward,
 
@@ -9,6 +9,7 @@ import {
   grantAchievement, saveTopicProgress, calcStars,
   recordTopicSession, saveStudent, addAppMinutes,
 } from '../utils/storage';
+import { trackVisit, trackSessionEnd } from '../utils/analytics';
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
@@ -65,26 +66,47 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
   const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
 
+  const sessionStartRef = useRef<number | null>(null);
+
   const login = useCallback((student: Student) => {
     setCurrentStudent(student);
     setCurrentStudentState(student);
     initPoints(student.id);
-    sessionStorage.setItem('math_session_start', Date.now().toString());
+    const now = Date.now();
+    sessionStorage.setItem('math_session_start', now.toString());
+    sessionStartRef.current = now;
+    trackVisit();
     setCurrentView('dashboard');
   }, []);
 
   const logout = useCallback(() => {
     const start = sessionStorage.getItem('math_session_start');
     if (start && currentStudent) {
-      const mins = Math.floor((Date.now() - parseInt(start)) / 60000);
+      const elapsed = Date.now() - parseInt(start);
+      const mins = Math.floor(elapsed / 60000);
       addAppMinutes(currentStudent.id, mins);
+      trackSessionEnd(Math.floor(elapsed / 1000));
     }
     sessionStorage.removeItem('math_session_start');
+    sessionStartRef.current = null;
     setCurrentStudent(null);
     setCurrentStudentState(null);
     setCurrentView('login');
     setIsTeacherState(false);
   }, [currentStudent]);
+
+  // Track session end on page close
+  useEffect(() => {
+    const handleUnload = () => {
+      const start = sessionStorage.getItem('math_session_start');
+      if (start) {
+        const elapsed = Math.floor((Date.now() - parseInt(start)) / 1000);
+        trackSessionEnd(elapsed);
+      }
+    };
+    window.addEventListener('beforeunload', handleUnload);
+    return () => window.removeEventListener('beforeunload', handleUnload);
+  }, []);
 
   const setView = useCallback((view: ExtendedView) => setCurrentView(view), []);
 
