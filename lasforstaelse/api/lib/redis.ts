@@ -1,11 +1,10 @@
 import { Redis } from '@upstash/redis';
 
-// Redis-klient för Upstash
-// Miljövariabler sätts i Vercel: UPSTASH_REDIS_REST_URL och UPSTASH_REDIS_REST_TOKEN
-export const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL!,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-});
+// Redis-klient för Upstash (via Vercel KV)
+// Använder Redis.fromEnv() som automatiskt hittar miljövariablerna:
+// - KV_REST_API_URL och KV_REST_API_TOKEN (Vercel standard)
+// - eller UPSTASH_REDIS_REST_URL och UPSTASH_REDIS_REST_TOKEN
+export const redis = Redis.fromEnv();
 
 // Prefix för alla nycklar (för att separera från andra appar)
 export const KEY_PREFIX = 'lasjakten:';
