@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '../lib/redis.js';
+import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '../lib/redis';
 
 /**
  * GDPR-SÄKRAD STATISTIK-HÄMTNING
