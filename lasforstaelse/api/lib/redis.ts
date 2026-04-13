@@ -1,26 +1,7 @@
-import { Redis } from '@upstash/redis';
+import { kv } from '@vercel/kv';
 
-// Redis-klient för Upstash (via Vercel KV)
-// Stödjer flera variabelnamn för flexibilitet:
-// - KV_REST_API_URL / KV_REST_API_TOKEN (standard)
-// - svenskajakten_KV_REST_API_URL / svenskajakten_KV_REST_API_TOKEN (prefix)
-// - UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN (Upstash standard)
-
-const url =
-  process.env.KV_REST_API_URL ||
-  process.env.svenskajakten_KV_REST_API_URL ||
-  process.env.UPSTASH_REDIS_REST_URL;
-
-const token =
-  process.env.KV_REST_API_TOKEN ||
-  process.env.svenskajakten_KV_REST_API_TOKEN ||
-  process.env.UPSTASH_REDIS_REST_TOKEN;
-
-if (!url || !token) {
-  throw new Error('Redis environment variables not configured');
-}
-
-export const redis = new Redis({ url, token });
+// Använder Vercel KV direkt - kräver KV_REST_API_URL och KV_REST_API_TOKEN
+export const redis = kv;
 
 // Prefix för alla nycklar (för att separera från andra appar)
 export const KEY_PREFIX = 'lasjakten:';
