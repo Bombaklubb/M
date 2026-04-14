@@ -34582,5 +34582,415 @@
       "generatedAt": "2026-04-14T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "ak10-arsenal-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Arsenals historia och identitet",
+    "text": "Arsenal Football Club grundades 1886 i London och är en av de mest välkända fotbollsklubbarna i världen. Klubben startades av arbetare vid en vapentillverkning, vilket förklarar klubbens smeknamn \"The Gunners\". Under åren har Arsenal utvecklats från ett lokalt lag till en global fotbollsgigant med supportrar över hela världen.\n\nEn av de viktigaste perioderna i klubbens historia inträffade under tränaren Arsène Wenger, som tog över laget 1996. Wenger förändrade hur klubben arbetade med kost, träning och taktik. Han införde en mer teknisk och snabb spelstil som kom att prägla Arsenal under många år. Den mest kända säsongen är 2003–2004, då laget gick igenom hela ligan utan att förlora en enda match. Detta lag kallas ofta för \"The Invincibles\".\n\nArsenal spelar sina hemmamatcher på Emirates Stadium, som invigdes 2006. Innan dess spelade laget på Highbury, en arena som var känd för sin speciella atmosfär. Flytten till Emirates innebar större ekonomiska möjligheter men också nya utmaningar, särskilt när det gällde att konkurrera med andra storklubbar.\n\nKlubbens identitet bygger på en kombination av tradition och utveckling. Arsenal är kända för att spela en offensiv och teknisk fotboll, samtidigt som de värnar om sin historia. Klubben har också haft en viktig roll i att utveckla unga spelare och ge dem chansen på hög nivå.\n\nTrots perioder av både framgång och motgång fortsätter Arsenal att vara en central del av engelsk fotboll. Deras historia visar hur en klubb kan förändras över tid utan att förlora sin grundläggande identitet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför kallas Arsenal för \"The Gunners\"?",
+        "options": [
+          "På grund av klubbens grundare arbetade med vapen",
+          "För att laget alltid skjuter många skott",
+          "På grund av deras stadionnamn",
+          "För att deras fans skapade smeknamnet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var speciellt med säsongen 2003–2004?",
+        "options": [
+          "Arsenal vann alla cuper",
+          "De förlorade inga ligamatcher",
+          "De gjorde flest mål i Europa",
+          "De bytte arena samma år"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken förändring införde Arsène Wenger?",
+        "options": [
+          "Mer defensivt spel",
+          "Kortare matcher",
+          "Nya tränings- och kostvanor",
+          "Färre unga spelare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebar flytten till Emirates Stadium?",
+        "options": [
+          "Mindre publik",
+          "Färre matcher",
+          "Större ekonomiska möjligheter",
+          "Kortare säsonger"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Arsenals spelstil?",
+        "options": [
+          "Fysiskt och långsamt spel",
+          "Offensiv och teknisk fotboll",
+          "Endast försvarsinriktat",
+          "Slumpmässigt spel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att Arsenal alltid vinner",
+          "Att arenor är viktigast i fotboll",
+          "Att unga spelare är oviktiga",
+          "Att Arsenal kombinerar tradition och utveckling"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 502,
+      "fingerprint": "ak10-arsenal-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Arsenals spelstil och filosofi",
+    "text": "Arsenal har länge varit kända för sin tekniska och offensiva spelstil. Denna filosofi blev särskilt tydlig under Arsène Wengers tid som tränare. Istället för att fokusera på fysisk styrka och långa bollar betonade Wenger kortpassningsspel, rörelse utan boll och kreativitet.\n\nEn central del av Arsenals spelidé är att kontrollera matchen genom bollinnehav. Genom att hålla bollen inom laget kan spelarna styra tempot och skapa luckor i motståndarnas försvar. Detta kräver hög teknisk skicklighet och god spelförståelse hos varje spelare.\n\nArsenal har också varit kända för att utveckla unga talanger. Klubben har ofta gett unga spelare chansen att spela i A-laget, vilket både kan innebära risker och möjligheter. Denna strategi har ibland kritiserats, särskilt när laget inte nått de högsta resultaten, men den har också lett till att många spelare utvecklats till stjärnor.\n\nUnder senare år har klubben försökt balansera sin traditionella spelstil med en mer pragmatisk approach. Detta innebär att laget ibland anpassar sitt spel beroende på motstånd och situation. Kombinationen av kreativitet och struktur har blivit allt viktigare i modern fotboll.\n\nArsenals filosofi handlar alltså inte bara om hur laget spelar, utan också om hur klubben ser på utveckling, lagarbete och långsiktighet. Det är denna helhetssyn som gör Arsenal till en unik klubb inom fotbollsvärlden.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Arsenals spelstil enligt texten?",
+        "options": [
+          "Tekniskt och offensivt spel",
+          "Endast försvarsspel",
+          "Slumpmässiga anfall",
+          "Långsamma passningar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är bollinnehav viktigt?",
+        "options": [
+          "Det gör matchen kortare",
+          "Det hjälper laget kontrollera tempot",
+          "Det minskar publikens intresse",
+          "Det gör spelet enklare att döma"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken risk finns med att satsa på unga spelare?",
+        "options": [
+          "De är alltid dyrare",
+          "De vill inte spela",
+          "De saknar erfarenhet",
+          "De kan inte träna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär en mer pragmatisk approach?",
+        "options": [
+          "Att alltid spela likadant",
+          "Att undvika taktik",
+          "Att spela utan tränare",
+          "Att anpassa spelet efter situationen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur har synen på spelstil förändrats?",
+        "options": [
+          "Den är helt oförändrad",
+          "Den kombinerar kreativitet och struktur",
+          "Den är mindre viktig",
+          "Den fokuserar bara på försvar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Att Arsenal saknar strategi",
+          "Att unga spelare alltid misslyckas",
+          "Att Arsenals filosofi omfattar både spel och utveckling",
+          "Att bollinnehav inte är viktigt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 462,
+      "fingerprint": "ak10-arsenal-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Supporterkultur kring Arsenal",
+    "text": "Arsenal har en stor och engagerad supporterbas som sträcker sig långt utanför England. Supportrar följer laget genom både framgångar och svårare perioder, vilket skapar en stark gemenskap.\n\nPå matchdagar samlas fans från olika bakgrunder för att stötta laget. Emirates Stadium fylls av sånger, flaggor och förväntan. Denna atmosfär bidrar till upplevelsen av fotboll som mer än bara en sport.\n\nSupporterkulturen kring Arsenal präglas av både lojalitet och kritiskt tänkande. Fansen är inte rädda för att uttrycka sina åsikter om klubbens ledning eller prestationer. Detta kan ibland skapa debatt, men det visar också hur engagerade supportrarna är.\n\nSociala medier har förändrat hur supportrar kommunicerar. Diskussioner sker inte längre bara på arenan eller puben, utan också online. Detta gör att fler kan delta i samtalet, men det kan också leda till konflikter.\n\nArsenals supporterbas är dessutom mångsidig. Den inkluderar människor i olika åldrar, kön och livssituationer. Denna variation gör att klubben speglar en bredare samhällsbild.\n\nSammanfattningsvis är supporterkulturen en viktig del av Arsenals identitet. Den visar hur sport kan förena människor samtidigt som den ger utrymme för olika perspektiv.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Arsenals supporterbas?",
+        "options": [
+          "Den är liten och lokal",
+          "Den är global och engagerad",
+          "Den är bara digital",
+          "Den är passiv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer på Emirates Stadium under matcher?",
+        "options": [
+          "Publiken är tyst",
+          "Fans lämnar tidigt",
+          "Sånger och stämning fyller arenan",
+          "Endast spelarna syns"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur uttrycker fans sina åsikter?",
+        "options": [
+          "Genom total tystnad",
+          "Genom att alltid hålla med",
+          "Genom att diskutera och kritisera",
+          "Genom att lämna klubben"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur har sociala medier påverkat supporterskapet?",
+        "options": [
+          "Minskat engagemanget",
+          "Tagit bort diskussioner",
+          "Begränsat deltagande",
+          "Ökat möjligheten att diskutera"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar mångfalden bland fansen?",
+        "options": [
+          "Att klubben bara är för vissa",
+          "Att den speglar samhället",
+          "Att alla är lika",
+          "Att ålder inte spelar roll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Att supportrar inte är viktiga",
+          "Att fotboll bara handlar om spel",
+          "Att supporterrollen är central för klubbens identitet",
+          "Att arenor är oviktiga"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak10-arsenal-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Ekonomi och konkurrens i modern fotboll",
+    "text": "Modern fotboll präglas i hög grad av ekonomi, och Arsenal är inget undantag. Intäkter från tv-avtal, sponsorer och biljettförsäljning spelar en avgörande roll för klubbens möjligheter att konkurrera.\n\nNär Arsenal flyttade till Emirates Stadium ökade klubbens intäkter, men samtidigt uppstod stora kostnader. Detta påverkade hur mycket pengar klubben kunde spendera på nya spelare under flera år.\n\nKonkurrensen i Premier League har också blivit hårdare. Flera klubbar har fått stora ekonomiska resurser genom externa investeringar. Detta har gjort det svårare för Arsenal att konsekvent nå toppen av tabellen.\n\nFör att hantera detta har klubben behövt utveckla en balans mellan ekonomisk stabilitet och sportslig framgång. Det innebär att fatta strategiska beslut kring spelarvärvningar, löner och långsiktig planering.\n\nEkonomi påverkar alltså inte bara vilka spelare som köps, utan också hur klubben organiseras och utvecklas. För Arsenal har detta inneburit både utmaningar och möjligheter.\n\nTexten visar hur ekonomiska faktorer blivit en central del av modern fotboll och hur klubbar måste anpassa sig till dessa förändringar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken faktor påverkar fotboll mest enligt texten?",
+        "options": [
+          "Ekonomi",
+          "Väder",
+          "Publikens kläder",
+          "Domarens ålder"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände efter flytten till Emirates Stadium?",
+        "options": [
+          "Intäkterna minskade",
+          "Intäkterna ökade men kostnaderna också",
+          "Klubben slutade spela matcher",
+          "Spelarna blev färre"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför har konkurrensen ökat?",
+        "options": [
+          "Färre lag spelar",
+          "Reglerna har ändrats",
+          "Fler klubbar har fått ekonomiska resurser",
+          "Matcherna är kortare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad krävs för att hantera ekonomin?",
+        "options": [
+          "Slumpmässiga beslut",
+          "Ingen planering",
+          "Endast unga spelare",
+          "Strategiska beslut"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad påverkar ekonomin mest i klubben?",
+        "options": [
+          "Spelarvärvningar och löner",
+          "Träningstider",
+          "Matchlängd",
+          "Publikens kläder"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Ekonomi spelar liten roll",
+          "Ekonomi är central i modern fotboll",
+          "Endast spelstil är viktig",
+          "Arenor är oviktiga"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak10-arsenal-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Framtiden för Arsenal",
+    "text": "Arsenal står inför en framtid där både möjligheter och utmaningar är tydliga. Klubben har under de senaste åren satsat på en yngre spelartrupp, vilket tyder på ett långsiktigt tänkande.\n\nEn viktig del av framtiden handlar om att utveckla spelare och skapa stabilitet. Genom att ge unga talanger tid att växa kan klubben bygga ett lag som håller över flera säsonger.\n\nSamtidigt måste Arsenal fortsätta konkurrera med ekonomiskt starka klubbar. Detta kräver smarta värvningar och effektiv användning av resurser. Att hitta rätt balans mellan investering och utveckling är avgörande.\n\nTeknologin spelar också en allt större roll inom fotboll. Analysverktyg används för att förbättra prestationer och minska skaderisker. Arsenal har investerat i sådana system för att ligga i framkant.\n\nSupporterbasen kommer fortsatt vara viktig. Engagemang från fansen kan påverka både spelare och klubbens riktning. En stark relation mellan klubb och supportrar kan bidra till framgång.\n\nFramtiden för Arsenal beror alltså på flera faktorer: ekonomi, strategi, spelutveckling och relationen till fansen. Hur klubben hanterar dessa delar kommer avgöra dess position i framtidens fotboll.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad satsar Arsenal på i sin spelartrupp?",
+        "options": [
+          "Yngre spelare",
+          "Endast äldre spelare",
+          "Färre spelare",
+          "Tillfälliga spelare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är unga spelare viktiga?",
+        "options": [
+          "De är billigast",
+          "De kan utvecklas över tid",
+          "De spelar fler matcher direkt",
+          "De kräver mindre träning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad krävs för att konkurrera?",
+        "options": [
+          "Slumpmässiga köp",
+          "Färre tränare",
+          "Smarta värvningar",
+          "Kortare matcher"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur används teknologi?",
+        "options": [
+          "För att sälja biljetter",
+          "För att ändra regler",
+          "För att minska publik",
+          "För analys och prestation"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad påverkar klubbens framgång utöver spelare?",
+        "options": [
+          "Supporterengagemang",
+          "Väder",
+          "Matchtid",
+          "Domare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Framtiden beror på flera faktorer",
+          "Endast pengar avgör",
+          "Teknik är oviktig",
+          "Fans påverkar inte klubben"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak10-arsenal-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
