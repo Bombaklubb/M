@@ -1,7 +1,7 @@
 {
-  "name": "lasjakten-api",
   "private": true,
   "dependencies": {
-    "@vercel/kv": "^2.0.0"
+    "@upstash/redis": "^1.37.0",
+    "@vercel/node": "^5.7.4"
   }
 }
