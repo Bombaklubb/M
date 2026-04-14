@@ -31,6 +31,7 @@ async function trackEvent(
     questionType?: string;
     timeSeconds?: number;
     correct?: boolean;
+    grade?: number;
   }
 ): Promise<void> {
   try {
@@ -56,9 +57,9 @@ export function trackPageView(): void {
   trackEvent('pageview');
 }
 
-// Spåra avslutad uppgift
-export function trackTaskComplete(correct: boolean, questionType?: string): void {
-  trackEvent('task_complete', { correct, questionType });
+// Spåra avslutad uppgift (med årskurs/stadie)
+export function trackTaskComplete(correct: boolean, questionType?: string, grade?: number): void {
+  trackEvent('task_complete', { correct, questionType, grade });
 }
 
 // Spåra sessionstid (kallas vid avslut eller regelbundet)
@@ -122,7 +123,8 @@ export interface TeacherStats {
   totalTimeSeconds: number;
   totalErrors: number;
   topErrors: { type: string; count: number }[];
-  dailyStats: { date: string; visitors: number; tasks: number }[];
+  gradeStats: { grade: number; count: number }[];
+  statsStarted: string;
   gdprNote: string;
 }
 

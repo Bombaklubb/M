@@ -297,22 +297,23 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
               </div>
             </div>
 
-            {/* Daglig statistik - graf */}
+            {/* Statistik per årskurs/stadie */}
             <h2 className="text-lg font-bold text-slate-700 dark:text-slate-200 mb-4">
-              DAGLIGA UPPGIFTER – SENASTE 14 DAGARNA
+              ANVÄNDNING PER ÅRSKURS
             </h2>
 
             <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 mb-8">
-              {stats?.dailyStats ? (
+              {stats?.gradeStats && stats.gradeStats.length > 0 ? (
                 <div className="space-y-3">
-                  {stats.dailyStats.map((day) => {
-                    const maxTasks = Math.max(...stats.dailyStats.map((d) => d.tasks), 1);
-                    const percentage = (day.tasks / maxTasks) * 100;
+                  {stats.gradeStats.map((item) => {
+                    const maxCount = Math.max(...stats.gradeStats.map((g) => g.count), 1);
+                    const percentage = (item.count / maxCount) * 100;
+                    const gradeLabel = item.grade === 10 ? 'Gymnasium' : `Årskurs ${item.grade}`;
 
                     return (
-                      <div key={day.date} className="flex items-center gap-4">
-                        <div className="w-20 text-sm text-slate-500 dark:text-slate-400 text-right">
-                          {formatDateShort(day.date)}
+                      <div key={item.grade} className="flex items-center gap-4">
+                        <div className="w-28 text-sm text-slate-500 dark:text-slate-400 text-right">
+                          {gradeLabel}
                         </div>
                         <div className="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-6 overflow-hidden">
                           <div
@@ -320,8 +321,8 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                             style={{ width: `${Math.max(percentage, 2)}%` }}
                           />
                         </div>
-                        <div className="w-12 text-sm text-slate-600 dark:text-slate-300 text-right font-medium">
-                          {day.tasks}
+                        <div className="w-16 text-sm text-slate-600 dark:text-slate-300 text-right font-medium">
+                          {item.count} st
                         </div>
                       </div>
                     );
@@ -329,8 +330,19 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 </div>
               ) : (
                 <p className="text-center text-slate-500 dark:text-slate-400 py-8">
-                  Ingen statistik tillgänglig
+                  Ingen stadiestatistik tillgänglig ännu
                 </p>
+              )}
+
+              {/* Visa när statistikinsamling startade */}
+              {stats?.statsStarted && (
+                <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 text-center text-sm text-slate-400 dark:text-slate-500">
+                  Statistikinsamling startade: {new Date(stats.statsStarted).toLocaleDateString('sv-SE', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </div>
               )}
             </div>
 
@@ -401,7 +413,12 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
       {/* Footer */}
       <footer className="text-center text-sm text-slate-400 dark:text-slate-600 py-6">
-        Kontakt: martin.akdogan@enkoping.se
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="hover:text-emerald-500 dark:hover:text-emerald-400 transition"
+        >
+          martin.akdogan@enkoping.se
+        </a>
         <span className="mx-3">·</span>
         Läsjakten av Martin Akdogan
       </footer>
