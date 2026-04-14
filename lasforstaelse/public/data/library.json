@@ -33762,5 +33762,415 @@
       "model": "manual"
     },
     "imageUrl": "https://images.unsplash.com/photo-1450052590821-8bf91254a353?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak10-tema-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Vad är mänskliga rättigheter?",
+    "text": "Mänskliga rättigheter är grundläggande rättigheter som gäller för alla människor, oavsett var de bor, vilken bakgrund de har eller vad de tror på. De formulerades tydligt efter andra världskriget, när världen ville förhindra att övergrepp som Förintelsen skulle hända igen. År 1948 antog Förenta nationerna en deklaration om de mänskliga rättigheterna.\n\nRättigheterna handlar till exempel om rätten till liv, frihet och säkerhet. De omfattar också yttrandefrihet, religionsfrihet och rätten att gå i skolan. En viktig princip är att alla människor är lika mycket värda och ska behandlas med respekt.\n\nTrots att rättigheterna är universella, det vill säga gäller överallt, följs de inte alltid i praktiken. I vissa länder begränsas människors möjlighet att uttrycka sina åsikter eller att leva fritt. Det kan bero på politiska system, konflikter eller ekonomiska problem.\n\nMänskliga rättigheter delas ofta in i olika kategorier. Medborgerliga och politiska rättigheter handlar om frihet och delaktighet i samhället. Ekonomiska, sociala och kulturella rättigheter handlar om till exempel arbete, hälsa och utbildning.\n\nDet finns organisationer som arbetar för att skydda och stärka dessa rättigheter. De kan dokumentera brott, påverka regeringar och informera människor. Även enskilda personer kan bidra genom att engagera sig, sprida kunskap och stå upp för andra.\n\nAtt förstå mänskliga rättigheter handlar inte bara om lagar, utan också om värderingar. Det innebär att se andra människors värde och att agera när orättvisor sker. På så sätt blir rättigheterna levande i vardagen och inte bara ord på papper.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför formulerades de mänskliga rättigheterna tydligt efter andra världskriget?",
+        "options": [
+          "För att stärka ekonomin i Europa",
+          "För att förhindra nya stora övergrepp",
+          "För att öka handeln mellan länder",
+          "För att skapa fler politiska partier"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken organisation antog deklarationen 1948?",
+        "options": [
+          "Europeiska unionen",
+          "Nato",
+          "Förenta nationerna",
+          "Världsbanken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betyder att rättigheterna är universella?",
+        "options": [
+          "De gäller bara i demokratiska länder",
+          "De gäller främst i Europa",
+          "De gäller alla människor överallt",
+          "De gäller endast vuxna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken typ av rättigheter handlar om arbete och utbildning?",
+        "options": [
+          "Militära rättigheter",
+          "Ekonomiska och sociala rättigheter",
+          "Tekniska rättigheter",
+          "Historiska rättigheter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan enskilda personer göra enligt texten?",
+        "options": [
+          "Starta egna lagar",
+          "Sprida kunskap och stå upp för andra",
+          "Bestämma över regeringar",
+          "Kontrollera alla organisationer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett huvudbudskap i texten?",
+        "options": [
+          "Rättigheter gäller bara i vissa länder",
+          "Lagar är viktigare än människor",
+          "Mänskliga rättigheter är bara teori",
+          "Rättigheter kräver både kunskap och handling"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 482,
+      "fingerprint": "ak10-tema-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Yttrandefrihet och dess gränser",
+    "text": "Yttrandefrihet är en central del av de mänskliga rättigheterna och innebär att människor har rätt att uttrycka sina tankar, åsikter och idéer. Denna rättighet är viktig i demokratiska samhällen eftersom den gör det möjligt att kritisera makthavare och delta i samhällsdebatten.\n\nSamtidigt är yttrandefriheten inte helt obegränsad. I många länder finns lagar som förbjuder hatpropaganda, hot eller uppmaningar till våld. Syftet är att skydda andra människors rättigheter och säkerhet.\n\nEn svår fråga är var gränsen ska dras. Vissa menar att yttrandefriheten bör vara nästan absolut, medan andra anser att den måste begränsas mer för att skydda utsatta grupper. Denna diskussion är ständigt aktuell, särskilt i takt med att sociala medier blivit en viktig arena för åsiktsutbyte.\n\nDigitala plattformar har förändrat hur information sprids. Det går snabbt att nå många människor, men det innebär också att falsk information kan spridas lätt. Detta kan påverka demokratiska processer och människors uppfattningar.\n\nI olika delar av världen ser situationen olika ut. I vissa länder riskerar människor fängelse eller andra straff för att uttrycka kritik mot regeringen. I andra länder är yttrandefriheten starkare skyddad, men debatten om dess gränser fortsätter.\n\nAtt förstå yttrandefrihet handlar därför om att balansera olika rättigheter. Det handlar både om individens frihet att uttrycka sig och om samhällets ansvar att skydda människor från skada.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Varför är yttrandefrihet viktig i demokratier?",
+        "options": [
+          "Den gör det möjligt att påverka och kritisera",
+          "Den ökar produktionen i samhället",
+          "Den minskar behovet av lagar",
+          "Den ersätter utbildning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan vara förbjudet trots yttrandefrihet?",
+        "options": [
+          "Diskussioner i skolan",
+          "Hatpropaganda och hot",
+          "Kulturella uttryck",
+          "Privata samtal"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har sociala medier bidragit till enligt texten?",
+        "options": [
+          "Mindre spridning av information",
+          "Färre åsikter i samhället",
+          "Snabb spridning av både information och falska uppgifter",
+          "Att lagar blivit onödiga"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad riskerar människor i vissa länder?",
+        "options": [
+          "Att förlora arbete automatiskt",
+          "Att inte få resa",
+          "Att tvingas studera",
+          "Straff för att kritisera regeringen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar debatten om?",
+        "options": [
+          "Hur man bygger fler skolor",
+          "Var gränsen för yttrandefrihet ska gå",
+          "Hur teknik ska utvecklas",
+          "Hur många lagar som behövs"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett centralt tema i texten?",
+        "options": [
+          "Att yttrandefrihet saknar betydelse",
+          "Att alla åsikter är lika sanna",
+          "Balansen mellan frihet och ansvar",
+          "Att lagar alltid begränsar människor"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 456,
+      "fingerprint": "ak10-tema-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Barns rättigheter i världen",
+    "text": "Barn har särskilda rättigheter som erkänns i en internationell överenskommelse kallad barnkonventionen. Den antogs av Förenta nationerna och syftar till att skydda barns liv, utveckling och välmående. Alla barn, oavsett bakgrund, ska ha samma rättigheter.\n\nEn viktig del av barnkonventionen är rätten till utbildning. Skolan ska vara tillgänglig och ge barn möjlighet att utveckla sina kunskaper och färdigheter. Utbildning anses vara avgörande för att bryta fattigdom och skapa bättre framtidsmöjligheter.\n\nBarn har också rätt till skydd mot våld, utnyttjande och diskriminering. I vissa delar av världen arbetar barn istället för att gå i skolan, vilket kan påverka deras hälsa och framtid negativt.\n\nBarnkonventionen betonar även barns rätt att uttrycka sina åsikter i frågor som rör dem. Det innebär att vuxna ska lyssna på barn och ta deras perspektiv på allvar.\n\nTrots att många länder har skrivit under konventionen finns det fortfarande stora utmaningar. Krig, fattigdom och brist på resurser gör att barns rättigheter inte alltid uppfylls.\n\nAtt arbeta för barns rättigheter handlar om både lagstiftning och praktiska åtgärder. Det kräver samarbete mellan regeringar, organisationer och individer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är barnkonventionen?",
+        "options": [
+          "En lokal lag i vissa länder",
+          "En internationell överenskommelse om barns rättigheter",
+          "En skolplan",
+          "En ekonomisk strategi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är utbildning viktig enligt texten?",
+        "options": [
+          "Den gör barn lydiga",
+          "Den minskar fritid",
+          "Den ger bättre framtidsmöjligheter",
+          "Den ökar konkurrens mellan barn"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan hindra barns rättigheter?",
+        "options": [
+          "Fler lärare",
+          "Krig och fattigdom",
+          "Nya skolor",
+          "Teknisk utveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär barns rätt att uttrycka sina åsikter?",
+        "options": [
+          "Att barn alltid bestämmer",
+          "Att barn ska ignorera vuxna",
+          "Att barn får rösta i alla val",
+          "Att vuxna ska lyssna på barn"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan barnarbete leda till?",
+        "options": [
+          "Bättre hälsa",
+          "Mer fritid",
+          "Sämre framtidsmöjligheter",
+          "Fler utbildningar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Barns rättigheter och utmaningar",
+          "Skolans historia",
+          "Ekonomiska system",
+          "Teknisk utveckling"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak10-tema-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Diskriminering och lika värde",
+    "text": "Diskriminering innebär att människor behandlas sämre än andra på grund av exempelvis kön, etnicitet, religion, funktionsvariation eller sexuell läggning. Detta strider mot principen om alla människors lika värde, som är central inom mänskliga rättigheter.\n\nDiskriminering kan ske på olika sätt. Den kan vara direkt, till exempel om någon nekas ett jobb på grund av sin bakgrund. Den kan också vara indirekt, när regler eller strukturer missgynnar vissa grupper utan att det alltid är uppenbart.\n\nLagstiftning i många länder förbjuder diskriminering, men lagar räcker inte alltid. Normer, attityder och fördomar kan påverka hur människor behandlas i vardagen.\n\nEtt viktigt arbete för att motverka diskriminering är utbildning och medvetenhet. Genom att förstå olika perspektiv och erfarenheter kan människor bli mer empatiska och inkluderande.\n\nI samhället finns personer med olika bakgrunder och livssituationer. Att inkludera alla innebär att skapa möjligheter för delaktighet och respekt.\n\nAtt arbeta mot diskriminering är en del av att stärka mänskliga rättigheter. Det handlar om att förändra både strukturer och attityder, så att alla människor får samma möjligheter och bemöts med respekt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad innebär diskriminering?",
+        "options": [
+          "Att alla behandlas lika",
+          "Att vissa behandlas sämre än andra",
+          "Att lagar förändras",
+          "Att utbildning ökar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är indirekt diskriminering?",
+        "options": [
+          "Öppen kritik",
+          "Synliga konflikter",
+          "Regler som missgynnar utan att det är tydligt",
+          "Frivilliga val"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad räcker inte alltid enligt texten?",
+        "options": [
+          "Lagar",
+          "Skolor",
+          "Arbete",
+          "Teknik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan motverka diskriminering?",
+        "options": [
+          "Mindre utbildning",
+          "Fler regler utan förståelse",
+          "Utbildning och medvetenhet",
+          "Färre människor i samhället"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär inkludering?",
+        "options": [
+          "Att vissa utesluts",
+          "Att alla får delta och respekteras",
+          "Att regler tas bort",
+          "Att skillnader ignoreras"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudidén i texten?",
+        "options": [
+          "Diskriminering är svårt att förändra",
+          "Lagar löser allt",
+          "Alla människor ska behandlas lika och rättvist",
+          "Skillnader bör förstärkas"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak10-tema-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Mänskliga rättigheter i vardagen",
+    "text": "Mänskliga rättigheter handlar inte bara om stora internationella frågor, utan också om hur människor behandlar varandra i vardagen. Det kan handla om respekt, rättvisa och möjligheten att känna sig trygg.\n\nI skolan är mänskliga rättigheter tydligt närvarande. Elever har rätt att uttrycka sina åsikter, känna sig trygga och få en likvärdig utbildning. Lärare har ansvar att skapa en miljö där alla behandlas med respekt.\n\nI arbetslivet handlar rättigheter om rättvisa villkor, säker arbetsmiljö och att inte bli diskriminerad. Det gäller både unga och vuxna.\n\nMänskliga rättigheter kan också kopplas till hur vi bemöter människor i sociala situationer. Att visa respekt, lyssna och inkludera andra är viktiga delar.\n\nI ett mångfaldigt samhälle möts människor med olika bakgrunder. Det kan skapa både möjligheter och utmaningar. Genom dialog och förståelse kan konflikter minska.\n\nAtt tänka på mänskliga rättigheter i vardagen innebär att reflektera över sina handlingar. Små val, som att säga ifrån vid orättvisor eller att inkludera någon som står utanför, kan göra stor skillnad.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Var märks mänskliga rättigheter enligt texten?",
+        "options": [
+          "Bara i internationella möten",
+          "Endast i lagböcker",
+          "I vardagliga situationer",
+          "Endast i politiken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad har elever rätt till?",
+        "options": [
+          "Att bestämma allt",
+          "Trygghet och likvärdig utbildning",
+          "Att slippa regler",
+          "Att välja betyg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar rättigheter om i arbetslivet?",
+        "options": [
+          "Hög lön alltid",
+          "Färre arbetsuppgifter",
+          "Rättvisa villkor och säkerhet",
+          "Kortare utbildning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan konflikter minska?",
+        "options": [
+          "Genom att ignorera skillnader",
+          "Genom dialog och förståelse",
+          "Genom fler regler",
+          "Genom att undvika kontakt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan små handlingar göra?",
+        "options": [
+          "Inte påverka något",
+          "Skapa stora förändringar",
+          "Försvåra relationer",
+          "Minska utbildning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Rättigheter gäller bara vuxna",
+          "Vardagen saknar betydelse",
+          "Mänskliga rättigheter är teoretiska",
+          "Alla kan bidra i vardagen"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak10-tema-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
