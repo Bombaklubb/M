@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import AnalyticsInit from "@/components/AnalyticsInit";
 
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <body className="min-h-screen">
+        <AnalyticsInit />
         {children}
         {/* Kontakt – vänster nedre hörn */}
         <div className="fixed bottom-2 left-3 z-40 pointer-events-none select-none">
