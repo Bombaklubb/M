@@ -34172,5 +34172,415 @@
       "generatedAt": "2026-04-14T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "ak10-obama-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Barack Obamas bakgrund",
+    "text": "Barack Obama föddes 1961 i Hawaii i USA. Hans mamma var från USA och hans pappa från Kenya. Under sin uppväxt bodde han både i USA och i Indonesien, vilket gav honom erfarenheter från olika kulturer. Denna bakgrund kom senare att påverka hans syn på världen och politik.\n\nObama studerade vid flera universitet, bland annat Columbia University och Harvard Law School. På Harvard blev han den första svarta redaktören för en prestigefylld juridisk tidskrift, vilket väckte stor uppmärksamhet.\n\nInnan han blev politiker arbetade Obama som samhällsorganisatör i Chicago. Där hjälpte han människor i utsatta områden att förbättra sina livsvillkor. Han arbetade också som jurist och undervisade i juridik.\n\nHans politiska karriär började i delstaten Illinois, där han valdes till delstatssenaten. Senare blev han senator på nationell nivå.\n\nObamas bakgrund anses av många ha bidragit till hans förmåga att förstå olika perspektiv. Hans erfarenheter från olika miljöer gjorde honom till en politiker som ofta betonade samarbete och dialog.\n\nHans livshistoria har inspirerat många människor, särskilt unga, att engagera sig i samhället och tro på möjligheten att skapa förändring.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var föddes Barack Obama?",
+        "options": [
+          "Kenya",
+          "Indonesien",
+          "Hawaii",
+          "Chicago"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Obama på Harvard?",
+        "options": [
+          "Han blev professor",
+          "Han blev redaktör för en juridisk tidskrift",
+          "Han startade ett företag",
+          "Han arbetade som politiker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad arbetade Obama med innan politiken?",
+        "options": [
+          "Ingenjör",
+          "Journalist",
+          "Samhällsorganisatör och jurist",
+          "Läkare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var började hans politiska karriär?",
+        "options": [
+          "I Vita huset",
+          "I FN",
+          "I delstaten Illinois",
+          "I Europa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade hans bakgrund honom?",
+        "options": [
+          "Han undvek politik",
+          "Han fick förståelse för olika perspektiv",
+          "Han arbetade ensam",
+          "Han fokuserade bara på ekonomi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett huvudbudskap i texten?",
+        "options": [
+          "Utbildning är oviktigt",
+          "Bakgrund kan påverka ledarskap",
+          "Politik är enkelt",
+          "Alla har samma erfarenheter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 435,
+      "fingerprint": "ak10-obama-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Vägen till presidentposten",
+    "text": "Barack Obama blev känd för en bredare publik när han höll ett uppmärksammat tal vid Demokraternas partikonvent 2004. Talet handlade om enighet och hopp, och många såg honom som en framtida ledare.\n\nÅr 2008 ställde Obama upp i presidentvalet i USA. Hans kampanj fokuserade på förändring och framtidstro, med sloganen \"Yes we can\". Han använde sociala medier på ett nytt sätt för att nå väljare, särskilt unga.\n\nObama mötte stark konkurrens under valet, men lyckades vinna stöd från många olika grupper i samhället. Han blev därmed den första afroamerikanska presidenten i USA:s historia.\n\nHans seger sågs som historisk och symbolisk, både i USA och internationellt. Många människor upplevde att valet markerade ett viktigt steg i kampen för jämlikhet.\n\nValet visade också hur viktigt kommunikation och strategi är i modern politik. Obamas kampanj ansågs vara effektiv och innovativ.\n\nVägen till presidentposten var inte enkel, men Obamas förmåga att inspirera och engagera människor spelade en avgörande roll i hans framgång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När blev Obama nationellt känd?",
+        "options": [
+          "Vid ett tal 2004",
+          "När han blev president",
+          "Under studietiden",
+          "Som barn"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var kampanjens budskap?",
+        "options": [
+          "Stabilitet och tradition",
+          "Förändring och hopp",
+          "Ekonomisk kontroll",
+          "Militär styrka"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var unikt med hans kampanj?",
+        "options": [
+          "Den använde radio mest",
+          "Den undvek teknik",
+          "Den använde sociala medier effektivt",
+          "Den riktade sig bara till äldre"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde hans seger historisk?",
+        "options": [
+          "Han var yngst",
+          "Han var första afroamerikanska presidenten",
+          "Han var rikast",
+          "Han var militär"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bidrog till hans framgång?",
+        "options": [
+          "Tur",
+          "Hans förmåga att inspirera",
+          "Endast ekonomi",
+          "Militära beslut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Utbildning i USA",
+          "Politikens historia",
+          "Obamas väg till presidentposten",
+          "Sociala medier generellt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak10-obama-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Obamas tid som president",
+    "text": "Barack Obama var president i USA mellan 2009 och 2017. Under denna tid stod han inför flera stora utmaningar, bland annat en ekonomisk kris som påverkade både USA och resten av världen.\n\nEn av hans viktigaste reformer var sjukvårdsreformen, ofta kallad \"Obamacare\". Syftet var att göra det möjligt för fler människor att få tillgång till sjukvård.\n\nObama arbetade också med klimatfrågor och internationellt samarbete. Han deltog i globala avtal för att minska utsläpp och bekämpa klimatförändringar.\n\nUnder hans presidentskap fattades beslut som både hyllades och kritiserades. Till exempel ökade användningen av drönare i militära operationer, vilket väckte debatt.\n\nObama betonade ofta diplomati i utrikespolitiken. Ett exempel är avtalet med Iran om landets kärnprogram.\n\nHans tid som president visar hur komplex rollen är, där beslut ofta innebär att väga olika intressen mot varandra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När var Obama president?",
+        "options": [
+          "2000–2008",
+          "2009–2017",
+          "2010–2018",
+          "2005–2013"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var syftet med sjukvårdsreformen?",
+        "options": [
+          "Att minska utbildning",
+          "Att öka militär styrka",
+          "Att ge fler tillgång till vård",
+          "Att sänka skatter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilket område arbetade han med globalt?",
+        "options": [
+          "Sport",
+          "Klimatfrågor",
+          "Film",
+          "Transport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad väckte debatt?",
+        "options": [
+          "Utbildning",
+          "Valet",
+          "Drönaranvändning",
+          "Skolor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade hans utrikespolitik?",
+        "options": [
+          "Diplomati",
+          "Isolation",
+          "Militär expansion",
+          "Handel endast"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar hans presidentskap?",
+        "options": [
+          "Att politik är enkelt",
+          "Att beslut alltid är tydliga",
+          "Att ledarskap är okomplicerat",
+          "Att beslut kräver avvägningar"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak10-obama-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Ledarskap och retorik",
+    "text": "Barack Obama är känd för sin förmåga att tala inför publik. Hans tal har ofta beskrivits som inspirerande och välformulerade. Retorik, alltså konsten att övertyga genom tal, var en viktig del av hans ledarskap.\n\nHan använde ofta berättelser och personliga exempel för att nå fram till människor. Genom att knyta an till gemensamma värderingar kunde han skapa engagemang.\n\nObamas tal innehöll också tydliga budskap om hopp, förändring och ansvar. Han betonade vikten av att människor tillsammans kan påverka samhället.\n\nSamtidigt har hans retorik kritiserats av vissa som menar att ord inte alltid följdes av handling. Detta visar att ledarskap inte bara handlar om att tala, utan också om att genomföra beslut.\n\nRetorik spelar en viktig roll i politik eftersom den påverkar hur människor uppfattar budskap. En stark talare kan mobilisera stöd och skapa förtroende.\n\nObamas sätt att kommunicera har studerats av både forskare och politiker, och hans tal används ofta som exempel på effektiv retorik.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är retorik?",
+        "options": [
+          "Konsten att skriva lagar",
+          "Konsten att övertyga genom tal",
+          "Att analysera ekonomi",
+          "Att leda företag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur nådde Obama människor i sina tal?",
+        "options": [
+          "Genom tekniska termer",
+          "Genom berättelser och exempel",
+          "Genom statistik enbart",
+          "Genom korta instruktioner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka teman återkom i hans tal?",
+        "options": [
+          "Rädsla och kontroll",
+          "Tradition och regler",
+          "Hopp och förändring",
+          "Teknik och ekonomi"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad har kritiker påpekat?",
+        "options": [
+          "Att han talade för lite",
+          "Att han undvek människor",
+          "Att hans språk var svårt",
+          "Att ord inte alltid följdes av handling"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan stark retorik göra?",
+        "options": [
+          "Minska intresse",
+          "Skapa stöd och förtroende",
+          "Stoppa förändring",
+          "Försvåra beslut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Ekonomi",
+          "Utbildning",
+          "Militär strategi",
+          "Obamas sätt att kommunicera"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak10-obama-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Efter presidentskapet",
+    "text": "Efter att Barack Obama avslutade sin tid som president 2017 fortsatte han att vara aktiv i samhällsfrågor. Tillsammans med sin fru Michelle Obama startade han initiativ och organisationer som arbetar med utbildning, ledarskap och demokrati.\n\nDe har också engagerat sig i att stödja unga människor och uppmuntra dem att delta i samhällsutvecklingen. Genom olika projekt vill de stärka framtida ledare.\n\nObama har även skrivit böcker där han reflekterar över sitt liv och sin tid som president. Dessa böcker har nått en stor publik och bidragit till diskussioner om politik och ledarskap.\n\nHan deltar ibland i offentliga samtal och föreläsningar där han diskuterar aktuella frågor som demokrati, klimat och globalt samarbete.\n\nTrots att han inte längre är president har han fortsatt inflytande. Många människor lyssnar fortfarande på hans åsikter och perspektiv.\n\nHans arbete efter presidentskapet visar att politiskt engagemang kan fortsätta även utanför formella maktpositioner.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gjorde Obama efter presidentskapet?",
+        "options": [
+          "Han slutade arbeta helt",
+          "Han startade initiativ och organisationer",
+          "Han blev militär",
+          "Han flyttade utomlands permanent"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad fokuserar hans arbete på?",
+        "options": [
+          "Sport och underhållning",
+          "Utbildning och ledarskap",
+          "Transport",
+          "Teknikutveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har han skrivit?",
+        "options": [
+          "Lagböcker",
+          "Tidningsartiklar",
+          "Böcker om sitt liv",
+          "Tekniska manualer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör han i offentliga sammanhang?",
+        "options": [
+          "Undviker debatt",
+          "Diskuterar aktuella frågor",
+          "Arbetar i fabriker",
+          "Undervisar barn dagligen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar hans fortsatta arbete?",
+        "options": [
+          "Att inflytande försvinner snabbt",
+          "Att engagemang kan fortsätta",
+          "Att politik är oviktigt",
+          "Att ledare inte påverkar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Karriärer slutar abrupt",
+          "Endast presidenter påverkar",
+          "Engagemang fortsätter efter makten",
+          "Böcker är oviktiga"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 432,
+      "fingerprint": "ak10-obama-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
