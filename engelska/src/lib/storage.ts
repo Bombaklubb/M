@@ -192,6 +192,14 @@ export function saveModuleProgress(
 
   data.totalPoints += addedPoints;
   saveStudent(data);
+
+  // Anonym statistik-tracking (GDPR-säkrad, inget personligt)
+  if (typeof window !== "undefined") {
+    import("@/services/analyticsService").then(({ trackTaskComplete }) => {
+      trackTaskComplete(completed, kind);
+    });
+  }
+
   return { ...data };
 }
 
