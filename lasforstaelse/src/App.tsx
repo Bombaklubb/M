@@ -169,8 +169,8 @@ function App() {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
       questionResults.push({ questionType: q.type, correct: isCorrect });
-      // Spåra anonym statistik (GDPR-säkrad)
-      trackTaskComplete(isCorrect, q.type);
+      // Spåra anonym statistik (GDPR-säkrad) - skicka grade för att spåra stadiestatistik
+      trackTaskComplete(isCorrect, q.type, currentText.grade);
       return count + (isCorrect ? 1 : 0);
     }, 0);
 

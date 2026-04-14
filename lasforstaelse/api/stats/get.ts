@@ -107,6 +107,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       .slice(0, 5)
       .map(([type, count]) => ({ type, count: count as number }));
 
+    // Hämta statistik per årskurs/stadie
+    const gradeStatsMap = await redis.hgetall<Record<string, number>>(`${KEY_PREFIX}grades`) || {};
+    const gradeStats = [];
+    for (let grade = 1; grade <= 10; grade++) {
+      const count = gradeStatsMap[`grade_${grade}`] || 0;
+      if (count > 0) {
+        gradeStats.push({ grade, count: count as number });
+      }
+    }
+    // Sortera efter användning (högst först)
+    gradeStats.sort((a, b) => b.count - a.count);
+
+    // Hämta startdatum för statistik
+    const statsStarted = await redis.get<string>(`${KEY_PREFIX}stats_started`) || today;
+
     // Formatera total tid
     const formatTime = (seconds: number) => {
       const hours = Math.floor(seconds / 3600);
@@ -138,8 +153,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       // Vanligaste fel
       topErrors: sortedErrors,
 
-      // Daglig statistik (för graf)
-      dailyStats: dailyStats.reverse(), // Äldst först
+      // Statistik per årskurs/stadie
+      gradeStats,
+
+      // Startdatum för statistikinsamling
+      statsStarted,
 
       // GDPR-info
       gdprNote: 'Anonymiserad aggregerad statistik - ingen personlig data lagras',

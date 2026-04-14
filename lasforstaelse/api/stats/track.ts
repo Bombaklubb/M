@@ -23,6 +23,7 @@ interface TrackEvent {
     questionType?: string; // För vanligaste fel
     timeSeconds?: number; // För total tid
     correct?: boolean; // För att räkna fel
+    grade?: number; // Årskurs/stadie (1-9)
   };
 }
 
@@ -67,11 +68,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         await redis.incr(`${KEY_PREFIX}pageviews:${today}`);
         // Uppdatera senast aktiv (för "inloggade nu")
         await redis.set(`${KEY_PREFIX}active:${event.deviceId}`, '1', { ex: 300 }); // 5 min TTL
+        // Spara startdatum för statistik (endast första gången)
+        await redis.setnx(`${KEY_PREFIX}stats_started`, today);
         break;
 
       case 'task_complete':
         // Öka räknaren för uppgifter gjorda
         await redis.incr(`${KEY_PREFIX}tasks:${today}`);
+        // Spåra användning per årskurs/stadie
+        if (event.data?.grade && event.data.grade >= 1 && event.data.grade <= 10) {
+          await redis.hincrby(`${KEY_PREFIX}grades`, `grade_${event.data.grade}`, 1);
+        }
         // Om det var fel, öka felräknaren
         if (event.data?.correct === false && event.data?.questionType) {
           await redis.hincrby(
