@@ -280,10 +280,32 @@ export default function LararePage() {
           </section>
         )}
 
-        {/* GDPR-note */}
-        <p className="text-xs text-center text-slate-400 dark:text-slate-600 pb-4">
-          {stats?.gdprNote}
-        </p>
+        {/* GDPR-info + statistikstart */}
+        <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-2xl p-5 space-y-3">
+          <div className="flex items-start gap-3">
+            <span className="text-xl leading-none mt-0.5">🔒</span>
+            <div>
+              <p className="font-bold text-emerald-800 dark:text-emerald-300 text-sm">GDPR-säkrad statistik</p>
+              <p className="text-emerald-700 dark:text-emerald-400 text-sm mt-1">
+                Inga personuppgifter samlas in. Varje enhet identifieras av ett slumpmässigt anonymt ID
+                som inte kan kopplas till en person. All statistik är aggregerad och visas
+                aldrig på individnivå.
+              </p>
+              <ul className="mt-2 space-y-1 text-xs text-emerald-600 dark:text-emerald-500">
+                <li>✓ Inga namn, IP-adresser eller inloggningsuppgifter lagras</li>
+                <li>✓ Anonymt enhets-ID (UUID) – kan inte kopplas till en elev</li>
+                <li>✓ Endast summerad data visas (antal, tid, uppgifter)</li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 pt-1 border-t border-emerald-200 dark:border-emerald-800">
+            <span className="text-base leading-none">📅</span>
+            <p className="text-xs text-emerald-600 dark:text-emerald-500">
+              Engelskajakten började samla in anonym statistik <strong>14 april 2026</strong>.
+              Data äldre än 14 dagar visas inte i grafen.
+            </p>
+          </div>
+        </div>
       </main>
     </div>
   );
