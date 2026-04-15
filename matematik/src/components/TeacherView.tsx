@@ -30,8 +30,8 @@ export default function TeacherView() {
     setLiveError(null);
     try {
       const res = await fetch(`/api/teacher-stats?password=${encodeURIComponent('Korsängen')}`);
-      if (res.status === 401) throw new Error('Fel lösenord');
-      if (!res.ok) throw new Error('server-error');
+      if (res.status === 401) throw new Error('401');
+      if (!res.ok) throw new Error(`${res.status}`);
       setLiveStats(await res.json());
     } catch (e: any) {
       setLiveError(e.message ?? 'error');
@@ -142,11 +142,24 @@ export default function TeacherView() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
               </svg>
               <div>
-                <p className="font-bold text-amber-800 text-sm mb-1">Redis är inte konfigurerat</p>
-                <p className="text-amber-700 text-xs leading-relaxed">
-                  Gå till <strong>Vercel → mattejakten → Storage</strong> och koppla databasen "svenskajakten" till projektet.
-                  Lägg sedan till miljövariabeln <code className="bg-amber-100 px-1 rounded">TEACHER_PASSWORD=Korsängen</code>.
-                </p>
+                {liveError === '401' ? (
+                  <>
+                    <p className="font-bold text-amber-800 text-sm mb-1">Saknar miljövariabel: TEACHER_PASSWORD</p>
+                    <p className="text-amber-700 text-xs leading-relaxed">
+                      Gå till <strong>Vercel → mattejakten → Settings → Environment Variables</strong> och lägg till:
+                      <br /><code className="bg-amber-100 px-1 rounded">TEACHER_PASSWORD=Korsängen</code>
+                      <br />Kör sedan en ny deployment.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="font-bold text-amber-800 text-sm mb-1">Redis-anslutning saknas (fel {liveError})</p>
+                    <p className="text-amber-700 text-xs leading-relaxed">
+                      Gå till <strong>Vercel → mattejakten → Storage</strong> och koppla databasen "svenskajakten" till projektet.
+                      Kör sedan en ny deployment.
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>
