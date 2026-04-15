@@ -249,6 +249,9 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
           </div>
         )}
 
+        <p className="text-center pb-4 text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.85)', textShadow: '0 1px 4px rgba(0,0,0,0.9)' }}>
+          Kontakt – martin.akdogan@enkoping.se
+        </p>
       </div>
     </div>
   );
