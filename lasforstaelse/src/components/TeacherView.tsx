@@ -334,16 +334,11 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 </p>
               )}
 
-              {/* Visa när statistikinsamling startade */}
-              {stats?.statsStarted && (
-                <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 text-center text-sm text-slate-400 dark:text-slate-500">
-                  Statistikinsamling startade: {new Date(stats.statsStarted).toLocaleDateString('sv-SE', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </div>
-              )}
+              {/* Visa när statistikinsamling startade och GDPR-info */}
+              <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 text-center text-sm text-slate-400 dark:text-slate-500 space-y-1">
+                <p>Statistikinsamling startade: 15 april 2026</p>
+                <p>🔒 GDPR-säkrad – ingen personlig data samlas in</p>
+              </div>
             </div>
 
             {/* Vanligaste fel */}
