@@ -5,7 +5,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Redis } from '@upstash/redis';
 
-const redis = Redis.fromEnv();
+const redis = new Redis({
+  url: process.env.svenskajakten_KV_REST_API_URL ?? process.env.KV_REST_API_URL ?? '',
+  token: process.env.svenskajakten_KV_REST_API_TOKEN ?? process.env.KV_REST_API_TOKEN ?? '',
+});
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).end();
