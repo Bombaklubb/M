@@ -19,6 +19,11 @@ import {
   updateAvatar,
   saveUser,
 } from './services/userService';
+import {
+  trackPageView,
+  startSession,
+  trackTaskComplete,
+} from './services/analyticsService';
 import { getRandomText } from './services/libraryService';
 import {
   loadGamification,
@@ -52,6 +57,12 @@ function App() {
       setAppState(AppState.SETUP);
     }
     setLoading(false);
+  }, []);
+
+  // Starta anonym analytics (GDPR-säkrad)
+  useEffect(() => {
+    trackPageView();
+    startSession();
   }, []);
 
   // Keyboard shortcut för lärarvy (F8 eller Ctrl+Shift+P)
@@ -158,6 +169,8 @@ function App() {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
       questionResults.push({ questionType: q.type, correct: isCorrect });
+      // Spåra anonym statistik (GDPR-säkrad) - skicka grade för att spåra stadiestatistik
+      trackTaskComplete(isCorrect, q.type, currentText.grade);
       return count + (isCorrect ? 1 : 0);
     }, 0);
 
@@ -475,8 +488,8 @@ function App() {
 
       {/* Kontaktinfo - visas endast på Setup-sidan */}
       {appState === AppState.SETUP && (
-        <div className="fixed bottom-4 left-4 text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity z-40">
-          Kontakt: <strong>martin.akdogan@enkoping.se</strong>
+        <div className="fixed bottom-4 left-4 text-sm text-slate-600 dark:text-slate-400 z-40">
+          Kontakt: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
         </div>
       )}
 
@@ -486,8 +499,8 @@ function App() {
       )}
 
       {/* Signatur */}
-      <footer className="fixed bottom-2 right-3 text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity">
-        Läsjakten av Martin Akdogan
+      <footer className="fixed bottom-4 right-4 text-sm text-slate-600 dark:text-slate-400">
+        Läsjakten av <span className="font-semibold">Martin Akdogan</span>
       </footer>
     </div>
   );

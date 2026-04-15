@@ -8,6 +8,7 @@ import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import ReadingQuestionComponent from "@/components/exercises/ReadingQuestion";
 import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { recordError } from "@/lib/errorBank";
 import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
@@ -67,7 +68,13 @@ export default function ReadingModulePage({ params }: Props) {
   const totalQuestions = questions.length;
   const currentQuestion = questions[currentIndex];
 
-  function handleAnswer(correct: boolean) {
+  function handleAnswer(correct: boolean, userAnswer: string, correctAnswer: string) {
+    // Record wrong answers in error bank
+    if (!correct && student) {
+      const q = questions[currentIndex];
+      recordError(student.name, stageId, "reading", mod!.id, mod!.title,
+        q.id, q.question, correctAnswer, userAnswer, q);
+    }
     const newResults = [...results, correct];
     setResults(newResults);
 

@@ -23,7 +23,7 @@ const LEVEL_LABELS: Record<string, { label: string; color: string; icon: string 
 
 interface Props {
   question: RQ;
-  onAnswer: (correct: boolean) => void;
+  onAnswer: (correct: boolean, userAnswer: string, correctAnswer: string) => void;
   isLast?: boolean;
 }
 
@@ -117,7 +117,11 @@ export default function ReadingQuestion({ question, onAnswer, isLast }: Props) {
       {revealed && (
         <div className="flex justify-end pt-2">
           <button
-            onClick={() => onAnswer(selected === question.correctIndex)}
+            onClick={() => onAnswer(
+              selected === question.correctIndex,
+              question.options[selected!] ?? "",
+              question.options[question.correctIndex]
+            )}
             className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}

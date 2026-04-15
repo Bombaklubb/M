@@ -1,496 +1,236 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { getAllStudents, getProgress, getPoints, getAchievements, getSessions, exportAllData, importAllData } from '../utils/storage';
-import { TOPICS } from '../data/topics';
-import { LEVEL_NAMES, GRADE_LABELS, Grade, StudentMessage } from '../types';
-import {
-  getStudentMessages,
-  markMessageAsRead,
-  markAllMessagesAsRead,
-  deleteMessage,
-} from '../utils/messages';
-import { ALL_AVATARS } from '../data/avatars';
+
+interface LiveStats {
+  activeNow: number;
+  visitorsToday: number;
+  visitorsMonth: number;
+  totalExercises: number;
+  totalErrors: number;
+  totalTimeMinutes: number;
+  topErrors: { topic: string; count: number }[];
+  daily14: { date: string; exercises: number; visitors: number }[];
+}
 
 export default function TeacherView() {
   const { setTeacher } = useApp();
-  const [tab, setTab] = useState<'overview' | 'students' | 'topics' | 'messages' | 'settings'>('overview');
-  const [messages, setMessages] = useState<StudentMessage[]>([]);
 
-  // Load messages whenever the tab changes to 'messages'
-  useEffect(() => {
-    if (tab === 'messages') {
-      setMessages(getStudentMessages().slice().reverse()); // newest first
+  // ── Redis live stats ──────────────────────────────────────────────────────
+  const [liveStats, setLiveStats] = useState<LiveStats | null>(null);
+  const [liveLoading, setLiveLoading] = useState(false);
+  const [liveError, setLiveError] = useState<string | null>(null);
+
+  const fetchLiveStats = useCallback(async () => {
+    setLiveLoading(true);
+    setLiveError(null);
+    try {
+      const res = await fetch(`/api/teacher-stats?password=${encodeURIComponent('Korsängen')}`);
+      if (res.status === 401) throw new Error('401');
+      if (!res.ok) throw new Error(`${res.status}`);
+      setLiveStats(await res.json());
+    } catch (e: any) {
+      setLiveError(e.message ?? 'error');
+    } finally {
+      setLiveLoading(false);
     }
-  }, [tab]);
+  }, []);
 
-  function handleMarkRead(id: string) {
-    markMessageAsRead(id);
-    setMessages(prev => prev.map(m => m.id === id ? { ...m, read: true } : m));
-  }
+  useEffect(() => { fetchLiveStats(); }, [fetchLiveStats]);
 
-  function handleMarkAllRead() {
-    markAllMessagesAsRead();
-    setMessages(prev => prev.map(m => ({ ...m, read: true })));
-  }
-
-  function handleDelete(id: string) {
-    deleteMessage(id);
-    setMessages(prev => prev.filter(m => m.id !== id));
-  }
-
-  const unreadCount = getStudentMessages().filter(m => !m.read).length;
-
-  function handleExport() {
-    const data = exportAllData();
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `mattejakten-backup-${new Date().toISOString().split('T')[0]}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (evt) => {
-      try {
-        const data = JSON.parse(evt.target?.result as string);
-        importAllData(data);
-      } catch {
-        alert('Filen kunde inte läsas. Kontrollera att det är en giltig backup-fil.');
-      }
-    };
-    reader.readAsText(file);
-  }
-
-  const allStudents = getAllStudents();
-  const sessions = getSessions();
-
-  // --- Stats computation ---
-  const stats = useMemo(() => {
-    const today = new Date().toISOString().split('T')[0];
-    const activeToday = allStudents.filter(s => {
-      const pts = getPoints(s.id);
-      return pts?.lastActiveDate === today;
-    }).length;
-
-    const totalExercises = sessions.reduce((s, e) => s + e.totalAnswers, 0);
-    const totalCorrect = sessions.reduce((s, e) => s + e.correctAnswers, 0);
-    const avgAccuracy = totalExercises > 0 ? Math.round((totalCorrect / totalExercises) * 100) : 0;
-
-    // Topic popularity
-    const topicCount: Record<string, number> = {};
-    for (const s of sessions) {
-      topicCount[s.topicId] = (topicCount[s.topicId] ?? 0) + 1;
-    }
-    const topTopics = Object.entries(topicCount)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([id, count]) => ({
-        id,
-        title: TOPICS.find(t => t.id === id)?.title ?? id,
-        icon: TOPICS.find(t => t.id === id)?.icon ?? '📚',
-        count,
-      }));
-
-    // Grade distribution
-    const gradeCount: Record<string, number> = {};
-    for (const s of allStudents) {
-      gradeCount[s.grade] = (gradeCount[s.grade] ?? 0) + 1;
-    }
-
-    // Weekly sessions
-    const sevenDaysAgo = new Date(Date.now() - 7 * 86400000).toISOString().split('T')[0];
-    const sessionsLastWeek = sessions.filter(s => s.date >= sevenDaysAgo);
-    const dailyActivity: Record<string, number> = {};
-    for (const s of sessionsLastWeek) {
-      dailyActivity[s.date] = (dailyActivity[s.date] ?? 0) + 1;
-    }
-
-    return { activeToday, totalExercises, avgAccuracy, topTopics, gradeCount, dailyActivity };
-  }, [allStudents, sessions]);
-
-  // Per student
-  const studentData = useMemo(() => allStudents.map(s => {
-    const pts = getPoints(s.id);
-    const prog = getProgress(s.id);
-    const achs = getAchievements(s.id);
-    const completed = prog.filter(p => p.completed).length;
-    const totalCorrect = prog.reduce((a, p) => a + p.correctAnswers, 0);
-    const totalAnswered = prog.reduce((a, p) => a + p.totalQuestions, 0);
-    const accuracy = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
-    return { student: s, pts, completed, accuracy, achievements: achs.length };
-  }).sort((a, b) => (b.pts?.total ?? 0) - (a.pts?.total ?? 0)), [allStudents]);
-
-  const tabs: { id: typeof tab; label: string; icon: string }[] = [
-    { id: 'overview',  label: 'Översikt',     icon: '📊' },
-    { id: 'students',  label: 'Elever',        icon: '👥' },
-    { id: 'topics',    label: 'Ämnen',         icon: '📚' },
-    { id: 'messages',  label: 'Meddelanden',   icon: '💬' },
-    { id: 'settings',  label: 'Inställningar', icon: '⚙️' },
-  ];
+  // ── Derived from Redis ────────────────────────────────────────────────────
+  const maxExercises14 = liveStats ? Math.max(...liveStats.daily14.map(d => d.exercises), 1) : 1;
+  const maxErrorCount = liveStats ? (liveStats.topErrors[0]?.count ?? 1) : 1;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
+
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-6 px-4">
-        <div className="max-w-2xl mx-auto flex justify-between items-center">
+      <div className="bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 text-white">
+        <div className="max-w-3xl mx-auto px-5 py-7 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-black">👩‍🏫 Lärarvy</h1>
-            <p className="text-white/80 text-sm">{allStudents.length} elever registrerade</p>
+            <div className="flex items-center gap-2.5 mb-0.5">
+              <svg className="w-6 h-6 text-indigo-200" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+              </svg>
+              <h1 className="text-xl font-black tracking-tight">Lärarvy</h1>
+            </div>
+            <p className="text-indigo-200 text-sm">Mattejakten · Aggregerad statistik · GDPR-säkrad</p>
           </div>
-          <button
-            onClick={() => setTeacher(false)}
-            className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-xl font-bold text-sm transition-colors"
-          >
-            ← Avsluta
-          </button>
-        </div>
-      </div>
-
-      {/* Tab bar */}
-      <div className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto flex">
-          {tabs.map(t => (
+          <div className="flex items-center gap-2">
             <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              className={`flex-1 py-3 text-sm font-bold transition-colors border-b-2 relative ${
-                tab === t.id
-                  ? 'border-indigo-600 text-indigo-600'
-                  : 'border-transparent text-gray-500 hover:text-gray-700'
-              }`}
+              onClick={fetchLiveStats}
+              disabled={liveLoading}
+              className="flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/20 px-3 py-2 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer disabled:opacity-50"
             >
-              {t.icon} {t.label}
-              {t.id === 'messages' && unreadCount > 0 && (
-                <span className="absolute top-1.5 right-1 bg-red-500 text-white text-[10px] font-black rounded-full min-w-[16px] h-4 flex items-center justify-center px-1">
-                  {unreadCount}
-                </span>
-              )}
+              <svg className={`w-4 h-4 ${liveLoading ? 'animate-spin' : ''}`} fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+              </svg>
+              Uppdatera
             </button>
-          ))}
+            <button
+              onClick={() => setTeacher(false)}
+              className="flex items-center gap-1.5 bg-white/15 hover:bg-white/25 border border-white/20 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              </svg>
+              Avsluta
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto px-4 py-6">
-        {/* OVERVIEW TAB */}
-        {tab === 'overview' && (
-          <div className="space-y-5 animate-fade-in">
-            <div className="grid grid-cols-2 gap-3">
-              <StatCard icon="👤" label="Totalt elever" value={String(allStudents.length)} color="bg-blue-50 text-blue-700" />
-              <StatCard icon="🟢" label="Aktiva idag" value={String(stats.activeToday)} color="bg-green-50 text-green-700" />
-              <StatCard icon="✏️" label="Totala svar" value={String(stats.totalExercises)} color="bg-purple-50 text-purple-700" />
-              <StatCard icon="🎯" label="Snitt träffsäkerhet" value={`${stats.avgAccuracy}%`} color="bg-amber-50 text-amber-700" />
+      <div className="max-w-3xl mx-auto px-5 py-7 space-y-6">
+
+        {/* ── REDIS: Live anonymous stats ───────────────────────────────────── */}
+        <p className="text-xs font-black uppercase tracking-widest text-slate-400">Realtidsstatistik – alla enheter</p>
+
+        {liveLoading && (
+          <div className="bg-white border border-slate-100 rounded-2xl p-8 text-center shadow-sm">
+            <div className="flex justify-center mb-3">
+              <svg className="w-8 h-8 text-indigo-400 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+              </svg>
+            </div>
+            <p className="text-sm text-slate-400">Hämtar statistik…</p>
+          </div>
+        )}
+
+        {!liveLoading && liveError && (
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 shadow-sm">
+            <div className="flex items-start gap-3">
+              <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+              </svg>
+              <div>
+                {liveError === '401' ? (
+                  <>
+                    <p className="font-bold text-amber-800 text-sm mb-1">Saknar miljövariabel: TEACHER_PASSWORD</p>
+                    <p className="text-amber-700 text-xs leading-relaxed">
+                      Gå till <strong>Vercel → mattejakten → Settings → Environment Variables</strong> och lägg till:
+                      <br /><code className="bg-amber-100 px-1 rounded">TEACHER_PASSWORD=Korsängen</code>
+                      <br />Kör sedan en ny deployment.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="font-bold text-amber-800 text-sm mb-1">Redis-anslutning saknas (fel {liveError})</p>
+                    <p className="text-amber-700 text-xs leading-relaxed">
+                      Gå till <strong>Vercel → mattejakten → Storage</strong> och koppla databasen "svenskajakten" till projektet.
+                      Kör sedan en ny deployment.
+                    </p>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {!liveLoading && liveStats && (
+          <>
+            {/* Live KPI row */}
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+              {/* Inloggade nu – highlighted */}
+              <div className="bg-white border-2 border-emerald-400 rounded-2xl p-4 text-center shadow-sm col-span-1">
+                <div className="flex justify-center mb-2">
+                  <span className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
+                </div>
+                <p className="text-2xl font-black text-emerald-600">{liveStats.activeNow}</p>
+                <p className="text-[11px] text-slate-500 mt-0.5 leading-tight">Inloggade nu</p>
+              </div>
+              <LiveKpi value={String(liveStats.visitorsToday)} label="Enheter idag" />
+              <LiveKpi value={String(liveStats.visitorsMonth)} label="Enheter 30 dagar" />
+              <LiveKpi value={String(liveStats.totalExercises)} label="Uppgifter gjorda" />
+              <LiveKpi
+                value={liveStats.totalTimeMinutes >= 60
+                  ? `${Math.floor(liveStats.totalTimeMinutes / 60)}t ${liveStats.totalTimeMinutes % 60}m`
+                  : `${liveStats.totalTimeMinutes}m`}
+                label="Total tid"
+              />
+              <LiveKpi value={String(liveStats.totalErrors)} label="Felaktiga svar" />
             </div>
 
-            {/* Top topics */}
-            <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-4">🔥 Populäraste ämnen</h2>
-              {stats.topTopics.length === 0 ? (
-                <p className="text-gray-400 text-sm">Ingen data ännu</p>
-              ) : (
-                <div className="space-y-3">
-                  {stats.topTopics.map((t, i) => (
-                    <div key={t.id} className="flex items-center gap-3">
-                      <span className="text-lg font-black text-gray-400 w-5">#{i+1}</span>
-                      <span className="text-xl">{t.icon}</span>
-                      <span className="flex-1 font-semibold text-gray-700">{t.title}</span>
-                      <span className="text-sm text-indigo-600 font-bold">{t.count} gånger</span>
+            {/* 14-day chart */}
+            <div className="bg-white border border-slate-100 rounded-2xl shadow-sm p-5">
+              <SectionHeader icon={
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+              } title="Dagliga uppgifter – senaste 14 dagarna" />
+              <div className="space-y-2 mt-3">
+                {liveStats.daily14.map(({ date, exercises }) => {
+                  const pct = exercises > 0 ? Math.max(2, (exercises / maxExercises14) * 100) : 0;
+                  const label = new Date(date + 'T12:00:00').toLocaleDateString('sv-SE', { day: 'numeric', month: 'short' });
+                  return (
+                    <div key={date} className="flex items-center gap-3">
+                      <span className="text-xs text-slate-400 w-14 text-right flex-shrink-0">{label}</span>
+                      <div className="flex-1 h-3.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-indigo-500 rounded-full transition-all duration-700"
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                      <span className="text-xs font-semibold text-slate-500 w-5 text-right flex-shrink-0">{exercises || ''}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Top errors */}
+            {liveStats.topErrors.length > 0 && (
+              <div className="bg-white border border-slate-100 rounded-2xl shadow-sm p-5">
+                <SectionHeader icon={
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                  </svg>
+                } title="Vanligaste felsvar per ämne" />
+                <div className="space-y-2 mt-3">
+                  {liveStats.topErrors.map((e, i) => (
+                    <div key={e.topic} className="flex items-center gap-3">
+                      <span className="text-xs font-bold text-slate-300 w-4 flex-shrink-0">#{i + 1}</span>
+                      <span className="text-xs text-slate-600 w-36 flex-shrink-0 truncate">{e.topic}</span>
+                      <div className="flex-1 h-3.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="h-full bg-red-400 rounded-full" style={{ width: `${(e.count / maxErrorCount) * 100}%` }} />
+                      </div>
+                      <span className="text-xs font-bold text-red-500 w-6 text-right flex-shrink-0">{e.count}</span>
                     </div>
                   ))}
                 </div>
-              )}
-            </div>
-
-            {/* Grade distribution */}
-            <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-4">🏫 Klassfördelning</h2>
-              {Object.keys(stats.gradeCount).length === 0 ? (
-                <p className="text-gray-400 text-sm">Inga elever ännu</p>
-              ) : (
-                <div className="space-y-2">
-                  {Object.entries(stats.gradeCount)
-                    .sort((a, b) => a[0].localeCompare(b[0]))
-                    .map(([grade, count]) => (
-                      <div key={grade} className="flex items-center gap-3">
-                        <span className="w-16 text-sm font-bold text-gray-600">
-                          {GRADE_LABELS[grade as Grade] ?? grade}
-                        </span>
-                        <div className="flex-1 h-4 bg-gray-100 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-indigo-400 rounded-full"
-                            style={{ width: `${(count / allStudents.length) * 100}%` }}
-                          />
-                        </div>
-                        <span className="text-sm text-gray-500 w-6">{count}</span>
-                      </div>
-                    ))}
-                </div>
-              )}
-            </div>
-
-            {/* Weekly activity */}
-            <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-4">📅 Aktivitet senaste 7 dagarna</h2>
-              {Object.keys(stats.dailyActivity).length === 0 ? (
-                <p className="text-gray-400 text-sm">Ingen aktivitet ännu</p>
-              ) : (
-                <div className="flex items-end gap-2 h-24">
-                  {Array.from({ length: 7 }, (_, i) => {
-                    const d = new Date(Date.now() - (6 - i) * 86400000);
-                    const key = d.toISOString().split('T')[0];
-                    const val = stats.dailyActivity[key] ?? 0;
-                    const max = Math.max(...Object.values(stats.dailyActivity), 1);
-                    const pct = (val / max) * 100;
-                    return (
-                      <div key={key} className="flex flex-col items-center flex-1 gap-1">
-                        <span className="text-xs text-gray-500">{val || ''}</span>
-                        <div
-                          className="w-full bg-indigo-400 rounded-t-lg transition-all"
-                          style={{ height: `${Math.max(4, pct)}%` }}
-                        />
-                        <span className="text-xs text-gray-400">
-                          {d.toLocaleDateString('sv-SE', { weekday: 'narrow' })}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* STUDENTS TAB */}
-        {tab === 'students' && (
-          <div className="space-y-3 animate-fade-in">
-            {studentData.length === 0 ? (
-              <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-                <div className="text-4xl mb-2">👥</div>
-                <p className="text-gray-500">Inga elever registrerade ännu</p>
-              </div>
-            ) : studentData.map(({ student, pts, completed, accuracy, achievements }) => (
-              <div key={student.id} className="bg-white rounded-2xl shadow-sm p-4">
-                <div className="flex items-center gap-3">
-                  <div className="text-3xl">{ALL_AVATARS[student.avatar] ?? ALL_AVATARS[0]}</div>
-                  <div className="flex-1">
-                    <div className="flex justify-between">
-                      <p className="font-bold text-gray-800">{student.name}</p>
-                      <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">
-                        {GRADE_LABELS[student.grade]}
-                      </span>
-                    </div>
-                    <div className="flex gap-3 mt-1 text-xs text-gray-500">
-                      <span>⭐ Nivå {pts?.level ?? 0} · {pts?.total ?? 0}p</span>
-                      <span>✅ {completed} ämnen</span>
-                      <span>🎯 {accuracy}%</span>
-                      <span>🏆 {achievements} märken</span>
-                    </div>
-                    {/* Level bar */}
-                    <div className="mt-1.5 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-indigo-400 rounded-full"
-                        style={{ width: `${Math.min(100, ((pts?.total ?? 0) / 500) * 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* TOPICS TAB */}
-        {tab === 'topics' && (
-          <div className="space-y-3 animate-fade-in">
-            <p className="text-sm text-gray-500 mb-2">Hur ofta varje ämne har tränats av alla elever</p>
-            {TOPICS.map(topic => {
-              const topicSessions = sessions.filter(s => s.topicId === topic.id);
-              const attempts = topicSessions.length;
-              const correct = topicSessions.reduce((s, e) => s + e.correctAnswers, 0);
-              const total = topicSessions.reduce((s, e) => s + e.totalAnswers, 0);
-              const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
-              const studentsWhoTried = new Set(topicSessions.map(s => s.studentId)).size;
-              const maxAttempts = Math.max(...TOPICS.map(t =>
-                sessions.filter(s => s.topicId === t.id).length
-              ), 1);
-
-              return (
-                <div key={topic.id} className="bg-white rounded-2xl shadow-sm p-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${topic.color} flex items-center justify-center text-lg flex-shrink-0`}>
-                      {topic.icon}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-bold text-gray-800 truncate">{topic.title}</p>
-                      <div className="flex gap-3 text-xs text-gray-500">
-                        <span>👥 {studentsWhoTried} elever</span>
-                        <span>🔄 {attempts} gånger</span>
-                        {attempts > 0 && <span>🎯 {accuracy}%</span>}
-                      </div>
-                    </div>
-                  </div>
-                  {/* Bar */}
-                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <div
-                      className={`h-full rounded-full bg-gradient-to-r ${topic.color}`}
-                      style={{ width: `${(attempts / maxAttempts) * 100}%` }}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {/* MESSAGES TAB */}
-        {tab === 'messages' && (
-          <div className="space-y-4 animate-fade-in">
-            <div className="flex items-center justify-between">
-              <h2 className="font-black text-gray-800">
-                💬 Elevmeddelanden
-                {unreadCount > 0 && (
-                  <span className="ml-2 bg-red-500 text-white text-xs font-black rounded-full px-2 py-0.5">
-                    {unreadCount} olästa
-                  </span>
-                )}
-              </h2>
-              {messages.some(m => !m.read) && (
-                <button
-                  onClick={handleMarkAllRead}
-                  className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
-                >
-                  Markera alla som lästa
-                </button>
-              )}
-            </div>
-
-            {messages.length === 0 ? (
-              <div className="bg-white rounded-2xl shadow-sm p-10 text-center">
-                <div className="text-4xl mb-3">📭</div>
-                <p className="font-bold text-gray-500">Inga meddelanden ännu</p>
-                <p className="text-gray-400 text-sm mt-1">
-                  Elever kan skicka meddelanden via 💬-knappen i appen.
-                </p>
-              </div>
-            ) : (
-              <div className="space-y-3">
-                {messages.map(msg => (
-                  <div
-                    key={msg.id}
-                    className={`bg-white rounded-2xl shadow-sm p-4 border-l-4 transition-all ${
-                      msg.read ? 'border-gray-200' : 'border-indigo-500'
-                    }`}
-                  >
-                    <div className="flex items-start gap-3">
-                      {/* Avatar */}
-                      <span className="text-2xl flex-shrink-0">
-                        {ALL_AVATARS[msg.studentAvatar] ?? ALL_AVATARS[0]}
-                      </span>
-
-                      {/* Content */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="font-black text-gray-800 text-sm">{msg.studentName}</span>
-                          {!msg.read && (
-                            <span className="bg-indigo-100 text-indigo-700 text-[10px] font-black px-1.5 py-0.5 rounded-full">
-                              NYTT
-                            </span>
-                          )}
-                          <span className="text-xs text-gray-400 ml-auto flex-shrink-0">
-                            {new Date(msg.sentAt).toLocaleString('sv-SE', {
-                              month: 'short', day: 'numeric',
-                              hour: '2-digit', minute: '2-digit',
-                            })}
-                          </span>
-                        </div>
-                        <p className="text-sm text-gray-700 leading-relaxed">{msg.message}</p>
-                      </div>
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex gap-2 mt-3 justify-end">
-                      {!msg.read && (
-                        <button
-                          onClick={() => handleMarkRead(msg.id)}
-                          className="text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
-                        >
-                          ✓ Markera som läst
-                        </button>
-                      )}
-                      <button
-                        onClick={() => handleDelete(msg.id)}
-                        className="text-xs font-bold text-red-400 hover:text-red-600 transition-colors"
-                      >
-                        🗑 Ta bort
-                      </button>
-                    </div>
-                  </div>
-                ))}
               </div>
             )}
-          </div>
+          </>
         )}
 
-        {/* SETTINGS TAB */}
-        {tab === 'settings' && (
-          <div className="space-y-4 animate-fade-in">
-            <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-3">🔐 Inloggning</h2>
-              <p className="text-sm text-gray-500">Lärarvyn öppnas med <strong>Ctrl+Shift+P</strong> och lösenordet <strong>Korsängen</strong>.</p>
-            </div>
-
-            {/* Data sync between devices */}
-            <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-1">🔄 Synka data mellan enheter</h2>
-              <p className="text-sm text-gray-500 mb-4">
-                All data sparas lokalt i webbläsaren och syns inte automatiskt på andra enheter.
-                Exportera data från en enhet och importera på en annan för att flytta elever, resultat och meddelanden.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={handleExport}
-                  className="flex-1 flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition-colors text-sm"
-                >
-                  ⬇️ Exportera all data
-                </button>
-                <label className="flex-1 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl transition-colors text-sm cursor-pointer">
-                  ⬆️ Importera data
-                  <input type="file" accept=".json" className="hidden" onChange={handleImport} />
-                </label>
-              </div>
-              <p className="text-xs text-gray-400 mt-3">
-                ⚠️ Import skriver över befintlig data på denna enhet och laddar om sidan.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-sm p-5">
-              <h2 className="font-bold text-gray-800 mb-3">📱 Om appen</h2>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>🎯 <strong>MatematikAppen</strong> – Lär dig matte på ett roligt sätt</p>
-                <p>📚 {TOPICS.length} ämnesområden täckande åk 1 – gymnasium</p>
-                <p>💾 All data sparas lokalt i webbläsaren (inga kostnader)</p>
-                <p>🏆 {18} utmärkelser att låsa upp</p>
-                <p>✏️ Ingen AI-anrop – fungerar offline!</p>
-              </div>
-            </div>
-          </div>
-        )}
+        <p className="text-center text-xs text-slate-400 pb-2">
+          Realtidsstatistik är anonymiserad och innehåller inga personuppgifter
+        </p>
       </div>
     </div>
   );
 }
 
-function StatCard({ icon, label, value, color }: { icon: string; label: string; value: string; color: string }) {
+// ── Sub-components ───────────────────────────────────────────────────────────
+
+function SectionHeader({ icon, title }: { icon: React.ReactNode; title: string }) {
   return (
-    <div className={`${color} rounded-2xl p-4`}>
-      <div className="text-2xl mb-1">{icon}</div>
-      <div className="text-2xl font-black">{value}</div>
-      <div className="text-xs font-semibold opacity-80">{label}</div>
+    <div className="flex items-center gap-2">
+      <span className="text-slate-400">{icon}</span>
+      <h2 className="text-sm font-bold text-slate-700 uppercase tracking-wide">{title}</h2>
     </div>
   );
+}
+
+function LiveKpi({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="bg-white border border-slate-100 rounded-2xl p-4 text-center shadow-sm">
+      <p className="text-2xl font-black text-slate-800">{value}</p>
+      <p className="text-[11px] text-slate-500 mt-0.5 leading-tight">{label}</p>
+    </div>
+  );
+}
+
+function EmptyState({ text }: { text: string }) {
+  return <p className="text-sm text-slate-400 py-2">{text}</p>;
 }

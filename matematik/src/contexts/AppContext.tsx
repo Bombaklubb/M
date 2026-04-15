@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
 import {
   Student, AppView, Topic, MattChest, MysteryBoxReward,
 
@@ -7,8 +7,9 @@ import {
   getCurrentStudent, setCurrentStudent, getProgress,
   getPoints, initPoints, getAchievements, addPoints,
   grantAchievement, saveTopicProgress, calcStars,
-  recordTopicSession, saveStudent,
+  recordTopicSession, saveStudent, addAppMinutes,
 } from '../utils/storage';
+import { trackVisit, trackSessionEnd, trackHeartbeat } from '../utils/analytics';
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
@@ -35,6 +36,7 @@ interface AppContextValue {
   sluttestWorldId: WorldId | null;
   questWorldId: WorldId | null;
   gameWorldId: WorldId | null;
+  errorBankWorldId: WorldId | null;
   pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null;
   clearPendingChestResult: () => void;
   login: (student: Student) => void;
@@ -45,6 +47,7 @@ interface AppContextValue {
   startSluttest: (worldId: WorldId) => void;
   startQuest: (worldId: WorldId) => void;
   startGames: (worldId: WorldId) => void;
+  startErrorBank: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null };
   updateAvatar: (avatarIndex: number) => void;
@@ -60,20 +63,57 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
+  const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
   const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
+
+  const sessionStartRef = useRef<number | null>(null);
 
   const login = useCallback((student: Student) => {
     setCurrentStudent(student);
     setCurrentStudentState(student);
     initPoints(student.id);
+    const now = Date.now();
+    sessionStorage.setItem('math_session_start', now.toString());
+    sessionStartRef.current = now;
+    trackVisit();
     setCurrentView('dashboard');
   }, []);
 
   const logout = useCallback(() => {
+    const start = sessionStorage.getItem('math_session_start');
+    if (start && currentStudent) {
+      const elapsed = Date.now() - parseInt(start);
+      const mins = Math.floor(elapsed / 60000);
+      addAppMinutes(currentStudent.id, mins);
+      trackSessionEnd(Math.floor(elapsed / 1000));
+    }
+    sessionStorage.removeItem('math_session_start');
+    sessionStartRef.current = null;
     setCurrentStudent(null);
     setCurrentStudentState(null);
     setCurrentView('login');
     setIsTeacherState(false);
+  }, [currentStudent]);
+
+  // Heartbeat – skicka var 2:e minut när elev är inloggad
+  useEffect(() => {
+    if (!currentStudent) return;
+    trackHeartbeat(); // direkt vid inloggning
+    const interval = setInterval(trackHeartbeat, 2 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, [currentStudent]);
+
+  // Track session end on page close
+  useEffect(() => {
+    const handleUnload = () => {
+      const start = sessionStorage.getItem('math_session_start');
+      if (start) {
+        const elapsed = Math.floor((Date.now() - parseInt(start)) / 1000);
+        trackSessionEnd(elapsed);
+      }
+    };
+    window.addEventListener('beforeunload', handleUnload);
+    return () => window.removeEventListener('beforeunload', handleUnload);
   }, []);
 
   const setView = useCallback((view: ExtendedView) => setCurrentView(view), []);
@@ -101,6 +141,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const startGames = useCallback((worldId: WorldId) => {
     setGameWorldId(worldId);
     setCurrentView('games');
+  }, []);
+
+  const startErrorBank = useCallback((worldId: WorldId) => {
+    setErrorBankWorldId(worldId);
+    setCurrentView('error-bank');
   }, []);
 
   const getStudentStats = useCallback((student: Student) => {
@@ -239,7 +284,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, errorBankWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, startErrorBank, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

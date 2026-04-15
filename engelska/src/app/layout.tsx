@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import AnalyticsInit from "@/components/AnalyticsInit";
 
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
@@ -34,16 +35,20 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <body className="min-h-screen">
+        <AnalyticsInit />
         {children}
         {/* Kontakt – vänster nedre hörn */}
-        <div className="fixed bottom-2 left-3 z-40 pointer-events-none select-none">
-          <span className="text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity pointer-events-auto">
+        <div className="fixed bottom-2 left-3 z-40 select-none">
+          <a
+            href="mailto:martin.akdogan@enkoping.se"
+            className="text-sm font-medium text-white/80 dark:text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] hover:text-white dark:hover:text-white transition-colors"
+          >
             Kontakt: martin.akdogan@enkoping.se
-          </span>
+          </a>
         </div>
         {/* Signatur – höger nedre hörn */}
         <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-          <span className="text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity">
+          <span className="text-sm font-medium text-white/80 dark:text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
             Engelskajakten av Martin Akdogan
           </span>
         </div>

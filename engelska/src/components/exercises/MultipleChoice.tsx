@@ -5,7 +5,7 @@ import type { MultipleChoiceExercise } from "@/lib/types";
 
 interface Props {
   exercise: MultipleChoiceExercise;
-  onAnswer: (correct: boolean) => void;
+  onAnswer: (correct: boolean, userAnswer: string, correctAnswer: string) => void;
   isLast?: boolean;
 }
 
@@ -92,7 +92,11 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
       {revealed && (
         <div className="flex justify-end pt-2">
           <button
-            onClick={() => onAnswer(selected === exercise.correctIndex)}
+            onClick={() => onAnswer(
+              selected === exercise.correctIndex,
+              exercise.options[selected!] ?? "",
+              exercise.options[exercise.correctIndex]
+            )}
             className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}

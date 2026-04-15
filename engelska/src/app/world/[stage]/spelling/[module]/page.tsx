@@ -11,6 +11,7 @@ import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
 import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { recordError } from "@/lib/errorBank";
 import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
@@ -69,7 +70,17 @@ export default function SpellingModulePage({ params }: Props) {
   const currentExercise: GrammarExercise | undefined = exercises[currentIndex];
   const progress = (currentIndex / totalExercises) * 100;
 
-  function handleAnswer(correct: boolean) {
+  function handleAnswer(correct: boolean, userAnswer: string, correctAnswer: string) {
+    // Record wrong answers in error bank
+    if (!correct && student) {
+      const ex = exercises[currentIndex];
+      const question =
+        ex.type === "fill-in-blank" ? ex.sentence :
+        ex.type === "build-sentence" ? ex.instruction :
+        ex.question;
+      recordError(student.name, stageId, "spelling", mod!.id, mod!.title,
+        ex.id, question, correctAnswer, userAnswer, ex);
+    }
     const newResults = [...results, correct];
     setResults(newResults);
 

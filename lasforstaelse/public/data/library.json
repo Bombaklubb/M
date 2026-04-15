@@ -9688,7 +9688,8 @@
       "fingerprint": "ak3-tema-004",
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-005",
@@ -28418,7 +28419,7 @@
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-tema-044",
@@ -33761,5 +33762,1645 @@
       "model": "manual"
     },
     "imageUrl": "https://images.unsplash.com/photo-1450052590821-8bf91254a353?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "ak10-tema-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Vad är mänskliga rättigheter?",
+    "text": "Mänskliga rättigheter är grundläggande rättigheter som gäller för alla människor, oavsett var de bor, vilken bakgrund de har eller vad de tror på. De formulerades tydligt efter andra världskriget, när världen ville förhindra att övergrepp som Förintelsen skulle hända igen. År 1948 antog Förenta nationerna en deklaration om de mänskliga rättigheterna.\n\nRättigheterna handlar till exempel om rätten till liv, frihet och säkerhet. De omfattar också yttrandefrihet, religionsfrihet och rätten att gå i skolan. En viktig princip är att alla människor är lika mycket värda och ska behandlas med respekt.\n\nTrots att rättigheterna är universella, det vill säga gäller överallt, följs de inte alltid i praktiken. I vissa länder begränsas människors möjlighet att uttrycka sina åsikter eller att leva fritt. Det kan bero på politiska system, konflikter eller ekonomiska problem.\n\nMänskliga rättigheter delas ofta in i olika kategorier. Medborgerliga och politiska rättigheter handlar om frihet och delaktighet i samhället. Ekonomiska, sociala och kulturella rättigheter handlar om till exempel arbete, hälsa och utbildning.\n\nDet finns organisationer som arbetar för att skydda och stärka dessa rättigheter. De kan dokumentera brott, påverka regeringar och informera människor. Även enskilda personer kan bidra genom att engagera sig, sprida kunskap och stå upp för andra.\n\nAtt förstå mänskliga rättigheter handlar inte bara om lagar, utan också om värderingar. Det innebär att se andra människors värde och att agera när orättvisor sker. På så sätt blir rättigheterna levande i vardagen och inte bara ord på papper.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför formulerades de mänskliga rättigheterna tydligt efter andra världskriget?",
+        "options": [
+          "För att stärka ekonomin i Europa",
+          "För att förhindra nya stora övergrepp",
+          "För att öka handeln mellan länder",
+          "För att skapa fler politiska partier"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken organisation antog deklarationen 1948?",
+        "options": [
+          "Europeiska unionen",
+          "Nato",
+          "Förenta nationerna",
+          "Världsbanken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betyder att rättigheterna är universella?",
+        "options": [
+          "De gäller bara i demokratiska länder",
+          "De gäller främst i Europa",
+          "De gäller alla människor överallt",
+          "De gäller endast vuxna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken typ av rättigheter handlar om arbete och utbildning?",
+        "options": [
+          "Militära rättigheter",
+          "Ekonomiska och sociala rättigheter",
+          "Tekniska rättigheter",
+          "Historiska rättigheter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan enskilda personer göra enligt texten?",
+        "options": [
+          "Starta egna lagar",
+          "Sprida kunskap och stå upp för andra",
+          "Bestämma över regeringar",
+          "Kontrollera alla organisationer"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett huvudbudskap i texten?",
+        "options": [
+          "Rättigheter gäller bara i vissa länder",
+          "Lagar är viktigare än människor",
+          "Mänskliga rättigheter är bara teori",
+          "Rättigheter kräver både kunskap och handling"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 482,
+      "fingerprint": "ak10-tema-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Yttrandefrihet och dess gränser",
+    "text": "Yttrandefrihet är en central del av de mänskliga rättigheterna och innebär att människor har rätt att uttrycka sina tankar, åsikter och idéer. Denna rättighet är viktig i demokratiska samhällen eftersom den gör det möjligt att kritisera makthavare och delta i samhällsdebatten.\n\nSamtidigt är yttrandefriheten inte helt obegränsad. I många länder finns lagar som förbjuder hatpropaganda, hot eller uppmaningar till våld. Syftet är att skydda andra människors rättigheter och säkerhet.\n\nEn svår fråga är var gränsen ska dras. Vissa menar att yttrandefriheten bör vara nästan absolut, medan andra anser att den måste begränsas mer för att skydda utsatta grupper. Denna diskussion är ständigt aktuell, särskilt i takt med att sociala medier blivit en viktig arena för åsiktsutbyte.\n\nDigitala plattformar har förändrat hur information sprids. Det går snabbt att nå många människor, men det innebär också att falsk information kan spridas lätt. Detta kan påverka demokratiska processer och människors uppfattningar.\n\nI olika delar av världen ser situationen olika ut. I vissa länder riskerar människor fängelse eller andra straff för att uttrycka kritik mot regeringen. I andra länder är yttrandefriheten starkare skyddad, men debatten om dess gränser fortsätter.\n\nAtt förstå yttrandefrihet handlar därför om att balansera olika rättigheter. Det handlar både om individens frihet att uttrycka sig och om samhällets ansvar att skydda människor från skada.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Varför är yttrandefrihet viktig i demokratier?",
+        "options": [
+          "Den gör det möjligt att påverka och kritisera",
+          "Den ökar produktionen i samhället",
+          "Den minskar behovet av lagar",
+          "Den ersätter utbildning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan vara förbjudet trots yttrandefrihet?",
+        "options": [
+          "Diskussioner i skolan",
+          "Hatpropaganda och hot",
+          "Kulturella uttryck",
+          "Privata samtal"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har sociala medier bidragit till enligt texten?",
+        "options": [
+          "Mindre spridning av information",
+          "Färre åsikter i samhället",
+          "Snabb spridning av både information och falska uppgifter",
+          "Att lagar blivit onödiga"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad riskerar människor i vissa länder?",
+        "options": [
+          "Att förlora arbete automatiskt",
+          "Att inte få resa",
+          "Att tvingas studera",
+          "Straff för att kritisera regeringen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar debatten om?",
+        "options": [
+          "Hur man bygger fler skolor",
+          "Var gränsen för yttrandefrihet ska gå",
+          "Hur teknik ska utvecklas",
+          "Hur många lagar som behövs"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett centralt tema i texten?",
+        "options": [
+          "Att yttrandefrihet saknar betydelse",
+          "Att alla åsikter är lika sanna",
+          "Balansen mellan frihet och ansvar",
+          "Att lagar alltid begränsar människor"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 456,
+      "fingerprint": "ak10-tema-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Barns rättigheter i världen",
+    "text": "Barn har särskilda rättigheter som erkänns i en internationell överenskommelse kallad barnkonventionen. Den antogs av Förenta nationerna och syftar till att skydda barns liv, utveckling och välmående. Alla barn, oavsett bakgrund, ska ha samma rättigheter.\n\nEn viktig del av barnkonventionen är rätten till utbildning. Skolan ska vara tillgänglig och ge barn möjlighet att utveckla sina kunskaper och färdigheter. Utbildning anses vara avgörande för att bryta fattigdom och skapa bättre framtidsmöjligheter.\n\nBarn har också rätt till skydd mot våld, utnyttjande och diskriminering. I vissa delar av världen arbetar barn istället för att gå i skolan, vilket kan påverka deras hälsa och framtid negativt.\n\nBarnkonventionen betonar även barns rätt att uttrycka sina åsikter i frågor som rör dem. Det innebär att vuxna ska lyssna på barn och ta deras perspektiv på allvar.\n\nTrots att många länder har skrivit under konventionen finns det fortfarande stora utmaningar. Krig, fattigdom och brist på resurser gör att barns rättigheter inte alltid uppfylls.\n\nAtt arbeta för barns rättigheter handlar om både lagstiftning och praktiska åtgärder. Det kräver samarbete mellan regeringar, organisationer och individer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är barnkonventionen?",
+        "options": [
+          "En lokal lag i vissa länder",
+          "En internationell överenskommelse om barns rättigheter",
+          "En skolplan",
+          "En ekonomisk strategi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är utbildning viktig enligt texten?",
+        "options": [
+          "Den gör barn lydiga",
+          "Den minskar fritid",
+          "Den ger bättre framtidsmöjligheter",
+          "Den ökar konkurrens mellan barn"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan hindra barns rättigheter?",
+        "options": [
+          "Fler lärare",
+          "Krig och fattigdom",
+          "Nya skolor",
+          "Teknisk utveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär barns rätt att uttrycka sina åsikter?",
+        "options": [
+          "Att barn alltid bestämmer",
+          "Att barn ska ignorera vuxna",
+          "Att barn får rösta i alla val",
+          "Att vuxna ska lyssna på barn"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan barnarbete leda till?",
+        "options": [
+          "Bättre hälsa",
+          "Mer fritid",
+          "Sämre framtidsmöjligheter",
+          "Fler utbildningar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Barns rättigheter och utmaningar",
+          "Skolans historia",
+          "Ekonomiska system",
+          "Teknisk utveckling"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak10-tema-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Diskriminering och lika värde",
+    "text": "Diskriminering innebär att människor behandlas sämre än andra på grund av exempelvis kön, etnicitet, religion, funktionsvariation eller sexuell läggning. Detta strider mot principen om alla människors lika värde, som är central inom mänskliga rättigheter.\n\nDiskriminering kan ske på olika sätt. Den kan vara direkt, till exempel om någon nekas ett jobb på grund av sin bakgrund. Den kan också vara indirekt, när regler eller strukturer missgynnar vissa grupper utan att det alltid är uppenbart.\n\nLagstiftning i många länder förbjuder diskriminering, men lagar räcker inte alltid. Normer, attityder och fördomar kan påverka hur människor behandlas i vardagen.\n\nEtt viktigt arbete för att motverka diskriminering är utbildning och medvetenhet. Genom att förstå olika perspektiv och erfarenheter kan människor bli mer empatiska och inkluderande.\n\nI samhället finns personer med olika bakgrunder och livssituationer. Att inkludera alla innebär att skapa möjligheter för delaktighet och respekt.\n\nAtt arbeta mot diskriminering är en del av att stärka mänskliga rättigheter. Det handlar om att förändra både strukturer och attityder, så att alla människor får samma möjligheter och bemöts med respekt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad innebär diskriminering?",
+        "options": [
+          "Att alla behandlas lika",
+          "Att vissa behandlas sämre än andra",
+          "Att lagar förändras",
+          "Att utbildning ökar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är indirekt diskriminering?",
+        "options": [
+          "Öppen kritik",
+          "Synliga konflikter",
+          "Regler som missgynnar utan att det är tydligt",
+          "Frivilliga val"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad räcker inte alltid enligt texten?",
+        "options": [
+          "Lagar",
+          "Skolor",
+          "Arbete",
+          "Teknik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad kan motverka diskriminering?",
+        "options": [
+          "Mindre utbildning",
+          "Fler regler utan förståelse",
+          "Utbildning och medvetenhet",
+          "Färre människor i samhället"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär inkludering?",
+        "options": [
+          "Att vissa utesluts",
+          "Att alla får delta och respekteras",
+          "Att regler tas bort",
+          "Att skillnader ignoreras"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudidén i texten?",
+        "options": [
+          "Diskriminering är svårt att förändra",
+          "Lagar löser allt",
+          "Alla människor ska behandlas lika och rättvist",
+          "Skillnader bör förstärkas"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak10-tema-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-tema-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Mänskliga rättigheter",
+    "title": "Mänskliga rättigheter i vardagen",
+    "text": "Mänskliga rättigheter handlar inte bara om stora internationella frågor, utan också om hur människor behandlar varandra i vardagen. Det kan handla om respekt, rättvisa och möjligheten att känna sig trygg.\n\nI skolan är mänskliga rättigheter tydligt närvarande. Elever har rätt att uttrycka sina åsikter, känna sig trygga och få en likvärdig utbildning. Lärare har ansvar att skapa en miljö där alla behandlas med respekt.\n\nI arbetslivet handlar rättigheter om rättvisa villkor, säker arbetsmiljö och att inte bli diskriminerad. Det gäller både unga och vuxna.\n\nMänskliga rättigheter kan också kopplas till hur vi bemöter människor i sociala situationer. Att visa respekt, lyssna och inkludera andra är viktiga delar.\n\nI ett mångfaldigt samhälle möts människor med olika bakgrunder. Det kan skapa både möjligheter och utmaningar. Genom dialog och förståelse kan konflikter minska.\n\nAtt tänka på mänskliga rättigheter i vardagen innebär att reflektera över sina handlingar. Små val, som att säga ifrån vid orättvisor eller att inkludera någon som står utanför, kan göra stor skillnad.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Var märks mänskliga rättigheter enligt texten?",
+        "options": [
+          "Bara i internationella möten",
+          "Endast i lagböcker",
+          "I vardagliga situationer",
+          "Endast i politiken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad har elever rätt till?",
+        "options": [
+          "Att bestämma allt",
+          "Trygghet och likvärdig utbildning",
+          "Att slippa regler",
+          "Att välja betyg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar rättigheter om i arbetslivet?",
+        "options": [
+          "Hög lön alltid",
+          "Färre arbetsuppgifter",
+          "Rättvisa villkor och säkerhet",
+          "Kortare utbildning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan konflikter minska?",
+        "options": [
+          "Genom att ignorera skillnader",
+          "Genom dialog och förståelse",
+          "Genom fler regler",
+          "Genom att undvika kontakt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan små handlingar göra?",
+        "options": [
+          "Inte påverka något",
+          "Skapa stora förändringar",
+          "Försvåra relationer",
+          "Minska utbildning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Rättigheter gäller bara vuxna",
+          "Vardagen saknar betydelse",
+          "Mänskliga rättigheter är teoretiska",
+          "Alla kan bidra i vardagen"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak10-tema-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Barack Obamas bakgrund",
+    "text": "Barack Obama föddes 1961 i Hawaii i USA. Hans mamma var från USA och hans pappa från Kenya. Under sin uppväxt bodde han både i USA och i Indonesien, vilket gav honom erfarenheter från olika kulturer. Denna bakgrund kom senare att påverka hans syn på världen och politik.\n\nObama studerade vid flera universitet, bland annat Columbia University och Harvard Law School. På Harvard blev han den första svarta redaktören för en prestigefylld juridisk tidskrift, vilket väckte stor uppmärksamhet.\n\nInnan han blev politiker arbetade Obama som samhällsorganisatör i Chicago. Där hjälpte han människor i utsatta områden att förbättra sina livsvillkor. Han arbetade också som jurist och undervisade i juridik.\n\nHans politiska karriär började i delstaten Illinois, där han valdes till delstatssenaten. Senare blev han senator på nationell nivå.\n\nObamas bakgrund anses av många ha bidragit till hans förmåga att förstå olika perspektiv. Hans erfarenheter från olika miljöer gjorde honom till en politiker som ofta betonade samarbete och dialog.\n\nHans livshistoria har inspirerat många människor, särskilt unga, att engagera sig i samhället och tro på möjligheten att skapa förändring.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var föddes Barack Obama?",
+        "options": [
+          "Kenya",
+          "Indonesien",
+          "Hawaii",
+          "Chicago"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Obama på Harvard?",
+        "options": [
+          "Han blev professor",
+          "Han blev redaktör för en juridisk tidskrift",
+          "Han startade ett företag",
+          "Han arbetade som politiker"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad arbetade Obama med innan politiken?",
+        "options": [
+          "Ingenjör",
+          "Journalist",
+          "Samhällsorganisatör och jurist",
+          "Läkare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Var började hans politiska karriär?",
+        "options": [
+          "I Vita huset",
+          "I FN",
+          "I delstaten Illinois",
+          "I Europa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade hans bakgrund honom?",
+        "options": [
+          "Han undvek politik",
+          "Han fick förståelse för olika perspektiv",
+          "Han arbetade ensam",
+          "Han fokuserade bara på ekonomi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är ett huvudbudskap i texten?",
+        "options": [
+          "Utbildning är oviktigt",
+          "Bakgrund kan påverka ledarskap",
+          "Politik är enkelt",
+          "Alla har samma erfarenheter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 435,
+      "fingerprint": "ak10-obama-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Vägen till presidentposten",
+    "text": "Barack Obama blev känd för en bredare publik när han höll ett uppmärksammat tal vid Demokraternas partikonvent 2004. Talet handlade om enighet och hopp, och många såg honom som en framtida ledare.\n\nÅr 2008 ställde Obama upp i presidentvalet i USA. Hans kampanj fokuserade på förändring och framtidstro, med sloganen \"Yes we can\". Han använde sociala medier på ett nytt sätt för att nå väljare, särskilt unga.\n\nObama mötte stark konkurrens under valet, men lyckades vinna stöd från många olika grupper i samhället. Han blev därmed den första afroamerikanska presidenten i USA:s historia.\n\nHans seger sågs som historisk och symbolisk, både i USA och internationellt. Många människor upplevde att valet markerade ett viktigt steg i kampen för jämlikhet.\n\nValet visade också hur viktigt kommunikation och strategi är i modern politik. Obamas kampanj ansågs vara effektiv och innovativ.\n\nVägen till presidentposten var inte enkel, men Obamas förmåga att inspirera och engagera människor spelade en avgörande roll i hans framgång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När blev Obama nationellt känd?",
+        "options": [
+          "Vid ett tal 2004",
+          "När han blev president",
+          "Under studietiden",
+          "Som barn"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var kampanjens budskap?",
+        "options": [
+          "Stabilitet och tradition",
+          "Förändring och hopp",
+          "Ekonomisk kontroll",
+          "Militär styrka"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var unikt med hans kampanj?",
+        "options": [
+          "Den använde radio mest",
+          "Den undvek teknik",
+          "Den använde sociala medier effektivt",
+          "Den riktade sig bara till äldre"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde hans seger historisk?",
+        "options": [
+          "Han var yngst",
+          "Han var första afroamerikanska presidenten",
+          "Han var rikast",
+          "Han var militär"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bidrog till hans framgång?",
+        "options": [
+          "Tur",
+          "Hans förmåga att inspirera",
+          "Endast ekonomi",
+          "Militära beslut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Utbildning i USA",
+          "Politikens historia",
+          "Obamas väg till presidentposten",
+          "Sociala medier generellt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak10-obama-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Obamas tid som president",
+    "text": "Barack Obama var president i USA mellan 2009 och 2017. Under denna tid stod han inför flera stora utmaningar, bland annat en ekonomisk kris som påverkade både USA och resten av världen.\n\nEn av hans viktigaste reformer var sjukvårdsreformen, ofta kallad \"Obamacare\". Syftet var att göra det möjligt för fler människor att få tillgång till sjukvård.\n\nObama arbetade också med klimatfrågor och internationellt samarbete. Han deltog i globala avtal för att minska utsläpp och bekämpa klimatförändringar.\n\nUnder hans presidentskap fattades beslut som både hyllades och kritiserades. Till exempel ökade användningen av drönare i militära operationer, vilket väckte debatt.\n\nObama betonade ofta diplomati i utrikespolitiken. Ett exempel är avtalet med Iran om landets kärnprogram.\n\nHans tid som president visar hur komplex rollen är, där beslut ofta innebär att väga olika intressen mot varandra.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "När var Obama president?",
+        "options": [
+          "2000–2008",
+          "2009–2017",
+          "2010–2018",
+          "2005–2013"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var syftet med sjukvårdsreformen?",
+        "options": [
+          "Att minska utbildning",
+          "Att öka militär styrka",
+          "Att ge fler tillgång till vård",
+          "Att sänka skatter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilket område arbetade han med globalt?",
+        "options": [
+          "Sport",
+          "Klimatfrågor",
+          "Film",
+          "Transport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad väckte debatt?",
+        "options": [
+          "Utbildning",
+          "Valet",
+          "Drönaranvändning",
+          "Skolor"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade hans utrikespolitik?",
+        "options": [
+          "Diplomati",
+          "Isolation",
+          "Militär expansion",
+          "Handel endast"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar hans presidentskap?",
+        "options": [
+          "Att politik är enkelt",
+          "Att beslut alltid är tydliga",
+          "Att ledarskap är okomplicerat",
+          "Att beslut kräver avvägningar"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak10-obama-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Ledarskap och retorik",
+    "text": "Barack Obama är känd för sin förmåga att tala inför publik. Hans tal har ofta beskrivits som inspirerande och välformulerade. Retorik, alltså konsten att övertyga genom tal, var en viktig del av hans ledarskap.\n\nHan använde ofta berättelser och personliga exempel för att nå fram till människor. Genom att knyta an till gemensamma värderingar kunde han skapa engagemang.\n\nObamas tal innehöll också tydliga budskap om hopp, förändring och ansvar. Han betonade vikten av att människor tillsammans kan påverka samhället.\n\nSamtidigt har hans retorik kritiserats av vissa som menar att ord inte alltid följdes av handling. Detta visar att ledarskap inte bara handlar om att tala, utan också om att genomföra beslut.\n\nRetorik spelar en viktig roll i politik eftersom den påverkar hur människor uppfattar budskap. En stark talare kan mobilisera stöd och skapa förtroende.\n\nObamas sätt att kommunicera har studerats av både forskare och politiker, och hans tal används ofta som exempel på effektiv retorik.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad är retorik?",
+        "options": [
+          "Konsten att skriva lagar",
+          "Konsten att övertyga genom tal",
+          "Att analysera ekonomi",
+          "Att leda företag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur nådde Obama människor i sina tal?",
+        "options": [
+          "Genom tekniska termer",
+          "Genom berättelser och exempel",
+          "Genom statistik enbart",
+          "Genom korta instruktioner"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka teman återkom i hans tal?",
+        "options": [
+          "Rädsla och kontroll",
+          "Tradition och regler",
+          "Hopp och förändring",
+          "Teknik och ekonomi"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad har kritiker påpekat?",
+        "options": [
+          "Att han talade för lite",
+          "Att han undvek människor",
+          "Att hans språk var svårt",
+          "Att ord inte alltid följdes av handling"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan stark retorik göra?",
+        "options": [
+          "Minska intresse",
+          "Skapa stöd och förtroende",
+          "Stoppa förändring",
+          "Försvåra beslut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Ekonomi",
+          "Utbildning",
+          "Militär strategi",
+          "Obamas sätt att kommunicera"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 431,
+      "fingerprint": "ak10-obama-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-obama-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Efter presidentskapet",
+    "text": "Efter att Barack Obama avslutade sin tid som president 2017 fortsatte han att vara aktiv i samhällsfrågor. Tillsammans med sin fru Michelle Obama startade han initiativ och organisationer som arbetar med utbildning, ledarskap och demokrati.\n\nDe har också engagerat sig i att stödja unga människor och uppmuntra dem att delta i samhällsutvecklingen. Genom olika projekt vill de stärka framtida ledare.\n\nObama har även skrivit böcker där han reflekterar över sitt liv och sin tid som president. Dessa böcker har nått en stor publik och bidragit till diskussioner om politik och ledarskap.\n\nHan deltar ibland i offentliga samtal och föreläsningar där han diskuterar aktuella frågor som demokrati, klimat och globalt samarbete.\n\nTrots att han inte längre är president har han fortsatt inflytande. Många människor lyssnar fortfarande på hans åsikter och perspektiv.\n\nHans arbete efter presidentskapet visar att politiskt engagemang kan fortsätta även utanför formella maktpositioner.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gjorde Obama efter presidentskapet?",
+        "options": [
+          "Han slutade arbeta helt",
+          "Han startade initiativ och organisationer",
+          "Han blev militär",
+          "Han flyttade utomlands permanent"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad fokuserar hans arbete på?",
+        "options": [
+          "Sport och underhållning",
+          "Utbildning och ledarskap",
+          "Transport",
+          "Teknikutveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad har han skrivit?",
+        "options": [
+          "Lagböcker",
+          "Tidningsartiklar",
+          "Böcker om sitt liv",
+          "Tekniska manualer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör han i offentliga sammanhang?",
+        "options": [
+          "Undviker debatt",
+          "Diskuterar aktuella frågor",
+          "Arbetar i fabriker",
+          "Undervisar barn dagligen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar hans fortsatta arbete?",
+        "options": [
+          "Att inflytande försvinner snabbt",
+          "Att engagemang kan fortsätta",
+          "Att politik är oviktigt",
+          "Att ledare inte påverkar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Karriärer slutar abrupt",
+          "Endast presidenter påverkar",
+          "Engagemang fortsätter efter makten",
+          "Böcker är oviktiga"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 432,
+      "fingerprint": "ak10-obama-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Arsenals historia och identitet",
+    "text": "Arsenal Football Club grundades 1886 i London och är en av de mest välkända fotbollsklubbarna i världen. Klubben startades av arbetare vid en vapentillverkning, vilket förklarar klubbens smeknamn \"The Gunners\". Under åren har Arsenal utvecklats från ett lokalt lag till en global fotbollsgigant med supportrar över hela världen.\n\nEn av de viktigaste perioderna i klubbens historia inträffade under tränaren Arsène Wenger, som tog över laget 1996. Wenger förändrade hur klubben arbetade med kost, träning och taktik. Han införde en mer teknisk och snabb spelstil som kom att prägla Arsenal under många år. Den mest kända säsongen är 2003–2004, då laget gick igenom hela ligan utan att förlora en enda match. Detta lag kallas ofta för \"The Invincibles\".\n\nArsenal spelar sina hemmamatcher på Emirates Stadium, som invigdes 2006. Innan dess spelade laget på Highbury, en arena som var känd för sin speciella atmosfär. Flytten till Emirates innebar större ekonomiska möjligheter men också nya utmaningar, särskilt när det gällde att konkurrera med andra storklubbar.\n\nKlubbens identitet bygger på en kombination av tradition och utveckling. Arsenal är kända för att spela en offensiv och teknisk fotboll, samtidigt som de värnar om sin historia. Klubben har också haft en viktig roll i att utveckla unga spelare och ge dem chansen på hög nivå.\n\nTrots perioder av både framgång och motgång fortsätter Arsenal att vara en central del av engelsk fotboll. Deras historia visar hur en klubb kan förändras över tid utan att förlora sin grundläggande identitet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför kallas Arsenal för \"The Gunners\"?",
+        "options": [
+          "På grund av klubbens grundare arbetade med vapen",
+          "För att laget alltid skjuter många skott",
+          "På grund av deras stadionnamn",
+          "För att deras fans skapade smeknamnet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var speciellt med säsongen 2003–2004?",
+        "options": [
+          "Arsenal vann alla cuper",
+          "De förlorade inga ligamatcher",
+          "De gjorde flest mål i Europa",
+          "De bytte arena samma år"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken förändring införde Arsène Wenger?",
+        "options": [
+          "Mer defensivt spel",
+          "Kortare matcher",
+          "Nya tränings- och kostvanor",
+          "Färre unga spelare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebar flytten till Emirates Stadium?",
+        "options": [
+          "Mindre publik",
+          "Färre matcher",
+          "Större ekonomiska möjligheter",
+          "Kortare säsonger"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Arsenals spelstil?",
+        "options": [
+          "Fysiskt och långsamt spel",
+          "Offensiv och teknisk fotboll",
+          "Endast försvarsinriktat",
+          "Slumpmässigt spel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att Arsenal alltid vinner",
+          "Att arenor är viktigast i fotboll",
+          "Att unga spelare är oviktiga",
+          "Att Arsenal kombinerar tradition och utveckling"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 502,
+      "fingerprint": "ak10-arsenal-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Arsenals spelstil och filosofi",
+    "text": "Arsenal har länge varit kända för sin tekniska och offensiva spelstil. Denna filosofi blev särskilt tydlig under Arsène Wengers tid som tränare. Istället för att fokusera på fysisk styrka och långa bollar betonade Wenger kortpassningsspel, rörelse utan boll och kreativitet.\n\nEn central del av Arsenals spelidé är att kontrollera matchen genom bollinnehav. Genom att hålla bollen inom laget kan spelarna styra tempot och skapa luckor i motståndarnas försvar. Detta kräver hög teknisk skicklighet och god spelförståelse hos varje spelare.\n\nArsenal har också varit kända för att utveckla unga talanger. Klubben har ofta gett unga spelare chansen att spela i A-laget, vilket både kan innebära risker och möjligheter. Denna strategi har ibland kritiserats, särskilt när laget inte nått de högsta resultaten, men den har också lett till att många spelare utvecklats till stjärnor.\n\nUnder senare år har klubben försökt balansera sin traditionella spelstil med en mer pragmatisk approach. Detta innebär att laget ibland anpassar sitt spel beroende på motstånd och situation. Kombinationen av kreativitet och struktur har blivit allt viktigare i modern fotboll.\n\nArsenals filosofi handlar alltså inte bara om hur laget spelar, utan också om hur klubben ser på utveckling, lagarbete och långsiktighet. Det är denna helhetssyn som gör Arsenal till en unik klubb inom fotbollsvärlden.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Arsenals spelstil enligt texten?",
+        "options": [
+          "Tekniskt och offensivt spel",
+          "Endast försvarsspel",
+          "Slumpmässiga anfall",
+          "Långsamma passningar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är bollinnehav viktigt?",
+        "options": [
+          "Det gör matchen kortare",
+          "Det hjälper laget kontrollera tempot",
+          "Det minskar publikens intresse",
+          "Det gör spelet enklare att döma"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken risk finns med att satsa på unga spelare?",
+        "options": [
+          "De är alltid dyrare",
+          "De vill inte spela",
+          "De saknar erfarenhet",
+          "De kan inte träna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär en mer pragmatisk approach?",
+        "options": [
+          "Att alltid spela likadant",
+          "Att undvika taktik",
+          "Att spela utan tränare",
+          "Att anpassa spelet efter situationen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur har synen på spelstil förändrats?",
+        "options": [
+          "Den är helt oförändrad",
+          "Den kombinerar kreativitet och struktur",
+          "Den är mindre viktig",
+          "Den fokuserar bara på försvar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Att Arsenal saknar strategi",
+          "Att unga spelare alltid misslyckas",
+          "Att Arsenals filosofi omfattar både spel och utveckling",
+          "Att bollinnehav inte är viktigt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 462,
+      "fingerprint": "ak10-arsenal-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Supporterkultur kring Arsenal",
+    "text": "Arsenal har en stor och engagerad supporterbas som sträcker sig långt utanför England. Supportrar följer laget genom både framgångar och svårare perioder, vilket skapar en stark gemenskap.\n\nPå matchdagar samlas fans från olika bakgrunder för att stötta laget. Emirates Stadium fylls av sånger, flaggor och förväntan. Denna atmosfär bidrar till upplevelsen av fotboll som mer än bara en sport.\n\nSupporterkulturen kring Arsenal präglas av både lojalitet och kritiskt tänkande. Fansen är inte rädda för att uttrycka sina åsikter om klubbens ledning eller prestationer. Detta kan ibland skapa debatt, men det visar också hur engagerade supportrarna är.\n\nSociala medier har förändrat hur supportrar kommunicerar. Diskussioner sker inte längre bara på arenan eller puben, utan också online. Detta gör att fler kan delta i samtalet, men det kan också leda till konflikter.\n\nArsenals supporterbas är dessutom mångsidig. Den inkluderar människor i olika åldrar, kön och livssituationer. Denna variation gör att klubben speglar en bredare samhällsbild.\n\nSammanfattningsvis är supporterkulturen en viktig del av Arsenals identitet. Den visar hur sport kan förena människor samtidigt som den ger utrymme för olika perspektiv.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknar Arsenals supporterbas?",
+        "options": [
+          "Den är liten och lokal",
+          "Den är global och engagerad",
+          "Den är bara digital",
+          "Den är passiv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer på Emirates Stadium under matcher?",
+        "options": [
+          "Publiken är tyst",
+          "Fans lämnar tidigt",
+          "Sånger och stämning fyller arenan",
+          "Endast spelarna syns"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur uttrycker fans sina åsikter?",
+        "options": [
+          "Genom total tystnad",
+          "Genom att alltid hålla med",
+          "Genom att diskutera och kritisera",
+          "Genom att lämna klubben"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur har sociala medier påverkat supporterskapet?",
+        "options": [
+          "Minskat engagemanget",
+          "Tagit bort diskussioner",
+          "Begränsat deltagande",
+          "Ökat möjligheten att diskutera"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar mångfalden bland fansen?",
+        "options": [
+          "Att klubben bara är för vissa",
+          "Att den speglar samhället",
+          "Att alla är lika",
+          "Att ålder inte spelar roll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Att supportrar inte är viktiga",
+          "Att fotboll bara handlar om spel",
+          "Att supporterrollen är central för klubbens identitet",
+          "Att arenor är oviktiga"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak10-arsenal-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Ekonomi och konkurrens i modern fotboll",
+    "text": "Modern fotboll präglas i hög grad av ekonomi, och Arsenal är inget undantag. Intäkter från tv-avtal, sponsorer och biljettförsäljning spelar en avgörande roll för klubbens möjligheter att konkurrera.\n\nNär Arsenal flyttade till Emirates Stadium ökade klubbens intäkter, men samtidigt uppstod stora kostnader. Detta påverkade hur mycket pengar klubben kunde spendera på nya spelare under flera år.\n\nKonkurrensen i Premier League har också blivit hårdare. Flera klubbar har fått stora ekonomiska resurser genom externa investeringar. Detta har gjort det svårare för Arsenal att konsekvent nå toppen av tabellen.\n\nFör att hantera detta har klubben behövt utveckla en balans mellan ekonomisk stabilitet och sportslig framgång. Det innebär att fatta strategiska beslut kring spelarvärvningar, löner och långsiktig planering.\n\nEkonomi påverkar alltså inte bara vilka spelare som köps, utan också hur klubben organiseras och utvecklas. För Arsenal har detta inneburit både utmaningar och möjligheter.\n\nTexten visar hur ekonomiska faktorer blivit en central del av modern fotboll och hur klubbar måste anpassa sig till dessa förändringar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken faktor påverkar fotboll mest enligt texten?",
+        "options": [
+          "Ekonomi",
+          "Väder",
+          "Publikens kläder",
+          "Domarens ålder"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände efter flytten till Emirates Stadium?",
+        "options": [
+          "Intäkterna minskade",
+          "Intäkterna ökade men kostnaderna också",
+          "Klubben slutade spela matcher",
+          "Spelarna blev färre"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför har konkurrensen ökat?",
+        "options": [
+          "Färre lag spelar",
+          "Reglerna har ändrats",
+          "Fler klubbar har fått ekonomiska resurser",
+          "Matcherna är kortare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad krävs för att hantera ekonomin?",
+        "options": [
+          "Slumpmässiga beslut",
+          "Ingen planering",
+          "Endast unga spelare",
+          "Strategiska beslut"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad påverkar ekonomin mest i klubben?",
+        "options": [
+          "Spelarvärvningar och löner",
+          "Träningstider",
+          "Matchlängd",
+          "Publikens kläder"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Ekonomi spelar liten roll",
+          "Ekonomi är central i modern fotboll",
+          "Endast spelstil är viktig",
+          "Arenor är oviktiga"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak10-arsenal-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-arsenal-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Framtiden för Arsenal",
+    "text": "Arsenal står inför en framtid där både möjligheter och utmaningar är tydliga. Klubben har under de senaste åren satsat på en yngre spelartrupp, vilket tyder på ett långsiktigt tänkande.\n\nEn viktig del av framtiden handlar om att utveckla spelare och skapa stabilitet. Genom att ge unga talanger tid att växa kan klubben bygga ett lag som håller över flera säsonger.\n\nSamtidigt måste Arsenal fortsätta konkurrera med ekonomiskt starka klubbar. Detta kräver smarta värvningar och effektiv användning av resurser. Att hitta rätt balans mellan investering och utveckling är avgörande.\n\nTeknologin spelar också en allt större roll inom fotboll. Analysverktyg används för att förbättra prestationer och minska skaderisker. Arsenal har investerat i sådana system för att ligga i framkant.\n\nSupporterbasen kommer fortsatt vara viktig. Engagemang från fansen kan påverka både spelare och klubbens riktning. En stark relation mellan klubb och supportrar kan bidra till framgång.\n\nFramtiden för Arsenal beror alltså på flera faktorer: ekonomi, strategi, spelutveckling och relationen till fansen. Hur klubben hanterar dessa delar kommer avgöra dess position i framtidens fotboll.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad satsar Arsenal på i sin spelartrupp?",
+        "options": [
+          "Yngre spelare",
+          "Endast äldre spelare",
+          "Färre spelare",
+          "Tillfälliga spelare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är unga spelare viktiga?",
+        "options": [
+          "De är billigast",
+          "De kan utvecklas över tid",
+          "De spelar fler matcher direkt",
+          "De kräver mindre träning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad krävs för att konkurrera?",
+        "options": [
+          "Slumpmässiga köp",
+          "Färre tränare",
+          "Smarta värvningar",
+          "Kortare matcher"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur används teknologi?",
+        "options": [
+          "För att sälja biljetter",
+          "För att ändra regler",
+          "För att minska publik",
+          "För analys och prestation"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad påverkar klubbens framgång utöver spelare?",
+        "options": [
+          "Supporterengagemang",
+          "Väder",
+          "Matchtid",
+          "Domare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Framtiden beror på flera faktorer",
+          "Endast pengar avgör",
+          "Teknik är oviktig",
+          "Fans påverkar inte klubben"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 451,
+      "fingerprint": "ak10-arsenal-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-rosa-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Rosa Parks och bussbojkotten",
+    "text": "Rosa Parks är en av de mest kända personerna inom den amerikanska medborgarrättsrörelsen. Den 1 december 1955 vägrade hon att ge upp sin sittplats på en buss i Montgomery, Alabama, till en vit passagerare. Detta var inte en slumpmässig handling utan en medveten protest mot de rasistiska lagar som fanns i USA vid den tiden.\n\nSegregationslagarna, även kallade Jim Crow-lagar, innebar att svarta och vita människor skulle hållas åtskilda i samhället. På bussar var svarta tvungna att sitta längst bak och ge upp sina platser om det inte fanns tillräckligt med sittplatser för vita.\n\nNär Rosa Parks arresterades spreds nyheten snabbt. Händelsen ledde till Montgomery Bus Boycott, en protest där svarta invånare vägrade åka buss under över ett år. Bojkotten organiserades av bland andra Martin Luther King Jr., som då var en relativt okänd pastor.\n\nBojkotten blev en framgång och bidrog till att högsta domstolen förklarade segregationen på bussar som olaglig. Rosa Parks blev en symbol för motstånd mot orättvisor.\n\nHennes handling visar hur en enskild persons mod kan påverka ett helt samhälle. Texten belyser också hur protester kan leda till förändring genom kollektiv handling.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gjorde Rosa Parks på bussen?",
+        "options": [
+          "Hon vägrade ge upp sin plats",
+          "Hon betalade inte biljetten",
+          "Hon steg av i protest",
+          "Hon började tala till publiken"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var Jim Crow-lagarna?",
+        "options": [
+          "Lagar om utbildning",
+          "Lagar som separerade människor efter hudfärg",
+          "Lagar om busspriser",
+          "Lagar om rösträtt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var Montgomery Bus Boycott?",
+        "options": [
+          "En protest genom att vägra åka buss",
+          "En strejk bland bussförare",
+          "En kampanj för fler bussar",
+          "En politisk valrörelse"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem var Martin Luther King Jr. vid denna tid?",
+        "options": [
+          "President",
+          "Domare",
+          "Pastor",
+          "Busschaufför"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad blev resultatet av bojkotten?",
+        "options": [
+          "Fler bussar byggdes",
+          "Segregation på bussar blev olaglig",
+          "Bussarna stängdes",
+          "Biljetterna blev billigare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att bussar var viktiga",
+          "Att lagar alltid följs",
+          "Att protester inte fungerar",
+          "Att en persons handling kan leda till förändring"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 462,
+      "fingerprint": "ak10-rosa-001",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-rosa-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Medborgarrättsrörelsen i USA",
+    "text": "Under mitten av 1900-talet växte medborgarrättsrörelsen fram i USA som en reaktion på rasdiskriminering och segregation. Rosa Parks blev en symbol för denna kamp, men hon var långt ifrån ensam.\n\nRörelsen bestod av aktivister, organisationer och vanliga människor som kämpade för lika rättigheter. Målet var att avskaffa diskriminerande lagar och skapa ett mer rättvist samhälle.\n\nProtester tog många former, inklusive demonstrationer, bojkotter och rättsprocesser. En viktig strategi var icke-våld, vilket innebar att man protesterade fredligt. Detta bidrog till att skapa sympati och uppmärksamhet både nationellt och internationellt.\n\nMedia spelade en avgörande roll genom att visa bilder av orättvisor. Detta gjorde att fler människor blev medvetna om situationen.\n\nRosa Parks handling blev en katalysator för större förändringar. Hennes protest inspirerade andra att engagera sig och stärkte rörelsen.\n\nTexten visar att förändring ofta kräver både individuella handlingar och kollektivt arbete över tid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad var medborgarrättsrörelsens mål?",
+        "options": [
+          "Att skapa lika rättigheter",
+          "Att bygga fler skolor",
+          "Att förändra bussar",
+          "Att minska befolkningen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken strategi användes ofta?",
+        "options": [
+          "Våldsamma protester",
+          "Icke-våld",
+          "Militär insats",
+          "Hemliga möten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur bidrog media?",
+        "options": [
+          "Genom att dölja information",
+          "Genom att visa orättvisor",
+          "Genom att stoppa protester",
+          "Genom att censurera nyheter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad betyder att Rosa Parks var en katalysator?",
+        "options": [
+          "Hon stoppade rörelsen",
+          "Hon startade en kemisk reaktion",
+          "Hon påskyndade förändring",
+          "Hon arbetade ensam"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilka deltog i rörelsen?",
+        "options": [
+          "Endast politiker",
+          "Många olika grupper och individer",
+          "Endast studenter",
+          "Endast domare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudidén?",
+        "options": [
+          "Förändring kräver både individer och grupper",
+          "Endast en person behövs",
+          "Media är oviktigt",
+          "Protester fungerar inte"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 452,
+      "fingerprint": "ak10-rosa-002",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-rosa-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Värdegrund",
+    "title": "Civilkurage och motstånd",
+    "text": "Civilkurage innebär att våga stå upp för det som är rätt, även när det innebär risker. Rosa Parks är ett tydligt exempel på detta. Hennes beslut att inte ge upp sin plats var ett medvetet val som kunde få konsekvenser.\n\nAtt visa civilkurage handlar ofta om att utmana normer och regler som upplevs som orättvisa. Detta kräver mod, särskilt när samhället förväntar sig att man ska följa reglerna.\n\nRosa Parks var inte den första att protestera mot segregationen, men hennes handling fick stor uppmärksamhet. Detta visar att timing och sammanhang också spelar roll.\n\nCivilkurage kan inspirera andra människor att agera. När en person tar ställning kan det skapa en kedjereaktion där fler vågar göra detsamma.\n\nSamtidigt kan det finnas risker, såsom sociala konsekvenser eller juridiska straff. Trots detta väljer vissa att agera, eftersom de anser att rättvisa är viktigare.\n\nTexten belyser hur civilkurage är en viktig del av samhällsförändring och varför individer som Rosa Parks får stor betydelse.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad betyder civilkurage?",
+        "options": [
+          "Att följa regler",
+          "Att undvika konflikter",
+          "Att stå upp för det som är rätt",
+          "Att vara tyst"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad riskerade Rosa Parks?",
+        "options": [
+          "Belöning",
+          "Straff och konsekvenser",
+          "Nya jobb",
+          "Berömmelse direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför fick hennes handling stor uppmärksamhet?",
+        "options": [
+          "Hon var ensam",
+          "Tidpunkt och sammanhang spelade roll",
+          "Hon var känd sedan tidigare",
+          "Media ignorerade det"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan civilkurage leda till?",
+        "options": [
+          "Mindre förändring",
+          "Inget händer",
+          "Kedjereaktion av handlingar",
+          "Färre människor engagerar sig"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan vara en konsekvens av civilkurage?",
+        "options": [
+          "Endast positiva effekter",
+          "Sociala och juridiska risker",
+          "Inga reaktioner",
+          "Automatisk framgång"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Civilkurage är oviktigt",
+          "Endast lagar spelar roll",
+          "Individers mod kan bidra till förändring",
+          "Risker bör alltid undvikas"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 454,
+      "fingerprint": "ak10-rosa-003",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-rosa-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Segregationens konsekvenser",
+    "text": "Segregation innebär att människor delas upp och behandlas olika baserat på exempelvis hudfärg. I USA under 1900-talet var detta en del av lagstiftningen, vilket påverkade många människors vardag.\n\nFör svarta amerikaner innebar segregation begränsad tillgång till utbildning, arbete och offentliga platser. Detta skapade stora skillnader i livsvillkor.\n\nRosa Parks protest var ett svar på denna orättvisa. Genom att vägra följa reglerna visade hon att lagar inte alltid är rättvisa.\n\nSegregationen påverkade även samhället som helhet genom att skapa konflikter och ojämlikhet. Den bidrog till att människor levde åtskilda och saknade förståelse för varandra.\n\nNär segregation började avskaffas ledde det till förändringar, men processen var lång och mötte motstånd.\n\nTexten visar hur lagar kan påverka människors liv och varför det är viktigt att ifrågasätta orättvisa system.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad innebär segregation?",
+        "options": [
+          "Att människor behandlas lika",
+          "Att människor delas upp och behandlas olika",
+          "Att alla har samma rättigheter",
+          "Att lagar saknas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur påverkades svarta amerikaner?",
+        "options": [
+          "De fick fler möjligheter",
+          "De fick begränsade möjligheter",
+          "De styrde samhället",
+          "De påverkades inte"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visade Rosa Parks handling?",
+        "options": [
+          "Att lagar alltid är rätt",
+          "Att protester är onödiga",
+          "Att lagar kan vara orättvisa",
+          "Att regler inte finns"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade segregation samhället?",
+        "options": [
+          "Skapade jämlikhet",
+          "Minskade konflikter",
+          "Förbättrade relationer",
+          "Skapade ojämlikhet och konflikter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad hände när segregation avskaffades?",
+        "options": [
+          "Snabba förändringar",
+          "Långsam förändring med motstånd",
+          "Inga förändringar",
+          "Direkt jämlikhet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Lagar är alltid rättvisa",
+          "Segregation påverkar inte samhället",
+          "Det är viktigt att ifrågasätta orättvisa system",
+          "Förändring sker direkt"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 453,
+      "fingerprint": "ak10-rosa-004",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "ak10-rosa-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Rosa Parks arv idag",
+    "text": "Rosa Parks handling har fått långvariga konsekvenser och hennes arv lever vidare än idag. Hon ses som en symbol för kamp mot orättvisa och inspirerar människor världen över.\n\nEfter händelsen i Montgomery fortsatte Parks att arbeta för medborgarrättigheter. Hon deltog i olika organisationer och föreläste om vikten av jämlikhet.\n\nI dagens samhälle används hennes historia ofta som ett exempel på hur individer kan påverka större system. Hennes liv visar att förändring inte sker över en natt, utan kräver uthållighet.\n\nSamtidigt diskuteras hur historien om Rosa Parks ibland förenklas. Vissa menar att fokus ofta ligger på en enskild handling, medan det kollektiva arbetet bakom förändringen glöms bort.\n\nHennes arv handlar därför både om individens betydelse och vikten av gemensam kamp. Detta gör hennes historia relevant även i dagens diskussioner om rättvisa.\n\nTexten betonar att historiska händelser kan tolkas på olika sätt och att deras betydelse förändras över tid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad symboliserar Rosa Parks idag?",
+        "options": [
+          "Orättvisa",
+          "Kamp för rättvisa",
+          "Politik",
+          "Historia utan betydelse"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde hon efter busshändelsen?",
+        "options": [
+          "Slutade arbeta",
+          "Fortsatte engagera sig i rättigheter",
+          "Flyttade och blev anonym",
+          "Bytte yrke till lärare direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar hennes liv om förändring?",
+        "options": [
+          "Den sker snabbt",
+          "Den kräver uthållighet",
+          "Den är enkel",
+          "Den sker utan motstånd"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kritiseras ibland i berättelsen om henne?",
+        "options": [
+          "Att den är för detaljerad",
+          "Att den saknar fakta",
+          "Att den överdriver våld",
+          "Att den förenklar och glömmer kollektivet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar hennes arv om?",
+        "options": [
+          "Endast individen",
+          "Både individ och kollektiv kamp",
+          "Endast lagar",
+          "Endast historia"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudidén?",
+        "options": [
+          "Historia är oföränderlig",
+          "Endast individer spelar roll",
+          "Historiska händelser kan tolkas olika över tid",
+          "Förändring är enkel"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 455,
+      "fingerprint": "ak10-rosa-005",
+      "generatedAt": "2026-04-14T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]

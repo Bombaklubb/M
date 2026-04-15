@@ -3,7 +3,7 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { ACHIEVEMENTS, RARITY_LABELS, RARITY_COLORS } from '../data/achievements';
 import { COLLECTION_ITEMS, RARITY_COLORS as COL_COLORS, RARITY_LABELS as COL_LABELS } from '../data/collection';
-import { getAchievements } from '../utils/storage';
+import { getAchievements, getAppMinutes } from '../utils/storage';
 import { getCollection } from '../utils/questStorage';
 import { WORLDS } from '../data/worlds';
 
@@ -68,6 +68,14 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
   const totalPossible = ACHIEVEMENTS.length + COLLECTION_ITEMS.length;
   const pct = (totalUnlocked / totalPossible) * 100;
 
+  const storedMins = getAppMinutes(currentStudent.id);
+  const sessionStart = sessionStorage.getItem('math_session_start');
+  const sessionMins = sessionStart ? Math.floor((Date.now() - parseInt(sessionStart)) / 60000) : 0;
+  const totalMins = storedMins + sessionMins;
+  const timeLabel = totalMins >= 60
+    ? `${Math.floor(totalMins / 60)} t ${totalMins % 60} min`
+    : `${totalMins} min`;
+
   const byRarity = ['common', 'rare', 'epic', 'legendary'] as const;
 
   return (
@@ -104,6 +112,20 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
 
         {/* ── MÄRKEN / ACHIEVEMENTS ──────────────────────────────────────── */}
         <section>
+          {/* Min tid i appen */}
+          <div className="mb-4 rounded-2xl px-4 py-3 flex items-center gap-3"
+            style={{
+              background: 'rgba(255,237,213,0.80)',
+              border: '1.5px solid rgba(251,146,60,0.50)',
+              boxShadow: '0 2px 10px rgba(251,146,60,0.15)',
+            }}>
+            <span className="text-2xl">⏱</span>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#ea580c' }}>Min tid i appen</p>
+              <p className="text-xl font-black" style={{ color: '#7c2d12' }}>{timeLabel}</p>
+            </div>
+          </div>
+
           <h2 className="text-base font-black text-gray-700 mb-5 flex items-center gap-2">
             🎖️ Märken
             <span className="text-sm font-normal text-gray-400">({earned.length}/{ACHIEVEMENTS.length})</span>
