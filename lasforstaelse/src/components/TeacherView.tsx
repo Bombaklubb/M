@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { fetchTeacherStats, type TeacherStats } from '../services/analyticsService';
-import { RefreshCw, LogOut, Monitor, FileText, Clock, XCircle, Calendar } from 'lucide-react';
+import { RefreshCw, LogOut, Monitor, FileText, Clock, Calendar } from 'lucide-react';
 
 interface TeacherViewProps {
   onClose: () => void;
 }
 
 type Tab = 'stats' | 'library';
-
-// Översätt frågetyper till svenska
-const questionTypeLabels: Record<string, string> = {
-  literal: 'Hittafrågor',
-  inferens: 'Inferensfrågor',
-  ord: 'Ordfrågor',
-  sammanfatta: 'Sammanfattning',
-};
 
 export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -230,7 +222,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
             </h2>
 
             {/* Statistik-kort */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {/* Inloggade nu */}
               <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
                 <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -283,18 +275,6 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 </div>
               </div>
 
-              {/* Felaktiga svar */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
-                <div className="w-10 h-10 bg-red-100 dark:bg-red-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <XCircle className="w-5 h-5 text-red-600 dark:text-red-400" />
-                </div>
-                <div className="text-3xl font-bold text-slate-800 dark:text-white">
-                  {stats?.totalErrors ?? '-'}
-                </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                  Felaktiga svar
-                </div>
-              </div>
             </div>
 
             {/* Statistik per årskurs/stadie */}
@@ -341,37 +321,6 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
               </div>
             </div>
 
-            {/* Vanligaste fel */}
-            {stats?.topErrors && stats.topErrors.length > 0 && (
-              <>
-                <h2 className="text-lg font-bold text-slate-700 dark:text-slate-200 mb-4">
-                  VANLIGASTE FEL
-                </h2>
-
-                <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
-                  <div className="space-y-3">
-                    {stats.topErrors.map((error, index) => (
-                      <div
-                        key={error.type}
-                        className="flex items-center justify-between py-2 border-b border-slate-100 dark:border-slate-700 last:border-0"
-                      >
-                        <div className="flex items-center gap-3">
-                          <span className="text-lg font-bold text-slate-400">
-                            {index + 1}.
-                          </span>
-                          <span className="text-slate-700 dark:text-slate-200">
-                            {questionTypeLabels[error.type] || error.type}
-                          </span>
-                        </div>
-                        <span className="font-bold text-red-600 dark:text-red-400">
-                          {error.count} fel
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
           </>
         )}
 
