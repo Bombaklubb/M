@@ -250,6 +250,7 @@ export function recordResult(
     pointsEarned,
     completedAt: new Date().toISOString(),
     genre,
+    theme,
     questionResults,
     readingTimeSeconds,
   };
