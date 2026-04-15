@@ -9,7 +9,7 @@ import {
   grantAchievement, saveTopicProgress, calcStars,
   recordTopicSession, saveStudent, addAppMinutes,
 } from '../utils/storage';
-import { trackVisit, trackSessionEnd } from '../utils/analytics';
+import { trackVisit, trackSessionEnd, trackHeartbeat } from '../utils/analytics';
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
@@ -93,6 +93,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentStudentState(null);
     setCurrentView('login');
     setIsTeacherState(false);
+  }, [currentStudent]);
+
+  // Heartbeat – skicka var 2:e minut när elev är inloggad
+  useEffect(() => {
+    if (!currentStudent) return;
+    trackHeartbeat(); // direkt vid inloggning
+    const interval = setInterval(trackHeartbeat, 2 * 60 * 1000);
+    return () => clearInterval(interval);
   }, [currentStudent]);
 
   // Track session end on page close
