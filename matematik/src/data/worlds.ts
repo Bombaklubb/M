@@ -49,6 +49,8 @@ export const WORLDS: World[] = [
       'sannolikhet-lag',
       // Nya kapitel
       'halften-dubbelt', 'storleksordna-tal', 'overgang-ental-tiotal', 'fore-och-efter',
+      // Programmering
+      'programmering-lag',
     ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
@@ -90,6 +92,8 @@ export const WORLDS: World[] = [
       'tallinjen-mel', 'omv-mat-mel', 'omv-vikt-mel', 'position-mel',
       // Rationella tal
       'rationella-brak-mel',
+      // Programmering
+      'programmering-mel',
     ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
@@ -137,6 +141,8 @@ export const WORLDS: World[] = [
       'symmetri-hog',
       // Rationella tal
       'rationella-brak-hog',
+      // Programmering
+      'programmering-hog',
     ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',
@@ -160,6 +166,8 @@ export const WORLDS: World[] = [
       'derivata', 'sannolikhet', 'matematik-begrepp-gym',
       // Övrigt (rad 3)
       'rimlighetsoevningar-gym',
+      // Programmering
+      'programmering-gym',
     ],
     islandEmojis: ['🌠', '🔭', '🪐', '⭐', '🌙', '💫'],
     storyIntro: 'Mästare på avancerad matematik – lösa universums mysterier!',
