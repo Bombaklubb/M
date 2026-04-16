@@ -206,6 +206,33 @@ export default function TeacherView() {
         <p className="text-center text-xs text-slate-400 pb-2">
           Realtidsstatistik är anonymiserad och innehåller inga personuppgifter
         </p>
+
+        {/* GDPR-info */}
+        <div className="rounded-2xl border border-teal-800/50 bg-slate-900 p-5 space-y-4">
+          <div>
+            <p className="font-black text-emerald-400 text-sm mb-2">🔒 GDPR-säkrad statistik</p>
+            <p className="text-teal-200 text-sm leading-relaxed mb-3">
+              Inga personuppgifter samlas in. Varje enhet identifieras av ett slumpmässigt anonymt ID som inte kan kopplas till en person. All statistik är aggregerad och visas aldrig på individnivå.
+            </p>
+            <ul className="space-y-1">
+              {[
+                'Inga namn, IP-adresser eller inloggningsuppgifter lagras',
+                'Anonymt enhets-ID (UUID) – kan inte kopplas till en elev',
+                'Endast summerad data visas (antal, tid, uppgifter)',
+              ].map(item => (
+                <li key={item} className="text-teal-300 text-sm flex items-start gap-1.5">
+                  <span className="flex-shrink-0">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border-t border-teal-800/50 pt-4">
+            <p className="text-teal-300 text-sm">
+              🗓️ Mattejakten började samla in anonym statistik <strong className="text-teal-100">14 april 2026</strong>. Data äldre än 14 dagar visas inte i grafen.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
