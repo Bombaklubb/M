@@ -314,10 +314,26 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 </p>
               )}
 
-              {/* Visa när statistikinsamling startade och GDPR-info */}
-              <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700 text-center text-sm text-slate-400 dark:text-slate-500 space-y-1">
-                <p>Statistikinsamling startade: 15 april 2026</p>
-                <p>🔒 GDPR-säkrad – ingen personlig data samlas in</p>
+              {/* GDPR-info box */}
+              <div className="mt-6 bg-slate-800 dark:bg-slate-900 rounded-xl p-5 border border-emerald-700/50">
+                <div className="flex items-start gap-3">
+                  <span className="text-emerald-400 text-xl">🔒</span>
+                  <div>
+                    <h3 className="text-emerald-400 font-bold mb-2">GDPR-säkrad statistik</h3>
+                    <p className="text-slate-300 text-sm mb-3">
+                      Inga personuppgifter samlas in. Varje enhet identifieras av ett slumpmässigt anonymt ID som inte kan kopplas till en person. All statistik är aggregerad och visas aldrig på individnivå.
+                    </p>
+                    <ul className="text-emerald-400 text-sm space-y-1 mb-4">
+                      <li>✓ Inga namn, IP-adresser eller inloggningsuppgifter lagras</li>
+                      <li>✓ Anonymt enhets-ID (UUID) – kan inte kopplas till en elev</li>
+                      <li>✓ Endast summerad data visas (antal, tid, uppgifter)</li>
+                    </ul>
+                    <div className="flex items-center gap-2 text-slate-400 text-sm border-t border-slate-700 pt-3">
+                      <Calendar className="w-4 h-4" />
+                      <span>Läsjakten började samla in anonym statistik <strong className="text-white">15 april 2026</strong>. Data äldre än 14 dagar visas inte i grafen.</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
