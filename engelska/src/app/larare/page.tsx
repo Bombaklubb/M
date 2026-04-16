@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { fetchTeacherStats, type TeacherStats } from "@/services/analyticsService";
-import { RefreshCw, LogOut, Monitor, FileText, Clock, XCircle } from "lucide-react";
+import { RefreshCw, LogOut, Monitor } from "lucide-react";
 
 const questionTypeLabels: Record<string, string> = {
   grammar: "Grammatik",
@@ -178,7 +178,7 @@ export default function LararePage() {
           <h2 className="text-xs font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-4">
             Översikt
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             {/* Inloggade nu */}
             <StatCard
               accent="bg-emerald-100 dark:bg-emerald-900/40"
@@ -194,27 +194,6 @@ export default function LararePage() {
               icon={<Monitor className="w-5 h-5 text-sky-600 dark:text-sky-400" />}
               value={stats?.totalVisitors ?? "–"}
               label="Unika enheter"
-            />
-            {/* Uppgifter gjorda */}
-            <StatCard
-              accent="bg-amber-100 dark:bg-amber-900/40"
-              icon={<FileText className="w-5 h-5 text-amber-600 dark:text-amber-400" />}
-              value={stats?.totalTasks ?? "–"}
-              label="Uppgifter gjorda"
-            />
-            {/* Total tid */}
-            <StatCard
-              accent="bg-purple-100 dark:bg-purple-900/40"
-              icon={<Clock className="w-5 h-5 text-purple-600 dark:text-purple-400" />}
-              value={stats?.totalTime ?? "–"}
-              label="Total tid"
-            />
-            {/* Felaktiga svar */}
-            <StatCard
-              accent="bg-red-100 dark:bg-red-900/40"
-              icon={<XCircle className="w-5 h-5 text-red-600 dark:text-red-400" />}
-              value={stats?.totalErrors ?? "–"}
-              label="Felaktiga svar"
             />
           </div>
         </section>
