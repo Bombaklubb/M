@@ -85,13 +85,13 @@ export default function ReadingModulePage({ params }: Props) {
       const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
       if (student) {
+        const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
         const updated = saveModuleProgress(
           student, stage!.id, "reading", mod!.id, finalPts, passed
         );
         setStudent(updated);
 
         const gam = loadGamification();
-        const prevPoints = student.totalPoints;
         const newPoints = updated.totalPoints;
         const prevEx = gam.exercisesCompleted;
         const newEx = prevEx + 1;

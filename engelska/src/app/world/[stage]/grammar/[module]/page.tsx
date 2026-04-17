@@ -103,6 +103,7 @@ export default function GrammarModulePage({ params }: Props) {
       const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
       if (student) {
+        const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
         const updated = saveModuleProgress(
           student,
           stage!.id,
@@ -115,7 +116,6 @@ export default function GrammarModulePage({ params }: Props) {
 
         // ── Gamification ──────────────────────────────────────────────
         const gam = loadGamification();
-        const prevPoints = student.totalPoints;
         const newPoints = updated.totalPoints;
         const prevExercises = gam.exercisesCompleted;
         const newExercises = prevExercises + 1;
