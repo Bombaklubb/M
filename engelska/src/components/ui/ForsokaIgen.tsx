@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   getErrorBank,
   clearError,
@@ -8,6 +8,7 @@ import {
   type EngelErrorEntry,
 } from "@/lib/errorBank";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
+import { getPositiveFeedback } from "@/lib/feedback";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
 import ReadingQuestion from "@/components/exercises/ReadingQuestion";
@@ -35,6 +36,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
   const [answered, setAnswered] = useState(false);
   const [correct, setCorrect] = useState(false);
   const [exerciseKey, setExerciseKey] = useState(0);
+  const feedbackMsgRef = useRef("");
 
   const errors = getErrorBank(student.name, stageId);
   const currentEntry = repairSession[repairIdx];
@@ -73,6 +75,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
         currentEntry.exerciseData
       );
     }
+    if (isCorrect) feedbackMsgRef.current = getPositiveFeedback();
     setCorrect(isCorrect);
     setAnswered(true);
   }
@@ -268,7 +271,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
                   : "text-red-700 dark:text-red-300"
               }`}
             >
-              {correct ? "Rätt! Misstaget är borta!" : "Inte riktigt..."}
+              {correct ? `${feedbackMsgRef.current} Misstaget är borta! ✅` : "Inte riktigt..."}
             </p>
             {!correct && (
               <p className="text-red-600 dark:text-red-400 text-sm mt-1">

@@ -2,6 +2,7 @@
 
 import type { ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
+import { getModuleCompleteFeedback } from "@/lib/feedback";
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
@@ -48,7 +49,7 @@ export default function ResultModal({
         <div className="text-7xl mb-4 animate-bounce-slow">{passed ? "🎉" : "💪"}</div>
 
         <h2 className="text-3xl font-black text-indigo-900 dark:text-gray-100 mb-2">
-          {passed ? "Bra jobbat!" : "Försök igen!"}
+          {passed ? getModuleCompleteFeedback() : "Försök igen!"}
         </h2>
 
         <p className="text-indigo-400 dark:text-gray-400 mb-6 text-lg font-medium">
