@@ -26,6 +26,31 @@ const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string }> = {
   ord: { label: 'Ord & begrepp', emoji: '📖' },
 };
 
+// Varierade positiva kommentarer för korrekta svar
+const CORRECT_FEEDBACK = [
+  { text: 'Rätt!', emoji: '✅' },
+  { text: 'Helt rätt!', emoji: '🎯' },
+  { text: 'Snyggt!', emoji: '🌟' },
+  { text: 'Toppen!', emoji: '🔥' },
+  { text: 'Bra jobbat!', emoji: '👏' },
+  { text: 'Perfekt!', emoji: '💯' },
+  { text: 'Fantastiskt!', emoji: '✨' },
+  { text: 'Utmärkt!', emoji: '🏆' },
+  { text: 'Grattis!', emoji: '🎉' },
+  { text: 'Yes!', emoji: '💪' },
+  { text: 'Korrekt!', emoji: '👍' },
+  { text: 'Spot on!', emoji: '🎯' },
+  { text: 'Lysande!', emoji: '⭐' },
+  { text: 'Imponerande!', emoji: '🤩' },
+  { text: 'Bravo!', emoji: '👑' },
+];
+
+// Generera ett konsistent slumpmässigt index baserat på frågeindex
+const getCorrectFeedback = (questionIndex: number) => {
+  const index = (questionIndex * 7 + 3) % CORRECT_FEEDBACK.length;
+  return CORRECT_FEEDBACK[index];
+};
+
 export const ResultView: React.FC<ResultViewProps> = ({
   text,
   answers,
@@ -319,14 +344,21 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     )}>
                       <CardContent className="p-5">
                         <div className="flex items-start gap-3">
-                          <motion.span
-                            className="text-2xl"
+                          <motion.div
+                            className="flex flex-col items-center"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ type: "spring", delay: index * 0.1 + 0.2 }}
                           >
-                            {result.isCorrect ? '✅' : '❌'}
-                          </motion.span>
+                            <span className="text-2xl">
+                              {result.isCorrect ? getCorrectFeedback(index).emoji : '❌'}
+                            </span>
+                            {result.isCorrect && (
+                              <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+                                {getCorrectFeedback(index).text}
+                              </span>
+                            )}
+                          </motion.div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <span className={cn(
