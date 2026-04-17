@@ -241,7 +241,7 @@ function Test({
     next[idx] = { answered: true, correct, userAnswer };
     setStates(next);
     setShowExpl(true);
-    if (correct) { celebrationMsgRef.current = getCorrectFeedback(); setCelebration(true); setTimeout(() => setCelebration(false), 700); }
+    if (correct) { celebrationMsgRef.current = getCorrectFeedback(); setCelebration(true); setTimeout(() => setCelebration(false), 1800); }
   }
 
   function handleNext() {

@@ -113,7 +113,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     if (correct) {
       setCelebrationMsg(getCorrectFeedback());
       setShowCelebration(true);
-      setTimeout(() => setShowCelebration(false), 800);
+      setTimeout(() => setShowCelebration(false), 1800);
     }
   }
 
