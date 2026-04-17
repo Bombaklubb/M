@@ -8,6 +8,7 @@ import { loadStudent } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
 import { WORD_PAIRS, shuffle, makeOptions } from "@/lib/gameVocab";
+import { getPositiveFeedback } from "@/lib/feedback";
 
 const GAME_DURATION = 60;
 
@@ -46,6 +47,7 @@ function TidsattackGame({ stageId, stageName, student }: {
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
+  const [feedbackMsg, setFeedbackMsg] = useState("");
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const q = questions[idx];
@@ -77,6 +79,7 @@ function TidsattackGame({ stageId, stageName, student }: {
   const handleAnswer = useCallback((opt: string) => {
     if (feedback || !q) return;
     const ok = opt === q.en;
+    if (ok) setFeedbackMsg(getPositiveFeedback());
     setFeedback(ok ? "correct" : "wrong");
     if (ok) {
       const ns = streak + 1;
@@ -179,7 +182,7 @@ function TidsattackGame({ stageId, stageName, student }: {
               <p className="text-white text-2xl font-black">{q.sv}</p>
               {feedback && (
                 <p className={`text-lg font-black mt-2 ${feedback === "correct" ? "text-emerald-400" : "text-rose-400"}`}>
-                  {feedback === "correct" ? "✓ Rätt!" : `✗ Rätt svar: ${q.en}`}
+                  {feedback === "correct" ? `✓ ${feedbackMsg}` : `✗ Rätt svar: ${q.en}`}
                 </p>
               )}
             </div>

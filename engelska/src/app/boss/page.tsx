@@ -7,6 +7,7 @@ import Header from "@/components/ui/Header";
 import { loadStudent, saveStudent, loadGamification, saveGamification } from "@/lib/storage";
 import { BOSS_QUESTIONS, CHEST_META, getBadge } from "@/lib/gamification";
 import type { StudentData, GamificationData, Chest } from "@/lib/types";
+import { getPositiveFeedback } from "@/lib/feedback";
 
 const BOSS_BONUS_POINTS = 150;
 const PASS_THRESHOLD = 0.6; // 60% to win
@@ -35,6 +36,7 @@ export default function BossPage() {
   const [results, setResults] = useState<boolean[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
   const [confirmed, setConfirmed] = useState(false);
+  const [feedbackMsg, setFeedbackMsg] = useState("");
 
   useEffect(() => {
     const s = loadStudent();
@@ -62,6 +64,7 @@ export default function BossPage() {
 
     setTimeout(() => {
       const correct = selected === currentQ.correctIndex;
+      if (correct) setFeedbackMsg(getPositiveFeedback());
       const newResults = [...results, correct];
 
       if (currentIndex + 1 >= questions.length) {
@@ -345,7 +348,7 @@ export default function BossPage() {
                   ? "bg-green-100 text-green-700 border-2 border-green-300"
                   : "bg-red-100 text-red-700 border-2 border-red-300"
               }`}>
-                {isCorrect ? "✓ Rätt!" : `✗ Fel! Rätt svar: ${currentQ.options[currentQ.correctIndex]}`}
+                {isCorrect ? `✓ ${feedbackMsg}` : `✗ Fel! Rätt svar: ${currentQ.options[currentQ.correctIndex]}`}
               </div>
             )}
           </div>

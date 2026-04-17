@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import type { FillInBlankExercise } from "@/lib/types";
+import { getPositiveFeedback } from "@/lib/feedback";
 
 interface Props {
   exercise: FillInBlankExercise;
@@ -13,6 +14,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
   const [input, setInput] = useState("");
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
   const [showHint, setShowHint] = useState(false);
+  const [feedbackMsg, setFeedbackMsg] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   const parts = exercise.sentence.split("___");
@@ -29,6 +31,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
     const expected = normalizeAnswer(exercise.answer);
     const alternatives = (exercise.alternativeAnswers ?? []).map(normalizeAnswer);
     const correct = given === expected || alternatives.includes(given);
+    if (correct) setFeedbackMsg(getPositiveFeedback());
     setState(correct ? "correct" : "wrong");
   }
 
@@ -126,7 +129,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
           }`}
         >
           <p className="font-semibold">
-            {state === "correct" ? "✓ Rätt!" : `✗ Fel. Rätt svar: "${exercise.answer}"`}
+            {state === "correct" ? `✓ ${feedbackMsg}` : `✗ Fel. Rätt svar: "${exercise.answer}"`}
           </p>
           {exercise.explanation && (
             <p className="text-sm mt-1 opacity-80">💡 {exercise.explanation}</p>
