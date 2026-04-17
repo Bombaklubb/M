@@ -222,12 +222,12 @@ export default function ModuleCard({
         gradientColor={`${beamColors[0]}18`}
         className={`h-full rounded-3xl border-3 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
           progress?.completed
-            ? `${stage.borderClass} bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-950/30 dark:to-green-950/20`
+            ? `${stage.borderClass} bg-white dark:bg-gray-800`
             : "bg-white dark:bg-gray-800 border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
         }`}
         style={{
           boxShadow: progress?.completed
-            ? "0 5px 0 0 rgba(34, 197, 94, 0.3), 0 8px 16px -4px rgba(34, 197, 94, 0.2)"
+            ? "0 5px 0 0 rgba(34, 197, 94, 0.2), 0 8px 16px -4px rgba(34, 197, 94, 0.1)"
             : "0 4px 0 0 rgba(99, 102, 241, 0.15), 0 8px 16px -4px rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
         } as React.CSSProperties}
       >
