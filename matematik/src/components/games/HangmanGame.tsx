@@ -1,8 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useApp } from '../../contexts/AppContext';
 import { WORLDS, WorldId } from '../../data/worlds';
 import { recordGameSession, loadGameProgress } from '../../utils/gameStorage';
+import { getCorrectFeedback } from '../../utils/feedback';
 import AppHeader from '../AppHeader';
 
 // ── Word lists per world ──────────────────────────────────────────────────────
@@ -86,6 +87,10 @@ export default function HangmanGame() {
 
   // Trigger win/loss transitions
   const currentPhase = isWon ? 'won' : isLost ? 'lost' : 'playing';
+  const winMsgRef = useRef('');
+  useEffect(() => {
+    if (isWon) winMsgRef.current = getCorrectFeedback();
+  }, [isWon]);
 
   const handleGuess = useCallback((letter: string) => {
     if (guessed.has(letter) || currentPhase !== 'playing') return;
@@ -215,7 +220,7 @@ export default function HangmanGame() {
             >
               <p className="text-3xl mb-1">{currentPhase === 'won' ? '🎉' : '😵'}</p>
               <p className="font-black text-white text-lg mb-1">
-                {currentPhase === 'won' ? 'Rätt! Snyggt jobbat!' : 'Rätt svar var:'}
+                {currentPhase === 'won' ? winMsgRef.current : 'Rätt svar var:'}
               </p>
               {currentPhase === 'lost' && (
                 <p className="text-2xl font-black text-red-300 mb-1">{word}</p>

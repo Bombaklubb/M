@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { getCorrectFeedback } from '../utils/feedback';
 import { useApp } from '../contexts/AppContext';
 import { WORLDS, WorldId } from '../data/worlds';
 import { Quest, getQuestsForWorld } from '../data/quests';
@@ -25,6 +26,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const [input, setInput] = useState('');
   const [answered, setAnswered] = useState(false);
   const [correct, setCorrect] = useState(false);
+  const feedbackMsgRef = useRef('');
   const [correctCount, setCorrectCount] = useState(0);
   const [newItem, setNewItem] = useState<string | null>(null);
 
@@ -67,7 +69,10 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     }
     setAnswered(true);
     setCorrect(isCorrect);
-    if (isCorrect) setCorrectCount(c => c + 1);
+    if (isCorrect) {
+      feedbackMsgRef.current = getCorrectFeedback();
+      setCorrectCount(c => c + 1);
+    }
   }
 
   function nextStep() {
@@ -260,7 +265,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
           {answered && (
             <div className={`rounded-2xl p-4 mt-3 ${correct ? 'bg-green-500/20 border border-green-500/40' : 'bg-red-500/20 border border-red-500/40'}`}>
               <p className={`font-black text-lg mb-1 ${correct ? 'text-green-400' : 'text-red-400'}`}>
-                {correct ? `${currentStep.rewardEmoji} Rätt!` : '❌ Inte riktigt...'}
+                {correct ? feedbackMsgRef.current : '❌ Inte riktigt...'}
               </p>
               <p className={`text-sm ${correct ? 'text-green-300' : 'text-red-300'}`}>{currentStep.explanation}</p>
             </div>

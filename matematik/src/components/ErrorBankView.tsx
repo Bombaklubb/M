@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { getCorrectFeedback } from '../utils/feedback';
 import { useApp } from '../contexts/AppContext';
 import { getErrorBank, clearError, ErrorEntry } from '../utils/errorBank';
 import { TOPICS } from '../data/topics';
@@ -20,6 +21,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
   const [input, setInput] = useState('');
   const [answered, setAnswered] = useState(false);
   const [correct, setCorrect] = useState(false);
+  const feedbackMsgRef = useRef('');
   // Use a counter to force re-read of localStorage after changes
   const [version, setVersion] = useState(0);
 
@@ -67,6 +69,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
           activeEntry.correctAnswer, ans
         );
       }
+      if (isCorrect) feedbackMsgRef.current = getCorrectFeedback();
       setCorrect(isCorrect);
       setAnswered(true);
     }
@@ -148,7 +151,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
             {answered && (
               <div className={`rounded-2xl p-4 mt-3 ${correct ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
                 <p className={`font-black text-lg mb-1 ${correct ? 'text-green-700' : 'text-red-700'}`}>
-                  {correct ? '🎉 Rätt! Uppgiften är borta!' : '❌ Inte riktigt — uppgiften finns kvar.'}
+                  {correct ? `${feedbackMsgRef.current} Uppgiften är borta!` : '❌ Inte riktigt — uppgiften finns kvar.'}
                 </p>
                 {ex && (ex as any).explanation && (
                   <p className={`text-sm ${correct ? 'text-green-600' : 'text-red-600'}`}>{(ex as any).explanation}</p>

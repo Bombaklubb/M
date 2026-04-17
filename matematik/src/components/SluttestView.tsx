@@ -9,6 +9,7 @@ import { TOPICS } from '../data/topics';
 import { recordError } from '../utils/errorBank';
 import { updateAdaptive } from '../utils/adaptive';
 import AppHeader from './AppHeader';
+import { getCorrectFeedback } from '../utils/feedback';
 import InteractiveClock from './InteractiveClock';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -205,6 +206,7 @@ function Test({
   const [input, setInput] = useState('');
   const [showExpl, setShowExpl] = useState(false);
   const [celebration, setCelebration] = useState(false);
+  const celebrationMsgRef = useRef('');
   const inputRef = useRef<HTMLInputElement>(null);
   const startRef = useRef(Date.now());
 
@@ -239,7 +241,7 @@ function Test({
     next[idx] = { answered: true, correct, userAnswer };
     setStates(next);
     setShowExpl(true);
-    if (correct) { setCelebration(true); setTimeout(() => setCelebration(false), 700); }
+    if (correct) { celebrationMsgRef.current = getCorrectFeedback(); setCelebration(true); setTimeout(() => setCelebration(false), 700); }
   }
 
   function handleNext() {
@@ -379,7 +381,7 @@ function Test({
 
           {showExpl && state.correct && (
             <div className="mt-4 rounded-2xl px-4 py-3 bg-emerald-500/20 border border-emerald-400/40 animate-fade-in">
-              <p className="text-emerald-300 font-black">🎉 Rätt! Bra jobbat!</p>
+              <p className="text-emerald-300 font-black">{celebrationMsgRef.current}</p>
             </div>
           )}
           {showExpl && !state.correct && (
