@@ -41,14 +41,14 @@ export default function RootLayout({
         <div className="fixed bottom-2 left-3 z-40 select-none">
           <a
             href="mailto:martin.akdogan@enkoping.se"
-            className="text-sm font-medium text-white/80 dark:text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] hover:text-white dark:hover:text-white transition-colors"
+            className="text-xs font-medium bg-black/5 dark:bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-colors"
           >
             Kontakt: martin.akdogan@enkoping.se
           </a>
         </div>
         {/* Signatur – höger nedre hörn */}
         <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-          <span className="text-sm font-medium text-white/80 dark:text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
+          <span className="text-xs font-medium bg-black/5 dark:bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 text-gray-500 dark:text-gray-400">
             Engelskajakten av Martin Akdogan
           </span>
         </div>

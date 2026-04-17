@@ -3743,6 +3743,204 @@
       ]
     },
     {
+      "id": "lag-frageord",
+      "title": "Frågeord",
+      "description": "Lär dig de viktigaste frågeorden: who, what, where, when, why, how.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🔑 De sex viktigaste frågeorden: Who (Vem) · What (Vad) · Where (Var/Vart) · When (När) · Why (Varför) · How (Hur)",
+        "WHO – frågar om en PERSON. 'Who is that?' = Vem är det?",
+        "WHAT – frågar om en SAK. 'What is this?' = Vad är det här?",
+        "WHERE – frågar om en PLATS. 'Where is the cat?' = Var är katten?",
+        "WHEN – frågar om en TID. 'When is your birthday?' = När är din födelsedag?",
+        "WHY – frågar om en ORSAK. 'Why are you sad?' = Varför är du ledsen?",
+        "HOW – frågar om ett SÄTT. 'How are you?' = Hur mår du?"
+      ],
+      "exercises": [
+        {
+          "id": "lag-frag-1",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ is that girl? – She is my sister.'",
+          "options": [
+            "Where",
+            "Who",
+            "What",
+            "When"
+          ],
+          "correctIndex": 1,
+          "explanation": "Who frågar om en person. Who is that girl? = Vem är den tjejen?"
+        },
+        {
+          "id": "lag-frag-2",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ is in your bag? – My lunch box.'",
+          "options": [
+            "Who",
+            "When",
+            "What",
+            "Where"
+          ],
+          "correctIndex": 2,
+          "explanation": "What frågar om en sak. What is in your bag? = Vad är i din väska?"
+        },
+        {
+          "id": "lag-frag-3",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ do you live? – I live in Sweden.'",
+          "options": [
+            "Why",
+            "Who",
+            "When",
+            "Where"
+          ],
+          "correctIndex": 3,
+          "explanation": "Where frågar om en plats. Where do you live? = Var bor du?"
+        },
+        {
+          "id": "lag-frag-4",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ is your birthday? – In March.'",
+          "options": [
+            "How",
+            "Where",
+            "When",
+            "What"
+          ],
+          "correctIndex": 2,
+          "explanation": "When frågar om en tid. When is your birthday? = När är din födelsedag?"
+        },
+        {
+          "id": "lag-frag-5",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ are you crying? – Because I fell down.'",
+          "options": [
+            "When",
+            "Why",
+            "Where",
+            "Who"
+          ],
+          "correctIndex": 1,
+          "explanation": "Why frågar om en orsak. Why are you crying? = Varför gråter du?"
+        },
+        {
+          "id": "lag-frag-6",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ do you come to school? – By bus.'",
+          "options": [
+            "What",
+            "Where",
+            "When",
+            "How"
+          ],
+          "correctIndex": 3,
+          "explanation": "How frågar om sättet. How do you come to school? = Hur kommer du till skolan?"
+        },
+        {
+          "id": "lag-frag-7",
+          "type": "fill-in-blank",
+          "sentence": "___ is your best friend? – My best friend is Emma.",
+          "answer": "Who",
+          "hint": "Frågar om en person (Vem).",
+          "explanation": "Who = Vem. Who is your best friend? = Vem är din bästa vän?"
+        },
+        {
+          "id": "lag-frag-8",
+          "type": "fill-in-blank",
+          "sentence": "___ colour is your pencil case? – It is blue.",
+          "answer": "What",
+          "hint": "Frågar om en sak eller egenskap (Vad).",
+          "explanation": "What = Vad. What colour is your pencil case? = Vad har pennfodret för färg?"
+        },
+        {
+          "id": "lag-frag-9",
+          "type": "fill-in-blank",
+          "sentence": "___ is the toilet? – It is down the corridor.",
+          "answer": "Where",
+          "hint": "Frågar om en plats (Var).",
+          "explanation": "Where = Var. Where is the toilet? = Var är toaletten?"
+        },
+        {
+          "id": "lag-frag-10",
+          "type": "fill-in-blank",
+          "sentence": "___ do we have PE? – On Mondays and Thursdays.",
+          "answer": "When",
+          "hint": "Frågar om en tid (När).",
+          "explanation": "When = När. When do we have PE? = När har vi idrott?"
+        },
+        {
+          "id": "lag-frag-11",
+          "type": "fill-in-blank",
+          "sentence": "___ is the sky blue? – Because of sunlight.",
+          "answer": "Why",
+          "hint": "Frågar om en orsak (Varför).",
+          "explanation": "Why = Varför. Why is the sky blue? = Varför är himlen blå?"
+        },
+        {
+          "id": "lag-frag-12",
+          "type": "fill-in-blank",
+          "sentence": "___ are you? – I am fine, thank you!",
+          "answer": "How",
+          "hint": "Frågar om mående eller sätt (Hur).",
+          "explanation": "How = Hur. How are you? = Hur mår du?"
+        },
+        {
+          "id": "lag-frag-13",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Var bor du?'",
+          "words": [
+            "Where",
+            "do",
+            "you",
+            "live",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "Where do you live? = Var bor du?"
+        },
+        {
+          "id": "lag-frag-14",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ are your shoes? – Under the bed.'",
+          "options": [
+            "When",
+            "Who",
+            "How",
+            "Where"
+          ],
+          "correctIndex": 3,
+          "explanation": "Where frågar om plats. Where are your shoes? = Var är dina skor?"
+        },
+        {
+          "id": "lag-frag-15",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Vad heter du?'",
+          "words": [
+            "What",
+            "is",
+            "your",
+            "name",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "What is your name? = Vad heter du? (Vad är ditt namn?)"
+        }
+      ]
+    },
+    {
       "id": "lag-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
@@ -5190,70 +5388,120 @@
         {
           "id": "lag-spel-1-q1",
           "question": "Vad heter 'katt' på engelska?",
-          "options": ["dog", "cat", "bird", "fish"],
+          "options": [
+            "dog",
+            "cat",
+            "bird",
+            "fish"
+          ],
           "correctIndex": 1,
           "explanation": "'Cat' betyder katt på engelska."
         },
         {
           "id": "lag-spel-1-q2",
           "question": "Vad heter 'hund' på engelska?",
-          "options": ["cat", "horse", "dog", "cow"],
+          "options": [
+            "cat",
+            "horse",
+            "dog",
+            "cow"
+          ],
           "correctIndex": 2,
           "explanation": "'Dog' betyder hund på engelska."
         },
         {
           "id": "lag-spel-1-q3",
           "question": "Vad heter 'fågel' på engelska?",
-          "options": ["fish", "bird", "frog", "rabbit"],
+          "options": [
+            "fish",
+            "bird",
+            "frog",
+            "rabbit"
+          ],
           "correctIndex": 1,
           "explanation": "'Bird' betyder fågel på engelska."
         },
         {
           "id": "lag-spel-1-q4",
           "question": "Vad heter 'fisk' på engelska?",
-          "options": ["fish", "frog", "fox", "fly"],
+          "options": [
+            "fish",
+            "frog",
+            "fox",
+            "fly"
+          ],
           "correctIndex": 0,
           "explanation": "'Fish' betyder fisk på engelska."
         },
         {
           "id": "lag-spel-1-q5",
           "question": "Vad heter 'häst' på engelska?",
-          "options": ["hen", "horse", "hare", "hippo"],
+          "options": [
+            "hen",
+            "horse",
+            "hare",
+            "hippo"
+          ],
           "correctIndex": 1,
           "explanation": "'Horse' betyder häst på engelska."
         },
         {
           "id": "lag-spel-1-q6",
           "question": "Vad heter 'ko' på engelska?",
-          "options": ["cat", "crab", "cow", "crane"],
+          "options": [
+            "cat",
+            "crab",
+            "cow",
+            "crane"
+          ],
           "correctIndex": 2,
           "explanation": "'Cow' betyder ko på engelska."
         },
         {
           "id": "lag-spel-1-q7",
           "question": "Vad heter 'kanin' på engelska?",
-          "options": ["rat", "rabbit", "raccoon", "robin"],
+          "options": [
+            "rat",
+            "rabbit",
+            "raccoon",
+            "robin"
+          ],
           "correctIndex": 1,
           "explanation": "'Rabbit' betyder kanin på engelska."
         },
         {
           "id": "lag-spel-1-q8",
           "question": "Vad heter 'orm' på engelska?",
-          "options": ["shark", "snail", "snake", "spider"],
+          "options": [
+            "shark",
+            "snail",
+            "snake",
+            "spider"
+          ],
           "correctIndex": 2,
           "explanation": "'Snake' betyder orm på engelska."
         },
         {
           "id": "lag-spel-1-q9",
           "question": "Vad heter 'lejon' på engelska?",
-          "options": ["leopard", "lion", "lizard", "llama"],
+          "options": [
+            "leopard",
+            "lion",
+            "lizard",
+            "llama"
+          ],
           "correctIndex": 1,
           "explanation": "'Lion' betyder lejon på engelska."
         },
         {
           "id": "lag-spel-1-q10",
           "question": "Vad heter 'elefant' på engelska?",
-          "options": ["eagle", "eel", "elephant", "elk"],
+          "options": [
+            "eagle",
+            "eel",
+            "elephant",
+            "elk"
+          ],
           "correctIndex": 2,
           "explanation": "'Elephant' betyder elefant på engelska."
         }
@@ -5270,70 +5518,120 @@
         {
           "id": "lag-spel-2-q1",
           "question": "Vad heter 'röd' på engelska?",
-          "options": ["blue", "green", "red", "yellow"],
+          "options": [
+            "blue",
+            "green",
+            "red",
+            "yellow"
+          ],
           "correctIndex": 2,
           "explanation": "'Red' betyder röd på engelska."
         },
         {
           "id": "lag-spel-2-q2",
           "question": "Vad heter 'blå' på engelska?",
-          "options": ["black", "blue", "brown", "beige"],
+          "options": [
+            "black",
+            "blue",
+            "brown",
+            "beige"
+          ],
           "correctIndex": 1,
           "explanation": "'Blue' betyder blå på engelska."
         },
         {
           "id": "lag-spel-2-q3",
           "question": "Vad heter 'gul' på engelska?",
-          "options": ["yellow", "orange", "green", "white"],
+          "options": [
+            "yellow",
+            "orange",
+            "green",
+            "white"
+          ],
           "correctIndex": 0,
           "explanation": "'Yellow' betyder gul på engelska."
         },
         {
           "id": "lag-spel-2-q4",
           "question": "Vad heter 'grön' på engelska?",
-          "options": ["grey", "gold", "green", "grape"],
+          "options": [
+            "grey",
+            "gold",
+            "green",
+            "grape"
+          ],
           "correctIndex": 2,
           "explanation": "'Green' betyder grön på engelska."
         },
         {
           "id": "lag-spel-2-q5",
           "question": "Vad heter 'svart' på engelska?",
-          "options": ["silver", "black", "brown", "blue"],
+          "options": [
+            "silver",
+            "black",
+            "brown",
+            "blue"
+          ],
           "correctIndex": 1,
           "explanation": "'Black' betyder svart på engelska."
         },
         {
           "id": "lag-spel-2-q6",
           "question": "Vad heter 'vit' på engelska?",
-          "options": ["violet", "white", "wine", "wheat"],
+          "options": [
+            "violet",
+            "white",
+            "wine",
+            "wheat"
+          ],
           "correctIndex": 1,
           "explanation": "'White' betyder vit på engelska."
         },
         {
           "id": "lag-spel-2-q7",
           "question": "Vad heter 'rosa' på engelska?",
-          "options": ["purple", "peach", "pink", "plum"],
+          "options": [
+            "purple",
+            "peach",
+            "pink",
+            "plum"
+          ],
           "correctIndex": 2,
           "explanation": "'Pink' betyder rosa på engelska."
         },
         {
           "id": "lag-spel-2-q8",
           "question": "Vad heter 'orange' på engelska?",
-          "options": ["olive", "orange", "ochre", "onyx"],
+          "options": [
+            "olive",
+            "orange",
+            "ochre",
+            "onyx"
+          ],
           "correctIndex": 1,
           "explanation": "'Orange' är samma ord på engelska!"
         },
         {
           "id": "lag-spel-2-q9",
           "question": "Vad heter 'lila' på engelska?",
-          "options": ["lilac", "purple", "plum", "pink"],
+          "options": [
+            "lilac",
+            "purple",
+            "plum",
+            "pink"
+          ],
           "correctIndex": 1,
           "explanation": "'Purple' eller 'violet' betyder lila på engelska."
         },
         {
           "id": "lag-spel-2-q10",
           "question": "Vad heter 'brun' på engelska?",
-          "options": ["black", "blue", "beige", "brown"],
+          "options": [
+            "black",
+            "blue",
+            "beige",
+            "brown"
+          ],
           "correctIndex": 3,
           "explanation": "'Brown' betyder brun på engelska."
         }

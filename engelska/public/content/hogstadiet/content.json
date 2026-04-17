@@ -3766,6 +3766,205 @@
       ]
     },
     {
+      "id": "hog-g-frageord",
+      "title": "Frågeord",
+      "description": "Avancerade frågeord och indirekta frågor.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🔑 Frågeordsordning i direkta frågor: frågeord + hjälpverb + subjekt + huvudverb. 'Where did she go?'",
+        "INDIREKTA FRÅGOR byter ordning: no hjälpverb + subjekt + verb. 'Do you know where she went?' (NOT 'where did she go')",
+        "WHAT vs WHICH: What = öppen fråga om vad som helst. Which = val mellan specifika alternativ. 'What film?' (öppet) vs 'Which of these films?' (begränsat val)",
+        "WHOSE frågar om ägande och kan stå ensamt eller följas av ett substantiv. 'Whose is this?' / 'Whose car is this?'",
+        "HOW + adjektiv/adverb: How long have you studied? · How often does she call? · To what extent...?"
+      ],
+      "exercises": [
+        {
+          "id": "hog-frag-1",
+          "type": "multiple-choice",
+          "question": "Vilken mening är grammatiskt korrekt?",
+          "options": [
+            "Do you know where is she?",
+            "Do you know where she is?",
+            "Do you know where does she live?",
+            "Do you know where is she from?"
+          ],
+          "correctIndex": 1,
+          "explanation": "I indirekta frågor används vanlig ordföljd (subjekt + verb), inte frågeordföljd. 'Do you know where she is?' är rätt."
+        },
+        {
+          "id": "hog-frag-2",
+          "type": "fill-in-blank",
+          "sentence": "Can you tell me ___ the meeting starts?",
+          "answer": "when",
+          "hint": "Indirekt fråga – vanlig ordföljd efter frågeordet.",
+          "explanation": "Can you tell me when the meeting starts? Indirekt fråga: frågeord + subjekt + verb (ingen inversion)."
+        },
+        {
+          "id": "hog-frag-3",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ extent does social media influence teenagers?'",
+          "options": [
+            "To what",
+            "To which",
+            "To how",
+            "To whose"
+          ],
+          "correctIndex": 0,
+          "explanation": "'To what extent' = I vilken utsträckning. Detta är ett formellt uttryck för att fråga om grad/nivå."
+        },
+        {
+          "id": "hog-frag-4",
+          "type": "fill-in-blank",
+          "sentence": "Do you know ___ invented the telephone?",
+          "answer": "who",
+          "hint": "Frågar om en person i en indirekt fråga.",
+          "explanation": "Do you know who invented the telephone? = Vet du vem som uppfann telefonen? (Indirekt fråga, ingen inversion)"
+        },
+        {
+          "id": "hog-frag-5",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar bäst? '___ of these arguments do you find most convincing?'",
+          "options": [
+            "What",
+            "How",
+            "Which",
+            "Whose"
+          ],
+          "correctIndex": 2,
+          "explanation": "Which används när vi väljer bland ett begränsat antal alternativ ('these arguments'). Which of these = Vilken av dessa."
+        },
+        {
+          "id": "hog-frag-6",
+          "type": "fill-in-blank",
+          "sentence": "She asked me ___ I was planning to do after school.",
+          "answer": "what",
+          "hint": "Indirekt fråga efter 'asked me'.",
+          "explanation": "She asked me what I was planning to do. Indirekt fråga: what + subjekt + verb."
+        },
+        {
+          "id": "hog-frag-7",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Varför kom hon inte till skolan?'",
+          "words": [
+            "Why",
+            "didn't",
+            "she",
+            "come",
+            "to",
+            "school",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "Why didn't she come to school? = Varför kom hon inte till skolan? Direkta frågor: frågeord + hjälpverb + subjekt."
+        },
+        {
+          "id": "hog-frag-8",
+          "type": "multiple-choice",
+          "question": "Vilken fråga är korrekt?",
+          "options": [
+            "Could you explain how does this process work?",
+            "Could you explain how this process works?",
+            "Could you explain how this process work?",
+            "Could you explain how work this process?"
+          ],
+          "correctIndex": 1,
+          "explanation": "Indirekt fråga efter 'explain': how + subjekt + verb (no inversion). 'Could you explain how this process works?'"
+        },
+        {
+          "id": "hog-frag-9",
+          "type": "fill-in-blank",
+          "sentence": "___ long have you been studying English?",
+          "answer": "How",
+          "hint": "How + long frågar om varaktighet (Hur länge).",
+          "explanation": "How long have you been studying English? = Hur länge har du studerat engelska? (Nuvarande perfekt kontinuerlig)"
+        },
+        {
+          "id": "hog-frag-10",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Hur länge har du studerat engelska?'",
+          "words": [
+            "How",
+            "long",
+            "have",
+            "you",
+            "studied",
+            "English",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "How long have you studied English? = Hur länge har du studerat engelska?"
+        },
+        {
+          "id": "hog-frag-11",
+          "type": "fill-in-blank",
+          "sentence": "I wonder ___ she decided to move abroad.",
+          "answer": "why",
+          "hint": "Indirekt fråga om orsak med 'I wonder'.",
+          "explanation": "I wonder why she decided to move abroad. = Jag undrar varför hon bestämde sig för att flytta utomlands."
+        },
+        {
+          "id": "hog-frag-12",
+          "type": "multiple-choice",
+          "question": "Vilken mening är korrekt?",
+          "options": [
+            "I don't know what time does the train leave.",
+            "I don't know what time the train leaves.",
+            "I don't know what time leaves the train.",
+            "I don't know at what time does the train leave."
+          ],
+          "correctIndex": 1,
+          "explanation": "Indirekt fråga: frågeord + subjekt + verb. 'I don't know what time the train leaves.' (ingen inversion)"
+        },
+        {
+          "id": "hog-frag-13",
+          "type": "fill-in-blank",
+          "sentence": "___ many times have you visited a foreign country?",
+          "answer": "How",
+          "hint": "How many + räkningsbara substantiv = Hur många.",
+          "explanation": "How many times = Hur många gånger. Frågar om antal tillfällen."
+        },
+        {
+          "id": "hog-frag-14",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ responsibility is it to ensure students' wellbeing?'",
+          "options": [
+            "Who",
+            "Which",
+            "What",
+            "Whose"
+          ],
+          "correctIndex": 3,
+          "explanation": "Whose frågar om ägande/ansvar. Whose responsibility = Vems ansvar."
+        },
+        {
+          "id": "hog-frag-15",
+          "type": "fill-in-blank",
+          "sentence": "Could you explain ___ you mean by that statement?",
+          "answer": "what",
+          "hint": "Indirekt fråga – frågar om en sak/innebörd.",
+          "explanation": "Could you explain what you mean by that? = Kan du förklara vad du menar med det? Indirekt fråga: what + subjekt + verb."
+        }
+      ]
+    },
+    {
       "id": "hog-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
@@ -5343,7 +5542,12 @@
         {
           "id": "hog-spel-1-q4",
           "question": "Vilket ord passar bäst? 'Despite ___ tired, she finished the race.'",
-          "options": ["be", "being", "been", "was"],
+          "options": [
+            "be",
+            "being",
+            "been",
+            "was"
+          ],
           "correctIndex": 1,
           "explanation": "Efter 'despite' + gerund: 'Despite being tired...'"
         },
@@ -5362,14 +5566,24 @@
         {
           "id": "hog-spel-1-q6",
           "question": "Vilket är korrekt? 'I wish I ___ taller.'",
-          "options": ["am", "was", "were", "will be"],
+          "options": [
+            "am",
+            "was",
+            "were",
+            "will be"
+          ],
           "correctIndex": 2,
           "explanation": "Efter 'I wish' används were (subjunctive) för alla pronomen."
         },
         {
           "id": "hog-spel-1-q7",
           "question": "Välj rätt: 'Not only ___ she speak French, but also Spanish.'",
-          "options": ["does", "do", "is", "has"],
+          "options": [
+            "does",
+            "do",
+            "is",
+            "has"
+          ],
           "correctIndex": 0,
           "explanation": "Inversion efter 'not only': 'Not only does she...'."
         },
@@ -5388,7 +5602,12 @@
         {
           "id": "hog-spel-1-q9",
           "question": "Välj korrekt relativ bisats: 'The book ___ I borrowed was interesting.'",
-          "options": ["who", "which", "what", "whom"],
+          "options": [
+            "who",
+            "which",
+            "what",
+            "whom"
+          ],
           "correctIndex": 1,
           "explanation": "'Which' används för saker. 'Who' används för personer."
         },
@@ -5417,70 +5636,120 @@
         {
           "id": "hog-spel-2-q1",
           "question": "Vad betyder 'ambiguous'?",
-          "options": ["tydlig", "tvetydig", "ambitiös", "annorlunda"],
+          "options": [
+            "tydlig",
+            "tvetydig",
+            "ambitiös",
+            "annorlunda"
+          ],
           "correctIndex": 1,
           "explanation": "'Ambiguous' betyder tvetydig – något kan tolkas på flera sätt."
         },
         {
           "id": "hog-spel-2-q2",
           "question": "Vad betyder 'inevitable'?",
-          "options": ["omöjlig", "oundviklig", "osynlig", "oförutsägbar"],
+          "options": [
+            "omöjlig",
+            "oundviklig",
+            "osynlig",
+            "oförutsägbar"
+          ],
           "correctIndex": 1,
           "explanation": "'Inevitable' betyder oundviklig – något som måste hända."
         },
         {
           "id": "hog-spel-2-q3",
           "question": "Vad betyder 'persevere'?",
-          "options": ["ge upp", "uthärda/kämpa vidare", "bevara", "förfölja"],
+          "options": [
+            "ge upp",
+            "uthärda/kämpa vidare",
+            "bevara",
+            "förfölja"
+          ],
           "correctIndex": 1,
           "explanation": "'Persevere' betyder kämpa vidare, hålla ut trots svårigheter."
         },
         {
           "id": "hog-spel-2-q4",
           "question": "Vad betyder 'eloquent'?",
-          "options": ["tystlåten", "vältalig", "elegant", "elak"],
+          "options": [
+            "tystlåten",
+            "vältalig",
+            "elegant",
+            "elak"
+          ],
           "correctIndex": 1,
           "explanation": "'Eloquent' betyder vältalig – att uttrycka sig skickligt."
         },
         {
           "id": "hog-spel-2-q5",
           "question": "Vad är synonymt med 'enormous'?",
-          "options": ["tiny", "ordinary", "huge", "narrow"],
+          "options": [
+            "tiny",
+            "ordinary",
+            "huge",
+            "narrow"
+          ],
           "correctIndex": 2,
           "explanation": "'Enormous' och 'huge' är synonymer – båda betyder enorm/jättestor."
         },
         {
           "id": "hog-spel-2-q6",
           "question": "Vad betyder 'collaborate'?",
-          "options": ["konkurrera", "samarbeta", "kommunicera", "kontrollera"],
+          "options": [
+            "konkurrera",
+            "samarbeta",
+            "kommunicera",
+            "kontrollera"
+          ],
           "correctIndex": 1,
           "explanation": "'Collaborate' betyder samarbeta."
         },
         {
           "id": "hog-spel-2-q7",
           "question": "Vad är motsatsen till 'vague'?",
-          "options": ["clear", "dark", "slow", "weak"],
+          "options": [
+            "clear",
+            "dark",
+            "slow",
+            "weak"
+          ],
           "correctIndex": 0,
           "explanation": "'Vague' = otydlig. Motsatsen är 'clear' = tydlig."
         },
         {
           "id": "hog-spel-2-q8",
           "question": "Vad betyder 'fluctuate'?",
-          "options": ["sjunka", "stiga", "variera upp och ner", "stagnera"],
+          "options": [
+            "sjunka",
+            "stiga",
+            "variera upp och ner",
+            "stagnera"
+          ],
           "correctIndex": 2,
           "explanation": "'Fluctuate' betyder variera/pendla upp och ner."
         },
         {
           "id": "hog-spel-2-q9",
           "question": "Välj rätt synonym till 'hostile':",
-          "options": ["friendly", "neutral", "aggressive", "passive"],
+          "options": [
+            "friendly",
+            "neutral",
+            "aggressive",
+            "passive"
+          ],
           "correctIndex": 2,
           "explanation": "'Hostile' = fientlig. Synonym: 'aggressive'."
         },
         {
           "id": "hog-spel-2-q10",
           "question": "Vad betyder 'sustain'?",
-          "options": ["förstöra", "uppehålla/underhålla", "ersätta", "minska"],
+          "options": [
+            "förstöra",
+            "uppehålla/underhålla",
+            "ersätta",
+            "minska"
+          ],
           "correctIndex": 1,
           "explanation": "'Sustain' betyder uppehålla, bibehålla eller stödja."
         }
