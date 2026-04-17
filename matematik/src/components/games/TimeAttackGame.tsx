@@ -4,6 +4,7 @@ import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, loadGameProgress } from '../../utils/gameStorage';
+import { getCorrectFeedback } from '../../utils/feedback';
 import { WORLDS } from '../../data/worlds';
 
 const GAME_DURATION = 60; // seconds
@@ -33,6 +34,7 @@ export default function TimeAttackGame() {
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null);
+  const feedbackMsgRef = useRef('');
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -130,6 +132,7 @@ export default function TimeAttackGame() {
     }
 
     setResults(r => [...r, isCorrect]);
+    if (isCorrect) feedbackMsgRef.current = getCorrectFeedback();
     setFeedback(isCorrect ? 'correct' : 'wrong');
 
     if (isCorrect) {
@@ -159,6 +162,7 @@ export default function TimeAttackGame() {
   const handleMCAnswer = (text: string, isCorrect: boolean) => {
     if (feedback) return;
     setResults(r => [...r, isCorrect]);
+    if (isCorrect) feedbackMsgRef.current = getCorrectFeedback();
     setFeedback(isCorrect ? 'correct' : 'wrong');
     if (isCorrect) {
       const newStreak = streak + 1;
@@ -408,7 +412,7 @@ export default function TimeAttackGame() {
               exit={{ opacity: 0 }}
               className={`text-center mt-3 text-lg font-black ${feedback === 'correct' ? 'text-emerald-400' : 'text-rose-400'}`}
             >
-              {feedback === 'correct' ? '✓ Rätt!' : 'Tyvärr, försök igen'}
+              {feedback === 'correct' ? feedbackMsgRef.current : 'Tyvärr, försök igen'}
             </motion.div>
           )}
         </AnimatePresence>

@@ -4,6 +4,7 @@ import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import { trackAnswer } from '../utils/analytics';
+import { getCorrectFeedback } from '../utils/feedback';
 import AppHeader from './AppHeader';
 import InteractiveClock from './InteractiveClock';
 import { Progress } from './ui/progress';
@@ -28,6 +29,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   const [newAchievements, setNewAchievements] = useState<string[]>([]);
   const [pointsGained, setPointsGained] = useState(0);
   const [showCelebration, setShowCelebration] = useState(false);
+  const [celebrationMsg, setCelebrationMsg] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   const exercise = topic.exercises[currentIdx];
@@ -109,6 +111,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     setStates(newStates);
 
     if (correct) {
+      setCelebrationMsg(getCorrectFeedback());
       setShowCelebration(true);
       setTimeout(() => setShowCelebration(false), 800);
     }
@@ -163,7 +166,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
         <div className="fixed inset-0 pointer-events-none flex items-center justify-center z-50">
           <div className="flex flex-col items-center gap-2 animate-bounce-in">
             <div className="text-8xl drop-shadow-[0_0_30px_rgba(251,191,36,0.9)]">⭐</div>
-            <div className="text-2xl font-black text-white drop-shadow-lg tracking-wide">Rätt!</div>
+            <div className="text-2xl font-black text-white drop-shadow-lg tracking-wide">{celebrationMsg}</div>
           </div>
         </div>
       )}
