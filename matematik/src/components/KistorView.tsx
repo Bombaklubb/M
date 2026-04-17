@@ -567,8 +567,8 @@ export default function KistorView() {
                     <p className="text-xs font-black text-orange-500 uppercase tracking-widest mb-2">Poäng-milstolpar</p>
                     <table style={{ borderCollapse: 'separate', borderSpacing: '0' }}>
                       <tbody>
-                        {row('/bronskista.png',   'Brons',   <><strong>Bronskista:</strong> 50 – 600 p</>)}
-                        {row('/silverkista.png',  'Silver',  <><strong>Silverkista:</strong> 300 – 2 000 p</>)}
+                        {row('/bronskista.png',   'Brons',   <><strong>Bronskista:</strong> 50 – 200 p</>)}
+                        {row('/silverkista.png',  'Silver',  <><strong>Silverkista:</strong> 300 – 750 p</>)}
                         {row('/guldkista.png',    'Guld',    <><strong>Guldkista:</strong> 1 000 – 2 500 p</>)}
                         {row('/rubinkista.png',   'Rubin',   <><strong>Rubinkista:</strong> 3 500 – 5 000 p</>)}
                         {row('/smaragdkista.png', 'Smaragd', <><strong>Smaragdkista:</strong> 7 000 – 10 000 p</>)}
@@ -581,7 +581,7 @@ export default function KistorView() {
                     <table style={{ borderCollapse: 'separate', borderSpacing: '0' }}>
                       <tbody>
                         {row('/bronskista.png',   'Brons',   <><strong>Bronskista:</strong> 1 – 10 kapitel</>)}
-                        {row('/silverkista.png',  'Silver',  <><strong>Silverkista:</strong> 15 – 40 kapitel</>)}
+                        {row('/silverkista.png',  'Silver',  <><strong>Silverkista:</strong> 15 – 20 kapitel</>)}
                         {row('/guldkista.png',    'Guld',    <><strong>Guldkista:</strong> 30 – 60 kapitel</>)}
                         {row('/rubinkista.png',   'Rubin',   <><strong>Rubinkista:</strong> 75 kapitel</>)}
                         {row('/smaragdkista.png', 'Smaragd', <><strong>Smaragdkista:</strong> 100 kapitel</>)}
