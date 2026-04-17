@@ -151,7 +151,7 @@ export default function TeacherView() {
                   accent="bg-indigo-100"
                   icon={<Users className="w-5 h-5 text-indigo-600" />}
                   value={liveStats.visitorsMonth}
-                  label="Enheter 30 dagar"
+                  label="Unika enheter totalt"
                 />
                 <StatCard
                   accent="bg-amber-100"
