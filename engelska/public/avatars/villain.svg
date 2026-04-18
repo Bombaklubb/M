@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Skurken">
+  
+  <circle cx="64" cy="64" r="62" fill="#3b0764"></circle>
+  <radialGradient id="vbg" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"></stop>
+    <stop offset="100%" stop-color="#3b0764" stop-opacity="0"></stop>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#vbg)"></circle>
+  
+  <path d="M20,20 L28,35 L22,35 L32,55" stroke="#fbbf24" stroke-width="1.5" fill="none" opacity="0.4"></path>
+  <path d="M100,15 L108,30 L102,30 L112,50" stroke="#fbbf24" stroke-width="1" fill="none" opacity="0.3"></path>
+  
+  <path d="M42,70 Q10,85 8,120 Q28,114 50,100 Q58,93 62,84Z" fill="#1c1917"></path>
+  <path d="M86,70 Q118,85 120,120 Q100,114 78,100 Q70,93 66,84Z" fill="#1c1917"></path>
+  
+  <path d="M44,72 Q16,87 14,116 Q32,110 52,98Z" fill="#6b21a8"></path>
+  <path d="M84,72 Q112,87 114,116 Q96,110 76,98Z" fill="#6b21a8"></path>
+  
+  <path d="M38,128 Q42,88 54,78 Q59,75 64,75 Q69,75 74,78 Q86,88 90,128Z" fill="#1c1917"></path>
+  
+  <path d="M52,80 Q64,76 76,80 L74,96 Q64,92 54,96Z" fill="#2e1065"></path>
+  
+  <polygon points="62,82 58,90 63,90 60,100 70,87 64,87 67,82" fill="#a855f7"></polygon>
+  
+  <rect x="46" y="96" width="36" height="7" rx="2" fill="#292524"></rect>
+  <circle cx="64" cy="99" r="4" fill="#6b21a8"></circle>
+  <circle cx="63" cy="97" r="1" fill="#1c1917"></circle>
+  <circle cx="65" cy="97" r="1" fill="#1c1917"></circle>
+  <path d="M61,100 Q64,102 67,100" stroke="#1c1917" stroke-width="1" fill="none"></path>
+  
+  <rect x="14" y="70" width="22" height="34" rx="8" fill="#1c1917"></rect>
+  <rect x="92" y="70" width="22" height="34" rx="8" fill="#1c1917"></rect>
+  
+  <polygon points="20,74 16,68 24,70" fill="#6b21a8"></polygon>
+  <polygon points="20,80 16,74 24,76" fill="#6b21a8"></polygon>
+  <polygon points="104,74 108,68 100,70" fill="#6b21a8"></polygon>
+  <polygon points="104,80 108,74 100,76" fill="#6b21a8"></polygon>
+  
+  <ellipse cx="25" cy="104" rx="12" ry="9" fill="#2e1065"></ellipse>
+  <ellipse cx="103" cy="104" rx="12" ry="9" fill="#2e1065"></ellipse>
+  <ellipse cx="25" cy="104" rx="8" ry="6" fill="#6b21a8" opacity="0.5"></ellipse>
+  <ellipse cx="103" cy="104" rx="8" ry="6" fill="#6b21a8" opacity="0.5"></ellipse>
+  
+  <rect x="57" y="62" width="14" height="16" rx="5" fill="#fbbf24"></rect>
+  
+  <ellipse cx="64" cy="50" rx="24" ry="26" fill="#fbbf24"></ellipse>
+  
+  <path d="M42,32 L38,16 L48,30Z" fill="#1c1917"></path>
+  <path d="M50,26 L50,10 L58,28Z" fill="#1c1917"></path>
+  <path d="M64,24 L66,8 L72,26Z" fill="#1c1917"></path>
+  <path d="M78,26 L82,10 L78,28Z" fill="#1c1917"></path>
+  <path d="M86,32 L90,16 L80,30Z" fill="#1c1917"></path>
+  <ellipse cx="64" cy="30" rx="24" ry="10" fill="#1c1917"></ellipse>
+  
+  <path d="M56,34 Q64,38 72,34 Q68,30 64,32 Q60,30 56,34Z" fill="#1c1917"></path>
+  
+  <path d="M38,42 Q52,38 64,40 Q76,38 90,42 L88,52 Q76,46 64,48 Q52,46 40,52Z" fill="#2e1065"></path>
+  
+  <ellipse cx="52" cy="47" rx="8" ry="6.5" fill="#fbbf24"></ellipse>
+  <ellipse cx="76" cy="47" rx="8" ry="6.5" fill="#fbbf24"></ellipse>
+  <circle cx="52" cy="47" r="5.5" fill="#a855f7"></circle>
+  <circle cx="76" cy="47" r="5.5" fill="#a855f7"></circle>
+  <circle cx="52" cy="47" r="3" fill="#111"></circle>
+  <circle cx="76" cy="47" r="3" fill="#111"></circle>
+  <circle cx="53" cy="45.5" r="1.5" fill="#e879f9" opacity="0.8"></circle>
+  <circle cx="77" cy="45.5" r="1.5" fill="#e879f9" opacity="0.8"></circle>
+  
+  <path d="M44,40 Q50,36 56,40" stroke="#1c1917" stroke-width="3" fill="none" stroke-linecap="round"></path>
+  <path d="M72,40 Q78,36 84,40" stroke="#1c1917" stroke-width="3" fill="none" stroke-linecap="round"></path>
+  
+  <path d="M62,53 Q64,58 66,53" fill="#f0b888" stroke="#d97706" stroke-width="0.5"></path>
+  
+  <path d="M54,62 Q60,70 74,64" stroke="#7c3aed" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+  <path d="M54,62 Q52,65 54,67" stroke="#7c3aed" stroke-width="1.5" fill="none"></path>
+  
+  <path d="M72,44 L76,56" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round" opacity="0.7"></path>
+</svg>
