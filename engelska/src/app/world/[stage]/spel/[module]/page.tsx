@@ -108,12 +108,14 @@ export default function SpelModulePage({ params }: Props) {
       const pointChests = chestsEarnedFromPoints(
         prevPoints,
         newPoints,
-        gam.pointsMilestonesRewarded
+        gam.pointsMilestonesRewarded,
+        gam.chests
       );
       const exChests = chestsEarnedFromExercises(
         prevEx,
         newEx,
-        gam.exerciseMilestonesRewarded
+        gam.exerciseMilestonesRewarded,
+        gam.chests
       );
       const allNewChests = [
         ...pointChests.map((c) => c.chest),
@@ -122,7 +124,7 @@ export default function SpelModulePage({ params }: Props) {
       const firstChest = allNewChests[0];
       const wasBossUnlocked = gam.bossUnlocked;
       const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
-      const mystery = rollMysteryBox(gam.badges);
+      const mystery = rollMysteryBox(gam.badges, newEx, gam.chests);
       const extraMysteryChest =
         mystery?.type === "chest" && mystery.chestType
           ? [
