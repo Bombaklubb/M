@@ -4146,6 +4146,407 @@
       ]
     },
     {
+      "id": "mel-synonymer",
+      "title": "Synonymer",
+      "description": "Träna på ord som betyder ungefär samma sak – på en mer avancerad nivå.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📖 En SYNONYM är ett ord som betyder ungefär samma sak som ett annat ord.",
+        "Exempel: 'angry' och 'furious' är synonymer – båda betyder arg (furious är starkare).",
+        "Exempel: 'tired' och 'exhausted' är synonymer – exhausted betyder extremt trött.",
+        "Tips: Synonymer kan ha lite olika styrka – 'big' och 'enormous' betyder båda stor, men enormous = jättestor!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-syn-1",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'angry'?",
+          "options": [
+            "happy",
+            "furious",
+            "calm",
+            "tired"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Angry' and 'furious' are synonyms – both mean arg (furious är starkare)."
+        },
+        {
+          "id": "mel-syn-2",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'tired'?",
+          "options": [
+            "awake",
+            "excited",
+            "exhausted",
+            "energetic"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Tired' and 'exhausted' are synonyms – exhausted means extremt trött."
+        },
+        {
+          "id": "mel-syn-3",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'beautiful'?",
+          "options": [
+            "ugly",
+            "strange",
+            "lovely",
+            "boring"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Beautiful' and 'lovely' are synonyms – both mean vacker/fin."
+        },
+        {
+          "id": "mel-syn-4",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'clever'?",
+          "options": [
+            "lazy",
+            "silly",
+            "weak",
+            "intelligent"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Clever' and 'intelligent' are synonyms – both mean klyftig/intelligent."
+        },
+        {
+          "id": "mel-syn-5",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'strange'?",
+          "options": [
+            "normal",
+            "usual",
+            "odd",
+            "common"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Strange' and 'odd' are synonyms – both mean konstig/märklig."
+        },
+        {
+          "id": "mel-syn-6",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'brave'?",
+          "options": [
+            "scared",
+            "weak",
+            "courageous",
+            "shy"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Brave' and 'courageous' are synonyms – both mean modig."
+        },
+        {
+          "id": "mel-syn-7",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'purchase'?",
+          "options": [
+            "sell",
+            "lose",
+            "give",
+            "buy"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Purchase' and 'buy' are synonyms – both mean köpa."
+        },
+        {
+          "id": "mel-syn-8",
+          "type": "fill-in-blank",
+          "sentence": "He was very angry. In other words, he was absolutely ___. (synonym, stronger feeling)",
+          "answer": "furious",
+          "explanation": "'Furious' is a stronger synonym for 'angry'."
+        },
+        {
+          "id": "mel-syn-9",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'glad'?",
+          "options": [
+            "sad",
+            "bored",
+            "pleased",
+            "angry"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Glad' and 'pleased' are synonyms – both mean glad/nöjd."
+        },
+        {
+          "id": "mel-syn-10",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'small'?",
+          "options": [
+            "huge",
+            "giant",
+            "big",
+            "tiny"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Small' and 'tiny' are synonyms – tiny means väldigt liten."
+        },
+        {
+          "id": "mel-syn-11",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'speak'?",
+          "options": [
+            "listen",
+            "hear",
+            "talk",
+            "read"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Speak' and 'talk' are synonyms – both mean prata/tala."
+        },
+        {
+          "id": "mel-syn-12",
+          "type": "fill-in-blank",
+          "sentence": "She was afraid of the dark. Another word for afraid is ___. (synonym)",
+          "answer": "scared",
+          "alternativeAnswers": [
+            "frightened"
+          ],
+          "explanation": "'Afraid', 'scared', and 'frightened' are all synonyms meaning rädd."
+        },
+        {
+          "id": "mel-syn-13",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'end'?",
+          "options": [
+            "start",
+            "begin",
+            "open",
+            "finish"
+          ],
+          "correctIndex": 3,
+          "explanation": "'End' and 'finish' are synonyms – both mean avsluta/sluta."
+        },
+        {
+          "id": "mel-syn-14",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'nice' (snäll/trevlig)?",
+          "options": [
+            "mean",
+            "rude",
+            "kind",
+            "strict"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Nice' and 'kind' are synonyms – both mean snäll/vänlig."
+        },
+        {
+          "id": "mel-syn-15",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'walk slowly and calmly'?",
+          "options": [
+            "sprint",
+            "run",
+            "stroll",
+            "march"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Stroll' means att promenera/gå lugnt. It is a synonym for a relaxed walk."
+        }
+      ]
+    },
+    {
+      "id": "mel-motsatsord",
+      "title": "Motsatsord",
+      "description": "Träna på motsatsord på en mellannivå – utöka ditt ordförråd!",
+      "icon": "↔️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "↔️ MOTSATSORD (antonymer) är ord som har motsatt betydelse.",
+        "Exempel: 'brave' ↔ 'cowardly' (modig ↔ feg)",
+        "Exempel: 'remember' ↔ 'forget' (komma ihåg ↔ glömma)",
+        "Tips: Lär dig ord i par – det är lättare att komma ihåg dem!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-mot-1",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'brave'?",
+          "options": [
+            "strong",
+            "cowardly",
+            "clever",
+            "happy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brave (modig) ↔ cowardly (feg)."
+        },
+        {
+          "id": "mel-mot-2",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'remember'?",
+          "options": [
+            "think",
+            "know",
+            "forget",
+            "learn"
+          ],
+          "correctIndex": 2,
+          "explanation": "Remember (komma ihåg) ↔ forget (glömma)."
+        },
+        {
+          "id": "mel-mot-3",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'ancient'?",
+          "options": [
+            "old",
+            "huge",
+            "modern",
+            "broken"
+          ],
+          "correctIndex": 2,
+          "explanation": "Ancient (fornlida/urgammal) ↔ modern (modern)."
+        },
+        {
+          "id": "mel-mot-4",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'dangerous'?",
+          "options": [
+            "wild",
+            "exciting",
+            "risky",
+            "safe"
+          ],
+          "correctIndex": 3,
+          "explanation": "Dangerous (farlig) ↔ safe (säker/trygg)."
+        },
+        {
+          "id": "mel-mot-5",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'generous'?",
+          "options": [
+            "kind",
+            "helpful",
+            "selfish",
+            "honest"
+          ],
+          "correctIndex": 2,
+          "explanation": "Generous (generös) ↔ selfish (självisk)."
+        },
+        {
+          "id": "mel-mot-6",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'success'?",
+          "options": [
+            "effort",
+            "failure",
+            "attempt",
+            "try"
+          ],
+          "correctIndex": 1,
+          "explanation": "Success (framgång) ↔ failure (misslyckande)."
+        },
+        {
+          "id": "mel-mot-7",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'include' is ___. (think: utesluta)",
+          "answer": "exclude",
+          "explanation": "Include (inkludera) ↔ exclude (exkludera/utesluta)."
+        },
+        {
+          "id": "mel-mot-8",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'arrive'?",
+          "options": [
+            "travel",
+            "visit",
+            "stay",
+            "depart"
+          ],
+          "correctIndex": 3,
+          "explanation": "Arrive (anlända) ↔ depart (avresa/lämna)."
+        },
+        {
+          "id": "mel-mot-9",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'victory'?",
+          "options": [
+            "battle",
+            "fight",
+            "defeat",
+            "score"
+          ],
+          "correctIndex": 2,
+          "explanation": "Victory (seger) ↔ defeat (förlust/nederlag)."
+        },
+        {
+          "id": "mel-mot-10",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'confident'?",
+          "options": [
+            "calm",
+            "loud",
+            "shy",
+            "proud"
+          ],
+          "correctIndex": 2,
+          "explanation": "Confident (säker/självsäker) ↔ shy (blyg/osäker)."
+        },
+        {
+          "id": "mel-mot-11",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'expand' is ___. (think: krympa)",
+          "answer": "shrink",
+          "explanation": "Expand (expandera/växa) ↔ shrink (krympa)."
+        },
+        {
+          "id": "mel-mot-12",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'reward'?",
+          "options": [
+            "praise",
+            "gift",
+            "punish",
+            "thank"
+          ],
+          "correctIndex": 2,
+          "explanation": "Reward (belöna) ↔ punish (bestraffa)."
+        },
+        {
+          "id": "mel-mot-13",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'curious'?",
+          "options": [
+            "excited",
+            "bored",
+            "interested",
+            "awake"
+          ],
+          "correctIndex": 1,
+          "explanation": "Curious (nyfiken) ↔ bored/indifferent (ointresserad/likgiltig)."
+        },
+        {
+          "id": "mel-mot-14",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'complicated'?",
+          "options": [
+            "hard",
+            "simple",
+            "difficult",
+            "tricky"
+          ],
+          "correctIndex": 1,
+          "explanation": "Complicated (komplicerad) ↔ simple (enkel/simpel)."
+        },
+        {
+          "id": "mel-mot-15",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'noisy'?",
+          "options": [
+            "loud",
+            "boring",
+            "quiet",
+            "busy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Noisy (bullrig/högljudd) ↔ quiet (tyst/lugn)."
+        }
+      ]
+    },
+    {
       "id": "mel-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",

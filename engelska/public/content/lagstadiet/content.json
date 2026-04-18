@@ -3941,6 +3941,404 @@
       ]
     },
     {
+      "id": "lag-synonymer",
+      "title": "Synonymer",
+      "description": "Lär dig ord som betyder ungefär samma sak på engelska.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📖 En SYNONYM är ett ord som betyder ungefär samma sak som ett annat ord.",
+        "Exempel: 'big' och 'large' är synonymer – båda betyder 'stor'.",
+        "Exempel: 'happy' och 'glad' är synonymer – båda betyder 'glad'.",
+        "Tips: Om du kan byta ut ett ord mot ett annat utan att meningen ändrar sig är de synonymer!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-syn-1",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'big'?",
+          "options": [
+            "small",
+            "large",
+            "fast",
+            "sad"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Big' and 'large' are synonyms – both mean stor."
+        },
+        {
+          "id": "lag-syn-2",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'happy'?",
+          "options": [
+            "angry",
+            "tired",
+            "glad",
+            "slow"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Happy' and 'glad' are synonyms – both mean glad."
+        },
+        {
+          "id": "lag-syn-3",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'fast'?",
+          "options": [
+            "slow",
+            "heavy",
+            "quick",
+            "tall"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Fast' and 'quick' are synonyms – both mean snabb."
+        },
+        {
+          "id": "lag-syn-4",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'small'?",
+          "options": [
+            "big",
+            "loud",
+            "little",
+            "mean"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Small' and 'little' are synonyms – both mean liten."
+        },
+        {
+          "id": "lag-syn-5",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'scared'?",
+          "options": [
+            "brave",
+            "funny",
+            "nice",
+            "frightened"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Scared' and 'frightened' are synonyms – both mean rädd."
+        },
+        {
+          "id": "lag-syn-6",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'start'?",
+          "options": [
+            "stop",
+            "begin",
+            "finish",
+            "wait"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Start' and 'begin' are synonyms – both mean börja."
+        },
+        {
+          "id": "lag-syn-7",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'smart'?",
+          "options": [
+            "silly",
+            "mean",
+            "clever",
+            "lazy"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Smart' and 'clever' are synonyms – both mean klyftig/smart."
+        },
+        {
+          "id": "lag-syn-8",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'tired'?",
+          "options": [
+            "awake",
+            "sleepy",
+            "fast",
+            "happy"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Tired' and 'sleepy' are synonyms – both mean trött."
+        },
+        {
+          "id": "lag-syn-9",
+          "type": "fill-in-blank",
+          "sentence": "The elephant is very big. You can also say the elephant is very ___. (synonym for big)",
+          "answer": "large",
+          "explanation": "'Large' is a synonym for 'big' – both mean stor."
+        },
+        {
+          "id": "lag-syn-10",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'angry'?",
+          "options": [
+            "happy",
+            "sad",
+            "mad",
+            "funny"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Angry' and 'mad' are synonyms – both mean arg."
+        },
+        {
+          "id": "lag-syn-11",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'pretty'?",
+          "options": [
+            "ugly",
+            "nice",
+            "beautiful",
+            "mean"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Pretty' and 'beautiful' are synonyms – both mean vacker."
+        },
+        {
+          "id": "lag-syn-12",
+          "type": "fill-in-blank",
+          "sentence": "She runs very fast. You can also say she runs very ___. (synonym for fast)",
+          "answer": "quick",
+          "explanation": "'Quick' is a synonym for 'fast' – both mean snabb."
+        },
+        {
+          "id": "lag-syn-13",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'look'?",
+          "options": [
+            "hear",
+            "touch",
+            "see",
+            "smell"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Look' and 'see' are synonyms – both mean se/titta."
+        },
+        {
+          "id": "lag-syn-14",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'thin'?",
+          "options": [
+            "fat",
+            "big",
+            "tall",
+            "slim"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Thin' and 'slim' are synonyms – both mean smal/tunn."
+        },
+        {
+          "id": "lag-syn-15",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'cold'?",
+          "options": [
+            "warm",
+            "hot",
+            "sunny",
+            "chilly"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Cold' and 'chilly' are synonyms – both mean kall."
+        }
+      ]
+    },
+    {
+      "id": "lag-motsatsord",
+      "title": "Motsatsord",
+      "description": "Lär dig ord som betyder motsatsen till varandra på engelska.",
+      "icon": "↔️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "↔️ Ett MOTSATSORD (antonym) är ett ord som betyder raka motsatsen till ett annat ord.",
+        "Exempel: 'big' ↔ 'small' (stor ↔ liten)",
+        "Exempel: 'hot' ↔ 'cold' (varm ↔ kall)",
+        "Exempel: 'day' ↔ 'night' (dag ↔ natt)"
+      ],
+      "exercises": [
+        {
+          "id": "lag-mot-1",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'hot'?",
+          "options": [
+            "warm",
+            "cold",
+            "sunny",
+            "fast"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hot (varm) ↔ cold (kall)."
+        },
+        {
+          "id": "lag-mot-2",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'big'?",
+          "options": [
+            "large",
+            "tall",
+            "small",
+            "heavy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Big (stor) ↔ small (liten)."
+        },
+        {
+          "id": "lag-mot-3",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'happy'?",
+          "options": [
+            "glad",
+            "tired",
+            "funny",
+            "sad"
+          ],
+          "correctIndex": 3,
+          "explanation": "Happy (glad) ↔ sad (ledsen)."
+        },
+        {
+          "id": "lag-mot-4",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'day'?",
+          "options": [
+            "morning",
+            "evening",
+            "night",
+            "noon"
+          ],
+          "correctIndex": 2,
+          "explanation": "Day (dag) ↔ night (natt)."
+        },
+        {
+          "id": "lag-mot-5",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'fast'?",
+          "options": [
+            "quick",
+            "small",
+            "loud",
+            "slow"
+          ],
+          "correctIndex": 3,
+          "explanation": "Fast (snabb) ↔ slow (långsam)."
+        },
+        {
+          "id": "lag-mot-6",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'up'?",
+          "options": [
+            "over",
+            "down",
+            "side",
+            "top"
+          ],
+          "correctIndex": 1,
+          "explanation": "Up (upp) ↔ down (ner)."
+        },
+        {
+          "id": "lag-mot-7",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'old' is ___. (think: ny/ung)",
+          "answer": "new",
+          "explanation": "Old (gammal) ↔ new (ny)."
+        },
+        {
+          "id": "lag-mot-8",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'light' (ljus)?",
+          "options": [
+            "bright",
+            "dark",
+            "sunny",
+            "white"
+          ],
+          "correctIndex": 1,
+          "explanation": "Light (ljus) ↔ dark (mörk)."
+        },
+        {
+          "id": "lag-mot-9",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'tall'?",
+          "options": [
+            "thin",
+            "fat",
+            "short",
+            "wide"
+          ],
+          "correctIndex": 2,
+          "explanation": "Tall (lång/hög) ↔ short (kort/låg)."
+        },
+        {
+          "id": "lag-mot-10",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'open'?",
+          "options": [
+            "empty",
+            "full",
+            "closed",
+            "broken"
+          ],
+          "correctIndex": 2,
+          "explanation": "Open (öppen) ↔ closed (stängd)."
+        },
+        {
+          "id": "lag-mot-11",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'loud' is ___. (think: tyst)",
+          "answer": "quiet",
+          "explanation": "Loud (högljudd) ↔ quiet (tyst/lugn)."
+        },
+        {
+          "id": "lag-mot-12",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'full'?",
+          "options": [
+            "whole",
+            "big",
+            "empty",
+            "long"
+          ],
+          "correctIndex": 2,
+          "explanation": "Full (full) ↔ empty (tom)."
+        },
+        {
+          "id": "lag-mot-13",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'clean'?",
+          "options": [
+            "wet",
+            "nice",
+            "dry",
+            "dirty"
+          ],
+          "correctIndex": 3,
+          "explanation": "Clean (ren) ↔ dirty (smutsig)."
+        },
+        {
+          "id": "lag-mot-14",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'start'?",
+          "options": [
+            "begin",
+            "stop",
+            "go",
+            "run"
+          ],
+          "correctIndex": 1,
+          "explanation": "Start (börja) ↔ stop (stoppa/sluta)."
+        },
+        {
+          "id": "lag-mot-15",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'young'?",
+          "options": [
+            "small",
+            "fast",
+            "new",
+            "old"
+          ],
+          "correctIndex": 3,
+          "explanation": "Young (ung) ↔ old (gammal)."
+        }
+      ]
+    },
+    {
       "id": "lag-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
