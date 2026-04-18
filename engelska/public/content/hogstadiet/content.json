@@ -3965,6 +3965,407 @@
       ]
     },
     {
+      "id": "hog-synonymer",
+      "title": "Synonymer",
+      "description": "Avancerade synonymer – bygg upp ett rikt engelska ordförråd.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📖 En SYNONYM är ett ord med liknande betydelse som ett annat – men ofta med olika styrka eller nyans.",
+        "Exempel: 'big' → 'large' → 'enormous' → 'gigantic' – alla betyder stor men med ökande styrka.",
+        "Exempel: 'respond' och 'reply' är synonymer – båda betyder svara.",
+        "Tips: I formell engelska används ofta längre, latinska ord (obtain, demonstrate, evaluate) istället för korta (get, show, check)."
+      ],
+      "exercises": [
+        {
+          "id": "hog-syn-1",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'enormous'?",
+          "options": [
+            "tiny",
+            "average",
+            "gigantic",
+            "narrow"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Enormous' and 'gigantic' are synonyms – both mean jättestor."
+        },
+        {
+          "id": "hog-syn-2",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'respond'?",
+          "options": [
+            "ask",
+            "ignore",
+            "reply",
+            "question"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Respond' and 'reply' are synonyms – both mean svara."
+        },
+        {
+          "id": "hog-syn-3",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'obtain'?",
+          "options": [
+            "lose",
+            "give",
+            "sell",
+            "acquire"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Obtain' and 'acquire' are synonyms – both mean skaffa/erhålla."
+        },
+        {
+          "id": "hog-syn-4",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'sufficient'?",
+          "options": [
+            "lacking",
+            "extra",
+            "adequate",
+            "scarce"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Sufficient' and 'adequate' are synonyms – both mean tillräcklig."
+        },
+        {
+          "id": "hog-syn-5",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'anxious'?",
+          "options": [
+            "relaxed",
+            "calm",
+            "nervous",
+            "cheerful"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Anxious' and 'nervous' are synonyms – both mean nervös/orolig."
+        },
+        {
+          "id": "hog-syn-6",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'conceal'?",
+          "options": [
+            "reveal",
+            "show",
+            "display",
+            "hide"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Conceal' and 'hide' are synonyms – both mean dölja/gömma."
+        },
+        {
+          "id": "hog-syn-7",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'accomplish'?",
+          "options": [
+            "fail",
+            "attempt",
+            "achieve",
+            "try"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Accomplish' and 'achieve' are synonyms – both mean uppnå/utföra."
+        },
+        {
+          "id": "hog-syn-8",
+          "type": "fill-in-blank",
+          "sentence": "The scientist wanted to ___ the results. (synonym for 'evaluate')",
+          "answer": "assess",
+          "explanation": "'Assess' is a synonym for 'evaluate' – both mean bedöma/utvärdera."
+        },
+        {
+          "id": "hog-syn-9",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'rapid'?",
+          "options": [
+            "slow",
+            "gradual",
+            "swift",
+            "delayed"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Rapid' and 'swift' are synonyms – both mean snabb."
+        },
+        {
+          "id": "hog-syn-10",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'ancient'?",
+          "options": [
+            "modern",
+            "future",
+            "historical",
+            "new"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Ancient' and 'historical' overlap in meaning – both relate to very old/from the past."
+        },
+        {
+          "id": "hog-syn-11",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'significant'?",
+          "options": [
+            "minor",
+            "trivial",
+            "important",
+            "useless"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Significant' and 'important' are synonyms – both mean viktig/betydande."
+        },
+        {
+          "id": "hog-syn-12",
+          "type": "fill-in-blank",
+          "sentence": "The teacher asked her to ___ her answer in more detail. (synonym for 'explain further')",
+          "answer": "elaborate",
+          "explanation": "'Elaborate' means to develop or explain in more detail."
+        },
+        {
+          "id": "hog-syn-13",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'persistent'?",
+          "options": [
+            "lazy",
+            "giving up",
+            "determined",
+            "careless"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Persistent' and 'determined' are synonyms – both mean envis/målmedveten."
+        },
+        {
+          "id": "hog-syn-14",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'transparent'?",
+          "options": [
+            "cloudy",
+            "hidden",
+            "opaque",
+            "clear"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Transparent' and 'clear' are synonyms – both mean genomskinlig/tydlig."
+        },
+        {
+          "id": "hog-syn-15",
+          "type": "multiple-choice",
+          "question": "Which word is a synonym for 'demonstrate'?",
+          "options": [
+            "hide",
+            "deny",
+            "show",
+            "ignore"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Demonstrate' and 'show' are synonyms – both mean visa/demonstrera."
+        }
+      ]
+    },
+    {
+      "id": "hog-motsatsord",
+      "title": "Motsatsord",
+      "description": "Avancerade antonymer – träna på komplexa ordpar på gymnasienivå.",
+      "icon": "↔️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "↔️ MOTSATSORD (antonymer) på avancerad nivå kan vara prefix-baserade: 'possible' ↔ 'impossible', 'relevant' ↔ 'irrelevant'.",
+        "Exempel: 'optimistic' ↔ 'pessimistic' (positiv syn ↔ negativ syn på framtiden)",
+        "Exempel: 'voluntary' ↔ 'compulsory' (frivillig ↔ obligatorisk)",
+        "Tips: Många antonymer bildas med prefix: un-, im-, in-, ir-, dis-."
+      ],
+      "exercises": [
+        {
+          "id": "hog-mot-1",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'optimistic'?",
+          "options": [
+            "realistic",
+            "excited",
+            "pessimistic",
+            "calm"
+          ],
+          "correctIndex": 2,
+          "explanation": "Optimistic (optimistisk) ↔ pessimistic (pessimistisk)."
+        },
+        {
+          "id": "hog-mot-2",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'voluntary'?",
+          "options": [
+            "optional",
+            "free",
+            "chosen",
+            "compulsory"
+          ],
+          "correctIndex": 3,
+          "explanation": "Voluntary (frivillig) ↔ compulsory (obligatorisk/tvingande)."
+        },
+        {
+          "id": "hog-mot-3",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'temporary'?",
+          "options": [
+            "short",
+            "brief",
+            "recent",
+            "permanent"
+          ],
+          "correctIndex": 3,
+          "explanation": "Temporary (tillfällig) ↔ permanent (permanent/varaktig)."
+        },
+        {
+          "id": "hog-mot-4",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'reveal'?",
+          "options": [
+            "show",
+            "display",
+            "conceal",
+            "announce"
+          ],
+          "correctIndex": 2,
+          "explanation": "Reveal (avslöja/visa) ↔ conceal (dölja/gömma)."
+        },
+        {
+          "id": "hog-mot-5",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'constructive'?",
+          "options": [
+            "useful",
+            "helpful",
+            "positive",
+            "destructive"
+          ],
+          "correctIndex": 3,
+          "explanation": "Constructive (konstruktiv/uppbygglig) ↔ destructive (destruktiv/nedbrytande)."
+        },
+        {
+          "id": "hog-mot-6",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'expand' is ___. (think: dra ihop sig)",
+          "answer": "contract",
+          "alternativeAnswers": [
+            "shrink"
+          ],
+          "explanation": "Expand (expandera) ↔ contract/shrink (dra ihop sig/krympa)."
+        },
+        {
+          "id": "hog-mot-7",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'superior'?",
+          "options": [
+            "equal",
+            "same",
+            "similar",
+            "inferior"
+          ],
+          "correctIndex": 3,
+          "explanation": "Superior (överlägsen) ↔ inferior (underlägsen)."
+        },
+        {
+          "id": "hog-mot-8",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'abundance'?",
+          "options": [
+            "wealth",
+            "plenty",
+            "scarcity",
+            "richness"
+          ],
+          "correctIndex": 2,
+          "explanation": "Abundance (överflöd) ↔ scarcity (brist/knapphet)."
+        },
+        {
+          "id": "hog-mot-9",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'encourage'?",
+          "options": [
+            "support",
+            "praise",
+            "help",
+            "discourage"
+          ],
+          "correctIndex": 3,
+          "explanation": "Encourage (uppmuntra) ↔ discourage (avskräcka/motverka)."
+        },
+        {
+          "id": "hog-mot-10",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'majority' is ___. (think: minoritet)",
+          "answer": "minority",
+          "explanation": "Majority (majoritet) ↔ minority (minoritet)."
+        },
+        {
+          "id": "hog-mot-11",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'abstract'?",
+          "options": [
+            "vague",
+            "unclear",
+            "complex",
+            "concrete"
+          ],
+          "correctIndex": 3,
+          "explanation": "Abstract (abstrakt) ↔ concrete (konkret)."
+        },
+        {
+          "id": "hog-mot-12",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'unity'?",
+          "options": [
+            "peace",
+            "cooperation",
+            "division",
+            "friendship"
+          ],
+          "correctIndex": 2,
+          "explanation": "Unity (enhet/sammanhållning) ↔ division (splittring/oenighet)."
+        },
+        {
+          "id": "hog-mot-13",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'reward'?",
+          "options": [
+            "praise",
+            "thank",
+            "gift",
+            "punish"
+          ],
+          "correctIndex": 3,
+          "explanation": "Reward (belöna) ↔ punish (bestraffa)."
+        },
+        {
+          "id": "hog-mot-14",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'amplify'?",
+          "options": [
+            "increase",
+            "boost",
+            "reduce",
+            "spread"
+          ],
+          "correctIndex": 2,
+          "explanation": "Amplify (förstärka) ↔ reduce (minska/reducera)."
+        },
+        {
+          "id": "hog-mot-15",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'relevant'?",
+          "options": [
+            "useless",
+            "boring",
+            "long",
+            "irrelevant"
+          ],
+          "correctIndex": 3,
+          "explanation": "Relevant (relevant) ↔ irrelevant (irrelevant/ointressant)."
+        }
+      ]
+    },
+    {
       "id": "hog-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
