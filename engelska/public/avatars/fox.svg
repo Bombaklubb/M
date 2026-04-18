@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Räven">
+  
+  <circle cx="64" cy="64" r="62" fill="#7c2d12"></circle>
+  <radialGradient id="fg" cx="50%" cy="35%" r="55%">
+    <stop offset="0%" stop-color="#ea580c" stop-opacity="0.5"></stop>
+    <stop offset="100%" stop-color="#7c2d12" stop-opacity="0"></stop>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#fg)"></circle>
+  
+  <ellipse cx="64" cy="92" rx="28" ry="26" fill="#ea580c"></ellipse>
+  
+  <ellipse cx="64" cy="96" rx="16" ry="18" fill="#fff7ed"></ellipse>
+  
+  <path d="M92,85 Q115,75 118,95 Q115,115 100,108 Q92,100 88,88Z" fill="#ea580c"></path>
+  
+  <path d="M110,100 Q118,105 115,112 Q108,115 104,108Z" fill="white"></path>
+  
+  <ellipse cx="36" cy="88" rx="12" ry="9" fill="#ea580c"></ellipse>
+  <ellipse cx="92" cy="88" rx="12" ry="9" fill="#ea580c"></ellipse>
+  
+  <ellipse cx="30" cy="94" rx="10" ry="7" fill="#c2410c"></ellipse>
+  <ellipse cx="98" cy="94" rx="10" ry="7" fill="#c2410c"></ellipse>
+  
+  <ellipse cx="64" cy="50" rx="28" ry="26" fill="#ea580c"></ellipse>
+  
+  <ellipse cx="64" cy="60" rx="14" ry="10" fill="#fff7ed"></ellipse>
+  
+  <polygon points="36,30 28,8 50,26" fill="#ea580c"></polygon>
+  <polygon points="92,30 100,8 78,26" fill="#ea580c"></polygon>
+  
+  <polygon points="38,28 32,14 48,26" fill="#fda4af"></polygon>
+  <polygon points="90,28 96,14 80,26" fill="#fda4af"></polygon>
+  
+  <ellipse cx="52" cy="46" rx="8" ry="7" fill="#fef3c7"></ellipse>
+  <ellipse cx="76" cy="46" rx="8" ry="7" fill="#fef3c7"></ellipse>
+  <circle cx="53" cy="47" r="5" fill="#92400e"></circle>
+  <circle cx="77" cy="47" r="5" fill="#92400e"></circle>
+  <circle cx="53" cy="47" r="3" fill="#111"></circle>
+  <circle cx="77" cy="47" r="3" fill="#111"></circle>
+  <circle cx="54.5" cy="45.5" r="1.5" fill="white"></circle>
+  <circle cx="78.5" cy="45.5" r="1.5" fill="white"></circle>
+  
+  <ellipse cx="64" cy="58" rx="5" ry="3.5" fill="#111"></ellipse>
+  <circle cx="62" cy="57" r="1" fill="#444" opacity="0.5"></circle>
+  
+  <line x1="50" y1="62" x2="30" y2="58" stroke="#888" stroke-width="1.2" opacity="0.7"></line>
+  <line x1="50" y1="64" x2="30" y2="64" stroke="#888" stroke-width="1.2" opacity="0.7"></line>
+  <line x1="50" y1="66" x2="30" y2="70" stroke="#888" stroke-width="1.2" opacity="0.7"></line>
+  <line x1="78" y1="62" x2="98" y2="58" stroke="#888" stroke-width="1.2" opacity="0.7"></line>
+  <line x1="78" y1="64" x2="98" y2="64" stroke="#888" stroke-width="1.2" opacity="0.7"></line>
+  <line x1="78" y1="66" x2="98" y2="70" stroke="#888" stroke-width="1.2" opacity="0.7"></line>
+  
+  <path d="M58,65 Q64,70 70,65" stroke="#c2410c" stroke-width="2" fill="none" stroke-linecap="round"></path>
+</svg>

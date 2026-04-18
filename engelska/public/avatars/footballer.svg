@@ -1,33 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
-  <!-- Background circle -->
-  <circle cx="40" cy="40" r="40" fill="#e8f4f8"/>
-  <!-- Head -->
-  <circle cx="40" cy="22" r="12" fill="#f5c89a"/>
-  <!-- Hair -->
-  <ellipse cx="40" cy="12" rx="12" ry="7" fill="#5c3d1e"/>
-  <!-- Jersey body – red top half, white bottom half with red stripes -->
-  <rect x="22" y="34" width="36" height="22" rx="4" fill="#cc0000"/>
-  <rect x="30" y="34" width="8" height="22" fill="white"/>
-  <rect x="42" y="34" width="8" height="22" fill="white"/>
-  <!-- Collar -->
-  <rect x="35" y="33" width="10" height="5" rx="2" fill="white"/>
-  <!-- Arms -->
-  <rect x="12" y="34" width="11" height="8" rx="4" fill="#cc0000"/>
-  <rect x="57" y="34" width="11" height="8" rx="4" fill="#cc0000"/>
-  <!-- Shorts – black -->
-  <rect x="24" y="55" width="15" height="12" rx="2" fill="#222"/>
-  <rect x="41" y="55" width="15" height="12" rx="2" fill="#222"/>
-  <!-- Socks – red/white stripes -->
-  <rect x="24" y="67" width="12" height="8" rx="2" fill="#cc0000"/>
-  <rect x="44" y="67" width="12" height="8" rx="2" fill="#cc0000"/>
-  <!-- Boots -->
-  <ellipse cx="30" cy="75" rx="8" ry="4" fill="#333"/>
-  <ellipse cx="50" cy="75" rx="8" ry="4" fill="#333"/>
-  <!-- Football -->
-  <circle cx="62" cy="62" r="8" fill="white" stroke="#333" stroke-width="1"/>
-  <path d="M62 55 L65 59 L62 63 L59 59 Z" fill="#333"/>
-  <path d="M70 62 L66 65 L62 63 L65 59 Z" fill="#333"/>
-  <path d="M54 62 L58 65 L62 63 L59 59 Z" fill="#333"/>
-  <!-- Number 10 on jersey -->
-  <text x="37" y="50" font-size="8" font-weight="bold" fill="#cc0000" font-family="Arial">10</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Fotbollsspelaren">
+  
+  <circle cx="64" cy="64" r="62" fill="#14532d"></circle>
+  <radialGradient id="fbbg2" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#4ade80" stop-opacity="0.4"></stop>
+    <stop offset="100%" stop-color="#14532d" stop-opacity="0"></stop>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#fbbg2)"></circle>
+  
+  <line x1="0" y1="105" x2="128" y2="105" stroke="#166534" stroke-width="2" opacity="0.5"></line>
+  <ellipse cx="64" cy="115" rx="40" ry="8" fill="#166534" opacity="0.4"></ellipse>
+  
+  <circle cx="28" cy="108" r="14" fill="white" stroke="#111" stroke-width="1.5"></circle>
+  
+  <polygon points="28,96 22,100 22,108 28,112 34,108 34,100" fill="#111" opacity="0.8" transform="scale(0.5) translate(28,100)"></polygon>
+  <path d="M18,100 Q28,95 38,100" fill="none" stroke="#111" stroke-width="1" opacity="0.6"></path>
+  <path d="M16,108 Q28,114 40,108" fill="none" stroke="#111" stroke-width="1" opacity="0.6"></path>
+  
+  <path d="M36,128 Q40,88 54,78 Q59,75 64,75 Q69,75 74,78 Q88,88 92,128Z" fill="#dc2626"></path>
+  
+  <path d="M54,78 Q64,74 74,78 L72,128 Q64,124 56,128Z" fill="#fff" opacity="0.15"></path>
+  
+  <text x="64" y="104" text-anchor="middle" font-size="18" font-weight="900" fill="white" font-family="sans-serif" opacity="0.9">10</text>
+  
+  <path d="M46,104 Q50,116 56,128 L72,128 Q78,116 82,104Z" fill="#1c1917"></path>
+  <line x1="64" y1="104" x2="64" y2="128" stroke="#374151" stroke-width="1.5"></line>
+  
+  <circle cx="54" cy="82" r="5" fill="#fbbf24"></circle>
+  <polygon points="54,78 55.5,82 54,86 52.5,82" fill="#dc2626"></polygon>
+  
+  <rect x="14" y="78" width="22" height="30" rx="8" fill="#dc2626"></rect>
+  <rect x="92" y="78" width="22" height="30" rx="8" fill="#dc2626"></rect>
+  
+  <rect x="14" y="100" width="22" height="5" rx="2" fill="white" opacity="0.5"></rect>
+  <rect x="92" y="100" width="22" height="5" rx="2" fill="white" opacity="0.5"></rect>
+  <ellipse cx="25" cy="108" rx="11" ry="8" fill="#fcd34d"></ellipse>
+  <ellipse cx="103" cy="108" rx="11" ry="8" fill="#fcd34d"></ellipse>
+  
+  <rect x="57" y="62" width="14" height="16" rx="6" fill="#fcd34d"></rect>
+  
+  <ellipse cx="64" cy="50" rx="24" ry="26" fill="#fcd34d"></ellipse>
+  
+  <path d="M40,38 Q64,28 88,38 L86,44 Q72,36 64,38 Q56,36 42,44Z" fill="#92400e"></path>
+  <path d="M40,35 Q36,26 38,20 Q42,24 42,36Z" fill="#92400e"></path>
+  <path d="M88,35 Q92,26 90,20 Q86,24 86,36Z" fill="#92400e"></path>
+  
+  <rect x="40" y="38" width="48" height="6" rx="3" fill="white" opacity="0.9"></rect>
+  <line x1="64" y1="38" x2="64" y2="44" stroke="#dc2626" stroke-width="2"></line>
+  
+  <ellipse cx="52" cy="48" rx="7" ry="6.5" fill="white"></ellipse>
+  <ellipse cx="76" cy="48" rx="7" ry="6.5" fill="white"></ellipse>
+  <circle cx="52" cy="49" r="5" fill="#1e3a8a"></circle>
+  <circle cx="76" cy="49" r="5" fill="#1e3a8a"></circle>
+  <circle cx="52" cy="49" r="2.5" fill="#111"></circle>
+  <circle cx="76" cy="49" r="2.5" fill="#111"></circle>
+  <circle cx="53.5" cy="47.5" r="1.5" fill="white"></circle>
+  <circle cx="77.5" cy="47.5" r="1.5" fill="white"></circle>
+  
+  <path d="M46,41 L58,41" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"></path>
+  <path d="M70,41 L82,41" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"></path>
+  
+  <ellipse cx="64" cy="55" rx="4" ry="3" fill="#f0b888"></ellipse>
+  
+  <path d="M55,62 Q64,70 73,62" stroke="#b45309" stroke-width="2.5" fill="#fda4af" stroke-linecap="round"></path>
+  
+  <ellipse cx="44" cy="56" rx="6" ry="4" fill="#fca5a5" opacity="0.3"></ellipse>
+  <ellipse cx="84" cy="56" rx="6" ry="4" fill="#fca5a5" opacity="0.3"></ellipse>
+  
+  <rect x="46" y="116" width="12" height="12" rx="3" fill="white" opacity="0.6"></rect>
+  <rect x="70" y="116" width="12" height="12" rx="3" fill="white" opacity="0.6"></rect>
+  
+  <rect x="44" y="124" width="16" height="4" rx="2" fill="#1c1917"></rect>
+  <rect x="68" y="124" width="16" height="4" rx="2" fill="#1c1917"></rect>
 </svg>
