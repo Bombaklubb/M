@@ -9,15 +9,13 @@ import type {
 
 export const BOSS_UNLOCK_THRESHOLD = 5; // exercises needed to unlock boss
 export const MYSTERY_BOX_CHANCE = 0.15; // 15% chance after each exercise
+export const MAX_CHESTS_PER_TYPE = 10;  // cap per chest type
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
-  { points: 25,    type: "wood" },    // Snabb första belöning
-  { points: 50,    type: "wood" },    // Snabb andra belöning
-  { points: 100,   type: "wood" },
+  { points: 50,    type: "wood" },
   { points: 200,   type: "wood" },
   { points: 300,   type: "silver" },
   { points: 500,   type: "silver" },
-  { points: 600,   type: "wood" },
   { points: 750,   type: "silver" },
   { points: 1000,  type: "gold" },
   { points: 1500,  type: "silver" },
@@ -36,8 +34,7 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
-  { exercises: 1,   type: "wood" },   // Direkt första belöning
-  { exercises: 3,   type: "wood" },   // Snabb uppföljning
+  { exercises: 1,   type: "wood" },
   { exercises: 5,   type: "wood" },
   { exercises: 10,  type: "wood" },
   { exercises: 15,  type: "silver" },
@@ -135,15 +132,34 @@ export const ALL_BADGES = [
 
 // ─── Boss challenge questions ─────────────────────────────────────────────────
 
-export interface BossQuestion {
-  id: string;
-  type: "multiple-choice";
-  category: "grammar" | "spelling" | "reading";
-  question: string;
-  options: string[];
-  correctIndex: number;
-}
+export type BossQuestion =
+  | {
+      id: string;
+      type: "multiple-choice";
+      category: "grammar" | "spelling" | "reading";
+      question: string;
+      options: string[];
+      correctIndex: number;
+    }
+  | {
+      id: string;
+      type: "fill-in-blank";
+      category: "grammar" | "spelling" | "reading";
+      sentence: string;
+      answer: string;
+      alternativeAnswers?: string[];
+      hint?: string;
+    }
+  | {
+      id: string;
+      type: "build-sentence";
+      category: "grammar" | "spelling" | "reading";
+      instruction: string;
+      words: string[];
+      correctOrder: number[];
+    };
 
+// Dragon boss – multiple choice grammar
 export const BOSS_QUESTIONS: BossQuestion[] = [
   {
     id: "bq1",
@@ -237,6 +253,239 @@ export const BOSS_QUESTIONS: BossQuestion[] = [
   },
 ];
 
+// Troll boss – fill-in-blank spelling
+export const TROLL_QUESTIONS: BossQuestion[] = [
+  {
+    id: "tq1",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "She was very ___ when she got the present.",
+    answer: "excited",
+    hint: "Starts with 'e'",
+  },
+  {
+    id: "tq2",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "He couldn't ___ that he had won the race!",
+    answer: "believe",
+    hint: "'i before e except after c'",
+  },
+  {
+    id: "tq3",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "They speak three ___ at home.",
+    answer: "languages",
+    hint: "Starts with 'l'",
+  },
+  {
+    id: "tq4",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "The loud ___ woke everyone up during the storm.",
+    answer: "thunder",
+    hint: "The rumbling sound in a storm",
+  },
+  {
+    id: "tq5",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "She had a ___ dream about flying over the mountains.",
+    answer: "beautiful",
+    hint: "Means very pretty",
+  },
+  {
+    id: "tq6",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "He read an ___ book about space and planets.",
+    answer: "interesting",
+    hint: "Means engaging or fascinating",
+  },
+  {
+    id: "tq7",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "They ___ to visit their grandparents every summer.",
+    answer: "travelled",
+    alternativeAnswers: ["traveled"],
+    hint: "Past tense of 'travel'",
+  },
+  {
+    id: "tq8",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "The colourful ___ appeared after the rain.",
+    answer: "rainbow",
+    hint: "Arcs across the sky after rain",
+  },
+  {
+    id: "tq9",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "She is always ___ to new students at school.",
+    answer: "friendly",
+    hint: "Kind and warm to others",
+  },
+  {
+    id: "tq10",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "The magician made the rabbit ___ from the hat.",
+    answer: "disappear",
+    hint: "The opposite of appear",
+  },
+];
+
+// Wizard boss – build-sentence word order
+export const WIZARD_QUESTIONS: BossQuestion[] = [
+  {
+    id: "wq1",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["likes", "She", "very", "much", "reading"],
+    correctOrder: [1, 0, 4, 2, 3],
+    // She likes reading very much
+  },
+  {
+    id: "wq2",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["are", "They", "football", "in", "playing", "the", "park"],
+    correctOrder: [1, 0, 4, 2, 3, 5, 6],
+    // They are playing football in the park
+  },
+  {
+    id: "wq3",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["dog", "My", "on", "always", "sleeps", "the", "sofa"],
+    correctOrder: [1, 0, 3, 4, 2, 5, 6],
+    // My dog always sleeps on the sofa
+  },
+  {
+    id: "wq4",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["has", "She", "to", "never", "been", "London"],
+    correctOrder: [1, 0, 3, 4, 2, 5],
+    // She has never been to London
+  },
+  {
+    id: "wq5",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["you", "Can", "my", "help", "me", "with", "homework"],
+    correctOrder: [1, 0, 3, 4, 5, 2, 6],
+    // Can you help me with my homework
+  },
+  {
+    id: "wq6",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["went", "We", "cinema", "to", "last", "the", "night"],
+    correctOrder: [1, 0, 3, 5, 2, 4, 6],
+    // We went to the cinema last night
+  },
+  {
+    id: "wq7",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["is", "She", "student", "the", "best", "in", "class"],
+    correctOrder: [1, 0, 3, 4, 2, 5, 6],
+    // She is the best student in class
+  },
+  {
+    id: "wq8",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["cats", "loves", "He", "black", "his", "and", "dog"],
+    correctOrder: [2, 1, 3, 0, 5, 4, 6],
+    // He loves black cats and his dog
+  },
+];
+
+// ─── Boss configurations ──────────────────────────────────────────────────────
+
+export type BossId = "dragon" | "troll" | "wizard";
+
+export interface BossConfig {
+  id: BossId;
+  name: string;
+  emoji: string;
+  subtitle: string;
+  description: string;
+  gradient: string;
+  cardBg: string;
+  borderColor: string;
+  accentColor: string;
+  questions: BossQuestion[];
+  passThreshold: number;
+  rewardChestType: ChestType;
+  rewardPoints: number;
+  rewardBadgeId: string;
+}
+
+export const BOSS_CONFIGS: Record<BossId, BossConfig> = {
+  dragon: {
+    id: "dragon",
+    name: "Grammatikdraken",
+    emoji: "🐉",
+    subtitle: "Grammatikens väktare",
+    description: "Draken vaktar grammatikens hemligheter. Svara rätt på 6 av 10 frågor!",
+    gradient: "linear-gradient(135deg, #7f1d1d, #991b1b, #dc2626)",
+    cardBg: "#fff5f5",
+    borderColor: "#fca5a5",
+    accentColor: "#dc2626",
+    questions: BOSS_QUESTIONS,
+    passThreshold: 0.6,
+    rewardChestType: "gold",
+    rewardPoints: 150,
+    rewardBadgeId: "boss_slayer",
+  },
+  troll: {
+    id: "troll",
+    name: "Stavningstrollet",
+    emoji: "🧌",
+    subtitle: "Stavningens mästare",
+    description: "Trollet utmanar din stavning. Skriv de saknade orden rätt – 6 av 10!",
+    gradient: "linear-gradient(135deg, #14532d, #166534, #16a34a)",
+    cardBg: "#f0fdf4",
+    borderColor: "#86efac",
+    accentColor: "#16a34a",
+    questions: TROLL_QUESTIONS,
+    passThreshold: 0.6,
+    rewardChestType: "silver",
+    rewardPoints: 100,
+    rewardBadgeId: "spelling_ace",
+  },
+  wizard: {
+    id: "wizard",
+    name: "Ordmästaren",
+    emoji: "🧙",
+    subtitle: "Meningsbyggarens guru",
+    description: "Mästaren blandar ihop ord. Sätt dem i rätt ordning – klara 5 av 8!",
+    gradient: "linear-gradient(135deg, #3b0764, #6d28d9, #7c3aed)",
+    cardBg: "#faf5ff",
+    borderColor: "#c4b5fd",
+    accentColor: "#7c3aed",
+    questions: WIZARD_QUESTIONS,
+    passThreshold: 0.6,
+    rewardChestType: "ruby",
+    rewardPoints: 200,
+    rewardBadgeId: "word_wizard",
+  },
+};
+
 // ─── Pure helper functions ────────────────────────────────────────────────────
 
 function makeChest(type: ChestType): Chest {
@@ -252,14 +501,20 @@ function makeChest(type: ChestType): Chest {
 export function chestsEarnedFromPoints(
   prevPoints: number,
   newPoints: number,
-  alreadyRewarded: number[]
+  alreadyRewarded: number[],
+  currentChests: Chest[] = []
 ): { chest: Chest; milestone: number }[] {
   const earned: { chest: Chest; milestone: number }[] = [];
+  const countByType = (t: ChestType) =>
+    currentChests.filter((c) => c.type === t).length +
+    earned.filter((e) => e.chest.type === t).length;
+
   for (const m of POINT_CHEST_MILESTONES) {
     if (
       prevPoints < m.points &&
       newPoints >= m.points &&
-      !alreadyRewarded.includes(m.points)
+      !alreadyRewarded.includes(m.points) &&
+      countByType(m.type) < MAX_CHESTS_PER_TYPE
     ) {
       earned.push({ chest: makeChest(m.type), milestone: m.points });
     }
@@ -271,14 +526,20 @@ export function chestsEarnedFromPoints(
 export function chestsEarnedFromExercises(
   prevCount: number,
   newCount: number,
-  alreadyRewarded: number[]
+  alreadyRewarded: number[],
+  currentChests: Chest[] = []
 ): { chest: Chest; milestone: number }[] {
   const earned: { chest: Chest; milestone: number }[] = [];
+  const countByType = (t: ChestType) =>
+    currentChests.filter((c) => c.type === t).length +
+    earned.filter((e) => e.chest.type === t).length;
+
   for (const m of EXERCISE_CHEST_MILESTONES) {
     if (
       prevCount < m.exercises &&
       newCount >= m.exercises &&
-      !alreadyRewarded.includes(m.exercises)
+      !alreadyRewarded.includes(m.exercises) &&
+      countByType(m.type) < MAX_CHESTS_PER_TYPE
     ) {
       earned.push({ chest: makeChest(m.type), milestone: m.exercises });
     }
@@ -295,7 +556,7 @@ function getMysteryBoxChance(exercisesCompleted: number): number {
 }
 
 /** Rolls for a mystery box reward. Pass exercisesCompleted for higher early-game chance. */
-export function rollMysteryBox(badges: string[], exercisesCompleted = 99): MysteryBoxReward | null {
+export function rollMysteryBox(badges: string[], exercisesCompleted = 99, currentChests: Chest[] = []): MysteryBoxReward | null {
   if (Math.random() > getMysteryBoxChance(exercisesCompleted)) return null;
 
   const roll = Math.random();
@@ -308,7 +569,12 @@ export function rollMysteryBox(badges: string[], exercisesCompleted = 99): Myste
       description: `+${pts} bonuspoäng!`,
     };
   } else if (roll < 0.75) {
-    // Bronze chest
+    // Bronze chest – only if under cap
+    const woodCount = currentChests.filter((c) => c.type === "wood").length;
+    if (woodCount >= MAX_CHESTS_PER_TYPE) {
+      const pts = Math.floor(Math.random() * 41) + 10;
+      return { type: "points", points: pts, description: `+${pts} bonuspoäng!` };
+    }
     return {
       type: "chest",
       chestType: "wood",
@@ -480,6 +746,7 @@ export function defaultGamificationData(): GamificationData {
     exercisesCompleted: 0,
     bossUnlocked: false,
     bossWins: 0,
+    bossesBeaten: [],
     pointsMilestonesRewarded: [],
     exerciseMilestonesRewarded: [],
   };

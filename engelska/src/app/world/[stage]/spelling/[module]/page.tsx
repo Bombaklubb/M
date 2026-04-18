@@ -99,13 +99,13 @@ export default function SpellingModulePage({ params }: Props) {
         const newPoints = updated.totalPoints;
         const prevEx = gam.exercisesCompleted;
         const newEx = prevEx + 1;
-        const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
-        const exChests = chestsEarnedFromExercises(prevEx, newEx, gam.exerciseMilestonesRewarded);
+        const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests);
+        const exChests = chestsEarnedFromExercises(prevEx, newEx, gam.exerciseMilestonesRewarded, gam.chests);
         const allNewChests = [...pointChests.map((c) => c.chest), ...exChests.map((c) => c.chest)];
         const firstChest = allNewChests[0];
         const wasBossUnlocked = gam.bossUnlocked;
         const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
-        const mystery = rollMysteryBox(gam.badges, newEx);
+        const mystery = rollMysteryBox(gam.badges, newEx, gam.chests);
         const extraMysteryChest = mystery?.type === "chest" && mystery.chestType
           ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
           : [];
