@@ -71,6 +71,9 @@ export enum BadgeType {
   THOUSAND_POINTS = 'thousand_points',
   STORY_LOVER = 'story_lover',
   FACT_LOVER = 'fact_lover',
+  GYMNASIUM = 'gymnasium',
+  TWO_THOUSAND_POINTS = 'two_thousand_points',
+  FIVE_THOUSAND_POINTS = 'five_thousand_points',
 }
 
 // En badge
@@ -287,6 +290,24 @@ export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
     name: 'Faktanörd',
     description: 'Läst 10 faktatexter',
     icon: '🔬',
+  },
+  [BadgeType.GYMNASIUM]: {
+    type: BadgeType.GYMNASIUM,
+    name: 'Gymnasist',
+    description: 'Klarat en text på gymnasienivå',
+    icon: '🎓',
+  },
+  [BadgeType.TWO_THOUSAND_POINTS]: {
+    type: BadgeType.TWO_THOUSAND_POINTS,
+    name: 'Poängstjärna',
+    description: 'Tjänat 2 000 poäng totalt',
+    icon: '🌠',
+  },
+  [BadgeType.FIVE_THOUSAND_POINTS]: {
+    type: BadgeType.FIVE_THOUSAND_POINTS,
+    name: 'Poängguru',
+    description: 'Tjänat 5 000 poäng totalt',
+    icon: '🏅',
   },
 };
 

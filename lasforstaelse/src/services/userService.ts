@@ -177,6 +177,8 @@ export function checkForNewBadges(user: User): Badge[] {
   if (user.totalPoints >= 100) addBadge(BadgeType.HUNDRED_POINTS);
   if (user.totalPoints >= 500) addBadge(BadgeType.FIVE_HUNDRED_POINTS);
   if (user.totalPoints >= 1000) addBadge(BadgeType.THOUSAND_POINTS);
+  if (user.totalPoints >= 2000) addBadge(BadgeType.TWO_THOUSAND_POINTS);
+  if (user.totalPoints >= 5000) addBadge(BadgeType.FIVE_THOUSAND_POINTS);
 
   // Årskurs-badges
   const grades = user.gradesCompleted;
@@ -202,6 +204,11 @@ export function checkForNewBadges(user: User): Badge[] {
   // Avancerad läsare - klarat åk 7, 8 och 9
   if (grades.includes(7) && grades.includes(8) && grades.includes(9)) {
     addBadge(BadgeType.ADVANCED_GRADES);
+  }
+
+  // Gymnasist - klarat minst en text på gymnasienivå (åk 10)
+  if (grades.includes(10)) {
+    addBadge(BadgeType.GYMNASIUM);
   }
 
   // Streak-badges (läst X dagar i rad)
