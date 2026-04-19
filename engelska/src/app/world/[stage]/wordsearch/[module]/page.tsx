@@ -7,7 +7,8 @@ import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import WordSearch from "@/components/exercises/WordSearch";
-import { loadStudent, saveModuleProgress } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { checkAchievementBadges } from "@/lib/gamification";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, WordSearchModule } from "@/lib/types";
 
@@ -53,6 +54,11 @@ export default function WordSearchModulePage({ params }: Props) {
     if (student) {
       const updated = saveModuleProgress(student, stage!.id, "wordsearch", mod!.id, pts, true);
       setStudent(updated);
+      const gam = loadGamification();
+      const achievementBadges = checkAchievementBadges(updated, gam);
+      if (achievementBadges.length > 0) {
+        saveGamification({ ...gam, badges: [...gam.badges, ...achievementBadges] });
+      }
     }
     setShowResult(true);
   }

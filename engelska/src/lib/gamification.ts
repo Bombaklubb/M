@@ -3,6 +3,7 @@ import type {
   Chest,
   MysteryBoxReward,
   GamificationData,
+  StudentData,
 } from "./types";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -120,15 +121,33 @@ export const CHEST_META: Record<
 };
 
 export const ALL_BADGES = [
-  { id: "grammar_star", label: "Grammatikstjärna", emoji: "⭐" },
-  { id: "spelling_ace", label: "Stavningsmästare", emoji: "🔤" },
-  { id: "reading_pro", label: "Läsproffs", emoji: "📖" },
-  { id: "curious_learner", label: "Nyfiken lärare", emoji: "🔍" },
-  { id: "word_wizard", label: "Ordtrollkarl", emoji: "🪄" },
-  { id: "english_hero", label: "Engelskahjälte", emoji: "🦸" },
-  { id: "boss_slayer", label: "Bossbesegrare", emoji: "⚔️" },
-  { id: "mystery_hunter", label: "Mysteriåjägare", emoji: "🎁" },
+  { id: "first_steps",    label: "Första steget",    emoji: "🌟" },
+  { id: "grammar_star",   label: "Grammatikstjärna", emoji: "⭐" },
+  { id: "spelling_ace",   label: "Stavningsmästare", emoji: "🔤" },
+  { id: "reading_pro",    label: "Läsproffs",        emoji: "📖" },
+  { id: "curious_learner",label: "Nyfiken elev",     emoji: "🔍" },
+  { id: "word_wizard",    label: "Ordtrollkarl",     emoji: "🪄" },
+  { id: "dedicated",      label: "Flitig elev",      emoji: "💪" },
+  { id: "english_hero",   label: "Engelskahjälte",   emoji: "🦸" },
+  { id: "all_rounder",    label: "Allroundern",      emoji: "🎯" },
+  { id: "boss_slayer",    label: "Bossbesegrare",    emoji: "⚔️" },
+  { id: "mystery_hunter", label: "Mysteriåjägare",   emoji: "🎁" },
 ];
+
+// How each badge is earned (shown in kistor page for locked badges)
+export const BADGE_HOW_TO_EARN: Record<string, string> = {
+  first_steps:     "Slutför din första modul",
+  grammar_star:    "Slutför 5 grammatikmoduler",
+  spelling_ace:    "Slutför 3 stavningsmoduler eller besegra Stavningstrollet 🧌",
+  reading_pro:     "Slutför 3 läsförståelsemoduler",
+  curious_learner: "Slutför moduler i 3 olika stadier",
+  word_wizard:     "Slutför 3 ordsökningar eller besegra Ordmästaren 🧙",
+  dedicated:       "Slutför 10 moduler totalt",
+  english_hero:    "Slutför 20 moduler totalt",
+  all_rounder:     "Slutför minst 1 modul i alla 4 stadier",
+  boss_slayer:     "Besegra Grammatikdraken 🐉",
+  mystery_hunter:  "Hitta en mysterylåda efter en övning",
+};
 
 // ─── Boss challenge questions ─────────────────────────────────────────────────
 
@@ -755,4 +774,46 @@ export function defaultGamificationData(): GamificationData {
 /** Badge info by id. */
 export function getBadge(id: string) {
   return ALL_BADGES.find((b) => b.id === id);
+}
+
+// ─── Achievement badge checker ────────────────────────────────────────────────
+
+/**
+ * Returns badge IDs that should be newly awarded based on the student's current
+ * progress. Call this after every module completion and merge the result into
+ * the gamification data before saving.
+ */
+export function checkAchievementBadges(
+  student: StudentData,
+  gam: GamificationData
+): string[] {
+  const newBadges: string[] = [];
+  const has = (id: string) => gam.badges.includes(id) || newBadges.includes(id);
+
+  const stages = Object.values(student.stages);
+
+  const grammarDone   = stages.reduce((n, s) => n + Object.values(s.grammarModules    ?? {}).filter((m) => m.completed).length, 0);
+  const readingDone   = stages.reduce((n, s) => n + Object.values(s.readingModules    ?? {}).filter((m) => m.completed).length, 0);
+  const spellingDone  = stages.reduce((n, s) => n + Object.values(s.spellingModules   ?? {}).filter((m) => m.completed).length, 0);
+  const wsearchDone   = stages.reduce((n, s) => n + Object.values(s.wordsearchModules ?? {}).filter((m) => m.completed).length, 0);
+  const totalDone     = grammarDone + readingDone + spellingDone + wsearchDone;
+
+  const stagesActive  = stages.filter((s) =>
+    Object.values(s.grammarModules    ?? {}).some((m) => m.completed) ||
+    Object.values(s.readingModules    ?? {}).some((m) => m.completed) ||
+    Object.values(s.spellingModules   ?? {}).some((m) => m.completed) ||
+    Object.values(s.wordsearchModules ?? {}).some((m) => m.completed)
+  ).length;
+
+  if (!has("first_steps")     && totalDone    >= 1)  newBadges.push("first_steps");
+  if (!has("grammar_star")    && grammarDone   >= 5)  newBadges.push("grammar_star");
+  if (!has("reading_pro")     && readingDone   >= 3)  newBadges.push("reading_pro");
+  if (!has("spelling_ace")    && spellingDone  >= 3)  newBadges.push("spelling_ace");
+  if (!has("curious_learner") && stagesActive  >= 3)  newBadges.push("curious_learner");
+  if (!has("word_wizard")     && wsearchDone   >= 3)  newBadges.push("word_wizard");
+  if (!has("dedicated")       && totalDone     >= 10) newBadges.push("dedicated");
+  if (!has("english_hero")    && totalDone     >= 20) newBadges.push("english_hero");
+  if (!has("all_rounder")     && stagesActive  >= 4)  newBadges.push("all_rounder");
+
+  return newBadges;
 }

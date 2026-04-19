@@ -12,7 +12,7 @@ import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
 import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
 import { recordError } from "@/lib/errorBank";
-import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
+import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, SpellingModule, GrammarExercise, ChestType, MysteryBoxReward } from "@/lib/types";
@@ -111,15 +111,22 @@ export default function SpellingModulePage({ params }: Props) {
           : [];
         const mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
         const mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
-        saveGamification({
+        const earlyBadgesSp = [...gam.badges];
+        if (mystery && !earlyBadgesSp.includes("mystery_hunter")) earlyBadgesSp.push("mystery_hunter");
+        if (mysteryBadge && !earlyBadgesSp.includes(mysteryBadge)) earlyBadgesSp.push(mysteryBadge);
+        const baseBadgesSp = earlyBadgesSp;
+        const newGamSp = {
           ...gam,
           chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
-          badges: mysteryBadge && !gam.badges.includes(mysteryBadge) ? [...gam.badges, mysteryBadge] : gam.badges,
+          badges: baseBadgesSp,
           exercisesCompleted: newEx,
           bossUnlocked: nowBossUnlocked,
           pointsMilestonesRewarded: [...gam.pointsMilestonesRewarded, ...pointChests.map((c) => c.milestone)],
           exerciseMilestonesRewarded: [...gam.exerciseMilestonesRewarded, ...exChests.map((c) => c.milestone)],
-        });
+        };
+        const achievementBadgesSp = checkAchievementBadges(updated, newGamSp);
+        if (achievementBadgesSp.length > 0) newGamSp.badges = [...newGamSp.badges, ...achievementBadgesSp];
+        saveGamification(newGamSp);
         if (mysteryPoints > 0) setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
         if (firstChest) setChestEarned(firstChest.type as ChestType);
         if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);

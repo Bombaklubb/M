@@ -16,6 +16,7 @@ import {
   chestsEarnedFromPoints,
   chestsEarnedFromExercises,
   rollMysteryBox,
+  checkAchievementBadges,
   BOSS_UNLOCK_THRESHOLD,
 } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
@@ -148,16 +149,15 @@ export default function GrammarModulePage({ params }: Props) {
         let mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
         let mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
 
+        // Award mystery_hunter on first mystery box found
+        const earlyBadges = [...gam.badges];
+        if (mystery && !earlyBadges.includes("mystery_hunter")) earlyBadges.push("mystery_hunter");
+        if (mysteryBadge && !earlyBadges.includes(mysteryBadge)) earlyBadges.push(mysteryBadge);
+        const baseBadges = earlyBadges;
         const newGam = {
           ...gam,
-          chests: [
-            ...gam.chests,
-            ...allNewChests,
-            ...extraMysteryChest,
-          ],
-          badges: mysteryBadge && !gam.badges.includes(mysteryBadge)
-            ? [...gam.badges, mysteryBadge]
-            : gam.badges,
+          chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
+          badges: baseBadges,
           exercisesCompleted: newExercises,
           bossUnlocked: nowBossUnlocked,
           pointsMilestonesRewarded: [
@@ -169,6 +169,10 @@ export default function GrammarModulePage({ params }: Props) {
             ...exChests.map((c) => c.milestone),
           ],
         };
+        const achievementBadges = checkAchievementBadges(updated, newGam);
+        if (achievementBadges.length > 0) {
+          newGam.badges = [...newGam.badges, ...achievementBadges];
+        }
         saveGamification(newGam);
 
         // Apply mystery box points to student
