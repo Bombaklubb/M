@@ -17,6 +17,7 @@ import {
   chestsEarnedFromPoints,
   chestsEarnedFromExercises,
   rollMysteryBox,
+  checkAchievementBadges,
   BOSS_UNLOCK_THRESHOLD,
 } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
@@ -141,13 +142,14 @@ export default function SpelModulePage({ params }: Props) {
       const mysteryPoints =
         mystery?.type === "points" && mystery.points ? mystery.points : 0;
 
-      saveGamification({
+      const earlyBadgesSpel = [...gam.badges];
+      if (mystery && !earlyBadgesSpel.includes("mystery_hunter")) earlyBadgesSpel.push("mystery_hunter");
+      if (mysteryBadge && !earlyBadgesSpel.includes(mysteryBadge)) earlyBadgesSpel.push(mysteryBadge);
+      const baseBadgesSpel = earlyBadgesSpel;
+      const newGamSpel = {
         ...gam,
         chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
-        badges:
-          mysteryBadge && !gam.badges.includes(mysteryBadge)
-            ? [...gam.badges, mysteryBadge]
-            : gam.badges,
+        badges: baseBadgesSpel,
         exercisesCompleted: newEx,
         bossUnlocked: nowBossUnlocked,
         pointsMilestonesRewarded: [
@@ -158,7 +160,10 @@ export default function SpelModulePage({ params }: Props) {
           ...gam.exerciseMilestonesRewarded,
           ...exChests.map((c) => c.milestone),
         ],
-      });
+      };
+      const achievementBadgesSpel = checkAchievementBadges(updated, newGamSpel);
+      if (achievementBadgesSpel.length > 0) newGamSpel.badges = [...newGamSpel.badges, ...achievementBadgesSpel];
+      saveGamification(newGamSpel);
 
       if (mysteryPoints > 0)
         setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });

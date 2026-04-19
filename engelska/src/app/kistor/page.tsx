@@ -23,6 +23,7 @@ import {
   openRubyChest,
   openDiamondChest,
   openEmeraldChest,
+  BADGE_HOW_TO_EARN,
 } from "@/lib/gamification";
 import type { BossId } from "@/lib/gamification";
 import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
@@ -531,31 +532,44 @@ export default function KistorPage() {
         <TrofHylla chests={gam.chests} />
 
         {/* ─── Badges ── */}
-        {gam.badges.length > 0 && (
-          <section>
-            <SectionTitle emoji="🎖️" title={`Märken (${gam.badges.length}/${ALL_BADGES.length})`} subtitle="Samla alla märken i appen" />
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-              {gam.badges.map((badgeId) => {
-                const badge = getBadge(badgeId);
-                if (!badge) return null;
-                return (
-                  <div
-                    key={badgeId}
-                    className="flex flex-col items-center p-4 rounded-2xl"
-                    style={{
-                      background: "linear-gradient(135deg, #312e81, #4c1d95)",
-                      border: "1px solid rgba(167,139,250,0.3)",
-                      boxShadow: "0 4px 16px rgba(124,58,237,0.25)",
-                    }}
-                  >
-                    <span className="text-3xl mb-2 leading-none">{badge.emoji}</span>
-                    <span className="text-[10px] font-bold text-violet-200 text-center leading-snug">{badge.label}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        )}
+        <section>
+          <SectionTitle
+            emoji="🎖️"
+            title={`Märken (${gam.badges.length}/${ALL_BADGES.length})`}
+            subtitle="Samla alla märken – grå = ej uppnådd ännu"
+          />
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+            {ALL_BADGES.map((badge) => {
+              const earned = gam.badges.includes(badge.id);
+              return (
+                <div
+                  key={badge.id}
+                  className="flex flex-col items-center p-3 rounded-2xl text-center"
+                  style={earned ? {
+                    background: "linear-gradient(135deg, #312e81, #4c1d95)",
+                    border: "1px solid rgba(167,139,250,0.35)",
+                    boxShadow: "0 4px 16px rgba(124,58,237,0.3)",
+                  } : {
+                    background: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                  }}
+                >
+                  <span className={`text-3xl mb-1.5 leading-none ${earned ? "" : "grayscale opacity-30"}`}>
+                    {earned ? badge.emoji : "🔒"}
+                  </span>
+                  <span className={`text-[10px] font-bold leading-snug ${earned ? "text-violet-200" : "text-white/35"}`}>
+                    {badge.label}
+                  </span>
+                  {!earned && BADGE_HOW_TO_EARN[badge.id] && (
+                    <span className="text-[9px] text-white/25 mt-1 leading-tight">
+                      {BADGE_HOW_TO_EARN[badge.id]}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
         {/* ─── How to earn chests ── */}
         <section>
