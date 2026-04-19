@@ -301,7 +301,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
     const chest = gam.chests.find((c) => c.id === chestId);
     if (!chest || chest.opened) return;
 
-    const result = openChest(chest.type, gam.gamificationBadges);
+    const result = openChest(chest.type, gam.gamificationBadges, gam.chests);
 
     const newChests = gam.chests.map((c) =>
       c.id === chestId ? { ...c, opened: true, openedReward: result.description } : c
