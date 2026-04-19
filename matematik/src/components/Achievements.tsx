@@ -279,12 +279,15 @@ function AchievementHint({ ach, stats }: {
   const RIMLIGHET_IDS = ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym'];
   const rimlighetDone = RIMLIGHET_IDS.filter(id => stats.progress.some(p => p.topicId === id && p.completed)).length;
   const perfectCount = stats.progress.filter(p => p.bestScore === 100).length;
+  const starsCount = stats.progress.filter(p => p.stars === 3).length;
+  const accuracy = stats.totalAnswered > 0 ? stats.totalCorrect / stats.totalAnswered : 0;
 
   const hints: Record<string, string> = {
     'first-exercise':       `${stats.totalAnswered}/1 svar`,
     'ten-correct':          `${stats.totalCorrect}/10 rätt`,
+    'fifty-correct':        `${stats.totalCorrect}/50 rätt`,
     'hundred-correct':      `${stats.totalCorrect}/100 rätt`,
-    'thousand-correct':     `${stats.totalCorrect}/1000 rätt`,
+    'thousand-correct':     `${stats.totalCorrect}/1 000 rätt`,
     'first-topic':          `${stats.completedTopics}/1 ämne`,
     'three-topics':         `${stats.completedTopics}/3 ämnen`,
     'five-topics':          `${stats.completedTopics}/5 ämnen`,
@@ -296,6 +299,16 @@ function AchievementHint({ ach, stats }: {
     'level-5':              `Nivå ${stats.points.level}/5`,
     'level-8':              `Nivå ${stats.points.level}/8`,
     'level-max':            `Nivå ${stats.points.level}/10`,
+    'perfect-topic':        `${perfectCount}/1 perfekt ämne (100%)`,
+    'three-stars':          `${starsCount}/1 ämne med 3 stjärnor`,
+    'five-stars':           `${starsCount}/5 ämnen med 3 stjärnor`,
+    'ten-stars':            `${starsCount}/10 ämnen med 3 stjärnor`,
+    'accuracy-90':          stats.totalAnswered >= 50
+                              ? `${Math.round(accuracy * 100)}% rätt (mål: 90%)`
+                              : `${stats.totalAnswered}/50 svar krävs`,
+    'points-500':           `${stats.points.total}/500 poäng`,
+    'points-2000':          `${stats.points.total}/2 000 poäng`,
+    'points-5000':          `${stats.points.total}/5 000 poäng`,
     'rimlighetsprövaren':   `${rimlighetDone}/1 rimlighetsövning`,
     'veckostjärna':         `${stats.points.weeklyPoints}/100 veckopoäng`,
     'logikdetektiven':      `${rimlighetDone}/2 rimlighetsövningar`,
