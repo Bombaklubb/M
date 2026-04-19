@@ -14,7 +14,7 @@ import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
   chestsEarnedFromTopicEvent,
-  rollMysteryBox, BOSS_UNLOCK_THRESHOLD,
+  rollMysteryBox, BOSS_UNLOCK_THRESHOLD, MAX_CHESTS_PER_TYPE,
 } from '../utils/chestStorage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { TOPICS } from '../data/topics';
@@ -220,11 +220,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       gam,
     });
 
-    const allNewChests = [
+    const allNewChestsRaw = [
       ...pointChests,
       ...exerciseChests,
       ...topicEventResult.chests.map(c => ({ chest: c })),
     ];
+
+    // Cap at MAX_CHESTS_PER_TYPE per valör
+    const chestCountByType: Record<string, number> = {};
+    for (const c of gam.chests) {
+      chestCountByType[c.type] = (chestCountByType[c.type] ?? 0) + 1;
+    }
+    const allNewChests = allNewChestsRaw.filter(item => {
+      const t = item.chest.type;
+      const count = chestCountByType[t] ?? 0;
+      if (count >= MAX_CHESTS_PER_TYPE) return false;
+      chestCountByType[t] = count + 1;
+      return true;
+    });
 
     const mysteryReward = rollMysteryBox(gam.badges, prevExercises);
     let updatedBadges = [...gam.badges];
@@ -234,12 +247,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       if (mysteryReward.type === 'badge' && mysteryReward.badgeId && !updatedBadges.includes(mysteryReward.badgeId)) {
         updatedBadges.push(mysteryReward.badgeId);
       } else if (mysteryReward.type === 'chest' && mysteryReward.chestType) {
-        mysteryChest = {
-          id: `chest_${Date.now()}_mystery`,
-          type: mysteryReward.chestType,
-          earnedAt: new Date().toISOString(),
-          opened: false,
-        };
+        const t = mysteryReward.chestType;
+        if ((chestCountByType[t] ?? 0) < MAX_CHESTS_PER_TYPE) {
+          mysteryChest = {
+            id: `chest_${Date.now()}_mystery`,
+            type: t,
+            earnedAt: new Date().toISOString(),
+            opened: false,
+          };
+        }
       } else if (mysteryReward.type === 'points' && mysteryReward.points) {
         addPoints(currentStudent.id, mysteryReward.points);
       }
