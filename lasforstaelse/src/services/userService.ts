@@ -223,6 +223,69 @@ export function checkForNewBadges(user: User): Badge[] {
   if (storyCount >= 10) addBadge(BadgeType.STORY_LOVER);
   if (factCount >= 10) addBadge(BadgeType.FACT_LOVER);
 
+  // Snabbläsare – klarat en text under 4 minuter (240 sekunder)
+  const hasQuickText = user.completedTexts.some(
+    t => t.readingTimeSeconds !== undefined && t.readingTimeSeconds > 0 && t.readingTimeSeconds < 240
+  );
+  if (hasQuickText) addBadge(BadgeType.FAST_READER);
+
+  // Uthållig – mer än 30 min (1800s) läst under en och samma dag
+  const readingByDay: Record<string, number> = {};
+  for (const t of user.completedTexts) {
+    if (t.readingTimeSeconds) {
+      const day = t.completedAt.slice(0, 10);
+      readingByDay[day] = (readingByDay[day] || 0) + t.readingTimeSeconds;
+    }
+  }
+  if (Object.values(readingByDay).some(s => s >= 1800)) addBadge(BadgeType.ENDURANCE);
+
+  // Månadsläsare – 14 dagar i rad
+  if (readingStreak >= 14) addBadge(BadgeType.STREAK_14);
+
+  // Storpoängare – 500 poäng på en dag
+  const pointsByDay: Record<string, number> = {};
+  for (const t of user.completedTexts) {
+    const day = t.completedAt.slice(0, 10);
+    pointsByDay[day] = (pointsByDay[day] || 0) + t.pointsEarned;
+  }
+  if (Object.values(pointsByDay).some(p => p >= 500)) addBadge(BadgeType.BIG_SCORER);
+
+  // Genremix – berättelse och faktatext samma dag
+  const genreByDay: Record<string, Set<string>> = {};
+  for (const t of user.completedTexts) {
+    if (t.genre) {
+      const day = t.completedAt.slice(0, 10);
+      if (!genreByDay[day]) genreByDay[day] = new Set();
+      genreByDay[day].add(t.genre);
+    }
+  }
+  const hasGenreMix = Object.values(genreByDay).some(
+    genres => genres.has('berättelse') && genres.has('faktatext')
+  );
+  if (hasGenreMix) addBadge(BadgeType.GENRE_MIX);
+
+  // Fullpoängsproffs – 5 texter totalt med alla rätt
+  const totalPerfect = user.completedTexts.filter(t => t.score === t.totalQuestions).length;
+  if (totalPerfect >= 5) addBadge(BadgeType.PERFECT_FIVE_TOTAL);
+
+  // Gymnasieexpert – 10 texter på gymnasienivå (grade 10)
+  const gymnasiumCount = user.completedTexts.filter(t => t.grade === 10).length;
+  if (gymnasiumCount >= 10) addBadge(BadgeType.GYMNASIUM_EXPERT);
+
+  // Morgonläsare – läst en text före kl 09:00
+  const hasMorning = user.completedTexts.some(t => {
+    const hour = new Date(t.completedAt).getHours();
+    return hour < 9;
+  });
+  if (hasMorning) addBadge(BadgeType.MORNING_READER);
+
+  // Nattugla – läst en text efter kl 20:00
+  const hasNight = user.completedTexts.some(t => {
+    const hour = new Date(t.completedAt).getHours();
+    return hour >= 20;
+  });
+  if (hasNight) addBadge(BadgeType.NIGHT_OWL);
+
   return newBadges;
 }
 
