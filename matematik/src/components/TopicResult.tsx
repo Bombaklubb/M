@@ -148,6 +148,14 @@ export default function TopicResult({ topic }: { topic: Topic }) {
             <p className="text-amber-400 text-sm">Nivå {points.level} – {points.streak} dagars streak 🔥</p>
           </div>
 
+          {/* Already completed notice */}
+          {pendingChestResult?.wasAlreadyCompleted && score >= 50 && (
+            <div className="bg-blue-500/15 border border-blue-400/40 rounded-2xl p-4 mb-4 text-center">
+              <p className="text-blue-300 font-bold text-sm">✅ Du har redan klarat detta ämne</p>
+              <p className="text-blue-400/80 text-xs mt-1">Inga nya poäng den här gången – men bra att du övar!</p>
+            </div>
+          )}
+
           {/* New achievements */}
           {newAchievements.length > 0 && (
             <div className="bg-purple-500/20 border border-purple-400/40 rounded-2xl p-4 mb-4 animate-bounce-in">
