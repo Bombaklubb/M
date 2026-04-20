@@ -10,7 +10,7 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress } from "@/lib/storage";
 import { recordError } from "@/lib/errorBank";
 import {
   chestsEarnedFromPoints,
@@ -104,6 +104,7 @@ export default function GrammarModulePage({ params }: Props) {
       const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
       if (student) {
+        const wasAlreadyCompleted = getModuleProgress(student, stage!.id, "grammar", mod!.id)?.completed ?? false;
         const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
         const updated = saveModuleProgress(
           student,
@@ -119,14 +120,14 @@ export default function GrammarModulePage({ params }: Props) {
         const gam = loadGamification();
         const newPoints = updated.totalPoints;
         const prevExercises = gam.exercisesCompleted;
-        const newExercises = prevExercises + 1;
+        const newExercises = wasAlreadyCompleted ? prevExercises : prevExercises + 1;
 
         // Chests from points
         const pointChests = chestsEarnedFromPoints(
           prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests
         );
-        // Chests from exercise count
-        const exChests = chestsEarnedFromExercises(
+        // Chests from exercise count (skip if replaying a completed module)
+        const exChests = wasAlreadyCompleted ? [] : chestsEarnedFromExercises(
           prevExercises, newExercises, gam.exerciseMilestonesRewarded, gam.chests
         );
 
@@ -141,8 +142,8 @@ export default function GrammarModulePage({ params }: Props) {
         const nowBossUnlocked =
           wasBossUnlocked || newExercises >= BOSS_UNLOCK_THRESHOLD;
 
-        // Mystery box
-        const mystery = rollMysteryBox(gam.badges, newExercises, gam.chests);
+        // Mystery box (skip if replaying a completed module)
+        const mystery = wasAlreadyCompleted ? null : rollMysteryBox(gam.badges, newExercises, gam.chests);
         let extraMysteryChest = mystery?.type === "chest" && mystery.chestType
           ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
           : [];
