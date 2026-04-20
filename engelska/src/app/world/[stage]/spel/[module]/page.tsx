@@ -12,6 +12,7 @@ import {
   saveModuleProgress,
   loadGamification,
   saveGamification,
+  getModuleProgress,
 } from "@/lib/storage";
 import {
   chestsEarnedFromPoints,
@@ -90,6 +91,7 @@ export default function SpelModulePage({ params }: Props) {
     const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
     if (student) {
+      const wasAlreadyCompleted = getModuleProgress(student, stage!.id, "spel", mod!.id)?.completed ?? false;
       const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
       const updated = saveModuleProgress(
         student,
@@ -104,7 +106,7 @@ export default function SpelModulePage({ params }: Props) {
       const gam = loadGamification();
       const newPoints = updated.totalPoints;
       const prevEx = gam.exercisesCompleted;
-      const newEx = prevEx + 1;
+      const newEx = wasAlreadyCompleted ? prevEx : prevEx + 1;
 
       const pointChests = chestsEarnedFromPoints(
         prevPoints,
@@ -112,7 +114,7 @@ export default function SpelModulePage({ params }: Props) {
         gam.pointsMilestonesRewarded,
         gam.chests
       );
-      const exChests = chestsEarnedFromExercises(
+      const exChests = wasAlreadyCompleted ? [] : chestsEarnedFromExercises(
         prevEx,
         newEx,
         gam.exerciseMilestonesRewarded,
@@ -125,7 +127,7 @@ export default function SpelModulePage({ params }: Props) {
       const firstChest = allNewChests[0];
       const wasBossUnlocked = gam.bossUnlocked;
       const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
-      const mystery = rollMysteryBox(gam.badges, newEx, gam.chests);
+      const mystery = wasAlreadyCompleted ? null : rollMysteryBox(gam.badges, newEx, gam.chests);
       const extraMysteryChest =
         mystery?.type === "chest" && mystery.chestType
           ? [
