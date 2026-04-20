@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchTeacherStats, type TeacherStats } from '../services/analyticsService';
-import { RefreshCw, LogOut, Monitor, FileText, Clock, Calendar } from 'lucide-react';
+import { RefreshCw, LogOut, Monitor, Calendar } from 'lucide-react';
 
 interface TeacherViewProps {
   onClose: () => void;
@@ -222,7 +222,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
             </h2>
 
             {/* Statistik-kort */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-3 gap-4 mb-8">
               {/* Inloggade nu */}
               <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
                 <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -236,42 +236,29 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 </div>
               </div>
 
-              {/* Unika enheter */}
+              {/* Inloggade idag */}
               <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
                 <div className="w-10 h-10 bg-sky-100 dark:bg-sky-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Monitor className="w-5 h-5 text-sky-600 dark:text-sky-400" />
+                </div>
+                <div className="text-3xl font-bold text-slate-800 dark:text-white">
+                  {stats?.visitorsToday ?? '-'}
+                </div>
+                <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                  Inloggade idag
+                </div>
+              </div>
+
+              {/* Unika enheter totalt */}
+              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
+                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Monitor className="w-5 h-5 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div className="text-3xl font-bold text-slate-800 dark:text-white">
                   {stats?.totalVisitors ?? '-'}
                 </div>
                 <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                   Unika enheter
-                </div>
-              </div>
-
-              {/* Uppgifter gjorda */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
-                <div className="w-10 h-10 bg-amber-100 dark:bg-amber-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <FileText className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                </div>
-                <div className="text-3xl font-bold text-slate-800 dark:text-white">
-                  {stats?.totalTasks ?? '-'}
-                </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                  Uppgifter gjorda
-                </div>
-              </div>
-
-              {/* Total tid */}
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 text-center">
-                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-                </div>
-                <div className="text-3xl font-bold text-slate-800 dark:text-white">
-                  {stats?.totalTime ?? '-'}
-                </div>
-                <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                  Total tid
                 </div>
               </div>
 
