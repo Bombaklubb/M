@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { RefreshCw, LogOut, Monitor, FileText, Users } from 'lucide-react';
+import { RefreshCw, LogOut, Monitor, Users } from 'lucide-react';
 
 interface LiveStats {
   activeNow: number;
@@ -132,7 +132,7 @@ export default function TeacherView() {
             {/* Översikt */}
             <section>
               <h2 className="text-xs font-black tracking-widest text-slate-400 uppercase mb-4">Översikt</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {/* Inloggade nu */}
                 <div className="bg-white rounded-2xl p-6 border-2 border-emerald-300 text-center flex flex-col items-center gap-3 shadow-sm">
                   <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
@@ -152,12 +152,6 @@ export default function TeacherView() {
                   icon={<Users className="w-5 h-5 text-indigo-600" />}
                   value={liveStats.visitorsMonth}
                   label="Unika enheter totalt"
-                />
-                <StatCard
-                  accent="bg-amber-100"
-                  icon={<FileText className="w-5 h-5 text-amber-600" />}
-                  value={liveStats.totalExercises}
-                  label="Uppgifter gjorda"
                 />
               </div>
             </section>
