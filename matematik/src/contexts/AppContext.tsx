@@ -37,7 +37,7 @@ interface AppContextValue {
   questWorldId: WorldId | null;
   gameWorldId: WorldId | null;
   errorBankWorldId: WorldId | null;
-  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null;
+  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean } | null;
   clearPendingChestResult: () => void;
   login: (student: Student) => void;
   logout: () => void;
@@ -49,7 +49,7 @@ interface AppContextValue {
   startGames: (worldId: WorldId) => void;
   startErrorBank: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
-  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null };
+  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean };
   updateAvatar: (avatarIndex: number) => void;
 }
 
@@ -64,7 +64,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
-  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
+  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean } | null>(null);
 
   const sessionStartRef = useRef<number | null>(null);
 
@@ -173,10 +173,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent]);
 
   const submitTopicResult = useCallback((topicId: string, correct: number, total: number, timeSpent: number) => {
-    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null };
+    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null, wasAlreadyCompleted: false };
     const score = total > 0 ? Math.round((correct / total) * 100) : 0;
     const stars = calcStars(score);
-    const basePoints = correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
+    // Förhindra fusk: inga poäng om ämnet redan är klarat
+    const prevProgress = getProgress(currentStudent.id).find(p => p.topicId === topicId);
+    const wasAlreadyCompleted = prevProgress?.completed === true;
+    const basePoints = wasAlreadyCompleted ? 0 : correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
     saveTopicProgress(currentStudent.id, { topicId, completed: score >= 50, bestScore: score, totalAttempts: 1, correctAnswers: correct, totalQuestions: total, lastAttempt: new Date().toISOString(), stars, timeSpent });
     recordTopicSession(currentStudent.id, topicId, correct, total);
 
@@ -199,7 +202,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     // Chest gamification
     const gam = loadGamification(currentStudent.id);
     const prevExercises = gam.exercisesCompleted;
-    const newExercises = prevExercises + 1;
+    // Räkna bara upp exercisesCompleted när ett ämne klaras för första gången
+    const newExercises = (!wasAlreadyCompleted && score >= 50) ? prevExercises + 1 : prevExercises;
 
     const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
     const exerciseChests = chestsEarnedFromExercises(prevExercises, newExercises, gam.exerciseMilestonesRewarded);
@@ -289,6 +293,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const chestResult = {
       newChests: allNewChests.map(c => c.chest),
       mysteryReward,
+      wasAlreadyCompleted,
     };
     setPendingChestResult(chestResult);
 

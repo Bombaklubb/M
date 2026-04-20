@@ -29,6 +29,8 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const feedbackMsgRef = useRef('');
   const [correctCount, setCorrectCount] = useState(0);
   const [newItem, setNewItem] = useState<string | null>(null);
+  const [ptsEarned, setPtsEarned] = useState(0);
+  const [alreadyDoneQuest, setAlreadyDoneQuest] = useState(false);
 
   if (!currentStudent) return null;
 
@@ -45,6 +47,8 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     setInput('');
     setAnswered(false);
     setNewItem(null);
+    setPtsEarned(0);
+    setAlreadyDoneQuest(false);
   }
 
   function beginSteps() {
@@ -84,8 +88,11 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     } else {
       // Quest complete – belöning KRÄVER alla rätt
       const allCorrect = correctCount === selectedQuest.steps.length;
-      const pts = correctCount * 20 + (allCorrect ? 100 : 0);
+      const wasAlreadyDone = questProgress.find(p => p.questId === selectedQuest.id)?.completed === true;
+      const pts = wasAlreadyDone ? 0 : (correctCount * 20 + (allCorrect ? 100 : 0));
       addPoints(currentStudent.id, pts);
+      setPtsEarned(pts);
+      setAlreadyDoneQuest(wasAlreadyDone);
       saveQuestProgress(currentStudent.id, selectedQuest.id, selectedQuest.steps.length, true, correctCount);
       if (allCorrect) {
         const item = COLLECTION_ITEMS.find(c => c.id === selectedQuest.rewardItem);
@@ -299,11 +306,19 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
               <p className="text-green-300 text-xs">Rätt svar</p>
             </div>
             <div className="bg-amber-500/20 rounded-xl p-3 border border-amber-500/30">
-              <p className="text-2xl font-black text-amber-400">+{correctCount * 20 + 50}</p>
+              <p className="text-2xl font-black text-amber-400">+{ptsEarned}</p>
               <p className="text-amber-300 text-xs">Poäng</p>
             </div>
           </div>
         </div>
+
+        {/* Already completed notice */}
+        {alreadyDoneQuest && (
+          <div className="bg-blue-500/15 border border-blue-400/40 rounded-2xl p-4 mb-5 text-center">
+            <p className="text-blue-300 font-bold text-sm">✅ Du har redan klarat detta äventyr</p>
+            <p className="text-blue-400/80 text-xs mt-1">Inga nya poäng den här gången – men bra att du övar!</p>
+          </div>
+        )}
 
         {/* Reward */}
         {newItem && item ? (
