@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { fetchTeacherStats, type TeacherStats } from "@/services/analyticsService";
-import { RefreshCw, LogOut, Monitor } from "lucide-react";
+import { RefreshCw, LogOut, Monitor, Users } from "lucide-react";
 
 const questionTypeLabels: Record<string, string> = {
   grammar: "Grammatik",
@@ -178,15 +178,20 @@ export default function LararePage() {
           <h2 className="text-xs font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-4">
             Översikt
           </h2>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {/* Inloggade nu */}
             <StatCard
               accent="bg-emerald-100 dark:bg-emerald-900/40"
-              icon={
-                <div className="w-5 h-5 bg-emerald-500 rounded-full animate-pulse" />
-              }
+              icon={<div className="w-5 h-5 bg-emerald-500 rounded-full animate-pulse" />}
               value={stats?.activeNow ?? "–"}
               label="Inloggade nu"
+            />
+            {/* Inloggade idag */}
+            <StatCard
+              accent="bg-violet-100 dark:bg-violet-900/40"
+              icon={<Users className="w-5 h-5 text-violet-600 dark:text-violet-400" />}
+              value={stats?.visitorsToday ?? "–"}
+              label="Inloggade idag"
             />
             {/* Unika enheter */}
             <StatCard
