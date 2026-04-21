@@ -95,10 +95,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setIsTeacherState(false);
   }, [currentStudent]);
 
-  // Heartbeat – skicka var 2:e minut när elev är inloggad
+  // Heartbeat + besöksregistrering – skicka vid varje session (även återupptagen)
   useEffect(() => {
     if (!currentStudent) return;
-    trackHeartbeat(); // direkt vid inloggning
+    trackVisit();     // registrera enheten för idag (HyperLogLog är idempotent)
+    trackHeartbeat();
     const interval = setInterval(trackHeartbeat, 2 * 60 * 1000);
     return () => clearInterval(interval);
   }, [currentStudent]);
