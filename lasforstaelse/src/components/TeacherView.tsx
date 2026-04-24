@@ -266,7 +266,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
             {/* Statistik per årskurs/stadie */}
             <h2 className="text-lg font-bold text-slate-700 dark:text-slate-200 mb-4">
-              ANVÄNDNING PER ÅRSKURS
+              ANTAL LÄSTA TEXTER
             </h2>
 
             <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 mb-8">
