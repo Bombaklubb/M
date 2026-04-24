@@ -4366,6 +4366,218 @@
       ]
     },
     {
+      "id": "hog-some-any",
+      "title": "Some och Any",
+      "description": "Avancerad användning av some och any – nyanser och undantag.",
+      "icon": "🔵",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "✅ SOME → positiva meningar och erbjudanden/förfrågningar i frågor.",
+        "❓ ANY → frågor (neutral) och negationer.",
+        "🔄 ANY kan också betyda 'vilken/vilket som helst' i positiva meningar: 'You can sit in any seat.' (= vilken plats som helst)",
+        "📌 SOME i meningar som 'Some people think...' syftar på 'en del människor' (inte alla)."
+      ],
+      "exercises": [
+        {
+          "id": "hog-sa-1",
+          "type": "multiple-choice",
+          "question": "I haven't made ___ progress on my essay yet.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (haven't made) → any."
+        },
+        {
+          "id": "hog-sa-2",
+          "type": "multiple-choice",
+          "question": "You can sit in ___ seat you like. ('vilken ... som helst')",
+          "options": [
+            "some",
+            "a",
+            "any",
+            "the"
+          ],
+          "correctIndex": 2,
+          "explanation": "Any i positiv mening = 'vilken som helst': 'You can sit in any seat you like.'"
+        },
+        {
+          "id": "hog-sa-3",
+          "type": "multiple-choice",
+          "question": "Would you like ___ assistance with that?",
+          "options": [
+            "any",
+            "a",
+            "an",
+            "some"
+          ],
+          "correctIndex": 3,
+          "explanation": "Artigt erbjudande → some: 'Would you like some assistance?'"
+        },
+        {
+          "id": "hog-sa-4",
+          "type": "fill-in-blank",
+          "sentence": "She rarely makes ___ effort to improve.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "'Rarely' ger meningen en negativ innebörd → any."
+        },
+        {
+          "id": "hog-sa-5",
+          "type": "multiple-choice",
+          "question": "There must be ___ explanation for this behaviour.",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Positiv mening, oräknebart → some: 'There must be some explanation.'"
+        },
+        {
+          "id": "hog-sa-6",
+          "type": "multiple-choice",
+          "question": "Could you lend me ___ money?",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Förfrågan (man hoppas på ja) → some: 'Could you lend me some money?'"
+        },
+        {
+          "id": "hog-sa-7",
+          "type": "fill-in-blank",
+          "sentence": "He could not find ___ evidence to support his theory.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (could not find) → any."
+        },
+        {
+          "id": "hog-sa-8",
+          "type": "multiple-choice",
+          "question": "___ people believe that climate change is not real.",
+          "options": [
+            "Any",
+            "A",
+            "Some",
+            "An"
+          ],
+          "correctIndex": 2,
+          "explanation": "Some people = 'En del människor' (en grupp, inte alla). Some i positiv mening."
+        },
+        {
+          "id": "hog-sa-9",
+          "type": "fill-in-blank",
+          "sentence": "She barely has ___ free time during the week.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "'Barely' ger negativ innebörd → any."
+        },
+        {
+          "id": "hog-sa-10",
+          "type": "multiple-choice",
+          "question": "We were able to gather ___ useful data.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'We gathered some useful data.'"
+        },
+        {
+          "id": "hog-sa-11",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Jag hittade inte några ledtrådar på brottsplatsen.'",
+          "words": [
+            "I",
+            "didn't",
+            "find",
+            "any",
+            "clues",
+            "at",
+            "the",
+            "scene"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "explanation": "Negation (didn't find) → any."
+        },
+        {
+          "id": "hog-sa-12",
+          "type": "multiple-choice",
+          "question": "Is there ___ particular reason you are late?",
+          "options": [
+            "some",
+            "a",
+            "any",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Neutral fråga → any: 'Is there any particular reason...?'"
+        },
+        {
+          "id": "hog-sa-13",
+          "type": "fill-in-blank",
+          "sentence": "The police found ___ clues at the scene.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "hog-sa-14",
+          "type": "multiple-choice",
+          "question": "They didn't face ___ serious problems during the project.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (didn't face) → any."
+        },
+        {
+          "id": "hog-sa-15",
+          "type": "multiple-choice",
+          "question": "Do you want ___ help carrying those bags?",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Erbjudande → some: 'Do you want some help?' (man hoppas på ja)"
+        }
+      ]
+    },
+    {
       "id": "hog-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",

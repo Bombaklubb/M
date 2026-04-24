@@ -4339,6 +4339,204 @@
       ]
     },
     {
+      "id": "lag-some-any",
+      "title": "Some och Any",
+      "description": "Lär dig när du ska använda some och any på engelska.",
+      "icon": "🔵",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📘 SOME används i positiva meningar: 'There are some apples.'",
+        "❓ ANY används i frågor och negationer: 'Are there any apples?' / 'There aren't any apples.'",
+        "💡 Undantag: SOME kan användas i frågor när man erbjuder något: 'Would you like some cake?'"
+      ],
+      "exercises": [
+        {
+          "id": "lag-sa-1",
+          "type": "multiple-choice",
+          "question": "There are ___ apples in the basket.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 0,
+          "explanation": "Positiv mening → some: 'There are some apples in the basket.'"
+        },
+        {
+          "id": "lag-sa-2",
+          "type": "multiple-choice",
+          "question": "Are there ___ eggs in the fridge?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Fråga → any: 'Are there any eggs in the fridge?'"
+        },
+        {
+          "id": "lag-sa-3",
+          "type": "multiple-choice",
+          "question": "I don't have ___ money.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "many"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (don't) → any: 'I don't have any money.'"
+        },
+        {
+          "id": "lag-sa-4",
+          "type": "multiple-choice",
+          "question": "She has ___ friends at school.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'She has some friends at school.'"
+        },
+        {
+          "id": "lag-sa-5",
+          "type": "multiple-choice",
+          "question": "Do you have ___ brothers or sisters?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Fråga → any: 'Do you have any brothers or sisters?'"
+        },
+        {
+          "id": "lag-sa-6",
+          "type": "multiple-choice",
+          "question": "We need ___ milk for the cake.",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Positiv mening → some: 'We need some milk for the cake.'"
+        },
+        {
+          "id": "lag-sa-7",
+          "type": "multiple-choice",
+          "question": "There aren't ___ cookies left.",
+          "options": [
+            "some",
+            "a",
+            "an",
+            "any"
+          ],
+          "correctIndex": 3,
+          "explanation": "Negation (aren't) → any: 'There aren't any cookies left.'"
+        },
+        {
+          "id": "lag-sa-8",
+          "type": "fill-in-blank",
+          "sentence": "I can see ___ cats in the garden.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "lag-sa-9",
+          "type": "fill-in-blank",
+          "sentence": "Is there ___ bread at home?",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Fråga → any."
+        },
+        {
+          "id": "lag-sa-10",
+          "type": "multiple-choice",
+          "question": "He doesn't have ___ pets.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (doesn't) → any: 'He doesn't have any pets.'"
+        },
+        {
+          "id": "lag-sa-11",
+          "type": "multiple-choice",
+          "question": "There are ___ birds in the tree.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'There are some birds in the tree.'"
+        },
+        {
+          "id": "lag-sa-12",
+          "type": "fill-in-blank",
+          "sentence": "They don't want ___ help.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (don't) → any."
+        },
+        {
+          "id": "lag-sa-13",
+          "type": "multiple-choice",
+          "question": "Would you like ___ cake? (erbjudande)",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vid erbjudande i frågor används some: 'Would you like some cake?'"
+        },
+        {
+          "id": "lag-sa-14",
+          "type": "fill-in-blank",
+          "sentence": "We have ___ homework today.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "lag-sa-15",
+          "type": "multiple-choice",
+          "question": "Have you got ___ questions?",
+          "options": [
+            "some",
+            "a",
+            "an",
+            "any"
+          ],
+          "correctIndex": 3,
+          "explanation": "Fråga → any: 'Have you got any questions?'"
+        }
+      ]
+    },
+    {
       "id": "lag-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
