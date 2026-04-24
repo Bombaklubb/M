@@ -5,7 +5,7 @@ import type { ChestType, MattChest, MattGamificationData, MysteryBoxReward } fro
 export const BOSS_UNLOCK_THRESHOLD = 5; // övningar för att låsa upp boss
 export const MYSTERY_BOX_CHANCE_EARLY = 0.25; // 25% chans under de 5 första topics
 export const MYSTERY_BOX_CHANCE = 0.15;       // 15% chans därefter
-export const MAX_CHESTS_PER_TYPE = 16;        // max antal kistor per valör
+export const MAX_CHESTS_PER_TYPE = 30;        // max antal kistor per valör
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 50,    type: 'wood' },
