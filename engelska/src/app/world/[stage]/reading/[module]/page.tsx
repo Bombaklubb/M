@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import ReadingQuestionComponent from "@/components/exercises/ReadingQuestion";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
 import { recordError } from "@/lib/errorBank";
 import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
@@ -38,6 +38,9 @@ export default function ReadingModulePage({ params }: Props) {
   const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
   const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
   const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
+  const [modalPoints, setModalPoints] = useState(0);
+  const [modalBonus, setModalBonus] = useState(0);
+  const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
     const s = loadStudent();
@@ -82,13 +85,22 @@ export default function ReadingModulePage({ params }: Props) {
       const totalCorrect = newResults.filter(Boolean).length;
       const pts = totalCorrect * POINTS_PER_CORRECT;
       const passed = (totalCorrect / totalQuestions) >= 0.6;
-      const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
       if (student) {
-        const wasAlreadyCompleted = getModuleProgress(student, stage!.id, "reading", mod!.id)?.completed ?? false;
+        const existingProgress = getModuleProgress(student, stage!.id, "reading", mod!.id);
+        const wasAlreadyCompleted = existingProgress?.completed ?? false;
+        const priorAttempts = existingProgress?.attempts ?? 0;
+        const repeatMult = getRepeatMultiplier(priorAttempts);
+        const adjustedBase = Math.round(pts * repeatMult);
+        const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
+        const adjustedTotal = adjustedBase + adjustedBonus;
+        setModalPoints(adjustedBase);
+        setModalBonus(adjustedBonus);
+        setAttemptNum(priorAttempts + 1);
+
         const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
         const updated = saveModuleProgress(
-          student, stage!.id, "reading", mod!.id, finalPts, passed
+          student, stage!.id, "reading", mod!.id, adjustedTotal, passed
         );
         setStudent(updated);
 
@@ -330,12 +342,13 @@ export default function ReadingModulePage({ params }: Props) {
 
       {showResult && (
         <ResultModal
-          points={earnedPoints}
-          bonusPoints={mod.bonusPoints}
+          points={modalPoints}
+          bonusPoints={modalBonus}
           totalCorrect={totalCorrect}
           totalQuestions={totalQuestions}
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
+          repeatAttemptNumber={attemptNum}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />

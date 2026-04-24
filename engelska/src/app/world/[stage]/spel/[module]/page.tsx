@@ -13,6 +13,7 @@ import {
   loadGamification,
   saveGamification,
   getModuleProgress,
+  getRepeatMultiplier,
 } from "@/lib/storage";
 import {
   chestsEarnedFromPoints,
@@ -53,6 +54,9 @@ export default function SpelModulePage({ params }: Props) {
   const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
   const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
   const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
+  const [modalPoints, setModalPoints] = useState(0);
+  const [modalBonus, setModalBonus] = useState(0);
+  const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
     const s = loadStudent();
@@ -88,17 +92,26 @@ export default function SpelModulePage({ params }: Props) {
 
     const pts = coins * POINTS_PER_COIN;
     const passed = coins / totalQuestions >= 0.6;
-    const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
     if (student) {
-      const wasAlreadyCompleted = getModuleProgress(student, stage!.id, "spel", mod!.id)?.completed ?? false;
+      const existingProgress = getModuleProgress(student, stage!.id, "spel", mod!.id);
+      const wasAlreadyCompleted = existingProgress?.completed ?? false;
+      const priorAttempts = existingProgress?.attempts ?? 0;
+      const repeatMult = getRepeatMultiplier(priorAttempts);
+      const adjustedBase = Math.round(pts * repeatMult);
+      const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
+      const adjustedTotal = adjustedBase + adjustedBonus;
+      setModalPoints(adjustedBase);
+      setModalBonus(adjustedBonus);
+      setAttemptNum(priorAttempts + 1);
+
       const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
       const updated = saveModuleProgress(
         student,
         stage!.id,
         "spel",
         mod!.id,
-        finalPts,
+        adjustedTotal,
         passed
       );
       setStudent(updated);
@@ -294,12 +307,13 @@ export default function SpelModulePage({ params }: Props) {
 
       {showResult && (
         <ResultModal
-          points={earnedPoints}
-          bonusPoints={mod.bonusPoints}
+          points={modalPoints}
+          bonusPoints={modalBonus}
           totalCorrect={coinsCollected}
           totalQuestions={totalQuestions}
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
+          repeatAttemptNumber={attemptNum}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />

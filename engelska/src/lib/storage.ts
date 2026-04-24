@@ -144,6 +144,13 @@ export function clearStudent(): void {
 
 // ─── Module progress helpers ──────────────────────────────────────────────────
 
+export function getRepeatMultiplier(priorAttempts: number): number {
+  if (priorAttempts === 0) return 1.0;
+  if (priorAttempts === 1) return 0.5;
+  if (priorAttempts === 2) return 0.25;
+  return 0;
+}
+
 export function getModuleProgress(
   data: StudentData,
   stageId: StageId,
@@ -180,7 +187,6 @@ export function saveModuleProgress(
     : stage.wordsearchModules;
   const existing = map[moduleId];
   const prevPoints = existing?.points ?? 0;
-  const addedPoints = Math.max(0, points - prevPoints);
 
   map[moduleId] = {
     moduleId,
@@ -190,7 +196,8 @@ export function saveModuleProgress(
     lastAttempt: new Date().toISOString(),
   };
 
-  data.totalPoints += addedPoints;
+  // Caller applies diminishing returns via getRepeatMultiplier before passing points
+  data.totalPoints += points;
   saveStudent(data);
 
   // Anonym statistik-tracking (GDPR-säkrad, inget personligt)

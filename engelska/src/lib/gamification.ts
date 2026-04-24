@@ -10,7 +10,7 @@ import type {
 
 export const BOSS_UNLOCK_THRESHOLD = 5; // exercises needed to unlock boss
 export const MYSTERY_BOX_CHANCE = 0.15; // 15% chance after each exercise
-export const MAX_CHESTS_PER_TYPE = 10;  // cap per chest type
+export const MAX_CHESTS_PER_TYPE = 30;  // cap per chest type
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 50,    type: "wood" },

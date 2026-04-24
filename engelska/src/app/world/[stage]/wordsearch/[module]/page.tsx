@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import WordSearch from "@/components/exercises/WordSearch";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
 import { checkAchievementBadges } from "@/lib/gamification";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, WordSearchModule } from "@/lib/types";
@@ -25,6 +25,8 @@ export default function WordSearchModulePage({ params }: Props) {
   const [mod, setMod] = useState<WordSearchModule | null>(null);
   const [loading, setLoading] = useState(true);
   const [showResult, setShowResult] = useState(false);
+  const [modalPoints, setModalPoints] = useState(0);
+  const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
     const s = loadStudent();
@@ -50,9 +52,16 @@ export default function WordSearchModulePage({ params }: Props) {
   if (!mod) return notFound();
 
   function handleComplete() {
-    const pts = mod!.bonusPoints + 50;
+    const rawPts = mod!.bonusPoints + 50;
     if (student) {
-      const updated = saveModuleProgress(student, stage!.id, "wordsearch", mod!.id, pts, true);
+      const existingProgress = getModuleProgress(student, stage!.id, "wordsearch", mod!.id);
+      const priorAttempts = existingProgress?.attempts ?? 0;
+      const repeatMult = getRepeatMultiplier(priorAttempts);
+      const adjustedPts = Math.round(rawPts * repeatMult);
+      setModalPoints(adjustedPts);
+      setAttemptNum(priorAttempts + 1);
+
+      const updated = saveModuleProgress(student, stage!.id, "wordsearch", mod!.id, adjustedPts, true);
       setStudent(updated);
       const gam = loadGamification();
       const achievementBadges = checkAchievementBadges(updated, gam);
@@ -101,10 +110,11 @@ export default function WordSearchModulePage({ params }: Props) {
 
       {showResult && (
         <ResultModal
-          points={mod.bonusPoints + 50}
+          points={modalPoints}
           bonusPoints={0}
           totalCorrect={mod.words.length}
           totalQuestions={mod.words.length}
+          repeatAttemptNumber={attemptNum}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
