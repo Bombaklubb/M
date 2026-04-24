@@ -37,7 +37,7 @@ interface AppContextValue {
   questWorldId: WorldId | null;
   gameWorldId: WorldId | null;
   errorBankWorldId: WorldId | null;
-  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean } | null;
+  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null;
   clearPendingChestResult: () => void;
   login: (student: Student) => void;
   logout: () => void;
@@ -49,7 +49,7 @@ interface AppContextValue {
   startGames: (worldId: WorldId) => void;
   startErrorBank: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
-  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean };
+  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number };
   updateAvatar: (avatarIndex: number) => void;
 }
 
@@ -64,7 +64,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
-  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean } | null>(null);
+  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null>(null);
 
   const sessionStartRef = useRef<number | null>(null);
 
@@ -174,13 +174,17 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent]);
 
   const submitTopicResult = useCallback((topicId: string, correct: number, total: number, timeSpent: number) => {
-    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null, wasAlreadyCompleted: false };
+    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null, wasAlreadyCompleted: false, attemptNumber: 1 };
     const score = total > 0 ? Math.round((correct / total) * 100) : 0;
     const stars = calcStars(score);
-    // Förhindra fusk: inga poäng om ämnet redan är klarat
     const prevProgress = getProgress(currentStudent.id).find(p => p.topicId === topicId);
+    const prevAttempts = prevProgress?.totalAttempts ?? 0;
+    const attemptNumber = prevAttempts + 1;
     const wasAlreadyCompleted = prevProgress?.completed === true;
-    const basePoints = wasAlreadyCompleted ? 0 : correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
+    // Glidande poängsänkning: 100% → 50% → 25% → 10% → 0% per upprepning
+    const repeatMultiplier = prevAttempts === 0 ? 1 : prevAttempts === 1 ? 0.5 : prevAttempts === 2 ? 0.25 : prevAttempts === 3 ? 0.1 : 0;
+    const fullPoints = correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
+    const basePoints = Math.round(fullPoints * repeatMultiplier);
     saveTopicProgress(currentStudent.id, { topicId, completed: score >= 50, bestScore: score, totalAttempts: 1, correctAnswers: correct, totalQuestions: total, lastAttempt: new Date().toISOString(), stars, timeSpent });
     recordTopicSession(currentStudent.id, topicId, correct, total);
 
@@ -295,6 +299,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       newChests: allNewChests.map(c => c.chest),
       mysteryReward,
       wasAlreadyCompleted,
+      attemptNumber,
     };
     setPendingChestResult(chestResult);
 
