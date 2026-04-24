@@ -4547,6 +4547,202 @@
       ]
     },
     {
+      "id": "mel-some-any",
+      "title": "Some och Any",
+      "description": "Fördjupa dig i när some och any används i olika meningstyper.",
+      "icon": "🔵",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "✅ SOME → positiva meningar: 'I bought some books.'",
+        "❓ ANY → frågor och negationer: 'Did you see any films?' / 'I didn't see any films.'",
+        "🎁 SOME → erbjudanden och förfrågningar: 'Would you like some coffee?' / 'Can I have some water?'",
+        "⚡ Kom ihåg: 'not any' = ingen/ingenting – e.g. 'I don't have any money' = Jag har inga pengar."
+      ],
+      "exercises": [
+        {
+          "id": "mel-sa-1",
+          "type": "multiple-choice",
+          "question": "She bought ___ new books at the store.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'She bought some new books.'"
+        },
+        {
+          "id": "mel-sa-2",
+          "type": "multiple-choice",
+          "question": "I couldn't find ___ information online.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (couldn't) → any: 'I couldn't find any information.'"
+        },
+        {
+          "id": "mel-sa-3",
+          "type": "multiple-choice",
+          "question": "Would you like ___ more coffee?",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Erbjudande i fråga → some: 'Would you like some more coffee?'"
+        },
+        {
+          "id": "mel-sa-4",
+          "type": "multiple-choice",
+          "question": "There weren't ___ students in the classroom.",
+          "options": [
+            "some",
+            "a",
+            "an",
+            "any"
+          ],
+          "correctIndex": 3,
+          "explanation": "Negation (weren't) → any: 'There weren't any students.'"
+        },
+        {
+          "id": "mel-sa-5",
+          "type": "fill-in-blank",
+          "sentence": "He needs ___ help with his project.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "mel-sa-6",
+          "type": "multiple-choice",
+          "question": "Did you see ___ interesting films last week?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vanlig fråga → any: 'Did you see any interesting films?'"
+        },
+        {
+          "id": "mel-sa-7",
+          "type": "multiple-choice",
+          "question": "We still have ___ time before the class starts.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'We still have some time.'"
+        },
+        {
+          "id": "mel-sa-8",
+          "type": "fill-in-blank",
+          "sentence": "The teacher didn't give ___ extra homework.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (didn't give) → any."
+        },
+        {
+          "id": "mel-sa-9",
+          "type": "multiple-choice",
+          "question": "Could I have ___ sugar for my tea?",
+          "options": [
+            "any",
+            "a",
+            "an",
+            "some"
+          ],
+          "correctIndex": 3,
+          "explanation": "Förfrågan → some: 'Could I have some sugar?' (man ber om något)"
+        },
+        {
+          "id": "mel-sa-10",
+          "type": "fill-in-blank",
+          "sentence": "I haven't read ___ books by that author.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (haven't) → any."
+        },
+        {
+          "id": "mel-sa-11",
+          "type": "multiple-choice",
+          "question": "There are ___ good restaurants near here.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'There are some good restaurants.'"
+        },
+        {
+          "id": "mel-sa-12",
+          "type": "multiple-choice",
+          "question": "Do you have ___ plans for the weekend?",
+          "options": [
+            "some",
+            "a",
+            "any",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vanlig fråga → any: 'Do you have any plans?'"
+        },
+        {
+          "id": "mel-sa-13",
+          "type": "fill-in-blank",
+          "sentence": "She didn't make ___ mistakes in her test.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (didn't make) → any."
+        },
+        {
+          "id": "mel-sa-14",
+          "type": "fill-in-blank",
+          "sentence": "We brought ___ sandwiches for the picnic.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "mel-sa-15",
+          "type": "multiple-choice",
+          "question": "Have you heard ___ good music recently?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vanlig fråga → any: 'Have you heard any good music?'"
+        }
+      ]
+    },
+    {
       "id": "mel-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
