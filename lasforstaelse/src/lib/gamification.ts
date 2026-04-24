@@ -3,7 +3,7 @@ import type { ChestType, Chest, MysteryBoxReward, GamificationData } from '../ty
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 export const MYSTERY_BOX_CHANCE = 0.12;
-export const MAX_CHESTS_PER_TYPE = 16;
+export const MAX_CHESTS_PER_TYPE = 30;
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   // Bronskista: 10-200 poäng
