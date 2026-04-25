@@ -223,20 +223,20 @@ export function rollMysteryBox(badges: string[], exercisesCompleted = 99): Myste
   }
 }
 
-/** Open a wood chest → points 50-100 */
+/** Open a wood chest → points 20-120 */
 export function openWoodChest(): { points: number; description: string } {
-  const pts = Math.floor(Math.random() * 51) + 50;
+  const pts = Math.floor(Math.random() * 101) + 20;
   return { points: pts, description: `+${pts} poäng` };
 }
 
-/** Open a silver chest → points 100-200 + possible badge + possible bonus wood chest */
+/** Open a silver chest → points 20-120 + possible badge + possible bonus wood chest */
 export function openSilverChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 100;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(
     b => b.id !== 'math_hero' && !badges.includes(b.id)
   );
@@ -252,14 +252,14 @@ export function openSilverChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a gold chest → points 200-500 + badge + possible silver chest */
+/** Open a gold chest → points 20-120 + badge + possible silver chest */
 export function openGoldChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 301) + 200;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -273,14 +273,14 @@ export function openGoldChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a rubin chest → points 400-700 + badge + possible bonus gold chest */
+/** Open a rubin chest → points 20-120 + badge + possible bonus gold chest */
 export function openRubinChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 301) + 400;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -294,14 +294,14 @@ export function openRubinChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a smaragd chest → points 700-1200 + badge + possible bonus rubin chest */
+/** Open a smaragd chest → points 20-120 + badge + possible bonus rubin chest */
 export function openSmaragdChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 501) + 700;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -315,14 +315,14 @@ export function openSmaragdChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a diamant chest → points 1200-2000 + badge + guaranteed bonus gold chest */
+/** Open a diamant chest → points 20-120 + badge + guaranteed bonus gold chest */
 export function openDiamantChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 801) + 1200;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
