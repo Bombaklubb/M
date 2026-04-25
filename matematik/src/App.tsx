@@ -22,6 +22,7 @@ import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
 import MemoryGame from './components/games/MemoryGame';
 import HangmanGame from './components/games/HangmanGame';
+import JaktlankarMenu from './components/JaktlankarMenu';
 
 // ─── Error Boundary ─────────────────────────────────────────────────────────
 // Catches any uncaught error in the React tree and shows a recovery screen
@@ -135,13 +136,7 @@ function AppInner() {
         }
       })()}
 
-      {/* Footer – alltid synlig */}
-      <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-        <span className="text-white/90 text-xs font-semibold"
-          style={{ textShadow: '0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7)' }}>
-          Mattejakten av Martin Akdogan
-        </span>
-      </div>
+      <JaktlankarMenu />
       <div className="fixed bottom-2 left-3 z-40 select-none">
         <a href="mailto:martin.akdogan@enkoping.se"
           className="text-white/90 text-xs font-semibold hover:underline"
