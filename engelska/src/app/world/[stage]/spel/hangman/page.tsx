@@ -3,6 +3,7 @@
 import { useState, useCallback, use, useEffect } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getPositiveFeedback } from "@/lib/feedback";
 import Header from "@/components/ui/Header";
 import { loadStudent } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
@@ -35,6 +36,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
   const [guessed, setGuessed] = useState<Set<string>>(new Set());
   const [wins, setWins] = useState(0);
   const [played, setPlayed] = useState(0);
+  const [wonMsg, setWonMsg] = useState("");
 
   const wrongGuesses = [...guessed].filter(l => !word.includes(l));
   const livesLeft = MAX_LIVES - wrongGuesses.length;
@@ -53,6 +55,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
     const newWrong = [...next].filter(l => !word.includes(l));
     const newLives = MAX_LIVES - newWrong.length;
     const won = word.split("").every(l => next.has(l));
+    if (won) setWonMsg(getPositiveFeedback());
     const lost = newLives <= 0;
     if (won || lost) {
       setPlayed(p => p + 1);
@@ -118,7 +121,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
           }`}>
             <p className="text-3xl mb-1">{phase === "won" ? "🎉" : "😵"}</p>
             <p className="font-black text-white text-lg mb-1">
-              {phase === "won" ? "Rätt! Snyggt jobbat!" : "Rätt svar var:"}
+              {phase === "won" ? wonMsg || "Snyggt jobbat! 🎉" : "Rätt svar var:"}
             </p>
             {phase === "lost" && <p className="text-2xl font-black text-red-300 mb-1">{word}</p>}
             <button

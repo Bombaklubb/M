@@ -206,6 +206,7 @@ export interface GamificationData {
   bossUnlocked: boolean;
   bossLastAttempt?: string;
   bossWins: number;
+  bossesBeaten?: string[]; // boss ids that have been beaten at least once
   pointsMilestonesRewarded: number[]; // total-point thresholds already rewarded
   exerciseMilestonesRewarded: number[]; // exercise-count thresholds already rewarded
 }

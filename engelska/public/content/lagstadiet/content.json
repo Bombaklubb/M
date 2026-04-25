@@ -1,6 +1,794 @@
 {
   "grammar": [
     {
+      "id": "lag-v1-farger",
+      "title": "Färger (Colours)",
+      "description": "Lär dig engelska ord för färger.",
+      "icon": "🎨",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🎨 Färger är bland de första orden du lär dig på engelska!",
+        "röd = red | blå = blue | grön = green | gul = yellow",
+        "lila = purple | orange = orange | rosa = pink",
+        "svart = black | vit = white | brun = brown"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v1-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'röd' på engelska?",
+          "options": [
+            "blue",
+            "red",
+            "green",
+            "yellow"
+          ],
+          "correctIndex": 1,
+          "explanation": "Röd = red. The fire engine is red!"
+        },
+        {
+          "id": "lag-v1-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'blå' på engelska?",
+          "options": [
+            "black",
+            "purple",
+            "blue",
+            "brown"
+          ],
+          "correctIndex": 2,
+          "explanation": "Blå = blue. The sky is blue!"
+        },
+        {
+          "id": "lag-v1-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'grön' på engelska?",
+          "options": [
+            "grey",
+            "green",
+            "red",
+            "pink"
+          ],
+          "correctIndex": 1,
+          "explanation": "Grön = green. Grass is green!"
+        },
+        {
+          "id": "lag-v1-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gul' på engelska?",
+          "options": [
+            "orange",
+            "pink",
+            "white",
+            "yellow"
+          ],
+          "correctIndex": 3,
+          "explanation": "Gul = yellow. The sun is yellow!"
+        },
+        {
+          "id": "lag-v1-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'svart' på engelska?",
+          "options": [
+            "black",
+            "brown",
+            "blue",
+            "grey"
+          ],
+          "correctIndex": 0,
+          "explanation": "Svart = black. A crow is black!"
+        },
+        {
+          "id": "lag-v1-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'vit' på engelska?",
+          "options": [
+            "grey",
+            "yellow",
+            "white",
+            "beige"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vit = white. Snow is white!"
+        },
+        {
+          "id": "lag-v1-7",
+          "type": "fill-in-blank",
+          "sentence": "Min cykel är ___ (lila på engelska).",
+          "answer": "purple",
+          "hint": "Lila = p _ _ _ _ _",
+          "explanation": "Lila = purple. My bike is purple."
+        },
+        {
+          "id": "lag-v1-8",
+          "type": "fill-in-blank",
+          "sentence": "Jordgubbar är ___ (röda på engelska).",
+          "answer": "red",
+          "hint": "Röd = r _ _",
+          "explanation": "Röd = red. Strawberries are red."
+        },
+        {
+          "id": "lag-v1-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'brun' på engelska?",
+          "options": [
+            "red",
+            "orange",
+            "brown",
+            "black"
+          ],
+          "correctIndex": 2,
+          "explanation": "Brun = brown. Chocolate is brown!"
+        },
+        {
+          "id": "lag-v1-10",
+          "type": "multiple-choice",
+          "question": "'The sky is ___.' Himlen är blå – vilket ord passar?",
+          "options": [
+            "green",
+            "red",
+            "blue",
+            "yellow"
+          ],
+          "correctIndex": 2,
+          "explanation": "The sky is blue. Himlen är blå."
+        },
+        {
+          "id": "lag-v1-11",
+          "type": "fill-in-blank",
+          "sentence": "Apelsinen är ___ (orange på engelska).",
+          "answer": "orange",
+          "hint": "Samma ord på svenska och engelska!",
+          "explanation": "Orange = orange. Det är ett lånord som är likadant på båda språken."
+        },
+        {
+          "id": "lag-v1-12",
+          "type": "multiple-choice",
+          "question": "Vilken färg är 'pink' på svenska?",
+          "options": [
+            "lila",
+            "röd",
+            "orange",
+            "rosa"
+          ],
+          "correctIndex": 3,
+          "explanation": "Pink = rosa. A flamingo is pink!"
+        }
+      ]
+    },
+    {
+      "id": "lag-v2-djur",
+      "title": "Djur (Animals)",
+      "description": "Lär dig engelska ord för vanliga djur.",
+      "icon": "🐾",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🐾 Djurord är roliga att lära sig på engelska!",
+        "katt = cat | hund = dog | häst = horse | ko = cow",
+        "gris = pig | kanin = rabbit | fisk = fish | fågel = bird",
+        "orm = snake | mus = mouse | lejon = lion | elefant = elephant"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v2-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'katt' på engelska?",
+          "options": [
+            "dog",
+            "fish",
+            "cat",
+            "bird"
+          ],
+          "correctIndex": 2,
+          "explanation": "Katt = cat. Cats say meow!"
+        },
+        {
+          "id": "lag-v2-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'hund' på engelska?",
+          "options": [
+            "cow",
+            "dog",
+            "horse",
+            "rabbit"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hund = dog. Dogs say woof!"
+        },
+        {
+          "id": "lag-v2-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'häst' på engelska?",
+          "options": [
+            "pig",
+            "sheep",
+            "horse",
+            "cow"
+          ],
+          "correctIndex": 2,
+          "explanation": "Häst = horse. Horses can run very fast!"
+        },
+        {
+          "id": "lag-v2-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ko' på engelska?",
+          "options": [
+            "cow",
+            "cat",
+            "crow",
+            "crab"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ko = cow. Cows give us milk!"
+        },
+        {
+          "id": "lag-v2-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gris' på engelska?",
+          "options": [
+            "horse",
+            "pig",
+            "sheep",
+            "goat"
+          ],
+          "correctIndex": 1,
+          "explanation": "Gris = pig. Pigs say oink!"
+        },
+        {
+          "id": "lag-v2-6",
+          "type": "fill-in-blank",
+          "sentence": "En ___ (kanin på engelska) hoppar runt i trädgården.",
+          "answer": "rabbit",
+          "hint": "Kanin = r _ _ _ _ _",
+          "explanation": "Kanin = rabbit. Rabbits love to hop!"
+        },
+        {
+          "id": "lag-v2-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fågel' på engelska?",
+          "options": [
+            "fish",
+            "fly",
+            "bird",
+            "bee"
+          ],
+          "correctIndex": 2,
+          "explanation": "Fågel = bird. Birds can fly!"
+        },
+        {
+          "id": "lag-v2-8",
+          "type": "fill-in-blank",
+          "sentence": "En ___ (orm på engelska) bor i skogen.",
+          "answer": "snake",
+          "hint": "Orm = s _ _ _ _",
+          "explanation": "Orm = snake. Snakes have no legs!"
+        },
+        {
+          "id": "lag-v2-9",
+          "type": "multiple-choice",
+          "question": "Vilket djur är 'elephant' på svenska?",
+          "options": [
+            "giraff",
+            "lejon",
+            "tiger",
+            "elefant"
+          ],
+          "correctIndex": 3,
+          "explanation": "Elephant = elefant. Elephants have a long trunk!"
+        },
+        {
+          "id": "lag-v2-10",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mus' på engelska?",
+          "options": [
+            "mouse",
+            "moose",
+            "monkey",
+            "mole"
+          ],
+          "correctIndex": 0,
+          "explanation": "Mus = mouse. A mouse is small and grey."
+        },
+        {
+          "id": "lag-v2-11",
+          "type": "fill-in-blank",
+          "sentence": "Simmar gör ___ (fisk på engelska) i havet.",
+          "answer": "fish",
+          "hint": "Fisk = f _ _ _",
+          "explanation": "Fisk = fish. Fish swim in the sea!"
+        },
+        {
+          "id": "lag-v2-12",
+          "type": "multiple-choice",
+          "question": "Vilket djur är 'lion' på svenska?",
+          "options": [
+            "tiger",
+            "lejon",
+            "björn",
+            "varg"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lion = lejon. The lion is the king of the jungle!"
+        }
+      ]
+    },
+    {
+      "id": "lag-v3-familjen",
+      "title": "Familjen (Family)",
+      "description": "Lär dig engelska ord för familjemedlemmar.",
+      "icon": "👨‍👩‍👧‍👦",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "👨‍👩‍👧‍👦 Familjeord på engelska är viktiga!",
+        "mamma = mum / mom | pappa = dad / father",
+        "syster = sister | bror = brother",
+        "farmor/mormor = grandmother | farfar/morfar = grandfather",
+        "farbror = uncle | faster/moster = aunt | kusin = cousin"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v3-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mamma' på engelska?",
+          "options": [
+            "sister",
+            "aunt",
+            "mum",
+            "gran"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mamma = mum (brittisk engelska) eller mom (amerikansk engelska)."
+        },
+        {
+          "id": "lag-v3-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'pappa' på engelska?",
+          "options": [
+            "brother",
+            "dad",
+            "uncle",
+            "son"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pappa = dad (eller father i mer formellt sammanhang)."
+        },
+        {
+          "id": "lag-v3-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'syster' på engelska?",
+          "options": [
+            "daughter",
+            "mother",
+            "sister",
+            "niece"
+          ],
+          "correctIndex": 2,
+          "explanation": "Syster = sister. My sister is funny!"
+        },
+        {
+          "id": "lag-v3-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bror' på engelska?",
+          "options": [
+            "son",
+            "uncle",
+            "cousin",
+            "brother"
+          ],
+          "correctIndex": 3,
+          "explanation": "Bror = brother. My brother plays football."
+        },
+        {
+          "id": "lag-v3-5",
+          "type": "fill-in-blank",
+          "sentence": "Min ___ (farmor/mormor på engelska) bakar kakor.",
+          "answer": "grandmother",
+          "hint": "Farmor/mormor = g _ _ _ _ _ _ _ _ _",
+          "explanation": "Grandmother = farmor eller mormor. Grandmother bakes cookies!"
+        },
+        {
+          "id": "lag-v3-6",
+          "type": "fill-in-blank",
+          "sentence": "Min ___ (farfar/morfar på engelska) fiskar vid sjön.",
+          "answer": "grandfather",
+          "hint": "Farfar/morfar = g _ _ _ _ _ _ _ _ _ _",
+          "explanation": "Grandfather = farfar eller morfar. My grandfather loves fishing."
+        },
+        {
+          "id": "lag-v3-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'farbror' på engelska?",
+          "options": [
+            "nephew",
+            "uncle",
+            "cousin",
+            "brother"
+          ],
+          "correctIndex": 1,
+          "explanation": "Farbror (eller morbror) = uncle på engelska."
+        },
+        {
+          "id": "lag-v3-8",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kusin' på engelska?",
+          "options": [
+            "niece",
+            "nephew",
+            "cousin",
+            "sibling"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kusin = cousin. Samma ord används för han och hon!"
+        },
+        {
+          "id": "lag-v3-9",
+          "type": "multiple-choice",
+          "question": "Vilket ord betyder 'familj' på engelska?",
+          "options": [
+            "family",
+            "friendly",
+            "famous",
+            "fairy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Familj = family. My family is great!"
+        },
+        {
+          "id": "lag-v3-10",
+          "type": "multiple-choice",
+          "question": "Vad heter 'faster' eller 'moster' på engelska?",
+          "options": [
+            "uncle",
+            "sister",
+            "aunt",
+            "niece"
+          ],
+          "correctIndex": 2,
+          "explanation": "Faster och moster = aunt på engelska. Samma ord för båda!"
+        },
+        {
+          "id": "lag-v3-11",
+          "type": "fill-in-blank",
+          "sentence": "Jag har en liten ___ (bebis på engelska) hemma.",
+          "answer": "baby",
+          "hint": "Bebis = b _ _ _",
+          "explanation": "Bebis = baby. There is a new baby in our family!"
+        },
+        {
+          "id": "lag-v3-12",
+          "type": "multiple-choice",
+          "question": "Vad heter 'föräldrar' på engelska?",
+          "options": [
+            "parents",
+            "persons",
+            "people",
+            "partners"
+          ],
+          "correctIndex": 0,
+          "explanation": "Föräldrar = parents. My parents are kind."
+        }
+      ]
+    },
+    {
+      "id": "lag-v4-frukter",
+      "title": "Frukter (Fruits)",
+      "description": "Lär dig engelska ord för frukter.",
+      "icon": "🍎",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🍎 Frukter på engelska – ät och lär!",
+        "äpple = apple | banan = banana | apelsin = orange",
+        "jordgubbe = strawberry | druva = grape | päron = pear",
+        "körsbär = cherry | citron = lemon | mango = mango",
+        "ananas = pineapple | melon = melon | hallon = raspberry"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v4-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'äpple' på engelska?",
+          "options": [
+            "orange",
+            "apple",
+            "apricot",
+            "avocado"
+          ],
+          "correctIndex": 1,
+          "explanation": "Äpple = apple. An apple a day keeps the doctor away!"
+        },
+        {
+          "id": "lag-v4-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'banan' på engelska?",
+          "options": [
+            "mango",
+            "melon",
+            "banana",
+            "berry"
+          ],
+          "correctIndex": 2,
+          "explanation": "Banan = banana. Monkeys love bananas!"
+        },
+        {
+          "id": "lag-v4-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'jordgubbe' på engelska?",
+          "options": [
+            "cherry",
+            "strawberry",
+            "raspberry",
+            "blueberry"
+          ],
+          "correctIndex": 1,
+          "explanation": "Jordgubbe = strawberry. Strawberries are red and sweet!"
+        },
+        {
+          "id": "lag-v4-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'apelsin' på engelska?",
+          "options": [
+            "lemon",
+            "apple",
+            "orange",
+            "onion"
+          ],
+          "correctIndex": 2,
+          "explanation": "Apelsin = orange. Oranges are juicy!"
+        },
+        {
+          "id": "lag-v4-5",
+          "type": "fill-in-blank",
+          "sentence": "En ___ (citron på engelska) smakar surt.",
+          "answer": "lemon",
+          "hint": "Citron = l _ _ _ _",
+          "explanation": "Citron = lemon. A lemon is sour!"
+        },
+        {
+          "id": "lag-v4-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'druva' på engelska?",
+          "options": [
+            "plum",
+            "grape",
+            "pear",
+            "peach"
+          ],
+          "correctIndex": 1,
+          "explanation": "Druva = grape. Grapes grow in bunches!"
+        },
+        {
+          "id": "lag-v4-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'päron' på engelska?",
+          "options": [
+            "plum",
+            "peach",
+            "pear",
+            "palm"
+          ],
+          "correctIndex": 2,
+          "explanation": "Päron = pear. A pear is green or yellow!"
+        },
+        {
+          "id": "lag-v4-8",
+          "type": "fill-in-blank",
+          "sentence": "En ___ (ananas på engelska) växer i varma länder.",
+          "answer": "pineapple",
+          "hint": "Ananas = p _ _ _ _ _ _ _ _",
+          "explanation": "Ananas = pineapple. A pineapple is sweet and tropical!"
+        },
+        {
+          "id": "lag-v4-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'körsbär' på engelska?",
+          "options": [
+            "cherry",
+            "chestnut",
+            "coconut",
+            "clementine"
+          ],
+          "correctIndex": 0,
+          "explanation": "Körsbär = cherry. Cherries are small and red!"
+        },
+        {
+          "id": "lag-v4-10",
+          "type": "multiple-choice",
+          "question": "'I like ___.' Vilket ord passar för mango?",
+          "options": [
+            "mango",
+            "mongo",
+            "mingi",
+            "mingu"
+          ],
+          "correctIndex": 0,
+          "explanation": "Mango = mango. Samma ord på svenska och engelska!"
+        },
+        {
+          "id": "lag-v4-11",
+          "type": "fill-in-blank",
+          "sentence": "En ___ (melon på engelska) är stor och rund.",
+          "answer": "melon",
+          "hint": "Tänk på en stor, rund frukt – den äts ofta på sommaren",
+          "explanation": "Melon = melon. Nästan samma ord!"
+        },
+        {
+          "id": "lag-v4-12",
+          "type": "multiple-choice",
+          "question": "Vilket ord betyder 'hallon' på engelska?",
+          "options": [
+            "blueberry",
+            "raspberry",
+            "strawberry",
+            "gooseberry"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hallon = raspberry. Raspberries are pink and tasty!"
+        }
+      ]
+    },
+    {
+      "id": "lag-v5-kroppen",
+      "title": "Kroppen (The Body)",
+      "description": "Lär dig engelska ord för kroppsdelar.",
+      "icon": "🦾",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🦾 Lär dig peka och namnge kroppsdelar på engelska!",
+        "huvud = head | öga = eye | näsa = nose | mun = mouth",
+        "öra = ear | hand = hand | fot = foot | arm = arm",
+        "ben = leg | mage = stomach | rygg = back | finger = finger",
+        "Tips: Sjung 'Head, shoulders, knees and toes' medan du lär dig!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'huvud' på engelska?",
+          "options": [
+            "hand",
+            "head",
+            "heel",
+            "hip"
+          ],
+          "correctIndex": 1,
+          "explanation": "Huvud = head. I nodded my head."
+        },
+        {
+          "id": "lag-v5-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'öga' på engelska?",
+          "options": [
+            "ear",
+            "elbow",
+            "eye",
+            "eyelid"
+          ],
+          "correctIndex": 2,
+          "explanation": "Öga = eye. I have two eyes."
+        },
+        {
+          "id": "lag-v5-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'näsa' på engelska?",
+          "options": [
+            "neck",
+            "knee",
+            "nail",
+            "nose"
+          ],
+          "correctIndex": 3,
+          "explanation": "Näsa = nose. I can smell with my nose."
+        },
+        {
+          "id": "lag-v5-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mun' på engelska?",
+          "options": [
+            "muscle",
+            "mouth",
+            "mole",
+            "middle"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mun = mouth. I eat with my mouth."
+        },
+        {
+          "id": "lag-v5-5",
+          "type": "fill-in-blank",
+          "sentence": "Jag hör med mitt ___ (öra på engelska).",
+          "answer": "ear",
+          "hint": "Öra = e _ _",
+          "explanation": "Öra = ear. I can hear with my ear."
+        },
+        {
+          "id": "lag-v5-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'hand' på engelska?",
+          "options": [
+            "hip",
+            "hair",
+            "hand",
+            "heel"
+          ],
+          "correctIndex": 2,
+          "explanation": "Hand = hand. Samma ord! I wave my hand."
+        },
+        {
+          "id": "lag-v5-7",
+          "type": "multiple-choice",
+          "question": "Vad heter 'arm' på engelska?",
+          "options": [
+            "ankle",
+            "arm",
+            "arch",
+            "axle"
+          ],
+          "correctIndex": 1,
+          "explanation": "Arm = arm. Nästan samma ord! I use my arms to hug."
+        },
+        {
+          "id": "lag-v5-8",
+          "type": "fill-in-blank",
+          "sentence": "Jag sparkar bollen med mitt ___ (ben på engelska).",
+          "answer": "leg",
+          "hint": "Ben = l _ _",
+          "explanation": "Ben = leg. I kick the ball with my leg."
+        },
+        {
+          "id": "lag-v5-9",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fot' på engelska?",
+          "options": [
+            "fist",
+            "face",
+            "foot",
+            "front"
+          ],
+          "correctIndex": 2,
+          "explanation": "Fot = foot. Plural: feet. My foot is size 36."
+        },
+        {
+          "id": "lag-v5-10",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mage' på engelska?",
+          "options": [
+            "shoulder",
+            "stomach",
+            "spine",
+            "shin"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mage = stomach. My stomach is hungry!"
+        },
+        {
+          "id": "lag-v5-11",
+          "type": "fill-in-blank",
+          "sentence": "Jag kliar mig på ___ (rygg på engelska).",
+          "answer": "back",
+          "hint": "Rygg = b _ _ _",
+          "explanation": "Rygg = back. I have a sore back."
+        },
+        {
+          "id": "lag-v5-12",
+          "type": "multiple-choice",
+          "question": "Vad heter 'finger' på engelska?",
+          "options": [
+            "finger",
+            "fern",
+            "fighter",
+            "flicker"
+          ],
+          "correctIndex": 0,
+          "explanation": "Finger = finger. Nästan samma ord! I have ten fingers."
+        }
+      ]
+    },
+    {
       "id": "lag-g1-be-verb",
       "title": "Is – Am – Are (Be-verb)",
       "description": "Lär dig använda is, am och are på rätt sätt.",
@@ -2617,794 +3405,6 @@
       ]
     },
     {
-      "id": "lag-v1-farger",
-      "title": "Färger (Colours)",
-      "description": "Lär dig engelska ord för färger.",
-      "icon": "🎨",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "helpText": [
-        "🎨 Färger är bland de första orden du lär dig på engelska!",
-        "röd = red | blå = blue | grön = green | gul = yellow",
-        "lila = purple | orange = orange | rosa = pink",
-        "svart = black | vit = white | brun = brown"
-      ],
-      "exercises": [
-        {
-          "id": "lag-v1-1",
-          "type": "multiple-choice",
-          "question": "Vad heter 'röd' på engelska?",
-          "options": [
-            "blue",
-            "red",
-            "green",
-            "yellow"
-          ],
-          "correctIndex": 1,
-          "explanation": "Röd = red. The fire engine is red!"
-        },
-        {
-          "id": "lag-v1-2",
-          "type": "multiple-choice",
-          "question": "Vad heter 'blå' på engelska?",
-          "options": [
-            "black",
-            "purple",
-            "blue",
-            "brown"
-          ],
-          "correctIndex": 2,
-          "explanation": "Blå = blue. The sky is blue!"
-        },
-        {
-          "id": "lag-v1-3",
-          "type": "multiple-choice",
-          "question": "Vad heter 'grön' på engelska?",
-          "options": [
-            "grey",
-            "green",
-            "red",
-            "pink"
-          ],
-          "correctIndex": 1,
-          "explanation": "Grön = green. Grass is green!"
-        },
-        {
-          "id": "lag-v1-4",
-          "type": "multiple-choice",
-          "question": "Vad heter 'gul' på engelska?",
-          "options": [
-            "orange",
-            "pink",
-            "white",
-            "yellow"
-          ],
-          "correctIndex": 3,
-          "explanation": "Gul = yellow. The sun is yellow!"
-        },
-        {
-          "id": "lag-v1-5",
-          "type": "multiple-choice",
-          "question": "Vad heter 'svart' på engelska?",
-          "options": [
-            "black",
-            "brown",
-            "blue",
-            "grey"
-          ],
-          "correctIndex": 0,
-          "explanation": "Svart = black. A crow is black!"
-        },
-        {
-          "id": "lag-v1-6",
-          "type": "multiple-choice",
-          "question": "Vad heter 'vit' på engelska?",
-          "options": [
-            "grey",
-            "yellow",
-            "white",
-            "beige"
-          ],
-          "correctIndex": 2,
-          "explanation": "Vit = white. Snow is white!"
-        },
-        {
-          "id": "lag-v1-7",
-          "type": "fill-in-blank",
-          "sentence": "Min cykel är ___ (lila på engelska).",
-          "answer": "purple",
-          "hint": "Lila = p _ _ _ _ _",
-          "explanation": "Lila = purple. My bike is purple."
-        },
-        {
-          "id": "lag-v1-8",
-          "type": "fill-in-blank",
-          "sentence": "Jordgubbar är ___ (röda på engelska).",
-          "answer": "red",
-          "hint": "Röd = r _ _",
-          "explanation": "Röd = red. Strawberries are red."
-        },
-        {
-          "id": "lag-v1-9",
-          "type": "multiple-choice",
-          "question": "Vad heter 'brun' på engelska?",
-          "options": [
-            "red",
-            "orange",
-            "brown",
-            "black"
-          ],
-          "correctIndex": 2,
-          "explanation": "Brun = brown. Chocolate is brown!"
-        },
-        {
-          "id": "lag-v1-10",
-          "type": "multiple-choice",
-          "question": "'The sky is ___.' Himlen är blå – vilket ord passar?",
-          "options": [
-            "green",
-            "red",
-            "blue",
-            "yellow"
-          ],
-          "correctIndex": 2,
-          "explanation": "The sky is blue. Himlen är blå."
-        },
-        {
-          "id": "lag-v1-11",
-          "type": "fill-in-blank",
-          "sentence": "Apelsinen är ___ (orange på engelska).",
-          "answer": "orange",
-          "hint": "Samma ord på svenska och engelska!",
-          "explanation": "Orange = orange. Det är ett lånord som är likadant på båda språken."
-        },
-        {
-          "id": "lag-v1-12",
-          "type": "multiple-choice",
-          "question": "Vilken färg är 'pink' på svenska?",
-          "options": [
-            "lila",
-            "röd",
-            "orange",
-            "rosa"
-          ],
-          "correctIndex": 3,
-          "explanation": "Pink = rosa. A flamingo is pink!"
-        }
-      ]
-    },
-    {
-      "id": "lag-v2-djur",
-      "title": "Djur (Animals)",
-      "description": "Lär dig engelska ord för vanliga djur.",
-      "icon": "🐾",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "helpText": [
-        "🐾 Djurord är roliga att lära sig på engelska!",
-        "katt = cat | hund = dog | häst = horse | ko = cow",
-        "gris = pig | kanin = rabbit | fisk = fish | fågel = bird",
-        "orm = snake | mus = mouse | lejon = lion | elefant = elephant"
-      ],
-      "exercises": [
-        {
-          "id": "lag-v2-1",
-          "type": "multiple-choice",
-          "question": "Vad heter 'katt' på engelska?",
-          "options": [
-            "dog",
-            "fish",
-            "cat",
-            "bird"
-          ],
-          "correctIndex": 2,
-          "explanation": "Katt = cat. Cats say meow!"
-        },
-        {
-          "id": "lag-v2-2",
-          "type": "multiple-choice",
-          "question": "Vad heter 'hund' på engelska?",
-          "options": [
-            "cow",
-            "dog",
-            "horse",
-            "rabbit"
-          ],
-          "correctIndex": 1,
-          "explanation": "Hund = dog. Dogs say woof!"
-        },
-        {
-          "id": "lag-v2-3",
-          "type": "multiple-choice",
-          "question": "Vad heter 'häst' på engelska?",
-          "options": [
-            "pig",
-            "sheep",
-            "horse",
-            "cow"
-          ],
-          "correctIndex": 2,
-          "explanation": "Häst = horse. Horses can run very fast!"
-        },
-        {
-          "id": "lag-v2-4",
-          "type": "multiple-choice",
-          "question": "Vad heter 'ko' på engelska?",
-          "options": [
-            "cow",
-            "cat",
-            "crow",
-            "crab"
-          ],
-          "correctIndex": 0,
-          "explanation": "Ko = cow. Cows give us milk!"
-        },
-        {
-          "id": "lag-v2-5",
-          "type": "multiple-choice",
-          "question": "Vad heter 'gris' på engelska?",
-          "options": [
-            "horse",
-            "pig",
-            "sheep",
-            "goat"
-          ],
-          "correctIndex": 1,
-          "explanation": "Gris = pig. Pigs say oink!"
-        },
-        {
-          "id": "lag-v2-6",
-          "type": "fill-in-blank",
-          "sentence": "En ___ (kanin på engelska) hoppar runt i trädgården.",
-          "answer": "rabbit",
-          "hint": "Kanin = r _ _ _ _ _",
-          "explanation": "Kanin = rabbit. Rabbits love to hop!"
-        },
-        {
-          "id": "lag-v2-7",
-          "type": "multiple-choice",
-          "question": "Vad heter 'fågel' på engelska?",
-          "options": [
-            "fish",
-            "fly",
-            "bird",
-            "bee"
-          ],
-          "correctIndex": 2,
-          "explanation": "Fågel = bird. Birds can fly!"
-        },
-        {
-          "id": "lag-v2-8",
-          "type": "fill-in-blank",
-          "sentence": "En ___ (orm på engelska) bor i skogen.",
-          "answer": "snake",
-          "hint": "Orm = s _ _ _ _",
-          "explanation": "Orm = snake. Snakes have no legs!"
-        },
-        {
-          "id": "lag-v2-9",
-          "type": "multiple-choice",
-          "question": "Vilket djur är 'elephant' på svenska?",
-          "options": [
-            "giraff",
-            "lejon",
-            "tiger",
-            "elefant"
-          ],
-          "correctIndex": 3,
-          "explanation": "Elephant = elefant. Elephants have a long trunk!"
-        },
-        {
-          "id": "lag-v2-10",
-          "type": "multiple-choice",
-          "question": "Vad heter 'mus' på engelska?",
-          "options": [
-            "mouse",
-            "moose",
-            "monkey",
-            "mole"
-          ],
-          "correctIndex": 0,
-          "explanation": "Mus = mouse. A mouse is small and grey."
-        },
-        {
-          "id": "lag-v2-11",
-          "type": "fill-in-blank",
-          "sentence": "Simmar gör ___ (fisk på engelska) i havet.",
-          "answer": "fish",
-          "hint": "Fisk = f _ _ _",
-          "explanation": "Fisk = fish. Fish swim in the sea!"
-        },
-        {
-          "id": "lag-v2-12",
-          "type": "multiple-choice",
-          "question": "Vilket djur är 'lion' på svenska?",
-          "options": [
-            "tiger",
-            "lejon",
-            "björn",
-            "varg"
-          ],
-          "correctIndex": 1,
-          "explanation": "Lion = lejon. The lion is the king of the jungle!"
-        }
-      ]
-    },
-    {
-      "id": "lag-v3-familjen",
-      "title": "Familjen (Family)",
-      "description": "Lär dig engelska ord för familjemedlemmar.",
-      "icon": "👨‍👩‍👧‍👦",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "helpText": [
-        "👨‍👩‍👧‍👦 Familjeord på engelska är viktiga!",
-        "mamma = mum / mom | pappa = dad / father",
-        "syster = sister | bror = brother",
-        "farmor/mormor = grandmother | farfar/morfar = grandfather",
-        "farbror = uncle | faster/moster = aunt | kusin = cousin"
-      ],
-      "exercises": [
-        {
-          "id": "lag-v3-1",
-          "type": "multiple-choice",
-          "question": "Vad heter 'mamma' på engelska?",
-          "options": [
-            "sister",
-            "aunt",
-            "mum",
-            "gran"
-          ],
-          "correctIndex": 2,
-          "explanation": "Mamma = mum (brittisk engelska) eller mom (amerikansk engelska)."
-        },
-        {
-          "id": "lag-v3-2",
-          "type": "multiple-choice",
-          "question": "Vad heter 'pappa' på engelska?",
-          "options": [
-            "brother",
-            "dad",
-            "uncle",
-            "son"
-          ],
-          "correctIndex": 1,
-          "explanation": "Pappa = dad (eller father i mer formellt sammanhang)."
-        },
-        {
-          "id": "lag-v3-3",
-          "type": "multiple-choice",
-          "question": "Vad heter 'syster' på engelska?",
-          "options": [
-            "daughter",
-            "mother",
-            "sister",
-            "niece"
-          ],
-          "correctIndex": 2,
-          "explanation": "Syster = sister. My sister is funny!"
-        },
-        {
-          "id": "lag-v3-4",
-          "type": "multiple-choice",
-          "question": "Vad heter 'bror' på engelska?",
-          "options": [
-            "son",
-            "uncle",
-            "cousin",
-            "brother"
-          ],
-          "correctIndex": 3,
-          "explanation": "Bror = brother. My brother plays football."
-        },
-        {
-          "id": "lag-v3-5",
-          "type": "fill-in-blank",
-          "sentence": "Min ___ (farmor/mormor på engelska) bakar kakor.",
-          "answer": "grandmother",
-          "hint": "Farmor/mormor = g _ _ _ _ _ _ _ _ _",
-          "explanation": "Grandmother = farmor eller mormor. Grandmother bakes cookies!"
-        },
-        {
-          "id": "lag-v3-6",
-          "type": "fill-in-blank",
-          "sentence": "Min ___ (farfar/morfar på engelska) fiskar vid sjön.",
-          "answer": "grandfather",
-          "hint": "Farfar/morfar = g _ _ _ _ _ _ _ _ _ _",
-          "explanation": "Grandfather = farfar eller morfar. My grandfather loves fishing."
-        },
-        {
-          "id": "lag-v3-7",
-          "type": "multiple-choice",
-          "question": "Vad heter 'farbror' på engelska?",
-          "options": [
-            "nephew",
-            "uncle",
-            "cousin",
-            "brother"
-          ],
-          "correctIndex": 1,
-          "explanation": "Farbror (eller morbror) = uncle på engelska."
-        },
-        {
-          "id": "lag-v3-8",
-          "type": "multiple-choice",
-          "question": "Vad heter 'kusin' på engelska?",
-          "options": [
-            "niece",
-            "nephew",
-            "cousin",
-            "sibling"
-          ],
-          "correctIndex": 2,
-          "explanation": "Kusin = cousin. Samma ord används för han och hon!"
-        },
-        {
-          "id": "lag-v3-9",
-          "type": "multiple-choice",
-          "question": "Vilket ord betyder 'familj' på engelska?",
-          "options": [
-            "family",
-            "friendly",
-            "famous",
-            "fairy"
-          ],
-          "correctIndex": 0,
-          "explanation": "Familj = family. My family is great!"
-        },
-        {
-          "id": "lag-v3-10",
-          "type": "multiple-choice",
-          "question": "Vad heter 'faster' eller 'moster' på engelska?",
-          "options": [
-            "uncle",
-            "sister",
-            "aunt",
-            "niece"
-          ],
-          "correctIndex": 2,
-          "explanation": "Faster och moster = aunt på engelska. Samma ord för båda!"
-        },
-        {
-          "id": "lag-v3-11",
-          "type": "fill-in-blank",
-          "sentence": "Jag har en liten ___ (bebis på engelska) hemma.",
-          "answer": "baby",
-          "hint": "Bebis = b _ _ _",
-          "explanation": "Bebis = baby. There is a new baby in our family!"
-        },
-        {
-          "id": "lag-v3-12",
-          "type": "multiple-choice",
-          "question": "Vad heter 'föräldrar' på engelska?",
-          "options": [
-            "parents",
-            "persons",
-            "people",
-            "partners"
-          ],
-          "correctIndex": 0,
-          "explanation": "Föräldrar = parents. My parents are kind."
-        }
-      ]
-    },
-    {
-      "id": "lag-v4-frukter",
-      "title": "Frukter (Fruits)",
-      "description": "Lär dig engelska ord för frukter.",
-      "icon": "🍎",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "helpText": [
-        "🍎 Frukter på engelska – ät och lär!",
-        "äpple = apple | banan = banana | apelsin = orange",
-        "jordgubbe = strawberry | druva = grape | päron = pear",
-        "körsbär = cherry | citron = lemon | mango = mango",
-        "ananas = pineapple | melon = melon | hallon = raspberry"
-      ],
-      "exercises": [
-        {
-          "id": "lag-v4-1",
-          "type": "multiple-choice",
-          "question": "Vad heter 'äpple' på engelska?",
-          "options": [
-            "orange",
-            "apple",
-            "apricot",
-            "avocado"
-          ],
-          "correctIndex": 1,
-          "explanation": "Äpple = apple. An apple a day keeps the doctor away!"
-        },
-        {
-          "id": "lag-v4-2",
-          "type": "multiple-choice",
-          "question": "Vad heter 'banan' på engelska?",
-          "options": [
-            "mango",
-            "melon",
-            "banana",
-            "berry"
-          ],
-          "correctIndex": 2,
-          "explanation": "Banan = banana. Monkeys love bananas!"
-        },
-        {
-          "id": "lag-v4-3",
-          "type": "multiple-choice",
-          "question": "Vad heter 'jordgubbe' på engelska?",
-          "options": [
-            "cherry",
-            "strawberry",
-            "raspberry",
-            "blueberry"
-          ],
-          "correctIndex": 1,
-          "explanation": "Jordgubbe = strawberry. Strawberries are red and sweet!"
-        },
-        {
-          "id": "lag-v4-4",
-          "type": "multiple-choice",
-          "question": "Vad heter 'apelsin' på engelska?",
-          "options": [
-            "lemon",
-            "apple",
-            "orange",
-            "onion"
-          ],
-          "correctIndex": 2,
-          "explanation": "Apelsin = orange. Oranges are juicy!"
-        },
-        {
-          "id": "lag-v4-5",
-          "type": "fill-in-blank",
-          "sentence": "En ___ (citron på engelska) smakar surt.",
-          "answer": "lemon",
-          "hint": "Citron = l _ _ _ _",
-          "explanation": "Citron = lemon. A lemon is sour!"
-        },
-        {
-          "id": "lag-v4-6",
-          "type": "multiple-choice",
-          "question": "Vad heter 'druva' på engelska?",
-          "options": [
-            "plum",
-            "grape",
-            "pear",
-            "peach"
-          ],
-          "correctIndex": 1,
-          "explanation": "Druva = grape. Grapes grow in bunches!"
-        },
-        {
-          "id": "lag-v4-7",
-          "type": "multiple-choice",
-          "question": "Vad heter 'päron' på engelska?",
-          "options": [
-            "plum",
-            "peach",
-            "pear",
-            "palm"
-          ],
-          "correctIndex": 2,
-          "explanation": "Päron = pear. A pear is green or yellow!"
-        },
-        {
-          "id": "lag-v4-8",
-          "type": "fill-in-blank",
-          "sentence": "En ___ (ananas på engelska) växer i varma länder.",
-          "answer": "pineapple",
-          "hint": "Ananas = p _ _ _ _ _ _ _ _",
-          "explanation": "Ananas = pineapple. A pineapple is sweet and tropical!"
-        },
-        {
-          "id": "lag-v4-9",
-          "type": "multiple-choice",
-          "question": "Vad heter 'körsbär' på engelska?",
-          "options": [
-            "cherry",
-            "chestnut",
-            "coconut",
-            "clementine"
-          ],
-          "correctIndex": 0,
-          "explanation": "Körsbär = cherry. Cherries are small and red!"
-        },
-        {
-          "id": "lag-v4-10",
-          "type": "multiple-choice",
-          "question": "'I like ___.' Vilket ord passar för mango?",
-          "options": [
-            "mango",
-            "mongo",
-            "mingi",
-            "mingu"
-          ],
-          "correctIndex": 0,
-          "explanation": "Mango = mango. Samma ord på svenska och engelska!"
-        },
-        {
-          "id": "lag-v4-11",
-          "type": "fill-in-blank",
-          "sentence": "En ___ (melon på engelska) är stor och rund.",
-          "answer": "melon",
-          "hint": "Tänk på en stor, rund frukt – den äts ofta på sommaren",
-          "explanation": "Melon = melon. Nästan samma ord!"
-        },
-        {
-          "id": "lag-v4-12",
-          "type": "multiple-choice",
-          "question": "Vilket ord betyder 'hallon' på engelska?",
-          "options": [
-            "blueberry",
-            "raspberry",
-            "strawberry",
-            "gooseberry"
-          ],
-          "correctIndex": 1,
-          "explanation": "Hallon = raspberry. Raspberries are pink and tasty!"
-        }
-      ]
-    },
-    {
-      "id": "lag-v5-kroppen",
-      "title": "Kroppen (The Body)",
-      "description": "Lär dig engelska ord för kroppsdelar.",
-      "icon": "🦾",
-      "pointsRequired": 0,
-      "bonusPoints": 15,
-      "helpText": [
-        "🦾 Lär dig peka och namnge kroppsdelar på engelska!",
-        "huvud = head | öga = eye | näsa = nose | mun = mouth",
-        "öra = ear | hand = hand | fot = foot | arm = arm",
-        "ben = leg | mage = stomach | rygg = back | finger = finger",
-        "Tips: Sjung 'Head, shoulders, knees and toes' medan du lär dig!"
-      ],
-      "exercises": [
-        {
-          "id": "lag-v5-1",
-          "type": "multiple-choice",
-          "question": "Vad heter 'huvud' på engelska?",
-          "options": [
-            "hand",
-            "head",
-            "heel",
-            "hip"
-          ],
-          "correctIndex": 1,
-          "explanation": "Huvud = head. I nodded my head."
-        },
-        {
-          "id": "lag-v5-2",
-          "type": "multiple-choice",
-          "question": "Vad heter 'öga' på engelska?",
-          "options": [
-            "ear",
-            "elbow",
-            "eye",
-            "eyelid"
-          ],
-          "correctIndex": 2,
-          "explanation": "Öga = eye. I have two eyes."
-        },
-        {
-          "id": "lag-v5-3",
-          "type": "multiple-choice",
-          "question": "Vad heter 'näsa' på engelska?",
-          "options": [
-            "neck",
-            "knee",
-            "nail",
-            "nose"
-          ],
-          "correctIndex": 3,
-          "explanation": "Näsa = nose. I can smell with my nose."
-        },
-        {
-          "id": "lag-v5-4",
-          "type": "multiple-choice",
-          "question": "Vad heter 'mun' på engelska?",
-          "options": [
-            "muscle",
-            "mouth",
-            "mole",
-            "middle"
-          ],
-          "correctIndex": 1,
-          "explanation": "Mun = mouth. I eat with my mouth."
-        },
-        {
-          "id": "lag-v5-5",
-          "type": "fill-in-blank",
-          "sentence": "Jag hör med mitt ___ (öra på engelska).",
-          "answer": "ear",
-          "hint": "Öra = e _ _",
-          "explanation": "Öra = ear. I can hear with my ear."
-        },
-        {
-          "id": "lag-v5-6",
-          "type": "multiple-choice",
-          "question": "Vad heter 'hand' på engelska?",
-          "options": [
-            "hip",
-            "hair",
-            "hand",
-            "heel"
-          ],
-          "correctIndex": 2,
-          "explanation": "Hand = hand. Samma ord! I wave my hand."
-        },
-        {
-          "id": "lag-v5-7",
-          "type": "multiple-choice",
-          "question": "Vad heter 'arm' på engelska?",
-          "options": [
-            "ankle",
-            "arm",
-            "arch",
-            "axle"
-          ],
-          "correctIndex": 1,
-          "explanation": "Arm = arm. Nästan samma ord! I use my arms to hug."
-        },
-        {
-          "id": "lag-v5-8",
-          "type": "fill-in-blank",
-          "sentence": "Jag sparkar bollen med mitt ___ (ben på engelska).",
-          "answer": "leg",
-          "hint": "Ben = l _ _",
-          "explanation": "Ben = leg. I kick the ball with my leg."
-        },
-        {
-          "id": "lag-v5-9",
-          "type": "multiple-choice",
-          "question": "Vad heter 'fot' på engelska?",
-          "options": [
-            "fist",
-            "face",
-            "foot",
-            "front"
-          ],
-          "correctIndex": 2,
-          "explanation": "Fot = foot. Plural: feet. My foot is size 36."
-        },
-        {
-          "id": "lag-v5-10",
-          "type": "multiple-choice",
-          "question": "Vad heter 'mage' på engelska?",
-          "options": [
-            "shoulder",
-            "stomach",
-            "spine",
-            "shin"
-          ],
-          "correctIndex": 1,
-          "explanation": "Mage = stomach. My stomach is hungry!"
-        },
-        {
-          "id": "lag-v5-11",
-          "type": "fill-in-blank",
-          "sentence": "Jag kliar mig på ___ (rygg på engelska).",
-          "answer": "back",
-          "hint": "Rygg = b _ _ _",
-          "explanation": "Rygg = back. I have a sore back."
-        },
-        {
-          "id": "lag-v5-12",
-          "type": "multiple-choice",
-          "question": "Vad heter 'finger' på engelska?",
-          "options": [
-            "finger",
-            "fern",
-            "fighter",
-            "flicker"
-          ],
-          "correctIndex": 0,
-          "explanation": "Finger = finger. Nästan samma ord! I have ten fingers."
-        }
-      ]
-    },
-    {
       "id": "lag-fill1-be-verb",
       "title": "Fylla i: is / am / are",
       "description": "Skriv rätt form av 'to be' i varje mening.",
@@ -3739,6 +3739,800 @@
           "answer": "birds",
           "hint": "Lägg till -s",
           "explanation": "bird → birds."
+        }
+      ]
+    },
+    {
+      "id": "lag-frageord",
+      "title": "Frågeord",
+      "description": "Lär dig de viktigaste frågeorden: who, what, where, when, why, how.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🔑 De sex viktigaste frågeorden: Who (Vem) · What (Vad) · Where (Var/Vart) · When (När) · Why (Varför) · How (Hur)",
+        "WHO – frågar om en PERSON. 'Who is that?' = Vem är det?",
+        "WHAT – frågar om en SAK. 'What is this?' = Vad är det här?",
+        "WHERE – frågar om en PLATS. 'Where is the cat?' = Var är katten?",
+        "WHEN – frågar om en TID. 'When is your birthday?' = När är din födelsedag?",
+        "WHY – frågar om en ORSAK. 'Why are you sad?' = Varför är du ledsen?",
+        "HOW – frågar om ett SÄTT. 'How are you?' = Hur mår du?"
+      ],
+      "exercises": [
+        {
+          "id": "lag-frag-1",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ is that girl? – She is my sister.'",
+          "options": [
+            "Where",
+            "Who",
+            "What",
+            "When"
+          ],
+          "correctIndex": 1,
+          "explanation": "Who frågar om en person. Who is that girl? = Vem är den tjejen?"
+        },
+        {
+          "id": "lag-frag-2",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ is in your bag? – My lunch box.'",
+          "options": [
+            "Who",
+            "When",
+            "What",
+            "Where"
+          ],
+          "correctIndex": 2,
+          "explanation": "What frågar om en sak. What is in your bag? = Vad är i din väska?"
+        },
+        {
+          "id": "lag-frag-3",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ do you live? – I live in Sweden.'",
+          "options": [
+            "Why",
+            "Who",
+            "When",
+            "Where"
+          ],
+          "correctIndex": 3,
+          "explanation": "Where frågar om en plats. Where do you live? = Var bor du?"
+        },
+        {
+          "id": "lag-frag-4",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ is your birthday? – In March.'",
+          "options": [
+            "How",
+            "Where",
+            "When",
+            "What"
+          ],
+          "correctIndex": 2,
+          "explanation": "When frågar om en tid. When is your birthday? = När är din födelsedag?"
+        },
+        {
+          "id": "lag-frag-5",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ are you crying? – Because I fell down.'",
+          "options": [
+            "When",
+            "Why",
+            "Where",
+            "Who"
+          ],
+          "correctIndex": 1,
+          "explanation": "Why frågar om en orsak. Why are you crying? = Varför gråter du?"
+        },
+        {
+          "id": "lag-frag-6",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ do you come to school? – By bus.'",
+          "options": [
+            "What",
+            "Where",
+            "When",
+            "How"
+          ],
+          "correctIndex": 3,
+          "explanation": "How frågar om sättet. How do you come to school? = Hur kommer du till skolan?"
+        },
+        {
+          "id": "lag-frag-7",
+          "type": "fill-in-blank",
+          "sentence": "___ is your best friend? – My best friend is Emma.",
+          "answer": "Who",
+          "hint": "Frågar om en person (Vem).",
+          "explanation": "Who = Vem. Who is your best friend? = Vem är din bästa vän?"
+        },
+        {
+          "id": "lag-frag-8",
+          "type": "fill-in-blank",
+          "sentence": "___ colour is your pencil case? – It is blue.",
+          "answer": "What",
+          "hint": "Frågar om en sak eller egenskap (Vad).",
+          "explanation": "What = Vad. What colour is your pencil case? = Vad har pennfodret för färg?"
+        },
+        {
+          "id": "lag-frag-9",
+          "type": "fill-in-blank",
+          "sentence": "___ is the toilet? – It is down the corridor.",
+          "answer": "Where",
+          "hint": "Frågar om en plats (Var).",
+          "explanation": "Where = Var. Where is the toilet? = Var är toaletten?"
+        },
+        {
+          "id": "lag-frag-10",
+          "type": "fill-in-blank",
+          "sentence": "___ do we have PE? – On Mondays and Thursdays.",
+          "answer": "When",
+          "hint": "Frågar om en tid (När).",
+          "explanation": "When = När. When do we have PE? = När har vi idrott?"
+        },
+        {
+          "id": "lag-frag-11",
+          "type": "fill-in-blank",
+          "sentence": "___ is the sky blue? – Because of sunlight.",
+          "answer": "Why",
+          "hint": "Frågar om en orsak (Varför).",
+          "explanation": "Why = Varför. Why is the sky blue? = Varför är himlen blå?"
+        },
+        {
+          "id": "lag-frag-12",
+          "type": "fill-in-blank",
+          "sentence": "___ are you? – I am fine, thank you!",
+          "answer": "How",
+          "hint": "Frågar om mående eller sätt (Hur).",
+          "explanation": "How = Hur. How are you? = Hur mår du?"
+        },
+        {
+          "id": "lag-frag-13",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Var bor du?'",
+          "words": [
+            "Where",
+            "do",
+            "you",
+            "live",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "Where do you live? = Var bor du?"
+        },
+        {
+          "id": "lag-frag-14",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ are your shoes? – Under the bed.'",
+          "options": [
+            "When",
+            "Who",
+            "How",
+            "Where"
+          ],
+          "correctIndex": 3,
+          "explanation": "Where frågar om plats. Where are your shoes? = Var är dina skor?"
+        },
+        {
+          "id": "lag-frag-15",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Vad heter du?'",
+          "words": [
+            "What",
+            "is",
+            "your",
+            "name",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "What is your name? = Vad heter du? (Vad är ditt namn?)"
+        }
+      ]
+    },
+    {
+      "id": "lag-synonymer",
+      "title": "Synonymer",
+      "description": "Lär dig ord som betyder ungefär samma sak på engelska.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📖 En SYNONYM är ett ord som betyder ungefär samma sak som ett annat ord.",
+        "Exempel: 'big' och 'large' är synonymer – båda betyder 'stor'.",
+        "Exempel: 'happy' och 'glad' är synonymer – båda betyder 'glad'.",
+        "Tips: Om du kan byta ut ett ord mot ett annat utan att meningen ändrar sig är de synonymer!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-syn-1",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'big'?",
+          "options": [
+            "small",
+            "large",
+            "fast",
+            "sad"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Big' and 'large' are synonyms – both mean stor."
+        },
+        {
+          "id": "lag-syn-2",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'happy'?",
+          "options": [
+            "angry",
+            "tired",
+            "glad",
+            "slow"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Happy' and 'glad' are synonyms – both mean glad."
+        },
+        {
+          "id": "lag-syn-3",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'fast'?",
+          "options": [
+            "slow",
+            "heavy",
+            "quick",
+            "tall"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Fast' and 'quick' are synonyms – both mean snabb."
+        },
+        {
+          "id": "lag-syn-4",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'small'?",
+          "options": [
+            "big",
+            "loud",
+            "little",
+            "mean"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Small' and 'little' are synonyms – both mean liten."
+        },
+        {
+          "id": "lag-syn-5",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'scared'?",
+          "options": [
+            "brave",
+            "funny",
+            "nice",
+            "frightened"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Scared' and 'frightened' are synonyms – both mean rädd."
+        },
+        {
+          "id": "lag-syn-6",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'start'?",
+          "options": [
+            "stop",
+            "begin",
+            "finish",
+            "wait"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Start' and 'begin' are synonyms – both mean börja."
+        },
+        {
+          "id": "lag-syn-7",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'smart'?",
+          "options": [
+            "silly",
+            "mean",
+            "clever",
+            "lazy"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Smart' and 'clever' are synonyms – both mean klyftig/smart."
+        },
+        {
+          "id": "lag-syn-8",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'tired'?",
+          "options": [
+            "awake",
+            "sleepy",
+            "fast",
+            "happy"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Tired' and 'sleepy' are synonyms – both mean trött."
+        },
+        {
+          "id": "lag-syn-9",
+          "type": "fill-in-blank",
+          "sentence": "The elephant is very big. You can also say the elephant is very ___. (synonym for big)",
+          "answer": "large",
+          "explanation": "'Large' is a synonym for 'big' – both mean stor."
+        },
+        {
+          "id": "lag-syn-10",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'angry'?",
+          "options": [
+            "happy",
+            "sad",
+            "mad",
+            "funny"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Angry' and 'mad' are synonyms – both mean arg."
+        },
+        {
+          "id": "lag-syn-11",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'pretty'?",
+          "options": [
+            "ugly",
+            "nice",
+            "beautiful",
+            "mean"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Pretty' and 'beautiful' are synonyms – both mean vacker."
+        },
+        {
+          "id": "lag-syn-12",
+          "type": "fill-in-blank",
+          "sentence": "She runs very fast. You can also say she runs very ___. (synonym for fast)",
+          "answer": "quick",
+          "explanation": "'Quick' is a synonym for 'fast' – both mean snabb."
+        },
+        {
+          "id": "lag-syn-13",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'look'?",
+          "options": [
+            "hear",
+            "touch",
+            "see",
+            "smell"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Look' and 'see' are synonyms – both mean se/titta."
+        },
+        {
+          "id": "lag-syn-14",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'thin'?",
+          "options": [
+            "fat",
+            "big",
+            "tall",
+            "slim"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Thin' and 'slim' are synonyms – both mean smal/tunn."
+        },
+        {
+          "id": "lag-syn-15",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'cold'?",
+          "options": [
+            "warm",
+            "hot",
+            "sunny",
+            "chilly"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Cold' and 'chilly' are synonyms – both mean kall."
+        }
+      ]
+    },
+    {
+      "id": "lag-motsatsord",
+      "title": "Motsatsord",
+      "description": "Lär dig ord som betyder motsatsen till varandra på engelska.",
+      "icon": "↔️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "↔️ Ett MOTSATSORD (antonym) är ett ord som betyder raka motsatsen till ett annat ord.",
+        "Exempel: 'big' ↔ 'small' (stor ↔ liten)",
+        "Exempel: 'hot' ↔ 'cold' (varm ↔ kall)",
+        "Exempel: 'day' ↔ 'night' (dag ↔ natt)"
+      ],
+      "exercises": [
+        {
+          "id": "lag-mot-1",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'hot'?",
+          "options": [
+            "warm",
+            "cold",
+            "sunny",
+            "fast"
+          ],
+          "correctIndex": 1,
+          "explanation": "Hot (varm) ↔ cold (kall)."
+        },
+        {
+          "id": "lag-mot-2",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'big'?",
+          "options": [
+            "large",
+            "tall",
+            "small",
+            "heavy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Big (stor) ↔ small (liten)."
+        },
+        {
+          "id": "lag-mot-3",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'happy'?",
+          "options": [
+            "glad",
+            "tired",
+            "funny",
+            "sad"
+          ],
+          "correctIndex": 3,
+          "explanation": "Happy (glad) ↔ sad (ledsen)."
+        },
+        {
+          "id": "lag-mot-4",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'day'?",
+          "options": [
+            "morning",
+            "evening",
+            "night",
+            "noon"
+          ],
+          "correctIndex": 2,
+          "explanation": "Day (dag) ↔ night (natt)."
+        },
+        {
+          "id": "lag-mot-5",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'fast'?",
+          "options": [
+            "quick",
+            "small",
+            "loud",
+            "slow"
+          ],
+          "correctIndex": 3,
+          "explanation": "Fast (snabb) ↔ slow (långsam)."
+        },
+        {
+          "id": "lag-mot-6",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'up'?",
+          "options": [
+            "over",
+            "down",
+            "side",
+            "top"
+          ],
+          "correctIndex": 1,
+          "explanation": "Up (upp) ↔ down (ner)."
+        },
+        {
+          "id": "lag-mot-7",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'old' is ___. (think: ny/ung)",
+          "answer": "new",
+          "explanation": "Old (gammal) ↔ new (ny)."
+        },
+        {
+          "id": "lag-mot-8",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'light' (ljus)?",
+          "options": [
+            "bright",
+            "dark",
+            "sunny",
+            "white"
+          ],
+          "correctIndex": 1,
+          "explanation": "Light (ljus) ↔ dark (mörk)."
+        },
+        {
+          "id": "lag-mot-9",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'tall'?",
+          "options": [
+            "thin",
+            "fat",
+            "short",
+            "wide"
+          ],
+          "correctIndex": 2,
+          "explanation": "Tall (lång/hög) ↔ short (kort/låg)."
+        },
+        {
+          "id": "lag-mot-10",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'open'?",
+          "options": [
+            "empty",
+            "full",
+            "closed",
+            "broken"
+          ],
+          "correctIndex": 2,
+          "explanation": "Open (öppen) ↔ closed (stängd)."
+        },
+        {
+          "id": "lag-mot-11",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'loud' is ___. (think: tyst)",
+          "answer": "quiet",
+          "explanation": "Loud (högljudd) ↔ quiet (tyst/lugn)."
+        },
+        {
+          "id": "lag-mot-12",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'full'?",
+          "options": [
+            "whole",
+            "big",
+            "empty",
+            "long"
+          ],
+          "correctIndex": 2,
+          "explanation": "Full (full) ↔ empty (tom)."
+        },
+        {
+          "id": "lag-mot-13",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'clean'?",
+          "options": [
+            "wet",
+            "nice",
+            "dry",
+            "dirty"
+          ],
+          "correctIndex": 3,
+          "explanation": "Clean (ren) ↔ dirty (smutsig)."
+        },
+        {
+          "id": "lag-mot-14",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'start'?",
+          "options": [
+            "begin",
+            "stop",
+            "go",
+            "run"
+          ],
+          "correctIndex": 1,
+          "explanation": "Start (börja) ↔ stop (stoppa/sluta)."
+        },
+        {
+          "id": "lag-mot-15",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'young'?",
+          "options": [
+            "small",
+            "fast",
+            "new",
+            "old"
+          ],
+          "correctIndex": 3,
+          "explanation": "Young (ung) ↔ old (gammal)."
+        }
+      ]
+    },
+    {
+      "id": "lag-some-any",
+      "title": "Some och Any",
+      "description": "Lär dig när du ska använda some och any på engelska.",
+      "icon": "🔵",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📘 SOME används i positiva meningar: 'There are some apples.'",
+        "❓ ANY används i frågor och negationer: 'Are there any apples?' / 'There aren't any apples.'",
+        "💡 Undantag: SOME kan användas i frågor när man erbjuder något: 'Would you like some cake?'"
+      ],
+      "exercises": [
+        {
+          "id": "lag-sa-1",
+          "type": "multiple-choice",
+          "question": "There are ___ apples in the basket.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 0,
+          "explanation": "Positiv mening → some: 'There are some apples in the basket.'"
+        },
+        {
+          "id": "lag-sa-2",
+          "type": "multiple-choice",
+          "question": "Are there ___ eggs in the fridge?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Fråga → any: 'Are there any eggs in the fridge?'"
+        },
+        {
+          "id": "lag-sa-3",
+          "type": "multiple-choice",
+          "question": "I don't have ___ money.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "many"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (don't) → any: 'I don't have any money.'"
+        },
+        {
+          "id": "lag-sa-4",
+          "type": "multiple-choice",
+          "question": "She has ___ friends at school.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'She has some friends at school.'"
+        },
+        {
+          "id": "lag-sa-5",
+          "type": "multiple-choice",
+          "question": "Do you have ___ brothers or sisters?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Fråga → any: 'Do you have any brothers or sisters?'"
+        },
+        {
+          "id": "lag-sa-6",
+          "type": "multiple-choice",
+          "question": "We need ___ milk for the cake.",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Positiv mening → some: 'We need some milk for the cake.'"
+        },
+        {
+          "id": "lag-sa-7",
+          "type": "multiple-choice",
+          "question": "There aren't ___ cookies left.",
+          "options": [
+            "some",
+            "a",
+            "an",
+            "any"
+          ],
+          "correctIndex": 3,
+          "explanation": "Negation (aren't) → any: 'There aren't any cookies left.'"
+        },
+        {
+          "id": "lag-sa-8",
+          "type": "fill-in-blank",
+          "sentence": "I can see ___ cats in the garden.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "lag-sa-9",
+          "type": "fill-in-blank",
+          "sentence": "Is there ___ bread at home?",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Fråga → any."
+        },
+        {
+          "id": "lag-sa-10",
+          "type": "multiple-choice",
+          "question": "He doesn't have ___ pets.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (doesn't) → any: 'He doesn't have any pets.'"
+        },
+        {
+          "id": "lag-sa-11",
+          "type": "multiple-choice",
+          "question": "There are ___ birds in the tree.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'There are some birds in the tree.'"
+        },
+        {
+          "id": "lag-sa-12",
+          "type": "fill-in-blank",
+          "sentence": "They don't want ___ help.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (don't) → any."
+        },
+        {
+          "id": "lag-sa-13",
+          "type": "multiple-choice",
+          "question": "Would you like ___ cake? (erbjudande)",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vid erbjudande i frågor används some: 'Would you like some cake?'"
+        },
+        {
+          "id": "lag-sa-14",
+          "type": "fill-in-blank",
+          "sentence": "We have ___ homework today.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "lag-sa-15",
+          "type": "multiple-choice",
+          "question": "Have you got ___ questions?",
+          "options": [
+            "some",
+            "a",
+            "an",
+            "any"
+          ],
+          "correctIndex": 3,
+          "explanation": "Fråga → any: 'Have you got any questions?'"
         }
       ]
     },
@@ -5190,70 +5984,120 @@
         {
           "id": "lag-spel-1-q1",
           "question": "Vad heter 'katt' på engelska?",
-          "options": ["dog", "cat", "bird", "fish"],
+          "options": [
+            "dog",
+            "cat",
+            "bird",
+            "fish"
+          ],
           "correctIndex": 1,
           "explanation": "'Cat' betyder katt på engelska."
         },
         {
           "id": "lag-spel-1-q2",
           "question": "Vad heter 'hund' på engelska?",
-          "options": ["cat", "horse", "dog", "cow"],
+          "options": [
+            "cat",
+            "horse",
+            "dog",
+            "cow"
+          ],
           "correctIndex": 2,
           "explanation": "'Dog' betyder hund på engelska."
         },
         {
           "id": "lag-spel-1-q3",
           "question": "Vad heter 'fågel' på engelska?",
-          "options": ["fish", "bird", "frog", "rabbit"],
+          "options": [
+            "fish",
+            "bird",
+            "frog",
+            "rabbit"
+          ],
           "correctIndex": 1,
           "explanation": "'Bird' betyder fågel på engelska."
         },
         {
           "id": "lag-spel-1-q4",
           "question": "Vad heter 'fisk' på engelska?",
-          "options": ["fish", "frog", "fox", "fly"],
+          "options": [
+            "fish",
+            "frog",
+            "fox",
+            "fly"
+          ],
           "correctIndex": 0,
           "explanation": "'Fish' betyder fisk på engelska."
         },
         {
           "id": "lag-spel-1-q5",
           "question": "Vad heter 'häst' på engelska?",
-          "options": ["hen", "horse", "hare", "hippo"],
+          "options": [
+            "hen",
+            "horse",
+            "hare",
+            "hippo"
+          ],
           "correctIndex": 1,
           "explanation": "'Horse' betyder häst på engelska."
         },
         {
           "id": "lag-spel-1-q6",
           "question": "Vad heter 'ko' på engelska?",
-          "options": ["cat", "crab", "cow", "crane"],
+          "options": [
+            "cat",
+            "crab",
+            "cow",
+            "crane"
+          ],
           "correctIndex": 2,
           "explanation": "'Cow' betyder ko på engelska."
         },
         {
           "id": "lag-spel-1-q7",
           "question": "Vad heter 'kanin' på engelska?",
-          "options": ["rat", "rabbit", "raccoon", "robin"],
+          "options": [
+            "rat",
+            "rabbit",
+            "raccoon",
+            "robin"
+          ],
           "correctIndex": 1,
           "explanation": "'Rabbit' betyder kanin på engelska."
         },
         {
           "id": "lag-spel-1-q8",
           "question": "Vad heter 'orm' på engelska?",
-          "options": ["shark", "snail", "snake", "spider"],
+          "options": [
+            "shark",
+            "snail",
+            "snake",
+            "spider"
+          ],
           "correctIndex": 2,
           "explanation": "'Snake' betyder orm på engelska."
         },
         {
           "id": "lag-spel-1-q9",
           "question": "Vad heter 'lejon' på engelska?",
-          "options": ["leopard", "lion", "lizard", "llama"],
+          "options": [
+            "leopard",
+            "lion",
+            "lizard",
+            "llama"
+          ],
           "correctIndex": 1,
           "explanation": "'Lion' betyder lejon på engelska."
         },
         {
           "id": "lag-spel-1-q10",
           "question": "Vad heter 'elefant' på engelska?",
-          "options": ["eagle", "eel", "elephant", "elk"],
+          "options": [
+            "eagle",
+            "eel",
+            "elephant",
+            "elk"
+          ],
           "correctIndex": 2,
           "explanation": "'Elephant' betyder elefant på engelska."
         }
@@ -5270,70 +6114,120 @@
         {
           "id": "lag-spel-2-q1",
           "question": "Vad heter 'röd' på engelska?",
-          "options": ["blue", "green", "red", "yellow"],
+          "options": [
+            "blue",
+            "green",
+            "red",
+            "yellow"
+          ],
           "correctIndex": 2,
           "explanation": "'Red' betyder röd på engelska."
         },
         {
           "id": "lag-spel-2-q2",
           "question": "Vad heter 'blå' på engelska?",
-          "options": ["black", "blue", "brown", "beige"],
+          "options": [
+            "black",
+            "blue",
+            "brown",
+            "beige"
+          ],
           "correctIndex": 1,
           "explanation": "'Blue' betyder blå på engelska."
         },
         {
           "id": "lag-spel-2-q3",
           "question": "Vad heter 'gul' på engelska?",
-          "options": ["yellow", "orange", "green", "white"],
+          "options": [
+            "yellow",
+            "orange",
+            "green",
+            "white"
+          ],
           "correctIndex": 0,
           "explanation": "'Yellow' betyder gul på engelska."
         },
         {
           "id": "lag-spel-2-q4",
           "question": "Vad heter 'grön' på engelska?",
-          "options": ["grey", "gold", "green", "grape"],
+          "options": [
+            "grey",
+            "gold",
+            "green",
+            "grape"
+          ],
           "correctIndex": 2,
           "explanation": "'Green' betyder grön på engelska."
         },
         {
           "id": "lag-spel-2-q5",
           "question": "Vad heter 'svart' på engelska?",
-          "options": ["silver", "black", "brown", "blue"],
+          "options": [
+            "silver",
+            "black",
+            "brown",
+            "blue"
+          ],
           "correctIndex": 1,
           "explanation": "'Black' betyder svart på engelska."
         },
         {
           "id": "lag-spel-2-q6",
           "question": "Vad heter 'vit' på engelska?",
-          "options": ["violet", "white", "wine", "wheat"],
+          "options": [
+            "violet",
+            "white",
+            "wine",
+            "wheat"
+          ],
           "correctIndex": 1,
           "explanation": "'White' betyder vit på engelska."
         },
         {
           "id": "lag-spel-2-q7",
           "question": "Vad heter 'rosa' på engelska?",
-          "options": ["purple", "peach", "pink", "plum"],
+          "options": [
+            "purple",
+            "peach",
+            "pink",
+            "plum"
+          ],
           "correctIndex": 2,
           "explanation": "'Pink' betyder rosa på engelska."
         },
         {
           "id": "lag-spel-2-q8",
           "question": "Vad heter 'orange' på engelska?",
-          "options": ["olive", "orange", "ochre", "onyx"],
+          "options": [
+            "olive",
+            "orange",
+            "ochre",
+            "onyx"
+          ],
           "correctIndex": 1,
           "explanation": "'Orange' är samma ord på engelska!"
         },
         {
           "id": "lag-spel-2-q9",
           "question": "Vad heter 'lila' på engelska?",
-          "options": ["lilac", "purple", "plum", "pink"],
+          "options": [
+            "lilac",
+            "purple",
+            "plum",
+            "pink"
+          ],
           "correctIndex": 1,
           "explanation": "'Purple' eller 'violet' betyder lila på engelska."
         },
         {
           "id": "lag-spel-2-q10",
           "question": "Vad heter 'brun' på engelska?",
-          "options": ["black", "blue", "beige", "brown"],
+          "options": [
+            "black",
+            "blue",
+            "beige",
+            "brown"
+          ],
           "correctIndex": 3,
           "explanation": "'Brown' betyder brun på engelska."
         }

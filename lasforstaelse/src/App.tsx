@@ -200,9 +200,9 @@ function App() {
     const prevTexts = user.completedTexts.length;
     const newTexts = updatedUser.completedTexts.length;
 
-    const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
-    const textChests = chestsEarnedFromTexts(prevTexts, newTexts, gam.textMilestonesRewarded);
-    const mysteryReward = rollMysteryBox(gam.gamificationBadges);
+    const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests);
+    const textChests = chestsEarnedFromTexts(prevTexts, newTexts, gam.textMilestonesRewarded, gam.chests);
+    const mysteryReward = rollMysteryBox(gam.gamificationBadges, gam.chests);
 
     const newChests: Chest[] = [
       ...pointChests.map(c => c.chest),

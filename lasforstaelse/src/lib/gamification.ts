@@ -3,6 +3,7 @@ import type { ChestType, Chest, MysteryBoxReward, GamificationData } from '../ty
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 export const MYSTERY_BOX_CHANCE = 0.12;
+export const MAX_CHESTS_PER_TYPE = 30;
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   // Bronskista: 10-200 poäng
@@ -168,16 +169,30 @@ function makeChest(type: ChestType): Chest {
 export function chestsEarnedFromPoints(
   prevPoints: number,
   newPoints: number,
-  alreadyRewarded: number[]
+  alreadyRewarded: number[],
+  currentChests: Chest[] = []
 ): { chest: Chest; milestone: number }[] {
   const earned: { chest: Chest; milestone: number }[] = [];
+
+  // Räkna antal kistor per typ
+  const chestCounts: Record<ChestType, number> = {
+    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0
+  };
+  for (const chest of currentChests) {
+    chestCounts[chest.type]++;
+  }
+
   for (const m of POINT_CHEST_MILESTONES) {
     if (
       prevPoints < m.points &&
       newPoints >= m.points &&
       !alreadyRewarded.includes(m.points)
     ) {
-      earned.push({ chest: makeChest(m.type), milestone: m.points });
+      // Kolla om max antal för denna typ är nådd
+      const currentCount = chestCounts[m.type] + earned.filter(e => e.chest.type === m.type).length;
+      if (currentCount < MAX_CHESTS_PER_TYPE) {
+        earned.push({ chest: makeChest(m.type), milestone: m.points });
+      }
     }
   }
   return earned;
@@ -186,23 +201,40 @@ export function chestsEarnedFromPoints(
 export function chestsEarnedFromTexts(
   prevCount: number,
   newCount: number,
-  alreadyRewarded: number[]
+  alreadyRewarded: number[],
+  currentChests: Chest[] = []
 ): { chest: Chest; milestone: number }[] {
   const earned: { chest: Chest; milestone: number }[] = [];
+
+  // Räkna antal kistor per typ
+  const chestCounts: Record<ChestType, number> = {
+    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0
+  };
+  for (const chest of currentChests) {
+    chestCounts[chest.type]++;
+  }
+
   for (const m of TEXT_CHEST_MILESTONES) {
     if (
       prevCount < m.texts &&
       newCount >= m.texts &&
       !alreadyRewarded.includes(m.texts)
     ) {
-      earned.push({ chest: makeChest(m.type), milestone: m.texts });
+      // Kolla om max antal för denna typ är nådd
+      const currentCount = chestCounts[m.type] + earned.filter(e => e.chest.type === m.type).length;
+      if (currentCount < MAX_CHESTS_PER_TYPE) {
+        earned.push({ chest: makeChest(m.type), milestone: m.texts });
+      }
     }
   }
   return earned;
 }
 
-export function rollMysteryBox(badges: string[]): MysteryBoxReward | null {
+export function rollMysteryBox(badges: string[], currentChests: Chest[] = []): MysteryBoxReward | null {
   if (Math.random() > MYSTERY_BOX_CHANCE) return null;
+
+  // Räkna antal bronskistor
+  const bronzeCount = currentChests.filter(c => c.type === 'bronze').length;
 
   const roll = Math.random();
   if (roll < 0.5) {
@@ -213,11 +245,22 @@ export function rollMysteryBox(badges: string[]): MysteryBoxReward | null {
       description: `+${pts} bonuspoäng!`,
     };
   } else if (roll < 0.75) {
-    return {
-      type: 'chest',
-      chestType: 'bronze',
-      description: 'En bronskista!',
-    };
+    // Ge bara bronskista om under max
+    if (bronzeCount < MAX_CHESTS_PER_TYPE) {
+      return {
+        type: 'chest',
+        chestType: 'bronze',
+        description: 'En bronskista!',
+      };
+    } else {
+      // Ge poäng istället
+      const pts = Math.floor(Math.random() * 41) + 10;
+      return {
+        type: 'points',
+        points: pts,
+        description: `+${pts} bonuspoäng!`,
+      };
+    }
   } else {
     const available = ALL_GAMIFICATION_BADGES.filter(
       (b) => !badges.includes(b.id)
@@ -251,7 +294,7 @@ function getChestPointRange(type: ChestType): { min: number; max: number } {
   }
 }
 
-export function openChest(type: ChestType, badges: string[]): {
+export function openChest(type: ChestType, badges: string[], currentChests: Chest[] = []): {
   points: number;
   badge?: string;
   bonusChest?: Chest;
@@ -259,6 +302,14 @@ export function openChest(type: ChestType, badges: string[]): {
 } {
   const range = getChestPointRange(type);
   const pts = Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
+
+  // Räkna antal kistor per typ
+  const chestCounts: Record<ChestType, number> = {
+    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0
+  };
+  for (const chest of currentChests) {
+    chestCounts[chest.type]++;
+  }
 
   // Higher tier chests have better chances for badges
   const badgeChance = {
@@ -295,7 +346,11 @@ export function openChest(type: ChestType, badges: string[]): {
     const bonusTypes: ChestType[] = ['bronze', 'bronze', 'silver', 'silver', 'gold', 'emerald'];
     const currentIndex = ['bronze', 'silver', 'gold', 'emerald', 'ruby', 'diamond'].indexOf(type);
     const bonusType = bonusTypes[currentIndex] || 'bronze';
-    bonusChest = makeChest(bonusType);
+
+    // Ge bara bonuskista om under max för den typen
+    if (chestCounts[bonusType] < MAX_CHESTS_PER_TYPE) {
+      bonusChest = makeChest(bonusType);
+    }
   }
 
   const desc = [

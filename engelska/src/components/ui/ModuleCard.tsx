@@ -220,22 +220,16 @@ export default function ModuleCard({
     <Link href={href} className="block group h-full">
       <MagicCard
         gradientColor={`${beamColors[0]}18`}
-        className={`h-full rounded-3xl border-3 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden ${
-          progress?.completed
-            ? `${stage.borderClass} bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-950/30 dark:to-green-950/20`
-            : "bg-white dark:bg-gray-800 border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
-        }`}
+        className="h-full rounded-3xl border-3 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden bg-white dark:bg-gray-800 border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"
         style={{
-          boxShadow: progress?.completed
-            ? "0 5px 0 0 rgba(34, 197, 94, 0.3), 0 8px 16px -4px rgba(34, 197, 94, 0.2)"
-            : "0 4px 0 0 rgba(99, 102, 241, 0.15), 0 8px 16px -4px rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
+          boxShadow: "0 4px 0 0 rgba(99, 102, 241, 0.15), 0 8px 16px -4px rgba(99, 102, 241, 0.1), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)"
         } as React.CSSProperties}
       >
         {progress?.completed && (
           <BorderBeam size={180} duration={10} colorFrom={beamColors[0]} colorTo={beamColors[1]} borderWidth={2} />
         )}
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative z-10">
           {/* Icon */}
           <div
             className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-200 group-hover:scale-110 group-hover:rotate-3 border-3 relative ${
@@ -275,7 +269,7 @@ export default function ModuleCard({
               </span>
             </div>
 
-            <p className={`text-sm mt-1 truncate font-medium ${progress?.completed ? "text-emerald-700 dark:text-emerald-300" : "text-indigo-400 dark:text-gray-400"}`}>{description}</p>
+            <p className="text-sm mt-1 truncate font-medium text-indigo-400 dark:text-gray-400">{description}</p>
 
             <div className="mt-3 flex items-center gap-3">
               <div className="flex-1">

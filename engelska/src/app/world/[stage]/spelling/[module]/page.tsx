@@ -10,9 +10,9 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
 import { recordError } from "@/lib/errorBank";
-import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
+import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, SpellingModule, GrammarExercise, ChestType, MysteryBoxReward } from "@/lib/types";
@@ -39,6 +39,9 @@ export default function SpellingModulePage({ params }: Props) {
   const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
   const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
   const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
+  const [modalPoints, setModalPoints] = useState(0);
+  const [modalBonus, setModalBonus] = useState(0);
+  const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
     const s = loadStudent();
@@ -88,38 +91,55 @@ export default function SpellingModulePage({ params }: Props) {
       const totalCorrect = newResults.filter(Boolean).length;
       const pts = totalCorrect * POINTS_PER_CORRECT;
       const passed = totalCorrect / totalExercises >= 0.6;
-      const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
       if (student) {
-        const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, finalPts, passed);
+        const existingProgress = getModuleProgress(student, stage!.id, "spelling", mod!.id);
+        const wasAlreadyCompleted = existingProgress?.completed ?? false;
+        const priorAttempts = existingProgress?.attempts ?? 0;
+        const repeatMult = getRepeatMultiplier(priorAttempts);
+        const adjustedBase = Math.round(pts * repeatMult);
+        const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
+        const adjustedTotal = adjustedBase + adjustedBonus;
+        setModalPoints(adjustedBase);
+        setModalBonus(adjustedBonus);
+        setAttemptNum(priorAttempts + 1);
+
+        const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
+        const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, adjustedTotal, passed);
         setStudent(updated);
 
         const gam = loadGamification();
-        const prevPoints = student.totalPoints;
         const newPoints = updated.totalPoints;
         const prevEx = gam.exercisesCompleted;
-        const newEx = prevEx + 1;
-        const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
-        const exChests = chestsEarnedFromExercises(prevEx, newEx, gam.exerciseMilestonesRewarded);
+        const newEx = wasAlreadyCompleted ? prevEx : prevEx + 1;
+        const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests);
+        const exChests = wasAlreadyCompleted ? [] : chestsEarnedFromExercises(prevEx, newEx, gam.exerciseMilestonesRewarded, gam.chests);
         const allNewChests = [...pointChests.map((c) => c.chest), ...exChests.map((c) => c.chest)];
         const firstChest = allNewChests[0];
         const wasBossUnlocked = gam.bossUnlocked;
         const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
-        const mystery = rollMysteryBox(gam.badges, newEx);
+        const mystery = wasAlreadyCompleted ? null : rollMysteryBox(gam.badges, newEx, gam.chests);
         const extraMysteryChest = mystery?.type === "chest" && mystery.chestType
           ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
           : [];
         const mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
         const mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
-        saveGamification({
+        const earlyBadgesSp = [...gam.badges];
+        if (mystery && !earlyBadgesSp.includes("mystery_hunter")) earlyBadgesSp.push("mystery_hunter");
+        if (mysteryBadge && !earlyBadgesSp.includes(mysteryBadge)) earlyBadgesSp.push(mysteryBadge);
+        const baseBadgesSp = earlyBadgesSp;
+        const newGamSp = {
           ...gam,
           chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
-          badges: mysteryBadge && !gam.badges.includes(mysteryBadge) ? [...gam.badges, mysteryBadge] : gam.badges,
+          badges: baseBadgesSp,
           exercisesCompleted: newEx,
           bossUnlocked: nowBossUnlocked,
           pointsMilestonesRewarded: [...gam.pointsMilestonesRewarded, ...pointChests.map((c) => c.milestone)],
           exerciseMilestonesRewarded: [...gam.exerciseMilestonesRewarded, ...exChests.map((c) => c.milestone)],
-        });
+        };
+        const achievementBadgesSp = checkAchievementBadges(updated, newGamSp);
+        if (achievementBadgesSp.length > 0) newGamSp.badges = [...newGamSp.badges, ...achievementBadgesSp];
+        saveGamification(newGamSp);
         if (mysteryPoints > 0) setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
         if (firstChest) setChestEarned(firstChest.type as ChestType);
         if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
@@ -306,12 +326,13 @@ export default function SpellingModulePage({ params }: Props) {
 
       {showResult && (
         <ResultModal
-          points={earnedPoints}
-          bonusPoints={mod.bonusPoints}
+          points={modalPoints}
+          bonusPoints={modalBonus}
           totalCorrect={totalCorrect}
           totalQuestions={totalExercises}
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
+          repeatAttemptNumber={attemptNum}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />

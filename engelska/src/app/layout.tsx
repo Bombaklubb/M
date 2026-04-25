@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import AnalyticsInit from "@/components/AnalyticsInit";
 import JaktlankarMenu from "@/components/JaktlankarMenu";
+import JakterMenu from "@/components/ui/JakterMenu";
 
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
@@ -38,16 +39,19 @@ export default function RootLayout({
       <body className="min-h-screen">
         <AnalyticsInit />
         {children}
-        {/* Kontakt – vänster nedre hörn */}
-        <div className="fixed bottom-2 left-3 z-40 select-none">
+        {/* Credits strip – full-width frosted bar at the bottom */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between px-3.5 py-1.5 select-none pointer-events-none"
+          style={{ background: "rgba(0,0,0,0.05)", backdropFilter: "blur(4px)" }}>
           <a
             href="mailto:martin.akdogan@enkoping.se"
-            className="text-sm font-medium text-white/80 dark:text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] hover:text-white dark:hover:text-white transition-colors"
+            className="text-[11px] font-bold text-white/80 dark:text-white/70 pointer-events-auto hover:text-white transition-colors"
           >
             Kontakt: martin.akdogan@enkoping.se
           </a>
         </div>
         <JaktlankarMenu />
+          <JakterMenu />
+        </div>
       </body>
     </html>
   );

@@ -15,6 +15,7 @@ import {
   CHEST_META,
   ALL_BADGES,
   BOSS_UNLOCK_THRESHOLD,
+  BOSS_CONFIGS,
   getBadge,
   openWoodChest,
   openSilverChest,
@@ -22,7 +23,9 @@ import {
   openRubyChest,
   openDiamondChest,
   openEmeraldChest,
+  BADGE_HOW_TO_EARN,
 } from "@/lib/gamification";
+import type { BossId } from "@/lib/gamification";
 import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
 
 const BG_LIGHT = "linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%)";
@@ -425,53 +428,80 @@ export default function KistorPage() {
 
       <main className="max-w-3xl mx-auto px-4 pb-10 space-y-8">
 
-        {/* ─── Boss challenge ── */}
-        <div
-          className="rounded-2xl p-4"
-          style={{
-            background: gam.bossUnlocked
-              ? "linear-gradient(135deg, #7f1d1d, #991b1b)"
-              : "rgba(255,255,255,0.07)",
-            border: `1px solid ${gam.bossUnlocked ? "rgba(239,68,68,0.5)" : "rgba(255,255,255,0.1)"}`,
-            boxShadow: gam.bossUnlocked ? "0 4px 20px rgba(239,68,68,0.25)" : "none",
-          }}
-        >
-          <div className="flex items-center justify-between flex-wrap gap-3">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">{gam.bossUnlocked ? "⚔️" : "🔒"}</span>
-              <div>
-                <h2 className="text-sm font-black text-white">Boss Challenge</h2>
+        {/* ─── Boss challenges ── */}
+        <section>
+          <SectionTitle emoji="⚔️" title="Boss Challenges" subtitle="Besegra bossarna för speciella belöningar" />
+
+          {!gam.bossUnlocked ? (
+            <div
+              className="rounded-2xl p-4 flex items-center gap-3"
+              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
+            >
+              <span className="text-3xl">🔒</span>
+              <div className="flex-1">
+                <p className="text-sm font-black text-white">Boss Challenge</p>
                 <p className="text-white/60 text-xs">
-                  {gam.bossUnlocked
-                    ? `Du har vunnit ${gam.bossWins} gång${gam.bossWins !== 1 ? "er" : ""} – vinn för att få bronskista!`
-                    : `Slutför ${exercisesLeft} övning${exercisesLeft !== 1 ? "ar" : ""} till för att låsa upp`}
+                  Slutför {exercisesLeft} övning{exercisesLeft !== 1 ? "ar" : ""} till för att låsa upp
                 </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <div className="h-1.5 flex-1 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.1)" }}>
+                    <div
+                      className="h-full bg-white/50 rounded-full transition-all"
+                      style={{ width: `${Math.min(100, (gam.exercisesCompleted / BOSS_UNLOCK_THRESHOLD) * 100)}%` }}
+                    />
+                  </div>
+                  <span className="text-white/40 text-xs">{gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}</span>
+                </div>
               </div>
             </div>
-            {gam.bossUnlocked ? (
-              <Link
-                href="/boss"
-                className="px-4 py-2 rounded-xl font-bold text-xs text-red-900 cursor-pointer transition-all active:scale-95 flex-shrink-0"
-                style={{ background: "linear-gradient(135deg, #fef2f2, #fee2e2)", border: "1px solid #fca5a5" }}
-              >
-                Utmana ⚔️
-              </Link>
-            ) : (
-              <div className="flex items-center gap-2">
-                <div
-                  className="h-1.5 w-24 rounded-full overflow-hidden"
-                  style={{ background: "rgba(255,255,255,0.1)" }}
-                >
+          ) : (
+            <div className="space-y-3">
+              {(["dragon", "troll", "wizard"] as BossId[]).map((bossId) => {
+                const boss = BOSS_CONFIGS[bossId];
+                const beaten = (gam.bossesBeaten ?? []).includes(bossId);
+                return (
                   <div
-                    className="h-full bg-white/50 rounded-full transition-all"
-                    style={{ width: `${Math.min(100, (gam.exercisesCompleted / BOSS_UNLOCK_THRESHOLD) * 100)}%` }}
-                  />
-                </div>
-                <span className="text-white/40 text-xs">{gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}</span>
-              </div>
-            )}
-          </div>
-        </div>
+                    key={bossId}
+                    className="rounded-2xl p-4"
+                    style={{
+                      background: boss.gradient,
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+                    }}
+                  >
+                    <div className="flex items-center justify-between flex-wrap gap-3">
+                      <div className="flex items-center gap-3">
+                        <span className="text-3xl">{boss.emoji}</span>
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <h2 className="text-sm font-black text-white">{boss.name}</h2>
+                            {beaten && (
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/20 text-white/90">
+                                ✓ Besegrad
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-white/60 text-xs">{boss.subtitle} · Belöning: {CHEST_META[boss.rewardChestType].label}</p>
+                        </div>
+                      </div>
+                      <Link
+                        href={`/boss?type=${bossId}`}
+                        className="px-4 py-2 rounded-xl font-bold text-xs cursor-pointer transition-all active:scale-95 flex-shrink-0"
+                        style={{
+                          background: "rgba(255,255,255,0.9)",
+                          color: boss.accentColor,
+                          border: "1px solid rgba(255,255,255,0.5)",
+                        }}
+                      >
+                        Utmana ⚔️
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </section>
 
         {/* ─── Unopened chests ── */}
         <section>
@@ -502,31 +532,44 @@ export default function KistorPage() {
         <TrofHylla chests={gam.chests} />
 
         {/* ─── Badges ── */}
-        {gam.badges.length > 0 && (
-          <section>
-            <SectionTitle emoji="🎖️" title={`Märken (${gam.badges.length}/${ALL_BADGES.length})`} subtitle="Samla alla märken i appen" />
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-              {gam.badges.map((badgeId) => {
-                const badge = getBadge(badgeId);
-                if (!badge) return null;
-                return (
-                  <div
-                    key={badgeId}
-                    className="flex flex-col items-center p-4 rounded-2xl"
-                    style={{
-                      background: "linear-gradient(135deg, #312e81, #4c1d95)",
-                      border: "1px solid rgba(167,139,250,0.3)",
-                      boxShadow: "0 4px 16px rgba(124,58,237,0.25)",
-                    }}
-                  >
-                    <span className="text-3xl mb-2 leading-none">{badge.emoji}</span>
-                    <span className="text-[10px] font-bold text-violet-200 text-center leading-snug">{badge.label}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        )}
+        <section>
+          <SectionTitle
+            emoji="🎖️"
+            title={`Märken (${gam.badges.length}/${ALL_BADGES.length})`}
+            subtitle="Samla alla märken – grå = ej uppnådd ännu"
+          />
+          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+            {ALL_BADGES.map((badge) => {
+              const earned = gam.badges.includes(badge.id);
+              return (
+                <div
+                  key={badge.id}
+                  className="flex flex-col items-center p-3 rounded-2xl text-center"
+                  style={earned ? {
+                    background: "linear-gradient(135deg, #312e81, #4c1d95)",
+                    border: "1px solid rgba(167,139,250,0.35)",
+                    boxShadow: "0 4px 16px rgba(124,58,237,0.3)",
+                  } : {
+                    background: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                  }}
+                >
+                  <span className={`text-3xl mb-1.5 leading-none ${earned ? "" : "grayscale opacity-30"}`}>
+                    {earned ? badge.emoji : "🔒"}
+                  </span>
+                  <span className={`text-[10px] font-bold leading-snug ${earned ? "text-violet-200" : "text-white/35"}`}>
+                    {badge.label}
+                  </span>
+                  {!earned && BADGE_HOW_TO_EARN[badge.id] && (
+                    <span className="text-[9px] text-white/25 mt-1 leading-tight">
+                      {BADGE_HOW_TO_EARN[badge.id]}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
         {/* ─── How to earn chests ── */}
         <section>
@@ -540,7 +583,7 @@ export default function KistorPage() {
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
-                  { type: "wood"    as ChestType, value: "25, 50, 100, 200, 600 p",                  bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
+                  { type: "wood"    as ChestType, value: "50, 200 p",                                bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
                   { type: "silver"  as ChestType, value: "300, 500, 750, 1 500, 2 000 p",            bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
                   { type: "gold"    as ChestType, value: "1 000, 2 500, 5 000, 10 000, 15 000 p",    bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
                   { type: "ruby"    as ChestType, value: "20 000, 30 000 p",                          bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
@@ -563,7 +606,7 @@ export default function KistorPage() {
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
-                  { type: "wood"    as ChestType, value: "1, 3, 5, 10 övningar",            bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
+                  { type: "wood"    as ChestType, value: "1, 5, 10 övningar",               bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
                   { type: "silver"  as ChestType, value: "15, 20, 40, 50 övningar",         bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
                   { type: "gold"    as ChestType, value: "30, 60, 75, 100, 150 övningar",   bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
                   { type: "ruby"    as ChestType, value: "200 övningar",                     bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },

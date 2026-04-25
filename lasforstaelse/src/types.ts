@@ -71,6 +71,18 @@ export enum BadgeType {
   THOUSAND_POINTS = 'thousand_points',
   STORY_LOVER = 'story_lover',
   FACT_LOVER = 'fact_lover',
+  GYMNASIUM = 'gymnasium',
+  TWO_THOUSAND_POINTS = 'two_thousand_points',
+  FIVE_THOUSAND_POINTS = 'five_thousand_points',
+  FAST_READER = 'fast_reader',
+  ENDURANCE = 'endurance',
+  STREAK_14 = 'streak_14',
+  BIG_SCORER = 'big_scorer',
+  GENRE_MIX = 'genre_mix',
+  PERFECT_FIVE_TOTAL = 'perfect_five_total',
+  GYMNASIUM_EXPERT = 'gymnasium_expert',
+  MORNING_READER = 'morning_reader',
+  NIGHT_OWL = 'night_owl',
 }
 
 // En badge
@@ -287,6 +299,78 @@ export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
     name: 'Faktanörd',
     description: 'Läst 10 faktatexter',
     icon: '🔬',
+  },
+  [BadgeType.GYMNASIUM]: {
+    type: BadgeType.GYMNASIUM,
+    name: 'Gymnasist',
+    description: 'Klarat en text på gymnasienivå',
+    icon: '🎓',
+  },
+  [BadgeType.TWO_THOUSAND_POINTS]: {
+    type: BadgeType.TWO_THOUSAND_POINTS,
+    name: 'Poängstjärna',
+    description: 'Tjänat 2 000 poäng totalt',
+    icon: '🌠',
+  },
+  [BadgeType.FIVE_THOUSAND_POINTS]: {
+    type: BadgeType.FIVE_THOUSAND_POINTS,
+    name: 'Poängguru',
+    description: 'Tjänat 5 000 poäng totalt',
+    icon: '🏅',
+  },
+  [BadgeType.FAST_READER]: {
+    type: BadgeType.FAST_READER,
+    name: 'Snabbläsare',
+    description: 'Klarat en text på under 4 minuter',
+    icon: '⚡',
+  },
+  [BadgeType.ENDURANCE]: {
+    type: BadgeType.ENDURANCE,
+    name: 'Uthållig',
+    description: 'Läst i mer än 30 minuter under en dag',
+    icon: '🏃',
+  },
+  [BadgeType.STREAK_14]: {
+    type: BadgeType.STREAK_14,
+    name: 'Månadsläsare',
+    description: 'Läst 14 dagar i rad',
+    icon: '📆',
+  },
+  [BadgeType.BIG_SCORER]: {
+    type: BadgeType.BIG_SCORER,
+    name: 'Storpoängare',
+    description: 'Tjänat 500 poäng på en och samma dag',
+    icon: '💥',
+  },
+  [BadgeType.GENRE_MIX]: {
+    type: BadgeType.GENRE_MIX,
+    name: 'Genremix',
+    description: 'Läst en berättelse och en faktatext samma dag',
+    icon: '🎭',
+  },
+  [BadgeType.PERFECT_FIVE_TOTAL]: {
+    type: BadgeType.PERFECT_FIVE_TOTAL,
+    name: 'Fullpoängsproffs',
+    description: 'Fått alla rätt på 5 texter totalt',
+    icon: '🌟',
+  },
+  [BadgeType.GYMNASIUM_EXPERT]: {
+    type: BadgeType.GYMNASIUM_EXPERT,
+    name: 'Gymnasieexpert',
+    description: 'Klarat 10 texter på gymnasienivå',
+    icon: '🎓',
+  },
+  [BadgeType.MORNING_READER]: {
+    type: BadgeType.MORNING_READER,
+    name: 'Morgonläsare',
+    description: 'Läst en text före klockan 09:00',
+    icon: '🌅',
+  },
+  [BadgeType.NIGHT_OWL]: {
+    type: BadgeType.NIGHT_OWL,
+    name: 'Nattugla',
+    description: 'Läst en text efter klockan 20:00',
+    icon: '🦉',
   },
 };
 
