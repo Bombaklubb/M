@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BookLogo } from './BookLogo';
 import { AvatarPicker } from './AvatarPicker';
+import { JaktLinks } from './JaktLinks';
 import { AVATAR_OPTIONS } from '../types';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader } from './ui/card';
@@ -189,14 +190,14 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
         </Card>
       </motion.div>
 
-      {/* Signatur */}
+      {/* Jaktlänkar */}
       <motion.div
-        className="fixed bottom-2 right-3 text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors"
+        className="fixed bottom-2 right-3 text-xs"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        Läsjakten av Martin Akdogan
+        <JaktLinks />
       </motion.div>
     </div>
   );

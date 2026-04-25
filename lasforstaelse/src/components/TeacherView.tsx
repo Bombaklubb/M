@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchTeacherStats, type TeacherStats } from '../services/analyticsService';
 import { RefreshCw, LogOut, Monitor, Calendar } from 'lucide-react';
+import { JaktLinks } from './JaktLinks';
 
 interface TeacherViewProps {
   onClose: () => void;
@@ -359,15 +360,15 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
       </main>
 
       {/* Footer */}
-      <footer className="text-center text-sm text-slate-400 dark:text-slate-600 py-6">
+      <footer className="flex items-center justify-center gap-3 text-sm text-slate-400 dark:text-slate-600 py-6">
         <a
           href="mailto:martin.akdogan@enkoping.se"
           className="hover:text-emerald-500 dark:hover:text-emerald-400 transition"
         >
           martin.akdogan@enkoping.se
         </a>
-        <span className="mx-3">·</span>
-        Läsjakten av Martin Akdogan
+        <span>·</span>
+        <JaktLinks />
       </footer>
     </div>
   );

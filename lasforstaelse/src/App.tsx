@@ -9,6 +9,7 @@ import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
 import { BookLogo } from './components/BookLogo';
+import { JaktLinks } from './components/JaktLinks';
 import {
   loginUser,
   loadUser,
@@ -498,9 +499,9 @@ function App() {
         <TeacherView onClose={() => setShowTeacher(false)} />
       )}
 
-      {/* Signatur */}
-      <footer className="fixed bottom-4 right-4 text-sm text-slate-600 dark:text-slate-400">
-        Läsjakten av <span className="font-semibold">Martin Akdogan</span>
+      {/* Jaktlänkar */}
+      <footer className="fixed bottom-4 right-4 text-sm">
+        <JaktLinks />
       </footer>
     </div>
   );
