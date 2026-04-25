@@ -47,7 +47,7 @@ export default function JakterMenu() {
         onClick={() => setOpen((v) => !v)}
         className="text-[11px] font-bold text-white/80 dark:text-white/70 hover:text-white transition-colors cursor-pointer"
       >
-        Martins andra &quot;Jakter&quot; ▴
+        Jaktlänkar ▴
       </button>
     </div>
   );
