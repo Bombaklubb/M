@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 const JAKT_APPS = [
-  { name: 'Läsjakten', icon: '📖', url: 'https://lasjakten.vercel.app' },
+  { name: 'Svenskajakten', icon: '🇸🇪', url: 'https://svenskajakten.vercel.app' },
   { name: 'Mattejakten', icon: '🔢', url: 'https://mattejakten.vercel.app' },
   { name: 'Engelskajakten', icon: '🇬🇧', url: 'https://engelskajakten.vercel.app' },
 ];
