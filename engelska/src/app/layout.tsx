@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import AnalyticsInit from "@/components/AnalyticsInit";
+import JaktlankarMenu from "@/components/JaktlankarMenu";
 
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
@@ -46,12 +47,7 @@ export default function RootLayout({
             Kontakt: martin.akdogan@enkoping.se
           </a>
         </div>
-        {/* Signatur – höger nedre hörn */}
-        <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-          <span className="text-sm font-medium text-white/80 dark:text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
-            Engelskajakten av Martin Akdogan
-          </span>
-        </div>
+        <JaktlankarMenu />
       </body>
     </html>
   );
