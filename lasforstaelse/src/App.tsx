@@ -500,7 +500,7 @@ function App() {
       )}
 
       {/* Jaktlänkar */}
-      <footer className="fixed bottom-4 right-4 text-sm">
+      <footer className="fixed bottom-4 right-4 text-sm z-50">
         <JaktLinks />
       </footer>
     </div>
