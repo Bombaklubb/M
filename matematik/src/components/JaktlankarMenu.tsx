@@ -39,12 +39,6 @@ export default function JaktlankarMenu() {
       {open && (
         <div className="absolute bottom-8 right-0 mb-1 bg-white rounded-2xl shadow-2xl overflow-hidden w-56"
           style={{ border: '1px solid rgba(0,0,0,0.08)' }}>
-          {/* Header */}
-          <div className="px-4 pt-4 pb-2">
-            <p className="text-[10px] font-black tracking-widest text-gray-400 uppercase">
-              Martins appar
-            </p>
-          </div>
           {/* Links */}
           {APPS.map((app, i) => (
             <a
