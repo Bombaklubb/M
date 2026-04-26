@@ -6,17 +6,17 @@ const APPS = [
   {
     label: "Läsjakten",
     url: "https://lasjakten.vercel.app",
-    favicon: "https://lasjakten.vercel.app/lasjakten-favicon.png",
+    icon: "📚",
   },
   {
     label: "Mattejakten",
     url: "https://mattejakten.vercel.app",
-    favicon: "https://mattejakten.vercel.app/mattejakten.png",
+    icon: "🔢",
   },
   {
     label: "Svenskajakten",
     url: "https://svenskajakten.vercel.app",
-    favicon: "https://svenskajakten.vercel.app/favicon.svg",
+    icon: "🇸🇪",
   },
 ];
 
@@ -50,13 +50,7 @@ export default function JakterMenu() {
               className="flex items-center gap-2.5 px-3 py-2 text-[13px] font-semibold text-gray-800 dark:text-gray-100 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors"
               onClick={() => setOpen(false)}
             >
-              <img
-                src={app.favicon}
-                alt=""
-                width={18}
-                height={18}
-                className="rounded-sm shrink-0"
-              />
+              <span className="text-base leading-none">{app.icon}</span>
               {app.label}
               <span className="ml-auto text-gray-400 text-[11px]">↗</span>
             </a>
