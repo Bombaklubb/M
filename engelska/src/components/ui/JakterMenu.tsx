@@ -6,12 +6,12 @@ const APPS = [
   {
     label: "Läsjakten",
     url: "https://lasjakten.vercel.app",
-    favicon: "https://lasjakten.vercel.app/favicon.svg",
+    favicon: "https://lasjakten.vercel.app/lasjakten-favicon.png",
   },
   {
     label: "Mattejakten",
     url: "https://mattejakten.vercel.app",
-    favicon: "https://mattejakten.vercel.app/favicon.svg",
+    favicon: "https://mattejakten.vercel.app/mattejakten.png",
   },
   {
     label: "Svenskajakten",
