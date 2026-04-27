@@ -39,6 +39,10 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 30000, type: 'diamond' },
   { points: 35000, type: 'diamond' },
   { points: 40000, type: 'diamond' },
+  // Hemliga kistan: 60000-100000 poäng
+  { points: 60000, type: 'secret' },
+  { points: 75000, type: 'secret' },
+  { points: 100000, type: 'secret' },
 ];
 
 export const TEXT_CHEST_MILESTONES: { texts: number; type: ChestType }[] = [
@@ -74,6 +78,10 @@ export const TEXT_CHEST_MILESTONES: { texts: number; type: ChestType }[] = [
   { texts: 400, type: 'diamond' },
   { texts: 450, type: 'diamond' },
   { texts: 500, type: 'diamond' },
+  // Hemliga kistan: 750-1000 texter
+  { texts: 750, type: 'secret' },
+  { texts: 875, type: 'secret' },
+  { texts: 1000, type: 'secret' },
 ];
 
 // ─── Chest metadata ───────────────────────────────────────────────────────────
@@ -142,6 +150,16 @@ export const CHEST_META: Record<
     shadowColor: 'shadow-cyan-500/40',
     description: 'En legendarisk diamantkista med de bästa belöningarna!',
   },
+  secret: {
+    label: 'Hemliga kistan',
+    emoji: '🔒',
+    image: '/content/hemligakista-blurrad.png',
+    openedImage: '/content/oppen-kista-hemlig.png',
+    color: 'from-purple-900 to-slate-900',
+    borderColor: 'border-purple-700',
+    shadowColor: 'shadow-purple-900/40',
+    description: 'Den hemligaste och svåraste kistan av alla – för de mest hängivna läsarna!',
+  },
 };
 
 export const ALL_GAMIFICATION_BADGES = [
@@ -176,7 +194,7 @@ export function chestsEarnedFromPoints(
 
   // Räkna antal kistor per typ
   const chestCounts: Record<ChestType, number> = {
-    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0
+    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0, secret: 0
   };
   for (const chest of currentChests) {
     chestCounts[chest.type]++;
@@ -208,7 +226,7 @@ export function chestsEarnedFromTexts(
 
   // Räkna antal kistor per typ
   const chestCounts: Record<ChestType, number> = {
-    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0
+    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0, secret: 0
   };
   for (const chest of currentChests) {
     chestCounts[chest.type]++;
@@ -290,6 +308,7 @@ function getChestPointRange(type: ChestType): { min: number; max: number } {
     case 'emerald': return { min: 150, max: 300 };
     case 'ruby': return { min: 200, max: 400 };
     case 'diamond': return { min: 300, max: 500 };
+    case 'secret': return { min: 500, max: 1000 };
     default: return { min: 10, max: 50 };
   }
 }
@@ -305,7 +324,7 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
 
   // Räkna antal kistor per typ
   const chestCounts: Record<ChestType, number> = {
-    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0
+    bronze: 0, silver: 0, gold: 0, emerald: 0, ruby: 0, diamond: 0, secret: 0
   };
   for (const chest of currentChests) {
     chestCounts[chest.type]++;
@@ -319,6 +338,7 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
     emerald: 0.4,
     ruby: 0.5,
     diamond: 0.6,
+    secret: 0.75,
   }[type] || 0;
 
   const bonusChestChance = {
@@ -328,6 +348,7 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
     emerald: 0.25,
     ruby: 0.3,
     diamond: 0.4,
+    secret: 0.5,
   }[type] || 0;
 
   let badge: { id: string; label: string; emoji: string } | null = null;
@@ -343,8 +364,8 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
   let bonusChest: Chest | undefined;
   if (Math.random() < bonusChestChance) {
     // Bonus chest is one tier lower than current
-    const bonusTypes: ChestType[] = ['bronze', 'bronze', 'silver', 'silver', 'gold', 'emerald'];
-    const currentIndex = ['bronze', 'silver', 'gold', 'emerald', 'ruby', 'diamond'].indexOf(type);
+    const bonusTypes: ChestType[] = ['bronze', 'bronze', 'silver', 'silver', 'gold', 'emerald', 'diamond'];
+    const currentIndex = ['bronze', 'silver', 'gold', 'emerald', 'ruby', 'diamond', 'secret'].indexOf(type);
     const bonusType = bonusTypes[currentIndex] || 'bronze';
 
     // Ge bara bonuskista om under max för den typen
