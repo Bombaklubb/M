@@ -5,7 +5,7 @@ import {
   loadGamification, saveGamification,
   CHEST_META, MATH_BADGES, BOSS_UNLOCK_THRESHOLD, getMathBadge,
   openWoodChest, openSilverChest, openGoldChest,
-  openRubinChest, openSmaragdChest, openDiamantChest,
+  openRubinChest, openSmaragdChest, openDiamantChest, openHemligChest,
 } from '../utils/chestStorage';
 import { addPoints, getPoints, initPoints } from '../utils/storage';
 import type { MattChest, MattGamificationData, ChestType } from '../types';
@@ -332,6 +332,8 @@ export default function KistorView() {
       result = openRubinChest(gam.badges);
     } else if (chest.type === 'smaragd') {
       result = openSmaragdChest(gam.badges);
+    } else if (chest.type === 'hemlig') {
+      result = openHemligChest(gam.badges);
     } else {
       result = openDiamantChest(gam.badges);
     }
@@ -572,7 +574,8 @@ export default function KistorView() {
                         {row('/guldkista.png',    'Guld',    <><strong>Guldkista:</strong> 1 000 – 2 500 p</>)}
                         {row('/rubinkista.png',   'Rubin',   <><strong>Rubinkista:</strong> 3 500 – 5 000 p</>)}
                         {row('/smaragdkista.png', 'Smaragd', <><strong>Smaragdkista:</strong> 7 000 – 10 000 p</>)}
-                        {row('/diamantkista.png', 'Diamant', <><strong>Diamantkista:</strong> 15 000 – 20 000 p</>)}
+                        {row('/diamantkista.png',        'Diamant', <><strong>Diamantkista:</strong> 15 000 – 20 000 p</>)}
+                        {row('/hemlig-kista-blurrad.png', 'Hemlig',  <><strong>Hemliga kistan:</strong> 30 000 – 50 000 p 🔒</>)}
                       </tbody>
                     </table>
                   </div>
@@ -580,12 +583,13 @@ export default function KistorView() {
                     <p className="text-xs font-black text-orange-500 uppercase tracking-widest mb-2">Klarade kapitel (antal)</p>
                     <table style={{ borderCollapse: 'separate', borderSpacing: '0' }}>
                       <tbody>
-                        {row('/bronskista.png',   'Brons',   <><strong>Bronskista:</strong> 1 – 10 kapitel</>)}
-                        {row('/silverkista.png',  'Silver',  <><strong>Silverkista:</strong> 15 – 20 kapitel</>)}
-                        {row('/guldkista.png',    'Guld',    <><strong>Guldkista:</strong> 30 – 60 kapitel</>)}
-                        {row('/rubinkista.png',   'Rubin',   <><strong>Rubinkista:</strong> 75 kapitel</>)}
-                        {row('/smaragdkista.png', 'Smaragd', <><strong>Smaragdkista:</strong> 100 kapitel</>)}
-                        {row('/diamantkista.png', 'Diamant', <><strong>Diamantkista:</strong> 150 kapitel</>)}
+                        {row('/bronskista.png',          'Brons',   <><strong>Bronskista:</strong> 1 – 10 kapitel</>)}
+                        {row('/silverkista.png',          'Silver',  <><strong>Silverkista:</strong> 15 – 20 kapitel</>)}
+                        {row('/guldkista.png',            'Guld',    <><strong>Guldkista:</strong> 30 – 60 kapitel</>)}
+                        {row('/rubinkista.png',           'Rubin',   <><strong>Rubinkista:</strong> 75 kapitel</>)}
+                        {row('/smaragdkista.png',         'Smaragd', <><strong>Smaragdkista:</strong> 100 kapitel</>)}
+                        {row('/diamantkista.png',         'Diamant', <><strong>Diamantkista:</strong> 150 kapitel</>)}
+                        {row('/hemlig-kista-blurrad.png', 'Hemlig',  <><strong>Hemliga kistan:</strong> 200 – 300 kapitel 🔒</>)}
                       </tbody>
                     </table>
                   </div>
