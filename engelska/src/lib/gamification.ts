@@ -31,7 +31,9 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 30000, type: "ruby" },
   { points: 35000, type: "diamond" },
   { points: 50000, type: "diamond" },
-  { points: 75000, type: "emerald" },
+  { points: 75000,  type: "emerald" },
+  { points: 100000, type: "hemlig" },
+  { points: 150000, type: "hemlig" },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
@@ -49,7 +51,9 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
   { exercises: 150, type: "gold" },
   { exercises: 200, type: "ruby" },
   { exercises: 300, type: "diamond" },
-  { exercises: 500, type: "emerald" },
+  { exercises: 500,  type: "emerald" },
+  { exercises: 750,  type: "hemlig" },
+  { exercises: 1000, type: "hemlig" },
 ];
 
 // ─── Chest reward tables ──────────────────────────────────────────────────────
@@ -117,6 +121,16 @@ export const CHEST_META: Record<
     borderColor: "border-emerald-600",
     shadowColor: "shadow-green-900/40",
     description: "Den legendariska smaragdkistan med de allra bästa belöningarna!",
+  },
+  hemlig: {
+    label: "Hemliga kistan",
+    emoji: "🔒",
+    image: "/hemliga-kistan-blurrad.png",
+    openImage: "/hemliga-kistan.png",
+    color: "from-purple-900 to-gray-900",
+    borderColor: "border-purple-700",
+    shadowColor: "shadow-purple-900/50",
+    description: "Den ytterst hemliga kistan. Mycket få lyckas öppna den!",
   },
 };
 
@@ -753,6 +767,27 @@ export function openEmeraldChest(badges: string[]): {
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
     bonusChest ? "Bonus: Rubinkista!" : null,
+  ].filter(Boolean).join(" • ");
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Compute chest rewards when opening the secret chest. */
+export function openHemligChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: Chest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
+  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = Math.random() < 0.6 ? makeChest("emerald") : undefined;
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    bonusChest ? "Bonus: Smaragdkista!" : null,
   ].filter(Boolean).join(" • ");
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
