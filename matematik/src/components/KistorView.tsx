@@ -14,6 +14,13 @@ import type { MattChest, MattGamificationData, ChestType } from '../types';
 
 const SHELF_ROWS: { type: ChestType; label: string; gradient: string; glow: string; shelfBg: string }[] = [
   {
+    type: 'hemlig',
+    label: 'Hemliga kistor',
+    gradient: 'from-purple-400 via-violet-400 to-indigo-500',
+    glow: 'rgba(167,139,250,0.65)',
+    shelfBg: 'linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #3730a3 100%)',
+  },
+  {
     type: 'diamant',
     label: 'Diamantkistor',
     gradient: 'from-cyan-300 via-blue-400 to-violet-500',
@@ -21,18 +28,18 @@ const SHELF_ROWS: { type: ChestType; label: string; gradient: string; glow: stri
     shelfBg: 'linear-gradient(135deg, #0c1445 0%, #1e3a8a 40%, #312e81 100%)',
   },
   {
-    type: 'smaragd',
-    label: 'Smaragdkistor',
-    gradient: 'from-emerald-300 via-green-400 to-teal-500',
-    glow: 'rgba(52,211,153,0.55)',
-    shelfBg: 'linear-gradient(135deg, #064e3b 0%, #065f46 40%, #047857 100%)',
-  },
-  {
     type: 'rubin',
     label: 'Rubinkistor',
     gradient: 'from-red-400 via-rose-400 to-pink-500',
     glow: 'rgba(239,68,68,0.5)',
     shelfBg: 'linear-gradient(135deg, #4c0519 0%, #881337 40%, #9f1239 100%)',
+  },
+  {
+    type: 'smaragd',
+    label: 'Smaragdkistor',
+    gradient: 'from-emerald-300 via-green-400 to-teal-500',
+    glow: 'rgba(52,211,153,0.55)',
+    shelfBg: 'linear-gradient(135deg, #064e3b 0%, #065f46 40%, #047857 100%)',
   },
   {
     type: 'gold',
@@ -308,9 +315,10 @@ export default function KistorView() {
 
   const unopened = gam.chests.filter(c => !c.opened);
   const opened = gam.chests.filter(c => c.opened);
+  const hemligCount  = opened.filter(c => c.type === 'hemlig').length;
   const diamantCount = opened.filter(c => c.type === 'diamant').length;
-  const smaragdCount = opened.filter(c => c.type === 'smaragd').length;
   const rubinCount   = opened.filter(c => c.type === 'rubin').length;
+  const smaragdCount = opened.filter(c => c.type === 'smaragd').length;
   const goldCount    = opened.filter(c => c.type === 'gold').length;
   const silverCount  = opened.filter(c => c.type === 'silver').length;
   const woodCount    = opened.filter(c => c.type === 'wood').length;
@@ -380,9 +388,10 @@ export default function KistorView() {
 
           {/* Stats row */}
           <div className="flex gap-1.5 flex-wrap">
-            {diamantCount > 0 && <StatBadge emoji="/diamantkista.png" count={diamantCount} label="Diamant" gradient="from-cyan-300 to-violet-500" />}
-            {smaragdCount > 0 && <StatBadge emoji="/smaragdkista.png" count={smaragdCount} label="Smaragd" gradient="from-emerald-300 to-teal-500" />}
-            {rubinCount   > 0 && <StatBadge emoji="/rubinkista.png"   count={rubinCount}   label="Rubin"   gradient="from-red-400 to-rose-600" />}
+            {hemligCount  > 0 && <StatBadge emoji="/hemlig-kista.png"  count={hemligCount}  label="Hemlig"  gradient="from-purple-400 to-indigo-500" />}
+            {diamantCount > 0 && <StatBadge emoji="/diamantkista.png"  count={diamantCount} label="Diamant" gradient="from-cyan-300 to-violet-500" />}
+            {rubinCount   > 0 && <StatBadge emoji="/rubinkista.png"    count={rubinCount}   label="Rubin"   gradient="from-red-400 to-rose-600" />}
+            {smaragdCount > 0 && <StatBadge emoji="/smaragdkista.png"  count={smaragdCount} label="Smaragd" gradient="from-emerald-300 to-teal-500" />}
             <StatBadge emoji="/guldkista.png"   count={goldCount}        label="Guld"    gradient="from-yellow-300 to-amber-500" />
             <StatBadge emoji="/silverkista.png" count={silverCount}      label="Silver"  gradient="from-slate-200 to-slate-400" />
             <StatBadge emoji="/bronskista.png"  count={woodCount}        label="Brons"   gradient="from-amber-600 to-amber-800" />
@@ -569,13 +578,13 @@ export default function KistorView() {
                     <p className="text-xs font-black text-orange-500 uppercase tracking-widest mb-2">Poäng-milstolpar</p>
                     <table style={{ borderCollapse: 'separate', borderSpacing: '0' }}>
                       <tbody>
-                        {row('/bronskista.png',   'Brons',   <><strong>Bronskista:</strong> 50 – 200 p</>)}
-                        {row('/silverkista.png',  'Silver',  <><strong>Silverkista:</strong> 300 – 750 p</>)}
-                        {row('/guldkista.png',    'Guld',    <><strong>Guldkista:</strong> 1 000 – 2 500 p</>)}
-                        {row('/rubinkista.png',   'Rubin',   <><strong>Rubinkista:</strong> 3 500 – 5 000 p</>)}
-                        {row('/smaragdkista.png', 'Smaragd', <><strong>Smaragdkista:</strong> 7 000 – 10 000 p</>)}
-                        {row('/diamantkista.png',        'Diamant', <><strong>Diamantkista:</strong> 15 000 – 20 000 p</>)}
-                        {row('/hemlig-kista-blurrad.png', 'Hemlig',  <><strong>Hemliga kistan:</strong> 30 000 – 50 000 p 🔒</>)}
+                        {row('/bronskista.png',          'Brons',   <><strong>Bronskista:</strong> 10 – 200 p</>)}
+                        {row('/silverkista.png',          'Silver',  <><strong>Silverkista:</strong> 300 – 4 000 p</>)}
+                        {row('/guldkista.png',            'Guld',    <><strong>Guldkista:</strong> 1 000 – 7 000 p</>)}
+                        {row('/smaragdkista.png',         'Smaragd', <><strong>Smaragdkista:</strong> 8 000 – 12 000 p</>)}
+                        {row('/rubinkista.png',           'Rubin',   <><strong>Rubinkista:</strong> 15 000 – 20 000 p</>)}
+                        {row('/diamantkista.png',         'Diamant', <><strong>Diamantkista:</strong> 25 000 – 40 000 p</>)}
+                        {row('/hemlig-kista-blurrad.png', 'Hemlig',  <><strong>Hemliga kistan:</strong> 60 000 – 100 000 p 🔒</>)}
                       </tbody>
                     </table>
                   </div>
@@ -583,13 +592,13 @@ export default function KistorView() {
                     <p className="text-xs font-black text-orange-500 uppercase tracking-widest mb-2">Klarade kapitel (antal)</p>
                     <table style={{ borderCollapse: 'separate', borderSpacing: '0' }}>
                       <tbody>
-                        {row('/bronskista.png',          'Brons',   <><strong>Bronskista:</strong> 1 – 10 kapitel</>)}
-                        {row('/silverkista.png',          'Silver',  <><strong>Silverkista:</strong> 15 – 20 kapitel</>)}
-                        {row('/guldkista.png',            'Guld',    <><strong>Guldkista:</strong> 30 – 60 kapitel</>)}
-                        {row('/rubinkista.png',           'Rubin',   <><strong>Rubinkista:</strong> 75 kapitel</>)}
-                        {row('/smaragdkista.png',         'Smaragd', <><strong>Smaragdkista:</strong> 100 kapitel</>)}
-                        {row('/diamantkista.png',         'Diamant', <><strong>Diamantkista:</strong> 150 kapitel</>)}
-                        {row('/hemlig-kista-blurrad.png', 'Hemlig',  <><strong>Hemliga kistan:</strong> 200 – 300 kapitel 🔒</>)}
+                        {row('/bronskista.png',          'Brons',   <><strong>Bronskista:</strong> 1 – 55 kapitel</>)}
+                        {row('/silverkista.png',          'Silver',  <><strong>Silverkista:</strong> 12 – 90 kapitel</>)}
+                        {row('/guldkista.png',            'Guld',    <><strong>Guldkista:</strong> 30 – 125 kapitel</>)}
+                        {row('/smaragdkista.png',         'Smaragd', <><strong>Smaragdkista:</strong> 150 – 200 kapitel</>)}
+                        {row('/rubinkista.png',           'Rubin',   <><strong>Rubinkista:</strong> 250 – 300 kapitel</>)}
+                        {row('/diamantkista.png',         'Diamant', <><strong>Diamantkista:</strong> 400 – 500 kapitel</>)}
+                        {row('/hemlig-kista-blurrad.png', 'Hemlig',  <><strong>Hemliga kistan:</strong> 750 – 1 000 kapitel 🔒</>)}
                       </tbody>
                     </table>
                   </div>
