@@ -2,22 +2,18 @@
 
 import { useState, useRef, useEffect } from "react";
 
+const SwedishFlag = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 11" width="20" height="14" className="rounded-sm shrink-0">
+    <rect width="16" height="11" fill="#006AA7"/>
+    <rect x="5" width="2" height="11" fill="#FECC02"/>
+    <rect y="4" width="16" height="3" fill="#FECC02"/>
+  </svg>
+);
+
 const APPS = [
-  {
-    label: "Läsjakten",
-    url: "https://lasjakten.vercel.app",
-    icon: "📚",
-  },
-  {
-    label: "Mattejakten",
-    url: "https://mattejakten.vercel.app",
-    icon: "🔢",
-  },
-  {
-    label: "Svenskajakten",
-    url: "https://svenskajakten.vercel.app",
-    icon: "🇸🇪",
-  },
+  { label: "Läsjakten",    url: "https://lasjakten.vercel.app",    icon: <span className="text-base leading-none">📚</span> },
+  { label: "Mattejakten",  url: "https://mattejakten.vercel.app",  icon: <span className="text-base leading-none">🔢</span> },
+  { label: "Svenskajakten",url: "https://svenskajakten.vercel.app",icon: <SwedishFlag /> },
 ];
 
 export default function JakterMenu() {
@@ -38,9 +34,6 @@ export default function JakterMenu() {
     <div ref={ref} className="relative pointer-events-auto">
       {open && (
         <div className="absolute bottom-7 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 overflow-hidden min-w-[190px]">
-          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider px-3 pt-2.5 pb-1">
-            Martins appar
-          </p>
           {APPS.map((app) => (
             <a
               key={app.url}
@@ -50,7 +43,7 @@ export default function JakterMenu() {
               className="flex items-center gap-2.5 px-3 py-2 text-[13px] font-semibold text-gray-800 dark:text-gray-100 hover:bg-blue-50 dark:hover:bg-blue-900/40 transition-colors"
               onClick={() => setOpen(false)}
             >
-              <span className="text-base leading-none">{app.icon}</span>
+              {app.icon}
               {app.label}
               <span className="ml-auto text-gray-400 text-[11px]">↗</span>
             </a>
