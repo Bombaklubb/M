@@ -23,6 +23,7 @@ import {
   openRubyChest,
   openDiamondChest,
   openEmeraldChest,
+  openHemligChest,
   BADGE_HOW_TO_EARN,
 } from "@/lib/gamification";
 import type { BossId } from "@/lib/gamification";
@@ -63,6 +64,7 @@ function ChestCard({ chest, onOpen }: { chest: Chest; onOpen: (id: string) => vo
     ruby:    "rgba(220,38,38,0.6)",
     diamond: "rgba(56,189,248,0.6)",
     emerald: "rgba(16,185,129,0.6)",
+    hemlig:  "rgba(147,51,234,0.7)",
   };
 
   return (
@@ -101,6 +103,14 @@ function ChestCard({ chest, onOpen }: { chest: Chest; onOpen: (id: string) => vo
 // ─── Trophy Shelf ─────────────────────────────────────────────────────────────
 
 const SHELF_CONFIGS: { type: ChestType; label: string; shelfColor: string; itemGlow: string; itemBg: string; badge: string }[] = [
+  {
+    type: "hemlig",
+    label: "Hemliga kistor",
+    shelfColor: "linear-gradient(90deg, #3b0764, #7e22ce 30%, #c084fc 50%, #7e22ce 70%, #3b0764)",
+    itemBg: "linear-gradient(135deg, #3b0764, #4c1d95)",
+    itemGlow: "rgba(192,132,252,0.6)",
+    badge: "#c084fc",
+  },
   {
     type: "emerald",
     label: "Smaragdkistor",
@@ -181,11 +191,11 @@ function TrofHylla({ chests }: { chests: Chest[] }) {
 
       {/* Stats bar */}
       <div className="flex gap-2 mb-4 flex-wrap">
-        {(["emerald", "diamond", "ruby", "gold", "silver", "wood"] as ChestType[]).map((type) => {
+        {(["hemlig", "emerald", "diamond", "ruby", "gold", "silver", "wood"] as ChestType[]).map((type) => {
           const count = totalByType(type);
           if (count === 0) return null;
           const colors: Record<ChestType, string> = {
-            emerald: "#34d399", diamond: "#7dd3fc", ruby: "#fca5a5",
+            hemlig: "#c084fc", emerald: "#34d399", diamond: "#7dd3fc", ruby: "#fca5a5",
             gold: "#fbbf24", silver: "#cbd5e1", wood: "#fdba74",
           };
           return (
@@ -382,7 +392,8 @@ export default function KistorPage() {
     else if (chest.type === "gold")    result = openGoldChest(gam.badges);
     else if (chest.type === "ruby")    result = openRubyChest(gam.badges);
     else if (chest.type === "diamond") result = openDiamondChest(gam.badges);
-    else                               result = openEmeraldChest(gam.badges);
+    else if (chest.type === "emerald") result = openEmeraldChest(gam.badges);
+    else                               result = openHemligChest(gam.badges);
 
     const newChests = gam.chests.map((c) =>
       c.id === chestId ? { ...c, opened: true, openedReward: result.description } : c
@@ -589,6 +600,7 @@ export default function KistorPage() {
                   { type: "ruby"    as ChestType, value: "20 000, 30 000 p",                          bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
                   { type: "diamond" as ChestType, value: "35 000, 50 000 p",                          bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
                   { type: "emerald" as ChestType, value: "75 000 p",                                  bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
+                  { type: "hemlig"  as ChestType, value: "100 000, 150 000 p 🔒",                     bg: "rgba(59,7,100,0.5)",    border: "rgba(192,132,252,0.3)" },
                 ]).map((row) => (
                   <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
@@ -612,6 +624,7 @@ export default function KistorPage() {
                   { type: "ruby"    as ChestType, value: "200 övningar",                     bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
                   { type: "diamond" as ChestType, value: "300 övningar",                     bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
                   { type: "emerald" as ChestType, value: "500 övningar",                     bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
+                  { type: "hemlig"  as ChestType, value: "750, 1 000 övningar 🔒",          bg: "rgba(59,7,100,0.5)",    border: "rgba(192,132,252,0.3)" },
                 ]).map((row) => (
                   <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
