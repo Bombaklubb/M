@@ -112,14 +112,6 @@ const SHELF_CONFIGS: { type: ChestType; label: string; shelfColor: string; itemG
     badge: "#c084fc",
   },
   {
-    type: "emerald",
-    label: "Smaragdkistor",
-    shelfColor: "linear-gradient(90deg, #064e3b, #059669 30%, #34d399 50%, #059669 70%, #064e3b)",
-    itemBg: "linear-gradient(135deg, #064e3b, #065f46)",
-    itemGlow: "rgba(52,211,153,0.5)",
-    badge: "#34d399",
-  },
-  {
     type: "diamond",
     label: "Diamantkistor",
     shelfColor: "linear-gradient(90deg, #0c4a6e, #0284c7 30%, #7dd3fc 50%, #0284c7 70%, #0c4a6e)",
@@ -134,6 +126,14 @@ const SHELF_CONFIGS: { type: ChestType; label: string; shelfColor: string; itemG
     itemBg: "linear-gradient(135deg, #7f1d1d, #991b1b)",
     itemGlow: "rgba(252,165,165,0.5)",
     badge: "#fca5a5",
+  },
+  {
+    type: "emerald",
+    label: "Smaragdkistor",
+    shelfColor: "linear-gradient(90deg, #064e3b, #059669 30%, #34d399 50%, #059669 70%, #064e3b)",
+    itemBg: "linear-gradient(135deg, #064e3b, #065f46)",
+    itemGlow: "rgba(52,211,153,0.5)",
+    badge: "#34d399",
   },
   {
     type: "gold",
@@ -191,12 +191,12 @@ function TrofHylla({ chests }: { chests: Chest[] }) {
 
       {/* Stats bar */}
       <div className="flex gap-2 mb-4 flex-wrap">
-        {(["hemlig", "emerald", "diamond", "ruby", "gold", "silver", "wood"] as ChestType[]).map((type) => {
+        {(["hemlig", "diamond", "ruby", "emerald", "gold", "silver", "wood"] as ChestType[]).map((type) => {
           const count = totalByType(type);
           if (count === 0) return null;
           const colors: Record<ChestType, string> = {
-            hemlig: "#c084fc", emerald: "#34d399", diamond: "#7dd3fc", ruby: "#fca5a5",
-            gold: "#fbbf24", silver: "#cbd5e1", wood: "#fdba74",
+            hemlig: "#c084fc", diamond: "#7dd3fc", ruby: "#fca5a5",
+            emerald: "#34d399", gold: "#fbbf24", silver: "#cbd5e1", wood: "#fdba74",
           };
           return (
             <div
@@ -594,13 +594,13 @@ export default function KistorPage() {
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
-                  { type: "wood"    as ChestType, value: "50, 200 p",                                bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
-                  { type: "silver"  as ChestType, value: "300, 500, 750, 1 500, 2 000 p",            bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
-                  { type: "gold"    as ChestType, value: "1 000, 2 500, 5 000, 10 000, 15 000 p",    bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
-                  { type: "ruby"    as ChestType, value: "20 000, 30 000 p",                          bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
-                  { type: "diamond" as ChestType, value: "35 000, 50 000 p",                          bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
-                  { type: "emerald" as ChestType, value: "75 000 p",                                  bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
-                  { type: "hemlig"  as ChestType, value: "100 000, 150 000 p 🔒",                     bg: "rgba(59,7,100,0.5)",    border: "rgba(192,132,252,0.3)" },
+                  { type: "wood"    as ChestType, value: "10 – 200 p",                               bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
+                  { type: "silver"  as ChestType, value: "300 – 4 000 p",                            bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
+                  { type: "gold"    as ChestType, value: "1 200 – 7 000 p",                          bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
+                  { type: "emerald" as ChestType, value: "8 000 – 12 000 p",                         bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
+                  { type: "ruby"    as ChestType, value: "15 000 – 20 000 p",                        bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
+                  { type: "diamond" as ChestType, value: "25 000 – 40 000 p",                        bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
+                  { type: "hemlig"  as ChestType, value: "60 000 – 100 000 p 🔒",                    bg: "rgba(59,7,100,0.5)",    border: "rgba(192,132,252,0.3)" },
                 ]).map((row) => (
                   <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
@@ -618,13 +618,13 @@ export default function KistorPage() {
               <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
-                  { type: "wood"    as ChestType, value: "1, 5, 10 övningar",               bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
-                  { type: "silver"  as ChestType, value: "15, 20, 40, 50 övningar",         bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
-                  { type: "gold"    as ChestType, value: "30, 60, 75, 100, 150 övningar",   bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
-                  { type: "ruby"    as ChestType, value: "200 övningar",                     bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
-                  { type: "diamond" as ChestType, value: "300 övningar",                     bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
-                  { type: "emerald" as ChestType, value: "500 övningar",                     bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
-                  { type: "hemlig"  as ChestType, value: "750, 1 000 övningar 🔒",          bg: "rgba(59,7,100,0.5)",    border: "rgba(192,132,252,0.3)" },
+                  { type: "wood"    as ChestType, value: "1 – 55 övningar",                  bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
+                  { type: "silver"  as ChestType, value: "12 – 90 övningar",                bg: "rgba(30,41,59,0.6)",    border: "rgba(148,163,184,0.3)" },
+                  { type: "gold"    as ChestType, value: "30 – 125 övningar",               bg: "rgba(120,53,15,0.4)",   border: "rgba(251,191,36,0.3)"  },
+                  { type: "emerald" as ChestType, value: "150 – 200 övningar",              bg: "rgba(6,78,59,0.4)",     border: "rgba(52,211,153,0.3)"  },
+                  { type: "ruby"    as ChestType, value: "250 – 300 övningar",              bg: "rgba(127,29,29,0.4)",   border: "rgba(252,165,165,0.3)" },
+                  { type: "diamond" as ChestType, value: "400 – 500 övningar",              bg: "rgba(12,74,110,0.4)",   border: "rgba(125,211,252,0.3)" },
+                  { type: "hemlig"  as ChestType, value: "750 – 1 000 övningar 🔒",         bg: "rgba(59,7,100,0.5)",    border: "rgba(192,132,252,0.3)" },
                 ]).map((row) => (
                   <div key={row.type} className="flex items-center gap-2.5 p-3 rounded-xl" style={{ background: row.bg, border: `1px solid ${row.border}` }}>
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />

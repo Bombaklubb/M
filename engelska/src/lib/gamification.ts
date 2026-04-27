@@ -13,46 +13,81 @@ export const MYSTERY_BOX_CHANCE = 0.15; // 15% chance after each exercise
 export const MAX_CHESTS_PER_TYPE = 30;  // cap per chest type
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
+  // Bronskista: 10–200
+  { points: 10,    type: "wood" },
   { points: 50,    type: "wood" },
+  { points: 100,   type: "wood" },
   { points: 200,   type: "wood" },
+  // Silverkista: 300–4 000
   { points: 300,   type: "silver" },
   { points: 500,   type: "silver" },
   { points: 750,   type: "silver" },
-  { points: 1000,  type: "gold" },
+  { points: 1000,  type: "silver" },
   { points: 1500,  type: "silver" },
   { points: 2000,  type: "silver" },
+  { points: 3000,  type: "silver" },
+  { points: 4000,  type: "silver" },
+  // Guldkista: 1 200–7 000
+  { points: 1200,  type: "gold" },
   { points: 2500,  type: "gold" },
   { points: 3500,  type: "gold" },
   { points: 5000,  type: "gold" },
   { points: 7000,  type: "gold" },
-  { points: 10000, type: "gold" },
-  { points: 15000, type: "gold" },
+  // Smaragdkista: 8 000–12 000
+  { points: 8000,  type: "emerald" },
+  { points: 10000, type: "emerald" },
+  { points: 12000, type: "emerald" },
+  // Rubinkista: 15 000–20 000
+  { points: 15000, type: "ruby" },
+  { points: 18000, type: "ruby" },
   { points: 20000, type: "ruby" },
-  { points: 30000, type: "ruby" },
+  // Diamantkista: 25 000–40 000
+  { points: 25000, type: "diamond" },
+  { points: 30000, type: "diamond" },
   { points: 35000, type: "diamond" },
-  { points: 50000, type: "diamond" },
-  { points: 75000,  type: "emerald" },
+  { points: 40000, type: "diamond" },
+  // Hemliga kistan: 60 000–100 000
+  { points: 60000,  type: "hemlig" },
+  { points: 80000,  type: "hemlig" },
   { points: 100000, type: "hemlig" },
-  { points: 150000, type: "hemlig" },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
+  // Bronskista: 1–55
   { exercises: 1,   type: "wood" },
   { exercises: 5,   type: "wood" },
   { exercises: 10,  type: "wood" },
-  { exercises: 15,  type: "silver" },
-  { exercises: 20,  type: "silver" },
-  { exercises: 30,  type: "gold" },
+  { exercises: 20,  type: "wood" },
+  { exercises: 35,  type: "wood" },
+  { exercises: 55,  type: "wood" },
+  // Silverkista: 12–90
+  { exercises: 12,  type: "silver" },
+  { exercises: 25,  type: "silver" },
   { exercises: 40,  type: "silver" },
-  { exercises: 50,  type: "silver" },
-  { exercises: 60,  type: "gold" },
-  { exercises: 75,  type: "gold" },
+  { exercises: 60,  type: "silver" },
+  { exercises: 75,  type: "silver" },
+  { exercises: 90,  type: "silver" },
+  // Guldkista: 30–125
+  { exercises: 30,  type: "gold" },
+  { exercises: 50,  type: "gold" },
+  { exercises: 80,  type: "gold" },
   { exercises: 100, type: "gold" },
-  { exercises: 150, type: "gold" },
-  { exercises: 200, type: "ruby" },
-  { exercises: 300, type: "diamond" },
-  { exercises: 500,  type: "emerald" },
+  { exercises: 125, type: "gold" },
+  // Smaragdkista: 150–200
+  { exercises: 150, type: "emerald" },
+  { exercises: 175, type: "emerald" },
+  { exercises: 200, type: "emerald" },
+  // Rubinkista: 250–300
+  { exercises: 250, type: "ruby" },
+  { exercises: 275, type: "ruby" },
+  { exercises: 300, type: "ruby" },
+  // Diamantkista: 400–500
+  { exercises: 400, type: "diamond" },
+  { exercises: 450, type: "diamond" },
+  { exercises: 500, type: "diamond" },
+  // Hemliga kistan: 750–1 000
   { exercises: 750,  type: "hemlig" },
+  { exercises: 875,  type: "hemlig" },
   { exercises: 1000, type: "hemlig" },
 ];
 
