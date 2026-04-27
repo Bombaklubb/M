@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import AnalyticsInit from "@/components/AnalyticsInit";
-import JaktlankarMenu from "@/components/JaktlankarMenu";
 import JakterMenu from "@/components/ui/JakterMenu";
 
 export const metadata: Metadata = {
@@ -48,8 +47,6 @@ export default function RootLayout({
           >
             Kontakt: martin.akdogan@enkoping.se
           </a>
-        </div>
-        <JaktlankarMenu />
           <JakterMenu />
         </div>
       </body>
