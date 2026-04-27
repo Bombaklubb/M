@@ -24,6 +24,8 @@ export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
   { points: 10000, type: 'smaragd' },
   { points: 15000, type: 'diamant' },
   { points: 20000, type: 'diamant' },
+  { points: 30000, type: 'hemlig' },
+  { points: 50000, type: 'hemlig' },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
@@ -41,6 +43,8 @@ export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[]
   { exercises: 75,  type: 'rubin' },
   { exercises: 100, type: 'smaragd' },
   { exercises: 150, type: 'diamant' },
+  { exercises: 200, type: 'hemlig' },
+  { exercises: 300, type: 'hemlig' },
 ];
 
 export const CHEST_META: Record<
@@ -94,6 +98,14 @@ export const CHEST_META: Record<
     openImage: '/oppen-diamant.png',
     gradient: 'from-cyan-300 via-blue-400 to-violet-500',
     description: 'Den ultimata diamantkistan – extremt sällsynt!',
+  },
+  hemlig: {
+    label: 'Hemliga kistan',
+    emoji: '🔒',
+    image: '/hemlig-kista-blurrad.png',
+    openImage: '/hemlig-kista.png',
+    gradient: 'from-purple-900 via-violet-800 to-indigo-900',
+    description: 'Den allra hemligaste kistan – bara för de mest dedikerade!',
   },
 };
 
@@ -332,6 +344,27 @@ export function openDiamantChest(badges: string[]): {
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
     'Bonus: Smaragdkista!',
+  ].filter(Boolean).join(' • ');
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Open a hemlig chest → points 20-120 + badge + guaranteed diamant bonus chest */
+export function openHemligChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: MattChest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 101) + 20;
+  const available = MATH_BADGES.filter(b => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = makeChest('diamant');
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    'Bonus: Diamantkista!',
   ].filter(Boolean).join(' • ');
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
