@@ -262,7 +262,7 @@ export default function WorldPage({ params }: Props) {
         )}
 
         {/* Module grid (grammar / reading / spelling / wordsearch) */}
-        {activeTab !== "regler" && activeTab !== "spel" && (
+        {activeTab !== "regler" && activeTab !== "spel" && activeTab !== "forsokaigen" && (
           !content ? (
             <div className="card text-center py-12 text-gray-400">
               <div className="text-4xl mb-3">📭</div>
