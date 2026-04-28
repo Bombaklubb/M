@@ -49,8 +49,6 @@ export const WORLDS: World[] = [
       'sannolikhet-lag',
       // Nya kapitel
       'halften-dubbelt', 'storleksordna-tal', 'overgang-ental-tiotal', 'fore-och-efter',
-      // Läsa av tabeller
-      'lasa-tabeller-lag',
     ],
     islandEmojis: ['🌿', '🦕', '🥚', '🌋', '🦖', '🪨'],
     storyIntro: 'Hjälp dinosaurierna att lösa matteproblem och rädda dinosaurieäggen!',
@@ -92,8 +90,8 @@ export const WORLDS: World[] = [
       'tallinjen-mel', 'omv-mat-mel', 'omv-vikt-mel', 'position-mel',
       // Rationella tal
       'rationella-brak-mel',
-      // Läsa av tabeller & Binära tal
-      'lasa-tabeller-mellan', 'binara-tal-mellan',
+      // Binära tal
+      'binara-tal-mellan',
     ],
     islandEmojis: ['🧙', '🏰', '🐉', '⚔️', '🪄', '💎'],
     storyIntro: 'Lös magiska gåtor för att befria drakskatten och rädda kungariket!',
@@ -141,8 +139,8 @@ export const WORLDS: World[] = [
       'symmetri-hog',
       // Rationella tal
       'rationella-brak-hog',
-      // Läsa av tabeller & Binära tal
-      'lasa-tabeller-hog', 'binara-tal-hog',
+      // Binära tal
+      'binara-tal-hog',
     ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',
