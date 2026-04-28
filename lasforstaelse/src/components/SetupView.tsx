@@ -211,7 +211,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                 >
-                  Inga texter ännu - kommer snart!
+                  {selectedGrade === 10 ? 'Texter kommer inom kort' : 'Inga texter ännu - kommer snart!'}
                 </motion.div>
               )}
             </AnimatePresence>
