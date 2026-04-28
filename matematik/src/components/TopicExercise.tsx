@@ -210,7 +210,13 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
 
           {/* Question */}
           <h2 className="text-xl font-bold text-white mb-4 leading-snug">
-            {exercise.question}
+            {exercise.question.split('\n').map((line, i) =>
+              line.includes('|') ? (
+                <span key={i} className="block font-mono text-base text-white/90 tracking-tight">{line}</span>
+              ) : (
+                <span key={i} className="block">{line || ' '}</span>
+              )
+            )}
           </h2>
 
           {/* Tänk så här – hint button (only before answering) */}
