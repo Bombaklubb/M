@@ -11,13 +11,15 @@ interface Props {
 type Cell = [number, number];
 type Placement = { word: string; cells: Cell[] };
 
-const GRID_SIZE = 12;
+const MIN_GRID_SIZE = 12;
 const DIRECTIONS: Cell[] = [
   [0, 1], [1, 0], [1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1], [-1, 1],
 ];
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-function buildGrid(wordList: string[]): { grid: string[][]; placements: Placement[] } {
+function buildGrid(wordList: string[]): { grid: string[][]; placements: Placement[]; gridSize: number } {
+  const longestWord = Math.max(...wordList.map((w) => w.length));
+  const GRID_SIZE = Math.max(MIN_GRID_SIZE, longestWord + 2);
   const grid: string[][] = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(""));
   const placements: Placement[] = [];
 
@@ -52,7 +54,7 @@ function buildGrid(wordList: string[]): { grid: string[][]; placements: Placemen
     for (let c = 0; c < GRID_SIZE; c++)
       if (!grid[r][c]) grid[r][c] = LETTERS[Math.floor(Math.random() * LETTERS.length)];
 
-  return { grid, placements };
+  return { grid, placements, gridSize: GRID_SIZE };
 }
 
 function cellKey(r: number, c: number) { return `${r},${c}`; }
@@ -69,7 +71,7 @@ function getLineCells(start: Cell, end: Cell): Cell[] | null {
 }
 
 export default function WordSearch({ words, onComplete }: Props) {
-  const { grid, placements } = useMemo(() => buildGrid(words.map((w) => w.word)), [words]);
+  const { grid, placements, gridSize } = useMemo(() => buildGrid(words.map((w) => w.word)), [words]);
 
   const [foundWords, setFoundWords] = useState<Set<string>>(new Set());
   const [selecting, setSelecting] = useState<Cell | null>(null);
@@ -161,7 +163,7 @@ export default function WordSearch({ words, onComplete }: Props) {
         >
           <div
             className="inline-grid gap-0.5"
-            style={{ gridTemplateColumns: `repeat(${GRID_SIZE}, minmax(0, 1fr))` }}
+            style={{ gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))` }}
           >
             {grid.map((row, r) =>
               row.map((letter, c) => (
