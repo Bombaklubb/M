@@ -36714,5 +36714,251 @@
       "generatedAt": "2026-05-03T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "akgy-demo-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Historia",
+    "title": "Demokratins framväxt och idéhistoriska rötter",
+    "text": "Demokrati som styrelseskick har utvecklats genom en lång och komplex historisk process där idéer, institutioner och maktförhållanden successivt har förändrats. Redan i antikens Aten etablerades en tidig form av direktdemokrati, där fria manliga medborgare deltog i beslut genom folkförsamlingar. Trots sina begränsningar – exempelvis exkluderingen av kvinnor, slavar och utlänningar – lade denna modell grunden för senare diskussioner om folkstyre och politiskt deltagande.\n\nUnder upplysningstiden på 1700-talet vidareutvecklades dessa idéer av tänkare som John Locke och Jean-Jacques Rousseau, som betonade individens rättigheter och folkets suveränitet. Locke argumenterade för att statens legitimitet bygger på ett samhällskontrakt där medborgarna överlåter viss makt i utbyte mot skydd av liv, frihet och egendom. Rousseau å sin sida framhöll den allmänna viljan som grund för politiska beslut, vilket innebar att lagar skulle spegla folkets gemensamma intresse.\n\nDessa idéer fick konkret betydelse i samband med revolutioner som den amerikanska och den franska, där krav på representation och rättigheter ledde till nya konstitutionella system. Gradvis utvecklades representativa demokratier där medborgarna väljer företrädare som fattar beslut å deras vägnar.\n\nUnder 1900-talet breddades demokratibegreppet ytterligare genom införandet av allmän och lika rösträtt i många länder. Detta innebar att tidigare marginaliserade grupper, såsom kvinnor och arbetarklass, fick politiskt inflytande. Samtidigt växte institutioner fram för att skydda minoriteters rättigheter och säkerställa rättsstatens principer.\n\nI dag betraktas demokrati inte enbart som ett system för val utan även som en värdegrund som omfattar yttrandefrihet, rättssäkerhet och maktdelning. Demokratin är dock inte statisk; den påverkas ständigt av sociala, ekonomiska och teknologiska förändringar.\n\nSammanfattningsvis är demokratin resultatet av en historisk utveckling där idéer om frihet, jämlikhet och deltagande har format moderna samhällen. För att förstå dess nuvarande form krävs en analys av både dess historiska rötter och dess samtida utmaningar.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade demokratin i antikens Aten?",
+        "options": [
+          "Allmän rösträtt för alla invånare",
+          "Direkt deltagande av fria män",
+          "Representation genom valda politiker",
+          "Starkt fokus på monarki"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad var centralt i Lockes teori?",
+        "options": [
+          "Den allmänna viljan",
+          "Samhällskontraktet och individens rättigheter",
+          "Kungens absoluta makt",
+          "Religiös styrning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur utvecklades demokratin under 1900-talet?",
+        "options": [
+          "Genom minskat deltagande",
+          "Genom återgång till direktdemokrati",
+          "Genom införandet av allmän rösträtt",
+          "Genom avskaffandet av rättigheter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär representativ demokrati?",
+        "options": [
+          "Att alla röstar i varje beslut",
+          "Att experter styr landet",
+          "Att medborgare väljer företrädare",
+          "Att militären styr"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket huvudbudskap förmedlar texten?",
+        "options": [
+          "Demokrati är statisk",
+          "Demokrati saknar historisk grund",
+          "Demokrati har utvecklats över tid",
+          "Demokrati är irrelevant idag"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken roll har värderingar i modern demokrati?",
+        "options": [
+          "Ingen roll alls",
+          "De är centrala för systemets funktion",
+          "De ersätter lagar helt",
+          "De är endast symboliska"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 663,
+      "fingerprint": "akgy-demo-001",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-demo-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Demokrati i praktiken: institutioner och utmaningar",
+    "text": "Demokrati i praktiken handlar inte enbart om val utan om ett komplext samspel mellan institutioner, lagar och medborgarnas deltagande. För att ett demokratiskt system ska fungera krävs stabila institutioner som säkerställer maktbalans och ansvarstagande. Dessa inkluderar parlament, oberoende domstolar och fria medier.\n\nParlamentet fungerar som den lagstiftande makten och representerar folkets vilja genom valda ledamöter. Regeringen ansvarar för att genomföra politiska beslut, medan domstolarna tolkar lagar och säkerställer att dessa följs. Denna maktdelning är central för att förhindra maktmissbruk.\n\nFria medier spelar en avgörande roll genom att granska makthavare och informera allmänheten. Utan tillgång till korrekt information riskerar medborgarna att fatta beslut på bristfälliga grunder, vilket kan underminera demokratin.\n\nTrots dessa strukturer står moderna demokratier inför flera utmaningar. En av dessa är minskat valdeltagande, särskilt bland unga. Detta kan leda till att vissa grupper blir underrepresenterade, vilket i sin tur påverkar legitimiteten i politiska beslut.\n\nEn annan utmaning är spridningen av desinformation, särskilt via digitala plattformar. När falsk eller vilseledande information sprids kan det påverka opinionen och försvåra en rationell samhällsdebatt.\n\nSamtidigt finns det möjligheter att stärka demokratin genom ökat medborgarengagemang och nya former av deltagande, såsom digitala forum och medborgardialoger.\n\nSammanfattningsvis är demokrati ett dynamiskt system som kräver både institutionell stabilitet och aktivt deltagande. Dess framtid beror på hur väl samhällen hanterar de utmaningar som uppstår i en föränderlig värld.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken funktion har parlamentet?",
+        "options": [
+          "Att döma i rättsfall",
+          "Att representera folkets vilja",
+          "Att styra militären",
+          "Att kontrollera media"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är maktdelning viktig?",
+        "options": [
+          "För att öka centralisering",
+          "För att förhindra maktmissbruk",
+          "För att minska ansvar",
+          "För att begränsa val"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken roll har medier?",
+        "options": [
+          "Att sprida propaganda",
+          "Att kontrollera domstolar",
+          "Att granska makthavare",
+          "Att ersätta parlamentet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är en konsekvens av lågt valdeltagande?",
+        "options": [
+          "Ökad representation",
+          "Underrepresentation av grupper",
+          "Starkare demokrati",
+          "Färre beslut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär desinformation?",
+        "options": [
+          "Korrekt information",
+          "Vilseledande information",
+          "Vetenskaplig fakta",
+          "Neutral rapportering"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudpoäng?",
+        "options": [
+          "Demokrati är enkelt",
+          "Demokrati kräver institutioner och deltagande",
+          "Demokrati fungerar automatiskt",
+          "Demokrati är irrelevant"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 652,
+      "fingerprint": "akgy-demo-002",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-demo-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Demokrati och mångfald i ett globalt perspektiv",
+    "text": "Demokrati i ett globalt perspektiv innebär att förstå hur olika samhällen tolkar och implementerar demokratiska principer utifrån sina historiska, kulturella och sociala förutsättningar. Det finns ingen enhetlig modell för demokrati; istället varierar dess uttryck beroende på kontext.\n\nI vissa länder betonas representativa institutioner och rättsstatens principer, medan andra experimenterar med mer deltagarbaserade modeller där medborgare direkt involveras i beslutsprocesser. Dessa variationer visar att demokrati är ett flexibelt begrepp som kan anpassas till olika behov.\n\nMångfald spelar en central roll i demokratiska samhällen. Detta inkluderar inte bara etnisk och kulturell variation utan även skillnader i kön, ålder, socioekonomisk bakgrund och identitet. Ett demokratiskt system måste kunna hantera dessa skillnader och skapa utrymme för olika perspektiv.\n\nSamtidigt kan mångfald innebära utmaningar. Konflikter mellan olika grupper kan uppstå, särskilt om resurser eller politiskt inflytande upplevs som ojämnt fördelade. Här blir institutioner och dialog avgörande för att hantera motsättningar på ett konstruktivt sätt.\n\nEtt exempel är hur unga aktivister, äldre beslutsfattare och personer med olika könsidentiteter kan ha skilda prioriteringar. Att integrera dessa perspektiv kräver både kompromisser och förståelse.\n\nGlobaliseringen har dessutom förändrat förutsättningarna för demokrati. Internationella organisationer, ekonomiska beroenden och digital kommunikation påverkar nationella beslut och skapar nya former av politiskt deltagande.\n\nSammanfattningsvis är demokrati i dagens värld en komplex och mångfacetterad företeelse. För att fungera effektivt måste den både respektera mångfald och skapa gemensamma ramar för beslutsfattande.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Vad innebär demokrati i ett globalt perspektiv?",
+        "options": [
+          "En enhetlig modell",
+          "Variation beroende på kontext",
+          "Endast västerländsk modell",
+          "Ingen variation alls"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad omfattar mångfald enligt texten?",
+        "options": [
+          "Endast kultur",
+          "Endast ekonomi",
+          "Flera typer av skillnader",
+          "Endast språk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken utmaning kan mångfald innebära?",
+        "options": [
+          "Minskad innovation",
+          "Konflikter mellan grupper",
+          "Färre idéer",
+          "Mindre deltagande"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan konflikter hanteras?",
+        "options": [
+          "Genom att ignorera dem",
+          "Genom institutioner och dialog",
+          "Genom våld",
+          "Genom censur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkar globalisering demokratin?",
+        "options": [
+          "Den eliminerar demokrati",
+          "Den skapar nya deltagandeformer",
+          "Den minskar kommunikation",
+          "Den isolerar länder"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Demokrati är enkel",
+          "Demokrati kräver hantering av mångfald",
+          "Demokrati är statisk",
+          "Demokrati saknar betydelse"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 654,
+      "fingerprint": "akgy-demo-003",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
