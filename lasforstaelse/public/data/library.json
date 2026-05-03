@@ -36222,5 +36222,251 @@
       "generatedAt": "2026-05-03T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "akgy-sol-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Solsystemets bildning och utveckling",
+    "text": "Solsystemet bildades för cirka 4,6 miljarder år sedan ur ett stort moln av gas och stoft som kallas en nebulosa. Genom gravitation började detta moln dra ihop sig och rotera snabbare, vilket ledde till att material samlades i mitten och bildade solen. Runt den nybildade solen skapades en skiva av resterande material där mindre partiklar kolliderade och växte till större kroppar genom en process som kallas ackretion. Med tiden bildades planetesimaler, som sedan utvecklades till planeter.\n\nDe inre delarna av solsystemet var varmare, vilket gjorde att endast tyngre material kunde kondensera. Detta ledde till bildandet av stenplaneter som Merkurius, Venus, jorden och Mars. Längre ut, där temperaturen var lägre, kunde lättare ämnen som gaser och is samlas, vilket resulterade i gasjättar och isjättar som Jupiter, Saturnus, Uranus och Neptunus.\n\nUnder solsystemets tidiga historia skedde många kollisioner mellan himlakroppar. Dessa kollisioner bidrog till att forma planeterna och deras månar. Ett exempel är teorin om månens bildning, där en stor kropp tros ha kolliderat med jorden och skapat material som senare bildade månen.\n\nGravitationen fortsätter att spela en central roll i solsystemets utveckling. Den håller planeterna i sina banor och påverkar även mindre objekt som kometer och asteroider. Samtidigt påverkar solvinden och andra processer hur atmosfärer utvecklas över tid.\n\nStudier av solsystemets bildning ger insikt i hur andra planetsystem kan ha uppstått. Genom att jämföra observationer från olika stjärnor kan forskare förstå vilka processer som är universella och vilka som är unika.\n\nSammanfattningsvis visar solsystemets utveckling hur fysikaliska lagar och långsamma processer kan skapa komplexa strukturer över mycket långa tidsperioder.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kallas det moln som solsystemet bildades ur?",
+        "options": [
+          "En nebulosa",
+          "En galax",
+          "Ett svart hål",
+          "En komet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ackretion?",
+        "options": [
+          "När material samlas och växer till större kroppar",
+          "När planeter exploderar",
+          "När ljus reflekteras",
+          "När gas försvinner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför bildades stenplaneter nära solen?",
+        "options": [
+          "På grund av starka vindar",
+          "På grund av magnetfält",
+          "På grund av hög temperatur",
+          "På grund av låg gravitation"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad tros ha skapat månen?",
+        "options": [
+          "Solens explosion",
+          "En kometkollision",
+          "En gasprocess",
+          "En stor kollision med jorden"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad håller planeterna i sina banor?",
+        "options": [
+          "Gravitation",
+          "Vind",
+          "Ljus",
+          "Tryck"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Solsystemet skapades snabbt",
+          "Solsystemet utvecklades genom naturliga processer",
+          "Planeter bildas slumpmässigt",
+          "Solen styr allt utan påverkan"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 604,
+      "fingerprint": "akgy-sol-001",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-sol-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Solsystemets dynamik och gravitation",
+    "text": "Gravitation är den grundläggande kraft som styr rörelserna i solsystemet. Alla objekt med massa påverkar varandra genom gravitation, men eftersom solen innehåller nästan all massa i systemet är dess påverkan dominerande. Planeterna rör sig i banor runt solen på grund av balansen mellan gravitationens dragkraft och deras egen rörelse framåt.\n\nIsaac Newton formulerade lagen om universell gravitation, som beskriver hur kraften mellan två objekt beror på deras massor och avståndet mellan dem. Denna lag förklarar varför planeter kretsar kring solen och varför månar kretsar kring planeter. Senare utvecklade Albert Einstein teorin om relativitet, som gav en djupare förståelse av gravitation som en krökning av rumtiden.\n\nI solsystemet påverkar gravitationen även mindre objekt. Asteroider kan ändra bana genom nära möten med planeter, och kometer kan kastas in i det inre solsystemet. Gravitationella resonanser, där objekt påverkar varandras banor regelbundet, kan skapa stabila eller instabila mönster.\n\nEtt exempel är Jupiters stora påverkan på asteroidbältet. Dess starka gravitation hindrar material från att bilda en planet och påverkar även kometers banor. På samma sätt påverkar månen jorden genom att skapa tidvatten, vilket har betydelse för jordens klimat och ekosystem.\n\nStudier av gravitation i solsystemet används också inom rymdfart. Genom att utnyttja så kallade gravitationsslungor kan rymdsonder få extra hastighet genom att passera nära planeter.\n\nSammanfattningsvis visar solsystemets dynamik hur gravitationen inte bara håller systemet samman utan också skapar förändring och rörelse över tid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad styr planeternas rörelser?",
+        "options": [
+          "Gravitation",
+          "Ljus",
+          "Vind",
+          "Temperatur"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad beskriver Newtons lag?",
+        "options": [
+          "Ljusets hastighet",
+          "Gravitation mellan objekt",
+          "Temperaturförändringar",
+          "Ljudets spridning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är relativitetsteorin kopplad till?",
+        "options": [
+          "Kemiska reaktioner",
+          "Magnetism",
+          "Rumtidens krökning",
+          "Vattenflöden"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad kan gravitationella resonanser göra?",
+        "options": [
+          "Stoppa planeter",
+          "Skapa ljus",
+          "Minska massa",
+          "Påverka banor regelbundet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Hur påverkar månen jorden?",
+        "options": [
+          "Genom tidvatten",
+          "Genom ljus",
+          "Genom värme",
+          "Genom rotation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Gravitation skapar rörelse och struktur",
+          "Planeter rör sig slumpmässigt",
+          "Solen saknar påverkan",
+          "Rymden är statisk"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 602,
+      "fingerprint": "akgy-sol-002",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-sol-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Solsystemet i ett större perspektiv",
+    "text": "Solsystemet är en del av Vintergatan, en galax som innehåller hundratals miljarder stjärnor. Under lång tid trodde forskare att vårt solsystem var unikt, men upptäckten av exoplaneter har visat att planetsystem är vanliga i universum. Detta har förändrat vår förståelse av hur solsystem uppstår och utvecklas.\n\nGenom att studera andra stjärnsystem kan forskare jämföra olika typer av planeter och banor. Vissa system har så kallade \"heta Jupitrar\", stora gasplaneter som kretsar mycket nära sina stjärnor. Detta skiljer sig från vårt solsystem och visar att planetsystem kan se mycket olika ut.\n\nSolsystemet har dock vissa egenskaper som anses gynnsamma för liv. Jorden befinner sig i den beboeliga zonen, där temperaturen tillåter flytande vatten. Dessutom skyddar jordens magnetfält mot skadlig strålning, och atmosfären bidrar till stabila förhållanden.\n\nForskning om solsystemet hjälper oss också att förstå jordens framtid. Solen kommer så småningom att förändras och bli en röd jätte, vilket kommer att påverka de inre planeterna. Detta visar att solsystem inte är statiska utan utvecklas över tid.\n\nTeknologiska framsteg har gjort det möjligt att observera solsystemet och universum med allt större precision. Rymdteleskop och sonder samlar data som används för att testa teorier och utveckla nya modeller.\n\nSammanfattningsvis placerar studiet av solsystemet oss i ett större kosmiskt sammanhang och hjälper oss att förstå både vår egen existens och universums struktur.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken galax tillhör solsystemet?",
+        "options": [
+          "Vintergatan",
+          "Andromeda",
+          "Orion",
+          "Centaurus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är exoplaneter?",
+        "options": [
+          "Planeter i vårt solsystem",
+          "Planeter runt andra stjärnor",
+          "Månar",
+          "Asteroider"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är en \"het Jupiter\"?",
+        "options": [
+          "En kall planet",
+          "En liten planet",
+          "En gasjätte nära sin stjärna",
+          "En dvärgplanet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad händer med solen i framtiden?",
+        "options": [
+          "Den exploderar direkt",
+          "Den blir kall",
+          "Den försvinner",
+          "Den blir en röd jätte"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gör jorden beboelig?",
+        "options": [
+          "Rätt temperatur och vatten",
+          "Storlek",
+          "Färg",
+          "Avstånd till månen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är huvudbudskapet?",
+        "options": [
+          "Solsystemet är isolerat",
+          "Solsystemet sätts i ett större universellt sammanhang",
+          "Endast jorden är viktig",
+          "Universum är enkelt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 600,
+      "fingerprint": "akgy-sol-003",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
