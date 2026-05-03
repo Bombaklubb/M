@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { getCorrectFeedback } from '../utils/feedback';
 import { useApp } from '../contexts/AppContext';
 import { WORLDS, WorldId } from '../data/worlds';
 import { Quest, getQuestsForWorld } from '../data/quests';
@@ -9,7 +10,13 @@ import { gradeToWorld } from '../data/worlds';
 
 type Phase = 'list' | 'intro' | 'step' | 'result';
 
-const DARK_BG = 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)';
+const DARK_BG_STYLE: React.CSSProperties = {
+  backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed',
+};
 
 export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const { currentStudent, setView, questWorldId } = useApp();
@@ -19,8 +26,11 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const [input, setInput] = useState('');
   const [answered, setAnswered] = useState(false);
   const [correct, setCorrect] = useState(false);
+  const feedbackMsgRef = useRef('');
   const [correctCount, setCorrectCount] = useState(0);
   const [newItem, setNewItem] = useState<string | null>(null);
+  const [ptsEarned, setPtsEarned] = useState(0);
+  const [alreadyDoneQuest, setAlreadyDoneQuest] = useState(false);
 
   if (!currentStudent) return null;
 
@@ -37,6 +47,8 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     setInput('');
     setAnswered(false);
     setNewItem(null);
+    setPtsEarned(0);
+    setAlreadyDoneQuest(false);
   }
 
   function beginSteps() {
@@ -61,7 +73,10 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     }
     setAnswered(true);
     setCorrect(isCorrect);
-    if (isCorrect) setCorrectCount(c => c + 1);
+    if (isCorrect) {
+      feedbackMsgRef.current = getCorrectFeedback();
+      setCorrectCount(c => c + 1);
+    }
   }
 
   function nextStep() {
@@ -73,8 +88,11 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     } else {
       // Quest complete – belöning KRÄVER alla rätt
       const allCorrect = correctCount === selectedQuest.steps.length;
-      const pts = correctCount * 20 + (allCorrect ? 100 : 0);
+      const wasAlreadyDone = questProgress.find(p => p.questId === selectedQuest.id)?.completed === true;
+      const pts = wasAlreadyDone ? 0 : (correctCount * 20 + (allCorrect ? 100 : 0));
       addPoints(currentStudent.id, pts);
+      setPtsEarned(pts);
+      setAlreadyDoneQuest(wasAlreadyDone);
       saveQuestProgress(currentStudent.id, selectedQuest.id, selectedQuest.steps.length, true, correctCount);
       if (allCorrect) {
         const item = COLLECTION_ITEMS.find(c => c.id === selectedQuest.rewardItem);
@@ -89,7 +107,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- LIST ----
   if (phase === 'list') return (
-    <div className="min-h-screen" style={{ background: DARK_BG }}>
+    <div className="min-h-screen" style={DARK_BG_STYLE}>
       <div className={`bg-gradient-to-r ${world.bg} text-white py-6 px-4`}>
         <div className="max-w-lg mx-auto">
           {!hideHeader && (
@@ -155,7 +173,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- INTRO ----
   if (phase === 'intro') return (
-    <div className="min-h-screen flex flex-col" style={{ background: DARK_BG }}>
+    <div className="min-h-screen flex flex-col" style={DARK_BG_STYLE}>
       <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
         <div className="text-8xl mb-5 animate-bounce">{selectedQuest.emoji}</div>
         <h1 className="text-3xl font-black text-white mb-3">{selectedQuest.title}</h1>
@@ -183,7 +201,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
 
   // ---- STEP ----
   if (phase === 'step') return (
-    <div className="min-h-screen" style={{ background: DARK_BG }}>
+    <div className="min-h-screen" style={DARK_BG_STYLE}>
       {/* Header */}
       <div className={`bg-gradient-to-r ${selectedQuest.storyColor} text-white py-4 px-4`}>
         <div className="max-w-lg mx-auto">
@@ -254,7 +272,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
           {answered && (
             <div className={`rounded-2xl p-4 mt-3 ${correct ? 'bg-green-500/20 border border-green-500/40' : 'bg-red-500/20 border border-red-500/40'}`}>
               <p className={`font-black text-lg mb-1 ${correct ? 'text-green-400' : 'text-red-400'}`}>
-                {correct ? `${currentStep.rewardEmoji} Rätt!` : '❌ Inte riktigt...'}
+                {correct ? feedbackMsgRef.current : '❌ Inte riktigt...'}
               </p>
               <p className={`text-sm ${correct ? 'text-green-300' : 'text-red-300'}`}>{currentStep.explanation}</p>
             </div>
@@ -274,7 +292,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   // ---- RESULT ----
   const item = COLLECTION_ITEMS.find(i => i.id === selectedQuest.rewardItem);
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6" style={{ background: DARK_BG }}>
+    <div className="min-h-screen flex flex-col items-center justify-center p-6" style={DARK_BG_STYLE}>
       <div className="w-full max-w-sm text-center">
         <div className="text-8xl mb-4 animate-bounce">{selectedQuest.emoji}</div>
         <h1 className="text-4xl font-black text-white mb-2">Äventyret klart!</h1>
@@ -288,11 +306,19 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
               <p className="text-green-300 text-xs">Rätt svar</p>
             </div>
             <div className="bg-amber-500/20 rounded-xl p-3 border border-amber-500/30">
-              <p className="text-2xl font-black text-amber-400">+{correctCount * 20 + 50}</p>
+              <p className="text-2xl font-black text-amber-400">+{ptsEarned}</p>
               <p className="text-amber-300 text-xs">Poäng</p>
             </div>
           </div>
         </div>
+
+        {/* Already completed notice */}
+        {alreadyDoneQuest && (
+          <div className="bg-blue-500/15 border border-blue-400/40 rounded-2xl p-4 mb-5 text-center">
+            <p className="text-blue-300 font-bold text-sm">✅ Du har redan klarat detta äventyr</p>
+            <p className="text-blue-400/80 text-xs mt-1">Inga nya poäng den här gången – men bra att du övar!</p>
+          </div>
+        )}
 
         {/* Reward */}
         {newItem && item ? (

@@ -3,7 +3,7 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { ACHIEVEMENTS, RARITY_LABELS, RARITY_COLORS } from '../data/achievements';
 import { COLLECTION_ITEMS, RARITY_COLORS as COL_COLORS, RARITY_LABELS as COL_LABELS } from '../data/collection';
-import { getAchievements } from '../utils/storage';
+import { getAchievements, getAppMinutes } from '../utils/storage';
 import { getCollection } from '../utils/questStorage';
 import { WORLDS } from '../data/worlds';
 
@@ -68,6 +68,14 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
   const totalPossible = ACHIEVEMENTS.length + COLLECTION_ITEMS.length;
   const pct = (totalUnlocked / totalPossible) * 100;
 
+  const storedMins = getAppMinutes(currentStudent.id);
+  const sessionStart = sessionStorage.getItem('math_session_start');
+  const sessionMins = sessionStart ? Math.floor((Date.now() - parseInt(sessionStart)) / 60000) : 0;
+  const totalMins = storedMins + sessionMins;
+  const timeLabel = totalMins >= 60
+    ? `${Math.floor(totalMins / 60)} t ${totalMins % 60} min`
+    : `${totalMins} min`;
+
   const byRarity = ['common', 'rare', 'epic', 'legendary'] as const;
 
   return (
@@ -104,6 +112,20 @@ export default function Achievements({ hideHeader }: { hideHeader?: boolean }) {
 
         {/* ── MÄRKEN / ACHIEVEMENTS ──────────────────────────────────────── */}
         <section>
+          {/* Min tid i appen */}
+          <div className="mb-4 rounded-2xl px-4 py-3 flex items-center gap-3"
+            style={{
+              background: 'rgba(255,237,213,0.80)',
+              border: '1.5px solid rgba(251,146,60,0.50)',
+              boxShadow: '0 2px 10px rgba(251,146,60,0.15)',
+            }}>
+            <span className="text-2xl">⏱</span>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: '#ea580c' }}>Min tid i appen</p>
+              <p className="text-xl font-black" style={{ color: '#7c2d12' }}>{timeLabel}</p>
+            </div>
+          </div>
+
           <h2 className="text-base font-black text-gray-700 mb-5 flex items-center gap-2">
             🎖️ Märken
             <span className="text-sm font-normal text-gray-400">({earned.length}/{ACHIEVEMENTS.length})</span>
@@ -257,12 +279,15 @@ function AchievementHint({ ach, stats }: {
   const RIMLIGHET_IDS = ['rimlighetsoevningar-lag','rimlighetsoevningar-mel','rimlighetsoevningar-hog','rimlighetsoevningar-gym'];
   const rimlighetDone = RIMLIGHET_IDS.filter(id => stats.progress.some(p => p.topicId === id && p.completed)).length;
   const perfectCount = stats.progress.filter(p => p.bestScore === 100).length;
+  const starsCount = stats.progress.filter(p => p.stars === 3).length;
+  const accuracy = stats.totalAnswered > 0 ? stats.totalCorrect / stats.totalAnswered : 0;
 
   const hints: Record<string, string> = {
     'first-exercise':       `${stats.totalAnswered}/1 svar`,
     'ten-correct':          `${stats.totalCorrect}/10 rätt`,
+    'fifty-correct':        `${stats.totalCorrect}/50 rätt`,
     'hundred-correct':      `${stats.totalCorrect}/100 rätt`,
-    'thousand-correct':     `${stats.totalCorrect}/1000 rätt`,
+    'thousand-correct':     `${stats.totalCorrect}/1 000 rätt`,
     'first-topic':          `${stats.completedTopics}/1 ämne`,
     'three-topics':         `${stats.completedTopics}/3 ämnen`,
     'five-topics':          `${stats.completedTopics}/5 ämnen`,
@@ -274,6 +299,16 @@ function AchievementHint({ ach, stats }: {
     'level-5':              `Nivå ${stats.points.level}/5`,
     'level-8':              `Nivå ${stats.points.level}/8`,
     'level-max':            `Nivå ${stats.points.level}/10`,
+    'perfect-topic':        `${perfectCount}/1 perfekt ämne (100%)`,
+    'three-stars':          `${starsCount}/1 ämne med 3 stjärnor`,
+    'five-stars':           `${starsCount}/5 ämnen med 3 stjärnor`,
+    'ten-stars':            `${starsCount}/10 ämnen med 3 stjärnor`,
+    'accuracy-90':          stats.totalAnswered >= 50
+                              ? `${Math.round(accuracy * 100)}% rätt (mål: 90%)`
+                              : `${stats.totalAnswered}/50 svar krävs`,
+    'points-500':           `${stats.points.total}/500 poäng`,
+    'points-2000':          `${stats.points.total}/2 000 poäng`,
+    'points-5000':          `${stats.points.total}/5 000 poäng`,
     'rimlighetsprövaren':   `${rimlighetDone}/1 rimlighetsövning`,
     'veckostjärna':         `${stats.points.weeklyPoints}/100 veckopoäng`,
     'logikdetektiven':      `${rimlighetDone}/2 rimlighetsövningar`,

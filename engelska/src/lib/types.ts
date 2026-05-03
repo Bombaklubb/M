@@ -179,7 +179,7 @@ export interface StudentData {
 
 // ─── Gamification ─────────────────────────────────────────────────────────────
 
-export type ChestType = "wood" | "silver" | "gold" | "ruby" | "diamond" | "emerald";
+export type ChestType = "wood" | "silver" | "gold" | "ruby" | "diamond" | "emerald" | "hemlig";
 
 export interface Chest {
   id: string;
@@ -206,6 +206,7 @@ export interface GamificationData {
   bossUnlocked: boolean;
   bossLastAttempt?: string;
   bossWins: number;
+  bossesBeaten?: string[]; // boss ids that have been beaten at least once
   pointsMilestonesRewarded: number[]; // total-point thresholds already rewarded
   exerciseMilestonesRewarded: number[]; // exercise-count thresholds already rewarded
 }

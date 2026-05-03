@@ -144,7 +144,7 @@ export default function HomePage() {
                 {/* Avatar selection */}
                 <div>
                   <p className="text-sm font-bold mb-2.5" style={{ color: "#1e40af" }}>Välj din karaktär</p>
-                  <div className="grid grid-cols-6 gap-2">
+                  <div className="grid grid-cols-8 gap-2">
                     {AVATARS.map((avatar) => (
                       <button
                         key={avatar.id}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Streak-mästare">
+  <defs>
+    <radialGradient id="fbg" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fcd34d"></stop>
+      <stop offset="50%" stop-color="#f97316"></stop>
+      <stop offset="100%" stop-color="#dc2626"></stop>
+    </radialGradient>
+  </defs>
+  
+  <circle cx="40" cy="40" r="34" fill="url(#fbg)" stroke="#b91c1c" stroke-width="1.5"></circle>
+  
+  <circle cx="40" cy="35" r="24" fill="#fef3c7" opacity="0.2"></circle>
+  
+  <path d="M40,15 Q48,20 50,30 Q55,22 52,30 Q60,28 56,40 Q62,36 58,46 Q60,55 40,65 Q20,55 22,46 Q18,36 24,40 Q20,28 28,30 Q25,22 30,30 Q32,20 40,15Z" fill="#fbbf24" opacity="0.9"></path>
+  
+  <path d="M40,25 Q44,30 45,38 Q48,32 46,38 Q50,38 47,45 Q40,52 33,45 Q30,38 34,38 Q32,32 35,38 Q36,30 40,25Z" fill="#fef3c7" opacity="0.8"></path>
+  
+  <text x="40" y="50" text-anchor="middle" font-size="20" font-weight="black" fill="#dc2626" font-family="sans-serif" opacity="0.9">7</text>
+  
+  <circle cx="25" cy="25" r="2" fill="#fbbf24" opacity="0.6"></circle>
+  <circle cx="55" cy="22" r="2.5" fill="#fbbf24" opacity="0.5"></circle>
+  <circle cx="18" cy="45" r="1.5" fill="#fbbf24" opacity="0.5"></circle>
+  <circle cx="62" cy="48" r="1.5" fill="#fbbf24" opacity="0.5"></circle>
+</svg>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
 import {
   Student, AppView, Topic, MattChest, MysteryBoxReward,
 
@@ -7,13 +7,14 @@ import {
   getCurrentStudent, setCurrentStudent, getProgress,
   getPoints, initPoints, getAchievements, addPoints,
   grantAchievement, saveTopicProgress, calcStars,
-  recordTopicSession, saveStudent,
+  recordTopicSession, saveStudent, addAppMinutes,
 } from '../utils/storage';
+import { trackVisit, trackSessionEnd, trackHeartbeat } from '../utils/analytics';
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
   chestsEarnedFromTopicEvent,
-  rollMysteryBox, BOSS_UNLOCK_THRESHOLD,
+  rollMysteryBox, BOSS_UNLOCK_THRESHOLD, MAX_CHESTS_PER_TYPE,
 } from '../utils/chestStorage';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { TOPICS } from '../data/topics';
@@ -35,7 +36,8 @@ interface AppContextValue {
   sluttestWorldId: WorldId | null;
   questWorldId: WorldId | null;
   gameWorldId: WorldId | null;
-  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null;
+  errorBankWorldId: WorldId | null;
+  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null;
   clearPendingChestResult: () => void;
   login: (student: Student) => void;
   logout: () => void;
@@ -45,8 +47,9 @@ interface AppContextValue {
   startSluttest: (worldId: WorldId) => void;
   startQuest: (worldId: WorldId) => void;
   startGames: (worldId: WorldId) => void;
+  startErrorBank: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
-  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null };
+  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number };
   updateAvatar: (avatarIndex: number) => void;
 }
 
@@ -60,20 +63,58 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [sluttestWorldId, setSluttestWorldId] = useState<WorldId | null>(null);
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
-  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null } | null>(null);
+  const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
+  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null>(null);
+
+  const sessionStartRef = useRef<number | null>(null);
 
   const login = useCallback((student: Student) => {
     setCurrentStudent(student);
     setCurrentStudentState(student);
     initPoints(student.id);
+    const now = Date.now();
+    sessionStorage.setItem('math_session_start', now.toString());
+    sessionStartRef.current = now;
+    trackVisit();
     setCurrentView('dashboard');
   }, []);
 
   const logout = useCallback(() => {
+    const start = sessionStorage.getItem('math_session_start');
+    if (start && currentStudent) {
+      const elapsed = Date.now() - parseInt(start);
+      const mins = Math.floor(elapsed / 60000);
+      addAppMinutes(currentStudent.id, mins);
+      trackSessionEnd(Math.floor(elapsed / 1000));
+    }
+    sessionStorage.removeItem('math_session_start');
+    sessionStartRef.current = null;
     setCurrentStudent(null);
     setCurrentStudentState(null);
     setCurrentView('login');
     setIsTeacherState(false);
+  }, [currentStudent]);
+
+  // Heartbeat + besöksregistrering – skicka vid varje session (även återupptagen)
+  useEffect(() => {
+    if (!currentStudent) return;
+    trackVisit();     // registrera enheten för idag (HyperLogLog är idempotent)
+    trackHeartbeat();
+    const interval = setInterval(trackHeartbeat, 2 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, [currentStudent]);
+
+  // Track session end on page close
+  useEffect(() => {
+    const handleUnload = () => {
+      const start = sessionStorage.getItem('math_session_start');
+      if (start) {
+        const elapsed = Math.floor((Date.now() - parseInt(start)) / 1000);
+        trackSessionEnd(elapsed);
+      }
+    };
+    window.addEventListener('beforeunload', handleUnload);
+    return () => window.removeEventListener('beforeunload', handleUnload);
   }, []);
 
   const setView = useCallback((view: ExtendedView) => setCurrentView(view), []);
@@ -103,6 +144,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('games');
   }, []);
 
+  const startErrorBank = useCallback((worldId: WorldId) => {
+    setErrorBankWorldId(worldId);
+    setCurrentView('error-bank');
+  }, []);
+
   const getStudentStats = useCallback((student: Student) => {
     const progress = getProgress(student.id);
     const points = getPoints(student.id) ?? initPoints(student.id);
@@ -128,10 +174,17 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent]);
 
   const submitTopicResult = useCallback((topicId: string, correct: number, total: number, timeSpent: number) => {
-    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null };
+    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null, wasAlreadyCompleted: false, attemptNumber: 1 };
     const score = total > 0 ? Math.round((correct / total) * 100) : 0;
     const stars = calcStars(score);
-    const basePoints = correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
+    const prevProgress = getProgress(currentStudent.id).find(p => p.topicId === topicId);
+    const prevAttempts = prevProgress?.totalAttempts ?? 0;
+    const attemptNumber = prevAttempts + 1;
+    const wasAlreadyCompleted = prevProgress?.completed === true;
+    // Glidande poängsänkning: 100% → 50% → 25% → 10% → 0% per upprepning
+    const repeatMultiplier = prevAttempts === 0 ? 1 : prevAttempts === 1 ? 0.5 : prevAttempts === 2 ? 0.25 : prevAttempts === 3 ? 0.1 : 0;
+    const fullPoints = correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
+    const basePoints = Math.round(fullPoints * repeatMultiplier);
     saveTopicProgress(currentStudent.id, { topicId, completed: score >= 50, bestScore: score, totalAttempts: 1, correctAnswers: correct, totalQuestions: total, lastAttempt: new Date().toISOString(), stars, timeSpent });
     recordTopicSession(currentStudent.id, topicId, correct, total);
 
@@ -154,7 +207,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     // Chest gamification
     const gam = loadGamification(currentStudent.id);
     const prevExercises = gam.exercisesCompleted;
-    const newExercises = prevExercises + 1;
+    // Räkna bara upp exercisesCompleted när ett ämne klaras för första gången
+    const newExercises = (!wasAlreadyCompleted && score >= 50) ? prevExercises + 1 : prevExercises;
 
     const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded);
     const exerciseChests = chestsEarnedFromExercises(prevExercises, newExercises, gam.exerciseMilestonesRewarded);
@@ -175,11 +229,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       gam,
     });
 
-    const allNewChests = [
+    const allNewChestsRaw = [
       ...pointChests,
       ...exerciseChests,
       ...topicEventResult.chests.map(c => ({ chest: c })),
     ];
+
+    // Cap at MAX_CHESTS_PER_TYPE per valör
+    const chestCountByType: Record<string, number> = {};
+    for (const c of gam.chests) {
+      chestCountByType[c.type] = (chestCountByType[c.type] ?? 0) + 1;
+    }
+    const allNewChests = allNewChestsRaw.filter(item => {
+      const t = item.chest.type;
+      const count = chestCountByType[t] ?? 0;
+      if (count >= MAX_CHESTS_PER_TYPE) return false;
+      chestCountByType[t] = count + 1;
+      return true;
+    });
 
     const mysteryReward = rollMysteryBox(gam.badges, prevExercises);
     let updatedBadges = [...gam.badges];
@@ -189,12 +256,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       if (mysteryReward.type === 'badge' && mysteryReward.badgeId && !updatedBadges.includes(mysteryReward.badgeId)) {
         updatedBadges.push(mysteryReward.badgeId);
       } else if (mysteryReward.type === 'chest' && mysteryReward.chestType) {
-        mysteryChest = {
-          id: `chest_${Date.now()}_mystery`,
-          type: mysteryReward.chestType,
-          earnedAt: new Date().toISOString(),
-          opened: false,
-        };
+        const t = mysteryReward.chestType;
+        if ((chestCountByType[t] ?? 0) < MAX_CHESTS_PER_TYPE) {
+          mysteryChest = {
+            id: `chest_${Date.now()}_mystery`,
+            type: t,
+            earnedAt: new Date().toISOString(),
+            opened: false,
+          };
+        }
       } else if (mysteryReward.type === 'points' && mysteryReward.points) {
         addPoints(currentStudent.id, mysteryReward.points);
       }
@@ -228,6 +298,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const chestResult = {
       newChests: allNewChests.map(c => c.chest),
       mysteryReward,
+      wasAlreadyCompleted,
+      attemptNumber,
     };
     setPendingChestResult(chestResult);
 
@@ -239,7 +311,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, errorBankWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, startErrorBank, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { BuildSentenceExercise } from "@/lib/types";
+import { getPositiveFeedback } from "@/lib/feedback";
 
 function shuffle(arr: number[]): number[] {
   const a = [...arr];
@@ -14,7 +15,7 @@ function shuffle(arr: number[]): number[] {
 
 interface Props {
   exercise: BuildSentenceExercise;
-  onAnswer: (correct: boolean) => void;
+  onAnswer: (correct: boolean, userAnswer: string, correctAnswer: string) => void;
   isLast?: boolean;
 }
 
@@ -22,6 +23,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
   const [placed, setPlaced] = useState<number[]>([]);
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
   const [showHint, setShowHint] = useState(false);
+  const [feedbackMsg, setFeedbackMsg] = useState("");
   // Shuffled display order – stable for the lifetime of this exercise instance
   const [shuffledOrder] = useState<number[]>(() =>
     shuffle(exercise.words.map((_, i) => i))
@@ -45,6 +47,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
     const correct =
       placed.length === exercise.correctOrder.length &&
       placed.every((wordIdx, pos) => wordIdx === exercise.correctOrder[pos]);
+    if (correct) setFeedbackMsg(getPositiveFeedback());
     setState(correct ? "correct" : "wrong");
   }
 
@@ -158,7 +161,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
         >
           <p className="font-semibold">
             {state === "correct"
-              ? "✓ Perfekt!"
+              ? `✓ ${feedbackMsg}`
               : `✗ Inte riktigt. Rätt: "${correctSentence}"`}
           </p>
           {exercise.explanation && (
@@ -170,7 +173,11 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
       {state !== "idle" && (
         <div className="flex justify-end pt-2">
           <button
-            onClick={() => onAnswer(state === "correct")}
+            onClick={() => onAnswer(
+              state === "correct",
+              placed.map((i) => exercise.words[i]).join(" "),
+              correctSentence
+            )}
             className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}

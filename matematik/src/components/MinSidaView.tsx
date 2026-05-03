@@ -30,7 +30,13 @@ export default function MinSidaView() {
   const senastAktiv = points.lastActiveDate || new Date().toISOString().split('T')[0];
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(160deg,#0f2027,#203a43,#2c5364)' }}>
+    <div className="min-h-screen" style={{
+      backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+    }}>
       <AppHeader />
 
       {/* Stars */}

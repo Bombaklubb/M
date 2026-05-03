@@ -195,7 +195,7 @@ export interface StudentMessage {
 }
 
 // === CHESTS / GAMIFICATION ===
-export type ChestType = 'wood' | 'silver' | 'gold' | 'rubin' | 'smaragd' | 'diamant';
+export type ChestType = 'wood' | 'silver' | 'gold' | 'rubin' | 'smaragd' | 'diamant' | 'hemlig';
 
 export interface MattChest {
   id: string;

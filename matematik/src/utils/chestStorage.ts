@@ -5,42 +5,53 @@ import type { ChestType, MattChest, MattGamificationData, MysteryBoxReward } fro
 export const BOSS_UNLOCK_THRESHOLD = 5; // övningar för att låsa upp boss
 export const MYSTERY_BOX_CHANCE_EARLY = 0.25; // 25% chans under de 5 första topics
 export const MYSTERY_BOX_CHANCE = 0.15;       // 15% chans därefter
+export const MAX_CHESTS_PER_TYPE = 30;        // max antal kistor per valör
 
 export const POINT_CHEST_MILESTONES: { points: number; type: ChestType }[] = [
-  { points: 50,    type: 'wood' },
-  { points: 100,   type: 'wood' },
-  { points: 200,   type: 'wood' },
-  { points: 300,   type: 'silver' },
-  { points: 500,   type: 'silver' },
-  { points: 600,   type: 'wood' },
-  { points: 750,   type: 'silver' },
-  { points: 1000,  type: 'gold' },
-  { points: 1500,  type: 'silver' },
-  { points: 2000,  type: 'silver' },
-  { points: 2500,  type: 'gold' },
-  { points: 3500,  type: 'rubin' },
-  { points: 5000,  type: 'rubin' },
-  { points: 7000,  type: 'smaragd' },
-  { points: 10000, type: 'smaragd' },
-  { points: 15000, type: 'diamant' },
-  { points: 20000, type: 'diamant' },
+  { points: 10,     type: 'wood' },
+  { points: 50,     type: 'wood' },
+  { points: 100,    type: 'wood' },
+  { points: 200,    type: 'wood' },
+  { points: 300,    type: 'silver' },
+  { points: 1000,   type: 'gold' },
+  { points: 2000,   type: 'silver' },
+  { points: 4000,   type: 'silver' },
+  { points: 5000,   type: 'gold' },
+  { points: 7000,   type: 'gold' },
+  { points: 8000,   type: 'smaragd' },
+  { points: 10000,  type: 'smaragd' },
+  { points: 12000,  type: 'smaragd' },
+  { points: 15000,  type: 'rubin' },
+  { points: 20000,  type: 'rubin' },
+  { points: 25000,  type: 'diamant' },
+  { points: 35000,  type: 'diamant' },
+  { points: 40000,  type: 'diamant' },
+  { points: 60000,  type: 'hemlig' },
+  { points: 100000, type: 'hemlig' },
 ];
 
 export const EXERCISE_CHEST_MILESTONES: { exercises: number; type: ChestType }[] = [
-  { exercises: 1,   type: 'wood' },
-  { exercises: 2,   type: 'wood' },
-  { exercises: 3,   type: 'wood' },
-  { exercises: 5,   type: 'wood' },
-  { exercises: 10,  type: 'wood' },
-  { exercises: 15,  type: 'silver' },
-  { exercises: 20,  type: 'silver' },
-  { exercises: 30,  type: 'gold' },
-  { exercises: 40,  type: 'silver' },
-  { exercises: 50,  type: 'silver' },
-  { exercises: 60,  type: 'gold' },
-  { exercises: 75,  type: 'rubin' },
-  { exercises: 100, type: 'smaragd' },
-  { exercises: 150, type: 'diamant' },
+  { exercises: 1,    type: 'wood' },
+  { exercises: 5,    type: 'wood' },
+  { exercises: 10,   type: 'wood' },
+  { exercises: 12,   type: 'silver' },
+  { exercises: 30,   type: 'gold' },
+  { exercises: 55,   type: 'wood' },
+  { exercises: 60,   type: 'silver' },
+  { exercises: 80,   type: 'gold' },
+  { exercises: 90,   type: 'silver' },
+  { exercises: 100,  type: 'gold' },
+  { exercises: 125,  type: 'gold' },
+  { exercises: 150,  type: 'smaragd' },
+  { exercises: 175,  type: 'smaragd' },
+  { exercises: 200,  type: 'smaragd' },
+  { exercises: 250,  type: 'rubin' },
+  { exercises: 300,  type: 'rubin' },
+  { exercises: 400,  type: 'diamant' },
+  { exercises: 450,  type: 'diamant' },
+  { exercises: 500,  type: 'diamant' },
+  { exercises: 750,  type: 'hemlig' },
+  { exercises: 1000, type: 'hemlig' },
 ];
 
 export const CHEST_META: Record<
@@ -94,6 +105,14 @@ export const CHEST_META: Record<
     openImage: '/oppen-diamant.png',
     gradient: 'from-cyan-300 via-blue-400 to-violet-500',
     description: 'Den ultimata diamantkistan – extremt sällsynt!',
+  },
+  hemlig: {
+    label: 'Hemliga kistan',
+    emoji: '🔒',
+    image: '/hemlig-kista-blurrad.png',
+    openImage: '/hemlig-kista.png',
+    gradient: 'from-purple-900 via-violet-800 to-indigo-900',
+    description: 'Den allra hemligaste kistan – bara för de mest dedikerade!',
   },
 };
 
@@ -223,20 +242,20 @@ export function rollMysteryBox(badges: string[], exercisesCompleted = 99): Myste
   }
 }
 
-/** Open a wood chest → points 50-100 */
+/** Open a wood chest → points 20-120 */
 export function openWoodChest(): { points: number; description: string } {
-  const pts = Math.floor(Math.random() * 51) + 50;
+  const pts = Math.floor(Math.random() * 101) + 20;
   return { points: pts, description: `+${pts} poäng` };
 }
 
-/** Open a silver chest → points 100-200 + possible badge + possible bonus wood chest */
+/** Open a silver chest → points 20-120 + possible badge + possible bonus wood chest */
 export function openSilverChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 100;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(
     b => b.id !== 'math_hero' && !badges.includes(b.id)
   );
@@ -252,14 +271,14 @@ export function openSilverChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a gold chest → points 200-500 + badge + possible silver chest */
+/** Open a gold chest → points 20-120 + badge + possible silver chest */
 export function openGoldChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 301) + 200;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -273,14 +292,14 @@ export function openGoldChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a rubin chest → points 400-700 + badge + possible bonus gold chest */
+/** Open a rubin chest → points 20-120 + badge + possible bonus gold chest */
 export function openRubinChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 301) + 400;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -294,14 +313,14 @@ export function openRubinChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a smaragd chest → points 700-1200 + badge + possible bonus rubin chest */
+/** Open a smaragd chest → points 20-120 + badge + possible bonus rubin chest */
 export function openSmaragdChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 501) + 700;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -315,14 +334,14 @@ export function openSmaragdChest(badges: string[]): {
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
-/** Open a diamant chest → points 1200-2000 + badge + guaranteed bonus gold chest */
+/** Open a diamant chest → points 20-120 + badge + guaranteed bonus gold chest */
 export function openDiamantChest(badges: string[]): {
   points: number;
   badge?: string;
   bonusChest?: MattChest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 801) + 1200;
+  const pts = Math.floor(Math.random() * 101) + 20;
   const available = MATH_BADGES.filter(b => !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
@@ -332,6 +351,27 @@ export function openDiamantChest(badges: string[]): {
     `+${pts} poäng`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
     'Bonus: Smaragdkista!',
+  ].filter(Boolean).join(' • ');
+  return { points: pts, badge: badge?.id, bonusChest, description: desc };
+}
+
+/** Open a hemlig chest → points 20-120 + badge + guaranteed diamant bonus chest */
+export function openHemligChest(badges: string[]): {
+  points: number;
+  badge?: string;
+  bonusChest?: MattChest;
+  description: string;
+} {
+  const pts = Math.floor(Math.random() * 101) + 20;
+  const available = MATH_BADGES.filter(b => !badges.includes(b.id));
+  const badge = available.length > 0
+    ? available[Math.floor(Math.random() * available.length)]
+    : null;
+  const bonusChest = makeChest('diamant');
+  const desc = [
+    `+${pts} poäng`,
+    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    'Bonus: Diamantkista!',
   ].filter(Boolean).join(' • ');
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }

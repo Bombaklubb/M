@@ -421,6 +421,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
             <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Smaragdkista" className="w-6 h-6 object-contain" /><span><strong>Smaragdkista:</strong> 8 000 – 12 000 poäng</span></li>
             <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Rubinkista" className="w-6 h-6 object-contain" /><span><strong>Rubinkista:</strong> 15 000 – 20 000 poäng</span></li>
             <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamantkista" className="w-6 h-6 object-contain" /><span><strong>Diamantkista:</strong> 25 000 – 40 000 poäng</span></li>
+            <li className="flex items-center gap-2"><img src="/content/hemligakista-blurrad.png" alt="Hemliga kistan" className="w-6 h-6 object-contain" /><span><strong>Hemliga kistan:</strong> 60 000 – 100 000 poäng 🔒</span></li>
           </ul>
           <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Läsmilstolpar</p>
           <ul className="space-y-1.5 text-sm text-sky-900 dark:text-sky-100 mb-4">
@@ -430,6 +431,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
             <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Smaragdkista" className="w-6 h-6 object-contain" /><span><strong>Smaragdkista:</strong> 150 – 200 texter</span></li>
             <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Rubinkista" className="w-6 h-6 object-contain" /><span><strong>Rubinkista:</strong> 250 – 300 texter</span></li>
             <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamantkista" className="w-6 h-6 object-contain" /><span><strong>Diamantkista:</strong> 400 – 500 texter</span></li>
+            <li className="flex items-center gap-2"><img src="/content/hemligakista-blurrad.png" alt="Hemliga kistan" className="w-6 h-6 object-contain" /><span><strong>Hemliga kistan:</strong> 750 – 1 000 texter 🔒</span></li>
           </ul>
           <div className="flex items-start gap-2 text-sm text-sky-900 dark:text-sky-100 pt-2 border-t border-sky-200 dark:border-slate-700">
             <span>🎁</span>

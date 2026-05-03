@@ -376,7 +376,7 @@ export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
 
 // ─── Gamification / Kistor ─────────────────────────────────────────────────────
 
-export type ChestType = 'bronze' | 'silver' | 'gold' | 'emerald' | 'ruby' | 'diamond';
+export type ChestType = 'bronze' | 'silver' | 'gold' | 'emerald' | 'ruby' | 'diamond' | 'secret';
 
 export interface Chest {
   id: string;

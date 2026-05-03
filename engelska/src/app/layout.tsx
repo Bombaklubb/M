@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import AnalyticsInit from "@/components/AnalyticsInit";
+import JakterMenu from "@/components/ui/JakterMenu";
 
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
@@ -34,18 +36,18 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <body className="min-h-screen">
+        <AnalyticsInit />
         {children}
-        {/* Kontakt – vänster nedre hörn */}
-        <div className="fixed bottom-2 left-3 z-40 pointer-events-none select-none">
-          <span className="text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity pointer-events-auto">
+        {/* Credits strip – full-width frosted bar at the bottom */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between px-3.5 py-1.5 select-none pointer-events-none"
+          style={{ background: "rgba(0,0,0,0.05)", backdropFilter: "blur(4px)" }}>
+          <a
+            href="mailto:martin.akdogan@enkoping.se"
+            className="text-[11px] font-bold text-white/80 dark:text-white/70 pointer-events-auto hover:text-white transition-colors"
+          >
             Kontakt: martin.akdogan@enkoping.se
-          </span>
-        </div>
-        {/* Signatur – höger nedre hörn */}
-        <div className="fixed bottom-2 right-3 z-40 pointer-events-none select-none">
-          <span className="text-xs text-slate-400 dark:text-slate-600 opacity-60 hover:opacity-100 transition-opacity">
-            Engelskajakten av Martin Akdogan
-          </span>
+          </a>
+          <JakterMenu />
         </div>
       </body>
     </html>

@@ -3947,6 +3947,802 @@
       ]
     },
     {
+      "id": "mel-g-frageord",
+      "title": "Frågeord",
+      "description": "Fördjupa dig i frågeord: how many, how much, which, whose och mer.",
+      "icon": "❓",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🔑 Grundfrågeorden: Who (Vem) · What (Vad) · Where (Var) · When (När) · Why (Varför) · How (Hur)",
+        "HOW MANY – frågar om antal av räkningsbara saker. 'How many books?' = Hur många böcker?",
+        "HOW MUCH – frågar om mängd av icke räkningsbara saker eller pris. 'How much water?' / 'How much does it cost?'",
+        "WHICH – frågar om val mellan ett begränsat antal alternativ. 'Which colour do you prefer?' = Vilken färg föredrar du?",
+        "WHOSE – frågar om vems något är. 'Whose bag is this?' = Vems väska är det här?",
+        "HOW + adjektiv: How old? (Hur gammal?) · How tall? (Hur lång?) · How far? (Hur långt?) · How long? (Hur länge/lång?)"
+      ],
+      "exercises": [
+        {
+          "id": "mel-frag-1",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ students are in your class? – Twenty-five.'",
+          "options": [
+            "How much",
+            "How many",
+            "Which",
+            "Whose"
+          ],
+          "correctIndex": 1,
+          "explanation": "How many används med räkningsbara substantiv (students). How many students? = Hur många elever?"
+        },
+        {
+          "id": "mel-frag-2",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ does a school lunch cost? – It costs 15 kronor.'",
+          "options": [
+            "How many",
+            "How often",
+            "How much",
+            "Which"
+          ],
+          "correctIndex": 2,
+          "explanation": "How much används för pris och mängd. How much does it cost? = Hur mycket kostar det?"
+        },
+        {
+          "id": "mel-frag-3",
+          "type": "fill-in-blank",
+          "sentence": "___ old are you? – I am thirteen years old.",
+          "answer": "How",
+          "hint": "How + adjektiv frågar om egenskaper. How old = Hur gammal.",
+          "explanation": "How old = Hur gammal. Samma mönster: How tall? (Hur lång?), How far? (Hur långt?)"
+        },
+        {
+          "id": "mel-frag-4",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ bag is this? – It's mine.'",
+          "options": [
+            "Who",
+            "Which",
+            "Whose",
+            "What"
+          ],
+          "correctIndex": 2,
+          "explanation": "Whose frågar om ägande/vems. Whose bag is this? = Vems väska är det här?"
+        },
+        {
+          "id": "mel-frag-5",
+          "type": "fill-in-blank",
+          "sentence": "___ subject do you prefer, English or Maths?",
+          "answer": "Which",
+          "hint": "Val mellan ett begränsat antal alternativ → Which (Vilken/vilket).",
+          "explanation": "Which används när vi väljer mellan specifika alternativ. Which subject? = Vilket ämne?"
+        },
+        {
+          "id": "mel-frag-6",
+          "type": "fill-in-blank",
+          "sentence": "___ far is it from here to Stockholm? – About 100 kilometres.",
+          "answer": "How",
+          "hint": "How + far frågar om avstånd (Hur långt).",
+          "explanation": "How far = Hur långt. How far is it to Stockholm? = Hur långt är det till Stockholm?"
+        },
+        {
+          "id": "mel-frag-7",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Hur gammal är din bror?'",
+          "words": [
+            "How",
+            "old",
+            "is",
+            "your",
+            "brother",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "How old is your brother? = Hur gammal är din bror?"
+        },
+        {
+          "id": "mel-frag-8",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ often do you exercise? – Three times a week.'",
+          "options": [
+            "How much",
+            "How many",
+            "How often",
+            "Which"
+          ],
+          "correctIndex": 2,
+          "explanation": "How often frågar om hur frekvent något sker. How often = Hur ofta."
+        },
+        {
+          "id": "mel-frag-9",
+          "type": "fill-in-blank",
+          "sentence": "___ languages can you speak? – I can speak two.",
+          "answer": "How many",
+          "hint": "Räkningsbara enheter (languages) → How many.",
+          "explanation": "How many languages = Hur många språk. Languages är räkningsbara."
+        },
+        {
+          "id": "mel-frag-10",
+          "type": "multiple-choice",
+          "question": "Vilken fråga är grammatiskt korrekt?",
+          "options": [
+            "How many homeworks do you have?",
+            "How much homeworks do you have?",
+            "How many homework do you have?",
+            "How much homework do you have?"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Homework' är ett icke räkningsbart substantiv, så vi använder 'how much'. How much homework do you have?"
+        },
+        {
+          "id": "mel-frag-11",
+          "type": "fill-in-blank",
+          "sentence": "___ long is the summer holiday? – About ten weeks.",
+          "answer": "How",
+          "hint": "How + long frågar om längd eller varaktighet.",
+          "explanation": "How long = Hur länge/lång. How long is the holiday? = Hur länge varar lovet?"
+        },
+        {
+          "id": "mel-frag-12",
+          "type": "build-sentence",
+          "instruction": "Bygg frågan: 'Vems bok är det här?'",
+          "words": [
+            "Whose",
+            "book",
+            "is",
+            "this",
+            "?"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "Whose book is this? = Vems bok är det här?"
+        },
+        {
+          "id": "mel-frag-13",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ was the weather like in London? – It was rainy.'",
+          "options": [
+            "How",
+            "Which",
+            "What",
+            "Where"
+          ],
+          "correctIndex": 2,
+          "explanation": "What ... like frågar om hur något är/var. What was the weather like? = Hur var vädret?"
+        },
+        {
+          "id": "mel-frag-14",
+          "type": "fill-in-blank",
+          "sentence": "___ tall is the Statue of Liberty? – About 93 metres.",
+          "answer": "How",
+          "hint": "How + tall frågar om höjd (Hur hög/lång).",
+          "explanation": "How tall = Hur hög/lång. How tall is it? = Hur hög är den?"
+        },
+        {
+          "id": "mel-frag-15",
+          "type": "multiple-choice",
+          "question": "Vilket frågeord passar? '___ of these two films do you want to watch?'",
+          "options": [
+            "What",
+            "Who",
+            "Which",
+            "Whose"
+          ],
+          "correctIndex": 2,
+          "explanation": "Which används när vi väljer mellan ett begränsat antal alternativ (these two films). Which of these? = Vilken av dessa?"
+        }
+      ]
+    },
+    {
+      "id": "mel-synonymer",
+      "title": "Synonymer",
+      "description": "Träna på ord som betyder ungefär samma sak – på en mer avancerad nivå.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "📖 En SYNONYM är ett ord som betyder ungefär samma sak som ett annat ord.",
+        "Exempel: 'angry' och 'furious' är synonymer – båda betyder arg (furious är starkare).",
+        "Exempel: 'tired' och 'exhausted' är synonymer – exhausted betyder extremt trött.",
+        "Tips: Synonymer kan ha lite olika styrka – 'big' och 'enormous' betyder båda stor, men enormous = jättestor!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-syn-1",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'angry'?",
+          "options": [
+            "happy",
+            "furious",
+            "calm",
+            "tired"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Angry' and 'furious' are synonyms – both mean arg (furious är starkare)."
+        },
+        {
+          "id": "mel-syn-2",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'tired'?",
+          "options": [
+            "awake",
+            "excited",
+            "exhausted",
+            "energetic"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Tired' and 'exhausted' are synonyms – exhausted means extremt trött."
+        },
+        {
+          "id": "mel-syn-3",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'beautiful'?",
+          "options": [
+            "ugly",
+            "strange",
+            "lovely",
+            "boring"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Beautiful' and 'lovely' are synonyms – both mean vacker/fin."
+        },
+        {
+          "id": "mel-syn-4",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'clever'?",
+          "options": [
+            "lazy",
+            "silly",
+            "weak",
+            "intelligent"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Clever' and 'intelligent' are synonyms – both mean klyftig/intelligent."
+        },
+        {
+          "id": "mel-syn-5",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'strange'?",
+          "options": [
+            "normal",
+            "usual",
+            "odd",
+            "common"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Strange' and 'odd' are synonyms – both mean konstig/märklig."
+        },
+        {
+          "id": "mel-syn-6",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'brave'?",
+          "options": [
+            "scared",
+            "weak",
+            "courageous",
+            "shy"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Brave' and 'courageous' are synonyms – both mean modig."
+        },
+        {
+          "id": "mel-syn-7",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'purchase'?",
+          "options": [
+            "sell",
+            "lose",
+            "give",
+            "buy"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Purchase' and 'buy' are synonyms – both mean köpa."
+        },
+        {
+          "id": "mel-syn-8",
+          "type": "fill-in-blank",
+          "sentence": "He was very angry. In other words, he was absolutely ___. (synonym, stronger feeling)",
+          "answer": "furious",
+          "explanation": "'Furious' is a stronger synonym for 'angry'."
+        },
+        {
+          "id": "mel-syn-9",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'glad'?",
+          "options": [
+            "sad",
+            "bored",
+            "pleased",
+            "angry"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Glad' and 'pleased' are synonyms – both mean glad/nöjd."
+        },
+        {
+          "id": "mel-syn-10",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'small'?",
+          "options": [
+            "huge",
+            "giant",
+            "big",
+            "tiny"
+          ],
+          "correctIndex": 3,
+          "explanation": "'Small' and 'tiny' are synonyms – tiny means väldigt liten."
+        },
+        {
+          "id": "mel-syn-11",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'speak'?",
+          "options": [
+            "listen",
+            "hear",
+            "talk",
+            "read"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Speak' and 'talk' are synonyms – both mean prata/tala."
+        },
+        {
+          "id": "mel-syn-12",
+          "type": "fill-in-blank",
+          "sentence": "She was afraid of the dark. Another word for afraid is ___. (synonym)",
+          "answer": "scared",
+          "alternativeAnswers": [
+            "frightened"
+          ],
+          "explanation": "'Afraid', 'scared', and 'frightened' are all synonyms meaning rädd."
+        },
+        {
+          "id": "mel-syn-13",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'end'?",
+          "options": [
+            "start",
+            "begin",
+            "open",
+            "finish"
+          ],
+          "correctIndex": 3,
+          "explanation": "'End' and 'finish' are synonyms – both mean avsluta/sluta."
+        },
+        {
+          "id": "mel-syn-14",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'nice' (snäll/trevlig)?",
+          "options": [
+            "mean",
+            "rude",
+            "kind",
+            "strict"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Nice' and 'kind' are synonyms – both mean snäll/vänlig."
+        },
+        {
+          "id": "mel-syn-15",
+          "type": "multiple-choice",
+          "question": "Which word means the same as 'walk slowly and calmly'?",
+          "options": [
+            "sprint",
+            "run",
+            "stroll",
+            "march"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Stroll' means att promenera/gå lugnt. It is a synonym for a relaxed walk."
+        }
+      ]
+    },
+    {
+      "id": "mel-motsatsord",
+      "title": "Motsatsord",
+      "description": "Träna på motsatsord på en mellannivå – utöka ditt ordförråd!",
+      "icon": "↔️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "↔️ MOTSATSORD (antonymer) är ord som har motsatt betydelse.",
+        "Exempel: 'brave' ↔ 'cowardly' (modig ↔ feg)",
+        "Exempel: 'remember' ↔ 'forget' (komma ihåg ↔ glömma)",
+        "Tips: Lär dig ord i par – det är lättare att komma ihåg dem!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-mot-1",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'brave'?",
+          "options": [
+            "strong",
+            "cowardly",
+            "clever",
+            "happy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brave (modig) ↔ cowardly (feg)."
+        },
+        {
+          "id": "mel-mot-2",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'remember'?",
+          "options": [
+            "think",
+            "know",
+            "forget",
+            "learn"
+          ],
+          "correctIndex": 2,
+          "explanation": "Remember (komma ihåg) ↔ forget (glömma)."
+        },
+        {
+          "id": "mel-mot-3",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'ancient'?",
+          "options": [
+            "old",
+            "huge",
+            "modern",
+            "broken"
+          ],
+          "correctIndex": 2,
+          "explanation": "Ancient (fornlida/urgammal) ↔ modern (modern)."
+        },
+        {
+          "id": "mel-mot-4",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'dangerous'?",
+          "options": [
+            "wild",
+            "exciting",
+            "risky",
+            "safe"
+          ],
+          "correctIndex": 3,
+          "explanation": "Dangerous (farlig) ↔ safe (säker/trygg)."
+        },
+        {
+          "id": "mel-mot-5",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'generous'?",
+          "options": [
+            "kind",
+            "helpful",
+            "selfish",
+            "honest"
+          ],
+          "correctIndex": 2,
+          "explanation": "Generous (generös) ↔ selfish (självisk)."
+        },
+        {
+          "id": "mel-mot-6",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'success'?",
+          "options": [
+            "effort",
+            "failure",
+            "attempt",
+            "try"
+          ],
+          "correctIndex": 1,
+          "explanation": "Success (framgång) ↔ failure (misslyckande)."
+        },
+        {
+          "id": "mel-mot-7",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'include' is ___. (think: utesluta)",
+          "answer": "exclude",
+          "explanation": "Include (inkludera) ↔ exclude (exkludera/utesluta)."
+        },
+        {
+          "id": "mel-mot-8",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'arrive'?",
+          "options": [
+            "travel",
+            "visit",
+            "stay",
+            "depart"
+          ],
+          "correctIndex": 3,
+          "explanation": "Arrive (anlända) ↔ depart (avresa/lämna)."
+        },
+        {
+          "id": "mel-mot-9",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'victory'?",
+          "options": [
+            "battle",
+            "fight",
+            "defeat",
+            "score"
+          ],
+          "correctIndex": 2,
+          "explanation": "Victory (seger) ↔ defeat (förlust/nederlag)."
+        },
+        {
+          "id": "mel-mot-10",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'confident'?",
+          "options": [
+            "calm",
+            "loud",
+            "shy",
+            "proud"
+          ],
+          "correctIndex": 2,
+          "explanation": "Confident (säker/självsäker) ↔ shy (blyg/osäker)."
+        },
+        {
+          "id": "mel-mot-11",
+          "type": "fill-in-blank",
+          "sentence": "The opposite of 'expand' is ___. (think: krympa)",
+          "answer": "shrink",
+          "explanation": "Expand (expandera/växa) ↔ shrink (krympa)."
+        },
+        {
+          "id": "mel-mot-12",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'reward'?",
+          "options": [
+            "praise",
+            "gift",
+            "punish",
+            "thank"
+          ],
+          "correctIndex": 2,
+          "explanation": "Reward (belöna) ↔ punish (bestraffa)."
+        },
+        {
+          "id": "mel-mot-13",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'curious'?",
+          "options": [
+            "excited",
+            "bored",
+            "interested",
+            "awake"
+          ],
+          "correctIndex": 1,
+          "explanation": "Curious (nyfiken) ↔ bored/indifferent (ointresserad/likgiltig)."
+        },
+        {
+          "id": "mel-mot-14",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'complicated'?",
+          "options": [
+            "hard",
+            "simple",
+            "difficult",
+            "tricky"
+          ],
+          "correctIndex": 1,
+          "explanation": "Complicated (komplicerad) ↔ simple (enkel/simpel)."
+        },
+        {
+          "id": "mel-mot-15",
+          "type": "multiple-choice",
+          "question": "What is the opposite of 'noisy'?",
+          "options": [
+            "loud",
+            "boring",
+            "quiet",
+            "busy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Noisy (bullrig/högljudd) ↔ quiet (tyst/lugn)."
+        }
+      ]
+    },
+    {
+      "id": "mel-some-any",
+      "title": "Some och Any",
+      "description": "Fördjupa dig i när some och any används i olika meningstyper.",
+      "icon": "🔵",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "✅ SOME → positiva meningar: 'I bought some books.'",
+        "❓ ANY → frågor och negationer: 'Did you see any films?' / 'I didn't see any films.'",
+        "🎁 SOME → erbjudanden och förfrågningar: 'Would you like some coffee?' / 'Can I have some water?'",
+        "⚡ Kom ihåg: 'not any' = ingen/ingenting – e.g. 'I don't have any money' = Jag har inga pengar."
+      ],
+      "exercises": [
+        {
+          "id": "mel-sa-1",
+          "type": "multiple-choice",
+          "question": "She bought ___ new books at the store.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'She bought some new books.'"
+        },
+        {
+          "id": "mel-sa-2",
+          "type": "multiple-choice",
+          "question": "I couldn't find ___ information online.",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Negation (couldn't) → any: 'I couldn't find any information.'"
+        },
+        {
+          "id": "mel-sa-3",
+          "type": "multiple-choice",
+          "question": "Would you like ___ more coffee?",
+          "options": [
+            "any",
+            "a",
+            "some",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Erbjudande i fråga → some: 'Would you like some more coffee?'"
+        },
+        {
+          "id": "mel-sa-4",
+          "type": "multiple-choice",
+          "question": "There weren't ___ students in the classroom.",
+          "options": [
+            "some",
+            "a",
+            "an",
+            "any"
+          ],
+          "correctIndex": 3,
+          "explanation": "Negation (weren't) → any: 'There weren't any students.'"
+        },
+        {
+          "id": "mel-sa-5",
+          "type": "fill-in-blank",
+          "sentence": "He needs ___ help with his project.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "mel-sa-6",
+          "type": "multiple-choice",
+          "question": "Did you see ___ interesting films last week?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "the"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vanlig fråga → any: 'Did you see any interesting films?'"
+        },
+        {
+          "id": "mel-sa-7",
+          "type": "multiple-choice",
+          "question": "We still have ___ time before the class starts.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'We still have some time.'"
+        },
+        {
+          "id": "mel-sa-8",
+          "type": "fill-in-blank",
+          "sentence": "The teacher didn't give ___ extra homework.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (didn't give) → any."
+        },
+        {
+          "id": "mel-sa-9",
+          "type": "multiple-choice",
+          "question": "Could I have ___ sugar for my tea?",
+          "options": [
+            "any",
+            "a",
+            "an",
+            "some"
+          ],
+          "correctIndex": 3,
+          "explanation": "Förfrågan → some: 'Could I have some sugar?' (man ber om något)"
+        },
+        {
+          "id": "mel-sa-10",
+          "type": "fill-in-blank",
+          "sentence": "I haven't read ___ books by that author.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (haven't) → any."
+        },
+        {
+          "id": "mel-sa-11",
+          "type": "multiple-choice",
+          "question": "There are ___ good restaurants near here.",
+          "options": [
+            "any",
+            "some",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Positiv mening → some: 'There are some good restaurants.'"
+        },
+        {
+          "id": "mel-sa-12",
+          "type": "multiple-choice",
+          "question": "Do you have ___ plans for the weekend?",
+          "options": [
+            "some",
+            "a",
+            "any",
+            "an"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vanlig fråga → any: 'Do you have any plans?'"
+        },
+        {
+          "id": "mel-sa-13",
+          "type": "fill-in-blank",
+          "sentence": "She didn't make ___ mistakes in her test.",
+          "answer": "any",
+          "acceptedAnswers": [
+            "any"
+          ],
+          "explanation": "Negation (didn't make) → any."
+        },
+        {
+          "id": "mel-sa-14",
+          "type": "fill-in-blank",
+          "sentence": "We brought ___ sandwiches for the picnic.",
+          "answer": "some",
+          "acceptedAnswers": [
+            "some"
+          ],
+          "explanation": "Positiv mening → some."
+        },
+        {
+          "id": "mel-sa-15",
+          "type": "multiple-choice",
+          "question": "Have you heard ___ good music recently?",
+          "options": [
+            "some",
+            "any",
+            "a",
+            "an"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vanlig fråga → any: 'Have you heard any good music?'"
+        }
+      ]
+    },
+    {
       "id": "mel-sluttest",
       "title": "Sluttest – Grammatik",
       "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
@@ -5421,70 +6217,120 @@
         {
           "id": "mel-spel-1-q1",
           "question": "Vad är past tense av 'go'?",
-          "options": ["goed", "gone", "went", "going"],
+          "options": [
+            "goed",
+            "gone",
+            "went",
+            "going"
+          ],
           "correctIndex": 2,
           "explanation": "'Go' → 'went' i past tense. Det är oregelbundet!"
         },
         {
           "id": "mel-spel-1-q2",
           "question": "Vad är past tense av 'eat'?",
-          "options": ["eated", "ate", "eaten", "eted"],
+          "options": [
+            "eated",
+            "ate",
+            "eaten",
+            "eted"
+          ],
           "correctIndex": 1,
           "explanation": "'Eat' → 'ate' i past tense."
         },
         {
           "id": "mel-spel-1-q3",
           "question": "Vad är past tense av 'see'?",
-          "options": ["seed", "sawed", "saw", "seen"],
+          "options": [
+            "seed",
+            "sawed",
+            "saw",
+            "seen"
+          ],
           "correctIndex": 2,
           "explanation": "'See' → 'saw' i past tense."
         },
         {
           "id": "mel-spel-1-q4",
           "question": "Vad är past tense av 'come'?",
-          "options": ["comed", "came", "comes", "coming"],
+          "options": [
+            "comed",
+            "came",
+            "comes",
+            "coming"
+          ],
           "correctIndex": 1,
           "explanation": "'Come' → 'came' i past tense."
         },
         {
           "id": "mel-spel-1-q5",
           "question": "Vad är past tense av 'run'?",
-          "options": ["runned", "ran", "ranned", "run"],
+          "options": [
+            "runned",
+            "ran",
+            "ranned",
+            "run"
+          ],
           "correctIndex": 1,
           "explanation": "'Run' → 'ran' i past tense."
         },
         {
           "id": "mel-spel-1-q6",
           "question": "Vad är past tense av 'write'?",
-          "options": ["writed", "written", "wrote", "writ"],
+          "options": [
+            "writed",
+            "written",
+            "wrote",
+            "writ"
+          ],
           "correctIndex": 2,
           "explanation": "'Write' → 'wrote' i past tense. Past participle är 'written'."
         },
         {
           "id": "mel-spel-1-q7",
           "question": "Vad är past tense av 'take'?",
-          "options": ["taked", "took", "taken", "takes"],
+          "options": [
+            "taked",
+            "took",
+            "taken",
+            "takes"
+          ],
           "correctIndex": 1,
           "explanation": "'Take' → 'took' i past tense."
         },
         {
           "id": "mel-spel-1-q8",
           "question": "Vad är past tense av 'give'?",
-          "options": ["gived", "given", "gave", "gives"],
+          "options": [
+            "gived",
+            "given",
+            "gave",
+            "gives"
+          ],
           "correctIndex": 2,
           "explanation": "'Give' → 'gave' i past tense."
         },
         {
           "id": "mel-spel-1-q9",
           "question": "Vad är past tense av 'know'?",
-          "options": ["knowed", "known", "knew", "knows"],
+          "options": [
+            "knowed",
+            "known",
+            "knew",
+            "knows"
+          ],
           "correctIndex": 2,
           "explanation": "'Know' → 'knew' i past tense."
         },
         {
           "id": "mel-spel-1-q10",
           "question": "Vad är past tense av 'think'?",
-          "options": ["thinked", "thought", "thinks", "thing"],
+          "options": [
+            "thinked",
+            "thought",
+            "thinks",
+            "thing"
+          ],
           "correctIndex": 1,
           "explanation": "'Think' → 'thought' i past tense."
         }
@@ -5501,70 +6347,120 @@
         {
           "id": "mel-spel-2-q1",
           "question": "Välj rätt preposition: 'She is waiting ___ the bus.'",
-          "options": ["on", "for", "at", "in"],
+          "options": [
+            "on",
+            "for",
+            "at",
+            "in"
+          ],
           "correctIndex": 1,
           "explanation": "'Wait for' – man väntar PÅ något/någon med 'for'."
         },
         {
           "id": "mel-spel-2-q2",
           "question": "Välj rätt preposition: 'He lives ___ London.'",
-          "options": ["at", "on", "in", "by"],
+          "options": [
+            "at",
+            "on",
+            "in",
+            "by"
+          ],
           "correctIndex": 2,
           "explanation": "Man bor 'in' en stad: 'He lives in London.'"
         },
         {
           "id": "mel-spel-2-q3",
           "question": "Välj rätt preposition: 'The book is ___ the table.'",
-          "options": ["at", "on", "in", "over"],
+          "options": [
+            "at",
+            "on",
+            "in",
+            "over"
+          ],
           "correctIndex": 1,
           "explanation": "'On' används när något ligger på en yta."
         },
         {
           "id": "mel-spel-2-q4",
           "question": "Välj rätt preposition: 'I wake up ___ 7 o'clock.'",
-          "options": ["in", "on", "at", "by"],
+          "options": [
+            "in",
+            "on",
+            "at",
+            "by"
+          ],
           "correctIndex": 2,
           "explanation": "'At' används med klockslag: 'at 7 o'clock'."
         },
         {
           "id": "mel-spel-2-q5",
           "question": "Välj rätt preposition: 'She was born ___ Monday.'",
-          "options": ["in", "at", "on", "by"],
+          "options": [
+            "in",
+            "at",
+            "on",
+            "by"
+          ],
           "correctIndex": 2,
           "explanation": "'On' används med veckodagar: 'on Monday'."
         },
         {
           "id": "mel-spel-2-q6",
           "question": "Välj rätt preposition: 'They go swimming ___ summer.'",
-          "options": ["on", "at", "in", "during"],
+          "options": [
+            "on",
+            "at",
+            "in",
+            "during"
+          ],
           "correctIndex": 2,
           "explanation": "'In' används med årstider: 'in summer'."
         },
         {
           "id": "mel-spel-2-q7",
           "question": "Välj rätt: 'The cat jumped ___ the box.'",
-          "options": ["into", "onto", "in", "at"],
+          "options": [
+            "into",
+            "onto",
+            "in",
+            "at"
+          ],
           "correctIndex": 0,
           "explanation": "'Into' används när man rör sig in i något."
         },
         {
           "id": "mel-spel-2-q8",
           "question": "Välj rätt: 'She walked ___ the bridge.'",
-          "options": ["under", "through", "across", "over"],
+          "options": [
+            "under",
+            "through",
+            "across",
+            "over"
+          ],
           "correctIndex": 2,
           "explanation": "'Across' betyder tvärs över – hon gick över bron."
         },
         {
           "id": "mel-spel-2-q9",
           "question": "Välj rätt: 'The cinema is ___ the supermarket.'",
-          "options": ["next to", "next of", "close with", "beside of"],
+          "options": [
+            "next to",
+            "next of",
+            "close with",
+            "beside of"
+          ],
           "correctIndex": 0,
           "explanation": "'Next to' betyder bredvid."
         },
         {
           "id": "mel-spel-2-q10",
           "question": "Välj rätt: 'I've known her ___ years.'",
-          "options": ["since", "for", "during", "ago"],
+          "options": [
+            "since",
+            "for",
+            "during",
+            "ago"
+          ],
           "correctIndex": 1,
           "explanation": "'For' används med en tidsperiod (for years, for months)."
         }

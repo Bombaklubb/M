@@ -6,6 +6,9 @@ import { defaultGamificationData } from "./gamification";
 /** Tracks which student is currently logged in (just the name, lowercased). */
 const ACTIVE_KEY = "engelskajakten_active";
 
+/** Tracks when the current session started (ISO string). */
+const SESSION_START_KEY = "engelskajakten_session_start";
+
 /** Per-name key for student progress. */
 function studentKey(name: string) {
   return `engelskajakten_student_${name.toLowerCase().trim()}`;
@@ -96,6 +99,10 @@ export function createStudent(name: string, avatar?: string): StudentData {
   if (typeof window === "undefined") return defaultStudentData(name);
 
   const trimmed = name.trim();
+
+  // Mark session start time
+  localStorage.setItem(SESSION_START_KEY, new Date().toISOString());
+
   const existingRaw = localStorage.getItem(studentKey(trimmed));
   if (existingRaw) {
     try {
@@ -117,15 +124,32 @@ export function createStudent(name: string, avatar?: string): StudentData {
 }
 
 /**
+ * Returns the ISO string for when the current session started,
+ * or null if no session is active.
+ */
+export function getSessionStart(): string | null {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem(SESSION_START_KEY);
+}
+
+/**
  * Logs out the current student.
  * Clears the active session but KEEPS the student's progress data on this device.
  */
 export function clearStudent(): void {
   if (typeof window === "undefined") return;
   localStorage.removeItem(ACTIVE_KEY);
+  localStorage.removeItem(SESSION_START_KEY);
 }
 
 // ─── Module progress helpers ──────────────────────────────────────────────────
+
+export function getRepeatMultiplier(priorAttempts: number): number {
+  if (priorAttempts === 0) return 1.0;
+  if (priorAttempts === 1) return 0.5;
+  if (priorAttempts === 2) return 0.25;
+  return 0;
+}
 
 export function getModuleProgress(
   data: StudentData,
@@ -163,7 +187,6 @@ export function saveModuleProgress(
     : stage.wordsearchModules;
   const existing = map[moduleId];
   const prevPoints = existing?.points ?? 0;
-  const addedPoints = Math.max(0, points - prevPoints);
 
   map[moduleId] = {
     moduleId,
@@ -173,8 +196,17 @@ export function saveModuleProgress(
     lastAttempt: new Date().toISOString(),
   };
 
-  data.totalPoints += addedPoints;
+  // Caller applies diminishing returns via getRepeatMultiplier before passing points
+  data.totalPoints += points;
   saveStudent(data);
+
+  // Anonym statistik-tracking (GDPR-säkrad, inget personligt)
+  if (typeof window !== "undefined") {
+    import("@/services/analyticsService").then(({ trackTaskComplete }) => {
+      trackTaskComplete(completed, kind);
+    });
+  }
+
   return { ...data };
 }
 

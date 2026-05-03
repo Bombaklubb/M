@@ -12,11 +12,14 @@ import {
   saveModuleProgress,
   loadGamification,
   saveGamification,
+  getModuleProgress,
+  getRepeatMultiplier,
 } from "@/lib/storage";
 import {
   chestsEarnedFromPoints,
   chestsEarnedFromExercises,
   rollMysteryBox,
+  checkAchievementBadges,
   BOSS_UNLOCK_THRESHOLD,
 } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
@@ -51,6 +54,9 @@ export default function SpelModulePage({ params }: Props) {
   const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
   const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
   const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
+  const [modalPoints, setModalPoints] = useState(0);
+  const [modalBonus, setModalBonus] = useState(0);
+  const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
     const s = loadStudent();
@@ -86,34 +92,46 @@ export default function SpelModulePage({ params }: Props) {
 
     const pts = coins * POINTS_PER_COIN;
     const passed = coins / totalQuestions >= 0.6;
-    const finalPts = passed ? pts + mod!.bonusPoints : pts;
 
     if (student) {
+      const existingProgress = getModuleProgress(student, stage!.id, "spel", mod!.id);
+      const wasAlreadyCompleted = existingProgress?.completed ?? false;
+      const priorAttempts = existingProgress?.attempts ?? 0;
+      const repeatMult = getRepeatMultiplier(priorAttempts);
+      const adjustedBase = Math.round(pts * repeatMult);
+      const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
+      const adjustedTotal = adjustedBase + adjustedBonus;
+      setModalPoints(adjustedBase);
+      setModalBonus(adjustedBonus);
+      setAttemptNum(priorAttempts + 1);
+
+      const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
       const updated = saveModuleProgress(
         student,
         stage!.id,
         "spel",
         mod!.id,
-        finalPts,
+        adjustedTotal,
         passed
       );
       setStudent(updated);
 
       const gam = loadGamification();
-      const prevPoints = student.totalPoints;
       const newPoints = updated.totalPoints;
       const prevEx = gam.exercisesCompleted;
-      const newEx = prevEx + 1;
+      const newEx = wasAlreadyCompleted ? prevEx : prevEx + 1;
 
       const pointChests = chestsEarnedFromPoints(
         prevPoints,
         newPoints,
-        gam.pointsMilestonesRewarded
+        gam.pointsMilestonesRewarded,
+        gam.chests
       );
-      const exChests = chestsEarnedFromExercises(
+      const exChests = wasAlreadyCompleted ? [] : chestsEarnedFromExercises(
         prevEx,
         newEx,
-        gam.exerciseMilestonesRewarded
+        gam.exerciseMilestonesRewarded,
+        gam.chests
       );
       const allNewChests = [
         ...pointChests.map((c) => c.chest),
@@ -122,7 +140,7 @@ export default function SpelModulePage({ params }: Props) {
       const firstChest = allNewChests[0];
       const wasBossUnlocked = gam.bossUnlocked;
       const nowBossUnlocked = wasBossUnlocked || newEx >= BOSS_UNLOCK_THRESHOLD;
-      const mystery = rollMysteryBox(gam.badges);
+      const mystery = wasAlreadyCompleted ? null : rollMysteryBox(gam.badges, newEx, gam.chests);
       const extraMysteryChest =
         mystery?.type === "chest" && mystery.chestType
           ? [
@@ -139,13 +157,14 @@ export default function SpelModulePage({ params }: Props) {
       const mysteryPoints =
         mystery?.type === "points" && mystery.points ? mystery.points : 0;
 
-      saveGamification({
+      const earlyBadgesSpel = [...gam.badges];
+      if (mystery && !earlyBadgesSpel.includes("mystery_hunter")) earlyBadgesSpel.push("mystery_hunter");
+      if (mysteryBadge && !earlyBadgesSpel.includes(mysteryBadge)) earlyBadgesSpel.push(mysteryBadge);
+      const baseBadgesSpel = earlyBadgesSpel;
+      const newGamSpel = {
         ...gam,
         chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
-        badges:
-          mysteryBadge && !gam.badges.includes(mysteryBadge)
-            ? [...gam.badges, mysteryBadge]
-            : gam.badges,
+        badges: baseBadgesSpel,
         exercisesCompleted: newEx,
         bossUnlocked: nowBossUnlocked,
         pointsMilestonesRewarded: [
@@ -156,7 +175,10 @@ export default function SpelModulePage({ params }: Props) {
           ...gam.exerciseMilestonesRewarded,
           ...exChests.map((c) => c.milestone),
         ],
-      });
+      };
+      const achievementBadgesSpel = checkAchievementBadges(updated, newGamSpel);
+      if (achievementBadgesSpel.length > 0) newGamSpel.badges = [...newGamSpel.badges, ...achievementBadgesSpel];
+      saveGamification(newGamSpel);
 
       if (mysteryPoints > 0)
         setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
@@ -285,12 +307,13 @@ export default function SpelModulePage({ params }: Props) {
 
       {showResult && (
         <ResultModal
-          points={earnedPoints}
-          bonusPoints={mod.bonusPoints}
+          points={modalPoints}
+          bonusPoints={modalBonus}
           totalCorrect={coinsCollected}
           totalQuestions={totalQuestions}
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
+          repeatAttemptNumber={attemptNum}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />

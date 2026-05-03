@@ -79,6 +79,10 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
         .map(([grade, count]) => ({ grade: parseInt(grade), count }))
         .sort((a, b) => a.grade - b.grade);
 
+      if (!gradeArray.find(g => g.grade === 10)) {
+        gradeArray.push({ grade: 10, count: 0 });
+      }
+
       setGradeCounts(gradeArray);
     } catch (err) {
       console.error('Kunde inte ladda biblioteket:', err);
@@ -343,7 +347,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                   className="bg-white dark:bg-slate-800 rounded-xl p-4 text-center min-w-[90px] border border-slate-200 dark:border-slate-700"
                 >
                   <div className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-1">
-                    {item.grade === 10 ? 'Gym' : `Åk ${item.grade}`}
+                    {item.grade === 10 ? 'GY' : `Åk ${item.grade}`}
                   </div>
                   <div className="text-2xl font-black text-slate-800 dark:text-white">
                     {item.count}

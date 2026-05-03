@@ -2,6 +2,7 @@
 
 import type { ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
+import { getModuleCompleteFeedback } from "@/lib/feedback";
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
@@ -20,6 +21,7 @@ interface ResultModalProps {
   totalQuestions: number;
   chestEarned?: ChestType;
   bossUnlocked?: boolean;
+  repeatAttemptNumber?: number;
   onContinue: () => void;
   onRetry: () => void;
 }
@@ -31,6 +33,7 @@ export default function ResultModal({
   totalQuestions,
   chestEarned,
   bossUnlocked,
+  repeatAttemptNumber,
   onContinue,
   onRetry,
 }: ResultModalProps) {
@@ -48,7 +51,7 @@ export default function ResultModal({
         <div className="text-7xl mb-4 animate-bounce-slow">{passed ? "🎉" : "💪"}</div>
 
         <h2 className="text-3xl font-black text-indigo-900 dark:text-gray-100 mb-2">
-          {passed ? "Bra jobbat!" : "Försök igen!"}
+          {passed ? getModuleCompleteFeedback() : "Försök igen!"}
         </h2>
 
         <p className="text-indigo-400 dark:text-gray-400 mb-6 text-lg font-medium">
@@ -126,6 +129,20 @@ export default function ResultModal({
                 Gå till Hemliga kistor för att utmana bossen.
               </p>
             </div>
+          </div>
+        )}
+
+        {/* Repeat attempt info */}
+        {repeatAttemptNumber && repeatAttemptNumber > 1 && (
+          <div className="bg-blue-50 dark:bg-blue-900/30 border-2 border-blue-200 dark:border-blue-700 rounded-2xl p-3 mb-4 text-left">
+            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-1">
+              🔁 Repetitionsövning (försök {repeatAttemptNumber})
+            </p>
+            <p className="text-xs text-blue-600 dark:text-blue-400">
+              Poängen minskar för varje gång du gör samma övning:{" "}
+              <strong>1:a gången 100% → 2:a 50% → 3:e 25% → 4:e+ 0 poäng.</strong>
+              {" "}Gör nya övningar för att tjäna full poäng!
+            </p>
           </div>
         )}
 

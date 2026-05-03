@@ -8,11 +8,69 @@ import { WORLDS } from '../../data/worlds';
 
 // ── Boss config ──────────────────────────────────────────────────────────────
 
-const BOSSES = [
-  { name: 'Räknetrollet', emoji: '👹', color: 'from-red-700 to-red-900', maxHp: 100 },
-  { name: 'Algebrahäxan', emoji: '🧙‍♀️', color: 'from-purple-700 to-purple-900', maxHp: 120 },
-  { name: 'Divisionsdrakens', emoji: '🐉', color: 'from-emerald-700 to-emerald-900', maxHp: 150 },
-  { name: 'Primtalsgiganten', emoji: '💀', color: 'from-gray-700 to-gray-900', maxHp: 180 },
+type BossMechanic = 'standard' | 'combo' | 'regen' | 'shield';
+type ExType = 'multiple-choice' | 'fill-in' | 'true-false';
+type FeedbackType = 'hit' | 'hurt' | 'combo' | 'shield-crack' | 'regen' | null;
+
+const REGEN_HEAL = 10;
+
+interface BossConfig {
+  name: string;
+  emoji: string;
+  bg: string;
+  hpBarColor: string;
+  maxHp: number;
+  mechanic: BossMechanic;
+  types: ExType[];
+  mechanicLabel: string;
+  mechanicDesc: string;
+}
+
+const BOSSES: BossConfig[] = [
+  {
+    name: 'Räknetrollet',
+    emoji: '👹',
+    bg: 'from-[#1a0505] via-[#2d0a0a] to-[#1a0505]',
+    hpBarColor: 'from-red-600 to-red-400',
+    maxHp: 100,
+    mechanic: 'standard',
+    types: ['fill-in', 'true-false'],
+    mechanicLabel: '⚔️ Standardstrid',
+    mechanicDesc: 'Klassisk kamp! Svara rätt och skada trollet. Fel svar och du tar skada.',
+  },
+  {
+    name: 'Algebrahäxan',
+    emoji: '🧙‍♀️',
+    bg: 'from-[#0f0520] via-[#1a0a2e] to-[#0f0520]',
+    hpBarColor: 'from-purple-600 to-purple-400',
+    maxHp: 130,
+    mechanic: 'combo',
+    types: ['multiple-choice'],
+    mechanicLabel: '✨ Kombobesvärjelse',
+    mechanicDesc: 'Var 3:e rätt svar i rad utlöser en BESVÄRJELSE som gör DUBBEL SKADA!',
+  },
+  {
+    name: 'Isdraken',
+    emoji: '🐉',
+    bg: 'from-[#020d1a] via-[#041a2e] to-[#020d1a]',
+    hpBarColor: 'from-cyan-600 to-cyan-400',
+    maxHp: 150,
+    mechanic: 'regen',
+    types: ['multiple-choice', 'fill-in', 'true-false'],
+    mechanicLabel: '❄️ Isregenerering',
+    mechanicDesc: `Draken läker sig! Varje fel svar ger draken +${REGEN_HEAL} HP tillbaka. Svara alltid rätt!`,
+  },
+  {
+    name: 'Primtalsgiganten',
+    emoji: '💀',
+    bg: 'from-[#0a0a0a] via-[#1a1010] to-[#0a0a0a]',
+    hpBarColor: 'from-gray-500 to-gray-300',
+    maxHp: 180,
+    mechanic: 'shield',
+    types: ['fill-in'],
+    mechanicLabel: '🛡️ Sköldsystem',
+    mechanicDesc: 'Jätten har sköld! Kräver 2 rätt i rad – första träffen spräcker skölden, andra gör skada!',
+  },
 ];
 
 type Phase = 'intro' | 'playing' | 'victory' | 'defeat';
@@ -71,10 +129,11 @@ export default function BossBattleGame() {
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
-  const [feedback, setFeedback] = useState<'hit' | 'hurt' | null>(null);
+  const [feedback, setFeedback] = useState<FeedbackType>(null);
   const [bossShake, setBossShake] = useState(false);
   const [playerShake, setPlayerShake] = useState(false);
   const [timings, setTimings] = useState<number[]>([]);
+  const [consecutiveCorrect, setConsecutiveCorrect] = useState(0);
   const questionStartRef = useRef(Date.now());
 
   const currentEx = exercises[currentIdx];
@@ -84,7 +143,7 @@ export default function BossBattleGame() {
   // ── Start ────────────────────────────────────────────────────────────────
 
   const startGame = useCallback(() => {
-    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, ['multiple-choice', 'fill-in', 'true-false'], worldGradeRange);
+    const pool = getGameExercisePool(grade, gameLevel, exerciseCount, boss.types, worldGradeRange);
     setExercises(pool);
     setCurrentIdx(0);
     setResults([]);
@@ -96,8 +155,9 @@ export default function BossBattleGame() {
     setPlayerHp(100);
     setBossHp(boss.maxHp);
     setTimings([]);
+    setConsecutiveCorrect(0);
     setPhase('playing');
-  }, [grade, gameLevel, exerciseCount, boss.maxHp]);
+  }, [grade, gameLevel, exerciseCount, boss]);
 
   // ── Load options ──────────────────────────────────────────────────────────
 
@@ -125,28 +185,53 @@ export default function BossBattleGame() {
       setStreak(newStreak);
       setBestStreak(b => Math.max(b, newStreak));
       setScore(s => s + currentEx.points + newStreak * 5);
-      setFeedback('hit');
       setBossShake(true);
-      setBossHp(hp => {
-        const newHp = Math.max(0, hp - playerDamage);
-        return newHp;
-      });
       setTimeout(() => setBossShake(false), 500);
+
+      if (boss.mechanic === 'shield') {
+        const newConsec = consecutiveCorrect + 1;
+        if (newConsec < 2) {
+          setConsecutiveCorrect(newConsec);
+          setFeedback('shield-crack');
+          // No HP damage yet — shield absorbed the hit
+        } else {
+          setConsecutiveCorrect(0);
+          setFeedback('hit');
+          setBossHp(hp => Math.max(0, hp - playerDamage));
+        }
+      } else if (boss.mechanic === 'combo') {
+        const newConsec = consecutiveCorrect + 1;
+        setConsecutiveCorrect(newConsec);
+        const isComboHit = newConsec % 3 === 0;
+        const dmg = isComboHit ? playerDamage * 2 : playerDamage;
+        setFeedback(isComboHit ? 'combo' : 'hit');
+        setBossHp(hp => Math.max(0, hp - dmg));
+      } else {
+        // standard & regen: straightforward damage
+        setFeedback('hit');
+        setBossHp(hp => Math.max(0, hp - playerDamage));
+      }
     } else {
       setStreak(0);
-      setFeedback('hurt');
+      if (boss.mechanic === 'shield' || boss.mechanic === 'combo') {
+        setConsecutiveCorrect(0);
+      }
       setPlayerShake(true);
-      setPlayerHp(hp => {
-        const newHp = Math.max(0, hp - bossDamage);
-        return newHp;
-      });
       setTimeout(() => setPlayerShake(false), 500);
+      setPlayerHp(hp => Math.max(0, hp - bossDamage));
+
+      if (boss.mechanic === 'regen') {
+        setFeedback('regen');
+        setBossHp(hp => Math.min(boss.maxHp, hp + REGEN_HEAL));
+      } else {
+        setFeedback('hurt');
+      }
     }
 
     setTimeout(() => advanceOrEnd(isCorrect), 1000);
   };
 
-  const advanceOrEnd = (lastCorrect: boolean) => {
+  const advanceOrEnd = (_lastCorrect: boolean) => {
     setBossHp(bHp => {
       setPlayerHp(pHp => {
         if (bHp <= 0) { setPhase('victory'); return pHp; }
@@ -154,7 +239,6 @@ export default function BossBattleGame() {
         setCurrentIdx(i => {
           const next = i + 1;
           if (next >= exercises.length) {
-            // End: victory if boss HP < player HP, else defeat
             setPhase(bHp < pHp ? 'victory' : 'defeat');
             return i;
           }
@@ -193,17 +277,17 @@ export default function BossBattleGame() {
 
   if (phase === 'intro') {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
+      <div className={`min-h-screen bg-gradient-to-b ${boss.bg}`}>
         <AppHeader />
         <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16">
           <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center max-w-sm">
             <div className="text-8xl mb-4 animate-bounce">{boss.emoji}</div>
             <h1 className="text-3xl font-black text-white mb-1">Boss Battle!</h1>
             <p className="text-purple-300 text-sm mb-2 font-bold">{boss.name} väntar...</p>
-            <p className="text-indigo-300 text-sm mb-6 leading-relaxed">
-              Rätt svar skadar bossen. Fel svar och du tar skada!
-              Besegra bossen innan ditt HP tar slut.
-            </p>
+            <div className="bg-white/10 rounded-xl px-4 py-2 mb-3 inline-block">
+              <p className="text-yellow-300 text-sm font-bold">{boss.mechanicLabel}</p>
+            </div>
+            <p className="text-indigo-300 text-sm mb-6 leading-relaxed">{boss.mechanicDesc}</p>
             <div className="bg-white/10 rounded-2xl p-4 mb-6 text-sm space-y-2">
               <div className="flex justify-between text-white/80">
                 <span>Bossens HP</span><span className="font-bold text-red-400">{boss.maxHp}</span>
@@ -241,7 +325,7 @@ export default function BossBattleGame() {
     const isVictory = phase === 'victory';
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
+      <div className={`min-h-screen bg-gradient-to-b ${boss.bg}`}>
         <AppHeader />
         <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16">
           <motion.div initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="text-center max-w-sm w-full">
@@ -295,24 +379,45 @@ export default function BossBattleGame() {
   const playerHpPct = playerHp;
   const bossHpPct = (bossHp / boss.maxHp) * 100;
 
+  let mechanicIndicator: React.ReactNode = null;
+  if (boss.mechanic === 'shield') {
+    mechanicIndicator = consecutiveCorrect === 0
+      ? <span className="text-blue-300 text-xs font-bold">🛡️ Sköld aktiv – kräver 2 rätt i rad</span>
+      : <span className="text-yellow-300 text-xs font-bold animate-pulse">⚡ Sköld spräckt! Slå nu!</span>;
+  } else if (boss.mechanic === 'combo') {
+    const comboPos = consecutiveCorrect % 3;
+    mechanicIndicator = (
+      <span className="text-purple-300 text-xs font-bold">
+        ✨ Kombo: {comboPos}/3{comboPos === 2 ? ' – Besvärjelse nästa!' : ''}
+      </span>
+    );
+  } else if (boss.mechanic === 'regen') {
+    mechanicIndicator = <span className="text-cyan-300 text-xs font-bold">❄️ Fel svar läker draken +{REGEN_HEAL} HP</span>;
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0f0e2e] via-[#1a1840] to-[#0f0e2e]">
+    <div className={`min-h-screen bg-gradient-to-b ${boss.bg}`}>
       <AppHeader />
       <div className="max-w-lg mx-auto px-4 pt-20 pb-8">
-        {/* Boss */}
-        <div className="mb-4">
+        {/* Boss HP */}
+        <div className="mb-1">
           <div className="flex justify-between text-xs text-white/60 mb-1">
             <span className="font-bold text-red-300">{boss.name} {boss.emoji}</span>
             <span>{bossHp}/{boss.maxHp} HP</span>
           </div>
           <div className="h-3 bg-white/10 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-red-600 to-red-400 rounded-full"
+              className={`h-full bg-gradient-to-r ${boss.hpBarColor} rounded-full`}
               animate={{ width: `${bossHpPct}%` }}
               transition={{ duration: 0.4 }}
             />
           </div>
         </div>
+
+        {/* Mechanic indicator */}
+        {mechanicIndicator && (
+          <div className="text-center mb-2">{mechanicIndicator}</div>
+        )}
 
         {/* Boss sprite */}
         <motion.div
@@ -323,16 +428,31 @@ export default function BossBattleGame() {
           <span className={`text-8xl ${bossShake ? 'grayscale' : ''}`}>{boss.emoji}</span>
         </motion.div>
 
-        {/* Damage flash */}
+        {/* Damage / effect flash */}
         <AnimatePresence>
           {feedback === 'hit' && (
-            <motion.div initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -30 }} exit={{}} className="text-center text-red-400 font-black text-xl mb-1">
+            <motion.div key="hit" initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -30 }} exit={{}} className="text-center text-red-400 font-black text-xl mb-1">
               -{playerDamage} HP 💥
             </motion.div>
           )}
+          {feedback === 'combo' && (
+            <motion.div key="combo" initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -40 }} exit={{}} className="text-center text-yellow-300 font-black text-2xl mb-1">
+              ✨ BESVÄRJELSE! -{playerDamage * 2} HP
+            </motion.div>
+          )}
+          {feedback === 'shield-crack' && (
+            <motion.div key="shield" initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -30 }} exit={{}} className="text-center text-blue-300 font-black text-xl mb-1">
+              🛡️ Sköld spräckt!
+            </motion.div>
+          )}
           {feedback === 'hurt' && (
-            <motion.div initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -30 }} exit={{}} className="text-center text-emerald-400 font-black text-xl mb-1">
+            <motion.div key="hurt" initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -30 }} exit={{}} className="text-center text-emerald-400 font-black text-xl mb-1">
               Du tar -{bossDamage} HP 😣
+            </motion.div>
+          )}
+          {feedback === 'regen' && (
+            <motion.div key="regen" initial={{ opacity: 1, y: 0 }} animate={{ opacity: 0, y: -30 }} exit={{}} className="text-center text-cyan-300 font-black text-lg mb-1">
+              Du tar -{bossDamage} HP 😣 · Draken läker +{REGEN_HEAL} HP ❄️
             </motion.div>
           )}
         </AnimatePresence>

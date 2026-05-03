@@ -18,7 +18,7 @@ function MysteryPopup({ description, onClose }: { description: string; onClose: 
       <div
         className="rounded-3xl p-8 max-w-sm w-full text-center"
         style={{
-          background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)',
+          backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed',
           border: '3px solid #a855f7',
           boxShadow: '0 8px 40px rgba(168,85,247,0.35)',
         }}
@@ -96,7 +96,7 @@ export default function TopicResult({ topic }: { topic: Topic }) {
   }, [visible, score]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ background: 'linear-gradient(160deg, #120318 0%, #1e0828 35%, #2d0d1e 65%, #160520 100%)' }}>
+    <div className="min-h-screen flex flex-col items-center justify-start pt-24 pb-10 px-4" style={{ backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}>
       <Confetti active={showConfetti} duration={3000} />
       <AppHeader />
       <div className={`w-full max-w-md transition-all duration-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -147,6 +147,28 @@ export default function TopicResult({ topic }: { topic: Topic }) {
             </p>
             <p className="text-amber-400 text-sm">Nivå {points.level} – {points.streak} dagars streak 🔥</p>
           </div>
+
+          {/* Repeat attempt notice */}
+          {pendingChestResult && pendingChestResult.attemptNumber > 1 && (() => {
+            const n = pendingChestResult.attemptNumber;
+            const pctMap: Record<number, string> = { 2: '50%', 3: '25%', 4: '10%' };
+            const pct = pctMap[n];
+            return (
+              <div className="bg-blue-500/15 border border-blue-400/40 rounded-2xl p-4 mb-4 text-center">
+                {pct ? (
+                  <>
+                    <p className="text-blue-300 font-bold text-sm">🔁 Du har gjort den här övningen {n - 1} gång{n > 2 ? 'er' : ''} tidigare</p>
+                    <p className="text-blue-400/80 text-xs mt-1">Du fick {pct} av full poäng – gör nya övningar för att tjäna mer!</p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-blue-300 font-bold text-sm">🔁 Du har gjort den här övningen {n - 1} gånger tidigare</p>
+                    <p className="text-blue-400/80 text-xs mt-1">Inga poäng den här gången – prova ett nytt ämne!</p>
+                  </>
+                )}
+              </div>
+            );
+          })()}
 
           {/* New achievements */}
           {newAchievements.length > 0 && (

@@ -51,6 +51,15 @@ export const ACHIEVEMENTS: Achievement[] = [
     condition: (s) => s.totalCorrect >= 10,
   },
   {
+    id: 'fifty-correct',
+    title: 'Halvvägs till hundra',
+    description: 'Svara rätt på 50 uppgifter',
+    icon: '🌿',
+    color: 'from-teal-300 to-emerald-500',
+    rarity: 'common',
+    condition: (s) => s.totalCorrect >= 50,
+  },
+  {
     id: 'perfect-topic',
     title: 'Perfekt!',
     description: 'Klara ett ämne med 100% rätt',
@@ -152,6 +161,24 @@ export const ACHIEVEMENTS: Achievement[] = [
     rarity: 'rare',
     condition: (s) => s.progress.some(p => p.stars === 3),
   },
+  {
+    id: 'five-stars',
+    title: 'Femstjärnig',
+    description: 'Få 3 stjärnor på 5 olika ämnesområden',
+    icon: '🌠',
+    color: 'from-amber-300 to-yellow-500',
+    rarity: 'rare',
+    condition: (s) => s.progress.filter(p => p.stars === 3).length >= 5,
+  },
+  {
+    id: 'points-500',
+    title: 'Poängsamlare',
+    description: 'Samla totalt 500 poäng',
+    icon: '💰',
+    color: 'from-green-400 to-emerald-600',
+    rarity: 'rare',
+    condition: (s) => s.points.total >= 500,
+  },
   // EPIC
   {
     id: 'rimlighetsmästaren',
@@ -212,6 +239,24 @@ export const ACHIEVEMENTS: Achievement[] = [
     rarity: 'epic',
     condition: (s) => s.completedTopics >= 10,
   },
+  {
+    id: 'ten-stars',
+    title: 'Stjärnsamlare',
+    description: 'Få 3 stjärnor på 10 olika ämnesområden',
+    icon: '✨',
+    color: 'from-yellow-400 to-amber-600',
+    rarity: 'epic',
+    condition: (s) => s.progress.filter(p => p.stars === 3).length >= 10,
+  },
+  {
+    id: 'points-2000',
+    title: 'Poängjägaren',
+    description: 'Samla totalt 2 000 poäng',
+    icon: '🏦',
+    color: 'from-emerald-500 to-green-700',
+    rarity: 'epic',
+    condition: (s) => s.points.total >= 2000,
+  },
   // LEGENDARY
   {
     id: 'fullständig-rimlighet',
@@ -268,6 +313,15 @@ export const ACHIEVEMENTS: Achievement[] = [
     color: 'from-cyan-400 via-blue-500 to-purple-600',
     rarity: 'legendary',
     condition: (s) => s.totalCorrect >= 1000,
+  },
+  {
+    id: 'points-5000',
+    title: 'Poängkungen',
+    description: 'Samla totalt 5 000 poäng',
+    icon: '👑',
+    color: 'from-amber-400 via-yellow-500 to-orange-600',
+    rarity: 'legendary',
+    condition: (s) => s.points.total >= 5000,
   },
 ];
 
