@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 const JAKT_APPS = [
-  { name: 'Svenskajakten', icon: '🇸🇪', url: 'https://svenskajakten.vercel.app' },
-  { name: 'Mattejakten', icon: '🔢', url: 'https://mattejakten.vercel.app' },
-  { name: 'Engelskajakten', icon: '🇬🇧', url: 'https://engelskajakten.vercel.app' },
+  { name: 'Svenskajakten', icon: 'SV', iconStyle: 'bg-blue-500 text-yellow-400', url: 'https://svenskajakten.vercel.app' },
+  { name: 'Mattejakten', icon: '🔢', iconStyle: '', url: 'https://mattejakten.vercel.app' },
+  { name: 'Engelskajakten', icon: 'EN', iconStyle: 'bg-red-600 text-white', url: 'https://engelskajakten.vercel.app' },
 ];
 
 export const JaktLinks: React.FC = () => {
@@ -22,15 +22,11 @@ export const JaktLinks: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative inline-block" ref={dropdownRef}>
+    <div className="relative inline-block z-50" ref={dropdownRef}>
       <button
         type="button"
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          setIsOpen(!isOpen);
-        }}
-        className="flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer pointer-events-auto select-none"
       >
         <span>🔗</span>
         <span>Jaktlänkar</span>
@@ -48,7 +44,11 @@ export const JaktLinks: React.FC = () => {
               className="flex items-center gap-3 px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              <span className="text-xl">{app.icon}</span>
+              {app.iconStyle ? (
+                <span className={`text-xs font-bold w-6 h-6 flex items-center justify-center rounded ${app.iconStyle}`}>{app.icon}</span>
+              ) : (
+                <span className="text-xl">{app.icon}</span>
+              )}
               <span className="text-slate-700 dark:text-slate-200 font-medium">{app.name}</span>
               <span className="text-slate-400 ml-auto">↗</span>
             </a>

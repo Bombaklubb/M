@@ -35812,5 +35812,415 @@
       "generatedAt": "2026-04-20T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "akgy-mj-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Musik",
+    "title": "Michael Jackson och popmusikens förändring",
+    "text": "Michael Jackson var en av de mest inflytelserika artisterna i modern musikhistoria. Han föddes 1958 i Gary, Indiana, och började sin karriär som barn i gruppen The Jackson 5 tillsammans med sina syskon. Gruppen blev snabbt framgångsrik, men det var som soloartist som Jackson verkligen förändrade musikindustrin. Hans album \"Thriller\", som släpptes 1982, är fortfarande ett av de mest sålda albumen genom tiderna. Det innehöll låtar som kombinerade pop, rock och funk, vilket bidrog till att bredda popmusikens uttryck.\n\nEn viktig del av Michael Jacksons framgång var hans förmåga att använda musikvideor som ett konstnärligt verktyg. Videon till \"Thriller\" var mer som en kortfilm än en traditionell musikvideo och satte en ny standard för hur musik kunde presenteras visuellt. Detta bidrog till att musikkanalen MTV började visa fler videor med svarta artister, vilket hade stor betydelse för representation inom populärkulturen.\n\nJackson var också känd för sin unika dansstil, särskilt rörelsen \"moonwalk\", som blev ikonisk. Hans scenframträdanden kombinerade avancerad koreografi med starka visuella effekter, vilket inspirerade generationer av artister.\n\nTrots sina framgångar var Michael Jacksons liv också präglat av kontroverser och intensiv mediebevakning. Diskussioner om hans privatliv och förändringar i hans utseende bidrog till en komplex bild av honom som person.\n\nSammanfattningsvis var Michael Jackson inte bara en artist utan också en kulturell kraft som förändrade hur musik skapades, framfördes och upplevdes globalt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad var en viktig faktor bakom Michael Jacksons stora framgång som soloartist?",
+        "options": [
+          "Hans användning av musikvideor som konstform",
+          "Hans arbete som filmregissör",
+          "Hans politiska engagemang",
+          "Hans samarbete med klassiska kompositörer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket album gjorde Michael Jackson till en global superstjärna?",
+        "options": [
+          "Bad",
+          "Thriller",
+          "Dangerous",
+          "Off the Wall"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur bidrog \"Thriller\"-videon till musikindustrin?",
+        "options": [
+          "Den gjorde konserter kortare",
+          "Den minskade musikens betydelse",
+          "Den förändrade synen på musikvideor",
+          "Den ersatte radio som medium"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken effekt hade Jacksons videor på MTV?",
+        "options": [
+          "Kanalen slutade visa musikvideor",
+          "Färre artister fick utrymme",
+          "Fokus flyttades till nyheter",
+          "Fler svarta artister började visas"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad var \"moonwalk\"?",
+        "options": [
+          "En dansrörelse kopplad till Jackson",
+          "En låt från albumet Thriller",
+          "En typ av scenbelysning",
+          "En musikstil från 1980-talet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket huvudtema lyfts i texten?",
+        "options": [
+          "Jacksons familjeliv",
+          "Hans påverkan på musik och kultur",
+          "Hans utbildning",
+          "Hans arbete som producent"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 603,
+      "fingerprint": "akgy-mj-001",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-mj-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Kontroverser och offentlig bild",
+    "text": "Michael Jacksons liv var inte bara fyllt av framgång utan också av kontroverser som påverkade hur han uppfattades av allmänheten. Under 1990-talet började medier rapportera om anklagelser mot honom, vilket ledde till omfattande rättsprocesser och debatter i samhället. Även om han aldrig dömdes i flera av fallen, påverkade dessa händelser hans rykte kraftigt.\n\nSamtidigt var Jackson känd för sitt ovanliga privatliv. Han levde under lång tid på sin ranch Neverland, som var utformad som en nöjespark. Detta bidrog till bilden av honom som en excentrisk person. Mediernas intensiva bevakning gjorde att varje aspekt av hans liv granskades, från hans relationer till förändringar i hans utseende.\n\nFörändringarna i hans utseende väckte särskilt stor uppmärksamhet. Jackson själv förklarade att han led av hudsjukdomen vitiligo, vilket påverkar hudens pigment. Trots detta fortsatte spekulationerna kring hans utseende, vilket visar hur kändisskap kan leda till att privatlivet suddas ut.\n\nDet är viktigt att förstå att Jacksons offentliga bild formades både av hans egna val och av mediernas framställning. Denna dubbla påverkan gör det svårt att avgöra vad som är fakta och vad som är tolkning.\n\nTexten belyser hur kändisskap kan innebära både framgång och stora personliga utmaningar, särskilt när gränsen mellan privat och offentligt liv försvinner.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bidrog mest till de kontroverser som omgav Michael Jackson?",
+        "options": [
+          "Anklagelser och rättsprocesser",
+          "Hans musikstil",
+          "Hans turnéer",
+          "Hans samarbeten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad var Neverland?",
+        "options": [
+          "En musikstudio",
+          "Hans ranch utformad som nöjespark",
+          "En konsertturné",
+          "Ett skivbolag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är vitiligo enligt texten?",
+        "options": [
+          "En dansstil",
+          "En sjukdom som påverkar rösten",
+          "En hudsjukdom som påverkar pigment",
+          "En psykisk sjukdom"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade medierna Jacksons liv?",
+        "options": [
+          "De ignorerade honom",
+          "De minskade hans popularitet direkt",
+          "De skyddade hans privatliv",
+          "De granskade hans liv intensivt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar texten om kändisskap?",
+        "options": [
+          "Att det alltid är positivt",
+          "Att det saknar påverkan",
+          "Att det innebär både fördelar och problem",
+          "Att det är lätt att hantera"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Musikindustrins utveckling",
+          "Kändisskapets komplexitet",
+          "Teknologins roll",
+          "Utbildningens betydelse"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 602,
+      "fingerprint": "akgy-mj-002",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-mj-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "Musikaliska innovationer",
+    "text": "Michael Jackson var inte bara en framgångsrik artist utan också en innovatör inom musikproduktion. Han arbetade nära producenter som Quincy Jones för att skapa ett nytt sound som kombinerade olika genrer. Genom att blanda pop, funk, rock och R&B skapade han musik som nådde en bred publik.\n\nEn viktig aspekt av hans arbete var användningen av studioteknik. Jackson experimenterade med inspelningstekniker, ljudlager och rytmiska strukturer för att skapa ett dynamiskt och detaljerat ljud. Detta bidrog till att höja standarden för musikproduktion under 1980-talet.\n\nHan var också noggrann med varje detalj i sina låtar. Från rytmsektioner till vokala arrangemang arbetade han intensivt för att uppnå perfektion. Denna arbetsmetod inspirerade många andra artister och producenter.\n\nJacksons musik nådde också över kulturella gränser. Hans låtar spelades över hela världen och bidrog till att globalisera popmusiken. Detta gjorde honom till en av de första verkligt globala superstjärnorna.\n\nSammanfattningsvis visar hans arbete hur teknisk innovation och konstnärlig vision kan kombineras för att skapa musik som både är kommersiellt framgångsrik och konstnärligt betydelsefull.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade Michael Jacksons musikproduktion?",
+        "options": [
+          "Blandning av flera genrer",
+          "Enbart klassisk musik",
+          "Fokus på akustiska instrument",
+          "Minimal användning av teknik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vem samarbetade Jackson med i produktionen?",
+        "options": [
+          "Rick Rubin",
+          "Quincy Jones",
+          "Dr. Dre",
+          "Max Martin"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bidrog hans användning av teknik till?",
+        "options": [
+          "Mindre variation i musik",
+          "Kortare låtar",
+          "Högre standard i produktion",
+          "Färre lyssnare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur beskrivs hans arbetsmetod?",
+        "options": [
+          "Slumpmässig",
+          "Snabb och enkel",
+          "Oplanerad",
+          "Detaljfokuserad och noggrann"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebar globaliseringen av hans musik?",
+        "options": [
+          "Den nådde publik över hela världen",
+          "Den spelades bara i USA",
+          "Den blev mindre populär",
+          "Den begränsades till radio"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Hans privatliv",
+          "Hans tekniska och musikaliska innovationer",
+          "Hans barndom",
+          "Hans ekonomi"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 600,
+      "fingerprint": "akgy-mj-003",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-mj-004",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Dans och scenframträdanden",
+    "text": "Michael Jacksons scenframträdanden var en central del av hans konstnärskap. Han kombinerade musik, dans och visuella effekter på ett sätt som förändrade publikens förväntningar på liveuppträdanden. Hans konserter var noggrant planerade och innehöll avancerad koreografi.\n\nEn av hans mest kända rörelser var \"moonwalk\", som gav illusionen av att han gled bakåt medan han rörde sig framåt. Denna rörelse blev snabbt en symbol för hans stil och kopierades av dansare världen över.\n\nJackson inspirerades av olika dansstilar, inklusive streetdance och klassisk scenkonst. Genom att kombinera dessa skapade han ett unikt uttryck. Hans förmåga att använda kroppen som ett instrument gjorde honom till en av de mest inflytelserika dansarna inom populärkulturen.\n\nTeknik spelade också en viktig roll i hans framträdanden. Ljus, scenografi och specialeffekter användes för att förstärka upplevelsen. Detta bidrog till att skapa en helhetsupplevelse för publiken.\n\nTexten visar hur Jacksons arbete inom dans och scenkonst bidrog till att förändra hur artister uppträder live.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade Jacksons scenframträdanden?",
+        "options": [
+          "Kombination av musik, dans och visuella effekter",
+          "Enbart sång utan rörelse",
+          "Improvisation utan planering",
+          "Fokus på publikens deltagande"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad är \"moonwalk\"?",
+        "options": [
+          "En låt",
+          "En dansrörelse",
+          "En scen",
+          "En musikstil"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilka influenser hade hans dans?",
+        "options": [
+          "Endast balett",
+          "Endast hiphop",
+          "Flera olika dansstilar",
+          "Inga influenser alls"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken roll hade teknik i hans framträdanden?",
+        "options": [
+          "Ingen roll",
+          "Den minskade effekten",
+          "Den ersatte dansen",
+          "Den förstärkte upplevelsen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Hur påverkade han andra dansare?",
+        "options": [
+          "Han inspirerade många världen över",
+          "Han begränsade utvecklingen",
+          "Han kritiserade andra",
+          "Han slutade uppträda tidigt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hans familj",
+          "Hans betydelse för dans och scenframträdanden",
+          "Hans ekonomi",
+          "Hans utbildning"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 598,
+      "fingerprint": "akgy-mj-004",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-mj-005",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Musik",
+    "title": "Arv och påverkan",
+    "text": "Michael Jacksons påverkan på musik och kultur är fortfarande tydlig långt efter hans död 2009. Många moderna artister hänvisar till honom som en viktig inspirationskälla, både musikaliskt och visuellt. Hans sätt att kombinera olika konstformer har blivit en modell för hur artister kan uttrycka sig.\n\nHans musik fortsätter att spelas globalt och når nya generationer av lyssnare. Genom digitala plattformar har hans verk fått nytt liv och blivit tillgängliga för en bredare publik. Detta visar hur teknologiska förändringar kan bidra till att bevara kulturellt arv.\n\nJacksons arbete har också påverkat frågor om representation och identitet inom populärkulturen. Hans framgång bidrog till att öppna dörrar för artister från olika bakgrunder.\n\nSamtidigt diskuteras hans arv ofta i relation till de kontroverser som omgav honom. Detta gör att hans eftermäle är komplext och föremål för olika tolkningar.\n\nTexten visar att Michael Jacksons betydelse inte bara ligger i hans musik utan också i hans långsiktiga påverkan på kultur och samhälle.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Hur påverkar Michael Jackson dagens artister?",
+        "options": [
+          "Han inspirerar dem",
+          "Han begränsar dem",
+          "Han ersätter dem",
+          "Han ignoreras"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur har digitala plattformar påverkat hans musik?",
+        "options": [
+          "De har minskat spridningen",
+          "De har gjort den mer tillgänglig",
+          "De har förstört kvaliteten",
+          "De har begränsat lyssnandet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bidrog hans framgång till inom kultur?",
+        "options": [
+          "Mindre mångfald",
+          "Färre artister",
+          "Ökad representation",
+          "Mindre innovation"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur beskrivs hans eftermäle?",
+        "options": [
+          "Enkelt och tydligt",
+          "Obetydligt",
+          "Kortvarigt",
+          "Komplext och omdiskuterat"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad är ett exempel på hans långsiktiga påverkan?",
+        "options": [
+          "Hans musik spelas fortfarande",
+          "Hans hus finns kvar",
+          "Hans kläder säljs",
+          "Hans familj är känd"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Hans barndom",
+          "Hans långvariga kulturella påverkan",
+          "Hans ekonomi",
+          "Hans utbildning"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 596,
+      "fingerprint": "akgy-mj-005",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
