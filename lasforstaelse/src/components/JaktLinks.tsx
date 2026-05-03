@@ -5,10 +5,6 @@ const JAKT_APPS = [
   { name: 'Mattejakten', icon: '🔢', iconStyle: '', url: 'https://mattejakten.vercel.app' },
   { name: 'Engelskajakten', icon: 'EN', iconStyle: 'bg-red-600 text-white', url: 'https://engelskajakten.vercel.app' },
 ];
-  { name: 'Svenskajakten', flagSrc: 'https://flagcdn.com/se.svg', url: 'https://svenskajakten.vercel.app' },
-  { name: 'Mattejakten', icon: '🔢', url: 'https://mattejakten.vercel.app' },
-  { name: 'Engelskajakten', flagSrc: 'https://flagcdn.com/gb.svg', url: 'https://engelskajakten.vercel.app' },
-] as const;
 
 export const JaktLinks: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,10 +49,6 @@ export const JaktLinks: React.FC = () => {
               ) : (
                 <span className="text-xl">{app.icon}</span>
               )}
-              {'flagSrc' in app
-                ? <img src={app.flagSrc} alt={app.name} className="w-7 h-5 rounded-sm object-cover shadow-sm" />
-                : <span className="text-xl">{app.icon}</span>
-              }
               <span className="text-slate-700 dark:text-slate-200 font-medium">{app.name}</span>
               <span className="text-slate-400 ml-auto">↗</span>
             </a>
