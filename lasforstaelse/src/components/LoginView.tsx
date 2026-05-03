@@ -192,7 +192,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
 
       {/* Jaktlänkar */}
       <motion.div
-        className="fixed bottom-2 right-3 text-xs"
+        className="fixed bottom-2 right-3 text-xs z-[100] pointer-events-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
