@@ -36468,5 +36468,251 @@
       "generatedAt": "2026-05-03T00:00:00.000Z",
       "model": "manual"
     }
+  },
+  {
+    "id": "akgy-borg-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Sport",
+    "title": "Björn Borg och den moderna tennisens framväxt",
+    "text": "Björn Borg framstår som en av de mest inflytelserika gestalterna inom modern tennis, inte enbart på grund av sina sportsliga meriter utan även genom sin betydelse för sportens professionalisering och globala genomslag. Under 1970-talet, en period präglad av kulturell och ekonomisk omvandling, bidrog Borg till att förändra hur tennis uppfattades – från en relativt elitistisk sport till ett massfenomen.\n\nBorgs spelstil kännetecknades av en ovanlig kombination av fysisk uthållighet, mental disciplin och teknisk innovation. Hans tvåhandsbackhand och extrema topspin var banbrytande i en tid då många spelare fortfarande använde mer traditionella slagtekniker. Dessa egenskaper gjorde honom särskilt framgångsrik på grus, vilket resulterade i sex segrar i Franska öppna, men även på gräs där han vann Wimbledon fem gånger i rad mellan 1976 och 1980.\n\nDet som särskilt utmärkte Borg var dock hans psykologiska kontroll. Hans lugn på banan, ofta beskrivet som närmast stoisk, kontrasterade mot motståndare som John McEnroe, vars emotionella spelstil skapade en dramatisk dynamik. Denna kontrast bidrog till att göra deras matcher till kulturella händelser som lockade en bred publik, både inom och utanför sportens traditionella kretsar.\n\nUtöver sina idrottsliga prestationer spelade Borg en central roll i tennisens kommersialisering. Hans image, präglad av långt hår och pannband, gjorde honom till en internationell ikon och bidrog till att locka sponsorer och mediauppmärksamhet. Detta markerade en övergång till en mer marknadsorienterad idrottsvärld där spelare blev varumärken.\n\nTrots sin framgång valde Borg att avsluta sin karriär relativt tidigt, vid 26 års ålder. Detta beslut har tolkats på olika sätt, från utbrändhet till en medveten strategi för att bevara sitt arv. Oavsett motiv bidrog hans tidiga pensionering till att förstärka hans mytiska status inom tennisens historia.\n\nSammanfattningsvis kan Björn Borg betraktas som en nyckelfigur i övergången till modern tennis. Genom sin spelstil, sitt psyke och sin roll i sportens kommersialisering förändrade han inte bara spelet på banan utan även dess kulturella och ekonomiska kontext.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad var en central aspekt av Borgs spelstil enligt texten?",
+        "options": [
+          "Hans fokus på nätspel",
+          "Hans kombination av uthållighet och topspin",
+          "Hans aggressiva serve-och-volley",
+          "Hans defensiva passivitet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur bidrog Borg till tennisens utveckling?",
+        "options": [
+          "Genom att minska sportens popularitet",
+          "Genom att bevara traditionella spelsätt",
+          "Genom att bidra till dess globalisering och kommersialisering",
+          "Genom att avskaffa professionella turneringar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad kännetecknade Borgs psykologiska förhållningssätt?",
+        "options": [
+          "Impulsivitet",
+          "Aggressivitet",
+          "Stoisk kontroll",
+          "Osäkerhet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken effekt hade rivaliteten med McEnroe?",
+        "options": [
+          "Den minskade publikintresset",
+          "Den gjorde matcher till kulturella händelser",
+          "Den ledde till färre turneringar",
+          "Den förändrade reglerna i tennis"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför anses Borgs pensionering vara betydelsefull?",
+        "options": [
+          "Den markerade slutet på tennis",
+          "Den förstärkte hans mytiska status",
+          "Den minskade hans popularitet",
+          "Den ökade hans tävlingsnivå"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket huvudbudskap förmedlar texten?",
+        "options": [
+          "Borg var en medioker spelare",
+          "Tennis har inte förändrats",
+          "Borg förändrade både spelet och dess kontext",
+          "Endast teknik avgör framgång"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 666,
+      "fingerprint": "akgy-borg-001",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-borg-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Kultur",
+    "title": "Björn Borg som kulturell ikon",
+    "text": "Under sin aktiva karriär blev Björn Borg mer än en framstående idrottare; han utvecklades till en kulturell symbol som speglade sin tids ideal och förändringar. I en era präglad av individualism och globalisering kom Borg att representera en ny typ av offentlig personlighet där idrott, mode och media sammanflätades.\n\nHans visuella uttryck, med karakteristiskt pannband och långt hår, bröt mot tidigare normer inom tennisens konservativa miljö. Detta bidrog till att attrahera en yngre publik och gjorde sporten mer tillgänglig för bredare samhällsgrupper. Borg blev därmed en brygga mellan tradition och modernitet.\n\nMedialt framställdes Borg ofta som en gåtfull figur. Hans reserverade personlighet skapade ett intresse som förstärktes av hans framgångar. Denna kombination av prestation och mystik gjorde honom till ett attraktivt objekt för reklam och internationell exponering.\n\nSamtidigt väckte hans framgång frågor om identitet och nationell stolthet. I Sverige blev Borg en symbol för nationell framgång under en period då landet sökte sin plats i en globaliserad värld. Hans prestationer användes ofta i diskussioner om svensk disciplin, arbetsmoral och innovationsförmåga.\n\nDet är också relevant att analysera Borg ur ett genusperspektiv. Hans framtoning utmanade vissa traditionella maskulinitetsideal genom sin återhållsamhet och emotionella kontroll. Detta gjorde honom till en komplex figur som kunde tolkas på olika sätt beroende på betraktarens perspektiv.\n\nSammanfattningsvis kan Björn Borg förstås som en kulturell ikon vars betydelse sträcker sig långt bortom tennisbanan. Genom sin image, sitt beteende och sin samtid bidrog han till att forma hur idrottare uppfattas i det moderna samhället.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Hur beskrivs Borgs roll i samhället?",
+        "options": [
+          "Som enbart idrottare",
+          "Som kulturell symbol",
+          "Som politisk ledare",
+          "Som tränare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad bidrog hans utseende till?",
+        "options": [
+          "Minskad popularitet",
+          "Ökad konservatism",
+          "Attraktion av yngre publik",
+          "Striktare regler"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur framställdes Borg i media?",
+        "options": [
+          "Som högljudd",
+          "Som gåtfull",
+          "Som aggressiv",
+          "Som ointressant"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken nationell betydelse hade Borg?",
+        "options": [
+          "Han ignorerades i Sverige",
+          "Han blev symbol för nationell framgång",
+          "Han skapade politiska konflikter",
+          "Han minskade intresset för sport"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan Borg analyseras ur genusperspektiv?",
+        "options": [
+          "Som traditionellt maskulin",
+          "Som utmanande vissa ideal",
+          "Som irrelevant",
+          "Som extremt aggressiv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudidé?",
+        "options": [
+          "Borg var okänd",
+          "Borgs betydelse var endast sportslig",
+          "Borg påverkade kultur och samhälle",
+          "Borg förändrade reglerna"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 659,
+      "fingerprint": "akgy-borg-002",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
+  },
+  {
+    "id": "akgy-borg-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Arv, identitet och eftermäle",
+    "text": "Björn Borgs eftermäle inom tennis och populärkultur är ett komplext fenomen som omfattar både hans prestationer och den symboliska betydelse han kom att bära. Efter sin tidiga pensionering har hans arv fortsatt att diskuteras och omtolkas i relation till förändringar inom sport, media och samhälle.\n\nEn central aspekt av Borgs arv är hans inflytande på spelstilen inom modern tennis. Många av dagens spelare använder tekniker som liknar hans topspinbaserade grundslag, vilket visar hur hans innovationer har institutionaliserats inom sporten. Detta illustrerar hur en individs bidrag kan få långvariga konsekvenser för ett helt fält.\n\nSamtidigt har Borgs liv efter karriären präglats av både framgångar och motgångar. Hans försök att etablera sig som affärsman har mött varierande resultat, vilket ger en mer nyanserad bild av honom som individ. Detta visar att idrottslig framgång inte nödvändigtvis garanterar framgång inom andra områden.\n\nI ett bredare perspektiv kan Borgs eftermäle analyseras utifrån begreppet identitet. För många representerar han en specifik tidsepok, medan andra ser honom som en tidlös symbol för disciplin och fokus. Dessa olika tolkningar speglar hur historiska figurer ständigt omförhandlas i ljuset av nya värderingar.\n\nDet är också viktigt att inkludera olika perspektiv i analysen av Borg. Yngre generationer, personer med olika kulturella bakgrunder och individer med varierande könsidentiteter kan tolka hans betydelse på olika sätt. Detta understryker vikten av mångfald i historiska och kulturella analyser.\n\nAvslutningsvis visar Björn Borgs eftermäle hur en individ kan få en bestående påverkan långt bortom sin aktiva period. Genom att analysera hans liv och karriär kan vi få insikter i hur sport, identitet och kultur samverkar i skapandet av historiska narrativ.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad handlar Borgs eftermäle om enligt texten?",
+        "options": [
+          "Endast hans vinster",
+          "Hans prestationer och symboliska betydelse",
+          "Hans familjeliv",
+          "Hans tränare"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur har Borg påverkat modern tennis?",
+        "options": [
+          "Genom att avskaffa topspin",
+          "Genom att införa nya regler",
+          "Genom tekniker som fortfarande används",
+          "Genom att minska tävlingar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar hans liv efter karriären?",
+        "options": [
+          "Att alla lyckas i affärer",
+          "Att framgång alltid är konstant",
+          "Att framgång kan variera",
+          "Att sport är irrelevant"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur kan hans identitet tolkas?",
+        "options": [
+          "Endast historiskt irrelevant",
+          "Som en symbol med olika betydelser",
+          "Som statisk och oföränderlig",
+          "Som ointressant"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är mångfald viktig i analysen?",
+        "options": [
+          "För att förenkla tolkningar",
+          "För att inkludera olika perspektiv",
+          "För att minska förståelse",
+          "För att skapa en enda sanning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är textens huvudsakliga budskap?",
+        "options": [
+          "Borg saknar betydelse idag",
+          "Endast sport är viktigt",
+          "Eftermäle formas av flera faktorer",
+          "Historien är oföränderlig"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 655,
+      "fingerprint": "akgy-borg-003",
+      "generatedAt": "2026-05-03T00:00:00.000Z",
+      "model": "manual"
+    }
   }
 ]
