@@ -1,0 +1,158 @@
+import { Achievement } from '../types';
+
+export const ACHIEVEMENTS: Achievement[] = [
+  // Common
+  {
+    id: 'first_chapter',
+    title: 'Första kapitlet!',
+    description: 'Klara ditt första kapitel.',
+    icon: '🌟',
+    color: 'from-yellow-400 to-amber-500',
+    rarity: 'common',
+    condition: (s) => s.completedChapters >= 1,
+  },
+  {
+    id: 'ten_correct',
+    title: 'Tio rätt',
+    description: 'Svara rätt på 10 frågor totalt.',
+    icon: '✅',
+    color: 'from-green-400 to-emerald-500',
+    rarity: 'common',
+    condition: (s) => s.totalCorrect >= 10,
+  },
+  {
+    id: 'three_chapters',
+    title: 'Ivrig elev',
+    description: 'Klara 3 kapitel.',
+    icon: '📖',
+    color: 'from-blue-400 to-indigo-500',
+    rarity: 'common',
+    condition: (s) => s.completedChapters >= 3,
+  },
+  {
+    id: 'streak_3',
+    title: 'Veckostjärna',
+    description: 'Använd appen 3 dagar i rad.',
+    icon: '🔥',
+    color: 'from-orange-400 to-red-500',
+    rarity: 'common',
+    condition: (s) => s.points.streak >= 3,
+  },
+  {
+    id: 'fifty_correct',
+    title: 'Kunskapsbank',
+    description: 'Svara rätt på 50 frågor.',
+    icon: '🧠',
+    color: 'from-purple-400 to-violet-500',
+    rarity: 'common',
+    condition: (s) => s.totalCorrect >= 50,
+  },
+  // Rare
+  {
+    id: 'historian',
+    title: 'Historiker',
+    description: 'Klara alla Historia-kapitel i åk 5.',
+    icon: '⚔️',
+    color: 'from-amber-500 to-orange-600',
+    rarity: 'rare',
+    condition: (s) => s.subjectCounts.historia >= 2,
+  },
+  {
+    id: 'geographer',
+    title: 'Geograf',
+    description: 'Klara alla Geografi-kapitel i åk 5.',
+    icon: '🌍',
+    color: 'from-emerald-500 to-teal-600',
+    rarity: 'rare',
+    condition: (s) => s.subjectCounts.geografi >= 3,
+  },
+  {
+    id: 'theologian',
+    title: 'Religionsforskare',
+    description: 'Klara alla Religionskunskap-kapitel i åk 5.',
+    icon: '🕊️',
+    color: 'from-violet-500 to-purple-600',
+    rarity: 'rare',
+    condition: (s) => s.subjectCounts.religion >= 3,
+  },
+  {
+    id: 'civic_hero',
+    title: 'Samhällskämpe',
+    description: 'Klara alla Samhällskunskap-kapitel i åk 5.',
+    icon: '🏛️',
+    color: 'from-blue-500 to-cyan-600',
+    rarity: 'rare',
+    condition: (s) => s.subjectCounts.samhalle >= 3,
+  },
+  {
+    id: 'perfect_score',
+    title: 'Prickskytt',
+    description: 'Få 100% på ett kapitel.',
+    icon: '🎯',
+    color: 'from-red-400 to-pink-500',
+    rarity: 'rare',
+    condition: (s) => s.progress.some(p => p.bestScore === 100),
+  },
+  {
+    id: 'three_subjects',
+    title: 'Allkonstnär',
+    description: 'Klara minst ett kapitel i 3 olika ämnen.',
+    icon: '🎨',
+    color: 'from-pink-400 to-rose-500',
+    rarity: 'rare',
+    condition: (s) => {
+      const subjects = new Set(s.progress.filter(p => p.completed).map(p => {
+        // subjectId is embedded in chapterId: ak5-historia-xxx
+        return p.chapterId.split('-')[1];
+      }));
+      return subjects.size >= 3;
+    },
+  },
+  // Epic
+  {
+    id: 'so_explorer',
+    title: 'SO-Utforskaren',
+    description: 'Klara alla 11 kapitel i åk 5.',
+    icon: '🗺️',
+    color: 'from-indigo-500 to-purple-600',
+    rarity: 'epic',
+    condition: (s) => s.completedChapters >= 11,
+  },
+  {
+    id: 'fact_nerd',
+    title: 'Faktanörd',
+    description: 'Svara rätt på 100 frågor totalt.',
+    icon: '🔬',
+    color: 'from-cyan-500 to-blue-600',
+    rarity: 'epic',
+    condition: (s) => s.totalCorrect >= 100,
+  },
+  {
+    id: 'accurate',
+    title: 'Pricksäker',
+    description: 'Ha minst 80% rätt totalt (efter 30+ svar).',
+    icon: '🏹',
+    color: 'from-green-500 to-teal-600',
+    rarity: 'epic',
+    condition: (s) => s.totalAnswered >= 30 && s.totalCorrect / s.totalAnswered >= 0.8,
+  },
+  // Legendary
+  {
+    id: 'so_legend',
+    title: 'SO-Legenden',
+    description: 'Nå nivå 10: SO-Legenden.',
+    icon: '👑',
+    color: 'from-yellow-400 via-amber-400 to-orange-500',
+    rarity: 'legendary',
+    condition: (s) => s.points.level >= 10,
+  },
+  {
+    id: 'all_three_stars',
+    title: 'Stjärnsamlare',
+    description: 'Få 3 stjärnor på alla 11 kapitel.',
+    icon: '🌠',
+    color: 'from-purple-500 via-pink-500 to-red-500',
+    rarity: 'legendary',
+    condition: (s) => s.progress.filter(p => p.stars === 3).length >= 11,
+  },
+];

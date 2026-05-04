@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97%;
+    --foreground: 243 75% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 243 75% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 243 75% 13%;
+    --primary: 239 84% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 243 75% 13%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 240 5% 92%;
+    --accent-foreground: 243 75% 13%;
+    --border: 240 6% 88%;
+    --input: 240 6% 88%;
+    --ring: 239 84% 57%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Nunito', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: linear-gradient(160deg, #eef2ff 0%, #f0fdf4 40%, #f5f3ff 70%, #eff6ff 100%);
+    background-attachment: fixed;
+    color: #1e1b4b;
+    overscroll-behavior: none;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Claymorphism base card */
+  .clay-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.12), 0 12px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
+  }
+
+  .clay-card-sm {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.12), 0 8px 20px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,1);
+  }
+
+  /* Subject card styles */
+  .clay-historia {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 3px solid #fbbf24;
+    box-shadow: 0 6px 0 #b45309, 0 10px 30px rgba(245,158,11,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    border-radius: 1.5rem;
+  }
+
+  .clay-geografi {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border: 3px solid #34d399;
+    box-shadow: 0 6px 0 #065f46, 0 10px 30px rgba(16,185,129,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    border-radius: 1.5rem;
+  }
+
+  .clay-religion {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    border: 3px solid #a78bfa;
+    box-shadow: 0 6px 0 #5b21b6, 0 10px 30px rgba(139,92,246,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    border-radius: 1.5rem;
+  }
+
+  .clay-samhalle {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border: 3px solid #60a5fa;
+    box-shadow: 0 6px 0 #1e40af, 0 10px 30px rgba(59,130,246,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    border-radius: 1.5rem;
+  }
+
+  /* Buttons */
+  .btn-clay {
+    @apply font-black rounded-2xl transition-all cursor-pointer select-none;
+    @apply active:translate-y-1;
+    border: 3px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  .btn-clay:active {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 3px 8px rgba(0,0,0,0.1);
+  }
+
+  .btn-primary-clay {
+    @apply btn-clay text-white;
+    background: linear-gradient(180deg, #6366f1 0%, #4338ca 100%);
+    border-color: #3730a3;
+    box-shadow: 0 4px 0 #312e81, 0 6px 20px rgba(99,102,241,0.4);
+  }
+
+  .btn-primary-clay:active {
+    box-shadow: 0 2px 0 #312e81, 0 3px 10px rgba(99,102,241,0.3);
+  }
+
+  .btn-orange-clay {
+    @apply btn-clay text-white;
+    background: linear-gradient(180deg, #f97316 0%, #c2560a 100%);
+    border-color: #9a3412;
+    box-shadow: 0 4px 0 #7c2d12, 0 6px 20px rgba(249,115,22,0.4);
+  }
+
+  /* Header */
+  .header-bar {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(99, 102, 241, 0.15);
+    box-shadow: 0 2px 20px rgba(99,102,241,0.08);
+  }
+
+  /* Progress */
+  .progress-indigo {
+    background: linear-gradient(90deg, #6366f1, #818cf8);
+    box-shadow: 0 0 8px rgba(99,102,241,0.4);
+  }
+
+  /* Star badge */
+  .star-badge {
+    @apply flex items-center gap-1 px-3 py-1.5 rounded-full font-bold text-sm;
+    background: rgba(245, 158, 11, 0.12);
+    border: 2px solid rgba(245, 158, 11, 0.40);
+    color: #b45309;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .glow-indigo {
+    box-shadow: 0 0 20px rgba(99,102,241,0.4);
+  }
+
+  .font-heading {
+    font-family: 'Fredoka', 'Nunito', system-ui, sans-serif;
+  }
+}
+
+/* Animation: star pop */
+@keyframes starPop {
+  0%   { transform: scale(0) rotate(-30deg); opacity: 0; }
+  60%  { transform: scale(1.4) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.animate-star-pop {
+  animation: starPop 0.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(99,102,241,0.3);
+  border-radius: 2px;
+}
+
+/* Prevent number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
