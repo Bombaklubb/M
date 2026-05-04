@@ -1,0 +1,94 @@
+import React, { createContext, useContext, useState } from 'react';
+import { AppView, Subject, Chapter, ExerciseSessionResult } from '../types';
+import { getProgress, getChapterProgress, saveChapterProgress, calcStars } from '../utils/storage';
+import { getChaptersForSubject, ALL_CHAPTERS } from '../data/subjects';
+
+interface AppContextValue {
+  currentView: AppView;
+  selectedSubject: Subject | null;
+  selectedChapter: Chapter | null;
+  lastResult: ExerciseSessionResult | null;
+
+  setView: (view: AppView) => void;
+  selectSubject: (subject: Subject) => void;
+  selectChapter: (chapter: Chapter) => void;
+  submitChapterResult: (chapterId: string, correctAnswers: number, totalQuestions: number) => ExerciseSessionResult;
+  isChapterUnlocked: (chapterId: string) => boolean;
+  getChapterProgressFor: (chapterId: string) => import('../types').ChapterProgress | null;
+}
+
+const AppContext = createContext<AppContextValue | null>(null);
+
+export function useApp(): AppContextValue {
+  const ctx = useContext(AppContext);
+  if (!ctx) throw new Error('useApp must be used within AppProvider');
+  return ctx;
+}
+
+export function AppProvider({ children }: { children: React.ReactNode }) {
+  const [currentView, setCurrentView] = useState<AppView>('subject-select');
+  const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
+  const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
+  const [lastResult, setLastResult] = useState<ExerciseSessionResult | null>(null);
+
+  function setView(view: AppView) { setCurrentView(view); }
+
+  function selectSubject(subject: Subject) {
+    setSelectedSubject(subject);
+    setCurrentView('chapter-map');
+  }
+
+  function selectChapter(chapter: Chapter) {
+    setSelectedChapter(chapter);
+    setCurrentView('chapter-exercise');
+  }
+
+  function isChapterUnlocked(chapterId: string): boolean {
+    const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
+    if (!chapter) return false;
+    const chapters = getChaptersForSubject(chapter.subjectId);
+    const idx = chapters.findIndex(c => c.id === chapterId);
+    if (idx === 0) return true;
+    const prev = chapters[idx - 1];
+    const prevP = getChapterProgress(prev.id);
+    return !!(prevP && prevP.bestScore >= 50);
+  }
+
+  function getChapterProgressFor(chapterId: string) {
+    return getChapterProgress(chapterId);
+  }
+
+  function submitChapterResult(
+    chapterId: string,
+    correctAnswers: number,
+    totalQuestions: number,
+  ): ExerciseSessionResult {
+    const score = Math.round((correctAnswers / totalQuestions) * 100);
+    const stars = calcStars(score);
+    const existing = getChapterProgress(chapterId);
+    const isNewBest = !existing || score > existing.bestScore;
+
+    saveChapterProgress({
+      chapterId,
+      completed: stars >= 1,
+      bestScore: score,
+      stars,
+      totalAttempts: 1,
+    });
+
+    const result: ExerciseSessionResult = { chapterId, correctAnswers, totalQuestions, score, stars, isNewBest };
+    setLastResult(result);
+    setCurrentView('chapter-result');
+    return result;
+  }
+
+  return (
+    <AppContext.Provider value={{
+      currentView, selectedSubject, selectedChapter, lastResult,
+      setView, selectSubject, selectChapter, submitChapterResult,
+      isChapterUnlocked, getChapterProgressFor,
+    }}>
+      {children}
+    </AppContext.Provider>
+  );
+}
