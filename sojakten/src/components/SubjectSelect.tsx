@@ -1,9 +1,10 @@
 import { useApp } from '../contexts/AppContext';
 import { SUBJECTS, getChaptersForSubject } from '../data/subjects';
 import { getProgress } from '../utils/storage';
+import { Trophy } from 'lucide-react';
 
 export default function SubjectSelect() {
-  const { selectSubject } = useApp();
+  const { selectSubject, setView } = useApp();
 
   function getSubjectStats(subjectId: typeof SUBJECTS[number]['id']) {
     const chapters = getChaptersForSubject(subjectId);
@@ -15,9 +16,19 @@ export default function SubjectSelect() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="header-bar px-4 py-4 text-center">
-        <h1 className="font-heading font-bold text-2xl text-indigo-700">🗺️ SO-jakten</h1>
-        <p className="text-xs text-gray-500 font-medium mt-0.5">Puls SO · Åk 5</p>
+      <header className="header-bar px-4 py-4 flex items-center justify-between">
+        <div className="w-10" />
+        <div className="text-center">
+          <h1 className="font-heading font-bold text-2xl text-indigo-700">🗺️ SO-jakten</h1>
+          <p className="text-xs text-gray-500 font-medium mt-0.5">Puls SO · Åk 5</p>
+        </div>
+        <button
+          onClick={() => setView('achievements')}
+          className="w-10 h-10 rounded-xl bg-indigo-50 border-2 border-indigo-200 flex items-center justify-center hover:bg-indigo-100 active:scale-95 transition-all cursor-pointer"
+          aria-label="Prestationer"
+        >
+          <Trophy size={18} className="text-indigo-600" />
+        </button>
       </header>
 
       <main className="max-w-2xl mx-auto p-4 sm:p-6 pb-16">

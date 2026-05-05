@@ -4,6 +4,7 @@ import SubjectSelect from './components/SubjectSelect';
 import ChapterMap from './components/ChapterMap';
 import ChapterExercise from './components/ChapterExercise';
 import ChapterResult from './components/ChapterResult';
+import Achievements from './components/Achievements';
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) { super(props); this.state = { hasError: false }; }
@@ -33,6 +34,7 @@ function AppInner() {
     case 'chapter-map':      return <ChapterMap />;
     case 'chapter-exercise': return <ChapterExercise />;
     case 'chapter-result':   return <ChapterResult />;
+    case 'achievements':     return <Achievements />;
     default:                 return <SubjectSelect />;
   }
 }

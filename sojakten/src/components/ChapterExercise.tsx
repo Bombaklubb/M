@@ -19,8 +19,9 @@ export default function ChapterExercise() {
 
   if (!selectedChapter || !selectedSubject) { setView('subject-select'); return null; }
 
-  const exercises = selectedChapter.exercises;
-  const exercise = exercises[currentIdx];
+  const chapter = selectedChapter;
+  const exercises = chapter.exercises;
+  const exercise = exercises[currentIdx]!;
   const total = exercises.length;
   const correct = answers.filter(a => a === 'correct').length;
   const progressPct = Math.round((currentIdx / total) * 100);
@@ -32,7 +33,7 @@ export default function ChapterExercise() {
       const newAnswers = [...answers, state];
       if (currentIdx + 1 >= total) {
         submitChapterResult(
-          selectedChapter.id,
+          chapter.id,
           newAnswers.filter(a => a === 'correct').length,
           total,
         );
