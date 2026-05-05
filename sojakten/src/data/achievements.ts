@@ -30,15 +30,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     condition: (s) => s.completedChapters >= 3,
   },
   {
-    id: 'streak_3',
-    title: 'Veckostjärna',
-    description: 'Använd appen 3 dagar i rad.',
-    icon: '🔥',
-    color: 'from-orange-400 to-red-500',
-    rarity: 'common',
-    condition: (s) => s.points.streak >= 3,
-  },
-  {
     id: 'fifty_correct',
     title: 'Kunskapsbank',
     description: 'Svara rätt på 50 frågor.',
@@ -55,7 +46,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     icon: '⚔️',
     color: 'from-amber-500 to-orange-600',
     rarity: 'rare',
-    condition: (s) => s.subjectCounts.historia >= 2,
+    condition: (s) => s.subjectCounts.historia >= 3,
   },
   {
     id: 'geographer',
@@ -101,10 +92,11 @@ export const ACHIEVEMENTS: Achievement[] = [
     color: 'from-pink-400 to-rose-500',
     rarity: 'rare',
     condition: (s) => {
-      const subjects = new Set(s.progress.filter(p => p.completed).map(p => {
-        // subjectId is embedded in chapterId: ak5-historia-xxx
-        return p.chapterId.split('-')[1];
-      }));
+      const subjects = new Set(
+        s.progress
+          .filter(p => p.completed)
+          .map(p => p.chapterId.split('-')[1])
+      );
       return subjects.size >= 3;
     },
   },
@@ -112,11 +104,11 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'so_explorer',
     title: 'SO-Utforskaren',
-    description: 'Klara alla 11 kapitel i åk 5.',
+    description: 'Klara alla 12 kapitel i åk 5.',
     icon: '🗺️',
     color: 'from-indigo-500 to-purple-600',
     rarity: 'epic',
-    condition: (s) => s.completedChapters >= 11,
+    condition: (s) => s.completedChapters >= 12,
   },
   {
     id: 'fact_nerd',
@@ -138,21 +130,12 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   // Legendary
   {
-    id: 'so_legend',
-    title: 'SO-Legenden',
-    description: 'Nå nivå 10: SO-Legenden.',
-    icon: '👑',
-    color: 'from-yellow-400 via-amber-400 to-orange-500',
-    rarity: 'legendary',
-    condition: (s) => s.points.level >= 10,
-  },
-  {
     id: 'all_three_stars',
     title: 'Stjärnsamlare',
-    description: 'Få 3 stjärnor på alla 11 kapitel.',
+    description: 'Få 3 stjärnor på alla 12 kapitel.',
     icon: '🌠',
     color: 'from-purple-500 via-pink-500 to-red-500',
     rarity: 'legendary',
-    condition: (s) => s.progress.filter(p => p.stars === 3).length >= 11,
+    condition: (s) => s.progress.filter(p => p.stars === 3).length >= 12,
   },
 ];

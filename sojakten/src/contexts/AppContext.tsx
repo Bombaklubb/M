@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { AppView, Subject, Chapter, ExerciseSessionResult } from '../types';
-import { getProgress, getChapterProgress, saveChapterProgress, calcStars } from '../utils/storage';
+import { getProgress, getChapterProgress, saveChapterProgress, calcStars, addStats } from '../utils/storage';
 import { getChaptersForSubject, ALL_CHAPTERS } from '../data/subjects';
 
 interface AppContextValue {
@@ -75,6 +75,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       stars,
       totalAttempts: 1,
     });
+    addStats(correctAnswers, totalQuestions);
 
     const result: ExerciseSessionResult = { chapterId, correctAnswers, totalQuestions, score, stars, isNewBest };
     setLastResult(result);

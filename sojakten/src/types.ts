@@ -19,6 +19,7 @@ export interface BaseExercise {
   type: ExerciseType;
   question: string;
   explanation?: string;
+  points?: number;
 }
 
 export interface MultipleChoiceExercise extends BaseExercise {
@@ -57,6 +58,7 @@ export interface Chapter {
   emoji: string;
   description: string;
   subjectId: SubjectId;
+  grade?: string;
   exercises: Exercise[];
 }
 
@@ -69,12 +71,32 @@ export interface ChapterProgress {
   totalAttempts: number;
 }
 
+// === ACHIEVEMENTS ===
+export interface AchievementStats {
+  completedChapters: number;
+  totalCorrect: number;
+  totalAnswered: number;
+  progress: ChapterProgress[];
+  subjectCounts: Record<SubjectId, number>;
+}
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  rarity: 'common' | 'rare' | 'epic' | 'legendary';
+  condition: (s: AchievementStats) => boolean;
+}
+
 // === APP STATE ===
 export type AppView =
   | 'subject-select'
   | 'chapter-map'
   | 'chapter-exercise'
-  | 'chapter-result';
+  | 'chapter-result'
+  | 'achievements';
 
 export interface ExerciseSessionResult {
   chapterId: string;
