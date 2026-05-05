@@ -322,6 +322,7 @@ function BossPageInner() {
   const [phase, setPhase] = useState<Phase>("intro");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
+  const [earnedBossPoints, setEarnedBossPoints] = useState(0);
 
   useEffect(() => {
     const s = loadStudent();
@@ -362,18 +363,27 @@ function BossPageInner() {
           ? beatenBefore
           : [...beatenBefore, boss.id];
 
+        const winCounts = currentGam.bossWinCounts ?? {};
+        const prevWins = winCounts[boss.id] ?? 0;
+        const earnedPoints = prevWins === 0 ? Math.min(boss.rewardPoints, 200)
+                           : prevWins === 1 ? 50
+                           : 0;
+        const newWinCounts = { ...winCounts, [boss.id]: prevWins + 1 };
+
         const newGam: GamificationData = {
           ...currentGam,
           chests: [...currentGam.chests, bonusChest],
           badges: newBadges,
           bossWins: currentGam.bossWins + 1,
           bossesBeaten: newBossesBeaten,
+          bossWinCounts: newWinCounts,
           bossLastAttempt: new Date().toISOString(),
         };
         saveGamification(newGam);
         setGam(newGam);
+        setEarnedBossPoints(earnedPoints);
 
-        const updatedStudent = { ...currentStudent, totalPoints: currentStudent.totalPoints + boss.rewardPoints };
+        const updatedStudent = { ...currentStudent, totalPoints: currentStudent.totalPoints + earnedPoints };
         saveStudent(updatedStudent);
         setStudent(updatedStudent);
       } else {
@@ -445,8 +455,7 @@ function BossPageInner() {
                 <p className="text-xs text-gray-400">frågor</p>
               </div>
               <div className="bg-gray-50 rounded-2xl p-3 border border-gray-100">
-                <p className="text-2xl font-black text-amber-500">+{boss.rewardPoints}</p>
-                <p className="text-xs text-gray-400">bonuspoäng</p>
+                {(() => { const w = (gam?.bossWinCounts ?? {})[boss.id] ?? 0; const pts = w === 0 ? Math.min(boss.rewardPoints, 200) : w === 1 ? 50 : 0; return <><p className="text-2xl font-black text-amber-500">+{pts}</p><p className="text-xs text-gray-400">bonuspoäng</p></>; })()}
               </div>
               <div className="bg-gray-50 rounded-2xl p-3 border border-gray-100">
                 <img
@@ -575,7 +584,7 @@ function BossPageInner() {
 
             <div className="grid grid-cols-3 gap-3 mb-6">
               <div className="bg-white rounded-2xl p-3 border border-green-200">
-                <p className="text-2xl font-black text-amber-500">+{boss.rewardPoints}</p>
+                <p className="text-2xl font-black text-amber-500">+{earnedBossPoints}</p>
                 <p className="text-xs text-green-500">bonuspoäng</p>
               </div>
               <div className="bg-white rounded-2xl p-3 border border-green-200">

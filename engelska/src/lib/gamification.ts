@@ -836,6 +836,7 @@ export function defaultGamificationData(): GamificationData {
     bossUnlocked: false,
     bossWins: 0,
     bossesBeaten: [],
+    bossWinCounts: {},
     pointsMilestonesRewarded: [],
     exerciseMilestonesRewarded: [],
   };
