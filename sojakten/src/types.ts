@@ -12,7 +12,7 @@ export interface Subject {
 }
 
 // === EXERCISES ===
-export type ExerciseType = 'multiple-choice' | 'true-false' | 'fill-in' | 'matching';
+export type ExerciseType = 'multiple-choice' | 'true-false' | 'fill-in' | 'matching' | 'spot-the-error' | 'timeline';
 
 export interface BaseExercise {
   id: string;
@@ -45,11 +45,44 @@ export interface MatchingExercise extends BaseExercise {
   pairs: { left: string; right: string }[];
 }
 
+export interface SpotTheErrorExercise extends BaseExercise {
+  type: 'spot-the-error';
+  wrongStatement: string;
+  options: string[];
+  correctIndex: number;
+}
+
+export interface TimelineExercise extends BaseExercise {
+  type: 'timeline';
+  events: { id: string; label: string; hint?: string }[];
+  correctOrder: string[];
+}
+
 export type Exercise =
   | MultipleChoiceExercise
   | TrueFalseExercise
   | FillInExercise
-  | MatchingExercise;
+  | MatchingExercise
+  | SpotTheErrorExercise
+  | TimelineExercise;
+
+// === CHAPTER SUMMARY ===
+export interface Concept {
+  term: string;
+  definition: string;
+}
+
+export interface CauseEffect {
+  cause: string;
+  effect: string;
+}
+
+export interface ChapterSummary {
+  concepts: Concept[];
+  keyPoints: string[];
+  causeEffect: CauseEffect[];
+  studentConnection: string;
+}
 
 // === CHAPTERS ===
 export interface Chapter {
@@ -59,6 +92,7 @@ export interface Chapter {
   description: string;
   subjectId: SubjectId;
   grade?: string;
+  summary?: ChapterSummary;
   exercises: Exercise[];
 }
 
@@ -94,8 +128,10 @@ export interface Achievement {
 export type AppView =
   | 'subject-select'
   | 'chapter-map'
+  | 'chapter-study'
   | 'chapter-exercise'
   | 'chapter-result'
+  | 'exit-ticket'
   | 'achievements';
 
 export interface ExerciseSessionResult {

@@ -8,6 +8,29 @@ export const AK5_GEOGRAFI: Chapter[] = [
     description: 'Europas länder, huvudstäder, geografi och gränser',
     grade: '5',
     subjectId: 'geografi',
+    summary: {
+      concepts: [
+        { term: 'Kontinent', definition: 'En av jordens sju stora landmassor. Europa är en kontinent (egentligen en halvö på Eurasien).' },
+        { term: 'Halvö', definition: 'Landområde omgivet av vatten på tre sidor. Skandinavien, Italien och Iberiska halvön är halvöar.' },
+        { term: 'Skandinavien', definition: 'Den region i norra Europa som innefattar Sverige, Norge och Danmark.' },
+        { term: 'Alperna', definition: 'Europas viktigaste bergskedja, sträcker sig genom Schweiz, Österrike, Frankrike och Italien. Mont Blanc (4808 m) är det högsta berget.' },
+        { term: 'Volga', definition: 'Europas längsta flod, ca 3690 km, rinner genom Ryssland och mynnar i Kaspiska havet.' },
+      ],
+      keyPoints: [
+        'Europa har ungefär 50 länder.',
+        'Ryssland är det till ytan största landet i Europa (och världen).',
+        'Europas högsta berg är Mont Blanc (4808 m) på gränsen Frankrike–Italien.',
+        'Europas längsta flod är Volga i Ryssland.',
+        'Medelhavet skiljer Europa från Afrika i söder.',
+        'Östersjön, Nordsjön och Atlanten är viktiga hav kring Europa.',
+      ],
+      causeEffect: [
+        { cause: 'Alperna bildar en naturlig barriär i södra Europa', effect: 'Klimat, kultur och språk skiljer sig tydligt norr och söder om Alperna.' },
+        { cause: 'Europa har långa kustlinjer och bra hamnar', effect: 'Handel och sjöfart har historiskt sett varit central för Europas ekonomi och kolonisering av världen.' },
+        { cause: 'Ryssland är ett enormt land', effect: 'Ryssland sträcker sig över elva tidszoner och innehåller en stor del av världens naturresurser.' },
+      ],
+      studentConnection: 'Du bor i Europa – Sverige är en del av den kontinent som vi kallar Europa. När du reser till södra Europa möter du varmare klimat, annan mat och andra språk men ändå samma kontinent.',
+    },
     exercises: [
       {
         id: 'ak5-ge-eu-1',
@@ -78,12 +101,17 @@ export const AK5_GEOGRAFI: Chapter[] = [
       },
       {
         id: 'ak5-ge-eu-8',
-        type: 'multiple-choice',
-        question: 'Vilket hav ligger väster om Portugal och Spanien?',
-        options: ['Medelhavet', 'Nordsjön', 'Atlanten', 'Kaspiska havet'],
-        correctIndex: 2,
-        points: 10,
-        explanation: 'Atlanten (Atlantiska oceanen) ligger väster om Iberiska halvön.',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Medelhavet är ett hav som ligger norr om Europa och skiljer Europa från Asien.',
+        options: [
+          'Medelhavet ligger söder om Europa och skiljer Europa från Afrika.',
+          'Medelhavet är inte ett hav utan en sjö.',
+          'Medelhavet ligger väster om Europa och skiljer Europa från Amerika.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Medelhavet ligger söder om Europa och är det hav som skiljer Europa från Afrika. Det är ett viktigt innanhav för handel och kommunikation.',
       },
       {
         id: 'ak5-ge-eu-9',
@@ -115,6 +143,29 @@ export const AK5_GEOGRAFI: Chapter[] = [
     description: 'Jordens klimatzoner och hur de påverkar växter och djur',
     grade: '5',
     subjectId: 'geografi',
+    summary: {
+      concepts: [
+        { term: 'Klimatzon', definition: 'Ett område med liknande klimat. Jordens klimatzoner bestäms av avstånd till ekvatorn och hav.' },
+        { term: 'Ekvatorn', definition: 'Den imaginära linje som delar jorden i norra och södra halvklotet. Närmast ekvatorn är det varmast.' },
+        { term: 'Vegetation', definition: 'Växtligheten i ett område – vilka växter som kan leva där bestäms av klimat, marktyp och vatten.' },
+        { term: 'Savann', definition: 'Tropiskt gräslandskap med enstaka träd, typiskt för Afrika söder om Sahara. Hem för lejon, giraffer och elefanter.' },
+        { term: 'Taigan', definition: 'Världens största skogszon – barrskog som täcker norra Ryssland och Kanada. Kallas även boreal skog.' },
+      ],
+      keyPoints: [
+        'Klimat beror på avstånd till ekvatorn, hav och höjd.',
+        'Nära ekvatorn är det tropiskt – varmt och fuktigt med regnskog.',
+        'Ju längre från ekvatorn, desto kallare och torrare (mot polerna).',
+        'Sverige har tempererat klimat med fyra årstider.',
+        'Ökenklimnat innebär extremt lite regn – under 250 mm per år.',
+        'Klimatförändringarna gör klimatzonerna varmare och väder mer extremt.',
+      ],
+      causeEffect: [
+        { cause: 'Tropiskt klimat nära ekvatorn ger mycket regn och värme', effect: 'Tropisk regnskog med enormt stor biologisk mångfald kan växa.' },
+        { cause: 'Ökenklimnat ger extremt lite vatten', effect: 'Bara specialiserade växter (som kaktusar) och djur klarar sig i öknar.' },
+        { cause: 'Klimatförändringarna värmer upp planeten', effect: 'Glaciärer smälter, havsnivån stiger och extremväder som torka och översvämningar ökar.' },
+      ],
+      studentConnection: 'Sveriges klimat avgör varför vi odlar vete och råg, inte ris och bananer. Varför går vi inte i skolan på sommaren? Delvis för att det historiskt sett var bättre väder för jordbruksarbete.',
+    },
     exercises: [
       {
         id: 'ak5-ge-kl-1',
@@ -175,13 +226,17 @@ export const AK5_GEOGRAFI: Chapter[] = [
       },
       {
         id: 'ak5-ge-kl-7',
-        type: 'fill-in',
-        question: 'Det klimat som finns vid polerna kallas ___.',
-        answer: 'polarklimat',
-        acceptableAnswers: ['polarklimat', 'polarklimnat', 'arktiskt klimat'],
-        wordBank: ['polarklimat', 'tropiskt klimat', 'medelhavsklimat', 'monsunklimat'],
-        points: 10,
-        explanation: 'Polarklimnat innebär långa kalla vintrar och kalla somrar, med permafrost.',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Klimatförändringar är bra för alla djur och växter eftersom det blir varmare och mer sol.',
+        options: [
+          'Klimatförändringar hotar många arter eftersom ekosystem störs – djur som isbjörnar förlorar sin livsmiljö när is smälter.',
+          'Klimatförändringar påverkar bara Arktis och Antarktis, inte resten av världen.',
+          'Klimatförändringar är naturliga och har alltid skett, så de påverkar inte djur och växter.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Klimatförändringar hotar biologisk mångfald och arternas överlevnad. Snabba temperaturförändringar ger inte ekosystemen tid att anpassa sig.',
       },
       {
         id: 'ak5-ge-kl-8',
@@ -222,6 +277,28 @@ export const AK5_GEOGRAFI: Chapter[] = [
     description: 'Bergarter, jordbävningar, vulkaner och plattektonik',
     grade: '5',
     subjectId: 'geografi',
+    summary: {
+      concepts: [
+        { term: 'Lithosfärplatter', definition: 'De stora skivor som jordskorpan är uppdelad i. De rör sig långsamt, ca 2–10 cm per år, och orsakar jordbävningar och vulkaner.' },
+        { term: 'Magma', definition: 'Smält sten under jordens yta. När magma når ytan kallas det lava.' },
+        { term: 'Vulkan', definition: 'En öppning i jordskorpan där lava, gas och aska kan sprutas ut. Bildas vid platttektoniska gränser eller "hot spots".' },
+        { term: 'Jordbävning', definition: 'Skakning i marken som uppstår när tektoniska plattor rör sig mot eller från varandra.' },
+        { term: 'Jordskorpan', definition: 'Jordens yttersta lager av fast bergart – det vi lever på. Tunnar under haven (ca 5–10 km) och tjockare under kontinenter (ca 30–70 km).' },
+      ],
+      keyPoints: [
+        'Jordens lager (utifrån och in): jordskorpan → manteln → yttre kärnan (flytande) → inre kärnan (fast järn).',
+        'Jordskorpan är uppdelad i tektoniska plattor som rör sig långsamt.',
+        'Jordbävningar och vulkaner uppstår vid platttektoniska gränser.',
+        '"Eldringens rand" runt Stilla havet har flest vulkaner och jordbävningar.',
+        'Bergarter delas in i: magmatiska (stelnad magma), sedimentära (pressade sediment) och metamorfa (omvandlade).',
+      ],
+      causeEffect: [
+        { cause: 'Tektoniska plattor krockar (kolliderar)', effect: 'Bergskedjor bildas – som Himalaya där Indiska och Eurasiska plattorna kolliderar.' },
+        { cause: 'Tektoniska plattor drar isär sig', effect: 'Sprickor bildas i jordskorpan, lava stiger upp och ny havsbotten skapas.' },
+        { cause: 'Vulkaner på öar (som på Island)', effect: 'Askmolnen kan störa flygtrafiken och påverka klimat globalt.' },
+      ],
+      studentConnection: 'Island, som är populärt för turister, är ett land som skapats av vulkaner och har fortfarande aktiva vulkaner. Islandsvulkanen Eyjafjallajökull ställde 2010 till med stora problem för europas flygtrafik.',
+    },
     exercises: [
       {
         id: 'ak5-ge-jo-1',
@@ -274,11 +351,17 @@ export const AK5_GEOGRAFI: Chapter[] = [
       },
       {
         id: 'ak5-ge-jo-6',
-        type: 'true-false',
-        question: 'Himlakroppen Jordens kärna är fast järn och nickel.',
-        isTrue: false,
-        points: 10,
-        explanation: 'Nej! Den inre kärnan är fast, men den yttre kärnan är flytande järn och nickel.',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Jordens kärna är helt fast och består av sten, precis som jordskorpan fast hårdare.',
+        options: [
+          'Jordens kärna har två delar: en flytande yttre kärna och en fast inre kärna – båda består av järn och nickel.',
+          'Jordens kärna är helt flytande och består av järn och nickel.',
+          'Jordens kärna består av guld och platina som smält under värmen.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Jordens kärna delas in i en yttre flytande kärna och en inre fast kärna, båda av järn och nickel. Det är den flytande kärnan som ger jorden dess magnetfält.',
       },
       {
         id: 'ak5-ge-jo-7',

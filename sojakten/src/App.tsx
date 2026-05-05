@@ -2,8 +2,10 @@ import React from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
 import SubjectSelect from './components/SubjectSelect';
 import ChapterMap from './components/ChapterMap';
+import ChapterStudy from './components/ChapterStudy';
 import ChapterExercise from './components/ChapterExercise';
 import ChapterResult from './components/ChapterResult';
+import ExitTicket from './components/ExitTicket';
 import Achievements from './components/Achievements';
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
@@ -32,8 +34,10 @@ function AppInner() {
   switch (currentView) {
     case 'subject-select':   return <SubjectSelect />;
     case 'chapter-map':      return <ChapterMap />;
+    case 'chapter-study':    return <ChapterStudy />;
     case 'chapter-exercise': return <ChapterExercise />;
     case 'chapter-result':   return <ChapterResult />;
+    case 'exit-ticket':      return <ExitTicket />;
     case 'achievements':     return <Achievements />;
     default:                 return <SubjectSelect />;
   }
