@@ -8,6 +8,28 @@ export const AK5_RELIGION: Chapter[] = [
     description: 'En av världens äldsta religioner – tro, traditioner och historia',
     grade: '5',
     subjectId: 'religion',
+    summary: {
+      concepts: [
+        { term: 'Monoteism', definition: 'Tro på en enda gud. Judendomen är en av världens äldsta monoteistiska religioner.' },
+        { term: 'Torah/Tanach', definition: 'Judarnas heliga skrift. Torah är de fem Moseböckerna; Tanach är hela den hebreiska bibeln.' },
+        { term: 'Sabbaten', definition: 'Judarnas heliga vilodag, från fredagskväll till lördagskväll. Arbete är förbjudet.' },
+        { term: 'Synagoga', definition: 'Judarnas böneplats och samlingslokal, ledd av en rabbi.' },
+        { term: 'Kosher', definition: 'De judiska matreglerna – t.ex. är griskött och skaldjur förbjudet, och kött och mjölk får inte blandas.' },
+      ],
+      keyPoints: [
+        'Judendomen är en av världens äldsta religioner – ca 3500 år gammal.',
+        'Judarna tror på en enda Gud (monoteism) och att de är Guds utvalda folk.',
+        'Torah (de fem Moseböckerna) är den heligaste delen av Tanach.',
+        'Jerusalem är judendomens heligaste stad – Klagomuren är en helig plats dit.',
+        'Viktiga högtider: Jom Kippur (försoningsdagen), Pesach (judarnas påsk), Hannukka (ljusfesten).',
+        'Judendomen, kristendomen och islam kallas abrahamitiska religioner – alla härstammar från Abraham.',
+      ],
+      causeEffect: [
+        { cause: 'Förintelsen (Holocaust) under andra världskriget – sex miljoner judar mördades', effect: 'Staten Israel grundades 1948 som ett judiskt hemland och tillflyktsort.' },
+        { cause: 'Judarna levde i diaspora (spridda) runt om i världen i ca 2000 år', effect: 'Judiska traditioner, musik och mat har spridits och påverkat kulturer världen över.' },
+      ],
+      studentConnection: 'Ord som "amen" och "halleluja" som du kanske känner igen från kyrkan eller sångerna kommer från hebreiskan – judarnas språk. Veckodagen lördag (Sabbat-dag) har judiska rötter.',
+    },
     exercises: [
       {
         id: 'ak5-re-ju-1',
@@ -106,6 +128,20 @@ export const AK5_RELIGION: Chapter[] = [
         points: 15,
         explanation: 'Varje religion har sina egna heliga platser runt om i världen.',
       },
+      {
+        id: 'ak5-re-ju-11',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Judendomen, kristendomen och islam är helt olika religioner som inte har något gemensamt – de tror på olika gudar och har inga gemensamma profeter.',
+        options: [
+          'Alla tre är abrahamitiska religioner som delar tron på en och samma Gud och ser Abraham som en gemensam stamfader.',
+          'Judendomen och kristendomen är samma religion – bara islams Gud är annorlunda.',
+          'De tre religionerna tror på exakt samma saker och har inga skillnader.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Judendomen, kristendomen och islam kallas abrahamitiska religioner. De delar tron på en Gud, ser Abraham som anfader och delar många heliga berättelser – men skiljer sig i synen på Jesus och Muhammed.',
+      },
     ],
   },
   {
@@ -115,6 +151,29 @@ export const AK5_RELIGION: Chapter[] = [
     description: 'Kristendomens historia, riktningar och centrala tro',
     grade: '5',
     subjectId: 'religion',
+    summary: {
+      concepts: [
+        { term: 'Bibeln', definition: 'Kristendomens heliga skrift, bestående av Gamla testamentet (delad med judendomen) och Nya testamentet (om Jesus).' },
+        { term: 'Treenigheten', definition: 'Kristna tror på en Gud i tre personer: Fadern, Sonen (Jesus) och den Helige Ande.' },
+        { term: 'Sakrament', definition: 'Heliga handlingar inom kyrkan, t.ex. dop och nattvard.' },
+        { term: 'Påven', definition: 'Den katolska kyrkans överhuvud, som bor i Vatikanen i Rom.' },
+        { term: 'Reformationen', definition: 'Religiös rörelse på 1500-talet som bröt med den katolska kyrkan och skapade protestantismen.' },
+      ],
+      keyPoints: [
+        'Jesus Kristus är kristendomens centralgestalt – Guds son som dog och uppstod.',
+        'Kristendomen har ca 2,4 miljarder anhängare och är världens största religion.',
+        'Tre huvudgrenar: katolicism (leds av påven), ortodoxi (Östeuropa) och protestantism (grundad vid reformationen).',
+        'Bibeln är uppdelad i Gamla testamentet och Nya testamentet.',
+        'Påsk är kristendomens viktigaste högtid – firar Jesu uppståndelse.',
+        'Sverige är sedan reformationen 1527 ett protestantiskt/lutherskt land.',
+      ],
+      causeEffect: [
+        { cause: 'Martin Luther kritiserade den katolska kyrkan 1517', effect: 'Reformationen startade – protestantiska kyrkor bildades och kyrkan splittrades.' },
+        { cause: 'Påven och kungen i England stred om makten', effect: 'England bröt med den katolska kyrkan och bildade den anglikanska kyrkan.' },
+        { cause: 'Kristendomen spred sig via det Romerska imperiet', effect: 'Europa kristnades och kyrkan fick enorm politisk och kulturell makt i 1000 år.' },
+      ],
+      studentConnection: 'Jullovet, påsklovet och Kristi himmelsfärdsdag är alla kristna högtider som du har ledigt. Kyrkorna du ser i svenska städer är arvet från kristnandet av Sverige på 1000-talet.',
+    },
     exercises: [
       {
         id: 'ak5-re-kr-1',
@@ -213,6 +272,20 @@ export const AK5_RELIGION: Chapter[] = [
         points: 15,
         explanation: 'De kristna högtiderna följer Jesu liv och den kristna troshistorien.',
       },
+      {
+        id: 'ak5-re-kr-11',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Alla kristna är katoliker och leds av påven i Rom – det finns bara en typ av kristendom.',
+        options: [
+          'Kristendomen delas in i tre huvudgrenar: katolicism (leds av påven), ortodoxi (Östeuropa) och protestantism (startad vid reformationen).',
+          'Kristendomen delas in i katolicism och islam – det finns inga andra kristna riktningar.',
+          'Protestantism och katolicism är samma sak – de firar bara jul och påsk på olika dagar.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Kristendomen har tre stora grenar med viktiga skillnader. I Sverige är den lutherska protestantismen dominerande – inte katolicismen.',
+      },
     ],
   },
   {
@@ -222,6 +295,29 @@ export const AK5_RELIGION: Chapter[] = [
     description: 'Islams tro, fem pelare, högtider och heliga platser',
     grade: '5',
     subjectId: 'religion',
+    summary: {
+      concepts: [
+        { term: 'Allah', definition: 'Det arabiska ordet för Gud. Muslimer är monoteister – de tror på en enda Gud.' },
+        { term: 'Koranen', definition: 'Islams heliga skrift – anses vara Guds direkta ord som uppenbarades för profeten Muhammed.' },
+        { term: 'Islams fem pelare', definition: 'De fem grundläggande skyldigheterna: Shahada (trosbekännelse), Salat (bön 5 ggr/dag), Zakat (välgörenhet), Sawm (fasta under Ramadan), Hajj (pilgrimsfärd till Mecka).' },
+        { term: 'Ramadan', definition: 'Islams heliga fasteperiod – muslimer fastar från gryning till solnedgång under en månads tid.' },
+        { term: 'Halal', definition: 'Islams matregler – bl.a. är griskött och alkohol förbjudet. Halal-mat är tillagad på ett sätt som är tillåtet enligt islamsk lag.' },
+      ],
+      keyPoints: [
+        'Islam grundades av profeten Muhammed i Arabien på 600-talet e.Kr.',
+        'Muslimer tror att Muhammed fick Guds uppenbarelser som samlades i Koranen.',
+        'Islam är världens näst största religion med ca 1,8 miljarder anhängare.',
+        'Islams fem pelare är de grundläggande skyldigheterna för alla muslimer.',
+        'Mecka och Medina i Saudiarabien är islams heligaste städer.',
+        'Islam delar sig i Sunni (ca 85%) och Shia (ca 15%) – skillnaden handlar om efterföljare till Muhammed.',
+      ],
+      causeEffect: [
+        { cause: 'Muhammeds uppenbarelser och predikan på 600-talet', effect: 'Islam spreds snabbt på arabiska halvön och sedan till stora delar av världen.' },
+        { cause: 'Den arabiska expansionen under 600–700-talen', effect: 'Arabisk vetenskap, matematik och filosofi nådde Europa och bidrog till den vetenskapliga revolutionen.' },
+        { cause: 'Muslimer fastar under Ramadan', effect: 'Eid al-Fitr firas som en stor festdag när fasteperioden är över – familjer samlas och ger gåvor.' },
+      ],
+      studentConnection: 'Siffrorna 0–9 som du använder i matematiken kallas "arabiska siffror" – de kom via muslimska matematiker till Europa under medeltiden. Orden "algebra" och "algoritm" är arabiska ord.',
+    },
     exercises: [
       {
         id: 'ak5-re-is-1',
@@ -319,6 +415,20 @@ export const AK5_RELIGION: Chapter[] = [
         ],
         points: 15,
         explanation: 'Dessa begrepp är centrala för att förstå islams tro och praktik.',
+      },
+      {
+        id: 'ak5-re-is-11',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Ramadan är en islamsk högtid som firas med festmat och presenter varje dag under en hel månad.',
+        options: [
+          'Ramadan är islams fasteperiod – muslimer fastar (ingen mat eller dryck) från gryning till solnedgång. Eid al-Fitr firas när Ramadan är slut.',
+          'Ramadan är en veckolång högtid då muslimer ger pengar till välgörenhet.',
+          'Ramadan är en pilgrimsfärd till Mecka som görs en gång per år.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Ramadan är en fasteperiod, inte en festperiod. Fastans mål är andlig rening och empati med fattiga. Festandet sker när Ramadan är slut – vid Eid al-Fitr.',
       },
     ],
   },

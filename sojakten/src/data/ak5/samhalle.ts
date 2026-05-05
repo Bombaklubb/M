@@ -8,6 +8,29 @@ export const AK5_SAMHALLE: Chapter[] = [
     description: 'Hur ekonomin fungerar – arbete, lön, skatter och handel',
     grade: '5',
     subjectId: 'samhalle',
+    summary: {
+      concepts: [
+        { term: 'Lön', definition: 'Pengar man får för sitt arbete. Lönen varierar beroende på yrke, utbildning och erfarenhet.' },
+        { term: 'Skatt', definition: 'Pengar vi betalar till staten. Skatterna finansierar gemensamma tjänster som skola, sjukvård och polis.' },
+        { term: 'Fackförbund', definition: 'Organisation som arbetar för löntagarnas rättigheter och förhandlar om löner och arbetsvillkor.' },
+        { term: 'Marknadsekonomi', definition: 'Ekonomiskt system där priset bestäms av utbud (vad som erbjuds) och efterfrågan (vad folk vill köpa).' },
+        { term: 'Inflation', definition: 'När priserna i samhället stiger – pengarna blir mindre värda och man får mindre för samma summa.' },
+      ],
+      keyPoints: [
+        'Pengar är ett smidigt bytesmedel – ersätter barterhandel (byta vara mot vara).',
+        'Alla som arbetar betalar inkomstskatt som finansierar välfärden.',
+        'Fackförbund förhandlar med arbetsgivare om löner och villkor.',
+        'Export = sälja till andra länder. Import = köpa från andra länder.',
+        'Inflation = priser stiger. Deflation = priser sjunker.',
+        'Riksbanken bestämmer räntan – låg ränta stimulerar ekonomin.',
+      ],
+      causeEffect: [
+        { cause: 'Hög efterfrågan på en vara (fler vill köpa)', effect: 'Priset stiger – säljaren kan ta mer betalt eftersom många konkurrerar om att köpa.' },
+        { cause: 'Hög skatt i Sverige', effect: 'Samhällstjänster som gratis sjukvård, skola och bibliotek kan finansieras.' },
+        { cause: 'Fackförbund strejkar', effect: 'Arbetsgivaren tvingas förhandla om bättre löner och arbetsvillkor.' },
+      ],
+      studentConnection: 'Du betalar redan skatt! När du köper godis eller spel betalar du moms – en skatt på ca 25%. Det är en av statens viktigaste inkomstkällor.',
+    },
     exercises: [
       {
         id: 'ak5-sh-ap-1',
@@ -116,6 +139,20 @@ export const AK5_SAMHALLE: Chapter[] = [
         points: 15,
         explanation: 'Det finns många yrken kopplade till ekonomi och pengar.',
       },
+      {
+        id: 'ak5-sh-ap-11',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Skatter är onödiga eftersom pengarna slösas bort av politiker – alla skulle ha mer pengar utan skatter.',
+        options: [
+          'Skatter finansierar gemensamma tjänster som skolan, sjukvården och polisen som alla behöver men inte hade råd att betala ensamma.',
+          'Skatter är frivilliga – du kan välja att inte betala dem om du inte vill.',
+          'Utan skatter skulle Sverige bli rikare eftersom pengar stannar hos individerna.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Skatter finansierar kollektiva nyttigheter – saker alla behöver men som marknaden inte tillhandahåller effektivt ensam, som sjukvård, utbildning och försvar.',
+      },
     ],
   },
   {
@@ -125,6 +162,28 @@ export const AK5_SAMHALLE: Chapter[] = [
     description: 'Hur lagar stiftas, rättsväsende och mänskliga rättigheter',
     grade: '5',
     subjectId: 'samhalle',
+    summary: {
+      concepts: [
+        { term: 'Demokrati', definition: 'Styrelseskick där folket väljer sina representanter. "Demokrati" kommer från greek och betyder "folkstyre".' },
+        { term: 'Riksdag', definition: 'Sveriges parlament – 349 valda politiker som stiftar lagar och beslutar om statsbudgeten.' },
+        { term: 'Grundlag', definition: 'Sveriges viktigaste lagar som bestämmer hur landet ska styras. Svårare att ändra än vanliga lagar.' },
+        { term: 'Domstol', definition: 'Institution som avgör om lagar brutits och bestämmer straff. I Sverige är alla skyldiga tills de dömts.' },
+        { term: 'Mänskliga rättigheter', definition: 'Grundläggande rättigheter som alla människor har oavsett nationalitet, kön eller religion – t.ex. rätt till liv och yttrandefrihet.' },
+      ],
+      keyPoints: [
+        'Sverige är en representativ demokrati – vi väljer politiker vart 4:e år.',
+        'Riksdagen stiftar lagar; regeringen verkställer dem.',
+        'Alla är lika inför lagen – ingen är över lagen.',
+        'Sverige har fyra grundlagar: Regeringsformen, Successionsordningen, Tryckfrihetsförordningen och Yttrandefrihetsgrundlagen.',
+        'FN:s deklaration om mänskliga rättigheter (1948) är ett globalt ramverk.',
+      ],
+      causeEffect: [
+        { cause: 'Sverige har allmän och lika rösträtt', effect: 'Alla medborgare över 18 år kan påverka vem som styr landet – det ger legitimitet åt demokratin.' },
+        { cause: 'Lagar och domstolar finns', effect: 'Konflikter kan lösas på ett rättvist sätt utan att den starkaste "vinner".' },
+        { cause: 'Om makten samlas hos en person utan kontroll', effect: 'Risk för diktatur – historien visar att makten då ofta missbrukas.' },
+      ],
+      studentConnection: 'Du möter demokrati i skolan varje dag – när ni röstar om klassregler, väljer klasskamrat till rådet eller bestämmer om utflykt tillsammans. Det är samma princip som i riksdagen!',
+    },
     exercises: [
       {
         id: 'ak5-sh-lr-1',
@@ -228,6 +287,20 @@ export const AK5_SAMHALLE: Chapter[] = [
         points: 15,
         explanation: 'Dessa friheter är grundläggande rättigheter i ett demokratiskt samhälle.',
       },
+      {
+        id: 'ak5-sh-lr-11',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Sverige är en demokrati eftersom statsministern bestämmer allt och inte behöver bry sig om vad folket tycker.',
+        options: [
+          'Sverige är en demokrati där folket väljer riksdagen vart fjärde år, och riksdagen kontrollerar regeringen och statsministern.',
+          'Sverige är en demokrati eftersom kungen bestämmer och han är vald av folket.',
+          'Sverige är inte en demokrati – det är en monarki eftersom vi har en kung.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'I Sverige är kungen statsöverhuvud men utan politisk makt. Det är riksdagen (folkets valda representanter) som stiftar lagar och regeringen som verkställer dem.',
+      },
     ],
   },
   {
@@ -237,6 +310,28 @@ export const AK5_SAMHALLE: Chapter[] = [
     description: 'Medias roll i samhället, källkritik och hur reklam fungerar',
     grade: '5',
     subjectId: 'samhalle',
+    summary: {
+      concepts: [
+        { term: 'Massmedia', definition: 'Kanaler som når många människor: TV, radio, tidningar, sociala medier. "Mass" = stor mängd.' },
+        { term: 'Källkritik', definition: 'Att kritiskt granska varifrån information kommer – vem har skrivit det, varför och när?' },
+        { term: 'Reklam', definition: 'Betald kommunikation vars syfte är att påverka dig att köpa en produkt eller tjänst.' },
+        { term: 'Propaganda', definition: 'Information som är avsedd att påverka åsikter, ofta ensidig och missvisande. Används av stater och politiska rörelser.' },
+        { term: 'Sociala medier', definition: 'Digitala plattformar (Instagram, TikTok, YouTube) där användare skapar och delar innehåll. Algoritmerna styr vad du ser.' },
+      ],
+      keyPoints: [
+        'Media har tre roller: informera, granska makten (tredje statsmakten) och underhålla.',
+        'Källkritik: Kolla vem som skrivit texten, när, varför och om det stämmer med andra källor.',
+        'Reklam är inte neutral – syftet är alltid att sälja något.',
+        'Sociala medier-algoritmer visar innehåll du troligen gillar – det skapar en "filterbubbla".',
+        'Desinformation (falsk information) sprids snabbt på sociala medier.',
+      ],
+      causeEffect: [
+        { cause: 'Sociala medier sprider information blixtsnabbt', effect: 'Falsk information (fake news) kan nå miljoner innan den hinner dementeras.' },
+        { cause: 'Reklam riktas specifikt mot dig baserat på din data', effect: 'Du påverkas av reklam för saker du redan är intresserad av – utan att märka det.' },
+        { cause: 'Fri press och yttrandefrihet', effect: 'Journalister kan granska makten och avslöja korruption – viktigt för demokratin.' },
+      ],
+      studentConnection: 'Nästa gång du scrollar TikTok eller YouTube – tänk på att en algoritm valt ut vad du ser, baserat på vad du tidigare gillat. Det är en form av påverkan. Och när du ser en reklam – fråga dig: vad vill de att jag ska göra?',
+    },
     exercises: [
       {
         id: 'ak5-sh-mr-1',
@@ -349,6 +444,20 @@ export const AK5_SAMHALLE: Chapter[] = [
         ],
         points: 15,
         explanation: 'Källkritik innebär att ställa dessa fyra frågor om all information man möter.',
+      },
+      {
+        id: 'ak5-sh-mr-11',
+        type: 'spot-the-error',
+        question: 'Vilket påstående rättar det felaktiga resonemanget?',
+        wrongStatement: 'Om något dyker upp på TikTok eller Instagram kan vi lita på att det är sant – sociala medier kollar ju upp allt.',
+        options: [
+          'Sociala medier granskar inte innehåll på ett tillförlitligt sätt – vem som helst kan publicera vad som helst. Källkritik är viktig.',
+          'Sociala medier har myndighetsansvar och kontrolleras av staten – allt som publiceras är faktakontrollerat.',
+          'Det spelar ingen roll var information kommer ifrån – det viktiga är om det verkar trovärdigt.',
+        ],
+        correctIndex: 0,
+        points: 15,
+        explanation: 'Sociala medier-plattformar har varken resurser eller skyldighet att faktakontrollera allt. Desinformation sprids lika lätt som sann information. Källkritik är viktigare än någonsin.',
       },
     ],
   },

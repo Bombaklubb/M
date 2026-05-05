@@ -1,9 +1,9 @@
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForSubject } from '../data/subjects';
-import { Star, RotateCcw, ArrowRight, Home } from 'lucide-react';
+import { Star, RotateCcw, ArrowRight, Home, BookOpen, Zap } from 'lucide-react';
 
 export default function ChapterResult() {
-  const { lastResult, selectedChapter, selectedSubject, setView, selectChapter, isChapterUnlocked } = useApp();
+  const { lastResult, selectedChapter, selectedSubject, setView, selectChapter, openChapterStudy, startExitTicket, isChapterUnlocked } = useApp();
 
   if (!lastResult || !selectedChapter || !selectedSubject) { setView('subject-select'); return null; }
 
@@ -84,6 +84,26 @@ export default function ChapterResult() {
               <ArrowRight size={18} />
             </button>
           )}
+
+          {/* Quick row: Study + Exit ticket */}
+          <div className="flex gap-3">
+            {selectedChapter.summary && (
+              <button
+                onClick={() => openChapterStudy(selectedChapter)}
+                className="btn-clay flex-1 py-3 flex items-center justify-center gap-2 text-sm font-heading bg-indigo-50 border-indigo-200 text-indigo-700"
+              >
+                <BookOpen size={16} />
+                Plugga
+              </button>
+            )}
+            <button
+              onClick={() => startExitTicket(selectedChapter)}
+              className="btn-clay flex-1 py-3 flex items-center justify-center gap-2 text-sm font-heading bg-amber-50 border-amber-200 text-amber-700"
+            >
+              <Zap size={16} />
+              Snabbkoll
+            </button>
+          </div>
 
           {/* Retry */}
           <button

@@ -7,11 +7,14 @@ interface AppContextValue {
   currentView: AppView;
   selectedSubject: Subject | null;
   selectedChapter: Chapter | null;
+  exitTicketChapter: Chapter | null;
   lastResult: ExerciseSessionResult | null;
 
   setView: (view: AppView) => void;
   selectSubject: (subject: Subject) => void;
   selectChapter: (chapter: Chapter) => void;
+  openChapterStudy: (chapter: Chapter) => void;
+  startExitTicket: (chapter: Chapter) => void;
   submitChapterResult: (chapterId: string, correctAnswers: number, totalQuestions: number) => ExerciseSessionResult;
   isChapterUnlocked: (chapterId: string) => boolean;
   getChapterProgressFor: (chapterId: string) => import('../types').ChapterProgress | null;
@@ -29,6 +32,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [currentView, setCurrentView] = useState<AppView>('subject-select');
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
+  const [exitTicketChapter, setExitTicketChapter] = useState<Chapter | null>(null);
   const [lastResult, setLastResult] = useState<ExerciseSessionResult | null>(null);
 
   function setView(view: AppView) { setCurrentView(view); }
@@ -38,9 +42,23 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('chapter-map');
   }
 
+  function openChapterStudy(chapter: Chapter) {
+    setSelectedChapter(chapter);
+    if (chapter.summary) {
+      setCurrentView('chapter-study');
+    } else {
+      setCurrentView('chapter-exercise');
+    }
+  }
+
   function selectChapter(chapter: Chapter) {
     setSelectedChapter(chapter);
     setCurrentView('chapter-exercise');
+  }
+
+  function startExitTicket(chapter: Chapter) {
+    setExitTicketChapter(chapter);
+    setCurrentView('exit-ticket');
   }
 
   function isChapterUnlocked(chapterId: string): boolean {
@@ -85,9 +103,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{
-      currentView, selectedSubject, selectedChapter, lastResult,
-      setView, selectSubject, selectChapter, submitChapterResult,
-      isChapterUnlocked, getChapterProgressFor,
+      currentView, selectedSubject, selectedChapter, exitTicketChapter, lastResult,
+      setView, selectSubject, selectChapter, openChapterStudy, startExitTicket,
+      submitChapterResult, isChapterUnlocked, getChapterProgressFor,
     }}>
       {children}
     </AppContext.Provider>

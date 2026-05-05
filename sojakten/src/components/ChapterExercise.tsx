@@ -6,6 +6,8 @@ import MultipleChoice from './exercises/MultipleChoice';
 import TrueFalse from './exercises/TrueFalse';
 import FillInBlank from './exercises/FillInBlank';
 import MatchingPairs from './exercises/MatchingPairs';
+import SpotTheError from './exercises/SpotTheError';
+import TimelineOrder from './exercises/TimelineOrder';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 type AnswerState = 'unanswered' | 'correct' | 'wrong';
@@ -51,6 +53,8 @@ export default function ChapterExercise() {
       case 'true-false':      return <TrueFalse exercise={ex} onAnswer={handleAnswer} />;
       case 'fill-in':         return <FillInBlank exercise={ex} onAnswer={handleAnswer} />;
       case 'matching':        return <MatchingPairs exercise={ex} onAnswer={handleAnswer} />;
+      case 'spot-the-error':  return <SpotTheError exercise={ex} onAnswer={handleAnswer} />;
+      case 'timeline':        return <TimelineOrder exercise={ex} onAnswer={handleAnswer} />;
     }
   }
 
