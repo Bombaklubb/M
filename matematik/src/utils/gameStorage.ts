@@ -8,6 +8,7 @@ export interface GameProgress {
   level: number;
   highScore: number;
   totalPlays: number;
+  totalWins: number;
   bestStreak: number;
   bestCombo: number;
   totalCorrect: number;
@@ -27,6 +28,7 @@ export interface GameSessionResult {
   timeSpent: number;
   xpEarned: number;
   newLevel: boolean;
+  isVictory?: boolean;
   weakTopics: string[]; // topic IDs where most mistakes happened
 }
 
@@ -41,32 +43,32 @@ const DEFAULT_PROGRESS: Record<GameId, GameProgress> = {
   'quick-answer': {
     gameId: 'quick-answer', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
-    totalXP: 0, unlockedAt: '', lastPlayed: '',
+    totalXP: 0, totalWins: 0, unlockedAt: '', lastPlayed: '',
   },
   'boss-battle': {
     gameId: 'boss-battle', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
-    totalXP: 0, unlockedAt: '', lastPlayed: '',
+    totalXP: 0, totalWins: 0, unlockedAt: '', lastPlayed: '',
   },
   'time-attack': {
     gameId: 'time-attack', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
-    totalXP: 0, unlockedAt: '', lastPlayed: '',
+    totalXP: 0, totalWins: 0, unlockedAt: '', lastPlayed: '',
   },
   'collect-coins': {
     gameId: 'collect-coins', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
-    totalXP: 0, unlockedAt: '', lastPlayed: '',
+    totalXP: 0, totalWins: 0, unlockedAt: '', lastPlayed: '',
   },
   'memory': {
     gameId: 'memory', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
-    totalXP: 0, unlockedAt: '', lastPlayed: '',
+    totalXP: 0, totalWins: 0, unlockedAt: '', lastPlayed: '',
   },
   'hangman': {
     gameId: 'hangman', level: 1, highScore: 0, totalPlays: 0,
     bestStreak: 0, bestCombo: 0, totalCorrect: 0, totalQuestions: 0,
-    totalXP: 0, unlockedAt: '', lastPlayed: '',
+    totalXP: 0, totalWins: 0, unlockedAt: '', lastPlayed: '',
   },
 };
 
@@ -92,7 +94,18 @@ export function recordGameSession(
   game.totalPlays += 1;
   game.totalCorrect += result.correct;
   game.totalQuestions += result.total;
-  game.totalXP += result.xpEarned;
+
+  // Cap XP for boss-battle victories based on number of past wins
+  let xpToAdd = result.xpEarned;
+  if (result.gameId === 'boss-battle' && result.isVictory) {
+    const wins = game.totalWins ?? 0;
+    if (wins === 0) xpToAdd = Math.min(xpToAdd, 200);
+    else if (wins === 1) xpToAdd = Math.min(xpToAdd, 50);
+    else xpToAdd = 0;
+    game.totalWins = wins + 1;
+  }
+
+  game.totalXP += xpToAdd;
   game.lastPlayed = new Date().toISOString();
   if (!game.unlockedAt) game.unlockedAt = game.lastPlayed;
   if (result.score > game.highScore) game.highScore = result.score;

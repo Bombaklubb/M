@@ -267,6 +267,7 @@ export default function BossBattleGame() {
         timeSpent: timings.reduce((a, b) => a + b, 0),
         xpEarned: xp,
         newLevel: false,
+        isVictory: phase === 'victory',
         weakTopics: analyzeWeakTopics(exercises, results),
       });
     }
