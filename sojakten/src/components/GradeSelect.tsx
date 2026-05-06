@@ -72,7 +72,7 @@ export default function GradeSelect() {
             <p className="text-base font-semibold mt-1 text-gray-700">Välj din årskurs</p>
           </div>
         </header>
-        <div className="h-20 sm:h-28" />
+        <div className="h-8 sm:h-12" />
       </div>
 
       <main className="max-w-lg mx-auto px-4 sm:px-6 pb-16 -mt-2 relative z-10">
