@@ -1,6 +1,573 @@
 {
   "grammar": [
     {
+      "id": "gym-v1-klader",
+      "title": "Kläder (Clothes)",
+      "description": "Avancerade engelska modeord.",
+      "icon": "👔",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "👔 Advanced fashion vocabulary!",
+        "kavaj = blazer | trenchcoat = trench coat | loafers = loafers",
+        "polotröja = turtleneck | denim = denim | tweed = tweed",
+        "Tips: Blazer, loafers och trench coat används i engelskan dagligen!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v1-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kavaj' på engelska?",
+          "options": [
+            "blazer",
+            "jacket",
+            "waistcoat",
+            "tailcoat"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kavaj = blazer. A blazer is smart-casual."
+        },
+        {
+          "id": "gym-v1-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'trenchcoat' på engelska?",
+          "options": [
+            "raincoat",
+            "trench coat",
+            "overcoat",
+            "mackintosh"
+          ],
+          "correctIndex": 1,
+          "explanation": "Trenchcoat = trench coat. Originally a military coat."
+        },
+        {
+          "id": "gym-v1-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'polotröja' på engelska?",
+          "options": [
+            "turtleneck",
+            "polo shirt",
+            "cowl neck",
+            "mock neck"
+          ],
+          "correctIndex": 0,
+          "explanation": "Polotröja = turtleneck. A turtleneck covers the neck."
+        },
+        {
+          "id": "gym-v1-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'loafers' på engelska?",
+          "options": [
+            "loafers",
+            "moccasins",
+            "oxfords",
+            "brogues"
+          ],
+          "correctIndex": 0,
+          "explanation": "Loafers = loafers. Loafers have no laces."
+        },
+        {
+          "id": "gym-v1-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'jeanstyg' på engelska?",
+          "options": [
+            "cotton",
+            "denim",
+            "twill",
+            "canvas"
+          ],
+          "correctIndex": 1,
+          "explanation": "Jeanstyg = denim. Jeans are made of denim."
+        }
+      ]
+    },
+    {
+      "id": "gym-v2-mat",
+      "title": "Mat (Food)",
+      "description": "Avancerade engelska mat- och gastronomiord.",
+      "icon": "🍴",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "🍴 Advanced gastronomy vocabulary!",
+        "gastronomisk = gourmet | näringslära = nutrition | delikatess = delicacy",
+        "aptitretare = appetizer | smakprov = tasting | marinera = marinate",
+        "Tips: Gourmet och nutrition används i engelskan direkt!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v2-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gastronomisk/finsmakare' på engelska?",
+          "options": [
+            "gourmet",
+            "epicure",
+            "connoisseur",
+            "foodie"
+          ],
+          "correctIndex": 0,
+          "explanation": "Gourmet = gourmet. Same word! A gourmet appreciates fine food."
+        },
+        {
+          "id": "gym-v2-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'näringslära' på engelska?",
+          "options": [
+            "dietetics",
+            "nutrition",
+            "biochemistry",
+            "physiology"
+          ],
+          "correctIndex": 1,
+          "explanation": "Näringslära = nutrition. Nutrition affects our health."
+        },
+        {
+          "id": "gym-v2-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'delikatess' på engelska?",
+          "options": [
+            "luxury",
+            "delicacy",
+            "specialty",
+            "rarity"
+          ],
+          "correctIndex": 1,
+          "explanation": "Delikatess = delicacy. Caviar is a delicacy."
+        },
+        {
+          "id": "gym-v2-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'aptitretare' på engelska?",
+          "options": [
+            "starter",
+            "appetizer",
+            "entree",
+            "amuse-bouche"
+          ],
+          "correctIndex": 1,
+          "explanation": "Aptitretare = appetizer. An appetizer opens the meal."
+        },
+        {
+          "id": "gym-v2-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'att marinera' på engelska?",
+          "options": [
+            "to season",
+            "to marinate",
+            "to brine",
+            "to cure"
+          ],
+          "correctIndex": 1,
+          "explanation": "Marinera = to marinate. Marinate the meat overnight."
+        }
+      ]
+    },
+    {
+      "id": "gym-v3-mobel",
+      "title": "Möbler (Furniture)",
+      "description": "Avancerade engelska inredningsord.",
+      "icon": "🏛️",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "🏛️ Advanced interior design vocabulary!",
+        "tapetsering = upholstery | ljuskrona = chandelier | rumsavdelare = partition",
+        "antikvitet = antique | inredning = decor | sockel = plinth",
+        "Tips: Chandelier = ljuskrona, kom ihåg det!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v3-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tapetsering/stoppning' på engelska?",
+          "options": [
+            "upholstery",
+            "padding",
+            "lining",
+            "stuffing"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tapetsering = upholstery. Upholstery covers sofas."
+        },
+        {
+          "id": "gym-v3-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ljuskrona' på engelska?",
+          "options": [
+            "chandelier",
+            "pendant",
+            "sconce",
+            "fixture"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ljuskrona = chandelier. A chandelier hangs from the ceiling."
+        },
+        {
+          "id": "gym-v3-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'rumsavdelare' på engelska?",
+          "options": [
+            "partition",
+            "divider",
+            "separator",
+            "screen"
+          ],
+          "correctIndex": 0,
+          "explanation": "Rumsavdelare = partition. A partition divides a room."
+        },
+        {
+          "id": "gym-v3-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'antikvitet' på engelska?",
+          "options": [
+            "antique",
+            "relic",
+            "heirloom",
+            "artifact"
+          ],
+          "correctIndex": 0,
+          "explanation": "Antikvitet = antique. An antique is old and valuable."
+        },
+        {
+          "id": "gym-v3-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'inredning' (hem) på engelska?",
+          "options": [
+            "decor",
+            "design",
+            "furnishing",
+            "arrangement"
+          ],
+          "correctIndex": 0,
+          "explanation": "Inredning = decor. The decor is modern."
+        }
+      ]
+    },
+    {
+      "id": "gym-v4-kanslor",
+      "title": "Känslor (Feelings)",
+      "description": "Avancerade engelska känsloord.",
+      "icon": "🧠",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "🧠 Advanced feelings vocabulary!",
+        "orolig/rädd inför = apprehensive | lycklig/upphetsad = elated",
+        "nedstämd = despondent | likgiltig = indifferent | euforisk = euphoric",
+        "Tips: Euphoric och euforisk är nästan identiska!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v4-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'orolig inför något' på engelska?",
+          "options": [
+            "apprehensive",
+            "tentative",
+            "reluctant",
+            "hesitant"
+          ],
+          "correctIndex": 0,
+          "explanation": "Orolig inför = apprehensive. She felt apprehensive before the speech."
+        },
+        {
+          "id": "gym-v4-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'överlycklig/exalterad' på engelska?",
+          "options": [
+            "elated",
+            "overjoyed",
+            "ecstatic",
+            "jubilant"
+          ],
+          "correctIndex": 0,
+          "explanation": "Överlycklig = elated. She was elated at the news."
+        },
+        {
+          "id": "gym-v4-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'djupt nedstämd' på engelska?",
+          "options": [
+            "despondent",
+            "depressed",
+            "melancholy",
+            "gloomy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Djupt nedstämd = despondent. He was despondent after the loss."
+        },
+        {
+          "id": "gym-v4-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'likgiltig' på engelska?",
+          "options": [
+            "indifferent",
+            "apathetic",
+            "passive",
+            "neutral"
+          ],
+          "correctIndex": 0,
+          "explanation": "Likgiltig = indifferent. She was indifferent to the outcome."
+        },
+        {
+          "id": "gym-v4-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'euforisk' på engelska?",
+          "options": [
+            "euphoric",
+            "ecstatic",
+            "elated",
+            "thrilled"
+          ],
+          "correctIndex": 0,
+          "explanation": "Euforisk = euphoric. Almost the same word!"
+        }
+      ]
+    },
+    {
+      "id": "gym-v5-vader",
+      "title": "Väder (Weather)",
+      "description": "Avancerade engelska meteorologiord.",
+      "icon": "🌊",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "🌊 Advanced meteorology vocabulary!",
+        "meteorologi = meteorology | nederbord = precipitation | atmosfärisk = atmospheric",
+        "klimat = climate | fenomen = phenomenon | virvelstorm = vortex",
+        "Tips: Meteorology, precipitation och atmosphere är viktiga ord!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'meteorologi' på engelska?",
+          "options": [
+            "meteorology",
+            "climatology",
+            "geography",
+            "oceanography"
+          ],
+          "correctIndex": 0,
+          "explanation": "Meteorologi = meteorology. Almost the same word!"
+        },
+        {
+          "id": "gym-v5-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'nederbörd' på engelska?",
+          "options": [
+            "precipitation",
+            "rainfall",
+            "condensation",
+            "evaporation"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nederbörd = precipitation. Rain and snow are precipitation."
+        },
+        {
+          "id": "gym-v5-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'atmosfärisk' på engelska?",
+          "options": [
+            "atmospheric",
+            "aerial",
+            "gaseous",
+            "ambient"
+          ],
+          "correctIndex": 0,
+          "explanation": "Atmosfärisk = atmospheric. Almost the same word!"
+        },
+        {
+          "id": "gym-v5-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'klimat' på engelska?",
+          "options": [
+            "climate",
+            "weather",
+            "environment",
+            "habitat"
+          ],
+          "correctIndex": 0,
+          "explanation": "Klimat = climate. Climate change is a global issue."
+        },
+        {
+          "id": "gym-v5-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'väderfenomen' på engelska?",
+          "options": [
+            "phenomenon",
+            "occurrence",
+            "event",
+            "episode"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fenomen = phenomenon. Almost the same word!"
+        }
+      ]
+    },
+    {
+      "id": "gym-v6-sporter",
+      "title": "Sporter (Sports)",
+      "description": "Avancerade engelska sportord.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "🏆 Advanced sports vocabulary!",
+        "triathlon = triathlon | ridsport = equestrian | lacrosse = lacrosse",
+        "decathlon = decathlon | fäktning = fencing | rodd = rowing",
+        "Tips: Triathlon och decathlon används direkt i engelskan!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'triathlon' på engelska?",
+          "options": [
+            "triathlon",
+            "biathlon",
+            "pentathlon",
+            "heptathlon"
+          ],
+          "correctIndex": 0,
+          "explanation": "Triathlon = triathlon. Same word! Swim, bike, run."
+        },
+        {
+          "id": "gym-v6-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ridsport' på engelska?",
+          "options": [
+            "equestrian",
+            "horsemanship",
+            "dressage",
+            "polo"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ridsport = equestrian. Equestrian sports involve horses."
+        },
+        {
+          "id": "gym-v6-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tiokamp' på engelska?",
+          "options": [
+            "decathlon",
+            "heptathlon",
+            "pentathlon",
+            "biathlon"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tiokamp = decathlon. The decathlon has ten events."
+        },
+        {
+          "id": "gym-v6-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'rodd' på engelska?",
+          "options": [
+            "rowing",
+            "paddling",
+            "sculling",
+            "crew"
+          ],
+          "correctIndex": 0,
+          "explanation": "Rodd = rowing. Rowing is done on water."
+        },
+        {
+          "id": "gym-v6-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'skytte' (sport) på engelska?",
+          "options": [
+            "shooting",
+            "archery",
+            "marksmanship",
+            "sniping"
+          ],
+          "correctIndex": 0,
+          "explanation": "Skytte = shooting. Shooting is an Olympic sport."
+        }
+      ]
+    },
+    {
+      "id": "gym-v7-fordon",
+      "title": "Fordon (Vehicle)",
+      "description": "Avancerade engelska fordonsord.",
+      "icon": "✈️",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "✈️ Advanced vehicle vocabulary!",
+        "lokomotiv = locomotive | rymdfarkost = spacecraft | katamaran = catamaran",
+        "tankfartyg = tanker | enospårig tåg = monorail | luftskepp = airship",
+        "Tips: Locomotive, catamaran och monorail används direkt i engelskan!"
+      ],
+      "exercises": [
+        {
+          "id": "gym-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'lokomotiv' på engelska?",
+          "options": [
+            "locomotive",
+            "engine",
+            "steam train",
+            "motorcar"
+          ],
+          "correctIndex": 0,
+          "explanation": "Lokomotiv = locomotive. The locomotive pulls the train."
+        },
+        {
+          "id": "gym-v7-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'rymdfarkost' på engelska?",
+          "options": [
+            "spacecraft",
+            "rocket",
+            "shuttle",
+            "capsule"
+          ],
+          "correctIndex": 0,
+          "explanation": "Rymdfarkost = spacecraft. A spacecraft travels in space."
+        },
+        {
+          "id": "gym-v7-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'katamaran' på engelska?",
+          "options": [
+            "catamaran",
+            "trimaran",
+            "pontoon",
+            "hydrofoil"
+          ],
+          "correctIndex": 0,
+          "explanation": "Katamaran = catamaran. Almost the same word!"
+        },
+        {
+          "id": "gym-v7-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tankfartyg' på engelska?",
+          "options": [
+            "tanker",
+            "carrier",
+            "freighter",
+            "bulk carrier"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tankfartyg = tanker. A tanker carries oil or gas."
+        },
+        {
+          "id": "gym-v7-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'enospårigt tåg' på engelska?",
+          "options": [
+            "monorail",
+            "light rail",
+            "metro",
+            "tram"
+          ],
+          "correctIndex": 0,
+          "explanation": "Enospårigt tåg = monorail. A monorail runs on one rail."
+        }
+      ]
+    },
+    {
       "id": "gym-g1-advanced-tenses",
       "title": "Advanced Tenses",
       "description": "Past perfect, future perfect och progressiva former.",
@@ -3784,14 +4351,24 @@
         {
           "id": "gym-spel-2-q1",
           "question": "Vilket ord är mest formellt/akademiskt för 'use'?",
-          "options": ["apply", "utilize", "employ", "Alla är likvärdigt formella"],
+          "options": [
+            "apply",
+            "utilize",
+            "employ",
+            "Alla är likvärdigt formella"
+          ],
           "correctIndex": 3,
           "explanation": "'Apply', 'utilize' och 'employ' är alla mer formella alternativ till 'use'."
         },
         {
           "id": "gym-spel-2-q2",
           "question": "Vad är ett bra akademiskt ord för 'show'?",
-          "options": ["demonstrate", "prove", "indicate", "Alla passar i akademisk text"],
+          "options": [
+            "demonstrate",
+            "prove",
+            "indicate",
+            "Alla passar i akademisk text"
+          ],
           "correctIndex": 3,
           "explanation": "I akademisk text kan man använda 'demonstrate', 'indicate', 'illustrate', 'reveal' m.fl."
         },
@@ -3846,7 +4423,12 @@
         {
           "id": "gym-spel-2-q7",
           "question": "Vad är ett bättre akademiskt ord för 'good'?",
-          "options": ["nice", "beneficial", "cool", "okay"],
+          "options": [
+            "nice",
+            "beneficial",
+            "cool",
+            "okay"
+          ],
           "correctIndex": 1,
           "explanation": "'Beneficial' (fördelaktig) är ett mer precist och akademiskt ord än 'good'."
         },
@@ -3865,7 +4447,12 @@
         {
           "id": "gym-spel-2-q9",
           "question": "Vad betyder 'albeit'?",
-          "options": ["ändå", "även om", "trots allt", "alltid"],
+          "options": [
+            "ändå",
+            "även om",
+            "trots allt",
+            "alltid"
+          ],
           "correctIndex": 1,
           "explanation": "'Albeit' är ett formellt ord som betyder 'even though' / 'although'."
         },

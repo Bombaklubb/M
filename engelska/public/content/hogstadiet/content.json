@@ -1,6 +1,573 @@
 {
   "grammar": [
     {
+      "id": "hog-v3-klader",
+      "title": "Kläder (Clothes)",
+      "description": "Lär dig avancerade engelska klädesord.",
+      "icon": "👗",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "👗 Advanced clothes vocabulary!",
+        "kofta = cardigan | hoodie = hoodie | sneakers = sneakers",
+        "leggings = leggings | mössa = beanie | overall = dungarees",
+        "Tips: Hoodie och sneakers används direkt på svenska!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v3-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kofta' på engelska?",
+          "options": [
+            "cardigan",
+            "pullover",
+            "hoodie",
+            "vest"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kofta = cardigan. A cardigan has buttons."
+        },
+        {
+          "id": "hog-v3-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mössa' (vintermössa) på engelska?",
+          "options": [
+            "cap",
+            "beanie",
+            "beret",
+            "bonnet"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vintermössa = beanie. A beanie keeps your head warm."
+        },
+        {
+          "id": "hog-v3-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'leggings' på engelska?",
+          "options": [
+            "tights",
+            "stockings",
+            "leggings",
+            "pantyhose"
+          ],
+          "correctIndex": 2,
+          "explanation": "Leggings = leggings. Same word in Swedish!"
+        },
+        {
+          "id": "hog-v3-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'overall' på engelska?",
+          "options": [
+            "jumpsuit",
+            "dungarees",
+            "coveralls",
+            "overalls"
+          ],
+          "correctIndex": 3,
+          "explanation": "Overall = overalls or dungarees. Common work clothing."
+        },
+        {
+          "id": "hog-v3-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'väst' på engelska?",
+          "options": [
+            "vest",
+            "waistcoat",
+            "bodice",
+            "corset"
+          ],
+          "correctIndex": 0,
+          "explanation": "Väst = vest. A vest has no sleeves."
+        }
+      ]
+    },
+    {
+      "id": "hog-v4-mat",
+      "title": "Mat (Food)",
+      "description": "Lär dig avancerade engelska matord.",
+      "icon": "🍽️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "🍽️ Advanced food vocabulary!",
+        "kök/matlagning = cuisine | ingrediens = ingredient | recept = recipe",
+        "dessert = dessert | dryck = beverage | aptitretare = appetizer",
+        "Tips: Dessert och dessert stavas likadant på svenska och engelska!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v4-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kök' (matlagningstradition) på engelska?",
+          "options": [
+            "cooking",
+            "cuisine",
+            "culinary",
+            "gastronomy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kök (tradition) = cuisine. Italian cuisine is popular."
+        },
+        {
+          "id": "hog-v4-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ingrediens' på engelska?",
+          "options": [
+            "ingredient",
+            "component",
+            "element",
+            "substance"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ingrediens = ingredient. Almost the same word!"
+        },
+        {
+          "id": "hog-v4-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'recept' (matrecept) på engelska?",
+          "options": [
+            "formula",
+            "method",
+            "recipe",
+            "instruction"
+          ],
+          "correctIndex": 2,
+          "explanation": "Recept = recipe. Follow the recipe carefully."
+        },
+        {
+          "id": "hog-v4-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'dessert' på engelska?",
+          "options": [
+            "snack",
+            "dessert",
+            "pudding",
+            "treat"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dessert = dessert. Same spelling in both languages!"
+        },
+        {
+          "id": "hog-v4-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'dryck' på engelska?",
+          "options": [
+            "liquid",
+            "fluid",
+            "beverage",
+            "substance"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dryck = beverage. Water is a beverage."
+        }
+      ]
+    },
+    {
+      "id": "hog-v5-mobel",
+      "title": "Möbler (Furniture)",
+      "description": "Lär dig avancerade engelska möbelord.",
+      "icon": "🪑",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "🪑 Advanced furniture vocabulary!",
+        "fåtölj = armchair | byrå = dresser | skåp = cabinet",
+        "nattduksbord = nightstand | puff = ottoman | hylla = shelf",
+        "Tips: Armchair = arm (arm) + chair (stol)!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fåtölj' på engelska?",
+          "options": [
+            "armchair",
+            "recliner",
+            "lounger",
+            "throne"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fåtölj = armchair. Relax in the armchair."
+        },
+        {
+          "id": "hog-v5-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'byrå' (möbel) på engelska?",
+          "options": [
+            "cabinet",
+            "dresser",
+            "sideboard",
+            "credenza"
+          ],
+          "correctIndex": 1,
+          "explanation": "Byrå = dresser. Clothes go in the dresser."
+        },
+        {
+          "id": "hog-v5-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'skåp' på engelska?",
+          "options": [
+            "cabinet",
+            "cupboard",
+            "locker",
+            "vault"
+          ],
+          "correctIndex": 0,
+          "explanation": "Skåp = cabinet. The cabinet has many shelves."
+        },
+        {
+          "id": "hog-v5-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'nattduksbord' på engelska?",
+          "options": [
+            "nightstand",
+            "bedside table",
+            "end table",
+            "side table"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nattduksbord = nightstand. The lamp is on the nightstand."
+        },
+        {
+          "id": "hog-v5-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'puff' (sitta/fotpall) på engelska?",
+          "options": [
+            "footstool",
+            "ottoman",
+            "hassock",
+            "pouf"
+          ],
+          "correctIndex": 1,
+          "explanation": "Puff = ottoman. Rest your feet on the ottoman."
+        }
+      ]
+    },
+    {
+      "id": "hog-v6-kanslor",
+      "title": "Känslor (Feelings)",
+      "description": "Lär dig avancerade engelska känsloord.",
+      "icon": "😰",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "😰 Advanced feelings vocabulary!",
+        "frustrerad = frustrated | orolig = anxious | nöjd = content",
+        "melankolisk = melancholy | överväldigad = overwhelmed | lättad = relieved",
+        "Tips: Anxious = orolig/ångestfylld, inte 'exakt nervös'!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'frustrerad' på engelska?",
+          "options": [
+            "frustrated",
+            "irritated",
+            "annoyed",
+            "aggravated"
+          ],
+          "correctIndex": 0,
+          "explanation": "Frustrerad = frustrated. Almost the same word!"
+        },
+        {
+          "id": "hog-v6-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'orolig' (ångestfull) på engelska?",
+          "options": [
+            "worried",
+            "anxious",
+            "concerned",
+            "uneasy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Orolig/ångestfylld = anxious. She feels anxious."
+        },
+        {
+          "id": "hog-v6-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'nöjd' (tillfreds) på engelska?",
+          "options": [
+            "happy",
+            "pleased",
+            "content",
+            "satisfied"
+          ],
+          "correctIndex": 2,
+          "explanation": "Nöjd = content. He is content with his life."
+        },
+        {
+          "id": "hog-v6-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'överväldigad' på engelska?",
+          "options": [
+            "overwhelmed",
+            "confused",
+            "stressed",
+            "pressured"
+          ],
+          "correctIndex": 0,
+          "explanation": "Överväldigad = overwhelmed. She felt overwhelmed."
+        },
+        {
+          "id": "hog-v6-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'lättad' på engelska?",
+          "options": [
+            "relieved",
+            "relaxed",
+            "calm",
+            "peaceful"
+          ],
+          "correctIndex": 0,
+          "explanation": "Lättad = relieved. I felt relieved after the test."
+        }
+      ]
+    },
+    {
+      "id": "hog-v7-vader",
+      "title": "Väder (Weather)",
+      "description": "Lär dig avancerade engelska väderord.",
+      "icon": "🌡️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "🌡️ Advanced weather vocabulary!",
+        "luftfuktighet = humidity | torka = drought | värmebölja = heatwave",
+        "frost = frost | snöstorm = blizzard | kyla = chill",
+        "Tips: Frost och frost stavas likadant!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'luftfuktighet' på engelska?",
+          "options": [
+            "humidity",
+            "moisture",
+            "dampness",
+            "wetness"
+          ],
+          "correctIndex": 0,
+          "explanation": "Luftfuktighet = humidity. High humidity feels uncomfortable."
+        },
+        {
+          "id": "hog-v7-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'torka' (väderfenomen) på engelska?",
+          "options": [
+            "drought",
+            "famine",
+            "dryness",
+            "desert"
+          ],
+          "correctIndex": 0,
+          "explanation": "Torka = drought. A drought means no rain."
+        },
+        {
+          "id": "hog-v7-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'värmebölja' på engelska?",
+          "options": [
+            "heatwave",
+            "hot spell",
+            "heat surge",
+            "warm front"
+          ],
+          "correctIndex": 0,
+          "explanation": "Värmebölja = heatwave. A heatwave is dangerous."
+        },
+        {
+          "id": "hog-v7-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'frost' på engelska?",
+          "options": [
+            "frost",
+            "ice",
+            "freeze",
+            "sleet"
+          ],
+          "correctIndex": 0,
+          "explanation": "Frost = frost. Same word! Frost covers the grass."
+        },
+        {
+          "id": "hog-v7-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'snöstorm' på engelska?",
+          "options": [
+            "blizzard",
+            "snowstorm",
+            "whiteout",
+            "avalanche"
+          ],
+          "correctIndex": 0,
+          "explanation": "Snöstorm = blizzard. A blizzard has strong winds."
+        }
+      ]
+    },
+    {
+      "id": "hog-v8-sporter",
+      "title": "Sporter (Sports)",
+      "description": "Lär dig avancerade engelska sportord.",
+      "icon": "🏋️",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "🏋️ Advanced sports vocabulary!",
+        "badminton = badminton | fäktning = fencing | bågskytte = archery",
+        "snowboard = snowboarding | kajakpaddling = kayaking | klättring = climbing",
+        "Tips: Badminton stavas likadant på svenska och engelska!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v8-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'badminton' på engelska?",
+          "options": [
+            "badminton",
+            "squash",
+            "racquetball",
+            "tennis"
+          ],
+          "correctIndex": 0,
+          "explanation": "Badminton = badminton. Same word in both languages!"
+        },
+        {
+          "id": "hog-v8-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fäktning' på engelska?",
+          "options": [
+            "fencing",
+            "jousting",
+            "dueling",
+            "swordfighting"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fäktning = fencing. Fencing uses a sword."
+        },
+        {
+          "id": "hog-v8-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bågskytte' på engelska?",
+          "options": [
+            "archery",
+            "hunting",
+            "shooting",
+            "javelin"
+          ],
+          "correctIndex": 0,
+          "explanation": "Bågskytte = archery. Archery uses a bow and arrow."
+        },
+        {
+          "id": "hog-v8-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'snowboard' på engelska?",
+          "options": [
+            "snowboarding",
+            "skiing",
+            "sledding",
+            "snowshoeing"
+          ],
+          "correctIndex": 0,
+          "explanation": "Snowboard = snowboarding. Snowboarding is popular in winter."
+        },
+        {
+          "id": "hog-v8-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kajakpaddling' på engelska?",
+          "options": [
+            "kayaking",
+            "canoeing",
+            "rowing",
+            "rafting"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kajakpaddling = kayaking. Kayaking is done on rivers."
+        }
+      ]
+    },
+    {
+      "id": "hog-v9-fordon",
+      "title": "Fordon (Vehicle)",
+      "description": "Lär dig avancerade engelska fordonsord.",
+      "icon": "🚁",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "🚁 Advanced vehicle vocabulary!",
+        "ambulans = ambulance | färja = ferry | traktor = tractor",
+        "limousin = limousine | svävare = hovercraft | lyftbil = forklift",
+        "Tips: Ambulance och ambulans är nästan samma ord!"
+      ],
+      "exercises": [
+        {
+          "id": "hog-v9-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ambulans' på engelska?",
+          "options": [
+            "ambulance",
+            "paramedic",
+            "rescue",
+            "emergency"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ambulans = ambulance. Almost the same word!"
+        },
+        {
+          "id": "hog-v9-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'färja' på engelska?",
+          "options": [
+            "ferry",
+            "barge",
+            "raft",
+            "vessel"
+          ],
+          "correctIndex": 0,
+          "explanation": "Färja = ferry. The ferry crosses the water."
+        },
+        {
+          "id": "hog-v9-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'traktor' på engelska?",
+          "options": [
+            "tractor",
+            "bulldozer",
+            "excavator",
+            "harvester"
+          ],
+          "correctIndex": 0,
+          "explanation": "Traktor = tractor. Almost the same word!"
+        },
+        {
+          "id": "hog-v9-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'limousin' på engelska?",
+          "options": [
+            "limousine",
+            "sedan",
+            "limo",
+            "luxury car"
+          ],
+          "correctIndex": 0,
+          "explanation": "Limousin = limousine. A limousine is very long."
+        },
+        {
+          "id": "hog-v9-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'svävare' på engelska?",
+          "options": [
+            "hovercraft",
+            "hydroplane",
+            "airboat",
+            "glider"
+          ],
+          "correctIndex": 0,
+          "explanation": "Svävare = hovercraft. A hovercraft floats on air."
+        }
+      ]
+    },
+    {
       "id": "hog-g1-perfect",
       "title": "Present Perfect",
       "description": "Perfektum — om erfarenheter och nyligen avslutade händelser.",
