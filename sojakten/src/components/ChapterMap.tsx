@@ -1,9 +1,9 @@
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForSubject } from '../data/subjects';
-import { Lock, Star, BookOpen, Zap, ArrowLeft } from 'lucide-react';
+import { Lock, Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
-  const { selectedSubject, setView, selectChapter, openChapterStudy, startExitTicket, isChapterUnlocked, getChapterProgressFor } = useApp();
+  const { selectedSubject, setView, selectChapter, openChapterStudy, isChapterUnlocked, getChapterProgressFor } = useApp();
 
   if (!selectedSubject) { setView('subject-select'); return null; }
 
@@ -123,35 +123,34 @@ export default function ChapterMap() {
                 )}
 
                 {unlocked && (
-                  <div className="flex gap-2 mt-3">
-                    {chapter.summary && (
+                  <div className="flex gap-2 mt-3 flex-wrap">
+                    {chapter.summary && (<>
                       <button
-                        onClick={() => openChapterStudy(chapter)}
-                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer"
-                        style={{
-                          background: `${s.progressHex}12`,
-                          border: `2px solid ${s.progressHex}35`,
-                          color: s.progressHex,
-                        }}
+                        onClick={() => openChapterStudy(chapter, 'concepts')}
+                        className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
                       >
-                        <BookOpen size={13} />
-                        Plugga
+                        📘 Begrepp
                       </button>
-                    )}
-                    <button
-                      onClick={() => startExitTicket(chapter)}
-                      className="flex items-center gap-1.5 px-3 py-2 rounded-xl border-2 border-amber-200 bg-amber-50 text-amber-700 text-xs font-black hover:bg-amber-100 active:scale-95 transition-all cursor-pointer"
-                    >
-                      <Zap size={13} />
-                      Snabbkoll
-                    </button>
+                      <button
+                        onClick={() => openChapterStudy(chapter, 'key-points')}
+                        className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
+                      >
+                        📋 Sammanfattning
+                      </button>
+                      <button
+                        onClick={() => openChapterStudy(chapter, 'cause-effect')}
+                        className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
+                      >
+                        ⚡ Orsak & konsekvens
+                      </button>
+                    </>)}
                     <button
                       onClick={() => selectChapter(chapter)}
                       className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-black transition-all cursor-pointer active:scale-95 text-white"
-                      style={{
-                        background: s.progressHex,
-                        boxShadow: `0 3px 0 ${s.inkHex}60`,
-                      }}
+                      style={{ background: s.progressHex, boxShadow: `0 3px 0 ${s.inkHex}60` }}
                     >
                       Öva →
                     </button>
