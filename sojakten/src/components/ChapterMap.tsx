@@ -123,28 +123,23 @@ export default function ChapterMap() {
                 )}
 
                 {unlocked && chapter.summary && (
-                  <div className="flex gap-2 mt-3 flex-wrap">
-                    <button
-                      onClick={() => openChapterStudy(chapter, 'concepts')}
-                      className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                      style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
-                    >
-                      📘 Begrepp
-                    </button>
-                    <button
-                      onClick={() => openChapterStudy(chapter, 'key-points')}
-                      className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                      style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
-                    >
-                      📋 Sammanfattning
-                    </button>
-                    <button
-                      onClick={() => openChapterStudy(chapter, 'cause-effect')}
-                      className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                      style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
-                    >
-                      ⚡ Orsak & konsekvens
-                    </button>
+                  <div className="mt-3 grid grid-cols-3 gap-2">
+                    {([
+                      { tab: 'concepts',     label: '📘 Begrepp' },
+                      { tab: 'key-points',   label: '📋 Sammanfattning' },
+                      { tab: 'cause-effect', label: '⚡ Orsak & konsekvens' },
+                      { tab: 'word-search',  label: '🔍 Ordsökning' },
+                      { tab: 'test',         label: '✏️ Test' },
+                    ] as const).map(({ tab, label }) => (
+                      <button
+                        key={tab}
+                        onClick={() => openChapterStudy(chapter, tab)}
+                        className="py-2 px-1 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
+                      >
+                        {label}
+                      </button>
+                    ))}
                   </div>
                 )}
               </div>
