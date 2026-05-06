@@ -1,6 +1,573 @@
 {
   "grammar": [
     {
+      "id": "lag-v6-klader",
+      "title": "Kläder (Clothes)",
+      "description": "Lär dig engelska ord för kläder.",
+      "icon": "🧥",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "👕 Kläder = clothes på engelska!",
+        "tröja = shirt | byxor = pants | skor = shoes",
+        "hatt = hat | klänning = dress | jacka = jacket",
+        "Tips: Många klädesplagg liknar svenska ord!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tröja' på engelska?",
+          "options": [
+            "shirt",
+            "pants",
+            "shoes",
+            "hat"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tröja = shirt. I wear a shirt."
+        },
+        {
+          "id": "lag-v6-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'byxor' på engelska?",
+          "options": [
+            "dress",
+            "pants",
+            "jacket",
+            "socks"
+          ],
+          "correctIndex": 1,
+          "explanation": "Byxor = pants. He wears pants."
+        },
+        {
+          "id": "lag-v6-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'skor' på engelska?",
+          "options": [
+            "hat",
+            "gloves",
+            "shoes",
+            "scarf"
+          ],
+          "correctIndex": 2,
+          "explanation": "Skor = shoes. I have new shoes."
+        },
+        {
+          "id": "lag-v6-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'hatt' på engelska?",
+          "options": [
+            "hat",
+            "coat",
+            "boots",
+            "shirt"
+          ],
+          "correctIndex": 0,
+          "explanation": "Hatt = hat. She wears a hat."
+        },
+        {
+          "id": "lag-v6-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'klänning' på engelska?",
+          "options": [
+            "skirt",
+            "pants",
+            "dress",
+            "blouse"
+          ],
+          "correctIndex": 2,
+          "explanation": "Klänning = dress. The dress is red."
+        }
+      ]
+    },
+    {
+      "id": "lag-v7-mat",
+      "title": "Mat (Food)",
+      "description": "Lär dig engelska ord för mat.",
+      "icon": "🍎",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🍎 Mat = food på engelska!",
+        "äpple = apple | bröd = bread | mjölk = milk",
+        "ägg = egg | banan = banana | smör = butter",
+        "Tips: Banan och banana är nästan samma ord!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'äpple' på engelska?",
+          "options": [
+            "orange",
+            "apple",
+            "banana",
+            "grape"
+          ],
+          "correctIndex": 1,
+          "explanation": "Äpple = apple. An apple a day!"
+        },
+        {
+          "id": "lag-v7-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bröd' på engelska?",
+          "options": [
+            "bread",
+            "milk",
+            "egg",
+            "rice"
+          ],
+          "correctIndex": 0,
+          "explanation": "Bröd = bread. I eat bread."
+        },
+        {
+          "id": "lag-v7-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mjölk' på engelska?",
+          "options": [
+            "juice",
+            "water",
+            "milk",
+            "tea"
+          ],
+          "correctIndex": 2,
+          "explanation": "Mjölk = milk. Milk is white."
+        },
+        {
+          "id": "lag-v7-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ägg' på engelska?",
+          "options": [
+            "egg",
+            "fish",
+            "meat",
+            "cake"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ägg = egg. I eat an egg."
+        },
+        {
+          "id": "lag-v7-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'banan' på engelska?",
+          "options": [
+            "apple",
+            "mango",
+            "pear",
+            "banana"
+          ],
+          "correctIndex": 3,
+          "explanation": "Banan = banana. Monkeys love bananas."
+        }
+      ]
+    },
+    {
+      "id": "lag-v8-mobel",
+      "title": "Möbler (Furniture)",
+      "description": "Lär dig engelska ord för möbler.",
+      "icon": "🛋️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🛋️ Möbler = furniture på engelska!",
+        "stol = chair | bord = table | säng = bed",
+        "soffa = sofa | lampa = lamp | dörr = door",
+        "Tips: Sofa och soffa är nästan likadana!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v8-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'stol' på engelska?",
+          "options": [
+            "chair",
+            "table",
+            "bed",
+            "lamp"
+          ],
+          "correctIndex": 0,
+          "explanation": "Stol = chair. Sit on the chair."
+        },
+        {
+          "id": "lag-v8-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bord' på engelska?",
+          "options": [
+            "shelf",
+            "desk",
+            "table",
+            "sofa"
+          ],
+          "correctIndex": 2,
+          "explanation": "Bord = table. The table is big."
+        },
+        {
+          "id": "lag-v8-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'säng' på engelska?",
+          "options": [
+            "sofa",
+            "bed",
+            "chair",
+            "floor"
+          ],
+          "correctIndex": 1,
+          "explanation": "Säng = bed. I sleep in a bed."
+        },
+        {
+          "id": "lag-v8-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'soffa' på engelska?",
+          "options": [
+            "sofa",
+            "lamp",
+            "door",
+            "rug"
+          ],
+          "correctIndex": 0,
+          "explanation": "Soffa = sofa. We sit on the sofa."
+        },
+        {
+          "id": "lag-v8-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'lampa' på engelska?",
+          "options": [
+            "window",
+            "lamp",
+            "mirror",
+            "clock"
+          ],
+          "correctIndex": 1,
+          "explanation": "Lampa = lamp. Turn on the lamp."
+        }
+      ]
+    },
+    {
+      "id": "lag-v9-kanslor",
+      "title": "Känslor (Feelings)",
+      "description": "Lär dig engelska ord för känslor.",
+      "icon": "😊",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "😊 Känslor = feelings på engelska!",
+        "glad = happy | ledsen = sad | arg = angry",
+        "rädd = scared | förvånad = surprised | trött = tired",
+        "Tips: Happy och ledsen är varandras motsatser!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v9-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'glad' på engelska?",
+          "options": [
+            "happy",
+            "sad",
+            "angry",
+            "tired"
+          ],
+          "correctIndex": 0,
+          "explanation": "Glad = happy. I am happy today!"
+        },
+        {
+          "id": "lag-v9-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ledsen' på engelska?",
+          "options": [
+            "scared",
+            "happy",
+            "sad",
+            "bored"
+          ],
+          "correctIndex": 2,
+          "explanation": "Ledsen = sad. She is sad."
+        },
+        {
+          "id": "lag-v9-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'arg' på engelska?",
+          "options": [
+            "angry",
+            "tired",
+            "shy",
+            "proud"
+          ],
+          "correctIndex": 0,
+          "explanation": "Arg = angry. He is angry."
+        },
+        {
+          "id": "lag-v9-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'rädd' på engelska?",
+          "options": [
+            "excited",
+            "scared",
+            "happy",
+            "calm"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rädd = scared. I am scared of the dark."
+        },
+        {
+          "id": "lag-v9-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'förvånad' på engelska?",
+          "options": [
+            "bored",
+            "tired",
+            "surprised",
+            "angry"
+          ],
+          "correctIndex": 2,
+          "explanation": "Förvånad = surprised. She is surprised!"
+        }
+      ]
+    },
+    {
+      "id": "lag-v10-vader",
+      "title": "Väder (Weather)",
+      "description": "Lär dig engelska ord för väder.",
+      "icon": "☀️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "☀️ Väder = weather på engelska!",
+        "solig = sunny | regnig = rainy | molnig = cloudy",
+        "blåsig = windy | snöig = snowy | kall = cold",
+        "Tips: Sunny och sun (sol) hänger ihop!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v10-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'solig' på engelska?",
+          "options": [
+            "sunny",
+            "rainy",
+            "cold",
+            "windy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Solig = sunny. It is sunny today!"
+        },
+        {
+          "id": "lag-v10-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'regnig' på engelska?",
+          "options": [
+            "snowy",
+            "cloudy",
+            "rainy",
+            "foggy"
+          ],
+          "correctIndex": 2,
+          "explanation": "Regnig = rainy. It is rainy outside."
+        },
+        {
+          "id": "lag-v10-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'molnig' på engelska?",
+          "options": [
+            "windy",
+            "cloudy",
+            "stormy",
+            "sunny"
+          ],
+          "correctIndex": 1,
+          "explanation": "Molnig = cloudy. The sky is cloudy."
+        },
+        {
+          "id": "lag-v10-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'blåsig' på engelska?",
+          "options": [
+            "windy",
+            "icy",
+            "warm",
+            "wet"
+          ],
+          "correctIndex": 0,
+          "explanation": "Blåsig = windy. It is very windy!"
+        },
+        {
+          "id": "lag-v10-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'snöig' på engelska?",
+          "options": [
+            "rainy",
+            "foggy",
+            "snowy",
+            "cold"
+          ],
+          "correctIndex": 2,
+          "explanation": "Snöig = snowy. It is snowy in winter."
+        }
+      ]
+    },
+    {
+      "id": "lag-v11-sporter",
+      "title": "Sporter (Sports)",
+      "description": "Lär dig engelska ord för sporter.",
+      "icon": "⚽",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "⚽ Sport = sport på engelska!",
+        "fotboll = football | simning = swimming | löpning = running",
+        "tennis = tennis | basket = basketball | cykling = cycling",
+        "Tips: Tennis stavas likadant på svenska och engelska!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v11-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fotboll' på engelska?",
+          "options": [
+            "football",
+            "tennis",
+            "golf",
+            "rugby"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fotboll = football. I play football."
+        },
+        {
+          "id": "lag-v11-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'simning' på engelska?",
+          "options": [
+            "running",
+            "cycling",
+            "swimming",
+            "jumping"
+          ],
+          "correctIndex": 2,
+          "explanation": "Simning = swimming. She loves swimming."
+        },
+        {
+          "id": "lag-v11-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'löpning' på engelska?",
+          "options": [
+            "running",
+            "hiking",
+            "skating",
+            "surfing"
+          ],
+          "correctIndex": 0,
+          "explanation": "Löpning = running. Running is healthy."
+        },
+        {
+          "id": "lag-v11-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tennis' på engelska?",
+          "options": [
+            "polo",
+            "tennis",
+            "squash",
+            "golf"
+          ],
+          "correctIndex": 1,
+          "explanation": "Tennis = tennis. Samma ord på svenska!"
+        },
+        {
+          "id": "lag-v11-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'basket' på engelska?",
+          "options": [
+            "baseball",
+            "basketball",
+            "volleyball",
+            "handball"
+          ],
+          "correctIndex": 1,
+          "explanation": "Basket = basketball. He plays basketball."
+        }
+      ]
+    },
+    {
+      "id": "lag-v12-fordon",
+      "title": "Fordon (Vehicle)",
+      "description": "Lär dig engelska ord för fordon.",
+      "icon": "🚗",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "🚗 Fordon = vehicle på engelska!",
+        "bil = car | buss = bus | tåg = train",
+        "cykel = bike | båt = boat | flyg = plane",
+        "Tips: Bus och buss låter nästan likadant!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-v12-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bil' på engelska?",
+          "options": [
+            "car",
+            "bus",
+            "van",
+            "truck"
+          ],
+          "correctIndex": 0,
+          "explanation": "Bil = car. My car is blue."
+        },
+        {
+          "id": "lag-v12-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'buss' på engelska?",
+          "options": [
+            "train",
+            "bus",
+            "tram",
+            "boat"
+          ],
+          "correctIndex": 1,
+          "explanation": "Buss = bus. I take the bus to school."
+        },
+        {
+          "id": "lag-v12-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tåg' på engelska?",
+          "options": [
+            "boat",
+            "plane",
+            "train",
+            "bike"
+          ],
+          "correctIndex": 2,
+          "explanation": "Tåg = train. The train is fast."
+        },
+        {
+          "id": "lag-v12-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'cykel' på engelska?",
+          "options": [
+            "car",
+            "scooter",
+            "bike",
+            "skateboard"
+          ],
+          "correctIndex": 2,
+          "explanation": "Cykel = bike. I ride my bike."
+        },
+        {
+          "id": "lag-v12-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'båt' på engelska?",
+          "options": [
+            "boat",
+            "ship",
+            "ferry",
+            "raft"
+          ],
+          "correctIndex": 0,
+          "explanation": "Båt = boat. We sail in a boat."
+        }
+      ]
+    },
+    {
       "id": "lag-v1-farger",
       "title": "Färger (Colours)",
       "description": "Lär dig engelska ord för färger.",

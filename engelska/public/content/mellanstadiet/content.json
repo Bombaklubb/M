@@ -1,6 +1,573 @@
 {
   "grammar": [
     {
+      "id": "mel-v5-klader",
+      "title": "Kläder (Clothes)",
+      "description": "Lär dig fler engelska klädesord.",
+      "icon": "🧥",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🧥 Intermediate clothes vocabulary!",
+        "jacka = jacket | halsduk = scarf | vantar = gloves",
+        "stövlar = boots | uniform = uniform | kostym = suit",
+        "Tips: Uniform stavas likadant på svenska och engelska!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'jacka' på engelska?",
+          "options": [
+            "jacket",
+            "scarf",
+            "gloves",
+            "vest"
+          ],
+          "correctIndex": 0,
+          "explanation": "Jacka = jacket. Put on your jacket!"
+        },
+        {
+          "id": "mel-v5-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'halsduk' på engelska?",
+          "options": [
+            "tie",
+            "scarf",
+            "belt",
+            "collar"
+          ],
+          "correctIndex": 1,
+          "explanation": "Halsduk = scarf. The scarf is warm."
+        },
+        {
+          "id": "mel-v5-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'vantar' på engelska?",
+          "options": [
+            "socks",
+            "gloves",
+            "mittens",
+            "earmuffs"
+          ],
+          "correctIndex": 1,
+          "explanation": "Vantar = gloves (or mittens). Gloves keep hands warm."
+        },
+        {
+          "id": "mel-v5-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'stövlar' på engelska?",
+          "options": [
+            "boots",
+            "clogs",
+            "slippers",
+            "sandals"
+          ],
+          "correctIndex": 0,
+          "explanation": "Stövlar = boots. Boots are good in rain."
+        },
+        {
+          "id": "mel-v5-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kostym' på engelska?",
+          "options": [
+            "uniform",
+            "suit",
+            "tuxedo",
+            "blazer"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kostym = suit. He wears a suit to work."
+        }
+      ]
+    },
+    {
+      "id": "mel-v6-mat",
+      "title": "Mat (Food)",
+      "description": "Lär dig fler engelska matord.",
+      "icon": "🍕",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🍕 More food vocabulary!",
+        "pasta = pasta | ris = rice | ost = cheese",
+        "kyckling = chicken | grönsak = vegetable | fisk = fish",
+        "Tips: Pasta stavas likadant på svenska och engelska!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ris' på engelska?",
+          "options": [
+            "rice",
+            "corn",
+            "wheat",
+            "oats"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ris = rice. Rice is eaten in many countries."
+        },
+        {
+          "id": "mel-v6-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ost' på engelska?",
+          "options": [
+            "butter",
+            "cream",
+            "cheese",
+            "yogurt"
+          ],
+          "correctIndex": 2,
+          "explanation": "Ost = cheese. Cheese is made from milk."
+        },
+        {
+          "id": "mel-v6-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kyckling' på engelska?",
+          "options": [
+            "beef",
+            "pork",
+            "lamb",
+            "chicken"
+          ],
+          "correctIndex": 3,
+          "explanation": "Kyckling = chicken. Chicken is popular."
+        },
+        {
+          "id": "mel-v6-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'grönsak' på engelska?",
+          "options": [
+            "fruit",
+            "grain",
+            "vegetable",
+            "herb"
+          ],
+          "correctIndex": 2,
+          "explanation": "Grönsak = vegetable. Vegetables are healthy."
+        },
+        {
+          "id": "mel-v6-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fisk' på engelska?",
+          "options": [
+            "meat",
+            "fish",
+            "shrimp",
+            "crab"
+          ],
+          "correctIndex": 1,
+          "explanation": "Fisk = fish. We eat fish on Fridays."
+        }
+      ]
+    },
+    {
+      "id": "mel-v7-mobel",
+      "title": "Möbler (Furniture)",
+      "description": "Lär dig fler engelska möbelord.",
+      "icon": "🪑",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🪑 More furniture vocabulary!",
+        "bokhylla = bookshelf | garderob = wardrobe | skrivbord = desk",
+        "gardiner = curtains | matta = carpet | spegel = mirror",
+        "Tips: Carpet på engelska = matta, inte kartong!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bokhylla' på engelska?",
+          "options": [
+            "bookshelf",
+            "cupboard",
+            "cabinet",
+            "drawer"
+          ],
+          "correctIndex": 0,
+          "explanation": "Bokhylla = bookshelf. Books go on the bookshelf."
+        },
+        {
+          "id": "mel-v7-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'garderob' på engelska?",
+          "options": [
+            "dresser",
+            "wardrobe",
+            "closet",
+            "chest"
+          ],
+          "correctIndex": 1,
+          "explanation": "Garderob = wardrobe. Clothes hang in the wardrobe."
+        },
+        {
+          "id": "mel-v7-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'skrivbord' på engelska?",
+          "options": [
+            "desk",
+            "counter",
+            "bench",
+            "table"
+          ],
+          "correctIndex": 0,
+          "explanation": "Skrivbord = desk. I study at my desk."
+        },
+        {
+          "id": "mel-v7-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gardiner' på engelska?",
+          "options": [
+            "blinds",
+            "shutters",
+            "curtains",
+            "drapes"
+          ],
+          "correctIndex": 2,
+          "explanation": "Gardiner = curtains. Close the curtains!"
+        },
+        {
+          "id": "mel-v7-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'matta' på engelska?",
+          "options": [
+            "tile",
+            "carpet",
+            "floor",
+            "mat"
+          ],
+          "correctIndex": 1,
+          "explanation": "Matta = carpet. The carpet is soft."
+        }
+      ]
+    },
+    {
+      "id": "mel-v8-kanslor",
+      "title": "Känslor (Feelings)",
+      "description": "Lär dig fler engelska känsloord.",
+      "icon": "😮",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "😮 More feelings vocabulary!",
+        "nervös = nervous | uppspelt = excited | besviken = disappointed",
+        "stolt = proud | avundsjuk = jealous | generad = embarrassed",
+        "Tips: Excited = uppspelt, inte exakt 'exalterad'!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v8-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'nervös' på engelska?",
+          "options": [
+            "nervous",
+            "excited",
+            "proud",
+            "calm"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nervös = nervous. I am nervous before tests."
+        },
+        {
+          "id": "mel-v8-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'uppspelt' på engelska?",
+          "options": [
+            "bored",
+            "excited",
+            "worried",
+            "sad"
+          ],
+          "correctIndex": 1,
+          "explanation": "Uppspelt = excited. She is excited about the trip!"
+        },
+        {
+          "id": "mel-v8-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'besviken' på engelska?",
+          "options": [
+            "relieved",
+            "disappointed",
+            "furious",
+            "content"
+          ],
+          "correctIndex": 1,
+          "explanation": "Besviken = disappointed. He is disappointed."
+        },
+        {
+          "id": "mel-v8-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'stolt' på engelska?",
+          "options": [
+            "proud",
+            "shy",
+            "selfish",
+            "brave"
+          ],
+          "correctIndex": 0,
+          "explanation": "Stolt = proud. She is proud of her work."
+        },
+        {
+          "id": "mel-v8-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'avundsjuk' på engelska?",
+          "options": [
+            "hateful",
+            "jealous",
+            "grumpy",
+            "lonely"
+          ],
+          "correctIndex": 1,
+          "explanation": "Avundsjuk = jealous. Try not to be jealous."
+        }
+      ]
+    },
+    {
+      "id": "mel-v9-vader",
+      "title": "Väder (Weather)",
+      "description": "Lär dig fler engelska väderord.",
+      "icon": "🌩️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🌩️ More weather vocabulary!",
+        "dimmig = foggy | stormig = stormy | åskväder = thunderstorm",
+        "temperatur = temperature | väderprognos = forecast | hagel = hail",
+        "Tips: Temperature och temperatur är nästan samma ord!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v9-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'dimmig' på engelska?",
+          "options": [
+            "foggy",
+            "frosty",
+            "hazy",
+            "misty"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dimmig = foggy. It is foggy this morning."
+        },
+        {
+          "id": "mel-v9-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'stormig' på engelska?",
+          "options": [
+            "breezy",
+            "stormy",
+            "gusty",
+            "wild"
+          ],
+          "correctIndex": 1,
+          "explanation": "Stormig = stormy. The sea is stormy."
+        },
+        {
+          "id": "mel-v9-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'åskväder' på engelska?",
+          "options": [
+            "hurricane",
+            "blizzard",
+            "thunderstorm",
+            "cyclone"
+          ],
+          "correctIndex": 2,
+          "explanation": "Åskväder = thunderstorm. There is a thunderstorm."
+        },
+        {
+          "id": "mel-v9-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'temperatur' på engelska?",
+          "options": [
+            "pressure",
+            "temperature",
+            "humidity",
+            "climate"
+          ],
+          "correctIndex": 1,
+          "explanation": "Temperatur = temperature. Almost the same word!"
+        },
+        {
+          "id": "mel-v9-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'väderprognos' på engelska?",
+          "options": [
+            "report",
+            "forecast",
+            "update",
+            "warning"
+          ],
+          "correctIndex": 1,
+          "explanation": "Väderprognos = forecast. Check the forecast!"
+        }
+      ]
+    },
+    {
+      "id": "mel-v10-sporter",
+      "title": "Sporter (Sports)",
+      "description": "Lär dig fler engelska sportord.",
+      "icon": "🏊",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🏊 More sports vocabulary!",
+        "volleyboll = volleyball | gymnastik = gymnastics | cykling = cycling",
+        "friidrott = athletics | brottning = wrestling | handboll = handball",
+        "Tips: Volleyball och volleyboll stavas nästan likadant!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v10-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'volleyboll' på engelska?",
+          "options": [
+            "volleyball",
+            "handball",
+            "netball",
+            "racquetball"
+          ],
+          "correctIndex": 0,
+          "explanation": "Volleyboll = volleyball. We play volleyball at the beach."
+        },
+        {
+          "id": "mel-v10-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gymnastik' på engelska?",
+          "options": [
+            "gymnastics",
+            "acrobatics",
+            "aerobics",
+            "pilates"
+          ],
+          "correctIndex": 0,
+          "explanation": "Gymnastik = gymnastics. Gymnastics needs flexibility."
+        },
+        {
+          "id": "mel-v10-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'cykling' på engelska?",
+          "options": [
+            "skating",
+            "cycling",
+            "jogging",
+            "hiking"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cykling = cycling. Cycling is good exercise."
+        },
+        {
+          "id": "mel-v10-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'friidrott' på engelska?",
+          "options": [
+            "athletics",
+            "triathlon",
+            "decathlon",
+            "pentathlon"
+          ],
+          "correctIndex": 0,
+          "explanation": "Friidrott = athletics. Athletics includes running and jumping."
+        },
+        {
+          "id": "mel-v10-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'brottning' på engelska?",
+          "options": [
+            "boxing",
+            "wrestling",
+            "judo",
+            "fencing"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brottning = wrestling. Wrestling is a contact sport."
+        }
+      ]
+    },
+    {
+      "id": "mel-v11-fordon",
+      "title": "Fordon (Vehicle)",
+      "description": "Lär dig fler engelska fordonsord.",
+      "icon": "🚂",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🚂 More vehicle vocabulary!",
+        "lastbil = truck | motorcykel = motorcycle | helikopter = helicopter",
+        "ubåt = submarine | spårvagn = tram | ambulans = ambulance",
+        "Tips: Helicopter och helikopter är nästan samma ord!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-v11-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'lastbil' på engelska?",
+          "options": [
+            "truck",
+            "van",
+            "lorry",
+            "wagon"
+          ],
+          "correctIndex": 0,
+          "explanation": "Lastbil = truck. The truck carries heavy loads."
+        },
+        {
+          "id": "mel-v11-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'motorcykel' på engelska?",
+          "options": [
+            "scooter",
+            "motorcycle",
+            "moped",
+            "bicycle"
+          ],
+          "correctIndex": 1,
+          "explanation": "Motorcykel = motorcycle. Wear a helmet on a motorcycle."
+        },
+        {
+          "id": "mel-v11-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'helikopter' på engelska?",
+          "options": [
+            "helicopter",
+            "airplane",
+            "drone",
+            "airship"
+          ],
+          "correctIndex": 0,
+          "explanation": "Helikopter = helicopter. Almost the same word!"
+        },
+        {
+          "id": "mel-v11-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ubåt' på engelska?",
+          "options": [
+            "submarine",
+            "torpedo",
+            "vessel",
+            "dinghy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ubåt = submarine. Submarines go underwater."
+        },
+        {
+          "id": "mel-v11-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'spårvagn' på engelska?",
+          "options": [
+            "tram",
+            "metro",
+            "trolley",
+            "cable car"
+          ],
+          "correctIndex": 0,
+          "explanation": "Spårvagn = tram. The tram runs on rails."
+        }
+      ]
+    },
+    {
       "id": "mel-g5-nouns",
       "title": "Substantiv – Singular & Plural",
       "description": "Hur man bildar plural av substantiv, inklusive oregelbundna former.",
