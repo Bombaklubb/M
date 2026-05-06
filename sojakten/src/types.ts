@@ -137,6 +137,8 @@ export interface Achievement {
 
 // === APP STATE ===
 export type AppView =
+  | 'grade-select'
+  | 'grade-coming-soon'
   | 'subject-select'
   | 'chapter-map'
   | 'chapter-study'

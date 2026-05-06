@@ -7,6 +7,7 @@ type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'te
 
 interface AppContextValue {
   currentView: AppView;
+  selectedGrade: number | null;
   selectedSubject: Subject | null;
   selectedChapter: Chapter | null;
   exitTicketChapter: Chapter | null;
@@ -14,6 +15,7 @@ interface AppContextValue {
   studyInitialTab: StudyTab;
 
   setView: (view: AppView) => void;
+  selectGrade: (grade: number) => void;
   selectSubject: (subject: Subject) => void;
   selectChapter: (chapter: Chapter) => void;
   openChapterStudy: (chapter: Chapter, tab?: StudyTab) => void;
@@ -32,7 +34,8 @@ export function useApp(): AppContextValue {
 }
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [currentView, setCurrentView] = useState<AppView>('subject-select');
+  const [currentView, setCurrentView] = useState<AppView>('grade-select');
+  const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [exitTicketChapter, setExitTicketChapter] = useState<Chapter | null>(null);
@@ -40,6 +43,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [studyInitialTab, setStudyInitialTab] = useState<StudyTab>('concepts');
 
   function setView(view: AppView) { setCurrentView(view); }
+
+  function selectGrade(grade: number) {
+    setSelectedGrade(grade);
+    if (grade === 5) {
+      setCurrentView('subject-select');
+    } else {
+      setCurrentView('grade-coming-soon');
+    }
+  }
 
   function selectSubject(subject: Subject) {
     setSelectedSubject(subject);
@@ -101,8 +113,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{
-      currentView, selectedSubject, selectedChapter, exitTicketChapter, lastResult, studyInitialTab,
-      setView, selectSubject, selectChapter, openChapterStudy, startExitTicket,
+      currentView, selectedGrade, selectedSubject, selectedChapter, exitTicketChapter, lastResult, studyInitialTab,
+      setView, selectGrade, selectSubject, selectChapter, openChapterStudy, startExitTicket,
       submitChapterResult, isChapterUnlocked, getChapterProgressFor,
     }}>
       {children}
