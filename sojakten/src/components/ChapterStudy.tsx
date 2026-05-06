@@ -4,9 +4,9 @@ import AppHeader from './AppHeader';
 import { BookOpen, ArrowRight, Eye, EyeOff, Zap } from 'lucide-react';
 
 export default function ChapterStudy() {
-  const { selectedChapter, selectedSubject, setView, selectChapter, startExitTicket } = useApp();
+  const { selectedChapter, selectedSubject, setView, selectChapter, startExitTicket, studyInitialTab } = useApp();
   const [revealedConcepts, setRevealedConcepts] = useState<Set<number>>(new Set());
-  const [activeTab, setActiveTab] = useState<'concepts' | 'key-points' | 'cause-effect'>('concepts');
+  const [activeTab, setActiveTab] = useState<'concepts' | 'key-points' | 'cause-effect'>(studyInitialTab);
 
   if (!selectedChapter || !selectedSubject) { setView('subject-select'); return null; }
 
@@ -169,7 +169,7 @@ export default function ChapterStudy() {
                 color: '#6b7280',
               }}
             >
-              {tab === 'concepts' ? '📘 Begrepp' : tab === 'key-points' ? '📋 Kärninnehåll' : '⚡ Orsak & konsekvens'}
+              {tab === 'concepts' ? '📘 Begrepp' : tab === 'key-points' ? '📋 Sammanfattning' : '⚡ Orsak & konsekvens'}
             </button>
           ))}
         </div>

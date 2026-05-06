@@ -9,11 +9,12 @@ interface AppContextValue {
   selectedChapter: Chapter | null;
   exitTicketChapter: Chapter | null;
   lastResult: ExerciseSessionResult | null;
+  studyInitialTab: 'concepts' | 'key-points' | 'cause-effect';
 
   setView: (view: AppView) => void;
   selectSubject: (subject: Subject) => void;
   selectChapter: (chapter: Chapter) => void;
-  openChapterStudy: (chapter: Chapter) => void;
+  openChapterStudy: (chapter: Chapter, tab?: 'concepts' | 'key-points' | 'cause-effect') => void;
   startExitTicket: (chapter: Chapter) => void;
   submitChapterResult: (chapterId: string, correctAnswers: number, totalQuestions: number) => ExerciseSessionResult;
   isChapterUnlocked: (chapterId: string) => boolean;
@@ -34,6 +35,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [exitTicketChapter, setExitTicketChapter] = useState<Chapter | null>(null);
   const [lastResult, setLastResult] = useState<ExerciseSessionResult | null>(null);
+  const [studyInitialTab, setStudyInitialTab] = useState<'concepts' | 'key-points' | 'cause-effect'>('concepts');
 
   function setView(view: AppView) { setCurrentView(view); }
 
@@ -42,8 +44,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('chapter-map');
   }
 
-  function openChapterStudy(chapter: Chapter) {
+  function openChapterStudy(chapter: Chapter, tab: 'concepts' | 'key-points' | 'cause-effect' = 'concepts') {
     setSelectedChapter(chapter);
+    setStudyInitialTab(tab);
     if (chapter.summary) {
       setCurrentView('chapter-study');
     } else {
@@ -103,7 +106,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{
-      currentView, selectedSubject, selectedChapter, exitTicketChapter, lastResult,
+      currentView, selectedSubject, selectedChapter, exitTicketChapter, lastResult, studyInitialTab,
       setView, selectSubject, selectChapter, openChapterStudy, startExitTicket,
       submitChapterResult, isChapterUnlocked, getChapterProgressFor,
     }}>
