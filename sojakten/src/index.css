@@ -60,33 +60,77 @@
     box-shadow: 0 4px 0 rgba(0,0,0,0.12), 0 8px 20px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,1);
   }
 
-  /* Subject card styles */
+  /* Subject card styles — design-token themed */
   .clay-historia {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border: 3px solid #fbbf24;
-    box-shadow: 0 6px 0 #b45309, 0 10px 30px rgba(245,158,11,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    background: linear-gradient(145deg, #f5e8c8 0%, #efddb5 60%, #e8d4a4 100%);
+    border: 3px solid #c8a866;
+    box-shadow: 0 6px 0 #7a4e1a, 0 10px 30px rgba(192,138,44,0.28), inset 0 1px 0 rgba(255,252,240,0.8);
     border-radius: 1.5rem;
   }
 
   .clay-geografi {
-    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-    border: 3px solid #34d399;
-    box-shadow: 0 6px 0 #065f46, 0 10px 30px rgba(16,185,129,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    background: linear-gradient(145deg, #eaf4e5 0%, #e0eeda 60%, #d2e8cb 100%);
+    border: 3px solid #5ba876;
+    box-shadow: 0 6px 0 #0a5233, 0 10px 30px rgba(31,122,77,0.28), inset 0 1px 0 rgba(240,255,245,0.8);
     border-radius: 1.5rem;
   }
 
   .clay-religion {
-    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-    border: 3px solid #a78bfa;
-    box-shadow: 0 6px 0 #5b21b6, 0 10px 30px rgba(139,92,246,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    background: linear-gradient(145deg, #f5eefa 0%, #ede4f5 60%, #e3d5ef 100%);
+    border: 3px solid #9b6ec0;
+    box-shadow: 0 6px 0 #3d1660, 0 10px 30px rgba(91,42,134,0.28), inset 0 1px 0 rgba(255,250,255,0.8);
     border-radius: 1.5rem;
   }
 
   .clay-samhalle {
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-    border: 3px solid #60a5fa;
-    box-shadow: 0 6px 0 #1e40af, 0 10px 30px rgba(59,130,246,0.25), inset 0 1px 0 rgba(255,255,255,0.6);
+    background: linear-gradient(145deg, #f6f2e8 0%, #f0ebdc 60%, #e8e2d4 100%);
+    border: 3px solid #8898d4;
+    box-shadow: 0 6px 0 #102080, 0 10px 30px rgba(29,77,214,0.28), inset 0 1px 0 rgba(255,255,255,0.8);
     border-radius: 1.5rem;
+  }
+
+  /* Subject page backgrounds */
+  .page-bg-historia {
+    background: linear-gradient(160deg, #faf3e0 0%, #f5e8c8 40%, #ecdbbf 100%);
+    background-attachment: fixed;
+  }
+  .page-bg-geografi {
+    background: linear-gradient(160deg, #f0f9ec 0%, #e4f2dd 40%, #d4e8cc 100%);
+    background-attachment: fixed;
+  }
+  .page-bg-religion {
+    background: linear-gradient(160deg, #faf5ff 0%, #f0e8fa 40%, #e5d8f2 100%);
+    background-attachment: fixed;
+  }
+  .page-bg-samhalle {
+    background: linear-gradient(160deg, #fafaf5 0%, #f5f0e5 40%, #ebe4d4 100%);
+    background-attachment: fixed;
+  }
+
+  /* Subject header bars */
+  .header-historia {
+    background: rgba(239, 221, 181, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(192, 138, 44, 0.35);
+    box-shadow: 0 2px 20px rgba(122,78,26,0.12);
+  }
+  .header-geografi {
+    background: rgba(224, 238, 218, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(31,122,77, 0.35);
+    box-shadow: 0 2px 20px rgba(10,83,51,0.12);
+  }
+  .header-religion {
+    background: rgba(237, 228, 245, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(91,42,134, 0.35);
+    box-shadow: 0 2px 20px rgba(61,22,96,0.12);
+  }
+  .header-samhalle {
+    background: rgba(240, 235, 220, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(29,77,214, 0.35);
+    box-shadow: 0 2px 20px rgba(16,32,128,0.12);
   }
 
   /* Buttons */
@@ -153,6 +197,20 @@
 
   .font-heading {
     font-family: 'Fredoka', 'Nunito', system-ui, sans-serif;
+  }
+
+  /* Subject-specific heading fonts */
+  .font-historia {
+    font-family: 'Playfair Display', 'EB Garamond', Georgia, serif;
+  }
+  .font-geografi {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+  .font-religion {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-samhalle {
+    font-family: 'Archivo Black', system-ui, sans-serif;
   }
 }
 
