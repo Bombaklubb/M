@@ -92,6 +92,7 @@ export interface ChapterSummary {
   keyPoints: string[];
   causeEffect: CauseEffect[];
   studentConnection: string;
+  questions?: { q: string; a: string }[];
 }
 
 // === CHAPTERS ===

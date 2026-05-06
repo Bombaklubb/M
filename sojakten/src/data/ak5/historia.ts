@@ -31,6 +31,19 @@ export const AK5_HISTORIA: Chapter[] = [
         { cause: 'Korsfararnas misslyckanden att hålla Jerusalem', effect: 'Minskad tilltro till påven och kyrkans politiska makt.' },
       ],
       studentConnection: 'Riddare och borgar som du ser i fantasy-spel och filmer härstammar direkt från medeltiden. Dungeons & Dragons, Game of Thrones och Zelda är alla inspirerade av medeltida Europa.',
+      questions: [
+        { q: 'Vad var feodalsystemet?', a: 'Ett system där kungen ägde all mark och lät adeln styra delar av landet i utbyte mot militär tjänst. Bönder odlade åt sina herrar.' },
+        { q: 'Ungefär när varade medeltiden?', a: 'Ungefär 500–1500 e.Kr.' },
+        { q: 'Vilken institution var mest mäktig i Europa under medeltiden?', a: 'Den katolska kyrkan hade enormt religiöst, politiskt och ekonomiskt inflytande.' },
+        { q: 'Vad heter den sjukdom som dödade ca en tredjedel av Europas befolkning på 1300-talet?', a: 'Digerdöden (böldpesten), som spreds via råttor och loppor.' },
+        { q: 'Vad var korstågen?', a: 'Religiösa krig där kristna från Europa reste till Mellanöstern för att erövra Jerusalem från muslimerna.' },
+        { q: 'Vad kallades kyrkans ledare som ansågs ha makt över alla europeiska kungar?', a: 'Påven i Rom.' },
+        { q: 'Hur påverkade digerdöden böndernas villkor?', a: 'Bristen på arbetskraft gav bönderna mer förhandlingskraft och bättre villkor.' },
+        { q: 'Vad är en borg?', a: 'En befäst byggnad där adeln bodde och skyddade sig och sina undersåtar.' },
+        { q: 'Vilka klasser bestod det feodala samhället av?', a: 'Kungen, adeln, präster och bönder (livegna).' },
+        { q: 'Vad innebar det att vara livegen?', a: 'Bönder som var bundna till marken och hade mycket lite frihet.' },
+        { q: 'Vad hände med kyrkans politiska makt när korstågen misslyckades?', a: 'Tilltron till påven och kyrkans politiska makt minskade.' },
+      ],
     },
     exercises: [
       {
@@ -172,6 +185,18 @@ export const AK5_HISTORIA: Chapter[] = [
         { cause: 'Gustav Vasa centraliserade makten', effect: 'Sverige fick en stark statsmakt och ett modernt skattesystem för första gången.' },
       ],
       studentConnection: 'Svenska kyrkan – den kyrka vars klockor du hör på julafton – existerar fortfarande som ett resultat av Vasatidens reformation. Gustav Vasas porträtt finns på gamla mynt och sedlar.',
+      questions: [
+        { q: 'Vem var Gustav Vasa?', a: 'Sveriges kung 1523–1560, grundare av det moderna Sverige och den lutherska staten.' },
+        { q: 'Vad var Kalmarunionen?', a: 'Den politiska union (1397–1523) som samlade Sverige, Norge och Danmark under en gemensam kung – oftast dansk.' },
+        { q: 'Vad hände vid Stockholms blodbad 1520?', a: 'Den danske kungen Kristian II lät avrätta ca 90 svenska adelsmän och präster.' },
+        { q: 'Vem startade reformationen och när?', a: 'Martin Luther, en tysk munk, 1517.' },
+        { q: 'Vad innebar reformationen för kyrkan i Sverige?', a: 'Sverige bröt med den katolska kyrkan och blev lutherskt/protestantiskt. Kyrkans mark och rikedomar konfiskerades av staten.' },
+        { q: 'Vilket år upplöstes Kalmarunionen och Gustav Vasa blev kung?', a: '1523.' },
+        { q: 'Varför startade Gustav Vasas uppror?', a: 'Stockholms blodbad 1520 utlöste upproret mot det danska styret.' },
+        { q: 'Vad hände med kyrkans mark och rikedomar under reformationen?', a: 'De konfiskerades av staten/kungen, vilket stärkte ekonomin enormt.' },
+        { q: 'Hur påverkade Gustav Vasa den svenska statens organisation?', a: 'Han lade grunden till en centraliserad svensk stat med ett modernt skattesystem.' },
+        { q: 'Vad kallades Martin Luthers religiösa rörelse?', a: 'Reformationen.' },
+      ],
     },
     exercises: [
       {
@@ -316,6 +341,18 @@ export const AK5_HISTORIA: Chapter[] = [
         { cause: 'Karl XI genomförde reduktionen', effect: 'Adeln förlorade mark till kronan, staten fick starkare ekonomi och kungamakten stärktes.' },
       ],
       studentConnection: 'Många svenska ortnamn i Finland och Estland härstammar från stormaktstiden. Städer som Tallinn (Reval) var svenska. Om du reser dit ser du fortfarande spår av Sverige.',
+      questions: [
+        { q: 'Under vilket århundrade var Sverige som starkast som stormakt?', a: '1600-talet.' },
+        { q: 'Vilka landområden kontrollerade Sverige under stormaktstiden?', a: 'Finland, Estland, Lettland och delar av norra Tyskland – stora delar av Östersjöns kuster.' },
+        { q: 'Vem kallas "Lejonet från Norden" och hur dog han?', a: 'Gustav II Adolf, kung 1611–1632, dog i slaget vid Lützen under Trettioåriga kriget.' },
+        { q: 'Vad var Trettioåriga kriget?', a: 'Stort europeiskt krig 1618–1648 mellan katolska och protestantiska stater. Sverige deltog på protestanternas sida.' },
+        { q: 'Vad innebar Westfaliska freden 1648?', a: 'Fredsavtal som avslutade Trettioåriga kriget. Sverige fick landområden i norra Tyskland och erkändes som stormakt.' },
+        { q: 'Vad var reduktionen och vem genomförde den?', a: 'Karl XI:s reform på 1680-talet då kronan tog tillbaka mark som tidigare getts till adeln.' },
+        { q: 'Hur slutade stormaktstiden?', a: 'Karl XII förlorade Stora nordiska kriget mot Ryssland. Freden i Nystad 1721 markerade slutet.' },
+        { q: 'Vem var Drottning Kristina?', a: 'Dotter till Gustav II Adolf som blev drottning som 6-åring när fadern dog 1632.' },
+        { q: 'Vilken effekt fick Karl XI:s reduktion?', a: 'Adeln förlorade mark till kronan, staten fick starkare ekonomi och kungamakten stärktes.' },
+        { q: 'Vilket år markerar officiellt stormaktstidens slut?', a: '1721, med freden i Nystad efter Stora nordiska kriget.' },
+      ],
     },
     exercises: [
       {

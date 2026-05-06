@@ -30,6 +30,19 @@ export const AK5_GEOGRAFI: Chapter[] = [
         { cause: 'Ryssland är ett enormt land', effect: 'Ryssland sträcker sig över elva tidszoner och innehåller en stor del av världens naturresurser.' },
       ],
       studentConnection: 'Du bor i Europa – Sverige är en del av den kontinent som vi kallar Europa. När du reser till södra Europa möter du varmare klimat, annan mat och andra språk men ändå samma kontinent.',
+      questions: [
+        { q: 'Hur många länder finns det ungefär i Europa?', a: 'Ungefär 50 länder.' },
+        { q: 'Vilket land är störst till ytan i Europa?', a: 'Ryssland.' },
+        { q: 'Vad heter Europas högsta berg och hur högt är det?', a: 'Mont Blanc, 4808 m, på gränsen mellan Frankrike och Italien.' },
+        { q: 'Vad heter Europas längsta flod?', a: 'Volga i Ryssland, ca 3690 km.' },
+        { q: 'Vilket hav skiljer Europa från Afrika i söder?', a: 'Medelhavet.' },
+        { q: 'Vilka tre länder ingår i Skandinavien?', a: 'Sverige, Norge och Danmark.' },
+        { q: 'Vad är en halvö?', a: 'Ett landområde omgivet av vatten på tre sidor.' },
+        { q: 'Vad heter Frankrikes huvudstad?', a: 'Paris.' },
+        { q: 'Vad heter Tysklands huvudstad?', a: 'Berlin.' },
+        { q: 'Vad heter bergskedjan som sträcker sig genom Schweiz, Österrike, Frankrike och Italien?', a: 'Alperna.' },
+        { q: 'Vad kallas det hav som ligger norr om Polen och söder om Skandinavien?', a: 'Östersjön.' },
+      ],
     },
     exercises: [
       {
@@ -165,6 +178,18 @@ export const AK5_GEOGRAFI: Chapter[] = [
         { cause: 'Klimatförändringarna värmer upp planeten', effect: 'Glaciärer smälter, havsnivån stiger och extremväder som torka och översvämningar ökar.' },
       ],
       studentConnection: 'Sveriges klimat avgör varför vi odlar vete och råg, inte ris och bananer. Varför går vi inte i skolan på sommaren? Delvis för att det historiskt sett var bättre väder för jordbruksarbete.',
+      questions: [
+        { q: 'Vad är en klimatzon?', a: 'Ett område med liknande klimat, bestämt av avstånd till ekvatorn och hav.' },
+        { q: 'Vilket klimat råder nära ekvatorn?', a: 'Tropiskt klimat – varmt och fuktigt med regnskog.' },
+        { q: 'Vilket klimat har Sverige?', a: 'Tempererat klimat med fyra årstider.' },
+        { q: 'Vad kallas den värme grässlätten i Afrika med lejon och giraffer?', a: 'Savannen.' },
+        { q: 'Vad är taigan?', a: 'Världens största skogszon – barrskog i norra Ryssland och Kanada.' },
+        { q: 'Vad delar ekvatorn?', a: 'Ekvatorn delar jorden i norra och södra halvklotet.' },
+        { q: 'Vad innebär ökenklimnat?', a: 'Extremt lite nederbörde – under 250 mm per år.' },
+        { q: 'Vad händer med glaciärer på grund av klimatförändringar?', a: 'De smälter, vilket gör att havsnivån stiger.' },
+        { q: 'Vilket klimat är typiskt för Medelhavsländerna?', a: 'Varmt och torrt sommar, mild och regnig vinter.' },
+        { q: 'Vad bestämmer vilka växter som kan leva i ett område?', a: 'Klimat, marktyp och tillgång till vatten bestämmer vegetationen.' },
+      ],
     },
     exercises: [
       {
@@ -298,6 +323,18 @@ export const AK5_GEOGRAFI: Chapter[] = [
         { cause: 'Vulkaner på öar (som på Island)', effect: 'Askmolnen kan störa flygtrafiken och påverka klimat globalt.' },
       ],
       studentConnection: 'Island, som är populärt för turister, är ett land som skapats av vulkaner och har fortfarande aktiva vulkaner. Islandsvulkanen Eyjafjallajökull ställde 2010 till med stora problem för europas flygtrafik.',
+      questions: [
+        { q: 'Vad är lithosfärplatter?', a: 'De stora skivor som jordskorpan är uppdelad i. De rör sig ca 2–10 cm per år.' },
+        { q: 'Vad är skillnaden mellan magma och lava?', a: 'Magma är smält sten under jordskorpan. När den når ytan kallas den lava.' },
+        { q: 'Vad orsakar jordbävningar?', a: 'Skakning i marken som uppstår när tektoniska plattor rör sig mot eller från varandra.' },
+        { q: 'Vilka är jordens lager från ytan till centrum?', a: 'Jordskorpan, manteln, yttre kärnan (flytande) och inre kärnan (fast järn).' },
+        { q: 'Vad kallas det bälte runt Stilla havet med många vulkaner?', a: '"Eldringens rand".' },
+        { q: 'Hur bildas bergskedjor?', a: 'När tektoniska plattor kolliderar (krockar) trycks marken uppåt och bildar berg.' },
+        { q: 'Vad är en vulkan?', a: 'En öppning i jordskorpan där lava, gas och aska kan sprutas ut.' },
+        { q: 'Vad är skillnaden mellan jordskorpan under hav och under kontinenter?', a: 'Under hav är jordskorpan tunnare (5–10 km), under kontinenter tjockare (30–70 km).' },
+        { q: 'Vad kan en undervattens-jordbävning orsaka?', a: 'En tsunami – enorma vågor som kan orsaka katastrofala översvämningar.' },
+        { q: 'Vad är granit för slags bergart?', a: 'En magmatisk bergart – bildad av stelnad magma djupt i jordskorpan.' },
+      ],
     },
     exercises: [
       {

@@ -30,6 +30,18 @@ export const AK5_SAMHALLE: Chapter[] = [
         { cause: 'Fackförbund strejkar', effect: 'Arbetsgivaren tvingas förhandla om bättre löner och arbetsvillkor.' },
       ],
       studentConnection: 'Du betalar redan skatt! När du köper godis eller spel betalar du moms – en skatt på ca 25%. Det är en av statens viktigaste inkomstkällor.',
+      questions: [
+        { q: 'Vad är en lön?', a: 'Pengar man får för sitt arbete. Lönen varierar beroende på yrke, utbildning och erfarenhet.' },
+        { q: 'Vad är en skatt och vad finansierar den?', a: 'Pengar vi betalar till staten. Skatterna finansierar skola, sjukvård, polis och annan välfärd.' },
+        { q: 'Vad är ett fackförbund?', a: 'Organisation som arbetar för löntagarnas rättigheter och förhandlar om löner och arbetsvillkor.' },
+        { q: 'Vad är marknadsekonomi?', a: 'Ekonomiskt system där priset bestäms av utbud (vad som erbjuds) och efterfrågan (vad folk vill köpa).' },
+        { q: 'Vad är inflation?', a: 'När priserna i samhället stiger – pengarna blir mindre värda.' },
+        { q: 'Vad är skillnaden mellan export och import?', a: 'Export = sälja till andra länder. Import = köpa från andra länder.' },
+        { q: 'Varför betalar vi moms?', a: 'Moms är en skatt på ca 25% på varor och tjänster som finansierar statens utgifter.' },
+        { q: 'Vad gör Riksbanken?', a: 'Riksbanken är Sveriges centralbank, ger ut kronor och bestämmer räntan.' },
+        { q: 'Vad händer med priset på en vara om många fler vill köpa den?', a: 'Priset stiger – hög efterfrågan driver upp priset.' },
+        { q: 'Vad är byteshandel?', a: 'Att byta en vara mot en annan, utan pengar. Pengar ersatte byteshandeln för att göra handel smidigare.' },
+      ],
     },
     exercises: [
       {
@@ -183,6 +195,18 @@ export const AK5_SAMHALLE: Chapter[] = [
         { cause: 'Om makten samlas hos en person utan kontroll', effect: 'Risk för diktatur – historien visar att makten då ofta missbrukas.' },
       ],
       studentConnection: 'Du möter demokrati i skolan varje dag – när ni röstar om klassregler, väljer klasskamrat till rådet eller bestämmer om utflykt tillsammans. Det är samma princip som i riksdagen!',
+      questions: [
+        { q: 'Vad är demokrati?', a: 'Styrelseskick där folket väljer sina representanter. "Demokrati" betyder "folkstyre" på grekiska.' },
+        { q: 'Vad är riksdagen?', a: 'Sveriges parlament – 349 valda politiker som stiftar lagar och beslutar om statsbudgeten.' },
+        { q: 'Vad är en grundlag?', a: 'Sveriges viktigaste lagar som bestämmer hur landet ska styras. Svårare att ändra än vanliga lagar.' },
+        { q: 'Vilka fyra grundlagar har Sverige?', a: 'Regeringsformen, Successionsordningen, Tryckfrihetsförordningen och Yttrandefrihetsgrundlagen.' },
+        { q: 'Vad gör en domstol?', a: 'Avgör om lagar brutits och bestämmer straff.' },
+        { q: 'Hur ofta väljer vi riksdag i Sverige?', a: 'Vart fjärde år.' },
+        { q: 'Vad är mänskliga rättigheter?', a: 'Grundläggande rättigheter som alla människor har oavsett nationalitet, kön eller religion.' },
+        { q: 'Vid vilken ålder är man straffmyndig i Sverige?', a: '15 år.' },
+        { q: 'Vad är yttrandefrihet?', a: 'Rätten att fritt uttrycka sina åsikter – skyddas i Sveriges grundlag.' },
+        { q: 'Vad antog FN 1948 om mänskliga rättigheter?', a: 'Den allmänna förklaringen om de mänskliga rättigheterna.' },
+      ],
     },
     exercises: [
       {
@@ -331,6 +355,18 @@ export const AK5_SAMHALLE: Chapter[] = [
         { cause: 'Fri press och yttrandefrihet', effect: 'Journalister kan granska makten och avslöja korruption – viktigt för demokratin.' },
       ],
       studentConnection: 'Nästa gång du scrollar TikTok eller YouTube – tänk på att en algoritm valt ut vad du ser, baserat på vad du tidigare gillat. Det är en form av påverkan. Och när du ser en reklam – fråga dig: vad vill de att jag ska göra?',
+      questions: [
+        { q: 'Vilka tre roller har media i samhället?', a: 'Informera, granska makten (tredje statsmakten) och underhålla.' },
+        { q: 'Vad är källkritik?', a: 'Att kritiskt granska varifrån information kommer – vem har skrivit det, varför och när?' },
+        { q: 'Vad är syftet med reklam?', a: 'Att övertala dig att köpa en produkt eller tjänst – reklam är aldrig neutral.' },
+        { q: 'Vad är propaganda?', a: 'Information avsedd att påverka åsikter, ofta ensidig och missvisande. Används av stater och politiska rörelser.' },
+        { q: 'Vad är sociala medier?', a: 'Digitala plattformar (Instagram, TikTok, YouTube) där användare skapar och delar innehåll.' },
+        { q: 'Vad är en filterbubbla?', a: 'När algoritmer på sociala medier visar bara sådant du redan gillar, så du sällan möter andra åsikter.' },
+        { q: 'Vad är desinformation?', a: 'Falsk eller vilseledande information som sprids – medvetet eller omedvetet.' },
+        { q: 'Varför är fri press viktig i en demokrati?', a: 'Journalister kan granska makten och avslöja korruption – det håller politikerna ansvariga.' },
+        { q: 'Vilka fyra frågor ställer man vid källkritik?', a: 'Vem har skrivit det? Varför skrevs det? Är det aktuellt? Stämmer det med andra källor?' },
+        { q: 'Är reklam riktad till barn under 12 år tillåten i svensk TV?', a: 'Nej – Sverige har förbud mot TV-reklam riktad direkt till barn under 12 år.' },
+      ],
     },
     exercises: [
       {
