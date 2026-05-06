@@ -1,5 +1,7 @@
 import React from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
+import GradeSelect from './components/GradeSelect';
+import GradeComingSoon from './components/GradeComingSoon';
 import SubjectSelect from './components/SubjectSelect';
 import ChapterMap from './components/ChapterMap';
 import ChapterStudy from './components/ChapterStudy';
@@ -32,6 +34,8 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
 function AppInner() {
   const { currentView } = useApp();
   switch (currentView) {
+    case 'grade-select':     return <GradeSelect />;
+    case 'grade-coming-soon': return <GradeComingSoon />;
     case 'subject-select':   return <SubjectSelect />;
     case 'chapter-map':      return <ChapterMap />;
     case 'chapter-study':    return <ChapterStudy />;
@@ -39,7 +43,7 @@ function AppInner() {
     case 'chapter-result':   return <ChapterResult />;
     case 'exit-ticket':      return <ExitTicket />;
     case 'achievements':     return <Achievements />;
-    default:                 return <SubjectSelect />;
+    default:                 return <GradeSelect />;
   }
 }
 

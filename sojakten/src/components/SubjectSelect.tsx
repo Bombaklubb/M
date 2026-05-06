@@ -134,7 +134,7 @@ function SubjectCard({ subject, onClick }: { subject: Subject; onClick: () => vo
 }
 
 export default function SubjectSelect() {
-  const { selectSubject } = useApp();
+  const { selectSubject, setView } = useApp();
 
   return (
     <div className="min-h-screen">
@@ -152,8 +152,18 @@ export default function SubjectSelect() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/80" />
 
         {/* Header */}
-        <header className="relative z-10 px-4 pt-6 pb-2 flex items-center justify-center">
-          <div className="text-center">
+        <header className="relative z-10 px-4 pt-6 pb-2 flex items-center">
+          <button
+            onClick={() => setView('grade-select')}
+            className="w-9 h-9 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+            style={{ background: 'rgba(30,27,75,0.08)', border: '2px solid rgba(30,27,75,0.15)' }}
+            aria-label="Tillbaka"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M10 3L5 8L10 13" stroke="#1e1b4b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <div className="flex-1 text-center pr-9">
             <h1 className="font-heading font-bold text-4xl drop-shadow-sm" style={{ color: '#1e1b4b' }}>SO-jakten</h1>
             <p className="text-base font-semibold mt-1 text-gray-700">Åk 5</p>
           </div>
