@@ -59,28 +59,6 @@ export default function ChapterStudy() {
           <p className="text-sm font-semibold" style={{ color: selectedSubject.inkHex }}>{summary.studentConnection}</p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex gap-2 mb-5">
-          {(['concepts', 'key-points', 'cause-effect'] as const).map(tab => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className="flex-1 py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer"
-              style={activeTab === tab ? {
-                background: `${selectedSubject.progressHex}18`,
-                borderColor: selectedSubject.progressHex,
-                color: selectedSubject.progressHex,
-              } : {
-                background: 'white',
-                borderColor: '#e5e7eb',
-                color: '#6b7280',
-              }}
-            >
-              {tab === 'concepts' ? '📘 Begrepp' : tab === 'key-points' ? '📋 Kärninnehåll' : '⚡ Orsak & konsekvens'}
-            </button>
-          ))}
-        </div>
-
         {/* --- CONCEPTS --- */}
         {activeTab === 'concepts' && (
           <div>
@@ -173,8 +151,30 @@ export default function ChapterStudy() {
       </main>
 
       {/* Bottom action bar */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 border-t border-gray-100 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto flex gap-3">
+      <div className="fixed bottom-0 left-0 right-0 bg-white/95 border-t border-gray-100 backdrop-blur-sm">
+        {/* Tab row */}
+        <div className="max-w-2xl mx-auto px-4 pt-3 flex gap-2">
+          {(['concepts', 'key-points', 'cause-effect'] as const).map(tab => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className="flex-1 py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer"
+              style={activeTab === tab ? {
+                background: `${selectedSubject.progressHex}18`,
+                borderColor: selectedSubject.progressHex,
+                color: selectedSubject.progressHex,
+              } : {
+                background: 'white',
+                borderColor: '#e5e7eb',
+                color: '#6b7280',
+              }}
+            >
+              {tab === 'concepts' ? '📘 Begrepp' : tab === 'key-points' ? '📋 Kärninnehåll' : '⚡ Orsak & konsekvens'}
+            </button>
+          ))}
+        </div>
+        {/* Action row */}
+        <div className="max-w-2xl mx-auto px-4 py-3 flex gap-3">
           <button
             onClick={() => startExitTicket(chapter)}
             className="btn-clay flex items-center gap-2 px-4 py-3 text-sm font-heading bg-white border-gray-200 text-gray-700"
