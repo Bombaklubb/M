@@ -24,14 +24,8 @@ export default function ChapterResult() {
     stars === 1 ? 'Godkänt! En stjärna! 💪' :
     'Försök igen – du klarar det! 🌟';
 
-  const bgGradient =
-    stars === 3 ? 'from-amber-50 to-yellow-50' :
-    stars === 2 ? 'from-indigo-50 to-blue-50' :
-    stars === 1 ? 'from-green-50 to-emerald-50' :
-    'from-gray-50 to-slate-50';
-
   return (
-    <div className={`min-h-screen bg-gradient-to-br ${bgGradient} flex flex-col`}>
+    <div className={`min-h-screen flex flex-col ${selectedSubject.pageBgClass}`}>
       <div className="max-w-lg mx-auto w-full p-4 sm:p-6 flex flex-col items-center pt-12 sm:pt-16 pb-16">
 
         {/* Stars */}

@@ -9,6 +9,16 @@ export interface Subject {
   cardClass: string;
   accentHex: string;
   textClass: string;
+  /** Subject-specific heading font CSS class (font-historia etc.) */
+  headingFont: string;
+  /** Full-page background class (page-bg-historia etc.) */
+  pageBgClass: string;
+  /** Header bar background class (header-historia etc.) */
+  headerClass: string;
+  /** Ink/text color hex for themed headings */
+  inkHex: string;
+  /** Progress bar accent color hex */
+  progressHex: string;
 }
 
 // === EXERCISES ===

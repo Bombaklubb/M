@@ -37,20 +37,26 @@ export default function ChapterStudy() {
   const allRevealed = revealedConcepts.size === summary.concepts.length;
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col ${selectedSubject.pageBgClass}`}>
       <AppHeader
         title={chapter.title}
         subtitle={`${selectedSubject.emoji} Sammanfattning`}
         onBack={() => setView('chapter-map')}
         accentClass={selectedSubject.textClass}
+        headerClass={selectedSubject.headerClass}
+        headingFont={selectedSubject.headingFont}
+        titleStyle={{ color: selectedSubject.inkHex }}
       />
 
       <main className="flex-1 max-w-2xl w-full mx-auto p-4 sm:p-6 pb-32">
 
         {/* Student connection */}
-        <div className="clay-card-sm p-4 mb-5 flex gap-3 items-start bg-indigo-50 border-indigo-200">
+        <div
+          className="clay-card-sm p-4 mb-5 flex gap-3 items-start"
+          style={{ background: `${selectedSubject.progressHex}12`, borderColor: `${selectedSubject.progressHex}40` }}
+        >
           <span className="text-2xl flex-shrink-0">💡</span>
-          <p className="text-sm font-semibold text-indigo-800">{summary.studentConnection}</p>
+          <p className="text-sm font-semibold" style={{ color: selectedSubject.inkHex }}>{summary.studentConnection}</p>
         </div>
 
         {/* Tabs */}
@@ -59,11 +65,16 @@ export default function ChapterStudy() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer ${
-                activeTab === tab
-                  ? `${selectedSubject.cardClass} border-transparent`
-                  : 'bg-white border-gray-200 text-gray-500'
-              }`}
+              className="flex-1 py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer"
+              style={activeTab === tab ? {
+                background: `${selectedSubject.progressHex}18`,
+                borderColor: selectedSubject.progressHex,
+                color: selectedSubject.progressHex,
+              } : {
+                background: 'white',
+                borderColor: '#e5e7eb',
+                color: '#6b7280',
+              }}
             >
               {tab === 'concepts' ? '📘 Begrepp' : tab === 'key-points' ? '📋 Kärninnehåll' : '⚡ Orsak & konsekvens'}
             </button>
@@ -79,7 +90,8 @@ export default function ChapterStudy() {
               </p>
               <button
                 onClick={allRevealed ? hideAll : revealAll}
-                className="flex items-center gap-1 text-xs font-black text-indigo-600 hover:text-indigo-800 cursor-pointer"
+                className="flex items-center gap-1 text-xs font-black cursor-pointer"
+                style={{ color: selectedSubject.progressHex }}
               >
                 {allRevealed ? <EyeOff size={14} /> : <Eye size={14} />}
                 {allRevealed ? 'Dölj alla' : 'Visa alla'}
@@ -92,9 +104,8 @@ export default function ChapterStudy() {
                   <button
                     key={i}
                     onClick={() => toggleConcept(i)}
-                    className={`w-full text-left clay-card p-4 transition-all cursor-pointer hover:scale-[1.01] active:scale-[0.99] ${
-                      revealed ? 'border-indigo-300' : ''
-                    }`}
+                    className="w-full text-left clay-card p-4 transition-all cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
+                    style={revealed ? { borderColor: selectedSubject.progressHex } : {}}
                   >
                     <div className="flex items-center justify-between gap-3">
                       <div className="flex-1">
@@ -103,7 +114,7 @@ export default function ChapterStudy() {
                           <p className="text-sm text-gray-600 mt-1 leading-relaxed">{concept.definition}</p>
                         )}
                       </div>
-                      <span className={`text-indigo-400 flex-shrink-0 transition-transform ${revealed ? 'rotate-180' : ''}`}>
+                      <span className={`flex-shrink-0 transition-transform ${revealed ? 'rotate-180' : ''}`} style={{ color: selectedSubject.progressHex }}>
                         {revealed ? <EyeOff size={16} /> : <Eye size={16} />}
                       </span>
                     </div>

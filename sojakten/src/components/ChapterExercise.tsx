@@ -59,12 +59,15 @@ export default function ChapterExercise() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col ${selectedSubject.pageBgClass}`}>
       <AppHeader
         title={selectedChapter.title}
         subtitle={`${selectedSubject.emoji} ${selectedSubject.name}`}
         onBack={() => setView('chapter-map')}
         accentClass={selectedSubject.textClass}
+        headerClass={selectedSubject.headerClass}
+        headingFont={selectedSubject.headingFont}
+        titleStyle={{ color: selectedSubject.inkHex }}
       />
 
       {/* Progress bar */}
