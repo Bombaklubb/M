@@ -64,15 +64,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('exit-ticket');
   }
 
-  function isChapterUnlocked(chapterId: string): boolean {
-    const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
-    if (!chapter) return false;
-    const chapters = getChaptersForSubject(chapter.subjectId);
-    const idx = chapters.findIndex(c => c.id === chapterId);
-    if (idx === 0) return true;
-    const prev = chapters[idx - 1];
-    const prevP = getChapterProgress(prev.id);
-    return !!(prevP && prevP.bestScore >= 50);
+  function isChapterUnlocked(_chapterId: string): boolean {
+    return true;
   }
 
   function getChapterProgressFor(chapterId: string) {
