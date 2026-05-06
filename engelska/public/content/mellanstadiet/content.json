@@ -5312,14 +5312,15 @@
     {
       "id": "mel-sluttest",
       "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
         "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker allt du tränat på: present simple, past simple, adjektiv & komparativ, prepositioner, verb tider och mycket mer.",
-        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Frågorna täcker allt du har tränat på: present simple, substantiv, do/does, artiklar, be-verb, have/has, demonstrativa pronomen, there is/are och mer.",
+        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
+        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -5677,6 +5678,97 @@
           "sentence": "She is the ___ girl in the class. (tall – superlativ)",
           "answer": "tallest",
           "explanation": "Superlativ av korta adjektiv bildas med -est. The tallest."
+        },
+        {
+          "id": "mel-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'jacka' på engelska?",
+          "options": [
+            "jacket",
+            "scarf",
+            "gloves",
+            "vest"
+          ],
+          "correctIndex": 0,
+          "explanation": "Jacka = jacket. Put on your jacket!"
+        },
+        {
+          "id": "mel-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ris' på engelska?",
+          "options": [
+            "rice",
+            "corn",
+            "wheat",
+            "oats"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ris = rice. Rice is eaten in many countries."
+        },
+        {
+          "id": "mel-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bokhylla' på engelska?",
+          "options": [
+            "bookshelf",
+            "cupboard",
+            "cabinet",
+            "drawer"
+          ],
+          "correctIndex": 0,
+          "explanation": "Bokhylla = bookshelf. Books go on the bookshelf."
+        },
+        {
+          "id": "mel-v8-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'nervös' på engelska?",
+          "options": [
+            "nervous",
+            "excited",
+            "proud",
+            "calm"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nervös = nervous. I am nervous before tests."
+        },
+        {
+          "id": "mel-v9-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'dimmig' på engelska?",
+          "options": [
+            "foggy",
+            "frosty",
+            "hazy",
+            "misty"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dimmig = foggy. It is foggy this morning."
+        },
+        {
+          "id": "mel-v10-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'volleyboll' på engelska?",
+          "options": [
+            "volleyball",
+            "handball",
+            "netball",
+            "racquetball"
+          ],
+          "correctIndex": 0,
+          "explanation": "Volleyboll = volleyball. We play volleyball at the beach."
+        },
+        {
+          "id": "mel-v11-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'lastbil' på engelska?",
+          "options": [
+            "truck",
+            "van",
+            "lorry",
+            "wagon"
+          ],
+          "correctIndex": 0,
+          "explanation": "Lastbil = truck. The truck carries heavy loads."
         }
       ]
     }
