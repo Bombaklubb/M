@@ -3,7 +3,7 @@ import { useState, useRef, useMemo } from 'react';
 interface Cell { r: number; c: number; }
 interface PlacedWord { clean: string; original: string; cells: Cell[]; }
 
-const SIZE = 12;
+const SIZE = 10;
 const DIRS = [{ dr: 0, dc: 1 }, { dr: 1, dc: 0 }, { dr: 1, dc: 1 }];
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ';
 
@@ -50,7 +50,6 @@ function buildGrid(rawWords: string[]): { grid: string[][]; placed: PlacedWord[]
     }
   }
 
-  // Fill empty cells
   for (let r = 0; r < SIZE; r++)
     for (let c = 0; c < SIZE; c++)
       if (!grid[r][c]) grid[r][c] = LETTERS[Math.floor(Math.random() * LETTERS.length)];
@@ -145,72 +144,12 @@ export default function WordSearch({ words, accentColor }: { words: string[]; ac
 
   return (
     <div>
-      {allFound ? (
-        <div className="clay-card p-6 text-center mb-4">
-          <p className="text-5xl mb-2">🎉</p>
-          <p className="font-heading font-bold text-xl text-gray-800">Alla ord hittade!</p>
-          <p className="text-sm text-gray-500 mt-1">Fantastiskt bra jobbat!</p>
-        </div>
-      ) : (
-        <p className="text-xs font-black text-gray-500 uppercase tracking-wide mb-3">
-          Hitta {placed.length} gömda ord – dra över bokstäverna
-        </p>
-      )}
-
-      {/* Grid */}
-      <div
-        ref={containerRef}
-        className="w-full rounded-2xl overflow-hidden touch-none select-none shadow-md"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${SIZE}, 1fr)`,
-          aspectRatio: '1 / 1',
-          cursor: 'crosshair',
-          userSelect: 'none',
-        }}
-        onPointerDown={onDown}
-        onPointerMove={onMove}
-        onPointerUp={onUp}
-        onPointerCancel={onUp}
-      >
-        {grid.flat().map((letter, idx) => {
-          const r = Math.floor(idx / SIZE);
-          const c = idx % SIZE;
-          const isFoundCell = foundCells.has(key(r, c));
-          const isSel = selecting.some(s => s.r === r && s.c === c);
-
-          let bg = 'white';
-          let color = '#374151';
-          let borderColor = '#f3f4f6';
-
-          if (isFoundCell) {
-            bg = accentColor + '28';
-            color = accentColor;
-            borderColor = accentColor + '50';
-          } else if (isSel) {
-            if (flash === 'wrong') { bg = '#fee2e2'; color = '#dc2626'; borderColor = '#fca5a5'; }
-            else if (flash === 'right') { bg = '#dcfce7'; color = '#16a34a'; borderColor = '#86efac'; }
-            else { bg = '#dbeafe'; color = '#1d4ed8'; borderColor = '#93c5fd'; }
-          }
-
-          return (
-            <div
-              key={idx}
-              className="flex items-center justify-center font-black text-xs transition-colors"
-              style={{ background: bg, color, border: `1px solid ${borderColor}` }}
-            >
-              {letter}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Word list */}
-      <div className="flex flex-wrap gap-2 mt-4">
+      {/* Word list ABOVE grid */}
+      <div className="flex flex-wrap gap-2 mb-3">
         {placed.map(({ clean: w, original }) => (
           <span
             key={w}
-            className="text-xs font-black px-3 py-1.5 rounded-full border-2 transition-all"
+            className="text-xs font-black px-2.5 py-1 rounded-full border-2 transition-all"
             style={found.includes(w) ? {
               textDecoration: 'line-through',
               background: accentColor + '18',
@@ -226,6 +165,68 @@ export default function WordSearch({ words, accentColor }: { words: string[]; ac
           </span>
         ))}
       </div>
+
+      {allFound ? (
+        <div className="clay-card p-5 text-center">
+          <p className="text-4xl mb-1">🎉</p>
+          <p className="font-heading font-bold text-lg text-gray-800">Alla ord hittade!</p>
+        </div>
+      ) : (
+        <>
+          <p className="text-xs font-black text-gray-400 uppercase tracking-wide mb-2">
+            Dra över bokstäverna för att markera ett ord
+          </p>
+
+          {/* Grid — capped height so it fits without scrolling */}
+          <div
+            ref={containerRef}
+            className="rounded-2xl overflow-hidden touch-none select-none shadow-md mx-auto"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: `repeat(${SIZE}, 1fr)`,
+              aspectRatio: '1 / 1',
+              maxWidth: 'min(100%, 340px)',
+              cursor: 'crosshair',
+              userSelect: 'none',
+            }}
+            onPointerDown={onDown}
+            onPointerMove={onMove}
+            onPointerUp={onUp}
+            onPointerCancel={onUp}
+          >
+            {grid.flat().map((letter, idx) => {
+              const r = Math.floor(idx / SIZE);
+              const c = idx % SIZE;
+              const isFoundCell = foundCells.has(key(r, c));
+              const isSel = selecting.some(s => s.r === r && s.c === c);
+
+              let bg = 'white';
+              let color = '#374151';
+              let borderColor = '#f3f4f6';
+
+              if (isFoundCell) {
+                bg = accentColor + '28';
+                color = accentColor;
+                borderColor = accentColor + '50';
+              } else if (isSel) {
+                if (flash === 'wrong') { bg = '#fee2e2'; color = '#dc2626'; borderColor = '#fca5a5'; }
+                else if (flash === 'right') { bg = '#dcfce7'; color = '#16a34a'; borderColor = '#86efac'; }
+                else { bg = '#dbeafe'; color = '#1d4ed8'; borderColor = '#93c5fd'; }
+              }
+
+              return (
+                <div
+                  key={idx}
+                  className="flex items-center justify-center font-black text-sm transition-colors"
+                  style={{ background: bg, color, border: `1px solid ${borderColor}` }}
+                >
+                  {letter}
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
     </div>
   );
 }

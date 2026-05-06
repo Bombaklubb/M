@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import WordSearch from './WordSearch';
-import { BookOpen, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import { BookOpen, Eye, EyeOff, ArrowRight, CheckCircle, XCircle, RotateCcw } from 'lucide-react';
 
-type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search';
+type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test';
 
 export default function ChapterStudy() {
   const { selectedChapter, selectedSubject, setView, studyInitialTab } = useApp();
@@ -19,6 +19,45 @@ export default function ChapterStudy() {
 
   const chapter = selectedChapter;
   const s = selectedSubject;
+
+  // --- TEST state ---
+  const [testIdx, setTestIdx] = useState(0);
+  const [testAnswered, setTestAnswered] = useState<number | null>(null);
+  const [testScore, setTestScore] = useState(0);
+  const [testDone, setTestDone] = useState(false);
+
+  const testQuestions = useMemo(() => {
+    const concepts = summary?.concepts ?? [];
+    if (concepts.length < 2) return [];
+    return concepts.map((c, i) => {
+      const showDef = i % 2 === 0;
+      const correct = showDef ? c.term : c.definition;
+      const pool = concepts.filter((_, j) => j !== i).map(x => showDef ? x.term : x.definition);
+      const distractors = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
+      const options = [...distractors, correct].sort(() => Math.random() - 0.5);
+      return {
+        prompt: showDef ? c.definition : c.term,
+        label: showDef ? 'Vad heter begreppet?' : 'Vad betyder ordet?',
+        correct,
+        options,
+      };
+    });
+  }, [chapter.id]);
+
+  function answerTest(option: string) {
+    if (testAnswered !== null) return;
+    const idx = testQuestions[testIdx]?.options.indexOf(option) ?? -1;
+    setTestAnswered(idx);
+    if (option === testQuestions[testIdx]?.correct) setTestScore(s => s + 1);
+    setTimeout(() => {
+      if (testIdx + 1 >= testQuestions.length) setTestDone(true);
+      else { setTestIdx(i => i + 1); setTestAnswered(null); }
+    }, 900);
+  }
+
+  function resetTest() {
+    setTestIdx(0); setTestAnswered(null); setTestScore(0); setTestDone(false);
+  }
 
   // Fetch Wikipedia thumbnails for all concepts on mount
   useEffect(() => {
@@ -61,6 +100,7 @@ export default function ChapterStudy() {
     { id: 'key-points',  label: '📋 Sammanfattning' },
     { id: 'cause-effect',label: '⚡ Orsak & konsekvens' },
     { id: 'word-search', label: '🔍 Ordsökning' },
+    { id: 'test',        label: '✏️ Test' },
   ];
 
   return (
@@ -86,9 +126,9 @@ export default function ChapterStudy() {
           <p className="text-sm font-semibold" style={{ color: s.inkHex }}>{summary.studentConnection}</p>
         </div>
 
-        {/* Tabs — two rows of 2 */}
-        <div className="grid grid-cols-2 gap-2 mb-5">
-          {TABS.map(tab => (
+        {/* Tabs — 3 + 2 layout */}
+        <div className="grid grid-cols-3 gap-2 mb-2">
+          {TABS.slice(0, 3).map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
@@ -97,11 +137,23 @@ export default function ChapterStudy() {
                 background: `${s.progressHex}18`,
                 borderColor: s.progressHex,
                 color: s.progressHex,
-              } : {
-                background: 'white',
-                borderColor: '#e5e7eb',
-                color: '#6b7280',
-              }}
+              } : { background: 'white', borderColor: '#e5e7eb', color: '#6b7280' }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <div className="grid grid-cols-2 gap-2 mb-5">
+          {TABS.slice(3).map(tab => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className="py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer"
+              style={activeTab === tab.id ? {
+                background: `${s.progressHex}18`,
+                borderColor: s.progressHex,
+                color: s.progressHex,
+              } : { background: 'white', borderColor: '#e5e7eb', color: '#6b7280' }}
             >
               {tab.label}
             </button>
@@ -220,6 +272,79 @@ export default function ChapterStudy() {
             words={summary.concepts.map(c => c.term)}
             accentColor={s.progressHex}
           />
+        )}
+
+        {/* --- TEST --- */}
+        {activeTab === 'test' && (
+          <div>
+            {testDone ? (
+              <div className="clay-card p-6 text-center">
+                <p className="text-5xl mb-3">{testScore === testQuestions.length ? '🏆' : testScore >= testQuestions.length / 2 ? '👍' : '💪'}</p>
+                <p className="font-heading font-bold text-xl text-gray-800 mb-1">
+                  {testScore} / {testQuestions.length} rätt
+                </p>
+                <p className="text-sm text-gray-500 mb-5">
+                  {testScore === testQuestions.length ? 'Perfekt! Du kan allt!' : testScore >= testQuestions.length / 2 ? 'Bra jobbat!' : 'Öva lite till så sitter det!'}
+                </p>
+                <button
+                  onClick={resetTest}
+                  className="btn-clay flex items-center gap-2 mx-auto px-5 py-3 text-sm font-heading bg-white border-gray-200 text-gray-700"
+                >
+                  <RotateCcw size={15} />
+                  Testa igen
+                </button>
+              </div>
+            ) : testQuestions.length > 0 ? (
+              <div>
+                {/* Progress */}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-black text-gray-400">Fråga {testIdx + 1} av {testQuestions.length}</span>
+                  <span className="text-xs font-black" style={{ color: s.progressHex }}>{testScore} rätt</span>
+                </div>
+                <div className="h-1.5 rounded-full bg-gray-100 mb-5 overflow-hidden">
+                  <div className="h-full rounded-full transition-all" style={{ width: `${((testIdx) / testQuestions.length) * 100}%`, background: s.progressHex }} />
+                </div>
+
+                {/* Question */}
+                <div className="clay-card p-5 mb-4">
+                  <p className="text-xs font-black uppercase tracking-wide mb-2 opacity-60" style={{ color: s.inkHex }}>
+                    {testQuestions[testIdx].label}
+                  </p>
+                  <p className="text-base font-semibold text-gray-800 leading-relaxed">
+                    {testQuestions[testIdx].prompt}
+                  </p>
+                </div>
+
+                {/* Options */}
+                <div className="space-y-2">
+                  {testQuestions[testIdx].options.map((opt, i) => {
+                    const isCorrect = opt === testQuestions[testIdx].correct;
+                    const isChosen = testAnswered === i;
+                    let style: React.CSSProperties = { background: 'white', borderColor: '#e5e7eb', color: '#374151' };
+                    if (testAnswered !== null) {
+                      if (isCorrect) style = { background: '#dcfce7', borderColor: '#86efac', color: '#15803d' };
+                      else if (isChosen) style = { background: '#fee2e2', borderColor: '#fca5a5', color: '#dc2626' };
+                    }
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => answerTest(opt)}
+                        disabled={testAnswered !== null}
+                        className="w-full text-left p-3 rounded-xl border-2 text-sm font-semibold transition-all cursor-pointer disabled:cursor-default flex items-center justify-between gap-3"
+                        style={style}
+                      >
+                        <span>{opt}</span>
+                        {testAnswered !== null && isCorrect && <CheckCircle size={16} className="flex-shrink-0 text-green-600" />}
+                        {testAnswered !== null && isChosen && !isCorrect && <XCircle size={16} className="flex-shrink-0 text-red-500" />}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ) : (
+              <p className="text-sm text-gray-500 text-center py-8">Inte tillräckligt med begrepp för ett test.</p>
+            )}
+          </div>
         )}
 
       </main>
