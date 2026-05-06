@@ -130,6 +130,7 @@ export default function ChapterMap() {
                       { tab: 'cause-effect', label: '⚡ Orsak & konsekvens' },
                       { tab: 'word-search',  label: '🔍 Ordsökning' },
                       { tab: 'test',         label: '✏️ Test' },
+                      { tab: 'questions',    label: '❓ Frågor' },
                     ] as const).map(({ tab, label }) => (
                       <button
                         key={tab}

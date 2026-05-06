@@ -29,6 +29,18 @@ export const AK5_RELIGION: Chapter[] = [
         { cause: 'Judarna levde i diaspora (spridda) runt om i världen i ca 2000 år', effect: 'Judiska traditioner, musik och mat har spridits och påverkat kulturer världen över.' },
       ],
       studentConnection: 'Ord som "amen" och "halleluja" som du kanske känner igen från kyrkan eller sångerna kommer från hebreiskan – judarnas språk. Veckodagen lördag (Sabbat-dag) har judiska rötter.',
+      questions: [
+        { q: 'Vad är monoteism?', a: 'Tro på en enda gud. Judendomen är en av världens äldsta monoteistiska religioner.' },
+        { q: 'Vad kallas judarnas heliga skrift?', a: 'Tanach (den hebreiska bibeln). Torah är de fem Moseböckerna som är den heligaste delen.' },
+        { q: 'Vad är sabbaten?', a: 'Judarnas heliga vilodag, från fredagskväll till lördagskväll. Arbete är förbjudet.' },
+        { q: 'Vad är en synagoga?', a: 'Judarnas böneplats och samlingslokal, ledd av en rabbi.' },
+        { q: 'Vad är kosher?', a: 'Judarnas matregler – t.ex. är griskött och skaldjur förbjudet, och kött och mjölk får inte blandas.' },
+        { q: 'Vad kallas judendomen, kristendomen och islams gemensamma beteckning?', a: 'Abrahamitiska religioner – de härstammar alla från Abraham.' },
+        { q: 'Vilken stad är heligast för judendomen?', a: 'Jerusalem. Klagomuren är en av de heligaste platserna.' },
+        { q: 'Vad är Jom Kippur?', a: 'Försoningsdagen – judendomens heligaste dag med fasta och bön.' },
+        { q: 'Vad ledde Förintelsen (Holocaust) till för judarna efter 1945?', a: 'Staten Israel grundades 1948 som ett judiskt hemland och tillflyktsort.' },
+        { q: 'Vad är Hannukka?', a: 'Ljusfesten – en judisk högtid som firas åtta dagar med tändning av en speciell menora.' },
+      ],
     },
     exercises: [
       {
@@ -173,6 +185,18 @@ export const AK5_RELIGION: Chapter[] = [
         { cause: 'Kristendomen spred sig via det Romerska imperiet', effect: 'Europa kristnades och kyrkan fick enorm politisk och kulturell makt i 1000 år.' },
       ],
       studentConnection: 'Jullovet, påsklovet och Kristi himmelsfärdsdag är alla kristna högtider som du har ledigt. Kyrkorna du ser i svenska städer är arvet från kristnandet av Sverige på 1000-talet.',
+      questions: [
+        { q: 'Vem är kristendomens centralgestalt?', a: 'Jesus Kristus – Guds son som dog och uppstod.' },
+        { q: 'Vad kallas kristendomens heliga skrift?', a: 'Bibeln, uppdelad i Gamla testamentet och Nya testamentet.' },
+        { q: 'Vad är treenigheten?', a: 'Kristna tror på en Gud i tre personer: Fadern, Sonen (Jesus) och den Helige Ande.' },
+        { q: 'Vilka tre huvudgrenar finns det inom kristendomen?', a: 'Katolicism (leds av påven), ortodoxi (Östeuropa) och protestantism (grundad vid reformationen).' },
+        { q: 'Vad är kristendomens viktigaste högtid?', a: 'Påsk – den firar Jesu uppståndelse från de döda.' },
+        { q: 'Vad kallas den katolska kyrkans ledare?', a: 'Påven, som bor i Vatikanen i Rom.' },
+        { q: 'Vad är ett sakrament?', a: 'Heliga handlingar inom kyrkan, t.ex. dop och nattvard.' },
+        { q: 'Vilket år delade sig kristendomen i katolsk och ortodox kyrka?', a: '1054 (det stora schismat).' },
+        { q: 'Hur många anhängare har kristendomen ungefär?', a: 'Ca 2,4 miljarder – kristendomen är världens största religion.' },
+        { q: 'Vilken kristen riktning är vanligast i Sverige?', a: 'Luthersk protestantism, som uppstod vid reformationen på 1500-talet.' },
+      ],
     },
     exercises: [
       {
@@ -317,6 +341,18 @@ export const AK5_RELIGION: Chapter[] = [
         { cause: 'Muslimer fastar under Ramadan', effect: 'Eid al-Fitr firas som en stor festdag när fasteperioden är över – familjer samlas och ger gåvor.' },
       ],
       studentConnection: 'Siffrorna 0–9 som du använder i matematiken kallas "arabiska siffror" – de kom via muslimska matematiker till Europa under medeltiden. Orden "algebra" och "algoritm" är arabiska ord.',
+      questions: [
+        { q: 'Vem grundade islam och när?', a: 'Profeten Muhammed grundade islam i Arabien på 600-talet e.Kr.' },
+        { q: 'Vad kallas islams heliga skrift?', a: 'Koranen – anses vara Guds direkta ord som uppenbarades för Muhammed.' },
+        { q: 'Vilka är islams fem pelare?', a: 'Shahada (trosbekännelse), Salat (bön 5 ggr/dag), Zakat (välgörenhet), Sawm (fasta under Ramadan), Hajj (pilgrimsfärd).' },
+        { q: 'Vad är Ramadan?', a: 'Islams heliga fasteperiod – muslimer fastar från gryning till solnedgång under en månad.' },
+        { q: 'Vad är halal?', a: 'Islams matregler – bland annat är griskött och alkohol förbjudet.' },
+        { q: 'Vilken stad är heligast inom islam?', a: 'Mecka i Saudiarabien.' },
+        { q: 'Vad kallas bönelokalen inom islam?', a: 'Moské.' },
+        { q: 'Vad firas under Eid al-Fitr?', a: 'Festdagen efter Ramadan är slut – familjer samlas och ger gåvor.' },
+        { q: 'Hur många anhängare har islam ungefär?', a: 'Ca 1,8 miljarder – islam är världens näst största religion.' },
+        { q: 'Vilka är islams två huvudinriktningar?', a: 'Sunni (ca 85%) och Shia (ca 15%) – skillnaden handlar om efterföljare till Muhammed.' },
+      ],
     },
     exercises: [
       {
