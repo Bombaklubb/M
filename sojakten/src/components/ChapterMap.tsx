@@ -3,7 +3,7 @@ import { getChaptersForSubject } from '../data/subjects';
 import { Lock, Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
-  const { selectedSubject, setView, selectChapter, openChapterStudy, isChapterUnlocked, getChapterProgressFor } = useApp();
+  const { selectedSubject, setView, openChapterStudy, isChapterUnlocked, getChapterProgressFor } = useApp();
 
   if (!selectedSubject) { setView('subject-select'); return null; }
 
@@ -65,7 +65,7 @@ export default function ChapterMap() {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-xs font-black text-gray-400">Kapitel {idx + 1}</span>
+                      <span className="text-xs font-black text-gray-400">Kapitel</span>
                       {progress?.completed && (
                         <span className="text-xs font-black text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Klar</span>
                       )}
@@ -122,37 +122,28 @@ export default function ChapterMap() {
                   </div>
                 )}
 
-                {unlocked && (
+                {unlocked && chapter.summary && (
                   <div className="flex gap-2 mt-3 flex-wrap">
-                    {chapter.summary && (<>
-                      <button
-                        onClick={() => openChapterStudy(chapter, 'concepts')}
-                        className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
-                      >
-                        📘 Begrepp
-                      </button>
-                      <button
-                        onClick={() => openChapterStudy(chapter, 'key-points')}
-                        className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
-                      >
-                        📋 Sammanfattning
-                      </button>
-                      <button
-                        onClick={() => openChapterStudy(chapter, 'cause-effect')}
-                        className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                        style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
-                      >
-                        ⚡ Orsak & konsekvens
-                      </button>
-                    </>)}
                     <button
-                      onClick={() => selectChapter(chapter)}
-                      className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-black transition-all cursor-pointer active:scale-95 text-white"
-                      style={{ background: s.progressHex, boxShadow: `0 3px 0 ${s.inkHex}60` }}
+                      onClick={() => openChapterStudy(chapter, 'concepts')}
+                      className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                      style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
                     >
-                      Öva →
+                      📘 Begrepp
+                    </button>
+                    <button
+                      onClick={() => openChapterStudy(chapter, 'key-points')}
+                      className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                      style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
+                    >
+                      📋 Sammanfattning
+                    </button>
+                    <button
+                      onClick={() => openChapterStudy(chapter, 'cause-effect')}
+                      className="flex-1 py-2 px-2 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                      style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
+                    >
+                      ⚡ Orsak & konsekvens
                     </button>
                   </div>
                 )}
