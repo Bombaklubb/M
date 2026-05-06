@@ -5147,14 +5147,15 @@
     {
       "id": "hog-sluttest",
       "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
         "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker allt du tränat på: present perfect, konditionalis, passiv form, indirekt tal, avancerade verbformer och mer.",
-        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Frågorna täcker allt du har tränat på: present perfect, conditional, passiv form, reported speech och avancerade verbformer.",
+        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
+        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -5515,6 +5516,97 @@
             "cannot"
           ],
           "explanation": "'Can't have' + past participle uttrycker att något omöjligen kan ha hänt."
+        },
+        {
+          "id": "hog-v3-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kofta' på engelska?",
+          "options": [
+            "cardigan",
+            "pullover",
+            "hoodie",
+            "vest"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kofta = cardigan. A cardigan has buttons."
+        },
+        {
+          "id": "hog-v4-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kök' (matlagningstradition) på engelska?",
+          "options": [
+            "cooking",
+            "cuisine",
+            "culinary",
+            "gastronomy"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kök (tradition) = cuisine. Italian cuisine is popular."
+        },
+        {
+          "id": "hog-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fåtölj' på engelska?",
+          "options": [
+            "armchair",
+            "recliner",
+            "lounger",
+            "throne"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fåtölj = armchair. Relax in the armchair."
+        },
+        {
+          "id": "hog-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'frustrerad' på engelska?",
+          "options": [
+            "frustrated",
+            "irritated",
+            "annoyed",
+            "aggravated"
+          ],
+          "correctIndex": 0,
+          "explanation": "Frustrerad = frustrated. Almost the same word!"
+        },
+        {
+          "id": "hog-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'luftfuktighet' på engelska?",
+          "options": [
+            "humidity",
+            "moisture",
+            "dampness",
+            "wetness"
+          ],
+          "correctIndex": 0,
+          "explanation": "Luftfuktighet = humidity. High humidity feels uncomfortable."
+        },
+        {
+          "id": "hog-v8-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'badminton' på engelska?",
+          "options": [
+            "badminton",
+            "squash",
+            "racquetball",
+            "tennis"
+          ],
+          "correctIndex": 0,
+          "explanation": "Badminton = badminton. Same word in both languages!"
+        },
+        {
+          "id": "hog-v9-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'ambulans' på engelska?",
+          "options": [
+            "ambulance",
+            "paramedic",
+            "rescue",
+            "emergency"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ambulans = ambulance. Almost the same word!"
         }
       ]
     }

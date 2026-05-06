@@ -2705,14 +2705,15 @@
     {
       "id": "gym-sluttest",
       "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
         "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker allt du tränat på: avancerade verb tider, modalverb, konjunktiv, diskursmarkörer, inversion och formellt språk.",
-        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Frågorna täcker avancerade ämnen: verb tenses, modal verbs, subjunktiv, diskursmarkörer och avancerad grammatik.",
+        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
+        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -3070,6 +3071,97 @@
           "sentence": "Such was her talent ___ she won every competition she entered.",
           "answer": "that",
           "explanation": "'Such...that' är en resultatkonstruktion. Such was her talent that she won everything."
+        },
+        {
+          "id": "gym-v1-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kavaj' på engelska?",
+          "options": [
+            "blazer",
+            "jacket",
+            "waistcoat",
+            "tailcoat"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kavaj = blazer. A blazer is smart-casual."
+        },
+        {
+          "id": "gym-v2-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'gastronomisk/finsmakare' på engelska?",
+          "options": [
+            "gourmet",
+            "epicure",
+            "connoisseur",
+            "foodie"
+          ],
+          "correctIndex": 0,
+          "explanation": "Gourmet = gourmet. Same word! A gourmet appreciates fine food."
+        },
+        {
+          "id": "gym-v3-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tapetsering/stoppning' på engelska?",
+          "options": [
+            "upholstery",
+            "padding",
+            "lining",
+            "stuffing"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tapetsering = upholstery. Upholstery covers sofas."
+        },
+        {
+          "id": "gym-v4-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'orolig inför något' på engelska?",
+          "options": [
+            "apprehensive",
+            "tentative",
+            "reluctant",
+            "hesitant"
+          ],
+          "correctIndex": 0,
+          "explanation": "Orolig inför = apprehensive. She felt apprehensive before the speech."
+        },
+        {
+          "id": "gym-v5-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'meteorologi' på engelska?",
+          "options": [
+            "meteorology",
+            "climatology",
+            "geography",
+            "oceanography"
+          ],
+          "correctIndex": 0,
+          "explanation": "Meteorologi = meteorology. Almost the same word!"
+        },
+        {
+          "id": "gym-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'triathlon' på engelska?",
+          "options": [
+            "triathlon",
+            "biathlon",
+            "pentathlon",
+            "heptathlon"
+          ],
+          "correctIndex": 0,
+          "explanation": "Triathlon = triathlon. Same word! Swim, bike, run."
+        },
+        {
+          "id": "gym-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'lokomotiv' på engelska?",
+          "options": [
+            "locomotive",
+            "engine",
+            "steam train",
+            "motorcar"
+          ],
+          "correctIndex": 0,
+          "explanation": "Lokomotiv = locomotive. The locomotive pulls the train."
         }
       ]
     }

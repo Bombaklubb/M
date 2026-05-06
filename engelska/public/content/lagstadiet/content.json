@@ -5106,14 +5106,15 @@
     {
       "id": "lag-sluttest",
       "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 32 blandade frågor.",
+      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
         "Det här är sluttestet för hela grammatikdelen!",
         "Frågorna täcker allt du har tränat på: be-verb, have/has, artiklar, plural, demonstrativa pronomen, ägandeord, can, there is/are, prepositioner och mer.",
-        "Svara på alla 32 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
+        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -5471,6 +5472,97 @@
           "sentence": "Is that your book? No, it is ___. (Det tillhör mig.)",
           "answer": "mine",
           "explanation": "'Mine' är ägandepronomenet för 'I'. It is mine."
+        },
+        {
+          "id": "lag-v6-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'tröja' på engelska?",
+          "options": [
+            "shirt",
+            "pants",
+            "shoes",
+            "hat"
+          ],
+          "correctIndex": 0,
+          "explanation": "Tröja = shirt. I wear a shirt."
+        },
+        {
+          "id": "lag-v7-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'äpple' på engelska?",
+          "options": [
+            "orange",
+            "apple",
+            "banana",
+            "grape"
+          ],
+          "correctIndex": 1,
+          "explanation": "Äpple = apple. An apple a day!"
+        },
+        {
+          "id": "lag-v8-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'stol' på engelska?",
+          "options": [
+            "chair",
+            "table",
+            "bed",
+            "lamp"
+          ],
+          "correctIndex": 0,
+          "explanation": "Stol = chair. Sit on the chair."
+        },
+        {
+          "id": "lag-v9-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'glad' på engelska?",
+          "options": [
+            "happy",
+            "sad",
+            "angry",
+            "tired"
+          ],
+          "correctIndex": 0,
+          "explanation": "Glad = happy. I am happy today!"
+        },
+        {
+          "id": "lag-v10-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'solig' på engelska?",
+          "options": [
+            "sunny",
+            "rainy",
+            "cold",
+            "windy"
+          ],
+          "correctIndex": 0,
+          "explanation": "Solig = sunny. It is sunny today!"
+        },
+        {
+          "id": "lag-v11-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'fotboll' på engelska?",
+          "options": [
+            "football",
+            "tennis",
+            "golf",
+            "rugby"
+          ],
+          "correctIndex": 0,
+          "explanation": "Fotboll = football. I play football."
+        },
+        {
+          "id": "lag-v12-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'bil' på engelska?",
+          "options": [
+            "car",
+            "bus",
+            "van",
+            "truck"
+          ],
+          "correctIndex": 0,
+          "explanation": "Bil = car. My car is blue."
         }
       ]
     }
