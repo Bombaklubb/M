@@ -155,7 +155,7 @@ export default function SubjectSelect() {
         <header className="relative z-10 px-4 pt-6 pb-2 flex items-center justify-center">
           <div className="text-center">
             <h1 className="font-heading font-bold text-4xl drop-shadow-sm" style={{ color: '#1e1b4b' }}>SO-jakten</h1>
-            <p className="text-base font-semibold mt-1 text-gray-700">Puls SO · Åk 5</p>
+            <p className="text-base font-semibold mt-1 text-gray-700">Åk 5</p>
           </div>
         </header>
 
@@ -176,6 +176,18 @@ export default function SubjectSelect() {
           ))}
         </div>
       </main>
+
+      {/* Contact footer */}
+      <footer className="fixed bottom-0 left-0 p-3">
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          Kontakt – martin.akdogan@enkoping.se
+        </a>
+      </footer>
     </div>
   );
 }
