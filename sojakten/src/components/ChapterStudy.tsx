@@ -4,7 +4,7 @@ import AppHeader from './AppHeader';
 import WordSearch from './WordSearch';
 import { BookOpen, Eye, EyeOff, ArrowRight, CheckCircle, XCircle, RotateCcw } from 'lucide-react';
 
-type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test';
+type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test'; // mirrors AppContext StudyTab
 
 export default function ChapterStudy() {
   const { selectedChapter, selectedSubject, setView, studyInitialTab } = useApp();
@@ -95,19 +95,19 @@ export default function ChapterStudy() {
   }
 
   const allRevealed = revealedConcepts.size === summary.concepts.length;
-  const TABS: { id: StudyTab; label: string }[] = [
-    { id: 'concepts',    label: '📘 Begrepp' },
-    { id: 'key-points',  label: '📋 Sammanfattning' },
-    { id: 'cause-effect',label: '⚡ Orsak & konsekvens' },
-    { id: 'word-search', label: '🔍 Ordsökning' },
-    { id: 'test',        label: '✏️ Test' },
-  ];
+  const TAB_LABELS: Record<StudyTab, string> = {
+    'concepts':    '📘 Begrepp',
+    'key-points':  '📋 Sammanfattning',
+    'cause-effect':'⚡ Orsak & konsekvens',
+    'word-search': '🔍 Ordsökning',
+    'test':        '✏️ Test',
+  };
 
   return (
     <div className={`min-h-screen flex flex-col ${s.pageBgClass}`}>
       <AppHeader
         title={chapter.title}
-        subtitle={`${s.emoji} Sammanfattning`}
+        subtitle={TAB_LABELS[activeTab]}
         onBack={() => setView('chapter-map')}
         accentClass={s.textClass}
         headerClass={s.headerClass}
@@ -117,48 +117,16 @@ export default function ChapterStudy() {
 
       <main className="flex-1 max-w-2xl w-full mx-auto p-4 sm:p-6 pb-10">
 
-        {/* Student connection */}
-        <div
-          className="clay-card-sm p-4 mb-5 flex gap-3 items-start"
-          style={{ background: `${s.progressHex}12`, borderColor: `${s.progressHex}40` }}
-        >
-          <span className="text-2xl flex-shrink-0">💡</span>
-          <p className="text-sm font-semibold" style={{ color: s.inkHex }}>{summary.studentConnection}</p>
-        </div>
-
-        {/* Tabs — 3 + 2 layout */}
-        <div className="grid grid-cols-3 gap-2 mb-2">
-          {TABS.slice(0, 3).map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className="py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer"
-              style={activeTab === tab.id ? {
-                background: `${s.progressHex}18`,
-                borderColor: s.progressHex,
-                color: s.progressHex,
-              } : { background: 'white', borderColor: '#e5e7eb', color: '#6b7280' }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-        <div className="grid grid-cols-2 gap-2 mb-5">
-          {TABS.slice(3).map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className="py-2 px-1 rounded-xl text-xs font-black border-2 transition-all cursor-pointer"
-              style={activeTab === tab.id ? {
-                background: `${s.progressHex}18`,
-                borderColor: s.progressHex,
-                color: s.progressHex,
-              } : { background: 'white', borderColor: '#e5e7eb', color: '#6b7280' }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+        {/* Student connection — only on content tabs */}
+        {(activeTab === 'concepts' || activeTab === 'key-points' || activeTab === 'cause-effect') && (
+          <div
+            className="clay-card-sm p-4 mb-5 flex gap-3 items-start"
+            style={{ background: `${s.progressHex}12`, borderColor: `${s.progressHex}40` }}
+          >
+            <span className="text-2xl flex-shrink-0">💡</span>
+            <p className="text-sm font-semibold" style={{ color: s.inkHex }}>{summary.studentConnection}</p>
+          </div>
+        )}
 
         {/* --- CONCEPTS --- */}
         {activeTab === 'concepts' && (

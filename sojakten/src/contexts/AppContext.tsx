@@ -3,18 +3,20 @@ import { AppView, Subject, Chapter, ExerciseSessionResult } from '../types';
 import { getProgress, getChapterProgress, saveChapterProgress, calcStars, addStats } from '../utils/storage';
 import { getChaptersForSubject, ALL_CHAPTERS } from '../data/subjects';
 
+type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test';
+
 interface AppContextValue {
   currentView: AppView;
   selectedSubject: Subject | null;
   selectedChapter: Chapter | null;
   exitTicketChapter: Chapter | null;
   lastResult: ExerciseSessionResult | null;
-  studyInitialTab: 'concepts' | 'key-points' | 'cause-effect';
+  studyInitialTab: StudyTab;
 
   setView: (view: AppView) => void;
   selectSubject: (subject: Subject) => void;
   selectChapter: (chapter: Chapter) => void;
-  openChapterStudy: (chapter: Chapter, tab?: 'concepts' | 'key-points' | 'cause-effect') => void;
+  openChapterStudy: (chapter: Chapter, tab?: StudyTab) => void;
   startExitTicket: (chapter: Chapter) => void;
   submitChapterResult: (chapterId: string, correctAnswers: number, totalQuestions: number) => ExerciseSessionResult;
   isChapterUnlocked: (chapterId: string) => boolean;
@@ -35,7 +37,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [exitTicketChapter, setExitTicketChapter] = useState<Chapter | null>(null);
   const [lastResult, setLastResult] = useState<ExerciseSessionResult | null>(null);
-  const [studyInitialTab, setStudyInitialTab] = useState<'concepts' | 'key-points' | 'cause-effect'>('concepts');
+  const [studyInitialTab, setStudyInitialTab] = useState<StudyTab>('concepts');
 
   function setView(view: AppView) { setCurrentView(view); }
 
@@ -44,7 +46,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('chapter-map');
   }
 
-  function openChapterStudy(chapter: Chapter, tab: 'concepts' | 'key-points' | 'cause-effect' = 'concepts') {
+  function openChapterStudy(chapter: Chapter, tab: StudyTab = 'concepts') {
     setSelectedChapter(chapter);
     setStudyInitialTab(tab);
     if (chapter.summary) {
