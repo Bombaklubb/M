@@ -238,3 +238,23 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* Flashcard flip */
+.flashcard-scene {
+  perspective: 1000px;
+}
+.flashcard-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flashcard-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.flashcard-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flashcard-face-back {
+  transform: rotateY(180deg);
+}

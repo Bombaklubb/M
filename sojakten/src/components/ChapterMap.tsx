@@ -125,6 +125,7 @@ export default function ChapterMap() {
                 {unlocked && chapter.summary && (
                   <div className="mt-3 grid grid-cols-3 gap-2">
                     {([
+                      { tab: 'flashcards',   label: '🃏 Flashcards' },
                       { tab: 'concepts',     label: '📘 Begrepp' },
                       { tab: 'key-points',   label: '📋 Sammanfattning' },
                       { tab: 'cause-effect', label: '⚡ Orsak & konsekvens' },
