@@ -147,7 +147,7 @@ export default function WorldPage({ params }: Props) {
             <span className="text-6xl drop-shadow-lg">{stage.emoji}</span>
             <div>
               <h1 className="text-3xl font-black text-white text-shadow">{stage.name}</h1>
-              <p className="text-white/70 font-semibold mt-0.5">{stage.subtitle} · {stage.grades}</p>
+              <p className="text-white/70 font-semibold mt-0.5">{stage.subtitle}</p>
               <p className="text-white/60 text-sm mt-1">{stage.description}</p>
             </div>
           </div>

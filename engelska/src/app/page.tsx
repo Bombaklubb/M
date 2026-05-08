@@ -256,7 +256,7 @@ export default function HomePage() {
                               </div>
                             )}
                           </div>
-                          <p className="text-white/70 font-semibold text-sm mt-0.5">{stage.subtitle} · {stage.grades}</p>
+                          <p className="text-white/70 font-semibold text-sm mt-0.5">{stage.subtitle}</p>
                           <p className="text-white/55 text-xs mt-1 leading-snug line-clamp-2">{stage.description}</p>
                         </div>
                       </div>
