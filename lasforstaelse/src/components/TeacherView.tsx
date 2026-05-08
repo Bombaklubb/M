@@ -280,7 +280,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                   {stats.gradeStats.map((item) => {
                     const maxCount = Math.max(...stats.gradeStats.map((g) => g.count), 1);
                     const percentage = (item.count / maxCount) * 100;
-                    const gradeLabel = item.grade === 10 ? 'Gymnasium' : `Årskurs ${item.grade}`;
+                    const gradeLabel = `Nivå ${item.grade}`;
 
                     return (
                       <div key={item.grade} className="flex items-center gap-4">
@@ -347,7 +347,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                   className="bg-white dark:bg-slate-800 rounded-xl p-4 text-center min-w-[90px] border border-slate-200 dark:border-slate-700"
                 >
                   <div className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-1">
-                    {item.grade === 10 ? 'GY' : `Åk ${item.grade}`}
+                    {`Nivå ${item.grade}`}
                   </div>
                   <div className="text-2xl font-black text-slate-800 dark:text-white">
                     {item.count}
