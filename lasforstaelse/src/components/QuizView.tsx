@@ -125,7 +125,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">{text.title}</h2>
           <div className="flex items-center gap-3 mt-1">
             <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300">
-              {text.grade === 10 ? 'Gymnasiet' : `Åk ${text.grade}`}
+              {`Nivå ${text.grade}`}
             </span>
             <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">
               {text.genre === 'berättelse' ? '📖 Berättelse' : '📰 Faktatext'}

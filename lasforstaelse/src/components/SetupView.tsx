@@ -22,7 +22,7 @@ const GRADE_LABELS = [
   { grade: 7, label: '7' },
   { grade: 8, label: '8' },
   { grade: 9, label: '9' },
-  { grade: 10, label: 'GY' },
+  { grade: 10, label: '10' },
 ];
 
 export const SetupView: React.FC<SetupViewProps> = ({
@@ -45,10 +45,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
   };
 
   const getGradeLabel = (grade: number): string => {
-    if (grade <= 3) return 'Lågstadiet (åk 1-3)';
-    if (grade <= 6) return 'Mellanstadiet (åk 4-6)';
-    if (grade <= 9) return 'Högstadiet (åk 7-9)';
-    return 'Gymnasiet';
+    return `Nivå ${grade}`;
   };
 
   const getGradeColor = (grade: number): { bg: string; text: string; gradient: string } => {
@@ -75,7 +72,6 @@ export const SetupView: React.FC<SetupViewProps> = ({
   };
 
   const getGradeDisplayText = (grade: number): string => {
-    if (grade === 10) return 'GY';
     return String(grade);
   };
 
