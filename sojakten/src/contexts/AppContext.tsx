@@ -3,7 +3,7 @@ import { AppView, Subject, Chapter, ExerciseSessionResult } from '../types';
 import { getProgress, getChapterProgress, saveChapterProgress, calcStars, addStats } from '../utils/storage';
 import { getChaptersForSubject, ALL_CHAPTERS } from '../data/subjects';
 
-type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'questions' | 'flashcards';
+type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'questions' | 'flashcards' | 'sant-falskt' | 'matcha' | 'tidslinje';
 
 interface AppContextValue {
   currentView: AppView;

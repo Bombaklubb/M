@@ -41,6 +41,18 @@ export const AK5_RELIGION: Chapter[] = [
         { q: 'Vad ledde Förintelsen (Holocaust) till för judarna efter 1945?', a: 'Staten Israel grundades 1948 som ett judiskt hemland och tillflyktsort.' },
         { q: 'Vad är Hannukka?', a: 'Ljusfesten – en judisk högtid som firas åtta dagar med tändning av en speciell menora.' },
       ],
+      trueFalse: [
+        { statement: 'Judendomen är en monoteistisk religion.', isTrue: true, explanation: 'Rätt! Judar tror på en enda Gud – detta är ett av judendomens viktigaste kännetecken.' },
+        { statement: 'Sabbaten firas från lördag kväll till söndag morgon.', isTrue: false, explanation: 'Nej – sabbaten firas från FREDAGS kväll till LÖRDAGS kväll (solnedgång till solnedgång).' },
+        { statement: 'Torah är en del av judarnas heliga skrift.', isTrue: true, explanation: 'Rätt! Torah är de fem Moseböckerna och den heligaste delen av Tanach (hela den hebreiska bibeln).' },
+        { statement: 'Jerusalem är en helig stad bara för judendomen.', isTrue: false, explanation: 'Nej – Jerusalem är helig för judendomen, kristendomen OCH islam – tre religioner.' },
+        { statement: 'Kosher-regler tillåter griskött om det tillagas ordentligt.', isTrue: false, explanation: 'Nej – griskött är ALLTID förbjudet enligt kosher-reglerna, oavsett tillagningssätt.' },
+        { statement: 'Hannukka kallas ljusfesten och firas i åtta dagar.', isTrue: true, explanation: 'Rätt! Under Hannukka tänds ett ljus om dagen i en chanukia (niogrammad menora).' },
+        { statement: 'Judendomen är ungefär 1000 år gammal.', isTrue: false, explanation: 'Nej – judendomen är en av världens ÄLDSTA religioner, ungefär 3500 år gammal.' },
+        { statement: 'Abraham ses som gemensam anfader i judendomen, kristendomen och islam.', isTrue: true, explanation: 'Rätt! Alla tre kallas abrahamitiska religioner för att de alla härstammar från Abraham.' },
+        { statement: 'En synagoga leds av en imam.', isTrue: false, explanation: 'Nej – en synagoga leds av en RABBI. En imam är ledare för en moské (islam).' },
+        { statement: 'Jom Kippur är judendomens heligaste dag.', isTrue: true, explanation: 'Rätt! Jom Kippur kallas "försoningsdagen" och är den viktigaste och heligaste dagen i judisk kalender.' },
+      ],
     },
     exercises: [
       {
@@ -197,6 +209,18 @@ export const AK5_RELIGION: Chapter[] = [
         { q: 'Hur många anhängare har kristendomen ungefär?', a: 'Ca 2,4 miljarder – kristendomen är världens största religion.' },
         { q: 'Vilken kristen riktning är vanligast i Sverige?', a: 'Luthersk protestantism, som uppstod vid reformationen på 1500-talet.' },
       ],
+      trueFalse: [
+        { statement: 'Kristendomen är världens minsta religion.', isTrue: false, explanation: 'Nej – kristendomen är världens STÖRSTA religion med ca 2,4 miljarder anhängare.' },
+        { statement: 'Bibeln består av Gamla och Nya testamentet.', isTrue: true, explanation: 'Rätt! Gamla testamentet delas med judendomen; Nya testamentet handlar om Jesus och de första kristna.' },
+        { statement: 'Påsken firar Jesu uppståndelse.', isTrue: true, explanation: 'Rätt! Påsken är kristendomens viktigaste högtid och firar att Jesus uppstod från de döda.' },
+        { statement: 'Alla kristna i världen tillhör den katolska kyrkan.', isTrue: false, explanation: 'Nej – kristendomen delas i tre huvudgrenar: katolicism, ortodoxi och protestantism.' },
+        { statement: 'Påven bor i Vatikanen i Rom.', isTrue: true, explanation: 'Rätt! Vatikanstaten i Rom är den katolska kyrkans centrum och påvens hemvist.' },
+        { statement: 'Martin Luther startade reformationen år 1517.', isTrue: true, explanation: 'Rätt! Luther publicerade sina 95 teser 1517 och startade den protestantiska reformationen.' },
+        { statement: 'Dopet är ett sakrament i de flesta kristna kyrkor.', isTrue: true, explanation: 'Rätt! Dopet är den heliga handling som tas upp en person i den kristna kyrkan.' },
+        { statement: 'Sverige är ett katolskt land.', isTrue: false, explanation: 'Nej – Sverige är sedan reformationen ca 1527 ett lutherskt/protestantiskt land.' },
+        { statement: 'Kristendomen uppstod ursprungligen i Egypten.', isTrue: false, explanation: 'Nej – kristendomen uppstod i Palestina/Israel, i den region som då var en del av Romarriket.' },
+        { statement: 'Treenigheten innebär att kristna tror på tre gudar.', isTrue: false, explanation: 'Nej – kristna tror på EN Gud i tre personer: Fadern, Sonen (Jesus) och den Helige Ande.' },
+      ],
     },
     exercises: [
       {
@@ -352,6 +376,18 @@ export const AK5_RELIGION: Chapter[] = [
         { q: 'Vad firas under Eid al-Fitr?', a: 'Festdagen efter Ramadan är slut – familjer samlas och ger gåvor.' },
         { q: 'Hur många anhängare har islam ungefär?', a: 'Ca 1,8 miljarder – islam är världens näst största religion.' },
         { q: 'Vilka är islams två huvudinriktningar?', a: 'Sunni (ca 85%) och Shia (ca 15%) – skillnaden handlar om efterföljare till Muhammed.' },
+      ],
+      trueFalse: [
+        { statement: 'Islam grundades av profeten Muhammed på 600-talet e.Kr.', isTrue: true, explanation: 'Rätt! Muhammed levde ca 570–632 e.Kr. och grundade islam i Arabien.' },
+        { statement: 'Muslimer ber tre gånger om dagen.', isTrue: false, explanation: 'Nej – muslimer ber FEM gånger om dagen. Det kallas Salat och är en av islams fem pelare.' },
+        { statement: 'Koranen är islams heliga skrift.', isTrue: true, explanation: 'Rätt! Koranen anses vara Guds (Allahs) direkta ord som uppenbarades för Muhammed.' },
+        { statement: 'Ramadan är en festperiod med mat och presenter varje dag.', isTrue: false, explanation: 'Nej – Ramadan är en FASTEPERIOD. Muslimer fastar från gryning till solnedgång. Eid al-Fitr är festdagen när Ramadan är slut.' },
+        { statement: 'Mecka ligger i Egypten.', isTrue: false, explanation: 'Nej – Mecka ligger i SAUDIARABIEN och är islams allra heligaste stad.' },
+        { statement: 'Islams fem pelare inkluderar pilgrimsfärden Hajj.', isTrue: true, explanation: 'Rätt! Hajj är den femte pelaren – en pilgrimsfärd till Mecka som varje muslim bör göra minst en gång.' },
+        { statement: 'Halal-regler tillåter griskött om det tillagas på rätt sätt.', isTrue: false, explanation: 'Nej – griskött är ALLTID förbjudet inom islam, oavsett tillagningssätt.' },
+        { statement: 'Eid al-Fitr firas när Ramadan är slut.', isTrue: true, explanation: 'Rätt! Eid al-Fitr är en stor festdag efter Ramadan med mat, gåvor och familjesamlingar.' },
+        { statement: 'Islam och kristendomen delar inga gemensamma rötter.', isTrue: false, explanation: 'Nej – båda är abrahamitiska religioner med gemensamma rötter. Jesus nämns som profet även i Koranen.' },
+        { statement: 'Sunni är den största inriktningen inom islam.', isTrue: true, explanation: 'Rätt! Ca 85% av världens muslimer tillhör sunni-inriktningen.' },
       ],
     },
     exercises: [

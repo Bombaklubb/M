@@ -125,14 +125,17 @@ export default function ChapterMap() {
                 {unlocked && chapter.summary && (
                   <div className="mt-3 grid grid-cols-3 gap-2">
                     {([
-                      { tab: 'flashcards',   label: '🃏 Flashcards' },
-                      { tab: 'concepts',     label: '📘 Begrepp' },
-                      { tab: 'key-points',   label: '📋 Sammanfattning' },
-                      { tab: 'cause-effect', label: '⚡ Orsak & konsekvens' },
-                      { tab: 'word-search',  label: '🔍 Ordsökning' },
-                      { tab: 'test',         label: '✏️ Test' },
-                      { tab: 'questions',    label: '❓ Frågor' },
-                    ] as const).map(({ tab, label }) => (
+                      { tab: 'flashcards',  label: '🃏 Flashcards',          show: true },
+                      { tab: 'concepts',    label: '📘 Begrepp',             show: true },
+                      { tab: 'key-points',  label: '📋 Sammanfattning',      show: true },
+                      { tab: 'cause-effect',label: '⚡ Orsak & konsekvens',  show: true },
+                      { tab: 'sant-falskt', label: '✅ Sant eller falskt',   show: true },
+                      { tab: 'matcha',      label: '🔗 Matcha begrepp',      show: true },
+                      { tab: 'word-search', label: '🔍 Ordsökning',          show: true },
+                      { tab: 'test',        label: '✏️ Test',                show: true },
+                      { tab: 'questions',   label: '❓ Frågor',              show: true },
+                      { tab: 'tidslinje',   label: '📅 Tidslinje',           show: !!chapter.summary?.timeline },
+                    ] as const).filter(b => b.show).map(({ tab, label }) => (
                       <button
                         key={tab}
                         onClick={() => openChapterStudy(chapter, tab)}

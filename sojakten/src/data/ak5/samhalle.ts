@@ -42,6 +42,18 @@ export const AK5_SAMHALLE: Chapter[] = [
         { q: 'Vad händer med priset på en vara om många fler vill köpa den?', a: 'Priset stiger – hög efterfrågan driver upp priset.' },
         { q: 'Vad är byteshandel?', a: 'Att byta en vara mot en annan, utan pengar. Pengar ersatte byteshandeln för att göra handel smidigare.' },
       ],
+      trueFalse: [
+        { statement: 'Lön är pengar man får för sitt arbete.', isTrue: true, explanation: 'Rätt! Lönen är ersättningen för det arbete man utför hos en arbetsgivare.' },
+        { statement: 'Moms är en skatt på ca 10%.', isTrue: false, explanation: 'Nej – den vanligaste momssatsen i Sverige är ca 25%. Det är en av statens viktigaste inkomstkällor.' },
+        { statement: 'Fackförbund arbetar för arbetsgivarnas rättigheter.', isTrue: false, explanation: 'Nej – fackförbund arbetar för LÖNTAGARNAS (de anställdas) rättigheter och bättre arbetsvillkor.' },
+        { statement: 'Export innebär att köpa varor från andra länder.', isTrue: false, explanation: 'Nej – export innebär att SÄLJA varor till andra länder. Import är att köpa från andra länder.' },
+        { statement: 'Inflation innebär att priserna i samhället stiger.', isTrue: true, explanation: 'Rätt! Vid inflation stiger priserna och pengarna blir mindre värda – man får mindre för samma summa.' },
+        { statement: 'Riksbanken ger ut svenska kronor.', isTrue: true, explanation: 'Rätt! Riksbanken är Sveriges centralbank och den enda som får ge ut svenska kronor.' },
+        { statement: 'I en planekonomi bestäms priserna av utbud och efterfrågan.', isTrue: false, explanation: 'Nej – i en MARKNADSEKONOMI bestäms priserna av utbud och efterfrågan. I planekonomi bestämmer staten.' },
+        { statement: 'Alla som arbetar i Sverige betalar inkomstskatt.', isTrue: true, explanation: 'Rätt! Inkomstskatt tas på de flesta inkomster och finansierar välfärden.' },
+        { statement: 'Byteshandel innebär att byta varor utan pengar.', isTrue: true, explanation: 'Rätt! Byteshandel (barter) är det äldsta handelssystemet – man byter en vara direkt mot en annan.' },
+        { statement: 'Deflation innebär att priserna stiger kraftigt.', isTrue: false, explanation: 'Nej – deflation innebär att priserna SJUNKER. Det är INFLATION som innebär att priserna stiger.' },
+      ],
     },
     exercises: [
       {
@@ -207,6 +219,18 @@ export const AK5_SAMHALLE: Chapter[] = [
         { q: 'Vad är yttrandefrihet?', a: 'Rätten att fritt uttrycka sina åsikter – skyddas i Sveriges grundlag.' },
         { q: 'Vad antog FN 1948 om mänskliga rättigheter?', a: 'Den allmänna förklaringen om de mänskliga rättigheterna.' },
       ],
+      trueFalse: [
+        { statement: 'Riksdagen stiftar lagar i Sverige.', isTrue: true, explanation: 'Rätt! Riksdagen med sina 349 ledamöter är den enda myndighet som kan stifta nya lagar.' },
+        { statement: 'I Sverige är man straffmyndig vid 12 år.', isTrue: false, explanation: 'Nej – i Sverige är den straffrättsliga åldersgränsen 15 år. Under det är man inte straffmyndig.' },
+        { statement: 'Sverige har fyra grundlagar.', isTrue: true, explanation: 'Rätt! De fyra grundlagarna är Regeringsformen, Successionsordningen, Tryckfrihetsförordningen och Yttrandefrihetsgrundlagen.' },
+        { statement: 'I en demokrati väljer folket sina representanter.', isTrue: true, explanation: 'Rätt! Demokrati betyder "folkstyre" och innebär att medborgarna väljer representanter.' },
+        { statement: 'Barnkonventionen är ett FN-avtal om barns rättigheter.', isTrue: true, explanation: 'Rätt! FN:s barnkonvention antogs 1989 och är i Sverige lag sedan 2020.' },
+        { statement: 'Statsministern i Sverige kan bestämma vad som helst utan riksdagens stöd.', isTrue: false, explanation: 'Nej – statsministern måste ha riksdagens förtroende och kan inte stifta lagar ensam.' },
+        { statement: 'Yttrandefrihet är grundlagsskyddad i Sverige.', isTrue: true, explanation: 'Rätt! Yttrandefriheten – rätten att fritt uttrycka sina åsikter – skyddas i svensk grundlag.' },
+        { statement: 'Kungen stiftar lagar i Sverige.', isTrue: false, explanation: 'Nej – kungen har ingen politisk makt i Sverige. Det är riksdagen som stiftar lagar.' },
+        { statement: 'Sverige väljer riksdag vart fjärde år.', isTrue: true, explanation: 'Rätt! Allmänna val hålls i Sverige vart fjärde år, alltid den andra söndagen i september.' },
+        { statement: 'En advokat i rätten företräder åklagaren.', isTrue: false, explanation: 'Nej – en advokat företräder den ÅTALADE (försvarare). Åklagaren för statens talan mot den misstänkte.' },
+      ],
     },
     exercises: [
       {
@@ -366,6 +390,18 @@ export const AK5_SAMHALLE: Chapter[] = [
         { q: 'Varför är fri press viktig i en demokrati?', a: 'Journalister kan granska makten och avslöja korruption – det håller politikerna ansvariga.' },
         { q: 'Vilka fyra frågor ställer man vid källkritik?', a: 'Vem har skrivit det? Varför skrevs det? Är det aktuellt? Stämmer det med andra källor?' },
         { q: 'Är reklam riktad till barn under 12 år tillåten i svensk TV?', a: 'Nej – Sverige har förbud mot TV-reklam riktad direkt till barn under 12 år.' },
+      ],
+      trueFalse: [
+        { statement: 'Reklam är alltid neutral och objektiv information.', isTrue: false, explanation: 'Nej – reklam är betald kommunikation vars syfte är att PÅVERKA dig att köpa något. Den är aldrig neutral.' },
+        { statement: 'Källkritik innebär att granska varifrån information kommer.', isTrue: true, explanation: 'Rätt! Källkritik handlar om att fråga sig: vem har skrivit det, varför och när?' },
+        { statement: 'Sociala medier-algoritmer väljer slumpmässigt vad du ser.', isTrue: false, explanation: 'Nej – algoritmerna anpassar innehållet baserat på dina tidigare beteenden och preferenser.' },
+        { statement: 'Falska nyheter sprids snabbt på sociala medier.', isTrue: true, explanation: 'Rätt! Desinformation sprids lika lätt som sann information – ibland snabbare.' },
+        { statement: 'I Sverige är TV-reklam riktad till barn under 12 år tillåten.', isTrue: false, explanation: 'Nej – Sverige har ett förbud mot TV-reklam riktad direkt till barn under 12 år.' },
+        { statement: 'En fri press är viktig för demokratin.', isTrue: true, explanation: 'Rätt! Fria medier granskar makthavare och håller dem ansvariga – en viktig funktion i demokratin.' },
+        { statement: 'Propaganda är alltid lätt att känna igen.', isTrue: false, explanation: 'Nej – propaganda är ofta svår att identifiera eftersom den kan se ut som vanlig information.' },
+        { statement: 'En podcast är ett ljudprogram man lyssnar på när man vill.', isTrue: true, explanation: 'Rätt! Podcasts är förinspelade ljudprogram man kan lyssna på i sin egen takt.' },
+        { statement: 'Alla som publicerar nyheter i Sverige behöver en ansvarig utgivare.', isTrue: true, explanation: 'Rätt! Den ansvarige utgivaren bär juridiskt ansvar för det som publiceras.' },
+        { statement: 'En filterbubbla innebär att man möter många olika sorters åsikter.', isTrue: false, explanation: 'Nej – filterbubblan innebär tvärtom att man bara ser likartade åsikter och perspektiv.' },
       ],
     },
     exercises: [

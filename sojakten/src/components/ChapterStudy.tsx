@@ -45,7 +45,242 @@ function useSpeech() {
   return { speaking, activeIdx, speakList, stop };
 }
 
-type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'questions' | 'flashcards'; // mirrors AppContext StudyTab
+type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'questions' | 'flashcards' | 'sant-falskt' | 'matcha' | 'tidslinje'; // mirrors AppContext StudyTab
+
+// ─── Sant eller falskt ───────────────────────────────────────────────────────
+function SantFalsktTab({ items, progressHex, accentHex }: {
+  items: { statement: string; isTrue: boolean; explanation: string }[];
+  progressHex: string;
+  accentHex: string;
+}) {
+  const [idx, setIdx] = useState(0);
+  const [answered, setAnswered] = useState<boolean | null>(null);
+  const [score, setScore] = useState(0);
+  const [done, setDone] = useState(false);
+
+  if (items.length === 0) return <p className="text-sm text-gray-500 text-center py-8">Inga sant/falskt-påståenden finns för det här kapitlet.</p>;
+
+  const current = items[idx];
+  const total = items.length;
+
+  function answer(choice: boolean) {
+    if (answered !== null) return;
+    setAnswered(choice);
+    if (choice === current.isTrue) setScore(s => s + 1);
+    setTimeout(() => {
+      if (idx + 1 >= total) { setDone(true); }
+      else { setIdx(i => i + 1); setAnswered(null); }
+    }, 1100);
+  }
+
+  function reset() { setIdx(0); setAnswered(null); setScore(0); setDone(false); }
+
+  if (done) return (
+    <div className="clay-card p-6 text-center">
+      <p className="text-5xl mb-3">{score === total ? '🏆' : score >= total / 2 ? '👍' : '💪'}</p>
+      <p className="font-heading font-bold text-xl text-gray-800 mb-1">{score} / {total} rätt</p>
+      <p className="text-sm text-gray-500 mb-5">{score === total ? 'Perfekt! Du kan allt!' : score >= total / 2 ? 'Bra jobbat!' : 'Öva lite till!'}</p>
+      <button onClick={reset} className="btn-clay flex items-center gap-2 mx-auto px-5 py-3 text-sm font-heading bg-white border-gray-200 text-gray-700">
+        <RotateCcw size={15} /> Försök igen
+      </button>
+    </div>
+  );
+
+  const isCorrect = answered !== null && answered === current.isTrue;
+  const isWrong   = answered !== null && answered !== current.isTrue;
+
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-xs font-black text-gray-400">Påstående {idx + 1} av {total}</span>
+        <span className="text-xs font-black" style={{ color: progressHex }}>{score} rätt</span>
+      </div>
+      <div className="h-1.5 rounded-full bg-gray-100 mb-5 overflow-hidden">
+        <div className="h-full rounded-full transition-all" style={{ width: `${(idx / total) * 100}%`, background: progressHex }} />
+      </div>
+
+      <div className="clay-card p-5 mb-4 text-center min-h-[100px] flex items-center justify-center"
+        style={isCorrect ? { borderColor: '#86efac', background: '#f0fdf4' } : isWrong ? { borderColor: '#fca5a5', background: '#fef2f2' } : {}}>
+        <p className="font-semibold text-gray-800 text-base leading-relaxed">{current.statement}</p>
+      </div>
+
+      {answered !== null && (
+        <div className="rounded-xl px-4 py-3 mb-4 text-sm font-semibold leading-relaxed"
+          style={isCorrect ? { background: '#dcfce7', color: '#15803d' } : { background: '#fee2e2', color: '#dc2626' }}>
+          {isCorrect ? '✅ Rätt! ' : '❌ Fel! '}{current.explanation}
+        </div>
+      )}
+
+      {answered === null && (
+        <div className="grid grid-cols-2 gap-3">
+          <button onClick={() => answer(true)} className="py-4 rounded-2xl text-base font-black transition-all active:scale-95 cursor-pointer" style={{ background: '#dcfce7', border: '2px solid #86efac', color: '#15803d' }}>
+            ✅ Sant
+          </button>
+          <button onClick={() => answer(false)} className="py-4 rounded-2xl text-base font-black transition-all active:scale-95 cursor-pointer" style={{ background: '#fee2e2', border: '2px solid #fca5a5', color: '#dc2626' }}>
+            ❌ Falskt
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Matcha begrepp ───────────────────────────────────────────────────────────
+function MatchaTab({ concepts, progressHex, accentHex }: {
+  concepts: { term: string; definition: string }[];
+  progressHex: string;
+  accentHex: string;
+}) {
+  const shuffledDefs = useMemo(() => [...concepts].sort(() => Math.random() - 0.5), [concepts.map(c => c.term).join()]);
+  const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
+  const [matched, setMatched] = useState<Set<string>>(new Set());
+  const [flash, setFlash] = useState<{ term: string; def: string; ok: boolean } | null>(null);
+
+  if (concepts.length === 0) return <p className="text-sm text-gray-500 text-center py-8">Inga begrepp finns att matcha.</p>;
+
+  const allDone = matched.size === concepts.length;
+
+  function pickTerm(term: string) {
+    if (matched.has(term)) return;
+    setSelectedTerm(t => t === term ? null : term);
+  }
+
+  function pickDef(def: string, correctTerm: string) {
+    if (!selectedTerm || matched.has(correctTerm)) return;
+    const isOk = selectedTerm === correctTerm;
+    setFlash({ term: selectedTerm, def, ok: isOk });
+    if (isOk) {
+      setMatched(prev => new Set([...prev, correctTerm]));
+      setSelectedTerm(null);
+    } else {
+      setTimeout(() => { setFlash(null); setSelectedTerm(null); }, 700);
+    }
+  }
+
+  function reset() { setMatched(new Set()); setSelectedTerm(null); setFlash(null); }
+
+  return (
+    <div>
+      <p className="text-xs font-black text-gray-500 uppercase tracking-wide mb-4">
+        Välj ett begrepp, välj sedan rätt förklaring
+      </p>
+
+      {allDone ? (
+        <div className="clay-card p-6 text-center mb-4">
+          <p className="text-4xl mb-2">🎉</p>
+          <p className="font-heading font-bold text-lg text-gray-800 mb-1">Alla matchade!</p>
+          <p className="text-sm text-gray-500 mb-4">Du kopplade ihop alla begrepp rätt.</p>
+          <button onClick={reset} className="btn-clay flex items-center gap-2 mx-auto px-5 py-2.5 text-sm font-heading bg-white border-gray-200 text-gray-700">
+            <RotateCcw size={14} /> Börja om
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-2 gap-3">
+          {/* Terms */}
+          <div className="space-y-2">
+            <p className="text-xs font-black text-center text-gray-400 mb-2 uppercase tracking-wide">Begrepp</p>
+            {concepts.map(c => {
+              const isMatched = matched.has(c.term);
+              const isSelected = selectedTerm === c.term;
+              const isFlashing = flash?.term === c.term;
+              let style: React.CSSProperties = { background: 'white', borderColor: '#e5e7eb', color: '#374151' };
+              if (isMatched) style = { background: `${progressHex}18`, borderColor: progressHex, color: progressHex };
+              else if (isSelected) style = { background: `${accentHex}18`, borderColor: accentHex, color: '#1f2937' };
+              else if (isFlashing && flash && !flash.ok) style = { background: '#fee2e2', borderColor: '#fca5a5', color: '#dc2626' };
+              return (
+                <button key={c.term} onClick={() => pickTerm(c.term)} disabled={isMatched}
+                  className="w-full p-2.5 rounded-xl border-2 text-xs font-black text-center transition-all active:scale-95 cursor-pointer disabled:cursor-default leading-snug"
+                  style={style}>
+                  {isMatched ? '✓ ' : ''}{c.term}
+                </button>
+              );
+            })}
+          </div>
+          {/* Definitions */}
+          <div className="space-y-2">
+            <p className="text-xs font-black text-center text-gray-400 mb-2 uppercase tracking-wide">Förklaring</p>
+            {shuffledDefs.map(c => {
+              const isMatched = matched.has(c.term);
+              const isFlashing = flash?.def === c.definition;
+              let style: React.CSSProperties = { background: 'white', borderColor: '#e5e7eb', color: '#374151' };
+              if (isMatched) style = { background: `${progressHex}18`, borderColor: progressHex, color: progressHex };
+              else if (isFlashing && flash && !flash.ok) style = { background: '#fee2e2', borderColor: '#fca5a5', color: '#dc2626' };
+              else if (selectedTerm) style = { background: '#eff6ff', borderColor: '#93c5fd', color: '#1e40af' };
+              return (
+                <button key={c.term} onClick={() => pickDef(c.definition, c.term)} disabled={isMatched || !selectedTerm}
+                  className="w-full p-2.5 rounded-xl border-2 text-xs font-semibold text-left transition-all active:scale-95 cursor-pointer disabled:cursor-default leading-snug"
+                  style={style}>
+                  {c.definition}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Tidslinje ────────────────────────────────────────────────────────────────
+function TimelineTab({ events, progressHex, inkHex, accentHex }: {
+  events: import('../types').TimelineEvent[];
+  progressHex: string;
+  inkHex: string;
+  accentHex: string;
+}) {
+  const [images, setImages] = useState<Record<string, string | null>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    async function fetchAll() {
+      const results: Record<string, string | null> = {};
+      await Promise.all(events.filter(e => e.wikiTitle).map(async e => {
+        try {
+          const res = await fetch(`https://sv.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(e.wikiTitle!)}`, { headers: { Accept: 'application/json' } });
+          const data = await res.json();
+          results[e.wikiTitle!] = data?.thumbnail?.source ?? null;
+        } catch { results[e.wikiTitle!] = null; }
+      }));
+      if (!cancelled) setImages(results);
+    }
+    fetchAll();
+    return () => { cancelled = true; };
+  }, [events.map(e => e.wikiTitle).join()]);
+
+  return (
+    <div className="relative">
+      {/* Vertical line */}
+      <div className="absolute left-[22px] top-4 bottom-4 w-0.5 rounded-full" style={{ background: `${progressHex}30` }} />
+
+      <div className="space-y-6">
+        {events.map((event, i) => {
+          const img = event.wikiTitle ? images[event.wikiTitle] : null;
+          return (
+            <div key={i} className="flex gap-4">
+              {/* Year bubble */}
+              <div className="flex-shrink-0 flex flex-col items-center" style={{ width: 44 }}>
+                <div className="w-11 h-11 rounded-full flex items-center justify-center text-white font-black text-xs z-10 shadow-md"
+                  style={{ background: progressHex, fontSize: '10px', lineHeight: 1.2, textAlign: 'center', padding: '2px' }}>
+                  {event.year}
+                </div>
+              </div>
+              {/* Card */}
+              <div className="flex-1 clay-card p-4 pb-3">
+                <p className="font-heading font-bold text-gray-800 text-base mb-1">{event.title}</p>
+                {img && (
+                  <img src={img} alt={event.title}
+                    className="rounded-xl object-cover w-full mb-2"
+                    style={{ maxHeight: '130px', objectPosition: 'center' }} />
+                )}
+                <p className="text-sm text-gray-600 leading-relaxed">{event.description}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function KeyPointsTab({ keyPoints, accentHex, progressHex, textClass }: {
   keyPoints: string[];
@@ -412,9 +647,12 @@ export default function ChapterStudy() {
     'concepts':    '📘 Begrepp',
     'key-points':  '📋 Sammanfattning',
     'cause-effect':'⚡ Orsak & konsekvens',
+    'sant-falskt': '✅ Sant eller falskt',
+    'matcha':      '🔗 Matcha begrepp',
     'word-search': '🔍 Ordsökning',
     'test':        '✏️ Test',
     'questions':   '❓ Frågor',
+    'tidslinje':   '📅 Tidslinje',
   };
 
   return (
@@ -539,12 +777,22 @@ export default function ChapterStudy() {
 
         {/* --- FLASHCARDS --- */}
         {activeTab === 'flashcards' && (
-          <FlashcardsTab
-            concepts={summary.concepts}
-            inkHex={s.inkHex}
-            progressHex={s.progressHex}
-            accentHex={s.accentHex}
-          />
+          <FlashcardsTab concepts={summary.concepts} inkHex={s.inkHex} progressHex={s.progressHex} accentHex={s.accentHex} />
+        )}
+
+        {/* --- SANT ELLER FALSKT --- */}
+        {activeTab === 'sant-falskt' && (
+          <SantFalsktTab items={summary.trueFalse ?? []} progressHex={s.progressHex} accentHex={s.accentHex} />
+        )}
+
+        {/* --- MATCHA BEGREPP --- */}
+        {activeTab === 'matcha' && (
+          <MatchaTab concepts={summary.concepts} progressHex={s.progressHex} accentHex={s.accentHex} />
+        )}
+
+        {/* --- TIDSLINJE --- */}
+        {activeTab === 'tidslinje' && (
+          <TimelineTab events={summary.timeline ?? []} progressHex={s.progressHex} inkHex={s.inkHex} accentHex={s.accentHex} />
         )}
 
         {/* --- QUESTIONS --- */}

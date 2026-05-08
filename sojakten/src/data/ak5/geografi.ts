@@ -43,6 +43,18 @@ export const AK5_GEOGRAFI: Chapter[] = [
         { q: 'Vad heter bergskedjan som sträcker sig genom Schweiz, Österrike, Frankrike och Italien?', a: 'Alperna.' },
         { q: 'Vad kallas det hav som ligger norr om Polen och söder om Skandinavien?', a: 'Östersjön.' },
       ],
+      trueFalse: [
+        { statement: 'Europa har ungefär 50 länder.', isTrue: true, explanation: 'Rätt! Det exakta antalet varierar beroende på definition, men ca 44–50 länder räknas som europeiska.' },
+        { statement: 'Ryssland är det minsta landet i Europa till ytan.', isTrue: false, explanation: 'Nej – Ryssland är det STÖRSTA landet i Europa (och världen) till ytan.' },
+        { statement: 'Mont Blanc är Europas högsta berg.', isTrue: true, explanation: 'Rätt! Mont Blanc är 4808 m högt och ligger på gränsen mellan Frankrike och Italien.' },
+        { statement: 'Medelhavet ligger norr om Europa och skiljer Europa från Asien.', isTrue: false, explanation: 'Nej – Medelhavet ligger SÖDER om Europa och skiljer Europa från Afrika.' },
+        { statement: 'Volga är Europas längsta flod.', isTrue: true, explanation: 'Rätt! Volga i Ryssland är ca 3690 km lång och Europas längsta flod.' },
+        { statement: 'Skandinavien består av Sverige, Norge och Danmark.', isTrue: true, explanation: 'Rätt! De tre länderna Sverige, Norge och Danmark kallas Skandinavien.' },
+        { statement: 'Alperna sträcker sig genom Spanien och Portugal.', isTrue: false, explanation: 'Nej – Alperna sträcker sig genom Schweiz, Österrike, Frankrike och norra Italien – inte Spanien.' },
+        { statement: 'Östersjön ligger söder om Skandinavien och norr om Polen.', isTrue: true, explanation: 'Rätt! Östersjön är det hav som omger södra Skandinavien och norra Polen.' },
+        { statement: 'Paris är Spaniens huvudstad.', isTrue: false, explanation: 'Nej – Paris är Frankrikes huvudstad. Spaniens huvudstad är Madrid.' },
+        { statement: 'Island är ett europeiskt land.', isTrue: true, explanation: 'Rätt! Island är en ö i norra Atlanten och tillhör Europa.' },
+      ],
     },
     exercises: [
       {
@@ -190,6 +202,18 @@ export const AK5_GEOGRAFI: Chapter[] = [
         { q: 'Vilket klimat är typiskt för Medelhavsländerna?', a: 'Varmt och torrt sommar, mild och regnig vinter.' },
         { q: 'Vad bestämmer vilka växter som kan leva i ett område?', a: 'Klimat, marktyp och tillgång till vatten bestämmer vegetationen.' },
       ],
+      trueFalse: [
+        { statement: 'Nära ekvatorn är klimatet tropiskt och fuktigt.', isTrue: true, explanation: 'Rätt! Närheten till ekvatorn ger stark sol och mycket regn – vilket skapar tropiska regnskogar.' },
+        { statement: 'Sverige har ett arktiskt klimat.', isTrue: false, explanation: 'Nej – Sverige har ett tempererat klimat med fyra årstider. Arktiskt klimat finns vid polerna.' },
+        { statement: 'Taigan är världens minsta skogszon.', isTrue: false, explanation: 'Nej – taigan (boreala skogen) är världens STÖRSTA skogszon och täcker norra Ryssland och Kanada.' },
+        { statement: 'Ökenklimnat innebär mer än 500 mm regn per år.', isTrue: false, explanation: 'Nej – ökenklimnat innebär UNDER 250 mm regn per år. Det är det som gör det till öken.' },
+        { statement: 'Ekvatorn delar jorden i norra och södra halvklotet.', isTrue: true, explanation: 'Rätt! Ekvatorn är den imaginära linje som delar planeten i exakt två lika stora delar.' },
+        { statement: 'Savannen är ett tropiskt gräslandskap typiskt för Afrika.', isTrue: true, explanation: 'Rätt! Savannen finns söder om Sahara i Afrika och är hem för lejon, giraffer och elefanter.' },
+        { statement: 'Klimatförändringar gör glaciärer större.', isTrue: false, explanation: 'Nej – klimatförändringar värmer upp planeten och gör att glaciärer SMÄLTER.' },
+        { statement: 'Medelhavsklimnat är varmt och torrt på sommaren.', isTrue: true, explanation: 'Rätt! Medelhavsklimnat kännetecknas av torra heta somrar och milda fuktiga vintrar.' },
+        { statement: 'Permafrost är mark som alltid är frusen.', isTrue: true, explanation: 'Rätt! Permafrost är mark som är permanent frusen, typiskt i arktiska regioner.' },
+        { statement: 'I Sverige kan man odla ris och bananer utomhus.', isTrue: false, explanation: 'Nej – Sveriges tempererade klimat är för kallt. Ris och bananer kräver tropiskt eller subtropiskt klimat.' },
+      ],
     },
     exercises: [
       {
@@ -334,6 +358,18 @@ export const AK5_GEOGRAFI: Chapter[] = [
         { q: 'Vad är skillnaden mellan jordskorpan under hav och under kontinenter?', a: 'Under hav är jordskorpan tunnare (5–10 km), under kontinenter tjockare (30–70 km).' },
         { q: 'Vad kan en undervattens-jordbävning orsaka?', a: 'En tsunami – enorma vågor som kan orsaka katastrofala översvämningar.' },
         { q: 'Vad är granit för slags bergart?', a: 'En magmatisk bergart – bildad av stelnad magma djupt i jordskorpan.' },
+      ],
+      trueFalse: [
+        { statement: 'Jordskorpan är jordens innersta lager.', isTrue: false, explanation: 'Nej – jordskorpan är det YTTERSTA lagret. Det innersta är kärnan.' },
+        { statement: 'Magma är smält sten under jordens yta.', isTrue: true, explanation: 'Rätt! Magma är smält berg under jordskorpan. När den når ytan kallas det lava.' },
+        { statement: 'Jordbävningar uppstår oftast mitt på kontinenter långt från plattgränser.', isTrue: false, explanation: 'Nej – jordbävningar uppstår nästan alltid vid gränser mellan tektoniska plattor.' },
+        { statement: '"Eldringens rand" finns runt Stilla havet.', isTrue: true, explanation: 'Rätt! Runt Stilla havet finns ett bälte med världens flesta vulkaner och jordbävningar.' },
+        { statement: 'En tsunami kan orsakas av en undervattens-jordbävning.', isTrue: true, explanation: 'Rätt! Undervattens-jordbävningar skapar chockvågor som blir enorma tsunamivågor.' },
+        { statement: 'Lithosfärplatter rör sig ca 2–10 cm per år.', isTrue: true, explanation: 'Rätt! Plattorna rör sig med ungefär samma hastighet som dina naglar växer.' },
+        { statement: 'Jordens inre kärna är flytande.', isTrue: false, explanation: 'Nej – jordens INRE kärna är fast. Det är den YTTRE kärnan som är flytande järn och nickel.' },
+        { statement: 'Granit är en sedimentär bergart.', isTrue: false, explanation: 'Nej – granit är en MAGMATISK bergart, bildad när magma stelnar djupt i jordskorpan.' },
+        { statement: 'Vulkaner bildas bara i hav och aldrig på land.', isTrue: false, explanation: 'Nej – vulkaner bildas både i hav och på land, vid tektoniska plattgränser och "hot spots".' },
+        { statement: 'Jordskorpan är tunnare under hav än under kontinenter.', isTrue: true, explanation: 'Rätt! Under hav är jordskorpan ca 5–10 km tjock, under kontinenter ca 30–70 km.' },
       ],
     },
     exercises: [
