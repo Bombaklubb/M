@@ -1,22 +1,22 @@
 // === GRADES ===
 export type Grade =
-  | '1' | '2' | '3'   // Lågstadiet
-  | '4' | '5' | '6'   // Mellanstadiet
-  | '7' | '8' | '9'   // Högstadiet
-  | 'gym1' | 'gym2' | 'gym3'; // Gymnasiet
+  | '1' | '2' | '3'   // Nivå 1–3
+  | '4' | '5' | '6'   // Nivå 4–6
+  | '7' | '8' | '9'   // Nivå 7–9
+  | 'gym1' | 'gym2' | 'gym3'; // Nivå 10
 
 export const GRADE_LABELS: Record<Grade, string> = {
-  '1': 'Åk 1', '2': 'Åk 2', '3': 'Åk 3',
-  '4': 'Åk 4', '5': 'Åk 5', '6': 'Åk 6',
-  '7': 'Åk 7', '8': 'Åk 8', '9': 'Åk 9',
-  'gym1': 'Gym 1', 'gym2': 'Gym 2', 'gym3': 'Gym 3',
+  '1': 'Nivå 1', '2': 'Nivå 2', '3': 'Nivå 3',
+  '4': 'Nivå 4', '5': 'Nivå 5', '6': 'Nivå 6',
+  '7': 'Nivå 7', '8': 'Nivå 8', '9': 'Nivå 9',
+  'gym1': 'Nivå 10', 'gym2': 'Nivå 10', 'gym3': 'Nivå 10',
 };
 
 export const GRADE_STAGE: Record<Grade, string> = {
-  '1': 'Lågstadiet', '2': 'Lågstadiet', '3': 'Lågstadiet',
-  '4': 'Mellanstadiet', '5': 'Mellanstadiet', '6': 'Mellanstadiet',
-  '7': 'Högstadiet', '8': 'Högstadiet', '9': 'Högstadiet',
-  'gym1': 'Gymnasiet', 'gym2': 'Gymnasiet', 'gym3': 'Gymnasiet',
+  '1': 'Nivå 1–3', '2': 'Nivå 1–3', '3': 'Nivå 1–3',
+  '4': 'Nivå 4–6', '5': 'Nivå 4–6', '6': 'Nivå 4–6',
+  '7': 'Nivå 7–9', '8': 'Nivå 7–9', '9': 'Nivå 7–9',
+  'gym1': 'Nivå 10', 'gym2': 'Nivå 10', 'gym3': 'Nivå 10',
 };
 
 // === EXERCISES ===
