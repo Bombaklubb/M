@@ -87,12 +87,21 @@ export interface CauseEffect {
   effect: string;
 }
 
+export interface TimelineEvent {
+  year: string;
+  title: string;
+  description: string;
+  wikiTitle?: string;
+}
+
 export interface ChapterSummary {
   concepts: Concept[];
   keyPoints: string[];
   causeEffect: CauseEffect[];
   studentConnection: string;
   questions?: { q: string; a: string }[];
+  trueFalse?: { statement: string; isTrue: boolean; explanation: string }[];
+  timeline?: TimelineEvent[];
 }
 
 // === CHAPTERS ===
