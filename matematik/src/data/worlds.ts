@@ -21,7 +21,7 @@ export const WORLDS: World[] = [
   {
     id: 'dino',
     name: 'Dinosaurie Världen',
-    subtitle: 'Grunderna – Åk 1–3',
+    subtitle: 'Nivå 1–3',
     emoji: '🦖',
     grades: ['1', '2', '3'],
     minGrade: 1,
@@ -56,7 +56,7 @@ export const WORLDS: World[] = [
   {
     id: 'fantasy',
     name: 'Fantasy Världen',
-    subtitle: 'Mellanstadiet – Åk 4–6',
+    subtitle: 'Nivå 4–6',
     emoji: '🏰',
     grades: ['4', '5', '6'],
     minGrade: 4,
@@ -99,7 +99,7 @@ export const WORLDS: World[] = [
   {
     id: 'scifi',
     name: 'Sci-Fi Världen',
-    subtitle: 'Högstadiet – Åk 7–9',
+    subtitle: 'Nivå 7–9',
     emoji: '🚀',
     grades: ['7', '8', '9'],
     minGrade: 7,
@@ -148,7 +148,7 @@ export const WORLDS: World[] = [
   {
     id: 'gym',
     name: 'Rymd Akademin',
-    subtitle: 'Gymnasiet – Gym 1–3',
+    subtitle: 'Nivå 10',
     emoji: '🌌',
     grades: ['gym1', 'gym2', 'gym3'],
     minGrade: 10,

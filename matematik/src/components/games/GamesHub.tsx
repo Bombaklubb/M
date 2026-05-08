@@ -9,7 +9,7 @@ import { WORLDS } from '../../data/worlds';
 const WORLD_CONFIG = {
   dino: {
     label: 'Dinosaurie Världen',
-    subtitle: 'Grunderna – Åk 1–3',
+    subtitle: 'Nivå 1–3',
     tagline: 'Träna addition, subtraktion och taluppfattning med roliga spel!',
     emoji: '🦖',
     gradientBg: 'from-[#0a1a0e] via-[#0f2d16] to-[#0a1a0e]',
@@ -20,7 +20,7 @@ const WORLD_CONFIG = {
   },
   fantasy: {
     label: 'Fantasy Världen',
-    subtitle: 'Mellanstadiet – Åk 4–6',
+    subtitle: 'Nivå 4–6',
     tagline: 'Kämpa med multiplikation, bråk och procent i magiska spel!',
     emoji: '🏰',
     gradientBg: 'from-[#150a2e] via-[#1e1040] to-[#150a2e]',
@@ -31,7 +31,7 @@ const WORLD_CONFIG = {
   },
   scifi: {
     label: 'Sci-Fi Världen',
-    subtitle: 'Högstadiet – Åk 7–9',
+    subtitle: 'Nivå 7–9',
     tagline: 'Erövra algebra, geometri och statistik med rymdäventyr!',
     emoji: '🚀',
     gradientBg: 'from-[#050d1f] via-[#0a1535] to-[#050d1f]',
@@ -42,7 +42,7 @@ const WORLD_CONFIG = {
   },
   gym: {
     label: 'Rymd Akademin',
-    subtitle: 'Gymnasiet – Gym 1–3',
+    subtitle: 'Nivå 10',
     tagline: 'Behärska trigonometri, derivata och avancerad matematik!',
     emoji: '🌌',
     gradientBg: 'from-[#0a0a1f] via-[#111138] to-[#0a0a1f]',
