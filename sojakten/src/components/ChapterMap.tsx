@@ -133,7 +133,6 @@ export default function ChapterMap() {
                       { tab: 'matcha',      label: '🔗 Matcha begrepp',      show: true },
                       { tab: 'word-search', label: '🔍 Ordsökning',          show: true },
                       { tab: 'test',        label: '✏️ Test',                show: true },
-                      { tab: 'questions',   label: '❓ Frågor',              show: true },
                       { tab: 'tidslinje',   label: '📅 Tidslinje',           show: !!chapter.summary?.timeline },
                     ] as const).filter(b => b.show).map(({ tab, label }) => (
                       <button
