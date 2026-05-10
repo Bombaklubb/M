@@ -99,7 +99,6 @@ export interface ChapterSummary {
   keyPoints: string[];
   causeEffect: CauseEffect[];
   studentConnection: string;
-  questions?: { q: string; a: string }[];
   trueFalse?: { statement: string; isTrue: boolean; explanation: string }[];
   timeline?: TimelineEvent[];
 }

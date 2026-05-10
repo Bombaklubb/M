@@ -45,7 +45,7 @@ function useSpeech() {
   return { speaking, activeIdx, speakList, stop };
 }
 
-type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'questions' | 'flashcards' | 'sant-falskt' | 'matcha' | 'tidslinje'; // mirrors AppContext StudyTab
+type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'flashcards' | 'sant-falskt' | 'matcha' | 'tidslinje'; // mirrors AppContext StudyTab
 
 // ─── Sant eller falskt ───────────────────────────────────────────────────────
 function SantFalsktTab({ items, progressHex, accentHex }: {
@@ -478,80 +478,6 @@ function FlashcardsTab({ concepts, inkHex, progressHex, accentHex }: {
   );
 }
 
-function QuestionsTab({ questions, inkHex, progressHex, accentHex }: {
-  questions: { q: string; a: string }[];
-  inkHex: string;
-  progressHex: string;
-  accentHex: string;
-}) {
-  const [revealed, setRevealed] = useState<Set<number>>(new Set());
-  const allRevealed = revealed.size === questions.length && questions.length > 0;
-
-  function toggle(i: number) {
-    setRevealed(prev => {
-      const next = new Set(prev);
-      next.has(i) ? next.delete(i) : next.add(i);
-      return next;
-    });
-  }
-
-  if (questions.length === 0) {
-    return <p className="text-sm text-gray-500 text-center py-8">Inga frågor finns för det här kapitlet.</p>;
-  }
-
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-3">
-        <p className="text-xs font-black text-gray-500 uppercase tracking-wide">
-          Tryck på frågan för att visa svaret
-        </p>
-        <button
-          onClick={allRevealed ? () => setRevealed(new Set()) : () => setRevealed(new Set(questions.map((_, i) => i)))}
-          className="flex items-center gap-1 text-xs font-black cursor-pointer"
-          style={{ color: progressHex }}
-        >
-          {allRevealed ? <EyeOff size={14} /> : <Eye size={14} />}
-          {allRevealed ? 'Dölj alla' : 'Visa alla'}
-        </button>
-      </div>
-      <div className="space-y-2">
-        {questions.map((item, i) => {
-          const open = revealed.has(i);
-          return (
-            <button
-              key={i}
-              onClick={() => toggle(i)}
-              className="w-full text-left clay-card p-4 transition-all cursor-pointer hover:scale-[1.01] active:scale-[0.99]"
-              style={open ? { borderColor: progressHex } : {}}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span
-                      className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0"
-                      style={{ background: accentHex }}
-                    >
-                      {i + 1}
-                    </span>
-                    <p className="font-semibold text-gray-800 text-sm leading-snug">{item.q}</p>
-                  </div>
-                  {open && (
-                    <p className="text-sm text-gray-600 mt-2 ml-7 leading-relaxed border-l-2 pl-3" style={{ borderColor: progressHex }}>
-                      {item.a}
-                    </p>
-                  )}
-                </div>
-                <span className="flex-shrink-0 mt-0.5" style={{ color: progressHex }}>
-                  {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </span>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 export default function ChapterStudy() {
   const { selectedChapter, selectedSubject, setView, studyInitialTab } = useApp();
@@ -651,7 +577,6 @@ export default function ChapterStudy() {
     'matcha':      '🔗 Matcha begrepp',
     'word-search': '🔍 Ordsökning',
     'test':        '✏️ Test',
-    'questions':   '❓ Frågor',
     'tidslinje':   '📅 Tidslinje',
   };
 
@@ -793,11 +718,6 @@ export default function ChapterStudy() {
         {/* --- TIDSLINJE --- */}
         {activeTab === 'tidslinje' && (
           <TimelineTab events={summary.timeline ?? []} progressHex={s.progressHex} inkHex={s.inkHex} accentHex={s.accentHex} />
-        )}
-
-        {/* --- QUESTIONS --- */}
-        {activeTab === 'questions' && (
-          <QuestionsTab questions={summary.questions ?? []} inkHex={s.inkHex} progressHex={s.progressHex} accentHex={s.accentHex} />
         )}
 
         {/* --- WORD SEARCH --- */}
