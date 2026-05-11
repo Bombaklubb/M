@@ -1,5 +1,5 @@
 import { useApp } from '../contexts/AppContext';
-import { SUBJECTS, getChaptersForSubject } from '../data/subjects';
+import { SUBJECTS, getChaptersForSubjectAndGrade } from '../data/subjects';
 import { getProgress } from '../utils/storage';
 import type { Subject } from '../types';
 
@@ -68,8 +68,8 @@ const ORNAMENTS: Record<string, React.FC> = {
   samhalle: SamhalleOrnament,
 };
 
-function SubjectCard({ subject, onClick }: { subject: Subject; onClick: () => void }) {
-  const chapters = getChaptersForSubject(subject.id);
+function SubjectCard({ subject, grade, onClick }: { subject: Subject; grade: number; onClick: () => void }) {
+  const chapters = getChaptersForSubjectAndGrade(subject.id, grade);
   const progress = getProgress();
   const done = chapters.filter(c => progress.some(p => p.chapterId === c.id && p.completed)).length;
   const total = chapters.length;
@@ -134,7 +134,8 @@ function SubjectCard({ subject, onClick }: { subject: Subject; onClick: () => vo
 }
 
 export default function SubjectSelect() {
-  const { selectSubject, setView } = useApp();
+  const { selectSubject, setView, selectedGrade } = useApp();
+  const grade = selectedGrade ?? 5;
 
   return (
     <div className="min-h-screen">
@@ -165,7 +166,7 @@ export default function SubjectSelect() {
           </button>
           <div className="flex-1 text-center pr-9">
             <h1 className="font-heading font-bold text-4xl drop-shadow-sm" style={{ color: '#1e1b4b' }}>SO-jakten</h1>
-            <p className="text-base font-semibold mt-1 text-gray-700">Åk 5</p>
+            <p className="text-base font-semibold mt-1 text-gray-700">Åk {grade}</p>
           </div>
         </header>
 
@@ -181,6 +182,7 @@ export default function SubjectSelect() {
             <SubjectCard
               key={subject.id}
               subject={subject}
+              grade={grade}
               onClick={() => selectSubject(subject)}
             />
           ))}

@@ -3,6 +3,9 @@ import { AK5_HISTORIA } from './ak5/historia';
 import { AK5_GEOGRAFI } from './ak5/geografi';
 import { AK5_RELIGION } from './ak5/religion';
 import { AK5_SAMHALLE } from './ak5/samhalle';
+import { AK6_HISTORIA } from './ak6/historia';
+import { AK6_SAMHALLE } from './ak6/samhalle';
+import { AK6_RELIGION } from './ak6/religion';
 
 export const SUBJECTS: Subject[] = [
   {
@@ -68,7 +71,14 @@ export const ALL_CHAPTERS: Chapter[] = [
   ...AK5_GEOGRAFI,
   ...AK5_RELIGION,
   ...AK5_SAMHALLE,
+  ...AK6_HISTORIA,
+  ...AK6_SAMHALLE,
+  ...AK6_RELIGION,
 ];
+
+export function getChaptersForSubjectAndGrade(subjectId: SubjectId, grade: number): Chapter[] {
+  return ALL_CHAPTERS.filter(c => c.subjectId === subjectId && c.grade === String(grade));
+}
 
 export function getSubject(id: SubjectId): Subject {
   return SUBJECTS.find(s => s.id === id)!;
