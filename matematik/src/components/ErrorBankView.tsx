@@ -22,6 +22,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
   const [answered, setAnswered] = useState(false);
   const [correct, setCorrect] = useState(false);
   const feedbackMsgRef = useRef('');
+  const pointsEarnedRef = useRef(0);
   // Use a counter to force re-read of localStorage after changes
   const [version, setVersion] = useState(0);
 
@@ -61,7 +62,9 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
       updateAdaptive(currentStudent.id, activeEntry.topicId, isCorrect, 8000);
       if (isCorrect) {
         clearError(currentStudent.id, activeEntry.id);
-        addPoints(currentStudent.id, 15);
+        const pts = Math.floor(Math.random() * 26) + 25;
+        pointsEarnedRef.current = pts;
+        addPoints(currentStudent.id, pts);
       } else {
         recordError(
           currentStudent.id, activeEntry.topicId, activeEntry.topicTitle,
@@ -151,7 +154,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
             {answered && (
               <div className={`rounded-2xl p-4 mt-3 ${correct ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
                 <p className={`font-black text-lg mb-1 ${correct ? 'text-green-700' : 'text-red-700'}`}>
-                  {correct ? `${feedbackMsgRef.current} Uppgiften är borta!` : '❌ Inte riktigt — uppgiften finns kvar.'}
+                  {correct ? `${feedbackMsgRef.current} +${pointsEarnedRef.current} poäng! Uppgiften är borta!` : '❌ Inte riktigt — uppgiften finns kvar.'}
                 </p>
                 {ex && (ex as any).explanation && (
                   <p className={`text-sm ${correct ? 'text-green-600' : 'text-red-600'}`}>{(ex as any).explanation}</p>
