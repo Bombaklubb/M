@@ -19,6 +19,7 @@ import type {
   BuildSentenceExercise,
   ReadingQuestion as RQ,
 } from "@/lib/types";
+import { loadStudent, saveStudent } from "@/lib/storage";
 
 type Phase = "list" | "repair";
 
@@ -36,6 +37,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
   const [answered, setAnswered] = useState(false);
   const [correct, setCorrect] = useState(false);
   const [exerciseKey, setExerciseKey] = useState(0);
+  const [earnedPoints, setEarnedPoints] = useState(0);
   const feedbackMsgRef = useRef("");
 
   const errors = getErrorBank(student.name, stageId);
@@ -61,6 +63,10 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
     if (!currentEntry) return;
     if (isCorrect) {
       clearError(student.name, stageId, currentEntry.id);
+      const pts = Math.floor(Math.random() * 26) + 25;
+      const fresh = loadStudent();
+      if (fresh) { fresh.totalPoints += pts; saveStudent(fresh); }
+      setEarnedPoints(pts);
     } else {
       recordError(
         student.name,
@@ -83,6 +89,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
   function nextRepair() {
     setAnswered(false);
     setCorrect(false);
+    setEarnedPoints(0);
     setExerciseKey((k) => k + 1);
     if (repairIdx + 1 >= repairSession.length) {
       setPhase("list");
@@ -271,7 +278,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
                   : "text-red-700 dark:text-red-300"
               }`}
             >
-              {correct ? `${feedbackMsgRef.current} Misstaget är borta! ✅` : "Inte riktigt..."}
+              {correct ? `${feedbackMsgRef.current} +${earnedPoints} poäng! ✅` : "Inte riktigt..."}
             </p>
             {!correct && (
               <p className="text-red-600 dark:text-red-400 text-sm mt-1">
