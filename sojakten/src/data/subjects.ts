@@ -4,6 +4,7 @@ import { AK5_GEOGRAFI } from './ak5/geografi';
 import { AK5_RELIGION } from './ak5/religion';
 import { AK5_SAMHALLE } from './ak5/samhalle';
 import { AK6_HISTORIA } from './ak6/historia';
+import { AK6_GEOGRAFI } from './ak6/geografi';
 import { AK6_SAMHALLE } from './ak6/samhalle';
 import { AK6_RELIGION } from './ak6/religion';
 
@@ -72,6 +73,7 @@ export const ALL_CHAPTERS: Chapter[] = [
   ...AK5_RELIGION,
   ...AK5_SAMHALLE,
   ...AK6_HISTORIA,
+  ...AK6_GEOGRAFI,
   ...AK6_SAMHALLE,
   ...AK6_RELIGION,
 ];
