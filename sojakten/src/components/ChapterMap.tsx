@@ -1,13 +1,14 @@
 import { useApp } from '../contexts/AppContext';
-import { getChaptersForSubject } from '../data/subjects';
+import { getChaptersForSubjectAndGrade } from '../data/subjects';
 import { Lock, Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
-  const { selectedSubject, setView, openChapterStudy, isChapterUnlocked, getChapterProgressFor } = useApp();
+  const { selectedSubject, selectedGrade, setView, openChapterStudy, isChapterUnlocked, getChapterProgressFor } = useApp();
 
   if (!selectedSubject) { setView('subject-select'); return null; }
 
-  const chapters = getChaptersForSubject(selectedSubject.id);
+  const grade = selectedGrade ?? 5;
+  const chapters = getChaptersForSubjectAndGrade(selectedSubject.id, grade);
   const s = selectedSubject;
 
   return (
@@ -40,6 +41,13 @@ export default function ChapterMap() {
       </header>
 
       <main className="max-w-2xl mx-auto p-4 sm:p-6 pb-16">
+        {chapters.length === 0 && (
+          <div className="mt-8 text-center py-12 clay-card">
+            <p className="text-4xl mb-3">🚧</p>
+            <p className="font-bold text-gray-700 text-lg">Innehållet för Åk {grade} – {s.name}</p>
+            <p className="text-gray-500 text-sm mt-1">är under uppbyggnad. Kom tillbaka snart!</p>
+          </div>
+        )}
         <div className="grid grid-cols-1 gap-3 mt-4">
           {chapters.map((chapter, idx) => {
             const unlocked = isChapterUnlocked(chapter.id);

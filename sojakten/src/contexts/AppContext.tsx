@@ -46,7 +46,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   function selectGrade(grade: number) {
     setSelectedGrade(grade);
-    if (grade === 5) {
+    if (grade === 5 || grade === 6) {
       setCurrentView('subject-select');
     } else {
       setCurrentView('grade-coming-soon');
