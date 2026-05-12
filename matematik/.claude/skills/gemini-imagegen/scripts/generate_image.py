@@ -34,6 +34,10 @@ def get_client():
     return OpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=api_key,
+        default_headers={
+            "HTTP-Referer": "https://github.com/Bombaklubb/M",
+            "X-Title": "Bombaklubb Image Editor",
+        },
     )
 
 
