@@ -568,6 +568,106 @@
       ]
     },
     {
+      "id": "lag-dial-1",
+      "title": "Dialoger – Lucktext",
+      "description": "Fyll i det saknade ordet i dialogerna.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "Läs dialogen och fyll i det ord som saknas i luckan.",
+        "Tänk på vad som passar i sammanhanget – vem pratar med vem och vad handlar det om?"
+      ],
+      "exercises": [
+        {
+          "id": "lag-dial-1-1",
+          "type": "fill-in-blank",
+          "sentence": "A: Hello! What is your ___? B: My name is Emma.",
+          "answer": "name",
+          "hint": "Fråga om vad någon heter.",
+          "explanation": "'What is your name?' = Vad heter du?"
+        },
+        {
+          "id": "lag-dial-1-2",
+          "type": "fill-in-blank",
+          "sentence": "A: How ___ you today? B: I am fine, thank you!",
+          "answer": "are",
+          "hint": "Be-verb med 'you'.",
+          "explanation": "'How are you?' = Hur mår du?"
+        },
+        {
+          "id": "lag-dial-1-3",
+          "type": "fill-in-blank",
+          "sentence": "A: How old are ___? B: I am seven years old.",
+          "answer": "you",
+          "hint": "Frågar om personens ålder.",
+          "explanation": "'How old are you?' = Hur gammal är du?"
+        },
+        {
+          "id": "lag-dial-1-4",
+          "type": "fill-in-blank",
+          "sentence": "A: Do you have a pet? B: Yes, I ___ a dog.",
+          "answer": "have",
+          "hint": "Att äga/ha något. Används med I/you/we/they.",
+          "explanation": "'I have' = Jag har. Med I, you, we, they använder vi 'have'."
+        },
+        {
+          "id": "lag-dial-1-5",
+          "type": "fill-in-blank",
+          "sentence": "A: What ___ this? B: It is a book.",
+          "answer": "is",
+          "hint": "Be-verb med 'this'.",
+          "explanation": "'What is this?' = Vad är detta? 'This' är singularis → 'is'."
+        },
+        {
+          "id": "lag-dial-1-6",
+          "type": "fill-in-blank",
+          "sentence": "A: Can you help ___? B: Yes, of course!",
+          "answer": "me",
+          "hint": "Objektsform av 'I'.",
+          "explanation": "'Can you help me?' = Kan du hjälpa mig? 'Me' = mig/objektsform."
+        },
+        {
+          "id": "lag-dial-1-7",
+          "type": "fill-in-blank",
+          "sentence": "A: Where are ___ from? B: I am from Sweden.",
+          "answer": "you",
+          "hint": "Fråga om var någon kommer ifrån.",
+          "explanation": "'Where are you from?' = Var kommer du ifrån?"
+        },
+        {
+          "id": "lag-dial-1-8",
+          "type": "fill-in-blank",
+          "sentence": "A: Do you like pizza? B: Yes, I ___ it very much!",
+          "answer": "like",
+          "alternativeAnswers": [
+            "love"
+          ],
+          "hint": "Att tycka om något.",
+          "explanation": "'I like' = Jag tycker om. 'I love' fungerar också – det betyder 'Jag älskar'."
+        },
+        {
+          "id": "lag-dial-1-9",
+          "type": "fill-in-blank",
+          "sentence": "A: Is that your bag? B: Yes, it is ___ bag.",
+          "answer": "my",
+          "hint": "Ägandeord för 'jag'.",
+          "explanation": "'My' = min/mitt/mina. Ägandeord som visar att något tillhör mig."
+        },
+        {
+          "id": "lag-dial-1-10",
+          "type": "fill-in-blank",
+          "sentence": "A: Good morning! ___ are you? B: I am great, thanks!",
+          "answer": "How",
+          "alternativeAnswers": [
+            "how"
+          ],
+          "hint": "Frågeord för att fråga om hur någon mår.",
+          "explanation": "'How are you?' = Hur mår du? 'How' = hur."
+        }
+      ]
+    },
+    {
       "id": "lag-v1-farger",
       "title": "Färger (Colours)",
       "description": "Lär dig engelska ord för färger.",

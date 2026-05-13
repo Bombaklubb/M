@@ -568,6 +568,119 @@
       ]
     },
     {
+      "id": "gym-dial-1",
+      "title": "Dialoger – Lucktext",
+      "description": "Fyll i det saknade ordet i dialogerna.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Läs dialogerna noggrant och fyll i det ord eller den form som passar bäst.",
+        "Tänk på avancerade grammatiska konstruktioner: konditionalis, subjunktiv, passiv form och idiomatiska uttryck."
+      ],
+      "exercises": [
+        {
+          "id": "gym-dial-1-1",
+          "type": "fill-in-blank",
+          "sentence": "A: It's high time we ___ a decision on this matter. B: I couldn't agree more.",
+          "answer": "made",
+          "hint": "It's high time + past simple.",
+          "explanation": "'It's high time + past simple' uttrycker att något borde ha gjorts redan. 'Made' = perfektparticip/past tense av 'make'."
+        },
+        {
+          "id": "gym-dial-1-2",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ I been informed earlier, I could have prevented this. B: I sincerely apologise.",
+          "answer": "Had",
+          "alternativeAnswers": [
+            "had"
+          ],
+          "hint": "Inverterad 3rd conditional – Had + subject + past participle.",
+          "explanation": "'Had I been informed' = Om jag hade blivit informerad. Inverterad konditionalis (formell) utan 'if': Had + subject."
+        },
+        {
+          "id": "gym-dial-1-3",
+          "type": "fill-in-blank",
+          "sentence": "A: The meeting has been ___ to next Monday. B: That works much better for me.",
+          "answer": "postponed",
+          "alternativeAnswers": [
+            "rescheduled",
+            "moved"
+          ],
+          "hint": "Passiv form – mötet har skjutits upp.",
+          "explanation": "'Has been postponed' = Har skjutits upp. Passiv konstruktion: have/has been + past participle."
+        },
+        {
+          "id": "gym-dial-1-4",
+          "type": "fill-in-blank",
+          "sentence": "A: She speaks as ___ she owns the entire company. B: Yes, her confidence is remarkable.",
+          "answer": "though",
+          "alternativeAnswers": [
+            "if"
+          ],
+          "hint": "'As though/as if' = som om.",
+          "explanation": "'As though' och 'as if' = som om. Används för att beskriva ett beteende som inte stämmer med verkligheten."
+        },
+        {
+          "id": "gym-dial-1-5",
+          "type": "fill-in-blank",
+          "sentence": "A: We need to come up ___ a more sustainable approach. B: Let me give it some thought.",
+          "answer": "with",
+          "hint": "Phrasal verb: come up ___.",
+          "explanation": "'Come up with' = komma på/hitta på. 'We need to come up with a solution' = Vi måste komma på en lösning."
+        },
+        {
+          "id": "gym-dial-1-6",
+          "type": "fill-in-blank",
+          "sentence": "A: I can't help but ___ that something is seriously wrong. B: You're very perceptive.",
+          "answer": "feel",
+          "alternativeAnswers": [
+            "notice",
+            "think",
+            "sense"
+          ],
+          "hint": "I can't help but + infinitiv.",
+          "explanation": "'I can't help but feel' = Jag kan inte låta bli att känna. Konstruktionen 'can't help but + infinitiv' = inte kunna undvika att."
+        },
+        {
+          "id": "gym-dial-1-7",
+          "type": "fill-in-blank",
+          "sentence": "A: The report is ___ to be submitted by Thursday at the latest. B: I'll make sure it's done on time.",
+          "answer": "due",
+          "hint": "'Be due to' = ska/är planerad att.",
+          "explanation": "'Is due to be submitted' = Ska lämnas in / förfaller till inlämning. 'Due' indikerar ett planerat datum eller förfallodatum."
+        },
+        {
+          "id": "gym-dial-1-8",
+          "type": "fill-in-blank",
+          "sentence": "A: I'd ___ you didn't mention this to the others just yet. B: Understood. Mum's the word.",
+          "answer": "rather",
+          "hint": "I'd rather + subject + past simple = Jag skulle helst vilja att.",
+          "explanation": "'I'd rather you didn't' = Jag skulle helst se att du inte. 'Would rather + subject + past simple' för önskemål om andras beteende."
+        },
+        {
+          "id": "gym-dial-1-9",
+          "type": "fill-in-blank",
+          "sentence": "A: Hardly ___ she walked in when the argument started. B: Talk about bad timing!",
+          "answer": "had",
+          "hint": "Inverterad konstruktion med Hardly – Hardly had + subject + past participle.",
+          "explanation": "'Hardly had she walked in' = Knappt hade hon kommit in. Inverterad konstruktion med Hardly/No sooner: Hardly + had + subject + past participle."
+        },
+        {
+          "id": "gym-dial-1-10",
+          "type": "fill-in-blank",
+          "sentence": "A: His latest novel is widely ___ as a masterpiece. B: I agree, it's truly outstanding.",
+          "answer": "regarded",
+          "alternativeAnswers": [
+            "considered",
+            "seen"
+          ],
+          "hint": "Passiv: widely regarded/considered as = allmänt ansedd som.",
+          "explanation": "'Widely regarded as' = allmänt ansedd/betraktad som. Passiv konstruktion vanlig i formell engelska."
+        }
+      ]
+    },
+    {
       "id": "gym-g1-advanced-tenses",
       "title": "Advanced Tenses",
       "description": "Past perfect, future perfect och progressiva former.",

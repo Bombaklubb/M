@@ -568,6 +568,120 @@
       ]
     },
     {
+      "id": "hog-dial-1",
+      "title": "Dialoger – Lucktext",
+      "description": "Fyll i det saknade ordet i dialogerna.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "Läs dialogen noggrant och fyll i rätt ord.",
+        "Tänk på verbform, tempus och kontext. Ibland finns mer än ett möjligt svar."
+      ],
+      "exercises": [
+        {
+          "id": "hog-dial-1-1",
+          "type": "fill-in-blank",
+          "sentence": "A: Have you ever ___ skydiving? B: No, but I'd love to try!",
+          "answer": "tried",
+          "alternativeAnswers": [
+            "done",
+            "been"
+          ],
+          "hint": "Present perfect – particip av 'try'.",
+          "explanation": "'Have you ever tried...?' = Har du någonsin provat...? Perfektparticip av 'try' = 'tried'."
+        },
+        {
+          "id": "hog-dial-1-2",
+          "type": "fill-in-blank",
+          "sentence": "A: If I ___ you, I would apologise immediately. B: You're probably right.",
+          "answer": "were",
+          "hint": "Hypotetiskt konditionalis – 'if I were you' är en fast fras.",
+          "explanation": "'If I were you' = Om jag vore du. Hypotetiskt konditionalis (2nd conditional) – vi använder 'were' även med I."
+        },
+        {
+          "id": "hog-dial-1-3",
+          "type": "fill-in-blank",
+          "sentence": "A: What would you do if you ___ the lottery? B: I would travel the world!",
+          "answer": "won",
+          "hint": "Hypotetisk if-sats – oregelbundet verb 'win' i past tense.",
+          "explanation": "'If you won' = Om du vann. 2nd conditional – if + past simple → would + infinitiv."
+        },
+        {
+          "id": "hog-dial-1-4",
+          "type": "fill-in-blank",
+          "sentence": "A: How long have you ___ studying English? B: For about five years now.",
+          "answer": "been",
+          "hint": "Present perfect continuous – particip av 'be'.",
+          "explanation": "'Have you been studying' = Har du studerat. Present perfect continuous visar pågående handling från dåtid."
+        },
+        {
+          "id": "hog-dial-1-5",
+          "type": "fill-in-blank",
+          "sentence": "A: The results ___ been announced yet. B: I know, I'm so nervous!",
+          "answer": "haven't",
+          "alternativeAnswers": [
+            "have not",
+            "haven't"
+          ],
+          "hint": "Negation av present perfect – resultaten har INTE tillkännagivits.",
+          "explanation": "'Haven't been announced yet' = Har ännu inte tillkännagivits. Negation: have not/haven't."
+        },
+        {
+          "id": "hog-dial-1-6",
+          "type": "fill-in-blank",
+          "sentence": "A: I wish I ___ more time to study for the exam. B: Practice makes perfect!",
+          "answer": "had",
+          "hint": "Wish + past simple för hypotetisk önskan om nutiden.",
+          "explanation": "'I wish I had' = Jag önskar att jag hade. 'Wish' + past simple uttrycker önskan om att något vore annorlunda nu."
+        },
+        {
+          "id": "hog-dial-1-7",
+          "type": "fill-in-blank",
+          "sentence": "A: Could you ___ me the way to the nearest train station? B: Of course, follow me!",
+          "answer": "show",
+          "alternativeAnswers": [
+            "tell",
+            "give"
+          ],
+          "hint": "Att visa vägen till någonstans.",
+          "explanation": "'Could you show me the way?' = Kan du visa mig vägen? 'Show' = visa."
+        },
+        {
+          "id": "hog-dial-1-8",
+          "type": "fill-in-blank",
+          "sentence": "A: I'd rather you ___ tell anyone about this. B: Of course, you have my word.",
+          "answer": "didn't",
+          "alternativeAnswers": [
+            "did not"
+          ],
+          "hint": "I'd rather + subjekt + past simple (negation).",
+          "explanation": "'I'd rather you didn't' = Jag skulle helst se att du inte... Konstruktionen 'would rather + subject + past simple' uttrycker en önskan."
+        },
+        {
+          "id": "hog-dial-1-9",
+          "type": "fill-in-blank",
+          "sentence": "A: She speaks English as ___ as a native speaker! B: Yes, she's lived there for years.",
+          "answer": "fluently",
+          "hint": "Adverb som beskriver hur bra hon talar.",
+          "explanation": "'As fluently as' = lika flytande som. 'Fluently' är adverbformen av adjektivet 'fluent'."
+        },
+        {
+          "id": "hog-dial-1-10",
+          "type": "fill-in-blank",
+          "sentence": "A: By the time we arrived, the film had already ___. B: What a shame!",
+          "answer": "started",
+          "alternativeAnswers": [
+            "begun",
+            "finished",
+            "ended"
+          ],
+          "hint": "Past perfect – något som hade hänt redan innan vi kom.",
+          "explanation": "'Had already started' = Hade redan börjat. Past perfect används för händelser som inträffat före en annan förfluten tid."
+        }
+      ]
+    },
+    {
       "id": "hog-g1-perfect",
       "title": "Present Perfect",
       "description": "Perfektum — om erfarenheter och nyligen avslutade händelser.",
