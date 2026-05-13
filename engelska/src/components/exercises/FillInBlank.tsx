@@ -22,7 +22,9 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
   function normalizeAnswer(s: string) {
     return s.trim().toLowerCase()
       // normalize curly/typographic apostrophes to straight apostrophe
-      .replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC]/g, "'");
+      .replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC]/g, "'")
+      // strip trailing punctuation (handles mobile autocorrect adding periods etc.)
+      .replace(/[.!?,;:]+$/, "");
   }
 
   function handleSubmit() {
