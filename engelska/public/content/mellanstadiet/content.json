@@ -568,6 +568,114 @@
       ]
     },
     {
+      "id": "mel-dial-1",
+      "title": "Dialoger – Lucktext",
+      "description": "Fyll i det saknade ordet i dialogerna.",
+      "icon": "💬",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "Läs dialogen noggrant och fyll i rätt ord i luckan.",
+        "Tänk på grammatik – vilken form av verbet passar? Behövs ett frågeord, hjälpverb eller pronomen?"
+      ],
+      "exercises": [
+        {
+          "id": "mel-dial-1-1",
+          "type": "fill-in-blank",
+          "sentence": "A: What time ___ the film start? B: It starts at seven o'clock.",
+          "answer": "does",
+          "hint": "Hjälpverb i frågor med he/she/it (present simple).",
+          "explanation": "'Does' används i frågor med he/she/it i present simple. 'What time does it start?'"
+        },
+        {
+          "id": "mel-dial-1-2",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ you ever been to London? B: No, but I want to go!",
+          "answer": "Have",
+          "alternativeAnswers": [
+            "have"
+          ],
+          "hint": "Present perfect – hjälpverb med you.",
+          "explanation": "'Have you ever been...?' = Har du någonsin varit...? Present perfect med 'have'."
+        },
+        {
+          "id": "mel-dial-1-3",
+          "type": "fill-in-blank",
+          "sentence": "A: How ___ does the jacket cost? B: It costs forty pounds.",
+          "answer": "much",
+          "hint": "Frågeord vid pris och pengar.",
+          "explanation": "'How much does it cost?' = Hur mycket kostar det? 'Much' används vid oräkneliga substantiv och pris."
+        },
+        {
+          "id": "mel-dial-1-4",
+          "type": "fill-in-blank",
+          "sentence": "A: Can I leave a ___? B: Sure, I'll give him your message.",
+          "answer": "message",
+          "hint": "Vad lämnar man när man ringer och den man söker inte svarar?",
+          "explanation": "'Can I leave a message?' = Kan jag lämna ett meddelande? Vanlig fras vid telefonsamtal."
+        },
+        {
+          "id": "mel-dial-1-5",
+          "type": "fill-in-blank",
+          "sentence": "A: I don't ___ well today. B: Oh no, I hope you feel better soon!",
+          "answer": "feel",
+          "hint": "Att känna sig. Används med don't.",
+          "explanation": "'I don't feel well' = Jag mår inte bra. 'Feel' = känna (sig)."
+        },
+        {
+          "id": "mel-dial-1-6",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ did you go on holiday last summer? B: We went to Spain!",
+          "answer": "Where",
+          "alternativeAnswers": [
+            "where"
+          ],
+          "hint": "Frågar om plats.",
+          "explanation": "'Where did you go?' = Vart åkte du? 'Where' = var/vart."
+        },
+        {
+          "id": "mel-dial-1-7",
+          "type": "fill-in-blank",
+          "sentence": "A: What ___ you doing this weekend? B: I'm going to the cinema with my family.",
+          "answer": "are",
+          "hint": "Present continuous – be-verb med you.",
+          "explanation": "'What are you doing?' = Vad gör du? Present continuous med 'are'."
+        },
+        {
+          "id": "mel-dial-1-8",
+          "type": "fill-in-blank",
+          "sentence": "A: Excuse me, could you tell me the ___ to the library? B: Of course! Go straight ahead.",
+          "answer": "way",
+          "hint": "Vad frågar man efter när man inte vet hur man ska ta sig till ett ställe?",
+          "explanation": "'Could you tell me the way to...?' = Kan du visa mig vägen till...?"
+        },
+        {
+          "id": "mel-dial-1-9",
+          "type": "fill-in-blank",
+          "sentence": "A: Would you like some more cake? B: No thank you, I ___ full.",
+          "answer": "am",
+          "alternativeAnswers": [
+            "feel"
+          ],
+          "hint": "Be-verb med 'I' – att vara mätt.",
+          "explanation": "'I am full' = Jag är mätt. Be-verb 'am' används med I."
+        },
+        {
+          "id": "mel-dial-1-10",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ you speak any other languages? B: Yes, I speak Swedish and a little Spanish.",
+          "answer": "Can",
+          "alternativeAnswers": [
+            "can",
+            "Do",
+            "do"
+          ],
+          "hint": "Frågar om förmåga.",
+          "explanation": "'Can you speak...?' = Kan du tala...? 'Can' frågar om förmåga."
+        }
+      ]
+    },
+    {
       "id": "mel-g5-nouns",
       "title": "Substantiv – Singular & Plural",
       "description": "Hur man bildar plural av substantiv, inklusive oregelbundna former.",
