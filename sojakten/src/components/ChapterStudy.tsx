@@ -485,22 +485,16 @@ export default function ChapterStudy() {
   const [activeTab, setActiveTab] = useState<StudyTab>(studyInitialTab);
   const [conceptImages, setConceptImages] = useState<Record<string, string | null>>({});
 
-  if (!selectedChapter || !selectedSubject) { setView('subject-select'); return null; }
-
-  const summary = selectedChapter.summary;
-  if (!summary) { setView('chapter-exercise'); return null; }
-
-  const chapter = selectedChapter;
-  const s = selectedSubject;
-
-  // --- TEST state ---
+  // --- TEST state (must be before any conditional returns) ---
   const [testIdx, setTestIdx] = useState(0);
   const [testAnswered, setTestAnswered] = useState<number | null>(null);
   const [testScore, setTestScore] = useState(0);
   const [testDone, setTestDone] = useState(false);
 
+  const chapterId = selectedChapter?.id ?? '';
+  const concepts = selectedChapter?.summary?.concepts ?? [];
+
   const testQuestions = useMemo(() => {
-    const concepts = summary?.concepts ?? [];
     if (concepts.length < 2) return [];
     return concepts.map((c, i) => {
       const showDef = i % 2 === 0;
@@ -515,31 +509,17 @@ export default function ChapterStudy() {
         options,
       };
     });
-  }, [chapter.id]);
-
-  function answerTest(option: string) {
-    if (testAnswered !== null) return;
-    const idx = testQuestions[testIdx]?.options.indexOf(option) ?? -1;
-    setTestAnswered(idx);
-    if (option === testQuestions[testIdx]?.correct) setTestScore(s => s + 1);
-    setTimeout(() => {
-      if (testIdx + 1 >= testQuestions.length) setTestDone(true);
-      else { setTestIdx(i => i + 1); setTestAnswered(null); }
-    }, 900);
-  }
-
-  function resetTest() {
-    setTestIdx(0); setTestAnswered(null); setTestScore(0); setTestDone(false);
-  }
+  }, [chapterId]);
 
   // Fetch Wikipedia thumbnails for all concepts on mount
   useEffect(() => {
+    if (!chapterId) return;
     setConceptImages({});
     let cancelled = false;
     async function fetchImages() {
       const results: Record<string, string | null> = {};
       await Promise.all(
-        summary!.concepts.map(async ({ term }) => {
+        concepts.map(async ({ term }) => {
           try {
             const res = await fetch(
               `https://sv.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(term)}`,
@@ -557,7 +537,30 @@ export default function ChapterStudy() {
     }
     fetchImages();
     return () => { cancelled = true; };
-  }, [chapter.id]);
+  }, [chapterId]);
+
+  if (!selectedChapter || !selectedSubject) return null;
+
+  const summary = selectedChapter.summary;
+  if (!summary) return null;
+
+  const chapter = selectedChapter;
+  const s = selectedSubject;
+
+  function answerTest(option: string) {
+    if (testAnswered !== null) return;
+    const idx = testQuestions[testIdx]?.options.indexOf(option) ?? -1;
+    setTestAnswered(idx);
+    if (option === testQuestions[testIdx]?.correct) setTestScore(n => n + 1);
+    setTimeout(() => {
+      if (testIdx + 1 >= testQuestions.length) setTestDone(true);
+      else { setTestIdx(i => i + 1); setTestAnswered(null); }
+    }, 900);
+  }
+
+  function resetTest() {
+    setTestIdx(0); setTestAnswered(null); setTestScore(0); setTestDone(false);
+  }
 
   function toggleConcept(i: number) {
     setRevealedConcepts(prev => {
