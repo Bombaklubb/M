@@ -18,7 +18,7 @@ const GRADE_CARDS: GradeCard[] = [
     emoji: '📚',
     label: 'Årskurs 4',
     subjects: 'Historia · Geografi · Religion · Samhälle',
-    available: false,
+    available: true,
     bgClass: 'bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-100',
     borderColor: '#93c5fd',
     inkHex: '#1e3a5f',
