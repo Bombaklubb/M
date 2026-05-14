@@ -132,14 +132,6 @@ export default function GradeSelect() {
                         Kommer snart
                       </span>
                     )}
-                    {card.available && (
-                      <span
-                        className="text-xs font-black px-2 py-0.5 rounded-full"
-                        style={{ background: `${card.accentHex}25`, color: card.accentHex }}
-                      >
-                        Tillgänglig
-                      </span>
-                    )}
                   </div>
                   <p className="text-xs font-semibold mt-1 opacity-60" style={{ color: card.inkHex }}>
                     {card.subjects}
