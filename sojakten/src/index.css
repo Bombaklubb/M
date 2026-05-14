@@ -201,13 +201,13 @@
 
   /* Subject-specific heading fonts */
   .font-historia {
-    font-family: 'Playfair Display', 'EB Garamond', Georgia, serif;
+    font-family: 'Archivo Black', system-ui, sans-serif;
   }
   .font-geografi {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Archivo Black', system-ui, sans-serif;
   }
   .font-religion {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Archivo Black', system-ui, sans-serif;
   }
   .font-samhalle {
     font-family: 'Archivo Black', system-ui, sans-serif;
