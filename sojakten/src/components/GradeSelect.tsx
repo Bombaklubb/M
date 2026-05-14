@@ -40,7 +40,7 @@ const GRADE_CARDS: GradeCard[] = [
     emoji: '🚀',
     label: 'Årskurs 6',
     subjects: 'Historia · Geografi · Religion · Samhälle',
-    available: false,
+    available: true,
     bgClass: 'bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-100',
     borderColor: '#c4b5fd',
     inkHex: '#2e1a47',
