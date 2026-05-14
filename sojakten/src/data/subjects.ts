@@ -1,4 +1,7 @@
 import { Subject, Chapter, SubjectId } from '../types';
+import { AK4_HISTORIA } from './ak4/historia';
+import { AK4_RELIGION } from './ak4/religion';
+import { AK4_SAMHALLE } from './ak4/samhalle';
 import { AK5_HISTORIA } from './ak5/historia';
 import { AK5_GEOGRAFI } from './ak5/geografi';
 import { AK5_RELIGION } from './ak5/religion';
@@ -68,6 +71,9 @@ export const SUBJECTS: Subject[] = [
 ];
 
 export const ALL_CHAPTERS: Chapter[] = [
+  ...AK4_HISTORIA,
+  ...AK4_RELIGION,
+  ...AK4_SAMHALLE,
   ...AK5_HISTORIA,
   ...AK5_GEOGRAFI,
   ...AK5_RELIGION,
