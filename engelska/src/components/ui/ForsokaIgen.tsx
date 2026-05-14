@@ -43,8 +43,8 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
   const errors = getErrorBank(student.name, stageId);
   const currentEntry = repairSession[repairIdx];
 
-  function startRepair() {
-    const sorted = [...getErrorBank(student.name, stageId)].sort(
+  function startRepair(entries?: EngelErrorEntry[]) {
+    const sorted = entries ?? [...getErrorBank(student.name, stageId)].sort(
       (a, b) => b.count - a.count
     );
     setRepairSession(sorted);
@@ -124,49 +124,37 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
             </p>
           </div>
         ) : (
-          <>
-            {/* Start repair button */}
-            <button
-              onClick={startRepair}
-              className={`w-full ${stage.colorClass} text-white font-black py-4 rounded-2xl text-lg shadow-lg hover:opacity-90 transition-all mb-6`}
-            >
-              Öva på mina {Math.min(errors.length, errors.length)} misstag!
-            </button>
-
-            {/* Error list */}
-            <h3 className="text-gray-500 dark:text-gray-400 font-bold text-xs uppercase tracking-widest mb-3">
-              Dina misstag
-            </h3>
-            <div className="space-y-3 pb-10">
-              {errors.map((entry) => (
-                <div
-                  key={entry.id}
-                  className="card flex items-start gap-3"
-                >
-                  <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500 dark:text-red-400 font-black text-sm">
-                    {entry.count}×
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-gray-500 dark:text-gray-400 text-xs mb-0.5">
-                      {entry.moduleTitle}
-                    </p>
-                    <p className="text-gray-800 dark:text-gray-100 text-sm font-medium leading-snug line-clamp-2">
-                      {entry.question}
-                    </p>
-                    <div className="flex gap-3 mt-1.5 text-xs">
-                      <span className="text-red-500">
-                        Ditt svar:{" "}
-                        <b>{entry.wrongAnswers[entry.wrongAnswers.length - 1]}</b>
-                      </span>
-                      <span className="text-green-600 dark:text-green-400">
-                        Rätt: <b>{entry.correctAnswer}</b>
-                      </span>
-                    </div>
+          <div className="space-y-3 pb-10">
+            {errors.map((entry) => (
+              <button
+                key={entry.id}
+                onClick={() => startRepair([entry])}
+                className="w-full text-left card flex items-start gap-3 hover:shadow-md hover:scale-[1.01] active:scale-[0.99] transition-all duration-150 cursor-pointer"
+              >
+                <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500 dark:text-red-400 font-black text-sm">
+                  {entry.count}×
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-gray-500 dark:text-gray-400 text-xs mb-0.5">
+                    {entry.moduleTitle}
+                  </p>
+                  <p className="text-gray-800 dark:text-gray-100 text-sm font-medium leading-snug line-clamp-2">
+                    {entry.question}
+                  </p>
+                  <div className="flex gap-3 mt-1.5 text-xs">
+                    <span className="text-red-500">
+                      Ditt svar:{" "}
+                      <b>{entry.wrongAnswers[entry.wrongAnswers.length - 1]}</b>
+                    </span>
+                    <span className="text-green-600 dark:text-green-400">
+                      Rätt: <b>{entry.correctAnswer}</b>
+                    </span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </>
+                <span className="flex-shrink-0 text-gray-300 dark:text-gray-600 self-center text-lg">›</span>
+              </button>
+            ))}
+          </div>
         )}
       </div>
     );
