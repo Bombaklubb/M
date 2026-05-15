@@ -3,7 +3,7 @@ import { useState, useRef, useMemo } from 'react';
 interface Cell { r: number; c: number; }
 interface PlacedWord { clean: string; original: string; cells: Cell[]; }
 
-const SIZE = 10;
+const SIZE = 12;
 const DIRS = [{ dr: 0, dc: 1 }, { dr: 1, dc: 0 }, { dr: 1, dc: 1 }];
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ';
 
