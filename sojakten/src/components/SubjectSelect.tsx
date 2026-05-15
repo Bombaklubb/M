@@ -1,7 +1,10 @@
+import { useState } from 'react';
+import { Search } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
-import { SUBJECTS, getChaptersForSubjectAndGrade } from '../data/subjects';
+import { SUBJECTS, getChaptersForSubjectAndGrade, ALL_CHAPTERS } from '../data/subjects';
 import { getProgress } from '../utils/storage';
 import type { Subject } from '../types';
+import SearchModal from './SearchModal';
 
 // Minimal inline ornaments per subject
 function HistoriaOrnament() {
@@ -134,11 +137,26 @@ function SubjectCard({ subject, grade, onClick }: { subject: Subject; grade: num
 }
 
 export default function SubjectSelect() {
-  const { selectSubject, setView, selectedGrade } = useApp();
+  const { selectSubject, setView, selectedGrade, openChapterStudy } = useApp();
   const grade = selectedGrade ?? 5;
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  function handleSearchSelect(subjectId: string, chapterId: string) {
+    const subject = SUBJECTS.find(s => s.id === subjectId);
+    const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
+    if (subject && chapter) {
+      selectSubject(subject);
+      openChapterStudy(chapter);
+    }
+  }
 
   return (
     <div className="min-h-screen">
+      <SearchModal
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onSelect={handleSearchSelect}
+      />
       {/* Hero background */}
       <div
         className="relative w-full"
@@ -164,10 +182,18 @@ export default function SubjectSelect() {
               <path d="M10 3L5 8L10 13" stroke="#1e1b4b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
-          <div className="flex-1 text-center pr-9">
+          <div className="flex-1 text-center">
             <h1 className="font-heading font-bold text-4xl drop-shadow-sm" style={{ color: '#1e1b4b' }}>SO-jakten</h1>
             <p className="text-base font-semibold mt-1 text-gray-700">Åk {grade}</p>
           </div>
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="w-9 h-9 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+            style={{ background: 'rgba(30,27,75,0.08)', border: '2px solid rgba(30,27,75,0.15)' }}
+            aria-label="Sök begrepp"
+          >
+            <Search size={16} color="#1e1b4b" />
+          </button>
         </header>
 
         {/* Spacer so image shows */}
