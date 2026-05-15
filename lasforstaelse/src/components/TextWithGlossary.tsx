@@ -70,7 +70,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
                   className={`cursor-help border-b-2 border-dotted transition-colors ${
                     isActive
                       ? 'border-indigo-500 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
-                      : 'border-slate-300 dark:border-slate-600 hover:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30'
+                      : 'border-emerald-500 dark:border-slate-300 hover:border-indigo-500 hover:bg-emerald-50 dark:hover:bg-indigo-900/30'
                   }`}
                 >
                   {word}
@@ -114,7 +114,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
 
       {/* Info om klickbara ord */}
       <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
-        <span className="inline-block w-4 border-b-2 border-dotted border-slate-400"></span>
+        <span className="inline-block w-6 border-b-2 border-dotted border-emerald-500 dark:border-slate-300"></span>
         <span>Klicka på understrukna ord för förklaring</span>
       </div>
     </div>
