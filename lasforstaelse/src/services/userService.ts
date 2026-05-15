@@ -362,6 +362,14 @@ export function getRecentCompletedTexts(user: User, count: number = 10): Complet
 }
 
 /**
+ * Hämta den senast lästa texten (för "fortsätt där du slutade")
+ */
+export function getLastCompletedText(user: User): CompletedText | null {
+  if (user.completedTexts.length === 0) return null;
+  return user.completedTexts[user.completedTexts.length - 1];
+}
+
+/**
  * Spara användare till "alla användare" listan (för lärarstatistik)
  */
 export function saveToAllUsers(user: User): void {

@@ -17,6 +17,7 @@ import {
   recordResult,
   getCompletedTextIds,
   getRecentCompletedTexts,
+  getLastCompletedText,
   updateAvatar,
   saveUser,
 } from './services/userService';
@@ -461,6 +462,7 @@ function App() {
           <SetupView
             onSelectGrade={handleSelectGrade}
             completedByGrade={getCompletedByGrade()}
+            lastCompletedText={user ? getLastCompletedText(user) : null}
           />
         )}
 
