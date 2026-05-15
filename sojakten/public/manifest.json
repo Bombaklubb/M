@@ -1,0 +1,18 @@
+{
+  "name": "SO-jakten",
+  "short_name": "SO-jakten",
+  "description": "Lär dig SO – Historia, Geografi, Religion och Samhällskunskap",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f4ff",
+  "theme_color": "#1e1b4b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/sojakten.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -511,28 +511,17 @@ export default function ChapterStudy() {
     });
   }, [chapterId]);
 
-  // Fetch Wikipedia thumbnails for all concepts on mount
+  // Fetch Wikipedia thumbnails for all concepts on mount (cached via sessionStorage)
   useEffect(() => {
     if (!chapterId) return;
     setConceptImages({});
     let cancelled = false;
     async function fetchImages() {
+      const { fetchWikiImage } = await import('../utils/imageCache');
       const results: Record<string, string | null> = {};
-      await Promise.all(
-        concepts.map(async ({ term }) => {
-          try {
-            const res = await fetch(
-              `https://sv.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(term)}`,
-              { headers: { 'Accept': 'application/json' } }
-            );
-            if (!res.ok) { results[term] = null; return; }
-            const data = await res.json();
-            results[term] = data?.thumbnail?.source ?? null;
-          } catch {
-            results[term] = null;
-          }
-        })
-      );
+      await Promise.all(concepts.map(async ({ term }) => {
+        results[term] = await fetchWikiImage(term);
+      }));
       if (!cancelled) setConceptImages(results);
     }
     fetchImages();
