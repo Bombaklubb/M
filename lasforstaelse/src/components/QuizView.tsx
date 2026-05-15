@@ -5,6 +5,7 @@ import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
+import { TextWithGlossary } from './TextWithGlossary';
 
 interface QuizViewProps {
   text: LibraryText;
@@ -72,6 +73,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [showText, setShowText] = useState(true);
   const [textSize, setTextSize] = useState<TextSize>('medium');
   const [bionicReading, setBionicReading] = useState(false);
+  const [showGlossary, setShowGlossary] = useState(true);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -188,6 +190,22 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     >
                       <span className="font-black">Bio</span>nic
                     </motion.button>
+                    <motion.button
+                      onClick={() => setShowGlossary(!showGlossary)}
+                      className={cn(
+                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
+                        showGlossary
+                          ? 'bg-gradient-to-br from-indigo-400 to-violet-500 text-white shadow-md'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
+                      )}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      title="Ordförklaring - klicka på svåra ord för att se vad de betyder"
+                      aria-label="Ordförklaring"
+                      aria-pressed={showGlossary}
+                    >
+                      📖 Ord
+                    </motion.button>
                     <button
                       onClick={() => setShowText(false)}
                       className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
@@ -207,22 +225,32 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 </div>
               )}
                 <div className="prose prose-lg max-w-none dark:prose-invert">
-                  <div className="space-y-4">
-                    {paragraphs.map((para, idx) => (
-                      <motion.p
-                        key={idx}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: idx * 0.05 }}
-                        className={cn(
-                          "leading-relaxed text-slate-700 dark:text-slate-300",
-                          textSizeClasses[textSize]
-                        )}
-                      >
-                        {bionicReading ? applyBionicReading(para) : para}
-                      </motion.p>
-                    ))}
-                  </div>
+                  {showGlossary && !bionicReading ? (
+                    <TextWithGlossary
+                      text={text.text}
+                      className={cn(
+                        "leading-relaxed text-slate-700 dark:text-slate-300",
+                        textSizeClasses[textSize]
+                      )}
+                    />
+                  ) : (
+                    <div className="space-y-4">
+                      {paragraphs.map((para, idx) => (
+                        <motion.p
+                          key={idx}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: idx * 0.05 }}
+                          className={cn(
+                            "leading-relaxed text-slate-700 dark:text-slate-300",
+                            textSizeClasses[textSize]
+                          )}
+                        >
+                          {bionicReading ? applyBionicReading(para) : para}
+                        </motion.p>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </CardContent>
             </Card>

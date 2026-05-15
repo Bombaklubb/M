@@ -257,6 +257,64 @@ export const ResultView: React.FC<ResultViewProps> = ({
                 )}
               </AnimatePresence>
 
+              {/* Learning summary */}
+              <motion.div
+                className="bg-gradient-to-br from-sky-50 to-blue-100 dark:from-sky-900/30 dark:to-blue-900/30 border-2 border-sky-200 dark:border-sky-700 rounded-2xl p-5 mb-6 text-left"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.15 }}
+              >
+                <h3 className="font-bold text-sky-900 dark:text-sky-200 mb-3 text-lg flex items-center gap-2">
+                  📚 Vad du lärt dig
+                </h3>
+                <div className="space-y-3">
+                  {/* Topic/theme */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🎯</span>
+                    <div>
+                      <div className="text-sm font-medium text-sky-700 dark:text-sky-300">Ämne</div>
+                      <div className="text-slate-700 dark:text-slate-200">{text.theme || text.genre}</div>
+                    </div>
+                  </div>
+
+                  {/* Question types practiced */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">🧠</span>
+                    <div>
+                      <div className="text-sm font-medium text-sky-700 dark:text-sky-300">Frågetyper du övat</div>
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        {[...new Set(text.questions.map(q => q.type))].map(type => {
+                          const typeInfo = QUESTION_TYPE_LABELS[type];
+                          return (
+                            <span
+                              key={type}
+                              className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-white/70 dark:bg-slate-700/70 text-sm"
+                            >
+                              {typeInfo?.emoji} {typeInfo?.label || type}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reading insight */}
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl">💡</span>
+                    <div>
+                      <div className="text-sm font-medium text-sky-700 dark:text-sky-300">Tips</div>
+                      <div className="text-slate-600 dark:text-slate-300 text-sm">
+                        {percentage >= 80
+                          ? 'Utmärkt! Du förstår texten bra. Testa en svårare nivå!'
+                          : percentage >= 60
+                          ? 'Bra jobbat! Fortsätt öva på denna nivå.'
+                          : 'Läs texten en gång till och fokusera på detaljerna.'}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Show/hide details */}
               <motion.div
                 className="mb-6"

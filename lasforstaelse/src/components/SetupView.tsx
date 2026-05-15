@@ -6,10 +6,12 @@ import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { BorderBeam } from './ui/border-beam';
 import { cn } from '@/lib/utils';
+import { CompletedText } from '../types';
 
 interface SetupViewProps {
   onSelectGrade: (grade: number) => void;
   completedByGrade: Record<number, number>;
+  lastCompletedText?: CompletedText | null;
 }
 
 const GRADE_LABELS = [
@@ -28,6 +30,7 @@ const GRADE_LABELS = [
 export const SetupView: React.FC<SetupViewProps> = ({
   onSelectGrade,
   completedByGrade: _completedByGrade,
+  lastCompletedText,
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
@@ -129,6 +132,41 @@ export const SetupView: React.FC<SetupViewProps> = ({
             >
               Börja ditt läsäventyr
             </motion.h2>
+
+            {/* Continue where you left off */}
+            {lastCompletedText && (
+              <motion.div
+                className="mb-6"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 }}
+              >
+                <button
+                  onClick={() => onSelectGrade(lastCompletedText.grade)}
+                  className="w-full p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border-2 border-emerald-200 dark:border-emerald-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all group"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xl shadow-lg">
+                      ▶️
+                    </div>
+                    <div className="flex-1 text-left">
+                      <div className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-0.5">
+                        Fortsätt där du slutade
+                      </div>
+                      <div className="text-slate-700 dark:text-slate-200 font-semibold truncate">
+                        Nivå {lastCompletedText.grade} • {lastCompletedText.title}
+                      </div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                        Senast: {lastCompletedText.score}/{lastCompletedText.totalQuestions} rätt
+                      </div>
+                    </div>
+                    <div className="text-emerald-500 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
+                      →
+                    </div>
+                  </div>
+                </button>
+              </motion.div>
+            )}
 
             {/* Grade display */}
             <motion.div
