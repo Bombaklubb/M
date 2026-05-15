@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { hasExplanation, getExplanation } from '../lib/dictionary';
+import { hasExplanation, getWordDefinition } from '../lib/dictionary';
 
 interface TextWithGlossaryProps {
   text: string;
@@ -86,23 +86,28 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
     ));
   };
 
-  const explanation = activeWord ? getExplanation(activeWord) : null;
+  const wordDef = activeWord ? getWordDefinition(activeWord) : null;
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
       {renderText()}
 
       {/* Tooltip */}
-      {activeWord && explanation && tooltipPosition && (
+      {activeWord && wordDef && tooltipPosition && (
         <div
-          className="absolute z-50 max-w-xs p-3 bg-slate-800 dark:bg-slate-700 text-white text-sm rounded-xl shadow-xl transform -translate-x-1/2 -translate-y-full -mt-2 animate-in fade-in zoom-in-95 duration-200"
+          className="absolute z-50 max-w-sm p-4 bg-slate-800 dark:bg-slate-700 text-white text-sm rounded-xl shadow-xl transform -translate-x-1/2 -translate-y-full -mt-2 animate-in fade-in zoom-in-95 duration-200"
           style={{
             left: tooltipPosition.x,
             top: tooltipPosition.y,
           }}
         >
-          <div className="font-bold text-indigo-300 mb-1 capitalize">{activeWord}</div>
-          <div className="text-slate-200">{explanation}</div>
+          <div className="font-bold text-indigo-300 mb-1 capitalize text-base">{activeWord}</div>
+          <div className="text-slate-200 mb-2">{wordDef.def}</div>
+          {wordDef.ex && (
+            <div className="text-slate-400 text-xs italic border-t border-slate-600 pt-2 mt-2">
+              "{wordDef.ex}"
+            </div>
+          )}
           <div className="absolute left-1/2 -bottom-2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-slate-800 dark:border-t-slate-700 transform -translate-x-1/2" />
         </div>
       )}
