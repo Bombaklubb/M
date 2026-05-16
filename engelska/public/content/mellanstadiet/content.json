@@ -568,6 +568,201 @@
       ]
     },
     {
+      "id": "mel-bs-extra",
+      "title": "Meningsbyggnad",
+      "description": "Bygg korrekta engelska meningar av de givna orden.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "Klicka på orden i rätt ordning för att bygga en korrekt engelsk mening.",
+        "Tänk på ordföljd: subjekt → verb → objekt. Frågesatser börjar med hjälpverb.",
+        "Klicka på ett placerat ord för att ta bort det och prova igen."
+      ],
+      "exercises": [
+        {
+          "id": "mel-bs-e1",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Jag gillar att titta på film.",
+          "words": [
+            "I",
+            "like",
+            "watching",
+            "films"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "explanation": "'I like watching films.' – 'like + -ing' = gillar att göra något."
+        },
+        {
+          "id": "mel-bs-e2",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Kan du hjälpa mig med min läxa?",
+          "words": [
+            "Can",
+            "you",
+            "help",
+            "me",
+            "with",
+            "my",
+            "homework"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "'Can you help me with my homework?' – hjälpverb 'can' börjar frågesatsen."
+        },
+        {
+          "id": "mel-bs-e3",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Hon spelar gitarr varje kväll.",
+          "words": [
+            "She",
+            "plays",
+            "the",
+            "guitar",
+            "every",
+            "evening"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "'She plays the guitar every evening.' – 'plays' med he/she/it i present simple."
+        },
+        {
+          "id": "mel-bs-e4",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Vi ska åka till London i sommar.",
+          "words": [
+            "We",
+            "are",
+            "going",
+            "to",
+            "London",
+            "this",
+            "summer"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "'We are going to London this summer.' – 'be going to' för framtidsplaner."
+        },
+        {
+          "id": "mel-bs-e5",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Det finns en katt under bordet.",
+          "words": [
+            "There",
+            "is",
+            "a",
+            "cat",
+            "under",
+            "the",
+            "table"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "'There is a cat under the table.' – 'There is' = Det finns (singularis)."
+        },
+        {
+          "id": "mel-bs-e6",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Han har redan ätit frukost.",
+          "words": [
+            "He",
+            "has",
+            "already",
+            "eaten",
+            "breakfast"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "'He has already eaten breakfast.' – Present perfect: has + eaten (particip av eat)."
+        },
+        {
+          "id": "mel-bs-e7",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Var du hemma igår kväll?",
+          "words": [
+            "Were",
+            "you",
+            "at",
+            "home",
+            "last",
+            "night"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "'Were you at home last night?' – 'Were' används med you/we/they i past tense."
+        },
+        {
+          "id": "mel-bs-e8",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Hon är den snabbaste löparen i klassen.",
+          "words": [
+            "She",
+            "is",
+            "the",
+            "fastest",
+            "runner",
+            "in",
+            "the",
+            "class"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "explanation": "'She is the fastest runner in the class.' – Superlativ: the + adjektiv + -est."
+        }
+      ]
+    },
+    {
       "id": "mel-dial-1",
       "title": "Dialoger – Lucktext",
       "description": "Fyll i det saknade ordet i dialogerna.",

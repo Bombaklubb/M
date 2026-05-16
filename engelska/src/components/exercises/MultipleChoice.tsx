@@ -37,9 +37,16 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
 
   return (
     <div className="space-y-4 animate-fade-in">
-      <p className="text-base sm:text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
-        {exercise.question}
-      </p>
+      {exercise.image && (
+        <div className="flex justify-center py-2">
+          <span className="text-8xl drop-shadow-sm select-none">{exercise.image}</span>
+        </div>
+      )}
+      {exercise.question && (
+        <p className="text-base sm:text-xl font-semibold text-gray-800 dark:text-gray-100 leading-relaxed">
+          {exercise.question}
+        </p>
+      )}
 
       {exercise.hint && (
         <div className="rounded-xl overflow-hidden border border-amber-200 dark:border-amber-700">

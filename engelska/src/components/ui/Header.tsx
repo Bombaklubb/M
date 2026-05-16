@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
-import { clearStudent, loadGamification } from "@/lib/storage";
+import { clearStudent, loadGamification, updateStreak } from "@/lib/storage";
 import { getAvatar, type Avatar } from "@/lib/avatars";
 import type { StudentData } from "@/lib/types";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -72,11 +72,13 @@ export default function Header({ student, onLogout }: HeaderProps) {
   const router = useRouter();
   const { dark, toggle } = useDarkMode();
   const [unopenedChests, setUnopenedChests] = useState(0);
+  const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     if (!student) return;
     const gam = loadGamification();
     setUnopenedChests(gam.chests.filter((c) => !c.opened).length);
+    setStreak(updateStreak(student.name));
   }, [student]);
 
   function handleLogout() {
@@ -134,6 +136,18 @@ export default function Header({ student, onLogout }: HeaderProps) {
                 </span>
               )}
             </Link>
+
+            {/* Streak */}
+            {streak > 0 && (
+              <div
+                className="hidden xs:flex items-center gap-1 bg-gradient-to-b from-orange-50 to-orange-100 dark:bg-orange-900/30 border-2 border-orange-300 dark:border-orange-700 px-2.5 py-1.5 rounded-xl cursor-default"
+                style={{ boxShadow: "0 3px 0 0 rgba(249, 115, 22, 0.25)" }}
+                title={`${streak} dagar i rad!`}
+              >
+                <span className="text-base leading-none">🔥</span>
+                <span className="text-sm font-black text-orange-700 dark:text-orange-400">{streak}</span>
+              </div>
+            )}
 
             {/* Points */}
             <div

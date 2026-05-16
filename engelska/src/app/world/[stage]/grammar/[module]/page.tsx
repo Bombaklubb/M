@@ -10,7 +10,7 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier, saveExercisePosition, loadExercisePosition, clearExercisePosition } from "@/lib/storage";
 import { recordError } from "@/lib/errorBank";
 import {
   chestsEarnedFromPoints,
@@ -55,6 +55,7 @@ export default function GrammarModulePage({ params }: Props) {
   const [modalPoints, setModalPoints] = useState(0);
   const [modalBonus, setModalBonus] = useState(0);
   const [attemptNum, setAttemptNum] = useState(1);
+  const [isNewRecord, setIsNewRecord] = useState(false);
 
   useEffect(() => {
     const s = loadStudent();
@@ -63,7 +64,14 @@ export default function GrammarModulePage({ params }: Props) {
       .then((r) => r.json())
       .then((data: StageContent) => {
         const found = data.grammar.find((m) => m.id === moduleId);
-        if (found) setMod(found);
+        if (found) {
+          setMod(found);
+          const savedPos = loadExercisePosition(stageId, moduleId);
+          if (savedPos !== null && savedPos > 0) {
+            setCurrentIndex(savedPos);
+            setPhase("exercises");
+          }
+        }
       })
       .catch(() => {})
       .finally(() => setLoading(false));
@@ -101,6 +109,7 @@ export default function GrammarModulePage({ params }: Props) {
     setResults(newResults);
 
     if (currentIndex + 1 >= totalExercises) {
+      clearExercisePosition(stageId, moduleId);
       const totalCorrect = newResults.filter(Boolean).length;
       const pts = totalCorrect * POINTS_PER_CORRECT;
       const passed = (totalCorrect / totalExercises) >= 0.6;
@@ -109,6 +118,7 @@ export default function GrammarModulePage({ params }: Props) {
         const existingProgress = getModuleProgress(student, stage!.id, "grammar", mod!.id);
         const wasAlreadyCompleted = existingProgress?.completed ?? false;
         const priorAttempts = existingProgress?.attempts ?? 0;
+        const prevBestPoints = existingProgress?.points ?? 0;
         const repeatMult = getRepeatMultiplier(priorAttempts);
         const adjustedBase = Math.round(pts * repeatMult);
         const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
@@ -197,17 +207,21 @@ export default function GrammarModulePage({ params }: Props) {
         if (firstChest) setChestEarned(firstChest.type as ChestType);
         if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
         if (mystery) setMysteryBox(mystery);
+        if (adjustedTotal > prevBestPoints && adjustedTotal > 0) setIsNewRecord(true);
       }
       setShowResult(true);
     } else {
       setCurrentIndex((i) => i + 1);
+      saveExercisePosition(stageId, moduleId, currentIndex + 1);
     }
   }
 
   function handleRetry() {
+    clearExercisePosition(stageId, moduleId);
     setCurrentIndex(0);
     setResults([]);
     setShowResult(false);
+    setIsNewRecord(false);
     setPhase("intro");
   }
 
@@ -391,6 +405,7 @@ export default function GrammarModulePage({ params }: Props) {
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
           repeatAttemptNumber={attemptNum}
+          isNewRecord={isNewRecord}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
