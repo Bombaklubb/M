@@ -16881,29 +16881,29 @@
         "q": "Varför vill Leila att gruppen ska skriva en plan med delmål?",
         "options": [
           "För att alla ska veta vad de ska göra och när det ska vara klart",
-          "För att Theo ska bestämma allt, eftersom det verkade mest rimligt",
+          "För att Theo ska bestämma allt",
           "För att göra arbetet svårare",
           "För att slippa presentera"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför behöver Samiras text kortas ner enligt Leila?",
         "options": [
           "För att den är fel",
           "För att lång text är svår att läsa på slides och de ska prata med egna ord",
           "För att Samira inte får skriva",
-          "För att bilder alltid är viktigare, eftersom det var det enda alternativet"
+          "För att bilder alltid är viktigare"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad visar det att Emil till slut berättar tryggt inför klassen?",
         "options": [
           "Att Theo gjorde allt",
-          "Att han alltid varit bäst i klassen på exakt samma sätt som förut",
+          "Att han alltid varit bäst i klassen",
           "Att tydligt ansvar och stöd kan få någon att växa i ett samarbete",
           "Att han egentligen inte gjort något"
         ],
@@ -16971,22 +16971,22 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför blir stämningen bättre när Siri föreslår sin nya regel?",
         "options": [
           "För att spelet blir lugnare och alla känner sig tryggare",
-          "För att ingen behöver spela längre innan det var för sent",
+          "För att ingen behöver spela längre",
           "För att läraren tar bollen",
           "För att Ali går hem"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad visar berättelsen om vänskap?",
         "options": [
           "Att vänskap kan vara att göra plats och säga ifrån när någon behandlas orättvist",
-          "Att vänskap bara handlar om att ha kul, eftersom det var det enda alternativet utan undantag",
+          "Att vänskap bara handlar om att ha kul",
           "Att man ska spela ensam",
           "Att man alltid ska vinna"
         ],
@@ -17211,10 +17211,10 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför skriver texten att handel också kan handla om etik?",
         "options": [
-          "För att etik betyder samma sak som pengar fast på ett annorlunda sätt",
+          "För att etik betyder samma sak som pengar",
           "För att handel ibland har inneburit utnyttjande och orättvisa villkor",
           "För att handel bara sker i skolor",
           "För att alla varor är gratis"
@@ -17222,12 +17222,12 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad kan man förstå att texten vill att du ska göra som konsument idag?",
         "options": [
           "Köpa så mycket som möjligt",
           "Tänka efter kring behov, hållbarhet och att reparera i stället för att slänga",
-          "Bara köpa varor från ett land, eftersom det var det enda alternativet ända sedan starten",
+          "Bara köpa varor från ett land",
           "Aldrig köpa frukt på vintern"
         ],
         "correct": 1
@@ -17374,10 +17374,10 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför hjälper flergångsprodukter, som en egen vattenflaska, enligt textens resonemang?",
         "options": [
-          "För att de gör att man aldrig behöver sortera fast på ett annorlunda sätt",
+          "För att de gör att man aldrig behöver sortera",
           "För att havet då slutar ha strömmar",
           "För att de minskar behovet av engångsprodukter och därmed mängden avfall",
           "För att de gör plasten osynlig"
@@ -17385,11 +17385,11 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför kan städinsatser och samtal om problemet påverka mer än bara den plats man städar?",
         "options": [
           "För att havet stängs av",
-          "För att all plast försvinner i hela världen direkt, för att det skulle gå snabbare",
+          "För att all plast försvinner i hela världen direkt",
           "För att mikroplast blir större av städning",
           "För att det kan öka engagemanget och få kommuner och företag att prioritera frågan"
         ],
@@ -17620,10 +17620,10 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar morfars råd om hur man plockar bär om hans syn på naturen?",
         "options": [
-          "Att naturen ska utnyttjas så fort som möjligt innan det var för sent",
+          "Att naturen ska utnyttjas så fort som möjligt",
           "Att man ska ta allt man hittar",
           "Att bär bara är till för vuxna",
           "Att man ska respektera naturens tempo och vänta på det som är moget"
@@ -17631,7 +17631,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför jämför Leila sina känslor i skolan med älgens situation?",
         "options": [
           "För att hon också kan springa snabbare än andra under hela den perioden",
@@ -17698,28 +17698,28 @@
           "För att de försvinner direkt",
           "För att de blir tydligare och går att planera kring",
           "För att Sanna inte bryr sig längre",
-          "För att Karin säger åt henne att sluta utan undantag"
+          "För att Karin säger åt henne att sluta"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför tar Hawa upp frågan om rättvisa när de pratar om olika lunchtider?",
         "options": [
           "För att hon vill bestämma allt själv",
           "För att vissa annars kan känna att de alltid hamnar sist och att det känns orättvist",
           "För att hon tycker att pilar är fula",
-          "För att hon vill att ingen ska få lunch, eftersom det var det enda alternativet av en slump"
+          "För att hon vill att ingen ska få lunch"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad vill berättelsen visa om att påverka i samhället?",
         "options": [
           "Att man kan börja förändra genom att prata, samla problem och testa lösningar",
           "Att bara vuxna kan ändra saker",
-          "Att elevråd alltid bestämmer allt direkt utan att det fick några konsekvenser",
+          "Att elevråd alltid bestämmer allt direkt",
           "Att problem aldrig går att lösa"
         ],
         "correct": 0
@@ -17775,7 +17775,7 @@
         "type": "inferens",
         "q": "Varför behöver tjänstepersoner utreda ett förslag innan politiker beslutar?",
         "options": [
-          "För att invånare inte bryr sig om cykelvägar utan undantag",
+          "För att invånare inte bryr sig om cykelvägar",
           "För att politiker inte får läsa dokument",
           "För att beslut behöver fakta om kostnader och konsekvenser",
           "För att nämnder alltid säger nej"
@@ -17783,21 +17783,21 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan hända om få invånare engagerar sig eller röstar i kommunvalet?",
         "options": [
           "Kommunen slutar fungera helt",
-          "Alla beslut tas av skolor i stället varje gång tillfälle gavs",
+          "Alla beslut tas av skolor i stället",
           "Skatten försvinner",
           "Färre perspektiv påverkar besluten och vissa behov kan missas"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför jämför texten kommunstyrelsen med en \"regering\" i kommunen?",
         "options": [
-          "För att den bestämmer över andra länder innan det var för sent",
+          "För att den bestämmer över andra länder",
           "För att den förbereder frågor och leder arbetet innan beslut",
           "För att den bara jobbar med skatter",
           "För att den bygger alla vägar själv"
@@ -17861,28 +17861,28 @@
           "För att maten blir kall direkt",
           "För att stress gör att man glömmer att äta",
           "För att man tar första bästa och slänger om man inte vill ha det",
-          "För att personalen lagar mer mat när det är trångt utan undantag"
+          "För att personalen lagar mer mat när det är trångt"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför säger rektorn att eleverna måste hjälpa till om de testar en 'lugna hörnan'?",
         "options": [
           "För att Maria inte gillar regler",
           "För att en regel bara fungerar om de som använder platsen följer den",
-          "För att lärarna inte får vara i matsalen fast på ett annorlunda sätt",
+          "För att lärarna inte får vara i matsalen",
           "För att maten då blir billigare"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad menar Aisha med att samhälle också kan vara ett möte i matsalen?",
         "options": [
           "Att samhälle handlar om att samarbeta och påverka sin vardag nära sig",
           "Att matsalen styr hela landet",
-          "Att man måste rösta om allt varje dag, för att det skulle gå snabbare",
+          "Att man måste rösta om allt varje dag",
           "Att bara vuxna får bestämma i skolan"
         ],
         "correct": 0
@@ -17949,7 +17949,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar Emilias axlar som åker upp mot öronen om hennes kropp?",
         "options": [
           "Att hon börjar bli spänd och trött",
@@ -17960,12 +17960,12 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför blir Zahra stolt på slutet, även om hon fortfarande är trött?",
         "options": [
           "För att hon aldrig blev svettig",
           "För att Diego gav henne ett pris",
-          "För att Jonas avbröt passet tidigt utan att det fick några konsekvenser",
+          "För att Jonas avbröt passet tidigt",
           "För att hon lärde sig en strategi och kände kontroll i stället för skam"
         ],
         "correct": 3
@@ -18112,7 +18112,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad lär sig Mateo av att Noor hittar felet i hans kod?",
         "options": [
           "Att det är bättre att fixa problem än att skylla ifrån sig",
@@ -18123,7 +18123,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför blir gruppens lösning bättre när Ali föreslår en timer på två minuter?",
         "options": [
           "För att lampan blinkar snyggare",
@@ -20032,7 +20032,7 @@
         "type": "inferens",
         "q": "Varför känns det först som att Leyla kliver in i en isvak?",
         "options": [
-          "För att hon gillar att simma men bara om det behövdes",
+          "För att hon gillar att simma",
           "För att hallen är kall",
           "För att golvet är blött",
           "För att allt redan är nytt och hon känner sig utanför"
@@ -20040,7 +20040,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför hjälper Amirs sätt att förklara Leyla att bli tryggare?",
         "options": [
           "För att han skrattar åt henne",
@@ -20051,12 +20051,12 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vilket budskap om vänskap visar berättelsen tydligast?",
         "options": [
           "Att man inte ska byta skola",
           "Att vänskap alltid börjar med en present",
-          "Att man måste vara bäst för att få vänner, eftersom det var det enda alternativet",
+          "Att man måste vara bäst för att få vänner",
           "Att små handlingar kan göra stor skillnad för att någon ska känna sig inkluderad"
         ],
         "correct": 3
@@ -20280,18 +20280,18 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför kan flockimmunitet skydda personer som inte kan vaccinera sig?",
         "options": [
           "För att de får dubbla doser av andras vaccin",
           "För att bakterier inte gillar grupper",
-          "För att virus försvinner om man pratar om det, för att det skulle gå snabbare",
+          "För att virus försvinner om man pratar om det",
           "För att smittan får färre möjligheter att spridas när många andra är skyddade"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad menar texten med att vacciner inte ersätter immunförsvaret utan tränar det?",
         "options": [
           "Att vacciner gör immunförsvaret onödigt",
@@ -20762,14 +20762,14 @@
         "q": "Varför ser Kenji “annorlunda” ut i musiksalen jämfört med i klassrummet?",
         "options": [
           "För att läraren är där",
-          "För att han vill imponera på Yara, eftersom det var det enda alternativet",
+          "För att han vill imponera på Yara",
           "För att han är mer trygg och fokuserad när han får uttrycka sig med musik",
           "För att han har nya skor"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad menar Yara när hon säger att låten låter som “regn som slutar” efter deras ändringar?",
         "options": [
           "Att låten blev kortare utan förvarning",
@@ -20780,13 +20780,13 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför vågar Yara säga ja till att vara med på scen till slut?",
         "options": [
           "För att hon märker att mod och övning kan förändra resultatet",
           "För att Kenji tvingar henne",
           "För att hon redan kan allt",
-          "För att hon inte bryr sig om talangkvällen ända sedan starten"
+          "För att hon inte bryr sig om talangkvällen"
         ],
         "correct": 0
       }
@@ -22708,23 +22708,23 @@
           "För att läraren tar hennes mobil",
           "För att chatten är stängd för henne",
           "För att hennes fråga inte får något svar",
-          "För att hon inte kan läsa meddelanden på nytt"
+          "För att hon inte kan läsa meddelanden"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar Elias när han säger att han också har känt så?",
         "options": [
           "Att han tycker Amina överdriver",
-          "Att han vill vinna en diskussion av misstag",
+          "Att han vill vinna en diskussion",
           "Att han försöker förstå och skapa trygghet",
           "Att han vill byta klass"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad lär sig Amina om vänskap?",
         "options": [
           "Att man alltid ska vara ensam",
@@ -22873,7 +22873,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför säger rektorn att det är fel att dela vidare även om man \"bara delar\"?",
         "options": [
           "För att delning sprider kränkningen vidare",
@@ -22884,7 +22884,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad visar Hanas svar till det anonyma kontot om hur hon utvecklas i berättelsen?",
         "options": [
           "Hon bestämmer sig för att aldrig använda teknik igen",
@@ -22956,7 +22956,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför står det att arbetaren är \"okänd\" enligt Lailas förklaring?",
         "options": [
           "För att museet glömde att skriva namnet på skylten",
@@ -22967,7 +22967,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad förändras i Nadirs syn på historia i slutet av berättelsen?",
         "options": [
           "Han tror att allt förr var bättre än i dag",
@@ -23039,7 +23039,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför blir rättighetsfrågor ibland svårare när teknik kan upptäcka likheter snabbare?",
         "options": [
           "För att oavsiktliga likheter kan skapa krav",
@@ -23050,10 +23050,10 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vilket etiskt skäl nämns till att man kan behöva tillstånd för att sampla?",
         "options": [
-          "Att musik annars blir för kort och tråkig på nytt",
+          "Att musik annars blir för kort och tråkig",
           "Att trummor inte får användas utan licens",
           "Att skapande är arbete som förtjänar ersättning",
           "Att lyssnare alltid blir arga"
@@ -23122,7 +23122,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför kan kompromisser vara viktiga i en demokrati enligt textens resonemang?",
         "options": [
           "För att det ger beslut som fler accepterar",
@@ -23133,7 +23133,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vilken risk beskriver texten om samhällsdebatten blir fylld av personangrepp och misstänksamhet?",
         "options": [
           "Att människor lyssnar mer på varandra och samarbetar",
@@ -24329,7 +24329,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför kan antibiotikaresistens göra operationer mer riskfyllda?",
         "options": [
           "För att infektioner blir svårare att behandla",
@@ -24340,7 +24340,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad antyder texten om varför problemet inte kan lösas av enbart individers val?",
         "options": [
           "För att resistens även beror på samhällsfaktorer",
@@ -26716,28 +26716,28 @@
         "options": [
           "För att hon inte vill bli klar i tid",
           "För att hon inte bryr sig om betyg",
-          "För att hon tycker att plagiat är okej, eftersom det var det enda alternativet men bara när tillfället passade",
+          "För att hon tycker att plagiat är okej",
           "För att hon känner konflikt mellan rättvisa mot gruppen och lojalitet mot Elias"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar det att de väljer att skriva om diskussionen i stället för att bara 'ändra lite'?",
         "options": [
           "Att de vill ha längre text",
-          "Att de vill imponera med svåra ord utan att det fick några konsekvenser",
+          "Att de vill imponera med svåra ord",
           "Att de tar ansvar för akademisk ärlighet och vill kunna stå för arbetet",
           "Att de vill slippa använda källor"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad menar Elias i slutet när han säger att etik är vad man gör när man har panik?",
         "options": [
           "Att ens verkliga värderingar syns i pressade situationer, när det är frestande att fuska",
-          "Att etik bara gäller när man är rädd, eftersom det var det enda alternativet men bara om det behövdes",
+          "Att etik bara gäller när man är rädd",
           "Att panik gör allt tillåtet",
           "Att etik är samma sak som stress"
         ],
@@ -26800,28 +26800,28 @@
           "För att hon gillar gammalt papper",
           "För att dokumenten visar hur stora beslut påverkar vanliga människor, särskilt barn",
           "För att hon hittar en hemlig kod",
-          "För att arkivarien berättar en spökhistoria, eftersom det var det enda alternativet"
+          "För att arkivarien berättar en spökhistoria"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad menar Parisa när hon säger att Elin ser vardagen, inte bara processen?",
         "options": [
           "Att Elin ser vad politiker hade på sig",
-          "Att Elin ser vilka filmer som var populära fast på ett annorlunda sätt",
+          "Att Elin ser vilka filmer som var populära",
           "Att Elin ser hur arkivet städas",
           "Att Elin ser konkreta problem och detaljer bakom en historisk händelse"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad antyder slutet om Elins nya syn på historia?",
         "options": [
           "Att historia alltid är enkel och tydlig",
           "Att historia handlar om ansvar: att läsa, tolka och berätta så att röster inte försvinner",
-          "Att historia bara är fakta utan människor, eftersom det var det enda alternativet och ingenting annat",
+          "Att historia bara är fakta utan människor",
           "Att framtiden inte kan förstå nutiden"
         ],
         "correct": 1
@@ -26888,7 +26888,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför kan jämförelse i flöden skapa stress och perfektionism?",
         "options": [
           "För att likes inte går att se",
@@ -26899,11 +26899,11 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad vill texten att läsaren ska göra för att minska påverkan från uppmärksamhetsekonomin?",
         "options": [
           "Bara läsa kommentarer",
-          "Posta så mycket som möjligt för att synas innan det var för sent",
+          "Posta så mycket som möjligt för att synas",
           "Förstå att flödet är ett urval, följa olika källor och ta pauser",
           "Aldrig använda sociala medier"
         ],
@@ -26966,12 +26966,12 @@
           "För att internet är för långsamt",
           "För att den alltid prioriterar korta svar",
           "För att träningsdata innehåller mer material från vissa grupper och mindre från andra",
-          "För att den väljer att ogilla vissa människor, eftersom det var det enda alternativet"
+          "För att den väljer att ogilla vissa människor"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför säger texten att ett snyggt svar inte är samma sak som ett sant svar?",
         "options": [
           "För att modellen kan skapa plausibla formuleringar även när fakta är fel",
@@ -26982,10 +26982,10 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad menar texten med att AI i skolan kan göra elever beroende av färdiga svar?",
         "options": [
-          "Att AI gör det omöjligt att skriva själv, eftersom det var det enda alternativet varje gång tillfälle gavs",
+          "Att AI gör det omöjligt att skriva själv",
           "Att prov alltid blir lättare",
           "Att lärare slutar undervisa automatiskt",
           "Att elever kan hoppa över den egna träningen i att resonera om AI gör hela arbetet"
@@ -27354,7 +27354,7 @@
         "q": "Vilken avvägning lyfter texten fram som ett skäl till att transparens inte är en enkel lösning?",
         "options": [
           "Att insyn kan kollidera med integritet och säkerhet samt att förklaringar kan bli förenklade",
-          "Att manipulation omöjliggörs av offentlig kod, eftersom det var det enda alternativet direkt när situationen uppstod",
+          "Att manipulation omöjliggörs av offentlig kod",
           "Att insyn alltid gör modeller mer rättvisa",
           "Att integritet bara är relevant i små system"
         ],
@@ -27366,7 +27366,7 @@
           "Hur ansvar organiseras påverkar relationen mellan beslutsfattare och de som berörs, och därmed tilliten",
           "Legitimitet påverkas inte av hur beslut fattas",
           "Automatisering gör alltid beslutsprocesser mer demokratiska",
-          "Ansvar i automatiserade beslut är främst en teknisk fråga utan samhällsdimension innan det var för sent"
+          "Ansvar i automatiserade beslut är främst en teknisk fråga utan samhällsdimension"
         ],
         "correct": 0
       }
@@ -27429,7 +27429,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför kan en graf med ovanlig skala lura en läsare?",
         "options": [
           "För att skalans start påverkar hur data tolkas utan förvarning",
@@ -27440,7 +27440,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför beskriver texten förmågan att skilja korrelation från kausalitet som demokratiskt viktig?",
         "options": [
           "För att det gör att du slipper läsa nyheter, eftersom ingen hade en bättre idé",
@@ -27501,7 +27501,7 @@
         "q": "Vilken risk beskriver texten som mer \"subtil\" än ren fusk-användning?",
         "options": [
           "Att elever gradvis tappar uthållighet att arbeta igenom svårigheter och nöjer sig med yta och tempo",
-          "Att verktyg kräver internetuppkoppling, eftersom det var det enda alternativet och ingenting annat redan innan något annat hände",
+          "Att verktyg kräver internetuppkoppling",
           "Att lärare måste lära sig nya lösenord",
           "Att alla texter blir längre än förut"
         ],
@@ -27521,7 +27521,7 @@
         "q": "Vilken underliggande definition av lärande verkar texten utgå från?",
         "options": [
           "Lärande är att följa regler oavsett syfte",
-          "Lärande är att snabbt producera en färdig produkt på exakt samma sätt som förut",
+          "Lärande är att snabbt producera en färdig produkt",
           "Lärande är att kunna visa förståelse och resonemang, inte bara leverera en text",
           "Lärande är att undvika misstag till varje pris"
         ],
@@ -27576,7 +27576,7 @@
         "options": [
           "Den visar att tolkningar alltid är fel",
           "Den visar att fakta är oviktiga j��mfört med känslor",
-          "Den visar att alla källor kan rangordnas utan problem innan det var för sent",
+          "Den visar att alla källor kan rangordnas utan problem",
           "Den visar ett försök att hantera komplexitet och göra resonemanget spårbart"
         ],
         "correct": 3
@@ -27585,7 +27585,7 @@
         "q": "Vad antyder lärarens motfråga om skoluppgiftens egentliga mål?",
         "options": [
           "Att eleven ska öva på att pröva hållbarheten i sina slutsatser genom att tänka som en kritisk läsare",
-          "Att eleven ska skriva så kort som möjligt, eftersom det var det enda alternativet men bara när tillfället passade",
+          "Att eleven ska skriva så kort som möjligt",
           "Att eleven ska undvika att ta ställning",
           "Att eleven ska gissa vad läraren tycker"
         ],
@@ -27597,7 +27597,7 @@
           "Att Lea vill hoppa över resten av terminen",
           "Att Lea tror att dagen går att spola tillbaka",
           "Att Lea ser en skillnad mellan att jaga ett perfekt svar och att bygga en begriplig process, och väljer det senare",
-          "Att Lea planerar att skriva två uppsatser och lämna in båda, eftersom det var det enda alternativet innan det var för sent"
+          "Att Lea planerar att skriva två uppsatser och lämna in båda"
         ],
         "correct": 2
       }
@@ -27661,7 +27661,7 @@
           "En text som länkar till originalrapporten",
           "En rubrik som anger datum och källa",
           "En formulering som antyder hemlig kunskap och att andra vill dölja sanningen",
-          "En artikel som redovisar osäkerheter i metoden på exakt samma sätt som förut"
+          "En artikel som redovisar osäkerheter i metoden"
         ],
         "correct": 2
       },
@@ -27724,7 +27724,7 @@
         "options": [
           "Texten menar att kvällstrafik alltid är farlig",
           "Texten visar hur varje transportsätt kan kännas både positivt och begränsande på olika sätt",
-          "Texten påstår att människor inte märker sin omgivning, eftersom det var det enda alternativet",
+          "Texten påstår att människor inte märker sin omgivning",
           "Texten framställer ett val som moraliskt överlägset"
         ],
         "correct": 1
@@ -27796,7 +27796,7 @@
       {
         "q": "Vilken lösning på startmotstånd föreslår texten, och varför fungerar den enligt resonemanget?",
         "options": [
-          "Att plugga dubbelt så länge nästa dag för att kompensera men bara när tillfället passade",
+          "Att plugga dubbelt så länge nästa dag för att kompensera",
           "Att bara göra enkla uppgifter för att undvika stress",
           "Att vänta tills man känner stark motivation",
           "Att göra starten mycket liten för att sänka tröskeln och minska behovet av att fly undan"
@@ -27819,7 +27819,7 @@
           "All stress är skadlig och bör undvikas helt",
           "Stressnivå och beslut påverkar var fokus hamnar, vilket gör att struktur och återhämtning kan styra energin mot det viktiga",
           "Stress löses bäst genom att alltid plugga ensam",
-          "Stress spelar ingen roll om man har bra anteckningar, eftersom det var det enda alternativet istället, för att det skulle gå snabbare"
+          "Stress spelar ingen roll om man har bra anteckningar"
         ],
         "correct": 1
       }
@@ -27868,7 +27868,7 @@
         "q": "Vilken skillnad mellan två texter pekar författaren ut som särskilt viktig att upptäcka, även om båda verkar sakliga?",
         "options": [
           "Att de kan använda samma begrepp men bygga dem på olika definitioner och mätningar.",
-          "Att de kan ha olika typsnitt och därmed olika trovärdighet men bara om det behövdes",
+          "Att de kan ha olika typsnitt och därmed olika trovärdighet",
           "Att de kan ha olika längd och därmed olika noggrannhet"
         ],
         "correct": 0
@@ -27887,7 +27887,7 @@
         "options": [
           "Att avgöra trovärdighet främst genom avsändarens status",
           "Att formulera vilka uppgifter som skulle behövas för att stärka eller försvaga ett påstående.",
-          "Att undvika osäkerhet genom att endast läsa texter som uttrycker tydliga slutsatser av misstag"
+          "Att undvika osäkerhet genom att endast läsa texter som uttrycker tydliga slutsatser"
         ],
         "correct": 1
       }
@@ -28161,7 +28161,7 @@
         "q": "Varför avslutar texten med att beskriva statistik som ett \"språk\"?",
         "options": [
           "För att visa att statistik främst handlar om retorik och inte om mätningar.",
-          "För att antyda att statistiska resultat alltid kan översättas till en enda entydig slutsats utan undantag",
+          "För att antyda att statistiska resultat alltid kan översättas till en enda entydig slutsats",
           "För att betona att tolkning kräver aktiva frågor om jämförelser, antaganden och alternativa förklaringar."
         ],
         "correct": 2
@@ -29055,7 +29055,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Hur påverkas jordbruket?",
         "options": [
           "Svårare i vissa områden",
@@ -29066,7 +29066,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad kan individer göra?",
         "options": [
           "Flyga mer",
@@ -29219,7 +29219,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Var reste de?",
         "options": [
           "Europa och längre",
@@ -29301,7 +29301,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad används protein främst till?",
         "options": [
           "Bygga kroppen",
@@ -29383,7 +29383,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad betyder inkludering?",
         "options": [
           "Alla känner sig delaktiga",
@@ -29465,7 +29465,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför är växter viktiga enligt ledaren?",
         "options": [
           "De luktar gott",
@@ -29629,7 +29629,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad bidrar respekt och empati till?",
         "options": [
           "Ett mer rättvist samhälle",
@@ -29722,7 +29722,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad visar utvecklingen av elektricitet?",
         "options": [
           "Att allt blir bättre",
@@ -29793,7 +29793,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad behöver man ibland?",
         "options": [
           "Mer skola",
@@ -29968,7 +29968,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Hur kan medborgare stärka demokratin?",
         "options": [
           "Genom att ignorera politik",
@@ -30039,7 +30039,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan rymdforskning ge svar på?",
         "options": [
           "Endast väder",
@@ -30121,7 +30121,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan musikexemplet visa?",
         "options": [
           "Att musik är gammal",
@@ -30214,7 +30214,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är vuxnas roll?",
         "options": [
           "Ignorera unga",
@@ -30285,7 +30285,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad lärde sig Sofia?",
         "options": [
           "Att undvika andra",
@@ -30531,7 +30531,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför är det viktigt att känna igen stress?",
         "options": [
           "För att öka den",
@@ -30706,7 +30706,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför är skogen viktig för människor?",
         "options": [
           "Den ger internet",
@@ -30859,7 +30859,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad händer när elever känner sig trygga?",
         "options": [
           "De lär sig bättre",
@@ -30941,7 +30941,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Hur påverkar AI jobb?",
         "options": [
           "Tar bort alla jobb",
@@ -31023,7 +31023,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan artister göra genom musik?",
         "options": [
           "Sälja produkter",
@@ -31269,7 +31269,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Hur kan teknik användas positivt?",
         "options": [
           "För utbildning och innovation",
@@ -31351,7 +31351,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför är utbildning viktig?",
         "options": [
           "För att minska kunskap",
@@ -31515,7 +31515,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför behövs internationellt samarbete?",
         "options": [
           "För att bygga fler hus",
@@ -31925,7 +31925,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan anonymitet leda till?",
         "options": [
           "Både frihet och problem",
@@ -32018,7 +32018,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad handlar klimatfrågan också om?",
         "options": [
           "Teknikutveckling",
@@ -32335,7 +32335,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad krävs av användare enligt texten?",
         "options": [
           "Källkritik",
@@ -32417,7 +32417,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Varför är kretsloppet viktigt?",
         "options": [
           "Det skapar energi",
@@ -32674,7 +32674,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Varför är vila viktig?",
         "options": [
           "För att bli trött",
@@ -32909,7 +32909,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad förändrades hos Sara?",
         "options": [
           "Hon slutade titta på film",
@@ -32991,7 +32991,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan smink vara enligt texten?",
         "options": [
           "Endast en vana",
@@ -33073,7 +33073,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad utvecklar forskare idag?",
         "options": [
           "Större segel",
@@ -33155,7 +33155,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kräver bilkörning?",
         "options": [
           "Tur",
@@ -33237,7 +33237,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad behöver katter för att må bra?",
         "options": [
           "Endast mat",
@@ -33319,7 +33319,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kom de fram till om identitet?",
         "options": [
           "Den är enkel",
@@ -33827,7 +33827,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är ett huvudbudskap i texten?",
         "options": [
           "Rättigheter gäller bara i vissa länder",
@@ -33898,7 +33898,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad handlar debatten om?",
         "options": [
           "Hur man bygger fler skolor",
@@ -33909,7 +33909,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är ett centralt tema i texten?",
         "options": [
           "Att yttrandefrihet saknar betydelse",
@@ -33980,7 +33980,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan barnarbete leda till?",
         "options": [
           "Bättre hälsa",
@@ -33991,7 +33991,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad handlar texten främst om?",
         "options": [
           "Barns rättigheter och utmaningar",
@@ -34062,7 +34062,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad innebär inkludering?",
         "options": [
           "Att vissa utesluts",
@@ -34073,7 +34073,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudidén i texten?",
         "options": [
           "Diskriminering är svårt att förändra",
@@ -34144,7 +34144,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan små handlingar göra?",
         "options": [
           "Inte påverka något",
@@ -34155,7 +34155,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "Rättigheter gäller bara vuxna",
@@ -34226,7 +34226,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Hur påverkade hans bakgrund honom?",
         "options": [
           "Han undvek politik",
@@ -34237,7 +34237,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är ett huvudbudskap i texten?",
         "options": [
           "Utbildning är oviktigt",
@@ -34308,7 +34308,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad bidrog till hans framgång?",
         "options": [
           "Tur",
@@ -34319,7 +34319,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad handlar texten främst om?",
         "options": [
           "Utbildning i USA",
@@ -34401,7 +34401,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad visar hans presidentskap?",
         "options": [
           "Att politik är enkelt",
@@ -34472,7 +34472,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan stark retorik göra?",
         "options": [
           "Minska intresse",
@@ -34483,7 +34483,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad handlar texten främst om?",
         "options": [
           "Ekonomi",
@@ -34554,7 +34554,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar hans fortsatta arbete?",
         "options": [
           "Att inflytande försvinner snabbt",
@@ -34565,7 +34565,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Karriärer slutar abrupt",
@@ -34647,7 +34647,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "Att Arsenal alltid vinner",
@@ -34718,7 +34718,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Hur har synen på spelstil förändrats?",
         "options": [
           "Den är helt oförändrad",
@@ -34729,7 +34729,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudidé?",
         "options": [
           "Att Arsenal saknar strategi",
@@ -34800,7 +34800,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar mångfalden bland fansen?",
         "options": [
           "Att klubben bara är för vissa",
@@ -34811,7 +34811,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Att supportrar inte är viktiga",
@@ -34893,7 +34893,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Ekonomi spelar liten roll",
@@ -34964,7 +34964,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad påverkar klubbens framgång utöver spelare?",
         "options": [
           "Supporterengagemang",
@@ -34975,7 +34975,7 @@
         "correct": 0
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudidé?",
         "options": [
           "Framtiden beror på flera faktorer",
@@ -35057,7 +35057,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "Att bussar var viktiga",
@@ -35139,7 +35139,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudidén?",
         "options": [
           "Förändring kräver både individer och grupper",
@@ -35210,7 +35210,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad kan vara en konsekvens av civilkurage?",
         "options": [
           "Endast positiva effekter",
@@ -35221,7 +35221,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Civilkurage är oviktigt",
@@ -35303,7 +35303,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Lagar är alltid rättvisa",
@@ -35374,7 +35374,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad handlar hennes arv om?",
         "options": [
           "Endast individen",
@@ -35385,7 +35385,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudidén?",
         "options": [
           "Historia är oföränderlig",
@@ -35467,7 +35467,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "ABBA förändrade svensk och internationell popmusik",
@@ -35538,7 +35538,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar gruppens fortsatta arbete trots konflikter?",
         "options": [
           "Att de saknade publik",
@@ -35549,7 +35549,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudidé?",
         "options": [
           "Relationer kan påverka kreativitet både positivt och negativt",
@@ -35631,7 +35631,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudidé?",
         "options": [
           "ABBA förändrade musikproduktion genom teknik",
@@ -35702,7 +35702,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "forfattarens-syfte",
         "q": "Vad visar deras fortsatta användning i kultur?",
         "options": [
           "Att de är bortglömda",
@@ -35713,7 +35713,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "ABBA påverkar fortfarande populärkulturen",
@@ -35795,7 +35795,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "textbevis",
         "q": "Vad är textens huvudidé?",
         "options": [
           "Musik kan uttrycka identitet och känslor",
