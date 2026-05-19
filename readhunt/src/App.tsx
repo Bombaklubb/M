@@ -426,7 +426,23 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden">
+    <div
+      className="min-h-screen relative overflow-hidden"
+      style={appState === AppState.SETUP ? {
+        backgroundImage: 'url(/readhunt.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      } : undefined}
+    >
+      {/* Dark overlay on setup page */}
+      {appState === AppState.SETUP && (
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0" />
+      )}
+      {/* Fallback bg for other states */}
+      {appState !== AppState.SETUP && (
+        <div className="absolute inset-0 bg-sky-50 dark:bg-slate-900 z-0" />
+      )}
       {/* Animated floating background elements - only show on setup page */}
       {appState === AppState.SETUP && (
         <>

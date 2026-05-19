@@ -46,7 +46,9 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundImage: 'url(/readhunt.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      {/* Dark overlay so the card stays readable */}
+      <div className="absolute inset-0 bg-black/55 backdrop-blur-[1px]" />
       {/* Animated floating background elements */}
       {floatingElements.map((el, index) => (
         <motion.div
