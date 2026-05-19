@@ -406,10 +406,10 @@ function App() {
       className="min-h-screen relative overflow-hidden"
       style={appState === AppState.SETUP ? {
         backgroundImage: 'url(/ny%20readhunt.png)',
-        backgroundSize: '110% auto',
-        backgroundPosition: 'center top',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
-        backgroundColor: '#0f172a',
+        backgroundColor: '#0c1a2e',
       } : undefined}
     >
       {/* Light overlay on setup page */}
