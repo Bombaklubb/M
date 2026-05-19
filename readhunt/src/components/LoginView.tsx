@@ -25,7 +25,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   return (
     <div
       className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
-      style={{ backgroundImage: 'url(/ny%20readhunt.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{ backgroundImage: 'url(/ny%20readhunt.png)', backgroundSize: '110% auto', backgroundPosition: 'center top', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a' }}
     >
       {/* Light overlay */}
       <div className="absolute inset-0 bg-black/20" />
