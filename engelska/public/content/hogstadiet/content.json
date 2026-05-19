@@ -3005,7 +3005,8 @@
           "id": "hog-g12-6",
           "type": "fill-in-blank",
           "sentence": "He is ___ (far) away from home than I thought.",
-          "answer": "farther/further",
+          "answer": "farther",
+          "alternativeAnswers": ["further"],
           "hint": "Komparativ av far?",
           "explanation": "Far → farther (avstånd) / further (bildligt). Båda accepteras."
         },
