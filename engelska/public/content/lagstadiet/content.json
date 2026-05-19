@@ -5387,16 +5387,16 @@
     },
     {
       "id": "lag-sluttest",
-      "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
+      "title": "Sluttest 1 – Grammatik",
+      "description": "Testa din grammatik! 23 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
-        "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker allt du har tränat på: be-verb, have/has, artiklar, plural, demonstrativa pronomen, ägandeord, can, there is/are, prepositioner och mer.",
-        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
-        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Det här är första sluttestet för grammatikdelen!",
+        "Frågorna täcker be-verb, have/has, artiklar, plural, demonstrativa pronomen, ägandeord, can, there is/are och prepositioner.",
+        "Ingår även bild-till-ord: se en bild och välj rätt engelskt ord.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -5660,6 +5660,61 @@
           "explanation": "Kort svar på Are you...? = Yes, I am. / No, I'm not."
         },
         {
+          "id": "lag-st-new1",
+          "type": "multiple-choice",
+          "image": "🐰",
+          "question": "Vad heter detta djur på engelska?",
+          "options": [
+            "Cat",
+            "Rabbit",
+            "Horse",
+            "Dog"
+          ],
+          "correctIndex": 1,
+          "explanation": "🐰 = rabbit (kanin)"
+        },
+        {
+          "id": "lag-st-new2",
+          "type": "multiple-choice",
+          "image": "🌈",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Cloud",
+            "Storm",
+            "Rainbow",
+            "Star"
+          ],
+          "correctIndex": 2,
+          "explanation": "🌈 = rainbow (regnbåge)"
+        },
+        {
+          "id": "lag-st-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: What ___ is the sky? B: It is blue!",
+          "answer": "colour",
+          "alternativeAnswers": [
+            "color"
+          ],
+          "hint": "Frågeord för färg.",
+          "explanation": "'What colour is the sky?' = Vilken färg har himlen?"
+        }
+      ]
+    },
+    {
+      "id": "lag-sluttest-2",
+      "title": "Sluttest 2 – Grammatik & Ordförråd",
+      "description": "Testa mer grammatik och ordförråd! 22 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är andra sluttestet för grammatikdelen!",
+        "Frågorna täcker negationer, frågeformer, short answers, vokabulär och dialoger.",
+        "Ingår även ordförrådsfrågor och dialogövningar.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
           "id": "lag-st-21",
           "type": "multiple-choice",
           "question": "___ she like cats?",
@@ -5845,6 +5900,39 @@
           ],
           "correctIndex": 0,
           "explanation": "Bil = car. My car is blue."
+        },
+        {
+          "id": "lag-st2-new1",
+          "type": "multiple-choice",
+          "image": "🎂",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Bread",
+            "Cookie",
+            "Pizza",
+            "Cake"
+          ],
+          "correctIndex": 3,
+          "explanation": "🎂 = cake (tårta/kaka)"
+        },
+        {
+          "id": "lag-st2-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ do you come from? B: I come from Sweden.",
+          "answer": "Where",
+          "alternativeAnswers": [
+            "where"
+          ],
+          "hint": "Frågeord för plats.",
+          "explanation": "'Where do you come from?' = Var kommer du ifrån?"
+        },
+        {
+          "id": "lag-st2-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: Is this your pen? B: Yes, it is ___.",
+          "answer": "mine",
+          "hint": "Självständigt ägandeord för 'I'.",
+          "explanation": "'Mine' = min/mitt. Självständigt ägandeord – man säger inte 'my' ensamt."
         }
       ]
     }

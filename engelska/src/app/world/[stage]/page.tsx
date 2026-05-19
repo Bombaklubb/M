@@ -276,7 +276,7 @@ export default function WorldPage({ params }: Props) {
                 : activeTab === "spelling" ? (content.spelling   ?? [])
                 : (content.wordsearch ?? [])
               ).map((mod, idx, arr) => {
-                const isFinalTest = mod.id.endsWith("-sluttest");
+                const isFinalTest = mod.id.includes("sluttest");
                 return (
                   <BlurFade key={mod.id} delay={idx * 0.04} duration={0.35} className={isFinalTest ? "sm:col-span-2" : ""}>
                     {isFinalTest && (
