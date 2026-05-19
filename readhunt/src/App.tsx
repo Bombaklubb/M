@@ -401,22 +401,6 @@ function App() {
     );
   }
 
-  // Clickable floating symbols on the setup/background page
-  const floatingElements = [
-    { emoji: '📖', size: 'text-4xl', top: '12%', left: '5%',   delay: '0s',  duration: '20s', label: 'Read'    },
-    { emoji: '📚', size: 'text-5xl', top: '18%', right: '8%',  delay: '2s',  duration: '25s', label: 'Books'   },
-    { emoji: '📕', size: 'text-3xl', top: '70%', left: '3%',   delay: '5s',  duration: '22s', label: 'Story'   },
-    { emoji: '📗', size: 'text-4xl', top: '80%', right: '5%',  delay: '8s',  duration: '18s', label: 'Facts'   },
-    { emoji: '📘', size: 'text-3xl', top: '45%', left: '2%',   delay: '3s',  duration: '24s', label: 'Level up'},
-    { emoji: '🔍', size: 'text-3xl', top: '28%', left: '7%',   delay: '4s',  duration: '21s', label: 'Search'  },
-    { emoji: '🧭', size: 'text-4xl', top: '60%', right: '4%',  delay: '6s',  duration: '23s', label: 'Explore' },
-    { emoji: '🗺️', size: 'text-3xl', top: '48%', right: '6%',  delay: '1s',  duration: '19s', label: 'Map'     },
-    { emoji: '⭐', size: 'text-3xl', top: '35%', right: '10%', delay: '5s',  duration: '15s', label: 'Points'  },
-    { emoji: '🏆', size: 'text-4xl', top: '55%', left: '8%',   delay: '3s',  duration: '13s', label: 'Trophy'  },
-    { emoji: '🌟', size: 'text-3xl', top: '65%', right: '15%', delay: '7s',  duration: '16s', label: 'Star'    },
-    { emoji: '🦉', size: 'text-4xl', top: '22%', left: '15%',  delay: '2s',  duration: '14s', label: 'Wise'    },
-  ];
-
   return (
     <div
       className="min-h-screen relative overflow-hidden"
@@ -427,46 +411,13 @@ function App() {
         backgroundAttachment: 'fixed',
       } : undefined}
     >
-      {/* Dark overlay on setup page */}
+      {/* Light overlay on setup page */}
       {appState === AppState.SETUP && (
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0" />
+        <div className="absolute inset-0 bg-black/20 z-0" />
       )}
       {/* Fallback bg for other states */}
       {appState !== AppState.SETUP && (
         <div className="absolute inset-0 bg-sky-50 dark:bg-slate-900 z-0" />
-      )}
-      {/* Clickable floating symbols - only on setup page */}
-      {appState === AppState.SETUP && (
-        <>
-          {floatingElements.map((el, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => {
-                const el2 = document.getElementById(`sym-pop-${index}`);
-                if (el2) { el2.classList.remove('hidden'); setTimeout(() => el2.classList.add('hidden'), 900); }
-              }}
-              className={`absolute ${el.size} z-10 cursor-pointer select-none leading-none transition-transform hover:scale-125 active:scale-90`}
-              style={{
-                top: el.top,
-                left: (el as any).left,
-                right: (el as any).right,
-                opacity: 0.7,
-                animation: `float ${el.duration} ease-in-out infinite`,
-                animationDelay: el.delay,
-              }}
-              aria-label={el.label}
-            >
-              {el.emoji}
-              <span
-                id={`sym-pop-${index}`}
-                className="hidden absolute -top-7 left-1/2 -translate-x-1/2 bg-white text-slate-800 text-xs font-bold px-2 py-1 rounded-full shadow-lg pointer-events-none whitespace-nowrap"
-              >
-                {el.label}
-              </span>
-            </button>
-          ))}
-        </>
       )}
 
       <Header
