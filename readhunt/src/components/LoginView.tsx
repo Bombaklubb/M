@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { BookLogo } from './BookLogo';
 import { AvatarPicker } from './AvatarPicker';
 import { JaktLinks } from './JaktLinks';
@@ -8,40 +8,18 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader } from './ui/card';
 import { BorderBeam } from './ui/border-beam';
 import { Sparkles } from './ui/sparkles';
-import { cn } from '@/lib/utils';
 
 interface LoginViewProps {
   onLogin: (name: string, avatar: string) => void;
 }
 
-const CLICKABLE_SYMBOLS = [
-  { emoji: '📖', label: 'Read', top: '8%',  left: '5%',  delay: 0,  duration: 20, size: 'text-4xl' },
-  { emoji: '📚', label: 'Books', top: '14%', right: '7%', delay: 2,  duration: 25, size: 'text-5xl' },
-  { emoji: '🔍', label: 'Search', top: '35%', left: '4%', delay: 4,  duration: 21, size: 'text-4xl' },
-  { emoji: '🧭', label: 'Explore', top: '58%', right: '5%', delay: 6, duration: 23, size: 'text-4xl' },
-  { emoji: '🗺️', label: 'Map',    top: '44%', right: '8%', delay: 1, duration: 19, size: 'text-3xl' },
-  { emoji: '⭐', label: 'Stars',  top: '28%', right: '12%', delay: 5, duration: 15, size: 'text-3xl' },
-  { emoji: '🏆', label: 'Trophy', top: '72%', left: '6%',  delay: 3, duration: 22, size: 'text-4xl' },
-  { emoji: '💡', label: 'Ideas',  top: '20%', left: '14%', delay: 7, duration: 18, size: 'text-3xl' },
-  { emoji: '🌟', label: 'Star',   top: '62%', right: '14%', delay: 8, duration: 16, size: 'text-3xl' },
-  { emoji: '🦉', label: 'Owl',    top: '82%', right: '9%', delay: 2, duration: 20, size: 'text-4xl' },
-  { emoji: '✏️', label: 'Write',  top: '88%', left: '12%', delay: 9, duration: 17, size: 'text-3xl' },
-  { emoji: '🎯', label: 'Goal',   top: '50%', left: '10%', delay: 5, duration: 24, size: 'text-3xl' },
-];
-
 export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   const [name, setName] = useState('');
   const [selectedAvatar, setSelectedAvatar] = useState(AVATAR_OPTIONS[0]);
-  const [popLabel, setPopLabel] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) onLogin(name.trim(), selectedAvatar);
-  };
-
-  const handleSymbolClick = (label: string) => {
-    setPopLabel(label);
-    setTimeout(() => setPopLabel(null), 900);
   };
 
   return (
@@ -49,49 +27,8 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
       className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
       style={{ backgroundImage: 'url(/ny%20readhunt.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Clickable floating symbols */}
-      {CLICKABLE_SYMBOLS.map((el, index) => (
-        <motion.button
-          key={index}
-          type="button"
-          onClick={() => handleSymbolClick(el.label)}
-          className={cn(
-            'absolute z-10 cursor-pointer select-none leading-none',
-            el.size
-          )}
-          style={{ top: el.top, left: (el as any).left, right: (el as any).right }}
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: [0.55, 0.8, 0.55],
-            y: [0, -14, 0],
-            rotate: [0, 4, -4, 0],
-          }}
-          transition={{ duration: el.duration, delay: el.delay, repeat: Infinity, ease: 'easeInOut' }}
-          whileHover={{ scale: 1.35, opacity: 1 }}
-          whileTap={{ scale: 0.85 }}
-          aria-label={el.label}
-        >
-          {el.emoji}
-          {/* Pop label on click */}
-          <AnimatePresence>
-            {popLabel === el.label && (
-              <motion.span
-                key="pop"
-                className="absolute -top-7 left-1/2 -translate-x-1/2 bg-white text-slate-800 text-xs font-bold px-2 py-1 rounded-full shadow-lg pointer-events-none whitespace-nowrap"
-                initial={{ opacity: 0, y: 4, scale: 0.8 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -6, scale: 0.8 }}
-                transition={{ duration: 0.2 }}
-              >
-                {el.label}
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </motion.button>
-      ))}
+      {/* Light overlay */}
+      <div className="absolute inset-0 bg-black/20" />
 
       {/* Login card */}
       <motion.div
