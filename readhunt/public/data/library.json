@@ -1,0 +1,84 @@
+[
+  {
+    "id": "rh-demo-1",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Clever Fox",
+    "text": "One morning, a fox named Felix woke up very hungry. He had not eaten since the day before. Felix was known in the forest for being clever. All the other animals said he was the smartest fox around.\n\nFelix walked through the forest looking for food. He saw some berries on a bush, but a crow had already taken them. He found a river, but no fish were swimming near the surface.\n\nThen Felix had an idea. He sat beside the river and pretended to sleep. Soon, a curious rabbit came closer to look at the sleeping fox. The rabbit got too close. Felix jumped up and caught the rabbit.\n\nThat evening, Felix sat by his den, full and happy. He smiled and thought, 'Sometimes the best way to find what you need is to wait and be patient.'",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why was Felix hungry?",
+        "options": [
+          "He had not eaten since the day before.",
+          "He did not like berries.",
+          "He was sick.",
+          "The other animals took his food."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Felix find at the river?",
+        "options": [
+          "A big fish.",
+          "Another fox.",
+          "No fish near the surface.",
+          "Fresh berries."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Felix pretend to do beside the river?",
+        "options": [
+          "He pretended to cry.",
+          "He pretended to sleep.",
+          "He pretended to eat berries.",
+          "He pretended to swim."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did the rabbit come closer to Felix?",
+        "options": [
+          "The rabbit wanted to help Felix.",
+          "The rabbit was not afraid of foxes.",
+          "The rabbit was curious about the sleeping fox.",
+          "The rabbit wanted to share food."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does the story tell us about Felix?",
+        "options": [
+          "He is very fast.",
+          "He uses his brain to solve problems.",
+          "He is afraid of other animals.",
+          "He does not like being alone."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What lesson can we learn from this story?",
+        "options": [
+          "Never eat berries from a bush.",
+          "It is better to run than to wait.",
+          "Being patient and clever can help you succeed.",
+          "Foxes are always hungry."
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 162,
+      "fingerprint": "demo-rh-1",
+      "generatedAt": "2026-05-19",
+      "model": "demo"
+    }
+  }
+]

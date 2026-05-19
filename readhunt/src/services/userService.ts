@@ -1,0 +1,421 @@
+import { User, Badge, BadgeType, BADGE_DEFINITIONS, CompletedText, AVATAR_OPTIONS, QuestionResult, StudentMessage } from '../types';
+
+const STORAGE_KEY = 'readhunt_user';
+const ALL_USERS_KEY = 'readhunt_all_users';
+const DAILY_STATS_KEY = 'readhunt_daily_stats';
+const MESSAGES_KEY = 'readhunt_messages';
+
+interface DailyStats {
+  date: string;
+  textsRead: number;
+  genres: Record<string, number>;
+  themes: Record<string, number>;
+  grades: Record<number, number>;
+}
+
+export function createUser(name: string, avatar?: string): User {
+  const now = new Date().toISOString();
+  return {
+    name: name.trim(),
+    avatar: avatar || AVATAR_OPTIONS[0],
+    totalPoints: 0,
+    badges: [],
+    completedTexts: [],
+    perfectScoreStreak: 0,
+    gradesCompleted: [],
+    createdAt: now,
+    lastActivity: now,
+  };
+}
+
+export function updateAvatar(user: User, avatar: string): User {
+  const updatedUser = { ...user, avatar, lastActivity: new Date().toISOString() };
+  saveUser(updatedUser);
+  return updatedUser;
+}
+
+export function loadUser(): User | null {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) return JSON.parse(stored) as User;
+  } catch { /* ignore */ }
+  return null;
+}
+
+export function findUserByName(name: string): User | null {
+  try {
+    const allUsers = getAllUsers();
+    const normalizedName = name.trim().toLowerCase();
+    return allUsers.find(u => u.name.toLowerCase() === normalizedName) || null;
+  } catch { /* ignore */ }
+  return null;
+}
+
+export function loginUser(name: string, avatar?: string): User {
+  const existingUser = findUserByName(name);
+  if (existingUser) {
+    const updatedUser = {
+      ...existingUser,
+      avatar: avatar || existingUser.avatar || AVATAR_OPTIONS[0],
+      lastActivity: new Date().toISOString(),
+    };
+    saveUser(updatedUser);
+    return updatedUser;
+  }
+  const newUser = createUser(name, avatar);
+  saveUser(newUser);
+  return newUser;
+}
+
+export function saveUser(user: User): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+    saveToAllUsers(user);
+  } catch { /* ignore */ }
+}
+
+export function logoutUser(): void {
+  localStorage.removeItem(STORAGE_KEY);
+}
+
+export function calculatePoints(score: number, totalQuestions: number, grade: number): number {
+  const percentage = score / totalQuestions;
+  const basePoints = Math.round(percentage * 100);
+  const gradeBonus = Math.floor(grade * 5 * percentage);
+  const perfectBonus = percentage === 1 ? 50 : 0;
+  return basePoints + gradeBonus + perfectBonus;
+}
+
+export function checkForNewBadges(user: User): Badge[] {
+  const newBadges: Badge[] = [];
+  const now = new Date().toISOString();
+
+  const hasBadge = (type: BadgeType) => user.badges.some(b => b.type === type);
+  const addBadge = (type: BadgeType) => {
+    if (!hasBadge(type)) newBadges.push({ ...BADGE_DEFINITIONS[type], earnedAt: now });
+  };
+
+  const totalTexts = user.completedTexts.length;
+
+  if (totalTexts >= 1) addBadge(BadgeType.FIRST_TEXT);
+  if (totalTexts >= 5) addBadge(BadgeType.FIVE_TEXTS);
+  if (totalTexts >= 10) addBadge(BadgeType.TEN_TEXTS);
+  if (totalTexts >= 15) addBadge(BadgeType.FIFTEEN_TEXTS);
+  if (totalTexts >= 25) addBadge(BadgeType.TWENTY_FIVE_TEXTS);
+  if (totalTexts >= 30) addBadge(BadgeType.THIRTY_TEXTS);
+  if (totalTexts >= 50) addBadge(BadgeType.FIFTY_TEXTS);
+  if (totalTexts >= 75) addBadge(BadgeType.SEVENTY_FIVE_TEXTS);
+  if (totalTexts >= 100) addBadge(BadgeType.HUNDRED_TEXTS);
+
+  const lastText = user.completedTexts[user.completedTexts.length - 1];
+  if (lastText && lastText.score === lastText.totalQuestions) addBadge(BadgeType.PERFECT_SCORE);
+  if (user.perfectScoreStreak >= 3) addBadge(BadgeType.THREE_PERFECT);
+  if (user.perfectScoreStreak >= 5) addBadge(BadgeType.FIVE_PERFECT);
+  if (user.perfectScoreStreak >= 10) addBadge(BadgeType.TEN_PERFECT);
+
+  if (user.totalPoints >= 100) addBadge(BadgeType.HUNDRED_POINTS);
+  if (user.totalPoints >= 500) addBadge(BadgeType.FIVE_HUNDRED_POINTS);
+  if (user.totalPoints >= 1000) addBadge(BadgeType.THOUSAND_POINTS);
+  if (user.totalPoints >= 2000) addBadge(BadgeType.TWO_THOUSAND_POINTS);
+  if (user.totalPoints >= 5000) addBadge(BadgeType.FIVE_THOUSAND_POINTS);
+
+  const grades = user.gradesCompleted;
+  if (grades.length >= 5) addBadge(BadgeType.EXPLORER);
+  if (grades.length >= 10) addBadge(BadgeType.ALL_GRADES);
+  if (grades.includes(1) && grades.includes(2) && grades.includes(3)) addBadge(BadgeType.BEGINNER_GRADES);
+  if (grades.includes(4) && grades.includes(5) && grades.includes(6)) addBadge(BadgeType.MIDDLE_GRADES);
+  if (grades.includes(7) && grades.includes(8) && grades.includes(9)) addBadge(BadgeType.ADVANCED_GRADES);
+  if (grades.includes(9) || grades.includes(10)) addBadge(BadgeType.ADVANCED_LEVEL);
+
+  const readingStreak = calculateReadingStreak(user.completedTexts);
+  if (readingStreak >= 3) addBadge(BadgeType.STREAK_3);
+  if (readingStreak >= 7) addBadge(BadgeType.STREAK_7);
+  if (readingStreak >= 14) addBadge(BadgeType.STREAK_14);
+
+  const storyCount = user.completedTexts.filter(t => t.genre === 'fiction').length;
+  const factCount = user.completedTexts.filter(t => t.genre === 'non-fiction').length;
+  if (storyCount >= 10) addBadge(BadgeType.STORY_LOVER);
+  if (factCount >= 10) addBadge(BadgeType.FACT_LOVER);
+
+  const hasQuickText = user.completedTexts.some(
+    t => t.readingTimeSeconds !== undefined && t.readingTimeSeconds > 0 && t.readingTimeSeconds < 240
+  );
+  if (hasQuickText) addBadge(BadgeType.FAST_READER);
+
+  const readingByDay: Record<string, number> = {};
+  for (const t of user.completedTexts) {
+    if (t.readingTimeSeconds) {
+      const day = t.completedAt.slice(0, 10);
+      readingByDay[day] = (readingByDay[day] || 0) + t.readingTimeSeconds;
+    }
+  }
+  if (Object.values(readingByDay).some(s => s >= 1800)) addBadge(BadgeType.ENDURANCE);
+
+  const pointsByDay: Record<string, number> = {};
+  for (const t of user.completedTexts) {
+    const day = t.completedAt.slice(0, 10);
+    pointsByDay[day] = (pointsByDay[day] || 0) + t.pointsEarned;
+  }
+  if (Object.values(pointsByDay).some(p => p >= 500)) addBadge(BadgeType.BIG_SCORER);
+
+  const genreByDay: Record<string, Set<string>> = {};
+  for (const t of user.completedTexts) {
+    if (t.genre) {
+      const day = t.completedAt.slice(0, 10);
+      if (!genreByDay[day]) genreByDay[day] = new Set();
+      genreByDay[day].add(t.genre);
+    }
+  }
+  const hasGenreMix = Object.values(genreByDay).some(
+    genres => genres.has('fiction') && genres.has('non-fiction')
+  );
+  if (hasGenreMix) addBadge(BadgeType.GENRE_MIX);
+
+  const totalPerfect = user.completedTexts.filter(t => t.score === t.totalQuestions).length;
+  if (totalPerfect >= 5) addBadge(BadgeType.PERFECT_FIVE_TOTAL);
+
+  const advancedCount = user.completedTexts.filter(t => t.grade >= 9).length;
+  if (advancedCount >= 10) addBadge(BadgeType.ADVANCED_EXPERT);
+
+  const hasMorning = user.completedTexts.some(t => new Date(t.completedAt).getHours() < 9);
+  if (hasMorning) addBadge(BadgeType.MORNING_READER);
+
+  const hasNight = user.completedTexts.some(t => new Date(t.completedAt).getHours() >= 20);
+  if (hasNight) addBadge(BadgeType.NIGHT_OWL);
+
+  return newBadges;
+}
+
+export function recordResult(
+  user: User,
+  textId: string,
+  title: string,
+  grade: number,
+  score: number,
+  totalQuestions: number,
+  genre?: string,
+  theme?: string,
+  questionResults?: QuestionResult[],
+  readingTimeSeconds?: number
+): { updatedUser: User; pointsEarned: number; newBadges: Badge[] } {
+  if (genre && theme) recordDailyStats(genre, theme, grade);
+
+  const pointsEarned = calculatePoints(score, totalQuestions, grade);
+  const isPerfect = score === totalQuestions;
+
+  const completedText: CompletedText = {
+    textId, grade, title, score, totalQuestions, pointsEarned,
+    completedAt: new Date().toISOString(),
+    genre, theme, questionResults, readingTimeSeconds,
+  };
+
+  const updatedUser: User = {
+    ...user,
+    totalPoints: user.totalPoints + pointsEarned,
+    completedTexts: [...user.completedTexts, completedText],
+    perfectScoreStreak: isPerfect ? user.perfectScoreStreak + 1 : 0,
+    gradesCompleted: user.gradesCompleted.includes(grade)
+      ? user.gradesCompleted
+      : [...user.gradesCompleted, grade].sort((a, b) => a - b),
+    lastActivity: new Date().toISOString(),
+  };
+
+  const newBadges = checkForNewBadges(updatedUser);
+  updatedUser.badges = [...updatedUser.badges, ...newBadges];
+  saveUser(updatedUser);
+
+  return { updatedUser, pointsEarned, newBadges };
+}
+
+export function getCompletedTextIds(user: User): string[] {
+  return user.completedTexts.map(t => t.textId);
+}
+
+export function getRecentCompletedTexts(user: User, count: number = 10): CompletedText[] {
+  return user.completedTexts.slice(-count);
+}
+
+export function getLastCompletedText(user: User): CompletedText | null {
+  if (user.completedTexts.length === 0) return null;
+  return user.completedTexts[user.completedTexts.length - 1];
+}
+
+export function saveToAllUsers(user: User): void {
+  try {
+    const allUsers = getAllUsers();
+    const existingIndex = allUsers.findIndex(u => u.name.toLowerCase() === user.name.toLowerCase());
+    if (existingIndex >= 0) allUsers[existingIndex] = user;
+    else allUsers.push(user);
+    localStorage.setItem(ALL_USERS_KEY, JSON.stringify(allUsers));
+  } catch { /* ignore */ }
+}
+
+export function getAllUsers(): User[] {
+  try {
+    const stored = localStorage.getItem(ALL_USERS_KEY);
+    if (stored) return JSON.parse(stored) as User[];
+  } catch { /* ignore */ }
+  return [];
+}
+
+function getTodayKey(): string {
+  return new Date().toISOString().split('T')[0];
+}
+
+export function calculateReadingStreak(completedTexts: CompletedText[]): number {
+  if (completedTexts.length === 0) return 0;
+
+  const uniqueDates = new Set<string>();
+  completedTexts.forEach(text => uniqueDates.add(text.completedAt.split('T')[0]));
+
+  const sortedDates = Array.from(uniqueDates).sort((a, b) => b.localeCompare(a));
+  if (sortedDates.length === 0) return 0;
+
+  const today = getTodayKey();
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayKey = yesterday.toISOString().split('T')[0];
+
+  const mostRecentDate = sortedDates[0];
+  if (mostRecentDate !== today && mostRecentDate !== yesterdayKey) return 0;
+
+  let streak = 1;
+  let currentDate = new Date(mostRecentDate);
+
+  for (let i = 1; i < sortedDates.length; i++) {
+    currentDate.setDate(currentDate.getDate() - 1);
+    const expectedDate = currentDate.toISOString().split('T')[0];
+    if (sortedDates.includes(expectedDate)) streak++;
+    else break;
+  }
+
+  return streak;
+}
+
+export function recordDailyStats(genre: string, theme: string, grade: number): void {
+  try {
+    const today = getTodayKey();
+    const statsKey = `${DAILY_STATS_KEY}_${today}`;
+
+    let stats: DailyStats = { date: today, textsRead: 0, genres: {}, themes: {}, grades: {} };
+    const stored = localStorage.getItem(statsKey);
+    if (stored) stats = JSON.parse(stored);
+
+    stats.textsRead++;
+    stats.genres[genre] = (stats.genres[genre] || 0) + 1;
+    stats.themes[theme] = (stats.themes[theme] || 0) + 1;
+    stats.grades[grade] = (stats.grades[grade] || 0) + 1;
+
+    localStorage.setItem(statsKey, JSON.stringify(stats));
+  } catch { /* ignore */ }
+}
+
+export function getDailyStats(date: string): DailyStats | null {
+  try {
+    const stored = localStorage.getItem(`${DAILY_STATS_KEY}_${date}`);
+    if (stored) return JSON.parse(stored);
+  } catch { /* ignore */ }
+  return null;
+}
+
+export function getTeacherStats(): {
+  todayTexts: number;
+  totalTexts: number;
+  topGenres: Array<{ name: string; count: number }>;
+  topThemes: Array<{ name: string; count: number }>;
+  topGrades: Array<{ grade: number; count: number }>;
+  leaderboard: Array<{ name: string; points: number; textsRead: number }>;
+  last7Days: Array<{ date: string; count: number }>;
+} {
+  const allUsers = getAllUsers();
+  let totalTexts = 0;
+  const genresMap = new Map<string, number>();
+  const themesMap = new Map<string, number>();
+  const gradesMap = new Map<number, number>();
+
+  allUsers.forEach(user => {
+    user.completedTexts.forEach(text => {
+      totalTexts++;
+      gradesMap.set(text.grade, (gradesMap.get(text.grade) || 0) + 1);
+    });
+  });
+
+  const today = getTodayKey();
+  const todayStats = getDailyStats(today);
+  const todayTexts = todayStats?.textsRead || 0;
+
+  const last7Days: Array<{ date: string; count: number }> = [];
+  for (let i = 6; i >= 0; i--) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    const dateKey = date.toISOString().split('T')[0];
+    const stats = getDailyStats(dateKey);
+    last7Days.push({ date: dateKey, count: stats?.textsRead || 0 });
+
+    if (stats) {
+      Object.entries(stats.genres).forEach(([genre, count]) => {
+        genresMap.set(genre, (genresMap.get(genre) || 0) + count);
+      });
+      Object.entries(stats.themes).forEach(([theme, count]) => {
+        themesMap.set(theme, (themesMap.get(theme) || 0) + count);
+      });
+    }
+  }
+
+  const topGenres = Array.from(genresMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([name, count]) => ({ name, count }));
+  const topThemes = Array.from(themesMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([name, count]) => ({ name, count }));
+  const topGrades = Array.from(gradesMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 9).map(([grade, count]) => ({ grade, count }));
+
+  const leaderboard = allUsers
+    .map(user => ({ name: user.name, points: user.totalPoints, textsRead: user.completedTexts.length }))
+    .sort((a, b) => b.points - a.points)
+    .slice(0, 10);
+
+  return { todayTexts, totalTexts, topGenres, topThemes, topGrades, leaderboard, last7Days };
+}
+
+export function sendStudentMessage(studentName: string, studentAvatar: string, message: string): StudentMessage {
+  const msg: StudentMessage = {
+    id: `msg_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+    studentName, studentAvatar,
+    message: message.trim(),
+    sentAt: new Date().toISOString(),
+    read: false,
+  };
+  const messages = getStudentMessages();
+  messages.push(msg);
+  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  return msg;
+}
+
+export function getStudentMessages(): StudentMessage[] {
+  try {
+    const stored = localStorage.getItem(MESSAGES_KEY);
+    if (stored) return JSON.parse(stored) as StudentMessage[];
+  } catch { /* ignore */ }
+  return [];
+}
+
+export function markMessageAsRead(messageId: string): void {
+  const messages = getStudentMessages();
+  const msg = messages.find(m => m.id === messageId);
+  if (msg) {
+    msg.read = true;
+    localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  }
+}
+
+export function markAllMessagesAsRead(): void {
+  const messages = getStudentMessages();
+  messages.forEach(m => m.read = true);
+  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+}
+
+export function deleteMessage(messageId: string): void {
+  const messages = getStudentMessages().filter(m => m.id !== messageId);
+  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+}
+
+export function getUnreadMessageCount(): number {
+  return getStudentMessages().filter(m => !m.read).length;
+}

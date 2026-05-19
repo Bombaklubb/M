@@ -1,0 +1,16 @@
+{
+  "name": "Readhunt",
+  "short_name": "Readhunt",
+  "description": "Practice English reading comprehension with level-adapted texts",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/readhunt-favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
