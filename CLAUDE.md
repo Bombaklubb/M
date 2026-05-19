@@ -11,6 +11,7 @@ These apps must always be treated as completely independent projects.
 | **Engelskajakten** | `engelska/` | Students practice English |
 | **Mattejakten** | `matematik/` | Students practice mathematics |
 | **Läsjakten** | `lasforstaelse/` | Students practice reading comprehension |
+| **Readhunt** | `readhunt/` | Students practice English reading comprehension |
 
 These apps share one GitHub repository but must **NEVER** interfere with each other technically.
 

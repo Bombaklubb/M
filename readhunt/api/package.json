@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "dependencies": {
+    "@vercel/kv": "^2.0.0",
+    "@vercel/node": "^5.7.4"
+  }
+}
