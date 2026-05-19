@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getTextCountByGrade } from '../services/libraryService';
-import { BookLogo } from './BookLogo';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { BorderBeam } from './ui/border-beam';
@@ -81,20 +80,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <motion.div
-            className="flex justify-center mb-4"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <BookLogo size={120} />
-          </motion.div>
-          <p className="text-xl text-slate-600 dark:text-slate-400">Loading texts...</p>
-        </motion.div>
+        <p className="text-xl text-slate-600 dark:text-slate-400">Loading texts...</p>
       </div>
     );
   }
@@ -102,33 +88,22 @@ export const SetupView: React.FC<SetupViewProps> = ({
   const colors = getGradeColor(selectedGrade);
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-4">
-      {/* Header */}
-      <motion.div
-        className="text-center mb-3"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="flex items-center justify-center">
-          <BookLogo size={140} />
-        </div>
-      </motion.div>
-
+    <div className="max-w-2xl mx-auto px-4 py-2">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
+        transition={{ delay: 0.1 }}
       >
         <Card className="relative bg-white/92 dark:bg-slate-900/92 backdrop-blur-xl border-white/30 shadow-2xl overflow-hidden">
           <BorderBeam size={200} duration={12} colorFrom="#6366f1" colorTo="#22c55e" />
 
-          <CardContent className="p-4 md:p-6">
+          <CardContent className="p-4 md:p-5">
             {/* Title */}
             <motion.h2
-              className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4 text-center"
+              className="text-lg md:text-xl font-bold text-slate-800 dark:text-white mb-3 text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.2 }}
             >
               Start your reading adventure
             </motion.h2>
@@ -136,27 +111,27 @@ export const SetupView: React.FC<SetupViewProps> = ({
             {/* Continue where you left off */}
             {lastCompletedText && (
               <motion.div
-                className="mb-6"
+                className="mb-3"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
+                transition={{ delay: 0.25 }}
               >
                 <button
                   onClick={() => onSelectGrade(lastCompletedText.grade)}
-                  className="w-full p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border-2 border-emerald-200 dark:border-emerald-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all group"
+                  className="w-full p-3 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border-2 border-emerald-200 dark:border-emerald-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all group"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xl shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-base shadow-md">
                       ▶️
                     </div>
                     <div className="flex-1 text-left">
-                      <div className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-0.5">
+                      <div className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
                         Continue where you left off
                       </div>
-                      <div className="text-slate-700 dark:text-slate-200 font-semibold truncate">
+                      <div className="text-slate-700 dark:text-slate-200 font-semibold text-sm truncate">
                         Level {lastCompletedText.grade} • {lastCompletedText.title}
                       </div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                      <div className="text-xs text-slate-500 dark:text-slate-400">
                         Last time: {lastCompletedText.score}/{lastCompletedText.totalQuestions} correct
                       </div>
                     </div>
@@ -170,7 +145,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
             {/* Grade display */}
             <motion.div
-              className="text-center mb-4"
+              className="text-center mb-3"
               layout
             >
               <AnimatePresence mode="wait">
@@ -181,7 +156,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   className={cn(
-                    "inline-flex items-center justify-center w-20 h-20 rounded-2xl text-4xl font-bold text-white mb-2 shadow-xl",
+                    "inline-flex items-center justify-center w-14 h-14 rounded-2xl text-3xl font-bold text-white mb-1 shadow-lg",
                     `bg-gradient-to-br ${colors.gradient}`
                   )}
                 >
@@ -189,7 +164,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                 </motion.div>
               </AnimatePresence>
               <motion.div
-                className={cn("text-base font-semibold", colors.text)}
+                className={cn("text-sm font-semibold", colors.text)}
                 key={`label-${selectedGrade}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

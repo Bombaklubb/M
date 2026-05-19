@@ -413,11 +413,11 @@ function App() {
     >
       {/* Light overlay on setup page */}
       {appState === AppState.SETUP && (
-        <div className="absolute inset-0 bg-black/20 z-0" />
+        <div className="absolute inset-0 bg-black/20 -z-10" />
       )}
       {/* Fallback bg for other states */}
       {appState !== AppState.SETUP && (
-        <div className="absolute inset-0 bg-sky-50 dark:bg-slate-900 z-0" />
+        <div className="absolute inset-0 bg-sky-50 dark:bg-slate-900 -z-10" />
       )}
 
       <Header
