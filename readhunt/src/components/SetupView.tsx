@@ -119,7 +119,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <Card className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-white/20 shadow-2xl overflow-hidden">
+        <Card className="relative bg-white/92 dark:bg-slate-900/92 backdrop-blur-xl border-white/30 shadow-2xl overflow-hidden">
           <BorderBeam size={200} duration={12} colorFrom="#6366f1" colorTo="#22c55e" />
 
           <CardContent className="p-4 md:p-6">
