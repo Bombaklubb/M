@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { BookLogo } from './BookLogo';
 import { AvatarPicker } from './AvatarPicker';
 import { JaktLinks } from './JaktLinks';
@@ -14,95 +14,91 @@ interface LoginViewProps {
   onLogin: (name: string, avatar: string) => void;
 }
 
+const CLICKABLE_SYMBOLS = [
+  { emoji: '📖', label: 'Read', top: '8%',  left: '5%',  delay: 0,  duration: 20, size: 'text-4xl' },
+  { emoji: '📚', label: 'Books', top: '14%', right: '7%', delay: 2,  duration: 25, size: 'text-5xl' },
+  { emoji: '🔍', label: 'Search', top: '35%', left: '4%', delay: 4,  duration: 21, size: 'text-4xl' },
+  { emoji: '🧭', label: 'Explore', top: '58%', right: '5%', delay: 6, duration: 23, size: 'text-4xl' },
+  { emoji: '🗺️', label: 'Map',    top: '44%', right: '8%', delay: 1, duration: 19, size: 'text-3xl' },
+  { emoji: '⭐', label: 'Stars',  top: '28%', right: '12%', delay: 5, duration: 15, size: 'text-3xl' },
+  { emoji: '🏆', label: 'Trophy', top: '72%', left: '6%',  delay: 3, duration: 22, size: 'text-4xl' },
+  { emoji: '💡', label: 'Ideas',  top: '20%', left: '14%', delay: 7, duration: 18, size: 'text-3xl' },
+  { emoji: '🌟', label: 'Star',   top: '62%', right: '14%', delay: 8, duration: 16, size: 'text-3xl' },
+  { emoji: '🦉', label: 'Owl',    top: '82%', right: '9%', delay: 2, duration: 20, size: 'text-4xl' },
+  { emoji: '✏️', label: 'Write',  top: '88%', left: '12%', delay: 9, duration: 17, size: 'text-3xl' },
+  { emoji: '🎯', label: 'Goal',   top: '50%', left: '10%', delay: 5, duration: 24, size: 'text-3xl' },
+];
+
 export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   const [name, setName] = useState('');
   const [selectedAvatar, setSelectedAvatar] = useState(AVATAR_OPTIONS[0]);
+  const [popLabel, setPopLabel] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (name.trim()) {
-      onLogin(name.trim(), selectedAvatar);
-    }
+    if (name.trim()) onLogin(name.trim(), selectedAvatar);
   };
 
-  // Decorative floating elements for the background
-  const floatingElements = [
-    { emoji: '📖', size: 'text-3xl', top: '8%', left: '5%', delay: 0, duration: 20 },
-    { emoji: '📚', size: 'text-4xl', top: '15%', right: '8%', delay: 2, duration: 25 },
-    { emoji: '📕', size: 'text-2xl', top: '70%', left: '3%', delay: 5, duration: 22 },
-    { emoji: '📗', size: 'text-3xl', top: '80%', right: '5%', delay: 8, duration: 18 },
-    { emoji: '📘', size: 'text-2xl', top: '40%', left: '2%', delay: 3, duration: 24 },
-    { emoji: '🔍', size: 'text-2xl', top: '25%', left: '7%', delay: 4, duration: 21 },
-    { emoji: '🧭', size: 'text-3xl', top: '60%', right: '4%', delay: 6, duration: 23 },
-    { emoji: '🗺️', size: 'text-2xl', top: '45%', right: '6%', delay: 1, duration: 19 },
-    { emoji: '🍃', size: 'text-xl', top: '12%', left: '12%', delay: 7, duration: 16 },
-    { emoji: '🌿', size: 'text-2xl', top: '85%', left: '10%', delay: 9, duration: 17 },
-    { emoji: '🌲', size: 'text-3xl', top: '5%', right: '15%', delay: 0, duration: 26 },
-    { emoji: '🌳', size: 'text-2xl', top: '75%', right: '12%', delay: 4, duration: 20 },
-    { emoji: '✨', size: 'text-xl', top: '20%', left: '15%', delay: 2, duration: 14 },
-    { emoji: '⭐', size: 'text-lg', top: '30%', right: '10%', delay: 5, duration: 15 },
-    { emoji: '💫', size: 'text-xl', top: '55%', left: '8%', delay: 3, duration: 13 },
-    { emoji: '🌟', size: 'text-lg', top: '65%', right: '15%', delay: 7, duration: 16 },
-  ];
+  const handleSymbolClick = (label: string) => {
+    setPopLabel(label);
+    setTimeout(() => setPopLabel(null), 900);
+  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ backgroundImage: 'url(/readhunt.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {/* Dark overlay so the card stays readable */}
-      <div className="absolute inset-0 bg-black/55 backdrop-blur-[1px]" />
-      {/* Animated floating background elements */}
-      {floatingElements.map((el, index) => (
-        <motion.div
+    <div
+      className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
+      style={{ backgroundImage: 'url(/ny%20readhunt.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Clickable floating symbols */}
+      {CLICKABLE_SYMBOLS.map((el, index) => (
+        <motion.button
           key={index}
-          className={cn("absolute pointer-events-none select-none", el.size)}
-          style={{
-            top: el.top,
-            left: el.left,
-            right: el.right,
-          }}
-          initial={{ opacity: 0, y: 0 }}
+          type="button"
+          onClick={() => handleSymbolClick(el.label)}
+          className={cn(
+            'absolute z-10 cursor-pointer select-none leading-none',
+            el.size
+          )}
+          style={{ top: el.top, left: (el as any).left, right: (el as any).right }}
+          initial={{ opacity: 0 }}
           animate={{
-            opacity: [0.15, 0.25, 0.15],
-            y: [0, -20, 0],
-            rotate: [0, 5, -5, 0]
+            opacity: [0.55, 0.8, 0.55],
+            y: [0, -14, 0],
+            rotate: [0, 4, -4, 0],
           }}
-          transition={{
-            duration: el.duration,
-            delay: el.delay,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          transition={{ duration: el.duration, delay: el.delay, repeat: Infinity, ease: 'easeInOut' }}
+          whileHover={{ scale: 1.35, opacity: 1 }}
+          whileTap={{ scale: 0.85 }}
+          aria-label={el.label}
         >
           {el.emoji}
-        </motion.div>
+          {/* Pop label on click */}
+          <AnimatePresence>
+            {popLabel === el.label && (
+              <motion.span
+                key="pop"
+                className="absolute -top-7 left-1/2 -translate-x-1/2 bg-white text-slate-800 text-xs font-bold px-2 py-1 rounded-full shadow-lg pointer-events-none whitespace-nowrap"
+                initial={{ opacity: 0, y: 4, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -6, scale: 0.8 }}
+                transition={{ duration: 0.2 }}
+              >
+                {el.label}
+              </motion.span>
+            )}
+          </AnimatePresence>
+        </motion.button>
       ))}
 
-      {/* Animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            x: [0, -50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
+      {/* Login card */}
       <motion.div
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-md"
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="relative z-20 w-full max-w-md"
       >
         <Card className="relative bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-white/20 shadow-2xl overflow-hidden">
           <BorderBeam size={300} duration={10} colorFrom="#6366f1" colorTo="#a855f7" />
@@ -112,9 +108,9 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               className="flex justify-center mb-2"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+              transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
             >
-              <Sparkles sparklesCount={8} colors={{ first: "#6366f1", second: "#a855f7" }}>
+              <Sparkles sparklesCount={8} colors={{ first: '#6366f1', second: '#a855f7' }}>
                 <BookLogo size={160} />
               </Sparkles>
             </motion.div>
@@ -130,10 +126,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <label
-                  htmlFor="name"
-                  className="block text-base font-bold text-slate-800 dark:text-slate-200 mb-2"
-                >
+                <label htmlFor="name" className="block text-base font-bold text-slate-800 dark:text-slate-200 mb-2">
                   What is your name?
                 </label>
                 <input
@@ -155,10 +148,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                 <label className="block text-base font-bold text-slate-800 dark:text-slate-200 mb-3">
                   Choose your avatar
                 </label>
-                <AvatarPicker
-                  selectedAvatar={selectedAvatar}
-                  onSelect={setSelectedAvatar}
-                />
+                <AvatarPicker selectedAvatar={selectedAvatar} onSelect={setSelectedAvatar} />
               </motion.div>
 
               <motion.div
@@ -166,13 +156,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <Button
-                  type="submit"
-                  disabled={!name.trim()}
-                  variant="gradient"
-                  size="xl"
-                  className="w-full"
-                >
+                <Button type="submit" disabled={!name.trim()} variant="gradient" size="xl" className="w-full">
                   Start reading
                 </Button>
               </motion.div>
