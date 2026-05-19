@@ -22,6 +22,7 @@ interface ResultModalProps {
   chestEarned?: ChestType;
   bossUnlocked?: boolean;
   repeatAttemptNumber?: number;
+  isNewRecord?: boolean;
   onContinue: () => void;
   onRetry: () => void;
 }
@@ -34,6 +35,7 @@ export default function ResultModal({
   chestEarned,
   bossUnlocked,
   repeatAttemptNumber,
+  isNewRecord,
   onContinue,
   onRetry,
 }: ResultModalProps) {
@@ -43,11 +45,17 @@ export default function ResultModal({
   return (
     <div className="fixed inset-0 bg-indigo-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
       <div
-        className="bg-white dark:bg-gray-800 rounded-4xl p-8 max-w-md w-full text-center animate-slide-up border-4 border-indigo-100 dark:border-gray-700"
+        className="relative bg-white dark:bg-gray-800 rounded-4xl p-8 max-w-md w-full text-center animate-slide-up border-4 border-indigo-100 dark:border-gray-700"
         style={{
           boxShadow: "0 10px 0 0 rgba(99, 102, 241, 0.15), 0 20px 40px -8px rgba(99, 102, 241, 0.25), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
         }}
       >
+        {isNewRecord && (
+          <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-amber-500 text-white text-sm font-black px-5 py-2 rounded-full shadow-lg animate-bounce-slow whitespace-nowrap border-2 border-yellow-300">
+            🏆 NY REKORD!
+          </div>
+        )}
+
         <div className="text-7xl mb-4 animate-bounce-slow">{passed ? "🎉" : "💪"}</div>
 
         <h2 className="text-3xl font-black text-indigo-900 dark:text-gray-100 mb-2">

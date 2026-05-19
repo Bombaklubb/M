@@ -568,6 +568,188 @@
       ]
     },
     {
+      "id": "lag-bild-1",
+      "title": "Bild & Ord",
+      "description": "Titta på bilden och välj rätt engelskt ord.",
+      "icon": "🖼️",
+      "pointsRequired": 0,
+      "bonusPoints": 15,
+      "helpText": [
+        "Titta på bilden och välj det engelska ord som stämmer.",
+        "Tänk på vad du ser – vad är det för föremål, djur eller sak?"
+      ],
+      "exercises": [
+        {
+          "id": "lag-bild-1-1",
+          "type": "multiple-choice",
+          "image": "🍎",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Apple",
+            "Banana",
+            "Orange",
+            "Grape"
+          ],
+          "correctIndex": 0,
+          "explanation": "🍎 = apple (äpple)"
+        },
+        {
+          "id": "lag-bild-1-2",
+          "type": "multiple-choice",
+          "image": "🐶",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Cat",
+            "Dog",
+            "Bird",
+            "Fish"
+          ],
+          "correctIndex": 1,
+          "explanation": "🐶 = dog (hund)"
+        },
+        {
+          "id": "lag-bild-1-3",
+          "type": "multiple-choice",
+          "image": "🚗",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Bus",
+            "Train",
+            "Car",
+            "Bike"
+          ],
+          "correctIndex": 2,
+          "explanation": "🚗 = car (bil)"
+        },
+        {
+          "id": "lag-bild-1-4",
+          "type": "multiple-choice",
+          "image": "🏠",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "School",
+            "Shop",
+            "House",
+            "Park"
+          ],
+          "correctIndex": 2,
+          "explanation": "🏠 = house (hus)"
+        },
+        {
+          "id": "lag-bild-1-5",
+          "type": "multiple-choice",
+          "image": "🌞",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Moon",
+            "Star",
+            "Cloud",
+            "Sun"
+          ],
+          "correctIndex": 3,
+          "explanation": "🌞 = sun (sol)"
+        },
+        {
+          "id": "lag-bild-1-6",
+          "type": "multiple-choice",
+          "image": "🐱",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Dog",
+            "Rabbit",
+            "Cat",
+            "Hamster"
+          ],
+          "correctIndex": 2,
+          "explanation": "🐱 = cat (katt)"
+        },
+        {
+          "id": "lag-bild-1-7",
+          "type": "multiple-choice",
+          "image": "🍌",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Apple",
+            "Mango",
+            "Grape",
+            "Banana"
+          ],
+          "correctIndex": 3,
+          "explanation": "🍌 = banana (banan)"
+        },
+        {
+          "id": "lag-bild-1-8",
+          "type": "multiple-choice",
+          "image": "⚽",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Tennis",
+            "Football",
+            "Basketball",
+            "Volleyball"
+          ],
+          "correctIndex": 1,
+          "explanation": "⚽ = football (fotboll)"
+        },
+        {
+          "id": "lag-bild-1-9",
+          "type": "multiple-choice",
+          "image": "🌲",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Flower",
+            "Grass",
+            "Tree",
+            "Leaf"
+          ],
+          "correctIndex": 2,
+          "explanation": "🌲 = tree (träd)"
+        },
+        {
+          "id": "lag-bild-1-10",
+          "type": "multiple-choice",
+          "image": "🎒",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Shoe",
+            "Hat",
+            "Coat",
+            "Bag"
+          ],
+          "correctIndex": 3,
+          "explanation": "🎒 = bag (väska/ryggsäck)"
+        },
+        {
+          "id": "lag-bild-1-11",
+          "type": "multiple-choice",
+          "image": "📖",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Pen",
+            "Book",
+            "Table",
+            "Chair"
+          ],
+          "correctIndex": 1,
+          "explanation": "📖 = book (bok)"
+        },
+        {
+          "id": "lag-bild-1-12",
+          "type": "multiple-choice",
+          "image": "🍕",
+          "question": "Vad heter detta på engelska?",
+          "options": [
+            "Pasta",
+            "Soup",
+            "Pizza",
+            "Cake"
+          ],
+          "correctIndex": 2,
+          "explanation": "🍕 = pizza"
+        }
+      ]
+    },
+    {
       "id": "lag-dial-1",
       "title": "Dialoger – Lucktext",
       "description": "Fyll i det saknade ordet i dialogerna.",

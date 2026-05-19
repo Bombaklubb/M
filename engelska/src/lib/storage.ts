@@ -285,3 +285,63 @@ export function importShareCode(code: string): StudentData | null {
     return null;
   }
 }
+
+// ─── Daily streak ─────────────────────────────────────────────────────────────
+
+interface StreakData { days: number; lastDate: string; }
+
+function streakKey(name: string) {
+  return `engelskajakten_streak_${name.toLowerCase().trim()}`;
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+}
+
+export function getStreak(studentName: string): number {
+  if (typeof window === "undefined") return 0;
+  try {
+    const raw = localStorage.getItem(streakKey(studentName));
+    if (!raw) return 0;
+    return (JSON.parse(raw) as StreakData).days;
+  } catch { return 0; }
+}
+
+export function updateStreak(studentName: string): number {
+  if (typeof window === "undefined") return 0;
+  const key = streakKey(studentName);
+  const today = todayStr();
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  try {
+    const raw = localStorage.getItem(key);
+    const prev: StreakData = raw ? JSON.parse(raw) : { days: 0, lastDate: "" };
+    if (prev.lastDate === today) return prev.days; // already counted today
+    const newDays = prev.lastDate === yesterday ? prev.days + 1 : 1;
+    localStorage.setItem(key, JSON.stringify({ days: newDays, lastDate: today }));
+    return newDays;
+  } catch { return 0; }
+}
+
+// ─── Exercise position (resume where you left off) ────────────────────────────
+
+function posKey(stageId: string, moduleId: string) {
+  return `engelskajakten_pos_${stageId}_${moduleId}`;
+}
+
+export function saveExercisePosition(stageId: string, moduleId: string, index: number): void {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(posKey(stageId, moduleId), String(index));
+}
+
+export function loadExercisePosition(stageId: string, moduleId: string): number | null {
+  if (typeof window === "undefined") return null;
+  const val = localStorage.getItem(posKey(stageId, moduleId));
+  if (val === null) return null;
+  const n = parseInt(val, 10);
+  return isNaN(n) ? null : n;
+}
+
+export function clearExercisePosition(stageId: string, moduleId: string): void {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem(posKey(stageId, moduleId));
+}

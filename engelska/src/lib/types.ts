@@ -25,6 +25,7 @@ export type ReadingQuestionType = "on-the-line" | "between-the-lines" | "beyond-
 export interface MultipleChoiceExercise {
   id: string;
   type: "multiple-choice";
+  image?: string;  // emoji or image path shown above question
   question: string;
   options: string[];
   correctIndex: number;
