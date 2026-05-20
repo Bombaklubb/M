@@ -7,5 +7,5 @@
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ],
-  "ignoreCommand": "git diff HEAD~1 HEAD -- lasforstaelse/ 2>/dev/null | grep -q . && exit 1 || exit 0"
+  "ignoreCommand": "git diff-tree --no-commit-id -r --name-only -m HEAD -- lasforstaelse/ 2>/dev/null | grep -q . && exit 1 || exit 0"
 }
