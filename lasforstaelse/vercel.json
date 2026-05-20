@@ -7,5 +7,5 @@
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ],
-  "ignoreCommand": "git diff --quiet origin/main $VERCEL_GIT_COMMIT_SHA -- lasforstaelse/ 2>/dev/null && exit 0 || exit 1"
+  "ignoreCommand": "git diff HEAD~1 HEAD -- lasforstaelse/ 2>/dev/null | grep -q . && exit 1 || exit 0"
 }
