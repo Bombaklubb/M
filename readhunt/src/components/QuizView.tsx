@@ -98,12 +98,12 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const inferenceQuestions = questions.filter(q => q.type === 'inference');
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg border-b border-slate-200/50 dark:border-slate-700/50 px-4 py-4 sticky top-0 z-20"
+        className="bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm px-4 py-3 sticky top-16 z-20"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">{text.title}</h2>

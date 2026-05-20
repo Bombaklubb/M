@@ -353,7 +353,7 @@ function App() {
   // Loading screen
   if (loading) {
     return (
-      <div className="min-h-screen bg-sky-50 dark:bg-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 flex items-center justify-center">
         <div className="text-center">
           <div className="flex justify-center mb-4 animate-bounce">
             <BookLogo size={120} />
@@ -372,7 +372,7 @@ function App() {
   // Profile view
   if (showProfile) {
     return (
-      <div className="min-h-screen bg-sky-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
         <Header
           user={user}
           onLogout={handleLogout}
@@ -417,7 +417,7 @@ function App() {
       )}
       {/* Fallback bg for other states */}
       {appState !== AppState.SETUP && (
-        <div className="absolute inset-0 bg-sky-50 dark:bg-slate-900 -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 -z-10" />
       )}
 
       <Header

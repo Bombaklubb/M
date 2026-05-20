@@ -113,7 +113,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 py-8">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 py-8">
       <div className="max-w-3xl mx-auto px-4">
         {/* Result card */}
         <motion.div
@@ -151,8 +151,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                You got <span className="font-bold text-indigo-600 dark:text-indigo-400">{correctCount}</span> av{' '}
-                <span className="font-bold dark:text-white">{totalQuestions}</span> rätt
+                You got <span className="font-bold text-indigo-600 dark:text-indigo-400">{correctCount}</span> out of{' '}
+                <span className="font-bold dark:text-white">{totalQuestions}</span> correct
               </motion.p>
 
               {/* Score circle with gradient */}
