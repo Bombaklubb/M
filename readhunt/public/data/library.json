@@ -490,5 +490,265 @@
       "generatedAt": "2026-05-19",
       "model": "gpt-4o"
     }
+  },
+  {
+    "id": "ak1-tema-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "friendship",
+    "title": "The Lost Hat",
+    "text": "Mia walked to school on a windy morning. Her red hat flew away from her head. The hat landed near a small tree. A boy named Leo picked it up and ran after Mia. He gave the hat back with a smile. Mia thanked Leo before they walked to school together.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was the weather like?",
+        "options": ["Rainy", "Windy", "Snowy", "Hot"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What color was Mia's hat?",
+        "options": ["Blue", "Green", "Red", "Yellow"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did the hat land?",
+        "options": ["Near a tree", "In a car", "On a roof", "By the river"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Who helped Mia?",
+        "options": ["Ella", "Sam", "Noah", "Leo"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What did Leo do with the hat?",
+        "options": ["He hid the hat", "He gave the hat back", "He threw the hat away", "He kept the hat"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "How did Mia feel at the end?",
+        "options": ["Angry", "Sleepy", "Thankful", "Scared"],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 50,
+      "fingerprint": "ak1-tema-001",
+      "generatedAt": "2026-05-20",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak1-tema-002",
+    "grade": 1,
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "The Tiny Garden",
+    "text": "Amina and her grandfather planted flowers in a tiny garden behind their home. They used small shovels and carried water in green buckets. Every morning, Amina checked the flowers before breakfast. After two weeks, bright yellow flowers opened in the sun. Amina gave one flower to her neighbor, who smiled happily.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who planted the flowers with Amina?",
+        "options": ["Her brother", "Her teacher", "Her grandfather", "Her cousin"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where was the garden?",
+        "options": ["Behind the home", "At school", "Next to a lake", "Inside a shop"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What color were the buckets?",
+        "options": ["Blue", "Green", "Black", "White"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "When did Amina check the flowers?",
+        "options": ["After dinner", "At night", "Before breakfast", "During class"],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How long did it take for the flowers to open?",
+        "options": ["One day", "Two weeks", "One month", "Three hours"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Who received a flower from Amina?",
+        "options": ["Her friend", "Her mother", "Her teacher", "Her neighbor"],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 48,
+      "fingerprint": "ak1-tema-002",
+      "generatedAt": "2026-05-20",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak1-tema-003",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "The New Soccer Ball",
+    "text": "Elliot got a new soccer ball for his birthday. After school, he went to the park with his sister Kim. They kicked the ball across the grass and practiced passing. A child in a wheelchair asked to join the game. Elliot and Kim smiled and played together until the sky became dark.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Elliot get for his birthday?",
+        "options": ["A soccer ball", "A kite", "A skateboard", "A backpack"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who went to the park with Elliot?",
+        "options": ["His teacher", "His sister", "His cousin", "His uncle"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did they play?",
+        "options": ["At the beach", "In the gym", "At the park", "Inside a house"],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What did the child in the wheelchair ask?",
+        "options": ["To borrow money", "To watch quietly", "To leave the park", "To join the game"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What did Elliot and Kim practice?",
+        "options": ["Passing the ball", "Drawing pictures", "Riding bikes", "Reading books"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "When did they stop playing?",
+        "options": ["When it rained", "When the sky became dark", "Before lunch", "After breakfast"],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 50,
+      "fingerprint": "ak1-tema-003",
+      "generatedAt": "2026-05-20",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak1-tema-004",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "everyday life",
+    "title": "The Busy Library",
+    "text": "Nora visited the town library with her two fathers on Saturday morning. She looked at books about animals and space. A librarian named Ben helped Nora find a story about dolphins. Nora sat in a soft chair and read quietly. Before leaving, she borrowed two books and thanked Ben for helping her.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Nora go?",
+        "options": ["To the library", "To the zoo", "To the farm", "To the pool"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who went with Nora?",
+        "options": ["Her friends", "Her two fathers", "Her teacher", "Her brother"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What animal was in the story Ben found?",
+        "options": ["Lions", "Cats", "Dolphins", "Horses"],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Who helped Nora find the book?",
+        "options": ["Liam", "Mia", "Ella", "Ben"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What did Nora do while sitting in the chair?",
+        "options": ["She read quietly", "She slept", "She ate lunch", "She painted"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How many books did Nora borrow?",
+        "options": ["One", "Two", "Four", "Five"],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 49,
+      "fingerprint": "ak1-tema-004",
+      "generatedAt": "2026-05-20",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak1-tema-005",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "food",
+    "title": "The Rainy Day Soup",
+    "text": "Rain fell outside while Omar and his mother cooked soup in the kitchen. They cut carrots, potatoes, and onions into small pieces. Omar stirred the soup carefully with a wooden spoon. The warm smell filled the house. When the soup was ready, Omar shared a bowl with his elderly neighbor, Mrs. Clark.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was the weather like?",
+        "options": ["Sunny", "Cloudy", "Rainy", "Snowy"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Omar cook?",
+        "options": ["Bread", "Soup", "Cake", "Rice"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Omar use to stir the soup?",
+        "options": ["A fork", "A knife", "A plate", "A wooden spoon"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Which vegetable was in the soup?",
+        "options": ["Carrots", "Corn", "Beans", "Peas"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did the house smell?",
+        "options": ["Warm and good", "Dirty", "Like smoke", "Like paint"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Who shared soup with Omar?",
+        "options": ["His coach", "Mrs. Clark", "His cousin", "Ben"],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 50,
+      "fingerprint": "ak1-tema-005",
+      "generatedAt": "2026-05-20",
+      "model": "gpt-4o"
+    }
   }
 ]
