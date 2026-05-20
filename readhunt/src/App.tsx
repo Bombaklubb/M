@@ -405,10 +405,9 @@ function App() {
     <div
       className="min-h-screen relative overflow-hidden"
       style={appState === AppState.SETUP ? {
-        backgroundImage: 'url(/ny%20readhunt.png)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage: 'url(/senaste%20readhunt.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundColor: '#0c1a2e',
       } : undefined}
     >
