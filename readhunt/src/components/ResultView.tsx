@@ -124,20 +124,75 @@ export const ResultView: React.FC<ResultViewProps> = ({
           <Card className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-white/20 shadow-2xl overflow-hidden mb-6">
             <BorderBeam size={300} duration={10} colorFrom={percentage >= 60 ? "#22c55e" : "#f59e0b"} colorTo={percentage >= 60 ? "#14b8a6" : "#ef4444"} />
 
-            <CardContent className="p-8 text-center">
-              <motion.div
-                className="text-8xl mb-4"
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-              >
-                <Sparkles sparklesCount={percentage >= 80 ? 12 : 6} colors={{ first: "#fbbf24", second: "#f59e0b" }}>
-                  {getEmoji()}
-                </Sparkles>
-              </motion.div>
+            <CardContent className="p-5 text-center">
+              {/* Top row: emoji + score circle + points side by side */}
+              <div className="flex items-center justify-center gap-6 mb-4">
+                <motion.div
+                  className="text-5xl"
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+                >
+                  <Sparkles sparklesCount={percentage >= 80 ? 8 : 4} colors={{ first: "#fbbf24", second: "#f59e0b" }}>
+                    {getEmoji()}
+                  </Sparkles>
+                </motion.div>
+
+                {/* Score circle */}
+                <motion.div
+                  className="relative w-28 h-28"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6, type: "spring" }}
+                >
+                  <svg className="w-28 h-28 transform -rotate-90" viewBox="0 0 112 112">
+                    <defs>
+                      <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor={percentage >= 60 ? "#22c55e" : "#f59e0b"} />
+                        <stop offset="100%" stopColor={percentage >= 60 ? "#14b8a6" : "#ef4444"} />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="56" cy="56" r="48" className="stroke-slate-100 dark:stroke-slate-700" strokeWidth="10" fill="none" />
+                    <motion.circle
+                      cx="56" cy="56" r="48"
+                      stroke="url(#scoreGradient)" strokeWidth="10" fill="none" strokeLinecap="round"
+                      initial={{ strokeDasharray: "0 302" }}
+                      animate={{ strokeDasharray: `${(animatedPercentage / 100) * 302} 302` }}
+                      transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
+                    />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.span
+                      className={cn("text-2xl font-bold bg-gradient-to-br bg-clip-text text-transparent", getGradientColor())}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1 }}
+                    >
+                      {percentage}%
+                    </motion.span>
+                  </div>
+                </motion.div>
+
+                {/* Points earned */}
+                <motion.div
+                  className="bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/30 dark:to-yellow-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-2xl px-4 py-3"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.9 }}
+                >
+                  <motion.span
+                    className="text-2xl block"
+                    animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
+                    transition={{ duration: 0.5, delay: 1.2 }}
+                  >⭐</motion.span>
+                  <span className="text-base font-bold bg-gradient-to-r from-amber-600 to-yellow-600 dark:from-amber-400 dark:to-yellow-400 bg-clip-text text-transparent">
+                    +{pointsEarned} pts
+                  </span>
+                </motion.div>
+              </div>
 
               <motion.h1
-                className="text-3xl font-extrabold text-slate-800 dark:text-white mb-2"
+                className="text-2xl font-extrabold text-slate-800 dark:text-white mb-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -146,7 +201,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
               </motion.h1>
 
               <motion.p
-                className="text-xl text-slate-600 dark:text-slate-300 mb-8"
+                className="text-base text-slate-600 dark:text-slate-300 mb-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
@@ -155,84 +210,16 @@ export const ResultView: React.FC<ResultViewProps> = ({
                 <span className="font-bold dark:text-white">{totalQuestions}</span> correct
               </motion.p>
 
-              {/* Score circle with gradient */}
-              <motion.div
-                className="relative w-44 h-44 mx-auto mb-8"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6, type: "spring" }}
-              >
-                <svg className="w-44 h-44 transform -rotate-90" viewBox="0 0 176 176">
-                  <defs>
-                    <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor={percentage >= 60 ? "#22c55e" : "#f59e0b"} />
-                      <stop offset="100%" stopColor={percentage >= 60 ? "#14b8a6" : "#ef4444"} />
-                    </linearGradient>
-                  </defs>
-                  <circle
-                    cx="88"
-                    cy="88"
-                    r="76"
-                    className="stroke-slate-100 dark:stroke-slate-700"
-                    strokeWidth="14"
-                    fill="none"
-                  />
-                  <motion.circle
-                    cx="88"
-                    cy="88"
-                    r="76"
-                    stroke="url(#scoreGradient)"
-                    strokeWidth="14"
-                    fill="none"
-                    strokeLinecap="round"
-                    initial={{ strokeDasharray: "0 478" }}
-                    animate={{ strokeDasharray: `${(animatedPercentage / 100) * 478} 478` }}
-                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.8 }}
-                  />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.span
-                    className={cn("text-5xl font-bold bg-gradient-to-br bg-clip-text text-transparent", getGradientColor())}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1 }}
-                  >
-                    {percentage}%
-                  </motion.span>
-                </div>
-              </motion.div>
-
-              {/* Points earned */}
-              <motion.div
-                className="relative bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-amber-900/30 dark:to-yellow-900/30 border-2 border-amber-200 dark:border-amber-700 rounded-2xl p-5 mb-6 inline-block overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 }}
-              >
-                <div className="flex items-center gap-3 justify-center relative z-10">
-                  <motion.span
-                    className="text-4xl"
-                    animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
-                    transition={{ duration: 0.5, delay: 1.2 }}
-                  >
-                    ⭐
-                  </motion.span>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-yellow-600 dark:from-amber-400 dark:to-yellow-400 bg-clip-text text-transparent">
-                    +{pointsEarned} points
-                  </span>
-                </div>
-              </motion.div>
-
               {/* New badges */}
               <AnimatePresence>
                 {newBadges.length > 0 && (
                   <motion.div
-                    className="bg-gradient-to-br from-violet-50 to-purple-100 dark:from-violet-900/30 dark:to-purple-900/30 border-2 border-violet-200 dark:border-violet-700 rounded-2xl p-5 mb-6"
+                    className="bg-gradient-to-br from-violet-50 to-purple-100 dark:from-violet-900/30 dark:to-purple-900/30 border-2 border-violet-200 dark:border-violet-700 rounded-2xl p-3 mb-4"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 1.1 }}
                   >
-                    <h3 className="font-bold text-violet-900 dark:text-violet-200 mb-4 text-lg">
+                    <h3 className="font-bold text-violet-900 dark:text-violet-200 mb-2 text-base">
                       🎉 New achievements!
                     </h3>
                     <div className="flex flex-wrap gap-3 justify-center">
@@ -257,29 +244,29 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
               {/* Learning summary */}
               <motion.div
-                className="bg-gradient-to-br from-sky-50 to-blue-100 dark:from-sky-900/30 dark:to-blue-900/30 border-2 border-sky-200 dark:border-sky-700 rounded-2xl p-5 mb-6 text-left"
+                className="bg-gradient-to-br from-sky-50 to-blue-100 dark:from-sky-900/30 dark:to-blue-900/30 border-2 border-sky-200 dark:border-sky-700 rounded-2xl p-3 mb-4 text-left"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.15 }}
               >
-                <h3 className="font-bold text-sky-900 dark:text-sky-200 mb-3 text-lg flex items-center gap-2">
+                <h3 className="font-bold text-sky-900 dark:text-sky-200 mb-2 text-sm flex items-center gap-2">
                   📚 What you practised
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {/* Topic/theme */}
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">🎯</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">🎯</span>
                     <div>
-                      <div className="text-sm font-medium text-sky-700 dark:text-sky-300">Topic</div>
-                      <div className="text-slate-700 dark:text-slate-200">{text.theme || text.genre}</div>
+                      <span className="text-xs font-medium text-sky-700 dark:text-sky-300">Topic: </span>
+                      <span className="text-xs text-slate-700 dark:text-slate-200">{text.theme || text.genre}</span>
                     </div>
                   </div>
 
                   {/* Question types practiced */}
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">🧠</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-base">🧠</span>
                     <div>
-                      <div className="text-sm font-medium text-sky-700 dark:text-sky-300">Question types practised</div>
+                      <span className="text-xs font-medium text-sky-700 dark:text-sky-300">Practised: </span>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {[...new Set(text.questions.map(q => q.type))].map(type => {
                           const typeInfo = QUESTION_TYPE_LABELS[type];
@@ -297,11 +284,10 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   </div>
 
                   {/* Reading insight */}
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">💡</span>
+                  <div className="flex items-start gap-2">
+                    <span className="text-base">💡</span>
                     <div>
-                      <div className="text-sm font-medium text-sky-700 dark:text-sky-300">Tip</div>
-                      <div className="text-slate-600 dark:text-slate-300 text-sm">
+                      <div className="text-xs text-slate-600 dark:text-slate-300">
                         {percentage >= 80
                           ? 'Excellent! You understand the text well. Try a harder level!'
                           : percentage >= 60
@@ -315,7 +301,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
               {/* Show/hide details */}
               <motion.div
-                className="mb-6"
+                className="mb-3"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.3 }}
@@ -336,7 +322,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
 
               {/* Actions - three level options */}
               <motion.div
-                className="flex flex-col gap-3"
+                className="flex flex-col gap-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4 }}
