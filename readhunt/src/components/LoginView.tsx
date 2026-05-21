@@ -47,22 +47,22 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
             >
               <Sparkles sparklesCount={8} colors={{ first: '#6366f1', second: '#a855f7' }}>
-                <img src="/readhunt.png" alt="Readhunt" className="w-40 h-40 object-contain drop-shadow-xl" />
+                <img src="/readhunt.png" alt="Readhunt" className="w-24 h-24 object-contain drop-shadow-xl" />
               </Sparkles>
             </motion.div>
-            <CardDescription className="text-indigo-500 dark:text-indigo-400 text-lg font-medium">
+            <CardDescription className="text-indigo-500 dark:text-indigo-400 text-base font-medium">
               Your Smart Reading Companion
             </CardDescription>
           </CardHeader>
 
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <CardContent className="pt-2">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <label htmlFor="name" className="block text-base font-bold text-slate-800 dark:text-slate-200 mb-2">
+                <label htmlFor="name" className="block text-sm font-bold text-slate-800 dark:text-slate-200 mb-1">
                   What is your name?
                 </label>
                 <input
@@ -70,7 +70,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full p-4 text-lg rounded-xl bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/20 focus:outline-none transition-all duration-200"
+                  className="w-full p-3 text-base rounded-xl bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/20 focus:outline-none transition-all duration-200"
                   autoFocus
                   maxLength={30}
                 />
@@ -81,7 +81,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <label className="block text-base font-bold text-slate-800 dark:text-slate-200 mb-3">
+                <label className="block text-sm font-bold text-slate-800 dark:text-slate-200 mb-2">
                   Choose your avatar
                 </label>
                 <AvatarPicker selectedAvatar={selectedAvatar} onSelect={setSelectedAvatar} />
@@ -92,19 +92,19 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                <Button type="submit" disabled={!name.trim()} variant="gradient" size="xl" className="w-full">
+                <Button type="submit" disabled={!name.trim()} variant="gradient" size="lg" className="w-full">
                   Start reading
                 </Button>
               </motion.div>
             </form>
 
             <motion.div
-              className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 text-center"
+              className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <p className="text-slate-500 dark:text-slate-400 text-sm">
+              <p className="text-slate-500 dark:text-slate-400 text-xs">
                 Readhunt helps you practise English reading comprehension at your level
               </p>
             </motion.div>
