@@ -27,7 +27,7 @@ function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
       >
         <img
           src={meta.openedImage}
-          alt={`${meta.label} öppnad`}
+          alt={`${meta.label} opened`}
           className="w-16 h-16 object-contain"
         />
       </div>
@@ -37,7 +37,7 @@ function OpenedChestDisplay({ chest }: OpenedChestDisplayProps) {
         {meta.label}
       </span>
       <span className="text-[10px] text-amber-600 dark:text-amber-400">
-        +{chest.openedReward?.match(/\+(\d+)/)?.[1] || '?'} poäng
+        +{chest.openedReward?.match(/\+(\d+)/)?.[1] || '?'} points
       </span>
     </div>
   );
@@ -61,7 +61,7 @@ function TrophyShelf({ chests }: TrophyShelfProps) {
     <section className="space-y-6">
       <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
         <span>🏆</span>
-        Trofehylla ({chests.length})
+        Trophy Shelf ({chests.length})
       </h2>
 
       <div
@@ -207,9 +207,9 @@ function ChestCard({ chest, onOpen }: ChestCardProps) {
       </span>
 
       {chest.opened ? (
-        <span className="text-xs text-gray-400 dark:text-gray-500">Opend</span>
+        <span className="text-xs text-gray-400 dark:text-gray-500">Opened</span>
       ) : (
-        <span className="text-xs text-white/80 mt-1">Tryck för att öppna</span>
+        <span className="text-xs text-white/80 mt-1">Tap to open</span>
       )}
 
       {chest.opened && chest.openedReward && (
@@ -256,7 +256,7 @@ function RewardPopup({
           🎉
         </div>
         <h2 className="text-2xl font-black text-amber-700 dark:text-amber-300 mb-3">
-          Kistan är öppnad!
+          Chest Opened!
         </h2>
         <p className="text-base font-semibold text-gray-800 dark:text-gray-100 mb-6 leading-relaxed">
           {result.description}
@@ -270,7 +270,7 @@ function RewardPopup({
             boxShadow: '0 4px 12px rgba(217,119,6,0.4)',
           }}
         >
-          Toppen!
+          Awesome!
         </button>
         <style>{`
           @keyframes popIn {
@@ -333,13 +333,13 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
             onClick={onClose}
             className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
           >
-            ← Tillbaka
+            ← Back
           </button>
           <div className="flex items-center gap-3">
             <span className="text-4xl">🏆</span>
             <div>
-              <h1 className="text-2xl font-black">Hemliga Kistor</h1>
-              <p className="text-white/70 text-sm">Open kistor och vinn belöningar!</p>
+              <h1 className="text-2xl font-black">Secret Chests</h1>
+              <p className="text-white/70 text-sm">Open chests and win rewards!</p>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
         <section>
           <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
             <span>🎁</span>
-            Oöppnade kistor
+            Unopened Chests
             {unopened.length > 0 && (
               <span className="ml-1 px-2 py-0.5 text-xs font-bold bg-amber-500 text-white rounded-full">
                 {unopened.length}
@@ -361,7 +361,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
             <div className="rounded-3xl p-8 text-center border-2 border-dashed border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800">
               <p className="text-5xl mb-3">🏅</p>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Inga kistor just nu. Läs texter för att tjäna kistor!
+                No chests right now. Read texts to earn chests!
               </p>
             </div>
           ) : (
@@ -378,7 +378,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
           <section>
             <h2 className="text-lg font-black text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
               <span>🎖️</span>
-              Dina märken ({gam.gamificationBadges.length})
+              Your Badges ({gam.gamificationBadges.length})
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
               {gam.gamificationBadges.map((badgeId) => {
@@ -411,31 +411,31 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
         {/* How to earn chests */}
         <section className="rounded-3xl p-5 bg-sky-50 dark:bg-slate-800 border-2 border-sky-200 dark:border-slate-700">
           <h3 className="font-bold text-sky-900 dark:text-sky-100 mb-3 flex items-center gap-2">
-            <span>💡</span> Hur tjänar man kistor?
+            <span>💡</span> How do you earn chests?
           </h3>
-          <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Pointsmilstolpar</p>
+          <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Point Milestones</p>
           <ul className="space-y-1.5 text-sm text-sky-900 dark:text-sky-100 mb-4">
-            <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronze Chest" className="w-6 h-6 object-contain" /><span><strong>Bronze Chest:</strong> 10 – 200 poäng</span></li>
-            <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silver Chest" className="w-6 h-6 object-contain" /><span><strong>Silver Chest:</strong> 300 – 4 000 poäng</span></li>
-            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Gold Chest" className="w-6 h-6 object-contain" /><span><strong>Gold Chest:</strong> 1 000 – 7 000 poäng</span></li>
-            <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Emerald Chest" className="w-6 h-6 object-contain" /><span><strong>Emerald Chest:</strong> 8 000 – 12 000 poäng</span></li>
-            <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Ruby Chest" className="w-6 h-6 object-contain" /><span><strong>Ruby Chest:</strong> 15 000 – 20 000 poäng</span></li>
-            <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamond Chest" className="w-6 h-6 object-contain" /><span><strong>Diamond Chest:</strong> 25 000 – 40 000 poäng</span></li>
-            <li className="flex items-center gap-2"><img src="/content/hemligakista-blurrad.png" alt="Secret Chest" className="w-6 h-6 object-contain" /><span><strong>Secret Chest:</strong> 60 000 – 100 000 poäng 🔒</span></li>
+            <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronze Chest" className="w-6 h-6 object-contain" /><span><strong>Bronze Chest:</strong> 10 – 200 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silver Chest" className="w-6 h-6 object-contain" /><span><strong>Silver Chest:</strong> 300 – 4 000 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Gold Chest" className="w-6 h-6 object-contain" /><span><strong>Gold Chest:</strong> 1 000 – 7 000 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Emerald Chest" className="w-6 h-6 object-contain" /><span><strong>Emerald Chest:</strong> 8 000 – 12 000 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Ruby Chest" className="w-6 h-6 object-contain" /><span><strong>Ruby Chest:</strong> 15 000 – 20 000 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamond Chest" className="w-6 h-6 object-contain" /><span><strong>Diamond Chest:</strong> 25 000 – 40 000 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/hemligakista-blurrad.png" alt="Secret Chest" className="w-6 h-6 object-contain" /><span><strong>Secret Chest:</strong> 60 000 – 100 000 points 🔒</span></li>
           </ul>
-          <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Läsmilstolpar</p>
+          <p className="text-xs font-semibold text-sky-700 dark:text-sky-300 uppercase tracking-wide mb-2">Reading Milestones</p>
           <ul className="space-y-1.5 text-sm text-sky-900 dark:text-sky-100 mb-4">
-            <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronze Chest" className="w-6 h-6 object-contain" /><span><strong>Bronze Chest:</strong> 1 – 55 texter</span></li>
-            <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silver Chest" className="w-6 h-6 object-contain" /><span><strong>Silver Chest:</strong> 12 – 90 texter</span></li>
-            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Gold Chest" className="w-6 h-6 object-contain" /><span><strong>Gold Chest:</strong> 30 – 125 texter</span></li>
-            <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Emerald Chest" className="w-6 h-6 object-contain" /><span><strong>Emerald Chest:</strong> 150 – 200 texter</span></li>
-            <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Ruby Chest" className="w-6 h-6 object-contain" /><span><strong>Ruby Chest:</strong> 250 – 300 texter</span></li>
-            <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamond Chest" className="w-6 h-6 object-contain" /><span><strong>Diamond Chest:</strong> 400 – 500 texter</span></li>
-            <li className="flex items-center gap-2"><img src="/content/hemligakista-blurrad.png" alt="Secret Chest" className="w-6 h-6 object-contain" /><span><strong>Secret Chest:</strong> 750 – 1 000 texter 🔒</span></li>
+            <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronze Chest" className="w-6 h-6 object-contain" /><span><strong>Bronze Chest:</strong> 1 – 55 texts</span></li>
+            <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silver Chest" className="w-6 h-6 object-contain" /><span><strong>Silver Chest:</strong> 12 – 90 texts</span></li>
+            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Gold Chest" className="w-6 h-6 object-contain" /><span><strong>Gold Chest:</strong> 30 – 125 texts</span></li>
+            <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Emerald Chest" className="w-6 h-6 object-contain" /><span><strong>Emerald Chest:</strong> 150 – 200 texts</span></li>
+            <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Ruby Chest" className="w-6 h-6 object-contain" /><span><strong>Ruby Chest:</strong> 250 – 300 texts</span></li>
+            <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamond Chest" className="w-6 h-6 object-contain" /><span><strong>Diamond Chest:</strong> 400 – 500 texts</span></li>
+            <li className="flex items-center gap-2"><img src="/content/hemligakista-blurrad.png" alt="Secret Chest" className="w-6 h-6 object-contain" /><span><strong>Secret Chest:</strong> 750 – 1 000 texts 🔒</span></li>
           </ul>
           <div className="flex items-start gap-2 text-sm text-sky-900 dark:text-sky-100 pt-2 border-t border-sky-200 dark:border-slate-700">
             <span>🎁</span>
-            <span><strong>Mysterykista:</strong> Slumpmässig chans efter varje text!</span>
+            <span><strong>Mystery Chest:</strong> Random chance after each text!</span>
           </div>
         </section>
       </main>

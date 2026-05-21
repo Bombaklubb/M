@@ -91,86 +91,86 @@ export const CHEST_META: Record<
   { label: string; emoji: string; image: string; openedImage: string; color: string; borderColor: string; shadowColor: string; description: string }
 > = {
   bronze: {
-    label: 'Bronskista',
+    label: 'Bronze Chest',
     emoji: '🥉',
     image: '/content/bronskista.png',
     openedImage: '/content/oppen-kista-brons.png',
     color: 'from-amber-600 to-amber-800',
     borderColor: 'border-amber-700',
     shadowColor: 'shadow-amber-900/40',
-    description: 'En enkel bronskista med små belöningar.',
+    description: 'A simple bronze chest with small rewards.',
   },
   silver: {
-    label: 'Silverkista',
+    label: 'Silver Chest',
     emoji: '🥈',
     image: '/content/silverkista.png',
     openedImage: '/content/oppen-kista-silver.png',
     color: 'from-slate-400 to-slate-600',
     borderColor: 'border-slate-500',
     shadowColor: 'shadow-slate-700/40',
-    description: 'En glänsande silverkista med bra belöningar.',
+    description: 'A shiny silver chest with good rewards.',
   },
   gold: {
-    label: 'Guldkista',
+    label: 'Gold Chest',
     emoji: '🥇',
     image: '/content/guldkista.png',
     openedImage: '/content/oppen-kista-guld.png',
     color: 'from-yellow-400 to-amber-500',
     borderColor: 'border-yellow-500',
     shadowColor: 'shadow-yellow-600/40',
-    description: 'En praktfull guldkista med fina belöningar!',
+    description: 'A magnificent gold chest with great rewards!',
   },
   emerald: {
-    label: 'Smaragdkista',
+    label: 'Emerald Chest',
     emoji: '💚',
     image: '/content/smaragdkista.png',
     openedImage: '/content/oppen-kista-smaragd.png',
     color: 'from-emerald-400 to-emerald-600',
     borderColor: 'border-emerald-500',
     shadowColor: 'shadow-emerald-600/40',
-    description: 'En lysande smaragdkista med värdefulla belöningar!',
+    description: 'A glowing emerald chest with valuable rewards!',
   },
   ruby: {
-    label: 'Rubinkista',
+    label: 'Ruby Chest',
     emoji: '❤️',
     image: '/content/rubinkista.png',
     openedImage: '/content/oppen-kista-rubin.png',
     color: 'from-red-400 to-red-600',
     borderColor: 'border-red-500',
     shadowColor: 'shadow-red-600/40',
-    description: 'En vacker rubinkista med fantastiska belöningar!',
+    description: 'A beautiful ruby chest with amazing rewards!',
   },
   diamond: {
-    label: 'Diamantkista',
+    label: 'Diamond Chest',
     emoji: '💎',
     image: '/content/diamantkista.png',
     openedImage: '/content/oppen-kista-diamant.png',
     color: 'from-cyan-300 to-blue-500',
     borderColor: 'border-cyan-400',
     shadowColor: 'shadow-cyan-500/40',
-    description: 'En legendarisk diamantkista med de bästa belöningarna!',
+    description: 'A legendary diamond chest with the best rewards!',
   },
   secret: {
-    label: 'Hemliga kistan',
+    label: 'Secret Chest',
     emoji: '🔒',
     image: '/content/hemligakista-blurrad.png',
     openedImage: '/content/oppen-kista-hemlig.png',
     color: 'from-purple-900 to-slate-900',
     borderColor: 'border-purple-700',
     shadowColor: 'shadow-purple-900/40',
-    description: 'Den hemligaste och svåraste kistan av alla – för de mest hängivna läsarna!',
+    description: 'The most secret and difficult chest of all – for the most dedicated readers!',
   },
 };
 
 export const ALL_GAMIFICATION_BADGES = [
-  { id: 'reading_star', label: 'Lässtjärna', emoji: '⭐' },
-  { id: 'book_worm', label: 'Bokmask', emoji: '🐛' },
-  { id: 'story_master', label: 'Berättarmästare', emoji: '📖' },
-  { id: 'curious_reader', label: 'Nyfiken läsare', emoji: '🔍' },
-  { id: 'word_explorer', label: 'Ordutforskare', emoji: '🧭' },
-  { id: 'reading_hero', label: 'Läshjälte', emoji: '🦸' },
-  { id: 'mystery_finder', label: 'Mysteriejägare', emoji: '🎁' },
-  { id: 'text_champion', label: 'Textmästare', emoji: '🏆' },
+  { id: 'reading_star', label: 'Reading Star', emoji: '⭐' },
+  { id: 'book_worm', label: 'Bookworm', emoji: '🐛' },
+  { id: 'story_master', label: 'Story Master', emoji: '📖' },
+  { id: 'curious_reader', label: 'Curious Reader', emoji: '🔍' },
+  { id: 'word_explorer', label: 'Word Explorer', emoji: '🧭' },
+  { id: 'reading_hero', label: 'Reading Hero', emoji: '🦸' },
+  { id: 'mystery_finder', label: 'Mystery Finder', emoji: '🎁' },
+  { id: 'text_champion', label: 'Text Champion', emoji: '🏆' },
 ];
 
 // ─── Pure helper functions ────────────────────────────────────────────────────
@@ -260,7 +260,7 @@ export function rollMysteryBox(badges: string[], currentChests: Chest[] = []): M
     return {
       type: 'points',
       points: pts,
-      description: `+${pts} bonuspoäng!`,
+      description: `+${pts} bonus points!`,
     };
   } else if (roll < 0.75) {
     // Ge bara bronskista om under max
@@ -268,7 +268,7 @@ export function rollMysteryBox(badges: string[], currentChests: Chest[] = []): M
       return {
         type: 'chest',
         chestType: 'bronze',
-        description: 'En bronskista!',
+        description: 'A bronze chest!',
       };
     } else {
       // Ge poäng istället
@@ -276,7 +276,7 @@ export function rollMysteryBox(badges: string[], currentChests: Chest[] = []): M
       return {
         type: 'points',
         points: pts,
-        description: `+${pts} bonuspoäng!`,
+        description: `+${pts} bonus points!`,
       };
     }
   } else {
@@ -288,14 +288,14 @@ export function rollMysteryBox(badges: string[], currentChests: Chest[] = []): M
       return {
         type: 'points',
         points: pts,
-        description: `+${pts} bonuspoäng!`,
+        description: `+${pts} bonus points!`,
       };
     }
     const badge = available[Math.floor(Math.random() * available.length)];
     return {
       type: 'badge',
       badgeId: badge.id,
-      description: `Märke: ${badge.label} ${badge.emoji}`,
+      description: `Badge: ${badge.label} ${badge.emoji}`,
     };
   }
 }
@@ -375,7 +375,7 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
   }
 
   const desc = [
-    `+${pts} poäng`,
+    `+${pts} points`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
     bonusChest ? `Bonus: ${CHEST_META[bonusChest.type].label}!` : null,
   ]
