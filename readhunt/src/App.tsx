@@ -471,7 +471,7 @@ function App() {
 
       {/* Kontaktinfo - visas endast på Setup-sidan */}
       {appState === AppState.SETUP && (
-        <div className="fixed bottom-4 left-4 text-sm text-slate-600 dark:text-slate-400 z-40">
+        <div className="fixed bottom-4 left-4 text-sm z-40 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-medium">
           Contact: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
         </div>
       )}
