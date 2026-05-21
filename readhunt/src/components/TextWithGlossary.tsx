@@ -29,8 +29,15 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
     const containerRect = containerRef.current?.getBoundingClientRect();
 
     if (containerRect) {
+      const tooltipWidth = 320;
+      const rawX = rect.left - containerRect.left + rect.width / 2;
+      // Clamp so tooltip stays within container
+      const clampedX = Math.max(
+        tooltipWidth / 2 + 8,
+        Math.min(rawX, containerRect.width - tooltipWidth / 2 - 8)
+      );
       setTooltipPosition({
-        x: rect.left - containerRect.left + rect.width / 2,
+        x: clampedX,
         y: rect.top - containerRect.top,
       });
     }
@@ -95,7 +102,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
       {/* Tooltip */}
       {activeWord && wordDef && tooltipPosition && (
         <div
-          className="absolute z-50 max-w-sm p-4 bg-slate-800 dark:bg-slate-700 text-white text-sm rounded-xl shadow-xl transform -translate-x-1/2 -translate-y-full -mt-2 animate-in fade-in zoom-in-95 duration-200"
+          className="absolute z-50 w-80 p-4 bg-slate-800 dark:bg-slate-700 text-white text-sm rounded-xl shadow-xl transform -translate-x-1/2 -translate-y-full -mt-2 animate-in fade-in zoom-in-95 duration-200"
           style={{
             left: tooltipPosition.x,
             top: tooltipPosition.y,
