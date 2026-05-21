@@ -80,7 +80,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?child,hat,playground"
+    "imageUrl": "/images/ak1-tema-001.svg"
   },
   {
     "id": "ak1-tema-002",
@@ -163,7 +163,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?vegetable,garden,seeds"
+    "imageUrl": "/images/ak1-tema-002.svg"
   },
   {
     "id": "ak1-tema-003",
@@ -246,7 +246,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?soccer,ball,grass,children"
+    "imageUrl": "/images/ak1-tema-003.svg"
   },
   {
     "id": "ak1-tema-004",
@@ -329,7 +329,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?library,books,reading"
+    "imageUrl": "/images/ak1-tema-004.svg"
   },
   {
     "id": "ak1-tema-005",
@@ -412,7 +412,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?soup,bowl,kitchen,cooking"
+    "imageUrl": "/images/ak1-tema-005.svg"
   },
   {
     "id": "ak2-tema-001",
@@ -495,7 +495,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?kitten,cat,cute"
+    "imageUrl": "/images/ak2-tema-001.svg"
   },
   {
     "id": "ak2-tema-002",
@@ -578,7 +578,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?soccer,rain,field,match"
+    "imageUrl": "/images/ak2-tema-002.svg"
   },
   {
     "id": "ak2-tema-003",
@@ -661,7 +661,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?school,garden,vegetables,children"
+    "imageUrl": "/images/ak2-tema-003.svg"
   },
   {
     "id": "ak2-tema-004",
@@ -744,7 +744,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?children,friends,school,smile"
+    "imageUrl": "/images/ak2-tema-004.svg"
   },
   {
     "id": "ak2-tema-005",
@@ -827,7 +827,7 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     },
-    "imageUrl": "https://source.unsplash.com/800x380/?bakery,bread,pastry,baking"
+    "imageUrl": "/images/ak2-tema-005.svg"
   },
   {
     "id": "ak3-tema-001",

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87CEEB"/><stop offset="100%" stop-color="#E0F4FF"/></linearGradient>
+    <linearGradient id="grass1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5DC85D"/><stop offset="100%" stop-color="#3A9A3A"/></linearGradient>
+  </defs>
+  <rect width="800" height="380" fill="url(#sky1)"/>
+  <!-- Sun -->
+  <circle cx="680" cy="70" r="48" fill="#FFD700" opacity="0.9"/>
+  <circle cx="680" cy="70" r="38" fill="#FFE135"/>
+  <!-- Clouds -->
+  <ellipse cx="150" cy="80" rx="70" ry="35" fill="white" opacity="0.9"/>
+  <ellipse cx="200" cy="68" rx="55" ry="30" fill="white" opacity="0.9"/>
+  <ellipse cx="100" cy="90" rx="45" ry="25" fill="white" opacity="0.9"/>
+  <ellipse cx="500" cy="55" rx="60" ry="28" fill="white" opacity="0.85"/>
+  <ellipse cx="550" cy="45" rx="50" ry="25" fill="white" opacity="0.85"/>
+  <!-- Ground -->
+  <rect x="0" y="250" width="800" height="130" fill="url(#grass1)"/>
+  <!-- Playground slide in background -->
+  <polygon points="580,250 640,150 660,150 660,250" fill="#FF8C42" opacity="0.7"/>
+  <rect x="635" y="140" width="30" height="15" fill="#FF6B1A" opacity="0.7"/>
+  <!-- Swing -->
+  <line x1="200" y1="130" x2="230" y2="240" stroke="#8B6914" stroke-width="3" opacity="0.6"/>
+  <line x1="280" y1="130" x2="250" y2="240" stroke="#8B6914" stroke-width="3" opacity="0.6"/>
+  <rect x="225" y="236" width="30" height="8" rx="4" fill="#8B6914" opacity="0.6"/>
+  <line x1="190" y1="125" x2="290" y2="125" stroke="#8B6914" stroke-width="5" opacity="0.6"/>
+  <!-- Lost hat on ground -->
+  <ellipse cx="390" cy="282" rx="75" ry="18" fill="#CC2200"/>
+  <path d="M 330 282 Q 340 240 390 235 Q 440 230 455 282 Z" fill="#FF3311"/>
+  <!-- Hat stripe -->
+  <path d="M 335 272 Q 345 258 390 254 Q 435 250 450 268" stroke="#FFD700" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Hat pom-pom -->
+  <circle cx="390" cy="230" r="14" fill="#FF9900"/>
+  <!-- Footprints near hat -->
+  <ellipse cx="320" cy="300" rx="10" ry="6" fill="#4A7A4A" opacity="0.5" transform="rotate(-15,320,300)"/>
+  <ellipse cx="340" cy="310" rx="10" ry="6" fill="#4A7A4A" opacity="0.5" transform="rotate(15,340,310)"/>
+  <!-- Flowers in grass -->
+  <circle cx="100" cy="268" r="8" fill="#FF69B4"/>
+  <circle cx="100" cy="268" r="5" fill="#FFD700"/>
+  <circle cx="700" cy="272" r="7" fill="#9B59B6"/>
+  <circle cx="700" cy="272" r="4" fill="#FFD700"/>
+  <circle cx="480" cy="265" r="6" fill="#FF6347"/>
+  <circle cx="480" cy="265" r="3" fill="#FFD700"/>
+</svg>
