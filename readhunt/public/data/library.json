@@ -1,497 +1,5 @@
 [
   {
-    "id": "rh-demo-1",
-    "grade": 3,
-    "genre": "fiction",
-    "theme": "animals",
-    "title": "The Clever Fox",
-    "text": "One morning, a fox named Felix woke up very hungry. He had not eaten since the day before. Felix was known in the forest for being clever. All the other animals said he was the smartest fox around.\n\nFelix walked through the forest looking for food. He saw some berries on a bush, but a crow had already taken them. He found a river, but no fish were swimming near the surface.\n\nThen Felix had an idea. He sat beside the river and pretended to sleep. Soon, a curious rabbit came closer to look at the sleeping fox. The rabbit got too close. Felix jumped up and caught the rabbit.\n\nThat evening, Felix sat by his den, full and happy. He smiled and thought, 'Sometimes the best way to find what you need is to wait and be patient.'",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Why was Felix hungry?",
-        "options": [
-          "He had not eaten since the day before.",
-          "He did not like berries.",
-          "He was sick.",
-          "The other animals took his food."
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What did Felix find at the river?",
-        "options": [
-          "A big fish.",
-          "Another fox.",
-          "No fish near the surface.",
-          "Fresh berries."
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "What did Felix pretend to do beside the river?",
-        "options": [
-          "He pretended to cry.",
-          "He pretended to sleep.",
-          "He pretended to eat berries.",
-          "He pretended to swim."
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Why did the rabbit come closer to Felix?",
-        "options": [
-          "The rabbit wanted to help Felix.",
-          "The rabbit was not afraid of foxes.",
-          "The rabbit was curious about the sleeping fox.",
-          "The rabbit wanted to share food."
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "What does the story tell us about Felix?",
-        "options": [
-          "He is very fast.",
-          "He uses his brain to solve problems.",
-          "He is afraid of other animals.",
-          "He does not like being alone."
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What lesson can we learn from this story?",
-        "options": [
-          "Never eat berries from a bush.",
-          "It is better to run than to wait.",
-          "Being patient and clever can help you succeed.",
-          "Foxes are always hungry."
-        ],
-        "correct": 2
-      }
-    ],
-    "meta": {
-      "wordCount": 162,
-      "fingerprint": "demo-rh-1",
-      "generatedAt": "2026-05-19",
-      "model": "demo"
-    }
-  },
-  {
-    "id": "ak3-tema-001",
-    "grade": 3,
-    "genre": "fiction",
-    "theme": "everyday life",
-    "title": "The Lost Backpack",
-    "text": "Ella walked home from school with her friend Sam on a rainy afternoon. They talked about their science project while jumping over puddles beside the road. When Ella reached her apartment building, she suddenly noticed that her backpack was missing. Inside the bag were her library book, her lunch box, and a drawing she wanted to give her grandmother. Ella felt worried and started searching the streets with Sam. They checked the playground, the bus stop, and the small bakery near the corner. Finally, the baker waved at them from the door. A customer had found the backpack under a bench and brought it inside. Ella thanked the baker and the customer with a big smile. Sam laughed and said they had turned an ordinary walk into an adventure. That evening, Ella carefully packed her bag again and placed it beside the front door before dinner.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Why did Ella feel worried?",
-        "options": [
-          "She lost her backpack",
-          "She missed the bus",
-          "Her shoes were wet",
-          "She forgot her homework at school"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Who walked home with Ella?",
-        "options": [
-          "Her grandmother",
-          "Sam",
-          "The baker",
-          "A teacher"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Where was the backpack found?",
-        "options": [
-          "Inside the school",
-          "Near the playground",
-          "Under a bench",
-          "On the bus"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "What does Sam's comment about 'turning an ordinary walk into an adventure' tell us?",
-        "options": [
-          "Sam was angry about the long walk",
-          "Sam thought it was a fun experience despite the problem",
-          "Sam wanted to go on a real adventure",
-          "Sam was jealous of Ella's backpack"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What was inside Ella's backpack?",
-        "options": [
-          "A library book",
-          "A soccer ball",
-          "A music player",
-          "A birthday gift"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why did Ella place her bag beside the front door before dinner?",
-        "options": [
-          "She was too tired to carry it",
-          "She wanted to remember it in the morning",
-          "She was going out again later",
-          "Her mother told her to"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 157,
-      "fingerprint": "ak3-tema-001",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak3-tema-002",
-    "grade": 3,
-    "genre": "fiction",
-    "theme": "nature",
-    "title": "The Tiny Garden",
-    "text": "Leo and his older sister Mina decided to build a small garden behind their house during spring break. Their grandfather gave them tomato seeds, carrot seeds, and a watering can with bright yellow flowers painted on the side. Every morning, the children carried water from the kitchen and carefully poured it onto the soil. At first, nothing changed, and Leo became impatient. Mina reminded him that plants needed time to grow. After two weeks, tiny green leaves finally pushed through the dirt. The children measured the plants every Saturday and wrote the numbers in a notebook. One afternoon, a strong wind bent several tomato plants. Leo wanted to give up, but Mina used sticks and string to help the plants stand again. By the end of summer, the garden was full of vegetables. The family used the tomatoes and carrots to make soup together on a cool evening.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "What did the children plant?",
-        "options": [
-          "Apple trees and roses",
-          "Beans and potatoes",
-          "Tomato and carrot seeds",
-          "Only flowers"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Who gave the children the seeds?",
-        "options": [
-          "Their teacher",
-          "Their grandfather",
-          "A neighbor",
-          "Their cousin"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "How did Mina help the tomato plants after the wind?",
-        "options": [
-          "She moved them indoors",
-          "She planted new seeds",
-          "She covered them with paper",
-          "She used sticks and string"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "Why did Leo become impatient?",
-        "options": [
-          "The watering can broke",
-          "The weather was cold",
-          "Nothing was growing yet",
-          "Mina lost the notebook"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "What does Mina's response to the broken tomato plants tell us about her character?",
-        "options": [
-          "She gives up easily",
-          "She is determined and does not quit",
-          "She does not care about the garden",
-          "She is afraid of storms"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What did the family make with the vegetables?",
-        "options": [
-          "Pizza",
-          "Soup",
-          "Cake",
-          "Sandwiches"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 154,
-      "fingerprint": "ak3-tema-002",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak3-tema-003",
-    "grade": 3,
-    "genre": "fiction",
-    "theme": "music",
-    "title": "The School Talent Show",
-    "text": "At Oak Hill School, students were preparing for the yearly talent show. Some children practiced dancing, while others rehearsed songs or magic tricks after class. Nora wanted to play the violin, but she felt nervous about performing in front of many people. Her best friend Amir encouraged her to practice with him in the music room every afternoon. During the first rehearsal, Nora played too quickly and missed several notes. Instead of laughing, Amir clapped and told her she was improving. Slowly, Nora became more confident. On the night of the talent show, families filled the school gym with loud cheers and colorful signs. A student named Robin performed a comedy act using funny voices and made everyone laugh. Finally, it was Nora's turn. She took a deep breath and played her violin beautifully. After the performance, the audience stood up and applauded loudly for her hard work and courage.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "What did Nora want to play?",
-        "options": [
-          "The violin",
-          "The drums",
-          "The piano",
-          "The guitar"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What happened during the first rehearsal?",
-        "options": [
-          "The violin broke",
-          "Nora forgot her music",
-          "She missed several notes",
-          "Nobody came to watch"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "What did Robin do in the talent show?",
-        "options": [
-          "Played the piano",
-          "Performed magic tricks",
-          "Sang a song",
-          "Did a comedy act"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "Why did Nora take a deep breath before playing?",
-        "options": [
-          "She was tired from walking",
-          "She needed to calm her nerves",
-          "The violin was heavy",
-          "She could not remember the music"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What does Amir's reaction to Nora's mistakes tell us about him?",
-        "options": [
-          "He was bored and not listening",
-          "He was a supportive and kind friend",
-          "He wanted to take her place",
-          "He thought the show was not important"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Why did the audience applaud loudly at the end?",
-        "options": [
-          "The show ended early",
-          "Nora performed well despite being nervous",
-          "Robin told another joke",
-          "The principal gave a speech"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 153,
-      "fingerprint": "ak3-tema-003",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak3-tema-004",
-    "grade": 3,
-    "genre": "non-fiction",
-    "theme": "science",
-    "title": "A Day at the Science Museum",
-    "text": "Class 3B visited the city science museum on a bright Tuesday morning. Their teacher, Mr. Lind, divided the students into small groups before they entered the building. Inside the museum, the children explored rooms filled with robots, space models, and giant dinosaur skeletons. Sofia and Eli spent a long time at an exhibit where visitors could build bridges using wooden blocks. They discovered that wide bridges could hold more weight than narrow ones. Another exhibit allowed students to create electricity by turning large wheels with their hands. Many children laughed when the light bulbs suddenly flashed above them. After lunch, the class watched a short movie about astronauts living on a space station. Before leaving, each student wrote down one new fact they had learned during the trip. On the bus ride home, the children excitedly shared ideas for inventions they wanted to build in the future.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Where did Class 3B go?",
-        "options": [
-          "To a science museum",
-          "To a zoo",
-          "To a beach",
-          "To a farm"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What did Sofia and Eli build at the exhibit?",
-        "options": [
-          "Robots",
-          "Bridges",
-          "Airplanes",
-          "Toy cars"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What happened when students turned the wheels?",
-        "options": [
-          "Music started playing",
-          "Water sprayed everywhere",
-          "Light bulbs flashed",
-          "The room became dark"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "Why did the teacher divide students into small groups?",
-        "options": [
-          "There was not enough space on the bus",
-          "So everyone could explore the museum more easily",
-          "The museum only allowed small groups",
-          "The students did not like each other"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What does the children's excitement on the bus ride home suggest?",
-        "options": [
-          "They were happy the trip was over",
-          "The museum had inspired them to think creatively",
-          "They were hungry after a long day",
-          "They wanted to visit a different museum"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What did students write before leaving?",
-        "options": [
-          "One new fact they learned",
-          "A letter to the museum",
-          "A shopping list",
-          "Their favorite lunch"
-        ],
-        "correct": 0
-      }
-    ],
-    "meta": {
-      "wordCount": 154,
-      "fingerprint": "ak3-tema-004",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak3-tema-005",
-    "grade": 3,
-    "genre": "fiction",
-    "theme": "animals",
-    "title": "The Mountain Rescue Dog",
-    "text": "High in the snowy mountains, a rescue dog named Taro worked with a team of helpers during winter storms. Taro had thick brown fur and a powerful sense of smell that helped him find lost hikers. One cold afternoon, heavy snow covered the trails near a small village. A skier became separated from friends and could not find the way back. The rescue team quickly prepared warm clothes, flashlights, and ropes before climbing into the storm. Taro ran ahead, carefully sniffing the snow while the team followed behind him. After nearly an hour, the dog stopped near a group of trees and barked loudly. The missing skier was sitting there, tired but safe. The rescuers wrapped the skier in blankets and guided everyone back down the mountain. Later, the village held a celebration for Taro and the rescue team, thanking them for their bravery and teamwork.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "What kind of animal was Taro?",
-        "options": [
-          "A rescue dog",
-          "A mountain goat",
-          "A wolf",
-          "A sled horse"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What helped Taro find people?",
-        "options": [
-          "Strong eyesight",
-          "A powerful sense of smell",
-          "A map",
-          "A radio"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Where did Taro find the missing person?",
-        "options": [
-          "Inside a cabin",
-          "Near the village",
-          "Beside a frozen lake",
-          "Near a group of trees"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "Why did the team prepare flashlights and ropes before the rescue?",
-        "options": [
-          "They were going camping",
-          "They needed them in case of danger in the storm",
-          "The skier had asked for them",
-          "They always carry them on walks"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What does Taro barking loudly near the trees tell us?",
-        "options": [
-          "He was scared of the trees",
-          "He had found something important",
-          "He wanted to play",
-          "He was cold and tired"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Why did the village hold a celebration for the rescue team?",
-        "options": [
-          "A new trail opened",
-          "They wanted to thank them for their bravery",
-          "The storm had finally ended",
-          "Taro learned a new trick"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 152,
-      "fingerprint": "ak3-tema-005",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
-    }
-  },
-  {
     "id": "ak1-tema-001",
     "grade": 1,
     "genre": "fiction",
@@ -1312,6 +820,498 @@
     }
   },
   {
+    "id": "ak3-tema-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "everyday life",
+    "title": "The Lost Backpack",
+    "text": "Ella walked home from school with her friend Sam on a rainy afternoon. They talked about their science project while jumping over puddles beside the road. When Ella reached her apartment building, she suddenly noticed that her backpack was missing. Inside the bag were her library book, her lunch box, and a drawing she wanted to give her grandmother. Ella felt worried and started searching the streets with Sam. They checked the playground, the bus stop, and the small bakery near the corner. Finally, the baker waved at them from the door. A customer had found the backpack under a bench and brought it inside. Ella thanked the baker and the customer with a big smile. Sam laughed and said they had turned an ordinary walk into an adventure. That evening, Ella carefully packed her bag again and placed it beside the front door before dinner.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did Ella feel worried?",
+        "options": [
+          "She lost her backpack",
+          "She missed the bus",
+          "Her shoes were wet",
+          "She forgot her homework at school"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who walked home with Ella?",
+        "options": [
+          "Her grandmother",
+          "Sam",
+          "The baker",
+          "A teacher"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where was the backpack found?",
+        "options": [
+          "Inside the school",
+          "Near the playground",
+          "Under a bench",
+          "On the bus"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does Sam's comment about 'turning an ordinary walk into an adventure' tell us?",
+        "options": [
+          "Sam was angry about the long walk",
+          "Sam thought it was a fun experience despite the problem",
+          "Sam wanted to go on a real adventure",
+          "Sam was jealous of Ella's backpack"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What was inside Ella's backpack?",
+        "options": [
+          "A library book",
+          "A soccer ball",
+          "A music player",
+          "A birthday gift"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Ella place her bag beside the front door before dinner?",
+        "options": [
+          "She was too tired to carry it",
+          "She wanted to remember it in the morning",
+          "She was going out again later",
+          "Her mother told her to"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 157,
+      "fingerprint": "ak3-tema-001",
+      "generatedAt": "2026-05-19",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak3-tema-002",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "The Tiny Garden",
+    "text": "Leo and his older sister Mina decided to build a small garden behind their house during spring break. Their grandfather gave them tomato seeds, carrot seeds, and a watering can with bright yellow flowers painted on the side. Every morning, the children carried water from the kitchen and carefully poured it onto the soil. At first, nothing changed, and Leo became impatient. Mina reminded him that plants needed time to grow. After two weeks, tiny green leaves finally pushed through the dirt. The children measured the plants every Saturday and wrote the numbers in a notebook. One afternoon, a strong wind bent several tomato plants. Leo wanted to give up, but Mina used sticks and string to help the plants stand again. By the end of summer, the garden was full of vegetables. The family used the tomatoes and carrots to make soup together on a cool evening.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did the children plant?",
+        "options": [
+          "Apple trees and roses",
+          "Beans and potatoes",
+          "Tomato and carrot seeds",
+          "Only flowers"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who gave the children the seeds?",
+        "options": [
+          "Their teacher",
+          "Their grandfather",
+          "A neighbor",
+          "Their cousin"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How did Mina help the tomato plants after the wind?",
+        "options": [
+          "She moved them indoors",
+          "She planted new seeds",
+          "She covered them with paper",
+          "She used sticks and string"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Leo become impatient?",
+        "options": [
+          "The watering can broke",
+          "The weather was cold",
+          "Nothing was growing yet",
+          "Mina lost the notebook"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does Mina's response to the broken tomato plants tell us about her character?",
+        "options": [
+          "She gives up easily",
+          "She is determined and does not quit",
+          "She does not care about the garden",
+          "She is afraid of storms"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What did the family make with the vegetables?",
+        "options": [
+          "Pizza",
+          "Soup",
+          "Cake",
+          "Sandwiches"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 154,
+      "fingerprint": "ak3-tema-002",
+      "generatedAt": "2026-05-19",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak3-tema-003",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "music",
+    "title": "The School Talent Show",
+    "text": "At Oak Hill School, students were preparing for the yearly talent show. Some children practiced dancing, while others rehearsed songs or magic tricks after class. Nora wanted to play the violin, but she felt nervous about performing in front of many people. Her best friend Amir encouraged her to practice with him in the music room every afternoon. During the first rehearsal, Nora played too quickly and missed several notes. Instead of laughing, Amir clapped and told her she was improving. Slowly, Nora became more confident. On the night of the talent show, families filled the school gym with loud cheers and colorful signs. A student named Robin performed a comedy act using funny voices and made everyone laugh. Finally, it was Nora's turn. She took a deep breath and played her violin beautifully. After the performance, the audience stood up and applauded loudly for her hard work and courage.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Nora want to play?",
+        "options": [
+          "The violin",
+          "The drums",
+          "The piano",
+          "The guitar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What happened during the first rehearsal?",
+        "options": [
+          "The violin broke",
+          "Nora forgot her music",
+          "She missed several notes",
+          "Nobody came to watch"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Robin do in the talent show?",
+        "options": [
+          "Played the piano",
+          "Performed magic tricks",
+          "Sang a song",
+          "Did a comedy act"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Nora take a deep breath before playing?",
+        "options": [
+          "She was tired from walking",
+          "She needed to calm her nerves",
+          "The violin was heavy",
+          "She could not remember the music"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does Amir's reaction to Nora's mistakes tell us about him?",
+        "options": [
+          "He was bored and not listening",
+          "He was a supportive and kind friend",
+          "He wanted to take her place",
+          "He thought the show was not important"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did the audience applaud loudly at the end?",
+        "options": [
+          "The show ended early",
+          "Nora performed well despite being nervous",
+          "Robin told another joke",
+          "The principal gave a speech"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 153,
+      "fingerprint": "ak3-tema-003",
+      "generatedAt": "2026-05-19",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak3-tema-004",
+    "grade": 3,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "A Day at the Science Museum",
+    "text": "Class 3B visited the city science museum on a bright Tuesday morning. Their teacher, Mr. Lind, divided the students into small groups before they entered the building. Inside the museum, the children explored rooms filled with robots, space models, and giant dinosaur skeletons. Sofia and Eli spent a long time at an exhibit where visitors could build bridges using wooden blocks. They discovered that wide bridges could hold more weight than narrow ones. Another exhibit allowed students to create electricity by turning large wheels with their hands. Many children laughed when the light bulbs suddenly flashed above them. After lunch, the class watched a short movie about astronauts living on a space station. Before leaving, each student wrote down one new fact they had learned during the trip. On the bus ride home, the children excitedly shared ideas for inventions they wanted to build in the future.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Class 3B go?",
+        "options": [
+          "To a science museum",
+          "To a zoo",
+          "To a beach",
+          "To a farm"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Sofia and Eli build at the exhibit?",
+        "options": [
+          "Robots",
+          "Bridges",
+          "Airplanes",
+          "Toy cars"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What happened when students turned the wheels?",
+        "options": [
+          "Music started playing",
+          "Water sprayed everywhere",
+          "Light bulbs flashed",
+          "The room became dark"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did the teacher divide students into small groups?",
+        "options": [
+          "There was not enough space on the bus",
+          "So everyone could explore the museum more easily",
+          "The museum only allowed small groups",
+          "The students did not like each other"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the children's excitement on the bus ride home suggest?",
+        "options": [
+          "They were happy the trip was over",
+          "The museum had inspired them to think creatively",
+          "They were hungry after a long day",
+          "They wanted to visit a different museum"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What did students write before leaving?",
+        "options": [
+          "One new fact they learned",
+          "A letter to the museum",
+          "A shopping list",
+          "Their favorite lunch"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 154,
+      "fingerprint": "ak3-tema-004",
+      "generatedAt": "2026-05-19",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak3-tema-005",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Mountain Rescue Dog",
+    "text": "High in the snowy mountains, a rescue dog named Taro worked with a team of helpers during winter storms. Taro had thick brown fur and a powerful sense of smell that helped him find lost hikers. One cold afternoon, heavy snow covered the trails near a small village. A skier became separated from friends and could not find the way back. The rescue team quickly prepared warm clothes, flashlights, and ropes before climbing into the storm. Taro ran ahead, carefully sniffing the snow while the team followed behind him. After nearly an hour, the dog stopped near a group of trees and barked loudly. The missing skier was sitting there, tired but safe. The rescuers wrapped the skier in blankets and guided everyone back down the mountain. Later, the village held a celebration for Taro and the rescue team, thanking them for their bravery and teamwork.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What kind of animal was Taro?",
+        "options": [
+          "A rescue dog",
+          "A mountain goat",
+          "A wolf",
+          "A sled horse"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What helped Taro find people?",
+        "options": [
+          "Strong eyesight",
+          "A powerful sense of smell",
+          "A map",
+          "A radio"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Taro find the missing person?",
+        "options": [
+          "Inside a cabin",
+          "Near the village",
+          "Beside a frozen lake",
+          "Near a group of trees"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the team prepare flashlights and ropes before the rescue?",
+        "options": [
+          "They were going camping",
+          "They needed them in case of danger in the storm",
+          "The skier had asked for them",
+          "They always carry them on walks"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does Taro barking loudly near the trees tell us?",
+        "options": [
+          "He was scared of the trees",
+          "He had found something important",
+          "He wanted to play",
+          "He was cold and tired"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did the village hold a celebration for the rescue team?",
+        "options": [
+          "A new trail opened",
+          "They wanted to thank them for their bravery",
+          "The storm had finally ended",
+          "Taro learned a new trick"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 152,
+      "fingerprint": "ak3-tema-005",
+      "generatedAt": "2026-05-19",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "rh-demo-1",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Clever Fox",
+    "text": "One morning, a fox named Felix woke up very hungry. He had not eaten since the day before. Felix was known in the forest for being clever. All the other animals said he was the smartest fox around.\n\nFelix walked through the forest looking for food. He saw some berries on a bush, but a crow had already taken them. He found a river, but no fish were swimming near the surface.\n\nThen Felix had an idea. He sat beside the river and pretended to sleep. Soon, a curious rabbit came closer to look at the sleeping fox. The rabbit got too close. Felix jumped up and caught the rabbit.\n\nThat evening, Felix sat by his den, full and happy. He smiled and thought, 'Sometimes the best way to find what you need is to wait and be patient.'",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why was Felix hungry?",
+        "options": [
+          "He had not eaten since the day before.",
+          "He did not like berries.",
+          "He was sick.",
+          "The other animals took his food."
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Felix find at the river?",
+        "options": [
+          "A big fish.",
+          "Another fox.",
+          "No fish near the surface.",
+          "Fresh berries."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Felix pretend to do beside the river?",
+        "options": [
+          "He pretended to cry.",
+          "He pretended to sleep.",
+          "He pretended to eat berries.",
+          "He pretended to swim."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did the rabbit come closer to Felix?",
+        "options": [
+          "The rabbit wanted to help Felix.",
+          "The rabbit was not afraid of foxes.",
+          "The rabbit was curious about the sleeping fox.",
+          "The rabbit wanted to share food."
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does the story tell us about Felix?",
+        "options": [
+          "He is very fast.",
+          "He uses his brain to solve problems.",
+          "He is afraid of other animals.",
+          "He does not like being alone."
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What lesson can we learn from this story?",
+        "options": [
+          "Never eat berries from a bush.",
+          "It is better to run than to wait.",
+          "Being patient and clever can help you succeed.",
+          "Foxes are always hungry."
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 162,
+      "fingerprint": "demo-rh-1",
+      "generatedAt": "2026-05-19",
+      "model": "demo"
+    }
+  },
+  {
     "id": "ak4-tema-001",
     "grade": 4,
     "genre": "fiction",
@@ -1717,6 +1717,416 @@
     "meta": {
       "wordCount": 203,
       "fingerprint": "ak4-tema-005",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak5-tema-001",
+    "grade": 5,
+    "genre": "fiction",
+    "theme": "family",
+    "title": "The Lost Painting",
+    "text": "Mila visited her grandfather every Saturday. He lived in a small town near the sea and spent most of his time painting pictures of boats, birds, and old buildings. One rainy afternoon, Mila noticed an empty space on the wall in his studio. A lighter square showed where a painting had once hung.\n\nHer grandfather looked worried when she asked about it. He explained that the missing painting was his favorite work. He had painted it many years earlier after traveling through northern Sweden with his best friend Elias. The painting showed a frozen lake under a sky filled with green northern lights.\n\nGrandfather believed the painting had been lost during a local art show the month before. Mila decided to help him search for it. They visited the community center, the library, and even the bakery where local artists sometimes displayed their work.\n\nAt the bakery, the owner remembered seeing a man carrying a large framed picture. Mila noticed flour on the floor leading toward a storage room. Inside, hidden behind boxes of cups and napkins, stood the missing painting.\n\nThe bakery owner apologized immediately. She explained that she had moved the painting to protect it after a pipe leaked water near the front window. Then she forgot to return it.\n\nMila's grandfather smiled with relief. Instead of feeling angry, he thanked the owner for trying to keep the painting safe. Later that evening, he told Mila that art was important, but memories connected to people mattered even more.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why was there an empty space on the wall?",
+        "options": [
+          "A shelf had fallen down",
+          "A painting was missing",
+          "The wall had been repaired",
+          "A window had been removed"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the missing painting show?",
+        "options": [
+          "A crowded city street",
+          "A summer beach",
+          "A frozen lake and northern lights",
+          "A fishing boat during a storm"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did Mila finally find the painting?",
+        "options": [
+          "Inside the bakery storage room",
+          "At the community center",
+          "Behind the library desk",
+          "In her grandfather's attic"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why had the bakery owner moved the painting?",
+        "options": [
+          "She wanted to buy it",
+          "She planned to clean it",
+          "She needed more wall space",
+          "She wanted to protect it from water"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "How did Mila's grandfather react after finding the painting?",
+        "options": [
+          "He laughed at the situation",
+          "He calmly thanked the owner",
+          "He demanded money for the damage",
+          "He refused to take the painting back"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the main message of the story?",
+        "options": [
+          "Traveling is expensive",
+          "Artists should never lend paintings",
+          "Old buildings are difficult to repair",
+          "Relationships can matter more than objects"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 312,
+      "fingerprint": "ak5-tema-001",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak5-tema-002",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Science of Sleep",
+    "text": "Many people believe that sleep is simply a time when the body rests. Scientists, however, have discovered that the brain remains very active during sleep. While sleeping, the body repairs muscles, stores memories, and prepares for the next day.\n\nDuring the night, people move through different stages of sleep. One stage is called deep sleep. In this stage, breathing slows down, and the body relaxes completely. Deep sleep is important because it helps the body recover after physical activity.\n\nAnother stage is called REM sleep. REM stands for rapid eye movement. During REM sleep, the eyes move quickly under closed eyelids, and most dreams occur. Researchers believe REM sleep helps people learn and remember information.\n\nLack of sleep can cause several problems. Students who do not sleep enough may have difficulty concentrating in school. They can also become more stressed or forgetful. Doctors often recommend that children around eleven years old sleep between nine and eleven hours each night.\n\nTechnology can also affect sleep quality. Bright screens from phones, tablets, and computers send signals to the brain that make it harder to feel tired. Experts suggest turning off screens at least one hour before bedtime.\n\nGood sleep habits are sometimes called 'sleep hygiene.' These habits include going to bed at the same time every night, avoiding large meals before sleeping, and keeping bedrooms dark and quiet.\n\nScientists continue to study sleep because they know it affects learning, emotions, and physical health. Although people spend many years of their lives sleeping, researchers still have much to discover about why sleep is so important.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What happens during deep sleep?",
+        "options": [
+          "The body relaxes and recovers",
+          "People usually wake up often",
+          "The brain stops working completely",
+          "Dreams become easier to control"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does REM stand for?",
+        "options": [
+          "Resting Energy Mode",
+          "Rapid Eye Movement",
+          "Repeated Evening Motion",
+          "Relaxed Eye Memory"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why is REM sleep important according to researchers?",
+        "options": [
+          "It lowers body temperature",
+          "It strengthens muscles",
+          "It may help learning and memory",
+          "It prevents people from dreaming"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How can screens affect sleep?",
+        "options": [
+          "They improve concentration immediately",
+          "They make bedrooms colder",
+          "They increase hunger at night",
+          "They make it harder to feel sleepy"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Which habit is part of good sleep hygiene?",
+        "options": [
+          "Eating large meals late at night",
+          "Changing bedtime every evening",
+          "Keeping a regular bedtime",
+          "Watching television until midnight"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Scientists understand everything about dreams",
+          "Sleep plays an important role in health and learning",
+          "Technology has completely changed human sleep",
+          "Children need less sleep than adults"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 316,
+      "fingerprint": "ak5-tema-002",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak5-tema-003",
+    "grade": 5,
+    "genre": "fiction",
+    "theme": "community",
+    "title": "A Team for Everyone",
+    "text": "At Riverdale School, the sports club had always focused on football and basketball. Many students enjoyed those activities, but others felt left out. Some students preferred quieter games, while others had physical disabilities that made certain sports difficult.\n\nOne autumn, the student council decided to create a new activity week called 'Move Together.' The goal was to design games that everyone could join.\n\nNora, who used a wheelchair, suggested wheelchair floor hockey. Amir wanted to include table tennis because players of different ages could compete together. Alex, who identified as non-binary, organized a dance workshop where students learned simple routines in groups.\n\nAt first, some students complained that the new activities would not be exciting enough. However, many changed their minds after trying them. During wheelchair hockey, students quickly discovered that controlling the chair while moving the ball required balance and teamwork.\n\nThe dance workshop became popular because students could create their own movements instead of following strict rules. Teachers noticed that students who were usually shy began speaking more confidently during group activities.\n\nThe school also invited older residents from a nearby retirement home. They taught students traditional games from different countries and shared stories about sports they had played when they were younger.\n\nBy the end of the week, students realized that competition was not the only purpose of sports. Activities could also help people cooperate, communicate, and understand each other better.\n\nThe principal decided that 'Move Together' would become a yearly tradition. The school even added several new clubs, including adaptive sports and community dance.\n\nMany students later said the week changed how they thought about physical activity. Instead of asking who was the fastest or strongest, they started asking how everyone could participate and enjoy themselves together.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did the school create 'Move Together'?",
+        "options": [
+          "To prepare students for competitions",
+          "To replace all traditional sports",
+          "To include more students in activities",
+          "To raise money for the school"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What activity did Nora suggest?",
+        "options": [
+          "Wheelchair floor hockey",
+          "Traditional football",
+          "Table tennis",
+          "Track and field"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who visited the school during the activity week?",
+        "options": [
+          "Professional athletes",
+          "University students",
+          "Parents from nearby towns",
+          "Residents from a retirement home"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did students enjoy the dance workshop?",
+        "options": [
+          "They could invent their own movements",
+          "It was shorter than the other activities",
+          "Teachers gave prizes to the winners",
+          "Only experienced dancers could join"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did many students learn by the end of the week?",
+        "options": [
+          "Sports should always be competitive",
+          "Only skilled athletes should join teams",
+          "Cooperation is also an important part of activities",
+          "Traditional games are too old-fashioned"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What happened after the event ended?",
+        "options": [
+          "The school canceled most sports clubs",
+          "The principal made the week a yearly tradition",
+          "Students voted to shorten the program",
+          "Teachers removed dance from the schedule"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 309,
+      "fingerprint": "ak5-tema-003",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak5-tema-004",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "The Mystery of the Deep Ocean",
+    "text": "The ocean covers more than seventy percent of Earth's surface, yet scientists know less about the deep ocean than they know about the Moon. The deepest parts of the sea are difficult to explore because of freezing temperatures, complete darkness, and extremely high pressure.\n\nFor many years, researchers believed very little life could survive in such conditions. However, modern technology has changed that idea. Special underwater vehicles with strong lights and cameras have discovered unusual animals living thousands of meters below the surface.\n\nOne famous example is the anglerfish. This fish uses a glowing light near its mouth to attract prey in the darkness. Giant tube worms, another deep-sea species, survive near underwater volcanoes where hot chemicals rise from cracks in the ocean floor.\n\nScientists also study the deep ocean because it may help people understand climate change. Oceans absorb large amounts of heat and carbon dioxide from the atmosphere. Deep ocean currents move this heat around the planet and influence weather patterns.\n\nExploring the deep sea is expensive and dangerous. Research submarines must be carefully designed to survive the pressure. Even small mistakes can damage equipment.\n\nDespite these challenges, countries and universities continue sending teams to explore the ocean floor. Researchers hope to discover new species, study unknown ecosystems, and learn more about Earth's history.\n\nSome scientists believe important medical discoveries may also come from deep-sea organisms. Certain animals produce chemicals that could someday help create new medicines.\n\nAlthough humans have explored space for decades, the deep ocean remains one of the least understood places on Earth. Each expedition reveals new information and reminds scientists how much is still waiting to be discovered beneath the waves.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why is the deep ocean difficult to explore?",
+        "options": [
+          "It contains too many islands",
+          "It has freezing temperatures and high pressure",
+          "Ships cannot travel across oceans",
+          "Scientists are not interested in oceans"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does the anglerfish use its glowing light for?",
+        "options": [
+          "To scare larger animals",
+          "To communicate with submarines",
+          "To attract prey",
+          "To warm its body"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why do scientists study deep ocean currents?",
+        "options": [
+          "They influence climate and weather",
+          "They make fishing easier",
+          "They help submarines move faster",
+          "They create underwater volcanoes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What challenge do research submarines face?",
+        "options": [
+          "Heavy ocean pressure",
+          "Lack of fuel stations",
+          "Strong sunlight underwater",
+          "Large numbers of tourists"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What possible benefit could deep-sea organisms provide?",
+        "options": [
+          "Cheaper airplane travel",
+          "New medicines",
+          "More farmland",
+          "Cleaner drinking water"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Space exploration is safer than ocean travel",
+          "Most ocean animals live near beaches",
+          "Deep-sea volcanoes are becoming stronger",
+          "The deep ocean is still largely unexplored"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 307,
+      "fingerprint": "ak5-tema-004",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak5-tema-005",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "The History of Chocolate",
+    "text": "Chocolate is one of the world's most popular foods, but its history began thousands of years ago in Central America. Ancient civilizations such as the Maya and the Aztecs used cacao beans to make a bitter drink mixed with spices and water.\n\nCacao beans were extremely valuable. In some areas, people even used them as money. Historical records show that workers could buy food or clothing with small amounts of cacao.\n\nWhen European explorers arrived in the Americas during the 1500s, they brought cacao back to Europe. At first, chocolate remained expensive because cacao plants only grew in warm climates. Wealthy families often drank hot chocolate during social gatherings.\n\nOver time, people began adding sugar and milk to improve the taste. During the Industrial Revolution, new machines made it possible to produce chocolate more quickly and cheaply. As a result, chocolate became available to more people.\n\nToday, cacao is grown in many tropical countries, especially in West Africa and South America. Farmers carefully remove cacao beans from large pods, dry them in the sun, and ship them to factories.\n\nModern chocolate production also raises important questions about fairness and the environment. Some companies now sell 'fair trade' chocolate, which aims to ensure farmers receive better pay for their work.\n\nScientists have studied chocolate as well. Dark chocolate contains substances called antioxidants, which may provide certain health benefits when eaten in small amounts. However, doctors still recommend moderation because chocolate products often contain large amounts of sugar.\n\nFrom ancient ceremonies to modern candy stores, chocolate has traveled across continents and cultures. Its long history shows how a simple bean became an important product enjoyed by millions of people around the world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How did the Maya and Aztecs usually consume cacao?",
+        "options": [
+          "As a frozen dessert",
+          "As a sweet candy",
+          "As a bitter drink",
+          "As baked bread"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why were cacao beans valuable in ancient times?",
+        "options": [
+          "They could be used as money",
+          "They were easy to grow everywhere",
+          "They replaced gold completely",
+          "They were only eaten by children"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What changed chocolate production during the Industrial Revolution?",
+        "options": [
+          "Farmers stopped growing cacao",
+          "New machines increased production",
+          "People stopped adding sugar",
+          "European countries banned cacao"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is one goal of fair trade chocolate?",
+        "options": [
+          "To make chocolate taste sweeter",
+          "To reduce factory sizes",
+          "To improve payment for farmers",
+          "To stop international shipping"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What do antioxidants in dark chocolate possibly provide?",
+        "options": [
+          "Certain health benefits",
+          "Longer storage time",
+          "Brighter color",
+          "Extra sweetness"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main focus of the text?",
+        "options": [
+          "Different candy recipes",
+          "The development and importance of chocolate through history",
+          "Why people dislike bitter drinks",
+          "The dangers of tropical farming"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 304,
+      "fingerprint": "ak5-tema-005",
       "generatedAt": "2026-05-21",
       "model": "gpt-4o"
     }
