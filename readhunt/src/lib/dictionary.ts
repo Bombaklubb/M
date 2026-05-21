@@ -204,6 +204,95 @@ export const WORD_DICTIONARY: Record<string, WordDefinition> = {
   'valid': { def: 'Based on sound reasoning; legally acceptable', ex: 'That is a valid point in the argument.' },
 };
 
+// Swedish definitions for grade 1–3 texts
+export const SWEDISH_WORD_DICTIONARY: Record<string, WordDefinition> = {
+  // Grade 1 – The Lost Hat
+  'windy':     { def: 'Blåsigt – det blåser mycket ute', ex: 'Det var en blåsig morgon.' },
+  'flew':      { def: 'Flög – rörde sig snabbt genom luften', ex: 'Hatten flög iväg i vinden.' },
+  'landed':    { def: 'Landade – föll ner och stannade på ett ställe', ex: 'Hatten landade nära ett träd.' },
+  'thanked':   { def: 'Tackade – sa tack till någon', ex: 'Hon tackade honom för hjälpen.' },
+
+  // Grade 1 – The Tiny Garden
+  'planted':   { def: 'Planterade – satte ner frön eller plantor i jord', ex: 'De planterade blommor i trädgården.' },
+  'shovels':   { def: 'Spadar – verktyg som används för att gräva i jord', ex: 'De använde spadar för att gräva hål.' },
+  'buckets':   { def: 'Hinkar – behållare för att bära vatten', ex: 'De bar vatten i gröna hinkar.' },
+  'neighbor':  { def: 'Granne – en person som bor nära dig', ex: 'Hon gav en blomma till sin granne.' },
+
+  // Grade 1 – The New Soccer Ball
+  'practiced': { def: 'Övade – tränade något om och om igen', ex: 'De övade att passa bollen.' },
+  'wheelchair':{ def: 'Rullstol – en stol med hjul för den som har svårt att gå', ex: 'Barnet satt i en rullstol.' },
+
+  // Grade 1 – The Busy Library
+  'librarian': { def: 'Bibliotekarie – en person som arbetar på ett bibliotek', ex: 'Bibliotekarien hjälpte henne hitta en bok.' },
+  'dolphins':  { def: 'Delfiner – smarta havsdjur som lever i grupper', ex: 'Hon läste en bok om delfiner.' },
+  'borrowed':  { def: 'Lånade – tog med sig hem för en tid och ska lämna tillbaka', ex: 'Hon lånade två böcker från biblioteket.' },
+  'quietly':   { def: 'Tyst – utan att göra ljud', ex: 'Hon satt och läste tyst i stolen.' },
+
+  // Grade 1 – The Rainy Day Soup
+  'stirred':   { def: 'Rörde om – rörde runt med en sked', ex: 'Han rörde om i soppan försiktigt.' },
+  'elderly':   { def: 'Äldre – en gammal person', ex: 'Han delade soppan med sin äldre granne.' },
+  'wooden':    { def: 'Av trä – gjord av trä', ex: 'Han rörde om med en träsked.' },
+
+  // Grade 2 – The Lost Kitten
+  'hiding':    { def: 'Gömde sig – stannade på ett hemligt ställe', ex: 'Katten gömde sig bakom buskarna.' },
+  'blanket':   { def: 'Filt – ett mjukt täcke att ligga under', ex: 'De lade en filt i korgen åt katten.' },
+  'poster':    { def: 'Affisch – en lapp eller bild som sätts upp på en vägg eller stolpe', ex: 'De såg en affisch om den försvunna katten.' },
+  'missing':   { def: 'Försvunnen – inte på sin vanliga plats', ex: 'Familjen letade efter sin försvunna katt.' },
+
+  // Grade 2 – A Rainy Soccer Match
+  'muddy':     { def: 'Lerig – full av lera, blött och smutsigt', ex: 'Planen var lerig efter regnet.' },
+  'slipped':   { def: 'Halkade – tappade balansen och gled till', ex: 'Han halkade på den lervåta planen.' },
+  'scored':    { def: 'Gjorde mål – fick bollen i mål', ex: 'Noor gjorde det avgörande målet.' },
+  'heavy':     { def: 'Kraftigt/tungt – mycket av något, t.ex. regn', ex: 'Det föll kraftigt regn.' },
+
+  // Grade 2 – The School Garden
+  'soil':      { def: 'Jord – den mörka, mjuka marken där växter växer', ex: 'Fröna sattes ner i jorden.' },
+  'sunlight':  { def: 'Solljus – ljuset som kommer från solen', ex: 'Växter behöver solljus för att växa.' },
+  'picnic':    { def: 'Picknick – en måltid utomhus, ofta i en park', ex: 'De åt tillsammans under en skolpicknick.' },
+  'term':      { def: 'Termin – en del av skolåret', ex: 'I slutet av terminen skördade de grönsakerna.' },
+
+  // Grade 2 – Sam and the New Student
+  'nervous':   { def: 'Nervös – orolig och lite rädd inför något', ex: 'Sam var nervös när den nye eleven kom.' },
+  'invited':   { def: 'Bjöd in – frågade om någon ville vara med', ex: 'Sam bjöd in Robin att sitta vid bordet.' },
+
+  // Grade 2 – The Busy Bakery
+  'cinnamon':  { def: 'Kanel – ett sött krydda som används i bullar och kakor', ex: 'Det luktade kanel i bageriet.' },
+  'customers': { def: 'Kunder – personer som köper saker i en butik', ex: 'Många kunder kom till bageriet.' },
+  'festival':  { def: 'Festival – ett stort evenemang med musik och aktiviteter', ex: 'En musikfestival hölls i närheten.' },
+  'muffin':    { def: 'Muffin – ett litet, mjukt bakverk', ex: 'Hon fick en blåbärsmuffin som tack.' },
+
+  // Grade 3 – The Lost Backpack
+  'suddenly':  { def: 'Plötsligt – på ett oväntat sätt, utan förvarning', ex: 'Plötsligt märkte hon att väskan saknades.' },
+  'worried':   { def: 'Orolig – rädd att något dåligt ska hända', ex: 'Ella kände sig orolig när hon inte hittade väskan.' },
+
+  // Grade 3 – The Tiny Garden
+  'impatient': { def: 'Otålig – ville att något skulle hända snabbare', ex: 'Leo blev otålig när ingenting hände.' },
+  'reminded':  { def: 'Påminde – sa till någon att tänka på något de glömt', ex: 'Mina påminde honom om att ha tålamod.' },
+  'measured':  { def: 'Mätte – tog reda på hur lång eller stor något är', ex: 'De mätte plantorna varje lördag.' },
+
+  // Grade 3 – The School Talent Show
+  'rehearsed': { def: 'Repeterade – övade inför en föreställning', ex: 'De repeterade sina nummer varje eftermiddag.' },
+  'confident': { def: 'Säker på sig själv – trodde på sin egen förmåga', ex: 'Nora kände sig mer säker inför uppträdandet.' },
+  'encouraged':{ def: 'Uppmuntrade – sade positiva saker för att hjälpa någon framåt', ex: 'Amir uppmuntrade Nora att öva.' },
+
+  // Grade 3 – A Day at the Science Museum
+  'exhibit':   { def: 'Utställning – en samling föremål eller aktiviteter att titta på', ex: 'De stannade länge vid bro-utställningen.' },
+  'electricity':{ def: 'Elektricitet – den osynliga kraft som får lampor att lysa', ex: 'De skapade elektricitet genom att snurra på hjulen.' },
+  'explored':  { def: 'Utforskade – gick runt och undersökte noga', ex: 'De utforskade rum fyllda med robotar och modeller.' },
+  'astronauts':{ def: 'Astronauter – personer som reser ut i rymden', ex: 'De såg en film om astronauter i rymden.' },
+
+  // Grade 3 – The Mountain Rescue Dog
+  'rescue':    { def: 'Räddning – att hjälpa någon som är i fara', ex: 'Räddningshunden hittade den vilsna skidåkaren.' },
+  'separated': { def: 'Skild från gruppen – hade tappat bort de andra', ex: 'Skidåkaren hade blivit skild från sina vänner.' },
+  'sniffing':  { def: 'Nosar – luktar noga på något för att hitta information', ex: 'Hunden nosar på snön för att hitta spår.' },
+  'flashlights':{ def: 'Ficklampor – små lampor man håller i handen', ex: 'De tog med ficklampor in i stormen.' },
+
+  // Grade 3 – The Clever Fox
+  'pretended': { def: 'Låtsades – agerade som om något var sant, fast det inte var det', ex: 'Räven låtsades sova.' },
+  'curious':   { def: 'Nyfiken – ville gärna ta reda på mer eller se vad som hände', ex: 'Den nyfikna kaninen kom allt närmare.' },
+  'surface':   { def: 'Yta – det översta lagret, t.ex. på vatten', ex: 'Inga fiskar simmade nära ytan.' },
+};
+
 // Get all words in a text that have definitions
 export function getDefinedWords(text: string): string[] {
   const words = text.toLowerCase().match(/[a-z]+/gi) || [];
@@ -212,11 +301,15 @@ export function getDefinedWords(text: string): string[] {
 }
 
 // Check if a word has a definition
-export function hasExplanation(word: string): boolean {
-  return !!WORD_DICTIONARY[word.toLowerCase()];
+export function hasExplanation(word: string, grade?: number): boolean {
+  const w = word.toLowerCase();
+  if (grade !== undefined && grade <= 3) return !!SWEDISH_WORD_DICTIONARY[w];
+  return !!WORD_DICTIONARY[w];
 }
 
 // Get the definition for a word
-export function getWordDefinition(word: string): WordDefinition | null {
-  return WORD_DICTIONARY[word.toLowerCase()] || null;
+export function getWordDefinition(word: string, grade?: number): WordDefinition | null {
+  const w = word.toLowerCase();
+  if (grade !== undefined && grade <= 3) return SWEDISH_WORD_DICTIONARY[w] || null;
+  return WORD_DICTIONARY[w] || null;
 }

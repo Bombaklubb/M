@@ -216,6 +216,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                   {showGlossary && !bionicReading ? (
                     <TextWithGlossary
                       text={text.text}
+                      grade={text.grade}
                       className={cn(
                         "leading-relaxed text-slate-700 dark:text-slate-300",
                         textSizeClasses[textSize]

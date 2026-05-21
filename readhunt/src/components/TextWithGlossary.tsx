@@ -4,9 +4,10 @@ import { hasExplanation, getWordDefinition } from '../lib/dictionary';
 interface TextWithGlossaryProps {
   text: string;
   className?: string;
+  grade?: number;
 }
 
-export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, className = '' }) => {
+export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, className = '', grade }) => {
   const [activeWord, setActiveWord] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,7 +24,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
   }, []);
 
   const handleWordClick = (word: string, event: React.MouseEvent) => {
-    if (!hasExplanation(word)) return;
+    if (!hasExplanation(word, grade)) return;
 
     const rect = (event.target as HTMLElement).getBoundingClientRect();
     const containerRect = containerRef.current?.getBoundingClientRect();
@@ -65,7 +66,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
 
           if (!word) return <span key={index}>{part}</span>;
 
-          const hasDef = hasExplanation(word);
+          const hasDef = hasExplanation(word, grade);
           const isActive = activeWord?.toLowerCase() === word.toLowerCase();
 
           return (
@@ -93,7 +94,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
     ));
   };
 
-  const wordDef = activeWord ? getWordDefinition(activeWord) : null;
+  const wordDef = activeWord ? getWordDefinition(activeWord, grade) : null;
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
@@ -122,7 +123,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
       {/* Info om klickbara ord */}
       <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
         <span className="inline-block w-6 border-b-2 border-dotted border-emerald-500 dark:border-slate-300"></span>
-        <span>Click underlined words for a definition</span>
+        <span>{grade !== undefined && grade <= 3 ? 'Klicka på understryket ord för förklaring på svenska' : 'Click underlined words for a definition'}</span>
       </div>
     </div>
   );
