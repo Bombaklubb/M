@@ -372,7 +372,13 @@ function App() {
   // Profile view
   if (showProfile) {
     return (
-      <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
+      <div
+        className="min-h-screen animate-uk-shift"
+        style={{
+          background: 'linear-gradient(135deg, #fce4e8, #f5f5f8, #dce6f5, #f5f5f8, #fce4e8)',
+          backgroundSize: '400% 400%',
+        }}
+      >
         <Header
           user={user}
           onLogout={handleLogout}

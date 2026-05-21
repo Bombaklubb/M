@@ -71,6 +71,11 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
+        "uk-shift": {
+          "0%":   { backgroundPosition: "0% 50%" },
+          "50%":  { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         "shimmer": "shimmer 2s linear infinite",
@@ -79,6 +84,7 @@ export default {
         "gradient": "gradient 8s linear infinite",
         "float": "float 6s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "uk-shift": "uk-shift 12s ease infinite",
       },
     },
   },
