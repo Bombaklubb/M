@@ -23,7 +23,6 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
   const [segmentStates, setSegmentStates] = useState<SegmentState[]>([]);
   const [checked, setChecked] = useState(false);
   const [totalFound, setTotalFound] = useState(0);
-  const [totalErrors, setTotalErrors] = useState(0);
 
   const texts = MODULE2_TEXTS;
   const currentText = texts[textIndex];
@@ -41,35 +40,27 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
 
   function toggleSegment(idx: number) {
     if (checked) return;
-    if (!currentText.segments[idx].isError) return; // only error segments are interactive
+    if (!currentText.segments[idx].isError) return;
     setSegmentStates(prev =>
       prev.map((s, i) => (i === idx ? { selected: !s.selected } : s))
     );
   }
 
   function handleCheck() {
-    const errorsInText = currentText.segments.filter(s => s.isError);
-    const found = errorsInText.filter((_, i) => {
-      const segIdx = currentText.segments.indexOf(errorsInText[i]);
-      return segmentStates[segIdx]?.selected;
-    }).length;
-
-    // Count using index-based approach
     let foundCount = 0;
     currentText.segments.forEach((seg, i) => {
       if (seg.isError && segmentStates[i]?.selected) foundCount++;
     });
-
     setTotalFound(prev => prev + foundCount);
-    setTotalErrors(prev => prev + errorsInText.length);
     setChecked(true);
   }
 
   function handleNext() {
     if (textIndex + 1 >= texts.length) {
       const finalXP = totalFound * 15;
-      const finalScore = Math.round((totalFound / allErrors) * totalTexts());
-      const badge = totalFound / allErrors >= 0.8 ? { name: 'Faktakollaren', icon: '🔍' } : null;
+      const badge = allErrors > 0 && totalFound / allErrors >= 0.8
+        ? { name: 'Faktakollaren', icon: '🔍' }
+        : null;
       onComplete(totalFound, finalXP, badge?.name);
       setPhase('result');
     } else {
@@ -79,22 +70,18 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     }
   }
 
-  function totalTexts() {
-    return texts.length;
-  }
-
   function handleReplay() {
     setPhase('intro');
     setTextIndex(0);
     setChecked(false);
     setSegmentStates([]);
     setTotalFound(0);
-    setTotalErrors(0);
   }
 
   if (phase === 'result') {
-    const pct = allErrors > 0 ? totalFound / allErrors : 0;
-    const badge = pct >= 0.8 ? { name: 'Faktakollaren', icon: '🔍' } : null;
+    const badge = allErrors > 0 && totalFound / allErrors >= 0.8
+      ? { name: 'Faktakollaren', icon: '🔍' }
+      : null;
     return (
       <ResultSummary
         moduleName="Hitta felet"
@@ -127,7 +114,8 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
             </motion.div>
             <h1 className="text-2xl font-bold text-foreground mb-2">Hitta felet</h1>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              AI-genererade texter kan innehålla <span className="text-danger font-semibold">faktafel</span>.
+              AI-genererade texter kan innehålla{' '}
+              <span className="text-danger font-semibold">faktafel</span>.
               Tryck på de ord eller fraser du tror är felaktiga, och vi kollar om du har rätt!
             </p>
             <div className="flex items-center justify-center gap-3 bg-xp/10 rounded-xl px-4 py-3 mb-6">
@@ -168,14 +156,12 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     );
   }
 
-  // Count stats for current text
   const errorSegments = currentText.segments.filter(s => s.isError);
   const foundInCurrent = currentText.segments.reduce((acc, seg, i) => {
     if (seg.isError && segmentStates[i]?.selected) return acc + 1;
     return acc;
   }, 0);
 
-  // Gather error explanations for checked state
   const revealedErrors = currentText.segments
     .map((seg, i) => ({ seg, i }))
     .filter(({ seg }) => seg.isError);
@@ -186,7 +172,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
       <div className="mb-5">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm text-muted-foreground font-medium">
-            Text {textIndex + 1} av {totalTexts()}
+            Text {textIndex + 1} av {texts.length}
           </span>
           <span className="text-sm text-muted-foreground">
             {totalFound} fel hittade totalt
@@ -196,7 +182,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
           <motion.div
             className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
             initial={{ width: 0 }}
-            animate={{ width: `${(textIndex / totalTexts()) * 100}%` }}
+            animate={{ width: `${(textIndex / texts.length) * 100}%` }}
             transition={{ duration: 0.4 }}
           />
         </div>
@@ -224,7 +210,9 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
               <div className="flex items-center gap-2 bg-xp/10 rounded-lg px-3 py-2 mb-4">
                 <AlertCircle className="w-4 h-4 text-xp shrink-0" />
                 <p className="text-xs text-xp">
-                  Tryck på <span className="underline decoration-xp decoration-2">markerade ord</span> du tror är fel
+                  Tryck på{' '}
+                  <span className="underline decoration-xp decoration-2">markerade ord</span>{' '}
+                  du tror är fel
                 </p>
               </div>
             )}
@@ -253,7 +241,9 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                     onClick={() => toggleSegment(i)}
                     role="button"
                     tabIndex={0}
-                    onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') toggleSegment(i); }}
+                    onKeyDown={e => {
+                      if (e.key === 'Enter' || e.key === ' ') toggleSegment(i);
+                    }}
                   >
                     {seg.text}
                   </span>
@@ -288,22 +278,28 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                 className="space-y-3 mb-4"
               >
                 {/* Score for this text */}
-                <div className={`flex items-center gap-3 rounded-xl px-4 py-3 ${
-                  foundInCurrent === errorSegments.length
-                    ? 'bg-success/15 border border-success/40'
-                    : foundInCurrent > 0
-                    ? 'bg-xp/15 border border-xp/40'
-                    : 'bg-danger/15 border border-danger/40'
-                }`}>
+                <div
+                  className={`flex items-center gap-3 rounded-xl px-4 py-3 ${
+                    foundInCurrent === errorSegments.length
+                      ? 'bg-success/15 border border-success/40'
+                      : foundInCurrent > 0
+                      ? 'bg-xp/15 border border-xp/40'
+                      : 'bg-danger/15 border border-danger/40'
+                  }`}
+                >
                   <span className="text-2xl">
                     {foundInCurrent === errorSegments.length ? '🎉' : foundInCurrent > 0 ? '🤔' : '😬'}
                   </span>
                   <div>
-                    <div className={`font-bold text-sm ${
-                      foundInCurrent === errorSegments.length ? 'text-success'
-                      : foundInCurrent > 0 ? 'text-xp'
-                      : 'text-danger'
-                    }`}>
+                    <div
+                      className={`font-bold text-sm ${
+                        foundInCurrent === errorSegments.length
+                          ? 'text-success'
+                          : foundInCurrent > 0
+                          ? 'text-xp'
+                          : 'text-danger'
+                      }`}
+                    >
                       Du hittade {foundInCurrent} av {errorSegments.length} fel
                     </div>
                     <div className="text-xs text-muted-foreground">
@@ -314,17 +310,15 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
 
                 {/* Error explanations */}
                 <div className="bg-card border border-border rounded-xl p-4 space-y-3">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-sm font-semibold text-foreground">Förklaringar</span>
-                  </div>
-                  {revealedErrors.map(({ seg, i }) => {
+                  <span className="text-sm font-semibold text-foreground">Förklaringar</span>
+                  {revealedErrors.map(({ seg, i }, idx) => {
                     const wasFound = segmentStates[i]?.selected;
                     return (
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: revealedErrors.findIndex(e => e.i === i) * 0.1 }}
+                        transition={{ delay: idx * 0.1 }}
                         className={`flex items-start gap-3 rounded-lg p-3 ${
                           wasFound
                             ? 'bg-success/10 border border-success/30'
@@ -336,7 +330,9 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                           : <XCircle className="w-4 h-4 text-danger shrink-0 mt-0.5" />
                         }
                         <div>
-                          <div className={`text-xs font-semibold mb-0.5 ${wasFound ? 'text-success' : 'text-danger'}`}>
+                          <div
+                            className={`text-xs font-semibold mb-0.5 ${wasFound ? 'text-success' : 'text-danger'}`}
+                          >
                             "{seg.text}"
                           </div>
                           <div className="text-xs text-muted-foreground">{seg.errorExplanation}</div>
