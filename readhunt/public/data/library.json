@@ -1010,6 +1010,266 @@
       "generatedAt": "2026-05-20",
       "model": "gpt-4o"
     }
+  },
+  {
+    "id": "ak4-tema-001",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "community",
+    "title": "The New Library",
+    "text": "When the old library in the town closed, many students felt disappointed. The building had been small, dark, and difficult to visit during winter. A year later, the town opened a new library near the school and the sports center. The new building had large windows, colorful chairs, and quiet study rooms. There was also a corner where younger children could listen to stories after school.\n\nEmma visited the library with her friend Noah during the first week. They were surprised by how many activities were available. A local artist taught drawing classes on Tuesdays, and a science club met every Thursday afternoon. Noah joined the science club because he enjoyed building simple robots. Emma preferred reading mystery books and writing short stories.\n\nThe librarian, Ms. Patel, wanted the library to become an important meeting place for everyone in town. She organized book discussions, language lessons, and movie nights. Older people often came to read newspapers, while teenagers used the computers to study.\n\nAfter several months, the library had become one of the busiest places in town. Many students said they visited more often than they had visited the old library.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where was the new library built?",
+        "options": ["Beside the train station", "Near the school and sports center", "Inside the shopping mall", "Next to the hospital"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why did Noah join the science club?",
+        "options": ["He liked painting pictures", "He wanted to learn languages", "He enjoyed building robots", "He needed help with homework"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Ms. Patel want the library to become?",
+        "options": ["A place only for children", "A museum for old books", "A quiet office building", "An important meeting place"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why might students have felt disappointed when the old library closed?",
+        "options": ["It had been a useful place to visit", "It was close to the school", "The books were expensive", "The computers stopped working"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does Emma's choice of books and activities tell us about her?",
+        "options": ["She enjoys creative and imaginative things", "She prefers science and technology", "She dislikes reading", "She only likes sports"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did the new library become busier than the old one?",
+        "options": ["It was easier to reach and offered more activities", "It had cheaper membership fees", "It gave away free books", "It was open all night"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 208,
+      "fingerprint": "ak4-tema-001",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak4-tema-002",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "A Day at the Nature Camp",
+    "text": "During spring break, Lina and her cousin Elias joined a nature camp near a large forest. The camp lasted for five days and focused on animals, plants, and outdoor skills. On the first morning, the group learned how to use a map and a compass. Some students already knew a little about hiking, but others had never spent much time outside.\n\nEach afternoon, the campers explored different parts of the forest with their guide, Mr. Andersson. He explained how birds build nests and why insects are important for nature. Lina enjoyed listening to the sounds of the forest, especially early in the morning when the birds sang loudly.\n\nOne evening, the group cooked soup over a fire. Elias accidentally dropped his spoon into the grass, and everyone laughed while helping him search for it. Later, the students sat together and talked about what they had learned.\n\nOn the final day, the campers worked in teams to build small shelters from branches and leaves. Lina's team included a girl who used a wheelchair, and the group made sure everyone could help with the project. Before leaving, many students said they wanted to visit nature more often in the future.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long did the nature camp last?",
+        "options": ["Three days", "Five days", "One week", "Two weeks"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the campers learn on the first morning?",
+        "options": ["How to build shelters", "How to cook soup", "How to use a map and compass", "How to climb trees"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Lina enjoy most in the forest?",
+        "options": ["Listening to birds", "Playing football", "Collecting rocks", "Drawing maps"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did everyone laugh during the evening meal?",
+        "options": ["The soup tasted strange", "Elias dropped his spoon in the grass", "Someone told a joke", "The fire went out"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the shelter-building activity tell us about the group?",
+        "options": ["They made sure everyone could participate", "They worked alone without helping each other", "They gave up when it got difficult", "They only wanted to finish quickly"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did many students want to visit nature more often after camp?",
+        "options": ["They enjoyed their time outdoors and learned a lot", "They wanted to avoid school", "The camp gave them free equipment", "They missed their families in the forest"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 209,
+      "fingerprint": "ak4-tema-002",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak4-tema-003",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "environment",
+    "title": "The School Recycling Project",
+    "text": "At Greenhill School, students noticed that large amounts of paper and plastic were thrown away every day. The student council decided to start a recycling project to reduce waste. Sofia, who was one of the council members, suggested placing recycling bins in every classroom and hallway.\n\nThe teachers supported the idea, and soon the project began. Students learned how to separate paper, plastic, and metal correctly. Some younger children mixed different materials together at first, but older students helped them understand the rules.\n\nEvery Friday, a group of volunteers carried the recycled materials to a collection center near the school. Malik, one of the volunteers, enjoyed explaining the project to visitors and parents. He believed small actions could improve the environment.\n\nAfter two months, the school produced much less trash than before. The principal was impressed by the results and rewarded the students with a special activity day. During the celebration, classes competed in games and quizzes about nature and climate.\n\nThe recycling project also changed habits outside school. Several students convinced their families to recycle more at home. Sofia felt proud because the project showed that cooperation could make a real difference in the community.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Sofia suggest to the student council?",
+        "options": ["Building a larger cafeteria", "Creating a school newspaper", "Placing recycling bins in classrooms and hallways", "Painting the hallways green"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who helped younger children understand the recycling rules?",
+        "options": ["Parents", "Teachers", "Older students", "Visitors"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did the principal reward the students?",
+        "options": ["With a special activity day", "With new uniforms", "With extra tests", "With free bus tickets"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does Malik's enjoyment of explaining the project suggest about him?",
+        "options": ["He cares about the environment and likes sharing ideas", "He only wanted to be in charge", "He disliked carrying the recycled materials", "He preferred working alone"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Sofia feel proud at the end of the story?",
+        "options": ["The project showed cooperation can make a real difference", "She received the most prizes", "The collection center gave her an award", "Her family started a new business"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What can we learn from the fact that students recycled more at home too?",
+        "options": ["Good habits learned at school can spread to families", "Parents never recycle without being asked", "The school forced families to change", "Recycling at home is easier than at school"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 201,
+      "fingerprint": "ak4-tema-003",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak4-tema-004",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "music",
+    "title": "The Young Music Group",
+    "text": "Every Wednesday evening, a group of young musicians met at the community center in town. The group included students from different schools and backgrounds. Some played instruments for fun, while others dreamed about becoming professional musicians in the future.\n\nTheir teacher, Mr. Rivera, believed music could help people work together and become more confident. He encouraged everyone to try new instruments and support each other during practice. Hana played the violin, while Leo preferred the drums. Sam, who was non-binary, enjoyed playing the keyboard and writing song lyrics.\n\nAt first, the musicians struggled to stay organized during rehearsals. Some students played too loudly, and others forgot to practice at home. Instead of becoming angry, Mr. Rivera asked the group to discuss solutions together. They decided to create a schedule and divide responsibilities.\n\nSeveral months later, the group performed at the town festival. Nervous families and friends filled the audience before the concert began. Although a microphone stopped working during one song, the musicians continued playing calmly.\n\nAfter the performance, the audience applauded loudly. The students felt proud because they had improved both their musical skills and their teamwork. Many younger children in the audience said they wanted to join the music group one day.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did the musicians meet every week?",
+        "options": ["At the sports center", "At the community center", "At the train station", "At the library"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which instrument did Sam enjoy playing?",
+        "options": ["Drums", "Violin", "Keyboard", "Flute"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What problem happened during the concert?",
+        "options": ["A microphone stopped working", "The audience left early", "The lights went out", "The drums broke"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did the group solve their problems during rehearsals?",
+        "options": ["They canceled practices", "They asked parents to lead", "They ignored the problems", "They discussed solutions and created a schedule"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does it tell us that the musicians kept playing when the microphone broke?",
+        "options": ["They had become calm and professional", "They did not notice the problem", "They were too nervous to stop", "They had a spare microphone ready"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Mr. Rivera ask the group to discuss solutions instead of getting angry?",
+        "options": ["He wanted them to learn to work things out together", "He did not know the answer", "He was too tired to speak", "He was testing if they would quit"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 202,
+      "fingerprint": "ak4-tema-004",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak4-tema-005",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "The Small Invention",
+    "text": "Oliver loved solving problems and building useful objects from old materials. One rainy afternoon, he noticed that his grandmother struggled to carry grocery bags from her car to the house. She used a walking stick and often became tired after shopping.\n\nOliver decided to create something that could help her. He searched through the garage and found small wheels, wooden boards, and strong fabric. After several hours of work, he built a lightweight cart that could hold bags and move easily across the sidewalk.\n\nThe first version of the cart was not perfect. One wheel became loose, and the handle felt uncomfortable. Oliver asked his grandmother to test the cart and share her opinions. She explained which parts were difficult to use, and Oliver carefully improved the design.\n\nA few weeks later, Oliver presented his invention at the school technology fair. Many students and teachers were interested because the cart solved a real problem. The judges especially liked that Oliver listened to feedback and changed his design instead of giving up.\n\nOliver did not win first prize, but he still felt successful. His grandmother used the cart every week, and several neighbors asked if he could help them build similar ones in the future.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did Oliver decide to build the cart?",
+        "options": ["He wanted to sell inventions", "He needed a school project", "His grandmother struggled with grocery bags", "His teacher asked him to practice woodworking"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What materials did Oliver find in the garage?",
+        "options": ["Metal pipes and paint", "Wheels, boards, and fabric", "Plastic bottles and rope", "Books and batteries"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Oliver present his invention?",
+        "options": ["At a sports competition", "At the school technology fair", "At the city museum", "At the local library"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What problem did the first version of the cart have?",
+        "options": ["It was too heavy to move", "The bags did not fit inside", "A wheel became loose and the handle was uncomfortable", "It cost too much to build"],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did the judges especially like Oliver's project?",
+        "options": ["He listened to feedback and improved his design", "He used the most expensive materials", "He built the largest invention", "He finished the project very quickly"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Oliver feel successful even without winning first prize?",
+        "options": ["His invention was actually helping people in real life", "He was given a bigger prize later", "He planned to sell the cart for money", "He wanted to impress his teacher"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 203,
+      "fingerprint": "ak4-tema-005",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   }
 ]
 
