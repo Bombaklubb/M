@@ -85,13 +85,23 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
       </div>
 
       {/* Text content */}
-      <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 dark:bg-slate-800">
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-6 dark:bg-slate-800">
+        {text.imageUrl && (
+          <img
+            src={text.imageUrl}
+            alt={text.title}
+            className="w-full h-52 object-cover"
+            loading="lazy"
+          />
+        )}
+        <div className="p-6 md:p-8">
         <div className="prose prose-lg max-w-none">
           {text.text.split('\n').map((paragraph, index) => (
             <p key={index} className={`text-slate-700 dark:text-slate-200 leading-relaxed mb-4 last:mb-0 ${textSizeClasses[textSize]}`}>
               {paragraph}
             </p>
           ))}
+        </div>
         </div>
       </div>
 
