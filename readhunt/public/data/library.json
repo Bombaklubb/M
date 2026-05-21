@@ -1530,6 +1530,266 @@
       "generatedAt": "2026-05-21",
       "model": "gpt-4o"
     }
+  },
+  {
+    "id": "ak7-tema-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "environment",
+    "title": "The Future of Urban Farming",
+    "text": "As cities continue to grow, many scientists and environmental planners have become concerned about how future populations will access fresh food. Traditional farming requires large areas of land and significant amounts of water, resources that are becoming increasingly limited in some regions. In response to these challenges, urban farming has developed into a possible solution for producing food closer to where people live.\n\nUrban farming can take many forms. Some cities have rooftop gardens where vegetables are grown on top of apartment buildings and offices. Others use vertical farming systems, where crops are planted indoors in stacked layers under artificial lighting. Supporters argue that these methods reduce transportation costs, lower pollution, and provide communities with fresher food.\n\nOne example can be found in Singapore, where limited land has encouraged investment in advanced farming technology. Several companies there now grow lettuce, herbs, and strawberries inside climate-controlled buildings. Computers monitor temperature, humidity, and water levels to ensure that plants receive exactly what they need. Similar projects have also appeared in cities across Europe and North America.\n\nHowever, urban farming also faces criticism. Building and maintaining indoor farms can be expensive, especially because artificial lighting requires large amounts of electricity. Some experts question whether these systems can produce enough food to support entire populations. Others worry that only wealthy communities may benefit from the technology at first.\n\nDespite these concerns, researchers continue exploring new methods to improve efficiency and reduce costs. Some scientists are experimenting with renewable energy sources such as solar panels to power indoor farms. Others are developing systems that recycle water and nutrients more effectively.\n\nFor many environmental experts, urban farming represents more than simply growing vegetables inside cities. It also reflects changing ideas about sustainability, technology, and how societies may adapt to environmental pressures in the future. Although urban farming alone will not solve global food shortages, many believe it could become an important part of a broader solution.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why are scientists concerned about future food production?",
+        "options": ["Traditional farming depends on limited land and water resources", "Cities are banning all forms of agriculture", "Most people refuse to eat vegetables", "Farmers are no longer using technology"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is one advantage supporters see in urban farming?",
+        "options": ["It completely removes the need for transportation", "It can provide fresher food with lower pollution", "It guarantees equal food access worldwide", "It eliminates the need for electricity"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why has Singapore invested heavily in urban farming technology?",
+        "options": ["Its climate prevents outdoor farming entirely", "The government wants to reduce tourism", "The country has very limited land", "Farmers there avoid using computers"],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What criticism do some experts have about indoor farms?",
+        "options": ["The crops grow too quickly", "The farms cannot use water efficiently", "The buildings are unsafe during storms", "The systems may be too expensive to maintain"],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "How are researchers trying to improve urban farming systems?",
+        "options": ["By using renewable energy and recycling resources", "By replacing vegetables with artificial food", "By reducing all forms of automation", "By moving farms farther from cities"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": ["Urban farming may become an important future solution despite challenges", "Traditional farming should disappear completely", "Cities should stop investing in environmental technology", "Only wealthy countries can grow food successfully"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 415,
+      "fingerprint": "ak7-tema-001",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak7-tema-002",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Mystery of Deep-Sea Exploration",
+    "text": "Although humans have explored the surface of the Moon and mapped large parts of Earth, scientists still know surprisingly little about the deepest parts of the oceans. Deep-sea environments remain difficult to study because of extreme pressure, freezing temperatures, and complete darkness. As a result, researchers continue discovering new species and geological formations in places that few humans have ever seen.\n\nModern technology has made deep-sea exploration more possible than in the past. Special submarines and remotely operated vehicles can travel thousands of meters below the surface while collecting samples and recording video footage. These machines allow scientists to investigate underwater volcanoes, giant trenches, and ecosystems that survive without sunlight.\n\nOne of the most fascinating discoveries in deep-sea science involved hydrothermal vents. These openings in the ocean floor release extremely hot water filled with minerals. Around the vents, scientists found unusual animals such as giant tube worms, blind shrimp, and bacteria that survive through chemical reactions rather than photosynthesis. Before this discovery, many researchers believed sunlight was necessary for all major ecosystems on Earth.\n\nDeep-sea exploration has also contributed to medical and technological research. Certain organisms living under extreme conditions produce chemicals that may help scientists develop new medicines. Engineers study how deep-sea animals survive intense pressure in hopes of improving materials used in submarines and underwater equipment.\n\nHowever, exploration of the oceans raises ethical and environmental questions as well. Some companies are interested in mining rare minerals from the ocean floor, but environmental groups warn that such activities could damage fragile ecosystems that scientists barely understand. Researchers argue that more scientific studies are necessary before large-scale industrial projects begin.\n\nDespite the difficulties and risks involved, interest in deep-sea exploration continues growing. Many experts believe the oceans may contain important scientific knowledge about climate systems, biodiversity, and even the origins of life on Earth. For that reason, scientists around the world continue investing time and resources into studying one of the planet's least understood environments.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why is deep-sea exploration difficult?",
+        "options": ["The oceans are too shallow in most regions", "Extreme pressure, darkness, and cold create challenges", "Governments forbid all underwater research", "Modern technology cannot operate underwater"],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What surprised scientists about hydrothermal vent ecosystems?",
+        "options": ["The animals depended entirely on sunlight", "No living organisms survived near the vents", "Some organisms survived without photosynthesis", "The water around the vents was completely cold"],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why are some deep-sea organisms important to medical research?",
+        "options": ["They may contain chemicals useful for new medicines", "They can replace traditional doctors", "They prevent underwater earthquakes", "They are easy to farm in laboratories"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What do remotely operated vehicles allow scientists to do that was previously impossible?",
+        "options": ["Study deep underwater environments without risking human lives", "Replace all human researchers permanently", "Control weather patterns in the oceans", "Transport fish to laboratories on land"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What concern do environmental groups have about ocean mining?",
+        "options": ["It could damage fragile ecosystems scientists barely understand", "It would increase deep-sea tourism", "It might reduce fish prices worldwide", "It could make submarines unnecessary"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central message of the text?",
+        "options": ["Deep-sea exploration is no longer necessary", "The oceans remain largely unexplored and scientifically important", "Hydrothermal vents are the only valuable ocean environments", "Industrial mining should begin immediately"],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 413,
+      "fingerprint": "ak7-tema-002",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak7-tema-003",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "technology",
+    "title": "The Rise of Artificial Intelligence in Education",
+    "text": "Artificial intelligence, often called AI, has become increasingly common in schools and educational systems around the world. AI technologies can now assist teachers with grading assignments, creating lesson plans, and identifying students who may need additional support. Supporters believe these tools could improve learning by making education more personalized and efficient.\n\nOne example of AI in education involves adaptive learning platforms. These systems analyze how students answer questions and then adjust the difficulty of tasks automatically. A student struggling with mathematics may receive simpler exercises and additional explanations, while another student progressing quickly may be offered more advanced material.\n\nSome teachers appreciate that AI systems can reduce repetitive administrative work, giving educators more time to focus on classroom discussions and student relationships. AI translation tools have also helped students who recently moved to new countries by making educational materials easier to understand.\n\nHowever, critics warn that relying too heavily on AI may create serious problems. Privacy experts are concerned about how companies collect and store student data. Others argue that technology cannot replace human teachers because emotional support, creativity, and social interaction are important parts of education.\n\nThere are also concerns about fairness. AI systems are trained using large amounts of data, and if that data contains bias, the technology may produce unfair results. For example, some researchers worry that automated systems could misjudge students from different cultural or linguistic backgrounds.\n\nSeveral schools have therefore chosen to introduce AI carefully rather than replacing traditional teaching methods entirely. In many classrooms, technology is treated as a tool to support teachers instead of replacing them. Educators emphasize that critical thinking and human judgment remain essential.\n\nAs AI continues developing, discussions about its role in education are likely to become even more important. The challenge for schools will be finding a balance between technological innovation and the human qualities that make learning meaningful. Whether AI ultimately improves education may depend less on the technology itself and more on how societies choose to use it.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is one way AI can support education?",
+        "options": ["By helping personalize learning experiences", "By removing the need for teachers entirely", "By preventing students from making mistakes", "By shortening all school programs"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How do adaptive learning platforms work?",
+        "options": ["They adjust tasks based on student performance", "They replace all classroom lessons with games", "They only provide identical exercises to everyone", "They focus entirely on language learning"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why are privacy experts concerned about AI in schools?",
+        "options": ["AI systems are too expensive to maintain", "Technology may collect and store student data", "Teachers refuse to use digital tools", "Students cannot understand online lessons"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What problem can occur if AI systems are trained with biased data?",
+        "options": ["The systems may produce unfair results for some students", "Computers will stop functioning completely", "Schools will no longer need exams", "Students will avoid using technology"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How have many schools chosen to use AI responsibly?",
+        "options": ["As a tool that supports teachers rather than replacing them", "As a replacement for all textbooks", "As a way to remove classroom discussions", "As entertainment during breaks only"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main challenge described in the text?",
+        "options": ["Balancing technological innovation with human needs in education", "Preventing students from using computers at home", "Replacing every teacher with automated systems", "Limiting scientific research about AI"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
+      "fingerprint": "ak7-tema-003",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak7-tema-004",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "The History of Public Libraries",
+    "text": "Public libraries are often considered essential parts of modern communities, providing free access to books, information, and educational resources. However, libraries have changed significantly throughout history. The earliest libraries existed thousands of years ago in ancient civilizations such as Mesopotamia and Egypt, where written records were stored on clay tablets and scrolls.\n\nIn many early societies, libraries were accessible only to rulers, priests, or wealthy scholars. Ordinary citizens rarely had opportunities to read or study because books were expensive and difficult to produce by hand. The invention of the printing press in the fifteenth century dramatically changed this situation by making books cheaper and easier to distribute.\n\nDuring the nineteenth century, many countries began creating public library systems intended to serve entire populations. Reformers argued that education and access to information could reduce poverty and strengthen democracy. Industrial cities especially benefited from libraries because workers and immigrants often lacked opportunities for formal education.\n\nOne important figure in library history was Andrew Carnegie, a businessman who funded the construction of thousands of libraries around the world. Carnegie believed libraries gave individuals opportunities to improve their lives through self-education. Although some critics questioned the influence of wealthy donors, many communities gained access to educational resources for the first time.\n\nToday, libraries offer far more than printed books. Many provide internet access, digital learning programs, language courses, and cultural events. Some libraries even lend tools, musical instruments, and technology equipment. During emergencies such as natural disasters or economic crises, libraries have sometimes served as safe public spaces where people can access information and support.\n\nDespite these developments, libraries still face challenges. Budget cuts, competition from digital entertainment, and changing reading habits have forced many institutions to reconsider their roles. Nevertheless, supporters argue that libraries remain important because they provide equal access to knowledge regardless of income or social background.\n\nThe continued existence of libraries reflects a broader belief that education and information should be available to everyone, not only to those who can afford them.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who could usually access the earliest libraries?",
+        "options": ["Rulers, priests, and wealthy scholars", "All members of society equally", "Only children and students", "Travelers from other countries"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How did the printing press affect books and libraries?",
+        "options": ["It made books cheaper and easier to distribute", "It ended the use of written language", "It reduced interest in education completely", "It limited libraries to large cities"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why were public libraries especially important in industrial cities?",
+        "options": ["Workers and immigrants often lacked educational opportunities", "Factories required every worker to become a writer", "Industrial cities banned private schools", "Libraries replaced newspapers entirely"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did Andrew Carnegie believe libraries could provide?",
+        "options": ["Entertainment for wealthy citizens only", "Opportunities for self-education and social improvement", "A replacement for universities", "Protection from economic crises"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What modern services show that libraries have adapted to changing needs?",
+        "options": ["Internet access, digital programs, and lending tools or instruments", "Free housing for all visitors", "Professional sports facilities", "Medical treatment centers"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": ["Libraries have evolved throughout history but continue supporting equal access to knowledge", "Digital technology has made libraries unnecessary", "Ancient libraries were more advanced than modern ones", "Public libraries only became important after the internet"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 407,
+      "fingerprint": "ak7-tema-004",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak7-tema-005",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Psychology of Teamwork",
+    "text": "Teamwork plays an important role in schools, workplaces, sports, and scientific research. Although people often focus on individual talent, psychologists argue that successful groups depend on communication, trust, and cooperation just as much as personal skill. Researchers studying teamwork have discovered that group performance is influenced by several psychological and social factors.\n\nOne important factor involves communication. Teams function more effectively when members feel comfortable sharing ideas and asking questions. In groups where individuals fear criticism or embarrassment, important information may remain unspoken. Psychologists sometimes describe effective teams as environments with "psychological safety," meaning participants believe their opinions will be respected.\n\nAnother factor is diversity within teams. Groups that include people with different experiences and perspectives can often solve problems more creatively. For example, scientific research teams may benefit when members from different cultural backgrounds contribute unique ideas and approaches. However, diversity can also create misunderstandings if communication is poor.\n\nLeadership style also affects teamwork. Some leaders attempt to control every decision, while others encourage collaboration and shared responsibility. Studies suggest that flexible leadership often produces stronger long-term results because team members feel more motivated and involved.\n\nConflict within teams is not always negative. Disagreements can help groups examine ideas more carefully and avoid poor decisions. However, conflict becomes harmful when it turns personal or prevents cooperation. Skilled teams learn how to debate respectfully while maintaining shared goals.\n\nModern workplaces increasingly rely on teamwork because many problems are too complex for individuals to solve alone. Technology companies, hospitals, engineering firms, and scientific organizations often depend on groups of specialists working together.\n\nPsychologists continue studying why some teams succeed while others fail. Their research suggests that successful teamwork is rarely based only on intelligence or talent. Instead, effective collaboration depends on communication, trust, adaptability, and the willingness of individuals to support one another while working toward common objectives.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What do psychologists believe is important for successful teamwork?",
+        "options": ["Communication, trust, and cooperation", "Competition between team members", "Avoiding all disagreements", "Working without leadership"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does 'psychological safety' mean in a team?",
+        "options": ["Members believe their ideas will be respected", "The team works in a physically secure building", "Only experienced members are allowed to speak", "Leaders make every decision alone"],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why can diverse teams sometimes solve problems more creatively?",
+        "options": ["They usually contain more members", "Different perspectives can produce new ideas", "They avoid using technology", "All members think in similar ways"],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What type of leadership often produces stronger long-term results, and why?",
+        "options": ["Flexible leadership, because members feel more motivated and involved", "Leadership that controls every detail", "Leadership without communication", "Leadership focused only on competition"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why can conflict sometimes benefit teams?",
+        "options": ["It can encourage more careful examination of ideas", "It always increases productivity immediately", "It prevents communication problems", "It removes the need for leaders"],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main conclusion of the text?",
+        "options": ["Successful teamwork depends on social and psychological factors, not only talent", "Individual skill is more important than cooperation", "Conflict should always be avoided in groups", "Technology will eventually replace teamwork"],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 401,
+      "fingerprint": "ak7-tema-005",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   }
 ]
 
