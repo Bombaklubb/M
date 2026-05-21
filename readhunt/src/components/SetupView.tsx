@@ -88,7 +88,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
   const colors = getGradeColor(selectedGrade);
 
   return (
-    <div className="max-w-2xl mx-auto px-4 pt-10 pb-4">
+    <div className="max-w-2xl mx-auto px-4 pt-20 pb-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

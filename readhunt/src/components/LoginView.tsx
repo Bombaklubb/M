@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookLogo } from './BookLogo';
 import { AvatarPicker } from './AvatarPicker';
 import { JaktLinks } from './JaktLinks';
 import { AVATAR_OPTIONS } from '../types';
@@ -48,7 +47,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
             >
               <Sparkles sparklesCount={8} colors={{ first: '#6366f1', second: '#a855f7' }}>
-                <BookLogo size={160} />
+                <img src="/readhunt.png" alt="Readhunt" className="w-40 h-40 object-contain drop-shadow-xl" />
               </Sparkles>
             </motion.div>
             <CardDescription className="text-indigo-500 dark:text-indigo-400 text-lg font-medium">

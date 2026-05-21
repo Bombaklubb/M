@@ -1,6 +1,5 @@
 import React from 'react';
 import { User } from '../types';
-import { BookLogo } from './BookLogo';
 import { useDarkMode } from '../contexts/DarkModeContext';
 
 interface HeaderProps {
@@ -26,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           onClick={onHomeClick}
           className="flex items-center gap-2 hover:opacity-75 transition-opacity cursor-pointer"
         >
-          <BookLogo size={48} />
+          <img src="/readhunt.png" alt="Readhunt" className="w-12 h-12 object-contain" />
         </button>
 
         {/* Right side */}
