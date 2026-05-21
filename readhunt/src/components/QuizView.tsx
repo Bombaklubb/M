@@ -202,11 +202,12 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
 
                 {/* Image support for lower levels */}
                 {text.imageUrl && text.grade <= 3 && (
-                  <div className="mb-4">
+                  <div className="mb-4 -mx-6 -mt-2">
                     <img
                       src={text.imageUrl}
-                      alt={`Image for ${text.title}`}
-                      className="w-full max-h-64 object-contain rounded-lg bg-slate-100 dark:bg-slate-700"
+                      alt={text.title}
+                      className="w-full h-44 object-cover rounded-t-none rounded-b-xl"
+                      loading="lazy"
                     />
                   </div>
                 )}
