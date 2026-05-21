@@ -372,13 +372,29 @@ function App() {
   // Profile view
   if (showProfile) {
     return (
-      <div
-        className="min-h-screen animate-uk-shift"
-        style={{
-          background: 'linear-gradient(135deg, #fce4e8, #f5f5f8, #dce6f5, #f5f5f8, #fce4e8)',
-          backgroundSize: '400% 400%',
-        }}
-      >
+      <div className="min-h-screen" style={{ position: 'relative' }}>
+        <style>{`
+          @keyframes ukWave {
+            0%   { background-position: 0% 50%; }
+            25%  { background-position: 100% 0%; }
+            50%  { background-position: 100% 100%; }
+            75%  { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+          }
+          .uk-bg {
+            background: linear-gradient(
+              135deg,
+              rgba(207,17,43,0.30) 0%,
+              rgba(255,255,255,0.95) 25%,
+              rgba(0,48,135,0.28) 50%,
+              rgba(255,255,255,0.95) 75%,
+              rgba(207,17,43,0.25) 100%
+            );
+            background-size: 400% 400%;
+            animation: ukWave 10s ease infinite;
+          }
+        `}</style>
+        <div className="uk-bg absolute inset-0 -z-10" />
         <Header
           user={user}
           onLogout={handleLogout}
