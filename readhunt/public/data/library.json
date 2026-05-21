@@ -502,37 +502,67 @@
       {
         "type": "literal",
         "q": "What was the weather like?",
-        "options": ["Rainy", "Windy", "Snowy", "Hot"],
+        "options": [
+          "Rainy",
+          "Windy",
+          "Snowy",
+          "Hot"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What color was Mia's hat?",
-        "options": ["Blue", "Green", "Red", "Yellow"],
+        "options": [
+          "Blue",
+          "Green",
+          "Red",
+          "Yellow"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Where did the hat land?",
-        "options": ["Near a tree", "In a car", "On a roof", "By the river"],
+        "options": [
+          "Near a tree",
+          "In a car",
+          "On a roof",
+          "By the river"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Who helped Mia?",
-        "options": ["Ella", "Sam", "Noah", "Leo"],
+        "options": [
+          "Ella",
+          "Sam",
+          "Noah",
+          "Leo"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What did Leo do with the hat?",
-        "options": ["He hid the hat", "He gave the hat back", "He threw the hat away", "He kept the hat"],
+        "options": [
+          "He hid the hat",
+          "He gave the hat back",
+          "He threw the hat away",
+          "He kept the hat"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "How did Mia feel at the end?",
-        "options": ["Angry", "Sleepy", "Thankful", "Scared"],
+        "options": [
+          "Angry",
+          "Sleepy",
+          "Thankful",
+          "Scared"
+        ],
         "correct": 2
       }
     ],
@@ -554,37 +584,67 @@
       {
         "type": "literal",
         "q": "Who planted the flowers with Amina?",
-        "options": ["Her brother", "Her teacher", "Her grandfather", "Her cousin"],
+        "options": [
+          "Her brother",
+          "Her teacher",
+          "Her grandfather",
+          "Her cousin"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Where was the garden?",
-        "options": ["Behind the home", "At school", "Next to a lake", "Inside a shop"],
+        "options": [
+          "Behind the home",
+          "At school",
+          "Next to a lake",
+          "Inside a shop"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What color were the buckets?",
-        "options": ["Blue", "Green", "Black", "White"],
+        "options": [
+          "Blue",
+          "Green",
+          "Black",
+          "White"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "When did Amina check the flowers?",
-        "options": ["After dinner", "At night", "Before breakfast", "During class"],
+        "options": [
+          "After dinner",
+          "At night",
+          "Before breakfast",
+          "During class"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "How long did it take for the flowers to open?",
-        "options": ["One day", "Two weeks", "One month", "Three hours"],
+        "options": [
+          "One day",
+          "Two weeks",
+          "One month",
+          "Three hours"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "Who received a flower from Amina?",
-        "options": ["Her friend", "Her mother", "Her teacher", "Her neighbor"],
+        "options": [
+          "Her friend",
+          "Her mother",
+          "Her teacher",
+          "Her neighbor"
+        ],
         "correct": 3
       }
     ],
@@ -606,37 +666,67 @@
       {
         "type": "literal",
         "q": "What did Elliot get for his birthday?",
-        "options": ["A soccer ball", "A kite", "A skateboard", "A backpack"],
+        "options": [
+          "A soccer ball",
+          "A kite",
+          "A skateboard",
+          "A backpack"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Who went to the park with Elliot?",
-        "options": ["His teacher", "His sister", "His cousin", "His uncle"],
+        "options": [
+          "His teacher",
+          "His sister",
+          "His cousin",
+          "His uncle"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Where did they play?",
-        "options": ["At the beach", "In the gym", "At the park", "Inside a house"],
+        "options": [
+          "At the beach",
+          "In the gym",
+          "At the park",
+          "Inside a house"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "What did the child in the wheelchair ask?",
-        "options": ["To borrow money", "To watch quietly", "To leave the park", "To join the game"],
+        "options": [
+          "To borrow money",
+          "To watch quietly",
+          "To leave the park",
+          "To join the game"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What did Elliot and Kim practice?",
-        "options": ["Passing the ball", "Drawing pictures", "Riding bikes", "Reading books"],
+        "options": [
+          "Passing the ball",
+          "Drawing pictures",
+          "Riding bikes",
+          "Reading books"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "When did they stop playing?",
-        "options": ["When it rained", "When the sky became dark", "Before lunch", "After breakfast"],
+        "options": [
+          "When it rained",
+          "When the sky became dark",
+          "Before lunch",
+          "After breakfast"
+        ],
         "correct": 1
       }
     ],
@@ -658,37 +748,67 @@
       {
         "type": "literal",
         "q": "Where did Nora go?",
-        "options": ["To the library", "To the zoo", "To the farm", "To the pool"],
+        "options": [
+          "To the library",
+          "To the zoo",
+          "To the farm",
+          "To the pool"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Who went with Nora?",
-        "options": ["Her friends", "Her two fathers", "Her teacher", "Her brother"],
+        "options": [
+          "Her friends",
+          "Her two fathers",
+          "Her teacher",
+          "Her brother"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What animal was in the story Ben found?",
-        "options": ["Lions", "Cats", "Dolphins", "Horses"],
+        "options": [
+          "Lions",
+          "Cats",
+          "Dolphins",
+          "Horses"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "Who helped Nora find the book?",
-        "options": ["Liam", "Mia", "Ella", "Ben"],
+        "options": [
+          "Liam",
+          "Mia",
+          "Ella",
+          "Ben"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What did Nora do while sitting in the chair?",
-        "options": ["She read quietly", "She slept", "She ate lunch", "She painted"],
+        "options": [
+          "She read quietly",
+          "She slept",
+          "She ate lunch",
+          "She painted"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "How many books did Nora borrow?",
-        "options": ["One", "Two", "Four", "Five"],
+        "options": [
+          "One",
+          "Two",
+          "Four",
+          "Five"
+        ],
         "correct": 1
       }
     ],
@@ -710,37 +830,67 @@
       {
         "type": "literal",
         "q": "What was the weather like?",
-        "options": ["Sunny", "Cloudy", "Rainy", "Snowy"],
+        "options": [
+          "Sunny",
+          "Cloudy",
+          "Rainy",
+          "Snowy"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What did Omar cook?",
-        "options": ["Bread", "Soup", "Cake", "Rice"],
+        "options": [
+          "Bread",
+          "Soup",
+          "Cake",
+          "Rice"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What did Omar use to stir the soup?",
-        "options": ["A fork", "A knife", "A plate", "A wooden spoon"],
+        "options": [
+          "A fork",
+          "A knife",
+          "A plate",
+          "A wooden spoon"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "Which vegetable was in the soup?",
-        "options": ["Carrots", "Corn", "Beans", "Peas"],
+        "options": [
+          "Carrots",
+          "Corn",
+          "Beans",
+          "Peas"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "How did the house smell?",
-        "options": ["Warm and good", "Dirty", "Like smoke", "Like paint"],
+        "options": [
+          "Warm and good",
+          "Dirty",
+          "Like smoke",
+          "Like paint"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Who shared soup with Omar?",
-        "options": ["His coach", "Mrs. Clark", "His cousin", "Ben"],
+        "options": [
+          "His coach",
+          "Mrs. Clark",
+          "His cousin",
+          "Ben"
+        ],
         "correct": 1
       }
     ],
@@ -762,37 +912,67 @@
       {
         "type": "literal",
         "q": "Where did Maya find the kitten?",
-        "options": ["Near a tree", "At school", "Inside a car", "Behind a store"],
+        "options": [
+          "Near a tree",
+          "At school",
+          "Inside a car",
+          "Behind a store"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What color was the kitten?",
-        "options": ["Black", "Gray", "White", "Orange"],
+        "options": [
+          "Black",
+          "Gray",
+          "White",
+          "Orange"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What did Maya's father give the kitten?",
-        "options": ["A toy and milk", "A bath and soap", "Water and food", "A leash and collar"],
+        "options": [
+          "A toy and milk",
+          "A bath and soap",
+          "Water and food",
+          "A leash and collar"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "Where did Maya see the poster?",
-        "options": ["On a school wall", "On a bus", "In a shop window", "On a lamp post"],
+        "options": [
+          "On a school wall",
+          "On a bus",
+          "In a shop window",
+          "On a lamp post"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "Why did Maya take the kitten home?",
-        "options": ["It looked cold and hungry", "She wanted a new pet", "Her friend asked her to", "It followed her loudly"],
+        "options": [
+          "It looked cold and hungry",
+          "She wanted a new pet",
+          "Her friend asked her to",
+          "It followed her loudly"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "How did the family feel when Maya returned the kitten?",
-        "options": ["Nervous", "Thankful", "Angry", "Confused"],
+        "options": [
+          "Nervous",
+          "Thankful",
+          "Angry",
+          "Confused"
+        ],
         "correct": 1
       }
     ],
@@ -814,37 +994,67 @@
       {
         "type": "literal",
         "q": "When did Leo usually play soccer?",
-        "options": ["Every Saturday", "Every Monday", "Every evening", "Every winter"],
+        "options": [
+          "Every Saturday",
+          "Every Monday",
+          "Every evening",
+          "Every winter"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What was the weather like?",
-        "options": ["Sunny and warm", "Rainy and cloudy", "Snowy and cold", "Windy and dry"],
+        "options": [
+          "Sunny and warm",
+          "Rainy and cloudy",
+          "Snowy and cold",
+          "Windy and dry"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What happened to Leo during the game?",
-        "options": ["He lost his shoes", "He kicked the wrong goal", "He slipped on the field", "He left the match early"],
+        "options": [
+          "He lost his shoes",
+          "He kicked the wrong goal",
+          "He slipped on the field",
+          "He left the match early"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "Who scored the winning goal?",
-        "options": ["Leo", "The coach", "A referee", "Noor"],
+        "options": [
+          "Leo",
+          "The coach",
+          "A referee",
+          "Noor"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "Why was the field muddy?",
-        "options": ["Heavy rain fell", "The team watered it", "A truck drove there", "Children played in it"],
+        "options": [
+          "Heavy rain fell",
+          "The team watered it",
+          "A truck drove there",
+          "Children played in it"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What did the team drink after the game?",
-        "options": ["Cold juice", "Warm tea", "Milk", "Hot chocolate"],
+        "options": [
+          "Cold juice",
+          "Warm tea",
+          "Milk",
+          "Hot chocolate"
+        ],
         "correct": 1
       }
     ],
@@ -866,37 +1076,67 @@
       {
         "type": "literal",
         "q": "Where was the garden?",
-        "options": ["Behind the school", "Next to a river", "Inside a classroom", "Near a library"],
+        "options": [
+          "Behind the school",
+          "Next to a river",
+          "Inside a classroom",
+          "Near a library"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Who brought seeds from a farm?",
-        "options": ["Ella", "Amir", "The teacher", "A gardener"],
+        "options": [
+          "Ella",
+          "Amir",
+          "The teacher",
+          "A gardener"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What appeared in the soil after several weeks?",
-        "options": ["Large flowers", "Brown stones", "Tiny green leaves", "Big tomatoes"],
+        "options": [
+          "Large flowers",
+          "Brown stones",
+          "Tiny green leaves",
+          "Big tomatoes"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "When did the students share the vegetables?",
-        "options": ["During winter break", "On the first school day", "At a birthday party", "During a school picnic"],
+        "options": [
+          "During winter break",
+          "On the first school day",
+          "At a birthday party",
+          "During a school picnic"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What did Ella do every morning?",
-        "options": ["Carried water for the plants", "Painted flower signs", "Fed the birds nearby", "Cleaned the playground"],
+        "options": [
+          "Carried water for the plants",
+          "Painted flower signs",
+          "Fed the birds nearby",
+          "Cleaned the playground"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What do plants need to grow well?",
-        "options": ["Only sunlight", "Sunlight, water, and good soil", "Snow and wind", "Sand and rocks"],
+        "options": [
+          "Only sunlight",
+          "Sunlight, water, and good soil",
+          "Snow and wind",
+          "Sand and rocks"
+        ],
         "correct": 1
       }
     ],
@@ -918,37 +1158,67 @@
       {
         "type": "literal",
         "q": "Why was Sam nervous on Monday?",
-        "options": ["A new student arrived", "There was a test", "The class changed rooms", "It was raining outside"],
+        "options": [
+          "A new student arrived",
+          "There was a test",
+          "The class changed rooms",
+          "It was raining outside"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What did Robin use?",
-        "options": ["A scooter", "A wheelchair", "Crutches", "A bicycle"],
+        "options": [
+          "A scooter",
+          "A wheelchair",
+          "Crutches",
+          "A bicycle"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What did Robin like to draw?",
-        "options": ["Cars and buses", "People and houses", "Animals and forests", "Mountains and trains"],
+        "options": [
+          "Cars and buses",
+          "People and houses",
+          "Animals and forests",
+          "Mountains and trains"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "Where did Sam and Robin plan to go together?",
-        "options": ["A movie theater", "A soccer field", "A beach", "The city museum"],
+        "options": [
+          "A movie theater",
+          "A soccer field",
+          "A beach",
+          "The city museum"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What did they talk about at lunch?",
-        "options": ["Video games, music, and food", "Only school rules", "Homework and tests", "Sports teams only"],
+        "options": [
+          "Video games, music, and food",
+          "Only school rules",
+          "Homework and tests",
+          "Sports teams only"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What project did the teacher give them?",
-        "options": ["A cooking project", "A science project", "A reading contest", "A dance show"],
+        "options": [
+          "A cooking project",
+          "A science project",
+          "A reading contest",
+          "A dance show"
+        ],
         "correct": 1
       }
     ],
@@ -970,37 +1240,67 @@
       {
         "type": "literal",
         "q": "When did Lina visit the bakery?",
-        "options": ["Every Friday morning", "Every Sunday evening", "Every school holiday", "Every afternoon"],
+        "options": [
+          "Every Friday morning",
+          "Every Sunday evening",
+          "Every school holiday",
+          "Every afternoon"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Who owned the bakery?",
-        "options": ["Lina's teacher", "Lina's uncle", "Lina's brother", "Lina's neighbor"],
+        "options": [
+          "Lina's teacher",
+          "Lina's uncle",
+          "Lina's brother",
+          "Lina's neighbor"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What did Lina place in the front window?",
-        "options": ["Fresh flowers", "Large books", "Small cakes", "Toy animals"],
+        "options": [
+          "Fresh flowers",
+          "Large books",
+          "Small cakes",
+          "Toy animals"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "Why was the bakery extra busy?",
-        "options": ["A storm was coming", "School was closed", "People wanted breakfast", "A music festival was nearby"],
+        "options": [
+          "A storm was coming",
+          "School was closed",
+          "People wanted breakfast",
+          "A music festival was nearby"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What kinds of food smelled fresh in the bakery?",
-        "options": ["Bread, buns, and cookies", "Soup and salad", "Pizza and pasta", "Fish and rice"],
+        "options": [
+          "Bread, buns, and cookies",
+          "Soup and salad",
+          "Pizza and pasta",
+          "Fish and rice"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What did Lina receive at the end?",
-        "options": ["A chocolate cake", "A blueberry muffin", "A sandwich", "A bag of candy"],
+        "options": [
+          "A chocolate cake",
+          "A blueberry muffin",
+          "A sandwich",
+          "A bag of candy"
+        ],
         "correct": 1
       }
     ],
@@ -1022,37 +1322,67 @@
       {
         "type": "literal",
         "q": "Where was the new library built?",
-        "options": ["Beside the train station", "Near the school and sports center", "Inside the shopping mall", "Next to the hospital"],
+        "options": [
+          "Beside the train station",
+          "Near the school and sports center",
+          "Inside the shopping mall",
+          "Next to the hospital"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Why did Noah join the science club?",
-        "options": ["He liked painting pictures", "He wanted to learn languages", "He enjoyed building robots", "He needed help with homework"],
+        "options": [
+          "He liked painting pictures",
+          "He wanted to learn languages",
+          "He enjoyed building robots",
+          "He needed help with homework"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What did Ms. Patel want the library to become?",
-        "options": ["A place only for children", "A museum for old books", "A quiet office building", "An important meeting place"],
+        "options": [
+          "A place only for children",
+          "A museum for old books",
+          "A quiet office building",
+          "An important meeting place"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "Why might students have felt disappointed when the old library closed?",
-        "options": ["It had been a useful place to visit", "It was close to the school", "The books were expensive", "The computers stopped working"],
+        "options": [
+          "It had been a useful place to visit",
+          "It was close to the school",
+          "The books were expensive",
+          "The computers stopped working"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What does Emma's choice of books and activities tell us about her?",
-        "options": ["She enjoys creative and imaginative things", "She prefers science and technology", "She dislikes reading", "She only likes sports"],
+        "options": [
+          "She enjoys creative and imaginative things",
+          "She prefers science and technology",
+          "She dislikes reading",
+          "She only likes sports"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did the new library become busier than the old one?",
-        "options": ["It was easier to reach and offered more activities", "It had cheaper membership fees", "It gave away free books", "It was open all night"],
+        "options": [
+          "It was easier to reach and offered more activities",
+          "It had cheaper membership fees",
+          "It gave away free books",
+          "It was open all night"
+        ],
         "correct": 0
       }
     ],
@@ -1074,37 +1404,67 @@
       {
         "type": "literal",
         "q": "How long did the nature camp last?",
-        "options": ["Three days", "Five days", "One week", "Two weeks"],
+        "options": [
+          "Three days",
+          "Five days",
+          "One week",
+          "Two weeks"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What did the campers learn on the first morning?",
-        "options": ["How to build shelters", "How to cook soup", "How to use a map and compass", "How to climb trees"],
+        "options": [
+          "How to build shelters",
+          "How to cook soup",
+          "How to use a map and compass",
+          "How to climb trees"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What did Lina enjoy most in the forest?",
-        "options": ["Listening to birds", "Playing football", "Collecting rocks", "Drawing maps"],
+        "options": [
+          "Listening to birds",
+          "Playing football",
+          "Collecting rocks",
+          "Drawing maps"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did everyone laugh during the evening meal?",
-        "options": ["The soup tasted strange", "Elias dropped his spoon in the grass", "Someone told a joke", "The fire went out"],
+        "options": [
+          "The soup tasted strange",
+          "Elias dropped his spoon in the grass",
+          "Someone told a joke",
+          "The fire went out"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What does the shelter-building activity tell us about the group?",
-        "options": ["They made sure everyone could participate", "They worked alone without helping each other", "They gave up when it got difficult", "They only wanted to finish quickly"],
+        "options": [
+          "They made sure everyone could participate",
+          "They worked alone without helping each other",
+          "They gave up when it got difficult",
+          "They only wanted to finish quickly"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did many students want to visit nature more often after camp?",
-        "options": ["They enjoyed their time outdoors and learned a lot", "They wanted to avoid school", "The camp gave them free equipment", "They missed their families in the forest"],
+        "options": [
+          "They enjoyed their time outdoors and learned a lot",
+          "They wanted to avoid school",
+          "The camp gave them free equipment",
+          "They missed their families in the forest"
+        ],
         "correct": 0
       }
     ],
@@ -1126,37 +1486,67 @@
       {
         "type": "literal",
         "q": "What did Sofia suggest to the student council?",
-        "options": ["Building a larger cafeteria", "Creating a school newspaper", "Placing recycling bins in classrooms and hallways", "Painting the hallways green"],
+        "options": [
+          "Building a larger cafeteria",
+          "Creating a school newspaper",
+          "Placing recycling bins in classrooms and hallways",
+          "Painting the hallways green"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Who helped younger children understand the recycling rules?",
-        "options": ["Parents", "Teachers", "Older students", "Visitors"],
+        "options": [
+          "Parents",
+          "Teachers",
+          "Older students",
+          "Visitors"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "How did the principal reward the students?",
-        "options": ["With a special activity day", "With new uniforms", "With extra tests", "With free bus tickets"],
+        "options": [
+          "With a special activity day",
+          "With new uniforms",
+          "With extra tests",
+          "With free bus tickets"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What does Malik's enjoyment of explaining the project suggest about him?",
-        "options": ["He cares about the environment and likes sharing ideas", "He only wanted to be in charge", "He disliked carrying the recycled materials", "He preferred working alone"],
+        "options": [
+          "He cares about the environment and likes sharing ideas",
+          "He only wanted to be in charge",
+          "He disliked carrying the recycled materials",
+          "He preferred working alone"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did Sofia feel proud at the end of the story?",
-        "options": ["The project showed cooperation can make a real difference", "She received the most prizes", "The collection center gave her an award", "Her family started a new business"],
+        "options": [
+          "The project showed cooperation can make a real difference",
+          "She received the most prizes",
+          "The collection center gave her an award",
+          "Her family started a new business"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What can we learn from the fact that students recycled more at home too?",
-        "options": ["Good habits learned at school can spread to families", "Parents never recycle without being asked", "The school forced families to change", "Recycling at home is easier than at school"],
+        "options": [
+          "Good habits learned at school can spread to families",
+          "Parents never recycle without being asked",
+          "The school forced families to change",
+          "Recycling at home is easier than at school"
+        ],
         "correct": 0
       }
     ],
@@ -1178,37 +1568,67 @@
       {
         "type": "literal",
         "q": "Where did the musicians meet every week?",
-        "options": ["At the sports center", "At the community center", "At the train station", "At the library"],
+        "options": [
+          "At the sports center",
+          "At the community center",
+          "At the train station",
+          "At the library"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Which instrument did Sam enjoy playing?",
-        "options": ["Drums", "Violin", "Keyboard", "Flute"],
+        "options": [
+          "Drums",
+          "Violin",
+          "Keyboard",
+          "Flute"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What problem happened during the concert?",
-        "options": ["A microphone stopped working", "The audience left early", "The lights went out", "The drums broke"],
+        "options": [
+          "A microphone stopped working",
+          "The audience left early",
+          "The lights went out",
+          "The drums broke"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "How did the group solve their problems during rehearsals?",
-        "options": ["They canceled practices", "They asked parents to lead", "They ignored the problems", "They discussed solutions and created a schedule"],
+        "options": [
+          "They canceled practices",
+          "They asked parents to lead",
+          "They ignored the problems",
+          "They discussed solutions and created a schedule"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "What does it tell us that the musicians kept playing when the microphone broke?",
-        "options": ["They had become calm and professional", "They did not notice the problem", "They were too nervous to stop", "They had a spare microphone ready"],
+        "options": [
+          "They had become calm and professional",
+          "They did not notice the problem",
+          "They were too nervous to stop",
+          "They had a spare microphone ready"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did Mr. Rivera ask the group to discuss solutions instead of getting angry?",
-        "options": ["He wanted them to learn to work things out together", "He did not know the answer", "He was too tired to speak", "He was testing if they would quit"],
+        "options": [
+          "He wanted them to learn to work things out together",
+          "He did not know the answer",
+          "He was too tired to speak",
+          "He was testing if they would quit"
+        ],
         "correct": 0
       }
     ],
@@ -1230,37 +1650,67 @@
       {
         "type": "literal",
         "q": "Why did Oliver decide to build the cart?",
-        "options": ["He wanted to sell inventions", "He needed a school project", "His grandmother struggled with grocery bags", "His teacher asked him to practice woodworking"],
+        "options": [
+          "He wanted to sell inventions",
+          "He needed a school project",
+          "His grandmother struggled with grocery bags",
+          "His teacher asked him to practice woodworking"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What materials did Oliver find in the garage?",
-        "options": ["Metal pipes and paint", "Wheels, boards, and fabric", "Plastic bottles and rope", "Books and batteries"],
+        "options": [
+          "Metal pipes and paint",
+          "Wheels, boards, and fabric",
+          "Plastic bottles and rope",
+          "Books and batteries"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Where did Oliver present his invention?",
-        "options": ["At a sports competition", "At the school technology fair", "At the city museum", "At the local library"],
+        "options": [
+          "At a sports competition",
+          "At the school technology fair",
+          "At the city museum",
+          "At the local library"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What problem did the first version of the cart have?",
-        "options": ["It was too heavy to move", "The bags did not fit inside", "A wheel became loose and the handle was uncomfortable", "It cost too much to build"],
+        "options": [
+          "It was too heavy to move",
+          "The bags did not fit inside",
+          "A wheel became loose and the handle was uncomfortable",
+          "It cost too much to build"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "Why did the judges especially like Oliver's project?",
-        "options": ["He listened to feedback and improved his design", "He used the most expensive materials", "He built the largest invention", "He finished the project very quickly"],
+        "options": [
+          "He listened to feedback and improved his design",
+          "He used the most expensive materials",
+          "He built the largest invention",
+          "He finished the project very quickly"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did Oliver feel successful even without winning first prize?",
-        "options": ["His invention was actually helping people in real life", "He was given a bigger prize later", "He planned to sell the cart for money", "He wanted to impress his teacher"],
+        "options": [
+          "His invention was actually helping people in real life",
+          "He was given a bigger prize later",
+          "He planned to sell the cart for money",
+          "He wanted to impress his teacher"
+        ],
         "correct": 0
       }
     ],
@@ -1282,37 +1732,67 @@
       {
         "type": "literal",
         "q": "What was one purpose of the community science fair?",
-        "options": ["To encourage curiosity and problem-solving", "To replace regular science classes", "To advertise local businesses", "To select professional scientists"],
+        "options": [
+          "To encourage curiosity and problem-solving",
+          "To replace regular science classes",
+          "To advertise local businesses",
+          "To select professional scientists"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Why did Clara become interested in water pollution?",
-        "options": ["She read about it in a newspaper", "She noticed fewer animals near the river", "Her teacher assigned the topic", "She wanted to win a prize"],
+        "options": [
+          "She read about it in a newspaper",
+          "She noticed fewer animals near the river",
+          "Her teacher assigned the topic",
+          "She wanted to win a prize"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What problem was Yusuf trying to solve?",
-        "options": ["Traffic congestion in the town", "Poor internet connections at school", "Slow sorting of recycling materials", "The lack of science teachers"],
+        "options": [
+          "Traffic congestion in the town",
+          "Poor internet connections at school",
+          "Slow sorting of recycling materials",
+          "The lack of science teachers"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "What difficulty did Yusuf face before the fair, and how was it handled?",
-        "options": ["He lost his research notes", "His machine had technical problems and classmates helped him", "The judges changed the rules", "He refused to compete"],
+        "options": [
+          "He lost his research notes",
+          "His machine had technical problems and classmates helped him",
+          "The judges changed the rules",
+          "He refused to compete"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What can we infer about the impact of the students' projects?",
-        "options": ["They inspired interest in science and led to council discussions", "They caused the fair to be canceled", "They were ignored by visitors", "They won first prize for both students"],
+        "options": [
+          "They inspired interest in science and led to council discussions",
+          "They caused the fair to be canceled",
+          "They were ignored by visitors",
+          "They won first prize for both students"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why might Clara's personal observation be a good starting point for scientific research?",
-        "options": ["Real-world observations can lead to meaningful questions worth investigating", "Judges prefer projects based on personal stories", "Science teachers always assign topics based on local rivers", "Personal stories are easier to present than experiments"],
+        "options": [
+          "Real-world observations can lead to meaningful questions worth investigating",
+          "Judges prefer projects based on personal stories",
+          "Science teachers always assign topics based on local rivers",
+          "Personal stories are easier to present than experiments"
+        ],
         "correct": 0
       }
     ],
@@ -1334,37 +1814,67 @@
       {
         "type": "literal",
         "q": "Why did most visitors ignore the painting for many years?",
-        "options": ["It was rarely displayed", "It had been destroyed by water", "The museum charged extra to see it", "Visitors were not allowed near it"],
+        "options": [
+          "It was rarely displayed",
+          "It had been destroyed by water",
+          "The museum charged extra to see it",
+          "Visitors were not allowed near it"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What did experts use to study the artwork?",
-        "options": ["Special cameras and scientific methods", "Only old photographs", "Computer games and animations", "Public opinion surveys"],
+        "options": [
+          "Special cameras and scientific methods",
+          "Only old photographs",
+          "Computer games and animations",
+          "Public opinion surveys"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What happened after experts confirmed the painting was authentic?",
-        "options": ["The museum organized a special exhibition", "The artwork was sold immediately", "The museum stopped accepting visitors", "The painting was returned to storage"],
+        "options": [
+          "The museum organized a special exhibition",
+          "The artwork was sold immediately",
+          "The museum stopped accepting visitors",
+          "The painting was returned to storage"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why were some people skeptical about the discovery?",
-        "options": ["They disliked modern art", "They believed museums should close", "They wanted stronger evidence before accepting it", "They thought the painting was too expensive"],
+        "options": [
+          "They disliked modern art",
+          "They believed museums should close",
+          "They wanted stronger evidence before accepting it",
+          "They thought the painting was too expensive"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "What does Dr. Morris's discovery suggest about assumptions people make?",
-        "options": ["Assumptions can cause valuable things to be overlooked", "Museums always know the value of their collections", "Old paintings are rarely worth studying", "Only famous curators can identify important art"],
+        "options": [
+          "Assumptions can cause valuable things to be overlooked",
+          "Museums always know the value of their collections",
+          "Old paintings are rarely worth studying",
+          "Only famous curators can identify important art"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did Dr. Morris encourage students to question assumptions?",
-        "options": ["Because curiosity and investigation can lead to important discoveries", "Because teachers are often wrong", "Because museums need more student volunteers", "Because art history is a difficult subject"],
+        "options": [
+          "Because curiosity and investigation can lead to important discoveries",
+          "Because teachers are often wrong",
+          "Because museums need more student volunteers",
+          "Because art history is a difficult subject"
+        ],
         "correct": 0
       }
     ],
@@ -1386,37 +1896,67 @@
       {
         "type": "literal",
         "q": "What was the purpose of the Arctic expedition?",
-        "options": ["To study the effects of climate change", "To build tourist attractions", "To search for valuable minerals", "To train military pilots"],
+        "options": [
+          "To study the effects of climate change",
+          "To build tourist attractions",
+          "To search for valuable minerals",
+          "To train military pilots"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "How did Maya join the expedition?",
-        "options": ["She was invited by her family", "She won a national science competition", "She worked as a journalist", "She applied for a tourism job"],
+        "options": [
+          "She was invited by her family",
+          "She won a national science competition",
+          "She worked as a journalist",
+          "She applied for a tourism job"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What did the expedition discover about Arctic ice?",
-        "options": ["It was melting faster than expected", "It had completely stopped melting", "It was increasing in every region", "It contained no pollution"],
+        "options": [
+          "It was melting faster than expected",
+          "It had completely stopped melting",
+          "It was increasing in every region",
+          "It contained no pollution"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did scientists warn about coastal cities during the storm?",
-        "options": ["Rising temperatures and melting ice could cause future flooding", "Cities were already underwater", "Storms were becoming less frequent", "Scientists wanted to move to coastal areas"],
+        "options": [
+          "Rising temperatures and melting ice could cause future flooding",
+          "Cities were already underwater",
+          "Storms were becoming less frequent",
+          "Scientists wanted to move to coastal areas"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What does Maya's message after returning home tell us about climate change?",
-        "options": ["It is both a scientific and a social challenge for millions of people", "It only affects Arctic animals", "Only scientists need to understand it", "It can be solved quickly with technology"],
+        "options": [
+          "It is both a scientific and a social challenge for millions of people",
+          "It only affects Arctic animals",
+          "Only scientists need to understand it",
+          "It can be solved quickly with technology"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why was it important for the expedition to include scientists from several countries?",
-        "options": ["Because climate change is a global problem that requires international cooperation", "Because no single country owns the Arctic", "Because the journey was too expensive for one country", "Because different languages were needed to communicate"],
+        "options": [
+          "Because climate change is a global problem that requires international cooperation",
+          "Because no single country owns the Arctic",
+          "Because the journey was too expensive for one country",
+          "Because different languages were needed to communicate"
+        ],
         "correct": 0
       }
     ],
@@ -1438,37 +1978,67 @@
       {
         "type": "literal",
         "q": "What was the debate competition about?",
-        "options": ["Whether schools should limit smartphone use", "How students could improve sports performance", "Why libraries should close", "Whether schools needed longer holidays"],
+        "options": [
+          "Whether schools should limit smartphone use",
+          "How students could improve sports performance",
+          "Why libraries should close",
+          "Whether schools needed longer holidays"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What argument did Amina support?",
-        "options": ["Phones should never be used anywhere", "Technology can support education", "Students should only use printed books", "Schools should ban all online learning"],
+        "options": [
+          "Phones should never be used anywhere",
+          "Technology can support education",
+          "Students should only use printed books",
+          "Schools should ban all online learning"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Why did the judges declare the competition a tie?",
-        "options": ["Both teams presented convincing arguments", "The debate ended too early", "The audience interrupted the discussion", "The judges could not hear the speakers"],
+        "options": [
+          "Both teams presented convincing arguments",
+          "The debate ended too early",
+          "The audience interrupted the discussion",
+          "The judges could not hear the speakers"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What surprised some students during their research preparation?",
-        "options": ["Experts themselves disagreed about technology's long-term effects", "No scientific studies existed on the topic", "Teachers refused to answer their questions", "Students preferred longer school days"],
+        "options": [
+          "Experts themselves disagreed about technology's long-term effects",
+          "No scientific studies existed on the topic",
+          "Teachers refused to answer their questions",
+          "Students preferred longer school days"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What does the school's decision to introduce balanced guidelines suggest?",
-        "options": ["Both sides of the argument had valid points worth considering", "The school agreed completely with Jonas", "Technology was banned from classrooms", "The debate had no real impact"],
+        "options": [
+          "Both sides of the argument had valid points worth considering",
+          "The school agreed completely with Jonas",
+          "Technology was banned from classrooms",
+          "The debate had no real impact"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why is it valuable that the debate remained respectful despite strong disagreements?",
-        "options": ["It shows that people can discuss difficult topics without becoming hostile", "It means both teams had the same opinion", "Respectful debates always end in a tie", "Students are never allowed to disagree with judges"],
+        "options": [
+          "It shows that people can discuss difficult topics without becoming hostile",
+          "It means both teams had the same opinion",
+          "Respectful debates always end in a tie",
+          "Students are never allowed to disagree with judges"
+        ],
         "correct": 0
       }
     ],
@@ -1490,37 +2060,67 @@
       {
         "type": "literal",
         "q": "Why was the rescue operation difficult?",
-        "options": ["The tunnel remained unstable and dangerous", "The workers refused assistance", "Emergency services arrived too late", "The city lacked rescue equipment"],
+        "options": [
+          "The tunnel remained unstable and dangerous",
+          "The workers refused assistance",
+          "Emergency services arrived too late",
+          "The city lacked rescue equipment"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "How did local businesses help during the emergency?",
-        "options": ["They repaired the tunnel walls", "They transported injured workers abroad", "They donated food, water, and supplies", "They organized political protests"],
+        "options": [
+          "They repaired the tunnel walls",
+          "They transported injured workers abroad",
+          "They donated food, water, and supplies",
+          "They organized political protests"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What did investigators discover after the rescue?",
-        "options": ["Weaknesses in the tunnel's support system", "Evidence of criminal activity", "Problems with television broadcasts", "Mistakes in weather forecasts"],
+        "options": [
+          "Weaknesses in the tunnel's support system",
+          "Evidence of criminal activity",
+          "Problems with television broadcasts",
+          "Mistakes in weather forecasts"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did Sofia Martinez believe communication with trapped workers was essential?",
-        "options": ["Fear and isolation could increase stress, making the situation more dangerous", "It allowed reporters to interview the workers live", "It reduced the cost of the rescue operation", "It helped officials decide which roads to close"],
+        "options": [
+          "Fear and isolation could increase stress, making the situation more dangerous",
+          "It allowed reporters to interview the workers live",
+          "It reduced the cost of the rescue operation",
+          "It helped officials decide which roads to close"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What does the city's promise of stricter inspections tell us?",
-        "options": ["The collapse could have been prevented with better safety checks", "The rescue was considered a complete failure", "Inspections had never existed before", "Officials blamed the rescue team"],
+        "options": [
+          "The collapse could have been prevented with better safety checks",
+          "The rescue was considered a complete failure",
+          "Inspections had never existed before",
+          "Officials blamed the rescue team"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why did the rescue receive international attention?",
-        "options": ["It demonstrated the value of cooperation, planning, and specialized training", "It was the largest tunnel in the world", "It lasted longer than expected", "It introduced new construction laws immediately"],
+        "options": [
+          "It demonstrated the value of cooperation, planning, and specialized training",
+          "It was the largest tunnel in the world",
+          "It lasted longer than expected",
+          "It introduced new construction laws immediately"
+        ],
         "correct": 0
       }
     ],
@@ -1542,37 +2142,67 @@
       {
         "type": "literal",
         "q": "Why are scientists concerned about future food production?",
-        "options": ["Traditional farming depends on limited land and water resources", "Cities are banning all forms of agriculture", "Most people refuse to eat vegetables", "Farmers are no longer using technology"],
+        "options": [
+          "Traditional farming depends on limited land and water resources",
+          "Cities are banning all forms of agriculture",
+          "Most people refuse to eat vegetables",
+          "Farmers are no longer using technology"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What is one advantage supporters see in urban farming?",
-        "options": ["It completely removes the need for transportation", "It can provide fresher food with lower pollution", "It guarantees equal food access worldwide", "It eliminates the need for electricity"],
+        "options": [
+          "It completely removes the need for transportation",
+          "It can provide fresher food with lower pollution",
+          "It guarantees equal food access worldwide",
+          "It eliminates the need for electricity"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "Why has Singapore invested heavily in urban farming technology?",
-        "options": ["Its climate prevents outdoor farming entirely", "The government wants to reduce tourism", "The country has very limited land", "Farmers there avoid using computers"],
+        "options": [
+          "Its climate prevents outdoor farming entirely",
+          "The government wants to reduce tourism",
+          "The country has very limited land",
+          "Farmers there avoid using computers"
+        ],
         "correct": 2
       },
       {
         "type": "inference",
         "q": "What criticism do some experts have about indoor farms?",
-        "options": ["The crops grow too quickly", "The farms cannot use water efficiently", "The buildings are unsafe during storms", "The systems may be too expensive to maintain"],
+        "options": [
+          "The crops grow too quickly",
+          "The farms cannot use water efficiently",
+          "The buildings are unsafe during storms",
+          "The systems may be too expensive to maintain"
+        ],
         "correct": 3
       },
       {
         "type": "inference",
         "q": "How are researchers trying to improve urban farming systems?",
-        "options": ["By using renewable energy and recycling resources", "By replacing vegetables with artificial food", "By reducing all forms of automation", "By moving farms farther from cities"],
+        "options": [
+          "By using renewable energy and recycling resources",
+          "By replacing vegetables with artificial food",
+          "By reducing all forms of automation",
+          "By moving farms farther from cities"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
-        "options": ["Urban farming may become an important future solution despite challenges", "Traditional farming should disappear completely", "Cities should stop investing in environmental technology", "Only wealthy countries can grow food successfully"],
+        "options": [
+          "Urban farming may become an important future solution despite challenges",
+          "Traditional farming should disappear completely",
+          "Cities should stop investing in environmental technology",
+          "Only wealthy countries can grow food successfully"
+        ],
         "correct": 0
       }
     ],
@@ -1594,37 +2224,67 @@
       {
         "type": "literal",
         "q": "Why is deep-sea exploration difficult?",
-        "options": ["The oceans are too shallow in most regions", "Extreme pressure, darkness, and cold create challenges", "Governments forbid all underwater research", "Modern technology cannot operate underwater"],
+        "options": [
+          "The oceans are too shallow in most regions",
+          "Extreme pressure, darkness, and cold create challenges",
+          "Governments forbid all underwater research",
+          "Modern technology cannot operate underwater"
+        ],
         "correct": 1
       },
       {
         "type": "literal",
         "q": "What surprised scientists about hydrothermal vent ecosystems?",
-        "options": ["The animals depended entirely on sunlight", "No living organisms survived near the vents", "Some organisms survived without photosynthesis", "The water around the vents was completely cold"],
+        "options": [
+          "The animals depended entirely on sunlight",
+          "No living organisms survived near the vents",
+          "Some organisms survived without photosynthesis",
+          "The water around the vents was completely cold"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "Why are some deep-sea organisms important to medical research?",
-        "options": ["They may contain chemicals useful for new medicines", "They can replace traditional doctors", "They prevent underwater earthquakes", "They are easy to farm in laboratories"],
+        "options": [
+          "They may contain chemicals useful for new medicines",
+          "They can replace traditional doctors",
+          "They prevent underwater earthquakes",
+          "They are easy to farm in laboratories"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What do remotely operated vehicles allow scientists to do that was previously impossible?",
-        "options": ["Study deep underwater environments without risking human lives", "Replace all human researchers permanently", "Control weather patterns in the oceans", "Transport fish to laboratories on land"],
+        "options": [
+          "Study deep underwater environments without risking human lives",
+          "Replace all human researchers permanently",
+          "Control weather patterns in the oceans",
+          "Transport fish to laboratories on land"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What concern do environmental groups have about ocean mining?",
-        "options": ["It could damage fragile ecosystems scientists barely understand", "It would increase deep-sea tourism", "It might reduce fish prices worldwide", "It could make submarines unnecessary"],
+        "options": [
+          "It could damage fragile ecosystems scientists barely understand",
+          "It would increase deep-sea tourism",
+          "It might reduce fish prices worldwide",
+          "It could make submarines unnecessary"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the central message of the text?",
-        "options": ["Deep-sea exploration is no longer necessary", "The oceans remain largely unexplored and scientifically important", "Hydrothermal vents are the only valuable ocean environments", "Industrial mining should begin immediately"],
+        "options": [
+          "Deep-sea exploration is no longer necessary",
+          "The oceans remain largely unexplored and scientifically important",
+          "Hydrothermal vents are the only valuable ocean environments",
+          "Industrial mining should begin immediately"
+        ],
         "correct": 1
       }
     ],
@@ -1646,37 +2306,67 @@
       {
         "type": "literal",
         "q": "What is one way AI can support education?",
-        "options": ["By helping personalize learning experiences", "By removing the need for teachers entirely", "By preventing students from making mistakes", "By shortening all school programs"],
+        "options": [
+          "By helping personalize learning experiences",
+          "By removing the need for teachers entirely",
+          "By preventing students from making mistakes",
+          "By shortening all school programs"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "How do adaptive learning platforms work?",
-        "options": ["They adjust tasks based on student performance", "They replace all classroom lessons with games", "They only provide identical exercises to everyone", "They focus entirely on language learning"],
+        "options": [
+          "They adjust tasks based on student performance",
+          "They replace all classroom lessons with games",
+          "They only provide identical exercises to everyone",
+          "They focus entirely on language learning"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Why are privacy experts concerned about AI in schools?",
-        "options": ["AI systems are too expensive to maintain", "Technology may collect and store student data", "Teachers refuse to use digital tools", "Students cannot understand online lessons"],
+        "options": [
+          "AI systems are too expensive to maintain",
+          "Technology may collect and store student data",
+          "Teachers refuse to use digital tools",
+          "Students cannot understand online lessons"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What problem can occur if AI systems are trained with biased data?",
-        "options": ["The systems may produce unfair results for some students", "Computers will stop functioning completely", "Schools will no longer need exams", "Students will avoid using technology"],
+        "options": [
+          "The systems may produce unfair results for some students",
+          "Computers will stop functioning completely",
+          "Schools will no longer need exams",
+          "Students will avoid using technology"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "How have many schools chosen to use AI responsibly?",
-        "options": ["As a tool that supports teachers rather than replacing them", "As a replacement for all textbooks", "As a way to remove classroom discussions", "As entertainment during breaks only"],
+        "options": [
+          "As a tool that supports teachers rather than replacing them",
+          "As a replacement for all textbooks",
+          "As a way to remove classroom discussions",
+          "As entertainment during breaks only"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main challenge described in the text?",
-        "options": ["Balancing technological innovation with human needs in education", "Preventing students from using computers at home", "Replacing every teacher with automated systems", "Limiting scientific research about AI"],
+        "options": [
+          "Balancing technological innovation with human needs in education",
+          "Preventing students from using computers at home",
+          "Replacing every teacher with automated systems",
+          "Limiting scientific research about AI"
+        ],
         "correct": 0
       }
     ],
@@ -1698,37 +2388,67 @@
       {
         "type": "literal",
         "q": "Who could usually access the earliest libraries?",
-        "options": ["Rulers, priests, and wealthy scholars", "All members of society equally", "Only children and students", "Travelers from other countries"],
+        "options": [
+          "Rulers, priests, and wealthy scholars",
+          "All members of society equally",
+          "Only children and students",
+          "Travelers from other countries"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "How did the printing press affect books and libraries?",
-        "options": ["It made books cheaper and easier to distribute", "It ended the use of written language", "It reduced interest in education completely", "It limited libraries to large cities"],
+        "options": [
+          "It made books cheaper and easier to distribute",
+          "It ended the use of written language",
+          "It reduced interest in education completely",
+          "It limited libraries to large cities"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Why were public libraries especially important in industrial cities?",
-        "options": ["Workers and immigrants often lacked educational opportunities", "Factories required every worker to become a writer", "Industrial cities banned private schools", "Libraries replaced newspapers entirely"],
+        "options": [
+          "Workers and immigrants often lacked educational opportunities",
+          "Factories required every worker to become a writer",
+          "Industrial cities banned private schools",
+          "Libraries replaced newspapers entirely"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What did Andrew Carnegie believe libraries could provide?",
-        "options": ["Entertainment for wealthy citizens only", "Opportunities for self-education and social improvement", "A replacement for universities", "Protection from economic crises"],
+        "options": [
+          "Entertainment for wealthy citizens only",
+          "Opportunities for self-education and social improvement",
+          "A replacement for universities",
+          "Protection from economic crises"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What modern services show that libraries have adapted to changing needs?",
-        "options": ["Internet access, digital programs, and lending tools or instruments", "Free housing for all visitors", "Professional sports facilities", "Medical treatment centers"],
+        "options": [
+          "Internet access, digital programs, and lending tools or instruments",
+          "Free housing for all visitors",
+          "Professional sports facilities",
+          "Medical treatment centers"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
-        "options": ["Libraries have evolved throughout history but continue supporting equal access to knowledge", "Digital technology has made libraries unnecessary", "Ancient libraries were more advanced than modern ones", "Public libraries only became important after the internet"],
+        "options": [
+          "Libraries have evolved throughout history but continue supporting equal access to knowledge",
+          "Digital technology has made libraries unnecessary",
+          "Ancient libraries were more advanced than modern ones",
+          "Public libraries only became important after the internet"
+        ],
         "correct": 0
       }
     ],
@@ -1750,37 +2470,67 @@
       {
         "type": "literal",
         "q": "What do psychologists believe is important for successful teamwork?",
-        "options": ["Communication, trust, and cooperation", "Competition between team members", "Avoiding all disagreements", "Working without leadership"],
+        "options": [
+          "Communication, trust, and cooperation",
+          "Competition between team members",
+          "Avoiding all disagreements",
+          "Working without leadership"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What does 'psychological safety' mean in a team?",
-        "options": ["Members believe their ideas will be respected", "The team works in a physically secure building", "Only experienced members are allowed to speak", "Leaders make every decision alone"],
+        "options": [
+          "Members believe their ideas will be respected",
+          "The team works in a physically secure building",
+          "Only experienced members are allowed to speak",
+          "Leaders make every decision alone"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Why can diverse teams sometimes solve problems more creatively?",
-        "options": ["They usually contain more members", "Different perspectives can produce new ideas", "They avoid using technology", "All members think in similar ways"],
+        "options": [
+          "They usually contain more members",
+          "Different perspectives can produce new ideas",
+          "They avoid using technology",
+          "All members think in similar ways"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What type of leadership often produces stronger long-term results, and why?",
-        "options": ["Flexible leadership, because members feel more motivated and involved", "Leadership that controls every detail", "Leadership without communication", "Leadership focused only on competition"],
+        "options": [
+          "Flexible leadership, because members feel more motivated and involved",
+          "Leadership that controls every detail",
+          "Leadership without communication",
+          "Leadership focused only on competition"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why can conflict sometimes benefit teams?",
-        "options": ["It can encourage more careful examination of ideas", "It always increases productivity immediately", "It prevents communication problems", "It removes the need for leaders"],
+        "options": [
+          "It can encourage more careful examination of ideas",
+          "It always increases productivity immediately",
+          "It prevents communication problems",
+          "It removes the need for leaders"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main conclusion of the text?",
-        "options": ["Successful teamwork depends on social and psychological factors, not only talent", "Individual skill is more important than cooperation", "Conflict should always be avoided in groups", "Technology will eventually replace teamwork"],
+        "options": [
+          "Successful teamwork depends on social and psychological factors, not only talent",
+          "Individual skill is more important than cooperation",
+          "Conflict should always be avoided in groups",
+          "Technology will eventually replace teamwork"
+        ],
         "correct": 0
       }
     ],
@@ -1802,37 +2552,67 @@
       {
         "type": "literal",
         "q": "Why do supporters believe space exploration is valuable?",
-        "options": ["It contributes to scientific knowledge and technological innovation", "It guarantees economic equality between countries", "It completely solves environmental problems on Earth", "It eliminates the need for international cooperation"],
+        "options": [
+          "It contributes to scientific knowledge and technological innovation",
+          "It guarantees economic equality between countries",
+          "It completely solves environmental problems on Earth",
+          "It eliminates the need for international cooperation"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Which example shows how space research has helped everyday society?",
-        "options": ["The development of weather forecasting systems", "The reduction of all healthcare costs", "The elimination of poverty in industrial nations", "The replacement of traditional transportation"],
+        "options": [
+          "The development of weather forecasting systems",
+          "The reduction of all healthcare costs",
+          "The elimination of poverty in industrial nations",
+          "The replacement of traditional transportation"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What concern do critics raise about the cost of space exploration?",
-        "options": ["It prevents scientific discoveries entirely", "It may take resources away from urgent social issues", "It causes all countries to increase military spending", "It makes international trade impossible"],
+        "options": [
+          "It prevents scientific discoveries entirely",
+          "It may take resources away from urgent social issues",
+          "It causes all countries to increase military spending",
+          "It makes international trade impossible"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "Why are some people worried about private space companies?",
-        "options": ["They may create ethical, environmental, and regulatory problems", "They refuse to cooperate with scientists", "They are unable to build modern technology", "They focus only on educational research"],
+        "options": [
+          "They may create ethical, environmental, and regulatory problems",
+          "They refuse to cooperate with scientists",
+          "They are unable to build modern technology",
+          "They focus only on educational research"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What does the Mars settlement debate reveal about how people prioritize resources?",
-        "options": ["Some see it as protecting humanity, while others believe Earth's problems should come first", "Scientists disagree about whether Mars exists", "Most experts believe humans could already survive there permanently", "Governments have decided to ban all Mars missions"],
+        "options": [
+          "Some see it as protecting humanity, while others believe Earth's problems should come first",
+          "Scientists disagree about whether Mars exists",
+          "Most experts believe humans could already survive there permanently",
+          "Governments have decided to ban all Mars missions"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
-        "options": ["Space exploration involves both opportunities and ethical challenges that must be balanced", "Private companies should control all future space missions", "Human settlement on Mars will happen within a few years", "Scientific research has no influence on politics or economics"],
+        "options": [
+          "Space exploration involves both opportunities and ethical challenges that must be balanced",
+          "Private companies should control all future space missions",
+          "Human settlement on Mars will happen within a few years",
+          "Scientific research has no influence on politics or economics"
+        ],
         "correct": 0
       }
     ],
@@ -1854,37 +2634,67 @@
       {
         "type": "literal",
         "q": "How has social media changed the spread of news?",
-        "options": ["Information can now spread globally within minutes", "Television broadcasts have disappeared completely", "Governments now control all public information", "People no longer discuss political issues online"],
+        "options": [
+          "Information can now spread globally within minutes",
+          "Television broadcasts have disappeared completely",
+          "Governments now control all public information",
+          "People no longer discuss political issues online"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Why can misinformation spread rapidly online?",
-        "options": ["Most users avoid emotional content", "Algorithms only promote scientific research", "Emotional and controversial stories attract more attention", "Professional journalists encourage false reporting"],
+        "options": [
+          "Most users avoid emotional content",
+          "Algorithms only promote scientific research",
+          "Emotional and controversial stories attract more attention",
+          "Professional journalists encourage false reporting"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "What problem is connected to 'echo chambers'?",
-        "options": ["People are exposed to many conflicting viewpoints", "Users mostly interact with opinions similar to their own", "Governments limit internet access completely", "Social media platforms stop using algorithms"],
+        "options": [
+          "People are exposed to many conflicting viewpoints",
+          "Users mostly interact with opinions similar to their own",
+          "Governments limit internet access completely",
+          "Social media platforms stop using algorithms"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "What advantage of social media is shown during natural disasters?",
-        "options": ["Eyewitnesses can share urgent information immediately", "It guarantees that all news is accurate", "It removes the need for journalists", "It prevents political disagreements"],
+        "options": [
+          "Eyewitnesses can share urgent information immediately",
+          "It guarantees that all news is accurate",
+          "It removes the need for journalists",
+          "It prevents political disagreements"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why do educators emphasize media literacy for younger generations?",
-        "options": ["Students need skills to evaluate and verify information critically", "Traditional newspapers should replace digital media", "Social media platforms will soon disappear", "Advertising has become illegal online"],
+        "options": [
+          "Students need skills to evaluate and verify information critically",
+          "Traditional newspapers should replace digital media",
+          "Social media platforms will soon disappear",
+          "Advertising has become illegal online"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the central idea of the text?",
-        "options": ["Social media has transformed news sharing while creating new challenges about trust and responsibility", "Traditional journalism no longer influences society", "Technology companies should control all information online", "Democracy is impossible in the digital age"],
+        "options": [
+          "Social media has transformed news sharing while creating new challenges about trust and responsibility",
+          "Traditional journalism no longer influences society",
+          "Technology companies should control all information online",
+          "Democracy is impossible in the digital age"
+        ],
         "correct": 0
       }
     ],
@@ -1906,37 +2716,67 @@
       {
         "type": "literal",
         "q": "Why do scientists consider biodiversity important?",
-        "options": ["Ecosystems depend on complex relationships between many species", "It prevents all natural disasters completely", "It guarantees equal wealth in all countries", "It eliminates the effects of climate change"],
+        "options": [
+          "Ecosystems depend on complex relationships between many species",
+          "It prevents all natural disasters completely",
+          "It guarantees equal wealth in all countries",
+          "It eliminates the effects of climate change"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What is one cause of biodiversity loss mentioned in the text?",
-        "options": ["Deforestation and habitat destruction", "Increased scientific research", "The growth of renewable energy", "International conservation agreements"],
+        "options": [
+          "Deforestation and habitat destruction",
+          "Increased scientific research",
+          "The growth of renewable energy",
+          "International conservation agreements"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "How can declining bee populations affect humans?",
-        "options": ["It could influence global food production", "It would increase ocean temperatures immediately", "It would stop all plant growth permanently", "It could eliminate rainfall in farming regions"],
+        "options": [
+          "It could influence global food production",
+          "It would increase ocean temperatures immediately",
+          "It would stop all plant growth permanently",
+          "It could eliminate rainfall in farming regions"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why are rainforests and coral reefs highlighted as examples in the text?",
-        "options": ["They show how many species can depend on each other in rich ecosystems", "They exist only in Europe and North America", "They cannot be damaged by human activity", "They have no connection to human medicine"],
+        "options": [
+          "They show how many species can depend on each other in rich ecosystems",
+          "They exist only in Europe and North America",
+          "They cannot be damaged by human activity",
+          "They have no connection to human medicine"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why can conservation efforts become politically difficult?",
-        "options": ["Protecting habitats may limit economic activities and employment in some regions", "Scientists disagree about whether species exist", "Governments refuse to study environmental issues", "Most industries oppose all environmental laws"],
+        "options": [
+          "Protecting habitats may limit economic activities and employment in some regions",
+          "Scientists disagree about whether species exist",
+          "Governments refuse to study environmental issues",
+          "Most industries oppose all environmental laws"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main message of the text?",
-        "options": ["Protecting biodiversity is essential for both nature and the long-term survival of human societies", "Economic growth is impossible without destroying ecosystems", "Only endangered animals should receive protection", "Climate change has no connection to biodiversity loss"],
+        "options": [
+          "Protecting biodiversity is essential for both nature and the long-term survival of human societies",
+          "Economic growth is impossible without destroying ecosystems",
+          "Only endangered animals should receive protection",
+          "Climate change has no connection to biodiversity loss"
+        ],
         "correct": 0
       }
     ],
@@ -1958,37 +2798,67 @@
       {
         "type": "literal",
         "q": "Why do supporters promote renewable energy?",
-        "options": ["It can reduce greenhouse gas emissions", "It guarantees free electricity worldwide", "It completely eliminates industrial pollution", "It removes the need for technological development"],
+        "options": [
+          "It can reduce greenhouse gas emissions",
+          "It guarantees free electricity worldwide",
+          "It completely eliminates industrial pollution",
+          "It removes the need for technological development"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "Why has solar energy become more widely used?",
-        "options": ["Solar panels have become more efficient and cheaper", "Governments have banned all other energy sources", "Weather conditions are now identical worldwide", "Electricity is no longer necessary in cities"],
+        "options": [
+          "Solar panels have become more efficient and cheaper",
+          "Governments have banned all other energy sources",
+          "Weather conditions are now identical worldwide",
+          "Electricity is no longer necessary in cities"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What challenge affects both solar and wind power?",
-        "options": ["They require fossil fuels to function", "They depend on varying weather conditions", "They cannot produce electricity offshore", "They are illegal in many countries"],
+        "options": [
+          "They require fossil fuels to function",
+          "They depend on varying weather conditions",
+          "They cannot produce electricity offshore",
+          "They are illegal in many countries"
+        ],
         "correct": 1
       },
       {
         "type": "inference",
         "q": "Why are better battery systems important for renewable energy?",
-        "options": ["They can store energy for when sunlight or wind is unavailable", "They reduce the need for engineering research", "They eliminate all environmental concerns", "They increase the use of fossil fuels"],
+        "options": [
+          "They can store energy for when sunlight or wind is unavailable",
+          "They reduce the need for engineering research",
+          "They eliminate all environmental concerns",
+          "They increase the use of fossil fuels"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What ethical concern is mentioned regarding the production of renewable technology?",
-        "options": ["Mining raw materials may damage ecosystems and raise labor concerns", "Renewable energy always increases pollution", "Wind farms prevent scientific research", "Solar panels cannot function in cold climates"],
+        "options": [
+          "Mining raw materials may damage ecosystems and raise labor concerns",
+          "Renewable energy always increases pollution",
+          "Wind farms prevent scientific research",
+          "Solar panels cannot function in cold climates"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
-        "options": ["Renewable energy offers important environmental benefits but also faces economic and ethical challenges", "Fossil fuels will remain the only reliable energy source", "Technology has already solved all climate-related problems", "Economic growth and environmental protection cannot coexist"],
+        "options": [
+          "Renewable energy offers important environmental benefits but also faces economic and ethical challenges",
+          "Fossil fuels will remain the only reliable energy source",
+          "Technology has already solved all climate-related problems",
+          "Economic growth and environmental protection cannot coexist"
+        ],
         "correct": 0
       }
     ],
@@ -2010,37 +2880,67 @@
       {
         "type": "literal",
         "q": "Why is memory important for human identity?",
-        "options": ["It connects people to past experiences, relationships, and emotions", "It prevents all psychological disorders", "It guarantees accurate understanding of every event", "It removes the influence of social relationships"],
+        "options": [
+          "It connects people to past experiences, relationships, and emotions",
+          "It prevents all psychological disorders",
+          "It guarantees accurate understanding of every event",
+          "It removes the influence of social relationships"
+        ],
         "correct": 0
       },
       {
         "type": "literal",
         "q": "What is an example of procedural memory?",
-        "options": ["Remembering a historical date", "Recalling a childhood vacation", "Riding a bicycle automatically", "Memorizing a phone number briefly"],
+        "options": [
+          "Remembering a historical date",
+          "Recalling a childhood vacation",
+          "Riding a bicycle automatically",
+          "Memorizing a phone number briefly"
+        ],
         "correct": 2
       },
       {
         "type": "literal",
         "q": "How can traumatic memories affect individuals?",
-        "options": ["They may continue influencing emotions and behavior for years", "They always disappear after a short time", "They improve concentration permanently", "They prevent people from forming new memories"],
+        "options": [
+          "They may continue influencing emotions and behavior for years",
+          "They always disappear after a short time",
+          "They improve concentration permanently",
+          "They prevent people from forming new memories"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "Why can memories sometimes become inaccurate over time?",
-        "options": ["The brain reconstructs information in complex ways influenced by emotions and later experiences", "Humans are unable to store long-term memories", "Technology completely replaces natural memory", "People consciously invent false experiences"],
+        "options": [
+          "The brain reconstructs information in complex ways influenced by emotions and later experiences",
+          "Humans are unable to store long-term memories",
+          "Technology completely replaces natural memory",
+          "People consciously invent false experiences"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What debate exists about digital technology and memory?",
-        "options": ["Researchers disagree about whether technology weakens memory or just changes how it is used", "Most scientists believe memory no longer matters", "Digital storage has replaced human thinking entirely", "Technology prevents people from learning new information"],
+        "options": [
+          "Researchers disagree about whether technology weakens memory or just changes how it is used",
+          "Most scientists believe memory no longer matters",
+          "Digital storage has replaced human thinking entirely",
+          "Technology prevents people from learning new information"
+        ],
         "correct": 0
       },
       {
         "type": "inference",
         "q": "What is the central idea of the text?",
-        "options": ["Memory is complex and deeply connected to identity, behavior, and mental health", "Human memory functions exactly like a computer system", "Psychologists fully understand how memory works", "Technology will eventually eliminate natural memory"],
+        "options": [
+          "Memory is complex and deeply connected to identity, behavior, and mental health",
+          "Human memory functions exactly like a computer system",
+          "Psychologists fully understand how memory works",
+          "Technology will eventually eliminate natural memory"
+        ],
         "correct": 0
       }
     ],
@@ -2050,8 +2950,7 @@
       "generatedAt": "2026-05-21",
       "model": "gpt-4o"
     }
-  }
-  ,
+  },
   {
     "id": "ak9-tema-001",
     "grade": 9,
@@ -2060,14 +2959,79 @@
     "title": "The Impact of Globalization on Culture",
     "text": "Globalization has transformed societies around the world by increasing the movement of goods, ideas, technology, and people across national borders. Supporters of globalization argue that international cooperation and trade have improved economic development, expanded cultural exchange, and increased access to information. Critics, however, warn that globalization may weaken local traditions and increase economic inequality.\n\nOne major effect of globalization can be seen in popular culture. Music, films, fashion, and social media trends now spread rapidly between countries. Young people in different parts of the world often consume similar entertainment and communicate through the same digital platforms. Some researchers believe this creates greater international understanding by exposing individuals to different cultures and perspectives.\n\nAt the same time, others argue that globalization can threaten local languages, customs, and artistic traditions. Smaller cultures sometimes struggle to compete with the global influence of large entertainment industries and multinational corporations. Critics worry that cultural diversity may decline if local traditions are replaced by standardized global trends.\n\nGlobalization has also influenced migration and education. Students increasingly travel abroad for university studies, while international companies employ workers from multiple countries. These developments can encourage cooperation and innovation because people with different backgrounds contribute new ideas and experiences.\n\nHowever, globalization has not benefited all groups equally. In some regions, factories moved production to countries with lower labor costs, causing unemployment in certain industries. Workers in developing countries may also face poor working conditions while producing goods for international markets. Economists therefore continue debating how governments should regulate trade and protect workers rights.\n\nTechnology has accelerated globalization further. The internet allows businesses to operate internationally and enables individuals to communicate instantly across continents. During global crises such as pandemics or climate-related disasters, countries often depend on international cooperation to share information and resources.\n\nDespite disagreements about its consequences, globalization remains one of the most influential forces shaping modern society. The challenge for future generations will likely involve balancing international cooperation with the protection of cultural diversity, social equality, and local identities.",
     "questions": [
-      {"type": "literal", "q": "What is one positive effect of globalization mentioned in the text?", "options": ["It can increase cultural exchange and access to information", "It completely removes economic inequality", "It prevents the spread of global entertainment", "It guarantees equal working conditions worldwide"], "correct": 0},
-      {"type": "literal", "q": "Why are some critics concerned about globalization's effect on culture?", "options": ["Local traditions and languages may become weaker", "International communication has become impossible", "Countries no longer produce entertainment", "Young people refuse to use technology"], "correct": 0},
-      {"type": "literal", "q": "How can globalization encourage innovation according to the text?", "options": ["By limiting migration between countries", "By reducing access to education", "By allowing people from different backgrounds to share ideas", "By replacing universities with online businesses"], "correct": 2},
-      {"type": "inference", "q": "What economic problem connected to globalization is described?", "options": ["Factories moving to cheaper countries can cause unemployment elsewhere", "International trade has ended completely", "Technology has reduced all business opportunities", "Workers in wealthy countries receive no salaries"], "correct": 0},
-      {"type": "inference", "q": "Why might technology be described as accelerating globalization?", "options": ["It enables instant international communication and business", "It prevents countries from cooperating", "It removes the need for transportation", "It limits the spread of information online"], "correct": 0},
-      {"type": "inference", "q": "What is the central idea of the text?", "options": ["Globalization creates both significant opportunities and serious challenges for societies", "Cultural exchange always damages local traditions", "International trade should be completely banned", "Technology has made national identities unimportant"], "correct": 0}
+      {
+        "type": "literal",
+        "q": "What is one positive effect of globalization mentioned in the text?",
+        "options": [
+          "It can increase cultural exchange and access to information",
+          "It completely removes economic inequality",
+          "It prevents the spread of global entertainment",
+          "It guarantees equal working conditions worldwide"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why are some critics concerned about globalization's effect on culture?",
+        "options": [
+          "Local traditions and languages may become weaker",
+          "International communication has become impossible",
+          "Countries no longer produce entertainment",
+          "Young people refuse to use technology"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How can globalization encourage innovation according to the text?",
+        "options": [
+          "By limiting migration between countries",
+          "By reducing access to education",
+          "By allowing people from different backgrounds to share ideas",
+          "By replacing universities with online businesses"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What economic problem connected to globalization is described?",
+        "options": [
+          "Factories moving to cheaper countries can cause unemployment elsewhere",
+          "International trade has ended completely",
+          "Technology has reduced all business opportunities",
+          "Workers in wealthy countries receive no salaries"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why might technology be described as accelerating globalization?",
+        "options": [
+          "It enables instant international communication and business",
+          "It prevents countries from cooperating",
+          "It removes the need for transportation",
+          "It limits the spread of information online"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central idea of the text?",
+        "options": [
+          "Globalization creates both significant opportunities and serious challenges for societies",
+          "Cultural exchange always damages local traditions",
+          "International trade should be completely banned",
+          "Technology has made national identities unimportant"
+        ],
+        "correct": 0
+      }
     ],
-    "meta": {"wordCount": 481, "fingerprint": "ak9-tema-001", "generatedAt": "2026-05-21", "model": "gpt-4o"}
+    "meta": {
+      "wordCount": 481,
+      "fingerprint": "ak9-tema-001",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   },
   {
     "id": "ak9-tema-002",
@@ -2077,14 +3041,79 @@
     "title": "The Development of Vaccines",
     "text": "Vaccines are considered one of the most important achievements in medical history because they have prevented millions of deaths worldwide. By training the immune system to recognize harmful viruses or bacteria, vaccines reduce the spread of infectious diseases and protect both individuals and communities.\n\nThe history of vaccination began long before modern laboratories existed. In the eighteenth century, the English physician Edward Jenner observed that milkmaids who had been infected with cowpox rarely developed smallpox, a deadly disease that killed millions of people. Jenner used this discovery to develop one of the earliest vaccines, helping lay the foundation for modern immunology.\n\nSince then, scientists have created vaccines against diseases such as polio, measles, and tetanus. Mass vaccination campaigns have dramatically reduced infection rates in many countries, and smallpox became the first human disease to be completely eradicated through vaccination.\n\nDespite these successes, vaccine development remains a complex and challenging process. Researchers must carefully test vaccines to ensure they are both safe and effective. Clinical trials often involve thousands of participants and may take years to complete. During global emergencies, however, governments and pharmaceutical companies sometimes accelerate research while still following scientific safety standards.\n\nPublic trust plays an important role in vaccination programs. Misinformation and conspiracy theories spread online have caused some individuals to question vaccine safety despite strong scientific evidence supporting their effectiveness. Health experts warn that declining vaccination rates can allow preventable diseases to return.\n\nEthical questions have also emerged regarding global access to vaccines. Wealthier countries often secure medical supplies more quickly than poorer nations, creating inequalities during health crises. International organizations therefore argue that cooperation is necessary to ensure fair distribution of vaccines worldwide.\n\nRecent advances in biotechnology, including mRNA technology, may influence future vaccine development significantly. Scientists hope these methods could allow faster responses to new diseases and even contribute to treatments for certain cancers.\n\nAlthough debates about healthcare policies continue, most medical researchers agree that vaccines remain one of the most effective tools for protecting public health and preventing large-scale outbreaks.",
     "questions": [
-      {"type": "literal", "q": "Why are vaccines considered important in medical history?", "options": ["They have prevented millions of deaths worldwide", "They eliminate all diseases permanently", "They remove the need for hospitals", "They replace healthy lifestyles completely"], "correct": 0},
-      {"type": "literal", "q": "What observation helped Edward Jenner develop an early vaccine?", "options": ["Milkmaids infected with cowpox rarely developed smallpox", "Polio spread mainly through polluted water", "Vaccines worked best in warm climates", "Hospitals reduced infection rates automatically"], "correct": 0},
-      {"type": "literal", "q": "Why does vaccine development often take many years?", "options": ["Researchers must test safety and effectiveness very carefully", "Scientists rarely cooperate internationally", "Governments forbid clinical trials completely", "Modern technology cannot study viruses"], "correct": 0},
-      {"type": "inference", "q": "How can misinformation affect vaccination programs?", "options": ["It can reduce public trust and lower vaccination rates, allowing diseases to return", "It guarantees stronger immunity in populations", "It increases scientific cooperation automatically", "It prevents the spread of online discussions"], "correct": 0},
-      {"type": "inference", "q": "What ethical issue connected to vaccines is discussed?", "options": ["Wealthier countries may gain faster access, creating global inequality", "Vaccines can only be produced in Europe", "Medical research no longer requires funding", "International organizations oppose vaccination"], "correct": 0},
-      {"type": "inference", "q": "What is the main idea of the text?", "options": ["Vaccines are highly important but involve scientific, social, and ethical challenges", "Modern medicine no longer depends on vaccination", "Clinical trials should be removed to speed up research", "Public health crises can be solved without international cooperation"], "correct": 0}
+      {
+        "type": "literal",
+        "q": "Why are vaccines considered important in medical history?",
+        "options": [
+          "They have prevented millions of deaths worldwide",
+          "They eliminate all diseases permanently",
+          "They remove the need for hospitals",
+          "They replace healthy lifestyles completely"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What observation helped Edward Jenner develop an early vaccine?",
+        "options": [
+          "Milkmaids infected with cowpox rarely developed smallpox",
+          "Polio spread mainly through polluted water",
+          "Vaccines worked best in warm climates",
+          "Hospitals reduced infection rates automatically"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why does vaccine development often take many years?",
+        "options": [
+          "Researchers must test safety and effectiveness very carefully",
+          "Scientists rarely cooperate internationally",
+          "Governments forbid clinical trials completely",
+          "Modern technology cannot study viruses"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How can misinformation affect vaccination programs?",
+        "options": [
+          "It can reduce public trust and lower vaccination rates, allowing diseases to return",
+          "It guarantees stronger immunity in populations",
+          "It increases scientific cooperation automatically",
+          "It prevents the spread of online discussions"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What ethical issue connected to vaccines is discussed?",
+        "options": [
+          "Wealthier countries may gain faster access, creating global inequality",
+          "Vaccines can only be produced in Europe",
+          "Medical research no longer requires funding",
+          "International organizations oppose vaccination"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Vaccines are highly important but involve scientific, social, and ethical challenges",
+          "Modern medicine no longer depends on vaccination",
+          "Clinical trials should be removed to speed up research",
+          "Public health crises can be solved without international cooperation"
+        ],
+        "correct": 0
+      }
     ],
-    "meta": {"wordCount": 482, "fingerprint": "ak9-tema-002", "generatedAt": "2026-05-21", "model": "gpt-4o"}
+    "meta": {
+      "wordCount": 482,
+      "fingerprint": "ak9-tema-002",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   },
   {
     "id": "ak9-tema-003",
@@ -2094,14 +3123,79 @@
     "title": "The Psychology of Advertising",
     "text": "Advertising influences modern society in countless ways. Companies spend enormous amounts of money studying consumer behavior in order to persuade people to purchase products, support brands, or change habits. Psychologists and marketing experts analyze how emotions, social pressure, and visual design affect decision-making.\n\nOne common advertising strategy involves creating emotional connections between products and positive experiences. Commercials often associate products with happiness, success, friendship, or personal confidence. Even when advertisements provide little factual information, emotional storytelling can strongly influence consumer attitudes.\n\nSocial influence also plays a major role in advertising. Companies frequently use celebrities, athletes, or social media influencers to promote products because consumers may trust recommendations from familiar figures. In digital environments, algorithms can even personalize advertisements based on users online behavior, interests, and search history.\n\nColor, music, and design are carefully selected to attract attention and shape perception. Fast-food companies, for example, often use bright colors such as red and yellow because researchers believe these colors may increase excitement and appetite. Luxury brands, in contrast, often use darker colors and minimalist designs to communicate exclusivity and sophistication.\n\nCritics argue that advertising can encourage unhealthy consumer habits and unrealistic expectations. Some advertisements promote materialism by suggesting that personal happiness depends on purchasing certain products. Others may reinforce stereotypes related to gender, beauty, or social status.\n\nChildren and teenagers are often considered especially vulnerable to advertising because they may have less experience evaluating persuasive messages critically. Governments in some countries therefore regulate advertising directed toward young audiences, particularly regarding unhealthy food, alcohol, or gambling.\n\nThe rise of social media has further complicated advertising ethics. Influencers sometimes promote products without clearly revealing sponsorship agreements, making it difficult for audiences to distinguish between personal opinions and paid marketing.\n\nDespite criticism, advertising remains central to modern economies because businesses depend on communication with consumers. Many experts argue that media literacy and critical thinking are essential skills in a world where persuasive messages appear constantly through television, smartphones, websites, and public spaces.",
     "questions": [
-      {"type": "literal", "q": "Why do companies study consumer behavior?", "options": ["To persuade people to buy products or support brands", "To reduce all forms of competition", "To eliminate emotional decision-making completely", "To prevent the use of social media advertising"], "correct": 0},
-      {"type": "literal", "q": "How do many advertisements influence consumers emotionally?", "options": ["By connecting products to positive experiences like happiness or success", "By avoiding storytelling completely", "By focusing only on scientific statistics", "By reducing the use of images and music"], "correct": 0},
-      {"type": "literal", "q": "Why are children and teenagers considered especially vulnerable to advertising?", "options": ["They may have less experience evaluating persuasive messages critically", "They completely ignore social media content", "They rarely encounter advertisements online", "They understand marketing better than adults"], "correct": 0},
-      {"type": "inference", "q": "What does the careful use of color and music in advertising suggest?", "options": ["Companies deliberately design every detail to shape how consumers feel and decide", "They choose colors randomly without research", "Visual design has no effect on buying decisions", "Music is only used to entertain, not persuade"], "correct": 0},
-      {"type": "inference", "q": "What criticism of advertising is mentioned in the text?", "options": ["It may encourage materialism, reinforce stereotypes, and create unrealistic expectations", "It prevents businesses from communicating with consumers", "It reduces the influence of digital technology", "It eliminates all cultural stereotypes"], "correct": 0},
-      {"type": "inference", "q": "What is the main idea of the text?", "options": ["Advertising uses psychological techniques to influence behavior and raises important ethical concerns", "Modern companies no longer depend on advertising", "Persuasive communication only exists in digital media", "Governments should completely ban all advertisements"], "correct": 0}
+      {
+        "type": "literal",
+        "q": "Why do companies study consumer behavior?",
+        "options": [
+          "To persuade people to buy products or support brands",
+          "To reduce all forms of competition",
+          "To eliminate emotional decision-making completely",
+          "To prevent the use of social media advertising"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How do many advertisements influence consumers emotionally?",
+        "options": [
+          "By connecting products to positive experiences like happiness or success",
+          "By avoiding storytelling completely",
+          "By focusing only on scientific statistics",
+          "By reducing the use of images and music"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why are children and teenagers considered especially vulnerable to advertising?",
+        "options": [
+          "They may have less experience evaluating persuasive messages critically",
+          "They completely ignore social media content",
+          "They rarely encounter advertisements online",
+          "They understand marketing better than adults"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the careful use of color and music in advertising suggest?",
+        "options": [
+          "Companies deliberately design every detail to shape how consumers feel and decide",
+          "They choose colors randomly without research",
+          "Visual design has no effect on buying decisions",
+          "Music is only used to entertain, not persuade"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What criticism of advertising is mentioned in the text?",
+        "options": [
+          "It may encourage materialism, reinforce stereotypes, and create unrealistic expectations",
+          "It prevents businesses from communicating with consumers",
+          "It reduces the influence of digital technology",
+          "It eliminates all cultural stereotypes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Advertising uses psychological techniques to influence behavior and raises important ethical concerns",
+          "Modern companies no longer depend on advertising",
+          "Persuasive communication only exists in digital media",
+          "Governments should completely ban all advertisements"
+        ],
+        "correct": 0
+      }
     ],
-    "meta": {"wordCount": 471, "fingerprint": "ak9-tema-003", "generatedAt": "2026-05-21", "model": "gpt-4o"}
+    "meta": {
+      "wordCount": 471,
+      "fingerprint": "ak9-tema-003",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   },
   {
     "id": "ak9-tema-004",
@@ -2111,14 +3205,79 @@
     "title": "The Challenges of Artificial Intelligence",
     "text": "Artificial intelligence, often referred to as AI, has become one of the most influential technologies of the twenty-first century. AI systems are now used in healthcare, transportation, education, finance, and entertainment. Supporters argue that artificial intelligence can improve efficiency, solve complex problems, and assist humans in ways that were previously impossible.\n\nIn healthcare, AI programs can analyze medical images and detect diseases more quickly than some traditional methods. In transportation, self-driving technology may eventually reduce traffic accidents caused by human error. Businesses also use AI to analyze large amounts of data and improve decision-making.\n\nDespite these advantages, AI development has created significant ethical and social concerns. One major issue involves employment. Automation may replace certain jobs, especially repetitive tasks in manufacturing, transportation, and customer service. Economists disagree about whether technological innovation will ultimately create enough new professions to replace those lost.\n\nAnother concern involves bias in AI systems. Artificial intelligence learns from data, and if that data reflects existing social inequalities or stereotypes, the technology may produce unfair outcomes. Researchers have discovered examples of biased facial recognition systems and hiring algorithms that treated certain groups unfairly.\n\nPrivacy is another important topic in discussions about AI. Modern systems can collect and analyze enormous amounts of personal information through smartphones, cameras, and online activity. Critics worry that governments or corporations could misuse such data for surveillance or manipulation.\n\nSome experts also debate the long-term risks of increasingly advanced AI systems. While many scientists believe AI will remain a useful tool controlled by humans, others warn that highly autonomous systems may eventually become difficult to regulate. International organizations have therefore called for ethical guidelines and global cooperation regarding AI development.\n\nEducation systems are already adapting to these technological changes. Schools and universities increasingly teach programming, digital ethics, and critical thinking skills to prepare students for future workplaces influenced by automation.\n\nAlthough opinions differ about the future of artificial intelligence, most researchers agree that societies must carefully balance technological innovation with ethical responsibility and human rights.",
     "questions": [
-      {"type": "literal", "q": "What is one benefit of AI mentioned in the text?", "options": ["It can improve efficiency and help solve complex problems", "It completely removes the need for human workers", "It guarantees equal wealth distribution worldwide", "It prevents all technological accidents"], "correct": 0},
-      {"type": "literal", "q": "How can bias appear in AI systems?", "options": ["The systems may learn unfair patterns from existing data", "Artificial intelligence ignores all human information", "Researchers avoid testing AI programs carefully", "Governments prevent the use of digital technology"], "correct": 0},
-      {"type": "literal", "q": "What privacy concern is discussed in the text?", "options": ["Personal data collected by AI could be misused for surveillance", "AI systems cannot store information online", "Smartphones no longer collect user data", "Governments have banned digital communication"], "correct": 0},
-      {"type": "inference", "q": "Why are economists uncertain about automation and employment?", "options": ["It is unclear whether new jobs created will replace those lost to AI", "Artificial intelligence cannot analyze data effectively", "Technology companies refuse to use automation", "Self-driving vehicles increase transportation costs"], "correct": 0},
-      {"type": "inference", "q": "Why are schools adding digital ethics to their programs?", "options": ["Students need skills to navigate a future shaped by AI and automation", "Programming has replaced all traditional subjects", "Universities no longer support scientific research", "Automation has ended the need for critical thinking"], "correct": 0},
-      {"type": "inference", "q": "What is the central idea of the text?", "options": ["AI offers significant opportunities but also creates serious ethical and social challenges", "AI technology should be banned completely", "Human workers will disappear within a few years", "Privacy concerns connected to AI are unimportant"], "correct": 0}
+      {
+        "type": "literal",
+        "q": "What is one benefit of AI mentioned in the text?",
+        "options": [
+          "It can improve efficiency and help solve complex problems",
+          "It completely removes the need for human workers",
+          "It guarantees equal wealth distribution worldwide",
+          "It prevents all technological accidents"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How can bias appear in AI systems?",
+        "options": [
+          "The systems may learn unfair patterns from existing data",
+          "Artificial intelligence ignores all human information",
+          "Researchers avoid testing AI programs carefully",
+          "Governments prevent the use of digital technology"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What privacy concern is discussed in the text?",
+        "options": [
+          "Personal data collected by AI could be misused for surveillance",
+          "AI systems cannot store information online",
+          "Smartphones no longer collect user data",
+          "Governments have banned digital communication"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why are economists uncertain about automation and employment?",
+        "options": [
+          "It is unclear whether new jobs created will replace those lost to AI",
+          "Artificial intelligence cannot analyze data effectively",
+          "Technology companies refuse to use automation",
+          "Self-driving vehicles increase transportation costs"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why are schools adding digital ethics to their programs?",
+        "options": [
+          "Students need skills to navigate a future shaped by AI and automation",
+          "Programming has replaced all traditional subjects",
+          "Universities no longer support scientific research",
+          "Automation has ended the need for critical thinking"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central idea of the text?",
+        "options": [
+          "AI offers significant opportunities but also creates serious ethical and social challenges",
+          "AI technology should be banned completely",
+          "Human workers will disappear within a few years",
+          "Privacy concerns connected to AI are unimportant"
+        ],
+        "correct": 0
+      }
     ],
-    "meta": {"wordCount": 472, "fingerprint": "ak9-tema-004", "generatedAt": "2026-05-21", "model": "gpt-4o"}
+    "meta": {
+      "wordCount": 472,
+      "fingerprint": "ak9-tema-004",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   },
   {
     "id": "ak9-tema-005",
@@ -2128,13 +3287,488 @@
     "title": "The Preservation of Historical Monuments",
     "text": "Historical monuments provide valuable connections to the past and help societies understand cultural, political, and architectural history. Castles, temples, statues, and ancient ruins often attract tourists, researchers, and students who wish to learn about earlier civilizations and historical events. Governments and international organizations therefore invest significant resources in preserving important historical sites.\n\nOne major challenge in monument preservation is environmental damage. Weather conditions such as rain, wind, heat, and pollution gradually weaken building materials over time. Climate change has increased concerns because rising sea levels, stronger storms, and extreme temperatures threaten historical sites in many regions.\n\nHuman activity can also create problems for preservation efforts. Large numbers of tourists may damage fragile structures, while urban expansion sometimes places historical sites at risk of destruction. In areas affected by war or political conflict, monuments may be intentionally damaged as symbols of cultural identity.\n\nModern technology has become increasingly important in preservation work. Scientists use laser scanning, digital modeling, and advanced imaging systems to study monuments and record detailed information about their condition. In some cases, damaged structures have even been partially reconstructed using 3D printing techniques.\n\nHowever, preservation efforts often involve difficult ethical questions. Some experts believe monuments should remain exactly as they are, even if they become damaged over time. Others support reconstruction projects that restore buildings to earlier appearances. Debates may also arise regarding monuments connected to controversial historical figures or events.\n\nEconomic considerations influence preservation decisions as well. Maintaining historical sites can be expensive, especially in countries with limited financial resources. Supporters argue that tourism and cultural education justify these costs, while critics sometimes believe funds should instead support healthcare, housing, or infrastructure.\n\nInternational organizations such as UNESCO have created programs to protect sites considered important to global cultural heritage. These efforts encourage cooperation between nations and emphasize that historical monuments belong not only to individual countries but also to humanity as a whole.\n\nThe preservation of historical monuments ultimately reflects broader questions about memory, identity, and how societies choose to represent their past for future generations.",
     "questions": [
-      {"type": "literal", "q": "Why are historical monuments considered important?", "options": ["They help societies understand cultural and historical identity", "They eliminate disagreements about the past", "They replace the need for historical education", "They prevent environmental damage completely"], "correct": 0},
-      {"type": "literal", "q": "How can climate change threaten historical monuments?", "options": ["Extreme weather and rising sea levels can damage structures", "It prevents researchers from studying architecture", "Tourism disappears during warmer temperatures", "Governments stop funding preservation projects"], "correct": 0},
-      {"type": "literal", "q": "What role does modern technology play in preservation work?", "options": ["It helps researchers study, record, and reconstruct monuments", "It replaces the need for historians completely", "It prevents all forms of pollution automatically", "It removes political disagreements about monuments"], "correct": 0},
-      {"type": "inference", "q": "What ethical debate about monuments is mentioned?", "options": ["Whether damaged sites should remain unchanged or be restored to earlier states", "Whether all monuments should be destroyed after wars", "Whether tourists should be forbidden from visiting museums", "Whether governments should stop teaching history"], "correct": 0},
-      {"type": "inference", "q": "Why do some critics question spending money on preservation?", "options": ["They believe funds could better serve urgent public needs like healthcare or housing", "They think tourism has no economic value", "They oppose all forms of cultural education", "They believe monuments are impossible to protect"], "correct": 0},
-      {"type": "inference", "q": "What is the main idea of the text?", "options": ["Preserving monuments involves cultural value, technological tools, and ethical decisions", "Historical monuments should only belong to wealthy countries", "Modern technology has solved all preservation problems", "Tourism is the only reason monuments are protected"], "correct": 0}
+      {
+        "type": "literal",
+        "q": "Why are historical monuments considered important?",
+        "options": [
+          "They help societies understand cultural and historical identity",
+          "They eliminate disagreements about the past",
+          "They replace the need for historical education",
+          "They prevent environmental damage completely"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How can climate change threaten historical monuments?",
+        "options": [
+          "Extreme weather and rising sea levels can damage structures",
+          "It prevents researchers from studying architecture",
+          "Tourism disappears during warmer temperatures",
+          "Governments stop funding preservation projects"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What role does modern technology play in preservation work?",
+        "options": [
+          "It helps researchers study, record, and reconstruct monuments",
+          "It replaces the need for historians completely",
+          "It prevents all forms of pollution automatically",
+          "It removes political disagreements about monuments"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What ethical debate about monuments is mentioned?",
+        "options": [
+          "Whether damaged sites should remain unchanged or be restored to earlier states",
+          "Whether all monuments should be destroyed after wars",
+          "Whether tourists should be forbidden from visiting museums",
+          "Whether governments should stop teaching history"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do some critics question spending money on preservation?",
+        "options": [
+          "They believe funds could better serve urgent public needs like healthcare or housing",
+          "They think tourism has no economic value",
+          "They oppose all forms of cultural education",
+          "They believe monuments are impossible to protect"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Preserving monuments involves cultural value, technological tools, and ethical decisions",
+          "Historical monuments should only belong to wealthy countries",
+          "Modern technology has solved all preservation problems",
+          "Tourism is the only reason monuments are protected"
+        ],
+        "correct": 0
+      }
     ],
-    "meta": {"wordCount": 478, "fingerprint": "ak9-tema-005", "generatedAt": "2026-05-21", "model": "gpt-4o"}
+    "meta": {
+      "wordCount": 478,
+      "fingerprint": "ak9-tema-005",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak10-tema-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Future of Genetic Engineering",
+    "text": "Advances in genetic engineering have transformed modern science and medicine during the last few decades. Researchers can now modify DNA with increasing precision, allowing scientists to study diseases, improve agriculture, and potentially prevent inherited medical conditions. One of the most discussed technologies is CRISPR, a method that enables scientists to edit genes more accurately and efficiently than earlier techniques.\n\nSupporters of genetic engineering argue that these developments could significantly improve human health. Scientists are currently researching treatments for diseases such as sickle cell anemia, cystic fibrosis, and certain forms of cancer. By correcting harmful genetic mutations, doctors may eventually prevent serious illnesses before symptoms even appear. Researchers have also developed genetically modified crops that resist drought, insects, and plant diseases, which may help increase food production in regions affected by climate change.\n\nDespite these possibilities, genetic engineering has also created ethical concerns. Some critics worry that editing human embryos could lead to 'designer babies,' where parents select physical characteristics such as height, intelligence, or appearance. Opponents argue that this could increase social inequality if advanced treatments become available only to wealthy individuals.\n\nAnother concern involves unintended consequences. Even small genetic changes might produce unexpected effects that scientists do not fully understand yet. Environmental groups have also questioned the long-term impact of genetically modified organisms on ecosystems. For example, modified crops could potentially affect insects, soil quality, or biodiversity in ways researchers cannot easily predict.\n\nGovernments around the world have responded differently to these issues. Some countries allow limited forms of genetic research under strict regulation, while others ban certain experiments completely. International organizations have called for global cooperation to establish ethical guidelines because scientific discoveries often spread quickly across national borders.\n\nPublic opinion regarding genetic engineering remains divided. Surveys show that many people support medical uses of gene editing when the goal is treating serious diseases. However, support often decreases when discussions involve altering human embryos or enhancing non-medical traits. Religious groups, philosophers, scientists, and policymakers continue debating where ethical boundaries should exist.\n\nThe development of genetic engineering also raises questions about the relationship between science and society. Scientific progress can create powerful opportunities, but societies must decide how technologies should be used responsibly. Some experts argue that fear of new technology may slow important medical advances, while others believe caution is necessary when dealing with changes that could affect future generations permanently.\n\nAlthough the future of genetic engineering remains uncertain, most researchers agree that the technology will continue influencing medicine, agriculture, and ethics for decades to come. The challenge for humanity will involve balancing scientific innovation with fairness, safety, and respect for human rights.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why do supporters believe genetic engineering could improve healthcare?",
+        "options": [
+          "It may help prevent or treat inherited diseases",
+          "It guarantees equal healthcare worldwide",
+          "It replaces the need for hospitals",
+          "It eliminates all environmental problems"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why are some environmental groups worried about genetically modified crops?",
+        "options": [
+          "They may create unpredictable effects on ecosystems",
+          "They cannot survive drought conditions",
+          "They prevent scientific cooperation",
+          "They increase biodiversity automatically"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How have governments responded to genetic engineering?",
+        "options": [
+          "Different countries have created different regulations",
+          "Every nation has completely banned gene editing",
+          "Governments no longer support scientific research",
+          "International laws are identical everywhere"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What ethical concern is connected to the idea of 'designer babies'?",
+        "options": [
+          "Parents could select non-medical traits, potentially increasing inequality",
+          "Scientists would stop studying diseases",
+          "Governments would ban all medical research",
+          "Food production would decrease globally"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does public support for gene editing sometimes decrease?",
+        "options": [
+          "People are more uncertain when it involves altering embryos or non-medical traits",
+          "Medical treatments have become less effective",
+          "Scientists no longer study inherited diseases",
+          "Religious groups fully support all experiments"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central idea of the text?",
+        "options": [
+          "Genetic engineering offers major possibilities but also serious ethical challenges that must be balanced",
+          "Scientific progress should always continue without regulation",
+          "Agricultural technology is more important than medicine",
+          "Future societies will completely reject genetic research"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 497,
+      "fingerprint": "ak10-tema-001",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak10-tema-002",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Role of Journalism in Democracy",
+    "text": "Journalism has long been considered one of the foundations of democratic societies. Independent news organizations provide citizens with information about politics, economics, social issues, and international events. Supporters of free journalism argue that informed citizens are better able to participate in elections, debate public policies, and hold powerful institutions accountable.\n\nHistorically, newspapers and investigative reporters have exposed corruption, abuse of power, and human rights violations. Investigative journalism often requires months or even years of research, interviews, and analysis. Famous investigations have led to political resignations, legal reforms, and increased public awareness about important issues.\n\nThe digital revolution has transformed journalism dramatically. Online platforms now allow information to spread almost instantly across the world. Many people receive news through smartphones and social media rather than traditional newspapers or television broadcasts. This shift has created both opportunities and challenges for journalists.\n\nOne advantage of digital media is that independent voices can now reach large audiences without requiring expensive printing systems or broadcasting networks. Citizen journalists can share videos and eyewitness accounts during protests, natural disasters, or political conflicts. In some situations, social media has helped expose injustices that might otherwise have remained hidden.\n\nHowever, digital communication has also increased the spread of misinformation and manipulated content. False stories can spread rapidly online because emotional or controversial material often attracts attention more effectively than careful reporting. Deepfake technology, which uses artificial intelligence to create realistic fake videos or audio recordings, has increased concerns about how easily information can be manipulated.\n\nEconomic challenges have also affected journalism. Traditional newspapers have lost advertising revenue as audiences move online, forcing many local news organizations to close or reduce staff. Critics worry that fewer professional journalists may weaken investigative reporting and reduce public access to reliable local information.\n\nAnother debate concerns the relationship between journalism and political influence. In some countries, governments restrict press freedom through censorship, arrests, or legal pressure. Even in democratic societies, critics sometimes accuse media organizations of political bias or corporate influence.\n\nEducators and researchers increasingly emphasize the importance of media literacy. Citizens must learn how to verify sources, compare perspectives, and distinguish between reliable reporting and misleading content. These skills have become especially important in digital environments where information spreads rapidly and audiences encounter competing narratives constantly.\n\nDespite technological and political challenges, many experts believe journalism remains essential for democratic societies. Without independent reporting and informed public discussion, governments and institutions may become less transparent and less accountable. The future of democracy may therefore depend partly on whether societies can protect press freedom while adapting journalism to the changing digital world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why is journalism considered important in democratic societies?",
+        "options": [
+          "It helps citizens stay informed and hold institutions accountable",
+          "It prevents all political disagreements",
+          "It replaces the need for elections",
+          "It guarantees equal economic conditions"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How has digital media changed journalism?",
+        "options": [
+          "Information can spread much faster and reach wider audiences",
+          "Citizens no longer consume news",
+          "Traditional reporting has disappeared completely",
+          "Governments fully control all online platforms"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why are deepfake technologies a concern for journalism?",
+        "options": [
+          "They make manipulated information appear realistic",
+          "They reduce internet access worldwide",
+          "They prevent investigative reporting",
+          "They eliminate political debates"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is one example of investigative journalism's real-world impact?",
+        "options": [
+          "It has led to political resignations and legal reforms by exposing abuses",
+          "It eliminated social media platforms",
+          "It prevented technological development",
+          "It replaced legal systems entirely"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do experts emphasize media literacy for citizens?",
+        "options": [
+          "People need skills to critically evaluate information in a rapidly changing digital world",
+          "Professional journalism is no longer necessary",
+          "Citizens should avoid using digital technology",
+          "Social media always provides accurate information"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Journalism remains essential for democracy despite significant digital and political challenges",
+          "Traditional newspapers should completely replace online media",
+          "Governments should regulate all public information",
+          "Investigative journalism has become unimportant in modern society"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 496,
+      "fingerprint": "ak10-tema-002",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak10-tema-003",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "psychology",
+    "title": "The Psychology of Human Motivation",
+    "text": "Human motivation has fascinated psychologists, philosophers, and educators for centuries. Motivation influences why people pursue goals, overcome difficulties, and continue working despite setbacks. Researchers have developed several theories to explain what drives human behavior and how individuals maintain long-term commitment.\n\nOne of the most influential psychological theories was developed by Abraham Maslow. His hierarchy of needs suggested that humans are motivated by different levels of needs, beginning with basic survival requirements such as food and safety. Once these needs are satisfied, individuals may focus on social belonging, self-esteem, and eventually self-actualization, which involves achieving personal potential and meaning.\n\nOther psychologists have emphasized the importance of intrinsic and extrinsic motivation. Intrinsic motivation occurs when people perform activities because they genuinely enjoy them or find them personally meaningful. Extrinsic motivation, by contrast, involves external rewards such as money, grades, or praise. Research often shows that intrinsic motivation can create stronger long-term engagement, especially in education and creative work.\n\nMotivation is also strongly connected to emotions and environment. Supportive relationships, positive feedback, and realistic goals can increase confidence and persistence. In contrast, repeated failure, stress, or social isolation may reduce motivation significantly. Educational researchers therefore study how schools and workplaces can create environments that encourage learning and productivity.\n\nModern neuroscience has added another perspective to motivation research. Scientists studying the brain have discovered that chemicals such as dopamine influence reward systems and decision-making. Activities that produce feelings of achievement or excitement can strengthen motivation by encouraging repeated behavior.\n\nTechnology and social media have introduced new questions about motivation in modern society. Some researchers argue that constant digital stimulation may reduce attention spans and make sustained concentration more difficult. Others believe online communities and digital tools can increase motivation by connecting individuals with supportive networks and educational opportunities.\n\nCultural differences also influence motivation. In some societies, personal achievement and independence are strongly emphasized, while other cultures place greater value on family responsibility or collective success. Psychologists therefore caution against assuming that motivation functions identically in every social context.\n\nAlthough no single theory fully explains human behavior, most researchers agree that motivation is influenced by biological, emotional, social, and cultural factors working together. Understanding motivation remains important not only for psychology but also for education, healthcare, sports, and workplace leadership. By understanding what encourages persistence and engagement, societies may become better equipped to support learning, creativity, and personal well-being.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "According to Maslow's theory, what needs usually come first?",
+        "options": [
+          "Basic survival and safety needs",
+          "Creative and artistic goals",
+          "Political influence and leadership",
+          "International cooperation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is intrinsic motivation?",
+        "options": [
+          "Doing something because it feels meaningful or enjoyable",
+          "Working only for financial rewards",
+          "Avoiding difficult situations completely",
+          "Depending entirely on social pressure"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What role does dopamine play according to neuroscience research?",
+        "options": [
+          "It influences reward systems and encourages repeated behavior",
+          "It prevents emotional reactions completely",
+          "It reduces the importance of learning",
+          "It eliminates social motivation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How can environment influence a person's motivation?",
+        "options": [
+          "Supportive relationships and realistic goals can increase persistence, while stress may reduce it",
+          "Social conditions have no effect on behavior",
+          "Failure always strengthens confidence",
+          "Motivation depends only on intelligence"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do psychologists caution against assuming motivation works the same everywhere?",
+        "options": [
+          "Different societies value different goals, so motivation is shaped by cultural context",
+          "Human motivation is biologically identical everywhere",
+          "Technology has removed all cultural differences",
+          "Only wealthy countries study psychology"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main conclusion of the text?",
+        "options": [
+          "Motivation is shaped by biological, emotional, social, and cultural factors working together",
+          "External rewards are always stronger than personal interest",
+          "Modern neuroscience has fully explained all human behavior",
+          "Motivation is unimportant in education and workplaces"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 492,
+      "fingerprint": "ak10-tema-003",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak10-tema-004",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "environment",
+    "title": "Climate Migration and Global Challenges",
+    "text": "Climate change is expected to influence human migration increasingly during the twenty-first century. Rising sea levels, droughts, extreme weather events, and changing agricultural conditions may force millions of people to leave their homes in search of safety and economic stability. Researchers often describe this phenomenon as climate migration.\n\nSome of the regions most vulnerable to climate migration include low-lying coastal areas and countries heavily dependent on agriculture. In certain island nations, rising sea levels already threaten homes, infrastructure, and freshwater supplies. In other regions, prolonged droughts have reduced crop production, creating food shortages and economic instability.\n\nClimate migration can occur both within countries and across international borders. After natural disasters such as floods or hurricanes, families may temporarily relocate to nearby cities or safer regions. However, long-term environmental changes can eventually force permanent migration if communities become unable to recover economically or environmentally.\n\nThe relationship between climate change and migration is complex because environmental factors often interact with political conflict, poverty, and social inequality. For example, water shortages or reduced agricultural productivity may increase competition for resources and contribute to political instability. Researchers therefore caution against viewing climate migration as caused by environmental conditions alone.\n\nGovernments and international organizations face difficult questions regarding how to respond to these challenges. Wealthier countries may experience pressure to accept larger numbers of migrants, while poorer nations often lack resources to support displaced populations effectively. International law currently provides limited legal protection specifically for climate migrants compared to refugees fleeing war or political persecution.\n\nSome policymakers emphasize adaptation strategies designed to help communities remain in their home regions. These measures may include building flood barriers, improving water management systems, and developing crops resistant to drought conditions. Supporters argue that prevention and adaptation may reduce forced migration significantly.\n\nOthers believe migration itself can sometimes become a necessary adaptation strategy. Moving to safer regions may allow individuals and families to survive environmental changes while sending financial support back to relatives remaining in vulnerable communities.\n\nPublic discussions about climate migration sometimes become politically controversial. Some citizens worry about economic competition, cultural tensions, or pressure on housing and healthcare systems. Others emphasize humanitarian responsibilities and argue that countries contributing most to greenhouse gas emissions should help support affected populations.\n\nMost climate researchers agree that environmental migration will likely become more common in the future. The challenge for governments and societies will involve balancing humanitarian responsibilities, economic planning, environmental adaptation, and international cooperation in an increasingly unstable climate.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is climate migration?",
+        "options": [
+          "Movement caused partly by environmental and climate-related changes",
+          "Travel connected only to tourism and education",
+          "Migration controlled entirely by technology companies",
+          "Temporary relocation during sporting events"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why are low-lying coastal regions considered especially vulnerable?",
+        "options": [
+          "Rising sea levels threaten homes, infrastructure, and freshwater supplies",
+          "Agriculture cannot exist near oceans",
+          "Governments have banned migration there",
+          "Climate change affects only inland regions"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is one adaptation strategy mentioned in the text?",
+        "options": [
+          "Building flood barriers and improving water management systems",
+          "Reducing all international cooperation",
+          "Closing major cities permanently",
+          "Replacing agriculture with tourism"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do researchers describe climate migration as complex?",
+        "options": [
+          "Environmental problems often interact with poverty, conflict, and inequality rather than acting alone",
+          "Migration has no connection to economic conditions",
+          "Political instability never affects environmental issues",
+          "Natural disasters always produce permanent migration"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do some public debates about climate migration become controversial?",
+        "options": [
+          "People disagree about humanitarian duties and the economic responsibilities of wealthier nations",
+          "Scientists deny climate change completely",
+          "Governments have already solved migration challenges",
+          "Environmental changes no longer affect populations"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central message of the text?",
+        "options": [
+          "Climate migration is a growing global challenge requiring international cooperation, adaptation, and humanitarian thinking",
+          "Migration can be prevented entirely through technology",
+          "Only island nations are affected by climate change",
+          "Economic planning is unrelated to environmental issues"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 494,
+      "fingerprint": "ak10-tema-004",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
+  },
+  {
+    "id": "ak10-tema-005",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "The Evolution of Human Rights",
+    "text": "Human rights are principles intended to protect the freedom, dignity, and equality of individuals. Although ideas about justice and fairness have existed for centuries, modern human rights developed gradually through historical events, political movements, and international agreements.\n\nOne important influence on human rights was the Enlightenment during the seventeenth and eighteenth centuries. Philosophers such as John Locke and Jean-Jacques Rousseau argued that individuals possessed natural rights that governments should respect. These ideas influenced political revolutions in Europe and North America, where demands for liberty and representation became increasingly powerful.\n\nThe twentieth century marked a major turning point in the development of international human rights. After the destruction and mass violence of the Second World War, many countries supported the creation of the United Nations. In 1948, the Universal Declaration of Human Rights established a global statement affirming rights such as freedom of speech, education, religion, and protection from discrimination.\n\nSince then, international organizations and activists have continued expanding human rights protections. Movements for civil rights, women's rights, disability rights, and LGBTQ rights have challenged discriminatory laws and social practices in many societies. Campaigns against apartheid in South Africa and for democratic freedoms in different regions demonstrated how political activism could influence international opinion.\n\nDespite these developments, human rights remain controversial in some contexts. Governments sometimes argue that national security, cultural traditions, or political stability justify limiting certain freedoms. Critics of international human rights organizations occasionally claim that universal standards may conflict with local customs or national sovereignty.\n\nEnforcing human rights also presents practical difficulties. International courts and organizations often depend on cooperation from governments, which may refuse to follow recommendations or legal decisions. In some regions, journalists, activists, and opposition groups continue facing imprisonment, violence, or censorship.\n\nTechnology has created additional challenges and opportunities for human rights. Social media platforms can help activists organize protests and share evidence of abuses internationally. However, digital surveillance technologies may also allow governments or corporations to monitor individuals more closely than ever before.\n\nEducation is often considered essential for protecting human rights. Schools, universities, and public institutions can encourage tolerance, critical thinking, and understanding of democratic values. Many experts argue that human rights depend not only on laws but also on public attitudes and social responsibility.\n\nAlthough human rights protections have expanded significantly over time, debates about equality, freedom, and justice continue shaping international politics and society. The future of human rights will likely depend on how successfully countries balance security, cultural differences, technological change, and universal principles of human dignity.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How did Enlightenment philosophers influence human rights?",
+        "options": [
+          "They argued that individuals possessed natural rights that governments should respect",
+          "They opposed all forms of political freedom",
+          "They supported censorship and discrimination",
+          "They rejected democratic systems entirely"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What kinds of movements expanded human rights protections after 1948?",
+        "options": [
+          "Civil rights, women's rights, disability rights, and LGBTQ rights movements",
+          "Only economic reform movements",
+          "Military organizations and corporations",
+          "Entertainment industries and tourism campaigns"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why can enforcing human rights be difficult?",
+        "options": [
+          "Governments may refuse to cooperate with international courts or organizations",
+          "Human rights laws no longer exist internationally",
+          "Citizens fully agree on every political issue",
+          "Technology has eliminated censorship"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why was the creation of the United Nations important for human rights?",
+        "options": [
+          "It helped establish shared international principles after the devastation of World War Two",
+          "It replaced all national governments",
+          "It prevented every future conflict",
+          "It ended political activism worldwide"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How can technology both help and threaten human rights?",
+        "options": [
+          "It can support activism and expose abuses, but also enable surveillance and monitoring",
+          "It prevents communication between countries",
+          "It removes the need for education",
+          "It guarantees complete political freedom"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Human rights have evolved significantly through history but still face serious modern challenges",
+          "International organizations have solved all equality issues",
+          "Cultural traditions always oppose human rights",
+          "Political activism no longer affects global society"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 493,
+      "fingerprint": "ak10-tema-005",
+      "generatedAt": "2026-05-21",
+      "model": "gpt-4o"
+    }
   }
 ]
