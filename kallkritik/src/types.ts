@@ -95,8 +95,7 @@ export interface FakeImageItem {
   title: string;
   description: string;
   context: string;
-  emoji: string;
-  bgGradient: string;
+  imageUrl: string;
   hotspots: FakeImageHotspot[];
 }
 

@@ -6,8 +6,7 @@ export const MODULE4_IMAGES: FakeImageItem[] = [
     title: 'Politiker håller presskonferens',
     description: 'En känd politiker talar vid ett podium med mikrofoner. Bilden har spridits i sociala medier som "bevis" för ett kontroversiellt uttalande.',
     context: 'Bilden lades upp med texten: "AVSLÖJAT: Minister erkänner hemlig plan!"',
-    emoji: '🎙️',
-    bgGradient: 'from-slate-100 to-blue-50',
+    imageUrl: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&h=480&fit=crop&q=80',
     hotspots: [
       { id: 1, label: 'Handen', description: 'Sex fingrar på vänster hand – AI räknar fel på händer', isArtifact: true, x: 30, y: 65 },
       { id: 2, label: 'Mikrofontexten', description: 'Logotypen på mikrofonen är oskarp och innehåller påhittade bokstäver', isArtifact: true, x: 55, y: 55 },
@@ -22,11 +21,10 @@ export const MODULE4_IMAGES: FakeImageItem[] = [
     title: 'Katt i rymddräkt – viral bild',
     description: 'En söt katt i en silverfärgad rymddräkt som flängs sig i ett rymdlandskap. Bilden har fått miljoner likes och delades som ett "riktigt foto från NASA".',
     context: 'Bildtexten löd: "NASA:s senaste astronaut är här! 🐱🚀"',
-    emoji: '🐱',
-    bgGradient: 'from-indigo-100 to-purple-100',
+    imageUrl: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&h=480&fit=crop&q=80',
     hotspots: [
       { id: 1, label: 'Öronen', description: 'Öronens form är onaturlig – AI har svårt med djurdetaljer', isArtifact: true, x: 35, y: 15 },
-      { id: 2, label: 'Pälstexturen', description: 'Päls­mönstret upprepas identiskt på båda sidor – inget djur har perfekt symmetrisk päls', isArtifact: true, x: 50, y: 40 },
+      { id: 2, label: 'Pälstexturen', description: 'Pälsmönstret upprepas identiskt på båda sidor – inget djur har perfekt symmetrisk päls', isArtifact: true, x: 50, y: 40 },
       { id: 3, label: 'Skuggan', description: 'Skuggan på marken pekar åt ett annat håll än ljuset i scenen', isArtifact: true, x: 60, y: 85 },
       { id: 4, label: 'Hjälmreflexen', description: 'Reflexen i hjälmglaset visar ett rum inomhus, inte rymden', isArtifact: true, x: 48, y: 28 },
       { id: 5, label: 'Rymdbakgrunden', description: 'Stjärnhimlen ser korrekt ut för en AI-bild', isArtifact: false, x: 85, y: 20 },
@@ -38,8 +36,7 @@ export const MODULE4_IMAGES: FakeImageItem[] = [
     title: 'Löpsedel – "Breaking News"',
     description: 'En bild på en tidningslöpsedel som påstår att en kändis gjort något chockerande. Bilden spreds snabbt innan folk kollade om tidningen verkligen skrivit det.',
     context: 'Delades tusentals gånger med kommentaren: "Kan inte tro att de skriver såhär!"',
-    emoji: '📰',
-    bgGradient: 'from-zinc-100 to-stone-100',
+    imageUrl: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=480&fit=crop&q=80',
     hotspots: [
       { id: 1, label: 'Tidningslogotypen', description: 'Logotypen är snarlik men fonten stämmer inte med den riktiga tidningens grafiska profil', isArtifact: true, x: 50, y: 8 },
       { id: 2, label: 'Rubriktexten', description: 'Bokstäverna "ä" och "ö" är felformade – AI har svårt med svenska specialtecken', isArtifact: true, x: 50, y: 35 },
@@ -54,8 +51,7 @@ export const MODULE4_IMAGES: FakeImageItem[] = [
     title: 'Deepfake – känd person',
     description: 'En bild på en välkänd person som påstås visa dem göra något de aldrig gjort. AI-genererade deepfakes används för att sprida felaktig information om verkliga personer.',
     context: 'Spreds med texten: "Seså, nu vet ni vad hen VERKLIGEN tycker!"',
-    emoji: '👤',
-    bgGradient: 'from-rose-100 to-slate-100',
+    imageUrl: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=800&h=480&fit=crop&q=80',
     hotspots: [
       { id: 1, label: 'Huden', description: 'Huden är onaturligt slät och plastliknande – inga porer, ärr eller ojämnheter', isArtifact: true, x: 45, y: 35 },
       { id: 2, label: 'Örat', description: 'Öronbrosket har en omöjlig form och saknar inre detaljer', isArtifact: true, x: 25, y: 40 },

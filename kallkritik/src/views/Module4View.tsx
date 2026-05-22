@@ -211,36 +211,20 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
                 </div>
               </div>
 
-              {/* Image area */}
-              <div
-                className={`relative w-full bg-gradient-to-br ${currentItem.bgGradient} overflow-hidden`}
-                style={{ height: 280 }}
-              >
-                {/* Illustrated scene background details */}
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute top-4 left-4 w-16 h-16 rounded-full bg-white/50" />
-                  <div className="absolute bottom-6 right-6 w-24 h-8 rounded-lg bg-black/10" />
-                  <div className="absolute top-1/3 right-1/4 w-8 h-8 rounded-full bg-black/10" />
-                </div>
+              {/* Real photo */}
+              <div className="relative w-full overflow-hidden" style={{ height: 280 }}>
+                <img
+                  src={currentItem.imageUrl}
+                  alt={currentItem.title}
+                  className="w-full h-full object-cover"
+                  draggable={false}
+                />
+                {/* Subtle dark overlay so hotspot numbers stay readable */}
+                <div className="absolute inset-0 bg-black/10 pointer-events-none" />
 
-                {/* Central emoji illustration */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <motion.div
-                    initial={{ scale: 0.7, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-                    className="text-[7rem] select-none pointer-events-none drop-shadow-xl leading-none"
-                  >
-                    {currentItem.emoji}
-                  </motion.div>
-                  <div className="bg-black/25 backdrop-blur-sm rounded-lg px-3 py-1">
-                    <span className="text-xs text-white font-semibold">{currentItem.title}</span>
-                  </div>
-                </div>
-
-                {/* Hotspot number legend */}
-                <div className="absolute bottom-2 left-3 bg-white/80 backdrop-blur-sm rounded-lg px-2 py-1">
-                  <span className="text-[10px] font-bold text-gray-600">{selectedHotspots.size} valda</span>
+                {/* Hotspot count */}
+                <div className="absolute bottom-2 left-3 bg-black/50 backdrop-blur-sm rounded-lg px-2 py-1">
+                  <span className="text-[10px] font-bold text-white">{selectedHotspots.size} valda</span>
                 </div>
 
               {/* Hotspot buttons */}
