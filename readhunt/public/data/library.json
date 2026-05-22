@@ -1613,410 +1613,400 @@
     "id": "ak5-tema-001",
     "grade": 5,
     "genre": "fiction",
-    "theme": "family",
-    "title": "The Lost Painting",
-    "text": "Mila visited her grandfather every Saturday. He lived in a small town near the sea and spent most of his time painting pictures of boats, birds, and old buildings. One rainy afternoon, Mila noticed an empty space on the wall in his studio. A lighter square showed where a painting had once hung.\n\nHer grandfather looked worried when she asked about it. He explained that the missing painting was his favorite work. He had painted it many years earlier after traveling through northern Sweden with his best friend Elias. The painting showed a frozen lake under a sky filled with green northern lights.\n\nGrandfather believed the painting had been lost during a local art show the month before. Mila decided to help him search for it. They visited the community center, the library, and even the bakery where local artists sometimes displayed their work.\n\nAt the bakery, the owner remembered seeing a man carrying a large framed picture. Mila noticed flour on the floor leading toward a storage room. Inside, hidden behind boxes of cups and napkins, stood the missing painting.\n\nThe bakery owner apologized immediately. She explained that she had moved the painting to protect it after a pipe leaked water near the front window. Then she forgot to return it.\n\nMila's grandfather smiled with relief. Instead of feeling angry, he thanked the owner for trying to keep the painting safe. Later that evening, he told Mila that art was important, but memories connected to people mattered even more.",
+    "theme": "community",
+    "title": "The Mountain Rescue Team",
+    "text": "Every winter, the small town of Silver Ridge attracted hundreds of tourists who came to ski in the nearby mountains. Although the snowy landscape looked peaceful, the area could become dangerous when storms arrived suddenly. Because of this, the town relied heavily on a volunteer mountain rescue team trained to help injured or lost visitors.\n\nFifteen-year-old Clara had always admired the rescue workers. Her mother had been part of the team for many years, and Clara often listened to stories about difficult rescues during heavy snowstorms. Wanting to contribute, Clara joined a youth training program organized by the rescue team. The participants learned how to read weather reports, use emergency radios, and safely guide people through icy conditions.\n\nOne Saturday afternoon, a powerful storm began earlier than expected while several tourists were skiing on the mountain trails. Visibility quickly became poor, and the rescue center received reports that two visitors were missing. Clara's mother and the other volunteers prepared to search the area immediately. Since Clara had completed basic safety training, she was allowed to assist at the communication center.\n\nThroughout the evening, Clara answered radio messages, updated maps, and helped organize information about the weather conditions. Although she was nervous, she remained calm and focused. Several hours later, the rescue team successfully located the missing tourists inside a small emergency shelter near the forest.\n\nThe next day, the town newspaper praised both the volunteers and the young trainees who supported the rescue effort. Clara realized that helping others did not always require dramatic actions. Sometimes responsibility, teamwork, and careful communication were just as important as bravery.",
     "questions": [
       {
         "type": "literal",
-        "q": "Why was there an empty space on the wall?",
+        "q": "Why did Silver Ridge need a mountain rescue team?",
         "options": [
-          "A shelf had fallen down",
-          "A painting was missing",
-          "The wall had been repaired",
-          "A window had been removed"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What did the missing painting show?",
-        "options": [
-          "A crowded city street",
-          "A summer beach",
-          "A frozen lake and northern lights",
-          "A fishing boat during a storm"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Where did Mila finally find the painting?",
-        "options": [
-          "Inside the bakery storage room",
-          "At the community center",
-          "Behind the library desk",
-          "In her grandfather's attic"
+          "The mountains could become dangerous during storms",
+          "Tourists often damaged the ski equipment",
+          "The town wanted to attract television reporters",
+          "Most visitors had never seen snow before"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why had the bakery owner moved the painting?",
+        "q": "Why did Clara join the youth training program?",
         "options": [
-          "She wanted to buy it",
-          "She planned to clean it",
-          "She needed more wall space",
-          "She wanted to protect it from water"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "How did Mila's grandfather react after finding the painting?",
-        "options": [
-          "He laughed at the situation",
-          "He calmly thanked the owner",
-          "He demanded money for the damage",
-          "He refused to take the painting back"
+          "She wanted to become a famous skier",
+          "She admired the rescue workers and wanted to help",
+          "Her school required students to volunteer",
+          "Her friends convinced her to participate"
         ],
         "correct": 1
       },
       {
-        "type": "inference",
-        "q": "What is the main message of the story?",
+        "type": "literal",
+        "q": "What skills did participants learn during the training?",
         "options": [
-          "Traveling is expensive",
-          "Artists should never lend paintings",
-          "Old buildings are difficult to repair",
-          "Relationships can matter more than objects"
+          "Cooking during emergencies",
+          "Building wooden shelters",
+          "Using radios and reading weather reports",
+          "Repairing damaged ski lifts"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happened during the storm?",
+        "options": [
+          "The rescue center lost electricity",
+          "A bridge near the town collapsed",
+          "A group of skiers became trapped in a hotel",
+          "Two tourists were reported missing"
         ],
         "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "How did Clara help during the rescue operation?",
+        "options": [
+          "She answered radio messages and updated maps",
+          "She drove snowmobiles through the forest",
+          "She taught tourists how to ski safely",
+          "She repaired communication equipment"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did Clara learn at the end of the story?",
+        "options": [
+          "Only adults can handle emergencies properly",
+          "Responsibility and teamwork are important forms of helping",
+          "Mountain tourism should be avoided during winter",
+          "Young people should never participate in rescue work"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 312,
-      "fingerprint": "ak5-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 306,
+      "readingTime": 6
     }
   },
   {
     "id": "ak5-tema-002",
     "grade": 5,
     "genre": "non-fiction",
-    "theme": "science",
-    "title": "The Science of Sleep",
-    "text": "Many people believe that sleep is simply a time when the body rests. Scientists, however, have discovered that the brain remains very active during sleep. While sleeping, the body repairs muscles, stores memories, and prepares for the next day.\n\nDuring the night, people move through different stages of sleep. One stage is called deep sleep. In this stage, breathing slows down, and the body relaxes completely. Deep sleep is important because it helps the body recover after physical activity.\n\nAnother stage is called REM sleep. REM stands for rapid eye movement. During REM sleep, the eyes move quickly under closed eyelids, and most dreams occur. Researchers believe REM sleep helps people learn and remember information.\n\nLack of sleep can cause several problems. Students who do not sleep enough may have difficulty concentrating in school. They can also become more stressed or forgetful. Doctors often recommend that children around eleven years old sleep between nine and eleven hours each night.\n\nTechnology can also affect sleep quality. Bright screens from phones, tablets, and computers send signals to the brain that make it harder to feel tired. Experts suggest turning off screens at least one hour before bedtime.\n\nGood sleep habits are sometimes called 'sleep hygiene.' These habits include going to bed at the same time every night, avoiding large meals before sleeping, and keeping bedrooms dark and quiet.\n\nScientists continue to study sleep because they know it affects learning, emotions, and physical health. Although people spend many years of their lives sleeping, researchers still have much to discover about why sleep is so important.",
+    "theme": "history",
+    "title": "The History of Paper",
+    "text": "Today, paper is such a common material that many people rarely think about where it comes from or how important it has been throughout history. However, the invention of paper changed communication, education, and culture across the world.\n\nBefore paper became widely available, people wrote on many different materials. Ancient Egyptians used papyrus, which was made from a plant growing near the Nile River. In other regions, people carved messages into stone or wrote on animal skins called parchment. These materials were often expensive or difficult to produce.\n\nHistorians believe that paper was first developed in China around two thousand years ago. Early paper makers used natural materials such as tree bark, old fishing nets, and cloth fibers. The process involved mixing the materials with water until they formed a soft pulp. The pulp was then spread into thin sheets and left to dry.\n\nAs trade routes expanded, knowledge about paper production spread to the Middle East and later to Europe. By the fifteenth century, the invention of the printing press increased the demand for paper dramatically because books could now be produced much faster than before. This development helped more people gain access to education and scientific knowledge.\n\nModern paper production is highly industrialized, and many factories now focus on recycling to reduce environmental damage. Scientists are also researching alternative materials, such as bamboo and agricultural waste, to create more sustainable paper products in the future.\n\nAlthough digital technology has reduced the use of printed materials in some areas, paper continues to play an important role in schools, businesses, and daily life around the world.",
     "questions": [
       {
         "type": "literal",
-        "q": "What happens during deep sleep?",
+        "q": "What did ancient Egyptians use for writing?",
         "options": [
-          "The body relaxes and recovers",
-          "People usually wake up often",
-          "The brain stops working completely",
-          "Dreams become easier to control"
+          "Papyrus",
+          "Plastic sheets",
+          "Clay tablets",
+          "Metal plates"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "What does REM stand for?",
+        "type": "inference",
+        "q": "Why were early writing materials difficult to use?",
         "options": [
-          "Resting Energy Mode",
-          "Rapid Eye Movement",
-          "Repeated Evening Motion",
-          "Relaxed Eye Memory"
+          "They were colorful and heavy",
+          "They were expensive or hard to produce",
+          "They disappeared quickly in sunlight",
+          "They could only be used by scientists"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Why is REM sleep important according to researchers?",
+        "q": "What materials were used in early Chinese paper making?",
         "options": [
-          "It lowers body temperature",
-          "It strengthens muscles",
-          "It may help learning and memory",
-          "It prevents people from dreaming"
+          "Glass and sand",
+          "Coal and oil",
+          "Tree bark and cloth fibers",
+          "Stone and animal bones"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "How can screens affect sleep?",
+        "type": "literal",
+        "q": "What invention increased the demand for paper in Europe?",
         "options": [
-          "They improve concentration immediately",
-          "They make bedrooms colder",
-          "They increase hunger at night",
-          "They make it harder to feel sleepy"
+          "The steam engine",
+          "The compass",
+          "The telephone",
+          "The printing press"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Which habit is part of good sleep hygiene?",
+        "type": "literal",
+        "q": "Why are factories focusing more on recycling today?",
         "options": [
-          "Eating large meals late at night",
-          "Changing bedtime every evening",
-          "Keeping a regular bedtime",
-          "Watching television until midnight"
+          "To reduce environmental damage",
+          "To make paper heavier",
+          "To increase the price of books",
+          "To replace digital technology completely"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "inference",
-        "q": "What is the main idea of the text?",
+        "q": "What does the text mainly explain?",
         "options": [
-          "Scientists understand everything about dreams",
-          "Sleep plays an important role in health and learning",
-          "Technology has completely changed human sleep",
-          "Children need less sleep than adults"
+          "How factories transport paper products",
+          "The historical development and importance of paper",
+          "Why digital technology will replace schools",
+          "How ancient people built libraries"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 316,
-      "fingerprint": "ak5-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 311,
+      "readingTime": 6
     }
   },
   {
     "id": "ak5-tema-003",
     "grade": 5,
-    "genre": "fiction",
-    "theme": "community",
-    "title": "A Team for Everyone",
-    "text": "At Riverdale School, the sports club had always focused on football and basketball. Many students enjoyed those activities, but others felt left out. Some students preferred quieter games, while others had physical disabilities that made certain sports difficult.\n\nOne autumn, the student council decided to create a new activity week called 'Move Together.' The goal was to design games that everyone could join.\n\nNora, who used a wheelchair, suggested wheelchair floor hockey. Amir wanted to include table tennis because players of different ages could compete together. Alex, who identified as non-binary, organized a dance workshop where students learned simple routines in groups.\n\nAt first, some students complained that the new activities would not be exciting enough. However, many changed their minds after trying them. During wheelchair hockey, students quickly discovered that controlling the chair while moving the ball required balance and teamwork.\n\nThe dance workshop became popular because students could create their own movements instead of following strict rules. Teachers noticed that students who were usually shy began speaking more confidently during group activities.\n\nThe school also invited older residents from a nearby retirement home. They taught students traditional games from different countries and shared stories about sports they had played when they were younger.\n\nBy the end of the week, students realized that competition was not the only purpose of sports. Activities could also help people cooperate, communicate, and understand each other better.\n\nThe principal decided that 'Move Together' would become a yearly tradition. The school even added several new clubs, including adaptive sports and community dance.\n\nMany students later said the week changed how they thought about physical activity. Instead of asking who was the fastest or strongest, they started asking how everyone could participate and enjoy themselves together.",
+    "genre": "non-fiction",
+    "theme": "environment",
+    "title": "The Community Garden Project",
+    "text": "In the center of Maplewood City, an empty parking lot stood unused for many years. Trash often collected there, and local residents complained that the area looked unsafe and unattractive. Instead of waiting for the city government to solve the problem, a group of neighbors decided to transform the space into a community garden.\n\nThe project brought together people from different backgrounds and age groups. Some volunteers had experience growing vegetables, while others knew how to build wooden benches and planting boxes. A retired engineer named Luis designed a system to collect rainwater for watering the plants. Meanwhile, two teenagers, Amira and Joel, created social media pages to share updates and invite more volunteers.\n\nDuring the first few months, the work was exhausting. The volunteers removed garbage, repaired broken fences, and prepared the soil for planting. Despite the challenges, the group continued meeting every weekend because they believed the garden could improve the neighborhood.\n\nBy summer, tomatoes, carrots, herbs, and flowers filled the once-empty lot. Families began spending time there after school and work, and local restaurants even purchased some of the fresh vegetables. The garden also became a place where residents could exchange ideas and learn from one another.\n\nCity officials later recognized the project as an example of successful community cooperation. For many volunteers, however, the most important result was not the vegetables themselves. It was the stronger sense of connection and trust that developed among people who had previously been strangers.",
     "questions": [
       {
         "type": "literal",
-        "q": "Why did the school create 'Move Together'?",
+        "q": "What problem existed in the parking lot before the project?",
         "options": [
-          "To prepare students for competitions",
-          "To replace all traditional sports",
-          "To include more students in activities",
-          "To raise money for the school"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "What activity did Nora suggest?",
-        "options": [
-          "Wheelchair floor hockey",
-          "Traditional football",
-          "Table tennis",
-          "Track and field"
+          "It was filled with trash and looked unsafe",
+          "It was used too often by tourists",
+          "It lacked enough parking spaces",
+          "It was damaged by flooding every year"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Who visited the school during the activity week?",
+        "q": "How did Luis contribute to the project?",
         "options": [
-          "Professional athletes",
-          "University students",
-          "Parents from nearby towns",
-          "Residents from a retirement home"
+          "He painted murals on nearby buildings",
+          "He designed a rainwater collection system",
+          "He organized music performances",
+          "He managed the local restaurants"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Amira and Joel help with?",
+        "options": [
+          "Cooking meals for volunteers",
+          "Repairing broken fences",
+          "Sharing information online",
+          "Teaching gardening classes at schools"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happened by summer?",
+        "options": [
+          "The city closed the garden temporarily",
+          "The volunteers stopped meeting regularly",
+          "The garden was replaced by new buildings",
+          "Vegetables and flowers were growing successfully"
         ],
         "correct": 3
       },
       {
         "type": "inference",
-        "q": "Why did students enjoy the dance workshop?",
+        "q": "How did the garden affect the neighborhood?",
         "options": [
-          "They could invent their own movements",
-          "It was shorter than the other activities",
-          "Teachers gave prizes to the winners",
-          "Only experienced dancers could join"
+          "It created stronger community connections",
+          "It increased traffic problems",
+          "It reduced the number of local businesses",
+          "It caused arguments between residents"
         ],
         "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What did many students learn by the end of the week?",
-        "options": [
-          "Sports should always be competitive",
-          "Only skilled athletes should join teams",
-          "Cooperation is also an important part of activities",
-          "Traditional games are too old-fashioned"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "What happened after the event ended?",
-        "options": [
-          "The school canceled most sports clubs",
-          "The principal made the week a yearly tradition",
-          "Students voted to shorten the program",
-          "Teachers removed dance from the schedule"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 309,
-      "fingerprint": "ak5-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak5-tema-004",
-    "grade": 5,
-    "genre": "non-fiction",
-    "theme": "nature",
-    "title": "The Mystery of the Deep Ocean",
-    "text": "The ocean covers more than seventy percent of Earth's surface, yet scientists know less about the deep ocean than they know about the Moon. The deepest parts of the sea are difficult to explore because of freezing temperatures, complete darkness, and extremely high pressure.\n\nFor many years, researchers believed very little life could survive in such conditions. However, modern technology has changed that idea. Special underwater vehicles with strong lights and cameras have discovered unusual animals living thousands of meters below the surface.\n\nOne famous example is the anglerfish. This fish uses a glowing light near its mouth to attract prey in the darkness. Giant tube worms, another deep-sea species, survive near underwater volcanoes where hot chemicals rise from cracks in the ocean floor.\n\nScientists also study the deep ocean because it may help people understand climate change. Oceans absorb large amounts of heat and carbon dioxide from the atmosphere. Deep ocean currents move this heat around the planet and influence weather patterns.\n\nExploring the deep sea is expensive and dangerous. Research submarines must be carefully designed to survive the pressure. Even small mistakes can damage equipment.\n\nDespite these challenges, countries and universities continue sending teams to explore the ocean floor. Researchers hope to discover new species, study unknown ecosystems, and learn more about Earth's history.\n\nSome scientists believe important medical discoveries may also come from deep-sea organisms. Certain animals produce chemicals that could someday help create new medicines.\n\nAlthough humans have explored space for decades, the deep ocean remains one of the least understood places on Earth. Each expedition reveals new information and reminds scientists how much is still waiting to be discovered beneath the waves.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Why is the deep ocean difficult to explore?",
-        "options": [
-          "It contains too many islands",
-          "It has freezing temperatures and high pressure",
-          "Ships cannot travel across oceans",
-          "Scientists are not interested in oceans"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What does the anglerfish use its glowing light for?",
-        "options": [
-          "To scare larger animals",
-          "To communicate with submarines",
-          "To attract prey",
-          "To warm its body"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Why do scientists study deep ocean currents?",
-        "options": [
-          "They influence climate and weather",
-          "They make fishing easier",
-          "They help submarines move faster",
-          "They create underwater volcanoes"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What challenge do research submarines face?",
-        "options": [
-          "Heavy ocean pressure",
-          "Lack of fuel stations",
-          "Strong sunlight underwater",
-          "Large numbers of tourists"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What possible benefit could deep-sea organisms provide?",
-        "options": [
-          "Cheaper airplane travel",
-          "New medicines",
-          "More farmland",
-          "Cleaner drinking water"
-        ],
-        "correct": 1
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
-          "Space exploration is safer than ocean travel",
-          "Most ocean animals live near beaches",
-          "Deep-sea volcanoes are becoming stronger",
-          "The deep ocean is still largely unexplored"
+          "Community cooperation can improve shared spaces",
+          "Gardening is more difficult than construction work",
+          "Cities should replace parking lots with restaurants",
+          "Young people are not interested in environmental projects"
         ],
-        "correct": 3
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 307,
-      "fingerprint": "ak5-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 305,
+      "readingTime": 6
+    }
+  },
+  {
+    "id": "ak5-tema-004",
+    "grade": 5,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "The Young Game Designer",
+    "text": "Since childhood, thirteen-year-old Naomi had loved playing adventure video games that involved solving puzzles and exploring fictional worlds. Over time, however, she became more interested in how games were created than simply playing them. She began watching online tutorials about programming, animation, and sound design.\n\nUsing free software on her laptop, Naomi started developing her own game after school. The story followed a group of explorers traveling through different planets while solving environmental problems. Players needed to cooperate, collect information, and make thoughtful decisions instead of relying on violence or competition.\n\nCreating the game was more difficult than Naomi expected. Sometimes the characters stopped moving correctly, and certain levels became impossible to complete because of programming errors. Instead of quitting, Naomi searched for solutions in online communities where experienced developers shared advice and explained common mistakes.\n\nAfter nearly a year of work, Naomi presented the game at a local technology fair. Visitors appreciated the creative graphics and the educational message about protecting natural resources. Several younger students especially enjoyed the teamwork elements because they could play together instead of competing against each other.\n\nAt the end of the event, a software company offered Naomi an opportunity to attend a summer workshop for young creators interested in technology and digital storytelling. Although Naomi was proud of the recognition, she believed the most valuable part of the experience was learning how persistence and creativity could turn an idea into reality.",
+    "questions": [
+      {
+        "type": "inference",
+        "q": "What interested Naomi more over time?",
+        "options": [
+          "How games were created",
+          "Winning online competitions",
+          "Collecting expensive gaming equipment",
+          "Watching professional players"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What was the main goal in Naomi's game?",
+        "options": [
+          "Defeating enemies in battles",
+          "Solving problems through cooperation and decisions",
+          "Building racing cars",
+          "Escaping from dangerous monsters"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What difficulties did Naomi face while creating the game?",
+        "options": [
+          "She lost her laptop frequently",
+          "The story became too short",
+          "Programming errors caused problems",
+          "Visitors disliked the game design"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happened at the technology fair?",
+        "options": [
+          "Naomi sold her game to a large company",
+          "The event was canceled because of weather",
+          "Students refused to test the game",
+          "A software company invited Naomi to a workshop"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why did younger students enjoy the game?",
+        "options": [
+          "It focused on teamwork instead of competition",
+          "It contained difficult math challenges",
+          "It allowed players to customize vehicles",
+          "It used famous movie characters"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did Naomi learn from the experience?",
+        "options": [
+          "Technology fairs are mainly for professionals",
+          "Persistence and creativity can help ideas succeed",
+          "Programming should always be done alone",
+          "Video games cannot contain educational themes"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 302,
+      "readingTime": 6
     }
   },
   {
     "id": "ak5-tema-005",
     "grade": 5,
     "genre": "non-fiction",
-    "theme": "history",
-    "title": "The History of Chocolate",
-    "text": "Chocolate is one of the world's most popular foods, but its history began thousands of years ago in Central America. Ancient civilizations such as the Maya and the Aztecs used cacao beans to make a bitter drink mixed with spices and water.\n\nCacao beans were extremely valuable. In some areas, people even used them as money. Historical records show that workers could buy food or clothing with small amounts of cacao.\n\nWhen European explorers arrived in the Americas during the 1500s, they brought cacao back to Europe. At first, chocolate remained expensive because cacao plants only grew in warm climates. Wealthy families often drank hot chocolate during social gatherings.\n\nOver time, people began adding sugar and milk to improve the taste. During the Industrial Revolution, new machines made it possible to produce chocolate more quickly and cheaply. As a result, chocolate became available to more people.\n\nToday, cacao is grown in many tropical countries, especially in West Africa and South America. Farmers carefully remove cacao beans from large pods, dry them in the sun, and ship them to factories.\n\nModern chocolate production also raises important questions about fairness and the environment. Some companies now sell 'fair trade' chocolate, which aims to ensure farmers receive better pay for their work.\n\nScientists have studied chocolate as well. Dark chocolate contains substances called antioxidants, which may provide certain health benefits when eaten in small amounts. However, doctors still recommend moderation because chocolate products often contain large amounts of sugar.\n\nFrom ancient ceremonies to modern candy stores, chocolate has traveled across continents and cultures. Its long history shows how a simple bean became an important product enjoyed by millions of people around the world.",
+    "theme": "science",
+    "title": "The Ocean Research Expedition",
+    "text": "Every year, marine scientists organize research expeditions to study life in the deep ocean. Although people have explored much of Earth's land, large parts of the ocean remain mysterious because they are difficult to reach. The pressure underwater is extremely high, and sunlight cannot reach the deepest areas.\n\nDuring one expedition in the Pacific Ocean, a team of researchers used a small robotic submarine equipped with cameras and sensors. The machine allowed scientists to observe underwater environments without risking human safety. Among the crew members was Dr. Hassan, a biologist specializing in deep-sea animals.\n\nAs the submarine traveled deeper, the cameras captured unusual creatures rarely seen by humans. Some fish produced their own light through a process called bioluminescence, which helps them communicate or attract prey in the darkness. The scientists also discovered colorful coral structures growing near underwater volcanic vents where temperatures were extremely high.\n\nThe expedition collected valuable information about ocean ecosystems and climate change. Researchers explained that deep oceans play an important role in regulating Earth's temperature and storing carbon dioxide. Damage to these ecosystems could affect marine life as well as global weather patterns.\n\nAfter returning home, the team shared videos and scientific data with schools and universities around the world. Dr. Hassan hoped the project would encourage more young people to become interested in marine science and environmental protection.",
     "questions": [
       {
         "type": "literal",
-        "q": "How did the Maya and Aztecs usually consume cacao?",
+        "q": "Why are large parts of the ocean still mysterious?",
         "options": [
-          "As a frozen dessert",
-          "As a sweet candy",
-          "As a bitter drink",
-          "As baked bread"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Why were cacao beans valuable in ancient times?",
-        "options": [
-          "They could be used as money",
-          "They were easy to grow everywhere",
-          "They replaced gold completely",
-          "They were only eaten by children"
+          "They are difficult and dangerous to explore",
+          "Governments do not allow scientists to study them",
+          "Most oceans are frozen throughout the year",
+          "Marine animals destroy research equipment"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What changed chocolate production during the Industrial Revolution?",
+        "q": "What did the researchers use during the expedition?",
         "options": [
-          "Farmers stopped growing cacao",
-          "New machines increased production",
-          "People stopped adding sugar",
-          "European countries banned cacao"
+          "A large sailing ship",
+          "A robotic submarine with cameras and sensors",
+          "A helicopter designed for underwater travel",
+          "Traditional fishing equipment"
         ],
         "correct": 1
       },
       {
-        "type": "inference",
-        "q": "What is one goal of fair trade chocolate?",
+        "type": "literal",
+        "q": "What is bioluminescence?",
         "options": [
-          "To make chocolate taste sweeter",
-          "To reduce factory sizes",
-          "To improve payment for farmers",
-          "To stop international shipping"
+          "A method for measuring ocean temperature",
+          "A process used to grow coral quickly",
+          "The ability of some animals to produce light",
+          "A type of underwater volcanic eruption"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "What do antioxidants in dark chocolate possibly provide?",
+        "type": "literal",
+        "q": "Why are deep oceans important according to researchers?",
         "options": [
-          "Certain health benefits",
-          "Longer storage time",
-          "Brighter color",
-          "Extra sweetness"
+          "They contain unlimited food resources",
+          "They prevent all natural disasters",
+          "They are warmer than Earth's surface",
+          "They help regulate temperature and store carbon dioxide"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did the team do after returning home?",
+        "options": [
+          "They shared videos and scientific information",
+          "They stopped studying marine ecosystems",
+          "They sold the submarine to a museum",
+          "They moved permanently to the Pacific Ocean"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What is the main focus of the text?",
+        "q": "What was Dr. Hassan's goal?",
         "options": [
-          "Different candy recipes",
-          "The development and importance of chocolate through history",
-          "Why people dislike bitter drinks",
-          "The dangers of tropical farming"
+          "To encourage interest in marine science and protection",
+          "To create a company selling submarines",
+          "To organize tourism in deep oceans",
+          "To replace scientists with robots completely"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 304,
-      "fingerprint": "ak5-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 303,
+      "readingTime": 6
     }
   },
   {
