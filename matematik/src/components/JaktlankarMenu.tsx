@@ -29,6 +29,11 @@ const APPS = [
     icon: <span className="text-3xl leading-none">📚</span>,
   },
   {
+    name: 'Readhunt',
+    url: 'https://readhunt.vercel.app',
+    icon: <span className="text-3xl leading-none">📖</span>,
+  },
+  {
     name: 'Engelskajakten',
     url: 'https://engelskajakten.vercel.app',
     icon: <FlagGB />,
