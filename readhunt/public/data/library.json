@@ -813,164 +813,160 @@
     "id": "ak3-tema-001",
     "grade": 3,
     "genre": "fiction",
-    "theme": "everyday life",
-    "title": "The Lost Backpack",
-    "text": "Ella walked home from school with her friend Sam on a rainy afternoon. They talked about their science project while jumping over puddles beside the road. When Ella reached her apartment building, she suddenly noticed that her backpack was missing. Inside the bag were her library book, her lunch box, and a drawing she wanted to give her grandmother. Ella felt worried and started searching the streets with Sam. They checked the playground, the bus stop, and the small bakery near the corner. Finally, the baker waved at them from the door. A customer had found the backpack under a bench and brought it inside. Ella thanked the baker and the customer with a big smile. Sam laughed and said they had turned an ordinary walk into an adventure. That evening, Ella carefully packed her bag again and placed it beside the front door before dinner.",
+    "theme": "nature",
+    "title": "The Rainy Camping Trip",
+    "text": "Sofia and her uncle went camping near a forest lake during the weekend. On the first evening, heavy rain started to fall, so they quickly put up their tent under tall trees. Later, they cooked soup on a small stove and listened to birds singing after the rain stopped.",
     "questions": [
       {
         "type": "literal",
-        "q": "Why did Ella feel worried?",
+        "q": "Where did Sofia go camping?",
         "options": [
-          "She lost her backpack",
-          "She missed the bus",
-          "Her shoes were wet",
-          "She forgot her homework at school"
+          "Near a forest lake",
+          "On a busy street",
+          "At a shopping mall",
+          "Inside a school gym"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Who walked home with Ella?",
+        "q": "Who went camping with Sofia?",
         "options": [
-          "Her grandmother",
-          "Sam",
-          "The baker",
-          "A teacher"
+          "Her cousin",
+          "Her uncle",
+          "Her teacher",
+          "Her neighbor"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Where was the backpack found?",
+        "q": "What happened on the first evening?",
         "options": [
-          "Inside the school",
-          "Near the playground",
-          "Under a bench",
-          "On the bus"
+          "Snow began to fall",
+          "They lost their tent",
+          "Heavy rain started",
+          "A boat arrived"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "What does Sam's comment about 'turning an ordinary walk into an adventure' tell us?",
+        "type": "literal",
+        "q": "Where did they put the tent?",
         "options": [
-          "Sam was angry about the long walk",
-          "Sam thought it was a fun experience despite the problem",
-          "Sam wanted to go on a real adventure",
-          "Sam was jealous of Ella's backpack"
+          "Next to the road",
+          "Near the river",
+          "On a bridge",
+          "Under tall trees"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
-        "type": "inference",
-        "q": "What was inside Ella's backpack?",
+        "type": "literal",
+        "q": "What did they cook later?",
         "options": [
-          "A library book",
-          "A soccer ball",
-          "A music player",
-          "A birthday gift"
+          "Soup",
+          "Pizza",
+          "Fish",
+          "Rice"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why did Ella place her bag beside the front door before dinner?",
+        "q": "What did they hear after the rain stopped?",
         "options": [
-          "She was too tired to carry it",
-          "She wanted to remember it in the morning",
-          "She was going out again later",
-          "Her mother told her to"
+          "Cars driving",
+          "Birds singing",
+          "People shouting",
+          "Dogs barking"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 157,
-      "fingerprint": "ak3-tema-001",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "wordCount": 50,
+      "readingTime": 2
     }
   },
   {
     "id": "ak3-tema-002",
     "grade": 3,
-    "genre": "fiction",
-    "theme": "nature",
-    "title": "The Tiny Garden",
-    "text": "Leo and his older sister Mina decided to build a small garden behind their house during spring break. Their grandfather gave them tomato seeds, carrot seeds, and a watering can with bright yellow flowers painted on the side. Every morning, the children carried water from the kitchen and carefully poured it onto the soil. At first, nothing changed, and Leo became impatient. Mina reminded him that plants needed time to grow. After two weeks, tiny green leaves finally pushed through the dirt. The children measured the plants every Saturday and wrote the numbers in a notebook. One afternoon, a strong wind bent several tomato plants. Leo wanted to give up, but Mina used sticks and string to help the plants stand again. By the end of summer, the garden was full of vegetables. The family used the tomatoes and carrots to make soup together on a cool evening.",
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The School Science Fair",
+    "text": "At the school science fair, Amir and Lucy showed a project about clean water. They built a simple filter using sand, rocks, and paper. Many students visited their table because the experiment was easy to understand. In the end, the judges gave them a prize for creative thinking.",
     "questions": [
       {
         "type": "literal",
-        "q": "What did the children plant?",
+        "q": "What was Amir and Lucy's project about?",
         "options": [
-          "Apple trees and roses",
-          "Beans and potatoes",
-          "Tomato and carrot seeds",
-          "Only flowers"
+          "Healthy food",
+          "Wild animals",
+          "Clean water",
+          "Space travel"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Who gave the children the seeds?",
+        "q": "What did they build?",
         "options": [
-          "Their teacher",
-          "Their grandfather",
-          "A neighbor",
-          "Their cousin"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "How did Mina help the tomato plants after the wind?",
-        "options": [
-          "She moved them indoors",
-          "She planted new seeds",
-          "She covered them with paper",
-          "She used sticks and string"
+          "A robot",
+          "A small bridge",
+          "A paper airplane",
+          "A simple filter"
         ],
         "correct": 3
       },
       {
         "type": "inference",
-        "q": "Why did Leo become impatient?",
+        "q": "Why did many students visit their table?",
         "options": [
-          "The watering can broke",
-          "The weather was cold",
-          "Nothing was growing yet",
-          "Mina lost the notebook"
+          "The experiment was easy to understand",
+          "They gave away candy",
+          "The table was colorful",
+          "The teacher asked everyone to go there"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the judges give them?",
+        "options": [
+          "A prize",
+          "A new desk",
+          "More homework",
+          "Free tickets"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What materials did they use in the filter?",
+        "options": [
+          "Wood and glass",
+          "Metal and plastic",
+          "Sand, rocks, and paper",
+          "Leaves and water"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "What does Mina's response to the broken tomato plants tell us about her character?",
+        "type": "literal",
+        "q": "Where did the event happen?",
         "options": [
-          "She gives up easily",
-          "She is determined and does not quit",
-          "She does not care about the garden",
-          "She is afraid of storms"
+          "At a museum",
+          "At a park",
+          "At a library",
+          "At school"
         ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What did the family make with the vegetables?",
-        "options": [
-          "Pizza",
-          "Soup",
-          "Cake",
-          "Sandwiches"
-        ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 154,
-      "fingerprint": "ak3-tema-002",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "wordCount": 47,
+      "readingTime": 2
     }
   },
   {
@@ -978,327 +974,239 @@
     "grade": 3,
     "genre": "fiction",
     "theme": "music",
-    "title": "The School Talent Show",
-    "text": "At Oak Hill School, students were preparing for the yearly talent show. Some children practiced dancing, while others rehearsed songs or magic tricks after class. Nora wanted to play the violin, but she felt nervous about performing in front of many people. Her best friend Amir encouraged her to practice with him in the music room every afternoon. During the first rehearsal, Nora played too quickly and missed several notes. Instead of laughing, Amir clapped and told her she was improving. Slowly, Nora became more confident. On the night of the talent show, families filled the school gym with loud cheers and colorful signs. A student named Robin performed a comedy act using funny voices and made everyone laugh. Finally, it was Nora's turn. She took a deep breath and played her violin beautifully. After the performance, the audience stood up and applauded loudly for her hard work and courage.",
+    "title": "Grandfather's Music Shop",
+    "text": "Ethan visited his grandfather's music shop every Friday after school. The shop sold guitars, drums, and old records from many countries. Ethan liked helping customers find songs they remembered from childhood. One afternoon, an elderly woman thanked Ethan for finding her favorite jazz album from the 1960s.",
     "questions": [
       {
         "type": "literal",
-        "q": "What did Nora want to play?",
+        "q": "When did Ethan visit the music shop?",
         "options": [
-          "The violin",
-          "The drums",
-          "The piano",
-          "The guitar"
+          "Every Friday after school",
+          "Only during summer",
+          "Every Sunday morning",
+          "Before breakfast"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What happened during the first rehearsal?",
+        "q": "Whose shop was it?",
         "options": [
-          "The violin broke",
-          "Nora forgot her music",
-          "She missed several notes",
-          "Nobody came to watch"
+          "His uncle's",
+          "His grandfather's",
+          "His teacher's",
+          "His friend's"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the shop sell?",
+        "options": [
+          "Shoes and clothes",
+          "Games and toys",
+          "Guitars, drums, and records",
+          "Books and maps"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did Robin do in the talent show?",
+        "q": "Who thanked Ethan?",
         "options": [
-          "Played the piano",
-          "Performed magic tricks",
-          "Sang a song",
-          "Did a comedy act"
+          "A young boy",
+          "A famous singer",
+          "A police officer",
+          "An elderly woman"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Why did Nora take a deep breath before playing?",
+        "type": "literal",
+        "q": "What kind of album did Ethan find?",
         "options": [
-          "She was tired from walking",
-          "She needed to calm her nerves",
-          "The violin was heavy",
-          "She could not remember the music"
+          "A jazz album",
+          "A rock album",
+          "A pop album",
+          "A country album"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inference",
-        "q": "What does Amir's reaction to Nora's mistakes tell us about him?",
+        "q": "Why did customers ask Ethan for help?",
         "options": [
-          "He was bored and not listening",
-          "He was a supportive and kind friend",
-          "He wanted to take her place",
-          "He thought the show was not important"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Why did the audience applaud loudly at the end?",
-        "options": [
-          "The show ended early",
-          "Nora performed well despite being nervous",
-          "Robin told another joke",
-          "The principal gave a speech"
+          "He repaired instruments",
+          "He helped them find songs",
+          "He taught music lessons",
+          "He played the drums"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 153,
-      "fingerprint": "ak3-tema-003",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "wordCount": 46,
+      "readingTime": 2
     }
   },
   {
     "id": "ak3-tema-004",
     "grade": 3,
-    "genre": "non-fiction",
-    "theme": "science",
-    "title": "A Day at the Science Museum",
-    "text": "Class 3B visited the city science museum on a bright Tuesday morning. Their teacher, Mr. Lind, divided the students into small groups before they entered the building. Inside the museum, the children explored rooms filled with robots, space models, and giant dinosaur skeletons. Sofia and Eli spent a long time at an exhibit where visitors could build bridges using wooden blocks. They discovered that wide bridges could hold more weight than narrow ones. Another exhibit allowed students to create electricity by turning large wheels with their hands. Many children laughed when the light bulbs suddenly flashed above them. After lunch, the class watched a short movie about astronauts living on a space station. Before leaving, each student wrote down one new fact they had learned during the trip. On the bus ride home, the children excitedly shared ideas for inventions they wanted to build in the future.",
+    "genre": "fiction",
+    "theme": "friendship",
+    "title": "The New Student",
+    "text": "When Mei started at her new school, she felt nervous about meeting new classmates. During lunch, a student named Robin invited Mei to sit with a group of friends. Robin used a wheelchair and loved drawing comic books. By the end of the week, Mei felt comfortable and excited to come back to school.",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did Class 3B go?",
+        "q": "How did Mei feel at first?",
         "options": [
-          "To a science museum",
-          "To a zoo",
-          "To a beach",
-          "To a farm"
+          "Nervous",
+          "Angry",
+          "Excited",
+          "Bored"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What did Sofia and Eli build at the exhibit?",
+        "q": "Who invited Mei to sit with friends?",
         "options": [
-          "Robots",
-          "Bridges",
-          "Airplanes",
-          "Toy cars"
+          "Her teacher",
+          "Robin",
+          "The principal",
+          "Her cousin"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What happened when students turned the wheels?",
+        "q": "What did Robin love doing?",
         "options": [
-          "Music started playing",
-          "Water sprayed everywhere",
-          "Light bulbs flashed",
-          "The room became dark"
+          "Playing football",
+          "Building robots",
+          "Drawing comic books",
+          "Cooking food"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "Why did the teacher divide students into small groups?",
+        "type": "literal",
+        "q": "What did Robin use?",
         "options": [
-          "There was not enough space on the bus",
-          "So everyone could explore the museum more easily",
-          "The museum only allowed small groups",
-          "The students did not like each other"
+          "A skateboard",
+          "A guitar",
+          "A camera",
+          "A wheelchair"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
-        "q": "What does the children's excitement on the bus ride home suggest?",
+        "q": "How did Mei feel by the end of the week?",
         "options": [
-          "They were happy the trip was over",
-          "The museum had inspired them to think creatively",
-          "They were hungry after a long day",
-          "They wanted to visit a different museum"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What did students write before leaving?",
-        "options": [
-          "One new fact they learned",
-          "A letter to the museum",
-          "A shopping list",
-          "Their favorite lunch"
+          "Comfortable and excited",
+          "Lonely and afraid",
+          "Tired and upset",
+          "Quiet and confused"
         ],
         "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did Robin invite Mei to join the group?",
+        "options": [
+          "Before class",
+          "During lunch",
+          "After school",
+          "On the bus"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 154,
-      "fingerprint": "ak3-tema-004",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "wordCount": 49,
+      "readingTime": 2
     }
   },
   {
     "id": "ak3-tema-005",
     "grade": 3,
     "genre": "fiction",
-    "theme": "animals",
-    "title": "The Mountain Rescue Dog",
-    "text": "High in the snowy mountains, a rescue dog named Taro worked with a team of helpers during winter storms. Taro had thick brown fur and a powerful sense of smell that helped him find lost hikers. One cold afternoon, heavy snow covered the trails near a small village. A skier became separated from friends and could not find the way back. The rescue team quickly prepared warm clothes, flashlights, and ropes before climbing into the storm. Taro ran ahead, carefully sniffing the snow while the team followed behind him. After nearly an hour, the dog stopped near a group of trees and barked loudly. The missing skier was sitting there, tired but safe. The rescuers wrapped the skier in blankets and guided everyone back down the mountain. Later, the village held a celebration for Taro and the rescue team, thanking them for their bravery and teamwork.",
+    "theme": "sports",
+    "title": "The City Bicycle Race",
+    "text": "Every spring, the city held a bicycle race through the downtown streets. Hundreds of people came to watch the riders pass cafés, parks, and bridges. Nora trained for several months before joining the race with her older brother Malik. Although Nora did not win, she felt proud after finishing the long course.",
     "questions": [
       {
         "type": "literal",
-        "q": "What kind of animal was Taro?",
+        "q": "When did the city hold the bicycle race?",
         "options": [
-          "A rescue dog",
-          "A mountain goat",
-          "A wolf",
-          "A sled horse"
+          "Every spring",
+          "Every winter",
+          "Every night",
+          "Every weekend"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What helped Taro find people?",
+        "q": "Who joined the race with Nora?",
         "options": [
-          "Strong eyesight",
-          "A powerful sense of smell",
-          "A map",
-          "A radio"
+          "Her coach",
+          "Her older brother Malik",
+          "Her teacher",
+          "Her neighbor Kim"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Where did Taro find the missing person?",
+        "q": "Where did the race happen?",
         "options": [
-          "Inside a cabin",
-          "Near the village",
-          "Beside a frozen lake",
-          "Near a group of trees"
+          "Inside a forest",
+          "Near the beach",
+          "Through downtown streets",
+          "At a stadium"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did people watch the riders pass?",
+        "options": [
+          "Factories and farms",
+          "Schools and libraries",
+          "Airports and hotels",
+          "Cafés, parks, and bridges"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Why did the team prepare flashlights and ropes before the rescue?",
-        "options": [
-          "They were going camping",
-          "They needed them in case of danger in the storm",
-          "The skier had asked for them",
-          "They always carry them on walks"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What does Taro barking loudly near the trees tell us?",
-        "options": [
-          "He was scared of the trees",
-          "He had found something important",
-          "He wanted to play",
-          "He was cold and tired"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Why did the village hold a celebration for the rescue team?",
-        "options": [
-          "A new trail opened",
-          "They wanted to thank them for their bravery",
-          "The storm had finally ended",
-          "Taro learned a new trick"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 152,
-      "fingerprint": "ak3-tema-005",
-      "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "rh-demo-1",
-    "grade": 3,
-    "genre": "fiction",
-    "theme": "animals",
-    "title": "The Clever Fox",
-    "text": "One morning, a fox named Felix woke up very hungry. He had not eaten since the day before. Felix was known in the forest for being clever. All the other animals said he was the smartest fox around.\n\nFelix walked through the forest looking for food. He saw some berries on a bush, but a crow had already taken them. He found a river, but no fish were swimming near the surface.\n\nThen Felix had an idea. He sat beside the river and pretended to sleep. Soon, a curious rabbit came closer to look at the sleeping fox. The rabbit got too close. Felix jumped up and caught the rabbit.\n\nThat evening, Felix sat by his den, full and happy. He smiled and thought, 'Sometimes the best way to find what you need is to wait and be patient.'",
-    "questions": [
-      {
         "type": "literal",
-        "q": "Why was Felix hungry?",
+        "q": "How long did Nora train?",
         "options": [
-          "He had not eaten since the day before.",
-          "He did not like berries.",
-          "He was sick.",
-          "The other animals took his food."
+          "Several months",
+          "One afternoon",
+          "Two days",
+          "One hour"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "What did Felix find at the river?",
+        "type": "inference",
+        "q": "How did Nora feel after the race?",
         "options": [
-          "A big fish.",
-          "Another fox.",
-          "No fish near the surface.",
-          "Fresh berries."
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "What did Felix pretend to do beside the river?",
-        "options": [
-          "He pretended to cry.",
-          "He pretended to sleep.",
-          "He pretended to eat berries.",
-          "He pretended to swim."
+          "Angry",
+          "Proud",
+          "Confused",
+          "Disappointed"
         ],
         "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Why did the rabbit come closer to Felix?",
-        "options": [
-          "The rabbit wanted to help Felix.",
-          "The rabbit was not afraid of foxes.",
-          "The rabbit was curious about the sleeping fox.",
-          "The rabbit wanted to share food."
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "What does the story tell us about Felix?",
-        "options": [
-          "He is very fast.",
-          "He uses his brain to solve problems.",
-          "He is afraid of other animals.",
-          "He does not like being alone."
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What lesson can we learn from this story?",
-        "options": [
-          "Never eat berries from a bush.",
-          "It is better to run than to wait.",
-          "Being patient and clever can help you succeed.",
-          "Foxes are always hungry."
-        ],
-        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 162,
-      "fingerprint": "demo-rh-1",
-      "generatedAt": "2026-05-19",
-      "model": "demo"
+      "wordCount": 49,
+      "readingTime": 2
     }
   },
   {
