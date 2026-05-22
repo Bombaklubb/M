@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 const JAKT_APPS = [
-  { name: 'Svenskajakten', icon: 'SV', iconStyle: 'bg-blue-500 text-yellow-400', url: 'https://svenskajakten.vercel.app' },
-  { name: 'Mattejakten', icon: '🔢', iconStyle: '', url: 'https://mattejakten.vercel.app' },
-  { name: 'Engelskajakten', icon: 'EN', iconStyle: 'bg-red-600 text-white', url: 'https://engelskajakten.vercel.app' },
-  { name: 'Readhunt', icon: 'RH', iconStyle: 'bg-emerald-500 text-white', url: 'https://readhunt.vercel.app' },
+  { name: 'Svenskajakten', icon: '🇸🇪', iconStyle: '', url: 'https://svenskajakten.vercel.app' },
+  { name: 'Mattejakten', icon: '🧮', iconStyle: '', url: 'https://mattejakten.vercel.app' },
+  { name: 'Engelskajakten', icon: '🇬🇧', iconStyle: '', url: 'https://engelskajakten.vercel.app' },
+  { name: 'Readhunt', icon: '📚', iconStyle: '', url: 'https://readhunt.vercel.app' },
 ];
 
 export const JaktLinks: React.FC = () => {
