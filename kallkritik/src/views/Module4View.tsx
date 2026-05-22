@@ -197,26 +197,51 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
 
           {/* Image area with hotspots */}
           <div className="mb-4">
-            <div
-              className={`relative w-full rounded-2xl bg-gradient-to-br ${currentItem.bgGradient} overflow-hidden border border-border`}
-              style={{ height: 300 }}
-            >
-              {/* Central emoji */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-8xl select-none pointer-events-none"
-                >
-                  {currentItem.emoji}
-                </motion.div>
+            {/* Fake social media post frame */}
+            <div className="rounded-2xl border-[3px] border-indigo-100 bg-white shadow-[0_6px_0_0_rgba(99,102,241,0.18)] overflow-hidden">
+              {/* Post header bar */}
+              <div className="flex items-center gap-2 px-3 py-2 bg-gray-50 border-b-2 border-gray-100">
+                <div className="w-7 h-7 rounded-full bg-gradient-to-br from-violet-400 to-indigo-500 flex items-center justify-center text-xs text-white font-bold">AI</div>
+                <div>
+                  <div className="text-xs font-bold text-gray-700">ai_news_bot</div>
+                  <div className="text-[10px] text-gray-400">Publicerad just nu · Sociala medier</div>
+                </div>
+                <div className="ml-auto bg-rose-100 border border-rose-200 rounded-full px-2 py-0.5">
+                  <span className="text-[10px] font-bold text-rose-600">AI-genererad</span>
+                </div>
               </div>
 
-              {/* AI image label */}
-              <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm rounded-lg px-2.5 py-1">
-                <span className="text-xs text-white/80 font-medium">🤖 AI-genererad bild</span>
-              </div>
+              {/* Image area */}
+              <div
+                className={`relative w-full bg-gradient-to-br ${currentItem.bgGradient} overflow-hidden`}
+                style={{ height: 280 }}
+              >
+                {/* Illustrated scene background details */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute top-4 left-4 w-16 h-16 rounded-full bg-white/50" />
+                  <div className="absolute bottom-6 right-6 w-24 h-8 rounded-lg bg-black/10" />
+                  <div className="absolute top-1/3 right-1/4 w-8 h-8 rounded-full bg-black/10" />
+                </div>
+
+                {/* Central emoji illustration */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                  <motion.div
+                    initial={{ scale: 0.7, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+                    className="text-[7rem] select-none pointer-events-none drop-shadow-xl leading-none"
+                  >
+                    {currentItem.emoji}
+                  </motion.div>
+                  <div className="bg-black/25 backdrop-blur-sm rounded-lg px-3 py-1">
+                    <span className="text-xs text-white font-semibold">{currentItem.title}</span>
+                  </div>
+                </div>
+
+                {/* Hotspot number legend */}
+                <div className="absolute bottom-2 left-3 bg-white/80 backdrop-blur-sm rounded-lg px-2 py-1">
+                  <span className="text-[10px] font-bold text-gray-600">{selectedHotspots.size} valda</span>
+                </div>
 
               {/* Hotspot buttons */}
               {currentItem.hotspots.map((hotspot, idx) => {
@@ -251,15 +276,13 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
                   </motion.button>
                 );
               })}
+              </div>
             </div>
 
             {/* Legend */}
             {!revealed && (
-              <div className="flex items-center justify-between mt-2 text-xs text-muted-foreground">
-                <span>Klicka på hotspots du tror är AI-artifakter</span>
-                <span className="text-primary font-medium">
-                  {selectedHotspots.size} valda
-                </span>
+              <div className="flex items-center justify-between mt-2 text-xs font-semibold text-gray-400">
+                <span>Klicka på siffrorna du tror är AI-artifakter</span>
               </div>
             )}
           </div>
