@@ -3,416 +3,406 @@
     "id": "ak1-tema-001",
     "grade": 1,
     "genre": "fiction",
-    "theme": "friendship",
-    "title": "The Lost Hat",
-    "text": "Mia walked to school on a windy morning. Her red hat flew away from her head. The hat landed near a small tree. A boy named Leo picked it up and ran after Mia. He gave the hat back with a smile. Mia thanked Leo before they walked to school together.",
+    "theme": "animals",
+    "title": "The Small Dog",
+    "text": "Emma saw a small dog in the park. The dog was brown and happy. It ran after a ball. Emma gave the dog some water before she went home.",
+    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What was the weather like?",
+        "q": "Where did Emma see the dog?",
         "options": [
-          "Rainy",
-          "Windy",
-          "Snowy",
-          "Hot"
+          "At school",
+          "In the park",
+          "In a shop",
+          "At the beach"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What color was Mia's hat?",
+        "q": "What color was the dog?",
         "options": [
+          "Brown",
           "Blue",
-          "Green",
-          "Red",
-          "Yellow"
+          "White",
+          "Green"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the dog run after?",
+        "options": [
+          "A bird",
+          "A stick",
+          "A ball",
+          "A bike"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Where did the hat land?",
+        "q": "What did Emma give the dog?",
         "options": [
-          "Near a tree",
-          "In a car",
-          "On a roof",
-          "By the river"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Who helped Mia?",
-        "options": [
-          "Ella",
-          "Sam",
-          "Noah",
-          "Leo"
+          "Milk",
+          "Bread",
+          "Candy",
+          "Water"
         ],
         "correct": 3
       },
       {
         "type": "inference",
-        "q": "What did Leo do with the hat?",
+        "q": "How was the dog feeling?",
         "options": [
-          "He hid the hat",
-          "He gave the hat back",
-          "He threw the hat away",
-          "He kept the hat"
+          "Happy",
+          "Angry",
+          "Cold",
+          "Slow"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
-        "type": "inference",
-        "q": "How did Mia feel at the end?",
+        "type": "literal",
+        "q": "What did Emma do last?",
         "options": [
-          "Angry",
-          "Sleepy",
-          "Thankful",
-          "Scared"
+          "She slept",
+          "She went home",
+          "She ran away",
+          "She ate lunch"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 50,
-      "fingerprint": "ak1-tema-001",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop"
+      "wordCount": 28,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak1-tema-002",
     "grade": 1,
-    "genre": "non-fiction",
-    "theme": "nature",
-    "title": "The Tiny Garden",
-    "text": "Amina and her grandfather planted flowers in a tiny garden behind their home. They used small shovels and carried water in green buckets. Every morning, Amina checked the flowers before breakfast. After two weeks, bright yellow flowers opened in the sun. Amina gave one flower to her neighbor, who smiled happily.",
+    "genre": "fiction",
+    "theme": "family",
+    "title": "Baking Bread",
+    "text": "Noah baked bread with his grandfather in the kitchen. They mixed flour and water in a big bowl. The bread smelled very good when it was ready.",
+    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Who planted the flowers with Amina?",
+        "q": "Who baked with Noah?",
         "options": [
-          "Her brother",
-          "Her teacher",
-          "Her grandfather",
-          "Her cousin"
+          "His sister",
+          "His teacher",
+          "His grandfather",
+          "His friend"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Where was the garden?",
+        "q": "Where did they bake?",
         "options": [
-          "Behind the home",
+          "In the kitchen",
           "At school",
-          "Next to a lake",
-          "Inside a shop"
+          "In the garden",
+          "In the car"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What color were the buckets?",
+        "q": "What did they mix?",
         "options": [
-          "Blue",
-          "Green",
-          "Black",
-          "White"
+          "Rice and milk",
+          "Flour and water",
+          "Sugar and butter",
+          "Eggs and cheese"
         ],
         "correct": 1
       },
       {
-        "type": "inference",
-        "q": "When did Amina check the flowers?",
+        "type": "literal",
+        "q": "What smelled good?",
         "options": [
-          "After dinner",
-          "At night",
-          "Before breakfast",
-          "During class"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "How long did it take for the flowers to open?",
-        "options": [
-          "One day",
-          "Two weeks",
-          "One month",
-          "Three hours"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "Who received a flower from Amina?",
-        "options": [
-          "Her friend",
-          "Her mother",
-          "Her teacher",
-          "Her neighbor"
+          "The soup",
+          "The cookies",
+          "The juice",
+          "The bread"
         ],
         "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did they use to mix the food?",
+        "options": [
+          "A big bowl",
+          "A plate",
+          "A cup",
+          "A box"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did the bread smell?",
+        "options": [
+          "Bad",
+          "Good",
+          "Strange",
+          "Burned"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 48,
-      "fingerprint": "ak1-tema-002",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=380&fit=crop"
+      "wordCount": 27,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak1-tema-003",
     "grade": 1,
     "genre": "fiction",
-    "theme": "sports",
-    "title": "The New Soccer Ball",
-    "text": "Elliot got a new soccer ball for his birthday. After school, he went to the park with his sister Kim. They kicked the ball across the grass and practiced passing. A child in a wheelchair asked to join the game. Elliot and Kim smiled and played together until the sky became dark.",
+    "theme": "nature",
+    "title": "At the Lake",
+    "text": "Lina and her dad walked to the lake after school. They saw three ducks in the water. Lina threw small stones and ate a red apple by the lake.",
+    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What did Elliot get for his birthday?",
+        "q": "Where did Lina go?",
         "options": [
-          "A soccer ball",
-          "A kite",
-          "A skateboard",
-          "A backpack"
+          "To the lake",
+          "To the library",
+          "To the shop",
+          "To the bus stop"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Who went to the park with Elliot?",
+        "q": "Who went with Lina?",
         "options": [
-          "His teacher",
-          "His sister",
-          "His cousin",
-          "His uncle"
+          "Her cousin",
+          "Her dad",
+          "Her teacher",
+          "Her friend"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How many ducks did they see?",
+        "options": [
+          "Two",
+          "Five",
+          "Three",
+          "Four"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Lina eat?",
+        "options": [
+          "A banana",
+          "A sandwich",
+          "A cookie",
+          "A red apple"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did Lina throw?",
+        "options": [
+          "Small stones",
+          "Balls",
+          "Flowers",
+          "Leaves"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did they go to the lake?",
+        "options": [
+          "After school",
+          "In the morning",
+          "At night",
+          "Before dinner"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 29,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-tema-004",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "Playing Football",
+    "text": "Maya played football with her friends on the schoolyard. She wore blue shoes and a yellow shirt. When Maya scored a goal, everyone laughed and jumped happily.",
+    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Maya play?",
+        "options": [
+          "Tennis",
+          "Basketball",
+          "Football",
+          "Hockey"
+        ],
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "Where did they play?",
         "options": [
           "At the beach",
-          "In the gym",
-          "At the park",
-          "Inside a house"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "What did the child in the wheelchair ask?",
-        "options": [
-          "To borrow money",
-          "To watch quietly",
-          "To leave the park",
-          "To join the game"
+          "In the forest",
+          "In a gym",
+          "On the schoolyard"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "What did Elliot and Kim practice?",
+        "type": "literal",
+        "q": "What color were Maya's shoes?",
         "options": [
-          "Passing the ball",
-          "Drawing pictures",
-          "Riding bikes",
-          "Reading books"
+          "Blue",
+          "Black",
+          "Red",
+          "White"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What color was Maya's shirt?",
+        "options": [
+          "Green",
+          "Yellow",
+          "Pink",
+          "Orange"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Maya do?",
+        "options": [
+          "She scored a goal",
+          "She fell down",
+          "She lost the ball",
+          "She went home"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "When did they stop playing?",
+        "q": "How did everyone feel?",
         "options": [
-          "When it rained",
-          "When the sky became dark",
-          "Before lunch",
-          "After breakfast"
+          "Sad",
+          "Happy",
+          "Angry",
+          "Tired"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 50,
-      "fingerprint": "ak1-tema-003",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop"
-  },
-  {
-    "id": "ak1-tema-004",
-    "grade": 1,
-    "genre": "fiction",
-    "theme": "everyday life",
-    "title": "The Busy Library",
-    "text": "Nora visited the town library with her two fathers on Saturday morning. She looked at books about animals and space. A librarian named Ben helped Nora find a story about dolphins. Nora sat in a soft chair and read quietly. Before leaving, she borrowed two books and thanked Ben for helping her.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Where did Nora go?",
-        "options": [
-          "To the library",
-          "To the zoo",
-          "To the farm",
-          "To the pool"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Who went with Nora?",
-        "options": [
-          "Her friends",
-          "Her two fathers",
-          "Her teacher",
-          "Her brother"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What animal was in the story Ben found?",
-        "options": [
-          "Lions",
-          "Cats",
-          "Dolphins",
-          "Horses"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "Who helped Nora find the book?",
-        "options": [
-          "Liam",
-          "Mia",
-          "Ella",
-          "Ben"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "What did Nora do while sitting in the chair?",
-        "options": [
-          "She read quietly",
-          "She slept",
-          "She ate lunch",
-          "She painted"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "How many books did Nora borrow?",
-        "options": [
-          "One",
-          "Two",
-          "Four",
-          "Five"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 49,
-      "fingerprint": "ak1-tema-004",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop"
+      "wordCount": 26,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak1-tema-005",
     "grade": 1,
     "genre": "fiction",
-    "theme": "food",
-    "title": "The Rainy Day Soup",
-    "text": "Rain fell outside while Omar and his mother cooked soup in the kitchen. They cut carrots, potatoes, and onions into small pieces. Omar stirred the soup carefully with a wooden spoon. The warm smell filled the house. When the soup was ready, Omar shared a bowl with his elderly neighbor, Mrs. Clark.",
+    "theme": "technology",
+    "title": "The Little Robot",
+    "text": "Alex built a small robot at school. The robot could move forward and flash green lights. An older neighbor came to see the new robot after dinner.",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What was the weather like?",
+        "q": "What did Alex build?",
         "options": [
-          "Sunny",
-          "Cloudy",
-          "Rainy",
-          "Snowy"
+          "A bike",
+          "A robot",
+          "A kite",
+          "A boat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Alex build the robot?",
+        "options": [
+          "At school",
+          "At the beach",
+          "In the forest",
+          "In a shop"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What could the robot do?",
+        "options": [
+          "Swim",
+          "Fly",
+          "Move forward",
+          "Cook food"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did Omar cook?",
+        "q": "What color were the lights?",
         "options": [
-          "Bread",
-          "Soup",
-          "Cake",
-          "Rice"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What did Omar use to stir the soup?",
-        "options": [
-          "A fork",
-          "A knife",
-          "A plate",
-          "A wooden spoon"
+          "Blue",
+          "Yellow",
+          "Red",
+          "Green"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Which vegetable was in the soup?",
+        "type": "literal",
+        "q": "Who came to see the robot?",
         "options": [
-          "Carrots",
-          "Corn",
-          "Beans",
-          "Peas"
+          "An older neighbor",
+          "A police officer",
+          "A doctor",
+          "A coach"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "How did the house smell?",
+        "q": "When did the neighbor come?",
         "options": [
-          "Warm and good",
-          "Dirty",
-          "Like smoke",
-          "Like paint"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Who shared soup with Omar?",
-        "options": [
-          "His coach",
-          "Mrs. Clark",
-          "His cousin",
-          "Ben"
+          "Before school",
+          "After dinner",
+          "At lunch",
+          "Early morning"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 50,
-      "fingerprint": "ak1-tema-005",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop"
+      "wordCount": 26,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak2-tema-001",
