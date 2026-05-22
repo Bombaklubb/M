@@ -1,30 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 230 25% 7%;
-    --foreground: 210 40% 96%;
-    --card: 230 25% 10%;
-    --card-foreground: 210 40% 96%;
-    --border: 230 20% 18%;
-    --input: 230 20% 16%;
-    --ring: 263 70% 55%;
-    --primary: 263 70% 55%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 230 20% 16%;
-    --secondary-foreground: 210 40% 90%;
-    --muted: 230 20% 14%;
-    --muted-foreground: 215 20% 55%;
-    --accent: 199 89% 50%;
-    --accent-foreground: 222 47% 11%;
+    --background: 238 100% 97%;
+    --foreground: 243 64% 33%;
+    --card: 0 0% 100%;
+    --card-foreground: 243 64% 33%;
+    --border: 226 100% 88%;
+    --input: 226 100% 92%;
+    --ring: 243 75% 59%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 100% 96%;
+    --secondary-foreground: 243 75% 59%;
+    --muted: 250 60% 96%;
+    --muted-foreground: 220 14% 46%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
     --success: 142 72% 45%;
-    --success-foreground: 210 40% 98%;
+    --success-foreground: 0 0% 100%;
     --danger: 0 84% 60%;
-    --danger-foreground: 210 40% 98%;
+    --danger-foreground: 0 0% 100%;
     --xp: 38 92% 55%;
-    --radius: 0.75rem;
+    --radius: 1.25rem;
+
+    /* Claymorphism */
+    --clay-border: 3px solid;
+    --clay-shadow: 0 6px 0 0;
+    --clay-shadow-color: rgba(99, 102, 241, 0.25);
+    --clay-shadow-hover: rgba(99, 102, 241, 0.4);
   }
 }
 
@@ -34,12 +42,16 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100dvh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Baloo 2', system-ui, sans-serif;
 }
 
 button {
@@ -64,56 +76,132 @@ button, input[type="submit"], a {
   border-radius: 3px;
 }
 
-/* XP bar glow */
+/* XP bar */
 .xp-bar-fill {
-  background: linear-gradient(90deg, hsl(263 70% 55%), hsl(199 89% 50%));
-  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+  background: linear-gradient(90deg, hsl(243 75% 59%), hsl(199 89% 48%));
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
 }
 
-/* Module card hover glow */
-.module-card-hover:hover {
-  box-shadow: 0 0 0 1px hsl(var(--primary)), 0 8px 30px rgba(124, 58, 237, 0.2);
+/* Clay card */
+.clay-card {
+  background: white;
+  border: 3px solid hsl(var(--border));
+  border-radius: 20px;
+  box-shadow: 0 6px 0 0 rgba(99, 102, 241, 0.2);
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
 }
+
+.clay-card:hover {
+  box-shadow: 0 8px 0 0 rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+
+.clay-card:active {
+  box-shadow: 0 2px 0 0 rgba(99, 102, 241, 0.3);
+  transform: translateY(4px);
+}
+
+/* Clay button */
+.clay-btn {
+  border: 3px solid;
+  border-radius: 16px;
+  box-shadow: 0 5px 0 0;
+  transition: box-shadow 0.15s ease-out, transform 0.15s ease-out;
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+}
+
+.clay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 0;
+}
+
+.clay-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0;
+}
+
+/* Module card per-color overrides */
+.module-card-violet {
+  border-color: #C4B5FD;
+  box-shadow: 0 6px 0 0 rgba(139, 92, 246, 0.3);
+}
+.module-card-violet:hover { box-shadow: 0 8px 0 0 rgba(139, 92, 246, 0.4); }
+.module-card-violet:active { box-shadow: 0 2px 0 0 rgba(139, 92, 246, 0.3); transform: translateY(4px); }
+
+.module-card-cyan {
+  border-color: #A5F3FC;
+  box-shadow: 0 6px 0 0 rgba(6, 182, 212, 0.3);
+}
+.module-card-cyan:hover { box-shadow: 0 8px 0 0 rgba(6, 182, 212, 0.4); }
+.module-card-cyan:active { box-shadow: 0 2px 0 0 rgba(6, 182, 212, 0.3); transform: translateY(4px); }
+
+.module-card-emerald {
+  border-color: #A7F3D0;
+  box-shadow: 0 6px 0 0 rgba(16, 185, 129, 0.3);
+}
+.module-card-emerald:hover { box-shadow: 0 8px 0 0 rgba(16, 185, 129, 0.4); }
+.module-card-emerald:active { box-shadow: 0 2px 0 0 rgba(16, 185, 129, 0.3); transform: translateY(4px); }
+
+.module-card-rose {
+  border-color: #FECDD3;
+  box-shadow: 0 6px 0 0 rgba(244, 63, 94, 0.3);
+}
+.module-card-rose:hover { box-shadow: 0 8px 0 0 rgba(244, 63, 94, 0.4); }
+.module-card-rose:active { box-shadow: 0 2px 0 0 rgba(244, 63, 94, 0.3); transform: translateY(4px); }
+
+.module-card-amber {
+  border-color: #FDE68A;
+  box-shadow: 0 6px 0 0 rgba(245, 158, 11, 0.3);
+}
+.module-card-amber:hover { box-shadow: 0 8px 0 0 rgba(245, 158, 11, 0.4); }
+.module-card-amber:active { box-shadow: 0 2px 0 0 rgba(245, 158, 11, 0.3); transform: translateY(4px); }
+
+.module-card-indigo {
+  border-color: #C7D2FE;
+  box-shadow: 0 6px 0 0 rgba(79, 70, 229, 0.3);
+}
+.module-card-indigo:hover { box-shadow: 0 8px 0 0 rgba(79, 70, 229, 0.4); }
+.module-card-indigo:active { box-shadow: 0 2px 0 0 rgba(79, 70, 229, 0.3); transform: translateY(4px); }
 
 /* Correct answer */
 .answer-correct {
-  background: hsl(142 72% 45% / 0.15) !important;
+  background: hsl(142 72% 45% / 0.12) !important;
   border-color: hsl(142 72% 45%) !important;
 }
 
 /* Wrong answer */
 .answer-wrong {
-  background: hsl(0 84% 60% / 0.15) !important;
+  background: hsl(0 84% 60% / 0.12) !important;
   border-color: hsl(0 84% 60%) !important;
-}
-
-/* Shimmer loading */
-.shimmer {
-  background: linear-gradient(90deg, hsl(var(--card)) 25%, hsl(var(--muted)) 50%, hsl(var(--card)) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
 }
 
 /* Text highlight for Module 2 */
 .error-highlight {
-  background: hsl(38 92% 55% / 0.25);
+  background: hsl(38 92% 55% / 0.2);
   border-bottom: 2px solid hsl(var(--xp));
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 0 2px;
 }
 
 .error-highlight.selected {
-  background: hsl(263 70% 55% / 0.3);
+  background: hsl(243 75% 59% / 0.2);
   border-bottom-color: hsl(var(--primary));
 }
 
 .error-highlight.revealed-correct {
-  background: hsl(0 84% 60% / 0.2);
+  background: hsl(0 84% 60% / 0.15);
   border-bottom-color: hsl(0 84% 60%);
 }
 
 .error-highlight.revealed-correct.selected {
-  background: hsl(142 72% 45% / 0.2);
+  background: hsl(142 72% 45% / 0.15);
   border-bottom-color: hsl(142 72% 45%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clay-card, .clay-btn {
+    transition: none;
+  }
 }

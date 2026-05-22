@@ -51,56 +51,48 @@ export default function App() {
             <HomeView gameState={state} onNavigate={handleNavigate} />
           </motion.div>
         );
-
       case 'module1':
         return (
           <motion.div key="module1" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module1View onComplete={handleModuleComplete(1)} onExit={handleExit} />
           </motion.div>
         );
-
       case 'module2':
         return (
           <motion.div key="module2" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module2View onComplete={handleModuleComplete(2)} onExit={handleExit} />
           </motion.div>
         );
-
       case 'module3':
         return (
           <motion.div key="module3" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module3View onComplete={handleModuleComplete(3)} onExit={handleExit} />
           </motion.div>
         );
-
       case 'module4':
         return (
           <motion.div key="module4" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module4View onComplete={handleModuleComplete(4)} onExit={handleExit} />
           </motion.div>
         );
-
       case 'module5':
         return (
           <motion.div key="module5" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module5View onComplete={handleModuleComplete(5)} onExit={handleExit} />
           </motion.div>
         );
-
       case 'module6':
         return (
           <motion.div key="module6" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module6View onComplete={handleModuleComplete(6)} onExit={handleExit} />
           </motion.div>
         );
-
       case 'stats':
         return (
           <motion.div key="stats" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <StatsView gameState={state} onNavigate={handleNavigate} onReset={resetProgress} />
           </motion.div>
         );
-
       default:
         return null;
     }
@@ -108,40 +100,16 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
-      {/* Animated background blobs */}
+      {/* Decorative background blobs — pastel, light */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <motion.div
-          className="absolute top-[-10%] left-[-5%] w-[40vw] h-[40vw] rounded-full bg-primary/5 blur-3xl"
-          animate={{
-            x: [0, 30, -20, 0],
-            y: [0, -20, 30, 0],
-            scale: [1, 1.05, 0.97, 1],
-          }}
-          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-[10%] right-[-10%] w-[35vw] h-[35vw] rounded-full bg-accent/5 blur-3xl"
-          animate={{
-            x: [0, -25, 15, 0],
-            y: [0, 20, -15, 0],
-            scale: [1, 0.97, 1.04, 1],
-          }}
-          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
-        />
-        <motion.div
-          className="absolute top-[40%] left-[40%] w-[25vw] h-[25vw] rounded-full bg-xp/3 blur-3xl"
-          animate={{
-            x: [0, 15, -10, 0],
-            y: [0, -30, 20, 0],
-          }}
-          transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut', delay: 8 }}
-        />
+        <div className="absolute top-[-8%] left-[-4%] w-[38vw] h-[38vw] rounded-full bg-violet-200/50 blur-3xl" />
+        <div className="absolute bottom-[8%] right-[-8%] w-[32vw] h-[32vw] rounded-full bg-cyan-200/50 blur-3xl" />
+        <div className="absolute top-[45%] left-[38%] w-[22vw] h-[22vw] rounded-full bg-pink-200/40 blur-3xl" />
+        <div className="absolute top-[20%] right-[20%] w-[18vw] h-[18vw] rounded-full bg-amber-200/35 blur-2xl" />
       </div>
 
-      {/* Header */}
       <Header gameState={state} currentView={currentView} onNavigate={handleNavigate} />
 
-      {/* Main content */}
       <main className="relative z-10">
         <AnimatePresence mode="wait">
           {renderView()}
