@@ -1214,409 +1214,399 @@
     "grade": 4,
     "genre": "fiction",
     "theme": "community",
-    "title": "The New Library",
-    "text": "When the old library in the town closed, many students felt disappointed. The building had been small, dark, and difficult to visit during winter. A year later, the town opened a new library near the school and the sports center. The new building had large windows, colorful chairs, and quiet study rooms. There was also a corner where younger children could listen to stories after school.\n\nEmma visited the library with her friend Noah during the first week. They were surprised by how many activities were available. A local artist taught drawing classes on Tuesdays, and a science club met every Thursday afternoon. Noah joined the science club because he enjoyed building simple robots. Emma preferred reading mystery books and writing short stories.\n\nThe librarian, Ms. Patel, wanted the library to become an important meeting place for everyone in town. She organized book discussions, language lessons, and movie nights. Older people often came to read newspapers, while teenagers used the computers to study.\n\nAfter several months, the library had become one of the busiest places in town. Many students said they visited more often than they had visited the old library.",
+    "title": "The Forgotten Library",
+    "text": "When twelve-year-old Elias moved to a small coastal town, he expected life to be boring and quiet. However, everything changed one rainy afternoon when he discovered an old library hidden behind the train station. The building looked abandoned, but inside he found shelves filled with books about history, science, and famous explorers. A retired teacher named Mrs. Carter visited the library every Tuesday to organize the dusty books and help young readers.\n\nElias began spending hours there after school. He especially enjoyed reading about ancient civilizations and underwater discoveries. Mrs. Carter noticed his curiosity and encouraged him to write notes about the things he learned. Soon, Elias started a small reading club with two classmates, Hana and Leo. The group met every Friday to discuss different books and share ideas.\n\nOne evening, the town council announced plans to close the old library because very few people visited it anymore. Elias and his friends decided to act quickly. They created posters, spoke to local families, and organized a public reading event outside the building. More than fifty people attended the event, including parents, students, and business owners.\n\nAfter seeing the community's support, the town council agreed to keep the library open. Elias realized that even small actions could make a big difference when people worked together.",
     "questions": [
       {
         "type": "literal",
-        "q": "Where was the new library built?",
+        "q": "Where did Elias find the old library?",
         "options": [
-          "Beside the train station",
-          "Near the school and sports center",
-          "Inside the shopping mall",
-          "Next to the hospital"
+          "Near the harbor",
+          "Behind the train station",
+          "Next to his school",
+          "Inside the town hall"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Why did Noah join the science club?",
+        "q": "What did Mrs. Carter do at the library?",
         "options": [
-          "He liked painting pictures",
-          "He wanted to learn languages",
-          "He enjoyed building robots",
-          "He needed help with homework"
+          "She repaired computers",
+          "She sold old books",
+          "She organized books and helped readers",
+          "She taught science classes"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "What did Ms. Patel want the library to become?",
+        "type": "inference",
+        "q": "Why did Elias enjoy visiting the library?",
         "options": [
-          "A place only for children",
-          "A museum for old books",
-          "A quiet office building",
-          "An important meeting place"
+          "He liked reading about history and discoveries",
+          "He wanted to avoid doing homework",
+          "He used the library computers every day",
+          "He met tourists from other countries"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What problem did the library face?",
+        "options": [
+          "It was damaged by rain",
+          "The books were stolen",
+          "The roof needed repairs",
+          "The town council wanted to close it"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Why might students have felt disappointed when the old library closed?",
+        "type": "literal",
+        "q": "How did Elias and his friends try to save the library?",
         "options": [
-          "It had been a useful place to visit",
-          "It was close to the school",
-          "The books were expensive",
-          "The computers stopped working"
+          "They organized a public reading event",
+          "They wrote a book together",
+          "They collected money for new computers",
+          "They asked a famous writer for help"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What does Emma's choice of books and activities tell us about her?",
+        "q": "What lesson did Elias learn at the end?",
         "options": [
-          "She enjoys creative and imaginative things",
-          "She prefers science and technology",
-          "She dislikes reading",
-          "She only likes sports"
+          "Libraries are always expensive to maintain",
+          "Small actions can create change when people cooperate",
+          "Reading clubs should meet every day",
+          "Old buildings are difficult to protect"
         ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why did the new library become busier than the old one?",
-        "options": [
-          "It was easier to reach and offered more activities",
-          "It had cheaper membership fees",
-          "It gave away free books",
-          "It was open all night"
-        ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 208,
-      "fingerprint": "ak4-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 197,
+      "readingTime": 4
     }
   },
   {
     "id": "ak4-tema-002",
     "grade": 4,
     "genre": "fiction",
-    "theme": "nature",
-    "title": "A Day at the Nature Camp",
-    "text": "During spring break, Lina and her cousin Elias joined a nature camp near a large forest. The camp lasted for five days and focused on animals, plants, and outdoor skills. On the first morning, the group learned how to use a map and a compass. Some students already knew a little about hiking, but others had never spent much time outside.\n\nEach afternoon, the campers explored different parts of the forest with their guide, Mr. Andersson. He explained how birds build nests and why insects are important for nature. Lina enjoyed listening to the sounds of the forest, especially early in the morning when the birds sang loudly.\n\nOne evening, the group cooked soup over a fire. Elias accidentally dropped his spoon into the grass, and everyone laughed while helping him search for it. Later, the students sat together and talked about what they had learned.\n\nOn the final day, the campers worked in teams to build small shelters from branches and leaves. Lina's team included a girl who used a wheelchair, and the group made sure everyone could help with the project. Before leaving, many students said they wanted to visit nature more often in the future.",
+    "theme": "technology",
+    "title": "A Robot for the Garden",
+    "text": "At Greenhill School, students in the technology club were given an unusual challenge. Their teacher, Mr. Bennett, asked them to design a machine that could help the school garden grow healthier plants. The group included students with different interests and skills. Priya enjoyed programming, Mateo liked building mechanical parts, and Robin preferred drawing design plans.\n\nAfter several meetings, the team created a small robot that could measure soil moisture and water plants automatically when the ground became too dry. The robot moved slowly between rows of vegetables and flowers using small wheels powered by solar energy. At first, the machine often stopped working because dirt collected around the wheels. Instead of giving up, the students tested different solutions and improved the design.\n\nDuring the school science exhibition, visitors gathered around the garden to watch the robot move and water the plants. Many teachers were impressed by how the students combined science, teamwork, and environmental thinking in one project. A local newspaper even wrote an article about the invention.\n\nBy the end of the semester, the garden looked greener and healthier than before. The students felt proud because they had solved a real problem through creativity and cooperation.",
     "questions": [
       {
         "type": "literal",
-        "q": "How long did the nature camp last?",
+        "q": "What challenge did Mr. Bennett give the students?",
         "options": [
-          "Three days",
-          "Five days",
-          "One week",
-          "Two weeks"
+          "To grow the largest pumpkin",
+          "To create a machine for the garden",
+          "To paint the school walls",
+          "To build a sports field"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What did the campers learn on the first morning?",
+        "q": "What could the robot do?",
         "options": [
-          "How to build shelters",
-          "How to cook soup",
-          "How to use a map and compass",
-          "How to climb trees"
+          "Pick vegetables automatically",
+          "Measure soil moisture and water plants",
+          "Clean the classrooms every morning",
+          "Carry books to the library"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What problem did the robot have at first?",
+        "options": [
+          "Its batteries exploded",
+          "It moved too quickly",
+          "Dirt collected around the wheels",
+          "Students forgot how to use it"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did Lina enjoy most in the forest?",
+        "q": "Where did people watch the robot in action?",
         "options": [
-          "Listening to birds",
-          "Playing football",
-          "Collecting rocks",
-          "Drawing maps"
+          "At the city museum",
+          "During a television interview",
+          "At the public library",
+          "At the school science exhibition"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why were teachers impressed by the project?",
+        "options": [
+          "It combined science, teamwork, and environmental thinking",
+          "The students finished it in one day",
+          "The robot looked expensive and modern",
+          "It won an international competition"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why did everyone laugh during the evening meal?",
+        "q": "How did the students feel at the end of the semester?",
         "options": [
-          "The soup tasted strange",
-          "Elias dropped his spoon in the grass",
-          "Someone told a joke",
-          "The fire went out"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What does the shelter-building activity tell us about the group?",
-        "options": [
-          "They made sure everyone could participate",
-          "They worked alone without helping each other",
-          "They gave up when it got difficult",
-          "They only wanted to finish quickly"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why did many students want to visit nature more often after camp?",
-        "options": [
-          "They enjoyed their time outdoors and learned a lot",
-          "They wanted to avoid school",
-          "The camp gave them free equipment",
-          "They missed their families in the forest"
+          "Proud of solving a real problem",
+          "Disappointed by the results",
+          "Confused about the project",
+          "Uninterested in technology"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 209,
-      "fingerprint": "ak4-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 189,
+      "readingTime": 4
     }
   },
   {
     "id": "ak4-tema-003",
     "grade": 4,
-    "genre": "fiction",
-    "theme": "environment",
-    "title": "The School Recycling Project",
-    "text": "At Greenhill School, students noticed that large amounts of paper and plastic were thrown away every day. The student council decided to start a recycling project to reduce waste. Sofia, who was one of the council members, suggested placing recycling bins in every classroom and hallway.\n\nThe teachers supported the idea, and soon the project began. Students learned how to separate paper, plastic, and metal correctly. Some younger children mixed different materials together at first, but older students helped them understand the rules.\n\nEvery Friday, a group of volunteers carried the recycled materials to a collection center near the school. Malik, one of the volunteers, enjoyed explaining the project to visitors and parents. He believed small actions could improve the environment.\n\nAfter two months, the school produced much less trash than before. The principal was impressed by the results and rewarded the students with a special activity day. During the celebration, classes competed in games and quizzes about nature and climate.\n\nThe recycling project also changed habits outside school. Several students convinced their families to recycle more at home. Sofia felt proud because the project showed that cooperation could make a real difference in the community.",
+    "genre": "non-fiction",
+    "theme": "food-science",
+    "title": "The Long Journey of Chocolate",
+    "text": "Chocolate is one of the world's most popular foods, but few people know the long journey it takes before reaching stores and cafés. Chocolate begins with cacao trees, which grow mainly in warm regions near the equator. Farmers carefully collect cacao pods by hand and remove the beans inside them. The beans are then dried in the sun before being shipped to factories.\n\nAt the factory, workers roast the cacao beans to develop their flavor. After roasting, the beans are crushed and mixed with ingredients such as sugar and milk. Different amounts of these ingredients create dark, milk, or white chocolate. Some companies also add nuts, fruit, or spices to create new flavors.\n\nProducing chocolate requires hard work from many people around the world. In recent years, some companies have started focusing on fair trade practices. This means farmers receive better payment and safer working conditions. Many customers now choose products that support these ethical practices.\n\nAlthough chocolate is often considered a sweet treat, scientists have discovered that dark chocolate may contain substances that can improve mood and support heart health when eaten in small amounts. However, experts still recommend eating chocolate in moderation because it contains sugar and fat.",
     "questions": [
       {
         "type": "literal",
-        "q": "What did Sofia suggest to the student council?",
+        "q": "Where do cacao trees usually grow?",
         "options": [
-          "Building a larger cafeteria",
-          "Creating a school newspaper",
-          "Placing recycling bins in classrooms and hallways",
-          "Painting the hallways green"
+          "Near the equator",
+          "In cold mountain areas",
+          "Inside large cities",
+          "In dry deserts"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What happens to cacao beans after farmers collect them?",
+        "options": [
+          "They are frozen immediately",
+          "They are dried in the sun",
+          "They are mixed with sugar",
+          "They are planted again"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is added to create different kinds of chocolate?",
+        "options": [
+          "Salt and oil",
+          "Rice and flour",
+          "Sugar and milk",
+          "Corn and water"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Who helped younger children understand the recycling rules?",
+        "q": "What does fair trade try to improve?",
         "options": [
-          "Parents",
-          "Teachers",
-          "Older students",
-          "Visitors"
+          "The color of chocolate packages",
+          "Factory machine speed",
+          "Tourism in farming regions",
+          "Payment and working conditions for farmers"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "How did the principal reward the students?",
+        "q": "What have scientists discovered about dark chocolate?",
         "options": [
-          "With a special activity day",
-          "With new uniforms",
-          "With extra tests",
-          "With free bus tickets"
+          "It may support mood and heart health",
+          "It can replace vegetables completely",
+          "It contains no sugar at all",
+          "It should be eaten every hour"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What does Malik's enjoyment of explaining the project suggest about him?",
+        "q": "Why do experts recommend moderation?",
         "options": [
-          "He cares about the environment and likes sharing ideas",
-          "He only wanted to be in charge",
-          "He disliked carrying the recycled materials",
-          "He preferred working alone"
+          "Chocolate melts very quickly",
+          "Chocolate contains sugar and fat",
+          "Chocolate is difficult to produce",
+          "Chocolate is expensive in some countries"
         ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why did Sofia feel proud at the end of the story?",
-        "options": [
-          "The project showed cooperation can make a real difference",
-          "She received the most prizes",
-          "The collection center gave her an award",
-          "Her family started a new business"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What can we learn from the fact that students recycled more at home too?",
-        "options": [
-          "Good habits learned at school can spread to families",
-          "Parents never recycle without being asked",
-          "The school forced families to change",
-          "Recycling at home is easier than at school"
-        ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 201,
-      "fingerprint": "ak4-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 195,
+      "readingTime": 4
     }
   },
   {
     "id": "ak4-tema-004",
     "grade": 4,
     "genre": "fiction",
-    "theme": "music",
-    "title": "The Young Music Group",
-    "text": "Every Wednesday evening, a group of young musicians met at the community center in town. The group included students from different schools and backgrounds. Some played instruments for fun, while others dreamed about becoming professional musicians in the future.\n\nTheir teacher, Mr. Rivera, believed music could help people work together and become more confident. He encouraged everyone to try new instruments and support each other during practice. Hana played the violin, while Leo preferred the drums. Sam, who was non-binary, enjoyed playing the keyboard and writing song lyrics.\n\nAt first, the musicians struggled to stay organized during rehearsals. Some students played too loudly, and others forgot to practice at home. Instead of becoming angry, Mr. Rivera asked the group to discuss solutions together. They decided to create a schedule and divide responsibilities.\n\nSeveral months later, the group performed at the town festival. Nervous families and friends filled the audience before the concert began. Although a microphone stopped working during one song, the musicians continued playing calmly.\n\nAfter the performance, the audience applauded loudly. The students felt proud because they had improved both their musical skills and their teamwork. Many younger children in the audience said they wanted to join the music group one day.",
+    "theme": "culture",
+    "title": "The Street Art Festival",
+    "text": "Every summer, the city of Brookdale organizes a street art festival that attracts artists from many countries. During the event, empty walls and public spaces are transformed into colorful murals, sculptures, and performances. Some artists focus on painting realistic portraits, while others create abstract designs filled with bright shapes and patterns.\n\nThis year, sixteen-year-old Dani received permission to participate for the first time. Dani, who is non-binary, spent several weeks planning a mural about community and inclusion. The artwork showed people of different ages, cultures, and abilities working together to build a giant treehouse.\n\nWhile some residents originally worried that street art would make the city look messy, many changed their opinions after attending the festival. Local cafés became busier, tourists visited nearby shops, and families spent time walking through the decorated streets.\n\nAt the end of the festival, visitors voted for their favorite artwork. Although Dani did not win first place, many people praised the mural's message and creativity. Dani explained that the goal of art is not only to decorate spaces but also to encourage people to think differently about the world around them.",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did the musicians meet every week?",
+        "q": "What happens during the street art festival?",
         "options": [
-          "At the sports center",
-          "At the community center",
-          "At the train station",
-          "At the library"
+          "People compete in sports tournaments",
+          "Public spaces are transformed into art",
+          "Students take final exams",
+          "Shops close for repairs"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Which instrument did Sam enjoy playing?",
+        "q": "What was Dani's mural about?",
         "options": [
-          "Drums",
-          "Violin",
-          "Keyboard",
-          "Flute"
+          "A historical battle",
+          "A science experiment",
+          "Community and inclusion",
+          "Wild animals in danger"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "What problem happened during the concert?",
+        "type": "inference",
+        "q": "Why did some residents change their opinions?",
         "options": [
-          "A microphone stopped working",
-          "The audience left early",
-          "The lights went out",
-          "The drums broke"
+          "The festival helped the local community and businesses",
+          "Artists paid people to support the event",
+          "The city banned abstract paintings",
+          "Tourists stopped visiting other attractions"
         ],
         "correct": 0
       },
       {
-        "type": "inference",
-        "q": "How did the group solve their problems during rehearsals?",
+        "type": "literal",
+        "q": "What did visitors do at the end of the festival?",
         "options": [
-          "They canceled practices",
-          "They asked parents to lead",
-          "They ignored the problems",
-          "They discussed solutions and created a schedule"
+          "They painted new murals",
+          "They attended concerts",
+          "They cleaned the streets",
+          "They voted for their favorite artwork"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "What does it tell us that the musicians kept playing when the microphone broke?",
+        "type": "literal",
+        "q": "How did people react to Dani's mural?",
         "options": [
-          "They had become calm and professional",
-          "They did not notice the problem",
-          "They were too nervous to stop",
-          "They had a spare microphone ready"
+          "Many praised its message and creativity",
+          "Most visitors ignored it completely",
+          "Teachers asked Dani to remove it",
+          "The mural caused arguments between artists"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why did Mr. Rivera ask the group to discuss solutions instead of getting angry?",
+        "q": "What did Dani believe about art?",
         "options": [
-          "He wanted them to learn to work things out together",
-          "He did not know the answer",
-          "He was too tired to speak",
-          "He was testing if they would quit"
+          "Art should only entertain people",
+          "Art can encourage new ways of thinking",
+          "Only professional artists can create murals",
+          "Street art should never include social messages"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 202,
-      "fingerprint": "ak4-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 185,
+      "readingTime": 4
     }
   },
   {
     "id": "ak4-tema-005",
     "grade": 4,
-    "genre": "fiction",
-    "theme": "technology",
-    "title": "The Small Invention",
-    "text": "Oliver loved solving problems and building useful objects from old materials. One rainy afternoon, he noticed that his grandmother struggled to carry grocery bags from her car to the house. She used a walking stick and often became tired after shopping.\n\nOliver decided to create something that could help her. He searched through the garage and found small wheels, wooden boards, and strong fabric. After several hours of work, he built a lightweight cart that could hold bags and move easily across the sidewalk.\n\nThe first version of the cart was not perfect. One wheel became loose, and the handle felt uncomfortable. Oliver asked his grandmother to test the cart and share her opinions. She explained which parts were difficult to use, and Oliver carefully improved the design.\n\nA few weeks later, Oliver presented his invention at the school technology fair. Many students and teachers were interested because the cart solved a real problem. The judges especially liked that Oliver listened to feedback and changed his design instead of giving up.\n\nOliver did not win first prize, but he still felt successful. His grandmother used the cart every week, and several neighbors asked if he could help them build similar ones in the future.",
+    "genre": "non-fiction",
+    "theme": "environment",
+    "title": "Saving the River",
+    "text": "For many years, the River Glen was polluted by plastic waste and chemicals from nearby factories. Fish populations decreased, and local residents avoided swimming or fishing there. Concerned about the environment, a group of teenagers decided to take action.\n\nThe students formed an organization called Clean Water Team. Every Saturday morning, they collected trash along the riverbanks and recorded the types of waste they found. They also invited scientists from a nearby university to test the water quality. The results showed that pollution levels were slowly decreasing after factories introduced new cleaning systems.\n\nTo educate the community, the teenagers visited schools and created online videos explaining how pollution harms animals and ecosystems. One member of the group, Amal, used sign language interpretation during presentations so that more people could participate.\n\nAfter two years of hard work, the river became cleaner and safer. Birds and fish returned to areas where they had disappeared before. The mayor thanked the students publicly and announced plans for stricter environmental laws.\n\nThe project demonstrated that young people can play an important role in protecting nature and improving their communities.",
     "questions": [
       {
         "type": "literal",
-        "q": "Why did Oliver decide to build the cart?",
+        "q": "Why did people avoid the River Glen before?",
         "options": [
-          "He wanted to sell inventions",
-          "He needed a school project",
-          "His grandmother struggled with grocery bags",
-          "His teacher asked him to practice woodworking"
+          "The water was polluted",
+          "The river was too small",
+          "There were no fish",
+          "The area was privately owned"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
-        "q": "What materials did Oliver find in the garage?",
+        "q": "What was the teenagers' organization called?",
         "options": [
-          "Metal pipes and paint",
-          "Wheels, boards, and fabric",
-          "Plastic bottles and rope",
-          "Books and batteries"
+          "River Guardians",
+          "Clean Water Team",
+          "Nature Experts Club",
+          "Green Future Society"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Where did Oliver present his invention?",
+        "q": "What did scientists help the students do?",
         "options": [
-          "At a sports competition",
-          "At the school technology fair",
-          "At the city museum",
-          "At the local library"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inference",
-        "q": "What problem did the first version of the cart have?",
-        "options": [
-          "It was too heavy to move",
-          "The bags did not fit inside",
-          "A wheel became loose and the handle was uncomfortable",
-          "It cost too much to build"
+          "Build boats for the river",
+          "Create online advertisements",
+          "Test the water quality",
+          "Plant trees near factories"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "Why did the judges especially like Oliver's project?",
+        "type": "literal",
+        "q": "How did Amal help during presentations?",
         "options": [
-          "He listened to feedback and improved his design",
-          "He used the most expensive materials",
-          "He built the largest invention",
-          "He finished the project very quickly"
+          "By creating maps",
+          "By cleaning the river alone",
+          "By interviewing factory workers",
+          "By using sign language interpretation"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What happened after two years of work?",
+        "options": [
+          "The river became cleaner and safer",
+          "The factories closed permanently",
+          "The students moved away",
+          "Tourists stopped visiting the city"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why did Oliver feel successful even without winning first prize?",
+        "q": "What message does the text mainly give?",
         "options": [
-          "His invention was actually helping people in real life",
-          "He was given a bigger prize later",
-          "He planned to sell the cart for money",
-          "He wanted to impress his teacher"
+          "Young people can improve their communities",
+          "Factories should always be closed",
+          "Environmental projects are too difficult",
+          "Only scientists can protect nature"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 203,
-      "fingerprint": "ak4-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 185,
+      "readingTime": 4
     }
   },
   {
