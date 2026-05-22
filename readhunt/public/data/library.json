@@ -2013,410 +2013,400 @@
     "id": "ak6-tema-001",
     "grade": 6,
     "genre": "non-fiction",
-    "theme": "science",
-    "title": "The Community Science Fair",
-    "text": "Every autumn, the town of Brookdale organized a large community science fair where students could present inventions, experiments, and environmental projects. Schools from nearby areas participated, and hundreds of visitors attended the event each year. The fair was designed to encourage curiosity and show how science could solve everyday problems.\n\nThis year, thirteen-year-old Clara decided to study water pollution in the small river that passed through the town. She became interested in the topic after noticing fewer fish and birds near the riverbank during summer walks with her grandfather. Clara collected water samples from different locations and worked with her science teacher to analyze the results.\n\nMeanwhile, another student named Yusuf designed a machine that separated plastic waste into different categories for recycling. He explained that many recycling centers wasted time sorting materials by hand. Yusuf believed his invention could make the process faster and more efficient.\n\nPreparing for the fair required patience and teamwork. Clara struggled to organize all her research into a short presentation, while Yusuf experienced technical problems with his machine only two days before the competition. Several classmates volunteered to help both students after school.\n\nOn the day of the science fair, judges walked from table to table asking detailed questions about each project. Clara explained how chemicals from factories and farms could affect rivers and wildlife. Yusuf demonstrated how sensors inside his machine could identify different types of plastic.\n\nAlthough neither student won first prize, both received special awards for creativity and environmental awareness. More importantly, their projects inspired many younger visitors to become interested in science and environmental protection. After the event, the town council even discussed ways to improve recycling systems and reduce pollution in local waterways.",
+    "theme": "history",
+    "title": "The Hidden City Beneath the Sand",
+    "text": "For decades, archaeologists believed that the desert region near Almera contained only a few scattered ruins from ancient settlements. However, new satellite technology changed everything. Researchers studying images from space noticed unusual patterns beneath the sand, including straight lines and rectangular shapes that did not appear natural. Curious about the discovery, an international team of archaeologists organized an expedition to investigate the area.\n\nWhen the team arrived, they used ground-scanning equipment to examine the buried structures before beginning any excavation. The scans revealed streets, walls, and several large buildings hidden beneath layers of sand that had accumulated over centuries. Scientists soon realized they had discovered the remains of a forgotten trading city that may have connected different civilizations across the desert.\n\nDuring the excavation, researchers uncovered pottery, tools, jewelry, and written records carved onto stone tablets. Some of the writings described trade routes involving spices, fabrics, and precious metals transported between distant regions. Historians were especially interested in evidence suggesting that people from multiple cultures had lived together peacefully within the city.\n\nThe discovery attracted worldwide attention because it provided new information about how ancient societies communicated and exchanged knowledge. Local authorities worked together with scientists to protect the site from damage caused by tourism and illegal artifact hunters. Students from nearby schools were invited to visit the excavation and learn about archaeology through workshops and guided tours.\n\nAlthough researchers still have many unanswered questions about the city's history, the discovery demonstrated how modern technology can help uncover important parts of humanity's past that were once thought to be lost forever.",
     "questions": [
       {
         "type": "literal",
-        "q": "What was one purpose of the community science fair?",
+        "q": "What helped researchers discover the hidden city?",
         "options": [
-          "To encourage curiosity and problem-solving",
-          "To replace regular science classes",
-          "To advertise local businesses",
-          "To select professional scientists"
+          "Satellite technology",
+          "Ancient maps found in a cave",
+          "Stories from local farmers",
+          "A severe sandstorm"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Why did Clara become interested in water pollution?",
+        "q": "What did the scans reveal beneath the sand?",
         "options": [
-          "She read about it in a newspaper",
-          "She noticed fewer animals near the river",
-          "Her teacher assigned the topic",
-          "She wanted to win a prize"
+          "Underground rivers",
+          "Streets, walls, and buildings",
+          "A buried forest",
+          "Large groups of statues"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What problem was Yusuf trying to solve?",
+        "q": "What did researchers find during the excavation?",
         "options": [
-          "Traffic congestion in the town",
-          "Poor internet connections at school",
-          "Slow sorting of recycling materials",
-          "The lack of science teachers"
+          "Modern electronic devices",
+          "Weapons from recent wars",
+          "Pottery, jewelry, and stone writings",
+          "Complete wooden ships"
         ],
         "correct": 2
       },
       {
         "type": "inference",
-        "q": "What difficulty did Yusuf face before the fair, and how was it handled?",
+        "q": "Why was the discovery important to historians?",
         "options": [
-          "He lost his research notes",
-          "His machine had technical problems and classmates helped him",
-          "The judges changed the rules",
-          "He refused to compete"
+          "It proved the city was built recently",
+          "It showed the desert was once covered by water",
+          "It contained the world's largest library",
+          "It revealed information about trade and cultural cooperation"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
-        "type": "inference",
-        "q": "What can we infer about the impact of the students' projects?",
+        "type": "literal",
+        "q": "How did local authorities help protect the site?",
         "options": [
-          "They inspired interest in science and led to council discussions",
-          "They caused the fair to be canceled",
-          "They were ignored by visitors",
-          "They won first prize for both students"
+          "They worked to prevent damage and illegal hunting",
+          "They closed all nearby schools permanently",
+          "They removed all artifacts immediately",
+          "They turned the city into a shopping center"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why might Clara's personal observation be a good starting point for scientific research?",
+        "q": "What is one main message of the text?",
         "options": [
-          "Real-world observations can lead to meaningful questions worth investigating",
-          "Judges prefer projects based on personal stories",
-          "Science teachers always assign topics based on local rivers",
-          "Personal stories are easier to present than experiments"
+          "Modern technology can reveal forgotten history",
+          "Ancient cities should remain completely untouched",
+          "Archaeology is only useful for tourism",
+          "Deserts are impossible to study scientifically"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 306,
-      "fingerprint": "ak6-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 400,
+      "readingTime": 7
     }
   },
   {
     "id": "ak6-tema-002",
     "grade": 6,
-    "genre": "fiction",
-    "theme": "art",
-    "title": "The Lost Painting",
-    "text": "For decades, an old painting hung quietly in the storage room of the Ashton City Museum. Most visitors never noticed it because it was rarely displayed. Museum workers believed the artwork had little historical value, and some even thought it was only a copy of a more famous painting.\n\nEverything changed when a new museum curator named Dr. Helena Morris began reviewing the museum's collection. While examining the painting closely, she noticed unusual details in the brushstrokes and the signature in one corner. Curious about its origin, she contacted art historians and conservation experts.\n\nThe investigation lasted several months. Experts used special cameras and scientific methods to study the layers of paint hidden beneath the surface. They discovered that earlier restoration work had covered important details and changed some of the original colors. Gradually, researchers became convinced that the painting might actually belong to a well-known nineteenth-century artist.\n\nNews of the discovery quickly spread through newspapers and social media. Some people were excited by the possibility of finding a forgotten masterpiece, while others remained skeptical and demanded stronger evidence. Dr. Morris carefully explained that scientific research often required time and patience before reaching final conclusions.\n\nEventually, international experts confirmed that the painting was authentic. The museum organized a special exhibition where visitors could learn about the artwork's history and the restoration process. Thousands of people traveled to Ashton City to see the painting for themselves.\n\nThe discovery transformed the museum's reputation and increased interest in local history and art. Dr. Morris later said the experience reminded her that valuable treasures are sometimes hidden in places people least expect. She also encouraged young students to remain curious and question assumptions instead of accepting easy answers without investigation.",
+    "genre": "non-fiction",
+    "theme": "environment",
+    "title": "The Future of Urban Farming",
+    "text": "As cities continue growing around the world, experts are searching for new ways to produce food sustainably in crowded urban environments. Traditional farms often require large amounts of land, water, and transportation, making it difficult to supply fresh food efficiently to growing populations. One increasingly popular solution is urban farming, a system in which food is grown inside cities rather than in distant rural areas.\n\nUrban farms can take many forms. Some are built on rooftops, while others operate inside abandoned factories or specially designed vertical greenhouses. In vertical farms, crops are grown in stacked layers under artificial lighting. Advanced systems carefully control temperature, humidity, and nutrients, allowing plants to grow throughout the entire year regardless of weather conditions.\n\nSupporters of urban farming argue that these systems reduce transportation costs and lower pollution because food does not need to travel long distances to reach customers. Urban farms may also use less water than traditional agriculture through recycling systems that capture and reuse moisture. In addition, many schools and communities have created small local gardens to teach children about healthy eating and environmental responsibility.\n\nDespite these advantages, urban farming also faces challenges. Building advanced indoor farms can be expensive, and artificial lighting requires large amounts of electricity. Some critics question whether urban farms can produce enough food to support entire cities. Scientists and engineers continue researching new technologies to improve energy efficiency and reduce costs.\n\nIn several countries, governments and private companies have started investing heavily in urban agriculture projects. Experts believe that although urban farming may not completely replace traditional agriculture, it could become an important part of future food production systems. As climate change and population growth create new pressures on global agriculture, innovative farming methods may help societies produce food more sustainably and reliably.",
     "questions": [
       {
         "type": "literal",
-        "q": "Why did most visitors ignore the painting for many years?",
+        "q": "Why are experts interested in urban farming?",
         "options": [
-          "It was rarely displayed",
-          "It had been destroyed by water",
-          "The museum charged extra to see it",
-          "Visitors were not allowed near it"
+          "Cities need more sustainable food production",
+          "Traditional farms can no longer grow vegetables",
+          "Urban residents dislike fresh food",
+          "Rural farming has become illegal in many countries"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What did experts use to study the artwork?",
+        "q": "What is a vertical farm?",
         "options": [
-          "Special cameras and scientific methods",
-          "Only old photographs",
-          "Computer games and animations",
-          "Public opinion surveys"
+          "A farm located under the ocean",
+          "A system where crops grow in stacked layers",
+          "A greenhouse built inside mountains",
+          "A traditional farm using animal labor"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
-        "q": "What happened after experts confirmed the painting was authentic?",
+        "q": "What is one advantage of urban farming mentioned?",
         "options": [
-          "The museum organized a special exhibition",
-          "The artwork was sold immediately",
-          "The museum stopped accepting visitors",
-          "The painting was returned to storage"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why were some people skeptical about the discovery?",
-        "options": [
-          "They disliked modern art",
-          "They believed museums should close",
-          "They wanted stronger evidence before accepting it",
-          "They thought the painting was too expensive"
+          "It eliminates the need for electricity",
+          "It guarantees unlimited food production",
+          "It can reduce transportation pollution",
+          "It replaces all outdoor farming immediately"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "What does Dr. Morris's discovery suggest about assumptions people make?",
+        "type": "literal",
+        "q": "What challenge does urban farming face?",
         "options": [
-          "Assumptions can cause valuable things to be overlooked",
-          "Museums always know the value of their collections",
-          "Old paintings are rarely worth studying",
-          "Only famous curators can identify important art"
+          "Lack of interest from communities",
+          "Difficulty growing plants indoors",
+          "The complete absence of modern technology",
+          "High costs and energy use"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "How do some urban farms save water?",
+        "options": [
+          "By recycling and reusing moisture",
+          "By importing water from oceans",
+          "By using only rainwater collected naturally",
+          "By avoiding irrigation systems completely"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why did Dr. Morris encourage students to question assumptions?",
+        "q": "What do experts believe about the future of urban farming?",
         "options": [
-          "Because curiosity and investigation can lead to important discoveries",
-          "Because teachers are often wrong",
-          "Because museums need more student volunteers",
-          "Because art history is a difficult subject"
+          "It may become an important part of food production",
+          "It will completely replace all traditional farms soon",
+          "It is too ineffective to continue developing",
+          "It can only succeed in small villages"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 304,
-      "fingerprint": "ak6-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 404,
+      "readingTime": 7
     }
   },
   {
     "id": "ak6-tema-003",
     "grade": 6,
-    "genre": "non-fiction",
-    "theme": "environment",
-    "title": "The Arctic Research Expedition",
-    "text": "A team of international scientists traveled to the Arctic to study how climate change was affecting ice, wildlife, and local communities. The expedition included researchers from several countries, each specializing in different scientific fields such as biology, meteorology, and environmental chemistry.\n\nAmong the team members was sixteen-year-old intern Maya Lindström, who had earned a place in the program after winning a national science competition. Maya hoped to gain practical experience while learning from professional researchers. Before the expedition began, the team spent weeks preparing equipment and studying safety procedures for extreme weather conditions.\n\nLife in the Arctic proved challenging. Temperatures remained far below freezing, and strong winds often delayed outdoor work. Scientists collected ice samples, measured air pollution levels, and tracked the movements of polar bears using satellite technology. Maya worked closely with a marine biologist who studied how melting ice affected fish populations.\n\nOne evening, severe weather forced the researchers to remain inside their station for almost twenty-four hours. During that time, the team discussed the long-term consequences of rising global temperatures. Some scientists warned that coastal cities around the world could face serious flooding in the future if ice continued melting rapidly.\n\nDespite the difficult conditions, the expedition achieved important results. Researchers discovered that parts of the Arctic ice were melting faster than earlier studies had predicted. They also observed changes in animal migration patterns and increasing pressure on local communities that depended on fishing and hunting.\n\nAfter returning home, Maya gave presentations at schools and environmental conferences. She explained that climate change was not only a scientific issue but also a social and economic challenge affecting millions of people worldwide. Her experiences inspired many students to become more interested in environmental science and global cooperation.",
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "The Athlete Who Changed the Rules",
+    "text": "When seventeen-year-old wheelchair racer Elena Morales qualified for the national athletics championship, many sports journalists focused only on her disability instead of her achievements. Elena found this frustrating because she wanted people to recognize the years of training, discipline, and determination that had helped her become one of the fastest young athletes in the country.\n\nElena began competing in wheelchair racing after a car accident injured her spinal cord when she was nine years old. At first, sports became a way to rebuild her confidence and independence. Over time, however, she discovered a passion for competition and developed ambitious goals for her future. Her coach often described her as one of the most focused athletes on the team.\n\nBefore the championship, Elena noticed that several sporting facilities still lacked proper accessibility features. Some locker rooms were difficult to enter, and transportation between events often created unnecessary challenges for athletes with disabilities. Instead of remaining silent, Elena spoke publicly about the issue during interviews and social media discussions.\n\nHer comments quickly attracted attention from both athletes and sports organizations. Several professional competitors supported her message, arguing that accessibility should be considered a basic requirement rather than a special accommodation. As public pressure increased, the championship organizers agreed to improve transportation systems and redesign certain facilities before the competition began.\n\nAlthough Elena won a silver medal during the championship, many people believed her greatest achievement happened outside the race itself. By using her platform to demand fair treatment and equal access, she encouraged sports organizations to create more inclusive environments for future athletes. Elena later explained that true success in sports should not only involve winning competitions but also making opportunities available to everyone who wishes to participate.",
     "questions": [
       {
         "type": "literal",
-        "q": "What was the purpose of the Arctic expedition?",
+        "q": "Why was Elena frustrated with journalists?",
         "options": [
-          "To study the effects of climate change",
-          "To build tourist attractions",
-          "To search for valuable minerals",
-          "To train military pilots"
+          "They focused more on her disability than her achievements",
+          "They ignored the championship completely",
+          "They criticized her coach unfairly",
+          "They refused to interview wheelchair athletes"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "How did Maya join the expedition?",
+        "q": "How did Elena first become involved in wheelchair racing?",
         "options": [
-          "She was invited by her family",
-          "She won a national science competition",
-          "She worked as a journalist",
-          "She applied for a tourism job"
+          "Her parents forced her to compete",
+          "She started after a spinal cord injury",
+          "Her school created a new sports club",
+          "She wanted to become famous online"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What did the expedition discover about Arctic ice?",
+        "q": "What problem did Elena notice before the championship?",
         "options": [
-          "It was melting faster than expected",
-          "It had completely stopped melting",
-          "It was increasing in every region",
-          "It contained no pollution"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why did scientists warn about coastal cities during the storm?",
-        "options": [
-          "Rising temperatures and melting ice could cause future flooding",
-          "Cities were already underwater",
-          "Storms were becoming less frequent",
-          "Scientists wanted to move to coastal areas"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What does Maya's message after returning home tell us about climate change?",
-        "options": [
-          "It is both a scientific and a social challenge for millions of people",
-          "It only affects Arctic animals",
-          "Only scientists need to understand it",
-          "It can be solved quickly with technology"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why was it important for the expedition to include scientists from several countries?",
-        "options": [
-          "Because climate change is a global problem that requires international cooperation",
-          "Because no single country owns the Arctic",
-          "Because the journey was too expensive for one country",
-          "Because different languages were needed to communicate"
-        ],
-        "correct": 0
-      }
-    ],
-    "meta": {
-      "wordCount": 303,
-      "fingerprint": "ak6-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak6-tema-004",
-    "grade": 6,
-    "genre": "fiction",
-    "theme": "technology",
-    "title": "The Digital Debate",
-    "text": "At Greenwood Secondary School, teachers noticed that students were spending increasing amounts of time on social media and digital devices. Although technology helped students communicate and access information quickly, many teachers and parents worried about the effects of constant screen use on concentration, sleep, and mental health.\n\nTo explore the issue, the school organized a formal debate competition. Two teams of students prepared arguments about whether schools should limit smartphone use during the school day. One team argued that smartphones distracted students from learning and reduced face-to-face communication. The opposing team believed technology was an important educational tool that could improve research and collaboration.\n\nFourteen-year-old Jonas joined the debate team supporting stricter phone limits. He explained that many students checked messages during lessons instead of paying attention to teachers. Meanwhile, Amina argued that banning phones completely would ignore the benefits of educational apps and online resources.\n\nPreparing for the debate required students to research scientific studies, interview classmates, and analyze different viewpoints carefully. Some students were surprised to discover that experts themselves disagreed about the long-term effects of digital technology.\n\nDuring the final debate, both teams presented strong arguments and responded confidently to difficult questions from the judges. Audience members appreciated that the discussion remained respectful even when opinions differed strongly.\n\nIn the end, the judges declared the competition a tie because both teams had presented convincing evidence. More importantly, the event encouraged students to think critically about how technology influenced their daily lives. After the debate, the school introduced new guidelines encouraging balanced technology use rather than complete restrictions.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "What was the debate competition about?",
-        "options": [
-          "Whether schools should limit smartphone use",
-          "How students could improve sports performance",
-          "Why libraries should close",
-          "Whether schools needed longer holidays"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What argument did Amina support?",
-        "options": [
-          "Phones should never be used anywhere",
-          "Technology can support education",
-          "Students should only use printed books",
-          "Schools should ban all online learning"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Why did the judges declare the competition a tie?",
-        "options": [
-          "Both teams presented convincing arguments",
-          "The debate ended too early",
-          "The audience interrupted the discussion",
-          "The judges could not hear the speakers"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What surprised some students during their research preparation?",
-        "options": [
-          "Experts themselves disagreed about technology's long-term effects",
-          "No scientific studies existed on the topic",
-          "Teachers refused to answer their questions",
-          "Students preferred longer school days"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What does the school's decision to introduce balanced guidelines suggest?",
-        "options": [
-          "Both sides of the argument had valid points worth considering",
-          "The school agreed completely with Jonas",
-          "Technology was banned from classrooms",
-          "The debate had no real impact"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why is it valuable that the debate remained respectful despite strong disagreements?",
-        "options": [
-          "It shows that people can discuss difficult topics without becoming hostile",
-          "It means both teams had the same opinion",
-          "Respectful debates always end in a tie",
-          "Students are never allowed to disagree with judges"
-        ],
-        "correct": 0
-      }
-    ],
-    "meta": {
-      "wordCount": 300,
-      "fingerprint": "ak6-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
-    }
-  },
-  {
-    "id": "ak6-tema-005",
-    "grade": 6,
-    "genre": "fiction",
-    "theme": "community",
-    "title": "The Underground Rescue",
-    "text": "Late one evening, a group of construction workers became trapped inside a tunnel beneath the city after part of the underground structure collapsed unexpectedly. Emergency services responded immediately, but rescuers quickly realized that reaching the workers safely would be extremely difficult.\n\nEngineers warned that unstable walls and falling debris could cause additional collapses. Rescue teams therefore needed to move carefully while searching for the trapped workers. Specialists from several regions arrived to assist with the operation, bringing advanced equipment designed for underground emergencies.\n\nNews about the accident spread rapidly through television broadcasts and social media. Families gathered near the rescue site waiting anxiously for updates, while reporters provided continuous coverage of the situation. Many local businesses donated food, water, and supplies to emergency workers who often remained underground for long hours.\n\nAmong the rescue team was paramedic Sofia Martinez, who had experience responding to natural disasters and mining accidents. She explained that maintaining communication with the trapped workers was essential because fear and isolation could increase stress during emergencies.\n\nAfter nearly two days of careful drilling and rescue work, teams finally created a safe passage to reach the workers. One by one, the trapped individuals were brought to the surface, where medical staff examined them for injuries and exhaustion. Fortunately, all of them survived.\n\nInvestigators later studied the causes of the collapse and discovered weaknesses in parts of the tunnel's support system. City officials promised stricter safety inspections for future construction projects.\n\nThe rescue operation received international attention because it demonstrated the importance of cooperation, planning, and specialized training during dangerous emergencies. Many people praised the bravery and determination shown by both rescuers and workers throughout the difficult experience.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "Why was the rescue operation difficult?",
-        "options": [
-          "The tunnel remained unstable and dangerous",
-          "The workers refused assistance",
-          "Emergency services arrived too late",
-          "The city lacked rescue equipment"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "How did local businesses help during the emergency?",
-        "options": [
-          "They repaired the tunnel walls",
-          "They transported injured workers abroad",
-          "They donated food, water, and supplies",
-          "They organized political protests"
+          "The races were too short for experienced athletes",
+          "There were not enough spectators",
+          "Several facilities lacked accessibility",
+          "Athletes were not allowed to use social media"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did investigators discover after the rescue?",
+        "q": "How did sports organizations respond to Elena's comments?",
         "options": [
-          "Weaknesses in the tunnel's support system",
-          "Evidence of criminal activity",
-          "Problems with television broadcasts",
-          "Mistakes in weather forecasts"
+          "They canceled the championship",
+          "They criticized her publicly",
+          "They ignored all complaints",
+          "They improved transportation and facilities"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What did many people consider Elena's greatest achievement?",
+        "options": [
+          "Encouraging more inclusive sports environments",
+          "Winning every race during the championship",
+          "Becoming the youngest athlete in the event",
+          "Starting her own sports company"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "Why did Sofia Martinez believe communication with trapped workers was essential?",
+        "q": "What idea does Elena express at the end of the text?",
         "options": [
-          "Fear and isolation could increase stress, making the situation more dangerous",
-          "It allowed reporters to interview the workers live",
-          "It reduced the cost of the rescue operation",
-          "It helped officials decide which roads to close"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What does the city's promise of stricter inspections tell us?",
-        "options": [
-          "The collapse could have been prevented with better safety checks",
-          "The rescue was considered a complete failure",
-          "Inspections had never existed before",
-          "Officials blamed the rescue team"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "Why did the rescue receive international attention?",
-        "options": [
-          "It demonstrated the value of cooperation, planning, and specialized training",
-          "It was the largest tunnel in the world",
-          "It lasted longer than expected",
-          "It introduced new construction laws immediately"
+          "Sports should provide opportunities for everyone",
+          "Professional competitions are becoming too expensive",
+          "Athletes should avoid discussing political issues",
+          "Accessibility improvements are difficult to achieve"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 301,
-      "fingerprint": "ak6-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 402,
+      "readingTime": 7
+    }
+  },
+  {
+    "id": "ak6-tema-004",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Mystery of the Northern Lights",
+    "text": "For centuries, people living in northern regions have been fascinated by the colorful lights that sometimes appear across the night sky. Different cultures created myths and stories to explain these mysterious displays, now known scientifically as the aurora borealis, or northern lights. Some communities believed the lights were messages from spirits, while others thought they represented powerful animals moving through the heavens.\n\nToday, scientists understand that the northern lights are caused by interactions between particles from the Sun and Earth's atmosphere. The Sun constantly releases streams of charged particles called solar wind. When these particles reach Earth, most are redirected by the planet's magnetic field. However, near the polar regions, some particles enter the atmosphere and collide with gases such as oxygen and nitrogen.\n\nThese collisions release energy in the form of light, creating moving patterns of green, purple, pink, and red across the sky. The exact colors depend on factors such as altitude and the type of gas involved in the collision. Strong solar storms can produce especially bright displays visible farther from the poles than usual.\n\nScientists study the northern lights not only because they are beautiful but also because they provide valuable information about space weather. Powerful solar storms can sometimes interfere with satellites, communication systems, and electrical networks on Earth. By understanding these events better, researchers hope to protect important technology from damage.\n\nToday, thousands of tourists travel to countries such as Norway, Iceland, and Canada hoping to witness the northern lights in person. Although modern science has explained much about the phenomenon, many people still describe the experience as magical and unforgettable.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did some ancient cultures believe about the northern lights?",
+        "options": [
+          "They were messages from spirits or animals",
+          "They were caused by airplanes",
+          "They appeared only during storms at sea",
+          "They represented underground volcanoes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What creates the northern lights according to scientists?",
+        "options": [
+          "Moonlight reflecting on clouds",
+          "Interactions between solar particles and the atmosphere",
+          "Pollution from factories near polar regions",
+          "Large amounts of ice crystals in the air"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What gases are mentioned in the text?",
+        "options": [
+          "Hydrogen and helium",
+          "Carbon dioxide and methane",
+          "Oxygen and nitrogen",
+          "Argon and chlorine"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why do scientists study the northern lights?",
+        "options": [
+          "To create new tourist attractions",
+          "To understand ancient myths",
+          "To improve airplane entertainment systems",
+          "To learn more about space weather and technology risks"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What can strong solar storms affect on Earth?",
+        "options": [
+          "Satellites and communication systems",
+          "The movement of continents",
+          "Ocean temperatures only",
+          "The size of polar mountains"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How do many people describe seeing the northern lights?",
+        "options": [
+          "As confusing and frightening",
+          "As magical and unforgettable",
+          "As boring after a few minutes",
+          "As similar to ordinary clouds"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
+      "readingTime": 7
+    }
+  },
+  {
+    "id": "ak6-tema-005",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "technology",
+    "title": "The Rise of Digital Libraries",
+    "text": "In the past, libraries were mainly physical spaces filled with shelves of printed books, newspapers, and reference materials. Although traditional libraries continue to play an important role in education and culture, digital technology has transformed how people access information. Today, millions of books, articles, photographs, and historical documents are available online through digital libraries.\n\nDigital libraries allow users to search for information quickly from computers, tablets, or smartphones. Students can access academic materials without traveling long distances, and researchers can study rare historical documents that were previously difficult to obtain. Some digital collections even include audio recordings, videos, and interactive learning tools.\n\nDuring the COVID-19 pandemic, digital libraries became especially important because many schools and public buildings temporarily closed. Librarians worked to expand online services so people could continue reading, studying, and attending virtual educational events from home.\n\nDespite these advantages, digital libraries also raise important concerns. Not everyone has reliable internet access or modern devices, which can create inequalities in education and access to knowledge. In addition, preserving digital information over long periods can be challenging because technology changes rapidly. Experts must regularly update storage systems to prevent important files from becoming unreadable.\n\nMany librarians believe the future will involve a combination of physical and digital resources rather than one completely replacing the other. Physical libraries continue providing quiet study spaces, community events, and personal assistance, while digital collections increase access and convenience for users worldwide.\n\nAs technology continues evolving, libraries will likely remain important centers for learning, creativity, and the sharing of knowledge in both physical and digital forms.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How have digital libraries changed access to information?",
+        "options": [
+          "They allow information to be accessed online quickly",
+          "They completely replaced all printed books",
+          "They only serve professional researchers",
+          "They removed the need for schools"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why were digital libraries especially important during the pandemic?",
+        "options": [
+          "People wanted fewer educational materials",
+          "Many physical buildings were temporarily closed",
+          "Internet access became free everywhere",
+          "Printed books became illegal to distribute"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What challenge connected to digital libraries is mentioned?",
+        "options": [
+          "Libraries cannot store photographs online",
+          "Digital books are impossible to organize",
+          "Not everyone has reliable internet access",
+          "Students prefer using paper maps"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why must experts update storage systems regularly?",
+        "options": [
+          "To reduce the number of users online",
+          "To make computers more expensive",
+          "To replace all librarians with technology",
+          "To prevent digital files from becoming unreadable"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What do many librarians believe about the future?",
+        "options": [
+          "Physical and digital libraries will both remain important",
+          "Printed books will disappear within a few years",
+          "Libraries should focus only on entertainment",
+          "Technology will make education unnecessary"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Digital technology is changing how libraries provide knowledge",
+          "Libraries no longer serve useful social purposes",
+          "Most people prefer historical documents to modern books",
+          "Only universities benefit from digital collections"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 405,
+      "readingTime": 7
     }
   },
   {
