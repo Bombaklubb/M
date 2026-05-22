@@ -17,6 +17,11 @@ const APPS = [
     url: 'https://svenskajakten.vercel.app',
     icon: 'https://svenskajakten.vercel.app/svenskajakten-logo.png',
   },
+  {
+    name: 'Readhunt',
+    url: 'https://readhunt.vercel.app',
+    icon: 'https://readhunt.vercel.app/readhunt-logo.png',
+  },
 ];
 
 export default function JaktlankarMenu() {

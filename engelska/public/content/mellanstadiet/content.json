@@ -5614,16 +5614,16 @@
     },
     {
       "id": "mel-sluttest",
-      "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
+      "title": "Sluttest 1 – Grammatik",
+      "description": "Testa din grammatik! 23 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
-        "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker allt du har tränat på: present simple, substantiv, do/does, artiklar, be-verb, have/has, demonstrativa pronomen, there is/are och mer.",
-        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
-        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Det här är första sluttestet för grammatikdelen!",
+        "Frågorna täcker present simple, past simple, komparativ, superlativ, prepositioner och frågeord.",
+        "Ingår även dialogövningar.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -5887,6 +5887,46 @@
           "explanation": "'On' används med dagar i veckan: on Mondays, on Friday."
         },
         {
+          "id": "mel-st-new1",
+          "type": "fill-in-blank",
+          "sentence": "A: Did you ___ your homework? B: Yes, I did it last night.",
+          "answer": "do",
+          "hint": "Hjälpverb 'did' + grundform.",
+          "explanation": "I frågor med 'did' använder man grundform: 'Did you do...'"
+        },
+        {
+          "id": "mel-st-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: Is this book ___ than that one? B: Yes, much more interesting!",
+          "answer": "better",
+          "hint": "Komparativ av 'good'.",
+          "explanation": "'Good → better → best'. Oregelbunden komparativ."
+        },
+        {
+          "id": "mel-st-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: When did she ___? B: She arrived yesterday.",
+          "answer": "arrive",
+          "hint": "Hjälpverb 'did' + grundform.",
+          "explanation": "Med 'did' i frågan används alltid verbets grundform: 'arrive', inte 'arrived'."
+        }
+      ]
+    },
+    {
+      "id": "mel-sluttest-2",
+      "title": "Sluttest 2 – Grammatik & Ordförråd",
+      "description": "Testa mer grammatik och ordförråd! 22 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är andra sluttestet för grammatikdelen!",
+        "Frågorna täcker negationer, frågeformer, vokabulär, meningsbyggnad och dialoger.",
+        "Ingår present perfect och meningsbyggnadsövningar.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
           "id": "mel-st-21",
           "type": "multiple-choice",
           "question": "Välj rätt past tense: 'I ___ my keys!' said Tom.",
@@ -6072,6 +6112,45 @@
           ],
           "correctIndex": 0,
           "explanation": "Lastbil = truck. The truck carries heavy loads."
+        },
+        {
+          "id": "mel-st2-new1",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ you ever been to Paris? B: No, never.",
+          "answer": "Have",
+          "alternativeAnswers": [
+            "have"
+          ],
+          "hint": "Present perfect frågeform.",
+          "explanation": "'Have you ever been...?' – present perfect för upplevelser."
+        },
+        {
+          "id": "mel-st2-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: How ___ does this cost? B: It is five pounds.",
+          "answer": "much",
+          "hint": "Frågar om pris.",
+          "explanation": "'How much does this cost?' = Hur mycket kostar det? 'Much' används för oräkneliga substantiv och pengar."
+        },
+        {
+          "id": "mel-st2-new3",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Han spelar fotboll varje lördag.",
+          "words": [
+            "He",
+            "plays",
+            "football",
+            "every",
+            "Saturday"
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "'He plays football every Saturday.' – 'plays' för he/she/it i present simple."
         }
       ]
     }

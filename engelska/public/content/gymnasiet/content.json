@@ -2817,16 +2817,16 @@
     },
     {
       "id": "gym-sluttest",
-      "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
+      "title": "Sluttest 1 – Grammatik",
+      "description": "Testa din avancerade grammatik! 23 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
-        "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker avancerade ämnen: verb tenses, modal verbs, subjunktiv, diskursmarkörer och avancerad grammatik.",
-        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
-        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Det här är första sluttestet för grammatikdelen!",
+        "Frågorna täcker konjunktiv, inversion, diskursmarkörer, passiv future perfect och blandade konditionalis.",
+        "Ingår även dialogövningar med avancerade strukturer.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -3090,6 +3090,46 @@
           "explanation": "'Never have I' – inversion med present perfect. Never have I seen such beauty."
         },
         {
+          "id": "gym-st-new1",
+          "type": "fill-in-blank",
+          "sentence": "A: It is crucial that every member ___ on time. B: Agreed, punctuality matters.",
+          "answer": "be",
+          "hint": "Konjunktiv i 'that'-sats.",
+          "explanation": "'It is crucial that he be...' – konjunktiv (subjunctive) används efter 'crucial/essential/important that'."
+        },
+        {
+          "id": "gym-st-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: Never before ___ I witnessed such talent. B: Nor have I – truly remarkable.",
+          "answer": "have",
+          "hint": "Inversion efter negativt adverbial.",
+          "explanation": "'Never before have I...' – inversion (have + subjekt) efter negativa adverbial som 'never', 'rarely', 'seldom'."
+        },
+        {
+          "id": "gym-st-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: She ___ have known about this all along. B: That would explain her reaction.",
+          "answer": "must",
+          "hint": "Stark slutledning i det förflutna.",
+          "explanation": "'Must have known' – stark slutledning om ett förflutet faktum. Jämför 'might have' (svagare osäkerhet)."
+        }
+      ]
+    },
+    {
+      "id": "gym-sluttest-2",
+      "title": "Sluttest 2 – Grammatik & Ordförråd",
+      "description": "Testa mer avancerad grammatik och ordförråd! 22 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är andra sluttestet för grammatikdelen!",
+        "Frågorna täcker relativklausuler, cleft-meningar, nominalisering, vokabulär och dialoger.",
+        "Ingår avancerade strukturer som inversion och typ 3-konditionalis.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
           "id": "gym-st-21",
           "type": "multiple-choice",
           "question": "Cleft-mening: 'It was ___ who first described the theory.'",
@@ -3275,6 +3315,34 @@
           ],
           "correctIndex": 0,
           "explanation": "Lokomotiv = locomotive. The locomotive pulls the train."
+        },
+        {
+          "id": "gym-st2-new1",
+          "type": "fill-in-blank",
+          "sentence": "A: It was the report ___ caused all the controversy. B: Indeed, no one expected that.",
+          "answer": "that",
+          "hint": "Cleft-mening för emfas.",
+          "explanation": "'It was the report that...' – cleft-mening betonar 'the report' som orsaken."
+        },
+        {
+          "id": "gym-st2-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: Had they been more careful, the accident ___ have been prevented. B: Unfortunately, yes.",
+          "answer": "could",
+          "alternativeAnswers": [
+            "would",
+            "might"
+          ],
+          "hint": "Typ 3-konditionalis – inverterad form.",
+          "explanation": "'Had they been more careful, the accident could have been prevented' – typ 3, inverterad form utan 'if'."
+        },
+        {
+          "id": "gym-st2-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: The policy, ___ was implemented last year, has had mixed results. B: Yes, the data supports that.",
+          "answer": "which",
+          "hint": "Icke-restriktiv relativklausul.",
+          "explanation": "'which' i icke-restriktiv relativklausul (med kommatecken) – tillför info om 'the policy' utan att begränsa."
         }
       ]
     }

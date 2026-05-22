@@ -3006,7 +3006,9 @@
           "type": "fill-in-blank",
           "sentence": "He is ___ (far) away from home than I thought.",
           "answer": "farther",
-          "alternativeAnswers": ["further"],
+          "alternativeAnswers": [
+            "further"
+          ],
           "hint": "Komparativ av far?",
           "explanation": "Far → farther (avstånd) / further (bildligt). Båda accepteras."
         },
@@ -5261,16 +5263,16 @@
     },
     {
       "id": "hog-sluttest",
-      "title": "Sluttest – Grammatik",
-      "description": "Testa allt du lärt dig i grammatikdelen! 39 blandade frågor.",
+      "title": "Sluttest 1 – Grammatik",
+      "description": "Testa din grammatik! 23 blandade frågor.",
       "icon": "🏆",
       "pointsRequired": 0,
       "bonusPoints": 150,
       "helpText": [
-        "Det här är sluttestet för hela grammatikdelen!",
-        "Frågorna täcker allt du har tränat på: present perfect, conditional, passiv form, reported speech och avancerade verbformer.",
-        "Nu ingår även vokabulär: kläder, mat, möbler, känslor, väder, sporter och fordon.",
-        "Svara på alla 39 frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+        "Det här är första sluttestet för grammatikdelen!",
+        "Frågorna täcker present perfect, konditionalis, passiv form, indirekt tal och past perfect.",
+        "Ingår även dialogövningar.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
       ],
       "exercises": [
         {
@@ -5534,6 +5536,49 @@
           "explanation": "Passiv past tense: was + past participle. The office was cleaned."
         },
         {
+          "id": "hog-st-new1",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ you ever worked abroad? B: Yes, I worked in France for two years.",
+          "answer": "Have",
+          "alternativeAnswers": [
+            "have"
+          ],
+          "hint": "Present perfect för livserfarenheter.",
+          "explanation": "'Have you ever...?' – present perfect används för erfarenheter utan specifik tidpunkt."
+        },
+        {
+          "id": "hog-st-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: If I were you, I ___ apologize. B: Maybe you're right.",
+          "answer": "would",
+          "hint": "Typ 2-konditionalis – hypotetisk situation.",
+          "explanation": "Typ 2: 'If I were you, I would...' – hypotetisk situation i nutid."
+        },
+        {
+          "id": "hog-st-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: The match ___ won by the home team. B: Really? What was the score?",
+          "answer": "was",
+          "hint": "Passiv past tense.",
+          "explanation": "'Was won' = passiv past tense. 'The match was won' – laget är objekt, inte subjekt."
+        }
+      ]
+    },
+    {
+      "id": "hog-sluttest-2",
+      "title": "Sluttest 2 – Grammatik & Ordförråd",
+      "description": "Testa mer grammatik och ordförråd! 22 blandade frågor.",
+      "icon": "🏆",
+      "pointsRequired": 0,
+      "bonusPoints": 150,
+      "helpText": [
+        "Det här är andra sluttestet för grammatikdelen!",
+        "Frågorna täcker konditionalis typ 2-3, passiv, modalverb, vokabulär och dialoger.",
+        "Ingår inversion och past perfect i kontext.",
+        "Svara på alla frågor och se hur bra du är. Du behöver minst 60% rätt för att klara testet!"
+      ],
+      "exercises": [
+        {
           "id": "hog-st-21",
           "type": "multiple-choice",
           "question": "Present Perfect vs Past Simple: '___ you see the film last night?'",
@@ -5722,6 +5767,33 @@
           ],
           "correctIndex": 0,
           "explanation": "Ambulans = ambulance. Almost the same word!"
+        },
+        {
+          "id": "hog-st2-new1",
+          "type": "fill-in-blank",
+          "sentence": "A: By the time he arrived, everyone ___. B: Yes, they had already left.",
+          "answer": "had left",
+          "hint": "Past perfect – något hände före ett annat förflutet.",
+          "explanation": "'Had left' = past perfect. Händelsen (lämna) skedde INNAN han anlände."
+        },
+        {
+          "id": "hog-st2-new2",
+          "type": "fill-in-blank",
+          "sentence": "A: Do you know where ___ from? B: She's originally from Spain.",
+          "answer": "she is",
+          "alternativeAnswers": [
+            "she's"
+          ],
+          "hint": "Indirekt fråga – ordföljd som ett påstående.",
+          "explanation": "I indirekt fråga: 'where she is' (inte 'where is she') – påståendeordföljd."
+        },
+        {
+          "id": "hog-st2-new3",
+          "type": "fill-in-blank",
+          "sentence": "A: ___ she told me earlier, I would have been prepared. B: I understand.",
+          "answer": "Had",
+          "hint": "Inverterad typ 3-konditionalis – utan 'if'.",
+          "explanation": "'Had she told me' = 'If she had told me' – inversion ersätter 'if' i formell engelska."
         }
       ]
     }
