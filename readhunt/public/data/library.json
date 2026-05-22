@@ -408,416 +408,406 @@
     "id": "ak2-tema-001",
     "grade": 2,
     "genre": "fiction",
-    "theme": "animals",
-    "title": "The Lost Kitten",
-    "text": "Maya walked home from school when she heard a small sound near a tree. A gray kitten was hiding behind some bushes. The kitten looked cold and hungry. Maya picked it up carefully and carried it home. Her father gave the kitten water and food. They made a small bed with a blanket. Later that evening, Maya and her father saw a poster on a lamp post. A family nearby was looking for their missing kitten. Maya returned the kitten, and the family thanked her warmly.",
+    "theme": "friendship",
+    "title": "The Lost Hat",
+    "text": "Ella went to the park with her brother Sam. It was windy outside. Sam lost his red hat near the swings, but a kind woman found it and gave it back to him.",
+    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did Maya find the kitten?",
+        "q": "Who went to the park with Ella?",
         "options": [
-          "Near a tree",
-          "At school",
-          "Inside a car",
-          "Behind a store"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What color was the kitten?",
-        "options": [
-          "Black",
-          "Gray",
-          "White",
-          "Orange"
+          "Her cousin",
+          "Her brother Sam",
+          "Her teacher",
+          "Her friend Mia"
         ],
         "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What did Maya's father give the kitten?",
-        "options": [
-          "A toy and milk",
-          "A bath and soap",
-          "Water and food",
-          "A leash and collar"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inference",
-        "q": "Where did Maya see the poster?",
-        "options": [
-          "On a school wall",
-          "On a bus",
-          "In a shop window",
-          "On a lamp post"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "Why did Maya take the kitten home?",
-        "options": [
-          "It looked cold and hungry",
-          "She wanted a new pet",
-          "Her friend asked her to",
-          "It followed her loudly"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "How did the family feel when Maya returned the kitten?",
-        "options": [
-          "Nervous",
-          "Thankful",
-          "Angry",
-          "Confused"
-        ],
-        "correct": 1
-      }
-    ],
-    "meta": {
-      "wordCount": 84,
-      "fingerprint": "ak2-tema-001",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=380&fit=crop"
-  },
-  {
-    "id": "ak2-tema-002",
-    "grade": 2,
-    "genre": "fiction",
-    "theme": "sports",
-    "title": "A Rainy Soccer Match",
-    "text": "Leo loved playing soccer every Saturday with his team. One morning, dark clouds filled the sky before the game started. Soon, heavy rain began to fall. The field became wet and muddy, but the players still wanted to play. Leo slipped once while running after the ball, but he quickly stood up again. His friend Noor scored the winning goal near the end of the match. After the game, the team drank warm tea and laughed together under a large tent beside the field.",
-    "questions": [
-      {
-        "type": "literal",
-        "q": "When did Leo usually play soccer?",
-        "options": [
-          "Every Saturday",
-          "Every Monday",
-          "Every evening",
-          "Every winter"
-        ],
-        "correct": 0
       },
       {
         "type": "literal",
         "q": "What was the weather like?",
         "options": [
-          "Sunny and warm",
-          "Rainy and cloudy",
-          "Snowy and cold",
-          "Windy and dry"
+          "Windy",
+          "Snowy",
+          "Hot",
+          "Rainy"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "literal",
-        "q": "What happened to Leo during the game?",
+        "q": "What did Sam lose?",
         "options": [
-          "He lost his shoes",
-          "He kicked the wrong goal",
-          "He slipped on the field",
-          "He left the match early"
+          "A shoe",
+          "A ball",
+          "His red hat",
+          "His backpack"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "Who scored the winning goal?",
+        "type": "literal",
+        "q": "Where did Sam lose the hat?",
         "options": [
-          "Leo",
-          "The coach",
-          "A referee",
-          "Noor"
+          "Near the lake",
+          "By the trees",
+          "At school",
+          "Near the swings"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Why was the field muddy?",
+        "type": "literal",
+        "q": "Who found the hat?",
         "options": [
-          "Heavy rain fell",
-          "The team watered it",
-          "A truck drove there",
-          "Children played in it"
+          "A kind woman",
+          "A police officer",
+          "A little boy",
+          "Sam's father"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What did the team drink after the game?",
+        "q": "What happened at the end?",
         "options": [
-          "Cold juice",
-          "Warm tea",
-          "Milk",
-          "Hot chocolate"
+          "The hat was lost forever",
+          "The woman gave the hat back",
+          "Sam bought a new hat",
+          "Ella found a jacket"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 80,
-      "fingerprint": "ak2-tema-002",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop"
+      "wordCount": 32,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-tema-002",
+    "grade": 2,
+    "genre": "non-fiction",
+    "theme": "animals",
+    "title": "A Day at the Zoo",
+    "text": "Liam visited the zoo with his class on Friday morning. They saw lions, monkeys, and tall giraffes. Liam liked the penguins best because they jumped into the cold water very fast.",
+    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Liam go?",
+        "options": [
+          "To the museum",
+          "To the zoo",
+          "To the beach",
+          "To the cinema"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who went with Liam?",
+        "options": [
+          "His class",
+          "His family",
+          "His football team",
+          "His neighbors"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which animals were tall?",
+        "options": [
+          "Lions",
+          "Penguins",
+          "Giraffes",
+          "Monkeys"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which animals did Liam like best?",
+        "options": [
+          "Lions",
+          "Monkeys",
+          "Giraffes",
+          "Penguins"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Liam like the penguins?",
+        "options": [
+          "They jumped into the water",
+          "They could fly",
+          "They were sleeping",
+          "They ate bananas"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did the class visit the zoo?",
+        "options": [
+          "On Friday morning",
+          "On Monday evening",
+          "On Saturday night",
+          "On Tuesday afternoon"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 31,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak2-tema-003",
     "grade": 2,
-    "genre": "non-fiction",
+    "genre": "fiction",
     "theme": "nature",
     "title": "The School Garden",
-    "text": "Class 2B started a small garden behind their school building in spring. The students planted carrots, tomatoes, and sunflowers in long rows. Amir brought seeds from his grandmother's farm, and Ella carried water for the plants every morning. After several weeks, tiny green leaves appeared in the soil. The class learned that plants need sunlight, water, and good soil to grow well. At the end of the term, the students picked vegetables from the garden and shared them with their families during a school picnic.",
+    "text": "Nora and Jay worked in the school garden after lunch. They planted carrots and watered small flowers. A teacher showed them how to pull weeds from the ground carefully.",
+    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Where was the garden?",
+        "q": "Where did Nora and Jay work?",
         "options": [
-          "Behind the school",
-          "Next to a river",
-          "Inside a classroom",
-          "Near a library"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Who brought seeds from a farm?",
-        "options": [
-          "Ella",
-          "Amir",
-          "The teacher",
-          "A gardener"
+          "In the library",
+          "In the school garden",
+          "In the kitchen",
+          "In the gym"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What appeared in the soil after several weeks?",
+        "q": "When did they work in the garden?",
         "options": [
-          "Large flowers",
-          "Brown stones",
-          "Tiny green leaves",
-          "Big tomatoes"
+          "After lunch",
+          "Before school",
+          "At night",
+          "Early morning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did they plant?",
+        "options": [
+          "Tomatoes",
+          "Trees",
+          "Carrots",
+          "Apples"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "When did the students share the vegetables?",
+        "type": "literal",
+        "q": "Who helped them?",
         "options": [
-          "During winter break",
-          "On the first school day",
-          "At a birthday party",
-          "During a school picnic"
+          "A farmer",
+          "A parent",
+          "A friend",
+          "A teacher"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "What did Ella do every morning?",
+        "type": "literal",
+        "q": "What did they water?",
         "options": [
-          "Carried water for the plants",
-          "Painted flower signs",
-          "Fed the birds nearby",
-          "Cleaned the playground"
+          "Small flowers",
+          "Big trees",
+          "The playground",
+          "Old plants"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What do plants need to grow well?",
+        "q": "What did the teacher show them?",
         "options": [
-          "Only sunlight",
-          "Sunlight, water, and good soil",
-          "Snow and wind",
-          "Sand and rocks"
+          "How to cook carrots",
+          "How to pull weeds carefully",
+          "How to paint flowers",
+          "How to build a fence"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 80,
-      "fingerprint": "ak2-tema-003",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=380&fit=crop"
+      "wordCount": 29,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak2-tema-004",
     "grade": 2,
     "genre": "fiction",
-    "theme": "friendship",
-    "title": "Sam and the New Student",
-    "text": "Sam felt nervous on Monday because a new student joined the class. The student's name was Robin, and Robin used a wheelchair. During art class, Sam noticed that Robin drew beautiful pictures of animals and forests. At lunch, Sam invited Robin to sit with some classmates. They talked about video games, music, and their favorite foods. Later, the teacher asked Robin and Sam to work together on a science project. By the end of the week, they had become close friends and planned to visit the city museum together.",
+    "theme": "music",
+    "title": "The Music Show",
+    "text": "Aisha played the drums in the school music show. Her friend Leo sang songs on the stage. Many parents clapped loudly when the students finished their last song together.",
+    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Why was Sam nervous on Monday?",
+        "q": "What instrument did Aisha play?",
         "options": [
-          "A new student arrived",
-          "There was a test",
-          "The class changed rooms",
-          "It was raining outside"
+          "The piano",
+          "The guitar",
+          "The drums",
+          "The violin"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did Robin use?",
+        "q": "Who sang songs on the stage?",
         "options": [
-          "A scooter",
-          "A wheelchair",
-          "Crutches",
-          "A bicycle"
+          "A teacher",
+          "Aisha",
+          "The parents",
+          "Leo"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Where did the students perform?",
+        "options": [
+          "At the park",
+          "On the stage",
+          "In the forest",
+          "At the library"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What did Robin like to draw?",
+        "q": "Who clapped loudly?",
         "options": [
-          "Cars and buses",
-          "People and houses",
-          "Animals and forests",
-          "Mountains and trains"
+          "The parents",
+          "The bus driver",
+          "The cook",
+          "The football team"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the students finish?",
+        "options": [
+          "Their homework",
+          "Their game",
+          "Their last song",
+          "Their dinner"
         ],
         "correct": 2
       },
       {
         "type": "inference",
-        "q": "Where did Sam and Robin plan to go together?",
+        "q": "What kind of show was it?",
         "options": [
-          "A movie theater",
-          "A soccer field",
-          "A beach",
-          "The city museum"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inference",
-        "q": "What did they talk about at lunch?",
-        "options": [
-          "Video games, music, and food",
-          "Only school rules",
-          "Homework and tests",
-          "Sports teams only"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inference",
-        "q": "What project did the teacher give them?",
-        "options": [
-          "A cooking project",
-          "A science project",
-          "A reading contest",
-          "A dance show"
+          "A dance show",
+          "A music show",
+          "A science show",
+          "A puppet show"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 81,
-      "fingerprint": "ak2-tema-004",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop"
+      "wordCount": 30,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak2-tema-005",
     "grade": 2,
     "genre": "fiction",
-    "theme": "food",
-    "title": "The Busy Bakery",
-    "text": "Every Friday morning, Lina visited her uncle's bakery before school. The bakery smelled like fresh bread, cinnamon buns, and warm cookies. Lina helped place small cakes in the front window for customers to see. Her uncle woke up very early each day to bake bread for the town. One Friday, the bakery became extra busy because a music festival was happening nearby. Many visitors stopped to buy snacks and drinks. At the end of the morning, Lina's uncle thanked her for helping and gave her a blueberry muffin.",
+    "theme": "sports",
+    "title": "The New Bike",
+    "text": "Oscar got a new blue bike for his birthday. He rode it around the neighborhood with his neighbor Kim. They wore helmets and stopped at a small shop to buy juice.",
+    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "When did Lina visit the bakery?",
+        "q": "What did Oscar get for his birthday?",
         "options": [
-          "Every Friday morning",
-          "Every Sunday evening",
-          "Every school holiday",
-          "Every afternoon"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Who owned the bakery?",
-        "options": [
-          "Lina's teacher",
-          "Lina's uncle",
-          "Lina's brother",
-          "Lina's neighbor"
+          "A skateboard",
+          "A blue bike",
+          "A football",
+          "A scooter"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "What did Lina place in the front window?",
+        "q": "Who rode with Oscar?",
         "options": [
-          "Fresh flowers",
-          "Large books",
-          "Small cakes",
-          "Toy animals"
+          "His neighbor Kim",
+          "His grandfather",
+          "His teacher",
+          "His cousin Emma"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did they wear?",
+        "options": [
+          "Boots",
+          "Jackets",
+          "Helmets",
+          "Gloves"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "Why was the bakery extra busy?",
+        "type": "literal",
+        "q": "Where did they stop?",
         "options": [
-          "A storm was coming",
-          "School was closed",
-          "People wanted breakfast",
-          "A music festival was nearby"
+          "At the park",
+          "At school",
+          "At the beach",
+          "At a small shop"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "What kinds of food smelled fresh in the bakery?",
+        "type": "literal",
+        "q": "What did they buy?",
         "options": [
-          "Bread, buns, and cookies",
-          "Soup and salad",
-          "Pizza and pasta",
-          "Fish and rice"
+          "Juice",
+          "Bread",
+          "Ice cream",
+          "Candy"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What did Lina receive at the end?",
+        "q": "What color was the bike?",
         "options": [
-          "A chocolate cake",
-          "A blueberry muffin",
-          "A sandwich",
-          "A bag of candy"
+          "Blue",
+          "Green",
+          "Black",
+          "Yellow"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 80,
-      "fingerprint": "ak2-tema-005",
-      "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
-    },
-    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop"
+      "wordCount": 31,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak3-tema-001",
