@@ -2,6 +2,15 @@ import { LibraryText, CompletedText } from '../types';
 
 let libraryCache: LibraryText[] | null = null;
 
+function shuffleArray<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 /**
  * Ladda biblioteket från JSON-filen
  */
@@ -20,16 +29,25 @@ export async function loadLibrary(): Promise<LibraryText[]> {
 
     // Normalisera texter: lägg till genre för texter som har category men saknar genre
     // Texter med category-fält är berättelser (narrativ struktur med karaktärer)
-    libraryCache = texts.map((text: LibraryText & { category?: string }) => {
+    const normalized = texts.map((text: LibraryText & { category?: string }) => {
       if (!text.genre && text.category) {
         return {
           ...text,
           genre: 'berättelse' as const,
-          theme: text.category, // Använd category som theme
+          theme: text.category,
         };
       }
       return text;
     });
+
+    // Shuffle within each grade so order varies every session
+    const grades = [...new Set(normalized.map((t: LibraryText) => t.grade))];
+    const shuffled: LibraryText[] = [];
+    for (const grade of grades) {
+      const gradeTexts = normalized.filter((t: LibraryText) => t.grade === grade);
+      shuffled.push(...shuffleArray(gradeTexts));
+    }
+    libraryCache = shuffled;
 
     return libraryCache;
   } catch (error) {
