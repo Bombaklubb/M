@@ -3611,412 +3611,402 @@
   },
   {
     "id": "ak10-tema-001",
+    "title": "The Ethics of Memory Editing",
+    "text": "During the late 2030s, neuroscientists developed a controversial medical technology capable of weakening traumatic memories. Originally, the treatment was designed for patients suffering from severe post-traumatic stress disorder. By targeting specific neural pathways during sleep, doctors could reduce the emotional intensity connected to painful experiences without completely erasing factual memories.\n\nAt first, the technology was celebrated internationally. Veterans recovering from war, survivors of violent crimes, and patients suffering from debilitating anxiety reported dramatic improvements in their quality of life. Mental health clinics described the treatment as one of the most important psychological breakthroughs of the century.\n\nHowever, public opinion began to shift when private companies started offering commercial versions of the procedure. Wealthy clients paid large amounts of money to weaken memories connected to failed relationships, embarrassing experiences, or professional disappointments.\n\nEighteen-year-old university student Clara became interested in the debate after her older brother considered undergoing the treatment following a serious accident. Although he survived physically, he struggled emotionally and avoided discussing the event.\n\nClara initially supported the technology completely. Watching her brother suffer convinced her that reducing psychological pain could be an act of compassion. Yet her perspective became more complicated during a philosophy seminar examining the relationship between memory and identity.\n\nOne professor argued that painful experiences often shape moral development. Regret, grief, and failure can influence empathy, maturity, and decision-making. According to this view, selectively weakening difficult memories might gradually change a person's personality in unpredictable ways.\n\nAnother speaker disagreed strongly. She argued that romanticizing suffering ignored the reality of psychological trauma. Human beings should not be forced to preserve emotional pain simply because adversity sometimes produces personal growth.\n\nThe debate intensified further when journalists revealed that several corporations had quietly encouraged employees to use memory treatments after workplace accidents or public scandals. Critics warned that companies might eventually pressure individuals into modifying emotionally uncomfortable experiences instead of improving harmful environments.\n\nClara's brother eventually chose to receive the treatment, though only after months of reflection and therapy. The procedure reduced the intensity of his panic attacks and allowed him to return gradually to everyday life.\n\nEven so, Clara noticed subtle changes afterward. Her brother rarely spoke about the accident anymore, not because he forgot it completely, but because the emotional connection seemed distant. Conversations that once felt deeply personal became strangely neutral.\n\nThe experience left Clara uncertain rather than convinced. She realized the issue could not easily be divided into right or wrong. The technology clearly relieved suffering for many people, yet it also raised difficult questions about autonomy, responsibility, and the meaning of human experience.\n\nYears later, governments continued struggling to regulate memory editing technology. Some countries restricted its use to severe medical cases, while others allowed broader commercial access.\n\nFor Clara, the debate ultimately revealed something larger about society itself. Technological progress often arrives faster than humanity's ability to decide how that progress should be used ethically. Scientific possibilities may expand rapidly, but moral understanding develops far more slowly.",
     "grade": 10,
-    "genre": "non-fiction",
-    "theme": "science",
-    "title": "The Future of Genetic Engineering",
-    "text": "Advances in genetic engineering have transformed modern science and medicine during the last few decades. Researchers can now modify DNA with increasing precision, allowing scientists to study diseases, improve agriculture, and potentially prevent inherited medical conditions. One of the most discussed technologies is CRISPR, a method that enables scientists to edit genes more accurately and efficiently than earlier techniques.\n\nSupporters of genetic engineering argue that these developments could significantly improve human health. Scientists are currently researching treatments for diseases such as sickle cell anemia, cystic fibrosis, and certain forms of cancer. By correcting harmful genetic mutations, doctors may eventually prevent serious illnesses before symptoms even appear. Researchers have also developed genetically modified crops that resist drought, insects, and plant diseases, which may help increase food production in regions affected by climate change.\n\nDespite these possibilities, genetic engineering has also created ethical concerns. Some critics worry that editing human embryos could lead to 'designer babies,' where parents select physical characteristics such as height, intelligence, or appearance. Opponents argue that this could increase social inequality if advanced treatments become available only to wealthy individuals.\n\nAnother concern involves unintended consequences. Even small genetic changes might produce unexpected effects that scientists do not fully understand yet. Environmental groups have also questioned the long-term impact of genetically modified organisms on ecosystems. For example, modified crops could potentially affect insects, soil quality, or biodiversity in ways researchers cannot easily predict.\n\nGovernments around the world have responded differently to these issues. Some countries allow limited forms of genetic research under strict regulation, while others ban certain experiments completely. International organizations have called for global cooperation to establish ethical guidelines because scientific discoveries often spread quickly across national borders.\n\nPublic opinion regarding genetic engineering remains divided. Surveys show that many people support medical uses of gene editing when the goal is treating serious diseases. However, support often decreases when discussions involve altering human embryos or enhancing non-medical traits. Religious groups, philosophers, scientists, and policymakers continue debating where ethical boundaries should exist.\n\nThe development of genetic engineering also raises questions about the relationship between science and society. Scientific progress can create powerful opportunities, but societies must decide how technologies should be used responsibly. Some experts argue that fear of new technology may slow important medical advances, while others believe caution is necessary when dealing with changes that could affect future generations permanently.\n\nAlthough the future of genetic engineering remains uncertain, most researchers agree that the technology will continue influencing medicine, agriculture, and ethics for decades to come. The challenge for humanity will involve balancing scientific innovation with fairness, safety, and respect for human rights.",
+    "genre": "berättelse",
+    "theme": "Vetenskap",
     "questions": [
       {
-        "type": "literal",
-        "q": "Why do supporters believe genetic engineering could improve healthcare?",
+        "q": "Why was memory editing technology originally created?",
         "options": [
-          "It may help prevent or treat inherited diseases",
-          "It guarantees equal healthcare worldwide",
-          "It replaces the need for hospitals",
-          "It eliminates all environmental problems"
+          "To improve academic performance",
+          "To weaken traumatic memories in medical patients",
+          "To help companies increase productivity",
+          "To erase ordinary embarrassing experiences"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "Why are some environmental groups worried about genetically modified crops?",
+        "q": "Why did public opinion become more divided later?",
         "options": [
-          "They may create unpredictable effects on ecosystems",
-          "They cannot survive drought conditions",
-          "They prevent scientific cooperation",
-          "They increase biodiversity automatically"
+          "Commercial companies began offering the treatment for less serious experiences",
+          "The technology stopped working effectively",
+          "Scientists discovered it damaged physical health permanently",
+          "Governments banned all psychological treatments"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "How have governments responded to genetic engineering?",
+        "q": "What argument did one philosophy professor make?",
         "options": [
-          "Different countries have created different regulations",
-          "Every nation has completely banned gene editing",
-          "Governments no longer support scientific research",
-          "International laws are identical everywhere"
+          "Painful memories always prevent emotional growth",
+          "Technology should replace traditional therapy entirely",
+          "Difficult experiences can influence moral and personal development",
+          "Human identity depends only on positive experiences"
         ],
-        "correct": 0
+        "correct": 2,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What ethical concern is connected to the idea of 'designer babies'?",
+        "q": "Why were some critics concerned about corporations using the treatment?",
         "options": [
-          "Parents could select non-medical traits, potentially increasing inequality",
-          "Scientists would stop studying diseases",
-          "Governments would ban all medical research",
-          "Food production would decrease globally"
+          "Companies might pressure employees instead of improving conditions",
+          "Businesses believed therapy was unnecessary",
+          "Employees demanded access to the technology for free",
+          "Corporations wanted to replace workers with artificial intelligence"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "Why does public support for gene editing sometimes decrease?",
+        "q": "How did Clara feel by the end of the text?",
         "options": [
-          "People are more uncertain when it involves altering embryos or non-medical traits",
-          "Medical treatments have become less effective",
-          "Scientists no longer study inherited diseases",
-          "Religious groups fully support all experiments"
+          "She viewed the issue as ethically complex",
+          "She completely rejected all forms of medical technology",
+          "She believed governments should remove all regulations",
+          "She became certain the treatment was harmful"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What is the central idea of the text?",
+        "q": "What is the central theme of the text?",
         "options": [
-          "Genetic engineering offers major possibilities but also serious ethical challenges that must be balanced",
-          "Scientific progress should always continue without regulation",
-          "Agricultural technology is more important than medicine",
-          "Future societies will completely reject genetic research"
+          "Scientific progress often creates difficult ethical questions",
+          "Psychological suffering should never be treated medically",
+          "Governments are unable to regulate new technology",
+          "Human memory can easily be controlled without consequences"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 497,
-      "fingerprint": "ak10-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 618,
+      "readingTime": 4
     }
   },
   {
     "id": "ak10-tema-002",
+    "title": "The Disappearing Current",
+    "text": "Marine scientists had monitored the North Atlantic Current for decades, but during the 2040s their data revealed increasingly unusual patterns. Water temperatures shifted unpredictably, storms intensified along European coastlines, and several fish species migrated far outside their traditional habitats.\n\nFor years, climate researchers warned that large ocean currents could weaken as polar ice melted and freshwater entered the Atlantic Ocean. However, many political leaders considered the possibility too uncertain or distant to justify dramatic economic reforms.\n\nAmong the scientists studying the issue was nineteen-year-old oceanography student Elias Lund. He joined an international research vessel investigating whether changes in ocean circulation might already be affecting global weather systems.\n\nThe expedition included experts from multiple disciplines: climatologists, marine biologists, economists, and policy analysts. Elias quickly discovered that climate science extended far beyond laboratory measurements. Every discussion eventually connected environmental evidence with politics, economics, and international cooperation.\n\nDuring the mission, researchers collected data showing that sections of the current had weakened significantly compared with measurements from previous decades. Although scientists remained cautious about making absolute predictions, many agreed the trend was serious.\n\nThe findings immediately triggered political debate once preliminary results reached the media. Environmental organizations demanded rapid reductions in fossil fuel use, while some industry representatives questioned whether the data justified major economic changes.\n\nElias became frustrated by how quickly scientific evidence transformed into ideological conflict. In interviews, some commentators treated the issue as a competition between political identities rather than a complex environmental challenge requiring long-term planning.\n\nOne evening aboard the research vessel, Elias spoke with Dr. Fernandes, a senior climate scientist who had spent thirty years studying ocean systems. She explained that public debates often oversimplified science because uncertainty made people uncomfortable.\n\nAccording to Dr. Fernandes, uncertainty did not mean scientists knew nothing. Instead, it reflected the reality that complex systems could not always be predicted with complete precision. Waiting for absolute certainty before taking action, she argued, could become extremely dangerous.\n\nAs the expedition continued, the team observed additional evidence of ecological disruption. Some coastal communities dependent on fishing were already experiencing economic instability because traditional species populations had shifted dramatically.\n\nToward the end of the mission, Elias participated in a conference where policymakers discussed possible responses. The conversations revealed enormous disagreements between countries regarding responsibility, cost, and environmental priorities.\n\nDespite these conflicts, Elias also witnessed moments of cooperation. Scientists from rival nations shared data openly, and several communities began developing local adaptation strategies instead of waiting for international agreements.\n\nThe experience changed Elias's understanding of environmental crises. He realized that climate change was not only a scientific issue but also a social and political challenge shaped by human behavior, economic systems, and competing values.\n\nYears later, Elias reflected that societies often struggle to respond to slow-moving threats because the consequences appear gradually rather than all at once. Yet by the time environmental transformations become impossible to ignore, reversing them may already be far more difficult.",
     "grade": 10,
-    "genre": "non-fiction",
-    "theme": "society",
-    "title": "The Role of Journalism in Democracy",
-    "text": "Journalism has long been considered one of the foundations of democratic societies. Independent news organizations provide citizens with information about politics, economics, social issues, and international events. Supporters of free journalism argue that informed citizens are better able to participate in elections, debate public policies, and hold powerful institutions accountable.\n\nHistorically, newspapers and investigative reporters have exposed corruption, abuse of power, and human rights violations. Investigative journalism often requires months or even years of research, interviews, and analysis. Famous investigations have led to political resignations, legal reforms, and increased public awareness about important issues.\n\nThe digital revolution has transformed journalism dramatically. Online platforms now allow information to spread almost instantly across the world. Many people receive news through smartphones and social media rather than traditional newspapers or television broadcasts. This shift has created both opportunities and challenges for journalists.\n\nOne advantage of digital media is that independent voices can now reach large audiences without requiring expensive printing systems or broadcasting networks. Citizen journalists can share videos and eyewitness accounts during protests, natural disasters, or political conflicts. In some situations, social media has helped expose injustices that might otherwise have remained hidden.\n\nHowever, digital communication has also increased the spread of misinformation and manipulated content. False stories can spread rapidly online because emotional or controversial material often attracts attention more effectively than careful reporting. Deepfake technology, which uses artificial intelligence to create realistic fake videos or audio recordings, has increased concerns about how easily information can be manipulated.\n\nEconomic challenges have also affected journalism. Traditional newspapers have lost advertising revenue as audiences move online, forcing many local news organizations to close or reduce staff. Critics worry that fewer professional journalists may weaken investigative reporting and reduce public access to reliable local information.\n\nAnother debate concerns the relationship between journalism and political influence. In some countries, governments restrict press freedom through censorship, arrests, or legal pressure. Even in democratic societies, critics sometimes accuse media organizations of political bias or corporate influence.\n\nEducators and researchers increasingly emphasize the importance of media literacy. Citizens must learn how to verify sources, compare perspectives, and distinguish between reliable reporting and misleading content. These skills have become especially important in digital environments where information spreads rapidly and audiences encounter competing narratives constantly.\n\nDespite technological and political challenges, many experts believe journalism remains essential for democratic societies. Without independent reporting and informed public discussion, governments and institutions may become less transparent and less accountable. The future of democracy may therefore depend partly on whether societies can protect press freedom while adapting journalism to the changing digital world.",
+    "genre": "berättelse",
+    "theme": "Natur & Miljö",
     "questions": [
       {
-        "type": "literal",
-        "q": "Why is journalism considered important in democratic societies?",
+        "q": "Why were scientists concerned about the North Atlantic Current?",
         "options": [
-          "It helps citizens stay informed and hold institutions accountable",
-          "It prevents all political disagreements",
-          "It replaces the need for elections",
-          "It guarantees equal economic conditions"
+          "Changes in the current were linked to environmental disruption",
+          "The current prevented international shipping routes",
+          "Marine research vessels could no longer cross the Atlantic",
+          "Ocean temperatures had become too cold for research"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "How has digital media changed journalism?",
+        "q": "What surprised Elias about climate science?",
         "options": [
-          "Information can spread much faster and reach wider audiences",
-          "Citizens no longer consume news",
-          "Traditional reporting has disappeared completely",
-          "Governments fully control all online platforms"
+          "It depended heavily on political and economic discussions",
+          "Most scientists avoided collecting environmental data",
+          "Researchers rarely cooperated internationally",
+          "Climate systems were simpler than expected"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "literal",
-        "q": "Why are deepfake technologies a concern for journalism?",
+        "q": "Why did Dr. Fernandes criticize waiting for absolute certainty?",
         "options": [
-          "They make manipulated information appear realistic",
-          "They reduce internet access worldwide",
-          "They prevent investigative reporting",
-          "They eliminate political debates"
+          "Scientific predictions are always completely accurate",
+          "Delaying action could increase future risks",
+          "Governments already understood climate systems perfectly",
+          "Environmental changes happen instantly rather than gradually"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What is one example of investigative journalism's real-world impact?",
+        "q": "How did some public debates treat the scientific findings?",
         "options": [
-          "It has led to political resignations and legal reforms by exposing abuses",
-          "It eliminated social media platforms",
-          "It prevented technological development",
-          "It replaced legal systems entirely"
+          "As irrelevant information with no political importance",
+          "As a conflict between political identities",
+          "As evidence that climate change had ended",
+          "As proof that economic growth should stop entirely"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "Why do experts emphasize media literacy for citizens?",
+        "q": "What broader lesson did Elias learn?",
         "options": [
-          "People need skills to critically evaluate information in a rapidly changing digital world",
-          "Professional journalism is no longer necessary",
-          "Citizens should avoid using digital technology",
-          "Social media always provides accurate information"
+          "Environmental crises involve scientific, social, and political factors",
+          "International cooperation is impossible during crises",
+          "Climate science should remain separate from public discussion",
+          "Economic systems never influence environmental decisions"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
-          "Journalism remains essential for democracy despite significant digital and political challenges",
-          "Traditional newspapers should completely replace online media",
-          "Governments should regulate all public information",
-          "Investigative journalism has become unimportant in modern society"
+          "Complex environmental problems require action despite uncertainty",
+          "Climate predictions are too unreliable to influence policy",
+          "Scientific research should avoid political discussions",
+          "Ocean currents have little effect on society"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 496,
-      "fingerprint": "ak10-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 612,
+      "readingTime": 4
     }
   },
   {
     "id": "ak10-tema-003",
+    "title": "The Trial of the Autonomous Machine",
+    "text": "When the autonomous delivery vehicle struck a pedestrian in central Berlin, the incident immediately became international news. Although self-driving systems had already operated for years with fewer accidents than human drivers overall, this particular case raised difficult legal and ethical questions.\n\nThe vehicle had been programmed to prioritize minimizing total harm during emergencies. According to investigators, the machine calculated multiple possible outcomes within milliseconds before choosing a maneuver that protected several pedestrians crossing illegally while injuring one individual standing nearby.\n\nPublic reaction was intense and deeply divided. Some people argued that the machine acted logically according to its programming and statistical evidence. Others believed no algorithm should ever make decisions involving human life.\n\nAmong the observers following the case was eighteen-year-old law student Mina Öberg, who attended several public hearings connected to the investigation. She became fascinated by the challenge of applying traditional legal principles to technologies capable of making independent decisions.\n\nDuring the hearings, engineers explained how the system processed environmental information. Ethicists debated whether machines could truly make moral decisions or merely follow mathematical instructions designed by humans.\n\nOne philosopher argued that society already accepted situations where human drivers made impossible split-second choices during accidents. According to him, autonomous systems should be judged primarily by whether they reduced harm overall compared with human behavior.\n\nAnother expert strongly disagreed. She warned that reducing ethical decisions to calculations risked treating human beings as statistical variables rather than individuals with equal moral value.\n\nMina noticed that the debate often reflected broader fears about artificial intelligence. Some participants worried less about transportation itself and more about societies gradually transferring responsibility from humans to automated systems.\n\nThe legal questions became even more complicated when investigators examined accountability. Should responsibility belong to the software company, the engineers, the owner of the vehicle, or the regulatory agencies that approved the technology?\n\nMeanwhile, journalists covering the trial influenced public opinion significantly. Certain media outlets emphasized emotional interviews with the injured family, while others focused heavily on statistics showing autonomous systems prevented thousands of accidents annually.\n\nMina realized that legal systems often developed more slowly than technological innovation. Existing laws had been designed for situations involving direct human actions, not machines capable of independent analysis.\n\nAfter months of debate, the court issued a limited ruling focusing mainly on technical safety standards rather than broader philosophical questions. However, public discussion continued long afterward.\n\nThe case eventually inspired universities across Europe to create new programs combining law, ethics, and computer science. Mina later enrolled in one of these programs, convinced that future societies would increasingly require professionals capable of understanding both technological systems and human values.\n\nFor Mina, the trial demonstrated that the most difficult questions surrounding artificial intelligence were not purely technical. The deeper challenge involved deciding which values societies wanted technology to reflect.",
     "grade": 10,
-    "genre": "non-fiction",
-    "theme": "psychology",
-    "title": "The Psychology of Human Motivation",
-    "text": "Human motivation has fascinated psychologists, philosophers, and educators for centuries. Motivation influences why people pursue goals, overcome difficulties, and continue working despite setbacks. Researchers have developed several theories to explain what drives human behavior and how individuals maintain long-term commitment.\n\nOne of the most influential psychological theories was developed by Abraham Maslow. His hierarchy of needs suggested that humans are motivated by different levels of needs, beginning with basic survival requirements such as food and safety. Once these needs are satisfied, individuals may focus on social belonging, self-esteem, and eventually self-actualization, which involves achieving personal potential and meaning.\n\nOther psychologists have emphasized the importance of intrinsic and extrinsic motivation. Intrinsic motivation occurs when people perform activities because they genuinely enjoy them or find them personally meaningful. Extrinsic motivation, by contrast, involves external rewards such as money, grades, or praise. Research often shows that intrinsic motivation can create stronger long-term engagement, especially in education and creative work.\n\nMotivation is also strongly connected to emotions and environment. Supportive relationships, positive feedback, and realistic goals can increase confidence and persistence. In contrast, repeated failure, stress, or social isolation may reduce motivation significantly. Educational researchers therefore study how schools and workplaces can create environments that encourage learning and productivity.\n\nModern neuroscience has added another perspective to motivation research. Scientists studying the brain have discovered that chemicals such as dopamine influence reward systems and decision-making. Activities that produce feelings of achievement or excitement can strengthen motivation by encouraging repeated behavior.\n\nTechnology and social media have introduced new questions about motivation in modern society. Some researchers argue that constant digital stimulation may reduce attention spans and make sustained concentration more difficult. Others believe online communities and digital tools can increase motivation by connecting individuals with supportive networks and educational opportunities.\n\nCultural differences also influence motivation. In some societies, personal achievement and independence are strongly emphasized, while other cultures place greater value on family responsibility or collective success. Psychologists therefore caution against assuming that motivation functions identically in every social context.\n\nAlthough no single theory fully explains human behavior, most researchers agree that motivation is influenced by biological, emotional, social, and cultural factors working together. Understanding motivation remains important not only for psychology but also for education, healthcare, sports, and workplace leadership. By understanding what encourages persistence and engagement, societies may become better equipped to support learning, creativity, and personal well-being.",
+    "genre": "berättelse",
+    "theme": "Teknik",
     "questions": [
       {
-        "type": "literal",
-        "q": "According to Maslow's theory, what needs usually come first?",
+        "q": "Why did the accident become internationally controversial?",
         "options": [
-          "Basic survival and safety needs",
-          "Creative and artistic goals",
-          "Political influence and leadership",
-          "International cooperation"
+          "The autonomous vehicle made a decision involving human safety",
+          "The software company immediately shut down all operations",
+          "The pedestrian had intentionally damaged the vehicle",
+          "Self-driving technology had never existed before the incident"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "What is intrinsic motivation?",
+        "q": "What principle guided the vehicle's emergency programming?",
         "options": [
-          "Doing something because it feels meaningful or enjoyable",
-          "Working only for financial rewards",
-          "Avoiding difficult situations completely",
-          "Depending entirely on social pressure"
+          "Avoiding all movement during emergencies",
+          "Minimizing total harm in dangerous situations",
+          "Protecting vehicle owners above pedestrians",
+          "Following traffic laws regardless of consequences"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "What role does dopamine play according to neuroscience research?",
+        "q": "Why did some critics reject the machine's decision-making process?",
         "options": [
-          "It influences reward systems and encourages repeated behavior",
-          "It prevents emotional reactions completely",
-          "It reduces the importance of learning",
-          "It eliminates social motivation"
+          "They believed algorithms should not determine outcomes involving human lives",
+          "They argued autonomous systems caused more accidents than humans",
+          "They wanted transportation systems controlled only by governments",
+          "They believed statistics were irrelevant in safety discussions"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "How can environment influence a person's motivation?",
+        "q": "What legal problem complicated the investigation?",
         "options": [
-          "Supportive relationships and realistic goals can increase persistence, while stress may reduce it",
-          "Social conditions have no effect on behavior",
-          "Failure always strengthens confidence",
-          "Motivation depends only on intelligence"
+          "No witnesses had observed the accident",
+          "The vehicle operated outside legal transportation zones",
+          "Investigators could not identify the injured pedestrian",
+          "Responsibility for the machine's actions was difficult to define"
         ],
-        "correct": 0
+        "correct": 3,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "Why do psychologists caution against assuming motivation works the same everywhere?",
+        "q": "What broader realization did Mina have during the trial?",
         "options": [
-          "Different societies value different goals, so motivation is shaped by cultural context",
-          "Human motivation is biologically identical everywhere",
-          "Technology has removed all cultural differences",
-          "Only wealthy countries study psychology"
+          "Technology forces societies to examine their values and legal systems",
+          "Artificial intelligence should replace all human decision-making",
+          "Courts are unable to regulate transportation technology",
+          "Engineers should make ethical decisions without public involvement"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What is the main conclusion of the text?",
+        "q": "What is the main message of the text?",
         "options": [
-          "Motivation is shaped by biological, emotional, social, and cultural factors working together",
-          "External rewards are always stronger than personal interest",
-          "Modern neuroscience has fully explained all human behavior",
-          "Motivation is unimportant in education and workplaces"
+          "Technological innovation creates ethical and legal challenges",
+          "Autonomous machines are more dangerous than human drivers",
+          "Modern legal systems should avoid scientific issues",
+          "Artificial intelligence can solve moral problems objectively"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 492,
-      "fingerprint": "ak10-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 610,
+      "readingTime": 4
     }
   },
   {
     "id": "ak10-tema-004",
+    "title": "Fragments of Truth",
+    "text": "By the middle of the twenty-first century, historians faced a problem unlike any previous generation. Digital information had become so overwhelming that preserving reliable historical records grew increasingly difficult.\n\nEarlier societies often struggled with missing documentation because records were physically destroyed through war, disasters, or time. Modern historians faced the opposite challenge: billions of photographs, videos, messages, and documents were uploaded daily, making verification more complicated than preservation.\n\nNineteen-year-old history student Samira Nilsson became interested in the issue while researching public reactions during a political crisis that had occurred only fifteen years earlier. Despite the event's relatively recent history, sources often contradicted each other dramatically.\n\nSome digital archives contained edited videos missing important context, while other online materials had been altered using advanced artificial intelligence tools capable of generating highly realistic false content.\n\nSamira initially assumed professional historians could simply identify reliable sources easily. However, her supervisor explained that historical interpretation always involved uncertainty, perspective, and critical analysis.\n\nThe problem became especially serious because many original digital platforms no longer existed. Private companies controlling social media networks had deleted enormous amounts of data over time, sometimes intentionally and sometimes because of changing technologies.\n\nAs Samira continued her research, she noticed how strongly political groups attempted to shape public memory of the crisis. Competing organizations promoted selective evidence supporting their own narratives while dismissing contradictory information as manipulated or biased.\n\nOne historian compared the situation to assembling a puzzle where many pieces were damaged, missing, or intentionally redesigned by different participants.\n\nThe university eventually organized a conference discussing digital historical ethics. Researchers debated whether governments should regulate artificial intelligence systems capable of producing realistic false media.\n\nOthers argued that censorship created separate dangers. Allowing governments to decide which information counted as truth could threaten freedom of expression and political criticism.\n\nSamira became fascinated by how closely historical questions connected to democracy itself. Societies depended on shared understandings of events, yet complete objectivity often proved impossible.\n\nDuring one discussion, an elderly journalist described how public trust in information had changed during his lifetime. Earlier generations usually relied on a limited number of major newspapers and broadcasters. Modern audiences instead navigated enormous information environments where professional journalism competed constantly with rumors, propaganda, and manipulated media.\n\nBy the end of the project, Samira concluded that historical research in the digital era required more than collecting information. Historians increasingly needed technical knowledge, media literacy, and awareness of how algorithms shaped public attention.\n\nThe experience also changed her personal behavior online. She became more cautious about sharing dramatic stories immediately and more aware that information could be technically convincing without being historically accurate.\n\nFor Samira, the greatest challenge facing future societies was not only producing information but preserving trust, context, and critical thinking within environments flooded by endless competing narratives.",
     "grade": 10,
-    "genre": "non-fiction",
-    "theme": "environment",
-    "title": "Climate Migration and Global Challenges",
-    "text": "Climate change is expected to influence human migration increasingly during the twenty-first century. Rising sea levels, droughts, extreme weather events, and changing agricultural conditions may force millions of people to leave their homes in search of safety and economic stability. Researchers often describe this phenomenon as climate migration.\n\nSome of the regions most vulnerable to climate migration include low-lying coastal areas and countries heavily dependent on agriculture. In certain island nations, rising sea levels already threaten homes, infrastructure, and freshwater supplies. In other regions, prolonged droughts have reduced crop production, creating food shortages and economic instability.\n\nClimate migration can occur both within countries and across international borders. After natural disasters such as floods or hurricanes, families may temporarily relocate to nearby cities or safer regions. However, long-term environmental changes can eventually force permanent migration if communities become unable to recover economically or environmentally.\n\nThe relationship between climate change and migration is complex because environmental factors often interact with political conflict, poverty, and social inequality. For example, water shortages or reduced agricultural productivity may increase competition for resources and contribute to political instability. Researchers therefore caution against viewing climate migration as caused by environmental conditions alone.\n\nGovernments and international organizations face difficult questions regarding how to respond to these challenges. Wealthier countries may experience pressure to accept larger numbers of migrants, while poorer nations often lack resources to support displaced populations effectively. International law currently provides limited legal protection specifically for climate migrants compared to refugees fleeing war or political persecution.\n\nSome policymakers emphasize adaptation strategies designed to help communities remain in their home regions. These measures may include building flood barriers, improving water management systems, and developing crops resistant to drought conditions. Supporters argue that prevention and adaptation may reduce forced migration significantly.\n\nOthers believe migration itself can sometimes become a necessary adaptation strategy. Moving to safer regions may allow individuals and families to survive environmental changes while sending financial support back to relatives remaining in vulnerable communities.\n\nPublic discussions about climate migration sometimes become politically controversial. Some citizens worry about economic competition, cultural tensions, or pressure on housing and healthcare systems. Others emphasize humanitarian responsibilities and argue that countries contributing most to greenhouse gas emissions should help support affected populations.\n\nMost climate researchers agree that environmental migration will likely become more common in the future. The challenge for governments and societies will involve balancing humanitarian responsibilities, economic planning, environmental adaptation, and international cooperation in an increasingly unstable climate.",
+    "genre": "berättelse",
+    "theme": "Historia",
     "questions": [
       {
-        "type": "literal",
-        "q": "What is climate migration?",
+        "q": "What major challenge did modern historians face according to the text?",
         "options": [
-          "Movement caused partly by environmental and climate-related changes",
-          "Travel connected only to tourism and education",
-          "Migration controlled entirely by technology companies",
-          "Temporary relocation during sporting events"
+          "An overwhelming amount of difficult-to-verify digital information",
+          "A complete disappearance of written communication",
+          "A lack of political interest in history",
+          "The end of all historical archives"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "Why are low-lying coastal regions considered especially vulnerable?",
+        "q": "Why was Samira surprised during her research?",
         "options": [
-          "Rising sea levels threaten homes, infrastructure, and freshwater supplies",
-          "Agriculture cannot exist near oceans",
-          "Governments have banned migration there",
-          "Climate change affects only inland regions"
+          "Professional historians struggled with uncertainty and conflicting sources",
+          "Digital archives contained no information about recent events",
+          "Artificial intelligence improved historical accuracy completely",
+          "Most political groups agreed about historical interpretation"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "What is one adaptation strategy mentioned in the text?",
+        "q": "What problem did deleted social media platforms create?",
         "options": [
-          "Building flood barriers and improving water management systems",
-          "Reducing all international cooperation",
-          "Closing major cities permanently",
-          "Replacing agriculture with tourism"
+          "They reduced public interest in journalism",
+          "Important historical data disappeared over time",
+          "Historians lost access to printed newspapers",
+          "Artificial intelligence systems became impossible to regulate"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "Why do researchers describe climate migration as complex?",
+        "q": "Why did some researchers oppose strict government regulation of information?",
         "options": [
-          "Environmental problems often interact with poverty, conflict, and inequality rather than acting alone",
-          "Migration has no connection to economic conditions",
-          "Political instability never affects environmental issues",
-          "Natural disasters always produce permanent migration"
+          "They believed false media improved democracy",
+          "They feared censorship could threaten freedom of expression",
+          "They wanted companies to control all historical records",
+          "They argued manipulated information was harmless"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "Why do some public debates about climate migration become controversial?",
+        "q": "What broader insight did Samira gain?",
         "options": [
-          "People disagree about humanitarian duties and the economic responsibilities of wealthier nations",
-          "Scientists deny climate change completely",
-          "Governments have already solved migration challenges",
-          "Environmental changes no longer affect populations"
+          "Historical understanding depends on critical analysis and media literacy",
+          "Technology has eliminated the need for historians",
+          "Modern societies no longer value accurate information",
+          "Digital communication prevents political disagreement"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What is the central message of the text?",
+        "q": "What is the central theme of the text?",
         "options": [
-          "Climate migration is a growing global challenge requiring international cooperation, adaptation, and humanitarian thinking",
-          "Migration can be prevented entirely through technology",
-          "Only island nations are affected by climate change",
-          "Economic planning is unrelated to environmental issues"
+          "Digital societies create new challenges for truth and historical memory",
+          "Historical research has become easier because of technology",
+          "Governments should control all online information",
+          "Artificial intelligence makes historical interpretation unnecessary"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 494,
-      "fingerprint": "ak10-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 612,
+      "readingTime": 4
     }
   },
   {
     "id": "ak10-tema-005",
+    "title": "The Cost of Perfection",
+    "text": "At first glance, the Helix Athletic Institute appeared almost futuristic. Students trained using biometric sensors, artificial intelligence analyzed performance data in real time, and nutrition programs were customized according to genetic profiles.\n\nThe institute attracted elite athletes from around the world, many hoping to qualify for international competitions or professional careers. Success stories filled promotional campaigns, showing champions breaking records after training at Helix.\n\nSeventeen-year-old Maya received a scholarship to the institute after becoming one of the country's most promising middle-distance runners. She arrived believing the environment would help her achieve everything she had worked toward since childhood.\n\nInitially, Maya was impressed by the precision of the training systems. Coaches monitored sleep patterns, stress levels, heart rate variability, and even emotional responses before competitions.\n\nHowever, over time, she began feeling increasingly uncomfortable. Every aspect of performance became measured, compared, and optimized constantly. Students discussed statistics obsessively, and many feared any sign of weakness could threaten future opportunities.\n\nOne athlete developed an eating disorder after becoming consumed by body composition data. Another secretly trained while injured because performance algorithms predicted he would lose his ranking if he rested.\n\nMaya noticed that the institute rarely discussed limits, balance, or mental wellbeing. Improvement was treated almost like a moral obligation.\n\nThe situation became more serious after a student collapsed during an extreme training session. Although the athlete eventually recovered, the incident triggered public criticism regarding the institute's methods.\n\nJournalists investigating Helix discovered that some coaches pressured students indirectly by comparing their biological data publicly during team meetings. Critics argued that treating athletes primarily as collections of measurable variables ignored the psychological complexity of human performance.\n\nMaya spoke to a sports psychologist who visited the institute after the collapse. The psychologist explained that optimal performance required more than physical optimization. Recovery, emotional stability, and a sense of personal identity outside sport were all essential factors that data alone could not capture.\n\nThe conversation prompted Maya to reconsider her own relationship with competition. She realized she had begun measuring her worth entirely through rankings and times rather than through her love of running itself.\n\nFollowing sustained media attention, the institute's leadership eventually agreed to introduce mandatory counseling sessions, restrict public sharing of personal biometric data, and allow athletes greater freedom to manage their own recovery schedules.\n\nNot all coaches welcomed the changes. Some argued that reducing data-driven pressure would lower performance standards and harm athletes competing against more intensively trained rivals.\n\nHowever, several athletes reported improvements in motivation and consistency after the changes. Without constant comparison to statistical ideals, they discovered they could focus more effectively on individual progress.\n\nFor Maya, the experience offered a complicated lesson about ambition and technology. Data and science could genuinely improve performance when used carefully. But systems designed purely around optimization risked reducing human beings to their measurable qualities while ignoring everything that made athletic achievement meaningful.\n\nShe continued running after leaving Helix, competing at a high level while also studying sports science at university. The institute had taught her both the possibilities and the dangers of pursuing perfection without understanding its cost.",
     "grade": 10,
-    "genre": "non-fiction",
-    "theme": "history",
-    "title": "The Evolution of Human Rights",
-    "text": "Human rights are principles intended to protect the freedom, dignity, and equality of individuals. Although ideas about justice and fairness have existed for centuries, modern human rights developed gradually through historical events, political movements, and international agreements.\n\nOne important influence on human rights was the Enlightenment during the seventeenth and eighteenth centuries. Philosophers such as John Locke and Jean-Jacques Rousseau argued that individuals possessed natural rights that governments should respect. These ideas influenced political revolutions in Europe and North America, where demands for liberty and representation became increasingly powerful.\n\nThe twentieth century marked a major turning point in the development of international human rights. After the destruction and mass violence of the Second World War, many countries supported the creation of the United Nations. In 1948, the Universal Declaration of Human Rights established a global statement affirming rights such as freedom of speech, education, religion, and protection from discrimination.\n\nSince then, international organizations and activists have continued expanding human rights protections. Movements for civil rights, women's rights, disability rights, and LGBTQ rights have challenged discriminatory laws and social practices in many societies. Campaigns against apartheid in South Africa and for democratic freedoms in different regions demonstrated how political activism could influence international opinion.\n\nDespite these developments, human rights remain controversial in some contexts. Governments sometimes argue that national security, cultural traditions, or political stability justify limiting certain freedoms. Critics of international human rights organizations occasionally claim that universal standards may conflict with local customs or national sovereignty.\n\nEnforcing human rights also presents practical difficulties. International courts and organizations often depend on cooperation from governments, which may refuse to follow recommendations or legal decisions. In some regions, journalists, activists, and opposition groups continue facing imprisonment, violence, or censorship.\n\nTechnology has created additional challenges and opportunities for human rights. Social media platforms can help activists organize protests and share evidence of abuses internationally. However, digital surveillance technologies may also allow governments or corporations to monitor individuals more closely than ever before.\n\nEducation is often considered essential for protecting human rights. Schools, universities, and public institutions can encourage tolerance, critical thinking, and understanding of democratic values. Many experts argue that human rights depend not only on laws but also on public attitudes and social responsibility.\n\nAlthough human rights protections have expanded significantly over time, debates about equality, freedom, and justice continue shaping international politics and society. The future of human rights will likely depend on how successfully countries balance security, cultural differences, technological change, and universal principles of human dignity.",
+    "genre": "berättelse",
+    "theme": "Hälsa",
     "questions": [
       {
-        "type": "literal",
-        "q": "How did Enlightenment philosophers influence human rights?",
+        "q": "What made the Helix Athletic Institute unusual?",
         "options": [
-          "They argued that individuals possessed natural rights that governments should respect",
-          "They opposed all forms of political freedom",
-          "They supported censorship and discrimination",
-          "They rejected democratic systems entirely"
+          "It used advanced technology to monitor and optimize athlete performance",
+          "It accepted only professional adult athletes",
+          "It avoided all scientific approaches to training",
+          "It focused on artistic rather than athletic development"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "What kinds of movements expanded human rights protections after 1948?",
+        "q": "What did Maya notice about the institute's culture over time?",
         "options": [
-          "Civil rights, women's rights, disability rights, and LGBTQ rights movements",
-          "Only economic reform movements",
-          "Military organizations and corporations",
-          "Entertainment industries and tourism campaigns"
+          "Every aspect of performance was constantly measured and compared",
+          "Coaches prioritized rest and mental wellbeing above results",
+          "Students rarely discussed statistics or rankings",
+          "The environment encouraged athletes to set their own goals"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "Why can enforcing human rights be difficult?",
+        "q": "Why did some athletes harm themselves at Helix?",
         "options": [
-          "Governments may refuse to cooperate with international courts or organizations",
-          "Human rights laws no longer exist internationally",
-          "Citizens fully agree on every political issue",
-          "Technology has eliminated censorship"
+          "They feared that any weakness would affect their opportunities",
+          "They disagreed with the coaching methods openly",
+          "They wanted to leave the institute permanently",
+          "They received incorrect medical advice from staff"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "Why was the creation of the United Nations important for human rights?",
+        "q": "What did the sports psychologist explain to Maya?",
         "options": [
-          "It helped establish shared international principles after the devastation of World War Two",
-          "It replaced all national governments",
-          "It prevented every future conflict",
-          "It ended political activism worldwide"
+          "Emotional stability and recovery were essential to performance",
+          "Data analysis was the only reliable measure of athletic potential",
+          "Athletes should train harder despite psychological difficulties",
+          "Competition was unnecessary for long-term athletic development"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "How can technology both help and threaten human rights?",
+        "q": "What changes did the institute introduce after media criticism?",
         "options": [
-          "It can support activism and expose abuses, but also enable surveillance and monitoring",
-          "It prevents communication between countries",
-          "It removes the need for education",
-          "It guarantees complete political freedom"
+          "Counseling sessions, data privacy measures, and flexible recovery schedules",
+          "A complete ban on biometric monitoring technology",
+          "Mandatory retirement for all high-pressure coaches",
+          "Reduced competition schedules for all athletes"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "What is the main idea of the text?",
+        "q": "What is the central message of the text?",
         "options": [
-          "Human rights have evolved significantly through history but still face serious modern challenges",
-          "International organizations have solved all equality issues",
-          "Cultural traditions always oppose human rights",
-          "Political activism no longer affects global society"
+          "Technology and data can improve performance but cannot replace human wellbeing",
+          "Elite sports should abandon scientific training methods entirely",
+          "Ambition and mental health are always incompatible",
+          "Athletic success depends only on measurable physical qualities"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 493,
-      "fingerprint": "ak10-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 620,
+      "readingTime": 4
     }
   }
 ]
