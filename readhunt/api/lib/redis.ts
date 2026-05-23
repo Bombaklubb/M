@@ -4,7 +4,7 @@ import { kv } from '@vercel/kv';
 export const redis = kv;
 
 // Prefix för alla nycklar (för att separera från andra appar)
-export const KEY_PREFIX = 'lasjakten:';
+export const KEY_PREFIX = 'readhunt:';
 
 // Hjälpfunktion för att få dagens datum i YYYY-MM-DD format
 export function getTodayKey(): string {
