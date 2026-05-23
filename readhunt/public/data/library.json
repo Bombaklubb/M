@@ -3211,412 +3211,402 @@
   },
   {
     "id": "ak9-tema-001",
+    "title": "The City Without Silence",
+    "text": "For most residents of Greyford, noise had become such a normal part of daily life that few people questioned it anymore. Traffic filled the streets from early morning until late at night, construction projects continued for years without interruption, and advertisements flashed constantly from giant digital screens above the shopping district. Many citizens believed modern cities were simply supposed to feel loud, crowded, and restless.\n\nSeventeen-year-old Elin never thought much about the issue either until her younger brother Noah began experiencing severe sleep problems. Doctors eventually explained that chronic exposure to noise could affect concentration, stress levels, and even physical health. Curious, Elin started researching urban sound pollution for a school project.\n\nThe more she learned, the more surprised she became. Scientific studies showed that constant noise exposure was linked to anxiety, memory difficulties, and reduced learning ability among students. In several major cities, researchers had already started redesigning public spaces to reduce harmful sound levels.\n\nElin decided to investigate Greyford more closely. Using a sound-measuring app provided by her science teacher, she recorded noise levels in different parts of the city. The results were alarming. Some intersections produced sound levels similar to industrial factories, especially during rush hour.\n\nWhen Elin shared her findings online, reactions were mixed. Some residents appreciated the information and admitted they also felt exhausted by the city environment. Others dismissed her concerns, arguing that noise was an unavoidable consequence of economic growth and urban development.\n\nDetermined to continue, Elin contacted an architect named Mateo who specialized in sustainable city planning. Mateo explained that noise pollution was often ignored because people adapted to it gradually over time. However, adaptation did not mean the effects disappeared.\n\nTogether, they organized a public exhibition showing how sound affected everyday life. Visitors entered different rooms simulating traffic noise, quiet parks, and crowded shopping areas. Many participants were shocked by how quickly loud environments increased stress and fatigue.\n\nThe exhibition also presented possible solutions. Urban planners described how trees, pedestrian zones, electric public transport, and improved building design could reduce harmful noise. Students from local schools proposed creating more quiet study spaces throughout the city.\n\nNot everyone supported the ideas. Business owners worried that reducing traffic might hurt local commerce, while some politicians argued that the city lacked money for major redesign projects.\n\nDespite the criticism, the exhibition attracted significant media attention. Within months, city officials agreed to test several smaller changes, including quieter buses, additional green spaces, and restrictions on nighttime construction.\n\nA year later, researchers measured noticeable reductions in noise levels in certain districts. Residents also reported sleeping better and spending more time outdoors.\n\nFor Elin, the project changed the way she viewed urban life. She realized that environmental problems were not always visible like polluted rivers or damaged forests. Some forms of pollution could be heard rather than seen.\n\nMore importantly, she understood that people often accept unhealthy conditions simply because they become familiar. Changing society sometimes begins when someone questions problems others have stopped noticing.",
     "grade": 9,
-    "genre": "non-fiction",
-    "theme": "society",
-    "title": "The Impact of Globalization on Culture",
-    "text": "Globalization has transformed societies around the world by increasing the movement of goods, ideas, technology, and people across national borders. Supporters of globalization argue that international cooperation and trade have improved economic development, expanded cultural exchange, and increased access to information. Critics, however, warn that globalization may weaken local traditions and increase economic inequality.\n\nOne major effect of globalization can be seen in popular culture. Music, films, fashion, and social media trends now spread rapidly between countries. Young people in different parts of the world often consume similar entertainment and communicate through the same digital platforms. Some researchers believe this creates greater international understanding by exposing individuals to different cultures and perspectives.\n\nAt the same time, others argue that globalization can threaten local languages, customs, and artistic traditions. Smaller cultures sometimes struggle to compete with the global influence of large entertainment industries and multinational corporations. Critics worry that cultural diversity may decline if local traditions are replaced by standardized global trends.\n\nGlobalization has also influenced migration and education. Students increasingly travel abroad for university studies, while international companies employ workers from multiple countries. These developments can encourage cooperation and innovation because people with different backgrounds contribute new ideas and experiences.\n\nHowever, globalization has not benefited all groups equally. In some regions, factories moved production to countries with lower labor costs, causing unemployment in certain industries. Workers in developing countries may also face poor working conditions while producing goods for international markets. Economists therefore continue debating how governments should regulate trade and protect workers rights.\n\nTechnology has accelerated globalization further. The internet allows businesses to operate internationally and enables individuals to communicate instantly across continents. During global crises such as pandemics or climate-related disasters, countries often depend on international cooperation to share information and resources.\n\nDespite disagreements about its consequences, globalization remains one of the most influential forces shaping modern society. The challenge for future generations will likely involve balancing international cooperation with the protection of cultural diversity, social equality, and local identities.",
+    "genre": "berättelse",
+    "theme": "Samhälle",
     "questions": [
       {
-        "type": "literal",
-        "q": "What is one positive effect of globalization mentioned in the text?",
+        "q": "What first caused Elin to investigate noise pollution?",
         "options": [
-          "It can increase cultural exchange and access to information",
-          "It completely removes economic inequality",
-          "It prevents the spread of global entertainment",
-          "It guarantees equal working conditions worldwide"
+          "Her brother developed serious sleep difficulties",
+          "A politician asked her to complete a survey",
+          "Her school banned the use of headphones",
+          "An architect invited her to join a research team"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "Why are some critics concerned about globalization's effect on culture?",
+        "q": "What did scientific studies mentioned in the text suggest?",
         "options": [
-          "Local traditions and languages may become weaker",
-          "International communication has become impossible",
-          "Countries no longer produce entertainment",
-          "Young people refuse to use technology"
+          "Noise mainly affects older adults",
+          "Constant noise can influence stress, memory, and learning",
+          "Urban noise has decreased globally in recent years",
+          "Students perform better in crowded environments"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "How can globalization encourage innovation according to the text?",
+        "q": "Why did some residents criticize Elin's project?",
         "options": [
-          "By limiting migration between countries",
-          "By reducing access to education",
-          "By allowing people from different backgrounds to share ideas",
-          "By replacing universities with online businesses"
+          "They believed sound pollution only affected rural areas",
+          "They thought cities should completely ban transportation",
+          "They viewed noise as a normal part of economic development",
+          "They wanted the exhibition moved to another district"
         ],
-        "correct": 2
+        "correct": 2,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What economic problem connected to globalization is described?",
+        "q": "What was one purpose of the public exhibition?",
         "options": [
-          "Factories moving to cheaper countries can cause unemployment elsewhere",
-          "International trade has ended completely",
-          "Technology has reduced all business opportunities",
-          "Workers in wealthy countries receive no salaries"
+          "To advertise new electronic devices",
+          "To encourage residents to move away from the city",
+          "To compare music styles from different countries",
+          "To demonstrate how sound environments influence people"
         ],
-        "correct": 0
+        "correct": 3,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "Why might technology be described as accelerating globalization?",
+        "q": "What happened after the exhibition gained attention?",
         "options": [
-          "It enables instant international communication and business",
-          "It prevents countries from cooperating",
-          "It removes the need for transportation",
-          "It limits the spread of information online"
+          "The city tested smaller measures to reduce noise",
+          "Most businesses permanently closed",
+          "Researchers stopped collecting environmental data",
+          "Construction projects increased immediately"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "What is the central idea of the text?",
+        "q": "What is the main message of the text?",
         "options": [
-          "Globalization creates both significant opportunities and serious challenges for societies",
-          "Cultural exchange always damages local traditions",
-          "International trade should be completely banned",
-          "Technology has made national identities unimportant"
+          "Modern cities should avoid all technological development",
+          "People may ignore harmful conditions once they become familiar",
+          "Environmental issues are always visible to society",
+          "Urban growth and environmental health cannot coexist"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 481,
-      "fingerprint": "ak9-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 583,
+      "readingTime": 3
     }
   },
   {
     "id": "ak9-tema-002",
+    "title": "The Archive of Lost Languages",
+    "text": "Professor Helena Varga had spent most of her career studying endangered languages. By the time she arrived at the university in Stockholm, she had already worked with communities across South America, northern Asia, and parts of Africa where traditional languages were disappearing rapidly.\n\nMany people assumed language loss was simply a natural result of globalization. Helena disagreed strongly. She believed that when a language disappeared, humanity also lost unique ways of understanding history, nature, and culture.\n\nAmong Helena's students was sixteen-year-old Karim, who initially enrolled in her course only because he needed additional credits in social science. However, his perspective changed after Helena introduced the class to recordings of elderly speakers from remote communities.\n\nSome recordings contained stories describing local weather patterns, medicinal plants, and migration routes that had never been written down formally. Helena explained that oral traditions often preserved knowledge developed over centuries.\n\nKarim became especially interested in one project involving a nearly extinct Arctic language spoken by fewer than fifty people. Younger generations in the region increasingly communicated in global languages connected to education, employment, and digital technology.\n\nDuring online interviews, several community members admitted feeling conflicted. They wanted younger relatives to succeed in modern society, but they also feared losing an important part of their identity.\n\nKarim realized the situation was more complicated than he first expected. Some politicians described language preservation as unrealistic or economically unnecessary. Others argued that protecting minority languages strengthened cultural diversity and human rights.\n\nHelena's research team used advanced technology to create digital archives containing audio recordings, translations, dictionaries, and interactive learning programs. Artificial intelligence helped organize large amounts of material, but Helena repeatedly reminded students that technology alone could not save a language.\n\nA language survived only if people continued using it in everyday life. Schools, families, and local communities all played essential roles.\n\nToward the end of the semester, Karim participated in a conference where researchers discussed ethical questions connected to cultural preservation. One debate focused on whether outside institutions should influence communities trying to protect traditions.\n\nSome speakers warned that preservation projects sometimes treated cultures like museum objects instead of living societies capable of change. Others argued that ignoring disappearing languages would represent a form of cultural neglect.\n\nThe discussion deeply affected Karim. Until then, he had mostly viewed language as a practical communication tool. He now understood that language also shaped memory, identity, and relationships between generations.\n\nMonths later, Karim began interviewing members of his own extended family about expressions and traditions that had slowly disappeared over time. He realized cultural preservation was not only an international issue connected to distant communities. Similar changes could happen within any society.\n\nHelena later told her students that protecting cultural diversity did not mean rejecting modern development. Instead, it required recognizing that progress should not automatically erase older forms of knowledge and expression.",
     "grade": 9,
-    "genre": "non-fiction",
-    "theme": "health",
-    "title": "The Development of Vaccines",
-    "text": "Vaccines are considered one of the most important achievements in medical history because they have prevented millions of deaths worldwide. By training the immune system to recognize harmful viruses or bacteria, vaccines reduce the spread of infectious diseases and protect both individuals and communities.\n\nThe history of vaccination began long before modern laboratories existed. In the eighteenth century, the English physician Edward Jenner observed that milkmaids who had been infected with cowpox rarely developed smallpox, a deadly disease that killed millions of people. Jenner used this discovery to develop one of the earliest vaccines, helping lay the foundation for modern immunology.\n\nSince then, scientists have created vaccines against diseases such as polio, measles, and tetanus. Mass vaccination campaigns have dramatically reduced infection rates in many countries, and smallpox became the first human disease to be completely eradicated through vaccination.\n\nDespite these successes, vaccine development remains a complex and challenging process. Researchers must carefully test vaccines to ensure they are both safe and effective. Clinical trials often involve thousands of participants and may take years to complete. During global emergencies, however, governments and pharmaceutical companies sometimes accelerate research while still following scientific safety standards.\n\nPublic trust plays an important role in vaccination programs. Misinformation and conspiracy theories spread online have caused some individuals to question vaccine safety despite strong scientific evidence supporting their effectiveness. Health experts warn that declining vaccination rates can allow preventable diseases to return.\n\nEthical questions have also emerged regarding global access to vaccines. Wealthier countries often secure medical supplies more quickly than poorer nations, creating inequalities during health crises. International organizations therefore argue that cooperation is necessary to ensure fair distribution of vaccines worldwide.\n\nRecent advances in biotechnology, including mRNA technology, may influence future vaccine development significantly. Scientists hope these methods could allow faster responses to new diseases and even contribute to treatments for certain cancers.\n\nAlthough debates about healthcare policies continue, most medical researchers agree that vaccines remain one of the most effective tools for protecting public health and preventing large-scale outbreaks.",
+    "genre": "berättelse",
+    "theme": "Kultur",
     "questions": [
       {
-        "type": "literal",
-        "q": "Why are vaccines considered important in medical history?",
+        "q": "Why did Helena believe language loss was serious?",
         "options": [
-          "They have prevented millions of deaths worldwide",
-          "They eliminate all diseases permanently",
-          "They remove the need for hospitals",
-          "They replace healthy lifestyles completely"
+          "It reduced tourism in remote areas",
+          "It caused universities to lose funding",
+          "It erased unique cultural knowledge and perspectives",
+          "It prevented people from learning global languages"
         ],
-        "correct": 0
+        "correct": 2,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "What observation helped Edward Jenner develop an early vaccine?",
+        "q": "What changed Karim's attitude toward the course?",
         "options": [
-          "Milkmaids infected with cowpox rarely developed smallpox",
-          "Polio spread mainly through polluted water",
-          "Vaccines worked best in warm climates",
-          "Hospitals reduced infection rates automatically"
+          "He received a scholarship for research",
+          "He listened to recordings from endangered language communities",
+          "His family encouraged him to become a linguist",
+          "The university required all students to study languages"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "Why does vaccine development often take many years?",
+        "q": "Why were some younger people abandoning the Arctic language?",
         "options": [
-          "Researchers must test safety and effectiveness very carefully",
-          "Scientists rarely cooperate internationally",
-          "Governments forbid clinical trials completely",
-          "Modern technology cannot study viruses"
+          "They associated other languages with education and employment",
+          "The language had become illegal to use publicly",
+          "Researchers advised communities to stop teaching it",
+          "Most older speakers refused to share knowledge"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "How can misinformation affect vaccination programs?",
+        "q": "What point did Helena repeatedly emphasize about technology?",
         "options": [
-          "It can reduce public trust and lower vaccination rates, allowing diseases to return",
-          "It guarantees stronger immunity in populations",
-          "It increases scientific cooperation automatically",
-          "It prevents the spread of online discussions"
+          "Artificial intelligence should replace teachers",
+          "Digital archives were too expensive to maintain",
+          "Modern technology made traditional communities weaker",
+          "Technology alone could not keep a language alive"
         ],
-        "correct": 0
+        "correct": 3,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "What ethical issue connected to vaccines is discussed?",
+        "q": "What ethical concern appeared during the conference?",
         "options": [
-          "Wealthier countries may gain faster access, creating global inequality",
-          "Vaccines can only be produced in Europe",
-          "Medical research no longer requires funding",
-          "International organizations oppose vaccination"
+          "Whether preservation projects treated cultures as static objects",
+          "Whether schools should stop teaching international languages",
+          "Whether oral traditions were historically accurate",
+          "Whether universities should avoid cultural research completely"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What is the main idea of the text?",
+        "q": "What is a central theme of the text?",
         "options": [
-          "Vaccines are highly important but involve scientific, social, and ethical challenges",
-          "Modern medicine no longer depends on vaccination",
-          "Clinical trials should be removed to speed up research",
-          "Public health crises can be solved without international cooperation"
+          "Cultural preservation requires balancing tradition and modernity",
+          "Globalization always destroys local communities",
+          "Technology makes human languages unnecessary",
+          "Historical knowledge should remain only in universities"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 482,
-      "fingerprint": "ak9-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 586,
+      "readingTime": 3
     }
   },
   {
     "id": "ak9-tema-003",
+    "title": "The Experiment",
+    "text": "At Westfield Science Academy, students were encouraged to design independent research projects each year. Most projects involved familiar topics such as renewable energy, plant growth, or robotics. However, seventeen-year-old Liv wanted to investigate something less predictable: how social pressure influenced decision-making.\n\nLiv became interested in the subject after noticing how quickly opinions spread online. Trends, rumors, and political debates often seemed shaped more by group reactions than by careful analysis.\n\nWith permission from her teachers, Liv designed a psychological experiment involving volunteers from different classes. Participants were asked to answer a series of simple questions about images and patterns while sitting in small groups.\n\nUnknown to one participant in each group, the others had secretly agreed to provide several obviously incorrect answers during parts of the experiment. Liv wanted to observe whether individuals would continue trusting their own judgment or begin agreeing with the group.\n\nThe results surprised even Liv herself. In many cases, participants ignored what they clearly saw and repeated the incorrect group answers instead. Some later admitted they suspected the group was wrong but feared appearing foolish or isolated.\n\nAfter the experiment, Liv interviewed several volunteers privately. One student explained that disagreeing repeatedly became emotionally exhausting. Another admitted feeling uncertain simply because everyone else seemed so confident.\n\nLiv's project attracted attention from both students and teachers because the results resembled behavior often observed online. Social media users frequently repeated information supported by large groups, even when evidence was weak or questionable.\n\nDuring a school presentation, Liv emphasized that conformity was not always negative. In many situations, cooperation and social agreement helped societies function effectively. Problems appeared when people stopped questioning ideas entirely because they feared exclusion.\n\nA philosophy teacher attending the presentation connected Liv's findings to historical events. Throughout history, societies had sometimes accepted harmful ideologies because individuals hesitated to challenge dominant opinions.\n\nThe discussion became especially intense when students debated whether modern technology increased social pressure. Some argued that online platforms amplified conformity because users constantly saw public reactions through likes, comments, and trends.\n\nOthers believed the internet also allowed minority perspectives to spread more easily than before. According to them, technology could both strengthen and weaken independent thinking depending on how it was used.\n\nLiv appreciated that the conversation produced disagreement rather than simple conclusions. She believed critical thinking depended on people feeling comfortable expressing uncertainty and questioning majority opinions.\n\nWeeks later, several teachers introduced new classroom activities encouraging students to analyze information more independently. Instead of focusing only on correct answers, discussions emphasized reasoning and evidence.\n\nFor Liv, the experiment demonstrated that intelligence alone did not guarantee independent judgment. Human beings were deeply influenced by social environments, often in ways they barely recognized themselves.\n\nThe project also changed her own behavior. She became more careful about automatically accepting popular opinions online and more willing to pause before following group reactions.",
     "grade": 9,
-    "genre": "non-fiction",
-    "theme": "psychology",
-    "title": "The Psychology of Advertising",
-    "text": "Advertising influences modern society in countless ways. Companies spend enormous amounts of money studying consumer behavior in order to persuade people to purchase products, support brands, or change habits. Psychologists and marketing experts analyze how emotions, social pressure, and visual design affect decision-making.\n\nOne common advertising strategy involves creating emotional connections between products and positive experiences. Commercials often associate products with happiness, success, friendship, or personal confidence. Even when advertisements provide little factual information, emotional storytelling can strongly influence consumer attitudes.\n\nSocial influence also plays a major role in advertising. Companies frequently use celebrities, athletes, or social media influencers to promote products because consumers may trust recommendations from familiar figures. In digital environments, algorithms can even personalize advertisements based on users online behavior, interests, and search history.\n\nColor, music, and design are carefully selected to attract attention and shape perception. Fast-food companies, for example, often use bright colors such as red and yellow because researchers believe these colors may increase excitement and appetite. Luxury brands, in contrast, often use darker colors and minimalist designs to communicate exclusivity and sophistication.\n\nCritics argue that advertising can encourage unhealthy consumer habits and unrealistic expectations. Some advertisements promote materialism by suggesting that personal happiness depends on purchasing certain products. Others may reinforce stereotypes related to gender, beauty, or social status.\n\nChildren and teenagers are often considered especially vulnerable to advertising because they may have less experience evaluating persuasive messages critically. Governments in some countries therefore regulate advertising directed toward young audiences, particularly regarding unhealthy food, alcohol, or gambling.\n\nThe rise of social media has further complicated advertising ethics. Influencers sometimes promote products without clearly revealing sponsorship agreements, making it difficult for audiences to distinguish between personal opinions and paid marketing.\n\nDespite criticism, advertising remains central to modern economies because businesses depend on communication with consumers. Many experts argue that media literacy and critical thinking are essential skills in a world where persuasive messages appear constantly through television, smartphones, websites, and public spaces.",
+    "genre": "berättelse",
+    "theme": "Vetenskap",
     "questions": [
       {
-        "type": "literal",
-        "q": "Why do companies study consumer behavior?",
+        "q": "Why did Liv become interested in studying social pressure?",
         "options": [
-          "To persuade people to buy products or support brands",
-          "To reduce all forms of competition",
-          "To eliminate emotional decision-making completely",
-          "To prevent the use of social media advertising"
+          "She noticed how quickly opinions spread online",
+          "Her teachers required psychology research",
+          "She planned to study medicine at university",
+          "Her classmates asked her to design a survey"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "How do many advertisements influence consumers emotionally?",
+        "q": "What was unusual about Liv's experiment?",
         "options": [
-          "By connecting products to positive experiences like happiness or success",
-          "By avoiding storytelling completely",
-          "By focusing only on scientific statistics",
-          "By reducing the use of images and music"
+          "Participants completed the experiment alone",
+          "Some group members intentionally gave incorrect answers",
+          "Students were tested on advanced mathematics",
+          "Teachers secretly changed the experiment results"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "Why are children and teenagers considered especially vulnerable to advertising?",
+        "q": "Why did many participants follow the group's wrong answers?",
         "options": [
-          "They may have less experience evaluating persuasive messages critically",
-          "They completely ignore social media content",
-          "They rarely encounter advertisements online",
-          "They understand marketing better than adults"
+          "They could not understand the questions",
+          "They believed the experiment involved trick images",
+          "They feared appearing isolated or incorrect",
+          "They wanted to finish the experiment quickly"
         ],
-        "correct": 0
+        "correct": 2,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What does the careful use of color and music in advertising suggest?",
+        "q": "What argument did some students make about social media?",
         "options": [
-          "Companies deliberately design every detail to shape how consumers feel and decide",
-          "They choose colors randomly without research",
-          "Visual design has no effect on buying decisions",
-          "Music is only used to entertain, not persuade"
+          "It completely prevented independent thought",
+          "It had no effect on human behavior",
+          "It replaced all forms of traditional communication",
+          "It could intensify conformity through public reactions"
         ],
-        "correct": 0
+        "correct": 3,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What criticism of advertising is mentioned in the text?",
+        "q": "What educational change happened after Liv's presentation?",
         "options": [
-          "It may encourage materialism, reinforce stereotypes, and create unrealistic expectations",
-          "It prevents businesses from communicating with consumers",
-          "It reduces the influence of digital technology",
-          "It eliminates all cultural stereotypes"
+          "Teachers introduced activities focused on reasoning and evidence",
+          "The school removed all online technology",
+          "Students stopped participating in discussions",
+          "Psychology courses became mandatory"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "What is the main idea of the text?",
+        "q": "What is the central idea of the text?",
         "options": [
-          "Advertising uses psychological techniques to influence behavior and raises important ethical concerns",
-          "Modern companies no longer depend on advertising",
-          "Persuasive communication only exists in digital media",
-          "Governments should completely ban all advertisements"
+          "Social influence strongly affects human decision-making",
+          "Independent thinking is impossible in modern society",
+          "Technology should replace classroom discussions",
+          "Most group behavior is harmful"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 471,
-      "fingerprint": "ak9-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 580,
+      "readingTime": 3
     }
   },
   {
     "id": "ak9-tema-004",
+    "title": "The Forest Agreement",
+    "text": "For decades, the Arken Valley forest had been the center of conflict between environmental organizations, local industries, and nearby communities. The region contained rare animal species and ancient trees, but it also provided jobs through logging and manufacturing.\n\nWhenever new development plans appeared, public debates became increasingly hostile. Activists accused companies of destroying ecosystems for profit, while industry representatives argued that environmental restrictions threatened local employment.\n\nSeventeen-year-old Tomas grew up in the valley and understood both perspectives. His mother worked for an environmental research organization, while his father managed operations at a wood-processing factory. At home, dinner conversations often became tense whenever forest policies appeared in the news.\n\nOne summer, severe wildfires damaged several parts of the valley. Scientists later explained that climate change and poor land management had increased the risk of extreme fires.\n\nThe disaster forced many groups to reconsider their positions. Factories temporarily closed because of damaged infrastructure, while environmental organizations struggled to protect wildlife habitats affected by the fires.\n\nA regional council eventually organized negotiations involving researchers, local residents, Indigenous representatives, factory owners, and environmental activists. Tomas attended several meetings as part of a youth council invited to observe the discussions.\n\nAt first, the negotiations seemed impossible. Participants interrupted each other constantly and accused opposing groups of selfishness or dishonesty. However, over time, moderators encouraged everyone to focus on shared long-term concerns rather than immediate political arguments.\n\nResearchers presented evidence showing that sustainable forestry methods could reduce fire risks while still supporting local economies. Indigenous representatives described traditional land management practices that had helped prevent large uncontrolled fires historically.\n\nGradually, the council developed a compromise agreement. Certain areas of ancient forest received stronger legal protection, while companies agreed to follow stricter environmental standards and invest in reforestation projects.\n\nIn return, local industries received government support for transitioning toward more sustainable production methods. The agreement also created educational programs teaching residents about fire prevention and ecosystem management.\n\nNot everyone was satisfied. Some activists believed the compromise still allowed excessive industrial activity, while some business leaders complained that regulations remained too expensive.\n\nDespite criticism, many residents viewed the agreement as progress because it replaced years of conflict with cooperation. Tomas noticed that people who previously refused to speak with each other were now participating in joint planning meetings.\n\nThe experience deeply influenced Tomas. He realized that environmental issues were rarely simple conflicts between good and bad sides. Most problems involved competing needs, fears, and responsibilities.\n\nHe also understood that compromise did not necessarily mean abandoning principles. Sometimes it represented the only realistic path toward long-term solutions in complex societies.",
     "grade": 9,
-    "genre": "non-fiction",
-    "theme": "technology",
-    "title": "The Challenges of Artificial Intelligence",
-    "text": "Artificial intelligence, often referred to as AI, has become one of the most influential technologies of the twenty-first century. AI systems are now used in healthcare, transportation, education, finance, and entertainment. Supporters argue that artificial intelligence can improve efficiency, solve complex problems, and assist humans in ways that were previously impossible.\n\nIn healthcare, AI programs can analyze medical images and detect diseases more quickly than some traditional methods. In transportation, self-driving technology may eventually reduce traffic accidents caused by human error. Businesses also use AI to analyze large amounts of data and improve decision-making.\n\nDespite these advantages, AI development has created significant ethical and social concerns. One major issue involves employment. Automation may replace certain jobs, especially repetitive tasks in manufacturing, transportation, and customer service. Economists disagree about whether technological innovation will ultimately create enough new professions to replace those lost.\n\nAnother concern involves bias in AI systems. Artificial intelligence learns from data, and if that data reflects existing social inequalities or stereotypes, the technology may produce unfair outcomes. Researchers have discovered examples of biased facial recognition systems and hiring algorithms that treated certain groups unfairly.\n\nPrivacy is another important topic in discussions about AI. Modern systems can collect and analyze enormous amounts of personal information through smartphones, cameras, and online activity. Critics worry that governments or corporations could misuse such data for surveillance or manipulation.\n\nSome experts also debate the long-term risks of increasingly advanced AI systems. While many scientists believe AI will remain a useful tool controlled by humans, others warn that highly autonomous systems may eventually become difficult to regulate. International organizations have therefore called for ethical guidelines and global cooperation regarding AI development.\n\nEducation systems are already adapting to these technological changes. Schools and universities increasingly teach programming, digital ethics, and critical thinking skills to prepare students for future workplaces influenced by automation.\n\nAlthough opinions differ about the future of artificial intelligence, most researchers agree that societies must carefully balance technological innovation with ethical responsibility and human rights.",
+    "genre": "berättelse",
+    "theme": "Natur & Miljö",
     "questions": [
       {
-        "type": "literal",
-        "q": "What is one benefit of AI mentioned in the text?",
+        "q": "Why had the Arken Valley forest caused conflict for many years?",
         "options": [
-          "It can improve efficiency and help solve complex problems",
-          "It completely removes the need for human workers",
-          "It guarantees equal wealth distribution worldwide",
-          "It prevents all technological accidents"
+          "The area lacked economic importance",
+          "Different groups disagreed about conservation and industry",
+          "Scientists wanted to ban all human activity there",
+          "The valley was owned by foreign governments"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "How can bias appear in AI systems?",
+        "q": "Why were the wildfires especially significant?",
         "options": [
-          "The systems may learn unfair patterns from existing data",
-          "Artificial intelligence ignores all human information",
-          "Researchers avoid testing AI programs carefully",
-          "Governments prevent the use of digital technology"
+          "They forced different groups to reconsider their positions",
+          "They permanently ended all industrial activity",
+          "They caused residents to leave the country",
+          "They proved climate change was not a problem"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "literal",
-        "q": "What privacy concern is discussed in the text?",
+        "q": "What role did Indigenous representatives play in the negotiations?",
         "options": [
-          "Personal data collected by AI could be misused for surveillance",
-          "AI systems cannot store information online",
-          "Smartphones no longer collect user data",
-          "Governments have banned digital communication"
+          "They argued against all scientific research",
+          "They shared historical land management knowledge",
+          "They demanded complete government control of the forest",
+          "They refused to participate in compromise discussions"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "Why are economists uncertain about automation and employment?",
+        "q": "What was included in the final agreement?",
         "options": [
-          "It is unclear whether new jobs created will replace those lost to AI",
-          "Artificial intelligence cannot analyze data effectively",
-          "Technology companies refuse to use automation",
-          "Self-driving vehicles increase transportation costs"
+          "The immediate closure of every factory in the valley",
+          "The removal of all environmental protections",
+          "A compromise involving conservation and sustainable industry",
+          "A decision to leave the damaged forest unchanged"
         ],
-        "correct": 0
+        "correct": 2,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "Why are schools adding digital ethics to their programs?",
+        "q": "Why did some people still criticize the agreement?",
         "options": [
-          "Students need skills to navigate a future shaped by AI and automation",
-          "Programming has replaced all traditional subjects",
-          "Universities no longer support scientific research",
-          "Automation has ended the need for critical thinking"
+          "Different groups believed the compromise favored the wrong side",
+          "The negotiations excluded local residents entirely",
+          "The council refused to discuss climate change",
+          "The agreement increased wildfire risks immediately"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What is the central idea of the text?",
+        "q": "What is a key message of the text?",
         "options": [
-          "AI offers significant opportunities but also creates serious ethical and social challenges",
-          "AI technology should be banned completely",
-          "Human workers will disappear within a few years",
-          "Privacy concerns connected to AI are unimportant"
+          "Environmental conflicts are usually simple to solve",
+          "Compromise can be necessary in complex social issues",
+          "Economic development and environmental protection cannot coexist",
+          "Public negotiations always create complete agreement"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 472,
-      "fingerprint": "ak9-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 578,
+      "readingTime": 3
     }
   },
   {
     "id": "ak9-tema-005",
+    "title": "Beyond the Scoreboard",
+    "text": "When people discussed professional sports, conversations usually focused on trophies, statistics, and famous athletes. However, few fans paid attention to the enormous psychological pressure experienced behind the scenes.\n\nSixteen-year-old Nora became aware of this issue after watching a documentary about elite athletes struggling with anxiety and depression. Many competitors described feeling trapped between public expectations, sponsorship demands, and fear of failure.\n\nNora herself played basketball at a high level and immediately recognized parts of the experience. Coaches, teammates, and parents often emphasized results so strongly that mistakes felt catastrophic.\n\nAt her sports academy, athletes followed demanding schedules balancing schoolwork, travel, training sessions, and competitions. Although the environment encouraged discipline and ambition, many students quietly experienced exhaustion.\n\nOne teammate, Adrian, suddenly stopped attending practice before an important tournament. Rumors spread quickly. Some students assumed he lacked motivation, while others speculated about conflicts with coaches.\n\nEventually, Adrian explained privately to several teammates that he had been experiencing panic attacks for months. He feared disappointing others and felt unable to maintain constant performance expectations.\n\nThe conversation affected Nora deeply. She realized how rarely athletes discussed mental health openly. Physical injuries received immediate attention from coaches and medical staff, but emotional struggles often remained hidden.\n\nTogether with several classmates, Nora organized a student discussion about psychological wellbeing in competitive sports. They invited sports psychologists, trainers, and former athletes to participate.\n\nDuring the event, speakers emphasized that ambition itself was not harmful. Problems emerged when athletes believed their personal value depended entirely on success or public approval.\n\nA former Olympic swimmer described how social media had intensified pressure for modern athletes. Competitors now faced continuous public judgment through comments, rankings, and online comparisons.\n\nAt the same time, some participants argued that sports could also improve mental health by creating community, discipline, and confidence. The discussion therefore focused less on eliminating competition and more on building healthier environments around it.\n\nAfter the event, Nora's academy introduced several changes. Students gained improved access to counseling services, coaches received additional mental health training, and athletes were encouraged to discuss stress more openly.\n\nNot everyone welcomed the changes immediately. A few older coaches worried that emphasizing emotional wellbeing might reduce competitiveness or resilience.\n\nHowever, many athletes reported feeling more supported over time. Adrian eventually returned to basketball and explained that speaking honestly about his experiences had reduced his sense of isolation.\n\nFor Nora, the experience transformed her understanding of success. She still cared deeply about improving as an athlete, but she no longer believed achievement alone defined a person's worth.\n\nShe also recognized that societies often celebrate performance while ignoring the emotional costs connected to constant competition. True strength, she concluded, included the ability to ask for help when necessary.",
     "grade": 9,
-    "genre": "non-fiction",
-    "theme": "history",
-    "title": "The Preservation of Historical Monuments",
-    "text": "Historical monuments provide valuable connections to the past and help societies understand cultural, political, and architectural history. Castles, temples, statues, and ancient ruins often attract tourists, researchers, and students who wish to learn about earlier civilizations and historical events. Governments and international organizations therefore invest significant resources in preserving important historical sites.\n\nOne major challenge in monument preservation is environmental damage. Weather conditions such as rain, wind, heat, and pollution gradually weaken building materials over time. Climate change has increased concerns because rising sea levels, stronger storms, and extreme temperatures threaten historical sites in many regions.\n\nHuman activity can also create problems for preservation efforts. Large numbers of tourists may damage fragile structures, while urban expansion sometimes places historical sites at risk of destruction. In areas affected by war or political conflict, monuments may be intentionally damaged as symbols of cultural identity.\n\nModern technology has become increasingly important in preservation work. Scientists use laser scanning, digital modeling, and advanced imaging systems to study monuments and record detailed information about their condition. In some cases, damaged structures have even been partially reconstructed using 3D printing techniques.\n\nHowever, preservation efforts often involve difficult ethical questions. Some experts believe monuments should remain exactly as they are, even if they become damaged over time. Others support reconstruction projects that restore buildings to earlier appearances. Debates may also arise regarding monuments connected to controversial historical figures or events.\n\nEconomic considerations influence preservation decisions as well. Maintaining historical sites can be expensive, especially in countries with limited financial resources. Supporters argue that tourism and cultural education justify these costs, while critics sometimes believe funds should instead support healthcare, housing, or infrastructure.\n\nInternational organizations such as UNESCO have created programs to protect sites considered important to global cultural heritage. These efforts encourage cooperation between nations and emphasize that historical monuments belong not only to individual countries but also to humanity as a whole.\n\nThe preservation of historical monuments ultimately reflects broader questions about memory, identity, and how societies choose to represent their past for future generations.",
+    "genre": "berättelse",
+    "theme": "Hälsa",
     "questions": [
       {
-        "type": "literal",
-        "q": "Why are historical monuments considered important?",
+        "q": "What first made Nora think about mental health in sports?",
         "options": [
-          "They help societies understand cultural and historical identity",
-          "They eliminate disagreements about the past",
-          "They replace the need for historical education",
-          "They prevent environmental damage completely"
+          "A documentary about elite athletes",
+          "An argument with her basketball coach",
+          "A school assignment about medicine",
+          "A sports injury during practice"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "How can climate change threaten historical monuments?",
+        "q": "Why did Adrian stop attending practice?",
         "options": [
-          "Extreme weather and rising sea levels can damage structures",
-          "It prevents researchers from studying architecture",
-          "Tourism disappears during warmer temperatures",
-          "Governments stop funding preservation projects"
+          "He planned to leave the academy permanently",
+          "He had been experiencing panic attacks and pressure",
+          "He wanted to focus only on schoolwork",
+          "He disagreed with the tournament schedule"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "literal"
       },
       {
-        "type": "literal",
-        "q": "What role does modern technology play in preservation work?",
+        "q": "What comparison about injuries appeared in the text?",
         "options": [
-          "It helps researchers study, record, and reconstruct monuments",
-          "It replaces the need for historians completely",
-          "It prevents all forms of pollution automatically",
-          "It removes political disagreements about monuments"
+          "Physical injuries were often treated more seriously than emotional struggles",
+          "Psychological problems were easier to solve than physical injuries",
+          "Athletes preferred discussing emotional difficulties publicly",
+          "Coaches ignored all forms of medical support"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "What ethical debate about monuments is mentioned?",
+        "q": "How did social media increase pressure on athletes according to the discussion?",
         "options": [
-          "Whether damaged sites should remain unchanged or be restored to earlier states",
-          "Whether all monuments should be destroyed after wars",
-          "Whether tourists should be forbidden from visiting museums",
-          "Whether governments should stop teaching history"
+          "It prevented athletes from training effectively",
+          "It reduced interest in professional competitions",
+          "It exposed athletes to constant public judgment",
+          "It replaced communication between teammates"
         ],
-        "correct": 0
+        "correct": 2,
+        "type": "inference"
       },
       {
-        "type": "inference",
-        "q": "Why do some critics question spending money on preservation?",
+        "q": "What changes did the sports academy introduce afterward?",
         "options": [
-          "They believe funds could better serve urgent public needs like healthcare or housing",
-          "They think tourism has no economic value",
-          "They oppose all forms of cultural education",
-          "They believe monuments are impossible to protect"
+          "Improved counseling access and mental health support",
+          "A ban on competitive tournaments",
+          "Shorter school days for all students",
+          "Mandatory social media restrictions"
         ],
-        "correct": 0
+        "correct": 0,
+        "type": "literal"
       },
       {
-        "type": "inference",
-        "q": "What is the main idea of the text?",
+        "q": "What is the central idea of the text?",
         "options": [
-          "Preserving monuments involves cultural value, technological tools, and ethical decisions",
-          "Historical monuments should only belong to wealthy countries",
-          "Modern technology has solved all preservation problems",
-          "Tourism is the only reason monuments are protected"
+          "Professional sports should avoid competition entirely",
+          "Mental wellbeing is an important part of athletic success",
+          "Public attention always harms athletes",
+          "Physical training matters more than emotional health"
         ],
-        "correct": 0
+        "correct": 1,
+        "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 478,
-      "fingerprint": "ak9-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "wordCount": 581,
+      "readingTime": 3
     }
   },
   {
