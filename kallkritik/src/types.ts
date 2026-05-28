@@ -85,24 +85,7 @@ export interface SourceItem {
   }[];
 }
 
-// Module 4: Fakebilder
-export interface FakeImageHotspot {
-  id: number;
-  label: string;
-  description: string;
-  isArtifact: boolean;
-  x: number;
-  y: number;
-}
-
-export interface FakeImageItem {
-  id: string;
-  title: string;
-  description: string;
-  context: string;
-  imageUrl: string;
-  hotspots: FakeImageHotspot[];
-}
+// Module 4: Fakebilder & Deepfakes – types live in data/module4Data.ts
 
 // Module 5: AI-hallucinationer
 export interface HallucinationItem {
