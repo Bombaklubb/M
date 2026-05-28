@@ -6,6 +6,7 @@ import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
 import { TextToSpeech } from './TextToSpeech';
+import { useSpeech } from '@/hooks/useSpeech';
 import { getThemeVisual } from '@/lib/themes';
 
 interface QuizViewProps {
@@ -71,6 +72,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   }, [text.id]);
 
   const themeVisual = getThemeVisual(text.theme, text.genre);
+  const speech = useSpeech(text.text);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -149,7 +151,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                 <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
                   <div className="flex items-center gap-3">
                     <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
-                    <TextToSpeech text={text.text} />
+                    <TextToSpeech speech={speech} />
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Size:</span>
@@ -255,6 +257,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     <TextWithGlossary
                       text={text.text}
                       grade={text.grade}
+                      highlightCharIndex={speech.speaking ? speech.charIndex : -1}
                       className={cn(
                         "leading-relaxed text-slate-700 dark:text-slate-300",
                         textSizeClasses[textSize]
