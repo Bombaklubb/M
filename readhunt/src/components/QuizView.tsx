@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
@@ -15,33 +15,24 @@ interface QuizViewProps {
   onShowText: () => void;
 }
 
-// Bionic reading: bold the first portion of each word for easier reading
-const applyBionicReading = (text: string): React.ReactNode[] => {
-  return text.split(' ').map((word, index) => {
-    if (word.length === 0) return null;
+// Bionic reading: bold the first portion of a single word for easier reading
+const bionicWord = (word: string): React.ReactNode => {
+  const cleanWord = word.replace(/[.,!?;:'"()-]/g, '');
+  const boldLength = Math.ceil(cleanWord.length * 0.4);
 
-    const cleanWord = word.replace(/[.,!?;:'"()-]/g, '');
-    const boldLength = Math.ceil(cleanWord.length * 0.4);
+  let startIdx = 0;
+  while (startIdx < word.length && /[.,!?;:'"()-]/.test(word[startIdx])) startIdx++;
 
-    let startIdx = 0;
-    while (startIdx < word.length && /[.,!?;:'"()-]/.test(word[startIdx])) startIdx++;
+  let boldEndIdx = startIdx + boldLength;
+  if (boldEndIdx > word.length) boldEndIdx = word.length;
 
-    let boldEndIdx = startIdx + boldLength;
-    if (boldEndIdx > word.length) boldEndIdx = word.length;
-
-    const before = word.slice(0, startIdx);
-    const boldPart = word.slice(startIdx, boldEndIdx);
-    const normalPart = word.slice(boldEndIdx);
-
-    return (
-      <span key={index}>
-        {before}
-        <strong className="font-bold">{boldPart}</strong>
-        {normalPart}
-        {' '}
-      </span>
-    );
-  });
+  return (
+    <>
+      {word.slice(0, startIdx)}
+      <strong className="font-bold">{word.slice(startIdx, boldEndIdx)}</strong>
+      {word.slice(boldEndIdx)}
+    </>
+  );
 };
 
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; category: string }> = {
@@ -73,6 +64,14 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
 
   const themeVisual = getThemeVisual(text.theme, text.genre);
   const speech = useSpeech(text.text);
+  const spokenRef = useRef<HTMLSpanElement>(null);
+
+  // Karaoke auto-scroll for the bionic/plain reading view
+  useEffect(() => {
+    if (speech.speaking && speech.charIndex >= 0 && spokenRef.current) {
+      spokenRef.current.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }, [speech.charIndex, speech.speaking]);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -102,7 +101,6 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const progress = ((currentQuestion + 1) / totalQuestions) * 100;
   const selectedAnswer = answers[currentQuestion];
 
-  const paragraphs = text.text.split('\n').filter((p) => p.trim().length > 0);
   const wordCount = text.meta?.wordCount || text.text.split(/\s+/).length;
   const readingTime = text.meta?.readingTime || Math.max(1, Math.round(wordCount / 150));
 
@@ -265,20 +263,41 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     />
                   ) : (
                     <div className="space-y-4">
-                      {paragraphs.map((para, idx) => (
-                        <motion.p
-                          key={idx}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: idx * 0.05 }}
-                          className={cn(
-                            "leading-relaxed text-slate-700 dark:text-slate-300",
-                            textSizeClasses[textSize]
-                          )}
-                        >
-                          {bionicReading ? applyBionicReading(para) : para}
-                        </motion.p>
-                      ))}
+                      {(() => {
+                        let paragraphStart = 0;
+                        return text.text.split('\n\n').map((para, idx) => {
+                          let offset = paragraphStart;
+                          paragraphStart += para.length + 2;
+                          return (
+                            <p
+                              key={idx}
+                              className={cn(
+                                "leading-relaxed text-slate-700 dark:text-slate-300 mb-4 last:mb-0",
+                                textSizeClasses[textSize]
+                              )}
+                            >
+                              {para.split(/(\s+)/).map((part, i) => {
+                                const partStart = offset;
+                                offset += part.length;
+                                if (/^\s+$/.test(part)) return <span key={i}>{part}</span>;
+                                const isSpoken =
+                                  speech.speaking &&
+                                  speech.charIndex >= partStart &&
+                                  speech.charIndex < partStart + part.length;
+                                return (
+                                  <span
+                                    key={i}
+                                    ref={isSpoken ? spokenRef : undefined}
+                                    className={isSpoken ? 'bg-amber-200 dark:bg-amber-500/40 rounded px-0.5 -mx-0.5' : ''}
+                                  >
+                                    {bionicReading ? bionicWord(part) : part}
+                                  </span>
+                                );
+                              })}
+                            </p>
+                          );
+                        });
+                      })()}
                     </div>
                   )}
                 </div>
