@@ -92,6 +92,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
 
   const paragraphs = text.text.split('\n').filter((p) => p.trim().length > 0);
   const wordCount = text.meta?.wordCount || text.text.split(/\s+/).length;
+  const readingTime = text.meta?.readingTime || Math.max(1, Math.round(wordCount / 150));
 
   // Group questions by type for the overview
   const literalQuestions = questions.filter(q => q.type === 'literal');
@@ -115,6 +116,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
               {text.genre === 'fiction' ? '📖 Fiction' : '📰 Non-fiction'}
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400">{wordCount} words</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400">⏱️ ~{readingTime} min read</span>
             <span className="text-xs text-slate-400 dark:text-slate-500">
               🔍 {literalQuestions.length} on lines · 🧠 {inferenceQuestions.length} between lines
             </span>

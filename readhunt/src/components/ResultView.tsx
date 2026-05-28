@@ -31,7 +31,7 @@ const CORRECT_FEEDBACK = [
   { text: 'Nice!', emoji: '🌟' },
   { text: 'Top marks!', emoji: '🔥' },
   { text: 'Well done!', emoji: '👏' },
-  { text: 'Perfekt!', emoji: '💯' },
+  { text: 'Perfect!', emoji: '💯' },
   { text: 'Fantastic!', emoji: '✨' },
   { text: 'Excellent!', emoji: '🏆' },
   { text: 'Congrats!', emoji: '🎉' },
@@ -258,7 +258,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     <span className="text-base">🎯</span>
                     <div>
                       <span className="text-xs font-medium text-sky-700 dark:text-sky-300">Topic: </span>
-                      <span className="text-xs text-slate-700 dark:text-slate-200">{text.theme || text.genre}</span>
+                      <span className="text-xs text-slate-700 dark:text-slate-200 capitalize">{(text.theme || text.genre).replace(/-/g, ' ')}</span>
                     </div>
                   </div>
 

@@ -50,6 +50,13 @@ export const SetupView: React.FC<SetupViewProps> = ({
     return `Level ${grade}`;
   };
 
+  const getDifficultyTier = (grade: number): string => {
+    if (grade <= 3) return 'Beginner';
+    if (grade <= 6) return 'Intermediate';
+    if (grade <= 9) return 'Advanced';
+    return 'Expert';
+  };
+
   const getGradeColor = (grade: number): { bg: string; text: string; gradient: string } => {
     if (grade <= 3) return {
       bg: 'bg-emerald-500',
@@ -164,12 +171,20 @@ export const SetupView: React.FC<SetupViewProps> = ({
                 </motion.div>
               </AnimatePresence>
               <motion.div
-                className={cn("text-sm font-semibold", colors.text)}
+                className="flex items-center justify-center gap-2"
                 key={`label-${selectedGrade}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
-                {getGradeLabel(selectedGrade)}
+                <span className={cn("text-sm font-semibold", colors.text)}>
+                  {getGradeLabel(selectedGrade)}
+                </span>
+                <span className={cn(
+                  "text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full text-white bg-gradient-to-r",
+                  colors.gradient
+                )}>
+                  {getDifficultyTier(selectedGrade)}
+                </span>
               </motion.div>
             </motion.div>
 
