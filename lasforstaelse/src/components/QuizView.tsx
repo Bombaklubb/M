@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
+import { TextToSpeech } from './TextToSpeech';
 
 interface QuizViewProps {
   text: LibraryText;
@@ -214,6 +215,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     </button>
                   </div>
                 </div>
+              {/* Talsyntes */}
+              <div className="mb-4">
+                <TextToSpeech text={text.text} compact />
+              </div>
               {/* Bildstöd för åk 1-2 */}
               {text.imageUrl && text.grade <= 2 && (
                 <div className="mb-4">

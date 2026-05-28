@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { LibraryText } from '../types';
+import { TextToSpeech } from './TextToSpeech';
 
 interface ReadingViewProps {
   text: LibraryText;
@@ -38,6 +39,11 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 dark:text-slate-100">
           {text.title}
         </h1>
+      </div>
+
+      {/* Talsyntes */}
+      <div className="flex items-center justify-start mb-4">
+        <TextToSpeech text={text.text} />
       </div>
 
       {/* Text size selector */}
