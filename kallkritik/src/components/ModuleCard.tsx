@@ -19,6 +19,7 @@ const difficultyConfig: Record<string, { label: string; className: string }> = {
 };
 
 const cardColorClass: Record<number, string> = {
+  7: 'module-card-sky',
   1: 'module-card-violet',
   2: 'module-card-cyan',
   3: 'module-card-emerald',
@@ -28,6 +29,7 @@ const cardColorClass: Record<number, string> = {
 };
 
 const iconBgClass: Record<number, string> = {
+  7: 'bg-sky-100 border-sky-200',
   1: 'bg-violet-100 border-violet-200',
   2: 'bg-cyan-100 border-cyan-200',
   3: 'bg-emerald-100 border-emerald-200',
@@ -37,6 +39,7 @@ const iconBgClass: Record<number, string> = {
 };
 
 const accentTextClass: Record<number, string> = {
+  7: 'text-sky-600',
   1: 'text-violet-600',
   2: 'text-cyan-600',
   3: 'text-emerald-600',

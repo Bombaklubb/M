@@ -6,6 +6,7 @@ export type View =
   | 'module4'
   | 'module5'
   | 'module6'
+  | 'module7'
   | 'stats';
 
 export interface GameState {

@@ -10,6 +10,7 @@ import Module3View from '@/views/Module3View';
 import { Module4View } from '@/views/Module4View';
 import { Module5View } from '@/views/Module5View';
 import { Module6View } from '@/views/Module6View';
+import { Module7View } from '@/views/Module7View';
 import { StatsView } from '@/views/StatsView';
 
 const pageVariants = {
@@ -85,6 +86,12 @@ export default function App() {
         return (
           <motion.div key="module6" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module6View onComplete={handleModuleComplete(6)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module7':
+        return (
+          <motion.div key="module7" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module7View onComplete={handleModuleComplete(7)} onExit={handleExit} />
           </motion.div>
         );
       case 'stats':

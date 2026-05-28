@@ -2,6 +2,18 @@ import { ModuleMeta } from '@/types';
 
 export const MODULES: ModuleMeta[] = [
   {
+    id: 7,
+    title: 'Källkritik – Grunderna',
+    subtitle: 'Vem kan du lita på?',
+    description: 'Lär dig de fyra grundfrågorna i källkritik och öva på att bedöma om en källa är pålitlig, osäker eller ren desinformation.',
+    icon: '📚',
+    gradient: 'from-sky-500 to-blue-600',
+    xpReward: 15,
+    difficulty: 'Lätt',
+    badge: 'source-critic',
+    badgeName: 'Källkritikern',
+  },
+  {
     id: 1,
     title: 'AI eller människa?',
     subtitle: 'Kan du se skillnaden?',
