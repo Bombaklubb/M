@@ -219,13 +219,14 @@ export const QuizView: React.FC<QuizViewProps> = ({
               <div className="mb-4">
                 <TextToSpeech text={text.text} compact />
               </div>
-              {/* Bildstöd för åk 1-2 */}
-              {text.imageUrl && text.grade <= 2 && (
+              {/* Bild till texten */}
+              {text.imageUrl && (
                 <div className="mb-4">
                   <img
                     src={text.imageUrl}
                     alt={`Bild till ${text.title}`}
-                    className="w-full max-h-64 object-contain rounded-lg bg-slate-100 dark:bg-slate-700"
+                    loading="lazy"
+                    className="w-full max-h-64 object-cover rounded-lg bg-slate-100 dark:bg-slate-700"
                   />
                 </div>
               )}

@@ -41,6 +41,18 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
         </h1>
       </div>
 
+      {/* Bild till texten */}
+      {text.imageUrl && (
+        <div className="mb-6">
+          <img
+            src={text.imageUrl}
+            alt={`Bild till ${text.title}`}
+            loading="lazy"
+            className="w-full max-h-72 object-cover rounded-2xl shadow-lg bg-slate-100 dark:bg-slate-700"
+          />
+        </div>
+      )}
+
       {/* Talsyntes */}
       <div className="flex items-center justify-start mb-4">
         <TextToSpeech text={text.text} />
