@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
+import { TextToSpeech } from './TextToSpeech';
+import { getThemeVisual } from '@/lib/themes';
 
 interface QuizViewProps {
   text: LibraryText;
@@ -61,6 +63,14 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const [textSize, setTextSize] = useState<TextSize>('medium');
   const [bionicReading, setBionicReading] = useState(false);
   const [showGlossary, setShowGlossary] = useState(true);
+  const [imageFailed, setImageFailed] = useState(false);
+
+  // Reset image fallback when switching to a new text
+  useEffect(() => {
+    setImageFailed(false);
+  }, [text.id]);
+
+  const themeVisual = getThemeVisual(text.theme, text.genre);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -136,9 +146,12 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
           >
             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-24 overflow-hidden">
               <CardContent className="p-6 lg:p-8">
-                <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
-                  <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
+                  <div className="flex items-center gap-3">
+                    <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
+                    <TextToSpeech text={text.text} />
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Size:</span>
                     {(['small', 'medium', 'large'] as const).map((size, idx) => (
                       <motion.button
@@ -202,17 +215,40 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                   </div>
                 </div>
 
-                {/* Image support for lower levels */}
-                {text.imageUrl && text.grade <= 3 && (
-                  <div className="mb-4 -mx-6 -mt-2">
-                    <img
-                      src={text.imageUrl}
-                      alt={text.title}
-                      className="w-full h-44 object-cover rounded-t-none rounded-b-xl"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
+                {/* Header image (all levels) with graceful themed fallback */}
+                <div className="mb-5 -mx-6 lg:-mx-8 rounded-xl overflow-hidden">
+                  {text.imageUrl && !imageFailed ? (
+                    <div className="relative">
+                      <img
+                        src={text.imageUrl}
+                        alt={text.title}
+                        className="w-full h-44 md:h-52 object-cover"
+                        loading="lazy"
+                        onError={() => setImageFailed(true)}
+                      />
+                      {/* subtle theme chip on the image */}
+                      <span className="absolute bottom-2 left-3 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold text-white bg-black/40 backdrop-blur-sm">
+                        <span>{themeVisual.emoji}</span>
+                        <span>{themeVisual.label}</span>
+                      </span>
+                    </div>
+                  ) : (
+                    <div
+                      className={cn(
+                        'w-full h-44 md:h-52 flex flex-col items-center justify-center text-white bg-gradient-to-br relative overflow-hidden',
+                        themeVisual.gradient
+                      )}
+                    >
+                      {/* decorative soft circles */}
+                      <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/15" />
+                      <div className="absolute -bottom-10 -left-6 w-40 h-40 rounded-full bg-white/10" />
+                      <span className="text-6xl drop-shadow-md mb-1">{themeVisual.emoji}</span>
+                      <span className="text-sm font-semibold uppercase tracking-wide opacity-90">
+                        {themeVisual.label}
+                      </span>
+                    </div>
+                  )}
+                </div>
 
                 <div className="prose prose-lg max-w-none dark:prose-invert">
                   {showGlossary && !bionicReading ? (
