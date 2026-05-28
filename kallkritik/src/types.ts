@@ -7,6 +7,8 @@ export type View =
   | 'module5'
   | 'module6'
   | 'module7'
+  | 'module8'
+  | 'module9'
   | 'stats';
 
 export interface GameState {
@@ -30,6 +32,7 @@ export interface ModuleMeta {
   difficulty: 'Lätt' | 'Medel' | 'Svår';
   badge: string;
   badgeName: string;
+  gradeRange: string;
 }
 
 // Module 1: AI eller människa?
@@ -55,6 +58,7 @@ export interface FindErrorText {
   title: string;
   segments: ErrorSegment[];
   topic: string;
+  hint?: string;
 }
 
 // Module 3: Källkritik

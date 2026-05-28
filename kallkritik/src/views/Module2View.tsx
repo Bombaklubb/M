@@ -23,6 +23,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
   const [segmentStates, setSegmentStates] = useState<SegmentState[]>([]);
   const [checked, setChecked] = useState(false);
   const [totalFound, setTotalFound] = useState(0);
+  const [hintShown, setHintShown] = useState(false);
 
   const texts = MODULE2_TEXTS;
   const currentText = texts[textIndex];
@@ -66,6 +67,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     } else {
       setTextIndex(i => i + 1);
       setChecked(false);
+      setHintShown(false);
       setSegmentStates(texts[textIndex + 1].segments.map(() => ({ selected: false })));
     }
   }
@@ -74,6 +76,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     setPhase('intro');
     setTextIndex(0);
     setChecked(false);
+    setHintShown(false);
     setSegmentStates([]);
     setTotalFound(0);
   }
@@ -207,13 +210,37 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
 
             {/* Instruction hint */}
             {!checked && (
-              <div className="flex items-center gap-2 bg-xp/10 rounded-lg px-3 py-2 mb-4">
-                <AlertCircle className="w-4 h-4 text-xp shrink-0" />
-                <p className="text-xs text-xp">
+              <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2 mb-3">
+                <AlertCircle className="w-4 h-4 text-amber-500 shrink-0" />
+                <p className="text-xs text-amber-700 font-semibold">
                   Tryck på{' '}
-                  <span className="underline decoration-xp decoration-2">markerade ord</span>{' '}
+                  <span className="underline decoration-amber-500 decoration-2">markerade ord</span>{' '}
                   du tror är fel
                 </p>
+              </div>
+            )}
+
+            {/* Hint button + panel */}
+            {!checked && (
+              <div className="mb-3">
+                {!hintShown ? (
+                  <button
+                    onClick={() => setHintShown(true)}
+                    className="flex items-center gap-1.5 text-xs font-bold text-indigo-500 hover:text-indigo-700 cursor-pointer transition-colors"
+                  >
+                    <Info className="w-3.5 h-3.5" />
+                    Visa ledtråd
+                  </button>
+                ) : (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-indigo-50 border-2 border-indigo-100 rounded-xl px-3 py-2 text-xs text-indigo-700 font-semibold"
+                  >
+                    <span className="font-extrabold">Ledtråd:</span>{' '}
+                    {currentText.hint ?? `Det finns ${currentText.segments.filter(s => s.isError).length} fel i texten. Leta efter felaktiga fakta om ${currentText.topic.toLowerCase()}.`}
+                  </motion.div>
+                )}
               </div>
             )}
 
