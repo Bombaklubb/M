@@ -1,5 +1,6 @@
 "use client";
 
+// Jaktlänkar: Läsjakten, Mattejakten, Svenskajakten, Readhunt
 import { useState, useRef, useEffect } from "react";
 
 const SwedishFlag = () => (
