@@ -152,9 +152,9 @@ export const QuizView: React.FC<QuizViewProps> = ({
           >
             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-24 overflow-hidden">
               <CardContent className="p-6 lg:p-8">
-                <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
-                  <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
-                  <div className="flex items-center gap-2">
+                <div className="flex items-start justify-between gap-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
+                  <h3 className="font-bold text-slate-700 dark:text-slate-200 shrink-0">{text.title}</h3>
+                  <div className="flex items-center justify-end gap-2 flex-wrap">
                     <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Storlek:</span>
                     {(['small', 'medium', 'large'] as const).map((size, idx) => (
                       <motion.button
@@ -232,6 +232,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     >
                       🎤 Följ med
                     </motion.button>
+                    {/* Talsyntes på samma rad (dölj i karaokeläge som har egna kontroller) */}
+                    {!karaokeMode && <TextToSpeech text={text.text} compact />}
                     <button
                       onClick={() => setShowText(false)}
                       className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
@@ -240,12 +242,6 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     </button>
                   </div>
                 </div>
-              {/* Talsyntes (visas bara om INTE i karaokeläge) */}
-              {!karaokeMode && (
-              <div className="mb-4">
-                <TextToSpeech text={text.text} compact />
-              </div>
-              )}
               {/* Bild till texten */}
               {text.imageUrl && (
                 <div className="mb-4">
