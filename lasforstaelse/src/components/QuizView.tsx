@@ -6,7 +6,6 @@ import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
-import { TextToSpeech } from './TextToSpeech';
 import { TextWithSpeech } from './TextWithSpeech';
 
 interface QuizViewProps {
@@ -152,9 +151,9 @@ export const QuizView: React.FC<QuizViewProps> = ({
           >
             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-24 overflow-hidden">
               <CardContent className="p-6 lg:p-8">
-                <div className="flex items-start justify-between gap-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
+                <div className="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
                   <h3 className="font-bold text-slate-700 dark:text-slate-200 shrink-0">{text.title}</h3>
-                  <div className="flex items-center justify-end gap-2 flex-wrap">
+                  <div className="flex items-center gap-2">
                     <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Storlek:</span>
                     {(['small', 'medium', 'large'] as const).map((size, idx) => (
                       <motion.button
@@ -190,6 +189,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       title="Bionic Reading - fetstil på ordets början för lättare läsning"
                       aria-label="Bionic Reading"
                       aria-pressed={bionicReading}
+                      disabled={karaokeMode}
                     >
                       <span className="font-black">Bio</span>nic
                     </motion.button>
@@ -226,14 +226,12 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       )}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      title="Karaoke - markerar orden medan de läses upp"
-                      aria-label="Karaoke-läge"
+                      title="Lyssna - läser upp texten och markerar orden"
+                      aria-label="Lyssna med ordmarkering"
                       aria-pressed={karaokeMode}
                     >
-                      🎤 Följ med
+                      🔊 Lyssna
                     </motion.button>
-                    {/* Talsyntes på samma rad (dölj i karaokeläge som har egna kontroller) */}
-                    {!karaokeMode && <TextToSpeech text={text.text} compact />}
                     <button
                       onClick={() => setShowText(false)}
                       className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
