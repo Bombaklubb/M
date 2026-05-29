@@ -147,10 +147,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-24 overflow-hidden">
               <CardContent className="p-6 lg:p-8">
                 <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
-                  <div className="flex items-center gap-3">
-                    <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
-                    <TextToSpeech speech={speech} />
-                  </div>
+                  <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Size:</span>
                     {(['small', 'medium', 'large'] as const).map((size, idx) => (
@@ -206,6 +203,8 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     >
                       📖 Words
                     </motion.button>
+                    <div className="h-4 w-px bg-slate-200 dark:bg-slate-600 mx-1 hidden sm:block" />
+                    <TextToSpeech speech={speech} />
                     <button
                       onClick={() => setShowText(false)}
                       className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
