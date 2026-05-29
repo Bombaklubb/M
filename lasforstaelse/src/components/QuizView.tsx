@@ -7,6 +7,7 @@ import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
 import { TextToSpeech } from './TextToSpeech';
+import { TextWithSpeech } from './TextWithSpeech';
 
 interface QuizViewProps {
   text: LibraryText;
@@ -75,6 +76,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [textSize, setTextSize] = useState<TextSize>('medium');
   const [bionicReading, setBionicReading] = useState(false);
   const [showGlossary, setShowGlossary] = useState(true);
+  const [karaokeMode, setKaraokeMode] = useState(false);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -195,7 +197,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       onClick={() => setShowGlossary(!showGlossary)}
                       className={cn(
                         "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
-                        showGlossary
+                        showGlossary && !karaokeMode
                           ? 'bg-gradient-to-br from-indigo-400 to-violet-500 text-white shadow-md'
                           : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
                       )}
@@ -203,9 +205,32 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       whileTap={{ scale: 0.98 }}
                       title="Ordförklaring - klicka på svåra ord för att se vad de betyder"
                       aria-label="Ordförklaring"
-                      aria-pressed={showGlossary}
+                      aria-pressed={showGlossary && !karaokeMode}
+                      disabled={karaokeMode}
                     >
                       📖 Ord
+                    </motion.button>
+                    <motion.button
+                      onClick={() => {
+                        setKaraokeMode(!karaokeMode);
+                        if (!karaokeMode) {
+                          setBionicReading(false);
+                          setShowGlossary(false);
+                        }
+                      }}
+                      className={cn(
+                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
+                        karaokeMode
+                          ? 'bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-md'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
+                      )}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      title="Karaoke - markerar orden medan de läses upp"
+                      aria-label="Karaoke-läge"
+                      aria-pressed={karaokeMode}
+                    >
+                      🎤 Följ med
                     </motion.button>
                     <button
                       onClick={() => setShowText(false)}
@@ -215,10 +240,12 @@ export const QuizView: React.FC<QuizViewProps> = ({
                     </button>
                   </div>
                 </div>
-              {/* Talsyntes */}
+              {/* Talsyntes (visas bara om INTE i karaokeläge) */}
+              {!karaokeMode && (
               <div className="mb-4">
                 <TextToSpeech text={text.text} compact />
               </div>
+              )}
               {/* Bild till texten */}
               {text.imageUrl && (
                 <div className="mb-4">
@@ -231,7 +258,12 @@ export const QuizView: React.FC<QuizViewProps> = ({
                 </div>
               )}
                 <div className="prose prose-lg max-w-none dark:prose-invert">
-                  {showGlossary && !bionicReading ? (
+                  {karaokeMode ? (
+                    <TextWithSpeech
+                      text={text.text}
+                      textSizeClass={textSizeClasses[textSize]}
+                    />
+                  ) : showGlossary && !bionicReading ? (
                     <TextWithGlossary
                       text={text.text}
                       className={cn(
