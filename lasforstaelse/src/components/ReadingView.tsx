@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LibraryText } from '../types';
-import { TextToSpeech } from './TextToSpeech';
+import { TextWithSpeech } from './TextWithSpeech';
 
 interface ReadingViewProps {
   text: LibraryText;
@@ -53,11 +53,6 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
         </div>
       )}
 
-      {/* Talsyntes */}
-      <div className="flex items-center justify-start mb-4">
-        <TextToSpeech text={text.text} />
-      </div>
-
       {/* Text size selector */}
       <div className="flex items-center justify-end gap-2 mb-4">
         <span className="text-sm text-slate-500 dark:text-slate-400 mr-2">Textstorlek:</span>
@@ -102,15 +97,12 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
         </button>
       </div>
 
-      {/* Text content */}
+      {/* Text content with speech and word highlighting */}
       <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 dark:bg-slate-800">
-        <div className="prose prose-lg max-w-none">
-          {text.text.split('\n').map((paragraph, index) => (
-            <p key={index} className={`text-slate-700 dark:text-slate-200 leading-relaxed mb-4 last:mb-0 ${textSizeClasses[textSize]}`}>
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <TextWithSpeech
+          text={text.text}
+          textSizeClass={textSizeClasses[textSize]}
+        />
       </div>
 
       {/* Action button */}
