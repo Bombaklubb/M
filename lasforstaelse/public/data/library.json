@@ -37056,5 +37056,245 @@
       "model": "manual"
     },
     "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "akgy-tema-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "AI och framtidens arbetsmarknad",
+    "text": "Utvecklingen av artificiell intelligens har under de senaste decennierna gått från att vara ett forskningsområde med begränsad praktisk betydelse till att bli en central del av ekonomiska och samhälleliga förändringar. Tekniken används i dag inom allt från sjukvård och utbildning till logistik och industriell produktion. Förespråkare menar att AI kan öka produktiviteten, minska kostnader och frigöra människor från monotona arbetsuppgifter. Kritiker framhåller samtidigt att automatisering riskerar att ersätta vissa yrken och skapa nya former av ekonomisk ojämlikhet.\n\nHistoriskt har tekniska innovationer ofta förändrat arbetsmarknaden. Under industrialiseringen ersattes många manuella arbetsuppgifter av maskiner, men samtidigt uppstod helt nya yrken. En liknande process kan observeras i dag. Vissa administrativa uppgifter, exempelvis enklare dokumenthantering eller standardiserad kundservice, kan utföras snabbare av intelligenta system. Samtidigt ökar efterfrågan på kompetenser inom programmering, dataanalys och digital strategi.\n\nEn viktig fråga handlar dock inte enbart om vilka arbeten som försvinner utan om hur arbetsuppgifter förändras. Många forskare betonar att AI ofta fungerar som ett komplement snarare än en ersättare. En läkare kan använda avancerade analysverktyg för att identifiera sjukdomsmönster, men den slutliga bedömningen kräver fortfarande medicinsk erfarenhet, etiska överväganden och kommunikation med patienten. På samma sätt kan lärare använda digitala system för att följa elevers utveckling, men undervisningens sociala och pedagogiska dimension kan inte reduceras till algoritmer.\n\nFrågan om utbildning blir därför central. Om arbetsmarknaden förändras snabbare än utbildningssystemen riskerar vissa grupper att hamna utanför. Livslångt lärande har blivit ett återkommande begrepp i debatten. Det innebär att människor behöver utveckla sina kunskaper kontinuerligt under hela yrkeslivet. Universitet, företag och offentliga institutioner förväntas samverka för att skapa flexibla utbildningsmöjligheter.\n\nSamtidigt finns etiska aspekter. Algoritmer tränas på stora mängder data, och om dessa data innehåller snedvridningar kan systemen reproducera eller förstärka existerande orättvisor. Ett rekryteringsverktyg som baseras på historiska anställningsmönster riskerar exempelvis att missgynna grupper som tidigare varit underrepresenterade. Därför efterfrågas ökad transparens och tydligare reglering.\n\nDebatten omfattar även frågor om makt och ansvar. Stora teknikföretag kontrollerar betydande mängder data och resurser, vilket ger dem stort inflytande över utvecklingen. Samtidigt har stater ett ansvar att skydda medborgarnas rättigheter och säkerställa rättvisa konkurrensvillkor. Balansen mellan innovation och reglering är därför komplex.\n\nTrots osäkerheten kring framtiden finns en bred enighet om att AI kommer att fortsätta påverka arbetslivet. Den avgörande frågan är inte om förändringen sker utan hur samhället väljer att hantera den. Genom utbildning, etiska riktlinjer och inkluderande politik kan tekniken bli ett verktyg som stärker människors möjligheter snarare än begränsar dem. Utfallet beror i hög grad på de beslut som fattas i dag.",
+    "questions": [
+      {
+        "type": "inferens",
+        "q": "Vilken huvudidé lyfts fram i texten?",
+        "options": [
+          "AI förändrar arbetslivet på flera nivåer",
+          "AI kommer att förbjudas i många länder",
+          "Utbildning saknar betydelse för framtiden",
+          "Teknikutvecklingen har stannat av"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur beskrivs relationen mellan AI och många yrkesgrupper?",
+        "options": [
+          "AI ersätter alltid människor",
+          "AI fungerar ofta som ett komplement",
+          "AI används endast inom industrin",
+          "AI saknar praktiska tillämpningar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämns industrialiseringen?",
+        "options": [
+          "För att kritisera maskiner",
+          "För att beskriva ekonomiska kriser",
+          "För att jämföra tidigare och nutida förändringar",
+          "För att förklara medicinsk forskning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken risk med algoritmer diskuteras?",
+        "options": [
+          "För låg energiförbrukning",
+          "Brist på internetuppkoppling",
+          "Överproduktion av varor",
+          "Att tidigare snedvridningar kan förstärkas"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär livslångt lärande enligt texten?",
+        "options": [
+          "Kontinuerlig kompetensutveckling",
+          "Obligatorisk universitetsutbildning",
+          "Att arbeta utan pension",
+          "Att endast studera digital teknik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken slutsats kan dras av textens avslutning?",
+        "options": [
+          "Utvecklingen är helt förutsägbar",
+          "Tekniken avgör ensam framtiden",
+          "Framtiden påverkas av samhälleliga beslut",
+          "AI kommer snart att försvinna"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 663
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "akgy-tema-002",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Städer i förändring",
+    "text": "Urbanisering är en av de mest betydelsefulla samhällsförändringarna under modern tid. Allt fler människor väljer eller tvingas att bosätta sig i städer, vilket påverkar ekonomi, miljö och sociala relationer. Fenomenet är globalt men tar sig olika uttryck beroende på historiska, geografiska och politiska förutsättningar.\n\nMånga städer växer eftersom de erbjuder utbildning, arbete och kulturella möjligheter. Företag söker ofta närhet till arbetskraft och infrastruktur, vilket förstärker utvecklingen. Samtidigt uppstår utmaningar när befolkningen ökar snabbare än samhällsplaneringen hinner anpassas. Bostadsbrist, trafikproblem och ökade levnadskostnader är återkommande frågor.\n\nMiljöperspektivet spelar en central roll. Tät bebyggelse kan minska behovet av långa transporter och därmed reducera utsläpp. Samtidigt kräver stora städer betydande resurser i form av energi, vatten och byggmaterial. Hållbar stadsutveckling handlar därför om att skapa effektiva system som kombinerar ekonomisk tillväxt med ekologiskt ansvar.\n\nSocial hållbarhet är minst lika viktig. Om olika grupper lever under mycket skilda villkor kan segregation förstärkas. Skillnader i inkomst, utbildning och hälsa riskerar att skapa geografiska mönster där vissa områden får bättre förutsättningar än andra. Forskare betonar att tillgång till kollektivtrafik, grönområden och offentlig service kan bidra till ökad jämlikhet.\n\nEtt exempel är arbetet med inkluderande stadsplanering. I flera kommuner deltar invånare i diskussioner om hur nya områden ska utformas. Genom dialog kan beslutsfattare få kunskap om lokala behov som annars riskerar att förbises. Kritiker menar dock att sådana processer ibland blir symboliska snarare än verkligt inflytelserika.\n\nTekniska innovationer påverkar också stadsmiljön. Sensorer kan användas för att övervaka trafikflöden, energiförbrukning och luftkvalitet. Förespråkare ser detta som ett sätt att använda resurser mer effektivt. Samtidigt väcker datainsamling frågor om integritet och demokratiskt ansvar. Vem kontrollerar informationen, och hur används den?\n\nI många städer lever människor med olika bakgrunder sida vid sida. En pensionerad ingenjör, en nyanländ student, en icke-binär kulturarbetare och en småföretagare kan dela samma stadsrum men ha helt olika erfarenheter av vardagen. Denna mångfald kan skapa kreativitet och innovation men kräver också institutioner som främjar delaktighet och respekt.\n\nFramtidens stad kommer sannolikt att präglas av både möjligheter och konflikter. Urbanisering är inte en process som kan stoppas genom enkla beslut. Däremot kan dess konsekvenser påverkas genom långsiktig planering, investeringar och medborgarinflytande. Frågan är därför inte enbart hur städer växer utan vilka värden som ska styra deras utveckling.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Varför växer många städer enligt texten?",
+        "options": [
+          "På grund av utbildning och arbetstillfällen",
+          "Enbart genom statliga beslut",
+          "För att landsbygden förbjuds",
+          "Endast genom turism"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilket problem nämns som en följd av snabb urbanisering?",
+        "options": [
+          "Minskad utbildning",
+          "Bostadsbrist",
+          "Färre företag",
+          "Minskad teknikutveckling"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad innebär social hållbarhet i textens sammanhang?",
+        "options": [
+          "Lägre energiförbrukning",
+          "Fler höghus",
+          "Minskade sociala skillnader och ökad jämlikhet",
+          "Privata vägar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken invändning riktas mot vissa dialogprocesser?",
+        "options": [
+          "De är för tekniska",
+          "De kostar för lite",
+          "De saknar deltagare",
+          "De kan bli mer symboliska än inflytelserika"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför diskuteras integritet i samband med smarta städer?",
+        "options": [
+          "På grund av datainsamling",
+          "På grund av väderförändringar",
+          "På grund av byggmaterial",
+          "På grund av kollektivtrafik"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilket budskap förmedlas i slutet av texten?",
+        "options": [
+          "Urbanisering kan enkelt stoppas",
+          "Utvecklingen påverkas av hur samhället planerar",
+          "Teknik löser alla problem",
+          "Städer blir identiska"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 671
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "akgy-tema-003",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Vetenskapliga revolutioner",
+    "text": "Vetenskapens historia beskrivs ofta som en gradvis process där ny kunskap successivt ersätter gamla föreställningar. Samtidigt visar flera historiska exempel att utvecklingen ibland sker genom mer dramatiska förändringar. När etablerade teorier inte längre kan förklara observationer uppstår situationer där hela perspektiv omprövas.\n\nUnder antiken dominerade föreställningen att jorden befann sig i universums centrum. Denna världsbild stöddes av filosofiska argument och observationer som verkade självklara för dåtidens människor. Med tiden började dock astronomer samla data som inte stämde överens med de rådande modellerna. Nya beräkningar ledde till alternativa förklaringar, vilket skapade vetenskapliga konflikter.\n\nEtt viktigt kännetecken för vetenskap är att teorier måste kunna prövas. En teori betraktas inte som sann för att den är populär eller traditionell, utan för att den ger förklaringar som stöds av evidens. När ny evidens framkommer måste forskarsamhället vara berett att omvärdera tidigare slutsatser. Detta gör vetenskapen både stabil och föränderlig.\n\nBegreppet paradigm används ofta för att beskriva de grundläggande antaganden som styr forskning inom ett område. Ett paradigm påverkar vilka frågor som anses relevanta, vilka metoder som används och hur resultat tolkas. Under normala perioder arbetar forskare huvudsakligen inom rådande paradigm. Om motsägelserna blir för många kan dock ett paradigmskifte inträffa.\n\nEtt paradigmskifte innebär inte att all tidigare kunskap förkastas. Snarare förändras sättet att förstå relationerna mellan olika fenomen. Nya teorier bygger ofta vidare på tidigare upptäckter samtidigt som de introducerar nya perspektiv. Därför är vetenskaplig utveckling mer komplex än en enkel kamp mellan rätt och fel.\n\nModerna forskningsområden illustrerar denna dynamik. Inom klimatvetenskap, genetik och partikelfysik utvecklas kunskapen kontinuerligt genom internationellt samarbete. Forskare granskar varandras resultat, upprepar experiment och diskuterar alternativa tolkningar. Processen kan vara långsam, men syftet är att säkerställa hög tillförlitlighet.\n\nSamtidigt möter vetenskapen samhälleliga utmaningar. Information sprids snabbt genom digitala medier, och människor exponeras för både välgrundade analyser och missvisande påståenden. Vetenskaplig kompetens handlar därför inte enbart om att känna till fakta utan också om att kunna värdera källor och förstå hur kunskap produceras.\n\nVetenskapliga revolutioner framstår ofta som avgörande vändpunkter när man ser tillbaka på historien. För dem som levde mitt i förändringen var utvecklingen däremot ofta osäker och omstridd. Detta påminner om att kunskap inte uppstår i ett vakuum utan formas genom diskussion, prövning och kritisk granskning. Just denna process utgör en av vetenskapens mest centrala styrkor.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad krävs enligt texten för att en teori ska accepteras vetenskapligt?",
+        "options": [
+          "Att den stöds av evidens",
+          "Att den är äldst",
+          "Att den är mest populär",
+          "Att den kommer från en myndighet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad beskriver begreppet paradigm?",
+        "options": [
+          "Ett tillfälligt experiment",
+          "Grundläggande antaganden som styr forskning",
+          "En typ av laboratorium",
+          "Ett statistiskt fel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur framställs ett paradigmskifte?",
+        "options": [
+          "Som total förstörelse av tidigare kunskap",
+          "Som en slumpmässig förändring",
+          "Som en omtolkning som bygger vidare på tidigare kunskap",
+          "Som ett politiskt beslut"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken utmaning för vetenskapen nämns i den moderna informationsmiljön?",
+        "options": [
+          "Brist på forskning",
+          "För få universitet",
+          "För många experiment",
+          "Spridning av missvisande påståenden"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämns den geocentriska världsbilden?",
+        "options": [
+          "Som exempel på hur etablerade idéer kan omprövas",
+          "Som bevis för modern astronomi",
+          "Som ett politiskt system",
+          "Som en ekonomisk teori"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken övergripande slutsats kan dras av texten?",
+        "options": [
+          "Vetenskap utvecklas utan kritik",
+          "Kunskap formas genom prövning och granskning",
+          "Historien saknar betydelse för forskning",
+          "Paradigm förändras varje år"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 658
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop"
   }
 ]
