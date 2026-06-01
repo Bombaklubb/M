@@ -1,5 +1,6 @@
 "use client";
 
+// Jaktlänkar: Läsjakten, Mattejakten, Svenskajakten, Readhunt
 import { useState, useRef, useEffect } from "react";
 
 const SwedishFlag = () => (
@@ -14,6 +15,7 @@ const APPS = [
   { label: "Läsjakten",    url: "https://lasjakten.vercel.app",    icon: <span className="text-base leading-none">📚</span> },
   { label: "Mattejakten",  url: "https://mattejakten.vercel.app",  icon: <span className="text-base leading-none">🔢</span> },
   { label: "Svenskajakten",url: "https://svenskajakten.vercel.app",icon: <SwedishFlag /> },
+  { label: "Readhunt",     url: "https://readhunt.vercel.app",     icon: <span className="text-base leading-none">🔍</span> },
 ];
 
 export default function JakterMenu() {

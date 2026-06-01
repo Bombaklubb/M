@@ -6,6 +6,7 @@ import { Card, CardContent } from './ui/card';
 import { BorderBeam } from './ui/border-beam';
 import { Sparkles } from './ui/sparkles';
 import { cn } from '@/lib/utils';
+import { getThemeVisual } from '@/lib/themes';
 
 interface ResultViewProps {
   text: LibraryText;
@@ -31,7 +32,7 @@ const CORRECT_FEEDBACK = [
   { text: 'Nice!', emoji: '🌟' },
   { text: 'Top marks!', emoji: '🔥' },
   { text: 'Well done!', emoji: '👏' },
-  { text: 'Perfekt!', emoji: '💯' },
+  { text: 'Perfect!', emoji: '💯' },
   { text: 'Fantastic!', emoji: '✨' },
   { text: 'Excellent!', emoji: '🏆' },
   { text: 'Congrats!', emoji: '🎉' },
@@ -62,6 +63,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [animatedPercentage, setAnimatedPercentage] = useState(0);
+  const [imageFailed, setImageFailed] = useState(false);
+  const themeVisual = getThemeVisual(text.theme, text.genre);
 
   // Beräkna resultat för flervalsfrågor
   const results = text.questions.map((q, index) => {
@@ -125,6 +128,30 @@ export const ResultView: React.FC<ResultViewProps> = ({
             <BorderBeam size={300} duration={10} colorFrom={percentage >= 60 ? "#22c55e" : "#f59e0b"} colorTo={percentage >= 60 ? "#14b8a6" : "#ef4444"} />
 
             <CardContent className="p-5 text-center">
+              {/* Text banner: image with themed fallback */}
+              <div className="-mx-5 -mt-5 mb-4 rounded-b-none overflow-hidden">
+                {text.imageUrl && !imageFailed ? (
+                  <div className="relative">
+                    <img
+                      src={text.imageUrl}
+                      alt={text.title}
+                      className="w-full h-28 object-cover"
+                      loading="lazy"
+                      onError={() => setImageFailed(true)}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <span className="absolute bottom-2 left-0 right-0 px-4 text-white font-bold text-base drop-shadow truncate">
+                      {text.title}
+                    </span>
+                  </div>
+                ) : (
+                  <div className={cn('relative w-full h-28 flex items-center justify-center gap-3 text-white bg-gradient-to-br', themeVisual.gradient)}>
+                    <span className="text-4xl drop-shadow">{themeVisual.emoji}</span>
+                    <span className="font-bold text-base drop-shadow">{text.title}</span>
+                  </div>
+                )}
+              </div>
+
               {/* Top row: emoji + score circle + points side by side */}
               <div className="flex items-center justify-center gap-6 mb-4">
                 <motion.div
@@ -258,7 +285,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     <span className="text-base">🎯</span>
                     <div>
                       <span className="text-xs font-medium text-sky-700 dark:text-sky-300">Topic: </span>
-                      <span className="text-xs text-slate-700 dark:text-slate-200">{text.theme || text.genre}</span>
+                      <span className="text-xs text-slate-700 dark:text-slate-200 capitalize">{(text.theme || text.genre).replace(/-/g, ' ')}</span>
                     </div>
                   </div>
 

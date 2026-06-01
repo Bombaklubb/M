@@ -10,6 +10,9 @@ import Module3View from '@/views/Module3View';
 import { Module4View } from '@/views/Module4View';
 import { Module5View } from '@/views/Module5View';
 import { Module6View } from '@/views/Module6View';
+import { Module7View } from '@/views/Module7View';
+import { Module8View } from '@/views/Module8View';
+import { Module9View } from '@/views/Module9View';
 import { StatsView } from '@/views/StatsView';
 
 const pageVariants = {
@@ -85,6 +88,24 @@ export default function App() {
         return (
           <motion.div key="module6" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module6View onComplete={handleModuleComplete(6)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module7':
+        return (
+          <motion.div key="module7" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module7View onComplete={handleModuleComplete(7)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module8':
+        return (
+          <motion.div key="module8" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module8View onComplete={handleModuleComplete(8)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module9':
+        return (
+          <motion.div key="module9" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module9View onComplete={handleModuleComplete(9)} onExit={handleExit} />
           </motion.div>
         );
       case 'stats':

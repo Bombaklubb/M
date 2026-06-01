@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
+import { TextToSpeech } from './TextToSpeech';
+import { useSpeech } from '@/hooks/useSpeech';
+import { getThemeVisual } from '@/lib/themes';
 
 interface QuizViewProps {
   text: LibraryText;
@@ -12,33 +15,24 @@ interface QuizViewProps {
   onShowText: () => void;
 }
 
-// Bionic reading: bold the first portion of each word for easier reading
-const applyBionicReading = (text: string): React.ReactNode[] => {
-  return text.split(' ').map((word, index) => {
-    if (word.length === 0) return null;
+// Bionic reading: bold the first portion of a single word for easier reading
+const bionicWord = (word: string): React.ReactNode => {
+  const cleanWord = word.replace(/[.,!?;:'"()-]/g, '');
+  const boldLength = Math.ceil(cleanWord.length * 0.4);
 
-    const cleanWord = word.replace(/[.,!?;:'"()-]/g, '');
-    const boldLength = Math.ceil(cleanWord.length * 0.4);
+  let startIdx = 0;
+  while (startIdx < word.length && /[.,!?;:'"()-]/.test(word[startIdx])) startIdx++;
 
-    let startIdx = 0;
-    while (startIdx < word.length && /[.,!?;:'"()-]/.test(word[startIdx])) startIdx++;
+  let boldEndIdx = startIdx + boldLength;
+  if (boldEndIdx > word.length) boldEndIdx = word.length;
 
-    let boldEndIdx = startIdx + boldLength;
-    if (boldEndIdx > word.length) boldEndIdx = word.length;
-
-    const before = word.slice(0, startIdx);
-    const boldPart = word.slice(startIdx, boldEndIdx);
-    const normalPart = word.slice(boldEndIdx);
-
-    return (
-      <span key={index}>
-        {before}
-        <strong className="font-bold">{boldPart}</strong>
-        {normalPart}
-        {' '}
-      </span>
-    );
-  });
+  return (
+    <>
+      {word.slice(0, startIdx)}
+      <strong className="font-bold">{word.slice(startIdx, boldEndIdx)}</strong>
+      {word.slice(boldEndIdx)}
+    </>
+  );
 };
 
 const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; category: string }> = {
@@ -61,6 +55,23 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const [textSize, setTextSize] = useState<TextSize>('medium');
   const [bionicReading, setBionicReading] = useState(false);
   const [showGlossary, setShowGlossary] = useState(true);
+  const [imageFailed, setImageFailed] = useState(false);
+
+  // Reset image fallback when switching to a new text
+  useEffect(() => {
+    setImageFailed(false);
+  }, [text.id]);
+
+  const themeVisual = getThemeVisual(text.theme, text.genre);
+  const speech = useSpeech(text.text);
+  const spokenRef = useRef<HTMLSpanElement>(null);
+
+  // Karaoke auto-scroll for the bionic/plain reading view
+  useEffect(() => {
+    if (speech.speaking && speech.charIndex >= 0 && spokenRef.current) {
+      spokenRef.current.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }, [speech.charIndex, speech.speaking]);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -90,8 +101,8 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const progress = ((currentQuestion + 1) / totalQuestions) * 100;
   const selectedAnswer = answers[currentQuestion];
 
-  const paragraphs = text.text.split('\n').filter((p) => p.trim().length > 0);
   const wordCount = text.meta?.wordCount || text.text.split(/\s+/).length;
+  const readingTime = text.meta?.readingTime || Math.max(1, Math.round(wordCount / 150));
 
   // Group questions by type for the overview
   const literalQuestions = questions.filter(q => q.type === 'literal');
@@ -115,6 +126,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
               {text.genre === 'fiction' ? '📖 Fiction' : '📰 Non-fiction'}
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400">{wordCount} words</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400">⏱️ ~{readingTime} min read</span>
             <span className="text-xs text-slate-400 dark:text-slate-500">
               🔍 {literalQuestions.length} on lines · 🧠 {inferenceQuestions.length} between lines
             </span>
@@ -134,9 +146,9 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
           >
             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-24 overflow-hidden">
               <CardContent className="p-6 lg:p-8">
-                <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
+                <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
                   <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">Size:</span>
                     {(['small', 'medium', 'large'] as const).map((size, idx) => (
                       <motion.button
@@ -191,6 +203,8 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     >
                       📖 Words
                     </motion.button>
+                    <div className="h-4 w-px bg-slate-200 dark:bg-slate-600 mx-1 hidden sm:block" />
+                    <TextToSpeech speech={speech} />
                     <button
                       onClick={() => setShowText(false)}
                       className="text-sm text-indigo-600 dark:text-indigo-400 font-medium ml-2 lg:hidden"
@@ -200,23 +214,47 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                   </div>
                 </div>
 
-                {/* Image support for lower levels */}
-                {text.imageUrl && text.grade <= 3 && (
-                  <div className="mb-4 -mx-6 -mt-2">
-                    <img
-                      src={text.imageUrl}
-                      alt={text.title}
-                      className="w-full h-44 object-cover rounded-t-none rounded-b-xl"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
+                {/* Header image (all levels) with graceful themed fallback */}
+                <div className="mb-5 -mx-6 lg:-mx-8 rounded-xl overflow-hidden">
+                  {text.imageUrl && !imageFailed ? (
+                    <div className="relative">
+                      <img
+                        src={text.imageUrl}
+                        alt={text.title}
+                        className="w-full h-44 md:h-52 object-cover"
+                        loading="lazy"
+                        onError={() => setImageFailed(true)}
+                      />
+                      {/* subtle theme chip on the image */}
+                      <span className="absolute bottom-2 left-3 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold text-white bg-black/40 backdrop-blur-sm">
+                        <span>{themeVisual.emoji}</span>
+                        <span>{themeVisual.label}</span>
+                      </span>
+                    </div>
+                  ) : (
+                    <div
+                      className={cn(
+                        'w-full h-44 md:h-52 flex flex-col items-center justify-center text-white bg-gradient-to-br relative overflow-hidden',
+                        themeVisual.gradient
+                      )}
+                    >
+                      {/* decorative soft circles */}
+                      <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-white/15" />
+                      <div className="absolute -bottom-10 -left-6 w-40 h-40 rounded-full bg-white/10" />
+                      <span className="text-6xl drop-shadow-md mb-1">{themeVisual.emoji}</span>
+                      <span className="text-sm font-semibold uppercase tracking-wide opacity-90">
+                        {themeVisual.label}
+                      </span>
+                    </div>
+                  )}
+                </div>
 
                 <div className="prose prose-lg max-w-none dark:prose-invert">
                   {showGlossary && !bionicReading ? (
                     <TextWithGlossary
                       text={text.text}
                       grade={text.grade}
+                      highlightCharIndex={speech.speaking ? speech.charIndex : -1}
                       className={cn(
                         "leading-relaxed text-slate-700 dark:text-slate-300",
                         textSizeClasses[textSize]
@@ -224,20 +262,41 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     />
                   ) : (
                     <div className="space-y-4">
-                      {paragraphs.map((para, idx) => (
-                        <motion.p
-                          key={idx}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: idx * 0.05 }}
-                          className={cn(
-                            "leading-relaxed text-slate-700 dark:text-slate-300",
-                            textSizeClasses[textSize]
-                          )}
-                        >
-                          {bionicReading ? applyBionicReading(para) : para}
-                        </motion.p>
-                      ))}
+                      {(() => {
+                        let paragraphStart = 0;
+                        return text.text.split('\n\n').map((para, idx) => {
+                          let offset = paragraphStart;
+                          paragraphStart += para.length + 2;
+                          return (
+                            <p
+                              key={idx}
+                              className={cn(
+                                "leading-relaxed text-slate-700 dark:text-slate-300 mb-4 last:mb-0",
+                                textSizeClasses[textSize]
+                              )}
+                            >
+                              {para.split(/(\s+)/).map((part, i) => {
+                                const partStart = offset;
+                                offset += part.length;
+                                if (/^\s+$/.test(part)) return <span key={i}>{part}</span>;
+                                const isSpoken =
+                                  speech.speaking &&
+                                  speech.charIndex >= partStart &&
+                                  speech.charIndex < partStart + part.length;
+                                return (
+                                  <span
+                                    key={i}
+                                    ref={isSpoken ? spokenRef : undefined}
+                                    className={isSpoken ? 'bg-amber-200 dark:bg-amber-500/40 rounded px-0.5 -mx-0.5' : ''}
+                                  >
+                                    {bionicReading ? bionicWord(part) : part}
+                                  </span>
+                                );
+                              })}
+                            </p>
+                          );
+                        });
+                      })()}
                     </div>
                   )}
                 </div>

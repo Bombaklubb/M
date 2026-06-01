@@ -19,6 +19,9 @@ const difficultyConfig: Record<string, { label: string; className: string }> = {
 };
 
 const cardColorClass: Record<number, string> = {
+  7: 'module-card-sky',
+  8: 'module-card-pink',
+  9: 'module-card-teal',
   1: 'module-card-violet',
   2: 'module-card-cyan',
   3: 'module-card-emerald',
@@ -28,6 +31,9 @@ const cardColorClass: Record<number, string> = {
 };
 
 const iconBgClass: Record<number, string> = {
+  7: 'bg-sky-100 border-sky-200',
+  8: 'bg-pink-100 border-pink-200',
+  9: 'bg-teal-100 border-teal-200',
   1: 'bg-violet-100 border-violet-200',
   2: 'bg-cyan-100 border-cyan-200',
   3: 'bg-emerald-100 border-emerald-200',
@@ -37,6 +43,9 @@ const iconBgClass: Record<number, string> = {
 };
 
 const accentTextClass: Record<number, string> = {
+  7: 'text-sky-600',
+  8: 'text-pink-600',
+  9: 'text-teal-600',
   1: 'text-violet-600',
   2: 'text-cyan-600',
   3: 'text-emerald-600',
@@ -91,9 +100,16 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
             </div>
           </div>
 
-          {/* Module number */}
-          <div className={`text-xs font-extrabold ${accentText} mb-0.5 tracking-wide`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-            MODUL {module.id}
+          {/* Module number + grade range */}
+          <div className="flex items-center gap-2 mb-0.5">
+            <div className={`text-xs font-extrabold ${accentText} tracking-wide`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
+              MODUL {module.id}
+            </div>
+            {module.gradeRange && (
+              <span className="text-[10px] font-bold text-gray-400 bg-gray-100 border border-gray-200 rounded-full px-2 py-0.5">
+                {module.gradeRange}
+              </span>
+            )}
           </div>
 
           {/* Title */}

@@ -5,12 +5,22 @@ interface TextWithGlossaryProps {
   text: string;
   className?: string;
   grade?: number;
+  /** Character index of the word being read aloud, or -1 for none. */
+  highlightCharIndex?: number;
 }
 
-export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, className = '', grade }) => {
+export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, className = '', grade, highlightCharIndex = -1 }) => {
   const [activeWord, setActiveWord] = useState<string | null>(null);
   const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const activeSpokenRef = useRef<HTMLSpanElement>(null);
+
+  // Gently keep the spoken word in view (karaoke auto-scroll)
+  useEffect(() => {
+    if (highlightCharIndex >= 0 && activeSpokenRef.current) {
+      activeSpokenRef.current.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }, [highlightCharIndex]);
 
   // Stäng tooltip vid klick utanför
   useEffect(() => {
@@ -46,52 +56,68 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
     setActiveWord(activeWord === word ? null : word);
   };
 
-  // Dela upp text i stycken och ord
+  // Dela upp text i stycken och ord (med absolut teckenindex för uppläsning)
   const renderText = () => {
     const paragraphs = text.split('\n\n');
+    let paragraphStart = 0;
 
-    return paragraphs.map((paragraph, pIndex) => (
-      <p key={pIndex} className="mb-4 last:mb-0">
-        {paragraph.split(/(\s+)/).map((part, index) => {
-          // Hantera whitespace
-          if (/^\s+$/.test(part)) {
-            return <span key={index}>{part}</span>;
-          }
+    return paragraphs.map((paragraph, pIndex) => {
+      let offset = paragraphStart;
+      // Advance the running start for the next paragraph (paragraphs are joined by '\n\n')
+      paragraphStart += paragraph.length + 2;
 
-          // Extrahera ord utan skiljetecken
-          const match = part.match(/^([^a-zåäöA-ZÅÄÖ]*)?([a-zåäöA-ZÅÄÖ]+)?([^a-zåäöA-ZÅÄÖ]*)?$/);
-          if (!match) return <span key={index}>{part}</span>;
+      return (
+        <p key={pIndex} className="mb-4 last:mb-0">
+          {paragraph.split(/(\s+)/).map((part, index) => {
+            const partStart = offset;
+            offset += part.length;
 
-          const [, before = '', word = '', after = ''] = match;
+            // Hantera whitespace
+            if (/^\s+$/.test(part)) {
+              return <span key={index}>{part}</span>;
+            }
 
-          if (!word) return <span key={index}>{part}</span>;
+            // Extrahera ord utan skiljetecken
+            const match = part.match(/^([^a-zåäöA-ZÅÄÖ]*)?([a-zåäöA-ZÅÄÖ]+)?([^a-zåäöA-ZÅÄÖ]*)?$/);
+            if (!match) return <span key={index}>{part}</span>;
 
-          const hasDef = hasExplanation(word, grade);
-          const isActive = activeWord?.toLowerCase() === word.toLowerCase();
+            const [, before = '', word = '', after = ''] = match;
 
-          return (
-            <span key={index}>
-              {before}
-              {hasDef ? (
-                <span
-                  onClick={(e) => handleWordClick(word, e)}
-                  className={`cursor-help border-b-2 border-dotted transition-colors ${
-                    isActive
-                      ? 'border-indigo-500 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
-                      : 'border-emerald-500 dark:border-slate-300 hover:border-indigo-500 hover:bg-emerald-50 dark:hover:bg-indigo-900/30'
-                  }`}
-                >
-                  {word}
-                </span>
-              ) : (
-                word
-              )}
-              {after}
-            </span>
-          );
-        })}
-      </p>
-    ));
+            if (!word) return <span key={index}>{part}</span>;
+
+            const hasDef = hasExplanation(word, grade);
+            const isActive = activeWord?.toLowerCase() === word.toLowerCase();
+            const isSpoken =
+              highlightCharIndex >= partStart && highlightCharIndex < partStart + part.length;
+
+            const spokenClass = isSpoken
+              ? 'bg-amber-200 dark:bg-amber-500/40 rounded px-0.5 -mx-0.5'
+              : '';
+
+            return (
+              <span key={index} ref={isSpoken ? activeSpokenRef : undefined} className={spokenClass}>
+                {before}
+                {hasDef ? (
+                  <span
+                    onClick={(e) => handleWordClick(word, e)}
+                    className={`cursor-help border-b-2 border-dotted transition-colors ${
+                      isActive
+                        ? 'border-indigo-500 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
+                        : 'border-emerald-500 dark:border-slate-300 hover:border-indigo-500 hover:bg-emerald-50 dark:hover:bg-indigo-900/30'
+                    }`}
+                  >
+                    {word}
+                  </span>
+                ) : (
+                  word
+                )}
+                {after}
+              </span>
+            );
+          })}
+        </p>
+      );
+    });
   };
 
   const wordDef = activeWord ? getWordDefinition(activeWord, grade) : null;

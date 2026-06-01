@@ -41,7 +41,7 @@ export default function JaktlankarMenu() {
   return (
     <div ref={ref} className="fixed bottom-2 right-3 z-40">
       {open && (
-        <div className="absolute bottom-8 right-0 mb-1 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[190px]">
+        <div className="absolute bottom-8 right-0 mb-1 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden min-w-[200px]">
           {APPS.map(app => (
             <a
               key={app.url}

@@ -6,6 +6,9 @@ export type View =
   | 'module4'
   | 'module5'
   | 'module6'
+  | 'module7'
+  | 'module8'
+  | 'module9'
   | 'stats';
 
 export interface GameState {
@@ -29,6 +32,7 @@ export interface ModuleMeta {
   difficulty: 'Lätt' | 'Medel' | 'Svår';
   badge: string;
   badgeName: string;
+  gradeRange: string;
 }
 
 // Module 1: AI eller människa?
@@ -54,6 +58,7 @@ export interface FindErrorText {
   title: string;
   segments: ErrorSegment[];
   topic: string;
+  hint?: string;
 }
 
 // Module 3: Källkritik
@@ -80,24 +85,7 @@ export interface SourceItem {
   }[];
 }
 
-// Module 4: Fakebilder
-export interface FakeImageHotspot {
-  id: number;
-  label: string;
-  description: string;
-  isArtifact: boolean;
-  x: number;
-  y: number;
-}
-
-export interface FakeImageItem {
-  id: string;
-  title: string;
-  description: string;
-  context: string;
-  imageUrl: string;
-  hotspots: FakeImageHotspot[];
-}
+// Module 4: Fakebilder & Deepfakes – types live in data/module4Data.ts
 
 // Module 5: AI-hallucinationer
 export interface HallucinationItem {
