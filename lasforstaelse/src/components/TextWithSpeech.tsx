@@ -20,11 +20,13 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
   const swedishVoiceRef = useRef<SpeechSynthesisVoice | null>(null);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const wordsRef = useRef<{ word: string; start: number; end: number }[]>([]);
+  const timerRef = useRef<number | null>(null);
+  const startTimeRef = useRef<number>(0);
+  const pausedAtRef = useRef<number>(0);
+  const boundaryWorkedRef = useRef(false);
 
-  // Split text into paragraphs and words with position tracking
   const paragraphs = text.split('\n').filter((p) => p.trim().length > 0);
 
-  // Build flat word list with character positions
   useEffect(() => {
     const words: { word: string; start: number; end: number }[] = [];
     let pos = 0;
@@ -39,12 +41,11 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
           end: wordStart + match[0].length,
         });
       }
-      pos += paragraph.length + 1; // +1 for newline
+      pos += paragraph.length + 1;
     }
     wordsRef.current = words;
   }, [text]);
 
-  // Initialize speech synthesis
   useEffect(() => {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
       setSupported(false);
@@ -65,19 +66,58 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     return () => {
       window.speechSynthesis.onvoiceschanged = null;
       window.speechSynthesis.cancel();
+      if (timerRef.current) cancelAnimationFrame(timerRef.current);
     };
   }, []);
+
+  const getWordTimings = useCallback((speechRate: number) => {
+    const words = wordsRef.current;
+    const totalChars = words.reduce((sum, w) => sum + w.word.length, 0);
+    const charsPerSecond = 12 * speechRate;
+    const totalDuration = (totalChars / charsPerSecond) * 1000;
+
+    let cumulative = 0;
+    return words.map((w) => {
+      const start = cumulative;
+      const duration = (w.word.length / totalChars) * totalDuration;
+      cumulative += duration;
+      return { start, end: cumulative };
+    });
+  }, []);
+
+  const startFallbackTimer = useCallback((speechRate: number) => {
+    const timings = getWordTimings(speechRate);
+    startTimeRef.current = performance.now();
+
+    const tick = () => {
+      if (!speaking || paused) return;
+
+      const elapsed = performance.now() - startTimeRef.current;
+      const wordIdx = timings.findIndex((t) => elapsed >= t.start && elapsed < t.end);
+
+      if (wordIdx !== -1 && !boundaryWorkedRef.current) {
+        setCurrentWordIndex(wordIdx);
+      }
+
+      if (elapsed < timings[timings.length - 1]?.end) {
+        timerRef.current = requestAnimationFrame(tick);
+      }
+    };
+
+    timerRef.current = requestAnimationFrame(tick);
+  }, [speaking, paused, getWordTimings]);
 
   const stop = useCallback(() => {
     if (!supported) return;
     window.speechSynthesis.cancel();
+    if (timerRef.current) cancelAnimationFrame(timerRef.current);
     setSpeaking(false);
     setPaused(false);
     setCurrentWordIndex(-1);
     utteranceRef.current = null;
+    boundaryWorkedRef.current = false;
   }, [supported]);
 
-  // Stop when text changes
   useEffect(() => {
     stop();
   }, [text, stop]);
@@ -85,6 +125,8 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
   const speak = useCallback(() => {
     if (!supported) return;
     window.speechSynthesis.cancel();
+    if (timerRef.current) cancelAnimationFrame(timerRef.current);
+    boundaryWorkedRef.current = false;
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'sv-SE';
@@ -93,11 +135,10 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
       utterance.voice = swedishVoiceRef.current;
     }
 
-    // Track word boundaries for highlighting
     utterance.onboundary = (event) => {
       if (event.name === 'word') {
+        boundaryWorkedRef.current = true;
         const charIndex = event.charIndex;
-        // Find which word we're at
         const wordIdx = wordsRef.current.findIndex(
           (w) => charIndex >= w.start && charIndex < w.end
         );
@@ -108,6 +149,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     };
 
     utterance.onend = () => {
+      if (timerRef.current) cancelAnimationFrame(timerRef.current);
       setSpeaking(false);
       setPaused(false);
       setCurrentWordIndex(-1);
@@ -115,6 +157,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     };
 
     utterance.onerror = () => {
+      if (timerRef.current) cancelAnimationFrame(timerRef.current);
       setSpeaking(false);
       setPaused(false);
       setCurrentWordIndex(-1);
@@ -126,24 +169,38 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     setSpeaking(true);
     setPaused(false);
     setCurrentWordIndex(0);
-  }, [supported, text, rate]);
+
+    setTimeout(() => {
+      if (!boundaryWorkedRef.current) {
+        startFallbackTimer(rate);
+      }
+    }, 200);
+  }, [supported, text, rate, startFallbackTimer]);
 
   const togglePause = useCallback(() => {
     if (!supported) return;
     if (paused) {
       window.speechSynthesis.resume();
+      if (!boundaryWorkedRef.current) {
+        startTimeRef.current = performance.now() - pausedAtRef.current;
+        startFallbackTimer(rate);
+      }
       setPaused(false);
     } else {
       window.speechSynthesis.pause();
+      if (timerRef.current) cancelAnimationFrame(timerRef.current);
+      pausedAtRef.current = performance.now() - startTimeRef.current;
       setPaused(true);
     }
-  }, [supported, paused]);
+  }, [supported, paused, rate, startFallbackTimer]);
 
   const handleRateChange = (newRate: number) => {
     setRate(newRate);
     if (speaking) {
-      // Restart with new rate
       window.speechSynthesis.cancel();
+      if (timerRef.current) cancelAnimationFrame(timerRef.current);
+      boundaryWorkedRef.current = false;
+
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'sv-SE';
       utterance.rate = newRate;
@@ -152,6 +209,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
       }
       utterance.onboundary = (event) => {
         if (event.name === 'word') {
+          boundaryWorkedRef.current = true;
           const charIndex = event.charIndex;
           const wordIdx = wordsRef.current.findIndex(
             (w) => charIndex >= w.start && charIndex < w.end
@@ -162,17 +220,26 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
         }
       };
       utterance.onend = () => {
+        if (timerRef.current) cancelAnimationFrame(timerRef.current);
         setSpeaking(false);
         setPaused(false);
         setCurrentWordIndex(-1);
       };
       utterance.onerror = () => {
+        if (timerRef.current) cancelAnimationFrame(timerRef.current);
         setSpeaking(false);
         setPaused(false);
         setCurrentWordIndex(-1);
       };
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
+      setCurrentWordIndex(0);
+
+      setTimeout(() => {
+        if (!boundaryWorkedRef.current) {
+          startFallbackTimer(newRate);
+        }
+      }, 200);
     }
   };
 
@@ -208,8 +275,8 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
             <span
               key={idx}
               className={cn(
-                'transition-all duration-100',
-                isHighlighted && 'bg-yellow-300 dark:bg-yellow-500 text-slate-900 dark:text-slate-900 rounded px-0.5 -mx-0.5'
+                'transition-all duration-75 rounded',
+                isHighlighted && 'bg-gradient-to-r from-yellow-300 to-amber-300 dark:from-yellow-400 dark:to-amber-400 text-slate-900 font-semibold px-1 py-0.5 -mx-0.5 shadow-sm ring-2 ring-yellow-400/50 dark:ring-yellow-500/50'
               )}
             >
               {segment}
