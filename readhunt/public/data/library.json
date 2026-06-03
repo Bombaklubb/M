@@ -3,80 +3,80 @@
     "id": "ak1-tema-001",
     "grade": 1,
     "genre": "fiction",
-    "theme": "animals",
-    "title": "The Small Dog",
-    "text": "Emma saw a small dog in the park. The dog was brown and happy. It ran after a ball. Emma gave the dog some water before she went home.",
-    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop",
+    "theme": "community",
+    "title": "Mickey and the Red Kite",
+    "text": "Mickey Mouse lives in a cheerful town. He likes walking with Pluto and meeting friends. One sunny day, Mickey finds a red kite in the park. He flies it and laughs all afternoon.",
+    "imageUrl": "https://images.unsplash.com/photo-1597149128485-6c6898a54283?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did Emma see the dog?",
+        "q": "Who lives in a cheerful town?",
         "options": [
-          "At school",
-          "In the park",
-          "In a shop",
-          "At the beach"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What color was the dog?",
-        "options": [
-          "Brown",
-          "Blue",
-          "White",
-          "Green"
+          "Mickey Mouse",
+          "Pluto",
+          "Donald Duck",
+          "Goofy"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What did the dog run after?",
+        "q": "What color is the kite?",
         "options": [
-          "A bird",
-          "A stick",
-          "A ball",
-          "A bike"
+          "Blue",
+          "Red",
+          "Yellow",
+          "Green"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where does Mickey find the kite?",
+        "options": [
+          "At school",
+          "At home",
+          "In the park",
+          "At a shop"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did Emma give the dog?",
+        "q": "Who does Mickey like walking with?",
         "options": [
-          "Milk",
-          "Bread",
-          "Candy",
-          "Water"
+          "Goofy",
+          "Donald",
+          "Minnie",
+          "Pluto"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "How was the dog feeling?",
+        "type": "literal",
+        "q": "What does Mickey do with the kite?",
         "options": [
-          "Happy",
-          "Angry",
-          "Cold",
-          "Slow"
+          "He flies it",
+          "He hides it",
+          "He paints it",
+          "He sells it"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "What did Emma do last?",
+        "type": "inference",
+        "q": "What is the weather like?",
         "options": [
-          "She slept",
-          "She went home",
-          "She ran away",
-          "She ate lunch"
+          "Rainy",
+          "Sunny",
+          "Snowy",
+          "Windy"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 28,
+      "wordCount": 33,
       "readingTime": 1
     }
   },
@@ -84,80 +84,80 @@
     "id": "ak1-tema-002",
     "grade": 1,
     "genre": "fiction",
-    "theme": "family",
-    "title": "Baking Bread",
-    "text": "Noah baked bread with his grandfather in the kitchen. They mixed flour and water in a big bowl. The bread smelled very good when it was ready.",
-    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop",
+    "theme": "friendship",
+    "title": "Minnie's Cupcakes",
+    "text": "Minnie Mouse bakes small cupcakes for her friends. She decorates them with pink icing. After school, Daisy visits Minnie. They share snacks, talk together, and enjoy a quiet afternoon at home today.",
+    "imageUrl": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Who baked with Noah?",
+        "q": "Who bakes cupcakes?",
         "options": [
-          "His sister",
-          "His teacher",
-          "His grandfather",
-          "His friend"
+          "Minnie Mouse",
+          "Daisy",
+          "Pluto",
+          "Elsa"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What color is the icing?",
+        "options": [
+          "Blue",
+          "Pink",
+          "White",
+          "Purple"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who visits Minnie?",
+        "options": [
+          "Mickey",
+          "Donald",
+          "Daisy",
+          "Olaf"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Where did they bake?",
+        "q": "When does Daisy visit?",
         "options": [
-          "In the kitchen",
-          "At school",
-          "In the garden",
-          "In the car"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What did they mix?",
-        "options": [
-          "Rice and milk",
-          "Flour and water",
-          "Sugar and butter",
-          "Eggs and cheese"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What smelled good?",
-        "options": [
-          "The soup",
-          "The cookies",
-          "The juice",
-          "The bread"
+          "Before breakfast",
+          "At night",
+          "On Sunday",
+          "After school"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "What did they use to mix the food?",
+        "q": "What do they share?",
         "options": [
-          "A big bowl",
-          "A plate",
-          "A cup",
-          "A box"
+          "Snacks",
+          "Books",
+          "Toys",
+          "Bikes"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "How did the bread smell?",
+        "q": "Where do they enjoy the afternoon?",
         "options": [
-          "Bad",
-          "Good",
-          "Strange",
-          "Burned"
+          "At the park",
+          "At home",
+          "At the beach",
+          "At school"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 27,
+      "wordCount": 32,
       "readingTime": 1
     }
   },
@@ -166,75 +166,75 @@
     "grade": 1,
     "genre": "fiction",
     "theme": "nature",
-    "title": "At the Lake",
-    "text": "Lina and her dad walked to the lake after school. They saw three ducks in the water. Lina threw small stones and ate a red apple by the lake.",
-    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=380&fit=crop",
+    "title": "Donald's Picnic",
+    "text": "Donald Duck feels excited about a lake picnic. He packs sandwiches and juice for the trip. A playful breeze moves the boat, but Donald stays calm and smiles often.",
+    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did Lina go?",
+        "q": "Who is excited about a picnic?",
         "options": [
-          "To the lake",
-          "To the library",
-          "To the shop",
-          "To the bus stop"
+          "Donald Duck",
+          "Mickey Mouse",
+          "Daisy",
+          "Goofy"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Who went with Lina?",
+        "q": "What does Donald pack to drink?",
         "options": [
-          "Her cousin",
-          "Her dad",
-          "Her teacher",
-          "Her friend"
+          "Milk",
+          "Juice",
+          "Tea",
+          "Water"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "How many ducks did they see?",
+        "q": "Where is the picnic?",
         "options": [
-          "Two",
-          "Five",
-          "Three",
-          "Four"
+          "Forest",
+          "Beach",
+          "Lake",
+          "Town"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What did Lina eat?",
+        "q": "What moves the boat?",
         "options": [
-          "A banana",
-          "A sandwich",
-          "A cookie",
-          "A red apple"
+          "A fish",
+          "A wave",
+          "A bird",
+          "A breeze"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "What did Lina throw?",
+        "q": "How does Donald feel at the start?",
         "options": [
-          "Small stones",
-          "Balls",
-          "Flowers",
-          "Leaves"
+          "Excited",
+          "Angry",
+          "Tired",
+          "Sad"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "When did they go to the lake?",
+        "type": "inference",
+        "q": "How does Donald react to the moving boat?",
         "options": [
-          "After school",
-          "In the morning",
-          "At night",
-          "Before dinner"
+          "He cries",
+          "He stays calm",
+          "He jumps out",
+          "He runs away"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
@@ -246,80 +246,80 @@
     "id": "ak1-tema-004",
     "grade": 1,
     "genre": "fiction",
-    "theme": "sports",
-    "title": "Playing Football",
-    "text": "Maya played football with her friends on the schoolyard. She wore blue shoes and a yellow shirt. When Maya scored a goal, everyone laughed and jumped happily.",
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop",
+    "theme": "family",
+    "title": "Mirabel's Celebration",
+    "text": "Mirabel from Encanto helps her family prepare for a celebration. Her cousin uses a wheelchair and joins every activity. Together they decorate rooms, sing songs, and welcome guests warmly.",
+    "imageUrl": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What did Maya play?",
+        "q": "Who helps prepare for a celebration?",
         "options": [
-          "Tennis",
-          "Basketball",
-          "Football",
-          "Hockey"
+          "Mirabel",
+          "Elsa",
+          "Anna",
+          "Minnie"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does Mirabel's cousin use?",
+        "options": [
+          "A scooter",
+          "A wheelchair",
+          "A bicycle",
+          "Crutches"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What are they preparing for?",
+        "options": [
+          "A trip",
+          "A game",
+          "A celebration",
+          "A class"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Where did they play?",
+        "q": "What do they do with the rooms?",
         "options": [
-          "At the beach",
-          "In the forest",
-          "In a gym",
-          "On the schoolyard"
+          "Clean them",
+          "Paint them",
+          "Close them",
+          "Decorate them"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "What color were Maya's shoes?",
+        "q": "What do they sing?",
         "options": [
-          "Blue",
-          "Black",
-          "Red",
-          "White"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What color was Maya's shirt?",
-        "options": [
-          "Green",
-          "Yellow",
-          "Pink",
-          "Orange"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What did Maya do?",
-        "options": [
-          "She scored a goal",
-          "She fell down",
-          "She lost the ball",
-          "She went home"
+          "Songs",
+          "Rules",
+          "Stories",
+          "Jokes"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "How did everyone feel?",
+        "q": "How do they welcome guests?",
         "options": [
-          "Sad",
-          "Happy",
-          "Angry",
-          "Tired"
+          "Quietly",
+          "Warmly",
+          "Slowly",
+          "Sadly"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 26,
+      "wordCount": 29,
       "readingTime": 1
     }
   },
@@ -327,80 +327,80 @@
     "id": "ak1-tema-005",
     "grade": 1,
     "genre": "fiction",
-    "theme": "technology",
-    "title": "The Little Robot",
-    "text": "Alex built a small robot at school. The robot could move forward and flash green lights. An older neighbor came to see the new robot after dinner.",
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop",
+    "theme": "community",
+    "title": "Elsa's Ice Shapes",
+    "text": "Elsa loves making sparkling ice shapes in Arendelle. One morning, she creates stars and flowers for the town square. Children watch happily and clap for her beautiful work.",
+    "imageUrl": "https://images.unsplash.com/photo-1612200996215-4dc78f388cfe?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What did Alex build?",
+        "q": "Who makes ice shapes?",
         "options": [
-          "A bike",
-          "A robot",
-          "A kite",
-          "A boat"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Where did Alex build the robot?",
-        "options": [
-          "At school",
-          "At the beach",
-          "In the forest",
-          "In a shop"
+          "Elsa",
+          "Anna",
+          "Olaf",
+          "Kristoff"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What could the robot do?",
+        "q": "Where does Elsa live?",
         "options": [
-          "Swim",
-          "Fly",
-          "Move forward",
-          "Cook food"
+          "Corona",
+          "Arendelle",
+          "Atlantica",
+          "Motunui"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does Elsa create?",
+        "options": [
+          "Boats and houses",
+          "Trees and bridges",
+          "Stars and flowers",
+          "Books and maps"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "What color were the lights?",
+        "q": "Where are the decorations made for?",
         "options": [
-          "Blue",
-          "Yellow",
-          "Red",
-          "Green"
+          "The castle",
+          "The school",
+          "The forest",
+          "The town square"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Who came to see the robot?",
+        "q": "Who watches happily?",
         "options": [
-          "An older neighbor",
-          "A police officer",
-          "A doctor",
-          "A coach"
+          "Children",
+          "Teachers",
+          "Farmers",
+          "Drivers"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "When did the neighbor come?",
+        "q": "What do the children do?",
         "options": [
-          "Before school",
-          "After dinner",
-          "At lunch",
-          "Early morning"
+          "Wave",
+          "Clap",
+          "Hide",
+          "Sleep"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 26,
+      "wordCount": 28,
       "readingTime": 1
     }
   },
