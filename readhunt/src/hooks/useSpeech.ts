@@ -17,9 +17,27 @@ export interface UseSpeech {
   cycleRate: () => void;
 }
 
+/**
+ * Prefer local/system voices — they reliably fire onboundary events.
+ * Cloud/enhanced voices (Chrome) often skip onboundary entirely.
+ */
 function pickVoice(lang: string): SpeechSynthesisVoice | null {
   const voices = window.speechSynthesis.getVoices();
   if (!voices.length) return null;
+
+  // 1. Local voice exact match
+  const localExact = voices.find((v) => v.localService && v.lang === lang);
+  if (localExact) return localExact;
+
+  // 2. Local voice en-GB prefix
+  const localGB = voices.find((v) => v.localService && v.lang.startsWith('en-GB'));
+  if (localGB) return localGB;
+
+  // 3. Any local English voice
+  const localEn = voices.find((v) => v.localService && v.lang.startsWith('en'));
+  if (localEn) return localEn;
+
+  // 4. Fallback: any en-GB or en voice (may not support onboundary)
   return (
     voices.find((v) => v.lang === lang) ||
     voices.find((v) => v.lang.startsWith('en-GB')) ||
@@ -37,7 +55,18 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
   const [paused, setPaused] = useState(false);
   const [charIndex, setCharIndex] = useState(-1);
   const [rate, setRate] = useState<SpeechRate>(0.95);
+  const [voicesReady, setVoicesReady] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+
+  // Wait for voices to load (Chrome loads them asynchronously)
+  useEffect(() => {
+    if (!speechSupported) return;
+    const update = () => setVoicesReady(true);
+    window.speechSynthesis.addEventListener('voiceschanged', update);
+    // Voices may already be loaded on Safari / Firefox
+    if (window.speechSynthesis.getVoices().length > 0) setVoicesReady(true);
+    return () => window.speechSynthesis.removeEventListener('voiceschanged', update);
+  }, []);
 
   const reset = useCallback(() => {
     setSpeaking(false);
@@ -62,16 +91,20 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = lang;
       utterance.rate = useRate;
+
       const voice = pickVoice(lang);
       if (voice) utterance.voice = voice;
 
       utterance.onboundary = (e: SpeechSynthesisEvent) => {
-        if (e.name === 'word' || e.charIndex !== undefined) {
+        if (e.name === 'word') {
           setCharIndex(e.charIndex);
         }
       };
       utterance.onend = reset;
-      utterance.onerror = reset;
+      utterance.onerror = (e) => {
+        // 'interrupted' is fired when we cancel intentionally — not an error
+        if (e.error !== 'interrupted') reset();
+      };
 
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
@@ -79,7 +112,9 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
       setPaused(false);
       setCharIndex(0);
     },
-    [text, lang, reset]
+    // voicesReady is a dep so start() re-memoizes once voices have loaded
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [text, lang, reset, voicesReady]
   );
 
   const toggle = useCallback(() => {
@@ -104,7 +139,7 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
   const cycleRate = useCallback(() => {
     const next: SpeechRate = rate >= 1.1 ? 0.75 : rate >= 0.95 ? 1.1 : 0.95;
     setRate(next);
-    if (speaking) start(next); // restart at new speed
+    if (speaking) start(next);
   }, [rate, speaking, start]);
 
   const rateLabel = rate >= 1.1 ? 'Fast' : rate >= 0.95 ? 'Normal' : 'Slow';
