@@ -407,81 +407,81 @@
   {
     "id": "ak2-tema-001",
     "grade": 2,
-    "genre": "fiction",
-    "theme": "friendship",
-    "title": "The Lost Hat",
-    "text": "Ella went to the park with her brother Sam. It was windy outside. Sam lost his red hat near the swings, but a kind woman found it and gave it back to him.",
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop",
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "Sweden and Nature",
+    "text": "Sweden is a country in northern Europe. Many people live in cities, but forests and lakes cover large areas. The capital city is Stockholm. In winter, days can be short. Children enjoy outdoor activities, and many families spend time near nature on weekends.",
+    "imageUrl": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Who went to the park with Ella?",
+        "q": "Where is Sweden?",
         "options": [
-          "Her cousin",
-          "Her brother Sam",
-          "Her teacher",
-          "Her friend Mia"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "What was the weather like?",
-        "options": [
-          "Windy",
-          "Snowy",
-          "Hot",
-          "Rainy"
+          "In northern Europe",
+          "In South America",
+          "In Africa",
+          "In Australia"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What did Sam lose?",
+        "q": "What is the capital city of Sweden?",
         "options": [
-          "A shoe",
-          "A ball",
-          "His red hat",
-          "His backpack"
+          "Gothenburg",
+          "Stockholm",
+          "Malmö",
+          "Uppsala"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What covers large areas of Sweden?",
+        "options": [
+          "Deserts and beaches",
+          "Mountains only",
+          "Forests and lakes",
+          "Rice fields"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Where did Sam lose the hat?",
+        "q": "How can days be in winter?",
         "options": [
-          "Near the lake",
-          "By the trees",
-          "At school",
-          "Near the swings"
+          "Very long",
+          "Very hot",
+          "Always rainy",
+          "Short"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Who found the hat?",
+        "q": "What do many children enjoy?",
         "options": [
-          "A kind woman",
-          "A police officer",
-          "A little boy",
-          "Sam's father"
+          "Outdoor activities",
+          "Flying airplanes",
+          "Building ships",
+          "Driving cars"
         ],
         "correct": 0
       },
       {
-        "type": "inference",
-        "q": "What happened at the end?",
+        "type": "literal",
+        "q": "When do many families spend time near nature?",
         "options": [
-          "The hat was lost forever",
-          "The woman gave the hat back",
-          "Sam bought a new hat",
-          "Ella found a jacket"
+          "Every night",
+          "On weekends",
+          "Only in winter",
+          "Only in school"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 32,
+      "wordCount": 43,
       "readingTime": 1
     }
   },
@@ -489,242 +489,242 @@
     "id": "ak2-tema-002",
     "grade": 2,
     "genre": "non-fiction",
-    "theme": "animals",
-    "title": "A Day at the Zoo",
-    "text": "Liam visited the zoo with his class on Friday morning. They saw lions, monkeys, and tall giraffes. Liam liked the penguins best because they jumped into the cold water very fast.",
-    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=380&fit=crop",
+    "theme": "culture",
+    "title": "The Swedish Flag",
+    "text": "The Swedish flag is blue with a yellow cross. People see it on holidays, schools, and boats. Midsummer is a popular celebration. Friends and families meet outdoors, eat food together, and enjoy music during the long bright days of summer in Sweden.",
+    "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did Liam go?",
+        "q": "What color is the cross on the flag?",
         "options": [
-          "To the museum",
-          "To the zoo",
-          "To the beach",
-          "To the cinema"
+          "Yellow",
+          "Green",
+          "White",
+          "Black"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What color is most of the flag?",
+        "options": [
+          "Red",
+          "Blue",
+          "Orange",
+          "Purple"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Who went with Liam?",
+        "q": "Which celebration is mentioned?",
         "options": [
-          "His class",
-          "His family",
-          "His football team",
-          "His neighbors"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Which animals were tall?",
-        "options": [
-          "Lions",
-          "Penguins",
-          "Giraffes",
-          "Monkeys"
+          "Halloween",
+          "New Year",
+          "Midsummer",
+          "Easter"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Which animals did Liam like best?",
+        "q": "Where do friends and families meet?",
         "options": [
-          "Lions",
-          "Monkeys",
-          "Giraffes",
-          "Penguins"
+          "Underground",
+          "Inside factories",
+          "On trains",
+          "Outdoors"
         ],
         "correct": 3
       },
       {
-        "type": "inference",
-        "q": "Why did Liam like the penguins?",
+        "type": "literal",
+        "q": "What do people enjoy during the celebration?",
         "options": [
-          "They jumped into the water",
-          "They could fly",
-          "They were sleeping",
-          "They ate bananas"
+          "Music",
+          "Snowstorms",
+          "Homework",
+          "Traffic"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "When did the class visit the zoo?",
+        "type": "inference",
+        "q": "What are the summer days described as?",
         "options": [
-          "On Friday morning",
-          "On Monday evening",
-          "On Saturday night",
-          "On Tuesday afternoon"
+          "Cold and dark",
+          "Long and bright",
+          "Short and windy",
+          "Wet and gray"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 31,
+      "wordCount": 42,
       "readingTime": 1
     }
   },
   {
     "id": "ak2-tema-003",
     "grade": 2,
-    "genre": "fiction",
-    "theme": "nature",
-    "title": "The School Garden",
-    "text": "Nora and Jay worked in the school garden after lunch. They planted carrots and watered small flowers. A teacher showed them how to pull weeds from the ground carefully.",
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=380&fit=crop",
+    "genre": "non-fiction",
+    "theme": "animals",
+    "title": "Animals in Sweden",
+    "text": "Many animals live in Sweden. Moose are among the largest wild animals there. Brown bears, foxes, and deer also live in forests. Birdwatchers visit lakes and wetlands to see different species. Protecting habitats helps animals stay healthy and safe every year.",
+    "imageUrl": "https://images.unsplash.com/photo-1525382455947-f319bc05fb35?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "Where did Nora and Jay work?",
+        "q": "Which country is the text about?",
         "options": [
-          "In the library",
-          "In the school garden",
-          "In the kitchen",
-          "In the gym"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "When did they work in the garden?",
-        "options": [
-          "After lunch",
-          "Before school",
-          "At night",
-          "Early morning"
+          "Sweden",
+          "Spain",
+          "Japan",
+          "Brazil"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What did they plant?",
+        "q": "Which animal is mentioned as very large?",
         "options": [
-          "Tomatoes",
-          "Trees",
-          "Carrots",
-          "Apples"
+          "Fox",
+          "Moose",
+          "Rabbit",
+          "Duck"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where do brown bears, foxes, and deer live?",
+        "options": [
+          "Cities",
+          "Deserts",
+          "Forests",
+          "Oceans"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Who helped them?",
+        "q": "Why do birdwatchers visit lakes and wetlands?",
         "options": [
-          "A farmer",
-          "A parent",
-          "A friend",
-          "A teacher"
+          "To swim",
+          "To fish",
+          "To build houses",
+          "To see different species"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "What did they water?",
+        "q": "What helps animals stay healthy and safe?",
         "options": [
-          "Small flowers",
-          "Big trees",
-          "The playground",
-          "Old plants"
+          "Protecting habitats",
+          "More traffic",
+          "Louder cities",
+          "Fewer trees"
         ],
         "correct": 0
       },
       {
-        "type": "inference",
-        "q": "What did the teacher show them?",
+        "type": "literal",
+        "q": "What do birdwatchers like to observe?",
         "options": [
-          "How to cook carrots",
-          "How to pull weeds carefully",
-          "How to paint flowers",
-          "How to build a fence"
+          "Cars",
+          "Birds",
+          "Roads",
+          "Buildings"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 29,
+      "wordCount": 42,
       "readingTime": 1
     }
   },
   {
     "id": "ak2-tema-004",
     "grade": 2,
-    "genre": "fiction",
-    "theme": "music",
-    "title": "The Music Show",
-    "text": "Aisha played the drums in the school music show. Her friend Leo sang songs on the stage. Many parents clapped loudly when the students finished their last song together.",
-    "imageUrl": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=380&fit=crop",
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "Travel by Train",
+    "text": "Many people travel by train in Sweden. Trains connect cities and towns across the country. They can be comfortable and easy to use. Lina, her brother Max, and their grandparent often take trains to visit museums, parks, and relatives during school breaks.",
+    "imageUrl": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What instrument did Aisha play?",
+        "q": "How do many people travel in the text?",
         "options": [
-          "The piano",
-          "The guitar",
-          "The drums",
-          "The violin"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Who sang songs on the stage?",
-        "options": [
-          "A teacher",
-          "Aisha",
-          "The parents",
-          "Leo"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "Where did the students perform?",
-        "options": [
-          "At the park",
-          "On the stage",
-          "In the forest",
-          "At the library"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Who clapped loudly?",
-        "options": [
-          "The parents",
-          "The bus driver",
-          "The cook",
-          "The football team"
+          "By train",
+          "By helicopter",
+          "By camel",
+          "By submarine"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "What did the students finish?",
+        "q": "What do trains connect?",
         "options": [
-          "Their homework",
-          "Their game",
-          "Their last song",
-          "Their dinner"
+          "Lakes and rivers",
+          "Cities and towns",
+          "Mountains and caves",
+          "Islands only"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How are trains described?",
+        "options": [
+          "Dangerous and slow",
+          "Tiny and crowded",
+          "Comfortable and easy to use",
+          "Very noisy only"
         ],
         "correct": 2
       },
       {
-        "type": "inference",
-        "q": "What kind of show was it?",
+        "type": "literal",
+        "q": "Who often travels together?",
         "options": [
-          "A dance show",
-          "A music show",
-          "A science show",
-          "A puppet show"
+          "Only Lina",
+          "Lina and a teacher",
+          "Max and a neighbor",
+          "Lina, Max, and their grandparent"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What places do they visit?",
+        "options": [
+          "Museums and parks",
+          "Volcanoes",
+          "Space stations",
+          "Castles only"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When do they often travel?",
+        "options": [
+          "Every morning",
+          "During school breaks",
+          "Only at night",
+          "Only in winter"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 30,
+      "wordCount": 44,
       "readingTime": 1
     }
   },
@@ -732,80 +732,80 @@
     "id": "ak2-tema-005",
     "grade": 2,
     "genre": "fiction",
-    "theme": "sports",
-    "title": "The New Bike",
-    "text": "Oscar got a new blue bike for his birthday. He rode it around the neighborhood with his neighbor Kim. They wore helmets and stopped at a small shop to buy juice.",
-    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop",
+    "theme": "community",
+    "title": "A Swedish School Day",
+    "text": "At a school in Sweden, students learn many subjects. Sam and Alex enjoy reading, while Noor likes science experiments. Teachers encourage teamwork and kindness. During breaks, children play outside when the weather is good. Learning and friendship are both important there.",
+    "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=380&fit=crop",
     "questions": [
       {
         "type": "literal",
-        "q": "What did Oscar get for his birthday?",
+        "q": "Where does the story take place?",
         "options": [
-          "A skateboard",
-          "A blue bike",
-          "A football",
-          "A scooter"
+          "At a school in Sweden",
+          "At a beach",
+          "At a farm",
+          "At an airport"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What do Sam and Alex enjoy?",
+        "options": [
+          "Swimming",
+          "Reading",
+          "Cooking",
+          "Painting"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Who rode with Oscar?",
+        "q": "What does Noor like?",
         "options": [
-          "His neighbor Kim",
-          "His grandfather",
-          "His teacher",
-          "His cousin Emma"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "What did they wear?",
-        "options": [
-          "Boots",
-          "Jackets",
-          "Helmets",
-          "Gloves"
+          "Music lessons",
+          "Football practice",
+          "Science experiments",
+          "Horse riding"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Where did they stop?",
+        "q": "What do teachers encourage?",
         "options": [
-          "At the park",
-          "At school",
-          "At the beach",
-          "At a small shop"
+          "Silence all day",
+          "Long naps",
+          "Competition only",
+          "Teamwork and kindness"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "What did they buy?",
+        "q": "What do children do during breaks when weather is good?",
         "options": [
-          "Juice",
-          "Bread",
-          "Ice cream",
-          "Candy"
+          "Play outside",
+          "Sleep in class",
+          "Watch movies",
+          "Travel home"
         ],
         "correct": 0
       },
       {
         "type": "inference",
-        "q": "What color was the bike?",
+        "q": "What is important at the school?",
         "options": [
-          "Blue",
-          "Green",
-          "Black",
-          "Yellow"
+          "Sports only",
+          "Learning and friendship",
+          "Homework only",
+          "Winning prizes"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 31,
+      "wordCount": 42,
       "readingTime": 1
     }
   },
