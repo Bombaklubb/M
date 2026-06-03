@@ -2859,6 +2859,330 @@
     }
   },
   {
+    "id": "ak3-sport-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "Leo and the Rainy Practice",
+    "text": "Leo loves football and plays every Tuesday after school with friends at the local field. One afternoon, heavy rain started during practice. The team could not use the grass pitch, so they moved to a small indoor hall nearby. There, they practiced passing, quick movement, and communication. The coach explained that adapting to different conditions helps players improve. After practice, Leo felt tired but proud because he had learned new skills.",
+    "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When did Leo usually play football?",
+        "options": [
+          "Every Tuesday",
+          "Every Friday",
+          "Every Saturday",
+          "Every Sunday"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why did the team leave the field?",
+        "options": [
+          "It became too dark",
+          "Heavy rain started",
+          "The match ended",
+          "The field was closed all week"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did the team continue practicing?",
+        "options": [
+          "At another outdoor field",
+          "At school",
+          "In an indoor hall",
+          "In a gym far away"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the coach say helps players improve?",
+        "options": [
+          "Buying new shoes",
+          "Scoring many goals",
+          "Training less often",
+          "Adapting to different conditions"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Which skill was practiced indoors?",
+        "options": [
+          "Passing",
+          "Swimming",
+          "Painting",
+          "Cooking"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did Leo feel after practice?",
+        "options": [
+          "Angry and disappointed",
+          "Tired but proud",
+          "Bored and sleepy",
+          "Nervous and worried"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 71,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak3-sport-002",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "The School Tournament",
+    "text": "Sara was excited about the school football tournament. Eight teams from nearby schools joined the event. Before the matches began, players warmed up carefully to avoid injuries. Sara played in midfield and helped connect defense and attack. During the final game, her team stayed calm under pressure and won by scoring a late goal. The victory was important, but Sara also valued teamwork, respect, and fair play throughout the competition that day.",
+    "imageUrl": "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What event was Sara excited about?",
+        "options": [
+          "A football tournament",
+          "A music concert",
+          "A science fair",
+          "A school trip"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many teams joined the event?",
+        "options": [
+          "Six teams",
+          "Eight teams",
+          "Ten teams",
+          "Twelve teams"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why did players warm up before the matches?",
+        "options": [
+          "To learn rules",
+          "To choose teams",
+          "To avoid injuries",
+          "To meet visitors"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which position did Sara play?",
+        "options": [
+          "Goalkeeper",
+          "Defender",
+          "Striker",
+          "Midfield"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "How did Sara's team win the final game?",
+        "options": [
+          "By scoring a late goal",
+          "By taking penalties",
+          "By having more players",
+          "By replaying the match"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did Sara value besides winning?",
+        "options": [
+          "New uniforms",
+          "Teamwork, respect, and fair play",
+          "Longer matches",
+          "More spectators"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 72,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak3-sport-003",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "Watching the Match",
+    "text": "Amir and his older sister Noor watched a professional football match on television. They noticed how the players spread out across the field to create space. After the match, they discussed tactics and compared different formations. Noor preferred an attacking style with more forwards, while Amir liked a balanced approach. The conversation helped them understand the game better. The next weekend, they tried some of the ideas during a friendly match with friends.",
+    "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who watched the football match with Amir?",
+        "options": [
+          "His older sister Noor",
+          "His coach",
+          "His teacher",
+          "His cousin"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where did they watch the match?",
+        "options": [
+          "At a stadium",
+          "On television",
+          "At school",
+          "In a park"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why did players spread out across the field?",
+        "options": [
+          "To rest",
+          "To celebrate",
+          "To create space",
+          "To waste time"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which style did Noor prefer?",
+        "options": [
+          "Defensive football",
+          "Balanced football",
+          "Slow football",
+          "An attacking style"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did the discussion help them do?",
+        "options": [
+          "Understand the game better",
+          "Buy tickets",
+          "Meet players",
+          "Change schools"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did they try some ideas from the match?",
+        "options": [
+          "The same evening",
+          "The next weekend",
+          "A month later",
+          "During winter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 73,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak3-sport-004",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "A New Team Member",
+    "text": "Robin recently joined a community football team. Robin is non-binary and felt nervous before the first practice because most players already knew each other. The coach welcomed everyone and organized activities that encouraged cooperation. Soon, Robin started making friends and became more confident. During a training game, Robin made an accurate pass that led to a goal. The experience showed that supportive teammates can help new players feel included and enjoy football.",
+    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595b4c3b?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Robin recently join?",
+        "options": [
+          "A community football team",
+          "A chess club",
+          "A dance group",
+          "A music band"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why was Robin nervous?",
+        "options": [
+          "The weather was bad",
+          "Most players already knew each other",
+          "The field was new",
+          "Practice was cancelled"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the coach organize?",
+        "options": [
+          "A tournament",
+          "A party",
+          "Activities that encouraged cooperation",
+          "A bus trip"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happened during the training game?",
+        "options": [
+          "Robin scored three goals",
+          "Robin became coach",
+          "The game was stopped",
+          "Robin made a pass that led to a goal"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "How did Robin feel after making friends?",
+        "options": [
+          "More confident",
+          "More worried",
+          "More tired",
+          "More confused"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is a main message of the text?",
+        "options": [
+          "Winning is everything",
+          "Supportive teammates help people feel included",
+          "Football is easy for everyone",
+          "Teams should stay small"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 71,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-tema-001",
     "grade": 3,
     "genre": "fiction",
