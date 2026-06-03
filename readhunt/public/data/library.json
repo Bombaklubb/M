@@ -1,6 +1,6 @@
 [
   {
-    "id": "ak1-tema-001",
+    "id": "ak1-film-001",
     "grade": 1,
     "genre": "fiction",
     "theme": "community",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "id": "ak1-tema-002",
+    "id": "ak1-film-002",
     "grade": 1,
     "genre": "fiction",
     "theme": "friendship",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "id": "ak1-tema-003",
+    "id": "ak1-film-003",
     "grade": 1,
     "genre": "fiction",
     "theme": "nature",
@@ -243,7 +243,7 @@
     }
   },
   {
-    "id": "ak1-tema-004",
+    "id": "ak1-film-004",
     "grade": 1,
     "genre": "fiction",
     "theme": "family",
@@ -324,7 +324,7 @@
     }
   },
   {
-    "id": "ak1-tema-005",
+    "id": "ak1-film-005",
     "grade": 1,
     "genre": "fiction",
     "theme": "community",
@@ -405,7 +405,412 @@
     }
   },
   {
-    "id": "ak2-tema-001",
+    "id": "ak1-tema-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Small Dog",
+    "text": "Emma saw a small dog in the park. The dog was brown and happy. It ran after a ball. Emma gave the dog some water before she went home.",
+    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Emma see the dog?",
+        "options": [
+          "At school",
+          "In the park",
+          "In a shop",
+          "At the beach"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What color was the dog?",
+        "options": [
+          "Brown",
+          "Blue",
+          "White",
+          "Green"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the dog run after?",
+        "options": [
+          "A bird",
+          "A stick",
+          "A ball",
+          "A bike"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Emma give the dog?",
+        "options": [
+          "Milk",
+          "Bread",
+          "Candy",
+          "Water"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "How was the dog feeling?",
+        "options": [
+          "Happy",
+          "Angry",
+          "Cold",
+          "Slow"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Emma do last?",
+        "options": [
+          "She slept",
+          "She went home",
+          "She ran away",
+          "She ate lunch"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 28,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-tema-002",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "family",
+    "title": "Baking Bread",
+    "text": "Noah baked bread with his grandfather in the kitchen. They mixed flour and water in a big bowl. The bread smelled very good when it was ready.",
+    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who baked with Noah?",
+        "options": [
+          "His sister",
+          "His teacher",
+          "His grandfather",
+          "His friend"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did they bake?",
+        "options": [
+          "In the kitchen",
+          "At school",
+          "In the garden",
+          "In the car"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did they mix?",
+        "options": [
+          "Rice and milk",
+          "Flour and water",
+          "Sugar and butter",
+          "Eggs and cheese"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What smelled good?",
+        "options": [
+          "The soup",
+          "The cookies",
+          "The juice",
+          "The bread"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did they use to mix the food?",
+        "options": [
+          "A big bowl",
+          "A plate",
+          "A cup",
+          "A box"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did the bread smell?",
+        "options": [
+          "Bad",
+          "Good",
+          "Strange",
+          "Burned"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 27,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-tema-003",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "At the Lake",
+    "text": "Lina and her dad walked to the lake after school. They saw three ducks in the water. Lina threw small stones and ate a red apple by the lake.",
+    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Lina go?",
+        "options": [
+          "To the lake",
+          "To the library",
+          "To the shop",
+          "To the bus stop"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who went with Lina?",
+        "options": [
+          "Her cousin",
+          "Her dad",
+          "Her teacher",
+          "Her friend"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How many ducks did they see?",
+        "options": [
+          "Two",
+          "Five",
+          "Three",
+          "Four"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Lina eat?",
+        "options": [
+          "A banana",
+          "A sandwich",
+          "A cookie",
+          "A red apple"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did Lina throw?",
+        "options": [
+          "Small stones",
+          "Balls",
+          "Flowers",
+          "Leaves"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did they go to the lake?",
+        "options": [
+          "After school",
+          "In the morning",
+          "At night",
+          "Before dinner"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 29,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-tema-004",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "Playing Football",
+    "text": "Maya played football with her friends on the schoolyard. She wore blue shoes and a yellow shirt. When Maya scored a goal, everyone laughed and jumped happily.",
+    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Maya play?",
+        "options": [
+          "Tennis",
+          "Basketball",
+          "Football",
+          "Hockey"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did they play?",
+        "options": [
+          "At the beach",
+          "In the forest",
+          "In a gym",
+          "On the schoolyard"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What color were Maya's shoes?",
+        "options": [
+          "Blue",
+          "Black",
+          "Red",
+          "White"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What color was Maya's shirt?",
+        "options": [
+          "Green",
+          "Yellow",
+          "Pink",
+          "Orange"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Maya do?",
+        "options": [
+          "She scored a goal",
+          "She fell down",
+          "She lost the ball",
+          "She went home"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did everyone feel?",
+        "options": [
+          "Sad",
+          "Happy",
+          "Angry",
+          "Tired"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 26,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-tema-005",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "The Little Robot",
+    "text": "Alex built a small robot at school. The robot could move forward and flash green lights. An older neighbor came to see the new robot after dinner.",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Alex build?",
+        "options": [
+          "A bike",
+          "A robot",
+          "A kite",
+          "A boat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Alex build the robot?",
+        "options": [
+          "At school",
+          "At the beach",
+          "In the forest",
+          "In a shop"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What could the robot do?",
+        "options": [
+          "Swim",
+          "Fly",
+          "Move forward",
+          "Cook food"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What color were the lights?",
+        "options": [
+          "Blue",
+          "Yellow",
+          "Red",
+          "Green"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Who came to see the robot?",
+        "options": [
+          "An older neighbor",
+          "A police officer",
+          "A doctor",
+          "A coach"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "When did the neighbor come?",
+        "options": [
+          "Before school",
+          "After dinner",
+          "At lunch",
+          "Early morning"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 26,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-sverige-001",
     "grade": 2,
     "genre": "non-fiction",
     "theme": "nature",
@@ -486,7 +891,7 @@
     }
   },
   {
-    "id": "ak2-tema-002",
+    "id": "ak2-sverige-002",
     "grade": 2,
     "genre": "non-fiction",
     "theme": "culture",
@@ -567,7 +972,7 @@
     }
   },
   {
-    "id": "ak2-tema-003",
+    "id": "ak2-sverige-003",
     "grade": 2,
     "genre": "non-fiction",
     "theme": "animals",
@@ -648,7 +1053,7 @@
     }
   },
   {
-    "id": "ak2-tema-004",
+    "id": "ak2-sverige-004",
     "grade": 2,
     "genre": "non-fiction",
     "theme": "society",
@@ -729,7 +1134,7 @@
     }
   },
   {
-    "id": "ak2-tema-005",
+    "id": "ak2-sverige-005",
     "grade": 2,
     "genre": "fiction",
     "theme": "community",
@@ -806,6 +1211,411 @@
     ],
     "meta": {
       "wordCount": 42,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-tema-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "friendship",
+    "title": "The Lost Hat",
+    "text": "Ella went to the park with her brother Sam. It was windy outside. Sam lost his red hat near the swings, but a kind woman found it and gave it back to him.",
+    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who went to the park with Ella?",
+        "options": [
+          "Her cousin",
+          "Her brother Sam",
+          "Her teacher",
+          "Her friend Mia"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was the weather like?",
+        "options": [
+          "Windy",
+          "Snowy",
+          "Hot",
+          "Rainy"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Sam lose?",
+        "options": [
+          "A shoe",
+          "A ball",
+          "His red hat",
+          "His backpack"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did Sam lose the hat?",
+        "options": [
+          "Near the lake",
+          "By the trees",
+          "At school",
+          "Near the swings"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Who found the hat?",
+        "options": [
+          "A kind woman",
+          "A police officer",
+          "A little boy",
+          "Sam's father"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What happened at the end?",
+        "options": [
+          "The hat was lost forever",
+          "The woman gave the hat back",
+          "Sam bought a new hat",
+          "Ella found a jacket"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 32,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-tema-002",
+    "grade": 2,
+    "genre": "non-fiction",
+    "theme": "animals",
+    "title": "A Day at the Zoo",
+    "text": "Liam visited the zoo with his class on Friday morning. They saw lions, monkeys, and tall giraffes. Liam liked the penguins best because they jumped into the cold water very fast.",
+    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Liam go?",
+        "options": [
+          "To the museum",
+          "To the zoo",
+          "To the beach",
+          "To the cinema"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who went with Liam?",
+        "options": [
+          "His class",
+          "His family",
+          "His football team",
+          "His neighbors"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which animals were tall?",
+        "options": [
+          "Lions",
+          "Penguins",
+          "Giraffes",
+          "Monkeys"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which animals did Liam like best?",
+        "options": [
+          "Lions",
+          "Monkeys",
+          "Giraffes",
+          "Penguins"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Liam like the penguins?",
+        "options": [
+          "They jumped into the water",
+          "They could fly",
+          "They were sleeping",
+          "They ate bananas"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did the class visit the zoo?",
+        "options": [
+          "On Friday morning",
+          "On Monday evening",
+          "On Saturday night",
+          "On Tuesday afternoon"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 31,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-tema-003",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "The School Garden",
+    "text": "Nora and Jay worked in the school garden after lunch. They planted carrots and watered small flowers. A teacher showed them how to pull weeds from the ground carefully.",
+    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Nora and Jay work?",
+        "options": [
+          "In the library",
+          "In the school garden",
+          "In the kitchen",
+          "In the gym"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "When did they work in the garden?",
+        "options": [
+          "After lunch",
+          "Before school",
+          "At night",
+          "Early morning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did they plant?",
+        "options": [
+          "Tomatoes",
+          "Trees",
+          "Carrots",
+          "Apples"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who helped them?",
+        "options": [
+          "A farmer",
+          "A parent",
+          "A friend",
+          "A teacher"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did they water?",
+        "options": [
+          "Small flowers",
+          "Big trees",
+          "The playground",
+          "Old plants"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did the teacher show them?",
+        "options": [
+          "How to cook carrots",
+          "How to pull weeds carefully",
+          "How to paint flowers",
+          "How to build a fence"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 29,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-tema-004",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "music",
+    "title": "The Music Show",
+    "text": "Aisha played the drums in the school music show. Her friend Leo sang songs on the stage. Many parents clapped loudly when the students finished their last song together.",
+    "imageUrl": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What instrument did Aisha play?",
+        "options": [
+          "The piano",
+          "The guitar",
+          "The drums",
+          "The violin"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who sang songs on the stage?",
+        "options": [
+          "A teacher",
+          "Aisha",
+          "The parents",
+          "Leo"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Where did the students perform?",
+        "options": [
+          "At the park",
+          "On the stage",
+          "In the forest",
+          "At the library"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who clapped loudly?",
+        "options": [
+          "The parents",
+          "The bus driver",
+          "The cook",
+          "The football team"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the students finish?",
+        "options": [
+          "Their homework",
+          "Their game",
+          "Their last song",
+          "Their dinner"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What kind of show was it?",
+        "options": [
+          "A dance show",
+          "A music show",
+          "A science show",
+          "A puppet show"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 30,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-tema-005",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "sports",
+    "title": "The New Bike",
+    "text": "Oscar got a new blue bike for his birthday. He rode it around the neighborhood with his neighbor Kim. They wore helmets and stopped at a small shop to buy juice.",
+    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Oscar get for his birthday?",
+        "options": [
+          "A skateboard",
+          "A blue bike",
+          "A football",
+          "A scooter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who rode with Oscar?",
+        "options": [
+          "His neighbor Kim",
+          "His grandfather",
+          "His teacher",
+          "His cousin Emma"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did they wear?",
+        "options": [
+          "Boots",
+          "Jackets",
+          "Helmets",
+          "Gloves"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did they stop?",
+        "options": [
+          "At the park",
+          "At school",
+          "At the beach",
+          "At a small shop"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did they buy?",
+        "options": [
+          "Juice",
+          "Bread",
+          "Ice cream",
+          "Candy"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What color was the bike?",
+        "options": [
+          "Blue",
+          "Green",
+          "Black",
+          "Yellow"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 31,
       "readingTime": 1
     }
   },
