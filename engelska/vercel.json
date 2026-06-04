@@ -3,5 +3,4 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "ignoreCommand": "git diff-tree --no-commit-id -r --name-only -m HEAD -- . 2>/dev/null | grep -q . && exit 1 || exit 0"
-  "ignoreCommand": "exit 1"
 }
