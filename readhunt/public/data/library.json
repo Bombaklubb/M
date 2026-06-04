@@ -4403,6 +4403,330 @@
     "imageUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak4-tmnt-001",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "friendship",
+    "title": "A Lesson in Teamwork",
+    "text": "Leonardo liked starting each morning with a plan for the day in the turtles' underground home beneath New York City. One Saturday, Master Splinter asked the team to practice patience instead of combat. Raphael wanted to train with heavy equipment, while Michelangelo hoped to play a new skateboard game. Donatello suggested building a simple robot that could sort training gear. Splinter gave each turtle a different task and told them not to compare their jobs. At first, the brothers complained because the tasks seemed uneven. Later, they discovered that every task connected to a larger challenge. The robot organized supplies, the training improved strength, the game tested balance, and the planning exercise improved teamwork. When a water pipe suddenly leaked in their home, the turtles solved the problem quickly by combining all the skills they had practiced. Splinter smiled because the lesson was clear: different strengths become more useful when people work together.",
+    "imageUrl": "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where do the turtles live?",
+        "options": [
+          "In an underground home",
+          "In a school",
+          "On a farm",
+          "In a castle"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Splinter want the turtles to practice?",
+        "options": [
+          "Speed",
+          "Patience",
+          "Cooking",
+          "Painting"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Donatello suggest building?",
+        "options": [
+          "A bridge",
+          "A skateboard",
+          "A robot",
+          "A bicycle"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What problem appeared later?",
+        "options": [
+          "A power failure",
+          "A missing map",
+          "A broken door",
+          "A leaking pipe"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why did the turtles solve the problem quickly?",
+        "options": [
+          "They combined their skills",
+          "They called the police",
+          "They ignored it",
+          "They moved away"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main message of the story?",
+        "options": [
+          "Games are best",
+          "Plans are unnecessary",
+          "Teamwork makes strengths more useful",
+          "Robots solve everything"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 153,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-tmnt-002",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "community",
+    "title": "The Mystery of the Missing Pizza",
+    "text": "One evening, the Teenage Mutant Ninja Turtles returned from training and discovered that three large pizzas had disappeared from their kitchen table. Michelangelo was shocked because he had been saving the pizzas for a movie night. Raphael immediately suspected that someone had entered their home. Leonardo wanted to investigate carefully before making accusations. Donatello checked a small security camera that he had installed near the entrance. The recording showed no strangers. Instead, it revealed a surprising clue. Earlier that afternoon, several hungry pigeons had flown through an open ventilation tunnel. The birds could not carry whole pizzas, but they had pulled slices away one by one. The turtles followed a trail of crumbs to an abandoned rooftop where they found dozens of pigeons sharing the food. Rather than becoming angry, the brothers laughed. Splinter reminded them that the city belonged to many creatures, not only humans. The turtles bought fresh ingredients, made new pizzas, and even left a few crumbs outside for the birds.",
+    "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was missing?",
+        "options": [
+          "Training gear",
+          "Three pizzas",
+          "A skateboard",
+          "A television"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who wanted to investigate carefully?",
+        "options": [
+          "Raphael",
+          "Michelangelo",
+          "Leonardo",
+          "Splinter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Donatello check?",
+        "options": [
+          "A map",
+          "A notebook",
+          "A recipe",
+          "A security camera"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Who took the pizza slices?",
+        "options": [
+          "Pigeons",
+          "Police officers",
+          "Tourists",
+          "Cats"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where did the turtles find the birds?",
+        "options": [
+          "In a museum",
+          "On a rooftop",
+          "In a classroom",
+          "At a station"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the turtles do at the end?",
+        "options": [
+          "Moved home",
+          "Started training",
+          "Made new pizzas",
+          "Sold the camera"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 165,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-tmnt-003",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "Donatello's Science Fair",
+    "text": "Donatello loved technology and often spent hours inventing useful tools. One spring, a community center announced a science fair for young people in New York City. Donatello wanted to enter, but he also wanted his brothers to participate. Leonardo designed a display about planning and leadership. Raphael created a machine that could safely lift heavy boxes. Michelangelo built a simple device that counted skateboard tricks. During the fair, many visitors stopped to ask questions. A student named Alex, who used a wheelchair, suggested improvements for several projects. Donatello listened carefully and changed parts of his design to make it easier for more people to use. The judges appreciated how the turtles accepted feedback and worked together. None of the brothers won first place alone. Instead, they received a special teamwork award. On the way home, they agreed that learning from other people was just as valuable as winning a competition.",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What event was announced?",
+        "options": [
+          "A music concert",
+          "A football match",
+          "A science fair",
+          "A parade"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who liked technology the most?",
+        "options": [
+          "Leonardo",
+          "Donatello",
+          "Raphael",
+          "Michelangelo"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Raphael create?",
+        "options": [
+          "A lifting machine",
+          "A camera",
+          "A robot dog",
+          "A computer game"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who suggested improvements?",
+        "options": [
+          "Splinter",
+          "A judge",
+          "Leonardo",
+          "Alex"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What award did the turtles receive?",
+        "options": [
+          "Teamwork award",
+          "Best painting award",
+          "Sports award",
+          "Cooking award"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did they learn?",
+        "options": [
+          "Only first place matters",
+          "Technology is easy",
+          "Learning from others is valuable",
+          "Competitions should end"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 155,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-tmnt-004",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "environment",
+    "title": "Cleaning the River",
+    "text": "After a heavy storm, the turtles noticed that a small river near the city was filled with litter. Plastic bottles, bags, and broken containers floated on the water. Splinter explained that pollution could harm animals and plants. The turtles decided to help. Donatello created a floating net that collected trash without blocking fish. Leonardo organized volunteers from nearby neighborhoods. Raphael carried heavy bags of waste, and Michelangelo encouraged younger children to join the project. During the cleanup, they discovered that much of the rubbish had washed into the river from overflowing bins after the storm. The volunteers worked for two days. By the end, the water looked cleaner and local birds returned to areas they had avoided earlier. The city thanked everyone who participated. The turtles felt proud, not because they were heroes, but because they had helped their community protect nature.",
+    "imageUrl": "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What problem did the turtles notice?",
+        "options": [
+          "River pollution",
+          "A traffic jam",
+          "A broken bridge",
+          "A power outage"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Donatello create?",
+        "options": [
+          "A boat",
+          "A floating net",
+          "A tunnel",
+          "A drone"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who organized the volunteers?",
+        "options": [
+          "Raphael",
+          "Michelangelo",
+          "Leonardo",
+          "Splinter"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How long did the cleanup last?",
+        "options": [
+          "One hour",
+          "One week",
+          "Three days",
+          "Two days"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why had rubbish entered the river?",
+        "options": [
+          "Overflowing bins after the storm",
+          "A factory explosion",
+          "A ship accident",
+          "A festival"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Storms are exciting",
+          "Communities can help protect nature",
+          "Fish dislike rivers",
+          "Cities should close parks"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 154,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak5-orig-001",
     "grade": 5,
     "genre": "fiction",
