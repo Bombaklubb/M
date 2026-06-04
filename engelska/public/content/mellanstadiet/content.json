@@ -568,6 +568,117 @@
       ]
     },
     {
+      "id": "mel-v12-familj",
+      "title": "Familj (Family)",
+      "description": "Lär dig engelska ord för familjemedlemmar.",
+      "icon": "👨‍👩‍👧‍👦",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "👨‍👩‍👧‍👦 Family vocabulary!",
+        "mamma = mother | pappa = father | syskon = siblings",
+        "mormor/farmor = grandmother | morfar/farfar = grandfather",
+        "kusin = cousin | moster/faster = aunt | morbror/farbror = uncle",
+        "Tips: 'parents' = föräldrar och 'grandparents' = far-/morföräldrar."
+      ],
+      "exercises": [
+        {
+          "id": "mel-v12-1",
+          "type": "multiple-choice",
+          "question": "Vad heter 'mamma' på engelska?",
+          "options": [
+            "mother",
+            "sister",
+            "aunt",
+            "daughter"
+          ],
+          "correctIndex": 0,
+          "explanation": "Mamma = mother. My mother is kind."
+        },
+        {
+          "id": "mel-v12-2",
+          "type": "multiple-choice",
+          "question": "Vad heter 'farfar/morfar' på engelska?",
+          "options": [
+            "uncle",
+            "grandfather",
+            "father",
+            "cousin"
+          ],
+          "correctIndex": 1,
+          "explanation": "Farfar/morfar = grandfather. My grandfather tells great stories."
+        },
+        {
+          "id": "mel-v12-3",
+          "type": "multiple-choice",
+          "question": "Vad heter 'kusin' på engelska?",
+          "options": [
+            "nephew",
+            "niece",
+            "cousin",
+            "sibling"
+          ],
+          "correctIndex": 2,
+          "explanation": "Kusin = cousin. I play with my cousin every summer."
+        },
+        {
+          "id": "mel-v12-4",
+          "type": "multiple-choice",
+          "question": "Vad heter 'moster/faster' på engelska?",
+          "options": [
+            "aunt",
+            "uncle",
+            "mother",
+            "grandmother"
+          ],
+          "correctIndex": 0,
+          "explanation": "Moster/faster = aunt. My aunt lives in London."
+        },
+        {
+          "id": "mel-v12-5",
+          "type": "multiple-choice",
+          "question": "Vad heter 'föräldrar' på engelska?",
+          "options": [
+            "siblings",
+            "parents",
+            "relatives",
+            "cousins"
+          ],
+          "correctIndex": 1,
+          "explanation": "Föräldrar = parents. My parents are at work."
+        },
+        {
+          "id": "mel-v12-6",
+          "type": "multiple-choice",
+          "question": "Vad heter 'morbror/farbror' på engelska?",
+          "options": [
+            "cousin",
+            "brother",
+            "uncle",
+            "grandfather"
+          ],
+          "correctIndex": 2,
+          "explanation": "Morbror/farbror = uncle. My uncle has a dog."
+        },
+        {
+          "id": "mel-v12-7",
+          "type": "fill-in-blank",
+          "sentence": "My father's mother is my ___.",
+          "answer": "grandmother",
+          "hint": "Pappas mamma = ?",
+          "explanation": "Grandmother = mormor/farmor. Your parent's mother is your grandmother."
+        },
+        {
+          "id": "mel-v12-8",
+          "type": "fill-in-blank",
+          "sentence": "My aunt's son is my ___.",
+          "answer": "cousin",
+          "hint": "Din mosters/fasters son = ?",
+          "explanation": "Cousin = kusin. Your aunt's or uncle's child is your cousin."
+        }
+      ]
+    },
+    {
       "id": "mel-bs-extra",
       "title": "Meningsbyggnad",
       "description": "Bygg korrekta engelska meningar av de givna orden.",
