@@ -58,7 +58,6 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
   // Accumulated *speaking* time, excluding pauses
   const elapsedRef = useRef(0);
   const lastTickRef = useRef(0);
-  const charsPerSecRef = useRef(13);
 
   // Wait for voices to load (Chrome loads them asynchronously)
   useEffect(() => {
@@ -69,14 +68,44 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
     return () => window.speechSynthesis.removeEventListener('voiceschanged', update);
   }, []);
 
-  // Pre-compute word char positions once per text
-  const wordPositions = useMemo(() => {
+  // Pre-compute a word timeline: for each word, its character position and the
+  // estimated time (at rate 1.0) when it STARTS being spoken. This models word
+  // length plus the pauses cloud voices insert at punctuation, which is the
+  // main source of karaoke drift.
+  const timeline = useMemo(() => {
+    const BASE_CHARS_PER_SEC = 13; // English TTS speed at rate 1.0
+    const PAUSE_STRONG = 0.42; // . ! ? — sentence end
+    const PAUSE_MEDIUM = 0.18; // , ; : — clause break
+    const PAUSE_PARAGRAPH = 0.5; // blank line between paragraphs
+
     const positions: number[] = [];
-    for (const match of text.matchAll(/\S+/g)) {
-      positions.push(match.index!);
+    const startTimes: number[] = []; // seconds, at rate 1.0
+    let cursor = 0; // accumulated time in seconds
+
+    const matches = [...text.matchAll(/\S+/g)];
+    for (let i = 0; i < matches.length; i++) {
+      const token = matches[i][0];
+      const pos = matches[i].index!;
+      positions.push(pos);
+      startTimes.push(cursor);
+
+      // Time to speak this token (+1 for the following space)
+      cursor += (token.length + 1) / BASE_CHARS_PER_SEC;
+
+      // Extra pause based on trailing punctuation
+      if (/[.!?]["')\]]?$/.test(token)) cursor += PAUSE_STRONG;
+      else if (/[,;:]["')\]]?$/.test(token)) cursor += PAUSE_MEDIUM;
+
+      // Paragraph break before the next token
+      const nextPos = matches[i + 1]?.index;
+      if (nextPos !== undefined && /\n\s*\n/.test(text.slice(pos + token.length, nextPos))) {
+        cursor += PAUSE_PARAGRAPH;
+      }
     }
-    return positions;
+    return { positions, startTimes };
   }, [text]);
+
+  const wordPositions = timeline.positions;
 
   const clearTimer = useCallback(() => {
     if (timerRef.current !== null) {
@@ -120,8 +149,6 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
       pausedRef.current = false;
       elapsedRef.current = 0;
       lastTickRef.current = performance.now();
-      // English TTS ~13 chars/sec at rate 1.0; scales with the rate.
-      charsPerSecRef.current = useRate * 13;
 
       utterance.onboundary = (e: SpeechSynthesisEvent) => {
         if (e.name !== 'word') return;
@@ -155,10 +182,13 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
         lastTickRef.current = now;
         if (pausedRef.current) return;
 
-        const estimatedCharPos = (elapsedRef.current / 1000) * charsPerSecRef.current;
+        // Convert real elapsed ms -> "rate 1.0 seconds" so the precomputed
+        // timeline (built at rate 1.0) can be compared directly.
+        const elapsedAtBaseRate = (elapsedRef.current / 1000) * useRate;
+        const { startTimes } = timeline;
         let idx = 0;
-        for (let i = 0; i < wordPositions.length; i++) {
-          if (wordPositions[i] <= estimatedCharPos) idx = i;
+        for (let i = 0; i < startTimes.length; i++) {
+          if (startTimes[i] <= elapsedAtBaseRate) idx = i;
           else break;
         }
         setCharIndex(wordPositions[idx]);
@@ -167,7 +197,7 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
     },
     // voicesReady ensures re-memoize once voice list is populated
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [text, lang, reset, clearTimer, wordPositions, voicesReady]
+    [text, lang, reset, clearTimer, wordPositions, timeline, voicesReady]
   );
 
   const toggle = useCallback(() => {
