@@ -9416,6 +9416,411 @@
     "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak9-ali-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "sport",
+    "title": "Muhammad Ali's Early Life",
+    "text": "Muhammad Ali was born as Cassius Marcellus Clay Jr. in Louisville, Kentucky, in 1942. He grew up during a period when racial segregation affected many parts of American society. As a child, he was energetic, confident, and highly competitive. According to a well-known story, his interest in boxing began after his bicycle was stolen when he was twelve years old. Angry about the theft, he told a police officer that he wanted to fight the person responsible. The officer, who also trained young boxers, suggested that he first learn how to box. Clay quickly became dedicated to the sport and spent many hours practicing. His natural speed, quick reflexes, and determination helped him improve rapidly. During his teenage years, he won several amateur competitions and developed a boxing style that was different from many fighters of the time. Instead of relying mainly on power, he used movement, timing, and footwork. His success eventually earned him a place on the United States Olympic boxing team. At the 1960 Olympic Games in Rome, he won a gold medal in the light heavyweight division. The victory brought him national attention and opened the door to a professional career. Soon after turning professional, he continued winning matches and attracting media interest. Unlike many athletes, Clay openly predicted his victories and spoke confidently about his abilities. Some people found his behavior entertaining, while others considered it arrogant. However, his confidence helped create public interest in his fights. As his reputation grew, he faced stronger opponents and continued to prove himself in the ring. His combination of athletic skill, intelligence, and charisma made him one of the most talked-about young athletes in the United States. These early experiences shaped the person he would become. The challenges he faced as a young African American, his dedication to training, and his willingness to stand out from others all contributed to his future success. Before he became a world champion and a global icon, he was a determined teenager who transformed a difficult moment into the beginning of an extraordinary career.",
+    "imageUrl": "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What event first inspired Clay to learn boxing?",
+        "options": [
+          "A school competition",
+          "His bicycle was stolen",
+          "An Olympic broadcast",
+          "A family tradition"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the police officer suggest?",
+        "options": [
+          "Learning to box first",
+          "Moving to another city",
+          "Joining the army",
+          "Playing football"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which Olympic achievement is mentioned?",
+        "options": [
+          "Winning a marathon",
+          "Coaching a team",
+          "Winning a gold medal",
+          "Carrying the flag"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How did some people react to Clay's predictions?",
+        "options": [
+          "They ignored them",
+          "They all admired them",
+          "They considered them humble",
+          "They thought they were arrogant"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What boxing qualities helped him succeed?",
+        "options": [
+          "Speed and footwork",
+          "Height alone",
+          "Expensive equipment",
+          "Family influence"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main focus of the text?",
+        "options": [
+          "Ali's retirement",
+          "Ali's early development as a boxer",
+          "The history of boxing",
+          "The Olympic Games in general"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 340,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-ali-002",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "Becoming Muhammad Ali",
+    "text": "After establishing himself as a successful professional boxer, Cassius Clay experienced important personal changes that influenced the rest of his life. During the early 1960s, he became interested in the Nation of Islam, a religious and political movement that focused on Black identity, self-respect, and social change. At a time when racial discrimination remained a major issue in the United States, many African Americans were searching for ways to challenge inequality and gain greater recognition. Clay listened carefully to the movement's ideas and eventually decided to join. Following his victory over Sonny Liston in 1964, he announced that he would no longer use the name Cassius Clay. Instead, he adopted the name Muhammad Ali. The decision attracted widespread attention and generated strong reactions. Supporters viewed the change as an expression of religious freedom and personal identity. Critics argued that he was rejecting traditions associated with his earlier life. Ali remained firm in his decision despite the controversy. He believed that choosing his own name allowed him to define himself rather than accept labels imposed by others. His willingness to defend his beliefs became one of the most recognizable aspects of his public image. Beyond boxing, he increasingly spoke about race, religion, and equality. This was unusual for many athletes at the time because public figures often avoided political topics. Ali's comments sometimes made him controversial, but they also earned him respect from people who admired his honesty. His growing influence demonstrated that athletes could shape public discussions as well as sporting events. The name Muhammad Ali eventually became known around the world. It represented more than a personal choice; it symbolized independence and self-determination. Historians often note that the decision reflected broader social changes occurring during the civil rights era. By openly embracing a new identity, Ali showed that success in sports did not require abandoning personal convictions. Instead, he used his fame to communicate ideas that mattered to him. Whether people agreed with him or not, many recognized the courage required to take such a public stand. The transformation from Cassius Clay to Muhammad Ali marked a turning point in his life and helped establish his legacy as both an athlete and a social figure.",
+    "imageUrl": "https://images.unsplash.com/photo-1530021232320-687d8e3dba54?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which organization did Ali join?",
+        "options": [
+          "The United Nations",
+          "The Nation of Islam",
+          "The Olympic Committee",
+          "The Peace Corps"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "When did he announce his new name?",
+        "options": [
+          "After defeating Sonny Liston",
+          "Before becoming a boxer",
+          "During the Olympics",
+          "After retirement"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did supporters view the name change?",
+        "options": [
+          "As a business strategy",
+          "As a sporting rule",
+          "As an expression of identity",
+          "As a publicity mistake"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What made Ali unusual among athletes of the time?",
+        "options": [
+          "His age",
+          "His training methods",
+          "His equipment",
+          "His willingness to discuss social issues"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did the new name symbolize?",
+        "options": [
+          "Independence and self-determination",
+          "A new boxing style",
+          "Olympic success",
+          "Financial success"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "The history of the Olympics",
+          "Ali's personal and social transformation",
+          "Boxing equipment",
+          "American elections"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 360,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-ali-003",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Vietnam War Controversy",
+    "text": "One of the most significant moments in Muhammad Ali's life occurred during the Vietnam War. In 1967, the United States government expected eligible men to serve in the military through the draft system. Ali refused induction into the armed forces. He explained that his religious beliefs and personal principles prevented him from participating in the conflict. His position immediately became the subject of national debate. Some Americans considered his refusal unpatriotic and believed that public figures should support military service during wartime. Others argued that he had the right to follow his conscience and practice his religion freely. The consequences for Ali were severe. He was stripped of his heavyweight boxing title and lost his boxing license in many states. As a result, he was unable to compete professionally during some of the most productive years of his athletic career. In addition, he faced legal challenges that threatened his freedom and financial stability. Despite these difficulties, Ali continued to defend his position. He spoke publicly about his beliefs and accepted the risks associated with his decision. Over time, opinions about the issue began to change. As public attitudes toward the Vietnam War became more critical, some people started viewing Ali's actions differently. In 1971, the United States Supreme Court overturned his conviction, allowing him to return fully to professional boxing. Historians often describe this episode as an important example of the relationship between sports, politics, and individual rights. Ali's choice demonstrated that athletes can influence discussions far beyond their own professions. His actions continue to generate debate because they raise questions about citizenship, responsibility, and freedom of conscience. Supporters emphasize the courage required to sacrifice a successful career in defense of personal principles. Critics maintain that national obligations should take priority during times of conflict. Regardless of perspective, the event remains a defining chapter in Ali's life. It showed that he was willing to accept significant personal costs rather than compromise his beliefs. The controversy also contributed to his lasting reputation as a figure whose impact extended beyond the boxing ring and into broader discussions about justice and individual freedom.",
+    "imageUrl": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did Ali refuse military induction?",
+        "options": [
+          "Because of religious and personal beliefs",
+          "Because of an injury",
+          "Because he moved abroad",
+          "Because he retired"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What happened after his refusal?",
+        "options": [
+          "He became president",
+          "He lost his title and license",
+          "He won a gold medal",
+          "He changed sports"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which institution later overturned his conviction?",
+        "options": [
+          "Congress",
+          "The Olympic Committee",
+          "The Supreme Court",
+          "The Pentagon"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What broader issue does the text connect to Ali's case?",
+        "options": [
+          "Weather patterns",
+          "Technology development",
+          "Agriculture",
+          "Individual rights and freedom of conscience"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "How did some supporters view Ali's actions?",
+        "options": [
+          "As courageous",
+          "As unimportant",
+          "As confusing",
+          "As humorous"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main focus of the text?",
+        "options": [
+          "Ali's childhood",
+          "His role in the Vietnam War controversy",
+          "His training routines",
+          "His Olympic experience"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 350,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-ali-004",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "sport",
+    "title": "The Rumble in the Jungle",
+    "text": "In 1974, Muhammad Ali participated in one of the most famous boxing matches in history. The event, later known as the Rumble in the Jungle, took place in Kinshasa, Zaire, which is now the Democratic Republic of the Congo. Ali's opponent was George Foreman, the reigning heavyweight champion. Many experts predicted that Foreman would win. He was younger, stronger, and had recently defeated several leading fighters. Ali entered the match as the underdog. Rather than relying on a traditional strategy, he adopted an approach that surprised both spectators and commentators. During much of the fight, he leaned against the ropes and allowed Foreman to throw large numbers of punches. This tactic became known as the \"rope-a-dope.\" Although it appeared risky, Ali believed it would tire his opponent. As the rounds progressed, Foreman began losing energy. Ali carefully observed the situation and waited for the right moment to attack. In the eighth round, he launched a series of fast and accurate punches that knocked Foreman to the canvas. The victory shocked many observers and restored Ali's status as heavyweight champion. Beyond its sporting significance, the fight attracted international attention. It highlighted the growing global popularity of boxing and brought focus to an African nation that many people outside the continent knew little about. The event also demonstrated Ali's intelligence as a competitor. Instead of depending solely on physical strength, he used strategy, patience, and psychological insight. Sports historians frequently cite the match as evidence of his exceptional understanding of boxing. The Rumble in the Jungle became an important part of Ali's legacy because it showed his ability to overcome difficult odds. It remains one of the most analyzed contests in sports history. Even decades later, athletes and coaches continue to study the fight for lessons about preparation, adaptability, and decision-making under pressure. The victory reinforced Ali's reputation as a champion capable of succeeding in situations where many expected him to fail.",
+    "imageUrl": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who was Ali's opponent in the Rumble in the Jungle?",
+        "options": [
+          "Joe Frazier",
+          "George Foreman",
+          "Sonny Liston",
+          "Larry Holmes"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where was the fight held?",
+        "options": [
+          "Kinshasa",
+          "London",
+          "Rome",
+          "Tokyo"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What was the \"rope-a-dope\" strategy designed to do?",
+        "options": [
+          "Increase speed",
+          "Confuse referees",
+          "Tire Foreman out",
+          "Avoid spectators"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "When did Ali win the fight?",
+        "options": [
+          "Round two",
+          "Round four",
+          "Round six",
+          "Round eight"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What quality does the text emphasize?",
+        "options": [
+          "Strategic intelligence",
+          "Physical size",
+          "Financial success",
+          "Political influence"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the passage?",
+        "options": [
+          "The significance of Ali's victory over Foreman",
+          "The history of Africa",
+          "Rules of boxing",
+          "Olympic boxing events"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 330,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-ali-005",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "Muhammad Ali's Legacy",
+    "text": "Muhammad Ali is remembered not only as one of the greatest boxers of all time but also as a global cultural figure. His achievements inside the ring were extraordinary. He won world heavyweight championships, defeated many leading opponents, and became famous for his speed, skill, and confidence. However, his influence extended far beyond sports. Throughout his life, Ali used his public platform to discuss issues such as equality, religion, and human dignity. As a result, he became an important figure in conversations about social change. After retiring from boxing, Ali remained active in public life. He traveled internationally, participated in humanitarian projects, and supported charitable causes. In later years, he lived with Parkinson's disease, a neurological condition that affected his movement and speech. Despite these challenges, he continued appearing at public events and inspiring people around the world. Many admired the determination he showed while dealing with illness. One of the most memorable moments of his later life occurred during the opening ceremony of the 1996 Olympic Games in Atlanta, where he lit the Olympic cauldron. The image became a powerful symbol of resilience and perseverance. Historians, athletes, and journalists often debate which aspect of Ali's legacy is most important. Some emphasize his accomplishments as a boxer, while others focus on his willingness to defend his beliefs during periods of controversy. Many argue that his greatest contribution was demonstrating that athletes can influence society in meaningful ways. His life story continues to be studied because it connects sports with larger themes such as courage, identity, justice, and leadership. Schools, documentaries, and museums frequently examine his impact on both American and global history. Even people with little interest in boxing often recognize his name and understand his significance. Muhammad Ali's legacy endures because he achieved excellence in competition while also engaging with important social issues. His example encourages people to pursue their goals, think independently, and remain committed to their values. For these reasons, he remains one of the most influential sporting figures of the twentieth century and an enduring symbol of determination and principle.",
+    "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which illness affected Ali later in life?",
+        "options": [
+          "Parkinson's disease",
+          "Asthma",
+          "Diabetes",
+          "Malaria"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What role did Ali have at the 1996 Olympics opening ceremony?",
+        "options": [
+          "He carried medals",
+          "He lit the Olympic cauldron",
+          "He coached athletes",
+          "He judged events"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Which themes are connected to Ali's life story?",
+        "options": [
+          "Only entertainment",
+          "Only science",
+          "Courage, identity, and justice",
+          "Agriculture and trade"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do many people consider Ali influential?",
+        "options": [
+          "He invented boxing",
+          "He owned sports teams",
+          "He avoided public issues",
+          "He influenced society beyond sports"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about his legacy?",
+        "options": [
+          "It extends beyond athletic success",
+          "It is limited to boxing statistics",
+          "It is mostly forgotten",
+          "It concerns only one country"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main focus of the text?",
+        "options": [
+          "Ali's lasting impact and reputation",
+          "The rules of boxing",
+          "Olympic history only",
+          "Medical research"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 350,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak9-orig-001",
     "grade": 9,
     "genre": "non-fiction",
