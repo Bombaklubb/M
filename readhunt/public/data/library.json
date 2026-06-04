@@ -7086,6 +7086,411 @@
     }
   },
   {
+    "id": "ak7-mlk-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "A Voice for Equality",
+    "imageUrl": "https://images.unsplash.com/photo-1591622180330-30b4de93b5f4?w=600&h=380&fit=crop",
+    "text": "Martin Luther King Jr. was one of the most influential leaders of the American Civil Rights Movement. He was born in Atlanta, Georgia, in 1929 and grew up during a time when racial segregation was common in many parts of the United States. Segregation laws separated Black and white people in schools, restaurants, buses, and other public places. King believed that these laws were unjust and should be changed. Inspired by religious teachings and the nonviolent ideas of Mahatma Gandhi, he argued that social change could be achieved without violence. During the 1950s and 1960s, King became a leading figure in campaigns that demanded equal rights for African Americans. One important event was the Montgomery Bus Boycott, which began after Rosa Parks refused to give up her seat to a white passenger. King helped organize the boycott, encouraging people to protest peacefully. The boycott lasted more than a year and eventually led to a Supreme Court decision that declared bus segregation unconstitutional. As King's influence grew, he traveled across the country giving speeches and leading demonstrations. He believed that peaceful protest could expose injustice and encourage change. However, his activism also made him a target for criticism, threats, and arrests. Despite these challenges, he continued his work because he believed equality and justice were worth fighting for. King's message reached millions of people and inspired individuals from different backgrounds to support civil rights. His leadership helped bring national attention to discrimination and inequality. Through determination, courage, and a commitment to nonviolence, Martin Luther King Jr. became a symbol of the struggle for civil rights. His legacy continues to influence discussions about equality and human rights around the world today.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was racial segregation?",
+        "options": [
+          "A system that separated people based on race",
+          "A method of voting in elections",
+          "A program for improving schools",
+          "A type of transportation system"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which leader's ideas influenced Martin Luther King Jr.?",
+        "options": [
+          "Nelson Mandela",
+          "Mahatma Gandhi",
+          "Winston Churchill",
+          "Abraham Lincoln"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What event helped make King a national leader?",
+        "options": [
+          "The March on Washington",
+          "The Freedom Rides",
+          "The Montgomery Bus Boycott",
+          "The Civil War"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did King believe social change should be achieved?",
+        "options": [
+          "Through military action",
+          "Through secret negotiations",
+          "Through economic isolation",
+          "Through nonviolent protest"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What challenge did King face because of his activism?",
+        "options": [
+          "Threats and arrests",
+          "Loss of citizenship",
+          "Military service requirements",
+          "Exile from the country"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "King worked to promote equality through nonviolent action",
+          "King mainly focused on economic policy",
+          "King opposed public demonstrations",
+          "King avoided national issues"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 510,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak7-mlk-002",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "The March on Washington",
+    "imageUrl": "https://images.unsplash.com/photo-1525206809162-d2c5f7b3a3b5?w=600&h=380&fit=crop",
+    "text": "On August 28, 1963, hundreds of thousands of people gathered in Washington, D.C., for one of the most significant demonstrations in American history. The event, known as the March on Washington for Jobs and Freedom, brought together civil rights organizations, religious groups, labor unions, and ordinary citizens. Participants wanted to draw attention to racial discrimination, unequal economic opportunities, and the need for stronger civil rights protections. Martin Luther King Jr. was one of several speakers at the event, but his speech became the most remembered. Standing near the Lincoln Memorial, King delivered what is now known as the \"I Have a Dream\" speech. In it, he described his hope for a future in which people would be judged by their character rather than the color of their skin. His words inspired many listeners and became one of the most famous speeches in modern history. The march itself was carefully planned and remained peaceful throughout the day. Organizers worked hard to ensure that participants followed guidelines promoting respect and nonviolence. News coverage brought images and speeches from the event into homes across the country, helping millions of people understand the goals of the civil rights movement. The march also increased pressure on political leaders to address racial inequality. Although discrimination did not disappear, the event helped build support for important reforms. Historians often point to the March on Washington as a turning point because it demonstrated the strength and organization of the movement. The gathering showed that large numbers of people were willing to unite behind demands for justice and equal rights. Today, the march is remembered not only for King's speech but also for the collective effort of thousands of individuals who believed change was possible. Their actions demonstrated how peaceful public demonstrations can influence public opinion and encourage political action.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was one goal of the March on Washington?",
+        "options": [
+          "To support segregation laws",
+          "To address discrimination and inequality",
+          "To celebrate a military victory",
+          "To oppose labor unions"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Martin Luther King Jr. give his famous speech?",
+        "options": [
+          "At the White House",
+          "At the Lincoln Memorial",
+          "At the Capitol Building",
+          "At a university"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was the title of King's famous speech?",
+        "options": [
+          "Freedom Now",
+          "Equal Voices",
+          "I Have a Dream",
+          "The New Beginning"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How was the march conducted?",
+        "options": [
+          "With violent confrontations",
+          "Without planning",
+          "In secret",
+          "Peacefully"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why was news coverage important?",
+        "options": [
+          "It helped spread the movement's message",
+          "It reduced attendance",
+          "It ended the march early",
+          "It prevented speeches"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do historians view the march as significant?",
+        "options": [
+          "It showed the strength of the civil rights movement",
+          "It ended all discrimination immediately",
+          "It created a new political party",
+          "It replaced existing laws overnight"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 517,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak7-mlk-003",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "Nonviolence as a Strategy",
+    "imageUrl": "https://images.unsplash.com/photo-1573676048035-9c2a72b6a12a?w=600&h=380&fit=crop",
+    "text": "One of Martin Luther King Jr.'s most important beliefs was that social change could be achieved through nonviolent action. This idea was influenced by his Christian faith and by the example of Mahatma Gandhi, who had used peaceful resistance during India's struggle for independence. King argued that violence often created more conflict, while nonviolence could expose injustice and encourage understanding. Throughout the Civil Rights Movement, activists used a variety of peaceful methods. These included marches, boycotts, sit-ins, and public speeches. During sit-ins, participants would sit in places where they were denied service because of segregation laws and refuse to leave peacefully. Such actions highlighted unfair treatment and attracted public attention. However, practicing nonviolence was often difficult. Demonstrators sometimes faced insults, arrests, and physical attacks. Despite these challenges, King encouraged supporters to remain calm and disciplined. He believed that responding peacefully would reveal the contrast between those seeking justice and those defending discrimination. Critics sometimes questioned whether nonviolence could produce meaningful results. King responded by pointing to examples where peaceful action had led to legal and social changes. He argued that lasting progress required changing both laws and attitudes. Violence might force immediate reactions, but it rarely built long-term cooperation. The philosophy of nonviolence became one of the defining features of the Civil Rights Movement and influenced other movements around the world. Leaders in different countries later adapted similar methods when advocating for human rights and political reform. King's approach demonstrated that courage does not always involve physical force. Instead, it can involve persistence, self-control, and a willingness to continue working for change despite obstacles. Today, many people study King's methods as examples of how citizens can challenge injustice while promoting respect and peaceful dialogue.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did King believe could achieve social change?",
+        "options": [
+          "Nonviolent action",
+          "Military intervention",
+          "Economic isolation only",
+          "Secret agreements"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who strongly influenced King's ideas about peaceful resistance?",
+        "options": [
+          "John Kennedy",
+          "Mahatma Gandhi",
+          "Theodore Roosevelt",
+          "Thomas Edison"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which activity was an example of peaceful protest?",
+        "options": [
+          "Armed patrols",
+          "Property destruction",
+          "Sit-ins",
+          "Military training"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did King encourage protesters to respond to hostility?",
+        "options": [
+          "With equal force",
+          "By leaving immediately",
+          "By avoiding public action",
+          "By remaining calm and disciplined"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why did King believe nonviolence was effective?",
+        "options": [
+          "It could help change laws and attitudes",
+          "It guaranteed quick victories",
+          "It eliminated all disagreements",
+          "It prevented criticism"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main message of the text?",
+        "options": [
+          "Peaceful action can be a powerful tool for change",
+          "Violence is necessary for reform",
+          "Protests should remain private",
+          "Social movements cannot succeed"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 506,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak7-mlk-004",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Legacy of Martin Luther King Jr.",
+    "imageUrl": "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?w=600&h=380&fit=crop",
+    "text": "Martin Luther King Jr. was assassinated in 1968, but his influence did not end with his death. Instead, his ideas continued to inspire people in the United States and around the world. During his lifetime, he helped draw attention to issues such as racial discrimination, voting rights, poverty, and social justice. After his death, many organizations, educators, and community leaders continued promoting the values he supported. One important part of King's legacy is the impact he had on civil rights legislation. The Civil Rights Act of 1964 and the Voting Rights Act of 1965 were major steps toward reducing legal discrimination in the United States. Although these laws did not solve every problem, they represented significant progress. King's speeches and writings also remain widely studied. Students analyze his arguments, language, and leadership style to better understand how communication can influence society. Beyond politics and law, King's message has inspired efforts to address inequality in many different contexts. Activists working on issues related to education, employment, disability rights, and other forms of social justice have often referenced his principles. His emphasis on dignity, equality, and peaceful action continues to resonate with people seeking change. Each year, Martin Luther King Jr. Day is observed in the United States. The holiday encourages reflection on his contributions and often includes community service activities. Many people use the occasion to discuss how King's goals remain relevant today. While societies have changed since the 1960s, debates about fairness, opportunity, and equal treatment continue. King's legacy reminds people that progress often requires participation from ordinary citizens as well as leaders. His life demonstrates how one person's vision, combined with the efforts of many others, can influence history. For this reason, Martin Luther King Jr. remains an important figure in discussions about human rights and democracy.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What happened to Martin Luther King Jr. in 1968?",
+        "options": [
+          "He retired from public life",
+          "He became president",
+          "He moved abroad",
+          "He was assassinated"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Which law is mentioned as part of King's legacy?",
+        "options": [
+          "The Civil Rights Act of 1964",
+          "The Homestead Act",
+          "The Sherman Act",
+          "The Patriot Act"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why do students study King's speeches?",
+        "options": [
+          "To learn military strategies",
+          "To understand communication and leadership",
+          "To practice mathematics",
+          "To study architecture"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What values are closely connected to King's message?",
+        "options": [
+          "Competition and wealth",
+          "Expansion and conquest",
+          "Dignity and equality",
+          "Isolation and independence"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is often encouraged on Martin Luther King Jr. Day?",
+        "options": [
+          "Community service and reflection",
+          "National elections",
+          "Sporting competitions",
+          "International travel"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "King's influence continues through his ideas and achievements",
+          "His impact ended after 1968",
+          "His work focused only on speeches",
+          "His legacy is mainly economic"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 511,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak7-mlk-005",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "Challenges and Criticism",
+    "imageUrl": "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&h=380&fit=crop",
+    "text": "Although Martin Luther King Jr. is widely admired today, his work was controversial during his lifetime. Many Americans supported the goals of the Civil Rights Movement, but others opposed them strongly. Some critics disagreed with King's methods, while others rejected the idea of racial equality altogether. As a result, King frequently faced hostility from individuals, organizations, and even government agencies. Public demonstrations often attracted opposition. In some cities, protesters encountered angry crowds who objected to desegregation and civil rights reforms. King himself received threatening letters and was sometimes criticized in newspapers and public debates. Despite these pressures, he continued advocating for change. He believed that avoiding difficult issues would only allow injustice to continue. Another challenge involved disagreements within the broader civil rights movement. Some activists argued that nonviolence was too slow and that stronger actions were necessary. King respected the frustration behind these views but maintained that peaceful methods offered the best chance of creating lasting progress. He worried that violence could undermine public support and increase divisions. Government agencies also monitored King's activities. Officials sometimes claimed that demonstrations might disrupt public order, while supporters argued that protest was an important democratic right. Historians continue to study these tensions to understand the complex political environment of the time. Examining criticism of King does not reduce his importance. Instead, it helps explain the obstacles he faced and the decisions he made. Social change rarely occurs without disagreement, and leaders often encounter resistance when challenging existing systems. King's experience demonstrates that pursuing justice can involve personal risks and difficult choices. By continuing his work despite criticism and threats, he showed a commitment to his principles. Understanding both the support and opposition he received provides a more complete picture of his role in history and the challenges faced by movements seeking social reform.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why was King's work controversial?",
+        "options": [
+          "Many people opposed civil rights reforms",
+          "He avoided public issues",
+          "He focused only on business",
+          "He refused to speak publicly"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did some activists criticize about King's approach?",
+        "options": [
+          "It was too expensive",
+          "They believed nonviolence was too slow",
+          "It focused on education",
+          "It avoided public demonstrations"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did King fear violence might do?",
+        "options": [
+          "Increase tourism",
+          "Reduce travel",
+          "Undermine public support",
+          "Strengthen cooperation"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did King respond to criticism and threats?",
+        "options": [
+          "He left politics permanently",
+          "He stopped giving speeches",
+          "He moved to another country",
+          "He continued his work"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why do historians study the criticism King faced?",
+        "options": [
+          "To understand the challenges of the period",
+          "To prove he was unpopular",
+          "To ignore his achievements",
+          "To focus only on opponents"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main message of the text?",
+        "options": [
+          "Social change often involves resistance and difficult choices",
+          "Criticism always prevents progress",
+          "Leaders should avoid controversy",
+          "Public protest has no effect"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 512,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak7-orig-001",
     "grade": 7,
     "genre": "non-fiction",
