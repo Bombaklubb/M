@@ -10636,6 +10636,411 @@
     "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak10-amazon-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "The Importance of the Amazon Rainforest",
+    "text": "The Amazon Rainforest is the largest tropical rainforest in the world and covers a vast area of South America. Most of it is located in Brazil, but it also extends into several neighboring countries. Because of its enormous size and biological richness, the Amazon plays a crucial role in global environmental systems. Scientists often describe it as one of the most important ecosystems on Earth. The rainforest contains millions of species of plants, animals, insects, and microorganisms. Many of these species have not yet been fully studied, and some remain completely unknown to science. This biodiversity is valuable not only because it supports healthy ecosystems but also because it may provide future medicines, crops, and scientific discoveries. The Amazon also influences the global climate. Trees absorb carbon dioxide from the atmosphere and store carbon in their trunks, roots, and soil. This process helps reduce the concentration of greenhouse gases that contribute to climate change. In addition, the rainforest releases large amounts of water vapor, which affects rainfall patterns across South America. Some researchers believe that changes in the Amazon could influence weather systems far beyond the region itself. Indigenous peoples have lived in the Amazon for thousands of years. Their communities possess extensive knowledge about local plants, animals, and ecological processes. Many Indigenous groups depend on the forest for food, shelter, medicine, and cultural traditions. However, the rainforest faces significant threats. Deforestation caused by logging, agriculture, mining, and infrastructure projects has destroyed large areas of forest. When trees are removed, habitats disappear, biodiversity declines, and stored carbon is released into the atmosphere. Climate change creates additional pressure by increasing temperatures and altering rainfall patterns. Protecting the Amazon requires cooperation among governments, businesses, scientists, local communities, and international organizations. Conservation efforts include creating protected areas, supporting sustainable economic activities, and strengthening environmental laws. While challenges remain, many experts believe that preserving the Amazon is essential for both regional and global sustainability. The future of the rainforest will likely depend on decisions made during the coming decades.",
+    "imageUrl": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80",
+    "questions": [
+      {
+        "type": "inference",
+        "q": "Why is the Amazon considered one of the most important ecosystems on Earth?",
+        "options": [
+          "It contains significant biodiversity and affects global systems",
+          "It is the driest region in South America",
+          "It contains the world's tallest mountains",
+          "It has no human inhabitants"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How do Amazonian trees help reduce climate change?",
+        "options": [
+          "They increase ocean temperatures",
+          "They absorb and store carbon dioxide",
+          "They create fossil fuels",
+          "They reduce sunlight"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is one consequence of deforestation mentioned in the text?",
+        "options": [
+          "More glaciers",
+          "Lower sea levels",
+          "Loss of habitats",
+          "More volcanoes"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who is described as having extensive ecological knowledge?",
+        "options": [
+          "Tourists",
+          "Mining companies",
+          "Scientists only",
+          "Indigenous communities"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about the future of the Amazon?",
+        "options": [
+          "It depends on decisions made today",
+          "It is already fully protected",
+          "It cannot be changed",
+          "It will disappear within a year"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main focus of the passage?",
+        "options": [
+          "The environmental importance of the Amazon and the threats it faces",
+          "The history of European exploration",
+          "South American sports",
+          "Ocean ecosystems"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 340,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-amazon-002",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "Biodiversity in the Amazon",
+    "text": "The Amazon Rainforest is widely recognized as one of the most biodiverse places on the planet. Scientists estimate that it contains millions of species, including plants, insects, birds, mammals, reptiles, amphibians, and microorganisms. Many species exist nowhere else in the world. Because large areas remain difficult to access, researchers continue discovering new organisms every year. Biodiversity is important because ecosystems depend on interactions among different species. Pollinators help plants reproduce, predators regulate populations, and decomposers recycle nutrients. If one part of the system is damaged, the effects can spread throughout the ecosystem. The Amazon provides many examples of these complex relationships. Certain trees rely on specific animals to spread their seeds, while some insects can survive only on particular plant species. The rainforest also supports scientific research. Plants found in tropical forests have contributed to the development of medicines used around the world. Researchers believe that many species in the Amazon may contain compounds that could help treat diseases in the future. However, species can disappear before they are studied if habitats are destroyed. Human activities represent a major threat to biodiversity. Deforestation, illegal logging, mining, and agricultural expansion reduce the amount of available habitat. Climate change may also alter environmental conditions faster than some species can adapt. Conservation organizations emphasize that protecting biodiversity is not only about saving individual species. It is also about maintaining ecosystem functions that support human societies. Healthy forests contribute to clean water, stable climates, and sustainable resources. Scientists therefore argue that biodiversity should be viewed as a valuable global asset. Preserving it requires long-term planning, environmental education, and cooperation among many different groups. The Amazon demonstrates both the extraordinary richness of life on Earth and the challenges involved in protecting it.",
+    "imageUrl": "https://images.unsplash.com/photo-1535338454770-8be927b5a00b?w=800&q=80",
+    "questions": [
+      {
+        "type": "inference",
+        "q": "Why do scientists continue finding new species in the Amazon?",
+        "options": [
+          "The rainforest is still not fully explored",
+          "Species arrive from space",
+          "Animals constantly change species",
+          "Maps do not exist"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why is biodiversity important?",
+        "options": [
+          "It makes ecosystems less connected",
+          "Species depend on one another in ecosystems",
+          "It prevents rainfall",
+          "It reduces soil nutrients"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What role can Amazonian plants play in medicine?",
+        "options": [
+          "They replace hospitals",
+          "They eliminate all diseases",
+          "They may provide useful compounds for treatments",
+          "They stop aging completely"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which human activity is identified as a threat?",
+        "options": [
+          "Bird watching",
+          "Scientific research",
+          "Nature photography",
+          "Deforestation"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "According to the text, biodiversity should be viewed as what?",
+        "options": [
+          "A valuable global asset",
+          "A local problem",
+          "An unnecessary expense",
+          "A temporary phenomenon"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the passage?",
+        "options": [
+          "The importance and vulnerability of Amazonian biodiversity",
+          "The history of mining",
+          "The growth of cities",
+          "Weather forecasting"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 285,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-amazon-003",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "Indigenous Peoples and the Forest",
+    "text": "Long before modern states were established in South America, Indigenous peoples lived throughout the Amazon region. Today, hundreds of Indigenous communities continue to inhabit the rainforest. These groups represent diverse languages, traditions, and cultural practices. Although their lifestyles vary, many communities maintain a close relationship with the natural environment. For generations, Indigenous peoples have developed knowledge about medicinal plants, animal behavior, seasonal changes, and sustainable resource management. This knowledge has often been passed from one generation to the next through oral traditions and daily experience. Researchers increasingly recognize that Indigenous knowledge can contribute to environmental conservation. Studies have shown that some Indigenous territories experience lower rates of deforestation than surrounding areas. Indigenous communities face numerous challenges. Expanding agriculture, illegal mining, logging operations, and infrastructure projects can threaten traditional lands and ways of life. In some regions, conflicts have emerged over land rights and access to natural resources. Environmental degradation may also affect food supplies, water quality, and cultural practices connected to the forest. Many Indigenous leaders argue that protecting their rights is closely linked to protecting the rainforest itself. International organizations and human rights groups have supported efforts to strengthen legal protections for Indigenous territories. However, implementation of these protections can vary between countries and regions. Discussions about the future of the Amazon increasingly include Indigenous perspectives because many experts believe that local knowledge is essential for effective conservation. At the same time, Indigenous communities seek opportunities for education, healthcare, and economic development while preserving cultural identity. Balancing these goals can be complex. The relationship between Indigenous peoples and the Amazon demonstrates that environmental issues are often connected to social, cultural, and political questions. Understanding this relationship helps explain why conservation is about more than protecting trees and animals. It also involves respecting human communities that have lived in the rainforest for centuries.",
+    "imageUrl": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What type of knowledge have Indigenous communities developed?",
+        "options": [
+          "Knowledge about ecosystems and natural resources",
+          "Knowledge only about foreign trade",
+          "Knowledge only about astronomy",
+          "Knowledge only about cities"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What have some studies shown about Indigenous territories?",
+        "options": [
+          "They contain no wildlife",
+          "They may have lower deforestation rates",
+          "They are all urbanized",
+          "They cannot be protected"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which challenge is mentioned in the text?",
+        "options": [
+          "Lack of rainfall everywhere",
+          "Declining oceans",
+          "Illegal mining and land conflicts",
+          "Polar ice growth"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do many experts value Indigenous perspectives?",
+        "options": [
+          "They replace scientific research",
+          "They increase tourism",
+          "They reduce biodiversity",
+          "They provide important local knowledge"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about conservation?",
+        "options": [
+          "It includes both environmental and human concerns",
+          "It only concerns wildlife",
+          "It only concerns economics",
+          "It has already been completed"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main focus of the passage?",
+        "options": [
+          "Ancient architecture",
+          "The connection between Indigenous peoples and Amazon conservation",
+          "Space exploration",
+          "Global shipping routes"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 295,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-amazon-004",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "Deforestation and Its Consequences",
+    "text": "Deforestation is one of the most serious environmental issues affecting the Amazon Rainforest. The term refers to the large-scale removal of trees and vegetation, often to create land for agriculture, cattle ranching, mining, or infrastructure development. Although economic activities can provide jobs and income, they may also produce significant environmental costs. When forests are cleared, habitats are fragmented or destroyed. Animals may lose access to food, shelter, and breeding areas. Some species are able to adapt or move elsewhere, but others face population declines. Biodiversity loss can weaken ecosystem stability and reduce the resilience of natural systems. Deforestation also influences the climate. Trees absorb carbon dioxide during photosynthesis and store carbon over long periods. When forests are burned or cut down, much of this carbon is released back into the atmosphere. This contributes to rising greenhouse gas concentrations. Scientists are concerned that continued forest loss could alter rainfall patterns within the Amazon itself. If rainfall decreases significantly, some areas may become less capable of supporting dense rainforest vegetation. Economically, deforestation can create short-term benefits while generating long-term risks. Agricultural expansion may increase production, but environmental degradation can reduce soil quality and ecosystem services. Policymakers therefore face difficult decisions about balancing development and conservation. Governments, businesses, and environmental organizations have proposed different strategies to address the problem. These include stronger law enforcement, sustainable land-use practices, reforestation programs, and improved monitoring systems. Technological tools such as satellite imagery help researchers track changes in forest cover. Public awareness campaigns also encourage consumers to consider the environmental impacts of products linked to deforestation. The debate surrounding deforestation highlights the complexity of environmental management. There is often disagreement about priorities, responsibilities, and acceptable trade-offs. Nevertheless, many scientists agree that reducing forest loss is essential for protecting biodiversity, supporting climate stability, and promoting sustainable development in the Amazon region.",
+    "imageUrl": "https://images.unsplash.com/photo-1612599316791-451087e8f877?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is deforestation?",
+        "options": [
+          "Large-scale removal of forests",
+          "Natural rainfall",
+          "Animal migration",
+          "Soil formation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How can deforestation affect animals?",
+        "options": [
+          "It increases all populations",
+          "It can destroy habitats",
+          "It eliminates predators only",
+          "It improves breeding areas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why does deforestation influence climate change?",
+        "options": [
+          "It creates more oceans",
+          "It blocks sunlight permanently",
+          "It releases stored carbon",
+          "It lowers gravity"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which tool helps researchers monitor forest cover?",
+        "options": [
+          "Typewriters",
+          "Compasses",
+          "Fishing boats",
+          "Satellite imagery"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What challenge do policymakers face?",
+        "options": [
+          "Balancing development and conservation",
+          "Eliminating all farming",
+          "Preventing rainfall",
+          "Controlling volcanoes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central theme of the text?",
+        "options": [
+          "The causes and consequences of Amazon deforestation",
+          "Ancient civilizations",
+          "Sports competitions",
+          "Ocean currents"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 300,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-amazon-005",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Future of the Amazon",
+    "text": "The future of the Amazon Rainforest is a subject of growing international concern. Scientists, policymakers, business leaders, Indigenous representatives, and environmental organizations all recognize that decisions made today may shape the condition of the rainforest for generations. While there is broad agreement that the Amazon is important, opinions differ regarding how it should be managed and protected. One major challenge involves balancing economic development with environmental sustainability. Many people depend on agriculture, forestry, transportation, and other industries for employment and income. At the same time, excessive exploitation of natural resources can damage ecosystems and undermine long-term prosperity. As a result, researchers increasingly emphasize sustainable development approaches that seek to combine economic growth with environmental protection. Technological innovation may play an important role. Satellite monitoring, data analysis, and improved environmental management systems can help identify areas at risk and support more effective decision-making. Scientists also continue studying the rainforest to better understand ecological processes and the potential impacts of climate change. Education is another important factor. Schools, universities, and public information campaigns can increase awareness of environmental issues and encourage responsible behavior. International cooperation may also be necessary because the effects of environmental change are not limited by national borders. Climate systems, biodiversity conservation, and global markets connect countries in complex ways. Some experts warn that if deforestation and climate change continue unchecked, parts of the Amazon could experience major ecological transformations. Others highlight successful conservation initiatives that demonstrate positive outcomes are possible. These examples suggest that environmental challenges are difficult but not impossible to address. Ultimately, the future of the Amazon will depend on choices made by governments, companies, communities, and individuals. The rainforest represents both a valuable natural resource and a critical component of the Earth's environmental systems. Protecting it requires long-term thinking, scientific knowledge, and cooperation across sectors and societies. The discussion about the Amazon is therefore not only about a specific forest. It is also about how humanity chooses to manage natural resources in an increasingly interconnected world.",
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What issue is described as a major challenge?",
+        "options": [
+          "Balancing development and sustainability",
+          "Eliminating technology",
+          "Reducing education",
+          "Stopping all trade"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How can technology contribute to conservation?",
+        "options": [
+          "By replacing ecosystems",
+          "By improving monitoring and management",
+          "By increasing deforestation",
+          "By reducing biodiversity"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why is international cooperation important?",
+        "options": [
+          "Because borders no longer exist",
+          "Because only one country uses the forest",
+          "Environmental effects cross national boundaries",
+          "Countries share one government"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What do some successful conservation projects demonstrate?",
+        "options": [
+          "Protection is impossible",
+          "Economic activity must stop",
+          "Forests can recover instantly",
+          "Positive outcomes are achievable"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "According to the text, who influences the Amazon's future?",
+        "options": [
+          "Governments, companies, communities, and individuals",
+          "Scientists alone",
+          "Tourists only",
+          "Farmers only"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the passage?",
+        "options": [
+          "The future of the Amazon depends on sustainable choices and cooperation",
+          "The Amazon is no longer important",
+          "Technology solves every problem",
+          "Climate change has ended"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 330,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak10-orig-001",
     "grade": 10,
     "genre": "non-fiction",
