@@ -37776,5 +37776,242 @@
       "wordCount": 667
     },
     "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop"
+  },
+  {
+    "id": "akgy-tema-010",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Vetenskap",
+    "title": "Solsystemets uppbyggnad och utveckling",
+    "text": "Solsystemet är ett komplext system som består av solen, åtta planeter, dvärgplaneter, månar, asteroider, kometer och stora mängder stoft och gas. Forskare menar att solsystemet bildades för ungefär 4,6 miljarder år sedan ur ett enormt molekylmoln. När molnet började kollapsa under påverkan av gravitationen skapades en roterande skiva av material. I centrum samlades merparten av massan och bildade solen, medan resterande material gradvis klumpade ihop sig till mindre himlakroppar. Denna process kallas ackretion och är central för förståelsen av hur planetsystem uppstår.\n\nSolen innehåller mer än 99 procent av solsystemets totala massa. Genom kärnfusion omvandlas väte till helium, vilket frigör enorma mängder energi. Denna energi sprids som ljus och värme och gör livet på jorden möjligt. Utan solen skulle planeternas banor förändras och förutsättningarna för liv försvinna.\n\nDe fyra innersta planeterna – Merkurius, Venus, jorden och Mars – kallas stenplaneter eftersom de huvudsakligen består av bergarter och metaller. De har relativt fasta ytor och är betydligt mindre än de yttre planeterna. Utanför Mars bana finns asteroidbältet, där miljontals mindre objekt kretsar runt solen. Vissa forskare anser att asteroidbältet består av material som aldrig lyckades bilda en planet.\n\nLängre ut finns gasjättarna Jupiter och Saturnus samt isjättarna Uranus och Neptunus. Dessa planeter skiljer sig från stenplaneterna genom sin sammansättning. Jupiter är den största planeten och har ett kraftfullt gravitationsfält som påverkar många andra objekt i solsystemet. Saturnus är särskilt känd för sina ringar, som består av ispartiklar och stenfragment i olika storlekar.\n\nUtanför Neptunus ligger Kuiperbältet, där många dvärgplaneter finns. Pluto klassificerades tidigare som planet men omdefinierades år 2006 till dvärgplanet eftersom den inte uppfyller alla kriterier för att räknas som en fullvärdig planet. Denna förändring väckte debatt bland både forskare och allmänhet och visar hur vetenskapliga definitioner kan förändras när ny kunskap tillkommer.\n\nSolsystemet är inte statiskt. Planeter, månar och andra objekt påverkar varandra genom gravitation. Kollisioner har spelat en viktig roll under solsystemets historia. En vanlig teori är att jordens måne bildades efter att ett marsstort objekt kolliderade med den unga jorden. Material från kollisionen samlades sedan till månen.\n\nModern teknik har gjort det möjligt att studera solsystemet i detalj. Rymdsonder har besökt samtliga planeter och skickat tillbaka stora mängder data. Genom dessa uppdrag har forskare fått bättre förståelse för planeternas atmosfärer, geologi och utveckling. Kunskapen om solsystemet fortsätter att växa, och nya upptäckter förändrar ständigt vår bild av hur vårt kosmiska grannskap fungerar.",
+    "questions": [
+      {
+        "type": "ord",
+        "q": "Vad menas med ackretion i texten?",
+        "options": [
+          "Att himlakroppar växer genom att material samlas ihop",
+          "Att stjärnor förlorar massa",
+          "Att planeter byter bana",
+          "Att gas omvandlas till ljus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Varför är solen central för solsystemet?",
+        "options": [
+          "Den innehåller alla planeter",
+          "Den dominerar massan och tillför energi",
+          "Den består av sten",
+          "Den ligger längst ut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken slutsats kan dras om asteroidbältet?",
+        "options": [
+          "Det bildades efter människans rymdfärder",
+          "Det består endast av kometer",
+          "Det kan innehålla material som aldrig blev en planet",
+          "Det ligger utanför Kuiperbältet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Varför omklassificerades Pluto?",
+        "options": [
+          "Den försvann från solsystemet",
+          "Den är större än Jupiter",
+          "Den slutade kretsa kring solen",
+          "Den uppfyllde inte alla kriterier för en planet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar debatten om Pluto enligt texten?",
+        "options": [
+          "Att vetenskapliga definitioner kan förändras",
+          "Att forskare alltid är överens",
+          "Att planeter inte går att studera",
+          "Att Kuiperbältet saknar betydelse"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket är textens huvudbudskap?",
+        "options": [
+          "Solen är den enda viktiga himlakroppen",
+          "Solsystemet är ett dynamiskt system vars förståelse utvecklas genom forskning",
+          "Alla planeter är lika uppbyggda",
+          "Rymdsonder har ersatt astronomi"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 665
+    }
+  },
+  {
+    "id": "akgy-tema-011",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Teknik",
+    "title": "Utforskningen av solsystemet",
+    "text": "Människans intresse för solsystemet sträcker sig tusentals år tillbaka i tiden. Redan i forntida civilisationer observerade människor planeterna och försökte förstå deras rörelser. Under lång tid dominerade föreställningen att jorden befann sig i universums centrum. Denna geocentriska världsbild ifrågasattes dock när nya observationer och matematiska modeller utvecklades.\n\nPå 1500-talet presenterade Nikolaus Kopernikus en modell där solen placerades i centrum av planetsystemet. Senare bidrog Galileo Galilei med observationer genom teleskop, vilket gav stöd åt den heliocentriska modellen. Johannes Kepler visade dessutom att planeterna rör sig i elliptiska banor snarare än perfekta cirklar. Dessa upptäckter förändrade människans förståelse av kosmos.\n\nUnder 1900-talet tog utforskningen av solsystemet ett avgörande steg framåt genom utvecklingen av raketteknik. När rymdkapplöpningen mellan USA och Sovjetunionen intensifierades investerades stora resurser i forskning och teknik. Satelliter, sonder och bemannade rymdfärder skapade nya möjligheter att samla information direkt från rymden.\n\nRymdsonder har haft en särskilt viktig roll. Voyager-programmet gav detaljerad information om de yttre planeterna och deras månar. Bilderna avslöjade komplexa atmosfärer, vulkanisk aktivitet och geologiska strukturer som tidigare varit okända. Senare uppdrag har undersökt Mars, Jupiter, Saturnus och flera mindre objekt i solsystemet.\n\nMars har länge varit ett centralt mål för forskning eftersom planeten uppvisar vissa likheter med jorden. Forskare har funnit spår av vatten och studerat om planeten någon gång kan ha haft förutsättningar för liv. Moderna robotfordon analyserar markprover och klimatförhållanden för att ge svar på dessa frågor.\n\nTeknologiska framsteg har också gjort det möjligt att utforska objekt längre bort från solen. Sonden New Horizons genomförde en historisk förbiflygning av Pluto och levererade detaljerade bilder som förändrade forskarnas syn på denna avlägsna värld. Resultaten visade att även små himlakroppar kan vara geologiskt aktiva och mer komplexa än tidigare antagits.\n\nUtforskningen av solsystemet handlar inte bara om vetenskaplig nyfikenhet. Kunskap om asteroider kan bidra till att identifiera potentiella hot mot jorden. Studier av andra planeters klimat kan också ge insikter om klimatprocesser på vår egen planet. Dessutom utvecklas ny teknik genom rymdprogram, vilket ofta leder till innovationer som får användning inom andra områden av samhället.\n\nI framtiden planeras nya expeditioner till månen, Mars och andra delar av solsystemet. Flera forskare ser dessa projekt som viktiga steg mot en djupare förståelse av universum. Samtidigt väcker de frågor om resurser, etik och internationellt samarbete. Utforskningen av solsystemet är därför både en vetenskaplig och samhällelig process som fortsätter att forma människans framtid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken världsbild dominerade länge?",
+        "options": [
+          "Den geocentriska modellen",
+          "Den heliocentriska modellen",
+          "Big Bang-teorin",
+          "Relativitetsteorin"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad bidrog Kepler främst med enligt texten?",
+        "options": [
+          "Byggde raketer",
+          "Visade att planetbanor är elliptiska",
+          "Upptäckte Pluto",
+          "Landade på månen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför har Mars fått stor uppmärksamhet?",
+        "options": [
+          "Den är störst",
+          "Den har ringar",
+          "Den kan ha haft förutsättningar för liv",
+          "Den ligger närmast solen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad visade New Horizons uppdrag?",
+        "options": [
+          "Att Pluto är en stjärna",
+          "Att Pluto saknar geologi",
+          "Att Pluto kretsar kring Mars",
+          "Att även små himlakroppar kan vara komplexa"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken bredare nytta nämns med rymdforskning?",
+        "options": [
+          "Den leder ofta till tekniska innovationer",
+          "Den stoppar klimatförändringar direkt",
+          "Den ersätter jordbaserad forskning",
+          "Den gör teleskop onödiga"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilket huvudtema dominerar texten?",
+        "options": [
+          "Planeternas storlek",
+          "Hur utforskningen av solsystemet utvecklat kunskap och teknik",
+          "Mytologiska förklaringar till planeterna",
+          "Astrologins historia"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 658
+    }
+  },
+  {
+    "id": "akgy-tema-012",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "Samhälle",
+    "title": "Människor och framtiden i solsystemet",
+    "text": "Frågan om människans framtid i solsystemet har blivit allt mer aktuell under de senaste decennierna. Forskare, ingenjörer och beslutsfattare diskuterar möjligheterna att etablera permanenta baser på månen eller Mars. Samtidigt pågår forskning kring hur människor kan leva och arbeta under extrema förhållanden långt från jorden.\n\nEtt av de största hindren är avståndet. Resor till Mars tar flera månader och kräver avancerade system för energi, kommunikation och livsuppehållande funktioner. Astronauter måste kunna få tillgång till vatten, syre och mat under lång tid utan regelbunden försörjning från jorden. Därför undersöks metoder för att producera resurser direkt på plats.\n\nMånen betraktas ofta som ett första steg mot mer omfattande rymdkolonisation. Dess relativa närhet gör den lämplig som testmiljö för ny teknik. Genom att bygga forskningsstationer på månen kan erfarenheter samlas inför framtida expeditioner längre ut i solsystemet. Vissa forskare föreslår att månens resurser kan användas för att stödja framtida rymdprojekt.\n\nMars framstår som det mest realistiska målet för en större mänsklig bosättning. Planeten har årstider, polarområden och tecken på tidigare vattenflöden. Trots detta är miljön mycket ogästvänlig. Atmosfären är tunn, temperaturen låg och strålningsnivåerna högre än på jorden. För att människor ska kunna leva där krävs avancerade skyddssystem och hållbara bostäder.\n\nUtvecklingen av rymdteknik sker genom samarbete mellan många olika grupper. Kvinnor, män och icke-binära forskare bidrar inom områden som astronomi, biologi, medicin och teknik. Även personer från olika länder och kulturella bakgrunder deltar i arbetet. Denna mångfald anses ofta vara en styrka eftersom komplexa problem kan analyseras ur flera perspektiv.\n\nDet finns också etiska frågor kring mänsklig expansion i solsystemet. Vissa anser att resurser bör användas för att lösa problem på jorden innan stora kolonisationsprojekt genomförs. Andra menar att rymdforskning kan bidra till långsiktig överlevnad för mänskligheten och samtidigt skapa ny kunskap som kommer jorden till nytta. Diskussionen handlar därför både om prioriteringar och framtidsvisioner.\n\nFlera organisationer planerar framtida uppdrag till månen och Mars. Målet är inte enbart att genomföra korta besök utan att skapa förutsättningar för långvarig närvaro. Om dessa projekt lyckas kan de förändra människans relation till solsystemet i grunden.\n\nOavsett vilka beslut som fattas kommer forskning om solsystemet att fortsätta spela en viktig roll. Genom att studera andra världar får vi inte bara kunskap om universum utan även nya perspektiv på vår egen planet. Framtiden i solsystemet handlar därför lika mycket om att förstå jorden som om att nå nya destinationer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket hinder lyfts fram som särskilt viktigt för Marsresor?",
+        "options": [
+          "Det stora avståndet",
+          "Brist på teleskop",
+          "För många satelliter",
+          "Avsaknad av gravitation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ses månen som ett första steg?",
+        "options": [
+          "Den har samma klimat som jorden",
+          "Den kan fungera som testmiljö för teknik",
+          "Den är större än Mars",
+          "Den ligger utanför solsystemet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad antyder texten om mångfald inom rymdforskning?",
+        "options": [
+          "Den saknar betydelse",
+          "Den försvårar samarbeten",
+          "Den kan bidra med fler perspektiv på komplexa problem",
+          "Den ersätter teknisk kompetens"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken etisk fråga diskuteras?",
+        "options": [
+          "Om solen ska utforskas",
+          "Om planeter bör byta namn",
+          "Om månen ska flyttas",
+          "Hur resurser bör prioriteras mellan jorden och rymdprojekt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är Mars intressant för bosättning?",
+        "options": [
+          "Den har egenskaper som gör den mer realistisk än många andra mål",
+          "Den saknar strålning",
+          "Den ligger närmare än månen",
+          "Den har syrehalt som jordens"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens övergripande budskap?",
+        "options": [
+          "Rymdresor är omöjliga",
+          "Framtida närvaro i solsystemet innebär både tekniska möjligheter och etiska överväganden",
+          "Mars kommer snart att vara fullt befolkad",
+          "Månen är viktigare än jorden"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 652
+    }
   }
 ]
