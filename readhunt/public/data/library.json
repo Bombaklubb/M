@@ -6681,6 +6681,411 @@
     "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak6-zara-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "music",
+    "title": "Zara Larsson's Early Years",
+    "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=380&fit=crop",
+    "text": "Zara Larsson is one of Sweden's most well-known pop artists. She was born in Stockholm and showed an interest in music from an early age. As a child, she enjoyed singing and performing for family members and friends. Her talent became widely known when she participated in a television talent competition. Winning the competition gave her national attention and opened new opportunities within the music industry. However, success did not happen overnight. After the program ended, Zara continued to practice, record music, and develop her artistic style. She spent years learning about songwriting, performance, and the business side of music. Many young performers become famous for a short time and then disappear from public attention, but Zara worked hard to build a long-term career. As she grew older, she released songs that became popular both in Sweden and internationally. Her powerful voice and energetic performances helped her gain fans in many countries. Music critics often praised her ability to combine catchy melodies with strong vocals. At the same time, she learned how to handle interviews, tours, and public expectations. Life as an artist can be exciting, but it can also be demanding. Long travel schedules, recording sessions, and live performances require discipline and commitment. Zara has often spoken about the importance of believing in yourself and continuing to improve your skills. Her journey demonstrates that talent alone is rarely enough. Consistent effort, patience, and determination are also important. Today, many young people look up to her because she followed her goals and continued working even when success was uncertain. Her story shows how dedication can help someone turn a childhood passion into an international career.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where was Zara Larsson born?",
+        "options": [
+          "Gothenburg",
+          "Malmö",
+          "Stockholm",
+          "Uppsala"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did many people first learn about her talent?",
+        "options": [
+          "A television competition",
+          "A newspaper article",
+          "A school concert",
+          "A radio interview"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Zara continue doing after the competition?",
+        "options": [
+          "Stopped performing",
+          "Practiced and developed her skills",
+          "Moved away from music",
+          "Became a teacher"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What do critics often praise?",
+        "options": [
+          "Her acting skills",
+          "Her fashion designs",
+          "Her sports ability",
+          "Her vocals and melodies"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What can be demanding about being an artist?",
+        "options": [
+          "Travel and performances",
+          "Only writing emails",
+          "Only meeting friends",
+          "Having weekends free"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is a main message of the text?",
+        "options": [
+          "Success requires only talent",
+          "Music careers are easy",
+          "Dedication helps achieve goals",
+          "Fame always arrives quickly"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-zara-002",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "music",
+    "title": "Writing and Recording Music",
+    "imageUrl": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=380&fit=crop",
+    "text": "Many listeners focus on the final version of a song, but creating music often involves a long process. Zara Larsson has participated in writing and developing many of her songs. Before a track reaches streaming services or radio stations, artists and producers may spend weeks or months improving it. The process often begins with an idea, a melody, or a short lyric. Writers experiment with different words and musical arrangements until they find a version that feels right. During recording sessions, singers may perform the same section many times. This allows producers to select the strongest performance and create a polished result. Zara has worked with musicians and producers from different countries, which has given her opportunities to learn new techniques and perspectives. Collaboration is an important part of modern pop music. Team members may contribute ideas about rhythm, lyrics, instruments, or sound effects. Technology also plays a major role. Recording equipment can capture details that audiences may never notice consciously but that help create a professional sound. Even after recording is complete, engineers continue working by mixing and mastering the music. These stages balance the volume of instruments and improve overall quality. Although the audience often hears only a three-minute song, many hours of work may be hidden behind it. Zara's career demonstrates how modern artists combine creativity with technical knowledge. Successful songs are not usually the result of a single moment of inspiration. Instead, they often develop through planning, revision, and teamwork. Understanding this process helps listeners appreciate the effort involved in music production. It also reminds young musicians that improvement takes time. Even experienced performers continue learning throughout their careers. By practicing regularly and accepting feedback, artists can continue developing their skills and creating music that connects with audiences around the world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What often starts the creation of a song?",
+        "options": [
+          "A melody or lyric idea",
+          "A finished album",
+          "A concert ticket",
+          "A music video"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why might singers record a section several times?",
+        "options": [
+          "To save money",
+          "To find the strongest performance",
+          "To shorten the song",
+          "To avoid producers"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who has Zara worked with?",
+        "options": [
+          "Only Swedish teachers",
+          "Only family members",
+          "Musicians and producers from different countries",
+          "Only television hosts"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happens during mixing and mastering?",
+        "options": [
+          "Concert tickets are sold",
+          "Lyrics are translated",
+          "Albums are printed",
+          "Sound quality is improved"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What is an important part of modern pop music?",
+        "options": [
+          "Collaboration",
+          "Silence",
+          "Luck alone",
+          "Competition only"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson does the text emphasize?",
+        "options": [
+          "Improvement takes time and effort",
+          "Songs are created instantly",
+          "Technology is unnecessary",
+          "Practice does not matter"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 405,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-zara-003",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "music",
+    "title": "Performing for Large Audiences",
+    "imageUrl": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&h=380&fit=crop",
+    "text": "Live performances are an important part of Zara Larsson's career. While recordings allow listeners to enjoy music anywhere, concerts create a different experience. Thousands of people may gather in one place to hear songs performed live. Preparing for such events requires careful planning. Artists often rehearse for many hours before a tour begins. They practice singing, movement, timing, and interaction with the audience. Behind the scenes, many professionals help make a concert successful. Sound technicians manage microphones and speakers, lighting teams create visual effects, and stage crews prepare equipment. Each person has specific responsibilities. If one part of the system fails, the audience may notice problems immediately. Therefore, teamwork is essential. Zara has performed in different countries and for audiences with diverse backgrounds. Music can connect people even when they speak different languages. Fans may sing along to familiar songs and share a common experience during a performance. However, performing live can also be challenging. Artists may feel nervous before stepping onto a stage, especially when large crowds are present. Learning how to stay focused under pressure is an important skill. Many performers develop routines that help them prepare mentally. They may warm up their voices, review the schedule, and spend time concentrating before the show begins. Concert tours also involve travel and long workdays. Despite these challenges, many musicians enjoy performing because they can connect directly with listeners. Audience reactions provide immediate feedback and energy. Zara's performances are often described as energetic and engaging. Her concerts demonstrate that successful live music depends on preparation, cooperation, and confidence. For young people interested in performing arts, her experiences show that public performances involve much more than simply stepping onto a stage. Careful preparation behind the scenes plays a major role in creating memorable events.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why are concerts different from recordings?",
+        "options": [
+          "They create a shared live experience",
+          "They require no planning",
+          "They use no technology",
+          "They are always shorter"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What do artists often do before a tour?",
+        "options": [
+          "Take a vacation",
+          "Rehearse extensively",
+          "Stop singing",
+          "Avoid audiences"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who manages microphones and speakers?",
+        "options": [
+          "Drivers",
+          "Fans",
+          "Sound technicians",
+          "Journalists"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What can artists feel before going on stage?",
+        "options": [
+          "Boredom",
+          "Confusion",
+          "Anger",
+          "Nervousness"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why is teamwork important at concerts?",
+        "options": [
+          "Many people have different responsibilities",
+          "Tickets become cheaper",
+          "Songs become longer",
+          "Audiences become smaller"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Concerts happen without preparation",
+          "Live music depends on planning and cooperation",
+          "Technology is unimportant",
+          "Only singers matter"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 402,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-zara-004",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "Social Media and Modern Artists",
+    "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=380&fit=crop",
+    "text": "The music industry has changed significantly during the last two decades. In the past, artists depended heavily on television, radio, and newspapers to reach audiences. Today, social media allows performers such as Zara Larsson to communicate directly with fans. Through online platforms, artists can share updates, photographs, videos, and information about upcoming projects. This creates new opportunities for interaction. Fans can comment on posts and sometimes receive responses from the people they admire. However, social media also brings challenges. Public figures often receive large amounts of attention, both positive and negative. Learning how to manage this attention responsibly is important. Artists must think carefully about what they share online because information can spread quickly. Social media can also influence how music becomes popular. A short video clip or performance may reach millions of viewers within a short period. As a result, songs can gain attention much faster than in earlier decades. Zara Larsson has used digital platforms to communicate with audiences around the world. These tools help artists maintain connections with listeners even when they are not touring. At the same time, spending too much time online can become distracting. Many public figures try to balance their digital presence with private life. This balance can be difficult because audiences often want constant updates. Understanding social media is now an important skill for many musicians. It involves communication, creativity, and responsibility. Young people who follow artists online can learn to think critically about the information they see. Not everything shared on the internet reflects reality completely. By examining sources carefully and considering different perspectives, users can become more informed digital citizens. The experiences of modern artists demonstrate both the advantages and challenges of living in a connected world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How did artists often reach audiences in the past?",
+        "options": [
+          "Television, radio, and newspapers",
+          "Only social media",
+          "Video games",
+          "School websites"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does social media allow artists to do?",
+        "options": [
+          "Avoid communication",
+          "Interact directly with fans",
+          "Stop releasing music",
+          "Replace concerts completely"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What can happen to information online?",
+        "options": [
+          "It disappears instantly",
+          "It becomes secret",
+          "It spreads quickly",
+          "It cannot be shared"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What challenge do many public figures face?",
+        "options": [
+          "Lack of technology",
+          "No audience interest",
+          "No travel opportunities",
+          "Balancing public and private life"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why should users think critically online?",
+        "options": [
+          "Not everything online reflects reality completely",
+          "The internet never changes",
+          "Artists dislike questions",
+          "Music cannot be shared"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is a key message of the text?",
+        "options": [
+          "Social media has benefits and challenges",
+          "Technology should be avoided",
+          "Fans should never comment",
+          "Only newspapers matter"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 403,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-zara-005",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "Inspiration and Role Models",
+    "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=600&h=380&fit=crop",
+    "text": "Many young people search for role models who inspire them to work toward their goals. For some music fans, Zara Larsson serves as an example of determination and confidence. Although every person follows a different path, stories about successful individuals can provide motivation. One reason people admire artists is that they often overcome challenges while pursuing their ambitions. Building a career in music requires practice, patience, and resilience. Performers must continue improving even when progress feels slow. Zara's career illustrates how persistence can help someone move from local recognition to international success. However, role models are valuable for more than their achievements. They can also influence attitudes and behavior. Young people may observe how public figures communicate, handle criticism, and respond to difficulties. These observations can encourage reflection about personal choices. At the same time, it is important to remember that no role model is perfect. Every person makes mistakes and continues learning throughout life. Admiration should therefore be balanced with critical thinking. Rather than copying someone completely, individuals can identify specific qualities they respect. For example, they might appreciate creativity, discipline, kindness, or courage. Inspiration can come from many places, including family members, teachers, coaches, friends, and public figures. Different people may choose different role models depending on their interests and experiences. What matters most is finding positive examples that encourage growth and responsibility. Zara Larsson's story can remind students that success often develops gradually through effort and commitment. By setting goals, practicing regularly, and learning from setbacks, people can continue moving forward. Whether someone dreams of becoming a musician, scientist, athlete, or teacher, determination and a willingness to learn can help transform ambitions into achievements over time.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why do many people look for role models?",
+        "options": [
+          "To find inspiration and motivation",
+          "To avoid learning",
+          "To replace friends",
+          "To become famous instantly"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What quality is highlighted in Zara's career?",
+        "options": [
+          "Luck only",
+          "Persistence",
+          "Silence",
+          "Perfection"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What should admiration be balanced with?",
+        "options": [
+          "Competition",
+          "Popularity",
+          "Critical thinking",
+          "Travel"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which of these can also be role models?",
+        "options": [
+          "Only celebrities",
+          "Only musicians",
+          "Only athletes",
+          "Family members and teachers"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What does the text suggest people should identify?",
+        "options": [
+          "Qualities they respect",
+          "Expensive hobbies",
+          "Popular trends",
+          "Difficult subjects"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main message of the text?",
+        "options": [
+          "Goals can be reached through effort and learning",
+          "Success arrives without work",
+          "Only musicians need role models",
+          "Mistakes should be hidden"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 401,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak7-orig-001",
     "grade": 7,
     "genre": "non-fiction",
