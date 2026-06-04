@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
@@ -64,14 +64,6 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
 
   const themeVisual = getThemeVisual(text.theme, text.genre);
   const speech = useSpeech(text.text);
-  const spokenRef = useRef<HTMLSpanElement>(null);
-
-  // Karaoke auto-scroll for the bionic/plain reading view
-  useEffect(() => {
-    if (speech.speaking && speech.charIndex >= 0 && spokenRef.current) {
-      spokenRef.current.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-    }
-  }, [speech.charIndex, speech.speaking]);
 
   const questions = text.questions;
   const totalQuestions = questions.length;
@@ -254,7 +246,6 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     <TextWithGlossary
                       text={text.text}
                       grade={text.grade}
-                      highlightCharIndex={speech.speaking ? speech.charIndex : -1}
                       className={cn(
                         "leading-relaxed text-slate-700 dark:text-slate-300",
                         textSizeClasses[textSize]
@@ -276,19 +267,10 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                               )}
                             >
                               {para.split(/(\s+)/).map((part, i) => {
-                                const partStart = offset;
                                 offset += part.length;
                                 if (/^\s+$/.test(part)) return <span key={i}>{part}</span>;
-                                const isSpoken =
-                                  speech.speaking &&
-                                  speech.charIndex >= partStart &&
-                                  speech.charIndex < partStart + part.length;
                                 return (
-                                  <span
-                                    key={i}
-                                    ref={isSpoken ? spokenRef : undefined}
-                                    className={isSpoken ? 'bg-amber-200 dark:bg-amber-500/40 rounded px-0.5 -mx-0.5' : ''}
-                                  >
+                                  <span key={i}>
                                     {bionicReading ? bionicWord(part) : part}
                                   </span>
                                 );
