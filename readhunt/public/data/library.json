@@ -8716,6 +8716,301 @@
     }
   },
   {
+    "id": "ak8-space-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Journey to Mars",
+    "text": "Mars has fascinated humans for centuries, but only in the last few decades have we seriously planned to send people there. The journey would take approximately seven months each way, making it the longest human spaceflight in history.\n\nAstronauts travelling to Mars would face extraordinary challenges. Exposure to cosmic radiation outside Earth's protective magnetic field could increase cancer risks significantly. The spacecraft would need sophisticated shielding, and scientists are exploring materials like polyethylene and water walls to absorb harmful particles.\n\nMicrogravity causes muscle and bone loss, so travellers would need daily exercise routines using resistance machines. Psychological challenges are equally serious. A crew of four to six people would be confined in a small space for over a year with no possibility of emergency return.\n\nCommunication with Earth would also be frustrating. Radio signals travel at the speed of light, but Mars can be up to 20 light-minutes away. A simple conversation would require waiting 40 minutes for a reply. Crews would need to be highly self-sufficient and make independent decisions.\n\nDespite these obstacles, space agencies and private companies are developing ambitious plans. NASA aims to land humans on Mars in the 2030s, while SpaceX envisions a permanent colony. If successful, it would be humanity's greatest exploration achievement.",
+    "imageUrl": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long would a one-way journey to Mars approximately take?",
+        "options": [
+          "Three months",
+          "Seven months",
+          "One year",
+          "Two years"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What health risk does cosmic radiation pose to astronauts?",
+        "options": [
+          "Heart disease",
+          "Blindness",
+          "Increased cancer risk",
+          "Memory loss"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why would crews need to be highly self-sufficient on a Mars mission?",
+        "options": [
+          "Because food supplies are limited",
+          "Because communication delays make Earth unable to help quickly",
+          "Because the spacecraft has no computer systems",
+          "Because Mars has no gravity"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the phrase 'humanity's greatest exploration achievement' suggest?",
+        "options": [
+          "That Mars missions have already succeeded",
+          "That landing on Mars would surpass all previous human exploration",
+          "That only private companies can reach Mars",
+          "That robots are better explorers than humans"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 224,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-space-002",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "Life of a Star",
+    "text": "Stars are not eternal. Like living things, they are born, they mature, and they die. The life cycle of a star depends almost entirely on one factor: its mass.\n\nStars form inside vast clouds of gas and dust called nebulae. Gravity pulls this material together until the pressure at the centre becomes so intense that hydrogen atoms fuse to form helium, releasing enormous energy. This process, called nuclear fusion, makes the star shine.\n\nOur Sun is a medium-sized star and has been burning for about 4.6 billion years. It will continue for another five billion years before it exhausts its hydrogen fuel. When that happens, the Sun will expand into a red giant, swallowing Mercury and Venus and possibly Earth. Eventually, it will shed its outer layers, leaving behind a dense core called a white dwarf.\n\nMassive stars live faster and die more dramatically. They burn through their fuel in millions rather than billions of years. When they exhaust their fuel, they collapse suddenly and explode in a supernova — one of the most violent events in the universe. The explosion can briefly outshine an entire galaxy.\n\nWhat remains after a supernova depends on the star's original mass. Some become neutron stars, incredibly dense objects where a teaspoon of material would weigh a billion tonnes. The most massive stars collapse completely into black holes, where gravity is so strong that nothing — not even light — can escape.",
+    "imageUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What process makes stars shine?",
+        "options": [
+          "Chemical burning",
+          "Nuclear fusion",
+          "Electrical discharge",
+          "Magnetic resonance"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What will the Sun eventually become after it expands into a red giant?",
+        "options": [
+          "A neutron star",
+          "A black hole",
+          "A white dwarf",
+          "A supernova"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do massive stars have shorter lives than medium-sized stars like our Sun?",
+        "options": [
+          "They are farther from Earth",
+          "They burn through their fuel much more quickly",
+          "They have less hydrogen to begin with",
+          "They form in smaller nebulae"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the teaspoon comparison tell us about neutron stars?",
+        "options": [
+          "They are made of ordinary rock",
+          "They are extremely dense objects",
+          "They contain liquid material",
+          "They are easy to study from Earth"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 212,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-space-003",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Mystery of Black Holes",
+    "text": "Black holes are among the most extreme objects in the universe. They form when massive stars collapse under their own gravity at the end of their lives. The result is a region where gravity is so intense that nothing — not even light — can escape once it crosses a boundary called the event horizon.\n\nDespite the name, black holes are not empty voids. They contain an enormous amount of mass compressed into an incredibly small space. At the centre lies the singularity, a point where our understanding of physics completely breaks down. Einstein's general relativity predicts its existence but cannot describe what happens there.\n\nBlack holes come in different sizes. Stellar black holes form from individual stars and may be only a few times larger than our Sun. Supermassive black holes, found at the centre of most galaxies, can contain billions of solar masses. The black hole at the heart of our galaxy, called Sagittarius A*, has a mass four million times that of our Sun.\n\nFor decades, black holes were theoretical. Then in 2019, the Event Horizon Telescope captured the first actual image of a black hole in the galaxy M87. The photograph showed a glowing ring of hot gas surrounding a dark central region.\n\nScientists study black holes by observing how they affect nearby matter and light. As gas spirals inward, it heats up and emits X-rays that telescopes can detect. Black holes are invisible, but their effects reveal them unmistakably.",
+    "imageUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the event horizon of a black hole?",
+        "options": [
+          "The centre of a black hole",
+          "The boundary beyond which nothing can escape",
+          "A type of radiation emitted by black holes",
+          "The region where stars form"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "In what year was the first actual image of a black hole captured?",
+        "options": [
+          "2015",
+          "2017",
+          "2019",
+          "2021"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How do scientists detect black holes if they cannot be seen directly?",
+        "options": [
+          "By using sound waves in space",
+          "By observing their effects on nearby matter and light",
+          "By travelling close enough to photograph them",
+          "By measuring changes in Earth's gravity"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does 'our understanding of physics completely breaks down' at the singularity mean?",
+        "options": [
+          "That physics equipment stops working near black holes",
+          "That current scientific laws cannot explain what occurs there",
+          "That gravity is weaker at the singularity",
+          "That time speeds up near the centre"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 215,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-space-004",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "technology",
+    "title": "Living on a Space Station",
+    "text": "The International Space Station (ISS) has been continuously inhabited since November 2000, making it humanity's longest-running outpost in space. Orbiting Earth at about 400 kilometres altitude, it travels at 28,000 kilometres per hour and completes 16 orbits of Earth every day.\n\nLife aboard the ISS requires adapting to microgravity, where everything floats unless secured. Astronauts sleep in small sleeping bags attached to walls. They eat specially prepared foods from sealed pouches or cans. Even drinking requires special pouches with straws — ordinary cups would spill in zero gravity.\n\nWater is precious and recycled extensively. The station's systems recover moisture from the air, including water vapour exhaled by the crew, and purify it for drinking. Urine is also recycled into drinking water through advanced filtration processes. Nothing is wasted.\n\nAstronauts must exercise for two hours every day to counteract the muscle and bone loss caused by weightlessness. Despite this, returning astronauts typically need months of rehabilitation on Earth. The longest continuous mission on the ISS lasted 355 days, leaving the astronaut noticeably weakened.\n\nThe ISS is also a laboratory. Scientists use the microgravity environment to study biology, physics, and materials science in ways impossible on Earth. Experiments have led to advances in medicine, water purification, and robotics.\n\nCurrently, NASA and its partners are planning a new lunar Gateway station as a stepping stone to Mars, building on lessons learned from over two decades aboard the ISS.",
+    "imageUrl": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many orbits of Earth does the ISS complete each day?",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "24"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why must astronauts exercise for two hours daily on the ISS?",
+        "options": [
+          "To stay entertained during long missions",
+          "To counteract muscle and bone loss from weightlessness",
+          "To generate electricity for the station",
+          "To maintain the station's systems"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the fact that urine is recycled into drinking water tell us about conditions on the ISS?",
+        "options": [
+          "That the crew lacks proper food and drink",
+          "That water is extremely scarce and must be reused completely",
+          "That the station has poor hygiene standards",
+          "That recycling technology is unreliable"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why is microgravity useful for scientific experiments?",
+        "options": [
+          "It makes experiments run faster",
+          "It allows studies that cannot be replicated on Earth",
+          "It reduces the cost of research",
+          "It improves communication with Earth"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 226,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-space-005",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "Searching for Other Worlds",
+    "text": "The discovery of planets beyond our solar system — called exoplanets — has transformed our understanding of the universe. Before 1992, we had no confirmed evidence that other stars hosted planets. Today, astronomers have catalogued over 5,500 exoplanets, with thousands more candidates awaiting confirmation.\n\nMost exoplanets are too far away to photograph directly. Instead, scientists use indirect methods. The transit method detects tiny dips in a star's brightness as a planet passes in front of it, briefly blocking some light. The radial velocity method measures small wobbles in a star caused by a planet's gravitational pull. Both techniques require incredibly precise measurements.\n\nThe Kepler Space Telescope, launched in 2009, revolutionised the field by discovering thousands of exoplanets using the transit method. Its successor, the TESS telescope, continues this work today.\n\nScientists are particularly interested in planets within the habitable zone — the range of distances from a star where liquid water could exist on a planet's surface. Water is considered essential for life as we know it. Several rocky planets in habitable zones have been identified, including some orbiting nearby stars.\n\nThe James Webb Space Telescope, launched in 2021, can analyse the atmospheres of exoplanets by studying starlight filtered through them. Scientists hope to detect gases like oxygen or methane that might indicate biological processes.\n\nWhether life exists elsewhere in the universe remains unknown. But with thousands of worlds to examine, the search has never been more promising.",
+    "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the transit method for detecting exoplanets?",
+        "options": [
+          "Measuring a star's temperature changes",
+          "Detecting dips in a star's brightness as a planet passes in front of it",
+          "Photographing planets with powerful telescopes",
+          "Measuring gravitational waves from distant systems"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is the habitable zone around a star?",
+        "options": [
+          "The zone where a star's gravity is strongest",
+          "The region where planets are most likely to be rocky",
+          "The range of distances where liquid water could exist on a surface",
+          "The area around a star free from radiation"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why are scientists excited about detecting oxygen or methane in an exoplanet's atmosphere?",
+        "options": [
+          "These gases make planets more visible to telescopes",
+          "They could suggest the presence of biological processes",
+          "They indicate that the planet has water underground",
+          "They show that the planet is in the habitable zone"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the author mean by 'the search has never been more promising'?",
+        "options": [
+          "Scientists have already found alien life",
+          "Advances in technology and data give scientists better chances of finding answers",
+          "The universe is smaller than previously thought",
+          "Governments are increasing space exploration funding"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 220,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak8-tema-001",
     "title": "The Silent Reef",
     "text": "Mira had always loved the sea near her grandmother's island. Every summer, she spent hours swimming near the coral reef outside the small fishing village. When she was younger, the water had been filled with colorful fish, bright coral, and sea turtles that moved slowly through the clear waves. However, during her latest visit, she noticed that many parts of the reef had turned white. Some fish had disappeared completely, and even the older fishermen seemed worried.\n\nOne evening, Mira joined her grandmother at the harbor. Several villagers were discussing the problem. A marine biologist named Elias explained that the reef was suffering from coral bleaching. Warmer ocean temperatures caused the coral to lose the tiny algae that helped keep it alive. Without the algae, the coral became weak and pale.\n\nMira listened carefully. She had learned about climate change in school, but hearing about it in the village made the issue feel more real. Elias also explained that pollution and overfishing made the reef even weaker. Some tourists had damaged coral by stepping on it while diving.\n\nThe next day, Mira decided to help. She and a group of local teenagers organized a beach cleanup. They collected plastic bottles, fishing nets, and other trash that had washed ashore. A non-binary student named Alex created posters encouraging tourists to respect the reef and avoid touching coral formations.\n\nAt first, some villagers doubted that the teenagers could make any difference. The reef's problems seemed too large to solve with small local actions. However, Elias supported the group. He explained that while global climate change required international cooperation, local communities could still protect ecosystems by reducing pollution and educating visitors.\n\nOver the following weeks, more people joined the project. Restaurants stopped using plastic straws, divers followed stricter environmental rules, and fishermen agreed to avoid certain breeding areas during sensitive seasons. Mira noticed that the project also brought the community closer together. People who rarely spoke to each other were suddenly working side by side.\n\nOne afternoon, Mira swam near the reef again. The damage was still visible, but she also noticed small signs of recovery. Tiny fish had returned to some areas, and several young corals were beginning to grow.\n\nElias reminded the group that environmental recovery takes time. Coral reefs can survive if people act early enough to reduce damage. Mira realized that protecting nature was not only the responsibility of scientists or politicians. Ordinary people could also influence what happened to the world around them.\n\nWhen summer ended, Mira returned home with a new goal. She planned to start an environmental club at school and share what she had learned on the island. The reef had shown her that even small actions could inspire larger changes when communities worked together.",
