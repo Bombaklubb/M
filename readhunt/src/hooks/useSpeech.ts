@@ -36,8 +36,12 @@ function pickVoice(lang: string): SpeechSynthesisVoice | null {
  * Wraps the browser Web Speech API and reports the character index of the
  * word currently being spoken so the UI can highlight it (karaoke style).
  *
- * Uses onboundary when available; falls back to a timer-based estimator
- * when the voice (e.g. Google cloud TTS) does not fire onboundary events.
+ * Strategy:
+ *  1. onboundary (perfectly synced) — used when the voice supports it.
+ *     The first boundary event disables the fallback timer immediately.
+ *  2. Char-position timer fallback — polls every 50ms and estimates which
+ *     word is being spoken based on elapsed time and characters-per-second.
+ *     More accurate than a fixed WPM timer because word length is respected.
  */
 export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
   const [speaking, setSpeaking] = useState(false);
@@ -48,8 +52,9 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
 
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const timerWordIdxRef = useRef(0);
-  const boundaryFiredRef = useRef(false);
+  const usingTimerRef = useRef(true);
+  const startTimeRef = useRef(0);
+  const pausedAtRef = useRef(0); // elapsed ms when paused
 
   // Wait for voices to load (Chrome loads them asynchronously)
   useEffect(() => {
@@ -81,8 +86,8 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
     setSpeaking(false);
     setPaused(false);
     setCharIndex(-1);
-    timerWordIdxRef.current = 0;
-    boundaryFiredRef.current = false;
+    usingTimerRef.current = true;
+    pausedAtRef.current = 0;
   }, [clearTimer]);
 
   // Cancel speech when text changes or on unmount
@@ -106,16 +111,17 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
       const voice = pickVoice(lang);
       if (voice) utterance.voice = voice;
 
-      boundaryFiredRef.current = false;
-      timerWordIdxRef.current = 0;
+      usingTimerRef.current = true;
+      pausedAtRef.current = 0;
 
       utterance.onboundary = (e: SpeechSynthesisEvent) => {
         if (e.name !== 'word') return;
-        boundaryFiredRef.current = true;
+        // onboundary is working — disable the timer estimator
+        if (usingTimerRef.current) {
+          usingTimerRef.current = false;
+          clearTimer();
+        }
         setCharIndex(e.charIndex);
-        // Sync the fallback timer index so it continues from the right word
-        const idx = wordPositions.findIndex((p) => p >= e.charIndex);
-        if (idx >= 0) timerWordIdxRef.current = idx + 1;
       };
 
       utterance.onend = reset;
@@ -125,28 +131,34 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
 
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
+
       setSpeaking(true);
       setPaused(false);
       setCharIndex(wordPositions[0] ?? 0);
-      timerWordIdxRef.current = 1;
 
-      // Timer-based fallback: fires every ~interval ms and advances to the
-      // next word. If onboundary fires, it takes over and keeps the timer in sync.
-      // ~140 WPM base rate for English TTS.
-      const msPerWord = Math.round(60000 / (useRate * 140));
+      // Char-position fallback timer.
+      // English TTS speaks roughly 12-14 chars/sec at rate=1.0.
+      // Polling every 50ms gives smooth updates with low CPU cost.
+      const charsPerSec = useRate * 13;
+      startTimeRef.current = performance.now();
+
       timerRef.current = setInterval(() => {
-        const idx = timerWordIdxRef.current;
-        if (idx < wordPositions.length) {
-          // Only update via timer if onboundary hasn't fired recently,
-          // or always advance as a safety net so karaoke never gets stuck.
-          setCharIndex(wordPositions[idx]);
-          timerWordIdxRef.current = idx + 1;
-        } else {
-          clearTimer();
+        if (!usingTimerRef.current) return; // onboundary took over
+        const elapsed = (performance.now() - startTimeRef.current) / 1000;
+        const estimatedCharPos = elapsed * charsPerSec;
+
+        // Find the last word that has started by now
+        let idx = 0;
+        for (let i = 0; i < wordPositions.length; i++) {
+          if (wordPositions[i] <= estimatedCharPos) idx = i;
+          else break;
         }
-      }, msPerWord);
+        setCharIndex(wordPositions[idx]);
+
+        if (idx >= wordPositions.length - 1) clearTimer();
+      }, 50);
     },
-    // voicesReady ensures we re-memoize once the voice list is populated
+    // voicesReady ensures re-memoize once voice list is populated
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [text, lang, reset, clearTimer, wordPositions, voicesReady]
   );
@@ -156,9 +168,13 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
     if (!speaking) {
       start(rate);
     } else if (paused) {
+      // Resume: shift startTime forward by the paused duration
+      const pausedDuration = performance.now() - pausedAtRef.current;
+      startTimeRef.current += pausedDuration;
       window.speechSynthesis.resume();
       setPaused(false);
     } else {
+      pausedAtRef.current = performance.now();
       window.speechSynthesis.pause();
       setPaused(true);
     }
