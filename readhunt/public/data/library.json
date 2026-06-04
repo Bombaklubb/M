@@ -4727,6 +4727,330 @@
     }
   },
   {
+    "id": "ak5-mc-001",
+    "grade": 5,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "The First Ride",
+    "text": "When Elias turned eleven, he became fascinated by motorcycles. He did not ride one himself, but he loved reading magazines, watching races, and learning how engines worked. One weekend, his aunt Sofia invited him to a motorcycle exhibition in a nearby city. The event displayed many different models, from small commuter bikes to powerful touring motorcycles designed for long journeys. Elias carefully studied each machine and asked questions about safety equipment, fuel systems, and maintenance. A mechanic explained that responsible riders spend time checking brakes, tires, and lights before every trip. Elias was surprised to learn that preparation was often more important than speed. During the exhibition, visitors could also try a riding simulator. The simulator taught balance, steering, and hazard awareness without using a real motorcycle. Elias enjoyed the challenge and improved after several attempts. Later, he attended a presentation about road safety. The speaker emphasized that helmets, protective clothing, and good judgment reduce risks significantly. On the way home, Elias realized that motorcycles were not only exciting machines. They also required knowledge, patience, and responsibility. He decided to continue learning about transportation technology and promised himself that if he ever became a rider in the future, safety would always come first.",
+    "imageUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did Elias visit the exhibition?",
+        "options": [
+          "To buy a motorcycle",
+          "To learn more about motorcycles",
+          "To repair an engine",
+          "To enter a race"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who invited Elias to the event?",
+        "options": [
+          "His teacher",
+          "His friend",
+          "His aunt Sofia",
+          "A mechanic"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the mechanic say riders should check?",
+        "options": [
+          "Brakes, tires, and lights",
+          "Maps and cameras",
+          "Seats and mirrors only",
+          "Fuel prices"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What could visitors try at the exhibition?",
+        "options": [
+          "A racing track",
+          "A repair workshop",
+          "A motorcycle museum",
+          "A riding simulator"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What was the main message of the safety presentation?",
+        "options": [
+          "Speed is most important",
+          "Protective equipment reduces risks",
+          "Motorcycles are easy to ride",
+          "Everyone should race"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What did Elias decide at the end?",
+        "options": [
+          "To stop learning about motorcycles",
+          "To buy a motorcycle immediately",
+          "To focus on racing",
+          "To value safety if he rides in the future"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 307,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-mc-002",
+    "grade": 5,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "A Journey Across the Mountains",
+    "text": "Mina and her grandfather Lars shared an interest in motorcycles and travel. During the summer holiday, they planned a trip through several mountain regions. Mina was not old enough to ride, but she enjoyed helping with navigation and planning. Before leaving, Lars checked the motorcycle carefully. He inspected the tires, adjusted the chain, tested the lights, and packed emergency supplies. Mina created a route that included small villages, scenic viewpoints, and historical landmarks. As they traveled, the weather changed frequently. Bright sunshine could quickly become heavy rain in the mountains. Because of this, they carried waterproof clothing and followed weather forecasts closely. Along the way, they met riders from different countries who shared stories about their journeys. Some preferred long-distance touring motorcycles, while others enjoyed lighter machines for winding roads. One afternoon, a road was temporarily closed because workers were repairing a damaged bridge. Instead of becoming frustrated, Mina suggested an alternative route. The detour led them through a forest area with beautiful lakes and wildlife. By the end of the trip, both travelers agreed that flexibility had improved the adventure. They had seen impressive landscapes, learned about local history, and practiced careful travel planning. The experience taught Mina that successful journeys depend not only on transportation but also on preparation, cooperation, and the ability to adapt when unexpected situations appear.",
+    "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who traveled with Mina?",
+        "options": [
+          "Her brother",
+          "Her grandfather Lars",
+          "Her neighbor",
+          "Her teacher"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Mina help with before the trip?",
+        "options": [
+          "Navigation and planning",
+          "Motorcycle repairs",
+          "Bridge construction",
+          "Photography lessons"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why did they carry waterproof clothing?",
+        "options": [
+          "To cross rivers",
+          "To clean the motorcycle",
+          "Because mountain weather changes quickly",
+          "Because it was required by law"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why was one road closed?",
+        "options": [
+          "A race was taking place",
+          "Flooding blocked it",
+          "Animals crossed it",
+          "Workers repaired a bridge"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did Mina suggest when the road was closed?",
+        "options": [
+          "An alternative route",
+          "Returning home",
+          "Taking a train",
+          "Stopping the trip"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did Mina learn?",
+        "options": [
+          "Only fast travel matters",
+          "Preparation and flexibility are important",
+          "Motorcycles never need maintenance",
+          "Maps are unnecessary"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 306,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-mc-003",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "history",
+    "title": "Building a Motorcycle Museum",
+    "text": "A small town wanted to attract more visitors and celebrate its transportation history. Community leaders decided to create a motorcycle museum in an old factory building. Many residents contributed photographs, tools, riding equipment, and stories from earlier decades. Noor, a twelve-year-old student, volunteered to help organize information for visitors. She interviewed former riders and recorded details about how motorcycles had changed over time. Early models were often simpler and less comfortable than modern machines. Advances in engineering improved reliability, fuel efficiency, and safety features. Noor discovered that motorcycles had been used for many purposes, including commuting, deliveries, recreation, and competitive racing. To make the museum engaging, volunteers created interactive displays. Visitors could compare engine designs, examine historical maps, and listen to recorded interviews. One section focused on environmental developments, explaining how manufacturers have worked to reduce emissions and improve efficiency. When the museum finally opened, people from nearby regions came to explore the exhibits. Teachers organized school visits, and local businesses noticed increased activity. Noor felt proud because her research helped preserve valuable community knowledge. She learned that museums do more than display objects. They also protect stories, encourage curiosity, and help people understand how technology and society influence one another across generations.",
+    "imageUrl": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why was the museum created?",
+        "options": [
+          "To celebrate transportation history",
+          "To sell motorcycles",
+          "To train racers",
+          "To store vehicles"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Noor help organize?",
+        "options": [
+          "Road repairs",
+          "Information for visitors",
+          "Motorcycle sales",
+          "Racing schedules"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Noor do to gather information?",
+        "options": [
+          "Built engines",
+          "Designed roads",
+          "Interviewed former riders",
+          "Managed tickets"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What topic was included in one museum section?",
+        "options": [
+          "Cooking history",
+          "Space travel",
+          "Ancient farming",
+          "Environmental developments"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What happened after the museum opened?",
+        "options": [
+          "More visitors came to the area",
+          "The factory closed",
+          "The exhibits were removed",
+          "Schools avoided it"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did Noor learn about museums?",
+        "options": [
+          "They only store objects",
+          "They protect stories and knowledge",
+          "They replace schools",
+          "They focus only on business"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 301,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-mc-004",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "science",
+    "title": "The Electric Motorcycle Project",
+    "text": "At Green Valley School, a group of students joined an after-school engineering club. Their mentor challenged them to design a model electric motorcycle that demonstrated efficient energy use. The project did not involve a full-sized vehicle. Instead, the students built a small working prototype powered by rechargeable batteries. Among the team members were Hugo, Selma, and Robin, who each contributed different skills. Hugo enjoyed mechanical design, Selma focused on research, and Robin analyzed test results. During the first trials, the prototype moved slowly and stopped frequently. The students investigated possible causes and discovered that some parts created unnecessary friction. After making adjustments, the model traveled farther on the same amount of stored energy. The team also compared different battery types and measured performance carefully. They recorded data in charts and discussed ways to improve efficiency without increasing weight. At a regional science event, the students presented their findings to judges and visitors. Many people were interested in how electric transportation could reduce emissions in the future. Although another team won the top prize, the club received recognition for clear research methods and teamwork. The experience showed that engineering often involves testing ideas repeatedly, learning from mistakes, and making gradual improvements until a better solution is achieved.",
+    "imageUrl": "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=600&h=380&fit=crop",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What kind of motorcycle did the students design?",
+        "options": [
+          "A racing motorcycle",
+          "A touring motorcycle",
+          "An electric motorcycle model",
+          "A police motorcycle"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What powered the prototype?",
+        "options": [
+          "Solar panels",
+          "Rechargeable batteries",
+          "Fuel",
+          "Wind energy"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What problem did the students discover?",
+        "options": [
+          "Too much friction",
+          "Broken roads",
+          "Poor weather",
+          "Missing maps"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where did the students present their project?",
+        "options": [
+          "A factory",
+          "A museum",
+          "A repair shop",
+          "A regional science event"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why were people interested in the project?",
+        "options": [
+          "Electric transportation may reduce emissions",
+          "It was the fastest vehicle",
+          "It used no batteries",
+          "It was extremely expensive"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did the students learn?",
+        "options": [
+          "Engineering requires repeated testing and improvement",
+          "Success comes immediately",
+          "Research is unnecessary",
+          "Mistakes should be avoided completely"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 301,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak5-orig-001",
     "grade": 5,
     "genre": "fiction",
