@@ -2816,6 +2816,1259 @@
       ]
     },
     {
+      "id": "gym-g5-relative",
+      "title": "Relative & Reduced Clauses",
+      "description": "Relativsatser och förkortade satser i avancerad engelska.",
+      "icon": "🔗",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "helpText": [
+        "Restriktiva relativsatser (utan komma) begränsar betydelsen: 'The book that I read was great.'",
+        "Icke-restriktiva (med komma) tillför extra info: 'My car, which is red, broke down.' – använd 'which', aldrig 'that'.",
+        "'whose' = ägande, 'whom' = objektsform i formellt språk.",
+        "Reduced clauses: 'The man who is standing there' → 'The man standing there.'",
+        "Tips: 'that' fungerar bara i restriktiva satser."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g5-1",
+          "type": "multiple-choice",
+          "question": "Choose the correct non-restrictive clause:",
+          "options": [
+            "My sister that lives in Rome called.",
+            "My sister, who lives in Rome, called.",
+            "My sister which lives in Rome called.",
+            "My sister, that lives in Rome, called."
+          ],
+          "correctIndex": 1,
+          "explanation": "Non-restrictive clauses use commas and 'who'/'which' (never 'that').",
+          "hint": "Med komma → who/which, aldrig that."
+        },
+        {
+          "id": "gym-g5-2",
+          "type": "fill-in-blank",
+          "sentence": "The scientist ___ research changed medicine won a prize.",
+          "answer": "whose",
+          "explanation": "'whose' shows possession – the research belongs to the scientist.",
+          "hint": "Ägandeform av who."
+        },
+        {
+          "id": "gym-g5-3",
+          "type": "multiple-choice",
+          "question": "Reduce: 'The students who were chosen will travel.'",
+          "options": [
+            "The students chosen will travel.",
+            "The students choosing will travel.",
+            "The students to choose will travel.",
+            "The students which chosen will travel."
+          ],
+          "correctIndex": 0,
+          "explanation": "Passive reduced clause drops 'who were' → past participle 'chosen'.",
+          "hint": "Ta bort 'who were', behåll particip."
+        },
+        {
+          "id": "gym-g5-4",
+          "type": "fill-in-blank",
+          "sentence": "The committee, ___ I spoke to yesterday, approved the plan.",
+          "answer": "whom",
+          "explanation": "Formal object relative pronoun is 'whom' after a preposition/as object.",
+          "alternativeAnswers": [
+            "who"
+          ],
+          "hint": "Formell objektsform."
+        },
+        {
+          "id": "gym-g5-5",
+          "type": "multiple-choice",
+          "question": "Which sentence is correct?",
+          "options": [
+            "The house where I grew up is gone.",
+            "The house which I grew up is gone.",
+            "The house that I grew up is gone.",
+            "The house when I grew up is gone."
+          ],
+          "correctIndex": 0,
+          "explanation": "'where' refers to a place; the others need a preposition ('in which').",
+          "hint": "Plats → where."
+        },
+        {
+          "id": "gym-g5-6",
+          "type": "fill-in-blank",
+          "sentence": "Anyone ___ wants to join is welcome.",
+          "answer": "who",
+          "explanation": "'who' for people as subject of the relative clause.",
+          "alternativeAnswers": [
+            "that"
+          ],
+          "hint": "Person som subjekt."
+        },
+        {
+          "id": "gym-g5-7",
+          "type": "multiple-choice",
+          "question": "Reduce: 'The report which was written last week is ready.'",
+          "options": [
+            "The report writing last week is ready.",
+            "The report written last week is ready.",
+            "The report wrote last week is ready.",
+            "The report to write last week is ready."
+          ],
+          "correctIndex": 1,
+          "explanation": "Passive reduction: 'which was' dropped, past participle 'written' remains.",
+          "hint": "Passiv förkortning."
+        },
+        {
+          "id": "gym-g5-8",
+          "type": "fill-in-blank",
+          "sentence": "This is the reason ___ she resigned.",
+          "answer": "why",
+          "explanation": "'why' introduces a relative clause about a reason.",
+          "alternativeAnswers": [
+            "that"
+          ],
+          "hint": "Anledning → why."
+        },
+        {
+          "id": "gym-g5-9",
+          "type": "multiple-choice",
+          "question": "Identify the restrictive clause:",
+          "options": [
+            "Paris, which is in France, is lovely.",
+            "The phone that I bought broke.",
+            "My dad, who is 60, retired.",
+            "London, where I live, is busy."
+          ],
+          "correctIndex": 1,
+          "explanation": "Restrictive clauses have no commas and define which noun is meant.",
+          "hint": "Utan komma = restriktiv."
+        },
+        {
+          "id": "gym-g5-10",
+          "type": "fill-in-blank",
+          "sentence": "The film, ___ lasted three hours, was boring.",
+          "answer": "which",
+          "explanation": "Non-restrictive clause about a thing uses 'which' with commas.",
+          "hint": "Sak, icke-restriktiv."
+        }
+      ]
+    },
+    {
+      "id": "gym-g6-inversion",
+      "title": "Inversion & Emphasis",
+      "description": "Inversion och emfas för stilistisk effekt.",
+      "icon": "🔄",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "helpText": [
+        "Efter negativa adverbial inverteras ordföljden: 'Never have I seen...' / 'Rarely does she...'",
+        "'Not only ... but also': 'Not only did he win, but he also set a record.'",
+        "'Only after/when...': 'Only then did I understand.'",
+        "Emfatiskt 'do/does/did': 'I do believe you.'",
+        "Cleft-meningar: 'It was John who called.' / 'What I need is rest.'"
+      ],
+      "exercises": [
+        {
+          "id": "gym-g6-1",
+          "type": "fill-in-blank",
+          "sentence": "Never ___ I seen such a beautiful sunset.",
+          "answer": "have",
+          "explanation": "After 'never' the auxiliary is inverted: 'Never have I seen'.",
+          "hint": "Inversion efter never."
+        },
+        {
+          "id": "gym-g6-2",
+          "type": "multiple-choice",
+          "question": "Choose the correct inversion:",
+          "options": [
+            "Rarely she goes out.",
+            "Rarely does she go out.",
+            "Rarely she does go out.",
+            "Rarely goes she out."
+          ],
+          "correctIndex": 1,
+          "explanation": "Negative adverbial 'rarely' triggers auxiliary inversion: 'does she go'.",
+          "hint": "Rarely + hjälpverb + subjekt."
+        },
+        {
+          "id": "gym-g6-3",
+          "type": "fill-in-blank",
+          "sentence": "Not only ___ he apologise, but he also paid for the damage.",
+          "answer": "did",
+          "explanation": "'Not only' at the start forces inversion with 'did'.",
+          "hint": "Inversion med did."
+        },
+        {
+          "id": "gym-g6-4",
+          "type": "multiple-choice",
+          "question": "Which is an emphatic sentence?",
+          "options": [
+            "I like coffee.",
+            "I do like coffee.",
+            "I am liking coffee.",
+            "I have liked coffee."
+          ],
+          "correctIndex": 1,
+          "explanation": "Emphatic 'do' adds stress: 'I do like coffee.'",
+          "hint": "Emfatiskt do."
+        },
+        {
+          "id": "gym-g6-5",
+          "type": "fill-in-blank",
+          "sentence": "Only when she left ___ he realise his mistake.",
+          "answer": "did",
+          "explanation": "'Only when...' clause triggers inversion in the main clause: 'did he realise'.",
+          "hint": "Only when → inversion."
+        },
+        {
+          "id": "gym-g6-6",
+          "type": "multiple-choice",
+          "question": "Complete the cleft sentence: '___ was Sarah who solved it.'",
+          "options": [
+            "That",
+            "It",
+            "There",
+            "What"
+          ],
+          "correctIndex": 1,
+          "explanation": "'It-cleft' begins with 'It was ... who/that' to emphasise the subject.",
+          "hint": "It-cleft."
+        },
+        {
+          "id": "gym-g6-7",
+          "type": "fill-in-blank",
+          "sentence": "Hardly ___ I arrived when the phone rang.",
+          "answer": "had",
+          "explanation": "'Hardly had I arrived when...' – past perfect inversion.",
+          "hint": "Hardly + had + subjekt."
+        },
+        {
+          "id": "gym-g6-8",
+          "type": "multiple-choice",
+          "question": "Which uses a 'what-cleft' correctly?",
+          "options": [
+            "What I need is a holiday.",
+            "That I need is a holiday.",
+            "It I need is a holiday.",
+            "Which I need is a holiday."
+          ],
+          "correctIndex": 0,
+          "explanation": "What-cleft: 'What I need is...' emphasises the object.",
+          "hint": "What-cleft."
+        },
+        {
+          "id": "gym-g6-9",
+          "type": "fill-in-blank",
+          "sentence": "So loud was the music ___ we couldn't talk.",
+          "answer": "that",
+          "explanation": "'So + adjective + inversion + that' shows degree and result.",
+          "hint": "So...that-konstruktion."
+        },
+        {
+          "id": "gym-g6-10",
+          "type": "multiple-choice",
+          "question": "Choose the correct inversion after 'Little':",
+          "options": [
+            "Little he knew the truth.",
+            "Little did he know the truth.",
+            "Little knew he the truth.",
+            "Little he did know the truth."
+          ],
+          "correctIndex": 1,
+          "explanation": "'Little did he know' – negative adverbial inversion.",
+          "hint": "Little + did + subjekt."
+        }
+      ]
+    },
+    {
+      "id": "gym-g7-conditionals",
+      "title": "Advanced & Mixed Conditionals",
+      "description": "Blandade och avancerade konditionalsatser.",
+      "icon": "🔀",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "helpText": [
+        "Typ 2 (nutid/hypotetisk): 'If I had time, I would help.'",
+        "Typ 3 (dåtid/orealiserad): 'If I had known, I would have come.'",
+        "Mixed: 'If I had studied (då), I would be a doctor now (nu).'",
+        "Inverterad: 'Had I known...' = 'If I had known...'",
+        "'Unless' = 'if not'; 'provided/as long as' = villkor."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g7-1",
+          "type": "fill-in-blank",
+          "sentence": "If I had left earlier, I ___ have caught the train. (typ 3)",
+          "answer": "would",
+          "explanation": "Type 3: 'would have + past participle' for unreal past.",
+          "hint": "Typ 3-konditionalis."
+        },
+        {
+          "id": "gym-g7-2",
+          "type": "multiple-choice",
+          "question": "Choose the mixed conditional:",
+          "options": [
+            "If I studied, I would pass.",
+            "If I had studied medicine, I would be a doctor now.",
+            "If I study, I will pass.",
+            "If I had studied, I would have passed."
+          ],
+          "correctIndex": 1,
+          "explanation": "Mixed: past condition (had studied) + present result (would be now).",
+          "hint": "Dåtid → nutid."
+        },
+        {
+          "id": "gym-g7-3",
+          "type": "fill-in-blank",
+          "sentence": "___ I known about the meeting, I would have attended. (inversion)",
+          "answer": "Had",
+          "explanation": "Inverted type 3: 'Had I known' replaces 'If I had known'.",
+          "hint": "Inverterad typ 3."
+        },
+        {
+          "id": "gym-g7-4",
+          "type": "multiple-choice",
+          "question": "'___ you need help, call me.'",
+          "options": [
+            "Unless",
+            "Should",
+            "Had",
+            "Were"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Should you need help' = formal/inverted 'If you should need help'.",
+          "hint": "Inverterad villkorssats med should."
+        },
+        {
+          "id": "gym-g7-5",
+          "type": "fill-in-blank",
+          "sentence": "We won't go ___ the weather improves. (om inte)",
+          "answer": "unless",
+          "explanation": "'unless' = 'if not' – a negative condition.",
+          "hint": "Om inte."
+        },
+        {
+          "id": "gym-g7-6",
+          "type": "multiple-choice",
+          "question": "Which is a correct type 2 conditional?",
+          "options": [
+            "If I was rich, I will travel.",
+            "If I were rich, I would travel.",
+            "If I am rich, I would travel.",
+            "If I were rich, I will travel."
+          ],
+          "correctIndex": 1,
+          "explanation": "Type 2 uses 'were' + 'would': hypothetical present.",
+          "hint": "Typ 2: were + would."
+        },
+        {
+          "id": "gym-g7-7",
+          "type": "fill-in-blank",
+          "sentence": "If she ___ (be) more careful, the accident wouldn't have happened.",
+          "answer": "had been",
+          "explanation": "Type 3 needs past perfect in the if-clause: 'had been'.",
+          "hint": "Typ 3 if-sats."
+        },
+        {
+          "id": "gym-g7-8",
+          "type": "multiple-choice",
+          "question": "'I'll lend you the book ___ you return it.'",
+          "options": [
+            "unless",
+            "as long as",
+            "had",
+            "were"
+          ],
+          "correctIndex": 1,
+          "explanation": "'as long as' expresses a condition (provided that).",
+          "hint": "Villkor: as long as."
+        },
+        {
+          "id": "gym-g7-9",
+          "type": "fill-in-blank",
+          "sentence": "Were I ___ your position, I would resign. (inversion, typ 2)",
+          "answer": "in",
+          "explanation": "'Were I in your position' = 'If I were in your position'.",
+          "hint": "Inverterad typ 2."
+        },
+        {
+          "id": "gym-g7-10",
+          "type": "multiple-choice",
+          "question": "Identify the mixed conditional result:",
+          "options": [
+            "If he had slept, he wouldn't be tired now.",
+            "If he sleeps, he won't be tired.",
+            "If he had slept, he wouldn't have been tired.",
+            "If he slept, he wouldn't be tired."
+          ],
+          "correctIndex": 0,
+          "explanation": "Past condition (had slept) + present result (wouldn't be now) = mixed.",
+          "hint": "Blandad konditionalis."
+        }
+      ]
+    },
+    {
+      "id": "gym-g8-phrasal",
+      "title": "Advanced Phrasal Verbs",
+      "description": "Avancerade partikelverb i kontext.",
+      "icon": "🧩",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Partikelverb = verb + partikel med ny betydelse: 'put off' = skjuta upp.",
+        "'carry out' = utföra | 'bring about' = orsaka | 'point out' = påpeka.",
+        "'come up with' = komma på | 'look into' = undersöka.",
+        "Många är vanliga i akademiskt och formellt språk.",
+        "Tips: lär dig hela frasen, inte bara verbet."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g8-1",
+          "type": "multiple-choice",
+          "question": "'The meeting was ___ until next week.' (skjuta upp)",
+          "options": [
+            "put off",
+            "put on",
+            "put up",
+            "put out"
+          ],
+          "correctIndex": 0,
+          "explanation": "'put off' = postpone/skjuta upp.",
+          "hint": "Skjuta upp."
+        },
+        {
+          "id": "gym-g8-2",
+          "type": "fill-in-blank",
+          "sentence": "Scientists will carry ___ the experiment tomorrow.",
+          "answer": "out",
+          "explanation": "'carry out' = perform/utföra.",
+          "alternativeAnswers": [
+            "out"
+          ],
+          "hint": "Utföra."
+        },
+        {
+          "id": "gym-g8-3",
+          "type": "multiple-choice",
+          "question": "'She ___ a brilliant solution.' (komma på)",
+          "options": [
+            "came across",
+            "came up with",
+            "came down with",
+            "came over"
+          ],
+          "correctIndex": 1,
+          "explanation": "'come up with' = think of/komma på.",
+          "hint": "Komma på en idé."
+        },
+        {
+          "id": "gym-g8-4",
+          "type": "fill-in-blank",
+          "sentence": "The police are looking ___ the matter. (undersöka)",
+          "answer": "into",
+          "explanation": "'look into' = investigate/undersöka.",
+          "hint": "Undersöka."
+        },
+        {
+          "id": "gym-g8-5",
+          "type": "multiple-choice",
+          "question": "'The new law brought ___ major changes.' (orsaka)",
+          "options": [
+            "about",
+            "up",
+            "off",
+            "in"
+          ],
+          "correctIndex": 0,
+          "explanation": "'bring about' = cause/orsaka.",
+          "hint": "Orsaka."
+        },
+        {
+          "id": "gym-g8-6",
+          "type": "fill-in-blank",
+          "sentence": "He pointed ___ several errors in the report. (påpeka)",
+          "answer": "out",
+          "explanation": "'point out' = highlight/påpeka.",
+          "hint": "Påpeka."
+        },
+        {
+          "id": "gym-g8-7",
+          "type": "multiple-choice",
+          "question": "'I can't ___ his behaviour.' (tolerera)",
+          "options": [
+            "put up with",
+            "put down",
+            "put off",
+            "put away"
+          ],
+          "correctIndex": 0,
+          "explanation": "'put up with' = tolerate/stå ut med.",
+          "hint": "Stå ut med."
+        },
+        {
+          "id": "gym-g8-8",
+          "type": "fill-in-blank",
+          "sentence": "Sales have fallen ___ sharply this year. (minska kraftigt)",
+          "answer": "off",
+          "explanation": "'fall off' = decline/minska.",
+          "alternativeAnswers": [
+            "off"
+          ],
+          "hint": "Minska."
+        },
+        {
+          "id": "gym-g8-9",
+          "type": "multiple-choice",
+          "question": "'The company had to ___ 200 workers.' (avskeda)",
+          "options": [
+            "lay off",
+            "lay out",
+            "lay down",
+            "lay over"
+          ],
+          "correctIndex": 0,
+          "explanation": "'lay off' = make redundant/avskeda.",
+          "hint": "Avskeda."
+        },
+        {
+          "id": "gym-g8-10",
+          "type": "fill-in-blank",
+          "sentence": "Let's set ___ a meeting to discuss this. (ordna/boka)",
+          "answer": "up",
+          "explanation": "'set up' = arrange/organise.",
+          "hint": "Ordna."
+        }
+      ]
+    },
+    {
+      "id": "gym-g9-collocations",
+      "title": "Prepositions & Collocations",
+      "description": "Prepositioner och vanliga ordkombinationer.",
+      "icon": "🔤",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Kollokationer = ord som ofta hör ihop: 'make a decision', 'take responsibility'.",
+        "Adjektiv + preposition: 'interested in', 'capable of', 'responsible for'.",
+        "Verb + preposition: 'depend on', 'consist of', 'result in'.",
+        "Substantiv + preposition: 'a solution to', 'an increase in', 'a reason for'.",
+        "Tips: lär dig prepositionen tillsammans med ordet."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g9-1",
+          "type": "multiple-choice",
+          "question": "'She is responsible ___ the whole department.'",
+          "options": [
+            "of",
+            "for",
+            "to",
+            "with"
+          ],
+          "correctIndex": 1,
+          "explanation": "'responsible for' is the fixed collocation.",
+          "hint": "responsible + ?"
+        },
+        {
+          "id": "gym-g9-2",
+          "type": "fill-in-blank",
+          "sentence": "The success depends ___ careful planning.",
+          "answer": "on",
+          "explanation": "'depend on' is the standard verb + preposition.",
+          "hint": "depend + ?"
+        },
+        {
+          "id": "gym-g9-3",
+          "type": "multiple-choice",
+          "question": "'There has been an increase ___ unemployment.'",
+          "options": [
+            "of",
+            "on",
+            "in",
+            "to"
+          ],
+          "correctIndex": 2,
+          "explanation": "'an increase in' is the correct noun + preposition.",
+          "hint": "increase + ?"
+        },
+        {
+          "id": "gym-g9-4",
+          "type": "fill-in-blank",
+          "sentence": "We must find a solution ___ this problem.",
+          "answer": "to",
+          "explanation": "'a solution to' (not 'of') a problem.",
+          "hint": "solution + ?"
+        },
+        {
+          "id": "gym-g9-5",
+          "type": "multiple-choice",
+          "question": "Choose the correct collocation:",
+          "options": [
+            "do a decision",
+            "make a decision",
+            "take a decision quickly",
+            "have a decision"
+          ],
+          "correctIndex": 1,
+          "explanation": "'make a decision' is the standard collocation.",
+          "hint": "decision → make."
+        },
+        {
+          "id": "gym-g9-6",
+          "type": "fill-in-blank",
+          "sentence": "He is not capable ___ handling the pressure.",
+          "answer": "of",
+          "explanation": "'capable of' + -ing form.",
+          "hint": "capable + ?"
+        },
+        {
+          "id": "gym-g9-7",
+          "type": "multiple-choice",
+          "question": "'The committee consists ___ five members.'",
+          "options": [
+            "in",
+            "of",
+            "from",
+            "with"
+          ],
+          "correctIndex": 1,
+          "explanation": "'consist of' = be made up of.",
+          "hint": "consist + ?"
+        },
+        {
+          "id": "gym-g9-8",
+          "type": "fill-in-blank",
+          "sentence": "Poor planning resulted ___ major delays.",
+          "answer": "in",
+          "explanation": "'result in' = lead to/cause.",
+          "hint": "result + ?"
+        },
+        {
+          "id": "gym-g9-9",
+          "type": "multiple-choice",
+          "question": "Which collocation is correct?",
+          "options": [
+            "pay attention to",
+            "pay attention on",
+            "give attention at",
+            "make attention to"
+          ],
+          "correctIndex": 0,
+          "explanation": "'pay attention to' is the fixed phrase.",
+          "hint": "attention → pay ... to."
+        },
+        {
+          "id": "gym-g9-10",
+          "type": "fill-in-blank",
+          "sentence": "She showed great interest ___ the project.",
+          "answer": "in",
+          "explanation": "'interest in' (noun) / 'interested in' (adjective).",
+          "hint": "interest + ?"
+        }
+      ]
+    },
+    {
+      "id": "gym-g10-wordformation",
+      "title": "Word Formation",
+      "description": "Ordbildning – prefix, suffix och nominalisering.",
+      "icon": "🏗️",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Prefix ändrar betydelse: un-, in-, dis-, mis-, over- (unhappy, incorrect, disagree).",
+        "Suffix ändrar ordklass: -tion, -ment, -ness, -ity (decide → decision).",
+        "Nominalisering: göra verb/adjektiv till substantiv – vanligt i akademiskt språk.",
+        "Adjektivsuffix: -able, -ive, -ous, -al (comfort → comfortable).",
+        "Tips: känn igen ordstammar för att gissa betydelse."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g10-1",
+          "type": "fill-in-blank",
+          "sentence": "Make a noun from 'decide': The ___ was final.",
+          "answer": "decision",
+          "explanation": "decide → decision (verb → noun, nominalisation).",
+          "hint": "Verb → substantiv."
+        },
+        {
+          "id": "gym-g10-2",
+          "type": "multiple-choice",
+          "question": "Add the correct prefix: '___ legal' (not legal)",
+          "options": [
+            "un",
+            "il",
+            "in",
+            "dis"
+          ],
+          "correctIndex": 1,
+          "explanation": "'illegal' – 'il-' is used before words starting with 'l'.",
+          "hint": "Negativt prefix före l."
+        },
+        {
+          "id": "gym-g10-3",
+          "type": "fill-in-blank",
+          "sentence": "Make a noun from 'happy': Her ___ was obvious.",
+          "answer": "happiness",
+          "explanation": "happy → happiness (-y becomes -iness).",
+          "hint": "Adjektiv → substantiv."
+        },
+        {
+          "id": "gym-g10-4",
+          "type": "multiple-choice",
+          "question": "Which is the adjective form of 'comfort'?",
+          "options": [
+            "comforting",
+            "comfortable",
+            "comfortably",
+            "comfortness"
+          ],
+          "correctIndex": 1,
+          "explanation": "'comfortable' is the adjective (-able suffix).",
+          "hint": "Adjektivform."
+        },
+        {
+          "id": "gym-g10-5",
+          "type": "fill-in-blank",
+          "sentence": "Make a noun from 'analyse': The ___ took two weeks.",
+          "answer": "analysis",
+          "explanation": "analyse → analysis (irregular noun form).",
+          "hint": "Oregelbunden form."
+        },
+        {
+          "id": "gym-g10-6",
+          "type": "multiple-choice",
+          "question": "Add a prefix meaning 'wrongly': '___understand'",
+          "options": [
+            "dis",
+            "mis",
+            "un",
+            "in"
+          ],
+          "correctIndex": 1,
+          "explanation": "'misunderstand' – 'mis-' means wrongly/badly.",
+          "hint": "Felaktigt → mis-."
+        },
+        {
+          "id": "gym-g10-7",
+          "type": "fill-in-blank",
+          "sentence": "Make an adjective from 'danger': a ___ situation.",
+          "answer": "dangerous",
+          "explanation": "danger → dangerous (-ous suffix).",
+          "hint": "-ous-suffix."
+        },
+        {
+          "id": "gym-g10-8",
+          "type": "multiple-choice",
+          "question": "Which is the noun form of 'strong'?",
+          "options": [
+            "strongness",
+            "strongth",
+            "strength",
+            "strongity"
+          ],
+          "correctIndex": 2,
+          "explanation": "'strength' is the irregular noun form of 'strong'.",
+          "hint": "Oregelbundet substantiv."
+        },
+        {
+          "id": "gym-g10-9",
+          "type": "fill-in-blank",
+          "sentence": "Make a noun from 'develop': economic ___.",
+          "answer": "development",
+          "explanation": "develop → development (-ment suffix).",
+          "hint": "-ment-suffix."
+        },
+        {
+          "id": "gym-g10-10",
+          "type": "multiple-choice",
+          "question": "Add the negative prefix: '___ responsible'",
+          "options": [
+            "un",
+            "ir",
+            "in",
+            "im"
+          ],
+          "correctIndex": 1,
+          "explanation": "'irresponsible' uses 'ir-' before words starting with 'r'.",
+          "hint": "Negativt prefix före r → ir-."
+        }
+      ]
+    },
+    {
+      "id": "gym-v8-akademiska",
+      "title": "Akademiska ord (Academic)",
+      "description": "Vanliga akademiska och formella ord.",
+      "icon": "🎓",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🎓 Academic vocabulary for essays and discussions!",
+        "to assess = bedöma | to demonstrate = visa | significant = betydande",
+        "Tips: dessa ord höjer nivån på dina texter."
+      ],
+      "exercises": [
+        {
+          "id": "gym-v8-akademiska-1",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to assess'?",
+          "options": [
+            "att bedöma",
+            "att gissa",
+            "att glömma",
+            "att skynda"
+          ],
+          "correctIndex": 0,
+          "explanation": "Assess = bedöma/utvärdera."
+        },
+        {
+          "id": "gym-v8-akademiska-2",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'significant'?",
+          "options": [
+            "obetydlig",
+            "betydande",
+            "tillfällig",
+            "tråkig"
+          ],
+          "correctIndex": 1,
+          "explanation": "Significant = betydande/viktig."
+        },
+        {
+          "id": "gym-v8-akademiska-3",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to demonstrate'?",
+          "options": [
+            "att dölja",
+            "att förneka",
+            "att visa/påvisa",
+            "att tveka"
+          ],
+          "correctIndex": 2,
+          "explanation": "Demonstrate = visa/påvisa."
+        },
+        {
+          "id": "gym-v8-akademiska-4",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'subsequent'?",
+          "options": [
+            "tidigare",
+            "efterföljande",
+            "samtidig",
+            "omöjlig"
+          ],
+          "correctIndex": 1,
+          "explanation": "Subsequent = efterföljande/påföljande."
+        },
+        {
+          "id": "gym-v8-akademiska-5",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to acquire'?",
+          "options": [
+            "att förlora",
+            "att förstöra",
+            "att förvärva/skaffa",
+            "att låna"
+          ],
+          "correctIndex": 2,
+          "explanation": "Acquire = förvärva/skaffa sig."
+        },
+        {
+          "id": "gym-v8-akademiska-6",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'adequate'?",
+          "options": [
+            "tillräcklig",
+            "överdriven",
+            "felaktig",
+            "sällsynt"
+          ],
+          "correctIndex": 0,
+          "explanation": "Adequate = tillräcklig/lämplig."
+        },
+        {
+          "id": "gym-v8-akademiska-7",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to emphasise'?",
+          "options": [
+            "att ignorera",
+            "att betona",
+            "att minska",
+            "att avsluta"
+          ],
+          "correctIndex": 1,
+          "explanation": "Emphasise = betona/framhäva."
+        },
+        {
+          "id": "gym-v8-akademiska-8",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'feasible'?",
+          "options": [
+            "omöjlig",
+            "dyr",
+            "genomförbar",
+            "farlig"
+          ],
+          "correctIndex": 2,
+          "explanation": "Feasible = genomförbar/möjlig."
+        }
+      ]
+    },
+    {
+      "id": "gym-v9-samhalle",
+      "title": "Samhälle & Politik",
+      "description": "Ord om samhälle, politik och demokrati.",
+      "icon": "🏛️",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🏛️ Society & politics vocabulary!",
+        "election = val | policy = politik/riktlinje | citizen = medborgare",
+        "Tips: bra för diskussioner om samhällsfrågor."
+      ],
+      "exercises": [
+        {
+          "id": "gym-v9-samhalle-1",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'election'?",
+          "options": [
+            "lag",
+            "val",
+            "skatt",
+            "gräns"
+          ],
+          "correctIndex": 1,
+          "explanation": "Election = val."
+        },
+        {
+          "id": "gym-v9-samhalle-2",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'citizen'?",
+          "options": [
+            "främling",
+            "politiker",
+            "medborgare",
+            "domare"
+          ],
+          "correctIndex": 2,
+          "explanation": "Citizen = medborgare."
+        },
+        {
+          "id": "gym-v9-samhalle-3",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'policy'?",
+          "options": [
+            "polis",
+            "politik/riktlinje",
+            "parti",
+            "protest"
+          ],
+          "correctIndex": 1,
+          "explanation": "Policy = politik/riktlinje (ej 'polis')."
+        },
+        {
+          "id": "gym-v9-samhalle-4",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'welfare'?",
+          "options": [
+            "välfärd",
+            "krig",
+            "handel",
+            "frihet"
+          ],
+          "correctIndex": 0,
+          "explanation": "Welfare = välfärd."
+        },
+        {
+          "id": "gym-v9-samhalle-5",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to govern'?",
+          "options": [
+            "att rösta",
+            "att styra/regera",
+            "att protestera",
+            "att betala"
+          ],
+          "correctIndex": 1,
+          "explanation": "Govern = styra/regera."
+        },
+        {
+          "id": "gym-v9-samhalle-6",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'taxation'?",
+          "options": [
+            "beskattning",
+            "utbildning",
+            "lagstiftning",
+            "invandring"
+          ],
+          "correctIndex": 0,
+          "explanation": "Taxation = beskattning."
+        },
+        {
+          "id": "gym-v9-samhalle-7",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'inequality'?",
+          "options": [
+            "jämlikhet",
+            "ojämlikhet",
+            "frihet",
+            "rättvisa"
+          ],
+          "correctIndex": 1,
+          "explanation": "Inequality = ojämlikhet."
+        },
+        {
+          "id": "gym-v9-samhalle-8",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'legislation'?",
+          "options": [
+            "lagstiftning",
+            "regering",
+            "opposition",
+            "folkomröstning"
+          ],
+          "correctIndex": 0,
+          "explanation": "Legislation = lagstiftning."
+        }
+      ]
+    },
+    {
+      "id": "gym-v10-miljo",
+      "title": "Miljö & Hållbarhet",
+      "description": "Ord om miljö, klimat och hållbarhet.",
+      "icon": "🌍",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "🌍 Environment & sustainability vocabulary!",
+        "emissions = utsläpp | renewable = förnybar | pollution = föroreningar",
+        "Tips: viktigt för texter om klimatfrågor."
+      ],
+      "exercises": [
+        {
+          "id": "gym-v10-miljo-1",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'emissions'?",
+          "options": [
+            "utsläpp",
+            "energi",
+            "skogar",
+            "resurser"
+          ],
+          "correctIndex": 0,
+          "explanation": "Emissions = utsläpp."
+        },
+        {
+          "id": "gym-v10-miljo-2",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'renewable'?",
+          "options": [
+            "fossil",
+            "förnybar",
+            "farlig",
+            "billig"
+          ],
+          "correctIndex": 1,
+          "explanation": "Renewable = förnybar (t.ex. renewable energy)."
+        },
+        {
+          "id": "gym-v10-miljo-3",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'pollution'?",
+          "options": [
+            "återvinning",
+            "bevarande",
+            "föroreningar",
+            "tillväxt"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pollution = föroreningar."
+        },
+        {
+          "id": "gym-v10-miljo-4",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to conserve'?",
+          "options": [
+            "att slösa",
+            "att bevara",
+            "att förstöra",
+            "att köpa"
+          ],
+          "correctIndex": 1,
+          "explanation": "Conserve = bevara/spara."
+        },
+        {
+          "id": "gym-v10-miljo-5",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'sustainability'?",
+          "options": [
+            "hållbarhet",
+            "förorening",
+            "uppvärmning",
+            "avfall"
+          ],
+          "correctIndex": 0,
+          "explanation": "Sustainability = hållbarhet."
+        },
+        {
+          "id": "gym-v10-miljo-6",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'drought'?",
+          "options": [
+            "översvämning",
+            "storm",
+            "torka",
+            "frost"
+          ],
+          "correctIndex": 2,
+          "explanation": "Drought = torka."
+        },
+        {
+          "id": "gym-v10-miljo-7",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to recycle'?",
+          "options": [
+            "att återvinna",
+            "att bränna",
+            "att gräva",
+            "att förorena"
+          ],
+          "correctIndex": 0,
+          "explanation": "Recycle = återvinna."
+        },
+        {
+          "id": "gym-v10-miljo-8",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'biodiversity'?",
+          "options": [
+            "biologisk mångfald",
+            "klimatförändring",
+            "energikälla",
+            "naturkatastrof"
+          ],
+          "correctIndex": 0,
+          "explanation": "Biodiversity = biologisk mångfald."
+        }
+      ]
+    },
+    {
+      "id": "gym-v11-business",
+      "title": "Affärsengelska (Business)",
+      "description": "Ord för arbetsliv, ekonomi och affärer.",
+      "icon": "💼",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "💼 Business English vocabulary!",
+        "profit = vinst | budget = budget | negotiate = förhandla",
+        "Tips: användbart för arbetsliv och ekonomitexter."
+      ],
+      "exercises": [
+        {
+          "id": "gym-v11-business-1",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'profit'?",
+          "options": [
+            "förlust",
+            "vinst",
+            "skatt",
+            "lön"
+          ],
+          "correctIndex": 1,
+          "explanation": "Profit = vinst."
+        },
+        {
+          "id": "gym-v11-business-2",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to negotiate'?",
+          "options": [
+            "att förhandla",
+            "att avskeda",
+            "att anställa",
+            "att investera"
+          ],
+          "correctIndex": 0,
+          "explanation": "Negotiate = förhandla."
+        },
+        {
+          "id": "gym-v11-business-3",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'revenue'?",
+          "options": [
+            "utgift",
+            "skuld",
+            "intäkter",
+            "ränta"
+          ],
+          "correctIndex": 2,
+          "explanation": "Revenue = intäkter/omsättning."
+        },
+        {
+          "id": "gym-v11-business-4",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to invest'?",
+          "options": [
+            "att spendera",
+            "att investera",
+            "att spara",
+            "att förlora"
+          ],
+          "correctIndex": 1,
+          "explanation": "Invest = investera."
+        },
+        {
+          "id": "gym-v11-business-5",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'employee'?",
+          "options": [
+            "arbetsgivare",
+            "kund",
+            "anställd",
+            "ägare"
+          ],
+          "correctIndex": 2,
+          "explanation": "Employee = anställd (employer = arbetsgivare)."
+        },
+        {
+          "id": "gym-v11-business-6",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'expenses'?",
+          "options": [
+            "intäkter",
+            "utgifter",
+            "vinster",
+            "tillgångar"
+          ],
+          "correctIndex": 1,
+          "explanation": "Expenses = utgifter/kostnader."
+        },
+        {
+          "id": "gym-v11-business-7",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'a deadline'?",
+          "options": [
+            "en sista tidpunkt",
+            "ett möte",
+            "en rabatt",
+            "ett kontrakt"
+          ],
+          "correctIndex": 0,
+          "explanation": "Deadline = sista tidpunkt/slutdatum."
+        },
+        {
+          "id": "gym-v11-business-8",
+          "type": "multiple-choice",
+          "question": "Vad betyder 'to merge'?",
+          "options": [
+            "att dela upp",
+            "att slå samman",
+            "att sälja",
+            "att stänga"
+          ],
+          "correctIndex": 1,
+          "explanation": "Merge = slå samman (t.ex. två företag)."
+        }
+      ]
+    },
+    {
       "id": "gym-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din avancerade grammatik! 23 blandade frågor.",

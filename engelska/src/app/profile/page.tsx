@@ -46,12 +46,11 @@ export default function ProfilePage() {
   function getStageStats(stageId: StageId) {
     const s = student!.stages[stageId];
     const grammarMods = Object.values(s.grammarModules);
-    const readingMods = Object.values(s.readingModules);
     const spellingMods = Object.values(s.spellingModules ?? {});
-    const all = [...grammarMods, ...readingMods, ...spellingMods];
+    const all = [...grammarMods, ...spellingMods];
     const completed = all.filter((m) => m.completed).length;
     const totalPoints = all.reduce((sum, m) => sum + m.points, 0);
-    return { completed, totalPoints, grammarMods, readingMods, spellingMods };
+    return { completed, totalPoints, grammarMods, spellingMods };
   }
 
   const joinDate = new Date(student.createdAt).toLocaleDateString("sv-SE");
@@ -88,9 +87,9 @@ export default function ProfilePage() {
           <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📊 Progression per stadie</h2>
           <div className="space-y-3">
             {STAGES.map((stage) => {
-              const { completed, totalPoints, grammarMods, readingMods, spellingMods } =
+              const { completed, totalPoints, grammarMods, spellingMods } =
                 getStageStats(stage.id);
-              const total = grammarMods.length + readingMods.length + spellingMods.length;
+              const total = grammarMods.length + spellingMods.length;
               const pct = total > 0 ? (completed / total) * 100 : 0;
 
               return (
@@ -124,21 +123,14 @@ export default function ProfilePage() {
                     />
 
                     {/* Detailed breakdown */}
-                    {(grammarMods.length > 0 || readingMods.length > 0 || spellingMods.length > 0) && (
-                      <div className="mt-3 grid grid-cols-3 gap-2">
+                    {(grammarMods.length > 0 || spellingMods.length > 0) && (
+                      <div className="mt-3 grid grid-cols-2 gap-2">
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
                           <div className="font-semibold dark:text-gray-100">
                             {grammarMods.filter((m) => m.completed).length}/
                             {grammarMods.length}
                           </div>
                           <div className="text-gray-500 dark:text-gray-400">📝 Grammatik</div>
-                        </div>
-                        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
-                          <div className="font-semibold dark:text-gray-100">
-                            {readingMods.filter((m) => m.completed).length}/
-                            {readingMods.length}
-                          </div>
-                          <div className="text-gray-500 dark:text-gray-400">📖 Läsning</div>
                         </div>
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
                           <div className="font-semibold dark:text-gray-100">
