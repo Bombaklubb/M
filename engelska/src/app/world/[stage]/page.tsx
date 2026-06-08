@@ -31,7 +31,7 @@ interface Props {
   params: Promise<{ stage: string }>;
 }
 
-type Tab = "grammar" | "reading" | "spelling" | "wordsearch" | "regler" | "spel" | "forsokaigen";
+type Tab = "grammar" | "spelling" | "wordsearch" | "regler" | "spel" | "forsokaigen";
 
 export default function WorldPage({ params }: Props) {
   const { stage: stageId } = use(params);
@@ -69,11 +69,10 @@ export default function WorldPage({ params }: Props) {
 
   const stageProgress = student?.stages[stage.id as keyof typeof student.stages];
 
-  function getModuleProgress(kind: "grammar" | "reading" | "spelling" | "wordsearch", moduleId: string) {
+  function getModuleProgress(kind: "grammar" | "spelling" | "wordsearch", moduleId: string) {
     if (!stageProgress) return null;
     const map =
       kind === "grammar"    ? stageProgress.grammarModules
-      : kind === "reading"  ? stageProgress.readingModules
       : kind === "spelling" ? (stageProgress.spellingModules    ?? {})
       : (stageProgress.wordsearchModules ?? {});
     return map[moduleId] ?? null;
@@ -84,11 +83,6 @@ export default function WorldPage({ params }: Props) {
     grammar: (
       <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-      </svg>
-    ),
-    reading: (
-      <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
     spelling: (
@@ -122,7 +116,6 @@ export default function WorldPage({ params }: Props) {
 
   const tabs: { id: Tab; label: string }[] = [
     { id: "grammar",      label: "Grammatik" },
-    { id: "reading",      label: "Läsning" },
     { id: "spelling",     label: "Stavning" },
     { id: "regler",       label: "Språkregler" },
     { id: "wordsearch",   label: "Ordsökning" },
@@ -160,7 +153,6 @@ export default function WorldPage({ params }: Props) {
           <div className="max-w-5xl mx-auto px-4 py-3 flex gap-3 flex-wrap">
             {[
               { label: "Grammatik", icon: tabIcons.grammar,    count: Object.values(stageProgress.grammarModules).filter((m) => m.completed).length,             total: content?.grammar.length ?? 0 },
-              { label: "Läsning",   icon: tabIcons.reading,    count: Object.values(stageProgress.readingModules).filter((m) => m.completed).length,             total: content?.reading.length ?? 0 },
               { label: "Stavning",  icon: tabIcons.spelling,   count: Object.values(stageProgress.spellingModules    ?? {}).filter((m) => m.completed).length,   total: content?.spelling?.length ?? 0 },
               { label: "Ordsök.",   icon: tabIcons.wordsearch, count: Object.values(stageProgress.wordsearchModules  ?? {}).filter((m) => m.completed).length,   total: content?.wordsearch?.length ?? 0 },
             ].map(({ label, icon, count, total }) => {
@@ -272,7 +264,6 @@ export default function WorldPage({ params }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pb-10">
               {(
                 activeTab === "grammar"    ? content.grammar
-                : activeTab === "reading" ? content.reading
                 : activeTab === "spelling" ? (content.spelling   ?? [])
                 : (content.wordsearch ?? [])
               ).map((mod, idx, arr) => {
@@ -298,9 +289,9 @@ export default function WorldPage({ params }: Props) {
                       title={mod.title}
                       description={mod.description}
                       icon={mod.icon}
-                      kind={activeTab as "grammar" | "reading" | "spelling" | "wordsearch"}
+                      kind={activeTab as "grammar" | "spelling" | "wordsearch"}
                       stage={stage}
-                      progress={getModuleProgress(activeTab as "grammar" | "reading" | "spelling" | "wordsearch", mod.id)}
+                      progress={getModuleProgress(activeTab as "grammar" | "spelling" | "wordsearch", mod.id)}
                       locked={false}
                       prevModuleTitle={idx > 0 ? arr[idx - 1].title : null}
                       isFinalTest={isFinalTest}

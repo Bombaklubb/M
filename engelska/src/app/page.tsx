@@ -28,10 +28,34 @@ function getStageCompleted(student: StudentData, stageId: string): number {
   if (!sp) return 0;
   let done = 0;
   for (const m of Object.values(sp.grammarModules    ?? {})) if (m.completed) done++;
-  for (const m of Object.values(sp.readingModules    ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.spellingModules   ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.wordsearchModules ?? {})) if (m.completed) done++;
   return done;
+}
+
+// Small circular progress ring shown on each stage card
+function ProgressRing({ pct }: { pct: number }) {
+  const r = 16;
+  const c = 2 * Math.PI * r;
+  const offset = c - (Math.min(100, Math.max(0, pct)) / 100) * c;
+  const done = pct >= 100;
+  const started = pct > 0;
+  const color = done ? "#16a34a" : started ? "#f59e0b" : "#cbd5e1";
+  return (
+    <div className="relative flex-shrink-0" style={{ width: 40, height: 40 }}>
+      <svg width="40" height="40" viewBox="0 0 40 40" className="-rotate-90">
+        <circle cx="20" cy="20" r={r} fill="none" stroke="currentColor" className="text-gray-200 dark:text-gray-700" strokeWidth="4" />
+        <circle
+          cx="20" cy="20" r={r} fill="none" stroke={color} strokeWidth="4" strokeLinecap="round"
+          strokeDasharray={c} strokeDashoffset={offset}
+          style={{ transition: "stroke-dashoffset 0.6s ease" }}
+        />
+      </svg>
+      <span className="absolute inset-0 flex items-center justify-center text-[10px] font-black" style={{ color }}>
+        {Math.round(pct)}%
+      </span>
+    </div>
+  );
 }
 
 export default function HomePage() {
@@ -40,10 +64,23 @@ export default function HomePage() {
   const [selectedAvatar, setSelectedAvatar] = useState("ninja");
   const [loading,        setLoading]        = useState(true);
   const [returningName,  setReturningName]  = useState<string | null>(null);
+  const [totals,         setTotals]         = useState<Record<string, number>>({});
 
   useEffect(() => {
     setStudent(loadStudent());
     setLoading(false);
+    // Fetch total module counts per stage for the progress rings
+    Promise.all(
+      STAGES.map((s) =>
+        fetch(`/content/${s.id}/content.json`)
+          .then((r) => r.json())
+          .then((d) => [
+            s.id,
+            (d.grammar?.length ?? 0) + (d.spelling?.length ?? 0) + (d.wordsearch?.length ?? 0),
+          ] as [string, number])
+          .catch(() => [s.id, 0] as [string, number])
+      )
+    ).then((entries) => setTotals(Object.fromEntries(entries)));
   }, []);
 
   function handleNameChange(value: string) {
@@ -218,6 +255,8 @@ export default function HomePage() {
           {STAGES.map((stage, i) => {
             const pts  = getStagePoints(student, stage.id);
             const done = getStageCompleted(student, stage.id);
+            const total = totals[stage.id] ?? 0;
+            const pct  = total > 0 ? (done / total) * 100 : 0;
 
             return (
               <BlurFade key={stage.id} delay={0.05 + i * 0.07} duration={0.4} inView>
@@ -263,22 +302,25 @@ export default function HomePage() {
                     </div>
 
                     {/* Footer */}
-                    <div className="bg-white dark:bg-gray-800 px-5 py-3 flex items-center justify-between">
-                      {done > 0 ? (
-                        <span className="text-sm font-semibold flex items-center gap-1.5 text-green-600 dark:text-green-400">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                          </svg>
-                          <span><NumberTicker value={done} duration={500} /> modul{done !== 1 ? "er" : ""} klarade</span>
-                        </span>
-                      ) : (
-                        <span className="text-sm font-semibold text-gray-400 dark:text-gray-500 flex items-center gap-1.5">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                          </svg>
-                          Inte börjat än
-                        </span>
-                      )}
+                    <div className="bg-white dark:bg-gray-800 px-5 py-3 flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <ProgressRing pct={pct} />
+                        {done > 0 ? (
+                          <span className="text-sm font-semibold flex items-center gap-1.5 text-green-600 dark:text-green-400">
+                            <span className="truncate">
+                              <NumberTicker value={done} duration={500} />
+                              {total > 0 ? `/${total}` : ""} modul{done !== 1 ? "er" : ""} klarade
+                            </span>
+                          </span>
+                        ) : (
+                          <span className="text-sm font-semibold text-gray-400 dark:text-gray-500 flex items-center gap-1.5">
+                            <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            Inte börjat än
+                          </span>
+                        )}
+                      </div>
                       <ShimmerButton
                         background="linear-gradient(135deg, #dc2626, #b91c1c)"
                         className="text-sm px-4 py-1.5 rounded-xl"
