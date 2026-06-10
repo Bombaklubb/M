@@ -61,7 +61,9 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
               <p className="mt-1 text-sm text-stone-500">
                 {task.textType === "berättelse"
                   ? "Skriv en berättelse"
-                  : "Skriv en argumenterande text"}
+                  : task.textType === "krönika"
+                    ? "Skriv en krönika"
+                    : "Skriv en argumenterande text"}
               </p>
             </button>
           ))}

@@ -3,7 +3,7 @@
 export interface MultipleChoiceQuestion {
   kind: "multiple-choice";
   id: number;
-  maxPoints: 1;
+  maxPoints: 1 | 2; // åk 9: kryssfrågor ger 0 eller 2 poäng
   prompt: string;
   options: string[]; // alltid fyra alternativ A–D
   correctIndex: number;
@@ -24,11 +24,14 @@ export interface OrderingQuestion {
 export interface OpenQuestion {
   kind: "open";
   id: number;
-  maxPoints: 1 | 2;
+  maxPoints: 1 | 2 | 4;
   prompt: string;
   note?: string; // t.ex. "Du måste skriva två exempel för att få poäng."
   guidance: string; // bedömningsanvisning som visas vid självrättning
   lines: number;
+  // Vilka poäng som kan sättas vid självrättning, t.ex. [0, 2, 4].
+  // Utelämnas den gäller alla heltal 0..maxPoints.
+  pointSteps?: number[];
 }
 
 export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;
@@ -53,7 +56,7 @@ export interface ReadingTest {
 export interface WritingTask {
   id: string;
   delprov: string; // t.ex. "Delprov C1: skriva – berättande text"
-  textType: "berättelse" | "argumenterande";
+  textType: "berättelse" | "argumenterande" | "krönika";
   title: string;
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"

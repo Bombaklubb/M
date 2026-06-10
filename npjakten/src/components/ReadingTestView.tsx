@@ -223,7 +223,7 @@ function QuestionView({
             Maxpoäng: <span className="font-bold text-stone-700">{q.maxPoints}</span>
           </p>
         </div>
-        <p className="pt-1 font-medium leading-relaxed">
+        <p className="whitespace-pre-line pt-1 font-medium leading-relaxed">
           <span className="font-bold">{q.id}.</span> {q.prompt}
           {reviewing && q.kind === "multiple-choice" && q.category && (
             <span
@@ -302,7 +302,7 @@ function QuestionView({
               <p className="mt-1 text-sm leading-relaxed text-stone-700">{q.guidance}</p>
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 <span className="text-sm font-semibold">Sätt poäng på ditt svar:</span>
-                {Array.from({ length: q.maxPoints + 1 }, (_, p) => (
+                {(q.pointSteps ?? Array.from({ length: q.maxPoints + 1 }, (_, p) => p)).map((p) => (
                   <button
                     key={p}
                     onClick={() => onSelfScore(p)}
