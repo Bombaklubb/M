@@ -2,7 +2,7 @@ import type { ReadingTest, WritingTask } from "../types";
 
 // ============================================================
 // Delprov B1: läsa – berättande text
-// Originaltext skriven för Provjakten i samma stil och längd
+// Originaltext skriven för NP-jakten i samma stil och längd
 // som de nationella provens berättande texter.
 // ============================================================
 
@@ -60,7 +60,7 @@ export const lasaBerattande: ReadingTest = {
       ],
     },
   ],
-  byline: ["Text skriven för Provjakten, 2026", "I samma stil som provens berättande texter."],
+  byline: ["Text skriven för NP-jakten, 2026", "I samma stil som provens berättande texter."],
   questions: [
     {
       kind: "multiple-choice",
@@ -198,7 +198,7 @@ export const lasaBerattande: ReadingTest = {
 
 // ============================================================
 // Delprov B2: läsa – sakprosatext
-// Originalartikel skriven för Provjakten i samma stil som
+// Originalartikel skriven för NP-jakten i samma stil som
 // provens sakprosatexter (ingress, mellanrubriker, fotnot).
 // ============================================================
 
@@ -237,7 +237,7 @@ export const lasaSakprosa: ReadingTest = {
       ],
     },
   ],
-  byline: ["Text skriven för Provjakten, 2026", "I samma stil som provens sakprosatexter."],
+  byline: ["Text skriven för NP-jakten, 2026", "I samma stil som provens sakprosatexter."],
   footnote:
     "* En lins är en genomskinlig, slipad skiva av glas eller plast som bryter ljuset så att det man tittar på ser större, mindre eller skarpare ut.",
   questions: [

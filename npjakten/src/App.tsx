@@ -25,7 +25,7 @@ export default function App() {
             onClick={() => setView({ name: "start" })}
             className="text-left font-serif text-2xl font-bold tracking-tight"
           >
-            Provjakten
+            NP-jakten
           </button>
           <span className="hidden text-sm font-medium opacity-90 sm:block">
             Träna på nationella proven i svenska
@@ -69,7 +69,7 @@ export default function App() {
       </main>
 
       <footer className="pb-10 text-center text-xs text-stone-400">
-        Provjakten – övningsuppgifter i de nationella provens format. Allt innehåll är
+        NP-jakten – övningsuppgifter i de nationella provens format. Allt innehåll är
         nyskrivet övningsmaterial.
       </footer>
     </div>

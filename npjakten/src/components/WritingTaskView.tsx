@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function WritingTaskView({ task, onBack }: Props) {
-  const storageKey = `provjakten-skriva-${task.id}`;
+  const storageKey = `npjakten-skriva-${task.id}`;
   const [text, setText] = useState<string>(
     () => localStorage.getItem(storageKey) ?? ""
   );
