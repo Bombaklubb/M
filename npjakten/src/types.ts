@@ -3,23 +3,38 @@
 export interface MultipleChoiceQuestion {
   kind: "multiple-choice";
   id: number;
-  maxPoints: 1;
+  maxPoints: 1 | 2; // åk 9: kryssfrågor ger 0 eller 2 poäng
   prompt: string;
   options: string[]; // alltid fyra alternativ A–D
   correctIndex: number;
+  // Åk 3: L = lokalisering av information, TI = tolkning och integrering
+  category?: "L" | "TI";
+}
+
+// Åk 3, delprov B: sista uppgiften – numrera meningarna i rätt ordning
+export interface OrderingQuestion {
+  kind: "ordering";
+  id: number;
+  maxPoints: 1;
+  prompt: string;
+  items: string[]; // meningarna i den ordning de visas (A–D)
+  correctOrder: number[]; // rätt nummer (1–4) för varje mening i items
 }
 
 export interface OpenQuestion {
   kind: "open";
   id: number;
-  maxPoints: 1 | 2;
+  maxPoints: 1 | 2 | 4;
   prompt: string;
   note?: string; // t.ex. "Du måste skriva två exempel för att få poäng."
   guidance: string; // bedömningsanvisning som visas vid självrättning
   lines: number;
+  // Vilka poäng som kan sättas vid självrättning, t.ex. [0, 2, 4].
+  // Utelämnas den gäller alla heltal 0..maxPoints.
+  pointSteps?: number[];
 }
 
-export type Question = MultipleChoiceQuestion | OpenQuestion;
+export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;
 
 export interface TextSection {
   heading?: string; // mellanrubrik i sakprosatexter
@@ -41,7 +56,7 @@ export interface ReadingTest {
 export interface WritingTask {
   id: string;
   delprov: string; // t.ex. "Delprov C1: skriva – berättande text"
-  textType: "berättelse" | "argumenterande";
+  textType: "berättelse" | "argumenterande" | "krönika";
   title: string;
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"

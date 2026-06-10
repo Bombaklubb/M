@@ -55,6 +55,7 @@ export default function App() {
           <ReadingTestView
             key={view.testId}
             test={grade.reading.find((t) => t.id === view.testId)!}
+            gradeLabel={grade.label}
             onBack={() => setView({ name: "grade", gradeId: grade.id })}
           />
         )}
@@ -63,6 +64,7 @@ export default function App() {
           <WritingTaskView
             key={view.taskId}
             task={grade.writing.find((t) => t.id === view.taskId)!}
+            gradeLabel={grade.label}
             onBack={() => setView({ name: "grade", gradeId: grade.id })}
           />
         )}
