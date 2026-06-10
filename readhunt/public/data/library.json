@@ -5866,6 +5866,183 @@
     "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak6-fic-001",
+    "grade": 6,
+    "genre": "fiction",
+    "theme": "friendship",
+    "title": "The New Kid's Secret",
+    "text": "Nobody knew much about Theo, the new kid in class 6B. He arrived in October, sat in the back row, and never raised his hand. At lunch, he disappeared. Every single day.\n\nMaja noticed because she noticed everything. On Tuesday, she followed him. Theo walked past the cafeteria, down the stairs, and slipped into the music room. Maja pressed her ear against the door. Piano music — not the simple songs they played in music class, but something fast and beautiful, like rain turning into a storm.\n\nShe opened the door without thinking. Theo stopped immediately and stared at her, his face red.\n\n\"Please don't tell anyone,\" he said.\n\n\"Why not? You're amazing!\"\n\nTheo looked down at the keys. \"At my old school, kids made fun of me for it. They called me piano boy. It was easier to just... hide it.\"\n\nMaja sat down on the bench beside him. \"Well, this isn't your old school. And I've been trying to learn that exact song for a year. Will you show me?\"\n\nFor the first time since October, Theo smiled. By December, they were playing together at the school concert — and nobody laughed. The applause lasted so long that the music teacher had to ask the audience to settle down.",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Theo go every day at lunch?",
+        "options": [
+          "The library",
+          "The music room",
+          "The schoolyard",
+          "The cafeteria"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why did Theo hide his piano playing?",
+        "options": [
+          "His parents told him to",
+          "He thought he was bad at it",
+          "Kids at his old school made fun of him",
+          "The music room was forbidden"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did Maja follow Theo on Tuesday?",
+        "options": [
+          "She was curious about where he went",
+          "The teacher asked her to",
+          "She wanted to borrow something",
+          "She was lost"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the ending suggest about Theo's worry?",
+        "options": [
+          "He was right — people laughed",
+          "His fear did not come true at his new school",
+          "He decided to stop playing piano",
+          "He moved back to his old school"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 215,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak6-fic-002",
+    "grade": 6,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "The Message in the Bottle",
+    "text": "Elsa found the bottle on the beach after the storm, half-buried in seaweed and sand. Inside was a piece of paper, rolled up tight and yellowed at the edges.\n\nHer hands shook a little as she pulled out the cork. The note was short: \"My name is Anna. I am eleven years old. I live on Gotland. If you find this, please write to me.\" There was an address at the bottom — and a date. The letter had been written thirty-two years ago.\n\nElsa did the maths in her head. Anna would be forty-three years old now. Did she still live there? Did she even remember the bottle?\n\nThat evening, Elsa wrote a letter. She told Anna about the storm, the beach, and how the bottle had survived three decades at sea. She posted it the next morning, not really expecting anything.\n\nTwo weeks later, an envelope arrived. Inside was a photo of a woman with grey streaks in her hair, standing on a rocky shore. The letter read: \"Dear Elsa, I threw that bottle into the sea when I was your age. I had almost forgotten it. Thank you for reminding me that some messages just take a little longer to arrive. Would you like to be pen pals?\"\n\nElsa smiled. Some things, she thought, are worth waiting thirty-two years for.",
+    "imageUrl": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long ago had the message been written?",
+        "options": [
+          "Eleven years",
+          "Twenty years",
+          "Thirty-two years",
+          "Forty-three years"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Anna send back to Elsa?",
+        "options": [
+          "Another bottle",
+          "A photo and a letter",
+          "A map of Gotland",
+          "A new cork"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did Elsa's hands shake when she opened the bottle?",
+        "options": [
+          "She was cold from the storm",
+          "She was excited and nervous",
+          "She was afraid of the sea",
+          "The bottle was heavy"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the last line of the story mean?",
+        "options": [
+          "Elsa wished she had found the bottle sooner",
+          "Old bottles are valuable",
+          "The slow journey made the message more special",
+          "Letters are faster than bottles"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 225,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak6-fic-003",
+    "grade": 6,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "Grandpa Versus the Robot",
+    "text": "When Dad brought home the cleaning robot, Grandpa refused to be in the same room as it.\n\n\"That thing is spying on us,\" he muttered, watching the small round machine hum across the kitchen floor. \"In my day, we cleaned with our own two hands.\"\n\nThe robot, which the family had named Sune, bumped gently into Grandpa's slipper and changed direction. Grandpa lifted both feet onto the sofa like the floor was lava.\n\nFor a week, it was war. Grandpa blocked Sune's path with chairs. He hid it behind the curtains. Once, he even put it out on the balcony and claimed it had \"escaped on its own.\"\n\nThen, one rainy Thursday, Grandpa dropped a whole jar of lingonberry jam. Glass and red sticky jam went everywhere. His back was too stiff to bend down, and nobody else was home.\n\nSune rolled out from under the bookshelf, circled the mess twice, and cleaned up every last bit while Grandpa watched from his chair.\n\nWhen the family came home, they found Grandpa in the kitchen, feeding biscuit crumbs onto the floor one at a time.\n\n\"What are you doing?\" Dad asked.\n\nGrandpa cleared his throat. \"Sune and I have reached an agreement,\" he said. \"He does the floors. I provide the crumbs. It's called teamwork.\"",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did the family name the cleaning robot?",
+        "options": [
+          "Sune",
+          "Bosse",
+          "Roboten",
+          "Tjorven"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Grandpa drop on the floor?",
+        "options": [
+          "A cup of coffee",
+          "A jar of lingonberry jam",
+          "A plate of biscuits",
+          "His slipper"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did Grandpa lift his feet onto the sofa?",
+        "options": [
+          "The floor was wet",
+          "He was playing a game with the children",
+          "He did not want the robot to touch him",
+          "His feet were cold"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What changed Grandpa's mind about the robot?",
+        "options": [
+          "Dad ordered him to accept it",
+          "The robot helped him when he could not clean up himself",
+          "He read about robots in the newspaper",
+          "The robot stopped working"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 220,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak6-orig-001",
     "grade": 6,
     "genre": "non-fiction",
@@ -7083,6 +7260,183 @@
     "meta": {
       "wordCount": 401,
       "readingTime": 3
+    }
+  },
+  {
+    "id": "ak7-fic-001",
+    "grade": 7,
+    "genre": "fiction",
+    "theme": "psychology",
+    "title": "The Tryout",
+    "text": "Liv stood outside the gym doors for four minutes before going in. She counted them on her phone. Four minutes of telling herself she was being ridiculous, and four minutes of not moving.\n\nInside, twenty girls were already warming up for the basketball tryouts. Most of them had played together for years. Liv had played exactly nowhere, unless you counted the rusty hoop behind her old apartment building — which she did, secretly, because that hoop had taught her everything.\n\nThe coach blew the whistle. Drills first: dribbling, passing, layups. Liv's hands remembered what to do even when her brain was busy panicking. Then came the scrimmage.\n\nNobody passed to her for the first ten minutes. She was invisible, which was almost a relief. But then a loose ball bounced her way, and instinct took over. She caught it, spun past a defender, and scored before she had time to doubt herself.\n\nThe gym went quiet for half a second. Then a tall girl with a red headband grinned at her. \"Okay, new girl. Do that again.\"\n\nSo she did.\n\nWhen the list went up on Friday, Liv made herself read it from the bottom. Her name was third from the top. She photographed it, sent it to her mum, and then stood in the corridor smiling at her phone like an idiot — for exactly four minutes.",
+    "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long did Liv wait outside the gym doors?",
+        "options": [
+          "Ten minutes",
+          "Four minutes",
+          "Half a second",
+          "An hour"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where had Liv learned to play basketball?",
+        "options": [
+          "At her old school's team",
+          "At a summer camp",
+          "At a rusty hoop behind her old apartment building",
+          "She had never played before"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why was being invisible during the scrimmage 'almost a relief' for Liv?",
+        "options": [
+          "She was too tired to play",
+          "She was nervous and avoided attention at first",
+          "She wanted to leave early",
+          "She disliked the other players"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does the story end with 'exactly four minutes'?",
+        "options": [
+          "It mirrors the four nervous minutes at the start, showing how things changed",
+          "Liv's phone battery died after four minutes",
+          "The coach gave her four minutes to decide",
+          "The bus left in four minutes"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 230,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak7-fic-002",
+    "grade": 7,
+    "genre": "fiction",
+    "theme": "society",
+    "title": "The Locker Next to Mine",
+    "text": "The boy with the locker next to mine never spoke. Not to me, not to anyone. He arrived at school in September with a backpack, a quiet nod for the teachers, and a name — Samir — that I only knew because it was written on the class list.\n\nI didn't think much about him until the day my maths book went missing right before a test. I was digging through my locker in a panic when a hand appeared beside me, holding a maths book. His copy.\n\n\"Take it,\" he said. It was the first time I'd heard his voice. \"I already studied.\"\n\nAfter the test, I found him in the library and tried to say thanks. He shrugged like it was nothing, but I sat down anyway. It turned out his Swedish was careful and slow not because he had nothing to say, but because he was translating everything in his head first — from Arabic, his third language, after Kurdish.\n\n\"Three languages,\" I said. \"I can barely manage English.\"\n\nHe smiled for the first time. \"Languages are easy,\" he said. \"Finding someone to talk to is the hard part.\"\n\nWe ate lunch together that day, and most days after. By spring, Samir was talking in class, cracking jokes that took the teachers by surprise. People said he had finally come out of his shell. But I knew the truth: he was never in a shell. He was just waiting for someone to sit down.",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Samir lend to the narrator?",
+        "options": [
+          "A pencil",
+          "His maths book",
+          "His backpack",
+          "Lunch money"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How many languages did Samir speak?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "Four"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did Samir speak slowly and carefully in Swedish?",
+        "options": [
+          "He was shy and afraid of everyone",
+          "He was translating in his head from his other languages",
+          "He had a speech problem",
+          "He did not want to talk to classmates"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the narrator mean by 'he was just waiting for someone to sit down'?",
+        "options": [
+          "Samir needed a chair in the library",
+          "Samir was lazy and waited for help",
+          "Samir was not shy — he was lonely until someone reached out",
+          "Samir wanted to be left alone"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 245,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak7-fic-003",
+    "grade": 7,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "The Night Hike",
+    "text": "The plan was simple: hike to the lake, set up camp before dark, and impress absolutely everyone with the tent Jonas had borrowed from his uncle. The execution was less simple.\n\nFirst, Jonas discovered that the tent bag contained a tent but no poles. Then Vera's phone, which held their only map, dropped to two percent battery. And then, because the universe has a sense of humour, it started to rain.\n\n\"We should go back,\" Jonas said.\n\n\"It's further back than forward,\" Vera said, pulling up her hood. \"The lake has a wind shelter. We can sleep there.\"\n\nThey walked the last hour in darkness, following the white trail markers that appeared in their torchlight like small ghosts. Neither of them said much. There was something about the forest at night that made talking feel wrong — not scary exactly, but serious, like being in a church.\n\nThe shelter was exactly where the map had promised, back when they could still see the map. They rolled out their sleeping bags, ate slightly squashed sandwiches, and listened to the rain drum on the wooden roof.\n\n\"You know what's weird?\" Vera said into the dark. \"This is going to be the part we remember. Not the tent. Not the plan. This.\"\n\nJonas thought about it. The rain, the dark forest, the sandwiches. She was right, and somehow that made the whole disaster feel like a victory.",
+    "imageUrl": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was missing from the tent bag?",
+        "options": [
+          "The tent itself",
+          "The poles",
+          "The sleeping bags",
+          "The pegs"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Jonas and Vera sleep?",
+        "options": [
+          "In the tent",
+          "In a wind shelter by the lake",
+          "Under a tree",
+          "They walked home"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did Vera want to keep going instead of turning back?",
+        "options": [
+          "She wanted to test the tent",
+          "Going forward was shorter and the shelter offered protection",
+          "She was angry at Jonas",
+          "Her phone needed charging at the lake"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does Vera mean when she says 'this is going to be the part we remember'?",
+        "options": [
+          "The difficult, unplanned moments often become the best memories",
+          "She wants to forget the whole trip",
+          "She plans to write everything down",
+          "The shelter is famous"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 235,
+      "readingTime": 2
     }
   },
   {
@@ -8304,6 +8658,183 @@
       "readingTime": 9
     },
     "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
+  },
+  {
+    "id": "ak8-fic-001",
+    "grade": 8,
+    "genre": "fiction",
+    "theme": "science",
+    "title": "The Signal",
+    "text": "The radio telescope had been Hanna's grandfather's obsession, and after he died, it became hers. It stood in the garden behind his old house — a three-metre dish he had built from scrap metal and stubbornness, pointed permanently at a patch of sky near the constellation Lyra.\n\n\"Why there?\" she had asked him once.\n\n\"Because nobody else is listening there,\" he'd said. \"Discoveries hide where nobody looks.\"\n\nEvery Sunday, Hanna cycled to the house, switched on the receiver, and recorded an hour of static. Forty-three Sundays of nothing. She kept a logbook anyway, the way he had taught her: date, time, frequency, results. Results: nothing. Nothing. Nothing.\n\nOn the forty-fourth Sunday, the static changed.\n\nIt was small — a rhythmic pulse buried in the noise, repeating every twelve seconds. Hanna's hands went cold. She checked the equipment for faults. She recorded for three more hours. The pulse stayed, steady as a heartbeat.\n\nShe knew what her teacher would say: probably a satellite, probably interference, probably nothing. And maybe it was. But as she cycled home through the dark with the recording in her backpack, she understood something about her grandfather for the first time. It wasn't really about finding aliens. It was about the forty-three empty Sundays — about being the kind of person who keeps listening when everyone else has decided there's nothing to hear.\n\nMonday morning, she emailed the recording to the observatory in Onsala. Then she turned the page in the logbook and wrote the date.",
+    "imageUrl": "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How often did the mysterious pulse repeat?",
+        "options": [
+          "Every three seconds",
+          "Every twelve seconds",
+          "Every minute",
+          "Every hour"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Hanna record in her logbook each week?",
+        "options": [
+          "Date, time, frequency, results",
+          "Weather observations",
+          "Her grandfather's stories",
+          "Maps of the stars"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did the grandfather point the telescope where 'nobody else is listening'?",
+        "options": [
+          "The equipment only worked in that direction",
+          "He believed discoveries are made where others do not look",
+          "It was the cheapest direction to build",
+          "His neighbours complained about other angles"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What did Hanna realise about her grandfather on the way home?",
+        "options": [
+          "He had already found the signal years ago",
+          "He was wrong about the telescope",
+          "The real point was persistence, not necessarily finding aliens",
+          "He wanted her to sell the telescope"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 250,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-fic-002",
+    "grade": 8,
+    "genre": "fiction",
+    "theme": "society",
+    "title": "Seventeen Likes",
+    "text": "The video took Alva eleven seconds to film and four seconds to post. It would take considerably longer to undo.\n\nIt wasn't even her joke. Someone had zoomed in on Felix's worn-out shoes in the changing room and added a laughing emoji, and Alva had simply reposted it because it was already going around, because everyone else had, because it was Tuesday and she was bored. Seventeen people liked it before dinner.\n\nFelix wasn't in school on Wednesday. Or Thursday.\n\nOn Friday, their mentor held a class meeting. She didn't shout. She just read aloud, in a flat voice, the messages that had been sent — without saying who had written what. Heard like that, stripped of emojis and context, they sounded different. Crueller. Alva felt her face burn when her repost was read. Eleven seconds of her life, sounding like something a villain would say.\n\nShe found Felix's address through a classmate and stood outside his door for a long time before ringing the bell. When he opened, she didn't offer excuses, because she had promised herself she wouldn't.\n\n\"It was me. One of them, anyway. And it wasn't a joke, it was just cruelty with better lighting. I'm sorry.\"\n\nFelix looked at her for a moment. \"You're the first one who's come here,\" he said finally. He didn't say it was okay. She hadn't expected him to. But he left the door open, and after a moment, she followed him inside.",
+    "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many people liked Alva's repost before dinner?",
+        "options": [
+          "Eleven",
+          "Four",
+          "Seventeen",
+          "Twenty"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the mentor do at the class meeting?",
+        "options": [
+          "She shouted at the class",
+          "She read the messages aloud without naming anyone",
+          "She showed the video on the projector",
+          "She called everyone's parents"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did the messages sound different when read aloud?",
+        "options": [
+          "The mentor changed the words",
+          "Without emojis and context, their cruelty became obvious",
+          "They were translated into another language",
+          "The students could not hear properly"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the open door at the end suggest?",
+        "options": [
+          "Felix forgave her completely and immediately",
+          "Felix wanted her to leave",
+          "A first step toward repairing things, though trust is not yet rebuilt",
+          "Felix was moving to another school"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 245,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-fic-003",
+    "grade": 8,
+    "genre": "fiction",
+    "theme": "history",
+    "title": "The Attic Letters",
+    "text": "The house was being sold, which meant the attic had to be emptied, which meant Noah spent his autumn break carrying boxes instead of gaming. He had complained about this loudly and at length — right up until he found the suitcase.\n\nIt was leather, cracked with age, and locked. His mother broke it open with a screwdriver. Inside lay perhaps a hundred letters, bundled with string, all addressed to his great-grandmother Ester. The earliest was dated 1943.\n\nThey were from her sister, Ruth — written from Berlin during the war. Noah's German wasn't good, but his mother's was, and she read them aloud at the kitchen table, evening after evening, while the moving boxes stood forgotten. Letters about rationing, about neighbours who disappeared, about fear that hid between ordinary sentences about the weather. The last letter was dated March 1944. After that, nothing.\n\n\"What happened to her?\" Noah asked.\n\nHis mother shook her head. \"Ester never talked about it. Ever.\"\n\nNoah, who had never voluntarily done research in his life, spent the rest of his break in digital archives. He cross-referenced names, dates, transport lists. And there, in a database of survivors, he found her: Ruth Lindqvist, arrived in Sweden 1945, died in Malmö 1989. She had survived. She had lived forty minutes away.\n\nThe sisters had never found each other again. Two women, one country, forty minutes apart. Noah looked at the last letter for a long time. Then he started searching for Ruth's grandchildren.",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Noah find in the attic?",
+        "options": [
+          "A photo album",
+          "A locked suitcase full of letters",
+          "A diary from 1943",
+          "An old radio"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "When was the last letter from Ruth dated?",
+        "options": [
+          "1943",
+          "March 1944",
+          "1945",
+          "1989"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does 'fear that hid between ordinary sentences about the weather' suggest about Ruth's letters?",
+        "options": [
+          "She only wrote about the weather",
+          "She could not write openly about the danger around her",
+          "She was a meteorologist",
+          "She found the war boring"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does Noah start searching for Ruth's grandchildren at the end?",
+        "options": [
+          "He wants to sell them the letters",
+          "He wants to reunite the families and finish what history interrupted",
+          "He needs help moving boxes",
+          "He wants to return the suitcase"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 250,
+      "readingTime": 2
+    }
   },
   {
     "id": "ak8-orig-001",
@@ -9821,6 +10352,249 @@
     }
   },
   {
+    "id": "ak9-fic-001",
+    "grade": 9,
+    "genre": "fiction",
+    "theme": "psychology",
+    "title": "What the Mirror Didn't Say",
+    "text": "The first thing people noticed about Vincent was that he was funny. He had discovered early that a well-timed joke worked like a shield: if people were laughing, they weren't looking too closely. By ninth grade, he had perfected the act. Class clown, always on, always fine.\n\nThe truth was less entertaining. The truth was lying awake at two in the morning rehearsing conversations that would never happen. The truth was the knot in his stomach every Sunday evening, and the exhausting daily performance of being okay.\n\nIt was Ms. Lindgren, the art teacher, who noticed. Not because he stopped joking — he never stopped joking — but because of a self-portrait he'd painted in October. The assignment was to paint yourself as others see you. Most students produced flattering selfies in acrylic. Vincent painted a grinning mask, and behind it, barely visible in greys, a second face that wasn't grinning at all.\n\nShe kept him after class. He prepared a joke about modern art being open to interpretation. She looked at the painting, then at him, and said: \"You know the assignment was how others see you. This looks more like how others don't.\"\n\nThe joke evaporated. For a horrible, liberating moment, Vincent had nothing funny to say.\n\nThey talked for an hour. Then she walked with him to the school counsellor's office and waited until he went in. It wasn't a cure — those took longer, he would learn. But years later, Vincent would still think of that painting as the most honest thing he made in school: the day the mask came off, because one person had bothered to look behind it.",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was the art assignment?",
+        "options": [
+          "Paint a landscape",
+          "Paint yourself as others see you",
+          "Paint your best friend",
+          "Paint a famous person"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Vincent paint?",
+        "options": [
+          "A flattering selfie",
+          "A grinning mask with a hidden second face",
+          "A grey landscape",
+          "Ms. Lindgren's portrait"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did Vincent use humour constantly?",
+        "options": [
+          "He wanted to become a comedian",
+          "Joking protected him from people seeing how he really felt",
+          "His teachers encouraged it",
+          "He found school genuinely funny"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why was the moment without a joke both 'horrible' and 'liberating'?",
+        "options": [
+          "He was embarrassed but also relieved that someone finally saw the truth",
+          "He was afraid of being punished but happy class was over",
+          "He hated art but loved the teacher",
+          "He wanted to laugh but could not"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about getting help with mental health?",
+        "options": [
+          "It happens instantly once someone notices",
+          "Jokes are usually enough",
+          "It is a longer process, but it can start when one person pays attention",
+          "Only teachers can provide it"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What is the main theme of the story?",
+        "options": [
+          "The history of art education",
+          "Hiding behind a mask and being truly seen",
+          "How to become popular in school",
+          "The importance of homework"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 275,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-fic-002",
+    "grade": 9,
+    "genre": "fiction",
+    "theme": "society",
+    "title": "The Whistle",
+    "text": "Amir had refereed forty-one matches in the youth league, and he could feel a bad one coming the way sailors feel weather. This one announced itself early: parents pressing against the touchline, a coach who disputed the first throw-in, and a number nine who played with his elbows.\n\nIn the second half, with the score tied, the number nine went down in the penalty area. Theatrically. Hopefully. The home crowd roared for a penalty.\n\nAmir had seen it clearly: no contact. He waved play on.\n\nWhat followed was ugly. The coach screamed. A parent called him a cheat, then something worse — something about where he was 'really from'. The match finished 2–2, and Amir walked to the changing room with his jaw clenched, forty kronor richer and several illusions poorer. He was sixteen years old.\n\nHe almost quit that evening. The email was half-written when his phone buzzed. Unknown number. \"Hi. My son played number six today, the tall one. He told me what that parent shouted at you. He also said you were the best ref they've had all season — you saw the dive everyone else missed. People who scream are loud, but they're not the majority. Hope you stay.\"\n\nAmir read it three times. Then he deleted the email draft and opened next weekend's fixture list instead.\n\nHe refereed for nine more years, and eventually, the league's young referees got a mentor programme. Amir ran it. The first thing he taught new referees wasn't the rulebook. It was this: \"The screamers are loud. They are not the majority. Now, let's talk about offside.\"",
+    "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What decision did Amir make about the incident in the penalty area?",
+        "options": [
+          "He gave a penalty",
+          "He waved play on because there was no contact",
+          "He stopped the match",
+          "He gave the number nine a red card"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who sent Amir the message that evening?",
+        "options": [
+          "His coach",
+          "The league chairman",
+          "A parent of one of the players",
+          "The number nine"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does 'several illusions poorer' suggest about Amir's experience?",
+        "options": [
+          "He lost money during the match",
+          "The ugly behaviour damaged his positive view of the job",
+          "He forgot the rules",
+          "He was injured"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why was the parent's comment about where Amir was 'really from' particularly hurtful?",
+        "options": [
+          "It was racist, attacking him as a person rather than his refereeing",
+          "It revealed his home address",
+          "It was against the league rules to talk to referees",
+          "It was factually incorrect"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Amir delete the email draft?",
+        "options": [
+          "The message reminded him that most people appreciated him",
+          "His phone battery died",
+          "He decided to complain in person",
+          "The email was full of mistakes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the lesson Amir passes on to new referees?",
+        "options": [
+          "Always give penalties when the crowd shouts",
+          "The loudest voices do not represent the majority",
+          "Quit while you are ahead",
+          "The rulebook matters more than people"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 270,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-fic-003",
+    "grade": 9,
+    "genre": "fiction",
+    "theme": "family",
+    "title": "Driving Lessons",
+    "text": "My mother taught me to drive the summer she got sick, which tells you everything about her. Other people, receiving that kind of news, might have postponed things. She accelerated them.\n\n\"Mirror, signal, manoeuvre,\" she said from the passenger seat of our old Volvo, on a gravel road where the worst I could hit was a hay bale. \"And relax your shoulders. You drive like you're being chased.\"\n\nWe went out every Tuesday and Thursday that summer. I learned hill starts while she quizzed me about my future. I learned parallel parking while she told stories I'd never heard — about hitchhiking through Portugal at nineteen, about the motorcycle she'd owned before I was born and sold, she claimed, 'under protest and under pressure.'\n\nI understood what she was doing. She was downloading herself into me, lesson by lesson, while pretending it was about clutch control. I let her pretend. Some conversations can only happen sideways, both people facing the windscreen, the engine giving you something to do with your hands.\n\nShe was there when I passed my test the following spring — thinner by then, in a wheelchair she called 'temporary' long past the point anyone believed it. I drove her home from the test centre myself. She criticised my lane changes the entire way, and I have never loved anyone more.\n\nShe didn't see the autumn. But every time I start a car, I hear it — mirror, signal, manoeuvre, relax your shoulders. People leave us in pieces, I've learned. And some of the pieces are instructions.",
+    "imageUrl": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did the first driving lessons take place?",
+        "options": [
+          "In a city centre",
+          "On a gravel road",
+          "At a test centre",
+          "On a motorway"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the mother talk about during the lessons?",
+        "options": [
+          "Only traffic rules",
+          "Her illness and treatments",
+          "Stories from her life and questions about the narrator's future",
+          "Her work colleagues"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does the narrator mean by 'she was downloading herself into me'?",
+        "options": [
+          "The mother was teaching the narrator to use a computer",
+          "The mother was passing on her memories and values while time remained",
+          "The mother was recording videos",
+          "The mother was writing a will"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why do 'some conversations only happen sideways'?",
+        "options": [
+          "The car was too noisy for normal talk",
+          "Difficult, emotional topics can be easier without direct eye contact",
+          "The mother had hearing problems",
+          "Swedish law requires drivers to face forward"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the wheelchair she called 'temporary' reveal?",
+        "options": [
+          "She was recovering quickly",
+          "She refused to openly admit how ill she was",
+          "The wheelchair was borrowed",
+          "She disliked walking"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the final line, 'some of the pieces are instructions', mean?",
+        "options": [
+          "The mother left a written manual",
+          "What loved ones teach us stays with us after they are gone",
+          "Cars come with instruction books",
+          "The narrator became a driving instructor"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 265,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak9-orig-001",
     "grade": 9,
     "genre": "non-fiction",
@@ -11037,6 +11811,249 @@
     ],
     "meta": {
       "wordCount": 330,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-fic-001",
+    "grade": 10,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "The Algorithm of You",
+    "text": "The app was called Mirror, and by the time Stella turned seventeen, it knew her better than anyone. That was the selling point, anyway. It had analysed six years of her messages, searches, playlists, and pauses — the algorithm noted what she lingered on, not just what she liked — and it offered guidance accordingly. Which friends were 'compatible'. Which study programme matched her 'cognitive profile'. Even which version of her morning face needed which filter.\n\nMost of her class used it. Refusing felt like refusing a map in a forest.\n\nThe trouble began with a notification: 'Based on your profile, we recommend ending your friendship with Idun L. Compatibility: 31%.' Stella stared at it. Idun, who had taught her to swim. Idun, who argued with her about everything — books, politics, whether cereal was soup. Idun, who was, according to Mirror, statistically wrong for her.\n\nShe almost dismissed it. But the notification had planted something, and over the following weeks she caught herself auditing the friendship: tallying disagreements, noticing friction the app had predicted. Knowing the prediction existed changed how she behaved, which made the prediction truer. By November, she and Idun barely spoke, and Mirror's accuracy score ticked upward, fattened by a prophecy it had fulfilled itself.\n\nIt was Idun who broke the silence, cornering her by the bike racks. \"Did the app tell you to drop me?\" she asked, and the directness was so utterly Idun — so unfiltered, so 31% — that Stella laughed before she could stop herself.\n\n\"It said we're incompatible.\"\n\n\"Of course we are,\" Idun said. \"That's the point of you. Nobody grows in a hall of mirrors, Stella. You grow by hitting things that don't reflect you back.\"\n\nStella deleted the app that evening. It asked, on the way out, if she was sure — it predicted, with 89% confidence, that she would reinstall it. She has spent every day since enjoying being part of the eleven percent.",
+    "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did the app Mirror recommend to Stella?",
+        "options": [
+          "Changing schools",
+          "Ending her friendship with Idun",
+          "Joining a new social network",
+          "Studying abroad"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What compatibility score did the app give Stella and Idun's friendship?",
+        "options": [
+          "11%",
+          "31%",
+          "89%",
+          "17%"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "How did the prediction become 'truer' over time?",
+        "options": [
+          "The app updated its data secretly",
+          "Knowing about the prediction changed Stella's behaviour, which damaged the friendship",
+          "Idun read the notification too",
+          "The compatibility score was recalculated weekly"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does Idun mean by 'nobody grows in a hall of mirrors'?",
+        "options": [
+          "Mirrors are bad for self-esteem",
+          "Being surrounded only by people who agree with you prevents personal growth",
+          "The app should be renamed",
+          "Gyms with mirrors are overrated"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the significance of the final line about the eleven percent?",
+        "options": [
+          "Stella proved the algorithm's prediction about her wrong",
+          "Stella reinstalled the app after eleven days",
+          "Only eleven percent of students used Mirror",
+          "Stella got an 11% discount"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the central theme of the story?",
+        "options": [
+          "The history of mobile apps",
+          "Algorithms can shape our choices in ways that limit who we become",
+          "Friendship compatibility can be measured accurately",
+          "Technology always improves relationships"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 330,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-fic-002",
+    "grade": 10,
+    "genre": "fiction",
+    "theme": "society",
+    "title": "The Last Shift",
+    "text": "The kiosk had stood at the corner of Storgatan and Järnvägsgatan for fifty-one years, and Margit had stood inside it for forty of them. She knew the town through its small purchases: the night-shift nurses buying coffee at dawn, the schoolkids counting coins for saturday sweets, the lonely men who bought a paper they didn't read for thirty seconds of conversation they badly needed.\n\nThe letter from the property company was polite and final. Redevelopment. Sixty days.\n\nMargit was seventy-one and had no illusions about progress; she had watched it arrive in waves, each one taking something. The bank had become an app. The post office had become a shelf in the supermarket. People said these things were more efficient, and they were, if efficiency meant fewer places where anyone said your name.\n\nWhat surprised her was the petition. It was started by Leyla, sixteen, who bought chewing gum and oat milk and had once, two winters ago, sat in the kiosk's back room for an hour because home wasn't safe that evening and Margit had asked no questions, just made tea. Margit had forgotten the evening. Leyla had not.\n\nEight hundred signatures in a town of six thousand. Then the local paper. Then, remarkably, the property company's regional manager, who arrived in a grey suit, drank a cup of Margit's coffee, and discovered that his grandmother had bought him liquorice boats at this exact counter in 1987.\n\nThe kiosk stayed. The official reason cited 'cultural value and community function' — committee language for something the town had known all along but had never needed to say out loud until someone threatened to demolish it. Margit hired Leyla for weekends. The men still come for their unread newspapers. The coffee is still terrible. Nobody minds. It was never really about the coffee.",
+    "imageUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long had Margit worked in the kiosk?",
+        "options": [
+          "Fifty-one years",
+          "Forty years",
+          "Sixteen years",
+          "Sixty years"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who started the petition to save the kiosk?",
+        "options": [
+          "Margit herself",
+          "The local paper",
+          "Leyla, a sixteen-year-old customer",
+          "The regional manager"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does 'fewer places where anyone said your name' suggest about modernisation?",
+        "options": [
+          "Efficiency has come at the cost of human connection",
+          "Names became legally protected",
+          "Modern shops have better customer service",
+          "People moved away from the town"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Leyla remember the evening in the back room when Margit had forgotten it?",
+        "options": [
+          "Leyla wrote a diary",
+          "An act of quiet kindness can matter far more to the receiver than the giver realises",
+          "Margit had a poor memory due to age",
+          "It was the day the kiosk opened"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What role did the manager's childhood memory play?",
+        "options": [
+          "It proved the kiosk was unprofitable",
+          "It connected him personally to what the kiosk meant to people",
+          "It showed the kiosk was old and needed demolishing",
+          "It had no effect on the decision"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the final line, 'it was never really about the coffee', mean?",
+        "options": [
+          "The kiosk should improve its coffee",
+          "The kiosk's true value was as a place of human connection",
+          "Customers preferred tea",
+          "The coffee was secretly good"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 305,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak10-fic-003",
+    "grade": 10,
+    "genre": "fiction",
+    "theme": "environment",
+    "title": "The Seed Vault",
+    "text": "In the year 2089, Dr. Iris Hammar made the journey north to Svalbard with a single steel case handcuffed to her wrist. Inside, packed in vacuum-sealed foil, were the last viable seeds of seventeen crop varieties from the drowned river deltas of Bangladesh — rice that could grow in salt water, collected over three generations by farmers who no longer had a country to grow it in.\n\nThe Global Seed Vault had been her grandmother's workplace, back when it was a precaution. Now it was something closer to a library of the lost. Iris's job was officially called 'deposit coordination', but the older staff used a different phrase: keeping the promises.\n\nThe promise, as her grandmother had explained it, was simple. Every seed accepted into the mountain carried an implicit contract: that someday, someone would plant it again.\n\nWhat the public didn't know — what Iris herself hadn't known until her security clearance came through — was that withdrawals had already begun. Syria, decades ago, had been the first. Then others, as floods and blights and wars erased the genetic heritage of one region after another. The vault was no longer just receiving deposits. It was paying them out, like a bank in a long, slow emergency.\n\nIn the receiving chamber, at eighteen degrees below zero, Iris logged the Bangladeshi rice into the system. Origin: deltas that no longer appeared on current maps. Depositor: a farmers' cooperative now scattered across four countries. Withdrawal conditions: when there is somewhere to plant it.\n\nShe paused at that last field. The form required a date estimate. Her predecessor, she noticed, had developed a convention for such cases, used hundreds of times in the database. She followed it, typing the words slowly: 'When we have earned it back.'\n\nOutside, the Arctic wind scoured a mountainside that no longer held snow in summer. Inside, in the cold dark, eleven hundred million seeds waited — patient, viable, and entirely sure, in the way only seeds can be, that there would be a future worth sprouting into.",
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was inside the steel case Iris carried?",
+        "options": [
+          "Frozen water samples",
+          "The last viable seeds of seventeen crop varieties",
+          "Old maps of Bangladesh",
+          "Her grandmother's research notes"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was special about the rice varieties?",
+        "options": [
+          "They could grow in salt water",
+          "They grew without sunlight",
+          "They were genetically modified",
+          "They ripened in winter"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the shift from 'precaution' to 'library of the lost' suggest?",
+        "options": [
+          "The vault changed owners",
+          "Disasters once considered unlikely had become reality",
+          "The vault stopped accepting seeds",
+          "Books were now stored there too"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the comparison to 'a bank in a long, slow emergency' mean?",
+        "options": [
+          "The vault charged interest on seeds",
+          "The vault was running out of money",
+          "Regions were steadily losing their crops and needing their deposits back",
+          "The vault would close soon"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does the phrase 'when we have earned it back' imply?",
+        "options": [
+          "The seeds must be purchased",
+          "Humanity must first repair the damage before replanting is possible",
+          "The farmers owed the vault a debt",
+          "The seeds were no longer viable"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the tone of the story's final image of the waiting seeds?",
+        "options": [
+          "Hopeless and bitter",
+          "Mocking and ironic",
+          "Cautiously hopeful despite loss",
+          "Completely neutral"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 340,
       "readingTime": 3
     }
   },
