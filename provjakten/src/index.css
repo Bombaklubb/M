@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-stone-100 text-stone-900 antialiased;
+}
+
+/* Provhäftets "pappersark" */
+.paper {
+  @apply mx-auto w-full max-w-3xl bg-white shadow-page rounded-sm px-6 py-8 sm:px-12 sm:py-10;
+}
+
+/* Diagonalrandigt NP-mönster till sidhuvuden */
+.np-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #b5004e,
+    #b5004e 12px,
+    #a30046 12px,
+    #a30046 24px
+  );
+}
