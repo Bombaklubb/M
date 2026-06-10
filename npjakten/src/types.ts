@@ -7,6 +7,18 @@ export interface MultipleChoiceQuestion {
   prompt: string;
   options: string[]; // alltid fyra alternativ A–D
   correctIndex: number;
+  // Åk 3: L = lokalisering av information, TI = tolkning och integrering
+  category?: "L" | "TI";
+}
+
+// Åk 3, delprov B: sista uppgiften – numrera meningarna i rätt ordning
+export interface OrderingQuestion {
+  kind: "ordering";
+  id: number;
+  maxPoints: 1;
+  prompt: string;
+  items: string[]; // meningarna i den ordning de visas (A–D)
+  correctOrder: number[]; // rätt nummer (1–4) för varje mening i items
 }
 
 export interface OpenQuestion {
@@ -19,7 +31,7 @@ export interface OpenQuestion {
   lines: number;
 }
 
-export type Question = MultipleChoiceQuestion | OpenQuestion;
+export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;
 
 export interface TextSection {
   heading?: string; // mellanrubrik i sakprosatexter

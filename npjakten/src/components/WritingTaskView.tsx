@@ -3,10 +3,11 @@ import type { WritingTask } from "../types";
 
 interface Props {
   task: WritingTask;
+  gradeLabel: string;
   onBack: () => void;
 }
 
-export default function WritingTaskView({ task, onBack }: Props) {
+export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
   const storageKey = `npjakten-skriva-${task.id}`;
   const [text, setText] = useState<string>(
     () => localStorage.getItem(storageKey) ?? ""
@@ -36,7 +37,7 @@ export default function WritingTaskView({ task, onBack }: Props) {
       {/* Uppgiftshäftet */}
       <div className="paper">
         <p className="text-right text-xs italic text-stone-500">
-          Svenska och svenska som andraspråk, årskurs 6
+          Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
           <br />
           {task.delprov}
         </p>

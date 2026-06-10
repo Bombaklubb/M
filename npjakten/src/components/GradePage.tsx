@@ -42,6 +42,8 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
           ))}
         </div>
 
+        {grade.writing.length > 0 && (
+          <>
         <h2 className="mt-10 border-b-2 border-np pb-1 font-serif text-xl font-bold">
           Skriva – olika texttyper
         </h2>
@@ -64,6 +66,8 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
             </button>
           ))}
         </div>
+          </>
+        )}
       </div>
     </div>
   );

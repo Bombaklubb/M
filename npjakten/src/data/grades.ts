@@ -1,12 +1,13 @@
 import type { Grade } from "../types";
 import { lasaBerattande, lasaSakprosa, skrivaBerattelse, skrivaArgumenterande } from "./ak6";
+import { ak3Berattande, ak3Faktatext } from "./ak3";
 
 export const grades: Grade[] = [
   {
     id: "ak3",
     label: "Årskurs 3",
-    available: false,
-    reading: [],
+    available: true,
+    reading: [ak3Berattande, ak3Faktatext],
     writing: [],
   },
   {
