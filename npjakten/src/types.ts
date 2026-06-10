@@ -53,6 +53,14 @@ export interface ReadingTest {
   questions: Question[];
 }
 
+// Bedömt elevexempel som visas efter att eleven skrivit klart
+export interface ExampleResponse {
+  level: string; // t.ex. "Godtagbar nivå" eller "Högre nivå"
+  heading: string; // exempeltextens rubrik
+  paragraphs: string[];
+  comments: string[]; // kommentarer om varför texten bedöms så
+}
+
 export interface WritingTask {
   id: string;
   delprov: string; // t.ex. "Delprov C1: skriva – berättande text"
@@ -64,6 +72,7 @@ export interface WritingTask {
   fixedHeading?: string; // given rubrik (berättelse)
   remember: string[]; // "Kom ihåg!"
   checklist: string[]; // självskattning efter skrivandet
+  examples?: ExampleResponse[]; // bedömda exempelsvar
 }
 
 export interface Grade {

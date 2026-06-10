@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import type { Question, ReadingTest } from "../types";
+import ExamTimer from "./ExamTimer";
 
 interface Props {
   test: ReadingTest;
@@ -16,6 +17,9 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
   const [orderAnswers, setOrderAnswers] = useState<Record<number, Record<number, number>>>({});
   const [selfPoints, setSelfPoints] = useState<Record<number, number>>({});
   const [reviewing, setReviewing] = useState(false);
+  // På små skärmar visas texten och uppgifterna som flikar i stället
+  // för under varandra, så att eleven slipper scrolla fram och tillbaka.
+  const [mobileTab, setMobileTab] = useState<"text" | "questions">("text");
 
   const maxPoints = useMemo(
     () => test.questions.reduce((sum, q) => sum + q.maxPoints, 0),
@@ -55,8 +59,32 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
         ← Tillbaka till delproven
       </button>
 
+      <ExamTimer presets={[30, 45, 60]} />
+
+      {/* Flikar på små skärmar: växla mellan text och uppgifter */}
+      <div className="sticky top-2 z-10 mb-4 grid grid-cols-2 gap-1 rounded-md bg-stone-200 p-1 shadow-page md:hidden">
+        <button
+          onClick={() => setMobileTab("text")}
+          className={
+            "rounded py-2 text-sm font-bold transition " +
+            (mobileTab === "text" ? "bg-np text-white" : "text-stone-600")
+          }
+        >
+          📖 Texten
+        </button>
+        <button
+          onClick={() => setMobileTab("questions")}
+          className={
+            "rounded py-2 text-sm font-bold transition " +
+            (mobileTab === "questions" ? "bg-np text-white" : "text-stone-600")
+          }
+        >
+          ✏️ Uppgifterna
+        </button>
+      </div>
+
       {/* Texthäftet */}
-      <div className="paper">
+      <div className={"paper" + (mobileTab === "questions" ? " hidden md:block" : "")}>
         <p className="text-right text-xs italic text-stone-500">
           Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
           <br />
@@ -102,7 +130,11 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
       </div>
 
       {/* Frågehäftet */}
-      <div className="paper mt-8">
+      <div
+        className={
+          "paper mt-4 md:mt-8" + (mobileTab === "text" ? " hidden md:block" : "")
+        }
+      >
         <div className="flex items-center justify-between border-b-2 border-np pb-3">
           <h2 className="font-serif text-2xl font-bold">
             {test.title}{" "}
