@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { WritingTask } from "../types";
+import ExamTimer from "./ExamTimer";
 
 interface Props {
   task: WritingTask;
@@ -16,6 +17,7 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
     task.checklist.map(() => false)
   );
   const [showChecklist, setShowChecklist] = useState(false);
+  const [openExample, setOpenExample] = useState<number | null>(null);
 
   // Spara utkastet löpande så att eleven inte tappar sin text
   useEffect(() => {
@@ -33,6 +35,8 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
       <button onClick={onBack} className="mb-4 text-sm font-medium text-np hover:underline">
         ← Tillbaka till delproven
       </button>
+
+      <ExamTimer presets={[40, 60, 80]} />
 
       {/* Uppgiftshäftet */}
       <div className="paper">
@@ -172,6 +176,63 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
           </div>
         )}
       </div>
+
+      {/* Exempelsvar – visas först när eleven sagt sig vara klar,
+          så att de inte läses i förväg och styr elevens egen text */}
+      {showChecklist && task.examples && task.examples.length > 0 && (
+        <div className="paper mt-8">
+          <h2 className="border-b-2 border-np pb-3 font-serif text-2xl font-bold">
+            Exempelsvar
+          </h2>
+          <p className="mt-3 text-sm text-stone-600">
+            Så här kan texter på olika nivåer se ut. Läs dem och jämför med din egen –
+            vad gör den starkare texten som du också skulle kunna göra?
+          </p>
+          <div className="mt-5 space-y-4">
+            {task.examples.map((example, i) => (
+              <div key={i} className="overflow-hidden rounded-md border-2 border-stone-300">
+                <button
+                  onClick={() => setOpenExample(openExample === i ? null : i)}
+                  className="flex w-full items-center justify-between bg-stone-50 px-5 py-3 text-left transition hover:bg-np-light"
+                >
+                  <span>
+                    <span className="rounded bg-np px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-white">
+                      {example.level}
+                    </span>
+                    <span className="ml-3 font-serif text-lg font-bold">
+                      {example.heading}
+                    </span>
+                  </span>
+                  <span className="text-np">{openExample === i ? "▲" : "▼"}</span>
+                </button>
+                {openExample === i && (
+                  <div className="px-5 py-4">
+                    <div className="space-y-3">
+                      {example.paragraphs.map((p, pi) => (
+                        <p key={pi} className="font-serif leading-relaxed">
+                          {p}
+                        </p>
+                      ))}
+                    </div>
+                    <div className="mt-5 rounded-md border-l-4 border-np bg-np-light p-4">
+                      <p className="text-sm font-bold uppercase tracking-wide text-np">
+                        Varför bedöms texten så här?
+                      </p>
+                      <ul className="mt-2 space-y-1">
+                        {example.comments.map((comment, ci) => (
+                          <li key={ci} className="flex gap-2 text-sm leading-relaxed">
+                            <span className="text-np">•</span> {comment}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
