@@ -646,7 +646,7 @@
       ],
       "examples": [
         {
-          "level": "Godtagbar nivå",
+          "level": "E-nivå",
           "heading": "Dörren som ingen öppnat",
           "paragraphs": [
             "Jag heter Leo och bor i ett gammalt hus. I källaren finns en dörr som ingen öppnat. Pappa säger att nyckeln har varit borta i många år.",
@@ -661,7 +661,26 @@
           ]
         },
         {
-          "level": "Högre nivå",
+          "level": "C-nivå",
+          "heading": "Dörren som ingen öppnat",
+          "paragraphs": [
+            "I min farfars hus finns en källare med tre dörrar. Två av dem används jämt, men den tredje, längst in i mörkret, har varit låst så länge någon kan minnas. Farfar brukar bara säga att nyckeln försvann för länge sedan.",
+            "I somras hjälpte jag farfar att städa källaren. När vi flyttade en gammal byrå hörde jag hur något rasslade i en av lådorna. Där låg en rostig nyckel, fastklistrad under en tidning från 1989.",
+            "– Farfar! ropade jag. Jag tror jag hittat den!",
+            "Farfar blev alldeles tyst. Sedan log han och sa att det väl var dags då. Vi gick bort till dörren tillsammans. Mina händer skakade lite när jag vred om nyckeln, och dörren gnisslade som i en skräckfilm när den gled upp.",
+            "Där inne fanns ett litet rum fullt med farfars gamla saker: en fotbollströja, pokaler och fotografier från när han var ung. Han hade varit lagkapten i stans fotbollslag, men slutat tvärt när han skadade knät. Sedan hade han inte velat se sakerna mer.",
+            "Vi bar upp pokalerna i vardagsrummet samma kväll. Farfar berättade historier om varenda match, och jag förstod att dörren inte hade varit låst för att skydda sakerna – utan för att minnena hade gjort ont.",
+            "Nu står pokalerna framme. Och nästa sommar ska farfar lära mig sin gamla straffspark."
+          ],
+          "comments": [
+            "Berättelsen har en tydlig inledning, handling och avslutning, och följer instruktionen.",
+            "Det finns dialog och viss gestaltning (”Mina händer skakade lite”, ”dörren gnisslade som i en skräckfilm”).",
+            "Avslutningen ger berättelsen en mening – dörren var låst för att minnena gjorde ont.",
+            "Texten är välstrukturerad men miljöbeskrivningar och känslor kunde ha utvecklats ytterligare för en högre nivå."
+          ]
+        },
+        {
+          "level": "A-nivå",
           "heading": "Dörren som ingen öppnat",
           "paragraphs": [
             "Det första jag lade märke till i mormors trappuppgång var dörren utan namnskylt. Den satt längst upp, halvt gömd bakom trappan till vinden, och färgen hade en gång varit grön. Nu såg den mest ut som glömska.",
@@ -721,7 +740,7 @@
       ],
       "examples": [
         {
-          "level": "Godtagbar nivå",
+          "level": "E-nivå",
           "heading": "Vi behöver längre raster!",
           "paragraphs": [
             "Jag tycker att rasterna i skolan ska bli längre. Nu är rasterna bara tio eller femton minuter och det är för kort.",
@@ -736,7 +755,24 @@
           ]
         },
         {
-          "level": "Högre nivå",
+          "level": "C-nivå",
+          "heading": "Säkrare cykelvägar – nu!",
+          "paragraphs": [
+            "Varje morgon cyklar jag och mina kompisar till skolan längs stora vägen. Det finns ingen cykelbana, så vi cyklar på vägrenen medan bilarna susar förbi alldeles nära. Jag tycker att kommunen ska bygga säkrare cykelvägar till skolan.",
+            "Mitt första argument är att det handlar om vår säkerhet. Förra månaden var en kille i parallellklassen nära att bli påkörd vid korsningen, och flera föräldrar vågar inte låta sina barn cykla alls. Det borde inte vara farligt att ta sig till skolan.",
+            "Mitt andra argument är att fler skulle cykla om det kändes tryggt. I dag skjutsar många föräldrar sina barn i bil, vilket gör att det blir ännu mer trafik runt skolan på morgonen. Med en riktig cykelbana skulle fler våga cykla, och då minskar trafiken samtidigt som vi får motion.",
+            "Dessutom är det bra för miljön. Varje bilresa som byts mot en cykeltur minskar utsläppen.",
+            "Säkra cykelvägar är en vinst för alla: barnen, föräldrarna och miljön. Därför borde kommunen börja bygga redan i år."
+          ],
+          "comments": [
+            "Åsikten är tydlig i inledningen och texten har en genomtänkt avslutning som knyter ihop argumenten.",
+            "Argumenten är utvecklade och stärks med konkreta exempel (killen i parallellklassen, föräldrar som skjutsar).",
+            "Texten visar följder av förslaget (mindre trafik, mer motion, bättre miljö).",
+            "För en högre nivå kunde texten också ha bemött ett motargument, till exempel vad bygget kostar."
+          ]
+        },
+        {
+          "level": "A-nivå",
           "heading": "Ge oss en fritidsgård!",
           "paragraphs": [
             "Vart ska man ta vägen en regnig torsdagskväll om man är tolv år och bor i vårt samhälle? Svaret är: ingenstans. Det vill jag ändra på. Jag tycker att kommunen ska öppna en fritidsgård för alla unga.",
