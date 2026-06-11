@@ -18,6 +18,10 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
   );
   const [showChecklist, setShowChecklist] = useState(false);
   const [openExample, setOpenExample] = useState<number | null>(null);
+  const [ownHeading, setOwnHeading] = useState<string>(
+    () => localStorage.getItem(storageKey + "-rubrik") ?? ""
+  );
+  const [copied, setCopied] = useState(false);
 
   // Spara utkastet löpande så att eleven inte tappar sin text
   useEffect(() => {
@@ -25,10 +29,46 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
     return () => clearTimeout(timer);
   }, [text, storageKey]);
 
+  // Spara även elevens egen rubrik
+  useEffect(() => {
+    localStorage.setItem(storageKey + "-rubrik", ownHeading);
+  }, [ownHeading, storageKey]);
+
   const wordCount = useMemo(
     () => (text.trim() === "" ? 0 : text.trim().split(/\s+/).length),
     [text]
   );
+
+  // Hela texten med rubrik, för kopiering och nedladdning
+  const fullText = useMemo(() => {
+    const heading = task.fixedHeading ?? ownHeading.trim();
+    return (heading ? heading + "\n\n" : "") + text;
+  }, [task.fixedHeading, ownHeading, text]);
+
+  const copyText = async () => {
+    try {
+      await navigator.clipboard.writeText(fullText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // Äldre webbläsare utan clipboard-API – markera texten manuellt
+      window.alert("Kunde inte kopiera automatiskt. Markera texten och kopiera själv.");
+    }
+  };
+
+  const downloadText = () => {
+    const heading = task.fixedHeading ?? ownHeading.trim();
+    const filename =
+      (heading || task.title).replace(/[^a-zA-Z0-9åäöÅÄÖ ]/g, "").trim().replace(/\s+/g, "-") +
+      ".txt";
+    const blob = new Blob([fullText], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -117,6 +157,8 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
         ) : (
           <input
             type="text"
+            value={ownHeading}
+            onChange={(e) => setOwnHeading(e.target.value)}
             placeholder="Skriv din rubrik här ..."
             className="mt-5 w-full border-b-2 border-stone-300 pb-1 font-serif text-xl font-bold focus:border-np focus:outline-none"
           />
@@ -127,7 +169,7 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
           onChange={(e) => setText(e.target.value)}
           rows={18}
           placeholder="Planera först: hur ska din text börja, vad ska hända och hur ska den sluta? Börja sedan skriva ..."
-          className="mt-3 w-full resize-y rounded border-2 border-stone-200 bg-[repeating-linear-gradient(transparent,transparent_27px,#e7e5e4_27px,#e7e5e4_28px)] p-3 font-serif leading-7 focus:border-np focus:outline-none"
+          className="mt-3 w-full resize-y rounded border-2 border-stone-200 bg-white p-3 font-serif leading-relaxed focus:border-np focus:outline-none"
         />
         <p className="mt-1 text-xs text-stone-400">
           Din text sparas automatiskt i webbläsaren på den här enheten.
@@ -173,6 +215,31 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
                 Snyggt jobbat! Din text uppfyller alla punkter på checklistan. 🎉
               </p>
             )}
+
+            {/* Spara texten utanför appen */}
+            <div className="mt-5 border-t border-np/20 pt-4">
+              <p className="mb-2 text-sm font-semibold text-stone-600">
+                Spara eller lämna in din text:
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <button
+                  onClick={copyText}
+                  className="rounded-md border-2 border-np bg-white px-5 py-2 font-bold text-np transition hover:bg-np hover:text-white"
+                >
+                  {copied ? "✓ Kopierad!" : "📋 Kopiera texten"}
+                </button>
+                <button
+                  onClick={downloadText}
+                  className="rounded-md border-2 border-np bg-white px-5 py-2 font-bold text-np transition hover:bg-np hover:text-white"
+                >
+                  ⬇️ Ladda ner texten
+                </button>
+              </div>
+              <p className="mt-2 text-xs text-stone-500">
+                Kopiera och klistra in i ett dokument, eller ladda ner som textfil till din
+                enhet.
+              </p>
+            </div>
           </div>
         )}
       </div>

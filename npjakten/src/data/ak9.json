@@ -516,7 +516,7 @@
       ],
       "examples": [
         {
-          "level": "Godtagbar nivå",
+          "level": "E-nivå",
           "heading": "Alltid nåbar?",
           "paragraphs": [
             "Min mobil ligger alltid nära mig. På lektionen, vid middagen och på natten laddar den bredvid sängen. Jag tror att det är likadant för de flesta i min ålder.",
@@ -531,7 +531,24 @@
           ]
         },
         {
-          "level": "Högre nivå",
+          "level": "C-nivå",
+          "heading": "Alltid nåbar?",
+          "paragraphs": [
+            "Häromdagen räknade jag efter: det första jag gör på morgonen är att kolla mobilen, och det sista jag gör innan jag somnar är att kolla mobilen. Någonstans däremellan hinner jag kolla den ungefär hundra gånger till. Jag är, precis som de flesta i min ålder, nåbar dygnet runt.",
+            "På många sätt är det fantastiskt. När jag glömde nycklarna förra veckan löste det sig på trettio sekunder med ett meddelande till mamma. Mina kompisar finns alltid en knapptryckning bort, även den som flyttade till en annan stad i höstas. Det är tryggt, snabbt och bekvämt.",
+            "Men det finns en baksida. För om man alltid kan svara, förväntas man också alltid göra det. När jag inte svarade på en timme efter träningen blev en kompis orolig på riktigt – en timme! Jag märker själv hur jag stressar över olästa meddelanden, som om varje notis vore en liten räkning som måste betalas direkt.",
+            "Jag tror inte lösningen är att slänga mobilen. Men jag tror att vi behöver träna på att låta bli ibland. Att lägga mobilen i en annan del av huset en kväll. Att låta ett meddelande vänta till i morgon utan dåligt samvete.",
+            "För ärligt talat: det mesta kan faktiskt vänta. Det är bara vi som har glömt bort det."
+          ],
+          "comments": [
+            "Krönikan är personligt skriven i jag-form och åsikten framgår tydligt.",
+            "Egna exempel används och kopplas till ämnet (nycklarna, kompisen som blev orolig).",
+            "Texten resonerar kring både fördelar och nackdelar och landar i en egen slutsats.",
+            "Det finns ansatser till bildspråk (”som om varje notis vore en liten räkning”), men rösten och humorn är inte lika genomförd som på A-nivå, och styckena kunde knytas ihop tätare."
+          ]
+        },
+        {
+          "level": "A-nivå",
           "heading": "Alltid nåbar?",
           "paragraphs": [
             "I lördags hände något historiskt: jag glömde mobilen hemma. I tre timmar var jag – håll i er nu – onåbar. När jag kom hem hade jag fjorton meddelanden, två missade samtal och en mamma som hunnit fundera på att ringa sjukhuset. Tre timmar. På 90-talet kallades det visst för ”en helt vanlig eftermiddag”.",
