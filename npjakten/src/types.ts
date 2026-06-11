@@ -76,7 +76,9 @@ export interface WritingTask {
     | "krönika"
     | "förklarande"
     | "instruerande"
-    | "beskrivande";
+    | "beskrivande"
+    | "utredande"
+    | "resonerande";
   title: string;
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"

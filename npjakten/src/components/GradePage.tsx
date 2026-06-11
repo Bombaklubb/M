@@ -7,6 +7,8 @@ const WRITING_LABELS: Record<WritingTask["textType"], string> = {
   förklarande: "Skriv en förklarande text",
   instruerande: "Skriv en instruerande text",
   beskrivande: "Skriv en beskrivande text",
+  utredande: "Skriv en utredande text",
+  resonerande: "Skriv en resonerande text",
 };
 
 interface Props {
