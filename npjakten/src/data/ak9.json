@@ -133,7 +133,11 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/kungen.svg",
+        "alt": "Ett schackbräde med en vit kung och en svart springare, och en kanelbulle på ett fat."
+      }
     },
     {
       "id": "ak9-b-esport",
@@ -244,7 +248,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/esport.svg",
+        "alt": "En e-sportarena med storbildsskärm, två spelare vid sina datorer och publik."
+      }
     },
     {
       "id": "ak9-b-jocke",
@@ -370,7 +378,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/jocke.svg",
+        "alt": "Två siluetter sitter på en bro i solnedgången, med en moped parkerad bredvid."
+      }
     },
     {
       "id": "ak9-b-ljudbok",
@@ -480,7 +492,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/ljudbok.svg",
+        "alt": "En uppslagen bok med ett par hörlurar runt sig och ljudvågor i luften."
+      }
     },
     {
       "id": "ak9-b-tidsomstallning",
@@ -598,7 +614,11 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/tidsomstallning.svg",
+        "alt": "En stor klocka mitt emellan dag och natt, med pilar framåt och bakåt."
+      }
     },
     {
       "id": "ak9-b-veta-vad-man-vill",
@@ -712,7 +732,11 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/veta-vad-man-vill.svg",
+        "alt": "En person med ryggsäck står vid ett vägskäl där vägvisarna bara visar frågetecken."
+      }
     }
   ],
   "writing": [
@@ -797,7 +821,11 @@
             "Avslutningen knyter tillbaka till inledningen, vilket ger texten en genomtänkt helhet."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/uppkopplad.svg",
+        "alt": "En mobiltelefon på natten med notiser som flyger omkring."
+      }
     },
     {
       "id": "ak9-c-debatt",
@@ -889,7 +917,11 @@
             "Språket är varierat och mottagaranpassat – texten skulle fungera publicerad på en riktig debattsida."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/debatt.svg",
+        "alt": "Två personer med stora pratbubblor som säger JA! och NEJ! mot varandra."
+      }
     },
     {
       "id": "ak9-c-utredande",
@@ -981,7 +1013,11 @@
             "Slutsatsen är nyanserad och tudelad men följer strikt av utredningen – texten landar i en egen tanke utan att tappa sakligheten."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/utredande.svg",
+        "alt": "En balansvåg som väger FÖR mot EMOT, med dokument bredvid."
+      }
     },
     {
       "id": "ak9-c-resonerande",
@@ -1066,7 +1102,11 @@
             "Språket är personligt och varierat med träffande formuleringar (”bekvämt som en gammal soffa”, ”omsorg eller hugg”)."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/resonerande.svg",
+        "alt": "Ett huvud i profil med tankebubblor som innehåller frågetecken och ett utropstecken."
+      }
     }
   ]
 }

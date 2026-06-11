@@ -232,7 +232,11 @@
             4
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/hundvakten.svg",
+        "alt": "En pojke rastar en lurvig brun hund i en park."
+      }
     },
     {
       "id": "ak3-c-igelkotten",
@@ -446,7 +450,11 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/igelkotten.svg",
+        "alt": "En igelkott med taggig rygg nosar på ett äpple i kvällsljus."
+      }
     },
     {
       "id": "ak3-b-taltet",
@@ -684,7 +692,11 @@
             4
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/taltet.svg",
+        "alt": "Ett grönt tält med varmt ljus i öppningen under stjärnhimlen."
+      }
     },
     {
       "id": "ak3-c-myror",
@@ -900,7 +912,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/myror.svg",
+        "alt": "En myrstack på en äng med myror som vandrar omkring."
+      }
     }
   ],
   "writing": []

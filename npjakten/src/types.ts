@@ -36,6 +36,12 @@ export interface OpenQuestion {
 
 export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;
 
+// Illustration som visas i texthäftet/uppgiftshäftet
+export interface Illustration {
+  src: string; // sökväg under /public, t.ex. "/images/bageriet.svg"
+  alt: string;
+}
+
 export interface TextSection {
   heading?: string; // mellanrubrik i sakprosatexter
   paragraphs: string[];
@@ -54,6 +60,7 @@ export interface ReadingTest {
     | "utredande"
     | "resonerande";
   title: string;
+  image?: Illustration;
   ingress?: string; // sakprosatexter inleds med en ingress
   sections: TextSection[];
   byline: string[];
@@ -82,6 +89,7 @@ export interface WritingTask {
     | "utredande"
     | "resonerande";
   title: string;
+  image?: Illustration;
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"
   topicExamples?: string[]; // exempelämnen (argumenterande)

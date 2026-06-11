@@ -88,6 +88,14 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
 
         <h1 className="mt-6 font-serif text-3xl font-bold">{task.title}</h1>
 
+        {task.image && (
+          <img
+            src={task.image.src}
+            alt={task.image.alt}
+            className="mt-5 aspect-video w-full rounded-md object-cover"
+          />
+        )}
+
         <div className="mt-4 space-y-3 rounded-md bg-stone-50 p-5">
           {task.intro.map((p, i) => (
             <p key={i} className="leading-relaxed">

@@ -39,16 +39,25 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
             <button
               key={test.id}
               onClick={() => onOpenReading(test.id)}
-              className="rounded-md border border-stone-300 p-4 text-left transition hover:border-np hover:bg-np-light"
+              className="flex items-center gap-4 rounded-md border border-stone-300 p-3 text-left transition hover:border-np hover:bg-np-light"
             >
-              <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
-                {test.delprov}
-              </p>
-              <p className="mt-1 font-serif text-lg font-bold">{test.title}</p>
-              <p className="mt-1 text-sm text-stone-500">
-                {test.questions.length} uppgifter ·{" "}
-                {test.questions.reduce((sum, q) => sum + q.maxPoints, 0)} poäng
-              </p>
+              {test.image && (
+                <img
+                  src={test.image.src}
+                  alt=""
+                  className="hidden h-20 w-32 shrink-0 rounded object-cover sm:block"
+                />
+              )}
+              <span>
+                <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+                  {test.delprov}
+                </p>
+                <p className="mt-1 font-serif text-lg font-bold">{test.title}</p>
+                <p className="mt-1 text-sm text-stone-500">
+                  {test.questions.length} uppgifter ·{" "}
+                  {test.questions.reduce((sum, q) => sum + q.maxPoints, 0)} poäng
+                </p>
+              </span>
             </button>
           ))}
         </div>
@@ -63,15 +72,24 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
             <button
               key={task.id}
               onClick={() => onOpenWriting(task.id)}
-              className="rounded-md border border-stone-300 p-4 text-left transition hover:border-np hover:bg-np-light"
+              className="flex items-center gap-4 rounded-md border border-stone-300 p-3 text-left transition hover:border-np hover:bg-np-light"
             >
-              <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
-                {task.delprov}
-              </p>
-              <p className="mt-1 font-serif text-lg font-bold">{task.title}</p>
-              <p className="mt-1 text-sm text-stone-500">
-                {WRITING_LABELS[task.textType]}
-              </p>
+              {task.image && (
+                <img
+                  src={task.image.src}
+                  alt=""
+                  className="hidden h-20 w-32 shrink-0 rounded object-cover sm:block"
+                />
+              )}
+              <span>
+                <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+                  {task.delprov}
+                </p>
+                <p className="mt-1 font-serif text-lg font-bold">{task.title}</p>
+                <p className="mt-1 text-sm text-stone-500">
+                  {WRITING_LABELS[task.textType]}
+                </p>
+              </span>
             </button>
           ))}
         </div>

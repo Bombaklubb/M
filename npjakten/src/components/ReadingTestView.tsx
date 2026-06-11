@@ -93,6 +93,14 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
 
         <h1 className="mt-6 font-serif text-3xl font-bold">{test.title}</h1>
 
+        {test.image && (
+          <img
+            src={test.image.src}
+            alt={test.image.alt}
+            className="mt-5 aspect-video w-full rounded-md object-cover"
+          />
+        )}
+
         {test.ingress && (
           <p className="mt-4 font-serif text-lg font-semibold leading-relaxed text-stone-700">
             {test.ingress}

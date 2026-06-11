@@ -178,7 +178,11 @@
           "guidance": "Ge 1 poäng per exempel, max 2 poäng. Möjliga exempel: Han säger ”Mmm” i stället för att säga vad han egentligen tycker om huset. / Han säger inget när pappa lovar att de ska tända ugnen, fast han tänker på sitt gamla rum. / Han hjälper till att bära in lådorna. / Han går och handlar frukost medan pappa städar.",
           "lines": 5
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/bageriet.svg",
+        "alt": "Ett smalt tvåvåningshus med gammal bageriskylt och förbommade fönster."
+      }
     },
     {
       "id": "b2-glasogon",
@@ -304,7 +308,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/glasogon.svg",
+        "alt": "Ett par runda gammaldags glasögon som ligger på en uppslagen bok."
+      }
     },
     {
       "id": "b1-isen",
@@ -480,7 +488,11 @@
           "guidance": "Ge upp till 2 poäng. 1 poäng för att eleven visar att Sigge uppskattar Livs mod / att någon måste våga gå först. 2 poäng om eleven också kopplar det till Sigges egen roll: att det är bra så länge det finns någon försiktig (som Sigge) kvar vid stranden som kan hjälpa till om något händer. De båda behövs och kompletterar varandra.",
           "lines": 5
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/isen.svg",
+        "alt": "Två barn på skridskor på en frusen sjö – längre ut är isen mörkare."
+      }
     },
     {
       "id": "b2-loven",
@@ -611,7 +623,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/loven.svg",
+        "alt": "Ett träd där ena halvan är grön och den andra har höstfärger, med fallande löv."
+      }
     },
     {
       "id": "b3-skolstart",
@@ -718,7 +734,11 @@
           ],
           "correctIndex": 3
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/skolstart.svg",
+        "alt": "Ett barn sover i sin säng medan en väckarklocka ringer och det är mörkt utanför fönstret."
+      }
     },
     {
       "id": "b4-insektshotell",
@@ -859,7 +879,11 @@
           ],
           "correctIndex": 0
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/insektshotell.svg",
+        "alt": "Ett insektshotell av trä fyllt med bamburör och kottar, med ett bi som flyger intill."
+      }
     },
     {
       "id": "b5-tornseglaren",
@@ -988,7 +1012,11 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/tornseglaren.svg",
+        "alt": "Tornseglare med bakåtböjda vingar som flyger högt över hustaken."
+      }
     }
   ],
   "writing": [
@@ -1075,7 +1103,11 @@
             "Avslutningen knyter ihop berättelsen och ger den en djupare mening i stället för att bara ta slut."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/dorren.svg",
+        "alt": "En gammal grön dörr på glänt i en mörk korridor – ljus strömmar ut, och en nyckel ligger på golvet."
+      }
     },
     {
       "id": "c2-lyssna",
@@ -1165,7 +1197,11 @@
             "Avslutningen knyter an till rubriken och slutar med en tydlig uppmaning."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/lyssna.svg",
+        "alt": "En megafon som sänder ut ljudvågor mot pratbubblor."
+      }
     },
     {
       "id": "c3-varfor-da",
@@ -1255,7 +1291,11 @@
             "Texten har en tydlig struktur med mellanrubriker och ett varierat språk anpassat till en yngre läsare."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/varfor-da.svg",
+        "alt": "En stor glödlampa med ett frågetecken, omgiven av fler frågetecken."
+      }
     },
     {
       "id": "c4-lar-ut",
@@ -1353,7 +1393,11 @@
             "Språket är instruerande med uppmanande verb, men har ändå en personlig och uppmuntrande ton som passar klassens bok."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/lar-ut.svg",
+        "alt": "En hög med pannkakor med sylt på ett fat, bredvid en stekspade."
+      }
     },
     {
       "id": "c5-djurboken",
@@ -1438,7 +1482,11 @@
             "Mellanrubrikerna är genomtänkta och väcker nyfikenhet i stället för att bara vara etiketter."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "/images/djurboken.svg",
+        "alt": "En sittande rödräv med vit bröstpäls och yvig svans framför granar."
+      }
     }
   ]
 }
