@@ -245,6 +245,242 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "ak9-b-jocke",
+      "delprov": "Delprov B: läsförståelse – skönlitterär text",
+      "textType": "berättande",
+      "title": "Sommaren med Jocke",
+      "sections": [
+        {
+          "paragraphs": [
+            "Den sommaren jag var tretton var min bror Jocke det coolaste som existerade. Han var sexton, hade nyss köpt en moppe för pengar han tjänat på att bära tidningar, och rörde sig genom världen med en sorts självklarhet som jag skulle ha gett min högra arm för att äga.",
+            "Jag följde efter honom överallt. Det erkänner jag utan att skämmas, för så är det att vara lillebror: man är en satellit som kretsar kring en planet som knappt vet att man finns.",
+            "Jocke lät mig hänga med, mest. Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna och att aldrig, aldrig erkänna för mamma att vi badat vid bron där det stod förbjudet. Vi hade ett helt språk av blickar och nickar som ingen vuxen kunde förstå."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Sedan kom Sandra.",
+            "Hon flyttade in i huset vid kyrkan i juni, och från den dagen blev allting annorlunda. Jocke började kamma håret. Han luktade plötsligt av pappas rakvatten. Och moppen, som hade varit vår, började alltid på något sätt vara på väg åt Sandras håll.",
+            "– Du kan inte hänga med i dag, sa han en morgon utan att titta upp från spegeln.",
+            "– Varför inte?",
+            "– För att jag säger det. Gå och lek med dina egna kompisar.",
+            "Dina egna kompisar. Som om vi inte hade varit varandras bästa kompisar i hela mitt liv. Jag minns att jag stod kvar i hallen länge efter att jag hört moppen tuffa iväg, och att tystnaden i huset var som ett fysiskt föremål, något man kunde ta på."
+          ]
+        },
+        {
+          "paragraphs": [
+            "I tre veckor var jag ensam. Jag cyklade till badbron själv, visslade genom tänderna åt ingen, och låtsades för mamma att allt var som vanligt. Inombords odlade jag en hård liten klump av ilska mot Jocke. Jag bestämde mig för att hata honom, vilket är ungefär lika lätt som att bestämma sig för att inte tycka om choklad.",
+            "Så en kväll, det var i slutet av juli, kom Jocke hem med ett ansikte som var alldeles fel. Det var blekt och slutet, och ögonen var röda i kanterna. Han gick rakt förbi mig in på sitt rum.",
+            "Jag borde ha känt mig hämnad. I stället stod jag utanför hans dörr och kände något helt annat, något som gjorde ont i bröstet.",
+            "– Jocke? sa jag och knackade. Är det Sandra?",
+            "Det blev tyst en lång stund. Sedan öppnades dörren på glänt.",
+            "– Hon flyttar, sa han. Pappan har fått jobb i Norrland. De åker på lördag."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Jag visste inte vad man skulle säga. Jag var tretton och hade aldrig blivit lämnad av någon annan än honom. Så jag gjorde det enda jag kunde komma på: jag frågade om han ville cykla till bron.",
+            "Och det ville han.",
+            "Vi satt på den varma betongen tills solen försvann och myggen kom fram. Jocke pratade inte om Sandra, och jag frågade inte. Vi bara satt där, två bröder, och kastade sten i det svarta vattnet. Då och då visslade han genom tänderna, och jag visslade tillbaka.",
+            "Det var den sommaren jag förstod att Jocke inte var en planet. Han var en människa, lika rädd och vilsen som jag, bara lite längre och med moppe. Och jag tror att det var då jag slutade vara hans satellit och började bli hans bror på riktigt.",
+            "Sandra åkte på lördagen. Jocke och jag åkte till bron igen. Vi pratade fortfarande inte om det. Men vi behövde inte det. Vi hade ju vårt språk."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens skönlitterära texter."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 2,
+          "prompt": "Vilket påstående stämmer bäst överens med hur berättarens syn på sin bror förändras under texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Berättaren går från att avgudahylla Jocke till att se honom som en vanlig, sårbar människa.",
+            "Berättaren går från att hata Jocke till att avguda honom.",
+            "Berättaren tycker hela tiden lika mycket om Jocke.",
+            "Berättaren slutar bry sig om Jocke helt och hållet."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "I början beskriver berättaren sig själv som ”en satellit som kretsar kring en planet”. Vad menar han med den bilden?",
+          "guidance": "Ge 2 poäng om svaret visar att berättaren (lillebrodern) hela tiden följer efter och kretsar kring Jocke, som är medelpunkten, medan Jocke knappt märker honom – precis som en satellit kretsar kring en planet. Ge 0 poäng för svar som bara återger orden utan att förklara innebörden.",
+          "lines": 3
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 4,
+          "pointSteps": [
+            0,
+            2,
+            4
+          ],
+          "prompt": "Jocke är ibland en dålig storebror och ibland en bra. Citera (skriv av) en mening eller replik som visar att\n• Jocke är en dålig storebror\n• Jocke är en bra storebror",
+          "guidance": "Ge 4 poäng om svaret citerar både en mening som visar att Jocke är en dålig storebror och en som visar att han är en bra storebror. Ge 2 poäng för enbart den ena. Mindre avskriftsfel accepteras. Dålig storebror, t.ex.: ”Gå och lek med dina egna kompisar.” / ”Du kan inte hänga med i dag, sa han ...”. Bra storebror, t.ex.: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna ...” / att han följer med till bron och visslar tillbaka i slutet.",
+          "lines": 6
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 2,
+          "prompt": "Vilket berättarperspektiv är det i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "förstapersonsperspektiv",
+            "tredjepersonsperspektiv",
+            "allvetande berättare",
+            "en blandning av olika perspektiv"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "När Jocke kommer hem ledsen skriver berättaren: ”Jag borde ha känt mig hämnad. I stället stod jag utanför hans dörr och kände något helt annat.” Vad är det berättaren känner i stället, och vad säger det om honom?",
+          "guidance": "Ge 2 poäng om svaret visar att berättaren känner medlidande/omtanke/empati i stället för skadeglädje, och att det visar att han bryr sig om sin bror trots ilskan – han är en omtänksam person / hans kärlek till brodern är starkare än hämndlusten. Ge 0 poäng om bara den ena delen (känslan eller tolkningen) framgår.",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 2,
+          "prompt": "I slutet står det att de ”inte behövde” prata om det som hänt, för ”vi hade ju vårt språk”. Vad menas med det? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "De talar ett hemligt språk som de hittat på.",
+            "De förstår varandra utan ord, genom sin nära relation.",
+            "De vill inte prata med varandra längre.",
+            "De pratar bara genom att vissla."
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "ak9-b-ljudbok",
+      "delprov": "Delprov B: läsförståelse – sakprosatext",
+      "textType": "sakprosa",
+      "title": "Att lyssna på en bok – är det riktig läsning ... eller?",
+      "ingress": "Allt fler sväljer böcker med öronen i stället för ögonen. Ljudboken har på några år gått från en hyllvärmare för bilresor till den vanligaste sättet att ta del av berättelser. Men en envis fråga vägrar tystna: räknas det egentligen som att läsa?",
+      "sections": [
+        {
+          "paragraphs": [
+            "Bussen är full, men nästan ingen läser en bok – åtminstone inte på det sätt vi brukar tänka oss. I stället har de hörlurar i öronen. Många av dem lyssnar just nu på en roman, en deckare eller en biografi. Ljudböckernas försäljning har ökat lavinartat, och för en hel generation unga är det självklart att en bok är något man lyssnar på lika gärna som något man tittar i.",
+            "Men i takt med att lyssnandet har växt har också en diskussion blossat upp. Vissa menar att den som lyssnar på en bok ”fuskar”, och att riktig läsning kräver ögon mot tryckt text. Andra avfärdar det som gammalmodigt struntprat. Vem har rätt?"
+          ]
+        },
+        {
+          "heading": "”Hjärnan gör nästan samma sak”",
+          "paragraphs": [
+            "Språkforskaren Tove Lindqvist har studerat vad som händer i hjärnan när vi tar in en berättelse på olika sätt. Hennes svar är tydligt.",
+            "– När du har förstått orden, oavsett om du sett eller hört dem, gör hjärnan i stort sett samma arbete. Den bygger inre bilder, känner med personerna och håller ihop handlingen. Den krävande, roliga delen av läsningen sker likadant vare sig informationen kommer via ögat eller örat, säger hon.",
+            "Lindqvist påpekar att människan har lyssnat på berättelser i tiotusentals år, långt innan skriften ens fanns. Att läsa med ögonen är historiskt sett den nya uppfinningen, inte tvärtom.",
+            "– För den som har svårt att avkoda bokstäver, till exempel vid dyslexi, kan ljudboken vara skillnaden mellan att älska berättelser och att stängas ute från dem helt, tillägger hon."
+          ]
+        },
+        {
+          "heading": "”Något går förlorat”",
+          "paragraphs": [
+            "Alla håller inte med. Svenskläraren Henrik Boström tycker att jämförelsen haltar.",
+            "– Jag är glad att folk tar del av litteratur på alla sätt. Men när man lyssnar kan man inte stanna upp lika lätt, gå tillbaka och läsa om en svår mening, eller se hur ett ovanligt ord stavas. Just det mödosamma – att kämpa sig igenom en knepig text – är en del av det som tränar tålamod och ordförråd, säger han.",
+            "Boström oroar sig särskilt för att lyssnandet ofta sker samtidigt med annat: medan man diskar, tränar eller spelar.",
+            "– Då glider uppmärksamheten. Man kan ha ”läst” en hel bok utan att minnas hälften. Det är inte samma djupa möte med en text som när man sitter ostörd med den."
+          ]
+        },
+        {
+          "heading": "Frågan handlar om mer än böcker",
+          "paragraphs": [
+            "Kanske är tvisten egentligen en fråga om vad vi menar med ordet läsa. Om läsning betyder att avkoda bokstäver har Boström en poäng. Om läsning betyder att förstå och uppleva en berättelse lutar det mer åt Lindqvist.",
+            "Historien bjuder på en tröst för den oroliga. När romanen var ny på 1700-talet varnade lärda män för att den skulle förstöra ungdomens förmåga att tänka. När serietidningen kom sades samma sak. Ändå lärde sig generation efter generation att läsa – och fortsatte göra det.",
+            "Frågan är alltså inte bara om ljudboken är riktig läsning, utan vem som får bestämma vad läsning egentligen är."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens sakprosatexter."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "Vad menas i texten med att ljudboken har blivit allt vanligare ”på några år”? Beskriv kort den utveckling texten tar upp.",
+          "guidance": "Ge 2 poäng om svaret visar att ljudboken har gått från att vara ovanlig/en nischprodukt (t.ex. för bilresor) till att bli ett av de vanligaste sätten att ta del av böcker – försäljningen har ökat kraftigt och för många unga är det självklart att lyssna på böcker. Ge 0 poäng för svar som bara upprepar att många lyssnar, utan att visa förändringen över tid.",
+          "lines": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 2,
+          "prompt": "Vad visade Tove Lindqvists forskning om hjärnan? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Att hjärnan gör i stort sett samma arbete vare sig man hör eller ser orden.",
+            "Att man minns mer av en bok om man lyssnar på den.",
+            "Att det går snabbare att lyssna än att läsa.",
+            "Att lyssnande passar bäst för den som har dyslexi."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 2,
+          "prompt": "Tove Lindqvist är positiv till ljudböcker. Vilket av följande påståenden stämmer överens med hennes motivering? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Ljudböcker säljer mer än tryckta böcker.",
+            "Människan har lyssnat på berättelser långt innan skriften fanns.",
+            "Unga föredrar att lyssna i stället för att läsa.",
+            "Det är svårare att förstå en bok man lyssnar på."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 10,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "Henrik Boström är inte emot att folk lyssnar på böcker, men ser ändå en risk med ljudböcker. Vad är hans främsta invändning?",
+          "guidance": "Ge 2 poäng om svaret visar att Boström menar att man vid lyssnande inte lika lätt kan stanna upp, gå tillbaka och kämpa med svåra meningar (det mödosamma som tränar ordförråd och tålamod), och/eller att lyssnandet ofta sker samtidigt med annat så att uppmärksamheten glider och man minns mindre. Ge 0 poäng för svar som bara säger att han ”inte gillar ljudböcker”.",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 2,
+          "prompt": "I textens sista del nämns att man förr varnade för att romaner och serietidningar skulle skada ungdomen. Vilken funktion har det exemplet i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Det bevisar att ljudböcker är bättre än tryckta böcker.",
+            "Det visar att man genom historien ofta oroat sig i onödan för nya sätt att läsa.",
+            "Det förklarar hur romanen uppfanns på 1700-talet.",
+            "Det visar att serietidningar var farliga för barn."
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "writing": [
