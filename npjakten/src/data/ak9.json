@@ -481,6 +481,238 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "ak9-b-tidsomstallning",
+      "delprov": "Läsa – utredande text",
+      "textType": "utredande",
+      "title": "Ska vi sluta ställa om klockan?",
+      "ingress": "Två gånger om året vrider hela Sverige på klockan – en timme fram på våren, en timme tillbaka på hösten. Få vanor är så omdiskuterade, och beslutet att avskaffa tidsomställningen har varit på väg i åratal utan att bli av. Vad talar egentligen för och emot?",
+      "sections": [
+        {
+          "paragraphs": [
+            "Tidsomställningen infördes i Sverige permanent 1980, med motiveringen att ljusare kvällar skulle spara energi: om människor är vakna när det är ljust behöver de mindre belysning. Sedan dess har världen dock förändrats. Uppvärmning, datorer och industri står i dag för en mycket större del av elförbrukningen än glödlampor, och moderna studier visar att energibesparingen är liten – i vissa länder nästan obefintlig. Det ursprungliga skälet till omställningen har därmed försvagats betydligt."
+          ]
+        },
+        {
+          "heading": "Kroppen protesterar",
+          "paragraphs": [
+            "Det tyngsta argumentet mot att ställa om klockan kommer från sömnforskningen. Människans inre dygnsrytm styrs av ljuset, och när klockan plötsligt flyttas en timme hamnar kroppen i otakt – ett slags mini-jetlag som för många sitter i flera dagar. Statistik från flera länder visar en liten men mätbar ökning av hjärtinfarkter och trafikolyckor dagarna efter vårens omställning, när alla förlorar en timmes sömn.",
+            "För barn och tonåringar är effekten ofta extra kännbar, eftersom deras dygnsrytm redan är förskjuten. Sömnforskare är därför påfallande eniga: ständiga hopp i tiden är dåliga för hälsan, och omställningen borde avskaffas."
+          ]
+        },
+        {
+          "heading": "Men vilken tid ska gälla?",
+          "paragraphs": [
+            "Där tar enigheten dock slut, för om omställningen avskaffas måste man välja vilken tid som ska gälla året runt – och det är här frågan blir svår.",
+            "Många önskar sig permanent sommartid, med ljusa sommarkvällar som räcker långt in på natten. Å andra sidan har det valet ett pris: på vintern skulle solen i Stockholm gå upp först vid tiotiden, och skolbarn i norra Sverige skulle göra hela sin skolväg i mörker. Sömnforskarna förespråkar i stället permanent vintertid, alltså normaltid. Morgonljuset är nämligen viktigast för dygnsrytmen – det är det som ställer kroppens inre klocka. Priset blir å sin sida att sommarkvällarna slutar en timme tidigare.",
+            "Dessutom spelar omvärlden in. Sverige handlar och pendlar tätt med sina grannländer, och om länderna i Europa valde olika tider skulle gränsregioner och tidtabeller drabbas av ständig förvirring. Det är delvis därför EU:s beslut i frågan har skjutits upp gång på gång: alla är trötta på omställningen, men ingen är överens om vad som ska ersätta den."
+          ]
+        },
+        {
+          "heading": "Slutsats",
+          "paragraphs": [
+            "Väger man samman perspektiven framträder en tydlig bild. Argumenten för att behålla tidsomställningen har försvagats – energibesparingen är i dag försumbar – medan hälsoargumenten emot den har stärkts. Det mesta talar alltså för att klockan borde få gå i fred året runt. Den verkliga striden står inte längre om huruvida omställningen ska avskaffas, utan om vilken tid vi ska leva i sedan: de ljusa kvällarnas sommartid eller de friska morgnarnas normaltid. Den frågan kan forskningen belysa, men i slutändan är det ett val mellan värden – och därmed ett beslut för politiken."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som en utredande text."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 2,
+          "prompt": "Varför infördes tidsomställningen i Sverige, enligt texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "För att skolbarn skulle slippa gå till skolan i mörker.",
+            "För att ljusare kvällar skulle spara energi.",
+            "För att Sverige skulle ha samma tid som resten av Europa.",
+            "För att sömnforskare rekommenderade det."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "Det ursprungliga skälet för tidsomställningen har försvagats, enligt texten. Förklara varför.",
+          "guidance": "Ge 2 poäng om svaret visar att energibesparingen blivit liten/nästan obefintlig eftersom belysningen i dag står för en mycket mindre del av elförbrukningen än förr (uppvärmning, datorer och industri drar mer). Ge 0 poäng för svar som bara konstaterar att skälet försvagats utan förklaring.",
+          "lines": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 2,
+          "prompt": "Vad menas i texten med att omställningen ger ett ”mini-jetlag”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Att människor reser mer under sommartid.",
+            "Att kroppens inre dygnsrytm hamnar i otakt med klockan under några dagar.",
+            "Att flygtrafiken påverkas av tidsomställningen.",
+            "Att man blir pigg av att vinna en timmes sömn."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 4,
+          "maxPoints": 4,
+          "pointSteps": [
+            0,
+            2,
+            4
+          ],
+          "prompt": "Om tidsomställningen avskaffas måste man välja mellan permanent sommartid och permanent vintertid. Båda alternativen har ett pris. Beskriv\n• vilket pris permanent sommartid har\n• vilket pris permanent vintertid har",
+          "guidance": "Ge 2 poäng per korrekt beskrivet pris, max 4 poäng. Sommartid: mörka vintermorgnar – solen går upp först vid tiotiden i Stockholm och skolbarn i norr får gå till skolan i mörker. Vintertid: sommarkvällarna slutar (blir mörka) en timme tidigare.",
+          "lines": 5
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 2,
+          "prompt": "Varför förespråkar sömnforskarna permanent vintertid? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Morgonljuset är viktigast för att ställa kroppens inre klocka.",
+            "Vintertid ger ljusare kvällar på sommaren.",
+            "Vintertid sparar mer energi än sommartid.",
+            "De flesta länder i Europa har redan vintertid."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 2,
+          "prompt": "Texten är en utredande text. Vilket av följande är typiskt utredande i textens avslutning? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Den uppmanar läsaren att skriva på en namninsamling.",
+            "Den berättar en personlig anekdot om tidsomställningen.",
+            "Den väger samman perspektiven och drar en slutsats som bygger på det som redogjorts.",
+            "Den avslutas med en överraskande vändning."
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "ak9-b-veta-vad-man-vill",
+      "delprov": "Läsa – resonerande text",
+      "textType": "resonerande",
+      "title": "Måste man veta vad man vill bli?",
+      "ingress": "En elev i nian resonerar kring den fråga alla vuxna ställer – och som blir svårare att besvara ju oftare den ställs.",
+      "sections": [
+        {
+          "paragraphs": [
+            "”Vad vill du bli när du blir stor?” Jag har fått frågan så länge jag kan minnas. När jag var sex svarade jag astronaut, när jag var tio veterinär, och alla nickade nöjt. Men nu går jag i nian, gymnasievalet närmar sig som ett tåg i tidtabell, och plötsligt förväntas svaret vara på riktigt. Studievägledaren ler vänligt och frågar vad jag brinner för. Och jag sitter där och tänker: måste man verkligen veta?",
+            "Å ena sidan förstår jag poängen med att ha ett mål. Min kusin har vetat att hon ska bli läkare sedan hon var åtta. Hon pluggar målmedvetet, vet exakt vilka betyg som krävs och verkar aldrig tveka i sina val. Det finns något avundsvärt i det – som att gå genom livet med en karta medan vi andra irrar omkring med ögonbindel. Den som vet vart den ska kan dessutom säga nej till sådant som leder fel, och slipper lägga energi på att välja om och om igen.",
+            "Men å andra sidan: hur många åttaåringars drömmar tål att bli livsbeslut? När jag tittar på de vuxna i min närhet ser jag något annat än raka vägar. Min mamma utbildade sig till frisör, sadlade om till undersköterska vid trettiofem och säger i dag att omvägen gjorde henne bättre på båda jobben. Min moster har bytt bana tre gånger. Och min farfar, som arbetade på samma fabrik i fyrtio år, säger inte att han valde sitt yrke – han säger att det blev så. Kanske är den raka vägen mer undantag än regel, och kanske har det alltid varit så.",
+            "Dessutom undrar jag om frågan i sig är rätt ställd. ”Vad vill du bli?” låter som om man bara blir något en gång, som om yrket vore en gjutform man hälls i vid arton och stelnar i. Men de yrken jag kanske kommer att ha om tjugo år finns möjligen inte ens ännu – och flera av dagens lär ha försvunnit. Att kräva att en femtonåring ska pricka rätt i en framtid som ingen kan beskriva är, om man tänker efter, en ganska orimlig beställning.",
+            "Samtidigt vill jag inte göra det för enkelt för mig. Att inte veta får inte bli en ursäkt för att inte bry sig. Det är skillnad på att vara öppen för många vägar och att stå still i vägkorsningen och vägra titta på skyltarna. Även den som inte vet sitt mål kan veta sin riktning: vad man tycker är roligt, vad man är bra på, vad man inte står ut med. Det är kanske inte en karta – men det är en kompass.",
+            "Så var landar jag? Kanske här: man måste inte veta vad man vill bli, men man bör veta vad man vill ta reda på härnäst. Mitt gymnasieval blir inte ett svar på vad jag ska bli, utan på vad jag är nyfiken på just nu. Och nästa gång någon frågar vad jag vill bli när jag blir stor tänker jag svara som det är: klokare. Resten får visa sig."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som en resonerande text."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 2,
+          "prompt": "Varför har frågan ”Vad vill du bli?” blivit svårare för skribenten just nu? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Skribenten har slutat drömma om framtiden.",
+            "Gymnasievalet närmar sig och svaret förväntas vara på allvar.",
+            "Studievägledaren kräver ett skriftligt svar.",
+            "Skribentens föräldrar tjatar om läkaryrket."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "Skribenten ser något ”avundsvärt” i kusinens situation. Vad är det skribenten avundas?",
+          "guidance": "Ge 2 poäng om svaret visar att kusinen vet vad hon vill (har ett tydligt mål/en karta), vilket gör att hon kan plugga målmedvetet, slippa tveka och välja bort det som leder fel. Ge 0 poäng för svar som bara anger att kusinen ska bli läkare.",
+          "lines": 3
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 4,
+          "pointSteps": [
+            0,
+            2,
+            4
+          ],
+          "prompt": "Skribenten använder personerna i sin närhet som exempel i resonemanget. Välj två av personerna (kusinen, mamman, mostern eller farfar) och förklara vilken tanke i resonemanget var och en är exempel på.",
+          "guidance": "Ge 2 poäng per korrekt koppling, max 4 poäng. Godtagbart: Kusinen – exempel på fördelen med att ha ett tydligt mål/veta vad man vill. Mamman – exempel på att omvägar kan göra en bättre/att man kan byta bana och tjäna på det. Mostern – exempel på att det är vanligt att byta bana (raka vägen är undantag). Farfar – exempel på att yrket inte alltid är ett aktivt val (”det blev så”).",
+          "lines": 6
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 2,
+          "prompt": "Vad menar skribenten med invändningen att frågan ”är fel ställd”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Frågan borde ställas av studievägledaren, inte av släktingar.",
+            "Frågan antar att man blir ett enda yrke för alltid, fast framtidens yrken inte ens går att förutse.",
+            "Frågan är för svår för barn under tio år.",
+            "Frågan borde handla om betyg i stället för yrken."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "prompt": "I femte stycket skriver skribenten: ”Det är kanske inte en karta – men det är en kompass.” Förklara vad skribenten menar med skillnaden mellan kartan och kompassen.",
+          "guidance": "Ge 2 poäng om svaret visar att kartan står för att veta sitt exakta mål/hela vägen (som kusinen), medan kompassen står för att veta sin riktning – vad man tycker om, är bra på och inte står ut med – utan att veta målet. Man kan alltså orientera sig framåt även utan färdigt mål. Ge 0 poäng för svar som bara upprepar orden utan förklaring.",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 2,
+          "prompt": "Vilket påstående beskriver bäst hur texten avslutas? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Skribenten landar i ett eget förhållningssätt men håller frågan delvis öppen.",
+            "Skribenten bestämmer sig till slut för att bli läkare.",
+            "Skribenten kommer fram till att frågan inte går att fundera på.",
+            "Skribenten uppmanar läsaren att välja gymnasium tidigt."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 2,
+          "prompt": "Vilket av följande drag i texten är typiskt för en resonerande text? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Numrerade steg som läsaren ska följa i ordning.",
+            "En tydlig tes som drivs igenom hela texten med argument.",
+            "Tankar som prövas mot varandra med uttryck som ”å ena sidan”, ”men å andra sidan” och ”samtidigt”.",
+            "Saklig fakta utan personliga exempel."
+          ],
+          "correctIndex": 2
+        }
+      ]
     }
   ],
   "writing": [

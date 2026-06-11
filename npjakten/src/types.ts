@@ -50,7 +50,9 @@ export interface ReadingTest {
     | "förklarande"
     | "argumenterande"
     | "instruerande"
-    | "beskrivande";
+    | "beskrivande"
+    | "utredande"
+    | "resonerande";
   title: string;
   ingress?: string; // sakprosatexter inleds med en ingress
   sections: TextSection[];
