@@ -178,7 +178,12 @@
           "guidance": "Ge 1 poäng per exempel, max 2 poäng. Möjliga exempel: Han säger ”Mmm” i stället för att säga vad han egentligen tycker om huset. / Han säger inget när pappa lovar att de ska tända ugnen, fast han tänker på sitt gamla rum. / Han hjälper till att bära in lådorna. / Han går och handlar frukost medan pappa städar.",
           "lines": 5
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=900&h=506&fit=crop",
+        "alt": "Nybakade bröd i ett bageri.",
+        "fallback": "/images/bageriet.svg"
+      }
     },
     {
       "id": "b2-glasogon",
@@ -304,7 +309,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&h=506&fit=crop",
+        "alt": "Ett par glasögon som ligger på en uppslagen bok.",
+        "fallback": "/images/glasogon.svg"
+      }
     },
     {
       "id": "b1-isen",
@@ -480,7 +490,12 @@
           "guidance": "Ge upp till 2 poäng. 1 poäng för att eleven visar att Sigge uppskattar Livs mod / att någon måste våga gå först. 2 poäng om eleven också kopplar det till Sigges egen roll: att det är bra så länge det finns någon försiktig (som Sigge) kvar vid stranden som kan hjälpa till om något händer. De båda behövs och kompletterar varandra.",
           "lines": 5
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1478719059408-592965723cbc?w=900&h=506&fit=crop",
+        "alt": "En frusen sjö i vinterlandskap.",
+        "fallback": "/images/isen.svg"
+      }
     },
     {
       "id": "b2-loven",
@@ -611,7 +626,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?w=900&h=506&fit=crop",
+        "alt": "Höstträd med färgglada löv längs en väg.",
+        "fallback": "/images/loven.svg"
+      }
     },
     {
       "id": "b3-skolstart",
@@ -718,7 +738,12 @@
           ],
           "correctIndex": 3
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=900&h=506&fit=crop",
+        "alt": "En väckarklocka.",
+        "fallback": "/images/skolstart.svg"
+      }
     },
     {
       "id": "b4-insektshotell",
@@ -859,7 +884,12 @@
           ],
           "correctIndex": 0
         }
-      ]
+      ],
+      "image": {
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Insektenhotel.JPG?width=900",
+        "alt": "Ett insektshotell av trä fyllt med rör och kottar.",
+        "fallback": "/images/insektshotell.svg"
+      }
     },
     {
       "id": "b5-tornseglaren",
@@ -988,7 +1018,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Apus%20apus%20-Barcelona%2C%20Spain-8.jpg?width=900",
+        "alt": "En tornseglare i flykten.",
+        "fallback": "/images/tornseglaren.svg"
+      }
     }
   ],
   "writing": [
@@ -1075,7 +1110,12 @@
             "Avslutningen knyter ihop berättelsen och ger den en djupare mening i stället för att bara ta slut."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1506377585622-bedcbb027afc?w=900&h=506&fit=crop",
+        "alt": "En gammal dörr.",
+        "fallback": "/images/dorren.svg"
+      }
     },
     {
       "id": "c2-lyssna",
@@ -1165,7 +1205,12 @@
             "Avslutningen knyter an till rubriken och slutar med en tydlig uppmaning."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&h=506&fit=crop",
+        "alt": "En megafon mot färgglad bakgrund.",
+        "fallback": "/images/lyssna.svg"
+      }
     },
     {
       "id": "c3-varfor-da",
@@ -1255,7 +1300,12 @@
             "Texten har en tydlig struktur med mellanrubriker och ett varierat språk anpassat till en yngre läsare."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=900&h=506&fit=crop",
+        "alt": "En hand håller en glödlampa mot stjärnhimlen.",
+        "fallback": "/images/varfor-da.svg"
+      }
     },
     {
       "id": "c4-lar-ut",
@@ -1353,7 +1403,12 @@
             "Språket är instruerande med uppmanande verb, men har ändå en personlig och uppmuntrande ton som passar klassens bok."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&h=506&fit=crop",
+        "alt": "En hög med pannkakor.",
+        "fallback": "/images/lar-ut.svg"
+      }
     },
     {
       "id": "c5-djurboken",
@@ -1438,7 +1493,12 @@
             "Mellanrubrikerna är genomtänkta och väcker nyfikenhet i stället för att bara vara etiketter."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=900&h=506&fit=crop",
+        "alt": "En rödräv i naturen.",
+        "fallback": "/images/djurboken.svg"
+      }
     }
   ]
 }

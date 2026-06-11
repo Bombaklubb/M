@@ -133,7 +133,12 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=900&h=506&fit=crop",
+        "alt": "Schackpjäser på ett bräde.",
+        "fallback": "/images/kungen.svg"
+      }
     },
     {
       "id": "ak9-b-esport",
@@ -244,7 +249,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&h=506&fit=crop",
+        "alt": "En gamingdator med lysande skärm i mörkt rum.",
+        "fallback": "/images/esport.svg"
+      }
     },
     {
       "id": "ak9-b-jocke",
@@ -370,7 +380,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=900&h=506&fit=crop",
+        "alt": "En moped.",
+        "fallback": "/images/jocke.svg"
+      }
     },
     {
       "id": "ak9-b-ljudbok",
@@ -480,7 +495,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&h=506&fit=crop",
+        "alt": "Ett par hörlurar.",
+        "fallback": "/images/ljudbok.svg"
+      }
     },
     {
       "id": "ak9-b-tidsomstallning",
@@ -598,7 +618,12 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=900&h=506&fit=crop",
+        "alt": "En klocka.",
+        "fallback": "/images/tidsomstallning.svg"
+      }
     },
     {
       "id": "ak9-b-veta-vad-man-vill",
@@ -712,7 +737,12 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&h=506&fit=crop",
+        "alt": "En väg genom skogen.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      }
     }
   ],
   "writing": [
@@ -797,7 +827,12 @@
             "Avslutningen knyter tillbaka till inledningen, vilket ger texten en genomtänkt helhet."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&h=506&fit=crop",
+        "alt": "En hand håller en mobiltelefon.",
+        "fallback": "/images/uppkopplad.svg"
+      }
     },
     {
       "id": "ak9-c-debatt",
@@ -889,7 +924,12 @@
             "Språket är varierat och mottagaranpassat – texten skulle fungera publicerad på en riktig debattsida."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=900&h=506&fit=crop",
+        "alt": "En mikrofon på en scen.",
+        "fallback": "/images/debatt.svg"
+      }
     },
     {
       "id": "ak9-c-utredande",
@@ -981,7 +1021,12 @@
             "Slutsatsen är nyanserad och tudelad men följer strikt av utredningen – texten landar i en egen tanke utan att tappa sakligheten."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=506&fit=crop",
+        "alt": "En balansvåg.",
+        "fallback": "/images/utredande.svg"
+      }
     },
     {
       "id": "ak9-c-resonerande",
@@ -1066,7 +1111,12 @@
             "Språket är personligt och varierat med träffande formuleringar (”bekvämt som en gammal soffa”, ”omsorg eller hugg”)."
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&h=506&fit=crop",
+        "alt": "En person sitter och tänker.",
+        "fallback": "/images/resonerande.svg"
+      }
     }
   ]
 }

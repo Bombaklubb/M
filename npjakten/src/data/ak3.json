@@ -232,7 +232,12 @@
             4
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=900&h=506&fit=crop",
+        "alt": "En glad hund springer i gräset.",
+        "fallback": "/images/hundvakten.svg"
+      }
     },
     {
       "id": "ak3-c-igelkotten",
@@ -446,7 +451,12 @@
           ],
           "correctIndex": 2
         }
-      ]
+      ],
+      "image": {
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Erinaceus%20europaeus%20LC0119.jpg?width=900",
+        "alt": "En igelkott i gräset.",
+        "fallback": "/images/igelkotten.svg"
+      }
     },
     {
       "id": "ak3-b-taltet",
@@ -684,7 +694,12 @@
             4
           ]
         }
-      ]
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&h=506&fit=crop",
+        "alt": "Ett tält i naturen.",
+        "fallback": "/images/taltet.svg"
+      }
     },
     {
       "id": "ak3-c-myror",
@@ -900,7 +915,12 @@
           ],
           "correctIndex": 1
         }
-      ]
+      ],
+      "image": {
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Meat%20eater%20ant%20feeding%20on%20honey02.jpg?width=900",
+        "alt": "En myra i närbild.",
+        "fallback": "/images/myror.svg"
+      }
     }
   ],
   "writing": []
