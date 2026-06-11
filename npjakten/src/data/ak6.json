@@ -305,6 +305,313 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "b1-isen",
+      "delprov": "Delprov B1: läsa – berättande text",
+      "textType": "berättande",
+      "title": "Tunn is",
+      "sections": [
+        {
+          "paragraphs": [
+            "Det var den där sortens marsdag som inte kan bestämma sig. Solen värmde Sigges nacke medan vinden samtidigt högg honom i kinderna. Nere vid sjön glittrade isen som om någon strött socker över den.",
+            "– Kom igen då, ropade Liv och åkte ut i en lång båge. Skridskorna sjöng mot isen. Hon var alltid först, alltid längst ut, alltid den som vågade en aning mer än vad som var klokt.",
+            "Sigge stannade vid vassen. Han hade lovat sin mamma att hålla sig nära land. Längre ut, där isen var mörkare, hade hon sagt nej. Mörk is är svag is, hade pappa lärt honom. Den glittrande, vita isen vid stranden bar, men den blanka, svarta isen där ute var en annan sak.",
+            "– Inte för långt, sa han.",
+            "– Du låter som en gammal gubbe, skrattade Liv."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Liv åkte längre ut. Sigge såg hur den vita isen under henne långsamt övergick i något mörkare. Han kände hur magen drog ihop sig.",
+            "– Liv! Kom tillbaka, det är mörkt där!",
+            "– Det är bara skuggan från molnet, ropade hon utan att vända sig om.",
+            "Men det var ingen skugga. Sigge visste det. Han öppnade munnen för att ropa igen.",
+            "Då hördes ett ljud han aldrig glömt. Ett långt, gnyende knak som rullade fram under isen som åska under vattnet.",
+            "Liv tvärstannade. För första gången den dagen stod hon alldeles stilla."
+          ]
+        },
+        {
+          "paragraphs": [
+            "– Sigge, sa hon, och rösten var inte alls den vanliga. Sigge, isen rör sig.",
+            "– Lägg dig ner! ropade Sigge. Orden kom innan han ens hann tänka. Han hade läst det i en broschyr om issäkerhet som legat hemma på köksbordet hela vintern, den han aldrig trott att han skulle behöva. Lägg dig ner och sprid ut armarna, så fördelas tyngden.",
+            "Liv lade sig ner på magen. Isen knakade igen, men höll.",
+            "– Ål dig tillbaka mot mig, sa Sigge. Sakta.",
+            "Han la sig själv platt på den vita, säkra isen och sträckte ut sin halsduk så långt han kunde. Centimeter för centimeter drog sig Liv närmare, tills hon till slut fick tag i den röda ulltråden och Sigge kunde dra henne in mot stranden.",
+            "De blev liggande där, andfådda, med kinderna mot den kalla isen. Ingen sa något på en lång stund."
+          ]
+        },
+        {
+          "paragraphs": [
+            "– Du, sa Liv till slut. Den där gubbrösten. Den var rätt bra att ha.",
+            "Sigge ville svara något fyndigt, men det kom inget. I stället började han skratta, och så skrattade de båda två, ett darrigt skratt som lät nästan som gråt.",
+            "På vägen hem var Liv ovanligt tyst. Precis innan de skildes vid grinden vände hon sig mot honom.",
+            "– Jag lyssnar nästa gång, sa hon. Det lovar jag.",
+            "Sigge nickade. Men han visste att Liv alltid skulle vara den som åkte längst ut. Och en hemlig del av honom var glad för det. Någon måste ju gå först. Så länge någon annan fanns kvar vid stranden och höll i halsduken."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens berättande texter."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "prompt": "I början av texten beskrivs isen vid stranden som att den ”glittrade som om någon strött socker över den”. Vad vill författaren visa med den beskrivningen?",
+          "options": [
+            "Att isen är farlig att åka på.",
+            "Att isen är vacker och inbjudande.",
+            "Att det nyligen har snöat.",
+            "Att sjön är full av socker."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "prompt": "Hur skiljer sig Liv och Sigge åt i början av texten?",
+          "options": [
+            "Liv är försiktig medan Sigge tar risker.",
+            "Liv vågar mer medan Sigge är försiktig.",
+            "Båda är lika rädda för isen.",
+            "Sigge vill åka längre ut än Liv."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 2,
+          "prompt": "Hur kan man veta om isen bär eller inte, enligt det Sigge har lärt sig? Skriv vad som skiljer säker is från svag is.",
+          "guidance": "Ge upp till 2 poäng. 1 poäng för att den vita/ljusa isen (vid stranden) bär, och 1 poäng för att den mörka/svarta/blanka isen (längre ut) är svag. Exempel på fullständigt svar: ”Den vita isen vid stranden bär, men den mörka, svarta isen längre ut är svag.”",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "prompt": "Författaren skriver att knaket ”rullade fram under isen som åska under vattnet”. Vad gestaltar hon då?",
+          "options": [
+            "Att det började åska och regna.",
+            "Att ljudet var svagt och knappt hördes.",
+            "Att ljudet var djupt, kraftigt och skrämmande.",
+            "Att isen redan hade brustit."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 1,
+          "prompt": "Hur visste Sigge vad man ska göra när isen håller på att brista?",
+          "guidance": "Ge 1 poäng för svar som visar att han hade läst det i en broschyr om issäkerhet som legat hemma på köksbordet under vintern.",
+          "lines": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "prompt": "Varför ska man lägga sig ner och sprida ut armarna om isen håller på att brista?",
+          "options": [
+            "För att kunna simma snabbare.",
+            "För att tyngden ska fördelas på en större yta.",
+            "För att synas bättre.",
+            "För att hålla sig varm."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "prompt": "När Liv säger ”Sigge, isen rör sig” står det att rösten ”inte alls var den vanliga”. Vad betyder det?",
+          "options": [
+            "Liv var hes och förkyld.",
+            "Liv var rädd, till skillnad från tidigare.",
+            "Liv låtsades vara rädd för att skoja.",
+            "Liv var arg på Sigge."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 8,
+          "maxPoints": 1,
+          "prompt": "Vad använde Sigge för att dra Liv in mot stranden?",
+          "guidance": "Ge 1 poäng för svar som anger halsduken (den röda ulltråden/halsduken).",
+          "lines": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "prompt": "Varför skrattade Liv och Sigge ett skratt som ”lät nästan som gråt”?",
+          "options": [
+            "De tyckte att allt var jätteroligt.",
+            "De var lättade men fortfarande skakade efter det som hänt.",
+            "De frös så att de huttrade.",
+            "De var arga på varandra."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "prompt": "Vad lovar Liv på vägen hem?",
+          "options": [
+            "Att aldrig mer åka skridskor.",
+            "Att lyssna nästa gång.",
+            "Att köpa en egen halsduk.",
+            "Att alltid stanna vid stranden."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 2,
+          "prompt": "I slutet tänker Sigge att en hemlig del av honom är glad att Liv alltid kommer att vara den som åker längst ut. Förklara vad han menar med det. Använd egna ord.",
+          "note": "Skriv ett utvecklat svar för att få full poäng.",
+          "guidance": "Ge upp till 2 poäng. 1 poäng för att eleven visar att Sigge uppskattar Livs mod / att någon måste våga gå först. 2 poäng om eleven också kopplar det till Sigges egen roll: att det är bra så länge det finns någon försiktig (som Sigge) kvar vid stranden som kan hjälpa till om något händer. De båda behövs och kompletterar varandra.",
+          "lines": 5
+        }
+      ]
+    },
+    {
+      "id": "b2-loven",
+      "delprov": "Delprov B2: läsa – sakprosatext",
+      "textType": "sakprosa",
+      "title": "Därför byter löven färg på hösten",
+      "ingress": "En dag i september ser du att björken utanför fönstret har börjat skifta i gult. Några veckor senare lyser hela skogen i rött, orange och brunt. Men varför händer det egentligen – och vart tar all den gröna färgen vägen?",
+      "sections": [
+        {
+          "paragraphs": [
+            "För att förstå höstens färger måste man först veta varför löven är gröna på sommaren. Inuti varje blad finns ett ämne som heter klorofyll*. Det är klorofyllet som gör bladen gröna, men det har också ett mycket viktigare jobb: det fångar in solljus. Med hjälp av ljuset, vatten och luft tillverkar trädet sitt eget socker, alltså sin mat. Den processen kallas fotosyntes."
+          ]
+        },
+        {
+          "heading": "Den gröna färgen försvinner",
+          "paragraphs": [
+            "Hela sommaren är bladen fulla av grönt klorofyll, som hela tiden bildas på nytt. Men klorofyllet håller inte länge. Det bryts ständigt ner och måste byggas upp igen, och för det krävs både ljus och värme.",
+            "När hösten kommer blir dagarna kortare och kallare. Då lönar det sig inte längre för trädet att tillverka nytt klorofyll. Det gamla klorofyllet bryts ner, och den gröna färgen försvinner bit för bit ur bladen."
+          ]
+        },
+        {
+          "heading": "Färgerna fanns där hela tiden",
+          "paragraphs": [
+            "Här kommer det förvånande: de gula och orangea färgerna har funnits i bladen hela sommaren. De har bara varit dolda bakom allt det gröna. När klorofyllet försvinner träder de fram, ungefär som stjärnorna syns först när solen har gått ner.",
+            "De röda färgerna fungerar lite annorlunda. Dem tillverkar trädet på hösten, och forskare tror att det röda fungerar som ett slags solskydd. Det skyddar bladet medan trädet tar tillvara de sista näringsämnena innan bladet faller."
+          ]
+        },
+        {
+          "heading": "Varför trädet fäller sina löv",
+          "paragraphs": [
+            "Till slut släpper trädet taget om sina löv. Det kan låta som ett slöseri, men det är tvärtom smart. På vintern finns det för lite ljus för fotosyntesen, och breda löv skulle dessutom samla på sig tung snö och frysa sönder. Genom att fälla löven sparar trädet vatten och energi och klarar vinterns kyla bättre.",
+            "Barrträd, som granar och tallar, gör på ett annat sätt. Deras barr är som hoprullade, vaxade löv som tål kylan, och därför kan de behålla dem året runt. Det är därför granen är grön även mitt i vintern."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens sakprosatexter."
+      ],
+      "footnote": "* Klorofyll är det gröna färgämnet i växternas blad. Det fångar upp solljus som växten använder för att tillverka sin näring.",
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "prompt": "Vad är klorofyllets viktigaste uppgift, enligt texten?",
+          "options": [
+            "Att göra bladen gröna.",
+            "Att fånga in solljus så att trädet kan tillverka sin mat.",
+            "Att skydda bladet mot kyla.",
+            "Att samla snö på vintern."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "prompt": "Vad kallas processen där trädet tillverkar sin egen mat med hjälp av solljus, vatten och luft?",
+          "guidance": "Ge 1 poäng för svaret fotosyntes.",
+          "lines": 2
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 2,
+          "prompt": "Varför slutar trädet att tillverka nytt klorofyll på hösten?",
+          "guidance": "Ge upp till 2 poäng. Svaret ska visa att dagarna blir kortare och kallare (mindre ljus och värme) och att det därför inte längre lönar sig för trädet att bilda nytt klorofyll. 1 poäng för någondera delen, 2 poäng för att både ljus/dagslängd och värme/kyla nämns.",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "prompt": "Varför syns de gula färgerna först på hösten?",
+          "options": [
+            "Trädet tillverkar dem på hösten.",
+            "De har funnits hela tiden men varit dolda bakom det gröna.",
+            "De kommer från solljuset.",
+            "De bildas när det blir kallt."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "prompt": "Vad tror forskarna att den röda färgen i bladen fungerar som?",
+          "options": [
+            "Ett slags näring.",
+            "Ett slags solskydd för bladet.",
+            "Ett sätt att locka till sig insekter.",
+            "Ett sätt att samla vatten."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 2,
+          "prompt": "Vi tänker oss att två elever, Noa och Selma, har läst texten och samtalar om den. Noa säger: ”Det är ju dumt av trädet att tappa alla sina löv på hösten. Då blir det ju alldeles kalt.” Vad kan Selma svara för att förklara varför det ändå är smart av trädet att fälla löven?",
+          "guidance": "Ge upp till 2 poäng. Svaret ska förklara att det är fördelaktigt: på vintern finns för lite ljus för fotosyntesen, och breda löv skulle samla tung snö och frysa sönder. Genom att fälla löven sparar trädet vatten och energi och klarar kylan bättre. 1 poäng för en delvis förklaring, 2 poäng för en tydlig förklaring med minst två skäl.",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "prompt": "Varför kan barrträd behålla sina barr hela vintern?",
+          "options": [
+            "De växer på varmare platser.",
+            "Barren är som hoprullade, vaxade löv som tål kylan.",
+            "De har inget klorofyll.",
+            "De fäller barren på sommaren i stället."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "prompt": "Läs stycket som börjar med ”För att förstå höstens färger”. Det är textens första stycke efter ingressen. Vilket alternativ stämmer in på stycket?",
+          "options": [
+            "Det sammanfattar hela textens innehåll.",
+            "Det ger en bakgrund som behövs för att förstå resten av texten.",
+            "Det beskriver hur barrträd klarar vintern.",
+            "Det förklarar varför löven blir röda."
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "writing": [

@@ -447,6 +447,460 @@
           "correctIndex": 2
         }
       ]
+    },
+    {
+      "id": "ak3-b-taltet",
+      "delprov": "Delprov B: läsa berättande text",
+      "textType": "berättande",
+      "title": "Natten i tältet",
+      "sections": [
+        {
+          "paragraphs": [
+            "Vera hade tjatat hela sommaren. Hon ville sova i tält på gården, alldeles själv, en hel natt.",
+            "– Du kommer att bli rädd i mörkret, sa hennes storebror Milo.",
+            "– Nej, det blir jag inte, sa Vera. Jag är inte rädd för någonting.",
+            "På kvällen satte de upp det gröna tältet under äppelträdet. Vera tog med sin kudde, sin ficklampa och sin nallebjörn. Milo skulle sova inne, men han lovade att titta ut genom fönstret ibland.",
+            "– Lycka till, sa han och flinade. Ropa om du vill in.",
+            "– Det vill jag inte, sa Vera."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Först var allt roligt. Vera lyste med ficklampan i taket och åt en smörgås. Men sedan blev det riktigt mörkt ute. Trädgården såg helt annorlunda ut. Buskarna blev till stora svarta skuggor.",
+            "Då hörde Vera ett ljud. Prassel, prassel. Det kom från buskarna alldeles bakom tältet.",
+            "Veras hjärta slog hårt. Hon kröp ihop under filten och kramade nallen så hårt hon kunde.",
+            "Prassel, prassel. Där var ljudet igen.",
+            "Vera ville springa in till Milo. Hon ville krypa ner i sin egen säng. Men då skulle Milo säga ”vad var det jag sa” i hela morgon. Det stod hon inte ut med.",
+            "Så hon tog ett djupt andetag och grep ficklampan. Sakta, sakta drog hon upp blixtlåset och lyste ut i mörkret."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Mitt i ljuskäglan satt en liten igelkott. Den nosade på ett äpple som hade fallit ner från trädet. När ljuset träffade den rullade den ihop sig till en liten boll.",
+            "Vera började skratta. Hela tiden hade hon varit rädd för en igelkott som åt äpplen!",
+            "– Hej, lilla du, viskade hon. Du bor visst här.",
+            "Igelkotten vecklade ut sig igen och tassade vidare bland buskarna. Vera kröp tillbaka in i tältet. Nu kändes mörkret inte längre så farligt.",
+            "Hon somnade med nallen i famnen innan Milo ens hann titta ut genom fönstret."
+          ]
+        },
+        {
+          "paragraphs": [
+            "På morgonen vaknade Vera av att fåglarna sjöng. Solen lyste genom tältduken och allt var grönt och fint.",
+            "Hon gick in och satte sig vid frukostbordet. Milo tittade förvånat på henne.",
+            "– Sov du ute hela natten? frågade han.",
+            "– Klart jag gjorde, sa Vera och tog en smörgås. Jag sa ju att jag inte är rädd för någonting.",
+            "Och den här gången var det nästan sant."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens berättande texter."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad ville Vera göra hela sommaren?",
+          "options": [
+            "Sova i tält på gården en hel natt.",
+            "Lära sig cykla utan stödhjul.",
+            "Få en egen igelkott.",
+            "Sova inne hos Milo."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad tog Vera med sig ut i tältet?",
+          "options": [
+            "En bok och en lampa.",
+            "Sin kudde, sin ficklampa och sin nalle.",
+            "En smörgås och en filt.",
+            "Sin storebror Milo."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför sa Vera att hon inte var rädd för någonting?",
+          "options": [
+            "Hon hade sovit i tält många gånger förut.",
+            "Hon visste att det fanns en igelkott på gården.",
+            "Hon ville visa Milo att hon vågade.",
+            "Hon var aldrig rädd för mörkret."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vilket ljud hörde Vera från buskarna?",
+          "options": [
+            "Ett pip.",
+            "Ett brak.",
+            "Ett prassel.",
+            "Ett tjut."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "I texten står det att ”Veras hjärta slog hårt”. Vad betyder det?",
+          "options": [
+            "Vera var rädd.",
+            "Vera hade sprungit.",
+            "Vera var arg.",
+            "Vera frös."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför sprang Vera inte in till Milo, fast hon ville?",
+          "options": [
+            "Dörren till huset var låst.",
+            "Hon ville inte att Milo skulle få rätt.",
+            "Hon hittade inte vägen i mörkret.",
+            "Milo hade redan somnat."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad var det som hade prasslat i buskarna?",
+          "options": [
+            "En katt.",
+            "En fågel.",
+            "En igelkott.",
+            "Milo."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför började Vera skratta?",
+          "options": [
+            "Igelkotten var jätterolig.",
+            "Hon hade varit rädd för något helt ofarligt.",
+            "Milo tittade ut genom fönstret.",
+            "Äpplet smakade gott."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad gjorde igelkotten när ljuset träffade den?",
+          "options": [
+            "Den sprang sin väg.",
+            "Den rullade ihop sig till en boll.",
+            "Den åt upp äpplet.",
+            "Den fräste."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Hur kändes mörkret för Vera efter att hon sett igelkotten?",
+          "options": [
+            "Ännu läskigare än förut.",
+            "Inte längre så farligt.",
+            "Precis lika läskigt som förut.",
+            "Kallt och blött."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad menas med sista meningen: ”Och den här gången var det nästan sant”?",
+          "options": [
+            "Vera ljög för Milo om natten.",
+            "Vera hade faktiskt varit lite rädd, men vågat ändå.",
+            "Vera var aldrig rädd för någonting.",
+            "Vera tänkte sova ute igen nästa natt."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad visar berättelsen om Vera?",
+          "options": [
+            "Att hon är rädd för djur.",
+            "Att hon kan vara modig fast hon är rädd.",
+            "Att hon inte tycker om sin storebror.",
+            "Att hon aldrig blir trött."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "ordering",
+          "id": 13,
+          "maxPoints": 1,
+          "prompt": "Numrera meningarna i rätt ordning.",
+          "items": [
+            "Vera och Milo sätter upp tältet under äppelträdet.",
+            "Vera lyser ut i mörkret och får syn på en igelkott.",
+            "Vera hör ett prassel från buskarna.",
+            "På morgonen äter Vera frukost och är stolt."
+          ],
+          "correctOrder": [
+            1,
+            3,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak3-c-myror",
+      "delprov": "Delprov C: läsa faktatext",
+      "textType": "sakprosa",
+      "title": "Myror",
+      "sections": [
+        {
+          "heading": "Små men många",
+          "paragraphs": [
+            "Har du sett en myra i dag? Kanske flera? Myror är några av de vanligaste djuren på jorden. Det finns fler myror i världen än nästan alla andra djur. En enda myra är pytteliten, men tillsammans är myrorna otroligt starka."
+          ]
+        },
+        {
+          "heading": "Myrstacken är ett hem",
+          "paragraphs": [
+            "Många myror bor i en myrstack. En stack kan se ut som en hög med barr och pinnar, men inuti finns massor av små gångar och rum. Där bor tusentals myror tillsammans.",
+            "Längst inne i stacken bor drottningen. Hon är större än de andra myrorna. Hennes enda jobb är att lägga ägg, så att det hela tiden kommer nya myror."
+          ]
+        },
+        {
+          "heading": "Alla hjälps åt",
+          "paragraphs": [
+            "I myrstacken har alla olika uppgifter. Några myror letar mat. Andra tar hand om äggen. Några vaktar stacken mot fiender.",
+            "Myrorna kan inte prata med varandra som vi gör. I stället känner de lukter. Om en myra hittar mat lämnar den ett luktspår hela vägen hem. Då kan de andra myrorna följa spåret till maten."
+          ]
+        },
+        {
+          "heading": "Starka som jättar",
+          "paragraphs": [
+            "En myra är väldigt stark för sin storlek. Den kan bära saker som väger mycket mer än den själv. Om du var lika stark som en myra skulle du kunna lyfta en bil!",
+            "Myror äter många olika saker. De tycker om sådant som är sött, men de äter också små insekter."
+          ]
+        },
+        {
+          "heading": "Nyttiga i naturen",
+          "paragraphs": [
+            "Myror är viktiga i naturen. När de gräver sina gångar luckrar de upp jorden, så att växterna trivs bättre. De städar också skogen genom att äta upp döda insekter.",
+            "Så nästa gång du ser en liten myra på marken – tänk på att den är en del av ett stort och flitigt lag."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens faktatexter."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Var bor många myror?",
+          "options": [
+            "I en myrstack.",
+            "Under en sten.",
+            "I ett träd.",
+            "I ett bo av gräs."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad är drottningens jobb i stacken?",
+          "options": [
+            "Att leta mat.",
+            "Att vakta stacken.",
+            "Att lägga ägg.",
+            "Att gräva gångar."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför kommer det hela tiden nya myror i stacken?",
+          "options": [
+            "För att andra myror flyttar in.",
+            "För att drottningen lägger ägg.",
+            "För att myrorna lever länge.",
+            "För att myrorna hittar mat."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Hur hittar myrorna fram till mat som en annan myra har hittat?",
+          "options": [
+            "De ropar till varandra.",
+            "De följer ett luktspår.",
+            "De ser maten på långt håll.",
+            "De gräver en gång dit."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför lämnar en myra ett luktspår när den hittat mat?",
+          "options": [
+            "För att hitta hem själv.",
+            "För att skrämma bort fiender.",
+            "För att de andra myrorna ska hitta maten.",
+            "För att märka ut sin egen mat."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Hur stark är en myra för sin storlek?",
+          "options": [
+            "Ungefär lika stark som en mygga.",
+            "Svagare än de flesta djur.",
+            "Väldigt stark – den kan bära mer än den själv väger.",
+            "Precis lika stark som en människa."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför står det i texten att du skulle kunna lyfta en bil?",
+          "options": [
+            "För att visa hur tunga bilar är.",
+            "För att förklara hur stark en myra är jämfört med sin storlek.",
+            "För att myror ibland bär bilar.",
+            "För att människor är starkare än myror."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad tycker myror om att äta?",
+          "options": [
+            "Bara blad.",
+            "Sådant som är sött, och små insekter.",
+            "Bara barr och pinnar.",
+            "Frön och nötter."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad händer med jorden när myrorna gräver sina gångar?",
+          "options": [
+            "Den blir hård.",
+            "Den luckras upp så att växterna trivs.",
+            "Den torkar ut.",
+            "Den blir full av sten."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför är myror nyttiga i naturen?",
+          "options": [
+            "De luckrar jorden och städar bort döda insekter.",
+            "De är mat åt alla andra djur.",
+            "De bygger bon åt fåglar.",
+            "De skrämmer bort farliga djur."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad menas med att myrorna är ”ett stort och flitigt lag”?",
+          "options": [
+            "Att de spelar fotboll.",
+            "Att de är många som arbetar tillsammans.",
+            "Att de är stora djur.",
+            "Att de tävlar mot varandra."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad handlar texten mest om?",
+          "options": [
+            "Hur farliga myror är.",
+            "Hur myror lever och varför de är nyttiga.",
+            "Hur man blir av med myror hemma.",
+            "Var i världen det finns flest myror."
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "writing": []
