@@ -38,8 +38,9 @@ export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;
 
 // Illustration som visas i texthäftet/uppgiftshäftet
 export interface Illustration {
-  src: string; // sökväg under /public, t.ex. "/images/bageriet.svg"
+  src: string; // foto-URL (Unsplash/Wikimedia) eller lokal sökväg
   alt: string;
+  fallback?: string; // lokal reservbild som visas om src inte laddar
 }
 
 export interface TextSection {

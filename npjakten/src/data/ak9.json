@@ -135,8 +135,9 @@
         }
       ],
       "image": {
-        "src": "/images/kungen.svg",
-        "alt": "Ett schackbräde med en vit kung och en svart springare, och en kanelbulle på ett fat."
+        "src": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=900&h=506&fit=crop",
+        "alt": "Schackpjäser på ett bräde.",
+        "fallback": "/images/kungen.svg"
       }
     },
     {
@@ -250,8 +251,9 @@
         }
       ],
       "image": {
-        "src": "/images/esport.svg",
-        "alt": "En e-sportarena med storbildsskärm, två spelare vid sina datorer och publik."
+        "src": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=900&h=506&fit=crop",
+        "alt": "En gamingdator med lysande skärm i mörkt rum.",
+        "fallback": "/images/esport.svg"
       }
     },
     {
@@ -380,8 +382,9 @@
         }
       ],
       "image": {
-        "src": "/images/jocke.svg",
-        "alt": "Två siluetter sitter på en bro i solnedgången, med en moped parkerad bredvid."
+        "src": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=900&h=506&fit=crop",
+        "alt": "En moped.",
+        "fallback": "/images/jocke.svg"
       }
     },
     {
@@ -494,8 +497,9 @@
         }
       ],
       "image": {
-        "src": "/images/ljudbok.svg",
-        "alt": "En uppslagen bok med ett par hörlurar runt sig och ljudvågor i luften."
+        "src": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&h=506&fit=crop",
+        "alt": "Ett par hörlurar.",
+        "fallback": "/images/ljudbok.svg"
       }
     },
     {
@@ -616,8 +620,9 @@
         }
       ],
       "image": {
-        "src": "/images/tidsomstallning.svg",
-        "alt": "En stor klocka mitt emellan dag och natt, med pilar framåt och bakåt."
+        "src": "https://images.unsplash.com/photo-1501139083538-0139583c060f?w=900&h=506&fit=crop",
+        "alt": "En klocka.",
+        "fallback": "/images/tidsomstallning.svg"
       }
     },
     {
@@ -734,8 +739,9 @@
         }
       ],
       "image": {
-        "src": "/images/veta-vad-man-vill.svg",
-        "alt": "En person med ryggsäck står vid ett vägskäl där vägvisarna bara visar frågetecken."
+        "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&h=506&fit=crop",
+        "alt": "En väg genom skogen.",
+        "fallback": "/images/veta-vad-man-vill.svg"
       }
     }
   ],
@@ -823,8 +829,9 @@
         }
       ],
       "image": {
-        "src": "/images/uppkopplad.svg",
-        "alt": "En mobiltelefon på natten med notiser som flyger omkring."
+        "src": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&h=506&fit=crop",
+        "alt": "En hand håller en mobiltelefon.",
+        "fallback": "/images/uppkopplad.svg"
       }
     },
     {
@@ -919,8 +926,9 @@
         }
       ],
       "image": {
-        "src": "/images/debatt.svg",
-        "alt": "Två personer med stora pratbubblor som säger JA! och NEJ! mot varandra."
+        "src": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=900&h=506&fit=crop",
+        "alt": "En mikrofon på en scen.",
+        "fallback": "/images/debatt.svg"
       }
     },
     {
@@ -1015,8 +1023,9 @@
         }
       ],
       "image": {
-        "src": "/images/utredande.svg",
-        "alt": "En balansvåg som väger FÖR mot EMOT, med dokument bredvid."
+        "src": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=506&fit=crop",
+        "alt": "En balansvåg.",
+        "fallback": "/images/utredande.svg"
       }
     },
     {
@@ -1104,8 +1113,9 @@
         }
       ],
       "image": {
-        "src": "/images/resonerande.svg",
-        "alt": "Ett huvud i profil med tankebubblor som innehåller frågetecken och ett utropstecken."
+        "src": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&h=506&fit=crop",
+        "alt": "En person sitter och tänker.",
+        "fallback": "/images/resonerande.svg"
       }
     }
   ]

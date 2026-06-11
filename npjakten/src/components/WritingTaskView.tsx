@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { WritingTask } from "../types";
 import ExamTimer from "./ExamTimer";
+import IllustrationImg from "./IllustrationImg";
 
 interface Props {
   task: WritingTask;
@@ -89,9 +90,8 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
         <h1 className="mt-6 font-serif text-3xl font-bold">{task.title}</h1>
 
         {task.image && (
-          <img
-            src={task.image.src}
-            alt={task.image.alt}
+          <IllustrationImg
+            image={task.image}
             className="mt-5 aspect-video w-full rounded-md object-cover"
           />
         )}

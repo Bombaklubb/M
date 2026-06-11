@@ -180,8 +180,9 @@
         }
       ],
       "image": {
-        "src": "/images/bageriet.svg",
-        "alt": "Ett smalt tvåvåningshus med gammal bageriskylt och förbommade fönster."
+        "src": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=900&h=506&fit=crop",
+        "alt": "Nybakade bröd i ett bageri.",
+        "fallback": "/images/bageriet.svg"
       }
     },
     {
@@ -310,8 +311,9 @@
         }
       ],
       "image": {
-        "src": "/images/glasogon.svg",
-        "alt": "Ett par runda gammaldags glasögon som ligger på en uppslagen bok."
+        "src": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=900&h=506&fit=crop",
+        "alt": "Ett par glasögon som ligger på en uppslagen bok.",
+        "fallback": "/images/glasogon.svg"
       }
     },
     {
@@ -490,8 +492,9 @@
         }
       ],
       "image": {
-        "src": "/images/isen.svg",
-        "alt": "Två barn på skridskor på en frusen sjö – längre ut är isen mörkare."
+        "src": "https://images.unsplash.com/photo-1478719059408-592965723cbc?w=900&h=506&fit=crop",
+        "alt": "En frusen sjö i vinterlandskap.",
+        "fallback": "/images/isen.svg"
       }
     },
     {
@@ -625,8 +628,9 @@
         }
       ],
       "image": {
-        "src": "/images/loven.svg",
-        "alt": "Ett träd där ena halvan är grön och den andra har höstfärger, med fallande löv."
+        "src": "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?w=900&h=506&fit=crop",
+        "alt": "Höstträd med färgglada löv längs en väg.",
+        "fallback": "/images/loven.svg"
       }
     },
     {
@@ -736,8 +740,9 @@
         }
       ],
       "image": {
-        "src": "/images/skolstart.svg",
-        "alt": "Ett barn sover i sin säng medan en väckarklocka ringer och det är mörkt utanför fönstret."
+        "src": "https://images.unsplash.com/photo-1495364141860-b0d03eccd065?w=900&h=506&fit=crop",
+        "alt": "En väckarklocka.",
+        "fallback": "/images/skolstart.svg"
       }
     },
     {
@@ -881,8 +886,9 @@
         }
       ],
       "image": {
-        "src": "/images/insektshotell.svg",
-        "alt": "Ett insektshotell av trä fyllt med bamburör och kottar, med ett bi som flyger intill."
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Insektenhotel.JPG?width=900",
+        "alt": "Ett insektshotell av trä fyllt med rör och kottar.",
+        "fallback": "/images/insektshotell.svg"
       }
     },
     {
@@ -1014,8 +1020,9 @@
         }
       ],
       "image": {
-        "src": "/images/tornseglaren.svg",
-        "alt": "Tornseglare med bakåtböjda vingar som flyger högt över hustaken."
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Apus%20apus%20-Barcelona%2C%20Spain-8.jpg?width=900",
+        "alt": "En tornseglare i flykten.",
+        "fallback": "/images/tornseglaren.svg"
       }
     }
   ],
@@ -1105,8 +1112,9 @@
         }
       ],
       "image": {
-        "src": "/images/dorren.svg",
-        "alt": "En gammal grön dörr på glänt i en mörk korridor – ljus strömmar ut, och en nyckel ligger på golvet."
+        "src": "https://images.unsplash.com/photo-1506377585622-bedcbb027afc?w=900&h=506&fit=crop",
+        "alt": "En gammal dörr.",
+        "fallback": "/images/dorren.svg"
       }
     },
     {
@@ -1199,8 +1207,9 @@
         }
       ],
       "image": {
-        "src": "/images/lyssna.svg",
-        "alt": "En megafon som sänder ut ljudvågor mot pratbubblor."
+        "src": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&h=506&fit=crop",
+        "alt": "En megafon mot färgglad bakgrund.",
+        "fallback": "/images/lyssna.svg"
       }
     },
     {
@@ -1293,8 +1302,9 @@
         }
       ],
       "image": {
-        "src": "/images/varfor-da.svg",
-        "alt": "En stor glödlampa med ett frågetecken, omgiven av fler frågetecken."
+        "src": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=900&h=506&fit=crop",
+        "alt": "En hand håller en glödlampa mot stjärnhimlen.",
+        "fallback": "/images/varfor-da.svg"
       }
     },
     {
@@ -1395,8 +1405,9 @@
         }
       ],
       "image": {
-        "src": "/images/lar-ut.svg",
-        "alt": "En hög med pannkakor med sylt på ett fat, bredvid en stekspade."
+        "src": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&h=506&fit=crop",
+        "alt": "En hög med pannkakor.",
+        "fallback": "/images/lar-ut.svg"
       }
     },
     {
@@ -1484,8 +1495,9 @@
         }
       ],
       "image": {
-        "src": "/images/djurboken.svg",
-        "alt": "En sittande rödräv med vit bröstpäls och yvig svans framför granar."
+        "src": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=900&h=506&fit=crop",
+        "alt": "En rödräv i naturen.",
+        "fallback": "/images/djurboken.svg"
       }
     }
   ]

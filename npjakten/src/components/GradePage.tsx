@@ -1,4 +1,5 @@
 import type { Grade, WritingTask } from "../types";
+import IllustrationImg from "./IllustrationImg";
 
 const WRITING_LABELS: Record<WritingTask["textType"], string> = {
   berättelse: "Skriv en berättelse",
@@ -42,9 +43,9 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
               className="flex items-center gap-4 rounded-md border border-stone-300 p-3 text-left transition hover:border-np hover:bg-np-light"
             >
               {test.image && (
-                <img
-                  src={test.image.src}
-                  alt=""
+                <IllustrationImg
+                  image={test.image}
+                  decorative
                   className="hidden h-20 w-32 shrink-0 rounded object-cover sm:block"
                 />
               )}
@@ -75,9 +76,9 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
               className="flex items-center gap-4 rounded-md border border-stone-300 p-3 text-left transition hover:border-np hover:bg-np-light"
             >
               {task.image && (
-                <img
-                  src={task.image.src}
-                  alt=""
+                <IllustrationImg
+                  image={task.image}
+                  decorative
                   className="hidden h-20 w-32 shrink-0 rounded object-cover sm:block"
                 />
               )}

@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import type { Question, ReadingTest } from "../types";
 import ExamTimer from "./ExamTimer";
+import IllustrationImg from "./IllustrationImg";
 
 interface Props {
   test: ReadingTest;
@@ -94,9 +95,8 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
         <h1 className="mt-6 font-serif text-3xl font-bold">{test.title}</h1>
 
         {test.image && (
-          <img
-            src={test.image.src}
-            alt={test.image.alt}
+          <IllustrationImg
+            image={test.image}
             className="mt-5 aspect-video w-full rounded-md object-cover"
           />
         )}
