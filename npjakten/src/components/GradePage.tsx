@@ -1,4 +1,13 @@
-import type { Grade } from "../types";
+import type { Grade, WritingTask } from "../types";
+
+const WRITING_LABELS: Record<WritingTask["textType"], string> = {
+  berättelse: "Skriv en berättelse",
+  argumenterande: "Skriv en argumenterande text",
+  krönika: "Skriv en krönika",
+  förklarande: "Skriv en förklarande text",
+  instruerande: "Skriv en instruerande text",
+  beskrivande: "Skriv en beskrivande text",
+};
 
 interface Props {
   grade: Grade;
@@ -59,11 +68,7 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
               </p>
               <p className="mt-1 font-serif text-lg font-bold">{task.title}</p>
               <p className="mt-1 text-sm text-stone-500">
-                {task.textType === "berättelse"
-                  ? "Skriv en berättelse"
-                  : task.textType === "krönika"
-                    ? "Skriv en krönika"
-                    : "Skriv en argumenterande text"}
+                {WRITING_LABELS[task.textType]}
               </p>
             </button>
           ))}

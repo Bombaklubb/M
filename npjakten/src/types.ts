@@ -44,7 +44,13 @@ export interface TextSection {
 export interface ReadingTest {
   id: string;
   delprov: string; // t.ex. "Delprov B1: läsa – berättande text"
-  textType: "berättande" | "sakprosa";
+  textType:
+    | "berättande"
+    | "sakprosa"
+    | "förklarande"
+    | "argumenterande"
+    | "instruerande"
+    | "beskrivande";
   title: string;
   ingress?: string; // sakprosatexter inleds med en ingress
   sections: TextSection[];
@@ -64,7 +70,13 @@ export interface ExampleResponse {
 export interface WritingTask {
   id: string;
   delprov: string; // t.ex. "Delprov C1: skriva – berättande text"
-  textType: "berättelse" | "argumenterande" | "krönika";
+  textType:
+    | "berättelse"
+    | "argumenterande"
+    | "krönika"
+    | "förklarande"
+    | "instruerande"
+    | "beskrivande";
   title: string;
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"
