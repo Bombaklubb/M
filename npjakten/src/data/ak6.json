@@ -612,6 +612,383 @@
           "correctIndex": 1
         }
       ]
+    },
+    {
+      "id": "b3-skolstart",
+      "delprov": "Läsa – argumenterande text",
+      "textType": "argumenterande",
+      "title": "Låt skolan börja senare!",
+      "ingress": "Insändare publicerad i barntidningen Komet, skriven av en läsare i årskurs 6.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Varje morgon klockan kvart i sju ringer min väckarklocka, och varje morgon känns det som att den ringer mitt i natten. Jag är inte ensam. Halva min klass sitter och gäspar sig igenom första lektionen. Därför tycker jag att skolan borde börja klockan nio i stället för klockan åtta.",
+            "Mitt första argument är att vi skulle lära oss mer. Forskare som studerat sömn har visat att barn i min ålder behöver ungefär tio timmars sömn, och att hjärnan hos unga vaknar senare på morgonen än hos vuxna. En utsövd elev minns bättre, koncentrerar sig bättre och orkar mer. Vad är poängen med en mattelektion som ingen är vaken nog att förstå?",
+            "Mitt andra argument är att morgonen skulle bli mindre stressig. I dag ska tusentals familjer hinna med frukost, packning och busskö på en knapp timme. Med en senare skolstart skulle fler hinna äta ordentligt och färre komma för sent. Vår lärare säger själv att de flesta sena ankomsterna sker just på morgonens första lektion.",
+            "En del vuxna säger att en senare skolstart inte går att ordna, eftersom skoldagen då skulle sluta senare och krocka med träningar och föräldrarnas arbetstider. Men det stämmer bara delvis. Skoldagen behöver inte bli längre – den kan packas smartare, med kortare håltimmar. Och är det verkligen rimligt att hela skolans schema styrs av något annat än det vi faktiskt är där för: att lära oss?",
+            "Skolan finns till för eleverna, och eleverna fungerar bäst när de fått sova klart. Jag uppmanar därför alla rektorer som läser detta: testa senare skolstart under en termin och mät resultatet. Jag lovar att ni kommer att mötas av piggare elever – och kanske till och med några leenden klockan nio.",
+            "Ines, 12 år"
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som en insändare i en barntidning."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "prompt": "Vilken åsikt för skribenten fram i insändaren?",
+          "options": [
+            "Skolan borde börja klockan nio i stället för klockan åtta.",
+            "Eleverna borde få sova på lektionerna.",
+            "Skoldagen borde bli kortare.",
+            "Väckarklockor borde förbjudas."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 2,
+          "prompt": "Skribenten ger flera argument för sin åsikt. Skriv två av argumenten.",
+          "note": "Du måste skriva två argument för att få full poäng.",
+          "guidance": "Ge 1 poäng per korrekt argument, max 2 poäng. Godtagbara argument: 1) Eleverna skulle lära sig mer / minnas och koncentrera sig bättre när de är utsövda. 2) Morgonen skulle bli mindre stressig / fler hinner äta frukost och färre kommer för sent.",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "prompt": "Varför hänvisar skribenten till forskare i sitt första argument?",
+          "options": [
+            "För att visa att forskare också är trötta på morgonen.",
+            "För att ge stöd åt argumentet och göra det mer trovärdigt.",
+            "För att forskarna har bestämt skolans tider.",
+            "För att göra texten längre."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "prompt": "Vilket motargument tar skribenten upp i texten?",
+          "options": [
+            "Att elever inte vill gå upp tidigare.",
+            "Att lärarna tycker om att börja tidigt.",
+            "Att skoldagen skulle sluta senare och krocka med träningar och arbetstider.",
+            "Att forskningen om sömn är osäker."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 1,
+          "prompt": "Hur bemöter skribenten motargumentet?",
+          "guidance": "Ge 1 poäng för svar som visar att skribenten menar att skoldagen inte behöver bli längre – den kan packas smartare med kortare håltimmar (och/eller att schemat borde styras av lärandet, inte av annat).",
+          "lines": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "prompt": "Insändaren avslutas med en uppmaning. Vad uppmanas läsaren (rektorerna) att göra?",
+          "options": [
+            "Att köpa nya väckarklockor till eleverna.",
+            "Att testa senare skolstart under en termin och mäta resultatet.",
+            "Att korta ner sommarlovet.",
+            "Att servera frukost i skolan."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "prompt": "Vad är textens viktigaste syfte?",
+          "options": [
+            "Att berätta en rolig historia om en morgon.",
+            "Att förklara hur sömn fungerar.",
+            "Att beskriva hur en skoldag ser ut.",
+            "Att övertyga läsaren om att skolan borde börja senare."
+          ],
+          "correctIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "b4-insektshotell",
+      "delprov": "Läsa – instruerande text",
+      "textType": "instruerande",
+      "title": "Gör ett eget insektshotell",
+      "ingress": "Bin, humlor och nyckelpigor gör stor nytta i naturen, men de har allt svårare att hitta boplatser. Med ett insektshotell kan du hjälpa dem – och få surrande gäster i din trädgård eller på din balkong.",
+      "sections": [
+        {
+          "heading": "Det här behöver du",
+          "paragraphs": [
+            "• En trälåda utan lock, ungefär så stor som en skokartong",
+            "• Ihåliga rör av bambu eller vass, cirka 10–15 centimeter långa",
+            "• Kottar, bark och torra pinnar",
+            "• En såg och sandpapper",
+            "• Ett snöre eller en krok att hänga upp hotellet med"
+          ]
+        },
+        {
+          "heading": "Gör så här",
+          "paragraphs": [
+            "1. Såga rören så att de blir lika djupa som lådan. Be en vuxen om hjälp med sågen.",
+            "2. Slipa rörens kanter med sandpapper så att de blir jämna. Vassa kanter kan skada insekternas vingar.",
+            "3. Kontrollera att varje rör är stängt i ena änden, till exempel av en naturlig led i bambun. Insekterna vill ha en skyddad återvändsgränd att bygga bo i – ett rör som är öppet i båda ändar blir det drag i, och då flyttar ingen in.",
+            "4. Fyll lådan med rören. Packa dem tätt så att de inte ramlar ur, och fyll tomrummen med kottar, bark och pinnar.",
+            "5. Häng upp hotellet på en solig plats som är skyddad från regn, gärna mot söder och minst en meter över marken.",
+            "6. Vänta och håll utkik! Snart kan de första gästerna checka in."
+          ]
+        },
+        {
+          "heading": "Tips!",
+          "paragraphs": [
+            "Sätt upp hotellet på våren, när insekterna letar boplatser som flitigast. Och ha tålamod – det kan dröja några veckor innan den första hyresgästen flyttar in. Ett rör som blivit igenmurat med lera är ett gott tecken: då har ett bi lagt ägg där inne."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som en instruerande text."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "prompt": "Vad är ett insektshotell till för?",
+          "options": [
+            "Att fånga insekter som man vill bli av med.",
+            "Att ge insekter en plats att bygga bo på.",
+            "Att mata fåglar på vintern.",
+            "Att förvara kottar och pinnar."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "prompt": "Var ska hotellet hängas upp?",
+          "options": [
+            "På en skuggig plats nära marken.",
+            "Inomhus i ett fönster.",
+            "På en solig plats som är skyddad från regn.",
+            "Högt uppe i ett träd."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 2,
+          "prompt": "Varför ska rören vara stängda i ena änden? Förklara med hjälp av texten.",
+          "guidance": "Ge upp till 2 poäng. 1 poäng för att insekterna vill ha en skyddad återvändsgränd att bygga bo i. 2 poäng om svaret också förklarar följden av öppna rör: det blir drag i ett rör som är öppet i båda ändar, och då flyttar ingen insekt in.",
+          "lines": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "prompt": "Varför ska man slipa rörens kanter med sandpapper?",
+          "options": [
+            "För att rören ska se finare ut.",
+            "För att vassa kanter kan skada insekternas vingar.",
+            "För att rören ska få plats i lådan.",
+            "För att lådan inte ska repas."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "ordering",
+          "id": 5,
+          "maxPoints": 1,
+          "prompt": "Numrera stegen i den ordning de ska göras enligt instruktionen.",
+          "items": [
+            "Häng upp hotellet på en solig plats.",
+            "Såga rören i rätt längd.",
+            "Fyll lådan med rör, kottar och bark.",
+            "Slipa rörens kanter."
+          ],
+          "correctOrder": [
+            4,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "prompt": "I avsnittet ”Gör så här” står verben i uppmanande form: såga, slipa, fyll, häng. Varför skriver man så i en instruerande text?",
+          "options": [
+            "För att texten ska låta sträng och allvarlig.",
+            "För att texten talar direkt till läsaren om vad hen ska göra.",
+            "För att texten ska bli kortare.",
+            "För att visa att det är bråttom."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 1,
+          "prompt": "Avsnittet ”Det här behöver du” är skrivet som en punktlista. Vilken är fördelen med en punktlista i en sådan text?",
+          "guidance": "Ge 1 poäng för svar som visar att punktlistan ger snabb överblick – läsaren ser direkt vilket material som behövs och kan bocka av/samla ihop sakerna, utan att leta i löpande text.",
+          "lines": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "prompt": "Hur kan man se att ett bi har flyttat in i hotellet, enligt texten?",
+          "options": [
+            "Ett rör har blivit igenmurat med lera.",
+            "Det surrar högt om nätterna.",
+            "Kottarna har trillat ur lådan.",
+            "Hotellet har blivit tyngre."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "b5-tornseglaren",
+      "delprov": "Läsa – beskrivande text",
+      "textType": "beskrivande",
+      "title": "Tornseglaren – fågeln som nästan aldrig landar",
+      "ingress": "Den syns som en svart pil mot sommarhimlen och hörs på sitt gälla skri. Men tornseglaren är märkligare än de flesta anar: den äter, dricker och till och med sover uppe i luften.",
+      "sections": [
+        {
+          "heading": "Utseende",
+          "paragraphs": [
+            "Tornseglaren är en medelstor fågel, ungefär sexton centimeter lång, med sotbrun fjäderdräkt som på avstånd ser helt svart ut. Det enklaste sättet att känna igen den är på siluetten: de långa, smala vingarna är böjda bakåt så att fågeln liknar en spänd pilbåge mot himlen. Stjärten är kort och kluven, och benen är så små att en tornseglare som hamnat på marken har mycket svårt att lyfta igen."
+          ]
+        },
+        {
+          "heading": "Ett liv i luften",
+          "paragraphs": [
+            "Inget annat djur i Sverige lever så stor del av sitt liv flygande. Tornseglaren fångar insekter i luften, dricker genom att glida tätt över vattenytor och samlar till och med sitt bomaterial – fjädrar och strån som virvlar omkring i vinden – utan att landa. När kvällen kommer stiger flockarna på hög höjd, och där uppe sover fåglarna i korta perioder medan de långsamt glider fram. En ung tornseglare kan vara i luften i nästan tre år i sträck, från att den lämnar boet tills den själv ska häcka för första gången."
+          ]
+        },
+        {
+          "heading": "Boet och flytten",
+          "paragraphs": [
+            "Tornseglaren häckar i håligheter högt upp: under takpannor, i ventiler och i gamla torn, vilket har gett fågeln dess namn. Honan lägger två till tre ägg, och båda föräldrarna turas om att ruva. I augusti, när ungarna är flygfärdiga, lämnar tornseglarna Sverige och flyger hela vägen till södra Afrika, en resa på över sju tusen kilometer."
+          ]
+        },
+        {
+          "heading": "En granne som behöver hjälp",
+          "paragraphs": [
+            "Tornseglaren har blivit allt mer sällsynt i Sverige. När äldre hus renoveras försvinner springorna under taken där fågeln byggt bo i generationer, och med dem försvinner fåglarna. Den som vill hjälpa till kan sätta upp en särskild holk med ingångshålet på undersidan, högt och fritt på en husgavel. Med lite tur tackar en svart pil ja till erbjudandet nästa sommar."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som en beskrivande faktatext."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "prompt": "Hur känner man enklast igen en tornseglare, enligt texten?",
+          "options": [
+            "På den röda fläcken på bröstet.",
+            "På siluetten med långa vingar böjda som en pilbåge.",
+            "På den långa stjärten.",
+            "På att den ofta sitter på marken."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "prompt": "Varför har en tornseglare som hamnat på marken svårt att lyfta igen?",
+          "guidance": "Ge 1 poäng för svar som anger att dess ben är mycket små/korta.",
+          "lines": 2
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 2,
+          "prompt": "Tornseglaren klarar nästan hela sitt liv utan att landa. Skriv två saker som tornseglaren gör uppe i luften.",
+          "note": "Du måste skriva två saker för att få full poäng.",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2 poäng. Godtagbart: fångar insekter/äter, dricker (glider över vattenytor), samlar bomaterial, sover.",
+          "lines": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "prompt": "Hur länge kan en ung tornseglare vara i luften i sträck?",
+          "options": [
+            "Nästan tre dagar.",
+            "Nästan tre veckor.",
+            "Nästan tre månader.",
+            "Nästan tre år."
+          ],
+          "correctIndex": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "prompt": "Varför heter fågeln tornseglare?",
+          "options": [
+            "Den seglar över havet som ett skepp.",
+            "Den häckar i håligheter högt upp, till exempel i gamla torn.",
+            "Den upptäcktes första gången i ett kyrktorn.",
+            "Den flyger högre än alla andra fåglar."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 2,
+          "prompt": "Varför har tornseglaren blivit mer sällsynt i Sverige, och vad kan man göra för att hjälpa den?",
+          "guidance": "Ge upp till 2 poäng. 1 poäng för orsaken: när äldre hus renoveras försvinner springorna under taken där fågeln bygger bo. 1 poäng för hjälpen: sätta upp en särskild holk (med hål på undersidan, högt på en husgavel).",
+          "lines": 4
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "prompt": "Texten kallar tornseglaren för ”en svart pil mot sommarhimlen”. Varför använder författaren den bilden?",
+          "options": [
+            "För att tornseglaren är farlig.",
+            "För att beskriva fågelns snabba, spetsiga form på ett målande sätt.",
+            "För att tornseglaren liknar en pilbåge.",
+            "För att fågeln bara flyger rakt fram."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "prompt": "Vad är textens mellanrubriker till för?",
+          "options": [
+            "De gör texten roligare att läsa.",
+            "De visar vad varje del av texten handlar om och gör det lätt att hitta.",
+            "De sammanfattar hela texten.",
+            "De ställer frågor som läsaren ska besvara."
+          ],
+          "correctIndex": 1
+        }
+      ]
     }
   ],
   "writing": [
@@ -786,6 +1163,279 @@
             "Argumenten är tydliga, utvecklade och stärks med exempel (kompisen som flyttade hit).",
             "Texten bemöter ett motargument (”Vissa vuxna säger att ...”), vilket gör argumentationen starkare.",
             "Avslutningen knyter an till rubriken och slutar med en tydlig uppmaning."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3-varfor-da",
+      "delprov": "Delprov C2: skriva – förklarande text",
+      "textType": "förklarande",
+      "title": "Varför då?",
+      "intro": [
+        "Det finns frågor som de flesta har undrat över någon gång. Varför behöver vi sova? Hur fungerar återvinning? Att skriva en förklarande text handlar om att svara på en sådan fråga så att läsaren verkligen förstår.",
+        "Du ska skriva en förklarande text som svarar på en varför- eller hur-fråga. Välj något du kan bra eller har lärt dig om i skolan, i böcker, på tv eller på internet.",
+        "Din text tänker du skicka till barntidningen Vetgirig. De har en sida som heter ”Varför då?” där unga läsare förklarar saker för varandra, och de söker just nu nya texter."
+      ],
+      "doThis": [
+        "Skriv en förklarande text som svarar på en varför- eller hur-fråga. Bestäm en fråga för din text. Förklara steg för steg så att en yngre elev skulle förstå. Beskriv orsaker och följder: vad beror det på, och vad leder det till? Använd gärna mellanrubriker och ge exempel.",
+        "Rubrik: Skriv en rubrik som passar till innehållet i din text, gärna som en fråga."
+      ],
+      "topicExamples": [
+        "Varför behöver vi sova?",
+        "Hur fungerar återvinning?",
+        "Varför har vi årstider?",
+        "Varför mår man bra av att röra på sig?",
+        "Hur blir en larv en fjäril?",
+        "Varför kan flygplan flyga?"
+      ],
+      "remember": [
+        "Du ska skriva en förklarande text.",
+        "Du ska följa instruktionerna under ”Gör det här!”",
+        "Tänk på att förklara orsaker och följder så att läsaren förstår sambanden.",
+        "Tänk på att planera din text innan du börjar skriva. Läs igenom texten innan du lämnar in den."
+      ],
+      "checklist": [
+        "Min text har en rubrik som passar innehållet.",
+        "Min text svarar på en varför- eller hur-fråga.",
+        "Jag förklarar orsaker och följder, inte bara vad som händer.",
+        "Jag förklarar svåra ord som läsaren kanske inte kan.",
+        "Min text är skriven så att en yngre elev skulle förstå.",
+        "Min text har en genomtänkt inledning och avslutning.",
+        "Jag har delat in texten i stycken.",
+        "Jag har läst igenom texten och rättat stavning och skiljetecken."
+      ],
+      "examples": [
+        {
+          "level": "E-nivå",
+          "heading": "Varför behöver vi sova?",
+          "paragraphs": [
+            "Alla människor behöver sova. Barn behöver sova ungefär tio timmar varje natt. Om man inte sover blir man trött och sur.",
+            "När vi sover vilar kroppen. Hjärnan jobbar fast vi sover. Den sparar det vi har lärt oss under dagen. Det är därför det är bra att sova innan ett prov.",
+            "Kroppen lagar sig själv när vi sover. Om man har tränat blir musklerna starkare medan man sover.",
+            "Det är alltså viktigt att sova. Annars orkar man inte med skolan och man kan bli sjuk lättare."
+          ],
+          "comments": [
+            "Texten svarar på en varför-fråga och innehåller flera riktiga förklaringar.",
+            "Det finns enkla orsaker och följder (sover man inte blir man trött).",
+            "Texten är indelad i stycken men saknar mellanrubriker, och förklaringarna är korta och utvecklas inte särskilt mycket."
+          ]
+        },
+        {
+          "level": "C-nivå",
+          "heading": "Varför behöver vi sova?",
+          "paragraphs": [
+            "Du somnar varje kväll och vaknar varje morgon, men har du någonsin funderat på varför? Sömnen är faktiskt en av kroppens viktigaste uppgifter, och här ska jag förklara varför.",
+            "Hjärnan städar och sparar. När du sover är hjärnan allt annat än ledig. Den går igenom allt du varit med om under dagen och flyttar det viktigaste till långtidsminnet. Det betyder att du faktiskt blir bättre på det du övat på medan du sover! Den som pluggar inför ett prov och sedan sover ordentligt minns mer än den som pluggar hela natten.",
+            "Kroppen reparerar sig. Under natten lagar kroppen sådant som slitits under dagen. Muskler växer, sår läker och kroppens försvar mot sjukdomar laddas om. Det är därför man behöver sova extra mycket när man är sjuk.",
+            "Vad händer om man sover för lite? Den som sover för lite blir trött, får svårt att koncentrera sig och blir lättare irriterad. På längre sikt kan man också bli sjuk oftare, eftersom kroppens försvar inte hinner ladda om.",
+            "Sömnen är alltså inte bortkastad tid. Den är tvärtom kroppens sätt att göra dig redo för en ny dag."
+          ],
+          "comments": [
+            "Inledningen väcker läsarens intresse med en fråga och texten har tydliga mellanrubriker.",
+            "Orsaker och följder förklaras tydligt (hjärnan flyttar minnen → man minns bättre; för lite sömn → sämre koncentration).",
+            "Exemplen hjälper läsaren att förstå (plugga inför prov, sova när man är sjuk).",
+            "För en högre nivå kunde texten förklara fler ämnesord och knyta ihop delarna ännu tätare."
+          ]
+        },
+        {
+          "level": "A-nivå",
+          "heading": "Varför behöver vi sova?",
+          "paragraphs": [
+            "Tänk dig att du fick ett superkraftpiller varje kväll: ett piller som gör dig piggare, smartare, starkare och friskare – helt gratis. Du skulle aldrig hoppa över det, eller hur? Det pillret finns. Det heter sömn, och här ska jag förklara varför det fungerar.",
+            "Hjärnans nattskift. När du somnar börjar hjärnan arbeta med något den inte hinner med på dagen: den sorterar. Allt du sett, hört och övat på under dagen gås igenom, och det viktigaste flyttas till långtidsminnet – ungefär som när man flyttar sina bästa bilder från mobilen till ett säkert album. Forskare har visat att den som sover efter att ha övat på något, till exempel glosor eller ett fotbollstrick, kan det bättre dagen efter än den som inte sovit. Att sova är alltså ett sätt att lära sig, fast med stängda ögon.",
+            "Kroppens verkstad. Samtidigt pågår ett annat arbete i resten av kroppen. Under den djupa sömnen frisätts ett ämne som kallas tillväxthormon. Det fungerar som kroppens reparatörer: muskler byggs upp, sår läker och immunförsvaret – kroppens skydd mot sjukdomar – fyller på sina förråd. Det är därför läkare brukar säga att sömn är den bästa medicinen när man är förkyld.",
+            "Därför går det inte att fuska. Men kan man inte bara sova mindre och vänja sig? Nej, och nu förstår du varför: städningen i hjärnan och reparationerna i kroppen tar helt enkelt sin tid. Sover du för lite hinner arbetet inte bli klart. Följderna märks snabbt – du får svårare att koncentrera dig, blir lättare irriterad och minns sämre – och på längre sikt blir du dessutom sjuk oftare.",
+            "Så nästa gång någon säger att sömn är tråkigt kan du svara: tvärtom. Sömnen är kroppens nattöppna verkstad, hjärnans bibliotekarie och ditt eget superkraftpiller – allt på samma gång. Det enda du behöver göra är att blunda."
+          ],
+          "comments": [
+            "Inledningen fångar läsaren med en tankebild (superkraftpillret) som sedan återkommer i avslutningen och knyter ihop texten.",
+            "Orsakssambanden är tydligt förklarade i flera led (sorteringen tar tid → för lite sömn → arbetet blir inte klart → sämre koncentration).",
+            "Ämnesord förklaras för läsaren (tillväxthormon, immunförsvaret) och jämförelser gör det svåra begripligt (bilder som flyttas till ett album, kroppens verkstad).",
+            "Texten har en tydlig struktur med mellanrubriker och ett varierat språk anpassat till en yngre läsare."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4-lar-ut",
+      "delprov": "Skriva – instruerande text",
+      "textType": "instruerande",
+      "title": "Lär ut något du kan!",
+      "intro": [
+        "Alla kan något som någon annan skulle vilja lära sig. Kanske gör du fantastiska pannkakor, kan ett kortspel som ingen annan kan, eller vet precis hur man bygger den perfekta kojan.",
+        "Du ska skriva en instruerande text som lär läsaren att göra något. Välj något du själv kan bra – ett recept, ett spel, ett pyssel eller något annat som går att förklara steg för steg.",
+        "Din klass håller på att sätta ihop boken ”Så gör man!” där varje elev bidrar med en instruktion. Boken ska kunna läsas av elever i andra klasser, så instruktionen måste gå att följa även för den som aldrig provat förut."
+      ],
+      "doThis": [
+        "Skriv en instruerande text om något du kan. Börja med att skriva vad som behövs. Beskriv sedan stegen i rätt ordning och numrera dem. Använd uppmanande form (skär, blanda, vänta). Avsluta gärna med ett tips till läsaren.",
+        "Rubrik: Skriv en rubrik som talar om vad läsaren ska lära sig, till exempel ”Så gör du ...”."
+      ],
+      "remember": [
+        "Du ska skriva en instruerande text.",
+        "Du ska följa instruktionerna under ”Gör det här!”",
+        "Tänk på att stegen ska komma i rätt ordning och att inget viktigt steg får saknas.",
+        "Tänk på att skriva så att även den som aldrig provat förut kan följa instruktionen.",
+        "Läs igenom texten innan du lämnar in den – helst genom att följa stegen i huvudet."
+      ],
+      "checklist": [
+        "Min rubrik talar om vad läsaren ska lära sig.",
+        "Texten börjar med vad som behövs.",
+        "Stegen är numrerade och kommer i rätt ordning.",
+        "Inget viktigt steg saknas.",
+        "Verben står i uppmanande form (skär, blanda, häll).",
+        "En person som aldrig provat förut skulle kunna följa min instruktion.",
+        "Jag har läst igenom texten och rättat stavning och skiljetecken."
+      ],
+      "examples": [
+        {
+          "level": "E-nivå",
+          "heading": "Så gör du pannkakor",
+          "paragraphs": [
+            "Du behöver: mjöl, mjölk, ägg, salt och smör.",
+            "1. Häll mjöl i en bunke.",
+            "2. Häll i mjölken och vispa.",
+            "3. Knäck i äggen och lite salt och vispa igen.",
+            "4. Smält smör i en stekpanna.",
+            "5. Häll i lite smet och stek pannkakan på båda sidor.",
+            "6. Gör likadant tills smeten är slut.",
+            "Ät pannkakorna med sylt!"
+          ],
+          "comments": [
+            "Texten har det viktigaste: en materiallista och numrerade steg i rätt ordning.",
+            "Verben står i uppmanande form (häll, vispa, knäck).",
+            "Det saknas mått (hur mycket mjöl och mjölk?), vilket gör instruktionen svår att följa för den som aldrig lagat pannkakor förut."
+          ]
+        },
+        {
+          "level": "C-nivå",
+          "heading": "Så gör du klassiska pannkakor",
+          "paragraphs": [
+            "Det här behöver du (ca 12 pannkakor): 2,5 dl vetemjöl, 6 dl mjölk, 3 ägg, en halv tesked salt och smör till stekningen. Du behöver också en bunke, en visp och en stekpanna.",
+            "1. Häll mjölet och saltet i bunken.",
+            "2. Tillsätt hälften av mjölken och vispa tills smeten är helt slät, utan klumpar.",
+            "3. Vispa ner resten av mjölken och därefter äggen, ett i taget.",
+            "4. Låt smeten vila i tio minuter. Då blir pannkakorna jämnare.",
+            "5. Hetta upp stekpannan på medelvärme och smält en klick smör.",
+            "6. Häll i ungefär en deciliter smet och luta pannan så att smeten täcker botten.",
+            "7. Stek pannkakan tills ytan ser torr ut, vänd den och stek den andra sidan gyllenbrun.",
+            "8. Upprepa tills smeten är slut.",
+            "Tips! Servera med sylt och grädde – eller rulla ihop pannkakan runt en banan."
+          ],
+          "comments": [
+            "Materiallistan har exakta mått och även redskapen finns med.",
+            "Stegen är tydliga, kommer i rätt ordning och innehåller hjälp på vägen (”tills smeten är helt slät”, ”tills ytan ser torr ut”).",
+            "Steg 2 delar upp mjölken, vilket visar att skribenten tänkt på att undvika klumpar.",
+            "För en högre nivå kunde texten förklara varför man gör vissa moment och ge råd om vad man gör om något går fel."
+          ]
+        },
+        {
+          "level": "A-nivå",
+          "heading": "Så gör du perfekta pannkakor – varje gång",
+          "paragraphs": [
+            "Pannkakor är världens tacksammaste maträtt: få ingredienser, en stekpanna och en kvart senare står middagen på bordet. Med den här instruktionen lyckas du även om du aldrig stått vid en spis förut.",
+            "Det här behöver du (ca 12 pannkakor): 2,5 dl vetemjöl, 6 dl mjölk, 3 ägg, ½ tesked salt och smör till stekningen. Redskap: en bunke, en visp, en deciliterskopa och en stekpanna. Räkna med cirka 30 minuter från start till färdig hög.",
+            "1. Häll mjölet och saltet i bunken och rör om.",
+            "2. Tillsätt hälften av mjölken och vispa till en tjock, helt slät smet. Att börja med bara hälften är tricket som hindrar klumpar – i en tjock smet vispas de sönder, i en tunn flyter de bara runt.",
+            "3. Vispa ner resten av mjölken, och därefter äggen ett i taget.",
+            "4. Låt smeten vila i tio minuter medan du dukar. Mjölet hinner då suga åt sig vätskan, vilket gör pannkakorna mjukare och lättare att vända.",
+            "5. Hetta upp pannan på medelvärme – inte högsta! – och smält en klick smör. När smöret tystnat och slutat bubbla är pannan lagom varm.",
+            "6. Häll i en knapp deciliter smet och luta pannan i en cirkel så att smeten precis täcker botten.",
+            "7. Stek tills ytan ser torr ut och kanterna släpper, cirka en minut. Vänd med stekspaden och ge andra sidan ungefär halva tiden.",
+            "8. Lägg de färdiga pannkakorna på en tallrik med ett lock eller en annan tallrik över, så håller de sig varma. Upprepa tills smeten är slut.",
+            "Om det går fel: Första pannkakan blir nästan alltid misslyckad – det är så det ska vara, pannan hittar sin rätta värme. Fastnar pannkakorna? Mer smör och lite lägre värme löser det mesta.",
+            "Tips! Klassikern är sylt och grädde, men prova också riven ost mellan varma pannkakor. Låter konstigt, smakar fantastiskt."
+          ],
+          "comments": [
+            "Instruktionen är komplett: exakta mått, redskap, tidsåtgång och numrerade steg i rätt ordning.",
+            "Texten förklarar varför man gör momenten (tjock smet hindrar klumpar, vilan gör pannkakorna mjukare), vilket gör att läsaren förstår och inte bara härmar.",
+            "Avsnittet ”Om det går fel” förutser läsarens problem – det visar att skribenten tänkt på mottagaren hela vägen.",
+            "Språket är instruerande med uppmanande verb, men har ändå en personlig och uppmuntrande ton som passar klassens bok."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5-djurboken",
+      "delprov": "Skriva – beskrivande text",
+      "textType": "beskrivande",
+      "title": "Klassens djurbok",
+      "intro": [
+        "Tänk på ett djur som du tycker är spännande och vet mycket om. Det kan vara ett vilt djur, ett husdjur eller något du läst om.",
+        "Du ska skriva en beskrivande faktatext om ett djur. I en beskrivande text berättar du hur något är: hur djuret ser ut, var det lever, vad det äter och hur det beter sig.",
+        "Din klass gör en gemensam djurbok där varje elev skriver om var sitt djur. Boken ska stå i skolbiblioteket, så texten ska vara skriven som en riktig faktatext som andra elever kan lära sig av."
+      ],
+      "doThis": [
+        "Skriv en beskrivande faktatext om ett djur du valt. Beskriv hur djuret ser ut, var det lever, vad det äter och något om hur det lever (till exempel ungar, vintern eller hur det jagar). Använd mellanrubriker för de olika delarna. Skriv i tredje person (den, djuret) och i nutid.",
+        "Rubrik: Skriv djurets namn som rubrik, gärna med ett tillägg som väcker nyfikenhet."
+      ],
+      "remember": [
+        "Du ska skriva en beskrivande faktatext.",
+        "Du ska följa instruktionerna under ”Gör det här!”",
+        "Tänk på att det är fakta du beskriver – skriv inte ”jag tycker” utan håll dig till hur djuret är.",
+        "Tänk på att förklara svåra ord som läsaren kanske inte kan.",
+        "Tänk på att planera din text innan du börjar skriva. Läs igenom texten innan du lämnar in den."
+      ],
+      "checklist": [
+        "Min rubrik säger vilket djur texten handlar om.",
+        "Jag beskriver hur djuret ser ut.",
+        "Jag beskriver var djuret lever och vad det äter.",
+        "Jag beskriver något om hur djuret lever (ungar, vintern, jakt ...).",
+        "Min text har mellanrubriker.",
+        "Texten är skriven i tredje person och i nutid, som en faktatext.",
+        "Jag har delat in texten i stycken.",
+        "Jag har läst igenom texten och rättat stavning och skiljetecken."
+      ],
+      "examples": [
+        {
+          "level": "E-nivå",
+          "heading": "Rödräven",
+          "paragraphs": [
+            "Rödräven är ett vilt djur som finns i hela Sverige. Den har röd päls och en stor yvig svans med vit spets. Den är ungefär lika stor som en liten hund.",
+            "Räven bor i skogen men den kan också bo i städer. Den gräver en håla som kallas gryt. Där föds ungarna på våren.",
+            "Räven äter nästan allt. Den jagar möss och kaniner och den kan ta fågelägg. I städer letar den mat i soporna.",
+            "Räven är mest vaken på natten. Den har bra hörsel och kan höra en mus under snön."
+          ],
+          "comments": [
+            "Texten är en riktig faktatext: den är skriven i tredje person och i nutid, utan egna åsikter.",
+            "Innehållet täcker utseende, var djuret lever, vad det äter och något om hur det lever.",
+            "Ämnesordet gryt förklaras.",
+            "Texten saknar mellanrubriker och beskrivningarna är korta – mer utvecklade detaljer hade lyft texten."
+          ]
+        },
+        {
+          "level": "C-nivå",
+          "heading": "Rödräven – stadens smartaste granne",
+          "paragraphs": [
+            "Utseende. Rödräven känns lätt igen på sin roströda päls, sina spetsiga öron och sin långa yviga svans med vit tofs. En vuxen räv väger mellan fem och tio kilo, ungefär som en katt och en halv. Benen är smala och tassarna tysta, vilket gör räven till en skicklig smygare.",
+            "Var den lever. Rödräven är en av Sveriges vanligaste rovdjur och finns från Skåne ända upp i fjällen. Den trivs i skogsbryn och på åkrar, men allt fler rävar har också flyttat in till städerna, där det är gott om mat. Räven bor i ett gryt, en grävd håla med flera utgångar.",
+            "Maten. Räven är allätare, vilket betyder att den äter både kött och växter. Helst tar den möss och sorkar, men den äter också bär, fågelägg, maskar och matrester. En räv på musjakt gör ett typiskt hopp: den lyssnar, hoppar högt och landar med framtassarna rakt på musen.",
+            "Ungarna. På våren föder honan fyra till sex valpar nere i grytet. I början är de blinda och mörka i pälsen. Efter några veckor börjar de leka utanför grytet, och på hösten är de redo att klara sig själva.",
+            "Rödräven är alltså inte bara vacker – den är också en av naturens mest anpassningsbara överlevare."
+          ],
+          "comments": [
+            "Texten har tydliga mellanrubriker som delar upp innehållet, precis som en riktig faktatext.",
+            "Beskrivningarna är utvecklade med detaljer och jämförelser (”ungefär som en katt och en halv”).",
+            "Ämnesord förklaras (gryt, allätare).",
+            "Avslutningen knyter ihop texten. För en högre nivå kunde texten ha en ingress och något mer fördjupande innehåll, till exempel om rävens revir."
+          ]
+        },
+        {
+          "level": "A-nivå",
+          "heading": "Rödräven – överlevaren som flyttade till stan",
+          "paragraphs": [
+            "Det är gryning i villakvarteret. En skugga glider ljudlöst längs häcken, stannar, lyssnar – och försvinner. Rödräven har varit på nattpass igen. Få vilda djur har lyckats så bra som räven med konststycket att leva mitt ibland oss utan att vi knappt märker det.",
+            "Byggd för att smyga. Rödräven är vårt mest spridda rovdjur. Pälsen skiftar i rostrött med vit haka och buk, öronen är spetsiga och svansen – som även kallas luva – är nästan halva djurets längd och fungerar som balansstång, värmande täcke och signalflagga på samma gång. En vuxen räv väger fem till tio kilo, men de smala benen och de mjuka trampdynorna gör att den rör sig tystare än en katt.",
+            "En meny utan gränser. Hemligheten bakom rävens framgång stavas allätare. Helst jagar den sorkar och möss, och musjakten är en föreställning i sig: räven lyssnar sig fram till ett prassel under snön, hoppar i en hög båge och landar med framtassarna exakt där ljudet fanns. Forskare har räknat ut att hörseln är så känslig att räven kan höra en mus på över femtio meters håll. Men räven tackar inte heller nej till bär, fågelägg, maskar – eller innehållet i en dåligt stängd soptunna.",
+            "Familjeliv i grytet. Räven bor i ett gryt, en grävd håla med flera utgångar som kan användas av generationer av rävar i tiotals år. I april föds fyra till sex valpar, blinda och chokladbruna. Båda föräldrarna hjälps åt med maten, och redan i juni sitter ungarna i grytöppningen och väntar på leverans. När hösten kommer vandrar de iväg för att hitta egna revir – det område en räv försvarar mot andra rävar.",
+            "Granne för livet. I dag lever rävar i nästan alla svenska städer. De har lärt sig trafikljusens rytm, vet vilka kvällar soporna ställs ut och uppfostrar sina ungar under våra friggebodar. Så nästa gång något prasslar bakom häcken i skymningen: titta noga. Stadens smartaste granne kanske tittar tillbaka."
+          ],
+          "comments": [
+            "Texten inleds med en målande scen som väcker läsarens intresse, och avslutningen knyter tillbaka till den – texten blir en helhet.",
+            "Innehållet är rikt och korrekt med fördjupande detaljer (hörselns räckvidd, grytets ålder, revir).",
+            "Ämnesord förklaras smidigt i texten (luva, allätare, gryt, revir).",
+            "Språket är varierat med liknelser och bilder (”tystare än en katt”, ”musjakten är en föreställning i sig”) men behåller faktatextens tredje person och nutid.",
+            "Mellanrubrikerna är genomtänkta och väcker nyfikenhet i stället för att bara vara etiketter."
           ]
         }
       ]
