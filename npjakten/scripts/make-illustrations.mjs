@@ -413,6 +413,37 @@ pics["resonerande"] = svg(
   `<path d="M560,142 q40,20 76,18 M640,238 q-20,44 -40,46" stroke="#9db8cc" stroke-width="4" fill="none" stroke-dasharray="6 8"/>`,
   "#ddeae4");
 
+pics["fagelungen"] = svg(
+  sun(110, 80) + cloud(620, 70, .9) + hill(490, 150, "#a8d88f") +
+  // gren med bo
+  `<path d="M0,250 q200,-30 380,-10 q60,6 120,30" stroke="#7a5536" stroke-width="16" fill="none" stroke-linecap="round"/>` +
+  `<path d="M300,238 q10,-30 -10,-46 M420,244 q16,-22 6,-44" stroke="#7a5536" stroke-width="8" fill="none" stroke-linecap="round"/>` +
+  // bo
+  `<g transform="translate(360,222)"><path d="M-64,0 a64,34 0 0 0 128,0 z" fill="#8a6038"/>` +
+  Array.from({ length: 8 }, (_, i) => `<line x1="${-56 + i * 16}" y1="2" x2="${-44 + i * 16}" y2="26" stroke="#6b4a2e" stroke-width="4" stroke-linecap="round"/>`).join("") + `</g>` +
+  // fågelunge
+  `<g transform="translate(360,196)"><ellipse cx="0" cy="0" rx="30" ry="24" fill="#b08e5e"/><circle cx="18" cy="-18" r="16" fill="#b08e5e"/><polygon points="32,-20 48,-15 32,-10" fill="#e8a13e"/><circle cx="22" cy="-21" r="3.5" fill="#2d2a26"/><path d="M-26,-6 q-12,-4 -16,4 q8,8 18,4 z" fill="#9a7a4e"/></g>` +
+  // fågelmamma som flyger in
+  `<g transform="translate(580,110)"><ellipse cx="0" cy="0" rx="26" ry="16" fill="#7a5b3a"/><circle cx="22" cy="-8" r="11" fill="#7a5b3a"/><polygon points="32,-9 46,-5 32,-1" fill="#e8a13e"/><circle cx="25" cy="-10" r="2.5" fill="#2d2a26"/><path d="M-6,-8 q-16,-26 8,-30 q8,16 -8,30" fill="#8d6b44"/><path d="M-24,2 q-18,2 -26,12 q12,8 28,0 z" fill="#8d6b44"/></g>` +
+  `<ellipse cx="640" cy="146" rx="5" ry="4" fill="#5da06f"/>`,
+  "#cfe9f7");
+
+pics["tander"] = svg(
+  `<rect width="${W}" height="${H}" fill="#dff0f7"/>` +
+  `<circle cx="660" cy="80" r="44" fill="#bfe0f2"/><circle cx="130" cy="370" r="60" fill="#cfe9f7"/>` +
+  // stor glad tand
+  `<g transform="translate(330,225)"><path d="M-95,-60 q0,-75 95,-75 q95,0 95,75 q0,52 -28,96 q-14,24 -24,64 q-6,22 -22,22 q-14,0 -18,-22 q-2,-16 -3,-26 q-1,16 -3,26 q-4,22 -18,22 q-16,0 -22,-22 q-10,-40 -24,-64 q-28,-44 -28,-96 z" fill="#ffffff" stroke="#9db8cc" stroke-width="6"/>` +
+  `<circle cx="-30" cy="-30" r="6" fill="#41526b"/><circle cx="30" cy="-30" r="6" fill="#41526b"/><path d="M-26,6 q26,24 52,0" stroke="#41526b" stroke-width="6" fill="none" stroke-linecap="round"/>` +
+  `<ellipse cx="-48" cy="-64" rx="18" ry="26" fill="#eaf4fa" transform="rotate(-20 -48 -64)"/></g>` +
+  // tandborste
+  `<g transform="translate(570,250) rotate(-35)"><rect x="-16" y="-130" width="32" height="56" rx="10" fill="#e8694a"/>` +
+  Array.from({ length: 4 }, (_, i) => `<rect x="${-14 + i * 8}" y="-152" width="6" height="22" rx="3" fill="#ffffff" stroke="#c9d8e2" stroke-width="1"/>`).join("") +
+  `<rect x="-12" y="-74" width="24" height="180" rx="12" fill="#3f7fb5"/><rect x="-12" y="20" width="24" height="60" rx="12" fill="#7fb0d8"/></g>` +
+  // tandkrämsklick + bubblor
+  `<path d="M548,116 q14,-18 30,-8 q16,8 6,24" fill="#9fd8c2"/>` +
+  `<circle cx="480" cy="120" r="10" fill="#ffffff" opacity=".8"/><circle cx="510" cy="90" r="7" fill="#ffffff" opacity=".8"/><circle cx="455" cy="85" r="5" fill="#ffffff" opacity=".8"/>`,
+  "#dff0f7");
+
 // Skriv alla filer
 for (const [name, content] of Object.entries(pics)) {
   fs.writeFileSync(`${out}/${name}.svg`, content);

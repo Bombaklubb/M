@@ -921,7 +921,621 @@
         "alt": "En myra i närbild.",
         "fallback": "/images/myror.svg"
       }
+    },
+    {
+      "id": "ak3-b-fagelungen",
+      "delprov": "Delprov B: läsa berättande text",
+      "textType": "berättande",
+      "title": "Fågelungen",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=900&h=506&fit=crop",
+        "alt": "En liten fågel som sitter på en gren.",
+        "fallback": "/images/fagelungen.svg"
+      },
+      "sections": [
+        {
+          "paragraphs": [
+            "Ali och hans lillasyster Noor var på väg hem från skolan. Då fick Noor syn på något i gräset under den stora björken.",
+            "– Titta! ropade hon. En fågelunge!",
+            "Fågelungen satt alldeles stilla. Den hade korta fjädrar och en gul kant runt näbben. Den såg ut att vara ensam.",
+            "– Vi tar hem den, sa Noor. Den behöver hjälp!",
+            "Ali skakade på huvudet. Han kom ihåg vad fröken hade berättat i skolan.",
+            "– Nej, sa han. Man ska inte röra fågelungar. Föräldrarna brukar vara i närheten. De vågar inte komma fram om vi står för nära."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Barnen gick en bit bort och ställde sig bakom häcken. Därifrån kunde de se ungen utan att skrämma någon.",
+            "Då hörde Ali ett ljud. Det prasslade i rabatten. Fram smög grannens katt Misse! Katten hade också sett fågelungen. Den kröp långsamt närmare med ögonen fästa på ungen.",
+            "– Schas! ropade Ali och klappade i händerna. Iväg med dig!",
+            "Misse hoppade högt och försvann över staketet. Noor skrattade, men Ali höll utkik en stund till, ifall katten skulle komma tillbaka.",
+            "Sedan hände det. En fågel kom flygande med något i näbben. Den satte sig bredvid ungen och matade den. Noor höll andan.",
+            "– Det är mamman, viskade Ali. Det är en gråsparv. Ser du? Ungen klarar sig. Den är nästan stor nog att flyga."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Nästa dag gick Ali och Noor förbi björken igen. Gräset var tomt. Noor blev först orolig, men då pekade Ali uppåt.",
+            "Högt uppe på en gren satt fågelungen och kvittrade. Bredvid satt mamman.",
+            "– Den kan flyga nu, sa Ali.",
+            "Noor vinkade till fåglarna hela vägen tills de svängde runt hörnet."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens berättande texter."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Var hittar Noor fågelungen?",
+          "options": [
+            "I gräset under björken.",
+            "I ett bo i häcken.",
+            "På skolgården.",
+            "På staketet."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad vill Noor göra med fågelungen?",
+          "options": [
+            "Mata den med frön.",
+            "Ta hem den.",
+            "Lyfta upp den i trädet.",
+            "Ringa till fröken."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför säger Ali nej till att ta hem fågelungen?",
+          "options": [
+            "Han tycker inte om fåglar.",
+            "Han vet att föräldrarna brukar vara i närheten.",
+            "Mamma har sagt att de inte får ha husdjur.",
+            "Fågelungen ser farlig ut."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför ställer sig barnen bakom häcken?",
+          "options": [
+            "För att gömma sig för katten.",
+            "För att de ska gå hem.",
+            "För att kunna se ungen utan att skrämma fåglarna.",
+            "För att vänta på fröken."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vem smyger fram ur rabatten?",
+          "options": [
+            "En hund.",
+            "Grannens katt Misse.",
+            "En annan fågel.",
+            "Noor."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför ropar Ali ”Schas!” och klappar i händerna?",
+          "options": [
+            "Han vill skrämma bort katten så att den inte tar fågelungen.",
+            "Han vill att Noor ska skynda sig.",
+            "Han är glad att se Misse.",
+            "Han vill att fågelungen ska flyga."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad gör fågelmamman när hon kommer?",
+          "options": [
+            "Hon jagar bort barnen.",
+            "Hon flyger upp i trädet.",
+            "Hon matar ungen.",
+            "Hon bygger ett nytt bo."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "I texten står det att ”Noor höll andan”. Vad betyder det?",
+          "options": [
+            "Hon var spänd och ville inte störa.",
+            "Hon kunde inte andas.",
+            "Hon skulle dyka.",
+            "Hon var arg på Ali."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad är det för sorts fågel?",
+          "options": [
+            "En talgoxe.",
+            "En gråsparv.",
+            "En skata.",
+            "En mås."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Var är fågelungen nästa dag?",
+          "options": [
+            "Kvar i gräset.",
+            "Hemma hos Misse.",
+            "Borta utan ett spår.",
+            "Högt uppe på en gren."
+          ],
+          "correctIndex": 3
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Hur känner sig Noor i slutet av texten?",
+          "options": [
+            "Glad och lättad.",
+            "Orolig och ledsen.",
+            "Arg på katten.",
+            "Trött och hungrig."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad kan man lära sig av texten?",
+          "options": [
+            "Att fågelungar behöver tas in i värmen.",
+            "Att man ska låta fågelungar vara – föräldrarna tar hand om dem.",
+            "Att katter inte tycker om fåglar.",
+            "Att gråsparvar inte kan flyga."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "ordering",
+          "id": 13,
+          "maxPoints": 1,
+          "prompt": "Numrera meningarna i rätt ordning.",
+          "items": [
+            "Noor hittar en fågelunge i gräset.",
+            "Fågelmamman kommer och matar ungen.",
+            "Ali schasar bort katten Misse.",
+            "Fågelungen sitter högt uppe på en gren."
+          ],
+          "correctOrder": [
+            1,
+            3,
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak3-c-tander",
+      "delprov": "Delprov C: läsa faktatext",
+      "textType": "sakprosa",
+      "title": "Dina tänder",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=900&h=506&fit=crop",
+        "alt": "Tandborste med tandkräm.",
+        "fallback": "/images/tander.svg"
+      },
+      "sections": [
+        {
+          "heading": "Två omgångar tänder",
+          "paragraphs": [
+            "Visste du att du får tänder två gånger i livet? De första tänderna kallas mjölktänder. De är tjugo stycken. När du är ungefär sex år börjar mjölktänderna lossna, en i taget. Under varje mjölktand väntar en ny, större tand som ska hålla resten av livet. En vuxen har 28 till 32 tänder."
+          ]
+        },
+        {
+          "heading": "Hårdast i hela kroppen",
+          "paragraphs": [
+            "Tandens yta kallas emalj. Emaljen är det allra hårdaste som finns i din kropp – hårdare än dina ben! Det behövs, för tänderna ska tugga mat varje dag i många år. Men även om emaljen är hård kan den få skador."
+          ]
+        },
+        {
+          "heading": "Bakterierna älskar socker",
+          "paragraphs": [
+            "I munnen bor massor av små bakterier. De är så små att de inte syns. När du äter sött äter bakterierna också. Då bildar de en syra som fräter på emaljen. Om syran får hålla på länge kan det bli ett hål i tanden. Hål i tänderna kallas också karies.",
+            "Det är därför det är smart att inte småäta godis hela veckan. Tänderna mår bäst om det söta kommer sällan, till exempel på lördagar."
+          ]
+        },
+        {
+          "heading": "Så tar du hand om dina tänder",
+          "paragraphs": [
+            "Borsta tänderna två gånger om dagen, på morgonen och på kvällen. Borsta i två minuter och använd tandkräm med fluor. Fluor är ett ämne som gör emaljen starkare och hjälper till att laga små skador innan de blir hål."
+          ]
+        },
+        {
+          "heading": "Hos tandläkaren",
+          "paragraphs": [
+            "Alla barn i Sverige får gå till tandläkaren gratis. Tandläkaren tittar på tänderna och ser sådant du inte kan se själv. Om det finns ett hål kan tandläkaren laga det. Ju tidigare ett hål upptäcks, desto lättare är det att laga."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten, 2026",
+        "I samma stil som provens faktatexter."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad kallas de första tänderna man får?",
+          "options": [
+            "Mjölktänder.",
+            "Vuxentänder.",
+            "Visdomständer.",
+            "Småtänder."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Hur många mjölktänder har man?",
+          "options": [
+            "Tio.",
+            "Tjugo.",
+            "Trettio.",
+            "Trettiotvå."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad händer när man är ungefär sex år?",
+          "options": [
+            "Man får sina första tänder.",
+            "Mjölktänderna börjar lossna.",
+            "Alla tänder byts ut på en gång.",
+            "Man slutar borsta tänderna."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad kallas tandens hårda yta?",
+          "options": [
+            "Karies.",
+            "Fluor.",
+            "Emalj.",
+            "Syra."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför behöver tändernas yta vara så hård?",
+          "options": [
+            "För att tänderna ska se vita ut.",
+            "För att tänderna ska tugga mat varje dag i många år.",
+            "För att bakterierna inte ska få plats.",
+            "För att tandläkaren ska kunna laga dem."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad gör bakterierna när du äter sött?",
+          "options": [
+            "De somnar.",
+            "De bildar en syra som fräter på emaljen.",
+            "De flyttar till en annan tand.",
+            "De gör emaljen starkare."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför är det bättre att äta godis på lördagar än att småäta hela veckan?",
+          "options": [
+            "Godiset smakar bättre på helgen.",
+            "Tänderna mår bäst om det söta kommer sällan.",
+            "Bakterierna är lediga på lördagar.",
+            "Man borstar tänderna oftare på helgen."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Hur ofta ska man borsta tänderna?",
+          "options": [
+            "En gång i veckan.",
+            "Bara när man ätit godis.",
+            "Två gånger om dagen.",
+            "Fem gånger om dagen."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "category": "L",
+          "prompt": "Vad gör fluor?",
+          "options": [
+            "Det gör emaljen starkare.",
+            "Det gör tandkrämen söt.",
+            "Det tar bort mjölktänder.",
+            "Det färgar tänderna vita."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad menas med ordet karies?",
+          "options": [
+            "En sorts tandkräm.",
+            "Hål i tänderna.",
+            "En tandläkare.",
+            "En mjölktand."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Varför är det bra att gå till tandläkaren fast man inte har ont?",
+          "options": [
+            "Tandläkaren kan se sådant man inte ser själv.",
+            "Man får alltid en present.",
+            "Tänderna blir hårdare av besöket.",
+            "Man slipper borsta tänderna sedan."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "category": "TI",
+          "prompt": "Vad handlar texten mest om?",
+          "options": [
+            "Hur tandläkare arbetar.",
+            "Varför godis är farligt.",
+            "Hur tänderna fungerar och hur man tar hand om dem.",
+            "Skillnaden mellan barn och vuxna."
+          ],
+          "correctIndex": 2
+        }
+      ]
     }
   ],
-  "writing": []
+  "writing": [
+    {
+      "id": "ak3-f-besoket",
+      "delprov": "Delprov F: skriva berättande text",
+      "textType": "berättelse",
+      "title": "Ett oväntat besök",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=900&h=506&fit=crop",
+        "alt": "En dörr som öppnas.",
+        "fallback": "/images/dorren.svg"
+      },
+      "intro": [
+        "Tänk dig att det ringer på dörren. Du öppnar – och utanför står någon eller något som du inte alls hade väntat dig!",
+        "Du ska skriva en berättelse om någon som får ett oväntat besök. Det kan vara du själv eller en påhittad person som får besöket."
+      ],
+      "doThis": [
+        "Skriv en berättelse om ett oväntat besök. Tänk på frågorna: Vem är det som får besök? Vem eller vad är det som kommer? Vad händer under besöket? Hur slutar det?"
+      ],
+      "fixedHeading": "Ett oväntat besök",
+      "remember": [
+        "Du ska skriva en berättelse.",
+        "Din berättelse ska ha en början, en mitt och ett slut.",
+        "Skriv hela meningar med stor bokstav och punkt.",
+        "Läs igenom din berättelse när du är klar."
+      ],
+      "checklist": [
+        "Min berättelse har rubriken Ett oväntat besök.",
+        "Det framgår vem som får besök och vem som kommer.",
+        "Något händer i min berättelse.",
+        "Min berättelse har ett slut.",
+        "Jag har skrivit hela meningar med stor bokstav och punkt.",
+        "Jag har läst igenom min berättelse."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Ett oväntat besök",
+          "paragraphs": [
+            "Det ringde på dörren. Jag öppnade. Det var en hund. Den var brun. Den kom in. Vi lekte. Sen gick den hem. Slut."
+          ],
+          "comments": [
+            "Berättelsen har en början och händelser i rätt ordning, och meningarna har stor bokstav och punkt.",
+            "Men berättelsen är mycket kort och svarar inte på alla frågorna: vi får inte veta vad som hände under besöket eller hur det kändes.",
+            "Nästa steg: berätta mer! Vad gjorde hunden? Vad tänkte du? Hur löste det sig?"
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Ett oväntat besök",
+          "paragraphs": [
+            "En lördag satt jag och åt frukost. Då ringde det på dörren. Jag öppnade och blev jätteförvånad. Utanför stod en liten brun hund, alldeles ensam!",
+            "Hunden såg ledsen ut. Den hade ett halsband men ingen människa med sig. Jag gav den lite vatten. Sen tittade jag på halsbandet. Där stod ett telefonnummer.",
+            "Mamma ringde numret. En tant svarade och blev jätteglad. Hunden hette Bobby och hade sprungit bort. Efter en stund kom tanten och hämtade honom. Bobby viftade på svansen.",
+            "Jag vinkade hejdå till Bobby. Det var det bästa besöket jag har fått."
+          ],
+          "comments": [
+            "Berättelsen har en tydlig början, mitt och slut, och svarar på frågorna: vem som får besök, vem som kommer, vad som händer och hur det slutar.",
+            "Det finns känslor med (förvånad, ledsen, jätteglad).",
+            "Meningarna är hela med stor bokstav och punkt, och texten är lätt att följa."
+          ]
+        },
+        {
+          "level": "Mer utvecklad",
+          "heading": "Ett oväntat besök",
+          "paragraphs": [
+            "Det knackade på dörren tidigt en söndagsmorgon. Konstigt, tänkte jag, det brukar aldrig komma någon så här dags. Jag smög fram och öppnade försiktigt.",
+            "Utanför stod min farfar – med en jättestor väska och ett finurligt leende.",
+            "– Överraskning! sa han. Jag har bestämt att vi ska bygga klart kojan i dag. Hela dagen!",
+            "Jag blev så glad att jag hoppade rakt ut i hallen i bara strumporna. Farfar och jag hade börjat bygga en koja i våras, men sedan fick han ont i ryggen och kojan stod halvfärdig hela sommaren. Jag hade nästan slutat hoppas.",
+            "Vi byggde hela dagen. Farfar sågade och jag spikade, och när det blev kväll var kojan äntligen klar. Vi satt där inne och drack saft, fast det nästan inte fanns plats för oss båda.",
+            "– Bra saker är värda att vänta på, sa farfar och blinkade.",
+            "Det var det bästa oväntade besöket jag någonsin fått."
+          ],
+          "comments": [
+            "Berättelsen har en spännande början som väcker nyfikenhet (vem knackar så tidigt?).",
+            "Det finns dialog, känslor och en bakgrund som gör besöket extra betydelsefullt (den halvfärdiga kojan).",
+            "Slutet knyter ihop berättelsen, och farfars ord ger den en liten tanke att ta med sig.",
+            "Meningarna är varierade – några korta och några längre – vilket gör texten levande."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak3-h-igelkotten",
+      "delprov": "Delprov H: skriva faktatext",
+      "textType": "beskrivande",
+      "title": "Skriv en faktatext om igelkotten",
+      "image": {
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Erinaceus%20europaeus%20LC0119.jpg?width=900",
+        "alt": "En igelkott i gräset.",
+        "fallback": "/images/igelkotten.svg"
+      },
+      "intro": [
+        "Du har lärt dig om igelkotten. (Om du vill kan du först läsa texten Igelkotten under Läsa.) Nu ska du skriva en egen faktatext om igelkotten.",
+        "Till hjälp får du stödord. Stödorden talar om vad din faktatext ska handla om. Du ska skriva egna, hela meningar – inte bara skriva av stödorden."
+      ],
+      "doThis": [
+        "Skriv en faktatext om igelkotten med hjälp av stödorden. Här är stödorden:",
+        "• taggar – skydd  • vaken på natten  • äter insekter, sniglar och maskar  • vintersömn – lövhög  • vatten, inte mjölk",
+        "Skriv minst en mening om varje stödord. Din text ska ha rubriken Igelkotten."
+      ],
+      "fixedHeading": "Igelkotten",
+      "remember": [
+        "Du ska skriva en faktatext, inte en saga. Allt du skriver ska vara på riktigt.",
+        "Använd stödorden och skriv egna, hela meningar.",
+        "Skriv med stor bokstav och punkt.",
+        "Läs igenom din text när du är klar."
+      ],
+      "checklist": [
+        "Min text har rubriken Igelkotten.",
+        "Jag har skrivit minst en mening om varje stödord.",
+        "Allt i min text är fakta som stämmer.",
+        "Jag har skrivit egna meningar, inte bara stödorden.",
+        "Jag har skrivit hela meningar med stor bokstav och punkt.",
+        "Jag har läst igenom min text."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Igelkotten",
+          "paragraphs": [
+            "Igelkotten har taggar. Den är vaken på natten. Den äter insekter, sniglar och maskar. Vintersömn i en lövhög. Vatten inte mjölk."
+          ],
+          "comments": [
+            "Texten tar upp alla stödorden – bra!",
+            "Men de två sista är inte hela meningar, utan nästan bara stödorden avskrivna.",
+            "Nästa steg: gör varje stödord till en egen hel mening, till exempel: ”På vintern sover igelkotten i en lövhög.”"
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Igelkotten",
+          "paragraphs": [
+            "Igelkotten har taggar på ryggen. Taggarna är igelkottens skydd. När den blir rädd rullar den ihop sig till en boll.",
+            "Igelkotten sover på dagen och är vaken på natten. På natten letar den mat. Den äter insekter, sniglar och maskar.",
+            "På vintern sover igelkotten vintersömn i en lövhög. Den vaknar på våren.",
+            "Om man vill hjälpa en igelkott ska man ge den vatten. Den får ont i magen av mjölk."
+          ],
+          "comments": [
+            "Alla stödord finns med och har blivit egna, hela meningar med stor bokstav och punkt.",
+            "All fakta stämmer, och texten är skriven som en faktatext – inte som en saga.",
+            "Texten är indelad i stycken där meningar som hör ihop står tillsammans."
+          ]
+        },
+        {
+          "level": "Mer utvecklad",
+          "heading": "Igelkotten",
+          "paragraphs": [
+            "Igelkotten är ett vilt djur som har funnits i Sverige i många tusen år. Den är lätt att känna igen på sina flera tusen taggar.",
+            "Taggarna är igelkottens bästa skydd. Om en fiende kommer rullar igelkotten ihop sig till en taggig boll, och då vågar nästan inget djur röra den.",
+            "Igelkotten är nattaktiv. Det betyder att den sover på dagen och är vaken på natten. Då går den ut och letar mat. Den äter insekter, sniglar och maskar, och den behöver äta mycket för att bli rund och tjock innan vintern.",
+            "På vintern finns det nästan ingen mat. Därför sover igelkotten vintersömn i en lövhög, från hösten ända till våren.",
+            "Vill du hjälpa en igelkott? Ställ ut en skål med vatten! Mjölk ska den inte ha, för det får den ont i magen av."
+          ],
+          "comments": [
+            "Texten har med alla stödorden och dessutom mer fakta som passar in (nattaktiv, flera tusen taggar, rund och tjock innan vintern).",
+            "Svåra ord förklaras (”Nattaktiv. Det betyder att ...”).",
+            "Texten förklarar varför: varför taggarna skyddar, varför igelkotten sover på vintern.",
+            "Styckena har varsitt ämne, precis som i en riktig faktatext."
+          ]
+        }
+      ]
+    }
+  ]
 }
