@@ -1471,9 +1471,7 @@
         "Till hjälp får du stödord. Stödorden talar om vad din faktatext ska handla om. Du ska skriva egna, hela meningar – inte bara skriva av stödorden."
       ],
       "doThis": [
-        "Skriv en faktatext om igelkotten med hjälp av stödorden. Här är stödorden:",
-        "• taggar – skydd  • vaken på natten  • äter insekter, sniglar och maskar  • vintersömn – lövhög  • vatten, inte mjölk",
-        "Skriv minst en mening om varje stödord. Din text ska ha rubriken Igelkotten."
+        "Skriv en faktatext om igelkotten. Använd alla stödord i rutan och skriv med hela meningar. Din text ska ha rubriken Igelkotten."
       ],
       "fixedHeading": "Igelkotten",
       "remember": [
@@ -1533,6 +1531,357 @@
             "Svåra ord förklaras (”Nattaktiv. Det betyder att ...”).",
             "Texten förklarar varför: varför taggarna skyddar, varför igelkotten sover på vintern.",
             "Styckena har varsitt ämne, precis som i en riktig faktatext."
+          ]
+        }
+      ],
+      "supportWords": [
+        "taggar",
+        "skydd",
+        "rulla ihop",
+        "nattaktiv",
+        "insekter",
+        "sniglar",
+        "vintersömn",
+        "lövhög",
+        "vatten",
+        "vår"
+      ]
+    },
+    {
+      "id": "ak3-h-hunden",
+      "delprov": "Delprov H: skriva faktatext",
+      "textType": "beskrivande",
+      "title": "Skriv en faktatext om hunden",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=900&h=506&fit=crop",
+        "alt": "En glad hund i gräset.",
+        "fallback": "/images/hund.svg"
+      },
+      "intro": [
+        "Hunden är ett av våra vanligaste husdjur. Nu ska du skriva en egen faktatext om hunden.",
+        "Använd alla stödord i rutan. Skriv med hela meningar – skriv inte bara av stödorden."
+      ],
+      "doThis": [
+        "Skriv en faktatext om hunden. Använd alla stödord i rutan och skriv med hela meningar. Din text ska ha rubriken Hunden."
+      ],
+      "supportWords": [
+        "valp",
+        "päls",
+        "svans",
+        "nos",
+        "koppel",
+        "promenad",
+        "skälla",
+        "ben",
+        "husdjur",
+        "veterinär"
+      ],
+      "fixedHeading": "Hunden",
+      "remember": [
+        "Du ska skriva en faktatext, inte en saga. Allt ska vara på riktigt.",
+        "Använd alla stödord och skriv egna, hela meningar.",
+        "Skriv med stor bokstav och punkt.",
+        "Läs igenom din text när du är klar."
+      ],
+      "checklist": [
+        "Min text har rubriken Hunden.",
+        "Jag har använt alla stödord i rutan.",
+        "Allt i min text är fakta som stämmer.",
+        "Jag har skrivit egna hela meningar, inte bara stödorden.",
+        "Jag har skrivit med stor bokstav och punkt.",
+        "Jag har läst igenom min text."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Hunden",
+          "paragraphs": [
+            "Hunden har päls och svans. Valp. Den skäller. Koppel och promenad. Nos. Husdjur. Ben. Veterinär."
+          ],
+          "comments": [
+            "Många av stödorden finns med – bra början!",
+            "Men flera står som ensamma ord, inte som hela meningar (Valp. Nos. Husdjur.).",
+            "Nästa steg: gör varje stödord till en hel mening, till exempel: ”En liten hund kallas valp.”"
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Hunden",
+          "paragraphs": [
+            "Hunden är ett vanligt husdjur. En liten hund kallas valp. Hunden har päls över hela kroppen och en svans som den viftar med när den är glad.",
+            "Hunden känner lukter med sin nos. Den kan skälla högt när någon kommer.",
+            "När man går ut med hunden har den ett koppel. Hunden tycker om att gå på promenad och att gnaga på ett ben.",
+            "Om hunden blir sjuk får den åka till veterinären."
+          ],
+          "comments": [
+            "Alla stödord finns med och har blivit egna, hela meningar.",
+            "All fakta stämmer och texten är skriven som en faktatext.",
+            "Meningarna har stor bokstav och punkt, och meningar som hör ihop står i samma stycke."
+          ]
+        },
+        {
+          "level": "Mer utvecklad",
+          "heading": "Hunden",
+          "paragraphs": [
+            "Hunden är ett av våra vanligaste husdjur. Många familjer har en hund hemma. En hundunge kallas för valp, och valpar är små och busiga.",
+            "Hela hunden är täckt av päls, som kan vara kort eller lång. Längst bak sitter svansen. Svansen berättar hur hunden mår: viftar den snabbt är hunden glad. Med sin våta nos kan hunden känna massor av lukter som vi människor inte alls märker.",
+            "När man tar med hunden ut sätter man fast ett koppel, så att den inte springer iväg. Hunden älskar att gå på promenad och att gnaga på ett ben. Om den vill varna eller säga något börjar den skälla.",
+            "En hund behöver mat, motion och kärlek. Blir den sjuk tar man den till veterinären, som är en doktor för djur."
+          ],
+          "comments": [
+            "Alla stödord finns med, och texten har dessutom mer fakta som passar in.",
+            "Svåra ord förklaras (”veterinären, som är en doktor för djur”).",
+            "Texten förklarar varför: varför man har koppel, vad svansen betyder.",
+            "Varje stycke har sitt eget ämne, precis som i en riktig faktatext."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak3-h-atervinning",
+      "delprov": "Delprov H: skriva faktatext",
+      "textType": "beskrivande",
+      "title": "Skriv en faktatext om återvinning",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=900&h=506&fit=crop",
+        "alt": "Färgglada återvinningskärl.",
+        "fallback": "/images/atervinning.svg"
+      },
+      "intro": [
+        "När vi sorterar våra sopor kan saker användas igen i stället för att slängas. Det kallas att återvinna. Nu ska du skriva en egen faktatext om återvinning.",
+        "Använd alla stödord i rutan. Skriv med hela meningar – skriv inte bara av stödorden."
+      ],
+      "doThis": [
+        "Skriv en faktatext om återvinning. Använd alla stödord i rutan och skriv med hela meningar. Din text ska ha rubriken Återvinning."
+      ],
+      "supportWords": [
+        "sortera",
+        "papper",
+        "plast",
+        "glas",
+        "metall",
+        "skräp",
+        "miljö",
+        "panta",
+        "återvinningsstation",
+        "använda igen"
+      ],
+      "fixedHeading": "Återvinning",
+      "remember": [
+        "Du ska skriva en faktatext, inte en saga. Allt ska vara på riktigt.",
+        "Använd alla stödord och skriv egna, hela meningar.",
+        "Skriv med stor bokstav och punkt.",
+        "Läs igenom din text när du är klar."
+      ],
+      "checklist": [
+        "Min text har rubriken Återvinning.",
+        "Jag har använt alla stödord i rutan.",
+        "Allt i min text är fakta som stämmer.",
+        "Jag har skrivit egna hela meningar, inte bara stödorden.",
+        "Jag har skrivit med stor bokstav och punkt.",
+        "Jag har läst igenom min text."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Återvinning",
+          "paragraphs": [
+            "Man ska sortera. Papper och plast. Glas och metall. Skräp. Miljö. Panta. Återvinningsstation. Använda igen."
+          ],
+          "comments": [
+            "Stödorden finns med, men de flesta är inte hela meningar.",
+            "Texten berättar inte vad orden betyder eller hör ihop.",
+            "Nästa steg: skriv hela meningar, till exempel: ”Glas och metall lägger man i olika kärl.”"
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Återvinning",
+          "paragraphs": [
+            "Att återvinna betyder att man tar hand om sopor så att de kan användas igen. Då slänger man inte allt skräp i samma soppåse, utan man måste sortera.",
+            "Papper läggs för sig och plast för sig. Glas och metall lägger man i egna kärl. Allt detta kan man lämna på en återvinningsstation.",
+            "Flaskor och burkar kan man panta i affären och få pengar för.",
+            "Återvinning är bra för miljön, eftersom man inte behöver göra allt nytt hela tiden."
+          ],
+          "comments": [
+            "Alla stödord finns med som egna, hela meningar.",
+            "Texten förklarar vad återvinning är, inte bara räknar upp orden.",
+            "Meningarna har stor bokstav och punkt, och texten är indelad i stycken."
+          ]
+        },
+        {
+          "level": "Mer utvecklad",
+          "heading": "Återvinning",
+          "paragraphs": [
+            "Varje dag slänger vi massor av sopor. Men allt skräp behöver inte bli avfall. Mycket kan användas igen, om vi bara sorterar det på rätt sätt. Det kallas att återvinna.",
+            "I stället för att slänga allt i samma påse delar man upp soporna. Papper läggs för sig, och plast för sig. Glas och metall samlas i egna kärl, eftersom de kan smältas och bli till nya saker. Allt detta lämnar man på en återvinningsstation.",
+            "Tomma flaskor och burkar kan man dessutom panta i affären. Då stoppar man dem i en maskin och får tillbaka några kronor.",
+            "Varför är allt detta viktigt? Jo, för miljön. När vi använder sakerna igen behöver vi inte ta lika mycket nytt material från naturen. På så sätt hjälper varje sorterad burk vår jord lite grann."
+          ],
+          "comments": [
+            "Alla stödord finns med, och texten har mer fakta som hör till ämnet.",
+            "Texten förklarar varför man återvinner och vad som händer med materialet.",
+            "Den avslutar med en tanke om varför det är viktigt.",
+            "Varje stycke har sitt eget ämne, som i en riktig faktatext."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak3-f-skogen",
+      "delprov": "Delprov F: skriva berättande text",
+      "textType": "berättelse",
+      "title": "Ett äventyr i skogen",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&h=506&fit=crop",
+        "alt": "En stig genom en solig skog.",
+        "fallback": "/images/skog.svg"
+      },
+      "intro": [
+        "Tänk dig att du går in i en skog. Mellan träden händer något du inte hade väntat dig – kanske hittar du något, kanske träffar du någon, kanske går du vilse.",
+        "Du ska skriva en berättelse om ett äventyr i skogen. Det kan vara du själv eller en påhittad person som är med om äventyret."
+      ],
+      "doThis": [
+        "Skriv en berättelse om ett äventyr i skogen. Tänk på frågorna: Vem är med i skogen? Vad händer där? Vad blir spännande eller svårt? Hur slutar äventyret?"
+      ],
+      "fixedHeading": "Ett äventyr i skogen",
+      "remember": [
+        "Du ska skriva en berättelse.",
+        "Din berättelse ska ha en början, en mitt och ett slut.",
+        "Skriv hela meningar med stor bokstav och punkt.",
+        "Läs igenom din berättelse när du är klar."
+      ],
+      "checklist": [
+        "Min berättelse har rubriken Ett äventyr i skogen.",
+        "Det framgår vem som är med i skogen.",
+        "Något spännande händer i skogen.",
+        "Min berättelse har ett slut.",
+        "Jag har skrivit hela meningar med stor bokstav och punkt.",
+        "Jag har läst igenom min berättelse."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Ett äventyr i skogen",
+          "paragraphs": [
+            "Jag gick in i skogen. Det var träd. Jag såg en räv. Den sprang. Jag gick hem. Det var kul."
+          ],
+          "comments": [
+            "Berättelsen har en början och ett slut, och meningarna har stor bokstav och punkt.",
+            "Men den är mycket kort, och det blir aldrig riktigt spännande.",
+            "Nästa steg: berätta mer om vad som hände med räven och hur det kändes."
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Ett äventyr i skogen",
+          "paragraphs": [
+            "En dag gick jag och min kompis Vera in i skogen för att leta efter kottar. Solen sken mellan träden.",
+            "Plötsligt hörde vi ett ljud bakom en buske. Vi blev rädda och stannade. Då kom en liten rådjurskalv fram! Den tittade på oss med stora ögon.",
+            "Vi stod alldeles stilla så att vi inte skulle skrämma den. Efter en stund sprang kalven iväg till sin mamma.",
+            "På vägen hem pratade vi om rådjuret hela tiden. Det var det roligaste vi varit med om."
+          ],
+          "comments": [
+            "Berättelsen har en tydlig början, mitt och slut och svarar på frågorna.",
+            "Det blir spännande när det hörs ett ljud bakom busken, och det finns känslor med (rädda).",
+            "Meningarna är hela och lätta att följa."
+          ]
+        },
+        {
+          "level": "Mer utvecklad",
+          "heading": "Ett äventyr i skogen",
+          "paragraphs": [
+            "Det var en gråmulen lördag när jag och farmor gav oss in i skogen för att plocka svamp. Farmor kunde allt om svampar och jag bar korgen.",
+            "Vi gick längre och längre in bland granarna. Allt blev tystare, och plötsligt insåg jag något läskigt: jag visste inte längre åt vilket håll vi kommit ifrån. Vi hade gått vilse.",
+            "– Ingen fara, sa farmor lugnt. Vi lyssnar.",
+            "Vi stod helt stilla. Först hörde jag bara vinden. Men sedan, långt borta, hörde jag ett svagt brus. Det var ån som rann nära vår stuga!",
+            "Vi följde ljudet, steg för steg, tills vi såg vattnet glittra mellan träden. Snart var vi hemma igen, med en korg full av kantareller.",
+            "Den dagen lärde jag mig något viktigt: i skogen ska man stanna upp och lyssna. Då hittar man ofta vägen hem."
+          ],
+          "comments": [
+            "Berättelsen har en stämningsfull början och bygger upp spänning när de går vilse.",
+            "Det finns dialog och känslor, och farmor blir en tydlig person.",
+            "Slutet löser problemet och ger en liten tanke att ta med sig.",
+            "Meningarna är varierade, vilket gör berättelsen levande."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak3-f-nyckeln",
+      "delprov": "Delprov F: skriva berättande text",
+      "textType": "berättelse",
+      "title": "Den magiska nyckeln",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=900&h=506&fit=crop",
+        "alt": "En gammal nyckel.",
+        "fallback": "/images/dorren.svg"
+      },
+      "intro": [
+        "Tänk dig att du hittar en nyckel. Men det är ingen vanlig nyckel – den är magisk! Vad kan den låsa upp? Och vad händer sedan?",
+        "Du ska skriva en berättelse om en magisk nyckel. Det kan vara du själv eller en påhittad person som hittar nyckeln."
+      ],
+      "doThis": [
+        "Skriv en berättelse om en magisk nyckel. Tänk på frågorna: Vem hittar nyckeln, och var? Vad kan nyckeln göra? Vad händer när man använder den? Hur slutar berättelsen?"
+      ],
+      "fixedHeading": "Den magiska nyckeln",
+      "remember": [
+        "Du ska skriva en berättelse.",
+        "Din berättelse ska ha en början, en mitt och ett slut.",
+        "Skriv hela meningar med stor bokstav och punkt.",
+        "Läs igenom din berättelse när du är klar."
+      ],
+      "checklist": [
+        "Min berättelse har rubriken Den magiska nyckeln.",
+        "Det framgår vem som hittar nyckeln och var.",
+        "Något händer när nyckeln används.",
+        "Min berättelse har ett slut.",
+        "Jag har skrivit hela meningar med stor bokstav och punkt.",
+        "Jag har läst igenom min berättelse."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Den magiska nyckeln",
+          "paragraphs": [
+            "Jag hittade en nyckel. Den var magisk. Den öppnade en dörr. Bakom dörren var det godis. Jag åt godis. Slut."
+          ],
+          "comments": [
+            "Berättelsen har en idé och händelser i ordning.",
+            "Men den är mycket kort och berättar inte hur saker såg ut eller kändes.",
+            "Nästa steg: berätta mer! Var hittade du nyckeln? Hur kändes det när dörren öppnades?"
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Den magiska nyckeln",
+          "paragraphs": [
+            "En dag när jag rensade i garderoben hittade jag en gammal guldnyckel. Den glittrade konstigt. Jag undrade vad den gick till.",
+            "Plötsligt började nyckeln lysa i min hand! Den drog mig mot den lilla dörren längst in i garderoben, en dörr jag aldrig sett förut.",
+            "Jag vred om nyckeln och dörren öppnades. Bakom den fanns en hel trädgård med pratande djur! En kanin hälsade på mig och visade mig runt.",
+            "När det blev kväll gick jag tillbaka genom dörren. Jag gömde nyckeln under kudden, så att jag kan åka dit igen i morgon."
+          ],
+          "comments": [
+            "Berättelsen har en tydlig början, mitt och slut och svarar på frågorna.",
+            "Fantasin flödar (en trädgård med pratande djur) och det finns spänning när nyckeln börjar lysa.",
+            "Meningarna är hela och berättelsen är lätt att följa."
+          ]
+        },
+        {
+          "level": "Mer utvecklad",
+          "heading": "Den magiska nyckeln",
+          "paragraphs": [
+            "Det glittrade till i sanden på stranden. Först trodde jag att det var en sten, men när jag grävde fram den såg jag att det var en liten nyckel av silver, full av konstiga mönster.",
+            "I samma stund som jag rörde vid den blev det alldeles tyst. Vågorna stod stilla, och en mås hängde orörlig i luften. Nyckeln hade stannat tiden!",
+            "Jag förstod inte hur, men jag visste vad jag ville göra. Jag sprang runt och plockade upp en glass som en pojke just hade tappat och ställde den i hans hand igen. Jag vände rätt på en flickas omkullblåsta hink.",
+            "Sedan klämde jag hårt om nyckeln en gång till. Med ett svisch började allt röra sig igen. Pojken tittade förvånat på sin glass, som plötsligt var hel.",
+            "Jag log och stoppade nyckeln i fickan. Ingen visste vad jag hade gjort. Men jag visste, och det räckte."
+          ],
+          "comments": [
+            "Berättelsen har en spännande början som väcker nyfikenhet (vad glittrar i sanden?).",
+            "Idén är fantasifull och genomförd: nyckeln stannar tiden, och huvudpersonen använder kraften till något gott.",
+            "Det finns fina detaljer (måsen som hänger stilla) som gör magin levande.",
+            "Slutet ger en känsla och en liten tanke, i stället för att bara ta slut."
           ]
         }
       ]

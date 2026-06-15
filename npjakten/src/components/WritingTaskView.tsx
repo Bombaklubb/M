@@ -134,6 +134,20 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
                 </ul>
               </div>
             )}
+            {task.supportWords && (
+              <div className="rounded-md border-2 border-np bg-white p-4">
+                <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-np">
+                  Stödord
+                </p>
+                <ul className="mx-auto grid max-w-md grid-cols-2 gap-x-8 gap-y-2 sm:grid-cols-3">
+                  {task.supportWords.map((word, i) => (
+                    <li key={i} className="font-serif text-lg">
+                      {word}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
