@@ -94,6 +94,7 @@ export interface WritingTask {
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"
   topicExamples?: string[]; // exempelämnen (argumenterande)
+  supportWords?: string[]; // stödord som ska användas (åk 3, delprov H)
   fixedHeading?: string; // given rubrik (berättelse)
   remember: string[]; // "Kom ihåg!"
   checklist: string[]; // självskattning efter skrivandet

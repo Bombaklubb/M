@@ -444,6 +444,53 @@ pics["tander"] = svg(
   `<circle cx="480" cy="120" r="10" fill="#ffffff" opacity=".8"/><circle cx="510" cy="90" r="7" fill="#ffffff" opacity=".8"/><circle cx="455" cy="85" r="5" fill="#ffffff" opacity=".8"/>`,
   "#dff0f7");
 
+pics["hund"] = svg(
+  sun(680, 80) + cloud(180, 70, .9) + hill(470, 150, "#a8d88f") + hill(520, 170, "#8fcb78") +
+  // boll
+  `<circle cx="610" cy="372" r="22" fill="#e8694a"/><path d="M588,372 a22,22 0 0 1 44,0" fill="none" stroke="#fff" stroke-width="3"/>` +
+  // hund (glad, sittande)
+  `<g transform="translate(330,300)">` +
+  `<ellipse cx="0" cy="86" rx="120" ry="16" fill="#88b873"/>` +
+  // svans
+  `<path d="M70,30 q56,-10 64,-56 q14,16 2,40 q-14,28 -56,40 z" fill="#caa06a"/>` +
+  // kropp
+  `<path d="M-44,84 q-30,-70 18,-104 q56,-34 92,18 q20,40 6,86 z" fill="#caa06a"/>` +
+  `<path d="M30,84 q6,-50 40,-66 q14,30 4,66 z" fill="#e3cba0"/>` +
+  // huvud
+  `<g transform="translate(-44,-46)"><circle cx="0" cy="0" r="42" fill="#caa06a"/>` +
+  `<path d="M-38,-18 q-22,-26 -8,-50 q26,8 30,40 z" fill="#a87f48"/><path d="M38,-18 q22,-26 8,-50 q-26,8 -30,40 z" fill="#a87f48"/>` +
+  `<ellipse cx="0" cy="14" rx="26" ry="22" fill="#e3cba0"/>` +
+  `<circle cx="-14" cy="-6" r="5" fill="#3a2d20"/><circle cx="14" cy="-6" r="5" fill="#3a2d20"/>` +
+  `<ellipse cx="0" cy="10" rx="8" ry="6" fill="#3a2d20"/><path d="M0,16 q0,12 -10,14 M0,16 q0,12 10,14" stroke="#3a2d20" stroke-width="3" fill="none"/>` +
+  `<path d="M2,22 q14,4 22,-2" stroke="#c0392b" stroke-width="4" fill="none" stroke-linecap="round"/></g></g>`,
+  "#cfe9f7");
+
+pics["atervinning"] = svg(
+  sun(110, 80) + cloud(640, 70, .9) + hill(480, 160, "#a8d88f") +
+  // tre kärl
+  [["#3f7fb5", "PAPPER", 250], ["#e8b73e", "PLAST", 400], ["#5e8c5a", "GLAS", 550]].map(([c, label, x]) =>
+    `<g transform="translate(${x},250)"><rect x="-58" y="0" width="116" height="150" rx="10" fill="${c}"/><rect x="-58" y="0" width="116" height="26" rx="10" fill="#ffffff" opacity=".25"/>` +
+    `<rect x="-34" y="-14" width="68" height="16" rx="6" fill="${c}"/>` +
+    // återvinningssymbol
+    `<g transform="translate(0,72)" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"><path d="M-16,-6 l10,-16 l10,4"/><path d="M16,2 l-2,18 l-14,-2"/><path d="M-14,14 l-8,-12 l12,-8"/><polygon points="2,-24 -6,-22 -2,-16" fill="#ffffff" stroke="none"/></g>` +
+    `<text x="0" y="132" font-family="system-ui,sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">${label}</text></g>`
+  ).join("") +
+  `<ellipse cx="400" cy="408" rx="320" ry="14" fill="#8fcb78"/>`,
+  "#cfe9f7");
+
+pics["skog"] = svg(
+  `<rect width="${W}" height="${H}" fill="#cfe9f7"/>` +
+  // ljusstrålar
+  `<polygon points="300,0 360,0 280,450 200,450" fill="#fff7d6" opacity=".4"/><polygon points="420,0 470,0 520,450 440,450" fill="#fff7d6" opacity=".3"/>` +
+  hill(470, 160, "#7fae6e") +
+  // stig
+  `<path d="M340,450 q60,-150 60,-260 q0,150 60,260 z" fill="#d9c08a"/>` +
+  // träd
+  gran(120, 300, 1.6, "#3e7d5a") + gran(220, 330, 1.2, "#4a8c66") + gran(680, 300, 1.6, "#3e7d5a") + gran(590, 335, 1.2, "#4a8c66") + gran(710, 360, 1, "#4a8c66") +
+  // svamp vid stigen
+  `<g transform="translate(450,400)"><rect x="-5" y="-4" width="10" height="18" rx="3" fill="#f0e6d2"/><path d="M-16,-2 a16,12 0 0 1 32,0 z" fill="#d2402f"/><circle cx="-6" cy="-8" r="2.5" fill="#fff"/><circle cx="6" cy="-6" r="2.5" fill="#fff"/></g>`,
+  "#cfe9f7");
+
 // Skriv alla filer
 for (const [name, content] of Object.entries(pics)) {
   fs.writeFileSync(`${out}/${name}.svg`, content);
