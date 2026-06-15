@@ -21,3 +21,29 @@ body {
     #a30046 24px
   );
 }
+
+/* Utskrift: visa bara provhäftet (text + frågor), dölj all kringnavigering */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  /* Visa både text- och frågehäftet även om en flik var dold på mobil */
+  .paper {
+    display: block !important;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0 0 1.5rem;
+  }
+
+  /* Frågorna börjar på ny sida för ett tydligt arbetsblad */
+  .print-page-break {
+    page-break-before: always;
+  }
+}

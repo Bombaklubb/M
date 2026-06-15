@@ -1111,7 +1111,7 @@
           "kind": "multiple-choice",
           "id": 8,
           "maxPoints": 1,
-          "prompt": "Vad är textens mellanrubriker till för?",
+          "prompt": "Vad är textens underrubriker till för?",
           "options": [
             "De gör texten roligare att läsa.",
             "De visar vad varje del av texten handlar om och gör det lätt att hitta.",
@@ -1325,7 +1325,7 @@
         "Din text tänker du skicka till barntidningen Vetgirig. De har en sida som heter ”Varför då?” där unga läsare förklarar saker för varandra, och de söker just nu nya texter."
       ],
       "doThis": [
-        "Skriv en förklarande text som svarar på en varför- eller hur-fråga. Bestäm en fråga för din text. Förklara steg för steg så att en yngre elev skulle förstå. Beskriv orsaker och följder: vad beror det på, och vad leder det till? Använd gärna mellanrubriker och ge exempel.",
+        "Skriv en förklarande text som svarar på en varför- eller hur-fråga. Bestäm en fråga för din text. Förklara steg för steg så att en yngre elev skulle förstå. Beskriv orsaker och följder: vad beror det på, och vad leder det till? Använd gärna underrubriker och ge exempel.",
         "Rubrik: Skriv en rubrik som passar till innehållet i din text, gärna som en fråga."
       ],
       "topicExamples": [
@@ -1365,7 +1365,7 @@
           "comments": [
             "Texten svarar på en varför-fråga och innehåller flera riktiga förklaringar.",
             "Det finns enkla orsaker och följder (sover man inte blir man trött).",
-            "Texten är indelad i stycken men saknar mellanrubriker, och förklaringarna är korta och utvecklas inte särskilt mycket."
+            "Texten är indelad i stycken men saknar underrubriker, och förklaringarna är korta och utvecklas inte särskilt mycket."
           ]
         },
         {
@@ -1379,7 +1379,7 @@
             "Sömnen är alltså inte bortkastad tid. Den är tvärtom kroppens sätt att göra dig redo för en ny dag."
           ],
           "comments": [
-            "Inledningen väcker läsarens intresse med en fråga och texten har tydliga mellanrubriker.",
+            "Inledningen väcker läsarens intresse med en fråga och texten har tydliga underrubriker.",
             "Orsaker och följder förklaras tydligt (hjärnan flyttar minnen → man minns bättre; för lite sömn → sämre koncentration).",
             "Exemplen hjälper läsaren att förstå (plugga inför prov, sova när man är sjuk).",
             "För en högre nivå kunde texten förklara fler ämnesord och knyta ihop delarna ännu tätare."
@@ -1399,7 +1399,7 @@
             "Inledningen fångar läsaren med en tankebild (superkraftpillret) som sedan återkommer i avslutningen och knyter ihop texten.",
             "Orsakssambanden är tydligt förklarade i flera led (sorteringen tar tid → för lite sömn → arbetet blir inte klart → sämre koncentration).",
             "Ämnesord förklaras för läsaren (tillväxthormon, immunförsvaret) och jämförelser gör det svåra begripligt (bilder som flyttas till ett album, kroppens verkstad).",
-            "Texten har en tydlig struktur med mellanrubriker och ett varierat språk anpassat till en yngre läsare."
+            "Texten har en tydlig struktur med underrubriker och ett varierat språk anpassat till en yngre läsare."
           ]
         }
       ],
@@ -1523,7 +1523,7 @@
         "Din klass gör en gemensam djurbok där varje elev skriver om var sitt djur. Boken ska stå i skolbiblioteket, så texten ska vara skriven som en riktig faktatext som andra elever kan lära sig av."
       ],
       "doThis": [
-        "Skriv en beskrivande faktatext om ett djur du valt. Beskriv hur djuret ser ut, var det lever, vad det äter och något om hur det lever (till exempel ungar, vintern eller hur det jagar). Använd mellanrubriker för de olika delarna. Skriv i tredje person (den, djuret) och i nutid.",
+        "Skriv en beskrivande faktatext om ett djur du valt. Beskriv hur djuret ser ut, var det lever, vad det äter och något om hur det lever (till exempel ungar, vintern eller hur det jagar). Använd underrubriker för de olika delarna. Skriv i tredje person (den, djuret) och i nutid.",
         "Rubrik: Skriv djurets namn som rubrik, gärna med ett tillägg som väcker nyfikenhet."
       ],
       "remember": [
@@ -1538,7 +1538,7 @@
         "Jag beskriver hur djuret ser ut.",
         "Jag beskriver var djuret lever och vad det äter.",
         "Jag beskriver något om hur djuret lever (ungar, vintern, jakt ...).",
-        "Min text har mellanrubriker.",
+        "Min text har underrubriker.",
         "Texten är skriven i tredje person och i nutid, som en faktatext.",
         "Jag har delat in texten i stycken.",
         "Jag har läst igenom texten och rättat stavning och skiljetecken."
@@ -1557,7 +1557,7 @@
             "Texten är en riktig faktatext: den är skriven i tredje person och i nutid, utan egna åsikter.",
             "Innehållet täcker utseende, var djuret lever, vad det äter och något om hur det lever.",
             "Ämnesordet gryt förklaras.",
-            "Texten saknar mellanrubriker och beskrivningarna är korta – mer utvecklade detaljer hade lyft texten."
+            "Texten saknar underrubriker och beskrivningarna är korta – mer utvecklade detaljer hade lyft texten."
           ]
         },
         {
@@ -1571,7 +1571,7 @@
             "Rödräven är alltså inte bara vacker – den är också en av naturens mest anpassningsbara överlevare."
           ],
           "comments": [
-            "Texten har tydliga mellanrubriker som delar upp innehållet, precis som en riktig faktatext.",
+            "Texten har tydliga underrubriker som delar upp innehållet, precis som en riktig faktatext.",
             "Beskrivningarna är utvecklade med detaljer och jämförelser (”ungefär som en katt och en halv”).",
             "Ämnesord förklaras (gryt, allätare).",
             "Avslutningen knyter ihop texten. För en högre nivå kunde texten ha en ingress och något mer fördjupande innehåll, till exempel om rävens revir."
@@ -1592,7 +1592,7 @@
             "Innehållet är rikt och korrekt med fördjupande detaljer (hörselns räckvidd, grytets ålder, revir).",
             "Ämnesord förklaras smidigt i texten (luva, allätare, gryt, revir).",
             "Språket är varierat med liknelser och bilder (”tystare än en katt”, ”musjakten är en föreställning i sig”) men behåller faktatextens tredje person och nutid.",
-            "Mellanrubrikerna är genomtänkta och väcker nyfikenhet i stället för att bara vara etiketter."
+            "Underrubrikerna är genomtänkta och väcker nyfikenhet i stället för att bara vara etiketter."
           ]
         }
       ],
