@@ -77,8 +77,6 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
         ← Tillbaka till delproven
       </button>
 
-      <ExamTimer presets={[40, 60, 80]} />
-
       {/* Uppgiftshäftet */}
       <div className="paper">
         <p className="text-right text-xs italic text-stone-500">
@@ -165,8 +163,12 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
         </div>
       </div>
 
+      <div className="mt-4">
+        <ExamTimer presets={[40, 60, 80]} />
+      </div>
+
       {/* Skrivytan */}
-      <div className="paper mt-8">
+      <div className="paper mt-4">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-np pb-3">
           <h2 className="font-serif text-2xl font-bold">Skriv din text här</h2>
           <span className="rounded bg-stone-100 px-3 py-1 text-sm font-semibold text-stone-600">
