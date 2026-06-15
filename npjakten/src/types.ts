@@ -53,7 +53,7 @@ export interface Illustration {
 }
 
 export interface TextSection {
-  heading?: string; // mellanrubrik i sakprosatexter
+  heading?: string; // underrubrik i sakprosatexter
   paragraphs: string[];
 }
 

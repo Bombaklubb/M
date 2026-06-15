@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
-      <header className="np-pattern text-white">
+      <header className="np-pattern text-white no-print">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
           <button
             onClick={() => setView({ name: "start" })}
@@ -70,13 +70,13 @@ export default function App() {
         )}
       </main>
 
-      <footer className="pb-10 text-center text-xs text-stone-400">
+      <footer className="no-print pb-10 text-center text-xs text-stone-400">
         NP-jakten – övningsuppgifter i de nationella provens format. Allt innehåll är
         nyskrivet övningsmaterial.
       </footer>
 
       {/* Kontaktruta längst ner till vänster */}
-      <div className="fixed bottom-3 left-3 z-30 rounded-md bg-white/90 px-3 py-1.5 text-xs text-stone-600 shadow-page backdrop-blur">
+      <div className="no-print fixed bottom-3 left-3 z-30 rounded-md bg-white/90 px-3 py-1.5 text-xs text-stone-600 shadow-page backdrop-blur">
         Kontakt:{" "}
         <a
           href="mailto:martin.akdogan@enkoping.se"

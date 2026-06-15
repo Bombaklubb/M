@@ -56,14 +56,19 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <button onClick={onBack} className="mb-4 text-sm font-medium text-np hover:underline">
+      <button
+        onClick={onBack}
+        className="no-print mb-4 text-sm font-medium text-np hover:underline"
+      >
         ← Tillbaka till delproven
       </button>
 
-      <ExamTimer presets={[30, 45, 60]} />
+      <div className="no-print">
+        <ExamTimer presets={[30, 45, 60]} />
+      </div>
 
       {/* Flikar på små skärmar: växla mellan text och uppgifter */}
-      <div className="sticky top-2 z-10 mb-4 grid grid-cols-2 gap-1 rounded-md bg-stone-200 p-1 shadow-page md:hidden">
+      <div className="no-print sticky top-2 z-10 mb-4 grid grid-cols-2 gap-1 rounded-md bg-stone-200 p-1 shadow-page md:hidden">
         <button
           onClick={() => setMobileTab("text")}
           className={
@@ -92,7 +97,16 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
           {test.delprov}
         </p>
 
-        <h1 className="mt-6 font-serif text-3xl font-bold">{test.title}</h1>
+        <div className="mt-6 flex items-start justify-between gap-4">
+          <h1 className="font-serif text-3xl font-bold">{test.title}</h1>
+          <button
+            onClick={() => window.print()}
+            title="Skriv ut texten och frågorna"
+            className="no-print mt-1 shrink-0 text-sm font-medium text-stone-400 transition hover:text-np hover:underline"
+          >
+            🖨 Skriv ut
+          </button>
+        </div>
 
         {test.image && (
           <IllustrationImg
@@ -140,7 +154,8 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
       {/* Frågehäftet */}
       <div
         className={
-          "paper mt-4 md:mt-8" + (mobileTab === "text" ? " hidden md:block" : "")
+          "paper print-page-break mt-4 md:mt-8" +
+          (mobileTab === "text" ? " hidden md:block" : "")
         }
       >
         <div className="flex items-center justify-between border-b-2 border-np pb-3">
@@ -184,7 +199,7 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
         </div>
 
         {!reviewing ? (
-          <div className="mt-10 border-t border-stone-200 pt-6 text-center">
+          <div className="no-print mt-10 border-t border-stone-200 pt-6 text-center">
             <p className="mb-3 text-sm text-stone-500">
               Du har besvarat {answeredCount} av {test.questions.length} uppgifter.
             </p>
@@ -196,7 +211,7 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
             </button>
           </div>
         ) : (
-          <div className="mt-10 rounded-md border-2 border-np bg-np-light p-6 text-center">
+          <div className="no-print mt-10 rounded-md border-2 border-np bg-np-light p-6 text-center">
             <p className="text-sm font-semibold uppercase tracking-wide text-np">
               Ditt resultat
             </p>
