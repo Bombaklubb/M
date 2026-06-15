@@ -91,7 +91,12 @@
           "maxPoints": 2,
           "prompt": "Det fanns två anledningar till att pappa köpte just bageriet i Stenvik. Skriv de två anledningarna till att köpet blev av.",
           "guidance": "Ge 1 poäng för varje korrekt anledning, max 2 poäng: 1) Pappa har länge drömt om ett eget litet bageri med en riktig stenugn. 2) Huset var mycket billigt (”kostade nästan ingenting”).",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han ville flytta från stan." },
+            { "points": 1, "answer": "Pappa hade länge drömt om ett eget bageri med en stenugn." },
+            { "points": 2, "answer": "Pappa hade alltid drömt om ett eget litet bageri med en riktig stenugn. Och så var huset jättebilligt, det kostade nästan ingenting." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -112,7 +117,11 @@
           "maxPoints": 1,
           "prompt": "I kiosken förstår Melker att livet i byn skiljer sig från livet i stan. Vad är det han upptäcker?",
           "guidance": "Ge 1 poäng för svar som visar att alla i byn redan vet vem han är/att alla håller reda på varandra, till skillnad från i stan där han var anonym. Exempel på elevsvar: ”Margit vet redan vem han är fast de kom kvällen innan.”",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Att det finns en liten kiosk i byn." },
+            { "points": 1, "answer": "Margit vet redan vem han är fast de kom kvällen innan. I byn håller alla reda på varandra, men i stan kände ingen honom." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -159,7 +168,11 @@
           "maxPoints": 1,
           "prompt": "När Melker och Tuva skrattar tillsammans händer något inom Melker. Beskriv med egna ord hur Melker förändras i det ögonblicket.",
           "guidance": "Ge 1 poäng för svar som visar att Melker slappnar av/känner sig lättare/blir gladare – ”något lossnar i bröstet, en knut han inte visste att han hade”. Eleven ska beskriva förändringen med egna ord.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han börjar skratta åt Tuva." },
+            { "points": 1, "answer": "Han slappnar av och känner sig gladare. Det är som att en knut i bröstet lossnar och han inte är lika ledsen längre." }
+          ]
         },
         {
           "kind": "open",
@@ -167,7 +180,11 @@
           "maxPoints": 1,
           "prompt": "I slutet av texten bestämmer sig Melker för att göra något innan lördagen. Vad ska han göra, och varför?",
           "guidance": "Ge 1 poäng för svar som anger både vad och varför: Han ska leta igenom huset (varenda golvbräda) för att hitta Signes gömda receptbok, så att ugnen ska ”lyda” när de tänder den.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han ska leta i huset." },
+            { "points": 1, "answer": "Han ska leta igenom hela övervåningen för att hitta Signes gömda receptbok, så att ugnen ska lyda när de tänder den på lördag." }
+          ]
         },
         {
           "kind": "open",
@@ -176,7 +193,12 @@
           "prompt": "Melker bryr sig om sin pappa, fast han själv är ledsen över flytten. Ge två exempel ur texten på något Melker gör eller låter bli att göra som visar att han tar hänsyn till pappa.",
           "note": "Du måste skriva två exempel för att få full poäng på uppgiften.",
           "guidance": "Ge 1 poäng per exempel, max 2 poäng. Möjliga exempel: Han säger ”Mmm” i stället för att säga vad han egentligen tycker om huset. / Han säger inget när pappa lovar att de ska tända ugnen, fast han tänker på sitt gamla rum. / Han hjälper till att bära in lådorna. / Han går och handlar frukost medan pappa städar.",
-          "lines": 5
+          "lines": 5,
+          "scoreExamples": [
+            { "points": 0, "answer": "Melker tycker att huset är fult." },
+            { "points": 1, "answer": "Han säger bara ”Mmm” i stället för att säga att han tycker huset är fult." },
+            { "points": 2, "answer": "Han säger bara ”Mmm” fast han tycker huset är fult, så pappa inte blir ledsen. Och han säger inget när pappa lovar att de ska tända ugnen, fast han tänker på sitt gamla rum." }
+          ]
         }
       ],
       "image": {
@@ -244,7 +266,11 @@
           "maxPoints": 1,
           "prompt": "Vad använde människor för att se bättre när de läste, innan glasögonen var uppfunna?",
           "guidance": "Ge 1 poäng för svar som nämner läsestenar (halvklot av bergkristall eller glas som lades på boksidan och förstorade bokstäverna).",
-          "lines": 2
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "De hade förstoringsglas." },
+            { "points": 1, "answer": "De använde läsestenar, halvklot av glas eller bergkristall som man la på boksidan så att bokstäverna blev större." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -265,7 +291,11 @@
           "maxPoints": 1,
           "prompt": "Varför var glasögon så dyra under de första århundradena?",
           "guidance": "Ge 1 poäng för svar som anger att varje lins slipades för hand av en mästare, vilket tog lång tid och krävde stor skicklighet.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "För att alla ville ha glasögon." },
+            { "points": 1, "answer": "För att varje lins slipades för hand av en mästare, och det tog lång tid och krävde stor skicklighet." }
+          ]
         },
         {
           "kind": "open",
@@ -273,7 +303,11 @@
           "maxPoints": 1,
           "prompt": "Vi tänker oss att två elever, Idris och Stella, har läst artikeln och samtalar om den. Idris säger: ”Det var boktryckarkonsten som gjorde glasögonen vanliga. Det låter konstigt – böcker och glasögon har ju inget med varandra att göra.” Stella svarar: ”Jo, det har de visst!” Vad kan Stella säga till Idris för att förklara sambandet mellan boktryckarkonsten och glasögonen?",
           "guidance": "Ge 1 poäng för svar som förklarar sambandet: När böcker kunde tryckas i stora upplagor ville fler lära sig läsa, och den som ville läsa behövde se bra. Då ville fler ha glasögon, verkstäderna blev fler och priserna sjönk.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Böcker och glasögon kom ungefär samtidigt." },
+            { "points": 1, "answer": "När man kunde trycka böcker ville fler lära sig läsa, och då behövde de glasögon för att se. Fler ville ha glasögon, det blev fler verkstäder och priset sjönk." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -294,7 +328,11 @@
           "maxPoints": 1,
           "prompt": "I texten står det att glasögon på 1700-talet ibland bars av personer som såg perfekt. Varför gjorde de det?",
           "guidance": "Ge 1 poäng för svar som anger att glasögon hade blivit ett tecken på klokhet och hög ställning – man bar dem för att se lärd/klok ut.",
-          "lines": 2
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "För att de tyckte glasögon var fina." },
+            { "points": 1, "answer": "Glasögon hade blivit ett tecken på att man var klok och förnäm, så de bar dem för att se lärda ut." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -398,7 +436,12 @@
           "maxPoints": 2,
           "prompt": "Hur kan man veta om isen bär eller inte, enligt det Sigge har lärt sig? Skriv vad som skiljer säker is från svag is.",
           "guidance": "Ge upp till 2 poäng. 1 poäng för att den vita/ljusa isen (vid stranden) bär, och 1 poäng för att den mörka/svarta/blanka isen (längre ut) är svag. Exempel på fullständigt svar: ”Den vita isen vid stranden bär, men den mörka, svarta isen längre ut är svag.”",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Man ska hålla sig nära land." },
+            { "points": 1, "answer": "Den vita isen vid stranden bär." },
+            { "points": 2, "answer": "Den vita, ljusa isen vid stranden bär, men den mörka, svarta isen längre ut är svag och farlig." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -419,7 +462,11 @@
           "maxPoints": 1,
           "prompt": "Hur visste Sigge vad man ska göra när isen håller på att brista?",
           "guidance": "Ge 1 poäng för svar som visar att han hade läst det i en broschyr om issäkerhet som legat hemma på köksbordet under vintern.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han bara visste det." },
+            { "points": 1, "answer": "Han hade läst det i en broschyr om issäkerhet som hade legat hemma på köksbordet hela vintern." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -453,7 +500,11 @@
           "maxPoints": 1,
           "prompt": "Vad använde Sigge för att dra Liv in mot stranden?",
           "guidance": "Ge 1 poäng för svar som anger halsduken (den röda ulltråden/halsduken).",
-          "lines": 2
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han drog henne med armarna." },
+            { "points": 1, "answer": "Han sträckte ut sin röda halsduk som Liv fick tag i." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -488,7 +539,12 @@
           "prompt": "I slutet tänker Sigge att en hemlig del av honom är glad att Liv alltid kommer att vara den som åker längst ut. Förklara vad han menar med det. Använd egna ord.",
           "note": "Skriv ett utvecklat svar för att få full poäng.",
           "guidance": "Ge upp till 2 poäng. 1 poäng för att eleven visar att Sigge uppskattar Livs mod / att någon måste våga gå först. 2 poäng om eleven också kopplar det till Sigges egen roll: att det är bra så länge det finns någon försiktig (som Sigge) kvar vid stranden som kan hjälpa till om något händer. De båda behövs och kompletterar varandra.",
-          "lines": 5
+          "lines": 5,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han är glad att Liv är hans kompis." },
+            { "points": 1, "answer": "Han menar att det är bra att Liv är modig, för någon måste ju våga gå först." },
+            { "points": 2, "answer": "Han menar att det är bra att Liv vågar mest och åker längst ut, så länge det finns någon försiktig som han själv kvar vid stranden som kan hjälpa till om det går fel. De behöver varandra." }
+          ]
         }
       ],
       "image": {
@@ -556,7 +612,11 @@
           "maxPoints": 1,
           "prompt": "Vad kallas processen där trädet tillverkar sin egen mat med hjälp av solljus, vatten och luft?",
           "guidance": "Ge 1 poäng för svaret fotosyntes.",
-          "lines": 2
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Klorofyll." },
+            { "points": 1, "answer": "Den kallas fotosyntes." }
+          ]
         },
         {
           "kind": "open",
@@ -564,7 +624,12 @@
           "maxPoints": 2,
           "prompt": "Varför slutar trädet att tillverka nytt klorofyll på hösten?",
           "guidance": "Ge upp till 2 poäng. Svaret ska visa att dagarna blir kortare och kallare (mindre ljus och värme) och att det därför inte längre lönar sig för trädet att bilda nytt klorofyll. 1 poäng för någondera delen, 2 poäng för att både ljus/dagslängd och värme/kyla nämns.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "För att löven ska byta färg." },
+            { "points": 1, "answer": "För att det blir kallare på hösten." },
+            { "points": 2, "answer": "På hösten blir dagarna kortare och kallare, alltså mindre ljus och värme. Då lönar det sig inte längre för trädet att tillverka nytt klorofyll." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -598,7 +663,12 @@
           "maxPoints": 2,
           "prompt": "Vi tänker oss att två elever, Noa och Selma, har läst texten och samtalar om den. Noa säger: ”Det är ju dumt av trädet att tappa alla sina löv på hösten. Då blir det ju alldeles kalt.” Vad kan Selma svara för att förklara varför det ändå är smart av trädet att fälla löven?",
           "guidance": "Ge upp till 2 poäng. Svaret ska förklara att det är fördelaktigt: på vintern finns för lite ljus för fotosyntesen, och breda löv skulle samla tung snö och frysa sönder. Genom att fälla löven sparar trädet vatten och energi och klarar kylan bättre. 1 poäng för en delvis förklaring, 2 poäng för en tydlig förklaring med minst två skäl.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Det är inte så dumt, alla träd gör ju så på hösten." },
+            { "points": 1, "answer": "På vintern finns det ändå för lite ljus för att löven ska kunna jobba med fotosyntesen, så trädet behöver dem inte." },
+            { "points": 2, "answer": "På vintern finns det för lite ljus för fotosyntesen, så löven gör ingen nytta då. Och breda löv skulle bara samla tung snö och frysa sönder. Genom att fälla löven sparar trädet vatten och energi och klarar kylan bättre." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -676,7 +746,12 @@
           "prompt": "Skribenten ger flera argument för sin åsikt. Skriv två av argumenten.",
           "note": "Du måste skriva två argument för att få full poäng.",
           "guidance": "Ge 1 poäng per korrekt argument, max 2 poäng. Godtagbara argument: 1) Eleverna skulle lära sig mer / minnas och koncentrera sig bättre när de är utsövda. 2) Morgonen skulle bli mindre stressig / fler hinner äta frukost och färre kommer för sent.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Hon tycker att skolan ska börja klockan nio." },
+            { "points": 1, "answer": "Vi skulle lära oss mer om vi fick sova klart, för en utsövd elev minns och koncentrerar sig bättre." },
+            { "points": 2, "answer": "Vi skulle lära oss mer när vi är utsövda, och morgonen skulle bli mindre stressig så att fler hinner äta frukost och färre kommer för sent." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -710,7 +785,11 @@
           "maxPoints": 1,
           "prompt": "Hur bemöter skribenten motargumentet?",
           "guidance": "Ge 1 poäng för svar som visar att skribenten menar att skoldagen inte behöver bli längre – den kan packas smartare med kortare håltimmar (och/eller att schemat borde styras av lärandet, inte av annat).",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Hon säger att de vuxna har fel." },
+            { "points": 1, "answer": "Hon säger att skoldagen inte behöver bli längre, för den kan packas smartare med kortare håltimmar." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -817,7 +896,12 @@
           "maxPoints": 2,
           "prompt": "Varför ska rören vara stängda i ena änden? Förklara med hjälp av texten.",
           "guidance": "Ge upp till 2 poäng. 1 poäng för att insekterna vill ha en skyddad återvändsgränd att bygga bo i. 2 poäng om svaret också förklarar följden av öppna rör: det blir drag i ett rör som är öppet i båda ändar, och då flyttar ingen insekt in.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "För att det ska se finare ut." },
+            { "points": 1, "answer": "För att insekterna vill ha en skyddad återvändsgränd att bygga bo i." },
+            { "points": 2, "answer": "Insekterna vill ha en skyddad återvändsgränd att bygga bo i. Om röret är öppet i båda ändar blir det drag, och då flyttar ingen insekt in." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -869,7 +953,11 @@
           "maxPoints": 1,
           "prompt": "Avsnittet ”Det här behöver du” är skrivet som en punktlista. Vilken är fördelen med en punktlista i en sådan text?",
           "guidance": "Ge 1 poäng för svar som visar att punktlistan ger snabb överblick – läsaren ser direkt vilket material som behövs och kan bocka av/samla ihop sakerna, utan att leta i löpande text.",
-          "lines": 2
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Det ser snyggt ut med en punktlista." },
+            { "points": 1, "answer": "Man ser direkt vad man behöver och kan bocka av sakerna, i stället för att leta i en massa text." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -947,7 +1035,11 @@
           "maxPoints": 1,
           "prompt": "Varför har en tornseglare som hamnat på marken svårt att lyfta igen?",
           "guidance": "Ge 1 poäng för svar som anger att dess ben är mycket små/korta.",
-          "lines": 2
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Den är för trött för att flyga." },
+            { "points": 1, "answer": "För att benen är så små att den inte kan ta sats och lyfta från marken." }
+          ]
         },
         {
           "kind": "open",
@@ -956,7 +1048,12 @@
           "prompt": "Tornseglaren klarar nästan hela sitt liv utan att landa. Skriv två saker som tornseglaren gör uppe i luften.",
           "note": "Du måste skriva två saker för att få full poäng.",
           "guidance": "Ge 1 poäng per korrekt sak, max 2 poäng. Godtagbart: fångar insekter/äter, dricker (glider över vattenytor), samlar bomaterial, sover.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Den flyger hela tiden." },
+            { "points": 1, "answer": "Den fångar insekter och äter uppe i luften." },
+            { "points": 2, "answer": "Den fångar insekter i luften och dricker genom att glida tätt över vattnet. Den sover också uppe i luften." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -990,7 +1087,12 @@
           "maxPoints": 2,
           "prompt": "Varför har tornseglaren blivit mer sällsynt i Sverige, och vad kan man göra för att hjälpa den?",
           "guidance": "Ge upp till 2 poäng. 1 poäng för orsaken: när äldre hus renoveras försvinner springorna under taken där fågeln bygger bo. 1 poäng för hjälpen: sätta upp en särskild holk (med hål på undersidan, högt på en husgavel).",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Det finns färre tornseglare nu än förr." },
+            { "points": 1, "answer": "När gamla hus renoveras försvinner springorna under taken där fågeln byggt bo." },
+            { "points": 2, "answer": "När äldre hus renoveras försvinner springorna under taken där fågeln byggt bo, så den hittar ingen boplats. Man kan hjälpa den genom att sätta upp en särskild holk högt på en husgavel." }
+          ]
         },
         {
           "kind": "multiple-choice",

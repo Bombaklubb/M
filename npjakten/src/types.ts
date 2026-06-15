@@ -21,6 +21,12 @@ export interface OrderingQuestion {
   correctOrder: number[]; // rätt nummer (1–4) för varje mening i items
 }
 
+// Facit-exempel för en viss poängnivå på en fritextfråga
+export interface ScoreExample {
+  points: number; // poängnivån exemplet illustrerar, t.ex. 0, 1 eller 2
+  answer: string; // hur ett elevsvar på den nivån kan se ut
+}
+
 export interface OpenQuestion {
   kind: "open";
   id: number;
@@ -32,6 +38,9 @@ export interface OpenQuestion {
   // Vilka poäng som kan sättas vid självrättning, t.ex. [0, 2, 4].
   // Utelämnas den gäller alla heltal 0..maxPoints.
   pointSteps?: number[];
+  // Konkreta facit-exempel per poängnivå som hjälper eleven att rätta sig
+  // själv: "mitt svar liknar mest 1-poängaren". Visas vid självrättning.
+  scoreExamples?: ScoreExample[];
 }
 
 export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;

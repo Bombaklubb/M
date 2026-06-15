@@ -80,7 +80,11 @@
           ],
           "prompt": "Vad gick vadslagningen mellan berättaren och Albin ut på?",
           "guidance": "Ge 2 poäng om svaret visar att förloraren av ett schackparti skulle bjuda vinnaren på kanelbulle på konditoriet. Det måste framgå att det handlar om schackpartierna. Exempel på godtagbart svar: ”Den som förlorade partiet fick bjuda på kanelbulle.” Ge 0 poäng för svar som bara nämner bullarna utan koppling till partierna.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "De åt kanelbullar på Brödernas konditori. Bullarna var stora och glänste av pärlsocker." },
+            { "points": 2, "answer": "De slog vad om att den som förlorade schackpartiet skulle bjuda den andra på kanelbulle på konditoriet. Den som blev matt fick alltså betala bullen." }
+          ]
         },
         {
           "kind": "open",
@@ -93,7 +97,12 @@
           ],
           "prompt": "Albin visar prov på att vara både en dålig och en bra förlorare. Citera (skriv av) en mening som visar att\n• Albin är en dålig förlorare\n• Albin är en bra förlorare",
           "guidance": "Ge 4 poäng om svaret citerar både en mening som visar att Albin är en dålig förlorare och en som visar att han är en bra förlorare. Ge 2 poäng för enbart den ena. Mindre avskriftsfel accepteras. Dålig förlorare, t.ex.: ”Sedan vände han sig mot fönstret och sa att det var för varmt i lokalen för att kunna tänka ...” / ”– Du hade bara tur, sa Albin.” Bra förlorare, t.ex.: ”– Snyggt spelat, sa han och sträckte fram handen.” / ”Han bjöd på tre kanelbullar och åt ingen själv ...”",
-          "lines": 6
+          "lines": 6,
+          "scoreExamples": [
+            { "points": 0, "answer": "Albin var en dålig förlorare i början men sedan blev han snällare. Han gillade inte att förlora." },
+            { "points": 2, "answer": "Dålig förlorare: ”– Du hade bara tur, sa Albin.” Det visar att han inte ville erkänna att berättaren var bättre." },
+            { "points": 4, "answer": "Dålig förlorare: ”Sedan vände han sig mot fönstret och sa att det var för varmt i lokalen för att kunna tänka.” Här skyller han ifrån sig i stället för att erkänna förlusten. Bra förlorare: ”– Snyggt spelat, sa han och sträckte fram handen.” Där tar han förlusten med stil och ger berättaren beröm." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -118,7 +127,11 @@
           ],
           "prompt": "Under finalpartiet upptäcker berättaren något om Albins sätt att spela. Vad upptäcker hon eller han, och hur används upptäckten för att vinna partiet?",
           "guidance": "Ge 2 poäng om svaret innehåller både upptäckten och hur den används: Albin spelar ett berömt parti ur boken utantill (han spelar inte själv), och berättaren bryter mönstret med ett oväntat/eget drag (kantbonden) så att Albin tvingas tänka själv – och då gör han misstag. Ge 0 poäng om bara den ena delen framgår.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Berättaren märker att Albin spelar väldigt snabbt och bra i början av partiet, och att han brukar vinna." },
+            { "points": 2, "answer": "Berättaren upptäcker att Albin inte spelar själv utan har lärt sig ett berömt parti ur boken ”Hundra odödliga partier” utantill. Då gör berättaren ett konstigt eget drag med kantbonden som inte finns i boken, så att Albin måste börja tänka själv – och då gör han fel och förlorar." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -196,7 +209,11 @@
           ],
           "prompt": "Vad menas med begreppet e-sport, enligt texten?",
           "guidance": "Ge 2 poäng om det framgår av svaret att e-sport betyder tävlande i datorspel. Exempel: ”Att man tävlar i datorspel.” Ge 0 poäng för svar som bara beskriver datorspelande i allmänhet, utan tävlingsmomentet, t.ex. ”att spela datorspel”.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "E-sport är när man sitter och spelar datorspel framför en skärm." },
+            { "points": 2, "answer": "E-sport betyder att man tävlar i datorspel. Proffsen spelar mot varandra i turneringar inför stor publik." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -234,7 +251,11 @@
           ],
           "prompt": "Måns Hederström tvivlar inte på att spelarna är skickliga, men är ändå emot att e-sport räknas som idrott. Vad är hans främsta invändning?",
           "guidance": "Ge 2 poäng om svaret visar att idrottens uppgift enligt Hederström är att få kroppar i rörelse, och att e-sport i stället innebär stillasittande – idrottsstämpeln skulle skicka fel signal till unga. Ge 0 poäng för svar som bara anger att han ”inte gillar datorspel” eller liknande.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han tycker inte att datorspel är en riktig sport och gillar inte att folk spelar så mycket." },
+            { "points": 2, "answer": "Hederström menar att idrottens uppgift, särskilt för barn och unga, är att få kroppar i rörelse. E-sport utförs sittande i en stol, och om man kallar det idrott skickar man fel signal till alla unga som spelar utan fysträning. Han är orolig för stillasittandet." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -327,7 +348,11 @@
           ],
           "prompt": "I början beskriver berättaren sig själv som ”en satellit som kretsar kring en planet”. Vad menar han med den bilden?",
           "guidance": "Ge 2 poäng om svaret visar att berättaren (lillebrodern) hela tiden följer efter och kretsar kring Jocke, som är medelpunkten, medan Jocke knappt märker honom – precis som en satellit kretsar kring en planet. Ge 0 poäng för svar som bara återger orden utan att förklara innebörden.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han menar att han är en satellit och att Jocke är en planet i rymden." },
+            { "points": 2, "answer": "Han menar att han som lillebror hela tiden följer efter Jocke och snurrar runt honom, precis som en satellit kretsar kring en planet. Jocke är medelpunkten som knappt märker att lillebrodern finns." }
+          ]
         },
         {
           "kind": "open",
@@ -340,7 +365,12 @@
           ],
           "prompt": "Jocke är ibland en dålig storebror och ibland en bra. Citera (skriv av) en mening eller replik som visar att\n• Jocke är en dålig storebror\n• Jocke är en bra storebror",
           "guidance": "Ge 4 poäng om svaret citerar både en mening som visar att Jocke är en dålig storebror och en som visar att han är en bra storebror. Ge 2 poäng för enbart den ena. Mindre avskriftsfel accepteras. Dålig storebror, t.ex.: ”Gå och lek med dina egna kompisar.” / ”Du kan inte hänga med i dag, sa han ...”. Bra storebror, t.ex.: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna ...” / att han följer med till bron och visslar tillbaka i slutet.",
-          "lines": 6
+          "lines": 6,
+          "scoreExamples": [
+            { "points": 0, "answer": "Jocke är ibland taskig mot lillebrorsan men ibland snäll. Det beror på hur han känner sig." },
+            { "points": 2, "answer": "Dålig storebror: ”Gå och lek med dina egna kompisar.” Han stöter bort lillebrodern för att vara med Sandra." },
+            { "points": 4, "answer": "Dålig storebror: ”– Du kan inte hänga med i dag, sa han en morgon utan att titta upp från spegeln.” Här gör han sig av med lillebrodern för Sandras skull. Bra storebror: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna.” Där tar han hand om lillebrodern och lär honom saker." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -365,7 +395,11 @@
           ],
           "prompt": "När Jocke kommer hem ledsen skriver berättaren: ”Jag borde ha känt mig hämnad. I stället stod jag utanför hans dörr och kände något helt annat.” Vad är det berättaren känner i stället, och vad säger det om honom?",
           "guidance": "Ge 2 poäng om svaret visar att berättaren känner medlidande/omtanke/empati i stället för skadeglädje, och att det visar att han bryr sig om sin bror trots ilskan – han är en omtänksam person / hans kärlek till brodern är starkare än hämndlusten. Ge 0 poäng om bara den ena delen (känslan eller tolkningen) framgår.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han känner något annat och blir ledsen, fast han egentligen borde ha varit glad." },
+            { "points": 2, "answer": "I stället för att vara skadeglad känner berättaren medlidande och omtanke, det gör ont i bröstet av att se Jocke ledsen. Det visar att han bryr sig om sin bror trots all ilska – kärleken till Jocke är starkare än hämndlusten." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -442,7 +476,11 @@
           ],
           "prompt": "Vad menas i texten med att ljudboken har blivit allt vanligare ”på några år”? Beskriv kort den utveckling texten tar upp.",
           "guidance": "Ge 2 poäng om svaret visar att ljudboken har gått från att vara ovanlig/en nischprodukt (t.ex. för bilresor) till att bli ett av de vanligaste sätten att ta del av böcker – försäljningen har ökat kraftigt och för många unga är det självklart att lyssna på böcker. Ge 0 poäng för svar som bara upprepar att många lyssnar, utan att visa förändringen över tid.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Det betyder att jättemånga människor lyssnar på ljudböcker i dag, till exempel på bussen." },
+            { "points": 2, "answer": "Det betyder att ljudboken har gått från att vara något ovanligt, mest för bilresor, till att bli ett av de vanligaste sätten att ta del av böcker. Försäljningen har ökat kraftigt och för många unga är det numera självklart att lyssna i stället för att läsa." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -480,7 +518,11 @@
           ],
           "prompt": "Henrik Boström är inte emot att folk lyssnar på böcker, men ser ändå en risk med ljudböcker. Vad är hans främsta invändning?",
           "guidance": "Ge 2 poäng om svaret visar att Boström menar att man vid lyssnande inte lika lätt kan stanna upp, gå tillbaka och kämpa med svåra meningar (det mödosamma som tränar ordförråd och tålamod), och/eller att lyssnandet ofta sker samtidigt med annat så att uppmärksamheten glider och man minns mindre. Ge 0 poäng för svar som bara säger att han ”inte gillar ljudböcker”.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Han tycker inte att ljudböcker är lika bra som vanliga böcker och vill att folk ska läsa i stället." },
+            { "points": 2, "answer": "Boström menar att man när man lyssnar inte lika lätt kan stanna upp, gå tillbaka och kämpa med en svår mening, och just det mödosamma tränar ordförråd och tålamod. Dessutom lyssnar man ofta samtidigt som man gör annat, så uppmärksamheten glider och man minns mindre av boken." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -564,7 +606,11 @@
           ],
           "prompt": "Det ursprungliga skälet för tidsomställningen har försvagats, enligt texten. Förklara varför.",
           "guidance": "Ge 2 poäng om svaret visar att energibesparingen blivit liten/nästan obefintlig eftersom belysningen i dag står för en mycket mindre del av elförbrukningen än förr (uppvärmning, datorer och industri drar mer). Ge 0 poäng för svar som bara konstaterar att skälet försvagats utan förklaring.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Skälet har försvagats för att tidsomställningen är gammal och infördes redan 1980. Numera tycker många att den är onödig." },
+            { "points": 2, "answer": "Tidsomställningen infördes för att spara energi, eftersom ljusare kvällar skulle göra att folk behövde mindre belysning. Men i dag står uppvärmning, datorer och industri för en mycket större del av elförbrukningen än glödlamporna gör. Därför blir energibesparingen liten, nästan obefintlig, och det ursprungliga skälet håller inte längre." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -590,7 +636,12 @@
           ],
           "prompt": "Om tidsomställningen avskaffas måste man välja mellan permanent sommartid och permanent vintertid. Båda alternativen har ett pris. Beskriv\n• vilket pris permanent sommartid har\n• vilket pris permanent vintertid har",
           "guidance": "Ge 2 poäng per korrekt beskrivet pris, max 4 poäng. Sommartid: mörka vintermorgnar – solen går upp först vid tiotiden i Stockholm och skolbarn i norr får gå till skolan i mörker. Vintertid: sommarkvällarna slutar (blir mörka) en timme tidigare.",
-          "lines": 5
+          "lines": 5,
+          "scoreExamples": [
+            { "points": 0, "answer": "Båda alternativen är dåliga på olika sätt. Det blir antingen för mörkt eller för ljust, och man vet inte vilket man ska välja." },
+            { "points": 2, "answer": "Priset med permanent sommartid är att vintermorgnarna blir väldigt mörka. I Stockholm skulle solen gå upp först vid tiotiden, och skolbarn i norra Sverige skulle få gå hela skolvägen i mörker." },
+            { "points": 4, "answer": "Permanent sommartid har priset att vintermorgnarna blir mörka: solen i Stockholm skulle gå upp först vid tiotiden, och skolbarn i norr skulle göra hela skolvägen i mörker. Permanent vintertid har i stället priset att sommarkvällarna slutar en timme tidigare, alltså att det blir mörkt tidigare på kvällen på sommaren. Man vinner ljus i ena änden men förlorar det i den andra." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -671,7 +722,11 @@
           ],
           "prompt": "Skribenten ser något ”avundsvärt” i kusinens situation. Vad är det skribenten avundas?",
           "guidance": "Ge 2 poäng om svaret visar att kusinen vet vad hon vill (har ett tydligt mål/en karta), vilket gör att hon kan plugga målmedvetet, slippa tveka och välja bort det som leder fel. Ge 0 poäng för svar som bara anger att kusinen ska bli läkare.",
-          "lines": 3
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Skribenten avundas att kusinen ska bli läkare. Hon har vetat det sedan hon var åtta år." },
+            { "points": 2, "answer": "Skribenten avundas att kusinen vet precis vad hon vill, hon har ett tydligt mål som en karta att gå efter. Därför kan hon plugga målmedvetet, vet vilka betyg som krävs och slipper tveka, medan skribenten själv känner sig som om hen irrar omkring med ögonbindel." }
+          ]
         },
         {
           "kind": "open",
@@ -684,7 +739,12 @@
           ],
           "prompt": "Skribenten använder personerna i sin närhet som exempel i resonemanget. Välj två av personerna (kusinen, mamman, mostern eller farfar) och förklara vilken tanke i resonemanget var och en är exempel på.",
           "guidance": "Ge 2 poäng per korrekt koppling, max 4 poäng. Godtagbart: Kusinen – exempel på fördelen med att ha ett tydligt mål/veta vad man vill. Mamman – exempel på att omvägar kan göra en bättre/att man kan byta bana och tjäna på det. Mostern – exempel på att det är vanligt att byta bana (raka vägen är undantag). Farfar – exempel på att yrket inte alltid är ett aktivt val (”det blev så”).",
-          "lines": 6
+          "lines": 6,
+          "scoreExamples": [
+            { "points": 0, "answer": "Skribenten skriver om sin kusin, mamma, moster och farfar. De har alla olika jobb och visar hur olika livet kan bli." },
+            { "points": 2, "answer": "Kusinen är ett exempel på fördelen med att veta vad man vill, hon har velat bli läkare sedan hon var åtta och pluggar målmedvetet. Mamman är ett exempel på att omvägar kan löna sig: hon var först frisör och blev sedan undersköterska, och säger att omvägen gjorde henne bättre på båda jobben." },
+            { "points": 4, "answer": "Mamman är ett exempel på att man kan byta bana och ändå tjäna på det. Hon utbildade sig till frisör men sadlade om till undersköterska vid trettiofem, och säger att omvägen gjorde henne bättre på båda jobben. Det stöder tanken att den raka vägen inte är nödvändig. Farfar är ett exempel på att yrket inte alltid är ett aktivt val. Han jobbade på samma fabrik i fyrtio år men säger inte att han valde yrket – han säger att ”det blev så”. Det stöder tanken att den raka, planerade vägen kanske är mer undantag än regel." }
+          ]
         },
         {
           "kind": "multiple-choice",
@@ -709,7 +769,11 @@
           ],
           "prompt": "I femte stycket skriver skribenten: ”Det är kanske inte en karta – men det är en kompass.” Förklara vad skribenten menar med skillnaden mellan kartan och kompassen.",
           "guidance": "Ge 2 poäng om svaret visar att kartan står för att veta sitt exakta mål/hela vägen (som kusinen), medan kompassen står för att veta sin riktning – vad man tycker om, är bra på och inte står ut med – utan att veta målet. Man kan alltså orientera sig framåt även utan färdigt mål. Ge 0 poäng för svar som bara upprepar orden utan förklaring.",
-          "lines": 4
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Skribenten menar att det inte är en karta utan en kompass. En karta och en kompass är ju olika saker man använder för att hitta." },
+            { "points": 2, "answer": "Kartan står för att veta sitt exakta mål och hela vägen dit, som kusinen som vet att hon ska bli läkare. Kompassen står för att veta sin riktning utan att veta målet, alltså att veta vad man tycker är roligt, vad man är bra på och vad man inte står ut med. Skribenten menar att man kan röra sig framåt och välja även om man inte har ett färdigt mål, så länge man har en riktning." }
+          ]
         },
         {
           "kind": "multiple-choice",
