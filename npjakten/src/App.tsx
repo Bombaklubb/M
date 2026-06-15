@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { grades } from "./data/grades";
 import StartPage from "./components/StartPage";
 import GradePage from "./components/GradePage";
@@ -13,6 +13,10 @@ type View =
 
 export default function App() {
   const [view, setView] = useState<View>({ name: "start" });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view]);
 
   const grade =
     view.name !== "start" ? grades.find((g) => g.id === view.gradeId) : undefined;
