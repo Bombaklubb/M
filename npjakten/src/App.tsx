@@ -74,6 +74,17 @@ export default function App() {
         NP-jakten – övningsuppgifter i de nationella provens format. Allt innehåll är
         nyskrivet övningsmaterial.
       </footer>
+
+      {/* Kontaktruta längst ner till vänster */}
+      <div className="fixed bottom-3 left-3 z-30 rounded-md bg-white/90 px-3 py-1.5 text-xs text-stone-600 shadow-page backdrop-blur">
+        Kontakt:{" "}
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="font-semibold text-np hover:underline"
+        >
+          martin.akdogan@enkoping.se
+        </a>
+      </div>
     </div>
   );
 }
