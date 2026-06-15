@@ -332,7 +332,7 @@ function QuestionView({
             disabled={reviewing}
             rows={q.lines}
             placeholder="Skriv ditt svar här ..."
-            className="w-full resize-y rounded border-2 border-stone-300 bg-[repeating-linear-gradient(transparent,transparent_27px,#d6d3d1_27px,#d6d3d1_28px)] p-3 font-serif leading-7 focus:border-np focus:outline-none disabled:bg-stone-50"
+            className="w-full resize-y rounded border-2 border-stone-300 bg-white p-3 font-serif leading-relaxed focus:border-np focus:outline-none disabled:bg-stone-50"
           />
           {reviewing && (
             <div className="mt-3 rounded-md border-l-4 border-np bg-np-light p-4">
