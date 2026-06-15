@@ -340,6 +340,26 @@ function QuestionView({
                 Bedömningsanvisning
               </p>
               <p className="mt-1 text-sm leading-relaxed text-stone-700">{q.guidance}</p>
+              {q.scoreExamples && q.scoreExamples.length > 0 && (
+                <div className="mt-3 space-y-2">
+                  <p className="text-sm font-semibold text-stone-700">
+                    Jämför med exempelsvar:
+                  </p>
+                  {q.scoreExamples.map((ex, i) => (
+                    <div
+                      key={i}
+                      className="flex gap-3 rounded-md border border-stone-200 bg-white p-3"
+                    >
+                      <span className="flex h-7 shrink-0 items-center rounded-full bg-np px-2.5 text-xs font-bold text-white">
+                        {ex.points} p
+                      </span>
+                      <p className="font-serif text-sm leading-relaxed text-stone-700">
+                        {ex.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
               <div className="mt-3 flex flex-wrap items-center gap-2">
                 <span className="text-sm font-semibold">Sätt poäng på ditt svar:</span>
                 {(q.pointSteps ?? Array.from({ length: q.maxPoints + 1 }, (_, p) => p)).map((p) => (
