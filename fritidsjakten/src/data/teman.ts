@@ -83,6 +83,32 @@ export const TEMAN: Tema[] = [
     ],
   },
   {
+    id: 'sommaren',
+    namn: 'Sommar',
+    emoji: '☀️',
+    aldersgrupper: ['F-1', '2-3', '4-6'],
+    aktiviteter: [
+      { titel: 'Vattenstafett', beskrivning: 'Bär vatten i svamp eller mugg till lagets hink – minst spill vinner.' },
+      { titel: 'Insektssafari', beskrivning: 'Leta småkryp med lupp och bestäm vad ni hittar tillsammans.' },
+      { titel: 'Kritkonst på asfalt', beskrivning: 'Måla stora gemensamma konstverk med gatukrita.' },
+      { titel: 'Picknick-lek', beskrivning: 'Planera och duka en låtsaspicknick – samarbeta om vad som behövs.' },
+      { titel: 'Sommarquiz', beskrivning: 'Frågor om sol, bad, sommardjur och midsommar.' },
+    ],
+  },
+  {
+    id: 'hosten',
+    namn: 'Höst',
+    emoji: '🍂',
+    aldersgrupper: ['F-1', '2-3', '4-6'],
+    aktiviteter: [
+      { titel: 'Lövjakt & lövkonst', beskrivning: 'Samla löv i olika färger och gör tavlor eller kransar.' },
+      { titel: 'Svamp- och bärquiz', beskrivning: 'Lär er vilka svampar och bär man får plocka – och vilka man inte ska röra.' },
+      { titel: 'Kastanjebana', beskrivning: 'Bygg en bana där kastanjer eller kottar ska rulla i mål.' },
+      { titel: 'Vindlekar', beskrivning: 'Gör drakar eller vimplar och se hur de rör sig i höstvinden.' },
+      { titel: 'Mysig lässtund', beskrivning: 'Varva ner med högläsning och en lugn höststund inomhus.' },
+    ],
+  },
+  {
     id: 'vintern',
     namn: 'Vintern',
     emoji: '❄️',

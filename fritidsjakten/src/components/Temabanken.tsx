@@ -51,7 +51,7 @@ export default function Temabanken() {
 
   return (
     <div className="animate-slide-up space-y-5">
-      <div>
+      <div className="no-print">
         <div className="text-sm font-bold text-slate-600 mb-2">Åldersgrupp</div>
         <div className="flex gap-2 flex-wrap">
           {ALDRAR.map((a) => (
@@ -66,7 +66,7 @@ export default function Temabanken() {
         </div>
       </div>
 
-      <div>
+      <div className="no-print">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-bold text-slate-600">Välj tema</div>
           <button onClick={() => setVisaForm(true)} className="btn-soft !py-1.5 !px-3 flex items-center gap-1 text-sm">

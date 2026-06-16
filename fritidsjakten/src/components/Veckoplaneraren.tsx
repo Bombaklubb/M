@@ -45,7 +45,7 @@ export default function Veckoplaneraren() {
 
   return (
     <div className="animate-slide-up space-y-5">
-      <div className="card p-4 space-y-4">
+      <div className="card p-4 space-y-4 no-print">
         <div>
           <div className="text-sm font-bold text-slate-600 mb-2">Årskurs</div>
           <div className="flex gap-2 flex-wrap">
@@ -93,7 +93,7 @@ export default function Veckoplaneraren() {
             <div className="text-sm text-slate-600">
               <span className="font-bold">{tema.emoji} {tema.namn}</span> · {arskurs === 'F' ? 'Förskoleklass' : `Åk ${arskurs}`} · {elever} elever
             </div>
-            <button onClick={() => window.print()} className="btn-soft !py-1.5 !px-3 flex items-center gap-1 text-sm">
+            <button onClick={() => window.print()} className="btn-soft !py-1.5 !px-3 flex items-center gap-1 text-sm no-print">
               <Printer size={15} /> Skriv ut
             </button>
           </div>
