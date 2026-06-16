@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise, ClockSetExercise } from '../types';
+import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise, ClockSetExercise, OrderExercise, MatchExercise } from '../types';
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
@@ -76,6 +76,16 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
     commitAnswer(correct ? 'korrekt' : 'fel', correct);
   }
 
+  function answerOrder(userOrder: string[], correct: boolean) {
+    if (state.answered) return;
+    commitAnswer(userOrder.join(' → '), correct);
+  }
+
+  function answerMatch(correct: boolean) {
+    if (state.answered) return;
+    commitAnswer(correct ? 'korrekt' : 'fel', correct);
+  }
+
   function answerFillIn() {
     if (state.answered) return;
     const ex = exercise as FillInExercise;
@@ -101,6 +111,10 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
           : ex.type === 'true-false' ? String((ex as any).isTrue)
           : ex.type === 'clock-set'
             ? `${String((ex as any).targetHour).padStart(2,'0')}:${String((ex as any).targetMinute).padStart(2,'0')}`
+          : ex.type === 'order'
+            ? (ex as any).items.join(' → ')
+          : ex.type === 'match'
+            ? (ex as any).pairs.map((p: any) => `${p.left}=${p.right}`).join(', ')
           : String((ex as any).answer);
         recordError(currentStudent.id, topic.id, topic.title, ex.id, ex.question, correctAns, userAnswer);
       }
@@ -179,11 +193,15 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
               exercise.type === 'multiple-choice'  ? 'bg-blue-500/30 text-blue-300' :
               exercise.type === 'fill-in'          ? 'bg-purple-500/30 text-purple-300' :
+              exercise.type === 'order'            ? 'bg-orange-500/30 text-orange-300' :
+              exercise.type === 'match'            ? 'bg-pink-500/30 text-pink-300' :
               topic.tags?.includes('rimlighet')    ? 'bg-amber-500/30 text-amber-300' :
                                                      'bg-emerald-500/30 text-emerald-300'
             }`}>
               {exercise.type === 'multiple-choice'   ? '🔘 Flerval' :
                exercise.type === 'fill-in'           ? '✏️ Fritext' :
+               exercise.type === 'order'             ? '🔢 Ordna' :
+               exercise.type === 'match'             ? '🔗 Para ihop' :
                topic.tags?.includes('rimlighet')     ? '⚖️ Rimlighet' :
                                                        '✅ Sant/Falskt'}
             </span>
@@ -264,6 +282,22 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
               exercise={exercise as ClockSetExercise}
               state={state}
               onAnswer={answerClockSet}
+            />
+          )}
+          {exercise.type === 'order' && (
+            <OrderAnswers
+              key={currentIdx}
+              exercise={exercise as OrderExercise}
+              state={state}
+              onAnswer={answerOrder}
+            />
+          )}
+          {exercise.type === 'match' && (
+            <MatchAnswers
+              key={currentIdx}
+              exercise={exercise as MatchExercise}
+              state={state}
+              onAnswer={answerMatch}
             />
           )}
           {/* Rätt svar – kort bekräftelse */}
@@ -574,6 +608,254 @@ function ClockSetAnswers({
   );
 }
 
+// ─── Order exercise (sortera i rätt ordning) ─────────────────────────────────
+
+function OrderAnswers({
+  exercise, state, onAnswer,
+}: {
+  exercise: OrderExercise;
+  state: ExerciseState;
+  onAnswer: (userOrder: string[], correct: boolean) => void;
+}) {
+  // Stable shuffle per exercise – avoid the rare chance of correct order
+  const shuffled = React.useMemo(() => {
+    const a = [...exercise.items];
+    for (let tries = 0; tries < 8; tries++) {
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      if (a.join('|') !== exercise.items.join('|')) break;
+    }
+    return a;
+  }, [exercise.id]);
+
+  const [placed, setPlaced] = useState<string[]>([]);
+  const remaining = shuffled.filter(item => !placed.includes(item));
+
+  function place(item: string) {
+    if (state.answered) return;
+    setPlaced(p => [...p, item]);
+  }
+  function removeAt(idx: number) {
+    if (state.answered) return;
+    setPlaced(p => p.filter((_, i) => i !== idx));
+  }
+  function submit() {
+    if (state.answered || placed.length !== exercise.items.length) return;
+    const correct = placed.join('|') === exercise.items.join('|');
+    onAnswer(placed, correct);
+  }
+
+  return (
+    <div className="space-y-3">
+      {exercise.orderHint && !state.answered && (
+        <p className="text-sm text-amber-300 bg-amber-500/20 border border-amber-400/30 rounded-xl px-3 py-2">
+          💡 Ordna {exercise.orderHint}
+        </p>
+      )}
+
+      {/* Din ordning – placerade rutor */}
+      <div className="min-h-[3.5rem] rounded-2xl border-2 border-dashed border-white/20 bg-white/5 p-2 flex flex-wrap gap-2 items-center">
+        {placed.length === 0 && (
+          <span className="text-white/30 text-sm px-2">Tryck på rutorna nedan i rätt ordning…</span>
+        )}
+        {placed.map((item, i) => {
+          let cls = 'bg-orange-500/30 border-orange-400/50 text-white';
+          if (state.answered) {
+            cls = item === exercise.items[i]
+              ? 'bg-emerald-500/25 border-emerald-400/70 text-emerald-100'
+              : 'bg-rose-500/25 border-rose-400/70 text-rose-100';
+          }
+          return (
+            <button
+              key={`${item}-${i}`}
+              onClick={() => removeAt(i)}
+              disabled={state.answered}
+              className={`px-3 py-2 rounded-xl border-2 font-bold text-base transition-all ${cls} ${!state.answered ? 'hover:scale-105 active:scale-95' : ''}`}
+            >
+              <span className="text-white/40 text-xs mr-1">{i + 1}.</span>{item}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Kvarvarande rutor */}
+      {!state.answered && remaining.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {remaining.map(item => (
+            <button
+              key={item}
+              onClick={() => place(item)}
+              className="px-4 py-2.5 rounded-xl border-2 font-bold text-base text-white transition-all hover:scale-105 active:scale-95"
+              style={{ background: 'rgba(40,8,32,0.70)', borderColor: 'rgba(200,140,50,0.35)' }}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {!state.answered && (
+        <div className="flex gap-3">
+          {placed.length > 0 && (
+            <button
+              onClick={() => setPlaced([])}
+              className="flex-1 py-3 rounded-2xl font-bold text-white/80 bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
+            >
+              ↺ Börja om
+            </button>
+          )}
+          <button
+            onClick={submit}
+            disabled={placed.length !== exercise.items.length}
+            className={`flex-1 font-black py-3 rounded-2xl text-lg transition-all ${
+              placed.length === exercise.items.length
+                ? 'bg-green-500 hover:bg-green-600 text-white hover:scale-[1.02]'
+                : 'bg-white/10 text-white/30 cursor-not-allowed'
+            }`}
+          >
+            ✓ Klar!
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Match exercise (para ihop) ──────────────────────────────────────────────
+
+const MATCH_COLORS = [
+  'border-sky-400/70 bg-sky-500/20 text-sky-100',
+  'border-amber-400/70 bg-amber-500/20 text-amber-100',
+  'border-emerald-400/70 bg-emerald-500/20 text-emerald-100',
+  'border-fuchsia-400/70 bg-fuchsia-500/20 text-fuchsia-100',
+  'border-rose-400/70 bg-rose-500/20 text-rose-100',
+  'border-lime-400/70 bg-lime-500/20 text-lime-100',
+];
+
+function MatchAnswers({
+  exercise, state, onAnswer,
+}: {
+  exercise: MatchExercise;
+  state: ExerciseState;
+  onAnswer: (correct: boolean) => void;
+}) {
+  // Right column shuffled (stable per exercise)
+  const rights = React.useMemo(() => {
+    const a = exercise.pairs.map(p => p.right);
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }, [exercise.id]);
+
+  const [selLeft, setSelLeft] = useState<number | null>(null);
+  // matches: leftIndex -> right string
+  const [matches, setMatches] = useState<Record<number, string>>({});
+
+  const usedRights = new Set(Object.values(matches));
+  const allMatched = Object.keys(matches).length === exercise.pairs.length;
+
+  function tapLeft(i: number) {
+    if (state.answered) return;
+    setSelLeft(prev => (prev === i ? null : i));
+  }
+  function tapRight(rightVal: string) {
+    if (state.answered || selLeft === null) return;
+    if (usedRights.has(rightVal)) return;
+    setMatches(m => ({ ...m, [selLeft]: rightVal }));
+    setSelLeft(null);
+  }
+  function clearLeft(i: number) {
+    if (state.answered) return;
+    setMatches(m => {
+      const n = { ...m }; delete n[i]; return n;
+    });
+  }
+  function submit() {
+    if (state.answered || !allMatched) return;
+    const correct = exercise.pairs.every((p, i) => matches[i] === p.right);
+    onAnswer(correct);
+  }
+
+  const colorForRight = (rightVal: string): string | null => {
+    const li = Object.keys(matches).find(k => matches[+k] === rightVal);
+    return li != null ? MATCH_COLORS[+li % MATCH_COLORS.length] : null;
+  };
+
+  return (
+    <div className="space-y-3">
+      {!state.answered && (
+        <p className="text-sm text-amber-300 bg-amber-500/20 border border-amber-400/30 rounded-xl px-3 py-2">
+          🔗 Tryck på en ruta till vänster och sedan dess par till höger.
+        </p>
+      )}
+      <div className="grid grid-cols-2 gap-3">
+        {/* Left column */}
+        <div className="space-y-2">
+          {exercise.pairs.map((p, i) => {
+            const matched = matches[i] != null;
+            let cls = 'border-white/20 bg-white/5 text-white';
+            if (selLeft === i) cls = 'border-amber-400 bg-amber-500/25 text-white ring-2 ring-amber-400/40';
+            else if (matched) cls = MATCH_COLORS[i % MATCH_COLORS.length];
+            if (state.answered) {
+              cls = matches[i] === p.right
+                ? 'border-emerald-400/70 bg-emerald-500/20 text-emerald-100'
+                : 'border-rose-400/70 bg-rose-500/20 text-rose-100';
+            }
+            return (
+              <button
+                key={i}
+                onClick={() => (matched && !state.answered ? clearLeft(i) : tapLeft(i))}
+                disabled={state.answered}
+                className={`w-full px-3 py-3 rounded-xl border-2 font-bold text-base text-left transition-all ${cls} ${!state.answered ? 'hover:scale-[1.02] active:scale-98' : ''}`}
+              >
+                {p.left}
+                {matched && !state.answered && <span className="float-right text-xs opacity-60">✕</span>}
+              </button>
+            );
+          })}
+        </div>
+        {/* Right column (shuffled) */}
+        <div className="space-y-2">
+          {rights.map((rightVal, i) => {
+            const color = colorForRight(rightVal);
+            const used = usedRights.has(rightVal);
+            let cls = 'border-white/20 bg-white/5 text-white';
+            if (color) cls = color;
+            return (
+              <button
+                key={i}
+                onClick={() => tapRight(rightVal)}
+                disabled={state.answered || used}
+                className={`w-full px-3 py-3 rounded-xl border-2 font-bold text-base text-left transition-all ${cls} ${(!state.answered && !used) ? 'hover:scale-[1.02] active:scale-98' : ''} ${used && !color ? 'opacity-40' : ''}`}
+              >
+                {rightVal}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {!state.answered && (
+        <button
+          onClick={submit}
+          disabled={!allMatched}
+          className={`w-full font-black py-3 rounded-2xl text-lg transition-all ${
+            allMatched
+              ? 'bg-green-500 hover:bg-green-600 text-white hover:scale-[1.02]'
+              : 'bg-white/10 text-white/30 cursor-not-allowed'
+          }`}
+        >
+          ✓ Klar!
+        </button>
+      )}
+    </div>
+  );
+}
+
 // ─── Visual explanation (only on wrong answer) ───────────────────────────────
 
 function WrongAnswerExplanation({ exercise }: { exercise: Exercise }) {
@@ -684,6 +966,40 @@ function ExerciseVisual({ exercise }: { exercise: Exercise }) {
         <p className="text-sm font-black text-emerald-300">
           ✓ Rätt svar: {ex.isTrue ? '👍 Sant' : '👎 Falskt'}
         </p>
+      </div>
+    );
+  }
+
+  // ── Order: show correct sequence ─────────────────────────────────────────
+  if (exercise.type === 'order') {
+    const ex = exercise as OrderExercise;
+    return (
+      <div className="mt-1 bg-emerald-500/20 border border-emerald-400/40 rounded-xl px-4 py-3">
+        <p className="text-sm font-black text-emerald-300 mb-2">✓ Rätt ordning:</p>
+        <div className="flex flex-wrap gap-2">
+          {ex.items.map((item, i) => (
+            <span key={i} className="px-3 py-1.5 rounded-lg bg-emerald-500/25 border border-emerald-400/50 text-emerald-100 font-bold text-sm">
+              <span className="text-emerald-300/60 text-xs mr-1">{i + 1}.</span>{item}
+            </span>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // ── Match: show correct pairs ────────────────────────────────────────────
+  if (exercise.type === 'match') {
+    const ex = exercise as MatchExercise;
+    return (
+      <div className="mt-1 bg-emerald-500/20 border border-emerald-400/40 rounded-xl px-4 py-3">
+        <p className="text-sm font-black text-emerald-300 mb-2">✓ Rätt par:</p>
+        <div className="space-y-1.5">
+          {ex.pairs.map((p, i) => (
+            <p key={i} className="text-sm text-emerald-100 font-bold">
+              {p.left} <span className="text-emerald-400/60 mx-1">↔</span> {p.right}
+            </p>
+          ))}
+        </div>
       </div>
     );
   }

@@ -215,7 +215,10 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
             <div className="space-y-3">
               {errors.map(entry => {
                 const topic = TOPICS.find(t => t.id === entry.topicId);
-                const hasExercise = !!topic?.exercises.find(e => e.id === entry.exerciseId);
+                const foundEx = topic?.exercises.find(e => e.id === entry.exerciseId);
+                // Endast typer som "Försök igen"-vyn kan rendera går att öva på inline
+                const hasExercise = !!foundEx &&
+                  (foundEx.type === 'fill-in' || foundEx.type === 'multiple-choice' || foundEx.type === 'true-false');
                 return (
                   <button
                     key={entry.id}

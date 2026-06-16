@@ -141,6 +141,8 @@ export const WORLDS: World[] = [
       'rationella-brak-hog',
       // Binära tal
       'binara-tal-hog',
+      // Fördjupning (tal, bråk & procent)
+      'potenser', 'brak-avancerat', 'procent-forandring', 'procentenheter',
     ],
     islandEmojis: ['🛸', '🌍', '🤖', '⚗️', '💡', '🌌'],
     storyIntro: 'Rädda rymdstationen med matte – fixa rymdsyret och navigera planeterna!',
@@ -162,7 +164,13 @@ export const WORLDS: World[] = [
       'ekvationer-gym', 'funktioner', 'trigonometri',
       // Derivata & sannolikhet (rad 2)
       'derivata', 'sannolikhet', 'matematik-begrepp-gym',
-      // Övrigt (rad 3)
+      // Logaritmer, potenser & talföljder (rad 3)
+      'logaritmer', 'potenslagar-gym', 'talfoljder',
+      // Linjära & exponentiella samband (rad 4)
+      'rata-linjen-gym', 'exponentialfunktioner', 'kombinatorik',
+      // Statistik (rad 5)
+      'statistik-gym',
+      // Övrigt (rad 6)
       'rimlighetsoevningar-gym',
       // Binära tal
       'binara-tal-gym',

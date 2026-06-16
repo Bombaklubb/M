@@ -1,5 +1,6 @@
 import { Topic } from '../types';
 import { SCIFI_EXTENDED_TOPICS } from './topics-scifi-extended';
+import { GYM_EXTENDED_TOPICS } from './topics-gym-extended';
 
 export const TOPICS: Topic[] = [
   // ============================================================
@@ -697,6 +698,13 @@ export const TOPICS: Topic[] = [
       { id: 'dec-12', type: 'true-false', question: '0,50 = 0,5', isTrue: true, points: 10, explanation: 'Rätt! Nollor i slutet av decimaler påverkar inte värdet.' },
       { id: 'dec-13', type: 'fill-in', question: '3,0 ÷ 2 = ?', answer: '1.5', acceptableAnswers: ['1.5', '1,5'], points: 10, explanation: '3,0 ÷ 2 = 1,5. Dela 3 i 2 lika delar: 1,5 + 1,5 = 3.' },
       { id: 'dec-14', type: 'multiple-choice', question: 'Avrunda 2,6 till närmaste heltal:', options: ['2', '3', '4', '2,5'], correctIndex: 1, points: 10, explanation: '2,6 — decimalen är 6 (≥5) → runda uppåt → 3.' },
+      { id: 'dec-15', type: 'match', question: 'Para ihop bråket med rätt decimaltal.', pairs: [
+        { left: '1/2', right: '0,5' },
+        { left: '1/4', right: '0,25' },
+        { left: '3/4', right: '0,75' },
+        { left: '1/10', right: '0,1' },
+      ], points: 15, explanation: 'Dela täljaren med nämnaren: 1/2=0,5, 1/4=0,25, 3/4=0,75, 1/10=0,1.' },
+      { id: 'dec-16', type: 'order', question: 'Ordna decimaltalen från minst till störst.', items: ['0,1', '0,25', '0,5', '0,75'], orderHint: 'från minst till störst', points: 15, explanation: 'Jämför tiondelar/hundradelar: 0,1 < 0,25 < 0,5 < 0,75.' },
     ],
   },
   {
@@ -2170,6 +2178,9 @@ export const TOPICS: Topic[] = [
   // Extended Sci-Fi topics (Åk 7-9)
   ...SCIFI_EXTENDED_TOPICS,
 
+  // Extended Gymnasium topics (Nivå 10)
+  ...GYM_EXTENDED_TOPICS,
+
   // ============================================================
   // RIMLIGHETSÖVNINGAR – SANT ELLER FALSKT (alla stadier)
   // ============================================================
@@ -3178,6 +3189,12 @@ export const TOPICS: Topic[] = [
       { id: 'hd-8', type: 'multiple-choice', question: 'Lisa har 5 äpplen. Hon vill ha dubbelt så många. Hur många behöver hon totalt?', options: ['7', '8', '10', '12'], correctIndex: 2, points: 10, explanation: 'Dubbelt av 5 = 5 + 5 = 10. Lisa behöver 10 äpplen totalt.' },
       { id: 'hd-9', type: 'fill-in', question: 'Hälften av vilket tal är 6?', answer: '12', points: 10, explanation: 'Om hälften är 6, så är hela talet 6 + 6 = 12. Kolla: hälften av 12 = 6. ✓' },
       { id: 'hd-10', type: 'multiple-choice', question: 'Vad är hälften av 20?', options: ['8', '9', '11', '10'], correctIndex: 3, points: 10, explanation: 'Hälften av 20 = 20 ÷ 2 = 10.' },
+      { id: 'hd-11', type: 'match', question: 'Para ihop talet med sitt dubbla.', pairs: [
+        { left: '2', right: '4' },
+        { left: '3', right: '6' },
+        { left: '4', right: '8' },
+        { left: '5', right: '10' },
+      ], points: 10, explanation: 'Dubbelt = talet + talet: 2→4, 3→6, 4→8, 5→10.' },
     ],
   },
 
@@ -3212,6 +3229,8 @@ export const TOPICS: Topic[] = [
       { id: 'st-8', type: 'fill-in', question: 'Skriv det minsta heltalet som är större än 4.', answer: '5', points: 10, explanation: 'Det minsta heltalet som är större än 4 är 5. Alltså 4 < 5.' },
       { id: 'st-9', type: 'multiple-choice', question: 'Vilka tre tal är i rätt ordning, minst till störst?', options: ['10, 6, 14', '6, 10, 14', '14, 10, 6', '6, 14, 10'], correctIndex: 1, points: 10, explanation: '6 < 10 < 14. Rätt ordning minst till störst: 6, 10, 14.' },
       { id: 'st-10', type: 'true-false', question: '20 > 19. Tjugo är större än nitton.', isTrue: true, points: 10, explanation: 'Sant! 20 är ett mer än 19, så 20 > 19.' },
+      { id: 'st-11', type: 'order', question: 'Dra talen i rätt ordning – minst först.', items: ['2', '5', '8', '11'], orderHint: 'från minst till störst', points: 10, explanation: 'Minst till störst: 2, 5, 8, 11.' },
+      { id: 'st-12', type: 'order', question: 'Ordna talen från störst till minst.', items: ['15', '10', '7', '3'], orderHint: 'från störst till minst', points: 10, explanation: 'Störst till minst: 15, 10, 7, 3.' },
     ],
   },
 

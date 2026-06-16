@@ -61,7 +61,24 @@ export interface ClockSetExercise extends BaseExercise {
   targetMinute: number;  // 0, 5, 10, …, 55
 }
 
-export type Exercise = MultipleChoiceExercise | FillInExercise | TrueFalseExercise | ClockSetExercise;
+export interface OrderExercise extends BaseExercise {
+  type: 'order';
+  items: string[];       // i RÄTT ordning – visas blandade för eleven
+  orderHint?: string;    // t.ex. "minst till störst"
+}
+
+export interface MatchExercise extends BaseExercise {
+  type: 'match';
+  pairs: { left: string; right: string }[]; // visas med högerkolumnen blandad
+}
+
+export type Exercise =
+  | MultipleChoiceExercise
+  | FillInExercise
+  | TrueFalseExercise
+  | ClockSetExercise
+  | OrderExercise
+  | MatchExercise;
 
 // === TOPICS ===
 export interface TopicInstruction {
