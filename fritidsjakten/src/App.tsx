@@ -90,9 +90,6 @@ export default function App() {
                       <Icon size={24} />
                     </div>
                     <div>
-                      <div className="text-[11px] font-bold text-brand-500 uppercase tracking-wide">
-                        Modul {m.nr}
-                      </div>
                       <div className="font-extrabold text-slate-800">{m.namn}</div>
                       <div className="text-sm text-slate-500">{m.beskrivning}</div>
                     </div>
@@ -100,9 +97,12 @@ export default function App() {
                 )
               })}
             </div>
-            <p className="text-center text-xs text-slate-400 mt-8">
-              Fritidsjakten · gjord för fritidshemmets pedagoger och elever
-            </p>
+            <div className="mt-8 text-left text-xs text-slate-400">
+              Kontakt –{' '}
+              <a href="mailto:martin.akdogan@enkoping.se" className="text-brand-600 font-bold hover:underline">
+                martin.akdogan@enkoping.se
+              </a>
+            </div>
           </div>
         )}
 
