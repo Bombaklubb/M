@@ -3,8 +3,13 @@ import { Plus, Trash2, X } from 'lucide-react'
 import { TEMAN } from '../data/teman'
 import type { Aldersgrupp, Tema } from '../types'
 
-const ALDRAR: Aldersgrupp[] = ['F-1', '2-3', '4-6']
+const ALDRAR: Aldersgrupp[] = ['F', '1-3', '4-6']
 const LS_KEY = 'fritids_egna_teman'
+
+// Etikett för en åldersgrupp: F visas som "Förskoleklass", övriga som "Åk X".
+function alderLabel(a: Aldersgrupp): string {
+  return a === 'F' ? 'Förskoleklass' : `Åk ${a}`
+}
 
 function laddaEgna(): Tema[] {
   try {
@@ -17,7 +22,7 @@ function laddaEgna(): Tema[] {
 
 export default function Temabanken() {
   const [egna, setEgna] = useState<Tema[]>(laddaEgna)
-  const [alder, setAlder] = useState<Aldersgrupp>('2-3')
+  const [alder, setAlder] = useState<Aldersgrupp>('1-3')
   const [valtId, setValtId] = useState<string | null>(null)
   const [visaForm, setVisaForm] = useState(false)
 
@@ -60,7 +65,7 @@ export default function Temabanken() {
               onClick={() => { setAlder(a); setValtId(null) }}
               className={`chip ${alder === a ? 'chip-on' : 'chip-off'}`}
             >
-              Åk {a}
+              {alderLabel(a)}
             </button>
           ))}
         </div>
@@ -138,7 +143,7 @@ function EgetTemaForm({
     <div className="fixed inset-0 z-30 bg-black/40 flex items-end sm:items-center justify-center p-4" onClick={onClose}>
       <div className="card p-5 w-full max-w-md animate-slide-up" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-3">
-          <h3 className="font-black text-brand-800">Nytt tema (Åk {alder})</h3>
+          <h3 className="font-black text-brand-800">Nytt tema ({alderLabel(alder)})</h3>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X size={20} /></button>
         </div>
         <div className="space-y-3">
