@@ -220,5 +220,113 @@ export const TEMAN: Tema[] = [
       { titel: 'Pengar och konsumtion', beskrivning: 'Driv en låtsasaffär – öva på att handla, betala och tänka behov vs. vilja.' },
     ],
   },
+
+  // ── Lgr22-förankrade teman för åk 4–6 (NO & SO) ──────────────────────────
+  {
+    id: 'no-biologi-46',
+    namn: 'NO: Biologi – kropp & ekosystem',
+    emoji: '🧬',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Människokroppen och hälsa', beskrivning: 'Stationer om puls, andning och vila – mät hur kroppen reagerar på rörelse.' },
+      { titel: 'Ekosystem, näringskedjor och hållbar utveckling', beskrivning: 'Bygg en näringskedja som lek och samtala om hur allt hänger ihop.' },
+      { titel: 'Djur, växter och deras anpassningar', beskrivning: 'Designa ett påhittat djur som är anpassat till en viss miljö och förklara varför.' },
+      { titel: 'Fältstudie i naturen', beskrivning: 'Inventera en ruta i naturen – räkna och jämför vad som lever där.' },
+    ],
+  },
+  {
+    id: 'no-fysik-46',
+    namn: 'NO: Fysik – energi & rymden',
+    emoji: '🔭',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Krafter och rörelse', beskrivning: 'Bygg kulbanor eller pappersbroar och testa friktion, tyngd och fart.' },
+      { titel: 'Energi och energikällor', beskrivning: 'Sortera energikällor i förnybart/icke förnybart och bygg en liten vind- eller vattenmodell.' },
+      { titel: 'Ljud, ljus och elektricitet', beskrivning: 'Experimentera med ljud, skuggor och enkla strömkretsar.' },
+      { titel: 'Astronomi och solsystemet', beskrivning: 'Bygg en skalmodell av solsystemet ute på skolgården.' },
+    ],
+  },
+  {
+    id: 'no-kemi-46',
+    namn: 'NO: Kemi – ämnen & kretslopp',
+    emoji: '🧪',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Materia och ämnens egenskaper', beskrivning: 'Undersök och klassificera ämnen efter egenskaper (löslighet, magnetism, densitet).' },
+      { titel: 'Blandningar, lösningar och kemiska processer', beskrivning: 'Gör säkra köksexperiment och separera blandningar.' },
+      { titel: 'Vattnets kretslopp', beskrivning: 'Bygg en modell av vattnets kretslopp och förklara avdunstning och nederbörd.' },
+      { titel: 'Kemikalier i vardagen', beskrivning: 'Läs faropiktogram och samtala om hur man hanterar vardagskemikalier säkert.' },
+    ],
+  },
+  {
+    id: 'no-arbetssatt-46',
+    namn: 'NO: Forska & undersök',
+    emoji: '🔬',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Planera och genomföra undersökningar', beskrivning: 'Formulera en hypotes, planera ett test och genomför det steg för steg.' },
+      { titel: 'Dokumentera och utvärdera resultat', beskrivning: 'För protokoll, gör en tabell eller diagram och dra slutsatser.' },
+      { titel: 'Använda naturvetenskapliga begrepp', beskrivning: 'Förklara ett resultat för gruppen med rätt begrepp.' },
+    ],
+  },
+  {
+    id: 'so-geografi-46',
+    namn: 'SO: Geografi – kartor & landskap',
+    emoji: '🌍',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Kartor och geografiska verktyg', beskrivning: 'Orientering med karta och kompass – lös ett uppdrag med väderstreck och skala.' },
+      { titel: 'Sveriges, Europas och världens natur- och kulturlandskap', beskrivning: 'Geografiquiz med kartor – para ihop länder, flaggor och landskap.' },
+      { titel: 'Klimat, miljö och hållbar utveckling', beskrivning: 'Kartlägg fritidshemmets miljöpåverkan och föreslå förbättringar.' },
+      { titel: 'Bygg en landskapsmodell', beskrivning: 'Skapa berg, floder och städer av naturmaterial och förklara kartan.' },
+    ],
+  },
+  {
+    id: 'so-historia-46',
+    namn: 'SO: Historia – Norden & källor',
+    emoji: '⚔️',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Nordens och Sveriges historia', beskrivning: 'Gör en tidslinje över viktiga händelser och placera in dem tillsammans.' },
+      { titel: 'Vikingatiden, medeltiden och stormaktstiden', beskrivning: 'Rollspel eller marknad från en tidsepok – kläder, hantverk och lekar.' },
+      { titel: 'Historiska källor och tidslinjer', beskrivning: 'Undersök gamla bilder eller föremål – vad kan de berätta, och vad saknas?' },
+    ],
+  },
+  {
+    id: 'so-religion-46',
+    namn: 'SO: Religion – världsreligioner & etik',
+    emoji: '☮️',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Kristendomens grunder', beskrivning: 'Utforska högtider, symboler och berättelser och jämför med egna traditioner.' },
+      { titel: 'Judendom, islam, hinduism och buddhism', beskrivning: 'Stationer om världsreligionernas symboler, högtider och byggnader.' },
+      { titel: 'Etiska frågor och livsfrågor', beskrivning: 'Dilemmasamtal: vad är rätt och fel, och varför tycker vi olika?' },
+    ],
+  },
+  {
+    id: 'so-samhalle-46',
+    namn: 'SO: Samhälle – demokrati & ekonomi',
+    emoji: '🗳️',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Demokrati och politiska beslut', beskrivning: 'Håll ett eget fritidsråd – lägg förslag, debattera och rösta.' },
+      { titel: 'Sveriges lagar och rättigheter', beskrivning: 'Samtala om regler och lagar – varför finns de och vem bestämmer?' },
+      { titel: 'Medier och informationsspridning', beskrivning: 'Granska en nyhet eller reklam – vad är fakta, åsikt och påverkan?' },
+      { titel: 'Ekonomi, arbete och konsumtion', beskrivning: 'Planera en budget för en låtsasaktivitet – inkomster, utgifter och val.' },
+    ],
+  },
+  {
+    id: 'so-arbetssatt-46',
+    namn: 'SO: Granska & resonera',
+    emoji: '🔎',
+    aldersgrupper: ['4-6'],
+    aktiviteter: [
+      { titel: 'Granska information och källor', beskrivning: 'Källkritik-lek: är källan trovärdig? Vem säger det och varför?' },
+      { titel: 'Analysera samband mellan människa, samhälle och miljö', beskrivning: 'Rita ett tankekarta-nät över hur ett beslut påverkar flera saker.' },
+      { titel: 'Använda ämnesspecifika begrepp', beskrivning: 'Förklara ett begrepp för gruppen utan att säga själva ordet.' },
+      { titel: 'Resonera kring orsaker och konsekvenser', beskrivning: 'Diskutera "vad händer om...?" och följ kedjan av konsekvenser.' },
+    ],
+  },
 ]
+
 
