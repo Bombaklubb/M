@@ -47,10 +47,14 @@ function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestio
 
   const all: SluttestQuestion[] = [];
   for (const topic of topics) {
+    // Sluttest stödjer endast snabbrättade typer – hoppa över ordna/para-ihop
+    const renderable = topic.exercises.filter(
+      ex => ex.type !== 'order' && ex.type !== 'match'
+    );
     // For lågstadiet: only pick from the easier first 60% of each topic's exercises
     const pool = easierPool
-      ? topic.exercises.slice(0, Math.max(3, Math.ceil(topic.exercises.length * 0.6)))
-      : topic.exercises;
+      ? renderable.slice(0, Math.max(3, Math.ceil(renderable.length * 0.6)))
+      : renderable;
     for (const ex of shuffle(pool).slice(0, qPerTopic)) {
       all.push({ exercise: ex, topic });
     }

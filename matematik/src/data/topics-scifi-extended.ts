@@ -75,6 +75,13 @@ export const SCIFI_EXTENDED_TOPICS: Topic[] = [
       { id: 'ntl-10', type: 'multiple-choice', question: 'Temperatur: −7°C på morgonen, +5°C på dagen. Skillnad?', options: ['2°C', '12°C', '−2°C', '−12°C'], correctIndex: 1, points: 10, explanation: '5 − (−7) = 5 + 7 = 12°C.' },
       { id: 'ntl-11', type: 'fill-in', question: '(−2)³ = ?', answer: '-8', acceptableAnswers: ['−8'], points: 15, explanation: '(−2)³ = (−2) × (−2) × (−2) = 4 × (−2) = −8.' },
       { id: 'ntl-12', type: 'multiple-choice', question: '−20 ÷ 4 + 3 = ?', options: ['−2', '2', '−5', '5'], correctIndex: 0, points: 15, explanation: '−20 ÷ 4 = −5. −5 + 3 = −2.' },
+      { id: 'ntl-13', type: 'order', question: 'Ordna talen från minst till störst på tallinjen.', items: ['−8', '−3', '0', '2', '5'], orderHint: 'från minst till störst', points: 15, explanation: 'På tallinjen: −8 < −3 < 0 < 2 < 5.' },
+      { id: 'ntl-14', type: 'match', question: 'Para ihop uträkningen med rätt svar.', pairs: [
+        { left: '−3 + 5', right: '2' },
+        { left: '−4 × 2', right: '−8' },
+        { left: '(−3) × (−4)', right: '12' },
+        { left: '6 − (−1)', right: '7' },
+      ], points: 15, explanation: 'Räkna ut varje uttryck och para ihop med dess värde.' },
     ],
   },
 
