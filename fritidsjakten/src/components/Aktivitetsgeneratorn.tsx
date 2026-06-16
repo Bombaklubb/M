@@ -40,7 +40,7 @@ export default function Aktivitetsgeneratorn() {
 
   return (
     <div className="animate-slide-up space-y-5">
-      <div className="card p-4 space-y-4">
+      <div className="card p-4 space-y-4 no-print">
         {/* Plats */}
         <div>
           <div className="flex items-center gap-1.5 text-sm font-bold text-slate-600 mb-2">

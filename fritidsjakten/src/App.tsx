@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   Sparkles, Library, Wand2, HeartHandshake, Layers, CalendarDays, Activity,
-  ArrowLeft,
+  ArrowLeft, Printer,
 } from 'lucide-react'
 import Temabanken from './components/Temabanken'
 import Aktivitetsgeneratorn from './components/Aktivitetsgeneratorn'
@@ -44,7 +44,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
-      <header className="sticky top-0 z-20 backdrop-blur bg-white/70 border-b border-brand-100">
+      <header className="sticky top-0 z-20 backdrop-blur bg-white/70 border-b border-brand-100 no-print">
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
           {aktiv !== 'hem' ? (
             <button
@@ -59,7 +59,7 @@ export default function App() {
               <Sparkles size={20} />
             </div>
           )}
-          <div className="leading-tight">
+          <div className="leading-tight flex-1">
             <h1 className="text-lg font-black text-brand-800">
               {aktiv === 'hem' ? 'Fritidsjakten' : aktuell?.namn}
             </h1>
@@ -67,8 +67,23 @@ export default function App() {
               {aktiv === 'hem' ? 'Aktiviteter för fritids' : `Modul ${aktuell?.nr}`}
             </p>
           </div>
+          <button
+            onClick={() => window.print()}
+            className="btn-soft !py-2 !px-3 flex items-center gap-1.5 shrink-0"
+            aria-label="Skriv ut"
+          >
+            <Printer size={18} /> <span className="hidden sm:inline">Skriv ut</span>
+          </button>
         </div>
       </header>
+
+      {/* Synlig rubrik vid utskrift (headern döljs i print) */}
+      <div className="hidden print:block mb-4">
+        <h1 className="text-2xl font-black text-brand-800">Fritidsjakten</h1>
+        <p className="text-sm text-slate-500">
+          {aktiv === 'hem' ? 'Aktiviteter för fritids' : aktuell?.namn}
+        </p>
+      </div>
 
       <main className="max-w-3xl mx-auto px-4 py-6">
         {aktiv === 'hem' && (

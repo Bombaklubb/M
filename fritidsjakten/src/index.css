@@ -50,3 +50,29 @@
     @apply bg-white/70 text-slate-600 border-slate-200 hover:border-brand-300;
   }
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  .card {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+    break-inside: avoid;
+  }
+
+  /* Undvik att kort och listrader bryts mitt itu vid sidbrytning */
+  li, .card {
+    page-break-inside: avoid;
+  }
+}
