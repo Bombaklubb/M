@@ -10,6 +10,8 @@
     "matematik:dev": "cd matematik && npm run dev",
     "matematik:build": "cd matematik && npm run build",
     "engelska:dev": "cd engelska && npm run dev",
-    "engelska:build": "cd engelska && npm run build"
+    "engelska:build": "cd engelska && npm run build",
+    "fritids:dev": "cd fritidsjakten && npm run dev",
+    "fritids:build": "cd fritidsjakten && npm run build"
   }
 }

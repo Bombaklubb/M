@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 35%, #ecfeff 65%, #f0fdfa 100%);
+    background-attachment: fixed;
+    color: #0f172a;
+    overscroll-behavior: none;
+  }
+}
+
+@layer components {
+  .card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 6px 24px rgba(14, 165, 233, 0.10);
+    @apply rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply text-white font-extrabold py-3 px-6 rounded-2xl transition-all active:scale-95 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed;
+    background: linear-gradient(180deg, #0ea5e9 0%, #0369a1 100%);
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+  }
+
+  .btn-soft {
+    @apply font-bold py-2.5 px-5 rounded-xl transition-all active:scale-95 bg-white/80 text-brand-700 border border-brand-200 hover:bg-white;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-bold transition-all active:scale-95 cursor-pointer select-none border;
+  }
+
+  .chip-on {
+    @apply bg-brand-500 text-white border-brand-500 shadow;
+  }
+
+  .chip-off {
+    @apply bg-white/70 text-slate-600 border-slate-200 hover:border-brand-300;
+  }
+}
