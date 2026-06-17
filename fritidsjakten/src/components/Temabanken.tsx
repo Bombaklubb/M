@@ -95,6 +95,11 @@ export default function Temabanken() {
             <span className="text-2xl">{valt.emoji}</span>
             <h2 className="text-lg font-black text-brand-800">{valt.namn}</h2>
           </div>
+          {valt.laroplan && (
+            <div className="mb-3 rounded-xl bg-amber-50 border border-amber-200 p-3 text-sm text-amber-900">
+              <span className="font-bold">📚 Läroplanskoppling:</span> {valt.laroplan}
+            </div>
+          )}
           <ul className="space-y-2">
             {valt.aktiviteter.map((a, i) => (
               <li key={i} className="rounded-xl bg-brand-50/60 p-3">

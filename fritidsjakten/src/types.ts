@@ -11,6 +11,8 @@ export interface Tema {
   namn: string
   emoji: string
   aktiviteter: TemaAktivitet[]
+  // Valfri koppling till Lgr22 (fritidshemmets centrala innehåll och/eller kursplaner).
+  laroplan?: string
 }
 
 // Modul 2 – Aktivitetsgeneratorn / Veckoplaneraren
