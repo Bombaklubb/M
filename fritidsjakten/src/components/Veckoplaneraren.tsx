@@ -25,49 +25,67 @@ function valjAktivitet(kategori: Kategori, elever: number, frö: number): Aktivi
   return fallback[frö % fallback.length]
 }
 
+function arskursLabel(a: string): string {
+  return a === 'F' ? 'F-klass' : `Åk ${a}`
+}
+
 export default function Veckoplaneraren() {
-  const [arskurs, setArskurs] = useState('3')
-  const [temaId, setTemaId] = useState(TEMAN[0].id)
+  const [arskurser, setArskurser] = useState<string[]>(['2', '3'])
+  const [temaIds, setTemaIds] = useState<string[]>([TEMAN[0].id])
   const [elever, setElever] = useState(20)
   const [frö, setFrö] = useState(0)
   const [genererad, setGenererad] = useState(false)
 
-  const tema = TEMAN.find((t) => t.id === temaId)!
+  const valdaTeman = useMemo(
+    () => TEMAN.filter((t) => temaIds.includes(t.id)),
+    [temaIds],
+  )
 
   const schema = useMemo(() => {
+    if (valdaTeman.length === 0) return []
     return DAGAR.map((d, i) => {
       const akt = valjAktivitet(d.kategori, elever, frö + i)
-      // Koppla in temats egna aktivitet om någon passar dagens fokus.
+      // Rotera mellan valda teman så att alla kommer med under veckan.
+      const tema = valdaTeman[i % valdaTeman.length]
       const temaAkt = tema.aktiviteter[(frö + i) % tema.aktiviteter.length]
-      return { ...d, akt, temaTips: temaAkt }
+      return { ...d, akt, tema, temaTips: temaAkt }
     })
-  }, [elever, frö, tema])
+  }, [elever, frö, valdaTeman])
+
+  function toggleArskurs(a: string) {
+    setArskurser((arr) => (arr.includes(a) ? arr.filter((x) => x !== a) : [...arr, a]))
+  }
+
+  function toggleTema(id: string) {
+    setTemaIds((arr) => (arr.includes(id) ? arr.filter((x) => x !== id) : [...arr, id]))
+  }
+
+  const kanGenerera = arskurser.length > 0 && temaIds.length > 0
+  const valdaArskurserSorterade = ARSKURSER.filter((a) => arskurser.includes(a))
 
   return (
     <div className="animate-slide-up space-y-5">
       <div className="card p-4 space-y-4 no-print">
         <div>
-          <div className="text-sm font-bold text-slate-600 mb-2">Årskurs</div>
+          <div className="text-sm font-bold text-slate-600 mb-2">Årskurs <span className="font-normal text-slate-400">(välj en eller flera)</span></div>
           <div className="flex gap-2 flex-wrap">
             {ARSKURSER.map((a) => (
-              <button key={a} onClick={() => setArskurs(a)} className={`chip ${arskurs === a ? 'chip-on' : 'chip-off'}`}>
-                {a === 'F' ? 'Förskoleklass' : `Åk ${a}`}
+              <button key={a} onClick={() => toggleArskurs(a)} className={`chip ${arskurser.includes(a) ? 'chip-on' : 'chip-off'}`}>
+                {arskursLabel(a)}
               </button>
             ))}
           </div>
         </div>
 
         <div>
-          <div className="text-sm font-bold text-slate-600 mb-2">Tema</div>
-          <select
-            value={temaId}
-            onChange={(e) => setTemaId(e.target.value)}
-            className="w-full rounded-xl border border-slate-200 px-3 py-2.5 font-bold bg-white"
-          >
+          <div className="text-sm font-bold text-slate-600 mb-2">Tema <span className="font-normal text-slate-400">(välj en eller flera)</span></div>
+          <div className="flex gap-2 flex-wrap">
             {TEMAN.map((t) => (
-              <option key={t.id} value={t.id}>{t.emoji} {t.namn}</option>
+              <button key={t.id} onClick={() => toggleTema(t.id)} className={`chip ${temaIds.includes(t.id) ? 'chip-on' : 'chip-off'}`}>
+                {t.emoji} {t.namn}
+              </button>
             ))}
-          </select>
+          </div>
         </div>
 
         <div>
@@ -80,20 +98,29 @@ export default function Veckoplaneraren() {
 
         <button
           onClick={() => { setGenererad(true); setFrö((f) => f + 1) }}
+          disabled={!kanGenerera}
           className="btn-primary w-full flex items-center justify-center gap-2"
         >
           {genererad ? <RefreshCw size={18} /> : <CalendarDays size={18} />}
           {genererad ? 'Generera ny vecka' : 'Generera veckoschema'}
         </button>
+        {!kanGenerera && (
+          <p className="text-xs text-slate-400 text-center">Välj minst en årskurs och ett tema.</p>
+        )}
       </div>
 
-      {genererad && (
+      {genererad && schema.length > 0 && (
         <div className="space-y-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between gap-3">
             <div className="text-sm text-slate-600">
-              <span className="font-bold">{tema.emoji} {tema.namn}</span> · {arskurs === 'F' ? 'Förskoleklass' : `Åk ${arskurs}`} · {elever} elever
+              <div className="font-bold">
+                {valdaArskurserSorterade.map(arskursLabel).join(', ')} · {elever} elever
+              </div>
+              <div className="text-slate-500">
+                {valdaTeman.map((t) => `${t.emoji} ${t.namn}`).join(' · ')}
+              </div>
             </div>
-            <button onClick={() => window.print()} className="btn-soft !py-1.5 !px-3 flex items-center gap-1 text-sm no-print">
+            <button onClick={() => window.print()} className="btn-soft !py-1.5 !px-3 flex items-center gap-1 text-sm shrink-0 no-print">
               <Printer size={15} /> Skriv ut
             </button>
           </div>
@@ -111,7 +138,7 @@ export default function Veckoplaneraren() {
                   ⏱ {s.akt.minMinuter}–{s.akt.maxMinuter} min · {s.akt.material.length ? s.akt.material.join(', ') : 'inget material'}
                 </div>
                 <div className="text-xs text-brand-600 mt-1.5 bg-brand-50 rounded-lg px-2 py-1 inline-block">
-                  💡 Temakoppling: {s.temaTips.titel}
+                  {s.tema.emoji} {s.tema.namn}: {s.temaTips.titel}
                 </div>
               </div>
             </div>
