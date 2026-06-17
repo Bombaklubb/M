@@ -1,14 +1,14 @@
 import type { Tema } from '../types'
 
 // Modul 1 – Temabanken
-// Färdiga teman med aktivitetsförslag. Skolans egna teman läggs till i appen
-// och sparas i localStorage (se Temabanken.tsx).
+// Varje tema samlar alla sina aktiviteter (passar förskoleklass upp till åk 6).
+// Aktiviteterna är ordnade ungefär från enklare till mer avancerade.
+// Skolans egna teman läggs till i appen och sparas i localStorage (se Temabanken.tsx).
 export const TEMAN: Tema[] = [
   {
     id: 'hallbar-utveckling',
     namn: 'Hållbar utveckling',
     emoji: '♻️',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Bygg återvinningsmaskiner', beskrivning: 'Bygg en låtsasmaskin av kartong och förpackningar som sorterar skräp.' },
       { titel: 'Sorteringsstafett', beskrivning: 'Lagen springer och sorterar (rena, torra) sopor i rätt återvinningstunna på tid.' },
@@ -21,7 +21,6 @@ export const TEMAN: Tema[] = [
     id: 'rymden',
     namn: 'Rymden',
     emoji: '🚀',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Bygg en raket', beskrivning: 'Konstruera en raket av rör, papper och tejp – vems flyger längst?' },
       { titel: 'Planetstafett', beskrivning: 'Spring mellan planeterna i rätt ordning från solen och ut.' },
@@ -34,7 +33,6 @@ export const TEMAN: Tema[] = [
     id: 'havet',
     namn: 'Havet',
     emoji: '🌊',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Hela havet stormar', beskrivning: 'Klassikern med stolar – en stol färre varje runda.' },
       { titel: 'Fiska skräp', beskrivning: 'Fiska upp "plast" (papperslappar) ur havet med metspö av pinne och snöre.' },
@@ -47,7 +45,6 @@ export const TEMAN: Tema[] = [
     id: 'riddartiden',
     namn: 'Riddartiden',
     emoji: '🏰',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Bygg en borg', beskrivning: 'Bygg en borg av kuddar, kartong eller klossar.' },
       { titel: 'Riddarbana', beskrivning: 'Hinderbana där man tränar till riddare/väpnare.' },
@@ -60,7 +57,6 @@ export const TEMAN: Tema[] = [
     id: 'kanslor-vanskap',
     namn: 'Känslor & vänskap',
     emoji: '💛',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Känslocharader', beskrivning: 'Visa en känsla med kroppen – de andra gissar.' },
       { titel: 'Komplimangcirkel', beskrivning: 'Sitt i ring och ge personen bredvid en ärlig komplimang.' },
@@ -73,7 +69,6 @@ export const TEMAN: Tema[] = [
     id: 'varen',
     namn: 'Våren',
     emoji: '🌱',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Plantera frön', beskrivning: 'Så frön i krukor och följ hur de växer veckorna framåt.' },
       { titel: 'Vårtecken-jakt', beskrivning: 'Leta vårtecken ute: knoppar, fåglar, insekter.' },
@@ -86,7 +81,6 @@ export const TEMAN: Tema[] = [
     id: 'sommaren',
     namn: 'Sommar',
     emoji: '☀️',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Vattenstafett', beskrivning: 'Bär vatten i svamp eller mugg till lagets hink – minst spill vinner.' },
       { titel: 'Insektssafari', beskrivning: 'Leta småkryp med lupp och bestäm vad ni hittar tillsammans.' },
@@ -99,7 +93,6 @@ export const TEMAN: Tema[] = [
     id: 'hosten',
     namn: 'Höst',
     emoji: '🍂',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Lövjakt & lövkonst', beskrivning: 'Samla löv i olika färger och gör tavlor eller kransar.' },
       { titel: 'Svamp- och bärquiz', beskrivning: 'Lär er vilka svampar och bär man får plocka – och vilka man inte ska röra.' },
@@ -112,7 +105,6 @@ export const TEMAN: Tema[] = [
     id: 'vintern',
     namn: 'Vintern',
     emoji: '❄️',
-    aldersgrupper: ['F', '1-3', '4-6'],
     aktiviteter: [
       { titel: 'Snöskulpturer', beskrivning: 'Bygg figurer och skulpturer av snö i lag.' },
       { titel: 'Spårjakt i snön', beskrivning: 'Följ spår i snön – vem eller vilket djur gick här?' },
@@ -122,112 +114,15 @@ export const TEMAN: Tema[] = [
     ],
   },
 
-  // ── Lgr22-förankrade teman för åk 1–3 (NO & SO) ──────────────────────────
-  // Aktiviteterna är fritidsanpassade ingångar till det centrala innehållet.
+  // ── Lgr22-förankrade ämnesteman (NO & SO) – aktiviteter från förskoleklass till åk 6 ──
   {
     id: 'no-biologi',
-    namn: 'NO: Biologi – natur & liv',
+    namn: 'NO: Biologi',
     emoji: '🐛',
-    aldersgrupper: ['1-3'],
     aktiviteter: [
       { titel: 'Naturen och årstidernas växlingar', beskrivning: 'Följ samma träd eller plats över tid och dokumentera hur den förändras med årstiderna.' },
       { titel: 'Djur, växter och deras livsmiljöer', beskrivning: 'Gå på upptäcktsfärd och para ihop djur och växter med var de bor.' },
       { titel: 'Kropp och hälsa', beskrivning: 'Rörelselekar och samtal om vila, mat och känslor – vad kroppen behöver för att må bra.' },
-      { titel: 'Enkla undersökningar', beskrivning: 'Plantera frön i olika förhållanden (ljus/mörker, vatten/torrt) och se vad som händer.' },
-    ],
-  },
-  {
-    id: 'no-kemi',
-    namn: 'NO: Kemi – material & ämnen',
-    emoji: '⚗️',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Material och ämnen i vardagen', beskrivning: 'Sortera föremål efter material (trä, metall, plast, tyg) och prata om egenskaper.' },
-      { titel: 'Fast, flytande och gas', beskrivning: 'Smält is och frys vatten – undersök hur ämnen ändrar form.' },
-      { titel: 'Blanda och lösa', beskrivning: 'Testa vad som löser sig i vatten (socker, salt, sand) och samtala om resultatet.' },
-      { titel: 'Ren eller smutsig?', beskrivning: 'Enkla experiment om vatten och rening – varför vi sorterar och återvinner.' },
-    ],
-  },
-  {
-    id: 'no-fysik',
-    namn: 'NO: Fysik – kraft, ljus & ljud',
-    emoji: '🧲',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Kraft och rörelse', beskrivning: 'Bygg en kulbana eller testa hur saker rullar i backe – vad får dem att röra sig?' },
-      { titel: 'Ljus och skugga', beskrivning: 'Gör skuggteater och undersök hur skuggor ändras med ljusets riktning.' },
-      { titel: 'Ljud och vibrationer', beskrivning: 'Bygg egna instrument av burkar och gummiband och utforska höga och låga ljud.' },
-      { titel: 'Energi i vardagen', beskrivning: 'Prata om var energi kommer ifrån och lek lekar som visar fart och stopp.' },
-    ],
-  },
-  {
-    id: 'no-so-arbetssatt',
-    namn: 'Forska & dokumentera',
-    emoji: '🔬',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Undersöka, ställa frågor och samtala', beskrivning: 'Välj något att utforska, gissa tillsammans och prata om vad ni tror händer.' },
-      { titel: 'Enkla undersökningar och experiment', beskrivning: 'Gör ett experiment steg för steg – jämför vad ni trodde med vad som hände.' },
-      { titel: 'Använda begrepp och enkla källor', beskrivning: 'Slå upp ett ord i en bok eller på en bild och förklara det med egna ord.' },
-      { titel: 'Dokumentera observationer och resultat', beskrivning: 'Rita, fota eller skriv ner vad ni märkte – gör en gemensam forskartavla.' },
-    ],
-  },
-  {
-    id: 'so-geografi',
-    namn: 'SO: Geografi – närområde & väder',
-    emoji: '🗺️',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Närområdet och kartor', beskrivning: 'Rita en egen karta över skolgården och gör en skattjakt med kartan.' },
-      { titel: 'Väder, årstider och naturmiljöer', beskrivning: 'För väderdagbok i en vecka och jämför olika dagar.' },
-      { titel: 'Väderstreck', beskrivning: 'Lär er norr/söder/öster/väster genom en orienteringslek ute.' },
-      { titel: 'Vår plats', beskrivning: 'Bygg en modell av närområdet med klossar eller naturmaterial.' },
-    ],
-  },
-  {
-    id: 'so-historia',
-    namn: 'SO: Historia – då, nu & sedan',
-    emoji: '⏳',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Tidsbegrepp: dåtid, nutid, framtid', beskrivning: 'Gör en tidslinje med bilder: förr, nu och hur ni tror det blir i framtiden.' },
-      { titel: 'Familjens historia', beskrivning: 'Berätta om någon i familjen och något de gjorde när de var barn.' },
-      { titel: 'Platsens historia', beskrivning: 'Ta reda på hur skolan eller orten såg ut förr och jämför med idag.' },
-      { titel: 'Förr i tidens lekar', beskrivning: 'Prova lekar som barn lekte förr – jämför med dagens lekar.' },
-    ],
-  },
-  {
-    id: 'so-religion',
-    namn: 'SO: Religion – högtider & livsfrågor',
-    emoji: '🕊️',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Högtider och traditioner', beskrivning: 'Utforska olika högtider under året och skapa något som hör till en av dem.' },
-      { titel: 'Berättelser', beskrivning: 'Lyssna på en berättelse och samtala om vad den vill säga.' },
-      { titel: 'Livsfrågor om rätt och fel', beskrivning: 'Diskutera kluriga vardagssituationer – vad är schyst att göra?' },
-      { titel: 'Vad är viktigt för oss?', beskrivning: 'Prata om vad som gör en bra kompis och vad som känns rättvist.' },
-    ],
-  },
-  {
-    id: 'so-samhalle',
-    namn: 'SO: Samhälle – regler & rättigheter',
-    emoji: '🏛️',
-    aldersgrupper: ['1-3'],
-    aktiviteter: [
-      { titel: 'Regler och demokrati i vardagen', beskrivning: 'Rösta fram en gemensam lek eller regel – alla röster räknas lika.' },
-      { titel: 'Barns rättigheter', beskrivning: 'Samtala om barnkonventionen och rita vad alla barn har rätt till.' },
-      { titel: 'Yrken och samhällsfunktioner', beskrivning: 'Lek olika yrken och prata om vilka som hjälper oss i samhället.' },
-      { titel: 'Pengar och konsumtion', beskrivning: 'Driv en låtsasaffär – öva på att handla, betala och tänka behov vs. vilja.' },
-    ],
-  },
-
-  // ── Lgr22-förankrade teman för åk 4–6 (NO & SO) ──────────────────────────
-  {
-    id: 'no-biologi-46',
-    namn: 'NO: Biologi – kropp & ekosystem',
-    emoji: '🧬',
-    aldersgrupper: ['4-6'],
-    aktiviteter: [
       { titel: 'Människokroppen och hälsa', beskrivning: 'Stationer om puls, andning och vila – mät hur kroppen reagerar på rörelse.' },
       { titel: 'Ekosystem, näringskedjor och hållbar utveckling', beskrivning: 'Bygg en näringskedja som lek och samtala om hur allt hänger ihop.' },
       { titel: 'Djur, växter och deras anpassningar', beskrivning: 'Designa ett påhittat djur som är anpassat till en viss miljö och förklara varför.' },
@@ -235,23 +130,13 @@ export const TEMAN: Tema[] = [
     ],
   },
   {
-    id: 'no-fysik-46',
-    namn: 'NO: Fysik – energi & rymden',
-    emoji: '🔭',
-    aldersgrupper: ['4-6'],
+    id: 'no-kemi',
+    namn: 'NO: Kemi',
+    emoji: '⚗️',
     aktiviteter: [
-      { titel: 'Krafter och rörelse', beskrivning: 'Bygg kulbanor eller pappersbroar och testa friktion, tyngd och fart.' },
-      { titel: 'Energi och energikällor', beskrivning: 'Sortera energikällor i förnybart/icke förnybart och bygg en liten vind- eller vattenmodell.' },
-      { titel: 'Ljud, ljus och elektricitet', beskrivning: 'Experimentera med ljud, skuggor och enkla strömkretsar.' },
-      { titel: 'Astronomi och solsystemet', beskrivning: 'Bygg en skalmodell av solsystemet ute på skolgården.' },
-    ],
-  },
-  {
-    id: 'no-kemi-46',
-    namn: 'NO: Kemi – ämnen & kretslopp',
-    emoji: '🧪',
-    aldersgrupper: ['4-6'],
-    aktiviteter: [
+      { titel: 'Material och ämnen i vardagen', beskrivning: 'Sortera föremål efter material (trä, metall, plast, tyg) och prata om egenskaper.' },
+      { titel: 'Fast, flytande och gas', beskrivning: 'Smält is och frys vatten – undersök hur ämnen ändrar form.' },
+      { titel: 'Blanda och lösa', beskrivning: 'Testa vad som löser sig i vatten (socker, salt, sand) och samtala om resultatet.' },
       { titel: 'Materia och ämnens egenskaper', beskrivning: 'Undersök och klassificera ämnen efter egenskaper (löslighet, magnetism, densitet).' },
       { titel: 'Blandningar, lösningar och kemiska processer', beskrivning: 'Gör säkra köksexperiment och separera blandningar.' },
       { titel: 'Vattnets kretslopp', beskrivning: 'Bygg en modell av vattnets kretslopp och förklara avdunstning och nederbörd.' },
@@ -259,74 +144,90 @@ export const TEMAN: Tema[] = [
     ],
   },
   {
-    id: 'no-arbetssatt-46',
+    id: 'no-fysik',
+    namn: 'NO: Fysik',
+    emoji: '🧲',
+    aktiviteter: [
+      { titel: 'Kraft och rörelse', beskrivning: 'Bygg en kulbana eller testa hur saker rullar i backe – vad får dem att röra sig?' },
+      { titel: 'Ljus och skugga', beskrivning: 'Gör skuggteater och undersök hur skuggor ändras med ljusets riktning.' },
+      { titel: 'Ljud och vibrationer', beskrivning: 'Bygg egna instrument av burkar och gummiband och utforska höga och låga ljud.' },
+      { titel: 'Energi och energikällor', beskrivning: 'Sortera energikällor i förnybart/icke förnybart och bygg en liten vind- eller vattenmodell.' },
+      { titel: 'Ljud, ljus och elektricitet', beskrivning: 'Experimentera med ljud, skuggor och enkla strömkretsar.' },
+      { titel: 'Astronomi och solsystemet', beskrivning: 'Bygg en skalmodell av solsystemet ute på skolgården.' },
+    ],
+  },
+  {
+    id: 'no-arbetssatt',
     namn: 'NO: Forska & undersök',
     emoji: '🔬',
-    aldersgrupper: ['4-6'],
     aktiviteter: [
+      { titel: 'Undersöka, ställa frågor och samtala', beskrivning: 'Välj något att utforska, gissa tillsammans och prata om vad ni tror händer.' },
       { titel: 'Planera och genomföra undersökningar', beskrivning: 'Formulera en hypotes, planera ett test och genomför det steg för steg.' },
       { titel: 'Dokumentera och utvärdera resultat', beskrivning: 'För protokoll, gör en tabell eller diagram och dra slutsatser.' },
       { titel: 'Använda naturvetenskapliga begrepp', beskrivning: 'Förklara ett resultat för gruppen med rätt begrepp.' },
     ],
   },
   {
-    id: 'so-geografi-46',
-    namn: 'SO: Geografi – kartor & landskap',
-    emoji: '🌍',
-    aldersgrupper: ['4-6'],
+    id: 'so-geografi',
+    namn: 'SO: Geografi',
+    emoji: '🗺️',
     aktiviteter: [
+      { titel: 'Närområdet och kartor', beskrivning: 'Rita en egen karta över skolgården och gör en skattjakt med kartan.' },
+      { titel: 'Väder, årstider och naturmiljöer', beskrivning: 'För väderdagbok i en vecka och jämför olika dagar.' },
+      { titel: 'Väderstreck', beskrivning: 'Lär er norr/söder/öster/väster genom en orienteringslek ute.' },
       { titel: 'Kartor och geografiska verktyg', beskrivning: 'Orientering med karta och kompass – lös ett uppdrag med väderstreck och skala.' },
       { titel: 'Sveriges, Europas och världens natur- och kulturlandskap', beskrivning: 'Geografiquiz med kartor – para ihop länder, flaggor och landskap.' },
       { titel: 'Klimat, miljö och hållbar utveckling', beskrivning: 'Kartlägg fritidshemmets miljöpåverkan och föreslå förbättringar.' },
-      { titel: 'Bygg en landskapsmodell', beskrivning: 'Skapa berg, floder och städer av naturmaterial och förklara kartan.' },
     ],
   },
   {
-    id: 'so-historia-46',
-    namn: 'SO: Historia – Norden & källor',
-    emoji: '⚔️',
-    aldersgrupper: ['4-6'],
+    id: 'so-historia',
+    namn: 'SO: Historia',
+    emoji: '⏳',
     aktiviteter: [
+      { titel: 'Tidsbegrepp: dåtid, nutid, framtid', beskrivning: 'Gör en tidslinje med bilder: förr, nu och hur ni tror det blir i framtiden.' },
+      { titel: 'Familjens och platsens historia', beskrivning: 'Berätta om någon i familjen och ta reda på hur orten såg ut förr.' },
+      { titel: 'Förr i tidens lekar', beskrivning: 'Prova lekar som barn lekte förr – jämför med dagens lekar.' },
       { titel: 'Nordens och Sveriges historia', beskrivning: 'Gör en tidslinje över viktiga händelser och placera in dem tillsammans.' },
       { titel: 'Vikingatiden, medeltiden och stormaktstiden', beskrivning: 'Rollspel eller marknad från en tidsepok – kläder, hantverk och lekar.' },
       { titel: 'Historiska källor och tidslinjer', beskrivning: 'Undersök gamla bilder eller föremål – vad kan de berätta, och vad saknas?' },
     ],
   },
   {
-    id: 'so-religion-46',
-    namn: 'SO: Religion – världsreligioner & etik',
-    emoji: '☮️',
-    aldersgrupper: ['4-6'],
+    id: 'so-religion',
+    namn: 'SO: Religionskunskap',
+    emoji: '🕊️',
     aktiviteter: [
+      { titel: 'Högtider, traditioner och berättelser', beskrivning: 'Utforska olika högtider under året och skapa något som hör till en av dem.' },
+      { titel: 'Livsfrågor om rätt och fel', beskrivning: 'Dilemmasamtal: vad är rätt och fel, och varför tycker vi olika?' },
       { titel: 'Kristendomens grunder', beskrivning: 'Utforska högtider, symboler och berättelser och jämför med egna traditioner.' },
       { titel: 'Judendom, islam, hinduism och buddhism', beskrivning: 'Stationer om världsreligionernas symboler, högtider och byggnader.' },
-      { titel: 'Etiska frågor och livsfrågor', beskrivning: 'Dilemmasamtal: vad är rätt och fel, och varför tycker vi olika?' },
+      { titel: 'Etiska frågor och livsfrågor', beskrivning: 'Samtala om kluriga frågor – hur vill vi vara mot varandra?' },
     ],
   },
   {
-    id: 'so-samhalle-46',
-    namn: 'SO: Samhälle – demokrati & ekonomi',
-    emoji: '🗳️',
-    aldersgrupper: ['4-6'],
+    id: 'so-samhalle',
+    namn: 'SO: Samhällskunskap',
+    emoji: '🏛️',
     aktiviteter: [
+      { titel: 'Regler och demokrati i vardagen', beskrivning: 'Rösta fram en gemensam lek eller regel – alla röster räknas lika.' },
+      { titel: 'Barns rättigheter', beskrivning: 'Samtala om barnkonventionen och rita vad alla barn har rätt till.' },
+      { titel: 'Yrken och samhällsfunktioner', beskrivning: 'Lek olika yrken och prata om vilka som hjälper oss i samhället.' },
       { titel: 'Demokrati och politiska beslut', beskrivning: 'Håll ett eget fritidsråd – lägg förslag, debattera och rösta.' },
       { titel: 'Sveriges lagar och rättigheter', beskrivning: 'Samtala om regler och lagar – varför finns de och vem bestämmer?' },
       { titel: 'Medier och informationsspridning', beskrivning: 'Granska en nyhet eller reklam – vad är fakta, åsikt och påverkan?' },
-      { titel: 'Ekonomi, arbete och konsumtion', beskrivning: 'Planera en budget för en låtsasaktivitet – inkomster, utgifter och val.' },
+      { titel: 'Pengar, ekonomi och konsumtion', beskrivning: 'Driv en låtsasaffär eller planera en budget – behov vs. vilja.' },
     ],
   },
   {
-    id: 'so-arbetssatt-46',
+    id: 'so-arbetssatt',
     namn: 'SO: Granska & resonera',
     emoji: '🔎',
-    aldersgrupper: ['4-6'],
     aktiviteter: [
+      { titel: 'Använda begrepp och enkla källor', beskrivning: 'Slå upp ett ord i en bok eller på en bild och förklara det med egna ord.' },
       { titel: 'Granska information och källor', beskrivning: 'Källkritik-lek: är källan trovärdig? Vem säger det och varför?' },
-      { titel: 'Analysera samband mellan människa, samhälle och miljö', beskrivning: 'Rita ett tankekarta-nät över hur ett beslut påverkar flera saker.' },
-      { titel: 'Använda ämnesspecifika begrepp', beskrivning: 'Förklara ett begrepp för gruppen utan att säga själva ordet.' },
+      { titel: 'Analysera samband mellan människa, samhälle och miljö', beskrivning: 'Rita en tankekarta över hur ett beslut påverkar flera saker.' },
       { titel: 'Resonera kring orsaker och konsekvenser', beskrivning: 'Diskutera "vad händer om...?" och följ kedjan av konsekvenser.' },
     ],
   },
 ]
-
-

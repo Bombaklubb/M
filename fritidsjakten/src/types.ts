@@ -1,7 +1,5 @@
 // Gemensamma typer för Fritidsjakten
 
-export type Aldersgrupp = 'F' | '1-3' | '4-6'
-
 // Modul 1 – Temabanken
 export interface TemaAktivitet {
   titel: string
@@ -12,7 +10,6 @@ export interface Tema {
   id: string
   namn: string
   emoji: string
-  aldersgrupper: Aldersgrupp[]
   aktiviteter: TemaAktivitet[]
 }
 

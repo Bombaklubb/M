@@ -1,20 +1,21 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Plus, Trash2, X } from 'lucide-react'
 import { TEMAN } from '../data/teman'
-import type { Aldersgrupp, Tema } from '../types'
+import type { Tema } from '../types'
 
-const ALDRAR: Aldersgrupp[] = ['F', '1-3', '4-6']
 const LS_KEY = 'fritids_egna_teman'
-
-// Etikett för en åldersgrupp: F visas som "Förskoleklass", övriga som "Åk X".
-function alderLabel(a: Aldersgrupp): string {
-  return a === 'F' ? 'Förskoleklass' : `Åk ${a}`
-}
 
 function laddaEgna(): Tema[] {
   try {
     const raw = localStorage.getItem(LS_KEY)
-    return raw ? (JSON.parse(raw) as Tema[]) : []
+    if (!raw) return []
+    // Tål gamla sparade teman som hade fältet "aldersgrupper".
+    return (JSON.parse(raw) as Tema[]).map((t) => ({
+      id: t.id,
+      namn: t.namn,
+      emoji: t.emoji,
+      aktiviteter: t.aktiviteter ?? [],
+    }))
   } catch {
     return []
   }
@@ -22,7 +23,6 @@ function laddaEgna(): Tema[] {
 
 export default function Temabanken() {
   const [egna, setEgna] = useState<Tema[]>(laddaEgna)
-  const [alder, setAlder] = useState<Aldersgrupp>('1-3')
   const [valtId, setValtId] = useState<string | null>(null)
   const [visaForm, setVisaForm] = useState(false)
 
@@ -31,7 +31,6 @@ export default function Temabanken() {
   }, [egna])
 
   const allaTeman = useMemo(() => [...TEMAN, ...egna], [egna])
-  const synliga = allaTeman.filter((t) => t.aldersgrupper.includes(alder))
   const valt = allaTeman.find((t) => t.id === valtId) ?? null
 
   function laggTill(namn: string, emoji: string, aktTexter: string[]) {
@@ -39,7 +38,6 @@ export default function Temabanken() {
       id: `eget-${Date.now()}`,
       namn,
       emoji: emoji || '⭐',
-      aldersgrupper: [alder],
       aktiviteter: aktTexter
         .filter((t) => t.trim())
         .map((t) => ({ titel: t.trim(), beskrivning: '' })),
@@ -57,21 +55,6 @@ export default function Temabanken() {
   return (
     <div className="animate-slide-up space-y-5">
       <div className="no-print">
-        <div className="text-sm font-bold text-slate-600 mb-2">Åldersgrupp</div>
-        <div className="flex gap-2 flex-wrap">
-          {ALDRAR.map((a) => (
-            <button
-              key={a}
-              onClick={() => { setAlder(a); setValtId(null) }}
-              className={`chip ${alder === a ? 'chip-on' : 'chip-off'}`}
-            >
-              {alderLabel(a)}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="no-print">
         <div className="flex items-center justify-between mb-2">
           <div className="text-sm font-bold text-slate-600">Välj tema</div>
           <button onClick={() => setVisaForm(true)} className="btn-soft !py-1.5 !px-3 flex items-center gap-1 text-sm">
@@ -79,7 +62,7 @@ export default function Temabanken() {
           </button>
         </div>
         <div className="grid sm:grid-cols-2 gap-3">
-          {synliga.map((t) => {
+          {allaTeman.map((t) => {
             const eget = t.id.startsWith('eget-')
             return (
               <button
@@ -123,17 +106,16 @@ export default function Temabanken() {
         </div>
       )}
 
-      {visaForm && <EgetTemaForm onClose={() => setVisaForm(false)} onSpara={laggTill} alder={alder} />}
+      {visaForm && <EgetTemaForm onClose={() => setVisaForm(false)} onSpara={laggTill} />}
     </div>
   )
 }
 
 function EgetTemaForm({
-  onClose, onSpara, alder,
+  onClose, onSpara,
 }: {
   onClose: () => void
   onSpara: (namn: string, emoji: string, akt: string[]) => void
-  alder: Aldersgrupp
 }) {
   const [namn, setNamn] = useState('')
   const [emoji, setEmoji] = useState('')
@@ -143,7 +125,7 @@ function EgetTemaForm({
     <div className="fixed inset-0 z-30 bg-black/40 flex items-end sm:items-center justify-center p-4" onClick={onClose}>
       <div className="card p-5 w-full max-w-md animate-slide-up" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-3">
-          <h3 className="font-black text-brand-800">Nytt tema ({alderLabel(alder)})</h3>
+          <h3 className="font-black text-brand-800">Nytt tema</h3>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X size={20} /></button>
         </div>
         <div className="space-y-3">
