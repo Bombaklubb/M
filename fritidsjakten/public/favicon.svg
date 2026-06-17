@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bg)"/>
+  <!-- Stor sparkle -->
+  <path fill="#ffffff" d="M32 13c1.2 8.6 5.4 12.8 14 14-8.6 1.2-12.8 5.4-14 14-1.2-8.6-5.4-12.8-14-14 8.6-1.2 12.8-5.4 14-14z"/>
+  <!-- Liten sparkle -->
+  <path fill="#ffffff" fill-opacity="0.95" d="M46 38c.5 3.6 2.3 5.4 6 6-3.7.6-5.5 2.4-6 6-.5-3.6-2.3-5.4-6-6 3.7-.6 5.5-2.4 6-6z"/>
+</svg>
