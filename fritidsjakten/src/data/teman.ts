@@ -117,8 +117,8 @@ export const TEMAN: Tema[] = [
   // ── Lgr22-förankrade ämnesteman (NO & SO) – aktiviteter från förskoleklass till åk 6 ──
   {
     id: 'no-biologi',
-    namn: 'NO: Biologi',
-    emoji: '🐛',
+    namn: 'Livet & naturen',
+    emoji: '🌿',
     aktiviteter: [
       { titel: 'Naturen och årstidernas växlingar', beskrivning: 'Följ samma träd eller plats över tid och dokumentera hur den förändras med årstiderna.' },
       { titel: 'Djur, växter och deras livsmiljöer', beskrivning: 'Gå på upptäcktsfärd och para ihop djur och växter med var de bor.' },
@@ -131,8 +131,8 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'no-kemi',
-    namn: 'NO: Kemi',
-    emoji: '⚗️',
+    namn: 'Experimentlabbet',
+    emoji: '🧪',
     aktiviteter: [
       { titel: 'Material och ämnen i vardagen', beskrivning: 'Sortera föremål efter material (trä, metall, plast, tyg) och prata om egenskaper.' },
       { titel: 'Fast, flytande och gas', beskrivning: 'Smält is och frys vatten – undersök hur ämnen ändrar form.' },
@@ -145,8 +145,8 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'no-fysik',
-    namn: 'NO: Fysik',
-    emoji: '🧲',
+    namn: 'Kraft & energi',
+    emoji: '⚡',
     aktiviteter: [
       { titel: 'Kraft och rörelse', beskrivning: 'Bygg en kulbana eller testa hur saker rullar i backe – vad får dem att röra sig?' },
       { titel: 'Ljus och skugga', beskrivning: 'Gör skuggteater och undersök hur skuggor ändras med ljusets riktning.' },
@@ -158,7 +158,7 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'no-arbetssatt',
-    namn: 'NO: Forska & undersök',
+    namn: 'Forskarverkstan',
     emoji: '🔬',
     aktiviteter: [
       { titel: 'Undersöka, ställa frågor och samtala', beskrivning: 'Välj något att utforska, gissa tillsammans och prata om vad ni tror händer.' },
@@ -169,8 +169,8 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-geografi',
-    namn: 'SO: Geografi',
-    emoji: '🗺️',
+    namn: 'Jorden runt',
+    emoji: '🌍',
     aktiviteter: [
       { titel: 'Närområdet och kartor', beskrivning: 'Rita en egen karta över skolgården och gör en skattjakt med kartan.' },
       { titel: 'Väder, årstider och naturmiljöer', beskrivning: 'För väderdagbok i en vecka och jämför olika dagar.' },
@@ -182,7 +182,7 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-historia',
-    namn: 'SO: Historia',
+    namn: 'Tidsresan',
     emoji: '⏳',
     aktiviteter: [
       { titel: 'Tidsbegrepp: dåtid, nutid, framtid', beskrivning: 'Gör en tidslinje med bilder: förr, nu och hur ni tror det blir i framtiden.' },
@@ -195,7 +195,7 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-religion',
-    namn: 'SO: Religionskunskap',
+    namn: 'Högtider & traditioner',
     emoji: '🕊️',
     aktiviteter: [
       { titel: 'Högtider, traditioner och berättelser', beskrivning: 'Utforska olika högtider under året och skapa något som hör till en av dem.' },
@@ -207,7 +207,7 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-samhalle',
-    namn: 'SO: Samhällskunskap',
+    namn: 'Vårt samhälle',
     emoji: '🏛️',
     aktiviteter: [
       { titel: 'Regler och demokrati i vardagen', beskrivning: 'Rösta fram en gemensam lek eller regel – alla röster räknas lika.' },
@@ -221,7 +221,7 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-arbetssatt',
-    namn: 'SO: Granska & resonera',
+    namn: 'Källdetektiven',
     emoji: '🔎',
     aktiviteter: [
       { titel: 'Använda begrepp och enkla källor', beskrivning: 'Slå upp ett ord i en bok eller på en bild och förklara det med egna ord.' },
