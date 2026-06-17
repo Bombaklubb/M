@@ -9,6 +9,7 @@ export const TEMAN: Tema[] = [
     id: 'hallbar-utveckling',
     namn: 'Hållbar utveckling',
     emoji: '♻️',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle (återvinning, miljö och hållbarhet). NO: människans påverkan på naturen och källsortering. SO: hållbar utveckling.',
     aktiviteter: [
       { titel: 'Bygg återvinningsmaskiner', beskrivning: 'Bygg en låtsasmaskin av kartong och förpackningar som sorterar skräp.' },
       { titel: 'Sorteringsstafett', beskrivning: 'Lagen springer och sorterar (rena, torra) sopor i rätt återvinningstunna på tid.' },
@@ -21,6 +22,7 @@ export const TEMAN: Tema[] = [
     id: 'rymden',
     namn: 'Rymden',
     emoji: '🚀',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle. NO/Fysik: jordens, solens och månens rörelser samt himlakroppar och rymden.',
     aktiviteter: [
       { titel: 'Bygg en raket', beskrivning: 'Konstruera en raket av rör, papper och tejp – vems flyger längst?' },
       { titel: 'Planetstafett', beskrivning: 'Spring mellan planeterna i rätt ordning från solen och ut.' },
@@ -33,6 +35,7 @@ export const TEMAN: Tema[] = [
     id: 'havet',
     namn: 'Havet',
     emoji: '🌊',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle. NO/Biologi: djur och växter i vattenmiljöer. SO/NO: hållbar utveckling och nedskräpning av haven.',
     aktiviteter: [
       { titel: 'Hela havet stormar', beskrivning: 'Klassikern med stolar – en stol färre varje runda.' },
       { titel: 'Fiska skräp', beskrivning: 'Fiska upp "plast" (papperslappar) ur havet med metspö av pinne och snöre.' },
@@ -45,6 +48,7 @@ export const TEMAN: Tema[] = [
     id: 'riddartiden',
     namn: 'Riddartiden',
     emoji: '🏰',
+    laroplan: 'Lgr22 fritidshem: Skapande och estetiska uttrycksformer. Historia: medeltiden och hur människor levde och arbetade förr.',
     aktiviteter: [
       { titel: 'Bygg en borg', beskrivning: 'Bygg en borg av kuddar, kartong eller klossar.' },
       { titel: 'Riddarbana', beskrivning: 'Hinderbana där man tränar till riddare/väpnare.' },
@@ -57,6 +61,7 @@ export const TEMAN: Tema[] = [
     id: 'kanslor-vanskap',
     namn: 'Känslor & vänskap',
     emoji: '💛',
+    laroplan: 'Lgr22 fritidshem: Språk och kommunikation samt normer och värden. Värdegrunden: empati, samspel och allas lika värde.',
     aktiviteter: [
       { titel: 'Känslocharader', beskrivning: 'Visa en känsla med kroppen – de andra gissar.' },
       { titel: 'Komplimangcirkel', beskrivning: 'Sitt i ring och ge personen bredvid en ärlig komplimang.' },
@@ -69,6 +74,7 @@ export const TEMAN: Tema[] = [
     id: 'varen',
     namn: 'Våren',
     emoji: '🌱',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle samt utevistelse. NO/Biologi: årstidsväxlingar, växters livscykel samt djur och växter i närmiljön.',
     aktiviteter: [
       { titel: 'Plantera frön', beskrivning: 'Så frön i krukor och följ hur de växer veckorna framåt.' },
       { titel: 'Vårtecken-jakt', beskrivning: 'Leta vårtecken ute: knoppar, fåglar, insekter.' },
@@ -81,6 +87,7 @@ export const TEMAN: Tema[] = [
     id: 'sommaren',
     namn: 'Sommar',
     emoji: '☀️',
+    laroplan: 'Lgr22 fritidshem: Lekar, fysiska aktiviteter och utevistelse. NO/Biologi: årstider samt djur och insekter. Idrott och hälsa: vatten- och solsäkerhet.',
     aktiviteter: [
       { titel: 'Vattenstafett', beskrivning: 'Bär vatten i svamp eller mugg till lagets hink – minst spill vinner.' },
       { titel: 'Insektssafari', beskrivning: 'Leta småkryp med lupp och bestäm vad ni hittar tillsammans.' },
@@ -93,6 +100,7 @@ export const TEMAN: Tema[] = [
     id: 'hosten',
     namn: 'Höst',
     emoji: '🍂',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle samt utevistelse. NO/Biologi: årstidsväxlingar, svampar och bär samt naturens kretslopp.',
     aktiviteter: [
       { titel: 'Lövjakt & lövkonst', beskrivning: 'Samla löv i olika färger och gör tavlor eller kransar.' },
       { titel: 'Svamp- och bärquiz', beskrivning: 'Lär er vilka svampar och bär man får plocka – och vilka man inte ska röra.' },
@@ -105,6 +113,7 @@ export const TEMAN: Tema[] = [
     id: 'vintern',
     namn: 'Vintern',
     emoji: '❄️',
+    laroplan: 'Lgr22 fritidshem: Lekar, fysiska aktiviteter och utevistelse. NO: årstider, vatten i fast form (is och snö) samt djur på vintern.',
     aktiviteter: [
       { titel: 'Snöskulpturer', beskrivning: 'Bygg figurer och skulpturer av snö i lag.' },
       { titel: 'Spårjakt i snön', beskrivning: 'Följ spår i snön – vem eller vilket djur gick här?' },
@@ -119,6 +128,7 @@ export const TEMAN: Tema[] = [
     id: 'no-biologi',
     namn: 'Livet & naturen',
     emoji: '🌿',
+    laroplan: 'Lgr22 Biologi åk 1–6: naturen och årstiderna, djur och växter och deras livsmiljöer, människokroppen och hälsa samt ekosystem och hållbar utveckling.',
     aktiviteter: [
       { titel: 'Naturen och årstidernas växlingar', beskrivning: 'Följ samma träd eller plats över tid och dokumentera hur den förändras med årstiderna.' },
       { titel: 'Djur, växter och deras livsmiljöer', beskrivning: 'Gå på upptäcktsfärd och para ihop djur och växter med var de bor.' },
@@ -133,6 +143,7 @@ export const TEMAN: Tema[] = [
     id: 'no-kemi',
     namn: 'Experimentlabbet',
     emoji: '🧪',
+    laroplan: 'Lgr22 Kemi åk 1–6: material och ämnens egenskaper, blandningar och lösningar, vattnets kretslopp samt kemikalier i vardagen.',
     aktiviteter: [
       { titel: 'Material och ämnen i vardagen', beskrivning: 'Sortera föremål efter material (trä, metall, plast, tyg) och prata om egenskaper.' },
       { titel: 'Fast, flytande och gas', beskrivning: 'Smält is och frys vatten – undersök hur ämnen ändrar form.' },
@@ -147,6 +158,7 @@ export const TEMAN: Tema[] = [
     id: 'no-fysik',
     namn: 'Kraft & energi',
     emoji: '⚡',
+    laroplan: 'Lgr22 Fysik åk 1–6: krafter och rörelse, energi och energikällor, ljus, ljud och elektricitet samt solsystemet.',
     aktiviteter: [
       { titel: 'Kraft och rörelse', beskrivning: 'Bygg en kulbana eller testa hur saker rullar i backe – vad får dem att röra sig?' },
       { titel: 'Ljus och skugga', beskrivning: 'Gör skuggteater och undersök hur skuggor ändras med ljusets riktning.' },
@@ -160,6 +172,7 @@ export const TEMAN: Tema[] = [
     id: 'no-arbetssatt',
     namn: 'Forskarverkstan',
     emoji: '🔬',
+    laroplan: 'Lgr22 NO – systematiska undersökningar: planera och genomföra undersökningar, dokumentera och utvärdera resultat samt använda naturvetenskapliga begrepp.',
     aktiviteter: [
       { titel: 'Undersöka, ställa frågor och samtala', beskrivning: 'Välj något att utforska, gissa tillsammans och prata om vad ni tror händer.' },
       { titel: 'Planera och genomföra undersökningar', beskrivning: 'Formulera en hypotes, planera ett test och genomför det steg för steg.' },
@@ -171,6 +184,7 @@ export const TEMAN: Tema[] = [
     id: 'so-geografi',
     namn: 'Jorden runt',
     emoji: '🌍',
+    laroplan: 'Lgr22 Geografi åk 1–6: kartor och geografiska verktyg, natur- och kulturlandskap samt klimat, miljö och hållbar utveckling.',
     aktiviteter: [
       { titel: 'Närområdet och kartor', beskrivning: 'Rita en egen karta över skolgården och gör en skattjakt med kartan.' },
       { titel: 'Väder, årstider och naturmiljöer', beskrivning: 'För väderdagbok i en vecka och jämför olika dagar.' },
@@ -184,6 +198,7 @@ export const TEMAN: Tema[] = [
     id: 'so-historia',
     namn: 'Tidsresan',
     emoji: '⏳',
+    laroplan: 'Lgr22 Historia åk 1–6: tidsbegrepp, familjens och platsens historia, Nordens och Sveriges historia samt historiska källor och tidslinjer.',
     aktiviteter: [
       { titel: 'Tidsbegrepp: dåtid, nutid, framtid', beskrivning: 'Gör en tidslinje med bilder: förr, nu och hur ni tror det blir i framtiden.' },
       { titel: 'Familjens och platsens historia', beskrivning: 'Berätta om någon i familjen och ta reda på hur orten såg ut förr.' },
@@ -197,6 +212,7 @@ export const TEMAN: Tema[] = [
     id: 'so-religion',
     namn: 'Högtider & traditioner',
     emoji: '🕊️',
+    laroplan: 'Lgr22 Religionskunskap åk 1–6: högtider, traditioner och berättelser, världsreligionerna samt etiska frågor och livsfrågor.',
     aktiviteter: [
       { titel: 'Högtider, traditioner och berättelser', beskrivning: 'Utforska olika högtider under året och skapa något som hör till en av dem.' },
       { titel: 'Livsfrågor om rätt och fel', beskrivning: 'Dilemmasamtal: vad är rätt och fel, och varför tycker vi olika?' },
@@ -209,6 +225,7 @@ export const TEMAN: Tema[] = [
     id: 'so-samhalle',
     namn: 'Vårt samhälle',
     emoji: '🏛️',
+    laroplan: 'Lgr22 Samhällskunskap åk 1–6: regler och demokrati, barns rättigheter, samhällsfunktioner och lagar, medier samt ekonomi och konsumtion.',
     aktiviteter: [
       { titel: 'Regler och demokrati i vardagen', beskrivning: 'Rösta fram en gemensam lek eller regel – alla röster räknas lika.' },
       { titel: 'Barns rättigheter', beskrivning: 'Samtala om barnkonventionen och rita vad alla barn har rätt till.' },
@@ -223,6 +240,7 @@ export const TEMAN: Tema[] = [
     id: 'so-arbetssatt',
     namn: 'Källdetektiven',
     emoji: '🔎',
+    laroplan: 'Lgr22 SO – arbetssätt: granska information och källor, använda ämnesspecifika begrepp samt analysera samband och resonera om orsaker och konsekvenser.',
     aktiviteter: [
       { titel: 'Använda begrepp och enkla källor', beskrivning: 'Slå upp ett ord i en bok eller på en bild och förklara det med egna ord.' },
       { titel: 'Granska information och källor', beskrivning: 'Källkritik-lek: är källan trovärdig? Vem säger det och varför?' },
