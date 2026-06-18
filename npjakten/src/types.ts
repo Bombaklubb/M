@@ -1,14 +1,23 @@
 // Datamodell för delproven
 
+// Läsförståelseaspekt (uppgiftstyp) enligt de nationella provens bedömningsmall.
+// Visas vid rättning, precis som i lärarens bedömningsmall.
+export type ReadingAspect =
+  | "Hitta efterfrågad information"
+  | "Dra enkla slutsatser"
+  | "Sammanföra och tolka information och idéer samt reflektera"
+  | "Granska och värdera innehåll, språk och textuella drag";
+
 export interface MultipleChoiceQuestion {
   kind: "multiple-choice";
   id: number;
-  maxPoints: 1 | 2; // åk 9: kryssfrågor ger 0 eller 2 poäng
+  maxPoints: 1 | 2 | 4; // åk 9: kryssfrågor ger 0 eller 2 (ibland 4) poäng
   prompt: string;
   options: string[]; // alltid fyra alternativ A–D
   correctIndex: number;
   // Åk 3: L = lokalisering av information, TI = tolkning och integrering
   category?: "L" | "TI";
+  aspect?: ReadingAspect; // åk 9: uppgiftstyp enligt bedömningsmallen
 }
 
 // Åk 3, delprov B: sista uppgiften – numrera meningarna i rätt ordning
@@ -30,7 +39,7 @@ export interface ScoreExample {
 export interface OpenQuestion {
   kind: "open";
   id: number;
-  maxPoints: 1 | 2 | 4;
+  maxPoints: 1 | 2 | 4 | 6;
   prompt: string;
   note?: string; // t.ex. "Du måste skriva två exempel för att få poäng."
   guidance: string; // bedömningsanvisning som visas vid självrättning
@@ -41,6 +50,7 @@ export interface OpenQuestion {
   // Konkreta facit-exempel per poängnivå som hjälper eleven att rätta sig
   // själv: "mitt svar liknar mest 1-poängaren". Visas vid självrättning.
   scoreExamples?: ScoreExample[];
+  aspect?: ReadingAspect; // åk 9: uppgiftstyp enligt bedömningsmallen
 }
 
 export type Question = MultipleChoiceQuestion | OpenQuestion | OrderingQuestion;
@@ -68,7 +78,9 @@ export interface ReadingTest {
     | "instruerande"
     | "beskrivande"
     | "utredande"
-    | "resonerande";
+    | "resonerande"
+    | "dikt"
+    | "tidningsartikel";
   title: string;
   image?: Illustration;
   ingress?: string; // sakprosatexter inleds med en ingress

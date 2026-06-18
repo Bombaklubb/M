@@ -68,7 +68,8 @@
             "Berättaren vill få nya vänner på biblioteket.",
             "Berättaren vill vinna kanelbullar på konditoriet."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -84,7 +85,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "De åt kanelbullar på Brödernas konditori. Bullarna var stora och glänste av pärlsocker." },
             { "points": 2, "answer": "De slog vad om att den som förlorade schackpartiet skulle bjuda den andra på kanelbulle på konditoriet. Den som blev matt fick alltså betala bullen." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -102,7 +104,8 @@
             { "points": 0, "answer": "Albin var en dålig förlorare i början men sedan blev han snällare. Han gillade inte att förlora." },
             { "points": 2, "answer": "Dålig förlorare: ”– Du hade bara tur, sa Albin.” Det visar att han inte ville erkänna att berättaren var bättre." },
             { "points": 4, "answer": "Dålig förlorare: ”Sedan vände han sig mot fönstret och sa att det var för varmt i lokalen för att kunna tänka.” Här skyller han ifrån sig i stället för att erkänna förlusten. Bra förlorare: ”– Snyggt spelat, sa han och sträckte fram handen.” Där tar han förlusten med stil och ger berättaren beröm." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -115,7 +118,8 @@
             "allvetande berättare",
             "en blandning av olika perspektiv"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "open",
@@ -131,7 +135,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Berättaren märker att Albin spelar väldigt snabbt och bra i början av partiet, och att han brukar vinna." },
             { "points": 2, "answer": "Berättaren upptäcker att Albin inte spelar själv utan har lärt sig ett berömt parti ur boken ”Hundra odödliga partier” utantill. Då gör berättaren ett konstigt eget drag med kantbonden som inte finns i boken, så att Albin måste börja tänka själv – och då gör han fel och förlorar." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -144,7 +149,8 @@
             "Att han har förstått att man måste spela sitt eget spel.",
             "Att han vill hindra berättaren från att läsa den."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Dra enkla slutsatser"
         }
       ],
       "image": {
@@ -213,7 +219,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "E-sport är när man sitter och spelar datorspel framför en skärm." },
             { "points": 2, "answer": "E-sport betyder att man tävlar i datorspel. Proffsen spelar mot varandra i turneringar inför stor publik." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -226,7 +233,8 @@
             "Att spelarna har bättre syn än elitskyttar.",
             "Att spelarna blir trötta av för lite sömn."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -239,7 +247,8 @@
             "Vi räknar redan precisionssporter som schack och skytte som idrott.",
             "Andra länder har redan jämställt e-sportare med idrottare."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -255,7 +264,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han tycker inte att datorspel är en riktig sport och gillar inte att folk spelar så mycket." },
             { "points": 2, "answer": "Hederström menar att idrottens uppgift, särskilt för barn och unga, är att få kroppar i rörelse. E-sport utförs sittande i en stol, och om man kallar det idrott skickar man fel signal till alla unga som spelar utan fysträning. Han är orolig för stillasittandet." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -268,7 +278,8 @@
             "Den bevisar att e-sport kommer att bli en olympisk gren.",
             "Den förklarar varför publiken är viktigare än forskarna."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -336,7 +347,8 @@
             "Berättaren tycker hela tiden lika mycket om Jocke.",
             "Berättaren slutar bry sig om Jocke helt och hållet."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -352,7 +364,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han menar att han är en satellit och att Jocke är en planet i rymden." },
             { "points": 2, "answer": "Han menar att han som lillebror hela tiden följer efter Jocke och snurrar runt honom, precis som en satellit kretsar kring en planet. Jocke är medelpunkten som knappt märker att lillebrodern finns." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -370,7 +383,8 @@
             { "points": 0, "answer": "Jocke är ibland taskig mot lillebrorsan men ibland snäll. Det beror på hur han känner sig." },
             { "points": 2, "answer": "Dålig storebror: ”Gå och lek med dina egna kompisar.” Han stöter bort lillebrodern för att vara med Sandra." },
             { "points": 4, "answer": "Dålig storebror: ”– Du kan inte hänga med i dag, sa han en morgon utan att titta upp från spegeln.” Här gör han sig av med lillebrodern för Sandras skull. Bra storebror: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna.” Där tar han hand om lillebrodern och lär honom saker." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -383,7 +397,8 @@
             "allvetande berättare",
             "en blandning av olika perspektiv"
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "open",
@@ -399,7 +414,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han känner något annat och blir ledsen, fast han egentligen borde ha varit glad." },
             { "points": 2, "answer": "I stället för att vara skadeglad känner berättaren medlidande och omtanke, det gör ont i bröstet av att se Jocke ledsen. Det visar att han bryr sig om sin bror trots all ilska – kärleken till Jocke är starkare än hämndlusten." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -412,7 +428,8 @@
             "De vill inte prata med varandra längre.",
             "De pratar bara genom att vissla."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Dra enkla slutsatser"
         }
       ],
       "image": {
@@ -480,7 +497,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Det betyder att jättemånga människor lyssnar på ljudböcker i dag, till exempel på bussen." },
             { "points": 2, "answer": "Det betyder att ljudboken har gått från att vara något ovanligt, mest för bilresor, till att bli ett av de vanligaste sätten att ta del av böcker. Försäljningen har ökat kraftigt och för många unga är det numera självklart att lyssna i stället för att läsa." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -493,7 +511,8 @@
             "Att det går snabbare att lyssna än att läsa.",
             "Att lyssnande passar bäst för den som har dyslexi."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -506,7 +525,8 @@
             "Unga föredrar att lyssna i stället för att läsa.",
             "Det är svårare att förstå en bok man lyssnar på."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -522,7 +542,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han tycker inte att ljudböcker är lika bra som vanliga böcker och vill att folk ska läsa i stället." },
             { "points": 2, "answer": "Boström menar att man när man lyssnar inte lika lätt kan stanna upp, gå tillbaka och kämpa med en svår mening, och just det mödosamma tränar ordförråd och tålamod. Dessutom lyssnar man ofta samtidigt som man gör annat, så uppmärksamheten glider och man minns mindre av boken." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -535,7 +556,8 @@
             "Det förklarar hur romanen uppfanns på 1700-talet.",
             "Det visar att serietidningar var farliga för barn."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -594,7 +616,8 @@
             "För att Sverige skulle ha samma tid som resten av Europa.",
             "För att sömnforskare rekommenderade det."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -610,7 +633,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Skälet har försvagats för att tidsomställningen är gammal och infördes redan 1980. Numera tycker många att den är onödig." },
             { "points": 2, "answer": "Tidsomställningen infördes för att spara energi, eftersom ljusare kvällar skulle göra att folk behövde mindre belysning. Men i dag står uppvärmning, datorer och industri för en mycket större del av elförbrukningen än glödlamporna gör. Därför blir energibesparingen liten, nästan obefintlig, och det ursprungliga skälet håller inte längre." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -623,7 +647,8 @@
             "Att flygtrafiken påverkas av tidsomställningen.",
             "Att man blir pigg av att vinna en timmes sömn."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -641,7 +666,8 @@
             { "points": 0, "answer": "Båda alternativen är dåliga på olika sätt. Det blir antingen för mörkt eller för ljust, och man vet inte vilket man ska välja." },
             { "points": 2, "answer": "Priset med permanent sommartid är att vintermorgnarna blir väldigt mörka. I Stockholm skulle solen gå upp först vid tiotiden, och skolbarn i norra Sverige skulle få gå hela skolvägen i mörker." },
             { "points": 4, "answer": "Permanent sommartid har priset att vintermorgnarna blir mörka: solen i Stockholm skulle gå upp först vid tiotiden, och skolbarn i norr skulle göra hela skolvägen i mörker. Permanent vintertid har i stället priset att sommarkvällarna slutar en timme tidigare, alltså att det blir mörkt tidigare på kvällen på sommaren. Man vinner ljus i ena änden men förlorar det i den andra." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -654,7 +680,8 @@
             "Vintertid sparar mer energi än sommartid.",
             "De flesta länder i Europa har redan vintertid."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -667,7 +694,8 @@
             "Den väger samman perspektiven och drar en slutsats som bygger på det som redogjorts.",
             "Den avslutas med en överraskande vändning."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -710,7 +738,8 @@
             "Studievägledaren kräver ett skriftligt svar.",
             "Skribentens föräldrar tjatar om läkaryrket."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -726,7 +755,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Skribenten avundas att kusinen ska bli läkare. Hon har vetat det sedan hon var åtta år." },
             { "points": 2, "answer": "Skribenten avundas att kusinen vet precis vad hon vill, hon har ett tydligt mål som en karta att gå efter. Därför kan hon plugga målmedvetet, vet vilka betyg som krävs och slipper tveka, medan skribenten själv känner sig som om hen irrar omkring med ögonbindel." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -744,7 +774,8 @@
             { "points": 0, "answer": "Skribenten skriver om sin kusin, mamma, moster och farfar. De har alla olika jobb och visar hur olika livet kan bli." },
             { "points": 2, "answer": "Kusinen är ett exempel på fördelen med att veta vad man vill, hon har velat bli läkare sedan hon var åtta och pluggar målmedvetet. Mamman är ett exempel på att omvägar kan löna sig: hon var först frisör och blev sedan undersköterska, och säger att omvägen gjorde henne bättre på båda jobben." },
             { "points": 4, "answer": "Mamman är ett exempel på att man kan byta bana och ändå tjäna på det. Hon utbildade sig till frisör men sadlade om till undersköterska vid trettiofem, och säger att omvägen gjorde henne bättre på båda jobben. Det stöder tanken att den raka vägen inte är nödvändig. Farfar är ett exempel på att yrket inte alltid är ett aktivt val. Han jobbade på samma fabrik i fyrtio år men säger inte att han valde yrket – han säger att ”det blev så”. Det stöder tanken att den raka, planerade vägen kanske är mer undantag än regel." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -757,7 +788,8 @@
             "Frågan är för svår för barn under tio år.",
             "Frågan borde handla om betyg i stället för yrken."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -773,7 +805,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Skribenten menar att det inte är en karta utan en kompass. En karta och en kompass är ju olika saker man använder för att hitta." },
             { "points": 2, "answer": "Kartan står för att veta sitt exakta mål och hela vägen dit, som kusinen som vet att hon ska bli läkare. Kompassen står för att veta sin riktning utan att veta målet, alltså att veta vad man tycker är roligt, vad man är bra på och vad man inte står ut med. Skribenten menar att man kan röra sig framåt och välja även om man inte har ett färdigt mål, så länge man har en riktning." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -786,7 +819,8 @@
             "Skribenten kommer fram till att frågan inte går att fundera på.",
             "Skribenten uppmanar läsaren att välja gymnasium tidigt."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -799,7 +833,8 @@
             "Tankar som prövas mot varandra med uttryck som ”å ena sidan”, ”men å andra sidan” och ”samtidigt”.",
             "Saklig fakta utan personliga exempel."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -807,6 +842,362 @@
         "alt": "En väg genom skogen.",
         "fallback": "/images/veta-vad-man-vill.svg"
       }
+    },
+    {
+      "id": "ak9-b-bron",
+      "delprov": "Delprov B: läsförståelse – dikt",
+      "textType": "dikt",
+      "title": "Bron",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=900&h=506&fit=crop",
+        "alt": "En bro över ett vattendrag i vinterljus.",
+        "fallback": "/images/isen.svg"
+      },
+      "ingress": "En dikt om att lämna något bakom sig och våga gå vidare.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Jag står på bron en kväll i mars.",
+            "Under mig bryter isen upp,",
+            "flak för flak, med ljud som av papper",
+            "som någon långsamt river sönder."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Bakom mig lyser köksfönstren hemma.",
+            "Någon ropar mitt namn en sista gång,",
+            "och rösten fastnar i kragen,",
+            "varm som en vante jag snart har växt ur."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Framför mig ligger andra sidan i dis.",
+            "Jag ser ingen gata, inget hus,",
+            "bara en stig som tappar bort sig",
+            "och ändå pekar framåt."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Så tar jag steget. Bron bär.",
+            "Bakom ryggen lossnar vintern",
+            "och far med strömmen mot havet,",
+            "och jag låter den fara."
+          ]
+        }
+      ],
+      "byline": [
+        "Av Elin Sparv (f. 1989)",
+        "Dikt skriven för NP-jakten, i de nationella provens stil."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 2,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "prompt": "Vad syftar isen som ”bryter upp” troligen på i dikten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Att vintern är farlig att vistas ute i.",
+            "Att något i jagets liv håller på att förändras och släppa.",
+            "Att jaget fryser och vill skynda hem.",
+            "Att våren gör vädret varmare."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "lines": 3,
+          "aspect": "Hitta efterfrågad information",
+          "prompt": "Vad finns ”bakom” jaget i dikten? Skriv två saker som nämns i texten.",
+          "note": "Du måste skriva två saker för att få full poäng.",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2 poäng: 1) köksfönstren hemma som lyser, 2) en röst/någon som ropar jagets namn. Exempel på godtagbart svar: ”De lysande köksfönstren hemma och en röst som ropar hans namn.”",
+          "scoreExamples": [
+            { "points": 0, "answer": "Bakom jaget finns en bro och is som bryter upp." },
+            { "points": 1, "answer": "Bakom jaget lyser köksfönstren hemma." },
+            { "points": 2, "answer": "Bakom jaget finns de lysande köksfönstren hemma och en röst som ropar hans namn en sista gång." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 4,
+          "pointSteps": [
+            0,
+            2,
+            4
+          ],
+          "lines": 6,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "prompt": "Diktens ”bro” kan tolkas som mer än en verklig bro. Förklara vad bron och det att gå över den kan stå för, och stöd din tolkning med något ur dikten.",
+          "guidance": "Ge 4 poäng om svaret ger en rimlig tolkning (bron = övergången från barndom/det trygga till vuxenliv/det okända; att gå över = att våga lämna och gå vidare) OCH stöder den med något ur dikten (t.ex. köksfönstren, vanten man växt ur, andra sidan i dis, ”bron bär”). Ge 2 poäng för en rimlig tolkning utan textstöd, eller textstöd utan tydlig tolkning. Ge 0 poäng för svar som bara återberättar.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Det är en bro över ett vatten på våren och jaget går över den." },
+            { "points": 2, "answer": "Bron står nog för att gå från barndomen till att bli vuxen. Det handlar om att lämna något och gå vidare." },
+            { "points": 4, "answer": "Bron står för övergången från barndomen till vuxenlivet, och att gå över den betyder att våga lämna det trygga och gå mot något nytt. Det syns i att jaget lämnar ”köksfönstren hemma” och ”en vante jag snart har växt ur” bakom sig, medan andra sidan ligger ”i dis” – framtiden är okänd, men jaget tar ändå steget och ”bron bär”." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 2,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Dikten är skriven på fri vers och bygger mycket på bilder. Vilket språkligt drag är mest framträdande? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Liknelser och bildspråk.",
+            "Fackord och statistik.",
+            "Repliker och dialog.",
+            "Instruktioner i punktform."
+          ],
+          "correctIndex": 0
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "lines": 4,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "prompt": "Läs sista strofen: ”Bakom ryggen lossnar vintern / och far med strömmen mot havet, / och jag låter den fara.” Vad uttrycker raderna om jagets känsla inför förändringen?",
+          "guidance": "Ge 2 poäng om svaret visar att jaget accepterar eller släpper det gamla och möter förändringen med lugn eller mod (”låter den fara” = väljer att inte hålla fast). Ge 0 poäng för svar som bara återberättar att isen flyter bort utan tolkning.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Isen och vintern flyter bort mot havet." },
+            { "points": 2, "answer": "Raderna visar att jaget har bestämt sig för att släppa taget om det som varit. Jaget möter förändringen med lugn och håller inte fast vid det gamla, utan ”låter den fara”." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 2,
+          "aspect": "Dra enkla slutsatser",
+          "prompt": "Vilken rad antyder tydligast att jaget är på väg att lämna barndomen bakom sig? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "”Jag står på bron en kväll i mars.”",
+            "”varm som en vante jag snart har växt ur.”",
+            "”Framför mig ligger andra sidan i dis.”",
+            "”Så tar jag steget. Bron bär.”"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 6,
+          "pointSteps": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "lines": 8,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Dikten handlar om en förändring i livet. Beskriv hur dikten gestaltar denna förändring genom sitt bildspråk. Ge minst tre bilder ur dikten och förklara kort vad var och en uttrycker.",
+          "guidance": "Ge 6 poäng om svaret tydligt förklarar hur förändringen gestaltas och ger minst tre bilder med förklaring. Ge 4 poäng för två bilder med förklaring, 2 poäng för en. Ge 0 poäng om inga bilder förklaras. Exempel på bilder: isen som bryter upp (tiden går/något släpper), köksfönstren och rösten (barndomens trygghet), vanten man växt ur (att man blivit för stor för barndomen), andra sidan i dis (den okända framtiden), ”bron bär” (mod/tillit), vintern som far mot havet (att släppa det gamla).",
+          "scoreExamples": [
+            { "points": 0, "answer": "Dikten handlar om en person som går över en bro på våren och allt förändras." },
+            { "points": 2, "answer": "Isen som ”bryter upp” visar att något i jagets liv håller på att släppa och att tiden går." },
+            { "points": 4, "answer": "Förändringen syns i bildspråket. Isen som ”bryter upp, flak för flak” visar att något släpper och att tiden går. ”Andra sidan i dis” står för framtiden som är oklar och okänd för jaget." },
+            { "points": 6, "answer": "Dikten gestaltar förändringen genom flera bilder. Isen som ”bryter upp, flak för flak” visar att något i livet håller på att släppa och att tiden går. ”En vante jag snart har växt ur” står för barndomen som jaget blivit för stor för. ”Andra sidan i dis” är den okända framtiden, och ”bron bär” visar att jaget vågar och litar på att det går att ta steget. Tillsammans gör bilderna att man förstår att jaget lämnar barndomen och går mot vuxenlivet." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak9-b-cyklar",
+      "delprov": "Delprov B: läsförståelse – tidningsartikel",
+      "textType": "tidningsartikel",
+      "title": "Här fixar Noa cyklarna som andra slänger",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=900&h=506&fit=crop",
+        "alt": "En cykel som lagas i en verkstad.",
+        "fallback": "/images/cyklar.svg"
+      },
+      "ingress": "Medan många slänger sina trasiga cyklar lagar Noa Linde, 15 år, dem i stället – och skänker bort dem gratis. På ett år har det blivit över sextio cyklar. ”Jag står inte ut med att se något som går att laga hamna på tippen”, säger Noa.",
+      "sections": [
+        {
+          "heading": "Verkstaden i garaget",
+          "paragraphs": [
+            "Det luktar olja och gummi i garaget hemma hos familjen Linde. På betonggolvet står ett dussin cyklar i olika skick: en utan sadel, en med skevt framhjul, en som mest är en rostig ram. Mitt bland dem sitter Noa Linde på huk med en skiftnyckel i handen och lyssnar på ett bakhjul som snurrar.",
+            "– Hör du? Det skrapar lite. Det är lagret som har torkat, säger Noa och torkar händerna på en redan svart trasa.",
+            "Sedan ett år tillbaka lagar femtonåringen cyklar som andra har gett upp om. När de är klara skänker hon bort dem – till nyinflyttade, till yngre barn i området, till vem som helst som behöver men inte har råd."
+          ]
+        },
+        {
+          "heading": "Det började med en present",
+          "paragraphs": [
+            "Att det blev just cyklar är ingen slump. När Noa var åtta år fick hon sin första riktiga cykel av en granne som skulle flytta.",
+            "– Den var begagnad och lite för stor, men jag har aldrig fått något som betytt så mycket. Jag cyklade överallt. Det var första gången jag kände mig riktigt fri, säger hon.",
+            "Några år senare hittade Noa en gammal verktygslåda på en loppis och började meka med sin egen cykel. Det dröjde inte länge förrän kompisarnas cyklar också hamnade i garaget.",
+            "– Jag fattade att jag var rätt bra på det. Och att det fanns hur många trasiga cyklar som helst som ingen brydde sig om."
+          ]
+        },
+        {
+          "heading": "Mer än bara cyklar",
+          "paragraphs": [
+            "För Noa handlar det inte bara om att laga. Det handlar lika mycket om vad cyklarna kan betyda för någon annan, och om att inget ska slängas i onödan.",
+            "– Varje cykel som rullar igen är en mindre som måste tillverkas ny. Det är bra för miljön, men ärligt talat är det bästa ändå att se någon trampa iväg på en cykel jag har fixat, säger hon.",
+            "En av dem som fått en cykel är Adin, 10 år, som bor i samma område.",
+            "– Min är blå och har ringklocka. Noa lärde mig att laga punktering själv också, säger han stolt.",
+            "Noas mamma, Sara Linde, ser garaget förvandlas till verkstad med blandade känslor.",
+            "– Det är trångt och stökigt och jag hittar aldrig mina egna verktyg, säger hon och skrattar. Men jag är väldigt stolt. Hon ger bort något som faktiskt spelar roll."
+          ]
+        },
+        {
+          "heading": "Planer framåt",
+          "paragraphs": [
+            "Just nu hör allt fler av sig som vill lämna in trasiga cyklar, och Noa hinner knappt med. Drömmen är att få låna en lokal av kommunen och lära andra ungdomar att laga.",
+            "– Tänk om vi vore tio stycken i stället för en. Då skulle ingen i hela stan behöva vara utan cykel, säger hon och vrider åt den sista skruven på bakhjulet. Det slutar att skrapa.",
+            "Hon ställer upp cykeln mot väggen, bredvid de andra som väntar på en ny ägare."
+          ]
+        },
+        {
+          "heading": "NOA LINDE",
+          "paragraphs": [
+            "Ålder: 15 år.",
+            "Bor: I Kvarnberga utanför stan.",
+            "Gör: Lagar trasiga cyklar i familjens garage och skänker bort dem gratis.",
+            "Har lagat: Över 60 cyklar på ett år.",
+            "Drömmer om: En egen verkstad där fler ungdomar kan lära sig att meka."
+          ]
+        }
+      ],
+      "byline": [
+        "Av Daria Holm",
+        "Mellanbygdens Tidning, 2026",
+        "Reportage skrivet för NP-jakten."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "lines": 4,
+          "aspect": "Hitta efterfrågad information",
+          "prompt": "Hur kom det sig att Noa började intressera sig för just cyklar? Förklara med stöd i texten.",
+          "guidance": "Ge 2 poäng om svaret visar bakgrunden: Noa fick en begagnad cykel av en granne när hon var åtta år, och den betydde mycket för henne / gav henne en känsla av frihet; senare började hon meka. Ge 1 poäng för en delvis förklaring (t.ex. bara att hon fick en cykel). Ge 0 poäng för svar utan koppling till texten, t.ex. ”hon gillar cyklar”.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Hon tycker om cyklar och är bra på att laga dem." },
+            { "points": 1, "answer": "Hon fick en cykel när hon var liten." },
+            { "points": 2, "answer": "När Noa var åtta fick hon en begagnad cykel av en granne, och den betydde jättemycket – hon kände sig fri. Senare började hon meka och förstod att hon var bra på det." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 2,
+          "aspect": "Hitta efterfrågad information",
+          "prompt": "Ungefär hur många cyklar har Noa lagat och skänkt bort på ett år? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Omkring 10.",
+            "Omkring 30.",
+            "Fler än 60.",
+            "Fler än 600."
+          ],
+          "correctIndex": 2
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 4,
+          "pointSteps": [
+            0,
+            2,
+            4
+          ],
+          "lines": 6,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "prompt": "Vad mer än själva lagandet verkar vara viktigt för Noa? Använd två olika exempel ur texten i ditt svar.",
+          "guidance": "Ge 4 poäng om svaret tar upp två olika drivkrafter med stöd i texten: 1) miljön / att inget ska slängas i onödan (”varje cykel som rullar igen är en mindre som måste tillverkas ny”), 2) att hjälpa andra / glädjen i att ge (cyklarna ges till dem som behöver men inte har råd; ”det bästa är att se någon trampa iväg”). Ge 2 poäng för en av dem. Ge 0 poäng för svar som bara upprepar att hon lagar cyklar.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Hon tycker om att laga cyklar och är bra på det." },
+            { "points": 2, "answer": "Hon bryr sig om miljön, för hon säger att varje cykel som rullar igen är en mindre som måste tillverkas ny." },
+            { "points": 4, "answer": "Två saker är viktiga för henne. Dels miljön – ”varje cykel som rullar igen är en mindre som måste tillverkas ny”. Dels att hjälpa andra: hon ger cyklarna till dem som behöver men inte har råd, och tycker att det bästa är att se någon trampa iväg på en cykel hon har fixat." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 2,
+          "aspect": "Dra enkla slutsatser",
+          "prompt": "Vilket påstående om Noa stämmer bäst med texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Hon lagar cyklar mest för att tjäna pengar.",
+            "Hon vill att fler ungdomar ska kunna laga cyklar tillsammans med henne.",
+            "Hon tycker att gamla cyklar borde slängas.",
+            "Hon lagar bara cyklar åt sina egna kompisar."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "lines": 3,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Artikeln inleds med en kort, fetstilt ingress. Vilken funktion har ingressen i en tidningsartikel?",
+          "guidance": "Ge 2 poäng om svaret förklarar ingressens funktion: den sammanfattar kort det viktigaste i artikeln och/eller väcker läsarens intresse så att man vill läsa vidare. Ge 0 poäng för svar som bara beskriver utseendet (”den är fet och står först”) utan funktion.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Den står först och är skriven med fet stil." },
+            { "points": 2, "answer": "Ingressen sammanfattar kort det viktigaste i artikeln och väcker läsarens intresse, så att man snabbt förstår vad texten handlar om och vill läsa vidare." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 2,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Vilken texttyp är ”Här fixar Noa cyklarna som andra slänger”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Insändare.",
+            "Reportage.",
+            "Novell.",
+            "Faktatext ur en uppslagsbok."
+          ],
+          "correctIndex": 1
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 6,
+          "pointSteps": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "lines": 8,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Beskriv hur skribenten bygger upp porträttet av Noa. Ge minst tre kännetecken för ett reportage som finns i artikeln (till exempel ingress, intervjucitat, faktaruta, miljöbeskrivning eller mellanrubriker) och förklara kort vad varje sak tillför texten.",
+          "guidance": "Ge 6 poäng om svaret pekar ut minst tre kännetecken för ett reportage och förklarar vad de tillför. Ge 4 poäng för två, 2 poäng för ett. Ge 0 poäng om inget kännetecken pekas ut/förklaras. Exempel: ingress (sammanfattar och lockar), miljöbeskrivning (”det luktar olja och gummi …” sätter scenen), intervjucitat (Noas och andras röster gör texten levande och trovärdig), faktaruta (ger snabb fakta om personen), mellanrubriker (delar upp texten).",
+          "scoreExamples": [
+            { "points": 0, "answer": "Det är ett reportage om en tjej som lagar cyklar." },
+            { "points": 2, "answer": "Texten har intervjucitat, till exempel när Noa säger ”Hör du? Det skrapar lite.” Citaten gör att man hör hennes egen röst." },
+            { "points": 4, "answer": "Texten har intervjucitat, som när Noa säger ”Hör du? Det skrapar lite.”, vilket gör henne levande. Den har också en miljöbeskrivning – ”Det luktar olja och gummi i garaget” – som sätter scenen för läsaren." },
+            { "points": 6, "answer": "Skribenten bygger upp porträttet på flera sätt. Ingressen sammanfattar det viktigaste och lockar läsaren. Miljöbeskrivningen ”Det luktar olja och gummi i garaget” sätter scenen så att man ser verkstaden framför sig. Intervjucitaten, både från Noa och från Adin och mamman, gör texten levande och trovärdig genom att vi hör flera röster. Dessutom ger faktarutan ”NOA LINDE” snabb fakta om vem hon är. Tillsammans gör allt detta att läsaren får en tydlig bild av Noa." }
+          ]
+        }
+      ]
     }
   ],
   "writing": [
