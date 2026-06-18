@@ -1390,22 +1390,34 @@
         "Du ska skriva en berättelse om någon som får ett oväntat besök. Det kan vara du själv eller en påhittad person som får besöket."
       ],
       "doThis": [
-        "Skriv en berättelse om ett oväntat besök. Tänk på frågorna: Vem är det som får besök? Vem eller vad är det som kommer? Vad händer under besöket? Hur slutar det?"
+        "Skriv en berättelse om ett oväntat besök. Tänk på frågorna: Vem är det som får besök? Vem eller vad är det som kommer? Vad händer under besöket? Hur slutar det?",
+        "När du är klar kan du göra texten ännu bättre: använd många innehållsord (ord som betyder något viktigt, som dörr, springa, rädd) och stava de vanliga orden rätt."
       ],
       "fixedHeading": "Ett oväntat besök",
       "remember": [
-        "Du ska skriva en berättelse.",
-        "Din berättelse ska ha en början, en mitt och ett slut.",
-        "Skriv hela meningar med stor bokstav och punkt.",
+        "Du ska skriva en berättelse med en tydlig inledning, handling och avslut.",
+        "Skriv minst tre hela meningar med stor bokstav, mellanrum mellan orden och rätt skiljetecken.",
         "Läs igenom din berättelse när du är klar."
       ],
-      "checklist": [
-        "Min berättelse har rubriken Ett oväntat besök.",
-        "Det framgår vem som får besök och vem som kommer.",
-        "Något händer i min berättelse.",
-        "Min berättelse har ett slut.",
-        "Jag har skrivit hela meningar med stor bokstav och punkt.",
-        "Jag har läst igenom min berättelse."
+      "checklistGroups": [
+        {
+          "level": "Godtagbar nivå",
+          "items": [
+            "Min berättelse har rubriken Ett oväntat besök.",
+            "Min berättelse har en tydlig inledning (början).",
+            "Det händer något i min berättelse (handling).",
+            "Min berättelse har ett avslut (slut).",
+            "Jag har skrivit minst tre meningar som är rätt: stor bokstav, mellanrum mellan orden och punkt, frågetecken eller utropstecken."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "items": [
+            "Jag har använt minst 10 innehållsord som för berättelsen framåt.",
+            "Jag har stavat minst 10 vanliga ord rätt.",
+            "Jag har läst igenom min berättelse och gjort den bättre."
+          ]
+        }
       ],
       "examples": [
         {
@@ -1468,25 +1480,38 @@
       },
       "intro": [
         "Du har lärt dig om igelkotten. (Om du vill kan du först läsa texten Igelkotten under Läsa.) Nu ska du skriva en egen faktatext om igelkotten.",
-        "Till hjälp får du stödord. Stödorden talar om vad din faktatext ska handla om. Du ska skriva egna, hela meningar – inte bara skriva av stödorden."
+        "Till hjälp får du nyckelord. Nyckelorden talar om vad din faktatext kan handla om. Du ska skriva egna, hela meningar – inte bara skriva av nyckelorden."
       ],
       "doThis": [
-        "Skriv en faktatext om igelkotten. Använd alla stödord i rutan och skriv med hela meningar. Din text ska ha rubriken Igelkotten."
+        "Skriv en faktatext om igelkotten. Använd minst 10 av de 14 nyckelorden i rutan och skriv med hela meningar. Din text ska ha rubriken Igelkotten."
       ],
       "fixedHeading": "Igelkotten",
       "remember": [
         "Du ska skriva en faktatext, inte en saga. Allt du skriver ska vara på riktigt.",
-        "Använd stödorden och skriv egna, hela meningar.",
+        "Använd minst 10 av nyckelorden och skriv egna, hela meningar.",
         "Skriv med stor bokstav och punkt.",
         "Läs igenom din text när du är klar."
       ],
-      "checklist": [
-        "Min text har rubriken Igelkotten.",
-        "Jag har skrivit minst en mening om varje stödord.",
-        "Allt i min text är fakta som stämmer.",
-        "Jag har skrivit egna meningar, inte bara stödorden.",
-        "Jag har skrivit hela meningar med stor bokstav och punkt.",
-        "Jag har läst igenom min text."
+      "minSupportWords": 10,
+      "checklistGroups": [
+        {
+          "level": "Godtagbar nivå",
+          "items": [
+            "Min text har rubriken Igelkotten.",
+            "Jag har använt minst 10 av nyckelorden.",
+            "Allt i min text är fakta som stämmer.",
+            "Jag har skrivit egna hela meningar, inte bara nyckelorden.",
+            "Jag har skrivit med stor bokstav och punkt."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "items": [
+            "Jag har förklarat svåra ord så att läsaren förstår.",
+            "Jag har delat in texten i stycken där meningar som hör ihop står tillsammans.",
+            "Jag har läst igenom min text och rättat det jag hittade."
+          ]
+        }
       ],
       "examples": [
         {
@@ -1496,9 +1521,9 @@
             "Igelkotten har taggar. Den är vaken på natten. Den äter insekter, sniglar och maskar. Vintersömn i en lövhög. Vatten inte mjölk."
           ],
           "comments": [
-            "Texten tar upp alla stödorden – bra!",
-            "Men de två sista är inte hela meningar, utan nästan bara stödorden avskrivna.",
-            "Nästa steg: gör varje stödord till en egen hel mening, till exempel: ”På vintern sover igelkotten i en lövhög.”"
+            "Texten tar upp många av nyckelorden – bra!",
+            "Men de två sista är inte hela meningar, utan nästan bara nyckelorden avskrivna.",
+            "Nästa steg: gör varje nyckelord till en egen hel mening, till exempel: ”På vintern sover igelkotten i en lövhög.”"
           ]
         },
         {
@@ -1511,7 +1536,7 @@
             "Om man vill hjälpa en igelkott ska man ge den vatten. Den får ont i magen av mjölk."
           ],
           "comments": [
-            "Alla stödord finns med och har blivit egna, hela meningar med stor bokstav och punkt.",
+            "Minst 10 av nyckelorden finns med och har blivit egna, hela meningar med stor bokstav och punkt.",
             "All fakta stämmer, och texten är skriven som en faktatext – inte som en saga.",
             "Texten är indelad i stycken där meningar som hör ihop står tillsammans."
           ]
@@ -1527,7 +1552,7 @@
             "Vill du hjälpa en igelkott? Ställ ut en skål med vatten! Mjölk ska den inte ha, för det får den ont i magen av."
           ],
           "comments": [
-            "Texten har med alla stödorden och dessutom mer fakta som passar in (nattaktiv, flera tusen taggar, rund och tjock innan vintern).",
+            "Texten har med många av nyckelorden och dessutom mer fakta som passar in (nattaktiv, flera tusen taggar, rund och tjock innan vintern).",
             "Svåra ord förklaras (”Nattaktiv. Det betyder att ...”).",
             "Texten förklarar varför: varför taggarna skyddar, varför igelkotten sover på vintern.",
             "Styckena har varsitt ämne, precis som i en riktig faktatext."
@@ -1544,7 +1569,11 @@
         "vintersömn",
         "lövhög",
         "vatten",
-        "vår"
+        "vår",
+        "djur",
+        "fiender",
+        "mat",
+        "löv"
       ]
     },
     {
@@ -1559,10 +1588,10 @@
       },
       "intro": [
         "Hunden är ett av våra vanligaste husdjur. Nu ska du skriva en egen faktatext om hunden.",
-        "Använd alla stödord i rutan. Skriv med hela meningar – skriv inte bara av stödorden."
+        "Till hjälp får du nyckelord. Skriv med hela meningar – skriv inte bara av nyckelorden."
       ],
       "doThis": [
-        "Skriv en faktatext om hunden. Använd alla stödord i rutan och skriv med hela meningar. Din text ska ha rubriken Hunden."
+        "Skriv en faktatext om hunden. Använd minst 10 av de 14 nyckelorden i rutan och skriv med hela meningar. Din text ska ha rubriken Hunden."
       ],
       "supportWords": [
         "valp",
@@ -1574,22 +1603,39 @@
         "skälla",
         "ben",
         "husdjur",
-        "veterinär"
+        "veterinär",
+        "tassar",
+        "lukter",
+        "vakta",
+        "sällskap"
       ],
+      "minSupportWords": 10,
       "fixedHeading": "Hunden",
       "remember": [
         "Du ska skriva en faktatext, inte en saga. Allt ska vara på riktigt.",
-        "Använd alla stödord och skriv egna, hela meningar.",
+        "Använd minst 10 av nyckelorden och skriv egna, hela meningar.",
         "Skriv med stor bokstav och punkt.",
         "Läs igenom din text när du är klar."
       ],
-      "checklist": [
-        "Min text har rubriken Hunden.",
-        "Jag har använt alla stödord i rutan.",
-        "Allt i min text är fakta som stämmer.",
-        "Jag har skrivit egna hela meningar, inte bara stödorden.",
-        "Jag har skrivit med stor bokstav och punkt.",
-        "Jag har läst igenom min text."
+      "checklistGroups": [
+        {
+          "level": "Godtagbar nivå",
+          "items": [
+            "Min text har rubriken Hunden.",
+            "Jag har använt minst 10 av nyckelorden.",
+            "Allt i min text är fakta som stämmer.",
+            "Jag har skrivit egna hela meningar, inte bara nyckelorden.",
+            "Jag har skrivit med stor bokstav och punkt."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "items": [
+            "Jag har förklarat svåra ord så att läsaren förstår.",
+            "Jag har delat in texten i stycken där meningar som hör ihop står tillsammans.",
+            "Jag har läst igenom min text och rättat det jag hittade."
+          ]
+        }
       ],
       "examples": [
         {
@@ -1599,9 +1645,9 @@
             "Hunden har päls och svans. Valp. Den skäller. Koppel och promenad. Nos. Husdjur. Ben. Veterinär."
           ],
           "comments": [
-            "Många av stödorden finns med – bra början!",
+            "Många av nyckelorden finns med – bra början!",
             "Men flera står som ensamma ord, inte som hela meningar (Valp. Nos. Husdjur.).",
-            "Nästa steg: gör varje stödord till en hel mening, till exempel: ”En liten hund kallas valp.”"
+            "Nästa steg: gör varje nyckelord till en hel mening, till exempel: ”En liten hund kallas valp.”"
           ]
         },
         {
@@ -1614,7 +1660,7 @@
             "Om hunden blir sjuk får den åka till veterinären."
           ],
           "comments": [
-            "Alla stödord finns med och har blivit egna, hela meningar.",
+            "Minst 10 av nyckelorden finns med och har blivit egna, hela meningar.",
             "All fakta stämmer och texten är skriven som en faktatext.",
             "Meningarna har stor bokstav och punkt, och meningar som hör ihop står i samma stycke."
           ]
@@ -1629,7 +1675,7 @@
             "En hund behöver mat, motion och kärlek. Blir den sjuk tar man den till veterinären, som är en doktor för djur."
           ],
           "comments": [
-            "Alla stödord finns med, och texten har dessutom mer fakta som passar in.",
+            "Många av nyckelorden finns med, och texten har dessutom mer fakta som passar in.",
             "Svåra ord förklaras (”veterinären, som är en doktor för djur”).",
             "Texten förklarar varför: varför man har koppel, vad svansen betyder.",
             "Varje stycke har sitt eget ämne, precis som i en riktig faktatext."
@@ -1649,10 +1695,10 @@
       },
       "intro": [
         "När vi sorterar våra sopor kan saker användas igen i stället för att slängas. Det kallas att återvinna. Nu ska du skriva en egen faktatext om återvinning.",
-        "Använd alla stödord i rutan. Skriv med hela meningar – skriv inte bara av stödorden."
+        "Till hjälp får du nyckelord. Skriv med hela meningar – skriv inte bara av nyckelorden."
       ],
       "doThis": [
-        "Skriv en faktatext om återvinning. Använd alla stödord i rutan och skriv med hela meningar. Din text ska ha rubriken Återvinning."
+        "Skriv en faktatext om återvinning. Använd minst 10 av de 14 nyckelorden i rutan och skriv med hela meningar. Din text ska ha rubriken Återvinning."
       ],
       "supportWords": [
         "sortera",
@@ -1664,22 +1710,39 @@
         "miljö",
         "panta",
         "återvinningsstation",
-        "använda igen"
+        "använda igen",
+        "sopor",
+        "kärl",
+        "flaskor",
+        "natur"
       ],
+      "minSupportWords": 10,
       "fixedHeading": "Återvinning",
       "remember": [
         "Du ska skriva en faktatext, inte en saga. Allt ska vara på riktigt.",
-        "Använd alla stödord och skriv egna, hela meningar.",
+        "Använd minst 10 av nyckelorden och skriv egna, hela meningar.",
         "Skriv med stor bokstav och punkt.",
         "Läs igenom din text när du är klar."
       ],
-      "checklist": [
-        "Min text har rubriken Återvinning.",
-        "Jag har använt alla stödord i rutan.",
-        "Allt i min text är fakta som stämmer.",
-        "Jag har skrivit egna hela meningar, inte bara stödorden.",
-        "Jag har skrivit med stor bokstav och punkt.",
-        "Jag har läst igenom min text."
+      "checklistGroups": [
+        {
+          "level": "Godtagbar nivå",
+          "items": [
+            "Min text har rubriken Återvinning.",
+            "Jag har använt minst 10 av nyckelorden.",
+            "Allt i min text är fakta som stämmer.",
+            "Jag har skrivit egna hela meningar, inte bara nyckelorden.",
+            "Jag har skrivit med stor bokstav och punkt."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "items": [
+            "Jag har förklarat svåra ord så att läsaren förstår.",
+            "Jag har delat in texten i stycken där meningar som hör ihop står tillsammans.",
+            "Jag har läst igenom min text och rättat det jag hittade."
+          ]
+        }
       ],
       "examples": [
         {
@@ -1689,7 +1752,7 @@
             "Man ska sortera. Papper och plast. Glas och metall. Skräp. Miljö. Panta. Återvinningsstation. Använda igen."
           ],
           "comments": [
-            "Stödorden finns med, men de flesta är inte hela meningar.",
+            "Nyckelorden finns med, men de flesta är inte hela meningar.",
             "Texten berättar inte vad orden betyder eller hör ihop.",
             "Nästa steg: skriv hela meningar, till exempel: ”Glas och metall lägger man i olika kärl.”"
           ]
@@ -1704,7 +1767,7 @@
             "Återvinning är bra för miljön, eftersom man inte behöver göra allt nytt hela tiden."
           ],
           "comments": [
-            "Alla stödord finns med som egna, hela meningar.",
+            "Minst 10 av nyckelorden finns med som egna, hela meningar.",
             "Texten förklarar vad återvinning är, inte bara räknar upp orden.",
             "Meningarna har stor bokstav och punkt, och texten är indelad i stycken."
           ]
@@ -1719,7 +1782,7 @@
             "Varför är allt detta viktigt? Jo, för miljön. När vi använder sakerna igen behöver vi inte ta lika mycket nytt material från naturen. På så sätt hjälper varje sorterad burk vår jord lite grann."
           ],
           "comments": [
-            "Alla stödord finns med, och texten har mer fakta som hör till ämnet.",
+            "Många av nyckelorden finns med, och texten har mer fakta som hör till ämnet.",
             "Texten förklarar varför man återvinner och vad som händer med materialet.",
             "Den avslutar med en tanke om varför det är viktigt.",
             "Varje stycke har sitt eget ämne, som i en riktig faktatext."
@@ -1742,22 +1805,34 @@
         "Du ska skriva en berättelse om ett äventyr i skogen. Det kan vara du själv eller en påhittad person som är med om äventyret."
       ],
       "doThis": [
-        "Skriv en berättelse om ett äventyr i skogen. Tänk på frågorna: Vem är med i skogen? Vad händer där? Vad blir spännande eller svårt? Hur slutar äventyret?"
+        "Skriv en berättelse om ett äventyr i skogen. Tänk på frågorna: Vem är med i skogen? Vad händer där? Vad blir spännande eller svårt? Hur slutar äventyret?",
+        "När du är klar kan du göra texten ännu bättre: använd många innehållsord (ord som betyder något viktigt, som skog, springa, rädd) och stava de vanliga orden rätt."
       ],
       "fixedHeading": "Ett äventyr i skogen",
       "remember": [
-        "Du ska skriva en berättelse.",
-        "Din berättelse ska ha en början, en mitt och ett slut.",
-        "Skriv hela meningar med stor bokstav och punkt.",
+        "Du ska skriva en berättelse med en tydlig inledning, handling och avslut.",
+        "Skriv minst tre hela meningar med stor bokstav, mellanrum mellan orden och rätt skiljetecken.",
         "Läs igenom din berättelse när du är klar."
       ],
-      "checklist": [
-        "Min berättelse har rubriken Ett äventyr i skogen.",
-        "Det framgår vem som är med i skogen.",
-        "Något spännande händer i skogen.",
-        "Min berättelse har ett slut.",
-        "Jag har skrivit hela meningar med stor bokstav och punkt.",
-        "Jag har läst igenom min berättelse."
+      "checklistGroups": [
+        {
+          "level": "Godtagbar nivå",
+          "items": [
+            "Min berättelse har rubriken Ett äventyr i skogen.",
+            "Min berättelse har en tydlig inledning (början).",
+            "Något spännande händer i skogen (handling).",
+            "Min berättelse har ett avslut (slut).",
+            "Jag har skrivit minst tre meningar som är rätt: stor bokstav, mellanrum mellan orden och punkt, frågetecken eller utropstecken."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "items": [
+            "Jag har använt minst 10 innehållsord som för berättelsen framåt.",
+            "Jag har stavat minst 10 vanliga ord rätt.",
+            "Jag har läst igenom min berättelse och gjort den bättre."
+          ]
+        }
       ],
       "examples": [
         {
@@ -1822,22 +1897,34 @@
         "Du ska skriva en berättelse om en magisk nyckel. Det kan vara du själv eller en påhittad person som hittar nyckeln."
       ],
       "doThis": [
-        "Skriv en berättelse om en magisk nyckel. Tänk på frågorna: Vem hittar nyckeln, och var? Vad kan nyckeln göra? Vad händer när man använder den? Hur slutar berättelsen?"
+        "Skriv en berättelse om en magisk nyckel. Tänk på frågorna: Vem hittar nyckeln, och var? Vad kan nyckeln göra? Vad händer när man använder den? Hur slutar berättelsen?",
+        "När du är klar kan du göra texten ännu bättre: använd många innehållsord (ord som betyder något viktigt, som nyckel, lysa, glad) och stava de vanliga orden rätt."
       ],
       "fixedHeading": "Den magiska nyckeln",
       "remember": [
-        "Du ska skriva en berättelse.",
-        "Din berättelse ska ha en början, en mitt och ett slut.",
-        "Skriv hela meningar med stor bokstav och punkt.",
+        "Du ska skriva en berättelse med en tydlig inledning, handling och avslut.",
+        "Skriv minst tre hela meningar med stor bokstav, mellanrum mellan orden och rätt skiljetecken.",
         "Läs igenom din berättelse när du är klar."
       ],
-      "checklist": [
-        "Min berättelse har rubriken Den magiska nyckeln.",
-        "Det framgår vem som hittar nyckeln och var.",
-        "Något händer när nyckeln används.",
-        "Min berättelse har ett slut.",
-        "Jag har skrivit hela meningar med stor bokstav och punkt.",
-        "Jag har läst igenom min berättelse."
+      "checklistGroups": [
+        {
+          "level": "Godtagbar nivå",
+          "items": [
+            "Min berättelse har rubriken Den magiska nyckeln.",
+            "Min berättelse har en tydlig inledning (början).",
+            "Något händer när nyckeln används (handling).",
+            "Min berättelse har ett avslut (slut).",
+            "Jag har skrivit minst tre meningar som är rätt: stor bokstav, mellanrum mellan orden och punkt, frågetecken eller utropstecken."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "items": [
+            "Jag har använt minst 10 innehållsord som för berättelsen framåt.",
+            "Jag har stavat minst 10 vanliga ord rätt.",
+            "Jag har läst igenom min berättelse och gjort den bättre."
+          ]
+        }
       ],
       "examples": [
         {

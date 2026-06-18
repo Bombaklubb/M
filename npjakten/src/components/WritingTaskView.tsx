@@ -11,11 +11,18 @@ interface Props {
 
 export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
   const storageKey = `npjakten-skriva-${task.id}`;
+
+  // Checklistan kan vara nivåindelad (åk 3) eller platt (åk 6/9). Vi arbetar
+  // alltid mot en platt lista internt så att kryss och success-logik blir lika.
+  const flatChecklist = task.checklistGroups
+    ? task.checklistGroups.flatMap((g) => g.items)
+    : task.checklist ?? [];
+
   const [text, setText] = useState<string>(
     () => localStorage.getItem(storageKey) ?? ""
   );
   const [checked, setChecked] = useState<boolean[]>(() =>
-    task.checklist.map(() => false)
+    flatChecklist.map(() => false)
   );
   const [showChecklist, setShowChecklist] = useState(false);
   const [openExample, setOpenExample] = useState<number | null>(null);
@@ -39,6 +46,27 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
     () => (text.trim() === "" ? 0 : text.trim().split(/\s+/).length),
     [text]
   );
+
+  // Räkna automatiskt hur många nyckelord eleven använt (åk 3 faktatext).
+  // Matchningen är medvetet generös: okänslig för stor/liten bokstav och
+  // tillåter böjningar ("vatten" → "vattnet"). Ordgräns till vänster gör att
+  // korta ord ("vår") inte fastnar mitt inne i andra ord.
+  const matchedSupport = useMemo(() => {
+    const matched = new Set<string>();
+    if (!task.supportWords) return matched;
+    const haystack = text.toLowerCase();
+    const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    for (const word of task.supportWords) {
+      const parts = word.toLowerCase().trim().split(/\s+/);
+      const allFound = parts.every((p) =>
+        new RegExp(`(^|[^\\p{L}])${esc(p)}`, "u").test(haystack)
+      );
+      if (allFound) matched.add(word);
+    }
+    return matched;
+  }, [text, task.supportWords]);
+
+  const supportCount = matchedSupport.size;
 
   // Hela texten med rubrik, för kopiering och nedladdning
   const fullText = useMemo(() => {
@@ -134,15 +162,40 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
             )}
             {task.supportWords && (
               <div className="rounded-md border-2 border-np bg-white p-4">
-                <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-np">
-                  Stödord
+                <p className="mb-1 text-center text-sm font-bold uppercase tracking-wide text-np">
+                  Nyckelord
                 </p>
+                {task.minSupportWords && (
+                  <p
+                    className={
+                      "mb-3 text-center text-sm font-semibold " +
+                      (supportCount >= task.minSupportWords
+                        ? "text-green-700"
+                        : "text-stone-500")
+                    }
+                  >
+                    {supportCount} av {task.supportWords.length} nyckelord använda
+                    {" – minst "}
+                    {task.minSupportWords} behövs
+                    {supportCount >= task.minSupportWords ? " ✓" : ""}
+                  </p>
+                )}
                 <ul className="mx-auto grid max-w-md grid-cols-2 gap-x-8 gap-y-2 sm:grid-cols-3">
-                  {task.supportWords.map((word, i) => (
-                    <li key={i} className="font-serif text-lg">
-                      {word}
-                    </li>
-                  ))}
+                  {task.supportWords.map((word, i) => {
+                    const used = matchedSupport.has(word);
+                    return (
+                      <li
+                        key={i}
+                        className={
+                          "font-serif text-lg " +
+                          (used ? "font-bold text-np" : "text-stone-700")
+                        }
+                      >
+                        {used ? "✓ " : ""}
+                        {word}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}
@@ -215,25 +268,68 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
               Läs igenom din text och bocka av varje punkt som stämmer. Saknas något? Gå
               tillbaka och förbättra texten – det gör man även på riktiga provet.
             </p>
-            <ul className="mt-4 space-y-2">
-              {task.checklist.map((item, i) => (
-                <li key={i}>
-                  <label className="flex cursor-pointer items-start gap-3">
-                    <input
-                      type="checkbox"
-                      checked={checked[i]}
-                      onChange={() =>
-                        setChecked((prev) => prev.map((c, ci) => (ci === i ? !c : c)))
-                      }
-                      className="mt-1 h-5 w-5 accent-np"
-                    />
-                    <span className={checked[i] ? "text-stone-500 line-through" : ""}>
-                      {item}
-                    </span>
-                  </label>
-                </li>
-              ))}
-            </ul>
+            {task.checklistGroups ? (
+              <div className="mt-4 space-y-4">
+                {(() => {
+                  let flatIndex = 0;
+                  return task.checklistGroups.map((group, gi) => (
+                    <div key={gi}>
+                      <p className="text-sm font-bold uppercase tracking-wide text-np">
+                        {group.level}
+                      </p>
+                      <ul className="mt-2 space-y-2">
+                        {group.items.map((item) => {
+                          const idx = flatIndex++;
+                          return (
+                            <li key={idx}>
+                              <label className="flex cursor-pointer items-start gap-3">
+                                <input
+                                  type="checkbox"
+                                  checked={checked[idx]}
+                                  onChange={() =>
+                                    setChecked((prev) =>
+                                      prev.map((c, ci) => (ci === idx ? !c : c))
+                                    )
+                                  }
+                                  className="mt-1 h-5 w-5 accent-np"
+                                />
+                                <span
+                                  className={
+                                    checked[idx] ? "text-stone-500 line-through" : ""
+                                  }
+                                >
+                                  {item}
+                                </span>
+                              </label>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  ));
+                })()}
+              </div>
+            ) : (
+              <ul className="mt-4 space-y-2">
+                {flatChecklist.map((item, i) => (
+                  <li key={i}>
+                    <label className="flex cursor-pointer items-start gap-3">
+                      <input
+                        type="checkbox"
+                        checked={checked[i]}
+                        onChange={() =>
+                          setChecked((prev) => prev.map((c, ci) => (ci === i ? !c : c)))
+                        }
+                        className="mt-1 h-5 w-5 accent-np"
+                      />
+                      <span className={checked[i] ? "text-stone-500 line-through" : ""}>
+                        {item}
+                      </span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            )}
             {checked.every(Boolean) && (
               <p className="mt-4 rounded bg-white p-3 text-center font-bold text-np">
                 Snyggt jobbat! Din text uppfyller alla punkter på checklistan. 🎉
