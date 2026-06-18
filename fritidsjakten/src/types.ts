@@ -63,3 +63,27 @@ export interface RorelseKategori {
   emoji: string
   lekar: Rorelselek[]
 }
+
+// Modul 7 – Temadagar (färdiga veckoupplägg för högtider/temadagar)
+export interface TemadagDag {
+  dag: string
+  titel: string
+  beskrivning: string
+}
+
+export interface Temadag {
+  id: string
+  namn: string
+  emoji: string
+  beskrivning: string
+  laroplan?: string
+  dagar: TemadagDag[]
+}
+
+// Modul 8 – Värdegrundskort (diskussionsfrågor och dilemman)
+export interface VardegrundKategori {
+  kategori: string
+  emoji: string
+  farg: string
+  fragor: string[]
+}

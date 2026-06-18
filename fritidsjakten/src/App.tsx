@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   Sparkles, Library, Wand2, HeartHandshake, Layers, CalendarDays, Activity,
-  ArrowLeft, Printer,
+  ArrowLeft, Printer, PartyPopper, MessagesSquare,
 } from 'lucide-react'
 import Temabanken from './components/Temabanken'
 import Aktivitetsgeneratorn from './components/Aktivitetsgeneratorn'
@@ -9,6 +9,8 @@ import Kompisuppdrag from './components/Kompisuppdrag'
 import Uppdragskort from './components/Uppdragskort'
 import Veckoplaneraren from './components/Veckoplaneraren'
 import Rorelsebanken from './components/Rorelsebanken'
+import Temadagar from './components/Temadagar'
+import Vardegrundskort from './components/Vardegrundskort'
 
 type ModulId =
   | 'hem'
@@ -18,6 +20,8 @@ type ModulId =
   | 'uppdragskort'
   | 'veckoplaneraren'
   | 'rorelsebanken'
+  | 'temadagar'
+  | 'vardegrundskort'
 
 interface ModulInfo {
   id: ModulId
@@ -35,6 +39,8 @@ const MODULER: ModulInfo[] = [
   { id: 'uppdragskort', nr: 4, namn: 'Uppdragskort', beskrivning: 'Eleverna drar ett eget uppdrag.', icon: Layers, farg: 'from-violet-400 to-fuchsia-600' },
   { id: 'veckoplaneraren', nr: 5, namn: 'Veckoplaneraren', beskrivning: 'Få ett färdigt veckoschema.', icon: CalendarDays, farg: 'from-amber-400 to-orange-600' },
   { id: 'rorelsebanken', nr: 6, namn: 'Rörelsebanken', beskrivning: 'Lekar för alla ytor och årstider.', icon: Activity, farg: 'from-cyan-400 to-teal-600' },
+  { id: 'temadagar', nr: 7, namn: 'Temadagar', beskrivning: 'Färdiga veckoupplägg för högtider.', icon: PartyPopper, farg: 'from-fuchsia-400 to-purple-600' },
+  { id: 'vardegrundskort', nr: 8, namn: 'Värdegrundskort', beskrivning: 'Frågor och dilemman för kompissamtal.', icon: MessagesSquare, farg: 'from-rose-400 to-orange-500' },
 ]
 
 export default function App() {
@@ -127,6 +133,8 @@ export default function App() {
         {aktiv === 'uppdragskort' && <Uppdragskort />}
         {aktiv === 'veckoplaneraren' && <Veckoplaneraren />}
         {aktiv === 'rorelsebanken' && <Rorelsebanken />}
+        {aktiv === 'temadagar' && <Temadagar />}
+        {aktiv === 'vardegrundskort' && <Vardegrundskort />}
       </main>
     </div>
   )
