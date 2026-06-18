@@ -86,6 +86,12 @@ export interface ExampleResponse {
   comments: string[]; // kommentarer om varför texten bedöms så
 }
 
+// En nivå i den nivåindelade självskattningen (åk 3)
+export interface ChecklistGroup {
+  level: string; // t.ex. "Godtagbar nivå" eller "Mer utvecklad nivå"
+  items: string[];
+}
+
 export interface WritingTask {
   id: string;
   delprov: string; // t.ex. "Delprov C1: skriva – berättande text"
@@ -103,10 +109,12 @@ export interface WritingTask {
   intro: string[]; // inledande stycken som sätter scenen
   doThis: string[]; // "Gör det här!"
   topicExamples?: string[]; // exempelämnen (argumenterande)
-  supportWords?: string[]; // stödord som ska användas (åk 3, delprov H)
+  supportWords?: string[]; // nyckelord som ska användas (åk 3, delprov H)
+  minSupportWords?: number; // minsta antal nyckelord som måste användas (åk 3)
   fixedHeading?: string; // given rubrik (berättelse)
   remember: string[]; // "Kom ihåg!"
-  checklist: string[]; // självskattning efter skrivandet
+  checklist?: string[]; // platt självskattning (åk 6/9)
+  checklistGroups?: ChecklistGroup[]; // nivåindelad självskattning (åk 3)
   examples?: ExampleResponse[]; // bedömda exempelsvar
 }
 
