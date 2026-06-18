@@ -1,33 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Plus, Trash2, X } from 'lucide-react'
 import { TEMAN } from '../data/teman'
+import { EGNA_TEMAN_KEY, laddaEgnaTeman } from '../lib/egnaTeman'
 import type { Tema } from '../types'
 
-const LS_KEY = 'fritids_egna_teman'
-
-function laddaEgna(): Tema[] {
-  try {
-    const raw = localStorage.getItem(LS_KEY)
-    if (!raw) return []
-    // Tål gamla sparade teman som hade fältet "aldersgrupper".
-    return (JSON.parse(raw) as Tema[]).map((t) => ({
-      id: t.id,
-      namn: t.namn,
-      emoji: t.emoji,
-      aktiviteter: t.aktiviteter ?? [],
-    }))
-  } catch {
-    return []
-  }
-}
-
 export default function Temabanken() {
-  const [egna, setEgna] = useState<Tema[]>(laddaEgna)
+  const [egna, setEgna] = useState<Tema[]>(laddaEgnaTeman)
   const [valtId, setValtId] = useState<string | null>(null)
   const [visaForm, setVisaForm] = useState(false)
 
   useEffect(() => {
-    localStorage.setItem(LS_KEY, JSON.stringify(egna))
+    localStorage.setItem(EGNA_TEMAN_KEY, JSON.stringify(egna))
   }, [egna])
 
   const allaTeman = useMemo(() => [...TEMAN, ...egna], [egna])
