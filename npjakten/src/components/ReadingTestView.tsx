@@ -295,6 +295,13 @@ function QuestionView({
         </p>
       </div>
 
+      {reviewing && (q.kind === "multiple-choice" || q.kind === "open") && q.aspect && (
+        <p className="mt-2 pl-2 text-xs text-stone-500 sm:pl-20">
+          <span className="font-semibold uppercase tracking-wide">Uppgiftstyp:</span>{" "}
+          {q.aspect}
+        </p>
+      )}
+
       {q.kind === "multiple-choice" ? (
         <div className="mt-4 space-y-2 pl-2 sm:pl-20">
           {q.options.map((option, index) => {
