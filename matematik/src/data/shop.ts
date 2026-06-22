@@ -3,13 +3,14 @@
 // eller kistor. Poäng som spenderas dras från en separat "plånbok"
 // (intjänat − spenderat), så livstidstotalen och kist-milstolparna rörs aldrig.
 
-export type Rarity = 'common' | 'rare' | 'epic' | 'legendary';
+export type Rarity = 'common' | 'rare' | 'epic' | 'legendary' | 'mythic';
 
 export const RARITY_LABELS: Record<Rarity, string> = {
   common: 'Vanlig',
   rare: 'Sällsynt',
   epic: 'Episk',
   legendary: 'Legendarisk',
+  mythic: 'Mytisk',
 };
 
 export const RARITY_RING: Record<Rarity, string> = {
@@ -17,10 +18,13 @@ export const RARITY_RING: Record<Rarity, string> = {
   rare: 'from-sky-400 to-blue-500',
   epic: 'from-violet-400 to-fuchsia-500',
   legendary: 'from-amber-400 to-orange-500',
+  mythic: 'from-fuchsia-500 via-purple-600 to-amber-400',
 };
 
 // ─── Avatarer ───────────────────────────────────────────────────────────────────
-export type AvatarGroup = 'Djur' | 'Fantasi' | 'Fordon' | 'Yrken';
+export type AvatarGroup =
+  | 'Djur' | 'Fantasi' | 'Fordon' | 'Yrken'
+  | 'Skoltema' | 'Roligt' | 'Sällsynt' | 'Säsong';
 
 export interface ShopAvatar {
   emoji: string;
@@ -31,7 +35,9 @@ export interface ShopAvatar {
 }
 
 // Visningsordning för avatar-grupperna i butiken.
-export const AVATAR_GROUP_ORDER: AvatarGroup[] = ['Djur', 'Fantasi', 'Fordon', 'Yrken'];
+export const AVATAR_GROUP_ORDER: AvatarGroup[] = [
+  'Djur', 'Skoltema', 'Fordon', 'Yrken', 'Roligt', 'Säsong', 'Fantasi', 'Sällsynt',
+];
 
 // OBS: lägg ALLTID till nya avatarer sist – köp sparas som index i denna array,
 // så ändrad ordning skulle flytta vad någon redan äger. (De 24 första behåller
@@ -96,6 +102,51 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { emoji: '👨‍💻', name: 'Programmeraren', rarity: 'epic', price: 1000, group: 'Yrken' },
   { emoji: '🧑‍⚖️', name: 'Domaren',       rarity: 'legendary', price: 2500, group: 'Yrken' },
   { emoji: '🧑‍🎤', name: 'Artisten',      rarity: 'legendary', price: 2500, group: 'Yrken' },
+
+  // ── Djur (tillagda) ───────────────────────────────────────────────────────────
+  { emoji: '🐬', name: 'Delfinen',     rarity: 'rare', price: 400, group: 'Djur' },
+
+  // ── Skoltema (tillagda) ───────────────────────────────────────────────────────
+  { emoji: '🤓', name: 'Bokmask',        rarity: 'common', price: 150, group: 'Skoltema' },
+  { emoji: '🧮', name: 'Mattesnille',    rarity: 'common', price: 150, group: 'Skoltema' },
+  { emoji: '🎨', name: 'Konstnär',       rarity: 'common', price: 150, group: 'Skoltema' },
+  { emoji: '🎸', name: 'Musikstjärna',   rarity: 'common', price: 150, group: 'Skoltema' },
+  { emoji: '🧪', name: 'Vetenskapsgeni', rarity: 'rare', price: 400, group: 'Skoltema' },
+  { emoji: '🔤', name: 'Språkmästare',   rarity: 'rare', price: 400, group: 'Skoltema' },
+  { emoji: '📚', name: 'Bibliotekarie',  rarity: 'rare', price: 400, group: 'Skoltema' },
+  { emoji: '💡', name: 'Uppfinnare',     rarity: 'rare', price: 400, group: 'Skoltema' },
+
+  // ── Roligt & knasigt (tillagda) ───────────────────────────────────────────────
+  { emoji: '🥔', name: 'Potatis med solglasögon', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🌮', name: 'Dansande taco',           rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍌', name: 'Flygande banan',          rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🧟', name: 'Zombie med läsglasögon',  rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🥒', name: 'Sur gurka',               rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🥦', name: 'Broccolisuperhjälte',     rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '👹', name: 'Toffelmonster',           rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '☕', name: 'Kaffekopp med ansikte',   rarity: 'rare', price: 400, group: 'Roligt' },
+
+  // ── Säsong (tillagda) ─────────────────────────────────────────────────────────
+  { emoji: '🐇', name: 'Påskhare',        rarity: 'rare', price: 400, group: 'Säsong' },
+  { emoji: '🏴‍☠️', name: 'Sommarpirat',    rarity: 'rare', price: 400, group: 'Säsong' },
+  { emoji: '👻', name: 'Halloween-spöke', rarity: 'rare', price: 400, group: 'Säsong' },
+  { emoji: '🎅', name: 'Jultomte',        rarity: 'rare', price: 400, group: 'Säsong' },
+  { emoji: '⛄', name: 'Snögubbe',        rarity: 'rare', price: 400, group: 'Säsong' },
+  { emoji: '💐', name: 'Midsommarfigur',  rarity: 'rare', price: 400, group: 'Säsong' },
+
+  // ── Fantasi (tillagda, dyrare) ────────────────────────────────────────────────
+  { emoji: '🐉', name: 'Elddrake',        rarity: 'epic', price: 1000, group: 'Fantasi' },
+  { emoji: '🧊', name: 'Ismagiker',       rarity: 'epic', price: 1000, group: 'Fantasi' },
+  { emoji: '🗡️', name: 'Skuggkrigare',    rarity: 'epic', price: 1000, group: 'Fantasi' },
+  { emoji: '👾', name: 'Rymdkejsare',     rarity: 'epic', price: 1000, group: 'Fantasi' },
+  { emoji: '⏳', name: 'Tidsresenär',     rarity: 'legendary', price: 2500, group: 'Fantasi' },
+  { emoji: '🦾', name: 'Guldrobot',       rarity: 'legendary', price: 2500, group: 'Fantasi' },
+  { emoji: '🌈', name: 'Regnbågsväktare', rarity: 'legendary', price: 2500, group: 'Fantasi' },
+
+  // ── Sällsynt (tillagda, mycket dyra – mytiska) ────────────────────────────────
+  { emoji: '💎', name: 'Diamantdrake',          rarity: 'mythic', price: 5000, group: 'Sällsynt' },
+  { emoji: '💫', name: 'Galaxhjälte',           rarity: 'mythic', price: 5000, group: 'Sällsynt' },
+  { emoji: '🔮', name: 'Legendarisk trollkarl', rarity: 'mythic', price: 5000, group: 'Sällsynt' },
 ];
 
 // ─── Ramar (avatar-frames) ──────────────────────────────────────────────────────
