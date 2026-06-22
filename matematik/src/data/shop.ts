@@ -24,7 +24,7 @@ export const RARITY_RING: Record<Rarity, string> = {
 // ─── Avatarer ───────────────────────────────────────────────────────────────────
 export type AvatarGroup =
   | 'Djur' | 'Fantasi' | 'Fordon' | 'Yrken'
-  | 'Skoltema' | 'Roligt' | 'Sällsynt' | 'Säsong';
+  | 'Skoltema' | 'Roligt' | 'Sällsynt' | 'Säsong' | 'Figurer';
 
 export interface ShopAvatar {
   emoji: string;
@@ -36,7 +36,7 @@ export interface ShopAvatar {
 
 // Visningsordning för avatar-grupperna i butiken.
 export const AVATAR_GROUP_ORDER: AvatarGroup[] = [
-  'Djur', 'Skoltema', 'Fordon', 'Yrken', 'Roligt', 'Säsong', 'Fantasi', 'Sällsynt',
+  'Figurer', 'Djur', 'Skoltema', 'Fordon', 'Yrken', 'Roligt', 'Säsong', 'Fantasi', 'Sällsynt',
 ];
 
 // OBS: lägg ALLTID till nya avatarer sist – köp sparas som index i denna array,
@@ -147,6 +147,25 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { emoji: '💎', name: 'Diamantdrake',          rarity: 'mythic', price: 5000, group: 'Sällsynt' },
   { emoji: '💫', name: 'Galaxhjälte',           rarity: 'mythic', price: 5000, group: 'Sällsynt' },
   { emoji: '🔮', name: 'Legendarisk trollkarl', rarity: 'mythic', price: 5000, group: 'Sällsynt' },
+
+  // ── Figurer (DiceBear-genererade) ─────────────────────────────────────────────
+  // "db:<stil>:<seed>" – ritas som bild av FramedAvatar via utils/dicebear.ts
+  { emoji: 'db:funEmoji:Bubbla',   name: 'Glada gänget',     rarity: 'common', price: 150, group: 'Figurer' },
+  { emoji: 'db:funEmoji:Kano',     name: 'Fjantet',          rarity: 'common', price: 150, group: 'Figurer' },
+  { emoji: 'db:funEmoji:Toff',     name: 'Busfiguren',       rarity: 'common', price: 150, group: 'Figurer' },
+  { emoji: 'db:adventurer:Aria',   name: 'Äventyraren',      rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:adventurer:Milo',   name: 'Upptäckaren',      rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:funEmoji:Vera',     name: 'Solstrålen',       rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:adventurer:Otto',   name: 'Kompisen',         rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:adventurer:Iris',   name: 'Drömmaren',        rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:funEmoji:Liv',      name: 'Konstnärssjälen',  rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:bottts:Rex',        name: 'Roboten',          rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:bottts:Volt',       name: 'Cyborgen',         rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:pixelArt:Bit',      name: 'Pixelhjälten',     rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:pixelArt:Nova',     name: 'Retrofiguren',     rarity: 'rare', price: 400, group: 'Figurer' },
+  { emoji: 'db:adventurer:Saga',   name: 'Hjälten',          rarity: 'epic', price: 1000, group: 'Figurer' },
+  { emoji: 'db:bottts:Titan',      name: 'Megaboten',        rarity: 'epic', price: 1000, group: 'Figurer' },
+  { emoji: 'db:pixelArt:Zix',      name: '8-bitaren',        rarity: 'epic', price: 1000, group: 'Figurer' },
 ];
 
 // ─── Ramar (avatar-frames) ──────────────────────────────────────────────────────

@@ -182,11 +182,11 @@ export default function ShopView() {
     return (
       <ItemCard
         key={`av-${i}`}
-        preview={<span style={{ fontSize: 52, lineHeight: 1 }}>{a.emoji}</span>}
+        preview={<FramedAvatar emoji={a.emoji} size={56} />}
         name={a.name} rarity={a.rarity} price={a.price}
         owned={owned} equipped={equipped} affordable={balance >= a.price}
         onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
-          preview: <span style={{ fontSize: 56 }}>{a.emoji}</span> })}
+          preview: <FramedAvatar emoji={a.emoji} size={64} /> })}
         onEquip={() => { updateAvatar(globalIdx); showToast(`${a.name} vald!`); }}
       />
     );
