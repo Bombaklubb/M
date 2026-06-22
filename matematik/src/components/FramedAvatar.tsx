@@ -1,5 +1,6 @@
 import React from 'react';
 import { FRAME_MAP } from '../data/shop';
+import { dicebearUriFromMarker } from '../utils/dicebear';
 
 interface Props {
   emoji: string;
@@ -9,20 +10,34 @@ interface Props {
   className?: string;
 }
 
+/** Ritar avatar-glyfen: antingen en emoji (text) eller en DiceBear-bild. */
+function Glyph({ emoji, size }: { emoji: string; size: number }) {
+  const uri = dicebearUriFromMarker(emoji);
+  if (uri) {
+    return (
+      <img
+        src={uri}
+        alt=""
+        draggable={false}
+        style={{ width: size, height: size, objectFit: 'contain', display: 'block', borderRadius: '50%' }}
+      />
+    );
+  }
+  return <span style={{ fontSize: size, lineHeight: 1, display: 'inline-block' }}>{emoji}</span>;
+}
+
 /**
- * Visar en emoji-avatar med valfri köpt ram (glow + färgad ring).
- * Utan ram renderas bara emojin – ingen layout-skillnad mot tidigare.
+ * Visar en avatar (emoji eller DiceBear-figur) med valfri köpt ram (glow + ring).
+ * Utan ram renderas bara glyfen – ingen layout-skillnad mot tidigare för emoji.
  */
 export default function FramedAvatar({ emoji, frameId, size = 40, className }: Props) {
   const frame = frameId ? FRAME_MAP[frameId] : null;
+  const isImage = dicebearUriFromMarker(emoji) !== null;
 
   if (!frame) {
     return (
-      <span
-        className={className}
-        style={{ fontSize: size * 0.9, lineHeight: 1, display: 'inline-block' }}
-      >
-        {emoji}
+      <span className={className} style={{ display: 'inline-flex', lineHeight: 1 }}>
+        <Glyph emoji={emoji} size={isImage ? size : size * 0.9} />
       </span>
     );
   }
@@ -56,13 +71,13 @@ export default function FramedAvatar({ emoji, frameId, size = 40, className }: P
           height: inner,
           borderRadius: '50%',
           background: 'rgba(255,255,255,0.92)',
-          fontSize: inner * 0.66,
           lineHeight: 1,
-          // motverka att den roterande ringen snurrar emojin
+          overflow: 'hidden',
+          // motverka att den roterande ringen snurrar glyfen
           ...(frame.animated ? { animation: 'shop-frame-spin 6s linear infinite reverse' } : {}),
         }}
       >
-        {emoji}
+        <Glyph emoji={emoji} size={isImage ? inner : inner * 0.66} />
       </span>
     </span>
   );

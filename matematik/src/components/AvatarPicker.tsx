@@ -6,6 +6,7 @@ import {
 } from '../data/avatars';
 import { SHOP_AVATARS } from '../data/shop';
 import { loadShop } from '../utils/shopStorage';
+import FramedAvatar from './FramedAvatar';
 
 interface Props {
   onClose: () => void;
@@ -130,13 +131,13 @@ export default function AvatarPicker({ onClose }: Props) {
                       key={shopIdx}
                       onClick={() => handleSelect(index)}
                       title={a.name}
-                      className={`text-3xl p-2.5 rounded-2xl transition-all ${
+                      className={`flex items-center justify-center p-2.5 rounded-2xl transition-all ${
                         currentIndex === index
                           ? 'bg-amber-100 ring-2 ring-amber-400 scale-110 shadow-md'
                           : 'bg-gray-50 hover:bg-amber-50 hover:scale-105'
                       }`}
                     >
-                      {a.emoji}
+                      <FramedAvatar emoji={a.emoji} size={34} />
                     </button>
                   );
                 })}
