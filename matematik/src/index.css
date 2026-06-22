@@ -174,3 +174,24 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* Butik: roterande ram + toast */
+@keyframes shop-frame-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes shop-toast {
+  0%   { transform: translate(-50%, 12px); opacity: 0; }
+  100% { transform: translate(-50%, 0);    opacity: 1; }
+}
+
+/* Respektera prefers-reduced-motion – stäng av rörelse-tunga animationer */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

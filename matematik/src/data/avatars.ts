@@ -1,6 +1,8 @@
 import { WorldId } from './worlds';
 import { getQuestProgress } from '../utils/questStorage';
 import { QUESTS } from './quests';
+import { SHOP_AVATARS } from './shop';
+import { loadShop } from '../utils/shopStorage';
 
 // ─── Base avatars (always unlocked) ──────────────────────────────────────────
 export const BASE_AVATARS = [
@@ -49,11 +51,28 @@ export const WORLD_AVATAR_PACKS: WorldAvatarPack[] = [
   },
 ];
 
-// Flat array: indices 0-15 = base, 16+ = world avatars in order dino/fantasy/scifi/gym
+// Antal world-avatarer (alla paket sammanlagt).
+const WORLD_AVATAR_COUNT = WORLD_AVATAR_PACKS.flatMap(p => p.avatars).length;
+
+// Globalt index där butiks-avatarerna börjar i ALL_AVATARS.
+export const SHOP_AVATAR_OFFSET = BASE_AVATARS.length + WORLD_AVATAR_COUNT;
+
+// Flat array: bas → world-avatarer (dino/fantasy/scifi/gym) → butiks-avatarer.
 export const ALL_AVATARS: string[] = [
   ...BASE_AVATARS,
   ...WORLD_AVATAR_PACKS.flatMap(p => p.avatars),
+  ...SHOP_AVATARS.map(a => a.emoji),
 ];
+
+/** Globalt avatar-index för en butiks-avatar (index i SHOP_AVATARS). */
+export function shopAvatarGlobalIndex(shopIndex: number): number {
+  return SHOP_AVATAR_OFFSET + shopIndex;
+}
+
+/** Sant om ett globalt index pekar på en butiks-avatar. */
+export function isShopAvatar(index: number): boolean {
+  return index >= SHOP_AVATAR_OFFSET;
+}
 
 // ─── Unlock helpers ───────────────────────────────────────────────────────────
 
@@ -74,6 +93,10 @@ export function isWorldPackUnlocked(studentId: string, worldId: WorldId): boolea
 /** Returns true if a specific avatar index is available to the student. */
 export function isAvatarUnlocked(studentId: string, index: number): boolean {
   if (index < BASE_AVATARS.length) return true;
+  // Butiks-avatarer låses upp genom köp.
+  if (isShopAvatar(index)) {
+    return loadShop(studentId).ownedAvatars.includes(index - SHOP_AVATAR_OFFSET);
+  }
   const worldId = getAvatarWorld(index);
   if (!worldId) return false;
   return isWorldPackUnlocked(studentId, worldId);

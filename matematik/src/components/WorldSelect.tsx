@@ -3,8 +3,10 @@ import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
 import { getProgress, getPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
+import { getEquippedFrame } from '../utils/shopStorage';
 import { ALL_AVATARS } from '../data/avatars';
 import { BorderBeam } from './magicui/border-beam';
+import FramedAvatar from './FramedAvatar';
 
 export default function WorldSelect() {
   const { currentStudent, logout, setView } = useApp();
@@ -13,6 +15,7 @@ export default function WorldSelect() {
   const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
   const totalPoints = pointsRecord?.total ?? 0;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
+  const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
   const unopenedChests = currentStudent
     ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
     : 0;
@@ -49,6 +52,21 @@ export default function WorldSelect() {
           )}
         </button>
 
+        {/* Butik */}
+        <button
+          onClick={() => setView('shop')}
+          className="flex items-center gap-1 px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          style={{
+            background: 'rgba(255, 248, 220, 0.82)',
+            border: '1px solid rgba(180, 130, 40, 0.50)',
+            boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
+          }}
+          title="Butiken"
+          aria-label="Öppna butiken"
+        >
+          <span className="text-xl leading-none">🛒</span>
+        </button>
+
         {/* Avatar + namn + poäng */}
         <button
           onClick={() => setView('my-page')}
@@ -59,7 +77,7 @@ export default function WorldSelect() {
             boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
           }}
         >
-          <span className="text-xl leading-none">{avatarEmoji}</span>
+          <FramedAvatar emoji={avatarEmoji} frameId={equippedFrame} size={equippedFrame ? 28 : 22} />
           <span className="font-bold text-sm" style={{ color: '#5c3a00' }}>{currentStudent?.name ?? ''}</span>
           <span className="text-amber-600 text-sm">·</span>
           <span className="text-amber-500 text-sm">⭐</span>
