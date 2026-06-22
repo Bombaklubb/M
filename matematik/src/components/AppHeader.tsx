@@ -2,7 +2,7 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getPoints, initPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
-import { getEquippedFrame } from '../utils/shopStorage';
+import { getEquippedFrame, getWalletBalance } from '../utils/shopStorage';
 import { ALL_AVATARS } from '../data/avatars';
 import FramedAvatar from './FramedAvatar';
 
@@ -18,6 +18,9 @@ export default function AppHeader() {
     : null;
 
   const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
+
+  // Visar plånbokssaldot (livstidspoäng − spenderat i butiken), inte livstidstotalen.
+  const walletBalance = currentStudent ? getWalletBalance(currentStudent.id) : 0;
 
   const unopenedChests = currentStudent
     ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
@@ -94,7 +97,7 @@ export default function AppHeader() {
               <FramedAvatar emoji={avatarEmoji ?? ''} frameId={equippedFrame} size={equippedFrame ? 26 : 20} />
               <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
               <span className="text-orange-400 text-sm">⭐</span>
-              <span className="font-bold text-sm hidden sm:inline" style={{ color: '#ea580c' }}>{points.total}</span>
+              <span className="font-bold text-sm hidden sm:inline" style={{ color: '#ea580c' }}>{walletBalance}</span>
             </button>
 
             {/* Logga ut */}

@@ -1,9 +1,9 @@
 import { useApp } from '../contexts/AppContext';
 import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
-import { getProgress, getPoints } from '../utils/storage';
+import { getProgress } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
-import { getEquippedFrame } from '../utils/shopStorage';
+import { getEquippedFrame, getWalletBalance } from '../utils/shopStorage';
 import { ALL_AVATARS } from '../data/avatars';
 import { BorderBeam } from './magicui/border-beam';
 import FramedAvatar from './FramedAvatar';
@@ -12,8 +12,8 @@ export default function WorldSelect() {
   const { currentStudent, logout, setView } = useApp();
 
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
-  const pointsRecord = currentStudent ? getPoints(currentStudent.id) : null;
-  const totalPoints = pointsRecord?.total ?? 0;
+  // Plånbokssaldo (livstidspoäng − spenderat i butiken) – det eleven faktiskt kan spendera.
+  const walletBalance = currentStudent ? getWalletBalance(currentStudent.id) : 0;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
   const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
   const unopenedChests = currentStudent
@@ -81,7 +81,7 @@ export default function WorldSelect() {
           <span className="font-bold text-sm" style={{ color: '#5c3a00' }}>{currentStudent?.name ?? ''}</span>
           <span className="text-amber-600 text-sm">·</span>
           <span className="text-amber-500 text-sm">⭐</span>
-          <span className="font-bold text-sm" style={{ color: '#92400e' }}>{totalPoints}</span>
+          <span className="font-bold text-sm" style={{ color: '#92400e' }}>{walletBalance}</span>
         </button>
 
         {/* Logga ut */}
