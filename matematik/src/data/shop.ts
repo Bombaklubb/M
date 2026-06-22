@@ -20,42 +20,82 @@ export const RARITY_RING: Record<Rarity, string> = {
 };
 
 // ─── Avatarer ───────────────────────────────────────────────────────────────────
+export type AvatarGroup = 'Djur' | 'Fantasi' | 'Fordon' | 'Yrken';
+
 export interface ShopAvatar {
   emoji: string;
   name: string;
   rarity: Rarity;
   price: number;
+  group: AvatarGroup;
 }
 
+// Visningsordning för avatar-grupperna i butiken.
+export const AVATAR_GROUP_ORDER: AvatarGroup[] = ['Djur', 'Fantasi', 'Fordon', 'Yrken'];
+
+// OBS: lägg ALLTID till nya avatarer sist – köp sparas som index i denna array,
+// så ändrad ordning skulle flytta vad någon redan äger. (De 24 första behåller
+// sin ursprungsordning; renderingen grupperar via group-fältet, inte arrayordning.)
 export const SHOP_AVATARS: ShopAvatar[] = [
-  // Vanliga
-  { emoji: '🐶', name: 'Valpen',       rarity: 'common', price: 150 },
-  { emoji: '🐱', name: 'Kattungen',    rarity: 'common', price: 150 },
-  { emoji: '🐰', name: 'Kaninen',      rarity: 'common', price: 150 },
-  { emoji: '🐥', name: 'Kycklingen',   rarity: 'common', price: 150 },
-  { emoji: '🐧', name: 'Pingvinen',    rarity: 'common', price: 150 },
-  { emoji: '🐨', name: 'Koalan',       rarity: 'common', price: 150 },
-  // Sällsynta
-  { emoji: '🦓', name: 'Zebran',       rarity: 'rare', price: 400 },
-  { emoji: '🦒', name: 'Giraffen',     rarity: 'rare', price: 400 },
-  { emoji: '🦔', name: 'Igelkotten',   rarity: 'rare', price: 400 },
-  { emoji: '🦦', name: 'Uttern',       rarity: 'rare', price: 400 },
-  { emoji: '🦥', name: 'Sengångaren',  rarity: 'rare', price: 400 },
-  { emoji: '🦉', name: 'Ugglan',       rarity: 'rare', price: 400 },
-  // Episka
-  { emoji: '🦚', name: 'Påfågeln',     rarity: 'epic', price: 1000 },
-  { emoji: '🦩', name: 'Flamingon',    rarity: 'epic', price: 1000 },
-  { emoji: '🐲', name: 'Drakungen',    rarity: 'epic', price: 1000 },
-  { emoji: '🦂', name: 'Skorpionen',   rarity: 'epic', price: 1000 },
-  { emoji: '🦏', name: 'Noshörningen', rarity: 'epic', price: 1000 },
-  { emoji: '🐙', name: 'Bläckfisken',  rarity: 'epic', price: 1000 },
-  // Legendariska
-  { emoji: '🧞', name: 'Anden',        rarity: 'legendary', price: 2500 },
-  { emoji: '🧚', name: 'Älvan',        rarity: 'legendary', price: 2500 },
-  { emoji: '🧛', name: 'Vampyren',     rarity: 'legendary', price: 2500 },
-  { emoji: '🦹', name: 'Superskurken', rarity: 'legendary', price: 2500 },
-  { emoji: '🦤', name: 'Dronten',      rarity: 'legendary', price: 2500 },
-  { emoji: '🐦‍🔥', name: 'Fenix',     rarity: 'legendary', price: 2500 },
+  // ── Ursprungliga (Djur + Fantasi) – ordning får EJ ändras ───────────────────────
+  { emoji: '🐶', name: 'Valpen',       rarity: 'common', price: 150, group: 'Djur' },
+  { emoji: '🐱', name: 'Kattungen',    rarity: 'common', price: 150, group: 'Djur' },
+  { emoji: '🐰', name: 'Kaninen',      rarity: 'common', price: 150, group: 'Djur' },
+  { emoji: '🐥', name: 'Kycklingen',   rarity: 'common', price: 150, group: 'Djur' },
+  { emoji: '🐧', name: 'Pingvinen',    rarity: 'common', price: 150, group: 'Djur' },
+  { emoji: '🐨', name: 'Koalan',       rarity: 'common', price: 150, group: 'Djur' },
+  { emoji: '🦓', name: 'Zebran',       rarity: 'rare', price: 400, group: 'Djur' },
+  { emoji: '🦒', name: 'Giraffen',     rarity: 'rare', price: 400, group: 'Djur' },
+  { emoji: '🦔', name: 'Igelkotten',   rarity: 'rare', price: 400, group: 'Djur' },
+  { emoji: '🦦', name: 'Uttern',       rarity: 'rare', price: 400, group: 'Djur' },
+  { emoji: '🦥', name: 'Sengångaren',  rarity: 'rare', price: 400, group: 'Djur' },
+  { emoji: '🦉', name: 'Ugglan',       rarity: 'rare', price: 400, group: 'Djur' },
+  { emoji: '🦚', name: 'Påfågeln',     rarity: 'epic', price: 1000, group: 'Djur' },
+  { emoji: '🦩', name: 'Flamingon',    rarity: 'epic', price: 1000, group: 'Djur' },
+  { emoji: '🐲', name: 'Drakungen',    rarity: 'epic', price: 1000, group: 'Fantasi' },
+  { emoji: '🦂', name: 'Skorpionen',   rarity: 'epic', price: 1000, group: 'Djur' },
+  { emoji: '🦏', name: 'Noshörningen', rarity: 'epic', price: 1000, group: 'Djur' },
+  { emoji: '🐙', name: 'Bläckfisken',  rarity: 'epic', price: 1000, group: 'Djur' },
+  { emoji: '🧞', name: 'Anden',        rarity: 'legendary', price: 2500, group: 'Fantasi' },
+  { emoji: '🧚', name: 'Älvan',        rarity: 'legendary', price: 2500, group: 'Fantasi' },
+  { emoji: '🧛', name: 'Vampyren',     rarity: 'legendary', price: 2500, group: 'Fantasi' },
+  { emoji: '🦹', name: 'Superskurken', rarity: 'legendary', price: 2500, group: 'Fantasi' },
+  { emoji: '🦤', name: 'Dronten',      rarity: 'legendary', price: 2500, group: 'Djur' },
+  { emoji: '🐦‍🔥', name: 'Fenix',     rarity: 'legendary', price: 2500, group: 'Fantasi' },
+
+  // ── Fordon (tillagda) ─────────────────────────────────────────────────────────
+  { emoji: '🚗', name: 'Bilen',        rarity: 'common', price: 150, group: 'Fordon' },
+  { emoji: '🚙', name: 'Stadsjeepen',  rarity: 'common', price: 150, group: 'Fordon' },
+  { emoji: '🚕', name: 'Taxin',        rarity: 'common', price: 150, group: 'Fordon' },
+  { emoji: '🚌', name: 'Bussen',       rarity: 'common', price: 150, group: 'Fordon' },
+  { emoji: '🚲', name: 'Cykeln',       rarity: 'common', price: 150, group: 'Fordon' },
+  { emoji: '🛻', name: 'Pickupen',     rarity: 'rare', price: 400, group: 'Fordon' },
+  { emoji: '🏍️', name: 'Motorcykeln',  rarity: 'rare', price: 400, group: 'Fordon' },
+  { emoji: '🚓', name: 'Polisbilen',   rarity: 'rare', price: 400, group: 'Fordon' },
+  { emoji: '🚑', name: 'Ambulansen',   rarity: 'rare', price: 400, group: 'Fordon' },
+  { emoji: '🚒', name: 'Brandbilen',   rarity: 'rare', price: 400, group: 'Fordon' },
+  { emoji: '🚜', name: 'Traktorn',     rarity: 'epic', price: 1000, group: 'Fordon' },
+  { emoji: '🚚', name: 'Lastbilen',    rarity: 'epic', price: 1000, group: 'Fordon' },
+  { emoji: '🚛', name: 'Långtradaren', rarity: 'epic', price: 1000, group: 'Fordon' },
+  { emoji: '🏎️', name: 'Racerbilen',   rarity: 'legendary', price: 2500, group: 'Fordon' },
+
+  // ── Yrken (tillagda) ──────────────────────────────────────────────────────────
+  { emoji: '👮', name: 'Polisen',        rarity: 'common', price: 150, group: 'Yrken' },
+  { emoji: '👷', name: 'Byggaren',       rarity: 'common', price: 150, group: 'Yrken' },
+  { emoji: '👨‍🍳', name: 'Kocken',        rarity: 'common', price: 150, group: 'Yrken' },
+  { emoji: '👨‍🌾', name: 'Bonden',        rarity: 'common', price: 150, group: 'Yrken' },
+  { emoji: '🧑‍🏫', name: 'Läraren',       rarity: 'common', price: 150, group: 'Yrken' },
+  { emoji: '👨‍⚕️', name: 'Doktorn',       rarity: 'rare', price: 400, group: 'Yrken' },
+  { emoji: '👨‍🚒', name: 'Brandmannen',   rarity: 'rare', price: 400, group: 'Yrken' },
+  { emoji: '👨‍🔧', name: 'Mekanikern',    rarity: 'rare', price: 400, group: 'Yrken' },
+  { emoji: '🕵️', name: 'Detektiven',     rarity: 'rare', price: 400, group: 'Yrken' },
+  { emoji: '💂', name: 'Gardisten',      rarity: 'rare', price: 400, group: 'Yrken' },
+  { emoji: '👨‍🚀', name: 'Astronauten',   rarity: 'epic', price: 1000, group: 'Yrken' },
+  { emoji: '👨‍✈️', name: 'Piloten',       rarity: 'epic', price: 1000, group: 'Yrken' },
+  { emoji: '👨‍🔬', name: 'Forskaren',     rarity: 'epic', price: 1000, group: 'Yrken' },
+  { emoji: '👨‍💻', name: 'Programmeraren', rarity: 'epic', price: 1000, group: 'Yrken' },
+  { emoji: '🧑‍⚖️', name: 'Domaren',       rarity: 'legendary', price: 2500, group: 'Yrken' },
+  { emoji: '🧑‍🎤', name: 'Artisten',      rarity: 'legendary', price: 2500, group: 'Yrken' },
 ];
 
 // ─── Ramar (avatar-frames) ──────────────────────────────────────────────────────

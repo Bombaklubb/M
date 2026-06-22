@@ -5,7 +5,7 @@ import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS, shopAvatarGlobalIndex } from '../data/avatars';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_TITLES, SHOP_BACKGROUNDS,
-  RARITY_LABELS, RARITY_RING, type Rarity,
+  RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity,
 } from '../data/shop';
 import {
   loadShop, buyItem, equipItem, getWalletBalance,
@@ -175,21 +175,39 @@ export default function ShopView() {
   }
 
   // ─── Flikinnehåll ──────────────────────────────────────────────────────────────
-  function renderAvatars() {
-    return SHOP_AVATARS.map((a, i) => {
-      const globalIdx = shopAvatarGlobalIndex(i);
-      const owned = shop!.ownedAvatars.includes(i);
-      const equipped = currentStudent!.avatar === globalIdx;
+  function avatarCard(a: typeof SHOP_AVATARS[number], i: number) {
+    const globalIdx = shopAvatarGlobalIndex(i);
+    const owned = shop!.ownedAvatars.includes(i);
+    const equipped = currentStudent!.avatar === globalIdx;
+    return (
+      <ItemCard
+        key={`av-${i}`}
+        preview={<span style={{ fontSize: 52, lineHeight: 1 }}>{a.emoji}</span>}
+        name={a.name} rarity={a.rarity} price={a.price}
+        owned={owned} equipped={equipped} affordable={balance >= a.price}
+        onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
+          preview: <span style={{ fontSize: 56 }}>{a.emoji}</span> })}
+        onEquip={() => { updateAvatar(globalIdx); showToast(`${a.name} vald!`); }}
+      />
+    );
+  }
+
+  // Avatarer visas grupperade (Djur, Fantasi, Fordon, Yrken) med rubriker.
+  function renderAvatarGroups() {
+    return AVATAR_GROUP_ORDER.map(group => {
+      const items = SHOP_AVATARS
+        .map((a, i) => ({ a, i }))
+        .filter(({ a }) => a.group === group);
+      if (items.length === 0) return null;
       return (
-        <ItemCard
-          key={`av-${i}`}
-          preview={<span style={{ fontSize: 52, lineHeight: 1 }}>{a.emoji}</span>}
-          name={a.name} rarity={a.rarity} price={a.price}
-          owned={owned} equipped={equipped} affordable={balance >= a.price}
-          onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
-            preview: <span style={{ fontSize: 56 }}>{a.emoji}</span> })}
-          onEquip={() => { updateAvatar(globalIdx); showToast(`${a.name} vald!`); }}
-        />
+        <section key={group}>
+          <h2 className="text-sm font-black uppercase tracking-wide text-orange-700/80 mb-2 px-0.5">
+            {group}
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {items.map(({ a, i }) => avatarCard(a, i))}
+          </div>
+        </section>
       );
     });
   }
@@ -256,11 +274,11 @@ export default function ShopView() {
     });
   }
 
-  const content =
-    tab === 'avatar' ? renderAvatars() :
+  const gridContent =
     tab === 'frame' ? renderFrames() :
     tab === 'title' ? renderTitles() :
-    renderBackgrounds();
+    tab === 'background' ? renderBackgrounds() :
+    null;
 
   return (
     <div className="min-h-screen">
@@ -312,10 +330,16 @@ export default function ShopView() {
           ))}
         </div>
 
-        {/* Rutnät */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
-          {content}
-        </div>
+        {/* Innehåll */}
+        {tab === 'avatar' ? (
+          <div className="space-y-6 pb-12">
+            {renderAvatarGroups()}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
+            {gridContent}
+          </div>
+        )}
       </main>
 
       {/* Köp-bekräftelse */}
