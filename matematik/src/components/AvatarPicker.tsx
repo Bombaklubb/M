@@ -2,15 +2,17 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import {
   BASE_AVATARS, WORLD_AVATAR_PACKS, ALL_AVATARS,
-  isWorldPackUnlocked,
+  isWorldPackUnlocked, shopAvatarGlobalIndex,
 } from '../data/avatars';
+import { SHOP_AVATARS } from '../data/shop';
+import { loadShop } from '../utils/shopStorage';
 
 interface Props {
   onClose: () => void;
 }
 
 export default function AvatarPicker({ onClose }: Props) {
-  const { currentStudent, updateAvatar } = useApp();
+  const { currentStudent, updateAvatar, setView } = useApp();
   if (!currentStudent) return null;
 
   function handleSelect(index: number) {
@@ -19,6 +21,7 @@ export default function AvatarPicker({ onClose }: Props) {
   }
 
   const currentIndex = currentStudent.avatar;
+  const ownedShopAvatars = loadShop(currentStudent.id).ownedAvatars;
 
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
@@ -109,6 +112,44 @@ export default function AvatarPicker({ onClose }: Props) {
               </div>
             );
           })}
+
+          {/* Butiks-avatarer */}
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-base">🛒</span>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Butiksavatarer</p>
+            </div>
+            {ownedShopAvatars.length > 0 ? (
+              <div className="grid grid-cols-4 gap-2">
+                {ownedShopAvatars.map(shopIdx => {
+                  const a = SHOP_AVATARS[shopIdx];
+                  if (!a) return null;
+                  const index = shopAvatarGlobalIndex(shopIdx);
+                  return (
+                    <button
+                      key={shopIdx}
+                      onClick={() => handleSelect(index)}
+                      title={a.name}
+                      className={`text-3xl p-2.5 rounded-2xl transition-all ${
+                        currentIndex === index
+                          ? 'bg-amber-100 ring-2 ring-amber-400 scale-110 shadow-md'
+                          : 'bg-gray-50 hover:bg-amber-50 hover:scale-105'
+                      }`}
+                    >
+                      {a.emoji}
+                    </button>
+                  );
+                })}
+              </div>
+            ) : (
+              <button
+                onClick={() => { onClose(); setView('shop'); }}
+                className="w-full bg-gray-50 rounded-2xl p-3 text-center hover:bg-amber-50 transition-colors cursor-pointer"
+              >
+                <p className="text-xs text-gray-400">Inga köpta ännu – tryck för att besöka butiken 🛒</p>
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

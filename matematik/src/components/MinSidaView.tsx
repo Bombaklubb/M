@@ -8,6 +8,9 @@ import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS } from '../data/avatars';
 import { GRADE_LABELS } from '../types';
 import { getPoints, initPoints } from '../utils/storage';
+import { loadShop } from '../utils/shopStorage';
+import { TITLE_MAP, BACKGROUND_MAP } from '../data/shop';
+import FramedAvatar from './FramedAvatar';
 
 type Tab = 'achievements' | 'results' | 'collection';
 
@@ -18,7 +21,7 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
 ];
 
 export default function MinSidaView() {
-  const { currentStudent } = useApp();
+  const { currentStudent, setView } = useApp();
   const [activeTab, setActiveTab] = useState<Tab>('achievements');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
 
@@ -29,14 +32,22 @@ export default function MinSidaView() {
   const aktivSedan = currentStudent.createdAt?.split('T')[0] ?? '';
   const senastAktiv = points.lastActiveDate || new Date().toISOString().split('T')[0];
 
+  const shop = loadShop(currentStudent.id);
+  const equippedTitle = shop.equippedTitle ? TITLE_MAP[shop.equippedTitle] : null;
+  const equippedBg = shop.equippedBackground ? BACKGROUND_MAP[shop.equippedBackground] : null;
+
+  const bgStyle: React.CSSProperties = equippedBg
+    ? { background: equippedBg.css, backgroundAttachment: 'fixed' }
+    : {
+        backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+      };
+
   return (
-    <div className="min-h-screen" style={{
-      backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
-    }}>
+    <div className="min-h-screen" style={bgStyle}>
       <AppHeader />
 
       {/* Stars */}
@@ -59,9 +70,9 @@ export default function MinSidaView() {
             className="relative group flex-shrink-0"
             title="Byt avatar"
           >
-            <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-4xl
+            <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center
               group-hover:bg-white/20 group-hover:scale-105 transition-all ring-2 ring-white/20 group-hover:ring-amber-400">
-              {avatarEmoji}
+              <FramedAvatar emoji={avatarEmoji} frameId={shop.equippedFrame} size={shop.equippedFrame ? 56 : 44} />
             </div>
             <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-400 rounded-full flex items-center justify-center
               text-xs opacity-0 group-hover:opacity-100 transition-opacity shadow-md">
@@ -69,12 +80,24 @@ export default function MinSidaView() {
             </div>
           </button>
 
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <p className="text-white font-black text-xl leading-tight truncate">{currentStudent.name}</p>
+            {equippedTitle && (
+              <p className="text-amber-300 text-sm font-bold truncate">{equippedTitle.label}</p>
+            )}
             <p className="text-white/60 text-sm">{GRADE_LABELS[currentStudent.grade]}</p>
             {aktivSedan && <p className="text-white/50 text-xs mt-0.5">Aktiv sedan {aktivSedan}</p>}
             <p className="text-white/50 text-xs">Senast aktiv: {senastAktiv}</p>
           </div>
+
+          <button
+            onClick={() => setView('shop')}
+            className="flex-shrink-0 self-start flex items-center gap-1 px-3 py-1.5 rounded-full text-white text-sm font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-300"
+            style={{ background: 'linear-gradient(135deg,#f59e0b,#d97706)', border: '1px solid #d97706' }}
+            title="Till butiken"
+          >
+            🛒 Butik
+          </button>
         </div>
 
         {/* Tabs */}

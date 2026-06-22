@@ -2,7 +2,9 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getPoints, initPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
+import { getEquippedFrame } from '../utils/shopStorage';
 import { ALL_AVATARS } from '../data/avatars';
+import FramedAvatar from './FramedAvatar';
 
 export default function AppHeader() {
   const { currentStudent, setView, logout } = useApp();
@@ -14,6 +16,8 @@ export default function AppHeader() {
   const avatarEmoji = currentStudent
     ? (ALL_AVATARS[currentStudent.avatar] ?? ALL_AVATARS[0])
     : null;
+
+  const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
 
   const unopenedChests = currentStudent
     ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
@@ -63,6 +67,21 @@ export default function AppHeader() {
               )}
             </button>
 
+            {/* Butik */}
+            <button
+              onClick={() => setView('shop')}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-full hover:scale-105 transition-all cursor-pointer"
+              style={{
+                background: 'rgba(251, 146, 60, 0.12)',
+                border: '1px solid rgba(251, 146, 60, 0.40)',
+                boxShadow: '0 2px 8px rgba(251,146,60,0.15)'
+              }}
+              title="Butiken"
+              aria-label="Öppna butiken"
+            >
+              <span className="text-base leading-none">🛒</span>
+            </button>
+
             {/* Avatar + namn + poäng */}
             <button
               onClick={() => setView('my-page')}
@@ -72,7 +91,7 @@ export default function AppHeader() {
                 border: '1px solid rgba(251, 146, 60, 0.35)',
               }}
             >
-              <span className="text-base leading-none">{avatarEmoji}</span>
+              <FramedAvatar emoji={avatarEmoji ?? ''} frameId={equippedFrame} size={equippedFrame ? 26 : 20} />
               <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
               <span className="text-orange-400 text-sm">⭐</span>
               <span className="font-bold text-sm hidden sm:inline" style={{ color: '#ea580c' }}>{points.total}</span>

@@ -17,6 +17,7 @@ import CollectionView from './components/CollectionView';
 import MinSidaView from './components/MinSidaView';
 import SluttestView from './components/SluttestView';
 import KistorView from './components/KistorView';
+import ShopView from './components/ShopView';
 import GamesHub from './components/games/GamesHub';
 import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
@@ -127,6 +128,7 @@ function AppInner() {
           case 'teacher':           return <TeacherView />;
           case 'sluttest':          return <SluttestView />;
           case 'kistor':            return <KistorView />;
+          case 'shop':              return <ShopView />;
           case 'games':             return <GamesHub />;
           case 'game-time-attack':  return <TimeAttackGame />;
           case 'game-collect-coins': return <CollectCoinsGame />;
