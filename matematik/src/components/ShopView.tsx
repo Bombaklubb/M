@@ -12,13 +12,12 @@ import {
   type ShopData, type ShopKind,
 } from '../utils/shopStorage';
 
-type Tab = 'avatar' | 'frame' | 'title' | 'background';
+type Tab = 'avatar' | 'frame' | 'owned';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: 'avatar',     label: 'Avatarer',  icon: '🦊' },
-  { id: 'frame',      label: 'Ramar',     icon: '⭕' },
-  { id: 'title',      label: 'Titlar',    icon: '🏷️' },
-  { id: 'background', label: 'Bakgrunder', icon: '🖼️' },
+  { id: 'avatar', label: 'Avatarer', icon: '🦊' },
+  { id: 'frame',  label: 'Ramar',    icon: '⭕' },
+  { id: 'owned',  label: 'Mina köp', icon: '🎁' },
 ];
 
 // ─── Sällsynthetschip ────────────────────────────────────────────────────────────
@@ -212,73 +211,98 @@ export default function ShopView() {
     });
   }
 
+  function frameCard(f: typeof SHOP_FRAMES[number]) {
+    const owned = shop!.ownedFrames.includes(f.id);
+    const equipped = shop!.equippedFrame === f.id;
+    return (
+      <ItemCard
+        key={`fr-${f.id}`}
+        preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={64} />}
+        name={f.name} rarity={f.rarity} price={f.price}
+        owned={owned} equipped={equipped} affordable={balance >= f.price}
+        onBuy={() => setConfirm({ kind: 'frame', key: f.id, price: f.price, name: f.name,
+          preview: <FramedAvatar emoji={currentEmoji} frameId={f.id} size={72} /> })}
+        onEquip={() => { equipItem(sid, 'frame', equipped ? null : f.id); refresh(); showToast(equipped ? 'Ram borttagen' : `${f.name} på!`); }}
+      />
+    );
+  }
+
+  function titleCard(t: typeof SHOP_TITLES[number]) {
+    const equipped = shop!.equippedTitle === t.id;
+    const chip = (
+      <span className={`px-3 py-1.5 rounded-full text-sm font-black bg-gradient-to-r ${RARITY_RING[t.rarity]} bg-clip-text text-transparent`}
+        style={{ border: '1px solid rgba(180,130,40,0.3)' }}>
+        {t.label}
+      </span>
+    );
+    return (
+      <ItemCard
+        key={`ti-${t.id}`}
+        preview={chip}
+        name={t.label} rarity={t.rarity} price={t.price}
+        owned equipped={equipped} affordable={false}
+        onBuy={() => {}}
+        onEquip={() => { equipItem(sid, 'title', equipped ? null : t.id); refresh(); showToast(equipped ? 'Titel borttagen' : `Titel: ${t.label}`); }}
+      />
+    );
+  }
+
+  function backgroundCard(b: typeof SHOP_BACKGROUNDS[number]) {
+    const equipped = shop!.equippedBackground === b.id;
+    const swatch = (
+      <div className="w-20 h-14 rounded-xl" style={{ background: b.css, border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }} />
+    );
+    return (
+      <ItemCard
+        key={`bg-${b.id}`}
+        preview={swatch}
+        name={b.name} rarity={b.rarity} price={b.price}
+        owned equipped={equipped} affordable={false}
+        onBuy={() => {}}
+        onEquip={() => { equipItem(sid, 'background', equipped ? null : b.id); refresh(); showToast(equipped ? 'Bakgrund borttagen' : `Bakgrund: ${b.name}`); }}
+      />
+    );
+  }
+
   function renderFrames() {
-    return SHOP_FRAMES.map(f => {
-      const owned = shop!.ownedFrames.includes(f.id);
-      const equipped = shop!.equippedFrame === f.id;
-      return (
-        <ItemCard
-          key={`fr-${f.id}`}
-          preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={64} />}
-          name={f.name} rarity={f.rarity} price={f.price}
-          owned={owned} equipped={equipped} affordable={balance >= f.price}
-          onBuy={() => setConfirm({ kind: 'frame', key: f.id, price: f.price, name: f.name,
-            preview: <FramedAvatar emoji={currentEmoji} frameId={f.id} size={72} /> })}
-          onEquip={() => { equipItem(sid, 'frame', equipped ? null : f.id); refresh(); showToast(equipped ? 'Ram borttagen' : `${f.name} på!`); }}
-        />
-      );
-    });
+    return SHOP_FRAMES.map(frameCard);
   }
 
-  function renderTitles() {
-    return SHOP_TITLES.map(t => {
-      const owned = shop!.ownedTitles.includes(t.id);
-      const equipped = shop!.equippedTitle === t.id;
-      const chip = (
-        <span className={`px-3 py-1.5 rounded-full text-sm font-black bg-gradient-to-r ${RARITY_RING[t.rarity]} bg-clip-text text-transparent`}
-          style={{ border: '1px solid rgba(180,130,40,0.3)' }}>
-          {t.label}
-        </span>
-      );
-      return (
-        <ItemCard
-          key={`ti-${t.id}`}
-          preview={chip}
-          name={t.label} rarity={t.rarity} price={t.price}
-          owned={owned} equipped={equipped} affordable={balance >= t.price}
-          onBuy={() => setConfirm({ kind: 'title', key: t.id, price: t.price, name: t.label, preview: chip })}
-          onEquip={() => { equipItem(sid, 'title', equipped ? null : t.id); refresh(); showToast(equipped ? 'Titel borttagen' : `Titel: ${t.label}`); }}
-        />
-      );
-    });
-  }
+  // "Mina köp" – visar bara det man redan äger, grupperat per kategori.
+  // Titlar/bakgrunder går inte längre att köpa, men gamla köp visas ändå här.
+  function renderOwned() {
+    const ownedAvatars = SHOP_AVATARS.map((a, i) => ({ a, i })).filter(({ i }) => shop!.ownedAvatars.includes(i));
+    const ownedFrames = SHOP_FRAMES.filter(f => shop!.ownedFrames.includes(f.id));
+    const ownedTitles = SHOP_TITLES.filter(t => shop!.ownedTitles.includes(t.id));
+    const ownedBackgrounds = SHOP_BACKGROUNDS.filter(b => shop!.ownedBackgrounds.includes(b.id));
+    const total = ownedAvatars.length + ownedFrames.length + ownedTitles.length + ownedBackgrounds.length;
 
-  function renderBackgrounds() {
-    return SHOP_BACKGROUNDS.map(b => {
-      const owned = shop!.ownedBackgrounds.includes(b.id);
-      const equipped = shop!.equippedBackground === b.id;
-      const swatch = (
-        <div className="w-20 h-14 rounded-xl" style={{ background: b.css, border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }} />
-      );
+    if (total === 0) {
       return (
-        <ItemCard
-          key={`bg-${b.id}`}
-          preview={swatch}
-          name={b.name} rarity={b.rarity} price={b.price}
-          owned={owned} equipped={equipped} affordable={balance >= b.price}
-          onBuy={() => setConfirm({ kind: 'background', key: b.id, price: b.price, name: b.name,
-            preview: <div className="w-24 h-16 rounded-xl" style={{ background: b.css }} /> })}
-          onEquip={() => { equipItem(sid, 'background', equipped ? null : b.id); refresh(); showToast(equipped ? 'Bakgrund borttagen' : `Bakgrund: ${b.name}`); }}
-        />
+        <div className="text-center py-16 text-orange-700/60">
+          <p className="text-4xl mb-3">📦</p>
+          <p className="font-bold">Inga köp ännu</p>
+          <p className="text-sm mt-1">Köp något i butiken för att se det här!</p>
+        </div>
       );
-    });
-  }
+    }
 
-  const gridContent =
-    tab === 'frame' ? renderFrames() :
-    tab === 'title' ? renderTitles() :
-    tab === 'background' ? renderBackgrounds() :
-    null;
+    const section = (title: string, items: React.ReactNode[]) => items.length === 0 ? null : (
+      <section key={title}>
+        <h2 className="text-sm font-black uppercase tracking-wide text-orange-700/80 mb-2 px-0.5">{title}</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">{items}</div>
+      </section>
+    );
+
+    return (
+      <div className="space-y-6">
+        {section('Avatarer', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
+        {section('Ramar', ownedFrames.map(frameCard))}
+        {section('Titlar', ownedTitles.map(titleCard))}
+        {section('Bakgrunder', ownedBackgrounds.map(backgroundCard))}
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
@@ -335,9 +359,13 @@ export default function ShopView() {
           <div className="space-y-6 pb-12">
             {renderAvatarGroups()}
           </div>
+        ) : tab === 'owned' ? (
+          <div className="pb-12">
+            {renderOwned()}
+          </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
-            {gridContent}
+            {renderFrames()}
           </div>
         )}
       </main>
