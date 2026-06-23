@@ -1,7 +1,7 @@
 import { useApp } from '../contexts/AppContext';
 import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
-import { getProgress } from '../utils/storage';
+import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
 import { getEquippedFrame, getWalletBalance } from '../utils/shopStorage';
 import { ALL_AVATARS } from '../data/avatars';
@@ -14,6 +14,9 @@ export default function WorldSelect() {
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
   // Plånbokssaldo (livstidspoäng − spenderat i butiken) – det eleven faktiskt kan spendera.
   const walletBalance = currentStudent ? getWalletBalance(currentStudent.id) : 0;
+  const lifetimePoints = currentStudent
+    ? (getPoints(currentStudent.id) ?? initPoints(currentStudent.id)).total
+    : 0;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
   const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
   const unopenedChests = currentStudent
@@ -52,7 +55,7 @@ export default function WorldSelect() {
           )}
         </button>
 
-        {/* Butik */}
+        {/* Butik – plånbokssaldo */}
         <button
           onClick={() => setView('shop')}
           className="flex items-center gap-1 px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
@@ -65,9 +68,24 @@ export default function WorldSelect() {
           aria-label="Öppna butiken"
         >
           <span className="text-xl leading-none">🛒</span>
+          <span className="font-bold text-sm" style={{ color: '#92400e' }}>{walletBalance}</span>
         </button>
 
-        {/* Avatar + namn + poäng */}
+        {/* Livstidspoäng */}
+        <div
+          className="flex items-center gap-1 px-3 py-1.5 rounded-full"
+          style={{
+            background: 'rgba(255, 248, 220, 0.82)',
+            border: '1px solid rgba(180, 130, 40, 0.50)',
+            boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
+          }}
+          title="Livstidspoäng"
+        >
+          <span className="text-amber-500 text-sm">⭐</span>
+          <span className="font-bold text-sm" style={{ color: '#92400e' }}>{lifetimePoints}</span>
+        </div>
+
+        {/* Avatar + namn */}
         <button
           onClick={() => setView('my-page')}
           className="flex items-center gap-2 px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
@@ -79,9 +97,6 @@ export default function WorldSelect() {
         >
           <FramedAvatar emoji={avatarEmoji} frameId={equippedFrame} size={equippedFrame ? 28 : 22} />
           <span className="font-bold text-sm" style={{ color: '#5c3a00' }}>{currentStudent?.name ?? ''}</span>
-          <span className="text-amber-600 text-sm">·</span>
-          <span className="text-amber-500 text-sm">⭐</span>
-          <span className="font-bold text-sm" style={{ color: '#92400e' }}>{walletBalance}</span>
         </button>
 
         {/* Logga ut */}
