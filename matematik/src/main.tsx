@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+// Build-trigger: verifierar att Vercel-deploy för matematik fungerar.
 
 // Global fallback – catches errors that happen outside the React tree
 // (module init, async code, etc.) so the page never stays blank.
