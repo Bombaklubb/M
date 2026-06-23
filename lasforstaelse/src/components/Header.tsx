@@ -2,6 +2,7 @@ import React from 'react';
 import { User } from '../types';
 import { BookLogo } from './BookLogo';
 import { useDarkMode } from '../contexts/DarkModeContext';
+import { getWalletBalance } from '../utils/shopStorage';
 
 interface HeaderProps {
   user: User;
@@ -15,6 +16,9 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, onShopClick, unopenedChests = 0 }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
+
+  // Plånbokssaldo = livstidspoäng − spenderat i butiken
+  const walletBalance = getWalletBalance();
 
   return (
     <header className="bg-white dark:bg-slate-800 shadow-sm border-b border-slate-200 dark:border-slate-700">
@@ -56,22 +60,26 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             </button>
           )}
 
-          {/* Shop button */}
+          {/* Shop button – plånbokssaldo (spenderbara poäng) */}
           {onShopClick && (
             <button
               onClick={onShopClick}
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors border border-indigo-200 dark:border-indigo-700"
-              title="Butik"
+              className="flex items-center space-x-1 md:space-x-2 bg-indigo-50 dark:bg-indigo-900/30 px-3 md:px-4 py-2 rounded-full border border-indigo-200 dark:border-indigo-700 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+              title="Butik – poäng att spendera"
               aria-label="Öppna butiken"
             >
-              <span className="text-xl">🛒</span>
+              <span className="text-lg md:text-xl">🛒</span>
+              <span className="font-bold text-slate-700 dark:text-slate-200 text-sm md:text-base">{walletBalance.toLocaleString('sv-SE')}</span>
             </button>
           )}
 
-          {/* Points */}
-          <div className="flex items-center space-x-1 md:space-x-2 bg-yellow-50 dark:bg-yellow-900/30 px-3 md:px-4 py-2 rounded-full border border-yellow-200 dark:border-yellow-700">
+          {/* Livstidspoäng */}
+          <div
+            className="flex items-center space-x-1 md:space-x-2 bg-yellow-50 dark:bg-yellow-900/30 px-3 md:px-4 py-2 rounded-full border border-yellow-200 dark:border-yellow-700"
+            title="Livstidspoäng (totalt intjänade)"
+          >
             <span className="text-lg md:text-xl">⭐</span>
-            <span className="font-bold text-slate-700 dark:text-slate-200 text-sm md:text-base">{user.totalPoints}</span>
+            <span className="font-bold text-slate-700 dark:text-slate-200 text-sm md:text-base">{user.totalPoints.toLocaleString('sv-SE')}</span>
           </div>
 
           {/* Profile button */}
