@@ -70,7 +70,7 @@ export default function AppHeader() {
               )}
             </button>
 
-            {/* Butik */}
+            {/* Butik – plånbokssaldo */}
             <button
               onClick={() => setView('shop')}
               className="flex items-center gap-1 px-3 py-1.5 rounded-full hover:scale-105 transition-all cursor-pointer"
@@ -83,9 +83,23 @@ export default function AppHeader() {
               aria-label="Öppna butiken"
             >
               <span className="text-base leading-none">🛒</span>
+              <span className="font-bold text-sm" style={{ color: '#ea580c' }}>{walletBalance}</span>
             </button>
 
-            {/* Avatar + namn + poäng */}
+            {/* Livstidspoäng */}
+            <div
+              className="flex items-center gap-1 px-3 py-1.5 rounded-full"
+              style={{
+                background: 'rgba(251, 146, 60, 0.12)',
+                border: '1px solid rgba(251, 146, 60, 0.40)',
+              }}
+              title="Livstidspoäng"
+            >
+              <span className="text-orange-400 text-sm">⭐</span>
+              <span className="font-bold text-sm" style={{ color: '#ea580c' }}>{points.total}</span>
+            </div>
+
+            {/* Avatar + namn */}
             <button
               onClick={() => setView('my-page')}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full transition-all hover:scale-105"
@@ -96,8 +110,6 @@ export default function AppHeader() {
             >
               <FramedAvatar emoji={avatarEmoji ?? ''} frameId={equippedFrame} size={equippedFrame ? 26 : 20} />
               <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
-              <span className="text-orange-400 text-sm">⭐</span>
-              <span className="font-bold text-sm hidden sm:inline" style={{ color: '#ea580c' }}>{walletBalance}</span>
             </button>
 
             {/* Logga ut */}
