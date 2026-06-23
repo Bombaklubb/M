@@ -9,10 +9,11 @@ interface HeaderProps {
   onHomeClick: () => void;
   onProfileClick?: () => void;
   onKistorClick?: () => void;
+  onShopClick?: () => void;
   unopenedChests?: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, unopenedChests = 0 }) => {
+export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, onShopClick, unopenedChests = 0 }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
@@ -52,6 +53,18 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
                   {unopenedChests}
                 </span>
               )}
+            </button>
+          )}
+
+          {/* Shop button */}
+          {onShopClick && (
+            <button
+              onClick={onShopClick}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-50 dark:bg-indigo-900/30 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors border border-indigo-200 dark:border-indigo-700"
+              title="Butik"
+              aria-label="Öppna butiken"
+            >
+              <span className="text-xl">🛒</span>
             </button>
           )}
 

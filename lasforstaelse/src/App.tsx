@@ -8,6 +8,7 @@ import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
+import ShopView from './components/ShopView';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
 import {
@@ -49,6 +50,7 @@ function App() {
   const [showProfile, setShowProfile] = useState(false);
   const [showTeacher, setShowTeacher] = useState(false);
   const [showKistor, setShowKistor] = useState(false);
+  const [showShop, setShowShop] = useState(false);
   const quizStartTime = useRef<number | null>(null);
 
   // Ladda användare vid start
@@ -120,6 +122,7 @@ function App() {
     setLastResult(null);
     setShowProfile(false);
     setShowKistor(false);
+    setShowShop(false);
     setAppState(AppState.LOGIN);
   };
 
@@ -251,6 +254,7 @@ function App() {
     setLastResult(null);
     setShowProfile(false);
     setShowKistor(false);
+    setShowShop(false);
     setAppState(AppState.SETUP);
     window.scrollTo(0, 0);
   };
@@ -379,6 +383,7 @@ function App() {
           onHomeClick={handleRestart}
           onProfileClick={() => setShowProfile(false)}
           onKistorClick={() => { setShowProfile(false); setShowKistor(true); }}
+          onShopClick={() => { setShowProfile(false); setShowShop(true); }}
           unopenedChests={getUnopenedChestsCount()}
         />
         <ProfileView
@@ -397,6 +402,15 @@ function App() {
         user={user}
         onClose={() => setShowKistor(false)}
         onPointsUpdate={handleChestPointsUpdate}
+      />
+    );
+  }
+
+  // Shop view
+  if (showShop) {
+    return (
+      <ShopView
+        onBack={() => setShowShop(false)}
       />
     );
   }
@@ -454,6 +468,7 @@ function App() {
         onHomeClick={handleRestart}
         onProfileClick={() => setShowProfile(true)}
         onKistorClick={() => setShowKistor(true)}
+        onShopClick={() => setShowShop(true)}
         unopenedChests={getUnopenedChestsCount()}
       />
 
