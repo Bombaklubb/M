@@ -290,7 +290,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
             <div className="flex items-center gap-3">
               <span className="text-4xl">🛒</span>
               <div>
-                <h1 className="text-2xl font-black">Butiken</h1>
+                <h1 className="text-2xl font-black">Affären</h1>
                 <p className="text-white/70 text-sm">Spendera dina poäng på coola saker!</p>
               </div>
             </div>
