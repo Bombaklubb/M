@@ -79,7 +79,7 @@ export default function AppHeader() {
                 border: '1px solid rgba(251, 146, 60, 0.40)',
                 boxShadow: '0 2px 8px rgba(251,146,60,0.15)'
               }}
-              title="Butiken"
+              title="Affären"
               aria-label="Öppna butiken"
             >
               <span className="text-base leading-none">🛒</span>
