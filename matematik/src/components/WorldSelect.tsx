@@ -64,7 +64,7 @@ export default function WorldSelect() {
             border: '1px solid rgba(180, 130, 40, 0.50)',
             boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
           }}
-          title="Butiken"
+          title="Affären"
           aria-label="Öppna butiken"
         >
           <span className="text-xl leading-none">🛒</span>

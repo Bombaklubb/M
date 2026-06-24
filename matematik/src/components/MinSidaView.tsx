@@ -94,9 +94,9 @@ export default function MinSidaView() {
             onClick={() => setView('shop')}
             className="flex-shrink-0 self-start flex items-center gap-1 px-3 py-1.5 rounded-full text-white text-sm font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-300"
             style={{ background: 'linear-gradient(135deg,#f59e0b,#d97706)', border: '1px solid #d97706' }}
-            title="Till butiken"
+            title="Till affären"
           >
-            🛒 Butik
+            🛒 Affär
           </button>
         </div>
 
