@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             <button
               onClick={onShopClick}
               className="flex items-center space-x-1 md:space-x-2 bg-indigo-50 dark:bg-indigo-900/30 px-3 md:px-4 py-2 rounded-full border border-indigo-200 dark:border-indigo-700 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
-              title="Butik – poäng att spendera"
+              title="Affären – poäng att spendera"
               aria-label="Öppna butiken"
             >
               <span className="text-lg md:text-xl">🛒</span>
