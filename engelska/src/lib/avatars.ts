@@ -1,3 +1,5 @@
+import { SHOP_AVATARS } from "./shop";
+
 export interface Avatar {
   id: string;
   emoji: string;
@@ -34,5 +36,9 @@ export const AVATARS: Avatar[] = [
 ];
 
 export function getAvatar(id: string): Avatar {
-  return AVATARS.find((a) => a.id === id) ?? AVATARS[0];
+  const base = AVATARS.find((a) => a.id === id);
+  if (base) return base;
+  const shopAvatar = SHOP_AVATARS.find((a) => a.id === id);
+  if (shopAvatar) return { id: shopAvatar.id, emoji: shopAvatar.emoji, name: shopAvatar.name };
+  return AVATARS[0];
 }

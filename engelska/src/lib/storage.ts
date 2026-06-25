@@ -123,6 +123,13 @@ export function createStudent(name: string, avatar?: string): StudentData {
   return data;
 }
 
+/** Sets the active avatar (e.g. after an equip in Affären) and persists it. */
+export function setAvatar(data: StudentData, avatarId: string): StudentData {
+  const updated = { ...data, avatar: avatarId };
+  saveStudent(updated);
+  return updated;
+}
+
 /**
  * Returns the ISO string for when the current session started,
  * or null if no session is active.

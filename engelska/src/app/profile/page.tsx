@@ -4,18 +4,27 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
 import ProgressBar from "@/components/ui/ProgressBar";
+import FramedAvatar from "@/components/ui/FramedAvatar";
 import { loadStudent, getSessionStart } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { ACHIEVEMENTS, ACHIEVEMENT_ICONS, isUnlocked } from "@/lib/achievements";
 import { getAvatar } from "@/lib/avatars";
+import { getEquippedFrame, getWalletBalance } from "@/lib/shopStorage";
 import type { StudentData, StageId } from "@/lib/types";
 
 export default function ProfilePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [sessionMinutes, setSessionMinutes] = useState(0);
+  const [equippedFrame, setEquippedFrame] = useState<string | null>(null);
+  const [walletBalance, setWalletBalance] = useState(0);
 
   useEffect(() => {
-    setStudent(loadStudent());
+    const s = loadStudent();
+    setStudent(s);
+    if (s) {
+      setEquippedFrame(getEquippedFrame(s.name));
+      setWalletBalance(getWalletBalance(s.name));
+    }
 
     const sessionStart = getSessionStart();
     if (sessionStart) {
@@ -64,9 +73,7 @@ export default function ProfilePage() {
         {/* Profile hero */}
         <div className="card bg-gradient-to-br from-gray-800 to-gray-900 text-white border-none dark:from-gray-700 dark:to-gray-800">
           <div className="flex items-center gap-4">
-            <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-5xl overflow-hidden">
-              {(() => { const av = getAvatar(student.avatar ?? "ninja"); return av.image ? <img src={av.image} alt={av.name} className="w-full h-full object-contain p-1" /> : av.emoji; })()}
-            </div>
+            <FramedAvatar avatar={getAvatar(student.avatar ?? "ninja")} frameId={equippedFrame} size={80} className="flex-shrink-0" />
             <div>
               <h1 className="text-2xl font-black">{student.name}</h1>
               <p className="text-gray-300 text-sm">Aktiv sedan {joinDate}</p>
@@ -80,6 +87,15 @@ export default function ProfilePage() {
               <div className="text-gray-300 text-sm">totala poäng</div>
             </div>
           </div>
+          <Link
+            href="/butik"
+            className="mt-4 flex items-center justify-between gap-2 rounded-2xl px-4 py-3 bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"
+          >
+            <span className="flex items-center gap-2 font-bold">
+              <span className="text-xl">🛒</span> Gå till Affären
+            </span>
+            <span className="font-black text-emerald-300">⭐ {walletBalance} att spendera</span>
+          </Link>
         </div>
 
         {/* Stage overview */}

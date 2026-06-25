@@ -5,15 +5,11 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent, loadGamification, updateStreak } from "@/lib/storage";
-import { getAvatar, type Avatar } from "@/lib/avatars";
+import { getAvatar } from "@/lib/avatars";
+import { getEquippedFrame, getWalletBalance } from "@/lib/shopStorage";
+import FramedAvatar from "@/components/ui/FramedAvatar";
 import type { StudentData } from "@/lib/types";
 import { NumberTicker } from "@/components/magicui/number-ticker";
-
-function AvatarImg({ av }: { av: Avatar }) {
-  const [error, setError] = useState(false);
-  if (!av.image || error) return <span className="text-lg leading-none">{av.emoji}</span>;
-  return <img src={av.image} alt={av.name} className="w-full h-full object-contain" onError={() => setError(true)} />;
-}
 
 interface HeaderProps {
   student: StudentData | null;
@@ -58,6 +54,16 @@ function IconMoon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+function IconCart({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="9" cy="21" r="1" />
+      <circle cx="20" cy="21" r="1" />
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+    </svg>
+  );
+}
+
 function IconLogOut({ className = "w-4 h-4" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -73,12 +79,16 @@ export default function Header({ student, onLogout }: HeaderProps) {
   const { dark, toggle } = useDarkMode();
   const [unopenedChests, setUnopenedChests] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [walletBalance, setWalletBalance] = useState(0);
+  const [equippedFrame, setEquippedFrame] = useState<string | null>(null);
 
   useEffect(() => {
     if (!student) return;
     const gam = loadGamification();
     setUnopenedChests(gam.chests.filter((c) => !c.opened).length);
     setStreak(updateStreak(student.name));
+    setWalletBalance(getWalletBalance(student.name));
+    setEquippedFrame(getEquippedFrame(student.name));
   }, [student]);
 
   function handleLogout() {
@@ -149,6 +159,17 @@ export default function Header({ student, onLogout }: HeaderProps) {
               </div>
             )}
 
+            {/* Affären (plånbokssaldo) */}
+            <Link
+              href="/butik"
+              title="Affären – poäng att spendera"
+              className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-emerald-50 to-emerald-100 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700 px-3 py-1.5 rounded-xl hover:border-emerald-400 hover:scale-105 transition-all cursor-pointer touch-manipulation"
+              style={{ boxShadow: "0 3px 0 0 rgba(16, 185, 129, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
+            >
+              <IconCart className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span className="text-sm font-black text-emerald-700 dark:text-emerald-400">{walletBalance}</span>
+            </Link>
+
             {/* Points */}
             <div
               className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default"
@@ -166,12 +187,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
                   href="/profile"
                   className="flex items-center gap-2 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-en-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-en-200 touch-manipulation"
                 >
-                  <div
-                    className="w-8 h-8 rounded-xl overflow-hidden bg-en-50 dark:bg-gray-700 flex items-center justify-center flex-shrink-0 border-2 border-en-200 dark:border-gray-600"
-                    style={{ boxShadow: "0 2px 0 0 rgba(37, 99, 235, 0.12)" }}
-                  >
-                    <AvatarImg av={av} />
-                  </div>
+                  <FramedAvatar avatar={av} frameId={equippedFrame} size={32} className="flex-shrink-0" />
                   <span className="hidden sm:inline text-sm font-bold text-en-700 dark:text-gray-200">{student.name}</span>
                 </Link>
               );
