@@ -4,13 +4,17 @@
 
 import { loadUser } from '../services/userService';
 
-export type ShopKind = 'avatar' | 'frame';
+export type ShopKind = 'avatar' | 'frame' | 'effect' | 'theme';
 
 export interface ShopData {
   spent: number;
   ownedAvatars: number[];      // index i SHOP_AVATARS
   ownedFrames: string[];
   equippedFrame: string | null;
+  ownedEffects: string[];
+  equippedEffect: string | null;
+  ownedThemes: string[];
+  equippedTheme: string | null;
 }
 
 const KEY = 'lasjakten_shop';
@@ -21,6 +25,10 @@ export function defaultShop(): ShopData {
     ownedAvatars: [],
     ownedFrames: [],
     equippedFrame: null,
+    ownedEffects: [],
+    equippedEffect: null,
+    ownedThemes: [],
+    equippedTheme: null,
   };
 }
 
@@ -50,6 +58,8 @@ function ownedListKey(kind: ShopKind): keyof ShopData {
   switch (kind) {
     case 'avatar': return 'ownedAvatars';
     case 'frame': return 'ownedFrames';
+    case 'effect': return 'ownedEffects';
+    case 'theme': return 'ownedThemes';
   }
 }
 
@@ -103,4 +113,28 @@ export function equipFrame(id: string | null): ShopData {
 
 export function getEquippedFrame(): string | null {
   return loadShop().equippedFrame;
+}
+
+/** Equipa (eller av-equipa med null) en effekt. */
+export function equipEffect(id: string | null): ShopData {
+  const shop = loadShop();
+  const updated = { ...shop, equippedEffect: id };
+  saveShop(updated);
+  return updated;
+}
+
+export function getEquippedEffect(): string | null {
+  return loadShop().equippedEffect;
+}
+
+/** Equipa (eller av-equipa med null) ett tema. */
+export function equipTheme(id: string | null): ShopData {
+  const shop = loadShop();
+  const updated = { ...shop, equippedTheme: id };
+  saveShop(updated);
+  return updated;
+}
+
+export function getEquippedTheme(): string | null {
+  return loadShop().equippedTheme;
 }
