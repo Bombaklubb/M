@@ -107,6 +107,18 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { emoji: '🧟', name: 'Zombie med läsglasögon', rarity: 'rare', price: 400, group: 'Roligt' },
   { emoji: '🥒', name: 'Sur gurka', rarity: 'rare', price: 400, group: 'Roligt' },
   { emoji: '🥦', name: 'Broccolisuperhjälte', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍕', name: 'Pizzaninja', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍩', name: 'Munkmonster', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🧀', name: 'Ost med attityd', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍔', name: 'Hamburgarbossen', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🌭', name: 'Korvlegenden', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🥑', name: 'Avokadohipstern', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍿', name: 'Popcornpartyt', rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🧁', name: 'Cupcakekungen', rarity: 'epic', price: 1000, group: 'Roligt' },
+  { emoji: '🍪', name: 'Kakgansen', rarity: 'epic', price: 1000, group: 'Roligt' },
+  { emoji: '🍝', name: 'Spagettimonstret', rarity: 'epic', price: 1000, group: 'Roligt' },
+  { emoji: '🥞', name: 'Pannkaksprinsen', rarity: 'legendary', price: 2500, group: 'Roligt' },
+  { emoji: '🦷', name: 'Tandfeansen', rarity: 'legendary', price: 2500, group: 'Roligt' },
 
   // Säsong
   { emoji: '🐇', name: 'Påskhare', rarity: 'rare', price: 400, group: 'Säsong' },
