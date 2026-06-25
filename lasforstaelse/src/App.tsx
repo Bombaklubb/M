@@ -28,6 +28,9 @@ import {
   trackTaskComplete,
 } from './services/analyticsService';
 import { getRandomText } from './services/libraryService';
+import { useDarkMode } from './contexts/DarkModeContext';
+import { getEquippedTheme } from './utils/shopStorage';
+import { THEME_MAP } from './data/shop';
 import {
   loadGamification,
   saveGamification,
@@ -52,6 +55,12 @@ function App() {
   const [showKistor, setShowKistor] = useState(false);
   const [showShop, setShowShop] = useState(false);
   const quizStartTime = useRef<number | null>(null);
+  const { darkMode } = useDarkMode();
+
+  // Valt tema från affären – appliceras bara i ljust läge så mörkt läge förblir oförändrat.
+  const equippedThemeId = getEquippedTheme();
+  const themeBg = !darkMode && equippedThemeId ? THEME_MAP[equippedThemeId]?.background : undefined;
+  const themeStyle = themeBg ? { background: themeBg } : undefined;
 
   // Ladda användare vid start
   useEffect(() => {
@@ -376,7 +385,7 @@ function App() {
   // Profile view
   if (showProfile) {
     return (
-      <div className="min-h-screen bg-sky-50 dark:bg-slate-900">
+      <div className="min-h-screen bg-sky-50 dark:bg-slate-900" style={themeStyle}>
         <Header
           user={user}
           onLogout={handleLogout}
@@ -440,7 +449,7 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden" style={themeStyle}>
       {/* Animated floating background elements - only show on setup page */}
       {appState === AppState.SETUP && (
         <>

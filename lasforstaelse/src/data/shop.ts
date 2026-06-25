@@ -162,3 +162,64 @@ export const SHOP_FRAMES: ShopFrame[] = [
 export const FRAME_MAP: Record<string, ShopFrame> = Object.fromEntries(
   SHOP_FRAMES.map(f => [f.id, f])
 );
+
+// Effekter (avatar-effects) – animerade partiklar runt avataren
+export type EffectKind = 'twinkle' | 'rise' | 'fall' | 'flash' | 'burst' | 'pulse';
+
+export interface ShopEffect {
+  id: string;
+  name: string;
+  rarity: Rarity;
+  price: number;
+  emoji: string;       // partikel-emoji som ringlar runt avataren
+  kind: EffectKind;    // vilken animation partiklarna använder
+  glow: string;        // sken bakom avataren
+}
+
+export const SHOP_EFFECTS: ShopEffect[] = [
+  { id: 'stars',     name: 'Glittrande stjärnor', rarity: 'rare',      price: 500,  emoji: '✨', kind: 'twinkle', glow: 'rgba(250,204,21,0.55)' },
+  { id: 'flames',    name: 'Eldlågor',            rarity: 'epic',      price: 1200, emoji: '🔥', kind: 'rise',    glow: 'rgba(249,115,22,0.60)' },
+  { id: 'rainbow',   name: 'Regnbåge',            rarity: 'epic',      price: 1200, emoji: '🌈', kind: 'pulse',   glow: 'rgba(168,85,247,0.55)' },
+  { id: 'lightning', name: 'Blixtar',             rarity: 'legendary', price: 2800, emoji: '⚡', kind: 'flash',   glow: 'rgba(56,189,248,0.65)' },
+  { id: 'snow',      name: 'Snöflingor',          rarity: 'rare',      price: 500,  emoji: '❄️', kind: 'fall',    glow: 'rgba(125,211,252,0.55)' },
+  { id: 'confetti',  name: 'Konfetti',            rarity: 'legendary', price: 2800, emoji: '🎉', kind: 'burst',   glow: 'rgba(236,72,153,0.55)' },
+];
+
+export const EFFECT_MAP: Record<string, ShopEffect> = Object.fromEntries(
+  SHOP_EFFECTS.map(e => [e.id, e])
+);
+
+// Teman (themes) – byter appens bakgrund (ljust läge)
+export interface ShopTheme {
+  id: string;
+  name: string;
+  rarity: Rarity;
+  price: number;
+  background: string;  // CSS-bakgrund för hela appen (ljust läge)
+  swatch: string;      // liten förhandsvisning i butiken
+}
+
+export const SHOP_THEMES: ShopTheme[] = [
+  { id: 'ocean',   name: 'Havsdjup',    rarity: 'common',    price: 300,
+    background: 'linear-gradient(160deg,#e0f2fe 0%,#bae6fd 55%,#7dd3fc 100%)',
+    swatch: 'linear-gradient(135deg,#bae6fd,#38bdf8)' },
+  { id: 'sunset',  name: 'Solnedgång',  rarity: 'common',    price: 300,
+    background: 'linear-gradient(160deg,#fff7ed 0%,#fed7aa 50%,#fdba74 100%)',
+    swatch: 'linear-gradient(135deg,#fdba74,#fb7185)' },
+  { id: 'forest',  name: 'Trollskog',   rarity: 'rare',      price: 700,
+    background: 'linear-gradient(160deg,#ecfdf5 0%,#bbf7d0 55%,#86efac 100%)',
+    swatch: 'linear-gradient(135deg,#86efac,#059669)' },
+  { id: 'candy',   name: 'Godislandet', rarity: 'rare',      price: 700,
+    background: 'linear-gradient(160deg,#fdf2f8 0%,#fbcfe8 50%,#f9a8d4 100%)',
+    swatch: 'linear-gradient(135deg,#f9a8d4,#ec4899)' },
+  { id: 'lavender',name: 'Lavendeldröm',rarity: 'epic',      price: 1500,
+    background: 'linear-gradient(160deg,#f5f3ff 0%,#ddd6fe 50%,#c4b5fd 100%)',
+    swatch: 'linear-gradient(135deg,#c4b5fd,#7c3aed)' },
+  { id: 'galaxy',  name: 'Rymden',      rarity: 'legendary', price: 3200,
+    background: 'linear-gradient(160deg,#312e81 0%,#1e1b4b 50%,#0f172a 100%)',
+    swatch: 'linear-gradient(135deg,#6366f1,#0f172a)' },
+];
+
+export const THEME_MAP: Record<string, ShopTheme> = Object.fromEntries(
+  SHOP_THEMES.map(t => [t.id, t])
+);
