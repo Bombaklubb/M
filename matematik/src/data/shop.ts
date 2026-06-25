@@ -166,6 +166,23 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { emoji: 'db:adventurer:Saga',   name: 'Hjälten',          rarity: 'epic', price: 1000, group: 'Figurer' },
   { emoji: 'db:bottts:Titan',      name: 'Megaboten',        rarity: 'epic', price: 1000, group: 'Figurer' },
   { emoji: 'db:pixelArt:Zix',      name: '8-bitaren',        rarity: 'epic', price: 1000, group: 'Figurer' },
+
+  // ── Roligt & knasigt (fler – tillagda sist för att bevara köp-index) ──────────
+  { emoji: '💩', name: 'Bajsemojin',         rarity: 'common', price: 150, group: 'Roligt' },
+  { emoji: '🤡', name: 'Clownen',            rarity: 'common', price: 150, group: 'Roligt' },
+  { emoji: '🤠', name: 'Cowboyfjanten',      rarity: 'common', price: 150, group: 'Roligt' },
+  { emoji: '🥸', name: 'Mästerförklädnaden', rarity: 'common', price: 150, group: 'Roligt' },
+  { emoji: '🤪', name: 'Tokfjanten',         rarity: 'common', price: 150, group: 'Roligt' },
+  { emoji: '🍕', name: 'Pizzakungen',        rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍔', name: 'Hamburgerhjälten',   rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍩', name: 'Munkmonstret',       rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍪', name: 'Kakmonstret',        rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🌭', name: 'Korv i bröd',        rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🥑', name: 'Avokadokämpen',      rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🦆', name: 'Knasankan',          rarity: 'rare', price: 400, group: 'Roligt' },
+  { emoji: '🍄', name: 'Svampfiguren',       rarity: 'epic', price: 1000, group: 'Roligt' },
+  { emoji: '🍦', name: 'Glassgänget',        rarity: 'epic', price: 1000, group: 'Roligt' },
+  { emoji: '🐡', name: 'Blåsfisken',         rarity: 'legendary', price: 2500, group: 'Roligt' },
 ];
 
 // ─── Ramar (avatar-frames) ──────────────────────────────────────────────────────
