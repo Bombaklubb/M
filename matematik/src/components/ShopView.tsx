@@ -4,7 +4,7 @@ import FramedAvatar from './FramedAvatar';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS, shopAvatarGlobalIndex } from '../data/avatars';
 import {
-  SHOP_AVATARS, SHOP_FRAMES, SHOP_TITLES, SHOP_BACKGROUNDS,
+  SHOP_AVATARS, SHOP_FRAMES, SHOP_TITLES, SHOP_BACKGROUNDS, SHOP_EFFECTS,
   RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity,
 } from '../data/shop';
 import {
@@ -12,11 +12,13 @@ import {
   type ShopData, type ShopKind,
 } from '../utils/shopStorage';
 
-type Tab = 'avatar' | 'frame' | 'owned';
+type Tab = 'avatar' | 'frame' | 'theme' | 'effect' | 'owned';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'avatar', label: 'Avatarer', icon: '🦊' },
   { id: 'frame',  label: 'Ramar',    icon: '⭕' },
+  { id: 'theme',  label: 'Teman',    icon: '🎨' },
+  { id: 'effect', label: 'Effekter', icon: '✨' },
   { id: 'owned',  label: 'Mina köp', icon: '🎁' },
 ];
 
@@ -248,6 +250,7 @@ export default function ShopView() {
   }
 
   function backgroundCard(b: typeof SHOP_BACKGROUNDS[number]) {
+    const owned = shop!.ownedBackgrounds.includes(b.id);
     const equipped = shop!.equippedBackground === b.id;
     const swatch = (
       <div className="w-20 h-14 rounded-xl" style={{ background: b.css, border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }} />
@@ -257,15 +260,40 @@ export default function ShopView() {
         key={`bg-${b.id}`}
         preview={swatch}
         name={b.name} rarity={b.rarity} price={b.price}
-        owned equipped={equipped} affordable={false}
-        onBuy={() => {}}
-        onEquip={() => { equipItem(sid, 'background', equipped ? null : b.id); refresh(); showToast(equipped ? 'Bakgrund borttagen' : `Bakgrund: ${b.name}`); }}
+        owned={owned} equipped={equipped} affordable={balance >= b.price}
+        onBuy={() => setConfirm({ kind: 'background', key: b.id, price: b.price, name: b.name,
+          preview: <div className="w-24 h-16 rounded-xl" style={{ background: b.css, border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }} /> })}
+        onEquip={() => { equipItem(sid, 'background', equipped ? null : b.id); refresh(); showToast(equipped ? 'Tema borttaget' : `Tema: ${b.name}`); }}
+      />
+    );
+  }
+
+  function effectCard(e: typeof SHOP_EFFECTS[number]) {
+    const owned = shop!.ownedEffects.includes(e.id);
+    const equipped = shop!.equippedEffect === e.id;
+    return (
+      <ItemCard
+        key={`fx-${e.id}`}
+        preview={<FramedAvatar emoji={currentEmoji} effectId={e.id} size={52} />}
+        name={e.name} rarity={e.rarity} price={e.price}
+        owned={owned} equipped={equipped} affordable={balance >= e.price}
+        onBuy={() => setConfirm({ kind: 'effect', key: e.id, price: e.price, name: e.name,
+          preview: <FramedAvatar emoji={currentEmoji} effectId={e.id} size={68} /> })}
+        onEquip={() => { equipItem(sid, 'effect', equipped ? null : e.id); refresh(); showToast(equipped ? 'Effekt borttagen' : `Effekt: ${e.name}`); }}
       />
     );
   }
 
   function renderFrames() {
     return SHOP_FRAMES.map(frameCard);
+  }
+
+  function renderThemes() {
+    return SHOP_BACKGROUNDS.map(backgroundCard);
+  }
+
+  function renderEffects() {
+    return SHOP_EFFECTS.map(effectCard);
   }
 
   // "Mina köp" – visar bara det man redan äger, grupperat per kategori.
@@ -275,7 +303,9 @@ export default function ShopView() {
     const ownedFrames = SHOP_FRAMES.filter(f => shop!.ownedFrames.includes(f.id));
     const ownedTitles = SHOP_TITLES.filter(t => shop!.ownedTitles.includes(t.id));
     const ownedBackgrounds = SHOP_BACKGROUNDS.filter(b => shop!.ownedBackgrounds.includes(b.id));
-    const total = ownedAvatars.length + ownedFrames.length + ownedTitles.length + ownedBackgrounds.length;
+    const ownedEffects = SHOP_EFFECTS.filter(e => shop!.ownedEffects.includes(e.id));
+    const total = ownedAvatars.length + ownedFrames.length + ownedTitles.length
+      + ownedBackgrounds.length + ownedEffects.length;
 
     if (total === 0) {
       return (
@@ -298,8 +328,9 @@ export default function ShopView() {
       <div className="space-y-6">
         {section('Avatarer', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
         {section('Ramar', ownedFrames.map(frameCard))}
+        {section('Teman', ownedBackgrounds.map(backgroundCard))}
+        {section('Effekter', ownedEffects.map(effectCard))}
         {section('Titlar', ownedTitles.map(titleCard))}
-        {section('Bakgrunder', ownedBackgrounds.map(backgroundCard))}
       </div>
     );
   }
@@ -365,7 +396,7 @@ export default function ShopView() {
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
-            {renderFrames()}
+            {tab === 'frame' ? renderFrames() : tab === 'theme' ? renderThemes() : renderEffects()}
           </div>
         )}
       </main>

@@ -184,6 +184,12 @@ input[type=number]::-webkit-outer-spin-button {
   100% { transform: translate(-50%, 0);    opacity: 1; }
 }
 
+/* Butik: avatar-effekter (svävande partiklar) */
+@keyframes avatar-effect-float {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.75; }
+  50%      { transform: translateY(-4px) scale(1.22) rotate(8deg); opacity: 1; }
+}
+
 /* Respektera prefers-reduced-motion – stäng av rörelse-tunga animationer */
 @media (prefers-reduced-motion: reduce) {
   *,

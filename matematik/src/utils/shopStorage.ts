@@ -4,7 +4,7 @@ import { getPoints } from './storage';
 // Poäng spenderas från en SEPARAT plånbok = (livstidspoäng − spenderat).
 // Livstidstotalen (points.total) rörs aldrig, så kistor/nivåer påverkas inte.
 
-export type ShopKind = 'avatar' | 'frame' | 'title' | 'background';
+export type ShopKind = 'avatar' | 'frame' | 'title' | 'background' | 'effect';
 
 export interface ShopData {
   spent: number;
@@ -12,9 +12,11 @@ export interface ShopData {
   ownedFrames: string[];
   ownedTitles: string[];
   ownedBackgrounds: string[];
+  ownedEffects: string[];
   equippedFrame: string | null;
   equippedTitle: string | null;
   equippedBackground: string | null;
+  equippedEffect: string | null;
 }
 
 const KEY = (studentId: string) => `math_shop_${studentId}`;
@@ -26,9 +28,11 @@ export function defaultShop(): ShopData {
     ownedFrames: [],
     ownedTitles: [],
     ownedBackgrounds: [],
+    ownedEffects: [],
     equippedFrame: null,
     equippedTitle: null,
     equippedBackground: null,
+    equippedEffect: null,
   };
 }
 
@@ -59,6 +63,7 @@ function ownedListKey(kind: ShopKind): keyof ShopData {
     case 'frame': return 'ownedFrames';
     case 'title': return 'ownedTitles';
     case 'background': return 'ownedBackgrounds';
+    case 'effect': return 'ownedEffects';
   }
 }
 
@@ -103,16 +108,17 @@ export function buyItem(
   return { ok: true, balance: getWalletBalance(studentId) };
 }
 
-/** Equipa (eller av-equipa med null) en ram/titel/bakgrund. */
+/** Equipa (eller av-equipa med null) en ram/titel/bakgrund/effekt. */
 export function equipItem(
   studentId: string,
-  kind: 'frame' | 'title' | 'background',
+  kind: 'frame' | 'title' | 'background' | 'effect',
   id: string | null
 ): ShopData {
   const shop = loadShop(studentId);
   const field =
     kind === 'frame' ? 'equippedFrame' :
-    kind === 'title' ? 'equippedTitle' : 'equippedBackground';
+    kind === 'title' ? 'equippedTitle' :
+    kind === 'background' ? 'equippedBackground' : 'equippedEffect';
   const updated = { ...shop, [field]: id } as ShopData;
   saveShop(studentId, updated);
   return updated;
@@ -130,4 +136,8 @@ export function getEquippedTitle(studentId: string): string | null {
 
 export function getEquippedBackground(studentId: string): string | null {
   return loadShop(studentId).equippedBackground;
+}
+
+export function getEquippedEffect(studentId: string): string | null {
+  return loadShop(studentId).equippedEffect;
 }
