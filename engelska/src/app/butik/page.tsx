@@ -4,23 +4,46 @@ import { useState, useEffect, type ReactNode } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
 import FramedAvatar from "@/components/ui/FramedAvatar";
+import EffectOverlay from "@/components/ui/EffectOverlay";
 import { loadStudent, setAvatar } from "@/lib/storage";
 import { getAvatar } from "@/lib/avatars";
 import {
-  SHOP_AVATARS, SHOP_FRAMES, RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity, type ShopAvatar, type ShopFrame,
+  SHOP_AVATARS, SHOP_FRAMES, SHOP_THEMES, SHOP_EFFECTS,
+  RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER,
+  type Rarity, type ShopAvatar, type ShopFrame, type ShopTheme, type ShopEffect,
 } from "@/lib/shop";
 import {
-  loadShop, buyItem, equipFrame, getWalletBalance, type ShopData, type ShopKind,
+  loadShop, buyItem, equipFrame, equipTheme, equipEffect, getWalletBalance, type ShopData, type ShopKind,
 } from "@/lib/shopStorage";
 import type { StudentData } from "@/lib/types";
 
-type Tab = "avatar" | "frame" | "owned";
+type Tab = "avatar" | "frame" | "theme" | "effect" | "owned";
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: "avatar", label: "Avatarer", icon: "🦊" },
   { id: "frame", label: "Ramar", icon: "⭕" },
+  { id: "theme", label: "Teman", icon: "🎨" },
+  { id: "effect", label: "Effekter", icon: "✨" },
   { id: "owned", label: "Mina köp", icon: "🎁" },
 ];
+
+// ─── Förhandsvisningar för tema/effekt ──────────────────────────────────────
+function ThemeSwatch({ theme, className = "w-full h-16" }: { theme: ShopTheme; className?: string }) {
+  return (
+    <div
+      className={`${className} rounded-xl border border-black/10 ${theme.animated ? "shop-theme-animated" : ""}`}
+      style={{ background: theme.css }}
+    />
+  );
+}
+
+function EffectSwatch({ effectId, className = "w-full h-16" }: { effectId: string; className?: string }) {
+  return (
+    <div className={`relative ${className} rounded-xl overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900`}>
+      <EffectOverlay effectId={effectId} />
+    </div>
+  );
+}
 
 // ─── Sällsynthetschip ──────────────────────────────────────────────────────
 function RarityChip({ rarity }: { rarity: Rarity }) {
@@ -244,10 +267,56 @@ export default function ButikPage() {
     );
   }
 
+  function themeCard(t: ShopTheme) {
+    const owned = shop!.ownedThemes.includes(t.id);
+    const equipped = shop!.equippedTheme === t.id;
+    return (
+      <ItemCard
+        key={t.id}
+        preview={<ThemeSwatch theme={t} />}
+        name={t.name} rarity={t.rarity} price={t.price}
+        owned={owned} equipped={equipped} affordable={balance >= t.price}
+        onBuy={() => setConfirm({
+          kind: "theme", id: t.id, price: t.price, name: t.name,
+          preview: <ThemeSwatch theme={t} className="w-44 h-24" />,
+        })}
+        onEquip={() => {
+          const updated = equipTheme(student!.name, equipped ? null : t.id);
+          setShop(updated);
+          showToast(equipped ? "Tema borttaget" : `${t.name} på!`);
+        }}
+      />
+    );
+  }
+
+  function effectCard(e: ShopEffect) {
+    const owned = shop!.ownedEffects.includes(e.id);
+    const equipped = shop!.equippedEffect === e.id;
+    return (
+      <ItemCard
+        key={e.id}
+        preview={<EffectSwatch effectId={e.id} />}
+        name={e.name} rarity={e.rarity} price={e.price}
+        owned={owned} equipped={equipped} affordable={balance >= e.price}
+        onBuy={() => setConfirm({
+          kind: "effect", id: e.id, price: e.price, name: e.name,
+          preview: <EffectSwatch effectId={e.id} className="w-44 h-24" />,
+        })}
+        onEquip={() => {
+          const updated = equipEffect(student!.name, equipped ? null : e.id);
+          setShop(updated);
+          showToast(equipped ? "Effekt borttagen" : `${e.name} på!`);
+        }}
+      />
+    );
+  }
+
   function renderOwned() {
     const ownedAvatars = SHOP_AVATARS.filter((a) => shop!.ownedAvatars.includes(a.id));
     const ownedFrames = SHOP_FRAMES.filter((f) => shop!.ownedFrames.includes(f.id));
-    const total = ownedAvatars.length + ownedFrames.length;
+    const ownedThemes = SHOP_THEMES.filter((t) => shop!.ownedThemes.includes(t.id));
+    const ownedEffects = SHOP_EFFECTS.filter((e) => shop!.ownedEffects.includes(e.id));
+    const total = ownedAvatars.length + ownedFrames.length + ownedThemes.length + ownedEffects.length;
 
     if (total === 0) {
       return (
@@ -270,6 +339,8 @@ export default function ButikPage() {
       <div className="space-y-6">
         {section("Avatarer", ownedAvatars.map(avatarCard))}
         {section("Ramar", ownedFrames.map(frameCard))}
+        {section("Teman", ownedThemes.map(themeCard))}
+        {section("Effekter", ownedEffects.map(effectCard))}
       </div>
     );
   }
@@ -320,9 +391,17 @@ export default function ButikPage() {
           <div className="space-y-6 pb-12">{renderAvatarGroups()}</div>
         ) : tab === "owned" ? (
           <div className="pb-12">{renderOwned()}</div>
-        ) : (
+        ) : tab === "frame" ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
             {SHOP_FRAMES.map(frameCard)}
+          </div>
+        ) : tab === "theme" ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
+            {SHOP_THEMES.map(themeCard)}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
+            {SHOP_EFFECTS.map(effectCard)}
           </div>
         )}
       </main>
