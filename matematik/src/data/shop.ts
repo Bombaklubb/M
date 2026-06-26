@@ -253,6 +253,7 @@ export interface ShopBackground {
 }
 
 export const SHOP_BACKGROUNDS: ShopBackground[] = [
+  // ── Enfärgade toningar (ursprungliga) ─────────────────────────────────────────
   { id: 'sunrise',    name: 'Soluppgång',  rarity: 'common', price: 350,
     css: 'linear-gradient(160deg,#7c2d12,#c2410c,#ea580c)' },
   { id: 'sea',        name: 'Djuphav',     rarity: 'common', price: 350,
@@ -269,8 +270,57 @@ export const SHOP_BACKGROUNDS: ShopBackground[] = [
     css: 'linear-gradient(160deg,#be123c,#b45309,#15803d,#1d4ed8,#6d28d9)' },
   { id: 'gold-bg',    name: 'Guldskimmer', rarity: 'legendary', price: 4500,
     css: 'linear-gradient(160deg,#78350f,#b45309,#f59e0b)' },
+
+  // ── Mönstrade teman (sticker ut) ──────────────────────────────────────────────
+  // Alla har ett mörkt "scrim"-lager överst så vit text alltid syns över mönstret.
+  { id: 'tiger',     name: 'Tiger',       rarity: 'epic', price: 2200,
+    css: 'linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.30)), repeating-linear-gradient(110deg,#ea580c 0 22px,#1c1917 22px 36px)' },
+  { id: 'zebra',     name: 'Zebra',       rarity: 'rare', price: 900,
+    css: 'linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), repeating-linear-gradient(100deg,#0a0a0a 0 20px,#fafaf9 20px 38px)' },
+  { id: 'leopard',   name: 'Leopard',     rarity: 'epic', price: 2200,
+    css: 'linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), radial-gradient(#451a03 22%,transparent 24%) 0 0/32px 32px, radial-gradient(#451a03 22%,transparent 24%) 16px 16px/32px 32px, linear-gradient(#b45309,#a16207)' },
+  { id: 'rainbow-stripes', name: 'Regnbågsränder', rarity: 'legendary', price: 4500,
+    css: 'linear-gradient(rgba(0,0,0,0.32),rgba(0,0,0,0.32)), repeating-linear-gradient(60deg,#dc2626 0 24px,#ea580c 24px 48px,#facc15 48px 72px,#16a34a 72px 96px,#2563eb 96px 120px,#7c3aed 120px 144px)' },
+  { id: 'checker',   name: 'Rutmönster',  rarity: 'rare', price: 900,
+    css: 'linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.30)), repeating-conic-gradient(#1e293b 0 25%,#334155 0 50%) 0 0/44px 44px' },
+  { id: 'polka',     name: 'Prickar',     rarity: 'rare', price: 900,
+    css: 'linear-gradient(rgba(0,0,0,0.22),rgba(0,0,0,0.22)), radial-gradient(#fbbf24 20%,transparent 22%) 0 0/28px 28px, linear-gradient(#7c2d12,#9a3412)' },
+  { id: 'starry',    name: 'Stjärnhimmel', rarity: 'epic', price: 2200,
+    css: 'radial-gradient(#ffffff 9%,transparent 10%) 0 0/26px 26px, radial-gradient(#ffffff 9%,transparent 10%) 13px 13px/26px 26px, linear-gradient(160deg,#0f172a,#1e1b4b)' },
+  { id: 'camo',      name: 'Kamouflage',  rarity: 'rare', price: 900,
+    css: 'linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), radial-gradient(#3f6212 30%,transparent 32%) 0 0/50px 50px, radial-gradient(#1a2e05 30%,transparent 32%) 25px 25px/50px 50px, linear-gradient(#4d7c0f,#365314)' },
 ];
 
 export const BACKGROUND_MAP: Record<string, ShopBackground> = Object.fromEntries(
   SHOP_BACKGROUNDS.map(b => [b.id, b])
+);
+
+// ─── Effekter (partiklar runt avataren) ──────────────────────────────────────────
+// Rent kosmetiska små emoji-partiklar som svävar runt avataren (visas på Min sida).
+export interface ShopEffect {
+  id: string;
+  name: string;
+  rarity: Rarity;
+  price: number;
+  particle: string;  // emoji som svävar runt avataren
+}
+
+export const SHOP_EFFECTS: ShopEffect[] = [
+  { id: 'stars',    name: 'Glittrande stjärnor', rarity: 'common', price: 150, particle: '✨' },
+  { id: 'snow',     name: 'Snöflingor',          rarity: 'common', price: 150, particle: '❄️' },
+  { id: 'hearts',   name: 'Hjärtan',             rarity: 'common', price: 150, particle: '💖' },
+  { id: 'bubbles',  name: 'Bubblor',             rarity: 'common', price: 150, particle: '🫧' },
+  { id: 'leaves',   name: 'Höstlöv',             rarity: 'common', price: 150, particle: '🍂' },
+  { id: 'bolts',    name: 'Blixtar',             rarity: 'rare', price: 400, particle: '⚡' },
+  { id: 'flames',   name: 'Eldlågor',            rarity: 'rare', price: 400, particle: '🔥' },
+  { id: 'rainbow',  name: 'Regnbåge',            rarity: 'rare', price: 400, particle: '🌈' },
+  { id: 'confetti', name: 'Konfetti',            rarity: 'rare', price: 400, particle: '🎉' },
+  { id: 'clover',   name: 'Tur',                 rarity: 'rare', price: 400, particle: '🍀' },
+  { id: 'crown',    name: 'Kunglig glans',       rarity: 'epic', price: 1000, particle: '👑' },
+  { id: 'galaxy-fx', name: 'Rymdstoft',          rarity: 'epic', price: 1000, particle: '🪐' },
+  { id: 'comet',    name: 'Stjärnregn',          rarity: 'legendary', price: 2500, particle: '🌟' },
+];
+
+export const EFFECT_MAP: Record<string, ShopEffect> = Object.fromEntries(
+  SHOP_EFFECTS.map(e => [e.id, e])
 );
