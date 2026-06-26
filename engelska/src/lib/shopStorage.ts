@@ -4,13 +4,17 @@ import { loadStudent } from "./storage";
 // Poäng spenderas från en SEPARAT plånbok = (livstidspoäng − spenderat).
 // student.totalPoints rörs aldrig, så kistor/utmärkelser påverkas inte.
 
-export type ShopKind = "avatar" | "frame";
+export type ShopKind = "avatar" | "frame" | "theme" | "effect";
 
 export interface ShopData {
   spent: number;
   ownedAvatars: string[];
   ownedFrames: string[];
+  ownedThemes: string[];
+  ownedEffects: string[];
   equippedFrame: string | null;
+  equippedTheme: string | null;
+  equippedEffect: string | null;
 }
 
 function key(studentName: string) {
@@ -18,7 +22,11 @@ function key(studentName: string) {
 }
 
 export function defaultShop(): ShopData {
-  return { spent: 0, ownedAvatars: [], ownedFrames: [], equippedFrame: null };
+  return {
+    spent: 0,
+    ownedAvatars: [], ownedFrames: [], ownedThemes: [], ownedEffects: [],
+    equippedFrame: null, equippedTheme: null, equippedEffect: null,
+  };
 }
 
 export function loadShop(studentName: string): ShopData {
@@ -44,8 +52,11 @@ export function getWalletBalance(studentName: string): number {
   return Math.max(0, total - spent);
 }
 
-function ownedListKey(kind: ShopKind): "ownedAvatars" | "ownedFrames" {
-  return kind === "avatar" ? "ownedAvatars" : "ownedFrames";
+function ownedListKey(kind: ShopKind): "ownedAvatars" | "ownedFrames" | "ownedThemes" | "ownedEffects" {
+  return kind === "avatar" ? "ownedAvatars"
+    : kind === "frame" ? "ownedFrames"
+    : kind === "theme" ? "ownedThemes"
+    : "ownedEffects";
 }
 
 export function isOwned(studentName: string, kind: ShopKind, id: string): boolean {
@@ -89,4 +100,28 @@ export function equipFrame(studentName: string, id: string | null): ShopData {
 
 export function getEquippedFrame(studentName: string): string | null {
   return loadShop(studentName).equippedFrame;
+}
+
+/** Equipa (eller av-equipa med null) ett tema. */
+export function equipTheme(studentName: string, id: string | null): ShopData {
+  const shop = loadShop(studentName);
+  const updated = { ...shop, equippedTheme: id };
+  saveShop(studentName, updated);
+  return updated;
+}
+
+export function getEquippedTheme(studentName: string): string | null {
+  return loadShop(studentName).equippedTheme;
+}
+
+/** Equipa (eller av-equipa med null) en effekt. */
+export function equipEffect(studentName: string, id: string | null): ShopData {
+  const shop = loadShop(studentName);
+  const updated = { ...shop, equippedEffect: id };
+  saveShop(studentName, updated);
+  return updated;
+}
+
+export function getEquippedEffect(studentName: string): string | null {
+  return loadShop(studentName).equippedEffect;
 }

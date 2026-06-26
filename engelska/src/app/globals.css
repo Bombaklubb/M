@@ -236,6 +236,33 @@
   to   { transform: translate(-50%, 0); opacity: 1; }
 }
 
+/* Affär – tema & effekter */
+@keyframes shop-theme-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+.shop-theme-animated {
+  background-size: 220% 220% !important;
+  animation: shop-theme-shift 12s ease infinite;
+}
+
+@keyframes shop-fall {
+  0%   { transform: translateY(-20%) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(420%) rotate(220deg); opacity: 0; }
+}
+@keyframes shop-rise {
+  0%   { transform: translateY(120%) scale(0.8); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateY(-360%) scale(1.1); opacity: 0; }
+}
+@keyframes shop-twinkle {
+  0%, 100% { transform: scale(0.6); opacity: 0; }
+  50%       { transform: scale(1.15); opacity: 1; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { @apply bg-transparent; }

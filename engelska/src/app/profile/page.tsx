@@ -9,13 +9,17 @@ import { loadStudent, getSessionStart } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { ACHIEVEMENTS, ACHIEVEMENT_ICONS, isUnlocked } from "@/lib/achievements";
 import { getAvatar } from "@/lib/avatars";
-import { getEquippedFrame, getWalletBalance } from "@/lib/shopStorage";
+import { getEquippedFrame, getEquippedTheme, getEquippedEffect, getWalletBalance } from "@/lib/shopStorage";
+import { THEME_MAP } from "@/lib/shop";
+import EffectOverlay from "@/components/ui/EffectOverlay";
 import type { StudentData, StageId } from "@/lib/types";
 
 export default function ProfilePage() {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [sessionMinutes, setSessionMinutes] = useState(0);
   const [equippedFrame, setEquippedFrame] = useState<string | null>(null);
+  const [equippedTheme, setEquippedTheme] = useState<string | null>(null);
+  const [equippedEffect, setEquippedEffect] = useState<string | null>(null);
   const [walletBalance, setWalletBalance] = useState(0);
 
   useEffect(() => {
@@ -23,6 +27,8 @@ export default function ProfilePage() {
     setStudent(s);
     if (s) {
       setEquippedFrame(getEquippedFrame(s.name));
+      setEquippedTheme(getEquippedTheme(s.name));
+      setEquippedEffect(getEquippedEffect(s.name));
       setWalletBalance(getWalletBalance(s.name));
     }
 
@@ -71,32 +77,51 @@ export default function ProfilePage() {
 
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-6">
         {/* Profile hero */}
-        <div className="card bg-gradient-to-br from-gray-800 to-gray-900 text-white border-none dark:from-gray-700 dark:to-gray-800">
-          <div className="flex items-center gap-4">
-            <FramedAvatar avatar={getAvatar(student.avatar ?? "ninja")} frameId={equippedFrame} size={80} className="flex-shrink-0" />
-            <div>
-              <h1 className="text-2xl font-black">{student.name}</h1>
-              <p className="text-gray-300 text-sm">Aktiv sedan {joinDate}</p>
-              <p className="text-gray-300 text-sm">Senast aktiv: {lastActive}</p>
-              <p className="text-gray-300 text-sm mt-1">
-                Min tid i appen: <span className="text-white font-semibold">{sessionMinutes} min</span>
-              </p>
+        {(() => {
+          const theme = equippedTheme ? THEME_MAP[equippedTheme] : null;
+          return (
+            <div
+              className={`card relative overflow-hidden text-white border-none ${
+                theme
+                  ? theme.animated ? "shop-theme-animated" : ""
+                  : "bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800"
+              }`}
+              style={theme ? { background: theme.css } : undefined}
+            >
+              {/* Scrim så vit text alltid syns ovanpå mönstret */}
+              {theme && <div className="absolute inset-0 bg-black/40" aria-hidden="true" />}
+              {/* Animerad partikeleffekt */}
+              <EffectOverlay effectId={equippedEffect} />
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-4">
+                  <FramedAvatar avatar={getAvatar(student.avatar ?? "ninja")} frameId={equippedFrame} size={80} className="flex-shrink-0" />
+                  <div>
+                    <h1 className="text-2xl font-black">{student.name}</h1>
+                    <p className="text-gray-300 text-sm">Aktiv sedan {joinDate}</p>
+                    <p className="text-gray-300 text-sm">Senast aktiv: {lastActive}</p>
+                    <p className="text-gray-300 text-sm mt-1">
+                      Min tid i appen: <span className="text-white font-semibold">{sessionMinutes} min</span>
+                    </p>
+                  </div>
+                  <div className="ml-auto text-center">
+                    <div className="text-4xl font-black">⭐ {student.totalPoints}</div>
+                    <div className="text-gray-300 text-sm">totala poäng</div>
+                  </div>
+                </div>
+                <Link
+                  href="/butik"
+                  className="mt-4 flex items-center justify-between gap-2 rounded-2xl px-4 py-3 bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"
+                >
+                  <span className="flex items-center gap-2 font-bold">
+                    <span className="text-xl">🛒</span> Gå till Affären
+                  </span>
+                  <span className="font-black text-emerald-300">⭐ {walletBalance} att spendera</span>
+                </Link>
+              </div>
             </div>
-            <div className="ml-auto text-center">
-              <div className="text-4xl font-black">⭐ {student.totalPoints}</div>
-              <div className="text-gray-300 text-sm">totala poäng</div>
-            </div>
-          </div>
-          <Link
-            href="/butik"
-            className="mt-4 flex items-center justify-between gap-2 rounded-2xl px-4 py-3 bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"
-          >
-            <span className="flex items-center gap-2 font-bold">
-              <span className="text-xl">🛒</span> Gå till Affären
-            </span>
-            <span className="font-black text-emerald-300">⭐ {walletBalance} att spendera</span>
-          </Link>
-        </div>
+          );
+        })()}
 
         {/* Stage overview */}
         <div>
