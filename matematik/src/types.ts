@@ -139,6 +139,7 @@ export interface PointsRecord {
   lastActiveDate: string;
   weeklyPoints: number;
   weekStart: string;
+  lastDailyBonus?: string;  // datum (YYYY-MM-DD) då daglig bonus senast gavs
 }
 
 export const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 800, 1200, 1800, 2500, 3500, 5000];
