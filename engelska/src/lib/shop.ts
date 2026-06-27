@@ -41,12 +41,12 @@ export const AVATAR_GROUP_ORDER: AvatarGroup[] = [
 // OBS: id:n är permanenta — ägda avatarer sparas via id, inte array-index.
 export const SHOP_AVATARS: ShopAvatar[] = [
   // ── Djur ──────────────────────────────────────────────────────────────────
-  { id: "av-puppy",      emoji: "🐶", name: "Valpen",        rarity: "common", price: 150, group: "Djur" },
-  { id: "av-kitten",     emoji: "🐱", name: "Kattungen",     rarity: "common", price: 150, group: "Djur" },
-  { id: "av-rabbit",     emoji: "🐰", name: "Kaninen",       rarity: "common", price: 150, group: "Djur" },
-  { id: "av-chick",      emoji: "🐥", name: "Kycklingen",    rarity: "common", price: 150, group: "Djur" },
-  { id: "av-penguin",    emoji: "🐧", name: "Pingvinen",     rarity: "common", price: 150, group: "Djur" },
-  { id: "av-koala",      emoji: "🐨", name: "Koalan",        rarity: "common", price: 150, group: "Djur" },
+  { id: "av-puppy",      emoji: "🐶", name: "Valpen",        rarity: "common", price: 100, group: "Djur" },
+  { id: "av-kitten",     emoji: "🐱", name: "Kattungen",     rarity: "common", price: 100, group: "Djur" },
+  { id: "av-rabbit",     emoji: "🐰", name: "Kaninen",       rarity: "common", price: 100, group: "Djur" },
+  { id: "av-chick",      emoji: "🐥", name: "Kycklingen",    rarity: "common", price: 100, group: "Djur" },
+  { id: "av-penguin",    emoji: "🐧", name: "Pingvinen",     rarity: "common", price: 100, group: "Djur" },
+  { id: "av-koala",      emoji: "🐨", name: "Koalan",        rarity: "common", price: 100, group: "Djur" },
   { id: "av-zebra",      emoji: "🦓", name: "Zebran",        rarity: "rare", price: 400, group: "Djur" },
   { id: "av-giraffe",    emoji: "🦒", name: "Giraffen",      rarity: "rare", price: 400, group: "Djur" },
   { id: "av-otter",      emoji: "🦦", name: "Uttern",        rarity: "rare", price: 400, group: "Djur" },
@@ -56,18 +56,18 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: "av-dodo",       emoji: "🦤", name: "Dronten",       rarity: "legendary", price: 2500, group: "Djur" },
 
   // ── Skoltema ──────────────────────────────────────────────────────────────
-  { id: "av-bookworm",   emoji: "🤓", name: "Bokmasken",     rarity: "common", price: 150, group: "Skoltema" },
-  { id: "av-painter",    emoji: "🎨", name: "Konstnären",    rarity: "common", price: 150, group: "Skoltema" },
-  { id: "av-musician",   emoji: "🎸", name: "Musikstjärnan", rarity: "common", price: 150, group: "Skoltema" },
+  { id: "av-bookworm",   emoji: "🤓", name: "Bokmasken",     rarity: "common", price: 100, group: "Skoltema" },
+  { id: "av-painter",    emoji: "🎨", name: "Konstnären",    rarity: "common", price: 100, group: "Skoltema" },
+  { id: "av-musician",   emoji: "🎸", name: "Musikstjärnan", rarity: "common", price: 100, group: "Skoltema" },
   { id: "av-scientist2", emoji: "🧪", name: "Vetenskapsgeniet", rarity: "rare", price: 400, group: "Skoltema" },
   { id: "av-wordmaster", emoji: "🔤", name: "Språkmästaren", rarity: "rare", price: 400, group: "Skoltema" },
   { id: "av-librarian",  emoji: "📚", name: "Bibliotekarien",rarity: "rare", price: 400, group: "Skoltema" },
   { id: "av-inventor",   emoji: "💡", name: "Uppfinnaren",   rarity: "rare", price: 400, group: "Skoltema" },
 
   // ── Fordon ────────────────────────────────────────────────────────────────
-  { id: "av-car",        emoji: "🚗", name: "Bilen",         rarity: "common", price: 150, group: "Fordon" },
-  { id: "av-bus",        emoji: "🚌", name: "Bussen",        rarity: "common", price: 150, group: "Fordon" },
-  { id: "av-bike",       emoji: "🚲", name: "Cykeln",        rarity: "common", price: 150, group: "Fordon" },
+  { id: "av-car",        emoji: "🚗", name: "Bilen",         rarity: "common", price: 100, group: "Fordon" },
+  { id: "av-bus",        emoji: "🚌", name: "Bussen",        rarity: "common", price: 100, group: "Fordon" },
+  { id: "av-bike",       emoji: "🚲", name: "Cykeln",        rarity: "common", price: 100, group: "Fordon" },
   { id: "av-motorcycle", emoji: "🏍️", name: "Motorcykeln",   rarity: "rare", price: 400, group: "Fordon" },
   { id: "av-firetruck",  emoji: "🚒", name: "Brandbilen",    rarity: "rare", price: 400, group: "Fordon" },
   { id: "av-tractor",    emoji: "🚜", name: "Traktorn",      rarity: "epic", price: 1000, group: "Fordon" },
@@ -75,9 +75,9 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: "av-racecar",    emoji: "🏎️", name: "Racerbilen",    rarity: "legendary", price: 2500, group: "Fordon" },
 
   // ── Yrken ─────────────────────────────────────────────────────────────────
-  { id: "av-police",     emoji: "👮", name: "Polisen",       rarity: "common", price: 150, group: "Yrken" },
-  { id: "av-chef",       emoji: "👨‍🍳", name: "Kocken",        rarity: "common", price: 150, group: "Yrken" },
-  { id: "av-teacher",    emoji: "🧑‍🏫", name: "Läraren",       rarity: "common", price: 150, group: "Yrken" },
+  { id: "av-police",     emoji: "👮", name: "Polisen",       rarity: "common", price: 100, group: "Yrken" },
+  { id: "av-chef",       emoji: "👨‍🍳", name: "Kocken",        rarity: "common", price: 100, group: "Yrken" },
+  { id: "av-teacher",    emoji: "🧑‍🏫", name: "Läraren",       rarity: "common", price: 100, group: "Yrken" },
   { id: "av-doctor",     emoji: "👨‍⚕️", name: "Doktorn",       rarity: "rare", price: 400, group: "Yrken" },
   { id: "av-firefighter",emoji: "👨‍🚒", name: "Brandmannen",   rarity: "rare", price: 400, group: "Yrken" },
   { id: "av-detective2", emoji: "🕵️", name: "Detektiven",    rarity: "rare", price: 400, group: "Yrken" },
@@ -91,12 +91,12 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: "av-zombie",     emoji: "🧟", name: "Zombie med läsglasögon", rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-pickle",     emoji: "🥒", name: "Sur gurka",       rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-broccoli",   emoji: "🥦", name: "Broccolisuperhjälte", rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-poop",       emoji: "💩", name: "Glad bajskorv",    rarity: "common", price: 150, group: "Roligt" },
-  { id: "av-clown",      emoji: "🤡", name: "Clownen",          rarity: "common", price: 150, group: "Roligt" },
-  { id: "av-pizza",      emoji: "🍕", name: "Pizzaslicen",      rarity: "common", price: 150, group: "Roligt" },
-  { id: "av-donut",      emoji: "🍩", name: "Munken",           rarity: "common", price: 150, group: "Roligt" },
-  { id: "av-burger",     emoji: "🍔", name: "Hungriga hamburgaren", rarity: "common", price: 150, group: "Roligt" },
-  { id: "av-popcorn",    emoji: "🍿", name: "Poppande popcorn",  rarity: "common", price: 150, group: "Roligt" },
+  { id: "av-poop",       emoji: "💩", name: "Glad bajskorv",    rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-clown",      emoji: "🤡", name: "Clownen",          rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-pizza",      emoji: "🍕", name: "Pizzaslicen",      rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-donut",      emoji: "🍩", name: "Munken",           rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-burger",     emoji: "🍔", name: "Hungriga hamburgaren", rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-popcorn",    emoji: "🍿", name: "Poppande popcorn",  rarity: "common", price: 100, group: "Roligt" },
   { id: "av-egg",        emoji: "🍳", name: "Stekta ägget",     rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-icecream",   emoji: "🍦", name: "Smältande glassen", rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-mushroom",   emoji: "🍄", name: "Svampen",          rarity: "rare", price: 400, group: "Roligt" },
@@ -236,9 +236,9 @@ export interface ShopEffect {
 }
 
 export const SHOP_EFFECTS: ShopEffect[] = [
-  { id: "fx-snow",    name: "Snöfall",       rarity: "common", price: 300, emoji: "❄️", motion: "fall",   count: 16 },
-  { id: "fx-rain",    name: "Regn",          rarity: "common", price: 300, emoji: "💧", motion: "fall",   count: 18 },
-  { id: "fx-bubbles", name: "Bubblor",       rarity: "common", price: 350, emoji: "🫧", motion: "rise",   count: 14 },
+  { id: "fx-snow",    name: "Snöfall",       rarity: "common", price: 100, emoji: "❄️", motion: "fall",   count: 16 },
+  { id: "fx-rain",    name: "Regn",          rarity: "common", price: 100, emoji: "💧", motion: "fall",   count: 18 },
+  { id: "fx-bubbles", name: "Bubblor",       rarity: "common", price: 100, emoji: "🫧", motion: "rise",   count: 14 },
   { id: "fx-confetti",name: "Konfetti",      rarity: "rare", price: 700, emoji: "🎊", motion: "fall",   count: 18 },
   { id: "fx-hearts",  name: "Hjärtan",       rarity: "rare", price: 700, emoji: "💕", motion: "rise",   count: 14 },
   { id: "fx-sparkle", name: "Stjärnglitter", rarity: "rare", price: 800, emoji: "✨", motion: "twinkle", count: 16 },

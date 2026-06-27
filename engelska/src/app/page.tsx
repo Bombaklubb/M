@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
-import { loadStudent, createStudent, clearStudent } from "@/lib/storage";
+import { loadStudent, createStudent, clearStudent, claimDailyBonus } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
@@ -65,9 +65,21 @@ export default function HomePage() {
   const [loading,        setLoading]        = useState(true);
   const [returningName,  setReturningName]  = useState<string | null>(null);
   const [totals,         setTotals]         = useState<Record<string, number>>({});
+  const [dailyBonus,     setDailyBonus]     = useState(0);
 
   useEffect(() => {
-    setStudent(loadStudent());
+    const s = loadStudent();
+    if (s) {
+      const bonus = claimDailyBonus();
+      if (bonus > 0) {
+        setDailyBonus(bonus);
+        setStudent(loadStudent()); // ladda om med uppdaterade poäng
+      } else {
+        setStudent(s);
+      }
+    } else {
+      setStudent(s);
+    }
     setLoading(false);
     // Fetch total module counts per stage for the progress rings
     Promise.all(
@@ -242,6 +254,27 @@ export default function HomePage() {
       <Header student={student} onLogout={handleLogout} />
 
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-4 flex flex-col min-h-0">
+        {dailyBonus > 0 && (
+          <BlurFade delay={0} duration={0.4} inView>
+            <div
+              className="mb-4 flex items-center justify-between gap-3 rounded-2xl px-4 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white border-2 border-white/30"
+              style={{ boxShadow: "0 4px 0 0 rgba(5,150,105,0.4), 0 8px 16px -4px rgba(5,150,105,0.3)" }}
+              role="status"
+            >
+              <span className="flex items-center gap-2 font-black">
+                <span className="text-2xl">🎁</span>
+                Daglig bonus! +{dailyBonus} ⭐ för att du kom tillbaka idag
+              </span>
+              <button
+                onClick={() => setDailyBonus(0)}
+                className="text-white/80 hover:text-white text-xl leading-none px-1 cursor-pointer"
+                aria-label="Stäng"
+              >
+                ✕
+              </button>
+            </div>
+          </BlurFade>
+        )}
         <BlurFade delay={0} duration={0.4} inView>
           <div className="mb-4">
             <h2 className="text-2xl font-black text-white drop-shadow">Välj din värld</h2>

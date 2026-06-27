@@ -75,7 +75,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
       setRunnerAnim("run");
       const ns = streak + 1;
       setStreak(ns);
-      setScore(s => s + 10 + Math.floor(ns / 3) * 5);
+      setScore(s => s + 10 + Math.floor(ns / 3) * 10);
       const newCoins = coins + 1;
       setCoins(newCoins);
       if (newCoins >= TOTAL_COINS) {

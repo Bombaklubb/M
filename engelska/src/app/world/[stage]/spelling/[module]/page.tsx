@@ -17,7 +17,7 @@ import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, SpellingModule, GrammarExercise, ChestType, MysteryBoxReward } from "@/lib/types";
 
-const POINTS_PER_CORRECT = 10;
+const POINTS_PER_CORRECT = 15;
 
 interface Props {
   params: Promise<{ stage: string; module: string }>;

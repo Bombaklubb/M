@@ -152,10 +152,12 @@ export function clearStudent(): void {
 // ─── Module progress helpers ──────────────────────────────────────────────────
 
 export function getRepeatMultiplier(priorAttempts: number): number {
+  // Mildare omspelsrabatt: det lönar sig alltid att öva om (golv 20 %).
   if (priorAttempts === 0) return 1.0;
-  if (priorAttempts === 1) return 0.5;
-  if (priorAttempts === 2) return 0.25;
-  return 0;
+  if (priorAttempts === 1) return 0.7;
+  if (priorAttempts === 2) return 0.5;
+  if (priorAttempts === 3) return 0.3;
+  return 0.2;
 }
 
 export function getModuleProgress(
@@ -327,6 +329,37 @@ export function updateStreak(studentName: string): number {
     localStorage.setItem(key, JSON.stringify({ days: newDays, lastDate: today }));
     return newDays;
   } catch { return 0; }
+}
+
+// ─── Daglig bonus ──────────────────────────────────────────────────────────────
+
+/** Poäng som delas ut första gången man är aktiv en ny dag. */
+export const DAILY_BONUS = 50;
+
+function dailyBonusKey(name: string) {
+  return `engelskajakten_dailybonus_${name.toLowerCase().trim()}`;
+}
+
+/**
+ * Delar ut daglig bonus (DAILY_BONUS ⭐) första gången på dagen.
+ * Lägger till poängen i den aktiva studentens totalPoints (= både livstidspoäng
+ * och plånbok) och returnerar bonusbeloppet. Returnerar 0 om den redan hämtats idag.
+ */
+export function claimDailyBonus(): number {
+  if (typeof window === "undefined") return 0;
+  const student = loadStudent();
+  if (!student) return 0;
+  const key = dailyBonusKey(student.name);
+  const today = todayStr();
+  try {
+    if (localStorage.getItem(key) === today) return 0; // redan hämtad idag
+    localStorage.setItem(key, today);
+    student.totalPoints += DAILY_BONUS;
+    saveStudent(student);
+    return DAILY_BONUS;
+  } catch {
+    return 0;
+  }
 }
 
 // ─── Exercise position (resume where you left off) ────────────────────────────
