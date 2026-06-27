@@ -32,7 +32,7 @@ import type {
   MysteryBoxReward,
 } from "@/lib/types";
 
-const POINTS_PER_COIN = 10;
+const POINTS_PER_COIN = 15;
 
 interface Props {
   params: Promise<{ stage: string; module: string }>;

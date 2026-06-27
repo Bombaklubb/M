@@ -85,7 +85,7 @@ function TidsattackGame({ stageId, stageName, student }: {
       const ns = streak + 1;
       setStreak(ns);
       setBestStreak(b => Math.max(b, ns));
-      setScore(s => s + 10 + Math.floor(ns / 3) * 5);
+      setScore(s => s + 10 + Math.floor(ns / 3) * 10);
       setCorrect(c => c + 1);
     } else {
       setStreak(0);
@@ -129,7 +129,7 @@ function TidsattackGame({ stageId, stageName, student }: {
         <div className="text-center max-w-sm w-full">
           <div className="text-6xl mb-3">⏱️</div>
           <h2 className="text-2xl font-black text-white mb-1">Tiden är ute!</h2>
-          <p className="text-cyan-300 text-sm mb-5">{correct + (score - correct * 10) / 5} frågor besvarade</p>
+          <p className="text-cyan-300 text-sm mb-5">{correct} frågor besvarade</p>
           <div className="grid grid-cols-3 gap-3 mb-5">
             {[
               { label: "Rätt", value: correct, emoji: "✅" },

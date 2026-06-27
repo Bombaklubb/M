@@ -29,7 +29,7 @@ import type {
   GrammarExercise,
 } from "@/lib/types";
 
-const POINTS_PER_CORRECT = 10;
+const POINTS_PER_CORRECT = 15;
 
 interface Props {
   params: Promise<{ stage: string; module: string }>;
