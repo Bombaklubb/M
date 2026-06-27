@@ -8,6 +8,7 @@ import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
+import ShopView from './components/ShopView';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
 import {
@@ -27,6 +28,9 @@ import {
   trackTaskComplete,
 } from './services/analyticsService';
 import { getRandomText } from './services/libraryService';
+import { useDarkMode } from './contexts/DarkModeContext';
+import { getEquippedTheme } from './utils/shopStorage';
+import { THEME_MAP } from './data/shop';
 import {
   loadGamification,
   saveGamification,
@@ -49,7 +53,14 @@ function App() {
   const [showProfile, setShowProfile] = useState(false);
   const [showTeacher, setShowTeacher] = useState(false);
   const [showKistor, setShowKistor] = useState(false);
+  const [showShop, setShowShop] = useState(false);
   const quizStartTime = useRef<number | null>(null);
+  const { darkMode } = useDarkMode();
+
+  // Valt tema från affären – appliceras bara i ljust läge så mörkt läge förblir oförändrat.
+  const equippedThemeId = getEquippedTheme();
+  const themeBg = !darkMode && equippedThemeId ? THEME_MAP[equippedThemeId]?.background : undefined;
+  const themeStyle = themeBg ? { background: themeBg } : undefined;
 
   // Ladda användare vid start
   useEffect(() => {
@@ -120,6 +131,7 @@ function App() {
     setLastResult(null);
     setShowProfile(false);
     setShowKistor(false);
+    setShowShop(false);
     setAppState(AppState.LOGIN);
   };
 
@@ -251,6 +263,7 @@ function App() {
     setLastResult(null);
     setShowProfile(false);
     setShowKistor(false);
+    setShowShop(false);
     setAppState(AppState.SETUP);
     window.scrollTo(0, 0);
   };
@@ -387,6 +400,7 @@ function App() {
           onHomeClick={handleRestart}
           onProfileClick={() => setShowProfile(false)}
           onKistorClick={() => { setShowProfile(false); setShowKistor(true); }}
+          onShopClick={() => { setShowProfile(false); setShowShop(true); }}
           unopenedChests={getUnopenedChestsCount()}
         />
         <ProfileView
@@ -409,6 +423,11 @@ function App() {
     );
   }
 
+  // Shop view
+  if (showShop) {
+    return <ShopView onBack={() => setShowShop(false)} />;
+  }
+
   return (
     <div
       className="min-h-screen relative overflow-hidden"
@@ -423,9 +442,12 @@ function App() {
       {appState === AppState.SETUP && (
         <div className="absolute inset-0 bg-black/20 -z-10" />
       )}
-      {/* Fallback bg for other states */}
+      {/* Fallback bg for other states – köpt tema (ljust läge) ersätter gradienten */}
       {appState !== AppState.SETUP && (
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 -z-10" />
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 -z-10"
+          style={themeStyle}
+        />
       )}
 
       <Header
@@ -434,6 +456,7 @@ function App() {
         onHomeClick={handleRestart}
         onProfileClick={() => setShowProfile(true)}
         onKistorClick={() => setShowKistor(true)}
+        onShopClick={() => setShowShop(true)}
         unopenedChests={getUnopenedChestsCount()}
       />
 

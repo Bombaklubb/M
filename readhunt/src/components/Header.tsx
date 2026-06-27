@@ -1,6 +1,7 @@
 import React from 'react';
 import { User } from '../types';
 import { useDarkMode } from '../contexts/DarkModeContext';
+import { getWalletBalance } from '../utils/shopStorage';
 
 interface HeaderProps {
   user: User;
@@ -8,11 +9,15 @@ interface HeaderProps {
   onHomeClick: () => void;
   onProfileClick?: () => void;
   onKistorClick?: () => void;
+  onShopClick?: () => void;
   unopenedChests?: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, unopenedChests = 0 }) => {
+export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, onShopClick, unopenedChests = 0 }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
+
+  // Plånbokssaldo = livstidspoäng − spenderat i butiken
+  const walletBalance = getWalletBalance();
 
   return (
     <header className="sticky top-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm">
@@ -58,8 +63,24 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             </button>
           )}
 
-          {/* Points */}
-          <div className="flex items-center gap-1.5 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 px-3 py-1.5 rounded-xl border border-amber-200/80 dark:border-amber-700/50">
+          {/* Shop – plånbokssaldo (spenderbara poäng) */}
+          {onShopClick && (
+            <button
+              onClick={onShopClick}
+              className="flex items-center gap-1.5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-700/50 hover:from-indigo-100 hover:to-violet-100 dark:hover:from-indigo-900/40 dark:hover:to-violet-900/40 transition-all"
+              title="Shop – points to spend"
+              aria-label="Open the shop"
+            >
+              <span className="text-base">🛒</span>
+              <span className="font-bold text-indigo-700 dark:text-indigo-300 text-sm tabular-nums">{walletBalance.toLocaleString('sv-SE')}</span>
+            </button>
+          )}
+
+          {/* Points (lifetime total) */}
+          <div
+            className="flex items-center gap-1.5 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 px-3 py-1.5 rounded-xl border border-amber-200/80 dark:border-amber-700/50"
+            title="Lifetime points (total earned)"
+          >
             <span className="text-base">⭐</span>
             <span className="font-bold text-amber-700 dark:text-amber-300 text-sm tabular-nums">{user.totalPoints}</span>
           </div>

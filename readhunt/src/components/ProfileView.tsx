@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { User, BADGE_DEFINITIONS, BadgeType, QuestionType } from '../types';
 import { AvatarPicker } from './AvatarPicker';
+import FramedAvatar from './FramedAvatar';
+import { getEquippedFrame, getEquippedEffect } from '../utils/shopStorage';
 
 interface ProfileViewProps {
   user: User;
@@ -96,10 +98,15 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
         <div className="text-center mb-4">
           <button
             onClick={() => setShowAvatarPicker(true)}
-            className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/50 rounded-full flex items-center justify-center mx-auto mb-2 hover:ring-4 hover:ring-purple-300 dark:hover:ring-purple-600 transition-all group relative"
+            className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2 hover:ring-4 hover:ring-purple-300 dark:hover:ring-purple-600 transition-all group relative"
             title="Klicka för att byta avatar"
           >
-            <span className="text-4xl">{user.avatar || '👤'}</span>
+            <FramedAvatar
+              emoji={user.avatar || '👤'}
+              size={64}
+              frameId={getEquippedFrame()}
+              effectId={getEquippedEffect()}
+            />
             <div className="absolute inset-0 bg-black/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <span className="text-white text-sm font-medium">Byt</span>
             </div>
