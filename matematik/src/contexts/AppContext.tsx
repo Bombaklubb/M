@@ -8,6 +8,7 @@ import {
   getPoints, initPoints, getAchievements, addPoints,
   grantAchievement, saveTopicProgress, calcStars,
   recordTopicSession, saveStudent, addAppMinutes,
+  claimDailyBonus,
 } from '../utils/storage';
 import { trackVisit, trackSessionEnd, trackHeartbeat } from '../utils/analytics';
 import {
@@ -39,6 +40,8 @@ interface AppContextValue {
   errorBankWorldId: WorldId | null;
   pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null;
   clearPendingChestResult: () => void;
+  dailyBonus: number | null;
+  clearDailyBonus: () => void;
   login: (student: Student) => void;
   logout: () => void;
   setView: (view: ExtendedView) => void;
@@ -65,6 +68,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
   const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null>(null);
+  const [dailyBonus, setDailyBonus] = useState<number | null>(null);
 
   const sessionStartRef = useRef<number | null>(null);
 
@@ -102,6 +106,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     trackHeartbeat();
     const interval = setInterval(trackHeartbeat, 2 * 60 * 1000);
     return () => clearInterval(interval);
+  }, [currentStudent]);
+
+  // Daglig bonus – ges en gång per kalenderdag (vid inloggning eller dagens första besök).
+  useEffect(() => {
+    if (!currentStudent) return;
+    const res = claimDailyBonus(currentStudent.id);
+    if (res.claimed) setDailyBonus(res.amount);
   }, [currentStudent]);
 
   // Track session end on page close
@@ -164,6 +175,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const clearPendingChestResult = useCallback(() => setPendingChestResult(null), []);
+  const clearDailyBonus = useCallback(() => setDailyBonus(null), []);
 
   const updateAvatar = useCallback((avatarIndex: number) => {
     if (!currentStudent) return;
@@ -181,9 +193,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const prevAttempts = prevProgress?.totalAttempts ?? 0;
     const attemptNumber = prevAttempts + 1;
     const wasAlreadyCompleted = prevProgress?.completed === true;
-    // Glidande poängsänkning: 100% → 50% → 25% → 10% → 0% per upprepning
-    const repeatMultiplier = prevAttempts === 0 ? 1 : prevAttempts === 1 ? 0.5 : prevAttempts === 2 ? 0.25 : prevAttempts === 3 ? 0.1 : 0;
-    const fullPoints = correct * 10 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
+    // Glidande poängsänkning: 100% → 70% → 50% → 30% → 20% per upprepning
+    // (mildare än tidigare så att omspel alltid lönar sig och ger pengar till affären)
+    const repeatMultiplier = prevAttempts === 0 ? 1 : prevAttempts === 1 ? 0.7 : prevAttempts === 2 ? 0.5 : prevAttempts === 3 ? 0.3 : 0.2;
+    const fullPoints = correct * 15 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
     const basePoints = Math.round(fullPoints * repeatMultiplier);
     saveTopicProgress(currentStudent.id, { topicId, completed: score >= 50, bestScore: score, totalAttempts: 1, correctAnswers: correct, totalQuestions: total, lastAttempt: new Date().toISOString(), stars, timeSpent });
     recordTopicSession(currentStudent.id, topicId, correct, total);
@@ -311,7 +324,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, errorBankWorldId, pendingChestResult, clearPendingChestResult, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, startErrorBank, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, errorBankWorldId, pendingChestResult, clearPendingChestResult, dailyBonus, clearDailyBonus, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, startErrorBank, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

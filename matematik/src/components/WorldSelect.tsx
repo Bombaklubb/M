@@ -9,7 +9,7 @@ import { BorderBeam } from './magicui/border-beam';
 import FramedAvatar from './FramedAvatar';
 
 export default function WorldSelect() {
-  const { currentStudent, logout, setView } = useApp();
+  const { currentStudent, logout, setView, dailyBonus, clearDailyBonus } = useApp();
 
   const progress = currentStudent ? getProgress(currentStudent.id) : [];
   // Plånbokssaldo (livstidspoäng − spenderat i butiken) – det eleven faktiskt kan spendera.
@@ -112,6 +112,22 @@ export default function WorldSelect() {
           Logga ut
         </button>
       </div>
+
+      {/* Daglig bonus-notis */}
+      {dailyBonus != null && (
+        <div className="relative z-10 px-4 flex justify-center">
+          <button
+            onClick={clearDailyBonus}
+            className="flex items-center gap-2 px-4 py-2 rounded-full text-white font-bold text-sm shadow-lg transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
+            style={{ background: 'linear-gradient(135deg,#f59e0b,#d97706)', border: '1px solid #b45309' }}
+            title="Stäng"
+          >
+            <span className="text-base">🎁</span>
+            <span>Daglig bonus: +{dailyBonus} ⭐!</span>
+            <span className="opacity-70 text-xs">✕</span>
+          </button>
+        </div>
+      )}
 
       {/* Logo – svävande */}
       <div className="relative z-10 pt-2 pb-1 text-center px-4 animate-float">

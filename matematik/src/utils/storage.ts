@@ -130,6 +130,9 @@ export function calcStars(score: number): number {
 
 // ======================== POINTS ========================
 
+/** Daglig inloggningsbonus (⭐ en gång per kalenderdag). */
+export const DAILY_BONUS = 50;
+
 export function initPoints(studentId: string): PointsRecord {
   const existing = getPoints(studentId);
   if (existing) return existing;
@@ -141,9 +144,35 @@ export function initPoints(studentId: string): PointsRecord {
     lastActiveDate: '',
     weeklyPoints: 0,
     weekStart: getWeekStart(),
+    lastDailyBonus: '',
   };
   savePoints(record);
   return record;
+}
+
+/**
+ * Ger en daglig bonus en gång per kalenderdag. Höjer livstidspoäng (och därm
+ * plånboken) + veckopoäng, men rör inte streak-logiken. Returnerar om bonusen
+ * faktiskt gavs så att UI kan visa en notis.
+ */
+export function claimDailyBonus(studentId: string): { claimed: boolean; amount: number } {
+  const record = getPoints(studentId) ?? initPoints(studentId);
+  const today = new Date().toISOString().split('T')[0];
+  if (record.lastDailyBonus === today) return { claimed: false, amount: 0 };
+
+  const weekStart = getWeekStart();
+  const weeklyBase = record.weekStart !== weekStart ? 0 : record.weeklyPoints;
+  const newTotal = record.total + DAILY_BONUS;
+  const updated: PointsRecord = {
+    ...record,
+    total: newTotal,
+    level: calcLevel(newTotal),
+    weeklyPoints: weeklyBase + DAILY_BONUS,
+    weekStart,
+    lastDailyBonus: today,
+  };
+  savePoints(updated);
+  return { claimed: true, amount: DAILY_BONUS };
 }
 
 export function getPoints(studentId: string): PointsRecord | null {
