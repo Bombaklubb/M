@@ -4,6 +4,7 @@ import Achievements from './Achievements';
 import StudentResults from './StudentResults';
 import AvatarPicker from './AvatarPicker';
 import CollectionView from './CollectionView';
+import EffectOverlay from './EffectOverlay';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS } from '../data/avatars';
 import { GRADE_LABELS } from '../types';
@@ -47,8 +48,15 @@ export default function MinSidaView() {
       };
 
   return (
-    <div className="min-h-screen" style={bgStyle}>
+    <div className={`min-h-screen${equippedBg?.animated ? ' shop-theme-animated' : ''}`} style={bgStyle}>
       <AppHeader />
+
+      {/* Equipad effekt – animerade partiklar över hela profilen */}
+      {shop.equippedEffect && (
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <EffectOverlay effectId={shop.equippedEffect} />
+        </div>
+      )}
 
       {/* Stars */}
       {Array.from({ length: 24 }, (_, i) => (
@@ -72,7 +80,7 @@ export default function MinSidaView() {
           >
             <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center
               group-hover:bg-white/20 group-hover:scale-105 transition-all ring-2 ring-white/20 group-hover:ring-amber-400">
-              <FramedAvatar emoji={avatarEmoji} frameId={shop.equippedFrame} effectId={shop.equippedEffect} size={shop.equippedFrame ? 56 : 44} />
+              <FramedAvatar emoji={avatarEmoji} frameId={shop.equippedFrame} size={shop.equippedFrame ? 56 : 44} />
             </div>
             <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-amber-400 rounded-full flex items-center justify-center
               text-xs opacity-0 group-hover:opacity-100 transition-opacity shadow-md">
