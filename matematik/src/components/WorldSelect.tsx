@@ -3,10 +3,12 @@ import { WORLDS } from '../data/worlds';
 import { TOPICS } from '../data/topics';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
-import { getEquippedFrame, getWalletBalance } from '../utils/shopStorage';
+import { getEquippedFrame, getWalletBalance, getEquippedBackground, getEquippedEffect } from '../utils/shopStorage';
+import { BACKGROUND_MAP } from '../data/shop';
 import { ALL_AVATARS } from '../data/avatars';
 import { BorderBeam } from './magicui/border-beam';
 import FramedAvatar from './FramedAvatar';
+import EffectOverlay from './EffectOverlay';
 
 export default function WorldSelect() {
   const { currentStudent, logout, setView, dailyBonus, clearDailyBonus } = useApp();
@@ -23,16 +25,31 @@ export default function WorldSelect() {
     ? loadGamification(currentStudent.id).chests.filter(c => !c.opened).length
     : 0;
 
-  return (
-    <div
-      className="min-h-screen relative overflow-x-hidden"
-      style={{
+  // Valt tema (bakgrund) – annars startsidans standardbild.
+  const equippedBgId = currentStudent ? getEquippedBackground(currentStudent.id) : null;
+  const equippedBg = equippedBgId ? BACKGROUND_MAP[equippedBgId] : null;
+  const equippedEffect = currentStudent ? getEquippedEffect(currentStudent.id) : null;
+  const bgStyle = equippedBg
+    ? { background: equippedBg.css }
+    : {
         backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
-      }}
+      };
+
+  return (
+    <div
+      className={`min-h-screen relative overflow-x-hidden${equippedBg?.animated ? ' shop-theme-animated' : ''}`}
+      style={bgStyle}
     >
+      {/* Equipad effekt – animerade partiklar över hela startsidan */}
+      {equippedEffect && (
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <EffectOverlay effectId={equippedEffect} />
+        </div>
+      )}
+
       {/* Top bar – real clickable buttons */}
       <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
 

@@ -308,6 +308,25 @@ export default function ShopView() {
     return SHOP_BACKGROUNDS.map(backgroundCard);
   }
 
+  // "Standardtema" – återställer startsidans/profilen ursprungsbild (inget tema).
+  function standardThemeCard() {
+    const equipped = shop!.equippedBackground === null;
+    const preview = (
+      <div className="w-full h-16 rounded-xl border border-black/10"
+        style={{ backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+    );
+    return (
+      <ItemCard
+        key="bg-standard"
+        preview={preview}
+        name="Standardtema" rarity="common" price={0}
+        owned equipped={equipped} affordable={false}
+        onBuy={() => {}}
+        onEquip={() => { equipItem(sid, 'background', null); refresh(); showToast('Standardtema valt'); }}
+      />
+    );
+  }
+
   function renderEffects() {
     return SHOP_EFFECTS.map(effectCard);
   }
@@ -344,7 +363,7 @@ export default function ShopView() {
       <div className="space-y-6">
         {section('Avatarer', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
         {section('Ramar', ownedFrames.map(frameCard))}
-        {section('Teman', ownedBackgrounds.map(backgroundCard))}
+        {section('Teman', [standardThemeCard(), ...ownedBackgrounds.map(backgroundCard)])}
         {section('Effekter', ownedEffects.map(effectCard))}
         {section('Titlar', ownedTitles.map(titleCard))}
       </div>
