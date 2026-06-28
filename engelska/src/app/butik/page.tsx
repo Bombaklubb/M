@@ -8,7 +8,7 @@ import EffectOverlay from "@/components/ui/EffectOverlay";
 import { loadStudent, setAvatar } from "@/lib/storage";
 import { getAvatar } from "@/lib/avatars";
 import {
-  SHOP_AVATARS, SHOP_FRAMES, SHOP_THEMES, SHOP_EFFECTS,
+  SHOP_AVATARS, SHOP_FRAMES, SHOP_THEMES, SHOP_EFFECTS, THEME_MAP,
   RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER,
   type Rarity, type ShopAvatar, type ShopFrame, type ShopTheme, type ShopEffect,
 } from "@/lib/shop";
@@ -349,9 +349,19 @@ export default function ButikPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header student={student} />
 
-      {/* Hero med plånbok */}
-      <div className="bg-gradient-to-br from-en-600 to-en-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 py-6">
+      {/* Hero med plånbok – visar aktivt tema + effekt */}
+      {(() => {
+      const heroTheme = shop.equippedTheme ? THEME_MAP[shop.equippedTheme] : null;
+      return (
+      <div
+        className={`relative overflow-hidden text-white ${
+          heroTheme ? (heroTheme.animated ? "shop-theme-animated" : "") : "bg-gradient-to-br from-en-600 to-en-800"
+        }`}
+        style={heroTheme ? { background: heroTheme.css } : undefined}
+      >
+        {heroTheme && <div className="absolute inset-0 bg-black/40" aria-hidden="true" />}
+        <EffectOverlay effectId={shop.equippedEffect} />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-3">
               <span className="text-4xl">🛒</span>
@@ -367,6 +377,8 @@ export default function ButikPage() {
           </div>
         </div>
       </div>
+      );
+      })()}
 
       <main className="max-w-4xl mx-auto px-4 py-5">
         {/* Flikar */}
