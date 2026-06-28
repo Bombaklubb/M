@@ -45,6 +45,13 @@ export function saveShop(studentName: string, data: ShopData): void {
   localStorage.setItem(key(studentName), JSON.stringify(data));
 }
 
+/** Signalerar att tema/effekt ändrats så global bakgrund kan uppdateras direkt. */
+function notifyCosmeticsChange(): void {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event("engelskajakten:cosmetics"));
+  }
+}
+
 /** Spenderbart saldo = livstidspoäng − redan spenderat. */
 export function getWalletBalance(studentName: string): number {
   const total = loadStudent()?.totalPoints ?? 0;
@@ -107,6 +114,7 @@ export function equipTheme(studentName: string, id: string | null): ShopData {
   const shop = loadShop(studentName);
   const updated = { ...shop, equippedTheme: id };
   saveShop(studentName, updated);
+  notifyCosmeticsChange();
   return updated;
 }
 
@@ -119,6 +127,7 @@ export function equipEffect(studentName: string, id: string | null): ShopData {
   const shop = loadShop(studentName);
   const updated = { ...shop, equippedEffect: id };
   saveShop(studentName, updated);
+  notifyCosmeticsChange();
   return updated;
 }
 

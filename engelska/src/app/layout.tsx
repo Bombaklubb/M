@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import AnalyticsInit from "@/components/AnalyticsInit";
 import JakterMenu from "@/components/ui/JakterMenu";
+import ThemedBackdrop from "@/components/ui/ThemedBackdrop";
 
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="sv" suppressHydrationWarning>
       <body className="min-h-screen">
+        <ThemedBackdrop />
         <AnalyticsInit />
         {children}
         {/* Credits strip – full-width frosted bar at the bottom */}
