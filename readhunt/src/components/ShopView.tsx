@@ -3,21 +3,20 @@ import { loadUser, saveUser } from '../services/userService';
 import { AVATAR_OPTIONS, User } from '../types';
 import FramedAvatar from './FramedAvatar';
 import {
-  SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, SHOP_THEMES, AVATAR_GROUP_ORDER,
+  SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, AVATAR_GROUP_ORDER,
   RARITY_LABELS, RARITY_RING, type Rarity,
 } from '../data/shop';
 import {
-  loadShop, buyItem, equipFrame, equipEffect, equipTheme, getWalletBalance,
+  loadShop, buyItem, equipFrame, equipEffect, getWalletBalance,
   type ShopData, type ShopKind,
 } from '../utils/shopStorage';
 
-type Tab = 'avatar' | 'frame' | 'effect' | 'theme' | 'owned';
+type Tab = 'avatar' | 'frame' | 'effect' | 'owned';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'avatar', label: 'Avatarer', icon: '🦊' },
   { id: 'frame', label: 'Ramar', icon: '⭕' },
   { id: 'effect', label: 'Effekter', icon: '✨' },
-  { id: 'theme', label: 'Teman', icon: '🎨' },
   { id: 'owned', label: 'Mina köp', icon: '🎁' },
 ];
 
@@ -267,44 +266,12 @@ export default function ShopView({ onBack }: ShopViewProps) {
     return SHOP_EFFECTS.map(effectCard);
   }
 
-  // Tema-swatch (förhandsvisning)
-  function themeSwatch(swatch: string, size = 56) {
-    return (
-      <div
-        className="rounded-2xl"
-        style={{ width: size, height: size, background: swatch, border: '2px solid rgba(255,255,255,0.7)', boxShadow: '0 2px 10px rgba(0,0,0,0.15)' }}
-      />
-    );
-  }
-
-  // Tema-kort
-  function themeCard(t: typeof SHOP_THEMES[number]) {
-    const owned = shop.ownedThemes.includes(t.id);
-    const equipped = shop.equippedTheme === t.id;
-    return (
-      <ItemCard
-        key={`th-${t.id}`}
-        preview={themeSwatch(t.swatch)}
-        name={t.name} rarity={t.rarity} price={t.price}
-        owned={owned} equipped={equipped} affordable={balance >= t.price}
-        onBuy={() => setConfirm({ kind: 'theme', key: t.id, price: t.price, name: t.name,
-          preview: themeSwatch(t.swatch, 72) })}
-        onEquip={() => { equipTheme(equipped ? null : t.id); refresh(); showToast(equipped ? 'Tema borttaget' : `${t.name} på!`); }}
-      />
-    );
-  }
-
-  function renderThemes() {
-    return SHOP_THEMES.map(themeCard);
-  }
-
   // "Mina köp"
   function renderOwned() {
     const ownedAvatars = SHOP_AVATARS.map((a, i) => ({ a, i })).filter(({ i }) => shop.ownedAvatars.includes(i));
     const ownedFrames = SHOP_FRAMES.filter(f => shop.ownedFrames.includes(f.id));
     const ownedEffects = SHOP_EFFECTS.filter(e => shop.ownedEffects.includes(e.id));
-    const ownedThemes = SHOP_THEMES.filter(t => shop.ownedThemes.includes(t.id));
-    const total = ownedAvatars.length + ownedFrames.length + ownedEffects.length + ownedThemes.length;
+    const total = ownedAvatars.length + ownedFrames.length + ownedEffects.length;
 
     if (total === 0) {
       return (
@@ -328,7 +295,6 @@ export default function ShopView({ onBack }: ShopViewProps) {
         {section('Avatarer', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
         {section('Ramar', ownedFrames.map(frameCard))}
         {section('Effekter', ownedEffects.map(effectCard))}
-        {section('Teman', ownedThemes.map(themeCard))}
       </div>
     );
   }
@@ -393,10 +359,6 @@ export default function ShopView({ onBack }: ShopViewProps) {
         ) : tab === 'effect' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
             {renderEffects()}
-          </div>
-        ) : tab === 'theme' ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
-            {renderThemes()}
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
