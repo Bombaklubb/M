@@ -9,9 +9,11 @@ export interface ThemeVisual {
 
 const THEME_VISUALS: Record<string, ThemeVisual> = {
   animals: { emoji: '🐾', gradient: 'from-amber-400 to-orange-500', label: 'Animals' },
+  art: { emoji: '🖼️', gradient: 'from-rose-400 to-fuchsia-500', label: 'Art' },
   community: { emoji: '🤝', gradient: 'from-sky-400 to-blue-500', label: 'Community' },
   culture: { emoji: '🎨', gradient: 'from-fuchsia-400 to-pink-500', label: 'Culture' },
   environment: { emoji: '🌿', gradient: 'from-emerald-400 to-teal-500', label: 'Environment' },
+  'everyday life': { emoji: '🌟', gradient: 'from-amber-400 to-yellow-500', label: 'Everyday life' },
   family: { emoji: '👨‍👩‍👧', gradient: 'from-rose-400 to-pink-500', label: 'Family' },
   'food-science': { emoji: '🍫', gradient: 'from-amber-500 to-yellow-600', label: 'Food science' },
   friendship: { emoji: '😊', gradient: 'from-orange-400 to-rose-500', label: 'Friendship' },
@@ -20,6 +22,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   literature: { emoji: '📚', gradient: 'from-indigo-400 to-violet-500', label: 'Literature' },
   music: { emoji: '🎵', gradient: 'from-violet-400 to-purple-500', label: 'Music' },
   nature: { emoji: '🏕️', gradient: 'from-green-400 to-emerald-500', label: 'Nature' },
+  psychology: { emoji: '🧠', gradient: 'from-purple-400 to-indigo-500', label: 'Psychology' },
   science: { emoji: '🔬', gradient: 'from-cyan-400 to-blue-500', label: 'Science' },
   society: { emoji: '🏙️', gradient: 'from-slate-400 to-slate-600', label: 'Society' },
   sports: { emoji: '⚽', gradient: 'from-blue-400 to-indigo-500', label: 'Sports' },
