@@ -3,9 +3,10 @@ import AppHeader from './AppHeader';
 import FramedAvatar from './FramedAvatar';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS, shopAvatarGlobalIndex } from '../data/avatars';
+import EffectOverlay from './EffectOverlay';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_TITLES, SHOP_BACKGROUNDS, SHOP_EFFECTS,
-  RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity,
+  RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity, type ShopBackground,
 } from '../data/shop';
 import {
   loadShop, buyItem, equipItem, getWalletBalance,
@@ -21,6 +22,24 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'effect', label: 'Effekter', icon: '✨' },
   { id: 'owned',  label: 'Mina köp', icon: '🎁' },
 ];
+
+// ─── Förhandsvisningar för tema/effekt ──────────────────────────────────────────
+function ThemeSwatch({ theme, className = 'w-full h-16' }: { theme: ShopBackground; className?: string }) {
+  return (
+    <div
+      className={`${className} rounded-xl border border-black/10 ${theme.animated ? 'shop-theme-animated' : ''}`}
+      style={{ background: theme.css }}
+    />
+  );
+}
+
+function EffectSwatch({ effectId, className = 'w-full h-16' }: { effectId: string; className?: string }) {
+  return (
+    <div className={`relative ${className} rounded-xl overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900`}>
+      <EffectOverlay effectId={effectId} />
+    </div>
+  );
+}
 
 // ─── Sällsynthetschip ────────────────────────────────────────────────────────────
 function RarityChip({ rarity }: { rarity: Rarity }) {
@@ -252,17 +271,14 @@ export default function ShopView() {
   function backgroundCard(b: typeof SHOP_BACKGROUNDS[number]) {
     const owned = shop!.ownedBackgrounds.includes(b.id);
     const equipped = shop!.equippedBackground === b.id;
-    const swatch = (
-      <div className="w-20 h-14 rounded-xl" style={{ background: b.css, border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }} />
-    );
     return (
       <ItemCard
         key={`bg-${b.id}`}
-        preview={swatch}
+        preview={<ThemeSwatch theme={b} />}
         name={b.name} rarity={b.rarity} price={b.price}
         owned={owned} equipped={equipped} affordable={balance >= b.price}
         onBuy={() => setConfirm({ kind: 'background', key: b.id, price: b.price, name: b.name,
-          preview: <div className="w-24 h-16 rounded-xl" style={{ background: b.css, border: '1px solid rgba(255,255,255,0.5)', boxShadow: '0 2px 8px rgba(0,0,0,0.2)' }} /> })}
+          preview: <ThemeSwatch theme={b} className="w-44 h-24" /> })}
         onEquip={() => { equipItem(sid, 'background', equipped ? null : b.id); refresh(); showToast(equipped ? 'Tema borttaget' : `Tema: ${b.name}`); }}
       />
     );
@@ -274,11 +290,11 @@ export default function ShopView() {
     return (
       <ItemCard
         key={`fx-${e.id}`}
-        preview={<FramedAvatar emoji={currentEmoji} effectId={e.id} size={52} />}
+        preview={<EffectSwatch effectId={e.id} />}
         name={e.name} rarity={e.rarity} price={e.price}
         owned={owned} equipped={equipped} affordable={balance >= e.price}
         onBuy={() => setConfirm({ kind: 'effect', key: e.id, price: e.price, name: e.name,
-          preview: <FramedAvatar emoji={currentEmoji} effectId={e.id} size={68} /> })}
+          preview: <EffectSwatch effectId={e.id} className="w-44 h-24" /> })}
         onEquip={() => { equipItem(sid, 'effect', equipped ? null : e.id); refresh(); showToast(equipped ? 'Effekt borttagen' : `Effekt: ${e.name}`); }}
       />
     );

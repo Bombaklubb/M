@@ -242,83 +242,95 @@ export const TITLE_MAP: Record<string, ShopTitle> = Object.fromEntries(
   SHOP_TITLES.map(t => [t.id, t])
 );
 
-// ─── Profilbakgrunder ────────────────────────────────────────────────────────────
-// Färgrika men mörka nog att vit text alltid syns (med lätt scrim ovanpå).
+// ─── Teman (profilbakgrunder med mönster) ──────────────────────────────────────
+// `css` är ett komplett CSS background-värde. animated === true ⇒ bakgrunden
+// glider långsamt (klassen .shop-theme-animated sätter background-size + animation).
 export interface ShopBackground {
   id: string;
   name: string;
   rarity: Rarity;
   price: number;
   css: string; // CSS background-värde
+  animated?: boolean;
 }
 
 export const SHOP_BACKGROUNDS: ShopBackground[] = [
-  // ── Enfärgade toningar (ursprungliga) ─────────────────────────────────────────
+  // ── Enfärgade toningar ────────────────────────────────────────────────────────
   { id: 'sunrise',    name: 'Soluppgång',  rarity: 'common', price: 350,
     css: 'linear-gradient(160deg,#7c2d12,#c2410c,#ea580c)' },
   { id: 'sea',        name: 'Djuphav',     rarity: 'common', price: 350,
     css: 'linear-gradient(160deg,#0c4a6e,#0369a1,#0891b2)' },
   { id: 'forest',     name: 'Skog',        rarity: 'rare', price: 900,
     css: 'linear-gradient(160deg,#14532d,#15803d,#16a34a)' },
-  { id: 'lavender',   name: 'Lavendel',    rarity: 'rare', price: 900,
-    css: 'linear-gradient(160deg,#4c1d95,#6d28d9,#7c3aed)' },
-  { id: 'galaxy',     name: 'Galax',       rarity: 'epic', price: 2200,
-    css: 'linear-gradient(160deg,#1e1b4b,#4c1d95,#312e81)' },
-  { id: 'aurora',     name: 'Norrsken',    rarity: 'epic', price: 2200,
-    css: 'linear-gradient(160deg,#042f2e,#065f46,#1e3a8a)' },
-  { id: 'rainbow-bg', name: 'Regnbåge',    rarity: 'legendary', price: 4500,
-    css: 'linear-gradient(160deg,#be123c,#b45309,#15803d,#1d4ed8,#6d28d9)' },
   { id: 'gold-bg',    name: 'Guldskimmer', rarity: 'legendary', price: 4500,
     css: 'linear-gradient(160deg,#78350f,#b45309,#f59e0b)' },
 
-  // ── Mönstrade teman (sticker ut) ──────────────────────────────────────────────
-  // Alla har ett mörkt "scrim"-lager överst så vit text alltid syns över mönstret.
-  { id: 'tiger',     name: 'Tiger',       rarity: 'epic', price: 2200,
-    css: 'linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.30)), repeating-linear-gradient(110deg,#ea580c 0 22px,#1c1917 22px 36px)' },
-  { id: 'zebra',     name: 'Zebra',       rarity: 'rare', price: 900,
-    css: 'linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), repeating-linear-gradient(100deg,#0a0a0a 0 20px,#fafaf9 20px 38px)' },
-  { id: 'leopard',   name: 'Leopard',     rarity: 'epic', price: 2200,
-    css: 'linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), radial-gradient(#451a03 22%,transparent 24%) 0 0/32px 32px, radial-gradient(#451a03 22%,transparent 24%) 16px 16px/32px 32px, linear-gradient(#b45309,#a16207)' },
-  { id: 'rainbow-stripes', name: 'Regnbågsränder', rarity: 'legendary', price: 4500,
-    css: 'linear-gradient(rgba(0,0,0,0.32),rgba(0,0,0,0.32)), repeating-linear-gradient(60deg,#dc2626 0 24px,#ea580c 24px 48px,#facc15 48px 72px,#16a34a 72px 96px,#2563eb 96px 120px,#7c3aed 120px 144px)' },
-  { id: 'checker',   name: 'Rutmönster',  rarity: 'rare', price: 900,
-    css: 'linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.30)), repeating-conic-gradient(#1e293b 0 25%,#334155 0 50%) 0 0/44px 44px' },
-  { id: 'polka',     name: 'Prickar',     rarity: 'rare', price: 900,
-    css: 'linear-gradient(rgba(0,0,0,0.22),rgba(0,0,0,0.22)), radial-gradient(#fbbf24 20%,transparent 22%) 0 0/28px 28px, linear-gradient(#7c2d12,#9a3412)' },
-  { id: 'starry',    name: 'Stjärnhimmel', rarity: 'epic', price: 2200,
-    css: 'radial-gradient(#ffffff 9%,transparent 10%) 0 0/26px 26px, radial-gradient(#ffffff 9%,transparent 10%) 13px 13px/26px 26px, linear-gradient(160deg,#0f172a,#1e1b4b)' },
-  { id: 'camo',      name: 'Kamouflage',  rarity: 'rare', price: 900,
-    css: 'linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), radial-gradient(#3f6212 30%,transparent 32%) 0 0/50px 50px, radial-gradient(#1a2e05 30%,transparent 32%) 25px 25px/50px 50px, linear-gradient(#4d7c0f,#365314)' },
+  // ── Mönster ───────────────────────────────────────────────────────────────────
+  { id: 'th-zebra',   name: 'Zebra',        rarity: 'rare', price: 600,
+    css: 'repeating-linear-gradient(48deg,#111827 0 20px,#f9fafb 20px 40px)' },
+  { id: 'th-tiger',   name: 'Tiger',        rarity: 'rare', price: 600,
+    css: 'repeating-linear-gradient(75deg,#1c1917 0 9px,#ea580c 9px 42px)' },
+  { id: 'th-cow',     name: 'Ko-fläckar',   rarity: 'rare', price: 600,
+    css: 'radial-gradient(circle,#111827 32%,transparent 34%) 0 0/90px 90px,radial-gradient(circle,#111827 32%,transparent 34%) 45px 45px/90px 90px,#f9fafb' },
+  { id: 'th-leopard', name: 'Leopard',      rarity: 'epic', price: 1400,
+    css: 'radial-gradient(circle,#78350f 20%,transparent 22%) 0 0/52px 52px,radial-gradient(circle,#78350f 20%,transparent 22%) 26px 26px/52px 52px,linear-gradient(160deg,#f59e0b,#d97706)' },
+  { id: 'th-giraffe', name: 'Giraff',       rarity: 'epic', price: 1400,
+    css: 'radial-gradient(circle,#92400e 38%,transparent 40%) 0 0/70px 70px,radial-gradient(circle,#92400e 38%,transparent 40%) 35px 35px/70px 70px,#fcd34d' },
+
+  // ── Färg & form ─────────────────────────────────────────────────────────────
+  { id: 'th-dots',    name: 'Prickar',      rarity: 'common', price: 350,
+    css: 'radial-gradient(circle,#ffffff 22%,transparent 24%) 0 0/30px 30px,linear-gradient(160deg,#2563eb,#1e40af)' },
+  { id: 'th-checker', name: 'Schackrutor',  rarity: 'common', price: 350,
+    css: 'conic-gradient(#1f2937 90deg,#374151 90deg 180deg,#1f2937 180deg 270deg,#374151 270deg) 0 0/54px 54px' },
+  { id: 'th-camo',    name: 'Kamouflage',   rarity: 'rare', price: 700,
+    css: 'radial-gradient(circle at 20% 30%,#3f6212 0 34px,transparent 36px),radial-gradient(circle at 72% 62%,#1a2e05 0 42px,transparent 44px),radial-gradient(circle at 50% 92%,#4d7c0f 0 32px,transparent 34px),#65a30d' },
+  { id: 'th-disco',   name: 'Disco',        rarity: 'epic', price: 1400,
+    css: 'repeating-linear-gradient(45deg,#ec4899 0 22px,#8b5cf6 22px 44px,#3b82f6 44px 66px,#22c55e 66px 88px)' },
+  { id: 'th-bubbles', name: 'Bubbelhav',    rarity: 'rare', price: 700,
+    css: 'radial-gradient(circle at 28% 82%,rgba(255,255,255,0.35) 0 12px,transparent 14px),radial-gradient(circle at 68% 40%,rgba(255,255,255,0.28) 0 20px,transparent 22px),radial-gradient(circle at 85% 78%,rgba(255,255,255,0.3) 0 9px,transparent 11px),linear-gradient(160deg,#0369a1,#0891b2)' },
+
+  // ── Regnbåge & galax ────────────────────────────────────────────────────────
+  { id: 'th-rainbow', name: 'Regnbåge',     rarity: 'epic', price: 1600,
+    css: 'linear-gradient(135deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6)' },
+  { id: 'th-galaxy',  name: 'Galax',        rarity: 'epic', price: 1600,
+    css: 'radial-gradient(circle,#ffffff 1px,transparent 2px) 0 0/42px 42px,radial-gradient(circle,#ffffff 1px,transparent 2px) 21px 21px/64px 64px,linear-gradient(160deg,#1e1b4b,#4c1d95,#312e81)' },
+
+  // ── Animerade (legendariska) ──────────────────────────────────────────────────
+  { id: 'th-rainbow-flow', name: 'Regnbågsvirvel', rarity: 'legendary', price: 3500, animated: true,
+    css: 'linear-gradient(60deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ef4444)' },
+  { id: 'th-aurora', name: 'Norrsken',      rarity: 'legendary', price: 3500, animated: true,
+    css: 'linear-gradient(120deg,#042f2e,#065f46,#1e3a8a,#4c1d95,#065f46)' },
 ];
 
 export const BACKGROUND_MAP: Record<string, ShopBackground> = Object.fromEntries(
   SHOP_BACKGROUNDS.map(b => [b.id, b])
 );
 
-// ─── Effekter (partiklar runt avataren) ──────────────────────────────────────────
-// Rent kosmetiska små emoji-partiklar som svävar runt avataren (visas på Min sida).
+// ─── Effekter (animerade partiklar på profilen) ─────────────────────────────────
+export type EffectMotion = 'fall' | 'rise' | 'twinkle';
+
 export interface ShopEffect {
   id: string;
   name: string;
   rarity: Rarity;
   price: number;
-  particle: string;  // emoji som svävar runt avataren
+  emoji: string;
+  motion: EffectMotion;
+  count: number;
 }
 
 export const SHOP_EFFECTS: ShopEffect[] = [
-  { id: 'stars',    name: 'Glittrande stjärnor', rarity: 'common', price: 150, particle: '✨' },
-  { id: 'snow',     name: 'Snöflingor',          rarity: 'common', price: 150, particle: '❄️' },
-  { id: 'hearts',   name: 'Hjärtan',             rarity: 'common', price: 150, particle: '💖' },
-  { id: 'bubbles',  name: 'Bubblor',             rarity: 'common', price: 150, particle: '🫧' },
-  { id: 'leaves',   name: 'Höstlöv',             rarity: 'common', price: 150, particle: '🍂' },
-  { id: 'bolts',    name: 'Blixtar',             rarity: 'rare', price: 400, particle: '⚡' },
-  { id: 'flames',   name: 'Eldlågor',            rarity: 'rare', price: 400, particle: '🔥' },
-  { id: 'rainbow',  name: 'Regnbåge',            rarity: 'rare', price: 400, particle: '🌈' },
-  { id: 'confetti', name: 'Konfetti',            rarity: 'rare', price: 400, particle: '🎉' },
-  { id: 'clover',   name: 'Tur',                 rarity: 'rare', price: 400, particle: '🍀' },
-  { id: 'crown',    name: 'Kunglig glans',       rarity: 'epic', price: 1000, particle: '👑' },
-  { id: 'galaxy-fx', name: 'Rymdstoft',          rarity: 'epic', price: 1000, particle: '🪐' },
-  { id: 'comet',    name: 'Stjärnregn',          rarity: 'legendary', price: 2500, particle: '🌟' },
+  { id: 'fx-snow',    name: 'Snöfall',       rarity: 'common', price: 100, emoji: '❄️', motion: 'fall',   count: 16 },
+  { id: 'fx-rain',    name: 'Regn',          rarity: 'common', price: 100, emoji: '💧', motion: 'fall',   count: 18 },
+  { id: 'fx-bubbles', name: 'Bubblor',       rarity: 'common', price: 100, emoji: '🫧', motion: 'rise',   count: 14 },
+  { id: 'fx-confetti',name: 'Konfetti',      rarity: 'rare', price: 700, emoji: '🎊', motion: 'fall',   count: 18 },
+  { id: 'fx-hearts',  name: 'Hjärtan',       rarity: 'rare', price: 700, emoji: '💕', motion: 'rise',   count: 14 },
+  { id: 'fx-sparkle', name: 'Stjärnglitter', rarity: 'rare', price: 800, emoji: '✨', motion: 'twinkle', count: 16 },
+  { id: 'fx-leaves',  name: 'Höstlöv',       rarity: 'rare', price: 800, emoji: '🍂', motion: 'fall',   count: 14 },
+  { id: 'fx-petals',  name: 'Körsbärsblom',  rarity: 'rare', price: 800, emoji: '🌸', motion: 'fall',   count: 14 },
+  { id: 'fx-fire',    name: 'Gnistor',       rarity: 'epic', price: 1600, emoji: '🔥', motion: 'rise',   count: 14 },
+  { id: 'fx-stars',   name: 'Stjärnstoft',   rarity: 'epic', price: 1600, emoji: '🌟', motion: 'twinkle', count: 16 },
+  { id: 'fx-shooting',name: 'Stjärnfall',    rarity: 'legendary', price: 3000, emoji: '🌠', motion: 'fall', count: 12 },
 ];
 
 export const EFFECT_MAP: Record<string, ShopEffect> = Object.fromEntries(
