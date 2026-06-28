@@ -2,9 +2,10 @@ import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getPoints, initPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
-import { getEquippedFrame, getWalletBalance } from '../utils/shopStorage';
+import { getEquippedFrame, getWalletBalance, getEquippedEffect } from '../utils/shopStorage';
 import { ALL_AVATARS } from '../data/avatars';
 import FramedAvatar from './FramedAvatar';
+import EffectOverlay from './EffectOverlay';
 
 export default function AppHeader() {
   const { currentStudent, setView, logout } = useApp();
@@ -18,6 +19,7 @@ export default function AppHeader() {
     : null;
 
   const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
+  const equippedEffect = currentStudent ? getEquippedEffect(currentStudent.id) : null;
 
   // Visar plånbokssaldot (livstidspoäng − spenderat i butiken), inte livstidstotalen.
   const walletBalance = currentStudent ? getWalletBalance(currentStudent.id) : 0;
@@ -102,14 +104,17 @@ export default function AppHeader() {
             {/* Avatar + namn */}
             <button
               onClick={() => setView('my-page')}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full transition-all hover:scale-105"
+              className="relative overflow-hidden flex items-center rounded-full transition-all hover:scale-105"
               style={{
                 background: 'rgba(255, 255, 255, 0.85)',
                 border: '1px solid rgba(251, 146, 60, 0.35)',
               }}
             >
-              <FramedAvatar emoji={avatarEmoji ?? ''} frameId={equippedFrame} size={equippedFrame ? 26 : 20} />
-              <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
+              <EffectOverlay effectId={equippedEffect} />
+              <span className="relative z-10 flex items-center gap-2 px-3 py-1.5">
+                <FramedAvatar emoji={avatarEmoji ?? ''} frameId={equippedFrame} size={equippedFrame ? 26 : 20} />
+                <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
+              </span>
             </button>
 
             {/* Logga ut */}
