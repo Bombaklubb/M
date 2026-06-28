@@ -1,5 +1,6 @@
 // Theme visuals: emoji + gradient used for image fallback banners and accents.
 // Keys match the `theme` field in library.json (English, lowercase).
+// (Banners audited 2026-06: art/psychology/everyday-life added; mismatches fixed.)
 
 export interface ThemeVisual {
   emoji: string;
