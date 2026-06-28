@@ -51,13 +51,6 @@ export default function MinSidaView() {
     <div className={`min-h-screen${equippedBg?.animated ? ' shop-theme-animated' : ''}`} style={bgStyle}>
       <AppHeader />
 
-      {/* Equipad effekt – animerade partiklar över hela profilen */}
-      {shop.equippedEffect && (
-        <div className="fixed inset-0 pointer-events-none z-0">
-          <EffectOverlay effectId={shop.equippedEffect} />
-        </div>
-      )}
-
       {/* Stars */}
       {Array.from({ length: 24 }, (_, i) => (
         <div key={i} className="fixed rounded-full bg-white pointer-events-none"
@@ -72,7 +65,11 @@ export default function MinSidaView() {
       <div className="relative pt-14 max-w-lg mx-auto px-4">
 
         {/* Profile card */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-5 mt-4 mb-4 flex items-center gap-4">
+        <div className="relative overflow-hidden bg-white/10 backdrop-blur-sm rounded-3xl p-5 mt-4 mb-4">
+          {/* Equipad effekt – animerade partiklar vid namnet */}
+          <EffectOverlay effectId={shop.equippedEffect} />
+
+          <div className="relative z-10 flex items-center gap-4">
           <button
             onClick={() => setShowAvatarPicker(true)}
             className="relative group flex-shrink-0"
@@ -106,6 +103,7 @@ export default function MinSidaView() {
           >
             🛒 Affär
           </button>
+          </div>
         </div>
 
         {/* Tabs */}
