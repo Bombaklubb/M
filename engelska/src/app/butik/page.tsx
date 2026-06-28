@@ -152,6 +152,41 @@ function ItemCard({
   );
 }
 
+// ─── Standard-/återställningskort (gratis, alltid tillgängligt) ──────────────
+function DefaultCard({
+  preview, label, active, onUse,
+}: {
+  preview: ReactNode; label: string; active: boolean; onUse: () => void;
+}) {
+  return (
+    <div
+      className={`flex flex-col rounded-2xl p-3 bg-white dark:bg-gray-800 transition-all ${
+        active ? "border-3 border-emerald-400" : "border-3 border-en-100 dark:border-gray-700"
+      }`}
+    >
+      <div className="flex items-center justify-center h-20 mb-2">{preview}</div>
+      <div className="flex items-center justify-between gap-1 mb-1">
+        <span className="text-sm font-black text-gray-800 dark:text-gray-100 truncate">{label}</span>
+      </div>
+      <div className="text-xs font-bold mb-2.5 text-gray-400 dark:text-gray-500">Gratis</div>
+      <button
+        onClick={onUse}
+        disabled={active}
+        className={`w-full py-2 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer disabled:cursor-default ${
+          active
+            ? "text-white bg-gradient-to-b from-emerald-500 to-emerald-600"
+            : "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700"
+        }`}
+      >
+        {active ? "Används ✓" : "Återställ"}
+      </button>
+    </div>
+  );
+}
+
+// Ursprunglig startsidebakgrund (samma gradient som i globals.css).
+const DEFAULT_BG = "linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 28%,#9f1239 62%,#dc2626 100%)";
+
 export default function ButikPage() {
   const [student, setStudent] = useState<StudentData | null>(null);
   const [shop, setShop] = useState<ShopData | null>(null);
@@ -409,10 +444,30 @@ export default function ButikPage() {
           </div>
         ) : tab === "theme" ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
+            <DefaultCard
+              label="Standard"
+              active={!shop.equippedTheme}
+              preview={<div className="w-full h-16 rounded-xl border border-black/10" style={{ background: DEFAULT_BG }} />}
+              onUse={() => {
+                const updated = equipTheme(student.name, null);
+                setShop(updated);
+                showToast("Standardbakgrunden återställd");
+              }}
+            />
             {SHOP_THEMES.map(themeCard)}
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
+            <DefaultCard
+              label="Ingen effekt"
+              active={!shop.equippedEffect}
+              preview={<div className="w-full h-16 rounded-xl border border-black/10 bg-gradient-to-br from-gray-700 to-gray-900" />}
+              onUse={() => {
+                const updated = equipEffect(student.name, null);
+                setShop(updated);
+                showToast("Effekten borttagen");
+              }}
+            />
             {SHOP_EFFECTS.map(effectCard)}
           </div>
         )}
