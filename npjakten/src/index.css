@@ -46,4 +46,10 @@ body {
   .print-page-break {
     page-break-before: always;
   }
+
+  /* Facit-utskrift: dölj elevhäftena och skriv bara ut facit-arket.
+     !important krävs eftersom .paper-regeln ovan annars vinner. */
+  .print-facit .paper:not(.facit-sheet) {
+    display: none !important;
+  }
 }
