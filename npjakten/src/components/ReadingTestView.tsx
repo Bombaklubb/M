@@ -1,23 +1,29 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Question, ReadingTest } from "../types";
 import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
+import StrategyTips from "./StrategyTips";
+import FacitSheet from "./FacitSheet";
+import { saveTestResult } from "../lib/results";
 
 interface Props {
   test: ReadingTest;
+  gradeId: string;
   gradeLabel: string;
   onBack: () => void;
 }
 
 const LETTERS = ["A", "B", "C", "D"];
 
-export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
+export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: Props) {
   const [mcAnswers, setMcAnswers] = useState<Record<number, number>>({});
   const [openAnswers, setOpenAnswers] = useState<Record<number, string>>({});
   // ordningsuppgift: valt nummer (1–4) per mening, per uppgift
   const [orderAnswers, setOrderAnswers] = useState<Record<number, Record<number, number>>>({});
   const [selfPoints, setSelfPoints] = useState<Record<number, number>>({});
   const [reviewing, setReviewing] = useState(false);
+  // Facit-utskrift: döljer elevhäftena och skriver ut FacitSheet i stället
+  const [facitMode, setFacitMode] = useState(false);
   // På små skärmar visas texten och uppgifterna som flikar i stället
   // för under varandra, så att eleven slipper scrolla fram och tillbaka.
   const [mobileTab, setMobileTab] = useState<"text" | "questions">("text");
@@ -34,28 +40,67 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
     return (openAnswers[q.id] ?? "").trim().length > 0;
   }).length;
 
+  // Poäng för en enskild fråga vid rättning – används av både totalsumman
+  // och resultatsparningen.
+  const pointsFor = (q: Question): number => {
+    if (q.kind === "multiple-choice") {
+      return mcAnswers[q.id] === q.correctIndex ? q.maxPoints : 0;
+    }
+    if (q.kind === "ordering") {
+      const allRight = q.items.every(
+        (_, i) => orderAnswers[q.id]?.[i] === q.correctOrder[i]
+      );
+      return allRight ? q.maxPoints : 0;
+    }
+    return selfPoints[q.id] ?? 0;
+  };
+
   const score = useMemo(() => {
     if (!reviewing) return 0;
-    return test.questions.reduce((sum, q) => {
-      if (q.kind === "multiple-choice") {
-        return sum + (mcAnswers[q.id] === q.correctIndex ? q.maxPoints : 0);
-      }
-      if (q.kind === "ordering") {
-        const allRight = q.items.every(
-          (_, i) => orderAnswers[q.id]?.[i] === q.correctOrder[i]
-        );
-        return sum + (allRight ? q.maxPoints : 0);
-      }
-      return sum + (selfPoints[q.id] ?? 0);
-    }, 0);
+    return test.questions.reduce((sum, q) => sum + pointsFor(q), 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reviewing, test, mcAnswers, orderAnswers, selfPoints]);
 
   const allOpenScored = test.questions
     .filter((q) => q.kind === "open")
     .every((q) => selfPoints[q.id] !== undefined);
 
+  // Spara resultatet till statistiken när provet rättas, och uppdatera det
+  // varje gång eleven sätter poäng på en öppen fråga.
+  useEffect(() => {
+    if (!reviewing) return;
+    saveTestResult({
+      testId: test.id,
+      gradeId,
+      when: Date.now(),
+      perQuestion: test.questions.map((q) => ({
+        qid: q.id,
+        points: pointsFor(q),
+        maxPoints: q.maxPoints,
+        aspect: q.kind === "ordering" ? undefined : q.aspect,
+        category: q.kind === "multiple-choice" ? q.category : undefined,
+        scored: q.kind !== "open" || selfPoints[q.id] !== undefined,
+      })),
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [reviewing, selfPoints]);
+
+  // Facit-utskrift: skriv ut när läget aktiverats och återställ efteråt.
+  useEffect(() => {
+    if (!facitMode) return;
+    const off = () => setFacitMode(false);
+    window.addEventListener("afterprint", off);
+    window.print();
+    // afterprint är opålitligt i vissa mobila webbläsare
+    const timer = setTimeout(off, 1000);
+    return () => {
+      window.removeEventListener("afterprint", off);
+      clearTimeout(timer);
+    };
+  }, [facitMode]);
+
   return (
-    <div className="mx-auto max-w-3xl">
+    <div className={"mx-auto max-w-3xl" + (facitMode ? " print-facit" : "")}>
       <button
         onClick={onBack}
         className="no-print mb-4 text-sm font-medium text-np hover:underline"
@@ -66,6 +111,8 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
       <div className="no-print">
         <ExamTimer presets={[30, 45, 60]} />
       </div>
+
+      <StrategyTips />
 
       {/* Flikar på små skärmar: växla mellan text och uppgifter */}
       <div className="no-print sticky top-2 z-10 mb-4 grid grid-cols-2 gap-1 rounded-md bg-stone-200 p-1 shadow-page md:hidden">
@@ -99,13 +146,22 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
 
         <div className="mt-6 flex items-start justify-between gap-4">
           <h1 className="font-serif text-3xl font-bold">{test.title}</h1>
-          <button
-            onClick={() => window.print()}
-            title="Skriv ut texten och frågorna"
-            className="no-print mt-1 shrink-0 text-sm font-medium text-stone-400 transition hover:text-np hover:underline"
-          >
-            🖨 Skriv ut
-          </button>
+          <span className="no-print mt-1 flex shrink-0 flex-col items-end gap-1">
+            <button
+              onClick={() => window.print()}
+              title="Skriv ut texten och frågorna"
+              className="text-sm font-medium text-stone-400 transition hover:text-np hover:underline"
+            >
+              🖨 Skriv ut
+            </button>
+            <button
+              onClick={() => setFacitMode(true)}
+              title="Skriv ut facit och bedömningsmall (för läraren)"
+              className="text-xs font-medium text-stone-300 transition hover:text-np hover:underline"
+            >
+              Skriv ut facit
+            </button>
+          </span>
         </div>
 
         {test.image && (
@@ -240,6 +296,9 @@ export default function ReadingTestView({ test, gradeLabel, onBack }: Props) {
           </div>
         )}
       </div>
+
+      {/* Facit/bedömningsmall – syns bara vid facit-utskrift */}
+      {facitMode && <FacitSheet test={test} gradeLabel={gradeLabel} />}
     </div>
   );
 }

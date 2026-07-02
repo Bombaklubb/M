@@ -1,5 +1,6 @@
 import type { Grade, WritingTask } from "../types";
 import IllustrationImg from "./IllustrationImg";
+import StatsPanel from "./StatsPanel";
 
 const WRITING_LABELS: Record<WritingTask["textType"], string> = {
   berättelse: "Skriv en berättelse",
@@ -31,6 +32,8 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
           {grade.label}
         </p>
         <h1 className="mt-1 font-serif text-3xl font-bold">Välj delprov</h1>
+
+        <StatsPanel grade={grade} onOpenReading={onOpenReading} />
 
         <h2 className="mt-8 border-b-2 border-np pb-1 font-serif text-xl font-bold">
           Läsa – läsförståelse
