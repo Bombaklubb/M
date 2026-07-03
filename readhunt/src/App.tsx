@@ -27,7 +27,14 @@ import {
   startSession,
   trackTaskComplete,
 } from './services/analyticsService';
-import { getRandomText } from './services/libraryService';
+import { getRandomText, loadLibrary } from './services/libraryService';
+import {
+  getDailyText,
+  getStreak,
+  isDailyBonusClaimedToday,
+  claimDailyBonus,
+  DAILY_BONUS_POINTS,
+} from './lib/daily';
 import {
   loadGamification,
   saveGamification,
@@ -51,7 +58,13 @@ function App() {
   const [showTeacher, setShowTeacher] = useState(false);
   const [showKistor, setShowKistor] = useState(false);
   const [showShop, setShowShop] = useState(false);
+  const [dailyText, setDailyText] = useState<LibraryText | null>(null);
   const quizStartTime = useRef<number | null>(null);
+
+  // Dagens text (deterministisk per datum)
+  useEffect(() => {
+    loadLibrary().then((lib) => setDailyText(getDailyText(lib)));
+  }, []);
 
   // Ladda användare vid start
   useEffect(() => {
@@ -185,7 +198,7 @@ function App() {
       : undefined;
 
     // Registrera resultatet
-    const { updatedUser, pointsEarned, newBadges } = recordResult(
+    const result = recordResult(
       user,
       currentText.id,
       currentText.title,
@@ -197,6 +210,16 @@ function App() {
       questionResults,
       readingTimeSeconds
     );
+    let { updatedUser, pointsEarned } = result;
+    const { newBadges } = result;
+
+    // Bonus för dagens text (kan bara hämtas en gång per dag)
+    if (dailyText && currentText.id === dailyText.id && !isDailyBonusClaimedToday()) {
+      claimDailyBonus();
+      updatedUser = { ...updatedUser, totalPoints: updatedUser.totalPoints + DAILY_BONUS_POINTS };
+      saveUser(updatedUser);
+      pointsEarned += DAILY_BONUS_POINTS;
+    }
 
     // Check for chest milestones
     const gam = loadGamification();
@@ -344,6 +367,18 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  // Starta dagens text direkt
+  const handleStartDailyText = () => {
+    if (!dailyText) return;
+    setCurrentGrade(dailyText.grade);
+    setCurrentText(dailyText);
+    setUserAnswers({});
+    setLastResult(null);
+    quizStartTime.current = Date.now();
+    setAppState(AppState.QUIZ);
+    window.scrollTo(0, 0);
+  };
+
   // Beräkna antal lästa texter per årskurs
   const getCompletedByGrade = (): Record<number, number> => {
     if (!user) return {};
@@ -454,6 +489,10 @@ function App() {
             onSelectGrade={handleSelectGrade}
             completedByGrade={getCompletedByGrade()}
             lastCompletedText={user ? getLastCompletedText(user) : null}
+            dailyText={dailyText}
+            dailyDone={isDailyBonusClaimedToday()}
+            streak={user ? getStreak(user.completedTexts) : 0}
+            onStartDaily={handleStartDailyText}
           />
         )}
 

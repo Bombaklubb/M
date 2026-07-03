@@ -103,6 +103,17 @@ export function buyItem(
   return { ok: true, balance: getWalletBalance() };
 }
 
+/** Ge en vara gratis (kist-belöning). Lägger till i ägodelar utan att dra poäng. */
+export function grantItem(kind: ShopKind, key: string | number): boolean {
+  const shop = loadShop();
+  const listKey = ownedListKey(kind);
+  const list = shop[listKey] as (string | number)[];
+  if (list.includes(key)) return false;
+  const updated: ShopData = { ...shop, [listKey]: [...list, key] } as ShopData;
+  saveShop(updated);
+  return true;
+}
+
 /** Equipa (eller av-equipa med null) en ram. */
 export function equipFrame(id: string | null): ShopData {
   const shop = loadShop();

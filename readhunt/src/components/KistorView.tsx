@@ -437,6 +437,10 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
             <span>🎁</span>
             <span><strong>Mystery Chest:</strong> Random chance after each text!</span>
           </div>
+          <div className="flex items-start gap-2 text-sm text-sky-900 dark:text-sky-100 pt-2">
+            <span>🛒</span>
+            <span><strong>Shop items:</strong> Silver chests and above can contain a free avatar or frame from the shop — the rarer the chest, the rarer the item!</span>
+          </div>
         </section>
       </main>
 

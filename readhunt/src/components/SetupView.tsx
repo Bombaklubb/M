@@ -5,12 +5,17 @@ import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { BorderBeam } from './ui/border-beam';
 import { cn } from '@/lib/utils';
-import { CompletedText } from '../types';
+import { CompletedText, LibraryText } from '../types';
+import { DAILY_BONUS_POINTS } from '../lib/daily';
 
 interface SetupViewProps {
   onSelectGrade: (grade: number) => void;
   completedByGrade: Record<number, number>;
   lastCompletedText?: CompletedText | null;
+  dailyText?: LibraryText | null;
+  dailyDone?: boolean;
+  streak?: number;
+  onStartDaily?: () => void;
 }
 
 const GRADE_LABELS = [
@@ -30,6 +35,10 @@ export const SetupView: React.FC<SetupViewProps> = ({
   onSelectGrade,
   completedByGrade: _completedByGrade,
   lastCompletedText,
+  dailyText,
+  dailyDone = false,
+  streak = 0,
+  onStartDaily,
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
@@ -114,6 +123,61 @@ export const SetupView: React.FC<SetupViewProps> = ({
             >
               Start your reading adventure
             </motion.h2>
+
+            {/* Daily challenge + streak */}
+            {dailyText && onStartDaily && (
+              <motion.div
+                className="mb-3"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <button
+                  onClick={onStartDaily}
+                  disabled={dailyDone}
+                  className={cn(
+                    "w-full p-3 rounded-xl border-2 transition-all group text-left",
+                    dailyDone
+                      ? "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700 cursor-default"
+                      : "bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 border-amber-200 dark:border-amber-700 hover:border-amber-400 dark:hover:border-amber-500"
+                  )}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className={cn(
+                      "w-9 h-9 rounded-lg flex items-center justify-center text-white text-base shadow-md",
+                      dailyDone ? "bg-slate-400 dark:bg-slate-600" : "bg-gradient-to-br from-amber-500 to-orange-500"
+                    )}>
+                      {dailyDone ? '✅' : '⭐'}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className={cn(
+                        "text-xs font-medium",
+                        dailyDone ? "text-slate-500 dark:text-slate-400" : "text-amber-600 dark:text-amber-400"
+                      )}>
+                        {dailyDone ? "Today's text completed!" : `Today's text • +${DAILY_BONUS_POINTS} bonus points`}
+                      </div>
+                      <div className="text-slate-700 dark:text-slate-200 font-semibold text-sm truncate">
+                        Level {dailyText.grade} • {dailyText.title}
+                      </div>
+                    </div>
+                    {streak > 0 && (
+                      <div
+                        className="flex items-center gap-1 px-2 py-1 rounded-full bg-orange-100 dark:bg-orange-900/50 border border-orange-200 dark:border-orange-700"
+                        title={`You have read ${streak} day${streak === 1 ? '' : 's'} in a row`}
+                      >
+                        <span className="text-sm">🔥</span>
+                        <span className="text-xs font-bold text-orange-700 dark:text-orange-300 tabular-nums">{streak}</span>
+                      </div>
+                    )}
+                    {!dailyDone && (
+                      <div className="text-amber-500 dark:text-amber-400 group-hover:translate-x-1 transition-transform">
+                        →
+                      </div>
+                    )}
+                  </div>
+                </button>
+              </motion.div>
+            )}
 
             {/* Continue where you left off */}
             {lastCompletedText && (

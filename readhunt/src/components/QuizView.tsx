@@ -41,6 +41,7 @@ const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; categ
 };
 
 type TextSize = 'small' | 'medium' | 'large';
+type LineSpacing = 'normal' | 'wide';
 
 const textSizeClasses: Record<TextSize, string> = {
   small: 'text-sm',
@@ -48,14 +49,40 @@ const textSizeClasses: Record<TextSize, string> = {
   large: 'text-lg'
 };
 
+// Lässinställningar sparas så de följer med mellan texter och sessioner
+const READING_PREFS_KEY = 'readhunt_reading_prefs';
+
+interface ReadingPrefs {
+  textSize: TextSize;
+  lineSpacing: LineSpacing;
+  dyslexicFont: boolean;
+}
+
+function loadReadingPrefs(): ReadingPrefs {
+  try {
+    const raw = localStorage.getItem(READING_PREFS_KEY);
+    if (raw) return { textSize: 'medium', lineSpacing: 'normal', dyslexicFont: false, ...JSON.parse(raw) };
+  } catch { /* ignore */ }
+  return { textSize: 'medium', lineSpacing: 'normal', dyslexicFont: false };
+}
+
 export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const [answers, setAnswers] = useState<UserAnswers>({});
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showText, setShowText] = useState(true);
-  const [textSize, setTextSize] = useState<TextSize>('medium');
+  const [textSize, setTextSize] = useState<TextSize>(() => loadReadingPrefs().textSize);
+  const [lineSpacing, setLineSpacing] = useState<LineSpacing>(() => loadReadingPrefs().lineSpacing);
+  const [dyslexicFont, setDyslexicFont] = useState<boolean>(() => loadReadingPrefs().dyslexicFont);
   const [bionicReading, setBionicReading] = useState(false);
   const [showGlossary, setShowGlossary] = useState(true);
   const [imageFailed, setImageFailed] = useState(false);
+
+  // Spara lässinställningar
+  useEffect(() => {
+    try {
+      localStorage.setItem(READING_PREFS_KEY, JSON.stringify({ textSize, lineSpacing, dyslexicFont }));
+    } catch { /* ignore */ }
+  }, [textSize, lineSpacing, dyslexicFont]);
 
   // Reset image fallback when switching to a new text
   useEffect(() => {
@@ -180,6 +207,38 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                       <span className="font-black">Bio</span>nic
                     </motion.button>
                     <motion.button
+                      onClick={() => setLineSpacing(lineSpacing === 'normal' ? 'wide' : 'normal')}
+                      className={cn(
+                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
+                        lineSpacing === 'wide'
+                          ? 'bg-gradient-to-br from-teal-400 to-emerald-500 text-white shadow-md'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
+                      )}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      title="Wide line spacing - more space between lines for easier reading"
+                      aria-label="Wide line spacing"
+                      aria-pressed={lineSpacing === 'wide'}
+                    >
+                      ↕ Space
+                    </motion.button>
+                    <motion.button
+                      onClick={() => setDyslexicFont(!dyslexicFont)}
+                      className={cn(
+                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
+                        dyslexicFont
+                          ? 'bg-gradient-to-br from-rose-400 to-pink-500 text-white shadow-md'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
+                      )}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      title="Dyslexia-friendly font (OpenDyslexic) - weighted letters that are easier to tell apart"
+                      aria-label="Dyslexia-friendly font"
+                      aria-pressed={dyslexicFont}
+                    >
+                      Dys
+                    </motion.button>
+                    <motion.button
                       onClick={() => setShowGlossary(!showGlossary)}
                       className={cn(
                         "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
@@ -247,7 +306,9 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                       text={text.text}
                       grade={text.grade}
                       className={cn(
-                        "leading-relaxed text-slate-700 dark:text-slate-300",
+                        "text-slate-700 dark:text-slate-300",
+                        lineSpacing === 'wide' ? 'leading-loose tracking-wide' : 'leading-relaxed',
+                        dyslexicFont && 'font-dyslexic',
                         textSizeClasses[textSize]
                       )}
                     />
@@ -262,7 +323,9 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                             <p
                               key={idx}
                               className={cn(
-                                "leading-relaxed text-slate-700 dark:text-slate-300 mb-4 last:mb-0",
+                                "text-slate-700 dark:text-slate-300 mb-4 last:mb-0",
+                                lineSpacing === 'wide' ? 'leading-loose tracking-wide' : 'leading-relaxed',
+                                dyslexicFont && 'font-dyslexic',
                                 textSizeClasses[textSize]
                               )}
                             >

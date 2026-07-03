@@ -1,4 +1,6 @@
 import type { ChestType, Chest, MysteryBoxReward, GamificationData } from '../types';
+import { SHOP_AVATARS, SHOP_FRAMES, type Rarity } from '../data/shop';
+import { loadShop, grantItem } from '../utils/shopStorage';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -313,6 +315,55 @@ function getChestPointRange(type: ChestType): { min: number; max: number } {
   }
 }
 
+// ─── Shop item drops from chests ─────────────────────────────────────────────
+// Högre kistor kan innehålla en slumpad avatar eller ram ur affärens katalog.
+// Föremålet ges gratis (grantItem) och syns direkt under "Mina köp" i affären.
+
+const ITEM_DROP_CHANCE: Record<ChestType, number> = {
+  bronze: 0, silver: 0.10, gold: 0.20, emerald: 0.30, ruby: 0.35, diamond: 0.45, secret: 0.60,
+};
+
+const ITEM_DROP_RARITIES: Record<ChestType, Rarity[]> = {
+  bronze: [],
+  silver: ['common'],
+  gold: ['common', 'rare'],
+  emerald: ['rare'],
+  ruby: ['rare', 'epic'],
+  diamond: ['epic', 'legendary'],
+  secret: ['legendary', 'mythic'],
+};
+
+function rollShopItemDrop(type: ChestType): string | null {
+  if (Math.random() >= ITEM_DROP_CHANCE[type]) return null;
+
+  const rarities = ITEM_DROP_RARITIES[type];
+  if (rarities.length === 0) return null;
+
+  const shop = loadShop();
+  type Candidate = { kind: 'avatar' | 'frame'; key: number | string; name: string; emoji: string };
+  const candidates: Candidate[] = [];
+
+  SHOP_AVATARS.forEach((a, i) => {
+    if (rarities.includes(a.rarity) && !shop.ownedAvatars.includes(i)) {
+      candidates.push({ kind: 'avatar', key: i, name: a.name, emoji: a.emoji });
+    }
+  });
+  SHOP_FRAMES.forEach((f) => {
+    if (rarities.includes(f.rarity) && !shop.ownedFrames.includes(f.id)) {
+      candidates.push({ kind: 'frame', key: f.id, name: f.name, emoji: '⭕' });
+    }
+  });
+
+  if (candidates.length === 0) return null;
+
+  const pick = candidates[Math.floor(Math.random() * candidates.length)];
+  if (!grantItem(pick.kind, pick.key)) return null;
+
+  return pick.kind === 'avatar'
+    ? `New avatar: ${pick.name} ${pick.emoji}`
+    : `New frame: ${pick.name} ${pick.emoji}`;
+}
+
 export function openChest(type: ChestType, badges: string[], currentChests: Chest[] = []): {
   points: number;
   badge?: string;
@@ -374,10 +425,13 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
     }
   }
 
+  const itemDrop = rollShopItemDrop(type);
+
   const desc = [
     `+${pts} points`,
     badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
     bonusChest ? `Bonus: ${CHEST_META[bonusChest.type].label}!` : null,
+    itemDrop,
   ]
     .filter(Boolean)
     .join(' • ');

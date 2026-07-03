@@ -1,7 +1,8 @@
 import React from 'react';
 import { User } from '../types';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import { getWalletBalance } from '../utils/shopStorage';
+import { getWalletBalance, getEquippedFrame, getEquippedEffect } from '../utils/shopStorage';
+import FramedAvatar from './FramedAvatar';
 
 interface HeaderProps {
   user: User;
@@ -91,7 +92,12 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             className="flex items-center gap-1.5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-700/50 hover:from-indigo-100 hover:to-violet-100 dark:hover:from-indigo-900/40 dark:hover:to-violet-900/40 transition-all"
             aria-label={`Profile for ${user.name}`}
           >
-            <span className="text-base">{user.avatar || '👤'}</span>
+            <FramedAvatar
+              emoji={user.avatar || '👤'}
+              size={24}
+              frameId={getEquippedFrame()}
+              effectId={getEquippedEffect()}
+            />
             <span className="font-semibold text-indigo-700 dark:text-indigo-300 text-sm hidden sm:inline">{user.name}</span>
           </button>
 
