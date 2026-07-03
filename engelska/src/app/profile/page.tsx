@@ -9,6 +9,7 @@ import { loadStudent, getSessionStart } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { ACHIEVEMENTS, ACHIEVEMENT_ICONS, isUnlocked } from "@/lib/achievements";
 import { getAvatar } from "@/lib/avatars";
+import { getLevel } from "@/lib/levels";
 import { getEquippedFrame, getEquippedTheme, getEquippedEffect, getWalletBalance } from "@/lib/shopStorage";
 import { THEME_MAP } from "@/lib/shop";
 import EffectOverlay from "@/components/ui/EffectOverlay";
@@ -98,6 +99,14 @@ export default function ProfilePage() {
                   <FramedAvatar avatar={getAvatar(student.avatar ?? "ninja")} frameId={equippedFrame} size={80} className="flex-shrink-0" />
                   <div>
                     <h1 className="text-2xl font-black">{student.name}</h1>
+                    {(() => {
+                      const lvl = getLevel(student.totalPoints);
+                      return (
+                        <p className="text-sm font-black text-violet-300">
+                          🏅 Nivå {lvl.level} · {lvl.title}
+                        </p>
+                      );
+                    })()}
                     <p className="text-gray-300 text-sm">Aktiv sedan {joinDate}</p>
                     <p className="text-gray-300 text-sm">Senast aktiv: {lastActive}</p>
                     <p className="text-gray-300 text-sm mt-1">
@@ -109,6 +118,23 @@ export default function ProfilePage() {
                     <div className="text-gray-300 text-sm">totala poäng</div>
                   </div>
                 </div>
+                {(() => {
+                  const lvl = getLevel(student.totalPoints);
+                  return lvl.next !== null ? (
+                    <div className="mt-3">
+                      <div className="flex justify-between text-xs text-gray-300 font-bold mb-1">
+                        <span>Nivå {lvl.level}</span>
+                        <span>{student.totalPoints} / {lvl.next} ⭐ till nivå {lvl.level + 1}</span>
+                      </div>
+                      <div className="h-2.5 rounded-full bg-white/15 overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-400 transition-all duration-700"
+                          style={{ width: `${lvl.pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  ) : null;
+                })()}
                 <Link
                   href="/butik"
                   className="mt-4 flex items-center justify-between gap-2 rounded-2xl px-4 py-3 bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"

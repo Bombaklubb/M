@@ -214,9 +214,60 @@ export function saveModuleProgress(
     import("@/services/analyticsService").then(({ trackTaskComplete }) => {
       trackTaskComplete(completed, kind);
     });
+    // Dagens uppdrag (dynamisk import för att undvika cirkulärt beroende)
+    import("@/lib/quests").then(({ recordQuestProgress }) => {
+      recordQuestProgress(data.name, { points, modules: completed ? 1 : 0 });
+    });
   }
 
   return { ...data };
+}
+
+// ─── Spelpoäng (snabbspelen) ──────────────────────────────────────────────────
+// Snabbspelen (Tidsattack, Samla mynt, Memory, Hänga gubben) ger riktiga poäng.
+// Avtagande utdelning per spel och dag så att det inte går att "farma":
+// runda 1–3 = 100 %, runda 4–5 = 50 %, därefter 20 %.
+
+interface GamePlayData { date: string; counts: Record<string, number>; }
+
+function gamePlayKey(name: string) {
+  return `engelskajakten_gameplays_${name.toLowerCase().trim()}`;
+}
+
+export function addGamePoints(gameId: string, rawPoints: number): { awarded: number; multiplier: number } {
+  if (typeof window === "undefined") return { awarded: 0, multiplier: 0 };
+  const student = loadStudent();
+  if (!student) return { awarded: 0, multiplier: 0 };
+
+  const key = gamePlayKey(student.name);
+  const today = todayStr();
+  let data: GamePlayData;
+  try {
+    const raw = localStorage.getItem(key);
+    data = raw ? (JSON.parse(raw) as GamePlayData) : { date: today, counts: {} };
+    if (data.date !== today) data = { date: today, counts: {} };
+  } catch {
+    data = { date: today, counts: {} };
+  }
+
+  const plays = data.counts[gameId] ?? 0;
+  const multiplier = plays < 3 ? 1 : plays < 5 ? 0.5 : 0.2;
+  const awarded = Math.round(Math.max(0, rawPoints) * multiplier);
+
+  data.counts[gameId] = plays + 1;
+  localStorage.setItem(key, JSON.stringify(data));
+
+  if (awarded > 0) {
+    student.totalPoints += awarded;
+    saveStudent(student);
+  }
+
+  // Dagens uppdrag: räkna spelrundan + poängen
+  import("@/lib/quests").then(({ recordQuestProgress }) => {
+    recordQuestProgress(student.name, { points: awarded, games: 1 });
+  });
+
+  return { awarded, multiplier };
 }
 
 // ─── Gamification persistence ─────────────────────────────────────────────────

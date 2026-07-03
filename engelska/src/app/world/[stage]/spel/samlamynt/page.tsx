@@ -4,7 +4,7 @@ import { useState, useCallback, use, useEffect } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
-import { loadStudent } from "@/lib/storage";
+import { loadStudent, addGamePoints } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
 import { WORD_PAIRS, shuffle, makeOptions } from "@/lib/gameVocab";
@@ -48,6 +48,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
   const [streak, setStreak]     = useState(0);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [runnerAnim, setRunnerAnim] = useState<"idle" | "run" | "stumble">("idle");
+  const [awarded, setAwarded] = useState<number | null>(null);
 
   const q = questions[idx];
   // runner position: 0–100% of track (based on coins collected)
@@ -63,8 +64,16 @@ function SamlaMyntGame({ stageId, stageName, student }: {
     setStreak(0);
     setFeedback(null);
     setRunnerAnim("idle");
+    setAwarded(null);
     setPhase("playing");
   }, [stageId]);
+
+  // Spara poängen till elevens konto när rundan är slut (en gång per runda)
+  useEffect(() => {
+    if ((phase === "victory" || phase === "defeat") && awarded === null) {
+      setAwarded(addGamePoints("samlamynt", score).awarded);
+    }
+  }, [phase, awarded, score]);
 
   const handleAnswer = useCallback((opt: string) => {
     if (feedback || !q) return;
@@ -147,7 +156,12 @@ function SamlaMyntGame({ stageId, stageName, student }: {
         <div className="text-center max-w-sm w-full">
           <div className="text-7xl mb-4">🏆</div>
           <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1">Bra jobbat!</h1>
-          <p className="text-gray-500 dark:text-gray-400 mb-6">Du samlade alla {TOTAL_COINS} mynt!</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-3">Du samlade alla {TOTAL_COINS} mynt!</p>
+          {awarded !== null && awarded > 0 && (
+            <p className="inline-block bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
+              +{awarded} ⭐ sparade till dina poäng!
+            </p>
+          )}
           <div className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-5 mb-6 grid grid-cols-3 gap-3 text-center">
             <div>
               <p className="text-2xl font-black text-yellow-500">{TOTAL_COINS}</p>
@@ -181,7 +195,12 @@ function SamlaMyntGame({ stageId, stageName, student }: {
         <div className="text-center max-w-sm w-full">
           <div className="text-7xl mb-4">😵</div>
           <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1">Försök igen!</h1>
-          <p className="text-gray-500 dark:text-gray-400 mb-6">Du samlade {coins} av {TOTAL_COINS} mynt.</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-3">Du samlade {coins} av {TOTAL_COINS} mynt.</p>
+          {awarded !== null && awarded > 0 && (
+            <p className="inline-block bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
+              +{awarded} ⭐ sparade till dina poäng!
+            </p>
+          )}
           <div className="flex flex-col gap-3">
             <button onClick={startGame} className="w-full py-3 bg-green-500 hover:bg-green-400 text-white font-black rounded-2xl transition active:scale-95 cursor-pointer" style={{ boxShadow: "0 4px 0 0 #16a34a" }}>
               Försök igen

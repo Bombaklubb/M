@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef, use } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
-import { loadStudent } from "@/lib/storage";
+import { loadStudent, addGamePoints } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
 import { WORD_PAIRS, shuffle, makeOptions } from "@/lib/gameVocab";
@@ -48,6 +48,7 @@ function TidsattackGame({ stageId, stageName, student }: {
   const [bestStreak, setBestStreak] = useState(0);
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [feedbackMsg, setFeedbackMsg] = useState("");
+  const [awarded, setAwarded] = useState<number | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const q = questions[idx];
@@ -62,8 +63,16 @@ function TidsattackGame({ stageId, stageName, student }: {
     setStreak(0);
     setBestStreak(0);
     setFeedback(null);
+    setAwarded(null);
     setPhase("playing");
   }, [stageId]);
+
+  // Spara poängen till elevens konto när rundan är slut (en gång per runda)
+  useEffect(() => {
+    if (phase === "result" && awarded === null) {
+      setAwarded(addGamePoints("tidsattack", score).awarded);
+    }
+  }, [phase, awarded, score]);
 
   useEffect(() => {
     if (phase !== "playing") return;
@@ -129,7 +138,12 @@ function TidsattackGame({ stageId, stageName, student }: {
         <div className="text-center max-w-sm w-full">
           <div className="text-6xl mb-3">⏱️</div>
           <h2 className="text-2xl font-black text-white mb-1">Tiden är ute!</h2>
-          <p className="text-cyan-300 text-sm mb-5">{correct} frågor besvarade</p>
+          <p className="text-cyan-300 text-sm mb-2">{correct} frågor besvarade</p>
+          {awarded !== null && awarded > 0 && (
+            <p className="inline-block bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
+              +{awarded} ⭐ sparade till dina poäng!
+            </p>
+          )}
           <div className="grid grid-cols-3 gap-3 mb-5">
             {[
               { label: "Rätt", value: correct, emoji: "✅" },
