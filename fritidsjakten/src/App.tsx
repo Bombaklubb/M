@@ -11,6 +11,7 @@ import Veckoplaneraren from './components/Veckoplaneraren'
 import Rorelsebanken from './components/Rorelsebanken'
 import Temadagar from './components/Temadagar'
 import Vardegrundskort from './components/Vardegrundskort'
+import IdagPanel from './components/IdagPanel'
 
 type ModulId =
   | 'hem'
@@ -33,7 +34,7 @@ interface ModulInfo {
 }
 
 const MODULER: ModulInfo[] = [
-  { id: 'temabanken', nr: 1, namn: 'Temabanken', beskrivning: 'Välj tema och åldersgrupp – få färdiga aktiviteter.', icon: Library, farg: 'from-emerald-400 to-green-600' },
+  { id: 'temabanken', nr: 1, namn: 'Temabanken', beskrivning: 'Välj tema – få färdiga aktiviteter.', icon: Library, farg: 'from-emerald-400 to-green-600' },
   { id: 'aktivitetsgeneratorn', nr: 2, namn: 'Aktivitetsgeneratorn', beskrivning: 'Filtrera på plats, antal, tid och material.', icon: Wand2, farg: 'from-sky-400 to-blue-600' },
   { id: 'kompisuppdrag', nr: 3, namn: 'Dagens kompisuppdrag', beskrivning: 'Ett nytt snällt uppdrag varje dag.', icon: HeartHandshake, farg: 'from-rose-400 to-pink-600' },
   { id: 'uppdragskort', nr: 4, namn: 'Uppdragskort', beskrivning: 'Eleverna drar ett eget uppdrag.', icon: Layers, farg: 'from-violet-400 to-fuchsia-600' },
@@ -94,9 +95,9 @@ export default function App() {
       <main className="max-w-3xl mx-auto px-4 py-6">
         {aktiv === 'hem' && (
           <div className="animate-fade-in">
+            <IdagPanel onOppnaKompisuppdrag={() => setAktiv('kompisuppdrag')} />
             <p className="text-slate-600 mb-5">
-              Välj en modul för att komma igång. Allt fungerar utan inloggning – perfekt att
-              ha framme på fritids.
+              Alla verktyg – välj en modul. Allt fungerar utan inloggning.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {MODULER.map((m) => {
