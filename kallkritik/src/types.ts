@@ -9,6 +9,9 @@ export type View =
   | 'module7'
   | 'module8'
   | 'module9'
+  | 'module10'
+  | 'kallkollen'
+  | 'diploma'
   | 'stats';
 
 export interface GameState {
@@ -44,6 +47,7 @@ export interface AiOrHumanItem {
   isAI: boolean;
   explanation: string;
   clues: string[];
+  discussionPrompt?: string;
 }
 
 // Module 2: Hitta felet
@@ -59,6 +63,7 @@ export interface FindErrorText {
   segments: ErrorSegment[];
   topic: string;
   hint?: string;
+  discussionPrompt?: string;
 }
 
 // Module 3: Källkritik
@@ -78,6 +83,7 @@ export interface SourceItem {
   purpose: string;
   correctTrust: TrustLevel;
   explanation: string;
+  discussionPrompt?: string;
   criteria: {
     label: string;
     met: boolean;
@@ -95,6 +101,7 @@ export interface HallucinationItem {
   isHallucination: boolean;
   explanation: string;
   correctAnswer?: string;
+  discussionPrompt?: string;
 }
 
 // Module 6: Sant eller fake?

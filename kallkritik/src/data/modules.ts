@@ -1,5 +1,34 @@
 import { ModuleMeta } from '@/types';
 
+// Tre teman/spår med rekommenderad ordning
+export interface Track {
+  title: string;
+  icon: string;
+  desc: string;
+  moduleIds: number[];
+}
+
+export const TRACKS: Track[] = [
+  {
+    title: 'Grunderna',
+    icon: '🧭',
+    desc: 'Börja här – metoderna som allt annat bygger på',
+    moduleIds: [7, 10, 3],
+  },
+  {
+    title: 'Sociala medier & AI',
+    icon: '📱',
+    desc: 'Reklam, AI-texter och AI som källa i skolan',
+    moduleIds: [8, 9, 1, 5],
+  },
+  {
+    title: 'Bilder & snabbtänk',
+    icon: '🖼️',
+    desc: 'Fejkbilder, felaktiga fakta och snabba bedömningar',
+    moduleIds: [4, 6, 2],
+  },
+];
+
 export const MODULES: ModuleMeta[] = [
   {
     id: 7,
@@ -13,6 +42,19 @@ export const MODULES: ModuleMeta[] = [
     badge: 'source-critic',
     badgeName: 'Källkritikern',
     gradeRange: 'Åk 4–9',
+  },
+  {
+    id: 10,
+    title: 'Sök i sidled',
+    subtitle: 'Gör som proffsen!',
+    description: 'Faktagranskarens viktigaste metod: lämna sidan, öppna en ny flik och kolla vad andra säger om källan.',
+    icon: '🧭',
+    gradient: 'from-lime-500 to-green-600',
+    xpReward: 15,
+    difficulty: 'Lätt',
+    badge: 'lateral-reader',
+    badgeName: 'Sidledsläsaren',
+    gradeRange: 'Åk 5–9',
   },
   {
     id: 8,

@@ -11,6 +11,7 @@ export interface Module8Question {
   explanation: string;
   tip: string;
   tag: 'dold-reklam' | 'clickbait' | 'social-proof' | 'falsk-recension' | 'native-ad' | 'manipulation';
+  discussionPrompt?: string;
 }
 
 export const TAG_CONFIG: Record<string, { icon: string; label: string; color: string }> = {
@@ -25,6 +26,7 @@ export const TAG_CONFIG: Record<string, { icon: string; label: string; color: st
 export const MODULE8_QUESTIONS: Module8Question[] = [
   {
     id: 'm8-1',
+    discussionPrompt: 'Varför är dold reklam förbjuden enligt lag? Vem är det lagen skyddar?',
     platform: 'Instagram',
     platformIcon: '📸',
     postContent: '✨ Äntligen hittat något som faktiskt funkar för min hud!! Den här kremen från @GlowSkin_SE har förändrat allt. Huden känns mjuk, jämn och strålande – efter bara två veckor! Länk i bio 🔗 #glowup #hudvård #naturligt',
@@ -44,6 +46,7 @@ export const MODULE8_QUESTIONS: Module8Question[] = [
   },
   {
     id: 'm8-2',
+    discussionPrompt: 'Klickar ni på sådana rubriker ibland? Vad gör clickbait med vad som syns i era flöden?',
     platform: 'YouTube',
     platformIcon: '▶️',
     postContent: 'THUMBNAIL: [Dramatisk bild av ung tjej med chockad min, röd text: "JAG TESTADE DIETEN SOM ÄNDRADE ALLT – LÄKARNA HATAR DETTA!!"] \n\nRubrik: Jag åt bara ett livsmedel i 30 dagar – se resultatet! (CHOCK)',
@@ -63,6 +66,7 @@ export const MODULE8_QUESTIONS: Module8Question[] = [
   },
   {
     id: 'm8-3',
+    discussionPrompt: 'Varför fungerar "3 miljoner använder det"? När har ni själva påverkats av att "alla" gör något?',
     platform: 'TikTok',
     platformIcon: '🎵',
     postContent: 'POV: Du provade kosttillskottet som 3 MILJONER personer redan tar varje dag 💪\n\n"Jag sov bättre, tränade hårdare och kände mig piggare på EN vecka" – det säger alla som testat!\n\n[I samarbete med VitalBoost – länk i bio]',
@@ -82,6 +86,7 @@ export const MODULE8_QUESTIONS: Module8Question[] = [
   },
   {
     id: 'm8-4',
+    discussionPrompt: 'Hur skulle NI skriva en recension som andra faktiskt kan lita på?',
     platform: 'Google Reviews',
     platformIcon: '⭐',
     postContent: '⭐⭐⭐⭐⭐ "Absolut bästa produkten jag köpt!! Leveransen gick supersnabbt och kvaliteten är fantastisk. Kan varmt rekommendera till alla! Ni är bäst!!"\n– Användare "nöjdkund2024" | Skrivet: Idag',
@@ -101,6 +106,7 @@ export const MODULE8_QUESTIONS: Module8Question[] = [
   },
   {
     id: 'm8-5',
+    discussionPrompt: 'Har ni sett en annons som såg ut som en nyhetsartikel? Varför gör medier så?',
     platform: 'Nyhetssajt',
     platformIcon: '📰',
     postContent: 'ARTIKEL: "5 livsmedel som botar stress – experter avslöjar"\n\nArtikeln skrivs som vanlig journalistik med citat från "experter" och råd. Längst ner, i liten text: "Annons | Innehållet är skapat i samarbete med SupplementCo"',
@@ -120,6 +126,7 @@ export const MODULE8_QUESTIONS: Module8Question[] = [
   },
   {
     id: 'm8-6',
+    discussionPrompt: 'Varför fungerar before/after-bilder så bra på oss – fast vi vet att de manipuleras?',
     platform: 'Instagram',
     platformIcon: '📸',
     postContent: '🔥 BEFORE/AFTER 🔥\n\n[Vänster bild: dålig belysning, inzoomad, ingen makeup, ledsen blick]\n[Höger bild: professionell belysning, full makeup, bredvinkel, strålande leende]\n\n"PÅ BARA 4 VECKOR med FitPlan-appen! Jag kan inte tro förändringen 😱 #reklam #FitPlan"',
@@ -139,6 +146,7 @@ export const MODULE8_QUESTIONS: Module8Question[] = [
   },
   {
     id: 'm8-7',
+    discussionPrompt: 'Blir en recension mer eller mindre trovärdig när skaparen berättar om affiliatelänkar? Varför?',
     platform: 'YouTube',
     platformIcon: '▶️',
     postContent: 'VIDEO: "Jag testade 5 gaming-headsets under 500 kr – ÄRLIG recension!"\n\nI videobeskrivningen (expanderas manuellt): "Alla produkter i det här videon är köpta med egna pengar och representerar mina egna åsikter. *Vissa länkar är affiliatelänkar – jag får en liten provision om du köper via dem, utan extra kostnad för dig."',

@@ -4,6 +4,7 @@ import { CheckCircle2, XCircle, AlertCircle, ChevronRight, Zap, Info } from 'luc
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ResultSummary } from '@/components/ResultSummary';
+import { DiscussionPrompt } from '@/components/DiscussionPrompt';
 import { MODULE2_TEXTS } from '@/data/module2Data';
 
 interface ModuleViewProps {
@@ -88,6 +89,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     return (
       <ResultSummary
         moduleName="Hitta felet"
+        moduleId={2}
         score={totalFound}
         totalQuestions={allErrors}
         xpEarned={totalFound * 15}
@@ -368,6 +370,8 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                     );
                   })}
                 </div>
+
+                <DiscussionPrompt text={currentText.discussionPrompt} />
 
                 <Button
                   variant="primary"

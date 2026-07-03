@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Zap, CheckCircle2, XCircle, Lightbulb, Brain } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { ResultSummary } from '@/components/ResultSummary';
+import { DiscussionPrompt } from '@/components/DiscussionPrompt';
 import { MODULE9_QUESTIONS, CATEGORY_CONFIG, AI_FACTS } from '@/data/module9Data';
 
 interface ModuleViewProps {
@@ -55,6 +56,7 @@ export function Module9View({ onComplete, onExit }: ModuleViewProps) {
     return (
       <ResultSummary
         moduleName="AI som källa – i skolan"
+        moduleId={9}
         score={correctCount}
         totalQuestions={questions.length}
         xpEarned={xpEarned}
@@ -244,6 +246,7 @@ export function Module9View({ onComplete, onExit }: ModuleViewProps) {
                   <Lightbulb className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                   <p className="text-xs text-amber-700 font-bold leading-relaxed">{current.tip}</p>
                 </div>
+                <DiscussionPrompt text={current.discussionPrompt} />
                 <Button variant="primary" size="lg" fullWidth onClick={handleNext} className="gap-2">
                   {currentIndex + 1 >= questions.length ? 'Se resultat' : 'Nästa scenario'}
                   <ChevronRight className="w-5 h-5" />

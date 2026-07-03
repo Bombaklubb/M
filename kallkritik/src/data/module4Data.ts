@@ -20,6 +20,7 @@ export interface Module4Question {
   explanation: string;
   tip: string;
   sign: string;
+  discussionPrompt?: string;
 }
 
 // The 5 telltale signs of AI-generated images
@@ -89,6 +90,7 @@ export const AI_SIGNS: AiSign[] = [
 export const MODULE4_QUESTIONS: Module4Question[] = [
   {
     id: 'm4-1',
+    discussionPrompt: 'Vad händer när AI blir bättre på att rita händer – vilka tecken letar vi efter då?',
     imageEmoji: '🖐️',
     imageBg: 'from-violet-100 to-purple-100',
     scenario: 'Du ser en bild på en person som vinkar. Den delas som ett "äkta foto" på sociala medier.',
@@ -106,6 +108,7 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
   },
   {
     id: 'm4-2',
+    discussionPrompt: 'Varför är text i bilder så svårt för AI? Har ni sett exempel på konstig text i en AI-bild?',
     imageEmoji: '🏪',
     imageBg: 'from-amber-100 to-orange-100',
     scenario: 'En bild visar en mysig affärsgata med många skyltar och butiksnamn i fönstren.',
@@ -123,6 +126,7 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
   },
   {
     id: 'm4-3',
+    discussionPrompt: 'Varför skapar någon en deepfake av en känd person? Vilka kan drabbas värst av deepfakes?',
     imageEmoji: '🤳',
     imageBg: 'from-rose-100 to-pink-100',
     scenario: 'Ett porträtt av en "kändis" sprids med ett kontroversiellt påstående. Huden är helt jämn och perfekt, utan en enda por eller ojämnhet.',
@@ -140,6 +144,7 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
   },
   {
     id: 'm4-4',
+    discussionPrompt: 'Kan man alltid se på skuggorna? Vad gör ni när tecknen inte räcker för att avgöra?',
     imageEmoji: '🌅',
     imageBg: 'from-sky-100 to-blue-100',
     scenario: 'En bild visar en person som står utomhus i starkt solljus. Solen syns tydligt till höger i bilden.',
@@ -157,6 +162,7 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
   },
   {
     id: 'm4-5',
+    discussionPrompt: 'Varför slarvar AI i bakgrunden? Vad säger det om hur AI-bilder skapas?',
     imageEmoji: '👥',
     imageBg: 'from-emerald-100 to-teal-100',
     scenario: 'En bild visar en stor folksamling på ett torg. Huvudpersonen i mitten ser skarp och tydlig ut.',
@@ -174,6 +180,7 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
   },
   {
     id: 'm4-6',
+    discussionPrompt: 'Vad är säkrast: att granska skärmdumpen eller att gå till källans riktiga sida? Varför?',
     imageEmoji: '📰',
     imageBg: 'from-zinc-100 to-stone-100',
     scenario: 'En "skärmdump" av en nyhetsartikel sprids. Den ser ut som en riktig tidning, men något känns fel med rubriken och datumet.',

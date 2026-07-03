@@ -8,6 +8,7 @@ export interface Module9Question {
   explanation: string;
   tip: string;
   category: 'faktagranskning' | 'plagiat' | 'citat' | 'källkritik' | 'etik' | 'smart-anvandning';
+  discussionPrompt?: string;
 }
 
 export const CATEGORY_CONFIG: Record<string, { icon: string; label: string; color: string }> = {
@@ -30,6 +31,7 @@ export const AI_FACTS = [
 export const MODULE9_QUESTIONS: Module9Question[] = [
   {
     id: 'm9-1',
+    discussionPrompt: 'Varför är det fusk även om AI inte är en person? Vem lurar man egentligen?',
     situation: 'Du har läxa att skriva om klimatförändringarnas orsaker.',
     studentAction: 'Du frågar ChatGPT: "Vad orsakar klimatförändringar?" och kopierar svaret rakt in i ditt dokument.',
     question: 'Vad är problemet med det här?',
@@ -46,6 +48,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
   },
   {
     id: 'm9-2',
+    discussionPrompt: 'Hur kollar man snabbast om en person som AI nämner faktiskt har funnits?',
     situation: 'Du skriver en historia-uppgift om Vikingarna.',
     studentAction: 'Du frågar AI: "Vilka är tre kända vikingahövdingar?" AI svarar med tre namn – inklusive "Ragnar Sigurdsson" som du inte känner igen. Du lämnar in utan att kolla.',
     question: 'Vad borde du ha gjort?',
@@ -62,6 +65,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
   },
   {
     id: 'm9-3',
+    discussionPrompt: 'Vad är skillnaden mellan att förstå med hjälp av AI och att kopiera från AI?',
     situation: 'Du skriver en rapport om rymden.',
     studentAction: 'Du använder AI som ett bollplank för att förstå hur svarta hål fungerar. Du läser AI:s förklaring, förstår den, och skriver sedan om det med egna ord – och lägger till en länk till NASA:s hemsida som extra källa.',
     question: 'Är det här rätt sätt att använda AI?',
@@ -78,6 +82,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
   },
   {
     id: 'm9-4',
+    discussionPrompt: 'Vilka frågor är AI dålig på att svara på? Gör en lista tillsammans.',
     situation: 'Ni diskuterar aktuella händelser på SO-lektionen.',
     studentAction: 'Du frågar ChatGPT om senaste nytt om ett pågående krig. AI berättar säkert om händelser med datum och fakta.',
     question: 'Varför är AI en dålig källa för aktuella nyheter?',
@@ -94,6 +99,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
   },
   {
     id: 'm9-5',
+    discussionPrompt: 'Hur märker man att ett svar bara visar ena sidan av en fråga? Vad frågar man då?',
     situation: 'Du ber AI sammanfatta ett perspektiv på en samhällsfråga.',
     studentAction: 'AI ger ett utförligt svar som verkar balanserat. Du märker att AI alltid ger argument "för" men sällan nämner argument "emot" – och svaret låter nästan som en reklam för en viss lösning.',
     question: 'Vad händer troligen här?',
@@ -110,6 +116,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
   },
   {
     id: 'm9-6',
+    discussionPrompt: 'Vilka AI-regler vore rimliga i er klass? Var går gränsen för er?',
     situation: 'Du skriver en kreativ berättelse i svenska.',
     studentAction: 'Du har ett utkast men är fast. Du ber AI: "Ge mig 5 idéer på hur berättelsen kan sluta" och väljer en av idéerna som startpunkt – sedan skriver du slutet själv.',
     question: 'Är det här att fuska?',
@@ -126,6 +133,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
   },
   {
     id: 'm9-7',
+    discussionPrompt: 'Varför räcker inte "ChatGPT 2025" som källhänvisning? Jämför med hur ni citerar en bok.',
     situation: 'Du skriver ett arbete om klimat och har använt AI för att förstå begrepp och få strukturhjälp.',
     studentAction: 'Du skriver i källförteckningen: "ChatGPT, 2025" utan mer info.',
     question: 'Vad saknas i din källhänvisning till AI?',

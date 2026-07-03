@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Lock, Zap } from 'lucide-react';
+import { CheckCircle, Lock, Zap, GraduationCap } from 'lucide-react';
 import { ModuleMeta } from '@/types';
+import { LessonGuideModal } from './LessonGuideModal';
 
 interface ModuleCardProps {
   module: ModuleMeta;
@@ -20,6 +21,7 @@ const difficultyConfig: Record<string, { label: string; className: string }> = {
 
 const cardColorClass: Record<number, string> = {
   7: 'module-card-sky',
+  10: 'module-card-lime',
   8: 'module-card-pink',
   9: 'module-card-teal',
   1: 'module-card-violet',
@@ -32,6 +34,7 @@ const cardColorClass: Record<number, string> = {
 
 const iconBgClass: Record<number, string> = {
   7: 'bg-sky-100 border-sky-200',
+  10: 'bg-lime-100 border-lime-200',
   8: 'bg-pink-100 border-pink-200',
   9: 'bg-teal-100 border-teal-200',
   1: 'bg-violet-100 border-violet-200',
@@ -44,6 +47,7 @@ const iconBgClass: Record<number, string> = {
 
 const accentTextClass: Record<number, string> = {
   7: 'text-sky-600',
+  10: 'text-lime-600',
   8: 'text-pink-600',
   9: 'text-teal-600',
   1: 'text-violet-600',
@@ -55,10 +59,15 @@ const accentTextClass: Record<number, string> = {
 };
 
 export function ModuleCard({ module, isCompleted, highScore, isLocked = false, onClick, index }: ModuleCardProps) {
+  const [guideOpen, setGuideOpen] = useState(false);
   const diff = difficultyConfig[module.difficulty] ?? difficultyConfig['Medel'];
   const colorClass = cardColorClass[module.id] ?? 'module-card-indigo';
   const iconBg = iconBgClass[module.id] ?? 'bg-indigo-100 border-indigo-200';
   const accentText = accentTextClass[module.id] ?? 'text-indigo-600';
+
+  function handleActivate() {
+    if (!isLocked) onClick();
+  }
 
   return (
     <motion.div
@@ -66,15 +75,22 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.07, ease: 'easeOut' }}
     >
-      <button
-        onClick={isLocked ? undefined : onClick}
-        disabled={isLocked}
-        className={`w-full text-left rounded-[20px] border-[3px] bg-white transition-all duration-200 group cursor-pointer ${
+      <div
+        role="button"
+        tabIndex={isLocked ? -1 : 0}
+        onClick={handleActivate}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleActivate();
+          }
+        }}
+        aria-disabled={isLocked}
+        className={`w-full text-left rounded-[20px] border-[3px] bg-white transition-all duration-200 group ${
           isLocked
             ? 'opacity-50 cursor-not-allowed border-gray-200 shadow-none'
-            : `${colorClass} clay-card`
+            : `${colorClass} clay-card cursor-pointer`
         }`}
-        style={{ fontFamily: 'inherit' }}
       >
         <div className="p-5">
           {/* Top row */}
@@ -100,7 +116,7 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
             </div>
           </div>
 
-          {/* Module number + grade range */}
+          {/* Module number + grade range + lesson guide */}
           <div className="flex items-center gap-2 mb-0.5">
             <div className={`text-xs font-extrabold ${accentText} tracking-wide`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
               MODUL {module.id}
@@ -110,6 +126,17 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
                 {module.gradeRange}
               </span>
             )}
+            <button
+              onClick={e => {
+                e.stopPropagation();
+                setGuideOpen(true);
+              }}
+              title="Lektionsguide för lärare"
+              aria-label="Öppna lektionsguide"
+              className="ml-auto w-7 h-7 rounded-xl bg-cyan-50 border-2 border-cyan-200 hover:bg-cyan-100 flex items-center justify-center transition-colors cursor-pointer"
+            >
+              <GraduationCap className="w-3.5 h-3.5 text-cyan-600" />
+            </button>
           </div>
 
           {/* Title */}
@@ -146,7 +173,14 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
             )}
           </div>
         </div>
-      </button>
+      </div>
+
+      <LessonGuideModal
+        moduleId={module.id}
+        moduleTitle={module.title}
+        open={guideOpen}
+        onClose={() => setGuideOpen(false)}
+      />
     </motion.div>
   );
 }

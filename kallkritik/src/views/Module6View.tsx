@@ -109,6 +109,7 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
     return (
       <ResultSummary
         moduleName="Sant eller Fake?"
+        moduleId={6}
         score={correctScore}
         totalQuestions={items.length}
         xpEarned={xpEarned}

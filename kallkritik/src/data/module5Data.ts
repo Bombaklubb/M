@@ -3,6 +3,7 @@ import { HallucinationItem } from '@/types';
 export const MODULE5_ITEMS: HallucinationItem[] = [
   {
     id: 'm5-1',
+    discussionPrompt: 'AI:n lät helt säker fast den hade fel. Varför är självsäkerhet inget bevis på att något stämmer?',
     question: 'Vad är huvudstaden i Australien?',
     aiAnswer: 'Huvudstaden i Australien är Sydney, som är landets folkrikaste och mest kända stad. Sydney är känt för sin ikoniska operahus och Harbour Bridge.',
     isHallucination: true,
@@ -11,6 +12,7 @@ export const MODULE5_ITEMS: HallucinationItem[] = [
   },
   {
     id: 'm5-2',
+    discussionPrompt: 'Den här gången hade AI rätt. Hur vet man NÄR man kan lita på ett AI-svar?',
     question: 'Vem skrev Harry Potter-böckerna?',
     aiAnswer: 'Harry Potter-böckerna skrevs av den brittiska författaren J.K. Rowling. Den första boken, "Harry Potter och de vises sten", publicerades ursprungligen på engelska 1997 och på svenska 1999.',
     isHallucination: false,
@@ -18,6 +20,7 @@ export const MODULE5_ITEMS: HallucinationItem[] = [
   },
   {
     id: 'm5-3',
+    discussionPrompt: 'Varför blir AI-svar om rekord och "senaste nytt" så ofta fel?',
     question: 'Vilken är världens snabbaste bil?',
     aiAnswer: 'Världens snabbaste bil är Bugatti Chiron Super Sport 300+, som år 2019 satte världsrekordet på 304 mph. Bilen drivs av en 8-liters W16-motor med 1577 hästkrafter.',
     isHallucination: true,
@@ -26,6 +29,7 @@ export const MODULE5_ITEMS: HallucinationItem[] = [
   },
   {
     id: 'm5-4',
+    discussionPrompt: 'Vad kan hända om felaktiga uppgifter om historiska händelser sprids vidare?',
     question: 'När inträffade terrorattackerna mot World Trade Center?',
     aiAnswer: 'Terrorattackerna mot World Trade Center inträffade den 12 september 2001. Fyra flygplan kapades av terrorister tillhörande al-Qaida. Totalt omkom nästan 3 000 personer.',
     isHallucination: true,
@@ -34,6 +38,7 @@ export const MODULE5_ITEMS: HallucinationItem[] = [
   },
   {
     id: 'm5-5',
+    discussionPrompt: 'Hade ni kunnat avslöja det här felet? Vilken sorts fel är svårast att upptäcka?',
     question: 'Hur länge lever en genomsnittlig husmanet (jordmask)?',
     aiAnswer: 'En husmanet lever vanligtvis 4–8 år under optimala förhållanden, men i fångenskap kan de leva upp till 10 år. De föredrar fuktig jord och spelar en viktig roll för jordens ekosystem.',
     isHallucination: true,
@@ -42,6 +47,7 @@ export const MODULE5_ITEMS: HallucinationItem[] = [
   },
   {
     id: 'm5-6',
+    discussionPrompt: 'Rätt svar den här gången – men skulle ni ändå dubbelkolla inför ett prov? Var går er gräns?',
     question: 'Vilken är jordens näst största kontinent?',
     aiAnswer: 'Jordens näst största kontinent är Afrika. Afrika har en yta på ungefär 30 miljoner kvadratkilometer och är hem för 54 erkända länder och över 1,4 miljarder människor.',
     isHallucination: false,

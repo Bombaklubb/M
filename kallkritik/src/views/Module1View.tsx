@@ -4,6 +4,7 @@ import { CheckCircle2, XCircle, ChevronRight, Bot, User, Lightbulb, Zap } from '
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ResultSummary } from '@/components/ResultSummary';
+import { DiscussionPrompt } from '@/components/DiscussionPrompt';
 import { MODULE1_ITEMS } from '@/data/module1Data';
 
 interface ModuleViewProps {
@@ -60,6 +61,7 @@ export default function Module1View({ onComplete, onExit }: ModuleViewProps) {
     return (
       <ResultSummary
         moduleName="AI eller människa?"
+        moduleId={1}
         score={correctScore}
         totalQuestions={totalQuestions}
         xpEarned={xpEarned}
@@ -258,6 +260,8 @@ export default function Module1View({ onComplete, onExit }: ModuleViewProps) {
                     ))}
                   </ul>
                 </div>
+
+                <DiscussionPrompt text={currentItem.discussionPrompt} />
 
                 {/* Next button */}
                 <Button

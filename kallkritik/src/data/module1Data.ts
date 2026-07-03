@@ -3,6 +3,7 @@ import { AiOrHumanItem } from '@/types';
 export const MODULE1_ITEMS: AiOrHumanItem[] = [
   {
     id: 'm1-1',
+    discussionPrompt: 'Texten upprepar sig utan att säga något konkret. Varför tror ni AI ofta skriver "mycket utan att säga något"?',
     type: 'text',
     typeLabel: 'Text om klimat',
     content: 'Klimatförändringarna är ett allvarligt problem som påverkar hela världen. Det är viktigt att vi alla tar ansvar för klimatförändringarna. Klimatförändringarna leder till extrema väderhändelser och stigande havsnivåer. Vi måste agera nu för att stoppa klimatförändringarna och skydda vår planet.',
@@ -17,6 +18,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-2',
+    discussionPrompt: 'Vilka detaljer i inlägget kändes mänskliga? Skulle en AI kunna fejka dem?',
     type: 'comment',
     typeLabel: 'Kommentar på sociala medier',
     content: 'Äntligen fredag!! 🎉 Sitter på bussen hem och lyssnar på Zara Larsson. Har INTE sovit tillräckligt denna veckan lol. Typ tre saker som händer denna helg: 1) ta igen sömn 2) baka kladdkaka med mamma 3) försöka träna löp (vi får se haha)',
@@ -31,6 +33,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-3',
+    discussionPrompt: 'Vem tjänar på att skicka sådana här mejl? Vad vill avsändaren att du ska göra?',
     type: 'email',
     typeLabel: 'E-postmeddelande',
     content: 'Hej! Jag hoppas att detta meddelande hittar dig väl. Jag skriver för att informera dig om en spännande affärsmöjlighet som jag tror kan vara av stort intresse för dig. Vi erbjuder en unik möjlighet att investera i ett innovativt projekt med hög potential för avkastning. Hör av dig om du vill veta mer!',
@@ -45,6 +48,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-4',
+    discussionPrompt: 'Vad skiljer en riktig nyhetsrubrik från en påhittad? Vilka detaljer går att kontrollera?',
     type: 'headline',
     typeLabel: 'Nyhetsrubrik',
     content: 'Branden i Kalmar: "Hela kvarteret stod i lågor" – sex lägenheter totalförstörda, tre skadade',
@@ -59,6 +63,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-5',
+    discussionPrompt: 'Var det något som kändes "för perfekt" i texten? Hur kan perfektion vara en varningssignal?',
     type: 'text',
     typeLabel: 'Karaktärsbeskrivning',
     content: 'Lisa är en fantastisk person som alltid hjälper andra. Hon är känd för sin vänlighet och sin förmåga att lösa problem. Lisa arbetar hårt varje dag och hennes kollegor uppskattar henne mycket. Hon är verkligen en tillgång för sin arbetsplats och gör alltid sitt bästa.',
@@ -73,6 +78,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-6',
+    discussionPrompt: 'Varför är småfel och personliga detaljer ofta tecken på en människa?',
     type: 'comment',
     typeLabel: 'Recept-kommentar',
     content: 'Testade det här receptet igår och det blev SUPERGOTT! Jag hade inte tahini hemma så körde med jordnötssmör istället, och la i lite mer vitlök än vad som stod. Tog 45 min inklusive disken haha. Ena barnet vägrade äta men det andre ville ha mer! 😂',
@@ -87,6 +93,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-7',
+    discussionPrompt: 'Varför kan AI-skrivna hälsoråd vara farligare än AI-skrivna filmtips?',
     type: 'post',
     typeLabel: 'Hälsoinlägg',
     content: 'Fysisk aktivitet är mycket viktigt för vår hälsa och välbefinnande. Regelbunden motion hjälper till att förbättra din kondition och styrka. Det rekommenderas att träna minst 30 minuter om dagen. Motion bidrar även till bättre mental hälsa och minskad stress.',
@@ -101,6 +108,7 @@ export const MODULE1_ITEMS: AiOrHumanItem[] = [
   },
   {
     id: 'm1-8',
+    discussionPrompt: 'Spelar det någon roll om en recension är AI-skriven? När skulle det kännas som lurendrejeri?',
     type: 'comment',
     typeLabel: 'Filmrecension',
     content: 'Typ åkte och såg Dune 2 med min brorsa igår. Mannen VAD var den bra!? Zendaya var sjukt cool men jag saknade lite mer Paul-action i första halvan tbh. Soundtrack var 12/10. Stanna INTE hemma om ni tänkt på det lmao',

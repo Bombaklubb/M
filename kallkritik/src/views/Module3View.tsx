@@ -15,6 +15,7 @@ import {
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ResultSummary } from '@/components/ResultSummary';
+import { DiscussionPrompt } from '@/components/DiscussionPrompt';
 import { MODULE3_SOURCES } from '@/data/module3Data';
 import { TrustLevel } from '@/types';
 
@@ -116,6 +117,7 @@ export default function Module3View({ onComplete, onExit }: ModuleViewProps) {
     return (
       <ResultSummary
         moduleName="Är källan trovärdig?"
+        moduleId={3}
         score={correctScore}
         totalQuestions={totalQuestions}
         xpEarned={xpEarned}
@@ -378,6 +380,8 @@ export default function Module3View({ onComplete, onExit }: ModuleViewProps) {
                     ))}
                   </ul>
                 </div>
+
+                <DiscussionPrompt text={currentSource.discussionPrompt} />
 
                 {/* Next button */}
                 <Button

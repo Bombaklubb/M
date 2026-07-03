@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Trophy, BarChart2, Home, Search } from 'lucide-react';
+import { Zap, Trophy, BarChart2, Home, Search, Presentation } from 'lucide-react';
 import { GameState } from '@/types';
 import { View } from '@/types';
 import { xpForNextLevel, getLevelTitle } from '@/lib/utils';
@@ -9,9 +9,11 @@ interface HeaderProps {
   gameState: GameState;
   currentView: View;
   onNavigate: (view: View) => void;
+  classMode: boolean;
+  onToggleClassMode: () => void;
 }
 
-export function Header({ gameState, currentView, onNavigate }: HeaderProps) {
+export function Header({ gameState, currentView, onNavigate, classMode, onToggleClassMode }: HeaderProps) {
   const { progress } = xpForNextLevel(gameState.xp);
   const levelTitle = getLevelTitle(gameState.level);
 
@@ -87,6 +89,19 @@ export function Header({ gameState, currentView, onNavigate }: HeaderProps) {
               aria-label="Statistik"
             >
               <BarChart2 className="w-4 h-4" />
+            </button>
+            <button
+              onClick={onToggleClassMode}
+              className={`p-2 rounded-xl transition-all duration-200 cursor-pointer ${
+                classMode
+                  ? 'bg-violet-100 text-violet-700 border-2 border-violet-300 shadow-sm'
+                  : 'text-indigo-400 hover:text-indigo-700 hover:bg-indigo-50 border-2 border-transparent'
+              }`}
+              title={classMode ? 'Klassläge på – större text för storskärm. Klicka för att stänga av.' : 'Klassläge – större text för storskärm/projektor'}
+              aria-label="Växla klassläge"
+              aria-pressed={classMode}
+            >
+              <Presentation className="w-4 h-4" />
             </button>
             {gameState.badges.length > 0 && (
               <div className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 border-2 border-amber-200 shadow-sm">

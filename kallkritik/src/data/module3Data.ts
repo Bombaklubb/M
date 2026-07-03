@@ -3,6 +3,7 @@ import { SourceItem } from '@/types';
 export const MODULE3_SOURCES: SourceItem[] = [
   {
     id: 'm3-1',
+    discussionPrompt: 'Varför använder oseriösa sajter ord som "SANNINGEN" och "det media döljer"? Vad gör de orden med läsaren?',
     platform: 'Anonym blogg',
     platformIcon: '📝',
     title: 'SANNINGEN om 5G-nät som media döljer!!',
@@ -25,6 +26,7 @@ export const MODULE3_SOURCES: SourceItem[] = [
   },
   {
     id: 'm3-2',
+    discussionPrompt: 'Varför sprids hälsopåståenden så snabbt i sociala medier? Vem kan skadas av ett sådant här inlägg?',
     platform: 'TikTok',
     platformIcon: '🎵',
     title: 'Denna planta botar CANCER – läkarna vill inte att du ska veta 🤫',
@@ -47,6 +49,7 @@ export const MODULE3_SOURCES: SourceItem[] = [
   },
   {
     id: 'm3-3',
+    discussionPrompt: 'När är Wikipedia ett bra verktyg – och när räcker det inte? Hur använder ni det i skolarbeten?',
     platform: 'Wikipedia',
     platformIcon: '📚',
     title: 'Klimatförändring – orsaker, konsekvenser och åtgärder',
@@ -69,6 +72,7 @@ export const MODULE3_SOURCES: SourceItem[] = [
   },
   {
     id: 'm3-4',
+    discussionPrompt: 'Varför litar vi mer på myndigheter? Finns det tillfällen då man bör granska även dem?',
     platform: 'Myndighet',
     platformIcon: '🏛️',
     title: 'Vaccination mot influensa – rekommendationer 2024/2025',
@@ -91,6 +95,7 @@ export const MODULE3_SOURCES: SourceItem[] = [
   },
   {
     id: 'm3-5',
+    discussionPrompt: 'Rubriken bygger på en studie. Vad skulle ni vilja veta om studien innan ni tror på siffran 40 procent?',
     platform: 'Dagstidning',
     platformIcon: '📰',
     title: 'Ny studie: Regelbunden promenad minskar risk för demens med 40 procent',
@@ -113,6 +118,7 @@ export const MODULE3_SOURCES: SourceItem[] = [
   },
   {
     id: 'm3-6',
+    discussionPrompt: 'Är AI-chatbotens svar en källa? Hur borde man använda svaret när det gäller ens hälsa?',
     platform: 'AI-chatbot',
     platformIcon: '🤖',
     title: 'Fråga: Vilka vacciner behöver jag ta inför resa till Sydostasien?',

@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Trophy, RotateCcw, Home, Star } from 'lucide-react';
+import { Zap, Trophy, RotateCcw, Home, Star, Backpack } from 'lucide-react';
 import { Button } from './ui/Button';
 import { Badge } from './ui/Badge';
+import { LESSON_GUIDES } from '@/data/lessonGuides';
 
 interface ResultSummaryProps {
   moduleName: string;
+  moduleId?: number;
   score: number;
   totalQuestions: number;
   xpEarned: number;
@@ -16,6 +18,7 @@ interface ResultSummaryProps {
 
 export function ResultSummary({
   moduleName,
+  moduleId,
   score,
   totalQuestions,
   xpEarned,
@@ -23,6 +26,7 @@ export function ResultSummary({
   onReplay,
   onHome,
 }: ResultSummaryProps) {
+  const mission = moduleId !== undefined ? LESSON_GUIDES[moduleId]?.mission : undefined;
   const percentage = Math.round((score / totalQuestions) * 100);
   const isGreat = percentage >= 80;
   const isGood = percentage >= 50;
@@ -122,6 +126,27 @@ export function ResultSummary({
               </motion.div>
             ))}
           </div>
+
+          {/* Veckans granskning – uppdrag utanför appen */}
+          {mission && (
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="text-left bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 mb-6"
+            >
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <Backpack className="w-4 h-4 text-amber-600 shrink-0" />
+                <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-wide">
+                  Uppdrag utanför appen
+                </span>
+              </div>
+              <div className="text-sm font-extrabold text-amber-700 mb-1" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
+                {mission.title}
+              </div>
+              <p className="text-xs font-semibold text-amber-800 leading-relaxed">{mission.task}</p>
+            </motion.div>
+          )}
 
           {/* Actions */}
           <div className="flex gap-3">

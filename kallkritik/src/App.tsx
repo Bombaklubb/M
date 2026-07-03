@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { View } from '@/types';
 import { useGameStore } from '@/lib/gameStore';
@@ -13,6 +13,9 @@ import { Module6View } from '@/views/Module6View';
 import { Module7View } from '@/views/Module7View';
 import { Module8View } from '@/views/Module8View';
 import { Module9View } from '@/views/Module9View';
+import { Module10View } from '@/views/Module10View';
+import { KallkollenView } from '@/views/KallkollenView';
+import { DiplomaView } from '@/views/DiplomaView';
 import { StatsView } from '@/views/StatsView';
 
 const pageVariants = {
@@ -28,7 +31,22 @@ const pageTransition = {
 
 export default function App() {
   const [currentView, setCurrentView] = useState<View>('home');
+  const [classMode, setClassMode] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('kallkritik_class_mode') === '1';
+    } catch {
+      return false;
+    }
+  });
   const { state, addXP, completeModule, resetProgress } = useGameStore();
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('kallkritik_class_mode', classMode ? '1' : '0');
+    } catch {
+      // localStorage kan vara blockerad – klassläget fungerar ändå för sessionen
+    }
+  }, [classMode]);
 
   function handleNavigate(view: View) {
     setCurrentView(view);
@@ -108,6 +126,24 @@ export default function App() {
             <Module9View onComplete={handleModuleComplete(9)} onExit={handleExit} />
           </motion.div>
         );
+      case 'module10':
+        return (
+          <motion.div key="module10" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module10View onComplete={handleModuleComplete(10)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'kallkollen':
+        return (
+          <motion.div key="kallkollen" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <KallkollenView onNavigate={handleNavigate} />
+          </motion.div>
+        );
+      case 'diploma':
+        return (
+          <motion.div key="diploma" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <DiplomaView gameState={state} onNavigate={handleNavigate} />
+          </motion.div>
+        );
       case 'stats':
         return (
           <motion.div key="stats" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
@@ -120,7 +156,7 @@ export default function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden">
+    <div className={`relative min-h-screen bg-background overflow-x-hidden ${classMode ? 'class-mode' : ''}`}>
       {/* Decorative background blobs — pastel, light */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <div className="absolute top-[-8%] left-[-4%] w-[38vw] h-[38vw] rounded-full bg-violet-200/50 blur-3xl" />
@@ -129,7 +165,13 @@ export default function App() {
         <div className="absolute top-[20%] right-[20%] w-[18vw] h-[18vw] rounded-full bg-amber-200/35 blur-2xl" />
       </div>
 
-      <Header gameState={state} currentView={currentView} onNavigate={handleNavigate} />
+      <Header
+        gameState={state}
+        currentView={currentView}
+        onNavigate={handleNavigate}
+        classMode={classMode}
+        onToggleClassMode={() => setClassMode(v => !v)}
+      />
 
       <main className="relative z-10">
         <AnimatePresence mode="wait">

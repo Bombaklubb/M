@@ -10,6 +10,7 @@ export interface Module7Question {
   explanation: string;
   tip: string;
   criterion: 'äkthet' | 'aktualitet' | 'oberoende' | 'tendens';
+  discussionPrompt?: string;
 }
 
 export const FOUR_QUESTIONS = [
@@ -50,6 +51,7 @@ export const FOUR_QUESTIONS = [
 export const MODULE7_QUESTIONS: Module7Question[] = [
   {
     id: 'm7-1',
+    discussionPrompt: 'Hur skulle en seriös sajt om klimat visa vem som står bakom? Ge exempel.',
     scenario: 'Du söker fakta om klimatförändringar och hittar en artikel utan angiven författare på en sida som heter "SannaFakta.se". Det finns ingen "Om oss"-sida och inga kontaktuppgifter.',
     source: 'SannaFakta.se',
     sourceType: 'Okänd webbsida',
@@ -68,6 +70,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   },
   {
     id: 'm7-2',
+    discussionPrompt: 'Hur gammal får information vara? Beror det på ämnet – jämför t.ex. historia med teknik.',
     scenario: 'En vän delar en länk om en ny "mirakelkur mot förkylning". Artikeln är skriven 2009 och hänvisar till en studie från 1998. Texten skriver att "forskning visar" utan att namnge studien.',
     source: 'HälsoTips24.com',
     sourceType: 'Hälsoblogg',
@@ -86,6 +89,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   },
   {
     id: 'm7-3',
+    discussionPrompt: 'Betyder ekonomiskt intresse att företaget ljuger? Hur bör man tänka i stället?',
     scenario: 'Du läser om ett kontrovers kring ett läkemedel. Tre nyhetsartiklar från SVT, The Guardian och NRK beskriver alla samma problem. En artikel från läkemedelsföretagets egna hemsida säger att läkemedlet är helt säkert.',
     source: 'LäkemedelsföretagetAB.se',
     sourceType: 'Företagets egna hemsida',
@@ -104,6 +108,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   },
   {
     id: 'm7-4',
+    discussionPrompt: 'Kan man ljuga med sann statistik? Hur skyddar man sig mot halva sanningar?',
     scenario: 'En hemsida publicerar statistik om invandring. Siffrorna stämmer, men artikeln väljer bara ut de negativa statistikarna och nämner aldrig de positiva. Rubriken lyder: "Sanningen de inte vill att du ska veta."',
     source: 'SanningsBladet.se',
     sourceType: 'Opinionswebbplats',
@@ -122,6 +127,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   },
   {
     id: 'm7-5',
+    discussionPrompt: 'Hur använder ni Wikipedia i skolan idag? Vad kommer ni göra annorlunda efter den här frågan?',
     scenario: 'Du hittar en Wikipedia-artikel om en historisk händelse. Den är välskriven, har 47 källhänvisningar och senast redigerades för 2 dagar sedan. Du ser att ämnet är "omtvistat" enligt en banner längst upp.',
     source: 'Wikipedia',
     sourceType: 'Fri encyklopedi',
@@ -140,6 +146,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   },
   {
     id: 'm7-6',
+    discussionPrompt: 'Varför stänger vissa annonsörer av kommentarsfältet? Vad vill de undvika?',
     scenario: 'En annons på Instagram påstår att en kändis rekommenderar ett kosttillskott och att "100% av användarna ser resultat på 2 veckor". Annonsen har ingen länk till studier och kommentarsfältet är avstängt.',
     source: 'Instagram-annons',
     sourceType: 'Betald reklam',

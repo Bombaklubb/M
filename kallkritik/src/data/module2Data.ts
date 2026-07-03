@@ -6,6 +6,7 @@ export const MODULE2_TEXTS: FindErrorText[] = [
     title: 'Sverige – fakta om landet',
     topic: 'Geografi',
     hint: 'Tänk på: Var på kartan ligger Sverige? Hur många bor i Sverige ungefär? Vad är landets huvudstad?',
+    discussionPrompt: 'Vilka av felen kunde ni ha upptäckt med rent rimlighetstänk – utan att slå upp något?',
     segments: [
       { text: 'Sverige är ett land i ', isError: false },
       { text: 'södra Europa', isError: true, errorExplanation: 'Sverige ligger i NORRA Europa, inte södra.' },
@@ -21,6 +22,7 @@ export const MODULE2_TEXTS: FindErrorText[] = [
     title: 'Internets historia',
     topic: 'Teknik & historia',
     hint: 'Tänk på: Vem uppfann internet? Vem skapade World Wide Web? Hur många webbsidor finns det idag – miljoner eller tusentals?',
+    discussionPrompt: 'Varför tror ni AI blandar ihop kända personer – som vem som uppfann vad?',
     segments: [
       { text: 'Internet uppfanns av ', isError: false },
       { text: 'Steve Jobs', isError: true, errorExplanation: 'Internet skapades inte av Steve Jobs. Det växte fram ur det militära nätverket ARPANET på 1960–70-talet, skapat av amerikanska forskare som Vint Cerf och Bob Kahn.' },
@@ -36,6 +38,7 @@ export const MODULE2_TEXTS: FindErrorText[] = [
     title: 'Albert Einstein – fysikens gigant',
     topic: 'Vetenskap & historia',
     hint: 'Tänk på: Uppfinns vetenskapliga teorier? Vad fick Einstein Nobelpriset för – var det relativitetsteorin? Var Einstein fysiker eller matematiker?',
+    discussionPrompt: 'Hur kollar man snabbast en faktauppgift om en historisk person? Kom överens om ett steg-för-steg-sätt.',
     segments: [
       { text: 'Albert Einstein var en tysk-schweizisk fysiker som levde 1879–1955. Han är mest känd för att ha ', isError: false },
       { text: 'uppfunnit', isError: true, errorExplanation: 'Man "uppfinner" inte vetenskapliga teorier – Einstein "formulerade" eller "utvecklade" relativitetsteorin. Teorier är tankekonstruktioner, inte uppfinningar.' },

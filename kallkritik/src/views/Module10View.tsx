@@ -4,7 +4,7 @@ import { ChevronRight, Zap, CheckCircle2, XCircle, Lightbulb, Eye } from 'lucide
 import { Button } from '@/components/ui/Button';
 import { ResultSummary } from '@/components/ResultSummary';
 import { DiscussionPrompt } from '@/components/DiscussionPrompt';
-import { MODULE4_QUESTIONS, AI_SIGNS } from '@/data/module4Data';
+import { MODULE10_QUESTIONS, LATERAL_STEPS } from '@/data/module10Data';
 
 interface ModuleViewProps {
   onComplete: (score: number, xpEarned: number, badgeName?: string) => void;
@@ -13,15 +13,13 @@ interface ModuleViewProps {
 
 type Phase = 'intro' | 'learn' | 'game' | 'result';
 
-const signColor: Record<string, { bg: string; text: string }> = {
-  hander:    { bg: 'bg-violet-100 border-violet-300', text: 'text-violet-700' },
-  text:      { bg: 'bg-amber-100 border-amber-300',   text: 'text-amber-700' },
-  ansikten:  { bg: 'bg-rose-100 border-rose-300',     text: 'text-rose-700' },
-  ljus:      { bg: 'bg-sky-100 border-sky-300',       text: 'text-sky-700' },
-  bakgrund:  { bg: 'bg-emerald-100 border-emerald-300', text: 'text-emerald-700' },
+const stepColor: Record<string, { bg: string; text: string }> = {
+  stanna: { bg: 'bg-rose-100 border-rose-300', text: 'text-rose-700' },
+  flik:   { bg: 'bg-sky-100 border-sky-300', text: 'text-sky-700' },
+  sok:    { bg: 'bg-lime-100 border-lime-300', text: 'text-lime-700' },
 };
 
-export function Module4View({ onComplete, onExit }: ModuleViewProps) {
+export function Module10View({ onComplete, onExit }: ModuleViewProps) {
   const [phase, setPhase] = useState<Phase>('intro');
   const [learnStep, setLearnStep] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,11 +27,11 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
   const [revealed, setRevealed] = useState(false);
   const [scores, setScores] = useState<boolean[]>([]);
 
-  const questions = MODULE4_QUESTIONS;
+  const questions = MODULE10_QUESTIONS;
   const current = questions[currentIndex];
   const correctCount = scores.filter(Boolean).length;
   const xpEarned = correctCount * 15;
-  const earnedBadge = correctCount >= 5 ? { name: 'Bilddetektiven', icon: '🖼️' } : null;
+  const earnedBadge = correctCount >= 5 ? { name: 'Sidledsläsaren', icon: '🧭' } : null;
 
   function handleAnswer(optId: string) {
     if (revealed) return;
@@ -65,8 +63,8 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
   if (phase === 'result') {
     return (
       <ResultSummary
-        moduleName="Fakebilder & Deepfakes"
-        moduleId={4}
+        moduleName="Sök i sidled"
+        moduleId={10}
         score={correctCount}
         totalQuestions={questions.length}
         xpEarned={xpEarned}
@@ -89,29 +87,32 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
         >
           <div className="clay-card p-8 text-center">
             <motion.div
-              animate={{ rotate: [0, -8, 8, -8, 0] }}
-              transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatDelay: 2.5 }}
+              animate={{ rotate: [0, 12, -12, 0] }}
+              transition={{ delay: 0.5, duration: 1.2, repeat: Infinity, repeatDelay: 3 }}
               className="text-7xl mb-4"
             >
-              🖼️
+              🧭
             </motion.div>
             <h1 className="text-2xl font-extrabold text-gray-800 mb-2" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-              Fakebilder & Deepfakes
+              Sök i sidled
             </h1>
             <p className="text-gray-500 font-semibold mb-5 leading-relaxed text-sm">
-              AI kan skapa bilder som ser helt äkta ut. Men det finns alltid små ledtrådar som avslöjar dem.
-              Lär dig de <span className="text-rose-600 font-bold">5 tecknen</span> och bli en bilddetektiv!
+              Professionella faktagranskare läser inte mer PÅ en misstänkt sida – de lämnar den och
+              kollar vad <span className="text-lime-600 font-bold">andra</span> säger.
+              Lär dig metoden i tre steg!
             </p>
 
             <div className="grid grid-cols-1 gap-2 mb-5 text-left">
-              {AI_SIGNS.map(sign => {
-                const c = signColor[sign.key];
+              {LATERAL_STEPS.map((step, i) => {
+                const c = stepColor[step.key];
                 return (
-                  <div key={sign.key} className={`${c.bg} border-2 rounded-2xl p-2.5 flex items-center gap-2.5`}>
-                    <span className="text-xl">{sign.icon}</span>
+                  <div key={step.key} className={`${c.bg} border-2 rounded-2xl p-2.5 flex items-center gap-2.5`}>
+                    <span className="text-xl">{step.icon}</span>
                     <div className="flex-1">
-                      <span className={`font-extrabold text-xs ${c.text}`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>{sign.title}</span>
-                      <span className="text-xs text-gray-500 font-medium"> – {sign.question}</span>
+                      <span className={`font-extrabold text-xs ${c.text}`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
+                        Steg {i + 1}: {step.title}
+                      </span>
+                      <span className="text-xs text-gray-500 font-medium"> – {step.question}</span>
                     </div>
                   </div>
                 );
@@ -126,12 +127,12 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
             <div className="flex gap-3">
               <Button variant="secondary" onClick={onExit} size="lg" className="flex-1">Avsluta</Button>
               <Button variant="primary" onClick={() => setPhase('learn')} size="lg" className="flex-1">
-                Lär dig tecknen <ChevronRight className="w-4 h-4 ml-1" />
+                Lär dig metoden <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
             </div>
             <button
               onClick={() => setPhase('game')}
-              className="mt-3 w-full text-xs font-bold text-rose-400 hover:text-rose-600 transition-colors cursor-pointer"
+              className="mt-3 w-full text-xs font-bold text-lime-600 hover:text-lime-700 transition-colors cursor-pointer"
             >
               Hoppa direkt till frågorna →
             </button>
@@ -143,20 +144,19 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
 
   /* ── LEARN ── */
   if (phase === 'learn') {
-    const sign = AI_SIGNS[learnStep];
-    const c = signColor[sign.key];
-    const isLast = learnStep === AI_SIGNS.length - 1;
+    const step = LATERAL_STEPS[learnStep];
+    const c = stepColor[step.key];
+    const isLast = learnStep === LATERAL_STEPS.length - 1;
 
     return (
       <div className="min-h-[60vh] flex items-center justify-center px-4 py-8">
         <div className="w-full max-w-md">
-          {/* Progress dots */}
           <div className="flex justify-center gap-2 mb-6">
-            {AI_SIGNS.map((_, i) => (
+            {LATERAL_STEPS.map((_, i) => (
               <div
                 key={i}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  i === learnStep ? 'w-8 bg-rose-500' : i < learnStep ? 'w-2 bg-rose-300' : 'w-2 bg-gray-200'
+                  i === learnStep ? 'w-8 bg-lime-500' : i < learnStep ? 'w-2 bg-lime-300' : 'w-2 bg-gray-200'
                 }`}
               />
             ))}
@@ -171,24 +171,23 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
               transition={{ duration: 0.28, ease: 'easeOut' }}
             >
               <div className="clay-card p-7 text-center">
-                <div className="text-6xl mb-3">{sign.icon}</div>
+                <div className="text-6xl mb-3">{step.icon}</div>
                 <div className="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">
-                  Tecken {learnStep + 1} av {AI_SIGNS.length}
+                  Steg {learnStep + 1} av {LATERAL_STEPS.length}
                 </div>
                 <h2 className="text-2xl font-extrabold text-gray-800 mb-1" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-                  {sign.title}
+                  {step.title}
                 </h2>
                 <div className={`inline-block text-sm font-bold px-3 py-1 rounded-full border-2 mb-5 ${c.bg} ${c.text}`}>
-                  {sign.question}
+                  {step.question}
                 </div>
-                <p className="text-gray-500 font-semibold text-sm leading-relaxed mb-5">{sign.desc}</p>
+                <p className="text-gray-500 font-semibold text-sm leading-relaxed mb-5">{step.desc}</p>
 
-                {/* Checklist */}
                 <div className="text-left bg-gray-50 border-2 border-gray-100 rounded-2xl p-4 mb-6 space-y-2.5">
-                  <div className="text-xs font-extrabold text-gray-400 uppercase tracking-wide mb-1">Så här granskar du:</div>
-                  {sign.checks.map((check, i) => (
+                  <div className="text-xs font-extrabold text-gray-400 uppercase tracking-wide mb-1">Så här gör du:</div>
+                  {step.checks.map((check, i) => (
                     <div key={i} className="flex items-start gap-2 text-xs">
-                      <Eye className="w-4 h-4 text-rose-400 mt-0.5 shrink-0" />
+                      <Eye className="w-4 h-4 text-lime-500 mt-0.5 shrink-0" />
                       <span className="text-gray-600 font-medium leading-relaxed">{check}</span>
                     </div>
                   ))}
@@ -207,7 +206,7 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
                   {isLast ? (
                     <>Starta quiz <Zap className="w-4 h-4" /></>
                   ) : (
-                    <>Nästa: {AI_SIGNS[learnStep + 1].title} <ChevronRight className="w-4 h-4" /></>
+                    <>Nästa: {LATERAL_STEPS[learnStep + 1].title} <ChevronRight className="w-4 h-4" /></>
                   )}
                 </Button>
               </div>
@@ -223,7 +222,6 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6">
-      {/* Progress */}
       <div className="mb-5">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm font-bold text-gray-500">Fråga {currentIndex + 1} av {questions.length}</span>
@@ -231,10 +229,10 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
             <Zap className="w-3.5 h-3.5" />{xpEarned} XP
           </span>
         </div>
-        <div className="h-3 bg-rose-50 rounded-full overflow-hidden border-2 border-rose-100">
+        <div className="h-3 bg-lime-50 rounded-full overflow-hidden border-2 border-lime-100">
           <motion.div
             className="h-full rounded-full"
-            style={{ background: 'linear-gradient(90deg, #f43f5e, #ec4899)' }}
+            style={{ background: 'linear-gradient(90deg, #84cc16, #22c55e)' }}
             animate={{ width: `${(currentIndex / questions.length) * 100}%` }}
             transition={{ duration: 0.4 }}
           />
@@ -250,39 +248,32 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
           transition={{ duration: 0.28, ease: 'easeOut' }}
           className="space-y-4"
         >
-          {/* Large illustration */}
-          <div className={`relative w-full rounded-[20px] border-[3px] border-gray-100 bg-gradient-to-br ${current.imageBg} overflow-hidden shadow-[0_6px_0_0_rgba(0,0,0,0.06)]`} style={{ height: 200 }}>
+          <div className={`relative w-full rounded-[20px] border-[3px] border-gray-100 bg-gradient-to-br ${current.imageBg} overflow-hidden shadow-[0_6px_0_0_rgba(0,0,0,0.06)]`} style={{ height: 160 }}>
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
                 initial={{ scale: 0.7, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.15, type: 'spring', stiffness: 200 }}
-                className="text-[6rem] select-none pointer-events-none drop-shadow-lg leading-none"
+                className="text-[5rem] select-none pointer-events-none drop-shadow-lg leading-none"
               >
                 {current.imageEmoji}
               </motion.div>
             </div>
-            <div className="absolute top-3 left-3 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full px-2.5 py-1">
-              <span className="text-[10px] font-extrabold text-gray-500">EXEMPELBILD</span>
-            </div>
           </div>
 
-          {/* Scenario */}
-          <div className="bg-gray-50 border-l-4 border-rose-400 rounded-r-xl px-4 py-3">
+          <div className="bg-gray-50 border-l-4 border-lime-400 rounded-r-xl px-4 py-3">
             <p className="text-sm text-gray-600 font-medium leading-relaxed">{current.scenario}</p>
           </div>
 
-          {/* Question */}
           <h3 className="font-extrabold text-gray-800 text-base" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
             {current.question}
           </h3>
 
-          {/* Options */}
           <div className="space-y-2">
             {current.options.map((opt, i) => {
               let cls = 'w-full text-left clay-card p-4 text-sm font-semibold text-gray-700 cursor-pointer transition-all duration-200';
               if (!revealed) {
-                cls += ' hover:border-rose-300 hover:shadow-[0_8px_0_0_rgba(244,63,94,0.25)] hover:-translate-y-0.5 active:translate-y-1';
+                cls += ' hover:border-lime-300 hover:shadow-[0_8px_0_0_rgba(132,204,22,0.3)] hover:-translate-y-0.5 active:translate-y-1';
               } else if (opt.id === current.correctId) {
                 cls = 'w-full text-left rounded-[20px] border-[3px] border-emerald-400 bg-emerald-50 shadow-[0_4px_0_0_rgba(16,185,129,0.3)] p-4 text-sm font-bold text-emerald-700';
               } else if (opt.id === selected && opt.id !== current.correctId) {
@@ -318,7 +309,6 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
             })}
           </div>
 
-          {/* Reveal */}
           <AnimatePresence>
             {revealed && (
               <motion.div

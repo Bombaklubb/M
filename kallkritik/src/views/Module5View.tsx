@@ -4,6 +4,7 @@ import { CheckCircle2, XCircle, ChevronRight, Zap, Bot, AlertTriangle, Info } fr
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ResultSummary } from '@/components/ResultSummary';
+import { DiscussionPrompt } from '@/components/DiscussionPrompt';
 import { MODULE5_ITEMS } from '@/data/module5Data';
 
 interface ModuleViewProps {
@@ -75,6 +76,7 @@ export function Module5View({ onComplete, onExit }: ModuleViewProps) {
     return (
       <ResultSummary
         moduleName="AI-hallucinationer"
+        moduleId={5}
         score={correctScore}
         totalQuestions={items.length}
         xpEarned={xpEarned}
@@ -354,6 +356,8 @@ export function Module5View({ onComplete, onExit }: ModuleViewProps) {
                     <p className="text-sm text-foreground leading-relaxed">{currentItem.correctAnswer}</p>
                   </motion.div>
                 )}
+
+                <DiscussionPrompt text={currentItem.discussionPrompt} />
 
                 <Button
                   variant="primary"
