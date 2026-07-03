@@ -4,6 +4,7 @@ import FramedAvatar from './FramedAvatar';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS, shopAvatarGlobalIndex } from '../data/avatars';
 import EffectOverlay from './EffectOverlay';
+import { Confetti } from './magicui/confetti';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_TITLES, SHOP_BACKGROUNDS, SHOP_EFFECTS,
   RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity, type ShopBackground,
@@ -167,6 +168,8 @@ export default function ShopView() {
     kind: ShopKind; key: string | number; price: number; name: string; preview: React.ReactNode;
   } | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  // Räknare så att konfettin startar om vid varje nytt köp.
+  const [celebrateKey, setCelebrateKey] = useState(0);
 
   if (!currentStudent || !shop) return null;
   const sid = currentStudent.id;
@@ -187,6 +190,7 @@ export default function ShopView() {
     const res = buyItem(sid, confirm.kind, confirm.key, confirm.price);
     if (res.ok) {
       showToast(`Du köpte ${confirm.name}! 🎉`);
+      setCelebrateKey(k => k + 1);
       refresh();
     } else if (res.reason === 'insufficient') {
       showToast('Du har inte råd ännu.');
@@ -447,6 +451,9 @@ export default function ShopView() {
           onCancel={() => setConfirm(null)}
         />
       )}
+
+      {/* Konfetti vid köp */}
+      {celebrateKey > 0 && <Confetti key={celebrateKey} active duration={2500} />}
 
       {/* Toast */}
       {toast && (

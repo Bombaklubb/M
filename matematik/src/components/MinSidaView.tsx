@@ -7,7 +7,7 @@ import CollectionView from './CollectionView';
 import EffectOverlay from './EffectOverlay';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS } from '../data/avatars';
-import { GRADE_LABELS } from '../types';
+import { GRADE_LABELS, LEVEL_NAMES, LEVEL_THRESHOLDS } from '../types';
 import { getPoints, initPoints } from '../utils/storage';
 import { loadShop } from '../utils/shopStorage';
 import { TITLE_MAP, BACKGROUND_MAP } from '../data/shop';
@@ -104,6 +104,33 @@ export default function MinSidaView() {
             🛒 Affär
           </button>
           </div>
+
+          {/* Nivåmätare */}
+          {(() => {
+            const level = points.level;
+            const isMax = level >= LEVEL_THRESHOLDS.length - 1;
+            const base = LEVEL_THRESHOLDS[level];
+            const nextAt = isMax ? base : LEVEL_THRESHOLDS[level + 1];
+            const pct = isMax ? 100 : Math.min(100, Math.round(((points.total - base) / (nextAt - base)) * 100));
+            return (
+              <div className="relative z-10 mt-4">
+                <div className="flex items-center justify-between text-xs mb-1.5">
+                  <span className="text-white font-bold">
+                    ⚡ Nivå {level + 1} · {LEVEL_NAMES[level] ?? LEVEL_NAMES[LEVEL_NAMES.length - 1]}
+                  </span>
+                  <span className="text-white/60">
+                    {isMax ? 'Maxnivå! 🏆' : `${nextAt - points.total} ⭐ till nästa nivå`}
+                  </span>
+                </div>
+                <div className="h-2.5 bg-white/15 rounded-full overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all duration-500"
+                    style={{ width: `${pct}%`, background: 'linear-gradient(90deg,#fbbf24,#f97316)' }}
+                  />
+                </div>
+              </div>
+            );
+          })()}
         </div>
 
         {/* Tabs */}

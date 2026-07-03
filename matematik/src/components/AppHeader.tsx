@@ -101,6 +101,21 @@ export default function AppHeader() {
               <span className="font-bold text-sm" style={{ color: '#ea580c' }}>{points.total}</span>
             </div>
 
+            {/* Streak – dagar i rad */}
+            {points.streak > 0 && (
+              <div
+                className="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full"
+                style={{
+                  background: 'rgba(251, 146, 60, 0.12)',
+                  border: '1px solid rgba(251, 146, 60, 0.40)',
+                }}
+                title={`${points.streak} dagar i rad – fortsätt imorgon för att behålla din streak!`}
+              >
+                <span className="text-sm">🔥</span>
+                <span className="font-bold text-sm" style={{ color: '#ea580c' }}>{points.streak}</span>
+              </div>
+            )}
+
             {/* Avatar + namn */}
             <button
               onClick={() => setView('my-page')}
