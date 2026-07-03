@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef, use } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
-import { loadStudent } from "@/lib/storage";
+import { loadStudent, addGamePoints } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
 import { WORD_PAIRS, shuffle } from "@/lib/gameVocab";
 import type { StudentData } from "@/lib/types";
@@ -72,6 +72,7 @@ function MemoryGame({ stageId, stage, student }: {
   const [matches, setMatches]       = useState(0);
   const [seconds, setSeconds]       = useState(0);
   const [locked, setLocked]         = useState(false);
+  const [awarded, setAwarded]       = useState<number | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startRef = useRef(0);
 
@@ -95,6 +96,7 @@ function MemoryGame({ stageId, stage, student }: {
     setMatches(0);
     setSeconds(0);
     setLocked(false);
+    setAwarded(null);
     setPhase("playing");
   }, [stageId]);
 
@@ -142,6 +144,13 @@ function MemoryGame({ stageId, stage, student }: {
   const secs = seconds % 60;
   const timeStr = mins > 0 ? `${mins}:${secs.toString().padStart(2, "0")}` : `${secs}s`;
   const score = Math.max(10, 200 - moves * 3 - Math.floor(seconds / 5));
+
+  // Spara poängen till elevens konto vid vinst (en gång per runda)
+  useEffect(() => {
+    if (phase === "victory" && awarded === null) {
+      setAwarded(addGamePoints("memory", score).awarded);
+    }
+  }, [phase, awarded, score]);
 
   const gridCols = difficulty === "hard" ? "grid-cols-5" : "grid-cols-4";
 
@@ -199,7 +208,12 @@ function MemoryGame({ stageId, stage, student }: {
           <div className="max-w-sm w-full text-center">
             <div className="text-7xl mb-4 animate-bounce">🎉</div>
             <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1">Grattis!</h1>
-            <p className="text-gray-500 dark:text-gray-400 mb-6">Du hittade alla {totalPairs} par!</p>
+            <p className="text-gray-500 dark:text-gray-400 mb-3">Du hittade alla {totalPairs} par!</p>
+            {awarded !== null && awarded > 0 && (
+              <p className="inline-block bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
+                +{awarded} ⭐ sparade till dina poäng!
+              </p>
+            )}
 
             <div className={`border-3 ${stage!.borderClass} rounded-2xl p-5 mb-6 grid grid-cols-3 gap-3 text-center`}
               style={{ boxShadow: "0 4px 0 0 rgba(0,0,0,0.08)" }}>

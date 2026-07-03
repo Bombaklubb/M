@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent, loadGamification, updateStreak } from "@/lib/storage";
 import { getAvatar } from "@/lib/avatars";
+import { getLevel } from "@/lib/levels";
 import { getEquippedFrame, getWalletBalance } from "@/lib/shopStorage";
 import FramedAvatar from "@/components/ui/FramedAvatar";
 import type { StudentData } from "@/lib/types";
@@ -146,6 +147,22 @@ export default function Header({ student, onLogout }: HeaderProps) {
                 </span>
               )}
             </Link>
+
+            {/* Nivå */}
+            {(() => {
+              const lvl = getLevel(student.totalPoints);
+              return (
+                <Link
+                  href="/profile"
+                  title={`Nivå ${lvl.level} – ${lvl.title}`}
+                  className="hidden sm:flex items-center gap-1 bg-gradient-to-b from-violet-50 to-violet-100 dark:bg-violet-900/30 border-2 border-violet-300 dark:border-violet-700 px-2.5 py-1.5 rounded-xl hover:border-violet-400 hover:scale-105 transition-all cursor-pointer touch-manipulation"
+                  style={{ boxShadow: "0 3px 0 0 rgba(139, 92, 246, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
+                >
+                  <span className="text-base leading-none">🏅</span>
+                  <span className="text-sm font-black text-violet-700 dark:text-violet-400">Nv {lvl.level}</span>
+                </Link>
+              );
+            })()}
 
             {/* Streak */}
             {streak > 0 && (
