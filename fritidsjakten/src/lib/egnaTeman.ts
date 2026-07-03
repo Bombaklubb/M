@@ -1,5 +1,15 @@
 import type { Tema } from '../types'
 
+// Generell hjälpare: läs JSON från localStorage med fallback vid fel/saknat värde.
+export function lasLS<T>(key: string, fallback: T): T {
+  try {
+    const raw = localStorage.getItem(key)
+    return raw ? (JSON.parse(raw) as T) : fallback
+  } catch {
+    return fallback
+  }
+}
+
 // Delad lagring/laddning av pedagogens egna teman (Temabanken + Veckoplaneraren).
 export const EGNA_TEMAN_KEY = 'fritids_egna_teman'
 

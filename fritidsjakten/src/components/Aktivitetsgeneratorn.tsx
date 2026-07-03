@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Users, Clock, MapPin, Package, RefreshCw } from 'lucide-react'
 import { AKTIVITETER } from '../data/aktiviteter'
+import { lasLS } from '../lib/egnaTeman'
 import type { Plats } from '../types'
 
 // Alla material som förekommer i banken (utöver "inget material").
@@ -8,12 +9,29 @@ const ALLT_MATERIAL = Array.from(
   new Set(AKTIVITETER.flatMap((a) => a.material)),
 ).sort((a, b) => a.localeCompare(b, 'sv'))
 
+// Sparade filterval mellan besök.
+const FILTER_KEY = 'fritids_generator_filter'
+
+interface SparadeFilter {
+  plats: Plats | 'alla'
+  elever: number
+  minuter: number
+  valtMaterial: string[]
+  endastUtanMaterial: boolean
+}
+
 export default function Aktivitetsgeneratorn() {
-  const [plats, setPlats] = useState<Plats | 'alla'>('alla')
-  const [elever, setElever] = useState(25)
-  const [minuter, setMinuter] = useState(20)
-  const [valtMaterial, setValtMaterial] = useState<string[]>([])
-  const [endastUtanMaterial, setEndastUtanMaterial] = useState(false)
+  const sparat = useMemo(() => lasLS<Partial<SparadeFilter>>(FILTER_KEY, {}), [])
+  const [plats, setPlats] = useState<Plats | 'alla'>(sparat.plats ?? 'alla')
+  const [elever, setElever] = useState(sparat.elever ?? 25)
+  const [minuter, setMinuter] = useState(sparat.minuter ?? 20)
+  const [valtMaterial, setValtMaterial] = useState<string[]>(sparat.valtMaterial ?? [])
+  const [endastUtanMaterial, setEndastUtanMaterial] = useState(sparat.endastUtanMaterial ?? false)
+
+  useEffect(() => {
+    const filter: SparadeFilter = { plats, elever, minuter, valtMaterial, endastUtanMaterial }
+    localStorage.setItem(FILTER_KEY, JSON.stringify(filter))
+  }, [plats, elever, minuter, valtMaterial, endastUtanMaterial])
 
   const traffar = useMemo(() => {
     return AKTIVITETER.filter((a) => {
