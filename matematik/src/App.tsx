@@ -18,6 +18,7 @@ import MinSidaView from './components/MinSidaView';
 import SluttestView from './components/SluttestView';
 import KistorView from './components/KistorView';
 import ShopView from './components/ShopView';
+import DailyChallengeView from './components/DailyChallengeView';
 import GamesHub from './components/games/GamesHub';
 import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
@@ -129,6 +130,7 @@ function AppInner() {
           case 'sluttest':          return <SluttestView />;
           case 'kistor':            return <KistorView />;
           case 'shop':              return <ShopView />;
+          case 'daily-challenge':   return <DailyChallengeView />;
           case 'games':             return <GamesHub />;
           case 'game-time-attack':  return <TimeAttackGame />;
           case 'game-collect-coins': return <CollectCoinsGame />;

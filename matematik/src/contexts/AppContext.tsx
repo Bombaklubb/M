@@ -25,7 +25,7 @@ export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
   | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
-  | 'sluttest' | 'kistor' | 'shop'
+  | 'sluttest' | 'kistor' | 'shop' | 'daily-challenge'
   | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins'
   | 'game-memory' | 'game-hangman';
 

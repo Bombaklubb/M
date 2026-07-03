@@ -8,6 +8,7 @@ import {
   openRubinChest, openSmaragdChest, openDiamantChest, openHemligChest,
 } from '../utils/chestStorage';
 import { addPoints, getPoints, initPoints } from '../utils/storage';
+import { Confetti } from './magicui/confetti';
 import type { MattChest, MattGamificationData, ChestType } from '../types';
 
 // ─── Trophy Shelf ─────────────────────────────────────────────────────────────
@@ -635,11 +636,15 @@ export default function KistorView() {
       `}</style>
 
       {rewardState && (
-        <RewardPopup
-          description={rewardState.description}
-          chestType={rewardState.chestType}
-          onClose={() => setRewardState(null)}
-        />
+        <>
+          {/* Konfetti när en kista öppnas */}
+          <Confetti active duration={2800} />
+          <RewardPopup
+            description={rewardState.description}
+            chestType={rewardState.chestType}
+            onClose={() => setRewardState(null)}
+          />
+        </>
       )}
 
       {mysteryDescription && (
