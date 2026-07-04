@@ -1225,6 +1225,65 @@
     }
   },
   {
+    "id": "ak2-horses-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "horses",
+    "title": "The Pony at the Farm",
+    "text": "Lisa visits her grandma's farm every summer. Her favourite animal is a small brown pony called Nutmeg.\n\nEvery morning, Lisa gives Nutmeg an apple. The pony makes a happy sound when he sees her. Then Lisa brushes his soft coat until it shines.\n\nOne day, Nutmeg was not in his field. Lisa looked everywhere. She looked in the barn. She looked behind the big tree. No pony!\n\nThen she heard a sound from the garden. Nutmeg was standing by the apple tree, eating apples from the ground. His tummy was very round.\n\n\"Oh Nutmeg!\" Lisa laughed. \"You found the apples all by yourself!\"\n\nGrandma smiled and said, \"Tomorrow we will build a better gate.\"",
+    "imageUrl": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the pony's name?",
+        "options": [
+          "Apple",
+          "Nutmeg",
+          "Brownie",
+          "Lisa"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does Lisa give the pony every morning?",
+        "options": [
+          "A carrot",
+          "Some hay",
+          "An apple",
+          "Sugar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where did Lisa find Nutmeg?",
+        "options": [
+          "In the barn",
+          "Behind the big tree",
+          "By the apple tree in the garden",
+          "In his field"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why will Grandma build a better gate?",
+        "options": [
+          "The old gate is pretty",
+          "So Nutmeg cannot escape again",
+          "Because Lisa asked for it",
+          "To keep the apples safe from birds"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 125,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak2-orig-001",
     "grade": 2,
     "genre": "fiction",
@@ -2363,6 +2422,124 @@
     ],
     "meta": {
       "wordCount": 31,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak3-dance-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "dance",
+    "title": "Dancing in the Rain",
+    "text": "Maja loved to dance more than anything. She danced in the kitchen. She danced on the way to school. She even danced while brushing her teeth.\n\nBut at the school disco, Maja stood still by the wall. Everyone was watching. What if they laughed at her?\n\nHer little brother Ville did not think about such things. He ran to the middle of the floor and danced like a happy robot. Some kids giggled. Ville did not care. He was having too much fun.\n\nMaja watched him. Ville was not the best dancer in the room. But he was the happiest.\n\nSlowly, Maja walked out on the floor. She started with a small step. Then a spin. Then a big jump. Soon she forgot that anyone was watching.\n\nWhen the music stopped, a girl from her class came up to her. \"You dance so well!\" she said. \"Can you teach me that spin?\"\n\nMaja smiled. Dancing was even more fun with a friend.",
+    "imageUrl": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Maja stand at the school disco?",
+        "options": [
+          "In the middle of the floor",
+          "By the wall",
+          "On the stage",
+          "By the door"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How did Ville dance?",
+        "options": [
+          "Like a happy robot",
+          "Like a ballerina",
+          "Very slowly",
+          "He did not dance"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Maja stand still at first?",
+        "options": [
+          "She did not like the music",
+          "She was afraid people would laugh at her",
+          "Her feet hurt",
+          "She did not know how to dance"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What did Maja learn from her brother?",
+        "options": [
+          "How to dance like a robot",
+          "That dancing is only for small children",
+          "That having fun matters more than what others think",
+          "That it is best to dance alone"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 170,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak3-football-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "football",
+    "title": "The Last Penalty",
+    "text": "It was the final match of the school cup. The score was 2–2, and now there would be a penalty shoot-out.\n\nOmar's team went first. Three players scored. The other team also scored three times. Now it was Omar's turn to take the last penalty.\n\nHis legs felt like spaghetti. The goalkeeper looked very big. The goal looked very small.\n\n\"You can do it!\" shouted his best friend Elsa from the side.\n\nOmar took a deep breath. He remembered what his coach always said: \"Don't look at the goalkeeper. Pick your corner and trust your foot.\"\n\nHe ran up and kicked the ball low into the left corner. The goalkeeper jumped the wrong way. Goal!\n\nHis whole team ran to him and everyone jumped and shouted. Omar had never smiled so much in his life. But the best part was not the trophy. The best part was when Elsa said, \"I knew you could do it.\"",
+    "imageUrl": "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was the score before the penalty shoot-out?",
+        "options": [
+          "1–1",
+          "2–2",
+          "3–3",
+          "2–1"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the coach always say?",
+        "options": [
+          "Kick as hard as you can",
+          "Look at the goalkeeper",
+          "Pick your corner and trust your foot",
+          "Always shoot high"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does 'his legs felt like spaghetti' mean?",
+        "options": [
+          "He was very hungry",
+          "He was very nervous",
+          "He had hurt his legs",
+          "He was tired from running"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What was the best part for Omar?",
+        "options": [
+          "Winning the trophy",
+          "Scoring the goal",
+          "His friend's support and belief in him",
+          "The goalkeeper jumping the wrong way"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 165,
       "readingTime": 1
     }
   },
@@ -3594,6 +3771,65 @@
     "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak4-gaming-001",
+    "grade": 4,
+    "genre": "fiction",
+    "theme": "gaming",
+    "title": "The Tournament",
+    "text": "Leon had practised for weeks. The school was holding a video game tournament, and the game was his favourite racing game. He knew every track, every shortcut, every secret boost.\n\nIn the first rounds, Leon won easily. But in the final, he met Sara from year 5. She was fast — really fast. On the last lap of the final race, they were side by side.\n\nThen it happened. Sara's controller stopped working. Her kart rolled slowly to a stop, and Leon's kart flew past. He was going to win!\n\nBut it did not feel right. Winning because someone's controller broke was not really winning.\n\nLeon stopped his kart right before the finish line. \"Get a new controller,\" he said. \"Let's finish the race properly.\"\n\nThe whole room went quiet. Sara plugged in a new controller, and they raced the last lap again. Sara won by half a second.\n\nLeon got the silver medal. But when the teacher told the whole school what he had done, the applause for second place was louder than the applause for first. Some things matter more than winning.",
+    "imageUrl": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What kind of game was the tournament in?",
+        "options": [
+          "A football game",
+          "A racing game",
+          "A building game",
+          "A puzzle game"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What happened to Sara in the final?",
+        "options": [
+          "She fell off her chair",
+          "She chose the wrong track",
+          "Her controller stopped working",
+          "She gave up"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did Leon stop before the finish line?",
+        "options": [
+          "His controller also broke",
+          "He wanted to win fairly, not because of bad luck",
+          "He was tired of the game",
+          "The teacher told him to stop"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the message of the story?",
+        "options": [
+          "Practice makes perfect",
+          "Fair play matters more than winning",
+          "Never trust your controller",
+          "Older students are always better at games"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 195,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak4-orig-001",
     "grade": 4,
     "genre": "fiction",
@@ -4735,6 +4971,124 @@
     "meta": {
       "wordCount": 154,
       "readingTime": 1
+    }
+  },
+  {
+    "id": "ak5-gaming-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "gaming",
+    "title": "How Video Games Are Made",
+    "text": "Have you ever wondered how your favourite video game was created? Behind every game is a team of people with very different skills, often working together for several years.\n\nIt all starts with an idea. Game designers decide what the game will be about: the story, the characters, and the rules. They ask questions like: What makes this game fun? What can the player do? What happens if the player fails?\n\nThen the artists get to work. They draw the characters, build the worlds, and decide how everything should look — from giant mountains to the smallest button on the screen. Musicians and sound designers create the music and sound effects that make the game feel alive.\n\nProgrammers write the code that makes everything work. Code is a set of instructions that tells the computer exactly what to do — for example, what happens when you press a button, or how high a character can jump.\n\nBefore a game is released, testers play it over and over to find bugs. A bug is a mistake in the game, like a door that will not open or a character that gets stuck in a wall. The team fixes the bugs, tests again, and polishes the game until it is ready.\n\nSmall games can be made by just one or two people. The biggest games are built by teams of hundreds. But every game, big or small, starts the same way: with an idea and someone who wants to bring it to life.",
+    "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What do game designers decide?",
+        "options": [
+          "The price of the game",
+          "The story, characters and rules",
+          "Which computers can run the game",
+          "How many people buy the game"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is a bug in a video game?",
+        "options": [
+          "A hidden insect character",
+          "A secret level",
+          "A mistake in the game",
+          "A type of code"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do testers play the game over and over?",
+        "options": [
+          "Because it is their favourite game",
+          "To find as many mistakes as possible before release",
+          "To beat the programmers' high scores",
+          "To learn how to code"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about making games?",
+        "options": [
+          "Only huge teams can make games",
+          "It requires many different skills working together",
+          "Programming is the only important job",
+          "Games are usually finished in a few weeks"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 245,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-horses-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "horses",
+    "title": "Taking Care of a Horse",
+    "text": "Many people dream of having their own horse, but taking care of one is a big responsibility. A horse needs attention every single day, all year round.\n\nFood and water come first. A horse eats mostly grass and hay, and it needs a lot — up to ten kilograms of hay every day. It also needs fresh water, sometimes more than 30 litres a day. In winter, when the water in the trough can freeze, someone has to make sure the horse can still drink.\n\nGrooming is also important. Brushing removes dirt and loose hair, and it helps the person spot cuts or swellings early. The hooves must be cleaned out with a hoof pick, because small stones can get stuck and cause pain. Every six to eight weeks, a farrier — a hoof expert — visits to trim the hooves or change the horseshoes.\n\nHorses also need exercise and company. In the wild, horses live in herds and walk many kilometres every day. A horse that stands alone in a stable becomes bored and sometimes sick. That is why horses do best when they can be outside with other horses.\n\nTaking care of a horse takes several hours every day. But people who love horses say the friendship you get back is worth every minute.",
+    "imageUrl": "https://images.unsplash.com/photo-1450052590821-8bf91254a353?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How much hay can a horse eat in a day?",
+        "options": [
+          "Up to two kilograms",
+          "Up to five kilograms",
+          "Up to ten kilograms",
+          "Up to thirty kilograms"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does a farrier do?",
+        "options": [
+          "Feeds the horse",
+          "Takes care of the hooves and horseshoes",
+          "Trains the horse for competitions",
+          "Cleans the stable"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why is brushing about more than keeping the horse clean?",
+        "options": [
+          "It makes the horse run faster",
+          "It helps discover injuries early",
+          "It is required by law",
+          "It keeps the horse warm in winter"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why do horses do best outside with other horses?",
+        "options": [
+          "Stables are always too small",
+          "Grass only grows outdoors",
+          "Horses are herd animals that need company and movement",
+          "Horses dislike people"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 220,
+      "readingTime": 2
     }
   },
   {
@@ -6059,6 +6413,65 @@
     }
   },
   {
+    "id": "ak6-football-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "football",
+    "title": "The World's Most Popular Sport",
+    "text": "Football is played and watched by more people than any other sport on Earth. FIFA, the international football federation, estimates that over 250 million people play the game, and billions more follow it as fans.\n\nGames where a ball is kicked toward a goal have existed for thousands of years, in China, ancient Greece, and medieval Europe. But modern football was born in England in 1863, when the newly formed Football Association wrote down a common set of rules. Before that, every town and school played by its own rules, which made matches between them chaotic.\n\nFrom England, the game spread quickly — often through sailors, railway workers, and traders who brought a ball with them. Today, football is played everywhere: on grass pitches, gravel yards, beaches, and streets. One reason for its popularity is its simplicity. You do not need expensive equipment. Two jackets can be goalposts, and almost anything round can be a ball.\n\nThe biggest tournament of all is the World Cup, held every four years. When the final is played, more than a billion people around the world watch at the same time — one of the few moments when so much of humanity shares the same experience.\n\nWomen's football is now growing faster than any other part of the sport. The Women's World Cup breaks new attendance records nearly every time it is held, and in many countries, more girls than boys now join football clubs.",
+    "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When and where was modern football born?",
+        "options": [
+          "In China thousands of years ago",
+          "In England in 1863",
+          "In Greece in ancient times",
+          "In Brazil in the 1900s"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How often is the World Cup held?",
+        "options": [
+          "Every year",
+          "Every two years",
+          "Every four years",
+          "Every ten years"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why was a common set of rules important?",
+        "options": [
+          "It made the game harder to learn",
+          "Teams from different places could finally play each other properly",
+          "It made footballs cheaper",
+          "It allowed more players on the pitch"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why is football's simplicity a reason for its popularity?",
+        "options": [
+          "Simple games are always boring",
+          "Almost anyone, anywhere can play without expensive equipment",
+          "It means there are no rules",
+          "Professional players do not need to train"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 240,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak6-orig-001",
     "grade": 6,
     "genre": "non-fiction",
@@ -7281,6 +7694,65 @@
     "meta": {
       "wordCount": 401,
       "readingTime": 3
+    }
+  },
+  {
+    "id": "ak7-dance-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "dance",
+    "title": "From the Streets to the Olympics",
+    "text": "In the early 1970s, at block parties in the Bronx in New York, young people began dancing in a completely new way. They spun on their backs, froze in impossible positions, and battled each other with moves instead of words. The style became known as breaking — and its dancers as b-boys and b-girls.\n\nBreaking was born out of hip-hop culture, together with DJing, rap, and graffiti. For many young people in poor neighbourhoods, dance battles offered something important: a way to compete, express themselves, and earn respect without violence. A battle had winners and losers, but it followed unwritten rules — you attacked with creativity, not with fists.\n\nFor decades, breaking spread around the world through films, music videos, and later the internet. Dancers in Japan, France, South Korea, and Sweden developed their own styles and techniques. What began on cardboard sheets on a Bronx sidewalk became a global culture with international championships.\n\nIn 2024, breaking took a step that few of its pioneers could have imagined: it became an Olympic sport at the Paris Games. B-boys and b-girls from around the world competed for medals in front of a global TV audience.\n\nNot everyone in the breaking community celebrated. Some feared that strict judging rules would tame a culture built on rebellion and personal style. Others saw it as recognition, finally, of an art form that began with young people who had little more than music and imagination. Either way, the journey from street corner to Olympic stage took just fifty years.",
+    "imageUrl": "https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where and when was breaking born?",
+        "options": [
+          "In Paris in 2024",
+          "In the Bronx, New York, in the early 1970s",
+          "In Japan in the 1990s",
+          "In Los Angeles in the 1980s"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What happened with breaking in 2024?",
+        "options": [
+          "It was banned in schools",
+          "It became an Olympic sport",
+          "It was invented",
+          "It stopped being popular"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What did dance battles offer young people in poor neighbourhoods?",
+        "options": [
+          "A way to earn money quickly",
+          "A way to compete and earn respect without violence",
+          "A path to university",
+          "Free music equipment"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did some in the breaking community not celebrate the Olympic step?",
+        "options": [
+          "They thought the medals were too small",
+          "They feared strict rules would tame a culture built on personal style",
+          "They wanted breaking to stay secret",
+          "They disliked travelling to Paris"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 260,
+      "readingTime": 2
     }
   },
   {
@@ -8859,6 +9331,65 @@
     ],
     "meta": {
       "wordCount": 250,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak8-gaming-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "gaming",
+    "title": "Esports: When Gaming Becomes a Profession",
+    "text": "Twenty years ago, telling your parents you wanted to play video games for a living would probably have earned you a worried look. Today, esports — competitive video gaming — is a global industry worth billions, with professional players, coaches, team houses, and stadium audiences.\n\nAt the highest level, esports resembles traditional sports more than most people expect. Professional players train six to ten hours a day, often in structured team practices with analysts who study opponents' strategies. Top teams employ physiotherapists, sports psychologists, and nutritionists. Reaction time, communication, and decision-making under pressure are trained as systematically as a footballer trains sprints.\n\nThe biggest tournaments fill arenas that normally host rock concerts or ice hockey finals. Millions more watch online. Sweden has a proud history here: Swedish players and teams have won world championships in several of the biggest titles, and some of the world's most famous esports events have been held in Stockholm and Jönköping.\n\nBut the profession has a dark side that is discussed more openly today. Careers are short — many professionals retire before age 25, when their reaction times begin to slow. The pressure to practise constantly can lead to burnout, sleep problems, and injuries to hands and wrists. The industry has begun responding with player unions, mandatory breaks, and better contracts, but critics argue there is far to go.\n\nFor the vast majority, gaming will remain a hobby, not a career — just as most people who play football never become professionals. But esports has changed something bigger: the idea of what can be a sport, and who can be an athlete.",
+    "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many hours a day do professional esports players train?",
+        "options": [
+          "One to two hours",
+          "Three to four hours",
+          "Six to ten hours",
+          "Twelve to fifteen hours"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why do many esports professionals retire before age 25?",
+        "options": [
+          "They lose interest in games",
+          "Their reaction times begin to slow",
+          "It is against the rules to play longer",
+          "They must start university"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text mention physiotherapists, psychologists and nutritionists?",
+        "options": [
+          "To show that esports teams waste money",
+          "To show how seriously esports resembles traditional professional sports",
+          "To show that players are often ill",
+          "To explain why tickets are expensive"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What 'bigger change' has esports brought according to the text?",
+        "options": [
+          "It has replaced traditional sports",
+          "It has made all gaming a career",
+          "It has changed ideas about what a sport and an athlete can be",
+          "It has made video games cheaper"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 270,
       "readingTime": 2
     }
   },
@@ -10622,6 +11153,87 @@
     ],
     "meta": {
       "wordCount": 265,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak9-horses-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "horses",
+    "title": "The Animal That Built Our World",
+    "text": "Few animals have shaped human history as profoundly as the horse. For most of the past five thousand years, the horse was our fastest form of transport, our strongest farm worker, and our most decisive military technology — all in one animal.\n\nHorses were first domesticated on the grasslands of Central Asia, probably around 3500 BCE. The consequences were enormous. Distances that had taken weeks to cross on foot could suddenly be covered in days. Ideas, languages, goods, and unfortunately also diseases began moving across continents at a completely new speed. Some historians argue that the horse was the most important 'communication technology' before the printing press.\n\nIn warfare, cavalry dominated battlefields for millennia, from ancient chariots to the mounted armies of the Mongol Empire, which in the 1200s built the largest connected land empire in history — largely on horseback. In agriculture, horses pulled the ploughs that fed growing cities. In everyday life, they pulled carriages, delivered post, and hauled goods through city streets. As late as 1900, cities like London and New York were utterly dependent on tens of thousands of working horses.\n\nThen, within a few decades, the combustion engine changed everything. Cars, tractors, and trucks took over the horse's work. The transformation was so complete that we still measure engine power in 'horsepower' — a ghost of the world the horse built.\n\nYet the horse did not disappear. Instead, its role changed from worker to companion. Today, millions of horses live as partners in sport, therapy, and recreation. In Sweden, horse riding is one of the largest youth sports, and riding schools are often described as leadership schools: caring for a large, powerful animal teaches responsibility, calm, and clear communication in a way few other activities can.\n\nThe horse no longer pulls our world forward. But for five thousand years, it did exactly that.",
+    "imageUrl": "https://images.unsplash.com/photo-1534773728080-33d31da27ae5?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where and approximately when were horses first domesticated?",
+        "options": [
+          "In Europe around 1000 BCE",
+          "On the grasslands of Central Asia around 3500 BCE",
+          "In North America around 500 CE",
+          "In Mongolia in the 1200s"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which empire built history's largest connected land empire largely on horseback?",
+        "options": [
+          "The Roman Empire",
+          "The British Empire",
+          "The Mongol Empire",
+          "The Ottoman Empire"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What invention took over the horse's work?",
+        "options": [
+          "The printing press",
+          "The combustion engine",
+          "The steam ship",
+          "The telegraph"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why do some historians call the horse a 'communication technology'?",
+        "options": [
+          "Horses can understand human speech",
+          "Horses made ideas, goods and languages travel much faster across distances",
+          "Horses were used to carry telephones",
+          "Horses replaced written letters"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the term 'horsepower' show, according to the text?",
+        "options": [
+          "That engines are built from horse parts",
+          "That cars are slower than horses",
+          "That the horse's old role still leaves traces in our language",
+          "That horses still power most machines"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How has the horse's role changed in modern times?",
+        "options": [
+          "From companion to worker",
+          "From worker to companion in sport, therapy and recreation",
+          "Horses have mostly disappeared",
+          "Horses are now mainly used in farming"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 310,
       "readingTime": 3
     }
   },
