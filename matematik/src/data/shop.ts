@@ -289,6 +289,18 @@ export const SHOP_BACKGROUNDS: ShopBackground[] = [
   { id: 'th-bubbles', name: 'Bubbelhav',    rarity: 'rare', price: 700,
     css: 'radial-gradient(circle at 28% 82%,rgba(255,255,255,0.35) 0 12px,transparent 14px),radial-gradient(circle at 68% 40%,rgba(255,255,255,0.28) 0 20px,transparent 22px),radial-gradient(circle at 85% 78%,rgba(255,255,255,0.3) 0 9px,transparent 11px),linear-gradient(160deg,#0369a1,#0891b2)' },
 
+  // ── Intressen ───────────────────────────────────────────────────────────────
+  { id: 'th-tvspel',  name: 'TV-spel',      rarity: 'epic', price: 1400,
+    css: 'linear-gradient(#ef4444,#ef4444) 12% 22%/34px 34px no-repeat,linear-gradient(#22c55e,#22c55e) 56% 68%/34px 34px no-repeat,linear-gradient(#3b82f6,#3b82f6) 82% 14%/34px 34px no-repeat,linear-gradient(#eab308,#eab308) 30% 76%/34px 34px no-repeat,linear-gradient(#a855f7,#a855f7) 68% 40%/34px 34px no-repeat,linear-gradient(#f97316,#f97316) 8% 60%/34px 34px no-repeat,#0f172a' },
+  { id: 'th-dataspel', name: 'Dataspel',    rarity: 'epic', price: 1400,
+    css: 'repeating-linear-gradient(0deg,rgba(34,211,238,0.32) 0 2px,transparent 2px 34px),repeating-linear-gradient(90deg,rgba(34,211,238,0.32) 0 2px,transparent 2px 34px),linear-gradient(180deg,#0f172a,#312e81)' },
+  { id: 'th-fotboll', name: 'Fotboll',      rarity: 'rare', price: 600,
+    css: 'radial-gradient(circle at 50% 50%,transparent 0 38px,rgba(255,255,255,0.85) 38px 42px,transparent 42px),linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)) 50% 0/4px 100% no-repeat,repeating-linear-gradient(90deg,#15803d 0 44px,#16a34a 44px 88px)' },
+  { id: 'th-dans',    name: 'Dans',         rarity: 'rare', price: 700,
+    css: 'repeating-conic-gradient(from 0deg at 50% -20%,rgba(255,255,255,0.16) 0 10deg,transparent 10deg 24deg),radial-gradient(circle,rgba(255,255,255,0.55) 12%,transparent 14%) 0 0/38px 38px,linear-gradient(160deg,#831843,#7c3aed,#ec4899)' },
+  { id: 'th-hastar',  name: 'Hästar',       rarity: 'rare', price: 600,
+    css: 'radial-gradient(circle,rgba(254,243,199,0.28) 18%,transparent 20%) 0 0/48px 48px,radial-gradient(circle,rgba(254,243,199,0.22) 18%,transparent 20%) 24px 24px/48px 48px,linear-gradient(160deg,#92400e,#78350f)' },
+
   // ── Regnbåge & galax ────────────────────────────────────────────────────────
   { id: 'th-rainbow', name: 'Regnbåge',     rarity: 'epic', price: 1600,
     css: 'linear-gradient(135deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6)' },
