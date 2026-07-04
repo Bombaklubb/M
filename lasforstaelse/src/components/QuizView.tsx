@@ -74,7 +74,6 @@ export const QuizView: React.FC<QuizViewProps> = ({
   const [showText, setShowText] = useState(true);
   const [textSize, setTextSize] = useState<TextSize>('medium');
   const [bionicReading, setBionicReading] = useState(false);
-  const [showGlossary, setShowGlossary] = useState(true);
   const [karaokeMode, setKaraokeMode] = useState(false);
 
   const questions = text.questions;
@@ -194,28 +193,10 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       <span className="font-black">Bio</span>nic
                     </motion.button>
                     <motion.button
-                      onClick={() => setShowGlossary(!showGlossary)}
-                      className={cn(
-                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all",
-                        showGlossary && !karaokeMode
-                          ? 'bg-gradient-to-br from-indigo-400 to-violet-500 text-white shadow-md'
-                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
-                      )}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      title="Ordförklaring - klicka på svåra ord för att se vad de betyder"
-                      aria-label="Ordförklaring"
-                      aria-pressed={showGlossary && !karaokeMode}
-                      disabled={karaokeMode}
-                    >
-                      📖 Ord
-                    </motion.button>
-                    <motion.button
                       onClick={() => {
                         setKaraokeMode(!karaokeMode);
                         if (!karaokeMode) {
                           setBionicReading(false);
-                          setShowGlossary(false);
                         }
                       }}
                       className={cn(
@@ -257,7 +238,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                       text={text.text}
                       textSizeClass={textSizeClasses[textSize]}
                     />
-                  ) : showGlossary && !bionicReading ? (
+                  ) : !bionicReading ? (
                     <TextWithGlossary
                       text={text.text}
                       className={cn(
