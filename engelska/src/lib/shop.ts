@@ -205,6 +205,18 @@ export const SHOP_THEMES: ShopTheme[] = [
   { id: "th-bubbles", name: "Bubbelhav",    rarity: "rare", price: 700,
     css: "radial-gradient(circle at 28% 82%,rgba(255,255,255,0.35) 0 12px,transparent 14px),radial-gradient(circle at 68% 40%,rgba(255,255,255,0.28) 0 20px,transparent 22px),radial-gradient(circle at 85% 78%,rgba(255,255,255,0.3) 0 9px,transparent 11px),linear-gradient(160deg,#0369a1,#0891b2)" },
 
+  // ── Intressen ───────────────────────────────────────────────────────────────
+  { id: "th-tvspel",   name: "TV-spel",      rarity: "rare", price: 700,
+    css: "radial-gradient(circle,#fde047 16%,transparent 18%) 0 0/46px 46px,radial-gradient(circle,#22d3ee 12%,transparent 14%) 23px 23px/46px 46px,#1e1b4b" },
+  { id: "th-dataspel", name: "Dataspel",     rarity: "rare", price: 700,
+    css: "repeating-linear-gradient(0deg,transparent 0 38px,rgba(34,211,238,0.45) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(34,211,238,0.45) 38px 40px),linear-gradient(160deg,#0f172a,#312e81)" },
+  { id: "th-fotboll",  name: "Fotbollsplan", rarity: "rare", price: 600,
+    css: "repeating-linear-gradient(90deg,#15803d 0 44px,#16a34a 44px 88px)" },
+  { id: "th-dans",     name: "Dansgolv",     rarity: "epic", price: 1400,
+    css: "conic-gradient(#ec4899 90deg,#8b5cf6 90deg 180deg,#06b6d4 180deg 270deg,#facc15 270deg) 0 0/58px 58px" },
+  { id: "th-hastar",   name: "Hästhage",     rarity: "rare", price: 600,
+    css: "radial-gradient(circle,#fef3c7 24%,transparent 26%) 0 0/52px 52px,radial-gradient(circle,#fde68a 18%,transparent 20%) 26px 26px/52px 52px,linear-gradient(160deg,#92400e,#b45309)" },
+
   // ── Regnbåge & galax ────────────────────────────────────────────────────────
   { id: "th-rainbow", name: "Regnbåge",     rarity: "epic", price: 1600,
     css: "linear-gradient(135deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6)" },
