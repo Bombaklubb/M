@@ -266,6 +266,23 @@ export const SHOP_THEMES: ShopTheme[] = [
   { id: 'pixel', name: 'Pixel', rarity: 'rare', price: 800,
     background: 'linear-gradient(rgba(79,70,229,0.18) 1px,transparent 1px) 0 0 / 18px 18px,linear-gradient(90deg,rgba(79,70,229,0.18) 1px,transparent 1px) 0 0 / 18px 18px,#eef2ff',
     swatch: 'linear-gradient(rgba(79,70,229,0.30) 1px,transparent 1px) 0 0 / 9px 9px,linear-gradient(90deg,rgba(79,70,229,0.30) 1px,transparent 1px) 0 0 / 9px 9px,#eef2ff' },
+
+  // --- Intressen (emoji-mönster via SVG-tiles, som Hjärtan) ---
+  { id: 'fotboll', name: 'Fotboll', rarity: 'rare', price: 800,
+    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='96'%20height='96'%3E%3Ctext%20x='14'%20y='44'%20font-size='26'%20opacity='0.55'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E\") 0 0 / 96px 96px,repeating-linear-gradient(90deg,#bbf7d0 0 48px,#a7f3d0 48px 96px)",
+    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='6'%20y='26'%20font-size='16'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,repeating-linear-gradient(90deg,#bbf7d0 0 20px,#a7f3d0 20px 40px)" },
+  { id: 'hastar', name: 'Hästar', rarity: 'rare', price: 800,
+    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'%3E%3Ctext%20x='12'%20y='46'%20font-size='28'%20opacity='0.55'%3E%F0%9F%90%B4%3C/text%3E%3C/svg%3E\") 0 0 / 100px 100px,linear-gradient(160deg,#fef3c7 0%,#fde68a 60%,#fcd34d 100%)",
+    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='6'%20y='27'%20font-size='17'%3E%F0%9F%90%B4%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#fef3c7,#fcd34d)" },
+  { id: 'dans', name: 'Dans', rarity: 'rare', price: 800,
+    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='110'%20height='110'%3E%3Ctext%20x='12'%20y='46'%20font-size='28'%20opacity='0.55'%3E%F0%9F%92%83%3C/text%3E%3Ctext%20x='66'%20y='96'%20font-size='20'%20opacity='0.45'%3E%F0%9F%8E%B5%3C/text%3E%3C/svg%3E\") 0 0 / 110px 110px,linear-gradient(160deg,#fdf2f8 0%,#fbcfe8 55%,#e9d5ff 100%)",
+    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='7'%20y='27'%20font-size='17'%3E%F0%9F%92%83%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#fdf2f8,#e9d5ff)" },
+  { id: 'tvspel', name: 'Tv-spel', rarity: 'epic', price: 1600,
+    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='104'%20height='104'%3E%3Ctext%20x='14'%20y='46'%20font-size='27'%20opacity='0.50'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E\") 0 0 / 104px 104px,linear-gradient(160deg,#e0e7ff 0%,#c7d2fe 60%,#a5b4fc 100%)",
+    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='6'%20y='27'%20font-size='17'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#e0e7ff,#a5b4fc)" },
+  { id: 'dataspel', name: 'Dataspel', rarity: 'epic', price: 1600,
+    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'%3E%3Ctext%20x='14'%20y='46'%20font-size='26'%20opacity='0.75'%3E%F0%9F%91%BE%3C/text%3E%3C/svg%3E\") 0 0 / 100px 100px,linear-gradient(rgba(74,222,128,0.10) 1px,transparent 1px) 0 0 / 20px 20px,linear-gradient(90deg,rgba(74,222,128,0.10) 1px,transparent 1px) 0 0 / 20px 20px,linear-gradient(160deg,#1e1b4b,#0f172a)",
+    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='7'%20y='27'%20font-size='17'%3E%F0%9F%91%BE%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#1e1b4b,#0f172a)" },
 ];
 
 export const THEME_MAP: Record<string, ShopTheme> = Object.fromEntries(
