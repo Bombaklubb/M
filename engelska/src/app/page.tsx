@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
 import { loadStudent, createStudent, clearStudent, claimDailyBonus } from "@/lib/storage";
-import { getDailyQuests, loadQuestState, claimQuest, questProgress, type Quest, type QuestState } from "@/lib/quests";
+import { getDailyChallengeRecord } from "@/lib/dailyChallenge";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
@@ -67,7 +67,7 @@ export default function HomePage() {
   const [returningName,  setReturningName]  = useState<string | null>(null);
   const [totals,         setTotals]         = useState<Record<string, number>>({});
   const [dailyBonus,     setDailyBonus]     = useState(0);
-  const [questState,     setQuestState]     = useState<QuestState | null>(null);
+  const [dailyDone,      setDailyDone]      = useState(false);
 
   useEffect(() => {
     const s = loadStudent();
@@ -79,7 +79,7 @@ export default function HomePage() {
       } else {
         setStudent(s);
       }
-      setQuestState(loadQuestState(s.name));
+      setDailyDone(getDailyChallengeRecord(s.name) !== null);
     } else {
       setStudent(s);
     }
@@ -117,14 +117,6 @@ export default function HomePage() {
     setNameInput("");
   }
 
-  function handleClaimQuest(q: Quest) {
-    if (!student) return;
-    const reward = claimQuest(student.name, q);
-    if (reward > 0) {
-      setStudent(loadStudent());
-      setQuestState(loadQuestState(student.name));
-    }
-  }
 
   if (loading) {
     return (
@@ -287,53 +279,33 @@ export default function HomePage() {
             </div>
           </BlurFade>
         )}
-        {/* Dagens uppdrag */}
-        {questState && (
-          <BlurFade delay={0.02} duration={0.4} inView>
-            <div className="mb-4 rounded-2xl border-2 border-white/25 bg-white/10 backdrop-blur-sm p-3">
-              <div className="flex items-center justify-between mb-2 px-1">
-                <h3 className="text-white font-black text-sm">📋 Dagens uppdrag</h3>
-                <span className="text-white/60 text-xs font-bold hidden sm:inline">Nya uppdrag varje dag!</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {getDailyQuests().map((q) => {
-                  const prog = Math.min(questProgress(questState, q), q.target);
-                  const done = prog >= q.target;
-                  const claimed = questState.claimed.includes(q.id);
-                  return (
-                    <div key={q.id} className="rounded-xl bg-white/10 border border-white/20 px-3 py-2">
-                      <div className="flex items-center justify-between gap-1">
-                        <span className="text-white text-xs font-bold truncate">{q.icon} {q.title}</span>
-                        <span className="text-amber-300 text-xs font-black flex-shrink-0">+{q.reward} ⭐</span>
-                      </div>
-                      <div className="mt-1.5 h-1.5 rounded-full bg-white/15 overflow-hidden">
-                        <div
-                          className={`h-full rounded-full transition-all duration-500 ${done ? "bg-emerald-400" : "bg-amber-400"}`}
-                          style={{ width: `${(prog / q.target) * 100}%` }}
-                        />
-                      </div>
-                      <div className="mt-1.5 flex items-center justify-between">
-                        <span className="text-white/60 text-[11px] font-bold">{prog}/{q.target}</span>
-                        {claimed ? (
-                          <span className="text-emerald-300 text-[11px] font-black">Hämtad ✓</span>
-                        ) : done ? (
-                          <button
-                            onClick={() => handleClaimQuest(q)}
-                            className="text-[11px] font-black text-white bg-emerald-500 hover:bg-emerald-400 rounded-lg px-2.5 py-1 cursor-pointer transition active:scale-95"
-                          >
-                            Hämta! 🎁
-                          </button>
-                        ) : (
-                          <span className="text-white/40 text-[11px] font-bold">Pågår…</span>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </BlurFade>
-        )}
+        {/* Dagens utmaning */}
+        <BlurFade delay={0.02} duration={0.4} inView>
+          <div className="mb-4 max-w-lg mx-auto w-full">
+            <Link
+              href="/dagens"
+              className="w-full flex items-center gap-3 rounded-2xl px-4 py-3 text-left transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              style={{
+                background: dailyDone
+                  ? "rgba(255, 248, 220, 0.9)"
+                  : "linear-gradient(135deg,#f59e0b,#d97706)",
+                border: dailyDone ? "1px solid rgba(180,130,40,0.50)" : "2px solid #b45309",
+                boxShadow: dailyDone ? "0 2px 10px rgba(120,80,10,0.20)" : "0 4px 18px rgba(217,119,6,0.45)",
+              }}
+            >
+              <span className="text-2xl">{dailyDone ? "✅" : "🗓️"}</span>
+              <span className="flex-1 min-w-0">
+                <span className={`block font-black text-sm ${dailyDone ? "" : "text-white"}`} style={dailyDone ? { color: "#78350f" } : undefined}>
+                  Dagens utmaning
+                </span>
+                <span className={`block text-xs ${dailyDone ? "" : "text-white/85"}`} style={dailyDone ? { color: "rgba(120,60,10,0.75)" } : undefined}>
+                  {dailyDone ? "Klar för idag – kom tillbaka imorgon!" : "5 frågor · upp till 200 ⭐ + kista!"}
+                </span>
+              </span>
+              {!dailyDone && <span className="text-white font-black text-lg">→</span>}
+            </Link>
+          </div>
+        </BlurFade>
 
         <BlurFade delay={0} duration={0.4} inView>
           <div className="mb-4">
