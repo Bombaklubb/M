@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent, loadGamification, updateStreak } from "@/lib/storage";
 import { getAvatar } from "@/lib/avatars";
-import { getLevel } from "@/lib/levels";
 import { getEquippedFrame, getWalletBalance } from "@/lib/shopStorage";
 import FramedAvatar from "@/components/ui/FramedAvatar";
 import type { StudentData } from "@/lib/types";
@@ -18,14 +17,13 @@ interface HeaderProps {
 }
 
 // Inline SVG icons — no emojis
-function IconTrophy({ className = "w-5 h-5" }: { className?: string }) {
+function IconChest({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 9H4a2 2 0 0 1-2-2V5h4" />
-      <path d="M18 9h2a2 2 0 0 0 2-2V5h-4" />
-      <path d="M12 17c-4 0-7-3-7-7V5h14v5c0 4-3 7-7 7z" />
-      <path d="M12 17v4" />
-      <path d="M8 21h8" />
+      <rect x="3" y="9" width="18" height="11" rx="1.5" />
+      <path d="M3 13h18" />
+      <path d="M10 13v2M14 13v2" />
+      <path d="M6 9V7a6 6 0 0 1 12 0v2" />
     </svg>
   );
 }
@@ -79,7 +77,6 @@ export default function Header({ student, onLogout }: HeaderProps) {
   const router = useRouter();
   const { dark, toggle } = useDarkMode();
   const [unopenedChests, setUnopenedChests] = useState(0);
-  const [streak, setStreak] = useState(0);
   const [walletBalance, setWalletBalance] = useState(0);
   const [equippedFrame, setEquippedFrame] = useState<string | null>(null);
 
@@ -87,7 +84,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
     if (!student) return;
     const gam = loadGamification();
     setUnopenedChests(gam.chests.filter((c) => !c.opened).length);
-    setStreak(updateStreak(student.name));
+    updateStreak(student.name);
     setWalletBalance(getWalletBalance(student.name));
     setEquippedFrame(getEquippedFrame(student.name));
   }, [student]);
@@ -140,41 +137,13 @@ export default function Header({ student, onLogout }: HeaderProps) {
               className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer text-amber-600 dark:text-amber-400"
               style={{ boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
             >
-              <IconTrophy className="w-5 h-5" />
+              <IconChest className="w-5 h-5" />
               {unopenedChests > 0 && (
                 <span className="absolute -top-1 -right-1 min-w-[16px] h-4 px-0.5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center leading-none">
                   {unopenedChests > 9 ? "9+" : unopenedChests}
                 </span>
               )}
             </Link>
-
-            {/* Nivå */}
-            {(() => {
-              const lvl = getLevel(student.totalPoints);
-              return (
-                <Link
-                  href="/profile"
-                  title={`Nivå ${lvl.level} – ${lvl.title}`}
-                  className="hidden sm:flex items-center gap-1 bg-gradient-to-b from-violet-50 to-violet-100 dark:bg-violet-900/30 border-2 border-violet-300 dark:border-violet-700 px-2.5 py-1.5 rounded-xl hover:border-violet-400 hover:scale-105 transition-all cursor-pointer touch-manipulation"
-                  style={{ boxShadow: "0 3px 0 0 rgba(139, 92, 246, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
-                >
-                  <span className="text-base leading-none">🏅</span>
-                  <span className="text-sm font-black text-violet-700 dark:text-violet-400">Nv {lvl.level}</span>
-                </Link>
-              );
-            })()}
-
-            {/* Streak */}
-            {streak > 0 && (
-              <div
-                className="hidden xs:flex items-center gap-1 bg-gradient-to-b from-orange-50 to-orange-100 dark:bg-orange-900/30 border-2 border-orange-300 dark:border-orange-700 px-2.5 py-1.5 rounded-xl cursor-default"
-                style={{ boxShadow: "0 3px 0 0 rgba(249, 115, 22, 0.25)" }}
-                title={`${streak} dagar i rad!`}
-              >
-                <span className="text-base leading-none">🔥</span>
-                <span className="text-sm font-black text-orange-700 dark:text-orange-400">{streak}</span>
-              </div>
-            )}
 
             {/* Affären (plånbokssaldo) */}
             <Link
