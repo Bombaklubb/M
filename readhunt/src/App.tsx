@@ -41,6 +41,7 @@ import {
   chestsEarnedFromPoints,
   chestsEarnedFromTexts,
   rollMysteryBox,
+  rollPointMultiplier,
 } from './lib/gamification';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
   const [lastResult, setLastResult] = useState<{
     pointsEarned: number;
     newBadges: Badge[];
+    multiplier?: 2 | 3 | null;
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
@@ -213,6 +215,18 @@ function App() {
     let { updatedUser, pointsEarned } = result;
     const { newBadges } = result;
 
+    // Slumpad poängmultiplikator (x2/x3) – ren tur, gäller textens poäng
+    let multiplier: 2 | 3 | null = null;
+    if (pointsEarned > 0) {
+      multiplier = rollPointMultiplier();
+      if (multiplier) {
+        const bonus = pointsEarned * (multiplier - 1);
+        updatedUser = { ...updatedUser, totalPoints: updatedUser.totalPoints + bonus };
+        saveUser(updatedUser);
+        pointsEarned += bonus;
+      }
+    }
+
     // Bonus för dagens text (kan bara hämtas en gång per dag)
     if (dailyText && currentText.id === dailyText.id && !isDailyBonusClaimedToday()) {
       claimDailyBonus();
@@ -264,7 +278,7 @@ function App() {
     saveGamification(updatedGam);
 
     setUser(updatedUser);
-    setLastResult({ pointsEarned, newBadges });
+    setLastResult({ pointsEarned, newBadges, multiplier });
     setAppState(AppState.RESULT);
     window.scrollTo(0, 0);
   };
@@ -510,6 +524,7 @@ function App() {
             answers={userAnswers}
             pointsEarned={lastResult.pointsEarned}
             newBadges={lastResult.newBadges}
+            multiplier={lastResult.multiplier}
             onRestart={handleRestart}
             onNextText={handleNextText}
             onNextTextLower={handleNextTextLower}

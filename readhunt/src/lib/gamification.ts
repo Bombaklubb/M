@@ -439,6 +439,17 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
   return { points: pts, badge: badge?.id, bonusChest, description: desc };
 }
 
+// ─── Lucky point multiplier ──────────────────────────────────────────────────
+// Slumpad poängbonus efter en avslutad text: ibland x2, sällan x3.
+// Ren slump utan mönster – ska inte gå att lista ut hur den triggas.
+
+export function rollPointMultiplier(): 2 | 3 | null {
+  const r = Math.random();
+  if (r < 0.03) return 3;   // ~3% av texterna
+  if (r < 0.12) return 2;   // ~9% av texterna
+  return null;
+}
+
 export function defaultGamificationData(): GamificationData {
   return {
     chests: [],

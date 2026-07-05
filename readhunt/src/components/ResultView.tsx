@@ -13,6 +13,7 @@ interface ResultViewProps {
   answers: UserAnswers;
   pointsEarned: number;
   newBadges: Badge[];
+  multiplier?: 2 | 3 | null;
   onRestart: () => void;
   onNextText: () => void;
   onNextTextLower: () => void;
@@ -55,6 +56,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   answers,
   pointsEarned,
   newBadges,
+  multiplier,
   onRestart: _onRestart,
   onNextText,
   onNextTextLower,
@@ -151,6 +153,37 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   </div>
                 )}
               </div>
+
+              {/* Lucky point multiplier banner */}
+              <AnimatePresence>
+                {multiplier && (
+                  <motion.div
+                    className={cn(
+                      "mb-4 py-3 px-4 rounded-2xl text-white relative overflow-hidden",
+                      multiplier === 3
+                        ? 'bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-500'
+                        : 'bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500'
+                    )}
+                    initial={{ opacity: 0, scale: 0.5, rotate: -3 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
+                  >
+                    <motion.div
+                      className="text-3xl mb-1"
+                      animate={{ rotate: [0, -12, 12, -8, 8, 0], scale: [1, 1.25, 1] }}
+                      transition={{ duration: 0.8, delay: 1, repeat: 2 }}
+                    >
+                      🎲✨
+                    </motion.div>
+                    <div className="text-xl font-black drop-shadow">
+                      LUCKY BONUS! ×{multiplier} POINTS!
+                    </div>
+                    <div className="text-sm font-semibold text-white/90">
+                      {multiplier === 3 ? 'Wow — triple points on this text!' : 'Double points on this text!'}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {/* Top row: emoji + score circle + points side by side */}
               <div className="flex items-center justify-center gap-6 mb-4">
