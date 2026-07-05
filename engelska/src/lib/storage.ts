@@ -214,10 +214,6 @@ export function saveModuleProgress(
     import("@/services/analyticsService").then(({ trackTaskComplete }) => {
       trackTaskComplete(completed, kind);
     });
-    // Dagens uppdrag (dynamisk import för att undvika cirkulärt beroende)
-    import("@/lib/quests").then(({ recordQuestProgress }) => {
-      recordQuestProgress(data.name, { points, modules: completed ? 1 : 0 });
-    });
   }
 
   return { ...data };
@@ -261,11 +257,6 @@ export function addGamePoints(gameId: string, rawPoints: number): { awarded: num
     student.totalPoints += awarded;
     saveStudent(student);
   }
-
-  // Dagens uppdrag: räkna spelrundan + poängen
-  import("@/lib/quests").then(({ recordQuestProgress }) => {
-    recordQuestProgress(student.name, { points: awarded, games: 1 });
-  });
 
   return { awarded, multiplier };
 }
