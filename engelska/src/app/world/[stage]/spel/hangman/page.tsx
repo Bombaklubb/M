@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { getPositiveFeedback } from "@/lib/feedback";
 import Header from "@/components/ui/Header";
 import { loadStudent, addGamePoints } from "@/lib/storage";
+import type { LuckyBonus } from "@/lib/luckyBonus";
 import { getStage } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
 import { HANGMAN_WORDS, shuffle } from "@/lib/gameVocab";
@@ -38,6 +39,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
   const [played, setPlayed] = useState(0);
   const [wonMsg, setWonMsg] = useState("");
   const [awarded, setAwarded] = useState<number | null>(null);
+  const [lucky, setLucky] = useState<LuckyBonus | null>(null);
 
   const wrongGuesses = [...guessed].filter(l => !word.includes(l));
   const livesLeft = MAX_LIVES - wrongGuesses.length;
@@ -63,7 +65,9 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
       if (won) {
         setWins(w => w + 1);
         // 25 ⭐ per vunnet ord, sparas till elevens konto
-        setAwarded(addGamePoints("hangman", 25).awarded);
+        const r = addGamePoints("hangman", 25);
+        setAwarded(r.awarded);
+        setLucky(r.lucky);
       }
     }
   }, [guessed, word, phase]);
@@ -72,6 +76,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
     setWord(pickWord(stageId));
     setGuessed(new Set());
     setAwarded(null);
+    setLucky(null);
   }, [stageId]);
 
   return (
@@ -129,6 +134,11 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
             <p className="font-black text-white text-lg mb-1">
               {phase === "won" ? wonMsg || "Snyggt jobbat! 🎉" : "Rätt svar var:"}
             </p>
+            {phase === "won" && lucky && (
+              <p className="block w-fit mx-auto bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-black text-sm rounded-xl px-4 py-1 mb-1 animate-pop">
+                ⚡ TURBONUS ×{lucky.multiplier}!
+              </p>
+            )}
             {phase === "won" && awarded !== null && awarded > 0 && (
               <p className="inline-block bg-emerald-500/25 border border-emerald-400/40 text-emerald-300 font-black text-sm rounded-xl px-4 py-1 mb-1">
                 +{awarded} ⭐ sparade!

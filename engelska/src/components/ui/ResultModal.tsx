@@ -3,6 +3,7 @@
 import type { ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
 import { getModuleCompleteFeedback } from "@/lib/feedback";
+import type { LuckyBonus } from "@/lib/luckyBonus";
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
@@ -23,6 +24,7 @@ interface ResultModalProps {
   bossUnlocked?: boolean;
   repeatAttemptNumber?: number;
   isNewRecord?: boolean;
+  lucky?: LuckyBonus | null;
   onContinue: () => void;
   onRetry: () => void;
 }
@@ -36,6 +38,7 @@ export default function ResultModal({
   bossUnlocked,
   repeatAttemptNumber,
   isNewRecord,
+  lucky,
   onContinue,
   onRetry,
 }: ResultModalProps) {
@@ -110,6 +113,23 @@ export default function ResultModal({
           )}
         </div>
 
+        {/* Turbonus – sällsynt slumpbonus */}
+        {lucky && (
+          <div
+            className="rounded-2xl p-4 mb-4 text-white text-center animate-pop border-3 border-fuchsia-300"
+            style={{
+              background: "linear-gradient(135deg,#d946ef,#8b5cf6,#6366f1)",
+              boxShadow: "0 4px 0 0 rgba(139,92,246,0.4), 0 8px 24px -4px rgba(217,70,239,0.5)",
+            }}
+          >
+            <p className="text-2xl font-black mb-0.5">⚡ TURBONUS! ×{lucky.multiplier}</p>
+            <p className="text-sm font-bold text-white/90">
+              Vilken tur – dina poäng {lucky.multiplier === 3 ? "tredubblades" : "dubblades"}!{" "}
+              <span className="text-yellow-300 font-black">+{lucky.extra} extra ⭐</span>
+            </p>
+          </div>
+        )}
+
         {/* Chest earned notification */}
         {chestEarned && (
           <div className="bg-amber-50 dark:bg-amber-900/30 border-2 border-amber-400 dark:border-amber-600 rounded-2xl p-3 mb-4 flex items-center gap-3">
@@ -148,7 +168,7 @@ export default function ResultModal({
             </p>
             <p className="text-xs text-blue-600 dark:text-blue-400">
               Poängen minskar för varje gång du gör samma övning:{" "}
-              <strong>1:a gången 100% → 2:a 50% → 3:e 25% → 4:e+ 0 poäng.</strong>
+              <strong>1:a gången 100% → 2:a 70% → 3:e 50% → 4:e 30% → därefter 20%.</strong>
               {" "}Gör nya övningar för att tjäna full poäng!
             </p>
           </div>

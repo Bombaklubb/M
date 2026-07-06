@@ -15,6 +15,7 @@ import {
   getModuleProgress,
   getRepeatMultiplier,
 } from "@/lib/storage";
+import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import {
   chestsEarnedFromPoints,
   chestsEarnedFromExercises,
@@ -56,6 +57,7 @@ export default function SpelModulePage({ params }: Props) {
   const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
   const [modalPoints, setModalPoints] = useState(0);
   const [modalBonus, setModalBonus] = useState(0);
+  const [modalLucky, setModalLucky] = useState<LuckyBonus | null>(null);
   const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
@@ -101,6 +103,10 @@ export default function SpelModulePage({ params }: Props) {
       const adjustedBase = Math.round(pts * repeatMult);
       const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
       const adjustedTotal = adjustedBase + adjustedBonus;
+      // Turbonus: sällsynt slumpbonus (×2/×3) på det som tjänades in nu
+      const luck = rollLuckyBonus(student.name, adjustedTotal);
+      setModalLucky(luck);
+      const totalWithLuck = adjustedTotal + (luck?.extra ?? 0);
       setModalPoints(adjustedBase);
       setModalBonus(adjustedBonus);
       setAttemptNum(priorAttempts + 1);
@@ -111,7 +117,7 @@ export default function SpelModulePage({ params }: Props) {
         stage!.id,
         "spel",
         mod!.id,
-        adjustedTotal,
+        totalWithLuck,
         passed
       );
       setStudent(updated);
@@ -314,6 +320,7 @@ export default function SpelModulePage({ params }: Props) {
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
           repeatAttemptNumber={attemptNum}
+          lucky={modalLucky}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
