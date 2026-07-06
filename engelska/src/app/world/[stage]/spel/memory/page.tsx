@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import { loadStudent, addGamePoints } from "@/lib/storage";
+import type { LuckyBonus } from "@/lib/luckyBonus";
 import { getStage } from "@/lib/stages";
 import { WORD_PAIRS, shuffle } from "@/lib/gameVocab";
 import type { StudentData } from "@/lib/types";
@@ -73,6 +74,7 @@ function MemoryGame({ stageId, stage, student }: {
   const [seconds, setSeconds]       = useState(0);
   const [locked, setLocked]         = useState(false);
   const [awarded, setAwarded]       = useState<number | null>(null);
+  const [lucky, setLucky]           = useState<LuckyBonus | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startRef = useRef(0);
 
@@ -97,6 +99,7 @@ function MemoryGame({ stageId, stage, student }: {
     setSeconds(0);
     setLocked(false);
     setAwarded(null);
+    setLucky(null);
     setPhase("playing");
   }, [stageId]);
 
@@ -148,7 +151,9 @@ function MemoryGame({ stageId, stage, student }: {
   // Spara poängen till elevens konto vid vinst (en gång per runda)
   useEffect(() => {
     if (phase === "victory" && awarded === null) {
-      setAwarded(addGamePoints("memory", score).awarded);
+      const r = addGamePoints("memory", score);
+      setAwarded(r.awarded);
+      setLucky(r.lucky);
     }
   }, [phase, awarded, score]);
 
@@ -209,6 +214,11 @@ function MemoryGame({ stageId, stage, student }: {
             <div className="text-7xl mb-4 animate-bounce">🎉</div>
             <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1">Grattis!</h1>
             <p className="text-gray-500 dark:text-gray-400 mb-3">Du hittade alla {totalPairs} par!</p>
+            {lucky && (
+              <p className="block w-fit mx-auto bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-black text-sm rounded-xl px-4 py-1.5 mb-2 animate-pop">
+                ⚡ TURBONUS ×{lucky.multiplier}!
+              </p>
+            )}
             {awarded !== null && awarded > 0 && (
               <p className="inline-block bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
                 +{awarded} ⭐ sparade till dina poäng!

@@ -1,5 +1,6 @@
 import type { StudentData, StageId, ModuleProgress, StageProgress, GamificationData } from "./types";
 import { defaultGamificationData } from "./gamification";
+import { rollLuckyBonus, type LuckyBonus } from "./luckyBonus";
 
 // ─── Storage keys ─────────────────────────────────────────────────────────────
 
@@ -230,10 +231,13 @@ function gamePlayKey(name: string) {
   return `engelskajakten_gameplays_${name.toLowerCase().trim()}`;
 }
 
-export function addGamePoints(gameId: string, rawPoints: number): { awarded: number; multiplier: number } {
-  if (typeof window === "undefined") return { awarded: 0, multiplier: 0 };
+export function addGamePoints(
+  gameId: string,
+  rawPoints: number
+): { awarded: number; multiplier: number; lucky: LuckyBonus | null } {
+  if (typeof window === "undefined") return { awarded: 0, multiplier: 0, lucky: null };
   const student = loadStudent();
-  if (!student) return { awarded: 0, multiplier: 0 };
+  if (!student) return { awarded: 0, multiplier: 0, lucky: null };
 
   const key = gamePlayKey(student.name);
   const today = todayStr();
@@ -248,17 +252,21 @@ export function addGamePoints(gameId: string, rawPoints: number): { awarded: num
 
   const plays = data.counts[gameId] ?? 0;
   const multiplier = plays < 3 ? 1 : plays < 5 ? 0.5 : 0.2;
-  const awarded = Math.round(Math.max(0, rawPoints) * multiplier);
+  let awarded = Math.round(Math.max(0, rawPoints) * multiplier);
 
   data.counts[gameId] = plays + 1;
   localStorage.setItem(key, JSON.stringify(data));
+
+  // Turbonus: sällsynt slumpbonus (×2/×3)
+  const lucky = rollLuckyBonus(student.name, awarded);
+  if (lucky) awarded += lucky.extra;
 
   if (awarded > 0) {
     student.totalPoints += awarded;
     saveStudent(student);
   }
 
-  return { awarded, multiplier };
+  return { awarded, multiplier, lucky };
 }
 
 // ─── Gamification persistence ─────────────────────────────────────────────────

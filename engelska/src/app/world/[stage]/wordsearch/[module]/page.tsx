@@ -8,6 +8,7 @@ import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import WordSearch from "@/components/exercises/WordSearch";
 import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
+import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import { checkAchievementBadges } from "@/lib/gamification";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, WordSearchModule } from "@/lib/types";
@@ -26,6 +27,7 @@ export default function WordSearchModulePage({ params }: Props) {
   const [loading, setLoading] = useState(true);
   const [showResult, setShowResult] = useState(false);
   const [modalPoints, setModalPoints] = useState(0);
+  const [modalLucky, setModalLucky] = useState<LuckyBonus | null>(null);
   const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
@@ -58,10 +60,14 @@ export default function WordSearchModulePage({ params }: Props) {
       const priorAttempts = existingProgress?.attempts ?? 0;
       const repeatMult = getRepeatMultiplier(priorAttempts);
       const adjustedPts = Math.round(rawPts * repeatMult);
+      // Turbonus: sällsynt slumpbonus (×2/×3) på det som tjänades in nu
+      const luck = rollLuckyBonus(student.name, adjustedPts);
+      setModalLucky(luck);
+      const totalWithLuck = adjustedPts + (luck?.extra ?? 0);
       setModalPoints(adjustedPts);
       setAttemptNum(priorAttempts + 1);
 
-      const updated = saveModuleProgress(student, stage!.id, "wordsearch", mod!.id, adjustedPts, true);
+      const updated = saveModuleProgress(student, stage!.id, "wordsearch", mod!.id, totalWithLuck, true);
       setStudent(updated);
       const gam = loadGamification();
       const achievementBadges = checkAchievementBadges(updated, gam);
@@ -115,6 +121,7 @@ export default function WordSearchModulePage({ params }: Props) {
           totalCorrect={mod.words.length}
           totalQuestions={mod.words.length}
           repeatAttemptNumber={attemptNum}
+          lucky={modalLucky}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />

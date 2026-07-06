@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import { loadStudent, addGamePoints } from "@/lib/storage";
+import type { LuckyBonus } from "@/lib/luckyBonus";
 import { getStage } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
 import { WORD_PAIRS, shuffle, makeOptions } from "@/lib/gameVocab";
@@ -49,6 +50,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
   const [feedback, setFeedback] = useState<"correct" | "wrong" | null>(null);
   const [runnerAnim, setRunnerAnim] = useState<"idle" | "run" | "stumble">("idle");
   const [awarded, setAwarded] = useState<number | null>(null);
+  const [lucky, setLucky] = useState<LuckyBonus | null>(null);
 
   const q = questions[idx];
   // runner position: 0–100% of track (based on coins collected)
@@ -65,13 +67,16 @@ function SamlaMyntGame({ stageId, stageName, student }: {
     setFeedback(null);
     setRunnerAnim("idle");
     setAwarded(null);
+    setLucky(null);
     setPhase("playing");
   }, [stageId]);
 
   // Spara poängen till elevens konto när rundan är slut (en gång per runda)
   useEffect(() => {
     if ((phase === "victory" || phase === "defeat") && awarded === null) {
-      setAwarded(addGamePoints("samlamynt", score).awarded);
+      const r = addGamePoints("samlamynt", score);
+      setAwarded(r.awarded);
+      setLucky(r.lucky);
     }
   }, [phase, awarded, score]);
 
@@ -157,6 +162,11 @@ function SamlaMyntGame({ stageId, stageName, student }: {
           <div className="text-7xl mb-4">🏆</div>
           <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1">Bra jobbat!</h1>
           <p className="text-gray-500 dark:text-gray-400 mb-3">Du samlade alla {TOTAL_COINS} mynt!</p>
+          {lucky && (
+            <p className="block w-fit mx-auto bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-black text-sm rounded-xl px-4 py-1.5 mb-2 animate-pop">
+              ⚡ TURBONUS ×{lucky.multiplier}!
+            </p>
+          )}
           {awarded !== null && awarded > 0 && (
             <p className="inline-block bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
               +{awarded} ⭐ sparade till dina poäng!
@@ -196,6 +206,11 @@ function SamlaMyntGame({ stageId, stageName, student }: {
           <div className="text-7xl mb-4">😵</div>
           <h1 className="text-3xl font-black text-gray-900 dark:text-gray-100 mb-1">Försök igen!</h1>
           <p className="text-gray-500 dark:text-gray-400 mb-3">Du samlade {coins} av {TOTAL_COINS} mynt.</p>
+          {lucky && (
+            <p className="block w-fit mx-auto bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-black text-sm rounded-xl px-4 py-1.5 mb-2 animate-pop">
+              ⚡ TURBONUS ×{lucky.multiplier}!
+            </p>
+          )}
           {awarded !== null && awarded > 0 && (
             <p className="inline-block bg-emerald-100 dark:bg-emerald-900/40 border border-emerald-300 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 font-black text-sm rounded-xl px-4 py-1.5 mb-4">
               +{awarded} ⭐ sparade till dina poäng!

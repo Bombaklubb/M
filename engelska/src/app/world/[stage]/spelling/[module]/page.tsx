@@ -11,6 +11,7 @@ import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
 import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
+import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import { recordError } from "@/lib/errorBank";
 import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
@@ -41,6 +42,7 @@ export default function SpellingModulePage({ params }: Props) {
   const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
   const [modalPoints, setModalPoints] = useState(0);
   const [modalBonus, setModalBonus] = useState(0);
+  const [modalLucky, setModalLucky] = useState<LuckyBonus | null>(null);
   const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
@@ -100,12 +102,16 @@ export default function SpellingModulePage({ params }: Props) {
         const adjustedBase = Math.round(pts * repeatMult);
         const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
         const adjustedTotal = adjustedBase + adjustedBonus;
+        // Turbonus: sällsynt slumpbonus (×2/×3) på det som tjänades in nu
+        const luck = rollLuckyBonus(student.name, adjustedTotal);
+        setModalLucky(luck);
+        const totalWithLuck = adjustedTotal + (luck?.extra ?? 0);
         setModalPoints(adjustedBase);
         setModalBonus(adjustedBonus);
         setAttemptNum(priorAttempts + 1);
 
         const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
-        const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, adjustedTotal, passed);
+        const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, totalWithLuck, passed);
         setStudent(updated);
 
         const gam = loadGamification();
@@ -333,6 +339,7 @@ export default function SpellingModulePage({ params }: Props) {
           chestEarned={chestEarned}
           bossUnlocked={bossJustUnlocked}
           repeatAttemptNumber={attemptNum}
+          lucky={modalLucky}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
