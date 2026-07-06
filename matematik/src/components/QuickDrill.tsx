@@ -3,6 +3,7 @@ import { useApp } from '../contexts/AppContext';
 import { TOPICS, gradeToNum } from '../data/topics';
 import { FillInExercise, MultipleChoiceExercise, TrueFalseExercise } from '../types';
 import { addPoints, recordTopicSession } from '../utils/storage';
+import { rollPointsBonus } from '../utils/pointsBonus';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import { gradeToWorld, WORLDS } from '../data/worlds';
@@ -20,6 +21,8 @@ export default function QuickDrill() {
   const [total, setTotal] = useState(0);
   const [flash, setFlash] = useState<'correct'|'wrong'|null>(null);
   const [personalBest, setPersonalBest] = useState(0);
+  const [earnedPts, setEarnedPts] = useState(0);
+  const [bonusMult, setBonusMult] = useState(1);
   const timerRef = useRef<ReturnType<typeof setInterval>|null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const startTimeRef = useRef(0);
@@ -101,7 +104,13 @@ export default function QuickDrill() {
   // Award points on finish
   useEffect(() => {
     if (phase === 'result' && total > 0) {
-      addPoints(currentStudent.id, correct * 5);
+      const basePts = correct * 5;
+      // Slumpmässig sällsynt bonus (x2/x3)
+      const bonus = basePts > 0 ? rollPointsBonus() : 1;
+      const pts = basePts * bonus;
+      addPoints(currentStudent.id, pts);
+      setEarnedPts(pts);
+      setBonusMult(bonus);
       const pb = parseInt(localStorage.getItem(`drill_pb_${currentStudent.id}`) || '0');
       if (correct > pb) {
         localStorage.setItem(`drill_pb_${currentStudent.id}`, String(correct));
@@ -253,10 +262,18 @@ export default function QuickDrill() {
               <p className="text-sm text-purple-700 font-bold">Totalt svarade</p>
             </div>
             <div className="bg-amber-50 rounded-2xl p-4">
-              <p className="text-3xl font-black text-amber-600">+{correct*5}</p>
+              <p className="text-3xl font-black text-amber-600">+{earnedPts}</p>
               <p className="text-sm text-amber-700 font-bold">Poäng intjänade</p>
             </div>
           </div>
+
+          {/* Slumpmässig poängbonus (x2/x3) */}
+          {bonusMult > 1 && (
+            <div className="rounded-2xl p-3 mb-4 text-white font-bold animate-bounce-in"
+              style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)', border: '2px solid #f0abfc', boxShadow: '0 0 20px rgba(236,72,153,0.45)' }}>
+              🎲 TUR! ×{bonusMult} poäng – helt slumpmässigt!
+            </div>
+          )}
 
           {correct >= personalBest && personalBest > 0 && (
             <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-2xl p-3 mb-4 font-bold animate-bounce-in">

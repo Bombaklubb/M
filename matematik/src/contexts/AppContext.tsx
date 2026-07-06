@@ -11,6 +11,7 @@ import {
   claimDailyBonus,
 } from '../utils/storage';
 import { trackVisit, trackSessionEnd, trackHeartbeat } from '../utils/analytics';
+import { rollPointsBonus } from '../utils/pointsBonus';
 import {
   loadGamification, saveGamification,
   chestsEarnedFromPoints, chestsEarnedFromExercises,
@@ -38,7 +39,7 @@ interface AppContextValue {
   questWorldId: WorldId | null;
   gameWorldId: WorldId | null;
   errorBankWorldId: WorldId | null;
-  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null;
+  pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number; bonusMultiplier: number } | null;
   clearPendingChestResult: () => void;
   dailyBonus: number | null;
   clearDailyBonus: () => void;
@@ -52,7 +53,7 @@ interface AppContextValue {
   startGames: (worldId: WorldId) => void;
   startErrorBank: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
-  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number };
+  submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number; bonusMultiplier: number };
   updateAvatar: (avatarIndex: number) => void;
 }
 
@@ -67,7 +68,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
-  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number } | null>(null);
+  const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number; bonusMultiplier: number } | null>(null);
   const [dailyBonus, setDailyBonus] = useState<number | null>(null);
 
   const sessionStartRef = useRef<number | null>(null);
@@ -186,7 +187,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent]);
 
   const submitTopicResult = useCallback((topicId: string, correct: number, total: number, timeSpent: number) => {
-    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null, wasAlreadyCompleted: false, attemptNumber: 1 };
+    if (!currentStudent) return { newAchievements: [], pointsGained: 0, newChests: [], mysteryReward: null, wasAlreadyCompleted: false, attemptNumber: 1, bonusMultiplier: 1 };
     const score = total > 0 ? Math.round((correct / total) * 100) : 0;
     const stars = calcStars(score);
     const prevProgress = getProgress(currentStudent.id).find(p => p.topicId === topicId);
@@ -198,13 +199,16 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const repeatMultiplier = prevAttempts === 0 ? 1 : prevAttempts === 1 ? 0.7 : prevAttempts === 2 ? 0.5 : prevAttempts === 3 ? 0.3 : 0.2;
     const fullPoints = correct * 15 + (stars === 3 ? 30 : stars === 2 ? 15 : 0);
     const basePoints = Math.round(fullPoints * repeatMultiplier);
+    // Slumpmässig sällsynt bonus (x2/x3) – bara när övningen faktiskt gav poäng.
+    const bonusMultiplier = basePoints > 0 ? rollPointsBonus() : 1;
+    const earnedPoints = basePoints * bonusMultiplier;
     saveTopicProgress(currentStudent.id, { topicId, completed: score >= 50, bestScore: score, totalAttempts: 1, correctAnswers: correct, totalQuestions: total, lastAttempt: new Date().toISOString(), stars, timeSpent });
     recordTopicSession(currentStudent.id, topicId, correct, total);
 
     // Track points before adding to detect milestones
     const prevPoints = getPoints(currentStudent.id)?.total ?? 0;
-    addPoints(currentStudent.id, basePoints);
-    const newPoints = prevPoints + basePoints;
+    addPoints(currentStudent.id, earnedPoints);
+    const newPoints = prevPoints + earnedPoints;
 
     // Achievements
     const stats = getStudentStats(currentStudent);
@@ -313,12 +317,13 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       mysteryReward,
       wasAlreadyCompleted,
       attemptNumber,
+      bonusMultiplier,
     };
     setPendingChestResult(chestResult);
 
     return {
       newAchievements,
-      pointsGained: basePoints,
+      pointsGained: earnedPoints,
       ...chestResult,
     };
   }, [currentStudent, getStudentStats]);

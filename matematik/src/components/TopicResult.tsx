@@ -140,6 +140,25 @@ export default function TopicResult({ topic }: { topic: Topic }) {
             ))}
           </div>
 
+          {/* Slumpmässig poängbonus (x2/x3) */}
+          {(pendingChestResult?.bonusMultiplier ?? 1) > 1 && (
+            <div
+              className="rounded-2xl p-4 text-center mb-4 animate-bounce-in"
+              style={{
+                background: 'linear-gradient(135deg,#7c3aed,#ec4899)',
+                border: '2px solid #f0abfc',
+                boxShadow: '0 0 24px rgba(236,72,153,0.5)',
+              }}
+            >
+              <p className="text-white font-black text-xl">
+                🎲 TUR! ×{pendingChestResult!.bonusMultiplier} POÄNG!
+              </p>
+              <p className="text-white/85 text-xs mt-1">
+                Du fick {pendingChestResult!.bonusMultiplier === 3 ? 'trippla' : 'dubbla'} poäng på den här övningen – helt slumpmässigt!
+              </p>
+            </div>
+          )}
+
           {/* Points earned */}
           <div className="bg-amber-500/20 border border-amber-400/40 rounded-2xl p-4 text-center mb-4">
             <p className="text-amber-300 font-bold text-lg">

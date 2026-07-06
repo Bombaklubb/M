@@ -5,6 +5,7 @@ import { WORLDS, WorldId } from '../data/worlds';
 import { Quest, getQuestsForWorld } from '../data/quests';
 import { getQuestProgress, saveQuestProgress, unlockCollectible } from '../utils/questStorage';
 import { addPoints } from '../utils/storage';
+import { rollPointsBonus } from '../utils/pointsBonus';
 import { COLLECTION_ITEMS } from '../data/collection';
 import { gradeToWorld } from '../data/worlds';
 
@@ -30,6 +31,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const [correctCount, setCorrectCount] = useState(0);
   const [newItem, setNewItem] = useState<string | null>(null);
   const [ptsEarned, setPtsEarned] = useState(0);
+  const [bonusMult, setBonusMult] = useState(1);
   const [alreadyDoneQuest, setAlreadyDoneQuest] = useState(false);
 
   if (!currentStudent) return null;
@@ -89,9 +91,13 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
       // Quest complete – belöning KRÄVER alla rätt
       const allCorrect = correctCount === selectedQuest.steps.length;
       const wasAlreadyDone = questProgress.find(p => p.questId === selectedQuest.id)?.completed === true;
-      const pts = wasAlreadyDone ? 0 : (correctCount * 20 + (allCorrect ? 100 : 0));
+      const basePts = wasAlreadyDone ? 0 : (correctCount * 20 + (allCorrect ? 100 : 0));
+      // Slumpmässig sällsynt bonus (x2/x3)
+      const bonus = basePts > 0 ? rollPointsBonus() : 1;
+      const pts = basePts * bonus;
       addPoints(currentStudent.id, pts);
       setPtsEarned(pts);
+      setBonusMult(bonus);
       setAlreadyDoneQuest(wasAlreadyDone);
       saveQuestProgress(currentStudent.id, selectedQuest.id, selectedQuest.steps.length, true, correctCount);
       if (allCorrect) {
@@ -311,6 +317,17 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
             </div>
           </div>
         </div>
+
+        {/* Slumpmässig poängbonus (x2/x3) */}
+        {bonusMult > 1 && (
+          <div className="rounded-2xl p-4 mb-5 text-center animate-bounce-in"
+            style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)', border: '2px solid #f0abfc', boxShadow: '0 0 24px rgba(236,72,153,0.5)' }}>
+            <p className="text-white font-black text-lg">🎲 TUR! ×{bonusMult} POÄNG!</p>
+            <p className="text-white/85 text-xs mt-1">
+              Du fick {bonusMult === 3 ? 'trippla' : 'dubbla'} poäng på det här äventyret – helt slumpmässigt!
+            </p>
+          </div>
+        )}
 
         {/* Already completed notice */}
         {alreadyDoneQuest && (
