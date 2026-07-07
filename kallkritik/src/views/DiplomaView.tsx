@@ -9,10 +9,11 @@ import { getLevelTitle } from '@/lib/utils';
 interface DiplomaViewProps {
   gameState: GameState;
   onNavigate: (view: View) => void;
+  userName?: string;
 }
 
-export function DiplomaView({ gameState, onNavigate }: DiplomaViewProps) {
-  const [name, setName] = useState('');
+export function DiplomaView({ gameState, onNavigate, userName }: DiplomaViewProps) {
+  const [name, setName] = useState(userName ?? '');
   const dateStr = new Date().toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' });
 
   return (

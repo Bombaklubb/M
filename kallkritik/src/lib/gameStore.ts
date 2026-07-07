@@ -1,8 +1,7 @@
 import { useState, useCallback } from 'react';
 import { GameState } from '@/types';
 import { xpToLevel } from './utils';
-
-const STORAGE_KEY = 'kallkritik_game_state';
+import { storageKeyFor } from './userStore';
 
 const DEFAULT_STATE: GameState = {
   xp: 0,
@@ -14,9 +13,9 @@ const DEFAULT_STATE: GameState = {
   moduleHighScores: {},
 };
 
-function loadState(): GameState {
+function loadState(storageKey: string): GameState {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(storageKey);
     if (!raw) return DEFAULT_STATE;
     return { ...DEFAULT_STATE, ...JSON.parse(raw) };
   } catch {
@@ -24,26 +23,29 @@ function loadState(): GameState {
   }
 }
 
-function saveState(state: GameState) {
+function saveState(storageKey: string, state: GameState) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    localStorage.setItem(storageKey, JSON.stringify(state));
   } catch {
     // ignore
   }
 }
 
-export function useGameStore() {
-  const [state, setState] = useState<GameState>(() => loadState());
+// Progress sparas per inloggat namn. Montera om komponenten (key={user})
+// vid användarbyte så att useState-initialiseraren läser rätt nyckel.
+export function useGameStore(userName: string) {
+  const storageKey = storageKeyFor(userName);
+  const [state, setState] = useState<GameState>(() => loadState(storageKey));
 
   const addXP = useCallback((amount: number) => {
     setState(prev => {
       const newXP = prev.xp + amount;
       const newLevel = xpToLevel(newXP);
       const next: GameState = { ...prev, xp: newXP, level: newLevel };
-      saveState(next);
+      saveState(storageKey, next);
       return next;
     });
-  }, []);
+  }, [storageKey]);
 
   const completeModule = useCallback((moduleId: number, score: number, badgeName?: string) => {
     setState(prev => {
@@ -76,16 +78,16 @@ export function useGameStore() {
         lastPlayedDate: today,
         moduleHighScores: updatedScores,
       };
-      saveState(next);
+      saveState(storageKey, next);
       return next;
     });
-  }, []);
+  }, [storageKey]);
 
   const resetProgress = useCallback(() => {
     const next = { ...DEFAULT_STATE };
-    saveState(next);
+    saveState(storageKey, next);
     setState(next);
-  }, []);
+  }, [storageKey]);
 
   return { state, addXP, completeModule, resetProgress };
 }

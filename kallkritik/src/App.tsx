@@ -20,6 +20,8 @@ import { Module13View } from '@/views/Module13View';
 import { KallkollenView } from '@/views/KallkollenView';
 import { DiplomaView } from '@/views/DiplomaView';
 import { StatsView } from '@/views/StatsView';
+import { LoginView } from '@/views/LoginView';
+import { loadCurrentUser, login, logout } from '@/lib/userStore';
 
 const pageVariants = {
   initial: { opacity: 0, y: 14 },
@@ -33,6 +35,35 @@ const pageTransition = {
 };
 
 export default function App() {
+  const [user, setUser] = useState<string | null>(() => loadCurrentUser());
+
+  return (
+    <div className="relative min-h-screen bg-background overflow-x-hidden">
+      {/* Decorative background blobs — pastel, light */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <div className="absolute top-[-8%] left-[-4%] w-[38vw] h-[38vw] rounded-full bg-violet-200/50 blur-3xl" />
+        <div className="absolute bottom-[8%] right-[-8%] w-[32vw] h-[32vw] rounded-full bg-cyan-200/50 blur-3xl" />
+        <div className="absolute top-[45%] left-[38%] w-[22vw] h-[22vw] rounded-full bg-pink-200/40 blur-3xl" />
+        <div className="absolute top-[20%] right-[20%] w-[18vw] h-[18vw] rounded-full bg-amber-200/35 blur-2xl" />
+      </div>
+
+      {user === null ? (
+        <LoginView onLogin={name => setUser(login(name))} />
+      ) : (
+        <AppShell
+          key={user}
+          user={user}
+          onLogout={() => {
+            logout();
+            setUser(null);
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
+function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
   const [currentView, setCurrentView] = useState<View>('home');
   const [classMode, setClassMode] = useState<boolean>(() => {
     try {
@@ -41,7 +72,7 @@ export default function App() {
       return false;
     }
   });
-  const { state, addXP, completeModule, resetProgress } = useGameStore();
+  const { state, addXP, completeModule, resetProgress } = useGameStore(user);
 
   useEffect(() => {
     try {
@@ -166,13 +197,13 @@ export default function App() {
       case 'diploma':
         return (
           <motion.div key="diploma" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
-            <DiplomaView gameState={state} onNavigate={handleNavigate} />
+            <DiplomaView gameState={state} onNavigate={handleNavigate} userName={user} />
           </motion.div>
         );
       case 'stats':
         return (
           <motion.div key="stats" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
-            <StatsView gameState={state} onNavigate={handleNavigate} onReset={resetProgress} />
+            <StatsView gameState={state} onNavigate={handleNavigate} onReset={resetProgress} userName={user} />
           </motion.div>
         );
       default:
@@ -181,21 +212,15 @@ export default function App() {
   }
 
   return (
-    <div className={`relative min-h-screen bg-background overflow-x-hidden ${classMode ? 'class-mode' : ''}`}>
-      {/* Decorative background blobs — pastel, light */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute top-[-8%] left-[-4%] w-[38vw] h-[38vw] rounded-full bg-violet-200/50 blur-3xl" />
-        <div className="absolute bottom-[8%] right-[-8%] w-[32vw] h-[32vw] rounded-full bg-cyan-200/50 blur-3xl" />
-        <div className="absolute top-[45%] left-[38%] w-[22vw] h-[22vw] rounded-full bg-pink-200/40 blur-3xl" />
-        <div className="absolute top-[20%] right-[20%] w-[18vw] h-[18vw] rounded-full bg-amber-200/35 blur-2xl" />
-      </div>
-
+    <div className={classMode ? 'class-mode' : ''}>
       <Header
         gameState={state}
         currentView={currentView}
         onNavigate={handleNavigate}
         classMode={classMode}
         onToggleClassMode={() => setClassMode(v => !v)}
+        userName={user}
+        onLogout={onLogout}
       />
 
       <main className="relative z-10">

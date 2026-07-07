@@ -10,22 +10,19 @@ interface StatsViewProps {
   gameState: GameState;
   onNavigate: (view: View) => void;
   onReset: () => void;
+  userName?: string;
 }
 
-export function StatsView({ gameState, onNavigate, onReset }: StatsViewProps) {
+export function StatsView({ gameState, onNavigate, onReset, userName }: StatsViewProps) {
   const [confirmReset, setConfirmReset] = useState(false);
 
   const { current, next, progress } = xpForNextLevel(gameState.xp);
   const levelTitle = getLevelTitle(gameState.level);
 
-  const BADGE_MAP: Record<string, { icon: string; description: string }> = {
-    'AI-Detektiven': { icon: '🔎', description: 'Modul 1 – AI eller människa?' },
-    'Faktakollaren': { icon: '🔍', description: 'Modul 2 – Hitta felet' },
-    'Källmästaren': { icon: '⚖️', description: 'Modul 3 – Är källan trovärdig?' },
-    'Bilddetektiven': { icon: '🖼️', description: 'Modul 4 – Fakebilder & Deepfakes' },
-    'Sanningssökaren': { icon: '💬', description: 'Modul 5 – AI-hallucinationer' },
-    'Snabbdomaren': { icon: '⚡', description: 'Modul 6 – Sant eller Fake?' },
-  };
+  // Byggs från MODULES så att kartan alltid stämmer med modulernas märken och visade nummer
+  const BADGE_MAP: Record<string, { icon: string; description: string }> = Object.fromEntries(
+    MODULES.map(m => [m.badgeName, { icon: m.icon, description: `Modul ${m.displayNumber} – ${m.title}` }])
+  );
 
   function handleResetConfirmed() {
     onReset();
@@ -54,7 +51,7 @@ export function StatsView({ gameState, onNavigate, onReset }: StatsViewProps) {
         animate={{ opacity: 1, y: 0 }}
         className="text-2xl font-bold text-foreground mb-6"
       >
-        Din statistik 📊
+        {userName ? `${userName.trim()}${/s$/i.test(userName.trim()) ? '' : 's'} statistik 📊` : 'Din statistik 📊'}
       </motion.h1>
 
       {/* Level + XP card */}

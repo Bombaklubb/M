@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Trophy, BarChart2, Home, Search, Presentation } from 'lucide-react';
+import { Zap, Trophy, BarChart2, Home, Search, Presentation, LogOut } from 'lucide-react';
 import { GameState } from '@/types';
 import { View } from '@/types';
 import { xpForNextLevel, getLevelTitle } from '@/lib/utils';
@@ -11,9 +11,11 @@ interface HeaderProps {
   onNavigate: (view: View) => void;
   classMode: boolean;
   onToggleClassMode: () => void;
+  userName: string;
+  onLogout: () => void;
 }
 
-export function Header({ gameState, currentView, onNavigate, classMode, onToggleClassMode }: HeaderProps) {
+export function Header({ gameState, currentView, onNavigate, classMode, onToggleClassMode, userName, onLogout }: HeaderProps) {
   const { progress } = xpForNextLevel(gameState.xp);
   const levelTitle = getLevelTitle(gameState.level);
 
@@ -103,6 +105,19 @@ export function Header({ gameState, currentView, onNavigate, classMode, onToggle
             >
               <Presentation className="w-4 h-4" />
             </button>
+            <div className="flex items-center gap-1 pl-1 ml-1 border-l-2 border-indigo-100">
+              <span className="hidden md:block text-xs font-bold text-indigo-500 max-w-[90px] truncate" title={userName}>
+                {userName}
+              </span>
+              <button
+                onClick={onLogout}
+                className="p-2 rounded-xl text-indigo-400 hover:text-rose-600 hover:bg-rose-50 border-2 border-transparent transition-all duration-200 cursor-pointer"
+                title={`Byt användare (inloggad: ${userName})`}
+                aria-label="Byt användare"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
+            </div>
             {gameState.badges.length > 0 && (
               <div className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 border-2 border-amber-200 shadow-sm">
                 <Trophy className="w-3.5 h-3.5 text-amber-600" />
