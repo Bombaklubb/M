@@ -10,6 +10,9 @@ export type View =
   | 'module8'
   | 'module9'
   | 'module10'
+  | 'module11'
+  | 'module12'
+  | 'module13'
   | 'kallkollen'
   | 'diploma'
   | 'stats';
@@ -26,6 +29,7 @@ export interface GameState {
 
 export interface ModuleMeta {
   id: number;
+  displayNumber: number;
   title: string;
   subtitle: string;
   description: string;

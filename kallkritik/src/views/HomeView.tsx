@@ -18,6 +18,8 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
   const levelTitle = getLevelTitle(gameState.level);
   const allCompleted = gameState.completedModules.length >= MODULES.length;
   const moduleById = new Map(MODULES.map(m => [m.id, m]));
+  const orderedIds = TRACKS.flatMap(t => t.moduleIds);
+  const startHereId = orderedIds.find(id => !gameState.completedModules.includes(id));
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 pb-14">
@@ -225,17 +227,23 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 + trackIndex * 0.1 }}
-            className="flex items-center gap-2.5 mb-3"
+            className="flex items-center gap-3 mb-3"
           >
-            <span className="text-2xl">{track.icon}</span>
-            <div>
+            <div className={`w-11 h-11 rounded-2xl border-2 flex items-center justify-center text-2xl shrink-0 shadow-sm ${track.chipColor}`}>
+              {track.icon}
+            </div>
+            <div className="min-w-0">
               <h3 className="text-base font-extrabold text-gray-700 leading-tight" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
                 Tema {trackIndex + 1}: {track.title}
               </h3>
-              <p className="text-xs font-semibold text-gray-400">{track.desc}</p>
+              <p className="text-xs font-semibold text-gray-500 truncate">{track.desc}</p>
             </div>
-            <span className="ml-auto text-xs font-bold text-gray-400">
-              {track.moduleIds.filter(id => gameState.completedModules.includes(id)).length}/{track.moduleIds.length}
+            <span className={`ml-auto shrink-0 text-xs font-extrabold rounded-full border-2 px-3 py-1 ${
+              track.moduleIds.every(id => gameState.completedModules.includes(id))
+                ? 'bg-emerald-100 border-emerald-300 text-emerald-700'
+                : 'bg-white border-indigo-100 text-indigo-500'
+            }`}>
+              {track.moduleIds.filter(id => gameState.completedModules.includes(id)).length}/{track.moduleIds.length} klara
             </span>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -249,6 +257,7 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
                   isCompleted={gameState.completedModules.includes(mod.id)}
                   highScore={gameState.moduleHighScores[mod.id]}
                   isLocked={false}
+                  isStartHere={mod.id === startHereId}
                   onClick={() => onNavigate(`module${mod.id}` as View)}
                   index={i}
                 />

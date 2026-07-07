@@ -54,6 +54,63 @@ export const LESSON_GUIDES: Record<number, LessonGuide> = {
       followUp: 'Berätta i grupp: Blev du förvånad över något du hittade?',
     },
   },
+  11: {
+    moduleId: 11,
+    before: [
+      'Varför tror ni att ni ser just det ni ser i era flöden?',
+      'Ser alla i klassen samma sak när ni öppnar samma app? Varför/varför inte?',
+    ],
+    during: 'Gör gärna lär-delen gemensamt på storskärm. Quizet görs enskilt – samtalsfrågorna passar utmärkt i par.',
+    pairMode: 'Jämför era flöden två och två innan ni börjar: öppna samma app och se hur olika det ser ut. Turas sedan om att svara varannan fråga.',
+    after: [
+      'Vad i era egna flöden känner ni igen från modulen?',
+      'Är filterbubblor farliga – eller mest bekväma? När blir de ett problem?',
+    ],
+    groupActivity: 'Bubbeltestet: läraren väljer ett neutralt sökord. Alla söker samtidigt på samma ord i samma app och jämför resultaten. Diskutera skillnaderna – vad har algoritmen "lärt sig" om var och en?',
+    mission: {
+      title: 'Kartlägg din bubbla',
+      task: 'Skriv ner de fem vanligaste typerna av innehåll i ditt flöde. Fundera: vad visas ALDRIG? Prova att aktivt söka på ett ämne du aldrig brukar titta på.',
+      followUp: 'Berätta i grupp: Vad säger ditt flöde om dig? Ändrades flödet efter din nya sökning?',
+    },
+  },
+  12: {
+    moduleId: 12,
+    before: [
+      'Har du eller någon du känner fått ett misstänkt meddelande eller erbjudande? Vad hände?',
+      'Varför tror ni att unga är en vanlig måltavla för bedragare?',
+    ],
+    during: 'Eleverna spelar enskilt eller i par. Betona att ingen ska skämmas – även vuxna experter blir lurade.',
+    pairMode: 'Läs varje scenario högt tillsammans. Leta minst ett varningstecken var innan ni svarar.',
+    after: [
+      'Vilket av de tre tecknen (lockbetet, brådskan, avsändaren) tycker ni är lättast att missa?',
+      'Vad skulle ni göra om en kompis blivit lurad? Hur hjälper man utan att skuldbelägga?',
+    ],
+    groupActivity: 'Bluffbygget: varje grupp designar en (påhittad!) bluff med alla tre knepen – lockbete, brådska och falsk avsändare. Grupperna presenterar och klassen pekar ut knepen. Att förstå hur bluffen byggs är bästa skyddet.',
+    mission: {
+      title: 'Veckans bluffspaning',
+      task: 'Håll utkik efter en misstänkt annons, ett SMS eller DM under veckan (klicka INTE på länkar). Ta en skärmdump och notera vilka varningstecken du ser.',
+      followUp: 'Visa i smågrupp: Vilka av de tre knepen använde bluffen? Hur nära var du att gå på den?',
+    },
+  },
+  13: {
+    moduleId: 13,
+    before: [
+      'Tror ni att alla konton ni möter på nätet är riktiga människor? Hur många är inte det, tror ni?',
+      'Vad är ett "troll" på internet – och vad vill det?',
+    ],
+    during: 'Eleverna spelar enskilt. Modulen passar åk 7–9 och kan med fördel kopplas till SO-undervisning om demokrati och påverkan.',
+    pairMode: 'Diskutera varje scenario innan ni svarar: vilka tecken ser ni? Kom överens om ett gemensamt svar.',
+    after: [
+      'Varför är "mata inte trollet" så svårt att följa i praktiken?',
+      'Hur påverkas en demokrati om folk inte kan lita på att åsikter på nätet kommer från riktiga människor?',
+    ],
+    groupActivity: 'Kontogranskning på storskärm: läraren visar (avidentifierade) exempel på konton. Klassen bedömer tillsammans: människa, bot eller troll? Vilka tecken avgör?',
+    mission: {
+      title: 'Botjägaren',
+      task: 'Nästa gång du ser en kommentar som känns konstig: klicka på profilen. Hur gammalt är kontot? Hur ofta postar det? Låter det som en människa? Skriv ner vad du hittar.',
+      followUp: 'Redovisa i par: Hittade du något konto du misstänker inte är en människa? Vilka tecken såg du?',
+    },
+  },
   3: {
     moduleId: 3,
     before: [
