@@ -14,6 +14,9 @@ import { Module7View } from '@/views/Module7View';
 import { Module8View } from '@/views/Module8View';
 import { Module9View } from '@/views/Module9View';
 import { Module10View } from '@/views/Module10View';
+import { Module11View } from '@/views/Module11View';
+import { Module12View } from '@/views/Module12View';
+import { Module13View } from '@/views/Module13View';
 import { KallkollenView } from '@/views/KallkollenView';
 import { DiplomaView } from '@/views/DiplomaView';
 import { StatsView } from '@/views/StatsView';
@@ -26,7 +29,7 @@ const pageVariants = {
 
 const pageTransition = {
   duration: 0.25,
-  ease: 'easeInOut',
+  ease: 'easeInOut' as const,
 };
 
 export default function App() {
@@ -47,6 +50,10 @@ export default function App() {
       // localStorage kan vara blockerad – klassläget fungerar ändå för sessionen
     }
   }, [classMode]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentView]);
 
   function handleNavigate(view: View) {
     setCurrentView(view);
@@ -130,6 +137,24 @@ export default function App() {
         return (
           <motion.div key="module10" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <Module10View onComplete={handleModuleComplete(10)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module11':
+        return (
+          <motion.div key="module11" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module11View onComplete={handleModuleComplete(11)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module12':
+        return (
+          <motion.div key="module12" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module12View onComplete={handleModuleComplete(12)} onExit={handleExit} />
+          </motion.div>
+        );
+      case 'module13':
+        return (
+          <motion.div key="module13" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <Module13View onComplete={handleModuleComplete(13)} onExit={handleExit} />
           </motion.div>
         );
       case 'kallkollen':

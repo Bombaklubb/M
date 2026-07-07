@@ -150,6 +150,27 @@ button, input[type="submit"], a {
 .module-card-lime:hover { box-shadow: 0 8px 0 0 rgba(132, 204, 22, 0.4); }
 .module-card-lime:active { box-shadow: 0 2px 0 0 rgba(132, 204, 22, 0.3); transform: translateY(4px); }
 
+.module-card-fuchsia {
+  border-color: #F5D0FE;
+  box-shadow: 0 6px 0 0 rgba(217, 70, 239, 0.3);
+}
+.module-card-fuchsia:hover { box-shadow: 0 8px 0 0 rgba(217, 70, 239, 0.4); }
+.module-card-fuchsia:active { box-shadow: 0 2px 0 0 rgba(217, 70, 239, 0.3); transform: translateY(4px); }
+
+.module-card-orange {
+  border-color: #FED7AA;
+  box-shadow: 0 6px 0 0 rgba(249, 115, 22, 0.3);
+}
+.module-card-orange:hover { box-shadow: 0 8px 0 0 rgba(249, 115, 22, 0.4); }
+.module-card-orange:active { box-shadow: 0 2px 0 0 rgba(249, 115, 22, 0.3); transform: translateY(4px); }
+
+.module-card-slate {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 0 0 rgba(100, 116, 139, 0.3);
+}
+.module-card-slate:hover { box-shadow: 0 8px 0 0 rgba(100, 116, 139, 0.4); }
+.module-card-slate:active { box-shadow: 0 2px 0 0 rgba(100, 116, 139, 0.3); transform: translateY(4px); }
+
 .module-card-violet {
   border-color: #C4B5FD;
   box-shadow: 0 6px 0 0 rgba(139, 92, 246, 0.3);

@@ -9,6 +9,7 @@ interface ModuleCardProps {
   isCompleted: boolean;
   highScore?: number;
   isLocked?: boolean;
+  isStartHere?: boolean;
   onClick: () => void;
   index: number;
 }
@@ -24,6 +25,9 @@ const cardColorClass: Record<number, string> = {
   10: 'module-card-lime',
   8: 'module-card-pink',
   9: 'module-card-teal',
+  11: 'module-card-fuchsia',
+  12: 'module-card-orange',
+  13: 'module-card-slate',
   1: 'module-card-violet',
   2: 'module-card-cyan',
   3: 'module-card-emerald',
@@ -37,6 +41,9 @@ const iconBgClass: Record<number, string> = {
   10: 'bg-lime-100 border-lime-200',
   8: 'bg-pink-100 border-pink-200',
   9: 'bg-teal-100 border-teal-200',
+  11: 'bg-fuchsia-100 border-fuchsia-200',
+  12: 'bg-orange-100 border-orange-200',
+  13: 'bg-slate-100 border-slate-200',
   1: 'bg-violet-100 border-violet-200',
   2: 'bg-cyan-100 border-cyan-200',
   3: 'bg-emerald-100 border-emerald-200',
@@ -50,6 +57,9 @@ const accentTextClass: Record<number, string> = {
   10: 'text-lime-600',
   8: 'text-pink-600',
   9: 'text-teal-600',
+  11: 'text-fuchsia-600',
+  12: 'text-orange-600',
+  13: 'text-slate-600',
   1: 'text-violet-600',
   2: 'text-cyan-600',
   3: 'text-emerald-600',
@@ -58,7 +68,7 @@ const accentTextClass: Record<number, string> = {
   6: 'text-indigo-600',
 };
 
-export function ModuleCard({ module, isCompleted, highScore, isLocked = false, onClick, index }: ModuleCardProps) {
+export function ModuleCard({ module, isCompleted, highScore, isLocked = false, isStartHere = false, onClick, index }: ModuleCardProps) {
   const [guideOpen, setGuideOpen] = useState(false);
   const diff = difficultyConfig[module.difficulty] ?? difficultyConfig['Medel'];
   const colorClass = cardColorClass[module.id] ?? 'module-card-indigo';
@@ -105,6 +115,15 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
                   <span className="text-xs font-bold">Klar!</span>
                 </div>
               )}
+              {isStartHere && !isCompleted && !isLocked && (
+                <motion.div
+                  animate={{ scale: [1, 1.06, 1] }}
+                  transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+                  className="flex items-center gap-1 text-white bg-emerald-500 border-2 border-emerald-600 rounded-full px-2.5 py-0.5 shadow-sm"
+                >
+                  <span className="text-xs font-extrabold" style={{ fontFamily: "'Baloo 2', sans-serif" }}>Börja här!</span>
+                </motion.div>
+              )}
               {isLocked && (
                 <div className="flex items-center gap-1 text-gray-400">
                   <Lock className="w-4 h-4" />
@@ -119,7 +138,7 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
           {/* Module number + grade range + lesson guide */}
           <div className="flex items-center gap-2 mb-0.5">
             <div className={`text-xs font-extrabold ${accentText} tracking-wide`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-              MODUL {module.id}
+              MODUL {module.displayNumber}
             </div>
             {module.gradeRange && (
               <span className="text-[10px] font-bold text-gray-400 bg-gray-100 border border-gray-200 rounded-full px-2 py-0.5">
@@ -143,10 +162,10 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, o
           <h3 className="font-extrabold text-base text-gray-800 mb-0.5 leading-tight" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
             {module.title}
           </h3>
-          <div className="text-xs font-semibold text-gray-400 mb-2">{module.subtitle}</div>
+          <div className="text-xs font-semibold text-gray-500 mb-2">{module.subtitle}</div>
 
           {/* Description */}
-          <p className="text-sm text-gray-500 leading-relaxed mb-4 font-medium">
+          <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
             {module.description}
           </p>
 

@@ -1,10 +1,14 @@
 import { ModuleMeta } from '@/types';
 
-// Tre teman/spår med rekommenderad ordning
+// Fyra teman/spår med rekommenderad ordning.
+// OBS: `id` är internt (rutter + sparad elevdata) och ändras aldrig.
+// `displayNumber` är siffran som visas på kortet – 1–13 i visningsordning.
+
 export interface Track {
   title: string;
   icon: string;
   desc: string;
+  chipColor: string;
   moduleIds: number[];
 }
 
@@ -13,25 +17,37 @@ export const TRACKS: Track[] = [
     title: 'Grunderna',
     icon: '🧭',
     desc: 'Börja här – metoderna som allt annat bygger på',
+    chipColor: 'bg-sky-100 border-sky-200',
     moduleIds: [7, 10, 3],
   },
   {
-    title: 'Sociala medier & AI',
+    title: 'Sociala medier',
     icon: '📱',
-    desc: 'Reklam, AI-texter och AI som källa i skolan',
-    moduleIds: [8, 9, 1, 5],
+    desc: 'Reklam, algoritmer, bluffar och fejkade konton',
+    chipColor: 'bg-pink-100 border-pink-200',
+    moduleIds: [8, 11, 12, 13],
   },
   {
-    title: 'Bilder & snabbtänk',
-    icon: '🖼️',
-    desc: 'Fejkbilder, felaktiga fakta och snabba bedömningar',
-    moduleIds: [4, 6, 2],
+    title: 'AI',
+    icon: '🤖',
+    desc: 'AI som källa, AI-texter, hallucinationer och fejkbilder',
+    chipColor: 'bg-teal-100 border-teal-200',
+    moduleIds: [9, 1, 5, 4],
+  },
+  {
+    title: 'Snabbtänk & fakta',
+    icon: '⚡',
+    desc: 'Snabba bedömningar och felaktiga fakta',
+    chipColor: 'bg-indigo-100 border-indigo-200',
+    moduleIds: [6, 2],
   },
 ];
 
 export const MODULES: ModuleMeta[] = [
+  // ── Tema 1: Grunderna ──
   {
     id: 7,
+    displayNumber: 1,
     title: 'Källkritik – Grunderna',
     subtitle: 'Vem kan du lita på?',
     description: 'Lär dig de fyra grundfrågorna i källkritik och öva på att bedöma om en källa är pålitlig, osäker eller ren desinformation.',
@@ -45,6 +61,7 @@ export const MODULES: ModuleMeta[] = [
   },
   {
     id: 10,
+    displayNumber: 2,
     title: 'Sök i sidled',
     subtitle: 'Gör som proffsen!',
     description: 'Faktagranskarens viktigaste metod: lämna sidan, öppna en ny flik och kolla vad andra säger om källan.',
@@ -57,7 +74,24 @@ export const MODULES: ModuleMeta[] = [
     gradeRange: 'Åk 5–9',
   },
   {
+    id: 3,
+    displayNumber: 3,
+    title: 'Är källan trovärdig?',
+    subtitle: 'Bedöm trovärdigheten',
+    description: 'Analysera olika typer av källor och bedöm om de är pålitliga, osäkra eller opålitliga.',
+    icon: '⚖️',
+    gradient: 'from-emerald-600 to-teal-800',
+    xpReward: 20,
+    difficulty: 'Medel',
+    badge: 'source-master',
+    badgeName: 'Källmästaren',
+    gradeRange: 'Åk 5–9',
+  },
+
+  // ── Tema 2: Sociala medier ──
+  {
     id: 8,
+    displayNumber: 4,
     title: 'Influencers & Reklam',
     subtitle: 'Betalt eller äkta?',
     description: 'Lär dig känna igen sponsrat innehåll, dolda annonser och när en influencer faktiskt menar vad hen säger – eller bara är betald.',
@@ -70,7 +104,52 @@ export const MODULES: ModuleMeta[] = [
     gradeRange: 'Åk 5–9',
   },
   {
+    id: 11,
+    displayNumber: 5,
+    title: 'Algoritmer & filterbubblor',
+    subtitle: 'Varför ser du det du ser?',
+    description: 'Ditt flöde väljs av en algoritm som vill ha din tid – inte ge dig sanningen. Lär dig hur bubblan fungerar och hur du bryter den.',
+    icon: '🫧',
+    gradient: 'from-fuchsia-500 to-purple-600',
+    xpReward: 15,
+    difficulty: 'Medel',
+    badge: 'bubble-breaker',
+    badgeName: 'Bubbelbrytaren',
+    gradeRange: 'Åk 6–9',
+  },
+  {
+    id: 12,
+    displayNumber: 6,
+    title: 'Nätfiske & bluffar',
+    subtitle: 'Nappa inte på kroken!',
+    description: 'Gratis Robux, falska vinster och kapade konton – lär dig känna igen bedrägerier innan du klickar.',
+    icon: '🎣',
+    gradient: 'from-orange-500 to-amber-500',
+    xpReward: 15,
+    difficulty: 'Lätt',
+    badge: 'scam-detector',
+    badgeName: 'Bluffdetektiven',
+    gradeRange: 'Åk 4–9',
+  },
+  {
+    id: 13,
+    displayNumber: 7,
+    title: 'Botar & troll',
+    subtitle: 'Vem är egentligen människa?',
+    description: 'Falska konton, provokatörer och fejkade folkstormar – lär dig avslöja konton som inte är vad de utger sig för.',
+    icon: '👾',
+    gradient: 'from-slate-500 to-slate-700',
+    xpReward: 15,
+    difficulty: 'Medel',
+    badge: 'troll-hunter',
+    badgeName: 'Trolljägaren',
+    gradeRange: 'Åk 7–9',
+  },
+
+  // ── Tema 3: AI ──
+  {
     id: 9,
+    displayNumber: 8,
     title: 'AI som källa – i skolan',
     subtitle: 'Hur använder du AI rätt?',
     description: 'AI kan vara till hjälp i skolarbete – men också lura dig. Lär dig när du kan lita på AI, när du måste verifiera, och när det är fusk.',
@@ -84,6 +163,7 @@ export const MODULES: ModuleMeta[] = [
   },
   {
     id: 1,
+    displayNumber: 9,
     title: 'AI eller människa?',
     subtitle: 'Kan du se skillnaden?',
     description: 'Granska texter, rubriker och inlägg – är det skrivet av en människa eller genererat av AI?',
@@ -96,33 +176,8 @@ export const MODULES: ModuleMeta[] = [
     gradeRange: 'Åk 4–9',
   },
   {
-    id: 6,
-    title: 'Sant eller Fake?',
-    subtitle: 'Snabbröstning!',
-    description: 'Rubriker, inlägg och statistik – sant eller fake? Perfekt för klassrumsdiskussioner!',
-    icon: '⚡',
-    gradient: 'from-indigo-600 to-violet-800',
-    xpReward: 10,
-    difficulty: 'Lätt',
-    badge: 'speed-judge',
-    badgeName: 'Snabbdomaren',
-    gradeRange: 'Åk 4–9',
-  },
-  {
-    id: 3,
-    title: 'Är källan trovärdig?',
-    subtitle: 'Bedöm trovärdigheten',
-    description: 'Analysera olika typer av källor och bedöm om de är pålitliga, osäkra eller opålitliga.',
-    icon: '⚖️',
-    gradient: 'from-emerald-600 to-teal-800',
-    xpReward: 20,
-    difficulty: 'Medel',
-    badge: 'source-master',
-    badgeName: 'Källmästaren',
-    gradeRange: 'Åk 5–9',
-  },
-  {
     id: 5,
+    displayNumber: 10,
     title: 'AI-hallucinationer',
     subtitle: 'Hittar AI på?',
     description: 'En AI svarar på frågor – men ibland hittar den på fakta. Kan du avgöra vad som är sant?',
@@ -135,7 +190,38 @@ export const MODULES: ModuleMeta[] = [
     gradeRange: 'Åk 5–9',
   },
   {
+    id: 4,
+    displayNumber: 11,
+    title: 'Fakebilder & Deepfakes',
+    subtitle: 'Se vad AI gömmer',
+    description: 'Lär dig de fem tecknen på AI-genererade bilder – händer, text, ansikten, skuggor och bakgrund.',
+    icon: '🖼️',
+    gradient: 'from-rose-600 to-pink-800',
+    xpReward: 15,
+    difficulty: 'Svår',
+    badge: 'image-detective',
+    badgeName: 'Bilddetektiven',
+    gradeRange: 'Åk 6–9',
+  },
+
+  // ── Tema 4: Snabbtänk & fakta ──
+  {
+    id: 6,
+    displayNumber: 12,
+    title: 'Sant eller Fake?',
+    subtitle: 'Snabbröstning!',
+    description: 'Rubriker, inlägg och statistik – sant eller fake? Perfekt för klassrumsdiskussioner!',
+    icon: '⚡',
+    gradient: 'from-indigo-600 to-violet-800',
+    xpReward: 10,
+    difficulty: 'Lätt',
+    badge: 'speed-judge',
+    badgeName: 'Snabbdomaren',
+    gradeRange: 'Åk 4–9',
+  },
+  {
     id: 2,
+    displayNumber: 13,
     title: 'Hitta felet',
     subtitle: 'Vad stämmer inte?',
     description: 'AI-genererade texter innehåller felaktig information. Klicka på det som verkar misstänkt!',
@@ -146,18 +232,5 @@ export const MODULES: ModuleMeta[] = [
     badge: 'fact-checker',
     badgeName: 'Faktakollaren',
     gradeRange: 'Åk 5–9',
-  },
-  {
-    id: 4,
-    title: 'Fakebilder & Deepfakes',
-    subtitle: 'Se vad AI gömmer',
-    description: 'Hitta AI-artifakter i bilder – konstiga händer, skuggor, text och omöjliga detaljer.',
-    icon: '🖼️',
-    gradient: 'from-rose-600 to-pink-800',
-    xpReward: 15,
-    difficulty: 'Svår',
-    badge: 'image-detective',
-    badgeName: 'Bilddetektiven',
-    gradeRange: 'Åk 6–9',
   },
 ];
