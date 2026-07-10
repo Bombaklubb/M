@@ -249,6 +249,17 @@ button, input[type="submit"], a {
   border-bottom-color: hsl(142 72% 45%);
 }
 
+/* Lockbete (korrekt fakta) efter kontroll */
+.error-highlight.revealed-decoy {
+  background: hsl(142 72% 45% / 0.1);
+  border-bottom-color: hsl(142 72% 45%);
+}
+
+.error-highlight.revealed-decoy.selected {
+  background: hsl(38 92% 55% / 0.35);
+  border-bottom-color: hsl(38 92% 55%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .clay-card, .clay-btn {
     transition: none;

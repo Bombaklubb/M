@@ -58,7 +58,9 @@ export interface AiOrHumanItem {
 export interface ErrorSegment {
   text: string;
   isError: boolean;
-  errorExplanation?: string;
+  isDecoy?: boolean;          // markerad och klickbar men KORREKT – lockbete
+  errorExplanation?: string;  // för fel: varför det är fel
+  factNote?: string;          // för lockbeten: varför det faktiskt stämmer
 }
 
 export interface FindErrorText {
