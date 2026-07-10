@@ -6,8 +6,9 @@ import { useRouter } from "next/navigation";
 import { useDarkMode } from "@/lib/useDarkMode";
 import { clearStudent, loadGamification, updateStreak } from "@/lib/storage";
 import { getAvatar } from "@/lib/avatars";
-import { getEquippedFrame, getWalletBalance } from "@/lib/shopStorage";
+import { getEquippedFrame, getEquippedEffect, getWalletBalance } from "@/lib/shopStorage";
 import FramedAvatar from "@/components/ui/FramedAvatar";
+import EffectOverlay from "@/components/ui/EffectOverlay";
 import type { StudentData } from "@/lib/types";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 
@@ -79,6 +80,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
   const [unopenedChests, setUnopenedChests] = useState(0);
   const [walletBalance, setWalletBalance] = useState(0);
   const [equippedFrame, setEquippedFrame] = useState<string | null>(null);
+  const [equippedEffect, setEquippedEffect] = useState<string | null>(null);
 
   useEffect(() => {
     if (!student) return;
@@ -87,6 +89,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
     updateStreak(student.name);
     setWalletBalance(getWalletBalance(student.name));
     setEquippedFrame(getEquippedFrame(student.name));
+    setEquippedEffect(getEquippedEffect(student.name));
   }, [student]);
 
   function handleLogout() {
@@ -171,8 +174,9 @@ export default function Header({ student, onLogout }: HeaderProps) {
               return (
                 <Link
                   href="/profile"
-                  className="flex items-center gap-2 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-en-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-en-200 touch-manipulation"
+                  className="relative flex items-center gap-2 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-en-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-en-200 touch-manipulation overflow-hidden"
                 >
+                  <EffectOverlay effectId={equippedEffect} />
                   <FramedAvatar avatar={av} frameId={equippedFrame} size={32} className="flex-shrink-0" />
                   <span className="hidden sm:inline text-sm font-bold text-en-700 dark:text-gray-200">{student.name}</span>
                 </Link>

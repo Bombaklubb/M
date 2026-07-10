@@ -247,16 +247,16 @@
 }
 
 @keyframes shop-fall {
-  0%   { transform: translateY(-20%) rotate(0deg);   opacity: 0; }
+  0%   { top: -8%;   opacity: 0; transform: rotate(0deg); }
   10%  { opacity: 1; }
   90%  { opacity: 1; }
-  100% { transform: translateY(420%) rotate(220deg); opacity: 0; }
+  100% { top: 106%;  opacity: 0; transform: rotate(220deg); }
 }
 @keyframes shop-rise {
-  0%   { transform: translateY(120%) scale(0.8); opacity: 0; }
+  0%   { top: 106%; opacity: 0; transform: scale(0.8); }
   15%  { opacity: 1; }
   85%  { opacity: 1; }
-  100% { transform: translateY(-360%) scale(1.1); opacity: 0; }
+  100% { top: -10%; opacity: 0; transform: scale(1.1); }
 }
 @keyframes shop-twinkle {
   0%, 100% { transform: scale(0.6); opacity: 0; }

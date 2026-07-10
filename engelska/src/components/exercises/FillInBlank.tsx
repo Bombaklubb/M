@@ -20,11 +20,17 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
   const parts = exercise.sentence.split("___");
 
   function normalizeAnswer(s: string) {
-    return s.trim().toLowerCase()
+    return s
+      .normalize("NFKC")
+      // collapse all whitespace variants (incl. non-breaking space) and trim
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase()
       // normalize curly/typographic apostrophes to straight apostrophe
       .replace(/[\u2018\u2019\u201A\u201B\u2032\u02BC\u00B4`]/g, "'")
       // strip trailing punctuation (handles mobile autocorrect adding periods etc.)
-      .replace(/[.!?,;:]+$/, "");
+      .replace(/[.!?,;:]+$/, "")
+      .trim();
   }
 
   function handleSubmit() {

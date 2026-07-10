@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/ui/Header";
 import { loadStudent, createStudent, clearStudent, claimDailyBonus } from "@/lib/storage";
-import { getDailyChallengeRecord } from "@/lib/dailyChallenge";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
 import type { StudentData, StageId } from "@/lib/types";
@@ -67,7 +66,6 @@ export default function HomePage() {
   const [returningName,  setReturningName]  = useState<string | null>(null);
   const [totals,         setTotals]         = useState<Record<string, number>>({});
   const [dailyBonus,     setDailyBonus]     = useState(0);
-  const [dailyDone,      setDailyDone]      = useState(false);
 
   useEffect(() => {
     const s = loadStudent();
@@ -79,7 +77,6 @@ export default function HomePage() {
       } else {
         setStudent(s);
       }
-      setDailyDone(getDailyChallengeRecord(s.name) !== null);
     } else {
       setStudent(s);
     }
@@ -279,34 +276,6 @@ export default function HomePage() {
             </div>
           </BlurFade>
         )}
-        {/* Dagens utmaning */}
-        <BlurFade delay={0.02} duration={0.4} inView>
-          <div className="mb-4 max-w-lg mx-auto w-full">
-            <Link
-              href="/dagens"
-              className="w-full flex items-center gap-3 rounded-2xl px-4 py-3 text-left transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-              style={{
-                background: dailyDone
-                  ? "rgba(255, 248, 220, 0.9)"
-                  : "linear-gradient(135deg,#f59e0b,#d97706)",
-                border: dailyDone ? "1px solid rgba(180,130,40,0.50)" : "2px solid #b45309",
-                boxShadow: dailyDone ? "0 2px 10px rgba(120,80,10,0.20)" : "0 4px 18px rgba(217,119,6,0.45)",
-              }}
-            >
-              <span className="text-2xl">{dailyDone ? "✅" : "🗓️"}</span>
-              <span className="flex-1 min-w-0">
-                <span className={`block font-black text-sm ${dailyDone ? "" : "text-white"}`} style={dailyDone ? { color: "#78350f" } : undefined}>
-                  Dagens utmaning
-                </span>
-                <span className={`block text-xs ${dailyDone ? "" : "text-white/85"}`} style={dailyDone ? { color: "rgba(120,60,10,0.75)" } : undefined}>
-                  {dailyDone ? "Klar för idag – kom tillbaka imorgon!" : "5 frågor · upp till 200 ⭐ + kista!"}
-                </span>
-              </span>
-              {!dailyDone && <span className="text-white font-black text-lg">→</span>}
-            </Link>
-          </div>
-        </BlurFade>
-
         <BlurFade delay={0} duration={0.4} inView>
           <div className="mb-4">
             <h2 className="text-2xl font-black text-white drop-shadow">Välj din värld</h2>
