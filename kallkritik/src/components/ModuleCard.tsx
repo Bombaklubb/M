@@ -135,7 +135,7 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, i
             </div>
           </div>
 
-          {/* Module number + grade range + lesson guide */}
+          {/* Module number + grade range */}
           <div className="flex items-center gap-2 mb-0.5">
             <div className={`text-xs font-extrabold ${accentText} tracking-wide`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
               MODUL {module.displayNumber}
@@ -145,17 +145,6 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, i
                 {module.gradeRange}
               </span>
             )}
-            <button
-              onClick={e => {
-                e.stopPropagation();
-                setGuideOpen(true);
-              }}
-              title="Lektionsguide för lärare"
-              aria-label="Öppna lektionsguide"
-              className="ml-auto w-7 h-7 rounded-xl bg-cyan-50 border-2 border-cyan-200 hover:bg-cyan-100 flex items-center justify-center transition-colors cursor-pointer"
-            >
-              <GraduationCap className="w-3.5 h-3.5 text-cyan-600" />
-            </button>
           </div>
 
           {/* Title */}
@@ -165,9 +154,25 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, i
           <div className="text-xs font-semibold text-gray-500 mb-2">{module.subtitle}</div>
 
           {/* Description */}
-          <p className="text-sm text-gray-600 leading-relaxed mb-4 font-medium">
+          <p className="text-sm text-gray-600 leading-relaxed mb-3 font-medium">
             {module.description}
           </p>
+
+          {/* Lektionsguide för pedagog */}
+          <button
+            onClick={e => {
+              e.stopPropagation();
+              setGuideOpen(true);
+            }}
+            title="Öppna lektionsguiden för pedagoger"
+            aria-label="Innan du börjar – lektionsguide för pedagog"
+            className="w-full flex items-center gap-2 bg-cyan-50 border-2 border-cyan-200 hover:bg-cyan-100 rounded-xl px-3 py-2 mb-4 transition-colors cursor-pointer"
+          >
+            <GraduationCap className="w-4 h-4 text-cyan-600 shrink-0" />
+            <span className="text-xs font-extrabold text-cyan-700" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
+              Innan du börjar – pedagog
+            </span>
+          </button>
 
           {/* Footer */}
           <div className="flex items-center justify-between pt-3 border-t-2 border-dashed border-gray-100">
