@@ -24,6 +24,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
   const [segmentStates, setSegmentStates] = useState<SegmentState[]>([]);
   const [checked, setChecked] = useState(false);
   const [totalFound, setTotalFound] = useState(0);
+  const [totalXP, setTotalXP] = useState(0);
   const [hintShown, setHintShown] = useState(false);
 
   const texts = MODULE2_TEXTS;
@@ -42,7 +43,8 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
 
   function toggleSegment(idx: number) {
     if (checked) return;
-    if (!currentText.segments[idx].isError) return;
+    const seg = currentText.segments[idx];
+    if (!seg.isError && !seg.isDecoy) return;
     setSegmentStates(prev =>
       prev.map((s, i) => (i === idx ? { selected: !s.selected } : s))
     );
@@ -50,20 +52,22 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
 
   function handleCheck() {
     let foundCount = 0;
+    let falseAlarms = 0;
     currentText.segments.forEach((seg, i) => {
       if (seg.isError && segmentStates[i]?.selected) foundCount++;
+      if (seg.isDecoy && segmentStates[i]?.selected) falseAlarms++;
     });
     setTotalFound(prev => prev + foundCount);
+    setTotalXP(prev => prev + Math.max(0, foundCount - falseAlarms) * 15);
     setChecked(true);
   }
 
   function handleNext() {
     if (textIndex + 1 >= texts.length) {
-      const finalXP = totalFound * 15;
       const badge = allErrors > 0 && totalFound / allErrors >= 0.8
         ? { name: 'Faktakollaren', icon: '🔍' }
         : null;
-      onComplete(totalFound, finalXP, badge?.name);
+      onComplete(totalFound, totalXP, badge?.name);
       setPhase('result');
     } else {
       setTextIndex(i => i + 1);
@@ -80,6 +84,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     setHintShown(false);
     setSegmentStates([]);
     setTotalFound(0);
+    setTotalXP(0);
   }
 
   if (phase === 'result') {
@@ -92,7 +97,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
         moduleId={2}
         score={totalFound}
         totalQuestions={allErrors}
-        xpEarned={totalFound * 15}
+        xpEarned={totalXP}
         newBadge={badge}
         onReplay={handleReplay}
         onHome={onExit}
@@ -120,12 +125,13 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
             <h1 className="text-2xl font-bold text-foreground mb-2">Hitta felet</h1>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               AI-genererade texter kan innehålla{' '}
-              <span className="text-danger font-semibold">faktafel</span>.
-              Tryck på de ord eller fraser du tror är felaktiga, och vi kollar om du har rätt!
+              <span className="text-danger font-semibold">faktafel</span> – men se upp:{' '}
+              <span className="text-success font-semibold">vissa markerade ord stämmer!</span>{' '}
+              Tryck bara på det du tror är fel.
             </p>
             <div className="flex items-center justify-center gap-3 bg-xp/10 rounded-xl px-4 py-3 mb-6">
               <Zap className="w-5 h-5 text-xp shrink-0" />
-              <p className="text-sm text-xp font-medium">15 XP per hittat fel · 3 texter</p>
+              <p className="text-sm text-xp font-medium">15 XP per hittat fel · felklick ger avdrag · 4 texter</p>
             </div>
             <div className="bg-muted rounded-xl p-4 mb-6 text-left">
               <div className="flex items-center gap-2 mb-2">
@@ -139,7 +145,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-xp mt-0.5 shrink-0">2.</span>
-                  Tryck på markerade ord som du tror är fel
+                  Tryck på markerade ord du tror är FEL – men vissa markeringar är sanna fakta!
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-xp mt-0.5 shrink-0">3.</span>
@@ -166,10 +172,15 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     if (seg.isError && segmentStates[i]?.selected) return acc + 1;
     return acc;
   }, 0);
+  const falseAlarmsInCurrent = currentText.segments.reduce((acc, seg, i) => {
+    if (seg.isDecoy && segmentStates[i]?.selected) return acc + 1;
+    return acc;
+  }, 0);
+  const xpInCurrent = Math.max(0, foundInCurrent - falseAlarmsInCurrent) * 15;
 
-  const revealedErrors = currentText.segments
+  const revealedMarked = currentText.segments
     .map((seg, i) => ({ seg, i }))
-    .filter(({ seg }) => seg.isError);
+    .filter(({ seg }) => seg.isError || seg.isDecoy);
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6">
@@ -217,7 +228,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                 <p className="text-xs text-amber-700 font-semibold">
                   Tryck på{' '}
                   <span className="underline decoration-amber-500 decoration-2">markerade ord</span>{' '}
-                  du tror är fel
+                  du tror är fel – men se upp, vissa markeringar stämmer!
                 </p>
               </div>
             )}
@@ -246,10 +257,10 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
               </div>
             )}
 
-            {/* Rendered text with interactive error spans */}
+            {/* Rendered text with interactive spans (fel + lockbeten) */}
             <p className="text-foreground leading-loose text-[15px]">
               {currentText.segments.map((seg, i) => {
-                if (!seg.isError) {
+                if (!seg.isError && !seg.isDecoy) {
                   return <span key={i}>{seg.text}</span>;
                 }
 
@@ -257,7 +268,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
 
                 let className = 'error-highlight';
                 if (checked) {
-                  className += ' revealed-correct';
+                  className += seg.isDecoy ? ' revealed-decoy' : ' revealed-correct';
                   if (isSelected) className += ' selected';
                 } else if (isSelected) {
                   className += ' selected';
@@ -287,9 +298,9 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
               <span className="text-sm text-muted-foreground">
                 Du har markerat{' '}
                 <span className="text-primary font-semibold">
-                  {segmentStates.filter((s, i) => s.selected && currentText.segments[i]?.isError).length}
+                  {segmentStates.filter(s => s.selected).length}
                 </span>{' '}
-                fel
+                ord
               </span>
               <Button variant="primary" size="md" onClick={handleCheck}>
                 Kontrollera mina svar
@@ -330,41 +341,53 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
                       }`}
                     >
                       Du hittade {foundInCurrent} av {errorSegments.length} fel
+                      {falseAlarmsInCurrent > 0 && (
+                        <span className="text-xp"> – men markerade {falseAlarmsInCurrent} som faktiskt stämde</span>
+                      )}
                     </div>
                     <div className="text-xs text-muted-foreground">
-                      +{foundInCurrent * 15} XP tjänat
+                      +{xpInCurrent} XP tjänat{falseAlarmsInCurrent > 0 ? ' (avdrag för felmarkeringar)' : ''}
                     </div>
                   </div>
                 </div>
 
-                {/* Error explanations */}
+                {/* Förklaringar – både fel och lockbeten */}
                 <div className="bg-card border border-border rounded-xl p-4 space-y-3">
                   <span className="text-sm font-semibold text-foreground">Förklaringar</span>
-                  {revealedErrors.map(({ seg, i }, idx) => {
-                    const wasFound = segmentStates[i]?.selected;
+                  {revealedMarked.map(({ seg, i }, idx) => {
+                    const wasSelected = segmentStates[i]?.selected ?? false;
+                    // Fyra utfall: fel hittat / fel missat / lockbete lämnat / lockbete felmarkerat
+                    const isGood = seg.isError ? wasSelected : !wasSelected;
+                    const label = seg.isError
+                      ? wasSelected ? 'Rätt – detta var ett fel!' : 'Missat fel'
+                      : wasSelected ? 'Oj – det här stämmer faktiskt!' : 'Rätt – du lät sann fakta vara!';
                     return (
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: idx * 0.1 }}
+                        transition={{ delay: idx * 0.08 }}
                         className={`flex items-start gap-3 rounded-lg p-3 ${
-                          wasFound
+                          isGood
                             ? 'bg-success/10 border border-success/30'
+                            : seg.isDecoy
+                            ? 'bg-xp/10 border border-xp/40'
                             : 'bg-danger/10 border border-danger/30'
                         }`}
                       >
-                        {wasFound
+                        {isGood
                           ? <CheckCircle2 className="w-4 h-4 text-success shrink-0 mt-0.5" />
+                          : seg.isDecoy
+                          ? <AlertCircle className="w-4 h-4 text-xp shrink-0 mt-0.5" />
                           : <XCircle className="w-4 h-4 text-danger shrink-0 mt-0.5" />
                         }
                         <div>
-                          <div
-                            className={`text-xs font-semibold mb-0.5 ${wasFound ? 'text-success' : 'text-danger'}`}
-                          >
-                            "{seg.text}"
+                          <div className={`text-xs font-semibold mb-0.5 ${isGood ? 'text-success' : seg.isDecoy ? 'text-xp' : 'text-danger'}`}>
+                            "{seg.text}" · {label}
                           </div>
-                          <div className="text-xs text-muted-foreground">{seg.errorExplanation}</div>
+                          <div className="text-xs text-muted-foreground">
+                            {seg.isError ? seg.errorExplanation : seg.factNote}
+                          </div>
                         </div>
                       </motion.div>
                     );
