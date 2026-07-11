@@ -119,12 +119,6 @@ export default function App() {
                 )
               })}
             </div>
-            <div className="mt-8 text-left text-xs text-slate-400">
-              Kontakt –{' '}
-              <a href="mailto:martin.akdogan@enkoping.se" className="text-brand-600 font-bold hover:underline">
-                martin.akdogan@enkoping.se
-              </a>
-            </div>
           </div>
         )}
 
@@ -137,6 +131,13 @@ export default function App() {
         {aktiv === 'temadagar' && <Temadagar />}
         {aktiv === 'vardegrundskort' && <Vardegrundskort />}
       </main>
+
+      <div className="no-print fixed bottom-3 left-3 z-30 rounded-md bg-white/90 px-3 py-1.5 text-xs text-slate-500 shadow backdrop-blur">
+        Kontakt:{' '}
+        <a href="mailto:martin.akdogan@enkoping.se" className="text-brand-600 font-bold hover:underline">
+          martin.akdogan@enkoping.se
+        </a>
+      </div>
     </div>
   )
 }
