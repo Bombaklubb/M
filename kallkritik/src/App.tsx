@@ -65,22 +65,7 @@ export default function App() {
 
 function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
   const [currentView, setCurrentView] = useState<View>('home');
-  const [classMode, setClassMode] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem('kallkritik_class_mode') === '1';
-    } catch {
-      return false;
-    }
-  });
   const { state, addXP, completeModule, resetProgress } = useGameStore(user);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem('kallkritik_class_mode', classMode ? '1' : '0');
-    } catch {
-      // localStorage kan vara blockerad – klassläget fungerar ändå för sessionen
-    }
-  }, [classMode]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -212,13 +197,11 @@ function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
   }
 
   return (
-    <div className={classMode ? 'class-mode' : ''}>
+    <>
       <Header
         gameState={state}
         currentView={currentView}
         onNavigate={handleNavigate}
-        classMode={classMode}
-        onToggleClassMode={() => setClassMode(v => !v)}
         userName={user}
         onLogout={onLogout}
       />
@@ -228,6 +211,6 @@ function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
           {renderView()}
         </AnimatePresence>
       </main>
-    </div>
+    </>
   );
 }

@@ -1,23 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Zap, Trophy, BarChart2, Home, Search, Presentation, LogOut } from 'lucide-react';
+import React, { useState } from 'react';
+import { Trophy, Home, Search } from 'lucide-react';
 import { GameState } from '@/types';
 import { View } from '@/types';
-import { xpForNextLevel, getLevelTitle } from '@/lib/utils';
+import { UserMenuModal } from './UserMenuModal';
 
 interface HeaderProps {
   gameState: GameState;
   currentView: View;
   onNavigate: (view: View) => void;
-  classMode: boolean;
-  onToggleClassMode: () => void;
   userName: string;
   onLogout: () => void;
 }
 
-export function Header({ gameState, currentView, onNavigate, classMode, onToggleClassMode, userName, onLogout }: HeaderProps) {
-  const { progress } = xpForNextLevel(gameState.xp);
-  const levelTitle = getLevelTitle(gameState.level);
+export function Header({ gameState, currentView, onNavigate, userName, onLogout }: HeaderProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-indigo-100 shadow-sm">
@@ -40,34 +36,8 @@ export function Header({ gameState, currentView, onNavigate, classMode, onToggle
             </div>
           </button>
 
-          {/* XP + Level */}
-          <div className="flex items-center gap-3 flex-1 max-w-xs">
-            <div className="flex items-center gap-1.5 shrink-0">
-              <div className="w-8 h-8 rounded-2xl bg-indigo-100 border-2 border-indigo-300 flex items-center justify-center shadow-sm">
-                <span className="text-xs font-extrabold text-indigo-700">{gameState.level}</span>
-              </div>
-              <div className="hidden sm:block text-xs font-bold text-indigo-500">{levelTitle}</div>
-            </div>
-            <div className="flex-1">
-              <div className="flex justify-between text-xs text-indigo-400 font-semibold mb-1">
-                <span className="flex items-center gap-1">
-                  <Zap className="w-3 h-3 text-amber-500" />
-                  {gameState.xp} XP
-                </span>
-              </div>
-              <div className="h-2 bg-indigo-100 rounded-full overflow-hidden border border-indigo-200">
-                <motion.div
-                  className="h-full xp-bar-fill rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${progress}%` }}
-                  transition={{ duration: 0.5, ease: 'easeOut' }}
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Nav */}
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-1 ml-auto">
             <button
               onClick={() => onNavigate('home')}
               className={`p-2 rounded-xl transition-all duration-200 cursor-pointer ${
@@ -80,44 +50,21 @@ export function Header({ gameState, currentView, onNavigate, classMode, onToggle
             >
               <Home className="w-4 h-4" />
             </button>
+
             <button
-              onClick={() => onNavigate('stats')}
-              className={`p-2 rounded-xl transition-all duration-200 cursor-pointer ${
-                currentView === 'stats'
-                  ? 'bg-indigo-100 text-indigo-700 border-2 border-indigo-200 shadow-sm'
-                  : 'text-indigo-400 hover:text-indigo-700 hover:bg-indigo-50 border-2 border-transparent'
-              }`}
-              title="Statistik"
-              aria-label="Statistik"
+              onClick={() => setMenuOpen(true)}
+              className="flex items-center gap-1.5 pl-1.5 pr-3 py-1.5 rounded-xl border-2 border-transparent hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-200 cursor-pointer"
+              title="Ditt konto och din statistik"
+              aria-label="Öppna kontomeny"
             >
-              <BarChart2 className="w-4 h-4" />
-            </button>
-            <button
-              onClick={onToggleClassMode}
-              className={`p-2 rounded-xl transition-all duration-200 cursor-pointer ${
-                classMode
-                  ? 'bg-violet-100 text-violet-700 border-2 border-violet-300 shadow-sm'
-                  : 'text-indigo-400 hover:text-indigo-700 hover:bg-indigo-50 border-2 border-transparent'
-              }`}
-              title={classMode ? 'Klassläge på – större text för storskärm. Klicka för att stänga av.' : 'Klassläge – större text för storskärm/projektor'}
-              aria-label="Växla klassläge"
-              aria-pressed={classMode}
-            >
-              <Presentation className="w-4 h-4" />
-            </button>
-            <div className="flex items-center gap-1 pl-1 ml-1 border-l-2 border-indigo-100">
-              <span className="hidden md:block text-xs font-bold text-indigo-500 max-w-[90px] truncate" title={userName}>
+              <div className="w-7 h-7 rounded-full bg-indigo-100 border-2 border-indigo-300 flex items-center justify-center shrink-0">
+                <span className="text-[10px] font-extrabold text-indigo-700">{gameState.level}</span>
+              </div>
+              <span className="hidden sm:block text-xs font-bold text-indigo-600 max-w-[90px] truncate">
                 {userName}
               </span>
-              <button
-                onClick={onLogout}
-                className="p-2 rounded-xl text-indigo-400 hover:text-rose-600 hover:bg-rose-50 border-2 border-transparent transition-all duration-200 cursor-pointer"
-                title={`Byt användare (inloggad: ${userName})`}
-                aria-label="Byt användare"
-              >
-                <LogOut className="w-4 h-4" />
-              </button>
-            </div>
+            </button>
+
             {gameState.badges.length > 0 && (
               <div className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-amber-100 border-2 border-amber-200 shadow-sm">
                 <Trophy className="w-3.5 h-3.5 text-amber-600" />
@@ -127,6 +74,21 @@ export function Header({ gameState, currentView, onNavigate, classMode, onToggle
           </nav>
         </div>
       </div>
+
+      <UserMenuModal
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        gameState={gameState}
+        userName={userName}
+        onNavigateStats={() => {
+          onNavigate('stats');
+          setMenuOpen(false);
+        }}
+        onLogout={() => {
+          onLogout();
+          setMenuOpen(false);
+        }}
+      />
     </header>
   );
 }

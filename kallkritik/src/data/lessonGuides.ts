@@ -41,7 +41,7 @@ export const LESSON_GUIDES: Record<number, LessonGuide> = {
       'Hur gör ni för att ta reda på om en sida går att lita på?',
       'Vad tror ni en professionell faktagranskare gör annorlunda än de flesta av oss?',
     ],
-    during: 'Gör gärna lär-delen gemensamt på storskärm (Klassläge). Quizet görs sedan enskilt eller i par.',
+    during: 'Gör gärna lär-delen gemensamt på storskärm. Quizet görs sedan enskilt eller i par.',
     pairMode: 'Diskutera varje scenario i paret innan ni svarar. Kom överens – ni får bara ett svar.',
     after: [
       'Varför räcker det inte att läsa källans egen "Om oss"-sida?',
@@ -249,7 +249,7 @@ export const LESSON_GUIDES: Record<number, LessonGuide> = {
     before: [
       'Vad delar folk vidare snabbast – tråkiga sanningar eller spännande lögner? Varför?',
     ],
-    during: 'Modulen passar bäst i helklass med Klassläge: visa påståendet på storskärm, låt klassen rösta med handuppräckning INNAN svaret visas.',
+    during: 'Modulen passar bäst i helklass: visa påståendet på storskärm, låt klassen rösta med handuppräckning INNAN svaret visas.',
     pairMode: 'Rösta samtidigt på tre – "sant" tumme upp, "fake" tumme ner. Oense? Diskutera 30 sekunder och rösta igen.',
     after: [
       'Vilket påstående lurade flest? Vad gjorde det trovärdigt?',

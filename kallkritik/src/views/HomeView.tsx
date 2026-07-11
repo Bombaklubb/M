@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, Flame, Trophy, ChevronDown, ChevronUp, Lightbulb, GraduationCap, Star, Printer, ChevronRight } from 'lucide-react';
+import { Zap, Trophy, ChevronDown, ChevronUp, Lightbulb, GraduationCap, Star, Printer, ChevronRight } from 'lucide-react';
 import { ModuleCard } from '@/components/ModuleCard';
 import { MODULES, TRACKS } from '@/data/modules';
 import { GameState, View } from '@/types';
-import { xpForNextLevel, getLevelTitle } from '@/lib/utils';
 
 interface HomeViewProps {
   gameState: GameState;
@@ -14,12 +13,14 @@ interface HomeViewProps {
 export function HomeView({ gameState, onNavigate }: HomeViewProps) {
   const [tipsExpanded, setTipsExpanded] = useState(false);
 
-  const { current, next, progress } = xpForNextLevel(gameState.xp);
-  const levelTitle = getLevelTitle(gameState.level);
   const allCompleted = gameState.completedModules.length >= MODULES.length;
   const moduleById = new Map(MODULES.map(m => [m.id, m]));
   const orderedIds = TRACKS.flatMap(t => t.moduleIds);
   const startHereId = orderedIds.find(id => !gameState.completedModules.includes(id));
+  const completedCount = gameState.completedModules.length;
+  const totalCount = MODULES.length;
+  const percentDone = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+  const percentLeft = 100 - percentDone;
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-6 pb-14">
@@ -115,69 +116,31 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
         </AnimatePresence>
       </motion.div>
 
-      {/* Stats bar */}
+      {/* Din progress – hur mycket av appen du klarat */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
-        className="grid grid-cols-3 gap-3 mb-6"
+        className="mb-6 clay-card px-5 py-4"
       >
-        <div className="clay-card p-4 flex flex-col items-center text-center gap-1">
-          <div className="w-9 h-9 rounded-2xl bg-orange-100 border-2 border-orange-200 flex items-center justify-center mb-1">
-            <Flame className={`w-5 h-5 ${gameState.streak > 0 ? 'text-orange-500' : 'text-gray-300'}`} />
-          </div>
-          <div className="text-2xl font-extrabold text-gray-800" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-            {gameState.streak}
-          </div>
-          <div className="text-xs font-bold text-gray-400">Streak</div>
+        <div className="flex justify-between items-center mb-2">
+          <span className="text-sm font-extrabold text-gray-700" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
+            Din progress
+          </span>
+          <span className="text-sm font-extrabold text-indigo-600">{percentDone}% klart</span>
         </div>
-
-        <div className="clay-card p-4 flex flex-col items-center text-center gap-1">
-          <div className="w-9 h-9 rounded-2xl bg-indigo-100 border-2 border-indigo-200 flex items-center justify-center mb-1">
-            <span className="text-sm font-extrabold text-indigo-700">{gameState.level}</span>
-          </div>
-          <div className="text-sm font-extrabold text-gray-800" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-            {levelTitle}
-          </div>
-          <div className="text-xs font-bold text-gray-400">Nivå {gameState.level}</div>
+        <div className="h-3 bg-indigo-50 rounded-full overflow-hidden border-2 border-indigo-100">
+          <motion.div
+            className="h-full xp-bar-fill rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${percentDone}%` }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+          />
         </div>
-
-        <div className="clay-card p-4 flex flex-col items-center text-center gap-1">
-          <div className="w-9 h-9 rounded-2xl bg-amber-100 border-2 border-amber-200 flex items-center justify-center mb-1">
-            <Zap className="w-5 h-5 text-amber-500" />
-          </div>
-          <div className="text-2xl font-extrabold text-amber-600" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
-            {gameState.xp}
-          </div>
-          <div className="text-xs font-bold text-gray-400">Total XP</div>
+        <div className="text-xs font-semibold text-gray-400 mt-1.5">
+          {completedCount} av {totalCount} moduler klara · {percentLeft}% kvar
         </div>
       </motion.div>
-
-      {/* XP progress */}
-      {gameState.level < 10 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mb-6 clay-card px-5 py-4"
-        >
-          <div className="flex justify-between items-center mb-2 text-xs font-bold">
-            <span className="text-gray-500">
-              Nästa nivå:{' '}
-              <span className="text-indigo-700">{getLevelTitle(gameState.level + 1)}</span>
-            </span>
-            <span className="text-amber-600 font-extrabold">{current} / {next} XP</span>
-          </div>
-          <div className="h-3 bg-indigo-50 rounded-full overflow-hidden border-2 border-indigo-100">
-            <motion.div
-              className="h-full xp-bar-fill rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-            />
-          </div>
-        </motion.div>
-      )}
 
       {/* Källkollen – verktyg för riktiga källor */}
       <motion.div
@@ -350,7 +313,6 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
                     { icon: '🎓', title: 'Lektionsguider', desc: 'Klicka på studentmössan på varje modulkort: före/under/efter-upplägg med samtalsfrågor.', color: 'bg-cyan-50 border-cyan-200' },
-                    { icon: '📺', title: 'Klassläge', desc: 'Aktivera skärm-ikonen i menyn för större text – perfekt på projektor för gemensam röstning.', color: 'bg-violet-50 border-violet-200' },
                     { icon: '👥', title: 'Parläge', desc: 'Två elever på en enhet: turas om varannan fråga och motivera högt innan ni svarar.', color: 'bg-emerald-50 border-emerald-200' },
                     { icon: '🎒', title: 'Veckans granskning', desc: 'Efter varje modul får eleven ett uppdrag i sitt eget flöde – redovisas i smågrupp.', color: 'bg-amber-50 border-amber-200' },
                     { icon: '🚦', title: 'Källkollen', desc: 'Låt eleverna granska riktiga källor med checklistan – funkar i alla ämnen.', color: 'bg-rose-50 border-rose-200' },

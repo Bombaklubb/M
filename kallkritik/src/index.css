@@ -266,11 +266,6 @@ button, input[type="submit"], a {
   }
 }
 
-/* Klassläge – större gränssnitt för storskärm/projektor */
-.class-mode main {
-  zoom: 1.2;
-}
-
 /* Utskrift av diplom */
 @media print {
   body * {
