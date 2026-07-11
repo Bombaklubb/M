@@ -18,7 +18,7 @@ const CATEGORY_LABELS: Record<"L" | "TI", string> = {
   TI: "Tolka och integrera",
 };
 
-// Styrke-/svaghetsanalys utifrån elevens senast sparade resultat per prov.
+// Resultatöversikt utifrån elevens senast sparade resultat per prov.
 // Åk 9 grupperas per uppgiftstyp (aspect), åk 3 per L/TI-kategori och
 // årskurser utan någon av dessa får en samlad stapel.
 // Tomt-läge när eleven ännu inte har rättat något prov i årskursen.
@@ -28,7 +28,7 @@ function EmptyStats() {
       <h2 className="font-serif text-xl font-bold">Min statistik</h2>
       <p className="mt-2 text-sm leading-relaxed text-stone-600">
         Du har inte rättat något prov än. Gör ett läsprov och rätta det – då visas
-        dina styrkor och svagheter per uppgiftstyp här.
+        dina resultat per uppgiftstyp här.
       </p>
     </div>
   );
