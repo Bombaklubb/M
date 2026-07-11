@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Grade, WritingTask } from "../types";
 import IllustrationImg from "./IllustrationImg";
 import StatsPanel from "./StatsPanel";
@@ -28,6 +29,7 @@ export default function GradePage({
   onOpenWriting,
   onOpenOral,
 }: Props) {
+  const [tab, setTab] = useState<"delprov" | "statistik">("delprov");
   return (
     <div className="mx-auto max-w-3xl">
       <button onClick={onBack} className="mb-4 text-sm font-medium text-np hover:underline">
@@ -40,8 +42,40 @@ export default function GradePage({
         </p>
         <h1 className="mt-1 font-serif text-3xl font-bold">Välj delprov</h1>
 
-        <StatsPanel grade={grade} onOpenReading={onOpenReading} />
+        {/* Flikar: delprovslistan eller elevens statistik */}
+        <div className="mt-4 inline-flex gap-1 rounded-md bg-stone-200 p-1">
+          <button
+            onClick={() => setTab("delprov")}
+            className={
+              "rounded px-4 py-1.5 text-sm font-bold transition " +
+              (tab === "delprov" ? "bg-np text-white" : "text-stone-600")
+            }
+          >
+            Delprov
+          </button>
+          <button
+            onClick={() => setTab("statistik")}
+            className={
+              "rounded px-4 py-1.5 text-sm font-bold transition " +
+              (tab === "statistik" ? "bg-np text-white" : "text-stone-600")
+            }
+          >
+            Min statistik
+          </button>
+        </div>
 
+        {tab === "statistik" && (
+          <StatsPanel
+            grade={grade}
+            onOpenReading={(id) => {
+              setTab("delprov");
+              onOpenReading(id);
+            }}
+          />
+        )}
+
+        {tab === "delprov" && (
+          <>
         <h2 className="mt-8 border-b-2 border-np pb-1 font-serif text-xl font-bold">
           Läsa – läsförståelse
         </h2>
@@ -138,6 +172,8 @@ export default function GradePage({
                 </button>
               ))}
             </div>
+          </>
+        )}
           </>
         )}
       </div>

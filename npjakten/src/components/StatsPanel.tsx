@@ -21,15 +21,28 @@ const CATEGORY_LABELS: Record<"L" | "TI", string> = {
 // Styrke-/svaghetsanalys utifrån elevens senast sparade resultat per prov.
 // Åk 9 grupperas per uppgiftstyp (aspect), åk 3 per L/TI-kategori och
 // årskurser utan någon av dessa får en samlad stapel.
+// Tomt-läge när eleven ännu inte har rättat något prov i årskursen.
+function EmptyStats() {
+  return (
+    <div className="no-print mt-6 rounded-md border-2 border-np bg-np-light p-5">
+      <h2 className="font-serif text-xl font-bold">Min statistik</h2>
+      <p className="mt-2 text-sm leading-relaxed text-stone-600">
+        Du har inte rättat något prov än. Gör ett läsprov och rätta det – då visas
+        dina styrkor och svagheter per uppgiftstyp här.
+      </p>
+    </div>
+  );
+}
+
 export default function StatsPanel({ grade, onOpenReading }: Props) {
   const [results, setResults] = useState(() => loadResults(grade.id));
 
-  if (results.length === 0) return null;
+  if (results.length === 0) return <EmptyStats />;
 
   const allQuestions = results.flatMap((r) => r.perQuestion);
   const scored = allQuestions.filter((q) => q.scored);
   const unscoredCount = allQuestions.length - scored.length;
-  if (scored.length === 0) return null;
+  if (scored.length === 0) return <EmptyStats />;
 
   // Välj gruppering: uppgiftstyp > kategori > samlat
   const dimension = scored.some((q) => q.aspect)
@@ -80,7 +93,7 @@ export default function StatsPanel({ grade, onOpenReading }: Props) {
   return (
     <div className="no-print mt-6 rounded-md border-2 border-np bg-np-light p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="font-serif text-xl font-bold">Dina styrkor och svagheter</h2>
+        <h2 className="font-serif text-xl font-bold">Min statistik</h2>
         <span className="text-xs text-stone-500">
           Baserat på {results.length} rättade prov
         </span>
