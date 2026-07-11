@@ -1573,5 +1573,87 @@
         "fallback": "/images/resonerande.svg"
       }
     }
+  ],
+  "oral": [
+    {
+      "id": "ak9-a-sociala-medier",
+      "delprov": "Delprov A: tala – samtal och diskussion",
+      "title": "Påståenden om sociala medier",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=900&h=506&fit=crop",
+        "alt": "Sociala medier-appar på en mobilskärm.",
+        "fallback": "/images/uppkopplad.svg"
+      },
+      "intro": [
+        "På det muntliga nationella provet leder eleverna turvis ett samtal utifrån ett underlag, och gruppen diskuterar tillsammans. Ni tränar samma förmågor här: att ta ordet, driva ett resonemang, lyssna och bygga vidare på det andra säger.",
+        "Korten innehåller påståenden om sociala medier. Er uppgift är inte att bli överens – utan att pröva påståendena från flera håll och motivera era ståndpunkter."
+      ],
+      "steps": [
+        "Sätt er 3–4 elever tillsammans. Utse en samtalsledare för första kortet – rollen roterar sedan.",
+        "Samtalsledaren läser påståendet högt, ger sin egen ståndpunkt med minst två argument och lämnar sedan ordet vidare.",
+        "Övriga tar ställning: håll med, säg emot eller nyansera (”det beror på …”) – motivera alltid.",
+        "Samtalsledaren ser till att alla kommer till tals och ställer följdfrågor: ”Hur menar du?”, ”Har du ett exempel?”.",
+        "Samtalsledaren sammanfattar: vilka argument vägde tyngst? Ändrade någon uppfattning?",
+        "Nästa person blir samtalsledare och drar ett nytt kort."
+      ],
+      "cards": [
+        "Man är ärligare bakom en skärm än ansikte mot ansikte.",
+        "Sociala medier gör oss mer ensamma, inte mer sociala.",
+        "Det borde finnas en åldersgräns på 16 år för sociala medier.",
+        "Influencers har större makt över unga än skolan har.",
+        "Den som lägger ut något offentligt får tåla hård kritik.",
+        "Utan sociala medier skulle färre unga må dåligt.",
+        "Det är rätt att stänga av personer som sprider hat – även om det begränsar yttrandefriheten.",
+        "Om 20 år kommer vi att se på sociala medier som vi i dag ser på rökning."
+      ],
+      "assessmentPoints": [
+        "Alla i gruppen kom till tals, och samtalsledaren fördelade ordet.",
+        "Vi motiverade våra ståndpunkter med argument och exempel.",
+        "Vi byggde vidare på varandras resonemang i stället för att bara upprepa vår egen åsikt.",
+        "Vi prövade påståendena från flera håll – även perspektiv vi inte själva håller med om.",
+        "Vi ställde följdfrågor till varandra.",
+        "Samtalsledaren sammanfattade diskussionen innan nästa kort."
+      ]
+    },
+    {
+      "id": "ak9-a-skolan-framtiden",
+      "delprov": "Delprov A: tala – samtal och diskussion",
+      "title": "Påståenden om skolan och framtiden",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900&h=506&fit=crop",
+        "alt": "Elever på väg genom en skolkorridor.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "intro": [
+        "Hur ska skolan vara – och vad väntar efter den? Det här samtalet handlar om betyg, läxor, teknik och framtidsval: ämnen där det finns goda argument åt flera håll.",
+        "Träna på att driva ett resonemang i flera led: påstående → argument → exempel → slutsats. Och på att lyssna så noga att du kan bygga vidare på vad de andra faktiskt sa."
+      ],
+      "steps": [
+        "Sätt er 3–4 elever tillsammans. Utse en samtalsledare för första kortet – rollen roterar sedan.",
+        "Samtalsledaren läser påståendet högt, ger sin egen ståndpunkt med minst två argument och lämnar sedan ordet vidare.",
+        "Övriga tar ställning: håll med, säg emot eller nyansera (”det beror på …”) – motivera alltid.",
+        "Utmana varandra schysst: ”Vad säger du om att …?”, ”Finns det något som talar emot det?”.",
+        "Samtalsledaren sammanfattar: vilka argument vägde tyngst? Ändrade någon uppfattning?",
+        "Nästa person blir samtalsledare och drar ett nytt kort."
+      ],
+      "cards": [
+        "Betyg gör elever bättre.",
+        "Läxor borde avskaffas.",
+        "AI kommer att ta över många av de jobb vi utbildar oss till.",
+        "Det är viktigare att lära sig samarbeta än att få höga betyg.",
+        "Alla borde jobba minst ett år innan de börjar gymnasiet.",
+        "Skolan förbereder oss för prov – inte för livet.",
+        "Eleverna borde få vara med och bestämma mer i skolan.",
+        "Det spelar ingen roll vilket gymnasieprogram man väljer – det ordnar sig ändå."
+      ],
+      "assessmentPoints": [
+        "Alla i gruppen kom till tals, och samtalsledaren fördelade ordet.",
+        "Vi motiverade våra ståndpunkter med argument och exempel.",
+        "Vi resonerade i flera led: påstående, argument, exempel och slutsats.",
+        "Vi byggde vidare på varandras resonemang.",
+        "Vi vågade säga emot – och lyssnade klart på motargumenten.",
+        "Samtalsledaren sammanfattade diskussionen innan nästa kort."
+      ]
+    }
   ]
 }

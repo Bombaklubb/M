@@ -4,6 +4,7 @@ import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
 import StrategyTips from "./StrategyTips";
 import FacitSheet from "./FacitSheet";
+import ReadAloudButton from "./ReadAloudButton";
 import { saveTestResult } from "../lib/results";
 
 interface Props {
@@ -15,13 +16,44 @@ interface Props {
 
 const LETTERS = ["A", "B", "C", "D"];
 
+// Pågående svar sparas i webbläsaren så att inget försvinner vid omladdning
+interface SavedProgress {
+  mc?: Record<number, number>;
+  open?: Record<number, string>;
+  order?: Record<number, Record<number, number>>;
+  self?: Record<number, number>;
+  reviewing?: boolean;
+}
+
+function loadProgress(key: string): SavedProgress {
+  try {
+    const raw = localStorage.getItem(key);
+    const parsed = raw ? JSON.parse(raw) : null;
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
 export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: Props) {
-  const [mcAnswers, setMcAnswers] = useState<Record<number, number>>({});
-  const [openAnswers, setOpenAnswers] = useState<Record<number, string>>({});
+  const progressKey = `npjakten-lasa-${test.id}`;
+  // Läses en gång per mount (komponenten remountas per prov via key)
+  const [saved] = useState<SavedProgress>(() => loadProgress(progressKey));
+
+  const [mcAnswers, setMcAnswers] = useState<Record<number, number>>(
+    () => saved.mc ?? {}
+  );
+  const [openAnswers, setOpenAnswers] = useState<Record<number, string>>(
+    () => saved.open ?? {}
+  );
   // ordningsuppgift: valt nummer (1–4) per mening, per uppgift
-  const [orderAnswers, setOrderAnswers] = useState<Record<number, Record<number, number>>>({});
-  const [selfPoints, setSelfPoints] = useState<Record<number, number>>({});
-  const [reviewing, setReviewing] = useState(false);
+  const [orderAnswers, setOrderAnswers] = useState<Record<number, Record<number, number>>>(
+    () => saved.order ?? {}
+  );
+  const [selfPoints, setSelfPoints] = useState<Record<number, number>>(
+    () => saved.self ?? {}
+  );
+  const [reviewing, setReviewing] = useState(() => saved.reviewing ?? false);
   // Facit-utskrift: döljer elevhäftena och skriver ut FacitSheet i stället
   const [facitMode, setFacitMode] = useState(false);
   // På små skärmar visas texten och uppgifterna som flikar i stället
@@ -85,6 +117,27 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reviewing, selfPoints]);
 
+  // Spara pågående svar löpande så att eleven inte tappar dem vid omladdning
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      try {
+        localStorage.setItem(
+          progressKey,
+          JSON.stringify({
+            mc: mcAnswers,
+            open: openAnswers,
+            order: orderAnswers,
+            self: selfPoints,
+            reviewing,
+          } satisfies SavedProgress)
+        );
+      } catch {
+        // localStorage kan vara avstängt – provet fungerar ändå
+      }
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [progressKey, mcAnswers, openAnswers, orderAnswers, selfPoints, reviewing]);
+
   // Facit-utskrift: skriv ut när läget aktiverats och återställ efteråt.
   useEffect(() => {
     if (!facitMode) return;
@@ -147,6 +200,16 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
         <div className="mt-6 flex items-start justify-between gap-4">
           <h1 className="font-serif text-3xl font-bold">{test.title}</h1>
           <span className="no-print mt-1 flex shrink-0 flex-col items-end gap-1">
+            <ReadAloudButton
+              chunks={[
+                test.title,
+                ...(test.ingress ? [test.ingress] : []),
+                ...test.sections.flatMap((s) => [
+                  ...(s.heading ? [s.heading] : []),
+                  ...s.paragraphs,
+                ]),
+              ]}
+            />
             <button
               onClick={() => window.print()}
               title="Skriv ut texten och frågorna"
@@ -287,6 +350,11 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
                 setOrderAnswers({});
                 setSelfPoints({});
                 setReviewing(false);
+                try {
+                  localStorage.removeItem(progressKey);
+                } catch {
+                  // ignorera – nollställningen av state räcker
+                }
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="mt-4 rounded-md border-2 border-np px-6 py-2 font-bold text-np transition hover:bg-white"

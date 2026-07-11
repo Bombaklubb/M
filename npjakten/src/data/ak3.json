@@ -1973,5 +1973,83 @@
         }
       ]
     }
+  ],
+  "oral": [
+    {
+      "id": "ak3-a-plats",
+      "delprov": "Muntlig uppgift: berätta",
+      "title": "Berätta om en plats du tycker om",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&h=506&fit=crop",
+        "alt": "En solig plats i naturen.",
+        "fallback": "/images/skog.svg"
+      },
+      "intro": [
+        "Alla har någon plats där de trivs extra bra. Det kan vara ett rum, en gård, en skog eller något helt annat.",
+        "Ni ska sitta i en liten grupp och turas om att berätta om en plats. Korten hjälper er att välja plats och komma på vad ni kan berätta."
+      ],
+      "steps": [
+        "Sätt er 3–4 elever tillsammans.",
+        "En av er drar ett kort och läser det högt.",
+        "Den som drog kortet berättar först. Berätta så att de andra kan se platsen framför sig: Hur ser det ut? Vad gör du där? Hur känns det att vara där?",
+        "De andra lyssnar klart och ställer sedan varsin fråga.",
+        "Turas om tills alla har berättat om minst en plats."
+      ],
+      "cards": [
+        "Ditt rum – hur ser det ut, och vad gör du helst där?",
+        "Skolgården – var brukar du vara, och med vem?",
+        "En plats utomhus som du tycker om – hur ser den ut?",
+        "Hos någon du gillar att hälsa på – vad brukar ni göra?",
+        "En plats där du har haft ett äventyr – vad hände?",
+        "Ett smultronställe – en plats som nästan ingen annan känner till.",
+        "En plats du längtar till – varför just dit?",
+        "Drömplatsen – hitta på en plats som inte finns. Hur skulle den vara?"
+      ],
+      "assessmentPoints": [
+        "Jag berättade så att de andra förstod och kunde se platsen framför sig.",
+        "Jag lyssnade klart när någon annan berättade.",
+        "Jag ställde minst en fråga till någon annan.",
+        "Jag svarade på frågorna jag fick.",
+        "Alla i gruppen fick berätta."
+      ]
+    },
+    {
+      "id": "ak3-a-gissa",
+      "delprov": "Muntlig uppgift: beskriva",
+      "title": "Beskriv och gissa",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&h=506&fit=crop",
+        "alt": "Vardagssaker på ett bord.",
+        "fallback": "/images/dorren.svg"
+      },
+      "intro": [
+        "Kan du beskriva en sak så bra att kompisarna gissar vad det är – utan att du säger vad saken heter?",
+        "Tänk på hur saken ser ut, hur den känns, vad man gör med den och var den brukar finnas."
+      ],
+      "steps": [
+        "Sätt er 3–4 elever tillsammans.",
+        "En av er drar ett kort utan att visa det för de andra.",
+        "Beskriv saken på kortet utan att säga vad den heter. Berätta om färg, form, storlek och vad man använder den till.",
+        "De andra får gissa. Den som gissar rätt drar nästa kort.",
+        "Går det inte att gissa? Ge fler ledtrådar tills någon klarar det."
+      ],
+      "cards": [
+        "Beskriv: en tandborste",
+        "Beskriv: en cykel",
+        "Beskriv: ett paraply",
+        "Beskriv: en glasstrut",
+        "Beskriv: ett par vantar",
+        "Beskriv: en ryggsäck",
+        "Beskriv: en nyckel",
+        "Beskriv: en kudde"
+      ],
+      "assessmentPoints": [
+        "Jag beskrev med flera olika ledtrådar: utseende, form och vad saken används till.",
+        "Jag sa inte sakens namn när jag beskrev.",
+        "Jag lyssnade noga på ledtrådarna när andra beskrev.",
+        "Jag gissade utan att avbryta den som beskrev.",
+        "Alla i gruppen fick beskriva minst en sak."
+      ]
+    }
   ]
 }

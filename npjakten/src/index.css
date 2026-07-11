@@ -52,4 +52,13 @@ body {
   .print-facit .paper:not(.facit-sheet) {
     display: none !important;
   }
+
+  /* Samtalskort-utskrift: skriv bara ut kort-arket, och håll ihop varje
+     kort så att det inte klipps av en sidbrytning. */
+  .print-cards .paper:not(.cards-sheet) {
+    display: none !important;
+  }
+  .cards-sheet .card {
+    break-inside: avoid;
+  }
 }

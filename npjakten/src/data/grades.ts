@@ -1,4 +1,4 @@
-import type { Grade, ReadingTest, WritingTask } from "../types";
+import type { Grade, OralTask, ReadingTest, WritingTask } from "../types";
 import ak3 from "./ak3.json";
 import ak6 from "./ak6.json";
 import ak9 from "./ak9.json";
@@ -10,6 +10,7 @@ import ak9 from "./ak9.json";
 interface GradeContent {
   reading: ReadingTest[];
   writing: WritingTask[];
+  oral?: OralTask[];
 }
 
 const content3 = ak3 as unknown as GradeContent;

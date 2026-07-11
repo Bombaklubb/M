@@ -18,9 +18,16 @@ interface Props {
   onBack: () => void;
   onOpenReading: (testId: string) => void;
   onOpenWriting: (taskId: string) => void;
+  onOpenOral: (taskId: string) => void;
 }
 
-export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting }: Props) {
+export default function GradePage({
+  grade,
+  onBack,
+  onOpenReading,
+  onOpenWriting,
+  onOpenOral,
+}: Props) {
   return (
     <div className="mx-auto max-w-3xl">
       <button onClick={onBack} className="mb-4 text-sm font-medium text-np hover:underline">
@@ -97,6 +104,40 @@ export default function GradePage({ grade, onBack, onOpenReading, onOpenWriting 
             </button>
           ))}
         </div>
+          </>
+        )}
+
+        {(grade.oral?.length ?? 0) > 0 && (
+          <>
+            <h2 className="mt-10 border-b-2 border-np pb-1 font-serif text-xl font-bold">
+              Muntligt – samtala tillsammans
+            </h2>
+            <div className="mt-4 grid gap-3">
+              {grade.oral!.map((task) => (
+                <button
+                  key={task.id}
+                  onClick={() => onOpenOral(task.id)}
+                  className="flex items-center gap-4 rounded-md border border-stone-300 p-3 text-left transition hover:border-np hover:bg-np-light"
+                >
+                  {task.image && (
+                    <IllustrationImg
+                      image={task.image}
+                      decorative
+                      className="hidden h-20 w-32 shrink-0 rounded object-cover sm:block"
+                    />
+                  )}
+                  <span>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+                      {task.delprov}
+                    </p>
+                    <p className="mt-1 font-serif text-lg font-bold">{task.title}</p>
+                    <p className="mt-1 text-sm text-stone-500">
+                      {task.cards.length} samtalskort · gruppövning
+                    </p>
+                  </span>
+                </button>
+              ))}
+            </div>
           </>
         )}
       </div>
