@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   Sparkles, Library, Wand2, HeartHandshake, Layers, CalendarDays, Activity,
-  ArrowLeft, Printer,
+  ArrowLeft, Printer, PartyPopper, MessagesSquare,
 } from 'lucide-react'
 import Temabanken from './components/Temabanken'
 import Aktivitetsgeneratorn from './components/Aktivitetsgeneratorn'
@@ -9,6 +9,9 @@ import Kompisuppdrag from './components/Kompisuppdrag'
 import Uppdragskort from './components/Uppdragskort'
 import Veckoplaneraren from './components/Veckoplaneraren'
 import Rorelsebanken from './components/Rorelsebanken'
+import Temadagar from './components/Temadagar'
+import Vardegrundskort from './components/Vardegrundskort'
+import IdagPanel from './components/IdagPanel'
 
 type ModulId =
   | 'hem'
@@ -18,6 +21,8 @@ type ModulId =
   | 'uppdragskort'
   | 'veckoplaneraren'
   | 'rorelsebanken'
+  | 'temadagar'
+  | 'vardegrundskort'
 
 interface ModulInfo {
   id: ModulId
@@ -29,12 +34,14 @@ interface ModulInfo {
 }
 
 const MODULER: ModulInfo[] = [
-  { id: 'temabanken', nr: 1, namn: 'Temabanken', beskrivning: 'Välj tema och åldersgrupp – få färdiga aktiviteter.', icon: Library, farg: 'from-emerald-400 to-green-600' },
+  { id: 'temabanken', nr: 1, namn: 'Temabanken', beskrivning: 'Välj tema – få färdiga aktiviteter.', icon: Library, farg: 'from-emerald-400 to-green-600' },
   { id: 'aktivitetsgeneratorn', nr: 2, namn: 'Aktivitetsgeneratorn', beskrivning: 'Filtrera på plats, antal, tid och material.', icon: Wand2, farg: 'from-sky-400 to-blue-600' },
   { id: 'kompisuppdrag', nr: 3, namn: 'Dagens kompisuppdrag', beskrivning: 'Ett nytt snällt uppdrag varje dag.', icon: HeartHandshake, farg: 'from-rose-400 to-pink-600' },
   { id: 'uppdragskort', nr: 4, namn: 'Uppdragskort', beskrivning: 'Eleverna drar ett eget uppdrag.', icon: Layers, farg: 'from-violet-400 to-fuchsia-600' },
   { id: 'veckoplaneraren', nr: 5, namn: 'Veckoplaneraren', beskrivning: 'Få ett färdigt veckoschema.', icon: CalendarDays, farg: 'from-amber-400 to-orange-600' },
   { id: 'rorelsebanken', nr: 6, namn: 'Rörelsebanken', beskrivning: 'Lekar för alla ytor och årstider.', icon: Activity, farg: 'from-cyan-400 to-teal-600' },
+  { id: 'temadagar', nr: 7, namn: 'Temadagar', beskrivning: 'Färdiga veckoupplägg för högtider.', icon: PartyPopper, farg: 'from-fuchsia-400 to-purple-600' },
+  { id: 'vardegrundskort', nr: 8, namn: 'Värdegrundskort', beskrivning: 'Frågor och dilemman för kompissamtal.', icon: MessagesSquare, farg: 'from-rose-400 to-orange-500' },
 ]
 
 export default function App() {
@@ -88,9 +95,9 @@ export default function App() {
       <main className="max-w-3xl mx-auto px-4 py-6">
         {aktiv === 'hem' && (
           <div className="animate-fade-in">
+            <IdagPanel onOppnaKompisuppdrag={() => setAktiv('kompisuppdrag')} />
             <p className="text-slate-600 mb-5">
-              Välj en modul för att komma igång. Allt fungerar utan inloggning – perfekt att
-              ha framme på fritids.
+              Alla verktyg – välj en modul. Allt fungerar utan inloggning.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {MODULER.map((m) => {
@@ -112,12 +119,6 @@ export default function App() {
                 )
               })}
             </div>
-            <div className="mt-8 text-left text-xs text-slate-400">
-              Kontakt –{' '}
-              <a href="mailto:martin.akdogan@enkoping.se" className="text-brand-600 font-bold hover:underline">
-                martin.akdogan@enkoping.se
-              </a>
-            </div>
           </div>
         )}
 
@@ -127,7 +128,16 @@ export default function App() {
         {aktiv === 'uppdragskort' && <Uppdragskort />}
         {aktiv === 'veckoplaneraren' && <Veckoplaneraren />}
         {aktiv === 'rorelsebanken' && <Rorelsebanken />}
+        {aktiv === 'temadagar' && <Temadagar />}
+        {aktiv === 'vardegrundskort' && <Vardegrundskort />}
       </main>
+
+      <div className="no-print fixed bottom-3 left-3 z-30 rounded-md bg-white/90 px-3 py-1.5 text-xs text-slate-500 shadow backdrop-blur">
+        Kontakt:{' '}
+        <a href="mailto:martin.akdogan@enkoping.se" className="text-brand-600 font-bold hover:underline">
+          martin.akdogan@enkoping.se
+        </a>
+      </div>
     </div>
   )
 }

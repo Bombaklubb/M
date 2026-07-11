@@ -9,6 +9,7 @@ export const TEMAN: Tema[] = [
     id: 'hallbar-utveckling',
     namn: 'Hållbar utveckling',
     emoji: '♻️',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle (återvinning, miljö och hållbarhet). NO: människans påverkan på naturen och källsortering. SO: hållbar utveckling.',
     aktiviteter: [
       { titel: 'Bygg återvinningsmaskiner', beskrivning: 'Bygg en låtsasmaskin av kartong och förpackningar som sorterar skräp.' },
       { titel: 'Sorteringsstafett', beskrivning: 'Lagen springer och sorterar (rena, torra) sopor i rätt återvinningstunna på tid.' },
@@ -21,6 +22,7 @@ export const TEMAN: Tema[] = [
     id: 'rymden',
     namn: 'Rymden',
     emoji: '🚀',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle. NO/Fysik: jordens, solens och månens rörelser samt himlakroppar och rymden.',
     aktiviteter: [
       { titel: 'Bygg en raket', beskrivning: 'Konstruera en raket av rör, papper och tejp – vems flyger längst?' },
       { titel: 'Planetstafett', beskrivning: 'Spring mellan planeterna i rätt ordning från solen och ut.' },
@@ -33,6 +35,7 @@ export const TEMAN: Tema[] = [
     id: 'havet',
     namn: 'Havet',
     emoji: '🌊',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle. NO/Biologi: djur och växter i vattenmiljöer. SO/NO: hållbar utveckling och nedskräpning av haven.',
     aktiviteter: [
       { titel: 'Hela havet stormar', beskrivning: 'Klassikern med stolar – en stol färre varje runda.' },
       { titel: 'Fiska skräp', beskrivning: 'Fiska upp "plast" (papperslappar) ur havet med metspö av pinne och snöre.' },
@@ -45,6 +48,7 @@ export const TEMAN: Tema[] = [
     id: 'riddartiden',
     namn: 'Riddartiden',
     emoji: '🏰',
+    laroplan: 'Lgr22 fritidshem: Skapande och estetiska uttrycksformer. Historia: medeltiden och hur människor levde och arbetade förr.',
     aktiviteter: [
       { titel: 'Bygg en borg', beskrivning: 'Bygg en borg av kuddar, kartong eller klossar.' },
       { titel: 'Riddarbana', beskrivning: 'Hinderbana där man tränar till riddare/väpnare.' },
@@ -57,6 +61,7 @@ export const TEMAN: Tema[] = [
     id: 'kanslor-vanskap',
     namn: 'Känslor & vänskap',
     emoji: '💛',
+    laroplan: 'Lgr22 fritidshem: Språk och kommunikation samt normer och värden. Värdegrunden: empati, samspel och allas lika värde.',
     aktiviteter: [
       { titel: 'Känslocharader', beskrivning: 'Visa en känsla med kroppen – de andra gissar.' },
       { titel: 'Komplimangcirkel', beskrivning: 'Sitt i ring och ge personen bredvid en ärlig komplimang.' },
@@ -69,6 +74,7 @@ export const TEMAN: Tema[] = [
     id: 'varen',
     namn: 'Våren',
     emoji: '🌱',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle samt utevistelse. NO/Biologi: årstidsväxlingar, växters livscykel samt djur och växter i närmiljön.',
     aktiviteter: [
       { titel: 'Plantera frön', beskrivning: 'Så frön i krukor och följ hur de växer veckorna framåt.' },
       { titel: 'Vårtecken-jakt', beskrivning: 'Leta vårtecken ute: knoppar, fåglar, insekter.' },
@@ -81,6 +87,7 @@ export const TEMAN: Tema[] = [
     id: 'sommaren',
     namn: 'Sommar',
     emoji: '☀️',
+    laroplan: 'Lgr22 fritidshem: Lekar, fysiska aktiviteter och utevistelse. NO/Biologi: årstider samt djur och insekter. Idrott och hälsa: vatten- och solsäkerhet.',
     aktiviteter: [
       { titel: 'Vattenstafett', beskrivning: 'Bär vatten i svamp eller mugg till lagets hink – minst spill vinner.' },
       { titel: 'Insektssafari', beskrivning: 'Leta småkryp med lupp och bestäm vad ni hittar tillsammans.' },
@@ -93,6 +100,7 @@ export const TEMAN: Tema[] = [
     id: 'hosten',
     namn: 'Höst',
     emoji: '🍂',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle samt utevistelse. NO/Biologi: årstidsväxlingar, svampar och bär samt naturens kretslopp.',
     aktiviteter: [
       { titel: 'Lövjakt & lövkonst', beskrivning: 'Samla löv i olika färger och gör tavlor eller kransar.' },
       { titel: 'Svamp- och bärquiz', beskrivning: 'Lär er vilka svampar och bär man får plocka – och vilka man inte ska röra.' },
@@ -105,6 +113,7 @@ export const TEMAN: Tema[] = [
     id: 'vintern',
     namn: 'Vintern',
     emoji: '❄️',
+    laroplan: 'Lgr22 fritidshem: Lekar, fysiska aktiviteter och utevistelse. NO: årstider, vatten i fast form (is och snö) samt djur på vintern.',
     aktiviteter: [
       { titel: 'Snöskulpturer', beskrivning: 'Bygg figurer och skulpturer av snö i lag.' },
       { titel: 'Spårjakt i snön', beskrivning: 'Följ spår i snön – vem eller vilket djur gick här?' },
@@ -117,8 +126,9 @@ export const TEMAN: Tema[] = [
   // ── Lgr22-förankrade ämnesteman (NO & SO) – aktiviteter från förskoleklass till åk 6 ──
   {
     id: 'no-biologi',
-    namn: 'NO: Biologi',
-    emoji: '🐛',
+    namn: 'Livet & naturen',
+    emoji: '🌿',
+    laroplan: 'Lgr22 Biologi åk 1–6: naturen och årstiderna, djur och växter och deras livsmiljöer, människokroppen och hälsa samt ekosystem och hållbar utveckling.',
     aktiviteter: [
       { titel: 'Naturen och årstidernas växlingar', beskrivning: 'Följ samma träd eller plats över tid och dokumentera hur den förändras med årstiderna.' },
       { titel: 'Djur, växter och deras livsmiljöer', beskrivning: 'Gå på upptäcktsfärd och para ihop djur och växter med var de bor.' },
@@ -131,8 +141,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'no-kemi',
-    namn: 'NO: Kemi',
-    emoji: '⚗️',
+    namn: 'Experimentlabbet',
+    emoji: '🧪',
+    laroplan: 'Lgr22 Kemi åk 1–6: material och ämnens egenskaper, blandningar och lösningar, vattnets kretslopp samt kemikalier i vardagen.',
     aktiviteter: [
       { titel: 'Material och ämnen i vardagen', beskrivning: 'Sortera föremål efter material (trä, metall, plast, tyg) och prata om egenskaper.' },
       { titel: 'Fast, flytande och gas', beskrivning: 'Smält is och frys vatten – undersök hur ämnen ändrar form.' },
@@ -145,8 +156,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'no-fysik',
-    namn: 'NO: Fysik',
-    emoji: '🧲',
+    namn: 'Kraft & energi',
+    emoji: '⚡',
+    laroplan: 'Lgr22 Fysik åk 1–6: krafter och rörelse, energi och energikällor, ljus, ljud och elektricitet samt solsystemet.',
     aktiviteter: [
       { titel: 'Kraft och rörelse', beskrivning: 'Bygg en kulbana eller testa hur saker rullar i backe – vad får dem att röra sig?' },
       { titel: 'Ljus och skugga', beskrivning: 'Gör skuggteater och undersök hur skuggor ändras med ljusets riktning.' },
@@ -158,8 +170,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'no-arbetssatt',
-    namn: 'NO: Forska & undersök',
+    namn: 'Forskarverkstan',
     emoji: '🔬',
+    laroplan: 'Lgr22 NO – systematiska undersökningar: planera och genomföra undersökningar, dokumentera och utvärdera resultat samt använda naturvetenskapliga begrepp.',
     aktiviteter: [
       { titel: 'Undersöka, ställa frågor och samtala', beskrivning: 'Välj något att utforska, gissa tillsammans och prata om vad ni tror händer.' },
       { titel: 'Planera och genomföra undersökningar', beskrivning: 'Formulera en hypotes, planera ett test och genomför det steg för steg.' },
@@ -169,8 +182,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-geografi',
-    namn: 'SO: Geografi',
-    emoji: '🗺️',
+    namn: 'Jorden runt',
+    emoji: '🌍',
+    laroplan: 'Lgr22 Geografi åk 1–6: kartor och geografiska verktyg, natur- och kulturlandskap samt klimat, miljö och hållbar utveckling.',
     aktiviteter: [
       { titel: 'Närområdet och kartor', beskrivning: 'Rita en egen karta över skolgården och gör en skattjakt med kartan.' },
       { titel: 'Väder, årstider och naturmiljöer', beskrivning: 'För väderdagbok i en vecka och jämför olika dagar.' },
@@ -182,8 +196,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-historia',
-    namn: 'SO: Historia',
+    namn: 'Tidsresan',
     emoji: '⏳',
+    laroplan: 'Lgr22 Historia åk 1–6: tidsbegrepp, familjens och platsens historia, Nordens och Sveriges historia samt historiska källor och tidslinjer.',
     aktiviteter: [
       { titel: 'Tidsbegrepp: dåtid, nutid, framtid', beskrivning: 'Gör en tidslinje med bilder: förr, nu och hur ni tror det blir i framtiden.' },
       { titel: 'Familjens och platsens historia', beskrivning: 'Berätta om någon i familjen och ta reda på hur orten såg ut förr.' },
@@ -195,8 +210,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-religion',
-    namn: 'SO: Religionskunskap',
+    namn: 'Högtider & traditioner',
     emoji: '🕊️',
+    laroplan: 'Lgr22 Religionskunskap åk 1–6: högtider, traditioner och berättelser, världsreligionerna samt etiska frågor och livsfrågor.',
     aktiviteter: [
       { titel: 'Högtider, traditioner och berättelser', beskrivning: 'Utforska olika högtider under året och skapa något som hör till en av dem.' },
       { titel: 'Livsfrågor om rätt och fel', beskrivning: 'Dilemmasamtal: vad är rätt och fel, och varför tycker vi olika?' },
@@ -207,8 +223,9 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-samhalle',
-    namn: 'SO: Samhällskunskap',
+    namn: 'Vårt samhälle',
     emoji: '🏛️',
+    laroplan: 'Lgr22 Samhällskunskap åk 1–6: regler och demokrati, barns rättigheter, samhällsfunktioner och lagar, medier samt ekonomi och konsumtion.',
     aktiviteter: [
       { titel: 'Regler och demokrati i vardagen', beskrivning: 'Rösta fram en gemensam lek eller regel – alla röster räknas lika.' },
       { titel: 'Barns rättigheter', beskrivning: 'Samtala om barnkonventionen och rita vad alla barn har rätt till.' },
@@ -221,13 +238,120 @@ export const TEMAN: Tema[] = [
   },
   {
     id: 'so-arbetssatt',
-    namn: 'SO: Granska & resonera',
+    namn: 'Källdetektiven',
     emoji: '🔎',
+    laroplan: 'Lgr22 SO – arbetssätt: granska information och källor, använda ämnesspecifika begrepp samt analysera samband och resonera om orsaker och konsekvenser.',
     aktiviteter: [
       { titel: 'Använda begrepp och enkla källor', beskrivning: 'Slå upp ett ord i en bok eller på en bild och förklara det med egna ord.' },
       { titel: 'Granska information och källor', beskrivning: 'Källkritik-lek: är källan trovärdig? Vem säger det och varför?' },
       { titel: 'Analysera samband mellan människa, samhälle och miljö', beskrivning: 'Rita en tankekarta över hur ett beslut påverkar flera saker.' },
       { titel: 'Resonera kring orsaker och konsekvenser', beskrivning: 'Diskutera "vad händer om...?" och följ kedjan av konsekvenser.' },
+    ],
+  },
+
+  // ── Tematiska "äventyrsvärldar" med tydlig läroplanskoppling ──────────────
+  {
+    id: 'pirater',
+    namn: 'Pirater & skattjakter',
+    emoji: '🏴‍☠️',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle (kartor, närområde) samt Lekar, fysiska aktiviteter och utevistelse. Geografi åk 1–3: kartor och rumsuppfattning. Matematik: lägesord och koordinater.',
+    aktiviteter: [
+      { titel: 'Skattkarta & koordinater', beskrivning: 'Rita en karta över området och markera skatten – öva väderstreck och lägesbegrepp (matematik/geografi).' },
+      { titel: 'Lös sjörövargåtor', beskrivning: 'Knäck kluringar och koder för att komma vidare – logiskt tänkande och läsförståelse.' },
+      { titel: 'Bygg & sjösätt ett skepp', beskrivning: 'Bygg en båt av återbruk och testa om den flyter – undersöka och dra slutsatser (NO/teknik).' },
+      { titel: 'Piratstafett', beskrivning: 'Hinderbana med planka, åror och kanonkulor – fysisk aktivitet och samarbete.' },
+      { titel: 'Skriv en ledtråd', beskrivning: 'Skriv egna ledtrådar till en skattjakt för en kompis – skrivande och språk.' },
+    ],
+  },
+  {
+    id: 'detektiver',
+    namn: 'Detektiver & mysterier',
+    emoji: '🔍',
+    laroplan: 'Lgr22 fritidshem: Språk och kommunikation. Svenska åk 1–3: läsa, samtala och återberätta. Matematik: logiskt resonemang. SO: granska källor.',
+    aktiviteter: [
+      { titel: 'Lös mysteriet', beskrivning: 'Följ ledtrådar och dra slutsatser tillsammans – läsförståelse och resonemang.' },
+      { titel: 'Hemliga koder & chiffer', beskrivning: 'Skapa och knäck koder – språk, mönster och matematik.' },
+      { titel: 'Spår & fingeravtryck', beskrivning: 'Undersök "bevis" och dokumentera vad ni hittar (NO – undersöka och dokumentera).' },
+      { titel: 'Vittnesförhör', beskrivning: 'Intervjua "vittnen" och återberätta – lyssna, ställa frågor och kommunicera.' },
+      { titel: 'Vem talar sanning?', beskrivning: 'Granska olika påståenden – källkritik och att värdera information (SO).' },
+    ],
+  },
+  {
+    id: 'sagolandet',
+    namn: 'Sagolandet',
+    emoji: '🧙',
+    laroplan: 'Lgr22 fritidshem: Skapande och estetiska uttrycksformer samt Språk och kommunikation. Svenska: berättande texter, muntligt berättande och att dramatisera.',
+    aktiviteter: [
+      { titel: 'Berätta en saga tillsammans', beskrivning: 'Bygg en gemensam berättelse runt en ring – muntligt berättande.' },
+      { titel: 'Bygg en sagomiljö', beskrivning: 'Skapa ett sagolandskap av natur- och återbruksmaterial – skapande.' },
+      { titel: 'Dramatisera en saga', beskrivning: 'Spela upp en känd saga med roller och rekvisita – drama och samarbete.' },
+      { titel: 'Hitta på ett sagoväsen', beskrivning: 'Rita och beskriv ett eget väsen med egenskaper – fantasi och bild.' },
+      { titel: 'Sagostafett', beskrivning: 'En börjar, nästa fortsätter berättelsen – språk och lyssnande.' },
+    ],
+  },
+  {
+    id: 'drama-teater',
+    namn: 'Drama & teater',
+    emoji: '🎭',
+    laroplan: 'Lgr22 fritidshem: Skapande och estetiska uttrycksformer (rollspel och drama). Svenska: muntliga framställningar och kommunikation.',
+    aktiviteter: [
+      { titel: 'Charader', beskrivning: 'Gestalta ord, djur och yrken med kroppen – uttrycka sig utan ord.' },
+      { titel: 'Improvisationslekar', beskrivning: 'Korta scener på given replik eller plats – samspel och språk.' },
+      { titel: 'Frysbilder', beskrivning: 'Skapa stillbilder i grupp som visar en händelse – gestaltning.' },
+      { titel: 'Sätt upp en kort pjäs', beskrivning: 'Planera, öva och spela upp – framträda och samarbeta.' },
+      { titel: 'Känslospel', beskrivning: 'Visa och gissa känslor – sociala och emotionella förmågor.' },
+    ],
+  },
+  {
+    id: 'koket',
+    namn: 'Köket',
+    emoji: '🍪',
+    laroplan: 'Lgr22 fritidshem: vardagsliv, hälsa och välbefinnande. Hem- och konsumentkunskap: mat, hygien och konsumtion. Matematik: mäta och väga. NO: ämnen och förändringar.',
+    aktiviteter: [
+      { titel: 'Baka & mät', beskrivning: 'Följ ett recept och mät upp ingredienser – volym, vikt och bråk (matematik).' },
+      { titel: 'Rent & säkert', beskrivning: 'Öva handhygien och kökssäkerhet – hälsa och ansvar.' },
+      { titel: 'Sinnesprovning', beskrivning: 'Smaka och lukta med förbundna ögon – sinnen och NO.' },
+      { titel: 'Vad händer i ugnen?', beskrivning: 'Undersök hur smet förändras vid värme – kemiska förändringar.' },
+      { titel: 'Planera en fika', beskrivning: 'Gör inköpslista och budget tillsammans – konsumtion och samarbete.' },
+    ],
+  },
+  {
+    id: 'friluftsliv',
+    namn: 'Friluftsliv',
+    emoji: '🏕️',
+    laroplan: 'Lgr22 fritidshem: Lekar, fysiska aktiviteter och utevistelse i närmiljön. Idrott och hälsa: friluftsliv och allemansrätten. NO: natur och miljö.',
+    aktiviteter: [
+      { titel: 'Allemansrätten', beskrivning: 'Vad får man göra i naturen? Lek och samtal om rättigheter och ansvar.' },
+      { titel: 'Bygg vindskydd eller koja', beskrivning: 'Konstruera tillsammans av pinnar och rep – teknik och samarbete.' },
+      { titel: 'Knopar & rep', beskrivning: 'Lär er enkla knopar – finmotorik och praktiskt kunnande.' },
+      { titel: 'Orientering & väderstreck', beskrivning: 'Hitta kontroller med karta och kompass – geografi och rumsuppfattning.' },
+      { titel: 'Eld & säkerhet', beskrivning: 'Prata om hur man eldar säkert och övar utan eld – säkerhet och ansvar.' },
+    ],
+  },
+  {
+    id: 'varldens-lander',
+    namn: 'Världens länder',
+    emoji: '🌏',
+    laroplan: 'Lgr22 fritidshem: Natur och samhälle samt värdegrund (allas lika värde). Geografi: världsdelar och länder. Religionskunskap: traditioner och högtider.',
+    aktiviteter: [
+      { titel: 'Flaggor & världskarta', beskrivning: 'Para ihop flaggor med länder på kartan – geografi.' },
+      { titel: 'Lekar från andra länder', beskrivning: 'Prova lekar från olika delar av världen – rörelse och kultur.' },
+      { titel: 'Hälsningar & ord', beskrivning: 'Lär er säga hej på flera språk – språk och nyfikenhet.' },
+      { titel: 'Mat & traditioner', beskrivning: 'Utforska maträtter och högtider från olika kulturer.' },
+      { titel: 'Allas lika värde', beskrivning: 'Samtala om likheter, olikheter och respekt – värdegrund (SO).' },
+    ],
+  },
+  {
+    id: 'lugn-aterhamtning',
+    namn: 'Lugn & återhämtning',
+    emoji: '🧘',
+    laroplan: 'Lgr22 fritidshem: behov av vila, rörelse och välbefinnande. Idrott och hälsa: kropp, hälsa och att hantera känslor.',
+    aktiviteter: [
+      { titel: 'Andningsövningar', beskrivning: 'Andas lugnt tillsammans och varva ner – reglera och må bra.' },
+      { titel: 'Yoga-saga', beskrivning: 'Lugna rörelser till en berättelse – kropp och närvaro.' },
+      { titel: 'Massageramsor', beskrivning: 'Rita ramsan på kompisens rygg – samspel och avslappning.' },
+      { titel: 'Lyssna på ljuden', beskrivning: 'Sitt still och räkna ljud ni hör – närvaro och fokus.' },
+      { titel: 'Känslocheck', beskrivning: 'Hur mår jag idag? Sätt ord på känslor – självkännedom.' },
     ],
   },
 ]

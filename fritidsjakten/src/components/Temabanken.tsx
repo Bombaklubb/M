@@ -1,37 +1,43 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Plus, Trash2, X } from 'lucide-react'
+import { Plus, Search, Star, Trash2, X } from 'lucide-react'
 import { TEMAN } from '../data/teman'
+import { EGNA_TEMAN_KEY, laddaEgnaTeman, lasLS } from '../lib/egnaTeman'
 import type { Tema } from '../types'
 
-const LS_KEY = 'fritids_egna_teman'
-
-function laddaEgna(): Tema[] {
-  try {
-    const raw = localStorage.getItem(LS_KEY)
-    if (!raw) return []
-    // Tål gamla sparade teman som hade fältet "aldersgrupper".
-    return (JSON.parse(raw) as Tema[]).map((t) => ({
-      id: t.id,
-      namn: t.namn,
-      emoji: t.emoji,
-      aktiviteter: t.aktiviteter ?? [],
-    }))
-  } catch {
-    return []
-  }
-}
+const FAVORIT_KEY = 'fritids_favorit_teman'
 
 export default function Temabanken() {
-  const [egna, setEgna] = useState<Tema[]>(laddaEgna)
+  const [egna, setEgna] = useState<Tema[]>(laddaEgnaTeman)
   const [valtId, setValtId] = useState<string | null>(null)
   const [visaForm, setVisaForm] = useState(false)
+  const [sok, setSok] = useState('')
+  const [favoriter, setFavoriter] = useState<string[]>(() => lasLS<string[]>(FAVORIT_KEY, []))
 
   useEffect(() => {
-    localStorage.setItem(LS_KEY, JSON.stringify(egna))
+    localStorage.setItem(EGNA_TEMAN_KEY, JSON.stringify(egna))
   }, [egna])
+
+  useEffect(() => {
+    localStorage.setItem(FAVORIT_KEY, JSON.stringify(favoriter))
+  }, [favoriter])
 
   const allaTeman = useMemo(() => [...TEMAN, ...egna], [egna])
   const valt = allaTeman.find((t) => t.id === valtId) ?? null
+
+  // Sökfiltrerad lista med favoriter först.
+  const synligaTeman = useMemo(() => {
+    const q = sok.trim().toLowerCase()
+    const filtrerade = q ? allaTeman.filter((t) => t.namn.toLowerCase().includes(q)) : allaTeman
+    return [...filtrerade].sort((a, b) => {
+      const fa = favoriter.includes(a.id) ? 0 : 1
+      const fb = favoriter.includes(b.id) ? 0 : 1
+      return fa - fb
+    })
+  }, [allaTeman, sok, favoriter])
+
+  function toggleFavorit(id: string) {
+    setFavoriter((f) => (f.includes(id) ? f.filter((x) => x !== id) : [...f, id]))
+  }
 
   function laggTill(namn: string, emoji: string, aktTexter: string[]) {
     const nytt: Tema = {
@@ -61,9 +67,19 @@ export default function Temabanken() {
             <Plus size={16} /> Eget tema
           </button>
         </div>
+        <div className="relative mb-3">
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input
+            value={sok}
+            onChange={(e) => setSok(e.target.value)}
+            placeholder="Sök tema..."
+            className="w-full rounded-xl border border-slate-200 bg-white/80 pl-9 pr-3 py-2"
+          />
+        </div>
         <div className="grid sm:grid-cols-2 gap-3">
-          {allaTeman.map((t) => {
+          {synligaTeman.map((t) => {
             const eget = t.id.startsWith('eget-')
+            const favorit = favoriter.includes(t.id)
             return (
               <button
                 key={t.id}
@@ -74,6 +90,13 @@ export default function Temabanken() {
               >
                 <span className="text-2xl">{t.emoji}</span>
                 <span className="font-bold text-slate-800 flex-1">{t.namn}</span>
+                <span
+                  onClick={(e) => { e.stopPropagation(); toggleFavorit(t.id) }}
+                  className={`p-1 ${favorit ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400'}`}
+                  aria-label={favorit ? 'Ta bort favorit' : 'Markera som favorit'}
+                >
+                  <Star size={16} fill={favorit ? 'currentColor' : 'none'} />
+                </span>
                 {eget && (
                   <span
                     onClick={(e) => { e.stopPropagation(); taBort(t.id) }}
@@ -86,6 +109,11 @@ export default function Temabanken() {
               </button>
             )
           })}
+          {synligaTeman.length === 0 && (
+            <div className="col-span-full text-center text-sm text-slate-400 py-6">
+              Inget tema matchar "{sok}".
+            </div>
+          )}
         </div>
       </div>
 
@@ -95,6 +123,11 @@ export default function Temabanken() {
             <span className="text-2xl">{valt.emoji}</span>
             <h2 className="text-lg font-black text-brand-800">{valt.namn}</h2>
           </div>
+          {valt.laroplan && (
+            <div className="mb-3 rounded-xl bg-amber-50 border border-amber-200 p-3 text-sm text-amber-900">
+              <span className="font-bold">📚 Läroplanskoppling:</span> {valt.laroplan}
+            </div>
+          )}
           <ul className="space-y-2">
             {valt.aktiviteter.map((a, i) => (
               <li key={i} className="rounded-xl bg-brand-50/60 p-3">

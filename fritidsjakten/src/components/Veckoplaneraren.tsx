@@ -1,10 +1,17 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { CalendarDays, RefreshCw, Printer } from 'lucide-react'
 import { AKTIVITETER } from '../data/aktiviteter'
 import { TEMAN } from '../data/teman'
+import { laddaEgnaTeman, lasLS } from '../lib/egnaTeman'
 import type { Aktivitet, Kategori } from '../types'
 
-const ARSKURSER = ['F', '1', '2', '3', '4', '5', '6']
+// Sparade val (valda teman + antal elever) mellan besök.
+const VAL_KEY = 'fritids_vecka_val'
+
+interface SparadeVal {
+  temaIds: string[]
+  elever: number
+}
 
 // Varje dag har ett fokus (kategori). Veckoplaneraren plockar en passande
 // aktivitet per dag utifrån antal elever – ingen AI behövs.
@@ -25,20 +32,27 @@ function valjAktivitet(kategori: Kategori, elever: number, frö: number): Aktivi
   return fallback[frö % fallback.length]
 }
 
-function arskursLabel(a: string): string {
-  return a === 'F' ? 'F-klass' : `Åk ${a}`
-}
-
 export default function Veckoplaneraren() {
-  const [arskurser, setArskurser] = useState<string[]>(['2', '3'])
-  const [temaIds, setTemaIds] = useState<string[]>([TEMAN[0].id])
-  const [elever, setElever] = useState(20)
+  // Alla teman som finns i Temabanken (inbyggda + pedagogens egna).
+  // Läses vid mount så nyskapade egna teman syns direkt.
+  const allaTeman = useMemo(() => [...TEMAN, ...laddaEgnaTeman()], [])
+
+  const sparat = useMemo(() => lasLS<SparadeVal | null>(VAL_KEY, null), [])
+  const [temaIds, setTemaIds] = useState<string[]>(() => {
+    const giltiga = (sparat?.temaIds ?? []).filter((id) => allaTeman.some((t) => t.id === id))
+    return giltiga.length ? giltiga : [allaTeman[0].id]
+  })
+  const [elever, setElever] = useState(() => sparat?.elever ?? 20)
   const [frö, setFrö] = useState(0)
   const [genererad, setGenererad] = useState(false)
 
+  useEffect(() => {
+    localStorage.setItem(VAL_KEY, JSON.stringify({ temaIds, elever } satisfies SparadeVal))
+  }, [temaIds, elever])
+
   const valdaTeman = useMemo(
-    () => TEMAN.filter((t) => temaIds.includes(t.id)),
-    [temaIds],
+    () => allaTeman.filter((t) => temaIds.includes(t.id)),
+    [allaTeman, temaIds],
   )
 
   const schema = useMemo(() => {
@@ -52,35 +66,19 @@ export default function Veckoplaneraren() {
     })
   }, [elever, frö, valdaTeman])
 
-  function toggleArskurs(a: string) {
-    setArskurser((arr) => (arr.includes(a) ? arr.filter((x) => x !== a) : [...arr, a]))
-  }
-
   function toggleTema(id: string) {
     setTemaIds((arr) => (arr.includes(id) ? arr.filter((x) => x !== id) : [...arr, id]))
   }
 
-  const kanGenerera = arskurser.length > 0 && temaIds.length > 0
-  const valdaArskurserSorterade = ARSKURSER.filter((a) => arskurser.includes(a))
+  const kanGenerera = temaIds.length > 0
 
   return (
     <div className="animate-slide-up space-y-5">
       <div className="card p-4 space-y-4 no-print">
         <div>
-          <div className="text-sm font-bold text-slate-600 mb-2">Årskurs <span className="font-normal text-slate-400">(välj en eller flera)</span></div>
-          <div className="flex gap-2 flex-wrap">
-            {ARSKURSER.map((a) => (
-              <button key={a} onClick={() => toggleArskurs(a)} className={`chip ${arskurser.includes(a) ? 'chip-on' : 'chip-off'}`}>
-                {arskursLabel(a)}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div>
           <div className="text-sm font-bold text-slate-600 mb-2">Tema <span className="font-normal text-slate-400">(välj en eller flera)</span></div>
           <div className="flex gap-2 flex-wrap">
-            {TEMAN.map((t) => (
+            {allaTeman.map((t) => (
               <button key={t.id} onClick={() => toggleTema(t.id)} className={`chip ${temaIds.includes(t.id) ? 'chip-on' : 'chip-off'}`}>
                 {t.emoji} {t.namn}
               </button>
@@ -105,7 +103,7 @@ export default function Veckoplaneraren() {
           {genererad ? 'Generera ny vecka' : 'Generera veckoschema'}
         </button>
         {!kanGenerera && (
-          <p className="text-xs text-slate-400 text-center">Välj minst en årskurs och ett tema.</p>
+          <p className="text-xs text-slate-400 text-center">Välj minst ett tema.</p>
         )}
       </div>
 
@@ -113,9 +111,7 @@ export default function Veckoplaneraren() {
         <div className="space-y-3">
           <div className="flex items-start justify-between gap-3">
             <div className="text-sm text-slate-600">
-              <div className="font-bold">
-                {valdaArskurserSorterade.map(arskursLabel).join(', ')} · {elever} elever
-              </div>
+              <div className="font-bold">{elever} elever</div>
               <div className="text-slate-500">
                 {valdaTeman.map((t) => `${t.emoji} ${t.namn}`).join(' · ')}
               </div>
