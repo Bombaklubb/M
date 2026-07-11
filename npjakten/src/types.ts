@@ -130,10 +130,24 @@ export interface WritingTask {
   examples?: ExampleResponse[]; // bedömda exempelsvar
 }
 
+// Muntligt delprov A: gruppsamtal som övas i klassrummet.
+// Appen ger struktur, samtalskort och självskattning – inget rättas.
+export interface OralTask {
+  id: string;
+  delprov: string; // t.ex. "Delprov A: tala – gruppsamtal"
+  title: string;
+  image?: Illustration;
+  intro: string[]; // instruktioner till gruppen
+  steps: string[]; // samtalsstruktur, steg för steg
+  cards: string[]; // samtalskort – frågor/påståenden att dra
+  assessmentPoints: string[]; // vad läraren lyssnar efter (självskattning)
+}
+
 export interface Grade {
   id: "ak3" | "ak6" | "ak9";
   label: string;
   available: boolean;
+  oral?: OralTask[];
   reading: ReadingTest[];
   writing: WritingTask[];
 }

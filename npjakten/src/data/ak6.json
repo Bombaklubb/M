@@ -70,7 +70,8 @@
             "Att huset är till salu.",
             "Att huset är byggt av sten."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "multiple-choice",
@@ -83,7 +84,8 @@
             "Han saknar sitt gamla liv och tvivlar på det nya.",
             "Han är arg på pappa och vägrar hjälpa till."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "open",
@@ -96,7 +98,8 @@
             { "points": 0, "answer": "Han ville flytta från stan." },
             { "points": 1, "answer": "Pappa hade länge drömt om ett eget bageri med en stenugn." },
             { "points": 2, "answer": "Pappa hade alltid drömt om ett eget litet bageri med en riktig stenugn. Och så var huset jättebilligt, det kostade nästan ingenting." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -109,7 +112,8 @@
             "Att det snart ska börja regna.",
             "Att byn är alldeles stilla och tyst."
           ],
-          "correctIndex": 3
+          "correctIndex": 3,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "open",
@@ -121,7 +125,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Att det finns en liten kiosk i byn." },
             { "points": 1, "answer": "Margit vet redan vem han är fast de kom kvällen innan. I byn håller alla reda på varandra, men i stan kände ingen honom." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -134,7 +139,8 @@
             "... säger Melker rakt ut att han är arg.",
             "... funderar Melker på vad Margit ska tro."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "multiple-choice",
@@ -147,7 +153,8 @@
             "Hon blir arg, eftersom ugnen tillhör Signe.",
             "Hon är ointresserad och vill bara sälja sina varor."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "multiple-choice",
@@ -160,7 +167,8 @@
             "Margit berättade det för hennes mormor.",
             "Det står på en skylt utanför bageriet."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "open",
@@ -172,7 +180,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han börjar skratta åt Tuva." },
             { "points": 1, "answer": "Han slappnar av och känner sig gladare. Det är som att en knut i bröstet lossnar och han inte är lika ledsen längre." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -184,7 +193,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han ska leta i huset." },
             { "points": 1, "answer": "Han ska leta igenom hela övervåningen för att hitta Signes gömda receptbok, så att ugnen ska lyda när de tänder den på lördag." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -198,7 +208,8 @@
             { "points": 0, "answer": "Melker tycker att huset är fult." },
             { "points": 1, "answer": "Han säger bara ”Mmm” i stället för att säga att han tycker huset är fult." },
             { "points": 2, "answer": "Han säger bara ”Mmm” fast han tycker huset är fult, så pappa inte blir ledsen. Och han säger inget när pappa lovar att de ska tända ugnen, fast han tänker på sitt gamla rum." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         }
       ],
       "image": {
@@ -258,7 +269,8 @@
             "Att kor var ovanligt billiga på 1400-talet.",
             "Att glasögonmästarna ofta fick betalt i djur."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "open",
@@ -270,7 +282,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "De hade förstoringsglas." },
             { "points": 1, "answer": "De använde läsestenar, halvklot av glas eller bergkristall som man la på boksidan så att bokstäverna blev större." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -283,7 +296,8 @@
             "En glasblåsare i Venedig.",
             "En italiensk mästare på 1400-talet."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -295,7 +309,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "För att alla ville ha glasögon." },
             { "points": 1, "answer": "För att varje lins slipades för hand av en mästare, och det tog lång tid och krävde stor skicklighet." }
-          ]
+          ],
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "open",
@@ -307,7 +322,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Böcker och glasögon kom ungefär samtidigt." },
             { "points": 1, "answer": "När man kunde trycka böcker ville fler lära sig läsa, och då behövde de glasögon för att se. Fler ville ha glasögon, det blev fler verkstäder och priset sjönk." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -320,7 +336,8 @@
             "De saknade skalmar och fick klämmas fast eller hållas i ett skaft.",
             "De kunde bara användas av munkar i kloster."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -332,7 +349,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "För att de tyckte glasögon var fina." },
             { "points": 1, "answer": "Glasögon hade blivit ett tecken på att man var klok och förnäm, så de bar dem för att se lärda ut." }
-          ]
+          ],
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "multiple-choice",
@@ -345,7 +363,8 @@
             "Stycket förklarar hur glasögon tillverkas i dag.",
             "Stycket beskriver glasögonens väg från Italien till Sverige."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -415,7 +434,8 @@
             "Att det nyligen har snöat.",
             "Att sjön är full av socker."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "multiple-choice",
@@ -428,7 +448,8 @@
             "Båda är lika rädda för isen.",
             "Sigge vill åka längre ut än Liv."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -441,7 +462,8 @@
             { "points": 0, "answer": "Man ska hålla sig nära land." },
             { "points": 1, "answer": "Den vita isen vid stranden bär." },
             { "points": 2, "answer": "Den vita, ljusa isen vid stranden bär, men den mörka, svarta isen längre ut är svag och farlig." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -454,7 +476,8 @@
             "Att ljudet var djupt, kraftigt och skrämmande.",
             "Att isen redan hade brustit."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "open",
@@ -466,7 +489,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han bara visste det." },
             { "points": 1, "answer": "Han hade läst det i en broschyr om issäkerhet som hade legat hemma på köksbordet hela vintern." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -479,7 +503,8 @@
             "För att synas bättre.",
             "För att hålla sig varm."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -492,7 +517,8 @@
             "Liv låtsades vara rädd för att skoja.",
             "Liv var arg på Sigge."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "open",
@@ -504,7 +530,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Han drog henne med armarna." },
             { "points": 1, "answer": "Han sträckte ut sin röda halsduk som Liv fick tag i." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -517,7 +544,8 @@
             "De frös så att de huttrade.",
             "De var arga på varandra."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -530,7 +558,8 @@
             "Att köpa en egen halsduk.",
             "Att alltid stanna vid stranden."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -544,7 +573,8 @@
             { "points": 0, "answer": "Han är glad att Liv är hans kompis." },
             { "points": 1, "answer": "Han menar att det är bra att Liv är modig, för någon måste ju våga gå först." },
             { "points": 2, "answer": "Han menar att det är bra att Liv vågar mest och åker längst ut, så länge det finns någon försiktig som han själv kvar vid stranden som kan hjälpa till om det går fel. De behöver varandra." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         }
       ],
       "image": {
@@ -604,7 +634,8 @@
             "Att skydda bladet mot kyla.",
             "Att samla snö på vintern."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -616,7 +647,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Klorofyll." },
             { "points": 1, "answer": "Den kallas fotosyntes." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -629,7 +661,8 @@
             { "points": 0, "answer": "För att löven ska byta färg." },
             { "points": 1, "answer": "För att det blir kallare på hösten." },
             { "points": 2, "answer": "På hösten blir dagarna kortare och kallare, alltså mindre ljus och värme. Då lönar det sig inte längre för trädet att tillverka nytt klorofyll." }
-          ]
+          ],
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "multiple-choice",
@@ -642,7 +675,8 @@
             "De kommer från solljuset.",
             "De bildas när det blir kallt."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "multiple-choice",
@@ -655,7 +689,8 @@
             "Ett sätt att locka till sig insekter.",
             "Ett sätt att samla vatten."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -668,7 +703,8 @@
             { "points": 0, "answer": "Det är inte så dumt, alla träd gör ju så på hösten." },
             { "points": 1, "answer": "På vintern finns det ändå för lite ljus för att löven ska kunna jobba med fotosyntesen, så trädet behöver dem inte." },
             { "points": 2, "answer": "På vintern finns det för lite ljus för fotosyntesen, så löven gör ingen nytta då. Och breda löv skulle bara samla tung snö och frysa sönder. Genom att fälla löven sparar trädet vatten och energi och klarar kylan bättre." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -681,7 +717,8 @@
             "De har inget klorofyll.",
             "De fäller barren på sommaren i stället."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -694,7 +731,8 @@
             "Det beskriver hur barrträd klarar vintern.",
             "Det förklarar varför löven blir röda."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -737,7 +775,8 @@
             "Skoldagen borde bli kortare.",
             "Väckarklockor borde förbjudas."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -751,7 +790,8 @@
             { "points": 0, "answer": "Hon tycker att skolan ska börja klockan nio." },
             { "points": 1, "answer": "Vi skulle lära oss mer om vi fick sova klart, för en utsövd elev minns och koncentrerar sig bättre." },
             { "points": 2, "answer": "Vi skulle lära oss mer när vi är utsövda, och morgonen skulle bli mindre stressig så att fler hinner äta frukost och färre kommer för sent." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -764,7 +804,8 @@
             "För att forskarna har bestämt skolans tider.",
             "För att göra texten längre."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "multiple-choice",
@@ -777,7 +818,8 @@
             "Att skoldagen skulle sluta senare och krocka med träningar och arbetstider.",
             "Att forskningen om sömn är osäker."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -789,7 +831,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Hon säger att de vuxna har fel." },
             { "points": 1, "answer": "Hon säger att skoldagen inte behöver bli längre, för den kan packas smartare med kortare håltimmar." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -802,7 +845,8 @@
             "Att korta ner sommarlovet.",
             "Att servera frukost i skolan."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -815,7 +859,8 @@
             "Att beskriva hur en skoldag ser ut.",
             "Att övertyga läsaren om att skolan borde börja senare."
           ],
-          "correctIndex": 3
+          "correctIndex": 3,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -875,7 +920,8 @@
             "Att mata fåglar på vintern.",
             "Att förvara kottar och pinnar."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -888,7 +934,8 @@
             "På en solig plats som är skyddad från regn.",
             "Högt uppe i ett träd."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -901,7 +948,8 @@
             { "points": 0, "answer": "För att det ska se finare ut." },
             { "points": 1, "answer": "För att insekterna vill ha en skyddad återvändsgränd att bygga bo i." },
             { "points": 2, "answer": "Insekterna vill ha en skyddad återvändsgränd att bygga bo i. Om röret är öppet i båda ändar blir det drag, och då flyttar ingen insekt in." }
-          ]
+          ],
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "multiple-choice",
@@ -914,7 +962,8 @@
             "För att rören ska få plats i lådan.",
             "För att lådan inte ska repas."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "ordering",
@@ -945,7 +994,8 @@
             "För att texten ska bli kortare.",
             "För att visa att det är bråttom."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "open",
@@ -957,7 +1007,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Det ser snyggt ut med en punktlista." },
             { "points": 1, "answer": "Man ser direkt vad man behöver och kan bocka av sakerna, i stället för att leta i en massa text." }
-          ]
+          ],
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "multiple-choice",
@@ -970,7 +1021,8 @@
             "Kottarna har trillat ur lådan.",
             "Hotellet har blivit tyngre."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "aspect": "Hitta efterfrågad information"
         }
       ],
       "image": {
@@ -1027,7 +1079,8 @@
             "På den långa stjärten.",
             "På att den ofta sitter på marken."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -1039,7 +1092,8 @@
           "scoreExamples": [
             { "points": 0, "answer": "Den är för trött för att flyga." },
             { "points": 1, "answer": "För att benen är så små att den inte kan ta sats och lyfta från marken." }
-          ]
+          ],
+          "aspect": "Dra enkla slutsatser"
         },
         {
           "kind": "open",
@@ -1053,7 +1107,8 @@
             { "points": 0, "answer": "Den flyger hela tiden." },
             { "points": 1, "answer": "Den fångar insekter och äter uppe i luften." },
             { "points": 2, "answer": "Den fångar insekter i luften och dricker genom att glida tätt över vattnet. Den sover också uppe i luften." }
-          ]
+          ],
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -1066,7 +1121,8 @@
             "Nästan tre månader.",
             "Nästan tre år."
           ],
-          "correctIndex": 3
+          "correctIndex": 3,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "multiple-choice",
@@ -1079,7 +1135,8 @@
             "Den upptäcktes första gången i ett kyrktorn.",
             "Den flyger högre än alla andra fåglar."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Hitta efterfrågad information"
         },
         {
           "kind": "open",
@@ -1092,7 +1149,8 @@
             { "points": 0, "answer": "Det finns färre tornseglare nu än förr." },
             { "points": 1, "answer": "När gamla hus renoveras försvinner springorna under taken där fågeln byggt bo." },
             { "points": 2, "answer": "När äldre hus renoveras försvinner springorna under taken där fågeln byggt bo, så den hittar ingen boplats. Man kan hjälpa den genom att sätta upp en särskild holk högt på en husgavel." }
-          ]
+          ],
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
           "kind": "multiple-choice",
@@ -1105,7 +1163,8 @@
             "För att tornseglaren liknar en pilbåge.",
             "För att fågeln bara flyger rakt fram."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         },
         {
           "kind": "multiple-choice",
@@ -1118,7 +1177,8 @@
             "De sammanfattar hela texten.",
             "De ställer frågor som läsaren ska besvara."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag"
         }
       ],
       "image": {
@@ -1601,6 +1661,88 @@
         "alt": "En rödräv i naturen.",
         "fallback": "/images/djurboken.svg"
       }
+    }
+  ],
+  "oral": [
+    {
+      "id": "ak6-a-mobiler",
+      "delprov": "Delprov A: tala – gruppsamtal",
+      "title": "Mobiler i skolan – bra eller dåligt?",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900&h=506&fit=crop",
+        "alt": "En mobiltelefon på ett bord.",
+        "fallback": "/images/uppkopplad.svg"
+      },
+      "intro": [
+        "På det nationella provets muntliga del samtalar ni i grupp om ett ämne. Ni ska turas om att prata, lyssna på varandra och motivera vad ni tycker.",
+        "Det här samtalet handlar om mobiltelefoner i skolan – något nästan alla har en åsikt om. Kom ihåg: det finns inga rätta svar, men alla åsikter ska motiveras."
+      ],
+      "steps": [
+        "Sätt er 3–4 elever tillsammans. Utse en kortdragare.",
+        "Kortdragaren läser ett kort högt och säger först vad hen själv tycker – och varför.",
+        "Gå laget runt: håller du med eller inte? Motivera alltid med ”… därför att …”.",
+        "Bygg vidare på varandras tankar: ”Jag håller med om det du sa om …, och dessutom …”.",
+        "Sammanfatta kortet med en mening: vad tyckte gruppen?",
+        "Dra ett nytt kort och börja om. Hinner ni, ta alla korten."
+      ],
+      "cards": [
+        "Mobiler borde vara helt förbjudna i skolan.",
+        "Det är rast – då bestämmer jag själv vad jag gör med min mobil.",
+        "Utan mobiler skulle fler prata med varandra på rasterna.",
+        "Mobilen är ett bra hjälpmedel på lektionerna, om man använder den rätt.",
+        "Det är föräldrarnas fel om elever är trötta i skolan av att ha spelat hela natten.",
+        "Läraren ska få ta mobilen om någon använder den på lektionen.",
+        "Om skolan samlar in mobilerna ska skolan betala om en går sönder.",
+        "Om tio år kommer ingen att prata om mobilförbud längre."
+      ],
+      "assessmentPoints": [
+        "Alla i gruppen kom till tals.",
+        "Vi lyssnade klart på varandra utan att avbryta.",
+        "Vi motiverade våra åsikter med ”därför att …”.",
+        "Vi byggde vidare på varandras tankar i stället för att bara byta ämne.",
+        "Vi vågade säga emot varandra på ett schysst sätt.",
+        "Vi höll oss till ämnet på kortet."
+      ]
+    },
+    {
+      "id": "ak6-a-kompis",
+      "delprov": "Delprov A: tala – gruppsamtal",
+      "title": "Vad gör en bra kompis?",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&h=506&fit=crop",
+        "alt": "Kompisar som går tillsammans.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "intro": [
+        "Vad är egentligen en bra kompis? Är det någon som alltid håller med – eller någon som vågar säga ifrån?",
+        "Ni ska samtala om vänskap, rättvisa och grupptryck. Korten tar upp situationer som kan hända på riktigt. Lyssna på varandra och motivera vad ni tycker."
+      ],
+      "steps": [
+        "Sätt er 3–4 elever tillsammans. Utse en kortdragare.",
+        "Kortdragaren läser ett kort högt och berättar först vad hen skulle göra – och varför.",
+        "Gå laget runt: vad skulle du göra? Finns det fler sätt att tänka?",
+        "Ställ frågor till varandra: ”Hur tänkte du där?” eller ”Vad skulle hända om …?”.",
+        "Sammanfatta: vad var gruppen överens om? Vad tyckte ni olika om?",
+        "Dra ett nytt kort och börja om."
+      ],
+      "cards": [
+        "Din kompis får inte vara med i spelet på rasten. De andra säger att laget redan är fullt. Vad gör du?",
+        "Du får höra att någon sprider ett rykte om din kompis. Vad gör du?",
+        "Din bästa kompis vill att ni bara ska vara ni två, men du vill vara med fler. Vad säger du?",
+        "En kompis fuskar i ett spel för att vinna. Är det någonsin okej? Varför/varför inte?",
+        "Alla i gruppen skrattar åt en elak kommentar om någon annan. Vad gör du?",
+        "Din kompis har glömt sitt läxförhör och vill titta på dina svar. Vad gör du?",
+        "Måste en bra kompis alltid hålla med? Motivera.",
+        "Kan man vara kompis med någon man bara träffar på nätet? Motivera."
+      ],
+      "assessmentPoints": [
+        "Alla i gruppen kom till tals.",
+        "Vi lyssnade klart på varandra utan att avbryta.",
+        "Vi motiverade våra åsikter med ”därför att …”.",
+        "Vi ställde frågor till varandra under samtalet.",
+        "Vi byggde vidare på varandras tankar.",
+        "Vi höll oss till ämnet på kortet."
+      ]
     }
   ]
 }

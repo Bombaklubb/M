@@ -4,12 +4,14 @@ import StartPage from "./components/StartPage";
 import GradePage from "./components/GradePage";
 import ReadingTestView from "./components/ReadingTestView";
 import WritingTaskView from "./components/WritingTaskView";
+import OralTaskView from "./components/OralTaskView";
 
 type View =
   | { name: "start" }
   | { name: "grade"; gradeId: string }
   | { name: "reading"; gradeId: string; testId: string }
-  | { name: "writing"; gradeId: string; taskId: string };
+  | { name: "writing"; gradeId: string; taskId: string }
+  | { name: "oral"; gradeId: string; taskId: string };
 
 export default function App() {
   const [view, setView] = useState<View>({ name: "start" });
@@ -52,6 +54,9 @@ export default function App() {
             onOpenWriting={(taskId) =>
               setView({ name: "writing", gradeId: grade.id, taskId })
             }
+            onOpenOral={(taskId) =>
+              setView({ name: "oral", gradeId: grade.id, taskId })
+            }
           />
         )}
 
@@ -69,6 +74,15 @@ export default function App() {
           <WritingTaskView
             key={view.taskId}
             task={grade.writing.find((t) => t.id === view.taskId)!}
+            gradeLabel={grade.label}
+            onBack={() => setView({ name: "grade", gradeId: grade.id })}
+          />
+        )}
+
+        {view.name === "oral" && grade && (
+          <OralTaskView
+            key={view.taskId}
+            task={grade.oral!.find((t) => t.id === view.taskId)!}
             gradeLabel={grade.label}
             onBack={() => setView({ name: "grade", gradeId: grade.id })}
           />
