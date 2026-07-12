@@ -29,38 +29,38 @@ function getTypeStyling(type: SantEllerFakeItem['type']) {
   switch (type) {
     case 'headline':
       return {
-        containerClass: 'bg-zinc-900 border-zinc-700',
-        headerClass: 'bg-zinc-800 border-b border-zinc-700',
+        containerClass: 'bg-white border-gray-200',
+        headerClass: 'bg-gray-100 border-b-2 border-gray-200',
         headerLabel: '📰 NYHETER',
-        contentClass: 'text-lg font-bold text-foreground leading-snug',
+        contentClass: 'text-lg font-bold text-gray-800 leading-snug',
       };
     case 'post':
       return {
-        containerClass: 'bg-slate-900 border-slate-700',
-        headerClass: 'bg-slate-800 border-b border-slate-700',
+        containerClass: 'bg-sky-50 border-sky-200',
+        headerClass: 'bg-sky-100 border-b-2 border-sky-200',
         headerLabel: '📱 Sociala medier',
-        contentClass: 'text-base text-foreground leading-relaxed',
+        contentClass: 'text-base text-gray-700 font-medium leading-relaxed',
       };
     case 'statistic':
       return {
-        containerClass: 'bg-indigo-950 border-indigo-800',
-        headerClass: 'bg-indigo-900/50 border-b border-indigo-800',
+        containerClass: 'bg-indigo-50 border-indigo-200',
+        headerClass: 'bg-indigo-100 border-b-2 border-indigo-200',
         headerLabel: '📊 Statistik / Fakta',
-        contentClass: 'text-base font-semibold text-foreground leading-relaxed text-center',
+        contentClass: 'text-base font-bold text-gray-800 leading-relaxed text-center',
       };
     case 'quote':
       return {
-        containerClass: 'bg-purple-950 border-purple-800',
-        headerClass: 'bg-purple-900/50 border-b border-purple-800',
+        containerClass: 'bg-purple-50 border-purple-200',
+        headerClass: 'bg-purple-100 border-b-2 border-purple-200',
         headerLabel: '💬 Citat',
-        contentClass: 'text-base italic text-foreground leading-relaxed text-center',
+        contentClass: 'text-base italic font-medium text-gray-700 leading-relaxed text-center',
       };
     case 'screenshot':
       return {
-        containerClass: 'bg-gray-900 border-gray-700',
-        headerClass: 'bg-gray-800 border-b border-gray-700',
+        containerClass: 'bg-gray-50 border-gray-200',
+        headerClass: 'bg-gray-100 border-b-2 border-gray-200',
         headerLabel: '📸 Skärmdump',
-        contentClass: 'text-base text-foreground leading-relaxed font-mono text-sm',
+        contentClass: 'text-sm font-mono text-gray-700 leading-relaxed',
       };
   }
 }
@@ -227,7 +227,7 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
                   : { borderColor: 'hsl(0 84% 60%)', boxShadow: '0 0 20px hsl(0 84% 60% / 0.15)' }
                 : {}
             }
-            className={`rounded-2xl border overflow-hidden transition-all duration-500 ${styling.containerClass}`}
+            className={`rounded-2xl border-2 shadow-sm overflow-hidden transition-all duration-500 ${styling.containerClass}`}
           >
             {/* Card header */}
             <div className={`flex items-center gap-2 px-4 py-2.5 ${styling.headerClass}`}>
@@ -256,8 +256,8 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
               )}
               {currentItem.type === 'statistic' && (
                 <div className="flex justify-center mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center">
-                    <BarChart2 className="w-5 h-5 text-indigo-400" />
+                  <div className="w-10 h-10 rounded-xl bg-indigo-100 border-2 border-indigo-200 flex items-center justify-center">
+                    <BarChart2 className="w-5 h-5 text-indigo-600" />
                   </div>
                 </div>
               )}
