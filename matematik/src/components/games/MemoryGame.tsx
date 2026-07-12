@@ -4,6 +4,7 @@ import { useApp } from '../../contexts/AppContext';
 import { WORLDS } from '../../data/worlds';
 import { WorldId } from '../../data/worlds';
 import { recordGameSession, loadGameProgress } from '../../utils/gameStorage';
+import { rollPointsBonus } from '../../utils/pointsBonus';
 import AppHeader from '../AppHeader';
 
 // ── Math pairs per world ──────────────────────────────────────────────────────
@@ -133,6 +134,8 @@ export default function MemoryGame() {
   const [matches, setMatches] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [locked, setLocked] = useState(false);
+  const [earnedXP, setEarnedXP] = useState(0);
+  const [bonusMult, setBonusMult] = useState(1);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startTimeRef = useRef(0);
 
@@ -157,6 +160,8 @@ export default function MemoryGame() {
     setMatches(0);
     setSeconds(0);
     setLocked(false);
+    setEarnedXP(0);
+    setBonusMult(1);
     setPhase('playing');
   }, [worldId]);
 
@@ -190,6 +195,9 @@ export default function MemoryGame() {
             setTimeout(() => {
               // Record result
               if (currentStudent) {
+                const baseXp = Math.max(20, totalPairs * 10 - moves);
+                const bonus = rollPointsBonus();
+                const finalXp = baseXp * bonus;
                 recordGameSession(currentStudent.id, {
                   gameId: 'memory',
                   score: Math.max(10, 200 - moves * 3 - Math.floor(seconds / 5)),
@@ -198,10 +206,12 @@ export default function MemoryGame() {
                   streak: newMatches,
                   combo: newMatches,
                   timeSpent: seconds,
-                  xpEarned: Math.max(20, totalPairs * 10 - moves),
+                  xpEarned: finalXp,
                   newLevel: false,
                   weakTopics: [],
                 });
+                setEarnedXP(finalXp);
+                setBonusMult(bonus);
               }
               setPhase('victory');
             }, 600);
@@ -301,6 +311,18 @@ export default function MemoryGame() {
               <p className="text-white/50 text-xs">Tid</p>
             </div>
           </div>
+
+          <div className="bg-amber-500/20 border border-amber-400/40 rounded-2xl p-4 mb-4">
+            <div className="text-amber-300 font-black text-2xl">+{earnedXP} XP</div>
+            <div className="text-amber-200/70 text-xs">intjänat denna omgång</div>
+          </div>
+
+          {bonusMult > 1 && (
+            <div className="rounded-2xl p-3 mb-4 text-white font-bold text-center"
+              style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)', border: '2px solid #f0abfc', boxShadow: '0 0 20px rgba(236,72,153,0.45)' }}>
+              🎲 TUR! ×{bonusMult} XP – helt slumpmässigt!
+            </div>
+          )}
 
           <div className="flex flex-col gap-3">
             <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }} onClick={() => startGame(difficulty)}

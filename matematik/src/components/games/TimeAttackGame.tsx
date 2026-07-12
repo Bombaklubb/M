@@ -5,6 +5,7 @@ import AppHeader from '../AppHeader';
 import { getGameExercisePool, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, loadGameProgress } from '../../utils/gameStorage';
 import { getCorrectFeedback } from '../../utils/feedback';
+import { rollPointsBonus } from '../../utils/pointsBonus';
 import { WORLDS } from '../../data/worlds';
 
 const GAME_DURATION = 60; // seconds
@@ -37,6 +38,9 @@ export default function TimeAttackGame() {
   const feedbackMsgRef = useRef('');
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  // Slumpmässig sällsynt bonus (x2/x3) – rullas en gång per omgång, delas mellan
+  // spar-effekten och resultatskärmen så visat och sparat XP alltid stämmer överens.
+  const bonusRollRef = useRef<number | null>(null);
 
   const currentEx = exercises[currentIdx];
 
@@ -54,6 +58,7 @@ export default function TimeAttackGame() {
     setInput('');
     setFeedback(null);
     setTimeLeft(GAME_DURATION);
+    bonusRollRef.current = null;
     setPhase('playing');
   }, [grade, gameLevel]);
 
@@ -90,7 +95,9 @@ export default function TimeAttackGame() {
     if (phase === 'result' && exercises.length > 0 && results.length > 0 && currentStudent) {
       const correct = results.filter(Boolean).length;
       const total = results.length;
-      const xp = calculateGameXP(correct, total, bestStreak, 1, correct === total && total > 0, total > 0 ? GAME_DURATION / total : 10);
+      const baseXp = calculateGameXP(correct, total, bestStreak, 1, correct === total && total > 0, total > 0 ? GAME_DURATION / total : 10);
+      if (bonusRollRef.current === null) bonusRollRef.current = rollPointsBonus();
+      const xp = baseXp * bonusRollRef.current;
       recordGameSession(currentStudent.id, {
         gameId: 'time-attack',
         score,
@@ -221,7 +228,10 @@ export default function TimeAttackGame() {
   if (phase === 'result') {
     const answered = results.length;
     const correct = results.filter(Boolean).length;
-    const xp = calculateGameXP(correct, answered || 1, bestStreak, 1, correct === answered && answered > 0, answered > 0 ? GAME_DURATION / answered : 10);
+    const baseXp = calculateGameXP(correct, answered || 1, bestStreak, 1, correct === answered && answered > 0, answered > 0 ? GAME_DURATION / answered : 10);
+    if (bonusRollRef.current === null) bonusRollRef.current = rollPointsBonus();
+    const bonus = bonusRollRef.current;
+    const xp = baseXp * bonus;
     const weakTopics = analyzeWeakTopics(exercises.slice(0, answered), results);
 
     return (
@@ -251,6 +261,13 @@ export default function TimeAttackGame() {
               <div className="text-amber-300 font-black text-2xl">+{xp} XP</div>
               <div className="text-amber-200/70 text-xs">intjänat denna omgång</div>
             </div>
+
+            {bonus > 1 && (
+              <div className="rounded-xl p-3 mb-5 text-white font-bold text-center"
+                style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)', border: '2px solid #f0abfc', boxShadow: '0 0 20px rgba(236,72,153,0.45)' }}>
+                🎲 TUR! ×{bonus} XP – helt slumpmässigt!
+              </div>
+            )}
 
             {weakTopics.length > 0 && (
               <div className="bg-rose-900/30 border border-rose-400/30 rounded-xl p-4 mb-5 text-left">

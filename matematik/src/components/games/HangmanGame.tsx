@@ -4,6 +4,7 @@ import { useApp } from '../../contexts/AppContext';
 import { WORLDS, WorldId } from '../../data/worlds';
 import { recordGameSession, loadGameProgress } from '../../utils/gameStorage';
 import { getCorrectFeedback } from '../../utils/feedback';
+import { rollPointsBonus } from '../../utils/pointsBonus';
 import AppHeader from '../AppHeader';
 
 // ── Word lists per world ──────────────────────────────────────────────────────
@@ -77,6 +78,7 @@ export default function HangmanGame() {
   const [phase, setPhase] = useState<Phase>('playing');
   const [gamesWon, setGamesWon] = useState(0);
   const [totalPlayed, setTotalPlayed] = useState(0);
+  const [bonusMult, setBonusMult] = useState(1);
 
   const wrongGuesses = [...guessed].filter(l => !word.includes(l));
   const livesLeft = MAX_LIVES - wrongGuesses.length;
@@ -107,6 +109,9 @@ export default function HangmanGame() {
       setTotalPlayed(n => n + 1);
       if (won) setGamesWon(n => n + 1);
       if (currentStudent) {
+        // Slumpmässig sällsynt bonus (x2/x3) – bara vid vinst.
+        const bonus = won ? rollPointsBonus() : 1;
+        setBonusMult(bonus);
         recordGameSession(currentStudent.id, {
           gameId: 'hangman',
           score: won ? Math.max(10, 100 + newLivesLeft * 15) : 5,
@@ -115,7 +120,7 @@ export default function HangmanGame() {
           streak: won ? 1 : 0,
           combo: 0,
           timeSpent: 0,
-          xpEarned: won ? 30 + newLivesLeft * 10 : 5,
+          xpEarned: (won ? 30 + newLivesLeft * 10 : 5) * bonus,
           newLevel: false,
           weakTopics: [],
         });
@@ -126,6 +131,7 @@ export default function HangmanGame() {
   const nextWord = useCallback(() => {
     setWord(pickWord(worldId));
     setGuessed(new Set());
+    setBonusMult(1);
     setPhase('playing');
   }, [worldId]);
 
@@ -226,7 +232,13 @@ export default function HangmanGame() {
                 <p className="text-2xl font-black text-red-300 mb-1">{word}</p>
               )}
               {currentPhase === 'won' && (
-                <p className="text-emerald-300 text-sm">+{30 + livesLeft * 10} XP</p>
+                <p className="text-emerald-300 text-sm">+{(30 + livesLeft * 10) * bonusMult} XP</p>
+              )}
+              {currentPhase === 'won' && bonusMult > 1 && (
+                <p className="mt-1 font-black text-white text-sm rounded-full inline-block px-3 py-1"
+                  style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)' }}>
+                  🎲 TUR! ×{bonusMult} XP!
+                </p>
               )}
               <button
                 onClick={nextWord}
