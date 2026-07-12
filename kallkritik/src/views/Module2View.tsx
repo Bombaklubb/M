@@ -67,7 +67,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
       const badge = allErrors > 0 && totalFound / allErrors >= 0.8
         ? { name: 'Faktakollaren', icon: '🔍' }
         : null;
-      onComplete(totalFound, totalXP, badge?.name);
+      onComplete(Math.round((totalFound / Math.max(allErrors, 1)) * 100), totalXP, badge?.name);
       setPhase('result');
     } else {
       setTextIndex(i => i + 1);

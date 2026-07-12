@@ -41,7 +41,7 @@ export default function Module1View({ onComplete, onExit }: ModuleViewProps) {
   function handleNext() {
     if (currentIndex + 1 >= items.length) {
       setPhase('result');
-      onComplete(correctScore, xpEarned, earnedBadge?.name);
+      onComplete(Math.round((correctScore / items.length) * 100), xpEarned, earnedBadge?.name);
     } else {
       setCurrentIndex(i => i + 1);
       setAnswer(null);
