@@ -5,6 +5,7 @@ import GradePage from "./components/GradePage";
 import ReadingTestView from "./components/ReadingTestView";
 import WritingTaskView from "./components/WritingTaskView";
 import OralTaskView from "./components/OralTaskView";
+import PresentationTaskView from "./components/PresentationTaskView";
 
 type View =
   | { name: "start" }
@@ -79,14 +80,21 @@ export default function App() {
           />
         )}
 
-        {view.name === "oral" && grade && (
-          <OralTaskView
-            key={view.taskId}
-            task={grade.oral!.find((t) => t.id === view.taskId)!}
-            gradeLabel={grade.label}
-            onBack={() => setView({ name: "grade", gradeId: grade.id })}
-          />
-        )}
+        {view.name === "oral" &&
+          grade &&
+          (() => {
+            const task = grade.oral!.find((t) => t.id === view.taskId)!;
+            const Viewer =
+              task.kind === "presentation" ? PresentationTaskView : OralTaskView;
+            return (
+              <Viewer
+                key={view.taskId}
+                task={task}
+                gradeLabel={grade.label}
+                onBack={() => setView({ name: "grade", gradeId: grade.id })}
+              />
+            );
+          })()}
       </main>
 
       <footer className="no-print pb-10 text-center text-xs text-stone-400">

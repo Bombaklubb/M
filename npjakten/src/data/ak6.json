@@ -1743,6 +1743,49 @@
         "Vi byggde vidare på varandras tankar.",
         "Vi höll oss till ämnet på kortet."
       ]
+    },
+    {
+      "id": "ak6-a-presentation",
+      "delprov": "Delprov A: tala – muntlig presentation",
+      "kind": "presentation",
+      "title": "Håll en kort presentation",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&h=506&fit=crop",
+        "alt": "En elev som presenterar inför en grupp.",
+        "fallback": "/images/lar-ut.svg"
+      },
+      "intro": [
+        "På det muntliga nationella provet håller du en kort presentation, ungefär två minuter, för en mindre grupp. Efteråt får du frågor från dem som lyssnat.",
+        "Du förbereder dig med ett stödkort: en tankekarta i ord med din inledning, dina huvudpunkter och din avslutning. På provet gäller samma regel som här – stödord är tillåtna, men du får inte läsa upp en färdigskriven text."
+      ],
+      "steps": [
+        "Välj ett ämne i listan, eller ett eget ämne som du kan mycket om.",
+        "Planera din presentation på stödkortet: inledning, tre huvudpunkter och avslutning.",
+        "Öva högt minst en gång, gärna med tidtagning – sikta på ungefär två minuter.",
+        "Håll presentationen för gruppen. Tala fritt utifrån stödorden och ha blickkontakt.",
+        "Svara på lyssnarnas frågor efteråt."
+      ],
+      "topics": [
+        "Min hobby eller min sport",
+        "Ett land jag vill besöka",
+        "Något jag kan mycket om",
+        "En bok, film eller ett spel jag rekommenderar",
+        "En person jag beundrar",
+        "Min framtidsdröm"
+      ],
+      "listenerTasks": [
+        "Lyssna aktivt och anteckna gärna något du vill fråga om.",
+        "Ställ minst en fråga till talaren efteråt.",
+        "Ge respons: säg en sak som var bra och en sak som kan bli ännu bättre."
+      ],
+      "assessmentPoints": [
+        "Min presentation hade en tydlig inledning och en tydlig avslutning.",
+        "Innehållet hängde ihop – det fanns en röd tråd.",
+        "Jag talade utifrån stödorden och läste inte innantill.",
+        "Jag hade blickkontakt med gruppen.",
+        "Jag talade tydligt och lagom fort.",
+        "Jag svarade på lyssnarnas frågor."
+      ]
     }
   ]
 }

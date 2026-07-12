@@ -166,7 +166,9 @@ export default function GradePage({
                     </p>
                     <p className="mt-1 font-serif text-lg font-bold">{task.title}</p>
                     <p className="mt-1 text-sm text-stone-500">
-                      {task.cards.length} samtalskort · gruppövning
+                      {task.kind === "presentation"
+                        ? "Välj ämne, förbered och presentera"
+                        : `${task.cards?.length ?? 0} samtalskort · gruppövning`}
                     </p>
                   </span>
                 </button>
