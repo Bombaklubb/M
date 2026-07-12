@@ -76,10 +76,11 @@ function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
   }
 
   function handleModuleComplete(moduleId: number) {
-    return (score: number, xpEarned: number, badgeName?: string) => {
+    return (scorePercent: number, xpEarned: number, badgeName?: string) => {
       addXP(xpEarned);
-      completeModule(moduleId, score, badgeName);
-      setCurrentView('home');
+      completeModule(moduleId, scorePercent, badgeName);
+      // Ingen navigering här – modulen visar sin resultatsida tills
+      // eleven själv väljer "Hem" eller "Spela igen".
     };
   }
 

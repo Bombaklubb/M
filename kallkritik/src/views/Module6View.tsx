@@ -88,7 +88,7 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
 
   function handleNext() {
     if (currentIndex + 1 >= items.length) {
-      onComplete(correctScore, xpEarned, earnedBadge?.name);
+      onComplete(Math.round((correctScore / items.length) * 100), xpEarned, earnedBadge?.name);
       setPhase('result');
     } else {
       setCurrentIndex(i => i + 1);

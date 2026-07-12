@@ -97,7 +97,7 @@ export default function Module3View({ onComplete, onExit }: ModuleViewProps) {
   function handleNext() {
     if (currentIndex + 1 >= sources.length) {
       setPhase('result');
-      onComplete(correctScore, xpEarned, earnedBadge?.name);
+      onComplete(Math.round((correctScore / sources.length) * 100), xpEarned, earnedBadge?.name);
     } else {
       setCurrentIndex(i => i + 1);
       setSelected(null);

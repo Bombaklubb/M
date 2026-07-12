@@ -112,7 +112,7 @@ export function LearnQuizModule({
   function handleNext() {
     if (currentIndex + 1 >= questions.length) {
       setPhase('result');
-      onComplete(correctCount, xpEarned, earnedBadge?.name);
+      onComplete(Math.round((correctCount / questions.length) * 100), xpEarned, earnedBadge?.name);
     } else {
       setCurrentIndex(i => i + 1);
       setSelected(null);
