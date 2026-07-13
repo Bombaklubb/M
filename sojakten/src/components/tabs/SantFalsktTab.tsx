@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { RotateCcw } from 'lucide-react';
+import Celebration from '../Celebration';
 
 export default function SantFalsktTab({ items, progressHex, accentHex }: {
   items: { statement: string; isTrue: boolean; explanation: string }[];
@@ -30,6 +31,7 @@ export default function SantFalsktTab({ items, progressHex, accentHex }: {
 
   if (done) return (
     <div className="clay-card p-6 text-center">
+      {score === total && <Celebration />}
       <p className="text-5xl mb-3">{score === total ? '🏆' : score >= total / 2 ? '👍' : '💪'}</p>
       <p className="font-heading font-bold text-xl text-gray-800 mb-1">{score} / {total} rätt</p>
       <p className="text-sm text-gray-500 mb-5">{score === total ? 'Perfekt! Du kan allt!' : score >= total / 2 ? 'Bra jobbat!' : 'Öva lite till!'}</p>

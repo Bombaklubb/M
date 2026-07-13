@@ -1,12 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { RotateCcw } from 'lucide-react';
+import { shuffle } from '../../utils/shuffle';
 
 export default function MatchaTab({ concepts, progressHex, accentHex }: {
   concepts: { term: string; definition: string }[];
   progressHex: string;
   accentHex: string;
 }) {
-  const shuffledDefs = useMemo(() => [...concepts].sort(() => Math.random() - 0.5), [concepts.map(c => c.term).join()]);
+  const shuffledDefs = useMemo(() => shuffle(concepts), [concepts.map(c => c.term).join()]);
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
   const [matched, setMatched] = useState<Set<string>>(new Set());
   const [flash, setFlash] = useState<{ term: string; def: string; ok: boolean } | null>(null);

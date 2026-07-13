@@ -2,14 +2,52 @@ import { ChapterProgress, AchievementStats, SubjectId } from '../types';
 
 const PROGRESS_KEY = 'so_progress';
 const STATS_KEY = 'so_stats';
+const VERSION_KEY = 'so_version';
+
+/**
+ * Höj detta tal vid inkompatibla ändringar i datastrukturen.
+ * Vid versionsskillnad rensas sparad data i stället för att krascha appen.
+ */
+const STORAGE_VERSION = 1;
+
+function ensureVersion(): void {
+  try {
+    const stored = localStorage.getItem(VERSION_KEY);
+    if (stored === String(STORAGE_VERSION)) return;
+    if (stored === null && localStorage.getItem(PROGRESS_KEY) === null && localStorage.getItem(STATS_KEY) === null) {
+      // Färsk installation – stämpla bara versionen.
+      localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
+      return;
+    }
+    if (stored === null) {
+      // Data från tiden före versionsstämpeln – nuvarande format är v1, behåll datan.
+      localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
+      return;
+    }
+    // Okänd/äldre version – rensa hellre än att krascha.
+    localStorage.removeItem(PROGRESS_KEY);
+    localStorage.removeItem(STATS_KEY);
+    localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
+  } catch { /* localStorage kan saknas (privat läge) – kör vidare utan */ }
+}
 
 interface StoredStats {
   totalCorrect: number;
   totalAnswered: number;
 }
 
+function isValidProgress(p: unknown): p is ChapterProgress {
+  return typeof p === 'object' && p !== null
+    && typeof (p as ChapterProgress).chapterId === 'string'
+    && typeof (p as ChapterProgress).bestScore === 'number';
+}
+
 export function getProgress(): ChapterProgress[] {
-  try { return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '[]'); }
+  ensureVersion();
+  try {
+    const parsed = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '[]');
+    return Array.isArray(parsed) ? parsed.filter(isValidProgress) : [];
+  }
   catch { return []; }
 }
 
@@ -34,7 +72,12 @@ export function saveChapterProgress(progress: ChapterProgress): void {
 }
 
 export function getStats(): StoredStats {
-  try { return JSON.parse(localStorage.getItem(STATS_KEY) || '{"totalCorrect":0,"totalAnswered":0}'); }
+  ensureVersion();
+  try {
+    const parsed = JSON.parse(localStorage.getItem(STATS_KEY) || '{"totalCorrect":0,"totalAnswered":0}');
+    if (typeof parsed?.totalCorrect === 'number' && typeof parsed?.totalAnswered === 'number') return parsed;
+    return { totalCorrect: 0, totalAnswered: 0 };
+  }
   catch { return { totalCorrect: 0, totalAnswered: 0 }; }
 }
 

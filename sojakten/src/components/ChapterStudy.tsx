@@ -1,6 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useApp } from '../contexts/AppContext';
+import { shuffle } from '../utils/shuffle';
+import { fetchConceptImage } from '../utils/imageCache';
 import AppHeader from './AppHeader';
+import Celebration from './Celebration';
 import WordSearch from './WordSearch';
 import { Eye, EyeOff, ArrowRight, CheckCircle, XCircle, RotateCcw } from 'lucide-react';
 import SantFalsktTab from './tabs/SantFalsktTab';
@@ -32,8 +35,8 @@ export default function ChapterStudy() {
       const showDef = i % 2 === 0;
       const correct = showDef ? c.term : c.definition;
       const pool = concepts.filter((_, j) => j !== i).map(x => showDef ? x.term : x.definition);
-      const distractors = [...pool].sort(() => Math.random() - 0.5).slice(0, 3);
-      const options = [...distractors, correct].sort(() => Math.random() - 0.5);
+      const distractors = shuffle(pool).slice(0, 3);
+      const options = shuffle([...distractors, correct]);
       return {
         prompt: showDef ? c.definition : c.term,
         label: showDef ? 'Vad heter begreppet?' : 'Vad betyder ordet?',
@@ -43,28 +46,17 @@ export default function ChapterStudy() {
     });
   }, [chapterId]);
 
-  // Fetch Wikipedia thumbnails for all concepts on mount
+  // Fetch Wikipedia thumbnails for all concepts on mount (cachas i sessionStorage,
+  // och respekterar wikiTitle-fältet per begrepp)
   useEffect(() => {
     if (!chapterId) return;
     setConceptImages({});
     let cancelled = false;
     async function fetchImages() {
       const results: Record<string, string | null> = {};
-      await Promise.all(
-        concepts.map(async ({ term }) => {
-          try {
-            const res = await fetch(
-              `https://sv.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(term)}`,
-              { headers: { 'Accept': 'application/json' } }
-            );
-            if (!res.ok) { results[term] = null; return; }
-            const data = await res.json();
-            results[term] = data?.thumbnail?.source ?? null;
-          } catch {
-            results[term] = null;
-          }
-        })
-      );
+      await Promise.all(concepts.map(async concept => {
+        results[concept.term] = await fetchConceptImage(concept);
+      }));
       if (!cancelled) setConceptImages(results);
     }
     fetchImages();
@@ -268,6 +260,7 @@ export default function ChapterStudy() {
           <div>
             {testDone ? (
               <div className="clay-card p-6 text-center">
+                {testScore === testQuestions.length && <Celebration />}
                 <p className="text-5xl mb-3">{testScore === testQuestions.length ? '🏆' : testScore >= testQuestions.length / 2 ? '👍' : '💪'}</p>
                 <p className="font-heading font-bold text-xl text-gray-800 mb-1">
                   {testScore} / {testQuestions.length} rätt

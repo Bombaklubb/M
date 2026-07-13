@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise, MultipleChoiceExercise, TrueFalseExercise, FillInExercise } from '../types';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+import Celebration from './Celebration';
 
 type AnswerState = 'unanswered' | 'correct' | 'wrong';
 
@@ -150,6 +151,7 @@ export default function ExitTicket() {
   if (done) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-6">
+        {correct === 3 && <Celebration />}
         <div className="max-w-sm w-full text-center">
           <div className="text-6xl mb-4">{correct === 3 ? '🎉' : correct >= 2 ? '👍' : '💪'}</div>
           <h1 className="text-2xl font-heading font-bold text-gray-800 mb-2">Snabbkoll klar!</h1>

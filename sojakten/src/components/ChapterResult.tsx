@@ -1,6 +1,7 @@
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForSubject } from '../data/subjects';
 import { Star, RotateCcw, ArrowRight, Home, BookOpen, Zap } from 'lucide-react';
+import Celebration from './Celebration';
 
 export default function ChapterResult() {
   const { lastResult, selectedChapter, selectedSubject, setView, selectChapter, openChapterStudy, startExitTicket, isChapterUnlocked } = useApp();
@@ -26,6 +27,7 @@ export default function ChapterResult() {
 
   return (
     <div className={`min-h-screen flex flex-col ${selectedSubject.pageBgClass}`}>
+      {stars === 3 && <Celebration />}
       <div className="max-w-lg mx-auto w-full p-4 sm:p-6 flex flex-col items-center pt-12 sm:pt-16 pb-16">
 
         {/* Stars */}

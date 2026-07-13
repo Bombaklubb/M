@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { TimelineEvent } from '../../types';
+import { fetchWikiImage } from '../../utils/imageCache';
 
 export default function TimelineTab({ events, progressHex, inkHex, accentHex }: {
   events: TimelineEvent[];
@@ -14,11 +15,7 @@ export default function TimelineTab({ events, progressHex, inkHex, accentHex }: 
     async function fetchAll() {
       const results: Record<string, string | null> = {};
       await Promise.all(events.filter(e => e.wikiTitle).map(async e => {
-        try {
-          const res = await fetch(`https://sv.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(e.wikiTitle!)}`, { headers: { Accept: 'application/json' } });
-          const data = await res.json();
-          results[e.wikiTitle!] = data?.thumbnail?.source ?? null;
-        } catch { results[e.wikiTitle!] = null; }
+        results[e.wikiTitle!] = await fetchWikiImage(e.wikiTitle!);
       }));
       if (!cancelled) setImages(results);
     }

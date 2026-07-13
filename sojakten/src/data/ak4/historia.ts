@@ -56,6 +56,16 @@ export const AK4_HISTORIA: Chapter[] = [
         { statement: 'Kristendomen kom till Sverige ungefär år 1000 med kung Olof Skötkonung.', isTrue: true, explanation: 'Rätt! Olof Skötkonung lät döpa sig runt år 1000 och kristendomen ersatte sakta den nordiska gudatron.' },
         { statement: 'Vikingarna offrade djur till gudarna vid ceremonier kallade blot.', isTrue: true, explanation: 'Rätt! Blot var viktiga offerritualer där djur offrades. Uppsala var en av de allra viktigaste blotplatserna.' },
       ],
+      timeline: [
+        { year: 'ca 800', title: 'Vikingatiden börjar', description: 'Den sista delen av järnåldern inleds. Skandinaver börjar segla ut på handels- och plundringsfärder.', wikiTitle: 'Vikingatiden' },
+        { year: 'ca 800', title: 'Birka grundas', description: 'Sveriges första stad växer fram på Björkö i Mälaren – ett handelscentrum med 500–1 000 invånare.', wikiTitle: 'Birka' },
+        { year: '830-tal', title: 'Ansgar besöker Birka', description: 'Den kristne missionären Ansgar kommer till Birka och predikar kristendomen för första gången i Sverige.', wikiTitle: 'Ansgar' },
+        { year: 'ca 860', title: 'Island upptäcks', description: 'Vikingar når Island och börjar bosätta sig där.', wikiTitle: 'Island' },
+        { year: '980-tal', title: 'Grönland koloniseras', description: 'Erik Röde seglar västerut från Island och grundar bosättningar på Grönland.', wikiTitle: 'Erik Röde' },
+        { year: 'ca 1000', title: 'Vinland – Amerika nås', description: 'Leif Eriksson seglar från Grönland och når Nordamerika – 500 år före Columbus.', wikiTitle: 'Leif Eriksson' },
+        { year: 'ca 1000', title: 'Olof Skötkonung döps', description: 'Sveriges kung låter döpa sig – kristendomens genombrott i Svea rike.', wikiTitle: 'Olof Skötkonung' },
+        { year: 'ca 1050', title: 'Vikingatiden tar slut', description: 'Danmark, Norge och Sverige har blivit egna kungariken och kristendomen har ersatt asatron.' },
+      ],
     },
     exercises: [
       {

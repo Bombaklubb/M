@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { MatchingExercise } from '../../types';
+import { shuffle } from '../../utils/shuffle';
 import { CheckCircle } from 'lucide-react';
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 }
 
 export default function MatchingPairs({ exercise, onAnswer }: Props) {
-  const shuffledRight = useMemo(() => [...exercise.pairs].sort(() => Math.random() - 0.5), [exercise.id]);
+  const shuffledRight = useMemo(() => shuffle(exercise.pairs), [exercise.id]);
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
   const [matched, setMatched] = useState<{ leftIdx: number; rightIdx: number; correct: boolean }[]>([]);
   const [wrongFlash, setWrongFlash] = useState<number | null>(null);

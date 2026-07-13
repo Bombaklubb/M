@@ -403,6 +403,13 @@ export const AK6_SAMHALLE: Chapter[] = [
         { statement: 'Tryckfrihetsförordningen från 1766 är en av Sveriges grundlagar.', isTrue: true, explanation: 'Rätt! Tryckfrihetsförordningen 1766 är en av världens äldsta och en av Sveriges fyra grundlagar.' },
         { statement: 'I en demokrati väljer folket sina representanter.', isTrue: true, explanation: 'Rätt! Demokrati = folkstyre. I Sverige väljer vi representanter till riksdag, kommunfullmäktige och EU-parlamentet.' },
       ],
+      timeline: [
+        { year: '1766', title: 'Tryckfrihetsförordningen', description: 'Sverige inför världens första lag om tryckfrihet – i dag en av de fyra grundlagarna.', wikiTitle: 'Tryckfrihetsförordningen' },
+        { year: '1809', title: 'Regeringsform', description: 'Ny grundlag delar makten mellan kung och riksdag efter enväldets fall.' },
+        { year: '1921', title: 'Allmän och lika rösträtt', description: 'Kvinnor röstar i riksdagsval för första gången – alla vuxna har nu rösträtt.', wikiTitle: 'Kvinnlig rösträtt' },
+        { year: '1974', title: 'Nuvarande regeringsform', description: 'Den moderna regeringsformen slår fast att all offentlig makt utgår från folket.', wikiTitle: 'Regeringsformen' },
+        { year: '1995', title: 'Sverige går med i EU', description: 'Efter folkomröstningen 1994 blir Sverige medlem i Europeiska unionen den 1 januari 1995.', wikiTitle: 'Europeiska unionen' },
+      ],
     },
     exercises: [
       {
