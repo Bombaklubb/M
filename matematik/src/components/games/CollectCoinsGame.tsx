@@ -5,6 +5,7 @@ import AppHeader from '../AppHeader';
 import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, getGameDifficulty, loadGameProgress } from '../../utils/gameStorage';
 import { WORLDS } from '../../data/worlds';
+import { rollPointsBonus } from '../../utils/pointsBonus';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -73,6 +74,9 @@ export default function CollectCoinsGame() {
   const [timings, setTimings] = useState<number[]>([]);
   const questionStartRef = useRef(Date.now());
   const [runnerScope, runnerAnimate] = useAnimate();
+  // Slumpmässig sällsynt bonus (x2/x3) – rullas en gång per omgång, delas mellan
+  // spar-effekten och resultatskärmen så visat och sparat XP alltid stämmer överens.
+  const bonusRollRef = useRef<number | null>(null);
 
   const currentEx = exercises[currentIdx];
 
@@ -91,6 +95,7 @@ export default function CollectCoinsGame() {
     setRunnerX(0);
     setTimings([]);
     questionStartRef.current = Date.now();
+    bonusRollRef.current = null;
     setPhase('playing');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [grade, gameLevel, exerciseCount, worldGradeRange]);
@@ -151,7 +156,9 @@ export default function CollectCoinsGame() {
     if (phase === 'result' && exercises.length > 0 && results.length > 0 && currentStudent) {
       const correct = results.filter(Boolean).length;
       const avgTime = timings.length ? timings.reduce((a, b) => a + b, 0) / timings.length : 8;
-      const xp = calculateGameXP(correct, results.length, 0, 1, lives > 0 && correct === results.length, avgTime);
+      const baseXp = calculateGameXP(correct, results.length, 0, 1, lives > 0 && correct === results.length, avgTime);
+      if (bonusRollRef.current === null) bonusRollRef.current = rollPointsBonus();
+      const xp = baseXp * bonusRollRef.current;
       recordGameSession(currentStudent.id, {
         gameId: 'collect-coins',
         score,
@@ -251,7 +258,10 @@ export default function CollectCoinsGame() {
     const correct = results.filter(Boolean).length;
     const total = results.length;
     const avgTime = timings.length ? timings.reduce((a, b) => a + b, 0) / timings.length : 8;
-    const xp = calculateGameXP(correct, total || 1, 0, 1, lives > 0 && correct === total, avgTime);
+    const baseXp = calculateGameXP(correct, total || 1, 0, 1, lives > 0 && correct === total, avgTime);
+    if (bonusRollRef.current === null) bonusRollRef.current = rollPointsBonus();
+    const bonus = bonusRollRef.current;
+    const xp = baseXp * bonus;
     const weakTopics = analyzeWeakTopics(exercises.slice(0, total), results);
     const isPerfect = coins === total;
     const isGood = coins >= total * 0.7;
@@ -299,6 +309,13 @@ export default function CollectCoinsGame() {
               <div className="text-amber-300 font-black text-3xl">+{xp} XP</div>
               <div className="text-amber-200/60 text-xs mt-0.5">intjänat denna omgång</div>
             </div>
+
+            {bonus > 1 && (
+              <div className="rounded-2xl p-3 mb-4 text-white font-bold text-center"
+                style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)', border: '2px solid #f0abfc', boxShadow: '0 0 20px rgba(236,72,153,0.45)' }}>
+                🎲 TUR! ×{bonus} XP – helt slumpmässigt!
+              </div>
+            )}
 
             {weakTopics.length > 0 && (
               <div className="bg-rose-900/20 border border-rose-500/25 rounded-2xl p-4 mb-4 text-left">

@@ -4,7 +4,6 @@ import { TOPICS } from '../data/topics';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { loadGamification } from '../utils/chestStorage';
 import { getEquippedFrame, getWalletBalance, getEquippedBackground } from '../utils/shopStorage';
-import { getDailyChallengeRecord } from '../utils/dailyChallenge';
 import { BACKGROUND_MAP } from '../data/shop';
 import { ALL_AVATARS } from '../data/avatars';
 import { BorderBeam } from './magicui/border-beam';
@@ -21,7 +20,6 @@ export default function WorldSelect() {
     : null;
   const lifetimePoints = pointsRecord?.total ?? 0;
   const streak = pointsRecord?.streak ?? 0;
-  const dailyDone = currentStudent ? getDailyChallengeRecord(currentStudent.id) !== null : false;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
   const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
   const unopenedChests = currentStudent
@@ -165,32 +163,6 @@ export default function WorldSelect() {
           className="h-48 w-auto mx-auto drop-shadow-lg"
           style={{ filter: 'drop-shadow(0 4px 16px rgba(120,80,10,0.30))' }}
         />
-      </div>
-
-      {/* Dagens utmaning */}
-      <div className="relative z-10 px-4 max-w-lg mx-auto mt-1">
-        <button
-          onClick={() => setView('daily-challenge')}
-          className="w-full flex items-center gap-3 rounded-2xl px-4 py-3 text-left transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-          style={{
-            background: dailyDone
-              ? 'rgba(255, 248, 220, 0.82)'
-              : 'linear-gradient(135deg,#f59e0b,#d97706)',
-            border: dailyDone ? '1px solid rgba(180,130,40,0.50)' : '2px solid #b45309',
-            boxShadow: dailyDone ? '0 2px 10px rgba(120,80,10,0.20)' : '0 4px 18px rgba(217,119,6,0.45)',
-          }}
-        >
-          <span className="text-2xl">{dailyDone ? '✅' : '🗓️'}</span>
-          <span className="flex-1 min-w-0">
-            <span className={`block font-black text-sm ${dailyDone ? '' : 'text-white'}`} style={dailyDone ? { color: '#78350f' } : undefined}>
-              Dagens utmaning
-            </span>
-            <span className={`block text-xs ${dailyDone ? '' : 'text-white/85'}`} style={dailyDone ? { color: 'rgba(120,60,10,0.75)' } : undefined}>
-              {dailyDone ? 'Klar för idag – kom tillbaka imorgon!' : '5 frågor · upp till 200 ⭐ + kista!'}
-            </span>
-          </span>
-          {!dailyDone && <span className="text-white font-black text-lg">→</span>}
-        </button>
       </div>
 
       {/* Välj din värld */}
