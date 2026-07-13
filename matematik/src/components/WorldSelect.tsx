@@ -19,7 +19,6 @@ export default function WorldSelect() {
     ? (getPoints(currentStudent.id) ?? initPoints(currentStudent.id))
     : null;
   const lifetimePoints = pointsRecord?.total ?? 0;
-  const streak = pointsRecord?.streak ?? 0;
   const avatarEmoji = ALL_AVATARS[currentStudent?.avatar ?? 0] ?? '🦁';
   const equippedFrame = currentStudent ? getEquippedFrame(currentStudent.id) : null;
   const unopenedChests = currentStudent
@@ -95,21 +94,6 @@ export default function WorldSelect() {
           <span className="font-bold text-sm" style={{ color: '#92400e' }}>{lifetimePoints}</span>
         </div>
 
-        {/* Streak – dagar i rad */}
-        {streak > 0 && (
-          <div
-            className="flex items-center gap-1 px-3 py-1.5 rounded-full"
-            style={{
-              background: 'rgba(255, 248, 220, 0.82)',
-              border: '1px solid rgba(180, 130, 40, 0.50)',
-              boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
-            }}
-            title={`${streak} dagar i rad – fortsätt imorgon för att behålla din streak!`}
-          >
-            <span className="text-sm">🔥</span>
-            <span className="font-bold text-sm" style={{ color: '#92400e' }}>{streak}</span>
-          </div>
-        )}
 
         {/* Avatar + namn */}
         <button
