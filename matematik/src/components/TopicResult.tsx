@@ -164,7 +164,7 @@ export default function TopicResult({ topic }: { topic: Topic }) {
             <p className="text-amber-300 font-bold text-lg">
               🏆 Poäng totalt: <NumberTicker value={points.total} delay={0.8} className="text-amber-300 font-bold" />
             </p>
-            <p className="text-amber-400 text-sm">Nivå {points.level} – {points.streak} dagars streak 🔥</p>
+            <p className="text-amber-400 text-sm">Nivå {points.level}</p>
           </div>
 
           {/* Repeat attempt notice */}
