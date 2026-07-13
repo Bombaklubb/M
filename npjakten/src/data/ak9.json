@@ -1654,6 +1654,50 @@
         "Vi vågade säga emot – och lyssnade klart på motargumenten.",
         "Samtalsledaren sammanfattade diskussionen innan nästa kort."
       ]
+    },
+    {
+      "id": "ak9-a-anforande",
+      "delprov": "Delprov A: tala – anförande",
+      "kind": "presentation",
+      "title": "Håll ett anförande",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&h=506&fit=crop",
+        "alt": "En person som talar inför en grupp.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "intro": [
+        "På det muntliga nationella provet håller du ett anförande på två till tre minuter för en mindre grupp, och avslutar med en fråga som gruppen sedan diskuterar. Du leder diskussionen om din fråga.",
+        "Du förbereder dig med ett stödkort med tankekarta eller stödord. Precis som på provet gäller: stödorden är ett stöd för minnet – anförandet ska hållas fritt, inte läsas upp."
+      ],
+      "steps": [
+        "Välj ett ämne i listan, eller ett eget ämne som engagerar dig.",
+        "Planera anförandet på stödkortet: en inledning som väcker intresse, tre huvudpunkter med exempel, och en avslutning.",
+        "Formulera din diskussionsfråga – en öppen fråga som gruppen kan tycka olika om.",
+        "Öva högt med tidtagning – sikta på två till tre minuter.",
+        "Håll anförandet fritt utifrån stödorden, med blickkontakt och tydlig röst.",
+        "Ställ din fråga till gruppen och led diskussionen: fördela ordet och sammanfatta."
+      ],
+      "topics": [
+        "Något som borde förändras i skolan",
+        "En app eller teknik som påverkar våra liv",
+        "Ett ämne jag brinner för",
+        "En orättvisa jag vill uppmärksamma",
+        "Något alla borde prova någon gång",
+        "En plats som betyder något för mig"
+      ],
+      "listenerTasks": [
+        "Lyssna aktivt och anteckna något du vill kommentera eller fråga om.",
+        "Delta i diskussionen om talarens fråga – motivera dina åsikter.",
+        "Ge respons efteråt: vad gjorde anförandet intressant, och vad kan utvecklas?"
+      ],
+      "assessmentPoints": [
+        "Min inledning väckte lyssnarnas intresse.",
+        "Innehållet var genomtänkt, med exempel som utvecklade mina huvudpunkter.",
+        "Min avslutning knöt ihop anförandet och ledde fram till diskussionsfrågan.",
+        "Jag talade fritt utifrån stödorden och läste inte innantill.",
+        "Jag hade kontakt med lyssnarna genom blicken och rösten.",
+        "Jag ledde diskussionen: fördelade ordet och sammanfattade."
+      ]
     }
   ]
 }

@@ -2050,6 +2050,48 @@
         "Jag gissade utan att avbryta den som beskrev.",
         "Alla i gruppen fick beskriva minst en sak."
       ]
+    },
+    {
+      "id": "ak3-a-beratta-for-gruppen",
+      "delprov": "Muntlig uppgift: berätta för gruppen",
+      "kind": "presentation",
+      "title": "Berätta för gruppen",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=900&h=506&fit=crop",
+        "alt": "Ett barn som berättar för sina klasskamrater.",
+        "fallback": "/images/lar-ut.svg"
+      },
+      "intro": [
+        "Nu ska du berätta något för en liten grupp – ungefär en minut. Du väljer själv vad du vill berätta om.",
+        "Till hjälp gör du ett stödkort med stödord. Stödorden hjälper dig att komma ihåg vad du ska säga, så att du kan titta på dina kompisar när du berättar."
+      ],
+      "steps": [
+        "Välj ett ämne i listan, eller hitta på ett eget.",
+        "Fyll i ditt stödkort: hur du börjar, tre saker du vill berätta och hur du slutar.",
+        "Öva en gång tyst för dig själv med stödkortet i handen.",
+        "Berätta för gruppen. Titta upp från kortet och prata så att alla hör.",
+        "Svara på kompisarnas frågor när du har berättat klart."
+      ],
+      "topics": [
+        "Mitt husdjur eller mitt drömhusdjur",
+        "En sak jag är bra på",
+        "Min favoritplats",
+        "En bok eller film jag gillar",
+        "Ett djur jag vet mycket om",
+        "Min bästa dag"
+      ],
+      "listenerTasks": [
+        "Lyssna tyst och titta på den som berättar.",
+        "Kom på en fråga om något du vill veta mer om, och ställ den efteråt.",
+        "Säg en sak som var bra med berättelsen."
+      ],
+      "assessmentPoints": [
+        "Jag berättade med en början, en mitt och ett slut.",
+        "Jag använde stödorden i stället för att läsa hela meningar.",
+        "Jag tittade upp på gruppen när jag berättade.",
+        "Jag pratade så att alla kunde höra.",
+        "Jag svarade på frågorna jag fick."
+      ]
     }
   ]
 }

@@ -107,7 +107,7 @@ export default function OralTaskView({ task, gradeLabel, onBack }: Props) {
           skärmen. Dra ett kort i taget och samtala tills ämnet känns färdigt.
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {task.cards.map((card, i) => (
+          {(task.cards ?? []).map((card, i) => (
             <div
               key={i}
               className="card flex min-h-32 flex-col items-center justify-center rounded border border-dashed border-stone-400 p-6 text-center"

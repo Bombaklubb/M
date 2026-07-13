@@ -130,16 +130,19 @@ export interface WritingTask {
   examples?: ExampleResponse[]; // bedömda exempelsvar
 }
 
-// Muntligt delprov A: gruppsamtal som övas i klassrummet.
-// Appen ger struktur, samtalskort och självskattning – inget rättas.
+// Muntligt delprov A: gruppsamtal eller individuell presentation.
+// Appen ger struktur, kort/ämnen och självskattning – inget rättas.
 export interface OralTask {
   id: string;
   delprov: string; // t.ex. "Delprov A: tala – gruppsamtal"
+  kind?: "samtal" | "presentation"; // saknas = samtal
   title: string;
   image?: Illustration;
-  intro: string[]; // instruktioner till gruppen
-  steps: string[]; // samtalsstruktur, steg för steg
-  cards: string[]; // samtalskort – frågor/påståenden att dra
+  intro: string[]; // instruktioner till gruppen/eleven
+  steps: string[]; // arbetsgång, steg för steg
+  cards?: string[]; // samtalskort – frågor/påståenden att dra (samtal)
+  topics?: string[]; // ämnesförslag att välja bland (presentation)
+  listenerTasks?: string[]; // lyssnarnas uppgift (presentation)
   assessmentPoints: string[]; // vad läraren lyssnar efter (självskattning)
 }
 
