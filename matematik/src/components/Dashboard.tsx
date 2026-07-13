@@ -41,8 +41,6 @@ export default function Dashboard() {
     return progress.find(p => p.topicId === topicId);
   }
 
-  const streakIcon = points.streak >= 7 ? '🔥🔥' : points.streak >= 3 ? '🔥' : '⚡';
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -96,7 +94,6 @@ export default function Dashboard() {
           <div className="flex gap-4 mt-4">
             <StatChip icon="✅" label={`${completedCount} klara`} />
             <StatChip icon="⭐" label={`${totalStars} stjärnor`} />
-            <StatChip icon={streakIcon} label={`${points.streak} dagar streak`} />
           </div>
         </div>
       </div>

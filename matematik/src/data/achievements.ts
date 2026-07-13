@@ -68,24 +68,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     rarity: 'rare',
     condition: (s) => s.progress.some(p => p.bestScore === 100),
   },
-  {
-    id: 'streak-3',
-    title: 'Tre i rad',
-    description: 'Var aktiv 3 dagar i rad',
-    icon: '🔥',
-    color: 'from-orange-400 to-red-500',
-    rarity: 'common',
-    condition: (s) => s.points.streak >= 3,
-  },
-  {
-    id: 'streak-7',
-    title: 'En hel vecka',
-    description: 'Var aktiv 7 dagar i rad',
-    icon: '🌟',
-    color: 'from-yellow-400 to-orange-500',
-    rarity: 'rare',
-    condition: (s) => s.points.streak >= 7,
-  },
   // RARE
   {
     id: 'logikdetektiven',
@@ -295,15 +277,6 @@ export const ACHIEVEMENTS: Achievement[] = [
     color: 'from-pink-400 via-purple-500 to-indigo-600',
     rarity: 'legendary',
     condition: (s) => s.points.level >= 10,
-  },
-  {
-    id: 'streak-30',
-    title: 'En månads streak',
-    description: 'Var aktiv 30 dagar i rad',
-    icon: '🔥🔥🔥',
-    color: 'from-red-500 via-orange-500 to-yellow-500',
-    rarity: 'legendary',
-    condition: (s) => s.points.streak >= 30,
   },
   {
     id: 'thousand-correct',

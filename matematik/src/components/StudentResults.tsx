@@ -66,7 +66,6 @@ export default function StudentResults({ hideHeader }: { hideHeader?: boolean })
           <StatCard icon="✅" value={String(stats.completedTopics)} label="Klara ämnen" color="bg-green-50 text-green-700" />
           <StatCard icon="🎯" value={`${accuracy}%`} label="Träffsäkerhet" color="bg-blue-50 text-blue-700" />
           <StatCard icon="🔢" value={String(stats.totalCorrect)} label="Rätta svar" color="bg-purple-50 text-purple-700" />
-          <StatCard icon="🔥" value={String(points.streak)} label="Dagars streak" color="bg-orange-50 text-orange-700" />
           <StatCard icon="⭐" value={String(progress.reduce((s, p) => s + p.stars, 0))} label="Stjärnor totalt" color="bg-yellow-50 text-yellow-700" />
           <StatCard icon="🏆" value={String(points.total)} label="Poäng totalt" color="bg-amber-50 text-amber-700" />
         </div>

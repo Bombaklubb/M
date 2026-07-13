@@ -140,7 +140,6 @@ export function initPoints(studentId: string): PointsRecord {
     studentId,
     total: 0,
     level: 0,
-    streak: 0,
     lastActiveDate: '',
     weeklyPoints: 0,
     weekStart: getWeekStart(),
@@ -151,9 +150,9 @@ export function initPoints(studentId: string): PointsRecord {
 }
 
 /**
- * Ger en daglig bonus en gång per kalenderdag. Höjer livstidspoäng (och därm
- * plånboken) + veckopoäng, men rör inte streak-logiken. Returnerar om bonusen
- * faktiskt gavs så att UI kan visa en notis.
+ * Ger en daglig bonus en gång per kalenderdag. Höjer livstidspoäng (och därmed
+ * plånboken) + veckopoäng. Returnerar om bonusen faktiskt gavs så att UI kan
+ * visa en notis.
  */
 export function claimDailyBonus(studentId: string): { claimed: boolean; amount: number } {
   const record = getPoints(studentId) ?? initPoints(studentId);
@@ -189,19 +188,6 @@ export function addPoints(studentId: string, amount: number): PointsRecord {
   const today = new Date().toISOString().split('T')[0];
   const weekStart = getWeekStart();
 
-  // Streak logic
-  let streak = record.streak;
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
-  if (record.lastActiveDate === today) {
-    // same day, no change to streak
-  } else if (record.lastActiveDate === yesterday) {
-    streak += 1;
-  } else if (record.lastActiveDate === '') {
-    streak = 1;
-  } else {
-    streak = 1; // reset
-  }
-
   // Weekly reset
   let weeklyPoints = record.weeklyPoints;
   if (record.weekStart !== weekStart) {
@@ -209,18 +195,13 @@ export function addPoints(studentId: string, amount: number): PointsRecord {
   }
   weeklyPoints += amount;
 
-  // Streak bonus
-  const bonusMultiplier = streak >= 7 ? 1.5 : streak >= 3 ? 1.2 : 1;
-  const actualAmount = Math.round(amount * bonusMultiplier);
-
-  const newTotal = record.total + actualAmount;
+  const newTotal = record.total + amount;
   const newLevel = calcLevel(newTotal);
 
   const updated: PointsRecord = {
     ...record,
     total: newTotal,
     level: newLevel,
-    streak,
     lastActiveDate: today,
     weeklyPoints,
     weekStart,

@@ -135,7 +135,6 @@ export interface PointsRecord {
   studentId: string;
   total: number;
   level: number;
-  streak: number;
   lastActiveDate: string;
   weeklyPoints: number;
   weekStart: string;

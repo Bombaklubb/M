@@ -175,8 +175,8 @@ export const COLLECTION_ITEMS: CollectibleItem[] = [
     emoji: '🗺️',
     description: 'Navigerade hem genom rymden!',
     rarity: 'rare',
-    unlockCondition: 'Var aktiv 3 dagar i rad',
-    statUnlock: (s) => s.points.streak >= 3,
+    unlockCondition: 'Var aktiv i appen i 3 dagar',
+    statUnlock: (s) => s.daysActive >= 3,
   },
   {
     id: 'robot-buddy',
