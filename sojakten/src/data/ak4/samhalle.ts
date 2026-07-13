@@ -53,6 +53,14 @@ export const AK4_SAMHALLE: Chapter[] = [
         { statement: 'Majoritetsregeln innebär att den åsikt som flest röstar på vinner.', isTrue: true, explanation: 'Rätt! I demokratin gäller majoritetsprincipen – den åsikt som mer än hälften stödjer vinner.' },
         { statement: 'Demokratin kräver inget engagemang – staten sköter allt åt medborgarna.', isTrue: false, explanation: 'Fel! Demokratin kräver engagemang, respekt, tolerans och kunskap från alla medborgare för att fungera.' },
       ],
+      timeline: [
+        { year: 'ca 500 f.Kr.', title: 'Demokratin föds i Aten', description: 'Medborgarna i Aten börjar rösta om viktiga beslut – men kvinnor och slavar utesluts.', wikiTitle: 'Atenska demokratin' },
+        { year: '1809', title: 'Sverige får ny grundlag', description: 'Makten delas mellan kungen och riksdagen – ett första steg mot dagens demokrati.' },
+        { year: '1921', title: 'Allmän rösträtt i Sverige', description: 'Kvinnor får rösta för första gången i ett riksdagsval. Nu har alla vuxna rösträtt.', wikiTitle: 'Kvinnlig rösträtt' },
+        { year: '1991', title: 'Baltikum blir fritt', description: 'Estland, Lettland och Litauen blir självständiga demokratier när Sovjetunionen faller.' },
+        { year: '1994', title: 'Mandela blir president', description: 'Apartheid avskaffas och Nelson Mandela väljs till Sydafrikas förste demokratiske president.', wikiTitle: 'Nelson Mandela' },
+        { year: '2011', title: 'Arabiska våren', description: 'Med hjälp av sociala medier protesterar folk i arabländerna mot sina diktatorer.', wikiTitle: 'Arabiska våren' },
+      ],
     },
     exercises: [
       {
@@ -215,6 +223,13 @@ export const AK4_SAMHALLE: Chapter[] = [
         { statement: 'En flykting är någon som frivilligt väljer att flytta till ett annat land av ekonomiska skäl.', isTrue: false, explanation: 'Fel! En flykting TVINGAS lämna sitt hemland på grund av krig, förföljelse eller naturkatastrof.' },
         { statement: 'FN:s barnkonvention antogs 1989.', isTrue: true, explanation: 'Rätt! Barnkonventionen antogs 1989 och slår fast barns grundläggande rättigheter.' },
         { statement: 'De globala målen är 7 stycken och ska uppnås till 2050.', isTrue: false, explanation: 'Fel! Det finns 17 globala mål och de ska uppnås till 2030.' },
+      ],
+      timeline: [
+        { year: '1945', title: 'FN bildas', description: 'Efter andra världskriget går länderna samman för att förhindra fler krig. Högkvarteret läggs i New York.', wikiTitle: 'Förenta nationerna' },
+        { year: '1946', title: 'UNICEF grundas', description: 'FN:s barnfond skapas för att hjälpa barn som drabbats av kriget.', wikiTitle: 'Unicef' },
+        { year: '1948', title: 'Mänskliga rättigheterna', description: 'FN antar deklarationen om de mänskliga rättigheterna – 30 artiklar som gäller alla människor.', wikiTitle: 'FN:s deklaration om de mänskliga rättigheterna' },
+        { year: '1989', title: 'Barnkonventionen', description: 'FN antar konventionen om barnets rättigheter – barns rätt till skola, lek och skydd mot våld.', wikiTitle: 'Barnkonventionen' },
+        { year: '2015', title: 'De globala målen', description: 'FN antar 17 mål för hållbar utveckling som ska uppnås till 2030.', wikiTitle: 'Globala målen för hållbar utveckling' },
       ],
     },
     exercises: [

@@ -75,6 +75,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   function startExitTicket(chapter: Chapter) {
     setExitTicketChapter(chapter);
+    // Sätt även selectedChapter så att "tillbaka"-knapparna i ExitTicket
+    // (som går till chapter-study) fungerar när Snabbkoll öppnas från kapitelkartan.
+    setSelectedChapter(chapter);
     setCurrentView('exit-ticket');
   }
 

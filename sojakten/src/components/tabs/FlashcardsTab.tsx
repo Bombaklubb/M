@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { shuffle } from '../../utils/shuffle';
 
 export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex }: {
   concepts: { term: string; definition: string }[];
@@ -23,8 +24,7 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
   }
 
   function handleShuffle() {
-    const copy = [...shuffled].sort(() => Math.random() - 0.5);
-    setShuffled(copy);
+    setShuffled(shuffle(shuffled));
     setIdx(0);
     setFlipped(false);
   }

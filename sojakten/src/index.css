@@ -258,3 +258,24 @@ input[type=number]::-webkit-outer-spin-button {
 .flashcard-face-back {
   transform: rotateY(180deg);
 }
+
+/* Konfetti (Celebration.tsx) */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-5vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) translateX(var(--confetti-drift, 0px)) rotate(var(--confetti-spin, 540deg));
+    opacity: 0;
+  }
+}
+.confetti-piece {
+  animation-name: confettiFall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}

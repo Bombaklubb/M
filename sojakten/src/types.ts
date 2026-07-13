@@ -80,6 +80,13 @@ export type Exercise =
 export interface Concept {
   term: string;
   definition: string;
+  /**
+   * Styr Wikipedia-bilden för begreppet.
+   * - utelämnad: bilden hämtas via term
+   * - satt till en artikeltitel: bilden hämtas via den titeln
+   * - satt till '' (tom sträng): ingen bild visas
+   */
+  wikiTitle?: string;
 }
 
 export interface CauseEffect {
