@@ -1235,7 +1235,7 @@
           "type": "fill-in-blank",
           "sentence": "Min ___ (farmor/mormor på engelska) bakar kakor.",
           "answer": "grandmother",
-          "hint": "Farmor/mormor = g _ _ _ _ _ _ _ _ _",
+          "hint": "Farmor/mormor = g _ _ _ _ _ _ _ _ _ _",
           "explanation": "Grandmother = farmor eller mormor. Grandmother bakes cookies!"
         },
         {
@@ -2373,7 +2373,7 @@
             "buss",
             "busies",
             "buses",
-            "buss"
+            "bus"
           ],
           "correctIndex": 2,
           "explanation": "Ord som slutar på -s bildar plural med -es. Bus → buses."
@@ -5811,7 +5811,7 @@
           "explanation": "'Mine' är ägandepronomenet för 'I'. It is mine."
         },
         {
-          "id": "lag-v6-1",
+          "id": "lag-sluttest-2--lag-v6-1",
           "type": "multiple-choice",
           "question": "Vad heter 'tröja' på engelska?",
           "options": [
@@ -5824,7 +5824,7 @@
           "explanation": "Tröja = shirt. I wear a shirt."
         },
         {
-          "id": "lag-v7-1",
+          "id": "lag-sluttest-2--lag-v7-1",
           "type": "multiple-choice",
           "question": "Vad heter 'äpple' på engelska?",
           "options": [
@@ -5837,7 +5837,7 @@
           "explanation": "Äpple = apple. An apple a day!"
         },
         {
-          "id": "lag-v8-1",
+          "id": "lag-sluttest-2--lag-v8-1",
           "type": "multiple-choice",
           "question": "Vad heter 'stol' på engelska?",
           "options": [
@@ -5850,7 +5850,7 @@
           "explanation": "Stol = chair. Sit on the chair."
         },
         {
-          "id": "lag-v9-1",
+          "id": "lag-sluttest-2--lag-v9-1",
           "type": "multiple-choice",
           "question": "Vad heter 'glad' på engelska?",
           "options": [
@@ -5863,7 +5863,7 @@
           "explanation": "Glad = happy. I am happy today!"
         },
         {
-          "id": "lag-v10-1",
+          "id": "lag-sluttest-2--lag-v10-1",
           "type": "multiple-choice",
           "question": "Vad heter 'solig' på engelska?",
           "options": [
@@ -5876,7 +5876,7 @@
           "explanation": "Solig = sunny. It is sunny today!"
         },
         {
-          "id": "lag-v11-1",
+          "id": "lag-sluttest-2--lag-v11-1",
           "type": "multiple-choice",
           "question": "Vad heter 'fotboll' på engelska?",
           "options": [
@@ -5889,7 +5889,7 @@
           "explanation": "Fotboll = football. I play football."
         },
         {
-          "id": "lag-v12-1",
+          "id": "lag-sluttest-2--lag-v12-1",
           "type": "multiple-choice",
           "question": "Vad heter 'bil' på engelska?",
           "options": [

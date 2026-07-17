@@ -4165,7 +4165,7 @@
           "type": "fill-in-blank",
           "sentence": "___ (Blomkål på engelska) ser ut som ett vitt träd.",
           "answer": "Cauliflower",
-          "hint": "Blomkål = c _ _ _ _ _ _ _ _ _",
+          "hint": "Blomkål = c _ _ _ _ _ _ _ _ _ _",
           "explanation": "Blomkål = cauliflower. Cauliflower looks like a white tree!"
         },
         {
@@ -4289,7 +4289,7 @@
           "type": "fill-in-blank",
           "sentence": "Till frukost äter vi ___ (pannkakor på engelska).",
           "answer": "pancakes",
-          "hint": "Pannkaka = pancake, pannkakor = p _ _ _ _ _ _ _ _",
+          "hint": "Pannkaka = pancake, pannkakor = p _ _ _ _ _ _ _",
           "explanation": "Pannkaka = pancake. Pancakes are great with maple syrup!"
         },
         {
@@ -6134,7 +6134,7 @@
           "explanation": "Superlativ av korta adjektiv bildas med -est. The tallest."
         },
         {
-          "id": "mel-v5-1",
+          "id": "mel-sluttest-2--mel-v5-1",
           "type": "multiple-choice",
           "question": "Vad heter 'jacka' på engelska?",
           "options": [
@@ -6147,7 +6147,7 @@
           "explanation": "Jacka = jacket. Put on your jacket!"
         },
         {
-          "id": "mel-v6-1",
+          "id": "mel-sluttest-2--mel-v6-1",
           "type": "multiple-choice",
           "question": "Vad heter 'ris' på engelska?",
           "options": [
@@ -6160,7 +6160,7 @@
           "explanation": "Ris = rice. Rice is eaten in many countries."
         },
         {
-          "id": "mel-v7-1",
+          "id": "mel-sluttest-2--mel-v7-1",
           "type": "multiple-choice",
           "question": "Vad heter 'bokhylla' på engelska?",
           "options": [
@@ -6173,7 +6173,7 @@
           "explanation": "Bokhylla = bookshelf. Books go on the bookshelf."
         },
         {
-          "id": "mel-v8-1",
+          "id": "mel-sluttest-2--mel-v8-1",
           "type": "multiple-choice",
           "question": "Vad heter 'nervös' på engelska?",
           "options": [
@@ -6186,7 +6186,7 @@
           "explanation": "Nervös = nervous. I am nervous before tests."
         },
         {
-          "id": "mel-v9-1",
+          "id": "mel-sluttest-2--mel-v9-1",
           "type": "multiple-choice",
           "question": "Vad heter 'dimmig' på engelska?",
           "options": [
@@ -6199,7 +6199,7 @@
           "explanation": "Dimmig = foggy. It is foggy this morning."
         },
         {
-          "id": "mel-v10-1",
+          "id": "mel-sluttest-2--mel-v10-1",
           "type": "multiple-choice",
           "question": "Vad heter 'volleyboll' på engelska?",
           "options": [
@@ -6212,7 +6212,7 @@
           "explanation": "Volleyboll = volleyball. We play volleyball at the beach."
         },
         {
-          "id": "mel-v11-1",
+          "id": "mel-sluttest-2--mel-v11-1",
           "type": "multiple-choice",
           "question": "Vad heter 'lastbil' på engelska?",
           "options": [
