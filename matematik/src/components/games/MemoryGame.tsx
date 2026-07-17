@@ -10,16 +10,18 @@ import AppHeader from '../AppHeader';
 // ── Math pairs per world ──────────────────────────────────────────────────────
 
 const MATH_PAIRS: Record<WorldId, { question: string; answer: string }[]> = {
+  // OBS: alla answer-strängar måste vara UNIKA inom en värld – annars ligger
+  // identiska svarskort på bordet och matchningen blir omöjlig att se.
   dino: [
     { question: '2 + 3', answer: '5' },
     { question: '10 − 4', answer: '6' },
     { question: '3 × 4', answer: '12' },
     { question: '8 ÷ 2', answer: '4' },
-    { question: '½ av 10', answer: '5' },
-    { question: 'Dubbelt av 6', answer: '12' },
+    { question: '½ av 14', answer: '7' },
+    { question: 'Dubbelt av 8', answer: '16' },
     { question: '7 + 8', answer: '15' },
     { question: '20 − 9', answer: '11' },
-    { question: '5 × 3', answer: '15' },
+    { question: '5 × 4', answer: '20' },
     { question: '9 ÷ 3', answer: '3' },
   ],
   fantasy: [
@@ -27,10 +29,10 @@ const MATH_PAIRS: Record<WorldId, { question: string; answer: string }[]> = {
     { question: '¼ av 40', answer: '10' },
     { question: '2x = 10, x =', answer: '5' },
     { question: '3²', answer: '9' },
-    { question: '√25', answer: '5' },
+    { question: '√36', answer: '6' },
     { question: '3 × 7', answer: '21' },
     { question: '100 ÷ 4', answer: '25' },
-    { question: '¾ av 12', answer: '9' },
+    { question: '¾ av 16', answer: '12' },
     { question: '2³', answer: '8' },
     { question: '25% av 60', answer: '15' },
   ],
@@ -41,21 +43,21 @@ const MATH_PAIRS: Record<WorldId, { question: string; answer: string }[]> = {
     { question: '√64', answer: '8' },
     { question: '3² + 4²', answer: '25' },
     { question: '−3 + 7', answer: '4' },
-    { question: '2x + 3 = 11, x =', answer: '4' },
-    { question: '(−2)²', answer: '4' },
-    { question: '5² − 3²', answer: '16' },
+    { question: '2x + 3 = 23, x =', answer: '10' },
+    { question: '(−3)²', answer: '9' },
+    { question: '5² − 2²', answer: '21' },
     { question: '4x = 24, x =', answer: '6' },
   ],
   gym: [
-    { question: 'sin(90°)', answer: '1' },
-    { question: 'cos(0°)', answer: '1' },
+    { question: 'sin(30°)', answer: '0,5' },
+    { question: 'log₁₀(10 000)', answer: '4' },
     { question: 'log₁₀(100)', answer: '2' },
-    { question: 'tan(45°)', answer: '1' },
+    { question: '√81', answer: '9' },
     { question: 'log₂(8)', answer: '3' },
     { question: 'sin²x + cos²x', answer: '1' },
     { question: "d/dx(x²)", answer: '2x' },
     { question: "d/dx(sin x)", answer: 'cos x' },
-    { question: 'e⁰', answer: '1' },
+    { question: 'ln(e⁵)', answer: '5' },
     { question: 'log₁₀(1)', answer: '0' },
   ],
 };

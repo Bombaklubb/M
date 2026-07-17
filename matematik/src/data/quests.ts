@@ -33,7 +33,7 @@ export const QUESTS: Quest[] = [
     worldId: 'dino',
     title: 'Rädda Dinosaurieäggen!',
     emoji: '🥚',
-    description: 'Vulkanen vaknar – hjälp Dino samla alla 10 ägg innan lavan rinner!',
+    description: 'Vulkanen vaknar – hjälp Dino rädda äggen innan lavan rinner!',
     storyColor: 'from-green-500 to-emerald-700',
     rewardItem: 'dino-baby',
     rewardEmoji: '🦕',
@@ -989,11 +989,11 @@ export const QUESTS: Quest[] = [
     steps: [
       {
         id: 'da-1',
-        narrative: '🌡️ Temperatursensorn mäter: 18, 22, 19, 25, 21, 19, 24. Vad är medelvärdet?',
-        question: 'Medelvärde = (18+22+19+25+21+19+24)/7 = ?',
+        narrative: '🌡️ Temperatursensorn mäter: 18, 22, 19, 24, 21, 19, 24. Vad är medelvärdet?',
+        question: 'Medelvärde = (18+22+19+24+21+19+24)/7 = ?',
         type: 'fill-in',
         answer: '21',
-        explanation: '148 / 7 = 21,1... ≈ 21.',
+        explanation: '147 / 7 = 21.',
         rewardEmoji: '🌡️',
       },
       {
