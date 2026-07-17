@@ -24,6 +24,13 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
   const startTimeRef = useRef<number>(0);
   const pausedAtRef = useRef<number>(0);
   const boundaryWorkedRef = useRef(false);
+  // Refs som speglar speaking/paused – läses av tick() så den alltid ser aktuellt state
+  // istället för ett inaktuellt värde fångat i en gammal closure.
+  const speakingRef = useRef(false);
+  const pausedRef = useRef(false);
+
+  useEffect(() => { speakingRef.current = speaking; }, [speaking]);
+  useEffect(() => { pausedRef.current = paused; }, [paused]);
 
   const paragraphs = text.split('\n').filter((p) => p.trim().length > 0);
 
@@ -90,7 +97,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     startTimeRef.current = performance.now();
 
     const tick = () => {
-      if (!speaking || paused) return;
+      if (!speakingRef.current || pausedRef.current) return;
 
       const elapsed = performance.now() - startTimeRef.current;
       const wordIdx = timings.findIndex((t) => elapsed >= t.start && elapsed < t.end);
@@ -105,7 +112,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     };
 
     timerRef.current = requestAnimationFrame(tick);
-  }, [speaking, paused, getWordTimings]);
+  }, [getWordTimings]);
 
   const stop = useCallback(() => {
     if (!supported) return;
