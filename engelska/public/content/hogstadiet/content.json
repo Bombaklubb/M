@@ -2837,7 +2837,7 @@
             "advices",
             "advice",
             "an advice",
-            "advices"
+            "advises"
           ],
           "correctIndex": 1,
           "explanation": "'Advice' är icke-räknebart – inga -s och ingen artikel 'an'. The advice is good."
@@ -2858,7 +2858,7 @@
             "criterions",
             "criterias",
             "criteria",
-            "criterions"
+            "criterion"
           ],
           "correctIndex": 2,
           "explanation": "'Criterion' är ett latinskt lånord. Plural → criteria."
@@ -4155,7 +4155,7 @@
           "type": "fill-in-blank",
           "sentence": "The crowd was ___ (entusiastisk på engelska) about the concert.",
           "answer": "enthusiastic",
-          "hint": "Entusiastisk = e _ _ _ _ _ _ _ _ _ _",
+          "hint": "Entusiastisk = e _ _ _ _ _ _ _ _ _ _ _",
           "explanation": "Entusiastisk = enthusiastic. The crowd was enthusiastic!"
         },
         {
@@ -5678,7 +5678,7 @@
           "explanation": "'Can't have' + past participle uttrycker att något omöjligen kan ha hänt."
         },
         {
-          "id": "hog-v3-1",
+          "id": "hog-sluttest-2--hog-v3-1",
           "type": "multiple-choice",
           "question": "Vad heter 'kofta' på engelska?",
           "options": [
@@ -5691,7 +5691,7 @@
           "explanation": "Kofta = cardigan. A cardigan has buttons."
         },
         {
-          "id": "hog-v4-1",
+          "id": "hog-sluttest-2--hog-v4-1",
           "type": "multiple-choice",
           "question": "Vad heter 'kök' (matlagningstradition) på engelska?",
           "options": [
@@ -5704,7 +5704,7 @@
           "explanation": "Kök (tradition) = cuisine. Italian cuisine is popular."
         },
         {
-          "id": "hog-v5-1",
+          "id": "hog-sluttest-2--hog-v5-1",
           "type": "multiple-choice",
           "question": "Vad heter 'fåtölj' på engelska?",
           "options": [
@@ -5717,7 +5717,7 @@
           "explanation": "Fåtölj = armchair. Relax in the armchair."
         },
         {
-          "id": "hog-v6-1",
+          "id": "hog-sluttest-2--hog-v6-1",
           "type": "multiple-choice",
           "question": "Vad heter 'frustrerad' på engelska?",
           "options": [
@@ -5730,7 +5730,7 @@
           "explanation": "Frustrerad = frustrated. Almost the same word!"
         },
         {
-          "id": "hog-v7-1",
+          "id": "hog-sluttest-2--hog-v7-1",
           "type": "multiple-choice",
           "question": "Vad heter 'luftfuktighet' på engelska?",
           "options": [
@@ -5743,7 +5743,7 @@
           "explanation": "Luftfuktighet = humidity. High humidity feels uncomfortable."
         },
         {
-          "id": "hog-v8-1",
+          "id": "hog-sluttest-2--hog-v8-1",
           "type": "multiple-choice",
           "question": "Vad heter 'badminton' på engelska?",
           "options": [
@@ -5756,7 +5756,7 @@
           "explanation": "Badminton = badminton. Same word in both languages!"
         },
         {
-          "id": "hog-v9-1",
+          "id": "hog-sluttest-2--hog-v9-1",
           "type": "multiple-choice",
           "question": "Vad heter 'ambulans' på engelska?",
           "options": [

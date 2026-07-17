@@ -555,7 +555,7 @@
         {
           "id": "gym-v7-5",
           "type": "multiple-choice",
-          "question": "Vad heter 'enospårigt tåg' på engelska?",
+          "question": "Vad heter 'enspårigt tåg' på engelska?",
           "options": [
             "monorail",
             "light rail",
@@ -563,7 +563,7 @@
             "tram"
           ],
           "correctIndex": 0,
-          "explanation": "Enospårigt tåg = monorail. A monorail runs on one rail."
+          "explanation": "Enspårigt tåg = monorail. A monorail runs on one rail."
         }
       ]
     },
@@ -4479,7 +4479,7 @@
           "explanation": "'Such...that' är en resultatkonstruktion. Such was her talent that she won everything."
         },
         {
-          "id": "gym-v1-1",
+          "id": "gym-sluttest-2--gym-v1-1",
           "type": "multiple-choice",
           "question": "Vad heter 'kavaj' på engelska?",
           "options": [
@@ -4492,7 +4492,7 @@
           "explanation": "Kavaj = blazer. A blazer is smart-casual."
         },
         {
-          "id": "gym-v2-1",
+          "id": "gym-sluttest-2--gym-v2-1",
           "type": "multiple-choice",
           "question": "Vad heter 'gastronomisk/finsmakare' på engelska?",
           "options": [
@@ -4505,7 +4505,7 @@
           "explanation": "Gourmet = gourmet. Same word! A gourmet appreciates fine food."
         },
         {
-          "id": "gym-v3-1",
+          "id": "gym-sluttest-2--gym-v3-1",
           "type": "multiple-choice",
           "question": "Vad heter 'tapetsering/stoppning' på engelska?",
           "options": [
@@ -4518,7 +4518,7 @@
           "explanation": "Tapetsering = upholstery. Upholstery covers sofas."
         },
         {
-          "id": "gym-v4-1",
+          "id": "gym-sluttest-2--gym-v4-1",
           "type": "multiple-choice",
           "question": "Vad heter 'orolig inför något' på engelska?",
           "options": [
@@ -4531,7 +4531,7 @@
           "explanation": "Orolig inför = apprehensive. She felt apprehensive before the speech."
         },
         {
-          "id": "gym-v5-1",
+          "id": "gym-sluttest-2--gym-v5-1",
           "type": "multiple-choice",
           "question": "Vad heter 'meteorologi' på engelska?",
           "options": [
@@ -4544,7 +4544,7 @@
           "explanation": "Meteorologi = meteorology. Almost the same word!"
         },
         {
-          "id": "gym-v6-1",
+          "id": "gym-sluttest-2--gym-v6-1",
           "type": "multiple-choice",
           "question": "Vad heter 'triathlon' på engelska?",
           "options": [
@@ -4557,7 +4557,7 @@
           "explanation": "Triathlon = triathlon. Same word! Swim, bike, run."
         },
         {
-          "id": "gym-v7-1",
+          "id": "gym-sluttest-2--gym-v7-1",
           "type": "multiple-choice",
           "question": "Vad heter 'lokomotiv' på engelska?",
           "options": [
@@ -4902,7 +4902,7 @@
           "options": [
             "nevertheles",
             "neverthless",
-            "nevertheles",
+            "neverthelless",
             "nevertheless"
           ],
           "correctIndex": 3,
