@@ -138,9 +138,11 @@ function ItemCard({
 
 interface ShopViewProps {
   onBack: () => void;
+  /** Meddelar App när avataren byts så att headern uppdateras direkt. */
+  onAvatarChange?: (avatar: string) => void;
 }
 
-export default function ShopView({ onBack }: ShopViewProps) {
+export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
   const [user, setUser] = useState<User | null>(null);
   const [tab, setTab] = useState<Tab>('avatar');
   const [shop, setShop] = useState<ShopData>(loadShop());
@@ -173,6 +175,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
       const updated = { ...user, avatar: emoji };
       saveUser(updated);
       setUser(updated);
+      onAvatarChange?.(emoji);
     }
   }
 
