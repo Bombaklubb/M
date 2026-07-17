@@ -182,7 +182,8 @@ function App() {
     const correctCount = currentText.questions.reduce((count, q, index) => {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
-      questionResults.push({ questionType: q.type, correct: isCorrect });
+      // Vissa äldre texter saknar type på frågan – fall tillbaka på 'literal' så statistiken aldrig visar "undefined"
+      questionResults.push({ questionType: q.type || 'literal', correct: isCorrect });
       // Spåra anonym statistik (GDPR-säkrad) - skicka grade för att spåra stadiestatistik
       trackTaskComplete(isCorrect, q.type, currentText.grade);
       return count + (isCorrect ? 1 : 0);
