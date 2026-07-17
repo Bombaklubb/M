@@ -34,11 +34,13 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
     texts.forEach(t => {
       if (t.questionResults) {
         t.questionResults.forEach(qr => {
-          if (!questionTypeStats[qr.questionType]) {
-            questionTypeStats[qr.questionType] = { correct: 0, total: 0 };
+          // Redan sparade resultat kan sakna typ (äldre bugg) – räkna dem som 'literal' istället för "undefined"
+          const type = qr.questionType || 'literal';
+          if (!questionTypeStats[type]) {
+            questionTypeStats[type] = { correct: 0, total: 0 };
           }
-          questionTypeStats[qr.questionType].total++;
-          if (qr.correct) questionTypeStats[qr.questionType].correct++;
+          questionTypeStats[type].total++;
+          if (qr.correct) questionTypeStats[type].correct++;
         });
       }
     });

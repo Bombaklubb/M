@@ -138,14 +138,16 @@ function ItemCard({
 
 interface ShopViewProps {
   onBack: () => void;
+  /** Meddelar App när avataren byts så att headern uppdateras direkt. */
+  onAvatarChange?: (avatar: string) => void;
 }
 
-export default function ShopView({ onBack }: ShopViewProps) {
+export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
   const [user, setUser] = useState<User | null>(null);
   const [tab, setTab] = useState<Tab>('avatar');
   const [shop, setShop] = useState<ShopData>(loadShop());
   const [confirm, setConfirm] = useState<{
-    kind: ShopKind; key: string | number; price: number; name: string; preview: React.ReactNode;
+    kind: ShopKind; key: string; price: number; name: string; preview: React.ReactNode;
   } | null>(null);
   const [toast, setToast] = useState<string | null>(null);
 
@@ -173,6 +175,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
       const updated = { ...user, avatar: emoji };
       saveUser(updated);
       setUser(updated);
+      onAvatarChange?.(emoji);
     }
   }
 
@@ -189,16 +192,16 @@ export default function ShopView({ onBack }: ShopViewProps) {
   }
 
   // Avatar-kort
-  function avatarCard(a: typeof SHOP_AVATARS[number], i: number) {
-    const owned = shop.ownedAvatars.includes(i);
+  function avatarCard(a: typeof SHOP_AVATARS[number]) {
+    const owned = shop.ownedAvatars.includes(a.id);
     const equipped = currentEmoji === a.emoji;
     return (
       <ItemCard
-        key={`av-${i}`}
+        key={`av-${a.id}`}
         preview={<FramedAvatar emoji={a.emoji} size={56} frameId={shop.equippedFrame} effectId={shop.equippedEffect} />}
         name={a.name} rarity={a.rarity} price={a.price}
         owned={owned} equipped={equipped} affordable={balance >= a.price}
-        onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
+        onBuy={() => setConfirm({ kind: 'avatar', key: a.id, price: a.price, name: a.name,
           preview: <FramedAvatar emoji={a.emoji} size={64} frameId={shop.equippedFrame} effectId={shop.equippedEffect} /> })}
         onEquip={() => { updateUserAvatar(a.emoji); showToast(`${a.name} vald!`); }}
       />
@@ -208,9 +211,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
   // Avatarer grupperade
   function renderAvatarGroups() {
     return AVATAR_GROUP_ORDER.map(group => {
-      const items = SHOP_AVATARS
-        .map((a, i) => ({ a, i }))
-        .filter(({ a }) => a.group === group);
+      const items = SHOP_AVATARS.filter(a => a.group === group);
       if (items.length === 0) return null;
       return (
         <section key={group}>
@@ -218,7 +219,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
             {group}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {items.map(({ a, i }) => avatarCard(a, i))}
+            {items.map(a => avatarCard(a))}
           </div>
         </section>
       );
@@ -300,7 +301,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
 
   // "Mina köp"
   function renderOwned() {
-    const ownedAvatars = SHOP_AVATARS.map((a, i) => ({ a, i })).filter(({ i }) => shop.ownedAvatars.includes(i));
+    const ownedAvatars = SHOP_AVATARS.filter(a => shop.ownedAvatars.includes(a.id));
     const ownedFrames = SHOP_FRAMES.filter(f => shop.ownedFrames.includes(f.id));
     const ownedEffects = SHOP_EFFECTS.filter(e => shop.ownedEffects.includes(e.id));
     const ownedThemes = SHOP_THEMES.filter(t => shop.ownedThemes.includes(t.id));
@@ -325,7 +326,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
 
     return (
       <div className="space-y-6">
-        {section('Avatarer', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
+        {section('Avatarer', ownedAvatars.map(a => avatarCard(a)))}
         {section('Ramar', ownedFrames.map(frameCard))}
         {section('Effekter', ownedEffects.map(effectCard))}
         {section('Teman', ownedThemes.map(themeCard))}

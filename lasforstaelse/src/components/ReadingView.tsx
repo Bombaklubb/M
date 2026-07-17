@@ -18,6 +18,7 @@ const textSizeClasses: Record<TextSize, string> = {
 export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) => {
   const [textSize, setTextSize] = useState<TextSize>('medium');
 
+  const knownGenre = text.genre === 'berättelse' || text.genre === 'faktatext';
   const genreEmoji = text.genre === 'berättelse' ? '📖' : '📰';
   const genreLabel = text.genre === 'berättelse' ? 'Berättelse' : 'Faktatext';
 
@@ -29,11 +30,13 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
           <span className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-bold dark:bg-indigo-900 dark:text-indigo-200">
             {`Nivå ${text.grade}`}
           </span>
-          <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold dark:bg-purple-900 dark:text-purple-200">
-            {genreEmoji} {genreLabel}
-          </span>
+          {knownGenre && (
+            <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold dark:bg-purple-900 dark:text-purple-200">
+              {genreEmoji} {genreLabel}
+            </span>
+          )}
           <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm dark:bg-slate-700 dark:text-slate-300">
-            {text.meta?.wordCount || text.text.split(/\s+/).length} ord
+            {text.text.trim().split(/\s+/).length} ord
           </span>
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 dark:text-slate-100">

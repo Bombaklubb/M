@@ -48,6 +48,7 @@ function App() {
   const [lastResult, setLastResult] = useState<{
     pointsEarned: number;
     newBadges: Badge[];
+    mysteryReward?: string | null;
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
@@ -182,7 +183,8 @@ function App() {
     const correctCount = currentText.questions.reduce((count, q, index) => {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
-      questionResults.push({ questionType: q.type, correct: isCorrect });
+      // Vissa äldre texter saknar type på frågan – fall tillbaka på 'literal' så statistiken aldrig visar "undefined"
+      questionResults.push({ questionType: q.type || 'literal', correct: isCorrect });
       // Spåra anonym statistik (GDPR-säkrad) - skicka grade för att spåra stadiestatistik
       trackTaskComplete(isCorrect, q.type, currentText.grade);
       return count + (isCorrect ? 1 : 0);
@@ -210,13 +212,22 @@ function App() {
     // Check for chest milestones
     const gam = loadGamification();
     const prevPoints = user.totalPoints;
-    const newPoints = updatedUser.totalPoints;
     const prevTexts = user.completedTexts.length;
     const newTexts = updatedUser.completedTexts.length;
 
+    // Mystery box rullas före milstolpe-kollen så att ev. bonuspoäng
+    // räknas med och inte kan hoppa över en poängmilstolpe.
+    const mysteryReward = rollMysteryBox(gam.gamificationBadges, gam.chests);
+
+    let finalUser = updatedUser;
+    if (mysteryReward?.type === 'points' && mysteryReward.points) {
+      finalUser = { ...updatedUser, totalPoints: updatedUser.totalPoints + mysteryReward.points };
+      saveUser(finalUser);
+    }
+    const newPoints = finalUser.totalPoints;
+
     const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests);
     const textChests = chestsEarnedFromTexts(prevTexts, newTexts, gam.textMilestonesRewarded, gam.chests);
-    const mysteryReward = rollMysteryBox(gam.gamificationBadges, gam.chests);
 
     const newChests: Chest[] = [
       ...pointChests.map(c => c.chest),
@@ -233,10 +244,17 @@ function App() {
       });
     }
 
+    // Mystery box-märke delas ut här (poäng/kista hanteras ovan)
+    const newGamBadges =
+      mysteryReward?.type === 'badge' && mysteryReward.badgeId && !gam.gamificationBadges.includes(mysteryReward.badgeId)
+        ? [...gam.gamificationBadges, mysteryReward.badgeId]
+        : gam.gamificationBadges;
+
     // Update gamification data
     const updatedGam = {
       ...gam,
       chests: [...gam.chests, ...newChests],
+      gamificationBadges: newGamBadges,
       textsCompleted: newTexts,
       pointsMilestonesRewarded: [
         ...gam.pointsMilestonesRewarded,
@@ -249,8 +267,8 @@ function App() {
     };
     saveGamification(updatedGam);
 
-    setUser(updatedUser);
-    setLastResult({ pointsEarned, newBadges });
+    setUser(finalUser);
+    setLastResult({ pointsEarned, newBadges, mysteryReward: mysteryReward?.description ?? null });
     setAppState(AppState.RESULT);
     window.scrollTo(0, 0);
   };
@@ -420,6 +438,7 @@ function App() {
     return (
       <ShopView
         onBack={() => setShowShop(false)}
+        onAvatarChange={handleAvatarChange}
       />
     );
   }
@@ -504,6 +523,7 @@ function App() {
             answers={userAnswers}
             pointsEarned={lastResult.pointsEarned}
             newBadges={lastResult.newBadges}
+            mysteryReward={lastResult.mysteryReward}
             onRestart={handleRestart}
             onNextText={handleNextText}
             onNextTextLower={handleNextTextLower}

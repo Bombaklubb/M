@@ -81,10 +81,12 @@ export function loginUser(name: string, avatar?: string): User {
   const existingUser = findUserByName(name);
 
   if (existingUser) {
-    // Uppdatera senaste aktivitet och avatar
+    // Behåll elevens sparade avatar (kan vara köpt/utrustad i Affären) –
+    // inloggningsskärmen skickar alltid ett förvalt värde som annars
+    // skulle skriva över den vid varje inloggning.
     const updatedUser = {
       ...existingUser,
-      avatar: avatar || existingUser.avatar || AVATAR_OPTIONS[0],
+      avatar: existingUser.avatar || avatar || AVATAR_OPTIONS[0],
       lastActivity: new Date().toISOString(),
     };
     saveUser(updatedUser);
