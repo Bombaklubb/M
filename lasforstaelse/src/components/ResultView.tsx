@@ -12,6 +12,7 @@ interface ResultViewProps {
   answers: UserAnswers;
   pointsEarned: number;
   newBadges: Badge[];
+  mysteryReward?: string | null;
   onRestart: () => void;
   onNextText: () => void;
   onNextTextLower: () => void;
@@ -58,6 +59,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   answers,
   pointsEarned,
   newBadges,
+  mysteryReward,
   onRestart: _onRestart,
   onNextText,
   onNextTextLower,
@@ -226,6 +228,34 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   </span>
                 </div>
               </motion.div>
+
+              {/* Mystery box-belöning */}
+              {mysteryReward && (
+                <motion.div
+                  className="bg-gradient-to-br from-fuchsia-50 to-purple-100 dark:from-fuchsia-900/30 dark:to-purple-900/30 border-2 border-fuchsia-300 dark:border-fuchsia-700 rounded-2xl p-5 mb-6"
+                  initial={{ opacity: 0, scale: 0.8, rotate: -3 }}
+                  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                  transition={{ delay: 1.0, type: 'spring', stiffness: 200 }}
+                >
+                  <div className="flex items-center gap-3 justify-center">
+                    <motion.span
+                      className="text-4xl"
+                      animate={{ rotate: [0, -12, 12, 0], scale: [1, 1.25, 1] }}
+                      transition={{ duration: 0.6, delay: 1.3 }}
+                    >
+                      🎁
+                    </motion.span>
+                    <div className="text-left">
+                      <div className="text-xs font-black uppercase tracking-wide text-fuchsia-500 dark:text-fuchsia-300">
+                        Mystery box!
+                      </div>
+                      <div className="text-lg font-bold text-fuchsia-800 dark:text-fuchsia-200">
+                        {mysteryReward}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
 
               {/* New badges */}
               <AnimatePresence>
