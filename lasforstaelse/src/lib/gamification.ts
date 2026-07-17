@@ -1,4 +1,5 @@
 import type { ChestType, Chest, MysteryBoxReward, GamificationData } from '../types';
+import { loadUser } from '../services/userService';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -401,11 +402,22 @@ export function getBadge(id: string) {
 
 // ─── Storage functions ────────────────────────────────────────────────────────
 
-const GAMIFICATION_KEY = 'lasjakten_gamification';
+const GAMIFICATION_KEY_PREFIX = 'lasjakten_gamification';
+
+// Elever delar samma webbläsare på skolans Chromebooks – varje elevs kistor och
+// milstolpar måste därför sparas under en nyckel kopplad till inloggat namn.
+function currentUserKey(): string {
+  const user = loadUser();
+  return user ? user.name.trim().toLowerCase() : 'anon';
+}
+
+function gamificationStorageKey(): string {
+  return `${GAMIFICATION_KEY_PREFIX}_${currentUserKey()}`;
+}
 
 export function loadGamification(): GamificationData {
   try {
-    const raw = localStorage.getItem(GAMIFICATION_KEY);
+    const raw = localStorage.getItem(gamificationStorageKey());
     if (!raw) return defaultGamificationData();
     return JSON.parse(raw) as GamificationData;
   } catch {
@@ -414,5 +426,5 @@ export function loadGamification(): GamificationData {
 }
 
 export function saveGamification(data: GamificationData): void {
-  localStorage.setItem(GAMIFICATION_KEY, JSON.stringify(data));
+  localStorage.setItem(gamificationStorageKey(), JSON.stringify(data));
 }
