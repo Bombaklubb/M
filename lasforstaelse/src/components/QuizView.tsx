@@ -113,8 +113,8 @@ export const QuizView: React.FC<QuizViewProps> = ({
   // Split text into paragraphs
   const paragraphs = text.text.split('\n').filter((p) => p.trim().length > 0);
 
-  // Get word count from meta or calculate it
-  const wordCount = text.meta?.wordCount || text.text.split(/\s+/).length;
+  // Räkna ordantal live – meta.wordCount kan vara felaktigt inmatat i biblioteket
+  const wordCount = text.text.trim().split(/\s+/).length;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800">
@@ -130,9 +130,11 @@ export const QuizView: React.FC<QuizViewProps> = ({
             <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300">
               {`Nivå ${text.grade}`}
             </span>
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">
-              {text.genre === 'berättelse' ? '📖 Berättelse' : '📰 Faktatext'}
-            </span>
+            {text.genre === 'berättelse' || text.genre === 'faktatext' ? (
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">
+                {text.genre === 'berättelse' ? '📖 Berättelse' : '📰 Faktatext'}
+              </span>
+            ) : null}
             <span className="text-xs text-slate-500 dark:text-slate-400">{wordCount} ord</span>
           </div>
         </div>
