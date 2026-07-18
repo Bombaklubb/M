@@ -57,7 +57,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Lätt',
     badge: 'source-critic',
     badgeName: 'Källkritikern',
-    gradeRange: 'Åk 4–9',
   },
   {
     id: 10,
@@ -71,7 +70,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Lätt',
     badge: 'lateral-reader',
     badgeName: 'Sidledsläsaren',
-    gradeRange: 'Åk 5–9',
   },
   {
     id: 3,
@@ -85,7 +83,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Medel',
     badge: 'source-master',
     badgeName: 'Källmästaren',
-    gradeRange: 'Åk 5–9',
   },
 
   // ── Tema 2: Sociala medier ──
@@ -101,7 +98,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Lätt',
     badge: 'ad-detector',
     badgeName: 'Reklamspanaren',
-    gradeRange: 'Åk 5–9',
   },
   {
     id: 11,
@@ -115,7 +111,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Medel',
     badge: 'bubble-breaker',
     badgeName: 'Bubbelbrytaren',
-    gradeRange: 'Åk 6–9',
   },
   {
     id: 12,
@@ -129,7 +124,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Lätt',
     badge: 'scam-detector',
     badgeName: 'Bluffdetektiven',
-    gradeRange: 'Åk 4–9',
   },
   {
     id: 13,
@@ -143,7 +137,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Medel',
     badge: 'troll-hunter',
     badgeName: 'Trolljägaren',
-    gradeRange: 'Åk 7–9',
   },
 
   // ── Tema 3: AI ──
@@ -159,7 +152,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Medel',
     badge: 'ai-scholar',
     badgeName: 'AI-Eleven',
-    gradeRange: 'Åk 6–9',
   },
   {
     id: 1,
@@ -173,7 +165,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Lätt',
     badge: 'ai-detective',
     badgeName: 'AI-Detektiven',
-    gradeRange: 'Åk 4–9',
   },
   {
     id: 5,
@@ -187,7 +178,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Medel',
     badge: 'truth-seeker',
     badgeName: 'Sanningssökaren',
-    gradeRange: 'Åk 5–9',
   },
   {
     id: 4,
@@ -201,7 +191,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Svår',
     badge: 'image-detective',
     badgeName: 'Bilddetektiven',
-    gradeRange: 'Åk 6–9',
   },
 
   // ── Tema 4: Snabbtänk & fakta ──
@@ -217,7 +206,6 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Lätt',
     badge: 'speed-judge',
     badgeName: 'Snabbdomaren',
-    gradeRange: 'Åk 4–9',
   },
   {
     id: 2,
@@ -231,6 +219,5 @@ export const MODULES: ModuleMeta[] = [
     difficulty: 'Medel',
     badge: 'fact-checker',
     badgeName: 'Faktakollaren',
-    gradeRange: 'Åk 5–9',
   },
 ];

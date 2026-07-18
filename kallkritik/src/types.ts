@@ -39,7 +39,6 @@ export interface ModuleMeta {
   difficulty: 'Lätt' | 'Medel' | 'Svår';
   badge: string;
   badgeName: string;
-  gradeRange: string;
 }
 
 // Module 1: AI eller människa?
