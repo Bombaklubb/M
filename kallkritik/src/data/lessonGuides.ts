@@ -98,7 +98,7 @@ export const LESSON_GUIDES: Record<number, LessonGuide> = {
       'Tror ni att alla konton ni möter på nätet är riktiga människor? Hur många är inte det, tror ni?',
       'Vad är ett "troll" på internet – och vad vill det?',
     ],
-    during: 'Eleverna spelar enskilt. Modulen passar åk 7–9 och kan med fördel kopplas till SO-undervisning om demokrati och påverkan.',
+    during: 'Eleverna spelar enskilt. Modulen kan med fördel kopplas till SO-undervisning om demokrati och påverkan.',
     pairMode: 'Diskutera varje scenario innan ni svarar: vilka tecken ser ni? Kom överens om ett gemensamt svar.',
     after: [
       'Varför är "mata inte trollet" så svårt att följa i praktiken?',

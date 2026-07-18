@@ -135,16 +135,11 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, i
             </div>
           </div>
 
-          {/* Module number + grade range */}
+          {/* Module number */}
           <div className="flex items-center gap-2 mb-0.5">
             <div className={`text-xs font-extrabold ${accentText} tracking-wide`} style={{ fontFamily: "'Baloo 2', sans-serif" }}>
               MODUL {module.displayNumber}
             </div>
-            {module.gradeRange && (
-              <span className="text-[10px] font-bold text-gray-400 bg-gray-100 border border-gray-200 rounded-full px-2 py-0.5">
-                {module.gradeRange}
-              </span>
-            )}
           </div>
 
           {/* Title */}
