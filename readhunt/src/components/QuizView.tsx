@@ -484,10 +484,10 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                     </motion.button>
                   ))}
                 </div>
-                {/* Type legend */}
+                {/* Type legend – counts only; question order can mix the two types */}
                 <div className="flex gap-4 mt-3 text-xs text-slate-500 dark:text-slate-400">
-                  <span>🔍 Q1–{literalQuestions.length}: On the Lines</span>
-                  <span>🧠 Q{literalQuestions.length + 1}–{totalQuestions}: Between the Lines</span>
+                  <span>🔍 {literalQuestions.length} On the Lines</span>
+                  <span>🧠 {inferenceQuestions.length} Between the Lines</span>
                 </div>
               </CardContent>
             </Card>

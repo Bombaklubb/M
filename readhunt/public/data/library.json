@@ -480,10 +480,11 @@
       }
     ],
     "meta": {
-      "wordCount": 50,
+      "wordCount": 51,
       "fingerprint": "ak1-tema-001",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop"
   },
@@ -563,10 +564,11 @@
       }
     ],
     "meta": {
-      "wordCount": 48,
+      "wordCount": 51,
       "fingerprint": "ak1-tema-002",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=380&fit=crop"
   },
@@ -646,10 +648,11 @@
       }
     ],
     "meta": {
-      "wordCount": 50,
+      "wordCount": 52,
       "fingerprint": "ak1-tema-003",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop"
   },
@@ -729,10 +732,11 @@
       }
     ],
     "meta": {
-      "wordCount": 49,
+      "wordCount": 52,
       "fingerprint": "ak1-tema-004",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop"
   },
@@ -812,10 +816,11 @@
       }
     ],
     "meta": {
-      "wordCount": 50,
+      "wordCount": 52,
       "fingerprint": "ak1-tema-005",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop"
   },
@@ -896,7 +901,7 @@
       }
     ],
     "meta": {
-      "wordCount": 28,
+      "wordCount": 29,
       "readingTime": 1
     }
   },
@@ -1139,7 +1144,7 @@
       }
     ],
     "meta": {
-      "wordCount": 26,
+      "wordCount": 27,
       "readingTime": 1
     }
   },
@@ -1220,7 +1225,7 @@
       }
     ],
     "meta": {
-      "wordCount": 26,
+      "wordCount": 27,
       "readingTime": 1
     }
   },
@@ -1279,7 +1284,7 @@
       }
     ],
     "meta": {
-      "wordCount": 125,
+      "wordCount": 114,
       "readingTime": 1
     }
   },
@@ -1359,10 +1364,11 @@
       }
     ],
     "meta": {
-      "wordCount": 84,
+      "wordCount": 86,
       "fingerprint": "ak2-tema-001",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=380&fit=crop"
   },
@@ -1442,10 +1448,11 @@
       }
     ],
     "meta": {
-      "wordCount": 80,
+      "wordCount": 84,
       "fingerprint": "ak2-tema-002",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop"
   },
@@ -1525,10 +1532,11 @@
       }
     ],
     "meta": {
-      "wordCount": 81,
+      "wordCount": 89,
       "fingerprint": "ak2-tema-004",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop"
   },
@@ -1608,10 +1616,11 @@
       }
     ],
     "meta": {
-      "wordCount": 80,
+      "wordCount": 88,
       "fingerprint": "ak2-tema-005",
       "generatedAt": "2026-05-20",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop"
   },
@@ -1854,7 +1863,7 @@
       }
     ],
     "meta": {
-      "wordCount": 42,
+      "wordCount": 41,
       "readingTime": 1
     }
   },
@@ -1935,7 +1944,7 @@
       }
     ],
     "meta": {
-      "wordCount": 44,
+      "wordCount": 42,
       "readingTime": 1
     }
   },
@@ -2016,7 +2025,7 @@
       }
     ],
     "meta": {
-      "wordCount": 42,
+      "wordCount": 41,
       "readingTime": 1
     }
   },
@@ -2097,7 +2106,7 @@
       }
     ],
     "meta": {
-      "wordCount": 32,
+      "wordCount": 33,
       "readingTime": 1
     }
   },
@@ -2340,7 +2349,7 @@
       }
     ],
     "meta": {
-      "wordCount": 30,
+      "wordCount": 29,
       "readingTime": 1
     }
   },
@@ -2480,7 +2489,7 @@
       }
     ],
     "meta": {
-      "wordCount": 170,
+      "wordCount": 162,
       "readingTime": 1
     }
   },
@@ -2539,7 +2548,7 @@
       }
     ],
     "meta": {
-      "wordCount": 165,
+      "wordCount": 156,
       "readingTime": 1
     }
   },
@@ -2619,10 +2628,11 @@
       }
     ],
     "meta": {
-      "wordCount": 157,
+      "wordCount": 146,
       "fingerprint": "ak3-tema-001",
       "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
   },
@@ -2702,10 +2712,11 @@
       }
     ],
     "meta": {
-      "wordCount": 154,
+      "wordCount": 148,
       "fingerprint": "ak3-tema-002",
       "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
   },
@@ -2785,10 +2796,11 @@
       }
     ],
     "meta": {
-      "wordCount": 153,
+      "wordCount": 150,
       "fingerprint": "ak3-tema-003",
       "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80"
   },
@@ -2868,10 +2880,11 @@
       }
     ],
     "meta": {
-      "wordCount": 154,
+      "wordCount": 147,
       "fingerprint": "ak3-tema-004",
       "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80"
   },
@@ -2951,10 +2964,11 @@
       }
     ],
     "meta": {
-      "wordCount": 152,
+      "wordCount": 146,
       "fingerprint": "ak3-tema-005",
       "generatedAt": "2026-05-19",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80"
   },
@@ -3034,10 +3048,11 @@
       }
     ],
     "meta": {
-      "wordCount": 162,
+      "wordCount": 139,
       "fingerprint": "demo-rh-1",
       "generatedAt": "2026-05-19",
-      "model": "demo"
+      "model": "demo",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=80"
   },
@@ -3361,7 +3376,7 @@
       }
     ],
     "meta": {
-      "wordCount": 71,
+      "wordCount": 72,
       "readingTime": 1
     }
   },
@@ -3441,8 +3456,8 @@
       }
     ],
     "meta": {
-      "wordCount": 50,
-      "readingTime": 2
+      "wordCount": 49,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=700&h=420&fit=crop"
   },
@@ -3522,8 +3537,8 @@
       }
     ],
     "meta": {
-      "wordCount": 47,
-      "readingTime": 2
+      "wordCount": 48,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=700&h=420&fit=crop"
   },
@@ -3603,8 +3618,8 @@
       }
     ],
     "meta": {
-      "wordCount": 46,
-      "readingTime": 2
+      "wordCount": 47,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
   },
@@ -3684,8 +3699,8 @@
       }
     ],
     "meta": {
-      "wordCount": 49,
-      "readingTime": 2
+      "wordCount": 54,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&h=420&fit=crop"
   },
@@ -3765,8 +3780,8 @@
       }
     ],
     "meta": {
-      "wordCount": 49,
-      "readingTime": 2
+      "wordCount": 52,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&h=420&fit=crop"
   },
@@ -3825,8 +3840,8 @@
       }
     ],
     "meta": {
-      "wordCount": 195,
-      "readingTime": 2
+      "wordCount": 184,
+      "readingTime": 1
     }
   },
   {
@@ -3905,10 +3920,11 @@
       }
     ],
     "meta": {
-      "wordCount": 208,
+      "wordCount": 191,
       "fingerprint": "ak4-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&q=80"
   },
@@ -3988,10 +4004,11 @@
       }
     ],
     "meta": {
-      "wordCount": 209,
+      "wordCount": 198,
       "fingerprint": "ak4-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80"
   },
@@ -4071,10 +4088,11 @@
       }
     ],
     "meta": {
-      "wordCount": 201,
+      "wordCount": 196,
       "fingerprint": "ak4-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=800&q=80"
   },
@@ -4154,10 +4172,11 @@
       }
     ],
     "meta": {
-      "wordCount": 202,
+      "wordCount": 204,
       "fingerprint": "ak4-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80"
   },
@@ -4237,10 +4256,11 @@
       }
     ],
     "meta": {
-      "wordCount": 203,
+      "wordCount": 204,
       "fingerprint": "ak4-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
   },
@@ -4320,8 +4340,8 @@
       }
     ],
     "meta": {
-      "wordCount": 197,
-      "readingTime": 4
+      "wordCount": 215,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&h=420&fit=crop"
   },
@@ -4401,8 +4421,8 @@
       }
     ],
     "meta": {
-      "wordCount": 189,
-      "readingTime": 4
+      "wordCount": 197,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&h=420&fit=crop"
   },
@@ -4482,8 +4502,8 @@
       }
     ],
     "meta": {
-      "wordCount": 195,
-      "readingTime": 4
+      "wordCount": 200,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=700&h=420&fit=crop"
   },
@@ -4563,8 +4583,8 @@
       }
     ],
     "meta": {
-      "wordCount": 185,
-      "readingTime": 4
+      "wordCount": 186,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=700&h=420&fit=crop"
   },
@@ -4644,8 +4664,8 @@
       }
     ],
     "meta": {
-      "wordCount": 185,
-      "readingTime": 4
+      "wordCount": 184,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=700&h=420&fit=crop"
   },
@@ -4807,7 +4827,7 @@
       }
     ],
     "meta": {
-      "wordCount": 165,
+      "wordCount": 164,
       "readingTime": 1
     }
   },
@@ -4888,7 +4908,7 @@
       }
     ],
     "meta": {
-      "wordCount": 155,
+      "wordCount": 150,
       "readingTime": 1
     }
   },
@@ -4969,7 +4989,7 @@
       }
     ],
     "meta": {
-      "wordCount": 154,
+      "wordCount": 142,
       "readingTime": 1
     }
   },
@@ -5028,7 +5048,7 @@
       }
     ],
     "meta": {
-      "wordCount": 245,
+      "wordCount": 251,
       "readingTime": 2
     }
   },
@@ -5087,8 +5107,8 @@
       }
     ],
     "meta": {
-      "wordCount": 220,
-      "readingTime": 2
+      "wordCount": 216,
+      "readingTime": 1
     }
   },
   {
@@ -5168,8 +5188,8 @@
       }
     ],
     "meta": {
-      "wordCount": 307,
-      "readingTime": 2
+      "wordCount": 203,
+      "readingTime": 1
     }
   },
   {
@@ -5249,8 +5269,8 @@
       }
     ],
     "meta": {
-      "wordCount": 306,
-      "readingTime": 2
+      "wordCount": 221,
+      "readingTime": 1
     }
   },
   {
@@ -5330,8 +5350,8 @@
       }
     ],
     "meta": {
-      "wordCount": 301,
-      "readingTime": 2
+      "wordCount": 203,
+      "readingTime": 1
     }
   },
   {
@@ -5411,8 +5431,8 @@
       }
     ],
     "meta": {
-      "wordCount": 301,
-      "readingTime": 2
+      "wordCount": 206,
+      "readingTime": 1
     }
   },
   {
@@ -5491,10 +5511,11 @@
       }
     ],
     "meta": {
-      "wordCount": 312,
+      "wordCount": 250,
       "fingerprint": "ak5-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80"
   },
@@ -5574,10 +5595,11 @@
       }
     ],
     "meta": {
-      "wordCount": 316,
+      "wordCount": 262,
       "fingerprint": "ak5-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&q=80"
   },
@@ -5657,10 +5679,11 @@
       }
     ],
     "meta": {
-      "wordCount": 309,
+      "wordCount": 291,
       "fingerprint": "ak5-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80"
   },
@@ -5740,10 +5763,11 @@
       }
     ],
     "meta": {
-      "wordCount": 307,
+      "wordCount": 277,
       "fingerprint": "ak5-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80"
   },
@@ -5823,10 +5847,11 @@
       }
     ],
     "meta": {
-      "wordCount": 304,
+      "wordCount": 280,
       "fingerprint": "ak5-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800&q=80"
   },
@@ -5906,8 +5931,8 @@
       }
     ],
     "meta": {
-      "wordCount": 306,
-      "readingTime": 6
+      "wordCount": 267,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=700&h=420&fit=crop"
   },
@@ -5987,8 +6012,8 @@
       }
     ],
     "meta": {
-      "wordCount": 311,
-      "readingTime": 6
+      "wordCount": 266,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1532153955177-f59af40d6472?w=700&h=420&fit=crop"
   },
@@ -6068,8 +6093,8 @@
       }
     ],
     "meta": {
-      "wordCount": 305,
-      "readingTime": 6
+      "wordCount": 244,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&h=420&fit=crop"
   },
@@ -6149,8 +6174,8 @@
       }
     ],
     "meta": {
-      "wordCount": 302,
-      "readingTime": 6
+      "wordCount": 238,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&h=420&fit=crop"
   },
@@ -6230,8 +6255,8 @@
       }
     ],
     "meta": {
-      "wordCount": 303,
-      "readingTime": 6
+      "wordCount": 224,
+      "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=700&h=420&fit=crop"
   },
@@ -6290,8 +6315,8 @@
       }
     ],
     "meta": {
-      "wordCount": 215,
-      "readingTime": 2
+      "wordCount": 211,
+      "readingTime": 1
     }
   },
   {
@@ -6349,8 +6374,8 @@
       }
     ],
     "meta": {
-      "wordCount": 225,
-      "readingTime": 2
+      "wordCount": 223,
+      "readingTime": 1
     }
   },
   {
@@ -6408,8 +6433,8 @@
       }
     ],
     "meta": {
-      "wordCount": 220,
-      "readingTime": 2
+      "wordCount": 214,
+      "readingTime": 1
     }
   },
   {
@@ -6467,7 +6492,7 @@
       }
     ],
     "meta": {
-      "wordCount": 240,
+      "wordCount": 241,
       "readingTime": 2
     }
   },
@@ -6547,10 +6572,11 @@
       }
     ],
     "meta": {
-      "wordCount": 306,
+      "wordCount": 284,
       "fingerprint": "ak6-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
   },
@@ -6630,10 +6656,11 @@
       }
     ],
     "meta": {
-      "wordCount": 304,
+      "wordCount": 286,
       "fingerprint": "ak6-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80"
   },
@@ -6713,10 +6740,11 @@
       }
     ],
     "meta": {
-      "wordCount": 303,
+      "wordCount": 288,
       "fingerprint": "ak6-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=800&q=80"
   },
@@ -6796,10 +6824,11 @@
       }
     ],
     "meta": {
-      "wordCount": 300,
+      "wordCount": 260,
       "fingerprint": "ak6-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"
   },
@@ -6879,10 +6908,11 @@
       }
     ],
     "meta": {
-      "wordCount": 301,
+      "wordCount": 279,
       "fingerprint": "ak6-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=800&q=80"
   },
@@ -6962,8 +6992,8 @@
       }
     ],
     "meta": {
-      "wordCount": 400,
-      "readingTime": 7
+      "wordCount": 261,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=700&h=420&fit=crop"
   },
@@ -7043,8 +7073,8 @@
       }
     ],
     "meta": {
-      "wordCount": 404,
-      "readingTime": 7
+      "wordCount": 296,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=700&h=420&fit=crop"
   },
@@ -7124,8 +7154,8 @@
       }
     ],
     "meta": {
-      "wordCount": 402,
-      "readingTime": 7
+      "wordCount": 286,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&h=420&fit=crop"
   },
@@ -7205,8 +7235,8 @@
       }
     ],
     "meta": {
-      "wordCount": 404,
-      "readingTime": 7
+      "wordCount": 267,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=700&h=420&fit=crop"
   },
@@ -7286,8 +7316,8 @@
       }
     ],
     "meta": {
-      "wordCount": 405,
-      "readingTime": 7
+      "wordCount": 261,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=700&h=420&fit=crop"
   },
@@ -7368,8 +7398,8 @@
       }
     ],
     "meta": {
-      "wordCount": 404,
-      "readingTime": 3
+      "wordCount": 275,
+      "readingTime": 2
     }
   },
   {
@@ -7449,8 +7479,8 @@
       }
     ],
     "meta": {
-      "wordCount": 405,
-      "readingTime": 3
+      "wordCount": 295,
+      "readingTime": 2
     }
   },
   {
@@ -7530,8 +7560,8 @@
       }
     ],
     "meta": {
-      "wordCount": 402,
-      "readingTime": 3
+      "wordCount": 293,
+      "readingTime": 2
     }
   },
   {
@@ -7611,8 +7641,8 @@
       }
     ],
     "meta": {
-      "wordCount": 403,
-      "readingTime": 3
+      "wordCount": 287,
+      "readingTime": 2
     }
   },
   {
@@ -7692,8 +7722,8 @@
       }
     ],
     "meta": {
-      "wordCount": 401,
-      "readingTime": 3
+      "wordCount": 279,
+      "readingTime": 2
     }
   },
   {
@@ -7710,48 +7740,48 @@
         "q": "Where and when was breaking born?",
         "options": [
           "In Paris in 2024",
-          "In the Bronx, New York, in the early 1970s",
           "In Japan in the 1990s",
+          "In the Bronx, New York, in the early 1970s",
           "In Los Angeles in the 1980s"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "What happened with breaking in 2024?",
         "options": [
-          "It was banned in schools",
-          "It became an Olympic sport",
           "It was invented",
-          "It stopped being popular"
+          "It was banned in schools",
+          "It stopped being popular",
+          "It became an Olympic sport"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What did dance battles offer young people in poor neighbourhoods?",
         "options": [
-          "A way to earn money quickly",
-          "A way to compete and earn respect without violence",
           "A path to university",
-          "Free music equipment"
+          "Free music equipment",
+          "A way to earn money quickly",
+          "A way to compete and earn respect without violence"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "Why did some in the breaking community not celebrate the Olympic step?",
         "options": [
-          "They thought the medals were too small",
-          "They feared strict rules would tame a culture built on personal style",
           "They wanted breaking to stay secret",
-          "They disliked travelling to Paris"
+          "They feared strict rules would tame a culture built on personal style",
+          "They disliked travelling to Paris",
+          "They thought the medals were too small"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 260,
+      "wordCount": 254,
       "readingTime": 2
     }
   },
@@ -7810,7 +7840,7 @@
       }
     ],
     "meta": {
-      "wordCount": 230,
+      "wordCount": 228,
       "readingTime": 2
     }
   },
@@ -7869,7 +7899,7 @@
       }
     ],
     "meta": {
-      "wordCount": 245,
+      "wordCount": 247,
       "readingTime": 2
     }
   },
@@ -7928,7 +7958,7 @@
       }
     ],
     "meta": {
-      "wordCount": 235,
+      "wordCount": 234,
       "readingTime": 2
     }
   },
@@ -8009,8 +8039,8 @@
       }
     ],
     "meta": {
-      "wordCount": 510,
-      "readingTime": 3
+      "wordCount": 279,
+      "readingTime": 2
     }
   },
   {
@@ -8090,8 +8120,8 @@
       }
     ],
     "meta": {
-      "wordCount": 517,
-      "readingTime": 3
+      "wordCount": 301,
+      "readingTime": 2
     }
   },
   {
@@ -8171,8 +8201,8 @@
       }
     ],
     "meta": {
-      "wordCount": 506,
-      "readingTime": 3
+      "wordCount": 284,
+      "readingTime": 2
     }
   },
   {
@@ -8252,8 +8282,8 @@
       }
     ],
     "meta": {
-      "wordCount": 511,
-      "readingTime": 3
+      "wordCount": 298,
+      "readingTime": 2
     }
   },
   {
@@ -8333,8 +8363,8 @@
       }
     ],
     "meta": {
-      "wordCount": 512,
-      "readingTime": 3
+      "wordCount": 301,
+      "readingTime": 2
     }
   },
   {
@@ -8413,10 +8443,11 @@
       }
     ],
     "meta": {
-      "wordCount": 415,
+      "wordCount": 320,
       "fingerprint": "ak7-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800&q=80"
   },
@@ -8496,10 +8527,11 @@
       }
     ],
     "meta": {
-      "wordCount": 413,
+      "wordCount": 325,
       "fingerprint": "ak7-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
   },
@@ -8579,10 +8611,11 @@
       }
     ],
     "meta": {
-      "wordCount": 404,
+      "wordCount": 331,
       "fingerprint": "ak7-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
   },
@@ -8662,10 +8695,11 @@
       }
     ],
     "meta": {
-      "wordCount": 407,
+      "wordCount": 332,
       "fingerprint": "ak7-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80"
   },
@@ -8745,10 +8779,11 @@
       }
     ],
     "meta": {
-      "wordCount": 401,
+      "wordCount": 307,
       "fingerprint": "ak7-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
   },
@@ -8828,8 +8863,8 @@
       }
     ],
     "meta": {
-      "wordCount": 523,
-      "readingTime": 9
+      "wordCount": 460,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=700&h=420&fit=crop"
   },
@@ -8909,8 +8944,8 @@
       }
     ],
     "meta": {
-      "wordCount": 518,
-      "readingTime": 9
+      "wordCount": 491,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&h=420&fit=crop"
   },
@@ -8990,8 +9025,8 @@
       }
     ],
     "meta": {
-      "wordCount": 510,
-      "readingTime": 9
+      "wordCount": 470,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=700&h=420&fit=crop"
   },
@@ -9071,8 +9106,8 @@
       }
     ],
     "meta": {
-      "wordCount": 517,
-      "readingTime": 9
+      "wordCount": 457,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=700&h=420&fit=crop"
   },
@@ -9152,8 +9187,8 @@
       }
     ],
     "meta": {
-      "wordCount": 514,
-      "readingTime": 9
+      "wordCount": 455,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
   },
@@ -9212,7 +9247,7 @@
       }
     ],
     "meta": {
-      "wordCount": 250,
+      "wordCount": 249,
       "readingTime": 2
     }
   },
@@ -9271,7 +9306,7 @@
       }
     ],
     "meta": {
-      "wordCount": 245,
+      "wordCount": 243,
       "readingTime": 2
     }
   },
@@ -9288,49 +9323,49 @@
         "type": "literal",
         "q": "What did Noah find in the attic?",
         "options": [
-          "A photo album",
-          "A locked suitcase full of letters",
           "A diary from 1943",
-          "An old radio"
+          "A photo album",
+          "An old radio",
+          "A locked suitcase full of letters"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "When was the last letter from Ruth dated?",
         "options": [
+          "1989",
           "1943",
           "March 1944",
-          "1945",
-          "1989"
+          "1945"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What does 'fear that hid between ordinary sentences about the weather' suggest about Ruth's letters?",
         "options": [
-          "She only wrote about the weather",
-          "She could not write openly about the danger around her",
           "She was a meteorologist",
-          "She found the war boring"
+          "She only wrote about the weather",
+          "She found the war boring",
+          "She could not write openly about the danger around her"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "Why does Noah start searching for Ruth's grandchildren at the end?",
         "options": [
           "He wants to sell them the letters",
-          "He wants to reunite the families and finish what history interrupted",
+          "He wants to return the suitcase",
           "He needs help moving boxes",
-          "He wants to return the suitcase"
+          "He wants to reunite the families and finish what history interrupted"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 250,
+      "wordCount": 247,
       "readingTime": 2
     }
   },
@@ -9389,7 +9424,7 @@
       }
     ],
     "meta": {
-      "wordCount": 270,
+      "wordCount": 267,
       "readingTime": 2
     }
   },
@@ -9469,10 +9504,11 @@
       }
     ],
     "meta": {
-      "wordCount": 461,
+      "wordCount": 341,
       "fingerprint": "ak8-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
   },
@@ -9552,10 +9588,11 @@
       }
     ],
     "meta": {
-      "wordCount": 457,
+      "wordCount": 346,
       "fingerprint": "ak8-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"
   },
@@ -9571,31 +9608,31 @@
         "type": "literal",
         "q": "Why do scientists consider biodiversity important?",
         "options": [
-          "Ecosystems depend on complex relationships between many species",
-          "It prevents all natural disasters completely",
           "It guarantees equal wealth in all countries",
+          "It prevents all natural disasters completely",
+          "Ecosystems depend on complex relationships between many species",
           "It eliminates the effects of climate change"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "What is one cause of biodiversity loss mentioned in the text?",
         "options": [
-          "Deforestation and habitat destruction",
-          "Increased scientific research",
           "The growth of renewable energy",
-          "International conservation agreements"
+          "Deforestation and habitat destruction",
+          "International conservation agreements",
+          "Increased scientific research"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "How can declining bee populations affect humans?",
         "options": [
           "It could influence global food production",
-          "It would increase ocean temperatures immediately",
           "It would stop all plant growth permanently",
+          "It would increase ocean temperatures immediately",
           "It could eliminate rainfall in farming regions"
         ],
         "correct": 0
@@ -9605,9 +9642,9 @@
         "q": "Why are rainforests and coral reefs highlighted as examples in the text?",
         "options": [
           "They show how many species can depend on each other in rich ecosystems",
+          "They have no connection to human medicine",
           "They exist only in Europe and North America",
-          "They cannot be damaged by human activity",
-          "They have no connection to human medicine"
+          "They cannot be damaged by human activity"
         ],
         "correct": 0
       },
@@ -9615,30 +9652,31 @@
         "type": "inference",
         "q": "Why can conservation efforts become politically difficult?",
         "options": [
-          "Protecting habitats may limit economic activities and employment in some regions",
-          "Scientists disagree about whether species exist",
           "Governments refuse to study environmental issues",
-          "Most industries oppose all environmental laws"
+          "Most industries oppose all environmental laws",
+          "Scientists disagree about whether species exist",
+          "Protecting habitats may limit economic activities and employment in some regions"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What is the main message of the text?",
         "options": [
-          "Protecting biodiversity is essential for both nature and the long-term survival of human societies",
-          "Economic growth is impossible without destroying ecosystems",
           "Only endangered animals should receive protection",
-          "Climate change has no connection to biodiversity loss"
+          "Climate change has no connection to biodiversity loss",
+          "Economic growth is impossible without destroying ecosystems",
+          "Protecting biodiversity is essential for both nature and the long-term survival of human societies"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 452,
+      "wordCount": 337,
       "fingerprint": "ak8-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
   },
@@ -9718,10 +9756,11 @@
       }
     ],
     "meta": {
-      "wordCount": 438,
+      "wordCount": 322,
       "fingerprint": "ak8-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80"
   },
@@ -9801,10 +9840,11 @@
       }
     ],
     "meta": {
-      "wordCount": 443,
+      "wordCount": 335,
       "fingerprint": "ak8-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
   },
@@ -9863,8 +9903,8 @@
       }
     ],
     "meta": {
-      "wordCount": 224,
-      "readingTime": 2
+      "wordCount": 208,
+      "readingTime": 1
     }
   },
   {
@@ -9922,7 +9962,7 @@
       }
     ],
     "meta": {
-      "wordCount": 212,
+      "wordCount": 238,
       "readingTime": 2
     }
   },
@@ -9981,7 +10021,7 @@
       }
     ],
     "meta": {
-      "wordCount": 215,
+      "wordCount": 244,
       "readingTime": 2
     }
   },
@@ -10040,7 +10080,7 @@
       }
     ],
     "meta": {
-      "wordCount": 226,
+      "wordCount": 235,
       "readingTime": 2
     }
   },
@@ -10099,7 +10139,7 @@
       }
     ],
     "meta": {
-      "wordCount": 220,
+      "wordCount": 238,
       "readingTime": 2
     }
   },
@@ -10179,7 +10219,7 @@
       }
     ],
     "meta": {
-      "wordCount": 523,
+      "wordCount": 460,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=700&h=420&fit=crop"
@@ -10260,7 +10300,7 @@
       }
     ],
     "meta": {
-      "wordCount": 518,
+      "wordCount": 491,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&h=420&fit=crop"
@@ -10341,7 +10381,7 @@
       }
     ],
     "meta": {
-      "wordCount": 510,
+      "wordCount": 470,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=700&h=420&fit=crop"
@@ -10422,7 +10462,7 @@
       }
     ],
     "meta": {
-      "wordCount": 517,
+      "wordCount": 457,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=700&h=420&fit=crop"
@@ -10503,7 +10543,7 @@
       }
     ],
     "meta": {
-      "wordCount": 514,
+      "wordCount": 455,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
@@ -10585,8 +10625,8 @@
       }
     ],
     "meta": {
-      "wordCount": 340,
-      "readingTime": 3
+      "wordCount": 342,
+      "readingTime": 2
     }
   },
   {
@@ -10666,8 +10706,8 @@
       }
     ],
     "meta": {
-      "wordCount": 360,
-      "readingTime": 3
+      "wordCount": 366,
+      "readingTime": 2
     }
   },
   {
@@ -10748,7 +10788,7 @@
     ],
     "meta": {
       "wordCount": 350,
-      "readingTime": 3
+      "readingTime": 2
     }
   },
   {
@@ -10828,8 +10868,8 @@
       }
     ],
     "meta": {
-      "wordCount": 330,
-      "readingTime": 3
+      "wordCount": 320,
+      "readingTime": 2
     }
   },
   {
@@ -10909,8 +10949,8 @@
       }
     ],
     "meta": {
-      "wordCount": 350,
-      "readingTime": 3
+      "wordCount": 344,
+      "readingTime": 2
     }
   },
   {
@@ -10991,7 +11031,7 @@
     ],
     "meta": {
       "wordCount": 275,
-      "readingTime": 3
+      "readingTime": 2
     }
   },
   {
@@ -11071,8 +11111,8 @@
       }
     ],
     "meta": {
-      "wordCount": 270,
-      "readingTime": 3
+      "wordCount": 267,
+      "readingTime": 2
     }
   },
   {
@@ -11152,8 +11192,8 @@
       }
     ],
     "meta": {
-      "wordCount": 265,
-      "readingTime": 3
+      "wordCount": 259,
+      "readingTime": 2
     }
   },
   {
@@ -11233,8 +11273,8 @@
       }
     ],
     "meta": {
-      "wordCount": 310,
-      "readingTime": 3
+      "wordCount": 308,
+      "readingTime": 2
     }
   },
   {
@@ -11313,10 +11353,11 @@
       }
     ],
     "meta": {
-      "wordCount": 481,
+      "wordCount": 332,
       "fingerprint": "ak9-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80"
   },
@@ -11333,8 +11374,8 @@
         "q": "Why are vaccines considered important in medical history?",
         "options": [
           "They have prevented millions of deaths worldwide",
-          "They eliminate all diseases permanently",
           "They remove the need for hospitals",
+          "They eliminate all diseases permanently",
           "They replace healthy lifestyles completely"
         ],
         "correct": 0
@@ -11343,63 +11384,64 @@
         "type": "literal",
         "q": "What observation helped Edward Jenner develop an early vaccine?",
         "options": [
-          "Milkmaids infected with cowpox rarely developed smallpox",
           "Polio spread mainly through polluted water",
           "Vaccines worked best in warm climates",
-          "Hospitals reduced infection rates automatically"
+          "Hospitals reduced infection rates automatically",
+          "Milkmaids infected with cowpox rarely developed smallpox"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "Why does vaccine development often take many years?",
         "options": [
-          "Researchers must test safety and effectiveness very carefully",
           "Scientists rarely cooperate internationally",
           "Governments forbid clinical trials completely",
+          "Researchers must test safety and effectiveness very carefully",
           "Modern technology cannot study viruses"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "How can misinformation affect vaccination programs?",
         "options": [
-          "It can reduce public trust and lower vaccination rates, allowing diseases to return",
           "It guarantees stronger immunity in populations",
-          "It increases scientific cooperation automatically",
-          "It prevents the spread of online discussions"
+          "It prevents the spread of online discussions",
+          "It can reduce public trust and lower vaccination rates, allowing diseases to return",
+          "It increases scientific cooperation automatically"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What ethical issue connected to vaccines is discussed?",
         "options": [
-          "Wealthier countries may gain faster access, creating global inequality",
-          "Vaccines can only be produced in Europe",
+          "International organizations oppose vaccination",
           "Medical research no longer requires funding",
-          "International organizations oppose vaccination"
+          "Vaccines can only be produced in Europe",
+          "Wealthier countries may gain faster access, creating global inequality"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
-          "Vaccines are highly important but involve scientific, social, and ethical challenges",
-          "Modern medicine no longer depends on vaccination",
           "Clinical trials should be removed to speed up research",
-          "Public health crises can be solved without international cooperation"
+          "Modern medicine no longer depends on vaccination",
+          "Public health crises can be solved without international cooperation",
+          "Vaccines are highly important but involve scientific, social, and ethical challenges"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 482,
+      "wordCount": 336,
       "fingerprint": "ak9-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
   },
@@ -11426,63 +11468,64 @@
         "type": "literal",
         "q": "How do many advertisements influence consumers emotionally?",
         "options": [
-          "By connecting products to positive experiences like happiness or success",
-          "By avoiding storytelling completely",
+          "By reducing the use of images and music",
           "By focusing only on scientific statistics",
-          "By reducing the use of images and music"
+          "By connecting products to positive experiences like happiness or success",
+          "By avoiding storytelling completely"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "Why are children and teenagers considered especially vulnerable to advertising?",
         "options": [
-          "They may have less experience evaluating persuasive messages critically",
           "They completely ignore social media content",
-          "They rarely encounter advertisements online",
-          "They understand marketing better than adults"
+          "They understand marketing better than adults",
+          "They may have less experience evaluating persuasive messages critically",
+          "They rarely encounter advertisements online"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What does the careful use of color and music in advertising suggest?",
         "options": [
-          "Companies deliberately design every detail to shape how consumers feel and decide",
           "They choose colors randomly without research",
           "Visual design has no effect on buying decisions",
+          "Companies deliberately design every detail to shape how consumers feel and decide",
           "Music is only used to entertain, not persuade"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What criticism of advertising is mentioned in the text?",
         "options": [
-          "It may encourage materialism, reinforce stereotypes, and create unrealistic expectations",
-          "It prevents businesses from communicating with consumers",
           "It reduces the influence of digital technology",
-          "It eliminates all cultural stereotypes"
+          "It eliminates all cultural stereotypes",
+          "It prevents businesses from communicating with consumers",
+          "It may encourage materialism, reinforce stereotypes, and create unrealistic expectations"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
-          "Advertising uses psychological techniques to influence behavior and raises important ethical concerns",
-          "Modern companies no longer depend on advertising",
+          "Governments should completely ban all advertisements",
           "Persuasive communication only exists in digital media",
-          "Governments should completely ban all advertisements"
+          "Modern companies no longer depend on advertising",
+          "Advertising uses psychological techniques to influence behavior and raises important ethical concerns"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 471,
+      "wordCount": 328,
       "fingerprint": "ak9-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
   },
@@ -11498,74 +11541,75 @@
         "type": "literal",
         "q": "What is one benefit of AI mentioned in the text?",
         "options": [
-          "It can improve efficiency and help solve complex problems",
-          "It completely removes the need for human workers",
+          "It prevents all technological accidents",
           "It guarantees equal wealth distribution worldwide",
-          "It prevents all technological accidents"
+          "It completely removes the need for human workers",
+          "It can improve efficiency and help solve complex problems"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "How can bias appear in AI systems?",
         "options": [
-          "The systems may learn unfair patterns from existing data",
-          "Artificial intelligence ignores all human information",
+          "Governments prevent the use of digital technology",
           "Researchers avoid testing AI programs carefully",
-          "Governments prevent the use of digital technology"
+          "The systems may learn unfair patterns from existing data",
+          "Artificial intelligence ignores all human information"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "What privacy concern is discussed in the text?",
         "options": [
-          "Personal data collected by AI could be misused for surveillance",
           "AI systems cannot store information online",
           "Smartphones no longer collect user data",
+          "Personal data collected by AI could be misused for surveillance",
           "Governments have banned digital communication"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why are economists uncertain about automation and employment?",
         "options": [
-          "It is unclear whether new jobs created will replace those lost to AI",
           "Artificial intelligence cannot analyze data effectively",
           "Technology companies refuse to use automation",
+          "It is unclear whether new jobs created will replace those lost to AI",
           "Self-driving vehicles increase transportation costs"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why are schools adding digital ethics to their programs?",
         "options": [
-          "Students need skills to navigate a future shaped by AI and automation",
-          "Programming has replaced all traditional subjects",
+          "Automation has ended the need for critical thinking",
           "Universities no longer support scientific research",
-          "Automation has ended the need for critical thinking"
+          "Programming has replaced all traditional subjects",
+          "Students need skills to navigate a future shaped by AI and automation"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What is the central idea of the text?",
         "options": [
           "AI offers significant opportunities but also creates serious ethical and social challenges",
-          "AI technology should be banned completely",
+          "Privacy concerns connected to AI are unimportant",
           "Human workers will disappear within a few years",
-          "Privacy concerns connected to AI are unimportant"
+          "AI technology should be banned completely"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 472,
+      "wordCount": 332,
       "fingerprint": "ak9-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80"
   },
@@ -11582,9 +11626,9 @@
         "q": "Why are historical monuments considered important?",
         "options": [
           "They help societies understand cultural and historical identity",
+          "They prevent environmental damage completely",
           "They eliminate disagreements about the past",
-          "They replace the need for historical education",
-          "They prevent environmental damage completely"
+          "They replace the need for historical education"
         ],
         "correct": 0
       },
@@ -11592,63 +11636,64 @@
         "type": "literal",
         "q": "How can climate change threaten historical monuments?",
         "options": [
-          "Extreme weather and rising sea levels can damage structures",
           "It prevents researchers from studying architecture",
           "Tourism disappears during warmer temperatures",
-          "Governments stop funding preservation projects"
+          "Governments stop funding preservation projects",
+          "Extreme weather and rising sea levels can damage structures"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "What role does modern technology play in preservation work?",
         "options": [
-          "It helps researchers study, record, and reconstruct monuments",
+          "It removes political disagreements about monuments",
           "It replaces the need for historians completely",
-          "It prevents all forms of pollution automatically",
-          "It removes political disagreements about monuments"
+          "It helps researchers study, record, and reconstruct monuments",
+          "It prevents all forms of pollution automatically"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What ethical debate about monuments is mentioned?",
         "options": [
-          "Whether damaged sites should remain unchanged or be restored to earlier states",
-          "Whether all monuments should be destroyed after wars",
+          "Whether governments should stop teaching history",
           "Whether tourists should be forbidden from visiting museums",
-          "Whether governments should stop teaching history"
+          "Whether damaged sites should remain unchanged or be restored to earlier states",
+          "Whether all monuments should be destroyed after wars"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why do some critics question spending money on preservation?",
         "options": [
+          "They believe monuments are impossible to protect",
           "They believe funds could better serve urgent public needs like healthcare or housing",
-          "They think tourism has no economic value",
           "They oppose all forms of cultural education",
-          "They believe monuments are impossible to protect"
+          "They think tourism has no economic value"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
+          "Tourism is the only reason monuments are protected",
           "Preserving monuments involves cultural value, technological tools, and ethical decisions",
-          "Historical monuments should only belong to wealthy countries",
           "Modern technology has solved all preservation problems",
-          "Tourism is the only reason monuments are protected"
+          "Historical monuments should only belong to wealthy countries"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 478,
+      "wordCount": 339,
       "fingerprint": "ak9-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80"
   },
@@ -11728,7 +11773,7 @@
       }
     ],
     "meta": {
-      "wordCount": 583,
+      "wordCount": 498,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=700&h=420&fit=crop"
@@ -11809,7 +11854,7 @@
       }
     ],
     "meta": {
-      "wordCount": 586,
+      "wordCount": 473,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=700&h=420&fit=crop"
@@ -11890,7 +11935,7 @@
       }
     ],
     "meta": {
-      "wordCount": 580,
+      "wordCount": 476,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&h=420&fit=crop"
@@ -11971,7 +12016,7 @@
       }
     ],
     "meta": {
-      "wordCount": 578,
+      "wordCount": 431,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&h=420&fit=crop"
@@ -12052,7 +12097,7 @@
       }
     ],
     "meta": {
-      "wordCount": 581,
+      "wordCount": 451,
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=700&h=420&fit=crop"
@@ -12134,8 +12179,8 @@
       }
     ],
     "meta": {
-      "wordCount": 340,
-      "readingTime": 3
+      "wordCount": 335,
+      "readingTime": 2
     }
   },
   {
@@ -12215,8 +12260,8 @@
       }
     ],
     "meta": {
-      "wordCount": 285,
-      "readingTime": 3
+      "wordCount": 287,
+      "readingTime": 2
     }
   },
   {
@@ -12296,8 +12341,8 @@
       }
     ],
     "meta": {
-      "wordCount": 295,
-      "readingTime": 3
+      "wordCount": 303,
+      "readingTime": 2
     }
   },
   {
@@ -12377,8 +12422,8 @@
       }
     ],
     "meta": {
-      "wordCount": 300,
-      "readingTime": 3
+      "wordCount": 303,
+      "readingTime": 2
     }
   },
   {
@@ -12458,8 +12503,8 @@
       }
     ],
     "meta": {
-      "wordCount": 330,
-      "readingTime": 3
+      "wordCount": 331,
+      "readingTime": 2
     }
   },
   {
@@ -12539,8 +12584,8 @@
       }
     ],
     "meta": {
-      "wordCount": 330,
-      "readingTime": 3
+      "wordCount": 326,
+      "readingTime": 2
     }
   },
   {
@@ -12620,8 +12665,8 @@
       }
     ],
     "meta": {
-      "wordCount": 305,
-      "readingTime": 3
+      "wordCount": 302,
+      "readingTime": 2
     }
   },
   {
@@ -12702,7 +12747,7 @@
     ],
     "meta": {
       "wordCount": 340,
-      "readingTime": 3
+      "readingTime": 2
     }
   },
   {
@@ -12717,74 +12762,75 @@
         "type": "literal",
         "q": "Why do supporters believe genetic engineering could improve healthcare?",
         "options": [
+          "It eliminates all environmental problems",
           "It may help prevent or treat inherited diseases",
-          "It guarantees equal healthcare worldwide",
           "It replaces the need for hospitals",
-          "It eliminates all environmental problems"
+          "It guarantees equal healthcare worldwide"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "Why are some environmental groups worried about genetically modified crops?",
         "options": [
-          "They may create unpredictable effects on ecosystems",
-          "They cannot survive drought conditions",
+          "They increase biodiversity automatically",
           "They prevent scientific cooperation",
-          "They increase biodiversity automatically"
+          "They may create unpredictable effects on ecosystems",
+          "They cannot survive drought conditions"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "How have governments responded to genetic engineering?",
         "options": [
+          "International laws are identical everywhere",
           "Different countries have created different regulations",
           "Every nation has completely banned gene editing",
-          "Governments no longer support scientific research",
-          "International laws are identical everywhere"
+          "Governments no longer support scientific research"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "What ethical concern is connected to the idea of 'designer babies'?",
         "options": [
-          "Parents could select non-medical traits, potentially increasing inequality",
-          "Scientists would stop studying diseases",
           "Governments would ban all medical research",
-          "Food production would decrease globally"
+          "Food production would decrease globally",
+          "Scientists would stop studying diseases",
+          "Parents could select non-medical traits, potentially increasing inequality"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "Why does public support for gene editing sometimes decrease?",
         "options": [
-          "People are more uncertain when it involves altering embryos or non-medical traits",
           "Medical treatments have become less effective",
-          "Scientists no longer study inherited diseases",
-          "Religious groups fully support all experiments"
+          "Religious groups fully support all experiments",
+          "People are more uncertain when it involves altering embryos or non-medical traits",
+          "Scientists no longer study inherited diseases"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What is the central idea of the text?",
         "options": [
-          "Genetic engineering offers major possibilities but also serious ethical challenges that must be balanced",
           "Scientific progress should always continue without regulation",
           "Agricultural technology is more important than medicine",
+          "Genetic engineering offers major possibilities but also serious ethical challenges that must be balanced",
           "Future societies will completely reject genetic research"
         ],
-        "correct": 0
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 497,
+      "wordCount": 435,
       "fingerprint": "ak10-tema-001",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
   },
@@ -12800,21 +12846,21 @@
         "type": "literal",
         "q": "Why is journalism considered important in democratic societies?",
         "options": [
-          "It helps citizens stay informed and hold institutions accountable",
-          "It prevents all political disagreements",
           "It replaces the need for elections",
-          "It guarantees equal economic conditions"
+          "It prevents all political disagreements",
+          "It guarantees equal economic conditions",
+          "It helps citizens stay informed and hold institutions accountable"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "How has digital media changed journalism?",
         "options": [
           "Information can spread much faster and reach wider audiences",
-          "Citizens no longer consume news",
           "Traditional reporting has disappeared completely",
-          "Governments fully control all online platforms"
+          "Governments fully control all online platforms",
+          "Citizens no longer consume news"
         ],
         "correct": 0
       },
@@ -12822,52 +12868,53 @@
         "type": "literal",
         "q": "Why are deepfake technologies a concern for journalism?",
         "options": [
+          "They eliminate political debates",
           "They make manipulated information appear realistic",
           "They reduce internet access worldwide",
-          "They prevent investigative reporting",
-          "They eliminate political debates"
+          "They prevent investigative reporting"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "What is one example of investigative journalism's real-world impact?",
         "options": [
-          "It has led to political resignations and legal reforms by exposing abuses",
-          "It eliminated social media platforms",
           "It prevented technological development",
+          "It eliminated social media platforms",
+          "It has led to political resignations and legal reforms by exposing abuses",
           "It replaced legal systems entirely"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why do experts emphasize media literacy for citizens?",
         "options": [
-          "People need skills to critically evaluate information in a rapidly changing digital world",
-          "Professional journalism is no longer necessary",
           "Citizens should avoid using digital technology",
-          "Social media always provides accurate information"
+          "Social media always provides accurate information",
+          "Professional journalism is no longer necessary",
+          "People need skills to critically evaluate information in a rapidly changing digital world"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
           "Journalism remains essential for democracy despite significant digital and political challenges",
-          "Traditional newspapers should completely replace online media",
           "Governments should regulate all public information",
-          "Investigative journalism has become unimportant in modern society"
+          "Investigative journalism has become unimportant in modern society",
+          "Traditional newspapers should completely replace online media"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 496,
+      "wordCount": 429,
       "fingerprint": "ak10-tema-002",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=800&q=80"
   },
@@ -12883,12 +12930,12 @@
         "type": "literal",
         "q": "According to Maslow's theory, what needs usually come first?",
         "options": [
-          "Basic survival and safety needs",
           "Creative and artistic goals",
+          "Basic survival and safety needs",
           "Political influence and leadership",
           "International cooperation"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -12896,8 +12943,8 @@
         "options": [
           "Doing something because it feels meaningful or enjoyable",
           "Working only for financial rewards",
-          "Avoiding difficult situations completely",
-          "Depending entirely on social pressure"
+          "Depending entirely on social pressure",
+          "Avoiding difficult situations completely"
         ],
         "correct": 0
       },
@@ -12905,21 +12952,21 @@
         "type": "literal",
         "q": "What role does dopamine play according to neuroscience research?",
         "options": [
-          "It influences reward systems and encourages repeated behavior",
           "It prevents emotional reactions completely",
           "It reduces the importance of learning",
+          "It influences reward systems and encourages repeated behavior",
           "It eliminates social motivation"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "How can environment influence a person's motivation?",
         "options": [
           "Supportive relationships and realistic goals can increase persistence, while stress may reduce it",
+          "Motivation depends only on intelligence",
           "Social conditions have no effect on behavior",
-          "Failure always strengthens confidence",
-          "Motivation depends only on intelligence"
+          "Failure always strengthens confidence"
         ],
         "correct": 0
       },
@@ -12927,30 +12974,31 @@
         "type": "inference",
         "q": "Why do psychologists caution against assuming motivation works the same everywhere?",
         "options": [
-          "Different societies value different goals, so motivation is shaped by cultural context",
           "Human motivation is biologically identical everywhere",
           "Technology has removed all cultural differences",
+          "Different societies value different goals, so motivation is shaped by cultural context",
           "Only wealthy countries study psychology"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What is the main conclusion of the text?",
         "options": [
-          "Motivation is shaped by biological, emotional, social, and cultural factors working together",
           "External rewards are always stronger than personal interest",
-          "Modern neuroscience has fully explained all human behavior",
-          "Motivation is unimportant in education and workplaces"
+          "Motivation is unimportant in education and workplaces",
+          "Motivation is shaped by biological, emotional, social, and cultural factors working together",
+          "Modern neuroscience has fully explained all human behavior"
         ],
-        "correct": 0
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 492,
+      "wordCount": 394,
       "fingerprint": "ak10-tema-003",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80"
   },
@@ -12966,74 +13014,75 @@
         "type": "literal",
         "q": "What is climate migration?",
         "options": [
-          "Movement caused partly by environmental and climate-related changes",
           "Travel connected only to tourism and education",
+          "Movement caused partly by environmental and climate-related changes",
           "Migration controlled entirely by technology companies",
           "Temporary relocation during sporting events"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "Why are low-lying coastal regions considered especially vulnerable?",
         "options": [
-          "Rising sea levels threaten homes, infrastructure, and freshwater supplies",
           "Agriculture cannot exist near oceans",
-          "Governments have banned migration there",
-          "Climate change affects only inland regions"
+          "Rising sea levels threaten homes, infrastructure, and freshwater supplies",
+          "Climate change affects only inland regions",
+          "Governments have banned migration there"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "What is one adaptation strategy mentioned in the text?",
         "options": [
-          "Building flood barriers and improving water management systems",
           "Reducing all international cooperation",
           "Closing major cities permanently",
+          "Building flood barriers and improving water management systems",
           "Replacing agriculture with tourism"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why do researchers describe climate migration as complex?",
         "options": [
-          "Environmental problems often interact with poverty, conflict, and inequality rather than acting alone",
-          "Migration has no connection to economic conditions",
+          "Natural disasters always produce permanent migration",
           "Political instability never affects environmental issues",
-          "Natural disasters always produce permanent migration"
+          "Environmental problems often interact with poverty, conflict, and inequality rather than acting alone",
+          "Migration has no connection to economic conditions"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why do some public debates about climate migration become controversial?",
         "options": [
-          "People disagree about humanitarian duties and the economic responsibilities of wealthier nations",
-          "Scientists deny climate change completely",
           "Governments have already solved migration challenges",
-          "Environmental changes no longer affect populations"
+          "Environmental changes no longer affect populations",
+          "Scientists deny climate change completely",
+          "People disagree about humanitarian duties and the economic responsibilities of wealthier nations"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What is the central message of the text?",
         "options": [
-          "Climate migration is a growing global challenge requiring international cooperation, adaptation, and humanitarian thinking",
           "Migration can be prevented entirely through technology",
-          "Only island nations are affected by climate change",
-          "Economic planning is unrelated to environmental issues"
+          "Economic planning is unrelated to environmental issues",
+          "Climate migration is a growing global challenge requiring international cooperation, adaptation, and humanitarian thinking",
+          "Only island nations are affected by climate change"
         ],
-        "correct": 0
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 494,
+      "wordCount": 409,
       "fingerprint": "ak10-tema-004",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
   },
@@ -13049,32 +13098,32 @@
         "type": "literal",
         "q": "How did Enlightenment philosophers influence human rights?",
         "options": [
-          "They argued that individuals possessed natural rights that governments should respect",
-          "They opposed all forms of political freedom",
+          "They rejected democratic systems entirely",
           "They supported censorship and discrimination",
-          "They rejected democratic systems entirely"
+          "They argued that individuals possessed natural rights that governments should respect",
+          "They opposed all forms of political freedom"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "What kinds of movements expanded human rights protections after 1948?",
         "options": [
-          "Civil rights, women's rights, disability rights, and LGBTQ rights movements",
           "Only economic reform movements",
-          "Military organizations and corporations",
-          "Entertainment industries and tourism campaigns"
+          "Civil rights, women's rights, disability rights, and LGBTQ rights movements",
+          "Entertainment industries and tourism campaigns",
+          "Military organizations and corporations"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "Why can enforcing human rights be difficult?",
         "options": [
           "Governments may refuse to cooperate with international courts or organizations",
+          "Technology has eliminated censorship",
           "Human rights laws no longer exist internationally",
-          "Citizens fully agree on every political issue",
-          "Technology has eliminated censorship"
+          "Citizens fully agree on every political issue"
         ],
         "correct": 0
       },
@@ -13082,41 +13131,42 @@
         "type": "inference",
         "q": "Why was the creation of the United Nations important for human rights?",
         "options": [
-          "It helped establish shared international principles after the devastation of World War Two",
           "It replaced all national governments",
+          "It helped establish shared international principles after the devastation of World War Two",
           "It prevented every future conflict",
           "It ended political activism worldwide"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "How can technology both help and threaten human rights?",
         "options": [
+          "It guarantees complete political freedom",
           "It can support activism and expose abuses, but also enable surveillance and monitoring",
           "It prevents communication between countries",
-          "It removes the need for education",
-          "It guarantees complete political freedom"
+          "It removes the need for education"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "What is the main idea of the text?",
         "options": [
+          "Political activism no longer affects global society",
           "Human rights have evolved significantly through history but still face serious modern challenges",
-          "International organizations have solved all equality issues",
           "Cultural traditions always oppose human rights",
-          "Political activism no longer affects global society"
+          "International organizations have solved all equality issues"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 493,
+      "wordCount": 417,
       "fingerprint": "ak10-tema-005",
       "generatedAt": "2026-05-21",
-      "model": "gpt-4o"
+      "model": "gpt-4o",
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?w=800&q=80"
   },
@@ -13196,8 +13246,8 @@
       }
     ],
     "meta": {
-      "wordCount": 618,
-      "readingTime": 4
+      "wordCount": 494,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&h=420&fit=crop"
   },
@@ -13277,8 +13327,8 @@
       }
     ],
     "meta": {
-      "wordCount": 612,
-      "readingTime": 4
+      "wordCount": 487,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=700&h=420&fit=crop"
   },
@@ -13358,8 +13408,8 @@
       }
     ],
     "meta": {
-      "wordCount": 610,
-      "readingTime": 4
+      "wordCount": 466,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=700&h=420&fit=crop"
   },
@@ -13439,8 +13489,8 @@
       }
     ],
     "meta": {
-      "wordCount": 612,
-      "readingTime": 4
+      "wordCount": 464,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=700&h=420&fit=crop"
   },
@@ -13466,62 +13516,62 @@
       {
         "q": "What did Maya notice about the institute's culture over time?",
         "options": [
+          "Students rarely discussed statistics or rankings",
           "Every aspect of performance was constantly measured and compared",
           "Coaches prioritized rest and mental wellbeing above results",
-          "Students rarely discussed statistics or rankings",
           "The environment encouraged athletes to set their own goals"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
         "q": "Why did some athletes harm themselves at Helix?",
         "options": [
-          "They feared that any weakness would affect their opportunities",
           "They disagreed with the coaching methods openly",
-          "They wanted to leave the institute permanently",
-          "They received incorrect medical advice from staff"
+          "They feared that any weakness would affect their opportunities",
+          "They received incorrect medical advice from staff",
+          "They wanted to leave the institute permanently"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "inference"
       },
       {
         "q": "What did the sports psychologist explain to Maya?",
         "options": [
+          "Competition was unnecessary for long-term athletic development",
           "Emotional stability and recovery were essential to performance",
-          "Data analysis was the only reliable measure of athletic potential",
           "Athletes should train harder despite psychological difficulties",
-          "Competition was unnecessary for long-term athletic development"
+          "Data analysis was the only reliable measure of athletic potential"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
         "q": "What changes did the institute introduce after media criticism?",
         "options": [
-          "Counseling sessions, data privacy measures, and flexible recovery schedules",
-          "A complete ban on biometric monitoring technology",
           "Mandatory retirement for all high-pressure coaches",
-          "Reduced competition schedules for all athletes"
+          "Counseling sessions, data privacy measures, and flexible recovery schedules",
+          "Reduced competition schedules for all athletes",
+          "A complete ban on biometric monitoring technology"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
         "q": "What is the central message of the text?",
         "options": [
-          "Technology and data can improve performance but cannot replace human wellbeing",
           "Elite sports should abandon scientific training methods entirely",
+          "Technology and data can improve performance but cannot replace human wellbeing",
           "Ambition and mental health are always incompatible",
           "Athletic success depends only on measurable physical qualities"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "inference"
       }
     ],
     "meta": {
-      "wordCount": 620,
-      "readingTime": 4
+      "wordCount": 514,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&h=420&fit=crop"
   }

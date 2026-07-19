@@ -17,6 +17,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   environment: { emoji: '🌿', gradient: 'from-emerald-400 to-teal-500', label: 'Environment' },
   'everyday life': { emoji: '🌟', gradient: 'from-amber-400 to-yellow-500', label: 'Everyday life' },
   family: { emoji: '👨‍👩‍👧', gradient: 'from-rose-400 to-pink-500', label: 'Family' },
+  food: { emoji: '🍎', gradient: 'from-red-400 to-orange-500', label: 'Food' },
   football: { emoji: '⚽', gradient: 'from-green-400 to-emerald-600', label: 'Football' },
   'food-science': { emoji: '🍫', gradient: 'from-amber-500 to-yellow-600', label: 'Food science' },
   friendship: { emoji: '😊', gradient: 'from-orange-400 to-rose-500', label: 'Friendship' },
@@ -30,6 +31,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   psychology: { emoji: '🧠', gradient: 'from-purple-400 to-indigo-500', label: 'Psychology' },
   science: { emoji: '🔬', gradient: 'from-cyan-400 to-blue-500', label: 'Science' },
   society: { emoji: '🏙️', gradient: 'from-slate-400 to-slate-600', label: 'Society' },
+  sport: { emoji: '🏅', gradient: 'from-blue-400 to-indigo-500', label: 'Sport' },
   sports: { emoji: '⚽', gradient: 'from-blue-400 to-indigo-500', label: 'Sports' },
   technology: { emoji: '🤖', gradient: 'from-cyan-400 to-indigo-500', label: 'Technology' },
 };
