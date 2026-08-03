@@ -8005,7 +8005,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 113
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak2-tema-007",
@@ -8079,7 +8081,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 106
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak2-tema-008",
@@ -8153,7 +8157,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 112
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak2-tema-009",
@@ -8227,7 +8233,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 103
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak2-tema-010",
@@ -8301,7 +8309,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 111
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak2-vanskap-01",
@@ -9854,7 +9864,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1505705694340-019e5d6e2eb2?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 112
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Samhälle"
   },
   {
     "id": "ak3-tema-007",
@@ -9933,7 +9945,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 137
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak3-tema-008",
@@ -10012,7 +10026,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 136
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-009",
@@ -10091,7 +10107,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 138
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Vetenskap"
   },
   {
     "id": "ak3-tema-010",
@@ -10170,7 +10188,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 133
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Sport"
   },
   {
     "id": "ak3-tema-011",
@@ -10244,7 +10264,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 126
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak3-tema-012",
@@ -10318,7 +10340,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 123
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Samhälle"
   },
   {
     "id": "ak3-tema-013",
@@ -10392,7 +10416,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 129
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-014",
@@ -10466,7 +10492,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 138
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Geografi"
   },
   {
     "id": "ak3-tema-015",
@@ -10540,7 +10568,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 144
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Hälsa"
   },
   {
     "id": "ak3-tema-016",
@@ -10614,7 +10644,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 158
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-017",
@@ -10688,7 +10720,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 144
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-018",
@@ -10762,7 +10796,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 157
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-019",
@@ -10836,7 +10872,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 155
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Värdegrund"
   },
   {
     "id": "ak3-tema-020",
@@ -10910,7 +10948,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 156
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-021",
@@ -10984,7 +11024,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 124
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Historia"
   },
   {
     "id": "ak3-tema-022",
@@ -11058,7 +11100,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 126
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak3-tema-023",
@@ -11132,7 +11176,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 119
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Teknik"
   },
   {
     "id": "ak3-tema-024",
@@ -11206,7 +11252,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 128
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak3-tema-025",
@@ -11280,7 +11328,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 121
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Hälsa"
   },
   {
     "id": "ak3-vanskap-001",
@@ -16541,7 +16591,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 231
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak5-tema-022",
@@ -16615,7 +16667,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 206
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak5-tema-023",
@@ -16689,7 +16743,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 194
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak5-tema-024",
@@ -16763,7 +16819,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 191
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak5-tema-025",
@@ -16837,7 +16895,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 181
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak5-vanskap-01",
@@ -18218,7 +18278,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 274
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak6-tema-002",
@@ -18292,7 +18354,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 326
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Teknik"
   },
   {
     "id": "ak6-tema-003",
@@ -18366,7 +18430,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 334
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Historia"
   },
   {
     "id": "ak6-tema-004",
@@ -18440,7 +18506,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 325
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Hälsa"
   },
   {
     "id": "ak6-tema-005",
@@ -18514,7 +18582,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 329
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Geografi"
   },
   {
     "id": "ak6-tema-006",
@@ -18587,7 +18657,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 204
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Medier"
   },
   {
     "id": "ak6-tema-007",
@@ -18660,7 +18732,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 218
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Vetenskap"
   },
   {
     "id": "ak6-tema-008",
@@ -18733,7 +18807,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 207
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak6-tema-009",
@@ -18806,7 +18882,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 227
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak6-tema-010",
@@ -18879,7 +18957,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 222
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Källkritik"
   },
   {
     "id": "ak6-tema-011",
@@ -18953,7 +19033,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 274
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak6-tema-012",
@@ -19027,7 +19109,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 327
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Sport"
   },
   {
     "id": "ak6-tema-013",
@@ -19101,7 +19185,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 327
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Sport"
   },
   {
     "id": "ak6-tema-014",
@@ -19175,7 +19261,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 339
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Värdegrund"
   },
   {
     "id": "ak6-tema-015",
@@ -19249,7 +19337,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 314
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Teknik"
   },
   {
     "id": "ak6-tema-016",
@@ -19323,7 +19413,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 319
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Geografi"
   },
   {
     "id": "ak6-tema-017",
@@ -19397,7 +19489,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 320
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Historia"
   },
   {
     "id": "ak6-tema-018",
@@ -19471,7 +19565,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 327
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak6-tema-019",
@@ -19545,7 +19641,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 331
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak6-tema-020",
@@ -19619,7 +19717,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 320
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak6-tema-021",
@@ -19693,7 +19793,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 275
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Musik"
   },
   {
     "id": "ak6-tema-022",
@@ -19767,7 +19869,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 294
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Historia"
   },
   {
     "id": "ak6-tema-023",
@@ -19841,7 +19945,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 294
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak6-tema-024",
@@ -19915,7 +20021,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 304
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak6-tema-025",
@@ -19989,7 +20097,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 290
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Teknik"
   },
   {
     "id": "ak6-vanskap-01",
@@ -21284,7 +21394,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 243
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak7-tema-004",
@@ -21358,7 +21470,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 225
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak7-tema-005",
@@ -21432,7 +21546,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 223
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak7-tema-006",
@@ -23311,7 +23427,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 255
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Historia"
   },
   {
     "id": "ak8-tema-003",
@@ -23385,7 +23503,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 312
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak8-tema-004",
@@ -23459,7 +23579,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 266
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak8-tema-005",
@@ -23533,7 +23655,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 287
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Mänskliga rättigheter"
   },
   {
     "id": "ak8-tema-006",
@@ -25265,7 +25389,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 389
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak9-tema-002",
@@ -25339,7 +25465,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 380
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak9-tema-003",
@@ -25413,7 +25541,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 381
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Historia"
   },
   {
     "id": "ak9-tema-004",
@@ -25487,7 +25617,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1584118624012-df056829fbd0?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 379
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Vetenskap"
   },
   {
     "id": "ak9-tema-005",
@@ -25561,7 +25693,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 396
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Kultur"
   },
   {
     "id": "ak9-tema-006",
@@ -25635,7 +25769,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 282
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak9-tema-007",
@@ -25709,7 +25845,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 293
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Teknik & Etik"
   },
   {
     "id": "ak9-tema-008",
@@ -25783,7 +25921,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 285
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak9-tema-009",
@@ -25857,7 +25997,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 302
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Digitalt samhälle"
   },
   {
     "id": "ak9-tema-010",
@@ -25931,7 +26073,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 279
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Vetenskap"
   },
   {
     "id": "ak9-tema-011",
@@ -26005,7 +26149,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 373
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Vetenskap"
   },
   {
     "id": "ak9-tema-012",
@@ -26079,7 +26225,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 391
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Samhälle"
   },
   {
     "id": "ak9-tema-013",
@@ -26153,7 +26301,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 377
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Hälsa"
   },
   {
     "id": "ak9-tema-014",
@@ -26227,7 +26377,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 362
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Historia"
   },
   {
     "id": "ak9-tema-015",
@@ -26301,7 +26453,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 418
-    }
+    },
+    "genre": "berättelse",
+    "theme": "Hälsa"
   },
   {
     "id": "ak9-tema-016",
@@ -26375,7 +26529,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1484981138541-3d074aa97716?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 355
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak9-tema-017",
@@ -26449,7 +26605,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 379
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "ak9-tema-018",
@@ -26523,7 +26681,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1484981138541-3d074aa97716?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 343
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Natur & Miljö"
   },
   {
     "id": "ak9-tema-019",
@@ -26597,7 +26757,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 324
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Kultur"
   },
   {
     "id": "ak9-tema-020",
@@ -26671,7 +26833,9 @@
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 340
-    }
+    },
+    "genre": "faktatext",
+    "theme": "Samhälle"
   },
   {
     "id": "gy-etik-05",
