@@ -8519,6 +8519,28 @@
           "Att de är ensamma"
         ],
         "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"stack\" i texten?",
+        "options": [
+          "Ett litet berg",
+          "Myrornas bo",
+          "En sorts mat",
+          "En smal stig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Vad myror äter",
+          "Hur myror bygger bon",
+          "Hur myror hittar vägen hem",
+          "Varför myror är små"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -8580,6 +8602,28 @@
           "För att han fick nya skor"
         ],
         "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"darrar\" i texten?",
+        "options": [
+          "Skakar lite",
+          "Sover djupt",
+          "Springer fort",
+          "Äter snabbt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Att Ture åker buss hem",
+          "Att Ture får en egen kanin",
+          "Att Ture bygger en snögubbe",
+          "Att Ture hjälper en kanin"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
@@ -8639,6 +8683,28 @@
           "Lugn och uttråkad",
           "Stressad men tacksam",
           "Arg och högljudd"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"stressad\" i texten?",
+        "options": [
+          "Glad och pigg",
+          "Jäktad och orolig",
+          "Trött och sömnig",
+          "Arg och sur"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Varför är texten skriven, tror du?",
+        "options": [
+          "För att lära ut hur busskort fungerar",
+          "För att beskriva olika sorters hundar",
+          "För att visa hur man gör rätt mot andra",
+          "För att berätta om en butik i staden"
         ],
         "correct": 2
       }
@@ -8702,6 +8768,28 @@
           "Den blir tyst för alltid"
         ],
         "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"ångrar\" i texten?",
+        "options": [
+          "Skyndar sig mycket",
+          "Glömmer bort helt",
+          "Blir väldigt glad",
+          "Tycker att det blev fel"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Vad det innebär att säga förlåt",
+          "Hur man blir bäst i klassen",
+          "Varför man ska städa hemma",
+          "Hur man hittar nya vänner"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
@@ -8761,6 +8849,28 @@
           "Att hon glömt sina läxor",
           "Att hon blev nyfiken och vill lära sig mer",
           "Att hon är arg på farfar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"nyfiken\" i texten?",
+        "options": [
+          "Är rädd för mörker",
+          "Vill veta mer",
+          "Blir lätt trött",
+          "Tycker om att sova"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Att Meja köper ett teleskop",
+          "Att Meja lär sig alla planeter",
+          "Att Meja funderar på rymden",
+          "Att Meja är rädd för mörkret"
         ],
         "correct": 2
       }
@@ -8824,6 +8934,28 @@
           "Att aldrig prata med någon"
         ],
         "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"pirrigt\" i texten?",
+        "options": [
+          "Nervöst i kroppen",
+          "Väldigt kallt ute",
+          "Riktigt roligt",
+          "Ganska tyst"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man springer fort",
+          "Varför man ska sova länge",
+          "Hur man lagar mat",
+          "Vad mod kan vara"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
@@ -8883,6 +9015,28 @@
           "Rädd",
           "Glad och lugn",
           "Sur och tyst"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"vispar\" i texten?",
+        "options": [
+          "Häller upp",
+          "Rör om snabbt",
+          "Smakar på",
+          "Ställer fram"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Ett recept på hemgjord sylt",
+          "En tävling i matlagning",
+          "En familj som lagar mat ihop",
+          "En vanlig dag i skolan"
         ],
         "correct": 2
       }
@@ -8946,6 +9100,28 @@
           "För att hon har glömt sin väska"
         ],
         "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"nervös\" i texten?",
+        "options": [
+          "Lite orolig",
+          "Väldigt hungrig",
+          "Riktigt arg",
+          "Ganska trött"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man bakar chokladtårta",
+          "Varför ballonger smäller",
+          "Vad man leker på rasten",
+          "Hur Aya förbereder sitt kalas"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
@@ -9007,6 +9183,28 @@
           "De smälter som is"
         ],
         "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"energi\" i texten?",
+        "options": [
+          "Ett slags färg",
+          "Kraft som trädet behöver",
+          "En sorts blad",
+          "Vatten i marken"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man planterar ett träd",
+          "Vilka djur som bor i träd",
+          "Varför löv byter färg",
+          "Hur man räknar löv"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -9066,6 +9264,28 @@
           "Jättehungrig",
           "Arg",
           "Lugn"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"glittrar\" i texten?",
+        "options": [
+          "Blänker i ljuset",
+          "Blir alldeles grått",
+          "Låter väldigt högt",
+          "Fryser snabbt till is"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man fiskar i en sjö",
+          "Varför fåglar flyttar",
+          "Hur man bygger en brygga",
+          "En morgon när dimman lättar"
         ],
         "correct": 3
       }
@@ -9129,6 +9349,28 @@
           "Att hitta rätt bok eller söka information"
         ],
         "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"information\" i texten?",
+        "options": [
+          "Sagor och sånger",
+          "Fakta och upplysningar",
+          "Bilder och filmer",
+          "Möbler och hyllor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man skriver en bok",
+          "Varför filmer kostar pengar",
+          "Vad man kan göra på ett bibliotek",
+          "Hur man bygger ett hus"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -9190,6 +9432,28 @@
           "Att man inte ska använda övergångsställe istället"
         ],
         "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"korsa\" i texten?",
+        "options": [
+          "Gå över",
+          "Springa längs",
+          "Stanna vid",
+          "Vända om"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man lär sig cykla",
+          "Varför bilar kör fort",
+          "Hur man hittar till skolan",
+          "Att se sig för i trafiken"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
@@ -9251,6 +9515,28 @@
           "Att skriva en lapp till sig själv"
         ],
         "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"lättad\" i texten?",
+        "options": [
+          "Väldigt hungrig",
+          "Lugn efter oro",
+          "Riktigt arg",
+          "Ganska sömnig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man räknar matte",
+          "Varför ryggsäckar är tunga",
+          "Att berätta när något gått fel",
+          "Hur man skriver fint"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -9310,6 +9596,28 @@
           "Man lär sig allt snabbare",
           "Man blir alltid starkare",
           "Man kan bli trött och ha svårare att koncentrera sig"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"paus\" i texten?",
+        "options": [
+          "En kort vila",
+          "Ett långt prov",
+          "En sorts lek",
+          "Ett stort rum"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man leker kurragömma",
+          "Varför skolan börjar tidigt",
+          "Vad man äter till lunch",
+          "Vad en rast är och varför"
         ],
         "correct": 3
       }
@@ -9373,6 +9681,28 @@
           "Att lampan släcks"
         ],
         "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"varv\" i texten?",
+        "options": [
+          "Ett par skor",
+          "En runda i banan",
+          "En sorts boll",
+          "Ett långt rep"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man lagar mat efter träning",
+          "Varför salar är stora",
+          "Att orka fortsätta trots trötthet",
+          "Hur man räknar poäng"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -9432,6 +9762,28 @@
           "Efter man har gått hem",
           "När man redan är helt slut",
           "Innan den riktiga träningen börjar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"risken\" i texten?",
+        "options": [
+          "Chansen att något går fel",
+          "En sorts träning",
+          "Ett mått på tid",
+          "En del av kroppen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man simmar snabbt",
+          "Vilka skor som är bäst",
+          "Hur länge man ska sova",
+          "Varför man värmer upp"
         ],
         "correct": 3
       }
@@ -11545,6 +11897,28 @@
           "Uttråkad"
         ],
         "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"försiktigt\" i texten?",
+        "options": [
+          "Snabbt och högljutt",
+          "Lugnt och lite osäkert",
+          "Argt och bestämt",
+          "Glatt och skrattande"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man tränar fotboll",
+          "Varför staket byggs",
+          "Att bjuda in någon som är ny",
+          "Hur man byter klass"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -11604,6 +11978,28 @@
           "Att han vill behålla dem för alltid",
           "Att han är arg",
           "Att han är tacksam och tar ansvar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"låna\" i texten?",
+        "options": [
+          "Få använda och lämna tillbaka",
+          "Få behålla för alltid",
+          "Köpa för egna pengar",
+          "Byta bort mot något annat"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man stickar vantar",
+          "Varför vintern är kall",
+          "Hur man packar ryggsäck",
+          "Att hjälpa någon som fryser"
         ],
         "correct": 3
       }
@@ -11667,6 +12063,28 @@
           "När molnen blir orange"
         ],
         "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"ånga\" i texten?",
+        "options": [
+          "Is som smälter",
+          "Vatten som blivit gas",
+          "Snö som faller",
+          "Sand som blåser"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man mäter vatten",
+          "Varför moln är vita",
+          "Hur regn bildas",
+          "Hur vinden blåser"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
@@ -11726,6 +12144,28 @@
           "Det är gjort av papper",
           "Det är för varmt",
           "Det är gjort av en metall som magneten inte drar lika mycket i"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"experiment\" i texten?",
+        "options": [
+          "Ett försök där man testar",
+          "En sorts läxa",
+          "Ett långt prov",
+          "En bok om djur"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten mest om?",
+        "options": [
+          "Hur man skriver i en bok",
+          "Varför skedar är av plast",
+          "Hur mynt tillverkas",
+          "Vad magneter drar till sig"
         ],
         "correct": 3
       }
