@@ -93,21 +93,23 @@
       {
         "q": "Vart gick Maja med klassen?",
         "options": [
+          "Till parken",
           "Till simhallen",
           "Till skolbiblioteket",
           "Till affären"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
         "q": "Vad handlade Majas bok om?",
         "options": [
           "Fiskar",
+          "Hästar",
           "Rävar",
           "Fåglar"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -115,6 +117,7 @@
         "options": [
           "En räv som sprang i snö",
           "En katt som sov",
+          "En fågel som flög",
           "En hund som åt"
         ],
         "correct": 0,
@@ -125,7 +128,8 @@
         "options": [
           "Hon ville kasta boken",
           "Hon ville dela boken hemma",
-          "Hon ville gömma boken"
+          "Hon ville gömma boken",
+          "Hon ville byta bok"
         ],
         "correct": 1,
         "type": "inferens"
@@ -133,21 +137,23 @@
       {
         "q": "Vad betyder ordet \"yvig\" i texten?",
         "options": [
+          "Kort och alldeles rak",
           "Väldigt blöt",
           "Helt osynlig",
           "Mycket stor och fluffig"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "ord"
       },
       {
         "q": "Varför är texten skriven, tror du?",
         "options": [
           "För att beskriva en fotbollsmatch",
+          "För att förklara hur snö bildas",
           "För att lära om trafik",
           "För att berätta om ett biblioteksbesök"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "sammanfatta"
       }
     ],
@@ -5516,9 +5522,10 @@
         "options": [
           "På bussen",
           "I klassrummet",
+          "På skolgården",
           "I kapprummet"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -5526,7 +5533,8 @@
         "options": [
           "Blå",
           "Röd",
-          "Grön"
+          "Grön",
+          "Gul"
         ],
         "correct": 0,
         "type": "literal"
@@ -5534,21 +5542,23 @@
       {
         "q": "Vems namn stod på lappen?",
         "options": [
+          "Sara",
           "Omar",
           "Erik",
           "Lina"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
         "q": "Varför tror du att Omar såg lättad ut?",
         "options": [
           "Han ville leka ensam",
+          "Han hade hittat en ny",
           "Han ville gå hem",
           "Han hade saknat vanten"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "inferens"
       },
       {
@@ -5556,9 +5566,10 @@
         "options": [
           "Hungrig",
           "Arg",
+          "Trött och sur",
           "Glad och lugn"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "ord"
       },
       {
@@ -5566,7 +5577,8 @@
         "options": [
           "För att visa hur man kan hjälpa någon",
           "För att berätta om en resa",
-          "För att lära om matte"
+          "För att lära om matte",
+          "För att beskriva ett djur"
         ],
         "correct": 0,
         "type": "sammanfatta"
@@ -12385,21 +12397,23 @@
       {
         "q": "Vad samlar bin från blommor?",
         "options": [
+          "Löv och barr",
           "Sand och grus",
           "Bara vatten",
           "Nektar och pollen"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
         "q": "Vad kan hända när pollen hamnar på en blommans pistill?",
         "options": [
           "Pollen försvinner alltid direkt",
+          "Blomman byter färg helt",
           "Växten kan bilda frön och frukter",
           "Blomman blir en sten"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -12407,6 +12421,7 @@
         "options": [
           "För att de annars inte kan få frön och frukter",
           "För att de annars slutar vara gröna",
+          "För att de annars tappar alla sina blad",
           "För att de annars blir högre"
         ],
         "correct": 0,
@@ -12428,7 +12443,8 @@
         "options": [
           "Ett slags frö",
           "Medel som används för att ta bort oönskade skadedjur eller växter",
-          "En typ av bikupa som bin bygger för att skydda sina larver"
+          "En typ av bikupa som bin bygger för att skydda sina larver",
+          "Ett näringsämne som sprids för att blommor ska växa snabbare"
         ],
         "correct": 1,
         "type": "ord"
@@ -12436,11 +12452,12 @@
       {
         "q": "Vad är textens syfte?",
         "options": [
+          "Att jämföra olika sorters honung med varandra",
           "Att förklara hur bin hjälper växter och hur vi kan hjälpa bin",
           "Att berätta en spökhistoria om insekter",
           "Att beskriva en enda blomma i detalj"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "sammanfatta"
       }
     ],
@@ -12790,10 +12807,11 @@
         "q": "Vad kallas det när verkligheten görs mindre på en karta?",
         "options": [
           "Skärm",
+          "Skiss",
           "Skugga",
           "Skala"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -12801,6 +12819,7 @@
         "options": [
           "Vad symbolerna betyder",
           "Vilken musik som passar",
+          "Vem som ritade kartan",
           "Hur gammal kartan är"
         ],
         "correct": 0,
@@ -12811,7 +12830,8 @@
         "options": [
           "När batteriet tar slut eller när man vill få överblick",
           "För att den alltid visar exakt var du är utan hjälp",
-          "För att den inte har några symboler"
+          "För att den inte har några symboler",
+          "För att den alltid är nyare än en digital karta"
         ],
         "correct": 0,
         "type": "inferens"
@@ -12819,21 +12839,23 @@
       {
         "q": "Vad kan du dra för slutsats om höjdkurvor ligger tätt?",
         "options": [
+          "Kartan är ritad i fel skala",
           "Terrängen är helt platt",
           "Det finns mer vatten där",
           "Terrängen är brant"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
         "q": "Vad betyder ordet \"orientera\" i texten?",
         "options": [
           "Måla med färg",
+          "Rita av en byggnad noggrant",
           "Hitta riktning och förstå var man är",
           "Bygga en bro"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "ord"
       },
       {
@@ -12841,9 +12863,10 @@
         "options": [
           "Att beskriva ett speciellt kvarter",
           "Att berätta om en resa utan karta",
+          "Att jämföra kartor från olika länder",
           "Att förklara vad en karta är och hur man kan använda den"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "sammanfatta"
       }
     ],
@@ -14575,7 +14598,8 @@
         "options": [
           "Det avdunstar och blir vattenånga",
           "Det blir till sand",
-          "Det fryser till is"
+          "Det fryser till is",
+          "Det sjunker ner i marken"
         ],
         "correct": 0,
         "type": "literal"
@@ -14583,21 +14607,23 @@
       {
         "q": "Vad kan nederbörd vara enligt texten?",
         "options": [
+          "Bara morgondagg",
           "Bara dimma",
           "Bara åska",
           "Regn, snö eller hagel"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
         "q": "Varför är det viktigt att skydda sjöar och vattendrag från kemikalier?",
         "options": [
           "För att moln annars försvinner",
+          "För att regnet annars blir varmare",
           "För att solen annars slocknar",
           "För att samma vatten används om och om igen"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "inferens"
       },
       {
@@ -14605,6 +14631,7 @@
         "options": [
           "Längre duschar",
           "Spara vatten hemma",
+          "Vattna gräsmattan oftare",
           "Lämna kranen rinnande"
         ],
         "correct": 1,
@@ -14615,7 +14642,8 @@
         "options": [
           "Blir till sten",
           "Försvinner som ånga",
-          "Blir tyngre"
+          "Blir tyngre",
+          "Fryser till iskristaller"
         ],
         "correct": 1,
         "type": "ord"
@@ -14623,11 +14651,12 @@
       {
         "q": "Vad är textens huvudsakliga syfte?",
         "options": [
+          "Att lista världens största hav",
           "Att förklara hur vattnets kretslopp fungerar",
           "Att berätta en saga om moln",
           "Att beskriva en särskild sjö"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "sammanfatta"
       }
     ],
@@ -28855,10 +28884,11 @@
         "q": "Vilken tolkning ligger närmast textens syn på varför felaktig information ofta sprids?",
         "options": [
           "Den sprids mest när mottagare saknar utbildning och kan därför främst lösas genom mer undervisning.",
+          "Den sprids framför allt via plattformarnas algoritmer och kan därför lösas tekniskt.",
           "Den sprids främst avsiktligt och kan motverkas genom att identifiera illvilliga aktörer.",
           "Den sprids ofta genom vardagliga genvägar i bedömningar, även utan avsikt att vilseleda."
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -28866,6 +28896,7 @@
         "options": [
           "Den påverkar bara om mottagaren redan håller med om slutsatsen",
           "Den kan fungera som en signal som ersätter eller försvagar kontroll av innehållets stöd.",
+          "Den saknar betydelse så länge innehållet innehåller källhänvisningar.",
           "Den gör att mottagaren automatiskt söker primärkällor"
         ],
         "correct": 1,
@@ -28876,7 +28907,8 @@
         "options": [
           "De kan vara användbara men kräver särskild uppmärksamhet på kedjor av återgivning.",
           "De är mer tillförlitliga än primärkällor eftersom de redan har tolkats av experter.",
-          "De är i regel opålitliga eftersom de alltid återger felaktigheter."
+          "De är i regel opålitliga eftersom de alltid återger felaktigheter.",
+          "De bör bara användas när primärkällan är skriven på ett främmande språk."
         ],
         "correct": 0,
         "type": "inferens"
@@ -28884,17 +28916,19 @@
       {
         "q": "Vilken skillnad mellan två texter pekar författaren ut som särskilt viktig att upptäcka, även om båda verkar sakliga?",
         "options": [
+          "Att de kan publiceras i olika tidskrifter och därmed nå olika läsare.",
           "Att de kan använda samma begrepp men bygga dem på olika definitioner och mätningar.",
           "Att de kan ha olika typsnitt och därmed olika trovärdighet",
           "Att de kan ha olika längd och därmed olika noggrannhet"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
         "q": "I texten kopplas tvärsäkerhet och försiktighet till trovärdighet. Vilken tolkning stämmer bäst?",
         "options": [
           "Försiktighet kan signalera att avsändaren redovisar osäkerheter och felkällor, vilket kan öka tilliten.",
+          "Tvärsäkerhet och försiktighet säger lika lite, eftersom tonen inte hör ihop med innehållet.",
           "Försiktighet är alltid ett tecken på bristande kunskap",
           "Tvärsäkerhet är en nödvändig markör för kvalitet eftersom forskning ska ge entydiga svar"
         ],
@@ -28906,6 +28940,7 @@
         "options": [
           "Att avgöra trovärdighet främst genom avsändarens status",
           "Att formulera vilka uppgifter som skulle behövas för att stärka eller försvaga ett påstående.",
+          "Att i första hand jämföra hur många källor olika texter hänvisar till.",
           "Att undvika osäkerhet genom att endast läsa texter som uttrycker tydliga slutsatser"
         ],
         "correct": 1,
@@ -28930,7 +28965,8 @@
         "options": [
           "Öppen data är värdefull, men bör styras av risk- och syftesbedömningar snarare än absolut princip.",
           "Öppen data bör alltid prioriteras eftersom samhällsnyttan överstiger riskerna",
-          "Öppen data bör undvikas eftersom anonymisering i praktiken inte fungerar."
+          "Öppen data bör undvikas eftersom anonymisering i praktiken inte fungerar.",
+          "Öppen data är främst en teknisk fråga och avgörs bäst av den som förvaltar systemen."
         ],
         "correct": 0,
         "type": "literal"
@@ -28938,21 +28974,23 @@
       {
         "q": "Vad menas i texten med att information kan få \"nya egenskaper när den kombineras\"?",
         "options": [
+          "Att data blir mer användbar ju fler myndigheter som publicerar samma uppgifter.",
           "Att data kan bli identifierande eller skadlig först när den kopplas ihop med andra dataset.",
           "Att data tappar sitt värde om den inte presenteras i samma format",
           "Att data ofta blir mindre exakt när flera källor blandas."
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
         "q": "Vilken implicit kritik riktas mot en förenklad syn på anonymisering?",
         "options": [
           "Att anonymisering alltid leder till att resultat blir politiskt vinklade",
+          "Att anonymisering bara behövs när uppgifterna rör hälsa eller ekonomi.",
           "Att anonymisering innebär avvägningar mellan användbarhet och risk, och därför inte löser frågan ensam.",
           "Att anonymisering kräver att man känner till alla framtida analyser"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -28960,6 +28998,7 @@
         "options": [
           "För att den gör all data lika öppen men med längre fördröjning",
           "För att den behåller någon form av återanvändbarhet men fördelar risk genom villkor och begränsning.",
+          "För att den flyttar ansvaret från myndigheten till den som ansöker om åtkomst.",
           "För att den ersätter behovet av insyn med tekniska säkerhetssystem"
         ],
         "correct": 1,
@@ -28970,7 +29009,8 @@
         "options": [
           "Att endast privata aktörer får använda data för att undvika politisk påverkan",
           "Att datamängder alltid publiceras i rå form så att alla kan granska dem",
-          "Att riskbedömningar och ansvarsmekanismer är tydliga när publicering kan få negativa effekter."
+          "Att riskbedömningar och ansvarsmekanismer är tydliga när publicering kan få negativa effekter.",
+          "Att datamängderna uppdateras tillräckligt ofta för att förbli aktuella."
         ],
         "correct": 2,
         "type": "literal"
@@ -28978,11 +29018,12 @@
       {
         "q": "Vilket påstående passar bäst som textens underliggande värdeprioritering?",
         "options": [
+          "Effektivitet väger tyngst, eftersom snabb tillgång ger störst samhällsnytta.",
           "Innovation kräver full öppenhet, och därför är detaljerad data alltid att föredra",
           "Integritet är överordnad alla andra värden och bör alltid stoppa publicering.",
           "Insyn är viktig, men bör inte automatiskt ske på bekostnad av individers ofrivilliga exponering."
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       }
     ],
@@ -29003,10 +29044,11 @@
         "q": "Vilken tolkning av rummet framstår som mest förenlig med textens helhetsintryck?",
         "options": [
           "Rummet är utformat för att göra alla arbetsuppgifter likartade och minska variation i arbetssätt.",
+          "Rummet är utformat för att rymma så många arbetsplatser som möjligt på liten yta.",
           "Rummet är utformat för att stödja olika arbetslägen genom tydliga men tysta signaler i miljön.",
           "Rummet är utformat för att maximera social interaktion, även om fokus får stå tillbaka."
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -29025,9 +29067,10 @@
         "options": [
           "De visar främst status och signalerar vilka som har längst erfarenhet",
           "De används för att göra gångarna smalare och därmed minska rörelse.",
+          "De är placerade för att styra var dagsljuset faller in i rummet.",
           "De fungerar som visuella och akustiska gränser som delar upp rummet utan att stänga det."
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -29035,7 +29078,8 @@
         "options": [
           "Det är en plats som främst är till för att dölja störande ljud från resten av kontoret",
           "Det är en plats som främst används för individuellt arbete",
-          "Det är en plats där idéer prövas informellt och där arbetsrollen tillfälligt blir mer social."
+          "Det är en plats där idéer prövas informellt och där arbetsrollen tillfälligt blir mer social.",
+          "Det är en plats som fyller en dekorativ funktion snarare än en praktisk."
         ],
         "correct": 2,
         "type": "inferens"
@@ -29043,21 +29087,23 @@
       {
         "q": "I sista stycket används ordet \"rytm\". Vad syftar det mest på?",
         "options": [
+          "En bestämd turordning för vem som får använda de tysta zonerna.",
           "Ett mönster av växling mellan olika intensiteter och sociala nivåer, stödjat av miljön.",
           "En fast daglig rutin där alla arbetar i samma tempo",
           "Ett sätt att mäta produktivitet i antal rörelser mellan zoner"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "ord"
       },
       {
         "q": "Vilken underliggande idé om produktivitet antyds snarare än sägs rakt ut?",
         "options": [
           "Att produktivitet främst uppstår genom spontana avbrott",
+          "Att produktivitet går att mäta genom hur mycket varje zon används.",
           "Att produktivitet består av flera tillstånd som kräver olika typer av rumsligt stöd.",
           "Att produktivitet kräver långvarig tystnad och minimalt samarbete"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       }
     ],
@@ -29079,6 +29125,7 @@
         "options": [
           "En konflikt om huruvida utbildning över huvud taget behövs",
           "En konflikt mellan att vilja framstå som positiv och att vilja undvika risk och extra belastning.",
+          "En konflikt mellan olika avdelningar om vem som ska betala för införandet.",
           "En konflikt om vem som ska få mest erkännande när förändringen lyckas"
         ],
         "correct": 1,
@@ -29100,7 +29147,8 @@
         "options": [
           "Han är entusiastisk och helt obekymrad inför pilotens konsekvenser",
           "Han är motståndare till förändringen och vill sabotera processen",
-          "Han försöker framstå som positiv, men visar samtidigt spänning och ett behov av kontroll."
+          "Han försöker framstå som positiv, men visar samtidigt spänning och ett behov av kontroll.",
+          "Han har redan bestämt sig och väntar bara på att mötet ska ta slut."
         ],
         "correct": 2,
         "type": "literal"
@@ -29108,17 +29156,19 @@
       {
         "q": "Varför kan Saras erbjudande om att delta i piloten uppfattas som ambivalent?",
         "options": [
+          "Det framstår som ett krav från ledningen som hon inte kunde säga nej till.",
           "Det framstår både som ett steg framåt och som ett sätt att undvika passivitet, utan full klarhet om följderna.",
           "Det framstår som ett beslut som togs efter att alla risker redan var utredda",
           "Det framstår främst som ett sätt att vinna status och synlighet inför chefen."
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "inferens"
       },
       {
         "q": "Vilken innebörd har uttrycket att tystnaden var \"full av beräkningar\" i sammanhanget?",
         "options": [
           "Att deltagarna vägde personliga och organisatoriska konsekvenser innan de tog ställning.",
+          "Att deltagarna väntade på att någon med högre befattning skulle tala först.",
           "Att deltagarna räknade på budgeten och därför behövde tid med siffrorna.",
           "Att deltagarna försökte komma ihåg innehållet i presentationen för att kunna sammanfatta den."
         ],
@@ -29130,6 +29180,7 @@
         "options": [
           "Att människors tolkningar och upplevda förluster ofta styr utfallet mer än själva planen.",
           "Att förändring främst är en kommunikationsfråga där rätt ordval löser motstånd",
+          "Att förändringar lyckas när de införs snabbt innan motståndet hinner växa.",
           "Att en tydlig plan alltid räcker, eftersom människor i längden anpassar sig."
         ],
         "correct": 0,
@@ -29165,7 +29216,8 @@
         "options": [
           "För att absolut förändring alltid är mer vetenskaplig än relativ förändring.",
           "För att de beskriver olika data och därför sällan kan vara samtidigt korrekta",
-          "För att de tenderar att aktivera olika tolkningar av hur stor förändringen upplevs vara."
+          "För att de tenderar att aktivera olika tolkningar av hur stor förändringen upplevs vara.",
+          "För att relativ förändring bara får användas när urvalet är slumpmässigt."
         ],
         "correct": 2,
         "type": "inferens"
@@ -29173,21 +29225,23 @@
       {
         "q": "Vilken distinktion mellan statistisk signifikans och praktisk betydelse antyds som viktigast?",
         "options": [
+          "Att praktisk betydelse alltid följer av signifikans när studien är tillräckligt stor.",
           "Att signifikans handlar om effektens storlek, medan praktisk betydelse handlar om urvalets storlek",
           "Att signifikans kan uppstå även vid små effekter, och därför måste effektstorlek och kontext vägas in.",
           "Att praktisk betydelse kan avgöras direkt genom att titta på p-värdet utan andra mått."
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
         "q": "Vad är den mest rimliga innebörden av att man ibland kan \"justera bort en del av det man vill förstå\"?",
         "options": [
           "Att kontrollvariabler alltid förvränger resultat och därför inte bör användas",
+          "Att fler kontrollvariabler alltid ger en mer rättvisande bild av sambandet.",
           "Att vissa variabler kan ligga i orsakskedjan, så kontroll kan dölja ett samband man försöker förklara.",
           "Att statistiska modeller fungerar bäst med endast en variabel"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -29195,9 +29249,10 @@
         "options": [
           "Generaliserbarhet avgörs främst av om studien har använt en avancerad modell.",
           "Ett robust resultat är automatiskt giltigt för alla populationer om det är signifikant",
+          "Generaliserbarhet ökar automatiskt med antalet deltagare i studien.",
           "Generaliserbarhet beror på hur väl urval och villkor matchar den situation man vill uttala sig om."
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -29205,7 +29260,8 @@
         "options": [
           "För att visa att statistik främst handlar om retorik och inte om mätningar.",
           "För att antyda att statistiska resultat alltid kan översättas till en enda entydig slutsats",
-          "För att betona att tolkning kräver aktiva frågor om jämförelser, antaganden och alternativa förklaringar."
+          "För att betona att tolkning kräver aktiva frågor om jämförelser, antaganden och alternativa förklaringar.",
+          "För att markera att statistik bör läras ut på samma sätt som grammatik."
         ],
         "correct": 2,
         "type": "inferens"
