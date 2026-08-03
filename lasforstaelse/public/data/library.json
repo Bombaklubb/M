@@ -536,12 +536,12 @@
         "type": "inferens",
         "q": "Varför är trähästen sliten?",
         "options": [
+          "För att den är alldeles ny",
+          "För att den är gjord av plast",
           "För att farmor lekte mycket med den förr",
-          "För att den är ny",
-          "För att den är av plast",
-          "För att den är våt"
+          "För att den har blivit våt"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -584,10 +584,10 @@
         "options": [
           "Idrottslektion",
           "Musiklektion",
-          "Bildlektion",
-          "Mattelektion"
+          "Mattelektion",
+          "Bildlektion"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -674,23 +674,23 @@
         "type": "literal",
         "q": "Ge ett exempel på hur man kan spara el som står i texten.",
         "options": [
+          "Släcka lampan när man går ut",
           "Äta glass efter maten",
           "Rita en sol på papper",
-          "Hoppa högt på gården",
-          "Släcka lampan när man går ut"
+          "Hoppa högt på gården"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad kan klassen ha enligt texten för att komma ihåg att släcka?",
         "options": [
-          "En släckare som påminner",
           "En ballong att blåsa upp",
+          "En släckare som påminner",
           "En cykel att låna ut",
           "En hund som skäller"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -779,12 +779,12 @@
         "type": "inferens",
         "q": "Varför är Mateo osäker först?",
         "options": [
+          "Han kan inte se var lådorna står",
+          "Han är hungrig efter maten",
           "Han undrar om han ska säga till kompisen",
-          "Han kan inte se lådorna",
-          "Han är hungrig",
-          "Han har ingen penna"
+          "Han har ingen penna med sig"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -859,12 +859,12 @@
         "type": "inferens",
         "q": "Varför blir Farah varm i ansiktet i början?",
         "options": [
-          "För att det lät rörigt och hon blev osäker",
-          "För att hon åt soppa",
-          "För att hon sprang",
-          "För att lampan var stark"
+          "För att hon åt soppa till lunch",
+          "För att hon sprang till skolan",
+          "För att lampan lyste för starkt",
+          "För att det lät rörigt och hon blev osäker"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -881,12 +881,12 @@
         "type": "inferens",
         "q": "Hur känner Farah sig i slutet?",
         "options": [
-          "Ledsen och alldeles ensam",
           "Stolt och sugen på att spela mer",
+          "Ledsen och alldeles ensam",
           "Arg och väldigt trött",
           "Rädd och genomfrusen"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop",
@@ -907,11 +907,11 @@
         "q": "Vad gör klassen på samlingen?",
         "options": [
           "Sover en stund",
-          "Badar i bassäng",
           "Sjunger en sång",
+          "Badar i bassäng",
           "Springer ute"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -963,10 +963,10 @@
         "options": [
           "Att orden inte behövs när man sjunger",
           "Att det gäller att sjunga allra högst",
-          "Att det är bäst att aldrig sjunga alls",
-          "Att lyssna och sjunga i samma takt som andra"
+          "Att lyssna och sjunga i samma takt som andra",
+          "Att det är bäst att aldrig sjunga alls"
         ],
-        "correct": 3
+        "correct": 2
       }
     ],
     "meta": {
@@ -1105,12 +1105,12 @@
         "type": "inferens",
         "q": "Varför växer roten ner i jorden?",
         "options": [
-          "För att hitta vatten och hålla fast",
           "För att kunna sjunga på natten",
           "För att kunna flyga i vinden",
-          "För att kunna leka med djuren"
+          "För att kunna leka med djuren",
+          "För att hitta vatten och hålla fast"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -1185,21 +1185,21 @@
         "type": "inferens",
         "q": "Varför kan vatten samlas i pölar när marken är hård?",
         "options": [
-          "För att solen lyser alldeles för starkt",
           "För att vattnet inte kan sjunka ner lika lätt",
+          "För att solen lyser alldeles för starkt",
           "För att allt gräs har försvunnit",
           "För att pölarna är målade på marken"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför är regn viktigt för växter?",
         "options": [
-          "För att regn är varmt",
+          "För att regnet nästan alltid är varmt",
           "För att växter behöver vatten för att växa",
-          "För att växter blir blå",
-          "För att växter vill bada"
+          "För att växterna då blir blå",
+          "För att växterna gärna vill bada"
         ],
         "correct": 1
       },
@@ -1843,23 +1843,23 @@
         "type": "inferens",
         "q": "Varför hoppar Amir kort första gången?",
         "options": [
-          "Han är osäker och springer långsamt",
-          "Han har inga skor",
-          "Han vill fuska",
-          "Han gillar inte sand"
+          "Han har inga riktiga skor på sig",
+          "Han vill fuska i tävlingen",
+          "Han gillar inte sanden",
+          "Han är osäker och springer långsamt"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
         "q": "Varför blir Amir glad i slutet?",
         "options": [
+          "Han märker att han kan bli bättre",
           "Han får glass efter loppet",
           "Han slipper idrotten idag",
-          "Han blir arg på tränaren",
-          "Han märker att han kan bli bättre"
+          "Han blir arg på tränaren"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -1912,12 +1912,12 @@
         "type": "literal",
         "q": "Vad gör de på väggen när lampan lyser?",
         "options": [
-          "Gör skuggor med händerna",
           "Ritar med färgkritor",
+          "Gör skuggor med händerna",
           "Skriver ett prov",
           "Sover en liten stund"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -1935,11 +1935,11 @@
         "q": "Hur löser Mei problemet?",
         "options": [
           "Hon kastar bort alltsammans",
-          "Hon tittar noga och sätter fast sladden",
           "Hon gömmer undan batteriet",
+          "Hon tittar noga och sätter fast sladden",
           "Hon ropar högt på hjälp"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -2171,10 +2171,10 @@
         "options": [
           "Recept på olika efterrätter",
           "Kartor över gamla städer",
-          "Bilder på planeter och stjärnor",
-          "Spel med tärningar och brickor"
+          "Spel med tärningar och brickor",
+          "Bilder på planeter och stjärnor"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -2822,12 +2822,12 @@
         "type": "literal",
         "q": "Vem kommer förbi?",
         "options": [
+          "Fatima",
           "Leonard",
           "Miriam",
-          "Kimberly",
-          "Fatima"
+          "Kimberly"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
@@ -2905,12 +2905,12 @@
         "type": "literal",
         "q": "Vad lägger de på brädan?",
         "options": [
-          "Lite bröd",
           "Små frön",
+          "Lite bröd",
           "Kokt ris",
           "Lite godis"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -3247,12 +3247,12 @@
         "type": "inferens",
         "q": "Varför håller Elias hårt i mössan hela vägen?",
         "options": [
+          "Mössan är alldeles ny och väldigt fin",
+          "Mira sa att han måste göra så",
           "Han vill inte att den ska blåsa bort igen",
-          "Mössan är ny och fin",
-          "Mira sa att han måste",
-          "Det är en del av en lek"
+          "Det är en del av en rolig lek"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -3317,11 +3317,11 @@
         "q": "Var sitter katten?",
         "options": [
           "Uppe på husets tak",
-          "Under ett äppelträd",
           "Precis vid dörren",
-          "Inne i en buske"
+          "Inne i en buske",
+          "Under ett äppelträd"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -3504,12 +3504,12 @@
         "type": "inferens",
         "q": "Hur tycker de att valen ser ut?",
         "options": [
+          "Mycket stor",
           "Ganska liten",
           "Alldeles rund",
-          "Mycket stor",
           "Väldigt snabb"
         ],
-        "correct": 2
+        "correct": 0
       }
     ],
     "meta": {
@@ -3671,11 +3671,11 @@
         "q": "Vad ser de utanför?",
         "options": [
           "Bara raka vägar",
+          "Träd hus och sjöar",
           "Bara tät skog",
-          "Ingenting alls",
-          "Träd hus och sjöar"
+          "Ingenting alls"
         ],
-        "correct": 3
+        "correct": 1
       }
     ],
     "meta": {
@@ -4196,12 +4196,12 @@
         "type": "literal",
         "q": "Var väntar Sara?",
         "options": [
-          "Vid hållplatsen",
           "Inne i skolan",
           "Inne i skogen",
+          "Vid hållplatsen",
           "Inne i huset"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -4230,11 +4230,11 @@
         "q": "Vad ser hon?",
         "options": [
           "Fiskar i sjön",
-          "Hus och träd",
           "Bilar på vägen",
-          "Berg i fjärran"
+          "Berg i fjärran",
+          "Hus och träd"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -4727,12 +4727,12 @@
         "type": "literal",
         "q": "Vilket djur ser Ali?",
         "options": [
-          "Katt",
-          "Hund",
-          "Häst",
-          "Elefant"
+          "Elefant",
+          "Kanin",
+          "Valross",
+          "Zebra"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -5027,11 +5027,11 @@
         "q": "Var väntar Sara?",
         "options": [
           "Inne i skogen",
-          "Inne i huset",
           "Vid hållplatsen",
+          "Inne i huset",
           "Inne i skolan"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -5449,12 +5449,12 @@
         "type": "literal",
         "q": "Vad ger Inez till Hassan när han inte hittar sitt sudd?",
         "options": [
-          "En glass",
+          "En liten glass",
+          "En röd boll",
           "Ett extra sudd",
-          "En boll",
-          "En keps"
+          "En blå keps"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -6021,12 +6021,12 @@
         "type": "literal",
         "q": "Vad är deepfakes?",
         "options": [
+          "Vanliga konton på sociala medier",
           "Manipulerade video- eller ljudinspelningar",
-          "Sociala medie-konton",
-          "Faktakontrollverktyg",
-          "Verkliga nyhetsrapporter"
+          "Verktyg för att faktakontrollera",
+          "Verkliga nyhetsrapporter i tv"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -6729,12 +6729,12 @@
         "type": "inferens",
         "q": "Vad menar texten med att snällhet kan smitta?",
         "options": [
-          "Att man blir sjuk av att vara snäll",
-          "Att mössor hoppar runt",
-          "Att alla måste låna vantar",
-          "Att en god handling kan göra att andra också vill vara snälla"
+          "Att man kan bli sjuk av att vara snäll",
+          "Att mössor hoppar runt av sig själva",
+          "Att en god handling kan göra att andra också vill vara snälla",
+          "Att alla måste låna ut sina vantar"
         ],
-        "correct": 3
+        "correct": 2
       }
     ],
     "meta": {
@@ -6852,11 +6852,11 @@
         "q": "Vad dricker de när de vilar?",
         "options": [
           "Kall läsk",
-          "Varm choklad",
           "Kall saft",
-          "Varm mjölk"
+          "Varm mjölk",
+          "Varm choklad"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -7183,12 +7183,12 @@
         "type": "literal",
         "q": "Vad kunde barn göra förr i stället för att gå i skolan?",
         "options": [
+          "Arbeta eller hjälpa till hemma",
           "Skriva långa texter på dator",
           "Åka tunnelbana till stan",
-          "Arbeta eller hjälpa till hemma",
           "Spela tv-spel på kvällen"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -7206,11 +7206,11 @@
         "q": "Varför är skolplikt bra enligt textens idé?",
         "options": [
           "För att man ska slippa träffa vänner",
+          "För att skolan ska hjälpa alla att lära sig viktiga saker",
           "För att ingen behöver lära sig något",
-          "För att alla ska ha likadana jackor",
-          "För att skolan ska hjälpa alla att lära sig viktiga saker"
+          "För att alla ska ha likadana jackor"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -7454,12 +7454,12 @@
         "type": "inferens",
         "q": "Varför är det smart av ekorren att gömma mat på många ställen?",
         "options": [
-          "För att den kan hitta mat även om något ställe försvinner",
           "För att den inte gillar nötter alls",
           "För att den vill lura barnen i parken",
+          "För att den kan hitta mat även om något ställe försvinner",
           "För att den vill hålla skogen städad"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -7759,22 +7759,22 @@
         "q": "Vad fanns i kassen?",
         "options": [
           "Godis, glass och en läsk",
-          "Mjölk, bröd, äpplen och en tidning",
           "Kläder, skor och strumpor",
-          "Böcker, pennor och sudd"
+          "Böcker, pennor och sudd",
+          "Mjölk, bröd, äpplen och en tidning"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "Vad fick barnen av Margit?",
         "options": [
+          "En kanelbulle var",
           "Pengar till glass",
           "En leksak var",
-          "En kanelbulle var",
           "Äpplen i en påse"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -7828,11 +7828,11 @@
         "q": "Vad är snö egentligen?",
         "options": [
           "Kallt damm som faller ner",
+          "Vatten som frusit till iskristaller",
           "Vit sand som faller från skyn",
-          "Moln som har ramlat ner",
-          "Vatten som frusit till iskristaller"
+          "Moln som har ramlat ner"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "literal",
@@ -7929,12 +7929,12 @@
         "type": "literal",
         "q": "Vad fanns i plåtburken?",
         "options": [
-          "Tre stenar, en pärla av glas och en lapp",
           "Sand och små snäckor från havsstranden",
           "Pengar och godis i ett litet paket",
+          "Tre stenar, en pärla av glas och en lapp",
           "En nyckel och en ring av silver"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -7952,11 +7952,11 @@
         "q": "Varför lade de tillbaka burken?",
         "options": [
           "De ville inte ha burken kvar hemma hos sig",
-          "De tyckte det var roligare om någon annan också kunde hitta en skatt",
           "De var rädda för att få skäll av sina föräldrar",
-          "Burken var alldeles för tung att bära hem"
+          "Burken var alldeles för tung att bära hem",
+          "De tyckte det var roligare om någon annan också kunde hitta en skatt"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -8171,12 +8171,12 @@
       {
         "q": "Var hamnade bollen?",
         "options": [
+          "I en buske med taggar",
           "I en bäck vid vägen",
           "Uppe på ett lågt tak",
-          "I en buske med taggar",
           "Mitt ute på vägen"
         ],
-        "correct": 2,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -8586,11 +8586,11 @@
         "q": "Vem ringer mamma?",
         "options": [
           "En polis i närheten",
+          "En granne som har kaniner",
           "En lärare från skolan",
-          "En kompis till Ture",
-          "En granne som har kaniner"
+          "En kompis till Ture"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -8668,12 +8668,12 @@
         "type": "literal",
         "q": "Vad finns i plånboken förutom busskortet?",
         "options": [
-          "Ett foto på en hund",
           "En karta över stan",
           "Ett äpple i en påse",
+          "Ett foto på en hund",
           "En liten leksaksbil"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -8835,11 +8835,11 @@
         "q": "Vad säger farfar att den blinkande pricken kan vara?",
         "options": [
           "En lampa i ett hus långt bort",
-          "En planet eller en stjärna långt bort",
           "En flygplats utanför staden",
-          "En billykta på en väg"
+          "En billykta på en väg",
+          "En planet eller en stjärna långt bort"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -8978,12 +8978,12 @@
         "type": "literal",
         "q": "Vad lagar pappa på fredagen?",
         "options": [
+          "Pannkakor",
           "Grönsakssoppa",
           "Havregröt",
-          "Pannkakor",
           "Hemgjord pizza"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -9095,11 +9095,11 @@
         "q": "Varför blir Aya nervös när lördagen kommer?",
         "options": [
           "För att hon har glömt sin väska hemma i hallen",
+          "För att hon väntar på gäster och vill att allt ska bli bra",
           "För att hon inte tycker om tårta",
-          "För att hon känner sig lite sjuk",
-          "För att hon väntar på gäster och vill att allt ska bli bra"
+          "För att hon känner sig lite sjuk"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "ord",
@@ -9155,12 +9155,12 @@
         "type": "inferens",
         "q": "Varför är det smart av trädet att släppa löven på vintern?",
         "options": [
-          "För att spara energi när det är kallt",
           "För att kunna få mer frukt nästa år",
           "För att kunna bli ännu högre",
+          "För att spara energi när det är kallt",
           "För att locka fler fåglar dit"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -9344,11 +9344,11 @@
         "q": "Vad kan personalen hjälpa dig med enligt texten?",
         "options": [
           "Att laga din cykel om den går sönder",
-          "Att hitta rätt bok eller söka information",
           "Att måla om huset där du bor",
-          "Att träna din hund på helgen"
+          "Att träna din hund på helgen",
+          "Att hitta rätt bok eller söka information"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "ord",
@@ -9404,12 +9404,12 @@
         "type": "inferens",
         "q": "Varför tar Amir ett steg tillbaka?",
         "options": [
+          "För att cyklisten kommer snabbt och bromsar sent",
           "För att han ser en fågel i luften",
           "För att han hellre vill leka",
-          "För att cyklisten kommer snabbt och bromsar sent",
           "För att han har tappat sin sko"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -9560,11 +9560,11 @@
         "q": "Vad är en rast?",
         "options": [
           "En utflykt med klassen",
+          "En paus mellan lektionerna",
           "En läxa till nästa dag",
-          "En dag med prov",
-          "En paus mellan lektionerna"
+          "En dag med prov"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -9592,12 +9592,12 @@
         "type": "inferens",
         "q": "Vad kan hända om man aldrig får rast?",
         "options": [
-          "Man kan bli trött och ha svårare att koncentrera sig",
           "Man behöver då aldrig vila under dagen",
           "Man lär sig allting mycket snabbare",
+          "Man kan bli trött och ha svårare att koncentrera sig",
           "Man blir alltid starkare av det"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "ord",
@@ -9726,11 +9726,11 @@
         "q": "Vad är uppvärmning enligt texten?",
         "options": [
           "När man äter frukost före träning",
-          "När man gör kroppen redo för att träna",
           "När man sitter helt stilla",
-          "När man sover länge på morgonen"
+          "När man sover länge på morgonen",
+          "När man gör kroppen redo för att träna"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -9830,12 +9830,12 @@
         "type": "literal",
         "q": "Vilken färg kan äpplen ha enligt texten?",
         "options": [
+          "Röda, gröna eller gula",
           "Blå eller ljusblå",
           "Lila och mörklila",
-          "Röda, gröna eller gula",
           "Svarta eller gråa"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -10152,11 +10152,11 @@
         "q": "Var ligger äpplena i början av tävlingen?",
         "options": [
           "I en stor trälåda",
+          "I en skål med vatten",
           "På ett långbord",
-          "I en flätad korg",
-          "I en skål med vatten"
+          "I en flätad korg"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "literal",
@@ -10184,12 +10184,12 @@
         "type": "inferens",
         "q": "Vad får vinnarlaget?",
         "options": [
-          "En korg med extra frukt",
           "En fotboll till klassen",
           "En bok om idrott",
+          "En korg med extra frukt",
           "En medalj i guld"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -10928,11 +10928,11 @@
         "q": "Vad är textens viktigaste budskap?",
         "options": [
           "Att alla sjöar alltid är stora och djupa",
-          "Att kartor hjälper oss att planera, även om de inte visar allt",
           "Att man alltid ska undvika att gå över broar",
-          "Att kartor inte behövs när man är i en stad"
+          "Att kartor inte behövs när man är i en stad",
+          "Att kartor hjälper oss att planera, även om de inte visar allt"
         ],
-        "correct": 1,
+        "correct": 3,
         "type": "literal"
       }
     ],
@@ -11528,12 +11528,12 @@
       {
         "q": "Vad är Marabou mest känd för?",
         "options": [
+          "Mjölkchoklad",
           "Gräddglass",
           "Läskedryck",
-          "Mjölkchoklad",
           "Knäckebröd"
         ],
-        "correct": 2,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -11610,12 +11610,12 @@
       {
         "q": "Var växer kakaobönor?",
         "options": [
+          "På kalla och höga fjäll",
           "I varma länder nära ekvatorn",
-          "På kalla fjäll",
-          "I svenska parker",
-          "Under marken"
+          "I svenska stadsparker",
+          "Långt nere under marken"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
@@ -11727,10 +11727,10 @@
         "options": [
           "Bakar kakor i fabrikens kök",
           "Kör buss mellan fabrikerna",
-          "Designar loggor och etiketter",
-          "Planerar hur varor körs till affärer"
+          "Planerar hur varor körs till affärer",
+          "Designar loggor och etiketter"
         ],
-        "correct": 3,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -11891,12 +11891,12 @@
         "type": "inferens",
         "q": "Hur tror du Milad känner sig i slutet av texten?",
         "options": [
-          "Glad och mer trygg",
           "Rädd och osäker",
           "Arg och besviken",
-          "Uttråkad och trött"
+          "Uttråkad och trött",
+          "Glad och mer trygg"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "ord",
@@ -11963,12 +11963,12 @@
         "type": "literal",
         "q": "Vad tar Vera fram ur sin ryggsäck?",
         "options": [
-          "Ett äpple och en banan",
           "Ett extra par vantar",
+          "Ett äpple och en banan",
           "En varm stickad mössa",
           "En bok från biblioteket"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -12130,11 +12130,11 @@
         "q": "Vilken sak fastnar inte på magneten?",
         "options": [
           "Bara träbiten och inget mer",
-          "Gemen och myntet tillsammans",
           "Båda: träbiten och plastskeden",
+          "Gemen och myntet tillsammans",
           "Gemen, som hoppade upp direkt"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -12142,21 +12142,21 @@
         "options": [
           "Det är för lätt för att kunna röra sig alls",
           "Det är gjort av papper och inte av metall",
-          "Det är för varmt för att magneten ska verka",
-          "Det är gjort av en metall som magneten inte drar lika mycket i"
+          "Det är gjort av en metall som magneten inte drar lika mycket i",
+          "Det är för varmt för att magneten ska verka"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "ord",
         "q": "Vad betyder ordet \"experiment\" i texten?",
         "options": [
-          "Ett försök där man testar",
-          "En sorts läxa",
-          "Ett långt prov",
-          "En bok om djur"
+          "En sorts läxa till nästa dag",
+          "Ett långt skriftligt prov",
+          "En bok som handlar om djur",
+          "Ett försök där man testar"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "sammanfatta",
@@ -12272,12 +12272,12 @@
       {
         "q": "Vilka material nämns som sådant man kan sortera hemma?",
         "options": [
-          "Bara tyg och ull",
-          "Papper, plast, glas och metall",
+          "Bara tyger, ull och garn",
           "Bara trä och sten",
-          "Bara mat"
+          "Bara matrester",
+          "Papper, plast, glas och metall"
         ],
-        "correct": 1,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -12812,12 +12812,12 @@
       {
         "q": "Vad är textens syfte?",
         "options": [
-          "Att övertala alla att köpa böcker",
           "Att förklara vad ett bibliotek erbjuder och hur det fungerar",
+          "Att övertala alla att köpa fler böcker",
           "Att beskriva en enda biblioteksbok",
-          "Att berätta om en persons besök"
+          "Att berätta om en persons besök där"
         ],
-        "correct": 1,
+        "correct": 0,
         "type": "sammanfatta"
       }
     ],
@@ -12930,11 +12930,11 @@
         "q": "Var finns magma innan ett utbrott?",
         "options": [
           "Högt uppe i molnen",
+          "Djupt nere i jorden",
           "Långt ute i havet",
-          "Inuti stora träd",
-          "Djupt nere i jorden"
+          "Inuti stora träd"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "literal",
@@ -13084,12 +13084,12 @@
         "type": "literal",
         "q": "Varför går klassen till biblioteket?",
         "options": [
-          "För att se en utställning om förr i tiden",
           "För att äta lunch tillsammans",
           "För att ha idrottslektion där",
+          "För att se en utställning om förr i tiden",
           "För att spela spel med klassen"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -13107,11 +13107,11 @@
         "q": "Vad ska eleverna skriva efter besöket?",
         "options": [
           "Ett matteprov om gamla tal",
-          "Ett eget brev som om de levde förr",
           "En affisch om vilda djur",
-          "En låt om skolans historia"
+          "En låt om skolans historia",
+          "Ett eget brev som om de levde förr"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -13128,23 +13128,23 @@
         "type": "inferens",
         "q": "Varför känns historia mer verklig för Aria när hon läser brevet?",
         "options": [
-          "För att hon gillar papper",
           "För att hon hör en persons röst och känslor, inte bara årtal",
-          "För att brevet är längre än en bok",
-          "För att biblioteket är tyst"
+          "För att hon verkligen tycker om gammalt papper",
+          "För att brevet är längre än en hel bok",
+          "För att det är alldeles tyst i biblioteket"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
         "q": "Vad visar Arias eget brev om hennes förståelse?",
         "options": [
           "Att vänskap inte alls fanns förr i tiden",
-          "Att ingen alls flyttade förr i tiden",
           "Att människor förr kunde känna längtan och mod, precis som nu",
+          "Att ingen alls flyttade förr i tiden",
           "Att människor förr var helt olika oss"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=600&h=400&fit=crop",
@@ -13177,10 +13177,10 @@
         "options": [
           "Spela musik på en scen inne i stan",
           "Läsa serietidningar hela dagen",
-          "Träna på ett gym efter skolan",
-          "Hjälpa till på gården, särskilt vid skörd"
+          "Hjälpa till på gården, särskilt vid skörd",
+          "Träna på ett gym efter skolan"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "literal",
@@ -13337,12 +13337,12 @@
       {
         "q": "Vilket material tar texten upp som exempel på något som sparar mycket energi att återvinna?",
         "options": [
-          "Aluminium",
           "Lergods",
           "Ullgarn",
-          "Trävirke"
+          "Trävirke",
+          "Aluminium"
         ],
-        "correct": 0,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -13381,12 +13381,12 @@
       {
         "q": "Vad menar texten med att små val kan bli stor skillnad?",
         "options": [
-          "Att sopor blir större",
-          "Att återvinning bara är en lek",
-          "Att en person kan göra allt",
-          "Att många små handlingar tillsammans påverkar mycket"
+          "Att många små handlingar tillsammans påverkar mycket",
+          "Att soporna hela tiden blir större",
+          "Att återvinning bara är en rolig lek",
+          "Att en enda person kan göra allting"
         ],
-        "correct": 3,
+        "correct": 0,
         "type": "inferens"
       }
     ],
@@ -13621,12 +13621,12 @@
       {
         "q": "Vad visar texten om varför myror klarar sig bra?",
         "options": [
-          "De äter bara blad",
           "De samarbetar och testar nya vägar",
-          "De flyger långt",
-          "De sover hela dagen"
+          "De äter enbart gröna löv och blad",
+          "De flyger långa sträckor",
+          "De sover nästan hela dagen"
         ],
-        "correct": 1,
+        "correct": 0,
         "type": "literal"
       }
     ],
@@ -13691,12 +13691,12 @@
         "type": "literal",
         "q": "Vad kan man plocka i skogen?",
         "options": [
-          "Bär och svamp",
           "Bilar och cyklar",
+          "Bär och svamp",
           "Glass och godis",
           "Stolar och bord"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "sammanfatta",
@@ -13751,12 +13751,12 @@
       {
         "q": "Vad säger tränaren efter matchen?",
         "options": [
-          "Att vinden var för stark",
+          "Att vinden var alldeles för stark",
+          "Att man aldrig ska passa bollen",
           "Att ett mål ofta börjar med en bra passning",
-          "Att man aldrig ska passa",
-          "Att domaren var fel"
+          "Att domaren dömde helt fel"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -13785,11 +13785,11 @@
         "q": "Vad visar berättelsen om mod i sport?",
         "options": [
           "Att mod är att skrika allra högst av alla",
-          "Att mod kan vara att passa när det är rätt och lita på laget",
           "Att mod är att låta bli att spela alls",
-          "Att mod bara är att skjuta själv på mål"
+          "Att mod bara är att skjuta själv på mål",
+          "Att mod kan vara att passa när det är rätt och lita på laget"
         ],
-        "correct": 1,
+        "correct": 3,
         "type": "literal"
       }
     ],
@@ -13809,12 +13809,12 @@
       {
         "q": "Vad bygger klassen på tekniklektionen?",
         "options": [
-          "En cykel",
-          "En båt",
-          "En drake",
-          "En liten robot"
+          "En liten robot",
+          "En liten cykel",
+          "En liten båt",
+          "En stor drake"
         ],
-        "correct": 3,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -13831,10 +13831,10 @@
       {
         "q": "Vad gör de för att roboten ska åka mer rakt?",
         "options": [
-          "Sätter på en skärm",
+          "Sätter på en liten skärm framtill",
           "Flyttar hjulen så de sitter lika",
-          "Målar den",
-          "Tar bort motorn"
+          "Målar om den i en ny färg",
+          "Tar bort motorn helt och hållet"
         ],
         "correct": 1,
         "type": "literal"
@@ -13853,10 +13853,10 @@
       {
         "q": "Varför kör roboten åt sidan när hjulen sitter fel?",
         "options": [
-          "För att motorn blir trött",
-          "För att linjen drar den",
+          "För att motorn blir trött av det",
+          "För att linjen drar den åt sidan",
           "För att den får obalans och styr åt ett håll",
-          "För att stolen rör sig"
+          "För att stolen rör sig lite"
         ],
         "correct": 2,
         "type": "inferens"
@@ -13936,10 +13936,10 @@
         "options": [
           "För att kablarna ska kunna bli kortare",
           "För att broar alltid måste vara små",
-          "För att se hur bron klarar belastning och hitta fel i tid",
-          "För att slippa rita hela ritningen"
+          "För att slippa rita hela ritningen",
+          "För att se hur bron klarar belastning och hitta fel i tid"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -14230,12 +14230,12 @@
         "type": "literal",
         "q": "Vad är nori?",
         "options": [
+          "Ett tunt sjögräs som används runt sushi",
           "En sorts fisk som ofta läggs på ris",
           "En kryddig sås som serveras till",
-          "En sorts ris som kokas långsamt",
-          "Ett tunt sjögräs som används runt sushi"
+          "En sorts ris som kokas långsamt"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
@@ -14324,12 +14324,12 @@
         "type": "literal",
         "q": "Vad handlar hennes låtar ofta om?",
         "options": [
-          "Vänskap, kärlek och att tro på sig själv",
           "Rymden och främmande planeter",
+          "Vänskap, kärlek och att tro på sig själv",
           "Matlagning och gamla recept",
           "Gamla sagor från förr"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -14714,11 +14714,11 @@
         "q": "Vad består moln av enligt texten?",
         "options": [
           "Bomull och andra lätta gaser",
-          "Små vattendroppar eller iskristaller",
           "Damm och sand från marken",
+          "Små vattendroppar eller iskristaller",
           "Rök från fabriker och bilar"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -14897,10 +14897,10 @@
         "options": [
           "Gömmer repet i väskan",
           "Börjar rita på asfalten",
-          "Hoppar hopprep med Hugo",
-          "Går hem tidigare än vanligt"
+          "Går hem tidigare än vanligt",
+          "Hoppar hopprep med Hugo"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -15139,23 +15139,23 @@
         "type": "literal",
         "q": "Varför kan en båt av metall flyta enligt texten?",
         "options": [
+          "För att båten har luft inuti så att densiteten för hela båten blir lägre",
           "För att vattnet stöter bort metall av sig självt",
           "För att metall alltid flyter oavsett form",
-          "För att båtar är målade med flytande färg",
-          "För att båten har luft inuti så att densiteten för hela båten blir lägre"
+          "För att båtar är målade med flytande färg"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför sjunker ofta en tät boll av aluminiumfolie, men en skålformad bit kan flyta?",
         "options": [
-          "För att skålformen tränger undan mer vatten och håller luft, vilket ökar lyftkraften",
           "För att en boll alltid hamnar snett när den släpps i vatten",
+          "För att skålformen tränger undan mer vatten och håller luft, vilket ökar lyftkraften",
           "För att vatten dras till aluminium men stöter bort andra metaller",
           "För att skålens form är snyggare och därför flyter bättre"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -15339,11 +15339,11 @@
         "q": "Vilken fråga föreslår texten att man kan ställa när man tycker något är orättvist?",
         "options": [
           "Vem av alla i klassen är egentligen bäst på det här?",
-          "Menar jag att det inte är lika, eller att någon inte får det stöd den behöver?",
           "När är nästa lov och hur långt är det dit?",
+          "Menar jag att det inte är lika, eller att någon inte får det stöd den behöver?",
           "Varför finns skolan och vem bestämde det?"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&h=400&fit=crop",
@@ -15376,10 +15376,10 @@
         "options": [
           "Smält glass",
           "Fin sand",
-          "Torra löv",
-          "Hård plast"
+          "Hård plast",
+          "Torra löv"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
@@ -15396,34 +15396,34 @@
         "type": "inferens",
         "q": "Varför är torra löv viktiga i komposten?",
         "options": [
+          "För att det ska bli lagom fuktigt och maskarna ska trivas",
           "För att all plast ska försvinna av sig själv",
           "För att det ska bli mer mat i komposten",
-          "För att komposten ska få en blå färg",
-          "För att det ska bli lagom fuktigt och maskarna ska trivas"
+          "För att komposten ska få en blå färg"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
         "q": "Varför vill Diego göra en skylt när de hittar plast?",
         "options": [
-          "För att informera så att fler förstår reglerna och komposten fungerar",
           "För att göra komposten mindre och lättare att sköta",
+          "För att informera så att fler förstår reglerna och komposten fungerar",
           "För att kunna sluta odla grönsaker helt",
           "För att kunna skylla ifrån sig på någon annan"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad är berättelsens viktigaste idé om miljöarbete?",
         "options": [
           "Att man lika gärna kan kasta all mat som blir över",
-          "Att små saker, som en kompost, kan göra stor skillnad när man förstår sambanden",
           "Att naturen inte klarar av att återvinna något alls",
+          "Att små saker, som en kompost, kan göra stor skillnad när man förstår sambanden",
           "Att maskar är farliga och bör hållas borta från jorden"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop",
@@ -15445,10 +15445,10 @@
         "options": [
           "Mindre sol på dagarna",
           "Mer snö under vintern",
-          "Längre dagar och mer ljus",
-          "Kortare dagar på hösten"
+          "Kortare dagar på hösten",
+          "Längre dagar och mer ljus"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
@@ -15465,12 +15465,12 @@
         "type": "literal",
         "q": "Vad kan man ibland se i vatten som grodor lägger?",
         "options": [
-          "Is",
           "Grodrom",
-          "Sand",
-          "Bark"
+          "Tunn is",
+          "Fin sand",
+          "Barkbitar"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -15499,11 +15499,11 @@
         "q": "Vad vill texten att du ska förstå om hur skogen vaknar?",
         "options": [
           "Att hela förändringen sker på bara någon sekund",
+          "Att det sker genom många små förändringar som tillsammans gör skillnad",
           "Att det bara är träden som påverkas av våren",
-          "Att skogen ser likadan ut året runt utan förändring",
-          "Att det sker genom många små förändringar som tillsammans gör skillnad"
+          "Att skogen ser likadan ut året runt utan förändring"
         ],
-        "correct": 3
+        "correct": 1
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&h=400&fit=crop",
@@ -15534,12 +15534,12 @@
         "type": "literal",
         "q": "Vilket ämne gör att löv ser gröna ut?",
         "options": [
-          "Klorofyll",
           "Koksalt",
           "Syrgas",
+          "Klorofyll",
           "Kalksten"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -15557,22 +15557,22 @@
         "q": "Varför slutar trädet att fylla på med nytt klorofyll på hösten?",
         "options": [
           "För att trädet vill bli av med precis alla sina löv direkt",
-          "För att dagarna blir kortare och fotosyntesen fungerar sämre, så trädet sparar energi",
           "För att löven inte alls behöver något ljus",
-          "För att det alltid regnar mycket på hösten"
+          "För att det alltid regnar mycket på hösten",
+          "För att dagarna blir kortare och fotosyntesen fungerar sämre, så trädet sparar energi"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
         "q": "Varför kan samma träd ha olika starka röda färger olika år?",
         "options": [
+          "För att soliga dagar och kalla nätter påverkar hur antocyaniner bildas",
           "För att karotenoiderna försvinner helt på hösten",
           "För att trädet byter art från år till år",
-          "För att soliga dagar och kalla nätter påverkar hur antocyaniner bildas",
           "För att löven alltid målas om av naturen"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -15651,22 +15651,22 @@
         "q": "Varför är det viktigt att förstå hur kommunen fungerar även om du inte kan rösta ännu?",
         "options": [
           "För att det hålls ett prov om kommunen nästan varje vecka",
+          "För att kommunens beslut påverkar din vardag och man kan lära sig hur man påverkar",
           "För att kommunen bestämmer allt du gör i din vardag",
-          "För att kommunen alltid har rätt i sina beslut",
-          "För att kommunens beslut påverkar din vardag och man kan lära sig hur man påverkar"
+          "För att kommunen alltid har rätt i sina beslut"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad vill texten att läsaren ska förstå om beslut i samhället?",
         "options": [
-          "Att samhället fungerar för att människor tar beslut, och att man kan vara med och påverka",
           "Att bara vuxna bryr sig om beslut och att unga inte kan påverka",
           "Att regler aldrig behövs så länge människor är överens",
+          "Att samhället fungerar för att människor tar beslut, och att man kan vara med och påverka",
           "Att beslut inte går att ändra när de en gång är fattade"
         ],
-        "correct": 0
+        "correct": 2
       }
     ],
     "meta": {
@@ -15712,22 +15712,22 @@
         "q": "Hur skickas data ofta över långa sträckor väldigt snabbt?",
         "options": [
           "I stora ballonger",
-          "I fiberkablar av glas",
           "I papper och brev",
-          "I träpinnar i marken"
+          "I träpinnar i marken",
+          "I fiberkablar av glas"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
         "q": "Varför delas information upp i paket?",
         "options": [
+          "För att data ska kunna skickas effektivt och hitta fram, även via olika vägar",
           "För att wifi-signalen inte ska bli för varm",
           "För att det ska bli svårare för andra att förstå",
-          "För att data ska kunna skickas effektivt och hitta fram, även via olika vägar",
           "För att servern ska hinna vila mellan gångerna"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -15745,11 +15745,11 @@
         "q": "Vilken huvudidé vill texten att du ska förstå?",
         "options": [
           "Att servern i själva verket finns inuti din egen telefon",
+          "Att internet består av många steg och saker som samarbetar, och att det är fysiskt",
           "Att man aldrig kan lösa problem med internet själv",
-          "Att internet i grunden fungerar som ren magi",
-          "Att internet består av många steg och saker som samarbetar, och att det är fysiskt"
+          "Att internet i grunden fungerar som ren magi"
         ],
-        "correct": 3
+        "correct": 1
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
@@ -15801,12 +15801,12 @@
       {
         "q": "Vad sparar växten överskottet av socker som?",
         "options": [
-          "Stärkelse i frön eller rötter",
           "Salt inuti blommorna",
           "Syra nere i rötterna",
+          "Stärkelse i frön eller rötter",
           "Vatten inuti stammen"
         ],
-        "correct": 0,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -16516,11 +16516,11 @@
         "q": "Varför säger texten att fett ibland har dåligt rykte?",
         "options": [
           "För att det inte finns fett i vanlig mat",
-          "För att många tror att fett bara är dåligt, men det behövs",
           "För att fett nästan alltid smakar illa",
-          "För att fett alltid är skadligt för kroppen"
+          "För att fett alltid är skadligt för kroppen",
+          "För att många tror att fett bara är dåligt, men det behövs"
         ],
-        "correct": 1,
+        "correct": 3,
         "type": "inferens"
       },
       {
@@ -17018,12 +17018,12 @@
       {
         "q": "Vad tyckte Amir var det viktigaste, trots ny teknik i PS5?",
         "options": [
+          "Att PlayStation kombinerar teknik med berättelser och delade upplevelser",
           "Att varje ny konsol alltid är större än den förra",
           "Att alla spel i grunden är sportspel",
-          "Att PlayStation kombinerar teknik med berättelser och delade upplevelser",
           "Att man alltid spelar helt ensam"
         ],
-        "correct": 2,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -17079,11 +17079,11 @@
         "q": "Vad betyder ordet \"bugg\" i texten?",
         "options": [
           "En hemlig extra nivå som är svår att hitta",
+          "Ett fel som gör att något inte fungerar som det ska",
           "En ny sorts handkontroll till konsolen",
-          "En sorts musik som spelas i bakgrunden",
-          "Ett fel som gör att något inte fungerar som det ska"
+          "En sorts musik som spelas i bakgrunden"
         ],
-        "correct": 3,
+        "correct": 1,
         "type": "ord"
       },
       {
@@ -17508,12 +17508,12 @@
       {
         "q": "Vad analyserar spelarna inför matcher?",
         "options": [
-          "Motståndarnas spel och tidigare matcher",
           "Publikens åsikter om spelarna",
           "Vädret i helt andra länder",
+          "Motståndarnas spel och tidigare matcher",
           "Gamla fotbollsmatcher från förr"
         ],
-        "correct": 0,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -17661,8 +17661,8 @@
       {
         "q": "Varför sparkar laget ibland bollen långt?",
         "options": [
-          "För att avsluta matchen",
-          "För att vila spelarna",
+          "För att kunna avsluta matchen snabbare",
+          "För att låta spelarna vila lite",
           "För att imponera på publiken",
           "För att flytta spelet till motståndarnas planhalva"
         ],
@@ -17710,12 +17710,12 @@
       {
         "q": "Vad bär många supportrar på matchdagar?",
         "options": [
-          "Blå halsdukar",
           "Vita tröjor med en röd ros",
-          "Svarta kostymer",
-          "Gröna jackor"
+          "Blå halsdukar och mössor",
+          "Svarta kostymer och slips",
+          "Gröna jackor med luva"
         ],
-        "correct": 1,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -17732,12 +17732,12 @@
       {
         "q": "Vad visar att laget är inkluderande?",
         "options": [
-          "Endast äldre får komma",
-          "Inga barn deltar",
+          "Att endast äldre supportrar får komma dit",
           "Tillgängliga platser för personer med funktionsvariationer",
-          "Bara professionella får vara fans"
+          "Att inga barn alls deltar där",
+          "Att bara professionella får vara fans"
         ],
-        "correct": 2,
+        "correct": 1,
         "type": "literal"
       },
       {
@@ -17817,11 +17817,11 @@
         "q": "Vilket program säger Theo att han kan fixa?",
         "options": [
           "Microsoft Word",
-          "PowerPoint",
           "Microsoft Teams",
+          "PowerPoint",
           "Paint 3D"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -17829,32 +17829,32 @@
         "options": [
           "För att Theo ska få bestämma allting själv",
           "För att göra arbetet svårare för alla",
-          "För att alla ska veta vad de ska göra och när det ska vara klart",
-          "För att slippa presentera inför klassen"
+          "För att slippa presentera inför klassen",
+          "För att alla ska veta vad de ska göra och när det ska vara klart"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "forfattarens-syfte",
         "q": "Varför behöver Samiras text kortas ner enligt Leila?",
         "options": [
+          "För att lång text är svår att läsa på slides och de ska prata med egna ord",
           "För att texten innehåller flera rena sakfel om ämnet",
           "För att Samira inte får skriva något alls",
-          "För att bilder alltid är viktigare än text",
-          "För att lång text är svår att läsa på slides och de ska prata med egna ord"
+          "För att bilder alltid är viktigare än text"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "textbevis",
         "q": "Vad visar det att Emil till slut berättar tryggt inför klassen?",
         "options": [
-          "Att tydligt ansvar och stöd kan få någon att växa i ett samarbete",
           "Att Theo i själva verket gjorde allting själv",
+          "Att tydligt ansvar och stöd kan få någon att växa i ett samarbete",
           "Att han alltid har varit bäst i klassen",
           "Att han egentligen inte har gjort något"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
@@ -17933,11 +17933,11 @@
         "q": "Vad visar berättelsen om vänskap?",
         "options": [
           "Att vänskap bara handlar om att ha roligt tillsammans",
-          "Att vänskap kan vara att göra plats och säga ifrån när någon behandlas orättvist",
           "Att man helst ska spela ensam för att slippa bråk",
+          "Att vänskap kan vara att göra plats och säga ifrån när någon behandlas orättvist",
           "Att man alltid måste vinna för att bli respekterad"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&h=400&fit=crop",
@@ -17959,21 +17959,21 @@
         "options": [
           "När man pratar om någon annan person",
           "När man alltid skriker högt",
-          "När man beskriver hur man själv upplever situationen",
-          "När man skriver ett rykte om någon"
+          "När man skriver ett rykte om någon",
+          "När man beskriver hur man själv upplever situationen"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "Vilket exempel på att vara tydlig utan att attackera personen nämns i texten?",
         "options": [
+          "Det där du sa kändes inte okej",
           "Ingen bryr sig om vad du säger",
           "Jag hatar dig och din åsikt",
-          "Du är dum som tycker så",
-          "Det där du sa kändes inte okej"
+          "Du är dum som tycker så"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
@@ -18001,23 +18001,23 @@
         "type": "inferens",
         "q": "Varför säger texten att ta hjälp inte alltid är att skvallra?",
         "options": [
-          "För att det kan handla om att skydda någon och stoppa något som skadar",
           "För att vuxna alltid vill höra precis allting",
+          "För att det kan handla om att skydda någon och stoppa något som skadar",
           "För att man då slipper ta eget ansvar",
           "För att det inte finns några regler alls"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vilket resultat kan det få om fler vågar säga ifrån i en grupp?",
         "options": [
           "Att ingen längre vågar prata alls i gruppen",
-          "Att gruppen kan bli tryggare och att dåliga beteenden inte blir normala",
           "Att man alltid måste hålla ett tal inför alla",
+          "Att gruppen kan bli tryggare och att dåliga beteenden inte blir normala",
           "Att elaka kommentarer blir ännu vanligare"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop",
@@ -18039,10 +18039,10 @@
         "options": [
           "En dikt från samma tidsperiod",
           "En nyhetsapp i en surfplatta",
-          "En karta från slutet av 1800-talet",
-          "En film om stadens historia"
+          "En film om stadens historia",
+          "En karta från slutet av 1800-talet"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
@@ -18070,23 +18070,23 @@
         "type": "inferens",
         "q": "Varför tycker Hugo först att kartan är fel?",
         "options": [
+          "För att platser och landskap har förändrats sedan kartan ritades",
           "För att ingen längre kan läsa gamla kartor",
           "För att papperet har gulnat med åren",
-          "För att floden inte finns med på kartan",
-          "För att platser och landskap har förändrats sedan kartan ritades"
+          "För att floden inte finns med på kartan"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
         "q": "Vad tyder den svaga fördjupningen i marken på?",
         "options": [
-          "Att många människor kan ha gått där under lång tid, som en gammal stig",
           "Att marken alltid är mjuk just på det stället",
+          "Att många människor kan ha gått där under lång tid, som en gammal stig",
           "Att det nyligen har varit en jordbävning där",
           "Att någon har grävt en pool på platsen"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -18173,11 +18173,11 @@
         "q": "Vad kan man förstå att texten vill att du ska göra som konsument idag?",
         "options": [
           "Köpa så mycket som möjligt medan priserna är låga",
-          "Tänka efter kring behov, hållbarhet och att reparera i stället för att slänga",
           "Bara köpa varor som tillverkats i ett enda land",
+          "Tänka efter kring behov, hållbarhet och att reparera i stället för att slänga",
           "Aldrig köpa frukt och grönt under vinterhalvåret"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "meta": {
@@ -18213,10 +18213,10 @@
         "options": [
           "Utbrott från vulkaner",
           "Löv som faller från träd",
-          "Tvätt av syntetkläder",
-          "Berg som vittrar sönder"
+          "Berg som vittrar sönder",
+          "Tvätt av syntetkläder"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
@@ -18375,9 +18375,9 @@
         "q": "Vad i en låt kan göra den lätt att minnas?",
         "options": [
           "Ett tydligt mönster som en upprepad refräng",
-          "Att den saknar rytm",
-          "Att den inte har tonhöjd",
-          "Att den bara är tyst"
+          "Att den helt saknar rytm och takt",
+          "Att den inte har någon tonhöjd alls",
+          "Att den bara består av tystnad"
         ],
         "correct": 0
       },
@@ -18408,11 +18408,11 @@
         "q": "Varför kan en öronmask dyka upp lättare när du gör något enkelt?",
         "options": [
           "För att man nästan alltid sjunger tyst för sig själv",
+          "För att hjärnan kan vandra när uppgiften inte kräver mycket fokus",
           "För att hjärnan aldrig tänker under promenader",
-          "För att benens rörelser skapar musik",
-          "För att hjärnan kan vandra när uppgiften inte kräver mycket fokus"
+          "För att benens rörelser skapar musik"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -18653,23 +18653,23 @@
         "type": "forfattarens-syfte",
         "q": "Varför tar Hawa upp frågan om rättvisa när de pratar om olika lunchtider?",
         "options": [
-          "För att vissa annars kan känna att de alltid hamnar sist och att det känns orättvist",
           "För att hon vill bestämma allting själv i hela gruppen",
           "För att hon tycker att pilarna på tavlan är fula",
+          "För att vissa annars kan känna att de alltid hamnar sist och att det känns orättvist",
           "För att hon inte vill att någon alls ska få lunch"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "textbevis",
         "q": "Vad vill berättelsen visa om att påverka i samhället?",
         "options": [
           "Att det bara är vuxna som kan ändra på saker i skolan",
-          "Att man kan börja förändra genom att prata, samla problem och testa lösningar",
           "Att elevrådet alltid bestämmer allting direkt",
-          "Att problem aldrig går att lösa i en skola"
+          "Att problem aldrig går att lösa i en skola",
+          "Att man kan börja förändra genom att prata, samla problem och testa lösningar"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&h=400&fit=crop",
@@ -18733,12 +18733,12 @@
         "type": "forfattarens-syfte",
         "q": "Vad kan hända om få invånare engagerar sig eller röstar i kommunvalet?",
         "options": [
-          "Kommunen slutar fungera helt",
-          "Alla beslut tas av skolor i stället",
-          "Skatten försvinner",
-          "Färre perspektiv påverkar besluten och vissa behov kan missas"
+          "Färre perspektiv påverkar besluten och vissa behov kan missas",
+          "Kommunen slutar fungera helt och hållet",
+          "Alla beslut tas av skolorna i stället",
+          "Skatten försvinner helt för invånarna"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "textbevis",
@@ -18828,11 +18828,11 @@
         "q": "Vad menar Aisha med att samhälle också kan vara ett möte i matsalen?",
         "options": [
           "Att matsalen i praktiken styr hela landet",
-          "Att man måste rösta om precis allt varje dag",
           "Att samhälle handlar om att samarbeta och påverka sin vardag nära sig",
+          "Att man måste rösta om precis allt varje dag",
           "Att bara vuxna får bestämma något i skolan"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "meta": {
@@ -18912,10 +18912,10 @@
         "options": [
           "För att hon aldrig blev svettig en enda gång under passet",
           "För att Diego gav henne ett pris efteråt",
-          "För att Jonas avbröt hela passet tidigt",
-          "För att hon lärde sig en strategi och kände kontroll i stället för skam"
+          "För att hon lärde sig en strategi och kände kontroll i stället för skam",
+          "För att Jonas avbröt hela passet tidigt"
         ],
-        "correct": 3
+        "correct": 2
       }
     ],
     "meta": {
@@ -18993,12 +18993,12 @@
         "type": "inferens",
         "q": "Vilken slutsats vill texten att du ska dra om batterier i vardagen?",
         "options": [
-          "Att batterier hänger ihop med teknik, säkerhet och miljö, och bör användas och återvinnas klokt",
           "Att alla batterier fungerar precis likadant oavsett vilken sort det är",
           "Att man aldrig ska använda en laddare till batterier",
-          "Att batterier är oviktiga eftersom de är så små"
+          "Att batterier är oviktiga eftersom de är så små",
+          "Att batterier hänger ihop med teknik, säkerhet och miljö, och bör användas och återvinnas klokt"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=400&fit=crop",
@@ -19018,12 +19018,12 @@
         "type": "literal",
         "q": "Vad skulle gruppen programmera enligt läraren Frida?",
         "options": [
-          "En robot som städar hela klassrummet själv",
           "En sensor som kan varna när någon glömmer att stänga fönstret",
+          "En robot som städar hela klassrummet själv",
           "En drönare som flyger i korridoren",
           "En app som räknar antalet steg"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "literal",
@@ -19041,11 +19041,11 @@
         "q": "Vad skulle hända när systemet varnade enligt målet i texten?",
         "options": [
           "En grön lampa skulle lysa med ett fast sken",
-          "En text skulle skrivas ut på skärmen",
           "En röd lampa skulle blinka och ett pip skulle höras",
+          "En text skulle skrivas ut på skärmen",
           "Datorn skulle stängas av helt direkt"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -19064,10 +19064,10 @@
         "options": [
           "Att man helst ska gömma sina misstag",
           "Att Noor nästan alltid har fel",
-          "Att man aldrig borde programmera",
-          "Att det är bättre att fixa problem än att skylla ifrån sig"
+          "Att det är bättre att fixa problem än att skylla ifrån sig",
+          "Att man aldrig borde programmera"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "textbevis",
@@ -19225,12 +19225,12 @@
       {
         "q": "Vad gjorde Mei för att hjälpa till enligt texten?",
         "options": [
-          "Hon stängde av en inställning och uppdaterade ett filter i nätverket",
           "Hon målade om hela datasalen tillsammans med klassen",
           "Hon gav alla elever nya surfplattor direkt",
-          "Hon tog bort allas spelappar från plattorna"
+          "Hon tog bort allas spelappar från plattorna",
+          "Hon stängde av en inställning och uppdaterade ett filter i nätverket"
         ],
-        "correct": 0,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -19460,12 +19460,12 @@
       {
         "q": "Varför har kommunen satt upp solpaneler vid anläggningen?",
         "options": [
-          "För att göra vattnet ännu saltare än det redan är",
           "För att processen kräver energi och solpaneler kan minska utsläpp och kostnader",
+          "För att göra vattnet ännu saltare än det redan är",
           "För att locka fler turister till ön om somrarna",
           "För att membranen ska hålla längre i kyla"
         ],
-        "correct": 1,
+        "correct": 0,
         "type": "inferens"
       },
       {
@@ -19937,11 +19937,11 @@
         "q": "Varför nämns passningsspel som något som kräver mycket?",
         "options": [
           "För att domaren måste springa betydligt mer",
-          "För att bollen måste vara helt ny",
           "För att spelarna måste röra sig rätt och våga passa i trånga lägen",
+          "För att bollen måste vara helt ny",
           "För att man bara får passa bakåt"
         ],
-        "correct": 2,
+        "correct": 1,
         "type": "inferens"
       },
       {
@@ -19971,10 +19971,10 @@
         "options": [
           "Att fotboll numera bara handlar om stora pengar",
           "Att derbyn nästan alltid slutar i bråk",
-          "Att en tränare inte påverkar spelet alls",
-          "Att Arsenal är mer än resultat: traditioner, minnen och gemenskap"
+          "Att Arsenal är mer än resultat: traditioner, minnen och gemenskap",
+          "Att en tränare inte påverkar spelet alls"
         ],
-        "correct": 3,
+        "correct": 2,
         "type": "sammanfatta"
       }
     ],
@@ -20111,12 +20111,12 @@
       {
         "q": "Vad blev Levi mest förvånad över på provträningen?",
         "options": [
-          "Hur mycket de pratade om beslut och varför man gör val",
           "Att alla spelare fick helt nya skor",
           "Att de aldrig passade bollen alls",
-          "Att matcherna spelades utan domare"
+          "Att matcherna spelades utan domare",
+          "Hur mycket de pratade om beslut och varför man gör val"
         ],
-        "correct": 0,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -20439,12 +20439,12 @@
       {
         "q": "Hur löstes konflikten om Ålands tillhörighet enligt texten?",
         "options": [
-          "Genom att Åland återigen blev en del av det ryska riket",
           "Genom en internationell lösning där Åland stannade i Finland men fick självstyre och språkskydd",
+          "Genom att Åland återigen blev en del av det ryska riket",
           "Genom att Sverige tog över öarna helt utan några villkor alls",
           "Genom att Åland flyttades längre bort ut i Östersjön"
         ],
-        "correct": 1,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -20522,11 +20522,11 @@
         "q": "Vilken utmaning för företag på Åland nämns i texten?",
         "options": [
           "Att solen aldrig går upp alls under hela vintern",
-          "Att det helt saknas vägar på hela ön",
           "Att transporter kan bli dyrare och leveranser kan bli sena vid hårt väder",
+          "Att det helt saknas vägar på hela ön",
           "Att man inte får sälja saker på sommaren"
         ],
-        "correct": 2,
+        "correct": 1,
         "type": "literal"
       },
       {
@@ -20745,12 +20745,12 @@
       {
         "q": "Var växte Elvis upp innan familjen flyttade till Memphis?",
         "options": [
+          "I staden Los Angeles",
+          "I staden Nashville",
           "I delstaten Mississippi",
-          "I Los Angeles",
-          "I Nashville",
-          "I New York"
+          "I staden New York"
         ],
-        "correct": 0,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -21270,12 +21270,12 @@
         "type": "inferens",
         "q": "Varför säger Karin att de ska skriva vad data tyder på?",
         "options": [
-          "För att data aldrig betyder något",
+          "För att data aldrig betyder någonting över huvud taget",
+          "För att rapporter inte får innehålla slutsatser",
           "För att deras undersökning gäller deras prover och kan ha begränsningar",
-          "För att rapporter inte får ha slutsatser",
-          "För att NO är en gissningslek"
+          "För att NO i grunden bara är en gissningslek"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -21283,10 +21283,10 @@
         "options": [
           "Hon tycker att snö alltid är smutsig och inte går att undersöka",
           "Hon vill aldrig testa något nytt i NO igen",
-          "Hon förstår att NO handlar om att undersöka noggrant, inte bara ha rätt direkt",
-          "Hon tycker att NO blivit tråkigare än förut"
+          "Hon tycker att NO blivit tråkigare än förut",
+          "Hon förstår att NO handlar om att undersöka noggrant, inte bara ha rätt direkt"
         ],
-        "correct": 2
+        "correct": 3
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop",
@@ -21339,12 +21339,12 @@
         "type": "inferens",
         "q": "Varför skriver Mei ner observationen 'Svänger åt höger'?",
         "options": [
+          "För att kunna jämföra och hitta vad som behöver ändras i nästa test",
           "För att raketen ska se snyggare ut när den flyger",
           "För att hon gärna vill ha ännu fler läxor",
-          "För att hon inte tycker om att jobba med Abbas",
-          "För att kunna jämföra och hitta vad som behöver ändras i nästa test"
+          "För att hon inte tycker om att jobba med Abbas"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -21441,9 +21441,9 @@
         "type": "textbevis",
         "q": "Vad menar texten med att vacciner inte ersätter immunförsvaret utan tränar det?",
         "options": [
-          "Att vacciner gör immunförsvaret onödigt",
+          "Att vacciner gör hela immunförsvaret helt överflödigt",
           "Att vacciner lär kroppen att känna igen smittor så den reagerar snabbare senare",
-          "Att vacciner bara fungerar på vintern",
+          "Att vacciner bara fungerar under vintern",
           "Att vacciner tar bort behovet av minnesceller"
         ],
         "correct": 1
@@ -21552,12 +21552,12 @@
         "type": "literal",
         "q": "Vad sprids i klasschatten?",
         "options": [
-          "En skärmdump från en privat konversation",
           "En läxa som ska lämnas in nästa vecka",
           "Ett schema för hela veckan",
+          "En skärmdump från en privat konversation",
           "En bild på någons hund"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -21575,11 +21575,11 @@
         "q": "Vilket meddelande skriver Arvin till slut?",
         "options": [
           "Att Noor borde byta till en annan skola",
-          "Att de ska sluta dela skärmdumpar eftersom det skadar folk",
           "Att läraren måste läsa igenom allting",
-          "Att alla ska fortsätta dela som förut"
+          "Att alla ska fortsätta dela som förut",
+          "Att de ska sluta dela skärmdumpar eftersom det skadar folk"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -21596,12 +21596,12 @@
         "type": "inferens",
         "q": "Vad menar Arvin när han säger att folk delar för att det är spännande, som att titta på en brand?",
         "options": [
-          "Att chatten handlar om säkerhet",
-          "Att Noor gillar att tända ljus",
-          "Att eld är intressant i NO",
-          "Att människor dras till drama även om det skadar någon"
+          "Att människor dras till drama även om det skadar någon",
+          "Att chatten mest handlar om säkerhet",
+          "Att Noor tycker om att tända ljus",
+          "Att eld är intressant att läsa om i NO"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -21655,11 +21655,11 @@
         "q": "Vilken dryck nämns hemma hos morfar?",
         "options": [
           "Te med citron och honung",
-          "Kall mjölk i ett glas",
           "Kaffe som doftar kardemumma",
+          "Kall mjölk i ett glas",
           "Varm choklad med grädde"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -21678,10 +21678,10 @@
         "options": [
           "Att äga fler saker än de flesta andra",
           "Att vara berömd i hela staden",
-          "Att vara bäst i allting man gör",
-          "Att passa in utan att behöva förklara sig"
+          "Att passa in utan att behöva förklara sig",
+          "Att vara bäst i allting man gör"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -21908,12 +21908,12 @@
         "type": "inferens",
         "q": "Varför ser Kenji “annorlunda” ut i musiksalen jämfört med i klassrummet?",
         "options": [
-          "För att han är mer trygg och fokuserad när han får uttrycka sig med musik",
           "För att han har fått nya skor och nya kläder till lektionen",
           "För att läraren står bredvid och tittar på",
-          "För att han vill imponera på Yara i klassen"
+          "För att han vill imponera på Yara i klassen",
+          "För att han är mer trygg och fokuserad när han får uttrycka sig med musik"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "forfattarens-syfte",
@@ -21980,12 +21980,12 @@
         "type": "literal",
         "q": "Vad ropar Samir vid staketet?",
         "options": [
-          "Du kommer för sent!",
           "Zahra! Sista biten!",
+          "Du kommer för sent!",
           "Gå hem nu direkt!",
           "Stanna där du är!"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -22003,11 +22003,11 @@
         "q": "Hur påverkar Majas vinkning Zahra?",
         "options": [
           "Den gör att Zahra blir arg på Maja",
-          "Den gör att Zahra går hem direkt",
           "Den får Zahra att känna stöd och vilja fortsätta",
+          "Den gör att Zahra går hem direkt",
           "Den gör att Zahra snubblar och faller"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -22040,21 +22040,21 @@
         "options": [
           "En särskild sorts mobil och app",
           "En hemlig kod som ingen utomstående kan förstå",
-          "En ny sorts spel man laddar ner",
-          "En uppsättning steg som löser ett problem eller tar ett beslut"
+          "En uppsättning steg som löser ett problem eller tar ett beslut",
+          "En ny sorts spel man laddar ner"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "Vad mäter sociala medier ofta för att gissa vad du vill se?",
         "options": [
-          "Vad du gör: vad du stannar vid, gillar, kommenterar och scrollar förbi",
           "Hur lång du är och vad du väger enligt profilen",
           "Vilken favoritfärg du angett i inställningarna",
-          "Hur snabbt du springer och hur ofta du tränar"
+          "Hur snabbt du springer och hur ofta du tränar",
+          "Vad du gör: vad du stannar vid, gillar, kommenterar och scrollar förbi"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
@@ -22165,12 +22165,12 @@
         "type": "inferens",
         "q": "Varför kan algoritmen tro att du vill se mer av något du tittade på av irritation?",
         "options": [
-          "För att du måste gilla allt",
           "För att algoritmen bara ser att du tittade länge, inte varför",
-          "För att irritation är förbjudet",
-          "För att mobilen gissar tankar exakt"
+          "För att du måste gilla precis allting",
+          "För att irritation är helt förbjudet",
+          "För att mobilen gissar dina tankar exakt"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -24368,12 +24368,12 @@
         "type": "literal",
         "q": "Vad kännetecknade hans scenframträdanden?",
         "options": [
-          "Enbart akustisk gitarr",
-          "Små och enkla konserter",
-          "Inga dansinslag",
-          "Stora scenshower med avancerad koreografi"
+          "Enbart akustisk gitarr på scen",
+          "Små och enkla konserter i klubbar",
+          "Stora scenshower med avancerad koreografi",
+          "Framträdanden helt utan dansinslag"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "literal",
@@ -24381,10 +24381,10 @@
         "options": [
           "En lång karriär inom politiken",
           "Arbete som filmregissör i Hollywood",
-          "Engagemang i välgörenhet och rättsprocesser",
-          "Studier vid ett stort universitet"
+          "Studier vid ett stort universitet",
+          "Engagemang i välgörenhet och rättsprocesser"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "sammanfatta",
@@ -25365,12 +25365,12 @@
       {
         "q": "Vilka funktioner fyller skogen enligt textens avslutning?",
         "options": [
-          "Bara att vara hem åt djur",
+          "Rena luft, lagra vatten, minska erosion och erbjuda rekreation",
+          "Bara att vara ett hem åt vilda djur och fåglar",
           "Bara att se fin ut i landskapet",
-          "Bara att producera virke och papper",
-          "Rena luft, lagra vatten, minska erosion och erbjuda rekreation"
+          "Bara att producera virke och papper"
         ],
-        "correct": 3,
+        "correct": 0,
         "type": "literal"
       }
     ],
@@ -25435,11 +25435,11 @@
         "q": "Hur reagerade elever på mobilfria zoner enligt texten?",
         "options": [
           "Alla tyckte att det var en riktigt bra idé direkt",
+          "Blandade reaktioner – rastlöshet först men sedan uppskattning hos en del",
           "Ingen märkte någon skillnad alls under dagen",
-          "Alla elever lämnade skolan i protest mot det",
-          "Blandade reaktioner – rastlöshet först men sedan uppskattning hos en del"
+          "Alla elever lämnade skolan i protest mot det"
         ],
-        "correct": 3,
+        "correct": 1,
         "type": "literal"
       },
       {
@@ -25481,12 +25481,12 @@
       {
         "q": "Vad menade Elsa med sitt svar om trädet?",
         "options": [
-          "Att frågan har två möjliga svar beroende på vad man menar med ljud",
           "Att bara utbildade forskare kan svara på frågan",
           "Att ljudvågor egentligen inte finns alls",
+          "Att frågan har två möjliga svar beroende på vad man menar med ljud",
           "Att träd aldrig faller omkull i en skog"
         ],
-        "correct": 0,
+        "correct": 2,
         "type": "literal"
       },
       {
@@ -25504,11 +25504,11 @@
         "q": "Vad handlade det andra tankeexperimentet om?",
         "options": [
           "Om djur kan tänka på samma sätt som vi",
-          "Om alla bytts ut mot identiska kopior som beter sig likadant",
           "Om tidsresor bakåt i tiden är möjliga",
-          "Om en människa kan leva helt utan sömn"
+          "Om en människa kan leva helt utan sömn",
+          "Om alla bytts ut mot identiska kopior som beter sig likadant"
         ],
-        "correct": 1,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -25645,12 +25645,12 @@
         "type": "literal",
         "q": "Vad arbetade kvinnan med att granska?",
         "options": [
+          "Ett system för ansiktsigenkänning",
           "En ny matsedel för skolan",
           "Ett nybyggt bibliotek i stan",
-          "Ett system för ansiktsigenkänning",
           "Ett nytt busskort för resor"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -25917,11 +25917,11 @@
         "q": "Varför känner berättaren både stolthet och skam efter att ha skapat en deepfake?",
         "options": [
           "Hen får ont i händerna av att sitta vid datorn",
+          "Hen imponeras av sin förmåga men inser hur lätt tekniken kan missbrukas",
           "Hen råkar radera hela videon utan att märka det",
-          "Hen tycker inte om hur den egna rösten låter",
-          "Hen imponeras av sin förmåga men inser hur lätt tekniken kan missbrukas"
+          "Hen tycker inte om hur den egna rösten låter"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -26010,12 +26010,12 @@
         "type": "inferens",
         "q": "Vad kan författaren mena med att politiken måste \"räkna värdighet\"?",
         "options": [
-          "Att lösningar bör upplevas som respektfulla och rättvisa för människor",
           "Att man framför allt ska räkna på pengarna",
           "Att man ska sluta prata om jobb helt och hållet",
+          "Att lösningar bör upplevas som respektfulla och rättvisa för människor",
           "Att man ska straffa alla lika hårt oavsett skäl"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -26144,11 +26144,11 @@
         "q": "Vad symboliserar Samwise enligt texten?",
         "options": [
           "Militär strategi och taktik",
-          "Trofasthet och vardagligt hjältemod",
           "Politiskt ledarskap i krig",
-          "Teknisk kunskap om vapen"
+          "Teknisk kunskap om vapen",
+          "Trofasthet och vardagligt hjältemod"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -26187,12 +26187,12 @@
         "type": "sammanfatta",
         "q": "Vad är textens huvudfokus?",
         "options": [
+          "Karaktärernas moraliska och psykologiska utveckling",
           "Ringens tekniska egenskaper och kraft",
           "De stora slagen och striderna",
-          "Karaktärernas moraliska och psykologiska utveckling",
           "Midgårds geografi och kartor"
         ],
-        "correct": 2
+        "correct": 0
       }
     ],
     "meta": {
@@ -26999,11 +26999,11 @@
         "q": "Vad menas med svarta låda-problematiken?",
         "options": [
           "Att systemen förvaras i hemliga lokaler långt under jord",
+          "Att vissa AI-system är så komplexa att man inte kan förklara hur de fattar beslut",
           "Att användare inte får öppna sina egna datorer",
-          "Att AI-system alltid är svarta till färgen",
-          "Att vissa AI-system är så komplexa att man inte kan förklara hur de fattar beslut"
+          "Att AI-system alltid är svarta till färgen"
         ],
-        "correct": 3,
+        "correct": 1,
         "type": "ord"
       },
       {
@@ -27058,10 +27058,10 @@
       {
         "q": "Vilka konsekvenser kan en butiksnedläggning få enligt texten?",
         "options": [
-          "Endast positiva effekter",
+          "Endast positiva effekter för orten",
           "Endast att priserna blir högre",
           "Förlorade mötesplatser, jobb och isolering för vissa",
-          "Att alla flyttar direkt"
+          "Att alla invånare flyttar direkt"
         ],
         "correct": 2,
         "type": "literal"
@@ -27069,12 +27069,12 @@
       {
         "q": "Vilket exempel på motrörelse nämns i texten?",
         "options": [
-          "Kooperativa butiker där invånarna driver verksamheten",
           "Att helt förbjuda handel på nätet",
           "Att flytta alla invånare till städer",
-          "Att stänga alla butiker på landet"
+          "Att stänga alla butiker på landet",
+          "Kooperativa butiker där invånarna driver verksamheten"
         ],
-        "correct": 0,
+        "correct": 3,
         "type": "literal"
       },
       {
@@ -27244,12 +27244,12 @@
       {
         "q": "Vilka frågor bör man ställa för att tänka kritiskt?",
         "options": [
-          "Är det populärt på sociala medier",
-          "Har det många gilla-markeringar",
-          "Är det skrivet med vackra ord",
-          "Vilken källa, är det granskat, finns oberoende bekräftelser"
+          "Vilken källa, är det granskat, finns oberoende bekräftelser",
+          "Är det populärt på sociala medier just nu",
+          "Har inlägget många gilla-markeringar",
+          "Är det skrivet med vackra och fina ord"
         ],
-        "correct": 3,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -28896,12 +28896,12 @@
         "type": "textbevis",
         "q": "Varför beskriver texten förmågan att skilja korrelation från kausalitet som demokratiskt viktig?",
         "options": [
-          "För att det gör att du slipper läsa nyheter",
-          "För att det gör dig svårare att manipulera när statistik används som argument",
-          "För att algoritmer slutar fungera annars",
-          "För att demokrati bara handlar om matematik"
+          "För att det gör att du helt slipper läsa nyheter alls",
+          "För att algoritmerna annars slutar fungera",
+          "För att demokrati bara handlar om ren matematik",
+          "För att det gör dig svårare att manipulera när statistik används som argument"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
@@ -28956,12 +28956,12 @@
       {
         "q": "Vilken risk beskriver texten som mer \"subtil\" än ren fusk-användning?",
         "options": [
+          "Att elever gradvis tappar uthållighet att arbeta igenom svårigheter och nöjer sig med yta och tempo",
           "Att verktygen kräver internetuppkoppling och slutar fungera vid avbrott",
           "Att lärare tvingas lära sig nya lösenord och system varje termin",
-          "Att alla inlämnade texter blir betydligt längre än de var förut",
-          "Att elever gradvis tappar uthållighet att arbeta igenom svårigheter och nöjer sig med yta och tempo"
+          "Att alla inlämnade texter blir betydligt längre än de var förut"
         ],
-        "correct": 3,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -29003,12 +29003,12 @@
       {
         "q": "Vilken konflikt driver Leas svårigheter i början av berättelsen?",
         "options": [
-          "Hon har för många möjliga riktningar och har svårt att välja vad som ska styra hennes text",
           "Hon vill inte skriva om det valda ämnet över huvud taget alls",
+          "Hon har för många möjliga riktningar och har svårt att välja vad som ska styra hennes text",
           "Hon saknar helt material att arbeta vidare med i uppgiften",
           "Hon har glömt datorn hemma och kan därför inte börja"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "literal"
       },
       {
@@ -29048,11 +29048,11 @@
         "q": "Vad antyder lärarens motfråga om skoluppgiftens egentliga mål?",
         "options": [
           "Att eleven ska skriva så kort det bara går och utelämna detaljer",
-          "Att eleven ska öva på att pröva hållbarheten i sina slutsatser genom att tänka som en kritisk läsare",
           "Att eleven ska undvika att ta ställning i frågan alls",
+          "Att eleven ska öva på att pröva hållbarheten i sina slutsatser genom att tänka som en kritisk läsare",
           "Att eleven ska försöka gissa vad läraren själv tycker"
         ],
-        "correct": 1,
+        "correct": 2,
         "type": "inferens"
       },
       {
@@ -29060,10 +29060,10 @@
         "options": [
           "Att Lea helst vill hoppa över hela resten av terminen och börja om från början",
           "Att Lea tror att dagen faktiskt går att spola tillbaka igen",
-          "Att Lea ser en skillnad mellan att jaga ett perfekt svar och att bygga en begriplig process, och väljer det senare",
-          "Att Lea planerar att skriva två uppsatser och lämna in båda två"
+          "Att Lea planerar att skriva två uppsatser och lämna in båda två",
+          "Att Lea ser en skillnad mellan att jaga ett perfekt svar och att bygga en begriplig process, och väljer det senare"
         ],
-        "correct": 2,
+        "correct": 3,
         "type": "literal"
       }
     ],
@@ -29185,12 +29185,12 @@
       {
         "q": "Vilken underförstådd poäng gör texten om att \"transport också är en sorts vardagsgeografi\"?",
         "options": [
+          "Att sättet man rör sig på påverkar vilka platser som upplevs som tillgängliga och hur man navigerar i vardagen",
           "Att alla borde välja exakt samma väg för att spara både tid och energi",
           "Att geografi i skolan borde handla enbart om trafik och vägar",
-          "Att resor främst handlar om att memorera kartor utantill",
-          "Att sättet man rör sig på påverkar vilka platser som upplevs som tillgängliga och hur man navigerar i vardagen"
+          "Att resor främst handlar om att memorera kartor utantill"
         ],
-        "correct": 3,
+        "correct": 0,
         "type": "literal"
       },
       {
@@ -29298,12 +29298,12 @@
       {
         "q": "Vilken slutsats om stress kan läsas mellan raderna i texten?",
         "options": [
-          "Stressnivå och beslut påverkar var fokus hamnar, vilket gör att struktur och återhämtning kan styra energin mot det viktiga",
           "All stress är skadlig och bör undvikas helt oavsett situation och sammanhang i livet",
+          "Stressnivå och beslut påverkar var fokus hamnar, vilket gör att struktur och återhämtning kan styra energin mot det viktiga",
           "Stress löses bäst genom att alltid plugga ensam utan avbrott från andra",
           "Stress spelar ingen roll så länge man har bra anteckningar att läsa"
         ],
-        "correct": 0,
+        "correct": 1,
         "type": "inferens"
       }
     ],
@@ -29923,12 +29923,12 @@
         "type": "literal",
         "q": "Vilket djur finns i boken?",
         "options": [
-          "Hund",
-          "Katt",
-          "Häst",
-          "Elefant"
+          "Kanin",
+          "Valross",
+          "Elefant",
+          "Zebra"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -30223,11 +30223,11 @@
         "q": "Var väntar Sara?",
         "options": [
           "Inne i skogen",
-          "Vid hållplatsen",
           "Inne i huset",
-          "Inne i skolan"
+          "Inne i skolan",
+          "Vid hållplatsen"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -30897,12 +30897,12 @@
         "type": "literal",
         "q": "Vad innebär demokrati?",
         "options": [
+          "Alla får vara med och bestämma",
           "En enda person bestämmer",
           "Ingen alls får rösta",
-          "Alla får vara med och bestämma",
           "Endast ledare bestämmer"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -30931,11 +30931,11 @@
         "q": "Vad betyder inkludering?",
         "options": [
           "Bara några få deltar",
+          "Alla känner sig delaktiga",
           "Ingen alls deltar",
-          "Endast vissa får delta",
-          "Alla känner sig delaktiga"
+          "Endast vissa får delta"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "sammanfatta",
@@ -31107,12 +31107,12 @@
         "type": "sammanfatta",
         "q": "Vad handlar texten främst om?",
         "options": [
-          "Teknikens utveckling",
           "Historiens gång",
           "Miljöns tillstånd",
+          "Teknikens utveckling",
           "Matens ursprung"
         ],
-        "correct": 0
+        "correct": 2
       }
     ],
     "meta": {
@@ -31274,11 +31274,11 @@
         "q": "Vad visar utvecklingen av elektricitet?",
         "options": [
           "Att historien är helt oviktig att läsa",
-          "Att förändring har både fördelar och nackdelar",
           "Att all teknik i grunden är farlig",
-          "Att allting blir bättre med tiden"
+          "Att allting blir bättre med tiden",
+          "Att förändring har både fördelar och nackdelar"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
@@ -31489,12 +31489,12 @@
         "type": "literal",
         "q": "Vad gör medier i en demokrati?",
         "options": [
+          "Sprider information och granskar",
           "Skapar konflikter mellan folk",
           "Bygger hus och vägar",
-          "Sprider information och granskar",
           "Bestämmer landets lagar"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -31573,11 +31573,11 @@
         "q": "Vilken risk finns för astronauter?",
         "options": [
           "Stark vind",
+          "Strålning",
           "Kraftig snö",
-          "Mycket regn",
-          "Strålning"
+          "Mycket regn"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "literal",
@@ -31633,20 +31633,20 @@
         "type": "literal",
         "q": "Vad ingår i kultur?",
         "options": [
-          "Värderingar och traditioner",
           "Endast det talade språket",
           "Bara kläder och mode",
+          "Värderingar och traditioner",
           "Endast landets historia"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "Vad påverkar identitet?",
         "options": [
-          "Bara arbete",
-          "Endast fritid",
-          "Endast skola",
+          "Bara arbete och yrke",
+          "Endast fritidsintressen",
+          "Endast skolan man gått i",
           "Familj och erfarenheter"
         ],
         "correct": 3
@@ -31656,9 +31656,9 @@
         "q": "Vad kan globalisering leda till?",
         "options": [
           "Ökad förståelse och konflikter",
-          "Inga förändringar",
-          "Färre idéer",
-          "Mindre kontakt"
+          "Inga förändringar alls",
+          "Färre idéer i samhället",
+          "Mindre kontakt mellan folk"
         ],
         "correct": 0
       },
@@ -32922,12 +32922,12 @@
         "type": "forfattarens-syfte",
         "q": "Varför är utbildning viktig?",
         "options": [
+          "För att kunna undvika allt ansvar",
           "För att förstå och försvara rättigheter",
-          "För att undvika ansvar",
-          "För att skapa regler",
-          "För att minska kunskap"
+          "För att kunna skapa nya regler",
+          "För att minska kunskapen hos folk"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -33056,11 +33056,11 @@
         "q": "Var finns sötvatten?",
         "options": [
           "I haven och de stora oceanerna",
-          "I sjöar, floder och grundvatten",
           "Endast uppe i molnen",
+          "I sjöar, floder och grundvatten",
           "I isen som finns på solen"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -33090,21 +33090,21 @@
         "options": [
           "För att kunna bygga fler hus vid vatten",
           "För att dela teknik mellan företag",
-          "För att många vattenkällor delas mellan länder",
-          "För att kunna minska mängden regn"
+          "För att kunna minska mängden regn",
+          "För att många vattenkällor delas mellan länder"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap?",
         "options": [
+          "Vatten är viktigt och måste användas ansvarsfullt",
           "Vatten är i grunden oviktigt",
           "Endast vissa människor behöver vatten",
-          "Allt vatten är farligt att dricka",
-          "Vatten är viktigt och måste användas ansvarsfullt"
+          "Allt vatten är farligt att dricka"
         ],
-        "correct": 3
+        "correct": 0
       }
     ],
     "meta": {
@@ -33171,12 +33171,12 @@
         "type": "literal",
         "q": "Vad är en utmaning för demokratin?",
         "options": [
-          "Desinformation och lågt deltagande",
           "För mycket kunskap hos alla",
+          "Desinformation och lågt deltagande",
           "För många val varje år",
           "Att alldeles alla röstar"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -33244,11 +33244,11 @@
         "q": "Vad använder forskare för att studera rymden?",
         "options": [
           "Bilar med stora motorer",
-          "Teleskop och rymdsonder",
           "Böcker från gamla tider",
+          "Teleskop och rymdsonder",
           "Kameror uppsatta på marken"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -33295,10 +33295,10 @@
         "options": [
           "Bara till utbildning i skolan",
           "Endast till tävlingar och priser",
-          "Att uttrycka känslor och skapa gemenskap",
-          "Endast till arbete och yrken"
+          "Endast till arbete och yrken",
+          "Att uttrycka känslor och skapa gemenskap"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -33315,12 +33315,12 @@
         "type": "inferens",
         "q": "Vad visar traditionell musik?",
         "options": [
+          "Ett lands historia och identitet",
           "Endast hur det ser ut i nutiden",
           "Bara landets ekonomi och handel",
-          "Endast teknik och instrument",
-          "Ett lands historia och identitet"
+          "Endast teknik och instrument"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
@@ -33348,12 +33348,12 @@
         "type": "sammanfatta",
         "q": "Vad är textens huvudidé?",
         "options": [
-          "Musik påverkar människor och samhälle",
           "Musik är svårt att lära sig",
+          "Musik påverkar människor och samhälle",
           "Musik är oviktig för de flesta",
           "Musik är bara en hobby"
         ],
-        "correct": 0
+        "correct": 1
       }
     ],
     "meta": {
@@ -33377,11 +33377,11 @@
         "q": "Vad bygger vänskap på?",
         "options": [
           "Tävling och vinst",
-          "Tillit och respekt",
           "Pengar och gåvor",
+          "Tillit och respekt",
           "Regler och straff"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -33461,10 +33461,10 @@
         "options": [
           "En persons privata ekonomi",
           "Ett lösenord till en tjänst",
-          "Information om en person på nätet",
-          "En särskild typ av dator"
+          "En särskild typ av dator",
+          "Information om en person på nätet"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -33542,12 +33542,12 @@
         "type": "literal",
         "q": "Vad orsakar främst klimatförändringar?",
         "options": [
+          "Växthusgaser från mänsklig aktivitet",
           "Naturliga skiften i årstiderna",
           "Mängden regn och snö per år",
-          "Solens rörelse över himlen",
-          "Växthusgaser från mänsklig aktivitet"
+          "Solens rörelse över himlen"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
@@ -33575,12 +33575,12 @@
         "type": "inferens",
         "q": "Vad innebär ansvar enligt texten?",
         "options": [
-          "Endast politiska beslut",
-          "Endast individers val",
+          "Endast politiska beslut uppifrån",
           "Både individuella och gemensamma insatser",
-          "Ingen påverkan alls"
+          "Endast enskilda individers val",
+          "Ingen påverkan alls från någon"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -33708,12 +33708,12 @@
         "type": "literal",
         "q": "Vad förändrades med tryckpressen?",
         "options": [
-          "Hur böcker producerades",
           "Hur varor transporterades",
           "Hur klimatet förändrades",
+          "Hur böcker producerades",
           "Hur jordbruket sköttes"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -33792,42 +33792,42 @@
         "q": "Vad händer när vi lär oss något nytt?",
         "options": [
           "Hjärnan krymper med tiden",
-          "Kopplingar mellan nervceller skapas",
           "Blodflödet till hjärnan minskar",
-          "Gamla minnen försvinner helt"
+          "Gamla minnen försvinner helt",
+          "Kopplingar mellan nervceller skapas"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
         "q": "Varför är sömn viktig?",
         "options": [
-          "Den gör oss starkare",
-          "Den sparar energi",
           "Den hjälper hjärnan bearbeta minnen",
-          "Den minskar hunger"
+          "Den gör oss starkare i musklerna",
+          "Den sparar energi till dagen efter",
+          "Den minskar hungern på morgonen"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
         "q": "Vad påverkar motivation?",
         "options": [
           "Musklerna i kroppen",
-          "Synen och hörseln",
           "Belöningssystemet",
+          "Synen och hörseln",
           "Hjärtats rytm"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vad kan förbättra inlärning?",
         "options": [
-          "Endast läsa",
-          "Ingen paus",
+          "Endast läsa tyst",
+          "Ingen paus alls",
           "Variation i studier",
-          "Stress"
+          "Mycket stress"
         ],
         "correct": 2
       },
@@ -35589,12 +35589,12 @@
         "type": "textbevis",
         "q": "Vad handlar texten främst om?",
         "options": [
-          "Barns rättigheter och utmaningar",
-          "Skolans historia",
-          "Ekonomiska system",
-          "Teknisk utveckling"
+          "Skolans historia i Sverige",
+          "Ekonomiska system i världen",
+          "Teknisk utveckling över tid",
+          "Barns rättigheter och utmaningar"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "meta": {
@@ -35628,12 +35628,12 @@
         "type": "inferens",
         "q": "Vad är indirekt diskriminering?",
         "options": [
+          "Regler som missgynnar utan att det är tydligt",
           "Öppen kritik som uttalas rakt ut",
           "Synliga konflikter mellan grupper",
-          "Frivilliga val som var och en gör",
-          "Regler som missgynnar utan att det är tydligt"
+          "Frivilliga val som var och en gör"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "literal",
@@ -35711,12 +35711,12 @@
         "type": "literal",
         "q": "Vad har elever rätt till?",
         "options": [
-          "Trygghet och likvärdig utbildning",
           "Att bestämma allting själva",
+          "Trygghet och likvärdig utbildning",
           "Att slippa alla regler",
           "Att välja sina egna betyg"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -35806,11 +35806,11 @@
         "q": "Vad arbetade Obama med innan politiken?",
         "options": [
           "Journalist och redaktör",
-          "Samhällsorganisatör och jurist",
           "Läkare och forskare",
+          "Samhällsorganisatör och jurist",
           "Ingenjör och uppfinnare"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -35901,21 +35901,21 @@
         "options": [
           "Han var den yngsta presidenten någonsin",
           "Han var den rikaste av alla presidenter",
-          "Han var första afroamerikanska presidenten",
-          "Han var militär innan han blev vald"
+          "Han var militär innan han blev vald",
+          "Han var första afroamerikanska presidenten"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "forfattarens-syfte",
         "q": "Vad bidrog till hans framgång?",
         "options": [
-          "Tur",
           "Hans förmåga att inspirera",
-          "Endast ekonomi",
-          "Militära beslut"
+          "Ren tur i rätt ögonblick",
+          "Endast ekonomiska frågor",
+          "Militära beslut i kriget"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "textbevis",
@@ -36232,11 +36232,11 @@
         "q": "Vad innebar flytten till Emirates Stadium?",
         "options": [
           "Mindre publik på matcher",
+          "Större ekonomiska möjligheter",
           "Färre matcher per säsong",
-          "Kortare säsonger totalt",
-          "Större ekonomiska möjligheter"
+          "Kortare säsonger totalt"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "literal",
@@ -36469,12 +36469,12 @@
         "type": "inferens",
         "q": "Varför har konkurrensen ökat?",
         "options": [
-          "Fler klubbar har fått ekonomiska resurser",
           "Färre lag spelar i den högsta ligan",
           "Reglerna har ändrats flera gånger",
+          "Fler klubbar har fått ekonomiska resurser",
           "Matcherna är kortare än förut"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -36575,11 +36575,11 @@
         "q": "Vad påverkar klubbens framgång utöver spelare?",
         "options": [
           "Vädret på matchdagen",
-          "Supporterengagemang",
           "Tiden matchen spelas",
-          "Domarens beslut"
+          "Domarens beslut",
+          "Supporterengagemang"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "textbevis",
@@ -36624,12 +36624,12 @@
         "type": "literal",
         "q": "Vad var Jim Crow-lagarna?",
         "options": [
+          "Lagar som separerade människor efter hudfärg",
           "Lagar om utbildning för alla barn",
           "Lagar om vad bussresor fick kosta",
-          "Lagar som separerade människor efter hudfärg",
           "Lagar om vem som fick rösta i val"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -36668,12 +36668,12 @@
         "type": "textbevis",
         "q": "Vad är textens huvudbudskap?",
         "options": [
-          "Att bussar var viktiga",
-          "Att lagar alltid följs",
-          "Att protester inte fungerar",
-          "Att en persons handling kan leda till förändring"
+          "Att bussar var mycket viktiga",
+          "Att en persons handling kan leda till förändring",
+          "Att lagar alltid följs av alla",
+          "Att protester aldrig fungerar"
         ],
-        "correct": 3
+        "correct": 1
       }
     ],
     "meta": {
@@ -36742,21 +36742,21 @@
         "options": [
           "Endast valda politiker",
           "Endast unga studenter",
-          "Endast domare i rätten",
-          "Många olika grupper och individer"
+          "Många olika grupper och individer",
+          "Endast domare i rätten"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "textbevis",
         "q": "Vad är huvudidén?",
         "options": [
-          "Förändring kräver både individer och grupper",
           "Det räcker med en enda modig person",
           "Medier spelar ingen roll alls",
-          "Protester fungerar aldrig i praktiken"
+          "Protester fungerar aldrig i praktiken",
+          "Förändring kräver både individer och grupper"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "meta": {
@@ -36989,12 +36989,12 @@
         "type": "forfattarens-syfte",
         "q": "Vad handlar hennes arv om?",
         "options": [
-          "Endast den enskilda individen",
           "Både individ och kollektiv kamp",
+          "Endast den enskilda individen",
           "Endast lagar och regler",
           "Endast historisk forskning"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "textbevis",
@@ -37062,11 +37062,11 @@
         "q": "Varför upplöstes ABBA?",
         "options": [
           "Allvarliga ekonomiska problem",
-          "Brist på publik vid konserter",
           "Personliga relationer och konflikter",
+          "Brist på publik vid konserter",
           "Tekniska svårigheter i studion"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -37113,10 +37113,10 @@
         "options": [
           "Agnetha och Benny samt Björn och Anni-Frid",
           "Björn och Anni-Frid samt Benny och Agnetha",
-          "Alla fyra var gifta med varandra",
-          "Björn och Agnetha samt Benny och Anni-Frid"
+          "Björn och Agnetha samt Benny och Anni-Frid",
+          "Alla fyra var gifta med varandra"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "literal",
@@ -37166,12 +37166,12 @@
         "type": "textbevis",
         "q": "Vad är textens huvudidé?",
         "options": [
-          "Relationer kan påverka kreativitet både positivt och negativt",
           "Musik handlar bara om teknik och inspelning",
           "ABBA var oorganiserade i sitt arbete",
-          "Relationer är oviktiga för musiken"
+          "Relationer är oviktiga för musiken",
+          "Relationer kan påverka kreativitet både positivt och negativt"
         ],
-        "correct": 0
+        "correct": 3
       }
     ],
     "meta": {
@@ -37277,12 +37277,12 @@
         "type": "literal",
         "q": "Vad är Mamma Mia!?",
         "options": [
-          "En konsertturné genom Europa",
           "En musikal baserad på ABBAs låtar",
+          "En konsertturné genom Europa",
           "Ett album med nya låtar",
           "En dokumentär om gruppen"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "literal",
@@ -37527,11 +37527,11 @@
         "q": "Vad bidrog mest till de kontroverser som omgav Michael Jackson?",
         "options": [
           "Hans musikstil och röst",
-          "Hans många turnéer",
           "Anklagelser och rättsprocesser",
+          "Hans många turnéer",
           "Hans samarbeten med andra"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -37539,10 +37539,10 @@
         "options": [
           "En musikstudio i Kalifornien",
           "En konsertturné i Amerika",
-          "Ett skivbolag han startade",
-          "Hans ranch utformad som nöjespark"
+          "Hans ranch utformad som nöjespark",
+          "Ett skivbolag han startade"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "literal",
@@ -37642,12 +37642,12 @@
         "type": "inferens",
         "q": "Hur beskrivs hans arbetsmetod?",
         "options": [
-          "Detaljfokuserad och noggrann",
           "Slumpmässig och spontan",
           "Snabb och mycket enkel",
-          "Oplanerad och rörig"
+          "Oplanerad och rörig",
+          "Detaljfokuserad och noggrann"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -37664,12 +37664,12 @@
         "type": "inferens",
         "q": "Vad är textens huvudidé?",
         "options": [
-          "Hans privatliv och relationer",
           "Hans tekniska och musikaliska innovationer",
+          "Hans privatliv och relationer",
           "Hans barndom i Indiana",
           "Hans ekonomi och affärer"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
@@ -37748,11 +37748,11 @@
         "q": "Vad handlar texten främst om?",
         "options": [
           "Hans familj och uppväxt",
-          "Hans ekonomi och avtal",
           "Hans betydelse för dans och scenframträdanden",
+          "Hans ekonomi och avtal",
           "Hans utbildning och tidiga skolgång"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "meta": {
@@ -37832,10 +37832,10 @@
         "options": [
           "Hans barndom i Gary, Indiana",
           "Hans ekonomi och kontrakt",
-          "Hans utbildning och skola",
-          "Hans långvariga kulturella påverkan"
+          "Hans långvariga kulturella påverkan",
+          "Hans utbildning och skola"
         ],
-        "correct": 3
+        "correct": 2
       }
     ],
     "meta": {
@@ -37869,12 +37869,12 @@
         "type": "literal",
         "q": "Vad är ackretion?",
         "options": [
-          "När material samlas och växer till större kroppar",
           "När planeter exploderar och faller sönder",
           "När ljus reflekteras mot en yta",
-          "När gas försvinner ut i rymden"
+          "När gas försvinner ut i rymden",
+          "När material samlas och växer till större kroppar"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -37902,12 +37902,12 @@
         "type": "literal",
         "q": "Vad håller planeterna i sina banor?",
         "options": [
-          "Solvinden",
           "Gravitation",
+          "Solvinden",
           "Solljuset",
           "Lufttryck"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -38047,11 +38047,11 @@
         "q": "Vad är en \"het Jupiter\"?",
         "options": [
           "En mycket kall planet",
-          "En ovanligt liten planet",
           "En gasjätte nära sin stjärna",
+          "En ovanligt liten planet",
           "En dvärgplanet i utkanten"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -38081,10 +38081,10 @@
         "options": [
           "Solsystemet är helt isolerat från allt",
           "Endast jorden är viktig att studera",
-          "Universum är enkelt att förstå",
-          "Solsystemet sätts i ett större universellt sammanhang"
+          "Solsystemet sätts i ett större universellt sammanhang",
+          "Universum är enkelt att förstå"
         ],
-        "correct": 3
+        "correct": 2
       }
     ],
     "meta": {
@@ -38273,12 +38273,12 @@
         "type": "literal",
         "q": "Vad handlar Borgs eftermäle om enligt texten?",
         "options": [
-          "Hans prestationer och symboliska betydelse",
           "Hans familjeliv efter karriären",
           "Hans tränare under uppväxten",
-          "Enbart hans vinster på banan"
+          "Enbart hans vinster på banan",
+          "Hans prestationer och symboliska betydelse"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -38367,12 +38367,12 @@
         "type": "literal",
         "q": "Vad var centralt i Lockes teori?",
         "options": [
-          "Kungens absoluta och odelade makt",
           "Samhällskontraktet och individens rättigheter",
+          "Kungens absoluta och odelade makt",
           "Religiös styrning av samhället",
           "Den allmänna viljans företräde"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "literal",
@@ -38533,12 +38533,12 @@
         "type": "literal",
         "q": "Vad omfattar mångfald enligt texten?",
         "options": [
+          "Endast olika språk och dialekt",
           "Flera typer av skillnader",
-          "Endast språk",
-          "Endast kultur",
-          "Endast ekonomi"
+          "Endast kulturella skillnader",
+          "Endast ekonomiska villkor"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -38798,12 +38798,12 @@
         "type": "literal",
         "q": "Vilken utmaning för vetenskapen nämns i den moderna informationsmiljön?",
         "options": [
-          "Brist på forskning",
-          "För få universitet",
-          "För många experiment",
-          "Spridning av missvisande påståenden"
+          "Spridning av missvisande påståenden",
+          "Brist på forskning inom området",
+          "För få universitet i landet",
+          "För många experiment på en gång"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -38889,12 +38889,12 @@
         "type": "inferens",
         "q": "Hur beskriver texten hiphopens sociala funktion?",
         "options": [
+          "Som enbart underhållning för unga",
           "Som en plattform för gemenskap och uttryck",
-          "Som enbart underhållning",
-          "Som ett skolämne",
-          "Som en ekonomisk teori"
+          "Som ett skolämne bland andra",
+          "Som en ren ekonomisk teori"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -38936,12 +38936,12 @@
         "type": "inferens",
         "q": "Hur beskrivs hiphopens betydelse för identitet?",
         "options": [
-          "Som ett sätt att uttrycka erfarenheter och perspektiv",
           "Som ett sportevenemang med publik",
           "Som en reform av hela skolsystemet",
+          "Som ett sätt att uttrycka erfarenheter och perspektiv",
           "Som en teknisk innovation inom ljud"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -39006,11 +39006,11 @@
         "q": "Vilket tema återkommer ofta i hiphop enligt texten?",
         "options": [
           "Astronomi och rymden",
-          "Rättvisa och identitet",
           "Jordbruk och skördar",
-          "Geologi och bergarter"
+          "Geologi och bergarter",
+          "Rättvisa och identitet"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -39085,12 +39085,12 @@
         "type": "literal",
         "q": "Var växte Astrid Lindgren upp?",
         "options": [
+          "Näs utanför Vimmerby",
           "Göteborg på västkusten",
           "Uppsala norr om Stockholm",
-          "Näs utanför Vimmerby",
           "Malmö längst i söder"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -39107,12 +39107,12 @@
         "type": "inferens",
         "q": "Varför väckte Pippi Långstrump debatt?",
         "options": [
-          "Hon bodde utomlands",
-          "Hon var fattig",
+          "Hon bodde utomlands en tid",
           "Hon utmanade traditionella normer",
-          "Hon saknade vänner"
+          "Hon var fattig som barn",
+          "Hon saknade vänner helt"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -39120,10 +39120,10 @@
         "options": [
           "Sport och lek",
           "Ekonomi och pengar",
-          "Teknik och maskiner",
-          "Döden och mod"
+          "Döden och mod",
+          "Teknik och maskiner"
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -39140,12 +39140,12 @@
         "type": "inferens",
         "q": "Vilken slutsats stöds av texten?",
         "options": [
-          "Hennes betydelse har minskat",
-          "Hon har haft stort inflytande på barnlitteraturen",
-          "Hon skrev bara en bok",
-          "Hon undvek samhällsfrågor"
+          "Hennes betydelse har minskat med tiden",
+          "Hon skrev bara en enda bok",
+          "Hon undvek helt samhällsfrågor",
+          "Hon har haft stort inflytande på barnlitteraturen"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
@@ -39187,12 +39187,12 @@
         "type": "inferens",
         "q": "Hur kan Pippi tolkas enligt litteraturforskare?",
         "options": [
-          "Som en historisk person",
-          "Som en vetenskapsfigur",
           "Som någon som ifrågasätter maktstrukturer",
-          "Som en politiker"
+          "Som en verklig historisk person",
+          "Som en vetenskaplig figur",
+          "Som en politiker i sin samtid"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -39278,12 +39278,12 @@
         "type": "inferens",
         "q": "Vad menas med att böckerna har flera tolkningsnivåer?",
         "options": [
-          "Olika åldrar kan upptäcka olika betydelser",
           "De finns i många olika format",
+          "Olika åldrar kan upptäcka olika betydelser",
           "De är svåra att läsa högt",
           "De har olika omslag i olika länder"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -39326,11 +39326,11 @@
         "q": "Vad menas med ackretion i texten?",
         "options": [
           "Att stjärnor förlorar massa med tiden",
-          "Att himlakroppar växer genom att material samlas ihop",
           "Att planeter byter bana runt solen",
+          "Att himlakroppar växer genom att material samlas ihop",
           "Att gas omvandlas till synligt ljus"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -39382,10 +39382,10 @@
         "options": [
           "Solen är den enda himlakropp som har betydelse",
           "Alla planeter är uppbyggda på precis samma sätt",
-          "Solsystemet är ett dynamiskt system vars förståelse utvecklas genom forskning",
-          "Rymdsonder har helt ersatt astronomin som vetenskap"
+          "Rymdsonder har helt ersatt astronomin som vetenskap",
+          "Solsystemet är ett dynamiskt system vars förståelse utvecklas genom forskning"
         ],
-        "correct": 2
+        "correct": 3
       }
     ],
     "meta": {
@@ -39415,12 +39415,12 @@
         "type": "literal",
         "q": "Vad bidrog Kepler främst med enligt texten?",
         "options": [
+          "Visade att planetbanor är elliptiska",
           "Byggde de första raketerna",
           "Upptäckte dvärgplaneten Pluto",
-          "Landade först på månen",
-          "Visade att planetbanor är elliptiska"
+          "Landade först på månen"
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -39505,45 +39505,45 @@
         "type": "inferens",
         "q": "Vad antyder texten om mångfald inom rymdforskning?",
         "options": [
-          "Den saknar betydelse",
-          "Den försvårar samarbeten",
+          "Den saknar helt betydelse i sammanhanget",
           "Den kan bidra med fler perspektiv på komplexa problem",
-          "Den ersätter teknisk kompetens"
+          "Den försvårar samarbeten mellan länder",
+          "Den ersätter behovet av teknisk kompetens"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
         "q": "Vilken etisk fråga diskuteras?",
         "options": [
-          "Hur resurser bör prioriteras mellan jorden och rymdprojekt",
           "Om solen över huvud taget bör utforskas",
           "Om planeter borde byta namn med tiden",
+          "Hur resurser bör prioriteras mellan jorden och rymdprojekt",
           "Om månen skulle kunna flyttas närmare"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
         "q": "Varför är Mars intressant för bosättning?",
         "options": [
           "Den saknar helt skadlig strålning på ytan",
-          "Den har egenskaper som gör den mer realistisk än många andra mål",
           "Den ligger närmare jorden än vad månen gör",
-          "Den har ungefär samma syrehalt som jorden"
+          "Den har ungefär samma syrehalt som jorden",
+          "Den har egenskaper som gör den mer realistisk än många andra mål"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "sammanfatta",
         "q": "Vad är textens övergripande budskap?",
         "options": [
+          "Framtida närvaro i solsystemet innebär både tekniska möjligheter och etiska överväganden",
           "Rymdresor är i praktiken omöjliga att genomföra för människor",
           "Mars kommer snart att vara fullt befolkad av människor",
-          "Framtida närvaro i solsystemet innebär både tekniska möjligheter och etiska överväganden",
           "Månen är viktigare att utforska än jorden själv"
         ],
-        "correct": 2
+        "correct": 0
       }
     ],
     "meta": {
