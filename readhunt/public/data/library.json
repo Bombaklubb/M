@@ -10144,6 +10144,411 @@
     }
   },
   {
+    "id": "ak8-tema-006",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "gaming",
+    "title": "The Science of Speedrunning",
+    "text": "Most people finish a video game in twenty or thirty hours. Some finish it in eleven minutes. The players who do this are called speedrunners, and what they do turns out to be far more complicated than simply playing quickly.\n\nSpeedrunning means completing a game as fast as possible according to rules agreed on by a community. Some categories only require the player to reach the ending by any means available. Others demand that every item is collected first, or that no glitches are used at all. These rules matter enormously, because they decide which shortcuts count as clever and which count as cheating.\n\nThe most surprising part of speedrunning is how much of it depends on mistakes — not the player's, but the programmers'. Every large game contains bugs: small errors in the code that nobody noticed before release. Ordinary players almost never meet them. Speedrunners hunt for them deliberately. In one famous platform game, the character can pass straight through a wall if the player jumps at an exact angle on an exact frame, one sixtieth of a second long. Discovering a glitch like that can remove several minutes from a world record overnight.\n\nThis is why speedrunning communities look less like sports teams and more like research groups. Runners publish their findings in shared documents, compare recordings frame by frame, and argue about whether a new trick is genuinely faster or merely lucky. When somebody proposes a new route through a game, others test it hundreds of times before it is accepted. A world record is rarely the work of one person. It is usually the last step in years of collective investigation.\n\nVerification is taken seriously. To have a record accepted, a runner must submit an unedited video, and moderators examine it closely for signs of tampering. Cheating scandals do happen. In several well-known cases, runners were found to have spliced together their best attempts or slowed their footage slightly, and their records were deleted. Because the whole system rests on trust, the punishment for breaking it is severe.\n\nSpeedrunning has also become a form of charity. Twice a year, an event called Games Done Quick gathers hundreds of runners who play continuously for a week while viewers donate. The event has raised more than fifty million dollars for medical research and disaster relief. Competitors with disabilities take part regularly. One runner completes games using only his feet; another, who is blind, navigates entirely by sound, having memorised the audio cues of every level.\n\nCritics sometimes argue that speedrunning misses the point of games — that racing past a carefully written story wastes the work of the people who made it. Runners tend to disagree. Many say they only speedrun games they already love, and that learning a game deeply enough to break it is its own form of respect. Some developers agree. Several studios now deliberately leave old glitches in place when they release updates, knowing the community depends on them.\n\nWhat speedrunning ultimately demonstrates is that expertise can grow almost anywhere. The skills involved are patience, precise timing, careful documentation and a willingness to repeat a difficult task thousands of times. Those are the same skills valued in laboratories and workshops. The subject happens to be a video game. The method looks remarkably like science.",
+    "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What do the rules of a speedrunning category mainly decide?",
+        "options": [
+          "How many hours of practice a runner is permitted beforehand",
+          "Which equipment every competitor must use",
+          "Which shortcuts are allowed",
+          "What minimum time a run has to beat"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "According to the text, where do most speedrunning shortcuts come from?",
+        "options": [
+          "Coding errors nobody noticed before release",
+          "Hidden levels that the developers deliberately built into the game",
+          "Controllers that respond faster than standard ones",
+          "Changes introduced by later software updates"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text compare speedrunning communities to research groups?",
+        "options": [
+          "They are usually funded by universities",
+          "They publish their results in scientific journals",
+          "They expect members to hold formal qualifications",
+          "They test each other's findings repeatedly before accepting them"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "How is a world record checked before it is accepted?",
+        "options": [
+          "A moderator has to watch the attempt as it happens",
+          "Moderators examine an unedited recording closely",
+          "The game uploads an official time to a central database",
+          "Two other runners must repeat the same route successfully"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What point does the text make by mentioning the runner who plays with his feet and the runner who is blind?",
+        "options": [
+          "That players with very different abilities take part",
+          "That competitors with disabilities usually set the fastest times of all",
+          "That the events prefer to invite unusual techniques",
+          "That ordinary controllers suit very few serious runners"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the text?",
+        "options": [
+          "Speedrunning events have raised large sums for charity",
+          "Video games contain far more bugs than most players realise",
+          "Speedrunning is a methodical practice much like research",
+          "Developers ought to remove the remaining glitches from their older titles"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 551,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-tema-007",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Right to Be Heard",
+    "text": "In 1989, the United Nations agreed on a treaty that changed how the world talks about childhood. The Convention on the Rights of the Child has been accepted by more countries than any other human rights agreement, and in 2020 Sweden made it part of national law.\n\nThe Convention contains fifty-four articles. Some cover what most people would expect: the right to food, shelter, education and medical care. Others are less obvious. Article 31 protects the right to rest and play, a reminder that childhood is not only preparation for adult life. But Article 12 may be the most radical of all. It states that children have the right to express their views on matters that affect them, and that adults must take those views seriously.\n\nArticle 12 does not mean that children decide everything. A nine-year-old does not get a vote on whether the family moves to another city. What the article requires is that the child is asked, listened to, and afterwards told how the decision was reached. The difference between being informed and being consulted sounds small. In practice it changes how courts, schools and hospitals work.\n\nSwedish courts now interview children directly in custody cases instead of relying only on what the parents report. Hospitals ask young patients about pain and treatment in ways that were once thought unnecessary. Some municipalities invite pupils onto planning committees when a schoolyard or playground is being redesigned, and the results often differ from what the adults had sketched. In one frequently cited case, the children asked for shelter from rain and corners where small groups could sit, while the adult plan had concentrated almost entirely on equipment for running and climbing.\n\nProgress is uneven. Critics point out that consultation easily becomes decorative: a class is asked for its opinions, the opinions are written down, and nothing changes. Researchers call this tokenism. Genuine participation, they argue, requires that young people know what will happen to what they say and can see the consequences afterwards. Others note that the children most affected by decisions — those in care, those with disabilities, those who have recently arrived in a country — are often the least likely to be asked at all.\n\nThere is also disagreement about age. Should a fifteen-year-old have more influence than a seven-year-old? Most legal systems answer yes, but drawing the line is difficult, and the Convention deliberately avoids fixed ages. It refers instead to a child's evolving capacities, a phrase that leaves considerable room for interpretation — and for adults to underestimate what young people actually understand.\n\nDespite these problems, the shift is real. Before 1989, children appeared in international law mainly as objects to be protected. The Convention describes them instead as people whose opinions are worth hearing. Some historians place that change of perspective alongside the abolition of child labour as a turning point in how societies see the young.\n\nThe treaty has one striking weakness: enforcement. A committee in Geneva reviews each country's report every five years, but it cannot impose penalties. Its main tool is publicity. States that ignore their obligations are named in reports that journalists and organisations then use to apply pressure. It is a slow instrument. For a document with almost universal support, it depends surprisingly heavily on whether anyone is paying attention.",
+    "imageUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does Article 12 of the Convention establish?",
+        "options": [
+          "That every child is entitled to rest, play and leisure time",
+          "That children have a right to be heard",
+          "That children must be protected from dangerous work",
+          "That schooling should be free for all young people"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text describe the difference between being informed and being consulted as important?",
+        "options": [
+          "Because information is usually given too late to be useful",
+          "Because consultation costs public authorities considerably less money",
+          "Because most adults find written explanations difficult",
+          "Because being asked, and told why, changes how institutions work"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did children ask for in the playground example?",
+        "options": [
+          "Shelter from rain and places for small groups to sit",
+          "More equipment for climbing and running fast",
+          "A larger area with space for ball games",
+          "Better lighting so that the yard could still be used in winter"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What do researchers mean by tokenism in this context?",
+        "options": [
+          "Giving children a formal vote before any decision is taken",
+          "Consulting only the oldest pupils in a school",
+          "Collecting opinions and then changing nothing",
+          "Asking adults to speak on children's behalf"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why does the Convention avoid setting fixed ages for influence?",
+        "options": [
+          "Because most countries refused to agree on any figure",
+          "Because capacities develop at different rates",
+          "Because age is rarely recorded reliably in legal cases",
+          "Because younger children are thought to need more say"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the final paragraph suggest about the Convention?",
+        "options": [
+          "Its wide support means most obligations are met in practice",
+          "It should be rewritten so that fewer countries can sign it",
+          "Its ambitions are limited because it has no way to enforce them",
+          "The Geneva committee reviews countries far too frequently"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 552,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-tema-008",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "environment",
+    "title": "The Wolves That Changed a River",
+    "text": "In 1995, fourteen grey wolves were released into Yellowstone National Park in the United States. They were the first wolves in the park for seventy years; the last ones had been shot in the 1920s, when predators were widely regarded as pests. What happened next became one of the most repeated stories in modern nature writing.\n\nWithout wolves, the park's elk population had grown very large. The elk grazed heavily along rivers and streams, eating young willow and aspen almost as fast as the trees could grow. When the wolves returned, the elk did not simply decline in number. They also changed their behaviour, avoiding the open valleys where they were easiest to hunt. Trees began to recover in those valleys. Beavers, which need willow, returned and built dams. The dams created ponds for fish and amphibians. Songbirds nested in the new growth. Riverbanks, held together by roots, eroded more slowly, so some streams became narrower and deeper.\n\nEcologists call this a trophic cascade: a change at the top of a food web that ripples downwards, altering plants, water and landforms. A short film describing the Yellowstone cascade has been watched tens of millions of times, usually under a title claiming that wolves changed the course of rivers.\n\nThe science, however, is less tidy than the film. Several researchers who study Yellowstone argue that the story has been simplified almost beyond recognition. Elk numbers were falling for other reasons too, including hunting outside the park, several dry years, and the return of bears and cougars. Willow recovery has been strong in some valleys and barely visible in others. One long-term study found that where groundwater levels had dropped, willows failed to recover even when elk were kept out entirely. The wolves mattered, these scientists say, but they were one factor among many, and the popular version leaves out the complexity that makes the research interesting.\n\nThe debate is not only academic, because wolves have returned to Europe as well. After being almost eliminated from Scandinavia, they reappeared in the 1980s and now number a few hundred across Sweden and Norway. Their return has been far more controversial than in Yellowstone, largely because the Scandinavian landscape is not a protected wilderness. It is a working landscape of forestry, farms and hunting grounds.\n\nFor a sheep farmer who loses animals, or a hunter whose dog is killed while tracking, the arguments about biodiversity can feel remote. Compensation schemes exist, but they do not cover the effort of rebuilding fences or the anxiety of not knowing what will happen next. Conservation organisations point out that wolves take a very small proportion of livestock compared with disease and traffic, and that the population remains genetically fragile. Both statements can be true at the same time, which is precisely what makes the conflict difficult. Wolves are also protected under European law, which limits how national governments are allowed to respond, and the tension between local frustration and international rules has ended up in court more than once.\n\nWhat Yellowstone really demonstrates, then, may not be that wolves rebuild rivers. It may be that removing a predator changes a landscape in ways nobody predicted, and that putting one back changes it again — unevenly, slowly, and never quite as neatly as a good story requires.",
+    "imageUrl": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why had wolves disappeared from Yellowstone before 1995?",
+        "options": [
+          "Disease had spread rapidly through the population",
+          "They had moved north in search of colder conditions",
+          "Elk herds had grown large enough to drive them out",
+          "They had been shot because predators were seen as pests"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did trees begin to recover after the wolves returned?",
+        "options": [
+          "The wolves cleared space by trampling older vegetation",
+          "Elk both declined in number and avoided open valleys",
+          "Beavers arrived first and planted new willow along the banks",
+          "Rainfall increased steadily during the years that followed"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is a trophic cascade?",
+        "options": [
+          "A sudden collapse in the number of predators in a region",
+          "The seasonal movement of large animals between valleys",
+          "A change at the top of a food web that affects everything below",
+          "The gradual erosion of riverbanks after heavy grazing"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do some researchers criticise the popular version of the Yellowstone story?",
+        "options": [
+          "It credits wolves alone for changes that had several causes",
+          "It exaggerates how many wolves were actually released",
+          "It suggests the recovery happened far more slowly than it did",
+          "It ignores the fact that elk numbers rose again afterwards"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why has the return of wolves been more controversial in Scandinavia than in Yellowstone?",
+        "options": [
+          "Scandinavian wolves are considerably larger and more aggressive",
+          "They live in a working landscape of farms, forestry and hunting",
+          "No compensation is available to people who lose animals",
+          "The population has grown far beyond what was expected"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the main point of the final paragraph?",
+        "options": [
+          "Wolves should be reintroduced to every landscape where they once lived",
+          "The Yellowstone research was carried out too hastily to be trusted",
+          "Removing and returning a predator has complex, unpredictable effects",
+          "Popular films are the best way to explain ecology to the public"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 549,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-tema-009",
+    "grade": 8,
+    "genre": "fiction",
+    "theme": "friendship",
+    "title": "The Understudy",
+    "text": "Nadia was given the part nobody wants. Understudy to the lead — which meant learning every line, attending every rehearsal, and almost certainly never going on stage.\n\n\"You'll be brilliant,\" said Ms Okonjo, the drama teacher, in a voice that suggested she knew exactly how disappointing this was. \"And if anything happens to Viktor, the whole thing rests on you.\"\n\nNothing was going to happen to Viktor. Viktor had played the lead in every production since year seven and had never so much as caught a cold.\n\nWhat made it harder was the way people assumed Nadia had been given the smaller role because of her hearing. She had worn a hearing aid in her left ear since she was six. It picked up voices well enough in a quiet room, but a rehearsal hall was not a quiet room, and she had learnt long ago to read faces as much as sound. When someone turned away mid-sentence, half the words vanished.\n\nSo she developed her own method. She learnt the whole play, not just the lines, but the shape of every scene: who moved where, who breathed before speaking, which gesture came before which cue. While the others waited for their entrances, scrolling on their phones, Nadia sat in the third row with the script open on her knees, watching.\n\nBy the fourth week she could predict a fumbled line two seconds before it happened. She began, quietly, to help. She would catch someone in the corridor afterwards. \"You come in a bit early on the balcony scene,\" she'd say. \"Wait for him to turn.\" People started asking her.\n\nViktor asked her too, which surprised her more than anything. He had the confidence of somebody who has never had to think about how he is perceived, and he used it, one afternoon in November, to say something honest.\n\n\"You know the play better than I do.\"\n\n\"I've had more time to watch it.\"\n\n\"That's not what I mean.\" He rubbed the back of his neck. \"I say the words. You understand them.\"\n\nOn the Thursday of performance week, Viktor's grandfather died. Ms Okonjo told the cast in the morning, and the room went very quiet, and then everybody looked at Nadia.\n\nShe was not ready. Nobody is ever ready. But she had watched the play ninety times from the third row, and when she stepped into the space where Viktor usually stood, her body already knew where to go.\n\nThe difficult part was not the lines. It was the noise: the shuffle of two hundred people, the hum of the lights, the whole soundscape she had never rehearsed in. Twice she lost a cue. Both times she found it by watching — a hand lifting, a step backwards, a mouth opening a fraction early.\n\nAfterwards, her father asked whether she had been frightened, and Nadia thought about it properly before answering.\n\n\"Not of forgetting,\" she said. \"I've never been able to rely on hearing my cue anyway. I just watch. Everyone else was suddenly doing what I do all the time.\"\n\nViktor came back for the Saturday performance and played the lead, and he was very good. But at the curtain call he stepped back and gestured towards the third row, where Nadia had returned to sit with the script open on her knees, and the applause went on considerably longer than anyone expected.",
+    "imageUrl": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does Nadia's role as understudy involve?",
+        "options": [
+          "Learning every line and attending every rehearsal",
+          "Directing the scenes that Ms Okonjo cannot supervise",
+          "Sharing the lead role with Viktor on alternate nights",
+          "Managing the lights and sound during performances"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does Nadia rely so heavily on watching during rehearsals?",
+        "options": [
+          "She finds the written script difficult to follow",
+          "Ms Okonjo has asked her to observe the other actors",
+          "A noisy hall makes her hearing aid less useful, so she reads faces",
+          "She is trying to memorise the lighting and stage positions"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does Viktor mean when he says \"I say the words. You understand them\"?",
+        "options": [
+          "He thinks his own pronunciation needs improvement",
+          "He believes Nadia's grasp of the play is deeper than his",
+          "He wants Nadia to take over the lead role permanently",
+          "He is admitting that he has not learnt his lines properly"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Nadia find hardest about the Thursday performance?",
+        "options": [
+          "Remembering the lines she had only recently learnt",
+          "Working with a cast that had not rehearsed with her",
+          "Following Ms Okonjo's instructions from the wings",
+          "Coping with an unfamiliar wall of noise from the audience"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does Nadia's answer to her father reveal about her?",
+        "options": [
+          "She had secretly hoped for the chance to perform",
+          "She was more frightened than she was willing to admit",
+          "The skill she uses daily became an advantage on stage",
+          "She resented the assumptions her classmates had made"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why does Viktor gesture towards the third row at the curtain call?",
+        "options": [
+          "To acknowledge publicly what Nadia contributed",
+          "To show the audience where the understudy usually sits",
+          "To thank Ms Okonjo for supporting him after his loss",
+          "To invite Nadia to join the cast for a second bow"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 565,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-tema-010",
+    "grade": 8,
+    "genre": "fiction",
+    "theme": "music",
+    "title": "The Complaint on the Third Floor",
+    "text": "The letter was taped to the door of the rehearsal room, printed in a font so large it could be read from the stairs.\n\nTHE NOISE FROM THIS ROOM ON TUESDAYS AND THURSDAYS IS UNREASONABLE. THIS IS THE FOURTH TIME I HAVE WRITTEN.\n\nNo signature, but everybody knew. Mr Bergqvist, third floor, the flat directly above the community centre's music room. He had complained about the guitar amplifier in September, the singing in October, and now, apparently, about existence in general.\n\n\"He's eighty-something,\" said Amira, unpacking her bass. \"My mum says he never leaves the building.\"\n\n\"He leaves to complain,\" said Theo.\n\nThey had been rehearsing for eleven weeks for a competition none of them expected to win, and they were not, Amira privately admitted, very good. The drums rushed. The bass and guitar disagreed about where beat one was. Their singer, Milla, had a strong voice and no idea what to do with it.\n\nOn the third Thursday after the letter, someone knocked. Not the caretaker's knock — three quick raps, then silence.\n\nMr Bergqvist was shorter than Amira had imagined, and he was holding a piece of paper. Everyone braced.\n\n\"Your drummer,\" he said, \"is playing on top of the beat. Not behind it. On top of it. That is why the whole thing sounds like an argument.\"\n\nNobody spoke.\n\n\"It's not the volume,\" he added, more quietly. \"I don't mind the volume. It's that you've been making the same mistake for eleven weeks and I have had to listen to all of them.\"\n\nTheo, who had been playing drums for four years and had never received a note from anybody, said: \"How would you fix it?\"\n\nSo Mr Bergqvist came in and sat on the plastic chair by the door, and for twenty minutes he did not touch an instrument. He clapped. He counted. He asked Theo to play only the hi-hat, then only the kick drum, then to leave a gap where he had been putting an extra note. The song, unmistakably, stopped arguing with itself.\n\nHe had been a session drummer, it turned out, for twenty-six years. Studios in Stockholm and Copenhagen, mostly, backing singers whose names Milla had to look up afterwards and then repeated in disbelief. His hands had stopped cooperating in his sixties — arthritis, he said, in the same tone he might have used for the weather — and he had not played since.\n\nHe came the following Tuesday without being invited. Then every Tuesday. He never brought sticks. He sat on the plastic chair with a coffee, counted quietly along, and occasionally offered one sentence that reorganised the entire afternoon.\n\nThey came fourth in the competition, which was three places better than anyone had predicted and, according to Milla, entirely because of the eight bars of silence Mr Bergqvist had made them put before the last chorus. \"Nobody your age trusts a gap,\" he had told them. \"You think silence is where the music stops. It's where it gets ready.\"\n\nAmira taped something to the rehearsal room door after that, in the same enormous font he had used.\n\nTHE NOISE FROM THIS ROOM ON TUESDAYS AND THURSDAYS IS SIGNIFICANTLY IMPROVED. PLEASE CONTINUE COMPLAINING.\n\nHe left it up for a year.",
+    "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What had Mr Bergqvist complained about before the letter on the door?",
+        "options": [
+          "The caretaker's decision to lend out the music room",
+          "The band rehearsing on evenings other than Tuesdays",
+          "The guitar amplifier and, later, the singing",
+          "The number of people using the stairs at night"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does Mr Bergqvist say is wrong with the band's sound?",
+        "options": [
+          "The bass player is consistently too loud",
+          "The singer does not know how to use her voice",
+          "They rehearse the same song far too often",
+          "The drummer is playing on top of the beat"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say the band \"braced\" when they opened the door?",
+        "options": [
+          "They were worried the caretaker would shut the room",
+          "They expected another angry complaint about the noise",
+          "They had recognised him as a former professional musician",
+          "They thought the competition results had arrived early"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the detail that Mr Bergqvist mentions his arthritis \"in the same tone he might have used for the weather\" suggest?",
+        "options": [
+          "He speaks about a painful loss without dramatising it",
+          "He does not believe his condition is particularly serious",
+          "He is reluctant to discuss his health with strangers",
+          "He has forgotten most of his years as a musician"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does Mr Bergqvist mean by \"silence is where it gets ready\"?",
+        "options": [
+          "Bands should rehearse quietly out of respect for neighbours",
+          "A pause builds tension and makes what follows stronger",
+          "Musicians need rest between long rehearsal sessions",
+          "Quiet passages are easier for young players to perform"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the story?",
+        "options": [
+          "Competitions rarely reward the bands that practise hardest",
+          "Neighbours should be consulted before rehearsals begin",
+          "An unpromising conflict turned into an unlikely friendship",
+          "Experienced musicians should be paid to coach young bands"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 540,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-ali-001",
     "grade": 9,
     "genre": "non-fiction",
