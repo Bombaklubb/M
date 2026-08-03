@@ -17,9 +17,10 @@ const path = require('path');
 const libraryPath = path.join(__dirname, '../public/data/library.json');
 const lib = JSON.parse(fs.readFileSync(libraryPath, 'utf8'));
 
-// Endast dessa fyra typer renderas korrekt i QuizView, ResultView OCH ProfileView.
-// 'forfattarens-syfte' och 'textbevis' visas som anonymt "❓ Fråga" i quizvyn.
-const GILTIGA_TYPER = ['literal', 'inferens', 'ord', 'sammanfatta'];
+// Samtliga renderas i QuizView, ResultView och ProfileView.
+const GILTIGA_TYPER = [
+  'literal', 'inferens', 'ord', 'sammanfatta', 'forfattarens-syfte', 'textbevis',
+];
 const GILTIGA_GENRER = ['berättelse', 'faktatext'];
 
 // Målintervall för antal ord per årskurs (åk 10 = gymnasiet).
@@ -112,15 +113,23 @@ lib.forEach(t => {
       fel.push(`${plats}: ogiltigt correct-index (${q.correct})`);
     }
 
-    // Rätt svar bör inte gå att peka ut på längden. Kräver att det är STRIKT
-    // längst – delad längd med ett annat alternativ avslöjar ingenting.
+    // Rätt svar ska inte gå att peka ut på längden. Måttet är KVOT mot närmaste
+    // distraktor, inte absolut teckenskillnad: "En hundvalp och hennes dag" (26)
+    // mot "En resa" (7) är trivialt gissningsbar trots bara 18 teckens skillnad,
+    // medan 53 mot 37 tecken knappt avslöjar något.
     if (alt.length === 4 && typeof q.correct === 'number' && alt[q.correct]) {
       const längder = alt.map(o => (o || '').length);
       const rätt = längder[q.correct];
       const övriga = längder.filter((_, i) => i !== q.correct);
-      const nästLängsta = Math.max(...övriga);
-      if (rätt > nästLängsta * 1.4 && rätt - nästLängsta >= 12) {
-        varningar.push(`${plats}: rätt svar ${rätt} tecken mot näst längsta ${nästLängsta} – går att gissa`);
+      const längsta = Math.max(...övriga);
+      const kortaste = Math.min(...övriga);
+
+      if (rätt / längsta >= 1.6) {
+        varningar.push(`${plats}: rätt svar ${rätt} tecken mot längsta distraktor ${längsta} (${(rätt / längsta).toFixed(1)}×) – går att gissa`);
+      }
+      // Ett påfallande kort rätt svar sticker ut lika mycket som ett långt
+      if (kortaste / rätt >= 1.6) {
+        varningar.push(`${plats}: rätt svar ${rätt} tecken mot kortaste distraktor ${kortaste} (${(kortaste / rätt).toFixed(1)}× kortare) – går att gissa`);
       }
     }
   });
