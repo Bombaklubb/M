@@ -38013,5 +38013,405 @@
     "meta": {
       "wordCount": 392
     }
+  },
+  {
+    "id": "ak6-skate-001",
+    "grade": 6,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Rampen bakom ishallen",
+    "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop",
+    "text": "Det första Elvin lärde sig om skateboard var hur man faller.\n\nHan hade sett klippen på nätet: någon rullar fram, hoppar, och landar perfekt medan brädan snurrar under fötterna. Ingen av filmerna visade de fyrtio försöken innan. Det förstod han först när han själv stod på asfalten bakom ishallen med skrapade knän och en bräda som verkade ha en helt egen vilja.\n\n\"Du är för spänd\", sa Noor. Hon satt på kanten av rampen med sin egen bräda i knäet. \"Du håller emot hela tiden. Brädan känner det.\"\n\nElvin fnyste. En bräda kunde väl inte känna någonting. Men han märkte att hon hade rätt: så fort han slappnade av i axlarna rullade han rakare.\n\nNoor hade åkt i tre år. Hon kunde saker Elvin inte ens hade namn på ännu, och ibland gjorde det honom irriterad — inte på henne, utan på avståndet mellan dem. Han ville hoppa över alla veckor som låg emellan.\n\n\"Vet du vad som är grejen med den här sporten?\" sa hon en gång när regnet drev in över parkeringen. \"Ingen kan göra den åt dig. Du kan titta på tusen klipp. Kroppen lär sig ändå bara genom att göra fel.\"\n\nDet tog Elvin sex veckor att lära sig det enklaste tricket — en ollie, där brädan följer med upp i luften utan att man rör den med händerna. Sex veckor av samma rörelse om och om igen. Hans föräldrar frågade försiktigt om han inte ville prova något lättare.\n\nMen den kvällen han äntligen lyckades, när brädan lyfte med honom och landade under fötterna som om den hade bestämt sig för att samarbeta, förstod han något han inte kunde förklara hemma vid middagsbordet.\n\nDet handlade inte om tricket. Det handlade om att han hade fortsatt trots att ingenting hände på flera veckor. Rampen bakom ishallen hade lärt honom att envishet inte är samma sak som talang — och att den ofta räcker längre.\n\nNoor gav honom en high five utan att säga något. Hon behövde inte. Hon hade också stått där en gång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur lång tid tog det för Elvin att lära sig en ollie?",
+        "options": [
+          "Tre dagar",
+          "Sex veckor",
+          "Tre år",
+          "En kväll"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gjorde Noor när Elvin äntligen lyckades?",
+        "options": [
+          "Hon filmade honom",
+          "Hon ropade högt av glädje",
+          "Hon gav honom en high five utan att säga något",
+          "Hon visade ett svårare trick"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"envishet\" i texten?",
+        "options": [
+          "Att fortsätta trots att det går långsamt",
+          "Att vara naturligt begåvad",
+          "Att bli lätt irriterad",
+          "Att härma andra noggrant"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blev Elvin irriterad över avståndet mellan sig och Noor?",
+        "options": [
+          "Hon vägrade lära honom något",
+          "Hon skrattade åt hans misslyckanden",
+          "Hon åkte hellre med andra kompisar",
+          "Han ville kunna lika mycket som hon direkt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Noor egentligen när hon säger att brädan \"känner\" om han är spänd?",
+        "options": [
+          "Att brädan är trasig och behöver bytas",
+          "Att kroppens spänning påverkar hur man åker",
+          "Att brädan fungerar bättre i torrt väder",
+          "Att han behöver en dyrare bräda"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur farlig skateboard kan vara för nybörjare",
+          "Varför klipp på nätet oftast är falska",
+          "Att uthållighet kan betyda mer än snabb talang",
+          "Hur man väljer rätt utrustning till sporten"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 337
+    }
+  },
+  {
+    "id": "ak7-bak-001",
+    "grade": 7,
+    "genre": "faktatext",
+    "theme": "mat",
+    "title": "Vetenskapen i en kanelbulle",
+    "imageUrl": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
+    "text": "En kanelbulle ser enkel ut. Deg, socker, kanel. Men mellan det ögonblick då degen blandas och den stund då bullen tas ur ugnen pågår flera kemiska processer som helt avgör om resultatet blir luftigt eller kompakt.\n\nAllt börjar med jästen. Jäst är en encellig svamp, och när den får värme, fukt och socker börjar den äta. Som restprodukt bildas koldioxid — samma gas som vi andas ut. Gasen kan inte ta sig ut ur degen, utan fastnar i små bubblor. Det är därför degen sväller. Utan jäst skulle bullen bli lika platt som en kaka.\n\nMen gasen behöver något att fastna i. Där kommer glutenet in. Gluten är ett nätverk av proteiner som bildas när vetemjöl blandas med vatten och bearbetas. Ju mer degen knådas, desto starkare blir nätverket. Ett välarbetat glutennät fungerar ungefär som en ballong: det håller kvar koldioxiden i stället för att låta den pysa ut. Det är också därför recept ofta säger att degen ska knådas i tio minuter — tiden behövs för att proteinerna ska hinna bygga sitt nät.\n\nDen sista förändringen sker i ugnen. När ytan blir varmare än ungefär 140 grader reagerar proteiner och sockerarter med varandra i det som kallas Maillardreaktionen. Den skapar hundratals nya smakämnen och ger bullen sin gyllenbruna yta. Samma reaktion gör att rostat bröd, halstrat kött och kaffebönor doftar som de gör. Det är alltså inte sockret i sig som ger färgen, utan mötet mellan socker och protein.\n\nBakning beskrivs ibland som en konst. Men den som förstår vad jästen, glutenet och värmen faktiskt gör har lättare att förstå varför det ibland blir fel — och vad som går att ändra till nästa gång.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken gas bildas när jästen äter socker?",
+        "options": [
+          "Syre",
+          "Vätgas",
+          "Koldioxid",
+          "Kväve"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"encellig\" i texten?",
+        "options": [
+          "Som består av en enda cell",
+          "Som växer mycket långsamt",
+          "Som bara finns i vetemjöl",
+          "Som tål höga temperaturer"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vid ungefär vilken temperatur startar Maillardreaktionen?",
+        "options": [
+          "40 grader",
+          "70 grader",
+          "100 grader",
+          "140 grader"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir en deg som knådats för kort tid ofta kompakt?",
+        "options": [
+          "Jästen hinner inte bli varm nog",
+          "Glutennätet blir för svagt för att hålla kvar gasen",
+          "Sockret hinner inte lösas upp",
+          "Degen innehåller för mycket vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämner texten rostat bröd och kaffebönor?",
+        "options": [
+          "För att visa vad man kan servera till bullen",
+          "För att jämföra vilket som smakar bäst",
+          "För att visa att samma reaktion sker i många livsmedel",
+          "För att förklara varför kaffe innehåller socker"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap?",
+        "options": [
+          "Att bakning kräver dyra råvaror för att lyckas",
+          "Att kunskap om processerna gör det lättare att lyckas med bakning",
+          "Att kanelbullar är nyttigare än de flesta tror",
+          "Att jäst är den enda ingrediens som spelar roll"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 276
+    }
+  },
+  {
+    "id": "ak8-esport-001",
+    "grade": 8,
+    "genre": "berättelse",
+    "theme": "sport",
+    "title": "Sista rundan före uttagningen",
+    "imageUrl": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=600&h=400&fit=crop",
+    "text": "Rösten i headsetet var för hög igen.\n\n\"Vänta! Vänta på mig!\" ropade Amir, men Tove hade redan rusat fram. På skärmen såg han hennes karaktär springa ut i det öppna området, ensam. Tre sekunder senare låg hon där.\n\n\"Varför gör du så?\" sa han.\n\n\"För att du är för långsam.\"\n\nDet var femte gången den kvällen. Laget hade tränat tillsammans i nästan ett år, och om två veckor var det uttagning till regionsfinalen. De var bra — alla fem visste om det. Problemet var att de var bra var för sig.\n\nDeras coach Nadja hade sagt samma sak flera gånger: \"Ni förlorar inte för att någon siktar dåligt. Ni förlorar för att ni pratar över varandra.\"\n\nEfter matchen blev det tyst i röstkanalen. Amir stirrade på resultatlistan. Han hade flest träffar av alla i laget, och de hade ändå förlorat med sex ronder.\n\nDet var Kian som till slut sa det ingen ville säga: \"Vi spelar fem enspelarmatcher samtidigt.\"\n\nIngen protesterade. Tove suckade i sin mikrofon, men hon avbröt honom inte.\n\nNästa träning provade de något Nadja hade föreslagit veckan innan, och som alla hade tyckt lät löjligt: bara en person i taget fick prata under en runda. De andra skulle lyssna. Först kändes det klumpigt, nästan pinsamt. Men mot slutet av kvällen märkte Amir något — han visste var Tove befann sig utan att titta på kartan.\n\nDe vann inte alla ronder. Men de förlorade tillsammans, och för första gången kändes det som en skillnad.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur länge hade laget tränat tillsammans?",
+        "options": [
+          "Nästan ett år",
+          "Två veckor",
+          "Sex ronder",
+          "Tre säsonger"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad föreslog Nadja att de skulle prova under träningen?",
+        "options": [
+          "Att byta ut en spelare i laget",
+          "Att träna dubbelt så många timmar",
+          "Att bara en person i taget fick prata",
+          "Att spela utan ljud helt och hållet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"protesterade\" i texten?",
+        "options": [
+          "Skrattade högt",
+          "Sa emot eller invände",
+          "Lämnade rummet",
+          "Höll med direkt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Kian när han säger att de spelar \"fem enspelarmatcher samtidigt\"?",
+        "options": [
+          "Att de borde tävla mot varandra i stället",
+          "Att de spelar på fem olika servrar",
+          "Att matcherna tar för lång tid att spela",
+          "Att var och en agerar för sig utan att samarbeta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför är det betydelsefullt att Amir hade flest träffar men laget ändå förlorade?",
+        "options": [
+          "Det visar att individuell skicklighet inte räcker i ett lag",
+          "Det visar att statistik alltid är missvisande",
+          "Det visar att Amir borde byta lag",
+          "Det visar att motståndarna fuskade"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten främst om?",
+        "options": [
+          "Hur man tränar inför en regionsfinal",
+          "Att kommunikation är avgörande för ett lag",
+          "Varför esport kräver dyr utrustning",
+          "Hur en coach väljer ut nya spelare"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 246
+    }
+  },
+  {
+    "id": "ak9-sneakers-001",
+    "grade": 9,
+    "genre": "faktatext",
+    "theme": "kultur",
+    "title": "Sneakers, status och slitna sulor",
+    "imageUrl": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop",
+    "text": "År 1984 skrev ett amerikanskt sportmärke kontrakt med en ung basketspelare. Skon som lanserades i hans namn kostade ungefär 65 dollar. Fyrtio år senare kan ett oanvänt par från samma serie säljas för hundratusentals kronor på andrahandsmarknaden. Frågan är vad man egentligen betalar för.\n\nPriset på en sneaker styrs bara delvis av materialet. Tillverkningskostnaden för ett par ligger ofta på en bråkdel av butikspriset. Resten består av design, marknadsföring, distribution och — framför allt — det som ekonomer kallar upplevt värde. En sko blir dyrare för att tillräckligt många är överens om att den är värd mer.\n\nDen mekanismen förstärks av att märkena medvetet begränsar tillgången. Genom att släppa ett fåtal exemplar skapas köer, lotterier och till slut en andrahandsmarknad där priset sätts av efterfrågan i stället för av tillverkaren. Ett par som säljs slut på nittio sekunder får ett värde som inte har med sulan att göra, utan med bristen.\n\nSamtidigt finns en baksida som sällan syns i marknadsföringen. Ett par sneakers består ofta av mer än trettio olika material — gummi, plast, textil och lim — som fogas samman på ett sätt som gör dem nästan omöjliga att materialåtervinna. Uppskattningsvis tillverkas över tjugo miljarder par skor i världen varje år, och de allra flesta hamnar till slut på deponi, där de bryts ned under mycket lång tid.\n\nDet har fått både konsumenter och företag att pröva andra vägar. Andrahandshandeln växer snabbt, särskilt bland unga, och några tillverkare experimenterar med skor som är konstruerade för att kunna tas isär och lagas. Om det är ett verkligt skifte eller ännu ett sätt att sälja mer är för tidigt att avgöra.\n\nDet som är säkert är att en sko sedan länge är mer än ett skydd för foten. Den är ett budskap — och budskap har alltid haft ett pris.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Ungefär vad kostade skon när den lanserades 1984?",
+        "options": [
+          "65 dollar",
+          "650 dollar",
+          "15 dollar",
+          "200 dollar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"efterfrågan\" i texten?",
+        "options": [
+          "Hur mycket det kostar att tillverka något",
+          "Hur mycket något eftertraktas av köpare",
+          "Hur länge en vara håller innan den slits ut",
+          "Hur många butiker som säljer varan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Varför är sneakers svåra att materialåtervinna?",
+        "options": [
+          "De innehåller giftiga färgämnen",
+          "De är för smutsiga när de slängs",
+          "De består av många material som fogats samman",
+          "De tillverkas i för många olika länder"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför släpper märkena medvetet bara ett fåtal exemplar?",
+        "options": [
+          "För att spara in på tillverkningskostnader",
+          "För att hinna testa kvaliteten först",
+          "För att minska sin klimatpåverkan",
+          "För att skapa brist som driver upp värdet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken hållning har texten till företagens hållbarhetssatsningar?",
+        "options": [
+          "Att de helt saknar betydelse",
+          "Att det är oklart om de är genuina eller marknadsföring",
+          "Att de redan har löst problemet",
+          "Att de enbart drivs fram av lagkrav"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vilken är textens huvudpoäng?",
+        "options": [
+          "Att sneakers har blivit sämre tillverkade med tiden",
+          "Att andrahandsmarknaden bör förbjudas",
+          "Att en skos pris styrs mer av status och brist än av material",
+          "Att basketspelare tjänar för mycket på reklam"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 299
+    }
+  },
+  {
+    "id": "akgy-stream-001",
+    "grade": 10,
+    "genre": "faktatext",
+    "theme": "musik",
+    "title": "Vad är en stream värd?",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&h=400&fit=crop",
+    "text": "När en låt spelas på en streamingtjänst betalas en ersättning ut. Beloppet ligger ofta någonstans mellan tre och fyra öre. Siffran används ibland som bevis för att musiker utnyttjas, men den säger i praktiken ganska lite, eftersom den är resultatet av en uträkning snarare än ett fast pris.\n\nDe flesta tjänster använder en modell som kallas pro rata. Alla abonnemangsavgifter i ett land läggs i en gemensam pott. Tjänsten behåller en andel, och resten fördelas efter hur stor del av landets totala lyssningar varje artist står för. Det innebär att en enskild lyssnares avgift inte nödvändigtvis går till de artister just den personen lyssnat på. Den som spelar samma smala artist tusen gånger i månaden bidrar i praktiken mest till dem som dominerar totalstatistiken.\n\nKritiker menar att detta systematiskt gynnar redan etablerade artister. Som alternativ föreslås en användarcentrerad modell, där varje abonnents avgift fördelas enbart mellan de artister personen faktiskt har lyssnat på. Flera studier har undersökt effekten, och resultaten är mindre dramatiska än många väntat sig: omfördelningen skulle gynna nischade genrer, men förändra totalbilden förhållandevis måttligt.\n\nYtterligare en faktor är att pengarna sällan går direkt till artisten. Ersättningen betalas till rättighetshavarna — skivbolag, förlag och distributörer — och hur mycket som når fram beror på avtal som skrevs långt innan låten släpptes. En artist med ett äldre kontrakt kan få en betydligt mindre andel än en som ger ut sin musik själv.\n\nTill detta kommer de redaktionella spellistorna. Att hamna på en stor lista kan mångdubbla en låts lyssningar över en natt, vilket ger den som väljer låtarna en påtaglig makt över vem som får uppmärksamhet.\n\nDiskussionen om ersättning handlar därför sällan om örestalet i sig. Den handlar om hur en gemensam pott ska fördelas, vem som avgör synligheten, och vilka avtal som skrevs innan någon visste hur stor streamingen skulle bli.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Ungefär hur mycket betalas ut per stream enligt texten?",
+        "options": [
+          "Mellan tre och fyra kronor",
+          "Mellan tre och fyra öre",
+          "Exakt tio öre",
+          "Det varierar mellan en och två kronor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ordet \"nischade\" i texten?",
+        "options": [
+          "Inriktade på en smal publik",
+          "Nyligen utgivna",
+          "Ekonomiskt framgångsrika",
+          "Producerade utomlands"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilka betalas ersättningen ut till?",
+        "options": [
+          "Direkt till artisten själv",
+          "Till lyssnarnas abonnemangskonton",
+          "Till rättighetshavarna",
+          "Till de redaktionella spellistorna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför menar texten att örestalet \"säger ganska lite\"?",
+        "options": [
+          "Det ändras varje månad utan förvarning",
+          "Det är hemligt och går inte att kontrollera",
+          "Det skiljer sig kraftigt mellan olika länder",
+          "Det är resultatet av en fördelning och inte ett fast pris"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar studierna om den användarcentrerade modellen?",
+        "options": [
+          "Att den skulle halvera artisternas inkomster",
+          "Att effekten blir mindre dramatisk än många väntat sig",
+          "Att den är omöjlig att genomföra tekniskt",
+          "Att den enbart gynnar de största artisterna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudsakliga syfte?",
+        "options": [
+          "Att uppmana läsaren att säga upp sitt abonnemang",
+          "Att bevisa att streamingtjänsterna bryter mot lagen",
+          "Att förklara hur ersättningen fördelas och vad som påverkar den",
+          "Att jämföra ljudkvaliteten hos olika tjänster"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 303
+    }
   }
 ]
