@@ -55,6 +55,8 @@ const QUESTION_TYPE_LABELS: Record<string, { label: string; emoji: string; categ
   inferens: { label: 'Mellan raderna', emoji: '🧠', category: 'Mellan raderna' },
   sammanfatta: { label: 'Sammanfatta', emoji: '📝', category: 'Sammanfatta' },
   ord: { label: 'Ord & begrepp', emoji: '📖', category: 'Ord & begrepp' },
+  'forfattarens-syfte': { label: 'Författarens syfte', emoji: '🎯', category: 'Författarens syfte' },
+  textbevis: { label: 'Textbevis', emoji: '📑', category: 'Textbevis' },
 };
 
 type TextSize = 'small' | 'medium' | 'large';

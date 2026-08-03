@@ -1,5 +1,11 @@
 // Frågetyper från biblioteket
-export type QuestionType = 'literal' | 'inferens' | 'ord' | 'sammanfatta';
+export type QuestionType =
+  | 'literal'
+  | 'inferens'
+  | 'ord'
+  | 'sammanfatta'
+  | 'forfattarens-syfte'
+  | 'textbevis';
 
 // Genre
 export type Genre = 'berättelse' | 'faktatext';

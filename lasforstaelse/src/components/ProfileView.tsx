@@ -15,6 +15,8 @@ const QUESTION_TYPE_LABELS: Record<QuestionType, { label: string; emoji: string 
   inferens: { label: 'Mellan raderna', emoji: '🧠' },
   sammanfatta: { label: 'Sammanfatta', emoji: '📝' },
   ord: { label: 'Ord & begrepp', emoji: '📖' },
+  'forfattarens-syfte': { label: 'Författarens syfte', emoji: '🎯' },
+  textbevis: { label: 'Textbevis', emoji: '📑' },
 };
 
 export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvatarChange }) => {
