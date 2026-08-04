@@ -3775,77 +3775,77 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten på trappan",
-    "text": "Maja öppnar dörren på morgonen. På trappan sitter en grå katt. Katten tittar lugnt på Maja. Hon hämtar lite vatten i en skål. Katten dricker och går sedan vidare.",
+    "text": "Maja öppnar dörren på morgonen. På trappan sitter en grå katt. Katten tittar lugnt på Maja. Den ser hungrig ut. Maja hämtar en skål med vatten. Katten dricker länge. Sedan reser den sig och går mot häcken. Maja vinkar. Nästa morgon sitter katten där igen.",
     "questions": [
       {
         "type": "literal",
         "q": "När öppnar Maja dörren?",
         "options": [
-          "På morgonen",
-          "På natten",
           "På kvällen",
-          "På rasten"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Var sitter katten?",
-        "options": [
-          "På taket",
-          "På trappan",
-          "På bordet",
-          "I bilen"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vilken färg har katten?",
-        "options": [
-          "Svart",
-          "Vit",
-          "Grå",
-          "Orange"
+          "På rasten",
+          "På morgonen",
+          "På natten"
         ],
         "correct": 2
       },
       {
         "type": "literal",
+        "q": "Var sitter katten?",
+        "options": [
+          "På trappan",
+          "Under bordet",
+          "I bilen",
+          "På taket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
         "q": "Vad hämtar Maja?",
         "options": [
+          "Bröd",
           "Mat",
           "Mjölk",
-          "Bröd",
           "Vatten"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör katten?",
+        "q": "Varför hämtar Maja något åt katten?",
         "options": [
-          "Dricker",
-          "Sover",
-          "Springer",
-          "Hoppar"
+          "Hon är själv törstig",
+          "Hon ska tvätta trappan",
+          "Katten ser hungrig ut",
+          "Hon ska vattna blommorna"
         ],
-        "correct": 0
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vart går katten sedan?",
+        "options": [
+          "Ner i källaren",
+          "Mot häcken",
+          "In i huset",
+          "Upp i ett träd"
+        ],
+        "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vad gör katten sedan?",
+        "q": "Vad förstår vi i slutet?",
         "options": [
-          "Stannar",
-          "Går vidare",
-          "Lägger sig",
-          "Jamnar"
+          "Att Maja fick en egen katt",
+          "Att katten var rädd för Maja",
+          "Att katten var sjuk",
+          "Att katten kommer tillbaka"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 29,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-022",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -3941,77 +3941,77 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Glass i solen",
-    "text": "Noor och hennes pappa går till torget. Det är varmt. Noor köper en jordgubbsglass. Pappan köper en glass med choklad. De sitter på en bänk och äter långsamt.",
+    "text": "Det är varmt i parken. Alma köper en glass med jordgubbssmak. Solen skiner starkt. Glassen börjar smälta direkt. En droppe faller på hennes sko. Alma skrattar och äter fortare. Sedan sätter hon sig i skuggan under ett träd. Där håller glassen längre.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vem går Noor med?",
+        "q": "Var är Alma?",
         "options": [
-          "Pappa",
-          "Mamma",
-          "Lärare",
-          "Vän"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Hur är vädret?",
-        "options": [
-          "Kallt",
-          "Varmt",
-          "Regnigt",
-          "Blåsigt"
+          "Vid havet",
+          "I parken",
+          "I skolan",
+          "Hemma i köket"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad köper Noor?",
-        "options": [
-          "Bröd",
-          "Juice",
-          "Glass",
-          "Kaka"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vilken smak har pappans glass?",
+        "q": "Vilken smak har glassen?",
         "options": [
           "Vanilj",
           "Citron",
-          "Jordgubb",
-          "Choklad"
+          "Choklad",
+          "Jordgubb"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Var sitter de?",
+        "q": "Varför smälter glassen?",
         "options": [
-          "På en bänk",
-          "På golvet",
-          "I bilen",
-          "På gräset"
+          "Alma håller den hårt",
+          "Solen skiner starkt",
+          "Den var för billig",
+          "Den är gammal"
         ],
-        "correct": 0
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vart faller droppen?",
+        "options": [
+          "I gräset",
+          "På bänken",
+          "På hennes sko",
+          "På hennes hand"
+        ],
+        "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Hur äter de glassen?",
+        "q": "Varför äter Alma fortare?",
         "options": [
-          "Snabbt",
-          "Långsamt",
-          "Inte alls",
-          "Stående"
+          "Hon är mycket hungrig",
+          "Hon ska hem snart",
+          "Hon fryser om händerna",
+          "Glassen håller på att smälta"
         ],
-        "correct": 1
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sätter hon sig i skuggan?",
+        "options": [
+          "Hon vill läsa en bok",
+          "Det är för högljutt i solen",
+          "Glassen håller längre där",
+          "Bänkarna i solen är upptagna"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 28,
+      "wordCount": 42,
       "fingerprint": "tema-ak1-tema-024",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4024,77 +4024,77 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Cykeln",
-    "text": "Ella har fått en ny cykel. Den är blå och blank. Först cyklar hon långsamt på gården. Sedan cyklar hon snabbare. Hennes vän Amir springer bredvid och hejar.",
+    "text": "Sam har fått en ny cykel. Den är blå och har en ringklocka. Först är det svårt att hålla balansen. Pappa håller i sadeln och springer bredvid. Sedan släpper han taget. Sam cyklar ensam hela vägen till grinden. Han ringer i klockan tre gånger av glädje.",
     "questions": [
-      {
-        "type": "literal",
-        "q": "Vad har Ella fått?",
-        "options": [
-          "En cykel",
-          "En bok",
-          "En boll",
-          "En väska"
-        ],
-        "correct": 0
-      },
       {
         "type": "literal",
         "q": "Vilken färg har cykeln?",
         "options": [
-          "Röd",
-          "Blå",
           "Grön",
-          "Gul"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Hur cyklar hon först?",
-        "options": [
-          "Snabbt",
-          "Bakåt",
-          "Långsamt",
-          "Stilla"
+          "Vit",
+          "Blå",
+          "Röd"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad gör hon sedan?",
+        "q": "Vad sitter på cykeln?",
         "options": [
-          "Stannar helt",
-          "Hoppar genast av",
-          "Ringer på klockan",
-          "Cyklar snabbare"
+          "En korg",
+          "En ringklocka",
+          "En lampa",
+          "En liten flagga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför håller pappa i sadeln?",
+        "options": [
+          "Han vill prova själv",
+          "Sam håller inte balansen",
+          "Vägen är väldigt brant",
+          "Cykeln är trasig"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur långt cyklar Sam ensam?",
+        "options": [
+          "Runt hela huset",
+          "Ända till skolan",
+          "Fram till affären",
+          "Hela vägen till grinden"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vem springer bredvid?",
+        "q": "Varför ringer Sam i klockan?",
         "options": [
-          "Amir",
-          "Sara",
-          "Leo",
-          "Kim"
+          "Någon står i vägen",
+          "Han vill hem",
+          "Klockan sitter löst",
+          "Han är glad"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör Amir?",
+        "q": "Vad har Sam lärt sig?",
         "options": [
-          "Sover",
-          "Hejar",
-          "Äter",
-          "Sitter"
+          "Att öppna grinden",
+          "Att laga en cykel",
+          "Att cykla själv",
+          "Att springa fort"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 28,
+      "wordCount": 46,
       "fingerprint": "tema-ak1-tema-025",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4107,77 +4107,77 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Fågeln i trädet",
-    "text": "Milo går i skogen med sin mormor. De hör en fågel sjunga högt. Fågeln sitter i ett grönt träd. Milo tittar upp och ler.",
+    "text": "Milo går i skogen med sin mormor. De hör en fågel sjunga högt. Fågeln sitter längst upp i ett grönt träd. Den är liten och brun. Milo står alldeles stilla för att inte skrämma den. Mormor viskar att fågeln heter bofink. Sedan flyger den vidare till nästa träd.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var går Milo?",
+        "q": "Vem går Milo med?",
         "options": [
-          "I skogen",
-          "I skolan",
-          "I staden",
-          "I huset"
+          "Sin mormor",
+          "Sin pappa",
+          "Sin storebror",
+          "Sin lärare"
         ],
         "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vem går han med?",
-        "options": [
-          "Pappa",
-          "Mormor",
-          "Läraren",
-          "Vännen"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad hör de?",
-        "options": [
-          "En bil",
-          "En hund",
-          "En fågel",
-          "En katt"
-        ],
-        "correct": 2
       },
       {
         "type": "literal",
         "q": "Var sitter fågeln?",
         "options": [
           "På marken",
-          "På stenen",
-          "På taket",
-          "I trädet"
+          "Längst upp i ett träd",
+          "På en stor sten",
+          "På en gren nära marken"
         ],
-        "correct": 3
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur ser fågeln ut?",
+        "options": [
+          "Vit med långa ben",
+          "Liten och brun",
+          "Grön med röd näbb",
+          "Stor och svart"
+        ],
+        "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vad gör Milo?",
+        "q": "Varför står Milo alldeles stilla?",
         "options": [
-          "Ler",
-          "Går",
-          "Ser",
-          "Står"
+          "Han lyssnar på mormor",
+          "Han har ont i foten",
+          "Han vill inte skrämma fågeln",
+          "Han är trött efter promenaden"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter fågeln?",
+        "options": [
+          "Bofink",
+          "Kråka",
+          "Talgoxe",
+          "Duva"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör fågeln?",
+        "q": "Varför viskar mormor?",
         "options": [
-          "Sover",
-          "Sjunger",
-          "Äter",
-          "Flyger"
+          "Milo hör dåligt",
+          "Det är förbjudet att prata",
+          "Hon är hes i halsen",
+          "Fågeln ska inte flyga i väg"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 24,
+      "wordCount": 48,
       "fingerprint": "tema-ak1-tema-026",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4190,77 +4190,77 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Bussen",
-    "text": "Sara väntar på bussen vid hållplatsen. Bussen kommer snart. Hon kliver på och sätter sig vid fönstret. Utanför ser hon hus och träd.",
+    "text": "Bussen kommer klockan åtta. Elin står vid skylten med sin ryggsäck. Dörrarna öppnas och hon går in. Hon hittar en plats vid fönstret. Utanför drar husen förbi. Vid tredje hållplatsen stiger hennes kompis på. De sitter bredvid varandra hela vägen. Sedan går de av vid skolan tillsammans.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var väntar Sara?",
+        "q": "När kommer bussen?",
         "options": [
-          "Inne i skolan",
-          "Vid hållplatsen",
-          "Inne i skogen",
-          "Inne i huset"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad väntar hon på?",
-        "options": [
-          "Tåget",
-          "Bussen",
-          "Taxin",
-          "Båten"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Var sätter hon sig?",
-        "options": [
-          "Vid dörren",
-          "Bak i bussen",
-          "Vid fönstret",
-          "På golvet"
+          "Klockan sju",
+          "Klockan tio",
+          "Klockan åtta",
+          "Klockan nio"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad ser hon?",
+        "q": "Var sätter sig Elin?",
         "options": [
-          "Fiskar i sjön",
-          "Bilar på vägen",
-          "Hus och träd",
-          "Berg i fjärran"
+          "Mitt i bussen",
+          "Längst bak",
+          "Vid fönstret",
+          "Bredvid föraren"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Vad gör bussen?",
+        "q": "Vad ser Elin utanför?",
         "options": [
-          "Kommer",
-          "Stannar",
-          "Backar",
-          "Hoppar"
+          "Husen dra förbi",
+          "Regnet på rutan",
+          "En annan buss köra om",
+          "Skolan komma närmare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vid vilken hållplats stiger kompisen på?",
+        "options": [
+          "Vid den tredje",
+          "Vid den första",
+          "Vid den sista",
+          "Vid den andra"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör Sara först?",
+        "q": "Varför står Elin vid skylten?",
         "options": [
-          "Springer",
-          "Väntar",
-          "Sover",
-          "Äter"
+          "Hon väntar på sin kompis",
+          "Det regnar mindre där",
+          "Hon läser vad som står",
+          "Där stannar bussen"
         ],
-        "correct": 1
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vart är de på väg?",
+        "options": [
+          "Till affären",
+          "Till parken",
+          "Hem",
+          "Till skolan"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 23,
+      "wordCount": 47,
       "fingerprint": "tema-ak1-tema-027",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4273,77 +4273,77 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Rita i klassrummet",
-    "text": "I klassrummet ritar. Kim en stor sol. Solen är gul och rund. Hennes vän Leo ritar ett träd bredvid.",
+    "text": "Klassen ritar efter lunchen. Ali ritar ett hus med rött tak. Han glömmer att rita en dörr. Läraren pekar och ler. Ali ritar en dörr och två fönster också. Bilden sätts upp på väggen. Nästa dag hänger tjugo hus bredvid varandra där.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var ritar Kim?",
+        "q": "När ritar klassen?",
         "options": [
-          "Ute i skogen",
-          "Inne i bussen",
-          "Ute i parken",
-          "I klassrummet"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "Vad ritar Kim?",
-        "options": [
-          "En bil",
-          "En sol",
-          "En katt",
-          "En boll"
+          "Sista timmen på dagen",
+          "Efter lunchen",
+          "På morgonen",
+          "Precis före rasten"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vilken färg har solen?",
+        "q": "Vilken färg har taket?",
         "options": [
-          "Blå",
-          "Röd",
-          "Gul",
-          "Grön"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad ritar Leo?",
-        "options": [
-          "En boll",
-          "Ett hus",
-          "En stol",
-          "Ett träd"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Hur är solen?",
-        "options": [
-          "Rund",
-          "Lång",
-          "Platt",
-          "Liten"
+          "Rött",
+          "Grönt",
+          "Svart",
+          "Blått"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Vem är Kims vän?",
+        "type": "literal",
+        "q": "Vad glömmer Ali först?",
         "options": [
-          "Sara",
-          "Leo",
-          "Maja",
-          "Ali"
+          "Trappan",
+          "Fönstren",
+          "Skorstenen",
+          "Dörren"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför pekar läraren på bilden?",
+        "options": [
+          "Ali har ritat fel färg",
+          "Något saknas på huset",
+          "Bilden är helt klar",
+          "Ali ska sluta rita nu"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ritar Ali sedan?",
+        "options": [
+          "Ett stort träd",
+          "En bil på gatan",
+          "En sol på himlen",
+          "En dörr och två fönster"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad har hänt nästa dag?",
+        "options": [
+          "Hela klassens hus hänger uppe",
+          "Ali har ritat en ny bild",
+          "Läraren har ritat ett eget hus",
+          "Bilderna är borttagna"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 19,
+      "wordCount": 42,
       "fingerprint": "tema-ak1-tema-028",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4356,77 +4356,77 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snögubben",
-    "text": "Det snöar ute. Leo och Noor bygger en snögubbe. De gör ögon av stenar och en näsa av en morot.",
+    "text": "Det har snöat hela natten. Elsa och Hugo rullar tre stora bollar. Den största blir underst. Snögubben får stenar till ögon och en morot till näsa. En gammal halsduk hamnar runt halsen. På kvällen börjar det regna. Nästa morgon står bara moroten kvar i snön.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad faller från himlen?",
+        "q": "Hur många bollar rullar de?",
         "options": [
-          "Snö",
-          "Regn",
-          "Löv",
-          "Sand"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vem bygger snögubben?",
-        "options": [
-          "Leo och Kim",
-          "Leo och Noor",
-          "Sara och Ali",
-          "Maja och Amir"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör de ögon av?",
-        "options": [
-          "Löv",
-          "Glass",
-          "Stenar",
-          "Pinnar"
+          "Fyra",
+          "Fem",
+          "Tre",
+          "Två"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad gör de näsan av?",
+        "q": "Vad får snögubben till ögon?",
         "options": [
-          "Ett äpple",
-          "En pinne",
-          "En potatis",
-          "En morot"
+          "Kolbitar",
+          "Stenar",
+          "Knappar",
+          "Två lock"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad får snögubben till näsa?",
+        "options": [
+          "En liten sten",
+          "En morot",
+          "En kotte",
+          "En pinne"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir den största bollen underst?",
+        "options": [
+          "Den är rundast av dem",
+          "Den blev först klar",
+          "Den är lättast att rulla",
+          "Den måste bära de andra"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
-        "q": "Vad bygger de?",
+        "type": "literal",
+        "q": "Vad händer på kvällen?",
         "options": [
-          "En snögubbe",
-          "Ett hus",
-          "En båt",
-          "En bil"
+          "Det blir mycket kallare",
+          "Det blåser upp till storm",
+          "Det börjar regna",
+          "Det snöar ännu mer"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Hur är vädret?",
+        "q": "Varför står bara moroten kvar?",
         "options": [
-          "Varmt",
-          "Snöigt",
-          "Soligt",
-          "Blåsigt"
+          "Snön har smält",
+          "Hugo har rivit snögubben",
+          "Halsduken blåste bort med den",
+          "Någon har tagit snögubben"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 20,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-029",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4439,77 +4439,77 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Lunch i skolan",
-    "text": "I skolans matsal äter eleverna lunch. Idag finns soppa och bröd. Amir tycker soppan är god. Han sitter bredvid sin vän Maja.",
+    "text": "I matsalen är det soppa idag. Amir tar två skivor bröd. Han sätter sig bredvid sin vän Maja. Soppan är varm och han blåser på skeden. Maja berättar om helgen. De hinner prata länge. Sedan ställer de tallrikarna på vagnen och går ut.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var äter eleverna?",
-        "options": [
-          "I matsalen",
-          "I skogen",
-          "På bussen",
-          "I parken"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad finns till lunch?",
+        "q": "Vad är det för mat?",
         "options": [
           "Pasta",
-          "Soppa",
-          "Pizza",
-          "Ris"
+          "Fisk",
+          "Pannkakor",
+          "Soppa"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vem tycker soppan är god?",
+        "q": "Hur många skivor bröd tar Amir?",
         "options": [
-          "Maja",
-          "Leo",
-          "Amir",
-          "Sara"
+          "Fyra",
+          "En",
+          "Två",
+          "Tre"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vem sitter bredvid Amir?",
+        "q": "Vem sitter Amir bredvid?",
         "options": [
-          "Leo",
-          "Kim",
-          "Noor",
+          "Ingen alls",
+          "Sin lillebror",
+          "Sin lärare",
           "Maja"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad äter de?",
+        "q": "Varför blåser Amir på skeden?",
         "options": [
-          "Lunch",
-          "Glass",
-          "Frukt",
-          "Kakor"
+          "Soppan är varm",
+          "Han är väldigt hungrig",
+          "Han sitter och leker",
+          "Soppan smakar konstigt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad berättar Maja om?",
+        "options": [
+          "Helgen",
+          "En bok hon läst",
+          "En film hon sett",
+          "Sin katt"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad äter de till soppan?",
+        "q": "Vad gör de innan de går ut?",
         "options": [
-          "Ris",
-          "Bröd",
-          "Pasta",
-          "Potatis"
+          "Hämtar mer mat",
+          "Ställer tallrikarna på vagnen",
+          "Torkar av hela bordet",
+          "Hämtar sina jackor"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 22,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-030",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4522,77 +4522,77 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen på gården",
-    "text": "Ella och Leo leker på gården efter skolan. De har en blå boll. Ella kastar bollen. Leo fångar den. De skrattar och kastar igen. Solen lyser och det är varmt.",
+    "text": "På gården spelar barnen fotboll. Bollen är gul och sliten. Ett skott går för högt och bollen hamnar på taket. Alla blir tysta. Sedan kommer vaktmästaren med en lång stege. Han hämtar ner bollen. Spelet börjar om direkt. Den här gången skjuter alla lägre.",
     "questions": [
-      {
-        "type": "literal",
-        "q": "Var leker Ella och Leo?",
-        "options": [
-          "På gården",
-          "I skogen",
-          "I bussen",
-          "I köket"
-        ],
-        "correct": 0
-      },
       {
         "type": "literal",
         "q": "Vilken färg har bollen?",
         "options": [
-          "Röd",
           "Blå",
-          "Grön",
-          "Gul"
+          "Gul",
+          "Röd",
+          "Vit"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad gör Ella?",
+        "q": "Var hamnar bollen?",
         "options": [
-          "Sparkar bollen",
-          "Tappar bollen",
-          "Kastar bollen",
-          "Gömmer bollen"
+          "På taket",
+          "Uppe i ett träd",
+          "Utanför staketet",
+          "I en buske"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir alla tysta?",
+        "options": [
+          "Någon har skadat sig",
+          "Läraren kommer ut",
+          "Bollen är utom räckhåll",
+          "Det ringer in till lektion"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad gör Leo?",
+        "q": "Vad har vaktmästaren med sig?",
         "options": [
-          "Springer hem",
-          "Sover",
-          "Ritar",
-          "Fångar bollen"
+          "En kratta",
+          "Ett långt rep",
+          "En lång stege",
+          "En ny boll"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför skjuter alla lägre efteråt?",
+        "options": [
+          "De har blivit trötta",
+          "Bollen är tyngre nu",
+          "Vaktmästaren har sagt till dem",
+          "De vill inte tappa bollen igen"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör de tillsammans?",
+        "q": "Hur slutar det?",
         "options": [
-          "Skrattar",
-          "Läser",
-          "Äter",
-          "Sitter"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Hur är vädret?",
-        "options": [
-          "Kallt",
-          "Varmt",
-          "Snöigt",
-          "Blåsigt"
+          "Barnen går in i skolan",
+          "Spelet börjar om",
+          "Bollen går sönder",
+          "De byter till en annan lek"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 30,
+      "wordCount": 44,
       "fingerprint": "tema-ak1-tema-031",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4688,77 +4688,77 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Boken i klassrummet",
-    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om djur. Han ser en bild på en stor elefant. Ali visar bilden för sin vän Sara.",
+    "text": "I hyllan står en bok som alla vill låna. Omslaget är blått med en drake på. Bara en kan läsa den i taget. Läraren gör en lista. Sara står först. Hon läser klart på tre dagar. Sedan lämnar hon boken vidare till nästa på listan.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var sitter Ali?",
+        "q": "Var står boken?",
         "options": [
-          "I klassrummet",
-          "I skogen",
-          "På bussen",
-          "I parken"
+          "På bänken",
+          "I en väska",
+          "På lärarens bord",
+          "I hyllan"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Hur ser omslaget ut?",
+        "options": [
+          "Blått med en drake",
+          "Grönt med ett skepp",
+          "Svart med en stjärna",
+          "Rött med en häst"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad gör Ali?",
+        "type": "inferens",
+        "q": "Varför gör läraren en lista?",
         "options": [
-          "Springer",
-          "Läser",
-          "Hoppar",
-          "Ritar"
+          "Alla ska skriva sitt namn",
+          "Bara en kan läsa i taget",
+          "Boken är väldigt dyr",
+          "Boken ska lämnas tillbaka"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad handlar boken om?",
+        "q": "Vem står först på listan?",
         "options": [
-          "Bilar",
-          "Mat",
-          "Djur",
-          "Hus"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vilket djur ser Ali?",
-        "options": [
-          "Elefant",
-          "Kanin",
-          "Valross",
-          "Zebra"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Vad visar Ali?",
-        "options": [
-          "En bild",
-          "En stol",
-          "En boll",
-          "En penna"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Vem visar han bilden för?",
-        "options": [
-          "Läraren",
+          "En ny elev",
           "Sara",
-          "Milo",
-          "Ella"
+          "Läraren själv",
+          "Omar"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur lång tid tar det för Sara att läsa ut boken?",
+        "options": [
+          "En vecka",
+          "Två dagar",
+          "En hel månad",
+          "Tre dagar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad händer med boken sedan?",
+        "options": [
+          "Nästa på listan får den",
+          "Sara får behålla den",
+          "Läraren tar hem den",
+          "Den ställs tillbaka i hyllan"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 27,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-033",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4770,78 +4770,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "samhälle",
-    "title": "Glass på torget",
-    "text": "Noor och hennes pappa går till torget. Det är varmt. Noor köper en jordgubbsglass. Pappan köper chokladglass. De sitter på en bänk och äter.",
+    "title": "Vid badplatsen",
+    "text": "Nils och pappa går till badplatsen. Vattnet är kallt först. Nils står still på bryggan och tvekar. Pappa räknar till tre. Sedan hoppar de i samtidigt. Efter en stund känns vattnet skönt. Nils simmar till bojen och tillbaka. På stranden ligger en varm handduk och väntar.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vem går Noor med?",
+        "q": "Vem går Nils med?",
         "options": [
-          "Pappa",
-          "Mamma",
-          "Lärare",
-          "Vän"
+          "Med sin syster",
+          "Med en kompis",
+          "Med pappa",
+          "Med mamma"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Hur är vädret?",
+        "type": "inferens",
+        "q": "Varför står Nils still på bryggan?",
         "options": [
-          "Kallt",
-          "Varmt",
-          "Regnigt",
-          "Snöigt"
+          "Han har glömt något hemma",
+          "Vattnet är kallt",
+          "Han kan inte simma alls",
+          "Han letar efter pappa"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad köper Noor?",
+        "q": "Vad gör pappa?",
         "options": [
-          "Bröd",
-          "Juice",
-          "Glass",
-          "Frukt"
+          "Han vinkar från stranden",
+          "Han simmar först",
+          "Han ropar på Nils",
+          "Han räknar till tre"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vilken smak har pappans glass?",
+        "q": "Vart simmar Nils?",
         "options": [
-          "Vanilj",
-          "Citron",
-          "Jordgubb",
-          "Choklad"
+          "Till bojen",
+          "Till stranden",
+          "Runt hela bryggan",
+          "Ut till en båt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känns vattnet efter en stund?",
+        "options": [
+          "Ännu kallare",
+          "Grumligt",
+          "Alldeles för djupt",
+          "Skönt"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Var sitter de?",
+        "q": "Vad ska Nils göra efter badet?",
         "options": [
-          "På en bänk",
-          "På golvet",
-          "I bilen",
-          "På taket"
+          "Torka sig med handduken",
+          "Gå ut på bryggan igen",
+          "Simma till bojen",
+          "Hoppa i en gång till"
         ],
         "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Vad gör de?",
-        "options": [
-          "Springer",
-          "Äter",
-          "Läser",
-          "Sover"
-        ],
-        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 24,
+      "wordCount": 46,
       "fingerprint": "tema-ak1-tema-034",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4853,78 +4853,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "hälsa",
-    "title": "Cykeln",
-    "text": "Ella har en ny cykel. Den är röd. Ella cyklar långsamt på gården. Hennes vän Amir springer bredvid och hejar.",
+    "title": "Skorna som klämde",
+    "text": "Livs nya skor är fina men för små. På rasten börjar tårna göra ont. Hon säger inget först. Efter en stund haltar hon lite. En kompis frågar vad som hänt. Liv berättar. De går till skolsköterskan, som lånar ut ett par gympaskor. Resten av dagen känns mycket bättre.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad har Ella?",
+        "q": "Vad är fel med skorna?",
         "options": [
-          "En cykel",
-          "En bok",
-          "En boll",
-          "En stol"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vilken färg har cykeln?",
-        "options": [
-          "Blå",
-          "Röd",
-          "Grön",
-          "Gul"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Hur cyklar Ella?",
-        "options": [
-          "Snabbt",
-          "Bakåt",
-          "Långsamt",
-          "Inte alls"
+          "De är trasiga",
+          "De är smutsiga",
+          "De är för små",
+          "De är för stora"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vem springer bredvid?",
+        "q": "När börjar tårna göra ont?",
         "options": [
-          "Sara",
-          "Leo",
-          "Milo",
-          "Amir"
+          "På lektionen",
+          "På rasten",
+          "På morgonen",
+          "På vägen hem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger Liv inget först?",
+        "options": [
+          "Hon hör inte frågan",
+          "Hon glömmer bort det",
+          "Hon vill inte klaga",
+          "Hon har ont i halsen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur märker kompisen att något är fel?",
+        "options": [
+          "Liv börjar gråta",
+          "Liv sätter sig ner",
+          "Liv tar av sig skorna",
+          "Liv haltar"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
-        "q": "Var cyklar hon?",
+        "type": "literal",
+        "q": "Vem hjälper Liv?",
         "options": [
-          "På gården",
-          "I skogen",
-          "På bussen",
-          "I huset"
+          "Skolsköterskan",
+          "Läraren",
+          "Vaktmästaren",
+          "Hennes pappa"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör Amir?",
+        "q": "Varför känns dagen bättre sedan?",
         "options": [
-          "Sover",
-          "Hejar",
-          "Äter",
-          "Sitter"
+          "Hon har lånat andra skor",
+          "Hon får gå hem tidigt",
+          "Hon har fått ett plåster",
+          "Rasten är slut"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 20,
+      "wordCount": 48,
       "fingerprint": "tema-ak1-tema-035",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4936,78 +4936,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "natur",
-    "title": "Fågeln i trädet",
-    "text": "Maja går i skogen med sin mormor. De hör en fågel sjunga. Fågeln sitter i ett träd. Maja tittar upp och ler.",
+    "title": "Ekorren vid stubben",
+    "text": "Vid en gammal stubb sitter en ekorre. Den håller en nöt mellan tassarna. Ekorren gräver ett litet hål i mossan. Där lägger den nöten och täcker över. Sedan springer den upp i en tall. Hanna undrar om ekorren kommer ihåg var nöten ligger. Mormor säger att den ofta glömmer.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var går Maja?",
+        "q": "Var sitter ekorren?",
         "options": [
-          "I skogen",
-          "I staden",
-          "I huset",
-          "I skolan"
+          "Inne i en buske",
+          "På en stor sten",
+          "Under en bänk",
+          "Vid en gammal stubb"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad håller ekorren i?",
+        "options": [
+          "En kotte",
+          "En pinne",
+          "En nöt",
+          "Ett löv"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför gräver ekorren ett hål?",
+        "options": [
+          "Den ska gömma nöten",
+          "Den letar efter vatten",
+          "Den letar efter mat",
+          "Den ska sova där i natt"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vem går hon med?",
+        "q": "Vart springer ekorren sedan?",
         "options": [
-          "Pappa",
-          "Mormor",
-          "Läraren",
-          "Vännen"
+          "Fram till Hanna",
+          "Upp i en tall",
+          "Ner i hålet",
+          "Bakom stubben"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad hör de?",
+        "type": "inferens",
+        "q": "Vad undrar Hanna?",
         "options": [
-          "En bil",
-          "En hund",
-          "En fågel",
-          "En katt"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Var sitter fågeln?",
-        "options": [
-          "På marken",
-          "På stenen",
-          "På taket",
-          "I trädet"
+          "Om ekorren är hungrig",
+          "Om ekorren är rädd för dem",
+          "Om ekorren har ungar",
+          "Om ekorren minns var nöten är"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör Maja?",
+        "q": "Vad svarar mormor?",
         "options": [
-          "Går",
-          "Ler",
-          "Ser",
-          "Står"
+          "Att ekorren ofta glömmer",
+          "Att nöten är för hård",
+          "Att ekorren kommer tillbaka",
+          "Att ekorren alltid minns"
         ],
-        "correct": 1
-      },
-      {
-        "type": "inferens",
-        "q": "Vad gör fågeln?",
-        "options": [
-          "Sover",
-          "Sjunger",
-          "Äter",
-          "Flyger"
-        ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 22,
+      "wordCount": 49,
       "fingerprint": "tema-ak1-tema-036",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -5019,78 +5019,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "samhälle",
-    "title": "Bussen",
-    "text": "Sara väntar på bussen vid hållplatsen. Bussen kommer. Sara kliver på och sätter sig vid fönstret.",
+    "title": "Tåget utanför fönstret",
+    "text": "Från köksfönstret ser Noa tågen passera. Han räknar vagnarna varje gång. Godstågen är längst. Ett av dem hade trettio vagnar. Persontågen går fortare och är svårare att räkna. På kvällen lyser fönstren i tågen som små gula prickar. Noa vinkar ibland. En gång vinkade någon tillbaka.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var väntar Sara?",
+        "q": "Var står Noa när han tittar?",
         "options": [
-          "Inne i skogen",
-          "Inne i huset",
-          "Vid hållplatsen",
-          "Inne i skolan"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad väntar hon på?",
-        "options": [
-          "Tåget",
-          "Bussen",
-          "Båten",
-          "Taxin"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör hon sedan?",
-        "options": [
-          "Springer",
-          "Sover",
-          "Kliver på",
-          "Hoppar"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Var sätter hon sig?",
-        "options": [
-          "På golvet",
-          "Vid dörren",
-          "Bak i bussen",
-          "Vid fönstret"
+          "På perrongen",
+          "Ute i trädgården",
+          "Vid grinden",
+          "Vid köksfönstret"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
-        "q": "Vad kommer?",
+        "type": "literal",
+        "q": "Vilka tåg är längst?",
         "options": [
-          "Bussen",
-          "Tåget",
-          "Bilen",
-          "Cykeln"
+          "Godstågen",
+          "Nattågen",
+          "Snabbtågen",
+          "Persontågen"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör Sara först?",
+        "q": "Varför är persontågen svårare att räkna?",
         "options": [
-          "Springer",
-          "Väntar",
-          "Sover",
-          "Äter"
+          "De har många fler vagnar",
+          "De kommer betydligt oftare",
+          "De går fortare",
+          "De är mörka utanpå"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur många vagnar hade ett av godstågen?",
+        "options": [
+          "Femton",
+          "Trettio",
+          "Tio",
+          "Tjugo"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad ser Noa på kvällen?",
+        "options": [
+          "Tågen stanna vid huset",
+          "Loken byta spår",
+          "Snön falla på rälsen",
+          "Fönstren lysa som gula prickar"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad gjorde en av gångerna särskild?",
+        "options": [
+          "Tåget stannade helt",
+          "Någon vinkade tillbaka",
+          "Han räknade fel",
+          "Tåget tutade högt"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 16,
+      "wordCount": 46,
       "fingerprint": "tema-ak1-tema-037",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -5102,78 +5102,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "kultur",
-    "title": "Rita en sol",
-    "text": "I klassrummet ritar. Kim en stor sol. Solen är gul. Hennes vän Leo ritar ett träd bredvid.",
+    "title": "Sagan som fröken läste",
+    "text": "Efter rasten läser fröken en saga. Alla sitter på mattan. Sagan handlar om en björn som tappat bort sin mössa. Björnen letar överallt. Till slut sitter mössan på hans eget huvud. Alla i klassen skrattar. Nour säger att hon gjort likadant med sina glasögon.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var ritar Kim?",
+        "q": "När läser fröken sagan?",
         "options": [
-          "Ute i skogen",
-          "Ute i parken",
-          "Inne i bussen",
-          "I klassrummet"
+          "Före lunchen",
+          "På morgonen",
+          "Sist på dagen",
+          "Efter rasten"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad ritar Kim?",
+        "q": "Var sitter alla?",
         "options": [
-          "En bil",
-          "En sol",
-          "En katt",
-          "En stol"
+          "I en ring på golvet",
+          "Ute på gården",
+          "Vid sina bänkar",
+          "På mattan"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vilken färg har solen?",
+        "q": "Vad har björnen tappat bort?",
         "options": [
-          "Blå",
-          "Röd",
-          "Gul",
-          "Grön"
+          "Sin väska",
+          "Sin ena sko",
+          "Sin mössa",
+          "Sin nyckel"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad ritar Leo?",
-        "options": [
-          "En boll",
-          "Ett hus",
-          "En stol",
-          "Ett träd"
-        ],
-        "correct": 3
-      },
-      {
         "type": "inferens",
-        "q": "Hur är solen?",
+        "q": "Varför skrattar klassen?",
         "options": [
-          "Stor",
-          "Liten",
-          "Mörk",
-          "Kall"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Vem är Kims vän?",
-        "options": [
-          "Maja",
-          "Leo",
-          "Ali",
-          "Sara"
+          "Sagan är plötsligt slut",
+          "Mössan satt på björnens huvud",
+          "Björnen ramlar omkull",
+          "Fröken läser fel ord"
         ],
         "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Vad menar Nour?",
+        "options": [
+          "Att hon har tappat sina glasögon nu",
+          "Att hon också letat efter något hon hade på sig",
+          "Att hon vill läsa sagan själv",
+          "Att björnen borde köpa en ny mössa"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känns stunden i klassrummet?",
+        "options": [
+          "Stressig och rörig",
+          "Spänd och tyst",
+          "Rolig och trevlig",
+          "Ledsam och tung"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 17,
+      "wordCount": 44,
       "fingerprint": "tema-ak1-tema-038",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -5185,78 +5185,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "natur",
-    "title": "Snögubben",
-    "text": "Det snöar ute. Leo och Noor bygger en snögubbe. De gör ögon av stenar och en näsa av en morot.",
+    "title": "Isen på pölen",
+    "text": "På gården finns en stor pöl. På natten har den frusit. Isen är tunn och vit i kanterna. Vilma trampar försiktigt på den. Det knakar. Hon backar direkt. Vaktmästaren kommer och strör sand runt pölen. Nu kan alla gå förbi utan att halka.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad faller från himlen?",
+        "q": "Vad finns på gården?",
         "options": [
-          "Snö",
-          "Regn",
-          "Löv",
-          "Sand"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vem bygger snögubben?",
-        "options": [
-          "Leo och Kim",
-          "Leo och Noor",
-          "Sara och Ali",
-          "Maja och Amir"
+          "En stor sten",
+          "En stor pöl",
+          "En sandlåda",
+          "En gunga"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad gör de ögon av?",
+        "q": "När frös pölen?",
         "options": [
-          "Löv",
-          "Glass",
-          "Stenar",
-          "Pinnar"
+          "På eftermiddagen",
+          "På morgonen",
+          "På natten",
+          "Under lunchen"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad gör de näsan av?",
+        "q": "Hur ser isen ut i kanterna?",
         "options": [
-          "Ett äpple",
-          "En pinne",
-          "En potatis",
-          "En morot"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad bygger de?",
-        "options": [
-          "En snögubbe",
-          "Ett hus",
-          "En båt",
-          "En bil"
+          "Tunn och vit",
+          "Full av sprickor",
+          "Tjock och blå",
+          "Grå och blöt"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Hur är vädret?",
+        "q": "Varför backar Vilma direkt?",
         "options": [
-          "Varmt",
-          "Snöigt",
-          "Soligt",
-          "Blåsigt"
+          "Hon ser något nere i isen",
+          "Isen knakar under henne",
+          "Hon blir kall om fötterna",
+          "Hon hör vaktmästaren ropa"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör vaktmästaren?",
+        "options": [
+          "Strör sand runt pölen",
+          "Hugger sönder isen",
+          "Sätter upp ett staket",
+          "Öser bort allt vatten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför strör han sand?",
+        "options": [
+          "Barnen ska få leka där",
+          "Isen ska smälta fortare",
+          "Ingen ska halka",
+          "Pölen ska försvinna helt"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 20,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-039",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -5268,78 +5268,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "hälsa",
-    "title": "Lunch i skolan",
-    "text": "I skolans matsal äter eleverna lunch. Idag finns soppa och bröd. Amir sitter bredvid sin vän Maja.",
+    "title": "Mellanmål hemma",
+    "text": "När Tuva kommer hem är hon hungrig. På bordet står en skål med äpplen. Hon skär ett äpple i fyra bitar. Sedan breder hon en smörgås. Katten hoppar upp och luktar på osten. Tuva flyttar tallriken. Hon äter vid fönstret och tittar ut på gården.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var äter eleverna?",
+        "q": "Hur känner sig Tuva när hon kommer hem?",
         "options": [
-          "I matsalen",
-          "I skogen",
-          "I bussen",
-          "I parken"
+          "Trött",
+          "Glad",
+          "Ledsen",
+          "Hungrig"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad står på bordet?",
+        "options": [
+          "En skål med äpplen",
+          "En tallrik bullar",
+          "En korg med bröd",
+          "En kanna saft"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad finns till lunch?",
+        "q": "I hur många bitar skär hon äpplet?",
         "options": [
-          "Pasta",
-          "Soppa",
-          "Pizza",
-          "Ris"
+          "Tre",
+          "Fyra",
+          "Sex",
+          "Två"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vem sitter vid Amir?",
+        "type": "inferens",
+        "q": "Varför flyttar Tuva tallriken?",
         "options": [
-          "Leo",
-          "Sara",
-          "Maja",
-          "Kim"
+          "Hon ska diska den direkt",
+          "Bordet är blött under den",
+          "Katten luktar på osten",
+          "Den står i vägen på bordet"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad äter de?",
+        "q": "Var äter Tuva?",
         "options": [
-          "Glass",
-          "Frukt",
-          "Kakor",
-          "Lunch"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad äter de med soppan?",
-        "options": [
-          "Bröd",
-          "Ris",
-          "Pasta",
-          "Potatis"
+          "Vid fönstret",
+          "Vid köksbordet",
+          "I soffan",
+          "På golvet"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Var sitter Amir?",
+        "q": "Vad gör hon medan hon äter?",
         "options": [
-          "Vid Maja",
-          "Vid dörren",
-          "Vid fönstret",
-          "Vid läraren"
+          "Pratar i telefon",
+          "Klappar katten",
+          "Läser en bok",
+          "Tittar ut på gården"
         ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 17,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-040",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -29620,78 +29620,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "sport",
-    "title": "En boll på gården",
-    "text": "Leo och Sara leker på gården efter skolan. De har en röd boll. Leo kastar bollen högt. Sara fångar den. De skrattar och kastar igen. Solen lyser över gården.",
+    "title": "Hopprepet på rasten",
+    "text": "Två flickor svänger ett långt hopprep. En i taget springer in och hoppar. Först vågar Melvin inte. Han står bredvid och räknar takten tyst för sig själv. Sedan springer han in. Repet slår i marken bakom honom och han hoppar rätt. De andra räknar högt: ett, två, tre.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var leker Leo och Sara?",
+        "q": "Vad svänger flickorna?",
         "options": [
-          "På gården",
-          "I skogen",
-          "I köket",
-          "På bussen"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vilken färg har bollen?",
-        "options": [
-          "Blå",
-          "Röd",
-          "Grön",
-          "Gul"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör Leo med bollen?",
-        "options": [
-          "Tappar den",
-          "Sparkar den",
-          "Kastar den",
-          "Gömmer den"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör Sara?",
-        "options": [
-          "Springer hem",
-          "Sover",
-          "Ritar",
-          "Fångar bollen"
+          "En stor boll",
+          "En tunn lina",
+          "En trädgårdsslang",
+          "Ett långt hopprep"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
-        "q": "Vad gör de när de leker?",
+        "type": "literal",
+        "q": "Hur många springer in åt gången?",
         "options": [
-          "Skrattar",
-          "Gråter",
-          "Viskar",
-          "Sover"
+          "En",
+          "Tre",
+          "Alla samtidigt",
+          "Två"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör solen?",
+        "q": "Vad gör Melvin först?",
         "options": [
-          "Regnar",
-          "Lyser",
-          "Blåser",
-          "Snöar"
+          "Springer in direkt",
+          "Går därifrån",
+          "Står bredvid och räknar tyst",
+          "Ber att få svänga repet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför räknar Melvin takten?",
+        "options": [
+          "Han har tråkigt",
+          "Han vill hitta rätt ögonblick",
+          "Han övar på matte",
+          "Han vill lära de andra"
         ],
         "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Hur går det när han springer in?",
+        "options": [
+          "Repet fastnar i foten",
+          "Han springer rakt igenom",
+          "Han hoppar rätt",
+          "Han snubblar och faller"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför räknar de andra högt?",
+        "options": [
+          "För att börja om från början",
+          "För att byta hoppare",
+          "För att Melvin ska sluta",
+          "För att heja på honom"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 29,
+      "wordCount": 48,
       "fingerprint": "tema-ak1-tema-041",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -29703,78 +29703,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "natur",
-    "title": "Katten på trappan",
-    "text": "Maja öppnar dörren på morgonen. På trappan sitter en liten katt. Katten är grå och tittar på Maja. Hon hämtar lite vatten. Katten dricker och går sedan vidare.",
+    "title": "Hunden som väntar",
+    "text": "Varje dag står en hund utanför affären. Den har ett rött koppel. Hunden tittar mot dörren hela tiden. Leo undrar varför den inte leker. Sedan kommer en man ut med en kasse. Hunden reser sig och viftar på svansen. De går hem tillsammans. Nu vet Leo varför hunden väntade.",
     "questions": [
       {
         "type": "literal",
-        "q": "När öppnar Maja dörren?",
+        "q": "Var står hunden?",
         "options": [
-          "På morgonen",
-          "På kvällen",
-          "På natten",
-          "På rasten"
+          "Inne i parken",
+          "Vid skolan",
+          "På gården",
+          "Utanför affären"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Var sitter katten?",
+        "q": "Vilken färg har kopplet?",
         "options": [
-          "På taket",
-          "På trappan",
-          "På bordet",
-          "På stolen"
+          "Svart",
+          "Blått",
+          "Rött",
+          "Grönt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför tittar hunden mot dörren?",
+        "options": [
+          "Den vill in i värmen",
+          "Den väntar på någon",
+          "Den ser sin spegelbild",
+          "Den är rädd för dörren"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vilken färg har katten?",
+        "q": "Vad har mannen med sig?",
         "options": [
-          "Svart",
-          "Vit",
-          "Grå",
-          "Orange"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad hämtar Maja?",
-        "options": [
-          "Mat",
-          "Mjölk",
-          "Bröd",
-          "Vatten"
+          "En hundleksak",
+          "Ett paraply",
+          "En hatt",
+          "En kasse"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör katten?",
+        "q": "Vad visar att hunden blir glad?",
         "options": [
-          "Dricker",
-          "Sover",
-          "Flyger",
-          "Hoppar"
+          "Den springer i väg",
+          "Den viftar på svansen",
+          "Den skäller högt",
+          "Den lägger sig ner"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vad gör katten sedan?",
+        "q": "Vad förstår Leo till slut?",
         "options": [
-          "Stannar",
-          "Går vidare",
-          "Lägger sig",
-          "Jamnar"
+          "Att hunden väntade på sin husse",
+          "Att hunden inte kan leka",
+          "Att hunden bor i affären",
+          "Att hunden var vilse"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 28,
+      "wordCount": 49,
       "fingerprint": "tema-ak1-tema-042",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -29786,78 +29786,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "kultur",
-    "title": "Boken om djur",
-    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om djur. Han ser bilder på elefanter och apor. Ali visar en bild för sin vän Kim.",
+    "title": "Torsdag på biblioteket",
+    "text": "Varje torsdag går klassen till biblioteket. Där är det tyst och luktar papper. Bibliotekarien visar var djurböckerna står. Noel letar länge och hittar en bok om valar. Han får låna den i tre veckor. På vägen tillbaka bär han boken med båda händerna.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var sitter Ali?",
+        "q": "När går klassen till biblioteket?",
         "options": [
-          "I klassrummet",
-          "Ute i parken",
-          "Inne i bussen",
-          "Ute i skogen"
+          "Varje torsdag",
+          "Varje måndag",
+          "Varannan vecka",
+          "En gång i månaden"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad gör Ali?",
+        "q": "Hur är det på biblioteket?",
         "options": [
-          "Springer",
-          "Läser",
-          "Ritar",
-          "Hoppar"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad handlar boken om?",
-        "options": [
-          "Bilar",
-          "Hus",
-          "Djur",
-          "Mat"
+          "Varmt och väldigt trångt",
+          "Högljutt och fullt med folk",
+          "Tyst och luktar papper",
+          "Mörkt och ganska kallt"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vilket djur finns i boken?",
+        "q": "Vad visar bibliotekarien?",
         "options": [
-          "Kanin",
-          "Elefant",
-          "Valross",
-          "Zebra"
+          "Hur man söker i datorn",
+          "Var djurböckerna står",
+          "Vilka böcker som är nya",
+          "Var man lämnar tillbaka böcker"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Vad visar Ali?",
+        "type": "literal",
+        "q": "Vad handlar Noels bok om?",
         "options": [
-          "En bild",
-          "En stol",
-          "En boll",
-          "En penna"
+          "Fåglar",
+          "Hästar",
+          "Insekter",
+          "Valar"
         ],
-        "correct": 0
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Hur länge får han låna boken?",
+        "options": [
+          "En vecka",
+          "Två veckor",
+          "En hel månad",
+          "Tre veckor"
+        ],
+        "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vem visar han bilden för?",
+        "q": "Varför bär Noel boken med båda händerna?",
         "options": [
-          "Sara",
-          "Kim",
-          "Maja",
-          "Leo"
+          "Ryggsäcken är redan full",
+          "Boken är blöt om kanterna",
+          "Den är viktig för honom",
+          "Han har ont i ena handen"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 27,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-043",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -29869,78 +29869,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "samhälle",
-    "title": "Glass på torget",
-    "text": "Noor och hennes pappa går till torget. Det är varmt. Noor köper en jordgubbsglass. Pappan köper chokladglass. De sitter på en bänk och äter.",
+    "title": "Kalas i trädgården",
+    "text": "Idag fyller Vera sju år. Kalaset är i trädgården. Det hänger ballonger i äppelträdet. Alla sjunger när tårtan kommer ut. Vera blåser ut ljusen i ett enda andetag. Sedan leker de kull i gräset. En ballong lossnar och flyger upp mot himlen. Alla tittar efter den tills den försvinner.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vem går Noor med?",
+        "q": "Hur gammal fyller Vera?",
         "options": [
-          "Pappa",
-          "Mamma",
-          "Vän",
-          "Lärare"
+          "Sju år",
+          "Sex år",
+          "Åtta år",
+          "Fem år"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Hur är vädret?",
+        "q": "Var är kalaset?",
         "options": [
-          "Kallt",
-          "Varmt",
-          "Snöigt",
-          "Regnigt"
+          "I skolan",
+          "I trädgården",
+          "På ett kafé",
+          "Hemma i köket"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad köper Noor?",
+        "q": "Var hänger ballongerna?",
         "options": [
-          "Bröd",
-          "Juice",
-          "Glass",
-          "Frukt"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vilken smak har pappans glass?",
-        "options": [
-          "Vanilj",
-          "Citron",
-          "Jordgubb",
-          "Choklad"
+          "Vid bordet",
+          "På staketet",
+          "På ytterdörren",
+          "I äppelträdet"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Var sitter de?",
+        "q": "Varför sjunger alla?",
         "options": [
-          "På en bänk",
-          "På golvet",
-          "I bilen",
-          "På taket"
+          "De leker en sånglek",
+          "De ska snart gå hem",
+          "Vera har bett dem om det",
+          "Tårtan kommer ut"
         ],
-        "correct": 0
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad leker de sedan?",
+        "options": [
+          "Fotboll",
+          "Hoppa hage",
+          "Kull",
+          "Kurragömma"
+        ],
+        "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Vad gör de?",
+        "q": "Varför tittar alla upp mot himlen?",
         "options": [
-          "Springer",
-          "Äter",
-          "Läser",
-          "Sover"
+          "Det börjar regna",
+          "En ballong flyger i väg",
+          "Ett flygplan passerar",
+          "Solen håller på att gå ner"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 24,
+      "wordCount": 49,
       "fingerprint": "tema-ak1-tema-044",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -29952,78 +29952,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "hälsa",
-    "title": "Den nya cykeln",
-    "text": "Ella har fått en ny cykel. Den är blå. Ella cyklar långsamt på gården. Hennes vän Amir springer bredvid och hejar.",
+    "title": "Regn på vägen hem",
+    "text": "På vägen hem börjar det regna. Omar har ingen jacka med sig. Han springer in under ett stort tak vid busshållplatsen. Där står redan en gammal man med paraply. Mannen håller upp paraplyet över dem båda. De går tillsammans till Omars port. Omar säger tack. Regnet slutar precis då.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad har Ella fått?",
+        "q": "Vad börjar hända på vägen hem?",
         "options": [
-          "En cykel",
-          "En bok",
-          "En boll",
-          "En stol"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vilken färg har cykeln?",
-        "options": [
-          "Röd",
-          "Blå",
-          "Grön",
-          "Gul"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Hur cyklar Ella först?",
-        "options": [
-          "Snabbt",
-          "Bakåt",
-          "Långsamt",
-          "Inte alls"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vem springer bredvid?",
-        "options": [
-          "Sara",
-          "Leo",
-          "Kim",
-          "Amir"
+          "Det börjar snöa",
+          "Det blir alldeles mörkt",
+          "Det börjar blåsa hårt",
+          "Det börjar regna"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Var cyklar hon?",
+        "q": "Varför springer Omar?",
         "options": [
-          "På gården",
-          "I skogen",
-          "På bussen",
-          "I huset"
+          "Han ser en kompis långt bort",
+          "Bussen håller på att gå",
+          "Han är sen till middagen",
+          "Han vill inte bli blöt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var ställer sig Omar?",
+        "options": [
+          "Under ett tak",
+          "Inne i en affär",
+          "Under ett stort träd",
+          "I en port"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad har mannen med sig?",
+        "options": [
+          "En stor hatt",
+          "Ett paraply",
+          "En hund i koppel",
+          "En tung kasse"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför håller mannen paraplyet över dem båda?",
+        "options": [
+          "Han vill hjälpa Omar",
+          "Paraplyet är för tungt",
+          "Han ska ge bort det",
+          "Han ser inte var han går"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör Amir?",
+        "q": "Vad händer när de kommer fram?",
         "options": [
-          "Sover",
-          "Hejar",
-          "Äter",
-          "Sitter"
+          "Mannen följer med in",
+          "Regnet slutar",
+          "Bussen kommer äntligen",
+          "Omar tappar sina nycklar"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 21,
+      "wordCount": 49,
       "fingerprint": "tema-ak1-tema-045",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -30035,78 +30035,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "natur",
-    "title": "Fågeln i trädet",
-    "text": "Milo går i skogen med sin mormor. De hör en fågel sjunga. Fågeln sitter i ett träd. Milo tittar upp och ler.",
+    "title": "Myrorna på stigen",
+    "text": "På stigen går en lång rad myror. De bär små bitar av löv. Raden ser ut som en tunn linje. Ida sätter sig ner och tittar länge. En myra tappar sin bit. En annan myra hjälper till att bära den. Ida flyttar sin fot så att ingen myra blir trampad på.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var går Milo?",
+        "q": "Vad går på stigen?",
         "options": [
-          "I skogen",
-          "I staden",
-          "I huset",
-          "I skolan"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vem går han med?",
-        "options": [
-          "Pappa",
-          "Mormor",
-          "Läraren",
-          "Vännen"
+          "En katt",
+          "En lång rad myror",
+          "En ekorre",
+          "En liten fågel"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad hör de?",
+        "q": "Vad bär myrorna?",
         "options": [
-          "En bil",
-          "En hund",
-          "En fågel",
-          "En katt"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Var sitter fågeln?",
-        "options": [
-          "På marken",
-          "På stenen",
-          "På taket",
-          "I trädet"
+          "Nötter",
+          "Torra pinnar",
+          "Små stenar",
+          "Små bitar av löv"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör Milo?",
+        "q": "Varför sätter sig Ida ner?",
         "options": [
-          "Går",
-          "Ser",
-          "Ler",
-          "Står"
+          "Hon har tappat något",
+          "Hon vill titta närmare",
+          "Hon har ont i benet",
+          "Hon är trött"
         ],
-        "correct": 2
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med en av myrorna?",
+        "options": [
+          "Den springer bort",
+          "Den klättrar upp på Ida",
+          "Den kryper under ett löv",
+          "Den tappar sin bit"
+        ],
+        "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad gör fågeln?",
+        "q": "Vad visar den andra myran?",
         "options": [
-          "Sover",
-          "Sjunger",
-          "Äter",
-          "Flyger"
+          "Att myror hjälps åt",
+          "Att myran är starkast",
+          "Att myror bråkar med varandra",
+          "Att myran har gått vilse"
         ],
-        "correct": 1
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför flyttar Ida på foten?",
+        "options": [
+          "Det är blött på stigen",
+          "Hon ska gå vidare",
+          "Hon vill inte trampa på myrorna",
+          "Foten har somnat"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 22,
+      "wordCount": 51,
       "fingerprint": "tema-ak1-tema-046",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -30118,78 +30118,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "samhälle",
-    "title": "Bussen",
-    "text": "Sara väntar på bussen vid hållplatsen. Bussen kommer snart. Hon kliver på och sätter sig vid fönstret.",
+    "title": "Första gången i simhallen",
+    "text": "Idag ska klassen till simhallen. Sara har aldrig badat inomhus förut. Ljudet studsar mot väggarna och allt ekar. Vattnet luktar konstigt. Först vågar hon bara sitta på kanten. Läraren räcker fram en flytkudde. Sara går ner i den grunda delen. Efter en stund plaskar hon lika mycket som alla andra.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var väntar Sara?",
+        "q": "Vart ska klassen?",
         "options": [
-          "Inne i skogen",
-          "Inne i huset",
-          "Inne i skolan",
-          "Vid hållplatsen"
+          "Ut i skogen",
+          "Till en sjö",
+          "Till idrottshallen",
+          "Till simhallen"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad väntar hon på?",
+        "q": "Vad är nytt för Sara?",
         "options": [
-          "Tåget",
-          "Bussen",
-          "Båten",
-          "Taxin"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör hon sedan?",
-        "options": [
-          "Springer",
-          "Sover",
-          "Kliver på",
-          "Hoppar"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Var sätter hon sig?",
-        "options": [
-          "På golvet",
-          "Vid dörren",
-          "Bak i bussen",
-          "Vid fönstret"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad kommer?",
-        "options": [
-          "Bussen",
-          "Tåget",
-          "Bilen",
-          "Cykeln"
+          "Att bada inomhus",
+          "Att åka buss med klassen",
+          "Att ha badkläder på sig",
+          "Att bada över huvud taget"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad gör Sara först?",
+        "q": "Varför ekar allt?",
         "options": [
-          "Springer",
-          "Väntar",
-          "Sover",
-          "Äter"
+          "Läraren ropar högt",
+          "Det är väldigt många barn",
+          "Vattnet skvalpar mot kanten",
+          "Ljudet studsar mot väggarna"
         ],
-        "correct": 1
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sitter Sara först på kanten?",
+        "options": [
+          "Hon väntar på en kompis",
+          "Hon har glömt sin handduk",
+          "Hon är osäker",
+          "Hon fryser om fötterna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ger läraren henne?",
+        "options": [
+          "En flytkudde",
+          "Ett par simglasögon",
+          "En stor handduk",
+          "En badring"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Hur går det till slut?",
+        "options": [
+          "Hon blir sittande på kanten",
+          "Hon går upp ur vattnet igen",
+          "Hon plaskar som alla andra",
+          "Hon simmar en hel bana"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 17,
+      "wordCount": 50,
       "fingerprint": "tema-ak1-tema-047",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -30201,78 +30201,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "kultur",
-    "title": "Rita i klassrummet",
-    "text": "I klassrummet ritar. Kim en stor sol. Solen är gul. Hennes vän Leo ritar ett träd bredvid.",
+    "title": "Sångstunden på fredag",
+    "text": "Varje fredag sjunger klassen tillsammans. Läraren spelar gitarr. Vissa sjunger högt och andra viskar. Elias vågar inte sjunga alls i början. Han bara rör på läpparna. Efter några veckor sjunger han med på refrängen. Ingen märker när han börjar. Det gör det lättare.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var ritar Kim?",
+        "q": "När sjunger klassen?",
         "options": [
-          "I klassrummet",
-          "Ute i skogen",
-          "Ute i parken",
-          "Inne i bussen"
+          "Varje fredag",
+          "Varje måndag",
+          "Varje morgon",
+          "Varje onsdag"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad ritar Kim?",
+        "q": "Vad spelar läraren?",
         "options": [
-          "En bil",
-          "En sol",
-          "En katt",
-          "En stol"
+          "Piano",
+          "Gitarr",
+          "Trummor",
+          "Flöjt"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilken färg har solen?",
+        "type": "inferens",
+        "q": "Vad gör Elias i början?",
         "options": [
-          "Blå",
-          "Röd",
-          "Gul",
-          "Grön"
+          "Går ut ur rummet",
+          "Rör bara på läpparna",
+          "Sjunger högre än alla andra",
+          "Sjunger mycket tyst"
         ],
-        "correct": 2
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sjunger Elias inte alls först?",
+        "options": [
+          "Han vågar inte",
+          "Han kan inte texten",
+          "Han tycker inte om musik",
+          "Han är förkyld i halsen"
+        ],
+        "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad ritar Leo?",
+        "q": "Vad sjunger Elias med på efter några veckor?",
         "options": [
-          "En boll",
-          "Ett hus",
-          "En stol",
-          "Ett träd"
+          "Hela sången",
+          "Första versen",
+          "Bara sista raden",
+          "Refrängen"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Hur är solen?",
+        "q": "Varför blir det lättare för Elias?",
         "options": [
-          "Stor",
-          "Liten",
-          "Mörk",
-          "Kall"
+          "Klassen sjunger tystare nu",
+          "Sången har blivit kortare",
+          "Läraren hjälper honom särskilt",
+          "Ingen märker när han börjar"
         ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Vem är Kims vän?",
-        "options": [
-          "Maja",
-          "Leo",
-          "Ali",
-          "Sara"
-        ],
-        "correct": 1
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 17,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-048",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -30284,78 +30284,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "natur",
-    "title": "Snögubben",
-    "text": "Det snöar ute. Leo och Noor bygger en snögubbe. De gör ögon av stenar och en näsa av en morot.",
+    "title": "Vanten som försvann",
+    "text": "Efter rasten saknar Ines en vante. Hon letar i fickorna och i hallen. Vanten är blå med vita prickar. Läraren frågar klassen. Ingen har sett den. Dagen efter hänger vanten på ett staket ute på gården. Någon har satt den där så att den syns.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad faller från himlen?",
+        "q": "Vad saknar Ines?",
         "options": [
-          "Snö",
-          "Regn",
-          "Löv",
-          "Sand"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vem bygger snögubben?",
-        "options": [
-          "Leo och Kim",
-          "Leo och Noor",
-          "Sara och Ali",
-          "Maja och Amir"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör de ögon av?",
-        "options": [
-          "Löv",
-          "Glass",
-          "Stenar",
-          "Pinnar"
+          "Sin ena sko",
+          "Sin ryggsäck",
+          "En vante",
+          "Sin mössa"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad gör de näsan av?",
+        "q": "Hur ser vanten ut?",
         "options": [
-          "Ett äpple",
-          "En pinne",
-          "En potatis",
-          "En morot"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad bygger de?",
-        "options": [
-          "En snögubbe",
-          "Ett hus",
-          "En båt",
-          "En bil"
+          "Blå med vita prickar",
+          "Alldeles svart",
+          "Grön med stjärnor",
+          "Röd med ränder"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Hur är vädret?",
+        "q": "Var letar Ines?",
         "options": [
-          "Varmt",
-          "Snöigt",
-          "Soligt",
-          "Blåsigt"
+          "Ute på hela gården",
+          "I fickorna och i hallen",
+          "Hemma hos en kompis",
+          "Bara i klassrummet"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad svarar klassen?",
+        "options": [
+          "Att vanten låg på bänken",
+          "Att någon säkert tagit den",
+          "Att den ligger kvar i hallen",
+          "Att ingen har sett den"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var hittas vanten?",
+        "options": [
+          "På ett staket",
+          "Under en bänk",
+          "Nere i sandlådan",
+          "Uppe i ett träd"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför hänger vanten på staketet?",
+        "options": [
+          "Ines glömde den där",
+          "Vaktmästaren har tvättat den",
+          "Den har blåst dit",
+          "Någon ville att den skulle synas"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 20,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-049",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -30367,78 +30367,78 @@
     "grade": 1,
     "genre": "berättelse",
     "theme": "hälsa",
-    "title": "Lunch i skolan",
-    "text": "I skolans matsal äter eleverna lunch. Idag finns soppa och bröd. Amir sitter bredvid sin vän Maja.",
+    "title": "En sen frukost",
+    "text": "Väckarklockan ringde aldrig. Idris vaknar när solen redan är hög. Han har tio minuter på sig. Han häller upp fil och tappar hälften på bordet. Mamma torkar upp utan att säga något. Idris hinner precis med bussen. I ryggsäcken ligger en banan han får äta senare.",
     "questions": [
       {
         "type": "literal",
-        "q": "Var äter eleverna?",
+        "q": "Varför vaknar Idris sent?",
         "options": [
-          "I matsalen",
-          "I skogen",
-          "I bussen",
-          "I parken"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad finns till lunch?",
-        "options": [
-          "Pasta",
-          "Soppa",
-          "Pizza",
-          "Ris"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vem sitter bredvid Amir?",
-        "options": [
-          "Leo",
-          "Sara",
-          "Maja",
-          "Kim"
+          "Klockan i köket gick fel",
+          "Han var sjuk under natten",
+          "Väckarklockan ringde aldrig",
+          "Han somnade om en gång"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad äter de?",
+        "q": "Hur lång tid har han på sig?",
         "options": [
-          "Glass",
-          "Frukt",
-          "Kakor",
-          "Lunch"
+          "Fem minuter",
+          "Tio minuter",
+          "En kvart",
+          "En halvtimme"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad tappar han på bordet?",
+        "options": [
+          "Kakao",
+          "Mjölk",
+          "Saft",
+          "Fil"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad äter de till soppan?",
+        "q": "Varför säger mamma inget?",
         "options": [
-          "Bröd",
-          "Ris",
-          "Pasta",
-          "Potatis"
+          "Hon pratar i telefon",
+          "Hon vet att Idris har bråttom",
+          "Hon har inte sett det",
+          "Hon är arg på honom"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Var sitter Maja?",
+        "q": "Hur går det med bussen?",
         "options": [
-          "Vid Amir",
-          "Vid dörren",
-          "Vid fönstret",
-          "Vid läraren"
+          "Han missar den helt",
+          "Bussen är försenad",
+          "Han får skjuts i stället",
+          "Han hinner precis med"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ligger en banan i ryggsäcken?",
+        "options": [
+          "Han ska äta den senare",
+          "Den är till en kompis",
+          "Den ska ges till läraren",
+          "Den har glömts kvar där"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 17,
+      "wordCount": 46,
       "fingerprint": "tema-ak1-tema-050",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"

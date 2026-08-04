@@ -49,6 +49,29 @@ Object.entries(titelNycklar)
     varningar.push(`Samma titel på samma årskurs: "${nyckel.split('|')[0]}" (${v.join(', ')})`)
   );
 
+// Nära dubbletter: två texter i samma årskurs som delar merparten av sina ord
+// är i praktiken samma text för eleven, även om titlarna skiljer sig. Sådana
+// texter tar upp en plats i biblioteket utan att ge något nytt att läsa.
+const ordmangd = s =>
+  new Set(s.toLowerCase().replace(/[^a-zåäöé0-9 ]/g, '').replace(/\s+/g, ' ').trim().split(' '));
+const overlapp = (a, b) => {
+  const gemensamma = [...a].filter(x => b.has(x)).length;
+  return gemensamma / (a.size + b.size - gemensamma);
+};
+const medOrd = lib.map(t => ({ id: t.id, grade: t.grade, ord: ordmangd(t.text || '') }));
+for (let i = 0; i < medOrd.length; i++) {
+  for (let j = i + 1; j < medOrd.length; j++) {
+    if (medOrd[i].grade !== medOrd[j].grade) continue;
+    const andel = overlapp(medOrd[i].ord, medOrd[j].ord);
+    if (andel >= 0.6) {
+      fel.push(
+        `Nära dubblett i åk ${medOrd[i].grade}: ${medOrd[i].id} och ${medOrd[j].id} ` +
+        `delar ${Math.round(andel * 100)} % av orden`
+      );
+    }
+  }
+}
+
 // ── Kontroller per text ─────────────────────────────────────────────────────
 lib.forEach(t => {
   const id = t.id || '(saknar id)';
