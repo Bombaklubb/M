@@ -740,7 +740,7 @@
     "genre": "berättelse",
     "theme": "miljö",
     "title": "Pappret i fel låda",
-    "text": "Efter pysslet skulle klassen städa. Det fanns tre lådor: papper, plast och rest. Mateo såg en kompis kasta papper i plastlådan. Mateo blev osäker. Skulle han säga något? Han gick fram och viskade: \"Papper ska dit.\" Han pekade på papperslådan. Kompisen, Aisha, tittade och sa: \"Oj, jag glömde.\" Hon flyttade pappret rätt. Läraren hörde och sa: \"Bra att ni hjälps åt.\" Mateo kände sig modig. Små saker kan hålla klassrummet rent.",
+    "text": "Efter pysslet skulle klassen städa. Det fanns tre lådor: papper, plast och rest. Mateo såg en kompis kasta papper i plastlådan. Mateo blev osäker. Skulle han säga något? Han gick fram och viskade: \"Papper ska dit.\" Han pekade på papperslådan. Aisha sa: \"Oj, jag glömde.\" Hon flyttade pappret rätt. Mateo kände sig modig. Små saker kan hålla klassrummet rent.",
     "questions": [
       {
         "type": "literal",
@@ -811,7 +811,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 71
+      "wordCount": 59
     }
   },
   {
@@ -820,7 +820,7 @@
     "genre": "berättelse",
     "theme": "musik",
     "title": "Trumma i magen",
-    "text": "På musiklektionen fick alla prova trummor. Farah höll trumpinnarna hårt och slog för fort. Det lät rörigt och hon blev varm i ansiktet. Läraren sa: \"Känn pulsen.\" De klappade: ett, två, ett, två. Farah provade igen och slog långsammare. Nu lät det som en riktig rytm. Bredvid henne spelade Kenji samma puls. De log mot varandra. När de slutade kände Farah trumman som ett hjärtslag i magen. Hon ville spela mer.",
+    "text": "På musiklektionen fick alla prova trummor. Farah höll trumpinnarna hårt och slog för fort. Det lät rörigt och hon blev varm i ansiktet. Läraren sa: \"Känn pulsen.\" De klappade: ett, två, ett, två. Farah provade igen och slog långsammare. Nu lät det som en riktig rytm. Bredvid henne spelade Kenji samma puls. De log mot varandra. Hon ville spela mer.",
     "questions": [
       {
         "type": "literal",
@@ -891,7 +891,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 71
+      "wordCount": 60
     }
   },
   {
@@ -1066,7 +1066,7 @@
     "genre": "faktatext",
     "theme": "natur",
     "title": "Ett frö blir en blomma",
-    "text": "Ett frö kan vara litet som en smula. Inuti fröet finns en ny liten växt. När fröet får vatten vaknar det. Om fröet också får värme och ljus kan det börja växa. Först kommer en liten rot som söker sig ner i jorden. Sedan kommer en liten stjälk uppåt. Efter ett tag får växten blad. Bladen hjälper växten att få energi från solen. Till slut kan växten få en blomma.",
+    "text": "Inuti fröet finns en ny liten växt. När fröet får vatten vaknar det. Om fröet också får värme och ljus kan det börja växa. Först kommer en liten rot som söker sig ner i jorden. Efter ett tag får växten blad. Bladen hjälper växten att få energi från solen. Till slut kan växten få en blomma.",
     "questions": [
       {
         "type": "literal",
@@ -1137,7 +1137,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 70
+      "wordCount": 56
     }
   },
   {
@@ -3360,7 +3360,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen på skolgården",
-    "text": "Noah och Kim leker på skolgården. De sparkar en blå boll mellan sig. Bollen rullar plötsligt mot staketet. Kim springer snabbt och hämtar den. Sedan fortsätter de spela och skrattar högt.",
+    "text": "Noah och Kim leker på skolgården. De sparkar en blå boll mellan sig. Bollen rullar plötsligt mot staketet. Kim springer snabbt och hämtar den. Sedan fortsätter de spela och skrattar högt. När det ringer in tar Noah bollen under armen och de går in tillsammans.",
     "questions": [
       {
         "type": "literal",
@@ -3430,7 +3430,7 @@
       }
     ],
     "meta": {
-      "wordCount": 31,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-017",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -3443,7 +3443,7 @@
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "En bok om havet",
-    "text": "I klassrummet läser. Amir en bok. Boken handlar om havet. Där finns bilder på fiskar och stora valar. Amir visar en bild för sin vän Sara. De tycker att valen ser mycket stor ut.",
+    "text": "I klassrummet läser Amir en bok. Boken handlar om havet. Där finns bilder på fiskar och stora valar. Amir visar en bild för sin vän Sara. De tycker att valen ser mycket stor ut. Sara vill också låna boken när Amir är klar.",
     "questions": [
       {
         "type": "literal",
@@ -3513,7 +3513,7 @@
       }
     ],
     "meta": {
-      "wordCount": 34,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-018",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -3526,7 +3526,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Bakning hemma",
-    "text": "Maja bakar bullar med sin pappa. De blandar mjöl socker och smör. Degen blir mjuk i skålen. När bullarna är klara luktar köket gott. Maja lägger en bulle på en tallrik och smakar.",
+    "text": "Maja bakar bullar med sin pappa. De blandar mjöl, socker och smör. Degen blir mjuk i skålen. När bullarna är klara luktar köket gott. Maja lägger en bulle på en tallrik och smakar. Den är varm och alldeles nybakad. Hon tar en till.",
     "questions": [
       {
         "type": "literal",
@@ -3596,7 +3596,7 @@
       }
     ],
     "meta": {
-      "wordCount": 33,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-019",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -3692,7 +3692,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen i parken",
-    "text": "Leo och Kim leker i parken efter skolan. De har en röd boll. Leo kastar bollen högt. Kim fångar den och skrattar. Sedan sparkar de bollen över gräset. Solen skiner och vinden är svag.",
+    "text": "Leo och Kim leker i parken efter skolan. De har en röd boll. Leo kastar bollen högt. Kim fångar den och skrattar. Sedan sparkar de bollen över gräset. Solen skiner och vinden är svag. De leker tills det börjar bli mörkt och går sedan hem.",
     "questions": [
       {
         "type": "literal",
@@ -3762,7 +3762,7 @@
       }
     ],
     "meta": {
-      "wordCount": 34,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-021",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -7498,7 +7498,7 @@
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Robot av kartong",
-    "text": "I klassrummet stod en stor låda kartong. Läraren sa att de skulle bygga något av återbruk. \"Ni får bestämma själva,\" sa läraren. \"Men det ska kunna användas till något.\"\n\nKenji och Sara satte sig tillsammans. Kenji ritade snabbt en plan. \"Vi kan bygga en robot!\" sa han. Sara nickade. \"Ja! Den kan hjälpa till att sortera pennor.\"\n\nDe hämtade toalettpappersrullar, kapsyler och tejp. Sara ville att roboten skulle ha långa armar, så att den kunde nå en burk med blyertspennor. Kenji ville att roboten skulle ha en lucka på magen.\n\n\"Varför en lucka?\" frågade Sara.\n\n\"För att stoppa in sudd,\" sa Kenji. \"Som en suddbank!\"\n\nDe skrattade och började klippa. Ibland blev det snett och tejpen fastnade i deras fingrar. Då tog Sara ett djupt andetag och sa: \"Vi provar igen.\" Kenji höll i rullen medan Sara tejpade. De hjälptes åt.\n\nNär roboten var klar stod den på bänken. Den hade runda ögon av kapsyler och en lucka som gick att öppna. De testade den: Sara stoppade i ett sudd. Kenji öppnade luckan och tog ut suddet igen.\n\n\"Den fungerar!\" sa Sara.\n\nLäraren kom förbi. \"Ni har byggt en prototyp,\" sa läraren. \"En första modell. Nu kan ni förbättra den.\"\n\nKenji och Sara tittade på varandra. \"Nästa gång kan den ha hjul,\" sa Sara.\n\n\"Eller en arm som kan peka,\" sa Kenji.\n\nDe skrev ner sina idéer. Kenji kände sig stolt. Sara kände sig modig. De hade byggt något tillsammans, och deras robot av kartong hade blivit en liten början på en större idé.",
+    "text": "I klassrummet stod en stor låda kartong. Läraren sa att de skulle bygga något av återbruk. \"Ni får bestämma själva,\" sa läraren. \"Men det ska kunna användas till något.\"\n\nKenji och Sara satte sig tillsammans. Kenji ritade snabbt en plan. \"Vi kan bygga en robot!\" sa han. Sara nickade. \"Ja! Den kan hjälpa till att sortera pennor.\"\n\nDe hämtade toalettpappersrullar, kapsyler och tejp. Kenji ville att roboten skulle ha en lucka på magen.\n\n\"Varför en lucka?\" frågade Sara.\n\n\"För att stoppa in sudd,\" sa Kenji. \"Som en suddbank!\"\n\nDe skrattade och började klippa. Ibland blev det snett och tejpen fastnade i deras fingrar. Då tog Sara ett djupt andetag och sa: \"Vi provar igen.\" Kenji höll i rullen medan Sara tejpade. De hjälptes åt.\n\nNär roboten var klar stod den på bänken. Den hade runda ögon av kapsyler och en lucka som gick att öppna. De testade den: Sara stoppade i ett sudd. Kenji öppnade luckan och tog ut suddet igen.\n\n\"Den fungerar!\" sa Sara.\n\nLäraren kom förbi. \"Ni har byggt en prototyp,\" sa läraren. \"En första modell. Nu kan ni förbättra den.\" Kenji kände sig stolt. Sara kände sig modig. De hade byggt något tillsammans, och deras robot av kartong hade blivit en liten början på en större idé.",
     "questions": [
       {
         "type": "literal",
@@ -7568,7 +7568,7 @@
       }
     ],
     "meta": {
-      "wordCount": 254,
+      "wordCount": 210,
       "fingerprint": "gpt4-ak2-03",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -8884,7 +8884,7 @@
     "genre": "faktatext",
     "theme": "existentiella frågor",
     "title": "Vad är mod?",
-    "text": "Mod betyder inte att man aldrig är rädd. Mod kan vara att våga göra något även när det känns pirrigt i magen. Det kan till exempel vara att räcka upp handen i klassen, säga ifrån när någon blir retad, eller prova en ny aktivitet. Ibland är mod att be om hjälp. När man tränar på mod blir det ofta lite lättare nästa gång, eftersom man märker att man klarade det.",
+    "text": "Mod betyder inte att man aldrig är rädd. Mod kan vara att våga göra något även när det känns pirrigt. Det kan vara att räcka upp handen i klassen eller säga ifrån när någon blir retad. Ibland är mod att be om hjälp. När man tränar på mod blir det lättare nästa gång, eftersom man märker att man klarade det.",
     "questions": [
       {
         "type": "literal",
@@ -8954,7 +8954,7 @@
       }
     ],
     "meta": {
-      "wordCount": 70,
+      "wordCount": 60,
       "fingerprint": "gpt3-020",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
@@ -9382,7 +9382,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Övergångsstället",
-    "text": "När Amir går till skolan måste han korsa en stor väg. Vid övergångsstället finns en knapp som tänder ett gult ljus. Amir trycker och väntar vid kanten. En bil saktar in och stannar, men en cyklist kommer snabbt bakom och bromsar sent. Amir tar ett steg tillbaka. Då säger en vuxen bredvid: \"Bra att du väntade.\" När det blir helt stopp på vägen går Amir lugnt över och vinkar tack.",
+    "text": "När Amir går till skolan måste han korsa en väg. Vid övergångsstället finns en knapp som tänder ett gult ljus. Amir trycker och väntar. En bil saktar in och stannar, men en cyklist kommer snabbt bakom och bromsar sent. Amir tar ett steg tillbaka. Då säger en vuxen: \"Bra att du väntade.\" När det blir stopp går Amir lugnt över.",
     "questions": [
       {
         "type": "literal",
@@ -9452,7 +9452,7 @@
       }
     ],
     "meta": {
-      "wordCount": 70,
+      "wordCount": 60,
       "fingerprint": "gpt3-017",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
@@ -13859,7 +13859,7 @@
     "genre": "faktatext",
     "theme": "teknik",
     "title": "Så fungerar en bro",
-    "text": "En bro hjälper människor att ta sig över något, till exempel en flod, en väg eller en dal. Det finns många sorters broar, men alla måste klara samma sak: de måste vara stabila och hålla för tyngd.\n\nNär en bil eller en person står på en bro trycker tyngden neråt. Det kallas belastning. Bron måste fördela belastningen så att den inte går sönder. Därför använder man olika former och material.\n\nEn enkel bro kan vara en planka över ett litet dike. Men om bron ska vara lång eller hålla för tunga lastbilar behöver den vara starkare. Då kan man bygga en balkbro. En balk är som en stark pinne av stål eller betong som bär upp bron.\n\nEn annan typ är bågbro. Den ser ut som en stor båge. När någon går på bron trycks bågen ihop och skickar kraften åt sidorna ner i marken. Det gör att bron kan bli stark även om den är ganska tunn.\n\nDet finns också hängbroar. De har kablar som hänger mellan höga torn. Vägen på bron hänger i kablarna. Kablarna dras hårt och kan bära mycket. Hängbroar passar bra när man behöver en väldigt lång bro.\n\nIngenjörerna som bygger broar testar ofta modeller först. I skolan kan du göra ett enkelt test: bygg en bro av papper eller sugrör och lägg mynt på den. Då ser du hur formen och stöden påverkar hur mycket bron klarar.\n\nBroar är alltså inte bara vägar i luften. De är smarta lösningar där form, material och krafter samarbetar för att människor ska kunna ta sig fram säkert.",
+    "text": "En bro hjälper människor att ta sig över något, till exempel en flod, en väg eller en dal. Det finns många sorters broar, men alla måste klara samma sak: de måste vara stabila och hålla för tyngd.\n\nNär en bil eller en person står på en bro trycker tyngden neråt. Det kallas belastning. Bron måste fördela belastningen så att den inte går sönder. Därför använder man olika former och material.\n\nMen om bron ska vara lång eller hålla för tunga lastbilar behöver den vara starkare.\n\nEn annan typ är bågbro. Den ser ut som en stor båge. När någon går på bron trycks bågen ihop och skickar kraften åt sidorna ner i marken. Det gör att bron kan bli stark även om den är ganska tunn.\n\nDet finns också hängbroar. De har kablar som hänger mellan höga torn. Vägen på bron hänger i kablarna. Kablarna dras hårt och kan bära mycket. Hängbroar passar bra när man behöver en väldigt lång bro.\n\nIngenjörerna som bygger broar testar ofta modeller först. I skolan kan du testa själv: bygg en bro av papper och lägg mynt på den.\n\nBroar är alltså inte bara vägar i luften. De är smarta lösningar där form, material och krafter samarbetar för att människor ska kunna ta sig fram säkert.",
     "questions": [
       {
         "type": "literal",
@@ -13930,7 +13930,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 260
+      "wordCount": 212
     }
   },
   {
@@ -14923,7 +14923,7 @@
     "genre": "faktatext",
     "theme": "värdegrund",
     "title": "Vänskap i klassen",
-    "text": "I klass 4B går elever med olika intressen och bakgrunder. Amir gillar att rita serier, Maja spelar fotboll och Kim älskar att läsa böcker. I klassen finns också Noor som använder rullstol och är duktig på schack.\n\nIbland kan det bli missförstånd när man arbetar i grupp. Då är det viktigt att lyssna på varandra och försöka förstå. När eleverna planerade en klassfest hade alla olika idéer. Genom att samarbeta hittade de en lösning som alla var nöjda med.\n\nEn bra vän stöttar andra och säger ifrån om någon blir retad. I klassen har de bestämt att alla ska få vara med på rasterna. Det gör att fler känner sig trygga.\n\nVänskap handlar inte om att vara lika. Det handlar om att visa respekt och hjälpa varandra.",
+    "text": "I klass 4B går elever med olika intressen och bakgrunder. Amir gillar att rita serier, Maja spelar fotboll och Kim älskar att läsa böcker. I klassen finns också Noor som använder rullstol och är duktig på schack.\n\nIbland kan det bli missförstånd när man arbetar i grupp. Då är det viktigt att lyssna på varandra och försöka förstå. När eleverna planerade en klassfest hade alla olika idéer. Genom att samarbeta hittade de en lösning som alla var nöjda med.\n\nAtt arbeta i grupp med någon man inte känner så väl kan kännas ovant i början. Men ofta upptäcker man saker om varandra som man annars aldrig hade fått veta.\n\nEn bra vän stöttar andra och säger ifrån om någon blir retad. I klassen har de bestämt att alla ska få vara med på rasterna. Det gör att fler känner sig trygga.\n\nVänskap handlar inte om att vara lika. Det handlar om att visa respekt och hjälpa varandra.",
     "questions": [
       {
         "type": "literal",
@@ -14993,7 +14993,7 @@
       }
     ],
     "meta": {
-      "wordCount": 127,
+      "wordCount": 157,
       "fingerprint": "ak4-varde-vanskap-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
@@ -22218,7 +22218,7 @@
     "genre": "faktatext",
     "theme": "kultur",
     "title": "Vägen från deltävling till final",
-    "text": "Melodifestivalen består av flera deltävlingar innan finalen avgörs. Upplägget gör att både artister och publik får följa en längre process. Varje deltävling innehåller ett antal bidrag som framförs live inför publik. Efter varje program går några bidrag direkt till final, medan andra får en ny chans genom ett uppsamlingsprogram.\n\nSystemet med deltävlingar infördes för att skapa större spänning och ge fler städer möjlighet att vara värdar. Det innebär också att produktionen turnerar runt i landet. För artisterna kan det vara både en möjlighet och en utmaning. De måste prestera flera gånger under press och hantera både positiva och negativa reaktioner.\n\nRöstningen sker genom en kombination av publikröster och internationella jurys i finalen. Syftet är att hitta ett bidrag som inte bara fungerar i Sverige utan också har potential internationellt. Det kan dock uppstå diskussioner om balansen mellan folklig smak och expertbedömning.\n\nUnder repetitionerna arbetar tekniker, dansare, producenter och stylister intensivt. En artist som deltar är sällan ensam, utan omges av ett helt team. Tre minuter på scen kräver veckor av planering. Ljussättning, kameravinklar och koreografi måste samspela för att skapa en helhet.\n\nFör unga tittare kan Melodifestivalen bli en första kontakt med hur tv-produktion fungerar. Programmet visar hur kultur, teknik och ekonomi hänger ihop. Samtidigt är det en tävling där känslor spelar stor roll. När resultatet presenteras kan glädje och besvikelse märkas tydligt.\n\nAtt ta sig till final är därför både en musikalisk och strategisk prestation. Det handlar inte bara om att ha en bra låt, utan också om att nå fram till publiken och skapa ett minnesvärt framträdande.",
+    "text": "Melodifestivalen består av flera deltävlingar innan finalen avgörs. Upplägget gör att både artister och publik får följa en längre process. Varje deltävling innehåller ett antal bidrag som framförs live inför publik. Efter varje program går några bidrag direkt till final, medan andra får en ny chans genom ett uppsamlingsprogram.\n\nSystemet med deltävlingar infördes för att skapa större spänning och ge fler städer möjlighet att vara värdar. Det innebär också att produktionen turnerar runt i landet. För artisterna kan det vara både en möjlighet och en utmaning. De måste prestera flera gånger under press och hantera både positiva och negativa reaktioner.\n\nRöstningen sker genom en kombination av publikröster och internationella jurys i finalen. Syftet är att hitta ett bidrag som inte bara fungerar i Sverige utan också har potential internationellt. Det kan dock uppstå diskussioner om balansen mellan folklig smak och expertbedömning.\n\nUnder repetitionerna arbetar tekniker, dansare, producenter och stylister intensivt. En artist som deltar är sällan ensam, utan omges av ett helt team. Tre minuter på scen kräver veckor av planering. Ljussättning, kameravinklar och koreografi måste samspela för att skapa en helhet.\n\nAtt ta sig till final är därför både en musikalisk och strategisk prestation. Det handlar inte bara om att ha en bra låt, utan också om att nå fram till publiken och skapa ett minnesvärt framträdande.",
     "questions": [
       {
         "type": "literal",
@@ -22288,7 +22288,7 @@
       }
     ],
     "meta": {
-      "wordCount": 259,
+      "wordCount": 218,
       "fingerprint": "ak7-tema-002",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -24346,7 +24346,7 @@
   {
     "id": "ak8-tema-002",
     "title": "Historien om löften och gränser",
-    "text": "När första världskriget tog slut förändrades kartan i Mellanöstern. Det osmanska riket, som länge hade styrt stora områden, försvagades och delades upp. För många kurder väcktes hoppet om större självbestämmande. I början av 1920-talet nämndes möjligheten till ett kurdiskt område i internationella förhandlingar. Men politik är sällan rak. Stormakter prioriterade egna intressen, och nya gränser drogs på ett sätt som inte alltid tog hänsyn till folkgruppernas önskemål.\n\nResultatet blev att kurder hamnade i flera olika länder. I Turkiet, Iran, Irak och Syrien utvecklades olika relationer mellan staten och den kurdiska befolkningen. I vissa perioder har kurdiska uttryck och organisationer begränsats, i andra har det funnits försök till dialog eller reformer. Under 1900-talet förekom också uppror och hårda motreaktioner, vilket bidrog till att misstro växte.\n\nEtt tragiskt exempel som ofta nämns i diskussioner om kurdernas historia är gasattacken mot Halabja 1988 under Iran–Irak-kriget. Många civila dog, och händelsen blev en symbol för hur civila kan drabbas när konflikter eskalerar. Efter Gulfkriget 1991 uppstod ett mer självstyrt kurdiskt område i norra Irak, och senare skapades en regional regering med eget parlament. För vissa kurder blev detta ett bevis på att politiska förändringar kan vara möjliga, även om området fortfarande formellt ingår i Irak.\n\nHistorien påverkar också hur människor pratar om framtiden. Vissa betonar rätten till ett eget land, andra vill främst ha starkare rättigheter och trygghet där de redan bor. Det som förenar många berättelser är erfarenheten av att ha funnits på kartan i människors minne, även när gränser har flyttats utan att de själva fått bestämma.",
+    "text": "När första världskriget tog slut förändrades kartan i Mellanöstern. Det osmanska riket, som länge hade styrt stora områden, försvagades och delades upp. För många kurder väcktes hoppet om större självbestämmande. I början av 1920-talet nämndes möjligheten till ett kurdiskt område i internationella förhandlingar. Stormakter prioriterade egna intressen, och nya gränser drogs på ett sätt som inte alltid tog hänsyn till folkgruppernas önskemål.\n\nResultatet blev att kurder hamnade i flera olika länder. I Turkiet, Iran, Irak och Syrien utvecklades olika relationer mellan staten och den kurdiska befolkningen.\n\nEtt tragiskt exempel som ofta nämns i diskussioner om kurdernas historia är gasattacken mot Halabja 1988 under Iran–Irak-kriget. Många civila dog, och händelsen blev en symbol för hur civila kan drabbas när konflikter eskalerar. Efter Gulfkriget 1991 uppstod ett mer självstyrt kurdiskt område i norra Irak, och senare skapades en regional regering med eget parlament. För vissa kurder blev detta ett bevis på att politiska förändringar kan vara möjliga, även om området fortfarande formellt ingår i Irak.\n\nHistorien påverkar också hur människor pratar om framtiden. Vissa betonar rätten till ett eget land, andra vill främst ha starkare rättigheter och trygghet där de redan bor. Det som förenar många berättelser är erfarenheten av att ha funnits på kartan i människors minne, även när gränser har flyttats utan att de själva fått bestämma.",
     "grade": 4,
     "category": "Historia",
     "questions": [
@@ -24419,7 +24419,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 255
+      "wordCount": 217
     },
     "genre": "faktatext",
     "theme": "Historia"
