@@ -331,7 +331,7 @@
     "genre": "berättelse",
     "theme": "etik",
     "title": "Den lånade suddgummit",
-    "text": "På bilden behövde alla sudda ibland. Theo hade tappat sitt suddgummi. Han tittade i sin låda och på golvet.\n\n\"Jag hittar det inte,\" sa Theo.\n\nSahar satt bredvid. Hon tog fram sitt suddgummi. \"Du kan låna mitt,\" sa Sahar.\n\nTheo tog det och suddade. Men när lektionen var slut stoppade han suddgummit i sin ficka utan att tänka. Sahar såg det och blev tyst.\n\nPå vägen ut stannade Theo. Han kände suddgummit i fickan. \"Oj!\" sa han och vände sig om.\n\n\"Förlåt,\" sa Theo och gav tillbaka suddet. \"Jag glömde.\"\n\nSahar log lite. \"Tack för att du sa det.\"\n\nTheo nickade. Han kände sig lättad. Att låna betyder att man lämnar tillbaka. Och om man gör fel kan man säga förlåt och göra rätt igen.",
+    "text": "Theo hade tappat sitt suddgummi.\n\n\"Jag hittar det inte\", sa Theo.\n\nSahar satt bredvid. \"Du kan låna mitt\", sa hon.\n\nTheo suddade. Men när lektionen var slut stoppade han suddgummit i sin ficka utan att tänka. Sahar såg det och blev tyst.\n\nPå vägen ut kände Theo suddgummit i fickan. \"Oj!\" sa han och vände sig om.\n\n\"Förlåt\", sa Theo och gav tillbaka det. \"Jag glömde.\"\n\nSahar log. \"Tack för att du sa det.\"\n\nAtt låna betyder att man lämnar tillbaka. Gör man fel kan man säga förlåt.",
     "questions": [
       {
         "type": "literal",
@@ -401,7 +401,7 @@
       }
     ],
     "meta": {
-      "wordCount": 125,
+      "wordCount": 88,
       "fingerprint": "gpt4-ak1-12",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -657,7 +657,7 @@
     "genre": "faktatext",
     "theme": "miljö",
     "title": "Släcka och spara",
-    "text": "El är något vi använder varje dag. Lampor lyser med el. Datorer och surfplattor behöver el. Ibland kommer el från vind, vatten eller sol. Ibland kommer el från sådant som kan göra luften smutsigare.\n\nDärför är det bra att spara el. När vi sparar el hjälper vi miljön. Då behövs det mindre energi.\n\nDu kan spara el på enkla sätt. Du kan släcka lampan när du går ut ur ett rum. Du kan stänga av tv:n när ingen tittar. Du kan ta ut laddaren när den inte används.\n\nI skolan kan ni också tänka på el. Kanske kan klassen ha en \"släckare\" som påminner alla. Att spara el är som att vara snäll mot naturen. Många små saker kan bli en stor hjälp.",
+    "text": "El är något vi använder varje dag. Lampor lyser med el. Ibland kommer el från vind, vatten eller sol.\n\nDärför är det bra att spara el. När vi sparar el hjälper vi miljön.\n\nDu kan spara el på enkla sätt. Du kan släcka lampan när du går ut ur ett rum. Du kan stänga av tv:n när ingen tittar. Du kan ta ut laddaren när den inte används.\n\nI skolan kan klassen ha en \"släckare\" som påminner alla. Många små saker kan bli en stor hjälp.",
     "questions": [
       {
         "type": "literal",
@@ -727,7 +727,7 @@
       }
     ],
     "meta": {
-      "wordCount": 123,
+      "wordCount": 86,
       "fingerprint": "gpt4-ak1-04",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -900,7 +900,7 @@
     "genre": "berättelse",
     "theme": "musik",
     "title": "Sången på samlingen",
-    "text": "På morgonen satt klassen i en ring. Det var samling. Läraren sa: \"Vi ska sjunga en sång.\"\n\nSven var glad och ville sjunga högt. Alva var blyg och sjöng tyst. Farah satt bredvid och lyssnade.\n\nNär sången började sjöng Sven snabbt. Alva tappade bort orden. Farah såg att Alva blev röd om kinderna.\n\nFarah viskade: \"Vi kan sjunga långsammare.\"\n\nFarah räckte upp handen. \"Kan vi sjunga en gång till och lite långsammare?\" frågade Farah.\n\nLäraren nickade. \"Bra idé.\"\n\nDe sjöng igen. Nu hann Alva med. Sven lyssnade och sjöng i samma takt som alla andra.\n\nEfter sången sa Alva: \"Tack. Nu var det roligt.\"\n\nSven log. \"Jag kan sjunga lagom också.\"\n\nFarah log. Klassen kände sig som ett lag. När alla hjälps åt blir sången fin.",
+    "text": "På morgonen satt klassen i en ring. Det var samling. Läraren sa: \"Vi ska sjunga en sång.\"\n\nSven ville sjunga högt. Alva var blyg och sjöng tyst.\n\nNär sången började sjöng Sven snabbt. Alva hann inte med och tappade bort orden.\n\nFarah räckte upp handen. \"Kan vi sjunga en gång till, lite långsammare?\"\n\nLäraren nickade. De sjöng igen. Nu hann Alva med, och Sven sjöng i samma takt som alla andra.\n\n\"Tack\", sa Alva. \"Nu var det roligt.\"\n\nNär alla hjälps åt blir sången fin.",
     "questions": [
       {
         "type": "literal",
@@ -970,7 +970,7 @@
       }
     ],
     "meta": {
-      "wordCount": 126,
+      "wordCount": 85,
       "fingerprint": "gpt4-ak1-05",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -5432,7 +5432,7 @@
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En plats bredvid mig",
-    "text": "På morgonen satt Inez vid sitt bord. Hon hade lagt fram sin bok och sin penna. Runt henne pratade många barn. Då kom Hassan in i klassrummet. Han såg sig omkring och höll hårt i sin ryggsäck.\n\nAlla platser såg upptagna ut, tyckte Hassan. Inez såg att han tveka. Hon flyttade sin stol lite och pekade på platsen bredvid.\n\n\"Du kan sitta här,\" sa Inez.\n\nHassan satte sig försiktigt. \"Tack,\" sa han.\n\nNär läraren delade ut ett papper viskade Hassan: \"Jag hittar inte mitt sudd.\"\n\nInez öppnade sitt pennskrin och gav honom ett extra. Hassan log. Senare på rasten byggde de en bana till en liten bil tillsammans. Inez kände sig stolt. Vänskap kan börja med en plats och ett sudd.",
+    "text": "På morgonen satt Inez vid sitt bord. Då kom Hassan in i klassrummet. Han såg sig omkring och höll hårt i sin ryggsäck.\n\nInez såg att han tvekade. Hon flyttade sin stol lite och pekade på platsen bredvid.\n\n\"Du kan sitta här\", sa Inez.\n\nHassan satte sig. \"Tack\", sa han.\n\nSenare viskade Hassan: \"Jag hittar inte mitt sudd.\" Inez gav honom ett extra. Hassan log.\n\nPå rasten byggde de en bana till en liten bil tillsammans. Vänskap kan börja med en plats och ett sudd.",
     "questions": [
       {
         "type": "literal",
@@ -5502,7 +5502,7 @@
       }
     ],
     "meta": {
-      "wordCount": 121,
+      "wordCount": 85,
       "fingerprint": "gpt4-ak1-08",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -7661,7 +7661,7 @@
     "genre": "berättelse",
     "theme": "kroppen",
     "title": "Tanden som lossnade",
-    "text": "Mitt under lunchen kände Amir att något var konstigt. Hans framtand gungade mer än vanligt. Han vågade inte bita i smörgåsen.\n\n\"Min tand gungar jättemycket,\" sa han till sin kompis Ella.\n\n\"Vicka på den!\" sa Ella. \"Min föll ut i ett äpple förra veckan.\"\n\nAmir vickade försiktigt med tungan. Plötsligt lossnade tanden. Den låg där i hans hand, liten och vit.\n\n\"Lägg den under kudden ikväll,\" sa Ella. \"Då kanske tandfen kommer.\"\n\nAmir visade tanden för fröken. Hon sa att det var helt normalt och att en ny tand snart skulle växa fram.\n\nPå kvällen lade Amir tanden under kudden. Nästa morgon låg där en blank femkrona. Amir log brett, och i spegeln såg han luckan där tanden hade suttit.",
+    "text": "Mitt under lunchen kände Amir att något var konstigt. Hans framtand gungade mer än vanligt. Han vågade inte bita i smörgåsen.\n\n\"Min tand gungar jättemycket\", sa han till sin kompis Ella.\n\n\"Vicka på den!\" sa Ella. \"Min föll ut i ett äpple förra veckan.\"\n\nAmir vickade försiktigt med tungan. Plötsligt lossnade tanden.\n\n\"Lägg den under kudden ikväll\", sa Ella. \"Då kanske tandfen kommer.\"\n\nPå kvällen lade Amir tanden under kudden. Nästa morgon låg där en blank femkrona.",
     "questions": [
       {
         "type": "literal",
@@ -7732,7 +7732,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 120
+      "wordCount": 77
     }
   },
   {
@@ -10046,7 +10046,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Äppelpajen på caféet",
-    "text": "I en liten stad finns ett café som är känt för sin äppelpaj. Caféet drivs av Alex och deras pappa. Varje morgon skär de färska äpplen i tunna skivor. Sedan blandar de äpplena med lite socker och kanel. Doften sprider sig snabbt i köket. När pajen bakas i ugnen luktar hela caféet gott. Många gäster kommer just för att smaka pajen. En äldre kvinna säger att den påminner henne om när hon var barn. Alex tycker om att höra sådana berättelser från gästerna. Ibland hjälper Alex kompis Kim till efter skolan. Kim serverar pajen med lite vaniljsås. Gästerna sitter länge och pratar medan de äter. Alex tycker att äpplen är speciella eftersom de kan göra människor både mätta och glada.",
+    "text": "I en liten stad finns ett café som är känt för sin äppelpaj. Caféet drivs av Alex och deras pappa. Varje morgon skär de färska äpplen i tunna skivor. Sedan blandar de äpplena med lite socker och kanel. Doften sprider sig snabbt i köket.\n\nMånga gäster kommer just för att smaka pajen.\n\nIbland hjälper Alex kompis Kim till efter skolan. Kim serverar pajen med lite vaniljsås.\n\nAlex tycker att äpplen är speciella eftersom de kan göra människor både mätta och glada.",
     "questions": [
       {
         "type": "literal",
@@ -10116,7 +10116,7 @@
       }
     ],
     "meta": {
-      "wordCount": 120,
+      "wordCount": 81,
       "fingerprint": "ak3-tema-004",
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
@@ -10614,7 +10614,7 @@
   {
     "id": "ak3-tema-011",
     "title": "Ett bihotell på skolgården",
-    "text": "I måndags hittade Elin och Amir en tom burk bakom cykelstället. De tog med den till fröken Sofia och frågade om den kunde bli ett bihotell. Fröken log och sa att vilda bin behöver små hål att vila och lägga ägg i. Klassen samlade bambupinnar, torra strån och lite lera. Amir mätte burken och Elin ritade en skylt: \"Rör inte, bina jobbar!\"\n\nDe satte burken i en trälåda så att den inte rullade. Sedan placerade de hotellet i solen, men nära blommorna vid staketet. Efter några dagar såg de ett litet bi krypa in i ett rör. Elin blev stolt, men fröken Sofia sa att man också måste låta hotellet vara i fred. Om bina får lugn och mat kan de hjälpa blommor att göra frön.",
+    "text": "I måndags hittade Elin och Amir en tom burk bakom cykelstället. De frågade fröken Sofia om den kunde bli ett bihotell. Fröken sa att vilda bin behöver små hål att vila och lägga ägg i.\n\nKlassen samlade bambupinnar och strån. Elin ritade en skylt: \"Rör inte, bina jobbar!\" De satte burken i en trälåda så att den inte rullade, och placerade hotellet i solen nära blommorna vid staketet.\n\nFröken sa att man också måste låta hotellet vara i fred. Om bina får lugn kan de hjälpa blommor att göra frön.",
     "grade": 2,
     "category": "Natur & Miljö",
     "questions": [
@@ -10687,7 +10687,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 126
+      "wordCount": 90
     },
     "genre": "berättelse",
     "theme": "Natur & Miljö"
@@ -10695,7 +10695,7 @@
   {
     "id": "ak3-tema-012",
     "title": "Bussen som nästan inte kom",
-    "text": "Milo skulle åka buss till simhallen med sin morfar. Morfar använder rullator och brukar planera i god tid. De stod vid hållplatsen tio minuter tidigt och Milo höll biljetten i fickan. Men när bussen skulle komma blev det plötsligt stilla på vägen. En lastbil hade fått motorstopp längre fram.\n\nMilo kände hur magen knöt sig. Tänk om de missade simlektionen! Morfar tog fram sin mobil och ringde trafikbolaget. Personen i telefonen berättade att en annan buss snart skulle köra en omväg och hämta dem.\n\nNär ersättningsbussen kom vinkade chauffören och fällde ut rampen. Milo hjälpte morfar att rulla på, och de satte sig nära dörren. De kom fram lite sent, men simläraren sa att de gjorde rätt som väntade lugnt och följde informationen.",
+    "text": "Milo skulle åka buss till simhallen med sin morfar. De stod vid hållplatsen tio minuter tidigt. Men när bussen skulle komma blev det stilla på vägen. En lastbil hade fått motorstopp längre fram.\n\nMilo kände hur magen knöt sig. Tänk om de missade simlektionen! Morfar tog fram sin mobil och ringde trafikbolaget. En annan buss skulle snart köra en omväg och hämta dem.\n\nNär ersättningsbussen kom vinkade chauffören och fällde ut rampen. De kom fram lite sent, men simläraren sa att de gjorde rätt som väntade lugnt och följde informationen.",
     "grade": 2,
     "category": "Samhälle",
     "questions": [
@@ -10768,7 +10768,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 123
+      "wordCount": 90
     },
     "genre": "berättelse",
     "theme": "Samhälle"
@@ -11424,7 +11424,7 @@
   {
     "id": "ak3-tema-021",
     "title": "Marabou och den första chokladen",
-    "text": "Marabou är ett känt chokladmärke i Sverige. Företaget startade år 1916 i staden Sundbyberg. Namnet Marabou kommer från en fågel som heter maraboustork. Fågeln fanns i loggan under många år. När fabriken började göra choklad ville de skapa något som många skulle tycka om. De gjorde mjölkchoklad som var söt och mjuk. Snart blev chokladen populär i hela landet. Många familjer köpte den till helgen. Under åren har Marabou gjort flera olika smaker, som nötter och frukt. För att göra choklad behöver man kakao, socker och mjölk. Kakaon växer i varma länder långt från Sverige. När bönorna kommer hit rostas och blandas de innan chokladen formas i stora plattor. I dag säljs Marabou i många affärer, och många förknippar märket med fika och högtider.",
+    "text": "Marabou är ett känt chokladmärke i Sverige. Företaget startade år 1916 i staden Sundbyberg. Namnet kommer från en fågel som heter maraboustork.\n\nNär fabriken började göra choklad ville de skapa något som många skulle tycka om. De gjorde mjölkchoklad som var söt och mjuk. Snart blev den populär i hela landet, och många familjer köpte den till helgen.\n\nFör att göra choklad behöver man kakao, socker och mjölk. Kakaon växer i varma länder långt från Sverige. I dag förknippar många märket med fika och högtider.",
     "grade": 2,
     "category": "Historia",
     "questions": [
@@ -11497,7 +11497,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 124
+      "wordCount": 85
     },
     "genre": "faktatext",
     "theme": "Historia"
@@ -11505,7 +11505,7 @@
   {
     "id": "ak3-tema-022",
     "title": "Olika smaker av Marabou",
-    "text": "Marabou är mest känd för sin mjölkchoklad, men det finns många fler smaker. En del plattor innehåller hela nötter som ger ett krispigt ljud när man biter. Andra har russin eller små bitar av kex. Det finns också choklad med apelsinsmak eller karamell. Företaget provar ofta nya idéer för att se vad kunderna tycker om. Ibland gör de tillfälliga smaker som bara säljs under en kort tid. Många tycker om att dela en stor chokladkaka med familj eller vänner. Chokladen är uppdelad i rutor som är lätta att bryta loss. På förpackningen står det vilken smak det är och hur mycket den väger. Vissa människor föredrar mörkare choklad med mer kakao, medan andra vill ha den extra söt. Det finns alltså något för nästan alla smaker.",
+    "text": "Marabou är mest känd för sin mjölkchoklad, men det finns många fler smaker. En del plattor innehåller hela nötter som ger ett krispigt ljud när man biter. Andra har russin eller små bitar av kex.\n\nFöretaget provar ofta nya idéer. Ibland gör de tillfälliga smaker som bara säljs under en kort tid.\n\nMånga tycker om att dela en stor chokladkaka med familj eller vänner. Chokladen är uppdelad i rutor som är lätta att bryta loss. På förpackningen står det vilken smak det är och hur mycket den väger.",
     "grade": 2,
     "category": "Kultur",
     "questions": [
@@ -11578,7 +11578,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 126
+      "wordCount": 88
     },
     "genre": "faktatext",
     "theme": "Kultur"
@@ -11748,7 +11748,7 @@
   {
     "id": "ak3-tema-025",
     "title": "Choklad och högtider",
-    "text": "Många förknippar Marabou med olika högtider. Till jul kan choklad vara en del av julgodiset som står på bordet. Under påsken gömmer vuxna ibland chokladägg som barnen får leta efter. På födelsedagar kan en chokladkaka vara en enkel present. En del tar med choklad när de ska hälsa på någon. Det kan vara ett sätt att visa uppskattning. Samtidigt är det bra att inte äta för mycket sötsaker. Kroppen mår bäst av varierad mat och rörelse. Därför äter många choklad ibland, men inte varje dag. Reklam för choklad kan synas på tv och i affärer, särskilt före stora helger. Då vill företagen påminna kunderna om sina produkter. För många människor är choklad kopplad till gemenskap och glädje, men också till ansvar.",
+    "text": "Många förknippar Marabou med olika högtider. Till jul kan choklad vara en del av julgodiset. Under påsken gömmer vuxna ibland chokladägg som barnen får leta efter. På födelsedagar kan en chokladkaka vara en enkel present.\n\nEn del tar med choklad när de ska hälsa på någon. Det kan vara ett sätt att visa uppskattning.\n\nSamtidigt är det bra att inte äta för mycket sötsaker. Kroppen mår bäst av varierad mat och rörelse.\n\nReklam för choklad syns på tv och i affärer, särskilt före stora helger.",
     "grade": 2,
     "category": "Hälsa",
     "questions": [
@@ -11821,7 +11821,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 121
+      "wordCount": 85
     },
     "genre": "faktatext",
     "theme": "Hälsa"
@@ -13616,7 +13616,7 @@
     "genre": "faktatext",
     "theme": "natur",
     "title": "Skogens hemligheter",
-    "text": "En skog kan verka tyst, men den är full av liv. Där finns träd, buskar, svampar och många olika djur. På marken kryper myror och skalbaggar. I träden bygger fåglar sina bon.\n\nTräden är viktiga för både människor och djur. De ger syre som vi andas och skyddar marken mot stark vind. På hösten tappar många träd sina löv. Då ändrar skogen färg och blir gul, orange och röd.\n\nI skogen kan man plocka bär och svamp, men man måste veta vilka som är ätbara. Det är också viktigt att vara rädd om naturen. Man ska inte skräpa ner eller bryta grenar i onödan.\n\nSkogen är en plats för lek, vila och upptäckter. Många går dit för att promenera eller bara lyssna på fåglarnas sång.",
+    "text": "En skog kan verka tyst, men den är full av liv. Där finns träd, buskar, svampar och många olika djur. På marken kryper myror. I träden bygger fåglar sina bon.\n\nTräden är viktiga för både människor och djur. De ger syre som vi andas. På hösten tappar många träd sina löv, och skogen blir gul, orange och röd.\n\nI skogen kan man plocka bär och svamp, men man måste veta vilka som är ätbara. Det är också viktigt att vara rädd om naturen.",
     "questions": [
       {
         "type": "literal",
@@ -13686,7 +13686,7 @@
       }
     ],
     "meta": {
-      "wordCount": 125,
+      "wordCount": 83,
       "fingerprint": "ak4-natur-skog-001",
       "generatedAt": "2026-02-28T12:50:32.171Z",
       "model": "claude"
@@ -14354,7 +14354,7 @@
     "genre": "faktatext",
     "theme": "geografi",
     "title": "Italien – landet med pizza och historia",
-    "text": "Italien är ett land i södra Europa. Landet ser ut som en stövel på kartan. Huvudstaden heter Rom. Där finns många gamla byggnader från antiken, till exempel Colosseum.\n\nItalien är känt för sin mat. Många tänker på pizza och pasta när de hör namnet. Glassen gelato är också populär. I olika delar av landet lagar man maten på olika sätt.\n\nI Italien finns både höga berg och långa stränder. I norr ligger Alperna där man kan åka skidor. I söder är klimatet varmare och många turister badar i havet.\n\nFotboll är en populär sport i Italien. Många människor följer sina favoritlag noga. Landet har också en lång historia med konst och musik. Många turister besöker Italien för att uppleva både natur och kultur.",
+    "text": "Italien är ett land i södra Europa. Landet ser ut som en stövel på kartan. Huvudstaden heter Rom. Där finns många gamla byggnader från antiken, till exempel Colosseum.\n\nItalien är känt för sin mat. Många tänker på pizza och pasta. Glassen gelato är också populär.\n\nI norr ligger Alperna, där man kan åka skidor. I söder är klimatet varmare och många turister badar i havet.\n\nFotboll är en populär sport i Italien. Landet har också en lång historia med konst och musik.",
     "questions": [
       {
         "type": "literal",
@@ -14424,7 +14424,7 @@
       }
     ],
     "meta": {
-      "wordCount": 123,
+      "wordCount": 82,
       "fingerprint": "ak4-tema-005",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -14437,7 +14437,7 @@
     "genre": "faktatext",
     "theme": "geografi",
     "title": "Grekland – öar och antika tempel",
-    "text": "Grekland är ett land i sydöstra Europa. Landet har många öar i Medelhavet. Huvudstaden heter Aten. Där finns den gamla byggnaden Akropolis som ligger högt på en kulle.\n\nGrekland har en lång historia. För länge sedan trodde människor på gudar som Zeus och Athena. Berättelserna om dem kallas myter. Många av dem läses fortfarande i dag.\n\nKlimatet i Grekland är varmt och soligt på sommaren. Därför reser många turister dit för att bada och njuta av solen. Havet är klart och blått.\n\nMaten i Grekland är ofta enkel och god. Man äter till exempel oliver, fetaost och grillat kött. Landet är också känt för sina vita hus med blå tak på vissa öar.\n\nGrekland är alltså ett land med både vacker natur och spännande historia.",
+    "text": "Grekland är ett land i sydöstra Europa. Landet har många öar i Medelhavet. Huvudstaden heter Aten. Där ligger den gamla byggnaden Akropolis högt på en kulle.\n\nFör länge sedan trodde människor på gudar som Zeus och Athena. Berättelserna om dem kallas myter och läses fortfarande i dag.\n\nKlimatet är varmt och soligt på sommaren. Därför reser många turister dit för att bada och njuta av solen.\n\nMaten är ofta enkel och god. Man äter oliver, fetaost och grillat kött.\n\nGrekland är ett land med både vacker natur och spännande historia.",
     "questions": [
       {
         "type": "literal",
@@ -14507,7 +14507,7 @@
       }
     ],
     "meta": {
-      "wordCount": 125,
+      "wordCount": 90,
       "fingerprint": "ak4-tema-006",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
