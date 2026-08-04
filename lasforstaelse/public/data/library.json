@@ -4418,9 +4418,9 @@
         "q": "Varför står bara moroten kvar?",
         "options": [
           "Snön har smält",
-          "Hugo har rivit snögubben",
-          "Halsduken blåste bort med den",
-          "Någon har tagit snögubben"
+          "Hugo rev den",
+          "Halsduken blåste bort",
+          "Någon tog den"
         ],
         "correct": 0
       }
@@ -4467,9 +4467,9 @@
         "type": "literal",
         "q": "Vem sitter Amir bredvid?",
         "options": [
-          "Ingen alls",
-          "Sin lillebror",
-          "Sin lärare",
+          "Sin bror",
+          "Läraren",
+          "Ingen",
           "Maja"
         ],
         "correct": 3
@@ -4821,9 +4821,9 @@
         "type": "inferens",
         "q": "Hur känns vattnet efter en stund?",
         "options": [
-          "Ännu kallare",
+          "Kallt",
           "Grumligt",
-          "Alldeles för djupt",
+          "Djupt",
           "Skönt"
         ],
         "correct": 3
@@ -4893,9 +4893,9 @@
         "type": "inferens",
         "q": "Hur märker kompisen att något är fel?",
         "options": [
-          "Liv börjar gråta",
-          "Liv sätter sig ner",
-          "Liv tar av sig skorna",
+          "Liv gråter",
+          "Liv sätter sig",
+          "Liv säger till",
           "Liv haltar"
         ],
         "correct": 3
@@ -29921,9 +29921,9 @@
         "q": "Vad leker de sedan?",
         "options": [
           "Fotboll",
-          "Hoppa hage",
+          "Hage",
           "Kull",
-          "Kurragömma"
+          "Dunken"
         ],
         "correct": 2
       },
@@ -30158,10 +30158,10 @@
         "type": "inferens",
         "q": "Varför sitter Sara först på kanten?",
         "options": [
-          "Hon väntar på en kompis",
-          "Hon har glömt sin handduk",
+          "Hon väntar",
+          "Hon har glömt något",
           "Hon är osäker",
-          "Hon fryser om fötterna"
+          "Hon fryser"
         ],
         "correct": 2
       },
@@ -30872,10 +30872,10 @@
         "type": "inferens",
         "q": "Varför blev Ali inte sur på Noras kommentar om teknik?",
         "options": [
-          "För att han inte riktigt hörde vad hon sa",
-          "För att hon sa det på skämt och log",
+          "För att han inte hörde vad hon sa",
+          "För att hon sa det på skämt",
           "För att hon hade rätt",
-          "För att han redan hade bestämt sig för annat"
+          "För att han redan bestämt sig"
         ],
         "correct": 2
       },
@@ -30905,10 +30905,10 @@
         "type": "literal",
         "q": "Vad gav kvinnan dem i stället för bröd?",
         "options": [
-          "En broschyr om parkens djur och växter",
+          "En broschyr om parken",
           "Varsin näve frön",
-          "En påse med bröd som var godkänt att ge",
-          "En karta över var i parken man får mata"
+          "En påse godkänt bröd",
+          "En karta över parken"
         ],
         "correct": 1
       },
@@ -32294,10 +32294,10 @@
         "type": "literal",
         "q": "Vilken effekt har anpassningar för elever med särskilda behov ofta?",
         "options": [
-          "De tar tid från den vanliga undervisningen",
+          "De tar tid från undervisningen",
           "De hjälper hela klassen",
-          "De gör lektionerna svårare att planera",
-          "De behöver bara användas vid enstaka tillfällen"
+          "De gör lektionerna svårare",
+          "De behövs bara ibland"
         ],
         "correct": 1
       },
@@ -39293,7 +39293,8 @@
     ],
     "meta": {
       "wordCount": 395
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?w=600&h=400&fit=crop"
   },
   {
     "id": "akgy-tema-011",
@@ -39372,7 +39373,8 @@
     ],
     "meta": {
       "wordCount": 391
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop"
   },
   {
     "id": "akgy-tema-012",
@@ -39451,7 +39453,8 @@
     ],
     "meta": {
       "wordCount": 392
-    }
+    },
+    "imageUrl": "https://images.unsplash.com/photo-1559599076-9c61d8e1b77c?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-skate-001",
