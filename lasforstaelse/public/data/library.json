@@ -5,7 +5,7 @@
     "genre": "berättelse",
     "theme": "djur",
     "title": "Katten Maja",
-    "text": "Maja är en katt. Hon är svart och vit. Maja bor hos. Lisa. Varje dag leker de. Maja gillar att jaga bollar. Lisa ger. Maja mat. Maja är glad.",
+    "text": "Maja är en katt. Hon är svart och vit. Maja bor hos Lisa. Varje dag leker de tillsammans. Maja gillar att jaga bollar över golvet. Lisa ger Maja mat på morgonen och på kvällen. Efter maten sover Maja i fönstret. Maja är glad.",
     "questions": [
       {
         "type": "literal",
@@ -75,7 +75,7 @@
       }
     ],
     "meta": {
-      "wordCount": 29,
+      "wordCount": 43,
       "fingerprint": "sample001",
       "generatedAt": "2025-01-01T00:00:00.000Z",
       "model": "sample"
@@ -3609,7 +3609,7 @@
     "genre": "berättelse",
     "theme": "geografi",
     "title": "Resan med tåget",
-    "text": "Leo och hans mormor åker tåg till en annan stad. De sitter vid fönstret och ser träd hus och sjöar. Tåget går snabbt. Leo räknar många röda hus på vägen.",
+    "text": "Leo och hans mormor åker tåg till en annan stad. De sitter vid fönstret och ser träd, hus och sjöar. Tåget går snabbt. Leo räknar många röda hus på vägen. Mormor har med sig smörgåsar i en påse. När de kommer fram har Leo räknat till tjugotvå.",
     "questions": [
       {
         "type": "literal",
@@ -3679,7 +3679,7 @@
       }
     ],
     "meta": {
-      "wordCount": 30,
+      "wordCount": 47,
       "fingerprint": "tema-ak1-tema-020",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -3858,7 +3858,7 @@
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "Boken om rymden",
-    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om rymden. Där finns bilder på planeter och stjärnor. Ali visar en stor planet för sin vän Sara.",
+    "text": "Ali sitter i klassrummet och läser en bok. Boken handlar om rymden. Där finns bilder på planeter och stjärnor. Ali visar en stor planet för sin vän Sara. Sara frågar vad den heter. Ali bläddrar tillbaka och läser: Jupiter. De tittar länge på bilden.",
     "questions": [
       {
         "type": "literal",
@@ -3928,7 +3928,7 @@
       }
     ],
     "meta": {
-      "wordCount": 28,
+      "wordCount": 44,
       "fingerprint": "tema-ak1-tema-023",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -4605,7 +4605,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten vid huset",
-    "text": "Milo går ut från huset. På trappan sitter en liten katt. Katten är svart. Milo sätter sig lugnt bredvid. Katten tittar på honom och jamar mjukt.",
+    "text": "Milo går ut från huset. På trappan sitter en liten katt. Katten är svart med vita tassar. Milo sätter sig lugnt bredvid. Katten tittar på honom och jamar mjukt. Sedan lägger den sig i solen på det översta trappsteget. Milo blir sittande tills mamma ropar.",
     "questions": [
       {
         "type": "literal",
@@ -4675,7 +4675,7 @@
       }
     ],
     "meta": {
-      "wordCount": 26,
+      "wordCount": 45,
       "fingerprint": "tema-ak1-tema-032",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -34850,7 +34850,7 @@
     "genre": "faktatext",
     "theme": "djur",
     "title": "Hästens liv i stallet",
-    "text": "Hästar är stora och starka djur som har levt tillsammans med människor i tusentals år. I dag finns många hästar i stall där de tas om hand varje dag. I ett stall får hästar mat, vatten och skydd mot väder och vind. De behöver också röra på sig regelbundet för att må bra.\n\nEn vanlig dag börjar med att hästarna får hö eller kraftfoder. Hö är torkat gräs som innehåller viktiga näringsämnen. Vatten är också mycket viktigt eftersom en häst kan dricka flera liter varje dag. Efter maten borstas hästen ofta. Det hjälper till att hålla pälsen ren och gör att man kan upptäcka sår eller skador.\n\nHästar behöver också motion. Det kan vara att gå i hage, bli riden eller tränad på olika sätt. Ridning är en sport men också ett sätt att samarbeta med hästen. För att det ska fungera måste ryttaren vara lugn och tydlig.\n\nI stallet finns också regler för säkerhet. Man ska till exempel inte gå bakom en häst utan att den vet att man är där. Hästar kan bli rädda och sparka om de känner sig hotade.\n\nAtt ta hand om en häst kräver ansvar och kunskap. Många som rider lär sig tidigt att samarbeta med djuret och förstå dess behov. Hästar kan också vara viktiga för människors välmående, eftersom närheten till djur ofta gör oss lugnare och gladare.\n\nDärför är hästar inte bara sportdjur utan också viktiga vänner för många människor.",
+    "text": "Hästar är stora och starka djur som har levt tillsammans med människor i tusentals år. I dag finns många hästar i stall där de tas om hand varje dag. I ett stall får hästar mat, vatten och skydd mot väder och vind. De behöver också röra på sig regelbundet för att må bra.\n\nEn vanlig dag börjar med att hästarna får hö eller kraftfoder. Hö är torkat gräs som innehåller viktiga näringsämnen. Vatten är också mycket viktigt eftersom en häst kan dricka flera liter varje dag. Efter maten borstas hästen ofta. Det hjälper till att hålla pälsen ren och gör att man kan upptäcka sår eller skador.\n\nHästens mage förklarar mycket av rutinerna. En häst är byggd för att äta små mängder nästan hela tiden, som den skulle ha gjort ute på en betesmark. Magsäcken är liten i förhållande till kroppen och klarar inte stora måltider. Därför fördelas fodret på flera tillfällen per dag, och en häst som står länge utan mat riskerar att få ont i magen.\n\nHästar behöver också motion. Det kan vara att gå i hage, bli riden eller tränad på olika sätt. Ridning är en sport men också ett sätt att samarbeta med hästen. För att det ska fungera måste ryttaren vara lugn och tydlig.\n\nTill de dagliga sysslorna hör också att mocka boxen, alltså att ta bort spillning och blöt strö. Det är tungt arbete som görs varje dag, året om. Många stall drivs som föreningar där medlemmarna turas om, och den som vill rida får ofta räkna med att arbeta i stallet också.\n\nI stallet finns också regler för säkerhet. Man ska till exempel inte gå bakom en häst utan att den vet att man är där. Hästar kan bli rädda och sparka om de känner sig hotade.\n\nAlla hästar står inte i box. I lösdrift går hästarna ute större delen av dygnet med tillgång till ett skydd, vilket ligger närmare deras naturliga liv. Boxar ger å andra sidan bättre möjlighet att hålla koll på varje enskild häst. Vilken lösning som är bäst diskuteras, och svaret beror ofta på den enskilda hästen och på stallets förutsättningar.\n\nAtt ta hand om en häst kräver ansvar och kunskap. Många som rider lär sig tidigt att samarbeta med djuret och förstå dess behov. Hästar kan också vara viktiga för människors välmående, eftersom närheten till djur ofta gör oss lugnare och gladare.\n\nDärför är hästar inte bara sportdjur utan också viktiga vänner för många människor.",
     "questions": [
       {
         "type": "literal",
@@ -34920,7 +34920,7 @@
       }
     ],
     "meta": {
-      "wordCount": 238,
+      "wordCount": 407,
       "fingerprint": "ak6-tema-026",
       "generatedAt": "2026-04-07T00:00:00.000Z",
       "model": "manual"
@@ -34933,7 +34933,7 @@
     "genre": "faktatext",
     "theme": "djur",
     "title": "Hästens kropp och rörelse",
-    "text": "Hästar är byggda för att röra sig snabbt och smidigt. Deras kroppar är anpassade för att springa långa sträckor och reagera snabbt på faror. En häst har långa ben med starka muskler som gör att den kan galoppera i hög fart.\n\nHovarna är en viktig del av hästens kropp. De fungerar som skydd för benen och hjälper hästen att stå stadigt. Hovar måste skötas noggrant och ibland får hästar skor av en hovslagare. Skorna skyddar hovarna från att slitas för mycket.\n\nHästens rygg är också viktig, särskilt när den bär en ryttare. Därför är det viktigt att sadeln passar bra. Om sadeln sitter fel kan hästen få ont.\n\nHästar kommunicerar med kroppsspråk. De använder öron, svans och kropp för att visa hur de känner sig. Till exempel kan bakåtriktade öron visa att hästen är irriterad eller rädd.\n\nDet finns olika gångarter hos hästar. De vanligaste är skritt, trav och galopp. Skritt är långsam och lugn, medan galopp är snabbast. Ryttare tränar ofta på att växla mellan dessa gångarter.\n\nHästens sinnen är också väl utvecklade. Den har bra hörsel och kan upptäcka ljud långt bort. Synen är bred eftersom ögonen sitter på sidan av huvudet. Det gör att hästen kan se nästan runt hela sig.\n\nAlla dessa egenskaper gör hästen till ett fantastiskt djur som både är starkt och känsligt.",
+    "text": "Hästar är byggda för att röra sig snabbt och smidigt. Deras kroppar är anpassade för att springa långa sträckor och reagera snabbt på faror. En häst har långa ben med starka muskler som gör att den kan galoppera i hög fart.\n\nHovarna är en viktig del av hästens kropp. De fungerar som skydd för benen och hjälper hästen att stå stadigt. Hovar måste skötas noggrant och ibland får hästar skor av en hovslagare. Skorna skyddar hovarna från att slitas för mycket.\n\nEn häst kan inte kräkas. Matsmältningen går bara åt ett håll, vilket gör att den inte kan göra sig av med något olämpligt den råkat äta. Det är en av anledningarna till att foder hanteras så noggrant i stall, och till att kolik, alltså ont i magen, är en av de vanligaste allvarliga åkommorna hos hästar.\n\nHästens rygg är också viktig, särskilt när den bär en ryttare. Därför är det viktigt att sadeln passar bra. Om sadeln sitter fel kan hästen få ont.\n\nHästar sover dessutom på ett ovanligt sätt. De kan låsa lederna i benen och sova stående, vilket gör att de snabbt kan fly om något händer. Djup sömn kräver däremot att de lägger sig ner, och det gör de bara korta stunder och helst när någon annan häst står vakt.\n\nHästar kommunicerar med kroppsspråk. De använder öron, svans och kropp för att visa hur de känner sig. Till exempel kan bakåtriktade öron visa att hästen är irriterad eller rädd.\n\nDet finns olika gångarter hos hästar. De vanligaste är skritt, trav och galopp. Skritt är långsam och lugn, medan galopp är snabbast. Ryttare tränar ofta på att växla mellan dessa gångarter.\n\nHästens sinnen är också väl utvecklade. Den har bra hörsel och kan upptäcka ljud långt bort. Synen är bred eftersom ögonen sitter på sidan av huvudet. Det gör att hästen kan se nästan runt hela sig.\n\nTrots den breda synen finns det två punkter där hästen inte ser något alls: rakt framför nosen och rakt bakom sig. Det förklarar varför man inte ska närma sig en häst bakifrån utan att först säga till, och varför en häst kan reagera starkt på något den plötsligt får syn på alldeles intill.\n\nVissa raser har fler gångarter än de tre vanliga. Islandshästen kan till exempel tölta, en jämn gångart där hästen alltid har minst en fot i marken, vilket gör ritten ovanligt mjuk.\n\nAlla dessa egenskaper gör hästen till ett fantastiskt djur som både är starkt och känsligt.",
     "questions": [
       {
         "type": "literal",
@@ -35003,7 +35003,7 @@
       }
     ],
     "meta": {
-      "wordCount": 219,
+      "wordCount": 409,
       "fingerprint": "ak6-tema-027",
       "generatedAt": "2026-04-07T00:00:00.000Z",
       "model": "manual"
@@ -35016,7 +35016,7 @@
     "genre": "faktatext",
     "theme": "djur",
     "title": "Olika typer av hästar",
-    "text": "Det finns många olika typer av hästar i världen. De skiljer sig åt i storlek, färg och användning. Vissa hästar är stora och starka, medan andra är små och snabba.\n\nEn ponny är en mindre häst som ofta används av barn. Trots sin storlek kan ponnyer vara mycket starka och uthålliga. Större hästar används ofta inom ridning, tävling och arbete.\n\nDet finns också olika raser av hästar. En ras är en grupp hästar med liknande egenskaper. Till exempel finns det raser som är bra på att hoppa och andra som passar bättre för dressyr.\n\nFärgen på hästar varierar också. Vanliga färger är brun, svart, vit och grå. Vissa hästar har fläckar eller speciella mönster.\n\nHästar används i många olika sammanhang. De kan vara tävlingsdjur inom sporter som hoppning och galopp. De används också inom terapi, där människor får rida för att må bättre både fysiskt och psykiskt.\n\nI vissa delar av världen används hästar fortfarande i arbete, till exempel för att dra vagnar eller arbeta på gårdar. Det visar hur mångsidiga hästar är.\n\nOavsett typ eller ras behöver alla hästar omsorg, mat och motion. De är levande varelser som kräver respekt och förståelse.\n\nAtt lära sig om olika hästar gör det lättare att ta hand om dem på rätt sätt.",
+    "text": "Det finns många olika typer av hästar i världen. De skiljer sig åt i storlek, färg och användning. Vissa hästar är stora och starka, medan andra är små och snabba.\n\nEn ponny är en mindre häst som ofta används av barn. Trots sin storlek kan ponnyer vara mycket starka och uthålliga. Större hästar används ofta inom ridning, tävling och arbete.\n\nDet finns också olika raser av hästar. En ras är en grupp hästar med liknande egenskaper. Till exempel finns det raser som är bra på att hoppa och andra som passar bättre för dressyr.\n\nRaserna har uppstått genom avel, alltså genom att människor valt vilka hästar som ska få föl. Under lång tid avlades hästar för arbete: att dra plog, bära ryttare i strid eller transportera varor. När maskinerna tog över de uppgifterna började man i stället avla för sport och fritid, och det syns tydligt i dagens raser.\n\nEn vanlig indelning är kallblod och varmblod. Kallblodshästar är tyngre och lugnare och användes traditionellt till skogs- och jordbruksarbete. Varmblodshästar är lättare och snabbare och används mest inom ridsport. Indelningen har inget med kroppstemperatur att göra, utan är ett gammalt uttryck för temperament.\n\nFärgen på hästar varierar också. Vanliga färger är brun, svart, vit och grå. Vissa hästar har fläckar eller speciella mönster.\n\nHästar används i många olika sammanhang. De kan vara tävlingsdjur inom sporter som hoppning och galopp. De används också inom terapi, där människor får rida för att må bättre både fysiskt och psykiskt.\n\nI Sverige finns flera egna raser. Nordsvensk brukshäst och ardenner är kallblod som fortfarande används i skogen, och gotlandsrusset är en liten, härdig ponny som funnits på Gotland i århundraden. Att bevara sådana raser handlar delvis om kulturhistoria och delvis om att behålla genetisk variation.\n\nI vissa delar av världen används hästar fortfarande i arbete, till exempel för att dra vagnar eller arbeta på gårdar. Det visar hur mångsidiga hästar är.\n\nAvel väcker också kritik. När en viss kroppsform blir populär i tävlingssammanhang avlas den fram allt mer utpräglat, och hos vissa raser har det lett till problem med leder, andning eller fruktsamhet. Att välja efter utseende snarare än efter hälsa är ett problem som hästen delar med många andra husdjur.\n\nOavsett typ eller ras behöver alla hästar omsorg, mat och motion. De är levande varelser som kräver respekt och förståelse.\n\nAtt lära sig om olika hästar gör det lättare att ta hand om dem på rätt sätt.",
     "questions": [
       {
         "type": "literal",
@@ -35086,7 +35086,7 @@
       }
     ],
     "meta": {
-      "wordCount": 210,
+      "wordCount": 403,
       "fingerprint": "ak6-tema-028",
       "generatedAt": "2026-04-07T00:00:00.000Z",
       "model": "manual"
@@ -35099,7 +35099,7 @@
     "genre": "faktatext",
     "theme": "sport",
     "title": "Att rida och träna hästar",
-    "text": "Ridning är en populär aktivitet där människor samarbetar med hästar. För att rida behöver man utrustning som hjälm, sadel och träns. Hjälmen skyddar huvudet om man skulle falla av.\n\nNär man rider lär man sig att ge signaler till hästen. Det kan vara med händerna, benen eller rösten. Hästen lär sig att förstå dessa signaler genom träning.\n\nDet finns olika typer av ridning. I hoppning ska hästen ta sig över hinder. I dressyr handlar det om att utföra rörelser med precision och samspel. Båda kräver träning och tålamod.\n\nTräning är viktigt för både häst och ryttare. Hästen behöver bygga muskler och kondition, medan ryttaren måste träna balans och teknik. Det är också viktigt att vila mellan träningspassen.\n\nEn tränare kan hjälpa till att utveckla ridningen. Tränaren ger råd och ser till att både häst och ryttare utvecklas på ett säkert sätt.\n\nSäkerhet är alltid viktigt vid ridning. Man ska alltid använda hjälm och följa regler i stallet. Det minskar risken för olyckor.\n\nRidning kan vara både roligt och utmanande. Det kräver samarbete, tålamod och respekt för hästen.\n\nMånga människor fortsätter att rida hela livet eftersom det ger både motion och glädje.",
+    "text": "Ridning är en populär aktivitet där människor samarbetar med hästar. För att rida behöver man utrustning som hjälm, sadel och träns. Hjälmen skyddar huvudet om man skulle falla av.\n\nNär man rider lär man sig att ge signaler till hästen. Det kan vara med händerna, benen eller rösten. Hästen lär sig att förstå dessa signaler genom träning.\n\nHur en häst lär sig är värt att förstå. Den lär sig framför allt av att något obehagligt upphör: när ryttaren tar i tygeln och släpper efter i samma stund som hästen svarar rätt, förstår hästen vad som efterfrågades. Timing är därför viktigare än styrka. En signal som ges för sent säger ingenting, hur tydlig den än är.\n\nStraff fungerar dåligt av samma skäl. En häst kopplar sällan ihop en tillsägelse med något som hände en stund tidigare, och en rädd häst lär sig långsammare än en lugn. Modern hästträning bygger därför mer på att belöna rätt svar än på att rätta fel.\n\nDet finns olika typer av ridning. I hoppning ska hästen ta sig över hinder. I dressyr handlar det om att utföra rörelser med precision och samspel. Båda kräver träning och tålamod.\n\nTräning är viktigt för både häst och ryttare. Hästen behöver bygga muskler och kondition, medan ryttaren måste träna balans och teknik. Det är också viktigt att vila mellan träningspassen.\n\nRyttarens vikt spelar också roll. En allmän tumregel är att ryttare och utrustning tillsammans inte bör väga mer än omkring en femtedel av hästens vikt, även om gränsen diskuteras och beror på hästens byggnad och kondition.\n\nEn tränare kan hjälpa till att utveckla ridningen. Tränaren ger råd och ser till att både häst och ryttare utvecklas på ett säkert sätt.\n\nSäkerhet är alltid viktigt vid ridning. Man ska alltid använda hjälm och följa regler i stallet. Det minskar risken för olyckor.\n\nTävling finns på alla nivåer. Lokala klubbtävlingar arrangeras för nybörjare med låga hinder och korta program, medan de högsta nivåerna kräver år av träning. Att det finns en väg uppåt i små steg är en av anledningarna till att många fortsätter länge.\n\nRidning är dessutom en av få sporter där kvinnor och män tävlar mot varandra på samma villkor, ända upp till olympisk nivå. I Sverige är samtidigt en stor majoritet av dem som rider flickor och kvinnor.\n\nRidning kan vara både roligt och utmanande. Det kräver samarbete, tålamod och respekt för hästen.\n\nMånga människor fortsätter att rida hela livet eftersom det ger både motion och glädje.",
     "questions": [
       {
         "type": "literal",
@@ -35169,7 +35169,7 @@
       }
     ],
     "meta": {
-      "wordCount": 191,
+      "wordCount": 408,
       "fingerprint": "ak6-tema-029",
       "generatedAt": "2026-04-07T00:00:00.000Z",
       "model": "manual"
@@ -35182,7 +35182,7 @@
     "genre": "faktatext",
     "theme": "historia",
     "title": "Hästar och människor",
-    "text": "Relationen mellan hästar och människor är mycket gammal. I tusentals år har människor använt hästar för transport, arbete och krig. I dag är hästar oftast en del av fritid och sport.\n\nMånga människor känner en stark vänskap med sina hästar. För att bygga förtroende krävs tid och tålamod. Hästar är känsliga djur som reagerar på hur människor beter sig.\n\nDet finns också verksamheter där hästar hjälper människor. Ridterapi används för personer med olika behov. Att rida kan stärka både kroppen och självförtroendet.\n\nI dagens samhälle är djurens välfärd viktig. Det betyder att hästar ska behandlas väl och få leva ett bra liv. Det finns lagar och regler som skyddar djur.\n\nAlla som arbetar med hästar har ett ansvar att ge dem rätt vård. Det handlar om mat, motion, vila och social kontakt med andra hästar.\n\nHästar lever ofta i flock i naturen. Därför trivs de bäst när de får vara tillsammans med andra hästar.\n\nGenom historien har hästar haft stor betydelse för människans utveckling. Även i dag spelar de en viktig roll, både som arbetskamrater och vänner.\n\nRelationen mellan människa och häst fortsätter att utvecklas och fördjupas.",
+    "text": "Relationen mellan hästar och människor är mycket gammal. I tusentals år har människor använt hästar för transport, arbete och krig. I dag är hästar oftast en del av fritid och sport.\n\nDomesticeringen skedde för ungefär femtusen år sedan på stäpperna i nuvarande Ukraina och Kazakstan. Först användes hästar troligen för kött och mjölk, och först senare för att rida och dra. Att människor kunde förflytta sig snabbare än till fots förändrade nästan allt: handel, krigföring och hur långt idéer och sjukdomar kunde spridas.\n\nUnder årtusenden var hästen den snabbaste transport som fanns. Post, arméer och nyheter rörde sig i hästens tempo, och avstånd mättes i dagsritter. Först på 1800-talet, med järnvägen, och sedan med bilen förlorade hästen den rollen. Antalet hästar i Sverige minskade kraftigt under 1900-talets mitt.\n\nMånga människor känner en stark vänskap med sina hästar. För att bygga förtroende krävs tid och tålamod. Hästar är känsliga djur som reagerar på hur människor beter sig.\n\nDet finns också verksamheter där hästar hjälper människor. Ridterapi används för personer med olika behov. Att rida kan stärka både kroppen och självförtroendet.\n\nSedan dess har antalet stigit igen, men av helt andra skäl. I dag finns omkring trehundratusen hästar i Sverige, nästan uteslutande för sport och fritid. Hästnäringen sysselsätter många människor och är särskilt betydelsefull på landsbygden.\n\nI dagens samhälle är djurens välfärd viktig. Det betyder att hästar ska behandlas väl och få leva ett bra liv. Det finns lagar och regler som skyddar djur.\n\nAlla som arbetar med hästar har ett ansvar att ge dem rätt vård. Det handlar om mat, motion, vila och social kontakt med andra hästar.\n\nHästar lever ofta i flock i naturen. Därför trivs de bäst när de får vara tillsammans med andra hästar.\n\nAtt hästar lever i flock i naturen får också konsekvenser för hur de mår i fångenskap. En häst som står ensam utan att se eller höra andra hästar blir stressad, och många beteenden som beskrivs som olydnad har sin grund i just det.\n\nAtt relationen är gammal betyder inte att den alltid varit god. Hästar har genom historien använts hårt i krig och arbete, ofta tills de inte orkade mer. Att djurens välfärd i dag betraktas som självklar är en ganska ny sak.\n\nGenom historien har hästar haft stor betydelse för människans utveckling. Även i dag spelar de en viktig roll, både som arbetskamrater och vänner.\n\nRelationen mellan människa och häst fortsätter att utvecklas och fördjupas.",
     "questions": [
       {
         "type": "literal",
@@ -35252,7 +35252,7 @@
       }
     ],
     "meta": {
-      "wordCount": 187,
+      "wordCount": 402,
       "fingerprint": "ak6-tema-030",
       "generatedAt": "2026-04-07T00:00:00.000Z",
       "model": "manual"
