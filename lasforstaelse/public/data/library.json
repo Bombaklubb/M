@@ -33438,78 +33438,78 @@
     "grade": 8,
     "genre": "faktatext",
     "theme": "Natur & Miljö",
-    "title": "Klimatförändringar och ansvar",
-    "text": "Klimatförändringar är en av de största utmaningarna världen står inför idag. De orsakas främst av ökade utsläpp av växthusgaser, som koldioxid, från mänskliga aktiviteter. Dessa utsläpp kommer bland annat från transporter, industri och energiproduktion. När mängden växthusgaser ökar, stiger jordens temperatur.\n\nKonsekvenserna av klimatförändringarna märks redan. Glaciärer smälter, havsnivåer stiger och extremväder som värmeböljor och kraftiga stormar blir vanligare. Detta påverkar både naturen och människor. I vissa områden blir det svårare att odla mat, vilket kan leda till brist och konflikter.\n\nSamtidigt finns det möjligheter att minska problemen. Genom att använda förnybar energi, som sol och vind, kan utsläppen minska. Även små förändringar i vardagen kan göra skillnad, till exempel att cykla istället för att åka bil eller att minska matsvinn.\n\nAnsvar är en viktig del av lösningen. Det handlar både om individuella val och politiska beslut. Länder samarbetar genom internationella avtal för att begränsa utsläppen, men det krävs att dessa följs.\n\nMånga unga engagerar sig idag i klimatfrågan. De deltar i demonstrationer och sprider kunskap. Detta visar att förändring är möjlig, men att det kräver engagemang från alla nivåer i samhället.\n\nKlimatfrågan handlar inte bara om miljö, utan också om rättvisa. De som påverkas mest är ofta de som bidragit minst till problemet.",
+    "title": "Klimaträttvisa och ungas engagemang",
+    "text": "Klimatförändringar är en av de största utmaningarna världen står inför idag. De orsakas främst av ökade utsläpp av växthusgaser, som koldioxid, från mänskliga aktiviteter. Dessa utsläpp kommer bland annat från transporter, industri och energiproduktion. När mängden växthusgaser ökar, stiger jordens temperatur.\n\nKonsekvenserna av klimatförändringarna märks redan. Glaciärer smälter, havsnivåer stiger och extremväder som värmeböljor och kraftiga stormar blir vanligare. Detta påverkar både naturen och människor. I vissa områden blir det svårare att odla mat, vilket kan leda till brist och konflikter.\n\nSamtidigt finns det möjligheter att minska problemen. Genom att använda förnybar energi, som sol och vind, kan utsläppen minska. Även små förändringar i vardagen kan göra skillnad, till exempel att cykla istället för att åka bil eller att minska matsvinn.\n\nAnsvar är en viktig del av lösningen. Det handlar både om individuella val och politiska beslut. Länder samarbetar genom internationella avtal för att begränsa utsläppen, men det krävs att dessa följs.\n\nFrågan om vem som bär ansvaret är dock inte enkel. Ett sätt att räkna är att titta på utsläppen i dag, ett annat att titta på hur mycket ett land släppt ut sedan industrialiseringen började. De två sätten ger helt olika svar. Ett tredje sätt är att räkna per invånare i stället för per land, vilket ändrar bilden igen. Vilket mått man väljer avgör i praktiken vem som framstår som skyldig.\n\nEtt fjärde sätt är att räkna det som konsumeras i stället för det som produceras. En tröja som sytts i ett land och bärs i ett annat ger utsläpp i tillverkningslandets statistik, trots att det är någon annan som köpt den. Rika länder som flyttat ut sin industri ser därför bättre ut i statistiken än de kanske borde.\n\nEtt återkommande argument är att det inte spelar någon roll vad Sverige gör, eftersom landet står för en mycket liten del av världens utsläpp. Motargumentet är att samma resonemang går att föra i nästan alla länder, eftersom väldigt få står för en stor andel var för sig. Om alla små bidrag räknas bort blir det ingenting kvar att minska. Att ett litet land ändå kan visa att omställningen är möjlig brukar också nämnas.\n\nMånga unga engagerar sig idag i klimatfrågan. De deltar i demonstrationer och sprider kunskap. Detta visar att förändring är möjlig, men att det kräver engagemang från alla nivåer i samhället.\n\nDen globala skolstrejksrörelsen som växte fram från 2018 samlade miljontals deltagare i över hundra länder. Kritiken mot den handlade ofta om att elever inte borde skolka, medan deltagarna svarade att en utbildning inför en framtid som ingen planerar för är ett märkligt argument. Rörelsen ändrade inte lagarna direkt, men den flyttade frågan högt upp på dagordningen under några år.\n\nKlimatfrågan har också hamnat i domstol. I flera länder har enskilda och organisationer stämt sin egen stat för att den inte gjort tillräckligt, och i vissa fall har de vunnit. Domstolarna har då slagit fast att staten har en skyldighet att skydda invånarnas liv och hälsa, och att den skyldigheten också gäller klimatet.\n\nMånga unga beskriver dessutom oro inför framtiden. Att känna så är rimligt, men forskning tyder på att den som gör något tillsammans med andra mår bättre än den som bara följer nyheterna.\n\nKlimatfrågan handlar inte bara om miljö, utan också om rättvisa. De som påverkas mest är ofta de som bidragit minst till problemet.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad orsakar främst klimatförändringar?",
+        "type": "inferens",
+        "q": "Varför ger olika sätt att räkna utsläpp olika svar på ansvarsfrågan?",
         "options": [
-          "Naturliga skiften i årstiderna",
-          "Mängden regn och snö per år",
-          "Växthusgaser från mänsklig aktivitet",
-          "Solens rörelse över himlen"
+          "För att mätningarna görs med olika sorters utrustning",
+          "För att vissa länder inte redovisar sina siffror alls",
+          "För att man kan räkna per år, historiskt eller per invånare",
+          "För att utsläppen varierar mellan olika årstider"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vilken konsekvens nämns i texten?",
+        "q": "Vad innebär det att räkna konsumtion i stället för produktion?",
         "options": [
-          "Mindre vind",
-          "Lägre temperatur",
-          "Smältande glaciärer",
-          "Kortare dagar"
+          "Att utsläppen räknas där varan används",
+          "Att bara inhemskt tillverkade varor räknas med",
+          "Att transporterna räknas för sig i statistiken",
+          "Att endast företag behöver redovisa sina utsläpp"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad är ett sätt att minska utsläpp?",
+        "type": "inferens",
+        "q": "Varför ser rika länder bättre ut i statistiken än de kanske borde?",
         "options": [
-          "Köra mer bil",
-          "Använda förnybar energi",
-          "Bygga fler fabriker",
-          "Sluta resa helt"
+          "För att de har infört betydligt fler miljölagar",
+          "För att de flyttat ut sin industri till andra länder",
+          "För att de mäter under en kortare tidsperiod",
+          "För att de köper utsläppsrätter av andra länder"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Vad innebär ansvar enligt texten?",
+        "type": "literal",
+        "q": "Vad svarade deltagarna i skolstrejkerna på kritiken?",
         "options": [
-          "Endast politiska beslut uppifrån",
-          "Endast enskilda individers val",
-          "Ingen påverkan alls från någon",
-          "Både individuella och gemensamma insatser"
+          "Att de tog igen skolarbetet på kvällarna i stället",
+          "Att strejkerna bara ägde rum på fredagar",
+          "Att lärarna hade godkänt deras frånvaro i förväg",
+          "Att utbildning inför en framtid ingen planerar för är märkligt"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad gör många unga idag?",
+        "q": "Vad har domstolar slagit fast i klimatmål mot stater?",
         "options": [
-          "Ignorerar frågan",
-          "Flyttar utomlands",
-          "Engagerar sig i klimatfrågan",
-          "Arbetar i fabriker"
+          "Att staten måste skydda invånarnas liv och hälsa",
+          "Att företagen bär hela ansvaret för utsläppen",
+          "Att internationella avtal går före nationell lag",
+          "Att enskilda inte har rätt att stämma sin egen stat"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
-        "type": "textbevis",
-        "q": "Vad handlar klimatfrågan också om?",
+        "type": "sammanfatta",
+        "q": "Vad säger forskningen om klimatoro?",
         "options": [
-          "Teknikutveckling",
-          "Ekonomi enbart",
-          "Sport och fritid",
-          "Rättvisa mellan människor"
+          "Att den drabbar främst dem som läser mest nyheter",
+          "Att den som gör något tillsammans med andra mår bättre",
+          "Att oron minskar när man lär sig mer om ämnet",
+          "Att den bör behandlas på samma sätt som annan ångest"
         ],
-        "correct": 3
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 204,
+      "wordCount": 550,
       "fingerprint": "ak8-tema-022",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
@@ -35348,77 +35348,77 @@
     "genre": "faktatext",
     "theme": "Mänskliga rättigheter",
     "title": "Yttrandefrihet och dess gränser",
-    "text": "Yttrandefrihet är en central del av de mänskliga rättigheterna och innebär att människor har rätt att uttrycka sina tankar, åsikter och idéer. Denna rättighet är viktig i demokratiska samhällen eftersom den gör det möjligt att kritisera makthavare och delta i samhällsdebatten.\n\nSamtidigt är yttrandefriheten inte helt obegränsad. I många länder finns lagar som förbjuder hatpropaganda, hot eller uppmaningar till våld. Syftet är att skydda andra människors rättigheter och säkerhet.\n\nEn svår fråga är var gränsen ska dras. Vissa menar att yttrandefriheten bör vara nästan absolut, medan andra anser att den måste begränsas mer för att skydda utsatta grupper. Denna diskussion är ständigt aktuell, särskilt i takt med att sociala medier blivit en viktig arena för åsiktsutbyte.\n\nDigitala plattformar har förändrat hur information sprids. Det går snabbt att nå många människor, men det innebär också att falsk information kan spridas lätt. Detta kan påverka demokratiska processer och människors uppfattningar.\n\nI olika delar av världen ser situationen olika ut. I vissa länder riskerar människor fängelse eller andra straff för att uttrycka kritik mot regeringen. I andra länder är yttrandefriheten starkare skyddad, men debatten om dess gränser fortsätter.\n\nAtt förstå yttrandefrihet handlar därför om att balansera olika rättigheter. Det handlar både om individens frihet att uttrycka sig och om samhällets ansvar att skydda människor från skada.",
+    "text": "Yttrandefrihet är en central del av de mänskliga rättigheterna och innebär att människor har rätt att uttrycka sina tankar, åsikter och idéer. Denna rättighet är viktig i demokratiska samhällen eftersom den gör det möjligt att kritisera makthavare och delta i samhällsdebatten.\n\nEn sak som ofta missförstås är vem yttrandefriheten riktar sig mot. Den binder staten. Den innebär att myndigheter inte får straffa någon för vad hen sagt, men den ger ingen rätt att bli publicerad i en tidning, att få stå kvar på en plattform eller att slippa motargument. Att bli emotsagd är alltså inte en inskränkning av yttrandefriheten utan ett exempel på att den fungerar åt båda hållen.\n\nSverige har en av världens äldsta lagar på området. Tryckfrihetsförordningen från 1766 gjorde myndigheternas handlingar offentliga och gav rätt att trycka kritik utan förhandsgranskning. Offentlighetsprincipen, som betyder att vem som helst kan begära ut handlingar från en myndighet, har sitt ursprung där och är fortfarande ett av de viktigaste verktygen för journalister.\n\nSamtidigt är yttrandefriheten inte helt obegränsad. I många länder finns lagar som förbjuder hatpropaganda, hot eller uppmaningar till våld. Syftet är att skydda andra människors rättigheter och säkerhet.\n\nI svensk lag finns flera sådana gränser. Hets mot folkgrupp gäller uttalanden som hotar eller uttrycker missaktning mot en grupp utifrån till exempel etnicitet, religion eller sexuell läggning. Förtal handlar om att sprida uppgifter som utpekar någon som brottslig eller klandervärd. Olaga hot gäller hot som är ägnade att framkalla allvarlig rädsla. Gemensamt för dem är att de riktar in sig på skada mot människor, inte på att åsikter är obekväma.\n\nEtt återkommande missförstånd gäller ordet censur. Censur i egentlig mening betyder att en myndighet granskar och stoppar något innan det publiceras. Att en text refuseras av en tidning, tas bort av en plattform eller möts av hård kritik är något annat, även om det kan kännas lika obehagligt för den som drabbas.\n\nEn svår fråga är var gränsen ska dras. Vissa menar att yttrandefriheten bör vara nästan absolut, medan andra anser att den måste begränsas mer för att skydda utsatta grupper. Denna diskussion är ständigt aktuell, särskilt i takt med att sociala medier blivit en viktig arena för åsiktsutbyte.\n\nDigitala plattformar har förändrat hur information sprids. Det går snabbt att nå många människor, men det innebär också att falsk information kan spridas lätt. Detta kan påverka demokratiska processer och människors uppfattningar.\n\nPlattformarna har dessutom fått en makt som ingen valt dem till. När ett företag bestämmer vilka inlägg som får finnas kvar fattar det beslut som liknar dem en domstol fattar, men utan samma krav på insyn eller möjlighet att överklaga. Att låta bli att moderera är samtidigt inget neutralt val, eftersom det låter den som skriker högst höras mest.\n\nI olika delar av världen ser situationen olika ut. I vissa länder riskerar människor fängelse eller andra straff för att uttrycka kritik mot regeringen. I andra länder är yttrandefriheten starkare skyddad, men debatten om dess gränser fortsätter. Varje år dödas dessutom journalister på grund av sitt arbete, och i de flesta av de fallen döms ingen någonsin för brottet.\n\nI skolan gäller yttrandefriheten också, men med vissa förutsättningar. En elev får uttrycka åsikter, samtidigt som skolan har ett ansvar att ingripa mot kränkningar och att undervisningen ska bygga på vetenskap. Att alla åsikter får framföras betyder alltså inte att alla påståenden väger lika tungt i ett klassrum.\n\nAtt förstå yttrandefrihet handlar därför om att balansera olika rättigheter. Det handlar både om individens frihet att uttrycka sig och om samhällets ansvar att skydda människor från skada.",
     "questions": [
       {
         "type": "inferens",
-        "q": "Varför är yttrandefrihet viktig i demokratier?",
+        "q": "Varför är det inte en inskränkning av yttrandefriheten att bli emotsagd?",
         "options": [
-          "Den gör det möjligt att påverka och kritisera",
-          "Den ökar produktionen i samhället",
-          "Den minskar behovet av lagar",
-          "Den ersätter utbildning"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad kan vara förbjudet trots yttrandefrihet?",
-        "options": [
-          "Diskussioner i skolan",
-          "Hatpropaganda och hot",
-          "Kulturella uttryck",
-          "Privata samtal"
+          "För att motargument sällan når lika många människor",
+          "För att friheten binder staten och gäller åt båda hållen",
+          "För att kritik inte räknas som ett yttrande i lagens mening",
+          "För att den som blir emotsagd alltid kan svara igen"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad har sociala medier bidragit till enligt texten?",
+        "q": "Vad innebär offentlighetsprincipen?",
         "options": [
-          "Snabb spridning av både information och falska uppgifter",
-          "Mindre spridning av information överlag",
-          "Färre olika åsikter i samhället",
-          "Att lagar har blivit helt onödiga"
+          "Att myndigheters möten alltid är öppna för allmänheten",
+          "Att tidningar får trycka utan att först granskas",
+          "Att vem som helst kan begära ut handlingar från en myndighet",
+          "Att alla domar publiceras i sin helhet på nätet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gäller brottet hets mot folkgrupp?",
+        "options": [
+          "Uttalanden som hotar eller uttrycker missaktning mot en grupp",
+          "Uppgifter som utpekar en enskild person som brottslig",
+          "Hot som är ägnade att framkalla allvarlig rädsla",
+          "Uppmaningar att delta i olagliga demonstrationer"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad riskerar människor i vissa länder?",
+        "type": "inferens",
+        "q": "Vad är gemensamt för de svenska gränserna i lagen?",
         "options": [
-          "Att förlora arbete automatiskt",
-          "Att inte få resa",
-          "Att tvingas studera",
-          "Straff för att kritisera regeringen"
+          "Att de bara gäller det som publiceras i tryckt form",
+          "Att de infördes ungefär samtidigt under 1900-talet",
+          "Att de kräver att någon först anmäler saken",
+          "Att de riktar in sig på skada, inte på obekväma åsikter"
         ],
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
-        "q": "Vad handlar debatten om?",
+        "type": "inferens",
+        "q": "Varför liknar plattformarnas beslut domstolsbeslut?",
         "options": [
-          "Hur man bygger fler skolor",
-          "Var gränsen för yttrandefrihet ska gå",
-          "Hur teknik ska utvecklas",
-          "Hur många lagar som behövs"
+          "För att de avgör vad som får finnas kvar, men utan insyn",
+          "För att de fattas av jurister anställda av företagen",
+          "För att de kan överklagas till en nationell myndighet",
+          "För att de följer samma lagar som domstolarna gör"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
-        "type": "textbevis",
-        "q": "Vad är ett centralt tema i texten?",
+        "type": "sammanfatta",
+        "q": "Varför är det inget neutralt val att låta bli att moderera?",
         "options": [
-          "Att yttrandefrihet saknar betydelse",
-          "Att alla åsikter är lika sanna",
-          "Balansen mellan frihet och ansvar",
-          "Att lagar alltid begränsar människor"
+          "För att lagen kräver att plattformar ingriper mot inlägg",
+          "För att den som skriker högst då hörs mest",
+          "För att annonsörerna i så fall drar sig ur",
+          "För att antalet inlägg skulle bli helt ohanterligt"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 213,
+      "wordCount": 585,
       "fingerprint": "ak10-tema-002",
       "generatedAt": "2026-04-14T00:00:00.000Z",
       "model": "manual"
@@ -36178,77 +36178,77 @@
     "genre": "faktatext",
     "theme": "Sport",
     "title": "Arsenals spelstil och filosofi",
-    "text": "Arsenal har länge varit kända för sin tekniska och offensiva spelstil. Denna filosofi blev särskilt tydlig under Arsène Wengers tid som tränare. Istället för att fokusera på fysisk styrka och långa bollar betonade Wenger kortpassningsspel, rörelse utan boll och kreativitet.\n\nEn central del av Arsenals spelidé är att kontrollera matchen genom bollinnehav. Genom att hålla bollen inom laget kan spelarna styra tempot och skapa luckor i motståndarnas försvar. Detta kräver hög teknisk skicklighet och god spelförståelse hos varje spelare.\n\nArsenal har också varit kända för att utveckla unga talanger. Klubben har ofta gett unga spelare chansen att spela i A-laget, vilket både kan innebära risker och möjligheter. Denna strategi har ibland kritiserats, särskilt när laget inte nått de högsta resultaten, men den har också lett till att många spelare utvecklats till stjärnor.\n\nUnder senare år har klubben försökt balansera sin traditionella spelstil med en mer pragmatisk approach. Detta innebär att laget ibland anpassar sitt spel beroende på motstånd och situation. Kombinationen av kreativitet och struktur har blivit allt viktigare i modern fotboll.\n\nArsenals filosofi handlar alltså inte bara om hur laget spelar, utan också om hur klubben ser på utveckling, lagarbete och långsiktighet. Det är denna helhetssyn som gör Arsenal till en unik klubb inom fotbollsvärlden.",
+    "text": "Arsenal har länge varit kända för sin tekniska och offensiva spelstil. Denna filosofi blev särskilt tydlig under Arsène Wengers tid som tränare. Istället för att fokusera på fysisk styrka och långa bollar betonade Wenger kortpassningsspel, rörelse utan boll och kreativitet.\n\nNär Wenger kom till England 1996 var han i det närmaste okänd, och tidningarna undrade högt vem han var. Det han förde med sig var inte bara en spelidé. Han ändrade vad spelarna åt, hur de stretchade, hur länge de tränade och hur mycket de fick dricka efter matcherna. Flera av de spelare som var med har senare berättat att förändringen kändes chockerande i början och självklar efter ett år.\n\nHan hämtade också spelare från länder som engelska klubbar dittills sällan tittat på. Att köpa en okänd fransk mittfältare för en liten summa och se honom bli en av ligans bästa blev något av ett kännetecken, och andra klubbar följde efter. Det som var ovanligt på 1990-talet är i dag hur alla arbetar.\n\nEn central del av Arsenals spelidé är att kontrollera matchen genom bollinnehav. Genom att hålla bollen inom laget kan spelarna styra tempot och skapa luckor i motståndarnas försvar. Detta kräver hög teknisk skicklighet och god spelförståelse hos varje spelare.\n\nBollinnehav är dock inget mål i sig. Ett lag kan ha bollen i sjuttio procent av matchen och ändå knappt komma till avslut, vilket kritiker återkommande påpekat. Poängen med att hålla bollen är att flytta motståndaren: varje passning tvingar någon att förflytta sig, och till slut uppstår ett mellanrum som inte fanns förut. Ett lag som passar utan att flytta någon har bara bollen, inte kontrollen.\n\nArsenal har också varit kända för att utveckla unga talanger. Klubben har ofta gett unga spelare chansen att spela i A-laget, vilket både kan innebära risker och möjligheter. Denna strategi har ibland kritiserats, särskilt när laget inte nått de högsta resultaten, men den har också lett till att många spelare utvecklats till stjärnor.\n\nEn återkommande invändning mot den offensiva idén var att laget blev sårbart. Ett lag som skickar många spelare framåt har färre kvar bakom, och mot motståndare som väntade och kontrade blev det dyrt. Att hitta balansen mellan att våga och att stå emot är en av fotbollens äldsta frågor, och den har inget slutgiltigt svar.\n\nUnder senare år har klubben försökt balansera sin traditionella spelstil med en mer pragmatisk approach. Detta innebär att laget ibland anpassar sitt spel beroende på motstånd och situation. Kombinationen av kreativitet och struktur har blivit allt viktigare i modern fotboll.\n\nModern fotboll har dessutom flyttat en del av arbetet till det som sker när ett lag förlorar bollen. Att pressa högt direkt efter en förlorad boll, i stället för att falla tillbaka, är i dag en central del av de flesta lags spelidé. Det kräver kondition och samordning snarare än teknik, vilket har förändrat vilka egenskaper klubbar letar efter hos spelare.\n\nSpelstilen har dessutom fått ett namn utanför klubben. Uttrycket att spela på Arsenals sätt användes länge som beröm av vissa och som gliring av andra, ungefär i betydelsen vackert men utan titlar. Att laget under säsongen 2003/2004 gick genom hela ligan obesegrat gjorde det svårare att använda gliringen, men den överlevde ändå. Ryktet om en klubb sitter alltså i längre än de resultat som skapade det.\n\nArsenals filosofi handlar alltså inte bara om hur laget spelar, utan också om hur klubben ser på utveckling, lagarbete och långsiktighet. Det är denna helhetssyn som gör Arsenal till en unik klubb inom fotbollsvärlden.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad kännetecknar Arsenals spelstil enligt texten?",
+        "q": "Vad förändrade Wenger utöver själva spelidén?",
         "options": [
-          "Tekniskt och offensivt spel",
-          "Endast försvarsspel",
-          "Slumpmässiga anfall",
-          "Långsamma passningar"
+          "Vad spelarna åt och hur de tränade",
+          "Klubbens ekonomiska planering på lång sikt",
+          "Arenans utformning och placering i staden",
+          "Hur biljetterna såldes till supportrarna"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Varför är bollinnehav viktigt?",
+        "q": "Varför var Wengers sätt att värva ovanligt bara under en period?",
         "options": [
-          "Det gör matchen kortare",
-          "Det hjälper laget kontrollera tempot",
-          "Det minskar publikens intresse",
-          "Det gör spelet enklare att döma"
+          "För att spelarna blev alltför dyra med åren",
+          "För att andra klubbar snart började arbeta likadant",
+          "För att reglerna för värvningar ändrades i grunden",
+          "För att franska spelare slutade söka sig till England"
         ],
         "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vilken risk finns med att satsa på unga spelare?",
+        "q": "Vad menas med att ett lag kan ha bollen utan att ha kontrollen?",
         "options": [
-          "De är alltid dyrare",
-          "De vill inte spela",
-          "De saknar erfarenhet",
-          "De kan inte träna"
+          "Att bollinnehavet mäts på ett missvisande sätt",
+          "Att laget spelar för långsamt för att hinna avsluta",
+          "Att passningarna inte tvingar motståndaren att flytta sig",
+          "Att motståndaren väljer att stå kvar i sitt straffområde"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad innebär en mer pragmatisk approach?",
+        "q": "Vilken invändning fanns mot den offensiva spelidén?",
         "options": [
-          "Att alltid spela likadant",
-          "Att undvika taktik",
-          "Att spela utan tränare",
-          "Att anpassa spelet efter situationen"
+          "Att den gjorde matcherna tråkiga att se på",
+          "Att den krävde för många unga spelare i laget",
+          "Att den passade dåligt på tunga underlag",
+          "Att laget blev sårbart för kontringar"
         ],
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
-        "q": "Hur har synen på spelstil förändrats?",
+        "type": "literal",
+        "q": "Vad har blivit en central del av de flesta lags spelidé i dag?",
         "options": [
-          "Den är helt oförändrad",
-          "Den kombinerar kreativitet och struktur",
-          "Den är mindre viktig",
-          "Den fokuserar bara på försvar"
+          "Att pressa högt direkt efter en förlorad boll",
+          "Att slå långa bollar mot en fysiskt stark anfallare",
+          "Att byta spelare betydligt oftare under matcherna",
+          "Att låta målvakten delta aktivt i uppspelet"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
-        "type": "textbevis",
-        "q": "Vad är textens huvudidé?",
+        "type": "sammanfatta",
+        "q": "Vad säger texten om balansen mellan att våga och att stå emot?",
         "options": [
-          "Att Arsenal helt saknar strategi",
-          "Att unga spelare nästan alltid misslyckas",
-          "Att Arsenals filosofi omfattar både spel och utveckling",
-          "Att bollinnehav inte är viktigt"
+          "Att den avgörs av vilka spelare klubben har råd med",
+          "Att frågan är gammal och saknar slutgiltigt svar",
+          "Att den löstes när den höga pressen blev vanlig",
+          "Att den bara gäller lag som satsar på unga spelare"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 206,
+      "wordCount": 577,
       "fingerprint": "ak10-arsenal-002",
       "generatedAt": "2026-04-14T00:00:00.000Z",
       "model": "manual"
@@ -37008,77 +37008,77 @@
     "genre": "faktatext",
     "theme": "Musik",
     "title": "Relationer och kreativitet inom ABBA",
-    "text": "ABBA var inte bara en musikgrupp utan också ett komplext nätverk av personliga relationer. Två av medlemmarna, Agnetha Fältskog och Björn Ulvaeus, var gifta, liksom Benny Andersson och Anni-Frid Lyngstad. Dessa relationer påverkade både gruppens dynamik och deras musikskapande.\n\nI början bidrog de nära relationerna till en stark kreativ energi. Medlemmarna kunde arbeta intensivt tillsammans och utveckla idéer snabbt. Björn och Benny skrev majoriteten av låtarna, medan Agnetha och Anni-Frid bidrog med sång och tolkning. Kombinationen av deras olika styrkor skapade ett unikt sound.\n\nNär relationerna började förändras, särskilt genom skilsmässor, påverkades också gruppens arbete. Trots detta lyckades de fortsätta producera musik av hög kvalitet. Album som The Visitors visar en mer komplex och ibland mörkare ton jämfört med tidigare verk.\n\nMånga av ABBAs låtar speglar känslor kopplade till relationer, som kärlek, separation och längtan. Detta gör att deras musik ofta upplevs som personlig och genuin. Lyssnare kan känna igen sig i texterna, vilket bidrar till deras långvariga popularitet.\n\nTrots interna svårigheter valde gruppen att fortsätta arbeta professionellt tillsammans under flera år. Detta visar på en stark arbetsmoral och respekt för musiken.\n\nABBA är ett exempel på hur personliga relationer både kan stärka och utmana kreativt samarbete. Deras historia visar att konflikter inte nödvändigtvis hindrar konstnärlig utveckling, utan ibland kan bidra till den.",
+    "text": "ABBA var inte bara en musikgrupp utan också ett komplext nätverk av personliga relationer. Två av medlemmarna, Agnetha Fältskog och Björn Ulvaeus, var gifta, liksom Benny Andersson och Anni-Frid Lyngstad. Dessa relationer påverkade både gruppens dynamik och deras musikskapande.\n\nNamnet i sig kom från deras förnamn, och gruppen fungerade länge som ett litet familjeföretag. Medlemmarna ägde bolaget tillsammans, turnerade tillsammans och bodde nära varandra. Att arbete och privatliv gick ihop var en styrka så länge det fungerade och ett problem när det slutade göra det.\n\nI början bidrog de nära relationerna till en stark kreativ energi. Medlemmarna kunde arbeta intensivt tillsammans och utveckla idéer snabbt. Björn och Benny skrev majoriteten av låtarna, medan Agnetha och Anni-Frid bidrog med sång och tolkning. Kombinationen av deras olika styrkor skapade ett unikt sound.\n\nArbetssättet var mer metodiskt än man kan tro. Björn och Benny satte sig i ett litet hus på en ö utanför Stockholm med varsitt instrument och arbetade i veckor, ofta helt utan text. Först när en melodi var färdig skrevs orden, vilket är en av förklaringarna till att texterna följer melodins rörelser så nära. Ibland kastades hela låtar som redan var inspelade.\n\nNär relationerna började förändras, särskilt genom skilsmässor, påverkades också gruppens arbete. Trots detta lyckades de fortsätta producera musik av hög kvalitet. Album som The Visitors visar en mer komplex och ibland mörkare ton jämfört med tidigare verk.\n\nAtt fortsätta arbeta med sin före detta partner varje dag var samtidigt en ovanlig situation. Medlemmarna har i efterhand beskrivit att de höll isär rollerna genom att vara mycket professionella i studion, och att musiken blev en plats där det gick att uttrycka sådant som inte sades vid köksbordet.\n\nTurnerandet slet också. Gruppen turnerade förhållandevis lite jämfört med andra artister av samma storlek, och en förklaring var att medlemmarna hade små barn hemma. Agnetha var dessutom rädd för att flyga, vilket gjorde långa turnéer plågsamma. Att de valde bort mycket av det som andra tackade ja till bidrog till att de aldrig blev lika närvarande i vissa länder.\n\nRollerna i gruppen var inte heller jämlika. Björn och Benny skrev, producerade och ägde rättigheterna till låtarna, medan Agnetha och Anni-Frid sjöng dem. Den fördelningen var vanlig i musikbranschen på den tiden, men den innebar att två av fyra hade betydligt mer att säga till om, och den har diskuterats mer i efterhand än den gjorde då.\n\nMånga av ABBAs låtar speglar känslor kopplade till relationer, som kärlek, separation och längtan. Detta gör att deras musik ofta upplevs som personlig och genuin. Lyssnare kan känna igen sig i texterna, vilket bidrar till deras långvariga popularitet.\n\nHur självbiografiska texterna egentligen är har diskuterats i decennier. Medlemmarna har genomgående varit försiktiga med att bekräfta kopplingar, och påpekat att en låt om ett uppbrott inte behöver handla om just deras. Att den som skriver hämtar ur sitt eget liv är samtidigt knappast överraskande, och gränsen mellan erfarenhet och hantverk går sällan att dra skarpt.\n\nTrots interna svårigheter valde gruppen att fortsätta arbeta professionellt tillsammans under flera år. Detta visar på en stark arbetsmoral och respekt för musiken.\n\nGruppen upplöstes aldrig formellt. De tog en paus 1982 utan att meddela något slut, och pausen blev fyrtio år lång. När de återkom med ny musik 2021 hade de flesta för länge sedan slutat räkna med det.\n\nABBA är ett exempel på hur personliga relationer både kan stärka och utmana kreativt samarbete. Deras historia visar att konflikter inte nödvändigtvis hindrar konstnärlig utveckling, utan ibland kan bidra till den.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vilka i ABBA var gifta med varandra?",
+        "q": "Hur arbetade Björn och Benny med låtarna?",
         "options": [
-          "Agnetha och Benny samt Björn och Anni-Frid",
-          "Björn och Agnetha samt Benny och Anni-Frid",
-          "Björn och Anni-Frid samt Benny och Agnetha",
-          "Alla fyra var gifta med varandra"
+          "I ett litet hus på en ö, i veckor och ofta utan text",
+          "Var för sig och skickade idéerna fram och tillbaka",
+          "Tillsammans med de andra två inne i studion",
+          "Under turnéerna, i pauserna mellan konserterna"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför följer texterna melodins rörelser så nära?",
+        "options": [
+          "För att texterna skrevs direkt på engelska",
+          "För att melodin skrevs färdig innan orden",
+          "För att låtarna var korta och enkelt byggda",
+          "För att de sjöngs av två personer samtidigt"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad bidrog relationerna till i början?",
+        "type": "inferens",
+        "q": "Hur höll medlemmarna isär rollerna efter skilsmässorna?",
         "options": [
-          "Konflikter direkt",
-          "Svagare musik",
-          "Stark kreativ energi",
-          "Mindre samarbete"
+          "De arbetade i skilda studior under en period",
+          "De lät en producent sköta all kontakt mellan dem",
+          "De var mycket professionella i studion",
+          "De slutade turnera tillsammans efter det"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Hur påverkade skilsmässorna gruppen?",
+        "q": "Varför är frågan om självbiografiska texter svår att avgöra?",
         "options": [
-          "De slutade spela musik direkt",
-          "De bytte musikstil helt",
-          "Arbetet blev mer komplext men fortsatte",
-          "De slutade skriva egna låtar"
+          "För att medlemmarna glömt hur låtarna kom till",
+          "För att texterna skrevs av flera olika personer",
+          "För att flera versioner av texterna finns bevarade",
+          "För att gränsen mellan erfarenhet och hantverk sällan är skarp"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad handlar många av ABBAs låtar om?",
+        "q": "Hur slutade gruppen?",
         "options": [
-          "Teknik och framtid",
-          "Relationer och känslor",
-          "Politik",
-          "Historia"
+          "Med en paus 1982 som aldrig meddelades som ett slut",
+          "Med ett gemensamt uttalande efter The Visitors",
+          "Med en avskedsturné genom hela Europa",
+          "Med att två av medlemmarna lämnade först"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad säger texten om relationernas betydelse för arbetet?",
+        "options": [
+          "Att de gjorde samarbetet omöjligt till slut",
+          "Att de både stärkte och utmanade det kreativa arbetet",
+          "Att de saknade egentlig betydelse för musiken",
+          "Att de förklarar varför gruppen aldrig återförenades"
         ],
         "correct": 1
-      },
-      {
-        "type": "forfattarens-syfte",
-        "q": "Vad visar gruppens fortsatta arbete trots konflikter?",
-        "options": [
-          "Att de saknade publik",
-          "Att de inte brydde sig",
-          "Att de hade stark arbetsmoral",
-          "Att de ville sluta snabbt"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "textbevis",
-        "q": "Vad är textens huvudidé?",
-        "options": [
-          "Musik handlar bara om teknik och inspelning",
-          "ABBA var oorganiserade i sitt arbete",
-          "Relationer är oviktiga för musiken",
-          "Relationer kan påverka kreativitet både positivt och negativt"
-        ],
-        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 213,
+      "wordCount": 579,
       "fingerprint": "akgy-abba-002",
       "generatedAt": "2026-04-20T00:00:00.000Z",
       "model": "manual"
@@ -37091,77 +37091,77 @@
     "genre": "faktatext",
     "theme": "Teknik",
     "title": "ABBA:s musikproduktion och teknik",
-    "text": "ABBA var kända för sitt innovativa sätt att producera musik, vilket spelade en stor roll i deras framgång. Under 1970-talet utvecklades inspelningsteknik snabbt, och gruppen använde studion som ett kreativt verktyg snarare än bara en plats för inspelning. Producenten och medlemmen Benny Andersson arbetade nära ljudteknikern för att skapa ett fylligt och detaljerat ljud.\n\nEn viktig del av ABBA:s sound var användningen av flerspårsinspelning. Det innebar att olika instrument och röster spelades in separat och sedan kombinerades. Detta gjorde det möjligt att skapa komplexa arrangemang med många lager av ljud. Sången spelades ofta in flera gånger för att skapa en rik och harmonisk effekt.\n\nGruppen var också noggrann med detaljer. De experimenterade med olika mikrofonplaceringar, ekon och effekter för att få fram rätt känsla i varje låt. Detta bidrog till att deras musik lät modern och professionell, även jämfört med dagens produktioner.\n\nABBA:s arbete i studion påverkade hur popmusik produceras idag. Många moderna producenter använder liknande tekniker, även om tekniken har utvecklats digitalt.\n\nDeras fokus på kvalitet och innovation gjorde att deras musik stack ut i en tid då många artister spelade in mer direkt och enklare. ABBA visade att studion kunde vara ett instrument i sig.\n\nDetta tekniska nytänkande är en viktig del av deras arv och förklarar varför deras musik fortfarande upplevs som relevant.",
+    "text": "ABBA var kända för sitt innovativa sätt att producera musik, vilket spelade en stor roll i deras framgång. Under 1970-talet utvecklades inspelningsteknik snabbt, och gruppen använde studion som ett kreativt verktyg snarare än bara en plats för inspelning. Producenten och medlemmen Benny Andersson arbetade nära ljudteknikern för att skapa ett fylligt och detaljerat ljud.\n\nLjudteknikern hette Michael B. Tretow och brukar räknas som en femte medlem när det gäller ljudet. Det var han som prövade ett knep han läst om: att spela in samma instrument två gånger och köra bandet med en aning olika hastighet vid det andra tillfället. Resultatet blev att de två inspelningarna aldrig låg exakt på varandra, och ljudet växte till något betydligt större än vad musikerna faktiskt hade spelat.\n\nEn viktig del av ABBA:s sound var användningen av flerspårsinspelning. Det innebar att olika instrument och röster spelades in separat och sedan kombinerades. Detta gjorde det möjligt att skapa komplexa arrangemang med många lager av ljud. Sången spelades ofta in flera gånger för att skapa en rik och harmonisk effekt.\n\nRösterna var i sig en del av lösningen. Agnetha sjöng ljusare och Anni-Frid mörkare, och när de sjöng samma stämma blev resultatet varken den enas eller den andras röst utan en tredje. Att de dessutom sjöng nästan exakt lika i tajming gjorde att lagren gick ihop utan att låta grumliga, vilket är betydligt svårare än det låter.\n\nLjudbilden byggdes också av instrument som var ovanliga i popmusik. Benny använde ofta piano tillsammans med marimba, cembalo och tidiga synthesizrar, vilket gav ett klingande och lätt gnistrande ljud i höjdregistret. I flera låtar ligger dessutom en akustisk gitarr med som knappt går att höra ensam men som märks direkt om den tas bort. Sådana lager är vanliga i deras inspelningar: mycket ligger där utan att höras, och gör ändå jobbet.\n\nGruppen var också noggrann med detaljer. De experimenterade med olika mikrofonplaceringar, ekon och effekter för att få fram rätt känsla i varje låt. Detta bidrog till att deras musik lät modern och professionell, även jämfört med dagens produktioner.\n\nFrån 1978 hade de en egen studio, Polar Studios i Stockholm, byggd efter deras egna önskemål. Att äga sin studio innebar att de kunde arbeta utan att räkna timmar, vilket i praktiken betydde att en låt fick ta den tid den behövde. Andra artister hyrde in sig där av samma skäl, och studion blev under några år en av Europas mest anlitade.\n\nArbetet var också tidskrävande på ett sätt som är svårt att föreställa sig i dag. En enda låt kunde ta veckor, och delar spelades in om gång på gång tills detaljerna satt. Att bandet inte gick att redigera fritt betydde att en misslyckad tagning måste göras helt på nytt, vilket satte press på musikerna men också höjde nivån.\n\nABBA:s arbete i studion påverkade hur popmusik produceras idag. Många moderna producenter använder liknande tekniker, även om tekniken har utvecklats digitalt.\n\nSkillnaden mot i dag är främst hur enkelt det har blivit. Det som krävde ett bandbord, stort tålamod och en teknikers hela kunnande går nu att göra i ett program på en bärbar dator. Att verktygen blivit tillgängliga betyder dock inte att resultatet blir detsamma. Det som gör inspelningarna hållbara är besluten, inte utrustningen.\n\nDeras fokus på kvalitet och innovation gjorde att deras musik stack ut i en tid då många artister spelade in mer direkt och enklare. ABBA visade att studion kunde vara ett instrument i sig.\n\nDetta tekniska nytänkande är en viktig del av deras arv och förklarar varför deras musik fortfarande upplevs som relevant.",
     "questions": [
       {
-        "type": "inferens",
-        "q": "Vad var speciellt med ABBA:s syn på studion?",
+        "type": "literal",
+        "q": "Vad gjorde Michael B. Tretow för att ljudet skulle växa?",
         "options": [
-          "Den användes bara för repetition",
-          "Den sågs som ett kreativt verktyg",
-          "Den var öppen för publik",
-          "Den användes sällan"
+          "Spelade in samma instrument två gånger i olika hastighet",
+          "Placerade mikrofonerna längre bort från instrumenten",
+          "Lade till kraftigt eko på samtliga inspelade spår",
+          "Lät inspelningarna göras i en betydligt större lokal"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lät de två inspelningarna större än vad musikerna spelat?",
+        "options": [
+          "För att volymen dubblerades vid mixningen",
+          "För att inspelningarna aldrig låg exakt på varandra",
+          "För att fler musiker deltog vid det andra tillfället",
+          "För att bandet gick långsammare vid uppspelningen"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad innebär flerspårsinspelning?",
+        "type": "inferens",
+        "q": "Vad blev resultatet när Agnetha och Anni-Frid sjöng samma stämma?",
         "options": [
-          "Att spela allt samtidigt",
-          "Att spela in live inför publik",
-          "Att spela in olika delar separat",
-          "Att bara spela in sång"
+          "Den ena rösten kom att dominera över den andra",
+          "Stämman måste spelas in flera gånger om",
+          "En tredje röst som inte var någon av deras",
+          "Ett ljud som lät grumligt och behövde bearbetas"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Varför spelades sången in flera gånger?",
+        "q": "Vad innebar det att äga en egen studio?",
         "options": [
-          "För att spara tid",
-          "För att skapa rik harmonisk effekt",
-          "För att undvika misstag",
-          "För att byta språk"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inferens",
-        "q": "Hur påverkade ABBA modern musikproduktion?",
-        "options": [
-          "De minskade användningen av teknik",
-          "De gjorde musik enklare",
-          "De stoppade utvecklingen",
-          "De inspirerade dagens producenter"
+          "Att de kunde spela in betydligt fler låtar per år",
+          "Att de slapp anlita utomstående studiomusiker",
+          "Att inspelningarna kunde göras även under turnéerna",
+          "Att en låt fick ta den tid den behövde"
         ],
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad kännetecknade deras arbete?",
+        "type": "inferens",
+        "q": "Vad är den största skillnaden mot att producera musik i dag?",
         "options": [
-          "Noggrannhet och detaljfokus",
-          "Slumpmässighet i studion",
-          "Enkelhet och snabbhet",
-          "Mycket snabb inspelning"
+          "Att verktygen blivit enkla och tillgängliga för alla",
+          "Att ljudet numera blir tydligare än det blev förr",
+          "Att artister spelar in färre lager än de gjorde då",
+          "Att studior sällan används av popartister längre"
         ],
         "correct": 0
       },
       {
-        "type": "textbevis",
-        "q": "Vad är textens huvudidé?",
+        "type": "sammanfatta",
+        "q": "Vad avgör om en inspelning håller över tid enligt texten?",
         "options": [
-          "ABBA spelade nästan enbart live på scen",
-          "ABBA förändrade musikproduktion genom teknik",
-          "Teknik är oviktigt i all musik",
-          "Studioarbete är enkelt att lära sig"
+          "Hur mycket pengar som lagts på inspelningen",
+          "Besluten som fattas, inte utrustningen",
+          "Hur många lager sången har spelats in i",
+          "Om studion ägs av artisten själv eller hyrs"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 216,
+      "wordCount": 587,
       "fingerprint": "akgy-abba-003",
       "generatedAt": "2026-04-20T00:00:00.000Z",
       "model": "manual"
